@@ -9,7 +9,7 @@ exl-id: 407c2bac-4c8a-4939-b3dd-788250f15650
 source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
 workflow-type: tm+mt
 source-wordcount: '855'
-ht-degree: 70%
+ht-degree: 73%
 
 ---
 
@@ -29,7 +29,7 @@ Mises à jour des fonctionnalités existantes dans Adobe Experience Platform 
 
 [!DNL Experience Platform] permet aux entreprises de rassembler des données issues de plusieurs systèmes d’entreprise afin de mieux permettre aux spécialistes du marketing d’identifier, de comprendre et d’impliquer les clients. [!DNL Experience Platform] comprend une infrastructure de gouvernance des données de bout en bout pour garantir une utilisation appropriée des données dans [!DNL Platform] et lors du partage entre les systèmes.
 
-Dans Adobe Experience Platform, la gouvernance des données désigne un ensemble de stratégies et de technologies permettant de gérer les données clients et de garantir la conformité aux réglementations, aux restrictions et aux stratégies applicables à l’utilisation des données. Elle joue un rôle clé dans la [!DNL Experience Platform] à différents niveaux, notamment le catalogage, la traçabilité des données, l’étiquetage de l’utilisation des données, les stratégies d’accès aux données et le contrôle d’accès aux données pour les actions marketing.
+Dans Adobe Experience Platform, la gouvernance des données désigne un ensemble de stratégies et de technologies permettant de gérer les données clients et de garantir la conformité aux réglementations, aux restrictions et aux stratégies applicables à l’utilisation des données. Elle joue un rôle clé dans [!DNL Experience Platform] à différents niveaux, notamment dans le catalogage, la traçabilité des données, l’étiquetage de l’utilisation des données, les stratégies d’accès aux données et le contrôle d’accès aux données pour les actions marketing.
 
 **Nouvelles fonctionnalités**
 

@@ -8,13 +8,13 @@ exl-id: b800ba43-c308-4334-adce-3d554d50cefb
 source-git-commit: af5564a07577a0123e1a45043d5479f6ad45d73e
 workflow-type: tm+mt
 source-wordcount: '175'
-ht-degree: 71%
+ht-degree: 73%
 
 ---
 
-# Mappages des champs d’Audience Manager
+# Mappages de champs Audience Manager
 
-Les tableaux ci-dessous contiennent les mappages entre les champs des données Adobe Audience Manager (données en temps réel, intégrées et de profil) et les champs XDM correspondants.
+Les tableaux ci-dessous contiennent les mappages entre les champs des données Adobe Audience Manager (données en temps réel, intégrées et de profil) et les champs XDM correspondants.
 
 Pour plus d’informations sur chaque champ XDM, consultez le [dictionnaire des champs XDM](../../../../xdm/schema/field-dictionary.md).
 

@@ -1,15 +1,15 @@
 ---
 title: (Version bêta) Bureau commercial - Connexion CRM
 description: Activez les profils dans votre compte de bureau Commerce pour le ciblage et la suppression des audiences en fonction des données CRM.
-source-git-commit: b186a1a4b7417503ffa08a66136411ccff495510
+exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
+source-git-commit: a761ab634dce31bd0a06297f703d9d815c2f0ea2
 workflow-type: tm+mt
 source-wordcount: '1041'
-ht-degree: 10%
+ht-degree: 11%
 
 ---
 
-
-# (Version Bêta) Le [!DNL Trade Desk] - Connexion CRM
+# (Beta) Connexion CRM The[!DNL Trade Desk]
 
 >[!IMPORTANT]
 >
@@ -45,7 +45,7 @@ Adobe Experience Platform prend en charge le texte brut et les adresses électro
 
 | Identité cible | Description | Considérations |
 |---|---|---|
-| Adresse e-mail | Adresses électroniques (texte en clair) | Sélectionnez la `Email` identité cible lorsque votre identité source est un espace de noms ou un attribut de courriel. |
+| E-mail | Adresses électroniques (texte en clair) | Sélectionnez la `Email` identité cible lorsque votre identité source est un espace de noms ou un attribut de courriel. |
 | Email_LC_SHA256 | Les adresses électroniques doivent être hachées à l’aide de SHA256 et mises en minuscules. Veillez à suivre les [normalisation des emails](https://github.com/UnifiedID2/uid2docs/tree/main/api#email-address-normalization) règles requises. Vous ne pourrez pas modifier ce paramètre ultérieurement. | Sélectionnez la `Email_LC_SHA256` identité cible lorsque votre identité source est un espace de noms ou un attribut Email_LC_SHA256. |
 
 {style=&quot;table-layout:auto&quot;}

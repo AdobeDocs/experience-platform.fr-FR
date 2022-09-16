@@ -12,11 +12,11 @@ ht-degree: 86%
 
 ---
 
-# Fonctions d&#39;agrégation
+# Fonctions d’agrégation
 
-Les fonctions d’agrégation sont utilisées pour regrouper plusieurs valeurs dans des tableaux [!DNL Profile Query Language] (PQL) afin de former une seule valeur de synthèse. Vous trouverez plus d’informations sur les autres fonctions PQL dans la [[!DNL Profile Query Language] présentation](./overview.md).
+Les fonctions d’agrégation sont utilisées pour regrouper plusieurs valeurs dans des tableaux [!DNL Profile Query Language] (PQL) afin de former une seule valeur de synthèse. Vous trouverez plus d’informations sur les autres fonctions PQL dans la section [[!DNL Profile Query Language] aperçu](./overview.md).
 
-## Count
+## Nombre
 
 La fonction `count` renvoie le nombre d&#39;éléments dans le tableau donné.
 

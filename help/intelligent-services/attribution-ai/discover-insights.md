@@ -24,7 +24,7 @@ Pour utiliser les insights relatifs à Attribution AI, vous devez avoir à dispo
 
 ## Aperçu des insights des instances de service
 
-Dans l’interface utilisateur [!DNL Adobe Experience Platform], sélectionnez **[!UICONTROL Services]** dans le volet de navigation de gauche. Le navigateur **[!UICONTROL Services]** apparaît et affiche les services intelligents Adobe disponibles. Dans le conteneur pour Attribution AI, sélectionnez **[!UICONTROL Ouvrir]**.
+Dans le [!DNL Adobe Experience Platform] Interface utilisateur, sélectionnez **[!UICONTROL Services]** dans le volet de navigation de gauche. Le navigateur **[!UICONTROL Services]** apparaît et affiche les services intelligents Adobe disponibles. Dans le conteneur pour Attribution AI, sélectionnez **[!UICONTROL Ouvrir]**.
 
 ![Accès à votre instance](./images/insights/open_Attribution_ai.png)
 
@@ -42,7 +42,7 @@ Ensuite, la page d’insights pour cette instance de service apparaît sur laque
 
 ### Détails des instances de service
 
-Pour afficher des détails supplémentaires pour une instance de service, sélectionnez **[!UICONTROL Afficher plus]** en haut à droite.
+Pour afficher des détails supplémentaires sur une instance de service, sélectionnez **[!UICONTROL Afficher plus]** en haut à droite.
 
 ![afficher plus](./images/insights/show-more.png)
 
@@ -61,12 +61,12 @@ La boîte de dialogue de modification s’affiche, vous permettant de modifier l
 
 ### Actions supplémentaires {#more-actions}
 
-Le bouton **[!UICONTROL Actions supplémentaires]** se trouve dans la navigation en haut à droite en regard de **[!UICONTROL Modifier]**. La sélection de **[!UICONTROL Autres actions]** ouvre une liste déroulante qui vous permet de sélectionner l’une des opérations suivantes :
+Le bouton **[!UICONTROL Actions supplémentaires]** se trouve dans la navigation en haut à droite en regard de **[!UICONTROL Modifier]**. Sélection **[!UICONTROL Autres actions]** ouvre une liste déroulante qui vous permet de sélectionner l’une des opérations suivantes :
 
-- **[!UICONTROL Cloner]** : Cloner l’instance.
+- **[!UICONTROL Cloner]**: Cloner l’instance.
 - **[!UICONTROL Supprimer]** : supprime l’instance.
 - **[!UICONTROL Télécharger des données récapitulatives]** : télécharge un fichier CSV contenant les données récapitulatives.
-- **[!UICONTROL Accéder aux scores]** : Sélectionnez  **[!UICONTROL Accéder aux]** scores vous redirige vers le tutoriel  [Accéder aux scores pour Attribution AI](./download-scores.md).
+- **[!UICONTROL Accéder aux scores]**: Sélection **[!UICONTROL Accéder aux scores]** vous redirige vers la [didacticiel sur les scores d’accès pour Attribution AI](./download-scores.md).
 - **[!UICONTROL Afficher l’historique d’exécution]** : une fenêtre contextuelle contenant une liste des exécutions de notation associée à l’instance de service apparaît.
 
 ![actions supplémentaires](./images/insights/more-actions.png)
@@ -85,7 +85,7 @@ Lorsque vous créez une nouvelle instance dans Attribution AI, le champ « Év�
 
 ### Modèle d’attribution
 
-Sélectionnez **[!UICONTROL Modèle d’attribution]** pour ouvrir une liste déroulante contenant tous les différents modèles d’attribution disponibles. Vous pouvez sélectionner plusieurs modèles pour en comparer les résultats. Pour plus d’informations sur les différents modèles d’attribution et la manière dont ils fonctionnent, rendez-vous sur l’aperçu [Attribution AI](./overview.md) sur lequel vous trouverez un tableau contenant des informations sur chaque modèle.
+Sélection **[!UICONTROL Modèle d’attribution]** ouvre une liste déroulante avec tous les différents modèles d’attribution disponibles. Vous pouvez sélectionner plusieurs modèles pour en comparer les résultats. Pour plus d’informations sur les différents modèles d’attribution et la manière dont ils fonctionnent, rendez-vous sur l’aperçu [Attribution AI](./overview.md) sur lequel vous trouverez un tableau contenant des informations sur chaque modèle.
 
 ![modèle d’attribution](./images/insights/attribution-model.png)
 
@@ -99,16 +99,16 @@ Ce filtre vous permet de sélectionner les régions que vous avez configurées a
 
 ### Ajout de filtres
 
-Vous pouvez ajouter d’autres filtres en sélectionnant l’icône **filter** pour ouvrir la fenêtre contextuelle **[!UICONTROL Ajouter des filtres]**. La fenêtre contextuelle **[!UICONTROL Ajouter des filtres]** vous permet de filtrer par canal, zone géographique, type de média et produit. Seuls les filtres applicables pour une instance de service sont renseignés par la fenêtre contextuelle. Par exemple, si vous n’avez pas fourni de données géographiques ou de type de média, ces attributs de filtre ne seront pas disponibles pour votre instance.
+Vous pouvez ajouter d’autres filtres en sélectionnant l’option **filter** pour ouvrir la **[!UICONTROL Ajout de filtres]** de la fenêtre contextuelle. Le **[!UICONTROL Ajout de filtres]** la fenêtre contextuelle vous permet de filtrer par canal, zone géographique, type de média et produit. Seuls les filtres applicables pour une instance de service sont renseignés par la fenêtre contextuelle. Par exemple, si vous n’avez pas fourni de données géographiques ou de type de média, ces attributs de filtre ne seront pas disponibles pour votre instance.
 
 ![filtres supplémentaires](./images/insights/additional-filters.png)
 
 ![fenêtre contextuelle de filtre](./images/insights/filter-popover.png)
 
-- **[!UICONTROL Canal] :** la sélection de l’attribut channel vous permet de filtrer l’un de vos canaux marketing disponibles. Vous pouvez sélectionner plusieurs canaux pour les comparer.
-- **[!UICONTROL Géographie] :**  la sélection de l’attribut géographie vous permet de filtrer les codes pays en fonction de modèles régionaux. En fonction de vos données, ce filtre peut être présent ou non. Les codes pays se composent de deux caractères. Voir la liste complète des codes de pays [ici](https://datahub.io/core/country-list).
-- **[!UICONTROL Type de média] :** la sélection de l’attribut de type de média vous permet de filtrer l’un de vos types de média définis.
-- **[!UICONTROL Produit] :** la sélection de l’attribut de produit vous permet de filtrer les produits ingérés à la création de votre instance.
+- **[!UICONTROL Canal]:** La sélection de l’attribut channel vous permet de filtrer l’un de vos canaux marketing disponibles. Vous pouvez sélectionner plusieurs canaux pour les comparer.
+- **[!UICONTROL Géographie]:** La sélection de l’attribut géographie vous permet de filtrer les codes pays en fonction de modèles régionaux. En fonction de vos données, ce filtre peut être présent ou non. Les codes pays se composent de deux caractères. Consultez la liste complète des codes pays [here](https://datahub.io/core/country-list).
+- **[!UICONTROL Type de média]:** La sélection de l’attribut de type de média vous permet de filtrer les types de médias que vous avez définis.
+- **[!UICONTROL Produit]:** La sélection de l’attribut product vous permet de filtrer les produits ingérés à la création de votre instance.
 
 ### Période
 
@@ -126,7 +126,7 @@ La fiche **[!UICONTROL Aperçu]** affiche vos conversions totales par modèle d�
 
 La fiche **[!UICONTROL Tendances hebdomadaires]** décompose vos conversions totales selon la période que vous avez définie au cours du processus de filtrage.
 
-Sélectionnez les points de suspension en haut à droite de la carte **Tendances hebdomadaires** pour afficher une liste déroulante vous permettant de sélectionner des tendances quotidiennes, hebdomadaires ou mensuelles.
+Sélection des ellipses en haut à droite de l’objet **Tendances hebdomadaires** affiche une liste déroulante qui vous permet de sélectionner des tendances quotidiennes, hebdomadaires ou mensuelles.
 
 Survoler la ligne des données avec votre souris d’un modèle d’attribution spécifique crée une fenêtre contextuelle qui affiche le nombre total de conversions pour cette date.
 
@@ -136,7 +136,7 @@ Survoler la ligne des données avec votre souris d’un modèle d’attribution 
 
 La fiche **[!UICONTROL Répartition par canal]** est utilisée pour déterminer le nombre total de conversions associé à chaque canal. Vous pouvez utiliser cette fiche pour vous aider à prendre des décisions sur l’efficacité de chaque canal et le retour sur investissement.
 
-Sélectionnez les points de suspension en haut à droite de la carte **[!UICONTROL Ventilation par canal]** pour ouvrir une liste déroulante vous permettant de renseigner les données en fonction des points de contact.
+Sélection des ellipses en haut à droite de l’objet **[!UICONTROL Ventilation par canal]** Une carte ouvre une liste déroulante qui vous permet de renseigner des données en fonction des points de contact.
 
 ![canal de répartition](./images/insights/channel-breakdown.png)
 
@@ -148,13 +148,13 @@ La fiche **[!UICONTROL Campagnes principales]** affiche un aperçu de vos campag
 
 ## Ventilation par position de point de contact
 
-La sélection de l’onglet **[!UICONTROL Analyse de chemin]** charge les graphiques **[!UICONTROL Ventilation par position de point de contact]** et **[!UICONTROL Meilleurs chemins de conversion]**.
+En sélectionnant le **[!UICONTROL Analyse des chemins]** charge l’onglet **[!UICONTROL Ventilation par position de point de contact]** et **[!UICONTROL Meilleurs chemins de conversion]** graphiques.
 
-Le **[!UICONTROL graphique Répartition par position de point de contact]** est une ventilation des conversions attribuées par position du point de contact, comparée à tous les chemins de conversion. Ce graphique vous aide à comprendre les points de contact les plus efficaces à différentes étapes du chemin de conversion. Les scènes sont de début, de lecture et de plus près.
+Le **[!UICONTROL Ventilation par position de point de contact]** Le graphique est une ventilation des conversions attribuées par position du point de contact par rapport à tous les chemins de conversion. Ce graphique vous aide à comprendre les points de contact les plus efficaces à différentes étapes du chemin de conversion. Les scènes sont de début, de lecture et de plus près.
 
-- **Démarrage :** indique que le point de contact a été la première touche dans un chemin de conversion.
-- **Lecteur :** indique que le point de contact n’était pas la première ou la dernière touche menant à une conversion.
-- **Plus proche :** indique que le point de contact était la dernière touche avant une conversion.
+- **Démarrage :** Indique que le point de contact était la première touche dans un chemin de conversion.
+- **Lecteur :** Indique que le point de contact n’était pas la première ou la dernière touche à l’origine d’une conversion.
+- **Plus proche :** Indique que le point de contact était la dernière touche avant une conversion.
 
 >!![NOTE]
 La somme des pourcentages de contribution pour un modèle d’attribution sur tous les points de contact et toutes les positions doit être égale à 100.
@@ -163,28 +163,28 @@ La somme des pourcentages de contribution pour un modèle d’attribution sur to
 
 ## Meilleurs chemins de conversion
 
-Le graphique **[!UICONTROL Meilleurs chemins de conversion]** affiche les scores algorithmiques et influencés sur les principaux chemins de conversion dans les régions sélectionnées. Ce graphique vous permet de visualiser les points de contact qui contribuent aux conversions et le score d’attribution pour chaque point de contact. Vous pouvez utiliser ces informations pour afficher les chemins les plus fréquents d’une région donnée et déterminer si des motifs apparaissent entre les différents ensembles de points de contact.
+Le **[!UICONTROL Meilleurs chemins de conversion]** Le graphique affiche les scores influencés et algorithmiques sur les principaux chemins de conversion dans les régions sélectionnées. Ce graphique vous permet de visualiser les points de contact qui contribuent aux conversions et le score d’attribution pour chaque point de contact. Vous pouvez utiliser ces informations pour afficher les chemins les plus fréquents d’une région donnée et déterminer si des motifs apparaissent entre les différents ensembles de points de contact.
 
 ![Chemins d’accès utilisateur les plus courants](./images/insights/Touchpoint-paths.png)
 
 ## Efficacité des points de contact
 
-Si vous sélectionnez l’onglet **[!UICONTROL Efficacité du point de contact]** , la carte **[!UICONTROL Efficacité du point de contact]** est chargée. Cette carte utilise la distribution des données d’Attribution AI pour afficher les informations pour chaque point de contact. Les données de ce tableau ne sont générées que pour des périodes spécifiques, comme indiqué par la date **[!UICONTROL À partir de]** dans le coin supérieur droit de la carte.
+En sélectionnant le **[!UICONTROL Efficacité des points de contact]** charge l’onglet **[!UICONTROL Efficacité des points de contact]** carte. Cette carte utilise la distribution des données d’Attribution AI pour afficher les informations pour chaque point de contact. Les données de ce tableau ne sont générées que pour des périodes spécifiques, comme indiqué par la variable **[!UICONTROL À partir de]** date dans le coin supérieur droit de la carte.
 
 ![sélection de l’efficacité du point de contact](./images/insights/Touchpoint-effectiveness.png)
 
-Vous pouvez utiliser les informations de la carte **[!UICONTROL Efficacité du point de contact]** pour comprendre comment un point de contact contribue à une conversion. Vous pouvez également déterminer l’efficacité de chaque point de contact avec les mesures de performances suivantes :
+Vous pouvez utiliser la variable **[!UICONTROL Efficacité des points de contact]** informations de carte pour comprendre comment un point de contact contribue à une conversion. Vous pouvez également déterminer l’efficacité de chaque point de contact avec les mesures de performances suivantes :
 
-**Chemins touchés** : Cette mesure affiche un pourcentage des chemins atteignant/n’atteignant pas la conversion pour le point de contact. Vous constaterez une augmentation des conversions attribuées si le taux de conversion (pourcentage) des chemins menant à la conversion vers les chemins n’aboutissant pas à une conversion est élevé.
+**Chemins touchés**: Cette mesure affiche un pourcentage des chemins atteignant/n’atteignant pas la conversion pour le point de contact. Vous constaterez une augmentation des conversions attribuées si le taux de conversion (pourcentage) des chemins menant à la conversion vers les chemins n’aboutissant pas à une conversion est élevé.
 
 ![Mesure Chemins touchés](./images/insights/Touchpoint-metrics.png)
 
-**Mesure** d’efficacité : Cette mesure affiche les étoiles sur une échelle de un à cinq. L’échelle indique l’importance relative d’un point de contact pour effectuer une conversion.
+**Mesure d&#39;efficacité**: Cette mesure affiche les étoiles sur une échelle de un à cinq. L’échelle indique l’importance relative d’un point de contact pour effectuer une conversion.
 
 >[!NOTE]
 Un volume de point de contact plus élevé ne garantit pas une mesure d’efficacité plus élevée.
 
-**Volume** total : Nombre agrégé de fois où un utilisateur a touché un point de contact. Cela inclut les points de contact qui apparaissent sur un chemin pour effectuer une conversion ainsi que les chemins qui n’entraînent pas de conversion.
+**Volume total**: Nombre agrégé de fois où un utilisateur a touché un point de contact. Cela inclut les points de contact qui apparaissent sur un chemin pour effectuer une conversion ainsi que les chemins qui n’entraînent pas de conversion.
 
 ## Étapes suivantes
 

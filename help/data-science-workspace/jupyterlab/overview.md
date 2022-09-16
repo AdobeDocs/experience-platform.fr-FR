@@ -18,7 +18,7 @@ ht-degree: 59%
 
 Ce document présente les [!DNL JupyterLab] et ses fonctionnalités, ainsi que des instructions pour exécuter des actions courantes.
 
-## [!DNL JupyterLab] à [!DNL Experience Platform]
+## [!DNL JupyterLab] sur [!DNL Experience Platform]
 
 L’intégration JupyterLab d’Experience Platform est accompagnée de modifications architecturales, de considérations de conception, d’extensions de notebooks personnalisées, de bibliothèques préinstallées et d’une interface sur le thème Adobe.
 
@@ -256,7 +256,7 @@ Pour en savoir plus sur chacun des notebooks pris en charge et sur leur utilisat
 
 Pour obtenir la liste des packages pris en charge en Python, R et PySpark, copiez et collez `!conda list` dans une nouvelle cellule, puis exécutez la cellule. Une liste des packages pris en charge est renseignée par ordre alphabétique.
 
-![example](../images/jupyterlab/user-guide/libraries.PNG)
+![exemple](../images/jupyterlab/user-guide/libraries.PNG)
 
 En outre, les dépendances suivantes sont utilisées, mais ne sont pas répertoriées :
 * CUDA 11.2

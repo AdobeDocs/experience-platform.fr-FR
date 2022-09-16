@@ -18,9 +18,9 @@ ht-degree: 5%
 >
 >L’apprentissage automatique en temps réel n’est pas encore disponible pour tous les utilisateurs. Cette fonctionnalité est en version alpha et est encore en cours de test. Ce document peut faire l’objet de modifications.
 
-L’apprentissage automatique en temps réel peut considérablement améliorer la pertinence de votre contenu d’expérience numérique pour vos utilisateurs finaux. Cela est possible en exploitant l’inférencement en temps réel et l’apprentissage continu sur [!DNL Experience Edge].
+L’apprentissage automatique en temps réel peut considérablement améliorer la pertinence de votre contenu d’expérience numérique pour vos utilisateurs finaux. Cela est rendu possible en tirant parti de l’infériorité en temps réel et de l’apprentissage continu sur la variable [!DNL Experience Edge].
 
-Une combinaison de calcul transparent sur le Hub et sur le [!DNL Edge] réduit considérablement la latence traditionnellement impliquée dans l’alimentation d’expériences hyper-personnalisées qui sont à la fois pertinentes et réactives. Par conséquent, l’apprentissage automatique en temps réel fournit des inférences avec une latence incroyablement faible pour la prise de décision synchrone. Par exemple, le rendu du contenu d’une page web personnalisée ou l’affichage d’une offre ou d’une remise pour réduire l’attrition et augmenter les conversions sur une boutique web.
+Combinaison de calcul transparent sur le Hub et la variable [!DNL Edge] réduit considérablement la latence traditionnellement impliquée dans l’alimentation d’expériences hyper-personnalisées qui sont à la fois pertinentes et réactives. Par conséquent, l’apprentissage automatique en temps réel fournit des inférences avec une latence incroyablement faible pour la prise de décision synchrone. Par exemple, le rendu du contenu d’une page web personnalisée ou l’affichage d’une offre ou d’une remise pour réduire l’attrition et augmenter les conversions sur une boutique web.
 
 ## Architecture d’apprentissage automatique en temps réel {#architecture}
 
@@ -36,7 +36,7 @@ Le workflow suivant décrit les étapes et les résultats typiques de la créati
 
 ### Ingestion et préparation des données
 
-Les données sont ingérées et transformées avec [!DNL Experience Data Model] (XDM) sur Adobe Experience Platform. Ces données sont utilisées pour la formation des modèles. Pour en savoir plus sur XDM, consultez la [présentation de XDM](../../xdm/home.md).
+Les données sont ingérées et transformées avec la variable [!DNL Experience Data Model] (XDM) sur Adobe Experience Platform. Ces données sont utilisées pour la formation des modèles. Pour en savoir plus sur XDM, consultez la [présentation de XDM](../../xdm/home.md).
 
 ### Création
 
@@ -44,7 +44,7 @@ Créez un modèle d’apprentissage automatique en temps réel à partir de zér
 
 ### Déploiement
 
-Déployez votre modèle sur [!DNL Experience Edge] pour créer un service d’apprentissage automatique en temps réel dans la [!UICONTROL Galerie de services] à l’aide du point de terminaison de l’API de prédiction.
+Déployez votre modèle sur [!DNL Experience Edge] Création d’un service d’apprentissage automatique en temps réel dans le [!UICONTROL Galerie de services] à l’aide du point de terminaison de l’API de prédiction.
 
 ### Inférence   
 
@@ -63,8 +63,8 @@ L’apprentissage automatique en temps réel est actuellement en version alpha. 
 > Limites Alpha :
 > - Actuellement, seuls les modèles basés sur ONNX sont pris en charge.
 > - Les fonctions utilisées dans les noeuds ne peuvent pas être sérialisées. Par exemple, une fonction lambda utilisée dans un noeud Pandas.
-> - Il y a 20 secondes de sommeil après le déploiement de [!DNL Edge] manuellement.
-> - Pour un apprentissage profond, vos données doivent être envoyées de manière à ce que, lorsque `df.values` est appelé, il renvoie un tableau acceptable par votre modèle DL. En effet, le noeud de notation du modèle ONNX utilise `df.values` et envoie la sortie pour noter le modèle.
+> - Il y a 20 secondes de sommeil après [!DNL Edge] Le déploiement est effectué manuellement.
+> - Pour un apprentissage profond, vos données doivent être envoyées de manière à ce que, lors de la `df.values` est appelée , elle renvoie un tableau acceptable par votre modèle DL. En effet, le noeud de notation de modèle ONNX utilise `df.values` et envoie la sortie à noter par rapport au modèle.
 
 
 
@@ -74,7 +74,7 @@ L’apprentissage automatique en temps réel est actuellement en version alpha. 
 | --- | --- |
 | **Fonctionnalités** | - Utilisation du modèle de notebook RTML, création, test et déploiement d’un modèle d’apprentissage automatique personnalisé. <br> - Prise en charge de l’importation de modèles d’apprentissage automatique pré-entraînés. <br> - SDK d’apprentissage automatique en temps réel. <br> - Ensemble de noeuds de création de départ. <br> - Déployé sur Adobe Experience Platform Hub. |
 | **Disponibilité** | Amérique du Nord |
-| **Noeuds de création** | - Pandas <br> - ScikitLearn <br> - ONNXNode <br> - Split <br> - ModelUpload <br> - OneHotEncoder |
+| **Noeuds de création** | - Pandas <br> - ScikitLearn <br> - ONNXNode <br> - Partage <br> - ModelUpload <br> - OneHotEncoder |
 | **Temps d’exécution de notation** | ONNX |
 
 ## Étapes suivantes

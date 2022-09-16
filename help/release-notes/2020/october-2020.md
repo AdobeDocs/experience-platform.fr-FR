@@ -22,7 +22,7 @@ ht-degree: 25%
 - [Sources](#sources)
 - [Temps jusqu’à la valeur](#time-to-value)
 
-## Préparation de données {#data-prep}
+## Préparation des données {#data-prep}
 
 La préparation des données permet aux ingénieurs de données de mapper, transformer et valider les données vers et à partir du modèle de données d’expérience (XDM).
 
@@ -35,7 +35,7 @@ La préparation des données permet aux ingénieurs de données de mapper, trans
 
 Pour plus d’informations, veuillez lire la [Aperçu de la préparation des données](../../data-prep/home.md).
 
-## Real-time Customer Profile {#profile}
+## Profil client en temps réel {#profile}
 
 Adobe Experience Platform vous permet d’offrir aux clients des expériences coordonnées, cohérentes et pertinentes, quel que soit l’endroit ou le moment où ils interagissent avec votre marque. Avec [!DNL Real-time Customer Profile], vous pouvez obtenir une vue d’ensemble de chaque client qui combine des données provenant de plusieurs canaux, notamment des données en ligne, hors ligne, CRM et tierces. [!DNL Profile] vous permet de consolider vos données client disparates en une vue unifiée offrant un compte horodaté et exploitable de chaque interaction client.
 

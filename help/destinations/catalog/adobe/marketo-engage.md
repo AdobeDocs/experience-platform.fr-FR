@@ -5,7 +5,7 @@ exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
 source-git-commit: 6dc4a93b46d6111637e0024da574d605e0d2b986
 workflow-type: tm+mt
 source-wordcount: '740'
-ht-degree: 11%
+ht-degree: 21%
 
 ---
 
@@ -24,8 +24,8 @@ ht-degree: 11%
 
 Les améliorations apportées à la destination Marketo V2 sont les suivantes :
 
-* Dans le **[!UICONTROL Planification du segment]** dans Marketo V1, vous devez ajouter manuellement une **ID de mappage** pour exporter des données vers Marketo. Cette étape manuelle n’est plus requise dans Marketo V2.
-* Dans le **[!UICONTROL Mappage]** au cours de l’étape du processus d’activation, dans Marketo V1, vous avez pu mapper les champs XDM à seulement trois champs cibles dans Marketo : `firstName`, `lastName`, et `companyName`. Avec la version Marketo V2, vous pouvez désormais mapper des champs XDM à de nombreux autres champs dans Marketo. Pour plus d’informations, reportez-vous à la section [attributs pris en charge](#supported-attributes) voir la section ci-dessous.
+* Dans Marketo V1, à l’étape de **[!UICONTROL Planification de segment]** du processus d’activation, il vous fallait ajouter manuellement un **ID de mappage** pour exporter des données vers Marketo. Cette étape manuelle n’est plus obligatoire dans Marketo V2.
+* Dans Marketo V1, à l’étape de **[!UICONTROL Mappage]** du processus d’activation, vous ne pouviez mapper les champs XDM qu’à trois champs cibles dans Marketo : `firstName`, `lastName` et `companyName`. Avec la version Marketo V2, vous pouvez désormais mapper des champs XDM à de nombreux autres champs dans Marketo. Pour plus d’informations, reportez-vous à la section [attributs pris en charge](#supported-attributes) voir la section ci-dessous.
 
 ## Présentation {#overview}
 
@@ -44,7 +44,7 @@ La Destination   permet aux marketeurs de pousser les segments créés dans Adob
 | Identité cible | Description |
 |---|---|
 | ECID | Espace de noms qui représente l’ECID. Cet espace de noms peut également être référencé par les alias suivants : &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Consultez le document suivant sur [ECID](/help/identity-service/ecid.md) pour plus d’informations. |
-| Adresse e-mail | Espace de noms représentant une adresse électronique. Ce type d’espace de noms est souvent associé à une seule personne et peut donc être utilisé pour identifier cette personne sur différents canaux. |
+| E-mail | Espace de noms représentant une adresse électronique. Ce type d’espace de noms est souvent associé à une seule personne et peut donc être utilisé pour identifier cette personne sur différents canaux. |
 
 {style=&quot;table-layout:auto&quot;}
 

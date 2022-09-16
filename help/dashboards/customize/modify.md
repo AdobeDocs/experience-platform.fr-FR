@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform;interface utilisateur;UI;tableaux de bord;tableau de bord;profils;segments;destinations;utilisation des licences
+keywords: Experience Platform;interface utilisateur;UI;tableaux de bord;tableau de bord;profils;segments;destinations;utilisation des licences
 title: Modification des tableaux de bord Platform dans l’interface utilisateur
-description: 'Ce guide fournit des instructions détaillées pour personnaliser l’affichage des données Adobe Experience Platform de votre organisation dans les tableaux de bord. '
+description: Ce guide fournit des instructions détaillées pour personnaliser l’affichage des données Adobe Experience Platform de votre organisation dans les tableaux de bord.
 exl-id: 75e4aea7-b521-434d-9cd5-32a00d00550d
 source-git-commit: be2c38f37dd288f5035f1688be9d56abc2cd31a7
 workflow-type: tm+mt
@@ -12,7 +12,7 @@ ht-degree: 100%
 
 # Modification des tableaux de bord {#modify-dashboards}
 
-L’interface utilisateur (IU) d’Adobe Experience Platform vous permet d’afficher les données de votre organisation et d’interagir avec elles à l’aide de plusieurs tableaux de bord. Les widgets et mesures par défaut affichés dans les tableaux de bord peuvent être ajustés au niveau de chaque utilisateur afin d’afficher les données préférées. Les widgets peuvent également être créés et partagés entre les utilisateurs d’une même organisation.
+L’interface utilisateur (IU) d’Adobe Experience Platform vous permet d’afficher les données de votre organisation et d’interagir avec elles à l’aide de plusieurs tableaux de bord. Les widgets et mesures par défaut affichés dans les tableaux de bord peuvent être ajustés au niveau de chaque utilisateur afin d’afficher les données préférées. Les widgets peuvent également être créés et partagés entre les utilisateurs d’une même organisation.
 
 Ce guide fournit des instructions détaillées pour personnaliser l’affichage des données dans les tableaux de bord [!UICONTROL Profils], [!UICONTROL Segments] et [!UICONTROL Destinations] dans l’interface utilisateur de Platform.
 

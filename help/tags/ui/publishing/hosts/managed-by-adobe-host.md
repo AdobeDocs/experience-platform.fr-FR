@@ -1,6 +1,6 @@
 ---
 title: Présentation des hôtes gérés par Adobe
-description: Découvrez l’option d’hébergement par défaut pour le déploiement des versions de bibliothèque de balises dans Adobe Experience Platform.
+description: Découvrez l’option d’hébergement par défaut pour le déploiement des versions de bibliothèques de balises dans Adobe Experience Platform.
 exl-id: 9042c313-b0d3-4f6e-963d-0051d760fd16
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
@@ -13,9 +13,9 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
-Les hôtes gérés par Adobe sont le paramètre d’hôte par défaut pour le déploiement des versions de bibliothèque de balises dans Adobe Experience Platform  Lorsque vous créez une propriété dans l’interface utilisateur de la collecte de données, un hôte géré par Adobe par défaut est créé pour vous.
+Les hôtes gérés par Adobe sont le paramètre d’hôte par défaut pour le déploiement des versions de bibliothèques de balises dans Adobe Experience Platform. Lorsque vous créez une propriété dans l’interface utilisateur de la collecte de données, un hôte géré par Adobe par défaut est créé pour vous.
 
 Avec les hôtes gérés par Adobe, les versions de bibliothèque sont diffusées à un réseau de diffusion de contenu (CDN) tiers avec lequel Adobe a conclu un contrat. Ces réseaux de diffusion de contenu fonctionnent indépendamment d’Adobe. Ainsi, même lorsque Platform est en cours de maintenance ou est hors service, votre code déployé continuera à fonctionner normalement sur vos sites et applications. Le code incorporé pour un hôte géré par Adobe indique l’emplacement du fichier de bibliothèque principal sur le réseau de diffusion de contenu afin qu’un appareil client puisse récupérer les fichiers au moment de l’exécution.
 
@@ -98,12 +98,13 @@ Lorsque vous créez une propriété pour la première fois dans l’[interface u
 >
 >1. Sélectionnez l’onglet **[!UICONTROL Hôtes]** sur votre propriété, puis cliquez sur **[!UICONTROL Ajouter l’hôte]**.
 >1. Attribuez un nom à l’hôte, sélectionnez **[!UICONTROL Géré par Adobe]** comme type d’hôte, puis cliquez sur **[!UICONTROL Enregistrer]**.
+
 >
 >Vous pouvez ensuite réaffecter vos environnements à l’hôte géré par Adobe selon vos besoins.
 
 ## Étapes suivantes
 
-Ce document fournit un aperçu de l’hébergement géré par Adobe pour les bibliothèques de balises dans Adobe Experience Platform. Pour plus d’informations sur les autres options d’hébergement, consultez la documentation suivante :
+Ce document fournit un aperçu de l’hébergement géré par Adobe pour les bibliothèques de balises dans Adobe Experience Platform. Pour plus d’informations sur les autres options d’hébergement, consultez la documentation suivante :
 
 * [Hébergement SFTP](./sftp-host.md)
 * [Bibliothèques auto-hébergées](./self-hosting-libraries.md)

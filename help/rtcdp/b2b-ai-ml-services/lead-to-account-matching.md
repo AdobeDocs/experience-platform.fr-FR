@@ -2,13 +2,13 @@
 title: Conduire à la correspondance de comptes dans la plateforme CDP B2B en temps réel
 type: Documentation
 description: Présentation et informations supplémentaires sur la fonctionnalité de correspondance de comptes dans la plateforme CDP B2B Experience Platform.
-source-git-commit: 827bd1b930478c3c0b553a9485f98545771a9062
+exl-id: 2f853599-6bca-4ba6-bbba-131a49d8854e
+source-git-commit: 0b140e767dec0e703b3ab9c75b7a23c797804c66
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '616'
+ht-degree: 6%
 
 ---
-
 
 # Conduire à la correspondance de comptes dans la plateforme CDP B2B en temps réel
 
@@ -32,7 +32,7 @@ Le marketing basé sur les comptes permet de lier des personnes connues et des v
 - Titre de la tâche
 - Emplacement
 
-La mise en correspondance des pistes et des comptes permet de joindre des profils de personnes connus à des profils de compte. Vous pouvez ensuite segmenter et cibler des données dans un contexte B2B tel que des comptes, des opportunités, etc. Les profils de personnes peuvent être classés dans les trois catégories suivantes :
+La correspondance des prospects et des comptes permet d’associer des profils de personnes connus à des profils de compte. Vous pouvez ensuite segmenter et cibler des données dans un contexte B2B tel que des comptes, des opportunités, etc. Les profils de personnes peuvent être classés dans les trois catégories suivantes :
 
 - **Profil du gestionnaire de compte :** Le profil de la personne est déjà associé à au moins un profil de compte par le biais de la relation à partir d’une source de données. Cela signifie qu’il existe au moins un fragment de contact.
 

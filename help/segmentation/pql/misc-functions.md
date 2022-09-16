@@ -14,7 +14,7 @@ ht-degree: 68%
 
 # Fonctions diverses
 
-La fonction suivante est une fonction diverse pour [!DNL Profile Query Language] (PQL). Vous trouverez plus d’informations sur les autres fonctions PQL dans la [[!DNL Profile Query Language] présentation](./overview.md).
+La fonction suivante est une fonction diverse pour [!DNL Profile Query Language] (PQL). Vous trouverez plus d’informations sur les autres fonctions PQL dans la section [[!DNL Profile Query Language] aperçu](./overview.md).
 
 ## Let
 

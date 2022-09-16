@@ -1,6 +1,6 @@
 ---
 title: Présentation de l’extension de suivi vidéo BrightCove
-description: Découvrez l’extension de balise de suivi de vidéo BrightCove dans Adobe Experience Platform.
+description: Découvrez lʼextension de balise de suivi vidéo BrightCove dans Adobe Experience Platform.
 exl-id: d27eff21-2abf-4495-8382-08cab32742e0
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
@@ -13,14 +13,14 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 ## Prérequis
 
 Pour chaque propriété de balise Adobe Experience Platform, les extensions suivantes doivent être installées et configurées dans l’écran Extension :
 
-* Adobe Analytics
-* Service d’identification des visiteurs Experience Cloud
+* Adobe Analytics
+*  du service d’identification des visiteurs Experience Cloud
 * Extensions Core installées
 
 Utilisez le fragment de code « Code incorporé sur la page (avancé) » dans le code HTML de chaque page web sur laquelle un lecteur vidéo doit apparaître. Le fragment de code HTML « Code incorporé sur la page (avancé) » se trouve dans la [documentation Brightcove](https://studio.support.brightcove.com/publish/choosing-correct-embed-code.html#inpage). Le lien suivant fournit des informations supplémentaires sur [la manière de générer du code incorporé pour les lecteurs vidéo d’aperçu et de vidéos publiées](https://fr.studio.support.brightcove.com/players/generating-player-embed-code.html).
@@ -39,7 +39,7 @@ Voir la [documentation de l’API BrightCove](https://docs.brightcove.com/bright
 
 L’extension contient sept éléments de données. Aucun ne nécessite d’être configuré.
 
-* **Position de la tête de lecture :** lorsque cet élément de données est appelé dans une règle de balise, il enregistre en secondes la position de la tête de lecture sur le montage vidéo.
+* **Position de la tête de lecture :** lorsque cet élément de données est appelé dans une règle de balise, il enregistre en secondes la position de la tête de lecture sur le montage vidéo.
 * **Identifiant du compte de la vidéo :** cet élément de données enregistre l’identifiant du compte Brightcove qui a publié la vidéo.
 * **Durée de la vidéo :** cet élément de données enregistre la durée totale, en secondes, du contenu vidéo. De plus, une mesure calculée peut être créée dans Analytics pour convertir cette valeur en minutes ou en heures.
 * **Prise en charge des publicités vidéo :** cet élément de données indique si les publicités sont prises en charge dans la vidéo.
@@ -58,7 +58,7 @@ L’extension comprend sept événements et seul le suivi personnalisé par poin
 >Veuillez noter que cet événement se déclenche à chaque fois que ce point de repère est atteint. Par exemple, si l’utilisateur atteint le repère des 50 %, retourne à un point antérieur de la vidéo, puis atteint à nouveau le repère, l’événement se déclenche à nouveau.
 
 * **Vidéo terminée :** cet événement se déclenche lorsqu’une vidéo est entièrement terminée.
-* **Métadonnées de vidéo chargées :** cet événement est déclenché lorsque le lecteur a reçu les informations initiales de durée et de dimension.
+* **Métadonnées de vidéo chargées :** cet événement est déclenché lorsque le lecteur a reçu les informations initiales de durée et de dimension.
 * **Vidéo mise en pause :** cet événement se déclenche lorsque la vidéo est mise en pause.
 * **Vidéo reprise :** cet événement se déclenche lorsque la vidéo reprend après avoir été mise en pause.
 * **Modification de l’affichage vidéo :** cet événement se déclenche lorsque la vidéo passe en mode Plein écran et le quitte.

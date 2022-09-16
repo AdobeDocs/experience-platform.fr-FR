@@ -4,13 +4,13 @@ description: Adobe Experience Platform Identity Service vous offre la possibil
 title: Surveillance des flux de données pour les identités dans l’interface utilisateur
 topic-legacy: overview
 type: Tutorial
-source-git-commit: 3018ee005c96e3905ae8dab24cca901cf48847ea
+exl-id: 735b0e52-74f6-47fe-98c6-e12a633b6f57
+source-git-commit: cfbc977efd09bba0927bf8b03147e40671eb362e
 workflow-type: tm+mt
 source-wordcount: '1149'
-ht-degree: 13%
+ht-degree: 14%
 
 ---
-
 
 # Surveillance des flux de données pour les identités dans l’interface utilisateur
 
@@ -107,7 +107,7 @@ Les mesures suivantes sont disponibles pour cette vue de tableau de bord :
 | **[!UICONTROL Identités ajoutées]** | Nombre de nouveaux identifiants nets ajoutés à [!DNL Identity Service]. |
 | **[!UICONTROL Graphiques créés]** | Nombre de nouveaux graphiques d’identités nets créés dans [!DNL Identity Service]. |
 | **[!UICONTROL Graphiques mis à jour]** | Nombre de graphiques d’identités existants mis à jour avec de nouvelles périphéries. |
-| **[!UICONTROL État]** | Définit l’état global d’un flux de données. Les valeurs d’état possibles sont les suivantes : <ul><li>`Success`: Indique qu’un flux de données est principal et ingère des données selon le planning selon lequel il a été fourni.</li><li>`Failed`: Indique que le processus d’activation d’un flux de données a été interrompu en raison d’erreurs. </li><li>`Processing`: Indique que le flux de données n’est pas encore principal. Cet état est souvent rencontré immédiatement après la création d’un nouveau flux de données.</li></ul> |
+| **[!UICONTROL Statut]** | Définit l’état global d’un flux de données. Les valeurs d’état possibles sont les suivantes : <ul><li>`Success`: Indique qu’un flux de données est principal et ingère des données selon le planning selon lequel il a été fourni.</li><li>`Failed`: Indique que le processus d’activation d’un flux de données a été interrompu en raison d’erreurs. </li><li>`Processing`: Indique que le flux de données n’est pas encore principal. Cet état est souvent rencontré immédiatement après la création d’un nouveau flux de données.</li></ul> |
 | **[!UICONTROL Démarrage de l’exécution du flux de données]** | Date et heure auxquelles le flux de données a commencé à s’exécuter. |
 | **[!UICONTROL Dernière mise à jour]** | Date et heure de la dernière mise à jour du flux de données. |
 | **[!UICONTROL Synthèse des erreurs]** | Si l’exécution du flux de données a échoué, un code d’erreur s’affiche et un résumé des raisons de l’échec de l’exécution du flux de données. |

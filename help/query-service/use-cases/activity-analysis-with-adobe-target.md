@@ -1,7 +1,8 @@
 ---
 title: Analyse des activités avec Adobe Target
 description: Ce document explique comment utiliser Query Service pour créer des informations exploitables à partir de jeux de données créés avec vos données Adobe Target.
-source-git-commit: 870626f25b1aabdcb5739bbb1ab85bdad44df195
+exl-id: a5181ee2-1e1c-405d-8dfe-5a32c28ac9f1
+source-git-commit: d573c01a0aa9989f581796a0be4aec6904ffc569
 workflow-type: tm+mt
 source-wordcount: '485'
 ht-degree: 12%

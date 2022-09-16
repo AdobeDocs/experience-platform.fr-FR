@@ -1,6 +1,6 @@
 ---
 title: Types de conditions pour les extensions Edge
-description: Découvrez comment définir un module de bibliothèque relatif aux types de conditions pour une extension Edge dans Adobe Experience Platform.
+description: Découvrez comment définir un module de bibliothèque relatif aux types de conditions pour une extension Edge dans Adobe Experience Platform.
 exl-id: fe13420e-ffa7-49d6-92c4-965ebd9d7390
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
@@ -13,13 +13,13 @@ ht-degree: 100%
 
 >[!NOTE]
 >
-> Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+> Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 Dans une règle de balise, une condition est évaluée suite à l’apparition d’un événement. Toutes les conditions doivent renvoyer la valeur vraie pour que la règle continue son traitement. Les types de conditions sont fournis par les extensions et évaluent si un élément est vrai ou faux, renvoyant une valeur booléenne.
 
 Par exemple, une extension peut fournir un type de condition « viewport contains » dans lequel l’utilisateur peut spécifier un sélecteur CSS. Lorsque la condition est évaluée sur le site web du client, l’extension peut trouver des éléments correspondant au sélecteur CSS et renvoyer si la fenêtre d’affichage de l’utilisateur contient l’un d’entre eux.
 
-Ce document explique comment définir des types de conditions pour une extension Edge dans Adobe Experience Platform.
+Ce document explique comment définir des types de conditions pour une extension Edge dans Adobe Experience Platform.
 
 >[!IMPORTANT]
 >

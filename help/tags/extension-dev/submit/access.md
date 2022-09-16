@@ -1,6 +1,6 @@
 ---
 title: Octroyer un accès utilisateur
-description: Configurez les comptes utilisateur et les autorisations de balises des membres de votre équipe dans Adobe Experience Platform.
+description: Configurez les comptes utilisateur et les autorisations de balises des membres de votre équipe dans Adobe Experience Platform.
 exl-id: c7235e50-13b3-4487-b171-873063875621
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
@@ -13,11 +13,11 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 Avant de commencer à utiliser extension_package, vous devez configurer des comptes d’utilisateur et des autorisations pour les membres de votre équipe. Vous pouvez le faire avec [Adobe Admin Console](https://adminconsole.adobe.com/).
 
-Ce document décrit les étapes pour accorder l’accès aux balises dans Adobe Experience Platform par l’intermédiaire d’Admin Console.
+Ce document décrit les étapes pour accorder l’accès aux balises dans Adobe Experience Platform par l’intermédiaire d’Admin Console.
 
 ## Conditions préalables
 
@@ -28,7 +28,7 @@ Ce guide suppose que vous êtes un administrateur d’organisation tel qu’éta
 
 ## Choix de votre organisation
 
-Votre administrateur d’organisation Adobe Experience Cloud doit se connecter à [Admin Console](https://adminconsole.adobe.com/). Le premier écran montre la vue d’ensemble.
+Votre administrateur d’organisation Adobe Experience Cloud doit se connecter à [Admin Console](https://adminconsole.adobe.com/). Le premier écran montre la vue d’ensemble.
 
 ![Onglet de présentation d’Admin Console](../images/getting-started/admin-console-overview.png)
 
@@ -40,7 +40,7 @@ Certains d’entre vous peuvent avoir accès à plusieurs organisations (Org). P
 
 Un profil de produit est un groupe. Les droits individuels sont attribués aux profils de produits et tous les utilisateurs du profil hériteront de ces droits.
 
-Cliquez sur le lien **[!UICONTROL Produits]** en haut de l’écran, puis sur **[!UICONTROL Experience Cloud]** sur la gauche. Si lʼinterface utilisateur de la collecte de données nʼest pas répertoriée, les clients doivent contacter leur équipe de compte, et les partenaires doivent envoyer un e-mail à <ExchangeTechEC@adobe.com>.
+Cliquez sur le lien **[!UICONTROL Produits]** en haut de l’écran, puis sur **[!UICONTROL Experience Cloud]** à gauche. Si lʼinterface utilisateur de la collecte de données nʼest pas répertoriée, les clients doivent contacter leur équipe de compte, et les partenaires doivent envoyer un e-mail à <ExchangeTechEC@adobe.com>.
 
 ![Onglet Produits d’Admin Console](../images/getting-started/admin-console-products-launch.png)
 
@@ -56,11 +56,11 @@ Veuillez noter que le profil de produit affiche zéro pour les **UTILISATEURS AU
 
 ![Affichage des profils de produit](../images/getting-started/admin-console-profiles-add-user.png)
 
-Sélectionnez l’onglet **[!UICONTROL Utilisateurs]**. Vous pouvez y rechercher des utilisateurs Adobe ID existants par adresse e-mail ou en ajouter de nouveaux en tant qu’utilisateurs de ce profil de produit. Sélectionnez **[!UICONTROL Ajouter un lien utilisateur]**.
+Sélectionnez l’onglet **[!UICONTROL Utilisateurs]**. Vous pouvez y rechercher des utilisateurs Adobe ID existants par adresse e-mail ou en ajouter de nouveaux en tant qu’utilisateurs de ce profil de produit. Sélectionnez **[!UICONTROL Ajouter un lien utilisateur]**.
 
 ![Onglet Utilisateurs de profils de produit](../images/getting-started/admin-console-add-launch-user.png)
 
-Entrez un nom, un groupe d’utilisateurs ou une adresse électronique dans le champ de texte approprié. Dans la mesure du possible, il est recommandé d’inclure un prénom et un nom. Sélectionnez **[!UICONTROL Enregistrer]** pour ajouter l’utilisateur.
+Saisissez un nom, un groupe d’utilisateurs ou une adresse e-mail dans le champ de texte approprié. Dans la mesure du possible, il est recommandé d’inclure un prénom et un nom. Sélectionnez **[!UICONTROL Enregistrer]** pour ajouter l’utilisateur.
 
 ![Ajout d’un utilisateur à l’affichage Profil](../images/getting-started/admin-console-add-user.png)
 
@@ -68,7 +68,7 @@ Lorsque vous aurez tous les utilisateurs dont vous avez besoin dans ce profil de
 
 ![Onglet Autorisations des profils de produit](../images/getting-started/admin-console-profile-permissions.png)
 
-Pour créer des extensions, votre équipe doit disposer au minimum des autorisations suivantes :
+Pour créer des extensions, votre équipe doit disposer au minimum des autorisations suivantes :
 
 * « Gérer les propriétés » à partir du groupe d’entreprise.
 * « Gérer les extensions », « Gérer les environnements » et « Développer » à partir du groupe de propriétés.

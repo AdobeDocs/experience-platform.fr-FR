@@ -6,13 +6,13 @@ exl-id: 06f9ee37-9879-4db2-af68-9336366f7521
 source-git-commit: afbbdfff4346ab5240927f5703d3a06676776ea8
 workflow-type: tm+mt
 source-wordcount: '337'
-ht-degree: 6%
+ht-degree: 8%
 
 ---
 
-# [!UICONTROL Groupe de champs ] Détails de la réservation
+# [!UICONTROL Détails de la réservation] groupe de champs de schéma
 
-[!UICONTROL Réservation ] Détail d’un groupe de champs de schéma standard pour la  [[!DNL XDM ExperienceEvent] ](../../classes/experienceevent.md) classe afin de capturer des informations concernant une réservation, notamment la longueur, la modification, le statut remboursable et le nombre de pièces.
+[!UICONTROL Détails de la réservation] est un groupe de champs de schéma standard pour la variable [[!DNL XDM ExperienceEvent] class](../../classes/experienceevent.md) utilisé pour capturer des informations concernant une réservation, notamment la longueur, la modification, le statut remboursable et le nombre de pièces.
 
 Le groupe de champs fournit un champ de type objet unique, `reservations`. Les propriétés contenues dans cet objet sont expliquées ci-dessous.
 
@@ -23,16 +23,16 @@ Le groupe de champs fournit un champ de type objet unique, `reservations`. Les p
 | `nonRefundableAmount` | [Devise](../../data-types/currency.md) | Montant du prix de réservation qui est marqué comme non remboursable. |
 | `transaction` | [Transaction](../../data-types/transaction.md) | Décrit la transaction de devise pour la réservation. |
 | `id` | Chaîne | Identifiant unique de la réservation. |
-| `cancellation` | Entier | Cette valeur est capturée lorsqu’une réservation a été annulée. |
+| `cancellation` | Nombre entier | Cette valeur est capturée lorsqu’une réservation a été annulée. |
 | `confirmationNumber` | Chaîne | Numéro ou identifiant de confirmation de la réservation. |
-| `created` | Entier | Cette valeur est capturée lorsque la réservation a été créée. |
+| `created` | Nombre entier | Cette valeur est capturée lorsque la réservation a été créée. |
 | `currencyCode` | Chaîne | Code de devise ISO 4217 utilisé pour effectuer l’achat. |
 | `endDate` | DateTime | Date de fin d’abandon, de retour ou d’extraction pour la réservation. |
-| `length` | Entier | Nombre total de jours pour la réservation. |
-| `modification` | Entier | Cette valeur est capturée lorsqu’une réservation a été modifiée. |
+| `length` | Nombre entier | Nombre total de jours pour la réservation. |
+| `modification` | Nombre entier | Cette valeur est capturée lorsqu’une réservation a été modifiée. |
 | `modificationDate` | DateTime | Heure à laquelle la réservation a été modifiée pour la dernière fois. |
-| `numberOfAdults` | Entier | Nombre d’adultes associés à la réservation. |
-| `numberOfChildren` | Entier | Nombre d’enfants associés à la réservation. |
+| `numberOfAdults` | Nombre entier | Nombre d’adultes associés à la réservation. |
+| `numberOfChildren` | Nombre entier | Nombre d’enfants associés à la réservation. |
 | `purpose` | Chaîne | L’objet de la réservation, généralement professionnel ou personnel. |
 | `startDate` | DateTime | Date de démarrage, de sortie ou d’archivage de la réservation. |
 | `triptype` | Chaîne | Indique si la réservation est pour un aller simple, un aller-retour ou un voyage dans plusieurs villes. |
@@ -46,8 +46,8 @@ Pour plus d’informations sur le groupe de champs, reportez-vous au référenti
 
 ## Groupes de champs de réservation spécifiques au secteur
 
-Il existe plusieurs autres groupes de champs standard qui étendent le schéma [!UICONTROL Détails de la réservation] pour les cas d’utilisation spécifiques au secteur. Pour plus d’informations, consultez la documentation suivante :
+Il existe plusieurs autres groupes de champs standard qui étendent la variable [!UICONTROL Détails de la réservation] schéma pour les cas d’utilisation spécifiques au secteur. Pour plus d’informations, consultez la documentation suivante :
 
-* [[!UICONTROL Définition de la réservation]](./dining-reservation.md)
-* [[!UICONTROL Réservation en vol]](./flight-reservation.md)
-* [[!UICONTROL Réservation logement]](./lodging-reservation.md)
+* [[!UICONTROL Réservation de restaurant]](./dining-reservation.md)
+* [[!UICONTROL Réservation de vol]](./flight-reservation.md)
+* [[!UICONTROL Réservation de logement]](./lodging-reservation.md)

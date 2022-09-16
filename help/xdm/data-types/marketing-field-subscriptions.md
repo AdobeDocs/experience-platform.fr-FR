@@ -7,7 +7,7 @@ exl-id: 170ea6ca-77fc-4b0a-87f9-6d4b6f32d953
 source-git-commit: bccf97d85421fcb2f8fe153ad0ddbef4975b6f7e
 workflow-type: tm+mt
 source-wordcount: '900'
-ht-degree: 2%
+ht-degree: 4%
 
 ---
 
@@ -104,7 +104,7 @@ Le fichier JSON suivant représente un exemple de champ marketing pour un canal 
 
 ## Ressources supplémentaires
 
-Pour plus d’informations sur le type de données, reportez-vous au référentiel XDM public :
+Pour obtenir plus d’informations sur ce type de données, reportez-vous au référentiel XDM public:
 
 * [Exemple rempli](https://github.com/adobe/xdm/blob/master/components/datatypes/consent/marketing-field-basic.example.1.json)
 * [Schéma complet](https://github.com/adobe/xdm/blob/master/components/datatypes/consent/marketing-field-basic.schema.json)

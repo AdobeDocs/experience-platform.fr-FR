@@ -12,24 +12,24 @@ ht-degree: 18%
 
 ---
 
-#  Type de devicedata
+# [!UICONTROL Appareil] type de données
 
- Les appareils sont un type de données XDM standard qui décrit un appareil identifié. Un périphérique est une instance d’application ou de navigateur qui peut faire l’objet d’un suivi entre plusieurs sessions, généralement par des cookies.
+[!UICONTROL Appareil] est un type de données XDM standard qui décrit un appareil identifié. Un périphérique est une instance d’application ou de navigateur qui peut faire l’objet d’un suivi entre plusieurs sessions, généralement par des cookies.
 
 <img src="../images/data-types/device.png" width="450" /><br />
 
 | Propriété | Type de données | Description |
 | --- | --- | --- |
-| `colorDepth` | Entier | Nombre de couleurs que l’affichage peut représenter. |
+| `colorDepth` | Nombre entier | Nombre de couleurs que l’affichage peut représenter. |
 | `manufacturer` | Chaîne | Nom de l’organisation propriétaire de la conception et de la création de l’appareil. |
 | `model` | Chaîne | Nom du modèle de l’appareil. Il s’agit du nom courant, lisible par l’utilisateur ou du nom marketing de l’appareil. Par exemple, &quot;iPhone 6S&quot; est un modèle particulier de téléphone mobile. |
 | `modelNumber` | Chaîne | Numéro de modèle unique attribué par le fabricant pour cet appareil. Les numéros de modèle ne sont pas des versions, mais des identifiants uniques qui désignent une configuration de modèle particulière. |
-| `screenHeight` | Entier | Nombre de pixels verticaux de l’affichage principal de l’appareil dans l’orientation par défaut. |
-| `screenOrientation` | Chaîne | Orientation de l’écran actuelle. Les valeurs acceptées sont `portrait` et `landscape`. |
+| `screenHeight` | Nombre entier | Nombre de pixels verticaux de l’affichage principal de l’appareil dans l’orientation par défaut. |
+| `screenOrientation` | Chaîne | Orientation de l’écran actuelle. Les valeurs acceptées sont les suivantes : `portrait` et `landscape`. |
 | `screenWidth` | Chaîne | Nombre de pixels horizontaux de l’affichage principal de l’appareil dans l’orientation par défaut. |
 | `type` | Chaîne | Type d’appareil suivi. Les valeurs acceptées sont les suivantes : <ul><li>`mobile`</li><li>`tablet`</li><li>`desktop`</li><li>`ereader`</li><li>`gaming`</li><li>`television`</li><li>`settop`</li><li>`mediaplayer`</li><li>`computers`</li><li>`tv screens`</li></ul> |
 | `typeID` | Chaîne | Identifiant de l’appareil. Il peut s’agir d’un identifiant de DeviceAtlas ou d’un autre service qui identifie le matériel utilisé. |
-| `typeIDService` | Chaîne | Espace de noms du service utilisé pour identifier le type d’appareil. Pour plus d’informations sur les valeurs acceptées, reportez-vous à l’ [annexe](#typeIDService) . |
+| `typeIDService` | Chaîne | Espace de noms du service utilisé pour identifier le type d’appareil. Voir [annexe](#typeIDService) pour plus d’informations sur les valeurs acceptées. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -40,7 +40,7 @@ Pour plus d’informations sur le groupe de champs, reportez-vous au référenti
 
 ## Annexe
 
-La section suivante contient des informations supplémentaires sur le type de données [!UICONTROL Appareil].
+La section suivante contient des informations supplémentaires sur la variable [!UICONTROL Appareil] type de données.
 
 ## Valeurs acceptées pour typeIDService {#typeIDService}
 

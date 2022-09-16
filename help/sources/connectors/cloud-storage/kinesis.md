@@ -8,15 +8,15 @@ exl-id: b71fc922-7722-4279-8fc6-e5d7735e1ebb
 source-git-commit: 5f4355a9d3ef39ee63581fc70dbf0f6e7d674814
 workflow-type: tm+mt
 source-wordcount: '491'
-ht-degree: 1%
+ht-degree: 19%
 
 ---
 
-# [!DNL Amazon Kinesis] connector
+# Connecteur [!DNL Amazon Kinesis]
 
 Adobe Experience Platform fournit une connectivité native pour les fournisseurs cloud tels qu’AWS, [!DNL Google Cloud Platform], et [!DNL Azure]. Vous pouvez importer vos données de ces systèmes dans [!DNL Platform].
 
-Les sources de stockage dans le cloud peuvent importer vos propres données dans [!DNL Platform] sans avoir à télécharger, mettre en forme ou charger. Les données ingérées peuvent être formatées sous la forme XDM JSON, XDM Parquet ou délimitées. Chaque étape du processus est intégrée dans le workflow Sources . [!DNL Platform] vous permet d’importer des données depuis [!DNL Amazon Kinesis] en temps réel.
+Les sources de stockage dans le cloud peuvent introduire vos propres données dans [!DNL Platform] sans avoir à les télécharger, les formater ou les transférer. Les données ingérées peuvent être formatées sous la forme XDM JSON, XDM Parquet ou délimitées. Chaque étape du processus est intégrée dans le processus Sources. [!DNL Platform] vous permet d’importer des données depuis [!DNL Amazon Kinesis] en temps réel.
 
 >[!NOTE]
 >
@@ -86,14 +86,14 @@ Pour plus d’informations sur les types d’itérateur, voir : [[!DNL Kinesis] 
 
 ## Connexion [!DNL Amazon Kinesis] to [!DNL Platform]
 
-La documentation ci-dessous fournit des informations sur la connexion. [!DNL Amazon Kinesis] to [!DNL Platform] à l’aide des API ou de l’interface utilisateur :
+La documentation ci-dessous fournit des informations sur la connexion de [!DNL Amazon Kinesis] à à l’aide d’API ou de l’interface utilisateur :[!DNL Platform]
 
-### Utilisation des API
+### Utiliser les API
 
 - [Création d’une connexion source Kinesis Amazon à l’aide de l’API Flow Service](../../tutorials/api/create/cloud-storage/kinesis.md)
-- [Collecte de données en continu à l’aide de l’API Flow Service](../../tutorials/api/collect/streaming.md)
+- [Collecter des données en continu à l’aide de l’API Flow Service](../../tutorials/api/collect/streaming.md)
 
-### Utilisation de l’interface utilisateur
+### Utiliser l’interface utilisateur
 
 - [Création d’une connexion source Amazon Kinesis dans l’interface utilisateur](../../tutorials/ui/create/cloud-storage/kinesis.md)
-- [Configuration d’un flux de données pour une connexion de stockage dans le cloud dans l’interface utilisateur](../../tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
+- [Configurer un flux de données pour une connexion de stockage dans le cloud dans l’interface utilisateur](../../tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)

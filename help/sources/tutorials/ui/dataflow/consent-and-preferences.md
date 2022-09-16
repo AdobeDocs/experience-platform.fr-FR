@@ -5,7 +5,8 @@ title: Création d’un flux de données à l’aide d’une source de consentem
 topic-legacy: overview
 type: Tutorial
 description: Un flux de données est une tâche planifiée qui récupère et ingère des données d’une source vers un jeu de données Platform. Ce tutoriel explique comment créer un flux de données pour une source de consentement et de préférences à l’aide de l’interface utilisateur de Platform.
-source-git-commit: 66dafe4bca6e1eb0fc67a745ac20a6e0b119aa39
+exl-id: 340b5945-baa1-4f79-88fa-2572606f6083
+source-git-commit: 6768b772a983588b36659f42bff5c143a6f625f7
 workflow-type: tm+mt
 source-wordcount: '1425'
 ht-degree: 43%

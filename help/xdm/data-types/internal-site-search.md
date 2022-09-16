@@ -1,7 +1,8 @@
 ---
 title: Type de données de recherche de site interne
 description: Ce document présente le type de données XDM de recherche de site interne.
-source-git-commit: eaea904ddda6b7ffee6f52cd4af897c2a8885714
+exl-id: 3cab9445-f641-4a44-9699-cd8a62da8a61
+source-git-commit: f5df893260f0772ad54ccdb00d99ed8f328d35a9
 workflow-type: tm+mt
 source-wordcount: '399'
 ht-degree: 6%

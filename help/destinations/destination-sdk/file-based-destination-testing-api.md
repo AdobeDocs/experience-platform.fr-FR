@@ -1,13 +1,13 @@
 ---
 description: Cette page explique comment utiliser le point d’entrée de l’API /testing/destinationInstance pour tester si votre destination basée sur des fichiers est configurée correctement et pour vérifier l’intégrité des flux de données vers votre destination configurée.
 title: Test de votre destination basée sur des fichiers avec des exemples de profils
-source-git-commit: fa092e4d1828d9ecd5bc98e3f225fa377f38065f
+exl-id: 75f76aec-245b-4f07-8871-c64a710db9f6
+source-git-commit: 44e056407f5089c927752f00cc6bf173d7640b83
 workflow-type: tm+mt
 source-wordcount: '830'
 ht-degree: 10%
 
 ---
-
 
 # Test de votre destination basée sur des fichiers avec des exemples de profils
 

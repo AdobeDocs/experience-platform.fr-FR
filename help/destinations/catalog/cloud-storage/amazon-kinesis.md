@@ -28,7 +28,7 @@ Vous pouvez créer une connexion sortante en temps réel vers votre [!DNL Amazon
 
 ![Amazon Kinesis dans l’interface utilisateur](../../assets/catalog/cloud-storage/amazon-kinesis/catalog.png)
 
-## Cas dʼutilisation {#use-cases}
+## Cas d&#39;utilisation {#use-cases}
 
 En utilisant des destinations de diffusion en continu, telles que [!DNL Amazon Kinesis], vous pouvez facilement alimenter les événements de segmentation à valeur élevée et les attributs de profil associés dans vos systèmes de choix.
 

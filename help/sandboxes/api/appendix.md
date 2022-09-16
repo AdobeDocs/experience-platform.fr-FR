@@ -14,15 +14,15 @@ ht-degree: 4%
 
 # Annexe du guide de l’API Sandbox
 
-Ce document fournit des informations supplémentaires sur l’utilisation de l’API [!DNL Sandbox].
+Ce document fournit des informations supplémentaires relatives à l’utilisation de la fonction [!DNL Sandbox] API.
 
 ## Utilisation des paramètres de requête {#query}
 
-L’ [[!DNL Sandbox] API](https://www.adobe.io/experience-platform-apis/references/sandbox) prend en charge l’utilisation de paramètres de requête pour la page et le filtrage des résultats lors de la mise en liste des environnements de test.
+Le [[!DNL Sandbox] API](https://www.adobe.io/experience-platform-apis/references/sandbox) prend en charge l’utilisation de paramètres de requête pour la page et le filtrage des résultats lors de la liste des environnements de test.
 
 >[!NOTE]
 >
->Les paramètres de requête `limit` et `offset` doivent être spécifiés ensemble. Si vous n’en spécifiez qu’une seule, l’API renvoie une erreur. Si vous n’indiquez aucun paramètre, la limite par défaut est de 50 et le décalage est de 0.
+>Le `limit` et `offset` les paramètres de requête doivent être spécifiés ensemble. Si vous n’en spécifiez qu’une seule, l’API renvoie une erreur. Si vous n’indiquez aucun paramètre, la limite par défaut est de 50 et le décalage est de 0.
 
 | Paramètre | Description |
 | --- | --- |

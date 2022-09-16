@@ -1,7 +1,7 @@
 ---
 keywords: gouvernance des données rtcdp;gouvernance des données rtcdp;gouvernance des données de profil client en temps réel
 title: Présentation de la gouvernance des données
-description: 'La gouvernance des données vous permet de gérer les données clients et de garantir la conformité aux réglementations, aux restrictions et aux politiques applicables à l’utilisation des données. '
+description: La gouvernance des données vous permet de gérer les données clients et de garantir la conformité aux réglementations, aux restrictions et aux politiques applicables à l’utilisation des données.
 exl-id: eb501d85-cabd-4667-a1cd-2210ec83fb71
 source-git-commit: ad0d38cbd249642d582a807c5679065827f57717
 workflow-type: tm+mt

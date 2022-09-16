@@ -14,7 +14,7 @@ ht-degree: 81%
 
 # Fonctions de filtre
 
-Fonctions de filtre sont utilisés pour filtrer les données dans des tableaux dans [!DNL Profile Query Language] (PQL). Vous trouverez plus d’informations sur les autres fonctions PQL dans la [[!DNL Profile Query Language] présentation](./overview.md).
+Fonctions de filtre sont utilisés pour filtrer les données dans des tableaux dans [!DNL Profile Query Language] (PQL). Vous trouverez plus d’informations sur les autres fonctions PQL dans la section [[!DNL Profile Query Language] aperçu](./overview.md).
 
 ## Filtrer
 

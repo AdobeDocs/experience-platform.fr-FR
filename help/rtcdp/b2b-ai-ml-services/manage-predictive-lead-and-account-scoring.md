@@ -2,7 +2,8 @@
 title: Gestion de la notation prédictive des pistes et des comptes dans la plateforme CDP B2B en temps réel
 type: Documentation
 description: Ce document fournit des informations sur la gestion de la fonctionnalité de notation de compte et de piste prédictive dans la plateforme CDP B2B Experience Platform.
-source-git-commit: 5ac8e099a6de563371f9a53a8b4816e6cf4d1953
+exl-id: fe7eb94e-5cf1-46bf-80e5-affe5735c998
+source-git-commit: 99b3b2d73b87a64fcaa9ba51563c0942fc21a0dc
 workflow-type: tm+mt
 source-wordcount: '1017'
 ht-degree: 5%

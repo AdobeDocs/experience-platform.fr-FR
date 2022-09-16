@@ -1,6 +1,6 @@
 ---
 title: Prise en main du développement des extensions
-description: Commencez à développer vos propres extensions de balise dans Adobe Experience Platform.
+description: Commencez à développer vos propres extensions de balises dans Adobe Experience Platform.
 exl-id: 3925b928-0180-4a4f-aaa6-42f342089560
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
@@ -13,7 +13,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 Pour vous aider à vous préparer à construire des extensions, nous utiliserons l’outil de génération de modèles automatique en open-source fourni par les ingénieurs Adobe pour créer les fichiers et la structure de fichiers nécessaires pour votre package d’extensions, afin que tout ce qu’il vous reste à faire soit la partie qui vous intéresse : écrire le code.
 

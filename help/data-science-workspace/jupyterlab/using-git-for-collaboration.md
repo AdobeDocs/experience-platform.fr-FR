@@ -13,9 +13,9 @@ ht-degree: 1%
 
 ---
 
-# Collaborez dans [!DNL JupyterLab] à l’aide de [!DNL Git]
+# Collaboration dans [!DNL JupyterLab] using [!DNL Git]
 
-[!DNL Git] est un système de contrôle de version distribué permettant d’effectuer le suivi des modifications du code source au cours du développement logiciel. Git est préinstallé dans l’environnement [!DNL Data Science Workspace JupyterLab].
+[!DNL Git] est un système de contrôle de version distribué permettant d’effectuer le suivi des modifications du code source au cours du développement logiciel. Git est préinstallé dans le [!DNL Data Science Workspace JupyterLab] environnement.
 
 ## Conditions préalables
 
@@ -23,13 +23,13 @@ ht-degree: 1%
 >
 > Le serveur Git que vous souhaitez utiliser doit être accessible via Internet.
 
-L’environnement [!DNL Data Science Workspace JupyterLab] est un environnement hébergé qui n’est pas déployé dans le pare-feu de votre entreprise. Par conséquent, le serveur Git auquel vous vous connectez doit être accessible à partir de l’Internet public. Il peut s’agir d’un référentiel public ou privé sur [GitHub](https://github.com/) ou d’une autre instance d’un serveur [!DNL Git] que vous avez décidé de héberger vous-même.
+Le [!DNL Data Science Workspace JupyterLab] est un environnement hébergé qui n’est pas déployé dans le pare-feu de votre entreprise. Par conséquent, le serveur Git auquel vous vous connectez doit être accessible à partir d’Internet public. Il peut s’agir d’un référentiel public ou privé sur [GitHub](https://github.com/) ou une autre instance d’une [!DNL Git] serveur que vous avez décidé de vous héberger vous-même.
 
-## Connectez [!DNL Git] à l’environnement [!DNL Data Science Workspace JupyterLab Notebooks]
+## Connexion [!DNL Git] au [!DNL Data Science Workspace JupyterLab Notebooks] environnement
 
-Commencez par lancer [!DNL Adobe Experience Platform] et accédez à l’environnement [[!DNL JupyterLabs Notebooks]](https://platform.adobe.com/notebooks/jupyterLab).
+Commencer par lancer [!DNL Adobe Experience Platform] et en accédant à la [[!DNL JupyterLabs Notebooks]](https://platform.adobe.com/notebooks/jupyterLab) environnement.
 
-Dans [!DNL JupyterLab], sélectionnez **[!UICONTROL Fichier]**, puis survolez **[!UICONTROL New]** avec la souris. Dans la liste déroulante qui s’affiche, sélectionnez **[!UICONTROL Terminal]**.
+Within [!DNL JupyterLab], sélectionnez **[!UICONTROL Fichier]** survolez **[!UICONTROL Nouveau]**. Dans la liste déroulante qui s’affiche, sélectionnez **[!UICONTROL Terminal]**.
 
 ![Navigation dans JupyterLab](../images/jupyterlab/tutorials/open-terminal.png)
 
@@ -41,9 +41,9 @@ Ensuite, dans *Terminal* accédez à votre espace de travail à l’aide de la c
 >
 > Pour afficher la liste des commandes git disponibles, lancez la commande : `git -help` dans votre terminal.
 
-Ensuite, clonez le référentiel que vous souhaitez utiliser à l’aide de la commande `git clone`. Cloner votre projet à l’aide d’une URL `https://` plutôt que de `ssh://`.
+Ensuite, clonez le référentiel que vous souhaitez utiliser à l’aide de la fonction `git clone` . Cloner votre projet à l’aide d’une `https://` URL plutôt que `ssh://`.
 
-**Exemple**:
+**Exemple** :
 
 `git clone https://github.com/adobe/experience-platform-dsw-reference.git`
 
@@ -51,7 +51,7 @@ Ensuite, clonez le référentiel que vous souhaitez utiliser à l’aide de la c
 
 >[!NOTE]
 >
-> Pour effectuer toute opération d’écriture (`git push` par exemple), les commandes de configuration suivantes doivent être exécutées pour chaque nouvelle session. Notez également que toute commande push demande un nom d’utilisateur et un mot de passe.
+> Pour effectuer toute opération d’écriture (`git push` par exemple) les commandes de configuration suivantes doivent être exécutées pour chaque nouvelle session. Notez également que toute commande push demande un nom d’utilisateur et un mot de passe.
 >
 >`git config --global user.email "you@example.com"`
 >
@@ -59,4 +59,4 @@ Ensuite, clonez le référentiel que vous souhaitez utiliser à l’aide de la c
 
 ## Étapes suivantes
 
-Une fois le clonage de votre référentiel terminé, vous pouvez utiliser Git comme vous le feriez normalement sur votre ordinateur local pour collaborer avec d’autres personnes sur des notebooks. Pour plus d’informations sur ce que vous pouvez faire dans [!DNL JupyterLab], voir [[!DNL JupyterLab user guide]](./overview.md).
+Une fois le clonage de votre référentiel terminé, vous pouvez utiliser Git comme vous le feriez normalement sur votre ordinateur local pour collaborer avec d’autres personnes sur des notebooks. Pour plus d’informations sur ce que vous pouvez faire dans [!DNL JupyterLab], reportez-vous à la section [[!DNL JupyterLab user guide]](./overview.md).

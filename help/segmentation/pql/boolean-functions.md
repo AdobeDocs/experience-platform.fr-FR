@@ -12,13 +12,13 @@ ht-degree: 82%
 
 ---
 
-# Fonctions booléennes 
+# Fonctions booléennes
 
-Les fonctions booléennes sont utilisées pour exécuter une logique booléenne sur différents éléments dans [!DNL Profile Query Language] (PQL).  Vous trouverez plus d’informations sur les autres fonctions PQL dans la [[!DNL Profile Query Language] présentation](./overview.md).
+Les fonctions booléennes sont utilisées pour exécuter une logique booléenne sur différents éléments dans [!DNL Profile Query Language] (PQL).  Vous trouverez plus d’informations sur les autres fonctions PQL dans la section [[!DNL Profile Query Language] aperçu](./overview.md).
 
 ## And
 
-La fonction `and` sert à créer une conjonction logique.
+La fonction `and` est utilisée pour convertir un nombre en pourcentage.
 
 **Format**
 

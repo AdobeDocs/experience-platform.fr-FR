@@ -8,7 +8,7 @@ exl-id: cd76a3f6-ae55-4d75-9b30-900fadb4664f
 source-git-commit: f9ccce8943e2aaf65cd3e0ffe2b974a668bba9b7
 workflow-type: tm+mt
 source-wordcount: '1566'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -26,7 +26,7 @@ Ce document fournit une vue d’ensemble de la configuration de vos opérations 
 
 Ce guide nécessite une compréhension pratique des différents services Experience Platform impliqués dans le traitement des données de consentement :
 
-* [Modèle de données d’expérience (XDM)](../../../../xdm/home.md): Cadre normalisé selon lequel l’Experience Platform organise les données d’expérience client.
+* [Modèle de données d’expérience (XDM)](../../../../xdm/home.md) : framework normalisé selon lequel Experience Platform organise les données d’expérience client.
 * [Service Adobe Experience Platform Identity](../../../../identity-service/home.md): Résout le problème fondamental posé par la fragmentation des données d’expérience client en rapprochant les identités entre les appareils et les systèmes.
 * [Real-time Customer Profile](../../../../profile/home.md): Utilisations [!DNL Identity Service] fonctionnalités pour créer des profils client détaillés à partir de vos jeux de données en temps réel. Real-time Customer Profile extrait des données du lac de données et conserve les profils clients dans sa propre banque de données distincte.
 * [SDK Web Adobe Experience Platform](../../../../edge/home.md): Bibliothèque JavaScript côté client qui vous permet d’intégrer divers services Platform à votre site web destiné aux clients.

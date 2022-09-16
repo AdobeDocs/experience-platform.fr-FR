@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform;accueil;rubriques les plus consultées;segmentation;Segmentation;Segmentation Service;segmentation par flux;segmentation par flux;Segmentation par flux;Évaluation continue;
 solution: Experience Platform
-title: 'Évaluation des événements en temps quasi réel avec la segmentation par flux '
+title: Évaluation des événements en temps quasi réel avec la segmentation par flux
 topic-legacy: developer guide
 description: Ce document contient des exemples d’utilisation de la segmentation par flux avec l’API Adobe Experience Platform Segmentation Service.
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
 source-git-commit: 654e141735b6882b4c0233b8e1c73d0838c8374e
 workflow-type: tm+mt
 source-wordcount: '1873'
-ht-degree: 33%
+ht-degree: 34%
 
 ---
 
-# Évaluation des événements en temps quasi réel à l’aide de la segmentation par flux
+# Évaluer les événements en temps quasi réel grâce à la segmentation par flux
 
 >[!NOTE]
 >

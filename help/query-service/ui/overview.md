@@ -51,7 +51,7 @@ L’onglet **[!UICONTROL Journal]** fournit une liste de requêtes qui ont été
 | **[!UICONTROL Créé par]** | Nom de la personne qui a créé la requête. |
 | **[!UICONTROL client]** | Client utilisé pour la requête. |
 | **[!UICONTROL Jeu de données]** | Jeu de données d’entrée utilisé par la requête. Sélectionnez le jeu de données pour accéder à l’écran des détails du jeu de données d’entrée. |
-| **[!UICONTROL État]** | État actuel de la requête. |
+| **[!UICONTROL Statut]** | État actuel de la requête. |
 | **[!UICONTROL Dernière exécution]** | Moment de la dernière exécution de la requête. Vous pouvez trier la liste par ordre croissant ou décroissant en sélectionnant la flèche au-dessus de cette colonne. |
 | **[!UICONTROL Exécution]** | Temps nécessaire pour l’exécution de la requête. |
 

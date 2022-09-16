@@ -9,7 +9,7 @@ exl-id: 7932471c-a9ce-4dd3-8189-8bc760ced5d6
 source-git-commit: f5d341daffd7d4d77ee816cc7537b0d0c52ca636
 workflow-type: tm+mt
 source-wordcount: '1058'
-ht-degree: 10%
+ht-degree: 25%
 
 ---
 
@@ -22,14 +22,14 @@ Ce tutoriel décrit les étapes à suivre pour créer une connexion à une sourc
 
 Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform :
 
-- [[!DNL Experience Data Model (XDM)] Système](../../../../../xdm/home.md): Le cadre normalisé selon lequel [!DNL Experience Platform] organise les données d’expérience client.
+- [[!DNL Experience Data Model (XDM)] Système](../../../../../xdm/home.md) : le cadre normalisé en fonction duquel [!DNL Experience Platform] organise les données d’expérience client.
    - [Principes de base de la composition des schémas](../../../../../xdm/schema/composition.md) : découvrez les blocs de création de base des schémas XDM, y compris les principes clés et les bonnes pratiques en matière de composition de schémas.
-   - [Tutoriel de l’éditeur de schémas](../../../../../xdm/tutorials/create-schema-ui.md): Découvrez comment créer des schémas personnalisés à l’aide de l’interface utilisateur de l’éditeur de schémas.
-- [[!DNL Real-time Customer Profile]](../../../../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
+   - [Tutoriel sur l’éditeur de schémas](../../../../../xdm/tutorials/create-schema-ui.md) : découvrez comment créer des schémas personnalisés à l’aide de l’interface utilisateur de l’éditeur de schémas.
+- [[!DNL Real-time Customer Profile]](../../../../../profile/home.md) : fournit un profil de consommateur unifié en temps réel, basé sur des données agrégées provenant de plusieurs sources.
 
 ## Création d’une connexion en continu
 
-Dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à la fonction [!UICONTROL Sources] workspace. Le [!UICONTROL Catalogue] affiche diverses sources avec lesquelles vous pouvez créer un compte.
+Dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources]. L’écran [!UICONTROL Catalogue] affiche diverses sources avec lesquelles vous pouvez créer un compte.
 
 Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de votre écran. Vous pouvez également trouver la source spécifique à utiliser à l’aide de l’option de recherche.
 
@@ -56,7 +56,7 @@ Lorsque vous avez terminé, sélectionnez **[!UICONTROL Connexion à la source]*
 
 ![new-account](../../../../images/tutorials/create/http/new.png)
 
-## Sélectionner des données
+## Sélectionner les données
 
 Après avoir créé la connexion API HTTP, la variable **[!UICONTROL Sélectionner des données]** s’affiche, vous fournissant une interface pour charger et prévisualiser vos données.
 
@@ -64,7 +64,7 @@ Sélectionner **[!UICONTROL Chargement de fichiers]** pour charger vos données.
 
 ![add-data](../../../../images/tutorials/create/http/add-data.png)
 
-Une fois les données chargées, vous pouvez utiliser le côté droit de l’interface pour prévisualiser la hiérarchie de fichiers. Sélectionner **[!UICONTROL Suivant]** pour continuer.
+Une fois les données chargées, vous pouvez utiliser le côté droit de l’interface pour prévisualiser la hiérarchie de fichiers. Cliquez sur **[!UICONTROL Suivant]** pour continuer.
 
 ![preview-sample-data](../../../../images/tutorials/create/http/preview-sample-data.png)
 
@@ -82,7 +82,7 @@ Pour créer un jeu de données, sélectionnez **[!UICONTROL Nouveau jeu de donn�
 
 ![new-dataset](../../../../images/tutorials/create/http/new-dataset.png)
 
-### Utilisation d’un jeu de données existant
+### Utiliser un jeu de données existant
 
 Pour utiliser un jeu de données existant, sélectionnez **[!UICONTROL Jeu de données existant]**. Dans le formulaire qui s’affiche, sélectionnez le jeu de données à utiliser. Une fois que vous avez sélectionné un jeu de données, vous pouvez choisir si le jeu de données doit être [!DNL Profile]-enabled.
 
@@ -91,7 +91,7 @@ Pour utiliser un jeu de données existant, sélectionnez **[!UICONTROL Jeu de do
 ### Mappage des champs standard
 
 
-Selon vos besoins, vous pouvez choisir de mapper directement des champs ou d’utiliser des fonctions de préparation de données pour transformer les données sources afin d’obtenir des valeurs calculées ou calculées. Pour obtenir des instructions complètes sur l’utilisation de l’interface du mappeur et des champs calculés, reportez-vous à la section [Guide de l’interface utilisateur de la préparation de données](../../../../../data-prep/ui/mapping.md).
+Selon vos besoins, vous pouvez choisir de mapper directement des champs ou d’utiliser des fonctions de préparation de données pour transformer les données sources afin d’obtenir des valeurs informatisées ou calculées. Pour obtenir des instructions complètes sur l’utilisation de l’interface du mappeur et des champs calculés, reportez-vous à la section [Guide de l’interface utilisateur de la préparation de données](../../../../../data-prep/ui/mapping.md).
 
 Pour ajouter un nouveau champ source, sélectionnez **[!UICONTROL Ajouter un nouveau mappage]**.
 

@@ -4,7 +4,8 @@ description: La segmentation vous permet de créer des segments et des audiences
 title: Surveillance des flux de données pour les segments dans l’interface utilisateur
 topic-legacy: overview
 type: Tutorial
-source-git-commit: cec27197d47d2dd979bdf29f16fef77e8ff855e3
+exl-id: 32fd2ba1-0ff0-4ea7-8d55-80d53eebc02f
+source-git-commit: c762e3925245f517cdcecb17a80378141f80fa86
 workflow-type: tm+mt
 source-wordcount: '1923'
 ht-degree: 5%
@@ -105,7 +106,7 @@ Les mesures suivantes sont disponibles pour cette vue de tableau de bord :
 | **[!UICONTROL Identités exclues]** | Nombre total d’identités qui ont été exclues de l’activation vers la destination, en fonction des profils reçus. Ces identités peuvent être exclues en raison d’attributs manquants ou de violations de consentement. |
 | **[!UICONTROL Taille des données]** | Taille du flux de données en cours d’activation. |
 | **[!UICONTROL Fichiers totaux]** | Nombre total de fichiers activés dans le flux de données. |
-| **[!UICONTROL État]** | État actuel de la tâche d’activation. |
+| **[!UICONTROL Statut]** | État actuel de la tâche d’activation. |
 | **[!UICONTROL Démarrage de l’exécution du flux de données]** | Date et heure de début de la tâche d’activation. |
 | **[!UICONTROL Fin de l’exécution du flux de données]** | Date et heure auxquelles la tâche d’activation s’est terminée. |
 | **[!UICONTROL Identifiant d’exécution du flux de données]** | Identifiant de la tâche d’activation actuelle. |
@@ -145,7 +146,7 @@ Les mesures suivantes sont disponibles pour cette vue de tableau de bord :
 | Mesure | Description |
 | ------ | ----------- |
 | **[!UICONTROL Profils totaux]** | Nombre total de profils en cours d’évaluation. |
-| **[!UICONTROL État]** | État de la tâche d’évaluation. Les états possibles de la tâche d’évaluation sont les suivants : **[!UICONTROL Succès]** et **[!UICONTROL En échec]**. |
+| **[!UICONTROL Statut]** | État de la tâche d’évaluation. Les états possibles de la tâche d’évaluation sont les suivants : **[!UICONTROL Succès]** et **[!UICONTROL En échec]**. |
 | **[!UICONTROL Démarrage de tâche]** | Date et heure de début de la tâche d’évaluation. |
 | **[!UICONTROL Fin de tâche]** | Date et heure auxquelles la tâche d’évaluation s’est terminée. |
 | **[!UICONTROL Type de tâche]** | Type de tâche de segmentation. Dans ce cas, il s’agira toujours d’une tâche d’évaluation de segment. |
@@ -193,4 +194,4 @@ Les mesures suivantes sont disponibles pour les tâches de segmentation :
 | **[!UICONTROL Type]** | Indique le type de tâche de segmentation : export ou évaluation. Notez que dans les deux cas, la tâche de segmentation évalue ou exporte **all** segments appartenant à une organisation. Pour en savoir plus sur les traitements d&#39;export, consultez le guide sur la [point d’entrée des traitements d’exportation](../../segmentation/api/export-jobs.md). Pour en savoir plus sur les tâches d’évaluation, consultez le tutoriel sur [évaluation d’un segment](../../segmentation/tutorials/evaluate-a-segment.md#evaluate-a-segment). |
 | **[!UICONTROL Démarrage de tâche]** | Date et heure de début de la tâche de segmentation. |
 | **[!UICONTROL Fin de tâche]** | Date et heure auxquelles la tâche de segmentation s’est terminée. |
-| **[!UICONTROL État]** | État de la tâche terminée. Les états possibles de la tâche de segmentation incluent la réussite ou l’échec. |
+| **[!UICONTROL Statut]** | État de la tâche terminée. Les états possibles de la tâche de segmentation incluent la réussite ou l’échec. |

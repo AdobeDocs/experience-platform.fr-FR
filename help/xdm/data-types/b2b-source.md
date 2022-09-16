@@ -5,7 +5,7 @@ exl-id: 01b7d41c-1ab6-4cbc-b9b3-77b6af69faf3
 source-git-commit: edf7afc5db219430232a3226dc691570b50a32bd
 workflow-type: tm+mt
 source-wordcount: '273'
-ht-degree: 4%
+ht-degree: 8%
 
 ---
 
@@ -28,7 +28,7 @@ Le [!UICONTROL Source B2B] Le type de données vous permet d’utiliser l’iden
 
 {style=&quot;table-layout:auto&quot;}
 
-Pour plus d’informations sur le type de données, reportez-vous au référentiel XDM public :
+Pour obtenir plus d’informations sur ce type de données, reportez-vous au référentiel XDM public:
 
 * [Exemple rempli](https://github.com/adobe/xdm/blob/master/components/datatypes/b2b/b2b-source.example.1.json)
 * [Schéma complet](https://github.com/adobe/xdm/blob/master/components/datatypes/b2b/b2b-source.schema.json)

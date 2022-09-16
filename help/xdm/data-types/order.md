@@ -8,13 +8,13 @@ exl-id: abfc6d53-ffe6-4692-ad65-03d556831fa0
 source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
 source-wordcount: '189'
-ht-degree: 23%
+ht-degree: 30%
 
 ---
 
-#  Type Orderdata
+# [!UICONTROL Commande] type de données
 
- Orderest un type de données XDM (Experience Data Model) standard qui décrit la commande passée pour une liste de produits.
+[!UICONTROL Commande] est un type de données XDM (Experience Data Model) standard qui décrit la commande placée pour une liste de produits.
 
 <img src="../images/data-types/order.PNG" width="400" /><br />
 
@@ -28,7 +28,7 @@ ht-degree: 23%
 
 {style=&quot;table-layout:auto&quot;}
 
-Pour plus d’informations sur le type de données, reportez-vous au référentiel XDM public :
+Pour obtenir plus d’informations sur ce type de données, reportez-vous au référentiel XDM public:
 
 * [Exemple rempli](https://github.com/adobe/xdm/blob/master/components/datatypes/data/order.example.1.json)
 * [Schéma complet](https://github.com/adobe/xdm/blob/master/components/datatypes/data/order.schema.json)

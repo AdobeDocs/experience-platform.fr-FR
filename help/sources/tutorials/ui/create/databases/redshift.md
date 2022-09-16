@@ -9,30 +9,30 @@ exl-id: 4faf3200-673b-4a20-8f94-d049e800444b
 source-git-commit: 2fb972b0ec8d1f679c6ce104a439265b5cc4d535
 workflow-type: tm+mt
 source-wordcount: '473'
-ht-degree: 12%
+ht-degree: 53%
 
 ---
 
 # Créez un [!DNL Amazon Redshift] connexion source dans l’interface utilisateur
 
-Les connecteurs source de Adobe Experience Platform permettent d’ingérer des données provenant de l’extérieur selon un calendrier précis. Ce tutoriel décrit les étapes à suivre pour créer une [!DNL Amazon Redshift] (ci-après dénommés &quot;[!DNL Redshift]&quot;) connecteur source à l’aide de [!DNL Platform] de l’interface utilisateur.
+Les connecteurs source d’Adobe Experience Platform permettent d’ingérer des données externes selon un calendrier précis. Ce tutoriel décrit les étapes à suivre pour créer une [!DNL Amazon Redshift] (ci-après dénommés &quot;[!DNL Redshift]&quot;) connecteur source à l’aide de [!DNL Platform] de l’interface utilisateur.
 
 ## Prise en main
 
 Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform :
 
-- [[!DNL Experience Data Model (XDM)] Système](../../../../../xdm/home.md): Le cadre normalisé selon lequel [!DNL Experience Platform] organise les données d’expérience client.
+- [[!DNL Experience Data Model (XDM)] Système](../../../../../xdm/home.md) : le cadre normalisé en fonction duquel [!DNL Experience Platform] organise les données d’expérience client.
    - [Principes de base de la composition des schémas](../../../../../xdm/schema/composition.md) : découvrez les blocs de création de base des schémas XDM, y compris les principes clés et les bonnes pratiques en matière de composition de schémas.
-   - [Tutoriel de l’éditeur de schémas](../../../../../xdm/tutorials/create-schema-ui.md): Découvrez comment créer des schémas personnalisés à l’aide de l’interface utilisateur de l’éditeur de schémas.
-- [[!DNL Real-time Customer Profile]](../../../../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
+   - [Tutoriel sur l’éditeur de schémas](../../../../../xdm/tutorials/create-schema-ui.md) : découvrez comment créer des schémas personnalisés à l’aide de l’interface utilisateur de l’éditeur de schémas.
+- [[!DNL Real-time Customer Profile]](../../../../../profile/home.md) : fournit un profil de consommateur unifié en temps réel, basé sur des données agrégées provenant de plusieurs sources.
 
-Si vous disposez déjà d’un [!DNL Redshift] vous pouvez ignorer le reste de ce document et passer au tutoriel sur [configuration d’un flux de données](../../dataflow/databases.md).
+Si vous disposez déjà d’une connexion [!DNL Redshift] valide, vous pouvez ignorer le reste de ce document et passer au tutoriel sur la [configuration d’un flux de données](../../dataflow/databases.md).
 
-### Collecte des informations d’identification requises
+### Collecter les informations d’identification requises
 
-Pour accéder à [!DNL Redshift] compte sur [!DNL Platform], vous devez fournir les valeurs suivantes :
+Pour accéder au compte [!DNL Redshift] sur , vous devez fournir les valeurs suivantes :[!DNL Platform]
 
-| **Credential** | **Description** |
+| **Informations d’identification** | **Description** |
 | -------------- | --------------- |
 | `server` | Le serveur associé à votre [!DNL Redshift] compte . |
 | `username` | Le nom d’utilisateur associé à votre [!DNL Redshift] compte . |
@@ -41,15 +41,15 @@ Pour accéder à [!DNL Redshift] compte sur [!DNL Platform], vous devez fournir 
 
 Pour plus d’informations sur la prise en main, reportez-vous à la section [this [!DNL Redshift] document](https://docs.aws.amazon.com/redshift/latest/gsg/getting-started.html).
 
-## Connectez-vous à [!DNL Redshift] account
+## Connecter votre compte [!DNL Redshift]
 
 >[!NOTE]
 >
 >La norme de codage par défaut pour [!DNL Redshift] est Unicode. Cela ne peut pas être modifié.
 
-Une fois que vous avez rassemblé vos informations d’identification requises, vous pouvez suivre les étapes ci-dessous pour lier votre [!DNL Redshift] compte à [!DNL Platform].
+Une fois les informations d’identification requises collectées, vous pouvez suivre les étapes ci-dessous pour lier votre compte [!DNL Redshift] à [!DNL Platform].
 
-Connectez-vous à [Adobe Experience Platform](https://platform.adobe.com) puis sélectionnez **[!UICONTROL Sources]** à partir de la barre de navigation de gauche pour accéder au **[!UICONTROL Sources]** workspace. Le **[!UICONTROL Catalogue]** affiche diverses sources pour lesquelles vous pouvez créer un compte.
+Connectez-vous à [Adobe Experience Platform](https://platform.adobe.com) puis sélectionnez **[!UICONTROL Sources]** à partir de la barre de navigation de gauche pour accéder au **[!UICONTROL Sources]** workspace. L’écran **[!UICONTROL Catalogue]** affiche diverses sources pour lesquelles vous pouvez créer un compte.
 
 Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de votre écran. Vous pouvez également trouver la source spécifique à utiliser à l’aide de l’option de recherche.
 
@@ -73,4 +73,4 @@ Pour connecter un compte existant, sélectionnez le [!DNL Redshift] compte auque
 
 ## Étapes suivantes
 
-En suivant ce tutoriel, vous avez établi une connexion à votre [!DNL Redshift] compte . Vous pouvez maintenant passer au tutoriel suivant et [configuration d’un flux de données pour importer des données dans [!DNL Platform]](../../dataflow/databases.md).
+En suivant ce tutoriel, vous avez établi une connexion à votre compte [!DNL Redshift]. Vous pouvez maintenant passer au tutoriel suivant et [configurer un flux de données pour importer des données dans [!DNL Platform]](../../dataflow/databases.md).

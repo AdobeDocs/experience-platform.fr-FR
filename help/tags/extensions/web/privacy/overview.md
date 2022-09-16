@@ -1,19 +1,19 @@
 ---
-title: Présentation de l’extension Adobe Privacy
-description: Découvrez lʼextension de balise Adobe Privacy dans Adobe Experience Platform.
+title: Présentation de l’extension Adobe Privacy
+description: Découvrez lʼextension de balise Adobe Privacy dans Adobe Experience Platform.
 exl-id: 8401861e-93ad-48eb-8796-b26ed8963c32
 source-git-commit: 285e7ff1a1cd6c9790c526ca27ffafc60e94218d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '909'
 ht-degree: 100%
 
 ---
 
-# Présentation de l’extension Adobe Privacy
+# Présentation de l’extension Adobe Privacy
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 L’extension de balise d’Adobe Privacy vous permet de collecter et de supprimer les identifiants d’utilisateur affectés aux utilisateurs finaux par les solutions Adobe sur les appareils côté client. Les identifiants collectés peuvent alors être envoyés à [Adobe Experience Platform Privacy Service](../../../../privacy-service/home.md) pour accéder ou supprimer les données personnelles de l’individu concerné dans les applications Adobe Experience Cloud prises en charge.
 

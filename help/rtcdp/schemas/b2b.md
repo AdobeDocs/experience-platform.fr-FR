@@ -3,7 +3,7 @@ title: Schémas dans l’édition B2B de Real-time Customer Data Platform
 description: Présentation du rôle des schémas de modèle de données d’expérience (XDM) dans l’édition B2B de Real-time Customer Data Platform.
 exl-id: 3b18d377-108f-443f-86ae-dc7537cf9013
 source-git-commit: 1a104d26b920082ee73178dd0ad7234ad43dec1a
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '235'
 ht-degree: 100%
 

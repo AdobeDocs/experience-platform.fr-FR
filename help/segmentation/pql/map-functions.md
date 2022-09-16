@@ -14,9 +14,9 @@ ht-degree: 81%
 
 # Fonctions de mappage
 
-[!DNL Profile Query Language] (PQL) offre des fonctions permettant de faciliter l&#39;interaction avec les cartes. Vous trouverez plus d’informations sur les autres fonctions PQL dans la [[!DNL Profile Query Language] présentation](./overview.md).
+[!DNL Profile Query Language] (PQL) offre des fonctions permettant de faciliter l&#39;interaction avec les cartes. Vous trouverez plus d’informations sur les autres fonctions PQL dans la section [[!DNL Profile Query Language] aperçu](./overview.md).
 
-## Get
+## Obtenir
 
 La fonction `get` est utilisée pour récupérer la valeur d&#39;une carte pour une clé donnée.
 

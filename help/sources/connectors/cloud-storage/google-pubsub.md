@@ -6,7 +6,7 @@ topic-legacy: overview
 description: Découvrez comment connecter Google PubSub à Adobe Experience Platform à l’aide des API ou de l’interface utilisateur.
 exl-id: 7c78173d-2639-47cb-8935-77fb7841a121
 source-git-commit: da7b6fe8f9d274b8e5f27138a1baf8caf63a0c01
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '174'
 ht-degree: 100%
 

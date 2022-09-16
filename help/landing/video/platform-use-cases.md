@@ -1,6 +1,6 @@
 ---
 title: Cas d’utilisation clés des Experience Platform
-description: Cette vidéo donne un aperçu des quatre cas d’utilisation clés de Adobe Experience Platform&mdash;plateforme de données client en temps réel, intelligence des parcours client, expérience de diffusion et cross-canal, et développement d’applications d’expérience client.
+description: Cette vidéo donne un aperçu des quatre cas d’utilisation clés de Adobe Experience Platform&mdash ; plateforme de données clients en temps réel ; informations sur les parcours client ; expérience de diffusion et cross-canal ; et développement d’applications d’expérience client.
 kt: 4337
 audience: all
 doc-type: video

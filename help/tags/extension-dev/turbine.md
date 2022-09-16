@@ -1,9 +1,9 @@
 ---
 title: Variable sans Turbine
-description: Découvrez lʼobjet turbine, une variable libre qui fournit des informations et des utilitaires spécifiques à lʼexécution des balises Adobe Experience Platform.
+description: Découvrez l’objet turbine, une variable libre qui fournit des informations et des utilitaires spécifiques à l’exécution de balise d’Adobe Experience Platform.
 exl-id: 1664ab2e-8704-4a56-8b6b-acb71534084e
 source-git-commit: 27dd38cc509040ea9dc40fc7030dcdec9a182d55
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '625'
 ht-degree: 100%
 
@@ -13,9 +13,9 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
-L’objet `turbine` est une « variable libre » dans la portée des modules de bibliothèque de votre extension. Il fournit des informations et des utilitaires spécifiques à lʼexécution des balises Adobe Experience Platform et est toujours disponible pour les modules de bibliothèque sans utiliser `require()`.
+L’objet `turbine` est une « variable libre » dans la portée des modules de bibliothèque de votre extension. Il fournit des informations et des utilitaires spécifiques à l’exécution de balise Adobe Experience Platform et est toujours disponible pour les modules de bibliothèque sans utiliser `require()`.
 
 ## `buildInfo`
 
@@ -112,7 +112,7 @@ Récupère un module qui a été partagé depuis une autre extension. Si aucun m
 turbine.logger.error('Error!');
 ```
 
-Lʼutilitaire de journalisation est utilisé pour consigner les messages dans la console. Les messages s’affichent uniquement dans la console si le débogage est activé par l’utilisateur. La méthode recommandée pour activer le débogage consiste à utiliser [Adobe Experience Cloud Debugger](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj?src=propaganda). Lʼutilisateur peut également exécuter la commande suivante `_satellite.setDebug(true)` dans la console de développeur du navigateur. La journalisation utilise les méthodes suivantes :
+Lʼutilitaire de journalisation est utilisé pour consigner les messages dans la console. Les messages s’affichent uniquement dans la console si le débogage est activé par l’utilisateur. La méthode recommandée pour activer le débogage consiste à utiliser [Adobe Experience Cloud Debugger](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj?src=propaganda). Lʼutilisateur peut également exécuter la commande suivante `_satellite.setDebug(true)` dans la console de développeur du navigateur. La journalisation utilise les méthodes suivantes :
 
 * `logger.log(message: string)` : consigne un message sur la console.
 * `logger.info(message: string)` : consigne un message d’information dans la console.

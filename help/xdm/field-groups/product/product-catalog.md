@@ -1,13 +1,13 @@
 ---
 title: Groupe de champs de schéma du catalogue de produits
 description: Ce document présente un aperçu du groupe de champs de schéma du catalogue de produits.
-source-git-commit: 9c06c58553aef4937454ced82d3e89867b5567b7
+exl-id: 91971a0c-a93a-4032-a2f2-0a99e4940bac
+source-git-commit: f5df893260f0772ad54ccdb00d99ed8f328d35a9
 workflow-type: tm+mt
 source-wordcount: '87'
 ht-degree: 10%
 
 ---
-
 
 # [!UICONTROL Catalogue de produits] groupe de champs de schéma
 

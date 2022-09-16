@@ -2,7 +2,8 @@
 keywords: Experience Platform;accueil;rubriques populaires;service de requête;service de requête;se connecter;se connecter au service de requête;SSL;ssl;sslmode;
 title: Options SSL de Query Service
 description: Découvrez la prise en charge du protocole SSL pour les connexions tierces à Adobe Experience Platform Query Service et comment vous connecter à l’aide du mode SSL vérification-full.
-source-git-commit: 92dac8e75e1ddda860d255ce1b7d278041c89325
+exl-id: 41b0a71f-165e-49a2-8a7d-d809f5f683ae
+source-git-commit: be877502f63fe08f17abe7cb0cf9f247394bf1ac
 workflow-type: tm+mt
 source-wordcount: '905'
 ht-degree: 1%

@@ -5,7 +5,8 @@ title: (Version bêta) Création d’une connexion à la source OneTrust dans l�
 topic-legacy: overview
 type: Tutorial
 description: Découvrez comment créer une connexion source OneTrust à l’aide de l’interface utilisateur de Adobe Experience Platform.
-source-git-commit: adefaeb895c91d45727f791b73b73a17a2b1ccf9
+exl-id: 6af0604d-cbb6-4c8e-b017-3eb82ec6ee1c
+source-git-commit: 6768b772a983588b36659f42bff5c143a6f625f7
 workflow-type: tm+mt
 source-wordcount: '526'
 ht-degree: 37%

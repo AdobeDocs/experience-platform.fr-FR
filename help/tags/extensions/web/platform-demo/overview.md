@@ -1,6 +1,6 @@
 ---
 title: Présentation de l’extension Adobe Experience Platform Demo
-description: Découvrez l’extension Adobe Experience Platform Demo dans Adobe Experience Platform.
+description: Découvrez l’extension Adobe Experience Platform Demo dans Adobe Experience Platform.
 exl-id: 4bafa132-0d21-4140-ab46-f09cc20bce6f
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
@@ -13,11 +13,11 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 >[!NOTE]
 >
->Cette extension sera abandonnée au profit du [SDK Web Adobe Experience Platform](../sdk/overview.md).
+>Cette extension sera abandonnée au profit du [SDK Web Adobe Experience Platform](../sdk/overview.md).
 
 Les fonctionnalités de cette extension sont transférées vers une nouvelle extension. Voici une rapide comparaison des fonctionnalités actuelles.
 
@@ -33,9 +33,9 @@ Les fonctionnalités de cette extension sont transférées vers une nouvelle ext
 |  | Entièrement open source |
 
 
-## Configuration de l’extension Adobe Experience Platform
+## Configuration de l’extension Adobe Experience Platform
 
-Cette section fournit une référence pour les options disponibles lors de la configuration de l’extension Adobe Experience Platform.
+Cette section fournit une référence pour les options disponibles lors de la configuration de l’extension Adobe Experience Platform.
 
 Si l’extension Adobe Experience Platform n’est pas encore installée, ouvrez votre propriété, puis cliquez sur **[!UICONTROL Extensions > Catalogue]**, placez le curseur sur l’extension Adobe Experience Platform et cliquez sur **[!UICONTROL Installer]**.
 

@@ -7,7 +7,7 @@ exl-id: f1f14eb7-21dd-45ca-8fb4-68f397cfa697
 source-git-commit: 0f39e9237185b49417f2af8dfc288ab1420cccae
 workflow-type: tm+mt
 source-wordcount: '612'
-ht-degree: 2%
+ht-degree: 4%
 
 ---
 
@@ -45,7 +45,7 @@ Le tableau suivant décrit les valeurs acceptées pour `val`:
 
 {style=&quot;table-layout:auto&quot;}
 
-Pour plus d’informations sur le type de données, reportez-vous au référentiel XDM public :
+Pour obtenir plus d’informations sur ce type de données, reportez-vous au référentiel XDM public:
 
 * [Exemple rempli](https://github.com/adobe/xdm/blob/master/components/datatypes/consent/consent-field.example.1.json)
 * [Schéma complet](https://github.com/adobe/xdm/blob/master/components/datatypes/consent/consent-field.schema.json)

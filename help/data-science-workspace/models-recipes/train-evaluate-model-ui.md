@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Formation et évaluation d’un modèle dans l’interface utilisateur de Data Science Workspace
 topic-legacy: tutorial
 type: Tutorial
-description: Dans Adobe Experience Platform Data Science Workspace, un modèle d’apprentissage automatique est créé en incorporant une recette existante adéquate au but du modèle. Le modèle est ensuite formé et évalué afin d’optimiser son efficience et son efficacité opérationnelles en affinant ses hyperparamètres associés. Les recettes sont réutilisables, ce qui signifie que plusieurs modèles peuvent être créés et adaptés à des fins spécifiques à l’aide d’une seule recette.
+description: Dans Adobe Experience Platform Data Science Workspace, un modèle d’apprentissage automatique est créé en incorporant une recette existante adéquate au but du modèle. Le modèle est ensuite formé et évalué afin d’optimiser son efficience et son efficacité opérationnelles en affinant ses hyperparamètres associés. Les recettes sont réutilisables, ce qui signifie que plusieurs modèles peuvent être créés et adaptés à des fins spécifiques à l’aide d’une seule recette.
 exl-id: 6f674cfa-c123-46a3-80e2-9342fe687976
 source-git-commit: 441d7822f287fabf1b06cdf3f6982f9c910387a8
 workflow-type: tm+mt
@@ -15,31 +15,31 @@ ht-degree: 66%
 
 # Formation et évaluation d’un modèle dans l’interface utilisateur de Data Science Workspace
 
-Dans Adobe Experience Platform Data Science Workspace, un modèle d’apprentissage automatique est créé en incorporant une recette existante adéquate au but du modèle. Le modèle est ensuite formé et évalué afin d’optimiser son efficience et son efficacité opérationnelles en affinant ses hyperparamètres associés. Les recettes sont réutilisables, ce qui signifie que plusieurs modèles peuvent être créés et adaptés à des fins spécifiques à l’aide d’une seule recette.
+Dans Adobe Experience Platform Data Science Workspace, un modèle d’apprentissage automatique est créé en incorporant une recette existante adéquate au but du modèle. Le modèle est ensuite formé et évalué afin d’optimiser son efficience et son efficacité opérationnelles en affinant ses hyperparamètres associés. Les recettes sont réutilisables, ce qui signifie que plusieurs modèles peuvent être créés et adaptés à des fins spécifiques à l’aide d’une seule recette.
 
 Ce tutoriel décrit les étapes à suivre pour créer, former et évaluer un modèle.
 
 ## Prise en main
 
-Pour suivre ce tutoriel, vous devez avoir accès à [!DNL Experience Platform]. Si vous n’avez pas accès à une organisation IMS dans [!DNL Experience Platform], contactez votre administrateur système avant de poursuivre.
+Pour suivre ce tutoriel, vous devez avoir accès à [!DNL Experience Platform]. Si vous n’avez pas accès à une organisation IMS dans [!DNL Experience Platform], contactez votre administrateur système avant de continuer.
 
 Ce tutoriel nécessite une recette existante. Si vous ne possédez aucune recette, suivez le tutoriel [Importation d’une recette empaquetée dans l’interface utilisateur](./import-packaged-recipe-ui.md) avant de continuer.
 
 ## Création d’un modèle
 
-Dans Experience Platform, sélectionnez l’onglet **[!UICONTROL Modèles]** situé dans le volet de navigation de gauche, puis sélectionnez l’onglet Parcourir pour afficher vos modèles existants. Sélectionnez **[!UICONTROL Créer un modèle]** près du coin supérieur droit de la page pour lancer un processus de création de modèle.
+Dans Experience Platform, sélectionnez la variable **[!UICONTROL Modèles]** dans le volet de navigation de gauche, puis sélectionnez l’onglet parcourir pour afficher vos modèles existants. Sélectionner **[!UICONTROL Créer un modèle]** près du coin supérieur droit de la page pour lancer un processus de création de modèle.
 
 ![](../images/models-recipes/train-evaluate-ui/models_browse.png)
 
 Parcourez la liste des recettes existantes, recherchez et sélectionnez la recette à utiliser pour créer le modèle, puis sélectionnez **[!UICONTROL Suivant]**.
 ![](../images/models-recipes/train-evaluate-ui/select_recipe.png)
 
-Sélectionnez un jeu de données d’entrée approprié, puis **[!UICONTROL Suivant]**. Cette opération définit le jeu de données de formation d’entrée par défaut pour le modèle.
+Sélectionnez un jeu de données d’entrée approprié, puis sélectionnez **[!UICONTROL Suivant]**. Cette opération définit le jeu de données de formation d’entrée par défaut pour le modèle.
 ![](../images/models-recipes/train-evaluate-ui/select_dataset.png)
 
 Attribuez un nom au modèle et passez en revue les configurations de modèle par défaut. Les configurations par défaut ont été appliquées lors de la création de la recette. Vérifiez et modifiez les valeurs de configuration en double-cliquant sur celles-ci.
 
-Pour fournir un nouvel ensemble de configurations, sélectionnez **[!UICONTROL Télécharger la nouvelle configuration]** et faites glisser un fichier JSON contenant les configurations de modèle dans la fenêtre du navigateur. Sélectionnez **[!UICONTROL Terminer]** pour créer le modèle.
+Pour fournir un nouvel ensemble de configurations, sélectionnez **[!UICONTROL Chargement d’une nouvelle configuration]** et faites glisser un fichier JSON contenant les configurations de modèle dans la fenêtre du navigateur. Sélectionner **[!UICONTROL Terminer]** pour créer le modèle.
 
 >[!NOTE]
 >
@@ -49,13 +49,13 @@ Pour fournir un nouvel ensemble de configurations, sélectionnez **[!UICONTROL T
 
 ## Création d’une opération de formation
 
-Dans Experience Platform, sélectionnez l’onglet **[!UICONTROL Modèles]** situé dans le volet de navigation de gauche, puis sélectionnez l’onglet Parcourir pour afficher vos modèles existants. Recherchez et sélectionnez le lien hypertexte associé au nom du modèle que vous souhaitez entraîner.
+Dans Experience Platform, sélectionnez la variable **[!UICONTROL Modèles]** dans le volet de navigation de gauche, puis sélectionnez l’onglet parcourir pour afficher vos modèles existants. Recherchez et sélectionnez le lien hypertexte associé au nom du modèle que vous souhaitez entraîner.
 
 ![](../images/models-recipes/train-evaluate-ui/model-hyperlink.png)
 
-Toutes les sessions de formation existantes ainsi que leur état actuel sont répertoriées. Pour les modèles créés à l’aide de l’interface utilisateur [!DNL Data Science Workspace], une opération de formation est automatiquement générée et exécutée à l’aide des configurations par défaut et du jeu de données de formation d’entrée.
+Toutes les sessions de formation existantes ainsi que leur état actuel sont répertoriées. Pour les modèles créés à l’aide du [!DNL Data Science Workspace] , une opération de formation est automatiquement générée et exécutée à l’aide des configurations par défaut et du jeu de données de formation d’entrée.
 
-Créez une nouvelle opération de formation en sélectionnant **[!UICONTROL Former]** près du coin supérieur droit de la page d’aperçu du modèle.
+Créez une opération de formation en sélectionnant **[!UICONTROL Train]** près du coin supérieur droit de la page d’aperçu du modèle.
 
 ![](../images/models-recipes/train-evaluate-ui/model_overview.png)
 
@@ -63,7 +63,7 @@ Sélectionnez le jeu de données d’entrée de formation pour l’opération de
 
 ![](../images/models-recipes/train-evaluate-ui/training_input.png)
 
-Les configurations par défaut fournies lors de la création du modèle s’affichent : modifiez-les en conséquence en double-cliquant sur les valeurs. Sélectionnez **[!UICONTROL Terminer]** pour créer et exécuter l’opération de formation.
+Les configurations par défaut fournies lors de la création du modèle s’affichent : modifiez-les en conséquence en double-cliquant sur les valeurs. Sélectionner **[!UICONTROL Terminer]** pour créer et exécuter l’opération de formation.
 
 >[!NOTE]
 >
@@ -74,7 +74,7 @@ Les configurations par défaut fournies lors de la création du modèle s’affi
 
 ## Évaluation du modèle
 
-Dans Experience Platform, sélectionnez l’onglet **[!UICONTROL Modèles]** situé dans le volet de navigation de gauche, puis sélectionnez l’onglet Parcourir pour afficher vos modèles existants. Recherchez et sélectionnez l’hyperlien associé au nom du modèle que vous souhaitez évaluer.
+Dans Experience Platform, sélectionnez la variable **[!UICONTROL Modèles]** dans le volet de navigation de gauche, puis sélectionnez l’onglet parcourir pour afficher vos modèles existants. Recherchez et sélectionnez l’hyperlien associé au nom du modèle que vous souhaitez évaluer.
 
 ![select model](../images/models-recipes/train-evaluate-ui/model-hyperlink.png)
 

@@ -22,11 +22,11 @@ Les diagrammes suivants présentent des simulations d’actions ETL courantes et
 
 Les actions illustrées ci-dessous sont détaillées dans les étapes décrites dans le [guide d’intégration ETL](home.md). Certaines étapes font référence à des « figures » spécifiques, d’autres décrivent des actions similaires au workflow présenté ici.
 
-### Figure 1 - Configuration du nouveau connecteur Adobe Experience Platform :
+### Figure 1 - Configuration du nouveau connecteur Adobe Experience Platform :
 
 ![](images/image2.png)
 
-### Figure 2 - [!DNL Experience Platform] Connecteur activé :
+### Tableau 2 - [!DNL Experience Platform] Connecteur activé :
 
 ![](images/image3.png)
 
@@ -34,11 +34,11 @@ Les actions illustrées ci-dessous sont détaillées dans les étapes décrites 
 
 ![](images/image4.png)
 
-### Figure 4 - Nouvelle interface utilisateur de transformation, en sélectionnant [!DNL Experience Platform] Connexion :
+### Figure 4 - Nouvelle interface utilisateur de transformation, sélection de [!DNL Experience Platform] Connexion :
 
 ![](images/image5.png)
 
-### Figure 5 - Recherche de jeux de données source [!DNL Experience Platform] :
+### Figure 5 - Recherche de la source [!DNL Experience Platform] Jeux de données :
 
 ![](images/image6.png)
 
@@ -58,7 +58,7 @@ Les actions illustrées ci-dessous sont détaillées dans les étapes décrites 
 
 ![](images/image10.png)
 
-### Figure 10 - Définition du jeu de données cible [!DNL Experience Data Model] (XDM) :
+### Figure 10 - Définition de la variable [!DNL Experience Data Model] Jeu de données cible (XDM) :
 
 ![](images/image11.png)
 

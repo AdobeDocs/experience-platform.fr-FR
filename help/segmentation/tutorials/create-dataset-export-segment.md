@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Création d’un jeu de données pour l’exportation d’un segment d’audience
 topic-legacy: tutorial
 type: Tutorial
-description: Ce tutoriel décrit les étapes nécessaires à la création d’un jeu de données qui peut être utilisé pour exporter un segment ciblé à l’aide de l’interface utilisateur d’Experience Platform.
+description: Ce tutoriel décrit les étapes nécessaires à la création d’un jeu de données qui peut être utilisé pour exporter un segment ciblé à l’aide de l’interface utilisateur d’Experience Platform.
 exl-id: 1cd16e43-b050-42ba-a894-d7ea477b65f3
 source-git-commit: 44d7e11e79ed0e6041ff2e4438ddb7141ae3532d
 workflow-type: tm+mt
@@ -17,24 +17,24 @@ ht-degree: 29%
 
 [!DNL Adobe Experience Platform] vous permet de segmenter les profils client en audiences en fonction d’attributs spécifiques. Une fois qu’un segment est créé, vous pouvez exporter cette audience vers un jeu de données où il est accessible et sur lequel elle peut agir. Pour que l’exportation soit réussie, le jeu de données doit être correctement configuré.
 
-Ce tutoriel décrit les étapes nécessaires à la création d’un jeu de données qui peut être utilisé pour exporter un segment ciblé à l’aide de l’interface utilisateur [!DNL Experience Platform].
+Ce tutoriel décrit les étapes nécessaires à la création d’un jeu de données qui peut être utilisé pour exporter un segment d’audience à l’aide du [!DNL Experience Platform] Interface utilisateur.
 
-Ce tutoriel est directement lié aux étapes décrites dans le tutoriel sur l’[évaluation et l’accès aux résultats de segmentation](./evaluate-a-segment.md). Le tutoriel sur l’évaluation des segments décrit les étapes à suivre pour créer un jeu de données à l’aide de l’API [!DNL Catalog Service], tandis que ce tutoriel décrit les étapes à suivre pour créer un jeu de données à l’aide de l’interface utilisateur [!DNL Experience Platform].
+Ce tutoriel est directement lié aux étapes décrites dans le tutoriel sur [évaluation et accès aux résultats de segmentation](./evaluate-a-segment.md). Le tutoriel sur l’évaluation des segments décrit les étapes à suivre pour créer un jeu de données à l’aide du [!DNL Catalog Service] API, tandis que ce tutoriel décrit les étapes de création d’un jeu de données à l’aide de la variable [!DNL Experience Platform] Interface utilisateur.
 
 ## Prise en main
 
-Pour exporter un segment, le jeu de données doit être basé sur la balise [!DNL XDM Individual Profile Union Schema]. Un schéma d’union est un schéma en lecture seule généré par le système qui agrège les champs de tous les schémas qui partagent la même classe. Pour plus d’informations sur les schémas d’union, consultez le guide sur [les principes de base de la composition des schémas](../../xdm/schema/composition.md#union).
+Pour exporter un segment, le jeu de données doit être basé sur la variable [!DNL XDM Individual Profile Union Schema]. Un schéma d’union est un schéma en lecture seule généré par le système qui agrège les champs de tous les schémas qui partagent la même classe. Pour plus d’informations sur les schémas d’union, consultez le guide sur les [les principes de base de la composition des schémas ;](../../xdm/schema/composition.md#union).
 
 Pour afficher les schémas d’union dans l’interface utilisateur, sélectionnez **[!UICONTROL Profils]** dans le volet de navigation de gauche, puis sélectionnez **[!UICONTROL Schéma d’union]** comme illustré ci-dessous.
 
-![Onglet de schéma d’union dans l’interface utilisateur d’Experience Platform](../images/tutorials/segment-export-dataset/union.png)
+![Onglet de schéma d’union dans l’interface utilisateur d’Experience Platform](../images/tutorials/segment-export-dataset/union.png)
 
 
 ## Espace de travail des jeux de données
 
-L’espace de travail [!UICONTROL Jeux de données] vous permet d’afficher et de gérer tous les jeux de données pour votre organisation.
+Le [!UICONTROL Jeux de données] workspace vous permet d’afficher et de gérer tous les jeux de données de votre entreprise.
 
-Sélectionnez **[!UICONTROL Jeux de données]** dans le volet de navigation de gauche pour accéder à l’espace de travail, puis sélectionnez **[!UICONTROL Parcourir]**. Cet onglet affiche une liste des jeux de données et leurs détails. Selon la largeur de chaque colonne, vous devrez peut-être faire défiler vers la gauche ou la droite pour toutes les afficher.
+Sélectionner **[!UICONTROL Jeux de données]** dans le volet de navigation de gauche pour accéder à l’espace de travail, sélectionnez **[!UICONTROL Parcourir]**. Cet onglet affiche une liste des jeux de données et leurs détails. Selon la largeur de chaque colonne, vous devrez peut-être faire défiler vers la gauche ou la droite pour toutes les afficher.
 
 >[!NOTE]
 >
@@ -48,13 +48,13 @@ Pour créer un jeu de données, sélectionnez **[!UICONTROL Créer un jeu de don
 
 ![Sélectionner Créer un jeu de données](../images/tutorials/segment-export-dataset/create-dataset.png)
 
-Sur l’écran suivant, sélectionnez **[!UICONTROL Créer un jeu de données à partir du schéma]**.
+Dans l’écran suivant, sélectionnez **[!UICONTROL Création d’un jeu de données à partir d’un schéma]**.
 
 ![Sélectionner la source de données](../images/tutorials/segment-export-dataset/create-from-schema.png)
 
 ## Sélection du schéma d’union XDM Individual Profile
 
-Pour sélectionner le [!DNL XDM Individual Profile Union Schema] à utiliser dans votre jeu de données, recherchez le schéma &quot;[!UICONTROL XDM Individual Profile]&quot; dans l’écran **[!UICONTROL Sélectionner le schéma]**. Une fois que vous avez sélectionné le schéma, vous pouvez vérifier s’il s’agit du schéma d’union sous **[!UICONTROL Utilisation de l’API]** dans le rail de droite. Si le chemin [!UICONTROL Schéma] se termine par `_union`, il s’agit d’un schéma d’union.
+Pour sélectionner le [!DNL XDM Individual Profile Union Schema] pour l’utiliser dans votre jeu de données, recherchez le[!UICONTROL XDM Individual Profile]&quot; sur le **[!UICONTROL Sélectionner un schéma]** écran. Une fois que vous avez sélectionné le schéma, vous pouvez confirmer s’il s’agit du schéma d’union sous **[!UICONTROL Utilisation de l’API]** dans le rail de droite. Si la variable [!UICONTROL Schéma] le chemin se termine par `_union`, il s’agit d’un schéma d’union.
 
 >[!NOTE]
 >
@@ -73,7 +73,7 @@ Sur l’écran suivant, vous devez donner un nom à votre jeu de données. Vous 
 * Les noms des jeux de données doivent être uniques, ce qui signifie qu’ils doivent également être suffisamment précis pour ne pas être réutilisés à l’avenir.
 * Il est recommandé de fournir des informations supplémentaires sur le jeu de données à l’aide du champ de description, car cela peut aider d’autres utilisateurs à différencier les jeux de données à l’avenir.
 
-Une fois que le jeu de données a un nom et une description, sélectionnez **[!UICONTROL Terminer]**.
+Une fois que le jeu de données comporte un nom et une description, sélectionnez **[!UICONTROL Terminer]**.
 
 ![Configurer un jeu de données](../images/tutorials/segment-export-dataset/configure-dataset.png)
 
@@ -87,6 +87,6 @@ Le rail de droite contient des informations relatives à votre nouveau jeu de do
 
 ## Étapes suivantes
 
-Maintenant que vous avez créé un jeu de données basé sur [!DNL XDM Individual Profile Union Schema], vous pouvez utiliser l’identifiant du jeu de données pour continuer le tutoriel [Évaluation et accès aux résultats de segmentation](./evaluate-a-segment.md) .
+Maintenant que vous avez créé un jeu de données basé sur la variable [!DNL XDM Individual Profile Union Schema], vous pouvez utiliser l’identifiant du jeu de données pour continuer la [évaluation et accès aux résultats de segmentation](./evaluate-a-segment.md) tutoriel .
 
-Pour l’instant, revenez au tutoriel portant sur l’évaluation des résultats de segmentation et intéressez-vous à l’étape [génération de profils pour les membres de l’audience](./evaluate-a-segment.md#generate-profiles) du workflow d’exportation d’un segment.
+Pour l’instant, revenez au tutoriel portant sur l’évaluation des résultats de segmentation et intéressez-vous à la section [génération de profils pour les membres de l’audience](./evaluate-a-segment.md#generate-profiles) de l’étape d’export d’un segment.

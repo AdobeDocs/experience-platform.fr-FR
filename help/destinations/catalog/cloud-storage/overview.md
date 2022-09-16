@@ -6,7 +6,7 @@ exl-id: d29f0a6e-b323-4f78-bbd0-dee2f1e0fedb
 source-git-commit: 818c9a6f5cd39db1405827b657872b99254ad1e5
 workflow-type: tm+mt
 source-wordcount: '295'
-ht-degree: 2%
+ht-degree: 11%
 
 ---
 
@@ -23,14 +23,14 @@ Adobe Experience Platform peut fournir vos segments sous forme de fichiers de do
 Adobe Experience Platform prend en charge les destinations de stockage dans le cloud suivantes :
 
 * [Connexion à Amazon Kinesis](amazon-kinesis.md)
-* [Connexion à Amazon S3](amazon-s3.md)
+* [Connexion Amazon S3](amazon-s3.md)
 * [Connexion Azure Blob](azure-blob.md)
 * [Connexion à Azure Event Hubs](azure-event-hubs.md)
 * [Connexion SFTP](sftp.md)
 
 ## Connexion à une nouvelle destination de stockage dans le cloud {#connect-destination}
 
-Pour envoyer des segments aux destinations de stockage dans le cloud pour vos campagnes, Platform doit d’abord se connecter à la destination. Voir [tutoriel sur la création de destination](../../ui/connect-destination.md) pour plus d’informations sur la configuration d’une nouvelle destination.
+Pour envoyer des segments aux destinations de stockage dans le cloud pour vos campagnes, Platform doit d’abord se connecter à la destination. Voir le [tutoriel sur la création de destinations](../../ui/connect-destination.md) pour des informations détaillées sur la configuration d’une nouvelle destination.
 
 
 ## Utilisez les macros pour créer un dossier à l’emplacement de stockage {#use-macros}

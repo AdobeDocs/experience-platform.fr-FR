@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;accueil;rubriques populaires;gouvernance des données;api de libellé d’utilisation des données;api policy service;présentation des libellés d’utilisation des données
+keywords: Experience Platform;accueil;rubriques populaires;gouvernance des données;api de libellé d’utilisation des données;api policy service;présentation des libellés d’utilisation des données
 solution: Experience Platform
 title: Présentation des libellés d’utilisation des données
 topic-legacy: labels
-description: La gouvernance des données d’Adobe Experience Platform vous permet d’appliquer des libellés d’utilisation des données aux jeux de données et aux champs, en les classant en fonction des stratégies d’utilisation des données associées. Ce document offre une présentation des libellés d’utilisation des données dans Experience Platform.
+description: La gouvernance des données d’Adobe Experience Platform vous permet d’appliquer des libellés d’utilisation des données aux jeux de données et aux champs, en les classant en fonction des stratégies d’utilisation des données associées. Ce document offre une présentation des libellés d’utilisation des données dans Experience Platform.
 exl-id: 4f113000-b9a1-4dfb-9502-6a5d08f0b26f
 source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '615'
 ht-degree: 100%
 
@@ -30,15 +30,15 @@ Outre les libellés fournis par Adobe, vous pouvez également définir vos propr
 
 ## Héritage de libellé pour les segments d’audience
 
-Tous les segments d’audience créés par le [service de segmentation d’Adobe Experience Platform](../../segmentation/home.md) héritent des libellés d’utilisation de leurs jeux de données correspondants. Cela permet à Experience Platform d’appliquer automatiquement la stratégie d’utilisation des données lors de l’activation de segments vers des destinations.
+Tous les segments d’audience créés par le [service de segmentation d’Adobe Experience Platform](../../segmentation/home.md) héritent des libellés d’utilisation de leurs jeux de données correspondants. Cela permet à Experience Platform d’appliquer automatiquement la stratégie d’utilisation des données lors de l’activation de segments vers des destinations.
 
 Outre l’héritage de libellés au niveau des jeux de données, les segments héritent par défaut de tous les libellés au niveau des champs de leurs jeux de données associés. Par conséquent, vous pouvez identifier plus facilement les attributs à exclure de vos segments et les empêcher d’hériter des libellés de champs exclus.
 
 Pour plus d’informations sur le fonctionnement de l’application automatique dans Platform, consultez la présentation de l’[application automatique des stratégies](../enforcement/auto-enforcement.md).
 
-### Héritage des contrôles d’exportation de données d’Adobe Audience Manager
+### Héritage des contrôles d’exportation de données d’Adobe Audience Manager
 
-[!DNL Experience Platform] permet de partager des segments avec Adobe Audience Manager. Les contrôles d’exportation de données appliqués aux segments d’Audience Manager sont convertis en libellés équivalents et en actions marketing reconnues par la gouvernance des données [!DNL Experience Platform].
+[!DNL Experience Platform] permet de partager des segments avec Adobe Audience Manager. Les contrôles d’exportation de données appliqués aux segments d’Audience Manager sont convertis en libellés équivalents et en actions marketing reconnues par la gouvernance des données [!DNL Experience Platform].
 
 Pour savoir comment des contrôles d‘exportation de données spécifiques se mappent aux libellés d’utilisation des données dans [!DNL Platform], consultez la [documentation sur Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=fr#aam-data-export-control-in-aep).
 

@@ -3,7 +3,7 @@ title: Extensions tierces
 description: Découvrez les extensions tierces pour Adobe Experience Platform.
 exl-id: c82546de-a89d-4d1c-b97a-43983b513360
 source-git-commit: 0175c8ebd0efe52d8ae80f4dfe6075630f73f945
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '143'
 ht-degree: 100%
 

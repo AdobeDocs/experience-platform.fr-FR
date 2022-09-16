@@ -3,7 +3,7 @@ keywords: Experience Platform;accueil;rubriques les plus consultées;préparati
 solution: Experience Platform
 title: Exemple de point d’entrée de l’API Data
 topic-legacy: sample data
-description: 'Vous pouvez utiliser le point d’entrée `/samples` dans l’API Adobe Experience Platform pour récupérer, créer, mettre à jour et valider par programmation les donnée d’exemple de mappage. '
+description: Vous pouvez utiliser le point d’entrée `/samples` dans l’API Adobe Experience Platform pour récupérer, créer, mettre à jour et valider par programmation les donnée d’exemple de mappage.
 source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '401'

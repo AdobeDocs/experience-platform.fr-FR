@@ -13,13 +13,13 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 Dans une règle de balise, une action est exécutée après que les conditions de la règle ont satisfait à lʼévaluation. Les types dʼactions sont fournis par les extensions et leurs effets sont entièrement définis par lʼauteur de lʼextension.
 
 Par exemple, une extension peut fournir un type d’action « show support chat » qui peut afficher une boîte de dialogue de conversation d’assistance pour aider les utilisateurs qui ont du mal à payer leur commande.
 
-Ce document explique comment définir des types dʼaction pour une extension Edge dans Adobe Experience Platform.
+Ce document explique comment définir des types dʼaction pour une extension Edge dans Adobe Experience Platform.
 
 >[!IMPORTANT]
 >

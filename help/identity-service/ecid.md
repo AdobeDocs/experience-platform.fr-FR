@@ -30,8 +30,8 @@ L’identification de vos utilisateurs en ligne nécessite l’instrumentalisati
 
 La documentation suivante fournit d’autres ressources sur la compréhension d’ECID dans différentes applications Platform et Experience Cloud :
 
-* Pour utiliser ECID avec la mise en oeuvre du site web, consultez la documentation de [Experience Cloud Identity Service](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=fr).
-* Pour découvrir comment l’ECID est utilisé avec les applications et le contenu web mobile, consultez la documentation sur le [suivi des visiteurs entre une application et le web mobile](https://experienceleague.adobe.com/docs/mobile-services/ios/sdk-reference-ios/hybrid-app.html?lang=en#sdk-reference-ios).
-* Le déploiement de ces outils peut être simple et facile à gérer si vous utilisez des [balises](../tags/home.md).
-* Consultez la [documentation du Privacy Service](../privacy-service/identity-data.md) pour plus d’informations sur l’utilisation de l’ECID afin de faciliter la conformité aux réglementations de confidentialité comme le RGPD.
-* Pour plus d’informations sur ECID avec le contexte de Platform, consultez la [présentation d’Identity Service](./home.md) et la [présentation des espaces de noms d’identité](./namespaces.md).
+* Pour utiliser ECID avec l’implémentation de site web, consultez la documentation pour [Service Experience Cloud Identity](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=fr).
+* Pour découvrir comment ECID est utilisé avec les applications et le contenu web mobile, consultez la documentation pour [suivi des visiteurs entre une application et le web mobile](https://experienceleague.adobe.com/docs/mobile-services/ios/sdk-reference-ios/hybrid-app.html?lang=en#sdk-reference-ios).
+* Le déploiement de ces outils peut être simple et facile à gérer si vous utilisez [tags](../tags/home.md).
+* Voir [Documentation du Privacy Service](../privacy-service/identity-data.md) pour plus d’informations sur l’utilisation de l’ECID afin de faciliter la conformité aux réglementations de confidentialité comme le RGPD.
+* Pour plus d’informations sur ECID avec le contexte de Platform, voir [Présentation d’Identity Service](./home.md) et le [espaces de noms d’identité - Aperçu](./namespaces.md).

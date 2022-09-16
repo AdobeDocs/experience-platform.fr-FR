@@ -6,7 +6,7 @@ exl-id: ce39b95b-cff7-46cf-a14c-8203017c8826
 source-git-commit: 9f00bff31f9e7d2da1294d3d1f24cba7870a4614
 workflow-type: tm+mt
 source-wordcount: '961'
-ht-degree: 31%
+ht-degree: 32%
 
 ---
 
@@ -60,7 +60,7 @@ Données activées pour les profils ingérées dans [!DNL Platform] est stocké 
 
 ## Mise à jour des attributs de profil {#update-profile}
 
-Il peut parfois être nécessaire de mettre à jour les données du magasin de profils de votre organisation. Vous pouvez par exemple avoir besoin de corriger des enregistrements ou de modifier une valeur d’attribut. Cela peut être effectué par ingestion par lots et nécessite un jeu de données activé par Profile configuré avec une balise upsert. Pour plus d’informations sur la façon de configurer un jeu de données pour les mises à jour d’attributs, veuillez vous référer au tutoriel concernant l’[activation d’un jeu de données pour Profile et upsert](../../catalog/datasets/enable-upsert.md).
+Il peut parfois être nécessaire de mettre à jour les données du magasin de profils de votre organisation. Vous pouvez par exemple avoir besoin de corriger des enregistrements ou de modifier une valeur d’attribut. Cette opération peut être effectuée par ingestion par lot et nécessite un jeu de données compatible avec les profils et configuré avec une balise upsert. Pour plus d’informations sur la façon de configurer un jeu de données pour les mises à jour d’attributs, veuillez vous référer au tutoriel concernant l’[activation d’un jeu de données pour Profile et upsert](../../catalog/datasets/enable-upsert.md).
 
 ## Étapes suivantes {#next-steps}
 

@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;accueil;rubriques populaires;RGPD;rgpd;ccpa;CCPA;pdpa;PDPA;pdpa_that;PDPA_THA;lgpd;LGPD;lgpd_bra;LGPD_BRA;
+keywords: Experience Platform;accueil;rubriques populaires;RGPD;rgpd;ccpa;CCPA;pdpa;PDPA;pdpa_that;PDPA_THA;lgpd;LGPD;lgpd_bra;LGPD_BRA;
 solution: Experience Platform
 title: Présentation de Privacy Service
 topic-legacy: overview
-description: Privacy Service vous permet de faciliter votre mise en conformité automatisée aux réglementations légales liées à la confidentialité dans vos opérations de données Experience Cloud.
+description: Privacy Service vous permet de faciliter votre mise en conformité automatisée aux réglementations légales liées à la confidentialité dans vos opérations de données Experience Cloud.
 exl-id: 585f7619-5072-413b-9a62-be0ea0cd4d1b
 source-git-commit: 82dea48c732b3ddea957511c22f90bbd032ed9b7
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1389'
 ht-degree: 100%
 
@@ -16,9 +16,9 @@ ht-degree: 100%
 
 Pour offrir de meilleures expériences client, vous devez collecter et stocker les données personnelles de vos clients. Lorsque vous utilisez ces données, il est important de comprendre et de respecter la confidentialité de vos clients. Les nouvelles réglementations légales et organisationnelles donnent aux utilisateurs le droit d’accéder à leurs données personnelles et de les supprimer de vos banques de données sur demande.
 
-Adobe Experience Platform [!DNL Privacy Service] a été développé en réponse à un changement fondamental dans la façon dont les entreprises sont tenues de gérer les données personnelles de leurs clients. Le principal objectif de [!DNL Privacy Service] est d’automatiser la conformité aux réglementations de confidentialité des données qui, en cas de violation, peuvent entraîner des amendes importantes et perturber les opérations de données de votre entreprise.
+Adobe Experience Platform [!DNL Privacy Service] a été développé en réponse à un changement fondamental dans la façon dont les entreprises sont tenues de gérer les données personnelles de leurs clients. Le principal objectif de [!DNL Privacy Service] est d’automatiser la conformité aux réglementations de confidentialité des données qui, en cas de violation, peuvent entraîner des amendes importantes et perturber les opérations de données de votre entreprise.
 
-[!DNL Privacy Service] fournit une API RESTful et une interface utilisateur pour vous aider à gérer les requêtes liées aux données des clients. Grâce à [!DNL Privacy Service], vous pouvez envoyer des demandes d’accès et de suppression de données clients personnelles depuis les applications Adobe Experience Cloud. Cela facilite l’automatisation de la mise en conformité concernant les réglementations légales et organisationnelles liées à la confidentialité.
+[!DNL Privacy Service] fournit une API RESTful et une interface utilisateur pour vous aider à gérer les requêtes liées aux données des clients. Grâce à [!DNL Privacy Service], vous pouvez envoyer des demandes d’accès et de suppression de données clients personnelles depuis les applications Adobe Experience Cloud. Cela facilite l’automatisation de la mise en conformité concernant les réglementations légales et organisationnelles liées à la confidentialité.
 
 ## Prise en main de [!DNL Privacy Service] {#getting-started}
 
@@ -49,13 +49,13 @@ En plus des règlements juridiques, toute norme organisationnelle ou industriell
 
 ### Libellés des données pour les demandes d’accès à des informations personnelles {#label}
 
-En fonction des applications [!DNL Experience Cloud] que vous utilisez, vous devez créer des libellés pour les champs de données spécifiques auxquels accéder ou que vous devez supprimer en réponse aux demandes d’accès à des informations personnelles. Le processus de création de libellés pour les données varie d’une application à l’autre. Pour savoir comment appliquer des libellés aux données de chaque application Adobe prise en charge, consultez le document sur les [applications Experience Cloud](./experience-cloud-apps.md).
+En fonction des applications [!DNL Experience Cloud] que vous utilisez, vous devez créer des libellés pour les champs de données spécifiques auxquels accéder ou que vous devez supprimer en réponse aux demandes d’accès à des informations personnelles. Le processus de création de libellés pour les données varie d’une application à l’autre. Pour savoir comment appliquer des libellés aux données de chaque application Adobe prise en charge, consultez le document sur les [applications Experience Cloud](./experience-cloud-apps.md).
 
 ### Détermination des types de données d’identité à envoyer à [!DNL Privacy Service] {#identity}
 
 Pour que [!DNL Privacy Service] puisse traiter une demande d’accès à des informations personnelles émanant d’un client, il faut qu’au moins une valeur d’identité unique soit fournie pour ce client dans la demande elle-même. Une valeur d’identité unique désigne tout élément d’information pouvant être utilisé pour identifier une personne et ses données personnelles stockées dans vos magasins de données [!DNL Experience Cloud]. Le [!DNL Privacy Service] utilise ces informations d’identité pour localiser et traiter les données personnelles du client en fonction de la nature de la demande (accès, suppression ou désinscription).
 
-Le type et le nombre de valeurs d’identité que vous devez fournir pour chaque client varient en fonction des applications [!DNL Experience Cloud] utilisées par votre système CRM. Certaines applications utilisent leurs propres valeurs d’ID client internes (tels que les ID Adobe Target), tandis que d’autres solutions reposent sur des identifiants globaux du [!DNL Experience Cloud Identity Service] (ECID) d’Adobe, qui effectuent le suivi de l’activité client dans toutes les applications [!DNL Experience Cloud]. En outre, des informations personnelles génériques telles qu’une adresse e-mail ou un numéro de téléphone peuvent également servir de données d’identité valides.
+Le type et le nombre de valeurs d’identité que vous devez fournir pour chaque client varient en fonction des applications [!DNL Experience Cloud] utilisées par votre système CRM. Certaines applications utilisent leurs propres valeurs d’ID client internes (tels que les ID Adobe Target), tandis que d’autres solutions reposent sur des identifiants globaux du [!DNL Experience Cloud Identity Service] (ECID) d’Adobe, qui effectuent le suivi de l’activité client dans toutes les applications [!DNL Experience Cloud]. En outre, des informations personnelles génériques telles qu’une adresse e-mail ou un numéro de téléphone peuvent également servir de données d’identité valides.
 
 Le document sur les [données d’identité pour les demandes d’accès à des informations personnelles](./identity-data.md) fournit des informations plus détaillées sur les types d’informations relatives à l’identité acceptées pour [!DNL Privacy Service]. Le document fournit également des instructions sur la manière d’exploiter les technologies Adobe pour récupérer efficacement les informations d’identité appropriées de vos clients lorsqu’ils interagissent avec votre site web et envoyer ces données à [!DNL Privacy Service] dans des demandes d’API.
 
@@ -67,9 +67,9 @@ Une fois que vous avez déterminé les besoins en matière de confidentialité d
 >
 >Les sections ci-dessous contiennent des liens menant à la documentation qui explique comment effectuer des demandes d’accès à des informations personnelles génériques dans l’API ou l’interface utilisateur. Toutefois, en fonction des applications [!DNL Experience Cloud] que vous utilisez, les champs à envoyer dans la payload de requête peuvent différer des exemples qui se trouvent dans ces guides.
 >
->Tout en suivant les instructions des guides relatifs à l’API ou à l’interface utilisateur, reportez-vous au document sur [Privacy Service et les applications Experience Cloud](./experience-cloud-apps.md) pour obtenir de plus amples informations sur la façon de formater les demandes d’accès à des informations personnelles pour une ou plusieurs de vos applications [!DNL Experience Cloud].
+>Tout en suivant les instructions des guides relatifs à l’API ou à l’interface utilisateur, reportez-vous au document sur [Privacy Service et les applications Experience Cloud](./experience-cloud-apps.md) pour obtenir de plus amples informations sur la façon de formater les demandes d’accès à des informations personnelles pour une ou plusieurs de vos applications [!DNL Experience Cloud].
 >
->Il est également important de noter que les demandes d’accès à des informations personnelles sont traitées de manière asynchrone dans les applications Experience Cloud. Lorsqu’une demande est reçue par Privacy Service, quelques minutes à plusieurs semaines peuvent être nécessaires à chaque application pour répondre à la requête. Le temps nécessaire à l’exécution de chaque demande est spécifique à l’application que vous utilisez et dépend également de la quantité de données à traiter.
+>Il est également important de noter que les demandes d’accès à des informations personnelles sont traitées de manière asynchrone dans les applications Experience Cloud. Lorsqu’une demande est reçue par Privacy Service, quelques minutes à plusieurs semaines peuvent être nécessaires à chaque application pour répondre à la requête. Le temps nécessaire à l’exécution de chaque demande est spécifique à l’application que vous utilisez et dépend également de la quantité de données à traiter.
 
 #### Utilisation de l’API
 

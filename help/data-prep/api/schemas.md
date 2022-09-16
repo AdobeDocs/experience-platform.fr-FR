@@ -3,7 +3,7 @@ keywords: Experience Platform;accueil;rubriques les plus consultées;préparati
 solution: Experience Platform
 title: Point d’entrée de l’API Schemas
 topic-legacy: schemas
-description: 'Vous pouvez utiliser le point d’entrée `/schemas` dans l’API Adobe Experience Platform pour récupérer, créer et mettre à jour par programmation les schémas à utiliser avec le mappeur dans Platform. '
+description: Vous pouvez utiliser le point d’entrée `/schemas` dans l’API Adobe Experience Platform pour récupérer, créer et mettre à jour par programmation les schémas à utiliser avec le mappeur dans Platform.
 source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '613'

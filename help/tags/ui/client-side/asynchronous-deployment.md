@@ -1,6 +1,6 @@
 ---
 title: Déploiement asynchrone
-description: Découvrez comment déployer les bibliothèques de balises Adobe Experience Platform de manière asynchrone sur votre site web.
+description: Découvrez comment déployer les bibliothèques de balises d’Adobe Experience Platform de manière asynchrone sur votre site web.
 exl-id: ed117d3a-7370-42aa-9bc9-2a01b8e7794e
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
@@ -13,9 +13,9 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
-Les performances et le déploiement sans blocage des bibliothèques JavaScript exigés par nos produits sont de plus en plus importants pour les utilisateurs dʼAdobe Experience Cloud. Des outils tels que [[!DNL Google PageSpeed]](https://developers.google.com/speed/pagespeed/insights/) recommandent aux utilisateurs de modifier leur manière de déployer les bibliothèques Adobe sur leur site. Cet article explique comment utiliser les bibliothèques JavaScript dʼAdobe de manière asynchrone.
+Les performances et le déploiement sans blocage des bibliothèques JavaScript exigés par nos produits sont de plus en plus importants pour les utilisateurs dʼAdobe Experience Cloud. Des outils tels que [[!DNL Google PageSpeed]](https://developers.google.com/speed/pagespeed/insights/) recommandent aux utilisateurs de modifier leur manière de déployer les bibliothèques Adobe sur leur site. Cet article explique comment utiliser les bibliothèques JavaScript dʼAdobe de manière asynchrone.
 
 ## Synchrone et asynchrone
 
@@ -53,7 +53,7 @@ Ensuite, le chargement de la bibliothèque de balises peut se terminer avant ou 
 
 Pour ces deux raisons, il est important de montrer comment les types d&#39;événements [Library Loaded (Bibliothèque chargée)](../../extensions/web/core/overview.md#library-loaded-page-top), [Page Bottom (Bas de page)](../../extensions/web/core/overview.md#page-bottom), [DOM Ready (Prêt pour DOM)](../../extensions/web/core/overview.md#page-bottom), et [Window Loaded (Fenêtre chargée)](../../extensions/web/core/overview.md#window-loaded) provenant de l’extension Core fonctionnent lors du chargement asynchrone d’une bibliothèque.
 
-Si votre propriété de balise contient les quatre règles suivantes :
+Si votre propriété de balise contient les quatre règles suivantes :
 
 * Règle A : utilise le type d’événement Library Loaded (Bibliothèque chargée).
 * Règle B : utilise le type d’événement Page Bottom (Bas de page).

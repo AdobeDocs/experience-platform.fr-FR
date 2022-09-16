@@ -6,7 +6,7 @@ exl-id: 16450867-040a-4be1-a6c0-f03d0a1b90ba
 source-git-commit: c31855bff9d87133252c43e2f2f2fe1960c7b144
 workflow-type: tm+mt
 source-wordcount: '191'
-ht-degree: 2%
+ht-degree: 18%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->Le contrôle d’accès basé sur les attributs est actuellement disponible dans une version limitée pour les clients de santé basés aux États-Unis. Cette fonctionnalité sera disponible pour tous les clients Real-time Customer Data Platform une fois qu’elle sera entièrement publiée.
+>Le contrôle d’accès basé sur les attributs est actuellement disponible pour un nombre restreint d’utilisateurs, qui sont actifs dans le secteur de la santé et basés aux États-Unis. Cette fonctionnalité sera disponible pour tous les clients Real-time Customer Data Platform dès son déploiement à grande échelle.
 
 Si vous souhaitez afficher les détails et les rôles des utilisateurs auxquels ils sont affectés, sélectionnez la variable **[!UICONTROL Utilisateurs]** .
 

@@ -17,7 +17,7 @@ Pour ingérer des données dans Adobe Experience Platform, le format et la struc
 
 Pour tout schéma que vous définissez dans l’interface utilisateur de l’Experience Platform, vous pouvez générer un exemple d’objet JSON conforme à la structure du schéma. Cet objet peut servir de modèle pour toute donnée ingérée dans des jeux de données qui utilisent le schéma en question.
 
-Dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Schémas]** dans le volet de navigation de gauche. Sous l’onglet **[!UICONTROL Parcourir]** , localisez le schéma pour lequel vous souhaitez générer des données d’exemple. Sélectionnez-la dans la liste et le rail de droite se met à jour pour afficher des détails sur le schéma. À partir de là, sélectionnez **[!UICONTROL Télécharger le fichier d’exemple]**.
+Dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Schémas]** dans le volet de navigation de gauche. Sous , **[!UICONTROL Parcourir]** recherchez le schéma pour lequel vous souhaitez générer des données d’exemple. Sélectionnez-la dans la liste et le rail de droite se met à jour pour afficher des détails sur le schéma. À partir de là, sélectionnez **[!UICONTROL Télécharger un exemple de fichier]**.
 
 ![](../images/ui/sample/sample-data.png)
 
@@ -25,8 +25,8 @@ Un exemple de fichier JSON est téléchargé par le navigateur. Vous pouvez dés
 
 ## Étapes suivantes
 
-Ce guide explique comment générer un exemple de fichier JSON à partir d’un schéma XDM dans l’interface utilisateur de Platform. Pour savoir comment générer des données d’exemple à l’aide de l’API Schema Registry, consultez le [guide d’exemple de point de terminaison de données](../api/sample-data.md).
+Ce guide explique comment générer un exemple de fichier JSON à partir d’un schéma XDM dans l’interface utilisateur de Platform. Pour savoir comment générer des données d’exemple à l’aide de l’API Schema Registry, reportez-vous à la section [guide d’exemple de point de fin de données](../api/sample-data.md).
 
-Une fois que vous êtes prêt à commencer à ingérer des données, consultez le tutoriel sur le [mappage d’un fichier CSV à XDM](../../ingestion/tutorials/map-a-csv-file.md) pour savoir comment mapper un fichier de données plat (tel qu’un fichier CSV) à un schéma XDM et l’ingérer dans Platform. Vous pouvez également établir une [connexion source](../../sources/home.md) pour importer vos données d’une source externe et les mapper à XDM.
+Une fois que vous êtes prêt à commencer à ingérer des données, consultez le tutoriel sur [mappage d’un fichier CSV à XDM](../../ingestion/tutorials/map-a-csv-file.md) pour savoir comment mapper un fichier de données plat (tel qu’un fichier CSV) à un schéma XDM et l’ingérer dans Platform. Vous pouvez également établir une [connexion source](../../sources/home.md) pour importer vos données d’une source externe et les mapper à XDM.
 
-Pour plus d’informations sur les fonctionnalités de l’espace de travail [!UICONTROL Schémas] dans l’interface utilisateur, reportez-vous à la [[!UICONTROL Présentation des schémas] de l’espace de travail](./overview.md).
+Pour plus d’informations sur les fonctionnalités de la variable [!UICONTROL Schémas] dans l’interface utilisateur, reportez-vous à la section [[!UICONTROL Schémas] présentation de workspace](./overview.md).

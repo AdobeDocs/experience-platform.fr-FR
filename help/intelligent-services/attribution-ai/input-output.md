@@ -8,7 +8,7 @@ exl-id: d6dbc9ee-0c1a-4a5f-b922-88c7a36a5380
 source-git-commit: e33d59c4ac28f55ba6ae2fc073d02f8738159263
 workflow-type: tm+mt
 source-wordcount: '2504'
-ht-degree: 13%
+ht-degree: 15%
 
 ---
 
@@ -238,8 +238,8 @@ Le tableau ci-dessous associe les scores agrégés aux scores bruts. Si vous sou
 >[!IMPORTANT]
 >
 > - Attribution AI utilise uniquement des données mises à jour pour la formation et la notation ultérieures. De même, lorsque vous demandez la suppression de données, Customer AI s’abstient d’utiliser les données supprimées.
-> - L’IA dédiée à l’attribution utilise les jeux de données Platform. Pour prendre en charge les demandes de droits des consommateurs qu’une marque peut recevoir, les marques doivent utiliser le Privacy Service Platform pour soumettre les demandes d’accès et de suppression des clients afin de supprimer leurs données dans le lac de données, Identity Service et Real-time Customer Profile.
-> - Tous les jeux de données que nous utilisons pour l’entrée/la sortie des modèles suivront les directives de Platform. Le chiffrement des données de plateforme s’applique aux données au repos et en transit. Consultez la documentation pour en savoir plus sur [cryptage des données](../../../help/landing/governance-privacy-security/encryption.md)
+> - L’IA dédiée à l’attribution utilise les jeux de données Platform. Pour prendre en charge les demandes de droits des consommateurs qu’une marque peut recevoir, les marques doivent utiliser le Privacy Service Platform pour soumettre les demandes d’accès et de suppression des clients afin de supprimer leurs données dans le lac de données, Service d’identités et Profil client en temps réel.
+> - Tous les jeux de données que nous utilisons pour l’entrée/la sortie des modèles suivront les directives de Platform. Le chiffrement des données de Platform s’applique aux données au repos et en transit. Consultez la documentation pour en savoir plus sur le [chiffrement des données](../../../help/landing/governance-privacy-security/encryption.md)
 
 
 ## Étapes suivantes {#next-steps}

@@ -1,6 +1,6 @@
 ---
 title: Guide de démarrage rapide
-description: Découvrez comment vous familiariser rapidement avec les balises dans Adobe Experience Platform.
+description: Découvrez comment vous familiariser rapidement avec les balises dans Adobe Experience Platform.
 exl-id: 490ee344-3b18-4189-9293-2378f86fb10d
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
@@ -13,9 +13,9 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
-Les balises représentent la nouvelle génération de la technologie de gestion des balises d’Adobe Experience Platform. Elles sont conçues de zéro de manière à prendre en charge un réseau ouvert et durable, où chacun peut construire ses propres intégrations que les clients Adobe peuvent déployer sur leurs sites. Il s’agit de la première application d’une API, donc tout ce que vous pouvez faire par le biais de l’interface utilisateur, vous pouvez également le faire par programmation via une API.
+Les balises représentent la nouvelle génération de la technologie de gestion des balises d’Adobe Experience Platform. Elles sont conçues de zéro de manière à prendre en charge un réseau ouvert et durable, où chacun peut construire ses propres intégrations que les clients Adobe peuvent déployer sur leurs sites. Il s’agit de la première application d’une API, donc tout ce que vous pouvez faire par le biais de l’interface utilisateur, vous pouvez également le faire par programmation via une API.
 
 Le workflow de base des balises :
 
@@ -29,7 +29,7 @@ Le workflow de base des balises :
 
 ## 1. Configuration de groupes et d’utilisateurs
 
-Les balises sont entièrement intégrées à votre Adobe ID. Les autorisations utilisateur sont gérées via l’Admin Console avec d’autres produits et solutions Adobe depuis [!DNL Creative Cloud], [!DNL Document Cloud] et Experience Cloud.
+Les balises sont totalement intégrées à votre Adobe ID. Les autorisations utilisateur sont gérées via lʼAdmin Console avec dʼautres produits et solutions Adobe depuis [!DNL Creative Cloud], [!DNL Document Cloud] et Experience Cloud.
 
 Les balises disposent dʼun système de gestion des utilisateurs basé sur les droits. Cela signifie que les droits individuels doivent être accordés explicitement. Ces droits sont octroyés aux groupes, puis les utilisateurs sont ajoutés aux groupes appropriés afin d’y avoir accès. Même si votre entreprise a accès à lʼinterface utilisateur de la collecte de données, les utilisateurs individuels ne peuvent rien faire tant quʼun administrateur de lʼentreprise ne leur a pas explicitement accordé des droits.
 
@@ -37,7 +37,7 @@ Pour obtenir des instructions détaillées sur la création de groupes et lʼajo
 
 ## 2. Connexion
 
-Une fois les droits relatifs aux balises ajoutés à votre Adobe ID, vous devez vous connecter à lʼinterface utilisateur de la collecte de données. Pour ce faire, accédez directement à lʼ [écran de connexion Experience Cloud](https://experiencecloud.adobe.com), puis sélectionnez l’interface utilisateur de la collecte de données dans l’onglet Accès rapide.
+Une fois les droits relatifs aux balises ajoutés à votre Adobe ID, vous devez vous connecter à lʼinterface utilisateur de la collecte de données. Pour ce faire, accédez directement à lʼ [écran de connexion Experience Cloud](https://experiencecloud.adobe.com), puis sélectionnez l’interface utilisateur de la collecte de données dans l’onglet Accès rapide.
 
 >[!NOTE]
 >
@@ -55,7 +55,7 @@ Une extension est une intégration construite par Adobe ou ses partenaires qui a
 
 Toutes les nouvelles propriétés sont dotées de l’ [extension Core](../extensions/web/core/overview.md). Les propriétés mobiles sont dotées d’extensions supplémentaires. Lʼextension Core est construite par Adobe afin de fournir un solide ensemble de types dʼéléments de données par défaut pour votre couche de données et de types dʼévénements pour vos règles. La plupart des actions que vous souhaitez effectuer (obtenir un ECID, envoyer des balises [!DNL Adobe Analytics], charger la mbox globale [!DNL Target], etc.) proviennent des extensions que vous installez depuis le catalogue.
 
-Ce qui rend les balises de Platform vraiment uniques, ce sont les extensions que chacun peut construire. Vous souhaitez déposer un pixel de remarketing Facebook sur votre site ? Découvrez l’extension créée par Facebook. Vous souhaitez la même pour Twitter ou LinkedIn ? Utilisez ces extensions. Vous souhaitez réaliser une enquête ? Jetez un œil à Question Pro ou Foresee. Vous souhaitez gérer la confidentialité et le consentement de vos utilisateurs finaux pour les aider avec [!DNL GDPR] ? Allez voir du côté d’Evidon et de Trust Arc. Vous souhaitez avoir des informations granulaires sur le comportement des utilisateurs individuels de votre site ? Clicktale peut vous être utile. Pour plus d’informations, consultez la section sur l’ [ajout d’une nouvelle extension](../ui/managing-resources/extensions/overview.md#add-a-new-extension).
+Ce qui rend les balises de Platform vraiment uniques, ce sont les extensions que chacun peut construire. Vous souhaitez déposer un pixel de remarketing Facebook sur votre site ? Découvrez l’extension créée par Facebook. Vous souhaitez la même pour Twitter ou LinkedIn ? Utilisez ces extensions. Vous souhaitez réaliser une enquête ? Jetez un œil à Question Pro ou Foresee. Vous souhaitez gérer la confidentialité et le consentement de vos utilisateurs finaux pour les aider avec [!DNL GDPR] ? Allez voir du côté d’Evidon et de Trust Arc. Vous souhaitez avoir des informations granulaires sur le comportement des utilisateurs individuels de votre site ? Clicktale peut vous être utile. Pour plus d’informations, consultez la section sur l’ [ajout d’une nouvelle extension](../ui/managing-resources/extensions/overview.md#add-a-new-extension).
 
 ## 5. Création de règles et d’éléments de données
 
@@ -101,8 +101,8 @@ Pour plus d’informations, reportez-vous à la section [Hôtes](../ui/publishin
 
 Chaque bibliothèque est créée dans un environnement. Un environnement définit la manière dont vous souhaitez que votre version apparaisse lorsqu’elle est publiée. Vous pouvez spécifier :
 
-* **Hôte :** chaque environnement a besoin d’un hôte qui détermine le point d’entrée où toutes les versions créées dans cet environnement seront poussées.
-* **Archive :** le paramètre par défaut consiste à déployer votre version sous la forme d’un fichier .js miniaturisé. Si vous utilisez du code personnalisé, plusieurs fichiers peuvent s’y faire référence. Ils peuvent être combinés en un seul fichier zip et chiffrés.
+* **Hôte :** chaque environnement a besoin d’un hôte qui détermine le point d’entrée où toutes les versions créées dans cet environnement seront poussées.
+* **Archive :** le paramètre par défaut consiste à déployer votre version sous la forme d’un fichier .js miniaturisé. Si vous utilisez du code personnalisé, plusieurs fichiers peuvent s’y faire référence. Ils peuvent être combinés en un seul fichier zip et chiffrés.
 
 Après avoir enregistré votre environnement, il génère le code incorporé que vous pouvez copier et coller dans votre site web. Veuillez noter que le code incorporé ne fonctionnera pas tant que vous n’aurez pas créé une bibliothèque et compilé une version. Pour plus d’informations, reportez-vous à la section [Environnements](../ui/publishing/environments.md).
 
@@ -134,6 +134,6 @@ Pour plus d’informations sur les différents états et options disponibles pen
 
 Pour en savoir plus sur les balises, consultez les ressources suivantes :
 
-* **[Communauté de la collecte de données](https://forums.adobe.com/community/experience-cloud/platform/launch)** : posez vos questions et répondez à celles des autres, proposez des idées, prononcez-vous sur les idées des autres. Connectez-vous avec votre Adobe ID.
+* **[Communauté de la collecte de données](https://forums.adobe.com/community/experience-cloud/platform/launch)** : posez vos questions et répondez à celles des autres, proposez des idées, prononcez-vous sur les idées des autres. Connectez-vous avec votre Adobe ID.
 * **[Developer Docs](https://developer.adobelaunch.com/)** : rejoignez la communauté des développeurs de balises pour créer des extensions ou utiliser les API de balises.
-* **[Présentation des tutoriels](https://experienceleague.adobe.com/docs/core-services-learn/tutorials/overview.html?lang=fr)** : ces documents vous présentent les concepts de balises, y compris le transfert d’événement et le SDK mobile dans les applications Android.
+* **[Présentation des tutoriels](https://experienceleague.adobe.com/docs/core-services-learn/tutorials/overview.html?lang=fr)** : ces documents vous présentent les concepts de balises, y compris le transfert d’événement et le SDK mobile dans les applications Android.

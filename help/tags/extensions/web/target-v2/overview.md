@@ -1,6 +1,6 @@
 ---
-title: Présentation de l’extension Adobe Target v2
-description: Découvrez l’extension de balise Adobe Target v2 dans Adobe Experience Platform.
+title: Présentation de l’extension Adobe Target v2
+description: Découvrez l’extension de balise Adobe Target v2 dans Adobe Experience Platform.
 exl-id: 8f491d67-86da-4e27-92bf-909cd6854be1
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
@@ -9,11 +9,11 @@ ht-degree: 100%
 
 ---
 
-# Présentation de l’extension Adobe Target v2
+# Présentation de l’extension Adobe Target v2
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 Utilisez cette référence pour obtenir des informations sur les options disponibles lors de l’utilisation de cette extension pour créer une règle.
 
@@ -23,7 +23,7 @@ Utilisez cette référence pour obtenir des informations sur les options disponi
 >
 >L’extension Adobe Target requiert le fichier at.js 2.x.
 
-Si l’extension Adobe Target n’est pas encore installée, ouvrez votre propriété, puis cliquez sur **[!UICONTROL Extensions > Catalogue]**, survolez l’extension Target et cliquez sur **[!UICONTROL Installer]**.
+Si l’extension Adobe Target n’est pas encore installée, ouvrez votre propriété, puis cliquez sur **[!UICONTROL Extensions > Catalogue]**, survolez l’extension Target et cliquez sur **[!UICONTROL Installer]**.
 
 Pour configurer l’extension, ouvrez l’onglet Extensions, survolez-la avec la souris, puis cliquez sur **[!UICONTROL Configurer]**.
 
@@ -41,7 +41,7 @@ Le code client est l’identificateur du compte Target. Cette valeur doit presqu
 
 #### Organization ID (ID d’organisation)
 
-Cet identifiant associe votre mise en œuvre à votre compte Adobe Experience Cloud. Cette valeur doit presque toujours être conservée comme valeur par défaut. Elle peut être modifiée à l’aide d’éléments de données.
+Cet identifiant associe votre mise en œuvre à votre compte Adobe Experience Cloud. Cette valeur doit presque toujours être conservée comme valeur par défaut. Elle peut être modifiée à l’aide d’éléments de données.
 
 #### Server Domain (Domaine du serveur)
 
@@ -55,7 +55,7 @@ Lorsque cette option est activée, Adobe Target fournit une fonctionnalité d�
 
 Si la réponse de Target n’est pas reçue au cours de la période définie, la demande expire et le contenu par défaut s’affiche. Des tentatives de requêtes supplémentaires sont effectuées pendant la session du visiteur. La valeur par défaut de 3 000 ms peut différer du délai configuré dans l’interface utilisateur de Target.
 
-Pour plus d’informations sur le fonctionnement du délai d’expiration, consultez l’[aide d’Adobe Target](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/deploy-at-js/implementing-target-without-a-tag-manager.html?lang=fr).
+Pour plus d’informations sur le fonctionnement du délai d’expiration, consultez l’[aide d’Adobe Target](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/deploy-at-js/implementing-target-without-a-tag-manager.html?lang=fr).
 
 ## Types d’actions de l’extension Target
 
@@ -109,7 +109,7 @@ L&#39;action Vue Trigger peut être appelée à chaque nouveau chargement de pag
 
 Pour plus d’informations sur le déclenchement d’un affichage, reportez-vous à la [`triggerView()`documentation d’aide](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/functions-overview/adobe-target-triggerview-atjs-2.html?lang=fr).
 
-## Déploiement de base d’Adobe Target
+## Déploiement de base d’Adobe Target
 
 Une fois que l’extension Target est installée, créez au moins une règle pour la déployer correctement. Vous devez d’abord charger la bibliothèque Target (at.js), définir les paramètres que vous souhaitez utiliser avec la requête de chargement de page, puis déclencher la requête de chargement de page.
 

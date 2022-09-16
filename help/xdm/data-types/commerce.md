@@ -8,13 +8,13 @@ exl-id: c9cc569b-1a91-4a6e-8bfd-7f8ec07d01d4
 source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
 source-wordcount: '341'
-ht-degree: 5%
+ht-degree: 17%
 
 ---
 
-#  Type CommerceData
+# [!UICONTROL Commerce] type de données
 
- Commerce est un type de données XDM (Experience Data Model) standard qui décrit les enregistrements liés aux activités d’achat et de vente.
+[!UICONTROL Commerce] est un type de données XDM (Experience Data Model) standard qui décrit les enregistrements liés aux activités d’achat et de vente.
 
 <img src="../images/data-types/commerce.PNG" width="400" /><br />
 
@@ -35,7 +35,7 @@ ht-degree: 5%
 
 {style=&quot;table-layout:auto&quot;}
 
-Pour plus d’informations sur le type de données, reportez-vous au référentiel XDM public :
+Pour obtenir plus d’informations sur ce type de données, reportez-vous au référentiel XDM public:
 
 * [Exemple rempli](https://github.com/adobe/xdm/blob/master/components/datatypes/marketing/commerce.example.1.json)
 * [Schéma complet](https://github.com/adobe/xdm/blob/master/components/datatypes/marketing/commerce.schema.json)

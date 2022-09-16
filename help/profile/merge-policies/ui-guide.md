@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;profil;profil client en temps réel;stratégies de fusion;IU;interface utilisateur;horodatage ordonné;priorité du jeu de données
+keywords: Experience Platform;profil;profil client en temps réel;stratégies de fusion;IU;interface utilisateur;horodatage ordonné;priorité du jeu de données
 title: Guide de l’interface utilisateur des stratégies de fusion
 type: Documentation
-description: Lorsque vous rassemblez des données provenant de plusieurs sources dans Experience Platform, les stratégies de fusion sont les règles utilisées par Platform pour déterminer quelle est la priorité des données et quelles données seront combinées pour créer la vue unifiée. Ce guide fournit des instructions détaillées sur l’utilisation des stratégies de fusion à l’aide de l’interface utilisateur d’Adobe Experience Platform.
+description: Lorsque vous rassemblez des données provenant de plusieurs sources dans Experience Platform, les stratégies de fusion sont les règles utilisées par Platform pour déterminer quelle est la priorité des données et quelles données seront combinées pour créer la vue unifiée. Ce guide fournit des instructions détaillées sur l’utilisation des stratégies de fusion à l’aide de l’interface utilisateur d’Adobe Experience Platform.
 exl-id: 0489217a-6a53-428c-a531-fd0a0e5bb71f
 source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '2319'
 ht-degree: 100%
 
@@ -14,18 +14,18 @@ ht-degree: 100%
 
 # Guide de l’interface utilisateur des stratégies de fusion
 
-Adobe Experience Platform permet de rassembler des données issues de plusieurs sources et de les combiner pour obtenir une vue complète de chacun de vos clients. Les stratégies de fusion sont les règles utilisées par [!DNL Platform] pour déterminer quelle est la priorité des données et quelles données seront combinées pour créer cette vue unifiée.
+Adobe Experience Platform permet de rassembler des données issues de plusieurs sources et de les combiner pour obtenir une vue complète de chacun de vos clients. Les stratégies de fusion sont les règles utilisées par [!DNL Platform] pour déterminer quelle est la priorité des données et quelles données seront combinées pour créer cette vue unifiée.
 
-À l’aide d’API RESTful ou de l’interface utilisateur, vous pouvez créer des stratégies de fusion, gérer des stratégies existantes et définir une stratégie de fusion par défaut pour votre organisation dans l’interface utilisateur. Ce guide fournit des instructions détaillées sur l’utilisation des stratégies de fusion à l’aide de l’interface utilisateur (IU) d’Adobe Experience Platform.
+À l’aide d’API RESTful ou de l’interface utilisateur, vous pouvez créer des stratégies de fusion, gérer des stratégies existantes et définir une stratégie de fusion par défaut pour votre organisation dans l’interface utilisateur. Ce guide fournit des instructions détaillées sur l’utilisation des stratégies de fusion à l’aide de l’interface utilisateur (IU) d’Adobe Experience Platform.
 
-Pour en savoir plus sur les stratégies de fusion et le rôle qu’elles jouent dans Experience Platform, commencez par lire la [présentation des stratégies de fusion](overview.md).
+Pour en savoir plus sur les stratégies de fusion et le rôle qu’elles jouent dans Experience Platform, commencez par lire la [présentation des stratégies de fusion](overview.md).
 
 ## Prise en main
 
 Ce guide nécessite une compréhension pratique de plusieurs fonctions [!DNL Experience Platform] importantes. Avant de lire ce guide d’utilisation, veuillez consulter la documentation relative aux services suivants :
 
 * [Real-time Customer Profile](../home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
-* [Adobe Experience Platform Identity Service](../../identity-service/home.md): permet d’obtenir un profil client en temps réel en rassemblant des identités de sources de données disparates ingérées dans [!DNL Platform].
+* [Adobe Experience Platform Identity Service](../../identity-service/home.md): permet d’obtenir un profil client en temps réel en rassemblant des identités de sources de données disparates ingérées dans [!DNL Platform].
 * [Modèle de données d’expérience (XDM)](../../xdm/home.md) : cadre normalisé selon lequel [!DNL Platform] organise les données d’expérience client.
 
 ## Affichage des stratégies de fusion {#view-merge-policies}
@@ -197,7 +197,7 @@ Lors de la création ou de la mise à jour d’une stratégie de fusion, une vé
 
 Cette notification inclut une liste des stratégies d’utilisation des données ayant été enfreintes et vous permet de consulter les détails de la violation en sélectionnant une stratégie depuis la liste. Si vous avez sélectionné une stratégie ayant fait lʼobjet dʼune infraction, lʼonglet **[!UICONTROL Liaison des données]** fournit un motif de violation et les activations concernées, chacun fournissant plus de détails sur la manière dont la stratégie dʼutilisation des données a été enfreinte.
 
-Pour en savoir plus sur la manière dont la gouvernance des données est réalisée au sein d’Adobe Experience Platform, veuillez commencer par lire la [présentation de la gouvernance des données](../../data-governance/home.md).
+Pour en savoir plus sur la manière dont la gouvernance des données est réalisée au sein d’Adobe Experience Platform, veuillez commencer par lire la [présentation de la gouvernance des données](../../data-governance/home.md).
 
 ![](../images/merge-policies/policy-violation.png)
 

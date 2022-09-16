@@ -3,7 +3,7 @@ title: Préparation des données pour la collecte de données
 description: Découvrez comment mapper vos données à un schéma d’événement du modèle de données d’expérience (XDM) lors de la configuration d’un flux de données pour les SDK web et mobile d’Adobe Experience Platform.
 exl-id: 87a70d56-1093-445c-97a5-b8fa72a28ad0
 source-git-commit: 5a30bd502cd3950f3c74d5c39d0c7e395fcbb839
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '918'
 ht-degree: 100%
 

@@ -2,7 +2,8 @@
 keywords: Experience Platform;requête;service de requête;dépannage;garde-fous;directives;limite;
 title: Barrières de sécurité pour Query Service
 description: Ce document fournit des informations sur les limites d’utilisation des données de Query Service afin de vous aider à optimiser l’utilisation de vos requêtes.
-source-git-commit: 8ae8efae04e299302cca42f9c92827d374883cd9
+exl-id: 1ad5dcf4-d048-49ff-97e3-07040392b65b
+source-git-commit: 78cbf9aea4be044b73ae32ea5920c821dacafaa2
 workflow-type: tm+mt
 source-wordcount: '692'
 ht-degree: 13%

@@ -1,13 +1,13 @@
 ---
 title: (Version bêta) Connexion d’accrochage Inc
 description: Découvrez comment vous connecter à la plateforme d’annonces instantanées et exporter vos segments d’audience depuis Experience Platform.
-source-git-commit: 734d66cc881ab1b691c13ef446331d0c51851cf9
+exl-id: 1f0f2dc0-5f3d-424b-9b22-b1a14ac30039
+source-git-commit: 44e056407f5089c927752f00cc6bf173d7640b83
 workflow-type: tm+mt
 source-wordcount: '1012'
-ht-degree: 6%
+ht-degree: 8%
 
 ---
-
 
 # (Version bêta) Accrocher Inc
 
@@ -19,9 +19,9 @@ ht-degree: 6%
 >
 >Cette page de documentation a été créée par la fonction *Accrocher à* l&#39;équipe. Il s’agit actuellement d’un produit bêta qui peut faire l’objet de modifications. Pour toute demande de mise à jour ou de renseignements, contactez-les directement à l’adresse *dev-support@snap.com*
 
-## Cas dʼutilisation {#use-cases}
+## Cas d&#39;utilisation {#use-cases}
 
-Cette destination permet aux marketeurs d’importer dans Snapchat Ads des segments d’utilisateurs créés dans Experience Platform et de les utiliser pour cibler leurs publicités.
+Cette destination permet aux spécialistes du marketing d’importer dans Snapchat Ads des segments utilisateurs créés dans Experience Platform et de les utiliser pour cibler leurs annonces.
 
 ## Conditions préalables {#prerequisites}
 

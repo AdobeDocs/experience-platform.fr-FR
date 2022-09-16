@@ -12,17 +12,17 @@ ht-degree: 7%
 
 ---
 
-#  Type de données currencydata
+# [!UICONTROL Devise] type de données
 
- currence est un type de données XDM standard qui décrit une quantité de devise, y compris le type de devise et la date de conversion.
+[!UICONTROL Devise] est un type de données XDM standard qui décrit une quantité de devise, y compris le type de devise et la date de conversion.
 
 ![](../images/data-types/currency.png)
 
 | Propriété | Type de données | Description |
 | --- | --- | --- |
-| `amount` | Double | Montant de la devise telle que définie par le `currencyCode`. |
+| `amount` | Double | Le montant de la devise tel que défini par la variable `currencyCode`. |
 | `conversionDate` | DateTime | Horodatage du moment où la conversion de devise a été effectuée. |
-| `currencyCode` | Chaîne | Code ISO 4217 indiquant le type de devise représenté par `amount`. |
+| `currencyCode` | Chaîne | Un code ISO 4217 indiquant le type de devise qui `amount` représente . |
 
 {style=&quot;table-layout:auto&quot;}
 

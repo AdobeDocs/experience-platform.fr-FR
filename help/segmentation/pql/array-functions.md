@@ -14,9 +14,9 @@ ht-degree: 95%
 
 # Fonctions de tableau, de liste et d’ensemble
 
-[!DNL Profile Query Language] (PQL) offre des fonctions pour faciliter l’interaction avec des tableaux, des listes et des chaînes. Vous trouverez plus d’informations sur les autres fonctions PQL dans la [[!DNL Profile Query Language] présentation](./overview.md).
+[!DNL Profile Query Language] (PQL) offre des fonctions pour faciliter l’interaction avec des tableaux, des listes et des chaînes. Vous trouverez plus d’informations sur les autres fonctions PQL dans la section [[!DNL Profile Query Language] aperçu](./overview.md).
 
-## In
+## Dans
 
 La fonction `in` permet de déterminer si un élément est un membre d&#39;un tableau ou d&#39;une liste.
 

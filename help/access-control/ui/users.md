@@ -1,9 +1,9 @@
 ---
-keywords: Experience Platform;accueil;rubriques populaires;profil produit
+keywords: Experience Platform;accueil;rubriques populaires;profil produit
 solution: Experience Platform
 title: Gestion des utilisateurs pour un profil de produit
 topic-legacy: user guide
-description: Ce document vous explique comment gérer les utilisateurs dʼun profil de produit dans lʼinterface utilisateur dʼAdobe Experience Platform.
+description: Ce document vous explique comment gérer les utilisateurs dʼun profil de produit dans lʼinterface utilisateur dʼAdobe Experience Platform.
 exl-id: 1a35f2e4-cb33-4625-92ec-98e615607a8b
 source-git-commit: 58655e5ff2c4d3a3b36c5067f2e99c021410c697
 workflow-type: tm+mt
@@ -22,7 +22,7 @@ La boîte de dialogue **[!UICONTROL Ajouter un utilisateur]** s’affiche. Le ch
 
 >[!NOTE]
 >
->Si un utilisateur n’apparaît pas dans la fenêtre de saisie semi-automatique, saisissez son adresse e-mail complète dans la barre de recherche. Une invitation sera envoyée à l’adresse électronique avec des instructions sur la configuration d’un compte Adobe ID.
+>Si un utilisateur n’apparaît pas dans la fenêtre de saisie semi-automatique, saisissez son adresse e-mail complète dans la barre de recherche. Une invitation sera envoyée à l’adresse électronique avec des instructions sur la configuration d’un compte Adobe ID.
 
 Une fois que vous avez sélectionné un utilisateur, cliquez sur **[!UICONTROL Enregistrer]** pour l’ajouter au profil du produit.
 

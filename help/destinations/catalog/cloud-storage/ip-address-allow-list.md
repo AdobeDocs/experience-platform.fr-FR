@@ -1,13 +1,13 @@
 ---
 keywords: Adresse IP, plage IP, destinations de liste autorisée, liste autorisée
-title: 'LISTE AUTORISÉE d’adresses IP pour les destinations de stockage dans le cloud '
+title: LISTE AUTORISÉE d’adresses IP pour les destinations de stockage dans le cloud
 type: Documentation
 description: Cette page fournit des plages d’adresses IP que vous pouvez ajouter à votre liste autorisée afin d’exporter en toute sécurité des données d’Experience Platform vers votre serveur SFTP, Amazon S3 ou le stockage Azure Blob.
 exl-id: 0b8086aa-786e-4244-b2a5-a3f57ad59a8b
 source-git-commit: c4d8ae6de2e1bbf23a25a66bde5dc88c13a13402
 workflow-type: tm+mt
 source-wordcount: '202'
-ht-degree: 0%
+ht-degree: 12%
 
 ---
 

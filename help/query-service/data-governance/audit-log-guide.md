@@ -77,7 +77,7 @@ La valeur de la variable [!UICONTROL Statut de l’événement] change en foncti
 
 Les filtres disponibles varient en fonction de la catégorie sélectionnée dans la liste déroulante. Le tableau suivant détaille les filtres disponibles pour [[!DNL Query Service] catégories du journal d’audit](#audit-log-categories).
 
-| Filtrer | Description |
+| Filtre | Description |
 |---|---|
 | Catégorie | Voir [[!DNL Query Service] catégories du journal d’audit](#audit-log-categories) pour obtenir une liste complète des catégories disponibles. |
 | Action | En ce qui concerne [!DNL Query Service] catégories d’audit, la mise à jour est une **modification du formulaire existant**, la suppression correspond à la propriété **suppression du planning ou du modèle**, créer est **création d’un nouveau planning ou d’un nouveau modèle**, et l’exécution est **exécution d’une requête**. |

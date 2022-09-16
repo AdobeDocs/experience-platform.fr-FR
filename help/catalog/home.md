@@ -1,9 +1,9 @@
 ---
-keywords: Experience Platform;accueil;rubriques populaires;service de catalogue;catalogue;Service de catalogue;emplacement des données;Emplacement des données;Gestion des données;gestion des données;Parenté;parenté;Catalogue;activer le jeu de données
+keywords: Experience Platform;accueil;rubriques populaires;service de catalogue;catalogue;Service de catalogue;emplacement des données;Emplacement des données;Gestion des données;gestion des données;Parenté;parenté;Catalogue;activer le jeu de données
 solution: Experience Platform
 title: Présentation du service de catalogue
 topic-legacy: overview
-description: Le service de catalogue constitue le système d’enregistrement de l’emplacement et de la liaison des données dans Adobe Experience Platform. Bien que toutes les données ingérées dans Experience Platform soient stockées dans le lac de données sous forme de fichiers et de répertoires, le catalogue renferme les métadonnées et la description de ces fichiers et répertoires à des fins de recherche et de surveillance.
+description: Le service de catalogue constitue le système d’enregistrement de l’emplacement et de la liaison des données dans Adobe Experience Platform. Bien que toutes les données ingérées dans Experience Platform soient stockées dans le lac de données sous forme de fichiers et de répertoires, le catalogue renferme les métadonnées et la description de ces fichiers et répertoires à des fins de recherche et de surveillance.
 exl-id: ef0c173b-607b-41b8-8676-c54ae9472e23
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
@@ -14,7 +14,7 @@ ht-degree: 100%
 
 # Présentation d’[!DNL Catalog Service]
 
-Le [!DNL Catalog Service]est le système d’enregistrement pour l’emplacement et la parenté des données au sein d’Adobe Experience Platform. Bien que toutes les données ingérées dans [!DNL Experience Platform] soient stockées dans le [!DNL Data Lake] sous forme de fichiers et de répertoires, le [!DNL Catalog] renferme les métadonnées et la description de ces fichiers et répertoires à des fins de recherche et de surveillance.
+Le [!DNL Catalog Service] est le système d’enregistrement pour l’emplacement et la parenté des données au sein d’Adobe Experience Platform. Bien que toutes les données ingérées dans [!DNL Experience Platform] soient stockées dans le [!DNL Data Lake] sous forme de fichiers et de répertoires, le [!DNL Catalog] renferme les métadonnées et la description de ces fichiers et répertoires à des fins de recherche et de surveillance.
 
 En d’autres termes, le [!DNL Catalog] fait office de banque de métadonnées ou de « catalogue » qui vous permet de trouver des informations sur vos données dans [!DNL Experience Platform]. Vous pouvez utiliser le [!DNL Catalog] pour répondre aux questions suivantes :
 
@@ -57,7 +57,7 @@ Le tableau suivant décrit les différents types d’objets pris en charge par l
 | Compte | `/accounts` | Lors de la création de connexions source, les informations d’authentification doivent être renseignées. Un compte représente un ensemble d’informations d’authentification utilisées pour créer une connexion d’un type spécifique. Chaque connexion comporte un ensemble de paramètres uniques qui sont conservés par le [!DNL Catalog] et sécurisés dans un [!DNL Azure Key Vault]. |
 | Lot | `/batches` | Les lots sont des unités de données composées d’un ou de plusieurs fichiers à ingérer en tant qu’unité unique. Un objet de lot dans le [!DNL Catalog] décrit les mesures d’ingestion du lot, telles que le nombre d’enregistrements traités ou la taille sur le disque. Il peut également inclure des liens vers des jeux de données, des vues et d’autres ressources que l’opération par lot a affectées. |
 | Connexion | `/connections` | Une connexion est une instance unique d’un connecteur source, propre à votre organisation et configurée à l’aide des informations d’authentification adéquates au type de connecteur. |
-| Connecteur | `/connectors` | Les connecteurs définissent la manière dont les connexions sources sont utilisées pour collecter les données d’autres applications Adobe (telles qu’Adobe Analytics et Adobe Audience Manager), de sources tierces de stockage dans le cloud (comme [!DNL Azure Blob], [!DNL Amazon S3], serveurs FTP et SFTP) et de systèmes de gestion de la relation client tiers (notamment [!DNL Microsoft Dynamics] et [!DNL Salesforce]). |
+| Connecteur | `/connectors` | Les connecteurs définissent la manière dont les connexions sources sont utilisées pour collecter les données d’autres applications Adobe (telles qu’Adobe Analytics et Adobe Audience Manager), de sources tierces de stockage dans le cloud (comme [!DNL Azure Blob], [!DNL Amazon S3], serveurs FTP et SFTP) et de systèmes de gestion de la relation client tiers (notamment [!DNL Microsoft Dynamics] et [!DNL Salesforce]). |
 | Jeu de données | `/dataSets` | Un jeu de données est une structure de stockage et de gestion utilisée pour la collecte de données (généralement sous la forme d’un tableau) qui contient un schéma (des colonnes) et des champs (des lignes). Pour plus d’informations, consultez la [présentation des jeux de données](./datasets/overview.md). |
 | Fichier de jeu de données | `/datasetFiles` | Les fichiers de jeux de données représentent des blocs de données qui ont été enregistrés sur [!DNL Platform]. Étant des enregistrements de fichiers littéraux, vous pouvez y trouver la taille du fichier, le nombre d’enregistrements qu’il contient, ainsi qu’une référence au lot qui a ingéré le fichier. |
 

@@ -117,7 +117,7 @@ Une fois que vous avez configuré votre CMP pour générer des chaînes de conse
 
 **Le SDK n’interface pas avec les CMP prêtes à l’emploi.**. C’est à vous de déterminer comment intégrer le SDK à votre site web, écouter les modifications apportées au consentement dans la CMP et appeler la commande appropriée.
 
-### Création d’un flux de données
+### Créer un flux de données
 
 Pour que le SDK envoie des données à l’Experience Platform, vous devez d’abord créer un nouveau flux de données pour Platform dans l’interface utilisateur de la collecte de données. Vous trouverez des étapes spécifiques pour créer un flux de données dans la section [Documentation du SDK](../../../../edge/datastreams/overview.md).
 
@@ -125,7 +125,7 @@ Après avoir fourni un nom unique pour la banque de données, cliquez sur le bou
 
 | Champ de flux de données | Valeur |
 | --- | --- |
-| [!UICONTROL Environnement de test] | Nom de la plateforme [sandbox](../../../../sandboxes/home.md) qui contient la connexion en continu et les jeux de données requis pour configurer le flux de données. |
+| [!UICONTROL Sandbox] | Nom de la plateforme [sandbox](../../../../sandboxes/home.md) qui contient la connexion en continu et les jeux de données requis pour configurer le flux de données. |
 | [!UICONTROL Inlet de diffusion en continu] | Une connexion en continu valide pour l’Experience Platform. Voir le tutoriel sur [création d’une connexion en continu](../../../../ingestion/tutorials/create-streaming-connection-ui.md) si vous n’avez pas d’inlet de diffusion en continu existant. |
 | [!UICONTROL Jeu de données d’événement] | Sélectionnez la [!DNL XDM ExperienceEvent] jeu de données créé dans [étape précédente](#datasets). Si vous avez inclus la variable [[!UICONTROL Consentement IAB TCF 2.0] groupe de champs](../../../../xdm/field-groups/event/iab.md) dans le schéma de ce jeu de données, vous pouvez effectuer le suivi des événements de modification du consentement au fil du temps à l’aide de la variable [`sendEvent`](#sendEvent) , en stockant ces données dans ce jeu de données. Gardez à l’esprit que les valeurs de consentement stockées dans ce jeu de données sont **not** utilisé dans les workflows d’application automatique. |
 | [!UICONTROL Jeu de données de profil] | Sélectionnez la [!DNL XDM Individual Profile] jeu de données créé dans [étape précédente](#datasets). Lorsque vous répondez aux hooks de modification du consentement de la CMP à l’aide de la variable [`setConsent`](#setConsent) , les données collectées seront stockées dans ce jeu de données. Comme ce jeu de données est activé pour Profile, les valeurs de consentement stockées dans ce jeu de données sont honorées pendant les workflows d’application automatique. |

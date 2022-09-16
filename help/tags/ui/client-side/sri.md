@@ -1,6 +1,6 @@
 ---
 title: Prise en charge de l’intégrité des sous-ressources (SRI)
-description: Découvrez comment l’intégrité des sous-ressources (SRI) est prise en charge dans Adobe Experience Platform.
+description: Découvrez comment l’intégrité des sous-ressources (SRI) est prise en charge dans Adobe Experience Platform.
 exl-id: bd8bc3f7-9a85-44e2-ae07-f0664179b51c
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
@@ -13,9 +13,9 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
-Ce document présente la façon dont l’intégrité des sous-ressources (SRI) est prise en charge dans Adobe Experience Platform.
+Ce document présente la façon dont l’intégrité des sous-ressources (SRI) est prise en charge dans Adobe Experience Platform.
 
 Les sites web d’aujourd’hui sont créés en référençant des images, du contenu et des scripts provenant de divers emplacements du Web. La SRI permet à un navigateur de vérifier que le contenu d’un fichier demandé n’a pas été modifié de manière inattendue.
 
@@ -34,7 +34,7 @@ Le processus de validation de la SRI peut se résumer comme suit :
 
 ## Limites des systèmes de gestion des balises
 
-En tant que système de gestion des balises (TMS, tag-management system), les balises dans Adobe Experience Platform fournissent une version de bibliothèque JavaScript compilée, que vous chargez sur vos pages avec un seul élément `<script>` (code incorporé). La fonctionnalité dynamique offerte par le TMS est accomplie en remplaçant dynamiquement le contenu de ce script sans que vous ayez à changer quoi que ce soit d’autre.
+En tant que système de gestion des balises (TMS), dans Adobe Experience Platform les balises fournissent une version de bibliothèque JavaScript compilée que vous chargez sur vos pages avec un seul élément `<script>` (code incorporé). La fonctionnalité dynamique offerte par le TMS est accomplie en remplaçant dynamiquement le contenu de ce script sans que vous ayez à changer quoi que ce soit d’autre.
 
 Cependant, lorsque le contenu du script change, le hachage cryptographique de ce contenu change également. Par conséquent, la seule façon de faire fonctionner la SRI avec un TMS est de mettre à jour votre code incorporé en même temps que vous publiez une nouvelle version. Pour beaucoup, cela va à l’encontre de l’objectif principal de l’utilisation d’un TMS en premier lieu.
 

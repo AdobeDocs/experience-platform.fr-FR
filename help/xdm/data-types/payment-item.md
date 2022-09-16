@@ -8,13 +8,13 @@ exl-id: d25a358b-73c1-468b-a9c5-808385689932
 source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
 source-wordcount: '164'
-ht-degree: 26%
+ht-degree: 34%
 
 ---
 
-# [!UICONTROL Type ] d’élément de paiement
+# [!UICONTROL Élément de paiement] type de données
 
-[!UICONTROL L’] élément de paiement est un type de données XDM (Experience Data Model) standard qui décrit un paiement associé à une commande qui définit le type de paiement, le montant et la devise associée.
+[!UICONTROL Élément de paiement] est un type de données XDM (Experience Data Model) standard qui décrit un paiement associé à une commande qui définit le type de paiement, le montant et la devise associée.
 
 <img src="../images/data-types/payment-item.PNG" width="400" /><br />
 
@@ -27,7 +27,7 @@ ht-degree: 26%
 
 {style=&quot;table-layout:auto&quot;}
 
-Pour plus d’informations sur le type de données, reportez-vous au référentiel XDM public :
+Pour obtenir plus d’informations sur ce type de données, reportez-vous au référentiel XDM public:
 
 * [Exemple rempli](https://github.com/adobe/xdm/blob/master/components/datatypes/data/paymentitem.example.1.json)
 * [Schéma complet](https://github.com/adobe/xdm/blob/master/components/datatypes/data/paymentitem.schema.json)

@@ -1,6 +1,6 @@
 ---
-title: Présentation de l’extension Adobe Target
-description: Découvrez l’extension de balise pour Adobe Target dans Adobe Experience Platform.
+title: Présentation de l’extension Adobe Target
+description: Découvrez l’extension de balise pour Adobe Target dans Adobe Experience Platform.
 exl-id: b1c5e25b-42ea-4835-b2d4-913fa2536e77
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
@@ -9,21 +9,21 @@ ht-degree: 100%
 
 ---
 
-# Présentation de l’extension Adobe Target
+# Présentation de l’extension Adobe Target
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 Utilisez cette référence pour obtenir des informations sur les options disponibles lors de l’utilisation de cette extension pour créer une règle.
 
-## Configurer l’extension Adobe Target
+## Configurer l’extension Adobe Target
 
 >[!IMPORTANT]
 >
-> L’extension Adobe Target requiert at.js. Elle ne prend pas en charge mbox.js.
+> L’extension Adobe Target requiert at.js. Elle ne prend pas en charge mbox.js.
 
-Si l’extension Adobe Target n’est pas encore installée, ouvrez votre propriété, puis cliquez sur **[!UICONTROL Extensions > Catalogue]**, survolez l’extension Target et cliquez sur **[!UICONTROL Installer]**.
+Si l’extension Adobe Target n’est pas encore installée, ouvrez votre propriété, puis cliquez sur **[!UICONTROL Extensions > Catalogue]**, survolez l’extension Target et cliquez sur **[!UICONTROL Installer]**.
 
 Pour configurer l’extension, ouvrez l’onglet [!UICONTROL Extensions], placez votre curseur sur l’extension, puis cliquez sur **[!UICONTROL Configurer]**.
 
@@ -43,7 +43,7 @@ Il peut être modifié à l’aide d’éléments de données.
 
 #### Organization ID (ID d’organisation)
 
-Cet identifiant associe votre mise en œuvre à votre compte Adobe Experience Cloud. Cette valeur doit presque toujours être conservée comme valeur par défaut.
+Cet identifiant associe votre mise en œuvre à votre compte Adobe Experience Cloud. Cette valeur doit presque toujours être conservée comme valeur par défaut.
 
 Il peut être modifié à l’aide d’éléments de données.
 
@@ -68,7 +68,7 @@ Détermine où Target définit des cookies dans les navigateurs.
 
 Si la réponse de Target n’est pas reçue au cours de la période définie, la demande expire et le contenu par défaut s’affiche. Des tentatives de requêtes supplémentaires sont effectuées pendant la session du visiteur. La valeur par défaut de 3 000 ms peut différer du délai configuré dans l’interface utilisateur de Target.
 
-Pour plus d’informations sur le fonctionnement du délai d’expiration, consultez l’[aide d’Adobe Target](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/deploy-at-js/implementing-target-without-a-tag-manager.html?lang=fr).
+Pour plus d’informations sur le fonctionnement du délai d’expiration, consultez l’[aide d’Adobe Target](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/deploy-at-js/implementing-target-without-a-tag-manager.html?lang=fr).
 
 #### Autres paramètres at.js disponibles dans l’interface utilisateur de Target
 
@@ -117,7 +117,7 @@ Les options disponibles sont les suivantes :
 
 Pour plus d’informations, reportez-vous à la [documentation d’aide en ligne de Target](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/mbox-implement/advanced-mboxjs-settings.html?lang=fr).
 
-## Déploiement de base d’Adobe Target
+## Déploiement de base d’Adobe Target
 
 Une fois que l’extension Target est installée, vous devez créer au moins une règle pour la déployer correctement. Vous devez d’abord charger la bibliothèque Target (at. js), spécifier les paramètres à utiliser avec la mbox globale et déclencher la mbox globale.
 

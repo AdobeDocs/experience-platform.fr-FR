@@ -7,7 +7,7 @@ exl-id: 3f6a3c31-19f3-4bad-921e-9ad33c6b9ac9
 source-git-commit: 0f39e9237185b49417f2af8dfc288ab1420cccae
 workflow-type: tm+mt
 source-wordcount: '617'
-ht-degree: 2%
+ht-degree: 4%
 
 ---
 
@@ -45,7 +45,7 @@ Le tableau suivant décrit les valeurs acceptées pour `val`:
 
 {style=&quot;table-layout:auto&quot;}
 
-Pour plus d’informations sur le type de données, reportez-vous au référentiel XDM public :
+Pour obtenir plus d’informations sur ce type de données, reportez-vous au référentiel XDM public:
 
 * [Exemple rempli](https://github.com/adobe/xdm/blob/master/components/datatypes/consent/personalization-field.example.1.json)
 * [Schéma complet](https://github.com/adobe/xdm/blob/master/components/datatypes/consent/personalization-field.schema.json)

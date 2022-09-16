@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Publication d’un modèle en tant que service dans l’interface utilisateur de Data Science Workspace
 topic-legacy: tutorial
 type: Tutorial
-description: Adobe Experience Platform Data Science Workspace vous permet de publier un modèle formé et noté en tant que service et permet ainsi aux utilisateurs de votre organisation IMS de noter des données sans avoir besoin de créer leurs propres modèles.
+description: Adobe Experience Platform Data Science Workspace vous permet de publier un modèle formé et noté en tant que service et permet ainsi aux utilisateurs de votre organisation IMS de noter des données sans avoir besoin de créer leurs propres modèles.
 exl-id: ebbec1b1-20d3-43b5-82d3-89c79757625a
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
@@ -15,11 +15,11 @@ ht-degree: 50%
 
 # Publication d’un modèle en tant que service dans l’interface utilisateur de Data Science Workspace
 
-Adobe Experience Platform Data Science Workspace vous permet de publier un modèle formé et noté en tant que service et permet ainsi aux utilisateurs de votre organisation IMS de noter des données sans avoir besoin de créer leurs propres modèles.
+Adobe Experience Platform Data Science Workspace vous permet de publier un modèle formé et noté en tant que service et permet ainsi aux utilisateurs de votre organisation IMS de noter des données sans avoir besoin de créer leurs propres modèles.
 
 ## Prise en main
 
-Pour suivre ce tutoriel, vous devez avoir accès à [!DNL Experience Platform]. Si vous n’avez pas accès à une organisation IMS dans [!DNL Experience Platform], contactez votre administrateur système avant de poursuivre.
+Pour suivre ce tutoriel, vous devez avoir accès à [!DNL Experience Platform]. Si vous n’avez pas accès à une organisation IMS dans [!DNL Experience Platform], contactez votre administrateur système avant de continuer.
 
 Ce tutoriel nécessite un modèle existant avec une opération de formation réussie. Si vous ne disposez pas d’un modèle publiable, suivez le tutoriel [Formation et notation d’un modèle dans l’interface utilisateur](./train-evaluate-model-ui.md) avant de poursuivre.
 
@@ -27,11 +27,11 @@ Si vous préférez publier un modèle à l’aide des API Sensei Machine Learnin
 
 ## Publication d’un modèle {#publish-a-model}
 
-Dans Adobe Experience Platform, sélectionnez **[!UICONTROL Modèles]** dans la colonne de navigation de gauche, puis sélectionnez l’onglet **[!UICONTROL Parcourir]** pour répertorier tous les modèles existants. Sélectionnez le nom du modèle que vous souhaitez publier en tant que service.
+Dans Adobe Experience Platform, sélectionnez **[!UICONTROL Modèles]** situé dans la colonne de navigation de gauche, puis sélectionnez l’option **[!UICONTROL Parcourir]** pour répertorier tous les modèles existants. Sélectionnez le nom du modèle que vous souhaitez publier en tant que service.
 
 ![](../images/models-recipes/publish-model/browse_model.png)
 
-Sélectionnez **[!UICONTROL Publier]** près du coin supérieur droit de la page d’aperçu du modèle pour lancer un processus de création de service.
+Sélectionner **[!UICONTROL Publier]** près du coin supérieur droit de la page d’aperçu du modèle pour lancer un processus de création de service.
 
 ![](../images/models-recipes/publish-model/view_training.png)
 
@@ -43,13 +43,13 @@ Toutes les opérations de formation réussies du modèle sont répertoriées. Le
 
 ![](../images/models-recipes/publish-model/select_training_run.png)
 
-Sélectionnez **[!UICONTROL Terminer]** pour créer le service et rediriger vers la **[!UICONTROL Galerie de services]** pour afficher tous les services disponibles, y compris le service nouvellement créé.
+Sélectionner **[!UICONTROL Terminer]** pour créer le service et accéder à la fonction **[!UICONTROL Galerie de services]** pour afficher tous les services disponibles, y compris le service nouvellement créé.
 
 ![](../images/models-recipes/publish-model/service_gallery.png)
 
 ## Notation à l’aide d’un service {#access-a-service}
 
-Dans Adobe Experience Platform, sélectionnez l’onglet **[!UICONTROL Services]** situé dans la colonne de navigation de gauche pour accéder à la **[!UICONTROL Galerie de services]**. Recherchez le service que vous souhaitez utiliser et sélectionnez **[!UICONTROL Ouvrir]**.
+Dans Adobe Experience Platform, sélectionnez la variable **[!UICONTROL Services]** situé dans la colonne de navigation de gauche pour accéder au **[!UICONTROL Galerie de services]**. Recherchez le service que vous souhaitez utiliser et sélectionnez **[!UICONTROL Ouvrir]**.
 
 ![](../images/models-recipes/publish-model/open_service.png)
 
@@ -65,7 +65,7 @@ Lorsqu’un service est créé, il hérite des configurations de notation par d�
 
 ![](../images/models-recipes/publish-model/scoring_configs.png)
 
-Sur la page **Présentation** du service, vous retrouvez les détails de la nouvelle tâche de notation et sa progression. Une fois la tâche terminée, l’en-tête **[!UICONTROL Le plus récent]** du conteneur **[!UICONTROL Scoring]** est mis à jour.
+Sur la page **Présentation** du service, vous retrouvez les détails de la nouvelle tâche de notation et sa progression. Une fois la tâche terminée, la variable **[!UICONTROL Le plus récent]** dans l’en-tête **[!UICONTROL Notation]** Le conteneur est mis à jour.
 
 ![](../images/models-recipes/publish-model/pending_scoring.png)
 

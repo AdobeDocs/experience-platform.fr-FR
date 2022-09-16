@@ -14,7 +14,7 @@ ht-degree: 89%
 
 # Fonctions de date et d’heure
 
-Fonctions de date et d’heure sont utilisées pour effectuer des opérations de date et d’heure sur des valeurs dans [!DNL Profile Query Language] (PQL). Vous trouverez plus d’informations sur les autres fonctions PQL dans la [[!DNL Profile Query Language] présentation](./overview.md).
+Fonctions de date et d’heure sont utilisés pour effectuer des opérations de date et d’heure sur des valeurs dans [!DNL Profile Query Language] (PQL). Vous trouverez plus d’informations sur les autres fonctions PQL dans la section [[!DNL Profile Query Language] aperçu](./overview.md).
 
 ## Current month
 

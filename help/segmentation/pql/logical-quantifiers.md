@@ -14,7 +14,7 @@ ht-degree: 79%
 
 # Fonctions de quantificateur logique
 
-Les quantificateurs logiques peuvent être utilisés pour insérer des conditions avec des tableaux dans [!DNL Profile Query Language] (PQL). Vous trouverez plus d’informations sur les autres fonctions PQL dans la [[!DNL Profile Query Language] présentation](./overview.md).
+Les quantificateurs logiques peuvent être utilisés pour insérer des conditions dans des tableaux. [!DNL Profile Query Language] (PQL). Vous trouverez plus d’informations sur les autres fonctions PQL dans la section [[!DNL Profile Query Language] aperçu](./overview.md).
 
 ## Existe
 

@@ -18,7 +18,7 @@ Les plateformes d’enquêtes détectent les événements d’enquête, capturen
 
 ## Destinations d’enquête prises en charge {#supported-destinations}
 
-Actuellement, Platform prend en charge les destinations d’enquête répertoriées ci-dessous. Pour en savoir plus sur la connexion à ces destinations, consultez les liens suivants :
+Actuellement, Platform prend en charge les destinations d’enquête répertoriées ci-dessous. Pour en savoir plus sur la connexion à ces destinations, consultez les liens individuels :
 
 * [Extension Foresee](./foresee.md)
 * [Extension InMoment](./inmoment.md)

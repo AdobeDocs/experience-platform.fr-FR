@@ -6,7 +6,7 @@ exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
 source-git-commit: 09e81093c2ed2703468693160939b3b6f62bc5b6
 workflow-type: tm+mt
 source-wordcount: '1305'
-ht-degree: 44%
+ht-degree: 50%
 
 ---
 
@@ -16,11 +16,11 @@ ht-degree: 44%
 
 Avec la version bêta de la version améliorée de **[!UICONTROL Personnalisation personnalisée]** connecteur de destination, vous pouvez voir deux **[!UICONTROL Personnalisation personnalisée]** cartes dans le catalogue des destinations.
 
-Le **[!UICONTROL Personnalisation Personnalisée Avec Attributs]** Le connecteur est actuellement en version bêta et disponible uniquement pour un nombre restreint de clients. En plus des fonctionnalités fournies par la fonction **[!UICONTROL Personnalisation personnalisée]**, la variable **[!UICONTROL Personnalisation Personnalisée Avec Attributs]** Le connecteur ajoute une valeur facultative [étape de mappage](/help/destinations/ui/activate-profile-request-destinations.md#map-attributes) au workflow d’activation, qui vous permet de mapper les attributs de profil à votre destination de personnalisation personnalisée, en activant la personnalisation de même page et de page suivante basée sur les attributs.
+Le **[!UICONTROL Personnalisation Personnalisée Avec Attributs]** Le connecteur est actuellement en version bêta et disponible uniquement pour un nombre restreint de clients. Outre la fonctionnalité fournie par **[!UICONTROL Personnalisation]**, le connecteur **[!UICONTROL Personnalisation avec les attributs]** ajoute une [étape de mappage](/help/destinations/ui/activate-profile-request-destinations.md#map-attributes) facultative au workflow d’activation, qui vous permet de mapper les attributs de profil à votre destination de personnalisation, en activant la personnalisation basée sur les attributs de la même page et de la page suivante.
 
 >[!IMPORTANT]
 >
->Les attributs de profil peuvent contenir des données sensibles. Pour protéger ces données, la variable **[!UICONTROL Personnalisation Personnalisée Avec Attributs]** La destination requiert que vous utilisiez la variable [API du serveur réseau Edge](/help/server-api/overview.md) pour la collecte de données. De plus, tous les appels de l’API du serveur doivent être effectués dans une [contexte authentifié](../../../server-api/authentication.md).
+>Les attributs de profil peuvent contenir des données sensibles. Pour protéger ces données, la destination **[!UICONTROL Personnalisation avec les attributs]** requiert que vous utilisiez l’[API du serveur réseau Edge](/help/server-api/overview.md) pour la collecte de données. De plus, tous les appels de l’API du serveur doivent être effectués dans un [contexte authentifié](../../../server-api/authentication.md).
 >
 >Si vous utilisez déjà le SDK Web ou le SDK mobile pour votre intégration, vous pouvez récupérer les attributs via l’API serveur de deux manières :
 >

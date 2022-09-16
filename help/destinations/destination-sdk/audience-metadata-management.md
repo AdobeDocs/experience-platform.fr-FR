@@ -3,7 +3,7 @@ description: Utilisez les modèles de métadonnées d’audience pour créer, me
 title: Gérer les métadonnées d’audience
 exl-id: 795e8adb-c595-4ac5-8d1a-7940608d01cd
 source-git-commit: 92bca3600d854540fd2badd925e453fba41601a7
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1046'
 ht-degree: 100%
 

@@ -1,6 +1,6 @@
 ---
 title: Comparaison des révisions des ressources
-description: Découvrez comment afficher lʼhistorique de révisions dʼune ressource de balise dans Adobe Experience Platform.
+description: Découvrez comment afficher l’historique de révisions d’une ressource de balise dans Adobe Experience Platform.
 exl-id: 95b22641-9f6f-4aac-a727-d99098f040a4
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
@@ -13,7 +13,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 Comparez des révisions des ressources pour afficher l’historique d’une ressource individuelle. Vous pouvez comparer l’état actuel de la ressource à des versions plus anciennes ou comparer la version actuellement publiée d’une ressource au jeu de modifications le plus récent qui a été enregistré.
 
@@ -81,9 +81,9 @@ Vous trouverez ci-dessus les modifications suivantes :
 
 * Le nom de la règle « Analytics » modifié par « Baseline Analytics », indiqué par la barre orange par Name (Nom).
 * La condition « Core - Domain » (Core - Domaine) a été ajoutée, comme l’indique l’icône « + » orange et l’ajout du composant sur la droite.
-* L’action « [!DNL Adobe Analytics] - Clear Variables » (Adobe Analytics - Effacer des variables) a été supprimée, comme l’indique l’icône « - » orange et l’absence du composant sur la droite.
-* L’action « [!DNL Adobe Analytics] - Set Variables » (Adobe Analytics - Définir les variables) a été modifiée, comme l’indique la ligne orange entre les versions du composant sur les côtés gauche et droit. Cette ligne est droite si l’ordre des composants n’a pas changé.
-* L’action « [!DNL Adobe Analytics] - Set Variables » (Adobe Analytics - Définir les variables) et l’ordre d’action « [!DNL Adobe Analytics] - Send Beacon » (Adobe Analytics - Envoyer la balise) ont changé, comme l’indiquent les lignes incurvées reliant les différentes versions des composants sur les côtés gauche et droit.
+* L’action « [!DNL Adobe Analytics] - Clear Variables » (Adobe Analytics - Effacer des variables) a été supprimée, comme l’indique l’icône « - » orange et l’absence du composant sur la droite.
+* L’action « [!DNL Adobe Analytics] - Set Variables » (Adobe Analytics - Définir les variables) a été modifiée, comme l’indique la ligne orange entre les versions du composant sur les côtés gauche et droit. Cette ligne est droite si l’ordre des composants n’a pas changé.
+* L’action « [!DNL Adobe Analytics] - Set Variables » (Adobe Analytics - Définir les variables) et l’ordre d’action « [!DNL Adobe Analytics] - Send Beacon » (Adobe Analytics - Envoyer la balise) ont changé, comme l’indiquent les lignes incurvées reliant les différentes versions des composants sur les côtés gauche et droit.
 
 Pour afficher les modifications spécifiques apportées à l’un des composants d’une règle, cliquez sur le composant spécifique que vous voulez afficher.  La ligne devient bleue lorsque vous la survolez à l’aide de la souris.
 

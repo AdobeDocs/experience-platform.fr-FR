@@ -37,7 +37,7 @@ Pour passer avec succès des appels à des API Experience Platform, vous devez d
 
 Vous devez également disposer d’un Adobe ID pour suivre ce tutoriel. Si vous ne possédez pas d’Adobe ID, vous pouvez en créer un en suivant les étapes suivantes :
 
-1. Accédez à [Adobe Developer Console](https://console.adobe.io).
+1. Accédez à [Console Adobe Developer](https://console.adobe.io).
 2. Sélectionner **[!UICONTROL Création d’un compte]**.
 3. Terminez le processus d’inscription.
 
@@ -49,7 +49,7 @@ Avant de créer des intégrations sur Adobe Developer Console, votre compte doit
 
 Contactez un [!DNL Admin Console] administrateur de votre entreprise pour vous ajouter en tant que développeur à un profil de produit Experience Platform à l’aide de la variable [[!DNL Admin Console]](https://adminconsole.adobe.com/). Voir [!DNL Admin Console] documentation pour obtenir des instructions spécifiques sur la manière de procéder [gérer l’accès des développeurs pour les profils de produit ;](https://helpx.adobe.com/fr/enterprise/admin-guide.html/enterprise/using/manage-developers.ug.html).
 
-Une fois que vous êtes désigné en tant que développeur, vous pouvez commencer à créer des intégrations dans [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui). Ces intégrations constituent un pipeline allant des applications et services externes vers les API d’Adobe.
+Une fois que vous êtes désigné en tant que développeur, vous pouvez commencer à créer des intégrations dans [Console Adobe Developer](https://www.adobe.com/go/devs_console_ui). Ces intégrations constituent un pipeline allant des applications et services externes vers les API d’Adobe.
 
 ### Obtenir un accès en tant qu’utilisateur
 

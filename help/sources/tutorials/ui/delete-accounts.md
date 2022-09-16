@@ -1,6 +1,6 @@
 ---
 keywords: Experience Platform;accueil;rubriques les plus consultées ; suppression de comptes
-description: Les connecteurs source de Adobe Experience Platform permettent d’ingérer des données provenant de l’extérieur selon un calendrier précis. Ce tutoriel décrit les étapes à suivre pour supprimer des comptes de l’espace de travail Sources .
+description: Les connecteurs source d’Adobe Experience Platform permettent d’ingérer des données externes selon un calendrier précis. Ce tutoriel décrit les étapes à suivre pour supprimer des comptes de l’espace de travail Sources .
 solution: Experience Platform
 title: Suppression des comptes de connexion source dans l’interface utilisateur
 topic-legacy: overview
@@ -9,28 +9,28 @@ exl-id: 7cb65d17-d99d-46ff-b28f-7469d0b57d07
 source-git-commit: 609f7a5de51840fe657ca72df99c90da56c8f466
 workflow-type: tm+mt
 source-wordcount: '487'
-ht-degree: 11%
+ht-degree: 27%
 
 ---
 
 # Suppression des comptes de connexion source
 
-Les connecteurs source de Adobe Experience Platform permettent d’ingérer des données provenant de l’extérieur selon un calendrier précis. Ce tutoriel décrit les étapes à suivre pour supprimer des comptes du **[!UICONTROL Sources]** workspace.
+Les connecteurs source d’Adobe Experience Platform permettent d’ingérer des données externes selon un calendrier précis. Ce tutoriel décrit les étapes à suivre pour supprimer des comptes du **[!UICONTROL Sources]** workspace.
 
 ## Prise en main
 
 Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform :
 
-- [[!DNL Experience Data Model (XDM)] Système](../../../xdm/home.md): Le cadre normalisé selon lequel [!DNL Experience Platform] organise les données d’expérience client.
+- [[!DNL Experience Data Model (XDM)] Système](../../../xdm/home.md) : le cadre normalisé en fonction duquel [!DNL Experience Platform] organise les données d’expérience client.
    - [Principes de base de la composition des schémas](../../../xdm/schema/composition.md) : découvrez les blocs de création de base des schémas XDM, y compris les principes clés et les bonnes pratiques en matière de composition de schémas.
-   - [Tutoriel de l’éditeur de schémas](../../../xdm/tutorials/create-schema-ui.md): Découvrez comment créer des schémas personnalisés à l’aide de l’interface utilisateur de l’éditeur de schémas.
-- [[!DNL Real-time Customer Profile]](../../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
+   - [Tutoriel sur l’éditeur de schémas](../../../xdm/tutorials/create-schema-ui.md) : découvrez comment créer des schémas personnalisés à l’aide de l’interface utilisateur de l’éditeur de schémas.
+- [[!DNL Real-time Customer Profile]](../../../profile/home.md) : fournit un profil de consommateur unifié en temps réel, basé sur des données agrégées provenant de plusieurs sources.
 
 ## Suppression de comptes à l’aide de l’interface utilisateur
 
 >[!TIP]
 >
->Avant de supprimer le compte source, vous devez d’abord supprimer les flux de données existants associés au compte source. Pour supprimer des flux de données existants, reportez-vous au tutoriel sur [suppression des flux de données de sources dans l’interface utilisateur](./delete.md).
+>Avant de supprimer le compte source, vous devez d’abord supprimer les flux de données existants associés à ce compte source. Pour supprimer des flux de données existants, reportez-vous au tutoriel sur [suppression des flux de données de sources dans l’interface utilisateur](./delete.md).
 
 Connectez-vous à [Adobe Experience Platform](https://platform.adobe.com) puis sélectionnez **[!UICONTROL Sources]** à partir de la barre de navigation de gauche pour accéder au **[!UICONTROL Sources]** workspace. Le **[!UICONTROL Catalogue]** affiche diverses sources pour lesquelles vous pouvez créer des comptes et des flux de données. Chaque source indique le nombre de comptes et de flux de données existants qui lui sont associés.
 

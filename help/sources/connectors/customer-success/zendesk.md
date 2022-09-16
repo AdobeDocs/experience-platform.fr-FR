@@ -7,7 +7,7 @@ exl-id: 9f245783-949d-4f40-9cf3-8991b4b6d780
 source-git-commit: 61b694ca5fbd3548243663b3f1bff06aaca72434
 workflow-type: tm+mt
 source-wordcount: '391'
-ht-degree: 35%
+ht-degree: 37%
 
 ---
 
@@ -21,7 +21,7 @@ Adobe Experience Platform permet d’ingérer des données à partir de source
 
 Experience Platform prend en charge l’ingestion de données provenant d’une application de succès client tierce. La prise en charge des fournisseurs de succès client inclut [!DNL Zendesk].
 
-Cette Adobe Experience Platform [sources](https://experienceleague.adobe.com/docs/experience-platform/sources/home.html?lang=en) tire parti de [API de recherche Zendesk > Exporter les résultats de recherche](https://developer.zendesk.com/api-reference/ticketing/ticket-management/search/#export-search-results) qui renvoie les informations sur les utilisateurs dans Experience Platform à partir de Zendesk pour un traitement ultérieur.
+Cette Adobe Experience Platform [sources](https://experienceleague.adobe.com/docs/experience-platform/sources/home.html?lang=fr) tire parti de [API de recherche Zendesk > Exporter les résultats de recherche](https://developer.zendesk.com/api-reference/ticketing/ticket-management/search/#export-search-results) qui renvoie les informations sur les utilisateurs dans Experience Platform à partir de Zendesk pour un traitement ultérieur.
 
 ## Liste autorisée d’adresses IP
 

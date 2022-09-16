@@ -22,7 +22,7 @@ La destination de l’API HTTP est une [!DNL Adobe Experience Platform] destinat
 
 Pour envoyer des données de profil aux points de terminaison HTTP, vous devez d’abord [se connecter à la destination](#connect-destination) in [!DNL Adobe Experience Platform].
 
-## Cas dʼutilisation {#use-cases}
+## Cas d&#39;utilisation {#use-cases}
 
 La destination de l’API HTTP vous permet d’exporter les données de profil XDM et les segments d’audience vers des points de terminaison HTTP génériques. Vous pouvez y exécuter vos propres analyses ou effectuer toute autre opération dont vous aurez besoin sur les données de profil exportées hors d’Experience Platform.
 

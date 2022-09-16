@@ -12,11 +12,11 @@ ht-degree: 70%
 
 ---
 
-# Fonctions d&#39;objet
+# Fonctions d’objet
 
-[!DNL Profile Query Language] (PQL) offre des fonctions pour faciliter l’interaction avec les objets. Vous trouverez plus d’informations sur les autres fonctions PQL dans la [[!DNL Profile Query Language] présentation](./overview.md).
+[!DNL Profile Query Language] (PQL) offre des fonctions pour faciliter l’interaction avec les objets. Vous trouverez plus d’informations sur les autres fonctions PQL dans la section [[!DNL Profile Query Language] aperçu](./overview.md).
 
-## isNull
+## Est nul
 
 La fonction `isNull` détermine si une référence d&#39;objet n&#39;existe pas.
 

@@ -6,7 +6,7 @@ exl-id: bb5852c0-a47a-42c7-9fae-ec7d80dc3bcf
 source-git-commit: f73598224d527535aaf9ecb2aa1c26786cae2d82
 workflow-type: tm+mt
 source-wordcount: '46'
-ht-degree: 0%
+ht-degree: 34%
 
 ---
 
@@ -16,6 +16,6 @@ ht-degree: 0%
 
 [!DNL Adobe Experience Platform] prend actuellement en charge les destinations d’engagement mobile suivantes :
 
-* [Connexion aux attributs du navire](airship-attributes.md)
-* [Connexion à Airship Tags](airship-tags.md)
-* [Connexion de frein](braze.md)
+* [Connexion Attributs Airship](airship-attributes.md)
+* [Connexion Balises Airship](airship-tags.md)
+* [Connexion Braze](braze.md)

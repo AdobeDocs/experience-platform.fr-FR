@@ -1,6 +1,6 @@
 ---
 title: Présentation de la publication
-description: Découvrez le processus de publication des modifications apportées à vos bibliothèques de code de gestion des balises dans Adobe Experience Platform.
+description: Découvrez le processus de publication des modifications apportées à vos bibliothèques de code de gestion des balises dans Adobe Experience Platform.
 exl-id: 32eaad87-d7dc-4812-b546-a136511512fe
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
@@ -13,9 +13,9 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
-Adobe Experience Platform vous permet d’encapsuler les modifications apportées à votre code de gestion des balises dans des bibliothèques individuelles. Plusieurs bibliothèques pouvant désormais être développées en parallèle par différentes équipes, ces bibliothèques doivent suivre un processus délibéré et autorisé afin de fusionner les modifications avant le transfert vers votre environnement de production.
+Adobe Experience Platform vous permet d’encapsuler les modifications apportées à votre code de gestion des balises dans des bibliothèques individuelles. Plusieurs bibliothèques pouvant désormais être développées en parallèle par différentes équipes, ces bibliothèques doivent suivre un processus délibéré et autorisé afin de fusionner les modifications avant le transfert vers votre environnement de production.
 
 Au niveau de base, chaque bibliothèque passe par le processus de publication suivant :
 
@@ -23,7 +23,7 @@ Au niveau de base, chaque bibliothèque passe par le processus de publication su
 1. Testez la fonctionnalité de la bibliothèque dans un environnement d’évaluation si nécessaire.
 1. Déployez la bibliothèque dans votre environnement de production.
 
-Supposons que vous créiez un nouvel événement de « passage en caisse » ainsi qu’un nouvel élément de données de chiffre d’affaires associé à cet événement, et que vous apportiez une modification à la configuration de l’extension Adobe Analytics pour la prise en charge de ce nouvel événement et de ce nouvel élément de données. Vous pouvez inclure toutes ces modifications dans une nouvelle bibliothèque et utiliser le processus de publication afin de les tester, de les approuver et de les publier sous la forme d’une seule unité.
+Supposons que vous créiez un nouvel événement de « passage en caisse » ainsi qu’un nouvel élément de données de chiffre d’affaires associé à cet événement, et que vous apportiez une modification à la configuration de l’extension Adobe Analytics pour la prise en charge de ce nouvel événement et de ce nouvel élément de données. Vous pouvez inclure toutes ces modifications dans une nouvelle bibliothèque et utiliser le processus de publication afin de les tester, de les approuver et de les publier sous la forme d’une seule unité.
 
 Pour une présentation générale du processus de publication des bibliothèques, notamment des détails sur la manière dont les bibliothèques héritent des ressources des versions en amont en fonction de leur état de publication, consultez le [guide des flux de publication](./publishing-flow.md).
 
@@ -39,4 +39,4 @@ Outre le flux de publication, il est important de comprendre le fonctionnement d
 
 ## Étapes suivantes
 
-Ce document présente un aperçu des différents composants impliqués dans la publication des bibliothèques de balises dans Adobe Experience Platform. Reportez-vous à la documentation à laquelle renvoie les différentes sections de ce guide pour en savoir plus sur les détails du processus de publication.
+Ce document présente un aperçu des différents composants impliqués dans la publication de bibliothèques de balises dans Adobe Experience Platform. Reportez-vous à la documentation à laquelle renvoie les différentes sections de ce guide pour en savoir plus sur les détails du processus de publication.

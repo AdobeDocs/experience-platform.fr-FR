@@ -6,7 +6,7 @@ exl-id: 37fd2cdb-87c0-4e5e-9599-ad4f397f7c28
 source-git-commit: 5be8eac1603f1b81e45b4c0aeace5c2017b46149
 workflow-type: tm+mt
 source-wordcount: '386'
-ht-degree: 7%
+ht-degree: 25%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 7%
 
 ## Présentation {#overview}
 
-Les entreprises B2B disposent souvent de leurs informations sur leurs clients stockées dans plusieurs systèmes, chacune d&#39;entre elles ne contenant que des données partielles, voire conflictuelles, pour la même entité commerciale au monde réel. Cela crée un énorme défi : parvenir à une vue exacte de ses clients, réduisant ainsi l’efficacité et l’efficience de leurs efforts de marketing et de vente B2B.
+Les entreprises B2B ont souvent leurs informations client stockées dans plusieurs systèmes, chacun ne contenant que des données partielles, voire conflictuelles, pour la même entité commerciale physique. Il est donc très difficile d’avoir une visualisation précise de leurs clients, ce qui réduit l’efficacité et l’efficience de leurs efforts de marketing et de vente B2B.
 
 | Identifiant | Nom | Site web | Secteur industriel | State (État) | Téléphone | A une opportunité ouverte avec quantité > `$1 million` |
 |---|---|---|---|---|---|---|

@@ -1,17 +1,17 @@
 ---
 keywords: supprimer des destinations, comment supprimer des destinations, supprimer des destinations
-title: Suppression de destinations
+title: Supprimer les destinations
 type: Tutorial
 description: Ce tutoriel répertorie les étapes de suppression d’une destination existante dans l’interface utilisateur de Adobe Experience Platform.
 exl-id: 7b672859-e61a-4b3c-9db9-62048258f0aa
 source-git-commit: 1ef6430b6661a2b8b5aef196b75cfaf3f6220aab
 workflow-type: tm+mt
 source-wordcount: '413'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
 
-# Suppression de destinations {#delete-destinations}
+# Supprimer les destinations {#delete-destinations}
 
 ## Présentation {#overview}
 
@@ -37,7 +37,7 @@ Suivez les étapes ci-dessous pour supprimer une destination du [!UICONTROL Parc
    ![Filtrage des destinations](../assets/ui/delete-destinations/filter-destinations.png)
 
 3. Sélectionnez la ![Bouton Plus](../assets/ui/delete-destinations/more-icon.png) dans la colonne Nom , puis sélectionnez ![Bouton Supprimer](../assets/ui/delete-destinations/delete-icon.png) **[!UICONTROL Supprimer]** pour supprimer une connexion de destination existante.
-   ![Suppression de destinations](../assets/ui/delete-destinations/delete-destinations.png)
+   ![Supprimer les destinations](../assets/ui/delete-destinations/delete-destinations.png)
 
 4. Sélectionner **[!UICONTROL Supprimer]** pour confirmer la suppression de la connexion à la destination.
 
@@ -57,7 +57,7 @@ Suivez les étapes ci-dessous pour supprimer une destination de la page de déta
 
 3. Sélectionnez le nom de la destination que vous souhaitez supprimer.
 
-   ![Sélectionner la destination](../assets/ui/delete-destinations/delete-destination-select.png)
+   ![Sélectionnez des destinations](../assets/ui/delete-destinations/delete-destination-select.png)
 
    * Si la destination comporte des flux de données existants, vous êtes dirigé vers la variable [!UICONTROL Exécutions de flux de données] .
 

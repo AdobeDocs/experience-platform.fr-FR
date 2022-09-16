@@ -1,7 +1,8 @@
 ---
 title: Notes de mise à jour de l’extension de couche de données Google
 description: Notes de mise à jour les plus récentes pour l’extension de balise de la couche de données Google dans Adobe Experience Platform.
-source-git-commit: 638b4fea8a80763a2b46863ecb0e3969a6fc127a
+exl-id: 740b6e3a-d469-475d-9523-03b0b48b11c8
+source-git-commit: 51a263dc2f42fe3538f15f32c7573c69a2e2adc4
 workflow-type: tm+mt
 source-wordcount: '61'
 ht-degree: 3%

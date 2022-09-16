@@ -2,7 +2,8 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;Teradata Vantage
 title: Création d’une connexion à la source de l’offre Teradata dans l’interface utilisateur
 description: Découvrez comment créer une connexion source Teradata Vantage à l’aide de l’interface utilisateur de Adobe Experience Platform.
-source-git-commit: f140dac67ccd09ec1e6cab794f53e0090af55442
+exl-id: 3fdb09fa-128a-477b-9144-d4ef3ed18ea6
+source-git-commit: 322b9aa5b817276eb4b56daf6e410944591c1d51
 workflow-type: tm+mt
 source-wordcount: '394'
 ht-degree: 33%

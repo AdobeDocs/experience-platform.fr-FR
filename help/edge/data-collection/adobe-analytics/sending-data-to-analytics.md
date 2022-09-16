@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Envoi de données à Adobe Analytics
 
-Alors que dans le passé, il existait différentes fonctions pour distinguer une page vue d’un lien (par exemple, `s.t(), s.tl()`), dans le SDK Web il n’y a que la commande `sendEvent`. Les données envoyées avec un événement déterminent s’il doit s’agir d’une page vue ou d’un lien. [En savoir plus sur les liens de suivi](../track-links.md).
+Alors que dans le passé, il existait différentes fonctions pour distinguer une page vue d’un lien (par exemple, `s.t(), s.tl()`), dans le SDK Web, il n’y a que la variable `sendEvent` . Les données envoyées avec un événement déterminent s’il doit s’agir d’une page vue ou d’un lien. [En savoir plus sur les liens de suivi](../track-links.md).
 
 ## Envoi d’une page vue
 

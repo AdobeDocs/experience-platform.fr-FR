@@ -6,27 +6,27 @@ exl-id: f0eafc83-21f1-483d-9397-1133e3777699
 source-git-commit: afbbdfff4346ab5240927f5703d3a06676776ea8
 workflow-type: tm+mt
 source-wordcount: '682'
-ht-degree: 6%
+ht-degree: 7%
 
 ---
 
-# [!UICONTROL Groupe de champs ] de schéma de réservation
+# [!UICONTROL Réservation logement] groupe de champs de schéma
 
-[!UICONTROL La ] réservation d’hébergement est un groupe de champs de schéma standard pour la  [[!DNL XDM ExperienceEvent] ](../../classes/experienceevent.md) classe afin de capturer des informations concernant une réservation d’hébergement.
+[!UICONTROL Réservation logement] est un groupe de champs de schéma standard pour la variable [[!DNL XDM ExperienceEvent] class](../../classes/experienceevent.md) utilisé pour capturer des informations sur une réservation de logement.
 
-Le groupe de champs est une extension du groupe de champs [!UICONTROL Détails de la réservation] et contient tous les mêmes champs sous un seul champ de type objet, `reservations`. Outre ces champs génériques, [!UICONTROL Réservation logement] comprend également le tableau `lodgingReservations`. Ce tableau d’objets est utilisé pour décrire une ou plusieurs réservations avec des propriétés propres au logement.
+Le groupe de champs est une extension de la variable [!UICONTROL Détails de la réservation] groupe de champs et contient tous les mêmes champs sous un seul champ de type objet, `reservations`. En plus de ces champs génériques, [!UICONTROL Réservation logement] inclut également `lodgingReservations` tableau. Ce tableau d’objets est utilisé pour décrire une ou plusieurs réservations avec des propriétés propres au logement.
 
 >[!NOTE]
 >
->Ce document couvre les détails du tableau `lodgingReservations`. Pour plus d’informations sur les autres champs fournis sous l’objet `reservations`, reportez-vous à la [[!UICONTROL Référence du groupe de champs ] ](./reservation-details.md).
+>Ce document couvre les détails de la variable `lodgingReservations` tableau. Pour plus d’informations sur les autres champs fournis sous le `reservations` , reportez-vous à la section [[!UICONTROL Détails de la réservation] référence de groupe de champs](./reservation-details.md).
 
 ![Logement Structure de la réservation](../../images/field-groups/lodging-reservation/structure.png)
 
 ## `lodgingReservations`
 
-`lodgingReservations` est un tableau d’objets qui représente une liste de réservations. Si un événement de réservation implique des réservations dans plusieurs hôtels différents le long de la route d’un voyage, par exemple, ces réservations peuvent être répertoriées comme des objets individuels sous `lodgingReservations` pour un seul événement.
+`lodgingReservations` est un tableau d’objets qui représente une liste de réservations. Si un événement de réservation implique des réservations dans plusieurs hôtels différents le long du parcours d’un voyage, par exemple, ces réservations peuvent être répertoriées comme des objets individuels sous `lodgingReservations` pour un seul événement.
 
-La structure de chaque objet fournie sous `lodgingReservations` est fournie ci-dessous.
+La structure de chaque objet fournie sous `lodgingReservations` est fourni ci-dessous.
 
 ![structure lodgingReserve](../../images/field-groups/lodging-reservation/lodgingReservations.png)
 
@@ -39,23 +39,23 @@ La structure de chaque objet fournie sous `lodgingReservations` est fournie ci-d
 | `agentID` | Chaîne | L’ID d’agent associé à la réservation de l’hôtel. |
 | `basePrice` | Chaîne | Le prix de base avant toute remise. |
 | `bookingID` | Chaîne | ID de réservation associé à la réservation de l’hôtel. |
-| `cancellation` | Entier | Cette valeur est capturée lorsqu’une réservation a été annulée. |
+| `cancellation` | Nombre entier | Cette valeur est capturée lorsqu’une réservation a été annulée. |
 | `checkInDate` | DateTime | La date d’enregistrement de la réservation de la chambre. |
 | `checkOutDate` | DateTime | Date de passage pour la réservation de la chambre. |
 | `confirmationNumber` | Chaîne | Numéro ou identifiant de confirmation de réservation. |
 | `couponCode` | Chaîne | Code coupon associé à la réservation de l’hôtel. |
-| `created` | Entier | Cette valeur est capturée lorsqu’une réservation a été créée. |
+| `created` | Nombre entier | Cette valeur est capturée lorsqu’une réservation a été créée. |
 | `currencyCode` | Chaîne | Code de devise ISO 4217 utilisé pour effectuer l’achat. |
 | `discountPercent` | Double | Pourcentage de remise associé à la réservation. |
 | `freeCancelation` | Booléen | Indique si la chambre a une politique d’annulation gratuite. |
 | `guestID` | Chaîne | ID d’invité associé à la réservation de l’hôtel. |
-| `length` | Entier | Nombre total de jours pour la réservation. |
+| `length` | Nombre entier | Nombre total de jours pour la réservation. |
 | `loyaltyID` | Chaîne | L’identifiant du programme de fidélité de l’invité répertorié dans la réservation. |
-| `modification` | Entier | Cette valeur est capturée lorsqu’une réservation a été modifiée. |
+| `modification` | Nombre entier | Cette valeur est capturée lorsqu’une réservation a été modifiée. |
 | `modificationDate` | DateTime | Heure à laquelle la réservation a été modifiée pour la dernière fois. |
-| `numberOfAdults` | Entier | Nombre d’adultes associés à la réservation. |
-| `numberOfChildren` | Entier | Nombre d’enfants associés à la réservation. |
-| `numberOfRooms` | Entier | Nombre de chambres associées à la réservation. |
+| `numberOfAdults` | Nombre entier | Nombre d’adultes associés à la réservation. |
+| `numberOfChildren` | Nombre entier | Nombre d’enfants associés à la réservation. |
+| `numberOfRooms` | Nombre entier | Nombre de chambres associées à la réservation. |
 | `propertyID` | Chaîne | Identifiant de l’hôtel ou du complexe pour la réservation. |
 | `propertyName` | Chaîne | Nom de l’hôtel ou du complexe pour la réservation. |
 | `purpose` | Chaîne | L’objet de la réservation, généralement professionnel ou personnel. |
@@ -63,7 +63,7 @@ La structure de chaque objet fournie sous `lodgingReservations` est fournie ci-d
 | `refundable` | Booléen | Indique si la chambre est remboursable. |
 | `reservationStatus` | Chaîne | Le statut de la réservation. |
 | `roomAccessibilityType` | Chaîne | Type d’accessibilité de la pièce, tel que la mobilité, l’audition ou autre. |
-| `roomCapacity` | Entier | Nombre de personnes que contient la chambre d’hôtel. |
+| `roomCapacity` | Nombre entier | Nombre de personnes que contient la chambre d’hôtel. |
 | `roomType` | Chaîne | Le type de chambre réservé. |
 | `smoking` | Booléen | Indique si la pièce permet de fumer. |
 | `tripType` | Chaîne | Indique si la réservation est pour un aller simple, un aller-retour ou un voyage dans plusieurs villes. |

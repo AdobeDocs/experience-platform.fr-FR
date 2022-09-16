@@ -2,19 +2,19 @@
 keywords: crm;CRM;destinations crm;portée globale;destination crm de diffusion
 title: Connexion sortante
 description: La destination de diffusion vous permet d’exporter les données de votre compte et de les activer dans le cadre d’Outreach en fonction de vos besoins professionnels.
-source-git-commit: 27da0f8d7896fd32e8a1b828630db7e5e08185c2
+exl-id: 7433933d-7a4e-441d-8629-a09cb77d5220
+source-git-commit: 4ef83c152c4649721c6a424f3ba47b7c6bbfef3f
 workflow-type: tm+mt
 source-wordcount: '1714'
-ht-degree: 5%
+ht-degree: 8%
 
 ---
-
 
 # Connexion [!DNL Outreach]
 
 ## Présentation {#overview}
 
-[[!DNL Outreach]](https://www.outreach.io/) est une plateforme d’exécution des ventes qui possède le plus grand nombre de données d’interaction entre vendeurs et acheteurs B2B au monde et qui investit de manière significative dans des technologies d’IA propriétaires afin de traduire les données de vente en informations. [!DNL Outreach] aide les entreprises à automatiser l’engagement commercial et à agir sur la base de l’intelligence du chiffre d’affaires afin d’améliorer leur efficacité, leur prévisibilité et leur croissance.
+[[!DNL Outreach]](https://www.outreach.io/) est une plateforme d’exécution des ventes qui possède le plus grand nombre de données d’interaction entre vendeurs et acheteurs B2B au monde et qui investit de manière significative dans des technologies d’IA propriétaires afin de traduire les données de vente en informations. [!DNL Outreach] aide les entreprises à automatiser l’engagement commercial et à agir sur la base des renseignements fournis par le chiffre d’affaires afin d’améliorer leur efficacité, leur prévisibilité et leur croissance.
 
 Ceci [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) tire parti de [API de ressource de mise à jour de diffusion externe](https://api.outreach.io/api/v2/docs#update-an-existing-resource), qui permet de mettre à jour les identités d’un segment correspondant aux prospects dans [!DNL Outreach].
 

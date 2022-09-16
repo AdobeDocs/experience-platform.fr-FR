@@ -94,7 +94,7 @@ Pour plus d’informations, reportez-vous à la [[!DNL Data Prep] présentation]
 
 ## Data Science Workspace {#dsw}
 
-Data Science Workspace utilise le machine learning et l’intelligence artificielle pour exploiter les informations contenues dans vos données. Intégré à Adobe Experience Platform, Data Science Workspace vous aide à obtenir des prévisions en utilisant votre contenu et des ressources de données de l’ensemble des solutions Adobe. L’utilisation de la fonction [!DNL JupyterLab]. [!DNL JupyterLab] est une interface utilisateur web pour [[!DNL Project Jupyter]](https://jupyter.org/) et est étroitement intégré à Adobe Experience Platform. Il fournit un environnement de développement interactif avec lequel les spécialistes des données peuvent travailler. [!DNL Jupyter] notebooks, code et données.
+Data Science Workspace utilise le machine learning et l’intelligence artificielle pour exploiter les informations contenues dans vos données. Intégré à Adobe Experience Platform, Data Science Workspace vous aide à obtenir des prévisions en utilisant votre contenu et des ressources de données de l’ensemble des solutions Adobe. Data Science Workspace accomplit cela notamment par l’utilisation de [!DNL JupyterLab]. [!DNL JupyterLab] est une interface utilisateur web pour [[!DNL Project Jupyter]](https://jupyter.org/) et est étroitement intégré à Adobe Experience Platform. Il fournit un environnement de développement interactif avec lequel les spécialistes des données peuvent travailler. [!DNL Jupyter] notebooks, code et données.
 
 **Fonctionnalités clés**
 
@@ -179,9 +179,9 @@ En tant que composant des services intelligents, Customer AI permet aux professi
 
 Pour plus d’informations, veuillez lire la [Présentation de Customer AI](../../intelligent-services/customer-ai/overview.md).
 
-## Real-time Customer Profile {#profile}
+## Profil client en temps réel {#profile}
 
-Adobe Experience Platform vous permet d’offrir aux clients des expériences coordonnées, cohérentes et pertinentes, quel que soit l’endroit ou le moment où ils interagissent avec votre marque. Real-time Customer Profile offre une vue d’ensemble de chaque client qui combine des données issues de plusieurs canaux, notamment des données en ligne, hors ligne, CRM et tierces. [!DNL Profile] vous permet de consolider vos données client disparates en une vue unifiée offrant un compte horodaté et exploitable de chaque interaction client.
+Adobe Experience Platform vous permet d’offrir aux clients des expériences coordonnées, cohérentes et pertinentes, quel que soit l’endroit ou le moment où ils interagissent avec votre marque. Profil client en temps réel offre une vue d’ensemble de chaque client qui combine des données issues de plusieurs canaux, notamment des données en ligne, hors ligne, CRM et tierces. [!DNL Profile] vous permet de consolider vos données client disparates en une vue unifiée offrant un compte horodaté et exploitable de chaque interaction client.
 
 **Fonctionnalités clés**
 

@@ -9,7 +9,7 @@ exl-id: 0499a2a3-5a22-47b1-ac0e-76a432bd26c0
 source-git-commit: 6a9ad0ce5d664e3b32cab4183b54fabd5d9d19e3
 workflow-type: tm+mt
 source-wordcount: '724'
-ht-degree: 11%
+ht-degree: 14%
 
 ---
 
@@ -22,11 +22,11 @@ Ce tutoriel vous explique comment mettre à jour un flux de données existant, y
 Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform :
 
 * [Sources](../../home.md) : Experience Platform permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de Platform.
-* [Environnements de test](../../../sandboxes/home.md) : Experience Platform fournit des environnements de test virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
+* [Sandbox](../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuelles qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
 
-## Mise à jour des flux de données
+## Mettre à jour des flux de données
 
-Dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à la fonction [!UICONTROL Sources] workspace. Sélectionner **[!UICONTROL Flux de données]** dans l’en-tête supérieur pour afficher une liste des flux de données existants.
+Dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources]. Sélectionner **[!UICONTROL Flux de données]** dans l’en-tête supérieur pour afficher une liste des flux de données existants.
 
 ![catalogue](../../images/tutorials/update-dataflows/catalog.png)
 
@@ -74,7 +74,7 @@ L’interface de mappage affiche le jeu de mappage existant de votre flux de don
 
 À partir de là, vous pouvez utiliser l’interface de mappage pour modifier les jeux de mappages appliqués à votre flux de données. Pour obtenir des instructions complètes sur l’utilisation de l’interface de mappage, reportez-vous à la section [guide de l’interface utilisateur de la préparation de données](../../../data-prep/ui/mapping.md) pour plus d’informations.
 
-![mapping](../../images/tutorials/update-dataflows/mapping.png)
+![mappage](../../images/tutorials/update-dataflows/mapping.png)
 
 ### Planification
 

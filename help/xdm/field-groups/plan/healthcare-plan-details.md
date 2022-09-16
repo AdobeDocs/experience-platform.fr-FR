@@ -1,7 +1,8 @@
 ---
 title: Groupe de champs de schéma Détails du plan de soins de santé
 description: Ce document présente un aperçu du groupe de champs Détails du plan de soins de santé .
-source-git-commit: 3937963ceee8502b0669a3f007fd38ecf2824e9b
+exl-id: 5a480c5b-74f8-48dd-858a-5cf2628dc7f0
+source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
 workflow-type: tm+mt
 source-wordcount: '219'
 ht-degree: 10%

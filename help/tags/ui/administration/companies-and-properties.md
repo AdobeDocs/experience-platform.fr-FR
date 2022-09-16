@@ -1,6 +1,6 @@
 ---
 title: Propriétés
-description: Découvrez comment vos extensions, environnements et bibliothèques sont organisés et regroupés pour votre organisation dans Adobe Experience Platform.
+description: Découvrez comment vos extensions, environnements et bibliothèques sont organisés et regroupés pour votre organisation dans Adobe Experience Platform.
 exl-id: e5b4a853-c23e-498c-9e20-e773ea1de88b
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
@@ -13,7 +13,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 ## Propriétés web
 
@@ -25,7 +25,7 @@ Un type de propriété mobile peut contenir plusieurs applications. Par exemple,
 
 ## Bonnes pratiques pour la planification des propriétés {#best-practices-for-planning-properties}
 
-Chaque mise en œuvre de balises dans Adobe Experience Platform peut être très différente. Elles possèdent un large éventail de besoins de collecte des données, dʼutilisation des variables, dʼextensions, de balises tierces, dʼautres systèmes et technologies, de personnes, dʼéquipes, de régions géographiques, etc. Vous devez structurer vos propriétés de manière à ce quʼelles correspondent au workflow de votre organisation IMS et à vos processus.
+Les implémentations de balises dans Adobe Experience Platform peuvent être très différentes. Elles possèdent un large éventail de besoins de collecte des données, dʼutilisation des variables, dʼextensions, de balises tierces, dʼautres systèmes et technologies, de personnes, dʼéquipes, de régions géographiques, etc. Vous devez structurer vos propriétés de manière à ce quʼelles correspondent au workflow de votre organisation IMS et à vos processus.
 
 Tenez compte des éléments suivants lors de la planification des propriétés :
 
@@ -65,7 +65,7 @@ Par exemple, si vous déployez [!DNL Adobe Analytics], [!DNL Target] et les mêm
 
 ### Personnes
 
-Les personnes, équipes et organisations qui travaillent sur Adobe Experience Platform auront-elles besoin dʼun accès à tous vos sites web et applications, à certaines de ces ressources ou à seulement lʼune dʼentre elles ?
+Les personnes, équipes et organisations qui travaillent sur Adobe Experience Platform auront-elles besoin d’un accès à tous vos sites web et applications, à certaines de ces ressources ou à seulement l’une d’entre elles ?
 
 Les fonctionnalités de gestion des utilisateurs permettent d’affecter des rôles à différentes personnes pour toutes vos propriétés ou par propriété. Si une personne dispose des droits suffisants, elle peut effectuer des actions administratives pour toutes les propriétés de cette organisation IMS dans Platform. Tous les autres rôles peuvent être affectés sur une base par propriété. Vous pouvez même masquer une propriété pour certains utilisateurs (non administrateurs) en ne leur accordant aucun rôle dans cette propriété.
 
@@ -89,7 +89,7 @@ Cliquez sur une propriété pour en voir une présentation. La présentation ré
 
 ## Création ou configuration d’une propriété
 
-Cette section fournit des instructions sur la manière de créer ou de configurer une propriété de balise dans Adobe Experience Platform.
+Cette section fournit des conseils sur la création ou la configuration d’une propriété de balise dans Adobe Experience Platform.
 
 >[!NOTE]
 >

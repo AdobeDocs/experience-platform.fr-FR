@@ -8,13 +8,13 @@ exl-id: 398f56d9-1802-458d-b565-4096beb5b014
 source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
 source-wordcount: '188'
-ht-degree: 4%
+ht-degree: 11%
 
 ---
 
-# [!UICONTROL Type ] interactiondata de point ciblé
+# [!UICONTROL Interaction avec le point ciblé] type de données
 
-[!UICONTROL Les ] interactions avec les points ciblés sont un type de données XDM standard qui décrit le périphérique sans fil qui communique des informations d’identité aux applications mobiles à mesure que les périphériques mobiles entrent en portée.
+[!UICONTROL Interaction avec le point ciblé] est un type de données XDM standard qui décrit l’appareil sans fil qui communique des informations d’identité aux applications mobiles à mesure que les appareils mobiles sont en portée.
 
 <img src="../images/data-types/poi-interaction.png" width="400" /><br />
 
@@ -26,7 +26,7 @@ ht-degree: 4%
 
 {style=&quot;table-layout:auto&quot;}
 
-Pour plus d’informations sur le type de données, reportez-vous au référentiel XDM public :
+Pour obtenir plus d’informations sur ce type de données, reportez-vous au référentiel XDM public:
 
 * [Exemple rempli](https://github.com/adobe/xdm/blob/master/components/datatypes/deprecated/poi-interaction.example.1.json)
 * [Schéma complet](https://github.com/adobe/xdm/blob/master/components/datatypes/deprecated/poi-interaction.schema.json)

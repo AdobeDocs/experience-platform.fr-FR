@@ -1,7 +1,8 @@
 ---
 title: Importer le point de terminaison de l’API
 description: Le point de terminaison /import de l’API Schema Registry vous permet de partager des ressources XDM entre les organisations IMS et les environnements de test.
-source-git-commit: 2a58236031834bbe298576e2fcab54b04ec16ac3
+exl-id: 30613535-4770-4f9c-9061-8e3efaf4de48
+source-git-commit: 32d4a364ba740194d4fd7a0f4df7bd69f25f62b8
 workflow-type: tm+mt
 source-wordcount: '294'
 ht-degree: 18%

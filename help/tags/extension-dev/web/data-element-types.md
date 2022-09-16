@@ -13,13 +13,13 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 Dans les balises de la collecte de données, les éléments de données sont essentiellement des alias vers des éléments de données sur une page. Ces données se trouvent dans des paramètres de chaîne de requête, des cookies, des éléments DOM ou d’autres emplacements. Un élément de données peut être référencé par des règles et agit comme une abstraction pour l’accès à ces données.
 
 Les types d’éléments de données sont fournis par les extensions et permettent aux utilisateurs de configurer des éléments de données pour accéder à des données d’une manière particulière. Par exemple, une extension peut fournir un type d’élément de données « élément d’enregistrement local » dans lequel l’utilisateur de peut spécifier un nom d’élément d’enregistrement local. Lorsque l’élément de données est référencé par une règle, l’extension peut rechercher la valeur de l’élément d’enregistrement local en utilisant le nom d’élément d’enregistrement local que l’utilisateur a fourni lors de la configuration de l’élément de données.
 
-Ce document explique comment définir des types d’éléments de données pour une extension web dans Adobe Experience Platform.
+Ce document explique comment définir des types d’éléments de données pour une extension web dans Adobe Experience Platform.
 
 >[!IMPORTANT]
 >
@@ -40,7 +40,7 @@ module.exports = function(settings) {
 }
 ```
 
-Si vous souhaitez que le nom de l’élément d’enregistrement local soit configurable par l’utilisateur d’Adobe Experience Platform, vous pouvez autoriser l’utilisateur à saisir un nom, puis enregistrer le nom dans l’objet `settings`. L’objet pourrait ressembler à ceci :
+Si vous souhaitez que le nom de l’élément de stockage local soit configurable par l’utilisateur d’Adobe Experience Platform, vous pouvez autoriser l’utilisateur à saisir un nom puis à l’enregistrer dans l’objet `settings`. L’objet pourrait ressembler à ceci :
 
 ```js
 {

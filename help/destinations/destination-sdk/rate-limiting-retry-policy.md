@@ -1,7 +1,8 @@
 ---
 description: Découvrez comment Experience Platform gère les différents types d’erreurs renvoyés par les destinations en continu et comment il tente à nouveau d’envoyer des données à la plateforme de destination.
 title: Limitation de débit et stratégie de reprise pour les destinations de diffusion en continu créées avec Destination SDK
-source-git-commit: ec50608f6454dd619c30b6337f454561844183ba
+exl-id: 7a4edf8d-f905-4d55-a25d-4b9c6063ff88
+source-git-commit: 61b8d40d6ecade10b0793bf7ad7c3e83974a0f02
 workflow-type: tm+mt
 source-wordcount: '427'
 ht-degree: 4%

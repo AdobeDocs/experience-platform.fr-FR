@@ -1,6 +1,6 @@
 ---
 title: Norme de rétrocompatibilité
-description: Découvrez la norme de rétrocompatibilité d’Adobe Experience Platform, qui garantit que les versions mises à jour des extensions de balises sont compatibles avec les versions précédentes.
+description: Découvrez la norme de rétrocompatibilité dans Adobe Experience Platform, qui garantit que les versions mises à jour des extensions de balises sont compatibles avec les versions précédentes.
 exl-id: 325390f1-88c7-4b9e-a484-5442ca649bdf
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
@@ -13,13 +13,13 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
-Les mises à jour d’extension de balise dans Adobe Experience Platform doivent être rétrocompatibles avec les versions précédentes de l’extension. Cela signifie que :
+Les mises à jour dʼune extension de balise dans Adobe Experience Platform doivent être rétrocompatibles avec les versions précédentes de lʼextension. Cela signifie que :
 
 * Toute modification des composants principaux des extensions doit être compatible avec les versions précédentes. Cela inclut la configuration de l’extension, les types d’événement, les types de condition, les types d’action, les types d’éléments de données et les modules partagés.
 * Les composants qu’un utilisateur a créés avec l’ancienne version de l’extension doivent être en mesure de transmettre la validation par rapport aux schémas fournis par la nouvelle version.
-* Un utilisateur d’Adobe Experience Platform doit pouvoir installer une version mise à jour de votre extension et faire en sorte que tout ce qu’il a fait continue à fonctionner exactement comme précédemment jusqu’à ce qu’il apporte des modifications délibérées.
+* Un utilisateur dʼAdobe Experience Platform doit pouvoir installer une version mise à jour de votre extension et faire en sorte que tout ce quʼil a fait continue à fonctionner exactement comme précédemment avant dʼeffectuer des modifications délibérées.
 
 ## Modifications autorisées
 

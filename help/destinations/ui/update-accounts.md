@@ -1,17 +1,17 @@
 ---
 keywords: mettre à jour le compte de destination, les comptes de destination, comment mettre à jour les comptes, mettre à jour la destination
-title: Mise à jour des comptes de destination
+title: Mettre à jour les comptes de destination
 type: Tutorial
 description: Ce tutoriel répertorie les étapes de mise à jour des comptes de destination dans l’interface utilisateur de Adobe Experience Platform.
 exl-id: afb41878-4205-4c64-af4d-e2740f852785
 source-git-commit: f31b54622c63f96fb8fa727f80dda295a926e2c7
 workflow-type: tm+mt
 source-wordcount: '505'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
 
-# Mise à jour des comptes de destination
+# Mettre à jour les comptes de destination
 
 ## Présentation {#overview}
 
@@ -25,7 +25,7 @@ Pour les destinations par lot, vous pouvez mettre à jour la clé d’accès ou 
 
 ![Onglet Comptes](../assets/ui/update-accounts/destination-accounts.png)
 
-## Mettre à jour les comptes {#update}
+## Mettre à jour des comptes {#update}
 
 Suivez les étapes ci-dessous pour mettre à jour les détails de connexion vers les destinations existantes.
 

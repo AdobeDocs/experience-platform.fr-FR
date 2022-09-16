@@ -217,7 +217,7 @@ Le `sendEvent` renvoie une promesse résolue avec une `result` . Le `result` con
 
 >[!WARNING]
 >
->`destinations` est actuellement en version bêta. La documentation et la fonctionnalité peuvent changer.
+>`destinations` est actuellement en version bêta. La documentation et les fonctionnalités peuvent changer.
 
 ## Modification globale des événements {#modifying-events-globally}
 

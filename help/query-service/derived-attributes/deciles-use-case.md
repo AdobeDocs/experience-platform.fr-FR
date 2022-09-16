@@ -64,10 +64,10 @@ Le tableau suivant affiche les exemples de données contenus dans la variable `_
 
 | `.membershipNumber` | `.emailAddress.address` | `.transactionDate` | `.transactionType` | `.transactionDetails` | `.mileage` | `.loyaltyStatus` |
 |---|---|---|---|---|---|---|
-| C435678623 | sfeldmark1vr@studiopress.com | 2022-01-01 | STATUS_MILES | Nouveau membre | 5 000 | FLYER |
+| C435678623 | sfeldmark1vr@studiopress.com | 2022-01-01 | STATUS_MILES | Nouveau membre | 5000 | FLYER |
 | B789279247 | pgalton32n@barnesandnoble.com | 2022-02-01 | AWARD_MILES | JFK-FRA | 7500 | SILVER |
 | B789279247 | pgalton32n@barnesandnoble.com | 2022-02-01 | STATUS_MILES | JFK-FRA | 7500 | SILVER |
-| B789279247 | pgalton32n@barnesandnoble.com | 2022-02-10 | AWARD_MILES | FRA-JFK | 5 000 | SILVER |
+| B789279247 | pgalton32n@barnesandnoble.com | 2022-02-10 | AWARD_MILES | FRA-JFK | 5 000 | SILVER |
 | A123487284 | rritson1zn@sciencedaily.com | 2022-01-07 | STATUS_MILES | Nouvelle carte de crédit | 10000 | FLYER |
 
 {style=&quot;table-layout:auto&quot;}

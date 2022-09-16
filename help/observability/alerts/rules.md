@@ -82,7 +82,7 @@ Les règles d’alerte suivantes sont spécifiques aux [destinations](../../dest
 | Informations relatives à l’exécution du flux de destinations | Succès de l’exécution du flux de destinations | Cette alerte se déclenche lorsqu’un segment est activé avec succès vers une destination. |
 | Délais, échecs et erreurs de l’exécution du flux de destinations | Retard de l’exécution du flux de destinations | Cette alerte se déclenche lorsqu’une exécution de flux de destinations dure plus de 150 minutes pour activer un segment. |
 | Délais, échecs et erreurs de l’exécution du flux de destinations | Échec de l’exécution du flux de destinations | Cette alerte se déclenche lorsqu’une erreur se produit lors de l’activation d’un segment vers une destination. |
-| Délais, échecs et erreurs de l’exécution du flux de destinations | Le taux de saut de page dépasse le seuil | Cette alerte se déclenche lorsque le rapport entre les identifiants ignorés et le nombre total d’identifiants dépasse un seuil. |
+| Délais, échecs et erreurs de l’exécution du flux de destinations | Le taux d’ID ignorés dépasse le seuil | Cette alerte se déclenche lorsque le rapport entre les identifiants ignorés et le nombre total d’identifiants dépasse un seuil. |
 
 {style=&quot;table-layout:auto&quot;}
 

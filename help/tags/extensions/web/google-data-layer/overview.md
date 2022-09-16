@@ -1,10 +1,11 @@
 ---
 title: Extension de couche de données Google
 description: Découvrez l’extension de balise de la couche de données client Google dans Adobe Experience Platform.
-source-git-commit: 638b4fea8a80763a2b46863ecb0e3969a6fc127a
+exl-id: 7990351d-8669-432b-94a9-4f9db1c2b3fe
+source-git-commit: 51a263dc2f42fe3538f15f32c7573c69a2e2adc4
 workflow-type: tm+mt
 source-wordcount: '819'
-ht-degree: 6%
+ht-degree: 8%
 
 ---
 
@@ -14,7 +15,7 @@ ht-degree: 6%
 >
 >Cette extension est actuellement en version bêta et n’a pas été entièrement testée en production.
 
-L’extension de couche de données Google vous permet d’utiliser une couche de données Google dans votre implémentation de balises. L’extension peut être utilisée indépendamment ou simultanément avec les solutions Google et avec Google open source [Bibliothèque d’assistance de couche de données](https://github.com/google/data-layer-helper).
+L’extension de la couche de données Google vous permet d’utiliser une couche de données Google lorsque vous implémentez des balises. L’extension peut être utilisée indépendamment ou simultanément avec les solutions Google et avec Google open source [Bibliothèque d’assistance de couche de données](https://github.com/google/data-layer-helper).
 
 La bibliothèque d’assistance fournit des fonctionnalités similaires, pilotées par des événements, au lecteur de données client Adobe (ACDL). Les éléments de données, les règles et les actions de l’extension de la couche de données Google fournissent des fonctionnalités similaires à celles du [Extension ACDL](../client-data-layer/overview.md).
 

@@ -8,7 +8,7 @@ exl-id: e7b0e9bb-a1f1-479c-9e9b-46991f2942e2
 source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '592'
-ht-degree: 14%
+ht-degree: 15%
 
 ---
 
@@ -60,7 +60,7 @@ Une fois que vous avez terminé, vos variables doivent ressembler à la capture 
 
 Vous pouvez désormais sélectionner votre environnement dans le menu déroulant dans le coin supérieur droit et renseigner automatiquement toutes les valeurs enregistrées. Il vous suffit de modifier à tout moment les valeurs pour mettre à jour tous vos appels d’API.
 
-![example](./images/select-environment.png)
+![exemple](./images/select-environment.png)
 
 Pour plus d’informations sur l’utilisation des API Adobe I/O à l’aide de Postman, reportez-vous à la publication sur le site Medium de [utilisation de Postman pour l’authentification JWT sur Adobe I/O](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f).
 

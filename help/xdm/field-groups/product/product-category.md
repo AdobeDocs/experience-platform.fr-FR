@@ -1,13 +1,13 @@
 ---
 title: Groupe de champs de schéma de catégorie de produit
 description: Ce document fournit un aperçu du groupe de champs de schéma Catégorie de produits .
-source-git-commit: 9c06c58553aef4937454ced82d3e89867b5567b7
+exl-id: 80825bcf-e646-426b-a3d6-f6759f6cd5cf
+source-git-commit: f5df893260f0772ad54ccdb00d99ed8f328d35a9
 workflow-type: tm+mt
 source-wordcount: '103'
 ht-degree: 10%
 
 ---
-
 
 # [!UICONTROL Catégorie de produits] groupe de champs de schéma
 

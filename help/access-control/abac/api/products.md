@@ -7,7 +7,7 @@ exl-id: 44ee9a9d-7a13-4d59-a1a9-97764dbd3763
 source-git-commit: 567bfe089fd96cb08cb8ea7c90d065c804be9413
 workflow-type: tm+mt
 source-wordcount: '523'
-ht-degree: 16%
+ht-degree: 22%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 16%
 
 >[!IMPORTANT]
 >
->Le contrôle d’accès basé sur les attributs est actuellement disponible dans une version limitée pour les clients de santé basés aux États-Unis. Cette fonctionnalité sera disponible pour tous les clients Real-time Customer Data Platform une fois qu’elle sera entièrement publiée.
+>Le contrôle d’accès basé sur les attributs est actuellement disponible pour un nombre restreint d’utilisateurs, qui sont actifs dans le secteur de la santé et basés aux États-Unis. Cette fonctionnalité sera disponible pour tous les clients Real-time Customer Data Platform dès son déploiement à grande échelle.
 
 Le `/products` Le point de terminaison de l’API de contrôle d’accès basé sur les attributs vous permet de gérer par programmation les produits, ainsi que les catégories d’autorisations et les jeux d’autorisations associés aux produits de votre entreprise.
 

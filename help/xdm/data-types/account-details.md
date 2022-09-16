@@ -1,7 +1,8 @@
 ---
 title: Type de données Détails du compte
 description: Ce document présente un aperçu du type de données XDM (Account Details Experience Data Model).
-source-git-commit: 77fb3e348c2298fc5c325fcf2d3408da084b2b19
+exl-id: 17254393-263e-4000-9bd2-815a9e842533
+source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
 workflow-type: tm+mt
 source-wordcount: '435'
 ht-degree: 22%

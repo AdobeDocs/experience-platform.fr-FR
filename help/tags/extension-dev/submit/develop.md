@@ -3,7 +3,7 @@ title: Développement d’une extension
 description: Ce document offre un aperçu général du processus de développement dʼune extension de balise et contient des liens vers dʼautres documents présentant des processus plus détaillés.
 exl-id: fb2f7275-a5da-4a41-b915-822c71c02e5c
 source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '538'
 ht-degree: 100%
 

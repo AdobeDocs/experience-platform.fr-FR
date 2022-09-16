@@ -1,7 +1,8 @@
 ---
 title: Groupe de champs de schéma Détails du site
 description: Ce document présente un aperçu du groupe de champs de schéma Détails du site.
-source-git-commit: 3937963ceee8502b0669a3f007fd38ecf2824e9b
+exl-id: 472c0a3f-efda-49af-9490-f2de90b348c0
+source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
 workflow-type: tm+mt
 source-wordcount: '198'
 ht-degree: 13%

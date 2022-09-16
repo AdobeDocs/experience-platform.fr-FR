@@ -11,14 +11,14 @@ ht-degree: 100%
 
 # Chiffrement des valeurs
 
-Lorsque vous utilisez des balises dans Adobe Experience Platform, certains workflows nécessitent de fournir des valeurs sensibles (par exemple en fournissant une clé privée lors de la diffusion de bibliothèques vers des environnements via des hôtes). La nature sensible de ces informations d’identification nécessite
+Lorsque vous utilisez des balises dans Adobe Experience Platform, certains flux de travaux nécessitent de fournir des valeurs sensibles (par exemple, en fournissant une clé privée lors de la diffusion de bibliothèques vers des environnements via des hôtes). La nature sensible de ces informations d’identification nécessite
 un transfert et un stockage sécurisés.
 
 Ce document décrit comment chiffrer des valeurs sensibles à l’aide du [chiffrement GnuPG](https://www.gnupg.org/gph/en/manual/x110.html) (également appelé GPG) afin que seul le système de balises puisse les lire.
 
 ## Obtention de la clé GPG publique et de la somme de contrôle
 
-Après avoir [téléchargé](https://gnupg.org/download/) et installé la dernière version de GPG, vous devez obtenir la clé GPG publique pour l’environnement de production des balises :
+Après avoir [téléchargé](https://gnupg.org/download/) et installé la dernière version de GPG, vous devez obtenir la clé GPG publique pour l’environnement de production des balises :
 
 * [Clé GPG](https://github.com/adobe/reactor-developer-docs/blob/master/files/launch%40adobe.com_pub.gpg)
 * [Somme de contrôle](https://github.com/adobe/reactor-developer-docs/blob/master/files/launch%40adobe.com_pub.gpg.sum)
@@ -47,13 +47,13 @@ gpg --import launch@adobe.com_pub.gpg
 
 ## Chiffrer les valeurs
 
-Après avoir ajouté la clé à votre trousseau, vous pouvez commencer à chiffrer les valeurs à l’aide de l’indicateur `--encrypt`. Le script suivant illustre le fonctionnement de cette commande :
+Après avoir ajouté la clé à votre trousseau, vous pouvez commencer à chiffrer les valeurs à l’aide de l’indicateur `--encrypt`. Le script suivant illustre le fonctionnement de cette commande :
 
 ```shell
 echo -n 'Example value' | gpg --armor --encrypt -r "Tags Data Encryption <launch@adobe.com>"
 ```
 
-Cette commande peut être répartie comme suit :
+Cette commande peut être répartie comme suit :
 
 * L&#39;entrée est fournie à la commande `gpg`.
 * `--armor` crée une sortie ASCII (texte) au lieu de binaire. Cela simplifie le transfert de la valeur via JSON.
@@ -62,7 +62,7 @@ Cette commande peut être répartie comme suit :
 
 La commande ci-dessus utilise la clé publique de `Tags Data Encryption <launch@adobe.com>` pour chiffrer la valeur, `Example value`, au format ASCII.
 
-La sortie de la commande ressemblerait à ce qui suit :
+La sortie de la commande ressemblerait à ce qui suit :
 
 ```shell
 -----BEGIN PGP MESSAGE-----

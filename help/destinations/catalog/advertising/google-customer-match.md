@@ -18,7 +18,7 @@ ht-degree: 5%
 
 ![Destination de correspondance client Google dans l’interface utilisateur de Adobe Experience Platform](../../assets/catalog/advertising/google-customer-match/catalog.png)
 
-## Cas dʼutilisation {#use-cases}
+## Cas d&#39;utilisation {#use-cases}
 
 Pour vous aider à mieux comprendre comment et à quel moment utiliser la variable [!DNL Google Customer Match] destination, voici des exemples de cas d’utilisation que les clients Adobe Experience Platform peuvent résoudre à l’aide de cette fonctionnalité.
 

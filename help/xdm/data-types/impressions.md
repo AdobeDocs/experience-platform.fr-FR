@@ -1,24 +1,25 @@
 ---
 title: Type de données Impressions
 description: Ce document fournit un aperçu du type de données XDM Impressions.
-source-git-commit: 7fc16546176d196582a3cdfcee51f799eeef9788
+exl-id: 1e758043-a41e-45f7-ae8b-514990d0649e
+source-git-commit: afdac5ce2ed967b4688d456a586c946bc2cf4179
 workflow-type: tm+mt
 source-wordcount: '141'
 ht-degree: 7%
 
 ---
 
-#  Type Impressionsdata
+# [!UICONTROL Impressions] type de données
 
- Impression est un type de données XDM standard qui décrit une impression marketing, qui est une mesure utilisée pour quantifier le nombre d’affichages ou d’engagements numériques pour un élément de contenu tel qu’une publicité, une publication numérique ou une page web.
+[!UICONTROL Impressions] est un type de données XDM standard qui décrit une impression marketing, qui est une mesure utilisée pour quantifier le nombre d’affichages ou d’engagements numériques pour un élément de contenu tel qu’une publicité, une publication numérique ou une page web.
 
 ![](../images/data-types/impressions.png)
 
 | Propriété | Type de données | Description |
 | --- | --- | --- |
 | `ID` | Chaîne | Identifiant unique de l’impression. |
-| `displays` | Entier | Nombre de fois où l’élément d’impression a été affiché pour un client. |
-| `selected` | Entier | Nombre de fois où l’élément d’impression a été sélectionné ou a fait l’objet d’un clic. |
+| `displays` | Nombre entier | Nombre de fois où l’élément d’impression a été affiché pour un client. |
+| `selected` | Nombre entier | Nombre de fois où l’élément d’impression a été sélectionné ou a fait l’objet d’un clic. |
 | `type` | Chaîne | Type d’impression. |
 
 {style=&quot;table-layout:auto&quot;}

@@ -30,7 +30,7 @@ Notez les détails suivants qui sont spécifiques à la variable [!DNL Braze] de
 >
 >Gardez à l’esprit que l’envoi d’attributs personnalisés supplémentaires à [!DNL Braze] peut entraîner des augmentations de vos [!DNL Braze] consommation des points de données. Veuillez consulter votre [!DNL Braze] gestionnaire de compte avant d’envoyer des attributs personnalisés supplémentaires.
 
-## Cas dʼutilisation {#use-cases}
+## Cas d&#39;utilisation {#use-cases}
 
 En tant que marketeur, je souhaite cibler les utilisateurs dans une destination d’engagement mobile, avec des segments intégrés à [!DNL Adobe Experience Platform]. En outre, je souhaite leur proposer des expériences personnalisées, en fonction des attributs de leur [!DNL Adobe Experience Platform] profils, dès que les segments et les profils sont mis à jour dans [!DNL Adobe Experience Platform].
 

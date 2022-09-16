@@ -1,6 +1,6 @@
 ---
-title: Notes de mise à jour de l’extension Adobe Media Analytics for Audio and Video
-description: Notes de mise à jour les plus récentes pour l’extension Adobe Media Analytics for Audio and Video dans Adobe Experience Platform.
+title: Notes de mise à jour de l’extension Adobe Media Analytics for Audio and Video
+description: Notes de mise à jour les plus récentes pour l’extension Adobe Media Analytics for Audio and Video dans Adobe Experience Platform.
 exl-id: 79d92f42-795f-4685-926f-ebe6f4125539
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
@@ -9,11 +9,11 @@ ht-degree: 100%
 
 ---
 
-# Notes de mise à jour d’Adobe Media Analytics for Audio and Vidéo
+# Notes de mise à jour d’Adobe Media Analytics for Audio and Vidéo
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 ## 25 octobre 2019
 
@@ -42,7 +42,7 @@ ht-degree: 100%
 
 #### **Fonctionnalités**
 
-L’ [extension Adobe Analytics for Video](../media-analytics/overview.md) ajoute la bibliothèque JavaScript Video Analytics de base. Cette bibliothèque fournit la fonctionnalité nécessaire pour ajouter l’instance MediaHeartbeat à un site ou un projet acceptant les balises. L’extension Adobe Analytics for Video (extension VA) requiert deux extensions supplémentaires :
+L’[extension Adobe Analytics for Video](../media-analytics/overview.md) ajoute la bibliothèque JavaScript Video Analytics de base. Cette bibliothèque fournit la fonctionnalité nécessaire pour ajouter l’instance MediaHeartbeat à un site ou un projet acceptant les balises. L’extension Adobe Analytics for Video (extension VA) requiert deux extensions supplémentaires :
 
 * Extension Analytics
-* L’extension Experience Cloud ID
+* L’extension Experience Cloud ID

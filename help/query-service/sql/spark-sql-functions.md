@@ -99,7 +99,7 @@ Pour plus d’informations sur les fonctions, notamment leur syntaxe, leur utili
 | [`<`](https://spark.apache.org/docs/latest/api/sql/index.html#_8) | Inférieur à |
 | [`<=`](https://spark.apache.org/docs/latest/api/sql/index.html#_9) | Inférieur ou égal à |
 | [`=`](https://spark.apache.org/docs/latest/api/sql/index.html#_12) | Equal to |
-| [`>`](https://spark.apache.org/docs/latest/api/sql/index.html#_14) | Greater than |
+| [`>`](https://spark.apache.org/docs/latest/api/sql/index.html#_14) | Supérieur à |
 | [`>=`](https://spark.apache.org/docs/latest/api/sql/index.html#_15) | Supérieur ou égal à |
 | [`^`](https://spark.apache.org/docs/latest/api/sql/index.html#_16) | Bitwise exclusive or |
 | [`\|`](https://spark.apache.org/docs/latest/api/sql/index.html#_17) | Au niveau du bit ou |

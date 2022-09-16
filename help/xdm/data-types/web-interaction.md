@@ -8,13 +8,13 @@ exl-id: 772d96c5-9fa3-4fed-8b38-16b8e7101743
 source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
 source-wordcount: '190'
-ht-degree: 5%
+ht-degree: 12%
 
 ---
 
-# [!UICONTROL Type ] Web interactiondata
+# [!UICONTROL Interaction web] type de données
 
-[!UICONTROL Les ] interactions web sont un type de données XDM (Experience Data Model) standard qui décrit les informations sur les interactions qui se sont produites sur une page web une fois le chargement initial de la page terminé. Il est destiné à enregistrer les interactions dans des applications web enrichies qui ne déclenchent pas de nouveau chargement de page, telles que les applications web d’une seule page (SPA).
+[!UICONTROL Interaction web] est un type de données XDM (Experience Data Model) standard qui décrit les informations sur les interactions qui se sont produites sur une page web une fois le chargement initial de la page terminé. Il est destiné à enregistrer les interactions dans des applications web enrichies qui ne déclenchent pas de nouveau chargement de page, telles que les applications web d’une seule page (SPA).
 
 <img src="../images/data-types/web-interaction.PNG" width="500" /><br />
 
@@ -27,7 +27,7 @@ ht-degree: 5%
 
 {style=&quot;table-layout:auto&quot;}
 
-Pour plus d’informations sur le type de données, reportez-vous au référentiel XDM public :
+Pour obtenir plus d’informations sur ce type de données, reportez-vous au référentiel XDM public:
 
 * [Exemple rempli](https://github.com/adobe/xdm/blob/master/components/datatypes/deprecated/webinteraction.example.1.json)
 * [Schéma complet](https://github.com/adobe/xdm/blob/master/components/datatypes/deprecated/webinteraction.schema.json)

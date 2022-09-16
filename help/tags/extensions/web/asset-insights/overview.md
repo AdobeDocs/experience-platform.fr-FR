@@ -1,6 +1,6 @@
 ---
 title: Présentation de l’extension AEM Asset Insights
-description: Découvrez l’extension de balise AEM Asset Insights dans Adobe Experience Platform.
+description: Découvrez lʼextension de balise AEM Asset Insights dans Adobe Experience Platform.
 exl-id: 7d3edd42-09fe-4e40-93dc-1edd2fdbb121
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
@@ -13,7 +13,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 Cette extension est destinée à être utilisée avec [AEM Asset Insights](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html?lang=fr). Plus précisément, elle remplace le processus « pageTracker » et le code incorporé. Lorsqu’elle est configurée, cette extension envoie les mesures *Impression* et *Clic* sur les ressources à Adobe Analytics, après quoi elles sont importées dans les rapports AEM Asset Insights. Les mesures sur les ressources peuvent ensuite faire l’objet de rapports à l’aide des espaces de travail AEM Asset Insights et Projet Adobe Analytics.
 
@@ -33,9 +33,9 @@ Il existe également deux mesures :
 
 Ces rapports doivent être activés à l’aide de l’administrateur Analytics (cliquez sur **[!UICONTROL Analytics] > [!UICONTROL Admin] > [!UICONTROL Suites de rapports] > `<report suite>` > [!UICONTROL Modifier les paramètres] > [!UICONTROL AEM] > [!UICONTROL Compte rendu des performances d’AEM Assets]**) avant de pouvoir être renseignés à l’aide de cette extension.
 
-L&#39;extension de balise « *Adobe Analytics* » pour Adobe Experience Platform doit être installée dans la même propriété Web.
+L&#39;extension de balise « *Adobe Analytics* » pour Adobe Experience Platform doit être installée dans la même propriété Web.
 
-### Adobe Experience Manager (AEM)
+### Adobe Experience Manager (AEM)
 
 1. Activez [AEM Asset Insights](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html). Dans AEM, sélectionnez **[!UICONTROL Outils > Ressources]**, puis ouvrez le panneau **[!UICONTROL Configuration des statistiques]**.
 
@@ -47,9 +47,9 @@ L&#39;extension de balise « *Adobe Analytics* » pour Adobe Experience Platfo
 
    ![Désactiver le suivi UUID](images/disableassets.jpg)
 
-## Configurer Adobe Experience Manager (AEM)
+## Configurer Adobe Experience Manager (AEM)
 
-Cette section décrit comment configurer AEM avec des balises dans Adobe Experience Platform, comment activer Asset Insight dans AEM et comment activer le suivi UUID pour Assets.
+Cette section décrit comment configurer AEM avec des balises dans Adobe Experience Platform, comment activer Asset Insight dans AEM et comment activer le suivi UUID pour Assets.
 
 ### Intégration d’AEM avec des balises
 
@@ -57,11 +57,11 @@ L’intégration recommandée de [Platform](https://experienceleague.adobe.com/d
 
 1. [Connexion d’AEM à Launch à l’aide d’Adobe I/O](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/connect-aem-launch-adobe-io.html?lang=fr).
 
-2. [Création d’une configuration de Cloud Service Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/create-launch-cloud-service.html?lang=fr).
+2. [Création dʼune configuration Adobe Experience Platform Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/create-launch-cloud-service.html?lang=fr).
 
 ### Activer Asset Insight dans AEM
 
-Pour obtenir des instructions sur l’activation d’Assets Insights, consultez le [guide de l’utilisateur Experience Manager 6.5 Assets](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html).
+Pour obtenir des instructions sur l’activation d’Assets Insights, consultez le [guide de l’utilisateur Experience Manager 6.5 Assets](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html).
 
 ### Activer le suivi UUID pour Assets
 
@@ -87,7 +87,7 @@ Cette extension comporte deux événements et une action.
 
 ### Impressions de ressources
 
-Ajoutez l’action « Définir des variables AA » sur une règle de balise nouvelle ou existante qui se déclenche sur chaque page et envoie une demande d’image Analytics. L’action « Définir des variables AA » doit s’afficher **avant** l’action « Adobe Analytics - Envoyer la balise ». Des actions supplémentaires peuvent être ajoutées si nécessaire.
+Ajoutez l’action « Définir des variables AA » sur une règle de balise nouvelle ou existante qui se déclenche sur chaque page et envoie une demande d’image Analytics. L’action « Définir des variables AA » doit s’afficher **avant** l’action « Adobe Analytics - Envoyer la balise ». Des actions supplémentaires peuvent être ajoutées si nécessaire.
 
 Dans la page de configuration **[Définir des variables AA]**, sélectionnez l’option **[Ressources consultées]** (par défaut). Ceci définit uniquement l’événement Impressions pour les ressources réellement consultées par le visiteur.
 
@@ -100,13 +100,13 @@ Dans la page de configuration **[Définir des variables AA]**, sélectionnez l�
 
 ### Clics sur les ressources
 
-Configurez une deuxième règle à l’aide de l’événement « Ressource ayant fait l’objet d’un clic » et de l’action « Définir des variables AA ». L’événement « Ressource ayant fait l’objet d’un clic » doit être configuré de sorte que « Demande d’image de ressource ayant fait l’objet d’un clic » soit défini sur « On PageLoad » (par défaut). Cette règle ne nécessite aucune action Adobe Analytics (telle que « Envoyer la balise »), car l’identifiant de ressource sera enregistré dans `sessionStorage` et envoyé par la règle Impressions suivante.
+Configurez une deuxième règle à l’aide de l’événement « Ressource ayant fait l’objet d’un clic » et de l’action « Définir des variables AA ». L’événement « Ressource ayant fait l’objet d’un clic » doit être configuré de sorte que « Demande d’image de ressource ayant fait l’objet d’un clic » soit défini sur « On PageLoad » (par défaut). Cette règle ne nécessite aucune action Adobe Analytics (telle que « Envoyer la balise »), car l’identifiant de ressource sera enregistré dans `sessionStorage` et envoyé par la règle Impressions suivante.
 
 L’événement « Ressource ayant fait l’objet d’un clic » prend également en charge le paramètre « Demande d’image de ressource ayant fait l’objet d’un clic » défini sur « À la suite d’un clic ». Cette opération envoie immédiatement la mesure des clics à Analytics et nécessite également une action « Envoyer la balise » d’Analytics.
 
 ![Clics sur les ressources au chargement de la page](images/sendClickOnPageload.jpg)
 
-Configurez une troisième règle qui se déclenche lorsqu’il y a des ressources sur les pages qui n’ont pas de destination (pas d’attribut `href`). Au minimum, la nouvelle règle doit utiliser l’événement « Ressource ayant fait l’objet d’un clic (Pas de destination) », ainsi que les actions « Définir des variables AA » et « Adobe Analytics - Envoyer la balise ». D’autres conditions et actions peuvent être ajoutées si nécessaire.
+Configurez une troisième règle qui se déclenche lorsqu’il y a des ressources sur les pages qui n’ont pas de destination (pas d’attribut `href`). Au minimum, la nouvelle règle doit utiliser l’événement « Ressource ayant fait l’objet d’un clic (Pas de destination) », ainsi que les actions « Définir des variables AA » et « Adobe Analytics - Envoyer la balise ». D’autres conditions et actions peuvent être ajoutées si nécessaire.
 
 ![Clics sur les ressources - Pas de destination](images/sendClickOnClickNoDestination.jpg)
 

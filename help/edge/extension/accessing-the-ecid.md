@@ -11,14 +11,14 @@ ht-degree: 10%
 
 # Accès à l’ECID
 
-[!DNL Experience Cloud Identity (ECID)] est l’identifiant persistant d’un visiteur de votre site Web. Dans certains cas, vous préférerez peut-être accéder à l’ECID (pour l’envoyer à un tiers, par exemple).
+Le [!DNL Experience Cloud Identity (ECID)] est un identifiant persistant d’un visiteur de votre site Web. Dans certains cas, vous préférerez peut-être accéder à l’ECID (pour l’envoyer à un tiers, par exemple).
 
 Pour accéder à l’ECID dans des balises, Adobe recommande ce qui suit :
 
-1. Vérifiez que la propriété est configurée avec l’option [séquencement des composants de règle](../../tags/ui/managing-resources/rules.md#sequencing) activée.
+1. Vérifiez que votre propriété est configurée avec [séquencement des composants de règle](../../tags/ui/managing-resources/rules.md#sequencing) activée.
 1. Créez une nouvelle règle.
-1. Ajoutez un événement [!UICONTROL Library Loaded] (Bibliothèque chargée) à la règle.
-1. Ajoutez une action [!UICONTROL Condition personnalisée] à la règle avec le code suivant (en supposant que le nom que vous avez configuré pour l’instance du SDK soit `alloy`) :
+1. Ajouter un [!UICONTROL Bibliothèque chargée] à la règle.
+1. Ajouter un [!UICONTROL Condition personnalisée] l’action sur la règle avec le code suivant (en supposant que le nom que vous avez configuré pour l’instance du SDK soit `alloy`) :
 
    ```javascript
     return alloy("getIdentity")

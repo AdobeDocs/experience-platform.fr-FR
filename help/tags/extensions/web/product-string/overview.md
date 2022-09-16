@@ -1,6 +1,6 @@
 ---
-title: Présentation de l’extension Adobe Analytics Product String
-description: Découvrez l’extension de balise Adobe Analytics Product String présente dans Adobe Experience Platform.
+title: Présentation de l’extension Adobe Analytics Product String
+description: Découvrez l’extension de balise Adobe Analytics Product String présente dans Adobe Experience Platform.
 exl-id: a49feb4e-f166-41d2-9f85-639f6ff8bb8f
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
@@ -13,7 +13,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 La variable `products` surveille la manière dont les utilisateurs interagissent avec les produits de votre site. Par exemple, la variable `products` peut surveiller le nombre de fois où un produit est affiché, ajouté au panier, passé en caisse et acheté. Elle peut également surveiller l’efficacité relative des catégories de marchandisage de votre site.
 
@@ -33,7 +33,7 @@ Pour obtenir une documentation complète, consultez la page [Produits](https://e
 
 ### Configuration d’action
 
-Ajoutez l’action « Adobe Analytics Product String - Set s.products » à votre règle.
+Ajoutez l’action « Adobe Analytics Product String - Set s.products » à votre règle.
 
 ![Configuration d’action](./images/screenshot-action-config.png)
 
@@ -87,11 +87,11 @@ Si votre mise en œuvre utilise des événements personnalisés ou des eVars de 
 
 ### Séquence d’actions
 
-Cette action doit s’accompagner d’une action « Adobe Analytics - Définir les variables » définissant les événements de succès correspondants, ainsi que d’une action « Adobe Analytics - Envoyer une balise ». La séquence d’actions appropriée est illustrée ci-dessous.
+Cette action doit s’accompagner d’une action « Adobe Analytics - Définir les variables » définissant les événements de succès correspondants, ainsi que d’une action « Adobe Analytics - Envoyer une balise ». La séquence d’actions appropriée est illustrée ci-dessous.
 
 ![Champs standard](./images/screenshot-price-type.png)
 
 ### Conditions
 
 * Une [couche de données](https://theblog.adobe.com/data-layers-buzzword-best-practice/) basée sur un objet avec des variables pour toutes les données liées au produit (comme l’ID du produit, la quantité, le prix). Cette extension ne fonctionne pas avec les couches de données basées sur des tableaux.
-* L’extension [Adobe Analytics](../analytics/overview.md) doit être installée.
+* L’extension [Adobe Analytics](../analytics/overview.md) doit être installée.

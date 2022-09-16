@@ -6,7 +6,7 @@ exl-id: 0cbe5089-b73d-4584-8451-2fc34d47c357
 source-git-commit: 874c590e83712a45e75308239fb71db04614bd1e
 workflow-type: tm+mt
 source-wordcount: '745'
-ht-degree: 6%
+ht-degree: 14%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 6%
 >[!IMPORTANT]
 >
 >Le **[!UICONTROL Exporter le fichier maintenant]** en Adobe Experience Platform Destination SDK est actuellement en version bêta. La documentation et les fonctionnalités peuvent changer.
->Contactez votre représentant d’Adobe pour accéder à cette fonctionnalité.
+>Contactez votre représentant Adobe pour accéder à cette fonctionnalité.
 
 >[!IMPORTANT]
 > 
@@ -26,11 +26,11 @@ ht-degree: 6%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_activatenow"
 >title="Exporter le fichier maintenant"
->abstract="Sélectionnez ce contrôle pour livrer un export de fichier complet en plus des exports précédemment programmés. L’exportation du fichier est déclenchée immédiatement et récupère les derniers résultats des exécutions de segmentation des Experience Platform."
+>abstract="Sélectionnez ce contrôle pour livrer un export de fichier complet en plus des exports précédemment programmés. L’exportation du fichier est déclenchée immédiatement et récupère les derniers résultats des exécutions de segmentation d’Experience Platform."
 
 Cet article explique comment utiliser l’interface utilisateur de l’Experience Platform pour exporter des fichiers à la demande vers des destinations par lots telles que [espace de stockage](/help/destinations/catalog/cloud-storage/overview.md) et [marketing par e-mail](/help/destinations/catalog/email-marketing/overview.md) destinations.
 
-Le **[!UICONTROL Exporter le fichier maintenant]** Le contrôle permet d’exporter un fichier complet sans interrompre le planning d’exportation actuel d’un segment précédemment planifié. Cet export s’effectue en plus des exports précédemment planifiés et ne modifie pas la fréquence d’exportation du segment. L’exportation du fichier est déclenchée immédiatement et récupère les derniers résultats des exécutions de segmentation des Experience Platform.
+Le **[!UICONTROL Exporter le fichier maintenant]** Le contrôle permet d’exporter un fichier complet sans interrompre le planning d’exportation actuel d’un segment précédemment planifié. Cette exportation s’ajoute aux exportations précédemment planifiées. Elle ne modifie pas la fréquence d’exportation du segment. L’exportation du fichier est déclenchée immédiatement et récupère les derniers résultats des exécutions de segmentation d’Experience Platform.
 
 Vous pouvez également utiliser les API Experience Platform à cet effet. Lire comment [Activation des segments d’audience à la demande vers des destinations par lots via l’API d’activation ad hoc](/help/destinations/api/ad-hoc-activation-api.md).
 

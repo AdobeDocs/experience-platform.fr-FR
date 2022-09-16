@@ -1,6 +1,6 @@
 ---
-title: Présentation de lʼextension du service Experience Cloud Identity dʼAdobe
-description: Découvrez lʼextension de balise du service Experience Cloud Identity dʼAdobe dans Adobe Experience Platform.
+title: Présentation de lʼextension du service Experience Cloud Identity dʼAdobe
+description: Découvrez lʼextension de balises du service Adobe Experience Cloud Identity dans Adobe Experience Platform.
 exl-id: 9bfcb666-a3f1-46ad-8678-2c63738da2b2
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
@@ -9,19 +9,19 @@ ht-degree: 100%
 
 ---
 
-# Présentation de lʼextension du service Experience Cloud Identity dʼAdobe
+# Présentation de lʼextension du service Experience Cloud Identity dʼAdobe
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
-Cette référence vous permet dʼobtenir plus dʼinformations sur la configuration de lʼextension du service Experience Cloud ID dʼAdobe et sur les options disponibles lors de lʼutilisation de cette extension afin de créer une règle.
+Cette référence vous permet dʼobtenir plus dʼinformations sur la configuration de lʼextension du service Experience Cloud ID dʼAdobe et sur les options disponibles lors de lʼutilisation de cette extension afin de créer une règle.
 
-Utilisez cette extension pour intégrer le service Experience Cloud Identity à votre propriété. Grâce au service Experience Cloud Identity, vous pouvez créer et stocker des identifiants uniques et persistants pour les visiteurs de votre site.
+Utilisez cette extension pour intégrer le service Experience Cloud Identity à votre propriété. Grâce au service Experience Cloud Identity, vous pouvez créer et stocker des identifiants uniques et persistants pour les visiteurs de votre site.
 
-## Configuration de l’extension Experience Cloud ID
+## Configuration de l’extension Experience Cloud ID
 
-Cette section fournit des informations relatives aux options disponibles lors de la configuration de l’extension Experience Cloud ID.
+Cette section fournit des informations relatives aux options disponibles lors de la configuration de l’extension Experience Cloud ID.
 
 Si lʼextension Experience Cloud ID nʼest pas encore installée, ouvrez votre propriété, puis cliquez sur **[!UICONTROL Extensions > Catalogue]**, survolez lʼextension Experience Cloud ID avec votre souris et cliquez sur **[!UICONTROL Installer]**.
 
@@ -31,15 +31,15 @@ Pour configurer l’extension, ouvrez l’onglet Extensions, survolez-la avec la
 
 Les options de configuration disponibles sont les suivantes :
 
-### Experience Cloud Organization ID (ID d’organisation d’Experience Cloud)
+### Experience Cloud Organization ID (ID d’organisation d’Experience Cloud)
 
-ID de votre organisation Experience Cloud.
+ID de votre organisation Experience Cloud.
 
 Votre ID est une chaîne alphanumérique de 24 caractères suivie par `@AdobeOrg`. Si vous ne connaissez pas votre ID, contactez l’Assistance clientèle.
 
 ### Exclusion de chemins d’accès spécifiques
 
-L’Experience Cloud ID ne se charge pas si l’URL correspond à l’un des chemins spécifiés.
+L’ID Experience Cloud ID ne se charge pas si l’URL correspond à l’un des chemins spécifiés.
 
 (Facultatif) Activez les Regex s’il s’agit d’une expression régulière.
 
@@ -89,11 +89,11 @@ Définissez les catégories qui sont approuvées ou refusées lorsqu’aucune pr
 
 ### Variables
 
-Définissez les paires nom-valeur comme propriétés d’instance Experience Cloud ID. Utilisez la liste déroulante pour sélectionner une variable, puis saisissez ou sélectionnez une valeur. Pour plus dʼinformations sur chaque variable, reportez-vous à la [documentation sur le service Experience Cloud Identity](https://experiencecloud.adobe.com/resources/help/fr_FR/mcvid/mcvid-overview.html).
+Définissez les paires nom-valeur comme propriétés d’instance Experience Cloud ID. Utilisez la liste déroulante pour sélectionner une variable, puis saisissez ou sélectionnez une valeur. Pour plus dʼinformations sur chaque variable, reportez-vous à la [documentation sur le service Experience Cloud Identity](https://experiencecloud.adobe.com/resources/help/fr_FR/mcvid/mcvid-overview.html).
 
 ## Types d’actions de l’extension Experience Cloud ID
 
-Cette section décrit les types d’actions disponibles dans l’extension Experience Cloud ID.
+Cette section décrit les types d’actions disponibles dans l’extension Experience Cloud ID.
 
 ### Types d’actions
 
@@ -103,7 +103,7 @@ Définissez un ou plusieurs ID de client.
 
 1. Saisissez le code d’intégration.
 
-   Le code d’intégration doit contenir la valeur configurée en tant que source de données dans Audience Manager ou dans Customer Attributes (Attributs du client).
+   Le code d’intégration doit contenir la valeur configurée en tant que source de données dans Audience Manager ou dans Customer Attributes (Attributs du client).
 
 1. Sélectionnez une valeur.
 

@@ -23,13 +23,13 @@ Ce tutoriel décrit les étapes de création et de modification des types de don
 
 ## Conditions préalables
 
-Ce guide nécessite une compréhension pratique du système XDM. Reportez-vous à la [présentation de XDM](../../home.md) pour une présentation du rôle de XDM dans l’écosystème Experience Platform et les [bases de la composition des schémas](../../schema/composition.md) pour la manière dont les types de données contribuent aux schémas XDM.
+Ce guide nécessite une compréhension pratique du système XDM. Reportez-vous à la section [Présentation de XDM](../../home.md) pour une présentation du rôle de XDM dans l’écosystème Experience Platform, et de [principes de base de la composition des schémas](../../schema/composition.md) pour savoir comment les types de données contribuent aux schémas XDM.
 
-Bien que ce guide ne soit pas obligatoire, il est recommandé de suivre également le tutoriel sur la [composition d’un schéma dans l’interface utilisateur](../../tutorials/create-schema-ui.md) afin de vous familiariser avec les différentes fonctionnalités de [!DNL Schema Editor].
+Bien que ce guide ne soit pas obligatoire, il est recommandé de suivre également le tutoriel sur [composition d’un schéma dans l’interface utilisateur](../../tutorials/create-schema-ui.md) pour vous familiariser avec les différentes capacités de la fonction [!DNL Schema Editor].
 
-## Ouvrez le [!DNL Schema Editor] pour un type de données.
+## Ouvrez le [!DNL Schema Editor] pour un type de données
 
-Dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Schémas]** dans le volet de navigation de gauche pour ouvrir l’espace de travail [!UICONTROL Schémas], puis sélectionnez l’onglet **[!UICONTROL Types de données]**. Une liste des types de données disponibles s’affiche, y compris ceux définis par Adobe et ceux créés par votre organisation.
+Dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Schémas]** dans le volet de navigation de gauche pour ouvrir la [!UICONTROL Schémas] espace de travail, puis sélectionnez **[!UICONTROL Types de données]** . Une liste des types de données disponibles s’affiche, y compris ceux définis par Adobe et ceux créés par votre organisation.
 
 ![](../../images/ui/resources/data-types/data-types-tab.png)
 
@@ -40,11 +40,11 @@ Vous disposez de deux options :
 
 ### Création d’un type de données {#create}
 
-Dans l’onglet **[!UICONTROL Types de données]**, sélectionnez **[!UICONTROL Créer un type de données]**.
+Dans la **[!UICONTROL Types de données]** onglet, sélectionnez **[!UICONTROL Création d’un type de données]**.
 
 ![](../../images/ui/resources/data-types/create.png)
 
-[!DNL Schema Editor] s’affiche, indiquant la structure actuelle du nouveau type de données dans la zone de travail. Dans la partie droite de l’éditeur, vous pouvez indiquer un nom d’affichage et une description facultative du type de données. Veillez à fournir un nom unique et concis pour votre type de données, car c’est ainsi qu’il sera identifié lors de son ajout à un schéma.
+Le [!DNL Schema Editor] s’affiche, indiquant la structure actuelle du nouveau type de données dans la zone de travail. Dans la partie droite de l’éditeur, vous pouvez indiquer un nom d’affichage et une description facultative du type de données. Veillez à fournir un nom unique et concis pour votre type de données, car c’est ainsi qu’il sera identifié lors de son ajout à un schéma.
 
 Ce tutoriel crée un type de données qui décrit une propriété &quot;restaurant&quot;, de sorte que le type de données se voit attribuer un nom d’affichage &quot;Restaurant&quot;.
 
@@ -56,23 +56,23 @@ Ce tutoriel crée un type de données qui décrit une propriété &quot;restaura
 
 >[!NOTE]
 >
->Une fois qu’un type de données existant est utilisé dans un schéma qui a été activé pour une utilisation dans Real-time Customer Profile, seules des modifications non destructives peuvent être apportées par la suite à ce type de données. Pour plus d’informations, consultez les [règles de l’évolution du schéma](../../schema/composition.md#evolution) .
+>Une fois qu’un type de données existant est utilisé dans un schéma qui a été activé pour une utilisation dans Real-time Customer Profile, seules des modifications non destructives peuvent être apportées par la suite à ce type de données. Voir [règles d’évolution des schémas](../../schema/composition.md#evolution) pour plus d’informations.
 
-Seuls les types de données personnalisés définis par votre organisation peuvent être modifiés. Pour réduire la liste affichée, sélectionnez l’icône de filtre (![Icône Filtrer](../../images/ui/resources/data-types/filter.png)) afin d’afficher les contrôles pour le filtrage en fonction de [!UICONTROL Propriétaire]. Sélectionnez **[!UICONTROL Client]** pour afficher uniquement les types de données personnalisés appartenant à votre organisation.
+Seuls les types de données personnalisés définis par votre organisation peuvent être modifiés. Pour réduire la liste affichée, sélectionnez l’icône de filtre (![Icône Filtrer](../../images/ui/resources/data-types/filter.png)) pour afficher les commandes de filtrage basées sur [!UICONTROL Propriétaire]. Sélectionner **[!UICONTROL Client]** pour afficher uniquement les types de données personnalisés appartenant à votre organisation.
 
-Sélectionnez le type de données à modifier dans la liste pour ouvrir le rail de droite, en affichant les détails du type de données. Sélectionnez le nom du type de données dans le rail de droite pour ouvrir sa structure dans la balise [!DNL Schema Editor].
+Sélectionnez le type de données à modifier dans la liste pour ouvrir le rail de droite, en affichant les détails du type de données. Sélectionnez le nom du type de données dans le rail de droite pour ouvrir sa structure dans le [!DNL Schema Editor].
 
 ![](../../images/ui/resources/data-types/edit.png)
 
 ## Ajouter des champs au type de données {#add-fields}
 
-Pour commencer à ajouter des champs au type de données, sélectionnez l’icône **plus (+)** en regard du champ de niveau racine dans la zone de travail. Un nouveau champ s’affiche en dessous et le rail de droite se met à jour pour afficher les commandes du nouveau champ.
+Pour commencer à ajouter des champs au type de données, sélectionnez la variable **plus (+)** en regard du champ de niveau racine dans la zone de travail. Un nouveau champ s’affiche ci-dessous et le rail de droite se met à jour pour afficher les commandes du nouveau champ.
 
 ![](../../images/ui/resources/data-types/new-field.png)
 
 Utilisez les commandes du rail de droite pour configurer les détails du nouveau champ. Consultez le guide sur la [définition des champs dans l’interface utilisateur](../fields/overview.md#define) pour obtenir des instructions spécifiques sur la configuration et l’ajout du champ au type de données.
 
-Le type de données Restaurant nécessite un champ de chaîne pour représenter le nom du restaurant. Par conséquent, le [!UICONTROL nom du champ] est défini comme &quot;name&quot; et le [!UICONTROL type] est défini comme &quot;[!UICONTROL chaîne]&quot;. Sélectionnez **[!UICONTROL Appliquer]** pour appliquer les modifications au champ.
+Le type de données Restaurant nécessite un champ de chaîne pour représenter le nom du restaurant. Ainsi, la variable [!UICONTROL Nom du champ] est défini sur &quot;name&quot; et la variable [!UICONTROL Type] est défini sur &quot;[!UICONTROL Chaîne]&quot;. Sélectionner **[!UICONTROL Appliquer]** pour appliquer les modifications au champ.
 
 ![](../../images/ui/resources/data-types/name-field.png)
 
@@ -92,22 +92,22 @@ Une fois que vous avez terminé d’ajouter des champs au type de données, sél
 
 Une fois que vous avez créé un type de données, vous pouvez commencer à l’utiliser dans vos schémas. Les schémas XDM étant composés d’une classe et de zéro ou plusieurs groupes de champs, les champs fournis par un type de données ne peuvent pas être ajoutés directement à un schéma. Ils doivent être inclus dans une classe ou un groupe de champs.
 
-Commencez par suivre la procédure d’[ajout d’un champ à une classe](./classes.md#add-fields) ou [ajout d’un champ à un groupe de champs](./field-groups.md#add-fields). Lorsque vous choisissez **[!UICONTROL Type]** pour le nouveau champ, sélectionnez le nom de votre type de données dans le menu déroulant.
+Suivez d’abord les étapes décrites dans la section [ajout d’un champ à une classe](./classes.md#add-fields) ou [ajout d’un champ à un groupe de champs](./field-groups.md#add-fields). Lorsque vous choisissez la variable **[!UICONTROL Type]** pour le nouveau champ, sélectionnez le nom de votre type de données dans le menu déroulant.
 
 ## Conversion d’un objet à plusieurs champs en un type de données {#convert}
 
-Lorsque vous créez un champ de type objet avec plusieurs sous-champs dans la balise [!DNL Schema Editor], vous pouvez convertir ce champ en un type de données afin d’utiliser la même structure de champ dans une autre classe ou groupe de champs.
+Lorsque vous créez un champ de type objet avec plusieurs sous-champs dans la variable [!DNL Schema Editor], vous pouvez convertir ce champ en type de données afin d’utiliser la même structure de champ dans une autre classe ou groupe de champs.
 
-Pour convertir un champ de type objet en type de données, sélectionnez le champ dans la zone de travail. Avant de convertir le champ, assurez-vous que le **[!UICONTROL nom d’affichage]** est descriptif des données que l’objet contiendra, car il deviendra le nom du type de données. Lorsque vous êtes prêt à convertir le champ, sélectionnez **[!UICONTROL Convertir en nouveau type de données]** dans le rail de droite.
+Pour convertir un champ de type objet en type de données, sélectionnez le champ dans la zone de travail. Avant de convertir le champ, assurez-vous que la variable **[!UICONTROL Nom d’affichage]** est descriptif des données que l’objet contiendra, car il deviendra le nom du type de données. Lorsque vous êtes prêt à convertir le champ, sélectionnez **[!UICONTROL Convertir en nouveau type de données]** dans le rail de droite.
 
 ![](../../images/ui/resources/data-types/convert-object.png)
 
-Le canevas met à jour le type de données du champ de &quot;[!UICONTROL Objet]&quot; vers le nouveau type de données. Les sous-champs comportent également de petites icônes de verrouillage, indiquant qu’ils ne sont plus des champs individuels, mais qu’ils font partie d’un type de données à champs multiples. Cette structure peut désormais être réutilisée dans d’autres classes et groupes de champs en sélectionnant ce type de données dans la liste déroulante **[!UICONTROL Type]** lors de la définition d’un nouveau champ.
+Le canevas met à jour le type de données du champ à partir de &quot;[!UICONTROL Objet]&quot; au nouveau type de données. Les sous-champs comportent également de petites icônes de verrouillage, indiquant qu’ils ne sont plus des champs individuels, mais qu’ils font partie d’un type de données à champs multiples. Cette structure peut désormais être réutilisée dans d’autres classes et groupes de champs en sélectionnant ce type de données dans le **[!UICONTROL Type]** de la liste déroulante lors de la définition d’un nouveau champ.
 
 ![](../../images/ui/resources/data-types/converted.png)
 
 ## Étapes suivantes
 
-Ce guide explique comment créer et modifier des types de données à l’aide de l’interface utilisateur de Platform. Pour plus d’informations sur les fonctionnalités de l’espace de travail [!UICONTROL Schémas], consultez la [[!UICONTROL présentation des schémas] de l’espace de travail](../overview.md).
+Ce guide explique comment créer et modifier des types de données à l’aide de l’interface utilisateur de Platform. Pour plus d’informations sur les fonctionnalités de la variable [!UICONTROL Schémas] workspace, voir [[!UICONTROL Schémas] présentation de workspace](../overview.md).
 
-Pour savoir comment gérer les types de données à l’aide de l’API [!DNL Schema Registry], consultez le [guide de point de terminaison des types de données](../../api/data-types.md).
+Pour savoir comment gérer les types de données à l’aide du [!DNL Schema Registry] API, voir [guide de point de fin des types de données](../../api/data-types.md).

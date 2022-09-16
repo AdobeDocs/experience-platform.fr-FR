@@ -64,7 +64,7 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 {style=&quot;table-layout:auto&quot;}
 
-## Cas dʼutilisation {#use-cases}
+## Cas d&#39;utilisation {#use-cases}
 
 Pour vous aider à mieux comprendre comment et à quel moment utiliser la destination SendGrid, voici des exemples d’utilisation qui [!DNL Experience Platform] les clients peuvent résoudre ce problème en utilisant cette destination.
 

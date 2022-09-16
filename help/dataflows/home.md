@@ -1,9 +1,9 @@
 ---
-keywords: Experience Platform;accueil;rubriques populaires;flux de données;flux des données;données;surveillance;surveillance de flux de données;surveillance des flux de données;surveiller;surveiller les flux de données;surveiller des flux de données;flux;service de flux;
+keywords: Experience Platform;accueil;rubriques populaires;flux de données;flux des données;données;surveillance;surveillance de flux de données;surveillance des flux de données;surveiller;surveiller les flux de données;surveiller des flux de données;flux;service de flux;
 solution: Experience Platform
 title: Présentation des flux de données
 topic-legacy: overview
-description: Ce document présente les flux de données et décrit leur utilisation dans Adobe Experience Platform.
+description: Ce document présente les flux de données et décrit leur utilisation dans Adobe Experience Platform.
 exl-id: 8fe08ffa-f095-4e9f-8bab-d060985f0236
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
@@ -14,7 +14,7 @@ ht-degree: 100%
 
 # Présentation des flux de données
 
-Dans Adobe Experience Platform, les données sont ingérées à partir d’une grande variété de sources, analysées dans Experience Platform et activées vers un grand nombre de destinations. En offrant de la transparence au niveau des flux de données, Platform facilite le processus de suivi de ce flux de données potentiellement non linéaire.
+Dans Adobe Experience Platform, les données sont ingérées à partir d’une grande variété de sources, analysées dans Experience Platform et activées vers un grand nombre de destinations. En offrant de la transparence au niveau des flux de données, Platform facilite le processus de suivi de ce flux de données potentiellement non linéaire.
 
 ## Utilisation des flux de données
 

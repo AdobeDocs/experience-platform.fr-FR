@@ -22,7 +22,7 @@ Auparavant, plusieurs règles de contrainte temporelle pouvaient être associée
 
 ![](../images/ui/segment-refactoring/former-time-constraint.png)
 
-Comme vous pouvez le constater, ce segment présente deux contraintes au niveau de la règle : Un pour &quot;[!UICONTROL Today]&quot; et l’autre pour &quot;[!UICONTROL Hier]&quot;.
+Comme vous pouvez le constater, ce segment présente deux contraintes au niveau de la règle : Un pour &quot;[!UICONTROL Aujourd&#39;hui]&quot; et l’autre pour &quot;[!UICONTROL Hier]&quot;.
 
 Le segment précédent est équivalent au segment suivant : les deux contraintes de temps au niveau de l’événement ont été connectées à l’aide d’un opérateur AND. La première contrainte temporelle de niveau événement fait référence à un événement de clic dont le nom est égal à &quot;Formation&quot; et se produit aujourd’hui, tandis que la seconde contrainte temporelle de niveau événement fait référence à un événement de clic dont le nom est égal à &quot;Animaux&quot; et qui s’est produit hier.
 

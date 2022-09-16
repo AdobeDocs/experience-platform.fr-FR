@@ -1,6 +1,6 @@
 ---
 title: Fonctionnalités clés de l’Experience Platform
-description: Cette vidéo passe en revue les fonctionnalités clés de Adobe Experience Platform&mdash;Créer des profils clients actifs, intelligents et en temps réel ; Enrichissez les données et obtenez plus d’informations avec les modèles AI/ML et les requêtes de données ; innover avec des éléments ouverts et composables; améliorer la diffusion et la personnalisation des expériences en temps réel ; et gagner la confiance avec la gouvernance, la sécurité et les contrôles de confidentialité.
+description: Cette vidéo passe en revue les principales fonctionnalités de Adobe Experience Platform&mdash ; Création de profils clients actifs, intelligents et en temps réel ; Enrichissez les données et obtenez plus d’informations avec les modèles AI/ML et les requêtes de données ; innover avec des éléments ouverts et composables; améliorer la diffusion et la personnalisation des expériences en temps réel ; et gagner la confiance avec la gouvernance, la sécurité et les contrôles de confidentialité.
 kt: 4332
 audience: all
 doc-type: video

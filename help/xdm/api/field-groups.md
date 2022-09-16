@@ -626,7 +626,7 @@ curl -X PATCH \
 
 **Réponse**
 
-La réponse montre que les deux opérations ont été réalisées avec succès. Le `description` a été mis à jour, et `propertyCountry` a été ajouté sous `definitions`.
+La réponse montre que les deux opérations ont été réalisées avec succès. Le `description` a été mis à jour et `propertyCountry` a été ajouté sous `definitions`.
 
 ```JSON
 {

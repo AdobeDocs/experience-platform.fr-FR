@@ -1,6 +1,6 @@
 ---
 title: Prise en charge de la stratégie de sécurité du contenu (CSP)
-description: Découvrez comment gérer les restrictions de la stratégie de sécurité du contenu (CSP) lors de lʼintégration de votre site web au moyen de balises dans Adobe Experience Platform.
+description: Découvrez comment gérer les restrictions de la stratégie de sécurité du contenu (CSP) lors de lʼintégration de votre site web au moyen de balises dans Adobe Experience Platform.
 exl-id: 9232961e-bc15-47e1-aa6d-3eb9b865ac23
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
@@ -13,7 +13,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 Une stratégie de sécurité du contenu (CSP) est une fonctionnalité de sécurité qui aide à prévenir les attaques de type « cross-site scripting » (XSS). Elles se produisent lorsque le navigateur est amené à exécuter du contenu malveillant qui semble provenir dʼune source de confiance, mais qui vient en réalité dʼailleurs. La stratégie de sécurité du contenu permet au navigateur (au nom de l’utilisateur) de vérifier que le script provient bien d’une source de confiance.
 
@@ -23,7 +23,7 @@ Les fichiers CSP sont implémentés en ajoutant un en-tête HTTP `Content-Securi
 >
 > Pour plus d’informations sur la CSP, consultez la [documentation web MDN](https://developer.mozilla.org/fr/docs/Web/HTTP/CSP).
 
-Dans Adobe Experience Platform, les balises représentent un système de gestion des balises conçu pour charger dynamiquement des scripts sur votre site web. Une CSP par défaut bloque ces scripts chargés dynamiquement en raison de problèmes de sécurité potentiels. Ce document explique comment configurer votre CSP pour autoriser les scripts chargés dynamiquement à partir de balises.
+Dans Adobe Experience Platform, les balises représentent un système de gestion des balises conçu pour charger dynamiquement des scripts sur votre site web. Une CSP par défaut bloque ces scripts chargés dynamiquement en raison de problèmes de sécurité potentiels. Ce document explique comment configurer votre CSP pour autoriser les scripts chargés dynamiquement à partir de balises.
 
 Si vous souhaitez que les balises soient conformes à votre stratégie de sécurité du contenu, deux critères principaux doivent être remplis :
 

@@ -11,7 +11,7 @@ ht-degree: 100%
 
 # Pagination des réponses dans l’API Reactor
 
-Les réponses renvoyées par l’API Reactor sont mises en page. La taille de page par défaut est de 25 éléments. Des détails sur la pagination sont signalés dans la section`meta.pagination ` de l’objet de réponse de l’API :
+Les réponses renvoyées par l’API Reactor sont mises en page. La taille de page par défaut est de 25 éléments. Des détails sur la pagination sont signalés dans la section`meta.pagination ` de l’objet de réponse de l’API :
 
 ```json
 "meta": {
@@ -29,7 +29,7 @@ Il est possible d’obtenir une page spécifique et de modifier la taille d’un
 
 ## Récupération d’une page spécifique
 
-Pour obtenir une page spécifique :
+Pour obtenir une page spécifique :
 
 ```http
 GET /{RESOURCE_TYPE}/{RESOURCE_ID}?page[number]={PAGE_NUMBER}
@@ -37,13 +37,13 @@ GET /{RESOURCE_TYPE}/{RESOURCE_ID}?page[number]={PAGE_NUMBER}
 
 ## Modifier la taille de la page
 
-Pour modifier la taille de la page :
+Pour modifier la taille de la page :
 
 ```http
 GET /{RESOURCE_TYPE}/{RESOURCE_ID}?page[size]={PAGE_SIZE}
 ```
 
-Différentes options peuvent être combinées :
+Différentes options peuvent être combinées :
 
 ```http
 GET /{RESOURCE_TYPE}/{RESOURCE_ID}?page[size]={PAGE_SIZE}&page[number]={PAGE_NUMBER}

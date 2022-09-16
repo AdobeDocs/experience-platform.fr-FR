@@ -2,7 +2,8 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées ; alertes, destinations
 description: Vous pouvez vous abonner à des alertes lors de la création d’un flux de données pour recevoir des messages d’alerte concernant l’état, la réussite ou l’échec de votre exécution de flux.
 title: Abonner aux alertes de destination contextuelles
-source-git-commit: 56f1d5a6a1e90910cedb21fafb6b2ecf16d5b6d7
+exl-id: 134144a0-cdfe-49a8-bd8b-e36a4f053de5
+source-git-commit: 3bb9858c236c91e1567fd8e78988f4049537ffe3
 workflow-type: tm+mt
 source-wordcount: '950'
 ht-degree: 12%

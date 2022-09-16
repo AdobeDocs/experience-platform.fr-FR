@@ -1,7 +1,8 @@
 ---
 title: Modèles de requête
 description: Les modèles de requête sont des requêtes SQL enregistrées réutilisables qui peuvent être réutilisées par d’autres utilisateurs pour gagner du temps et des efforts. Ils peuvent être créés à l’aide de Query Editor ou de l’API Query Service et peuvent être utilisés sur tous les jeux de données Experience Platform.
-source-git-commit: 5ed822ec16e8e8d38e93370440242ec4c1c01320
+exl-id: e74d058f-bb89-45ed-83cc-2e3a33401270
+source-git-commit: b6aaa3baaf8b3ff139ba6ebc7f14ac283ad52241
 workflow-type: tm+mt
 source-wordcount: '436'
 ht-degree: 2%

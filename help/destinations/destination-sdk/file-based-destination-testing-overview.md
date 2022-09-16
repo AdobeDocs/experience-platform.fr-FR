@@ -1,13 +1,13 @@
 ---
 description: L’API de test de destination basée sur des fichiers est un ensemble de points de terminaison que vous pouvez utiliser pour valider la configuration de vos destinations basées sur des fichiers créées via la Destination SDK.
 title: API de test de destination basé sur les fichiers
-source-git-commit: 734d66cc881ab1b691c13ef446331d0c51851cf9
+exl-id: 2733fd00-af08-4763-a30e-a53ee56c0a19
+source-git-commit: 44e056407f5089c927752f00cc6bf173d7640b83
 workflow-type: tm+mt
 source-wordcount: '386'
 ht-degree: 0%
 
 ---
-
 
 # API de test de destination basé sur les fichiers
 

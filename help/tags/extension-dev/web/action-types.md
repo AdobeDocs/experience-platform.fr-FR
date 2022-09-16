@@ -13,13 +13,13 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 Dans le contexte des balises de collecte de données, une action est exécutée après qu’un événement de règle s’est produit et que toutes les conditions ont réussi l’évaluation.
 
 Par exemple, une extension peut fournir un type d’action « show support chat » qui peut afficher une boîte de dialogue de conversation d’assistance pour aider les utilisateurs qui ont du mal à payer leur commande.
 
-Ce document explique comment définir des types d’action pour une extension web dans Adobe Experience Platform.
+Ce document explique comment définir des types d’action pour une extension web dans Adobe Experience Platform.
 
 >[!IMPORTANT]
 >
@@ -38,7 +38,7 @@ module.exports = function(settings) {
 };
 ```
 
-Par exemple, pour que l’utilisateur Adobe Experience Platform soit capable de configurer le message, vous pouvez lui donner l’autorisation de saisir et d’enregistrer un message dans l’objet Paramètres. L’objet ressemble à ceci :
+Par exemple, pour rendre le message configurable par l’utilisateur d’Adobe Experience Platform, vous pouvez autoriser ce dernier à saisir et enregistrer un message dans l’objet settings. L’objet ressemble à ceci :
 
 ```json
 {

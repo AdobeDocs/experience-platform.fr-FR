@@ -7,8 +7,8 @@ description: Découvrez comment connecter Google BigQuery à Adobe Experience Pl
 exl-id: 35c61382-a909-47f4-a937-15cb725ecbe3
 source-git-commit: 7a62dcf1e9712d3c0c0d148b953e50dc11c91f1b
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '387'
+ht-degree: 34%
 
 ---
 

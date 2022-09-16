@@ -1,6 +1,6 @@
 ---
 title: Bibliothèques
-description: Découvrez le concept de bibliothèques de balises ainsi que leur fonctionnement dans Adobe Experience Platform.
+description: Découvrez le concept des bibliothèques de balises et leur fonctionnement dans Adobe Experience Platform.
 exl-id: 4d6f86e6-5684-4635-aaf1-87ba10cd7d94
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
@@ -13,7 +13,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 Une bibliothèque est un ensemble d’instructions qui définit la façon dont les extensions, les éléments de données et les règles interagissent les uns avec les autres après leur déploiement. Lors de la création d’une bibliothèque, vous indiquez les modifications que vous souhaitez apporter à votre bibliothèque. Lors de la création, ces modifications sont combinées avec tout ce qui a été soumis, approuvé ou publié dans les bibliothèques précédentes.
 
@@ -57,13 +57,13 @@ Pour ajouter un élément, cliquez sur **[!UICONTROL Ajouter une modification]**
 
 Une fois qu’une bibliothèque est créée, utilisez son menu déroulant pour sélectionner l’une des options suivantes :
 
-* **Modifier** : cette option vous permet de modifier la configuration de la bibliothèque.
+* **Modifier** : cette option vous permet de modifier la configuration de la bibliothèque.
 
-* **Version pour le développement** : cette option compile une version et la déploie dans l’environnement affecté.
+* **Version pour le développement** : cette option compile une version et la déploie dans l’environnement affecté.
 
-* **Soumettre pour approbation** : cette option rend la bibliothèque disponible pour qu’un approbateur la déplace à l’étape suivante du processus de publication.
+* **Soumettre pour approbation** : cette option rend la bibliothèque disponible pour qu’un approbateur la déplace à l’étape suivante du processus de publication.
 
-* **Supprimer** : cette option supprime la bibliothèque actuellement sélectionnée du processus de publication.
+* **Supprimer** : cette option supprime la bibliothèque actuellement sélectionnée du processus de publication.
 
 ![](../../images/library-menu.png)
 

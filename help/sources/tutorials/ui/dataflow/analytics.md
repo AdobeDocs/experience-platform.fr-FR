@@ -3,7 +3,8 @@ keywords: Experience Platform;accueil;rubriques les plus consultées;analytics;m
 solution: Experience Platform
 title: Création d’un flux de données à l’aide d’une source Analytics dans l’interface utilisateur
 description: Ce tutoriel décrit les étapes à suivre pour créer un flux de données pour une source d’analyse à l’aide de l’interface utilisateur de Platform.
-source-git-commit: d23f3791b040a856c0e3c048be31ac36a60e0cf1
+exl-id: 108a69e5-d7d9-4ca1-a364-38ea54aa74ff
+source-git-commit: a3343f170c9ab922964a3dbbd54cd722b44e1b1f
 workflow-type: tm+mt
 source-wordcount: '1277'
 ht-degree: 48%

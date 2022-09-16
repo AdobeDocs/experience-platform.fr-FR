@@ -3,10 +3,11 @@ keywords: Experience Platform;accueil;rubriques populaires;CJA;journey analytic
 title: Exemple de workflow de bout en bout Adobe Experience Platform
 topic-legacy: getting started
 description: Découvrez le workflow de base de bout en bout pour Adobe Experience Platform à un niveau élevé.
-source-git-commit: 9ed521c4e2ebcd20da662e93b9591ef690f51c5e
+exl-id: 0a4d3b68-05a5-43ef-bf0d-5738a148aa77
+source-git-commit: c9ebccb6584c687a9cc3fe693b9303c9392a1114
 workflow-type: tm+mt
 source-wordcount: '1836'
-ht-degree: 10%
+ht-degree: 11%
 
 ---
 
@@ -24,7 +25,7 @@ Ce workflow de bout en bout utilise plusieurs services Adobe Experience Platform
 
 - [[!DNL Experience Data Model (XDM)]](../xdm/home.md) : cadre normalisé selon lequel [!DNL Platform] organise les données de l’expérience client. Pour utiliser au mieux la segmentation, veillez à ce que vos données soient ingérées en tant que profils et événements en fonction des [bonnes pratiques pour la modélisation des données](../xdm/schema/best-practices.md).
 - [[!DNL Identity Service]](../identity-service/home.md): Fournit une vue d’ensemble complète de vos clients et de leur comportement en rapprochant des identités entre appareils et systèmes.
-- [Sources](../sources/home.md): [!DNL Experience Platform] permet d’ingérer des données provenant de diverses sources tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide de [!DNL Platform] services.
+- [Sources ](../sources/home.md): [!DNL Experience Platform]permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services [!DNL Platform].
 - [[!DNL Segmentation Service]](../segmentation/home.md): [!DNL Segmentation Service] permet de diviser les données stockées dans [!DNL Experience Platform] qui se rapporte aux individus (tels que les clients, les prospects, les utilisateurs ou les organisations) en groupes plus petits.
 - [[!DNL Real-time Customer Profile]](../profile/home.md) : fournit un profil de consommateur unifié en temps réel, basé sur des données agrégées provenant de plusieurs sources.
 - [Jeu de données](../catalog/datasets/overview.md) : la structure de stockage et de gestion pour la persistance des données dans [!DNL Experience Platform].

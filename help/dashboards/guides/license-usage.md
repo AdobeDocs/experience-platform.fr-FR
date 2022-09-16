@@ -7,11 +7,11 @@ exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
 source-git-commit: d3a1d4a65d1e5810bbc37fa9d3d230557bec39ee
 workflow-type: tm+mt
 source-wordcount: '873'
-ht-degree: 17%
+ht-degree: 18%
 
 ---
 
-# Tableau de bord d’utilisation de la licence {#license-usage-dashboard}
+# Tableau de bord d’utilisation des licences {#license-usage-dashboard}
 
 L’interface utilisateur d’Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur l’utilisation des licences de l’entreprise. Celles-ci sont présentées telles qu’elles sont capturées lors d’aperçus quotidiens. Ce guide explique comment accéder au tableau de bord de l’utilisation des licences dans l’interface utilisateur et l’utiliser. Il fournit également des informations supplémentaires sur les visualisations affichées dans le tableau de bord.
 
@@ -27,7 +27,7 @@ Le tableau de bord de l’utilisation des licences affiche un instantané des do
 
 ## Exploration du tableau de bord de l’utilisation des licences
 
-Pour accéder au tableau de bord de l’utilisation des licences dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Utilisation des licences]** dans le rail de gauche. Cela ouvre la fenêtre **[!UICONTROL Présentation]** du tableau de bord.
+Pour accéder au tableau de bord de l’utilisation des licences dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Utilisation des licences]** dans le rail de gauche. L’onglet **[!UICONTROL Vue d’ensemble]** du tableau de bord s’ouvre alors.
 
 >[!NOTE]
 >

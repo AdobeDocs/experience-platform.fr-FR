@@ -8,20 +8,20 @@ exl-id: cab5463b-97a0-400d-a00c-0cd8bf9301a5
 source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
 source-wordcount: '204'
-ht-degree: 15%
+ht-degree: 23%
 
 ---
 
-# [!UICONTROL Type de données des ] détails du point ciblé
+# [!UICONTROL Détails des points ciblés] type de données
 
-[!UICONTROL Les ] détails du point ciblé correspondent à un type de données XDM standard qui décrit les données géographiques dans lesquelles un événement a été observé.
+[!UICONTROL Détails des points ciblés] est un type de données XDM standard qui décrit les données géographiques où un événement a été observé.
 
 <img src="../images/data-types/poi-details.png" width="550" /><br />
 
 | Propriété | Type de données | Description |
 | --- | --- | --- |
-| `beaconInteractionDetails` | [[!UICONTROL Balise]](./beacon.md) | Décrit les détails de la balise principaux pour l’interaction du point ciblé. |
-| `geoInteractionDetails` | [[!UICONTROL Détails des interactions géographiques]](./geo-interaction-details.md) | Décrit les détails géographiques principaux pour l’interaction du point ciblé. |
+| `beaconInteractionDetails` | [[!UICONTROL Repère]](./beacon.md) | Décrit les détails de la balise principaux pour l’interaction du point ciblé. |
+| `geoInteractionDetails` | [[!UICONTROL Informations sur l’interaction géographique]](./geo-interaction-details.md) | Décrit les détails géographiques principaux pour l’interaction du point ciblé. |
 | `category` | Chaîne | Catégorie générale affectée à l’organisation des points ciblés par l’administrateur des définitions des points ciblés. |
 | `distanceToPOICenter` | Double | Distance estimée depuis le centre du point ciblé en mètres. |
 | `locatingType` | Chaîne | Mécanisme utilisé pour déterminer la position. Les valeurs acceptées sont les suivantes : <ul><li>`beacon`</li><li>`gps`</li><li>`ip`</li><li>`ip+wifi`</li><li>`wifi-triangulation`</li></ul> |
@@ -31,7 +31,7 @@ ht-degree: 15%
 
 {style=&quot;table-layout:auto&quot;}
 
-Pour plus d’informations sur le type de données, reportez-vous au référentiel XDM public :
+Pour obtenir plus d’informations sur ce type de données, reportez-vous au référentiel XDM public:
 
 * [Exemple rempli](https://github.com/adobe/xdm/blob/master/components/datatypes/poi-detail.example.1.json)
 * [Schéma complet](https://github.com/adobe/xdm/blob/master/components/datatypes/poi-detail.schema.json)

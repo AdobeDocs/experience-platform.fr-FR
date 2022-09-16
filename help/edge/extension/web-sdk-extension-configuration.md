@@ -62,7 +62,7 @@ Le [!UICONTROL Confidentialité] vous permet de configurer la manière dont le S
 
 | [!UICONTROL Niveau de consentement par défaut] | Description |
 | --- | --- |
-| [!UICONTROL In] | Collectez les événements qui se produisent avant que l’utilisateur ne fournisse ses préférences de consentement. |
+| [!UICONTROL Dans] | Collectez les événements qui se produisent avant que l’utilisateur ne fournisse ses préférences de consentement. |
 | [!UICONTROL Out] | Ignorer les événements qui se produisent avant que l’utilisateur ne fournisse ses préférences de consentement. |
 | [!UICONTROL En attente] | Événements de file d’attente qui se produisent avant que l’utilisateur ne fournisse ses préférences de consentement. Lorsque les préférences de consentement sont fournies, les événements sont collectés ou ignorés en fonction des préférences fournies. |
 | [!UICONTROL Fourni par l’élément de données] | Le niveau de consentement par défaut est déterminé par un élément de données distinct que vous définissez. Lorsque vous utilisez cette option, vous devez spécifier l’élément de données à l’aide du menu déroulant fourni. |

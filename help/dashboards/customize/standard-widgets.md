@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform;interface utilisateur;UI;tableaux de bord;tableau de bord;profils;segments;destinations;utilisation des licences
+keywords: Experience Platform;interface utilisateur;UI;tableaux de bord;tableau de bord;profils;segments;destinations;utilisation des licences
 title: Widgets de tableaux de bord standard
-description: Ce guide fournit des instructions détaillées sur l’ajout de widgets standard à vos tableaux de bord Adobe Experience Platform.
+description: Ce guide fournit des instructions détaillées sur l’ajout de widgets standard à vos tableaux de bord Adobe Experience Platform.
 exl-id: 37353e73-b207-444a-b2b5-a20a3628086b
 source-git-commit: 89a0e2544a17fe10e6dfd7611b5223ca4fc55501
 workflow-type: tm+mt
@@ -12,7 +12,7 @@ ht-degree: 100%
 
 # Ajout de widgets standard aux tableaux de bord
 
-Adobe Experience Platform vous permet d’afficher les données de votre organisation et d’interagir avec elles à l’aide de plusieurs tableaux de bord. Vous pouvez également mettre à jour certains tableaux de bord en ajoutant de nouveaux widgets à l’affichage de votre tableau de bord. Adobe propose une sélection de widgets standard que vous pouvez ajouter à vos tableaux de bord.
+Adobe Experience Platform vous permet d’afficher les données de votre organisation et d’interagir avec elles à l’aide de plusieurs tableaux de bord. Vous pouvez également mettre à jour certains tableaux de bord en ajoutant de nouveaux widgets à l’affichage de votre tableau de bord. Adobe propose une sélection de widgets standard que vous pouvez ajouter à vos tableaux de bord.
 
 Ce guide fournit des instructions détaillées sur l’ajout de widgets standard pour personnaliser les tableaux de bord [!UICONTROL Profils], [!UICONTROL Segments] et [!UICONTROL Destinations] dans l’interface utilisateur de Platform.
 
@@ -24,7 +24,7 @@ Pour en savoir plus sur les widgets personnalisés, consultez le guide de [créa
 
 ## Bibliothèque de widgets {#widget-library}
 
-Ce guide nécessite l’accès à la [!UICONTROL bibliothèque de widgets] d’Experience Platform. Pour en savoir plus sur la bibliothèque de widgets et sur la façon d’y accéder dans l’interface utilisateur, commencez par lire la [présentation de la bibliothèque de widgets](widget-library.md).
+Ce guide nécessite l’accès à la [!UICONTROL bibliothèque de widgets] d’Experience Platform. Pour en savoir plus sur la bibliothèque de widgets et sur la façon d’y accéder dans l’interface utilisateur, commencez par lire la [présentation de la bibliothèque de widgets](widget-library.md).
 
 ## Prise en main des widgets standard {#standard-widgets}
 

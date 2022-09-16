@@ -3,7 +3,7 @@ title: Traitement des erreurs
 description: Découvrez la manière dont les erreurs sont traitées dans lʼAPI Reactor.
 exl-id: 336c0ced-1067-4519-94e1-85aea700fce6
 source-git-commit: f3c23665229a83d6c63c7d6026ebf463069d8ad9
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1068'
 ht-degree: 100%
 
@@ -78,7 +78,7 @@ Le tableau suivant répertorie les différentes erreurs que l’API peut renvoye
 | `ims-session-error` | Il y a un problème avec la session de connexion. Déconnectez-vous et reconnectez-vous. |
 | `internal-error` | Une erreur interne sʼest produite. Patientez quelques minutes et réessayez. Si le problème persiste, contactez lʼassistance clientèle. |
 | `invalid-data_element` | Un élément de données non valide ne peut pas être ajouté à une bibliothèque. |
-| `invalid-embed_code` | Il ne sʼagit pas dʼun code incorporé valide ou vous essayez de le lier à un environnement de développement ou dʼévaluation. Les codes incorporés de la gestion dynamique des balises (Dynamic Tag Management, DTM) ne peuvent être associés quʼà des environnements de production. |
+| `invalid-embed_code` | Il ne sʼagit pas dʼun code incorporé valide ou vous essayez de le lier à un environnement de développement ou dʼévaluation. Les codes incorporés de la gestion dynamique des balises (Dynamic Tag Management, DTM) ne peuvent être associés quʼà des environnements de production. |
 | `invalid-extension` | Une extension non valide ne peut pas être ajoutée à une bibliothèque. |
 | `invalid-extension_package_id` | Vous pouvez uniquement modifier certaines des propriétés dʼobjet dʼun package dʼextension. Vous avez tenté de modifier une propriété dʼobjet non autorisée. |
 | `invalid-new-owner-org-id` | LʼID dʼorganisation que vous avez tenté dʼaffecter nʼest pas un ID dʼorganisation valide. |
@@ -91,7 +91,7 @@ Le tableau suivant répertorie les différentes erreurs que l’API peut renvoye
 | `no-available-orgs` | Ce compte utilisateur nʼappartient pas à un profil de produit ayant accès aux balises. Utilisez Admin Console pour ajouter cet utilisateur à un profil de produit disposant de droits de balises. |
 | `not-authorized` | Ce compte utilisateur ne dispose pas des autorisations nécessaires pour effectuer cette action. |
 | `not-found` | Lʼenregistrement est introuvable. Vérifiez lʼidentifiant de lʼobjet que vous essayez de récupérer. |
-| `not-unique` | Le nom que vous souhaitez utiliser est déjà attribué. Pour cette ressource, la propriété « name » doit être unique. |
+| `not-unique` | Le nom que vous souhaitez utiliser est déjà attribué. Pour cette ressource, la propriété « name » doit être unique. |
 | `public-release-not-authorized` | La publication publique des extensions est coordonnée par `launch-ext-dev@adobe.com`. Pour plus dʼinformations, consultez le document [Publication des extensions](../../extension-dev/submit/release.md). |
 | `read-only` | Cette ressource est en lecture seule et ne peut pas être modifiée. |
 | `session-timeout` | La session utilisateur a expiré. Déconnectez-vous et reconnectez-vous. |

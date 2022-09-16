@@ -8,7 +8,7 @@ exl-id: 00c20081-09d0-425c-9894-0f957558bd43
 source-git-commit: 64e76c456ac5f59a2a1996e58eda405f1b27efa8
 workflow-type: tm+mt
 source-wordcount: '730'
-ht-degree: 8%
+ht-degree: 11%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 8%
 
 >[!NOTE]
 >
->Les noms de plusieurs groupes de champs de schéma ont changé. Consultez le document sur [mises à jour des noms de groupe de champs](../name-updates.md) pour plus d’informations.
+>Les noms de plusieurs groupes de champs de schéma ont changé. Pour plus d’informations, consultez le document sur les [mises à jour des noms de groupes de champs](../name-updates.md).
 
 [!UICONTROL Abonnement aux télécommunications] est un groupe de champs de schéma standard pour la variable [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md) qui décrit le plan d’abonnement d’un client aux télécommunications, notamment les tarifs, les packages et les abonnements à des produits individuels.
 

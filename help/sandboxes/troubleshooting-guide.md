@@ -3,7 +3,7 @@ keywords: Experience Platform;accueil;rubriques les plus consultées;dépannage 
 solution: Experience Platform
 title: Guide de dépannage des environnements de test
 topic-legacy: troubleshooting guide
-description: Ce document apporte des réponses aux questions fréquentes sur les environnements de test dans Adobe Experience Platform.
+description: Ce document apporte des réponses aux questions fréquentes sur les environnements de test dans Adobe Experience Platform.
 exl-id: 6a496509-a4e9-4e76-829b-32d67ccfcce6
 source-git-commit: 2a7b2040c221ff039f17f78d9ca712032d9fc02c
 workflow-type: tm+mt
@@ -14,17 +14,17 @@ ht-degree: 44%
 
 # Guide de dépannage des environnements de test
 
-Ce document apporte des réponses aux questions fréquentes sur les environnements de test dans Adobe Experience Platform. Pour les questions et le dépannage relatifs aux autres services Platform, consultez le [guide de dépannage d’Experience Platform](../landing/troubleshooting.md).
+Ce document apporte des réponses aux questions fréquentes sur les environnements de test dans Adobe Experience Platform. Pour les questions et le dépannage relatifs aux autres services Platform, consultez le [guide de dépannage d’Experience Platform](../landing/troubleshooting.md).
 
 Les environnements de test divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique. Pour plus d’informations, consultez la [Présentation des environnements de test](home.md).
 
 ## Qu’est-ce qu’un environnement de test ?
 
-Les environnements de test sont des partitions virtuelles au sein d’une instance unique d’Experience Platform. Chaque environnement de test conserve sa propre bibliothèque indépendante de ressources Platform (qui comprend des schémas, des jeux de données, des profils, etc.). Tout le contenu et les actions réalisés dans un environnement de test sont limités à celui-ci et n’en affectent aucun autre. Pour plus d’informations, consultez la [Présentation des environnements de test](home.md).
+Les environnements de test sont des partitions virtuelles au sein d’une instance unique d’Experience Platform. Chaque environnement de test conserve sa propre bibliothèque indépendante de ressources Platform (qui comprend des schémas, des jeux de données, des profils, etc.). Tout le contenu et les actions réalisés dans un environnement de test sont limités à celui-ci et n’en affectent aucun autre. Pour plus d’informations, consultez la [Présentation des environnements de test](home.md).
 
 ## Quels sont les types d’environnements de test disponibles et quelles sont leurs différences ?
 
-Deux types d’environnements de test sont disponibles dans Experience Platform :
+Deux types d’environnements de test sont disponibles dans Experience Platform :
 
 * **Environnement de test de production**: Un environnement de test de production est conçu pour être utilisé avec des profils dans votre environnement de production. Platform vous permet de créer plusieurs environnements de test de production afin de fournir les fonctionnalités appropriées aux données tout en maintenant l’isolation opérationnelle. Cette fonctionnalité vous permet de dédier des environnements de test de production spécifiques à des secteurs d’activité, des marques, des projets ou des régions distincts. Les environnements de test de production prennent en charge un volume de profils de production allant jusqu’à votre licence [!DNL Profile] engagement (mesuré de manière cumulée sur tous vos environnements de test de production autorisés). Vous avez le droit d’utiliser un profil de moyenne sous licence par autorisé [!DNL Profile] (mesuré de manière cumulée sur tous vos environnements de test de production autorisés).
 * **Environnement de test de développement**: Un environnement de test de développement est un environnement de test qui peut être utilisé exclusivement à des fins de développement et de test avec des profils hors production. Les environnements de test de développement prennent en charge un volume de profils hors production pouvant atteindre 10 % de votre licence [!DNL Profile] engagement (mesuré de manière cumulée sur tous vos environnements de test de développement autorisés). Vous avez le droit de :

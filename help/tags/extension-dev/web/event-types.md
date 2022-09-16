@@ -1,6 +1,6 @@
 ---
 title: Types d’événements pour les extensions web
-description: Découvrez comment définir un module de bibliothèque relatif aux types d’événements pour une extension web dans Adobe Experience Platform.
+description: Découvrez comment définir un module de bibliothèque relatif aux types d’événements pour une extension web dans Adobe Experience Platform.
 exl-id: dbdd1c88-5c54-46be-9824-2f15cce3d160
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
@@ -13,13 +13,13 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 Dans une règle de balise, un événement est une activité qui doit se produire pour qu’une règle se déclenche. Par exemple, une extension web peut fournir un type d’événement « mouvement » qui surveille un certain mouvement de souris ou de toucher. Une fois le mouvement effectué, la logique de l’événement déclenche la règle.
 
 Un module Bibliothèque de type d’événement est conçu pour détecter lorsqu’une activité se produit, puis appeler une fonction pour déclencher une règle associée. L’événement détecté est personnalisable. Il peut par exemple détecter un certain mouvement de la part d’un utilisateur, un défilement rapide ou une interaction avec quelque chose.
 
-Ce document explique comment définir des types d’événements pour une extension web dans Adobe Experience Platform.
+Ce document explique comment définir des types d’événements pour une extension web dans Adobe Experience Platform.
 
 >[!NOTE]
 >
@@ -53,7 +53,7 @@ module.exports = function(settings, trigger) {
 };
 ```
 
-Si vous souhaitez que l’utilisateur Adobe Experience Platform puisse configurer la durée, vous avez la possibilité de saisir et d’enregistrer une durée dans l’objet Paramètres. L’objet pourrait ressembler à ceci :
+Si vous souhaitez que l’utilisateur Adobe Experience Platform puisse configurer la durée, il est nécessaire d’ajouter la possibilité de saisir et d’enregistrer une durée à l’objet settings. L’objet pourrait ressembler à ceci :
 
 ```js
 {
@@ -105,7 +105,7 @@ trigger({
 
 ## Respect de l’ordre des règles
 
-Les balises permettent aux utilisateurs de trier les règles. Par exemple, un utilisateur peut créer deux règles qui utilisent toutes les deux le type d’événement de changement d’orientation et personnaliser l’ordre dans lequel les règles se déclenchent. Supposons que l’utilisateur d’Adobe Experience Platform spécifie une valeur d’ordre de `2` pour l’événement de modification d’orientation dans la règle A et une valeur d’ordre de `1` pour l’événement de modification d’orientation dans la règle B. Ces valeurs indiquent que lorsque l’orientation change sur un équipement mobile, la règle B doit se déclencher avant la règle A (les règles avec les plus petites valeurs d’ordre se déclenchent en premier).
+Les balises permettent aux utilisateurs de trier les règles. Par exemple, un utilisateur peut créer deux règles qui utilisent toutes les deux le type d’événement de changement d’orientation et personnaliser l’ordre dans lequel les règles se déclenchent. Supposons que l’utilisateur d’Adobe Experience Platform spécifie une valeur d’ordre de `2` pour l’événement de modification d’orientation dans la règle A et une valeur d’ordre de `1` pour l’événement de modification d’orientation dans la règle B. Ces valeurs indiquent que lorsque l’orientation change sur un équipement mobile, la règle B doit se déclencher avant la règle A (les règles avec les plus petites valeurs d’ordre se déclenchent en premier).
 
 Comme mentionné précédemment, la fonction exportée dans notre module d’événement sera appelée une fois pour chaque règle configurée pour utiliser notre type d’événement. Chaque fois que la fonction exportée est appelée, elle transmet une fonction `trigger` unique liée à une règle spécifique. Dans le scénario qui vient d’être décrit, notre fonction exportée sera appelée une fois avec une fonction `trigger` liée à la règle B, puis une autre fois avec une fonction `trigger` liée à la règle A. La règle B est appelée en premier parce que l’utilisateur lui a donné une valeur d’ordre inférieure à la règle A. Lorsque notre module de bibliothèque détecte une modification d’orientation, il est important d’appeler les fonctions `trigger` dans l’ordre dans lequel elles ont été fournies au module de bibliothèque.
 

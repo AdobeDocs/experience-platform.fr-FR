@@ -13,7 +13,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
-> Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+> Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 Tous les modules de bibliothèque des extensions Edge reçoivent un objet `context` lorsqu’ils sont exécutés. Ce document couvre les propriétés fournies par l’objet `context` et le rôle qu’ils jouent dans les modules de bibliothèque.
 
@@ -36,13 +36,13 @@ logger.log(context.arc.event);
 
 ### [!DNL request]
 
-À ne pas confondre avec une requête du périphérique client, `request` est un objet légèrement modifié qui provient d’Adobe Experience Platform Edge Network.
+À ne pas confondre avec une requête du périphérique client, `request` est un objet légèrement modifié qui provient d’Adobe Experience Platform Edge Network.
 
 ```js
 logger.log(context.arc.request)
 ```
 
-L’objet `request` présente deux propriétés de niveau supérieur : `body` et `head`. La propriété `body` contient des informations sur le modèle de données d’expérience (XDM) et peut être inspectée dans Adobe Experience Platform Debugger lorsque vous accédez à **[!UICONTROL Launch]** et sélectionnez l’onglet **[!UICONTROL Edge Trace]**.
+L’objet `request` présente deux propriétés de niveau supérieur : `body` et `head`. La propriété `body` contient des informations sur le modèle de données d’expérience (XDM) et peut être inspectée dans Adobe Experience Platform Debugger lorsque vous accédez à **[!UICONTROL Launch]** et sélectionnez l’onglet **[!UICONTROL Edge Trace]**.
 
 ### [!DNL ruleStash] {#rulestash}
 
@@ -104,7 +104,7 @@ La propriété `utils` représente un objet qui fournit des utilitaires spécifi
 
 ### [!DNL logger]
 
-L’utilitaire `logger` vous permet de consigner les messages qui s’afficheront pendant les sessions de débogage lors de l’utilisation d’[Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob).
+Lʼutilitaire `logger` vous permet de consigner les messages qui sʼafficheront pendant les sessions de débogage lors de lʼutilisation dʼ[Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob).
 
 ```js
 context.utils.logger.error('Error!');

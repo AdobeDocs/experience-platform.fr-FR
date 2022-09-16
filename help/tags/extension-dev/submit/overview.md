@@ -3,7 +3,7 @@ title: Présentation du processus d’envoi des extensions
 description: Découvrez la procédure qui vous permettra d’envoyer votre extension Adobe Experience Platform du développement à la publication.
 exl-id: 7a30ae5c-f9c7-45f9-b648-3fb31006b1ce
 source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '238'
 ht-degree: 100%
 

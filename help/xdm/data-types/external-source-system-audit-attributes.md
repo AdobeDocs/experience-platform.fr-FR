@@ -5,17 +5,17 @@ exl-id: ebdd8707-9675-4232-a5b7-4e4a481d706a
 source-git-commit: 7e07ba8b5d7bc7df809a9a122d2a58837c933674
 workflow-type: tm+mt
 source-wordcount: '216'
-ht-degree: 6%
+ht-degree: 14%
 
 ---
 
-# [!UICONTROL Type de données ] Attributs d’audit du système de source externe
+# [!UICONTROL Attributs d’audit du système de source externe] type de données
 
 >[!NOTE]
 >
->Ce type de données est uniquement disponible pour les organisations qui ont accès à l’édition B2B de la plateforme de données clients en temps réel.
+>Ce type de données est uniquement disponible pour les organisations qui ont accès à l’édition B2B de Real-time Customer Data Platform.
 
-[!UICONTROL Les ] attributs d’audit du système source externe sont un type de données XDM (Experience Data Model) standard qui capture les détails d’audit d’un système source externe.
+[!UICONTROL Attributs d’audit du système de source externe] est un type de données XDM (Experience Data Model) standard qui capture les détails de l’audit sur un système source externe.
 
 ![](../images/data-types/external-source-system-audit-attributes.png)
 
@@ -26,14 +26,14 @@ ht-degree: 6%
 | `createdDate` | DateTime | Date de création de cet enregistrement. |
 | `externalID` | Chaîne | Identifiant unique externe de la source. Cette valeur permet d’identifier et de dédupliquer si nécessaire. |
 | `lastActivityDate` | DateTime | Date de la dernière activité du système source. |
-| `lastReferencedDate` | DateTime | Dernière date référencée du système source. |
+| `lastReferencedDate` | DateTime | Dernière date référencée pour le système source. |
 | `lastUpdatedBy` | Chaîne | Nom de la personne qui a mis à jour cet enregistrement pour la dernière fois. |
 | `lastUpdatedDate` | DateTime | Date de la dernière mise à jour du système source. |
 | `lastViewedDate` | DateTime | Date de dernière consultation du système source. |
 
 {style=&quot;table-layout:auto&quot;}
 
-Pour plus d’informations sur le type de données, reportez-vous au référentiel XDM public :
+Pour obtenir plus d’informations sur ce type de données, reportez-vous au référentiel XDM public:
 
 * [Exemple rempli](https://github.com/adobe/xdm/blob/master/components/datatypes/auditing/external-source-system-audit.example.1.json)
 * [Schéma complet](https://github.com/adobe/xdm/blob/master/components/datatypes/auditing/external-source-system-audit.schema.json)

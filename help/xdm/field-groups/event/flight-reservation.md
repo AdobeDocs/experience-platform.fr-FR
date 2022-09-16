@@ -10,15 +10,15 @@ ht-degree: 5%
 
 ---
 
-# [!UICONTROL Groupe de champs ] de schéma de réservation de vol
+# [!UICONTROL Réservation en vol] groupe de champs de schéma
 
-[!UICONTROL La ] réservation de vol est un groupe de champs de schéma standard pour la  [[!DNL XDM ExperienceEvent] ](../../classes/experienceevent.md) classe afin de capturer des informations concernant une réservation de vol.
+[!UICONTROL Réservation en vol] est un groupe de champs de schéma standard pour la variable [[!DNL XDM ExperienceEvent] class](../../classes/experienceevent.md) utilisé pour capturer des informations concernant une réservation de vol.
 
-Le groupe de champs est une extension du groupe de champs [!UICONTROL Détails de la réservation] et contient tous les mêmes champs sous un seul champ de type objet, `reservations`. Outre ces champs génériques, [!UICONTROL La réservation de vols] comprend également le tableau `flightReservations`. Ce tableau d’objets est utilisé pour décrire une ou plusieurs réservations avec des propriétés propres au transport aérien.
+Le groupe de champs est une extension de la variable [!UICONTROL Détails de la réservation] groupe de champs et contient tous les mêmes champs sous un seul champ de type objet, `reservations`. En plus de ces champs génériques, [!UICONTROL Réservation en vol] inclut également `flightReservations` tableau. Ce tableau d’objets est utilisé pour décrire une ou plusieurs réservations avec des propriétés propres au transport aérien.
 
 >[!NOTE]
 >
->Ce document couvre les détails du tableau `flightReservations`. Pour plus d’informations sur les autres champs fournis sous l’objet `reservations`, reportez-vous à la [[!UICONTROL Référence du groupe de champs ] ](./reservation-details.md).
+>Ce document couvre les détails de la variable `flightReservations` tableau. Pour plus d’informations sur les autres champs fournis sous le `reservations` , reportez-vous à la section [[!UICONTROL Détails de la réservation] référence de groupe de champs](./reservation-details.md).
 
 ![Structure de la réservation de vol](../../images/field-groups/flight-reservation/structure.png)
 
@@ -26,7 +26,7 @@ Le groupe de champs est une extension du groupe de champs [!UICONTROL Détails d
 
 `flightReservations` est un tableau d’objets qui représente une liste de réservations de vols. Si un événement de réservation implique des réservations pour plusieurs vols de correspondance lors d&#39;un voyage, par exemple, ces réservations peuvent être répertoriées comme des objets individuels sous `flightReservations` pour un seul événement.
 
-La structure de chaque objet fournie sous `flightReservations` est fournie ci-dessous.
+La structure de chaque objet fournie sous `flightReservations` est fourni ci-dessous.
 
 ![Structure de flightReserve](../../images/field-groups/flight-reservation/flightReservations.png)
 
@@ -39,7 +39,7 @@ La structure de chaque objet fournie sous `flightReservations` est fournie ci-de
 | `aircraftType` | Chaîne | Le type d&#39;avion. |
 | `arrivalAirportCode` | Chaîne | Le code de l&#39;aéroport de la ville d&#39;arrivée. |
 | `arrivalDate` | DateTime | Date d&#39;arrivée du vol réservé. |
-| `cancellation` | Entier | Cette valeur est capturée lorsqu’une réservation a été annulée. |
+| `cancellation` | Nombre entier | Cette valeur est capturée lorsqu’une réservation a été annulée. |
 | `confirmationNumber` | Chaîne | Numéro ou identifiant de confirmation de réservation. |
 | `created` | Chaîne | Cette valeur est capturée lorsqu’une réservation a été créée. |
 | `currencyCode` | Chaîne | Code de devise ISO 4217 utilisé pour effectuer l’achat. |
@@ -47,12 +47,12 @@ La structure de chaque objet fournie sous `flightReservations` est fournie ci-de
 | `departureDate` | DateTime | La date de départ du vol réservé. |
 | `fareClass` | Chaîne | La classe de tarif du vol réservé. |
 | `flightNumber` | Chaîne | Numéro du vol réservé. |
-| `length` | Entier | Nombre total de jours pour la réservation. |
+| `length` | Nombre entier | Nombre total de jours pour la réservation. |
 | `loyaltyID` | Chaîne | Identifiant du programme de fidélité ou de récompense pour le passager répertorié dans la réservation. |
-| `modification` | Entier | Cette valeur est capturée lorsqu’une réservation a été modifiée. |
+| `modification` | Nombre entier | Cette valeur est capturée lorsqu’une réservation a été modifiée. |
 | `modificationDate` | DateTime | Heure à laquelle la réservation a été modifiée pour la dernière fois. |
-| `numberOfAdults` | Entier | Nombre d’adultes associés à la réservation. |
-| `numberOfChildren` | Entier | Nombre d’enfants associés à la réservation. |
+| `numberOfAdults` | Nombre entier | Nombre d’adultes associés à la réservation. |
+| `numberOfChildren` | Nombre entier | Nombre d’enfants associés à la réservation. |
 | `passengerID` | Chaîne | Informations sur les passagers associées à la réservation. |
 | `purpose` | Chaîne | L’objet de la réservation, généralement professionnel ou personnel. |
 | `salesChannel` | Chaîne | Canal de vente à partir duquel la réservation a été réservée. |

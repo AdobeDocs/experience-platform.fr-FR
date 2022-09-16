@@ -13,13 +13,13 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 Dans les balises, les éléments de données sont des alias de données sur une page web ou mobile, quel que soit l’emplacement de ces données dans l’événement reçu par le serveur. Un élément de données peut être référencé par des règles et agit comme une abstraction pour l’accès à ces données. À l’avenir, lors du changement d’emplacement des données (notamment en cas de modification de la clé de l’événement contenant la valeur), un seul élément de données pourra être reconfiguré tandis que toutes les règles référençant cet élément de données pourront rester inchangées.
 
-Les types d’éléments de données sont fournis par les extensions. L’auteur de l’extension détermine la manière dont cet élément de données est récupéré. Par exemple, vous pouvez utiliser un type d’élément de données pour permettre aux utilisateurs d’Adobe Experience Platform de récupérer un élément de données de la couche XDM ou de leur couche de données personnalisée.
+Les types d’éléments de données sont fournis par les extensions. L’auteur de l’extension détermine la manière dont cet élément de données est récupéré. Par exemple, vous pouvez utiliser un type d’élément de données pour permettre aux utilisateurs d’Adobe Experience Platform de récupérer un élément de données de la couche XDM ou de leur couche de données personnalisée.
 
-Ce document explique comment définir des types d’éléments de données pour une extension Edge dans Adobe Experience Platform.
+Ce document explique comment définir des types d’éléments de données pour une extension Edge dans Adobe Experience Platform.
 
 >[!IMPORTANT]
 >
@@ -41,7 +41,7 @@ module.exports = (context) => {
 };
 ```
 
-Si vous souhaitez que les données renvoyées pour la couche de données puissent être configurées par lʼutilisateur dʼAdobe Experience Platform, vous pouvez autoriser lʼutilisateur à saisir un nom clé puis à enregistrer le nom dans lʼobjet `settings`. Lʼobjet pourrait ressembler à ceci.
+Si vous souhaitez que les données renvoyées pour la couche de données puissent être configurées par lʼutilisateur dʼAdobe Experience Platform, vous pouvez autoriser lʼutilisateur à saisir un nom clé puis à enregistrer le nom dans lʼobjet `settings`. Lʼobjet pourrait ressembler à ceci.
 
 ```js
 {

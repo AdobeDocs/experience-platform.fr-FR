@@ -1,7 +1,8 @@
 ---
 description: Découvrez comment utiliser Destination SDK pour configurer une destination de zone d’entrée de données (DLZ) avec des options de mise en forme de fichier personnalisées et une configuration de nom de fichier personnalisée.
 title: (Version bêta) Configurez une destination de zone d’entrée de données (DLZ) avec des options de mise en forme de fichier personnalisées et une configuration de nom de fichier personnalisée.
-source-git-commit: fd3114a4578637dcf99232245f8d2cec64de14b5
+exl-id: 3a5c1188-c2b5-4e81-ae41-9fff797f08a6
+source-git-commit: a9eae6b798be40bfdc51a8523a0818f364c7cb76
 workflow-type: tm+mt
 source-wordcount: '765'
 ht-degree: 10%

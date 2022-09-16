@@ -1,13 +1,13 @@
 ---
 description: Cette page explique comment utiliser le point d’entrée de l’API /sample-profiles depuis Destination SDK pour générer des profils d’exemple basés sur un schéma source. Vous pouvez utiliser ces exemples de profils pour tester votre configuration de destination basée sur des fichiers.
 title: Générer des exemples de profils en fonction d’un schéma source
-source-git-commit: ee2bf346a4857a70a7f9aec02bab574f8a257ace
+exl-id: aea50d2e-e916-4ef0-8864-9333a4eafe80
+source-git-commit: 44e056407f5089c927752f00cc6bf173d7640b83
 workflow-type: tm+mt
 source-wordcount: '678'
 ht-degree: 13%
 
 ---
-
 
 # Générer des exemples de profils en fonction d’un schéma source
 

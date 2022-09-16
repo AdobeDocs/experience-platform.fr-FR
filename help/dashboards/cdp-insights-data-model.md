@@ -1,7 +1,8 @@
 ---
 title: Modèle de données de connaissance de la plateforme de données clients (CDP)
 description: Découvrez comment utiliser les requêtes SQL des modèles de données de statistiques CDP pour personnaliser vos propres rapports CDP pour vos cas d’utilisation de marketing et de KPI.
-source-git-commit: 62e282138de8cf2d74b4a62f4ced39e3fb78001a
+exl-id: 61bc7f23-9f79-4c75-a515-85dd9dda2d02
+source-git-commit: 5009dd0b48090530736c711a34e3bcb8b6cde2b6
 workflow-type: tm+mt
 source-wordcount: '1084'
 ht-degree: 0%

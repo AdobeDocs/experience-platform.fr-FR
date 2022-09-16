@@ -1,6 +1,6 @@
 ---
-title: Présentation de lʼextension Adobe Media Analytics (3.x SDK) for Audio and Video
-description: Découvrez lʼextension Adobe Media Analytics (SDK 3.x) for Audio and Video dans Adobe Experience Platform.
+title: Présentation de lʼextension Adobe Media Analytics (3.x SDK) for Audio and Video
+description: Découvrez lʼextension Adobe Media Analytics (SDK 3.x) for Audio and Video dans Adobe Experience Platform.
 exl-id: 7289d57d-7e7f-4832-9469-3b5a62183a32
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
@@ -9,18 +9,18 @@ ht-degree: 100%
 
 ---
 
-# Présentation de lʼextension Adobe Media Analytics (3.x SDK) for Audio and Video
+# Présentation de lʼextension Adobe Media Analytics (3.x SDK) for Audio and Video
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 Pour plus d’informations sur l’installation, la configuration et la mise en œuvre de l’extension Adobe Media Analytics (SDK 3.x) for Audio and Video (extension Media Analytics), utilisez cette documentation. Les options disponibles lors de l’utilisation de cette extension pour créer une règle, ainsi que des exemples et des liens vers des exemples, sont inclus.
 
 L’extension Media Analytics (MA) ajoute le SDK principal JavaScript Media (SDK Media 3.x). Cette extension est une fonctionnalité qui permet d’ajouter l’instance `Media` de suivi à un site ou à un projet acceptant les balises. L’extension MA requiert deux extensions supplémentaires :
 
 * [Extension Analytics](../analytics/overview.md)
-* [L’extension Experience Cloud ID](../id-service/overview.md)
+* [L’extension Experience Cloud ID](../id-service/overview.md)
 
 >[!IMPORTANT]
 >
@@ -33,7 +33,7 @@ Après avoir inclus les trois extensions mentionnées ci-dessus dans votre proje
 
 ## Installation et configuration de l’extension MA
 
-* **Installation :** pour installer l’extension MA, ouvrez la propriété de votre extension, puis sélectionnez **[!UICONTROL Extensions > Catalogue]**. Placez le curseur sur l’extension **[!UICONTROL Adobe Media Analytics (3.x SDK) for Audio and Video]** et cliquez sur **[!UICONTROL Installer]**.
+* **Installation :** pour installer l’extension MA, ouvrez la propriété de votre extension, puis sélectionnez **[!UICONTROL Extensions > Catalogue]**. Placez le curseur sur l’extension **[!UICONTROL Adobe Media Analytics (3.x SDK) for Audio and Video]** et cliquez sur **[!UICONTROL Installer]**.
 
 * **Configuration :** pour configurer l’extension MA, ouvrez l’onglet [!UICONTROL Extensions] et placez le curseur sur l’extension. Cliquez ensuite sur **[!UICONTROL Configurer]** :
 
@@ -52,7 +52,7 @@ Après avoir inclus les trois extensions mentionnées ci-dessus dans votre proje
 | Export APIs to Window Object | Activer ou désactiver l’exportation des API Media Analytics vers la portée globale |
 | Variable Name | Une variable utilisée pour exporter les API de Media Analytics sous l’objet `window` |
 
-**Rappel :** l’extension MA requiert les extensions [Analytics](../analytics/overview.md) et [Experience Cloud ID](../id-service/overview.md). Vous devez également ajouter ces extensions à la propriété de votre extension et les configurer.
+**Rappel :** l’extension MA requiert les extensions [Analytics](../analytics/overview.md) et [Experience Cloud ID](../id-service/overview.md). Vous devez également ajouter ces extensions à la propriété de votre extension et les configurer.
 
 ## Utilisation de l’extension MA
 

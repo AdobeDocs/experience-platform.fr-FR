@@ -3,7 +3,7 @@ title: Type de données de paires clé-valeur
 description: Ce document offre un aperçu du type de données des modèles de données d’expérience (XDM) des paires clé-valeur.
 exl-id: 2a1a7537-9019-4cf2-bfa1-9c760f9656dd
 source-git-commit: 1d023ce6184e54693401eb68a04ceeb1464dcaa0
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '121'
 ht-degree: 100%
 

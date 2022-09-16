@@ -1,6 +1,6 @@
 ---
 title: Présentation de l’extension Adobe ContextHub
-description: Découvrez lʼextension de balise Adobe ContextHub dans Adobe Experience Platform.
+description: Découvrez lʼextension de balise Adobe ContextHub dans Adobe Experience Platform.
 exl-id: 90700ce2-14fd-4d15-bbb8-98a8bbca5005
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
@@ -13,7 +13,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 Utilisez cette référence pour obtenir des informations sur la configuration de l’extension Adobe ContextHub et sur les options disponibles lors de l’utilisation de cette extension pour créer une règle.
 
@@ -21,7 +21,7 @@ Utilisez cette référence pour obtenir des informations sur la configuration de
 
 Cette section fournit des informations relatives aux options disponibles lors de la configuration de l’extension Adobe ContextHub.
 
-Si l’extension Adobe ContextHub n’est pas encore installée, ouvrez votre propriété, puis cliquez sur **[!UICONTROL Extensions > Catalogue]**, placez le curseur sur l’extension Adobe ContextHub et cliquez sur **[!UICONTROL Installer]**.
+Si l’extension Adobe ContextHub n’est pas encore installée, ouvrez votre propriété, puis cliquez sur **[!UICONTROL Extensions > Catalogue]**, placez le curseur sur l’extension Adobe ContextHub et cliquez sur **[!UICONTROL Installer]**.
 
 Pour configurer l’extension, ouvrez l’onglet [!UICONTROL Extensions], placez votre curseur sur l’extension, puis cliquez sur **[!UICONTROL Configurer]**.
 

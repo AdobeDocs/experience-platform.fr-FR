@@ -122,7 +122,7 @@ msg6 = model_train.process(msg5)
 
 | Valeur | Description |
 | --- | --- |
-| features | Fonctionnalités d’entrée du modèle (liste des chaînes). <br> Par exemple: `browser`, `device`, `login_page`, `product_page`, `search_page` |
+| fonctionnalités | Fonctionnalités d’entrée du modèle (liste des chaînes). <br> Par exemple: `browser`, `device`, `login_page`, `product_page`, `search_page` |
 | label | Nom de la colonne cible (chaîne). |
 | mode | Train/test (chaîne). |
 | model_path | Chemin d’accès local au modèle d’enregistrement au format unique. |
@@ -130,7 +130,7 @@ msg6 = model_train.process(msg5)
 | params.model_params | hyperparamètres du modèle, voir [API sklearn (map/dict)](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html) pour plus d’informations. |
 | node_instance.process(data_message_from_previous_node) | La méthode `process()` prend DataMsg du noeud précédent et applique la transformation. Cela dépend du noeud actif utilisé. |
 
-### Split
+### Fractionner
 
 Utilisez le noeud suivant pour fractionner votre cadre de données en formation et test en transmettant `train_size` ou `test_size`. Cette opération renvoie un cadre de données avec un multi-index. Vous pouvez accéder aux jeux de données de formation et de test à l’aide de l’exemple suivant, `msg5.data.xs(“train”)`.
 

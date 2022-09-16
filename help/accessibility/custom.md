@@ -1,9 +1,9 @@
 ---
-keywords: Experience Platform;profil;profil client en temps réel;dépannage;API;profil unifié;Profil unifié;unifié;Profil;rtcp;graphiques XDM
-title: Solutions d’accessibilité personnalisées pour Experience Platform
+keywords: Experience Platform;profil;profil client en temps réel;dépannage;API;profil unifié;Profil unifié;unifié;Profil;rtcp;graphiques XDM
+title: Solutions d’accessibilité personnalisées pour Experience Platform
 topic-legacy: guide
 type: Documentation
-description: En savoir plus sur les solutions d’accessibilité personnalisées dans l’interface utilisateur d’Adobe Experience Platform.
+description: En savoir plus sur les solutions d’accessibilité personnalisées dans l’interface utilisateur d’Adobe Experience Platform.
 exl-id: cb5ad99e-8a95-4c9e-aae6-1d0036ecf052
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
@@ -12,43 +12,43 @@ ht-degree: 100%
 
 ---
 
-# Solutions d’accessibilité personnalisées pour Experience Platform
+# Solutions d’accessibilité personnalisées pour Experience Platform
 
-Adobe Experience Platform est continuellement amélioré pour répondre aux besoins de tous les types d’utilisateurs et appliquer les normes internationales afin d’inclure les personnes atteintes d’une déficience visuelle ou auditive, souffrant de mobilité réduite ou autre. Ce document décrit les solutions d’accessibilité personnalisées dans l’interface utilisateur d’Experience Platform.
+Adobe Experience Platform est continuellement amélioré pour répondre aux besoins de tous les types d’utilisateurs et appliquer les normes internationales afin d’inclure les personnes atteintes d’une déficience visuelle ou auditive, souffrant de mobilité réduite ou autre. Ce document décrit les solutions d’accessibilité personnalisées dans l’interface utilisateur d’Experience Platform.
 
 ## Présentation de la page d’accueil et de l’interface utilisateur
 
-L’interface utilisateur d’Experience Platform applique les rapports de contraste requis pour le texte normal, les graphiques et les composants de l’interface utilisateur. Les couleurs de l’interface utilisateur ont également été choisies pour prendre en charge l’accessibilité de tous les utilisateurs, y compris ceux présentant un handicap visuel.
+L’interface utilisateur d’Experience Platform applique les rapports de contraste requis pour le texte normal, les graphiques et les composants de l’interface utilisateur. Les couleurs de l’interface utilisateur ont également été choisies pour prendre en charge l’accessibilité de tous les utilisateurs, y compris ceux présentant un handicap visuel.
 
 Dans Platform, les éléments de l’interface utilisateur exploitables ou sur lesquels l’utilisateur peut cliquer peuvent également fonctionner à l’aide d’un clavier. Cela inclut le volet de navigation de gauche, les lecteurs vidéo, les tableaux, etc.
 
-Experience Platform s’efforce de respecter les normes internationales en matière d’accessibilité. Cela inclut les règles pour l’accessibilité des contenus web 2.1 aux niveaux A et AA, ainsi que les normes web WAI-ARIA (Web Accessibility Initiative - Accessible Rich Internet Applications).
+Experience Platform s’efforce de respecter les normes internationales en matière d’accessibilité. Cela inclut les règles pour l’accessibilité des contenus web 2.1 aux niveaux A et AA, ainsi que les normes web WAI-ARIA (Web Accessibility Initiative - Accessible Rich Internet Applications).
 
-![Page d’accueil de l’interface utilisateur d’Adobe Experience Platform.](images/homepage.png)
+![Page d’accueil de l’interface utilisateur d’Adobe Experience Platform.](images/homepage.png)
 
 ## Volet de navigation de gauche
 
-Le volet de navigation de gauche de l’interface utilisateur d’Experience Platform est accessible à partir du clavier et fournit un contraste des couleurs dans les états Normal, De survol et De sélection, conformément aux normes d’accessibilité.
+Le volet de navigation de gauche de l’interface utilisateur d’Experience Platform est accessible à partir du clavier et fournit un contraste des couleurs dans les états Normal, De survol et De sélection, conformément aux normes d’accessibilité.
 
 Sur l’écran d’accueil, les utilisateurs peuvent utiliser la touche de tabulation pour accéder au volet de navigation de gauche. En sélectionnant **Maj + touche de tabulation** l’utilisateur est renvoyé à l’écran d’accueil.
 
-![Volet de navigation de gauche d’Experience Platform.](images/left-navigation-select.png)
+![Volet de navigation de gauche d’Experience Platform.](images/left-navigation-select.png)
 
 Lorsque le focus se trouve sur le volet de navigation de gauche, la touche de **tabulation** permet aux utilisateurs de développer et de réduire l’interaction. La possibilité de développer ou réduire le volet de navigation de gauche est activée avec **Entrée (Retour)**.
 
-![Volet de navigation de gauche d’Experience Platform réduit.](images/left-navigation-collapse.png)
+![Volet de navigation de gauche d’Experience Platform réduit.](images/left-navigation-collapse.png)
 
 Lorsque le focus se trouve sur le volet de navigation de gauche, les touches fléchées vers le haut et vers le bas permettent d’accéder à chaque élément de la navigation dans un cycle continu (en d’autres termes, le focus reste sur le volet de navigation de gauche tant que l’utilisateur ne le quitte pas à l’aide de la touche de tabulation). Le focus apparaît pour les éléments de navigation sélectionnés. La sélection en cours s’affiche avec un texte en surbrillance et en gras. Lorsqu’un élément du volet de navigation de gauche est sélectionné, la touche **Entrée (Retour)** ouvre l’élément d’interface utilisateur sélectionné dans le panneau de droite. Toutefois, le focus reste sur le volet de navigation de gauche jusqu’à ce que l’utilisateur le quitte à l’aide de la touche de tabulation.
 
-![Volet de navigation de gauche d’Experience Platform avec l’élément Sources sélectionné.](images/left-navigation-sources.png)
+![Volet de navigation de gauche d’Experience Platform avec l’élément Sources sélectionné.](images/left-navigation-sources.png)
 
 Certaines fonctionnalités de Platform ne sont pas activées pour tous les utilisateurs. Ces éléments apparaissent dans la navigation, mais ne peuvent pas être sélectionnés. Lorsque vous naviguez à l’aide du clavier, ces éléments sont ignorés lors de la navigation par flèche et ne peuvent pas être sélectionnés à l’aide de la touche **Entrée (Retour)**.
 
-![Sections du volet de navigation de gauche d’Experience Platform non activées pour l’utilisateur et ne pouvant pas être sélectionnées.](images/left-navigation-sections-disabled.png)
+![Sections du volet de navigation de gauche d’Experience Platform non activées pour l’utilisateur et ne pouvant pas être sélectionnées.](images/left-navigation-sections-disabled.png)
 
 ## Boîte de dialogue de la vidéo intégrée
 
-Vous pouvez visionner des vidéos dans Experience Platform à l’aide de la navigation au clavier, qui permet de mettre en surbrillance et de sélectionner un lien vidéo disponible. Une boîte de dialogue de la vidéo intégrée s’ouvre alors dans l’interface utilisateur de Platform.
+Vous pouvez visionner des vidéos dans Experience Platform à l’aide de la navigation au clavier, qui permet de mettre en surbrillance et de sélectionner un lien vidéo disponible. Une boîte de dialogue de la vidéo intégrée s’ouvre alors dans l’interface utilisateur de Platform.
 
 ![Bordure bleue apparaissant autour d’un élément sélectionné pour indiquer que le focus est appliqué.](images/profile-overview-tab.png)
 
@@ -75,7 +75,7 @@ Vous pouvez également naviguer dans la boîte de dialogue de la vidéo intégr�
 
 ## Glisser-déposer un fichier
 
-Dans Experience Platform, toutes les zones de glisser-déposer de sélection de fichier sont accessibles à l’aide du clavier. L’utilisation de la touche de **tabulation** pour mettre en surbrillance le bouton **[!UICONTROL Choisir des fichiers]** ainsi que l’utilisation de la touche **Entrée ou de la barre d’espacement** afin de le sélectionner invoquent l’interface utilisateur de sélection de fichier du système d’exploitation.
+Dans Experience Platform, toutes les zones de glisser-déposer de sélection de fichier sont accessibles à l’aide du clavier. L’utilisation de la touche de **tabulation** pour mettre en surbrillance le bouton **[!UICONTROL Choisir des fichiers]** ainsi que l’utilisation de la touche **Entrée ou de la barre d’espacement** afin de le sélectionner invoquent l’interface utilisateur de sélection de fichier du système d’exploitation.
 
 Une fois le fichier transféré, une icône de suppression devient accessible à l’aide du clavier. Cela permet de supprimer le fichier sélectionné et d’en transférer un nouveau. Les utilisateurs peuvent utiliser la touche de **tabulation** pour placer le focus sur l’icône de suppression, puis appuyer sur **Entrée ou la barre d’espacement** pour la sélectionner. Une fois le fichier supprimé, le focus se trouve automatiquement sur le bouton **[!UICONTROL Choisir des fichiers]**, qui peut être sélectionné.
 
@@ -89,7 +89,7 @@ Sélectionner une zone de glisser-déposer à l’aide de la souris invoque éga
 
 ## Navigation dans un tableau
 
-Tous les tableaux de l’interface utilisateur d’Experience Platform sont accessibles à l’aide du clavier. La navigation et l’interaction avec les lignes et les colonnes d’un tableau sont possibles grâce à une série de raccourcis clavier :
+Tous les tableaux de l’interface utilisateur d’Experience Platform sont accessibles à l’aide du clavier. La navigation et l’interaction avec les lignes et les colonnes d’un tableau sont possibles grâce à une série de raccourcis clavier :
 
 * Dans l’en-tête du tableau, utilisez la **flèche vers le bas** pour parcourir le tableau. Les en-têtes de tableau peuvent être sélectionnés lors de la navigation à l’aide de la touche de **tabulation**. Vous pouvez modifier l’ordre de tri à l’aide de la **barre d’espacement**.
 * Les **touches fléchées vers le haut et vers le bas** permettent de se déplacer vers le haut et vers le bas parmi les lignes du tableau.
@@ -124,7 +124,7 @@ L’interface utilisateur de l’éditeur de schéma est accessible à l’aide 
 
 ## Interface utilisateur du créateur de segments
 
-Lors de l’utilisation de l’interface utilisateur du créateur de segments pour créer, modifier et interagir avec des segments dans Experience Platform, les fonctionnalités suivantes améliorent l’accessibilité :
+Lors de l’utilisation de l’interface utilisateur du créateur de segments pour créer, modifier et interagir avec des segments dans Experience Platform, les fonctionnalités suivantes améliorent l’accessibilité :
 
 * L’interface utilisateur du créateur de segments est accessible par le biais de la navigation au clavier.
 * Les lecteurs d’écran doivent reconnaître le balisage des titres et peuvent annoncer le titre ainsi que son niveau.

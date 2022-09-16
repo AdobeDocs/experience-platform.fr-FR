@@ -5,7 +5,7 @@ exl-id: 21e4d647-1168-4cb4-a2f8-22d201e39bba
 source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '526'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
@@ -41,7 +41,7 @@ Avec cet outil, après avoir configuré votre destination, vous pouvez :
 
 Vous pouvez effectuer des appels vers le point de terminaison de l’API de test de destination avec ou sans ajouter de profils sur la requête.
 
-Si vous n’ajoutez aucun profil dans la requête, Adobe les génère en interne et les ajoute à la requête. Si vous souhaitez générer des profils à utiliser dans cette requête, reportez-vous à la section [Exemple de référence d’API de génération de profil](./sample-profile-generation-api.md). Vous devez générer des profils en fonction du schéma XDM source, comme indiqué dans la section [Référence d’API](./sample-profile-generation-api.md#generate-sample-profiles-source-schema). Notez que le schéma source est le [schéma d’union](https://experienceleague.adobe.com/docs/experience-platform/profile/union-schemas/union-schema.html?lang=en) de l’environnement de test que vous utilisez.
+Si vous n’ajoutez aucun profil dans la requête, Adobe les génère en interne et les ajoute à la requête. Si vous souhaitez générer des profils à utiliser dans cette requête, reportez-vous à la section [Exemple de référence d’API de génération de profil](./sample-profile-generation-api.md). Vous devez générer des profils en fonction du schéma XDM source, comme indiqué dans la section [Référence d’API](./sample-profile-generation-api.md#generate-sample-profiles-source-schema). Notez que le schéma source est le [schéma d’union](https://experienceleague.adobe.com/docs/experience-platform/profile/union-schemas/union-schema.html?lang=fr) de l’environnement de test que vous utilisez.
 
 La réponse contient le résultat du traitement de la requête de destination. La demande comprend trois sections principales :
 * La requête générée par Adobe pour la destination.

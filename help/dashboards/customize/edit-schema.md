@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform;interface utilisateur;UI;tableaux de bord;tableau de bord;profils;segments;destinations;utilisation des licences
+keywords: Experience Platform;interface utilisateur;UI;tableaux de bord;tableau de bord;profils;segments;destinations;utilisation des licences
 title: Modification du schéma pour créer des widgets de tableaux de bord personnalisés
-description: Ce guide fournit des instructions détaillées relatives à la sélection des attributs et à la configuration du schéma de votre organisation dans le but de créer des widgets personnalisés pour les tableaux de bord d’Adobe Experience Platform.
+description: Ce guide fournit des instructions détaillées relatives à la sélection des attributs et à la configuration du schéma de votre organisation dans le but de créer des widgets personnalisés pour les tableaux de bord d’Adobe Experience Platform.
 exl-id: a744eb24-5ba7-4971-9183-3f891e807863
 source-git-commit: 89a0e2544a17fe10e6dfd7611b5223ca4fc55501
 workflow-type: tm+mt
@@ -12,7 +12,7 @@ ht-degree: 100%
 
 # Modification du schéma pour créer des widgets personnalisés
 
-Pour créer des widgets personnalisés pour les tableaux de bord d’Adobe Experience Platform, vous devez d’abord identifier les attributs Real-time Customer Profile sur lesquels les widgets seront basés.
+Pour créer des widgets personnalisés pour les tableaux de bord d’Adobe Experience Platform, vous devez d’abord identifier les attributs Real-time Customer Profile sur lesquels les widgets seront basés.
 
 Ce guide fournit des instructions détaillées pour modifier le schéma de votre organisation en sélectionnant des attributs, afin de créer des widgets de tableaux de bord personnalisés.
 
@@ -24,7 +24,7 @@ Une fois les attributs sélectionnés et le schéma configuré, vous pouvez suiv
 
 ## Bibliothèque de widgets {#widget-library}
 
-Ce guide nécessite l’accès à la [!UICONTROL bibliothèque de widgets] d’Experience Platform. Pour en savoir plus sur la bibliothèque de widgets et sur la façon d’y accéder dans l’interface utilisateur, commencez par lire la [présentation de la bibliothèque de widgets](widget-library.md).
+Ce guide nécessite l’accès à la [!UICONTROL bibliothèque de widgets] d’Experience Platform. Pour en savoir plus sur la bibliothèque de widgets et sur la façon d’y accéder dans l’interface utilisateur, commencez par lire la [présentation de la bibliothèque de widgets](widget-library.md).
 
 ## Modification du schéma
 

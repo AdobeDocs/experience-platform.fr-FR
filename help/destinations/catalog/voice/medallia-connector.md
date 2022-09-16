@@ -19,7 +19,7 @@ Activez les profils pour les enquêtes et la collecte de commentaires Medallia c
 >
 >Cette page de documentation a été créée par l’équipe de Medallia. Pour toute demande d&#39;information ou de mise à jour, contactez-les directement à l&#39;adresse adobe-integrations@medallia.com.
 
-## Cas dʼutilisation {#use-cases}
+## Cas d&#39;utilisation {#use-cases}
 
 Pour vous aider à mieux comprendre comment et à quel moment utiliser la destination Medallia, voici des exemples de cas d’utilisation que les clients Adobe Experience Platform peuvent résoudre à l’aide de cette destination.
 

@@ -38,7 +38,7 @@ Après avoir accédé au site d’accueil, une image à forte identification fai
 
 ![](assets/example-views.png)
 
-À mesure que le client s’intéresse davantage aux produits que l’entreprise vend, il décide de cliquer sur le lien **Produits** . Comme pour le site d’accueil, l’intégralité du site de produits peut être définie comme une ue.V Cette vue peut être nommée &quot;products-all&quot;.
+À mesure que le client s’intéresse de plus en plus aux produits que l’entreprise vend, il décide de cliquer sur l’événement **Produits** lien. Comme pour le site d’accueil, l’intégralité du site de produits peut être définie comme une ue.V Cette vue peut être nommée &quot;products-all&quot;.
 
 ![](assets/example-products-all.png)
 
@@ -46,7 +46,7 @@ Une Vue pouvant être définie comme un site entier ou un groupe d’éléments 
 
 ![](assets/example-products.png)
 
-Lorsque le client décide de cliquer sur le bouton **Charger plus** pour explorer d’autres produits sur le site, l’URL du site web ne change pas dans ce cas, mais une Vue peut être créée ici pour représenter uniquement la deuxième ligne de produits qui s’affichent. Le nom de la vue peut être &quot;products-page-2&quot;.
+Lorsque le client décide de cliquer sur la variable **Charger plus** pour explorer d’autres produits sur le site, l’URL du site web ne change pas dans ce cas, mais une Vue peut être créée ici pour représenter uniquement la deuxième ligne des produits affichés. Le nom de la vue peut être &quot;products-page-2&quot;.
 
 ![](assets/example-load-more.png)
 
@@ -62,7 +62,7 @@ Les vues XDM peuvent être exploitées dans Adobe Target pour permettre aux mark
 
 1. Installer [SDK Web Adobe Experience Platform](../../fundamentals/installing-the-sdk.md)
 2. Déterminez toutes les vues XDM de votre application d’une seule page que vous souhaitez personnaliser.
-3. Après avoir défini les vues XDM, pour diffuser des activités AB ou XT VEC, implémentez la fonction `sendEvent()` avec `renderDecisions` défini sur `true` et la vue XDM correspondante dans votre application de page unique. La vue XDM doit être transmise dans `xdm.web.webPageDetails.viewName`. Cette étape permet aux marketeurs d’utiliser le compositeur d’expérience visuelle pour lancer des tests A/B et XT pour ces XDM.
+3. Après avoir défini les vues XDM, pour diffuser des activités AB ou XT VEC, implémentez la variable `sendEvent()` fonction avec `renderDecisions` défini sur `true` et la vue XDM correspondante dans votre application d’une seule page. La vue XDM doit être transmise. `xdm.web.webPageDetails.viewName`. Cette étape permet aux marketeurs d’utiliser le compositeur d’expérience visuelle pour lancer des tests A/B et XT pour ces XDM.
 
    ```javascript
    alloy("sendEvent", { 
@@ -79,11 +79,11 @@ Les vues XDM peuvent être exploitées dans Adobe Target pour permettre aux mark
 
 >[!NOTE]
 >
->Lors du premier appel `sendEvent()`, toutes les vues XDM qui doivent être rendues à l’utilisateur final seront récupérées et mises en cache. Les appels `sendEvent()` suivants avec les vues XDM transmises seront lus à partir du cache et rendus sans appel au serveur.
+>Le premier `sendEvent()` tous les affichages XDM qui doivent être rendus à l’utilisateur final seront récupérés et mis en cache. Suivant `sendEvent()` Les appels avec les vues XDM transmises seront lus à partir du cache et rendus sans appel au serveur.
 
 ## `sendEvent()` exemples de fonctions
 
-Cette section présente trois exemples illustrant l’appel de la fonction `sendEvent()` dans React pour une hypothèse de SPA de commerce électronique.
+Cette section présente trois exemples illustrant comment appeler la méthode `sendEvent()` dans React pour une SPA de commerce électronique hypothétique.
 
 ### Exemple 1 : Page d’accueil du test A/B
 
@@ -91,7 +91,7 @@ L’équipe marketing souhaite exécuter des tests A/B sur l’ensemble de la pa
 
 ![](assets/use-case-1.png)
 
-Pour exécuter des tests A/B sur l’ensemble du site d’accueil, `sendEvent()` doit être appelé en définissant XDM `viewName` sur `home` :
+Pour exécuter des tests A/B sur l’ensemble du site d’accueil, `sendEvent()` doit être appelé avec XDM `viewName` défini sur `home`:
 
 ```jsx
 function onViewChange() { 
@@ -131,7 +131,7 @@ history.listen(onViewChange);
 
 ### Exemple 2 : Produits personnalisés
 
-L’équipe marketing souhaite personnaliser la deuxième ligne de produits en définissant la couleur du libellé du prix sur rouge après qu’un utilisateur a cliqué sur **Charger plus**.
+L’équipe marketing souhaite personnaliser la deuxième ligne de produits en définissant la couleur du libellé de prix sur rouge après qu’un utilisateur a cliqué sur **Charger plus**.
 
 ![](assets/use-case-2.png)
 
@@ -169,11 +169,11 @@ class Products extends Component {
 
 ### Exemple 3 : Préférences de diffusion du test A/B
 
-L’équipe marketing souhaite exécuter un test A/B afin de déterminer si la modification de la couleur du bouton du bleu au rouge lorsque l’option **Livraison express** est sélectionnée peut augmenter les conversions (au lieu de conserver la couleur bleue du bouton pour les deux options de livraison).
+L’équipe marketing souhaite exécuter un test A/B afin de déterminer si la couleur du bouton doit passer du bleu au rouge lorsque vous le souhaitez. **Livraison express** est sélectionné peut augmenter les conversions (au lieu de conserver la couleur bleue du bouton pour les deux options de diffusion).
 
 ![](assets/use-case-3.png)
 
-Pour personnaliser le contenu du site en fonction des préférences de diffusion sélectionnées, une Vue peut être créée pour chaque préférence de diffusion. Lorsque **Livraison normale** est sélectionné, la vue peut être nommée &quot;checkout-normal&quot;. Si **Livraison express** est sélectionné, la vue peut être nommée &quot;Extraction-express&quot;.
+Pour personnaliser le contenu du site en fonction des préférences de diffusion sélectionnées, une Vue peut être créée pour chaque préférence de diffusion. When **Livraison normale** est sélectionnée, la vue peut être nommée &quot;checkout-normal&quot;. If **Livraison express** est sélectionnée, la vue peut être nommée &quot;checkout-express&quot;.
 
 ```jsx
 function onViewChange(viewName) { 
@@ -216,11 +216,11 @@ class Checkout extends Component {
 
 ## Utilisation du compositeur d’expérience visuelle pour un SPA
 
-Une fois que vous avez défini vos vues XDM et mis en oeuvre `sendEvent()` avec ces vues XDM transmises, le VEC peut détecter ces vues et permettre aux utilisateurs de créer des actions et des modifications pour les activités A/B ou XT.
+Lorsque vous avez terminé de définir vos vues XDM et que vous avez mis en oeuvre `sendEvent()` avec ces vues XDM transmises, le VEC pourra détecter ces vues et permettre aux utilisateurs de créer des actions et des modifications pour les activités A/B ou XT.
 
 >[!NOTE]
 >
->Pour utiliser le compositeur d’expérience visuelle pour votre SPA, vous devez installer et activer l’extension d’assistance [Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/) ou [Chrome](https://chrome.google.com/webstore/detail/adobe-target-vec-helper/ggjpideecfnbipkacplkhhaflkdjagak) VEC.
+>Pour utiliser le compositeur d’expérience visuelle pour votre SPA, vous devez installer et activer le [Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/) ou [Chrome](https://chrome.google.com/webstore/detail/adobe-target-vec-helper/ggjpideecfnbipkacplkhhaflkdjagak) Extension d’assistance du compositeur d’expérience visuelle.
 
 ### Panneau des modifications
 
@@ -230,16 +230,16 @@ Le panneau Modifications capture les actions créées pour une vue spécifique. 
 
 ### Actions
 
-Cliquer sur une action met en évidence l’élément de la page sur lequel cette action sera appliquée. Chaque action du VEC créée sous une vue comporte les icônes suivantes : **Informations**, **Modifier**, **Cloner**, **Déplacer** et **Supprimer**. Ces icônes sont expliquées plus en détail dans le tableau qui suit.
+Cliquer sur une action met en évidence l’élément de la page sur lequel cette action sera appliquée. Chaque action du VEC créée sous une vue comporte les icônes suivantes : **Informations**, **Modifier**, **Cloner**, **Déplacer**, et **Supprimer**. Ces icônes sont expliquées plus en détail dans le tableau qui suit.
 
 ![](assets/action-icons.png)
 
-| Icon | Description |
+| Icône | Description |
 |---|---|
 | Informations | Affiche les détails de cette action. |
 | Modifier | Permet de modifier directement les propriétés de cette action. |
-| Dupliquer | Cloner l’action vers une ou plusieurs vues figurant dans le panneau Modifications ou vers une ou plusieurs vues que vous avez parcourues et auxquelles vous avez accédé dans le VEC. L’action n’a pas nécessairement besoin d’exister dans le panneau Modifications.<br/><br/>**Remarque :** Une fois une opération de clonage effectuée, vous devez accéder à la vue dans le VEC via Parcourir pour vérifier si l’action clonée a été une opération valide. Si l’action ne peut pas être appliquée à l’affichage, une erreur s’affiche. |
-| Déplacer | Déplace l’action vers un événement de chargement de page ou tout autre vue existant dans le panneau Modifications.<br/><br/>**Événement de chargement de page :** toutes les actions correspondant à l’événement de chargement de page sont appliquées au chargement initial de la page de votre application web. <br/><br/>**Remarque :** Une fois une opération de déplacement effectuée, vous devez accéder à la vue dans le VEC via Parcourir pour vérifier si le déplacement a été une opération valide. Si l’action ne peut pas être appliquée à l’affichage, une erreur s’affiche. |
+| Dupliquer | Cloner l’action vers une ou plusieurs vues figurant dans le panneau Modifications ou vers une ou plusieurs vues que vous avez parcourues et auxquelles vous avez accédé dans le VEC. L’action n’a pas nécessairement besoin d’exister dans le panneau Modifications.<br/><br/>**Remarque :** Une fois une opération de clonage effectuée, vous devez accéder à la vue dans le VEC via Parcourir pour vérifier si l’action clonée était une opération valide. Si l’action ne peut pas être appliquée à l’affichage, une erreur s’affiche. |
+| Déplacer | Déplace l’action vers un événement de chargement de page ou tout autre vue existant dans le panneau Modifications.<br/><br/>**Événement de chargement de page :** Toutes les actions correspondant à l’événement de chargement de page sont appliquées au chargement initial de la page de votre application web. <br/><br/>**Remarque :** Une fois une opération de déplacement effectuée, vous devez accéder à la vue dans le VEC via Parcourir pour vérifier si le déplacement a été une opération valide. Si l’action ne peut pas être appliquée à l’affichage, une erreur s’affiche. |
 | Supprimer | Supprime l’action. |
 
 ## Utilisation du compositeur d’expérience visuelle pour SPA exemples
@@ -250,8 +250,8 @@ Cette section présente trois exemples d’utilisation du compositeur d’expér
 
 Auparavant, dans ce document, une vue nommée &quot;accueil&quot; était définie pour l’ensemble du site d’accueil. L’équipe marketing souhaite maintenant mettre à jour la vue &quot;accueil&quot; de la manière suivante :
 
-* Remplacez les boutons **Ajouter au panier** et **Comme** par un partage plus clair de bleu. Cela doit se produire lors du chargement de la page, car cela implique de modifier les composants de l’en-tête.
-* Remplacez le libellé **Derniers produits pour 2019** par **Produits les plus chauds pour 2019** et remplacez la couleur du texte par le violet.
+* Modifiez la variable **Ajouter au panier** et **Comme** des boutons plus clairs en bleu. Cela doit se produire lors du chargement de la page, car cela implique de modifier les composants de l’en-tête.
+* Modifiez la variable **Derniers produits pour 2019** libellé à **Produits les plus réactifs pour 2019** et modifiez la couleur du texte en violet.
 
 Pour effectuer ces mises à jour dans le VEC, sélectionnez **Composer** et appliquez ces modifications à la vue &quot;accueil&quot;.
 
@@ -259,15 +259,15 @@ Pour effectuer ces mises à jour dans le VEC, sélectionnez **Composer** et appl
 
 ### Exemple 2 : Modification des étiquettes de produit
 
-Pour la vue &quot;products-page-2&quot;, l’équipe marketing souhaite remplacer l’étiquette **Prix** par **Prix de vente** et changer la couleur du libellé en rouge.
+Pour la vue &quot;products-page-2&quot;, l’équipe marketing souhaite modifier la variable **Prix** libellé à **Prix de vente** et modifiez la couleur du libellé en rouge.
 
 Pour effectuer ces mises à jour dans le compositeur d’expérience visuelle, procédez comme suit :
 
-1. Sélectionnez **Parcourir** dans le VEC.
-2. Sélectionnez **Produits** dans la barre de navigation supérieure du site.
-3. Sélectionnez **Charger plus** une fois pour afficher la deuxième ligne de produits.
-4. Sélectionnez **Composer** dans le VEC.
-5. Appliquez les actions pour remplacer le libellé du texte par **Prix de vente** et modifier la couleur en rouge.
+1. Sélectionner **Parcourir** dans le compositeur d’expérience visuelle.
+2. Sélectionner **Produits** dans la barre de navigation supérieure du site.
+3. Sélectionner **Charger plus** une fois pour afficher la deuxième ligne de produits.
+4. Sélectionner **Composer** dans le compositeur d’expérience visuelle.
+5. Appliquez les actions pour remplacer le libellé du texte par **Prix de vente** et la couleur en rouge.
 
 ![](assets/vec-products-page-2.png)
 
@@ -277,16 +277,16 @@ Les vues peuvent être définies à un niveau granulaire, par exemple un état o
 
 Pour effectuer ces mises à jour dans le compositeur d’expérience visuelle, procédez comme suit :
 
-1. Sélectionnez **Parcourir** dans le VEC.
+1. Sélectionner **Parcourir** dans le compositeur d’expérience visuelle.
 2. Ajoutez des produits au panier sur le site.
 3. Sélectionnez l’icône de panier dans le coin supérieur droit du site.
-4. Sélectionnez **Extraire votre commande**.
-5. Sélectionnez le bouton radio **Livraison express** sous **Préférences de remise**.
-6. Sélectionnez **Composer** dans le VEC.
-7. Remplacez la couleur du bouton **Payer** par rouge.
+4. Sélectionner **Extraction de votre commande**.
+5. Sélectionnez la **Livraison express** Bouton radio situé sous **Préférences de diffusion**.
+6. Sélectionner **Composer** dans le compositeur d’expérience visuelle.
+7. Modifiez la variable **Payer** couleur du bouton en rouge.
 
 >[!NOTE]
 >
->La vue &quot;checkout-express&quot; n’apparaît pas dans le panneau Modifications tant que le bouton radio **Livraison express** n’a pas été sélectionné. Cela est dû au fait que la fonction `sendEvent()` est exécutée lorsque le bouton radio **Livraison express** est sélectionné. Par conséquent, le VEC ne connaît pas la vue &quot;checkout-express&quot; tant que le bouton radio n’a pas été sélectionné.
+>La vue &quot;Extraction&quot; n’apparaît pas dans le panneau Modifications tant que la variable **Livraison express** Le bouton radio est sélectionné. En effet, la variable `sendEvent()` est exécutée lorsque la fonction **Livraison express** Le bouton radio est sélectionné. Par conséquent, le VEC ne connaît pas la vue &quot;checkout-express&quot; tant que le bouton radio n’est pas sélectionné.
 
 ![](assets/vec-delivery-preference.png)

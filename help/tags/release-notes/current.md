@@ -1,11 +1,11 @@
 ---
 title: Notes de mise à jour relatives aux balises et au transfert d’événements
-description: Notes de mise à jour les plus récentes concernant le transfert de balises et d’événements dans Adobe Experience Platform.
+description: Dernières notes de mise à jour concernant les balises et le transfert d’événement dans Adobe Experience Platform.
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
 source-git-commit: af424089c0afdaae76b312137afc5cbd28e82856
 workflow-type: tm+mt
 source-wordcount: '138'
-ht-degree: 13%
+ht-degree: 22%
 
 ---
 

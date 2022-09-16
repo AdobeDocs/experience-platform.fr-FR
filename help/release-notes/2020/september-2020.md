@@ -8,7 +8,7 @@ exl-id: bf401f3a-b088-4cbd-9a64-224294b797b9
 source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
 workflow-type: tm+mt
 source-wordcount: '863'
-ht-degree: 34%
+ht-degree: 37%
 
 ---
 
@@ -28,7 +28,7 @@ Mises à jour des fonctionnalités existantes dans Adobe Experience Platform 
 
 ## Gouvernance des données {#governance}
 
-Dans Adobe Experience Platform, la gouvernance des données désigne un ensemble de stratégies et de technologies permettant de gérer les données clients et de garantir la conformité aux réglementations, aux restrictions et aux stratégies applicables à l’utilisation des données. Elle joue un rôle clé dans la [!DNL Experience Platform] à différents niveaux, notamment le catalogage, la traçabilité des données, l’étiquetage de l’utilisation des données, les stratégies d’accès aux données et le contrôle d’accès aux données pour les actions marketing.
+Dans Adobe Experience Platform, la gouvernance des données désigne un ensemble de stratégies et de technologies permettant de gérer les données clients et de garantir la conformité aux réglementations, aux restrictions et aux stratégies applicables à l’utilisation des données. Elle joue un rôle clé dans [!DNL Experience Platform] à différents niveaux, notamment dans le catalogage, la traçabilité des données, l’étiquetage de l’utilisation des données, les stratégies d’accès aux données et le contrôle d’accès aux données pour les actions marketing.
 
 **Nouvelles fonctionnalités**
 
@@ -36,7 +36,7 @@ Dans Adobe Experience Platform, la gouvernance des données désigne un ensemb
 | ------- | ----------- |
 | Améliorations de l’interface utilisateur de l’étiquetage des jeux de données | Plusieurs nouveaux contrôles de tri et de filtrage ont été ajoutés à l’interface utilisateur d’étiquetage des jeux de données afin de faciliter l’utilisation des schémas volumineux : <ul><li>Triez les champs par ordre alphabétique en fonction du chemin d’accès au schéma complet.</li><li>Effectuez des recherches partielles sur les noms de chemin de champ.</li><li>Filtrez les champs sans libellé, avec un libellé sélectionné ou avec une catégorie de libellé.</li></ul> |
 
-Pour plus d’informations sur ce service, consultez la [présentation de la gouvernance des données.](../../data-governance/home.md)
+Pour plus d’informations sur ce service, consultez la [présentation de la gouvernance des données](../../data-governance/home.md).
 
 ## Destinations {#destinations}
 
@@ -74,7 +74,7 @@ Plusieurs réglementations juridiques et organisationnelles donnent aux utilisat
 
 Voir [Présentation du Privacy Service](../../privacy-service/home.md) pour plus d’informations sur le service.
 
-## Real-time Customer Profile {#profile}
+## Profil client en temps réel {#profile}
 
 Adobe Experience Platform vous permet d’offrir aux clients des expériences coordonnées, cohérentes et pertinentes, quel que soit l’endroit ou le moment où ils interagissent avec votre marque. Avec [!DNL Real-time Customer Profile], vous pouvez obtenir une vue d’ensemble de chaque client qui combine des données provenant de plusieurs canaux, notamment des données en ligne, hors ligne, CRM et tierces. [!DNL Profile] vous permet de consolider vos données client disparates en une vue unifiée offrant un compte horodaté et exploitable de chaque interaction client.
 

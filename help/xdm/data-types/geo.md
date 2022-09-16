@@ -8,7 +8,7 @@ exl-id: d0eef943-ef86-4abd-8a51-dc45f2ed782d
 source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
 workflow-type: tm+mt
 source-wordcount: '202'
-ht-degree: 36%
+ht-degree: 44%
 
 ---
 
@@ -31,7 +31,7 @@ ht-degree: 36%
 
 {style=&quot;table-layout:auto&quot;}
 
-Pour plus d’informations sur le type de données, reportez-vous au référentiel XDM public :
+Pour obtenir plus d’informations sur ce type de données, reportez-vous au référentiel XDM public:
 
 * [Exemple rempli](https://github.com/adobe/xdm/blob/master/components/datatypes/demographic/geo.example.1.json)
 * [Schéma complet](https://github.com/adobe/xdm/blob/master/components/datatypes/demographic/geo.schema.json)

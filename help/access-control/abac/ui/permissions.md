@@ -6,7 +6,7 @@ exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
 source-git-commit: 79ffdf35e27d74a64ea8e25544fdeeb293b58306
 workflow-type: tm+mt
 source-wordcount: '930'
-ht-degree: 0%
+ht-degree: 10%
 
 ---
 
@@ -14,15 +14,15 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Le contrôle d’accès basé sur les attributs est actuellement disponible dans une version limitée pour les clients de santé basés aux États-Unis. Cette fonctionnalité sera disponible pour tous les clients Real-time Customer Data Platform une fois qu’elle sera entièrement publiée.
+>Le contrôle d’accès basé sur les attributs est actuellement disponible pour un nombre restreint d’utilisateurs, qui sont actifs dans le secteur de la santé et basés aux États-Unis. Cette fonctionnalité sera disponible pour tous les clients Real-time Customer Data Platform dès son déploiement à grande échelle.
 
 >[!IMPORTANT]
 >
 >Le contrôle d’accès utilise un ID utilisateur (un ID unique interne attribué à un utilisateur) pour accorder des autorisations. Lorsqu’une organisation est migrée d’Adobe ID vers Business ID, toutes les autorisations définies pour ses utilisateurs seront perdues car l’ID utilisateur change et le contrôle d’accès utilisera l’ID utilisateur nouvellement généré. Si votre entreprise est migrée vers un identifiant professionnel, contactez votre représentant d’Adobe pour migrer votre identifiant utilisateur d’Adobe ID vers un identifiant professionnel.
 
-Les autorisations sont la zone de l’Experience Cloud dans laquelle les administrateurs peuvent définir des rôles utilisateur et des stratégies d’accès afin de gérer les autorisations d’accès pour les fonctionnalités et les objets au sein d’une application de produit.
+La zone dédiée aux autorisations dans Experience Cloud permet aux administrateurs de définir des rôles d’utilisateur et des stratégies d’accès. Ils peuvent ainsi gérer les autorisations d’accès aux fonctionnalités et objets dans une application de produit.
 
-Grâce aux autorisations, vous pouvez créer et gérer des rôles, ainsi que attribuer les autorisations de ressources souhaitées pour ces rôles. Les autorisations vous permettent également de gérer les libellés, les environnements de test et les utilisateurs associés à un rôle spécifique.
+Grâce aux autorisations, vous pouvez créer et gérer des rôles, ainsi qu’attribuer les autorisations de ressource souhaitées pour ces rôles. Les autorisations vous permettent également de gérer les libellés, les sandbox et les utilisateurs associés à un rôle spécifique.
 
 Immédiatement après [création d’un nouveau rôle](#create-a-new-role), vous revenez au **[!UICONTROL Rôles]** . Si vous modifiez les autorisations d’un rôle existant, sélectionnez le rôle dans la **[!UICONTROL Rôles]** . Vous pouvez également utiliser l’option de filtrage pour filtrer les résultats afin de trouver un rôle.
 

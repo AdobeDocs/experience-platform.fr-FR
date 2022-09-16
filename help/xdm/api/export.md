@@ -1,7 +1,8 @@
 ---
 title: Exporter le point de terminaison de l’API
 description: Le point de terminaison /export de l’API Schema Registry vous permet de partager des ressources XDM entre environnements de test.
-source-git-commit: 2a58236031834bbe298576e2fcab54b04ec16ac3
+exl-id: 1dcbfa59-af98-4db5-b6f4-f848e5bf5e81
+source-git-commit: 32d4a364ba740194d4fd7a0f4df7bd69f25f62b8
 workflow-type: tm+mt
 source-wordcount: '414'
 ht-degree: 14%

@@ -1,6 +1,6 @@
 ---
 title: Copie des ressources
-description: Découvrez comment créer une ressource de balise à l’aide des paramètres d’une ressource existante dans Adobe Experience Platform.
+description: Découvrez comment créer une ressource de balise à lʼaide des paramètres dʼune ressource de balise existante dans Adobe Experience Platform.
 exl-id: 7e52ceae-97df-4c64-aba3-4f5ba6018a47
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
@@ -13,7 +13,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 Parfois, il peut s’avérer pratique de créer une nouvelle ressource à l’aide des paramètres d’une ressource existante. Dans ce cas, vous pouvez en faire une copie.
 

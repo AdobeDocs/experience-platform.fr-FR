@@ -1,7 +1,8 @@
 ---
 title: Tri et filtrage des réponses dans l’API Flow Service
 description: Ce tutoriel décrit la syntaxe à utiliser pour trier et filtrer à l’aide des paramètres de requête dans l’API Flow Service, y compris certains cas d’utilisation avancés.
-source-git-commit: ccca81357bd7d7083abd3f395aa547c85ebf65fd
+exl-id: 029c3199-946e-4f89-ba7a-dac50cc40c09
+source-git-commit: ef8db14b1eb7ea555135ac621a6c155ef920e89a
 workflow-type: tm+mt
 source-wordcount: '607'
 ht-degree: 7%
@@ -10,11 +11,11 @@ ht-degree: 7%
 
 # Tri et filtrage des réponses dans l’API Flow Service
 
-Lors de l’exécution de requêtes de liste (GET) dans l’ [API de service de flux](https://www.adobe.io/experience-platform-apis/references/flow-service/), vous pouvez utiliser des paramètres de requête pour trier et filtrer les réponses. Ce guide fournit une référence pour l’utilisation de ces paramètres pour différents cas d’utilisation.
+Lors de l’exécution de requêtes de liste (GET) dans la variable [API de service de flux](https://www.adobe.io/experience-platform-apis/references/flow-service/), vous pouvez utiliser des paramètres de requête pour trier et filtrer les réponses. Ce guide fournit une référence pour l’utilisation de ces paramètres pour différents cas d’utilisation.
 
 ## Tri 
 
-Vous pouvez trier les réponses à l’aide d’un paramètre de requête `orderby`. Les ressources suivantes peuvent être triées dans l’API :
+Vous pouvez trier les réponses à l’aide d’une `orderby` paramètre de requête. Les ressources suivantes peuvent être triées dans l’API :
 
 * [Connexions](https://www.adobe.io/experience-platform-apis/references/flow-service/#tag/Connections)
 * [Connexions source](https://www.adobe.io/experience-platform-apis/references/flow-service/#tag/Source-connections)
@@ -22,7 +23,7 @@ Vous pouvez trier les réponses à l’aide d’un paramètre de requête `order
 * [Flux](https://www.adobe.io/experience-platform-apis/references/flow-service/#tag/Flows)
 * [Exécutions](https://www.adobe.io/experience-platform-apis/references/flow-service/#tag/Runs)
 
-Pour utiliser le paramètre , vous devez définir sa valeur sur la propriété spécifique par laquelle vous souhaitez trier (par exemple, `?orderby=name`). Vous pouvez ajouter en préfixe la valeur avec un signe plus (`+`) pour l’ordre croissant ou un signe moins (`-`) pour l’ordre décroissant. Si aucun préfixe d’ordre n’est fourni, la liste est triée par défaut dans l’ordre croissant.
+Pour utiliser le paramètre , vous devez définir sa valeur sur la propriété spécifique selon laquelle vous souhaitez effectuer un tri (par exemple, `?orderby=name`). Vous pouvez ajouter en préfixe la valeur à l’aide d’un signe plus (`+`) pour l’ordre croissant ou le signe moins (`-`) pour l’ordre décroissant. Si aucun préfixe d’ordre n’est fourni, la liste est triée par défaut dans l’ordre croissant.
 
 ```http
 GET /flows?orderby=name
@@ -37,15 +38,15 @@ GET /flows?property=state==enabled&orderby=createdAt
 
 ## Filtrage
 
-Vous pouvez filtrer les réponses en utilisant un paramètre `property` avec une expression clé-valeur. Par exemple, `?property=id==12345` renvoie uniquement les ressources dont la propriété `id` est exactement égale à `12345`.
+Vous pouvez filtrer les réponses à l’aide d’une `property` avec une expression clé-valeur. Par exemple : `?property=id==12345` renvoie uniquement les ressources dont la `id` est exactement égal à `12345`.
 
 Le filtrage peut être appliqué de manière générique sur n’importe quelle propriété d’une entité tant que le chemin d’accès valide à cette propriété est connu.
 
 >[!NOTE]
 >
->Si une propriété est imbriquée dans un élément de tableau, vous devez ajouter des crochets (`[]`) au tableau du chemin. Pour obtenir des exemples, reportez-vous à la section [filtrage sur les propriétés de tableau](#arrays) .
+>Si une propriété est imbriquée dans un élément de tableau, vous devez ajouter des crochets (`[]`) au tableau du chemin d’accès. Voir la section sur [filtrage sur les propriétés de tableau](#arrays) pour obtenir des exemples.
 
-**Renvoie toutes les connexions source dont le nom de la table source est  `lead`:**
+**Renvoie toutes les connexions source dont le nom de la table source est `lead`:**
 
 ```http
 GET /sourceConnections?property=params.tableName==lead
@@ -59,7 +60,7 @@ GET /flows?property=transformations[].params.segmentSelectors.selectors[].value.
 
 ### Combinaison de filtres
 
-Plusieurs `property` filtres peuvent être inclus dans une requête à condition qu’ils soient séparés par des caractères &quot;et&quot; (`&`). Une relation ET est supposée lors de la combinaison de filtres, ce qui signifie qu’une entité doit satisfaire tous les filtres pour qu’elle soit incluse dans la réponse.
+Multiple `property` Les filtres peuvent être inclus dans une requête à condition qu’ils soient séparés par des caractères &quot;et&quot; (`&`). Une relation ET est supposée lors de la combinaison de filtres, ce qui signifie qu’une entité doit satisfaire tous les filtres pour qu’elle soit incluse dans la réponse.
 
 **Renvoie tous les flux activés pour un identifiant de segment :**
 
@@ -83,7 +84,7 @@ GET /flows?property=sourceConnectionIds[]==9874984,6980696
 GET /flows?property=transformations[].params.segmentSelectors.selectors[].value.id==5722a16f-5e1f-4732-91b6-3b03943f759a
 ```
 
-**Renvoi des connexions source comportant une colonne avec une  `name` valeur spécifique :**
+**Renvoie les connexions source qui comportent une colonne avec une `name` value:**
 
 ```http
 GET /sourceConnections?property=params.columns[].name==firstName
@@ -97,7 +98,7 @@ GET /runs?property=metrics.recordSummary.targetSummaries[].entitySummaries[].id=
 
 ### `count`
 
-Toute requête de filtrage peut être ajoutée avec un paramètre de requête `count` avec une valeur `true` pour renvoyer le nombre de résultats. La réponse de l’API contient une propriété `count` dont la valeur représente le nombre total d’éléments filtrés. Les éléments filtrés réels ne sont pas renvoyés dans cet appel.
+Toute requête de filtrage peut être ajoutée avec `count` paramètre de requête avec la valeur de `true` pour renvoyer le nombre de résultats. La réponse de l’API contient une `count` dont la valeur représente le nombre total d’éléments filtrés. Les éléments filtrés réels ne sont pas renvoyés dans cet appel.
 
 **Renvoie le nombre de flux activés dans le système :**
 
@@ -196,4 +197,4 @@ Selon l’entité de service de flux que vous récupérez, différentes proprié
 
 ## Étapes suivantes
 
-Ce guide explique comment utiliser les paramètres de requête `orderby` et `property` pour trier et filtrer les réponses dans l’API Flow Service. Pour obtenir des guides détaillés sur l’utilisation de l’API pour les processus courants dans Platform, consultez les tutoriels sur l’API contenus dans la documentation [sources](../../sources/home.md) et [destinations](../../destinations/home.md) .
+Ce guide explique comment utiliser la variable `orderby` et `property` paramètres de requête pour trier et filtrer les réponses dans l’API Flow Service. Pour obtenir des guides détaillés sur l’utilisation de l’API pour les processus courants dans Platform, consultez les tutoriels sur l’API contenus dans la [sources](../../sources/home.md) et [destinations](../../destinations/home.md) documentation.

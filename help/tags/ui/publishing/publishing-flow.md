@@ -1,6 +1,6 @@
 ---
 title: Flux de publication
-description: Découvrez le processus de création des bibliothèques, de test et d’approbation des versions pour la production dans Adobe Experience Platform.
+description: Découvrez le processus de création des bibliothèques, de test et d’approbation des versions pour la production dans Adobe Experience Platform.
 exl-id: 4885f60b-6401-4ec7-aa1a-29c135087847
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
@@ -13,9 +13,9 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
-Le flux de publication des balises dans Adobe Experience Platform fait référence au processus de création de bibliothèques, de test des versions et dʼapprobation pour la production.
+Le flux de publication des balises dans Adobe Experience Platform fait référence au processus de création de bibliothèques, de test des versions et dʼapprobation pour la production.
 
 Les actions disponibles que vous pouvez réaliser sur une bibliothèque dépendent de l’état de la bibliothèque et du niveau d’autorisation que vous possédez. En outre, l’état d’une bibliothèque affecte également les ressources qu’elle contient (règles, éléments de données et extensions) en fonction de ce qui se trouve en amont dans le flux de publication.
 
@@ -122,4 +122,4 @@ La section se développe pour afficher les ressources individuelles héritées d
 
 ## Étapes suivantes
 
-Ce guide fournit une présentation détaillée du flux de publication pour les bibliothèques dans Adobe Experience Platform. Pour en savoir plus sur la façon de publier vos bibliothèques, consultez la section [Présentation de la publication](./overview.md).
+Ce guide fournit une présentation détaillée du flux de publication pour les bibliothèques dans Adobe Experience Platform. Pour en savoir plus sur la façon de publier vos bibliothèques, consultez la section [Présentation de la publication](./overview.md).

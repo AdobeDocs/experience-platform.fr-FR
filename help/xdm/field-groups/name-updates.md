@@ -8,7 +8,7 @@ exl-id: 2c775b86-7262-4f05-b421-c626867de0a4
 source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
 source-wordcount: '287'
-ht-degree: 2%
+ht-degree: 12%
 
 ---
 
@@ -23,18 +23,18 @@ Le tableau suivant décrit les groupes de champs existants qui ont été mis à 
 | --- | --- |
 | [!UICONTROL Mixin de confidentialité des événements d’expérience] | [!UICONTROL Détails de confidentialité] |
 | [!UICONTROL Détails de l’application ExperienceEvent] | [!UICONTROL Détails de l’application] |
-| [!UICONTROL Détails du canal ExperienceEvent] | [!UICONTROL Détails du canal] |
-| [!UICONTROL Détails du commerce ExperienceEvent] | [!UICONTROL Détails du commerce] |
+| [!UICONTROL Détails du canal ExperienceEvent] | [!UICONTROL Informations sur le canal] |
+| [!UICONTROL Détails du commerce ExperienceEvent] | [!UICONTROL Informations commerciales] |
 | [!UICONTROL Détails ExperienceEvent pour la publicité] | [!UICONTROL Détails de la publicité] |
-| [!UICONTROL Détails ExperienceEvent pour le marketing] | [!UICONTROL Détails du marketing de campagne] |
+| [!UICONTROL Détails ExperienceEvent pour le marketing] | [!UICONTROL Détails de la campagne marketing] |
 | [!UICONTROL Détails ExperienceEvent pour le média] | [!UICONTROL Détails de l’interaction multimédia] |
 | [!UICONTROL Détails ExperienceEvent pour la recherche] | [!UICONTROL Détails de la recherche] |
 | [!UICONTROL Détails du marketing direct ExperienceEvent] | [!UICONTROL Détails du marketing direct] |
-| [!UICONTROL ExperienceEvent EndUserIDs] | [!UICONTROL Détails de l’ID d’utilisateur final] |
+| [!UICONTROL ExperienceEvent EndUserIDs] | [!UICONTROL Informations sur l’identifiant de l’utilisateur final] |
 | [!UICONTROL Détails de l’environnement ExperienceEvent] | [!UICONTROL Détails de l’environnement] |
 | [!UICONTROL Détails de l’implémentation d’ExperienceEvent] | [!UICONTROL Détails de mise en œuvre] |
 | [!UICONTROL Détails du regroupement de profils ExperienceEvent] | [!UICONTROL Combinaison de profils] |
-| [!UICONTROL Détails de l’adhésion aux segments ExperienceEvent] | [!UICONTROL Détails de l’adhésion au segment] |
+| [!UICONTROL Détails de l’adhésion aux segments ExperienceEvent] | [!UICONTROL Détails de l’appartenance à un segment] |
 | [!UICONTROL Détails techniques d’ExperienceEvent] | [!UICONTROL Détails techniques] |
 | [!UICONTROL Détails web d’ExperienceEvent] | [!UICONTROL Détails web] |
 | [!UICONTROL Marketing direct des profils] | [!UICONTROL Détails du contact marketing direct] |
@@ -44,7 +44,7 @@ Le tableau suivant décrit les groupes de champs existants qui ont été mis à 
 | [!UICONTROL Détails des préférences de profil] | [!UICONTROL Détails des préférences] |
 | [!UICONTROL Confidentialité du profil] | [!UICONTROL Détails de confidentialité] |
 | [!UICONTROL Détails des notifications push de profil] | [!UICONTROL Détails du jeton de notification push] |
-| [!UICONTROL Segmentation des profils] | [!UICONTROL Détails de l’adhésion au segment] |
+| [!UICONTROL Segmentation des profils] | [!UICONTROL Détails de l’appartenance à un segment] |
 | [!UICONTROL Abonnements aux profils] | [!UICONTROL Détails de l’abonnement] |
 | [!UICONTROL Détails du travail du profil] | [!UICONTROL Détails du contact professionnel] |
 | [!UICONTROL Détails des notifications push] | [!UICONTROL Détails des notifications push] |

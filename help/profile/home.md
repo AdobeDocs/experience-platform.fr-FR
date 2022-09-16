@@ -5,7 +5,7 @@ topic-legacy: guide
 description: Real-time Customer Profile fusionne des données provenant de diverses sources et permet d’accéder à ces données sous la forme de profils clients individuels et d’événements de séries temporelles associés. Cette fonctionnalité permet aux spécialistes marketing d’offrir à leur audience des expériences coordonnées, cohérentes et pertinentes sur plusieurs canaux.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
 source-git-commit: d2182b48e21de059f12ad8923bb3b420ed87bcfc
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '2046'
 ht-degree: 100%
 

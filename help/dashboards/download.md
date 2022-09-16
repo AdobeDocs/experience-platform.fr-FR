@@ -1,8 +1,8 @@
 ---
 solution: Experience Platform
-title: Téléchargement de tableaux de bord Experience Platform au format PDF
+title: Téléchargement de tableaux de bord Experience Platform au format PDF
 type: Documentation
-description: Enregistrez des copies des visualisations de vos tableaux de bord à l’aide de la fonctionnalité de téléchargement au format PDF disponible dans l’interface utilisateur d’Experience Platform.
+description: Enregistrez des copies des visualisations de vos tableaux de bord à l’aide de la fonctionnalité de téléchargement au format PDF disponible dans l’interface utilisateur d’Experience Platform.
 exl-id: 838e98a0-ce2e-4dcd-8c8f-d28ef2cb8315
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
@@ -13,7 +13,7 @@ ht-degree: 100%
 
 # Téléchargement de tableaux de bord au format PDF
 
-Il est possible de télécharger les tableaux de bord d’Adobe Experience Platform au format PDF depuis l’interface utilisateur de Platform. Cela facilite ainsi le partage d’informations avec les membres de votre organisation.
+Il est possible de télécharger les tableaux de bord d’Adobe Experience Platform au format PDF depuis l’interface utilisateur de Platform. Cela facilite ainsi le partage d’informations avec les membres de votre organisation.
 
 Ce document résume la procédure de téléchargement de tableaux de bord à l’aide de l’interface utilisateur de Platform. Il décrit également comment enregistrer le tableau de bord au format PDF à l’aide du menu d’impression du navigateur par défaut.
 
@@ -35,7 +35,7 @@ Le menu d’impression vous permet de prévisualiser le PDF qui sera enregistré
 
 ![](images/download/download-chrome-print.png)
 
-Le fichier PDF inclut un en-tête généré automatiquement, lequel contient le logo d’Experience Platform, le nom du tableau de bord, votre nom ainsi que la date et l’heure de téléchargement du tableau de bord. Ces informations sont en lecture seule et ne peuvent pas être modifiées dans le PDF.
+Le fichier PDF inclut un en-tête généré automatiquement, lequel contient le logo d’Experience Platform, le nom du tableau de bord, votre nom ainsi que la date et l’heure de téléchargement du tableau de bord. Ces informations sont en lecture seule et ne peuvent pas être modifiées dans le PDF.
 
 ![](images/download/download-pdf.png)
 

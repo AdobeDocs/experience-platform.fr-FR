@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;accueil;rubriques populaires;période
+keywords: Experience Platform;accueil;rubriques populaires;période
 solution: Experience Platform
 title: Guide de l’API Observability Insights
 topic-legacy: developer guide
@@ -14,10 +14,10 @@ ht-degree: 30%
 
 # Guide de l’API [!DNL Observability Insights]
 
-L’API [!DNL Observability Insights] fournit un point de terminaison qui vous permet de récupérer et de surveiller par programmation les données de mesure pour diverses fonctionnalités de Adobe Experience Platform. Ce point de terminaison est décrit ci-dessous. Consultez le guide de point de terminaison pour plus de détails et reportez-vous au [guide de prise en main](./getting-started.md) pour obtenir des informations importantes sur les en-têtes requis, la lecture d’exemples d’appels API, etc.
+Le [!DNL Observability Insights] L’API fournit un point de terminaison qui vous permet de récupérer et de surveiller par programmation les données de mesure pour différentes fonctionnalités de Adobe Experience Platform. Ce point de terminaison est décrit ci-dessous. Consultez le guide du point de terminaison pour plus d’informations et reportez-vous à la section [guide de prise en main](./getting-started.md) pour obtenir des informations importantes sur les en-têtes requis, lire des exemples d’appels API, etc.
 
 Pour afficher tous les points d’entrée et opérations CRUD disponibles, consultez le document Swagger de l’[[!DNL Observability Insights] API](https://www.adobe.io/experience-platform-apis/references/observability-insights/).
 
 ## Mesures
 
-Les mesures d’observabilité fournissent des informations sur les statistiques d’utilisation, les tendances historiques et les indicateurs de performances de diverses fonctionnalités de Adobe Experience Platform. Pour savoir comment récupérer des mesures à l’aide de l’API, consultez le [guide de point de terminaison des mesures](./metrics.md).
+Les mesures d’observabilité fournissent des informations sur les statistiques d’utilisation, les tendances historiques et les indicateurs de performances de diverses fonctionnalités de Adobe Experience Platform. Pour savoir comment récupérer des mesures à l’aide de l’API, reportez-vous à la section [guide de point de fin metrics](./metrics.md).

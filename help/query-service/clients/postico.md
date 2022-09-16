@@ -12,23 +12,23 @@ ht-degree: 7%
 
 ---
 
-# Connecter [!DNL Postico] à Query Service (Mac)
+# Connexion [!DNL Postico] vers Query Service (Mac)
 
-Ce document décrit les étapes de connexion de [!DNL Postico] à Adobe Experience Platform [!DNL Query Service].
+Ce document décrit les étapes de connexion. [!DNL Postico] avec Adobe Experience Platform [!DNL Query Service].
 
 >[!NOTE]
 >
-> Ce guide suppose que vous avez déjà accès à [!DNL Postico] et que vous savez comment naviguer dans son interface. Vous trouverez plus d’informations sur [!DNL Postico] dans la [documentation  [!DNL Postico] officielle](https://eggerapps.at/postico/docs).
+> Ce guide suppose que vous avez déjà accès à [!DNL Postico] et connaissent comment naviguer dans son interface. Plus d’informations sur [!DNL Postico] se trouve dans la variable [officiel [!DNL Postico] documentation](https://eggerapps.at/postico/docs).
 > 
-> En outre, [!DNL Postico] est **uniquement** disponible sur les appareils macOS.
+> En outre, [!DNL Postico] is **only** disponibles sur les appareils macOS.
 
-Pour connecter [!DNL Postico] à Query Service, ouvrez [!DNL Postico] et sélectionnez **[!DNL New Favorite]**.
+Pour se connecter [!DNL Postico] à Query Service, ouvrez [!DNL Postico] et sélectionnez **[!DNL New Favorite]**.
 
 ![](../images/clients/postico/open-postico.png)
 
 Vous pouvez désormais saisir des valeurs pour vous connecter à Adobe Experience Platform.
 
-Pour plus d’informations sur la recherche du nom, de l’hôte, du port et des informations de connexion de votre base de données, consultez le [guide des informations d’identification](../ui/credentials.md). Pour trouver vos informations d’identification, connectez-vous à [!DNL Platform], puis sélectionnez **[!UICONTROL Requêtes]**, suivie de **[!UICONTROL Informations d’identification]**.
+Pour plus d’informations sur la recherche du nom de la base de données, de l’hôte, du port et des informations de connexion, consultez la section [guide des informations d’identification](../ui/credentials.md). Pour trouver vos informations d’identification, connectez-vous à [!DNL Platform], puis sélectionnez **[!UICONTROL Requêtes]**, suivie de **[!UICONTROL Informations d’identification]**.
 
 Après avoir inséré vos informations d’identification, sélectionnez **[!DNL Connect]** pour vous connecter à Query Service.
 

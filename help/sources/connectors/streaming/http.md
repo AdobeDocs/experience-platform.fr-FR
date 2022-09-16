@@ -7,13 +7,13 @@ exl-id: 41e079f3-75b2-4033-8138-73162c31461a
 source-git-commit: 1127e85852b56cc9db3d1d0d483c1780c961b0bc
 workflow-type: tm+mt
 source-wordcount: '165'
-ht-degree: 11%
+ht-degree: 27%
 
 ---
 
-# [!DNL HTTP API] connector
+# Connecteur [!DNL HTTP API]
 
-Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide de [!DNL Platform] services. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, des bases de données, etc.
+Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous permettant de structurer, de libeller et d’améliorer les données entrantes à l’aide des services [!DNL Platform]. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, des bases de données, etc.
 
 Vous pouvez utiliser la variable [!DNL HTTP API] connecteur source pour diffuser vos données vers Platform. Le [!DNL HTTP API] La source est prise en charge par [!DNL Data Prep] qui vous permet de mapper des données non conformes à XDM à un jeu de données compatible XDM.
 

@@ -1,7 +1,8 @@
 ---
 title: Groupe de champs de schéma Détails du membre HealthCare
 description: Ce document présente un aperçu du groupe de champs Détails du membre HealthCare.
-source-git-commit: a51079ff1686ecae3e5fe9f0170b28bc16bcef86
+exl-id: 43ba025e-2acf-4cb7-8487-e6c7c7240867
+source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
 workflow-type: tm+mt
 source-wordcount: '661'
 ht-degree: 6%

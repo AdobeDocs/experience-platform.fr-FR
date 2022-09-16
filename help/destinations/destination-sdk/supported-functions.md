@@ -1,7 +1,8 @@
 ---
 description: Experience Platform Destination SDK utilise des modèles de bulle, ce qui vous permet de transformer les données exportées d’Experience Platform au format requis par votre destination.
 title: Fonctions de transformation prises en charge dans Destination SDK
-source-git-commit: 840404741da06ba1593b227c7d6ba459b5f43110
+exl-id: 79bed9e4-5897-4c69-a4e9-a325a408302d
+source-git-commit: d18b662ba8a8415dd71ed89a806e770f3cfbe72a
 workflow-type: tm+mt
 source-wordcount: '550'
 ht-degree: 6%

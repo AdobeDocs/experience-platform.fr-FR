@@ -1,6 +1,6 @@
 ---
 title: Navigateurs pris en charge
-description: Liste de plusieurs navigateurs compatibles avec l’exécution d’une balise Adobe Experience Platform.
+description: Liste des navigateurs compatibles avec lʼexécution dʼune balise Adobe Experience Platform.
 exl-id: fc9ff6f5-7d54-4f13-8286-44791499d704
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
@@ -13,9 +13,9 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
-L’exécution de balise dans Adobe Experience Platform (diffusée sur les sites web des clients) est compatible avec plusieurs navigateurs :
+Lʼexécution des balises dans Adobe Experience Platform (diffusée sur les sites web des clients) est compatible avec différents navigateurs :
 
 - Chrome (dernière version)
 - Safari (dernière version)

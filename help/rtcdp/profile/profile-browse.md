@@ -37,13 +37,13 @@ Le détail du profil inclut l’accès à [!UICONTROL Comptes], [!UICONTROL Oppo
 
 Sélectionner **[!UICONTROL Comptes]** pour afficher la liste des comptes liés au profil. Cette liste comprend des informations de base du profil du compte, telles que le nom, le site web et le secteur industriel du compte, ainsi qu’un lien vers le profil du compte.
 
-Pour plus d’informations sur l’affichage et l’exploration des profils de compte, commencez par lire la [présentation des profils de compte](../accounts/account-profile-overview.md).
+Pour plus d’informations sur l’affichage et l’exploration des profils de compte, commencez par lire la section [présentation des profils de compte](../accounts/account-profile-overview.md).
 
 ![](images/b2b-profile-accounts.png)
 
 ### Onglet Opportunités
 
-Le **[!UICONTROL Opportunités]** fournit des détails sur les opportunités ouvertes et fermées liées au compte. Ces opportunités peuvent être ingérées dans Experience Platform à partir de sources multiples. Toutefois, l’édition B2B de Real-time CDP permet aux spécialistes marketing de consulter facilement toutes ces opportunités au même endroit.
+Le **[!UICONTROL Opportunités]** fournit des détails sur les opportunités ouvertes et fermées liées au compte. Ces opportunités peuvent être ingérées dans Experience Platform à partir de sources multiples. Toutefois, l’édition B2B de Real-time CDP permet aux spécialistes marketing de consulter facilement toutes ces opportunités au même endroit.
 
 Chaque opportunité inclut des informations telles que son nom, son montant, son avancée et si elle est ouverte, clôturée, gagnée ou perdue.
 

@@ -98,7 +98,7 @@ Lorsque la bibliothèque autonome est utilisée, la valeur est simplement la ver
 | ------------------------------------------------ | ------------ |
 | `events[].xdm.implementationDetails.environment` | `browser` |
 
-Environnement dans lequel les données ont été collectées. Cette valeur est toujours définie sur `browser`.
+Environnement dans lequel les données ont été collectées. Cette variable est toujours définie sur `browser`.
 
 ## Contexte de l’emplacement (`placeContext`)
 

@@ -100,7 +100,7 @@ Une fois définie dans la recette, l’étape suivante consiste à l’activer d
 evaluation.class=com.adobe.platform.ml.Evaluator
 ```
 
-Dans la balise [!DNL Data Science Workspace], l’utilisateur peut voir les informations dans l’onglet &quot;Mesures d’évaluation&quot; de la page de l’expérience.
+Dans le [!DNL Data Science Workspace], l’utilisateur peut consulter les insights dans l’onglet &quot;Mesures d’évaluation&quot; de la page de l’expérience.
 
 ### [!DNL Python/Tensorflow] {#pythontensorflow}
 
@@ -110,9 +110,9 @@ Pour l’instant, il n’existe aucune mesure d’évaluation par défaut pour [
 
 Pour les mesures d’évaluation personnalisées, deux méthodes principales doivent être mises en œuvre pour l’évaluateur : `split()` et `evaluate()`.
 
-Pour [!DNL Python], ces méthodes sont définies dans [evaluator.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py) pour la classe `Evaluator`. Suivez le lien [evaluator.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py) pour obtenir un exemple de l’`Evaluator`.
+Pour [!DNL Python], ces méthodes seraient définies dans [evaluator.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py) pour le `Evaluator` classe . Suivez le lien [evaluator.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py) pour obtenir un exemple de l’`Evaluator`.
 
-Pour créer des mesures d’évaluation dans [!DNL Python], l’utilisateur doit mettre en oeuvre les méthodes `evaluate()` et `split()`.
+Création de mesures d’évaluation dans [!DNL Python] nécessite que l’utilisateur mette en oeuvre la variable `evaluate()` et `split()` méthodes.
 
 La méthode `evaluate()` renvoie l’objet de mesure qui contient un tableau d’objets de mesure avec les propriétés `name`, `value` et `valueType`.
 
@@ -122,7 +122,7 @@ La méthode `split()` doit renvoyer un cadre de données de formation et de test
 
 #### Mesures d’évaluation personnalisées pour Tensorflow
 
-Pour [!DNL Tensorflow], comme [!DNL Python], les méthodes `evaluate()` et `split()` de la classe `Evaluator` devront être implémentées. Les mesures doivent être renvoyées pour `evaluate()`, tandis que `split()` renvoie les jeux de données de formation et de test.
+Pour [!DNL Tensorflow], similaire à [!DNL Python], les méthodes `evaluate()` et `split()` dans le `Evaluator` doit être mise en oeuvre. Les mesures doivent être renvoyées pour `evaluate()`, tandis que `split()` renvoie les jeux de données de formation et de test.
 
 ```PYTHON
 from ml.runtime.python.Interfaces.AbstractEvaluator import AbstractEvaluator
@@ -157,7 +157,7 @@ Les données sont d’abord chargées dans un jeu de données à partir d’une 
 
 ## Utilisation de mesures préconfigurées et de graphiques de visualisation
 
-[!DNL Sensei Model Insights Framework] prend en charge un modèle par défaut pour chaque type d’algorithme d’apprentissage automatique. Le tableau ci-dessous présente les classes d’algorithme d’apprentissage automatique de haut niveau courantes et les mesures d’évaluation et visualisations correspondantes.
+Le [!DNL Sensei Model Insights Framework] prend en charge un modèle par défaut pour chaque type d’algorithme d’apprentissage automatique. Le tableau ci-dessous présente les classes d’algorithme d’apprentissage automatique de haut niveau courantes et les mesures d’évaluation et visualisations correspondantes.
 
 | Type d’algorithme de ML | Mesures d’évaluation | Visualisations |
 | --- | --- | --- |

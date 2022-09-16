@@ -6,8 +6,8 @@ description: Explorez de nombreux tableaux de bord dans Adobe Experience Platf
 exl-id: d56cb139-392d-4bbc-97ec-202a0c8a2863
 source-git-commit: 25953a5a1f5b32de7d150dbef700ad06ce6014df
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '306'
+ht-degree: 99%
 
 ---
 

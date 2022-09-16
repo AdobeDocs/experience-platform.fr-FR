@@ -5,7 +5,7 @@ exl-id: 81b502dd-d1b2-409e-972c-652c0a01526c
 source-git-commit: 1a104d26b920082ee73178dd0ad7234ad43dec1a
 workflow-type: tm+mt
 source-wordcount: '238'
-ht-degree: 7%
+ht-degree: 12%
 
 ---
 
@@ -25,4 +25,4 @@ Les documents suivants fournissent des informations supplémentaires sur l’uti
 
 - Pour plus d’informations sur l’une des destinations disponibles pour l’édition B2B de Real-time Customer Data Platform, accédez au [destinations](../../destinations/catalog/overview.md).
 - Pour plus d’informations sur les identités qui peuvent être exportées vers Marketo Engage, consultez la [Documentation sur la destination du Marketo Engage](../../destinations/catalog/adobe/marketo-engage.md).
-- Pour plus d’informations sur la connexion à la destination du Marketo Engage dans l’interface utilisateur de l’Experience Platform et l’exportation de données, consultez la rubrique [&quot;Envoyer un segment Adobe Experience Platform vers une liste statique Marketo&quot;](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-platform-segment-to-a-marketo-static-list.html?lang=en).
+- Pour plus d’informations sur la connexion à la destination du Marketo Engage dans l’interface utilisateur de l’Experience Platform et l’exportation de données, consultez la rubrique [&quot;Envoyer un segment Adobe Experience Platform vers une liste statique Marketo&quot;](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-platform-segment-to-a-marketo-static-list.html?lang=fr).

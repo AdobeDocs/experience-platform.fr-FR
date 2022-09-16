@@ -15,11 +15,11 @@ ht-degree: 0%
 
 # Accès aux données à l’aide de Spark dans Data Science Workspace
 
-Le document suivant contient des exemples d’accès aux données à l’aide de Spark pour une utilisation dans Data Science Workspace. Pour plus d’informations sur l’accès aux données à l’aide des notebooks JupyterLab, consultez la documentation [Accès aux données des notebooks JupyterLab](../jupyterlab/access-notebook-data.md) .
+Le document suivant contient des exemples d’accès aux données à l’aide de Spark pour une utilisation dans Data Science Workspace. Pour plus d’informations sur l’accès aux données à l’aide de notebooks JupyterLab, consultez la page [Accès aux données des notebooks JupyterLab](../jupyterlab/access-notebook-data.md) documentation.
 
 ## Prise en main
 
-L’utilisation de [!DNL Spark] nécessite des optimisations de performances qui doivent être ajoutées à `SparkSession`. En outre, vous pouvez également configurer `configProperties` pour que les jeux de données puissent être lus et écrits ultérieurement.
+Utilisation [!DNL Spark] nécessite des optimisations de performances qui doivent être ajoutées à la variable `SparkSession`. En outre, vous pouvez également configurer `configProperties` pour plus tard lire et écrire dans des jeux de données.
 
 ```scala
 import com.adobe.platform.ml.config.ConfigProperties
@@ -50,9 +50,9 @@ Class Helper {
 
 Lorsque vous utilisez Spark, vous avez accès à deux modes de lecture : interactive et par lots.
 
-Le mode interactif crée une connexion JDBC (Java Database Connectivity) à [!DNL Query Service] et obtient des résultats par le biais d’un JDBC normal `ResultSet` qui est automatiquement traduit en `DataFrame`. Ce mode fonctionne de la même manière que la méthode [!DNL Spark] intégrée `spark.read.jdbc()`. Ce mode est destiné uniquement aux petits jeux de données. Si votre jeu de données dépasse 5 millions de lignes, il est conseillé de passer en mode batch.
+Le mode interactif crée une connexion Java Database Connectivity (JDBC) à [!DNL Query Service] et obtient des résultats par le biais d’un JDBC standard `ResultSet` qui est automatiquement traduit en un `DataFrame`. Ce mode fonctionne de la même manière que le mode intégré [!DNL Spark] method `spark.read.jdbc()`. Ce mode est destiné uniquement aux petits jeux de données. Si votre jeu de données dépasse 5 millions de lignes, il est conseillé de passer en mode batch.
 
-Le mode batch utilise la commande COPY de [!DNL Query Service] pour générer les ensembles de résultats Parquet dans un emplacement partagé. Ces fichiers Parquet peuvent ensuite être traités plus en détail.
+Le mode par lot utilise [!DNL Query Service]Commande COPY de pour générer les jeux de résultats Parquet dans un emplacement partagé. Ces fichiers Parquet peuvent ensuite être traités plus en détail.
 
 Vous trouverez ci-dessous un exemple de lecture d’un jeu de données en mode interactif :
 
@@ -104,7 +104,7 @@ df = df.select("column-a", "column-b").show()
 
 La clause DISTINCT vous permet de récupérer toutes les valeurs distinctes au niveau d’une ligne/colonne, supprimant toutes les valeurs en double de la réponse.
 
-Vous trouverez ci-dessous un exemple d’utilisation de la fonction `distinct()` :
+Exemple d’utilisation de la méthode `distinct()` est visible ci-dessous :
 
 ```scala
 df = df.select("column-a", "column-b").distinct().show()
@@ -112,7 +112,7 @@ df = df.select("column-a", "column-b").distinct().show()
 
 ### Clause WHERE
 
-Le SDK [!DNL Spark] permet deux méthodes de filtrage : Utilisation d’une expression SQL ou filtrage par conditions.
+Le [!DNL Spark] Le SDK permet deux méthodes de filtrage : Utilisation d’une expression SQL ou filtrage par conditions.
 
 Vous trouverez ci-dessous un exemple d’utilisation de ces fonctions de filtrage :
 
@@ -130,9 +130,9 @@ df.where("age" > 15 || "name" = "Steve")
 
 ### Clause ORDER BY
 
-La clause ORDER BY permet de trier les résultats reçus par une colonne spécifiée dans un ordre spécifique (croissant ou décroissant). Dans le SDK [!DNL Spark], cette opération s’effectue à l’aide de la fonction `sort()` .
+La clause ORDER BY permet de trier les résultats reçus par une colonne spécifiée dans un ordre spécifique (croissant ou décroissant). Dans le [!DNL Spark] Pour ce faire, utilisez le SDK `sort()` fonction .
 
-Vous trouverez ci-dessous un exemple d’utilisation de la fonction `sort()` :
+Exemple d’utilisation de la méthode `sort()` est visible ci-dessous :
 
 ```scala
 df = df.sort($"column1", $"column2".desc)
@@ -142,7 +142,7 @@ df = df.sort($"column1", $"column2".desc)
 
 La clause LIMIT vous permet de limiter le nombre d’enregistrements reçus du jeu de données.
 
-Vous trouverez ci-dessous un exemple d’utilisation de la fonction `limit()` :
+Exemple d’utilisation de la méthode `limit()` est visible ci-dessous :
 
 ```scala
 df = df.limit(100)
@@ -150,7 +150,7 @@ df = df.limit(100)
 
 ## Écriture dans un jeu de données
 
-À l’aide de votre mappage `configProperties`, vous pouvez écrire dans un jeu de données en Experience Platform à l’aide de `QSOption`.
+En utilisant `configProperties` mappage, vous pouvez écrire sur un jeu de données dans Experience Platform à l’aide de `QSOption`.
 
 ```scala
 val userToken: String = sparkSession.sparkContext.getConf.get("ML_FRAMEWORK_IMS_TOKEN", "").toString
@@ -170,4 +170,4 @@ val sandboxName: String = sparkSession.sparkContext.getConf.get("sandboxName", "
 
 ## Étapes suivantes
 
-Adobe Experience Platform Data Science Workspace fournit un exemple de recette Scala (Spark) qui utilise les exemples de code ci-dessus pour lire et écrire des données. Si vous souhaitez en savoir plus sur l’utilisation de Spark pour accéder à vos données, consultez le [référentiel Scala GitHub de Data Science Workspace](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/scala).
+Adobe Experience Platform Data Science Workspace fournit un exemple de recette Scala (Spark) qui utilise les exemples de code ci-dessus pour lire et écrire des données. Si vous souhaitez en savoir plus sur l’utilisation de Spark pour accéder à vos données, veuillez consulter la section [Référentiel GitHub de Data Science Workspace](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/scala).

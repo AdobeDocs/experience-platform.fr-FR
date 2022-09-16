@@ -8,34 +8,34 @@ exl-id: fb02b6b4-255b-442f-895c-600022231a1c
 source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
 source-wordcount: '287'
-ht-degree: 11%
+ht-degree: 16%
 
 ---
 
-#  Type de données d’identification
+# [!UICONTROL Identité] type de données
 
- L’identité est un type de données XDM standard utilisé pour distinguer clairement les personnes qui interagissent avec des expériences numériques. L’identité est établie par un fournisseur d’identité, qui est lui-même référencé dans un attribut `namespace`. Dans chaque `namespace`, l’identité est unique.
+[!UICONTROL Identité] est un type de données XDM standard utilisé pour distinguer clairement les personnes qui interagissent avec des expériences numériques. L’identité est établie par un fournisseur d’identité, qui est lui-même référencé dans une variable `namespace` attribut. Dans chaque `namespace`, l’identité est unique.
 
 <img src="../images/data-types/identity.png" width="550" /><br />
 
 | Propriété | Type de données | Description |
 | --- | --- | --- |
-| `namespace` | Objet | Objet contenant un seul champ de chaîne (`code`), qui indique l’espace de noms associé à l’attribut `id` fourni. |
-| `authenticatedState` | Chaîne | État authentifié de cette identité au moment de l’événement d’expérience observé. Voir l’ [annexe](#authenticatedState) pour connaître les valeurs et les définitions acceptées. |
+| `namespace` | Objet | Objet contenant un seul champ de chaîne (`code`), qui indique l’espace de noms associé au fourni `id` attribut. |
+| `authenticatedState` | Chaîne | État authentifié de cette identité au moment de l’événement d’expérience observé. Voir [annexe](#authenticatedState) pour les valeurs et définitions acceptées. |
 | `id` | Chaîne | Identité du consommateur dans l’espace de noms associé. |
 | `primary` | Booléen | Indique s’il s’agit de l’identité Principale de l’individu. Chaque individu ne peut avoir qu&#39;une seule identité Principale. |
 | `xid` | Chaîne | Lorsqu’elle est présente, cette valeur représente un identifiant d’espace de noms croisé unique pour tous les identifiants d’espace de noms inclus dans tous les espaces de noms. |
 
 {style=&quot;table-layout:auto&quot;}
 
-Pour plus d’informations sur le type de données, reportez-vous au référentiel XDM public :
+Pour obtenir plus d’informations sur ce type de données, reportez-vous au référentiel XDM public:
 
 * [Exemple rempli](https://github.com/adobe/xdm/blob/master/components/datatypes/identity.example.1.json)
 * [Schéma complet](https://github.com/adobe/xdm/blob/master/components/datatypes/identity.schema.json)
 
 ## Annexe
 
-La section suivante contient des informations supplémentaires sur le type de données [!UICONTROL Identité].
+La section suivante contient des informations supplémentaires sur la variable [!UICONTROL Identité] type de données.
 
 ## Valeurs acceptées pour authenticatedState {#authenticatedState}
 

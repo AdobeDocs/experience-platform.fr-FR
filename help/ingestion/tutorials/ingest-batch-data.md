@@ -9,11 +9,11 @@ exl-id: a4a7358d-b117-4d81-8cb0-3dbbfeccdcbd
 source-git-commit: e7fc8a168a48cc6fadda62efda9ee9eb3025ab51
 workflow-type: tm+mt
 source-wordcount: '1322'
-ht-degree: 55%
+ht-degree: 56%
 
 ---
 
-# Ingestion de données dans Adobe Experience Platform
+# Ingestion de données dans Adobe Experience Platform
 
 Adobe Experience Platform vous permet d’importer facilement des données dans [!DNL Platform] en tant que fichiers de lot. Parmi les exemples de données à ingérer, citons les données de profil d’un fichier plat dans un système CRM (par exemple un fichier Parquet) ou les données conformes à un [!DNL Experience Data Model] Schéma (XDM) dans le registre des schémas.
 
@@ -151,6 +151,6 @@ Pour en savoir plus sur l’ingestion par lots, consultez la section [Présentat
 
 >[!WARNING]
 >
->Lʼinterface utilisateur de [!DNL Platform] affichée dans la vidéo suivante est obsolète. Reportez-vous à la documentation ci-dessus pour connaître les dernières captures d’écran et fonctionnalités de l’interface utilisateur.
+>Lʼinterface utilisateur de [!DNL Platform] affichée dans la vidéo suivante est obsolète. Consultez la documentation pour découvrir les dernières captures dʼécran et fonctionnalités de lʼinterface utilisateur.
 
 >[!VIDEO](https://video.tv.adobe.com/v/27269?quality=12&learn=on)

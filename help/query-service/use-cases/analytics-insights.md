@@ -1,7 +1,8 @@
 ---
-title: 'Analytics Insights for Web and Mobile Interactions '
+title: Analytics Insights for Web and Mobile Interactions
 description: Ce document explique comment utiliser Query Service pour créer des informations exploitables à partir de données Adobe Analytics ingérées.
-source-git-commit: cdceba9caf035831f4c376edf34356f666b79aa8
+exl-id: f64e61ef-0157-4f0a-88f8-bbe4f9aa83f0
+source-git-commit: d573c01a0aa9989f581796a0be4aec6904ffc569
 workflow-type: tm+mt
 source-wordcount: '223'
 ht-degree: 1%

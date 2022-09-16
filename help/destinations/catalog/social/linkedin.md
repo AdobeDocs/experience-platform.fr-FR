@@ -18,7 +18,7 @@ Activez les profils pour votre [!DNL LinkedIn] campagnes pour le ciblage, la per
 
 ![Destination linkedIn dans l’interface utilisateur de Adobe Experience Platform](../../assets/catalog/social/linkedin/catalog.png)
 
-## Cas dʼutilisation
+## Cas d&#39;utilisation
 
 Pour vous aider à mieux comprendre comment et à quel moment utiliser la variable [!DNL LinkedIn Matched Audiences] destination : voici un cas d’utilisation que les clients Adobe Experience Platform peuvent résoudre à l’aide de cette fonctionnalité.
 

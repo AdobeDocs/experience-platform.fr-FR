@@ -53,7 +53,7 @@ Experience Platform prend en charge les trois types de subventions OAuth 2 dans 
 | Subvention OAuth 2 | Entrées | Sorties |
 |---------|----------|---------|
 | Code d’autorisation | <ul><li><b>clientId</b></li><li><b>clientSecret</b></li><li>portée</li><li><b>authorizationUrl</b></li><li><b>accessTokenUrl</b></li><li>refreshTokenUrl</li></ul> | <ul><li><b>accessToken</b></li><li>expiresIn</li><li>refreshToken</li><li>tokenType</li></ul> |
-| Mot de passe | <ul><li><b>clientId</b></li><li><b>clientSecret</b></li><li>portée</li><li><b>accessTokenUrl</b></li><li><b>username</b></li><li><b>password</b></li></ul> | <ul><li><b>accessToken</b></li><li>expiresIn</li><li>refreshToken</li><li>tokenType</li></ul> |
+| Mot de passe | <ul><li><b>clientId</b></li><li><b>clientSecret</b></li><li>portée</li><li><b>accessTokenUrl</b></li><li><b>username</b></li><li><b>mot de passe</b></li></ul> | <ul><li><b>accessToken</b></li><li>expiresIn</li><li>refreshToken</li><li>tokenType</li></ul> |
 | Informations d’identification client | <ul><li><b>clientId</b></li><li><b>clientSecret</b></li><li>portée</li><li><b>accessTokenUrl</b></li></ul> | <ul><li><b>accessToken</b></li><li>expiresIn</li><li>refreshToken</li><li>tokenType</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
@@ -118,7 +118,7 @@ Adobe utilise les entrées standard ci-dessous pour simplifier la configuration 
 
 | Subvention OAuth 2 | Entrées | Sorties |
 |---------|----------|---------|
-| Mot de passe | <ul><li><b>clientId</b></li><li><b>clientSecret</b></li><li>portée</li><li><b>accessTokenUrl</b></li><li><b>username</b></li><li><b>password</b></li></ul> | <ul><li><b>accessToken</b></li><li>expiresIn</li><li>refreshToken</li><li>tokenType</li></ul> |
+| Mot de passe | <ul><li><b>clientId</b></li><li><b>clientSecret</b></li><li>portée</li><li><b>accessTokenUrl</b></li><li><b>username</b></li><li><b>mot de passe</b></li></ul> | <ul><li><b>accessToken</b></li><li>expiresIn</li><li>refreshToken</li><li>tokenType</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
 

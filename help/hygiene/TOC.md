@@ -5,7 +5,7 @@ breadcrumb-title: Guide de nettoyage de données
 user-guide-description: Gérez les demandes de données des clients afin de respecter les réglementations légales en matière de confidentialité, telles que le RGPD et le CCPA.
 feature: Data Hygiene
 source-git-commit: 49ba5263c6dc8eccac2ffe339476cf316c68e486
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '48'
 ht-degree: 100%
 

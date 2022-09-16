@@ -8,13 +8,13 @@ exl-id: 209654f7-0bde-439a-989c-ce2e41599105
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '271'
-ht-degree: 19%
+ht-degree: 24%
 
 ---
 
-# [!UICONTROL Type de données ] du canal d’expérience
+# [!UICONTROL Canal d’expérience] type de données
 
-[!UICONTROL Experience ] channel est un type de données XDM (Experience Data Model) standard qui décrit un canal d’expérience. Un canal d’expérience représente une méthode ou un chemin d’accès pour la manière dont les expériences numériques sont utilisées.
+[!UICONTROL Canal d’expérience] est un type de données XDM (Experience Data Model) standard qui décrit un canal d’expérience. Un canal d’expérience représente une méthode ou un chemin d’accès pour la manière dont les expériences numériques sont utilisées.
 
 Il existe plusieurs canaux d’expérience, chacun avec des contraintes différentes sur la manière dont le contenu est diffusé, sur la manière dont l’interaction client peut être observée et sur la manière dont les données sont collectées. Dans un canal, les expériences peuvent être diffusées à des emplacements spécifiques. Les emplacements et les types d’emplacements existant dans un canal diffèrent d’un canal à l’autre.
 
@@ -34,7 +34,7 @@ Il existe plusieurs canaux d’expérience, chacun avec des contraintes différe
 
 {style=&quot;table-layout:auto&quot;}
 
-Pour plus d’informations sur le type de données, reportez-vous au référentiel XDM public :
+Pour obtenir plus d’informations sur ce type de données, reportez-vous au référentiel XDM public:
 
 * [Exemple rempli](https://github.com/adobe/xdm/blob/master/components/datatypes/channels/channel.example.1.json)
 * [Schéma complet](https://github.com/adobe/xdm/blob/master/components/datatypes/channels/channel.schema.json)

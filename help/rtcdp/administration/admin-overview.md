@@ -1,7 +1,7 @@
 ---
 keywords: Présentation de l’administration rtcdp;présentation de l’administration
 title: Présentation de l’administration Real-time Customer Data Platform
-description: 'Ce document présente les fonctionnalités d’administration de la plateforme de données client en temps réel, optimisée par Adobe Experience Platform. '
+description: Ce document présente les fonctionnalités d’administration de la plateforme de données client en temps réel, optimisée par Adobe Experience Platform.
 exl-id: c5bdeac6-345a-4ef1-bc5a-a993f565b9d6
 source-git-commit: ad0d38cbd249642d582a807c5679065827f57717
 workflow-type: tm+mt

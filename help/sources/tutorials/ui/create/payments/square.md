@@ -2,7 +2,8 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;Carré;carré
 title: Création d’une connexion source carrée dans l’interface utilisateur
 description: Découvrez comment créer une connexion source au carré à l’aide de l’interface utilisateur de Adobe Experience Platform.
-source-git-commit: e905b11040c8de33aa757bd5743605bb36a8009b
+exl-id: 7cdfeb36-c989-4875-bb94-e6594ddf30da
+source-git-commit: c762e3925245f517cdcecb17a80378141f80fa86
 workflow-type: tm+mt
 source-wordcount: '455'
 ht-degree: 51%

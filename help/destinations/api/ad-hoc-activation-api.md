@@ -33,7 +33,7 @@ Le diagramme ci-dessous illustre le workflow de bout en bout pour l’activation
 >
 >L’activation des audiences ad hoc n’est prise en charge que par [destinations basées sur des fichiers de lots](../destination-types.md#file-based).
 
-## Cas dʼutilisation {#use-cases}
+## Cas d&#39;utilisation {#use-cases}
 
 ### Ventes ou promotions de Flash
 

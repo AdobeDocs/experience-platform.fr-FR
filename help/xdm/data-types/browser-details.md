@@ -8,13 +8,13 @@ exl-id: c67ff8bc-0614-4422-9bb7-689b98d7086d
 source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
 source-wordcount: '266'
-ht-degree: 20%
+ht-degree: 25%
 
 ---
 
-# [!UICONTROL Type de données ] Détails du navigateur
+# [!UICONTROL Détails du navigateur] type de données
 
-[!UICONTROL Les ] détails du navigateur correspondent à un type de données XDM standard qui décrit les détails relatifs à un navigateur ou à une application.
+[!UICONTROL Détails du navigateur] est un type de données XDM standard qui décrit les détails relatifs à un navigateur ou à une application.
 
 <img src="../images/data-types/browser-details.png" width="450" /><br />
 
@@ -32,12 +32,12 @@ ht-degree: 20%
 | `userAgent` | Chaîne | Chaîne de l’agent utilisateur HTTP issue de la demande du client. |
 | `vendor` | Chaîne | Fournisseur de l’application ou du navigateur. |
 | `version` | Chaîne | Version de l’application ou du navigateur. |
-| `viewportHeight` | Entier | Taille verticale en pixels de la fenêtre dans laquelle l’événement a été affiché. Pour un événement d’affichage Web, il s’agit de la hauteur de la fenêtre d’affichage du navigateur. |
-| `viewportWidth` | Entier | Taille horizontale en pixels de la fenêtre dans laquelle l’événement a été affiché. Pour un événement d’affichage Web, il s’agit de la largeur de la fenêtre d’affichage du navigateur. |
+| `viewportHeight` | Nombre entier | Taille verticale en pixels de la fenêtre dans laquelle l’événement a été affiché. Pour un événement d’affichage Web, il s’agit de la hauteur de la fenêtre d’affichage du navigateur. |
+| `viewportWidth` | Nombre entier | Taille horizontale en pixels de la fenêtre dans laquelle l’événement a été affiché. Pour un événement d’affichage Web, il s’agit de la largeur de la fenêtre d’affichage du navigateur. |
 
 {style=&quot;table-layout:auto&quot;}
 
-Pour plus d’informations sur le type de données, reportez-vous au référentiel XDM public :
+Pour obtenir plus d’informations sur ce type de données, reportez-vous au référentiel XDM public:
 
 * [Exemple rempli](https://github.com/adobe/xdm/blob/master/components/datatypes/browserdetails.example.1.json)
 * [Schéma complet](https://github.com/adobe/xdm/blob/master/components/datatypes/browserdetails.schema.json)

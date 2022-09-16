@@ -20,7 +20,7 @@ Cet article présente les exemples de transformations qu’un développeur ETL (
 
 ### Exemples de fichiers
 
-Des exemples de fichiers CSV et JSON sont disponibles à partir du référentiel public de référence ETL [!DNL GitHub] géré par Adobe :
+Des exemples de fichiers CSV et JSON sont disponibles à partir de la référence ETL publique. [!DNL GitHub] référentiel géré par Adobe :
 
 - [CRM_profiles.csv](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.csv)
 - [CRM_profiles.json](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.json)
@@ -177,7 +177,7 @@ La hiérarchie d’un cadre de données (tel qu’un fichier Parquet) doit corre
 
 ### Exemple de cadre de données
 
-La structure de l’exemple de cadre de données suivant a été mappée à un schéma qui implémente la classe [!DNL XDM Individual Profile] et contient les champs les plus courants associés aux schémas de ce type.
+La structure de l’exemple de cadre de données suivant a été mappée à un schéma qui implémente l’ [!DNL XDM Individual Profile] et contient les champs les plus courants associés aux schémas de ce type.
 
 ```python
 [
@@ -250,7 +250,7 @@ La structure de l’exemple de cadre de données suivant a été mappée à un s
 ]
 ```
 
-Lors de la création d’un cadre de données pour une utilisation dans Adobe Experience Platform, il est important de s’assurer que sa structure hiérarchique correspond exactement à celle d’un schéma XDM existant afin que les champs soient correctement mappés.
+Lors de la création d’un cadre de données pour une utilisation dans Adobe Experience Platform, il est important de s’assurer que sa structure hiérarchique correspond exactement à celle d’un schéma XDM existant afin que les champs soient correctement mappés.
 
 ## Identités vers le mappage d’identités
 

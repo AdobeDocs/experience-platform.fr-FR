@@ -9,7 +9,7 @@ exl-id: b327bbea-039d-4c04-afd3-f1d6a5f902a6
 source-git-commit: 86d8313d7acea41e7b3bcea6554e91ea2190ae69
 workflow-type: tm+mt
 source-wordcount: '2083'
-ht-degree: 3%
+ht-degree: 17%
 
 ---
 
@@ -21,10 +21,10 @@ Un flux de données est une tâche planifiée qui récupère et ingère des donn
 
 Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform :
 
-* [[!DNL Experience Data Model (XDM)] Système](../../../../../xdm/home.md): Le cadre normalisé selon lequel [!DNL Experience Platform] organise les données d’expérience client.
+* [[!DNL Experience Data Model (XDM)] Système](../../../../../xdm/home.md) : le cadre normalisé en fonction duquel [!DNL Experience Platform] organise les données d’expérience client.
    * [Principes de base de la composition des schémas](../../../../../xdm/schema/composition.md) : découvrez les blocs de création de base des schémas XDM, y compris les principes clés et les bonnes pratiques en matière de composition de schémas.
-   * [Tutoriel de l’éditeur de schémas](../../../../../xdm/tutorials/create-schema-ui.md): Découvrez comment créer des schémas personnalisés à l’aide de l’interface utilisateur de l’éditeur de schémas.
-* [[!DNL Real-time Customer Profile]](../../../../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
+   * [Tutoriel sur l’éditeur de schémas](../../../../../xdm/tutorials/create-schema-ui.md) : découvrez comment créer des schémas personnalisés à l’aide de l’interface utilisateur de l’éditeur de schémas.
+* [[!DNL Real-time Customer Profile]](../../../../../profile/home.md) : fournit un profil de consommateur unifié en temps réel, basé sur des données agrégées provenant de plusieurs sources.
 
 En outre, ce tutoriel nécessite que vous disposiez d’un compte de stockage dans le cloud établi. Vous trouverez une liste des tutoriels relatifs à la création de différents comptes de stockage dans le cloud dans l’interface utilisateur de la section [Présentation des connecteurs source](../../../../home.md).
 
@@ -37,7 +37,7 @@ En outre, ce tutoriel nécessite que vous disposiez d’un compte de stockage da
 * [!DNL Apache Parquet]: Les fichiers de données au format parquet doivent être compatibles avec XDM.
 * Fichiers compressés : Les fichiers JSON et délimités peuvent être compressés comme suit : `bzip2`, `gzip`, `deflate`, `zipDeflate`, `tarGzip`, et `tar`.
 
-## Sélectionner des données
+## Sélectionner les données
 
 Après avoir créé votre compte de stockage dans le cloud, la variable **[!UICONTROL Sélectionner des données]** s’affiche, fournissant une interface vous permettant d’explorer la hiérarchie des fichiers de stockage dans le cloud.
 
@@ -52,7 +52,7 @@ Une fois que vous avez sélectionné un fichier ou un dossier compatible, sélec
 
 Le tableau suivant affiche le format de données approprié pour les types de fichiers pris en charge :
 
-| Type de fichier | Sur le format des données saisies |
+| Type de fichier | Format des données |
 | --- | --- |
 | CSV | [!UICONTROL Délimité] |
 | JSON | [!UICONTROL JSON] |
@@ -104,7 +104,7 @@ Le **[!UICONTROL Mappage]** s’affiche, fournissant une interface interactive p
 
 Sélectionnez un jeu de données dans lequel ingérer les données entrantes. Vous pouvez utiliser un jeu de données existant ou en créer un nouveau.
 
-**Utilisation d’un jeu de données existant**
+**Utiliser un jeu de données existant**
 
 Pour ingérer des données dans un jeu de données existant, sélectionnez **[!UICONTROL Jeu de données existant]**, puis sélectionnez l’icône du jeu de données.
 
@@ -114,7 +114,7 @@ Le **[!UICONTROL Sélectionner un jeu de données]** s’affiche. Recherchez le 
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-existing-dataset.png)
 
-**Utilisation d’un nouveau jeu de données**
+**Utiliser un nouveau jeu de données**
 
 Pour ingérer des données dans un nouveau jeu de données, sélectionnez **[!UICONTROL Nouveau jeu de données]** et saisissez un nom et une description pour le jeu de données dans les champs fournis. Pour ajouter un schéma, vous pouvez saisir un nom de schéma existant dans le champ **[!UICONTROL Sélectionner un schéma]** de la boîte de dialogue Vous pouvez également sélectionner la variable **[!UICONTROL Recherche avancée dans un schéma]** pour rechercher un schéma approprié.
 
@@ -128,7 +128,7 @@ Le **[!UICONTROL Sélectionner un schéma]** s’affiche. Sélectionnez le sché
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-schema.png)
 
-Selon vos besoins, vous pouvez choisir de mapper directement des champs ou d’utiliser des fonctions de préparation de données pour transformer les données sources afin d’obtenir des valeurs calculées ou calculées. Pour obtenir des instructions complètes sur l’utilisation de l’interface du mappeur et des champs calculés, reportez-vous à la section [Guide de l’interface utilisateur de la préparation de données](../../../../../data-prep/ui/mapping.md).
+Selon vos besoins, vous pouvez choisir de mapper directement des champs ou d’utiliser des fonctions de préparation de données pour transformer les données sources afin d’obtenir des valeurs informatisées ou calculées. Pour obtenir des instructions complètes sur l’utilisation de l’interface du mappeur et des champs calculés, reportez-vous à la section [Guide de l’interface utilisateur de la préparation de données](../../../../../data-prep/ui/mapping.md).
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/mapping.png)
 
@@ -144,9 +144,9 @@ Notez que vous ne pouvez pas effectuer de mappage sur différents types. Par exe
 >
 >Platform fournit des recommandations intelligentes pour les champs mappés automatiquement en fonction du schéma ou du jeu de données cible que vous avez sélectionné. Vous pouvez ajuster manuellement les règles de mappage en fonction de vos cas d’utilisation.
 
-Sélectionner **[!UICONTROL Aperçu des données]** pour afficher les résultats de mappage de 100 lignes maximum de données d’exemple du jeu de données sélectionné.
+Sélectionnez **[!UICONTROL Prévisualiser des données]** pour afficher les résultats de mappage de 100 lignes maximum de données d’exemple du jeu de données sélectionné.
 
-Lors de la prévisualisation, la colonne d’identité est considérée comme le premier champ, car il s’agit des informations clés nécessaires à la validation des résultats du mapping.
+Lors de la prévisualisation, la colonne d’identité est considérée comme le premier champ, car il s’agit des informations clés nécessaires à la validation des résultats du mappage.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/mapping-preview.png)
 
@@ -171,7 +171,7 @@ Indiquez les valeurs du planning et sélectionnez **[!UICONTROL Suivant]**.
 
 >[!NOTE]
 >
->Pour l’ingestion par lots, chaque flux de données qui s’ensuit sélectionne les fichiers à ingérer à partir de votre source en fonction de leur **last modified** horodatage. Cela signifie que les flux de données par lot sélectionnent les fichiers de la source qui sont nouveaux ou qui ont été modifiés depuis la dernière exécution du flux. En outre, vous devez vous assurer qu’il existe une période suffisante entre le chargement de fichiers et l’exécution d’un flux planifié, car les fichiers qui ne sont pas entièrement chargés sur votre compte de stockage dans le cloud avant l’heure d’exécution planifiée du flux peuvent ne pas être sélectionnés pour ingestion.
+>Pour l’ingestion par lots, chaque flux de données qui s’ensuit sélectionne les fichiers à ingérer à partir de votre source en fonction de la date et heure de leur **dernière modification**. Cela signifie que les flux de données par lot sélectionnent les fichiers de la source qui sont nouveaux ou qui ont été modifiés depuis la dernière exécution du flux. En outre, vous devez vous assurer qu’il existe une période suffisante entre le chargement de fichiers et l’exécution d’un flux planifié, car les fichiers qui ne sont pas entièrement chargés sur votre compte de stockage dans le cloud avant l’heure d’exécution planifiée du flux peuvent ne pas être sélectionnés pour ingestion.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/scheduling-interval-on.png)
 
@@ -181,13 +181,13 @@ Pour configurer l’ingestion unique, sélectionnez la flèche de liste déroula
 
 >[!IMPORTANT]
 >
->Il est vivement recommandé de planifier votre flux de données pour une ingestion unique lors de l’utilisation de la variable [Connecteur FTP](../../../../connectors/cloud-storage/ftp.md).
+>Il est vivement recommandé de planifier votre flux de données pour une ingestion unique lors de l’utilisation du [connecteur FTP](../../../../connectors/cloud-storage/ftp.md).
 
 Une fois que vous avez fourni les valeurs appropriées au planning, sélectionnez **[!UICONTROL Suivant]**.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/scheduling-once.png)
 
-## Fournir des détails sur les flux de données
+## Fournir des détails sur le flux de données
 
 Le **[!UICONTROL Détails du flux de données]** s’affiche, ce qui vous permet de nommer et de décrire brièvement votre nouveau flux de données.
 
@@ -197,36 +197,36 @@ Indiquez des valeurs pour le flux de données et sélectionnez **[!UICONTROL Sui
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/dataflow-detail.png)
 
-## Vérification du flux de données
+## Vérifier le flux de données
 
-Le **[!UICONTROL Réviser]** s’affiche, ce qui vous permet de consulter votre nouveau flux de données avant qu’il ne soit créé. Les détails sont regroupés dans les catégories suivantes :
+L’écran de **[!UICONTROL Révision]** s’affiche, vous permettant dʼexaminer votre nouveau flux de données avant sa création. Les détails sont regroupés dans les catégories suivantes :
 
 * **[!UICONTROL Connexion]**: Affiche le type de source, le chemin d’accès approprié du fichier source choisi et la quantité de colonnes qu’il contient.
-* **[!UICONTROL Attribution de champs de jeu de données et de mappage]**: Affiche le jeu de données dans lequel les données source sont ingérées, y compris le schéma auquel le jeu de données adhère.
+* **[!UICONTROL Attribuer des champs de jeu de données et de mappage]** : affiche le jeu de données dans lequel les données sources sont ingérées, y compris le schéma auquel le jeu de données se conforme.
 * **[!UICONTROL Planification]**: Affiche la période, la fréquence et l’intervalle principaux du planning d’ingestion.
 
 Une fois que vous avez examiné votre flux de données, cliquez sur **[!UICONTROL Terminer]** et accorder un certain temps pour la création du flux de données.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/review.png)
 
-## Surveillance de votre flux de données
+## Surveiller votre flux de données
 
-Une fois votre flux de données créé, vous pouvez surveiller les données ingérées pour afficher des informations sur les taux d’ingestion, les succès et les erreurs. Pour plus d’informations sur la surveillance du flux de données, consultez le tutoriel sur [surveillance des comptes et des flux de données dans l’interface utilisateur](../../monitor.md).
+Une fois votre flux de données créé, vous pouvez surveiller les données ingérées et afficher les informations relatives au taux d’ingestion, aux succès et aux erreurs. Pour plus d’informations sur la surveillance du flux de données, consultez le tutoriel sur [surveillance des comptes et des flux de données dans l’interface utilisateur](../../monitor.md).
 
-## Suppression de votre flux de données
+## Supprimer le flux de données
 
-Vous pouvez supprimer les flux de données qui ne sont plus nécessaires ou qui ont été créés de manière incorrecte à l’aide de la fonction **[!UICONTROL Supprimer]** de la fonction **[!UICONTROL Flux de données]** workspace. Pour plus d’informations sur la suppression des flux de données, consultez le tutoriel sur [suppression de flux de données dans l’interface utilisateur](../../delete.md).
+Vous pouvez supprimer les flux de données qui ne sont plus nécessaires ou qui ont été créés de manière incorrecte à l’aide de la fonction **[!UICONTROL Supprimer]**, disponible dans l’espace de travail **[!UICONTROL Flux de données]**. Pour plus d’informations sur la suppression des flux de données, consultez le tutoriel sur la [suppression de flux de données dans l’interface utilisateur](../../delete.md).
 
 ## Étapes suivantes
 
-En suivant ce tutoriel, vous avez créé un flux de données pour importer des données d’un espace de stockage cloud externe et vous avez obtenu des informations sur la surveillance des jeux de données. Pour en savoir plus sur la création de flux de données, vous pouvez compléter votre apprentissage en regardant la vidéo ci-dessous. En outre, les données entrantes peuvent désormais être utilisées par les utilisateurs en aval. [!DNL Platform] des services tels que [!DNL Real-time Customer Profile] et [!DNL Data Science Workspace]. Pour plus d’informations, consultez les documents suivants :
+En suivant ce tutoriel, vous avez créé un flux de données pour importer des données d’un espace de stockage cloud externe et vous avez obtenu des informations sur la surveillance des jeux de données. Pour en savoir plus sur la création de flux de données, vous pouvez compléter votre apprentissage en regardant la vidéo ci-dessous. En outre, les données entrantes peuvent désormais être utilisées par les utilisateurs en aval. [!DNL Platform] des services tels que [!DNL Real-time Customer Profile] et [!DNL Data Science Workspace]. Consultez les documents suivants pour plus d’informations :
 
 * [Présentation de [!DNL Real-time Customer Profile]](../../../../../profile/home.md)
 * [Présentation de [!DNL Data Science Workspace]](../../../../../data-science-workspace/home.md)
 
 >[!WARNING]
 >
-> Lʼinterface utilisateur de [!DNL Platform] affichée dans la vidéo suivante est obsolète. Reportez-vous à la documentation ci-dessus pour connaître les dernières captures d’écran et fonctionnalités de l’interface utilisateur.
+> Lʼinterface utilisateur de [!DNL Platform] affichée dans la vidéo suivante est obsolète. Consultez la documentation pour découvrir les dernières captures dʼécran et fonctionnalités de lʼinterface utilisateur.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29695?quality=12&learn=on)
 

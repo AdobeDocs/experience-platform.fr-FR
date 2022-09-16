@@ -1,6 +1,6 @@
 ---
 title: Présentation de l’extension Cloud Connector
-description: Découvrez l’extension de transfert d’événement Cloud Connector dans Adobe Experience Platform.
+description: Découvrez l’extension de transfert d’événements Cloud Connector dans Adobe Experience Platform.
 exl-id: f3713652-ac32-4171-8dda-127c8c235849
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
@@ -13,15 +13,15 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
-L’extension de transfert d’événement Cloud Connector vous permet de créer des requêtes HTTP personnalisées pour envoyer des données à une destination ou récupérer des données d’une destination. L’extension Cloud Connector est semblable à Postman sur Adobe Experience Platform Edge Network et peut être utilisée pour envoyer des données à un point d’entrée qui n’a pas encore d’extension dédiée.
+L’extension de transfert d’événement Cloud Connector vous permet de créer des requêtes HTTP personnalisées pour envoyer des données à une destination ou récupérer des données d’une destination. L’extension Cloud Connector est semblable à Postman sur Adobe Experience Platform Edge Network et peut être utilisée pour envoyer des données à un point d’entrée qui n’a pas encore d’extension dédiée.
 
 Utilisez cette référence pour obtenir des informations sur les options disponibles lors de l’utilisation de cette extension pour créer une règle.
 
 ## Type d’action d’extension Cloud Connector
 
-Cette section décrit le type d’action Envoyer les données disponible dans l’extension Adobe Experience Platform Cloud Connector.
+Cette section décrit le type d’action Envoyer les données disponible dans l’extension Adobe Experience Platform Cloud Connector.
 
 ### Type de requête
 
@@ -31,7 +31,7 @@ Pour sélectionner le type de requête requis par le point d’entrée, cliquez 
 |---|---|
 | [GET](https://developer.mozilla.org/fr-FR/docs/Web/HTTP/Methods/GET) | Demande une représentation de la ressource spécifiée. Les requêtes utilisant GET doivent uniquement récupérer des données. |
 | [POST](https://developer.mozilla.org/fr-FR/docs/Web/HTTP/Methods/POST) | Envoie une entité à la ressource spécifiée, provoquant souvent un changement d’état ou des effets secondaires sur le serveur. |
-| [PUT](https://developer.mozilla.org/fr-FR/docs/Web/HTTP/Methods/PUT) | Remplace toutes les représentations actuelles de la ressource target par la payload de la requête. |
+| [PUT](https://developer.mozilla.org/fr-FR/docs/Web/HTTP/Methods/PUT) | Remplace toutes les représentations actuelles de la ressource cible par la payload de la requête. |
 | [PATCH](https://developer.mozilla.org/fr-FR/docs/Web/HTTP/Methods/PATCH) | Applique des modifications partielles à une ressource. |
 | [DELETE](https://developer.mozilla.org/fr-FR/docs/Web/HTTP/Methods/DELETE) | Supprime la ressource spécifiée. |
 
@@ -81,7 +81,7 @@ Le tableau suivant répertorie les en-têtes prédéfinis. Vous n’êtes pas li
 | [DNT](https://developer.mozilla.org/fr-FR/docs/Web/HTTP/Headers/DNT) | Exprime la préférence de suivi de l’utilisateur. |
 | Attente | Indique les attentes que le serveur doit satisfaire pour pouvoir gérer correctement la requête. |
 | Transféré | Contient des informations provenant des [serveurs proxy inverse](https://developer.mozilla.org/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling) qui sont modifiées ou perdues lorsqu’un proxy est impliqué dans le chemin de la requête. |
-| De | Contient une adresse électronique Internet pour un utilisateur humain qui contrôle l’agent utilisateur requérant. |
+| De | Contient une adresse e-mail Internet pour un utilisateur humain qui contrôle l’agent utilisateur requérant. |
 | Hôte | Indique l’hôte et le numéro de port du serveur auquel la requête est envoyée. |
 | If-Match |  |
 | If-Modified-Since |  |

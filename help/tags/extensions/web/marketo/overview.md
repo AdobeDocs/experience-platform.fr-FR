@@ -1,6 +1,6 @@
 ---
 title: Extension Marketo Munchkin  Présentation
-description: Découvrez lʼextension de balise Marketo Munchkin dans Adobe Experience Platform.
+description: Découvrez l’extension de balises Marketo Munchkin dans Adobe Experience Platform.
 exl-id: 8efc5203-91fc-4e89-be8f-74bf1aeeee5f
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
@@ -13,7 +13,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 Utilisez cette extension pour intégrer le code de suivi JavaScript [!DNL Marketo Munchkin] à votre propriété. [!DNL Marketo Munchkin] JavaScript permet le suivi des visites et des clics des pages des utilisateurs finaux vers vos pages web externes et vos pages de destination Marketo.
 

@@ -8,7 +8,7 @@ exl-id: 5d5449ad-a1ba-402b-a281-0b2d8b704f32
 source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
 workflow-type: tm+mt
 source-wordcount: '596'
-ht-degree: 7%
+ht-degree: 8%
 
 ---
 
@@ -20,7 +20,7 @@ Avec les sources en libre-service (SDK par lots), vous pouvez :
 
 * Configurez et intégrez une nouvelle source au catalogue de l’Experience Platform à l’aide du [!DNL Flow Service] API.
 * Définissez les spécifications de votre source, y compris les informations relatives aux types d’authentification pris en charge et la manière dont les données de ressource sont récupérées.
-* Créez une documentation destinée aux utilisateurs pour votre nouvelle source.
+* Créer une documentation destinée aux utilisateurs pour votre nouvelle source.
 
 La documentation des sources en libre-service fournit des instructions pour configurer, tester et publier une intégration de source basée sur l’API REST avec Experience Platform et faire en sorte que votre source soit intégrée au catalogue de sources en constante augmentation.
 

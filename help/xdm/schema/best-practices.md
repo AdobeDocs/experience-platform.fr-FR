@@ -3,7 +3,7 @@ keywords: Experience Platform;accueil;rubriques les plus consultées;schéma;én
 solution: Experience Platform
 title: Bonnes Pratiques Pour La Modélisation Des Données
 topic-legacy: overview
-description: Ce document présente les schémas du modèle de données d’expérience (XDM) ainsi que les blocs de création, principes et bonnes pratiques de la composition de schémas à utiliser dans Adobe Experience Platform.
+description: Ce document présente les schémas du modèle de données d’expérience (XDM) ainsi que les blocs de création, principes et bonnes pratiques de la composition de schémas à utiliser dans Adobe Experience Platform.
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
 source-git-commit: c5ab8c12c4c5bd14d3504d60c654105ad36effe6
 workflow-type: tm+mt
@@ -12,7 +12,7 @@ ht-degree: 3%
 
 ---
 
-# Bonnes pratiques relatives à la modélisation des données
+# Bonnes pratiques de modélisation des données
 
 [!DNL Experience Data Model] (XDM) est le cadre de base qui normalise les données d’expérience client en fournissant des structures et des définitions communes à utiliser dans les services Adobe Experience Platform en aval. En adhérant aux normes XDM, toutes les données d’expérience client peuvent être intégrées à une représentation commune qui vous permet d’obtenir des informations précieuses à partir des actions des clients, de définir des audiences de clients par le biais de segments et d’exprimer les attributs du client à des fins de personnalisation.
 
@@ -203,7 +203,7 @@ Le [règles d’évolution des schémas](./composition.md#evolution) Vous devez 
 
 Si vous ne savez pas si un champ particulier est nécessaire pour l’inclure dans un schéma, la bonne pratique consiste à l’exclure. S’il est déterminé par la suite que le champ est nécessaire, il peut toujours être ajouté à la prochaine itération du schéma.
 
-### Champs d&#39;identité
+### Champs d’identité
 
 Dans Experience Platform, les champs XDM marqués comme identités sont utilisés pour rassembler des informations sur les clients individuels provenant de plusieurs sources de données. Bien qu’un schéma puisse comporter plusieurs champs marqués comme identités, une seule identité Principale doit être définie pour que le schéma puisse être utilisé dans [!DNL Real-time Customer Profile]. Voir la section sur [champs d’identité](./composition.md#identity) dans les principes de base de la composition des schémas pour plus d’informations sur le cas d’utilisation de ces champs.
 
@@ -213,10 +213,10 @@ Lors de la conception de vos schémas, toute clé Principale dans vos tableaux d
 
 Experience Platform fournit plusieurs groupes de champs de schéma XDM prêts à l’emploi pour la capture de données liées aux applications d’Adobe suivantes :
 
-* Adobe Analytics
-* Adobe Audience Manager
-* Adobe Campaign
-* Adobe Target
+* Adobe Analytics
+* Adobe Audience Manager
+* Adobe Campaign
+* Adobe Target
 
 Par exemple, la variable [[!UICONTROL Modèle ExperienceEvent Adobe Analytics] groupe de champs](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json) vous permet de mapper [!DNL Analytics]Champs spécifiques à vos schémas XDM. Selon les applications d’Adobe que vous utilisez, vous devez utiliser ces groupes de champs fournis par Adobe dans vos schémas.
 

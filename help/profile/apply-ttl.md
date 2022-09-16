@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform;accueil;rubriques populaires;jeu de données;Jeu de donnéesvdurée de vie;ttl;durée-de-vie;
+keywords: Experience Platform;accueil;rubriques populaires;jeu de données;Jeu de donnéesvdurée de vie;ttl;durée-de-vie;
 solution: Experience Platform
 title: Durée de vie des jeux de données
-description: Ce document fournit des instructions générales sur la durée de vie (TTL) des jeux de données dans le magasin de profils pour Adobe Experience Platform.
+description: Ce document fournit des instructions générales sur la durée de vie (TTL) des jeux de données dans le magasin de profils pour Adobe Experience Platform.
 exl-id: a91f2cd2-3a5d-42e6-81c3-0ec5bc644f5f
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt

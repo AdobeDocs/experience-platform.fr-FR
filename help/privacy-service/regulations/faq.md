@@ -18,7 +18,7 @@ Ce document répond aux questions les plus fréquemment posées sur les régleme
 
 >[!NOTE]
 >
->Les définitions des différents termes utilisés dans ce document se trouvent dans le guide [terminologie de la réglementation sur la protection des renseignements personnels](terminology.md).
+>Les définitions des différents termes utilisés dans ce document se trouvent dans la section [terminologie de la réglementation sur la confidentialité](terminology.md) guide.
 
 ## Questions générales
 
@@ -26,11 +26,11 @@ Les questions suivantes concernent toutes les réglementations de confidentialit
 
 ### Quelles sont les répercussions des réglementations de confidentialité prises en charge ?
 
-Les [règlements sur la protection de la vie privée pris en charge par Experience Cloud](./overview.md) s’appliquent à toutes les organisations qui stockent et traitent les données personnelles des citoyens dans les juridictions respectives de l’organisation, quel que soit l’emplacement géographique de l’organisation.
+Le [réglementations de confidentialité prises en charge par l’Experience Cloud](./overview.md) s’appliquent à toutes les organisations qui stockent et traitent les données personnelles des citoyens dans les juridictions respectives des règlements, quel que soit l’emplacement géographique de l’organisation.
 
 ### Que signifie la notion de données personnelles ?
 
-Les données personnelles constituent toute information relative à une personne physique ou à un sujet des données qui peut être utilisée pour identifier directement ou indirectement la personne. Il peut s’agir d’un nom, d’une photo, d’une adresse électronique, de détails bancaires, de publications sur les réseaux sociaux, d’informations médicales ou de l’adresse IP d’un ordinateur.
+Les données personnelles constituent toute information relative à une personne physique ou à un sujet des données qui peut être utilisée pour identifier directement ou indirectement la personne. Il peut s’agir d’un nom, d’une photo, d’une adresse e-mail, de détails bancaires, de publications sur les réseaux sociaux, d’informations médicales ou de l’adresse IP d’un ordinateur.
 
 Les identifiants suivants sont couramment utilisés dans des applications Experience Cloud et peuvent être soumis à des exigences de réglementation en matière de confidentialité :
 
@@ -39,7 +39,7 @@ Les identifiants suivants sont couramment utilisés dans des applications Experi
 * Identifiant personnel unique
 * Identifiant en ligne
 * Adresse IP
-* Adresse électronique
+* Adresse e-mail
 * Nom du compte
 
 Les informations personnelles peuvent aussi inclure les renseignements liés à l’activité sur Internet ou sur d’autres réseaux électroniques. Cela inclut, entre autres :
@@ -54,13 +54,13 @@ Bien que les réglementations relatives à la vie privée couvrent un large éve
 
 Le **contrôleur des données** est l’entité qui détermine les finalités, conditions et moyens du traitement des données personnelles, tandis que l’**entité de traitement des données** est une entité qui traite les données personnelles pour le compte du contrôleur des données.
 
-Un **contrôleur des données** est la personne ou l’organisation qui a le pouvoir et la responsabilité de prendre des décisions concernant la collecte, l’utilisation ou la divulgation de données personnelles. Un **responsable du traitement des données** est la personne ou l’organisation qui opère en relation avec la collecte, l’utilisation ou la divulgation des données personnelles et la direction du contrôleur des données.
+A **contrôleur de données** est la personne ou l’organisation qui a le pouvoir et la responsabilité de prendre des décisions concernant la collecte, l’utilisation ou la divulgation de données personnelles. A **responsable du traitement des données** est la personne ou l’organisation qui opère en relation avec la collecte, l’utilisation ou la divulgation des données personnelles et la direction du contrôleur des données.
 
 ### Quelle est la différence entre le consentement explicite et le consentement univoque du sujet des données ?
 
-**Il s’agit** d’une norme de consentement explicite qui implique une indication précise, éclairée et sans ambiguïté des souhaits du sujet des données sous forme orale ou écrite. En d’autres termes, le sujet des données doit littéralement et explicitement dire &quot;J’accepte&quot; ou &quot;Je suis d’accord&quot; pour que le consentement soit considéré comme explicite. En outre, il doit être aussi facile de retirer le consentement que de le donner.
+**Consentement explicite** désigne une norme de consentement qui implique une indication précise, éclairée et sans ambiguïté des souhaits du sujet des données sous forme orale ou écrite. En d’autres termes, le sujet des données doit littéralement et explicitement dire &quot;J’accepte&quot; ou &quot;Je suis d’accord&quot; pour que le consentement soit considéré comme explicite. En outre, il doit être aussi facile de retirer le consentement que de le donner.
 
-**Les** consentements non ambigus (implicites) désignent un consentement qui n’a pas été explicitement donné par le sujet des données, mais qui n’en présente pas moins un caractère non ambigu. Par exemple, lors du processus d’inscription à un site web d’entreprise, un avis est donné qu’en fournissant une adresse électronique, le sujet des données accepte de recevoir des emails sur des offres spéciales. Si le sujet des données lit l&#39;avis, la discrimination positive consistant à entrer dans son email est suffisante pour être considérée comme un consentement univoque.
+**Consentement non ambigu (implicite)** fait référence au consentement qui n’a pas été donné explicitement par le sujet des données, mais qui n’en est pas moins sans ambiguïté dans sa nature. Par exemple, lors du processus d’inscription à un site web d’entreprise, un avis est donné qu’en fournissant une adresse électronique, le sujet des données accepte de recevoir des emails sur des offres spéciales. Si le sujet des données lit l&#39;avis, la discrimination positive consistant à entrer dans son email est suffisante pour être considérée comme un consentement univoque.
 
 Pour de nombreuses réglementations comme le RGPD, un consentement explicite est requis pour le traitement de données personnelles sensibles, où rien d’autre que &quot;opt-in&quot; ne suffira. Toutefois, pour les données non sensibles, le consentement univoque (implicite) est acceptable.
 
@@ -104,7 +104,7 @@ Si les opérations de données de votre entreprise relèvent des juridictions l�
 
 ### Comment puis-je prendre en charge les demandes d’accès à des informations personnelles des clients si je conserve des données couvertes par les réglementations de confidentialité ?
 
-Une fois que vous avez pris les mesures nécessaires pour authentifier les clients qui appartiennent aux juridictions appropriées, Adobe Experience Platform Privacy Service vous permet d’envoyer des demandes d’accès à des informations personnelles des clients à des applications Experience Cloud compatibles. Pour plus d’informations, consultez la [[!DNL Privacy Service] présentation ](../home.md). Pour plus d’informations sur la manière dont vos applications Experience Cloud spécifiques peuvent répondre aux demandes de confidentialité, reportez-vous au guide sur les [applications Privacy Service et Experience Cloud](../experience-cloud-apps.md).
+Une fois que vous avez pris les mesures nécessaires pour authentifier les clients qui appartiennent aux juridictions appropriées, Adobe Experience Platform Privacy Service vous permet d’envoyer des demandes d’accès à des informations personnelles des clients à des applications Experience Cloud compatibles. Pour plus d’informations, consultez la [[!DNL Privacy Service] présentation](../home.md). Pour plus d’informations sur la manière dont vos applications Experience Cloud spécifiques peuvent répondre aux demandes de confidentialité, reportez-vous au guide sur les [applications Privacy Service et Experience Cloud](../experience-cloud-apps.md).
 
 >[!NOTE]
 >
@@ -114,7 +114,7 @@ Une fois que vous avez pris les mesures nécessaires pour authentifier les clien
 
 Les questions suivantes concernent spécifiquement la CCPA.
 
-### Comment les différents rôles et responsabilités de la CCPA s’appliquent-ils à Experience Cloud ?
+### Comment les différents rôles et responsabilités de la CCPA s’appliquent-ils à Experience Cloud ?
 
 Selon la définition de la CCPA, s’appliquent à Adobe et à ses clients les rôles suivants :
 
@@ -129,7 +129,7 @@ Cependant, les services Adobe peuvent être utilisés pour activer certains part
 
 ### Adobe propose-t-il d’autres outils pouvant être utiles pour répondre aux exigences de la CCPA ?
 
-Les applications Adobe Experience Cloud fournissent des fonctionnalités de gestion et de gouvernance qui peuvent être utiles pour les besoins de confidentialité des entreprises. Parmi ces outils figurent l’étiquetage de l’utilisation des données, les contrôles d’accès basés sur les rôles, l’obscurcissement de l’adresse IP et les fonctions de hachage.
+Les applications Adobe Experience Cloud fournissent des fonctionnalités de gestion et de gouvernance qui peuvent être utiles pour les besoins de confidentialité des entreprises. Parmi ces outils figurent l’étiquetage de l’utilisation des données, les contrôles d’accès basés sur les rôles, l’obscurcissement de l’adresse IP et les fonctions de hachage.
 
 Adobe a reçu diverses certifications pour ses pratiques en matière de confidentialité et de sécurité, telles qu’une certification ISO 27001 et une validation RGPD de TrustArc.
 

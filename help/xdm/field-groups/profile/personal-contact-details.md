@@ -8,18 +8,18 @@ exl-id: a78d9aee-ecf6-45a9-b270-cdad5b800a86
 source-git-commit: afe748d443aad7b6da5b348cd569c9e806e4419b
 workflow-type: tm+mt
 source-wordcount: '169'
-ht-degree: 10%
+ht-degree: 16%
 
 ---
 
 
-# [!UICONTROL Groupe de champs ] Détails du contact personnel
+# [!UICONTROL Détails du contact personnel] groupe de champs de schéma
 
 >[!NOTE]
 >
->Les noms de plusieurs groupes de champs de schéma ont changé. Pour plus d’informations, consultez le document [mises à jour des noms de groupe de champs](../name-updates.md) .
+>Les noms de plusieurs groupes de champs de schéma ont changé. Pour plus d’informations, consultez le document sur les [mises à jour des noms de groupes de champs](../name-updates.md).
 
-[!UICONTROL Contact personnel ] Détails d’un schéma standard pour la  [[!DNL XDM Individual Profile] ](../../classes/individual-profile.md) classe qui décrit les coordonnées d’une personne.
+[!UICONTROL Détails du contact personnel] est un groupe de champs de schéma standard pour la variable [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md) qui décrit les coordonnées d’une personne.
 
 ![](../../images/field-groups/personal-contact-details.png)
 
@@ -29,7 +29,7 @@ ht-degree: 10%
 | `homeAddress` | [Adresse postale](../../data-types/postal-address.md) | Décrit l’adresse résidentielle de la personne. |
 | `homePhone` | [Numéro de téléphone](../../data-types/phone-number.md) | Décrit le numéro de téléphone de la personne. |
 | `mobilePhone` | [Numéro de téléphone](../../data-types/phone-number.md) | Décrit le numéro de téléphone portable de la personne. |
-| `personalEmail` | [Adresse électronique](../../data-types/email-address.md) | Décrit l’adresse électronique de la personne. |
+| `personalEmail` | [Adresse e-mail](../../data-types/email-address.md) | Décrit l’adresse électronique de la personne. |
 
 {style=&quot;table-layout:auto&quot;}
 

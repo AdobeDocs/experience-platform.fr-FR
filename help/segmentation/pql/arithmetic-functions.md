@@ -12,9 +12,9 @@ ht-degree: 87%
 
 ---
 
-# Fonctions arithmétiques 
+# Fonctions arithmétiques
 
-Les fonctions arithmétiques sont utilisées pour effectuer des calculs de base sur des valeurs dans [!DNL Profile Query Language] (PQL). Vous trouverez plus d’informations sur les autres fonctions PQL dans la [[!DNL Profile Query Language] présentation](./overview.md).
+Les fonctions arithmétiques sont utilisées pour effectuer des calculs de base sur des valeurs dans [!DNL Profile Query Language] (PQL). Vous trouverez plus d’informations sur les autres fonctions PQL dans la section [[!DNL Profile Query Language] aperçu](./overview.md).
 
 ## Addition
 

@@ -2,7 +2,8 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;sources;API;explorer;service de flux
 title: Exploration d’une source tabulaire à l’aide de l’API Flow Service
 description: Ce tutoriel utilise l’API Flow Service pour explorer le contenu et la structure d’une source basée sur un tableau.
-source-git-commit: 1333eac5e022ef32f051120496154a88e2f9324e
+exl-id: 0c7a5b8a-2071-4ac2-b2d1-c5534e7c7d9c
+source-git-commit: 3bdeec8284873b8d9368f833b24e9922ed489019
 workflow-type: tm+mt
 source-wordcount: '469'
 ht-degree: 23%

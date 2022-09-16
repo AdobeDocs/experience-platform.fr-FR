@@ -18,7 +18,7 @@ Dans certains cas, il est possible que vous souhaitiez interagir avec deux propr
 * Des relations de partage de données entre plusieurs entreprises.
 * Des clients qui testent de nouvelles solutions Adobe et qui ne souhaitent pas perturber leur implémentation existante.
 
-Le SDK permet de créer une instance distincte pour chaque propriété en ajoutant un autre nom au tableau dans le code de base. L’exemple suivant fournit deux noms, `mycustomname1` et `mycustomname2`.
+Le SDK permet de créer une instance distincte pour chaque propriété en ajoutant un autre nom au tableau dans le code de base. L’exemple suivant fournit deux noms : `mycustomname1` et `mycustomname2`.
 
 ```markup
 <script>
@@ -32,7 +32,7 @@ Le SDK permet de créer une instance distincte pour chaque propriété en ajouta
 
 Par conséquent, le script crée deux instances du SDK. La fonction globale permettant d’interagir avec la première instance est appelée `mycustomname1` et celle permettant d’interagir avec la seconde instance est appelée `mycustomname2`.
 
-En créant deux instances distinctes, chacune peut être configurée pour une propriété différente. Toute communication ou persistance de données résultant d’une interaction avec `mycustomname1` est isolée de `mycustomname2`.
+En créant deux instances distinctes, chacune peut être configurée pour une propriété différente. Toute communication ou persistance des données résultant d’une interaction avec `mycustomname1` est isolé de `mycustomname2`.
 
 En suivant l’exemple ci-dessus, vous pouvez exécuter comme suit des commandes à l’aide de chacune des instances :
 
@@ -64,4 +64,4 @@ Veillez à exécuter la commande `configure` pour chaque instance avant d’exé
 
 ## Limites
 
-Pour éviter tout conflit avec les cookies, une seule instance de Adobe Experience Platform [!DNL Web SDK] dans une page peut avoir une `edgeConfigId` spécifique. De même, une seule instance de Adobe Experience Platform [!DNL Web SDK] peut avoir une `orgId` spécifique.
+Pour éviter tout conflit avec les cookies, une seule instance de Adobe Experience Platform [!DNL Web SDK] dans une page peut avoir une `edgeConfigId`. De même, une seule instance de Adobe Experience Platform [!DNL Web SDK] peut avoir un `orgId`.

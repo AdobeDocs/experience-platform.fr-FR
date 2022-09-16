@@ -1,7 +1,8 @@
 ---
 title: Définition des identités Principal dans un jeu de données ad hoc
 description: Adobe Experience Platform Query Service vous permet de définir une identité ou une identité Principale pour les champs de jeu de données de schéma ad hoc directement via la commande SQL ALTER TABLE. Le document explique comment utiliser la commande ALTER TABLE pour définir une identité Principale ou une identité secondaire.
-source-git-commit: bf51fc3e0c9635c0555f87f3389fb4a9542c092d
+exl-id: b8e6b87e-c6e5-4688-a936-a3a1510a3c5b
+source-git-commit: d9c3ccdf0c0e191af1ab18e894688f301378156d
 workflow-type: tm+mt
 source-wordcount: '445'
 ht-degree: 1%

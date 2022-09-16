@@ -1,9 +1,9 @@
 ---
-keywords: Experience Platform;profil;profil client en temps réel;dépannage;API;profil unifié;Profil unifié;unifié;Profil;rtcp;graphiques XDM
+keywords: Experience Platform;profil;profil client en temps réel;dépannage;API;profil unifié;Profil unifié;unifié;Profil;rtcp;graphiques XDM
 title: Fonctionnalités d’accessibilité générales dans Platform
 topic-legacy: guide
 type: Documentation
-description: En savoir plus sur les fonctionnalités d’accessibilité générales prises en charge par Adobe Experience Platform, notamment la navigation au clavier, le contraste et les palettes de couleurs, ainsi que la prise en charge des technologies d’assistance.
+description: En savoir plus sur les fonctionnalités d’accessibilité générales prises en charge par Adobe Experience Platform, notamment la navigation au clavier, le contraste et les palettes de couleurs, ainsi que la prise en charge des technologies d’assistance.
 exl-id: 4b7e2f2b-af51-4376-8a63-16c921cc7135
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
@@ -12,17 +12,17 @@ ht-degree: 100%
 
 ---
 
-# Fonctionnalités d’accessibilité dans Experience Platform
+# Fonctionnalités d’accessibilité dans Experience Platform
 
-Adobe Experience Platform s’engage à fournir des fonctionnalités accessibles et inclusives à tous les individus, y compris les utilisateurs ayant recours à des dispositifs d’assistance tels que des logiciels de reconnaissance vocale et des lecteurs d’écran. Ce document décrit les fonctionnalités d’accessibilité générales prises en charge par Platform, notamment la navigation au clavier, la structure sémantique, un contraste suffisant entre les éléments de premier plan et les éléments d’arrière-plan, ainsi que la prise en charge des technologies d’assistance.
+Adobe Experience Platform s’engage à fournir des fonctionnalités accessibles et inclusives à tous les individus, y compris les utilisateurs ayant recours à des dispositifs d’assistance tels que des logiciels de reconnaissance vocale et des lecteurs d’écran. Ce document décrit les fonctionnalités d’accessibilité générales prises en charge par Platform, notamment la navigation au clavier, la structure sémantique, un contraste suffisant entre les éléments de premier plan et les éléments d’arrière-plan, ainsi que la prise en charge des technologies d’assistance.
 
 ## Technologies d’assistance
 
-Les utilisateurs présentant un handicap dépendent fréquemment du matériel et des logiciels connus sous le nom de technologies d’assistance pour accéder au contenu numérique et utiliser des produits logiciels. Adobe Experience Platform prend en charge plusieurs types de technologies d’assistance (AT), telles que les lecteurs d’écran, le zoom et les logiciels de reconnaissance vocale, en appliquant les bonnes pratiques d’accessibilité comme l’utilisation de code sémantique, d’équivalents textuels, de libellés et d’attributs ARIA, le cas échéant. Les éléments interactifs de l’interface utilisateur (IU) d’Experience Platform utilisent des libellés, des noms accessibles et des rôles correspondants qui identifient à la fois leur objectif et leur état actuel. Les technologies d’assistance telles que les lecteurs d’écran peuvent ainsi lire les libellés et d’autres informations aux utilisateurs. Cela permet à ces derniers d’interagir facilement avec les commandes de l’application.
+Les utilisateurs présentant un handicap dépendent fréquemment du matériel et des logiciels connus sous le nom de technologies d’assistance pour accéder au contenu numérique et utiliser des produits logiciels. Adobe Experience Platform prend en charge plusieurs types de technologies d’assistance (AT), telles que les lecteurs d’écran, le zoom et les logiciels de reconnaissance vocale, en appliquant les bonnes pratiques d’accessibilité comme l’utilisation de code sémantique, d’équivalents textuels, de libellés et d’attributs ARIA, le cas échéant. Les éléments interactifs de l’interface utilisateur (IU) d’Experience Platform utilisent des libellés, des noms accessibles et des rôles correspondants qui identifient à la fois leur objectif et leur état actuel. Les technologies d’assistance telles que les lecteurs d’écran peuvent ainsi lire les libellés et d’autres informations aux utilisateurs. Cela permet à ces derniers d’interagir facilement avec les commandes de l’application.
 
 ## Accessibilité à l’aide du clavier
 
-Experience Platform s’efforce de prendre en charge l’accessibilité complète du clavier.
+Experience Platform s’efforce de prendre en charge l’accessibilité complète du clavier.
 
 Les éléments de navigation suivants facilitent l’accessibilité :
 * La touche de tabulation permet de se déplacer entre les éléments, les sections et les groupes de menus de l’interface utilisateur.
@@ -30,15 +30,15 @@ Les éléments de navigation suivants facilitent l’accessibilité :
 * Maj + tabulation permet de revenir en arrière dans l’ordre de tabulation.
 * Les touches Retour (Entrée) et la barre d’espacement activent les éléments sélectionnés.
 * La touche Échap (ESC) fait office de bouton d’annulation pour fermer une boîte de dialogue, le cas échéant.
-* Experience Platform affiche une bordure bleue autour d’un élément sélectionné afin d’indiquer clairement sur quel élément de l’interface utilisateur se trouve actuellement le focus.
+* Experience Platform affiche une bordure bleue autour d’un élément sélectionné afin d’indiquer clairement sur quel élément de l’interface utilisateur se trouve actuellement le focus.
 
 ![Bordure bleue apparaissant autour d’un élément sélectionné pour indiquer que le focus est appliqué.](images/profile-overview-tab.png)
 
 ## Palettes et contraste des couleurs
 
-Experience Platform s’efforce de respecter la norme [WCAG 2.1 AA](https://www.w3.org/TR/WCAG/), y compris les exigences en matière de contraste des couleurs. L’interface utilisateur d’Experience Platform offre un contraste suffisant dans l’application pour garantir une expérience de visionnage accessible aux utilisateurs présentant une faible vision ou des défauts de vision des couleurs.
+Experience Platform s’efforce de respecter la norme [WCAG 2.1 AA](https://www.w3.org/TR/WCAG/), y compris les exigences en matière de contraste des couleurs. L’interface utilisateur d’Experience Platform offre un contraste suffisant dans l’application pour garantir une expérience de visionnage accessible aux utilisateurs présentant une faible vision ou des défauts de vision des couleurs.
 
-![Contraste et palette de couleurs présents sur la page d’accueil de l’interface utilisateur d’Experience Platform.](images/homepage.png)
+![Contraste et palette de couleurs présents sur la page d’accueil de l’interface utilisateur d’Experience Platform.](images/homepage.png)
 
 ## Validation des champs requis
 

@@ -1,7 +1,8 @@
 ---
 title: Groupe de champs de schéma Détails de la requête entre guillemets
 description: Ce document présente un aperçu du groupe de champs Détails de la demande de devis .
-source-git-commit: 32d8798d426696d8fd4ace4c53a8bf9b4db26b61
+exl-id: 19be76fa-d212-4b00-815a-d3869c1054e2
+source-git-commit: f5df893260f0772ad54ccdb00d99ed8f328d35a9
 workflow-type: tm+mt
 source-wordcount: '150'
 ht-degree: 8%

@@ -20,7 +20,7 @@ Vous pouvez utiliser cette destination pour le ciblage des audiences sur l’ens
 
 ![Destination facebook dans l’interface utilisateur de Adobe Experience Platform](../../assets/catalog/social/facebook/catalog.png)
 
-## Cas dʼutilisation
+## Cas d&#39;utilisation
 
 Pour vous aider à mieux comprendre comment et à quel moment utiliser la variable [!DNL Facebook] destination, voici deux exemples de cas d’utilisation que les clients Adobe Experience Platform peuvent résoudre à l’aide de cette fonctionnalité.
 

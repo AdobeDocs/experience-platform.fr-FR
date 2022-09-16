@@ -6,7 +6,7 @@ exl-id: e6f394b2-ab82-47bb-8521-1cf9d01a203b
 source-git-commit: 8211ca28462548e1c17675e504e6de6f5cc55e73
 workflow-type: tm+mt
 source-wordcount: '1007'
-ht-degree: 8%
+ht-degree: 9%
 
 ---
 
@@ -51,7 +51,7 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 | Type d’exportation | Exportation des segments | Vous exportez tous les membres d’un segment (audience) avec les identifiants (nom, numéro de téléphone ou autres) utilisés dans la variable [!DNL Criteo] destination. |
 | Fréquence des exports | Diffusion en continu | Les destinations de diffusion en continu sont &quot;toujours sur&quot; des connexions basées sur l’API. Dès qu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation des segments, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur [destinations de diffusion en continu](../../destination-types.md#streaming-destinations). |
 
-## Cas dʼutilisation {#use-cases}
+## Cas d&#39;utilisation {#use-cases}
 
 Pour vous aider à mieux comprendre comment utiliser la variable [!DNL Criteo] destination, voici quelques objectifs que les clients Adobe Experience Platform peuvent atteindre. [!DNL Criteo]:
 
@@ -177,7 +177,7 @@ Le corps de requête de suppression du profil utilisateur reçu par le [!DNL Cri
 
 ## Utilisation et gouvernance des données {#data-usage}
 
-Toutes les destinations Adobe Experience Platform sont conformes aux politiques d’utilisation des données lors de la gestion de vos données. Pour plus d’informations sur la manière dont Adobe Experience Platform applique la gouvernance des données, reportez-vous à la section [Présentation de la gouvernance des données](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=en).
+Toutes les destinations Adobe Experience Platform sont conformes aux politiques d’utilisation des données lors de la gestion de vos données. Pour plus d’informations sur la manière dont Adobe Experience Platform applique la gouvernance des données, reportez-vous à la section [Présentation de la gouvernance des données](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=fr).
 
 ## Ressources supplémentaires
 

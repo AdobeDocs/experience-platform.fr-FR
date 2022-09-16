@@ -4,13 +4,13 @@ title: Créer une connexion source Adobe Campaign Managed Services à l’aide d
 description: Découvrez comment connecter Adobe Experience Platform à Adobe Campaign Managed Services à l’aide de l’interface utilisateur de Platform.
 hide: true
 hidefromtoc: true
-source-git-commit: 57a34b10e40dee80638392477d49c21e107c491f
-workflow-type: ht
+exl-id: 067ed558-b239-4845-8c85-3bf9b1d4caed
+source-git-commit: f5df893260f0772ad54ccdb00d99ed8f328d35a9
+workflow-type: tm+mt
 source-wordcount: '300'
 ht-degree: 100%
 
 ---
-
 
 # Créer une connexion source Adobe Campaign Managed Services à l’aide de l’interface utilisateur de Platform
 
@@ -25,7 +25,7 @@ Ce guide nécessite une compréhension professionnelle des composants suivants d
 
 ## Connecter Adobe Campaign Managed Services à Platform
 
-Dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources]. La page [!UICONTROL Catalogue] affiche diverses sources avec lesquelles vous pouvez créer un compte.
+Dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources]. L’écran [!UICONTROL Catalogue] affiche diverses sources avec lesquelles vous pouvez créer un compte.
 
 Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de votre écran. Vous pouvez également utiliser la barre de recherche pour réduire les sources affichées.
 

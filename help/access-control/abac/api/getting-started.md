@@ -6,7 +6,7 @@ exl-id: d1a66afa-dff4-49d7-b57c-527f05977155
 source-git-commit: 567bfe089fd96cb08cb8ea7c90d065c804be9413
 workflow-type: tm+mt
 source-wordcount: '356'
-ht-degree: 64%
+ht-degree: 73%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 64%
 
 >[!IMPORTANT]
 >
->Le contrôle d’accès basé sur les attributs est actuellement disponible dans une version limitée pour les clients de santé basés aux États-Unis. Cette fonctionnalité sera disponible pour tous les clients Real-time Customer Data Platform une fois qu’elle sera entièrement publiée.
+>Le contrôle d’accès basé sur les attributs est actuellement disponible pour un nombre restreint d’utilisateurs, qui sont actifs dans le secteur de la santé et basés aux États-Unis. Cette fonctionnalité sera disponible pour tous les clients Real-time Customer Data Platform dès son déploiement à grande échelle.
 
 Ce guide de développement décrit les étapes à suivre pour vous aider à utiliser le contrôle d’accès basé sur les attributs afin de gérer les rôles, les produits, les catégories d’autorisations et les jeux d’autorisations dans Adobe Experience Platform. Il comprend des exemples d’appels API pour effectuer diverses opérations.
 

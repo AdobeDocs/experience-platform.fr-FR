@@ -62,7 +62,7 @@ Attribuez un nom convivial à votre jeton, par exemple &quot;Destination des att
 
 Cliquez sur **[!UICONTROL Créer un jeton]** et enregistrez les informations comme confidentielles.
 
-## Cas dʼutilisation {#use-cases}
+## Cas d&#39;utilisation {#use-cases}
 
 Pour vous aider à mieux comprendre comment et à quel moment utiliser la variable [!DNL Airship Attributes] destination, voici des exemples de cas d’utilisation que les clients Adobe Experience Platform peuvent résoudre à l’aide de cette destination.
 

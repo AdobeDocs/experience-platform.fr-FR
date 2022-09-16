@@ -6,7 +6,7 @@ topic-legacy: overview
 description: La normalisation et l’interopérabilité sont les concepts clés d’Adobe Experience Platform. Le modèle de données d’expérience (XDM), optimisé par Adobe, vise à normaliser les données d’expérience client et à définir des schémas pour la gestion de l’expérience client.
 exl-id: 294d5f02-850f-47ea-9333-8b94a0bb291e
 source-git-commit: a95e5cf02e993d6c761abd74c98c0967a89eb678
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '2087'
 ht-degree: 100%
 

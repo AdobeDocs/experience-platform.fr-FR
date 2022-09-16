@@ -9,7 +9,7 @@ exl-id: 75deead6-ef3c-48be-aed2-c43d1f432178
 source-git-commit: 38f64f2ba0b40a20528aac6efff0e2fd6bc12ed2
 workflow-type: tm+mt
 source-wordcount: '1055'
-ht-degree: 10%
+ht-degree: 20%
 
 ---
 
@@ -29,10 +29,10 @@ Ce tutoriel nécessite une compréhension du fonctionnement des composants suiva
 
 - [Flux de données](../../../../../dataflows/home.md) : les flux de données sont une représentation des tâches de données qui déplacent ces dernières dans Platform. Les flux de données sont configurés entre différents services, des sources aux [!DNL Identity Service], à [!DNL Profile]et à [!DNL Destinations].
 - [Préparation de données](../../../../../data-prep/home.md) : la préparation des données permet aux ingénieurs de données de mapper, transformer et valider les données vers et à partir du modèle de données d’expérience (XDM). Data Prep sʼaffiche en tant quʼétape de « mappage » dans les processus dʼingestion de données, y compris le processus dʼingestion de données CSV.
-- [[!DNL Experience Data Model (XDM)] Système](../../../../../xdm/home.md): Le cadre normalisé selon lequel [!DNL Experience Platform] organise les données d’expérience client.
+- [[!DNL Experience Data Model (XDM)] Système](../../../../../xdm/home.md) : le cadre normalisé en fonction duquel [!DNL Experience Platform] organise les données d’expérience client.
    - [Principes de base de la composition des schémas](../../../../../xdm/schema/composition.md) : découvrez les blocs de création de base des schémas XDM, y compris les principes clés et les bonnes pratiques en matière de composition de schémas.
-   - [Tutoriel de l’éditeur de schémas](../../../../../xdm/tutorials/create-schema-ui.md): Découvrez comment créer des schémas personnalisés à l’aide de l’interface utilisateur de l’éditeur de schémas.
-- [[!DNL Real-time Customer Profile]](../../../../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
+   - [Tutoriel sur l’éditeur de schémas](../../../../../xdm/tutorials/create-schema-ui.md) : découvrez comment créer des schémas personnalisés à l’aide de l’interface utilisateur de l’éditeur de schémas.
+- [[!DNL Real-time Customer Profile]](../../../../../profile/home.md) : fournit un profil de consommateur unifié en temps réel, basé sur des données agrégées provenant de plusieurs sources.
 
 ## Ajout de données
 
@@ -105,11 +105,11 @@ Une fois votre jeu de données et votre schéma créés, la variable **[!UICONTR
 >
 >Platform fournit des recommandations intelligentes pour les champs mappés automatiquement en fonction du schéma ou du jeu de données cible que vous avez sélectionné. Vous pouvez ajuster manuellement les règles de mappage en fonction de vos cas d’utilisation.
 
-Selon vos besoins, vous pouvez choisir de mapper directement des champs ou d’utiliser des fonctions de préparation de données pour transformer les données sources afin d’obtenir des valeurs calculées ou calculées. Pour obtenir des instructions complètes sur l’utilisation de l’interface du mappeur et des champs calculés, reportez-vous à la section [Guide de l’interface utilisateur de la préparation de données](../../../../../data-prep/ui/mapping.md).
+Selon vos besoins, vous pouvez choisir de mapper directement des champs ou d’utiliser des fonctions de préparation de données pour transformer les données sources afin d’obtenir des valeurs informatisées ou calculées. Pour obtenir des instructions complètes sur l’utilisation de l’interface du mappeur et des champs calculés, reportez-vous à la section [Guide de l’interface utilisateur de la préparation de données](../../../../../data-prep/ui/mapping.md).
 
 Une fois les données source mappées, sélectionnez **[!UICONTROL Suivant]**.
 
-![mapping](../../../../images/tutorials/dataflow/cloud-storage/streaming/mapping.png)
+![mappage](../../../../images/tutorials/dataflow/cloud-storage/streaming/mapping.png)
 
 ## Détails du flux de données
 
@@ -121,7 +121,7 @@ Indiquez des valeurs pour le flux de données et sélectionnez **[!UICONTROL Sui
 
 ### Révision
 
-Le **[!UICONTROL Réviser]** s’affiche, ce qui vous permet de consulter votre nouveau flux de données avant qu’il ne soit créé. Les détails sont regroupés dans les catégories suivantes :
+L’écran de **[!UICONTROL Révision]** s’affiche, vous permettant dʼexaminer votre nouveau flux de données avant sa création. Les détails sont regroupés dans les catégories suivantes :
 
 - **[!UICONTROL Connexion]**: Affiche le nom de votre compte, le type de source et d’autres informations diverses spécifiques à la source de stockage dans le cloud de diffusion en continu que vous utilisez.
 - **[!UICONTROL Attribution de champs de jeu de données et de mappage]**: Affiche le jeu de données et le schéma cible que vous utilisez pour votre flux de données.
@@ -136,7 +136,7 @@ Une fois votre flux de données de stockage dans le cloud en continu créé, vou
 
 ## Étapes suivantes
 
-En suivant ce tutoriel, vous avez créé un flux de données pour diffuser des données à partir d’une source de stockage dans le cloud. Les données entrantes peuvent désormais être utilisées par les services Platform en aval, tels que [!DNL Real-time Customer Profile] et [!DNL Data Science Workspace]. Pour plus d’informations, consultez les documents suivants :
+En suivant ce tutoriel, vous avez créé un flux de données pour diffuser des données à partir d’une source de stockage dans le cloud. Ces données entrantes peuvent désormais être utilisées par les services de Platform en aval, comme [!DNL Real-time Customer Profile] et [!DNL Data Science Workspace]. Consultez les documents suivants pour plus d’informations :
 
 - [Présentation de [!DNL Real-time Customer Profile]](../../../../../profile/home.md)
 - [Présentation de [!DNL Data Science Workspace]](../../../../../data-science-workspace/home.md)

@@ -1,6 +1,6 @@
 ---
 title: Extensions
-description: Découvrez le fonctionnement des extensions de balises dans Adobe Experience Platform.
+description: Découvrez le fonctionnement des extensions de balises dans Adobe Experience Platform.
 exl-id: e911bedd-6c67-4339-91d7-839c8b00c153
 source-git-commit: f7edfa05e25c17f9ace34287c8a2d8426d0f36d4
 workflow-type: tm+mt
@@ -13,7 +13,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 Une extension est un jeu de codes empaqueté qui étend les fonctionnalités fournies par les balises ou le transfert dʼévénements.
 

@@ -3,7 +3,7 @@ title: Notes de mise à jour de l’extension Core
 description: Notes de mise à jour les plus récentes pour l’extension Core dans Adobe Experience Platform.
 exl-id: a049b2d5-7a00-435d-bcc7-112658a53a1e
 source-git-commit: 5441c6ca0c15996ee06afa2c795ec5ae6e030f35
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1565'
 ht-degree: 100%
 

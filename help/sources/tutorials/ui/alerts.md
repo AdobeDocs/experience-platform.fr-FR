@@ -6,7 +6,7 @@ exl-id: 5d51edaa-ecba-4ac0-8d3c-49010466b9a5
 source-git-commit: 2acb58d21952699c60471cb4f4347af89621f045
 workflow-type: tm+mt
 source-wordcount: '832'
-ht-degree: 10%
+ht-degree: 14%
 
 ---
 
@@ -22,7 +22,7 @@ Ce document décrit les étapes à suivre pour s’abonner à des messages d’a
 
 Ce document nécessite une compréhension pratique des composants suivants de Adobe Experience Platform :
 
-* [Sources](../../home.md): [!DNL Experience Platform] permet d’ingérer des données provenant de diverses sources tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide de [!DNL Platform] services.
+* [Sources ](../../home.md): [!DNL Experience Platform]permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services [!DNL Platform].
 * [Observability vous permet de surveiller les activités de Platform en utilisant des mesures statistiques et des notifications dʼévénement.](../../../observability/home.md)[!DNL Observability Insights]
    * [Alertes](../../../observability/alerts/overview.md): Lorsqu’un certain ensemble de conditions de vos opérations Platform est atteint (par exemple, un problème potentiel lorsque le système enfreint un seuil), Platform peut envoyer des messages d’alerte à tous les utilisateurs de votre organisation qui se sont abonnés à eux.
 
@@ -30,7 +30,7 @@ Ce document nécessite une compréhension pratique des composants suivants de Ad
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_alerts_subscribe"
->title="Abonnement aux alertes de sources"
+>title="S’abonner aux alertes sur les sources"
 >abstract="Les alertes vous permettent de recevoir des notifications en fonction de l’état des flux de données de vos sources. Vous pouvez définir des notifications d’alerte pour obtenir des mises à jour si votre flux de données a démarré, a réussi, a échoué ou n’a ingéré aucune donnée."
 >text="Learn more in documentation"
 
@@ -57,7 +57,7 @@ Sélectionnez les alertes auxquelles vous souhaitez vous abonner, puis sélectio
 
 Pour obtenir des instructions détaillées sur la création d’un flux de données de sources dans l’interface utilisateur, consultez les guides suivants :
 
-* [Advertising](./dataflow/advertising.md)
+* [Publicité](./dataflow/advertising.md)
 * [Stockage dans le cloud](./dataflow/batch/cloud-storage.md)
 * [CRM](./dataflow/crm.md)
 * [Base de données](./dataflow/databases.md)
@@ -103,7 +103,7 @@ Pour plus d’informations sur la gestion des erreurs de flux de données, consu
 
 Les alertes de vos flux de données vous sont également envoyées par courrier électronique. Sélectionnez le nom du flux de données dans le corps de l’email pour afficher plus d’informations sur votre flux de données.
 
-![adresse e-mail](../../images/tutorials/alerts/email.png)
+![email](../../images/tutorials/alerts/email.png)
 
 Tout comme l’alerte de l’interface utilisateur, la variable [!UICONTROL Présentation de l’exécution du flux de données] s’affiche, vous fournissant une interface permettant d’enquêter sur les erreurs associées à votre flux de données.
 

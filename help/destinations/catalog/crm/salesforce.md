@@ -2,13 +2,13 @@
 keywords: crm;CRM;destinations crm;salesforce crm;destination Salesforce crm
 title: Connexion CRM Salesforce
 description: La destination Salesforce CRM vous permet d’exporter les données de votre compte et de les activer dans Salesforce CRM pour vos besoins professionnels.
-source-git-commit: 154cca31c5b434a2f036773ef9cda088f84eb1e5
+exl-id: bd9cb656-d742-4a18-97a2-546d4056d093
+source-git-commit: 7d8b25b25b53edd7de836fc508de15cfa2a5a3a2
 workflow-type: tm+mt
 source-wordcount: '1730'
 ht-degree: 6%
 
 ---
-
 
 # Connexion [!DNL Salesforce CRM]
 
@@ -20,7 +20,7 @@ Ceci [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) 
 
 Salesforce CRM utilise OAuth 2 avec l’octroi de mot de passe comme mécanisme d’authentification pour communiquer avec l’API REST Salesforce. Les instructions d’authentification à votre instance Salesforce CRM sont présentées ci-dessous, dans la section [Authentification à la destination](#authenticate) .
 
-## Cas dʼutilisation {#use-cases}
+## Cas d&#39;utilisation {#use-cases}
 
 En tant que marketeur, vous pouvez proposer des expériences personnalisées à vos utilisateurs en fonction des attributs de leurs profils Adobe Experience Platform. Vous pouvez créer des segments à partir de vos données hors ligne et envoyer ces segments à Salesforce CRM, afin qu’ils s’affichent dans les flux des utilisateurs dès que les segments et les profils sont mis à jour dans Adobe Experience Platform.
 

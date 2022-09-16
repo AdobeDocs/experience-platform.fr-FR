@@ -1,7 +1,8 @@
 ---
 title: Groupe de champs du schéma des médicaments pour le secteur de la santé
 description: Ce document présente un aperçu du groupe de champs Schéma des médicaments pour les soins de santé .
-source-git-commit: 3b0c85eb5184dd116b1013e617cf528080fa0656
+exl-id: 3423d067-fe8c-44e5-a6f9-ce0458d26ebc
+source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
 workflow-type: tm+mt
 source-wordcount: '213'
 ht-degree: 12%

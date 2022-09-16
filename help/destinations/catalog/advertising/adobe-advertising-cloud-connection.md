@@ -19,7 +19,7 @@ La destination Adobe Advertising Cloud [!DNL Demand-Side Platform] (DSP) vous 
 >
 >Cette page a été créée par l’équipe DSP. Pour toute question ou demande de mise à jour, contactez le support Advertising Cloud directement à l’adresse `adcloud_support@adobe.com`.
 
-## Cas dʼutilisation {#use-cases}
+## Cas d&#39;utilisation {#use-cases}
 
 Pour vous aider à mieux comprendre comment et à quel moment utiliser la destination Advertising Cloud DSP, voici des exemples de cas d’utilisation que les clients Adobe Experience Platform peuvent résoudre à l’aide de cette destination.
 

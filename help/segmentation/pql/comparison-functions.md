@@ -14,11 +14,11 @@ ht-degree: 85%
 
 # Fonctions de comparaison
 
-Les fonctions de comparaison sont utilisées pour comparer les différentes expressions et valeurs, renvoyant `true` ou `false` en conséquence. Vous trouverez plus d’informations sur les autres fonctions PQL dans la [[!DNL Profile Query Language] présentation](./overview.md).
+Les fonctions de comparaison sont utilisées pour comparer les différentes expressions et valeurs, renvoyant `true` ou `false` en conséquence. Vous trouverez plus d’informations sur les autres fonctions PQL dans la section [[!DNL Profile Query Language] aperçu](./overview.md).
 
-## Est égal à
+## Égal à
 
-La fonction `=` (est égal) vérifie si une valeur ou expression est égale à une autre valeur ou expression.
+La fonction `=` (égal à) vérifie si une valeur ou expression est égale à une autre valeur ou expression.
 
 **Format**
 

@@ -8,7 +8,7 @@ exl-id: 36318163-ba07-4209-b1be-dc193ab7ba41
 source-git-commit: 8df601af88295eba10c23f455807c7d5faf644f3
 workflow-type: tm+mt
 source-wordcount: '1363'
-ht-degree: 9%
+ht-degree: 10%
 
 ---
 
@@ -92,7 +92,7 @@ When [!DNL Shared Device Detection] est activé, [!DNL Profile] définit l’ide
 
 Un **événement d’expérience authentifié** est une action effectuée par un utilisateur lorsqu’il est connecté à un appareil. Pour les événements d’expérience authentifiés, l’identité Principale est **Espace de noms d’identité utilisateur** (ID de connexion). Un **événement d’expérience non authentifié** est une action effectuée par un utilisateur qui n’est pas connecté à un appareil. Pour les événements d’expérience non authentifiés, l’identité Principale est **Espace de noms d’identité partagée** (ECID).
 
-Pour plus d’informations, voir  [[!DNL Real-time Customer Profile] aperçu](../../profile/home.md).
+Pour plus d’informations, consultez la [[!DNL Real-time Customer Profile] présentation](../../profile/home.md).
 
 ## Interface utilisateur des périphériques partagés
 

@@ -28,7 +28,7 @@ Pour les notes de mise à jour du Service d’identités d’Experience Cloud l
    * Possibilité de configurer la durée de vie de la variable `s_ecid` cookie utilisant la configuration cookieLifetime
    * Mise à jour d’un problème de navigateur Firefox qui se produit lorsqu’une page est chargée dans un iFrame enfant
 
-## 10 octobre 2021
+## 10 octobre 2021
 
 ### Extension 5.3.1 d’Experience Cloud ID
 

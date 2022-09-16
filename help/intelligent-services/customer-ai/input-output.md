@@ -9,7 +9,7 @@ exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
 source-git-commit: e0e96a52e30f5c34e0695c3e291bed9b6c085e00
 workflow-type: tm+mt
 source-wordcount: '3195'
-ht-degree: 15%
+ht-degree: 17%
 
 ---
 
@@ -287,8 +287,8 @@ Le tableau ci-dessous décrit les différents attributs trouvés dans les sortie
 >[!NOTE]
 >
 > - Customer AI utilise uniquement des données mises à jour pour suivre une formation et une notation plus poussées. De même, lorsque vous demandez la suppression de données, Customer AI s’abstient d’utiliser les données supprimées.
-> - Customer AI exploite des jeux de données Platform. Pour prendre en charge les demandes de droits des consommateurs qu’une marque peut recevoir, les marques doivent utiliser le Privacy Service Platform pour soumettre les demandes d’accès et de suppression des clients afin de supprimer leurs données dans le lac de données, Identity Service et Real-time Customer Profile.
-> - Tous les jeux de données que nous utilisons pour l’entrée/la sortie des modèles suivront les directives de Platform. Le chiffrement des données de plateforme s’applique aux données au repos et en transit. Consultez la documentation pour en savoir plus sur [cryptage des données](../../../help/landing/governance-privacy-security/encryption.md)
+> - L’IA dédiée aux clients utilise les jeux de données Platform. Pour prendre en charge les demandes de droits des consommateurs qu’une marque peut recevoir, les marques doivent utiliser le Privacy Service Platform pour soumettre les demandes d’accès et de suppression des clients afin de supprimer leurs données dans le lac de données, Service d’identités et Profil client en temps réel.
+> - Tous les jeux de données que nous utilisons pour l’entrée/la sortie des modèles suivront les directives de Platform. Le chiffrement des données de Platform s’applique aux données au repos et en transit. Consultez la documentation pour en savoir plus sur le [chiffrement des données](../../../help/landing/governance-privacy-security/encryption.md)
 
 
 ## Étapes suivantes {#next-steps}

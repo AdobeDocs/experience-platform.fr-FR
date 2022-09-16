@@ -20,7 +20,7 @@ ht-degree: 12%
 
 Pour envoyer des données de profil à [!DNL Trade Desk], vous devez d’abord vous connecter à la destination.
 
-## Cas dʼutilisation {#use-cases}
+## Cas d&#39;utilisation {#use-cases}
 
 En tant que marketeur, je souhaite pouvoir utiliser des segments reposant sur [!DNL Trade Desk IDs] ou des identifiants d’appareil pour créer un reciblage ou des campagnes numériques ciblées.
 

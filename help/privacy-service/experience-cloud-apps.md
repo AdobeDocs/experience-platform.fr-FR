@@ -51,7 +51,7 @@ Voici une liste de [!DNL Experience Cloud] applications qui ne sont pas intégr�
 
 | Application | Description de la documentation |
 | ------- | ----------- |
-| [Adobe Campaign Classic](https://experienceleague.adobe.com/docs/campaign-classic/using/getting-started/privacy/privacy-management.html) | Présentation des fonctionnalités relatives au RGPD pour Adobe Campaign Classic. |
+| [Adobe Campaign Classic](https://experienceleague.adobe.com/docs/campaign-classic/using/getting-started/privacy/privacy-management.html?lang=fr) | Présentation des fonctionnalités relatives au RGPD pour Adobe Campaign Classic. |
 | [Adobe Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-64/managing/data-protection/data-protection-and-privacy.html) | Présentation de la gestion des requêtes RGPD par l’administrateur de la confidentialité client ou l’administrateur AEM. |
 | [Adobe Experience Manager Livefyre](https://experienceleague.adobe.com/docs/livefyre/using/settings-other/privacy-requests/c-gdpr-compliance.html) | Étapes pour créer des requêtes RGPD d’accès et de suppression à l’aide de Livefyre. |
 | [Magento](https://devdocs.magento.com/compliance/industry-compliance.html) | Assurez-vous que vos installations de Magento Commerce sont conformes aux exigences des législations spécifiques sur la confidentialité. |

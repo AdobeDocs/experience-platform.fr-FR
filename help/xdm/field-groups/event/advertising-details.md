@@ -1,7 +1,8 @@
 ---
 title: Groupe de champs de schéma des détails de publicité
 description: Ce document fournit un aperçu du groupe de champs de schéma Détails de publicité .
-source-git-commit: 77fb3e348c2298fc5c325fcf2d3408da084b2b19
+exl-id: 25de09bd-eedd-489c-9cd5-8acd0c52ddbe
+source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
 workflow-type: tm+mt
 source-wordcount: '1016'
 ht-degree: 22%

@@ -1,6 +1,6 @@
 ---
 title: Téléchargement et implémentation de tests de bout en bout pour une extension
-description: Découvrez comment valider, télécharger et tester votre extension dans Adobe Experience Platform.
+description: Découvrez comment valider, télécharger et tester votre extension dans Adobe Experience Platform.
 exl-id: 6176a9e1-fa06-447e-a080-42a67826ed9e
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
@@ -13,9 +13,9 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
-Pour tester les extensions de balises dans Adobe Experience Platform, utilisez l’API des balises et/ou les outils de ligne de commande pour télécharger vos packages d’extension. Ensuite, utilisez l’interface utilisateur de la collecte de données pour installer votre package d’extension sur une propriété et exercer ses fonctionnalités dans une bibliothèque de balises et une version.
+Pour tester les extensions de balises dans Adobe Experience Platform, utilisez lʼAPI des balises et/ou les outils de ligne de commande pour télécharger vos packages dʼextension. Ensuite, utilisez l’interface utilisateur de la collecte de données pour installer votre package d’extension sur une propriété et exercer ses fonctionnalités dans une bibliothèque de balises et une version.
 
 Ce document explique comment mettre en œuvre des tests de bout en bout pour votre extension.
 
@@ -39,11 +39,11 @@ Le fichier de logo en est un exemple précis : ajoutez une ligne `"iconPath": "
 
 Pour utiliser l’API ou les outils de ligne de commande, vous avez besoin d’un compte technique avec Adobe I/O. Vous devez créer ce compte technique dans la console I/O, puis utiliser l’outil de téléchargement pour télécharger le package d’extension.
 
-Pour plus d’informations sur la création d’un compte technique à utiliser avec les balises dans Adobe Experience Platform, reportez-vous au guide [Jetons d’accès](https://developer.adobelaunch.com/api/guides/access_tokens/).
+Pour plus dʼinformations sur la création dʼun compte technique à utiliser avec les balises dans Adobe Experience Platform, reportez-vous au guide [Jetons dʼaccès](https://developer.adobelaunch.com/api/guides/access_tokens/).
 
 >[!IMPORTANT]
 >
->Pour créer une intégration dans Adobe I/O, vous devez être un administrateur d’organisation Experience Cloud ou un développeur d’organisation Experience Cloud.
+>Pour créer une intégration dans Adobe I/O, vous devez être un administrateur d’organisation Experience Cloud ou un développeur d’organisation Experience Cloud.
 
 Si vous ne pouvez pas créer d’intégration, il est probable que vous ne disposiez pas des autorisations appropriées. Un administrateur de l’organisation doit alors terminer les étapes pour vous ou vous devez être affecté en tant que développeur.
 
@@ -128,7 +128,7 @@ Vous devriez maintenant voir l’écran des extensions **Installées** avec l’
 
 ## Créer des ressources pour tester votre extension {#resources}
 
-Les extensions offrent de nouvelles fonctionnalités aux utilisateurs d’Adobe Experience Platform. Celles-ci sont généralement affichées dans les éléments de données ou le créateur de règles.
+Les extensions offrent de nouvelles fonctionnalités aux utilisateurs dʼAdobe Experience Platform. Celles-ci sont généralement affichées dans les éléments de données ou le créateur de règles.
 
 ### Éléments de données
 

@@ -10,7 +10,7 @@ exl-id: 514b73cd-d1f1-472d-8021-ecfb2abeb411
 source-git-commit: f12baaa9d4b37f1101792a4ae479b5a62893eb68
 workflow-type: tm+mt
 source-wordcount: '118'
-ht-degree: 0%
+ht-degree: 15%
 
 ---
 
@@ -20,7 +20,7 @@ Cette vidéo présente brièvement l’interface utilisateur de Adobe Experience
 
 >[!NOTE]
 >
->L’interface utilisateur de l’Experience Platform est fréquemment mise à jour et peut avoir changé depuis l’enregistrement de cette vidéo. Pour obtenir les informations les plus récentes, consultez le [guide de l’interface utilisateur de Adobe Experience Platform](../ui-guide.md).
+>L’interface utilisateur d’Experience Platform est fréquemment mise à jour et peut avoir changé depuis l’enregistrement de cette vidéo. Pour obtenir les informations les plus récentes, veuillez consulter le [Guide de l’interface utilisateur de Adobe Experience Platform](../ui-guide.md).
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/32792?quality=12&learn=on)

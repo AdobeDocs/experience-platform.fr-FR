@@ -11,7 +11,7 @@ ht-degree: 100%
 
 # ID de descripteur de délégué
 
-Lors de l’utilisation de balises dans Adobe Experience Platform, toutes les fonctionnalités que vous pouvez déployer sur votre site sont fournies par des extensions. Les fonctionnalités fournies par chaque extension sont définies par le développeur de l’extension. Lorsqu’une extension est déployée, elle est groupée avec ses différentes fonctionnalités sous la forme d’un [package d’extension](../endpoints/extension-packages.md). Les fonctionnalités que les développeurs ajoutent à un package d’extension sont considérées comme des « délégués » de ce package.
+Lors de l’utilisation des balises dans Adobe Experience Platform, toutes les fonctionnalités que vous pouvez déployer sur votre site sont fournies par des extensions. Les fonctionnalités fournies par chaque extension sont définies par le développeur de l’extension. Lorsqu’une extension est déployée, elle est groupée avec ses différentes fonctionnalités sous la forme d’un [package d’extension](../endpoints/extension-packages.md). Les fonctionnalités que les développeurs ajoutent à un module d’extension sont considérées comme des « délégués » de ce module.
 
 Chaque délégué de package d’extension reçoit un ID de descripteur de délégué unique. L’ID de descripteur de délégué d’une ressource spécifique indique au système de quel type de ressource il s’agit, ainsi qu’à quel package d’extension elle appartient.
 

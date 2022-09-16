@@ -6,7 +6,7 @@ exl-id: 32f51761-5de3-4192-8f23-c1412ca12c08
 source-git-commit: a278f27223c9a5d0b97a0aa6b5d943caf5f6b10e
 workflow-type: tm+mt
 source-wordcount: '565'
-ht-degree: 7%
+ht-degree: 14%
 
 ---
 
@@ -36,7 +36,7 @@ Les tableaux ci-dessous contiennent les mappages entre les [!DNL Microsoft Dynam
 | `"Dynamics"` | `b2b.personKey.sourceType` |
 | `"${CRM_ORG_ID}"` | `b2b.personKey.sourceInstanceID` | La valeur de `"${CRM_ORG_ID}"` sera automatiquement remplacé. |
 | `contactid` | `b2b.personKey.sourceID` |
-| `concat(contactid,"@${CRM_ORG_ID}.Dynamics")` | `b2b.personKey.sourceKey` | Identité Principal. La valeur de `"${CRM_ORG_ID}"` sera automatiquement remplacé. |
+| `concat(contactid,"@${CRM_ORG_ID}.Dynamics")` | `b2b.personKey.sourceKey` | Identité principale. La valeur de `"${CRM_ORG_ID}"` sera automatiquement remplacé. |
 | `iif(contactid != null && contactid != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", contactid, "sourceKey", concat(contactid,"@${CRM_ORG_ID}.Dynamics")), null)` | `personComponents.sourcePersonKey` |
 | `department` | `extendedWorkDetails.departments` |
 | `fullname` | `person.name.fullName` |
@@ -89,7 +89,7 @@ Les tableaux ci-dessous contiennent les mappages entre les [!DNL Microsoft Dynam
 | `"Dynamics"` | `b2b.personKey.sourceType` |
 | `"${CRM_ORG_ID}"` | `b2b.personKey.sourceInstanceID` | La valeur de `"${CRM_ORG_ID}"` sera automatiquement remplacé. |
 | `leadid` | `b2b.personKey.sourceID` |
-| `concat(leadid,"@${CRM_ORG_ID}.Dynamics")` | `b2b.personKey.sourceKey` | Identité Principal. La valeur de `"${CRM_ORG_ID}"` sera automatiquement remplacé. |
+| `concat(leadid,"@${CRM_ORG_ID}.Dynamics")` | `b2b.personKey.sourceKey` | Identité principale. La valeur de `"${CRM_ORG_ID}"` sera automatiquement remplacé. |
 | `iif(leadid != null && leadid != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", leadid, "sourceKey", concat(leadid,"@${CRM_ORG_ID}.Dynamics")), null)` | `personComponents.sourcePersonKey` |
 | `middlename` | `person.name.middleName` |
 | `mobilephone` | `mobilePhone.number` |
@@ -104,7 +104,7 @@ Les tableaux ci-dessous contiennent les mappages entre les [!DNL Microsoft Dynam
 | --- | --- | --- |
 | `"Dynamics"` | `accountKey.sourceType` |
 | `"${CRM_ORG_ID}"` | `accountKey.sourceInstanceID` | La valeur de `"${CRM_ORG_ID}"` sera automatiquement remplacé. |
-| `accountid` | `accountKey.sourceID` | Identité Principal. La valeur de `"${CRM_ORG_ID}"` sera automatiquement remplacé. |
+| `accountid` | `accountKey.sourceID` | Identité principale. La valeur de `"${CRM_ORG_ID}"` sera automatiquement remplacé. |
 | `accountnumber` | `accountNumber` |
 | `accountratingcode` | `accountOrganization.rating` |
 | `address1_addressid` | `accountPhysicalAddress._id` |
@@ -153,7 +153,7 @@ Les tableaux ci-dessous contiennent les mappages entre les [!DNL Microsoft Dynam
 | `estimatedvalue` | `expectedRevenue.amount` |
 | `modifiedon` | `extSourceSystemAudit.lastUpdatedDate` |
 | `opportunityid` | `opportunityKey.sourceID` |
-| `concat(opportunityid,"@${CRM_ORG_ID}.Dynamics")` | `opportunityKey.sourceKey` | Identité Principal. La valeur de `"${CRM_ORG_ID}"` sera automatiquement remplacé. |
+| `concat(opportunityid,"@${CRM_ORG_ID}.Dynamics")` | `opportunityKey.sourceKey` | Identité principale. La valeur de `"${CRM_ORG_ID}"` sera automatiquement remplacé. |
 | `salesstage` | `opportunityStage` |
 | `stepname` | `nextStep` |
 
@@ -166,7 +166,7 @@ Les tableaux ci-dessous contiennent les mappages entre les [!DNL Microsoft Dynam
 | `"Dynamics"` | `opportunityPersonKey.sourceType` |
 | `"${CRM_ORG_ID}"` | `opportunityPersonKey.sourceInstanceID` | La valeur de `"${CRM_ORG_ID}"` sera automatiquement remplacé. |
 | `connectionid` | `opportunityPersonKey.sourceID` |
-| `concat(connectionid,"@${CRM_ORG_ID}.Dynamics")` | `opportunityPersonKey.sourceKey` | Identité Principal. La valeur de `"${CRM_ORG_ID}"` sera automatiquement remplacé. |
+| `concat(connectionid,"@${CRM_ORG_ID}.Dynamics")` | `opportunityPersonKey.sourceKey` | Identité principale. La valeur de `"${CRM_ORG_ID}"` sera automatiquement remplacé. |
 | `createdon` | `extSourceSystemAudit.createdDate` |
 | `modifiedon` | `extSourceSystemAudit.lastUpdatedDate` |
 | `iif(record1id != null && record1id != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", record1id, "sourceKey", concat(record1id,"@${CRM_ORG_ID}.Dynamics")), null)` | `opportunityKey` |
@@ -183,7 +183,7 @@ Les tableaux ci-dessous contiennent les mappages entre les [!DNL Microsoft Dynam
 | --- | --- | --- |
 | `campaignid` | `campaignKey.sourceID` |
 | `"${CRM_ORG_ID}"` | `campaignKey.sourceInstanceID` | La valeur de `"${CRM_ORG_ID}"` sera automatiquement remplacé. |
-| `concat(campaignid,"@${CRM_ORG_ID}.Dynamics")` | `campaignKey.sourceKey` | Identité Principal. La valeur de `"${CRM_ORG_ID}"` sera automatiquement remplacé. |
+| `concat(campaignid,"@${CRM_ORG_ID}.Dynamics")` | `campaignKey.sourceKey` | Identité principale. La valeur de `"${CRM_ORG_ID}"` sera automatiquement remplacé. |
 | `"Dynamics"` | `campaignKey.sourceType` |
 | `iif(campaignid != null && campaignid != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", campaignid, "sourceKey", concat(campaignid,"@${CRM_ORG_ID}.Dynamics")), null)` | `extSourceSystemAudit.externalKey` | Le `extSourceSystemAudit.externalKey` est l’identité secondaire. La valeur de `"${CRM_ORG_ID}"` sera automatiquement remplacé. |
 | `createdon` | `extSourceSystemAudit.createdDate` |
@@ -211,7 +211,7 @@ Les tableaux ci-dessous contiennent les mappages entre les [!DNL Microsoft Dynam
 | `description` | `marketingListDescription` |
 | `listname` | `marketingListName` |
 | `listid` | `marketingListKey.sourceID` |
-| `concat(listid,"@${CRM_ORG_ID}.Dynamics")` | `marketingListKey.sourceKey` | Identité Principal. La valeur de `"${CRM_ORG_ID}"` sera automatiquement remplacé. |
+| `concat(listid,"@${CRM_ORG_ID}.Dynamics")` | `marketingListKey.sourceKey` | Identité principale. La valeur de `"${CRM_ORG_ID}"` sera automatiquement remplacé. |
 | `modifiedon` | `extSourceSystemAudit.lastUpdatedDate` |
 | `createdon` | `extSourceSystemAudit.createdDate` |
 
@@ -225,7 +225,7 @@ Les tableaux ci-dessous contiennent les mappages entre les [!DNL Microsoft Dynam
 | `"${CRM_ORG_ID}"` | `marketingListMemberKey.sourceInstanceID` | La valeur de `"${CRM_ORG_ID}"` sera automatiquement remplacé. |
 | `iif(entityid != null && entityid != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", entityid, "sourceKey", concat(entityid,"@${CRM_ORG_ID}.Dynamics")), null)` | `personKey` |
 | `listmemberid` | `marketingListMemberKey.sourceID` |
-| `concat(listmemberid,"@${CRM_ORG_ID}.Dynamics")` | `marketingListMemberKey.sourceKey` | Identité Principal. La valeur de `"${CRM_ORG_ID}"` sera automatiquement remplacé. |
+| `concat(listmemberid,"@${CRM_ORG_ID}.Dynamics")` | `marketingListMemberKey.sourceKey` | Identité principale. La valeur de `"${CRM_ORG_ID}"` sera automatiquement remplacé. |
 | `iif(listid != null && listid != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", listid, "sourceKey", concat(listid,"@${CRM_ORG_ID}.Dynamics")), null)` | `marketingListKey` |
 | `createdon` | `extSourceSystemAudit.createdDate` |
 

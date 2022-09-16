@@ -1,16 +1,17 @@
 ---
 title: Groupe de champs de schéma de détails de mise à niveau
 description: Ce document présente un aperçu du groupe de champs Détails de la mise à niveau .
-source-git-commit: 4a74faad811d9b13f93799686df44f04a8d1b784
+exl-id: 6b69805d-03bc-489b-945a-03e61b99842e
+source-git-commit: afdac5ce2ed967b4688d456a586c946bc2cf4179
 workflow-type: tm+mt
 source-wordcount: '154'
 ht-degree: 5%
 
 ---
 
-# [!UICONTROL Groupe de champs ] Détails du schéma de mise à niveau
+# [!UICONTROL Détails de la mise à niveau] groupe de champs de schéma
 
- Détails de la mise à niveau : groupe de champs de schéma standard pour la  [[!DNL XDM ExperienceEvent] ](../../classes/experienceevent.md) classe afin de capturer des informations concernant un événement marketing de mise à niveau, y compris des détails sur la transaction et les différentes manières dont l’offre s’affichait pour un client.
+[!UICONTROL Détails de la mise à niveau] est un groupe de champs de schéma standard pour la variable [[!DNL XDM ExperienceEvent] class](../../classes/experienceevent.md) utilisé pour capturer des informations concernant un événement marketing de vente incitative, notamment des détails sur la transaction et les différentes manières dont l’offre s’affichait pour un client.
 
 Le groupe de champs fournit un champ de type objet unique, `upsells`. Les propriétés contenues dans cet objet sont expliquées ci-dessous.
 

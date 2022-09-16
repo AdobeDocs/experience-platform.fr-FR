@@ -7,7 +7,7 @@ type: Tutorial
 description: Découvrez comment créer un connecteur source Google PubSub à l’aide de l’interface utilisateur de Platform.
 exl-id: fb8411f2-ccae-4bb5-b1bf-52b1144534ed
 source-git-commit: da7b6fe8f9d274b8e5f27138a1baf8caf63a0c01
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '493'
 ht-degree: 100%
 
@@ -57,9 +57,9 @@ La page **[!UICONTROL Connexion à Google PubSub]** s’affiche. Sur cette page
 
 ### Compte existant
 
-Pour utiliser un compte existant, sélectionnez le compte [!DNL PubSub] avec lequel vous souhaitez créer un flux de données, puis cliquez sur **[!UICONTROL Suivant]** pour continuer.
+Pour utiliser un compte existant, sélectionnez le compte [!DNL PubSub] avec lequel vous souhaitez créer un flux de données, puis sélectionnez **[!UICONTROL Suivant]** pour continuer.
 
-![existing](../../../../images/tutorials/create/google-pubsub/existing.png)
+![existant](../../../../images/tutorials/create/google-pubsub/existing.png)
 
 ### Nouveau compte
 

@@ -15,7 +15,7 @@ ht-degree: 96%
 # Contrôle d&#39;accès {#access-control}
 
 * [Présentation du contrôle d’accès](home.md)
-* Contrôle d’accès basé sur les attributs {#abac}
+* Contrôle d’accès basé sur attribut {#abac}
    * [Présentation](abac/overview.md)
    * Autorisations {#permissions-ui}
       * [Parcourir](abac/ui/browse.md)

@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Création d’une connexion en continu à l’aide de l’interface utilisateur
 topic-legacy: tutorial
 type: Tutorial
-description: Ce guide de l’interface utilisateur vous aidera à créer une connexion en continu à l’aide d’Adobe Experience Platform.
+description: Ce guide de l’interface utilisateur vous aidera à créer une connexion en continu à l’aide d’Adobe Experience Platform.
 exl-id: af485890-61b1-4c83-8af9-a55e8ed6d69a
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
@@ -15,8 +15,8 @@ ht-degree: 56%
 
 # Création d’une connexion en continu à l’aide de l’interface utilisateur
 
-Pour commencer à diffuser des données en continu vers [!DNL Experience Platform], vous devez d’abord créer une connexion HTTP en continu. Lors de la création d’une connexion en continu, vous devez fournir des détails clés, tels que la source des données en flux continu, et indiquer si vous prévoyez d’envoyer des données à partir d’une source approuvée (authentifiée) ou non approuvée (non authentifiée).
+Pour commencer la diffusion en continu de données vers [!DNL Experience Platform], vous devez d’abord créer une connexion HTTP en continu. Lors de la création d’une connexion en continu, vous devez fournir des détails clés, tels que la source des données en flux continu, et indiquer si vous prévoyez d’envoyer des données à partir d’une source approuvée (authentifiée) ou non approuvée (non authentifiée).
 
 Après avoir enregistré une connexion en continu, vous disposerez d’une URL unique avec laquelle vous pourrez transmettre des données en continu à [!DNL Platform].
 
-Pour savoir comment créer une connexion en continu, consultez le [guide de l’interface utilisateur de la source de l’API HTTP](../../sources/tutorials/ui/create/streaming/http.md).
+Pour savoir comment créer une connexion en continu, veuillez lire le [Guide de l’interface utilisateur source de l’API HTTP](../../sources/tutorials/ui/create/streaming/http.md).

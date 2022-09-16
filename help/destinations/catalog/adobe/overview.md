@@ -6,7 +6,7 @@ exl-id: 15a22a93-b4d6-4b94-bc6c-3634920c7689
 source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
 workflow-type: tm+mt
 source-wordcount: '218'
-ht-degree: 27%
+ht-degree: 32%
 
 ---
 
@@ -29,14 +29,14 @@ Pour comprendre la différence entre les connexions et les extensions, voir [Con
 
 ### Extensions
 
-* [Extension Adobe Advertising Cloud](../advertising/adobe-advertising-cloud.md)
-* [Extension Adobe Analytics](../analytics/adobe-analytics.md)
+* [Extension Adobe Advertising Cloud](../advertising/adobe-advertising-cloud.md)
+* [Extension Adobe Analytics](../analytics/adobe-analytics.md)
 * [Extension Adobe Livefyre](../social/adobe-livefyre.md)
-* [Extension Adobe Media Analytics for Audio and Video](../analytics/adobe-video-analytics.md)
-* [Extension Adobe Target](../personalization/adobe-target.md)
-* [Extension Adobe Target v2](../personalization/adobe-target-v2.md)
-* [Extension Audience Manager DIL](../data-management/aam-dil-extension.md)
-* [Extension du service Experience Cloud ID](../personalization/adobe-ecid.md)
+* [Extension Adobe Media Analytics for Audio and Video](../analytics/adobe-video-analytics.md)
+* [Extension Adobe Target](../personalization/adobe-target.md)
+* [Extension Adobe Target v2](../personalization/adobe-target-v2.md)
+* [Extension Audience Manager DIL](../data-management/aam-dil-extension.md)
+* [Extension du service Experience Cloud ID](../personalization/adobe-ecid.md)
 * [Extension Marketo](../email/marketo.md)
 * [Extension Marketo Munchkin](../email/marketo-munchkin.md)
 * [Extension Marketo Web Personalization](../personalization/marketo-web-personalization.md)

@@ -13,13 +13,13 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 Dans le contexte d’une règle, une condition est évaluée une fois qu’un événement s’est produit. Toutes les conditions doivent renvoyer la valeur vraie pour que la règle continue son traitement. Une exception survient lorsque les utilisateurs placent explicitement des conditions dans un compartiment « exception », auquel cas toutes les conditions du compartiment doivent renvoyer la valeur false pour que la règle puisse continuer le traitement.
 
 Par exemple, une extension peut fournir un type de condition « viewport contains » dans lequel l’utilisateur peut spécifier un sélecteur CSS. Lorsque la condition est évaluée sur le site web du client, l’extension peut trouver des éléments correspondant au sélecteur CSS et renvoyer si la fenêtre d’affichage de l’utilisateur contient l’un d’entre eux.
 
-Ce document explique comment définir des types de conditions pour une extension web dans Adobe Experience Platform.
+Ce document explique comment définir des types de conditions pour une extension web dans Adobe Experience Platform.
 
 >[!NOTE]
 >
@@ -42,7 +42,7 @@ module.exports = function(settings) {
 };
 ```
 
-Maintenant, imaginez une situation où vous souhaitez rendre le nom d’hôte configurable par l’utilisateur Adobe Experience Platform Vous pouvez autoriser l’utilisateur à saisir un nom d’hôte, puis enregistrer ce dernier dans l’objet settings. L’objet pourrait ressembler à ceci :
+Maintenant, imaginez une situation où vous souhaitez rendre le nom d’hôte configurable par l’utilisateur Adobe Experience Platform Vous pouvez autoriser l’utilisateur à saisir un nom d’hôte, puis enregistrer ce dernier dans l’objet settings. L’objet pourrait ressembler à ceci :
 
 ```js
 {

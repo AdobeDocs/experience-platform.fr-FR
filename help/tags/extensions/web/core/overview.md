@@ -3,7 +3,7 @@ title: Présentation de l’extension Core
 description: Découvrez lʼextension de balise Core dans Adobe Experience Platform.
 exl-id: 841f32ad-a6a8-49fb-a131-ef4faab47187
 source-git-commit: 04404ff9ab8d623214b96ec65342d2e8d11e85a6
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '5492'
 ht-degree: 100%
 
@@ -544,7 +544,7 @@ Indiquez le pourcentage de fois où la condition renvoie true (vrai).
 
 Cette section décrit les types d’actions disponibles dans l’extension Core.
 
-### Custom Code
+### Code personnalisé
 
 >[!NOTE]
 >
@@ -592,7 +592,7 @@ Lorsque l’option « Run rule components in sequence » des paramètres de pr
 
 *JavaScript*
 
-Lors de la création d’une action Custom Code JavaScript, vous pouvez renvoyer une [promesse](https://developer.mozilla.org/fr-FR/docs/Web/JavaScript/Reference/Global_Objects/Promise) depuis votre action. L’action suivante de la règle sera exécutée uniquement lorsque la promesse renvoyée sera résolue. Si la promesse est refusée, les actions suivantes de la règle ne seront pas exécutées.
+Lors de la création d’une action Custom Code JavaScript, vous pouvez renvoyer une [promesse](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) depuis votre action. L’action suivante de la règle sera exécutée uniquement lorsque la promesse renvoyée sera résolue. Si la promesse est refusée, les actions suivantes de la règle ne seront pas exécutées.
 
 >[!NOTE]
 >
@@ -799,7 +799,7 @@ Vous pouvez sélectionner l’un des attributs de page suivants à utiliser dans
 * URL
 * Hostname
 * Pathname
-* Protocol
+* Protocole
 * Référent
 * Title
 

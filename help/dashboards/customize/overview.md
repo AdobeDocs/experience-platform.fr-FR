@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform;interface utilisateur;UI;tableaux de bord;tableau de bord;profils;segments;destinations
+keywords: Experience Platform;interface utilisateur;UI;tableaux de bord;tableau de bord;profils;segments;destinations
 title: Présentation de la personnalisation des tableaux de bord
-description: Découvrez comment personnaliser les données affichées dans vos tableaux de bord Adobe Experience Platform.
+description: Découvrez comment personnaliser les données affichées dans vos tableaux de bord Adobe Experience Platform.
 exl-id: efabdb61-4148-4b0e-b7a1-6e788b5e43a8
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
@@ -12,7 +12,7 @@ ht-degree: 100%
 
 # Présentation de la personnalisation des tableaux de bord
 
-Les tableaux de bord des profils, des segments et des destinations disponibles dans Adobe Experience Platform peuvent être personnalisés de plusieurs manières. Ce guide fournit un aperçu des personnalisations disponibles, des liens vers des instructions étape par étape vous guidant sur la manière de personnaliser les widgets affichés dans vos tableaux de bord, ainsi que la taille, la forme et lʼemplacement de ces widgets.
+Les tableaux de bord des profils, des segments et des destinations disponibles dans Adobe Experience Platform peuvent être personnalisés de plusieurs manières. Ce guide fournit un aperçu des personnalisations disponibles, des liens vers des instructions étape par étape vous guidant sur la manière de personnaliser les widgets affichés dans vos tableaux de bord, ainsi que la taille, la forme et lʼemplacement de ces widgets.
 
 >[!NOTE]
 >
@@ -24,7 +24,7 @@ Sélectionnez **[!UICONTROL Modifier le tableau de bord]** dans les tableaux de 
 
 ## Bibliothèque de widgets
 
-Dans la bibliothèque de widgets dʼExperience Platform, vous pouvez afficher tous les widgets [standard](#standard-widgets) et [personnalisés](#custom-widgets) disponibles pour votre organisation. Dans vos tableaux de bord (par exemple, le tableau de bord des profils), vous pouvez sélectionner **[!UICONTROL Modifier le tableau de bord]** afin dʼafficher le bouton **[!UICONTROL Bibliothèque de widgets]**.
+Dans la bibliothèque de widgets dʼExperience Platform, vous pouvez afficher tous les widgets [standard](#standard-widgets) et [personnalisés](#custom-widgets) disponibles pour votre organisation. Dans vos tableaux de bord (par exemple, le tableau de bord des profils), vous pouvez sélectionner **[!UICONTROL Modifier le tableau de bord]** afin dʼafficher le bouton **[!UICONTROL Bibliothèque de widgets]**.
 
 ![](../images/customization/modify-dashboard.png)
 
@@ -54,4 +54,4 @@ Pour obtenir des instructions détaillées sur la modification du schéma de vot
 
 ## Étapes suivantes
 
-Après la lecture de ce document, vous êtes prêt à commencer à personnaliser vos tableaux de bord Experience Platform en modifiant la taille, la forme et lʼordre des widgets existants, en ajoutant des widgets standard fournis par Adobe ou en créant et en partageant des widgets personnalisés avec votre organisation.
+Après la lecture de ce document, vous êtes prêt à commencer à personnaliser vos tableaux de bord Experience Platform en modifiant la taille, la forme et lʼordre des widgets existants, en ajoutant des widgets standard fournis par Adobe ou en créant et en partageant des widgets personnalisés avec votre organisation.

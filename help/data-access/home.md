@@ -1,9 +1,9 @@
 ---
-keywords: Experience Platform;accueil;rubriques populaires;accès aux données;sdk python;sdk spark;api data access
+keywords: Experience Platform;accueil;rubriques populaires;accès aux données;sdk python;sdk spark;api data access
 solution: Experience Platform
 title: Présentation de Data Access
 topic-legacy: overview
-description: Data Access prend en charge Adobe Experience Platform en fournissant aux utilisateurs des outils axés sur la découverte et lʼaccessibilité des jeux de données Platform ingérés.
+description: Data Access prend en charge Adobe Experience Platform en fournissant aux utilisateurs des outils axés sur la découverte et lʼaccessibilité des jeux de données Platform ingérés.
 exl-id: 76e3585b-44df-412e-9ac3-aeca5f85d403
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
@@ -14,9 +14,9 @@ ht-degree: 100%
 
 # Présentation d’[!DNL Data Access]
 
-[!DNL Data Access] prend en charge Adobe Experience Platform en fournissant aux utilisateurs des outils axés sur la découverte et lʼaccessibilité des jeux de données ingérés dans [!DNL Experience Platform].
+[!DNL Data Access] prend en charge Adobe Experience Platform en fournissant aux utilisateurs des outils axés sur la découverte et lʼaccessibilité des jeux de données ingérés dans [!DNL Experience Platform].
 
-![Data Access sur Experience Platform](images/Data_Access_Experience_Platform.png)
+![Data Access sur Experience Platform](images/Data_Access_Experience_Platform.png)
 
 ## [!DNL Data Access] API
 
