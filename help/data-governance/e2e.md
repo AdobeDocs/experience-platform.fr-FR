@@ -1,9 +1,9 @@
 ---
 title: Guide de bout en bout de la gouvernance des données
 description: Suivez le processus complet pour appliquer des contraintes d’utilisation des données pour les champs et les jeux de données dans Adobe Experience Platform.
-source-git-commit: 415300f6338eb485b8dead307f3e6a5b2d5d8b22
+source-git-commit: c8b2dba9b1e305f826830b8341bf1a6dde4e2da2
 workflow-type: tm+mt
-source-wordcount: '1449'
+source-wordcount: '1447'
 ht-degree: 2%
 
 ---
@@ -111,7 +111,7 @@ Dans l’écran suivant, sélectionnez les actions marketing pour lesquelles cet
 
 ![Image montrant une action marketing affectée à une stratégie dans l’interface utilisateur](./images/e2e/select-marketing-action.png)
 
-Le dernier écran affiche un résumé des détails de la stratégie et des actions qu’elle restreint pour les libellés. Sélectionner **[!UICONTROL Terminer]** pour créer et activer la stratégie.
+Le dernier écran affiche un résumé des détails de la stratégie et des actions qu’elle restreint pour les libellés. Sélectionner **[!UICONTROL Terminer]** pour créer la stratégie.
 
 ![Image montrant la confirmation de la configuration de la stratégie dans l’interface utilisateur](./images/e2e/confirm-policy.png)
 
