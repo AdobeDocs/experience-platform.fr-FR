@@ -4,10 +4,10 @@ title: Guide de bout en bout du contrôle d’accès basé sur les attributs
 description: Ce document fournit un guide de bout en bout sur le contrôle d’accès basé sur les attributs dans Adobe Experience Platform.
 hide: true
 hidefromtoc: true
-source-git-commit: 440176ea1f21db3c7c4b3572fb52771dc70c80a0
+source-git-commit: f7a8f9a5eb0ef3c961f9524057ff01564f88dec3
 workflow-type: tm+mt
-source-wordcount: '1612'
-ht-degree: 9%
+source-wordcount: '2218'
+ht-degree: 7%
 
 ---
 
@@ -58,6 +58,35 @@ Une fois que vous disposez des droits d’administrateur, accédez à [Adobe Exp
 L’espace de travail Autorisations de l’interface utilisateur de Platform s’affiche, s’ouvrant sur la fenêtre **[!UICONTROL Rôles]** page.
 
 ## Application d’étiquettes à un rôle {#label-roles}
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_labels_about"
+>title="Que sont les étiquettes ?"
+>abstract="Les libellés vous permettent de classer les jeux de données et les champs en fonction des stratégies d’utilisation qui s’appliquent à ces données. Platform fournit plusieurs libellés d’utilisation des données &quot;de base&quot; définis par l’Adobe, qui couvrent un large éventail de restrictions courantes applicables à la gouvernance des données. Par exemple, les étiquettes Sensibles &quot;S&quot; telles que RHD (données d’intégrité réglementées) vous permettent de catégoriser les données qui font référence aux informations d’intégrité protégées (PHI). Vous pouvez également définir vos propres étiquettes personnalisées qui répondent aux besoins de votre entreprise."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=en#understanding-data-usage-labels" text="Présentation des libellés d’utilisation des données"
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_labels_about_create"
+>title="Créer un libellé"
+>abstract="Vous pouvez créer vos propres étiquettes personnalisées en fonction des besoins de votre entreprise. Les étiquettes personnalisées peuvent être utilisées pour appliquer à vos données des configurations de gouvernance des données et de contrôle d’accès."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=en#manage-labels" text="Gestion des libellés personnalisés"
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_roles_about"
+>title="Quels sont les rôles ?"
+>abstract="Les rôles sont des moyens de catégoriser les types d’utilisateurs qui interagissent avec votre instance Platform et sont des blocs élémentaires des stratégies de contrôle d’accès. Un rôle possède un ensemble donné d’autorisations et les membres de votre organisation peuvent être affectés à un ou plusieurs rôles, selon la portée de l’accès en lecture ou en écriture dont ils ont besoin."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=en" text="Gestion des rôles"
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_roles_about_create"
+>title="Créer un nouveau rôle"
+>abstract="Vous pouvez créer un nouveau rôle pour mieux classer les utilisateurs qui accèdent à votre instance Platform. Par exemple, vous pouvez créer un rôle pour une équipe de marketing interne et appliquer le libellé du RHD à ce rôle, ce qui permettra à votre équipe de marketing interne d’accéder aux informations d’intégrité protégées (PHI). Vous pouvez également créer un rôle pour une agence externe et refuser l’accès à ce rôle aux données d’identification personnelle en n’appliquant pas le libellé du RHD à ce rôle."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=en#create-a-new-role" text="Création d’un rôle"
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_roles_details"
+>title="Présentation des rôles"
+>abstract="La boîte de dialogue de présentation des rôles affiche les ressources et les environnements de test auxquels un rôle donné est autorisé à accéder."
 
 Les rôles sont des moyens de catégoriser les types d’utilisateurs qui interagissent avec votre instance Platform et sont des blocs élémentaires des stratégies de contrôle d’accès. Un rôle possède un ensemble donné d’autorisations et les membres de votre organisation peuvent être affectés à un ou plusieurs rôles, selon la portée de l’accès dont ils ont besoin.
 
@@ -117,6 +146,34 @@ Le **[!UICONTROL Modifier les libellés]** s’affiche, vous permettant de chois
 Répétez les étapes ci-dessus avec **[!UICONTROL Insuline &lt;50]**.
 
 ## Création d’une stratégie de contrôle d’accès {#policy}
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_policies_about"
+>title="Que sont les politiques ?"
+>abstract="Les politiques sont des déclarations qui réunissent des attributs pour établir des actions permises et non admissibles. Chaque organisation s’accompagne d’une stratégie par défaut que vous devez activer afin de définir des règles pour les ressources telles que les segments et les champs de schéma. Les stratégies par défaut ne peuvent pas être modifiées ni supprimées. Toutefois, les stratégies par défaut peuvent être activées ou désactivées."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=en" text="Gestion des stratégies"
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_policies_about_create"
+>title="Création d’une stratégie"
+>abstract="Créez une stratégie pour définir les actions que vos utilisateurs peuvent ou ne peuvent pas entreprendre par rapport à vos segments et champs de schéma."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=en#create-a-new-policy" text="Création d’une stratégie"
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_policies_edit_permitdeny"
+>title="Configuration des actions autorisées et non autorisées pour une stratégie"
+>abstract="Sélectionnez Autoriser l’accès à pour configurer les actions autorisées que vos utilisateurs peuvent effectuer par rapport aux ressources. Sélectionnez Refuser l’accès à pour configurer les actions non autorisées que vos utilisateurs ne peuvent pas effectuer par rapport aux ressources."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=en#edit-a-policy" text="Modification d’une stratégie"
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_policies_edit_resource"
+>title="Configuration des autorisations pour une ressource"
+>abstract="Une ressource est la ressource ou l’objet auquel un utilisateur peut ou ne peut pas accéder. Les ressources peuvent être des segments ou des schémas. Vous pouvez configurer des autorisations d’écriture, de lecture ou de suppression pour les segments et les champs de schéma."
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_policies_edit_condition"
+>title="Editer les conditions"
+>abstract="Appliquez des instructions conditionnelles à votre stratégie pour configurer l’accès des utilisateurs à certaines ressources. Sélectionnez l’option Correspondre à tous pour exiger des utilisateurs qu’ils possèdent les mêmes libellés qu’une ressource pour pouvoir y accéder. Sélectionnez l’option Faire correspondre n’importe lequel pour exiger uniquement que les utilisateurs disposent d’un rôle avec un seul libellé correspondant à une ressource. Les libellés peuvent être définis comme des libellés principaux ou personnalisés, avec des libellés principaux représentant les libellés créés et fournis par des libellés d’Adobe et personnalisés représentant les libellés que vous avez créés pour votre organisation."
 
 Les stratégies de contrôle d’accès utilisent des étiquettes pour définir les rôles utilisateur ayant accès à des ressources Platform spécifiques. Les stratégies peuvent être locales ou globales et peuvent remplacer d’autres stratégies. Dans cet exemple, l’accès aux champs de schéma et aux segments sera refusé dans tous les environnements de test pour les utilisateurs qui ne disposent pas des libellés correspondants dans le champ de schéma.
 
