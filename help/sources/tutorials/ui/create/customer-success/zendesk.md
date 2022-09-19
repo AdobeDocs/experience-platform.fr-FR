@@ -3,7 +3,7 @@ keywords: Experience Platform;Zendesk;sources;connecteurs;connecteurs source;sdk
 title: Création d’une connexion source Zendesk dans l’interface utilisateur
 description: Découvrez comment créer une connexion source Zendesk à l’aide de l’interface utilisateur de Adobe Experience Platform.
 exl-id: 75d303b0-2dcd-4202-987c-fe3400398d90
-source-git-commit: e92c2386d9f4a4709f0a749d3ed97e033f066610
+source-git-commit: 795c98fb555f79afd7a7035a23a9989cc734a1e1
 workflow-type: tm+mt
 source-wordcount: '797'
 ht-degree: 32%
@@ -33,7 +33,7 @@ Pour accéder à [!DNL Zendesk] sur Platform, vous devez fournir des valeurs pou
 
 | Informations d’identification | Description | Exemple |
 | --- | --- | --- |
-| Sous-domaine | Domaine unique spécifique à votre compte créé lors du processus d’enregistrement. | `https://yoursubdomain.zendesk.com` |
+| Sous-domaine | Domaine unique spécifique à votre compte créé lors du processus d’enregistrement. | `yoursubdomain` |
 | Jeton d’accès | Jeton d’API Zendesk. | `0lZnClEvkJSTQ7olGLl7PMhVq99gu26GTbJtf` |
 
 Pour plus d’informations sur l’authentification [!DNL Zendesk] source, voir [[!DNL Zendesk] présentation de la source](../../../../connectors/customer-success/zendesk.md).
