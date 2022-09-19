@@ -5,7 +5,7 @@ exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
 source-git-commit: 5a12c75a54f420b2ca831dbfe05105dfd856dc4d
 workflow-type: tm+mt
 source-wordcount: '438'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -19,7 +19,7 @@ L’espace de travail [[!UICONTROL Hygiène des données]](./overview.md) dans l
 
 >[!WARNING]
 >
->Si un jeu de données est défini pour expirer, vous devez modifier manuellement les flux de données susceptibles d’ingérer des données dans ce jeu de données afin que vos flux de données en aval ne soient pas affectés négativement.
+>Si un jeu de données est défini pour expirer, vous devez modifier manuellement les flux de données susceptibles d’ingérer des données dans ce jeu, afin que vos workflows en aval ne soient pas affectés négativement.
 
 Ce document explique comment planifier et gérer des expirations de jeux de données dans l’interface utilisateur de Platform.
 

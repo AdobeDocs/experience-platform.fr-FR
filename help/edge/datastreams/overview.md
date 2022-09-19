@@ -6,7 +6,7 @@ exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
 source-git-commit: 3690a32f32c6cfa25120e9af44fe559122e779a0
 workflow-type: tm+mt
 source-wordcount: '1729'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -122,7 +122,7 @@ Ce service contrôle si et comment les données sont envoyées à Adobe Experien
 | [!UICONTROL Jeu de données de profil] | Sélectionnez le jeu de données de Platform auquel les données d’attribut du client seront envoyées. Ce schéma doit utiliser la [classe XDM Individual Profile](../../xdm/classes/individual-profile.md). |
 | [!UICONTROL Offer Decisioning] | Cochez cette case pour activer Offer Decisioning pour une mise en œuvre du SDK web de Platform. Consultez le guide sur l’[utilisation d’Offer Decisioning avec le SDK web de Platform](../personalization/offer-decisioning/offer-decisioning-overview.md) pour plus d’informations sur la mise en œuvre. Pour plus d’informations sur les fonctionnalités d’Offer Decisioning, consultez la [Documentation d’Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started/starting-offer-decisioning.html?lang=fr). |
 | [!UICONTROL Segmentation Edge] | Cochez cette case pour activer la [segmentation Edge](../../segmentation/ui/edge-segmentation.md) de ce flux de données. Lorsque le SDK envoie des données par le biais d’un flux de données compatible avec la segmentation Edge, toutes les adhésions au segment mises à jour pour le profil en question sont renvoyées dans la réponse.<br><br>Cette option peut être utilisée conjointement avec [!UICONTROL Destinations de personnalisation] pour les [cas d’utilisation de la personnalisation de page suivante](../../destinations/ui/configure-personalization-destinations.md). |
-| [!UICONTROL Destinations de personnalisation] | Lorsque vous activez cette fonction après avoir activé la variable [!UICONTROL Segmentation Edge] , cette option permet à la banque de données de se connecter aux destinations de personnalisation, telles que [Personnalisation personnalisée](../../destinations/catalog/personalization/custom-personalization.md). Consultez la documentation des destinations pour obtenir des instructions spécifiques sur la [configuration des destinations de personnalisation](../../destinations/ui/configure-personalization-destinations.md). |
+| [!UICONTROL Destinations de personnalisation] | Lorsque vous activez cette fonction après avoir activé la case à cocher [!UICONTROL Segmentation Edge], cette option permet au flux de données de se connecter aux destinations de personnalisation, telles que [Personnalisation personnalisée](../../destinations/catalog/personalization/custom-personalization.md). Consultez la documentation des destinations pour obtenir des instructions spécifiques sur la [configuration des destinations de personnalisation](../../destinations/ui/configure-personalization-destinations.md). |
 
 ### Paramètres d’Adobe Target {#target}
 

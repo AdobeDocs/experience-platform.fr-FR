@@ -8,7 +8,7 @@ exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
 source-git-commit: b732fa1f4afb71e7b8c3276335b371d0f8ef888d
 workflow-type: tm+mt
 source-wordcount: '1024'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -173,10 +173,10 @@ Pour plus d’informations sur les autorisations disponibles accordées à l’a
 
 ## Conditions générales {#terms-and-conditions}
 
-En utilisant l’une des sources libellées bêta (&quot;Beta&quot;), Vous reconnaissez que la version bêta est fournie. ***&quot;en l’état&quot; sans aucune garantie***.
+En utilisant l’une des sources libellées comme étant en version Beta (« Beta »), vous reconnaissez que la version Beta est fournie ***« telle quelle », sans garantie d’aucune sorte***.
 
 Adobe n’a aucune obligation de tenir à jour, corriger, mettre à jour, modifier, remplacer ou prendre en charge cette version Beta. Il est recommandé de faire preuve de prudence et de ne pas se fier, de quelque manière que ce soit, au bon fonctionnement ou aux performances de cette version Beta et/ou des éléments qui l’accompagnent. La version Beta est considérée comme étant une information confidentielle dʼAdobe.
 
-Tout &quot;retour&quot; (informations relatives à la version bêta, y compris, mais sans s’y limiter, aux problèmes ou défauts que vous rencontrez lors de l’utilisation de la version bêta, suggestions, améliorations et recommandations) fourni par Vous à l’Adobe est affecté à l’Adobe, y compris tous les droits, titres et intérêts dans et à ces commentaires.
+Tout « commentaire » (informations relatives à la version Beta, y compris, mais sans s’y limiter, les problèmes ou défauts rencontrés lors de son utilisation, les suggestions, les améliorations et les recommandations) que vous fournissez à Adobe est par la présente cédé à Adobe. Cela inclut tous les droits, titres et intérêts relatifs à ces commentaires.
 
 Envoyez vos commentaires ou créez un ticket dʼassistance pour partager vos suggestions, signaler un bug ou demander une amélioration de fonctionnalité.

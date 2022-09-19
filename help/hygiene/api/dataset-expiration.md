@@ -5,7 +5,7 @@ exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
 source-git-commit: 5a12c75a54f420b2ca831dbfe05105dfd856dc4d
 workflow-type: tm+mt
 source-wordcount: '1405'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 97%
 
 >[!IMPORTANT]
 >
->Actuellement, les fonctionnalités de nettoyage de données d’Adobe Experience Platform sont uniquement disponibles pour les organisations qui ont acheté Healthcare Shield.
+>Actuellement, les fonctionnalités d’hygiène des données d’Adobe Experience Platform sont uniquement disponibles pour les organisations qui ont acheté Healthcare Shield.
 
 Le point d’entrée `/ttl` de l’API Data Hygiene vous permet de planifier des dates d’expiration pour les jeux de données dans Adobe Experience Platform.
 
@@ -29,7 +29,7 @@ Une fois que la suppression du jeu de données est lancée, sa tâche d’expira
 
 >[!WARNING]
 >
->Si un jeu de données est défini pour expirer, vous devez modifier manuellement les flux de données susceptibles d’ingérer des données dans ce jeu de données afin que vos flux de données en aval ne soient pas affectés négativement.
+>Si un jeu de données est défini pour expirer, vous devez modifier manuellement les flux de données susceptibles d’ingérer des données dans ce jeu, afin que vos workflows en aval ne soient pas affectés négativement.
 
 ## Prise en main
 
