@@ -2,9 +2,9 @@
 title: Prise en charge du réseau de diffusion de contenu Premium pour les balises
 description: Découvrez la fonctionnalité premium CDN pour les balises et comment elle peut être utilisée pour diffuser votre contenu dans plusieurs zones géographiques.
 exl-id: 33e36d3b-9e21-44a8-8498-32a5fc20b46b
-source-git-commit: 3843b08a3a047200f02c1ceb17a64a196d4a0287
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '536'
+source-wordcount: '540'
 ht-degree: 0%
 
 ---
@@ -19,11 +19,11 @@ Lorsque vous utilisez une [Hôte géré par Adobe](./hosts/managed-by-adobe-host
 
 Pour en tenir compte, les balises dans Experience Platform fournissent une fonctionnalité de réseau de diffusion de contenu haut de gamme qui vous permet de diffuser du contenu vers ces régions spéciales.
 
-La prise en charge Premium du réseau de diffusion de contenu est une fonctionnalité payante qui doit être achetée par votre organisation pour l’activer et l’utiliser. Ce guide explique comment configurer et utiliser cette fonctionnalité dans l’interface utilisateur de la collecte de données une fois qu’elle a été achetée.
+La prise en charge Premium du réseau de diffusion de contenu est une fonctionnalité payante qui doit être achetée par votre organisation pour l’activer et l’utiliser. Ce guide explique comment configurer et utiliser cette fonctionnalité dans l’interface utilisateur de l’Experience Platform ou dans l’interface utilisateur de collecte de données une fois qu’elle a été achetée.
 
 ## Activation du réseau de diffusion de contenu Premium pour votre organisation
 
-Le réseau de diffusion de contenu Premium est activé au niveau de l’entreprise. Une fois que votre organisation a acheté la fonction de réseau de diffusion de contenu Premium, un administrateur d’Adobe l’activera pour votre entreprise dans l’interface utilisateur de la collecte de données.
+Le réseau de diffusion de contenu Premium est activé au niveau de l’entreprise. Une fois que votre entreprise a acheté la fonctionnalité de réseau de diffusion de contenu Premium, un administrateur d’Adobe l’activera dans l’interface utilisateur de votre entreprise.
 
 ## Reconstruire et installer des bibliothèques de balises avec des codes incorporés mis à jour
 

@@ -2,10 +2,10 @@
 title: Types dʼéléments de données pour les extensions Edge
 description: Découvrez comment définir un module de bibliothèque de type élément de données pour une extension de balise dans une propriété Edge.
 exl-id: ddbc3912-1c25-4d21-bde8-e40e583b4278
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '435'
-ht-degree: 100%
+source-wordcount: '439'
+ht-degree: 94%
 
 ---
 
@@ -29,7 +29,7 @@ Ce document explique comment définir des types d’éléments de données pour 
 
 Les types d’éléments de données sont généralement les suivants :
 
-1. Une vue affichée dans l’interface utilisateur de la collecte de données qui permet aux utilisateurs de modifier les paramètres de l’élément de données.
+1. Vue affichée dans l’interface utilisateur de l’Experience Platform et dans l’interface utilisateur de collecte de données qui permet aux utilisateurs de modifier les paramètres de l’élément de données.
 2. Un module de bibliothèque émis dans la bibliothèque d’exécution de balise pour interpréter les paramètres et récupérer des éléments de données.
 
 Si vous souhaitez permettre aux utilisateurs de récupérer un élément de donnée de la couche de données personnalisée, votre module peut ressembler à cet exemple.

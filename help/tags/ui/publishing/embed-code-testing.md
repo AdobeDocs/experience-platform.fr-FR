@@ -2,10 +2,10 @@
 title: Test des codes incorporés à l’aide du débogeur Adobe Experience Platform
 description: Découvrez comment utiliser Platform Debugger pour tester localement différents codes incorporés pour Adobe Experience Platform sur votre site web.
 exl-id: ae6183b9-0d25-49d0-b0e9-f8b5ba58ab33
-source-git-commit: 71c63e0d0b993206cb3bb5de7f7fbd5e10c6f2e3
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '510'
-ht-degree: 100%
+source-wordcount: '507'
+ht-degree: 96%
 
 ---
 
@@ -19,7 +19,7 @@ Lorsque vous apportez des modifications à vos versions de bibliothèque dans Ad
 
 ## Conditions préalables
 
-Ce tutoriel nécessite une bonne compréhension de l’utilisation des environnements et des codes incorporés dans l’interface utilisateur de la collecte de données. Pour plus d’informations, consultez la [présentation des environnements](./environments.md).
+Ce tutoriel nécessite une compréhension pratique de l’utilisation des environnements et des codes incorporés pour les balises. Pour plus d’informations, consultez la [présentation des environnements](./environments.md).
 
 Ce tutoriel nécessite également l’installation de l’extension de navigateur Débogueur Platform. Le débogueur Platform n’est disponible que pour les navigateurs Chrome et Firefox. Utilisez l’un des liens suivants pour installer l’extension avant de démarrer le tutoriel :
 

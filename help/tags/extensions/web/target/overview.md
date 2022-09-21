@@ -2,10 +2,10 @@
 title: Présentation de l’extension Adobe Target
 description: Découvrez l’extension de balise pour Adobe Target dans Adobe Experience Platform.
 exl-id: b1c5e25b-42ea-4835-b2d4-913fa2536e77
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '1194'
-ht-degree: 100%
+source-wordcount: '1192'
+ht-degree: 95%
 
 ---
 
@@ -31,13 +31,13 @@ Pour configurer l’extension, ouvrez l’onglet [!UICONTROL Extensions], placez
 
 ### Paramètres at.js
 
-Tous les paramètres at.js, à l’exception de la temporisation, sont automatiquement extraits de la configuration at.js de l’interface utilisateur Target. L’extension extrait les paramètres de l’interface utilisateur de Target uniquement lors de l’ajout initial. De ce fait, tous les paramètres doivent être gérés dans l’interface utilisateur de la collecte de données si d’autres mises à jour sont nécessaires.
+Tous les paramètres at.js, à l’exception de la temporisation, sont automatiquement extraits de la configuration at.js de l’interface utilisateur Target. L’extension récupère uniquement les paramètres de l’interface utilisateur de Target lors de son premier ajout. De ce fait, tous les paramètres doivent être gérés dans l’interface utilisateur si d’autres mises à jour sont nécessaires.
 
 Les options de configuration disponibles sont les suivantes :
 
 #### Client Code (Code client)
 
-Le code client est l’identificateur du compte Target. Cette valeur doit presque toujours être conservée comme valeur par défaut.
+Le code client est l’identifiant de compte de Target. Cette valeur doit presque toujours être conservée comme valeur par défaut.
 
 Il peut être modifié à l’aide d’éléments de données.
 
@@ -141,7 +141,7 @@ Voici quelques éléments à garder à l’esprit lors de l’utilisation du fra
    * Lorsque la réponse mbox globale a été reçue.
    * Lorsque la demande de mbox globale expire.
    * Lorsque le fragment lui-même arrive à expiration.
-* L’action « Fire global mbox » (Déclencher la mbox globale) doit être utilisée sur toutes les pages à l’aide du fragment de code de masquage préalable afin de minimiser la durée du masquage préalable.
+* L’action &quot;Fire Global Mbox&quot; (Déclencher la mbox globale) doit être utilisée sur toutes les pages à l’aide du fragment de code de masquage préalable afin de minimiser la durée du masquage préalable.
 
 Le fragment de code de masquage préalable se présente comme suit et peut être réduit. Les options configurables se trouvent à la fin :
 

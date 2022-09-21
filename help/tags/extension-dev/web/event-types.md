@@ -2,10 +2,10 @@
 title: Types d’événements pour les extensions web
 description: Découvrez comment définir un module de bibliothèque relatif aux types d’événements pour une extension web dans Adobe Experience Platform.
 exl-id: dbdd1c88-5c54-46be-9824-2f15cce3d160
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '1048'
-ht-degree: 100%
+source-wordcount: '1052'
+ht-degree: 98%
 
 ---
 
@@ -27,7 +27,7 @@ Ce document explique comment définir des types d’événements pour une extens
 
 Les types d’événements sont définis par des extensions et se composent généralement des éléments suivants :
 
-1. Une [vue](./views.md) affichée dans l’interface utilisateur de la collecte de données, qui permet aux utilisateurs de modifier les paramètres de l’événement.
+1. A [view](./views.md) affichées dans l’interface utilisateur de l’Experience Platform et l’interface utilisateur de collecte de données qui permettent aux utilisateurs de modifier les paramètres de l’événement.
 2. Un module de bibliothèque émis dans la bibliothèque d’exécution de balise pour interpréter les paramètres et surveiller l’apparition d’une certaine activité.
 
 `module.exports` acceptez les paramètres `settings` et `trigger`. Cela permet de personnaliser le type d’événement.

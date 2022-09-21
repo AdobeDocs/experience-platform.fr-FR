@@ -2,10 +2,10 @@
 title: Types d’actions pour les extensions Edge
 description: Découvrez comment définir un module de bibliothèque de type action pour une extension de balise dans une propriété edge.
 exl-id: c0b058aa-f0fe-4fd8-a873-018482c3e4db
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '382'
-ht-degree: 100%
+source-wordcount: '386'
+ht-degree: 94%
 
 ---
 
@@ -29,7 +29,7 @@ Ce document explique comment définir des types dʼaction pour une extension Edg
 
 Les types d’actions sont généralement les suivants :
 
-1. Affichage dans lʼinterface utilisateur de la collecte de données qui permet aux utilisateurs de modifier les paramètres de lʼaction.
+1. Vue affichée dans l’interface utilisateur de l’Experience Platform et dans l’interface utilisateur de collecte de données qui permet aux utilisateurs de modifier les paramètres de l’action.
 2. Un module de bibliothèque émis dans la bibliothèque d’exécution de balise pour interpréter les paramètres et effectuer une action.
 
 Par exemple, un module permettant de transférer certaines données vers un point d’entrée tiers peut ressembler à ceci.

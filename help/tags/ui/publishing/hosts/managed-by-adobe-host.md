@@ -2,10 +2,10 @@
 title: Présentation des hôtes gérés par Adobe
 description: Découvrez l’option d’hébergement par défaut pour le déploiement des versions de bibliothèques de balises dans Adobe Experience Platform.
 exl-id: 9042c313-b0d3-4f6e-963d-0051d760fd16
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '1175'
-ht-degree: 100%
+source-wordcount: '1173'
+ht-degree: 98%
 
 ---
 
@@ -88,9 +88,9 @@ Comme l’indique le tableau ci-dessus, le caching du navigateur n’est pas pri
 
 Les en-têtes de contrôle du cache ne sont appliqués que pour la version de la bibliothèque principale. Toutes les sous-ressources situées sous la bibliothèque principale sont toujours considérées comme des sous-ressources nouvelles et il n’est donc pas nécessaire de les mettre en cache dans le navigateur.
 
-## Utilisation de l’hébergement géré par Adobe dans l’interface utilisateur Data Collection
+## Utilisation de l’hébergement géré par Adobe dans l’interface utilisateur de 
 
-Lorsque vous créez une propriété pour la première fois dans l’[interface utilisateur Data Collection](https://experience.adobe.com/#/data-collection/), un hôte géré par Adobe est automatiquement créé. Tous les environnements disponibles possédant des propriétés immédiatement utilisables sont également affectés par défaut à l’hôte géré par Adobe.
+Lorsque vous créez une propriété pour la première fois dans l’interface utilisateur de Platform ou dans l’interface utilisateur de collecte de données, un hôte géré par Adobe est automatiquement créé. Tous les environnements disponibles possédant des propriétés immédiatement utilisables sont également affectés par défaut à l’hôte géré par Adobe.
 
 >[!NOTE]
 >
@@ -98,6 +98,7 @@ Lorsque vous créez une propriété pour la première fois dans l’[interface u
 >
 >1. Sélectionnez l’onglet **[!UICONTROL Hôtes]** sur votre propriété, puis cliquez sur **[!UICONTROL Ajouter l’hôte]**.
 >1. Attribuez un nom à l’hôte, sélectionnez **[!UICONTROL Géré par Adobe]** comme type d’hôte, puis cliquez sur **[!UICONTROL Enregistrer]**.
+
 >
 >Vous pouvez ensuite réaffecter vos environnements à l’hôte géré par Adobe selon vos besoins.
 

@@ -3,10 +3,10 @@ title: Présentation des flux de données
 description: Connectez votre intégration SDK Experience Platform côté client à des produits Adobe et à des destinations tierces.
 keywords: configuration;flux de données;datastreamId;edge;identifiant de flux de données;Paramètres d’environnement;edgeConfigId;identité;synchronisation des identifiants activée;Identifiant de conteneur de synchronisation d’identifiant;Sandbox;Diffusion d’entrée;Jeu de données d’événement;cible;code client;Jeton de propriété;Identifiant d’environnement cible;Destinations de cookie;Destinations d’url;identifiant de suite de rapports de blocs de paramètres Analytics;Préparation des données pour la collecte de données;Préparation des données;Mappeur;Mappeur XDM;Mappeur sur Edge;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 3690a32f32c6cfa25120e9af44fe559122e779a0
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '1729'
-ht-degree: 100%
+source-wordcount: '1725'
+ht-degree: 95%
 
 ---
 
@@ -14,13 +14,13 @@ ht-degree: 100%
 
 Un flux de données représente la configuration côté serveur lors de la mise en œuvre des SDK web et mobile d’Adobe Experience Platform. Lorsque la [commande de configuration](../fundamentals/configuring-the-sdk.md) dans le SDK contrôle les éléments qui doivent être gérés sur le client (comme `edgeDomain`), les flux de données gèrent toutes les autres configurations pour le SDK. Lorsqu’une requête est envoyée à Adobe Experience Platform Edge Network, `edgeConfigId` est utilisé pour référencer le flux de données. Cela vous permet de mettre à jour la configuration côté serveur sans devoir modifier le code du site web.
 
-Ce document décrit les étapes de configuration d’un flux de données dans l’interface utilisateur de collecte de données.
+Ce document décrit les étapes de configuration d’un flux de données dans l’interface utilisateur.
 
 ## Accéder à l’espace de travail [!UICONTROL Flux de données]
 
-Vous pouvez créer et gérer des flux de données dans l’interface utilisateur de collecte de données en sélectionnant **[!UICONTROL Flux de données]** dans le volet de navigation de gauche.
+Vous pouvez créer et gérer des flux de données dans l’interface utilisateur de la collecte de données ou l’interface utilisateur Experience Platform en sélectionnant **[!UICONTROL Datastreams]** dans le volet de navigation de gauche.
 
-![Onglet Flux de données dans l’interface utilisateur de collecte de données](../images/datastreams/overview/datastreams-tab.png)
+![Onglet Flux de données dans l’interface utilisateur](../images/datastreams/overview/datastreams-tab.png)
 
 L’onglet [!UICONTROL Flux de données] affiche une liste des flux de données existants, y compris leur nom convivial, leur identifiant et leur date de dernière modification. Sélectionnez le nom d’un flux de données pour [afficher les détails et configurer des services](#view-details).
 
@@ -106,7 +106,7 @@ Ce service contrôle si et comment les données sont envoyées à Adobe Audience
 
 >[!IMPORTANT]
 >
->Lors de l’activation d’un flux de données pour Platform, notez le sandbox de Platform que vous utilisez actuellement, tel qu’affiché dans le ruban supérieur de l’interface utilisateur de collecte de données.
+>Lors de l’activation d’un flux de données pour Platform, prenez note de l’environnement de test Platform que vous utilisez actuellement, tel qu’affiché dans le ruban supérieur de l’interface utilisateur.
 >
 >![Sandbox sélectionné](../images/datastreams/overview/platform-sandbox.png)
 >
@@ -175,4 +175,4 @@ La page principale de l’espace de travail [!UICONTROL Flux de données] réapp
 
 ## Étapes suivantes
 
-Ce guide explique comment gérer les flux de données dans l’interface utilisateur de collecte de données. Pour plus d’informations sur l’installation et la configuration du SDK web après la configuration d’un flux de données, consultez le [Guide E2E de collecte de données](../../collection/e2e.md#install).
+Ce guide explique comment gérer les flux de données dans l’interface utilisateur. Pour plus d’informations sur l’installation et la configuration du SDK web après la configuration d’un flux de données, consultez le [Guide E2E de collecte de données](../../collection/e2e.md#install).

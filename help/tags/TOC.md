@@ -5,9 +5,9 @@ breadcrumb-title: Balises
 user-guide-description: Découvrez comment déployer et gérer des balises d’analyse, de marketing et de publicité pour améliorer les expériences clients.
 feature: Tags
 solution: Data Collection
-source-git-commit: d9787b6d093037a2d346ac3bd2f37220ace43ad2
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '402'
+source-wordcount: '401'
 ht-degree: 96%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 96%
 * Prise en main {#get-started}
    * [Guide de démarrage rapide](./quick-start/quick-start.md)
    * [Guides de mise en œuvre](./quick-start/implementation-guides.md)
-* Interface utilisateur de collecte de données {#ui}
+* Guides d’interface utilisateur {#ui}
    * [Présentation](./ui/managing-resources/overview.md)
    * Extensions {#extensions}
       * [Présentation](./ui/managing-resources/extensions/overview.md)

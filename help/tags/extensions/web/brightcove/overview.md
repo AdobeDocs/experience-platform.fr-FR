@@ -2,10 +2,10 @@
 title: Présentation de l’extension de suivi vidéo BrightCove
 description: Découvrez lʼextension de balise de suivi vidéo BrightCove dans Adobe Experience Platform.
 exl-id: d27eff21-2abf-4495-8382-08cab32742e0
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '915'
-ht-degree: 100%
+source-wordcount: '908'
+ht-degree: 97%
 
 ---
 
@@ -100,7 +100,7 @@ Les objets d’extension vidéo suivants doivent être inclus :
 
 >[!TIP]
 >
->Pour ceux qui ne souhaitent pas configurer plusieurs eVars ou props pour chaque élément vidéo, il existe une autre méthode. Les valeurs des éléments de données peuvent être concaténées dans l’interface utilisateur de la collecte de données. Ils sont ensuite analysés dans les rapports de classification à l’aide de l’outil Créateur de règles de classification. Pour plus d’informations, voir la documentation [Outil Créateur de règles de classification](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html?lang=fr). Enfin, elles sont appliquées en tant que segment dans Analysis Workspace.
+>Pour ceux qui ne souhaitent pas configurer plusieurs eVars ou props pour chaque élément vidéo, les valeurs des éléments de données sont concaténées en tant que méthode alternative. Ils sont ensuite analysés dans les rapports de classification à l’aide de l’outil Créateur de règles de classification. Pour plus d’informations, voir la documentation [Outil Créateur de règles de classification](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html?lang=fr). Enfin, elles sont appliquées en tant que segment dans Analysis Workspace.
 >
 >Pour ce faire, créez un nouvel élément de données appelé par exemple « Métadonnées vidéo » et programmez-le pour extraire tous les éléments de données vidéo (répertoriés ci-dessus) et les concaténer.
 

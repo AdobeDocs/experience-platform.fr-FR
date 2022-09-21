@@ -2,10 +2,10 @@
 title: Types de conditions pour les extensions Edge
 description: Découvrez comment définir un module de bibliothèque relatif aux types de conditions pour une extension Edge dans Adobe Experience Platform.
 exl-id: fe13420e-ffa7-49d6-92c4-965ebd9d7390
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '408'
-ht-degree: 100%
+source-wordcount: '412'
+ht-degree: 94%
 
 ---
 
@@ -29,7 +29,7 @@ Ce document explique comment définir des types de conditions pour une extension
 
 Les types de conditions se composent généralement des éléments suivants :
 
-1. Une vue affichée dans l’interface utilisateur de la collecte de données, qui permet aux utilisateurs de modifier les paramètres de la condition.
+1. Vue affichée dans l’interface utilisateur de l’Experience Platform et dans l’interface utilisateur de collecte de données qui permet aux utilisateurs de modifier les paramètres de la condition.
 2. Un module de bibliothèque émis dans la bibliothèque d’exécution de balise pour interpréter les paramètres et évaluer une condition.
 
 Par exemple, si vous souhaitez évaluer si l’utilisateur se trouve sur l’hôte `example.com`, votre module pourra ressembler à ceci.

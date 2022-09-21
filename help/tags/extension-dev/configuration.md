@@ -1,11 +1,11 @@
 ---
 title: Configuration d’extension
-description: Découvrez comment configurer une extension de balise pour rassembler les paramètres globaux d’un utilisateur dans l’interface utilisateur de la collecte de données d’Adobe Experience Platform.
+description: Découvrez comment configurer une extension de balise pour rassembler les paramètres globaux d’un utilisateur dans l’interface utilisateur de Adobe Experience Platform ou de l’interface utilisateur de collecte de données.
 exl-id: 2bf33617-1398-499f-8325-3849dbdb1f97
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '273'
-ht-degree: 100%
+source-wordcount: '274'
+ht-degree: 91%
 
 ---
 
