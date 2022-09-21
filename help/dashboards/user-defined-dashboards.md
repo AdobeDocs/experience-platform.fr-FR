@@ -2,9 +2,9 @@
 title: Tableaux de bord définis par l’utilisateur
 description: Découvrez comment créer et gérer des tableaux de bord personnalisés dans lesquels vous pouvez créer, ajouter et modifier des widgets personnalisés pour visualiser des mesures clés.
 exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
-source-git-commit: bf2b35e3366c71c51c58b6257cc55f7c9b0cd9c7
+source-git-commit: bb94f7438efe1e24056d6689ffc10b928fc633c2
 workflow-type: tm+mt
-source-wordcount: '825'
+source-wordcount: '881'
 ht-degree: 0%
 
 ---
@@ -37,9 +37,18 @@ Le [!UICONTROL Créer un tableau de bord] s’affiche. Saisissez un nom explicit
 
 Le tableau de bord vierge nouvellement créé s’affiche avec le nom de votre choix dans le coin supérieur gauche de la vue.
 
-## Création d’un widget
+## Création d’un widget {#create-widget}
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_udd_maxwidgets"
+>title="Nombre maximal de widgets"
+>abstract="Les tableaux de bord définis par l’utilisateur prennent en charge jusqu’à dix widgets. Une fois que vous avez ajouté dix widgets à votre tableau de bord, la variable [!UICONTROL Ajouter un nouveau widget] est désactivée et apparaît en gris."
 
 Dans la nouvelle vue de tableau de bord, sélectionnez **[!UICONTROL Ajouter un nouveau widget]** pour lancer le processus de création du widget.
+
+>[!IMPORTANT]
+>
+>Les tableaux de bord définis par l’utilisateur prennent en charge jusqu’à dix widgets. Une fois que vous avez ajouté dix widgets à votre tableau de bord, la variable [!UICONTROL Ajouter un nouveau widget] est désactivée et apparaît en gris.
 
 ![Le nouveau tableau de bord vide avec l’option Ajouter un nouveau widget mise en surbrillance.](./images/user-defined-dashboards/add-new-widget.png)
 
