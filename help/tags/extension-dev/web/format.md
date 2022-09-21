@@ -2,7 +2,7 @@
 title: Modules de bibliothèque dans les extensions web
 description: Découvrez comment formater des modules de bibliothèque pour les extensions web dans Adobe Experience Platform.
 exl-id: 08f2bb01-9071-49c5-a0ff-47d592cc34a5
-source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
+source-git-commit: 8d29765c0d3b57c69b46271e3f0b7338c75c135d
 workflow-type: tm+mt
 source-wordcount: '378'
 ht-degree: 100%
@@ -23,7 +23,7 @@ Un module de bibliothèque est un morceau de code réutilisable fourni par une e
 
 Le module Bibliothèque est structuré comme un [module CommonJS](https://nodejs.org/api/modules.html#modules-commonjs-modules). Dans un module CommonJS, les variables suivantes peuvent être utilisées :
 
-## [!DNL require]
+## `require`
 
 Vous pouvez accéder à une fonction `require` :
 
@@ -37,7 +37,7 @@ var cookie = require('@adobe/reactor-cookie');
 cookie.set('foo', 'bar');
 ```
 
-## [!DNL module]
+## `module`
 
 Une variable libre nommée `module` est disponible, ce qui vous permet d’exporter l’API du module.
 
@@ -47,7 +47,7 @@ Cas d’utilisation :
 module.exports = function(…) { … }
 ```
 
-## [!DNL exports]
+## `exports`
 
 Une variable libre nommée `exports` est disponible, ce qui vous permet d’exporter l’API du module.
 
