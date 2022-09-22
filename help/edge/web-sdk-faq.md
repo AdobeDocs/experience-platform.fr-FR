@@ -2,9 +2,9 @@
 title: FAQ sur le SDK Web Adobe Experience Platform
 description: Obtenez des réponses aux questions fréquentes sur le SDK Web de Adobe Experience Platform.
 exl-id: 6ddb4b4d-c9b8-471a-bd2e-135dc4202876
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '1934'
+source-wordcount: '1935'
 ht-degree: 2%
 
 ---
@@ -82,7 +82,7 @@ Alloy est le nom de code du SDK Web de Adobe Experience Platform. Il est utilis�
 
 ## Les clients doivent-ils acheter Adobe Experience Platform pour utiliser la variable [!DNL Web SDK]?
 
-Non. Tout client Adobe Digital Experience peut utiliser le SDK Web de Adobe Experience Platform gratuitement. Les clients qui souhaitent utiliser la variable [!DNL Web SDK] Vous devrez configurer les autorisations appropriées pour créer des schémas, des jeux de données, des espaces de noms d’identité et des flux de données dans l’interface utilisateur de la collecte de données ou l’interface utilisateur Experience Platform.
+Non. Tout client Adobe Digital Experience peut utiliser le SDK Web de Adobe Experience Platform gratuitement. Les clients qui souhaitent utiliser la variable [!DNL Web SDK] Vous devrez configurer les autorisations appropriées pour créer des schémas, des jeux de données, des espaces de noms d’identité et des flux de données dans l’interface utilisateur de la collecte de données Adobe Experience Platform.
 
 Pour plus d’informations sur la configuration de ces autorisations, consultez notre documentation sur [gestion des autorisations de collecte de données](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html?lang=en).
 
@@ -135,7 +135,7 @@ Non. Vous pouvez télécharger le `alloy.js` mettez-vous en file.
 
 Toutefois :
 
-* Le SDK Web de Adobe Experience Platform nécessite un identifiant de flux de données (Datastream ID) afin que le réseau Edge puisse identifier le flux et déterminer ce qu’il faut faire avec les données. Cet identifiant est créé dans Experience Platform. Cela ne signifie pas que vous devez utiliser l’interface utilisateur pour créer des propriétés ou déployer le code JavaScript, mais vous devez utiliser des balises pour créer un ID de configuration.
+* Le SDK Web de Adobe Experience Platform nécessite un identifiant de flux de données (Datastream ID) afin que le réseau Edge puisse identifier le flux et déterminer ce qu’il faut faire avec les données. Cet identifiant est créé dans Experience Platform. Cela ne signifie pas que vous devez utiliser l’interface utilisateur de la collecte de données pour créer des propriétés ou déployer le code JavaScript, mais vous devez utiliser des balises pour créer un ID de configuration.
 
 * Les balises ne sont pas seulement le meilleur gestionnaire de balises et de SDK disponible. Il facilite le déploiement. `alloy.js` et mapper les données aux schémas XDM. Si vous décidez de ne pas utiliser de balises, vous devrez gérer le déploiement `alloy.js`, l’événement et le mappage de vos données dans XDM avant de les envoyer. Il s’agit d’une _many_ processus plus difficile que l’utilisation de balises.
 

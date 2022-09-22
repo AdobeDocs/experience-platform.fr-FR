@@ -2,10 +2,10 @@
 title: Présentation complète de la collecte de données
 description: Présentation générale de l’envoi de données d’événement aux solutions Adobe Experience Cloud à l’aide des fonctionnalités de collecte de données Adobe Experience Platform.
 exl-id: 01ddbb19-40bb-4cb5-bfca-b272b88008b3
-source-git-commit: da17b273d5464ecd8b00aa37de51425ce3a9a576
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '2619'
-ht-degree: 95%
+source-wordcount: '2606'
+ht-degree: 97%
 
 ---
 
@@ -18,8 +18,6 @@ Ce guide fournit un tutoriel général sur la manière d’envoyer un événemen
 >[!NOTE]
 >
 >Vous pouvez également choisir d’installer et de configurer le SDK manuellement si vous ne souhaitez pas utiliser de balises, mais les étapes environnantes doivent toujours être effectuées comme indiqué ci-dessous.
->
->Toutes les étapes impliquant l’interface utilisateur de collecte de données peuvent également être effectuées dans l’interface utilisateur Experience Platform.
 
 ## Conditions préalables
 
@@ -59,7 +57,7 @@ La première étape de la configuration de vos opérations de collecte de donné
 >
 >Les schémas XDM sont hautement personnalisables. Plutôt que d’être trop directives, les étapes décrites ci-dessous portent spécifiquement sur les exigences de schéma pour le SDK Web. En dehors de ces paramètres, vous êtes libre de définir la structure restante de vos données comme vous le souhaitez.
 
-Dans l’interface utilisateur, sélectionnez **[!UICONTROL Schémas]** dans le volet de navigation de gauche. À partir de là, vous pouvez voir une liste des schémas créés précédemment et appartenant à votre organisation. Pour continuer, sélectionnez **[!UICONTROL Créer un schéma]**, puis **[!UICONTROL XDM ExperienceEvent]** dans le menu déroulant.
+Dans l’interface utilisateur de collecte de données, sélectionnez **[!UICONTROL Schémas]** dans le volet de navigation de gauche. À partir de là, vous pouvez voir une liste des schémas créés précédemment et appartenant à votre organisation. Pour continuer, sélectionnez **[!UICONTROL Créer un schéma]**, puis **[!UICONTROL XDM ExperienceEvent]** dans le menu déroulant.
 
 ![Espace de travail des schémas](./images/e2e/schemas.png)
 
@@ -99,7 +97,7 @@ Un flux de données est une configuration qui indique à Edge Network où vous s
 >
 >Si vous souhaitez utiliser le [transfert d’événement](../tags/ui/event-forwarding/overview.md) (en supposant que votre organisation dispose d’une licence pour cette fonctionnalité), vous devez l’activer pour un flux de données de la même manière que vous activez les produits Adobe. Les détails de ce processus sont traités dans une [section ultérieure](#event-forwarding).
 
-Sélectionner **[!UICONTROL Datastreams]** dans le volet de navigation de gauche. À partir de là, vous pouvez sélectionner un flux de données existant à modifier dans la liste ou créer une configuration en sélectionnant **[!UICONTROL Nouveau flux de données]**.
+Dans l’interface utilisateur de la collecte de données, sélectionnez **[!UICONTROL Flux de données]**. À partir de là, vous pouvez sélectionner un flux de données existant à modifier dans la liste ou créer une configuration en sélectionnant **[!UICONTROL Nouveau flux de données]**.
 
 ![Flux de données](./images/e2e/datastreams.png)
 

@@ -5,10 +5,10 @@ title: Présentation de la collecte de données
 topic-legacy: overview
 description: Découvrez les différentes technologies impliquées dans la collecte de données relatives aux expériences client dans Adobe Experience Platform.
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '469'
-ht-degree: 80%
+source-wordcount: '464'
+ht-degree: 84%
 
 ---
 
@@ -38,7 +38,7 @@ Ce guide présente de manière approfondie la collecte de données et son foncti
 
 ## Balises, SDK Web et SDK Mobile
 
-Le SDK Web de Platform et le SDK Mobile de Platform réduisent et compressent toutes les bibliothèques de produits d’Adobe dans un seul kit de développement pour les plateformes web et mobiles, respectivement. Ils peuvent être implémentés à l’aide de code brut ou en utilisant [tags](../tags/home.md) via l’interface utilisateur de collecte de données ou l’interface utilisateur de Adobe Experience Platform.
+Le SDK Web de Platform et le SDK Mobile de Platform réduisent et compressent toutes les bibliothèques de produits d’Adobe dans un seul kit de développement pour les plateformes web et mobiles, respectivement. Ils peuvent être implémentés à l’aide de code brut ou en utilisant des [balises](../tags/home.md) via l’interface utilisateur de collecte de données.
 
 La compression de ces bibliothèques accélère la collecte de données et consolide les opérations dans un flux unique, reliant les appareils côté client à Platform Edge Network.
 

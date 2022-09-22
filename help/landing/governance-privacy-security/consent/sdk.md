@@ -3,7 +3,7 @@ title: Traiter les données de consentement du client à l’aide du SDK Web de 
 topic-legacy: getting started
 description: Découvrez comment intégrer le SDK Web de Adobe Experience Platform pour traiter les données de consentement des clients dans Adobe Experience Platform.
 exl-id: 3a53d908-fc61-452b-bec3-af519dfefa41
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
 source-wordcount: '1375'
 ht-degree: 2%
@@ -23,7 +23,7 @@ Ce tutoriel suppose que vous avez déjà déterminé comment générer des donn�
 * [Création d’un jeu de données à l’aide de la norme Adobe](./adobe/dataset.md)
 * [Création d’un jeu de données à l’aide de la norme TCF 2.0](./iab/dataset.md)
 
-Ce guide suit le processus de configuration du SDK à l’aide de l’extension de balise dans l’interface utilisateur. Si vous ne souhaitez pas utiliser l’extension et que vous préférez incorporer directement la version autonome du SDK sur votre site, reportez-vous aux documents suivants au lieu de ce guide :
+Ce guide suit le processus de configuration du SDK à l’aide de l’extension de balise dans l’interface utilisateur de la collecte de données. Si vous ne souhaitez pas utiliser l’extension et que vous préférez incorporer directement la version autonome du SDK sur votre site, reportez-vous aux documents suivants au lieu de ce guide :
 
 * [Configuration d’un flux de données](../../../edge/datastreams/overview.md)
 * [Installation du SDK](../../../edge/fundamentals/installing-the-sdk.md)
@@ -37,7 +37,7 @@ Les étapes d’installation de ce guide nécessitent une compréhension pratiqu
 
 ## Configuration d’un flux de données
 
-Pour que le SDK envoie des données à l’Experience Platform, vous devez d’abord configurer un flux de données. Dans l’interface utilisateur de la collecte de données ou l’interface utilisateur Experience Platform, sélectionnez **[!UICONTROL Datastreams]** dans le volet de navigation de gauche.
+Pour que le SDK envoie des données à l’Experience Platform, vous devez d’abord configurer un flux de données. Dans l’interface utilisateur de la collecte de données, sélectionnez **[!UICONTROL Datastreams]** dans le volet de navigation de gauche.
 
 Après avoir créé un nouveau flux de données ou sélectionné un flux existant à modifier, cliquez sur le bouton de basculement en regard de **[!UICONTROL Adobe Experience Platform]**. Ensuite, utilisez les valeurs répertoriées ci-dessous pour remplir le formulaire.
 
@@ -80,7 +80,7 @@ Si la région de l’utilisateur est déterminée par une CMP, vous pouvez plut�
 1. Dans le gestionnaire d’événements, définissez une `adobeDefaultConsent` selon la région de l’utilisateur, puis chargez le script de bibliothèque de balises à l’aide de JavaScript.
 1. Configurez un élément de données qui utilise la variable `adobeDefaultConsent` et utilisez cet élément de données comme valeur de consentement par défaut pour l’utilisateur.
 
-Pour créer un élément de données dans l’interface utilisateur, sélectionnez **[!UICONTROL Éléments de données]** dans le volet de navigation de gauche, puis sélectionnez **[!UICONTROL Ajouter un élément de données]** pour accéder à la boîte de dialogue de création de l’élément de données.
+Pour créer un élément de données dans l’interface utilisateur de collecte de données, sélectionnez **[!UICONTROL Éléments de données]** dans le volet de navigation de gauche, puis sélectionnez **[!UICONTROL Ajouter un élément de données]** pour accéder à la boîte de dialogue de création de l’élément de données.
 
 À partir de là, vous devez créer une [!UICONTROL Variable JavaScript] élément de données basé sur `adobeDefaultConsent`. Lorsque vous avez terminé, cliquez sur **[!UICONTROL Enregistrer]**.
 

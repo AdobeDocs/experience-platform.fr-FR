@@ -2,10 +2,10 @@
 title: Notes de mise à jour de l’extension Statistiques sur les ressources AEM
 description: Notes de mise à jour les plus récentes pour lʼextension de balise Informations sur les assets AEM dans Adobe Experience Platform.
 exl-id: cee35b44-2249-47c6-80d6-8b4eaa9802df
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '134'
-ht-degree: 77%
+source-wordcount: '137'
+ht-degree: 100%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 77%
 
 - Cette extension est destinée à être utilisée avec les statistiques sur les ressources AEM.
 - Plus précisément, elle remplace le processus ***pageTracker*** et le code de page.
-- Lorsqu’elle est configurée et activée, cette extension envoie les mesures Impression et Clic de ressource AEM à Adobe Analytics, qui sera alors automatiquement réimporté dans les rapports Statistiques sur les ressources dans AEM.
+- Lorsquʼelle est configurée dans lʼinterface utilisateur de collecte de données, cette extension envoie les mesures Impression et Clic des assets AEM à Adobe Analytics, qui seront alors automatiquement réimportées dans les rapports Informations sur les assets dans AEM.
 
 **Correctifs**
 

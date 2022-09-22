@@ -2,9 +2,9 @@
 title: Extension de couche de données Google
 description: Découvrez l’extension de balise de la couche de données client Google dans Adobe Experience Platform.
 exl-id: 7990351d-8669-432b-94a9-4f9db1c2b3fe
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '823'
+source-wordcount: '819'
 ht-degree: 8%
 
 ---
@@ -25,7 +25,7 @@ La version 1.0.x de l’extension est une version bêta. Cette extension n’a p
 
 ## Installation
 
-Pour installer l’extension, accédez au catalogue d’extensions dans l’interface utilisateur Experience Platform ou l’interface utilisateur de collecte de données, puis sélectionnez **Couche de données Google**.
+Pour installer l’extension, accédez au catalogue d’extensions dans l’interface utilisateur de la collecte de données et sélectionnez **Couche de données Google**.
 
 Une fois installée, l’extension crée ou accède à une couche de données chaque fois que la bibliothèque de balises se charge sur votre site web.
 

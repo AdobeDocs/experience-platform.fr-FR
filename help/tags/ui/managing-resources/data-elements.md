@@ -2,10 +2,10 @@
 title: Éléments de données
 description: Les éléments de données sont les blocs de construction de votre dictionnaire de données (ou mappage de données). Utilisez des éléments de données pour recueillir, organiser et diffuser des données dans les technologies marketing et publicitaires.
 exl-id: 1e7b03cc-5a54-403d-bf8d-dbc206cfeb2d
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '1622'
-ht-degree: 95%
+source-wordcount: '1631'
+ht-degree: 99%
 
 ---
 
@@ -161,7 +161,7 @@ Obtention de la valeur de :
 
 N’importe quelle variable ou n’importe quel objet JavaScript peut être référencé à l’aide du champ de chemin d’accès.
 
-Si vous souhaitez collecter des variables JavaScript ou des propriétés d’objet dans vos balises et les utiliser avec l’une de vos extensions ou règles, des éléments de données peuvent être utilisés pour capturer ces valeurs. Ainsi, vous pouvez vous reporter à l’élément de données dans vos règles. Si la source des données venait à changer, il vous suffirait de modifier la référence à la source (l’élément de données) à un seul emplacement.
+Si vous souhaitez collecter des variables JavaScript ou des propriétés d’objet dans vos balises et les utiliser avec l’une de vos extensions ou règles, des éléments de données peuvent être utilisés pour capturer ces valeurs. Ainsi, vous pouvez vous reporter à l’élément de données dans vos règles, et si la source des données venait à changer, il vous suffirait de modifier la référence à la source (l’élément de données) à un seul endroit dans l’interface utilisateur de collecte de données.
 
 Par exemple, supposons que vos balises contiennent une variable JavaScript nommée « `Page_Name` » comme illustré ci-dessous :
 
@@ -213,7 +213,7 @@ Seule la section de nom est nécessaire. Les indicateurs spéciaux tels que « 
 
 ### Nombre aléatoire
 
-Utilisez cet élément de données pour générer un nombre aléatoire. Il est souvent utilisé pour échantillonner des données ou pour créer des identifiants, tels qu’un identifiant d’accès. Le nombre aléatoire peut également être utilisé pour obscurcir ou appliquer un salage aux données sensibles. Voici quelques exemples :
+Utilisez cet élément de données pour générer un nombre aléatoire. Il est souvent utilisé pour échantillonner des données ou pour créer des identifiants, comme un ID d’accès. Le nombre aléatoire peut également être utilisé pour obscurcir ou appliquer un salage aux données sensibles. Voici quelques exemples :
 
 * Générer un ID d’accès
 * Concaténer le nombre à un jeton utilisateur ou à un horodatage pour garantir l’unicité
@@ -257,7 +257,7 @@ Voici quelques cas d’utilisation courants :
 
 ## Éléments de données intégrés
 
-Vous devez créer des éléments de données personnalisés supplémentaires si vous avez déjà utilisé l’un des éléments de données suivants :
+Si vous avez déjà utilisé l’un des éléments de données suivants, vous devez créer un élément de données personnalisé dans l’interface utilisateur de collecte de données :
 
 * URI
 * Protocole

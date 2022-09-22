@@ -2,10 +2,10 @@
 title: Extension Adobe Client Data Layer
 description: Découvrez l’extension de balise ACDL dans Adobe Experience Platform.
 exl-id: c4d1b4d3-4b51-4701-be2e-31b08e109bf6
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '647'
-ht-degree: 95%
+source-wordcount: '643'
+ht-degree: 100%
 
 ---
 
@@ -18,7 +18,7 @@ If you would like to have more details on development consideration, [please rea
 
 ## Installation
 
-Pour installer l’extension, accédez au catalogue d’extensions dans l’interface utilisateur de l’Experience Platform ou l’interface utilisateur de collecte de données et sélectionnez Adobe Client Data Layer.
+Pour installer l’extension, accédez au catalogue d’extensions dans l’interface utilisateur de collecte de données et sélectionnez Adobe Client data Layer.
 
 ![Vue Extension ACDL dans le catalogue](./images/catalog.png)
 

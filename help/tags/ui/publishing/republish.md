@@ -2,10 +2,10 @@
 title: Republication de bibliothèque
 description: Découvrez comment republier une ancienne bibliothèque de balises dans Adobe Experience Platform.
 exl-id: 026b01f2-a93d-4e8a-9ed2-47c4f011e70f
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '648'
-ht-degree: 96%
+source-wordcount: '650'
+ht-degree: 100%
 
 ---
 
@@ -45,7 +45,7 @@ Cela signifie que lorsque vous republiez une ancienne bibliothèque :
 
 * La manière dont les environnements de développement et d’évaluation calculent ce qui est en amont ne change pas.
 
-Prenons comme exemple le cas où vous effectuez une restauration en raison d’un problème avec une règle spécifique. La révision de la règle qui est actuellement en production peut, par exemple, être vieille de trois versions. Lorsque vous affichez cette règle dans l’interface utilisateur pour la corriger, elle reflète toujours les dernières modifications enregistrées plutôt que celles qui sont actuellement en production.
+Prenons comme exemple le cas où vous effectuez une restauration en raison d’un problème avec une règle spécifique. La révision de la règle qui est actuellement en production peut, par exemple, être vieille de trois versions. Lorsque vous affichez cette règle dans lʼinterface utilisateur de collecte de données pour la corriger, elle reflète toujours les dernières modifications enregistrées au lieu de celles qui sont actuellement en production.
 
 Cʼest pourquoi Platform vous avertit quʼune propriété est dans un état republié afin de vous rappeler que ce que vous voyez dans lʼinterface utilisateur de collecte de données est un peu plus éloigné de la production que dʼhabitude. Cette notification peut être ignorée et sʼaffiche une seule fois par session du navigateur, lors de la première consultation de la propriété.
 

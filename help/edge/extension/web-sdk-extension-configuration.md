@@ -1,10 +1,10 @@
 ---
 title: Configuration de l’extension du SDK Web Adobe Experience Platform
-description: Comment configurer l’extension de balise du SDK Web de Adobe Experience Platform dans l’interface utilisateur.
+description: Comment configurer l’extension de balise du SDK Web Adobe Experience Platform dans l’interface utilisateur de la collecte de données.
 exl-id: 96d32db8-0c9a-49f0-91f3-0244522d66df
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '1041'
+source-wordcount: '1047'
 ht-degree: 6%
 
 ---
@@ -13,11 +13,11 @@ ht-degree: 6%
 
 L’extension de balise SDK Web Adobe Experience Platform envoie des données à Adobe Experience Cloud à partir de propriétés web via Adobe Experience Platform Edge Network. L’extension vous permet de diffuser des données dans Platform, de synchroniser les identités, de traiter les signaux de consentement du client et de collecter automatiquement des données contextuelles.
 
-Ce document explique comment configurer l’extension dans l’interface utilisateur.
+Ce document explique comment configurer l’extension dans l’interface utilisateur de la collecte de données.
 
 ## Prise en main
 
-Si l’extension SDK Web Platform a déjà été installée pour une propriété, ouvrez la propriété dans l’interface utilisateur et sélectionnez l’option **[!UICONTROL Extensions]** . Sous Platform Web SDK, sélectionnez **[!UICONTROL Configurer]**.
+Si l’extension SDK Web Platform a déjà été installée pour une propriété, ouvrez la propriété dans l’interface utilisateur de la collecte de données et sélectionnez l’option **[!UICONTROL Extensions]** . Sous Platform Web SDK, sélectionnez **[!UICONTROL Configurer]**.
 
 ![](../images/extension/overview/configure.png)
 

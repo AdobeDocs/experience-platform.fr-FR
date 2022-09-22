@@ -2,10 +2,10 @@
 title: Autorisations d’utilisateur relatives aux balises
 description: Découvrez les différents types d’autorisations relatives aux balises disponibles et quelques stratégies d’implémentation de base pour différents cas d’utilisation commerciale.
 exl-id: 9b48847a-6133-4dbd-b17d-e7b88152ad7d
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '1308'
-ht-degree: 93%
+source-wordcount: '1311'
+ht-degree: 96%
 
 ---
 
@@ -42,7 +42,7 @@ Par défaut, les profils de produit octroient l’accès à toutes les propriét
 
 ### Droits de propriété {#property-rights}
 
-Toute propriété de balise que vous créez dans l’interface utilisateur est disponible dans Admin Console, ce qui vous permet de regrouper la propriété avec des droits de propriété spécifiques dans le même profil de produit.
+Toute propriété que vous créez dans l’interface utilisateur de la collecte de données est disponible dans Admin Console. Cela vous permet d’associer la propriété à des droits de propriété spécifiques dans le même profil de produit.
 
 Si, par exemple, un profil de produit donné n’a pas accès à Propriété A1, les utilisateurs qui appartiennent à ce profil ne peuvent ni consulter ni modifier les paramètres dans Propriété A1.
 
@@ -52,7 +52,7 @@ Le tableau suivant décrit les droits de propriété disponibles et les fonction
 
 | Droit de propriété | Description |
 | --- | --- |
-| **Développer** | Ce droit autorise les actions suivantes :<ul><li>Création de règles et d’éléments de données</li><li>Création de bibliothèques et intégration dans des environnements de développement existants</li><li>Envoi de bibliothèque pour approbation</li></ul>La plupart des tâches quotidiennes dans l’interface utilisateur exigent ce droit. |
+| **Développer** | Ce droit autorise les actions suivantes :<ul><li>Création de règles et d’éléments de données</li><li>Création de bibliothèques et intégration dans des environnements de développement existants</li><li>Envoi de bibliothèque pour approbation</li></ul>La plupart des tâches quotidiennes dans l’interface utilisateur de la collecte de données requièrent ce droit. |
 | **Approuver** | Cela vous permet de prendre une bibliothèque envoyée et de l’intégrer dans l’environnement d’évaluation. Vous pouvez également approuver une bibliothèque en vue de la publier une fois le test terminé. |
 | **Publier** | Cela vous permet de publier des bibliothèques approuvées dans l’environnement de production. |
 | **Gérer les extensions** | Ce droit autorise les actions suivantes : <ul><li>Installation de nouvelles extensions sur une propriété</li><li>Modification de la configuration d’une extension déjà installée</li><li>Suppression d’une extension</li></ul>Consultez la documentation de présentation des extensions pour [plus dʼinformations sur les extensions](../managing-resources/extensions/overview.md). Ce rôle appartient généralement au service informatique ou au marketing, selon votre organisation. |

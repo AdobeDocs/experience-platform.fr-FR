@@ -3,10 +3,10 @@ title: Utilisation d’Offer Decisioning avec le SDK Web Platform
 description: Le SDK Web de Adobe Experience Platform peut diffuser et générer des offres personnalisées gérées dans Offer Decisioning. Vous pouvez créer vos offres et d’autres objets associés à l’aide de l’interface utilisateur ou de l’API Offer Decisioning.
 keywords: offer decisioning;prise de décision;SDK Web;SDK Web Platform;offres personnalisées;diffuser des offres;diffusion d’offres;personnalisation des offres ;
 exl-id: 4ab51f9d-3c44-4855-b900-aa2cde673a9a
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '865'
-ht-degree: 20%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -65,7 +65,7 @@ Pour activer l’Offer decisioning, procédez comme suit :
 
    ![offer-decisioning-edge-config](./assets/offer-decisioning-edge-config.png)
 
-1. Suivez les instructions de la section [installation du SDK](../../fundamentals/installing-the-sdk.md) (Le SDK peut être installé de manière autonome ou via l’interface utilisateur. Voir [guide de démarrage rapide des balises](../../../tags/quick-start/quick-start.md)) pour plus d’informations.
+1. Suivez les instructions de la section [installation du SDK](../../fundamentals/installing-the-sdk.md) (Le SDK peut être installé de manière autonome ou par l’intermédiaire de la fonction [Interface utilisateur de la collecte de données](https://experience.adobe.com/#/data-collection/). Voir [guide de démarrage rapide des balises](../../../tags/quick-start/quick-start.md)) pour plus d’informations.
 1. [Configuration du SDK](../../fundamentals/configuring-the-sdk.md) pour l’Offer decisioning. Vous trouverez ci-dessous d’autres étapes spécifiques à l’Offer decisioning.
 
    * Installation du SDK autonome

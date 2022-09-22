@@ -2,10 +2,10 @@
 title: Suppression de ressources
 description: Découvrez comment supprimer des ressources de balises dans Adobe Experience Platform.
 exl-id: c8e26720-1976-48ec-8490-3d4ce587831e
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '558'
-ht-degree: 93%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 93%
 >
 >Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
-La suppression d’une ressource entraîne la suppression définitive de cette ressource dans Adobe Experience Platform. Si vous souhaitez supprimer une ressource d’une bibliothèque de balises spécifique tout en souhaitant que cette ressource soit disponible dans d’autres bibliothèques, consultez le guide sur [suppression de ressources d’une bibliothèque](remove-resources-from-library.md).
+La suppression d’une ressource entraîne la suppression définitive de cette ressource dans Adobe Experience Platform. Si vous souhaitez que la ressource apparaisse toujours dans l’interface utilisateur de collecte de données mais pas dans votre bibliothèque de balises, reportez-vous à [Suppression de ressources d’une bibliothèque](remove-resources-from-library.md).
 
 Vous pouvez supprimer des éléments de données, des règles, des extensions, des hôtes, des environnements et des propriétés. Une fois supprimées, il n’est pas possible de récupérer ces ressources.
 

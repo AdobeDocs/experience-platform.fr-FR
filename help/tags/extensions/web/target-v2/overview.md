@@ -2,10 +2,10 @@
 title: Présentation de l’extension Adobe Target v2
 description: Découvrez l’extension de balise Adobe Target v2 dans Adobe Experience Platform.
 exl-id: 8f491d67-86da-4e27-92bf-909cd6854be1
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '1356'
-ht-degree: 93%
+source-wordcount: '1363'
+ht-degree: 100%
 
 ---
 
@@ -31,13 +31,13 @@ Pour configurer l’extension, ouvrez l’onglet Extensions, survolez-la avec la
 
 ### Paramètres at.js
 
-Tous les paramètres at.js, à l’exception de la temporisation, sont automatiquement extraits de la configuration at.js de l’interface utilisateur de Target. L’extension récupère uniquement les paramètres de l’interface utilisateur de Target lors de son premier ajout. De ce fait, tous les paramètres doivent être gérés dans l’interface utilisateur si d’autres mises à jour sont nécessaires.
+Tous les paramètres at.js, à l’exception de la temporisation, sont automatiquement extraits de la configuration at.js de l’interface utilisateur de Target. L’extension extrait les paramètres de l’interface utilisateur de Target uniquement lors de l’ajout initial. De ce fait, tous les paramètres doivent être gérés dans l’interface utilisateur de collecte de données si d’autres mises à jour sont nécessaires.
 
 Les options de configuration disponibles sont les suivantes :
 
 #### Client Code (Code client)
 
-Le code client est l’identifiant de compte de Target. Cette valeur doit presque toujours être conservée comme valeur par défaut. Elle peut être modifiée à l’aide d’éléments de données.
+Le code client est l’identificateur du compte Target. Cette valeur doit presque toujours être conservée comme valeur par défaut. Elle peut être modifiée à l’aide d’éléments de données.
 
 #### Organization ID (ID d’organisation)
 
@@ -133,8 +133,8 @@ Voici quelques éléments à garder à l’esprit lors de l’utilisation du fra
    * Lorsque la réponse de chargement de page a été reçue
    * Lorsque la requête de chargement de page arrive à expiration
    * Lorsque le fragment lui-même arrive à expiration.
-* L’action &quot;Fire Page Load Request&quot; (Déclencher la requête de chargement de page) doit être utilisée sur toutes les pages à l’aide du fragment de code de masquage préalable afin de minimiser la durée du masquage.
-* Le masquage du corps doit également être activé dans l’action de requête de chargement de page de la règle de chargement de page que vous utilisez pour Target ; dans le cas contraire, tous les chargements de page restent masqués pendant le délai d’expiration.
+* L’action « Fire Page Load Request » (Déclenchement de la requête pendant le chargement de la page) doit être utilisée sur toutes les pages à l’aide du fragment de code de masquage préalable afin de minimiser la durée du masquage.
+* Le masquage du corps doit également être activé dans l’action Requête de chargement de page de la règle Chargement de page que vous utilisez pour Target dans l&#39;interface utilisateur de collecte de données. Dans le cas contraire, tous les chargements de page restent masqués pendant la période de temporisation.
 
 Le fragment de code de masquage préalable se présente comme suit et peut être réduit. Les options configurables se trouvent à la fin :
 
