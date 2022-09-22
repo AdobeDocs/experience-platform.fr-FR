@@ -5,7 +5,7 @@ title: Définition des champs d’énumération dans l’interface utilisateur
 description: Découvrez comment définir un champ d’énumération dans l’interface utilisateur de l’Experience Platform.
 topic-legacy: user guide
 exl-id: 67ec5382-31de-4f8d-9618-e8919bb5a472
-source-git-commit: f6fefda974d2ae6fd4b035ef3b5fe633311c9772
+source-git-commit: 878d99d9eb45f40ff76e5e90116abf032be1c93f
 workflow-type: tm+mt
 source-wordcount: '310'
 ht-degree: 2%
@@ -15,7 +15,7 @@ ht-degree: 2%
 # Définition des champs d’énumération dans l’interface utilisateur {#enum}
 
 >[!CONTEXTUALHELP]
->id="platform_xdm_enumsuggestedvalue"
+>id="platform_xdm_enum_suggestedvalue"
 >title="Enumérations et valeurs suggérées"
 >abstract="Une énumération limite un champ de chaîne pour autoriser uniquement l’ingestion des données correspondant à un ensemble prédéfini de valeurs. Vous pouvez également définir un ensemble de valeurs suggérées pour le champ qui ne limite pas l’ingestion, mais qui définit à la place les attributs parmi lesquels vous pouvez choisir dans la segmentation. Pour plus d’informations, consultez la documentation."
 
