@@ -98,7 +98,6 @@ Lorsque vous créez une propriété pour la première fois dans l’[interface u
 >
 >1. Sélectionnez l’onglet **[!UICONTROL Hôtes]** sur votre propriété, puis cliquez sur **[!UICONTROL Ajouter l’hôte]**.
 >1. Attribuez un nom à l’hôte, sélectionnez **[!UICONTROL Géré par Adobe]** comme type d’hôte, puis cliquez sur **[!UICONTROL Enregistrer]**.
-
 >
 >Vous pouvez ensuite réaffecter vos environnements à l’hôte géré par Adobe selon vos besoins.
 
