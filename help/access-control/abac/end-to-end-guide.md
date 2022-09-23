@@ -4,9 +4,9 @@ title: Guide de bout en bout du contrôle d’accès basé sur les attributs
 description: Ce document fournit un guide de bout en bout sur le contrôle d’accès basé sur les attributs dans Adobe Experience Platform.
 hide: true
 hidefromtoc: true
-source-git-commit: f7a8f9a5eb0ef3c961f9524057ff01564f88dec3
+source-git-commit: 230bcfdb92c3fbacf2e24e7210d61e2dbe0beb86
 workflow-type: tm+mt
-source-wordcount: '2218'
+source-wordcount: '2315'
 ht-degree: 7%
 
 ---
@@ -39,9 +39,9 @@ Pour ce faire, vous devez configurer les rôles, les ressources et les stratégi
 
 Vous allez :
 
-* [Étiqueter les rôles de vos utilisateurs]{#label-roles}: Utilisez l’exemple d’un prestataire de santé (ACME Business Group) dont le groupe marketing travaille avec des agences externes.
-* [Étiqueter vos ressources (champs de schéma et segments)]{#label-resources}: Attribuez le **[!UICONTROL PHI/Données d’intégrité réglementées]** libellé aux ressources de schéma et aux segments.
-* [Créez la stratégie qui les reliera.]{#policy}: Créez une stratégie pour lier les libellés de vos ressources aux libellés de votre rôle qui refusent l’accès aux champs de schéma et aux segments. Cela refusera l’accès au champ de schéma et au segment dans tous les environnements de test pour les utilisateurs qui n’ont pas de libellés correspondants.
+* [Étiqueter les rôles de vos utilisateurs](#label-roles): Utilisez l’exemple d’un prestataire de santé (ACME Business Group) dont le groupe marketing travaille avec des agences externes.
+* [Étiqueter vos ressources (champs de schéma et segments)](#label-resources): Attribuez le **[!UICONTROL PHI/Données d’intégrité réglementées]** libellé aux ressources de schéma et aux segments.
+* [Créez la stratégie qui les reliera.](#policy): Créez une stratégie pour lier les libellés de vos ressources aux libellés de votre rôle qui refusent l’accès aux champs de schéma et aux segments. Cela refusera l’accès au champ de schéma et au segment dans tous les environnements de test pour les utilisateurs qui n’ont pas de libellés correspondants.
 
 ## Autorisations
 
@@ -162,7 +162,7 @@ Répétez les étapes ci-dessus avec **[!UICONTROL Insuline &lt;50]**.
 >[!CONTEXTUALHELP]
 >id="platform_permissions_policies_edit_permitdeny"
 >title="Configuration des actions autorisées et non autorisées pour une stratégie"
->abstract="Sélectionnez Autoriser l’accès à pour configurer les actions autorisées que vos utilisateurs peuvent effectuer par rapport aux ressources. Sélectionnez Refuser l’accès à pour configurer les actions non autorisées que vos utilisateurs ne peuvent pas effectuer par rapport aux ressources."
+>abstract="A <b>refuser l’accès</b> lorsque les critères sont satisfaits, l’accès des utilisateurs est refusé. Lorsqu’elle est combinée avec <b>Les éléments suivants sont faux :</b> - tous les utilisateurs se verront refuser l’accès à moins qu’ils ne répondent aux critères correspondants définis. Ce type de stratégie vous permet de protéger une ressource sensible et de n’autoriser l’accès qu’aux utilisateurs qui possèdent des libellés correspondants. <br>A <b>autoriser l’accès à</b> La stratégie permet aux utilisateurs d’accéder à lorsque les critères sont remplis. Lorsqu’elle est combinée avec <b>La valeur suivante est vraie :</b> - les utilisateurs auront accès s’ils répondent aux critères correspondants définis. Cela ne nie pas explicitement l’accès aux utilisateurs, mais ajoute un accès aux autorisations. Ce type de stratégie vous permet d’accorder un accès supplémentaire à la ressource, en plus des utilisateurs qui peuvent déjà y avoir accès par le biais d’autorisations de rôle.&quot;</br>
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=en#edit-a-policy" text="Modification d’une stratégie"
 
 >[!CONTEXTUALHELP]
