@@ -3,9 +3,9 @@ keywords: Experience Platform;accueil;rubriques populaires;Connecteur source Ana
 title: Connecteur source Adobe Analytics pour les données d’une suite de rapports
 description: Ce document présente Analytics et décrit les cas d’utilisation des données Analytics.
 exl-id: c4887784-be12-40d4-83bf-94b31eccdc2e
-source-git-commit: 352993365dfcd4f39e7aea337b014430f7bad41c
+source-git-commit: fd114a418668436efa17edb00f2849a10f2c8cd6
 workflow-type: tm+mt
-source-wordcount: '1043'
+source-wordcount: '997'
 ht-degree: 21%
 
 ---
@@ -82,7 +82,3 @@ Ces champs ne sont pas marqués comme des identités. Au lieu de cela, les même
 * `{ “key”: “AACUSTOMID”, “value”: [ { “id”: “<identity>”, “primary”: false } ] }`
 
 Dans la carte d’identité, si ECID est présent, il est marqué comme identité Principale de l’événement. Dans ce cas, AAID peut être basé sur ECID en raison de la variable [Période de grâce d’Identity Service](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/grace-period.html). Dans le cas contraire, l’AAID est marqué comme étant l’identité principale de l’événement. L’AACUSTOMID n’est jamais marqué comme l’ID principal de l’événement. Cependant, si AACUSTOMID est présent, AAID est basé sur AACUSTOMID en raison de l’ordre des opérations Experience Cloud.
-
-### Customer Journey Analytics et identifiant Principal
-
-Pour Customer Journey Analytics, la définition de l’ID de Principal n’est importante que si vous décidez d’utiliser l’ID de Principal comme ID de personne. Cependant, ce n’est pas obligatoire. Vous pouvez choisir une autre colonne d’identité comme ID de personne.
