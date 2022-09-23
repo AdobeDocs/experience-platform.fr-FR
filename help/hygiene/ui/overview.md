@@ -3,9 +3,9 @@ title: Guide de l’interface utilisateur de nettoyage de données
 description: Découvrez comment gérer les tâches de nettoyage de données dans l’interface utilisateur d’Adobe Experience Platform.
 exl-id: 7199151a-5390-4150-8a1d-daf53b7a1f5b
 source-git-commit: 3a98275b4b2969e2c7d8c1ec6ada14d1dd52b9b8
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '228'
-ht-degree: 66%
+ht-degree: 100%
 
 ---
 
@@ -14,12 +14,12 @@ ht-degree: 66%
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_privacyconsole_consumer"
 >title="Roue d’hygiène des données"
->abstract="Ce widget affiche l’état des tâches de suppression des clients de l’hygiène des données pour la période sélectionnée. Pour plus d’informations sur vos processus d’hygiène des données, sélectionnez **Hygiène des données** dans le volet de navigation de gauche."
+>abstract="Ce widget affiche le statut des tâches de suppression des clients de l’hygiène des données pour le délai sélectionnée. Pour plus d’informations sur vos processus d’hygiène des données, sélectionnez **Hygiène des données** dans le volet de navigation de gauche."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_privacyconsole_recents"
->title="Commandes de travail récentes relatives à l’hygiène des données"
->abstract="Ce widget présente les cinq derniers ordres de travail d’hygiène des données créés ou mis à jour, selon l’option sélectionnée en haut à droite. Pour plus d’informations sur vos processus d’hygiène des données, sélectionnez **Hygiène des données** dans le volet de navigation de gauche."
+>title="Parcourir les ordres de travail d’hygiène des données"
+>abstract="Ce widget affiche les cinq derniers ordres de travail d’hygiène des données créés ou mis à jour, selon l’option sélectionnée en haut à droite. Pour plus d’informations sur vos processus d’hygiène des données, sélectionnez **Hygiène des données** dans le volet de navigation de gauche."
 
 >[!IMPORTANT]
 >
