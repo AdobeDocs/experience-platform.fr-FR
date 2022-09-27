@@ -2,12 +2,10 @@
 title: Supprimer des enregistrements de clients
 description: Découvrez comment supprimer des enregistrements de clients dans l’interface utilisateur d’Adobe Experience Platform.
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-hide: true
-hidefromtoc: true
-source-git-commit: 7f1e4bdf54314cab1f69619bcbb34216da94b17e
+source-git-commit: 425298ec28517bba4eca1bf0966fd3b205fce764
 workflow-type: tm+mt
-source-wordcount: '1089'
-ht-degree: 100%
+source-wordcount: '1131'
+ht-degree: 93%
 
 ---
 
@@ -15,7 +13,7 @@ ht-degree: 100%
 
 >[!IMPORTANT]
 >
->Actuellement, les fonctionnalités de nettoyage de données d’Adobe Experience Platform sont uniquement disponibles pour les organisations qui ont acheté Healthcare Shield.
+>Les demandes de suppression des consommateurs ne sont disponibles que pour les organisations qui ont acheté Adobe Healthcare Shield ou Privacy Shield.
 
 L’espace de travail [[!UICONTROL Nettoyage de données]](./overview.md) dans l’interface utilisateur d’Adobe Experience Platform, vous permet de supprimer les enregistrements des clients qui utilisent le service d’identités et le profil client en temps réel.
 
@@ -37,7 +35,7 @@ Pour lancer le processus, sélectionnez **[!UICONTROL Créer une requête]** dan
 
 ![Image illustrant le bouton [!UICONTROL Créer une requête] sélectionné](../images/ui/delete-consumer/create-request-button.png)
 
-La boîte de dialogue de création de requête s’affiche. Par défaut, l’option **[!UICONTROL Consommateur]** est sélectionnée sous la section **[!UICONTROL Action]**. Conservez la sélection de cette option.
+La boîte de dialogue de création de requête s’affiche. Par défaut, la variable **[!UICONTROL Consommateur]** est sélectionnée sous la propriété **[!UICONTROL Action requise]** . Conservez la sélection de cette option.
 
 ![Image illustrant l’option Client sélectionnée dans la boîte de dialogue de création](../images/ui/delete-consumer/consumer-action.png)
 
@@ -130,7 +128,7 @@ Pour ajouter d’autres identités, cliquez sur l’icône plus (![image de l’
 
 ## Envoyer la requête (#submit)
 
-Une fois que vous avez terminé d’ajouter des identités à la requête, sélectionnez **[!UICONTROL Envoyer]**.
+Une fois que vous avez terminé d’ajouter des identités à la requête, sous **[!UICONTROL Paramètres de requête]**, attribuez un nom et une description facultative à la requête avant de sélectionner **[!UICONTROL Envoyer]**.
 
 ![Image illustrant le bouton [!UICONTROL Envoyer] sélectionné](../images/ui/delete-consumer/submit.png)
 
@@ -138,16 +136,14 @@ Vous êtes invité à confirmer la liste des identités dont vous souhaitez supp
 
 ![Image illustrant la boîte de dialogue de confirmation](../images/ui/delete-consumer/confirm-request.png)
 
-Une fois la requête soumise, un ordre de travail est créé et s’affiche dans l’onglet [!UICONTROL Consommateur] de l’espace de travail [!UICONTROL Nettoyage de données]. Ensuite, vous pouvez surveiller le statut de l’ordre de travail lors du traitement de la requête. La majorité des ordres de travail de suppression des clients prennent plusieurs jours.
+Une fois la requête soumise, un ordre de travail est créé et s’affiche dans l’onglet [!UICONTROL Consommateur] de l’espace de travail [!UICONTROL Nettoyage de données]. Ensuite, vous pouvez surveiller le statut de l’ordre de travail lors du traitement de la requête.
+
+>[!NOTE]
+>
+>Consultez la section de présentation sur [calendrier et transparence](../home.md#consumer-delete-transparency) pour plus d’informations sur le traitement des suppressions par les consommateurs une fois qu’elles sont exécutées.
 
 ## Étapes suivantes
 
 Ce document explique comment supprimer des enregistrements de clients dans l’interface utilisateur d’Experience Platform. Pour plus d’informations sur l’exécution d’autres tâches de nettoyage de données dans l’interface utilisateur, consultez la [Présentation de l’interface utilisateur de nettoyage de données](./overview.md).
 
-<!--
-
-Paragraph below should be commented out until workorder.md will be added to the TOC.
-
-To learn how to delete consumer records using the Data Hygiene API, refer to the [work order endpoint guide](../api/workorder.md).
-
--->
+Pour découvrir comment supprimer des enregistrements de clients à l’aide de l’API Data Hygiene, consultez le [Guide de point d’entrée d’ordre de travail](../api/workorder.md).
