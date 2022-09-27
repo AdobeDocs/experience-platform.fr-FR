@@ -1,15 +1,12 @@
 ---
 keywords: Experience Platform;accueil;rubriques populaires;connecteur source Audience Manager;Audience Manager;connecteur audience manager
-solution: Experience Platform
 title: Création d’une connexion source Adobe Audience Manager dans l’interface utilisateur
-topic-legacy: overview
-type: Tutorial
-description: Ce tutoriel vous guide tout au long des étapes de création d’un connecteur source pour Adobe Audience Manager afin d’importer les données d’événement d’expérience client dans Platform à l’aide de l’interface utilisateur.
+description: Ce tutoriel vous guide tout au long des étapes nécessaires à la création d’une connexion source pour Adobe Audience Manager afin d’importer les données d’événement d’expérience client dans Platform à l’aide de l’interface utilisateur.
 exl-id: 90c4a719-aaad-4687-afd8-7a1c0c56f744
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 90a917ea2b623079f26c67b776dd46b62531c7da
 workflow-type: tm+mt
-source-wordcount: '466'
-ht-degree: 11%
+source-wordcount: '523'
+ht-degree: 18%
 
 ---
 
@@ -19,11 +16,19 @@ Ce tutoriel vous guide tout au long des étapes de création d’un connecteur s
 
 ## Création d’une connexion source avec Adobe Audience Manager
 
-Connectez-vous à [Adobe Experience Platform](https://platform.adobe.com) puis sélectionnez **[!UICONTROL Sources]** à partir de la barre de navigation de gauche pour accéder au [!UICONTROL Sources] workspace. L’écran [!UICONTROL Catalogue] affiche diverses sources pour lesquelles vous pouvez créer un compte.
+Dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources]. L’écran [!UICONTROL Catalogue] affiche diverses sources avec lesquelles vous pouvez créer un compte.
 
-Sous , [!UICONTROL Adobe des applications] catégorie, sélectionnez **[!UICONTROL Adobe Audience Manager]** puis sélectionnez **[!UICONTROL Configurer]**.
+Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de votre écran. Vous pouvez également sélectionner la source de votre choix à l’aide de la barre de recherche.
+
+Sous [!UICONTROL Adobe de l’application], sélectionnez **[!UICONTROL Adobe Audience Manager]** puis sélectionnez **[!UICONTROL Configuration]**.
 
 ![catalogue](../../../../images/tutorials/create/aam/catalog.png)
+
+### Sélection de caractéristiques et de segments
+
+>[!NOTE]
+>
+>Vous ne pouvez pas ingérer de données régionales de la source de l’Audience Manager vers Experience Platform. Si vous avez des cas d’utilisation Analytics qui nécessitent des données régionales, veuillez utiliser la variable [Connecteur source Analytics](../adobe-applications/analytics.md).
 
 Le [!UICONTROL Sélection de caractéristiques et de segments] s’affiche, vous fournissant une interface interactive permettant d’explorer et de sélectionner vos caractéristiques, segments et données.
 

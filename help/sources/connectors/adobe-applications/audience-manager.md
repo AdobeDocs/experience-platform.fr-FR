@@ -1,27 +1,27 @@
 ---
 keywords: Experience Platform;accueil;rubriques les plus consultées;connecteur d’Audience Manager;Audience Manager;gestionnaire d’audience
 solution: Experience Platform
-title: Présentation d’Audience Manager Source Connector
+title: Présentation de la source d’Audience Manager
 topic-legacy: overview
-description: Le connecteur source Adobe Audience Manager diffuse les données propriétaires collectées dans Audience Manager vers Adobe Experience Platform.
+description: La source Adobe Audience Manager diffuse les données propriétaires collectées dans Audience Manager vers Adobe Experience Platform.
 exl-id: be90db33-69e1-4f42-9d1a-4f8f26405f0f
-source-git-commit: d0b6885b6e8606692cfe1173b75c7d3537800a5f
+source-git-commit: 37e810ce6faf40f9980841b2c9d6eb29e8b0e82a
 workflow-type: tm+mt
-source-wordcount: '927'
-ht-degree: 43%
+source-wordcount: '1059'
+ht-degree: 22%
 
 ---
 
-# Connecteur d’Audience Manager
+# Source de l’Audience Manager
 
-Le connecteur de données Adobe Audience Manager diffuse les données propriétaires collectées dans Adobe Audience Manager vers Adobe Experience Platform. Le connecteur d’Audience Manager ingère deux catégories de données vers Platform :
+La source Adobe Audience Manager diffuse les données propriétaires collectées dans Adobe Audience Manager pour activation dans Adobe Experience Platform. La source d’Audience Manager ingère deux types de données vers Platform :
 
-- **Données en temps réel :** Données capturées en temps réel sur le serveur de collecte de données d’Audience Manager. Ces données sont utilisées dans Audience Manager pour générer des caractéristiques basées sur des règles et apparaîtront dans Platform dans le temps de latence le plus court.
+- **Données en temps réel :** Données capturées en temps réel sur le serveur de collecte de données d’Audience Manager. Ces données sont utilisées en Audience Manager pour remplir des caractéristiques basées sur des règles et apparaîtront dans Platform dans le temps de latence le plus court.
 - **Données de profil :** Audience Manager utilise des données en temps réel et intégrées pour dériver des profils clients. Ces profils sont utilisés pour générer des graphiques d’identités et des caractéristiques sur des réalisations de segment.
 
-Le connecteur Audience Manager associe ces catégories de données à un schéma modèle de données d’expérience (XDM) et les envoie vers Platform. Les données en temps réel sont envoyées sous forme de données XDM ExperienceEvent, tandis que les données de profil sont envoyées sous la forme de profils individuels XDM.
+La source d’Audience Manager mappe ces types de données à un schéma de modèle de données d’expérience (XDM), puis les envoie à Platform. Les données en temps réel sont envoyées sous forme de données XDM ExperienceEvent, tandis que les données Profile sont envoyées sous forme de données XDM Individual Profile.
 
-Pour obtenir des instructions sur la création d’une connexion avec Adobe Audience Manager à l’aide de l’interface utilisateur de Platform, consultez le [tutoriel sur le connecteur d’Audience Manager](../../tutorials/ui/create/adobe-applications/audience-manager.md).
+Pour plus d’informations, consultez le guide sur [création d’une connexion source d’Audience Manager dans l’interface utilisateur](../../tutorials/ui/create/adobe-applications/audience-manager.md).
 
 ## En quoi consiste le modèle de données d’expérience (XDM) ?
 
@@ -29,7 +29,7 @@ XDM est une spécification documentée publiquement qui fournit un cadre normali
 
 Le respect des normes XDM permet d’intégrer uniformément les données de l’expérience client, ce qui facilite la diffusion des données et la collecte des informations.
 
-Pour plus d’informations sur l’utilisation de XDM dans Experience Platform, voir [Présentation du système XDM](../../../xdm/home.md). Pour en savoir plus sur la manière dont les profils et les ExperienceEvent de type schéma XDM sont structurés, consultez les [principes de base de la composition des schémas](../../../xdm/schema/composition.md).
+Pour plus d’informations sur l’utilisation de XDM dans Experience Platform, consultez la section [Présentation du système XDM](../../../xdm/home.md). Pour en savoir plus sur la structure des schémas XDM entre les profils et les événements, consultez la section [principes de base de la composition des schémas](../../../xdm/schema/composition.md).
 
 ## Exemples de schémas XDM
 
@@ -39,25 +39,23 @@ Vous trouverez ci-dessous des exemples de structure Audience Manager mappés à
 
 ![](images/aam-experience-events-for-dcs-and-onboarding-data.png)
 
-### XDM Individual Profile : pour les données de profil
+### XDM Individual Profile - pour les données de profil
 
 ![](images/aam-profile-xdm-for-profile-data.png)
 
-## Comment les champs sont-ils mappés d’Adobe Audience Manager à XDM ?
-
-Pour plus d’informations, veuillez consulter la documentation des [champs de mappage Audience Manager](./mapping/audience-manager.md).
+Pour plus d’informations sur la façon dont les champs sont mappés d’Audience Manager à XDM, consultez la documentation sur [Champs de mappage des Audiences Manager](./mapping/audience-manager.md).
 
 ## Gestion des données dans Platform
 
 ### Jeux de données
 
-Les jeux de données sont une structure de stockage et de gestion d’une collecte de données, généralement un tableau qui contient des schémas (colonnes) et des champs (lignes) et est mis à disposition par une connexion de données. Les données d’Audience Manager se composent de données en temps réel, de données entrantes et de données de profil. Pour localiser vos jeux de données Audience Manager, utilisez la fonction de recherche de l’interface utilisateur en utilisant les conventions de dénomination fournies pour chaque type de données.
+Un jeu de données est une structure de stockage et de gestion pour une collecte de données, généralement sous la forme d’un tableau, qui contient un schéma (des colonnes) et des champs (des lignes) et qui est mis à disposition par une connexion aux données. Les données d’Audience Manager se composent de données en temps réel, de données entrantes et de données de profil. Pour localiser vos jeux de données Audience Manager, utilisez la fonction de recherche de l’interface utilisateur en utilisant les conventions de dénomination fournies pour chaque type de données.
 
 Par défaut, les jeux de données d’Audience Manager sont désactivés pour Profile et les utilisateurs peuvent activer ou désactiver des jeux de données en fonction de leurs cas d’utilisation. Il n’est pas recommandé de désactiver les jeux de données qui seront utilisés pour l’appartenance à un segment dans Profile.
 
 >[!NOTE]
 >
->AAM Temps réel est le seul jeu de données qui va à la variable [!DNL Data Lake]. Tous les autres jeux de données d’Audience Manager sont dirigés vers [!DNL Profile], s’ils sont activés pour [!DNL Profile]. S’ils ne sont pas activés pour [!DNL Profile], elles ne reçoivent aucune donnée et s’affichent comme vides.
+>AAM temps réel est le seul jeu de données qui va au lac de données. Tous les autres jeux de données d’Audience Manager sont dirigés vers [!DNL Profile], s’ils sont activés pour [!DNL Profile]. S’ils ne sont pas activés pour [!DNL Profile], elles ne reçoivent aucune donnée et s’affichent comme vides.
 
 | Nom du jeu de données | Description | Classe |
 | --- | --- | --- |
@@ -72,11 +70,18 @@ Par défaut, les jeux de données d’Audience Manager sont désactivés pour Pr
 
 ### Connexions
 
-Adobe Audience Manager crée une connexion dans le catalogue : connexion Audience Manager. Le catalogue est le système d’enregistrements pour l’emplacement et la liaison des données au sein d’Adobe Experience Platform. Une connexion est un objet du catalogue qui est une instance des connecteurs spécifique au client. Pour plus d’informations sur le catalogue, les connexions et les connecteurs, veuillez consulter la [présentation du service de catalogue](../../../catalog/home.md).
+Adobe Audience Manager crée une connexion dans le catalogue : connexion Audience Manager. Le catalogue est le système d’enregistrements pour l’emplacement et la liaison des données au sein d’Adobe Experience Platform. Une connexion est un objet Catalog qui est une instance de connecteurs spécifique au client. Veuillez lire la [Présentation du service de catalogue](../../../catalog/home.md) pour plus d’informations sur le catalogue, les connexions et les connecteurs.
+
+### Impact de la population de segments sur le profil
+
+La taille des populations de segments a un impact direct sur les numéros de profils lorsque vous envoyez un segment d’Audience Manager pour la première fois à Platform. Cela signifie que la sélection de tous les segments peut entraîner des dépassements de profil qui dépassent vos droits d’utilisation de licence. Platform distingue également les nouvelles données des données historiques pour l’ingestion de profils. Un segment avec 100 identités propriétaires crée 100 profils. Cependant, si la population de ce même segment a été augmentée à 150 et a été ingérée dans Platform, le nombre de profils n’augmentera que de 50, car il n’y a que 50 nouveaux profils.
+
+Vous pouvez également vérifier l’utilisation du profil dont votre compte dispose via l’ [Tableau de bord de l’utilisation des licences](../../../dashboards/guides/license-usage.md).
 
 ## Quelle est la latence attendue sur Platform pour les données Audience Manager ?
 
-| Données Audience Manager | Latence | Remarques |
-| --- | --- | --- |
-| Données en temps réel | &lt; 35 minutes. | Temps nécessaire pour que la capture du noeud Edge d’Audience Manager apparaisse sur le lac de données de Platform. |
-| Données de profil | &lt; 2 jours | Temps nécessaire pour que les données DCS/PCS Edge et les données intégrées, en cours de traitement dans un profil utilisateur, apparaissent ensuite dans Profile. Ces données ne se trouvent pas directement sur le lac de données de Platform aujourd’hui. Le basculement de profil peut être activé pour que les jeux de données Profile d’Audience Manager assimilent ces données directement dans Profile. |
+| Données Audience Manager | Type | Latence | Remarques |
+| --- | --- | --- | --- |
+| Données en temps réel | Événements | &lt;25 minutes | Temps nécessaire pour que la capture sur le noeud Audience Manager Edge apparaisse dans le lac de données. |
+| Données en temps réel | Mises à jour des profils | &lt;10 minutes | Temps nécessaire pour accéder à Real-time Customer Profile. |
+| Données en temps réel et intégrées | Mises à jour des profils | 24 à 36 heures | Temps écoulé entre la capture via les données Edge DCS/PCS et les données intégrées, en cours de traitement dans un profil utilisateur, et l’affichage dans Real-time Customer Profile. Actuellement, ces données ne se trouvent pas directement dans le lac de données. Le basculement de profil peut être activé pour que les jeux de données de profil d’Audience Manager assimilent directement ces données dans Real-time Customer Profile. |
