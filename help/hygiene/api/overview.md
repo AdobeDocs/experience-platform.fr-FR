@@ -2,10 +2,10 @@
 title: Guide de l’API Data Hygiene
 description: Découvrez comment corriger ou supprimer par programmation les données personnelles des clients stockées dans Adobe Experience Platform.
 exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
-source-git-commit: 49ba5263c6dc8eccac2ffe339476cf316c68e486
+source-git-commit: 724852c63886ea8761b177c4351cca8a6fe748c3
 workflow-type: tm+mt
-source-wordcount: '303'
-ht-degree: 100%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -46,6 +46,10 @@ A work order is a representation of a data hygiene task that deletes consumer id
 ## Expirations de jeux de données
 
 Une expiration de jeu de données correspond à une action « supprimer un jeu de données » différée. En créant une expiration de jeu de données, vous spécifiez une heure ultérieure à laquelle ce jeu de données doit être supprimé. Consultez le [Guide de point d’entrée d’expiration de jeux de données](./dataset-expiration.md) pour plus d’informations sur la planification des expirations de jeux de données dans l’API.
+
+## Quota
+
+Votre entreprise est limitée à un quota mensuel d’emplois prédéterminé pour chaque type d’opération d’hygiène des données, qui peut varier en fonction des licences. Voir [Guide du point de fin de quota](./quota.md) pour plus d’informations sur l’état actuel du quota de vos processus d’hygiène des données.
 
 ## Étapes suivantes
 
