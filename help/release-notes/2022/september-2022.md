@@ -1,13 +1,12 @@
 ---
 title: Notes de mise à jour de Adobe Experience Platform - Septembre 2022
 description: Notes de mise à jour de septembre 2022 pour Adobe Experience Platform.
-source-git-commit: 1890bd9dbce6a217951c28fc2fb3fec2634e714d
+source-git-commit: 5335c77b4636d10064e8786525c9f8f893371b9b
 workflow-type: tm+mt
-source-wordcount: '349'
+source-wordcount: '927'
 ht-degree: 38%
 
 ---
-
 
 # Notes de mise à jour d’Adobe Experience Platform
 
@@ -15,8 +14,54 @@ ht-degree: 38%
 
 Mises à jour des fonctionnalités existantes dans Adobe Experience Platform :
 
+- [Modèle de données d’expérience (XDM)](#xdm)
 - [Service d’identités](#identity-service)
 - [Sources](#sources)
+
+## Modèle de données d’expérience (XDM) {#xdm}
+
+XDM est une spécification Open Source qui fournit des structures et des définitions communes (schémas) pour les données introduites dans Adobe Experience Platform. En adhérant aux normes XDM, toutes les données d’expérience client peuvent être intégrées dans une représentation commune afin de fournir des informations plus rapidement et de manière plus intégrée. Vous pouvez obtenir des informations précieuses à partir des actions des clients, définir des types de clients par le biais de segments et utiliser les attributs du client à des fins de personnalisation.
+
+**Nouvelles fonctionnalités**
+
+| Fonctionnalité | Description |
+| --- | --- |
+| Prise en charge de l’interface utilisateur pour les énumérations et les valeurs suggérées | Outre les énumérations qui activent la validation des données, vous pouvez désormais [ajouter ou supprimer des valeurs suggérées](../../xdm/ui/fields/enum.md) pour les champs de chaîne standard ou personnalisés, de sorte que les utilisateurs de Platform disposent d’une liste conviviale de valeurs à sélectionner lors de la création de segments. |
+
+**Nouveaux composants XDM**
+
+| Type de composant | Nom | Description |
+| --- | --- | --- |
+| Groupe de champs | [[!UICONTROL Champs de classification AJO]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/decisioning/proposition-action.schema.json) | Propriétés d’un élément spécifique avec lequel l’événement de proposition a été déclenché. |
+| Groupe de champs | [[!UICONTROL Détails de l’interaction MediaAnalytics]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-media-analytics.schema.json) | Effectue le suivi des interactions multimédia au fil du temps. |
+| Groupe de champs | [[!UICONTROL Informations détaillées sur le média]](https://github.com/adobe/xdm/blob/master/components/datatypes/mediadetails.schema.json) | Effectue le suivi des informations sur les médias. |
+| Groupe de champs | [[!UICONTROL Adobe CJM ExperienceEvent - Surfaces]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/surfaces.schema.json) | Décrit les surfaces des événements d’expérience dans Adobe Journey Optimizer. |
+
+{style=&quot;table-layout:auto&quot;}
+
+**Composants XDM mis à jour**
+
+| Type de composant | Nom | Description |
+| --- | --- | --- |
+| Comportement | [[!UICONTROL Série temporelle]](https://github.com/adobe/xdm/blob/master/components/behaviors/time-series.schema.json) | <ul><li>Ajout de valeurs pour `eventType`:<ul><li>`decisioning.propositionSend`</li><li>`decisioning.propositionDismiss`</li><li>`decisioning.propositionTrigger`</li><li>`media.downloaded`</li><li>`location.entry`</li><li>`location.exit`</li></ul></li><li>Valeurs supprimées pour `eventType`:<ul><li>`decisioning.propositionDeliver`</li><li>`media.stateStart`</li><li>`media.stateEnd`</li></ul></li></ul> |
+| Groupe de champs | (Multiple) | [Mise à jour de plusieurs descriptions de champ](https://github.com/adobe/xdm/pull/1628/files) sur les composants de Journey Orchestration. |
+| Groupe de champs | (Multiple) | [Mise à jour des titres de plusieurs composants Adobe Workfront](https://github.com/adobe/xdm/pull/1634/files) pour assurer la cohérence. |
+| Groupe de champs | [[!UICONTROL Champs de classification AJO]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/decisioning/proposition-event-type.schema.json) | Mise à jour des espaces de noms de plusieurs champs vers `xdm`. |
+| Groupe de champs | [[!UICONTROL Champs communs des événements d’étape de l’orchestration de parcours]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/journeyOrchestration/stepEvents/journeyStepEventCommonFieldsMixin.schema.json) | Ajout d’un nouveau champ, `isReadSegmentTriggerStartEvent`. |
+| Groupe de champs | [[!UICONTROL Prévisions météorologiques]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/forecasted-weather.schema.json) | Modification de la variable `xdm:uvIndex` à un type entier, puis ajout de la propriété `xdm` de plusieurs champs dans lesquels était manquant. |
+| Groupe de champs | [[!UICONTROL Informations détaillées sur le média]](https://github.com/adobe/xdm/blob/master/components/datatypes/mediadetails.schema.json) | `xdm:endUserIDs` et `xdm:implementationDetails` ont été supprimés du groupe de champs. |
+| Type de données | (Multiple) | [Mise à jour de plusieurs noms de propriétés de média](https://github.com/adobe/xdm/pull/1626/files) sur plusieurs types de données pour assurer la cohérence. |
+| Type de données | [[!UICONTROL Détails d’implémentation]](https://github.com/adobe/xdm/blob/master/components/datatypes/industry-verticals/implementationdetails.schema.json) | Ajout de noms connus pour flutter. |
+| Type de données | [[!UICONTROL Détails des points ciblés]](https://github.com/adobe/xdm/blob/master/components/datatypes/poi-detail.schema.json) | Le type de données peut désormais accepter une liste de paires clé-valeur de métadonnées associées au point ciblé. |
+| Type de données | [[!UICONTROL Action de proposition]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/decisioning/proposition-action.schema.json) | [!DNL AJO Classification Fields] a été renommé en [!UICONTROL Action de proposition]. |
+| Type de données | [[!UICONTROL Type d’événement de proposition]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/decisioning/proposition-event-type.schema.json) | [!DNL AJO Classification Fields] a été renommé en [!UICONTROL Action de proposition]. |
+| (Multiple) | (Multiple) | Les propriétés expérimentales ont été [stabilisé sur tous les composants B2B](https://github.com/adobe/xdm/pull/1617/files). |
+| (Multiple) | (Multiple) | Les entités Adobe Journey Optimizer ont été [stabilisé](https://github.com/adobe/xdm/pull/1625/files). |
+| (Multiple) | (Multiple) | Les espaces de noms de certains champs de plusieurs composants expérimentaux ont été [mise à jour pour assurer la cohérence](https://github.com/adobe/xdm/pull/1626/files). |
+
+{style=&quot;table-layout:auto&quot;}
+
+Pour plus d’informations sur XDM dans Platform, consultez la [présentation du système XDM](../../xdm/home.md).
 
 ## Identity Service {#identity-service}
 
