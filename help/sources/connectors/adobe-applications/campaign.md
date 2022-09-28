@@ -1,0 +1,76 @@
+---
+keywords: Experience Platform;accueil;rubriques populaires;Adobe Campaign Managed Cloud Services;campagne;services gérés de campagne
+title: Adobe Campaign Managed Cloud Services
+description: Découvrez comment connecter des Cloud Services gérés Campaign à Platform à l’aide de l’interface utilisateur
+source-git-commit: 99f65889aecf8c045dbb72053ebaca9429c3ebe1
+workflow-type: tm+mt
+source-wordcount: '663'
+ht-degree: 8%
+
+---
+
+# Adobe Campaign Managed Cloud Services
+
+Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous permettant de structurer, de libeller et d’améliorer les données entrantes à l’aide des services de Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, des bases de données, etc.
+
+Adobe Campaign Managed Cloud Services fournit une plateforme Managed Services pour la conception d’expériences client cross-canal et fournit un environnement pour l’orchestration visuelle des campagnes, la gestion des interactions en temps réel et l’exécution cross-canal. Visitez le [Documentation d’Adobe Campaign v8](https://experienceleague.adobe.com/docs/campaign/campaign-v8/campaign-home.html?lang=en) pour plus d’informations.
+
+La source Adobe Campaign Managed Cloud Services vous permet d’importer les données des logs de diffusion et de tracking d’Adobe Campaign v8 dans Adobe Experience Platform.
+
+## Conditions préalables
+
+Avant de pouvoir créer une connexion source pour que Campaign v8 soit Experience Platform, vous devez d&#39;abord remplir les conditions préalables suivantes :
+
+* [Configuration de l’importation de votre journal d’événements à l’aide de la console cliente Adobe Campaign](#view-delivery-and-tracking-log-data)
+* [Création d’un schéma XDM ExperienceEvent](#create-a-schema)
+* [Création d’un jeu de données](#create-a-dataset)
+
+### Afficher les données des logs de diffusion et de tracking {#view-delivery-and-tracking-log-data}
+
+>[!IMPORTANT]
+>
+>Vous devez avoir accès à la console cliente Adobe Campaign v8 pour pouvoir visualiser vos données de journal dans Campaign. Visitez le [Documentation de Campaign v8](https://experienceleague.adobe.com/docs/campaign/campaign-v8/deploy/connect.html?lang=en) pour plus d’informations sur le téléchargement et l’installation de la console cliente.
+
+Connectez-vous à votre instance Campaign v8 via la console cliente. Sous , [!DNL Explorer] onglet, sélectionnez [!DNL Administration] puis sélectionnez [!DNL Configuration]. Ensuite, sélectionnez [!DNL Data schemas] puis appliquez la variable `broadLog` filtre pour le nom ou le libellé. Dans la liste qui s&#39;affiche, sélectionnez le schéma source des logs de diffusion des destinataires avec le nom . `broadLogRcp`.
+
+![La console cliente Adobe Campaign v8 avec l&#39;onglet Explorateur sélectionné, les noeuds Administration, Configuration et Schémas de données se sont développés et le filtrage défini sur &quot;large&quot;.](./images/campaign/explorer.png)
+
+Sélectionnez ensuite le **Données** .
+
+![La console cliente Adobe Campaign v8 avec l&#39;onglet Données sélectionné.](./images/campaign/data.png)
+
+Cliquez avec le bouton droit de la souris ou appuyez sur la touche dans le panneau de données pour ouvrir le menu contextuel. À partir de là, sélectionnez **Configurer la liste...**
+
+![La console cliente Adobe Campaign v8 avec le menu contextuel ouvert et l&#39;option Configurer la liste sélectionnée.](./images/campaign/configure.png)
+
+La fenêtre de configuration de la liste s’affiche. Elle vous permet d’ajouter les champs de votre choix à la liste préexistante afin d’afficher les données du panneau de données.
+
+![Liste des configurations des logs de diffusion des destinataires qui peuvent être ajoutés pour affichage.](./images/campaign/list-configuration.png)
+
+Vous pouvez maintenant visualiser les logs de diffusion de vos destinataires, y compris les champs de configuration ajoutés à l&#39;étape précédente.
+
+>[!TIP]
+>
+>Vous pouvez répéter les mêmes étapes, mais filtrer pour `tracking` pour afficher vos données de log de suivi.
+
+![Les logs de diffusion des destinataires s&#39;affichent avec des informations sur leur nom modifié, canal de diffusion, nom de la diffusion interne et libellé.](./images/campaign/recipient-delivery-logs.png)
+
+### Création d’un schéma {#create-a-schema}
+
+Créez ensuite un schéma XDM ExperienceEvent pour les logs de diffusion et les logs de suivi. Vous devez appliquer le groupe de champs Logs de diffusion de campagne à votre schéma de logs de diffusion et le groupe de champs Logs de tracking de campagne à votre schéma de logs de tracking. Vous devez également définir la variable `externalID` comme identité Principale de votre schéma.
+
+>[!NOTE]
+>
+>Votre schéma XDM ExperienceEvent doit être activé dans Profile pour ingérer vos données Campaign vers [!DNL Real-time Customer Profile].
+
+Pour obtenir des instructions détaillées sur la création d’un schéma, consultez le guide sur [création d’un schéma XDM dans l’interface utilisateur](../../../xdm/tutorials/create-schema-ui.md).
+
+### Création d’un jeu de données {#create-a-dataset}
+
+Enfin, vous devez créer un jeu de données pour vos schémas. Pour obtenir des instructions détaillées sur la création d’un jeu de données, consultez le guide sur [création d’un jeu de données dans l’interface utilisateur](../../../catalog/datasets/user-guide.md).
+
+## Création d’une connexion source Adobe Campaign Managed Cloud Services à l’aide de l’interface utilisateur de Platform
+
+Maintenant que vous avez accédé à vos logs de données dans la console cliente Campaign, que vous avez créé un schéma et un jeu de données, vous pouvez créer une connexion source pour importer vos données Campaign Managed Services dans Platform.
+
+Pour obtenir des instructions détaillées sur la manière d’importer vos données de logs de diffusion et de tracking Campaign v8 dans Experience Platform, consultez le guide sur [création d’une connexion source Managed Services en campagne dans l’interface utilisateur](../../tutorials/ui/create/adobe-applications/campaign.md).
