@@ -3,10 +3,10 @@ keywords: Experience Platform;accueil;rubriques populaires;contrôle d’accès;
 title: Présentation du contrôle d’accès basé sur les attributs
 description: Ce document fournit des informations sur le contrôle d’accès basé sur les attributs dans Adobe Experience Platform.
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
-source-git-commit: 981d604770fbc2e979346146845ad7bc80805356
+source-git-commit: b095461b0c2510e84ca9a3a368f4907f8b3d5370
 workflow-type: tm+mt
-source-wordcount: '1583'
-ht-degree: 36%
+source-wordcount: '1684'
+ht-degree: 34%
 
 ---
 
@@ -62,7 +62,7 @@ Les sections suivantes fournissent des informations sur la manière dont le cont
 
 Pour plus d’informations sur le contrôle d’accès, voir [présentation du contrôle d’accès](../home.md).
 
-### Destinations
+### Destinations {#destinations}
 
 [!DNL Destinations] sont des intégrations prédéfinies avec des plateformes de destination qui permettent l’activation transparente des données de Platform. Vous pouvez utiliser les destinations pour activer vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
 
@@ -72,6 +72,15 @@ En tant qu’administrateur, vous pouvez utiliser des fonctionnalités de contr�
    * Dans le processus d’activation, les utilisateurs peuvent être tenus de sélectionner les segments qu’ils souhaitent activer vers une destination. En tant qu’administrateur, vous pouvez configurer les utilisateurs de votre entreprise pour qu’ils n’affichent que les segments étiquetés avec des étiquettes auxquelles les utilisateurs ont accès et les segments qui ne contiennent pas d’étiquettes.
 * Configurez l’accès des utilisateurs pour afficher des champs spécifiques dans le processus d’activation, en fonction du rôle, des autorisations et des libellés.
    * Dans le processus d’activation, les utilisateurs peuvent être tenus de sélectionner les champs qu’ils souhaitent activer vers une destination. En tant qu’administrateur, vous pouvez configurer les utilisateurs de votre entreprise pour qu’ils n’affichent que les champs étiquetés avec des libellés auxquels les utilisateurs ont accès et les champs qui ne contiennent aucun libellé.
+
+>[!IMPORTANT]
+>
+>En résumé, gardez à l’esprit les implications suivantes lorsque vous utilisez des destinations et un contrôle d’accès basé sur les attributs :
+>
+>* Vous ne pouvez activer que les segments que vous êtes autorisé à accéder et à afficher dans le [vue de navigation dans les segments](/help/segmentation/ui/overview.md#browse) et [étape sélection d’un segment](/help/destinations/ui/activate-batch-profile-destinations.md#select-segments) du workflow d’activation.
+>* Dans le [étape de mappage du workflow d’activation](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping), vous pouvez uniquement afficher et sélectionner pour activation les champs auxquels vous avez accès.
+>* Lorsque vous souhaitez activer des segments supplémentaires vers une destination existante où vous n’avez pas accès à tous les champs mappés à l’exportation, le workflow d’activation est bloqué pour vous.
+
 
 Pour plus d’informations sur [!DNL Destinations], reportez-vous à la section [[!DNL Destinations] aperçu](../../destinations/home.md).
 

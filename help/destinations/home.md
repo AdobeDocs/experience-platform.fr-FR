@@ -3,10 +3,10 @@ keywords: destinations;adobe experience platform;plateforme;présentation des de
 title: Présentation des destinations
 description: Les destinations sont des intégrations préconfigurées à des plateformes de destination qui permettent dʼactiver facilement des données provenant dʼAdobe Experience Platform. Vous pouvez utiliser les destinations dans Adobe Experience Platform pour activer vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: ad0d38cbd249642d582a807c5679065827f57717
+source-git-commit: 842aaa7104b277cf415d1ed9ee2744a200c07ce8
 workflow-type: tm+mt
-source-wordcount: '489'
-ht-degree: 47%
+source-wordcount: '633'
+ht-degree: 37%
 
 ---
 
@@ -44,7 +44,24 @@ Pour plus d’informations, consultez la [présentation des types et catégories
 
 La fonctionnalité de destinations de Platform fonctionne avec les autorisations de contrôle d’accès de Adobe Experience Platform. Selon le niveau d’autorisation de l’utilisateur, vous pouvez afficher, gérer et activer les destinations. Pour plus d’informations sur les autorisations individuelles, consultez [Contrôle d’accès dans Adobe Experience Platform](../access-control/home.md) et faites défiler la page vers le bas.
 
+Le tableau suivant décrit les combinaisons d’autorisations et d’autorisations requises pour effectuer certaines actions sur les destinations :
+
+| Niveau d’autorisation | Description |
+| ---- | ----|
+| **[!UICONTROL Gestion des destinations]** | Pour vous connecter aux destinations, vous avez besoin de l’événement **[!UICONTROL Gestion des destinations]** [autorisation de contrôle d’accès](/help/access-control/home.md#permissions). |
+| **[!UICONTROL Gestion des destinations]**, **[!UICONTROL Activation des destinations]**, **[!UICONTROL Afficher les profils]**, et **[!UICONTROL Affichage de segments]** | Pour activer des segments vers des destinations, vous avez besoin de l’événement **[!UICONTROL Gestion des destinations]**, **[!UICONTROL Activation des destinations]**, **[!UICONTROL Afficher les profils]**, et **[!UICONTROL Affichage de segments]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). |
+
+{style=&quot;table-layout:auto&quot;}
+
 Pour plus d’informations sur les contrôles d’accès, consultez le [Guide de l’utilisateur du contrôle d’accès](../access-control/ui/overview.md).
+
+### Contrôle d’accès basé sur les attributs pour les destinations {#attribute-based-access}
+
+Le contrôle d’accès basé sur les attributs dans Adobe Experience Platform permet aux administrateurs de contrôler l’accès à des objets et/ou fonctionnalités spécifiques en fonction d’attributs.
+
+Avec le contrôle d’accès basé sur les attributs, vous pouvez appliquer des configurations de mappage aux champs auxquels vous êtes autorisé à accéder. De plus, vous ne pouvez pas exporter des données vers une destination si vous n’avez pas accès à tous les champs du jeu de données.
+
+Pour plus d’informations sur le fonctionnement des destinations avec les contrôles d’accès basés sur les attributs, consultez la section [contrôle d’accès basé sur les attributs - Aperçu](../access-control/abac/overview.md#destinations).
 
 ## Restrictions de gouvernance des données concernant l’activation des données vers les destinations {#data-governance}
 
@@ -64,7 +81,7 @@ Pour plus d’informations sur la sélection d’actions marketing dans le proce
 * [Destinations de marketing par e-mail ](./catalog/email-marketing/overview.md)
 * [Destinations sociales ](./catalog/social/overview.md)
 
-Pour plus d’informations sur les violations de stratégie de données dans le processus d’activation des segments, voir l’étape Révision dans les guides suivants :
+Pour plus d’informations sur les violations de stratégie de données dans le processus d’activation des segments, voir **[!UICONTROL Réviser]** dans les guides suivants :
 
 * [Activer les données d’audience vers des destinations d’exportation de segments de diffusion en continu](./ui/activate-segment-streaming-destinations.md#review)
 * [Activer les données d’audience vers des destinations d’exportation de segments de diffusion en continu](./ui/activate-streaming-profile-destinations.md#review)
