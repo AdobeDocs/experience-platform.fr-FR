@@ -1,10 +1,10 @@
 ---
 title: Notes de mise à jour de Adobe Experience Platform - Septembre 2022
 description: Notes de mise à jour de septembre 2022 pour Adobe Experience Platform.
-source-git-commit: 3d7a04c0ec6cf6a9bed90c9c22db2e8b56bfa01f
+source-git-commit: 61b3799a4d8c8b6682babd85b6f50a7e69778553
 workflow-type: tm+mt
-source-wordcount: '1827'
-ht-degree: 36%
+source-wordcount: '2326'
+ht-degree: 33%
 
 ---
 
@@ -14,6 +14,7 @@ ht-degree: 36%
 
 Nouvelles fonctionnalités d’Adobe Experience Platform :
 
+- [Contrôle d’accès basé sur les attributs](#abac)
 - [Hygiène des données](#data-hygiene)
 - [[!UICONTROL Console de confidentialité]](#privacy-console)
 
@@ -25,6 +26,23 @@ Mises à jour des fonctionnalités existantes dans Adobe Experience Platform 
 - [Modèle de données d’expérience (XDM)](#xdm)
 - [Service d’identités](#identity-service)
 - [Sources](#sources)
+
+## Contrôle d’accès basé sur les attributs {#abac}
+
+>[!IMPORTANT]
+>
+>Le contrôle d’accès basé sur les attributs sera activé à compter d’octobre 2022. Si vous souhaitez être un des premiers adoptants, contactez votre représentant Adobe.
+
+Le contrôle d’accès basé sur les attributs est une fonctionnalité de Adobe Experience Platform qui offre une plus grande flexibilité aux marques soucieuses de la confidentialité pour gérer l’accès des utilisateurs. Les objets individuels tels que les champs de schéma et les segments peuvent être affectés à des rôles utilisateur. Cette fonctionnalité vous permet d’accorder ou de révoquer l’accès à des objets individuels pour des utilisateurs de Platform spécifiques de votre entreprise.
+
+Grâce au contrôle d’accès basé sur les attributs, les administrateurs de votre organisation peuvent contrôler l’accès des utilisateurs aux données personnelles sensibles (SPD), aux informations d’identification personnelle (PII) et à d’autres types de données personnalisés dans tous les workflows et ressources Platform. Les administrateurs peuvent définir des rôles d’utilisateur qui n’ont accès qu’à des champs spécifiques et aux données correspondant à ces champs.
+
+| Fonctionnalité | Description |
+| --- | --- |
+| Contrôle d’accès basé sur les attributs | Le contrôle d’accès basé sur les attributs vous permet de libeller les champs de schéma et les segments du modèle de données d’expérience (XDM) avec des libellés qui définissent les portées d’utilisation des données ou de l’organisation. En parallèle, les administrateurs peuvent utiliser l’interface d’administration des utilisateurs et des rôles pour définir des stratégies d’accès couvrant les champs de schéma XDM et les segments afin de mieux gérer l’accès attribué aux utilisateurs ou groupes d’utilisateurs (utilisateurs internes, externes ou tiers). Pour plus d’informations, consultez la [présentation du contrôle d’accès basé sur les attributs](../../access-control/abac/overview.md). |
+| Autorisations | La zone dédiée aux autorisations dans Experience Cloud permet aux administrateurs de définir des rôles d’utilisateur et des stratégies d’accès. Ils peuvent ainsi gérer les autorisations d’accès aux fonctionnalités et objets dans une application de produit. Grâce aux autorisations, vous pouvez créer et gérer des rôles, attribuer les autorisations de ressources souhaitées pour ces rôles et créer des stratégies pour exploiter les étiquettes et définir les rôles utilisateur ayant accès à des ressources Platform spécifiques. Les autorisations vous permettent également de gérer les libellés, les sandbox et les utilisateurs associés à un rôle spécifique. Pour plus d’informations, consultez le [guide de l’interface utilisateur des autorisations](../../access-control/abac/ui/browse.md). |
+
+Pour plus d’informations sur le contrôle d’accès basé sur les attributs, consultez la [présentation du contrôle d’accès basé sur les attributs](../../access-control/abac/overview.md). Pour consulter un guide complet sur le workflow de contrôle d’accès basé sur les attributs, reportez-vous à la section [guide de bout en bout du contrôle d’accès basé sur les attributs](../../access-control/abac/end-to-end-guide.md).
 
 ## Hygiène des données {#data-hygiene}
 
@@ -172,5 +190,9 @@ Experience Platform fournit une API RESTful et une interface utilisateur intera
 | Fonctionnalité | Description |
 | --- | --- |
 | Impact de la population de segments d’Audience Manager sur Real-time Customer Profile | L’ingestion de populations de segments d’Audience Manager importantes a un impact direct sur le nombre total de profils lorsque vous envoyez un segment d’Audience Manager pour la première fois à Platform à l’aide de la source d’Audience Manager. Cela signifie que la sélection de tous les segments peut potentiellement entraîner un nombre de profils supérieur à vos droits d’utilisation de licence. Pour plus d’informations, reportez-vous à la section [Présentation de la source d’Audience Manager](../../sources/connectors/adobe-applications/audience-manager.md). Pour plus d’informations sur l’utilisation de votre licence, consultez la documentation sur [utilisation du tableau de bord de l’utilisation des licences](../../dashboards/guides/license-usage.md). |
+| Prise en charge d’Adobe Campaign Managed Cloud Service | Utilisez la source du Cloud Service géré Adobe Campaign pour importer vos données de logs de diffusion et de suivi Adobe Campaign v8.4 à l’Experience Platform. Lisez le guide sur [création d’une connexion source Adobe Campaign Managed Cloud Service dans l’interface utilisateur](../../sources/tutorials/ui/create/adobe-applications/campaign.md) pour plus d’informations. |
+| Prise en charge des API pour l’ingestion à la demande pour les sources par lots | Utilisez l’ingestion à la demande pour créer des exécutions de flux ad hoc pour un flux de données donné avec la variable [!DNL Flow Service] API. Les exécutions de flux créées doivent être définies sur une ingestion unique. Pour plus d’informations, consultez le guide sur [création d’une exécution de flux pour l’ingestion à la demande à l’aide de l’API](../../sources/tutorials/api/on-demand-ingestion.md) pour plus d’informations. |
+| Prise en charge de l’API pour la nouvelle tentative d’exécutions de flux de données ayant échoué pour les sources par lots | Utilisez la variable `re-trigger` pour essayer de relancer votre flux de données ayant échoué via l’API. Lisez le guide sur [reprise des exécutions de flux de données ayant échoué à l’aide de l’API](../../sources/tutorials/api/retry-flows.md) pour plus d’informations. |
+| Prise en charge de l’API pour le filtrage des données au niveau des lignes pour le [!DNL Google BigQuery] et [!DNL Snowflake] sources | Utilisez des opérateurs logiques et de comparaison pour filtrer les données au niveau de la ligne pour le [!DNL Google BigQuery] et [!DNL Snowflake] sources. Pour plus d’informations, consultez le guide sur le filtrage des données pour une source à l’aide de l’API . |
 
 Pour en savoir plus sur les sources, lisez le [présentation des sources](../../sources/home.md).
