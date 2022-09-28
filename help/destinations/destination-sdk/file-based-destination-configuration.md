@@ -1,29 +1,27 @@
 ---
-description: Cette configuration vous permet d’indiquer des informations de base telles que votre nom de destination, votre catégorie, votre description, votre logo, etc. Les paramètres de cette configuration déterminent également comment les utilisateurs d’Experience Platform s’authentifient pour votre destination, comment ils apparaissent dans l’interface utilisateur d’Experience Platform ainsi que les identités qui peuvent être exportées vers votre destination.
-title: (Version Beta) Options de configuration de destinations basées sur des fichiers pour Destination SDK
+description: Cette configuration vous permet d’indiquer les informations essentielles pour votre destination basée sur des fichiers, telles que votre nom de destination, votre catégorie, votre description, etc. Les paramètres de cette configuration déterminent également comment les utilisateurs d’Experience Platform s’authentifient pour votre destination, comment ils apparaissent dans l’interface utilisateur d’Experience Platform ainsi que les identités qui peuvent être exportées vers votre destination.
+title: Options de configuration des destinations basées sur des fichiers pour la Destination SDK
 exl-id: 6b0a0398-6392-470a-bb27-5b34b0062793
-source-git-commit: fe61b2ebe1a06e8909ef675cae088cb4e7d2b325
+source-git-commit: 1d6318e33be639237c2c8e6f1bf67e1702949c20
 workflow-type: tm+mt
-source-wordcount: '2389'
-ht-degree: 79%
+source-wordcount: '2664'
+ht-degree: 66%
 
 ---
 
-# (Version Beta) Configuration de destinations basées sur des fichiers {#destination-configuration}
+# Configuration des destinations basées sur des fichiers {#destination-configuration}
 
 ## Présentation {#overview}
 
->[!IMPORTANT]
->
->La prise en charge des destinations basées sur des fichiers dans Adobe Experience Platform Destination SDK est actuellement en version bêta. La documentation et la fonctionnalité peuvent changer.
+Cette configuration vous permet d’indiquer les informations essentielles pour votre destination basée sur des fichiers, telles que votre nom de destination, votre catégorie, votre description, etc. Les paramètres de cette configuration déterminent également comment les utilisateurs d’Experience Platform s’authentifient pour votre destination, comment ils apparaissent dans l’interface utilisateur d’Experience Platform ainsi que les identités qui peuvent être exportées vers votre destination. Vous pouvez également utiliser cette configuration pour afficher les options liées au type de fichier, au format de fichier ou aux paramètres de compression des fichiers exportés.
 
-Cette configuration vous permet d’indiquer les informations essentielles pour votre destination basée sur des fichiers, telles que votre nom de destination, votre catégorie, votre description, etc. Les paramètres de cette configuration déterminent également comment les utilisateurs d’Experience Platform s’authentifient pour votre destination, comment ils apparaissent dans l’interface utilisateur d’Experience Platform ainsi que les identités qui peuvent être exportées vers votre destination.
-
-Cette configuration connecte également les autres configurations requises pour que votre destination fonctionne (métadonnées de serveur de destination et d’audience) à celle-ci. Découvrez comment vous pouvez référencer les deux configurations dans une [section ci-dessous](./destination-configuration.md#connecting-all-configurations).
+Cette configuration connecte également les autres configurations requises pour que votre destination fonctionne (métadonnées de serveur de destination et d’audience) à celle-ci. Découvrez comment vous pouvez référencer les deux configurations dans une [section ci-dessous](./file-based-destination-configuration.md#connecting-all-configurations).
 
 Vous pouvez configurer la fonctionnalité décrite dans ce document à l’aide du point d’entrée de l’API `/authoring/destinations`. Consultez [Opérations de point d’entrée de l’API Destinations](./destination-configuration-api.md) pour obtenir une liste complète des opérations que vous pouvez effectuer sur le point d’entrée.
 
 ## Exemple de configuration de destination Amazon S3 {#batch-example-configuration}
+
+Vous trouverez ci-dessous un exemple d’une destination Amazon S3 personnalisée privée créée à l’aide de la fonction `/destinations` point d’entrée de configuration.
 
 ```json
 {
@@ -368,9 +366,9 @@ Lorsque vous configurez le SFTP avec le type d’authentification par clé SSH, 
 
 Utilisez cette section pour demander aux utilisateurs de renseigner des champs personnalisés, spécifiques à votre destination, lors de la connexion à la destination dans l’interface utilisateur d’Experience Platform.
 
-Dans l’exemple ci-dessous, `customerDataFields` exige des utilisateurs qu’ils saisissent un nom pour leur destination et qu’ils fournissent un [!DNL Amazon S3] nom du compartiment et chemin du dossier, ainsi qu’un type de compression, un format de fichier et plusieurs autres options d’exportation de fichiers.
+Dans l’exemple ci-dessous, `customerDataFields` exige des utilisateurs qu’ils saisissent un nom pour leur destination et qu’ils fournissent un [!DNL Amazon S3] nom du compartiment et chemin du dossier, ainsi qu’un type de compression, un format de fichier et plusieurs autres options de formatage de fichier.
 
-Vous pouvez accéder aux entrées client des champs de données client et les utiliser dans un modèle. Utilisation de la macro `{{customerData.name}}`. Par exemple, si vous demandez aux utilisateurs de saisir un champ de compartiment Amazon S3, avec le nom `bucket`, vous pouvez y accéder dans un modèle à l’aide de la macro . `{{customerData.bucket}}`. Afficher un exemple d’utilisation d’un champ de données client dans la variable [configuration du serveur de destination](/help/destinations/destination-sdk/server-and-file-configuration.md#s3-example).
+Vous pouvez accéder aux entrées client des champs de données client et les utiliser dans un modèle. Utilisation de la macro `{{customerData.exampleName}}`. Par exemple, si vous demandez aux utilisateurs de saisir un champ de compartiment Amazon S3, avec le nom `bucket`, vous pouvez y accéder dans un modèle à l’aide de la macro . `{{customerData.bucket}}`. Afficher un exemple d’utilisation d’un champ de données client dans la variable [configuration du serveur de destination](/help/destinations/destination-sdk/server-and-file-configuration.md#s3-example).
 
 ```json
  "customerDataFields":[
@@ -558,6 +556,10 @@ Vous pouvez accéder aux entrées client des champs de données client et les ut
       }
 ```
 
+>[!TIP]
+>
+>Toutes les configurations de mise en forme de fichier répertoriées dans l’exemple ci-dessus sont décrites en détail dans la section [configuration du formatage de fichier](/help/destinations/destination-sdk/server-and-file-configuration.md#file-configuration) .
+
 | Paramètre | Type | Description |
 |---------|----------|------|
 | `name` | Chaîne | Attribuez un nom au champ personnalisé que vous introduisez. |
@@ -578,7 +580,7 @@ Cette section fait référence aux éléments de l’interface utilisateur dans 
 ```json
 "uiAttributes":{
       "documentationLink":"http://www.adobe.com/go/YOURDESTINATION-en",
-      "category":"S3",
+      "category":"cloudStorage",
       "iconUrl":"https://dc5tqsrhldvnl.cloudfront.net/2/90048/da276e30c730ce6cd666c8ca78360df21.png",
       "connectionType":"S3",
       "flowRunsSupported":true,
@@ -591,7 +593,7 @@ Cette section fait référence aux éléments de l’interface utilisateur dans 
 |---------|----------|------|
 | `documentationLink` | Chaîne | Fait référence à la page de documentation du [Catalogue des destinations](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html?lang=fr#catalog) pour votre destination. Utilisez `http://www.adobe.com/go/destinations-YOURDESTINATION-en`, où `YOURDESTINATION` est le nom de votre destination. Par exemple, pour une destination appelée Moviestar, procédez comme suit : `http://www.adobe.com/go/destinations-moviestar-en`. Notez que ce lien ne fonctionne qu’après que Adobe a défini votre destination et que la documentation a été publiée. |
 | `category` | Chaîne | Fait référence à la catégorie affectée à votre destination dans Adobe Experience Platform. Pour plus d’informations, consultez la section [Catégories de destinations](https://experienceleague.adobe.com/docs/experience-platform/destinations/destination-types.html?lang=fr). Utilisez l’une des valeurs suivantes :`adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments`. |
-| `iconUrl` | Chaîne | URL dans laquelle vous avez hébergé l’icône à afficher dans la carte du catalogue des destinations. |
+| `iconUrl` | Chaîne | URL dans laquelle vous avez hébergé l’icône à afficher dans la carte du catalogue des destinations. Pour les intégrations personnalisées privées, cela n’est pas obligatoire. Pour les configurations productisées, vous devez partager une icône avec l’équipe d’Adobe lorsque vous [envoyer la destination pour révision ;](/help/destinations/destination-sdk/submit-destination.md#logo). |
 | `connectionType` | Chaîne | Type de connexion en fonction de la destination. Valeurs prises en charge : <ul><li>`Azure Blob`</li><li>`Azure Data Lake Storage`</li><li>`S3`</li><li>`SFTP`</li></ul> |
 | `flowRunsSupported` | Booléen | Indique si la connexion de destination est incluse dans l’[interface utilisateur d’exécution de flux](../../dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard). Lorsque vous définissez ce paramètre sur `true` : <ul><li>La **[!UICONTROL date d’exécution du dernier flux de données]** et **[!UICONTROL le statut d’exécution du dernier flux de données]** s’affichent dans la page de navigation de destination.</li><li>Les onglets **[!UICONTROL Exécution du flux de données]** et **[!UICONTROL Données d’activation]** s’affichent dans la page d’affichage de destination.</li></ul> |
 | `monitoringSupported` | Booléen | Indique si la connexion de destination est incluse dans la [surveillance de l’interface utilisateur](../ui/destinations-workspace.md#browse). Lorsque vous définissez ce paramètre sur `true`, l’option **[!UICONTROL Afficher dans la surveillance]** s’affiche sur la page de navigation de destination. |
@@ -600,6 +602,10 @@ Cette section fait référence aux éléments de l’interface utilisateur dans 
 {style=&quot;table-layout:auto&quot;}
 
 ## Diffusion de destination {#destination-delivery}
+
+La section de diffusion destination indique où se rendent exactement les données exportées et quelle règle d’authentification est utilisée à l’emplacement où les données atterriront. Vous devez indiquer une ou plusieurs `destinationServerId`s où les données seront diffusées et règle d’authentification. Dans la plupart des cas, la règle d’authentification que vous devez utiliser est : `CUSTOMER_AUTHENTICATION`.
+
+Le `deliveryMatchers` est facultative et peut être utilisée si vous spécifiez plusieurs `destinationServerId`s. Si c’est le cas, la variable `deliveryMatchers` indique comment les données exportées doivent être fractionnées entre les différents serveurs de destination.
 
 ```json
  "destinationDelivery":[
@@ -621,7 +627,7 @@ Cette section fait référence aux éléments de l’interface utilisateur dans 
 | Paramètre | Type | Description |
 |---------|----------|------|
 | `authenticationRule` | Chaîne | Indique comment les clients [!DNL Platform] se connectent à votre destination. Les valeurs acceptées sont les suivantes : `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION` ou `NONE`. <br> <ul><li>Utilisez `CUSTOMER_AUTHENTICATION` si les clients Platform se connectent à votre système par l’une des méthodes suivantes : <ul><li>`"authType": "S3"`</li><li>`"authType":"AZURE_CONNECTION_STRING"`</li><li>`"authType":"AZURE_SERVICE_PRINCIPAL"`</li><li>`"authType":"SFTP_WITH_SSH_KEY"`</li><li>`"authType":"SFTP_WITH_PASSWORD"`</li></ul> </li><li> Utilisez `PLATFORM_AUTHENTICATION` s’il existe un système d’authentification global entre Adobe et votre destination et que le client [!DNL Platform] n’a pas besoin de fournir d’informations d’authentification pour se connecter à votre destination. Dans ce cas, vous devez créer des informations d’identification à l’aide de la configuration des [Informations d’identification](./credentials-configuration-api.md). </li><li>Utilisez `NONE` si aucune authentification n’est requise pour envoyer des données à votre plateforme de destination. </li></ul> |
-| `destinationServerId` | Chaîne | L’`instanceId` de la [configuration du serveur de destination](./destination-server-api.md) utilisé pour cette destination. |
+| `destinationServerId` | Chaîne | Le `instanceId` de [configuration du serveur de destination](./server-and-file-configuration.md) que vous [created](/help/destinations/destination-sdk/destination-server-api.md#create-file-based) pour cette destination. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -649,7 +655,15 @@ Par le biais du paramètre `audienceTemplateId`, cette section associe égalemen
 
 ## Configuration du schéma dans l’étape de mappage {#schema-configuration}
 
+Adobe Experience Platform Destination SDK prend en charge les schémas définis par les partenaires. Un schéma défini par un partenaire permet aux utilisateurs de mapper des attributs de profil et des identités à des schémas personnalisés définis par les partenaires de destination, comme le fait le processus de [destinations de diffusion en continu](destination-configuration.md#schema-configuration).
+
 Utilisez les paramètres de la section `schemaConfig` pour activer l’étape de mappage du processus d’activation de destination. En utilisant les paramètres décrits ci-dessous, vous pouvez déterminer si les utilisateurs d’Experience Platform peuvent mapper des attributs de profil et/ou des identités à votre destination basée sur des fichiers.
+
+Vous pouvez créer des champs de schéma statiques codés en dur ou spécifier un schéma dynamique auquel l’Experience Platform doit se connecter afin de récupérer et de remplir dynamiquement les champs dans le schéma cible du workflow de mappage. Le schéma cible est présenté dans la capture d’écran ci-dessous.
+
+![Capture d’écran mettant en évidence les champs du schéma cible dans l’étape de mappage du workflow d’activation.](/help/destinations/destination-sdk/assets/target-schema-fields.png)
+
+### Configuration statique des champs de schéma codés en dur
 
 ```json
 "schemaConfig":{
@@ -681,16 +695,14 @@ Utilisez les paramètres de la section `schemaConfig` pour activer l’étape de
 
 ### Configuration de schéma dynamique dans l’étape de mappage {#dynamic-schema-configuration}
 
-Adobe Experience Platform Destination SDK prend en charge les schémas définis par les partenaires. Un schéma défini par un partenaire permet aux utilisateurs de mapper des attributs de profil et des identités à des schémas personnalisés définis par les partenaires de destination, comme le fait le processus de [destinations de diffusion en continu](destination-configuration.md#schema-configuration).
-
-Utilisez les paramètres de la section `dynamicSchemaConfig` pour définir votre propre schéma auquel les attributs de profil Platform et/ou les identités peuvent être mappés.
+Utilisez les paramètres de la section  `dynamicSchemaConfig` pour récupérer dynamiquement votre propre schéma auquel les attributs de profil et/ou les identités de Platform peuvent être mappés.
 
 ```json
 "schemaConfig":{
    "dynamicSchemaConfig":{
       "dynamicEnum": {
          "authenticationRule":"CUSTOMER_AUTHENTICATION",
-         "destinationServerId":"{{destinationServerId}}",
+         "destinationServerId":"2aa8a809-c4ae-4f66-bb02-12df2e0a2279",
          "value": "Schema Name",
          "responseFormat": "SCHEMA"
       }
@@ -706,7 +718,7 @@ Utilisez les paramètres de la section `dynamicSchemaConfig` pour définir votre
 | `profileRequired` | Booléen | Utilisez `true` si les utilisateurs doivent être en mesure de mapper les attributs de profil d’Experience Platform aux attributs personnalisés du côté de votre destination, tel qu’indiqué dans l’exemple de configuration ci-dessus. |
 | `segmentRequired` | Booléen | Utilisez toujours `segmentRequired:true`. |
 | `identityRequired` | Booléen | Utilisez `true` si les utilisateurs doivent être en mesure de mapper des espaces de noms d’identité Experience Platform à votre schéma souhaité. |
-| `destinationServerId` | Chaîne | Valeur `instanceId` de la [configuration du serveur de destination](./destination-server-api.md) utilisée pour cette destination. |
+| `destinationServerId` | Chaîne | Le `instanceId` de [configuration du serveur de destination](./destination-server-api.md) que vous avez créé pour votre schéma dynamique. Ce serveur de destination inclut le point de terminaison HTTP que l’Experience Platform appellera pour récupérer le schéma dynamique utilisé pour renseigner les champs cibles. |
 | `authenticationRule` | Chaîne | Indique comment les clients [!DNL Platform] se connectent à votre destination. Les valeurs acceptées sont les suivantes : `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION` ou `NONE`. <br> <ul><li>Utilisez `CUSTOMER_AUTHENTICATION` si les clients Platform se connectent à votre système par l’une des méthodes suivantes : <ul><li>`"authType": "S3"`</li><li>`"authType":"AZURE_CONNECTION_STRING"`</li><li>`"authType":"AZURE_SERVICE_PRINCIPAL"`</li><li>`"authType":"SFTP_WITH_SSH_KEY"`</li><li>`"authType":"SFTP_WITH_PASSWORD"`</li></ul> </li><li> Utilisez `PLATFORM_AUTHENTICATION` s’il existe un système d’authentification global entre Adobe et votre destination et que le client [!DNL Platform] n’a pas besoin de fournir d’informations d’authentification pour se connecter à votre destination. Dans ce cas, vous devez créer des informations d’identification à l’aide de la configuration des [Informations d’identification](./credentials-configuration-api.md). </li><li>Utilisez `NONE` si aucune authentification n’est requise pour envoyer des données à votre plateforme de destination. </li></ul> |
 | `value` | Chaîne | Nom du schéma à afficher dans l’interface utilisateur d’Experience Platform, à l’étape de mappage. |
 | `responseFormat` | Chaîne | Toujours définie sur `SCHEMA` lors de la définition d’un schéma personnalisé. |
@@ -720,7 +732,7 @@ Les paramètres de cette section déterminent les identités acceptées par votr
 
 ```json
 "identityNamespaces": {
-        "adobe_id": {
+        "crm_id": {
             "acceptsAttributes": true,
             "acceptsCustomNamespaces": true
         },
@@ -734,11 +746,11 @@ Les paramètres de cette section déterminent les identités acceptées par votr
 Vous devez indiquer quelles identités [!DNL Platform] les clients peuvent exporter vers votre destination. Voici quelques exemples : [!DNL Experience Cloud ID], e-mail haché, identifiant de l’appareil ([!DNL IDFA], [!DNL GAID]). Ces valeurs sont les suivantes : espaces de noms d’identité [!DNL Platform] que les clients peuvent mapper aux espaces de noms d’identité de votre destination. Vous pouvez également indiquer si les clients peuvent mapper des espaces de noms personnalisés à des identités prises en charge par votre destination.
 
 Les espaces de noms d’identité ne nécessitent pas de correspondance 1-1 entre [!DNL Platform] et votre destination.
-Par exemple, les clients peuvent mapper un espace de noms [!DNL Platform] [!DNL IDFA] à un espace de noms [!DNL IDFA] de votre destination ou mapper le même espace de noms [!DNL Platform] [!DNL IDFA] à un espace de noms [!DNL Customer ID] de votre destination.
+Par exemple, les clients peuvent mapper un espace de nom [!DNL Platform] [!DNL IDFA] à un espace de noms [!DNL IDFA] depuis votre destination ou mapper le même espace de noms [!DNL Platform] [!DNL IDFA] à un espace de noms [!DNL Customer ID] dans votre destination.
 
-## Configuration par lots {#batch-configuration}
+## Configuration de lot - Dénomination de fichier et planification de l’exportation {#batch-configuration}
 
-Cette section fait référence aux paramètres d’exportation de fichiers dans la configuration ci-dessus qu’Adobe doit utiliser pour votre destination dans l’interface utilisateur d’Adobe Experience Platform.
+Cette section fait référence aux paramètres de dénomination des fichiers et de planification des exportations qui s’afficheront pour votre destination dans l’interface utilisateur de Adobe Experience Platform. Les valeurs que vous configurez ici sont affichées dans la variable [Planification de l’exportation de segments](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) de l’étape du workflow d’activation des destinations basées sur des fichiers.
 
 ```json
 "batchConfig":{
@@ -796,7 +808,10 @@ Cette section fait référence aux paramètres d’exportation de fichiers dans 
 
 Utilisez les macros de configuration des noms de fichier pour définir les noms de fichier exportés à inclure. Les macros du tableau ci-dessous décrivent les éléments figurant dans l’interface utilisateur de la fonction [configuration du nom de fichier](../ui/activate-batch-profile-destinations.md#file-names) écran.
 
-En règle générale, vous devez toujours inclure la variable `SEGMENT_ID` macro dans les noms de fichiers exportés. Les identifiants de segment sont uniques. Par conséquent, leur inclusion dans le nom de fichier est la meilleure manière de s’assurer que les noms de fichier sont également uniques.
+
+>[!TIP]
+> 
+>En règle générale, vous devez toujours inclure la variable `SEGMENT_ID` macro dans les noms de fichiers exportés. Les identifiants de segment sont uniques. Par conséquent, leur inclusion dans le nom de fichier est la meilleure manière de s’assurer que les noms de fichier sont également uniques.
 
 | Macro | Libellé de l’interface utilisateur | Description | Exemple |
 |---|---|---|---|
@@ -849,7 +864,7 @@ Vous pouvez utiliser le paramètre `backfillHistoricalProfileData` dans la confi
 
 ## Comment cette configuration connecte toutes les informations nécessaires à votre destination {#connecting-all-configurations}
 
-Certains de vos paramètres de destination doivent être configurés via le [serveur de destination](./server-and-file-configuration.md) ou la [configuration des métadonnées d’audience](./audience-metadata-management.md). La configuration de destination décrite ici connecte tous ces paramètres en référençant les deux autres configurations comme suit :
+Certains de vos paramètres de destination doivent être configurés via le [serveur de destination](./server-and-file-configuration.md) ou le [configuration des métadonnées d’audience](./audience-metadata-management.md) points de fin. La configuration de destination décrite ici connecte tous ces paramètres en référençant les deux autres configurations comme suit :
 
-* Utilisez la variable `destinationServerId` pour référencer la configuration du serveur de destination et du modèle pour votre destination.
+* Utilisez la variable `destinationServerId` pour référencer la configuration du serveur de destination et du modèle de fichier configuré pour votre destination.
 * Utilisez la variable `audienceMetadataId` pour référencer la configuration des métadonnées d’audience pour votre destination.

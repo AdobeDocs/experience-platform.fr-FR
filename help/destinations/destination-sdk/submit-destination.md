@@ -2,10 +2,10 @@
 description: Cette page fournit toutes les informations dont vous avez besoin pour soumettre une révision d’une destination productisée créée à l’aide de Destination SDK.
 title: Envoyer pour révision une destination productisée créée en Destination SDK
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
-source-git-commit: 50f205a5ddd9ec264d7390911fef45dc595ca6a1
+source-git-commit: e68ae7d1cb87d078d9fce5a5df501cc6ce944403
 workflow-type: tm+mt
 source-wordcount: '683'
-ht-degree: 75%
+ht-degree: 65%
 
 ---
 
@@ -42,8 +42,8 @@ Vous trouverez des informations détaillées sur chaque élément dans les secti
 
 Fournissez une description des cas d’utilisation que votre destination résout pour les clients Experience Platform. Vos descriptions peuvent être similaires aux cas d’utilisation des partenaires existants :
 
-* [Pinterest](/help/destinations/catalog/advertising/pinterest.md) : créez des audiences à partir de vos listes de clients, des personnes qui ont visité votre site ou de celles qui ont déjà interagi avec votre contenu sur Pinterest.
-* [Yahoo Data X](/help/destinations/catalog/advertising/datax.md#use-cases) : les API DataX sont disponibles pour les annonceurs qui souhaitent cibler un groupe d’audience spécifique à partir dʼadresses e-mail dans Verizon Media (VMG). Ils peuvent rapidement créer un segment et envoyer le groupe d’audience souhaité à l’aide de lʼAPI en temps quasi réel de VMG.
+* [Pinterest](/help/destinations/catalog/advertising/pinterest.md): Créez des audiences à partir des listes de clients, des personnes qui ont visité votre site ou des personnes qui ont déjà interagi avec votre contenu sur Pinterest.
+* [Yahoo Data X](/help/destinations/catalog/advertising/datax.md#use-cases): Les API DataX sont disponibles pour les annonceurs qui souhaitent cibler un groupe d’audience spécifique en dehors des adresses électroniques dans Verizon Media (VMG). Elles peuvent rapidement créer un nouveau segment et pousser le groupe d’audience souhaité à l’aide de l’API en temps quasi réel de VMG.
 
 ## Résultats du test après l’utilisation de l’API de destination du test
 
@@ -225,7 +225,7 @@ Indiquez l’identifiant de la demande de publication pour votre destination. Po
 
 Si vous êtes un fournisseur de logiciels indépendant (ISV) ou un intégrateur de système (SI) créant une [intégration personnalisée](./overview.md#productized-custom-integrations), utilisez le [processus de documentation en libre-service](./docs-framework/documentation-instructions.md) pour créer une page de documentation du produit pour votre destination. Dans le cadre du processus d’envoi, indiquez la demande de tirage (PR) pour votre documentation de destination.
 
-## Logo de votre destination
+## Logo de votre destination {#logo}
 
 Le catalogue des destinations comprend un logo pour chaque carte de destination. Incluez dans votre e-mail une image avec le logo de votre destination.
 

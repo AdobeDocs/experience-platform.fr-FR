@@ -4,10 +4,10 @@ user-guide-title: Guide des destinations
 user-guide-description: Activez vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
 description: Ce document répertorie la table des matières des destinations Adobe Experience Platform
 feature: Destinations
-source-git-commit: 9336545ce77406ca8b1a04d9b9c0ce7752aa9ce5
+source-git-commit: 3a46eee98797da7b113f45624682377cc7ad05a3
 workflow-type: tm+mt
-source-wordcount: '950'
-ht-degree: 73%
+source-wordcount: '945'
+ht-degree: 72%
 
 ---
 
@@ -173,9 +173,9 @@ ht-degree: 73%
    * Fonctionnalité de Destination SDK {#functionality}
       * [Options de configuration](./destination-sdk/configuration-options.md)
       * [Configuration de destination de diffusion en continu](./destination-sdk/destination-configuration.md)
-      * [(Version Beta) Configuration de destinations basées sur des fichiers](./destination-sdk/file-based-destination-configuration.md)
+      * [Configuration des destinations basées sur des fichiers](./destination-sdk/file-based-destination-configuration.md)
       * [Spécifications de serveur et de modèle pour les destinations de diffusion en continu](./destination-sdk/server-and-template-configuration.md)
-      * [(Version Beta) Spécifications de serveur et de fichier pour les destinations basées sur les fichiers](./destination-sdk/server-and-file-configuration.md)
+      * [Spécifications de fichier et serveur de destinations basées sur des fichiers](./destination-sdk/server-and-file-configuration.md)
       * [Format des messages](./destination-sdk/message-format.md)
       * [Gérer les métadonnées d’audience](./destination-sdk/audience-metadata-management.md)
       * Authentification {#authentication}
@@ -205,15 +205,16 @@ ht-degree: 73%
             * [Validation des champs de client modélisés](./destination-sdk/file-based-render-template-api.md)
    * Guides {#guides}
       * [Utiliser Destination SDK pour configurer une destination de diffusion en continu](./destination-sdk/configure-destination-instructions.md)
-      * [(Version Beta) Utilisez Destination SDK pour configurer une destination basée sur des fichiers.](./destination-sdk/configure-file-based-destination-instructions.md)
+      * [Utiliser la Destination SDK pour configurer une destination basée sur des fichiers](./destination-sdk/configure-file-based-destination-instructions.md)
       * [Envoyer pour révision une destination créée dans Destination SDK](./destination-sdk/submit-destination.md)
       * Configuration de destinations basées sur des fichiers {#configure-file-based-destinations}
-         * [(Version bêta) Configuration d’une destination Amazon S3 avec des options de formatage de fichier prédéfinies et une configuration de nom de fichier personnalisée](../destinations/destination-sdk/guides/batch/configure-amazon-s3-destination-with-predefined-file-formatting.md)
-         * [(Version bêta) Configuration d’une destination Amazon S3 avec nom de fichier personnalisé et options de mise en forme](../destinations/destination-sdk/guides/batch/configure-amazon-s3-destination-with-custom-file-formatting.md)
-         * [(Version bêta) Configuration d’une destination de stockage Azure Blob avec des options de mise en forme de fichier personnalisées et une configuration de nom de fichier personnalisée](../destinations/destination-sdk/guides/batch/configure-blob-destination-with-custom-file-formatting.md)
-         * [(Version bêta) Configuration d’une destination Azure Data Lake Storage avec des options de formatage de fichier personnalisées et une configuration de nom de fichier personnalisée](../destinations/destination-sdk/guides/batch/configure-adls-destination-with-custom-file-formatting.md)
-         * [(Version bêta) Configuration d’une destination de zone d’entrée de données (DLZ) avec des options de formatage de fichier personnalisées et une configuration de nom de fichier personnalisée](../destinations/destination-sdk/guides/batch/configure-dlz-destination-with-custom-file-formatting.md)
-         * [(Version bêta) Configuration d’une destination SFTP avec des options de formatage de fichier prédéfinies et une configuration de nom de fichier personnalisée](../destinations/destination-sdk/guides/batch/configure-sftp-destination-with-predefined-file-formatting.md)
+         * [Configuration des options de formatage de fichier](/help/destinations/destination-sdk/guides/batch/configure-file-formatting-options.md)
+         * [Configuration d’une destination Amazon S3 avec des options de formatage de fichier prédéfinies et une configuration de nom de fichier personnalisée](../destinations/destination-sdk/guides/batch/configure-amazon-s3-destination-with-predefined-file-formatting.md)
+         * [Configuration d’une destination Amazon S3 avec nom de fichier personnalisé et options de mise en forme](../destinations/destination-sdk/guides/batch/configure-amazon-s3-destination-with-custom-file-formatting.md)
+         * [Configuration d’une destination de stockage Azure Blob avec des options de formatage de fichier personnalisées et une configuration de nom de fichier personnalisée](../destinations/destination-sdk/guides/batch/configure-blob-destination-with-custom-file-formatting.md)
+         * [Configuration d’une destination de stockage Azure Data Lake avec des options de formatage de fichier personnalisées et une configuration de nom de fichier personnalisée](../destinations/destination-sdk/guides/batch/configure-adls-destination-with-custom-file-formatting.md)
+         * [Configuration d’une destination de zone d’entrée de données (DLZ) avec des options de formatage de fichier personnalisées et une configuration de nom de fichier personnalisée](../destinations/destination-sdk/guides/batch/configure-dlz-destination-with-custom-file-formatting.md)
+         * [Configuration d’une destination SFTP avec des options de formatage de fichier prédéfinies et une configuration de nom de fichier personnalisée](../destinations/destination-sdk/guides/batch/configure-sftp-destination-with-predefined-file-formatting.md)
    * Référence {#reference}
       * [Limitation de débit et stratégie de reprise pour les destinations de diffusion en continu](./destination-sdk/rate-limiting-retry-policy.md)
       * [Fonctions de transformation prises en charge](./destination-sdk/supported-functions.md)

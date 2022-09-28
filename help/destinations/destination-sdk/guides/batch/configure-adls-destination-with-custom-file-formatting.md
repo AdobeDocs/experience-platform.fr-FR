@@ -1,15 +1,15 @@
 ---
 description: Découvrez comment utiliser Destination SDK pour configurer une destination Azure Data Lake Storage avec des options de mise en forme de fichier personnalisées et une configuration de nom de fichier personnalisée.
-title: (Version bêta) Configurez une destination Azure Data Lake Storage avec des options de formatage de fichier personnalisées et une configuration de nom de fichier personnalisée.
+title: Configurez une destination Azure Data Lake Storage avec des options de formatage de fichier personnalisées et une configuration de nom de fichier personnalisée.
 exl-id: cb67b126-cd30-4fb7-b67e-c15dc7daef73
-source-git-commit: 6a666c9850a4a55bfa93a54111a597f690eb8431
+source-git-commit: 557db5b7eefdd7902895e428f7bc34e3ad8a6f58
 workflow-type: tm+mt
-source-wordcount: '769'
+source-wordcount: '767'
 ht-degree: 10%
 
 ---
 
-# (Version bêta) Configurez une [!DNL Azure Data Lake Storage] destination avec options de formatage de fichier personnalisées et configuration de nom de fichier personnalisé
+# Configurez une [!DNL Azure Data Lake Storage] destination avec options de formatage de fichier personnalisées et configuration de nom de fichier personnalisé
 
 ## Présentation {#overview}
 

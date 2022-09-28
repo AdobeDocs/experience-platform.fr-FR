@@ -4,10 +4,10 @@ description: Découvrez comment configurer le SDK Web de Adobe Experience Platfo
 seo-description: Learn how to configure the Experience Platform Web SDK
 keywords: configure;configuration;SDK;edge;SDK Web;configure;edgeConfigId;contexte;web;périphérique;environnement;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;paramètres du sdk web;prehideStyle;opacity;cookieDestinationsEnabled;urlDestinations;idMigrationEnabled;thirdPartyCookiesEnabled;
 exl-id: d1e95afc-0b8a-49c0-a20e-e2ab3d657e45
-source-git-commit: 4d0f1b3e064bd7b24e17ff0fafb50d930b128968
+source-git-commit: ed39d782ba6991a00a31b48abb9d143e15e6d89e
 workflow-type: tm+mt
-source-wordcount: '860'
-ht-degree: 39%
+source-wordcount: '999'
+ht-degree: 34%
 
 ---
 
@@ -44,15 +44,26 @@ De nombreuses options peuvent être définies lors de la configuration. Vous tro
 
 L’ID de configuration que vous avez attribué, qui lie le SDK aux comptes et à la configuration appropriés. Lors de la configuration de plusieurs instances dans une seule page, vous devez configurer un `edgeConfigId` différent pour chaque instance.
 
-### `context`
+### `context` {#context}
 
 | **Type** | **Obligatoire** | **Valeur par défaut** |
 | ---------------- | ------------ | -------------------------------------------------- |
-| Tableau de chaînes | Non | `["web", "device", "environment", "placeContext"]` |
+| Tableau de chaînes | Non | `["web", "device", "environment", "placeContext", "highEntropyUserAgentHints"]` |
 
 {style=&quot;table-layout:auto&quot;}
 
 Indique les catégories contextuelles à collecter automatiquement, comme décrit dans la section [Informations automatiques](../data-collection/automatic-information.md). Si cette configuration n&#39;est pas spécifiée, toutes les catégories sont utilisées par défaut.
+
+>[!IMPORTANT]
+>
+>Toutes les propriétés de contexte, à l’exception de `highEntropyUserAgentHints`, sont activés par défaut. Si vous avez spécifié les propriétés de contexte manuellement dans votre configuration de SDK Web, vous devez activer toutes les propriétés de contexte pour continuer à collecter les informations nécessaires.
+
+Pour activer [indices client à forte entropie](user-agent-client-hints.md#enabling-high-entropy-client-hints) sur votre déploiement du SDK Web, vous devez inclure les `highEntropyUserAgentHints` l’option contextuelle , avec votre configuration existante.
+
+Par exemple, pour récupérer des indices client à forte entropie à partir de propriétés web, votre configuration ressemblerait à ceci :
+
+`context: ["highEntropyUserAgentHints", "web"]`
+
 
 ### `debugEnabled`
 
@@ -134,9 +145,9 @@ Définit le consentement par défaut de l’utilisateur. Utilisez ce paramètre 
 * `"out"`: Lorsque ce paramètre est défini, le travail est ignoré jusqu’à ce que l’utilisateur fournisse les préférences de consentement.
 Une fois les préférences de l’utilisateur fournies, le travail se poursuit ou est abandonné en fonction de celles-ci. Pour plus d’informations, voir [Prise en charge du consentement](../consent/supporting-consent.md).
 
-## Options de personnalisation
+## Options de personnalisation {#personalization}
 
-### `prehidingStyle`
+### `prehidingStyle` {#prehidingStyle}
 
 | **Type** | **Obligatoire** | **Valeur par défaut** |
 | -------- | ------------ | ----------------- |
@@ -151,6 +162,16 @@ Par exemple, si un élément de votre page web comporte un identifiant de `conta
 ```javascript
   prehidingStyle: "#container { opacity: 0 !important }"
 ```
+
+### `targetMigrationEnabled` {#targetMigrationEnabled}
+
+Cette option doit être utilisée lors de la migration de pages individuelles depuis [!DNL at.js] vers le SDK Web.
+
+Utilisez cette option pour permettre au SDK Web de lire et d’écrire l’héritage `mbox` et `mboxEdgeCluster` cookies utilisés par [!DNL at.js]. Vous pouvez ainsi conserver le profil du visiteur lors du passage d’une page qui utilise le SDK Web à une page qui utilise la variable [!DNL at.js] et vice versa.
+
+| **Type** | **Obligatoire** | **Valeur par défaut** |
+| -------- | ------------ | ----------------- |
+| Booléen | Non | `false` |
 
 ## Options d’audiences
 
@@ -184,7 +205,9 @@ Active [!DNL Audience Manager] Destinations d’URL, qui permettent de déclench
 
 {style=&quot;table-layout:auto&quot;}
 
-Si la valeur est true, le SDK lit et définit les anciens cookies AMCV. Cette option permet de passer à l’utilisation du SDK Web Adobe Experience Platform, tandis que certaines parties du site peuvent toujours utiliser Visitor.js. Si l’API visiteur est définie sur la page, le SDK interroge l’API visiteur pour l’ECID. Cette option vous permet de créer des pages à deux balises avec le SDK Web de Adobe Experience Platform et qui possèdent toujours le même ECID.
+Si la valeur est true, le SDK lit et définit les anciens cookies AMCV. Cette option permet de passer à l’utilisation du SDK Web Adobe Experience Platform, tandis que certaines parties du site peuvent toujours utiliser Visitor.js.
+
+Si l’API visiteur est définie sur la page, le SDK interroge l’API visiteur pour l’ECID. Cette option vous permet de créer des pages à deux balises avec le SDK Web de Adobe Experience Platform et qui possèdent toujours le même ECID.
 
 ### `thirdPartyCookiesEnabled`
 

@@ -1,7 +1,7 @@
 ---
 title: Notes de mise à jour de Adobe Experience Platform - Septembre 2022
 description: Notes de mise à jour de septembre 2022 pour Adobe Experience Platform.
-source-git-commit: 5f79b10306f74db75b25654ca51969ea69e38299
+source-git-commit: f7092a394e0ad72d38bf8616e54789c7b2f1ab00
 workflow-type: tm+mt
 source-wordcount: '2539'
 ht-degree: 33%
@@ -64,7 +64,7 @@ Pour commencer à utiliser l’hygiène des données, reportez-vous à la docume
 
 ## [!UICONTROL Console de confidentialité] {#privacy-console}
 
-Le [!UICONTROL Console de confidentialité] dans l’interface utilisateur de l’Experience Platform fournit un tableau de bord des principales informations des fonctionnalités liées à la confidentialité, telles que [Requêtes de sujet de données de Privacy Service], [ordres de travail relatifs à l&#39;hygiène des données], et [journaux d’audit]. La console fournit également plusieurs guides de cas d’utilisation intégrés au produit pour vous aider à vous guider dans les processus de confidentialité courants.
+Le [!UICONTROL Console de confidentialité] dans l’interface utilisateur de l’Experience Platform fournit un tableau de bord des principales informations des fonctionnalités liées à la confidentialité, telles que [Requêtes de sujet de données de Privacy Service](../../privacy-service/home.md), [ordres de travail relatifs à l&#39;hygiène des données](../../hygiene/home.md), et [journaux d’audit](../../landing/governance-privacy-security/audit-logs/overview.md). La console fournit également plusieurs guides de cas d’utilisation intégrés au produit pour vous aider à vous guider dans les processus de confidentialité courants.
 
 Voir [Présentation de Privacy Console](../../landing/governance-privacy-security/privacy-console.md) pour plus d’informations sur la fonctionnalité.
 
@@ -218,6 +218,6 @@ Experience Platform fournit une API RESTful et une interface utilisateur intera
 | Prise en charge d’Adobe Campaign Managed Cloud Service | Utilisez la source du Cloud Service géré Adobe Campaign pour importer vos données de logs de diffusion et de suivi Adobe Campaign v8.4 à l’Experience Platform. Lisez le guide sur [création d’une connexion source Adobe Campaign Managed Cloud Service dans l’interface utilisateur](../../sources/tutorials/ui/create/adobe-applications/campaign.md) pour plus d’informations. |
 | Prise en charge des API pour l’ingestion à la demande pour les sources par lots | Utilisez l’ingestion à la demande pour créer des exécutions de flux ad hoc pour un flux de données donné avec la variable [!DNL Flow Service] API. Les exécutions de flux créées doivent être définies sur une ingestion unique. Pour plus d’informations, consultez le guide sur [création d’une exécution de flux pour l’ingestion à la demande à l’aide de l’API](../../sources/tutorials/api/on-demand-ingestion.md) pour plus d’informations. |
 | Prise en charge de l’API pour la nouvelle tentative d’exécutions de flux de données ayant échoué pour les sources par lots | Utilisez la variable `re-trigger` pour essayer de relancer votre flux de données ayant échoué via l’API. Lisez le guide sur [reprise des exécutions de flux de données ayant échoué à l’aide de l’API](../../sources/tutorials/api/retry-flows.md) pour plus d’informations. |
-| Prise en charge de l’API pour le filtrage des données au niveau des lignes pour le [!DNL Google BigQuery] et [!DNL Snowflake] sources | Utilisez des opérateurs logiques et de comparaison pour filtrer les données au niveau de la ligne pour le [!DNL Google BigQuery] et [!DNL Snowflake] sources. Pour plus d’informations, consultez le guide sur le filtrage des données pour une source à l’aide de l’API . |
+| Prise en charge de l’API pour le filtrage des données au niveau des lignes pour le [!DNL Google BigQuery] et [!DNL Snowflake] sources | Utilisez des opérateurs logiques et de comparaison pour filtrer les données au niveau de la ligne pour le [!DNL Google BigQuery] et [!DNL Snowflake] sources. Lisez le guide sur [filtrage des données pour une source à l’aide de l’API](../../sources/tutorials/api/filter.md) pour plus d’informations. |
 
 Pour en savoir plus sur les sources, lisez le [présentation des sources](../../sources/home.md).

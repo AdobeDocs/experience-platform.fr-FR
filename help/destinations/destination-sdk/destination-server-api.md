@@ -2,9 +2,9 @@
 description: Cette page répertorie et décrit toutes les opérations d’API que vous pouvez effectuer à l’aide du point d’entrée d’API `/authoring/destination-servers`. Les spécifications du serveur et du modèle pour votre destination peuvent être configurées dans Adobe Experience Platform Destination SDK via le point d’entrée commun `/authoring/destination-servers`.
 title: Opérations de l’API du point d’entrée du serveur de destination
 exl-id: a144b0fb-d34f-42d1-912b-8576296e59d2
-source-git-commit: a43bb18182ac6e591e011b585719da955ee681b7
+source-git-commit: 557db5b7eefdd7902895e428f7bc34e3ad8a6f58
 workflow-type: tm+mt
-source-wordcount: '1382'
+source-wordcount: '1361'
 ht-degree: 95%
 
 ---
@@ -81,10 +81,6 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 Une réponse réussie renvoie un état HTTP 200 avec les détails de la configuration du serveur de destination que vous venez de créer.
 
 ## Créer une configuration pour un serveur de destination basé sur des fichiers {#create-file-based}
-
->[!IMPORTANT]
->
->La prise en charge des destinations basées sur des fichiers dans Adobe Experience Platform Destination SDK est actuellement en version bêta. La documentation et la fonctionnalité peuvent changer.
 
 ### Exemple de configuration du serveur de destination SFTP {#sftp-server-sample}
 
