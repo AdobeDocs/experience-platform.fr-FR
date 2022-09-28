@@ -4,10 +4,10 @@ title: Règles d’alerte standard
 description: Ce document couvre les règles d’alerte prédéfinies fournies par Experience Platform.
 feature: Alerts
 exl-id: b4af1c15-b1bc-4e4b-a447-09cc17a63988
-source-git-commit: df79ecac33314cc73ba8ad2508516be706bac767
+source-git-commit: f707a6338ad72578328b363792010fa50ea9ce88
 workflow-type: tm+mt
-source-wordcount: '843'
-ht-degree: 90%
+source-wordcount: '966'
+ht-degree: 79%
 
 ---
 
@@ -92,6 +92,18 @@ Les règles d’alerte suivantes sont spécifiques aux [destinations](../../dest
 | Délais, échecs et erreurs de l’exécution du flux de destinations | Le taux d’ID ignorés dépasse le seuil | Cette alerte se déclenche lorsque le rapport entre les identifiants ignorés et le nombre total d’identifiants dépasse un seuil. |
 
 {style=&quot;table-layout:auto&quot;}
+
+## Query Service
+
+Les règles d’alerte suivantes sont spécifiques à [Query Service](../../query-service/home.md):
+
+| Abonnement aux événements I/O | Règle d’alerte | Description |
+| --- | --- | --- |
+| Informations ad hoc de Query Service | Succès ad hoc de Query Service | Cette alerte se déclenche lorsqu’une tâche de schéma ad hoc se termine avec succès. |
+| Délais, échecs et erreurs ad hoc de Query Service | Échec ad hoc de Query Service | Cette alerte se déclenche lorsqu’une tâche de schéma ad hoc échoue. |
+| Informations de requête planifiées de Query Service | Démarrage de requête planifiée de Query Service | Cette alerte se déclenche lorsqu’une requête planifiée commence à être en cours d’exécution. |
+| Informations de requête planifiées de Query Service | Succès des requêtes planifiées de Query Service | Cette alerte se déclenche lorsqu’une tâche de requête planifiée se termine correctement. |
+| Délais, échecs et erreurs des requêtes planifiées de Query Service | échec de requête planifiée du service de requête | Cette alerte se déclenche lorsqu’une tâche de requête planifiée échoue. |
 
 <!-- (Definitions to be added once available)
 | Segment Job Delay | This alert triggers when a segment job takes longer than 150 minutes to complete. | N/A | 30 seconds | 3 hours |
