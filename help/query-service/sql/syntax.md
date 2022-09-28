@@ -5,9 +5,9 @@ title: Syntaxe SQL dans Query Service
 topic-legacy: syntax
 description: Ce document présente la syntaxe SQL prise en charge par Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 33c45c53e2ff591e7b94be1b4b17c25d2fe9d497
+source-git-commit: 5ec37ee797ec297b2e5c275dc0e6091e4ee8ecae
 workflow-type: tm+mt
-source-wordcount: '3033'
+source-wordcount: '3160'
 ht-degree: 8%
 
 ---
@@ -447,7 +447,7 @@ L’exemple renvoie les éléments suivants :
 2  b Spark SQL
 ```
 
-Ce deuxième exemple illustre le concept et l&#39;application de la méthode `inline` fonction . Le modèle de données de l’exemple est illustré dans l’image ci-dessous.
+Ce deuxième exemple illustre le concept et l&#39;application de la `inline` fonction . Le modèle de données de l’exemple est illustré dans l’image ci-dessous.
 
 ![Schéma de productListItems](../images/sql/productListItems.png)
 
@@ -488,6 +488,30 @@ Pour renvoyer la valeur d’un paramètre, utilisez `SET [property key]` sans `p
 ## Commandes PostgreSQL
 
 Les sous-sections ci-dessous couvrent les commandes PostgreSQL prises en charge par Query Service.
+
+### ANALYSER LE TABLEAU
+
+Le `ANALYZE TABLE` calcule les statistiques pour une table sur l’entrepôt accéléré. Les statistiques sont calculées sur les requêtes CTAS ou ITAS exécutées pour un tableau donné sur la boutique accélérée.
+
+**Exemple**
+
+```sql
+ANALYZE TABLE <original_table_name>
+```
+
+Vous trouverez ci-dessous une liste de calculs statistiques disponibles après l’utilisation de la variable `ANALYZE TABLE` command:-
+
+| Valeurs calculées | Description |
+|---|---|
+| `field` | Nom de la colonne d’un tableau. |
+| `data-type` | Type de données acceptable pour chaque colonne. |
+| `count` | Nombre de lignes contenant une valeur non nulle pour ce champ. |
+| `distinct-count` | Nombre de valeurs uniques ou distinctes pour ce champ. |
+| `missing` | Nombre de lignes dont la valeur de ce champ est nulle. |
+| `max` | Valeur maximale du tableau analysé. |
+| `min` | Valeur minimale du tableau analysé. |
+| `mean` | Valeur moyenne du tableau analysé. |
+| `stdev` | Écart type du tableau analysé. |
 
 ### BEGIN
 
