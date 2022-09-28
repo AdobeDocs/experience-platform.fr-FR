@@ -2,10 +2,10 @@
 title: Présentation de l’extension Common Analytics
 description: Découvrez l’extension de balises Common Analytics dans Adobe Experience Platform.
 exl-id: 9eeb4589-df90-4356-b927-b2c29c32370b
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '549'
-ht-degree: 100%
+source-wordcount: '406'
+ht-degree: 90%
 
 ---
 
@@ -50,7 +50,7 @@ L’extension de modules externes courants Analytics propose les actions suivant
 >
 >Bien que l’implémentation de cette action soit plus facile, Adobe Consulting ne vous recommande pas d’utiliser cette action, car celle-ci augmente le poids du module externe.
 
-Avec cette action, vous pouvez sélectionner chaque module externe que vous souhaitez inclure dans votre implémentation et enregistrer les modifications. Sélectionnez tout ou partie des modules externes que vous prévoyez d’utiliser au cours de cette implémentation. Vous trouverez des liens renvoyant vers la documentation d’utilisation et une description rapide de chaque module externe dans l’[aperçu des modules externes](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/impl-plugins.html?lang=fr) d’Analytics.
+Avec cette action, vous pouvez sélectionner chaque module externe que vous souhaitez inclure dans votre implémentation et enregistrer les modifications. Sélectionnez tout ou partie des modules externes que vous prévoyez d’utiliser au cours de cette implémentation.
 
 ### Initialiser le module externe
 
@@ -58,36 +58,17 @@ Ces actions initialisent les modules externes spécifiques que vous prévoyez d�
 
 ## Éléments de données de l’extension de modules externes courants Analytics
 
-Cette section décrit les éléments de données disponibles dans l’extension de modules externes courants Analytics.
+Les éléments de données suivants sont disponibles dans l’extension de modules externes courants Analytics, qui tirent parti des fonctionnalités de balises pour configurer et configurer leurs modules externes correspondants dans Analytics :
 
-### getGeoCoordinates
+* `getGeoCoordinates`
+* `getNewRepeat`
+* `getPageName`
+* `getResponsiveLayout`
+* `getTimeParting`
+* `getTimeSinceLastVisit`
+* `getVisitDuration`
+* `getVisitNum`
 
-Permet aux utilisateurs d’utiliser l’interface utilisateur native de la collecte de données d’Adobe Experience Platform pour configurer le plug-in getGeoCoordinates.
-
-### getNewRepeat
-
-Permet aux utilisateurs de tirer profit de l’interface utilisateur native de la collecte de données pour définir et configurer le plug-in getNewRepeat.
-
-### getPageName
-
-Permet aux utilisateurs de tirer profit de l’interface utilisateur native de la collecte de données pour définir et configurer le plug-in getPageName.
-
-### getResponsiveLayout
-
-Permet aux utilisateurs de tirer profit de l’interface utilisateur native de la collecte de données pour définir et configurer le plug-in getResponsiveLayout.
-
-### getTimeParting
-
-Permet aux utilisateurs de tirer profit de l’interface utilisateur native de collecte de données pour définir et configurer le plug-in getTimeParting.
-
-### getTimeSinceLastVisit
-
-Permet aux utilisateurs de tirer profit de l’interface utilisateur native de la collecte de données pour définir et configurer le plug-in getTimeSinceLastVisit.
-
-### getVisitDuration
-
-Permet aux utilisateurs de tirer profit de l’interface utilisateur native de la collecte de données pour définir et configurer le plug-in getVisitDuration.
-
-### getVisitNum
-
-Permet aux utilisateurs de tirer profit de l’interface utilisateur native de la collecte de données pour définir et configurer le plug-in getVisitNum.
+>[!NOTE]
+>
+>Pour plus d’informations sur les modules externes ci-dessus, consultez la section [Documentation Analytics](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/impl-plugins.html?lang=fr).

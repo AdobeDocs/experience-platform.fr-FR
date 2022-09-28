@@ -2,10 +2,10 @@
 title: Copie des ressources
 description: Découvrez comment créer une ressource de balise à lʼaide des paramètres dʼune ressource de balise existante dans Adobe Experience Platform.
 exl-id: 7e52ceae-97df-4c64-aba3-4f5ba6018a47
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '785'
-ht-degree: 100%
+source-wordcount: '780'
+ht-degree: 96%
 
 ---
 
@@ -35,7 +35,7 @@ Si vous copiez une règle ou un élément de données, vous pouvez utiliser le m
 
 >[!NOTE]
 >
->Dans l’interface utilisateur de collecte de données, il est impossible de copier des ressources vers une autre propriété si une propriété est configurée pour le développement d’extensions et que l’autre propriété ne l’est pas.
+>Il n’est pas possible de copier des ressources vers une autre propriété si une propriété est configurée pour le développement d’extensions et que l’autre propriété ne l’est pas.
 
 Après avoir configuré le comportement souhaité, cliquez sur **[!UICONTROL Copier]**.
 

@@ -2,10 +2,10 @@
 title: Point d’entrée des packages d’extension
 description: Découvrez comment effectuer des appels au point d'entrée /extension_packages dans l’API Reactor.
 exl-id: a91c6f32-6c72-4118-a43f-2bd8ef50709f
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '951'
-ht-degree: 100%
+source-wordcount: '956'
+ht-degree: 97%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 100%
 
 Un package d’extension représente une [extension](./extensions.md) telle qu’elle a été créée par un développeur d’extension. Un package d’extension définit des fonctionnalités supplémentaires qui peuvent être mises à la disposition des utilisateurs de balises. La plupart du temps, ces fonctionnalités se présentent sous la forme de [composants de règle](./rule-components.md) (événements, conditions et actions) et [d&#39;éléments de données](./data-elements.md), mais peuvent également inclure des modules principaux et des modules partagés.
 
-Les packages d&#39;extension s’affichent dans le catalogue d’extensions dans l’interface utilisateur de collecte de données pour que les utilisateurs puissent les installer. L’ajout d’un package d’extension à une propriété s&#39;effectue en créant une extension comportant un lien vers le package d’extension.
+Les modules d’extension s’affichent dans le catalogue d’extensions dans l’interface utilisateur de la collecte de données et l’interface utilisateur de Adobe Experience Platform pour que les utilisateurs puissent les installer. L’ajout d’un package d’extension à une propriété s&#39;effectue en créant une extension comportant un lien vers le package d’extension.
 
 Un package d’extension appartient à la [société](./companies.md) du développeur qui l’a créé.
 

@@ -3,10 +3,10 @@ keywords: destinations;destination;types de destinations
 title: Types et catégories de destination
 description: Découvrez les différents types et catégories de destinations dans Adobe Experience Platform.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '642'
-ht-degree: 38%
+source-wordcount: '640'
+ht-degree: 36%
 
 ---
 
@@ -69,7 +69,7 @@ La vidéo ci-dessous vous montre les particularités des deux types de destinati
 
 ## Extensions {#extensions}
 
-Platform tire parti de la puissance et de la flexibilité de la gestion des balises, ce qui vous permet de configurer des extensions de balise dans l’interface utilisateur de la collecte de données.
+Platform tire parti de la puissance et de la flexibilité de la gestion des balises, ce qui vous permet de configurer des extensions de balises dans l’interface utilisateur.
 
 >[!TIP]
 >
@@ -83,7 +83,7 @@ Les extensions de balise transfèrent les données d’événement brutes à plu
 
 En tant que professionnel du marketing, vous pouvez utiliser une combinaison de connexions et d’extensions pour répondre à vos cas d’utilisation.
 
-Les connexions sont utiles lorsqu’il est nécessaire d’utiliser un profil client centralisé complet ou un segment client pour l’activation. Par exemple, utilisez des connexions si vous assemblez les données comportementales d’un système d’analyse et des données de gestion de la relation client chargées, afin de qualifier un utilisateur pour un segment donné avant de lui envoyer un message personnalisé.
+Les connexions sont utiles lorsqu’il est nécessaire d’exploiter un profil client centralisé complet ou un segment de client pour l’activation. Par exemple, utilisez des connexions si vous assemblez les données comportementales d’un système d’analyse et des données de gestion de la relation client chargées, afin de qualifier un utilisateur pour un segment donné avant de lui envoyer un message personnalisé.
 
 Les extensions s’avèrent utiles lorsque des données d’événement sont utilisées pour déclencher une action ou pour effectuer une segmentation dans un environnement externe. Par exemple, si les données comportementales doivent être transférées vers un système externe sans être jointes à d’autres sources de données dans un fichier pour un utilisateur donné.
 

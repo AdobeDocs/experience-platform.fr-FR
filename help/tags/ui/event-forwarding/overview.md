@@ -3,10 +3,10 @@ title: Présentation du transfert dʼévénements
 description: Découvrez Adobe Experience Platform, qui vous permet dʼutiliser Platform Edge Network afin dʼexécuter des tâches sans modifier votre implémentation de balises.
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '955'
-ht-degree: 100%
+source-wordcount: '959'
+ht-degree: 96%
 
 ---
 
@@ -49,7 +49,7 @@ Tandis que les balises collectent les données d’événement directement sur v
 
 ### Propriétés {#properties}
 
-Le transfert d’événement conserve sa propre banque de propriétés séparées des balises, que vous pouvez afficher dans l’interface utilisateur de la collecte de données en sélectionnant **[!UICONTROL Transfert d’événement]** dans le volet de navigation de gauche.
+Le transfert d’événement conserve sa propre banque de propriétés séparées des balises, que vous pouvez afficher dans l’interface utilisateur de l’Experience Platform ou dans l’interface utilisateur de collecte de données en sélectionnant **[!UICONTROL Transfert d’événement]** dans le volet de navigation de gauche.
 
 ![Propriétés de transfert d’événement dans l’interface utilisateur de la collecte de données](../../images/ui/event-forwarding/overview/properties.png)
 

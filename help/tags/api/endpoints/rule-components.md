@@ -2,10 +2,10 @@
 title: Point d’entrée des composants de règle
 description: Découvrez comment effectuer des appels au point d’entrée /rule_components dans l’API Reactor.
 exl-id: 8a878a89-7f41-45fc-88f3-17f0f743e29c
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '1207'
-ht-degree: 100%
+source-wordcount: '1205'
+ht-degree: 98%
 
 ---
 
@@ -15,7 +15,7 @@ Dans les balises de collecte de données, les [règles](./rules.md) contrôlent 
 
 >[!NOTE]
 >
->Ce document explique comment gérer les composants de règle dans l’API Reactor. Pour plus d’informations sur la façon d’interagir avec les règles et les composants de règle dans l’interface utilisateur de la collecte de données, reportez-vous au [guide de l’interface utilisateur](../../ui/managing-resources/rules.md).
+>Ce document explique comment gérer les composants de règle dans l’API Reactor. Pour plus d’informations sur l’interaction avec les règles et les composants de règle dans l’interface utilisateur, reportez-vous à la section [Guide de l’interface utilisateur](../../ui/managing-resources/rules.md).
 
 Les composants de règle possèdent trois types de base :
 

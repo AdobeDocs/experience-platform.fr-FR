@@ -2,10 +2,10 @@
 title: Environnements
 description: Découvrez le concept des environnements de balises et leur fonctionnement dans Adobe Experience Platform.
 exl-id: 0bf641c9-412e-4737-9b76-232d980385b2
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '1468'
-ht-degree: 100%
+source-wordcount: '1464'
+ht-degree: 98%
 
 ---
 
@@ -91,7 +91,7 @@ Sélectionnez **[!UICONTROL Hôte]** pour choisir un hôte préconfiguré pour l
 
 ![](./images/environments/select-host.png)
 
-Lors de la création d’une version, celle-ci est distribuée à l’emplacement spécifié pour l’hôte affecté. Pour plus d’informations sur la création et la configuration des hôtes dans l’interface utilisateur de collecte de données, reportez-vous à la [présentation des hôtes](./hosts/hosts-overview.md).
+Lors de la création d’une version, celle-ci est distribuée à l’emplacement spécifié pour l’hôte affecté. Pour plus d’informations sur la création et la configuration des hôtes de balises, reportez-vous à la section [présentation des hôtes](./hosts/hosts-overview.md).
 
 ### Paramètre d’archivage {#archive}
 

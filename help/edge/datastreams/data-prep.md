@@ -2,10 +2,10 @@
 title: Préparation des données pour la collecte de données
 description: Découvrez comment mapper vos données à un schéma d’événement du modèle de données d’expérience (XDM) lors de la configuration d’un flux de données pour les SDK web et mobile d’Adobe Experience Platform.
 exl-id: 87a70d56-1093-445c-97a5-b8fa72a28ad0
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '918'
-ht-degree: 100%
+source-wordcount: '914'
+ht-degree: 96%
 
 ---
 
@@ -22,7 +22,7 @@ La préparation des données est un service Adobe Experience Platform qui vous p
 >* [Gestion des formats de données avec la préparation des données](../../data-prep/data-handling.md)
 
 
-Ce guide explique comment mapper vos données dans l’interface utilisateur de collecte de données. Pour respecter les étapes, commencez le processus de création d’un flux de données jusqu’à (et y compris) l’[étape de configuration de base](./overview.md#create).
+Ce guide explique comment mapper vos données dans l’interface utilisateur. Pour respecter les étapes, commencez le processus de création d’un flux de données jusqu’à (et y compris) l’[étape de configuration de base](./overview.md#create).
 
 Pour une démonstration rapide du processus de préparation des données pour la collecte de données, reportez-vous à la vidéo suivante :
 
@@ -203,4 +203,4 @@ Une fois que le nombre de champs obligatoires atteint zéro et que le mappage vo
 
 ## Étapes suivantes
 
-Ce guide explique comment mapper les données à XDM lors de la configuration d’un flux de données dans l’interface utilisateur de collecte de données. Si vous avez suivi le tutoriel général sur les flux de données, vous pouvez maintenant revenir à l’étape sur l’[affichage des détails des flux de données](./overview.md).
+Ce guide explique comment mapper vos données à XDM lors de la configuration d’un flux de données dans l’interface utilisateur. Si vous avez suivi le tutoriel général sur les flux de données, vous pouvez maintenant revenir à l’étape sur l’[affichage des détails des flux de données](./overview.md).

@@ -2,9 +2,9 @@
 title: Référence dʼobjet satellite
 description: Découvrez lʼobjet _satellite côté client et les différentes fonctions quʼil offre dans les balises.
 exl-id: f8b31c23-409b-471e-bbbc-b8f24d254761
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '1291'
+source-wordcount: '1290'
 ht-degree: 95%
 
 ---
@@ -51,7 +51,7 @@ Dans lʼexemple proposé, sʼil existe un élément de données avec un nom corr
 
 >[!NOTE]
 >
->Vous pouvez utiliser le pourcentage (`%`) pour référencer des variables pour de nombreux champs de formulaire dans l’interface utilisateur de collecte de données, ce qui réduit la nécessité d’appeler `_satellite.getVar()`. Par exemple, en utilisant `%product%` accède à la valeur de l’élément de données de produit ou de la variable personnalisée.
+>Vous pouvez utiliser le pourcentage (`%`) pour référencer des variables pour de nombreux champs de formulaire dans l’implémentation des balises, ce qui réduit la nécessité d’appeler `_satellite.getVar()`. Par exemple, en utilisant `%product%` accède à la valeur de l’élément de données de produit ou de la variable personnalisée.
 
 Lorsqu’un événement déclenche une règle, vous pouvez transmettre la variable correspondante de la règle `event` dans `_satellite.getVar()` comme si :
 

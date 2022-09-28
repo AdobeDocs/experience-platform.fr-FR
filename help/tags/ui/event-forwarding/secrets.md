@@ -1,11 +1,11 @@
 ---
 title: Configuration de secrets dans le transfert d’événements
-description: Découvrez comment configurer des secrets dans lʼinterface utilisateur de la collecte de données afin de vous authentifier aux points dʼentrée utilisés dans les propriétés de transfert dʼévénement.
+description: Découvrez comment configurer des secrets dans l’interface utilisateur pour s’authentifier aux points de terminaison utilisés dans les propriétés de transfert d’événement.
 exl-id: eefd87d7-457f-422a-b159-5b428da54189
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '1637'
-ht-degree: 84%
+source-wordcount: '1633'
+ht-degree: 78%
 
 ---
 
@@ -24,7 +24,7 @@ Il existe actuellement trois types de secret pris en charge :
 
 {style=&quot;table-layout:auto&quot;}
 
-Ce guide fournit une présentation générale de la configuration des secrets pour une propriété de transfert dʼévénement ([!UICONTROL Edge]) dans lʼinterface utilisateur de la collecte de données.
+Ce guide fournit un aperçu général de la configuration des secrets pour un transfert d’événement ([!UICONTROL Edge]) dans l’interface utilisateur de l’Experience Platform ou l’interface utilisateur de collecte de données.
 
 >[!NOTE]
 >
@@ -32,13 +32,13 @@ Ce guide fournit une présentation générale de la configuration des secrets po
 
 ## Conditions préalables
 
-Avant dʼutiliser ce guide, assurez-vous au préalable de savoir comment gérer les ressources pour les balises et le transfert dʼévénement dans lʼinterface utilisateur de la collecte de données, y compris comment créer un élément de données et une règle de transfert dʼévénement. Si vous avez besoin dʼune présentation, consultez le guide sur la [gestion des ressources](../managing-resources/overview.md).
+Ce guide suppose que vous savez déjà comment gérer les ressources pour le transfert de balises et d’événements dans l’interface utilisateur, y compris comment créer un élément de données et une règle de transfert d’événement. Si vous avez besoin dʼune présentation, consultez le guide sur la [gestion des ressources](../managing-resources/overview.md).
 
 Vous devez également posséder une compréhension pratique du flux de publication pour les balises et le transfert dʼévénement, y compris la manière dʼajouter des ressources à une bibliothèque et dʼinstaller une version de celle-ci sur votre site web à des fins de test. Pour plus dʼinformations, voir [présentation de la publication](../publishing/overview.md).
 
 ## Créer un secret {#create}
 
-Pour créer un secret, connectez-vous à lʼinterface utilisateur de la collecte de données et ouvrez la propriété de transfert dʼévénement sous laquelle vous souhaitez ajouter le secret. Ensuite, sélectionnez **[!UICONTROL Secrets]** dans le volet de navigation de gauche, puis **[!UICONTROL Créer un secret]**.
+Pour créer un secret, sélectionnez **[!UICONTROL Transfert d’événement]** dans le volet de navigation de gauche, ouvrez la propriété de transfert d’événement sous laquelle vous souhaitez ajouter le secret. Ensuite, sélectionnez **[!UICONTROL Secrets]** dans le volet de navigation de gauche, puis **[!UICONTROL Créer un secret]**.
 
 ![Création dʼun secret](../../images/ui/event-forwarding/secrets/create-new-secret.png)
 
@@ -87,7 +87,7 @@ Pour créer un secret HTTP, sélectionnez **[!UICONTROL HTTP simple]** dans la l
 
 ### [!UICONTROL OAuth2] {#oauth2}
 
-Pour créer un secret OAuth2, sélectionnez **[!UICONTROL OAuth2]** dans la liste déroulante **[!UICONTROL Type]**. Dans les champs qui s’affichent ci-dessous, fournissez vos [[!UICONTROL ID client] et [!UICONTROL Secret du client]](https://www.oauth.com/oauth2-servers/client-registration/client-id-secret/), ainsi que vos [[!UICONTROL URL du jeton]](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) pour votre intégration OAuth. Le [!UICONTROL URL du jeton] dans l’interface utilisateur de la collecte de données est une concaténation entre l’hôte du serveur d’autorisations et le chemin d’accès au jeton.
+Pour créer un secret OAuth2, sélectionnez **[!UICONTROL OAuth2]** dans la liste déroulante **[!UICONTROL Type]**. Dans les champs qui s’affichent ci-dessous, fournissez vos [[!UICONTROL ID client] et [!UICONTROL Secret du client]](https://www.oauth.com/oauth2-servers/client-registration/client-id-secret/), ainsi que vos [[!UICONTROL URL du jeton]](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) pour votre intégration OAuth. Le [!UICONTROL URL du jeton] dans l’interface utilisateur est une concaténation entre l’hôte du serveur d’autorisations et le chemin d’accès au jeton.
 
 ![Secret OAuth2](../../images/ui/event-forwarding/secrets/oauth-secret-1.png)
 
@@ -180,4 +180,4 @@ En attribuant plusieurs secrets à un élément de données unique et en l’inc
 
 ## Étapes suivantes
 
-Ce guide explique comment gérer les secrets dans l’interface utilisateur de collecte de données. Pour plus d’informations sur l’interaction avec les secrets à l’aide de l’API Reactor, voir le [guide de points d’entrée des secrets](../../api/endpoints/secrets.md).
+Ce guide explique comment gérer les secrets dans l’interface utilisateur. Pour plus d’informations sur l’interaction avec les secrets à l’aide de l’API Reactor, voir le [guide de points d’entrée des secrets](../../api/endpoints/secrets.md).

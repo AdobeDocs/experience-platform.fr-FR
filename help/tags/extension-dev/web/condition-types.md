@@ -2,10 +2,10 @@
 title: Types de conditions pour les extensions web
 description: Découvrez comment définir un module de bibliothèque de types de conditions pour une extension de balise dans une propriété web.
 exl-id: db504455-858b-4ac8-aa42-de516b0f1d5a
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '498'
-ht-degree: 100%
+source-wordcount: '502'
+ht-degree: 95%
 
 ---
 
@@ -29,7 +29,7 @@ Ce document explique comment définir des types de conditions pour une extension
 
 Les types de conditions se composent généralement des éléments suivants :
 
-1. Une [vue](./views.md) affichée dans l’interface utilisateur de la collecte de données, qui permet aux utilisateurs de modifier les paramètres de la condition.
+1. A [view](./views.md) affichées dans l’interface utilisateur de l’Experience Platform et l’interface utilisateur de collecte de données qui permettent aux utilisateurs de modifier les paramètres de la condition.
 2. Un module de bibliothèque émis dans la bibliothèque d’exécution de balise pour interpréter les paramètres et évaluer une condition.
 
 Un module de bibliothèque de type de condition a un seul objectif : évaluer si quelque chose est vrai ou faux. Ce qu’il évalue ne dépend que de vous.

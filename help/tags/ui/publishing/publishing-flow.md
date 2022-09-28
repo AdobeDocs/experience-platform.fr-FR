@@ -2,10 +2,10 @@
 title: Flux de publication
 description: Découvrez le processus de création des bibliothèques, de test et d’approbation des versions pour la production dans Adobe Experience Platform.
 exl-id: 4885f60b-6401-4ec7-aa1a-29c135087847
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '1499'
-ht-degree: 100%
+source-wordcount: '1490'
+ht-degree: 97%
 
 ---
 
@@ -42,7 +42,7 @@ En ce qui concerne le flux de publication, une bibliothèque peut se trouver dan
 * [[!UICONTROL Approuvé]](#approved)
 * [[!UICONTROL Publié]](#published)
 
-Ces quatre états sont représentés sous forme de colonnes dans lʼonglet **[!UICONTROL Flux de publication]** de lʼinterface utilisateur de collecte de données.
+Ces quatre états sont représentés sous forme de colonnes dans la variable **[!UICONTROL Flux de publication]** .
 
 ![](./images/approval-workflow/flow-ui.png)
 
@@ -112,7 +112,7 @@ Ce qui est inclus en amont dépend de l’étape actuelle de la bibliothèque. P
 
 ![](./images/approval-workflow/upstream.png)
 
-Lorsque vous modifiez une bibliothèque dans lʼinterface utilisateur de collecte de données, toutes les ressources héritées des éléments en amont sont représentées dans la section **[!UICONTROL Ressources en amont]**. Pour afficher ces ressources, sélectionnez l’onglet Développer situé sous l’en-tête de la section.
+Lors de la modification d’une bibliothèque dans l’interface utilisateur, toutes les ressources héritées du amont sont représentées dans la variable **[!UICONTROL Ressources en amont]** . Pour afficher ces ressources, sélectionnez l’onglet Développer situé sous l’en-tête de la section.
 
 ![](./images/approval-workflow/upstream-collapse.png)
 

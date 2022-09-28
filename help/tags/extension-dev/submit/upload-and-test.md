@@ -2,10 +2,10 @@
 title: Téléchargement et implémentation de tests de bout en bout pour une extension
 description: Découvrez comment valider, télécharger et tester votre extension dans Adobe Experience Platform.
 exl-id: 6176a9e1-fa06-447e-a080-42a67826ed9e
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '2392'
-ht-degree: 100%
+source-wordcount: '2394'
+ht-degree: 95%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 100%
 >
 >Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
-Pour tester les extensions de balises dans Adobe Experience Platform, utilisez lʼAPI des balises et/ou les outils de ligne de commande pour télécharger vos packages dʼextension. Ensuite, utilisez l’interface utilisateur de la collecte de données pour installer votre package d’extension sur une propriété et exercer ses fonctionnalités dans une bibliothèque de balises et une version.
+Pour tester les extensions de balises dans Adobe Experience Platform, utilisez lʼAPI des balises et/ou les outils de ligne de commande pour télécharger vos packages dʼextension. Ensuite, utilisez l’interface utilisateur de Platform ou l’interface utilisateur de collecte de données pour installer votre package d’extension sur une propriété et exercer ses fonctionnalités dans une bibliothèque de balises et créer.
 
 Ce document explique comment mettre en œuvre des tests de bout en bout pour votre extension.
 
@@ -74,7 +74,7 @@ Votre package d’extension sera ensuite téléchargé et le téléchargeur vous
 
 >[!NOTE]
 >
->Pendant le téléchargement ou l’application de correctifs, les modules d’extension sont placés en attente tandis que le système extrait le module et le déploie de manière asynchrone. Pendant ce processus, vous pouvez interroger l’ID `extension_package` pour connaître son statut à l’aide de l’API et dans l’interface utilisateur de la collecte de données. Une carte d’extension apparaît dans le catalogue portant la mention En attente.
+>Pendant le téléchargement ou l’application de correctifs, les modules d’extension sont placés en attente tandis que le système extrait le module et le déploie de manière asynchrone. Pendant ce processus, vous pouvez interroger la variable `extension_package` ID pour son état à l’aide de l’API et dans l’interface utilisateur. Une carte d’extension apparaît dans le catalogue portant la mention En attente.
 
 >[!NOTE]
 >
@@ -82,7 +82,7 @@ Votre package d’extension sera ensuite téléchargé et le téléchargeur vous
 
 ## Créer une propriété de développement {#property}
 
-Une fois que vous êtes connecté à l’interface utilisateur de la collecte de données, l’écran Propriétés s’affiche. Une propriété est un conteneur pour les balises que vous souhaitez déployer et elle peut être utilisée sur un ou plusieurs sites.
+Après vous être connecté à l’interface utilisateur, sélectionnez **[!UICONTROL Balises]** dans le volet de navigation de gauche, la variable [!UICONTROL Propriétés] s’affiche. Une propriété est un conteneur pour les balises que vous souhaitez déployer et elle peut être utilisée sur un ou plusieurs sites.
 
 ![](../images/getting-started/properties-screen.png)
 
@@ -142,7 +142,7 @@ Si nécessaire, les extensions peuvent définir des types d’éléments de donn
 
 Lorsqu’un utilisateur sélectionne votre extension dans la liste déroulante **Extension**, la liste déroulante **Type d’élément de données** est renseignée avec tous les types d’élément de données fournis par votre extension. L’utilisateur peut ensuite mapper chaque élément de données à sa valeur source. Les éléments de données peuvent ensuite être utilisés lors de la création de règles dans l’Événement de modification des éléments de données ou l’Événement de code personnalisé pour déclencher l’exécution d’une règle. Un élément de données peut également être utilisé dans la condition de l’élément de données ou dans d’autres conditions, exceptions ou actions d’une règle.
 
-Une fois l’élément de données créé (le mappage est configuré), les utilisateurs peuvent référencer les données sources simplement en référençant l’élément de données. Si la source de la valeur change un jour (modification de la conception du site, etc.) les utilisateurs n’ont besoin de mettre à jour le mappage qu’une seule fois dans l’interface utilisateur de la collecte de données. Tous les éléments de données recevront alors automatiquement la nouvelle valeur source.
+Une fois l’élément de données créé (le mappage est configuré), les utilisateurs peuvent référencer les données sources simplement en référençant l’élément de données. Si la source de la valeur change un jour (modification de la conception du site, etc.) Les utilisateurs n’ont besoin de mettre à jour le mappage qu’une seule fois dans l’interface utilisateur. Tous les éléments de données recevront automatiquement la nouvelle valeur source.
 
 ### Règles
 
@@ -226,6 +226,6 @@ Lorsque vous découvrez des modifications à apporter à votre package d’exten
    >
    >Les arguments peuvent être transmis sur la ligne de commande afin de gagner du temps et éviter ainsi la saisie répétée des informations d’identification. Pour plus d’informations à ce sujet, consultez la [documentation de reactor-uploader](https://www.npmjs.com/package/@adobe/reactor-uploader).
 1. L’étape d’installation peut être ignorée lors de la mise à jour d’un package existant.
-1. Modification des ressources : si la configuration de l’un de vos composants d’extension a été modifiée, vous devez mettre à jour ces ressources dans l’interface utilisateur de la collecte de données.
+1. Modifier des ressources : si la configuration de l’un de vos composants d’extension a été modifiée, vous devrez mettre à jour ces ressources dans l’interface utilisateur.
 1. Ajoutez vos dernières modifications à votre bibliothèque et effectuez une nouvelle génération.
 1. Effectuez une autre série de tests.

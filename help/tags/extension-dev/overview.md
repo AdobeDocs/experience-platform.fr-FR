@@ -2,10 +2,10 @@
 title: Présentation du développement d’extension
 description: Découvrez les principaux composants des différents types d’extensions de balise ainsi que le processus de développement des extensions dans Adobe Experience Platform.
 exl-id: b72df3df-f206-488d-a690-0f086973c5b6
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '950'
+ht-degree: 95%
 
 ---
 
@@ -37,11 +37,11 @@ Vous pouvez placer les fichiers de module de bibliothèque n’importe où dans 
 
 ### Vues
 
-Une vue est un fichier HTML pouvant être chargé dans un [`iframe`élément](https://developer.mozilla.org/fr-FR/docs/Web/HTML/Element/iframe) dans l’application de balises, en particulier via l’interface utilisateur de la collecte de données. La vue doit inclure un script fourni par l’extension et se conformer à une petite API pour communiquer avec l’application.
+Une vue est un fichier de HTML pouvant être chargé dans une [`iframe` element](https://developer.mozilla.org/fr-FR/docs/Web/HTML/Element/iframe) dans l’application des balises, notamment via l’interface utilisateur de Platform et l’interface utilisateur de collecte de données. La vue doit inclure un script fourni par l’extension et se conformer à une petite API pour communiquer avec l’application.
 
 Le plus important fichier de vue de toute extension est sa configuration. Pour plus d’informations, consultez la section consacrée aux [configurations d’extension](#configuration).
 
-Il n’y a aucune restriction quant aux bibliothèques utilisées dans vos vues. En d’autres termes, vous pouvez utiliser jQuery, Underscore, React, Angular, Bootstrap ou d’autres. Toutefois, il est toujours recommandé de faire en sorte que votre extension ait un aspect similaire à celui de l’interface utilisateur de la collecte de données.
+Il n’y a aucune restriction quant aux bibliothèques utilisées dans vos vues. En d’autres termes, vous pouvez utiliser jQuery, Underscore, React, Angular, Bootstrap ou d’autres. Cependant, il est toujours recommandé de faire en sorte que votre extension ait une apparence similaire à celle de l’interface utilisateur.
 
 Il est recommandé de placer tous les fichiers liés aux vues (HTML, CSS, JavaScript) dans un seul sous-répertoire isolé des fichiers du module Bibliothèque. Dans `extension.json`, vous pouvez décrire l’emplacement de ce sous-répertoire de vue. Platform servira alors ce sous-répertoire (et uniquement celui-ci) à partir de ses serveurs web.
 

@@ -2,10 +2,10 @@
 title: Présentation de l’extension Adobe Privacy
 description: Découvrez lʼextension de balise Adobe Privacy dans Adobe Experience Platform.
 exl-id: 8401861e-93ad-48eb-8796-b26ed8963c32
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '909'
-ht-degree: 100%
+source-wordcount: '901'
+ht-degree: 92%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 100%
 
 L’extension de balise d’Adobe Privacy vous permet de collecter et de supprimer les identifiants d’utilisateur affectés aux utilisateurs finaux par les solutions Adobe sur les appareils côté client. Les identifiants collectés peuvent alors être envoyés à [Adobe Experience Platform Privacy Service](../../../../privacy-service/home.md) pour accéder ou supprimer les données personnelles de l’individu concerné dans les applications Adobe Experience Cloud prises en charge.
 
-Ce guide explique comment installer et configurer l’extension Adobe Privacy dans l’interface utilisateur de collecte de données.
+Ce guide explique comment installer et configurer l’extension Adobe Privacy dans l’interface utilisateur Experience Platform ou l’interface utilisateur de collecte de données.
 
 >[!NOTE]
 >
@@ -25,7 +25,7 @@ Ce guide explique comment installer et configurer l’extension Adobe Privacy d
 
 ## Installation et configuration de l’extension 
 
-Dans l’interface utilisateur de collecte de données, sélectionnez **[!UICONTROL Extensions]** dans le volet de navigation de gauche, suivi de l’onglet **[!UICONTROL Catalogue]**. Utilisez la barre de recherche pour réduire la liste des extensions disponibles jusqu’à ce que vous trouviez Adobe Privacy. Sélectionnez **[!UICONTROL Installer]** pour continuer.
+Sélectionner **[!UICONTROL Extensions]** dans le volet de navigation de gauche, suivi de la fonction **[!UICONTROL Catalogue]** . Utilisez la barre de recherche pour réduire la liste des extensions disponibles jusqu’à ce que vous trouviez Adobe Privacy. Sélectionnez **[!UICONTROL Installer]** pour continuer.
 
 ![Installer l’extension](../../../images/extensions/privacy/install.png)
 
@@ -71,7 +71,7 @@ Lors de l’utilisation de l’extension de balise d’Adobe Privacy, vous deve
 
 ### Définition d’un élément de données pour gérer les identités
 
-Dans l’interface utilisateur de collecte de données, commencez le processus de création d’un nouvel élément de données en sélectionnant **[!UICONTROL Éléments de données]** dans le volet de navigation de gauche, suivi de **[!UICONTROL Ajouter un élément de données]**. Une fois que vous êtes sur l’écran de configuration, sélectionnez **[!UICONTROL Core]** pour l’extension et **[!UICONTROL Code personnalisé]** pour le type d’élément de données. À partir de là, sélectionnez **[!UICONTROL Ouvrir l’éditeur]** dans le panneau de droite.
+Lancez le processus de création d’un élément de données en sélectionnant **[!UICONTROL Éléments de données]** dans le volet de navigation de gauche, suivi de **[!UICONTROL Ajouter un élément de données]**. Une fois que vous êtes sur l’écran de configuration, sélectionnez **[!UICONTROL Core]** pour l’extension et **[!UICONTROL Code personnalisé]** pour le type d’élément de données. À partir de là, sélectionnez **[!UICONTROL Ouvrir l’éditeur]** dans le panneau de droite.
 
 ![Sélectionner le type d’élément de données](../../../images/extensions/privacy/data-element-type.png)
 
@@ -111,4 +111,4 @@ Après avoir installé l’extension, vous pouvez la désactiver ou la supprimer
 
 ## Étapes suivantes
 
-Ce guide a porté sur l’utilisation de l’extension de balise d’Adobe Privacy dans l’interface utilisateur de collecte de données. Pour plus d’informations sur les fonctionnalités fournies par l’extension, y compris des exemples d’utilisation du code brut, voir la section [Présentation de la bibliothèque JavaScript de confidentialité](../../../../privacy-service/js-library.md) dans la documentation du Privacy Service.
+Ce guide a porté sur l’utilisation de l’extension de balise de confidentialité Adobe dans l’interface utilisateur. Pour plus d’informations sur les fonctionnalités fournies par l’extension, y compris des exemples d’utilisation du code brut, voir la section [Présentation de la bibliothèque JavaScript de confidentialité](../../../../privacy-service/js-library.md) dans la documentation du Privacy Service.

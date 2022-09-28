@@ -2,9 +2,9 @@
 title: Hôtes SFTP
 description: Découvrez comment configurer les balises dans Adobe Experience Platform pour diffuser des versions de bibliothèque sur un serveur SFTP sécurisé et auto-hébergé.
 exl-id: 3c1dc43b-291c-4df4-94f7-a03b25dbb44c
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '821'
+source-wordcount: '820'
 ht-degree: 40%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 40%
 >
 >Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
-Adobe Experience Platform vous permet de fournir des versions de bibliothèque de balises à un serveur SFTP sécurisé que vous hébergez, ce qui vous permet de mieux contrôler la manière dont vos versions sont stockées et gérées. Ce guide explique comment configurer un hôte SFTP pour une propriété de balise dans l’interface utilisateur de la collecte de données.
+Adobe Experience Platform vous permet de fournir des versions de bibliothèque de balises à un serveur SFTP sécurisé que vous hébergez, ce qui vous permet de mieux contrôler la manière dont vos versions sont stockées et gérées. Ce guide explique comment configurer un hôte SFTP pour une propriété de balise dans l’interface utilisateur Experience Platform ou l’interface utilisateur de collecte de données.
 
 >[!NOTE]
 >
@@ -51,7 +51,7 @@ Pour plus d’informations détaillées, reportez-vous à l’article Medium sui
 
 ## Création d’un hôte SFTP {#create}
 
-Dans l’interface utilisateur de la collecte de données, sélectionnez **[!UICONTROL Hôtes]** dans le volet de navigation de gauche, suivi de **[!UICONTROL Ajouter un hôte]**.
+Sélectionner **[!UICONTROL Hôtes]** dans le volet de navigation de gauche, suivi de **[!UICONTROL Ajouter un hôte]**.
 
 ![Image montrant le bouton Ajouter l’hôte sélectionné dans l’interface utilisateur](../../../images/ui/publishing/sftp-hosts/add-host-button.png)
 

@@ -2,10 +2,10 @@
 title: Guide de démarrage rapide
 description: Découvrez comment vous familiariser rapidement avec les balises dans Adobe Experience Platform.
 exl-id: 490ee344-3b18-4189-9293-2378f86fb10d
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '1532'
-ht-degree: 100%
+source-wordcount: '1527'
+ht-degree: 92%
 
 ---
 
@@ -31,13 +31,13 @@ Le workflow de base des balises :
 
 Les balises sont totalement intégrées à votre Adobe ID. Les autorisations utilisateur sont gérées via lʼAdmin Console avec dʼautres produits et solutions Adobe depuis [!DNL Creative Cloud], [!DNL Document Cloud] et Experience Cloud.
 
-Les balises disposent dʼun système de gestion des utilisateurs basé sur les droits. Cela signifie que les droits individuels doivent être accordés explicitement. Ces droits sont octroyés aux groupes, puis les utilisateurs sont ajoutés aux groupes appropriés afin d’y avoir accès. Même si votre entreprise a accès à lʼinterface utilisateur de la collecte de données, les utilisateurs individuels ne peuvent rien faire tant quʼun administrateur de lʼentreprise ne leur a pas explicitement accordé des droits.
+Les balises disposent dʼun système de gestion des utilisateurs basé sur les droits. Cela signifie que les droits individuels doivent être accordés explicitement. Ces droits sont octroyés aux groupes, puis les utilisateurs sont ajoutés aux groupes appropriés afin d’y avoir accès. Même si votre entreprise a accès à la collecte de données, les utilisateurs individuels ne peuvent rien faire tant qu’un administrateur ne leur a pas explicitement accordé certains droits.
 
-Pour obtenir des instructions détaillées sur la création de groupes et lʼajout dʼutilisateurs pour les balises, reportez-vous au document sur les [autorisations utilisateur](../ui/administration/user-permissions.md).
+Pour obtenir des instructions détaillées sur la création de groupes et l’ajout d’utilisateurs pour les balises, voir [guide des autorisations de collecte de données](../../collection/permissions.md).
 
 ## 2. Connexion
 
-Une fois les droits relatifs aux balises ajoutés à votre Adobe ID, vous devez vous connecter à lʼinterface utilisateur de la collecte de données. Pour ce faire, accédez directement à lʼ [écran de connexion Experience Cloud](https://experiencecloud.adobe.com), puis sélectionnez l’interface utilisateur de la collecte de données dans l’onglet Accès rapide.
+Une fois les droits de balise ajoutés à votre Adobe ID, vous devez vous connecter à l’interface utilisateur de l’Experience Platform ou à l’interface utilisateur de collecte de données. Pour ce faire, accédez directement au [Écran de connexion Experience Cloud](https://experience.adobe.com/)et en sélectionnant **[!UICONTROL Collecte de données]** ou **[!UICONTROL Experience Platform]**.
 
 >[!NOTE]
 >
@@ -45,7 +45,7 @@ Une fois les droits relatifs aux balises ajoutés à votre Adobe ID, vous devez
 
 ## 3. Création d’une propriété
 
-Une fois que vous êtes connecté à lʼinterface utilisateur de la collecte de données, la première étape consiste à créer une propriété. Une propriété est essentiellement un conteneur que vous remplissez avec des extensions, des règles, des éléments de données et des bibliothèques lorsque vous déployez des balises sur votre site. De nombreuses personnes créent une propriété pour chaque site web (ou groupe de sites étroitement liés) où elles souhaitent déployer le même ensemble de balises.
+Une fois que vous êtes connecté à l’interface utilisateur, la première chose à faire est de créer une propriété. Une propriété est essentiellement un conteneur que vous remplissez avec des extensions, des règles, des éléments de données et des bibliothèques lorsque vous déployez des balises sur votre site. De nombreuses personnes créent une propriété pour chaque site web (ou groupe de sites étroitement liés) où elles souhaitent déployer le même ensemble de balises.
 
 Pour plus d’informations sur la création de propriétés, reportez-vous à la section [Création d’une propriété](../ui/administration/companies-and-properties.md).
 
@@ -67,7 +67,7 @@ Les **éléments de données** sont des pointeurs vers les informations que vous
 * Stockage local et de session
 * À peu près tout
 
-Une fois l’élément de données défini, vous pouvez l’utiliser n’importe où dans l&#39;interface utilisateur de collecte de données, et ce pour n’importe quelle extension. Pour plus d’informations, voir la documentation sur les [éléments de données](../ui/managing-resources/data-elements.md).
+Une fois l’élément de données défini, vous pouvez l’utiliser n’importe où dans l’interface utilisateur pour n’importe quelle extension. Pour plus d’informations, voir la documentation sur les [éléments de données](../ui/managing-resources/data-elements.md).
 
 Les **règles** se rapportent au noyau logique de votre mise en œuvre et contrôlent tout ce qui concerne les balises de votre site. Définissez un événement, des conditions et des exceptions, puis les actions et l’ordre. Enfin, publiez vos modifications pour afficher les résultats. Pour plus d’informations, reportez-vous à la section [Règles](../ui/managing-resources/rules.md).
 

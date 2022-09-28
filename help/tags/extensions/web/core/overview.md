@@ -2,10 +2,10 @@
 title: Présentation de l’extension Core
 description: Découvrez lʼextension de balise Core dans Adobe Experience Platform.
 exl-id: 841f32ad-a6a8-49fb-a131-ef4faab47187
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '5492'
-ht-degree: 100%
+source-wordcount: '5482'
+ht-degree: 96%
 
 ---
 
@@ -88,7 +88,7 @@ L’événement se déclenche en cas d’augmentation ou de réduction de volume
 
 #### Orientation Change
 
-L’événement se déclenche s’il y a modification de l’orientation de l’appareil. Pour déclencher l’événement, vous devez spécifier la durée pendant laquelle la modification d’orientation doit se produire. Il n’existe aucun paramètre pour ce type d’événement.
+L’événement se déclenche si l’orientation de l’appareil change. Pour déclencher l’événement, vous devez spécifier la durée pendant laquelle la modification d’orientation doit se produire. Il n’existe aucun paramètre pour ce type d’événement.
 
 #### Zoom Change
 
@@ -108,7 +108,7 @@ Si lʼélément est une balise de type ancre (`<a>`) de lien vers un contenu, vo
 
 Lorsque vous utilisez un retard de lien, Platform empêche le navigateur de quitter la page. Il effectue ensuite une redirection JavaScript vers la destination d’origine après la temporisation spécifiée. C’est particulièrement risqué lorsque le balisage de votre page comporte des balises `<a>` où la fonctionnalité prévue ne permet pas de rediriger l’utilisateur en dehors de la page. S’il vous est impossible de résoudre ce problème d’une autre manière, soyez extrêmement précis quant à la définition de votre sélecteur afin que cet événement se déclenche exactement là où vous en avez besoin et nulle part ailleurs.
 
-La valeur par défaut du délai de lien est de 100 millisecondes. Veuillez noter que les balises attendront toujours l’intervalle de temps spécifié et ne sont en aucun cas liées à l’exécution des actions de la règle. Il est possible que le délai oblige l’utilisateur à attendre plus longtemps que nécessaire et qu’il ne soit pas suffisant pour permettre à toutes les actions de la règle de s’achever correctement. Des retards plus longs donnent plus de temps à l’exécution des règles, mais dégradent également l’expérience client.
+La valeur par défaut du délai de lien est de 100 millisecondes. Notez que les balises attendront toujours le temps spécifié et n’est en aucun cas connecté à l’exécution des actions de la règle. Il est possible que le délai force l’utilisateur à attendre plus longtemps que nécessaire, et également possible que le délai ne soit pas suffisant pour que toutes les actions de la règle se terminent avec succès. Des retards plus longs donnent plus de temps à l’exécution des règles, mais dégradent également l’expérience client.
 
 Pour appliquer le retard, il est nécessaire de fournir à la fois l’élément sélectionné qui déclenche l’événement et l’intervalle de temps précis à respecter avant que l’événement ne soit déclenché.
 
@@ -235,7 +235,7 @@ Utilisez l’éditeur de code intégré pour saisir le code personnalisé :
 1. Saisissez le Custom Code.
 1. Sélectionnez **[!UICONTROL Enregistrer]**.
 
-Une variable nommée `event` sera automatiquement disponible et vous pouvez y faire référence à partir de votre Custom Code. L’objet `event` contient des informations utiles sur l’événement qui a déclenché la règle. Le moyen le plus simple de déterminer les données d’événement disponibles consiste à connecter `event` à la console à partir du Cutom Code :
+Une variable nommée `event` sera automatiquement disponible et vous pouvez y faire référence à partir de votre Custom Code. L’objet `event` contient des informations utiles sur l’événement qui a déclenché la règle. Le moyen le plus simple de déterminer les données d’événement disponibles consiste à connecter `event` à la console à partir du code personnalisé :
 
 ```javascript
 console.log(event);
@@ -246,7 +246,7 @@ Exécutez la règle dans un navigateur et examinez l’objet d’événement con
 
 *Séquençage de conditions*
 
-Lorsque l’option « Run rule components in sequence » des paramètres de propriété est activée, vous pouvez faire attendre les composants de règle suivants pendant que votre condition effectue une tâche asynchrone.
+Lorsque l’option &quot;Run rule components in sequence&quot; des paramètres de propriété est activée, vous pouvez faire attendre les composants de règle suivants pendant que votre condition effectue une tâche asynchrone.
 
 Lorsque la condition renvoie une [promesse](https://developer.mozilla.org/fr-FR/docs/Web/JavaScript/Reference/Global_Objects/Promise), la prochaine condition de la règle ne s’exécutera pas tant que la promesse renvoyée n’aura pas été résolue. Si la promesse est refusée, les balises considèrent que la condition a échoué et aucune autre condition ou action de cette règle ne sera exécutée.
 
@@ -444,7 +444,7 @@ Sélectionnez la taille de la fenêtre que les visiteurs doivent utiliser sur le
 
 ### URL
 
-#### Domain
+#### Domaine
 
 Indiquez le domaine du visiteur.
 
@@ -560,13 +560,13 @@ Fournissez le code qui s’exécute une fois que l’événement est déclenché
 1. Sélectionnez **[!UICONTROL Ouvrir l’éditeur]**.
 1. Modifiez le code, puis cliquez sur **[!UICONTROL Enregistrer]**.
 
-Lorsque JavaScript est sélectionné comme langage, une variable nommée `event` est automatiquement disponible et vous pouvez y faire référence à partir de votre Custom Code. L’objet `event` contient des informations utiles sur l’événement qui a déclenché la règle. Le moyen le plus simple de déterminer les données d’événement disponibles consiste à connecter `event` à la console à partir du Cutom Code :
+Lorsque JavaScript est sélectionné comme langage, une variable nommée `event` est automatiquement disponible et vous pouvez y faire référence à partir de votre Custom Code. L’objet `event` contient des informations utiles sur l’événement qui a déclenché la règle. Le moyen le plus simple de déterminer les données d’événement disponibles consiste à connecter `event` à la console à partir du code personnalisé :
 
 ```javascript
 console.log(event);
 ```
 
-Exécutez la règle dans un navigateur et examinez l’objet d’événement consigné dans la console du navigateur. Une fois que vous avez compris quelles informations sont disponibles, vous pouvez les utiliser pour la prise de décision programmée dans votre Custom Code, envoyer une partie de l’objet `event` à un serveur et bien plus encore.
+Exécutez la règle dans un navigateur et examinez l’objet d’événement consigné dans la console du navigateur. Une fois que vous avez compris quelles informations sont disponibles, vous pouvez les utiliser pour la prise de décision programmée dans votre code personnalisé, envoyer une partie de l’objet `event` à un serveur et bien plus encore.
 
 ### Traitement de l’action Custom Code
 
@@ -588,7 +588,7 @@ Le programme de validation utilisé dans lʼéditeur de code de balises est con�
 
 #### Séquencage d’actions
 
-Lorsque l’option « Run rule components in sequence » des paramètres de propriété est activée, vous pouvez faire attendre les composants de règle suivants pendant que votre action effectue une tâche asynchrone.  Cela fonctionne différemment pour le Custom Code JavaScript et HTML.
+Lorsque l’option &quot;Run rule components in sequence&quot; des paramètres de propriété est activée, vous pouvez faire attendre les composants de règle suivants pendant que votre action effectue une tâche asynchrone.  Cela fonctionne différemment pour le Custom Code JavaScript et HTML.
 
 *JavaScript*
 
@@ -681,14 +681,14 @@ if (window.location.pathname == '/') {
 }
 ```
 
-Si l’élément de données de Custom Code est récupéré dans le cadre de l’exécution d’une règle, une variable nommée `event` est automatiquement disponible et vous pouvez y faire référence à partir de votre code personnalisé. L’objet `event` contient des informations utiles sur l’événement qui a déclenché la règle. Le moyen le plus simple de déterminer les données d’événement disponibles consiste à connecter `event` à la console à partir du Cutom Code :
+Si l’élément de données de Custom Code est récupéré dans le cadre de l’exécution d’une règle, une variable nommée `event` est automatiquement disponible et vous pouvez y faire référence à partir de votre code personnalisé. L’objet `event` contient des informations utiles sur l’événement qui a déclenché la règle. Le moyen le plus simple de déterminer les données d’événement disponibles consiste à connecter `event` à la console à partir du code personnalisé :
 
 ```javascript
 console.log(event);
 return true;
 ```
 
-Exécutez la règle dans un navigateur et examinez l’objet d’événement consigné dans la console du navigateur. Une fois que vous avez compris quelles informations sont disponibles sous les différentes règles pouvant utiliser votre élément de données, vous pouvez les utiliser pour la prise de décision programmée dans votre Custom Code ou renvoyer une partie de l’objet `event` comme valeur de l’élément de données.
+Exécutez la règle dans un navigateur et examinez l’objet d’événement consigné dans la console du navigateur. Une fois que vous avez compris quelles informations sont disponibles sous les différentes règles pouvant utiliser votre élément de données, vous pouvez les utiliser pour la prise de décision programmée dans votre code personnalisé ou renvoyer une partie de l’objet `event` comme valeur de l’élément de données.
 
 ### Attribut DOM
 
@@ -708,7 +708,7 @@ Obtention de la valeur de :
 
 N’importe quelle variable ou n’importe quel objet JavaScript peut être référencé à l’aide du champ de chemin d’accès.
 
-Les éléments de données de balise peuvent être utilisés pour recueillir vos variables JavaScript de balisage ou vos propriétés d’objet. Ces valeurs peuvent ensuite être utilisées dans vos extensions ou règles personnalisées en référençant les éléments de données de balise. Si la source des données est modifiée, il suffit de mettre à jour la référence à la source dans l’interface utilisateur de la collecte de données.
+Les éléments de données de balise peuvent être utilisés pour recueillir vos variables JavaScript de balisage ou vos propriétés d’objet. Ces valeurs peuvent ensuite être utilisées dans vos extensions ou règles personnalisées en référençant les éléments de données de balise. Si la source des données change, il suffit de mettre à jour la référence à la source.
 
 Dans l’exemple ci-dessous, l’annotation contient une variable JavaScript nommée `Page_Name`.
 
@@ -719,9 +719,9 @@ Dans l’exemple ci-dessous, l’annotation contient une variable JavaScript nom
 </script>
 ```
 
-Lorsque vous créez l’élément de données dans l’interface utilisateur de la collecte de données, fournissez simplement le chemin d’accès à cette variable.
+Lorsque vous créez l’élément de données, fournissez simplement le chemin d’accès à cette variable.
 
-Si vous utilisez un objet collecteur de données dans votre couche de données, servez-vous simplement de la notation point dans le chemin d’accès pour faire référence à l’objet et de la propriété que vous souhaitez recueillir dans l’élément de données, par exemple `_myData.pageName`, ou `digitalData.pageName`, etc.
+Si vous utilisez un objet collecteur de données dans votre couche de données, utilisez la notation point dans le chemin pour référencer l’objet et la propriété que vous souhaitez capturer dans l’élément de données, par exemple `_myData.pageName`ou `digitalData.pageName`, etc.
 
 #### Exemple :
 
@@ -815,7 +815,7 @@ Seule la section de nom est nécessaire. Les indicateurs spéciaux tels que « 
 
 ### Nombre aléatoire
 
-Utilisez cet élément de données pour générer un nombre aléatoire. Il est souvent utilisé pour échantillonner des données ou pour créer des identifiants, comme un ID d’accès. Le nombre aléatoire peut également être utilisé pour obscurcir ou appliquer un salage aux données sensibles. Voici quelques exemples :
+Utilisez cet élément de données pour générer un nombre aléatoire. Il est souvent utilisé pour échantillonner des données ou pour créer des identifiants, tels qu’un identifiant d’accès. Le nombre aléatoire peut également être utilisé pour obscurcir ou appliquer un salage aux données sensibles. Voici quelques exemples :
 
 * Générer un ID d’accès
 * Concaténer le nombre à un jeton utilisateur ou à un horodatage pour garantir l’unicité
