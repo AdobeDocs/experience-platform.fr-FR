@@ -3,9 +3,9 @@ title: Notes de mise à jour du SDK web Adobe Experience Platform
 description: Notes de mise à jour les plus récentes pour le SDK Web Adobe Experience Platform.
 keywords: SDK Web Adobe Experience Platform;SDK Web Platform;SDK Web;notes de mise à jour;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: b12f97a7c5e937a116d86495b3434dd9c0805b04
+source-git-commit: 777a1749670f36abc09e4bacd190b1be17a9a237
 workflow-type: tm+mt
-source-wordcount: '1227'
+source-wordcount: '1349'
 ht-degree: 2%
 
 ---
@@ -15,6 +15,23 @@ ht-degree: 2%
 
 Ce document couvre les notes de mise à jour du SDK Web de Adobe Experience Platform.
 Pour obtenir les dernières notes de mise à jour sur l’extension de balise du SDK Web, reportez-vous à la section [Notes de mise à jour de l’extension de balise SDK Web](extension/web-sdk-ext-release-notes.md).
+
+## Version 2.13.0 - 28 septembre 2022
+
+**Nouvelles fonctionnalités**
+
+* Ajout de la prise en charge de la migration complète page par page. Le profil Adobe Target est désormais conservé lorsqu’un visiteur passe d’une page at.js à une page SDK Web.
+* Ajout de la prise en charge configurable de [Conseils client User-Agent à forte entropie](fundamentals/user-agent-client-hints.md#high-entropy).
+* Ajout de la prise en charge de la nouvelle `applyResponse` . Cela permet une personnalisation hybride via le [API du serveur réseau Edge](../server-api/overview.md).
+* Les liens du mode AQ fonctionnent désormais sur plusieurs pages.
+
+**Correctifs et améliorations**
+
+* Correction d’un problème en raison duquel les mesures de suivi des clics de personnalisation n’étaient pas mises à jour lorsque le suivi des liens était désactivé.
+* Mise à jour des commandes pour générer une erreur de validation lorsque des options inconnues sont spécifiées.
+* Le `_experience.decisioning.propositionEventType` est maintenant renseignée lors de l’envoi automatique d’événements d’affichage et de personnalisation d’interaction.
+* Ajout de la validation d’espace de noms dupliquée pour le `getIdentity` .
+* Ajout de la validation de l’étendue de décision dupliquée pour la variable `sendEvent` .
 
 ## Version 2.12.0 - 29 juin 2022
 
