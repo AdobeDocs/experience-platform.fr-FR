@@ -2,20 +2,19 @@
 keywords: Experience Platform;accueil;rubriques populaires;contrôle d’accès;contrôle d’accès basé sur les attributs;
 title: Guide de bout en bout du contrôle d’accès basé sur les attributs
 description: Ce document fournit un guide de bout en bout sur le contrôle d’accès basé sur les attributs dans Adobe Experience Platform.
-hide: true
-hidefromtoc: true
-source-git-commit: 230bcfdb92c3fbacf2e24e7210d61e2dbe0beb86
+source-git-commit: 0035f4611f2c269bb36f045c3c57e6e7bad7c013
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '2382'
+ht-degree: 5%
 
 ---
 
 # Guide de bout en bout du contrôle d’accès basé sur les attributs
 
-Le contrôle d’accès basé sur les attributs est une fonctionnalité de Adobe Experience Platform qui offre une plus grande flexibilité aux marques soucieuses de la confidentialité pour gérer l’accès des utilisateurs. Les objets individuels tels que les champs de schéma et les segments peuvent être affectés à des rôles utilisateur. Cette fonctionnalité vous permet d’accorder ou de révoquer l’accès à des objets individuels pour des utilisateurs de Platform spécifiques de votre entreprise.
+Le contrôle d’accès basé sur les attributs est une fonctionnalité de Adobe Experience Platform qui offre aux clients multi-marques et soucieux de la confidentialité une plus grande flexibilité pour gérer l’accès des utilisateurs. L’accès à des objets individuels, tels que les champs de schéma et les segments, peut être accordé/refusé avec des stratégies basées sur les attributs et le rôle de l’objet. Cette fonctionnalité vous permet d’accorder ou de révoquer l’accès à des objets individuels pour des utilisateurs de Platform spécifiques de votre entreprise.
 
-Cette fonctionnalité vous permet de classer les champs de schéma, les segments, etc. avec des libellés qui définissent les portées d’utilisation des données ou de l’organisation. Dans Adobe Journey Optimizer, vous pouvez appliquer ces mêmes étiquettes aux parcours et aux offres. En parallèle, les administrateurs peuvent définir des stratégies d’accès concernant les champs de schéma XDM et mieux gérer les utilisateurs ou les groupes (utilisateurs internes, externes ou tiers) pouvant accéder à ces champs.
+Cette fonctionnalité vous permet de classer les champs de schéma, les segments, etc. avec des libellés qui définissent les portées d’utilisation des données ou de l’organisation. Vous pouvez appliquer ces mêmes étiquettes aux parcours, aux offres et aux autres objets de Adobe Journey Optimizer. En parallèle, les administrateurs peuvent définir des stratégies d’accès concernant les champs de schéma XDM et mieux gérer les utilisateurs ou les groupes (utilisateurs internes, externes ou tiers) pouvant accéder à ces champs.
+
 
 ## Prise en main
 
@@ -28,9 +27,9 @@ Ce tutoriel nécessite une connaissance pratique des composants Platform suivant
 
 ### Présentation du cas d’utilisation
 
-Ce guide utilise un exemple de cas pratique de limitation de l’accès aux données sensibles pour démontrer le workflow. Vous accédez à un exemple de workflow de contrôle d’accès basé sur les attributs dans lequel vous allez créer et affecter des rôles, des libellés et des stratégies afin de configurer si vos utilisateurs peuvent ou non accéder à certaines ressources de votre organisation. Ce cas pratique est décrit ci-dessous :
+Vous accédez à un exemple de workflow de contrôle d’accès basé sur les attributs dans lequel vous allez créer et affecter des rôles, des libellés et des stratégies afin de configurer si vos utilisateurs peuvent ou non accéder à des ressources spécifiques de votre organisation. Ce guide utilise un exemple de limitation de l’accès aux données sensibles pour démontrer le workflow. Ce cas pratique est décrit ci-dessous :
 
-Vous êtes un prestataire de santé et vous souhaitez configurer l’accès aux ressources de votre entreprise.
+Vous êtes un prestataire de santé et souhaitez configurer l’accès aux ressources de votre entreprise.
 
 * Votre équipe marketing interne doit pouvoir accéder à **[!UICONTROL PHI/Données d’intégrité réglementées]** data.
 * Votre agence externe ne doit pas pouvoir accéder à **[!UICONTROL PHI/Données d’intégrité réglementées]** data.
@@ -41,17 +40,17 @@ Vous allez :
 
 * [Étiqueter les rôles de vos utilisateurs](#label-roles): Utilisez l’exemple d’un prestataire de santé (ACME Business Group) dont le groupe marketing travaille avec des agences externes.
 * [Étiqueter vos ressources (champs de schéma et segments)](#label-resources): Attribuez le **[!UICONTROL PHI/Données d’intégrité réglementées]** libellé aux ressources de schéma et aux segments.
-* [Créez la stratégie qui les reliera.](#policy): Créez une stratégie pour lier les libellés de vos ressources aux libellés de votre rôle qui refusent l’accès aux champs de schéma et aux segments. Cela refusera l’accès au champ de schéma et au segment dans tous les environnements de test pour les utilisateurs qui n’ont pas de libellés correspondants.
+* [Créez la stratégie qui les reliera.](#policy): Créez une stratégie pour lier les libellés de vos ressources aux libellés de votre rôle, en refusant l’accès aux champs de schéma et aux segments. Cela refusera l’accès au champ de schéma et au segment dans tous les environnements de test pour les utilisateurs qui n’ont pas de libellés correspondants.
 
 ## Autorisations
 
-[!UICONTROL La zone dédiée aux autorisations dans Experience Cloud permet aux administrateurs de définir des rôles d’utilisateur et des stratégies d’accès. Ils peuvent ainsi gérer les autorisations d’accès aux fonctionnalités et objets dans une application de produit.]
+[!UICONTROL Autorisations] est la zone de l’Experience Cloud dans laquelle les administrateurs peuvent définir des rôles utilisateur et des stratégies afin de gérer les autorisations pour les fonctionnalités et les objets au sein d’une application de produit.
 
-Via [!UICONTROL Autorisations], vous pouvez créer et gérer des rôles, ainsi qu’affecter les autorisations de ressources souhaitées pour ces rôles. [!UICONTROL Les autorisations vous permettent également de gérer les libellés, les sandbox et les utilisateurs associés à un rôle spécifique.]
+Via [!UICONTROL Autorisations], vous pouvez créer et gérer des rôles et attribuer les autorisations de ressources souhaitées pour ces rôles. [!UICONTROL Les autorisations vous permettent également de gérer les libellés, les sandbox et les utilisateurs associés à un rôle spécifique.]
 
-Si vous ne disposez pas de droits d’administrateur, contactez votre administrateur système pour obtenir l’accès.
+Contactez votre administrateur système pour obtenir un accès si vous ne disposez pas de droits d’administrateur.
 
-Une fois que vous disposez des droits d’administrateur, accédez à [Adobe Experience Cloud](https://experience.adobe.com/) et connectez-vous à l’aide de vos informations d’identification d’Adobe. Une fois connecté, l’événement **[!UICONTROL Présentation]** s’affiche pour votre organisation pour laquelle vous disposez des droits d’administrateur. Cette page présente les produits auxquels votre organisation est abonnée, ainsi que d’autres contrôles permettant d’ajouter des utilisateurs et des administrateurs à l’organisation dans son ensemble. Sélectionner **[!UICONTROL Autorisations]** pour ouvrir l’espace de travail de votre intégration Platform.
+Une fois que vous disposez des droits d’administrateur, accédez à [Adobe Experience Cloud](https://experience.adobe.com/) et connectez-vous à l’aide de vos informations d’identification d’Adobe. Une fois connecté, l’événement **[!UICONTROL Présentation]** s’affiche pour votre organisation pour laquelle vous disposez des droits d’administrateur. Cette page présente les produits auxquels votre organisation est abonnée, ainsi que d’autres contrôles permettant d’ajouter des utilisateurs et des administrateurs à l’organisation. Sélectionner **[!UICONTROL Autorisations]** pour ouvrir l’espace de travail de votre intégration Platform.
 
 ![Image montrant le produit Autorisations sélectionné dans Adobe Experience Cloud](../images/flac-ui/flac-select-product.png)
 
@@ -62,7 +61,7 @@ L’espace de travail Autorisations de l’interface utilisateur de Platform s�
 >[!CONTEXTUALHELP]
 >id="platform_permissions_labels_about"
 >title="Que sont les étiquettes ?"
->abstract="Les libellés vous permettent de classer les jeux de données et les champs en fonction des stratégies d’utilisation qui s’appliquent à ces données. Platform fournit plusieurs libellés d’utilisation des données &quot;de base&quot; définis par l’Adobe, qui couvrent un large éventail de restrictions courantes applicables à la gouvernance des données. Par exemple, les étiquettes Sensibles &quot;S&quot; telles que RHD (données d’intégrité réglementées) vous permettent de catégoriser les données qui font référence aux informations d’intégrité protégées (PHI). Vous pouvez également définir vos propres étiquettes personnalisées qui répondent aux besoins de votre entreprise."
+>abstract="Les libellés vous permettent de classer les jeux de données et les champs en fonction des stratégies d’utilisation qui s’appliquent à ces données. Platform fournit plusieurs libellés d’utilisation des données &quot;de base&quot; définis par l’Adobe, qui couvrent un large éventail de restrictions courantes applicables à la gouvernance des données. Par exemple, les étiquettes Sensibles &quot;S&quot; telles que RHD (données d’intégrité réglementées) vous permettent de catégoriser les données qui font référence aux informations d’intégrité protégées (PHI). Vous pouvez également définir vos propres étiquettes personnalisées en fonction des besoins de votre entreprise."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=en#understanding-data-usage-labels" text="Présentation des libellés d’utilisation des données"
 
 >[!CONTEXTUALHELP]
@@ -80,7 +79,7 @@ L’espace de travail Autorisations de l’interface utilisateur de Platform s�
 >[!CONTEXTUALHELP]
 >id="platform_permissions_roles_about_create"
 >title="Créer un nouveau rôle"
->abstract="Vous pouvez créer un nouveau rôle pour mieux classer les utilisateurs qui accèdent à votre instance Platform. Par exemple, vous pouvez créer un rôle pour une équipe de marketing interne et appliquer le libellé du RHD à ce rôle, ce qui permettra à votre équipe de marketing interne d’accéder aux informations d’intégrité protégées (PHI). Vous pouvez également créer un rôle pour une agence externe et refuser l’accès à ce rôle aux données d’identification personnelle en n’appliquant pas le libellé du RHD à ce rôle."
+>abstract="Vous pouvez créer un nouveau rôle pour mieux classer les utilisateurs qui accèdent à votre instance Platform. Par exemple, vous pouvez créer un rôle pour une équipe de marketing interne et appliquer l’étiquette RHD à ce rôle, ce qui permet à votre équipe de marketing interne d’accéder aux informations d’intégrité protégées (PHI). Vous pouvez également créer un rôle pour une agence externe et refuser l’accès à ce rôle aux données d’identification personnelle en n’appliquant pas le libellé du RHD à ce rôle."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=en#create-a-new-role" text="Création d’un rôle"
 
 >[!CONTEXTUALHELP]
@@ -102,6 +101,10 @@ Une liste de tous les libellés de votre organisation s’affiche. Sélectionner
 
 ![Image montrant l&#39;étiquette du disque dur en cours de sélection et d&#39;enregistrement](../images/abac-end-to-end-user-guide/abac-select-role-label.png)
 
+>[!NOTE]
+>
+>Lors de l’ajout d’un groupe d’organisation à un rôle, tous les utilisateurs de ce groupe sont ajoutés au rôle . Toute modification apportée au groupe d’organisations (utilisateurs supprimés ou ajoutés) sera automatiquement mise à jour dans le rôle .
+
 ## Application de libellés aux champs de schéma {#label-resources}
 
 Maintenant que vous avez configuré un rôle d’utilisateur avec la fonction [!UICONTROL RHD] , l’étape suivante consiste à ajouter le même libellé aux ressources que vous souhaitez contrôler pour ce rôle.
@@ -110,9 +113,9 @@ Sélectionner **[!UICONTROL Schémas]** dans le volet de navigation de gauche, p
 
 ![Image montrant le schéma ACME Health care sélectionné dans l’onglet Schémas](../images/abac-end-to-end-user-guide/abac-select-schema.png)
 
-Ensuite, sélectionnez **[!UICONTROL Étiquettes]** pour afficher une liste qui affiche les champs associés à votre schéma. À partir de là, vous pouvez attribuer des étiquettes à un ou plusieurs champs à la fois. Sélectionnez la **[!UICONTROL BloodGluglucose]** et **[!UICONTROL InsulinLevel]** puis sélectionnez **[!UICONTROL Modification des étiquettes de gouvernance]**.
+Ensuite, sélectionnez **[!UICONTROL Étiquettes]** pour afficher une liste qui affiche les champs associés à votre schéma. À partir de là, vous pouvez attribuer des étiquettes à un ou plusieurs champs à la fois. Sélectionnez la **[!UICONTROL BloodGluglucose]** et **[!UICONTROL InsulinLevel]** puis sélectionnez **[!UICONTROL Appliquer les étiquettes d’accès et de gouvernance des données]**.
 
-![Image montrant BloodGluglucose et InsulinLevel sélectionnés et les étiquettes de gouvernance de modification sélectionnées](../images/abac-end-to-end-user-guide/abac-select-schema-labels-tab.png)
+![Image montrant la sélection des étiquettes BloodGluglucose et InsulinLevel et l’application des étiquettes d’accès et de gouvernance des données](../images/abac-end-to-end-user-guide/abac-select-schema-labels-tab.png)
 
 Le **[!UICONTROL Modifier les libellés]** s’affiche, vous permettant de choisir les libellés à appliquer aux champs du schéma. Pour ce cas pratique, sélectionnez la variable **[!UICONTROL PHI/Données d’intégrité réglementées]** libellé, puis sélectionnez **[!UICONTROL Enregistrer]**.
 
@@ -150,7 +153,7 @@ Répétez les étapes ci-dessus avec **[!UICONTROL Insuline &lt;50]**.
 >[!CONTEXTUALHELP]
 >id="platform_permissions_policies_about"
 >title="Que sont les politiques ?"
->abstract="Les politiques sont des déclarations qui réunissent des attributs pour établir des actions permises et non admissibles. Chaque organisation s’accompagne d’une stratégie par défaut que vous devez activer afin de définir des règles pour les ressources telles que les segments et les champs de schéma. Les stratégies par défaut ne peuvent pas être modifiées ni supprimées. Toutefois, les stratégies par défaut peuvent être activées ou désactivées."
+>abstract="Les politiques sont des déclarations qui réunissent des attributs pour établir des actions permises et non admissibles. Chaque organisation s’accompagne d’une stratégie par défaut que vous devez activer pour définir des règles pour les ressources telles que les segments et les champs de schéma. Les stratégies par défaut ne peuvent pas être modifiées ni supprimées. Toutefois, les stratégies par défaut peuvent être activées ou désactivées."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=en" text="Gestion des stratégies"
 
 >[!CONTEXTUALHELP]
@@ -162,20 +165,24 @@ Répétez les étapes ci-dessus avec **[!UICONTROL Insuline &lt;50]**.
 >[!CONTEXTUALHELP]
 >id="platform_permissions_policies_edit_permitdeny"
 >title="Configuration des actions autorisées et non autorisées pour une stratégie"
->abstract="A <b>refuser l’accès</b> lorsque les critères sont satisfaits, l’accès des utilisateurs est refusé. Lorsqu’elle est combinée avec <b>Les éléments suivants sont faux :</b> - tous les utilisateurs se verront refuser l’accès à moins qu’ils ne répondent aux critères correspondants définis. Ce type de stratégie vous permet de protéger une ressource sensible et de n’autoriser l’accès qu’aux utilisateurs qui possèdent des libellés correspondants. <br>A <b>autoriser l’accès à</b> La stratégie permet aux utilisateurs d’accéder à lorsque les critères sont remplis. Lorsqu’elle est combinée avec <b>La valeur suivante est vraie :</b> - les utilisateurs auront accès s’ils répondent aux critères correspondants définis. Cela ne nie pas explicitement l’accès aux utilisateurs, mais ajoute un accès aux autorisations. Ce type de stratégie vous permet d’accorder un accès supplémentaire à la ressource, en plus des utilisateurs qui peuvent déjà y avoir accès par le biais d’autorisations de rôle.&quot;</br>
+>abstract="A <b>refuser l’accès</b> lorsque les critères sont satisfaits, l’accès des utilisateurs est refusé. Combiné avec <b>Les éléments suivants sont faux :</b> - tous les utilisateurs se verront refuser l’accès à moins qu’ils ne répondent aux critères correspondants définis. Ce type de stratégie vous permet de protéger une ressource sensible et de n’autoriser l’accès qu’aux utilisateurs avec les libellés correspondants. <br>A <b>autoriser l’accès à</b> La stratégie permet aux utilisateurs d’accéder à lorsque les critères sont remplis. Lorsqu’elle est combinée avec <b>La valeur suivante est vraie :</b> - les utilisateurs auront accès s’ils répondent aux critères correspondants définis. Cela ne nie pas explicitement l’accès aux utilisateurs, mais ajoute un accès aux autorisations. Ce type de stratégie vous permet d’accorder un accès supplémentaire à la ressource, en plus des utilisateurs qui peuvent déjà y avoir accès par le biais d’autorisations de rôle.&quot;</br>
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=en#edit-a-policy" text="Modification d’une stratégie"
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_policies_edit_resource"
 >title="Configuration des autorisations pour une ressource"
->abstract="Une ressource est la ressource ou l’objet auquel un utilisateur peut ou ne peut pas accéder. Les ressources peuvent être des segments ou des schémas. Vous pouvez configurer des autorisations d’écriture, de lecture ou de suppression pour les segments et les champs de schéma."
+>abstract="Une ressource est la ressource ou l’objet auquel un utilisateur peut ou ne peut pas accéder. Les ressources peuvent être des champs de segments ou de schémas. Vous pouvez configurer des autorisations d’écriture, de lecture ou de suppression pour les segments et les champs de schéma."
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_policies_edit_condition"
 >title="Editer les conditions"
->abstract="Appliquez des instructions conditionnelles à votre stratégie pour configurer l’accès des utilisateurs à certaines ressources. Sélectionnez l’option Correspondre à tous pour exiger des utilisateurs qu’ils possèdent les mêmes libellés qu’une ressource pour pouvoir y accéder. Sélectionnez l’option Faire correspondre n’importe lequel pour exiger uniquement que les utilisateurs disposent d’un rôle avec un seul libellé correspondant à une ressource. Les libellés peuvent être définis comme des libellés principaux ou personnalisés, avec des libellés principaux représentant les libellés créés et fournis par des libellés d’Adobe et personnalisés représentant les libellés que vous avez créés pour votre organisation."
+>abstract="Appliquez des instructions conditionnelles à votre stratégie pour configurer l’accès des utilisateurs à certaines ressources. Sélectionnez l’option Correspondre à tous pour exiger des utilisateurs qu’ils disposent des mêmes libellés qu’une ressource pour y avoir accès. Sélectionnez faire correspondre n’importe lequel pour exiger que les utilisateurs aient un rôle avec un seul libellé correspondant à un libellé sur une ressource. Les libellés peuvent être définis comme des libellés principaux ou personnalisés, avec des libellés principaux représentant les libellés créés et fournis par des libellés d’Adobe et personnalisés représentant les libellés que vous avez créés pour votre organisation."
 
 Les stratégies de contrôle d’accès utilisent des étiquettes pour définir les rôles utilisateur ayant accès à des ressources Platform spécifiques. Les stratégies peuvent être locales ou globales et peuvent remplacer d’autres stratégies. Dans cet exemple, l’accès aux champs de schéma et aux segments sera refusé dans tous les environnements de test pour les utilisateurs qui ne disposent pas des libellés correspondants dans le champ de schéma.
+
+>[!NOTE]
+>
+>Une &quot;stratégie de refus&quot; est créée pour accorder l’accès à des ressources sensibles, car le rôle accorde l’autorisation aux sujets. La stratégie écrite dans cet exemple **démentis** vous accédez à si les libellés requis vous manquent.
 
 Pour créer une stratégie de contrôle d’accès, sélectionnez **[!UICONTROL Autorisations]** dans le volet de navigation de gauche, puis sélectionnez **[!UICONTROL Stratégies]**. Ensuite, sélectionnez **[!UICONTROL Création d’une stratégie]**.
 
