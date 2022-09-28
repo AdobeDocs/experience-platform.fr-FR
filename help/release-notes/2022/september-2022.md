@@ -1,9 +1,9 @@
 ---
 title: Notes de mise à jour de Adobe Experience Platform - Septembre 2022
 description: Notes de mise à jour de septembre 2022 pour Adobe Experience Platform.
-source-git-commit: 61b3799a4d8c8b6682babd85b6f50a7e69778553
+source-git-commit: 5f79b10306f74db75b25654ca51969ea69e38299
 workflow-type: tm+mt
-source-wordcount: '2326'
+source-wordcount: '2539'
 ht-degree: 33%
 
 ---
@@ -22,9 +22,11 @@ Mises à jour des fonctionnalités existantes dans Adobe Experience Platform 
 
 - [[!DNL Artificial Intelligence and Machine Learning Services]](#ai-and-ml-services)
 - [Journaux d’audit](#audit-logs)
+- [[!DNL Dashboards]](#dashboards)
 - [Collecte de données](#data-collection)
 - [Modèle de données d’expérience (XDM)](#xdm)
 - [Service d’identités](#identity-service)
+- [Query Service](#query-service)
 - [Sources](#sources)
 
 ## Contrôle d’accès basé sur les attributs {#abac}
@@ -106,7 +108,17 @@ Experience Platform vous permet d’auditer l’activité des utilisateurs pour 
 
 Pour plus d’informations sur les différents types d’événements spécifiques à la ressource suivis par les journaux d’audit dans Platform, reportez-vous à la section [aperçu des journaux d’audit](../../landing/governance-privacy-security/audit-logs/overview.md).
 
-## Collecte de données
+## [!DNL Dashboards] {#dashboards}
+
+Adobe Experience Platform fournit plusieurs tableaux de bord grâce auxquels vous pouvez afficher des informations importantes sur les données de votre entreprise, telles qu’elles sont capturées lors d’instantanés quotidiens.
+
+| Fonctionnalité | Description |
+| --- | --- |
+| Libellé en cours d’utilisation | Lorsqu’il est affiché dans la bibliothèque de widgets, le libellé en cours d’utilisation identifie facilement la présence de widgets existants dans votre tableau de bord. Cela permet d’éviter facilement la duplication bien que vous puissiez ajouter le même widget plusieurs fois si vous le souhaitez. |
+
+Pour plus d’informations sur les [!DNL Dashboards], consultez la [[!DNL Dashboards] présentation](../../dashboards/home.md).
+
+## Collecte de données {#data-collection}
 
 Adobe Experience Platform fournit une suite de technologies qui vous permettent de collecter des données d’expérience client côté client. Vous pouvez ensuite les envoyer à Adobe Experience Platform Edge Network pour les enrichir, les transformer et les distribuer vers des destinations Adobe ou autres qu’Adobe.
 
@@ -178,6 +190,19 @@ Adobe Experience Platform Identity Service vous permet de mieux connaître vos c
 | Prise en charge de la suppression de jeux de données | Identity Service prend désormais en charge la suppression de jeux de données lors de la demande via [API Catalog Service](https://developer.adobe.com/experience-platform-apis/references/catalog/), l’interface utilisateur ou l’hygiène des données. Lisez le guide sur [suppression de jeux de données dans l’interface utilisateur](../../catalog/datasets/user-guide.md#delete-a-dataset) pour plus d’informations. |
 
 Pour en savoir plus sur Identity Service, lisez le [Présentation d’Identity Service](../../identity-service/home.md).
+
+## Query Service {#query-service}
+
+Query Service vous permet d’utiliser le langage SQL standard pour interroger les données dans le [!DNL Data Lake] d’Adobe Experience Platform. Vous pouvez joindre n’importe quel jeu de données à partir du [!DNL Data Lake] et capturer les résultats de la requête sous la forme d’un nouveau jeu de données à utiliser dans les rapports, dans Data Science Workspace ou pour l’ingestion dans Profil client en temps réel.
+
+**Fonctionnalités mises à jour**
+
+| Fonctionnalité | Description |
+| --- | --- |
+| API d’abonnement aux alertes | Adobe Experience Platform Query Service vous permet de vous abonner à des alertes pour les requêtes ad hoc et planifiées. Les alertes peuvent être reçues par courrier électronique, dans l’interface utilisateur de Platform ou les deux. Actuellement, les alertes de requête ne peuvent être abonnées qu’à l’aide de la variable [API Query Service](https://developer.adobe.com/experience-platform-apis/references/query-service/). |
+| Exemples de jeux de données | Les exemples de jeux de données Query Service vous permettent de mener des requêtes exploratoires sur les données volumineuses avec un temps de traitement considérablement réduit, au prix de la précision des requêtes. |
+
+Pour plus d’informations sur les [!DNL Query Service], consultez la [[!DNL Query Service] présentation](../../query-service/home.md).
 
 ## Sources {#sources}
 
