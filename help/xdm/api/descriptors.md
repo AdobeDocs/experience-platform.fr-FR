@@ -5,10 +5,10 @@ title: Point de terminaison de l’API Descripteurs
 description: Le point de terminaison /descriptors de l’API Schema Registry vous permet de gérer par programmation les descripteurs XDM dans votre application d’expérience.
 topic-legacy: developer guide
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: 65a6eca9450b3a3e19805917fb777881c08817a0
+source-git-commit: e8ad829ac4ea89c0d0167e6b414db577c9ecf094
 workflow-type: tm+mt
-source-wordcount: '1839'
-ht-degree: 51%
+source-wordcount: '1900'
+ht-degree: 47%
 
 ---
 
@@ -341,6 +341,10 @@ Les descripteurs de nom convivial permettent à l’utilisateur de modifier la v
     "click": "Mouse Click",
     "addCart": "Add to Cart",
     "checkout": "Cart Checkout"
+  },
+  "xdm:excludeMetaEnum": {
+    "web.formFilledOut": "Web Form Filled Out",
+    "media.ping": "Media ping"
   }
 }
 ```
@@ -350,10 +354,11 @@ Les descripteurs de nom convivial permettent à l’utilisateur de modifier la v
 | `@type` | Le type de descripteur en cours de définition. Pour un descripteur de nom convivial, cette valeur doit être définie sur `xdm:alternateDisplayInfo`. |
 | `xdm:sourceSchema` | L’URI `$id` du schéma dans lequel le descripteur est défini. |
 | `xdm:sourceVersion` | La version principale du schéma source. |
-| `xdm:sourceProperty` | Le chemin vers la propriété spécifique qui sera l’identité. Le chemin doit commencer et non se terminer par un « / ». N’incluez pas « properties » dans le chemin (par exemple, utilisez « /personalEmail/address » au lieu de « /properties/personalEmail/properties/address ») |
+| `xdm:sourceProperty` | Chemin d’accès à la propriété spécifique dont vous souhaitez modifier les détails. Le chemin doit commencer par une barre oblique (`/`) et ne pas se terminer par un. Ne pas inclure `properties` dans le chemin (par exemple, utilisez `/personalEmail/address` au lieu de `/properties/personalEmail/properties/address`). |
 | `xdm:title` | Le nouveau titre que vous souhaitez afficher pour ce champ, écrit en Casse Titre. |
 | `xdm:description` | Vous pouvez ajouter une description facultative avec le titre. |
-| `meta:enum` | Si le champ indiqué par `xdm:sourceProperty` est un champ de chaîne, `meta:enum` détermine la liste des valeurs suggérées pour le champ dans la variable [!DNL Experience Platform] Interface utilisateur. Il est important de noter que `meta:enum` ne déclare pas d’énumération ni ne fournit de validation de données pour le champ XDM.<br><br>Cela ne doit être utilisé que pour les champs XDM principaux définis par Adobe. Si la propriété source est un champ personnalisé défini par votre organisation, vous devez modifier le `meta:enum` par le biais d’une requête de PATCH à la ressource parente du champ. |
+| `meta:enum` | Si le champ indiqué par `xdm:sourceProperty` est un champ de chaîne, `meta:enum` peut être utilisé pour ajouter des valeurs suggérées pour le champ dans l’interface utilisateur de segmentation. Il est important de noter que `meta:enum` ne déclare pas d’énumération ni ne fournit de validation de données pour le champ XDM.<br><br>Cela ne doit être utilisé que pour les champs XDM principaux définis par Adobe. Si la propriété source est un champ personnalisé défini par votre organisation, vous devez modifier le `meta:enum` par le biais d’une requête de PATCH à la ressource parente du champ. |
+| `meta:excludeMetaEnum` | Si le champ indiqué par `xdm:sourceProperty` est un champ de chaîne dont les valeurs suggérées existantes sont fournies sous une `meta:enum` , vous pouvez inclure cet objet dans un descripteur de nom convivial pour exclure certaines ou toutes ces valeurs de la segmentation. La clé et la valeur de chaque entrée doivent correspondre à celles incluses dans l’original. `meta:enum` du champ pour que la saisie soit exclue. |
 
 {style=&quot;table-layout:auto&quot;}
 
