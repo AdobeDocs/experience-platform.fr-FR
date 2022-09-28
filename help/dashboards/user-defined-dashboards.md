@@ -2,18 +2,14 @@
 title: Tableaux de bord définis par l’utilisateur
 description: Découvrez comment créer et gérer des tableaux de bord personnalisés dans lesquels vous pouvez créer, ajouter et modifier des widgets personnalisés pour visualiser des mesures clés.
 exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
-source-git-commit: bb94f7438efe1e24056d6689ffc10b928fc633c2
+source-git-commit: 2c96bfd2c1b541d30a72fcf2bac414ee06607456
 workflow-type: tm+mt
-source-wordcount: '881'
+source-wordcount: '865'
 ht-degree: 0%
 
 ---
 
-# Tableaux de bord définis par l’utilisateur (bêta)
-
->[!IMPORTANT]
->
->La fonctionnalité de tableaux de bord définis par l’utilisateur est en version bêta. Ses fonctionnalités et sa documentation peuvent faire l’objet de modifications.
+# Tableaux de bord définis par l’utilisateur
 
 Les tableaux de bord Adobe Experience Platform vous permettent d’accélérer les insights et de personnaliser la visualisation par le biais de la fonctionnalité de tableaux de bord définis par l’utilisateur. Cette fonctionnalité vous permet de créer et de gérer des tableaux de bord personnalisés dans lesquels vous pouvez créer, ajouter et modifier des widgets personnalisés pour visualiser les mesures clés pertinentes pour votre entreprise.
 

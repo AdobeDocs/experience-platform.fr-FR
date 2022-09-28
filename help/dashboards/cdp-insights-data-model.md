@@ -2,20 +2,16 @@
 title: Modèle de données de connaissance de la plateforme de données clients (CDP)
 description: Découvrez comment utiliser les requêtes SQL des modèles de données de statistiques CDP pour personnaliser vos propres rapports CDP pour vos cas d’utilisation de marketing et de KPI.
 exl-id: 61bc7f23-9f79-4c75-a515-85dd9dda2d02
-source-git-commit: 5009dd0b48090530736c711a34e3bcb8b6cde2b6
+source-git-commit: 2c96bfd2c1b541d30a72fcf2bac414ee06607456
 workflow-type: tm+mt
-source-wordcount: '1084'
+source-wordcount: '1066'
 ht-degree: 0%
 
 ---
 
-# (Version bêta) Modèle de données d’insights de la plateforme de données clients (CDP)
+# Modèle de données de connaissance de la plateforme de données clients (CDP)
 
->[!IMPORTANT]
->
->La fonctionnalité Modèles de données de statistiques CDP est en version bêta. Ses fonctionnalités et sa documentation peuvent faire l’objet de modifications.
-
-La fonction Modèle de données de statistiques de la plateforme de données clients (CDP) expose les modèles de données et SQL qui alimentent les informations pour divers widgets de profil, de destination et de segmentation. Vous pouvez personnaliser ces modèles de requête SQL pour créer des rapports CDP pour vos cas d’utilisation d’indicateurs de performance clés (IPC) et marketing. Ces informations peuvent ensuite être utilisées comme widgets personnalisés pour vos tableaux de bord définis.
+La fonction Modèle de données de statistiques de la plateforme de données clients (CDP) expose les modèles de données et SQL qui alimentent les informations pour divers widgets de profil, de destination et de segmentation. Vous pouvez personnaliser ces modèles de requête SQL pour créer des rapports CDP pour vos cas d’utilisation d’indicateurs de performance clés (IPC) et marketing. Ces informations peuvent ensuite être utilisées comme widgets personnalisés pour vos tableaux de bord définis par l’utilisateur.
 
 ## Conditions préalables
 
@@ -63,7 +59,7 @@ GROUP BY adwh_dim_merge_policies.merge_policy_name;
 
 #### Cas d’utilisation des profils d’identité unique
 
-La logique utilisée pour la variable [!UICONTROL Profils d’identité uniques] Le widget fournit un décompte des profils de votre organisation qui ne comportent qu’un seul type d’ID qui crée leur identité. Voir[[!UICONTROL Profils d’identité uniques] documentation du widget](./guides/profiles.md#single-identity-profiles) pour plus d’informations.
+La logique utilisée pour la variable [!UICONTROL Profils d’identité uniques] Le widget fournit un décompte des profils de votre organisation qui ne disposent que d’un seul type d’ID qui crée leur identité. Voir[[!UICONTROL Profils d’identité uniques] documentation du widget](./guides/profiles.md#single-identity-profiles) pour plus d’informations.
 
 Le SQL qui génère la variable [!UICONTROL Profils d’identité uniques] Le widget est visible dans la section réductible ci-dessous.
 

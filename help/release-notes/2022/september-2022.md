@@ -1,10 +1,10 @@
 ---
 title: Notes de mise à jour de Adobe Experience Platform - Septembre 2022
 description: Notes de mise à jour de septembre 2022 pour Adobe Experience Platform.
-source-git-commit: 8813e423cd62de7932052c1e157f86cc3c4165dd
+source-git-commit: 65743c1741210a87b1cc64406412dd7e58218321
 workflow-type: tm+mt
-source-wordcount: '2754'
-ht-degree: 33%
+source-wordcount: '2979'
+ht-degree: 30%
 
 ---
 
@@ -116,6 +116,9 @@ Adobe Experience Platform fournit plusieurs tableaux de bord grâce auxquels vou
 | Fonctionnalité | Description |
 | --- | --- |
 | Libellé en cours d’utilisation | Lorsqu’il est affiché dans la bibliothèque de widgets, le libellé en cours d’utilisation identifie facilement la présence de widgets existants dans votre tableau de bord. Cela permet d’éviter facilement la duplication bien que vous puissiez ajouter le même widget plusieurs fois si vous le souhaitez. |
+| Tableaux de bord définis par l’utilisateur | Les tableaux de bord définis par l’utilisateur accélèrent les insights et personnalisent les visualisations en vous permettant de créer et de gérer des tableaux de bord personnalisés. Avec les tableaux de bord définis par l’utilisateur, vous pouvez créer, ajouter et modifier des widgets personnalisés pour visualiser les mesures clés pertinentes pour votre entreprise. Lisez le [guide des fonctionnalités](../../dashboards/user-defined-dashboards.md) pour en savoir plus. |
+| Modèle de données de statistiques sur la plateforme de données clients | La fonction Modèle de données de statistiques de la plateforme de données clients (CDP) expose les modèles de données et SQL qui alimentent les informations pour divers widgets de profil, de destination et de segmentation. Vous pouvez personnaliser ces modèles de requête SQL pour créer des rapports CDP pour vos cas d’utilisation d’indicateurs de performance clés et marketing. Ces informations peuvent ensuite être utilisées comme widgets personnalisés pour vos tableaux de bord définis par l’utilisateur. Lisez le [Guide de fonctionnalité du modèle de données de statistiques CDP](../../dashboards/cdp-insights-data-model.md) pour en savoir plus. |
+| Widget de rapport sur le chevauchement des audiences | Ce widget est disponible pour les deux [!UICONTROL Profils] et [!UICONTROL Segments] tableaux de bord. Le rapport fournit une liste ordonnée des audiences classées selon les pourcentages de chevauchement les plus élevés ou les plus bas pour le segment sélectionné. Dans la [!UICONTROL Profils] tableau de bord, vous pouvez filtrer et afficher le chevauchement de vos audiences par stratégie de fusion de tous les segments disponibles. Le [!UICONTROL Segments] Les tableaux de bord vous permettent de filtrer le chevauchement des audiences selon un segment spécifique.<br>Utilisez cette analyse pour créer de nouveaux segments hautement performants et éviter d’envoyer la même audience vers différentes destinations. Le rapport permet également d’identifier les informations masquées afin d’améliorer la segmentation ou de localiser les profils uniques à rechercher. |
 
 Pour plus d’informations sur les [!DNL Dashboards], consultez la [[!DNL Dashboards] présentation](../../dashboards/home.md).
 
