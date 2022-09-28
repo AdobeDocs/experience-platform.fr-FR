@@ -2,10 +2,8 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;service de flux ;
 title: (Version bêta) Création d’une exécution de flux pour l’ingestion à la demande à l’aide de l’API Flow Service
 description: Ce tutoriel décrit les étapes à suivre pour créer une exécution de flux pour l’ingestion à la demande à l’aide de l’API Flow Service.
-hide: true
-hidefromtoc: true
 exl-id: a7b20cd1-bb52-4b0a-aad0-796929555e4a
-source-git-commit: 24f16e315607a1076ff2efef129d9e97040a9500
+source-git-commit: 659f99a47b533bba2a6084bc8e235df2a29a6386
 workflow-type: tm+mt
 source-wordcount: '1147'
 ht-degree: 10%
