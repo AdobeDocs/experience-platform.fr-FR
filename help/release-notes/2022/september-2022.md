@@ -1,9 +1,9 @@
 ---
 title: Notes de mise à jour de Adobe Experience Platform - Septembre 2022
 description: Notes de mise à jour de septembre 2022 pour Adobe Experience Platform.
-source-git-commit: f7092a394e0ad72d38bf8616e54789c7b2f1ab00
+source-git-commit: 8813e423cd62de7932052c1e157f86cc3c4165dd
 workflow-type: tm+mt
-source-wordcount: '2539'
+source-wordcount: '2754'
 ht-degree: 33%
 
 ---
@@ -24,6 +24,7 @@ Mises à jour des fonctionnalités existantes dans Adobe Experience Platform 
 - [Journaux d’audit](#audit-logs)
 - [[!DNL Dashboards]](#dashboards)
 - [Collecte de données](#data-collection)
+- [Destinations](#destinations)
 - [Modèle de données d’expérience (XDM)](#xdm)
 - [Service d’identités](#identity-service)
 - [Query Service](#query-service)
@@ -52,9 +53,9 @@ Adobe Experience Platform offre un ensemble d’outils fiables pour gérer des o
 
 Les fonctionnalités d’hygiène des données de Adobe Experience Platform vous permettent de nettoyer vos données en planifiant l’expiration automatisée des jeux de données et en supprimant par programmation les données des consommateurs par identité.
 
->[!NOTE]
+>[!IMPORTANT]
 >
->Les fonctionnalités de suppression des consommateurs ne sont disponibles que pour les organisations qui ont acheté Adobe Healthcare Shield ou Privacy Shield.
+>Les fonctionnalités d’hygiène des données ne sont disponibles que pour les organisations qui ont acheté Adobe Healthcare Shield ou Privacy Shield.
 
 Pour commencer à utiliser l’hygiène des données, reportez-vous à la documentation suivante :
 
@@ -127,10 +128,39 @@ Adobe Experience Platform fournit une suite de technologies qui vous permetten
 | Fonctionnalité | Description |
 | --- | --- |
 | Intégration de la navigation de gauche dans l’interface utilisateur de Platform | Toutes les fonctionnalités qui étaient auparavant exclusives à l’interface utilisateur de collecte de données (y compris les balises, le transfert d’événement et les flux de données) sont désormais disponibles via la navigation de gauche dans Experience Platform, sous la catégorie **[!UICONTROL Collecte de données]**. Cela évite de basculer entre les interfaces utilisateur lors de l’utilisation des fonctionnalités de collecte de données dans Platform. |
+| Attribution utilisateur dans les balises et le transfert d’événement | Lorsque la liste est disponible [!UICONTROL Propriétés] dans les balises et le transfert d’événement, chaque propriété répertoriée indique désormais à quel moment elle a été mise à jour pour la dernière fois et quel utilisateur a effectué la mise à jour. |
 
 {style=&quot;table-layout:auto&quot;}
 
 Pour plus d’informations sur la collecte de données dans Platform, consultez la [Présentation de la collecte de données](../../collection/home.md).
+
+## [!DNL Destinations] {#destinations}
+
+Les [!DNL Destinations] sont des intégrations préconfigurées à des plateformes de destination qui permettent d’activer facilement des données provenant d’Adobe Experience Platform. Vous pouvez utiliser les destinations pour activer vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
+
+**Fonctionnalités nouvelles ou mises à jour**
+
+| Fonctionnalité | Description |
+| ----------- | ----------- |
+| Destination SDK | Destination SDK offre désormais une prise en charge complète des partenaires et des clients qui créent des destinations (ou fichiers) productisées ou privées par lots. Pour plus d’informations, consultez les pages de documentation suivantes : <ul><li>[Présentation de la Destination SDK](/help/destinations/destination-sdk/overview.md)</li><li>[Configuration d’une destination basée sur des fichiers](/help/destinations/destination-sdk/configure-file-based-destination-instructions.md)</li><li>[Configuration des options de formatage de fichier pour les destinations basées sur des fichiers](/help/destinations/destination-sdk/configure-file-based-destination-instructions.md)</li><li>[Test de vos destinations basées sur des fichiers](/help/destinations/destination-sdk/file-based-destination-testing-overview.md)</li></ul> |
+
+{style=&quot;table-layout:auto&quot;}
+
+**Destinations nouvelles ou mises à jour**
+
+| Destination | Description |
+| ----------- | ----------- |
+| [[!DNL Salesforce CRM]](../..//destinations/catalog/crm/salesforce.md) | Le [!DNL Salesforce CRM] La destination a été mise à jour afin de prendre en charge les mises à jour des contacts et des prospects, ainsi que des améliorations des performances pour des mises à jour plus rapides. |
+
+{style=&quot;table-layout:auto&quot;}
+
+**Documentation nouvelle ou mise à jour**
+
+| Documentation | Description |
+| ----------- | ----------- |
+| Documentation de l’API du service de flux de destinations | Le [Documentation de référence de l’API Destinations](https://developer.adobe.com/experience-platform-apis/references/destinations/) a été mis à jour afin d’inclure des conseils sur la manière d’effectuer des opérations sur des destinations basées sur des fichiers. Les opérations pour les destinations de diffusion en continu seront ajoutées ultérieurement. |
+
+Pour des informations plus générales sur les destinations, consultez la [présentation des destinations](../../destinations/home.md).
 
 ## Modèle de données d’expérience (XDM) {#xdm}
 
