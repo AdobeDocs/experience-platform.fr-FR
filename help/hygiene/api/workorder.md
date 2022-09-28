@@ -2,12 +2,10 @@
 title: Point d’entrée de l’API de l’ordre de travail
 description: Le point d’entrée /workorder de l’API Data Hygiene vous permet de gérer par programmation les tâches de suppression des identités des clients.
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
-hide: true
-hidefromtoc: true
-source-git-commit: 7f1e4bdf54314cab1f69619bcbb34216da94b17e
+source-git-commit: fb9d226a4ea2d23ccbf61416e275a0de5025554f
 workflow-type: tm+mt
-source-wordcount: '998'
-ht-degree: 100%
+source-wordcount: '985'
+ht-degree: 49%
 
 ---
 
@@ -15,15 +13,15 @@ ht-degree: 100%
 
 >[!IMPORTANT]
 >
->Actuellement, les fonctionnalités de nettoyage de données d’Adobe Experience Platform sont uniquement disponibles pour les organisations qui ont acheté Healthcare Shield.
+>Actuellement, les demandes de suppression des consommateurs ne sont disponibles que pour les organisations qui ont acheté Adobe Healthcare Shield ou Privacy Shield.
 
-Le point d’entrée `/workorder` de l’API Data Hygiene vous permet de gérer par programmation les tâches de suppression des identités des clients dans Adobe Experience Platform.
+Le `/workorder` Dans l’API Data Hygiene, le point de terminaison permet de gérer par programmation les requêtes de suppression des consommateurs dans Adobe Experience Platform.
 
 ## Prise en main
 
 Le point d’entrée utilisé dans ce guide fait partie de lʼAPI Data Hygiene. Avant de continuer, consultez la [présentation](./overview.md) pour obtenir des liens vers la documentation associée, un guide de lecture des exemples d’appels API dans ce document et des informations importantes sur les en-têtes requis pour réussir des appels vers n’importe quelle API d’Experience Platform.
 
-## Supprimer des identités {#delete-identities}
+## Création d’une requête de suppression de consommateur {#delete-consumers}
 
 Vous pouvez supprimer une ou plusieurs identités de clients d’un seul jeu de données ou de tous les jeux de données en effectuant une requête POST au point d’entrée `/workorder`.
 
@@ -48,6 +46,8 @@ curl -X POST \
   -d '{
         "action": "delete_identity",
         "datasetId": "c48b51623ec641a2949d339bad69cb15",
+        "displayName": "Example Consumer Delete Request",
+        "description": "Cleanup identities required by Jira request 12345.",
         "identities": [
           {
             "namespace": {
@@ -73,132 +73,51 @@ curl -X POST \
 
 | Propriété | Description |
 | --- | --- |
-| `action` | L’action à effectuer. La valeur doit être définie sur `delete_identity` lors de la suppression des identités. |
+| `action` | L’action à effectuer. La valeur doit être définie sur `delete_identity` pour les suppressions de consommateurs. |
 | `datasetId` | Si vous effectuez une suppression dans un seul jeu de données, cette valeur doit correspondre à l’identifiant du jeu de données en question. Si vous effectuez une suppression dans tous les jeux de données, définissez la valeur sur `ALL`.<br><br>Si vous spécifiez un seul jeu de données, une identité principale doit être définie pour le schéma de modèle de données d’expérience (XDM) associé au jeu de données. |
+| `displayName` | Nom d’affichage de la requête de suppression du consommateur. |
+| `description` | Description de la requête de suppression du client. |
 | `identities` | Un tableau contenant les identités d’au moins un utilisateur dont vous souhaitez supprimer les informations. Chaque identité se compose d’un [espace de noms d’identité](../../identity-service/namespaces.md) et d’une valeur :<ul><li>`namespace` : contient une seule propriété de chaîne, `code`, qui représente l’espace de noms d’identité. </li><li>`id` : la valeur de l’identité.</ul>Si `datasetId` spécifie un seul jeu de données, chaque entité sous `identities` doit utiliser le même espace de noms d’identité que l’identité principale du schéma.<br><br>Si `datasetId` est défini sur `ALL`, le tableau `identities` n’est limité à aucun espace de noms unique, car chaque jeu de données peut être différent. Toutefois, les requêtes sont toujours limitées aux espaces de noms disponibles pour l’organisation, comme indiqué par le [service d’identités](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces). |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Réponse**
 
-Une réponse réussie renvoie les détails de la suppression d’identité.
+Une réponse réussie renvoie les détails de la suppression du client.
 
 ```json
 {
   "workorderId": "a15345b8-a2d6-4d6f-b33c-5b593e86439a",
   "orgId": "{ORG_ID}",
-  "batchId": "fc0cf8af-a176-4107-a31a-381d6af38cbe",
-  "bundleOrdinal": 1,
-  "payloadByteSize": 362,
-  "operationCount": 3,
-  "createdAt": 1652122493242,
-  "responseMessage": "received",
+  "bundleId": "BN-35c1676c-3b4f-4195-8d6c-7cf5aa21efdd",
+  "action": "identity-delete",
+  "createdAt": "2022-07-21T18:05:28.316029Z",
+  "updatedAt": "2022-07-21T17:59:43.217801Z",
   "status": "received",
-  "createdBy": "{USER_ID}"
+  "createdBy": "{USER_ID}",
+  "datasetId": "c48b51623ec641a2949d339bad69cb15",
+  "displayName": "Example Consumer Delete Request",
+  "description": "Cleanup identities required by Jira request 12345."
 }
 ```
 
 | Propriété | Description |
 | --- | --- |
 | `workorderId` | L’identifiant de l’ordre de suppression. Vous pouvez l’utiliser pour rechercher le statut de la suppression ultérieurement. |
-| `orgId` | L’identifiant de l’organisation. |
-| `batchId` | L’identifiant du lot auquel cet ordre de suppression est associé, utilisé à des fins de débogage. Plusieurs ordres de suppression sont regroupés dans un lot pour être traités par les services en aval. |
-| `bundleOrdinal` | L’ordre dans lequel cet ordre de suppression a été reçu lorsqu’il a été regroupé dans un lot pour un traitement en aval. Utilisé à des fins de débogage. |
-| `payloadByteSize` | La taille, en octets, de la liste des identités fournies dans le payload de requête à l’origine de cet ordre de suppression. |
-| `operationCount` | Le nombre d’identités auxquelles s’applique cet ordre de suppression. |
+| `orgId` | ID d’organisation. |
+| `bundleId` | L’identifiant du lot auquel cet ordre de suppression est associé, utilisé à des fins de débogage. Plusieurs commandes de suppression sont regroupées pour être traitées par des services en aval. |
+| `action` | L’action effectuée par l’ordre de travail. Pour les suppressions par le client, la valeur est `identity-delete`. |
 | `createdAt` | La date et l’heure de création de l’ordre de suppression. |
-| `responseMessage` | La dernière réponse renvoyée par le système. Si une erreur se produit lors du traitement, cette valeur est une chaîne JSON contenant des informations détaillées sur les erreurs afin de vous aider à comprendre ce qui s’est passé. |
+| `updatedAt` | Horodatage de la dernière mise à jour de la commande de suppression. |
 | `status` | Le statut actuel de l’ordre de suppression. |
 | `createdBy` | L’utilisateur qui a créé l’ordre de suppression. |
+| `datasetId` | Identifiant du jeu de données sujet à la requête. Si la requête concerne tous les jeux de données, la valeur est définie sur `ALL`. |
 
 {style=&quot;table-layout:auto&quot;}
 
-## Répertorier les statuts de toutes les suppressions d’identité {#list}
+## Récupération de l’état d’une suppression de consommateur (#lookup)
 
-Vous pouvez répertorier les statuts de toutes les suppressions d’identité en effectuant une requête GET.
-
-**Format d’API**
-
-```http
-GET /workorder?{QUERY_PARAMS}
-```
-
-| Paramètre | Description |
-| --- | --- |
-| `{QUERY_PARAMS}` | Une liste des paramètres de requête facultatifs pour l’appel de liste, avec plusieurs paramètres séparés par des caractères `&`. Les paramètres de requête acceptés sont les suivants :<ul><li>`data` : une valeur booléenne qui, lorsqu’elle est définie sur `true`, comprend toutes les données de requête et de réponse supplémentaires reçues pour l’ordre de suppression. La valeur par défaut est `false`.</li><li>`start` : date et heure de début du délai de recherche des ordres de suppression.</li><li>`end` : date et heure de fin du délai de recherche des ordres de suppression.</li><li>`page` : la page de réponse spécifique à renvoyer.</li><li>`limit` : le nombre d’enregistrements à afficher par page.</li></ul> |
-
-{style=&quot;table-layout:auto&quot;}
-
-**Requête**
-
-```shell
-curl -X GET \
-  https://platform.adobe.io/data/core/hygiene/workorder \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**Réponse**
-
-Une réponse réussie renvoie les détails de toutes les opérations de suppression, y compris leur statut actuel. La réponse ci-dessous a été réduite pour gagner de l’espace.
-
-```json
-{
-  "results": [
-    {
-      "workorderId": "4fe4be4f-47f3-477a-927e-f908452513f6",
-      "orgId": "{ORG_ID}",
-      "batchId": "e62cd6b6-ce3e-49e0-9221-ba1f286a851c",
-      "bundleOrdinal": 1,
-      "payloadByteSize": 164,
-      "operationCount": 1,
-      "createdAt": 1650929265295,
-      "responseMessage": "received",
-      "status": "received",
-      "createdBy": "{USER_ID}"
-    },
-    {
-      "workorderId": "e4a662e8-a5f3-497d-8d6a-d26970d8732b",
-      "orgId": "{ORG_ID}",
-      "batchId": "74fe4e38-ed42-4ca5-8bee-88bdc03ae786",
-      "bundleOrdinal": 1,
-      "payloadByteSize": 164,
-      "operationCount": 1,
-      "createdAt": 1650931057899,
-      "responseMessage": "received",
-      "status": "received",
-      "createdBy": "{USER_ID}"
-    }
-  ],
-  "total": 200,
-  "count": 50,
-  "_links": {
-    "next": {
-      "href": "https://platform.adobe.io/workorder?page=1&limit=50",
-      "templated": false
-    },
-    "page": {
-      "href": "https://platform.adobe.io/workorder?limit={limit}&page={page}",
-      "templated": true
-    }
-  }
-}
-```
-
-| Propriété | Description |
-| --- | --- |
-| `results` | Contient la liste des ordres de suppression et les détails. Pour plus d’informations sur les propriétés d’un ordre de suppression, consultez l’exemple de réponse dans la section sur la [recherche d’un ordre de suppression](#lookup). |
-| `total` | Le nombre total d’ordres de suppression trouvés en fonction des filtres actuels. |
-| `count` | Le nombre total d’ordres de suppression trouvés sur chaque page de la réponse. |
-| `_links` | Contient des informations de pagination vous permettant de découvrir le reste de la réponse :<ul><li>`next` : contient l’URL de la page suivante dans la réponse.</li><li>`page` : contient un modèle d’URL pour accéder à une autre page de la réponse ou ajuster le nombre d’éléments renvoyés sur chaque page.</li></ul> |
-
-{style=&quot;table-layout:auto&quot;}
-
-## Récupérer le statut d’une suppression d’identité (#lookup)
-
-Après avoir envoyé une requête pour [supprimer une identité](#delete-identities), vous pouvez vérifier son statut à l’aide d’une requête GET.
+Après [création d’une requête de suppression client](#delete-consumers), vous pouvez vérifier son état à l’aide d’une requête de GET.
 
 **Format d’API**
 
@@ -208,7 +127,7 @@ GET /workorder/{WORK_ORDER_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{WORK_ORDER_ID}` | Le `workorderId` de la suppression d’identité que vous recherchez. |
+| `{WORK_ORDER_ID}` | Le `workorderId` de l’utilisateur que vous recherchez. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -216,7 +135,7 @@ GET /workorder/{WORK_ORDER_ID}
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/core/hygiene/workorder/ID6c28e2d2d2b54079aadf7be94568f6d3 \
+  https://platform.adobe.io/data/core/hygiene/workorder/BN-35c1676c-3b4f-4195-8d6c-7cf5aa21efdd \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -229,28 +148,136 @@ Une réponse réussie renvoie les détails de l’opération de suppression, y c
 
 ```json
 {
-  "workorderId": "4fe4be4f-47f3-477a-927e-f908452513f6",
+  "workorderId": "a15345b8-a2d6-4d6f-b33c-5b593e86439a",
   "orgId": "{ORG_ID}",
-  "batchId": "e62cd6b6-ce3e-49e0-9221-ba1f286a851c",
-  "bundleOrdinal": 1,
-  "payloadByteSize": 164,
-  "operationCount": 1,
-  "createdAt": 1650929265295,
-  "responseMessage": "received",
+  "bundleId": "BN-35c1676c-3b4f-4195-8d6c-7cf5aa21efdd",
+  "action": "identity-delete",
+  "createdAt": "2022-07-21T18:05:28.316029Z",
+  "updatedAt": "2022-07-21T17:59:43.217801Z",
   "status": "received",
-  "createdBy": "{USER_ID}"
+  "createdBy": "{USER_ID}",
+  "datasetId": "c48b51623ec641a2949d339bad69cb15",
+  "displayName": "Example Consumer Delete Request",
+  "description": "Cleanup identities required by Jira request 12345.",
+  "productStatusDetails": [
+    {
+        "productName": "Data Management",
+        "productStatus": "success",
+        "createdAt": "2022-08-08T16:51:31.535872Z"
+    },
+    {
+        "productName": "Identity Service",
+        "productStatus": "success",
+        "createdAt": "2022-08-08T16:43:46.331150Z"
+    },
+    {
+        "productName": "Profile Service",
+        "productStatus": "waiting",
+        "createdAt": "2022-08-08T16:37:13.443481Z"
+    }
+  ]
 }
 ```
 
 | Propriété | Description |
 | --- | --- |
 | `workorderId` | L’identifiant de l’ordre de suppression. Vous pouvez l’utiliser pour rechercher le statut de la suppression ultérieurement. |
-| `orgId` | L’identifiant de l’organisation. |
-| `batchId` | L’identifiant du lot auquel cet ordre de suppression est associé, utilisé à des fins de débogage. Plusieurs ordres de suppression sont regroupés dans un lot pour être traités par les services en aval. |
-| `bundleOrdinal` | L’ordre dans lequel cet ordre de suppression a été reçu lorsqu’il a été regroupé dans un lot pour un traitement en aval. Utilisé à des fins de débogage. |
-| `payloadByteSize` | La taille, en octets, de la liste des identités fournies dans le payload de requête à l’origine de cet ordre de suppression. |
-| `operationCount` | Le nombre d’identités auxquelles s’applique cet ordre de suppression. |
+| `orgId` | ID d’organisation. |
+| `bundleId` | L’identifiant du lot auquel cet ordre de suppression est associé, utilisé à des fins de débogage. Plusieurs commandes de suppression sont regroupées pour être traitées par des services en aval. |
+| `action` | L’action effectuée par l’ordre de travail. Pour les suppressions par le client, la valeur est `identity-delete`. |
 | `createdAt` | La date et l’heure de création de l’ordre de suppression. |
-| `responseMessage` | La dernière réponse renvoyée par le système. Si une erreur se produit lors du traitement, cette valeur est une chaîne JSON contenant des informations détaillées sur les erreurs afin de vous aider à comprendre ce qui s’est passé. |
+| `updatedAt` | Horodatage de la dernière mise à jour de la commande de suppression. |
 | `status` | Le statut actuel de l’ordre de suppression. |
 | `createdBy` | L’utilisateur qui a créé l’ordre de suppression. |
+| `datasetId` | Identifiant du jeu de données sujet à la requête. Si la requête concerne tous les jeux de données, la valeur est définie sur `ALL`. |
+| `productStatusDetails` | Tableau qui répertorie l’état actuel des processus en aval liés à la requête. Chaque objet de tableau contient les propriétés suivantes :<ul><li>`productName`: Nom du service en aval.</li><li>`productStatus`: État actuel du traitement de la requête du service en aval.</li><li>`createdAt`: Horodatage indiquant le moment où le statut le plus récent a été publié par le service.</li></ul> |
+
+## Mettre à jour une requête de suppression d’un client
+
+Vous pouvez mettre à jour la variable `displayName` et `description` pour un client, supprimez en effectuant une requête de PUT.
+
+**Format d’API**
+
+```http
+PUT /workorder{WORK_ORDER_ID}
+```
+
+| Paramètre | Description |
+| --- | --- |
+| `{WORK_ORDER_ID}` | Le `workorderId` de l’utilisateur que vous recherchez. |
+
+{style=&quot;table-layout:auto&quot;}
+
+**Requête**
+
+```shell
+curl -X GET \
+  https://platform.adobe.io/data/core/hygiene/workorder/BN-35c1676c-3b4f-4195-8d6c-7cf5aa21efdd \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -d '{
+        "displayName" : "Update - displayName",
+        "description" : "Update - description"
+      }'
+```
+
+| Propriété | Description |
+| --- | --- |
+| `displayName` | Nom d’affichage mis à jour pour la requête de suppression du consommateur. |
+| `description` | Description mise à jour de la requête de suppression du client. |
+
+{style=&quot;table-layout:auto&quot;}
+
+**Réponse**
+
+Une réponse réussie renvoie les détails de la suppression du client.
+
+```json
+{
+  "workorderId": "a15345b8-a2d6-4d6f-b33c-5b593e86439a",
+  "orgId": "{ORG_ID}",
+  "bundleId": "BN-35c1676c-3b4f-4195-8d6c-7cf5aa21efdd",
+  "action": "identity-delete",
+  "createdAt": "2022-07-21T18:05:28.316029Z",
+  "updatedAt": "2022-07-21T17:59:43.217801Z",
+  "status": "received",
+  "createdBy": "{USER_ID}",
+  "datasetId": "c48b51623ec641a2949d339bad69cb15",
+  "displayName" : "Update - displayName",
+  "description" : "Update - description",
+  "productStatusDetails": [
+    {
+        "productName": "Data Management",
+        "productStatus": "success",
+        "createdAt": "2022-08-08T16:51:31.535872Z"
+    },
+    {
+        "productName": "Identity Service",
+        "productStatus": "success",
+        "createdAt": "2022-08-08T16:43:46.331150Z"
+    },
+    {
+        "productName": "Profile Service",
+        "productStatus": "waiting",
+        "createdAt": "2022-08-08T16:37:13.443481Z"
+    }
+  ]
+}
+```
+
+| Propriété | Description |
+| --- | --- |
+| `workorderId` | L’identifiant de l’ordre de suppression. Vous pouvez l’utiliser pour rechercher le statut de la suppression ultérieurement. |
+| `orgId` | ID d’organisation. |
+| `bundleId` | L’identifiant du lot auquel cet ordre de suppression est associé, utilisé à des fins de débogage. Plusieurs commandes de suppression sont regroupées pour être traitées par des services en aval. |
+| `action` | L’action effectuée par l’ordre de travail. Pour les suppressions par le client, la valeur est `identity-delete`. |
+| `createdAt` | La date et l’heure de création de l’ordre de suppression. |
+| `updatedAt` | Horodatage de la dernière mise à jour de la commande de suppression. |
+| `status` | Le statut actuel de l’ordre de suppression. |
+| `createdBy` | L’utilisateur qui a créé l’ordre de suppression. |
+| `datasetId` | Identifiant du jeu de données sujet à la requête. Si la requête concerne tous les jeux de données, la valeur est définie sur `ALL`. |
+| `productStatusDetails` | Tableau qui répertorie l’état actuel des processus en aval liés à la requête. Chaque objet de tableau contient les propriétés suivantes :<ul><li>`productName`: Nom du service en aval.</li><li>`productStatus`: État actuel du traitement de la requête du service en aval.</li><li>`createdAt`: Horodatage indiquant le moment où le statut le plus récent a été publié par le service.</li></ul> |
+
+{style=&quot;table-layout:auto&quot;}

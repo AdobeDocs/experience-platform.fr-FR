@@ -4,10 +4,10 @@ user-guide-title: Aide du nettoyage de données
 breadcrumb-title: Guide de nettoyage de données
 user-guide-description: Gérez les demandes de données des clients afin de respecter les réglementations légales en matière de confidentialité, telles que le RGPD et le CCPA.
 feature: Data Hygiene
-source-git-commit: c5a09a01ed9cc180ea5623af6f2c9f176a8334dc
+source-git-commit: 16eecb22a1bec89c7dbac2fcee566a2226cf897f
 workflow-type: tm+mt
-source-wordcount: '49'
-ht-degree: 97%
+source-wordcount: '48'
+ht-degree: 93%
 
 ---
 
@@ -23,5 +23,5 @@ ht-degree: 97%
 * API Data Hygiene {#api}
    * [Présentation](./api/overview.md)
    * [Expirations de jeux de données](./api/dataset-expiration.md)
-   * [Tâches de suppression de consommateurs](./api/workorder.md)
+   * [Suppressions des consommateurs](./api/workorder.md)
    * [Quota](./api/quota.md)

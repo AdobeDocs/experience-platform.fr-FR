@@ -4,10 +4,10 @@ description: Découvrez comment corriger ou supprimer par programmation les donn
 hide: true
 hidefromtoc: true
 exl-id: d80a4be3-e072-4bb4-a56d-b34a20f88c78
-source-git-commit: c0d51d33d1e9d49d43f732925f2a794b5afea03b
+source-git-commit: c2ff0d5806e57f230b937e8754d40031fb4b2305
 workflow-type: tm+mt
-source-wordcount: '505'
-ht-degree: 100%
+source-wordcount: '504'
+ht-degree: 96%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 100%
 
 >[!IMPORTANT]
 >
->L’API Data Hygiene est actuellement en version bêta. Les fonctionnalités décrites dans ce document peuvent faire l’objet de modifications.
+>Ce point de terminaison représente la fonctionnalité bêta pour les suppressions de consommateurs. Pour connaître les dernières fonctionnalités, veuillez utiliser la variable [`/workorder` endpoint](./workorder.md) au lieu de .
 
 L’API Data Hygiene vous permet de corriger ou de supprimer par programmation les données personnelles de vos clients stockées dans Adobe Experience Platform.
 

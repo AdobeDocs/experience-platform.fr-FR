@@ -2,10 +2,10 @@
 title: Guide de l’API Data Hygiene
 description: Découvrez comment corriger ou supprimer par programmation les données personnelles des clients stockées dans Adobe Experience Platform.
 exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
-source-git-commit: 724852c63886ea8761b177c4351cca8a6fe748c3
+source-git-commit: 16eecb22a1bec89c7dbac2fcee566a2226cf897f
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '415'
+ht-degree: 73%
 
 ---
 
@@ -39,13 +39,17 @@ Toutes les requêtes contenant un payload (POST, PUT, PATCH) requièrent un en-t
 
 Ce document fournit un exemple d’appel API pour illustrer la manière dont vous devez formater vos requêtes. Pour en savoir plus sur les conventions utilisées dans la documentation pour les exemples d’appels API, consultez la section relative à la [lecture d’exemples d’appels API](../../landing/api-guide.md#sample-api) dans le guide de prise en main des API d’Experience Platform.
 
-<!-- ## Work orders
-
-A work order is a representation of a data hygiene task that deletes consumer identities from a specific dataset or all datasets. See the [work order endpoint guide](./workorder.md) for details on working with work orders in the API. -->
-
 ## Expirations de jeux de données
 
 Une expiration de jeu de données correspond à une action « supprimer un jeu de données » différée. En créant une expiration de jeu de données, vous spécifiez une heure ultérieure à laquelle ce jeu de données doit être supprimé. Consultez le [Guide de point d’entrée d’expiration de jeux de données](./dataset-expiration.md) pour plus d’informations sur la planification des expirations de jeux de données dans l’API.
+
+## Suppressions des consommateurs
+
+>[!NOTE]
+>
+>Les suppressions des consommateurs ne sont disponibles que pour les organisations qui ont acheté Adobe Healthcare Shield ou Privacy Sheild.
+
+L’API Data Hygiene vous permet de supprimer tous les enregistrements associés à une identité de consommateur dans un ou tous les jeux de données. Toutes les tâches d’hygiène des données qui suppriment les identités des consommateurs sont représentées par un concept appelé ordre de travail. Voir [guide de point de terminaison des commandes de travail](./workorder.md) pour plus d’informations sur l’utilisation des suppressions de consommateurs dans l’API, voir .
 
 ## Quota
 
