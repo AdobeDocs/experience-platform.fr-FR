@@ -3,10 +3,10 @@ keywords: Experience Platform;accueil;rubriques populaires;contrôle d’accès;
 title: Présentation du contrôle d’accès basé sur les attributs
 description: Ce document fournit des informations sur le contrôle d’accès basé sur les attributs dans Adobe Experience Platform.
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
-source-git-commit: 6156d84cfdd33f8fe491e9a80e3711cf304733e9
+source-git-commit: 981d604770fbc2e979346146845ad7bc80805356
 workflow-type: tm+mt
-source-wordcount: '1576'
-ht-degree: 38%
+source-wordcount: '1583'
+ht-degree: 36%
 
 ---
 
@@ -20,7 +20,7 @@ Le contrôle d’accès basé sur les attributs est une fonctionnalité d’Adob
 
 Cette fonctionnalité vous permet d’étiqueter les champs de schéma du modèle de données d’expérience (XDM) avec des libellés qui définissent les portées d’utilisation des données ou de l’organisation. En parallèle, les administrateurs peuvent utiliser l’interface d’administration des utilisateurs et des rôles pour définir des stratégies d’accès autour des champs de schéma XDM et mieux gérer l’accès attribué aux utilisateurs ou groupes d’utilisateurs (utilisateurs internes, externes ou tiers). Enfin, le contrôle d’accès basé sur les attributs permet aux administrateurs de gérer l’accès à des segments spécifiques.
 
-Grâce au contrôle d’accès basé sur les attributs, les administrateurs de votre organisation peuvent contrôler l’accès des utilisateurs aux données personnelles sensibles (SPD) et aux informations d’identification personnelle (PII) sur l’ensemble des workflows et ressources de Platform. Les administrateurs peuvent définir des rôles d’utilisateur qui n’ont accès qu’à des champs spécifiques et aux données correspondant à ces champs.
+Grâce au contrôle d’accès basé sur les attributs, les administrateurs de votre organisation peuvent contrôler l’accès des utilisateurs aux données personnelles sensibles (SPD), aux informations d’identification personnelle (PII) et au type de données personnalisé dans tous les workflows et ressources Platform. Les administrateurs peuvent définir des rôles d’utilisateur qui n’ont accès qu’à des champs spécifiques et aux données correspondant à ces champs.
 
 ## Terminologie du contrôle d’accès en fonction des attributs
 
@@ -33,8 +33,8 @@ Le contrôle d’accès basé sur les attributs implique les composants suivants
 | Autorisations | Les autorisations incluent la possibilité d’afficher ou d’utiliser les fonctionnalités  Platform, telles que la création d’environnements de test, la définition de schémas et la gestion des jeux de données. |
 | Jeux d’autorisations | Les jeux d’autorisations représentent un groupe d’autorisations qu’un administrateur peut appliquer à un rôle. Un administrateur peut attribuer des jeux d’autorisations à un rôle au lieu d’affecter des autorisations individuelles. Vous pouvez ainsi créer des rôles personnalisés à partir d’un rôle prédéfini contenant un groupe d’autorisations. |
 | Stratégies | Les politiques sont des déclarations qui réunissent des attributs pour établir des actions permises et non admissibles. Les stratégies peuvent être locales ou globales et peuvent remplacer d’autres stratégies. |
-| Ressource | Une ressource est la ressource ou l’objet auquel un sujet peut ou ne peut pas accéder. Les ressources peuvent être des fichiers, des applications, des serveurs ou même des API. |
-| Rôles | Les rôles définissent l’accès dont dispose un administrateur, un spécialiste ou un utilisateur final aux ressources de votre entreprise. Dans un environnement de contrôle d’accès basé sur les rôles, la configuration de l’accès des utilisateurs est regroupée par le biais de responsabilités et de besoins communs. Un rôle possède un ensemble donné d’autorisations et les membres de votre organisation peuvent être affectés à un ou plusieurs rôles, selon la portée de l’accès en lecture ou en écriture dont ils ont besoin. |
+| Ressource | Une ressource est la ressource ou l’objet auquel un sujet peut ou ne peut pas accéder. Les ressources peuvent être des segments ou des champs de schéma. |
+| Rôles | Les rôles sont des moyens de catégoriser les types d’utilisateurs qui interagissent avec votre instance Platform et sont des blocs élémentaires des stratégies de contrôle d’accès. Dans un environnement de contrôle d’accès basé sur les rôles, la configuration de l’accès des utilisateurs est regroupée par le biais de responsabilités et de besoins communs. Un rôle possède un ensemble donné d’autorisations et les membres de votre organisation peuvent être affectés à un ou plusieurs rôles, selon la portée de l’accès en lecture ou en écriture dont ils ont besoin. |
 | Objet | Un objet est l’utilisateur qui demande l’accès à une ressource pour effectuer une action. |
 | Groupes d’utilisateurs | Les groupes d’utilisateurs sont plusieurs utilisateurs qui ont été regroupés et qui ont l’accès pour exécuter les mêmes fonctions. |
 

@@ -5,10 +5,10 @@ title: Présentation des connecteurs source
 topic-legacy: overview
 description: Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous permettant de structurer, de libeller et d’améliorer les données entrantes à l’aide des services de Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, des bases de données, etc.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: b732fa1f4afb71e7b8c3276335b371d0f8ef888d
+source-git-commit: 552d8412067503847a6c9e4ffcf1aa18710dfbdd
 workflow-type: tm+mt
-source-wordcount: '1024'
-ht-degree: 100%
+source-wordcount: '1094'
+ht-degree: 91%
 
 ---
 
@@ -169,7 +169,15 @@ Le tableau suivant décrit le comportement de l’interface utilisateur en fonct
 | **[!UICONTROL Gérer les sources]** activée | Outre les fonctions incluses dans **[!UICONTROL Afficher les sources]**, elle accorde un accès à l’option **[!UICONTROL Connecter une source]** dans **[!UICONTROL Catalogue]** et l’option **[!UICONTROL Sélectionner les données]** dans **[!UICONTROL Parcourir]**. **[!UICONTROL Gérer les sources]** vous permet également d’activer ou de désactiver **[!UICONTROL les flux de données]** et de modifier leurs planifications. |
 | **[!UICONTROL Afficher les sources]** désactivée et **[!UICONTROL Gérer les sources]** désactivée | Révoquez tous les accès aux sources. |
 
-Pour plus d’informations sur les autorisations disponibles accordées à l’aide d’Admin Console, y compris ces quatre sources, consultez la [présentation du contrôle d’accès](../access-control/home.md).
+Pour plus d’informations sur les autorisations disponibles accordées par le biais des autorisations d’Adobe, consultez la section [présentation du contrôle d’accès](../access-control/home.md).
+
+### Contrôle d’accès basé sur les attributs pour les sources
+
+Le contrôle d’accès basé sur les attributs dans Adobe Experience Platform permet aux administrateurs de contrôler l’accès à des objets et/ou fonctionnalités spécifiques en fonction d’attributs.
+
+Avec le contrôle d’accès basé sur les attributs, vous pouvez appliquer des configurations de mappage aux champs auxquels vous êtes autorisé à accéder. En outre, vous ne pouvez pas ingérer de données à un jeu de données si vous n’avez pas accès à tous les champs du jeu de données.
+
+Pour plus d’informations sur le contrôle d’accès basé sur les attributs, consultez la section [contrôle d’accès basé sur les attributs - Aperçu](../access-control/abac/overview.md).
 
 ## Conditions générales {#terms-and-conditions}
 
