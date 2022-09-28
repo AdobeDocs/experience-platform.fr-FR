@@ -3,9 +3,9 @@ keywords: Experience Platform;accueil;rubriques les plus consultées ; alertes
 description: Vous pouvez vous abonner à des alertes lors de la création d’un flux de données pour recevoir des messages d’alerte concernant l’état, la réussite ou l’échec de votre exécution de flux.
 title: Abonnement à des alertes contextuelles dans l’interface utilisateur
 exl-id: 5d51edaa-ecba-4ac0-8d3c-49010466b9a5
-source-git-commit: 2acb58d21952699c60471cb4f4347af89621f045
+source-git-commit: d450dc7b0dc0303c9d33c3e8e003659e3140cf5b
 workflow-type: tm+mt
-source-wordcount: '832'
+source-wordcount: '845'
 ht-degree: 14%
 
 ---
@@ -49,7 +49,7 @@ Les alertes disponibles pour les flux de données de sources sont les suivantes 
 | Démarrage de l’exécution du flux de données sources | Cette alerte vous envoie un message lorsque votre flux de données source a démarré. |
 | Réussite de l’exécution du flux de données sources | Cette alerte vous envoie un message lorsque les données de votre source sont correctement ingérées dans Platform. |
 | Échec de l’exécution des flux de données sources | Cette alerte vous envoie un message si une erreur se produit dans votre flux de données. |
-| Sources Flux de données : absence d’ingestion | Cette alerte vous envoie un message si l’ingestion est retardée de plus de sept heures et qu’aucune donnée n’est ingérée dans Platform. |
+| ~~Sources Flux de données : absence d’ingestion~~ | ~~Cette alerte vous envoie un message si l’ingestion est retardée de plus de sept heures et qu’aucune donnée n’est ingérée dans Platform.~~ <br>**Remarque :** Vous ne recevrez plus d’alertes car cette alerte est obsolète. |
 
 Sélectionnez les alertes auxquelles vous souhaitez vous abonner, puis sélectionnez **[!UICONTROL Suivant]** pour passer en revue et terminer votre flux de données.
 

@@ -4,10 +4,10 @@ title: Règles d’alerte standard
 description: Ce document couvre les règles d’alerte prédéfinies fournies par Experience Platform.
 feature: Alerts
 exl-id: b4af1c15-b1bc-4e4b-a447-09cc17a63988
-source-git-commit: c0559fc55531e2b0c2938294742397b43e9e0445
+source-git-commit: df79ecac33314cc73ba8ad2508516be706bac767
 workflow-type: tm+mt
-source-wordcount: '811'
-ht-degree: 92%
+source-wordcount: '843'
+ht-degree: 90%
 
 ---
 
@@ -27,8 +27,15 @@ Les règles d’alerte suivantes sont spécifiques à l’[Ingestion des donnée
 | Informations relatives à l’exécution du flux de sources | Succès de l’exécution du flux de sources | Cette alerte se déclenche lorsque les données sont correctement ingérées à partir d’une connexion source. |
 | Retards, échecs et erreurs de l’exécution du flux de sources | Échec de l’exécution du flux des sources | Cette alerte se déclenche lorsqu’une erreur se produit lors de l’ingestion de données à partir d’une connexion source. |
 | Retards, échecs et erreurs de l’exécution du flux de sources | Retard d’ingestion | Cette alerte se déclenche lorsqu’une exécution de flux d’ingestion par lots dure plus de 150 minutes. |
-| Retards, échecs et erreurs de l’exécution du flux de sources | Absence d’ingestion | Cette alerte vous envoie un message si l’ingestion est retardée de plus de sept heures et qu’aucune donnée n’est ingérée dans Platform. |
 | Retards, échecs et erreurs de l’exécution du flux de sources | Échec de l’ingestion | Cette alerte se déclenche lorsque le rapport entre les enregistrements en échec et tous les enregistrements dépasse un seuil de 0,5 %. |
+
+{style=&quot;table-layout:auto&quot;}
+
+Si vous vous êtes déjà abonné au type d’alerte suivant, vous ne recevrez plus d’alertes, car cette alerte est obsolète :
+
+| Abonnement aux événements I/O | Règle d’alerte | Description |
+| --- | --- | --- |
+| Retards, échecs et erreurs de l’exécution du flux de sources | Absence d’ingestion | Cette alerte vous envoie un message si l’ingestion est retardée de plus de sept heures et qu’aucune donnée n’est ingérée dans Platform. |
 
 {style=&quot;table-layout:auto&quot;}
 
