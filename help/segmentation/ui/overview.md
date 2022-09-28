@@ -5,10 +5,10 @@ title: Guide de l’interface utilisateur de Segmentation Service
 topic-legacy: ui guide
 description: Adobe Experience Platform Segmentation Service fournit une interface utilisateur pour la création et la gestion des définitions de segment.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 356d76d61293b9ff0887afbf30852159af8d72ad
+source-git-commit: f71d49b576059e687c337cbacd6dd3d525e97834
 workflow-type: tm+mt
-source-wordcount: '1775'
-ht-degree: 21%
+source-wordcount: '2375'
+ht-degree: 17%
 
 ---
 
@@ -27,7 +27,7 @@ L’utilisation des définitions de segment nécessite une compréhension des di
 
 Il est également important de connaître deux termes clés utilisés dans ce document et de comprendre la différence entre eux :
 - **Définition de segment** : ensemble des règles utilisées pour décrire les caractéristiques ou les comportements clés d’une audience cible.
-- **Audience** : ensemble des profils ainsi obtenus qui répondent aux critères d’une définition de segment.
+- **Audience** : ensemble des profils ainsi obtenus qui répondent aux critères d’une définition de segment. Cela peut être créé via Adobe Experience Platform (audience générée par Platform) ou à partir d’une source externe (audience générée en externe).
 
 ## Présentation
 
@@ -62,7 +62,7 @@ Pour en savoir plus, rendez-vous sur la page [guide du tableau de bord des segme
 >title="Ajouter tous les segments à planifier"
 >abstract="Activez cette option pour inclure tous les segments d’évaluation par lots dans la mise à jour planifiée quotidienne à 15h30 UTC. Désactivez la suppression de tous les segments de la mise à jour planifiée."
 
-Sélectionnez la **[!UICONTROL Parcourir]** pour afficher une liste de toutes les définitions de segment pour votre organisation IMS.
+Sélectionnez la **[!UICONTROL Parcourir]** pour afficher une liste de toutes les définitions de segment pour votre organisation.
 
 ![](../images/ui/overview/segment-browse-all.png)
 
@@ -92,7 +92,7 @@ Sélection **[!UICONTROL Créer un segment]** vous emmènera au créateur de seg
 
 ![](../images/ui/overview/segment-browse-top.png)
 
-La barre latérale droite contient des informations sur tous les segments de l’organisation IMS, répertoriant le nombre total de segments, la date de dernière évaluation, la date d’évaluation suivante, ainsi qu’une ventilation des segments par méthode d’évaluation.
+La barre latérale droite contient des informations sur tous les segments de l’organisation, répertoriant le nombre total de segments, la date de dernière évaluation, la date d’évaluation suivante, ainsi qu’une ventilation des segments par méthode d’évaluation.
 
 ![](../images/ui/overview/segment-browse-segment-info.png)
 
@@ -112,7 +112,7 @@ La page des détails du segment s’affiche. En haut se trouve un résumé de la
 
 ![](../images/ui/overview/segment-details-summary.png)
 
-### Synthèse des segments
+### Synthèse des segments {#segment-summary}
 
 Le **[!UICONTROL Synthèse des segments]** fournit des informations telles que l’identifiant, le nom, la description et les détails des attributs.
 
@@ -191,6 +191,80 @@ Vous pouvez activer les définitions de segment pour une évaluation planifiée 
 Actuellement, les plannings ne peuvent être créés qu’à l’aide de l’API. Pour obtenir des instructions détaillées sur la création, la modification et l’utilisation des plannings à l’aide de l’API, suivez le tutoriel relatif à l’évaluation et à l’accès aux résultats de segmentation, en particulier la section sur [l’évaluation planifiée à l’aide de l’API](../tutorials/evaluate-a-segment.md#scheduled-evaluation).
 
 ![](../images/ui/overview/segment-browse-scheduled.png)
+
+## Audiences {#audiences}
+
+>[!IMPORTANT]
+>
+>La fonctionnalité d’audiences est actuellement en version bêta limitée et n’est pas disponible pour tous les utilisateurs. La documentation et les fonctionnalités peuvent changer.
+
+Sélectionnez la **[!UICONTROL Audiences]** pour afficher la liste de toutes les audiences de votre organisation.
+
+![Liste des audiences de votre organisation.](../images/ui/overview/list-audiences.png)
+
+Par défaut, cette vue répertorie les informations sur les audiences, notamment le nom, le nombre de profils, l’origine, la date de création et la date de dernière modification.
+
+Vous pouvez sélectionner la variable ![Personnalisation du tableau](../images/ui/overview/customize-table.png) pour modifier les champs affichés.
+
+![Le bouton Personnaliser le tableau est mis en surbrillance. En sélectionnant ce bouton, vous pouvez personnaliser les champs affichés sur la page de navigation Audiences .](../images/ui/overview/select-customize-table.png)
+
+Une fenêtre contextuelle s’affiche, répertoriant tous les champs pouvant être affichés dans le tableau.
+
+![Attributs pouvant être affichés pour la section Parcourir les audiences .](../images/ui/overview/customize-table-attributes.png)
+
+| Champ | Description |
+| ----- | ----------- | 
+| [!UICONTROL Nom] | Nom de l’audience. |
+| [!UICONTROL Nombre de profils] | Le nombre total de profils qui remplissent les critères de l’audience. |
+| [!UICONTROL Origin] | Origine de l’audience. Si cette audience a été générée par Platform, elle aura une origine de Segmentation Service. |
+| [!UICONTROL État du cycle de vie] | État de l’audience. Les valeurs possibles pour ce champ incluent `Draft`, `Published`, et `Archived`. |
+| [!UICONTROL Fréquence de mise à jour] | Valeur qui indique la fréquence de mise à jour des données de l’audience. Les valeurs possibles pour ce champ incluent `On Demand`, `Scheduled`, et `Continuous`. |
+| [!UICONTROL Dernière mise à jour par] | Nom de la personne qui a mis à jour l’audience pour la dernière fois. |
+| [!UICONTROL Créé] | Heure et date de création de l’audience. |
+| [!UICONTROL Dernière mise à jour] | Heure et date de la dernière création de l’audience. |
+| [!UICONTROL Accès aux étiquettes] | Étiquettes d’accès pour l’audience. Les libellés d’accès vous permettent de classer les jeux de données et les champs en fonction des stratégies d’utilisation qui s’appliquent à ces données. Ces libellés peuvent être appliqués à tout moment, offrant ainsi une certaine souplesse dans la manière dont vous choisissez de gérer les données. Pour plus d’informations sur les étiquettes d’accès, veuillez lire la documentation sur [gestion des libellés](../../access-control/abac/ui/labels.md). |
+
+Vous pouvez sélectionner **[!UICONTROL Création d’une audience]** pour créer une audience.
+
+![Le bouton Créer une audience est mis en surbrillance et indique l’emplacement de création d’une audience.](../images/ui/overview/create-audience.png)
+
+Une fenêtre contextuelle s’affiche, vous permettant de choisir entre composer une audience ou créer des règles.
+
+![Une fenêtre contextuelle qui affiche les deux types d’audiences que vous pouvez créer.](../images/ui/overview/create-audience-type.png)
+
+Sélection **[!UICONTROL Composer les audiences]** vous conduit au créateur d’audiences. Pour en savoir plus sur la création d’audiences, veuillez lire le [Guide d’Audience Builder](./audience-builder.md).
+
+Sélection **[!UICONTROL Règle de création]** vous dirige vers le créateur de segments. Pour en savoir plus sur la création de segments, consultez la section [Guide du créateur de segments](./segment-builder.md)
+
+## Détails de l’audience {#audience-details}
+
+Pour afficher plus de détails sur une audience spécifique, sélectionnez le nom d’une audience dans la variable [!UICONTROL Audiences] .
+
+La page des détails de l’audience s’affiche. Cette page diffère en détails selon que l’audience a été générée avec Adobe Experience Platform ou à partir d’une source externe telle qu’Audience Orchestration.
+
+### Audience générée par la plateforme
+
+Pour plus d’informations sur les audiences générées par Platform, veuillez lire le [section de résumé du segment](#segment-summary).
+
+### Audience générée de manière externe
+
+En haut de la page des détails de l’audience se trouve un résumé de l’audience et des détails sur le jeu de données dans lequel l’audience est enregistrée.
+
+![Détails fournis pour une audience générée de l’extérieur.](../images/ui/overview/externally-generated-audience.png)
+
+Le **[!UICONTROL Synthèse de l’audience]** fournit des informations telles que l’identifiant, le nom, la description et les détails des attributs.
+
+Le **[!UICONTROL Détails du jeu de données]** fournit des informations telles que le nom, la description, le nom de la table, la source et le schéma. Vous pouvez sélectionner **[!UICONTROL Afficher le jeu de données]** pour afficher plus d’informations sur le jeu de données.
+
+| Champ | Description |
+| ----- | ----------- |
+| [!UICONTROL Nom] | Nom du jeu de données. |
+| [!UICONTROL Description] | Description du jeu de données. |
+| [!UICONTROL Nom de la table] | Nom de la table du jeu de données. |
+| [!UICONTROL Source] | Source du jeu de données. Pour les audiences générées en externe, cette valeur sera **Schéma**. |
+| [!UICONTROL Schéma] | Type de schéma XDM auquel le jeu de données correspond. |
+
+Pour en savoir plus sur les jeux de données, veuillez lire le [présentation du jeu de données](../../catalog/datasets/overview.md).
 
 ## Segmentation par flux {#streaming-segmentation}
 
