@@ -2,10 +2,10 @@
 title: Présentation des journaux d’audit
 description: Découvrez comment les journaux d’audit vous permettent de savoir qui a effectué quelles actions dans Adobe Experience Platform.
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: 90481d2cff0f133ee10310da02e4b9ace9d8309f
+source-git-commit: 6c0e001419dc78d4ff87bebd0604c7add07b635f
 workflow-type: tm+mt
-source-wordcount: '920'
-ht-degree: 16%
+source-wordcount: '936'
+ht-degree: 17%
 
 ---
 
@@ -35,9 +35,11 @@ Le tableau ci-dessous présente les actions sur lesquelles les ressources sont e
 | --- | --- |
 | [Stratégie de contrôle d’accès (contrôle d’accès basé sur les attributs)](../../../access-control/home.md) | <ul><li>Créez</li><li>Mise à jour </li><li>Supprimer</li></ul> |
 | [Compte (Adobe)](../../../sources/connectors/tutorials/ui/../../../tutorials/ui/update.md) | <ul><li>Créez</li><li>Mise à jour </li><li>Supprimer</li></ul> |
+| [Instance Attribution AI](../../../intelligent-services/attribution-ai/overview.md) | <ul><li>Créez</li><li>Mise à jour </li><li>Supprimer</li><li>Activer</li><li>Désactiver</li></ul> |
 | [Journaux d’audit](../../../landing/governance-privacy-security/audit-logs/overview.md) | <ul><li>Exporter</li></ul> |
 | [Classe](../../../xdm/schema/composition.md#class) | <ul><li>Créez</li><li>Mise à jour </li><li>Supprimer</li></ul> |
 | [Attribut calculé](../../../profile/computed-attributes/overview.md) | <ul><li>Créez</li><li>Mise à jour </li><li>Supprimer</li></ul> |
+| [Instance Customer AI](../../../intelligent-services/customer-ai/overview.md) | <ul><li>Créez</li><li>Mise à jour </li><li>Supprimer</li><li>Activer</li><li>Désactiver</li></ul> |
 | [Jeu de données](../../../catalog/datasets/overview.md) | <ul><li>Créez</li><li>Mise à jour </li><li>Supprimer</li><li>Activer pour [Real-time Customer Profile](../../../profile/home.md)</li><li>Désactiver pour Profile</li><li>Ajout de données</li><li>Supprimer le lot</li></ul> |
 | [Types de données](../../../xdm/schema/composition.md#data-type) | <ul><li>Créez</li><li>Mise à jour </li><li>Supprimer</li></ul> |
 | [Destination](../../../destinations/home.md) | <ul><li>Créez</li><li>Mise à jour </li><li>Supprimer</li><li>Activer</li><li>Désactiver</li><li>Activation du jeu de données</li><li>Suppression de jeux de données</li><li>Activation de profil</li><li>Suppression de profils</li></ul> |

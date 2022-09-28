@@ -6,16 +6,16 @@ topic-legacy: Attribution AI
 description: Attribution AI est utilisé pour attribuer des crédits aux points de contact qui génèrent des événements de conversion. Il peut aider les spécialistes du marketing à quantifier l’impact publicitaire de chaque point de contact marketing sur le parcours client. Les impressions de publicités affichées, les envois de courriers électroniques, les ouvertures de courriers électroniques ainsi que les clics de référencement payants sont autant d’exemples de points de contact.
 landing-page-description: L’IA dédiée à l’attribution est utilisée pour attribuer des crédits aux points de contact qui génèrent des événements de conversion. Il peut aider les spécialistes du marketing à quantifier l’impact publicitaire de chaque point de contact marketing sur le parcours client.
 exl-id: a5991b08-217a-4b39-9948-d28eadea7ded
-source-git-commit: a71da02b7cef5870bc9ca689a47c25098b2297b8
+source-git-commit: 6c0e001419dc78d4ff87bebd0604c7add07b635f
 workflow-type: tm+mt
 source-wordcount: '499'
-ht-degree: 90%
+ht-degree: 77%
 
 ---
 
 # Présentation d’Attribution AI
 
-Dans le cadre d’Intelligent Services, Attribution AI est un service d’attribution algorithmique à plusieurs canaux qui calcule l’influence et l’impact incrémentiel des interactions des clients par rapport à des résultats spécifiés. Grâce à Attribution AI, les professionnels du marketing peuvent mesurer et optimiser les dépenses publicitaires et marketing en comprenant l’impact de chaque interaction client sur chaque phase du parcours des clients.
+Attribution AI, dans le cadre d’Intelligent Services, est un service d’attribution algorithmique à plusieurs canaux qui calcule l’influence et l’impact incrémentiel des interactions des clients par rapport à des résultats spécifiés. Grâce à Attribution AI, les marketeurs peuvent mesurer et optimiser les dépenses publicitaires et marketing en comprenant l’impact de chaque interaction client sur chaque phase du parcours des clients.
 
 ## Fonctionnement d’Attribution AI
 
@@ -38,7 +38,7 @@ Attribution AI peut fournir une assistance pour les cas d’utilisation suivants
 - **Rapport à la direction** : permettre aux cadres de comprendre l’impact incrémentiel réel du marketing, tant dans son ensemble que par canal, par région, par SKU, etc.
 - **Allocation budgétaire** : faire part des décisions d’allocation du budget sur les différents canaux marketing.
 - **Optimisation des campagnes** : déterminer au sein de chaque canal quels sont les éléments créatifs, les mots-clés et les campagnes qui fonctionnent le mieux pour quels SKU ou Géo. Cela vous permet d’examiner chaque canal afin que l’équipe marketing puisse optimiser ses tactiques.
-- **Attribution d’entonnoir rempli** : comprendre l’impact du marketing sur l’ensemble du parcours client. Par exemple, d’une création gratuite de compte à une conversion payante et au-delà.
+- **Attribution d’entonnoir complet**: Comprendre l’impact du marketing sur l’ensemble du parcours client. Par exemple, d’une création gratuite de compte à une conversion payante et au-delà.
 - **Évaluations des partenaires** : évaluer l’efficacité des organismes et des partenaires en fonction des résultats d’attribution.
 
 ### Fonctionnalités supplémentaires
