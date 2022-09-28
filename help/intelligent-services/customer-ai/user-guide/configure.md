@@ -6,10 +6,10 @@ title: Configuration d’une instance Customer AI
 topic-legacy: Instance creation
 description: Les services AI/ML fournissent Customer AI en tant que service Adobe Sensei simple d’utilisation pouvant être configuré pour différents cas d’utilisation. Les sections suivantes décrivent les étapes de configuration d’une instance de Customer AI.
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
-source-git-commit: 4f74be4ed8d84a58779b9e7d9f1de6d9bf19cc5e
+source-git-commit: cec2449525eb067fa7915073e929f9693a45575a
 workflow-type: tm+mt
-source-wordcount: '3088'
-ht-degree: 11%
+source-wordcount: '3342'
+ht-degree: 10%
 
 ---
 
@@ -36,7 +36,7 @@ Les instances de service peuvent être modifiées, clonées et supprimées à l�
 
 - **[!UICONTROL Modifier]**: Sélection **[!UICONTROL Modifier]** permet de modifier une instance de service existante. Vous pouvez modifier le nom, la description et la fréquence de notation de l’instance.
 - **[!UICONTROL Cloner]**: Sélection **[!UICONTROL Cloner]** copie la configuration de l’instance de service actuellement sélectionnée. Vous pouvez ensuite modifier le workflow pour effectuer des ajustements mineurs et le renommer en nouvelle instance.
-- **[!UICONTROL Supprimer]**: Vous pouvez supprimer une instance de service, y compris les exécutions historiques.
+- **[!UICONTROL Supprimer]**: Vous pouvez supprimer une instance de service, y compris les exécutions historiques. Le jeu de données de sortie correspondant sera supprimé de Platform. Toutefois, les scores synchronisés dans Real-time Customer Profile ne sont pas supprimés.
 - **[!UICONTROL Source de données]**: Un lien vers le jeu de données utilisé par cette instance. Si plusieurs jeux de données sont utilisés, la sélection du texte de lien hypertexte ouvre la fenêtre contextuelle d’aperçu du jeu de données.
 - **[!UICONTROL Détails de la dernière exécution]**: Cette option n’est affichée que lorsqu’une exécution échoue. Vous trouverez ici des informations sur les raisons de l’échec de l’exécution, telles que les codes d’erreur.
 - **[!UICONTROL Définition de score]**: Aperçu rapide de l’objectif que vous avez configuré pour cette instance.
@@ -67,7 +67,7 @@ Indiquez les valeurs requises, puis sélectionnez **[!UICONTROL Suivant]** pour 
 
 Par conception, Customer AI utilise Adobe Analytics, Adobe Audience Manager, les événements d’expérience en général et les données d’événement d’expérience client pour calculer les scores de propension. Lors de la sélection d’un jeu de données, seuls les jeux compatibles avec Customer AI sont répertoriés. Pour sélectionner un jeu de données, sélectionnez (**+**) en regard du nom du jeu de données ou cochez la case pour ajouter plusieurs jeux de données à la fois. Utilisez l’option de recherche pour trouver rapidement les jeux de données qui vous intéressent.
 
-![Sélection et recherche d’un jeu de données](../images/user-guide/configure-dataset-page.png)
+![Sélection et recherche d’un jeu de données](../images/user-guide/configure-dataset-page-save-and-exit-cai.png)
 
 Après avoir sélectionné les jeux de données que vous souhaitez utiliser, sélectionnez la variable **[!UICONTROL Ajouter]** pour ajouter les jeux de données au volet d’aperçu du jeu de données.
 
@@ -78,6 +78,10 @@ Icône Sélectionner l’information ![icône info](../images/user-guide/info-ic
 ![Sélection et recherche d’un jeu de données](../images/user-guide/dataset-info.png)
 
 L’aperçu du jeu de données contient des données telles que l’heure de la dernière mise à jour, le schéma source et un aperçu des dix premières colonnes.
+
+Sélectionner **[!UICONTROL Enregistrer]** pour enregistrer vos brouillons au fur et à mesure que vous vous déplacez dans le workflow. Vous pouvez également enregistrer les configurations de modèle de brouillon et passer à l’étape suivante du workflow. Utilisation **[!UICONTROL Enregistrer et continuer]** pour créer et enregistrer des brouillons lors des configurations de modèle. Cette fonctionnalité vous permet de créer et d’enregistrer des brouillons de la configuration du modèle. Elle est particulièrement utile lorsque vous devez définir de nombreux champs dans le workflow de configuration.
+
+![Le workflow Créer de l’onglet Customer AI des Data Science Services avec les options Enregistrer et Enregistrer et continuer en surbrillance.](../images/user-guide/cai-save-and-exit.png)
 
 ### Complétude du jeu de données {#dataset-completeness}
 
@@ -236,7 +240,7 @@ Le bouton activer/désactiver de Profile permet à Customer AI d’exporter les 
 
 Lorsque vous utilisez Customer AI pour la première fois, vous pouvez désactiver cette fonction jusqu’à ce que vous soyez satisfait des résultats de sortie du modèle. Cela vous empêche de charger plusieurs jeux de données de notation sur vos profils client tout en affinant votre modèle. Une fois que vous avez fini d’étalonner votre modèle, vous pouvez le cloner à l’aide de la fonction [option de clone](#set-up-your-instance) de la **Instances de service** page. Vous pouvez ainsi créer une copie de votre modèle et activer/désactiver le profil.
 
-![Bascule des profils](../images/user-guide/advanced-workflow.png)
+![Bascule des profils](../images/user-guide/advanced-workflow-save.png)
 
 Une fois que vous avez défini votre planning de notation, que les exclusions de prédiction sont incluses et que le bouton bascule du profil à l’endroit où vous souhaitez qu’il soit, sélectionnez **[!UICONTROL Terminer]** dans le coin supérieur droit pour créer votre instance Customer AI.
 
@@ -247,6 +251,14 @@ Si l’instance est créée avec succès, une opération de prédiction se décl
 >Selon le volume des données d’entrée, les opérations de prédiction peuvent durer jusqu’à 24 heures.
 
 En suivant cette section, vous avez configuré une instance de Customer AI et exécuté une opération de prédiction. Une fois l’exécution terminée, les insights notés renseignent automatiquement les profils avec les scores prévus si le bouton bascule du profil est activé. Veuillez patienter jusqu’à 24 heures avant de passer à la section suivante de ce tutoriel.
+
+## Stratégies de gouvernance
+
+Une fois que vous avez parcouru le workflow pour créer une instance et envoyer la configuration du modèle, la variable [application des stratégies](/help/data-governance/enforcement/auto-enforcement.md) vérifie s’il existe des violations. Si une violation de stratégie se produit, une fenêtre contextuelle s’affiche indiquant qu’une ou plusieurs stratégies ont été violées. Cela permet de vous assurer que vos opérations de données et vos actions marketing dans Platform sont conformes aux politiques d’utilisation des données.
+
+![fenêtre contextuelle affichant une violation de stratégie](../images/user-guide/policy-violation-popover-cai.png)
+
+La fenêtre contextuelle fournit des informations spécifiques sur la violation. Vous pouvez résoudre ces violations par le biais de paramètres de stratégie et d’autres mesures qui ne sont pas directement liés au workflow de configuration. Par exemple, vous pouvez modifier les étiquettes afin que certains champs soient autorisés à être utilisés à des fins de science des données. Vous pouvez également modifier la configuration de modèle elle-même afin qu’elle n’utilise rien avec un libellé. Consultez la documentation pour en savoir plus sur la configuration [policies](/help/data-governance/policies/overview.md).
 
 ## Contrôle d’accès basé sur attribut
 
@@ -274,11 +286,11 @@ En haut de l’espace de travail de Customer AI **page insights**, notez que les
 
 Lorsque vous prévisualisez des jeux de données avec un schéma limité sur l’objet **[!UICONTROL Workflow Créer une instance]** , un avertissement s’affiche pour vous informer que [!UICONTROL En raison des restrictions d’accès, certaines informations ne s’affichent pas dans l’aperçu du jeu de données.]
 
-![L’espace de travail Customer AI avec les champs restreints des jeux de données d’aperçu avec les résultats de schéma limités mis en surbrillance.](../images/user-guide/restricted-dataset-preview.png)
+![L’espace de travail Customer AI avec les champs restreints des jeux de données d’aperçu avec les résultats de schéma limités mis en surbrillance.](../images/user-guide/restricted-dataset-preview-save-and-exit-cai.png)
 
 Après avoir créé une instance contenant des informations restreintes, passez à la **[!UICONTROL Définition d’un objectif]** , un avertissement s’affiche en haut de l’écran : [!UICONTROL En raison des restrictions d’accès, certaines informations ne s’affichent pas dans la configuration.]
 
-![L’espace de travail Customer AI avec les champs restreints de l’instance de service est mis en surbrillance.](../images/user-guide/information-not-displayed.png)
+![L’espace de travail Customer AI avec les champs restreints de l’instance de service est mis en surbrillance.](../images/user-guide/information-not-displayed-save-and-exit.png)
 
 ## Étapes suivantes {#next-steps}
 

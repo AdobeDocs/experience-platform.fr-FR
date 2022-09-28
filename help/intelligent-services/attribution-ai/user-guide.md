@@ -5,10 +5,10 @@ title: Guide de l’interface utilisateur Attribution AI
 topic-legacy: User guide
 description: Ce document sert de guide pour interagir avec Attribution AI dans l’interface utilisateur d’Intelligent Services.
 exl-id: 32e1dd07-31a8-41c4-88df-8893ff773f79
-source-git-commit: 8071ddc945e89dd54173b34d44c6f622570801a3
+source-git-commit: cec2449525eb067fa7915073e929f9693a45575a
 workflow-type: tm+mt
-source-wordcount: '2873'
-ht-degree: 35%
+source-wordcount: '2960'
+ht-degree: 34%
 
 ---
 
@@ -70,6 +70,10 @@ Icône Sélectionner l’information ![icône info](./images/user-guide/info-ico
 
 L’aperçu du jeu de données contient des données telles que l’heure de la dernière mise à jour, le schéma source et un aperçu des dix premières colonnes.
 
+Sélectionner **[!UICONTROL Enregistrer]** pour enregistrer vos brouillons au fur et à mesure que vous vous déplacez dans le workflow. Vous pouvez également enregistrer les configurations de modèle de brouillon et passer à l’étape suivante du workflow. Utilisation **[!UICONTROL Enregistrer et continuer]** pour créer et enregistrer des brouillons lors des configurations de modèle. Cette fonctionnalité vous permet de créer et d’enregistrer des brouillons de la configuration du modèle. Elle est particulièrement utile lorsque vous devez définir de nombreux champs dans le workflow de configuration.
+
+![Le workflow Créer de l’onglet Attribution AI Data Science Services avec Enregistrer et enregistrer et continuer est mis en surbrillance.](./images/user-guide/aai-save-save-&-exit.png)
+
 ### Complétude du jeu de données {#dataset-completeness}
 
 <!-- https://www.adobe.com/go/aai-dataset-completeness -->
@@ -92,7 +96,7 @@ Vous pouvez désormais joindre plusieurs jeux de données les uns aux autres en 
 
 Pour sélectionner une identité, sélectionnez la valeur soulignée située dans la colonne d’identité. La fenêtre contextuelle Sélectionner une identité s’affiche.
 
-![sélectionner le même espace de noms](./images/user-guide/aai-identity-map.png)
+![sélectionner le même espace de noms](./images/user-guide/aai-identity-map-save-and-exit.png)
 
 Dans le cas où plusieurs identités sont disponibles dans un espace de noms, veillez à sélectionner le champ d’identité approprié à votre cas d’utilisation. Par exemple, deux identités de courrier électronique sont disponibles dans l’espace de noms de courrier électronique, un courrier électronique professionnel et un courrier électronique personnel. Selon le cas d’utilisation, un email personnel est plus susceptible d’être renseigné et plus utile dans les prédictions individuelles. Cela signifie que vous pouvez sélectionner `EMAIL (personalEmail.address)` comme votre identité.
 
@@ -108,7 +112,7 @@ Dans le cas où plusieurs identités sont disponibles dans un espace de noms, ve
 
 Une fois que vous avez fini de sélectionner et d’ajouter des jeux de données, la variable **Carte** l’étape de configuration s’affiche. Attribution AI exige que vous mappez le champ Canal multimédia pour chaque jeu de données sélectionné à l’étape précédente. En effet, sans le mappage du canal Media entre les jeux de données, les informations dérivées d’Attribution AI peuvent ne pas s’afficher correctement, ce qui rend la page d’informations difficile à interpréter. Bien que seul le canal Média soit requis, il est vivement recommandé de mapper certains des champs facultatifs tels que l’action Média, le nom de la campagne, le groupe Campagne et la balise Campagne. Cela permet à Attribution AI de fournir des informations plus claires et des résultats optimaux.
 
-![mappage](./images/user-guide/mapping.png)
+![mappage](./images/user-guide/mapping-save-&-exit.png)
 
 ## Définition des événements {#define-events}
 
@@ -198,13 +202,13 @@ Vous pouvez ajouter d’autres points de contact en sélectionnant **Ajouter un 
 
 Une fois que vous avez défini tous les points de contact nécessaires, faites défiler la page vers le haut et sélectionnez **Suivant** dans le coin supérieur droit pour passer à l’étape finale.
 
-![définition terminée](./images/user-guide/define_event_next.png)
+![définition terminée](./images/user-guide/define_event_save_and_exit.png)
 
 ## Configuration de la formation et de la notation avancées
 
 La dernière page d’Attribution AI est la page **[!UICONTROL Avancé]** utilisée pour configurer la formation et la notation.
 
-![nouvelle page Avancé](./images/user-guide/advanced_settings.png)
+![nouvelles options de jeu de pages](./images/user-guide/advanced_settings_set_options.png)
 
 ### Planification de la formation
 
@@ -298,7 +302,7 @@ Lorsque vous prévisualisez des jeux de données avec un schéma limité sur l�
 
 Après avoir créé une instance contenant des informations restreintes, passez à la **[!UICONTROL Définition d’un objectif]** , un avertissement s’affiche en haut de l’écran : [!UICONTROL En raison des restrictions d’accès, certaines informations ne s’affichent pas dans la configuration.]
 
-![Espace de travail Attribution AI avec les champs restreints des résultats de l’instance mis en surbrillance.](./images/user-guide/information-not-displayed.png)
+![Espace de travail Attribution AI avec les champs restreints des résultats de l’instance mis en surbrillance.](./images/user-guide/information-not-displayed-save-and-exit.png)
 
 ## Étapes suivantes
 
