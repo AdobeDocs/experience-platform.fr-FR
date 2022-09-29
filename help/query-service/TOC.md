@@ -4,10 +4,10 @@ user-guide-title: Aide d’Adobe Experience Platform Query Service
 breadcrumb-title: Guide de Query Service
 user-guide-description: Utilisez SQL standard pour créer des requêtes de données dans le lac de données de Platform.
 feature: Queries
-source-git-commit: 3d4c8163524561a1ef59b044b57b3c6488850d14
+source-git-commit: a0931e890f54fa0e9e15a69ca46ba25f26ed6b85
 workflow-type: tm+mt
-source-wordcount: '210'
-ht-degree: 69%
+source-wordcount: '215'
+ht-degree: 67%
 
 ---
 
@@ -16,6 +16,8 @@ ht-degree: 69%
 
 - [Présentation de Query Service](home.md)
 - [Barrières de sécurité pour Query Service](guardrails.md)
+- Distiller de données {#data-distiller}
+   - [Package Query Service](data-distiller/packages.md)
 - Prise en main {#get-started}
    - [Conditions préalables](get-started/prerequisites.md)
 - Cas pratiques {#use-cases}
