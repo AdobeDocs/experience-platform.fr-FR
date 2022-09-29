@@ -1,14 +1,18 @@
 ---
 title: Connexion Adobe Campaign Managed Cloud Services
 description: Adobe Campaign Managed Cloud Services offre une plateforme pour concevoir des expériences client cross-canal et un environnement pour l’orchestration visuelle des campagnes, la gestion des interactions en temps réel et l’exécution cross-canal.
-source-git-commit: 10dc6ac0f78237f8d6bea01d63d07e61662278df
+source-git-commit: ea4d17459dcd7abd981260fe6733320b08af15e8
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1487'
+ht-degree: 9%
 
 ---
 
 # Connexion Adobe Campaign Managed Cloud Services {#adobe-campaign-managed-services}
+
+>[!IMPORTANT]
+>
+>Cette intégration fonctionne avec Adobe Campaign version 8.4 ou ultérieure. La version 8.4 doit être publiée le 30 septembre 2022.
 
 ## Présentation {#overview}
 
