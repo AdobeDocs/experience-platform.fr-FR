@@ -4,10 +4,10 @@ title: Guide du tableau de bord des segments
 description: Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur les segments que votre entreprise a créés.
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: 7f226a37996ab5e1fef432c6007d7d488f84ded6
+source-git-commit: 18288130b98e13d824273426a860d97722c434de
 workflow-type: tm+mt
-source-wordcount: '1791'
-ht-degree: 11%
+source-wordcount: '2094'
+ht-degree: 9%
 
 ---
 
@@ -85,6 +85,7 @@ Pour en savoir plus sur chacun des widgets standard disponibles, sélectionnez l
 * [[!UICONTROL Tendance de changement de la taille de l’audience]](#audience-size-change-trend)
 * [[!UICONTROL Tendance de la taille de l’audience par identité]](#audience-size-trend-by-identity)
 * [[!UICONTROL Supervision de l’audience]](#audience-overlap)
+* [[!UICONTROL Rapport de chevauchement d’audiences]](#audience-overlap-report)
 * [[!UICONTROL Superposition des identités]](#identity-overlap)
 * [[!UICONTROL Profils par identité]](#profiles-by-identity)
 * [[!UICONTROL Activations planifiées]](#scheduled-activations)
@@ -147,14 +148,33 @@ Ce widget vous permet d’optimiser la stratégie de segmentation en consultant 
 
 ![Le widget de chevauchement d’audience.](../images/segments/audience-overlap.png)
 
-<!-- * [[!UICONTROL Audience overlap report]](#audience-overlap-report) -->
-<!-- ### [!UICONTROL Audience overlap report] {#audience-overlap-report} -->
+### [!UICONTROL Rapport de chevauchement d’audiences] {#audience-overlap-report}
 
-<!-- View an ordered list of audiences by Highest or Lowest overlap percentages. -->
+Ce widget présente les données de chevauchement d’audience d’un segment spécifique. Une liste de cinq audiences classées des pourcentages de chevauchement les plus élevés aux plus bas est fournie pour le segment sélectionné dans le menu déroulant en haut de l’écran. Pour plus de clarté, le segment choisi est répertorié dans la section [!UICONTROL SEGMENT D’UN NOM] colonne . L’analyse du chevauchement des audiences est fournie pour le deuxième segment répertorié dans la section [!UICONTROL NOM DU SEGMENT B] colonne . Le chevauchement en pourcentage est fourni dans la troisième colonne avec une précision de douze décimales.
 
-<!-- ![The Audience overlap report widget.]() -->
+Le rapport sur les chevauchements d’audience vous permet de créer de nouveaux segments hautement performants. L’observation des chevauchements en pourcentage élevé vous permet de supprimer des audiences et d’empêcher l’envoi d’une même audience vers différentes destinations. Elles vous aident également à identifier les insights cachés qui peuvent contribuer à une meilleure segmentation. Un faible taux de chevauchement permet de localiser les profils uniques à rechercher.
 
-<!-- https://jira.corp.adobe.com/browse/PLAT-125511 -->
+Sélectionner **[!UICONTROL En savoir plus]** pour ouvrir une boîte de dialogue plein écran contenant davantage de données de chevauchement de segments.
+
+![Le widget Rapport de chevauchement d’audiences avec l’option Afficher plus en surbrillance .](../images/segments/audience-overlap-report.png)
+
+Le [!UICONTROL Rapport de chevauchement d’audiences] s’affiche. Cette boîte de dialogue peut contenir jusqu’à 50 lignes d’analyses de chevauchement d’audiences, divisées en six colonnes. Cliquez sur l’icône des paramètres (![Icône Paramètres .](../images/segments/settings-icon.png)) pour supprimer ou ajouter des colonnes du tableau.
+
+![Boîte de dialogue Rapport de chevauchement d’audiences .](../images/segments/audience-overlap-report-dialog.png)
+
+>[!NOTE]
+>
+>Sélectionnez la **[!UICONTROL Chevauchement]** en-tête de colonne pour modifier le classement des résultats entre le plus haut au plus bas ou le plus bas au plus haut.
+
+Pour télécharger l&#39;intégralité du rapport au format PDF, sélectionnez le menu d&#39;options (**`...`**) suivie de **[!UICONTROL Télécharger]**.
+
+![La boîte de dialogue Rapport de chevauchement d’audience avec les options de téléchargement et de points de suspension mises en surbrillance.](../images/segments/segments-audience-overlap-report-dialog-download.png)
+
+Sélectionnez une ligne dans le rapport pour ouvrir un diagramme de Venn de l’analyse de chevauchement. Passez la souris sur une section du diagramme de Venn pour afficher le nombre de profils dans une boîte de dialogue.
+
+![La boîte de dialogue Rapport de chevauchement d’audience avec un diagramme de Venn et une ligne surlignée.](../images/segments/audience-overlap-report-dialog-venn.png)
+
+Sélectionner **[!UICONTROL Fermer]** pour revenir au [!UICONTROL Segments] tableau de bord.
 
 ### [!UICONTROL Superposition des identités] {#identity-overlap}
 
