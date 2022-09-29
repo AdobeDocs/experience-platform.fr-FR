@@ -6,16 +6,16 @@ topic-legacy: tutorial
 type: Tutorial
 description: Ce document fournit un guide sur la manière d’enrichir Real-time Customer Profile avec des insights d’apprentissage automatique.
 exl-id: 397023c9-383d-4a21-b58a-0f920631ac56
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 89a9b64f2fb238c08a281f29a035ce0b24b34804
 workflow-type: tm+mt
-source-wordcount: '640'
-ht-degree: 29%
+source-wordcount: '577'
+ht-degree: 21%
 
 ---
 
 # Enrichir [!DNL Real-time Customer Profile] avec des insights d’apprentissage automatique
 
-Adobe Experience Platform [!DNL Data Science Workspace] fournit les outils et les ressources nécessaires pour créer, évaluer et utiliser des modèles d’apprentissage automatique afin de générer des prévisions et des insights sur les données. Lorsque des insights d’apprentissage automatique sont ingérés dans une [!DNL Profile]Jeu de données compatible, ces mêmes données sont également ingérées en tant que [!DNL Profile] enregistrements pouvant ensuite être segmentés à l’aide de [!DNL Adobe Experience Platform Segmentation Service]. À mesure que les données de profil et de série temporelle sont ingérées, Real-time Customer Profile décide automatiquement d’inclure ou d’exclure ces données des segments par le biais d’un processus continu appelé la segmentation par flux, avant de les fusionner avec les données existantes et de mettre à jour la vue d’union. Par conséquent, vous pouvez instantanément effectuer des calculs et prendre des décisions pour offrir aux clients de meilleures expériences personnalisées lorsqu’ils interagissent avec votre marque.
+Adobe Experience Platform [!DNL Data Science Workspace] fournit les outils et les ressources nécessaires pour créer, évaluer et utiliser des modèles d’apprentissage automatique afin de générer des prévisions et des insights sur les données. Lorsque des insights d’apprentissage automatique sont ingérés dans une [!DNL Profile]Jeu de données compatible, ces mêmes données sont également ingérées en tant que [!DNL Profile] enregistrements pouvant ensuite être segmentés à l’aide de [!DNL Adobe Experience Platform Segmentation Service].
 
 Ce document fournit des liens vers des tutoriels qui vous permettent d’enrichir [!DNL Real-time Customer Profile] avec vos insights d’apprentissage automatique.
 
