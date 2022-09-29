@@ -3,10 +3,10 @@ title: Présentation des flux de données
 description: Connectez votre intégration SDK Experience Platform côté client à des produits Adobe et à des destinations tierces.
 keywords: configuration;flux de données;datastreamId;edge;identifiant de flux de données;Paramètres d’environnement;edgeConfigId;identité;synchronisation des identifiants activée;Identifiant de conteneur de synchronisation d’identifiant;Sandbox;Diffusion d’entrée;Jeu de données d’événement;cible;code client;Jeton de propriété;Identifiant d’environnement cible;Destinations de cookie;Destinations d’url;identifiant de suite de rapports de blocs de paramètres Analytics;Préparation des données pour la collecte de données;Préparation des données;Mappeur;Mappeur XDM;Mappeur sur Edge;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 81b20d40d3511592125cba123fa070fc27aace5a
 workflow-type: tm+mt
-source-wordcount: '1725'
-ht-degree: 95%
+source-wordcount: '1789'
+ht-degree: 92%
 
 ---
 
@@ -20,29 +20,29 @@ Ce document décrit les étapes de configuration d’un flux de données dans l�
 
 Vous pouvez créer et gérer des flux de données dans l’interface utilisateur de la collecte de données ou l’interface utilisateur Experience Platform en sélectionnant **[!UICONTROL Datastreams]** dans le volet de navigation de gauche.
 
-![Onglet Flux de données dans l’interface utilisateur](../images/datastreams/overview/datastreams-tab.png)
+![Onglet Flux de données dans l’interface utilisateur](../assets/datastreams/overview/datastreams-tab.png)
 
 L’onglet [!UICONTROL Flux de données] affiche une liste des flux de données existants, y compris leur nom convivial, leur identifiant et leur date de dernière modification. Sélectionnez le nom d’un flux de données pour [afficher les détails et configurer des services](#view-details).
 
 Sélectionnez l’icône « plus » (**…**) d’un flux de données spécifique afin d’afficher plus d’options. Sélectionnez **[!UICONTROL Modifier]** pour mettre à jour la [configuration de base](#configure) du flux de données ou sélectionnez **[!UICONTROL Supprimer]** pour supprimer le flux de données.
 
-![Options de modification ou de suppression d’un flux de données existant](../images/datastreams/overview/edit-datastream.png)
+![Options de modification ou de suppression d’un flux de données existant](../assets/datastreams/overview/edit-datastream.png)
 
 ## Créer un flux de données {#create}
 
 Pour créer un flux de données, commencez par sélectionner **[!UICONTROL Nouveau flux de données]**.
 
-![Sélectionner un nouveau flux de données](../images/datastreams/overview/new-datastream-button.png)
+![Sélectionner un nouveau flux de données](../assets/datastreams/overview/new-datastream-button.png)
 
 Le processus de création du flux de données s’affiche, en commençant à l’étape de configuration. Ensuite, vous devez fournir un nom et une description facultative pour le flux de données.
 
 Si vous configurez ce flux de données pour l’utiliser dans Experience Platform et que vous utilisez le SDK web de Platform, vous devez également sélectionner un [schéma de modèle de données d’expérience (XDM) basé sur un événement](../../xdm/classes/experienceevent.md) pour représenter les données que vous prévoyez d’ingérer.
 
-![Configuration de base d’un flux de données](../images/datastreams/overview/configure.png)
+![Configuration de base d’un flux de données](../assets/datastreams/overview/configure.png)
 
 Sélectionnez **[!UICONTROL Options avancées]** pour afficher des commandes supplémentaires permettant de configurer le flux de données.
 
-![Options de configuration avancées](../images/datastreams/overview/advanced-options.png)
+![Options de configuration avancées](../assets/datastreams/overview/advanced-options.png)
 
 | Paramètre | Description |
 | --- | --- |
@@ -57,7 +57,7 @@ Ensuite, si vous configurez le flux de données d’Experience Platform, suivez 
 
 Après avoir configuré un nouveau flux de données ou sélectionné un flux de données existant à afficher, sa page de détails s’affiche. Vous y trouverez des informations supplémentaires sur le flux de données, y compris son identifiant.
 
-![Page de détails d’un flux de données créé](../images/datastreams/overview/view-details.png)
+![Page de détails d’un flux de données créé](../assets/datastreams/overview/view-details.png)
 
 À partir de l’écran de détails du flux de données, vous pouvez [ajouter des services](#add-services) pour activer les fonctionnalités des produits Adobe Experience Cloud auxquels vous avez accès. Vous pouvez également modifier la [configuration de base](#create) du flux de données, mettre à jour ses [règles de mappage](./data-prep.md), [copier le flux de données](#copy) ou le supprimer entièrement.
 
@@ -65,15 +65,15 @@ Après avoir configuré un nouveau flux de données ou sélectionné un flux de 
 
 Sur la page de détails d’un flux de données, sélectionnez **[!UICONTROL Ajouter un service]** pour commencer à ajouter les services disponibles à ce flux de données.
 
-![Sélectionner Ajouter un service pour continuer](../images/datastreams/overview/add-service.png)
+![Sélectionner Ajouter un service pour continuer](../assets/datastreams/overview/add-service.png)
 
 Sur l’écran suivant, utilisez le menu déroulant pour sélectionner un service à configurer pour ce flux de données. Seuls les services auxquels vous avez accès apparaissent dans cette liste.
 
-![Sélectionner un service dans la liste](../images/datastreams/overview/service-selection.png)
+![Sélectionner un service dans la liste](../assets/datastreams/overview/service-selection.png)
 
 Sélectionnez le service souhaité, renseignez les options de configuration qui s’affichent, puis sélectionnez **[!UICONTROL Enregistrer]** pour ajouter le service au flux de données. Tous les services ajoutés s’affichent dans la vue des détails du flux de données.
 
-![Services ajoutés à un flux de données](../images/datastreams/overview/services-added.png)
+![Services ajoutés à un flux de données](../assets/datastreams/overview/services-added.png)
 
 Les sous-sections ci-dessous décrivent les options de configuration de chaque service.
 
@@ -85,7 +85,7 @@ Les sous-sections ci-dessous décrivent les options de configuration de chaque s
 
 Ce service contrôle si et comment les données sont envoyées à Adobe Analytics. Vous trouverez des informations supplémentaires dans le guide sur l’[envoi de données à Analytics](../data-collection/adobe-analytics/analytics-overview.md).
 
-![Bloc de paramètres d’Adobe Analytics](../images/datastreams/overview/analytics-config.png)
+![Bloc de paramètres d’Adobe Analytics](../assets/datastreams/overview/analytics-config.png)
 
 | Paramètre | Description |
 | --- | --- |
@@ -95,7 +95,7 @@ Ce service contrôle si et comment les données sont envoyées à Adobe Analytic
 
 Ce service contrôle si et comment les données sont envoyées à Adobe Audience Manager. Il suffit d’activer cette section pour envoyer des données à Audience Manager. Les autres paramètres sont facultatifs, mais recommandés.
 
-![Bloc de paramètres d’Adobe Audience Manager](../images/datastreams/overview/audience-manager-config.png)
+![Bloc de paramètres d’Adobe Audience Manager](../assets/datastreams/overview/audience-manager-config.png)
 
 | Paramètre | Description |
 | --- | --- |
@@ -108,27 +108,28 @@ Ce service contrôle si et comment les données sont envoyées à Adobe Audience
 >
 >Lors de l’activation d’un flux de données pour Platform, prenez note de l’environnement de test Platform que vous utilisez actuellement, tel qu’affiché dans le ruban supérieur de l’interface utilisateur.
 >
->![Sandbox sélectionné](../images/datastreams/overview/platform-sandbox.png)
+>![Sandbox sélectionné](../assets/datastreams/overview/platform-sandbox.png)
 >
 >Les sandbox sont des partitions virtuelles dans Adobe Experience Platform qui vous permettent d’isoler les données et mises en œuvre des autres membres de l’organisation. Une fois un flux de données créé, le sandbox ne peut plus être modifié. Pour plus d’informations sur le rôle des sandbox dans Experience Platform, consultez la [documentation sur les sandbox](../../sandboxes/home.md).
 
 Ce service contrôle si et comment les données sont envoyées à Adobe Experience Platform.
 
-![Bloc de paramètres d’Adobe Experience Platform](../images/datastreams/overview/platform-config.png)
+![Bloc de paramètres d’Adobe Experience Platform](../assets/datastreams/overview/platform-config.png)
 
 | Paramètre | Description |
 |---| --- |
 | [!UICONTROL Jeu de données d’événement] | **(Obligatoire)** Sélectionnez le jeu de données de Platform vers lequel les données d’événement client seront diffusées. Ce schéma doit utiliser la [classe XDM ExperienceEvent](../../xdm/classes/experienceevent.md). |
 | [!UICONTROL Jeu de données de profil] | Sélectionnez le jeu de données de Platform auquel les données d’attribut du client seront envoyées. Ce schéma doit utiliser la [classe XDM Individual Profile](../../xdm/classes/individual-profile.md). |
-| [!UICONTROL Offer Decisioning] | Cochez cette case pour activer Offer Decisioning pour une mise en œuvre du SDK web de Platform. Consultez le guide sur l’[utilisation d’Offer Decisioning avec le SDK web de Platform](../personalization/offer-decisioning/offer-decisioning-overview.md) pour plus d’informations sur la mise en œuvre. Pour plus d’informations sur les fonctionnalités d’Offer Decisioning, consultez la [Documentation d’Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started/starting-offer-decisioning.html?lang=fr). |
-| [!UICONTROL Segmentation Edge] | Cochez cette case pour activer la [segmentation Edge](../../segmentation/ui/edge-segmentation.md) de ce flux de données. Lorsque le SDK envoie des données par le biais d’un flux de données compatible avec la segmentation Edge, toutes les adhésions au segment mises à jour pour le profil en question sont renvoyées dans la réponse.<br><br>Cette option peut être utilisée conjointement avec [!UICONTROL Destinations de personnalisation] pour les [cas d’utilisation de la personnalisation de page suivante](../../destinations/ui/configure-personalization-destinations.md). |
-| [!UICONTROL Destinations de personnalisation] | Lorsque vous activez cette fonction après avoir activé la case à cocher [!UICONTROL Segmentation Edge], cette option permet au flux de données de se connecter aux destinations de personnalisation, telles que [Personnalisation personnalisée](../../destinations/catalog/personalization/custom-personalization.md). Consultez la documentation des destinations pour obtenir des instructions spécifiques sur la [configuration des destinations de personnalisation](../../destinations/ui/configure-personalization-destinations.md). |
+| [!UICONTROL Offer Decisioning] | Cochez cette case pour activer Offer Decisioning pour une mise en œuvre du SDK web de Platform. Consultez le guide sur l’[utilisation d’Offer Decisioning avec le SDK web de Platform](../personalization/offer-decisioning/offer-decisioning-overview.md) pour plus d’informations sur la mise en œuvre. <br><br> Pour plus d’informations sur les fonctionnalités d’Offer Decisioning, consultez la [Documentation d’Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started/starting-offer-decisioning.html?lang=fr). |
+| [!UICONTROL Segmentation Edge] | Cochez cette case pour activer la [segmentation Edge](../../segmentation/ui/edge-segmentation.md) de ce flux de données. Lorsque le SDK envoie des données par le biais d’un flux de données compatible avec la segmentation Edge, toutes les adhésions au segment mises à jour pour le profil en question sont renvoyées dans la réponse.<br><br>Cette option peut être utilisée conjointement avec [!UICONTROL Destinations de personnalisation] pour [Cas d’utilisation de la personnalisation de la page suivante](../../destinations/ui/configure-personalization-destinations.md)ou en combinaison avec [!UICONTROL Adobe Journey Optimizer]. |
+| [!UICONTROL Destinations de personnalisation] | Lorsque vous activez cette fonction après avoir activé la case à cocher [!UICONTROL Segmentation Edge], cette option permet au flux de données de se connecter aux destinations de personnalisation, telles que [Personnalisation personnalisée](../../destinations/catalog/personalization/custom-personalization.md). <br><br>Consultez la documentation des destinations pour obtenir des instructions spécifiques sur la [configuration des destinations de personnalisation](../../destinations/ui/configure-personalization-destinations.md). |
+| [!UICONTROL Adobe Journey Optimizer] | Cochez cette case pour activer [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=fr) pour ce flux de données. <br><br> L’activation de cette option permet à l’ensemble de données de renvoyer du contenu personnalisé à partir de campagnes Web et d’entrée basées sur des applications dans [!DNL Adobe Journey Optimizer]. Cette option nécessite [!UICONTROL Segmentation Edge] pour être principal. If [!UICONTROL Segmentation Edge] n’est pas cochée, cette option est grisée. |
 
 ### Paramètres d’Adobe Target {#target}
 
 Ce service contrôle si et comment les données sont envoyées à Adobe Target.
 
-![Bloc de paramètres d’Adobe Target](../images/datastreams/overview/target-config.png)
+![Bloc de paramètres d’Adobe Target](../assets/datastreams/overview/target-config.png)
 
 | Paramètre | Description |
 | --- | --- |
@@ -140,7 +141,7 @@ Ce service contrôle si et comment les données sont envoyées à Adobe Target.
 
 Ce service contrôle si et comment les données sont envoyées au [transfert d’événement](../../tags/ui/event-forwarding/overview.md).
 
-![Section Transfert d’événement de l’interface utilisateur de configuration](../images/datastreams/overview/event-forwarding-config.png)
+![Section Transfert d’événement de l’interface utilisateur de configuration](../assets/datastreams/overview/event-forwarding-config.png)
 
 | Paramètre | Description |
 | --- | --- |
@@ -161,15 +162,15 @@ Vous pouvez créer une copie d’un flux de données existant et en modifier les
 
 À partir de la page principale de l’espace de travail [!UICONTROL Flux de données], sélectionnez les points de suspension (**....**) pour le flux de données en question, puis sélectionnez **[!UICONTROL Copier]**.
 
-![Image illustrant l’option [!UICONTROL Copier] sélectionnée dans la vue de liste du flux de données](../images/datastreams/overview/copy-datastream-list.png).
+![Image illustrant l’option [!UICONTROL Copier] sélectionnée dans la vue de liste du flux de données](../assets/datastreams/overview/copy-datastream-list.png).
 
 Vous pouvez également sélectionner **[!UICONTROL Copier le flux de données]** dans la vue des détails d’un flux de données particulier.
 
-![Image illustrant l’option [!UICONTROL Copier] sélectionnée dans la vue des détails du flux de données](../images/datastreams/overview/copy-datastream-details.png).
+![Image illustrant l’option [!UICONTROL Copier] sélectionnée dans la vue des détails du flux de données](../assets/datastreams/overview/copy-datastream-details.png).
 
 Une boîte de dialogue de confirmation s’affiche, vous invitant à fournir un nom unique pour la création du flux de données, ainsi que des détails sur les options de configuration qui seront copiées. Une fois prêt, sélectionnez **[!UICONTROL Copier]**.
 
-![Image de la boîte de dialogue de confirmation pour la copie d’un flux de données](../images/datastreams/overview/copy-datastream-confirm.png)
+![Image de la boîte de dialogue de confirmation pour la copie d’un flux de données](../assets/datastreams/overview/copy-datastream-confirm.png)
 
 La page principale de l’espace de travail [!UICONTROL Flux de données] réapparaît avec le nouveau flux de données répertorié.
 

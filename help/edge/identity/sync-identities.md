@@ -3,7 +3,7 @@ title: Synchronisation des identités entre Audience Manager et Adobe Experience
 description: Découvrez comment synchroniser les identités entre Audience Manager et Adobe Experience Platform à l’aide du SDK Web Platform
 seo-description: Learn how to sync identities with Adobe Audience Manager with Experience Platform Web SDK
 keywords: audience manager;aam;identités;identités de synchronisation;espace de noms;
-source-git-commit: 3a1d08a4ea87ee3db7a2a8b048d5721fa679c372
+source-git-commit: f5270d1d1b9697173bc60d16c94c54d001ae175a
 workflow-type: tm+mt
 source-wordcount: '195'
 ht-degree: 0%
@@ -17,7 +17,7 @@ Le SDK Web de Adobe Experience Platform prend en charge la possibilité de décl
 
 Choisissez vos espaces de noms dans la [Espaces de noms Identity Service](../../identity/../identity-service/namespaces.md) pour indiquer le contexte auquel une identité se rapporte, en utilisant les valeurs de la colonne Symbole d’identité :
 
-![Vue de l’interface utilisateur des espaces de noms](../images/identity/edge_namespaceUI_identity-symbol.png)
+![Vue de l’interface utilisateur des espaces de noms](../assets/identity/edge_namespaceUI_identity-symbol.png)
 
 En tant que client d’Audience Manager, toutes vos sources de données existantes qui utilisent le type d’ID : Un espace de noms d’identité est automatiquement associé à l’ensemble des appareils. Pour trouver l’espace de noms d’identité correspondant à votre source de données d’Audience Manager, connectez-vous à Adobe Experience Platform et accédez à la section Identités .
 

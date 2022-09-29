@@ -2,7 +2,7 @@
 title: Configuration de l’extension du SDK Web Adobe Experience Platform
 description: Comment configurer l’extension de balise du SDK Web de Adobe Experience Platform dans l’interface utilisateur.
 exl-id: 96d32db8-0c9a-49f0-91f3-0244522d66df
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 3ab02646968222c0ad09c1d8ce8fda04de7aaac6
 workflow-type: tm+mt
 source-wordcount: '1041'
 ht-degree: 6%
@@ -19,15 +19,15 @@ Ce document explique comment configurer l’extension dans l’interface utilisa
 
 Si l’extension SDK Web Platform a déjà été installée pour une propriété, ouvrez la propriété dans l’interface utilisateur et sélectionnez l’option **[!UICONTROL Extensions]** . Sous Platform Web SDK, sélectionnez **[!UICONTROL Configurer]**.
 
-![](../images/extension/overview/configure.png)
+![](../assets/extension/overview/configure.png)
 
 Si vous n’avez pas encore installé l’extension, sélectionnez l’extension **[!UICONTROL Catalogue]** . Dans la liste des extensions disponibles, recherchez l’extension SDK Web Platform et sélectionnez **[!UICONTROL Installer]**.
 
-![](../images/extension/overview/install.png)
+![](../assets/extension/overview/install.png)
 
 Dans les deux cas, vous accédez à la page de configuration du SDK Web Platform. Les sections ci-dessous expliquent les options de configuration de l’extension.
 
-![](../images/extension/overview/config-screen.png)
+![](../assets/extension/overview/config-screen.png)
 
 ## Options de configuration générales
 
@@ -56,7 +56,7 @@ Consultez le guide sur la [datastreams](../datastreams/overview.md) pour plus d�
 
 ## [!UICONTROL Confidentialité]
 
-![](../images/extension/overview/privacy.png)
+![](../assets/extension/overview/privacy.png)
 
 Le [!UICONTROL Confidentialité] vous permet de configurer la manière dont le SDK traite les signaux de consentement de l’utilisateur de votre site web. Plus précisément, il vous permet de sélectionner le niveau de consentement par défaut supposé d’un utilisateur si aucune autre préférence de consentement explicite n’a été fournie. Le niveau de consentement par défaut n’est pas enregistré dans le profil de l’utilisateur. Le tableau suivant décompose les fonctions de chaque option :
 
@@ -71,7 +71,7 @@ Utilisez Out ou Pending (En attente) si vous avez besoin du consentement explici
 
 ## [!UICONTROL Identité]
 
-![](../images/extension/overview/identity.png)
+![](../assets/extension/overview/identity.png)
 
 ### [!UICONTROL Migration de l’ECID depuis VisitorAPI]
 
@@ -83,13 +83,13 @@ Cette option permet au SDK de tenter de stocker un identifiant d’utilisateur d
 
 ## [!UICONTROL Personnalisation]
 
-![](../images/extension/overview/personalization.png)
+![](../assets/extension/overview/personalization.png)
 
 Si vous souhaitez masquer certaines parties si le contenu personnalisé de votre site est chargé, vous pouvez spécifier les éléments à masquer dans l’éditeur de style de prémasquage. Vous pouvez ensuite copier le fragment de code de masquage préalable par défaut qui vous a été fourni et le coller dans le `<head>`de votre site de HTML.
 
 ## [!UICONTROL Collecte de données]
 
-![](../images/extension/overview/data-collection.png)
+![](../assets/extension/overview/data-collection.png)
 
 ### [!UICONTROL Fonction de rappel]
 
@@ -105,7 +105,7 @@ Par défaut, le SDK collecte certaines données contextuelles concernant l’app
 
 ## [!UICONTROL Paramètres avancés]
 
-![](../images/extension/overview/advanced-settings.png)
+![](../assets/extension/overview/advanced-settings.png)
 
 ### [!UICONTROL Chemin de base Edge]
 

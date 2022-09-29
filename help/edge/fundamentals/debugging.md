@@ -3,7 +3,7 @@ title: Débogage dans le SDK Web de Adobe Experience Platform
 description: Découvrez comment activer/désactiver les fonctionnalités de débogage dans le SDK Web Experience Platform.
 keywords: débogage du sdk web;débogage;configurer;commande de configuration;commande de débogage;edgeConfigId;setDebug;debugEnabled;debug;
 exl-id: 4e893af8-a48e-48dc-9737-4c61b3355f03
-source-git-commit: c1e6b1519bc40e7d36bd83dc49e442d3d5583fed
+source-git-commit: f5270d1d1b9697173bc60d16c94c54d001ae175a
 workflow-type: tm+mt
 source-wordcount: '515'
 ht-degree: 62%
@@ -21,7 +21,7 @@ Le débogage est désactivé par défaut, mais peut être activé de quatre mani
 * Paramètre de chaîne de requête
 * Activation/désactivation du débogage dans Adobe Experience Platform Debugger. Adobe Experience Platform est un outil puissant qui examine vos pages web et vous aide à déboguer les problèmes d’implémentation avec vos produits Experience Cloud. Adobe Experience Platform Debugger est disponible sous la forme d’un [Chrome](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) et [Firefox](https://addons.mozilla.org/fr/firefox/addon/adobe-experience-platform-dbg/) extension . Le débogage peut être activé à partir de l’onglet de configuration de la section SDK Web AEP.
 
-![](../images/enable-debugging.png)
+![](../assets/enable-debugging.png)
 
 ## Activation/désactivation du débogage avec la commande Configure
 

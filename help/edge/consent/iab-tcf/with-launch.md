@@ -2,7 +2,7 @@
 title: Intégration de la prise en charge du TCF 2.0 de l’IAB à l’aide de balises et de l’extension du SDK Web Platform
 description: Découvrez comment configurer le consentement du TCF 2.0 de l’IAB avec les balises et l’extension du SDK Web Adobe Experience Platform.
 exl-id: dc0e6b68-8257-4862-9fc4-50b370ef204f
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: f5270d1d1b9697173bc60d16c94c54d001ae175a
 workflow-type: tm+mt
 source-wordcount: '838'
 ht-degree: 0%
@@ -64,7 +64,7 @@ Ce code personnalisé effectue deux opérations :
 * Valeur : &quot;%IAB TCF Consent String%&quot;
 * Le RGPD s’applique : &quot;%Consentement du TCF de l’IAB RGPD%&quot;
 
-![Action de consentement du jeu IAB](../../images/consent/iab-tcf/with-launch/iab-action.png)
+![Action de consentement du jeu IAB](../../assets/consent/iab-tcf/with-launch/iab-action.png)
 
 >[!IMPORTANT]
 >
