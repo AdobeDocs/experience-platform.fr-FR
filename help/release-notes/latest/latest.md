@@ -1,10 +1,10 @@
 ---
 title: Notes de mise à jour de Adobe Experience Platform - Septembre 2022
 description: Notes de mise à jour de septembre 2022 pour Adobe Experience Platform.
-source-git-commit: 64c376b52aa7f7827c19194d677d8a1648c04195
+source-git-commit: c9abf2d0ef2b8a9a9727224fdbb4c784dd041158
 workflow-type: tm+mt
-source-wordcount: '2776'
-ht-degree: 30%
+source-wordcount: '2959'
+ht-degree: 31%
 
 ---
 
@@ -24,6 +24,7 @@ Mises à jour des fonctionnalités existantes dans Adobe Experience Platform 
 - [Journaux d’audit](#audit-logs)
 - [[!DNL Dashboards]](#dashboards)
 - [Collecte de données](#data-collection)
+- [Destinations](#destinations)
 - [Modèle de données d’expérience (XDM)](#xdm)
 - [Service d’identités](#identity-service)
 - [Query Service](#query-service)
@@ -135,6 +136,34 @@ Adobe Experience Platform fournit une suite de technologies qui vous permetten
 {style=&quot;table-layout:auto&quot;}
 
 Pour plus d’informations sur la collecte de données dans Platform, consultez la [Présentation de la collecte de données](../../collection/home.md).
+
+## [!DNL Destinations] {#destinations}
+
+Les [!DNL Destinations] sont des intégrations préconfigurées à des plateformes de destination qui permettent d’activer facilement des données provenant d’Adobe Experience Platform. Vous pouvez utiliser les destinations pour activer vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
+
+**Fonctionnalités nouvelles ou mises à jour**
+
+| Fonctionnalité | Description |
+| ----------- | ----------- |
+| Destination SDK | Destination SDK offre désormais une prise en charge complète des partenaires et des clients qui créent des destinations (ou fichiers) productisées ou privées par lots. Pour plus d’informations, consultez les pages de documentation suivantes : <ul><li>[Présentation de la Destination SDK](/help/destinations/destination-sdk/overview.md)</li><li>[Configuration d’une destination basée sur des fichiers](/help/destinations/destination-sdk/configure-file-based-destination-instructions.md)</li><li>[Configuration des options de formatage de fichier pour les destinations basées sur des fichiers](/help/destinations/destination-sdk/configure-file-based-destination-instructions.md)</li><li>[Test de vos destinations basées sur des fichiers](/help/destinations/destination-sdk/file-based-destination-testing-overview.md)</li></ul> |
+
+{style=&quot;table-layout:auto&quot;}
+
+**Destinations nouvelles ou mises à jour**
+
+| Destination | Description |
+| ----------- | ----------- |
+| [[!DNL Salesforce CRM]](../..//destinations/catalog/crm/salesforce.md) | Le [!DNL Salesforce CRM] La destination a été mise à jour afin de prendre en charge les mises à jour des contacts et des prospects, ainsi que des améliorations des performances pour des mises à jour plus rapides. |
+
+{style=&quot;table-layout:auto&quot;}
+
+**Documentation nouvelle ou mise à jour**
+
+| Documentation | Description |
+| ----------- | ----------- |
+| Documentation de l’API du service de flux de destinations | Le [Documentation de référence de l’API Destinations](https://developer.adobe.com/experience-platform-apis/references/destinations/) a été mis à jour afin d’inclure des conseils sur la manière d’effectuer des opérations sur des destinations basées sur des fichiers. Les opérations pour les destinations de diffusion en continu seront ajoutées ultérieurement. |
+
+Pour des informations plus générales sur les destinations, consultez la [présentation des destinations](../../destinations/home.md).
 
 ## Modèle de données d’expérience (XDM) {#xdm}
 
