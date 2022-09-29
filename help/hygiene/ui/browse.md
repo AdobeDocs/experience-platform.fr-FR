@@ -2,9 +2,9 @@
 title: Parcourir les ordres de travail relatifs au nettoyage de données
 description: Découvrez comment afficher et gérer les ordres de travail de nettoyage de données existants dans l’interface utilisateur d’Adobe Experience Platform.
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
-source-git-commit: 425298ec28517bba4eca1bf0966fd3b205fce764
+source-git-commit: e4cc78591d0d3b4abd660956b1263092697d63d5
 workflow-type: tm+mt
-source-wordcount: '857'
+source-wordcount: '863'
 ht-degree: 75%
 
 ---
@@ -16,6 +16,10 @@ ht-degree: 75%
 >title="Identifiants des ordres de travail"
 >abstract="Lorsqu’une demande de nettoyage de données est envoyée au système, un ordre de travail est créé pour exécuter la tâche demandée. En d’autres termes, un ordre de travail représente un processus spécifique de nettoyage de données comprenant le statut actuel et d’autres détails connexes. Chaque ordre de travail est automatiquement doté d’un identifiant unique lors de sa création."
 >text="See the data hygiene UI guide to learn more."
+
+>[!IMPORTANT]
+>
+>Actuellement, les fonctionnalités d’hygiène des données de Adobe Experience Platform ne sont disponibles que pour les organisations qui ont acheté Adobe Healthcare Shield ou Privacy Shield.
 
 Lorsqu’une demande de nettoyage de données est envoyée au système, un ordre de travail est créé pour exécuter la tâche demandée. Un ordre de travail représente un processus spécifique de nettoyage de données (par exemple, l’expiration planifiée d’un jeu de données), qui comprend le statut actuel et d’autres détails connexes.
 
@@ -30,10 +34,6 @@ Lorsque vous accédez pour la première fois à l’espace de travail **[!UICONT
 La liste affiche uniquement les ordres de travail d’une catégorie à la fois. Sélectionner **[!UICONTROL Consommateur]** pour afficher la liste des tâches de suppression des clients, et **[!UICONTROL Jeu de données]** pour afficher une liste des expirations de jeux de données planifiées.
 
 ![Image illustrant l’onglet [!UICONTROL Jeu de données]](../images/ui/browse/dataset-tab.png).
-
->[!IMPORTANT]
->
->Les suppressions des consommateurs ne sont disponibles que pour les organisations qui ont acheté Adobe Healthcare Shield ou Privacy Shield.
 
 Sélectionnez l’icône d’entonnoir (![image de l’icône d’entonnoir](../images/ui/browse/funnel-icon.png)) pour consulter une liste de filtres pour les ordres de travail affichés.
 

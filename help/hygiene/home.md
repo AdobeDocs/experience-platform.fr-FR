@@ -2,7 +2,7 @@
 title: Présentation de l’hygiène des données
 description: Le nettoyage de données d’Adobe Experience Platform vous permet de gérer le cycle de vie des données en mettant à jour ou en purgeant des enregistrements obsolètes ou inexacts.
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
-source-git-commit: 51181dccbd37df60e438f34090ebaeb9e327c4ce
+source-git-commit: e4cc78591d0d3b4abd660956b1263092697d63d5
 workflow-type: tm+mt
 source-wordcount: '756'
 ht-degree: 26%
@@ -11,16 +11,16 @@ ht-degree: 26%
 
 # Veille des données dans Adobe Experience Platform
 
+>[!IMPORTANT]
+>
+>Actuellement, l’hygiène des données n’est disponible que pour les organisations qui ont acheté Adobe Healthcare Shield ou Privacy Shield.
+
 Adobe Experience Platform offre un ensemble d’outils fiables pour gérer des opérations de données complexes et volumineuses afin d’orchestrer les expériences client. Les données étant ingérées dans le système au fil du temps, il devient de plus en plus important de gérer les banques de données pour que les données soient utilisées comme prévu, mises à jour lorsque des données incorrectes doivent être corrigées et supprimées lorsque les politiques d’entreprise le jugent nécessaire.
 
 Les fonctionnalités d’hygiène des données de Platform vous permettent de gérer vos données client stockées par le biais des éléments suivants :
 
 * Planification de l’expiration automatisée des jeux de données
 * Suppression des données des consommateurs en fonction des identités ingérées
-
->[!NOTE]
->
->Les demandes de suppression des consommateurs ne sont disponibles que pour les organisations qui ont acheté Adobe Healthcare Shield ou Privacy Shield.
 
 Ces activités peuvent être exécutées à l’aide du [[!UICONTROL Hygiène des données] Espace de travail de l’interface utilisateur](#ui) ou le [API Data Hygiene](#api). Lorsqu’une tâche d’hygiène des données s’exécute, le système fournit des mises à jour de transparence à chaque étape du processus. Voir la section sur [calendrier et transparence](#timelines-and-transparency) pour plus d’informations sur la représentation de chaque type de tâche dans le système.
 
