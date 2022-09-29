@@ -5,9 +5,9 @@ title: Définition des champs d’énumération et des valeurs proposées dans l
 description: Découvrez comment définir des énumérations et des valeurs suggérées pour les champs de chaîne dans l’interface utilisateur de l’Experience Platform.
 topic-legacy: user guide
 exl-id: 67ec5382-31de-4f8d-9618-e8919bb5a472
-source-git-commit: e515e32588991e468429c9256533732d04a4339f
+source-git-commit: ea27486a198f5248eeb5348ce20865bc41c2339a
 workflow-type: tm+mt
-source-wordcount: '1295'
+source-wordcount: '1207'
 ht-degree: 0%
 
 ---
@@ -49,7 +49,7 @@ Sélectionner **[!UICONTROL Enumérations et valeurs proposées]**, puis sélect
 
 ![Image montrant l’option Valeurs proposées sélectionnée dans l’interface utilisateur](../../images/ui/fields/enum/suggested-add-row.png)
 
-Sous , **[!UICONTROL Nom d’affichage]** indiquez un nom convivial pour la valeur telle que vous souhaitez la voir apparaître dans l’interface utilisateur de segmentation. Pour ajouter d’autres valeurs suggérées, sélectionnez **[!UICONTROL Ajouter une ligne]** et répétez le processus selon vos besoins. Pour supprimer une ligne précédemment ajoutée, cliquez sur l’icône de suppression (![Image de l’icône de suppression](../../images/ui/fields/enum/remove-icon.png)) en regard de la ligne en question.
+Sous , **[!UICONTROL Nom d’affichage]** indiquez un nom convivial pour la valeur telle que vous souhaitez la voir apparaître dans l’interface utilisateur de segmentation. Pour ajouter d’autres valeurs suggérées, sélectionnez **[!UICONTROL Ajouter une ligne]** et répétez le processus selon vos besoins. Pour supprimer une ligne précédemment ajoutée, sélectionnez ![l’icône de suppression](../../images/ui/fields/enum/remove-icon.png) à côté de la ligne en question.
 
 Lorsque vous avez terminé, sélectionnez **[!UICONTROL Appliquer]** pour appliquer les modifications au schéma.
 
@@ -61,25 +61,25 @@ Lorsque vous avez terminé, sélectionnez **[!UICONTROL Appliquer]** pour appliq
 
 ### Gestion des valeurs suggérées pour les champs standard
 
-Certains champs des composants XDM standard contiennent leurs propres valeurs suggérées, telles que `eventType` de la [[!UICONTROL XDM ExperienceEvent] class](../../classes/experienceevent.md). Lorsque vous utilisez ces champs dans vos schémas, vous pouvez utiliser les bascules disponibles pour contrôler les valeurs suggérées existantes à utiliser.
+Certains champs des composants XDM standard contiennent leurs propres valeurs suggérées, telles que `eventType` de la [[!UICONTROL XDM ExperienceEvent] class](../../classes/experienceevent.md). Bien que vous puissiez créer d’autres valeurs suggérées pour un champ standard, vous ne pouvez pas modifier ni supprimer les valeurs suggérées qui ne sont pas définies par votre organisation. Lors de l’affichage d’un champ standard dans l’interface utilisateur, les valeurs proposées sont affichées, mais sont en lecture seule.
 
 ![Image montrant les valeurs d’énumération et les noms d’affichage renseignés pour le champ de chaîne dans l’interface utilisateur](../../images/ui/fields/enum/suggested-standard.png)
 
-Comme pour les champs personnalisés, sélectionnez **[!UICONTROL Ajouter une ligne]** pour ajouter vos propres valeurs suggérées pour les champs standard.
+Pour ajouter de nouvelles valeurs suggérées pour un champ standard, sélectionnez **[!UICONTROL Ajouter une ligne]**. Pour supprimer une valeur suggérée précédemment ajoutée par votre organisation, sélectionnez ![l’icône de suppression](../../images/ui/fields/enum/remove-icon.png) à côté de la ligne en question.
 
-![Image montrant les valeurs d’énumération et les noms d’affichage renseignés pour le champ de chaîne dans l’interface utilisateur](../../images/ui/fields/enum/suggested-standard.png)
+![Image montrant les valeurs d’énumération et les noms d’affichage renseignés pour le champ de chaîne dans l’interface utilisateur](../../images/ui/fields/enum/suggested-standard-add.png)
 
-### Suppression des valeurs proposées pour les champs standard
+<!-- ### Removing suggested values for standard fields
 
-Seules les valeurs suggérées que vous définissez peuvent être supprimées d’un champ standard. Les valeurs suggérées existantes peuvent être désactivées afin qu’elles n’apparaissent plus dans la liste déroulante de segmentation, mais elles ne peuvent pas être supprimées directement.
+Only suggested values that you define can be removed from a standard field. Existing suggested values can be disabled so that they no longer appear in the segmentation dropdown, but they cannot be removed outright.
 
-Prenons l’exemple d’un schéma de profil où la valeur suggérée pour la variable standard `person.gender` est désactivé :
+For example, consider a profile schema where the a suggested value for the standard `person.gender` field is disabled:
 
-![Image montrant les valeurs d’énumération et les noms d’affichage renseignés pour le champ de chaîne dans l’interface utilisateur](../../images/ui/fields/enum/standard-enum-disabled.png)
+![Image showing the enum values and display names filled out for the string field in the UI](../../images/ui/fields/enum/standard-enum-disabled.png)
 
-Dans cet exemple, le nom d’affichage &quot;[!UICONTROL Non spécifique]&quot; n’est désormais plus visible dans la liste déroulante de segmentation. Cependant, la valeur `non_specific` fait toujours partie de la liste des champs énumérés et est donc toujours autorisé lors de l’ingestion. En d’autres termes, vous ne pouvez pas désactiver la valeur d’énumération réelle du champ standard, car cela irait à l’encontre du principe selon lequel seules les modifications qui rendent un champ moins restrictif seraient autorisées.
+In this example, the display name "[!UICONTROL Non-specific]" is now disabled from being shown in the segmentation dropdown list. However, the value `non_specific` is still part of the list of enumerated fields and is therefore still allowed on ingestion. In other words, you cannot disable the actual enum value for the standard field as it would go against the principle of only allowing changes that make a field less restrictive.
 
-Voir [section ci-dessous](#evolution) pour plus d’informations sur les règles de mise à jour des énumérations et des valeurs suggérées pour les champs de schéma existants.
+See the [section below](#evolution) for more information on the rules for updating enums and suggested values for existing schema fields. -->
 
 ## Règles d’évolution pour les énumérations et les valeurs proposées {#evolution}
 
@@ -109,6 +109,13 @@ Si vous référencez le même chemin de champ personnalisé dans différents gro
 
 * Toutes les autres valeurs suggérées sont **AJOUTÉ** dans l’union.
 * Si la même valeur suggérée supplémentaire est définie dans plusieurs schémas, ces valeurs sont **FUSIONNÉ** dans l’union. En d’autres termes, la même valeur suggérée n’apparaîtra pas deux fois après la fusion.
+
+## Limites de validation
+
+En raison des limitations actuelles du système, il existe deux cas où une énumération n’est pas validée par le système lors de l’ingestion :
+
+1. L’énumération est définie sur une [champ de tableau](./array.md).
+1. L’énumération est définie à plusieurs niveaux au sein de la hiérarchie des schémas.
 
 ## Étapes suivantes
 
