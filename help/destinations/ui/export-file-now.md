@@ -3,9 +3,9 @@ title: (Version bêta) Exportation de fichiers à la demande vers des destinatio
 type: Tutorial
 description: Découvrez comment exporter des fichiers à la demande vers des destinations par lots à l’aide de l’interface utilisateur de l’Experience Platform.
 exl-id: 0cbe5089-b73d-4584-8451-2fc34d47c357
-source-git-commit: 874c590e83712a45e75308239fb71db04614bd1e
+source-git-commit: 29962e07aa50c97b6098f4c892facf48508d28cf
 workflow-type: tm+mt
-source-wordcount: '745'
+source-wordcount: '743'
 ht-degree: 14%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 14%
 
 >[!IMPORTANT]
 >
->Le **[!UICONTROL Exporter le fichier maintenant]** en Adobe Experience Platform Destination SDK est actuellement en version bêta. La documentation et les fonctionnalités peuvent changer.
+>Le **[!UICONTROL Exporter le fichier maintenant]** dans Adobe Experience Platform est actuellement en version bêta. La documentation et les fonctionnalités peuvent changer.
 >Contactez votre représentant Adobe pour accéder à cette fonctionnalité.
 
 >[!IMPORTANT]

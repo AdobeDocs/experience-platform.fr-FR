@@ -2,9 +2,9 @@
 description: Découvrez comment utiliser Destination SDK pour configurer une destination Amazon S3 avec des options de formatage de fichier prédéfinies et une configuration de nom de fichier personnalisée.
 title: Configurez une destination Amazon S3 avec des options de formatage de fichier prédéfinies et une configuration de nom de fichier personnalisée.
 exl-id: 0ecd3575-dcda-4e5c-af5c-247d4ea13fa1
-source-git-commit: 557db5b7eefdd7902895e428f7bc34e3ad8a6f58
+source-git-commit: 29962e07aa50c97b6098f4c892facf48508d28cf
 workflow-type: tm+mt
-source-wordcount: '770'
+source-wordcount: '746'
 ht-degree: 10%
 
 ---
@@ -12,10 +12,6 @@ ht-degree: 10%
 # Configurez une [!DNL Amazon S3] destination avec options de formatage de fichier prédéfinies et configuration de nom de fichier personnalisé
 
 ## Présentation {#overview}
-
->[!IMPORTANT]
->
->La fonctionnalité de configuration des destinations basées sur des fichiers à l’aide d’Adobe Experience Platform Destination SDK est actuellement en version bêta. La documentation et les fonctionnalités peuvent changer.
 
 Cette page décrit l’utilisation de la Destination SDK pour configurer une destination Amazon S3 avec des valeurs par défaut prédéfinies. [options de formatage de fichier](../../server-and-file-configuration.md#file-configuration) et une [configuration du nom de fichier](../../file-based-destination-configuration.md#file-name-configuration).
 

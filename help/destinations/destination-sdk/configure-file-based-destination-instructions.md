@@ -2,20 +2,16 @@
 description: Cette page répertorie et décrit les étapes de configuration d’une destination basée sur des fichiers à l’aide de Destination SDK.
 title: Utiliser la Destination SDK pour configurer une destination basée sur des fichiers
 exl-id: 84d73452-88e4-4e0f-8fc7-d0d8e10f9ff5
-source-git-commit: 557db5b7eefdd7902895e428f7bc34e3ad8a6f58
+source-git-commit: 29962e07aa50c97b6098f4c892facf48508d28cf
 workflow-type: tm+mt
-source-wordcount: '542'
-ht-degree: 84%
+source-wordcount: '516'
+ht-degree: 83%
 
 ---
 
 # Utiliser la Destination SDK pour configurer une destination basée sur des fichiers
 
 ## Présentation {#overview}
-
->[!IMPORTANT]
->
->La fonctionnalité de configuration et d’envoi de destinations basées sur des fichiers à l’aide de Destination SDK d’Adobe Experience Platform est actuellement en version Beta. La documentation et la fonctionnalité peuvent changer.
 
 Cette page décrit comment utiliser les informations contenues dans la section [Options de configuration dans Destination SDK](./configuration-options.md) et dans dʼautres documents de référence sur les fonctionnalités et lʼAPI Destination SDK pour configurer une [destination basée sur des fichiers](../../destinations/destination-types.md#file-based). Les étapes sont présentées dans l’ordre séquentiel ci-dessous.
 

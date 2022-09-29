@@ -2,20 +2,16 @@
 description: Les spécifications de configuration du serveur et des fichiers pour les destinations basées sur des fichiers peuvent être configurées dans Adobe Experience Platform Destination SDK via le point dʼentrée « /destination-servers ».
 title: Options de configuration des spécifications de serveur de destination basées sur des fichiers
 exl-id: 56434e36-0458-45d9-961d-f6505de998f7
-source-git-commit: 5506a938253083d3dfd657a787eae20a05b1c0a9
+source-git-commit: 29962e07aa50c97b6098f4c892facf48508d28cf
 workflow-type: tm+mt
-source-wordcount: '1274'
-ht-degree: 56%
+source-wordcount: '1248'
+ht-degree: 55%
 
 ---
 
 # Configuration du serveur et des fichiers pour les spécifications de serveur de destination basées sur les fichiers
 
 ## Présentation {#overview}
-
->[!IMPORTANT]
->
->La fonctionnalité de configuration et d’envoi de destinations basées sur des fichiers à l’aide de Destination SDK d’Adobe Experience Platform est actuellement en version Beta. La documentation et la fonctionnalité peuvent changer.
 
 Cette page décrit toutes les options de configuration du serveur pour vos serveurs de destination basés sur des fichiers et indique comment configurer diverses options de configuration de fichier pour les utilisateurs qui exportent des fichiers d’Experience Platform vers votre destination.
 
