@@ -5,10 +5,10 @@ topic-legacy: guide
 type: Documentation
 description: En savoir plus sur les solutions d’accessibilité personnalisées dans l’interface utilisateur d’Adobe Experience Platform.
 exl-id: cb5ad99e-8a95-4c9e-aae6-1d0036ecf052
-source-git-commit: e30e04453bd814de103cceb14e3580992436923d
+source-git-commit: 7f4202c9c4a132ed9d74c495f6608357eac8003f
 workflow-type: tm+mt
-source-wordcount: '1568'
-ht-degree: 97%
+source-wordcount: '1615'
+ht-degree: 94%
 
 ---
 
@@ -132,6 +132,10 @@ Lors de l’utilisation de l’interface utilisateur du créateur de segments po
 * L’interface utilisateur du créateur de segments est accessible par le biais de la navigation au clavier.
 * Les lecteurs d’écran doivent reconnaître le balisage des titres et peuvent annoncer le titre ainsi que son niveau.
 * D’autres technologies d’assistance peuvent modifier l’affichage visuel d’une page à l’aide de titres codés de manière adéquate pour afficher un aperçu ou une autre vue.
+
+Vous pouvez désormais réduire ou développer les rails gauche et droit du canevas du créateur de segments afin de gagner plus d’espace sur l’écran. Cette fonctionnalité est particulièrement utile, car elle offre une fonctionnalité complète avec un zoom de 200 %.
+
+![Zone de travail du créateur de segments avec les widgets de divulgation du rail gauche et droit en surbrillance.](images/left-right-rail-expandables.png)
 
 ## Éditeur de Query Service
 
