@@ -1,10 +1,10 @@
 ---
 title: Notes de mise à jour de Adobe Experience Platform - Septembre 2022
 description: Notes de mise à jour de septembre 2022 pour Adobe Experience Platform.
-source-git-commit: 5c6bb56b4b3fa63c285aa62b0a7b68ed269654b2
+source-git-commit: eb146769ac78312f83a8336e4eac578f8301abc8
 workflow-type: tm+mt
-source-wordcount: '3042'
-ht-degree: 30%
+source-wordcount: '3080'
+ht-degree: 29%
 
 ---
 
@@ -158,7 +158,8 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 
 | Destination | Description |
 | ----------- | ----------- |
-| [[!DNL Salesforce CRM]](../..//destinations/catalog/crm/salesforce.md) | Le [!DNL Salesforce CRM] La destination a été mise à jour afin de prendre en charge les mises à jour des contacts et des prospects, ainsi que des améliorations des performances pour des mises à jour plus rapides. |
+| [[!DNL Adobe Campaign Managed Cloud Services]](../../destinations/catalog/email-marketing/adobe-campaign-managed-services.md) | Adobe Campaign Managed Cloud Services offre une plateforme pour concevoir des expériences client cross-canal et un environnement pour l’orchestration visuelle des campagnes, la gestion des interactions en temps réel et l’exécution cross-canal. [Prise en main de Campaign](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html). |
+| [[!DNL Salesforce CRM]](../../destinations/catalog/crm/salesforce.md) | Le [!DNL Salesforce CRM] La destination a été mise à jour afin de prendre en charge les mises à jour des contacts et des prospects, ainsi que des améliorations des performances pour des mises à jour plus rapides. |
 
 {style=&quot;table-layout:auto&quot;}
 
