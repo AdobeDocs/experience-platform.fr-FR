@@ -1,9 +1,9 @@
 ---
 title: Notes de mise à jour d’Adobe Experience Platform
 description: Dernières notes de mise à jour pour Adobe Experience Platform.
-source-git-commit: bbc9df59f91b6de12e902a71f7b9d054735cad7b
+source-git-commit: ac60e664d7708d9ac6772c61d13b7c1c44e92321
 workflow-type: tm+mt
-source-wordcount: '3079'
+source-wordcount: '3106'
 ht-degree: 30%
 
 ---
@@ -118,7 +118,7 @@ Adobe Experience Platform fournit plusieurs tableaux de bord grâce auxquels vou
 | Libellé en cours d’utilisation | Lorsqu’il est affiché dans la bibliothèque de widgets, le libellé en cours d’utilisation identifie facilement la présence de widgets existants dans votre tableau de bord. Cela permet d’éviter facilement la duplication bien que vous puissiez ajouter le même widget plusieurs fois si vous le souhaitez. |
 | Tableaux de bord définis par l’utilisateur | Les tableaux de bord définis par l’utilisateur accélèrent les insights et personnalisent les visualisations en vous permettant de créer et de gérer des tableaux de bord personnalisés. Avec les tableaux de bord définis par l’utilisateur, vous pouvez créer, ajouter et modifier des widgets personnalisés pour visualiser les mesures clés pertinentes pour votre entreprise. Lisez le [guide des fonctionnalités](../../dashboards/user-defined-dashboards.md) pour en savoir plus. |
 | Modèle de données de statistiques sur la plateforme de données clients | La fonction Modèle de données de statistiques de la plateforme de données clients (CDP) expose les modèles de données et SQL qui alimentent les informations pour divers widgets de profil, de destination et de segmentation. Vous pouvez personnaliser ces modèles de requête SQL pour créer des rapports CDP pour vos cas d’utilisation d’indicateurs de performance clés et marketing. Ces informations peuvent ensuite être utilisées comme widgets personnalisés pour vos tableaux de bord définis par l’utilisateur. Lisez le [Guide de fonctionnalité du modèle de données de statistiques CDP](../../dashboards/cdp-insights-data-model.md) pour en savoir plus. |
-| Widget de rapport sur le chevauchement des audiences | Ce widget est disponible pour les deux [!UICONTROL Profils] et [!UICONTROL Segments] tableaux de bord. Le rapport fournit une liste ordonnée des audiences classées selon les pourcentages de chevauchement les plus élevés ou les plus bas pour le segment sélectionné. Dans la [!UICONTROL Profils] tableau de bord, vous pouvez filtrer et afficher le chevauchement de vos audiences par stratégie de fusion de tous les segments disponibles. Le [!UICONTROL Segments] Les tableaux de bord vous permettent de filtrer le chevauchement des audiences selon un segment spécifique.<br>Utilisez cette analyse pour créer de nouveaux segments hautement performants et éviter d’envoyer la même audience vers différentes destinations. Le rapport permet également d’identifier les informations masquées afin d’améliorer la segmentation ou de localiser les profils uniques à rechercher. |
+| Widget de rapport sur le chevauchement des audiences | Ce widget est disponible pour les deux [!UICONTROL Profils] et [!UICONTROL Segments] tableaux de bord. Le rapport fournit une liste ordonnée des audiences classées selon les pourcentages de chevauchement les plus élevés ou les plus bas pour le segment sélectionné. Dans la [!UICONTROL Profils] tableau de bord, vous pouvez filtrer et afficher le chevauchement de vos audiences par stratégie de fusion de tous les segments disponibles. Le [!UICONTROL Segments] Les tableaux de bord vous permettent de filtrer le chevauchement des audiences selon un segment spécifique.<br>Utilisez cette analyse pour créer de nouveaux segments hautement performants et éviter d’envoyer la même audience vers différentes destinations. Le rapport permet également d’identifier les informations masquées afin d’améliorer la segmentation ou de localiser les profils uniques à rechercher. Lisez les [profils](../../dashboards/guides/profiles.md#audience-overlap-report) et [segments](../../dashboards/guides/segments.md#audience-overlap-report) guides du widget pour en savoir plus. |
 
 Pour plus d’informations sur les [!DNL Dashboards], consultez la [[!DNL Dashboards] présentation](../../dashboards/home.md).
 
@@ -238,8 +238,8 @@ Query Service vous permet d’utiliser le langage SQL standard pour interroger l
 
 | Fonctionnalité | Description |
 | --- | --- |
-| API d’abonnement aux alertes | Adobe Experience Platform Query Service vous permet de vous abonner à des alertes pour les requêtes ad hoc et planifiées. Les alertes peuvent être reçues par courrier électronique, dans l’interface utilisateur de Platform ou les deux. Actuellement, les alertes de requête ne peuvent être abonnées qu’à l’aide de la variable [API Query Service](https://developer.adobe.com/experience-platform-apis/references/query-service/). |
-| Exemples de jeux de données | Les exemples de jeux de données Query Service vous permettent de mener des requêtes exploratoires sur les données volumineuses avec un temps de traitement considérablement réduit, au prix de la précision des requêtes. |
+| API d’abonnement aux alertes | Adobe Experience Platform Query Service vous permet de vous abonner à des alertes pour les requêtes ad hoc et planifiées. Les alertes peuvent être reçues par courrier électronique, dans l’interface utilisateur de Platform ou les deux. Actuellement, les alertes de requête ne peuvent être abonnées qu’à l’aide de la variable [API Query Service](https://developer.adobe.com/experience-platform-apis/references/query-service/). Voir [documentation sur les alertes de requête](../../query-service/api/alert-subscriptions.md) pour en savoir plus. |
+| Exemples de jeux de données | Les exemples de jeux de données Query Service vous permettent de mener des requêtes exploratoires sur les données volumineuses avec un temps de traitement considérablement réduit, au prix de la précision des requêtes. Voir [guide des exemples de jeux de données](../../query-service/sql/dataset-samples.md) pour en savoir plus. |
 
 Pour plus d’informations sur les [!DNL Query Service], consultez la [[!DNL Query Service] présentation](../../query-service/home.md).
 
