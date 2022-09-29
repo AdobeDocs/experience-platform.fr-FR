@@ -5,10 +5,10 @@ topic-legacy: guide
 type: Documentation
 description: En savoir plus sur les solutions d’accessibilité personnalisées dans l’interface utilisateur d’Adobe Experience Platform.
 exl-id: cb5ad99e-8a95-4c9e-aae6-1d0036ecf052
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: e30e04453bd814de103cceb14e3580992436923d
 workflow-type: tm+mt
-source-wordcount: '1531'
-ht-degree: 100%
+source-wordcount: '1568'
+ht-degree: 97%
 
 ---
 
@@ -96,6 +96,9 @@ Tous les tableaux de l’interface utilisateur d’Experience Platform sont acc
 * Lorsqu’une ligne est sélectionnée ou fait l’objet du focus, l’utilisation de la touche **Entrée** permet d’obtenir des détails dans le rail de droite.
 * Lorsqu’une ligne est sélectionnée ou fait l’objet du focus, utilisez les **touches fléchées** pour vous déplacer parmi tous les éléments de la ligne.
 * Appuyez sur **Entrée** pour sélectionner un élément de la ligne. Les utilisateurs disposant de lecteurs d’écran sont avertis si une nouvelle fenêtre doit s’ouvrir.
+* Lorsque vous effectuez un zoom à 200 % ou plus, vous pouvez voir la variable **inspecteur de rail** comme le rail de droite s’effondre afin de libérer de l’espace pour le tableau.
+
+![Icône d’inspection du rail active lorsqu’un utilisateur effectue un zoom sur 200 %.](images/rail-inspector.png)
 
 ### Accessibilité de la navigation dans un tableau à l’aide du clavier
 
