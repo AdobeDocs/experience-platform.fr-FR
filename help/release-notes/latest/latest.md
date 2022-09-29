@@ -1,9 +1,9 @@
 ---
 title: Notes de mise à jour de Adobe Experience Platform - Septembre 2022
 description: Notes de mise à jour de septembre 2022 pour Adobe Experience Platform.
-source-git-commit: 65743c1741210a87b1cc64406412dd7e58218321
+source-git-commit: 64c376b52aa7f7827c19194d677d8a1648c04195
 workflow-type: tm+mt
-source-wordcount: '2796'
+source-wordcount: '2776'
 ht-degree: 30%
 
 ---
@@ -78,7 +78,7 @@ L’IA dédiée à l’attribution est utilisée pour attribuer des crédits aux
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Enregistrement d’une instance Brouillon | Cette nouvelle fonctionnalité permet aux analystes marketing d’enregistrer la configuration du modèle en tant qu’instance de brouillon pendant les configurations et de continuer à modifier le brouillon jusqu’à la fin de la formation et de la notation. Les scénarios où cette fonctionnalité est utile incluent, sans s’y limiter, les cas où les utilisateurs ont plusieurs champs à définir dans le workflow de configuration qu’ils ne peuvent pas terminer en une seule fois ou lorsqu’une ou plusieurs statistiques de jeux de données (telles que l’exhaustivité des colonnes) prennent du temps à être traitées avant qu’elles ne soient disponibles. Lisez le [Guide d’utilisation d’Attribution AI](../../intelligent-services/attribution-ai/user-guide.md) pour en savoir plus. |
+| Enregistrement d’une instance Brouillon | Cette nouvelle fonctionnalité permet aux analystes marketing d’enregistrer une configuration de modèle en tant qu’instance de brouillon et de continuer à la modifier jusqu’à ce qu’elle soit terminée avant la formation et la notation. Les scénarios où cette fonctionnalité est utile incluent lorsqu’un utilisateur a plusieurs champs à définir dans le workflow, mais qu’il ne peut pas les terminer en raison de contraintes de temps. Un autre scénario se produit lorsqu’une ou plusieurs statistiques de jeux de données sont en cours de traitement et ne sont pas encore disponibles. Lisez le [Guide d’utilisation d’Attribution AI](../../intelligent-services/attribution-ai/user-guide.md#governance-policies) pour en savoir plus. |
 | Stratégies de gouvernance | Une fois que les utilisateurs se sont engagés à créer une instance par le biais du processus de configuration, le nouveau service d’application de la stratégie vérifie s’il existe des violations de stratégie de l’utilisation des données et affiche les détails dans une fenêtre contextuelle. Elle garantit que les opérations de données et les actions marketing sont conformes aux stratégies d’utilisation des données configurées sur Adobe Experience Platform. |
 
 Pour plus d’informations sur Attribution AI, la variable [Présentation d’Attribution AI](../../intelligent-services/attribution-ai/overview.md). Pour plus d’informations sur les politiques de gouvernance des données, consultez la section [présentation des stratégies](../../data-governance/policies/overview.md).
@@ -89,7 +89,7 @@ L’IA dédiée aux clients disponible dans Real-time Customer Data Platform 
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Enregistrement d’une instance Brouillon | Cette nouvelle fonctionnalité permet aux analystes marketing d’enregistrer la configuration du modèle en tant qu’instance de brouillon pendant les configurations et de continuer à modifier le brouillon jusqu’à la fin de la formation et de la notation. Les scénarios où cette fonctionnalité est utile incluent, sans s’y limiter, les cas où les utilisateurs ont plusieurs champs à définir dans le workflow de configuration qu’ils ne peuvent pas terminer en une seule fois ou lorsqu’une ou plusieurs statistiques de jeux de données (telles que l’exhaustivité des colonnes) prennent du temps à être traitées avant qu’elles ne soient disponibles. Lisez le [Guide d’utilisation de Customer AI](../../intelligent-services/customer-ai/user-guide/configure.md) pour en savoir plus. |
+| Enregistrement d’une instance Brouillon | Cette nouvelle fonctionnalité permet aux analystes marketing d’enregistrer une configuration de modèle en tant qu’instance de brouillon et de continuer à la modifier jusqu’à ce qu’elle soit terminée avant la formation et la notation. Les scénarios où cette fonctionnalité est utile incluent lorsqu’un utilisateur a plusieurs champs à définir dans le workflow, mais qu’il ne peut pas les terminer en raison de contraintes de temps. Un autre scénario se produit lorsqu’une ou plusieurs statistiques de jeux de données sont en cours de traitement et ne sont pas encore disponibles. Lisez le [Guide d’utilisation de Customer AI](../../intelligent-services/customer-ai/user-guide/configure.md#governance-policies) pour en savoir plus. |
 | Stratégies de gouvernance | Une fois que les utilisateurs se sont engagés à créer une instance par le biais du processus de configuration, le nouveau service d’application de la stratégie vérifie s’il existe des violations de stratégie de l’utilisation des données et affiche les détails dans une fenêtre contextuelle. Elle garantit que les opérations de données et les actions marketing sont conformes aux stratégies d’utilisation des données configurées sur Adobe Experience Platform. |
 
 Pour plus d’informations sur Customer AI, consultez la section [Présentation de Customer AI](../../intelligent-services/customer-ai/overview.md). Pour plus d’informations sur les politiques de gouvernance des données, consultez la section [présentation des stratégies](../../data-governance/policies/overview.md).
