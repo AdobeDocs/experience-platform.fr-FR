@@ -3,10 +3,10 @@ keywords: Experience Platform;interface utilisateur;UI;tableaux de bord;tableau
 title: Présentation de la bibliothèque de widgets des tableaux de bord
 description: Ce guide fournit des instructions détaillées pour accéder à la bibliothèque de widgets dans Adobe Experience Platform.
 exl-id: 1d33e3ea-a8a8-4a09-8bd9-2e04ecedebdc
-source-git-commit: 7f226a37996ab5e1fef432c6007d7d488f84ded6
+source-git-commit: 09f212741321f17372d52fee507a96d2d2834e85
 workflow-type: tm+mt
-source-wordcount: '458'
-ht-degree: 63%
+source-wordcount: '516'
+ht-degree: 56%
 
 ---
 
@@ -41,6 +41,12 @@ Sélectionnez **[!UICONTROL Bibliothèque de widgets]** pour ouvrir la biblioth�
 Dans la [!UICONTROL Bibliothèque de widgets], sélectionnez un widget dans la liste des widgets standard ou personnalisés disponibles. Une coche dans le coin du widget indique votre sélection.
 
 ![Bibliothèque de widgets avec un widget sélectionné et coche mise en surbrillance.](../images/customization/confirm-selected-widget-to-add.png)
+
+### Libellé en cours d’utilisation {#in-use-label}
+
+Les widgets déjà ajoutés à un tableau de bord comportent une [!UICONTROL En cours d’utilisation] libellé qui leur est associé lors de l’affichage dans la bibliothèque de widgets. Ce libellé met en évidence les widgets qui ont déjà été ajoutés à votre tableau de bord afin d’éviter la duplication. Cependant, vous pouvez toujours ajouter le même widget plusieurs fois si vous le souhaitez.
+
+![Bibliothèque de widgets avec le libellé en cours d’utilisation surligné.](../images/customization/in-use-label.png)
 
 Une fois que vous avez sélectionné tous les widgets requis, sélectionnez **[!UICONTROL Ajout de widgets]** pour confirmer votre choix et ajouter les widgets à votre tableau de bord.
 
