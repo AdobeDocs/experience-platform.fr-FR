@@ -2,10 +2,10 @@
 title: Notes de mise à jour de Adobe Experience Platform - Août 2022
 description: Notes de mise à jour d’août 2022 pour Adobe Experience Platform.
 exl-id: dbf1e7a3-8599-4991-8932-f57d3b1c640d
-source-git-commit: fb9fdc70aabb62cdc39888b1ff90557d8420c31b
+source-git-commit: 83149c4e6e8ea483133da4766c37886b8ebd7316
 workflow-type: tm+mt
-source-wordcount: '2137'
-ht-degree: 99%
+source-wordcount: '2131'
+ht-degree: 97%
 
 ---
 
@@ -40,7 +40,7 @@ L’IA dédiée à l’attribution est utilisée pour attribuer des crédits aux
 
 {style=&quot;table-layout:auto&quot;}
 
-**Remarque** : l’IA dédiée à l’attribution n’est pas disponible pour les clients Healthcare Shield ou Privacy Shield existants jusqu’à nouvel avis.
+**Remarque**: Attribution AI ne sera pas disponible avec les clients existants de Healthcare Shield avant d’être averti.
 
 Consultez la présentation de l’[IA dédiée à l’attribution](../../intelligent-services/attribution-ai/overview.md) pour plus d’informations.
 
@@ -56,7 +56,7 @@ L’IA dédiée aux clients disponible dans Real-time Customer Data Platform 
 
 {style=&quot;table-layout:auto&quot;}
 
-**Remarque** : l’IA dédiée aux clients n’est pas disponible pour les clients Healthcare Shield ou Privacy Shield existants jusqu’à nouvel avis.
+**Remarque**: Customer AI ne sera pas disponible avec les clients existants de Healthcare Shield avant d’être averti.
 
 Consultez la présentation de l’[IA dédiée aux clients](../../intelligent-services/customer-ai/overview.md) pour plus d’informations.
 

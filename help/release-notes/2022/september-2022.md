@@ -1,10 +1,10 @@
 ---
 title: Notes de mise à jour de Adobe Experience Platform - Septembre 2022
 description: Notes de mise à jour de septembre 2022 pour Adobe Experience Platform.
-source-git-commit: 81c17a6ea07efbbea91e0d918d52ec96e0335152
+source-git-commit: 45281721c6fb26c303bb820fa39f5c6ed71b55f9
 workflow-type: tm+mt
-source-wordcount: '3128'
-ht-degree: 29%
+source-wordcount: '3059'
+ht-degree: 30%
 
 ---
 
@@ -16,7 +16,6 @@ Nouvelles fonctionnalités d’Adobe Experience Platform :
 
 - [Contrôle d’accès basé sur les attributs](#abac)
 - [Hygiène des données](#data-hygiene)
-- [[!UICONTROL Console de confidentialité]](#privacy-console)
 
 Mises à jour des fonctionnalités existantes dans Adobe Experience Platform :
 
@@ -55,19 +54,13 @@ Les fonctionnalités d’hygiène des données de Adobe Experience Platform vous
 
 >[!IMPORTANT]
 >
->Les fonctionnalités d’hygiène des données ne sont disponibles que pour les organisations qui ont acheté Adobe Healthcare Shield ou Privacy Shield.
+>Les capacités d’hygiène des données ne sont disponibles que pour les organisations qui ont acheté l’Adobe Healthcare Shield.
 
 Pour commencer à utiliser l’hygiène des données, reportez-vous à la documentation suivante :
 
 - [Présentation de l’hygiène des données](../../hygiene/home.md): Découvrez les principes de base des fonctionnalités d’hygiène des données de Platform.
 - [[!UICONTROL Hygiène des données] Guide de l’interface utilisateur](../../hygiene/ui/overview.md): Découvrez comment planifier l’expiration des jeux de données et les demandes de suppression des consommateurs dans l’interface utilisateur de Platform.
 - [Guide de l’API d’hygiène des données](../../hygiene/api/overview.md): Toutes les activités d’hygiène des données que vous pouvez exécuter dans l’interface utilisateur peuvent également être programmées
-
-## [!UICONTROL Console de confidentialité] {#privacy-console}
-
-Le [!UICONTROL Console de confidentialité] dans l’interface utilisateur de l’Experience Platform fournit un tableau de bord des principales informations des fonctionnalités liées à la confidentialité, telles que [Requêtes de sujet de données de Privacy Service](../../privacy-service/home.md), [ordres de travail relatifs à l&#39;hygiène des données](../../hygiene/home.md), et [journaux d’audit](../../landing/governance-privacy-security/audit-logs/overview.md). La console fournit également plusieurs guides de cas d’utilisation intégrés au produit pour vous aider à vous guider dans les processus de confidentialité courants.
-
-Voir [Présentation de Privacy Console](../../landing/governance-privacy-security/privacy-console.md) pour plus d’informations sur la fonctionnalité.
 
 ## [!DNL Artificial Intelligence/Machine Learning services] {#ai-and-ml-services}
 
