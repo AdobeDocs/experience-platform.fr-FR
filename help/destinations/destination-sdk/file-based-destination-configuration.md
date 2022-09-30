@@ -2,10 +2,10 @@
 description: Cette configuration vous permet d’indiquer les informations essentielles pour votre destination basée sur des fichiers, telles que votre nom de destination, votre catégorie, votre description, etc. Les paramètres de cette configuration déterminent également comment les utilisateurs d’Experience Platform s’authentifient pour votre destination, comment ils apparaissent dans l’interface utilisateur d’Experience Platform ainsi que les identités qui peuvent être exportées vers votre destination.
 title: Options de configuration des destinations basées sur des fichiers pour la Destination SDK
 exl-id: 6b0a0398-6392-470a-bb27-5b34b0062793
-source-git-commit: 1d6318e33be639237c2c8e6f1bf67e1702949c20
+source-git-commit: b32450311469ecf2af2ca45b3fa1feaf25147ea2
 workflow-type: tm+mt
-source-wordcount: '2664'
-ht-degree: 66%
+source-wordcount: '3021'
+ht-degree: 59%
 
 ---
 
@@ -722,6 +722,54 @@ Utilisez les paramètres de la section  `dynamicSchemaConfig` pour récupérer d
 | `authenticationRule` | Chaîne | Indique comment les clients [!DNL Platform] se connectent à votre destination. Les valeurs acceptées sont les suivantes : `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION` ou `NONE`. <br> <ul><li>Utilisez `CUSTOMER_AUTHENTICATION` si les clients Platform se connectent à votre système par l’une des méthodes suivantes : <ul><li>`"authType": "S3"`</li><li>`"authType":"AZURE_CONNECTION_STRING"`</li><li>`"authType":"AZURE_SERVICE_PRINCIPAL"`</li><li>`"authType":"SFTP_WITH_SSH_KEY"`</li><li>`"authType":"SFTP_WITH_PASSWORD"`</li></ul> </li><li> Utilisez `PLATFORM_AUTHENTICATION` s’il existe un système d’authentification global entre Adobe et votre destination et que le client [!DNL Platform] n’a pas besoin de fournir d’informations d’authentification pour se connecter à votre destination. Dans ce cas, vous devez créer des informations d’identification à l’aide de la configuration des [Informations d’identification](./credentials-configuration-api.md). </li><li>Utilisez `NONE` si aucune authentification n’est requise pour envoyer des données à votre plateforme de destination. </li></ul> |
 | `value` | Chaîne | Nom du schéma à afficher dans l’interface utilisateur d’Experience Platform, à l’étape de mappage. |
 | `responseFormat` | Chaîne | Toujours définie sur `SCHEMA` lors de la définition d’un schéma personnalisé. |
+
+{style=&quot;table-layout:auto&quot;}
+
+### Mappings requis {#required-mappings}
+
+Dans la configuration du schéma, vous avez la possibilité d’ajouter des mappages obligatoires (ou prédéfinis). Il s’agit de mappages que les utilisateurs peuvent afficher, mais pas modifier, lorsqu’ils configurent une connexion à votre destination. Par exemple, vous pouvez appliquer le champ de l’adresse électronique pour qu’il soit toujours envoyé à la destination dans les fichiers exportés. Voir ci-dessous un exemple de configuration de schéma avec les mappages requis et à quoi elle ressemble dans l’étape de mappage de la [Activation des données vers le workflow de destinations par lot](/help/destinations/ui/activate-batch-profile-destinations.md).
+
+```json
+    "requiredMappingsOnly": true, // this is selected true , users cannot map other attributes and identities in the activation flow, apart from the required mappings that you define.
+    "requiredMappings": [
+      {
+        "destination": "identityMap.ExamplePartner_ID", //if only the destination field is specified, then the user is able to select a source field to map to the destination.
+        "mandatoryRequired": true,
+        "primaryKeyRequired": true
+      },
+      {
+        "sourceType": "text/x.schema-path",
+        "source": "personalEmail.address",
+        "destination": "personalEmail.address" //when both source and destination fields are specified as required mappings, then the user can not select or edit any of the two fields and can only view the selection.
+      },
+      {
+        "sourceType": "text/x.aep-xl",
+        "source": "iif(${segmentMembership.ups.seg_id.status}==\"exited\", \"1\",\"0\")",
+        "destination": "delete"
+      }
+    ] 
+```
+
+![Image des mappages requis dans le flux d’activation de l’interface utilisateur.](/help/destinations/destination-sdk/assets/required-mappings.png)
+
+>[!NOTE]
+>
+>Les combinaisons de mappages requis actuellement prises en charge sont les suivantes :
+>* Vous pouvez configurer un champ source obligatoire et un champ de destination obligatoire. Dans ce cas, les utilisateurs ne peuvent pas modifier ni sélectionner l’un des deux champs et peuvent uniquement afficher la sélection.
+>* Vous ne pouvez configurer qu’un champ de destination obligatoire. Dans ce cas, les utilisateurs seront autorisés à sélectionner un champ source à mapper à la destination.
+>
+> La configuration d’un champ source requis est actuellement la seule *not* pris en charge.
+
+Utilisez les paramètres décrits dans le tableau ci-dessous si vous souhaitez ajouter les mappages requis dans le workflow d’activation pour votre destination.
+
+| Paramètre | Type | Description |
+|---------|----------|------|
+| `requiredMappingsOnly` | Booléen | Indique si les utilisateurs peuvent mapper d’autres attributs et identités dans le flux d’activation, *apart* les mappages requis que vous définissez. |
+| `requiredMappings.mandatoryRequired` | Booléen | Définissez cette variable sur true si ce champ doit être un attribut obligatoire qui doit toujours être présent dans les exportations de fichiers vers votre destination. En savoir plus sur [attributs obligatoires](/help/destinations/ui/activate-batch-profile-destinations.md#mandatory-attributes). |
+| `requiredMappings.primaryKeyRequired` | Booléen | Définissez cette variable sur true si ce champ doit être utilisé comme clé de déduplication dans les exportations de fichiers vers votre destination. En savoir plus sur [clés de déduplication](/help/destinations/ui/activate-batch-profile-destinations.md#deduplication-keys). |
+| `requiredMappings.sourceType` | Chaîne | Utilisé lorsque vous configurez un champ source selon les besoins. Indique le type de champ source. Les options disponibles sont les suivantes : <ul><li>`"text/x.schema-path"` lorsque le champ source est un attribut XDM prédéfini</li><li>`"text/x.aep-xl"` lorsque le champ source est une fonction, par exemple si vous avez besoin qu’une condition soit remplie côté champ source. Pour plus d’informations sur les fonctions prises en charge, consultez la section [Préparation de données](/help/data-prep/api/functions.md) documentation.</li></ul> |
+| `requiredMappings.source` | Chaîne | Indique le champ source requis. |
+| `requiredMappings.destination` | Chaîne | Indique le champ de destination requis. |
 
 {style=&quot;table-layout:auto&quot;}
 
