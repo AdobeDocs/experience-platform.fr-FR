@@ -1,9 +1,9 @@
 ---
 title: Notes de mise à jour d’Adobe Experience Platform
 description: Dernières notes de mise à jour pour Adobe Experience Platform.
-source-git-commit: 45281721c6fb26c303bb820fa39f5c6ed71b55f9
+source-git-commit: 20902b6a0dce4c189f43343d9fd0a87913a0fdbf
 workflow-type: tm+mt
-source-wordcount: '3064'
+source-wordcount: '3059'
 ht-degree: 30%
 
 ---
@@ -15,7 +15,6 @@ ht-degree: 30%
 Nouvelles fonctionnalités d’Adobe Experience Platform :
 
 - [Contrôle d’accès basé sur les attributs](#abac)
-- [Hygiène des données](#data-hygiene)
 
 Mises à jour des fonctionnalités existantes dans Adobe Experience Platform :
 
@@ -23,6 +22,7 @@ Mises à jour des fonctionnalités existantes dans Adobe Experience Platform 
 - [Journaux d’audit](#audit-logs)
 - [[!DNL Dashboards]](#dashboards)
 - [Collecte de données](#data-collection)
+- [Hygiène des données](#data-hygiene)
 - [Destinations](#destinations)
 - [Modèle de données d’expérience (XDM)](#xdm)
 - [Service d’identités](#identity-service)
@@ -45,22 +45,6 @@ Grâce au contrôle d’accès basé sur les attributs, les administrateurs de v
 | Autorisations | La zone dédiée aux autorisations dans Experience Cloud permet aux administrateurs de définir des rôles d’utilisateur et des stratégies d’accès. Ils peuvent ainsi gérer les autorisations d’accès aux fonctionnalités et objets dans une application de produit. Grâce aux autorisations, vous pouvez créer et gérer des rôles, attribuer les autorisations de ressources souhaitées pour ces rôles et créer des stratégies pour exploiter les étiquettes et définir les rôles utilisateur ayant accès à des ressources Platform spécifiques. Les autorisations vous permettent également de gérer les libellés, les sandbox et les utilisateurs associés à un rôle spécifique. Pour plus d’informations, consultez le [guide de l’interface utilisateur des autorisations](../../access-control/abac/ui/browse.md). |
 
 Pour plus d’informations sur le contrôle d’accès basé sur les attributs, consultez la [présentation du contrôle d’accès basé sur les attributs](../../access-control/abac/overview.md). Pour consulter un guide complet sur le workflow de contrôle d’accès basé sur les attributs, reportez-vous à la section [guide de bout en bout du contrôle d’accès basé sur les attributs](../../access-control/abac/end-to-end-guide.md).
-
-## Hygiène des données {#data-hygiene}
-
-Adobe Experience Platform offre un ensemble d’outils fiables pour gérer des opérations de données complexes et volumineuses afin d’orchestrer les expériences client. Les données étant ingérées dans le système au fil du temps, il devient de plus en plus important de gérer les banques de données pour que les données soient utilisées comme prévu, mises à jour lorsque des données incorrectes doivent être corrigées et supprimées lorsque les politiques d’entreprise le jugent nécessaire.
-
-Les fonctionnalités d’hygiène des données de Adobe Experience Platform vous permettent de nettoyer vos données en planifiant l’expiration automatisée des jeux de données et en supprimant par programmation les données des consommateurs par identité.
-
->[!IMPORTANT]
->
->Les capacités d’hygiène des données ne sont disponibles que pour les organisations qui ont acheté l’Adobe Healthcare Shield.
-
-Pour commencer à utiliser l’hygiène des données, reportez-vous à la documentation suivante :
-
-- [Présentation de l’hygiène des données](../../hygiene/home.md): Découvrez les principes de base des fonctionnalités d’hygiène des données de Platform.
-- [[!UICONTROL Hygiène des données] Guide de l’interface utilisateur](../../hygiene/ui/overview.md): Découvrez comment planifier l’expiration des jeux de données et les demandes de suppression des consommateurs dans l’interface utilisateur de Platform.
-- [Guide de l’API d’hygiène des données](../../hygiene/api/overview.md): Toutes les activités d’hygiène des données que vous pouvez exécuter dans l’interface utilisateur peuvent également être programmées
 
 ## [!DNL Artificial Intelligence/Machine Learning services] {#ai-and-ml-services}
 
@@ -135,6 +119,27 @@ Adobe Experience Platform fournit une suite de technologies qui vous permetten
 
 Pour plus d’informations sur la collecte de données dans Platform, consultez la [Présentation de la collecte de données](../../collection/home.md).
 
+## Hygiène des données {#data-hygiene}
+
+Adobe Experience Platform offre un ensemble d’outils fiables pour gérer des opérations de données complexes et volumineuses afin d’orchestrer les expériences client. Les données étant ingérées dans le système au fil du temps, il devient de plus en plus important de gérer les banques de données pour que les données soient utilisées comme prévu, mises à jour lorsque des données incorrectes doivent être corrigées et supprimées lorsque les politiques d’entreprise le jugent nécessaire.
+
+Les fonctionnalités d’hygiène des données de Adobe Experience Platform vous permettent de nettoyer vos données en planifiant l’expiration automatisée des jeux de données et en supprimant par programmation les données des consommateurs par identité.
+
+>[!IMPORTANT]
+>
+>Les capacités d’hygiène des données ne sont disponibles que pour les organisations qui ont acheté l’Adobe Healthcare Shield.
+
+**Fonctionnalités nouvelles ou mises à jour**
+
+| Fonctionnalité | Description |
+| --- | --- |
+| Processus de l’interface utilisateur mis à jour | Les workflows pour [planification de l’expiration des jeux de données](../../hygiene/ui/dataset-expiration.md) et [suppression des données des consommateurs](../../hygiene/ui/delete-consumer.md) ont été rationalisées dans l’interface utilisateur. |
+| Point d’entrée de l’API Quota | Vous pouvez désormais récupérer les informations sur les quotas pour les processus d’hygiène des données de votre entreprise en appelant le [`/quota` endpoint](../../hygiene/api/quota.md). |
+
+{style=&quot;table-layout:auto&quot;}
+
+Pour plus d&#39;informations sur les fonctionnalités d&#39;hygiène des données de Platform, reportez-vous à la section [présentation de l’hygiène des données](../../hygiene/home.md).
+
 ## [!DNL Destinations] {#destinations}
 
 Les [!DNL Destinations] sont des intégrations préconfigurées à des plateformes de destination qui permettent d’activer facilement des données provenant d’Adobe Experience Platform. Vous pouvez utiliser les destinations pour activer vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
@@ -151,7 +156,7 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 
 | Destination | Description |
 | ----------- | ----------- |
-| [[!DNL Adobe Campaign Managed Cloud Services]](../../destinations/catalog/email-marketing/adobe-campaign-managed-services.md) | Adobe Campaign Managed Cloud Services offre une plateforme pour concevoir des expériences client cross-canal et un environnement pour l’orchestration visuelle des campagnes, la gestion des interactions en temps réel et l’exécution cross-canal. [Prise en main de Campaign](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html). Notez que cette intégration fonctionne avec . Notez que cette intégration fonctionne avec [Adobe Campaign version 8.4 ou ultérieure](https://experienceleague.adobe.com/docs/campaign/campaign-v8/new/release-notes.html?lang=en#release-8-4-1). |
+| [[!DNL Adobe Campaign Managed Cloud Services]](../../destinations/catalog/email-marketing/adobe-campaign-managed-services.md) | Adobe Campaign Managed Cloud Services offre une plateforme pour concevoir des expériences client cross-canal et un environnement pour l’orchestration visuelle des campagnes, la gestion des interactions en temps réel et l’exécution cross-canal. [Prise en main de Campaign](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html). Notez que cette intégration fonctionne avec [Adobe Campaign version 8.4 ou ultérieure](https://experienceleague.adobe.com/docs/campaign/campaign-v8/new/release-notes.html?lang=en#release-8-4-1). |
 | [[!DNL Salesforce CRM]](../../destinations/catalog/crm/salesforce.md) | Le [!DNL Salesforce CRM] La destination a été mise à jour afin de prendre en charge les mises à jour des contacts et des prospects, ainsi que des améliorations des performances pour des mises à jour plus rapides. |
 
 {style=&quot;table-layout:auto&quot;}
