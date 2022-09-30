@@ -3,18 +3,14 @@ keywords: Experience Platform;accueil;rubriques populaires;contrôle d’accès;
 title: Contrôle d’accès basé sur les attributs Création d’une stratégie
 description: Ce document fournit des informations sur la gestion des stratégies par le biais de l’interface Autorisations dans Adobe Experience Cloud.
 exl-id: 66820711-2db0-4621-908d-01187771de14
-source-git-commit: 97b4b98a2f14e36e8e8c71bd2ab9631782bc333f
+source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
 workflow-type: tm+mt
-source-wordcount: '692'
-ht-degree: 5%
+source-wordcount: '661'
+ht-degree: 0%
 
 ---
 
 # Gestion des stratégies
-
->[!IMPORTANT]
->
->Le contrôle d’accès basé sur les attributs est actuellement disponible pour un nombre restreint d’utilisateurs, qui sont actifs dans le secteur de la santé et basés aux États-Unis. Cette fonctionnalité sera disponible pour tous les clients Real-time Customer Data Platform dès son déploiement à grande échelle.
 
 Les politiques sont des déclarations qui réunissent des attributs pour établir des actions permises et non admissibles. Les stratégies peuvent être locales ou globales et peuvent remplacer d’autres stratégies.
 

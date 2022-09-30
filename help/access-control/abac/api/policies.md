@@ -4,18 +4,14 @@ solution: Experience Platform
 title: Point de terminaison de l’API Access Control Policies
 description: Le point de terminaison /policies de l’API de contrôle d’accès basé sur les attributs vous permet de gérer par programmation les stratégies dans Adobe Experience Platform.
 exl-id: 07690f43-fdd9-4254-9324-84e6bd226743
-source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
+source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
 workflow-type: tm+mt
-source-wordcount: '1443'
-ht-degree: 12%
+source-wordcount: '1412'
+ht-degree: 10%
 
 ---
 
 # Point de terminaison des stratégies de contrôle d’accès
-
->[!IMPORTANT]
->
->Le contrôle d’accès basé sur les attributs est actuellement disponible pour un nombre restreint d’utilisateurs, qui sont actifs dans le secteur de la santé et basés aux États-Unis. Cette fonctionnalité sera disponible pour tous les clients Real-time Customer Data Platform dès son déploiement à grande échelle.
 
 Les politiques de contrôle d&#39;accès sont des déclarations qui rassemblent les attributs pour établir les actions permises et non autorisées. Ces politiques peuvent être locales ou globales et peuvent remplacer d’autres politiques. Le `/policies` Le point de terminaison de l’API de contrôle d’accès basé sur les attributs vous permet de gérer par programmation les stratégies, y compris des informations sur les règles qui les régissent, ainsi que leurs conditions d’objet respectives.
 

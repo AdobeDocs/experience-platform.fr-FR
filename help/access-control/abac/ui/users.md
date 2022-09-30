@@ -3,18 +3,14 @@ keywords: Experience Platform;accueil;rubriques populaires;contrôle d’accès;
 title: Gestion des utilisateurs du contrôle d’accès basé sur les attributs
 description: Ce document fournit des informations sur la gestion des utilisateurs et des groupes d’utilisateurs par le biais de l’interface Autorisations dans Adobe Experience Cloud.
 exl-id: 16450867-040a-4be1-a6c0-f03d0a1b90ba
-source-git-commit: c31855bff9d87133252c43e2f2f2fe1960c7b144
+source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
 workflow-type: tm+mt
-source-wordcount: '191'
-ht-degree: 18%
+source-wordcount: '160'
+ht-degree: 2%
 
 ---
 
 # Gérer les utilisateurs
-
->[!IMPORTANT]
->
->Le contrôle d’accès basé sur les attributs est actuellement disponible pour un nombre restreint d’utilisateurs, qui sont actifs dans le secteur de la santé et basés aux États-Unis. Cette fonctionnalité sera disponible pour tous les clients Real-time Customer Data Platform dès son déploiement à grande échelle.
 
 Si vous souhaitez afficher les détails et les rôles des utilisateurs auxquels ils sont affectés, sélectionnez la variable **[!UICONTROL Utilisateurs]** .
 

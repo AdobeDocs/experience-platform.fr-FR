@@ -4,18 +4,14 @@ solution: Experience Platform
 title: Point de terminaison de l’API Products
 description: Le point de terminaison /products de l’API Attribute-Based Access Control vous permet de gérer les produits par programmation dans Adobe Experience Platform.
 exl-id: 44ee9a9d-7a13-4d59-a1a9-97764dbd3763
-source-git-commit: 567bfe089fd96cb08cb8ea7c90d065c804be9413
+source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
 workflow-type: tm+mt
-source-wordcount: '523'
-ht-degree: 22%
+source-wordcount: '492'
+ht-degree: 17%
 
 ---
 
 # Point d’entrée Produits
-
->[!IMPORTANT]
->
->Le contrôle d’accès basé sur les attributs est actuellement disponible pour un nombre restreint d’utilisateurs, qui sont actifs dans le secteur de la santé et basés aux États-Unis. Cette fonctionnalité sera disponible pour tous les clients Real-time Customer Data Platform dès son déploiement à grande échelle.
 
 Le `/products` Le point de terminaison de l’API de contrôle d’accès basé sur les attributs vous permet de gérer par programmation les produits, ainsi que les catégories d’autorisations et les jeux d’autorisations associés aux produits de votre entreprise.
 
