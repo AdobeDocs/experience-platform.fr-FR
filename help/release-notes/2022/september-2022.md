@@ -1,10 +1,10 @@
 ---
 title: Notes de mise à jour de Adobe Experience Platform - Septembre 2022
 description: Notes de mise à jour de septembre 2022 pour Adobe Experience Platform.
-source-git-commit: 20902b6a0dce4c189f43343d9fd0a87913a0fdbf
+source-git-commit: d93036c26e9f1b86a82f4da4cce6f9e8152e3542
 workflow-type: tm+mt
-source-wordcount: '3060'
-ht-degree: 30%
+source-wordcount: '2895'
+ht-degree: 29%
 
 ---
 
@@ -22,7 +22,6 @@ Mises à jour des fonctionnalités existantes dans Adobe Experience Platform 
 - [Journaux d’audit](#audit-logs)
 - [[!DNL Dashboards]](#dashboards)
 - [Collecte de données](#data-collection)
-- [Hygiène des données](#data-hygiene)
 - [Destinations](#destinations)
 - [Modèle de données d’expérience (XDM)](#xdm)
 - [Service d’identités](#identity-service)
@@ -118,27 +117,6 @@ Adobe Experience Platform fournit une suite de technologies qui vous permetten
 -->
 
 Pour plus d’informations sur la collecte de données dans Platform, consultez la [Présentation de la collecte de données](../../collection/home.md).
-
-## Hygiène des données {#data-hygiene}
-
-Adobe Experience Platform offre un ensemble d’outils fiables pour gérer des opérations de données complexes et volumineuses afin d’orchestrer les expériences client. Les données étant ingérées dans le système au fil du temps, il devient de plus en plus important de gérer les banques de données pour que les données soient utilisées comme prévu, mises à jour lorsque des données incorrectes doivent être corrigées et supprimées lorsque les politiques d’entreprise le jugent nécessaire.
-
-Les fonctionnalités d’hygiène des données de Adobe Experience Platform vous permettent de nettoyer vos données en planifiant l’expiration automatisée des jeux de données et en supprimant par programmation les données des consommateurs par identité.
-
->[!IMPORTANT]
->
->Les capacités d’hygiène des données ne sont disponibles que pour les organisations qui ont acheté l’Adobe Healthcare Shield.
-
-**Fonctionnalités nouvelles ou mises à jour**
-
-| Fonctionnalité | Description |
-| --- | --- |
-| Processus de l’interface utilisateur mis à jour | Les workflows pour [planification de l’expiration des jeux de données](../../hygiene/ui/dataset-expiration.md) et [suppression des données des consommateurs](../../hygiene/ui/delete-consumer.md) ont été rationalisées dans l’interface utilisateur. |
-| Point d’entrée de l’API Quota | Vous pouvez désormais récupérer les informations sur les quotas pour les processus d’hygiène des données de votre entreprise en appelant le [`/quota` endpoint](../../hygiene/api/quota.md). |
-
-{style=&quot;table-layout:auto&quot;}
-
-Pour plus d&#39;informations sur les fonctionnalités d&#39;hygiène des données de Platform, reportez-vous à la section [présentation de l’hygiène des données](../../hygiene/home.md).
 
 ## [!DNL Destinations] {#destinations}
 
