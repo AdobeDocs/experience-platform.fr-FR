@@ -5,9 +5,9 @@ title: Contraintes de type de champ XDM
 topic-legacy: overview
 description: Référence pour les contraintes de type de champ dans le modèle de données d’expérience (XDM), y compris les autres formats de sérialisation auxquels elles peuvent être mappées et comment définir vos propres types de champ dans l’API.
 exl-id: 63839a28-6d26-46f1-8bbf-b524e82ac4df
-source-git-commit: 2a58236031834bbe298576e2fcab54b04ec16ac3
+source-git-commit: a3b4dd65b22bb04bcba52c44a09030f51454a9c8
 workflow-type: tm+mt
-source-wordcount: '668'
+source-wordcount: '663'
 ht-degree: 12%
 
 ---
@@ -126,11 +126,11 @@ Les sections ci-dessous décrivent comment chaque type XDM est mappé à d’aut
 * [Scala, .NET et CosmosDB](#scala)
 * [MongoDB, Aerospike et Protobuf 2](#mongo)
 
->[!IMPORTANT]
+>[!NOTE]
 >
 >Parmi les types XDM standard répertoriés dans les tableaux ci-dessous, la variable [!UICONTROL Carte] est également inclus. Les cartes sont utilisées dans les schémas standard lorsque les données sont représentées sous la forme de clés qui mappent à certaines valeurs ou lorsque les clés ne peuvent pas raisonnablement être incluses dans un schéma statique et doivent être traitées comme des valeurs de données.
 >
->Les champs de type map sont réservés à l’utilisation des schémas du secteur et des fournisseurs et ne peuvent donc pas être utilisés dans les ressources personnalisées que vous définissez. L’inclusion du type de mappage dans les tableaux ci-dessous est uniquement destinée à vous aider à déterminer comment mapper vos données existantes à XDM si elles sont actuellement stockées dans l’un des formats répertoriés ci-dessous.
+>De nombreux composants XDM standard utilisent des types de mappage. Vous pouvez également [Définition des champs de mappage personnalisés](../tutorials/custom-fields-api.md#maps) si vous le souhaitez. L’inclusion du type de mappage dans les tableaux ci-dessous a pour but de vous aider à déterminer comment mapper vos données existantes à XDM si elles sont actuellement stockées dans l’un des formats répertoriés ci-dessous.
 
 ### Parquet, Spark SQL et Java {#parquet}
 
