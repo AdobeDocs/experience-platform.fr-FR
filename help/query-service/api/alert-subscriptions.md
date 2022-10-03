@@ -2,7 +2,7 @@
 keywords: Experience Platform;accueil;rubriques populaires;service de requête;service de requête;alerte;
 title: Point de terminaison de l’API des abonnements des alertes
 description: Ce guide fournit des exemples de requêtes et de réponses HTTP pour les différents appels API que vous pouvez effectuer au point de terminaison des abonnements aux alertes avec l’API Query Service.
-source-git-commit: bd841244fcb7d63af9c3383335307647b93499ce
+source-git-commit: cab7fcfda1bd8f6462af6e631f1fcee1f354d26b
 workflow-type: tm+mt
 source-wordcount: '2289'
 ht-degree: 5%
@@ -301,7 +301,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/query/alert-subscriptions
 
 **Réponse**
 
-Une réponse réussie renvoie un état HTML de 200 et toutes les alertes auxquelles vous êtes abonné. Il s’agit notamment de l’identifiant de l’alerte, du type d’alerte, des identifiants d’adresse électronique enregistrés de l’Adobe de l’abonné et de leur canal de notification préféré.
+Une réponse réussie renvoie un état HTTP de 200 et toutes les alertes auxquelles vous êtes abonné. Il s’agit notamment de l’identifiant de l’alerte, du type d’alerte, des identifiants d’adresse électronique enregistrés de l’Adobe de l’abonné et de leur canal de notification préféré.
 
 ```json
 {

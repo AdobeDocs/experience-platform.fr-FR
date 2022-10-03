@@ -5,9 +5,9 @@ title: Guide des informations d’identification de Query Service
 topic-legacy: guide
 description: Adobe Experience Platform Query Service fournit une interface utilisateur qui peut être utilisée pour écrire et exécuter des requêtes, afficher des requêtes précédemment exécutées et accéder aux requêtes enregistrées par les utilisateurs au sein de votre organisation IMS.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
+source-git-commit: f3052745105df603e547535a12285b6c1d771fa6
 workflow-type: tm+mt
-source-wordcount: '1168'
+source-wordcount: '1186'
 ht-degree: 2%
 
 ---
@@ -109,6 +109,7 @@ Le tableau ci-dessous décrit les paramètres généralement requis pour se conn
 >[!NOTE]
 >
 >Lors de la connexion à un hôte à l’aide d’informations d’identification non arrivant à expiration, il est toujours nécessaire d’utiliser tous les paramètres répertoriés dans la variable [!UICONTROL EXPIRATION DES INFORMATIONS D’IDENTIFICATION] sauf pour le mot de passe et le nom d’utilisateur.
+>Le format de saisie de votre nom d’utilisateur et de votre mot de passe utilise des valeurs séparées par des deux points comme indiqué dans cet exemple. `username:{your_username}` et `password:{password_string}`.
 
 | Paramètre | Description |
 |---|---|
