@@ -2,14 +2,19 @@
 title: Notes de mise à jour relatives aux balises et au transfert d’événements
 description: Dernières notes de mise à jour concernant les balises et le transfert d’événement dans Adobe Experience Platform.
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: af424089c0afdaae76b312137afc5cbd28e82856
+source-git-commit: 2a5c31f8991c1c6aff294eabf4cc0e35c96ecaf7
 workflow-type: tm+mt
-source-wordcount: '138'
-ht-degree: 22%
+source-wordcount: '224'
+ht-degree: 14%
 
 ---
 
 # Notes de mise à jour relatives aux balises et au transfert d’événement
+
+## 28 septembre 2022
+
+* **Intégration de la navigation de gauche Adobe Experience Platform**: Toutes les fonctionnalités qui étaient auparavant exclusives à l’interface utilisateur de collecte de données (y compris les balises et le transfert d’événement) sont désormais également disponibles via la navigation de gauche dans l’interface utilisateur de l’Experience Platform, sous la catégorie . **[!UICONTROL Collecte de données]**. Cela évite de basculer entre les interfaces utilisateur lors de l’utilisation des fonctionnalités de collecte de données dans Platform.
+* **Attribution utilisateur dans les balises et le transfert d’événement**: Lors de la mise en liste des propriétés disponibles dans les balises et le transfert d’événement, chaque propriété répertoriée indique désormais à quel moment elle a été mise à jour pour la dernière fois et par qui.
 
 ## 27 juillet 2022
 
