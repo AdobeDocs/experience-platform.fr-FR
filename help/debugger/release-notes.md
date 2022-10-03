@@ -4,20 +4,23 @@ description: Dernières notes de mise à jour pour Adobe Experience Platform 
 keywords: debugger;extension Experience Platform Debugger;chrome;extension;notes de mise à jour
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
-source-git-commit: 28e54656fcd85fc56e72d4fdd3d079cf8590302f
+source-git-commit: 96a092efe5ceefeb7b6c3ddd9845d78b8862ac68
 workflow-type: tm+mt
-source-wordcount: '373'
+source-wordcount: '430'
 ht-degree: 2%
 
 ---
 
 # Notes de mise à jour de Adobe Experience Platform Debugger
 
-<!-- ## Version 1.4.0 - August 24, 2022
+## Version 1.4.0 - 3 octobre 2022
 
-* Added support for Web SDK hybrid implementation.
-* Added error message when enabling Target Trace fails.
-* Updated dependencies. -->
+* Ajout de la prise en charge du débogage AEP Assurance pour les mises en oeuvre hybrides du SDK Web.
+* Ajout de la prise en charge de plusieurs onglets dans la même session AEP Assurance.
+* Correction d’un problème en raison duquel les utilisateurs ne pouvaient pas changer de profil/d’organisation après connexion.
+   * Pour certains comptes, il est nécessaire de se déconnecter et de se reconnecter pour changer d’entreprise.
+* Ajout d’un message d’erreur lors de l’échec de l’activation de Target Trace.
+* Mise à jour des dépendances.
 
 ## Version 1.3.3 - 20 juin 2022
 
