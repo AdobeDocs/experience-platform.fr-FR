@@ -5,7 +5,7 @@ exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
 source-git-commit: 83149c4e6e8ea483133da4766c37886b8ebd7316
 workflow-type: tm+mt
 source-wordcount: '400'
-ht-degree: 71%
+ht-degree: 81%
 
 ---
 
@@ -49,7 +49,7 @@ L’API Data Hygiene vous permet de supprimer tous les enregistrements associés
 
 ## Quota
 
-Votre entreprise est limitée à un quota mensuel d’emplois prédéterminé pour chaque type d’opération d’hygiène des données, qui peut varier en fonction des licences. Voir [Guide du point de fin de quota](./quota.md) pour plus d’informations sur l’état actuel du quota de vos processus d’hygiène des données.
+Votre entreprise est limitée à un quota mensuel de traitements prédéterminé pour chaque type d’opération d’hygiène des données, ce qui peut varier en fonction des licences. Voir [Guide du point d’entrée du quota](./quota.md) pour plus d’informations sur l’état actuel du quota de vos processus d’hygiène des données.
 
 ## Étapes suivantes
 
