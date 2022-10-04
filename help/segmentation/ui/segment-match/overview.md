@@ -5,9 +5,9 @@ title: Présentation de la correspondance de segment
 topic-legacy: overview
 description: La correspondance de segment est un service de partage de segments dans Adobe Experience Platform qui permet à deux utilisateurs ou plus de Platform d’échanger des données de segment de manière sécurisée, gérée et respectueuse de la confidentialité.
 exl-id: 4e6ec2e0-035a-46f4-b171-afb777c14850
-source-git-commit: 1c2b9862facfe9fbce59246c882e6373f3e2c3ef
+source-git-commit: 2329065b938d97f48a23be5250fec535355db770
 workflow-type: tm+mt
-source-wordcount: '1994'
+source-wordcount: '1998'
 ht-degree: 6%
 
 ---
@@ -45,7 +45,7 @@ La liste des espaces de noms pris en charge est la suivante :
 
 | Espace de noms | Description |
 | --------- | ----------- |
-| Emails (SHA256, avec mise en minuscules) | Espace de noms pour l’adresse électronique préhachée. Les valeurs fournies dans cet espace de noms sont converties en minuscules avant le hachage avec SHA256. Les espaces de début et de fin doivent être supprimés avant qu’une adresse email ne soit normalisée. Ce paramètre ne peut pas être modifié rétroactivement. Consultez le document suivant sur [Prise en charge du hachage SHA-256](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html?lang=en#hashing-support) pour plus d’informations. |
+| Emails (SHA256, avec mise en minuscules) | Espace de noms pour l’adresse électronique préhachée. Les valeurs fournies dans cet espace de noms sont converties en minuscules avant le hachage avec SHA256. Les espaces de début et de fin doivent être supprimés avant qu’une adresse email ne soit normalisée. Ce paramètre ne peut pas être modifié rétroactivement. Platform propose deux méthodes de prise en charge du hachage de la collecte de données, par le biais de [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html?lang=en#hashing-support) et [préparation des données](../../../data-prep/functions.md#hashing). |
 | Téléphone (SHA256_E.164) | Espace de noms qui représente les numéros de téléphone bruts qui doivent être hachés au format SHA256 et E.164. |
 | ECID | Espace de noms représentant une valeur d’identifiant Experience Cloud (ECID). Cet espace de noms peut également être référencé par les alias suivants : &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Pour plus d’informations, consultez la [présentation ECID](../../../identity-service/ecid.md). |
 | Apple IDFA (ID pour les annonceurs) | Espace de noms représentant l’Apple ID pour les annonceurs. Consultez le document suivant sur [publicités basées sur les intérêts](https://support.apple.com/fr-fr/HT202074) pour plus d’informations. |
