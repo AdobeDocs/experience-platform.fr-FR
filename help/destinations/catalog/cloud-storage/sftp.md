@@ -3,9 +3,9 @@ keywords: SFTP;sftp
 title: Connexion SFTP
 description: Créez une connexion sortante active à votre serveur SFTP afin d’exporter périodiquement des fichiers de données délimités de Adobe Experience Platform.
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: fd2019feb25b540612a278cbea5bf5efafe284dc
+source-git-commit: 1dd87ce19c3d9f4eb07c49968754ab979b4dee5c
 workflow-type: tm+mt
-source-wordcount: '673'
+source-wordcount: '690'
 ht-degree: 6%
 
 ---
@@ -60,10 +60,9 @@ Si vous sélectionnez la variable **[!UICONTROL Authentification de base]** sais
 * **[!UICONTROL Hôte]**: l’adresse de votre emplacement de stockage SFTP ;
 * **[!UICONTROL Nom d’utilisateur]**: Nom d’utilisateur pour se connecter à l’emplacement de stockage SFTP ;
 * **[!UICONTROL Mot de passe]**: Mot de passe pour se connecter à l’emplacement de stockage de votre SFTP.
-* **[!UICONTROL Clé de chiffrement]**: Vous pouvez éventuellement joindre votre clé publique au format RSA pour ajouter un chiffrement à vos fichiers exportés. Votre clé publique doit être écrite en tant que [!DNL Base64] chaîne codée.
-   * Exemple: `----BEGIN PGP PUBLIC KEY BLOCK---- {Base64-encoded string} ----END PGP PUBLIC KEY BLOCK----`. Voir ci-dessous un exemple de clé PGP correctement formatée, avec la partie centrale raccourcie pour plus de concision.
+* **[!UICONTROL Clé de chiffrement]**: Vous pouvez éventuellement joindre votre clé publique au format RSA pour ajouter un chiffrement à vos fichiers exportés. Votre clé publique doit être écrite en tant que [!DNL Base64-encoded] chaîne. Affichez un exemple d’une clé codée en base64 correctement formatée dans le lien de documentation ci-dessous. La partie centrale est raccourcie par concision.
 
-      ![Clé PGP](../..//assets/catalog/cloud-storage/sftp/pgp-key.png)
+![Image montrant un exemple d’une clé PGP correctement formatée et chiffrée en base64 dans l’interface utilisateur](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
 
 Si vous sélectionnez la variable **[!UICONTROL SFTP avec clé SSH]** type d’authentification pour se connecter à votre emplacement SFTP :
