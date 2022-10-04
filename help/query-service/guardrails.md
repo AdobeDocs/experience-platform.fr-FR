@@ -3,14 +3,14 @@ keywords: Experience Platform;requête;service de requête;dépannage;garde-fous
 title: Barrières de sécurité pour Query Service
 description: Ce document fournit des informations sur les limites d’utilisation des données de Query Service afin de vous aider à optimiser l’utilisation de vos requêtes.
 exl-id: 1ad5dcf4-d048-49ff-97e3-07040392b65b
-source-git-commit: d874fed681449c6f5114196cface157c8c406d69
+source-git-commit: 8e5df8b3e38197520c6e15f7c6639c62527c086e
 workflow-type: tm+mt
-source-wordcount: '765'
-ht-degree: 11%
+source-wordcount: '764'
+ht-degree: 12%
 
 ---
 
-# Barrières de sécurité pour les données de Query Service
+# Barrières de sécurité pour Query Service
 
 Les barrières de sécurité sont des seuils qui fournissent des conseils pour l’utilisation des données et du système, l’optimisation des performances et la prévention des erreurs ou des résultats inattendus dans Adobe Experience Platform.
 
@@ -23,10 +23,6 @@ Avant de poursuivre ce document, vous devez bien comprendre les deux fonctionnal
 * **Requêtes ad hoc**: Pour exécuter `SELECT` requêtes pour explorer, tester et valider les données où les résultats des requêtes **ne sont pas stockés** sur le lac de données.
 
 * **Requêtes par lots**: Pour exécuter `INSERT TABLE AS SELECT` et `CREATE TABLE AS SELECT` requêtes pour nettoyer, former, manipuler et enrichir les données. Les résultats de ces requêtes **sont stockées** sur le lac de données. La mesure permettant de mesurer la consommation de cette fonctionnalité est les heures de calcul.
-
->[!IMPORTANT]
->
->Pour s’assurer que chaque requête d’un tableau de bord des insights Real-time Customer Data Platform dispose de suffisamment de ressources pour s’exécuter efficacement, l’API effectue le suivi de l’utilisation des ressources en attribuant des emplacements simultanés à chaque requête. Le système peut traiter jusqu’à quatre requêtes simultanées. Par conséquent, quatre emplacements de requête simultanés sont disponibles à tout moment. Les requêtes sont placées dans une file d’attente en fonction des emplacements de simultanéité, puis patientez dans la file d’attente jusqu’à ce que suffisamment d’emplacements de simultanéité soient disponibles.
 
 L’illustration ci-dessous résume la manière dont les fonctionnalités de Query Service sont actuellement mises en package et sous licence :
 
@@ -71,6 +67,8 @@ Les tableaux ci-dessous contiennent les descriptions et limites recommandées po
 | Résultats renvoyés via | Jeu de données | S/O | Cela définit la manière dont les résultats sont mis à la disposition des utilisateurs. |
 
 {style=&quot;table-layout:auto&quot;}
+
+Pour s’assurer que chaque requête d’un tableau de bord des insights Real-time Customer Data Platform dispose de suffisamment de ressources pour s’exécuter efficacement, l’API effectue le suivi de l’utilisation des ressources en attribuant des emplacements simultanés à chaque requête. Le système peut traiter jusqu’à quatre requêtes simultanées. Par conséquent, quatre emplacements de requête simultanés sont disponibles à tout moment. Les requêtes sont placées dans une file d’attente en fonction des emplacements de simultanéité, puis patientez dans la file d’attente jusqu’à ce que suffisamment d’emplacements de simultanéité soient disponibles.
 
 ## Étapes suivantes
 
