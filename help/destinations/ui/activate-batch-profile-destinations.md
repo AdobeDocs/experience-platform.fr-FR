@@ -4,10 +4,10 @@ title: Activer les données d’audience vers des destinations d’exportation d
 type: Tutorial
 description: Comment activer les données d’audience disponibles dans Adobe Experience Platform en envoyant des segments vers des destinations de profils par lots.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 70670f7aec2ab6a5594f5e69672236c7bcc3ce81
+source-git-commit: 48e87f6089f6fe0be6cb49f5138422c631a485c3
 workflow-type: tm+mt
-source-wordcount: '2520'
-ht-degree: 81%
+source-wordcount: '2577'
+ht-degree: 79%
 
 ---
 
@@ -122,6 +122,11 @@ Utilisez la variable **[!UICONTROL Planifié]** pour que la tâche d’activatio
 1. Sélectionnez **[!UICONTROL Créer]** pour enregistrer le planning.
 
 ### Exporter des fichiers incrémentiels {#export-incremental-files}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_datasets_exportoptions"
+>title="Options d’exportation de fichiers pour les jeux de données"
+>abstract="Sélectionner **Exportation de fichiers incrémentiels** pour n’exporter que les données ajoutées au jeu de données depuis la dernière exportation. <br> La première exportation incrémentielle de fichier inclut toutes les données du jeu de données, agissant comme un renvoi. Les futurs fichiers incrémentiels incluent uniquement les données qui ont été ajoutées au jeu de données depuis la première exportation."
 
 Sélectionnez **[!UICONTROL Exporter des fichiers incrémentiels]** pour une exportation où le premier fichier est un cliché instantané complet de toutes les qualifications de profil pour le segment sélectionné, et les fichiers suivants sont des qualifications de profil incrémentielles depuis l’exportation précédente.
 
