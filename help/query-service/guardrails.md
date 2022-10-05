@@ -3,9 +3,9 @@ keywords: Experience Platform;requête;service de requête;dépannage;garde-fous
 title: Barrières de sécurité pour Query Service
 description: Ce document fournit des informations sur les limites d’utilisation des données de Query Service afin de vous aider à optimiser l’utilisation de vos requêtes.
 exl-id: 1ad5dcf4-d048-49ff-97e3-07040392b65b
-source-git-commit: 8e5df8b3e38197520c6e15f7c6639c62527c086e
+source-git-commit: f8913fd8f5d6f4acf70a43c0a047bcd034dfd402
 workflow-type: tm+mt
-source-wordcount: '764'
+source-wordcount: '769'
 ht-degree: 12%
 
 ---
@@ -67,6 +67,8 @@ Les tableaux ci-dessous contiennent les descriptions et limites recommandées po
 | Résultats renvoyés via | Jeu de données | S/O | Cela définit la manière dont les résultats sont mis à la disposition des utilisateurs. |
 
 {style=&quot;table-layout:auto&quot;}
+
+## Informations sur les tableaux de bord générés avec des requêtes {#dashboard-insights}
 
 Pour s’assurer que chaque requête d’un tableau de bord des insights Real-time Customer Data Platform dispose de suffisamment de ressources pour s’exécuter efficacement, l’API effectue le suivi de l’utilisation des ressources en attribuant des emplacements simultanés à chaque requête. Le système peut traiter jusqu’à quatre requêtes simultanées. Par conséquent, quatre emplacements de requête simultanés sont disponibles à tout moment. Les requêtes sont placées dans une file d’attente en fonction des emplacements de simultanéité, puis patientez dans la file d’attente jusqu’à ce que suffisamment d’emplacements de simultanéité soient disponibles.
 
