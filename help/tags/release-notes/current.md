@@ -2,10 +2,10 @@
 title: Notes de mise à jour relatives aux balises et au transfert d’événements
 description: Dernières notes de mise à jour concernant les balises et le transfert d’événement dans Adobe Experience Platform.
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: 2a5c31f8991c1c6aff294eabf4cc0e35c96ecaf7
+source-git-commit: 319c30facb7e8093318a01a3155bdb2fee0f548b
 workflow-type: tm+mt
-source-wordcount: '224'
-ht-degree: 14%
+source-wordcount: '263'
+ht-degree: 12%
 
 ---
 
@@ -15,6 +15,7 @@ ht-degree: 14%
 
 * **Intégration de la navigation de gauche Adobe Experience Platform**: Toutes les fonctionnalités qui étaient auparavant exclusives à l’interface utilisateur de collecte de données (y compris les balises et le transfert d’événement) sont désormais également disponibles via la navigation de gauche dans l’interface utilisateur de l’Experience Platform, sous la catégorie . **[!UICONTROL Collecte de données]**. Cela évite de basculer entre les interfaces utilisateur lors de l’utilisation des fonctionnalités de collecte de données dans Platform.
 * **Attribution utilisateur dans les balises et le transfert d’événement**: Lors de la mise en liste des propriétés disponibles dans les balises et le transfert d’événement, chaque propriété répertoriée indique désormais à quel moment elle a été mise à jour pour la dernière fois et par qui.
+* **[[!DNL Snap Conversions API] extension](https://exchange.adobe.com/apps/ec/108550) pour le transfert d’événement**: Vous pouvez désormais envoyer des données à la variable [!DNL Snapchat Conversions API] à l’aide d’une [transfert d’événement](../../tags/ui/event-forwarding/overview.md) extension . Pour plus d’informations sur l’authentification et l’utilisation de l’API, reportez-vous à la section [[!DNL Snapchat Marketing API] documentation](https://marketingapi.snapchat.com/docs/conversion.html).
 
 ## 27 juillet 2022
 
