@@ -2,10 +2,10 @@
 title: Destination Marketo Engage
 description: Marketo Engage est la seule solution de gestion de l’expérience client de bout en bout (CXM) pour le marketing, la publicité, les analyses et le commerce. Il vous permet d’automatiser et de gérer les activités, de la gestion de la relation client à la gestion de la relation client en passant par le marketing basé sur les comptes et l’attribution des recettes.
 exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
-source-git-commit: 6dc4a93b46d6111637e0024da574d605e0d2b986
+source-git-commit: 9f305ee7824bd8790dec57ccbd2d9462ccfa8b49
 workflow-type: tm+mt
-source-wordcount: '740'
-ht-degree: 21%
+source-wordcount: '870'
+ht-degree: 20%
 
 ---
 
@@ -75,9 +75,15 @@ Pour obtenir des instructions détaillées sur la configuration de la destinatio
 
 La vidéo ci-dessous présente également les étapes de configuration d’une destination Marketo et d’activation de segments.
 
->[!NOTE]
+>[!IMPORTANT]
 >
->L’interface utilisateur d’Experience Platform est fréquemment mise à jour et peut avoir changé depuis l’enregistrement de cette vidéo. Pour obtenir les informations les plus récentes, consultez le guide ci-dessus.
+>La vidéo ne reflète pas entièrement la fonctionnalité actuelle. Pour obtenir les informations les plus récentes, consultez le guide ci-dessus. Les parties suivantes de la vidéo sont obsolètes :
+> 
+>* La carte de destination que vous devez utiliser dans l’interface utilisateur de l’Experience Platform est **[!UICONTROL Marketo V2]**.
+>* La vidéo n’affiche pas la nouvelle **[!UICONTROL Création de personne]** champ sélecteur dans le workflow de connexion à la destination.
+>* Les deux limitations mentionnées dans la vidéo ne s&#39;appliquent plus. Vous pouvez désormais mapper de nombreux autres champs d’attribut de profil en plus des informations d’adhésion au segment qui étaient prises en charge au moment de l’enregistrement de la vidéo. Vous pouvez également exporter des membres de segment vers Marketo qui n’existent pas encore dans vos listes statiques Marketo et qui seront ajoutés aux listes.
+>* Dans Marketo V1, à l’étape de **** Planification de segment du processus d’activation, il vous fallait ajouter manuellement un **[!UICONTROL ID de mappage]** pour exporter des données vers Marketo. Cette étape manuelle n’est plus obligatoire dans Marketo V2.
+
 
 >[!VIDEO](https://video.tv.adobe.com/v/338248?quality=12)
 
