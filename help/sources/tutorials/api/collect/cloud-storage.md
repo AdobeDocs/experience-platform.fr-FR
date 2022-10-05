@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: Ce tutoriel décrit la procédure à suivre pour récupérer des données à partir d’un stockage cloud tiers afin de les importer dans Platform à l’aide des connecteurs source et des API.
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
-source-git-commit: 2d3fbbb5c743b8e172e3e64bda31ebf3278b4f5b
+source-git-commit: 1f492fd48de304c70fdd8beb477b8a22369b853a
 workflow-type: tm+mt
-source-wordcount: '1631'
-ht-degree: 78%
+source-wordcount: '1692'
+ht-degree: 75%
 
 ---
 
@@ -62,33 +62,33 @@ POST /sourceConnections
 
 ```shell
 curl -X POST \
-    'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "name": "Cloud Storage source connection",
-        "description: "Source connection for a cloud storage source",
-        "baseConnectionId": "1f164d1b-debe-4b39-b4a9-df767f7d6f7c",
-        "data": {
-            "format": "delimited",
-            "properties": {
-                "columnDelimiter": "{COLUMN_DELIMITER}",
-                "encoding": "{ENCODING}"
-                "compressionType": "{COMPRESSION_TYPE}"
-            }
-        },
-        "params": {
-            "path": "/acme/summerCampaign/account.csv",
-            "type": "file"
-        },
-        "connectionSpec": {
-            "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
-            "version": "1.0"
-        }
-    }'
+  'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "Cloud Storage source connection",
+      "description: "Source connection for a cloud storage source",
+      "baseConnectionId": "1f164d1b-debe-4b39-b4a9-df767f7d6f7c",
+      "data": {
+          "format": "delimited",
+          "properties": {
+              "columnDelimiter": "{COLUMN_DELIMITER}",
+              "encoding": "{ENCODING}",
+              "compressionType": "{COMPRESSION_TYPE}"
+          }
+      },
+      "params": {
+          "path": "/acme/summerCampaign/account.csv",
+          "type": "file"
+      },
+      "connectionSpec": {
+          "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
+          "version": "1.0"
+      }
+  }'
 ```
 
 | Propriété | Description |
@@ -112,6 +112,46 @@ Une réponse réussie renvoie l’identifiant unique (`id`) de la nouvelle conne
     "id": "26b53912-1005-49f0-b539-12100559f0e2",
     "etag": "\"11004d97-0000-0200-0000-5f3c3b140000\""
 }
+```
+
+### Utilisation d’expressions régulières pour sélectionner un ensemble spécifique de fichiers à ingérer {#regex}
+
+Vous pouvez utiliser des expressions régulières pour ingérer un ensemble particulier de fichiers de votre source vers Platform lors de la création d’une connexion source.
+
+**Format d’API**
+
+```http
+POST /sourceConnections
+```
+
+**Requête**
+
+Dans l’exemple ci-dessous, l’expression régulière est utilisée dans le chemin d’accès au fichier pour spécifier l’ingestion de tous les fichiers CSV comportant `premium` en leur nom.
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "Cloud Storage source connection",
+      "description: "Source connection for a cloud storage source",
+      "baseConnectionId": "1f164d1b-debe-4b39-b4a9-df767f7d6f7c",
+      "data": {
+          "format": "delimited"
+      },
+      "params": {
+          "path": "/acme/summerCampaign/*premium*.csv",
+          "type": "folder"
+      },
+      "connectionSpec": {
+          "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
+          "version": "1.0"
+      }
+  }'
 ```
 
 ## Créer un schéma XDM cible {#target-schema}
