@@ -4,9 +4,9 @@ user-guide-title: Aide sur les connecteurs source d’Adobe Experience Platfor
 breadcrumb-title: Guide des connecteurs sources
 user-guide-description: Ingérez des données à partir de diverses sources ou structures, et étiquetez et améliorez les données déjà importées.
 feature: Sources
-source-git-commit: ae6ec330ce62024a0eccec0dbc5c29e9a4645de2
+source-git-commit: eb78984d233c5d0dea04f235ee9e75eefff71752
 workflow-type: tm+mt
-source-wordcount: '837'
+source-wordcount: '830'
 ht-degree: 85%
 
 ---
@@ -287,7 +287,6 @@ ht-degree: 85%
       - [Flux de données de connexion à l’automatisation marketing](tutorials/ui/dataflow/marketing-automation.md)
       - [Flux de données de connexion aux paiements](tutorials/ui/dataflow/payments.md)
       - [Flux de données de connexion au protocole](tutorials/ui/dataflow/protocols.md)
-   - [Activer les données entrantes pour renseigner les profils client](tutorials/ui/profile.md)
    - [Surveiller les flux de données par lots](tutorials/ui/monitor.md)
    - [Surveiller les flux de données de diffusion en continu](tutorials/ui/monitor-streaming.md)
    - [Mettre à jour des comptes](tutorials/ui/update.md)
