@@ -5,7 +5,7 @@ title: Définition des champs d’énumération et des valeurs proposées dans l
 description: Découvrez comment définir des énumérations et des valeurs suggérées pour les champs de chaîne dans l’interface utilisateur de l’Experience Platform.
 topic-legacy: user guide
 exl-id: 67ec5382-31de-4f8d-9618-e8919bb5a472
-source-git-commit: ea27486a198f5248eeb5348ce20865bc41c2339a
+source-git-commit: 3b71f6b07345d7b1e08fa5a8b93abc3519606015
 workflow-type: tm+mt
 source-wordcount: '1207'
 ht-degree: 0%
@@ -16,8 +16,8 @@ ht-degree: 0%
 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_enum_suggestedvalue"
->title="Enumérations et valeurs suggérées"
->abstract="Un **Enum** limite un champ de chaîne pour autoriser uniquement l’ingestion des données correspondant à un jeu prédéfini de valeurs. Chaque contrainte peut se voir attribuer une **Nom d’affichage** qui renseigne les listes déroulantes d’attributs dans l’interface utilisateur de segmentation. **Valeurs proposées** pour un champ ne limite pas l’ingestion et ne détermine que les noms d’affichage affichés dans Segmentation. Si plusieurs schémas partagent un champ appartenant à une classe ou à un groupe de champs commun et que vous définissez différentes énumérations ou valeurs suggérées pour ce champ entre chaque schéma, ces valeurs sont fusionnées et ajoutées dans le schéma d’union."
+>title="Enumérations et valeurs proposées"
+>abstract="Un **Enum** limite un champ de chaîne pour autoriser uniquement l’ingestion des données correspondant à un jeu prédéfini de valeurs. Chaque contrainte d’énumération peut se voir attribuer une **Nom d’affichage** qui renseigne les listes déroulantes d’attributs dans l’interface utilisateur de segmentation. **Valeurs proposées** pour un champ ne limite pas l’ingestion et ne détermine que les noms d’affichage affichés dans Segmentation. Si plusieurs schémas partagent un champ appartenant à une classe ou à un groupe de champs commun et que vous définissez différentes énumérations ou valeurs suggérées pour ce champ entre chaque schéma, ces valeurs sont fusionnées et ajoutées dans le schéma d’union."
 
 Dans le modèle de données d’expérience (XDM), un champ de chaîne peut se voir attribuer un jeu prédéfini de valeurs acceptées ou suggérées afin de mieux contrôler les valeurs ingérées dans ce champ ou leur comportement dans la segmentation.
 
