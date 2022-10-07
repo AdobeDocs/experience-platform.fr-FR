@@ -2,7 +2,9 @@
 keywords: Experience Platform;accueil;rubriques populaires;service de requête;service de requête;alerte;
 title: Point de terminaison de l’API des abonnements des alertes
 description: Ce guide fournit des exemples de requêtes et de réponses HTTP pour les différents appels API que vous pouvez effectuer au point de terminaison des abonnements aux alertes avec l’API Query Service.
-source-git-commit: cab7fcfda1bd8f6462af6e631f1fcee1f354d26b
+hide: true
+hidefromtoc: true
+source-git-commit: df894d8b52aff3708aa06e73d4c5ba3e1e501f10
 workflow-type: tm+mt
 source-wordcount: '2289'
 ht-degree: 5%

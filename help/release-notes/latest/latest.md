@@ -1,9 +1,9 @@
 ---
 title: Notes de mise à jour d’Adobe Experience Platform
 description: Dernières notes de mise à jour pour Adobe Experience Platform.
-source-git-commit: 319c30facb7e8093318a01a3155bdb2fee0f548b
+source-git-commit: 87789668da0cfdf86d3c47be6e4dc49282932180
 workflow-type: tm+mt
-source-wordcount: '2933'
+source-wordcount: '2925'
 ht-degree: 29%
 
 ---
@@ -215,10 +215,12 @@ Query Service vous permet d’utiliser le langage SQL standard pour interroger l
 
 | Fonctionnalité | Description |
 | --- | --- |
-| API d’abonnement aux alertes | Adobe Experience Platform Query Service vous permet de vous abonner à des alertes pour les requêtes ad hoc et planifiées. Les alertes peuvent être reçues par courrier électronique, dans l’interface utilisateur de Platform ou les deux. Actuellement, les alertes de requête ne peuvent être abonnées qu’à l’aide de la variable [API Query Service](https://developer.adobe.com/experience-platform-apis/references/query-service/). Voir [documentation sur les alertes de requête](../../query-service/api/alert-subscriptions.md) pour en savoir plus. |
+| API d’abonnement aux alertes | Adobe Experience Platform Query Service vous permet de vous abonner à des alertes pour les requêtes ad hoc et planifiées. Les alertes peuvent être reçues par courrier électronique, dans l’interface utilisateur de Platform ou les deux. Actuellement, les alertes de requête ne peuvent être abonnées qu’à l’aide de la variable [API Query Service](https://developer.adobe.com/experience-platform-apis/references/query-service/). |
 | Exemples de jeux de données | Les exemples de jeux de données Query Service vous permettent de mener des requêtes exploratoires sur les données volumineuses avec un temps de traitement considérablement réduit, au prix de la précision des requêtes. Voir [guide des exemples de jeux de données](../../query-service/sql/dataset-samples.md) pour en savoir plus. |
 
 Pour plus d’informations sur les [!DNL Query Service], consultez la [[!DNL Query Service] présentation](../../query-service/home.md).
+
+<!-- See the [query alerts documentation](../../query-service/api/alert-subscriptions.md) to learn more. -->
 
 ## Sources {#sources}
 
