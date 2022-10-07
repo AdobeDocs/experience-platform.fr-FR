@@ -2,10 +2,10 @@
 title: Guide du tableau de bord des profils de compte
 description: Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur les profils de compte B2B de votre entreprise.
 exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
-source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
+source-git-commit: 19d6d3c03e6b3b0f9f82ceeee30816fa054261a3
 workflow-type: tm+mt
-source-wordcount: '823'
-ht-degree: 9%
+source-wordcount: '1050'
+ht-degree: 7%
 
 ---
 
@@ -63,6 +63,8 @@ Pour en savoir plus sur chacun des widgets standard disponibles, sélectionnez l
 
 * [ du nombre total de comptes par secteur](#total-accounts-by-industry)
 * [Profils de compte ajoutés](#account-profiles-added)
+* [Distribution de notation prédictive](#predictive-scoring-distribution)
+* [Facteurs d’influence de la notation prédictive](#predictive-scoring-top-influential-factors)
 
 ###  du nombre total de comptes par secteur {#total-accounts-by-industry}
 
@@ -82,6 +84,28 @@ Ce widget utilise un graphique à barres avec code-couleur pour illustrer le nom
 
 ![Le widget Profils de compte ajouté.](../images/account-profiles/accounts-profiles-added-widget.png)
 
+### Distribution de notation prédictive {#predictive-scoring-distribution}
+
+Le [!UICONTROL Distribution de notation prédictive] widget affiche la distribution des scores de tous les profils de compte pour vous aider à comprendre en un coup d’oeil l’état de votre pipeline de ventes. Les données de notation sont véhiculées par le biais d’un graphique en anneau et d’un graphique en colonnes.
+
+Le graphique en anneau illustre la proportion de vos profils de compte totaux dans chacune des classes à forte, moyenne et faible propension à acheter des compartiments. La clé fournit plus de détails sur les sections codées par couleur, y compris les plages de compartiment de notation et le nombre de profils de compte dans cette plage.
+
+Le graphique en colonnes fournit une ventilation de notation plus granulaire. Chaque colonne indique le nombre de profils de compte dans chacun des 20 intervalles de cinq points.
+
+Le menu déroulant du widget vous permet de sélectionner le modèle de notation du compte.
+
+![Le widget de distribution de notation prédictive.](../images/account-profiles/predictive-scoring-distribution.png)
+
+### Facteurs d’influence de la notation prédictive {#predictive-scoring-top-influential-factors}
+
+Le [!UICONTROL Facteurs d’influence de la notation prédictive] vous aide à comprendre les facteurs les plus significatifs qui génèrent les scores pour chaque compartiment de propension.
+
+Ce widget présente les principaux facteurs d’influence pour chacun des compartiments de propension élevée, moyenne et faible. Une barre pour chaque facteur d’influence indique le pourcentage des profils de compte dans ce compartiment de propension qui contient le facteur d’influence spécifique.
+
+Le menu déroulant du widget vous permet de sélectionner le modèle de notation du compte.
+
+![Le widget Score prédictif des principaux facteurs d’influence .](../images/account-profiles/predictive-scoring-top-influential-factors.png)
+
 ## Étapes suivantes
 
-En suivant ce document, vous devriez maintenant pouvoir localiser la variable [!UICONTROL Profils de compte] tableau de bord. Vous devez également comprendre les mesures affichées dans les widgets disponibles. Pour en savoir plus sur l’utilisation des profils de compte dans le cadre de vos données B2B dans l’interface utilisateur de l’Experience Platform, reportez-vous à la section [présentation des profils de compte](../../rtcdp/accounts/account-profile-overview.md) pour Adobe Real-Time CDP, édition B2B.
+En suivant ce document, vous devez maintenant savoir comment localiser la variable [!UICONTROL Profils de compte] tableau de bord. Vous devez également comprendre les mesures affichées dans les widgets disponibles. Pour en savoir plus sur l’utilisation des profils de compte dans le cadre de vos données B2B dans l’interface utilisateur de l’Experience Platform, reportez-vous à la section [présentation des profils de compte](../../rtcdp/accounts/account-profile-overview.md) pour Adobe Real-Time CDP, édition B2B.
