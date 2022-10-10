@@ -4,10 +4,10 @@ title: Activer les données d’audience vers des destinations d’exportation d
 type: Tutorial
 description: Comment activer les données d’audience disponibles dans Adobe Experience Platform en envoyant des segments vers des destinations de profils par lots.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 48e87f6089f6fe0be6cb49f5138422c631a485c3
+source-git-commit: c096720d9b7a645475d3a3f63f900e81c212d121
 workflow-type: tm+mt
-source-wordcount: '2577'
-ht-degree: 79%
+source-wordcount: '2626'
+ht-degree: 78%
 
 ---
 
@@ -212,6 +212,12 @@ Pour les destinations basées sur un profil, vous devez sélectionner les attrib
 >[!NOTE]
 >
 > Adobe Experience Platform préremplit votre sélection avec quatre attributs recommandés couramment utilisés de votre schéma : `person.name.firstName`, `person.name.lastName`, `personalEmail.address`, `segmentMembership.status`.
+
+>[!IMPORTANT]
+>
+>En raison d’une limitation connue, vous ne pouvez actuellement pas utiliser la variable **[!UICONTROL Sélectionner un champ]** fenêtre à ajouter `segmentMembership.status` à vos exportations de fichiers. Vous devez plutôt coller manuellement la valeur. `xdm: segmentMembership.status` dans le champ de schéma, comme illustré ci-dessous.
+>
+>![Enregistrement de l’écran montrant la solution de contournement de l’appartenance au segment à l’étape de mappage du workflow d’activation.](/help/destinations/assets/ui/activate-batch-profile-destinations/segment-membership.gif)
 
 Les exportations de fichiers varient comme suit, selon que `segmentMembership.status` est sélectionné :
 * Si le champ `segmentMembership.status` est sélectionné, les fichiers exportés incluent les membres **[!UICONTROL actifs]** dans l’instantané complet initial ainsi que les membres **[!UICONTROL actifs]** et **[!UICONTROL expirés]** dans les exportations incrémentielles suivantes.
