@@ -3,10 +3,10 @@ keywords: Experience Platform;accueil;rubriques les plus consultées;service de 
 title: (Version bêta) Création d’une exécution de flux pour l’ingestion à la demande à l’aide de l’API Flow Service
 description: Ce tutoriel décrit les étapes à suivre pour créer une exécution de flux pour l’ingestion à la demande à l’aide de l’API Flow Service.
 exl-id: a7b20cd1-bb52-4b0a-aad0-796929555e4a
-source-git-commit: 61b3799a4d8c8b6682babd85b6f50a7e69778553
+source-git-commit: 795b1af6421c713f580829588f954856e0a88277
 workflow-type: tm+mt
-source-wordcount: '1157'
-ht-degree: 10%
+source-wordcount: '856'
+ht-degree: 13%
 
 ---
 
@@ -70,6 +70,7 @@ curl -X POST \
   -d '{
       "flowId": "3abea21c-7e36-4be1-bec1-d3bad0e3e0de",
       "params": {
+          "startTime": "1663735590",
           "windowStartTime": "1651584991",
           "windowEndTime": "16515859567",
           "deltaColumn": {
@@ -82,9 +83,10 @@ curl -X POST \
 | Paramètre | Description |
 | --- | --- |
 | `flowId` | L’identifiant du flux sur lequel votre exécution de flux sera créée. |
+| `params.startTime` | Entier qui définit l’heure de début de l’exécution. La valeur est représentée en heure d’époque unix. |
 | `params.windowStartTime` | Entier qui définit l’heure de début de la fenêtre pendant laquelle les données doivent être extraites. La valeur est représentée en heure unix. |
 | `params.windowEndTime` | Entier qui définit l’heure de fin de la fenêtre pendant laquelle les données doivent être extraites. La valeur est représentée en heure unix. |
-| `params.deltaColumn` | La colonne delta est nécessaire pour partitionner les données et séparer les données nouvellement ingérées des données historiques. |
+| `params.deltaColumn` | La colonne delta est nécessaire pour partitionner les données et séparer les données nouvellement ingérées des données historiques. **Remarque**: Le `deltaColumn` n’est nécessaire que lors de la création de votre première exécution de flux. |
 | `params.deltaColumn.name` | Nom de la colonne delta. |
 
 **Réponse**
@@ -93,53 +95,36 @@ Une réponse réussie renvoie les détails de l’exécution de flux nouvellemen
 
 ```json
 {
-    "id": "3fb0418e-1804-45d6-8d56-dd51f05c0baf",
-    "createdAt": 1651587212543,
-    "updatedAt": 1651587223839,
-    "createdBy": "{CREATED_BY}",
-    "updatedBy": "{UPDATED_BY}",
-    "createdClient": "{CREATED_CLIENT}",
-    "updatedClient": "{UPDATED_CLIENT}",
-    "sandboxId": "{SANDBOX_ID}",
-    "sandboxName": "prod",
-    "imsOrgId": "{ORGANIZATION_ID}",
-    "flowId": "3abea21c-7e36-4be1-bec1-d3bad0e3e0de",
-    "params": {
-        "windowStartTime": "1651584991",
-        "windowEndTime": "16515859567",
-        "deltaColumn": {
-            "name": "DOB"
+    "items": [
+        {
+            "id": "3fb0418e-1804-45d6-8d56-dd51f05c0baf",
+            "etag": "\"1100c53e-0000-0200-0000-627138980000\""
         }
-    },
-    "etag": "\"1100c53e-0000-0200-0000-627138980000\"",
-    "metrics": {
-        "statusSummary": {
-            "status": "scheduled"
-        }
-    },
-    "activities": []
+    ]
 }
 ```
 
 | Propriété | Description |
 | --- | --- |
 | `id` | L’identifiant de l’exécution de flux nouvellement créée. Consultez le guide sur la [récupération des spécifications de flux](../api/collect/database-nosql.md#specs) pour plus d’informations sur les spécifications d’exécution basées sur un tableau. |
-| `createdAt` | Horodatage unix désignant le moment où l’exécution du flux a été créée. |
-| `updatedAt` | Horodatage unix désignant le moment où l’exécution du flux a été mise à jour pour la dernière fois. |
-| `createdBy` | ID d’organisation de l’utilisateur qui a créé l’exécution du flux. |
-| `updatedBy` | ID d’organisation de l’utilisateur qui a mis à jour l’exécution du flux pour la dernière fois. |
-| `createdClient` | Client de l’application qui a créé l’exécution du flux. |
-| `updatedClient` | Client de l’application qui a mis à jour la dernière exécution du flux. |
-| `sandboxId` | L’identifiant de l’environnement de test qui contient l’exécution du flux. |
-| `sandboxName` | Nom de l’environnement de test qui contient l’exécution de flux. |
-| `imsOrgId` | ID d’organisation. |
-| `flowId` | Identifiant du flux par lequel l’exécution du flux est créée. |
-| `params.windowStartTime` | Entier qui définit l’heure de début de la fenêtre pendant laquelle les données doivent être extraites. La valeur est représentée en heure unix. |
-| `params.windowEndTime` | Entier qui définit l’heure de fin de la fenêtre pendant laquelle les données doivent être extraites. La valeur est représentée en heure unix. |
-| `params.deltaColumn` | La colonne delta est nécessaire pour partitionner les données et séparer les données nouvellement ingérées des données historiques. **Remarque**: Le `deltaColumn` n’est nécessaire que lors de la création de votre première exécution de flux. |
-| `params.deltaColumn.name` | Nom de la colonne delta. |
 | `etag` | Version de ressource de l’exécution de flux. |
-| `metrics` | Cette propriété affiche un résumé de l’état de l’exécution du flux. |
+<!-- 
+| `createdAt` | The unix timestamp that designates when the flow run was created. |
+| `updatedAt` | The unix timestamp that designates when the flow run was last updated. |
+| `createdBy` | The organization ID of the user who created the flow run. |
+| `updatedBy` | The organization ID of the user who last updated the flow run. |
+| `createdClient` | The application client that created the flow run. |
+| `updatedClient` | The application client that last updated the flow run. |
+| `sandboxId` | The ID of the sandbox that contains the flow run. |
+| `sandboxName` | The name of the sandbox that contains the flow run. |
+| `imsOrgId` | The organization ID. |
+| `flowId` | The ID of the flow in which the flow run is created against. |
+| `params.windowStartTime` | An integer that defines the start time of the window during which data is to be pulled. The value is represented in unix time. |
+| `params.windowEndTime` | An integer that defines the end time of the window during which data is to be pulled. The value is represented in unix time. |
+| `params.deltaColumn` | The delta column is required to partition the data and separate newly ingested data from historic data. **Note**: The `deltaColumn` is only needed when creating your firs flow run. |
+| `params.deltaColumn.name` | The name of the delta column. |
+| `etag` | The resource version of the flow run. |
+| `metrics` | This property displays a status summary for the flow run. | -->
 
 ## Création d’une exécution de flux pour une source basée sur des fichiers
 
@@ -170,6 +155,7 @@ curl -X POST \
   -d '{
       "flowId": "3abea21c-7e36-4be1-bec1-d3bad0e3e0de",
       "params": {
+          "startTime": "1663735590",
           "windowStartTime": "1651584991",
           "windowEndTime": "16515859567"
       }
@@ -179,6 +165,7 @@ curl -X POST \
 | Paramètre | Description |
 | --- | --- |
 | `flowId` | L’identifiant du flux sur lequel votre exécution de flux sera créée. |
+| `params.startTime` | Entier qui définit l’heure de début de l’exécution. La valeur est représentée en heure d’époque unix. |
 | `params.windowStartTime` | Entier qui définit l’heure de début de la fenêtre pendant laquelle les données doivent être extraites. La valeur est représentée en heure unix. |
 | `params.windowEndTime` | Entier qui définit l’heure de fin de la fenêtre pendant laquelle les données doivent être extraites. La valeur est représentée en heure unix. |
 
@@ -189,49 +176,19 @@ Une réponse réussie renvoie les détails de l’exécution de flux nouvellemen
 
 ```json
 {
-    "id": "3fb0418e-1804-45d6-8d56-dd51f05c0baf",
-    "createdAt": 1651587212543,
-    "updatedAt": 1651587223839,
-    "createdBy": "{CREATED_BY}",
-    "updatedBy": "{UPDATED_BY}",
-    "createdClient": "{CREATED_CLIENT}",
-    "updatedClient": "{UPDATED_CLIENT}",
-    "sandboxId": "{SANDBOX_ID}",
-    "sandboxName": "prod",
-    "imsOrgId": "{ORGANIZATION_ID}",
-    "flowId": "3abea21c-7e36-4be1-bec1-d3bad0e3e0de",
-    "params": {
-        "windowStartTime": "1651584991",
-        "windowEndTime": "16515859567"
-    },
-    "etag": "\"1100c53e-0000-0200-0000-627138980000\"",
-    "metrics": {
-        "statusSummary": {
-            "status": "scheduled"
+    "items": [
+        {
+            "id": "3fb0418e-1804-45d6-8d56-dd51f05c0baf",
+            "etag": "\"1100c53e-0000-0200-0000-627138980000\""
         }
-    },
-    "activities": []
+    ]
 }
 ```
 
 | Propriété | Description |
 | --- | --- |
-| `id` | L’identifiant de l’exécution de flux nouvellement créée. Consultez le guide sur la [récupération des spécifications de flux](../api/collect/cloud-storage.md#specs) pour plus d’informations sur les spécifications d’exécution basées sur les fichiers. |
-| `createdAt` | Horodatage unix désignant le moment où l’exécution du flux a été créée. |
-| `updatedAt` | Horodatage unix désignant le moment où l’exécution du flux a été mise à jour pour la dernière fois. |
-| `createdBy` | ID d’organisation de l’utilisateur qui a créé l’exécution du flux. |
-| `updatedBy` | ID d’organisation de l’utilisateur qui a mis à jour l’exécution du flux pour la dernière fois. |
-| `createdClient` | Client de l’application qui a créé l’exécution du flux. |
-| `updatedClient` | Client de l’application qui a mis à jour la dernière exécution du flux. |
-| `sandboxId` | L’identifiant de l’environnement de test qui contient l’exécution du flux. |
-| `sandboxName` | Nom de l’environnement de test qui contient l’exécution de flux. |
-| `imsOrgId` | ID d’organisation. |
-| `flowId` | Identifiant du flux par lequel l’exécution du flux est créée. |
-| `params.windowStartTime` | Entier qui définit l’heure de début de la fenêtre pendant laquelle les données doivent être extraites. La valeur est représentée en heure unix. |
-| `params.windowEndTime` | Entier qui définit l’heure de fin de la fenêtre pendant laquelle les données doivent être extraites. La valeur est représentée en heure unix. |
+| `id` | L’identifiant de l’exécution de flux nouvellement créée. Consultez le guide sur la [récupération des spécifications de flux](../api/collect/database-nosql.md#specs) pour plus d’informations sur les spécifications d’exécution basées sur un tableau. |
 | `etag` | Version de ressource de l’exécution de flux. |
-| `metrics` | Cette propriété affiche un résumé de l’état de l’exécution du flux. |
-
 
 ## Surveillance des exécutions de flux
 
