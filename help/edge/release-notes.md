@@ -3,7 +3,7 @@ title: Notes de mise à jour du SDK web Adobe Experience Platform
 description: Notes de mise à jour les plus récentes pour le SDK Web Adobe Experience Platform.
 keywords: SDK Web Adobe Experience Platform;SDK Web Platform;SDK Web;notes de mise à jour;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 777a1749670f36abc09e4bacd190b1be17a9a237
+source-git-commit: becff2390aca3a1195cc157c075b1c9a087989c8
 workflow-type: tm+mt
 source-wordcount: '1349'
 ht-degree: 2%
@@ -20,7 +20,7 @@ Pour obtenir les dernières notes de mise à jour sur l’extension de balise du
 
 **Nouvelles fonctionnalités**
 
-* Ajout de la prise en charge de la migration complète page par page. Le profil Adobe Target est désormais conservé lorsqu’un visiteur passe d’une page at.js à une page SDK Web.
+* Ajout de la prise en charge de [Migration complète des pages par page](home.md#migrating-to-web-sdk). Le profil Adobe Target est désormais conservé lorsqu’un visiteur passe d’une page at.js à une page SDK Web.
 * Ajout de la prise en charge configurable de [Conseils client User-Agent à forte entropie](fundamentals/user-agent-client-hints.md#high-entropy).
 * Ajout de la prise en charge de la nouvelle `applyResponse` . Cela permet une personnalisation hybride via le [API du serveur réseau Edge](../server-api/overview.md).
 * Les liens du mode AQ fonctionnent désormais sur plusieurs pages.

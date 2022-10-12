@@ -5,10 +5,10 @@ breadcrumb-title: Balises
 user-guide-description: Découvrez comment déployer et gérer des balises d’analyse, de marketing et de publicité pour améliorer les expériences clients.
 feature: Tags
 solution: Data Collection
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: f6c22d260e1583dc035d1508ca3bce0d7f9de8bd
 workflow-type: tm+mt
-source-wordcount: '401'
-ht-degree: 96%
+source-wordcount: '408'
+ht-degree: 95%
 
 ---
 
@@ -112,6 +112,9 @@ ht-degree: 96%
       * Plugins Analytics courants {#plugins}
          * [Présentation](./extensions/web/plugins/overview.md)
          * [Notes de mise à jour](./extensions/web/plugins/release-notes.md)
+      * Plug-ins SDK Web courants {#web-sdk-plugins}
+         * [Présentation](./extensions/web/web-sdk-plugins/overview.md)
+         * [Notes de mise à jour](./extensions/web/web-sdk-plugins/release-notes.md)
       * Base {#core}
          * [Présentation](./extensions/web/core/overview.md)
          * [Transfert d’événement](./extensions/web/core/event-forwarding.md)
