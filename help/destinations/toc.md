@@ -1,13 +1,13 @@
 ---
 audience: user
 user-guide-title: Guide des destinations
-user-guide-description: Activez vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
+user-guide-description: Activez vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée, etc.
 description: Ce document répertorie la table des matières des destinations Adobe Experience Platform
 feature: Destinations
-source-git-commit: 10c04bdee8536194baea00d3466c758f848c46c5
+source-git-commit: ba0399b0d171c2e604b4de3b22f8568b5431bcf4
 workflow-type: tm+mt
-source-wordcount: '948'
-ht-degree: 72%
+source-wordcount: '945'
+ht-degree: 70%
 
 ---
 

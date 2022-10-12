@@ -2,12 +2,12 @@
 audience: user
 user-guide-title: Aide du contrôle d’accès dans Adobe Experience Platform
 breadcrumb-title: Guide du contrôle d’accès
-user-guide-description: Tirez parti des profils de produits d’Adobe Admin Console pour lier les utilisateurs aux autorisations et aux sandbox.
+user-guide-description: Utilisez les profils de produit dans Adobe Admin Console pour gérer les autorisations d’utilisateur. Découvrez comment affecter des utilisateurs aux produits et aux environnements de test.
 feature: Access Control
-source-git-commit: 440176ea1f21db3c7c4b3572fb52771dc70c80a0
+source-git-commit: 2790ae0b0bbba454ded1a6a8f73e05500f531cda
 workflow-type: tm+mt
-source-wordcount: '118'
-ht-degree: 94%
+source-wordcount: '124'
+ht-degree: 79%
 
 ---
 
