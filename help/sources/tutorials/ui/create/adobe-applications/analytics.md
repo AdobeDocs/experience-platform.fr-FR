@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: Découvrez comment créer une connexion source Adobe Analytics dans l’interface utilisateur pour importer des données client dans Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 7ad0015dbea0b74673ed0ed2c8c2159065f47ba7
+source-git-commit: 04a8ca33e712c00d687432ddf9ad82f5d1644db2
 workflow-type: tm+mt
-source-wordcount: '2243'
-ht-degree: 64%
+source-wordcount: '2302'
+ht-degree: 62%
 
 ---
 
@@ -156,7 +156,12 @@ La documentation suivante fournit d’autres ressources sur la compréhension de
 * [Fonctions de mappage de la préparation des données](../../../../../data-prep/functions.md)
 * [Ajouter des champs calculés](../../../../../data-prep/ui/mapping.md#calculated-fields)
 
-### Filtrage pour [!DNL Profile Service] (Version bêta)
+### Filtrage pour [!DNL Profile Service] (Version bêta) {#filtering-for-profile}
+
+>[!CONTEXTUALHELP]
+>id="platform_data_prep_analytics_filtering"
+>title="Créer des règles de filtrage"
+>abstract="Définissez des règles de filtrage au niveau des lignes et des colonnes lors de l’envoi de données à Real-time Customer Profile. Utilisez le filtrage au niveau des lignes pour appliquer des conditions et dicter les données à **inclusion pour l’ingestion de profils**. Utilisez le filtrage au niveau des colonnes pour sélectionner les colonnes de données à sélectionner. **exclusion de l’ingestion de profils**. Les règles de filtrage ne s’appliquent pas aux données envoyées au lac de données."
 
 >[!IMPORTANT]
 >

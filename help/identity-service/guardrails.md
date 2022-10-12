@@ -3,10 +3,10 @@ keywords: Experience Platform;identité;service d’identité;dépannage;garde-f
 title: Barrières de sécurité pour Identity Service
 description: Ce document fournit des informations sur l’utilisation et les limites de taux pour les données Identity Service afin de vous aider à optimiser l’utilisation du graphique d’identités.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: b07a45e5bb9cae6e147ea790ebb77cb63f8790c1
+source-git-commit: e6d0f0d0bc3de2f6da4e4269811d254db4fa3303
 workflow-type: tm+mt
-source-wordcount: '385'
-ht-degree: 13%
+source-wordcount: '445'
+ht-degree: 11%
 
 ---
 
@@ -45,6 +45,10 @@ Le tableau suivant décrit les règles existantes que vous devez suivre pour gar
 | --- | --- | --- |
 | ECID | <ul><li>La valeur d’identité d’un ECID doit comporter exactement 38 caractères.</li><li>La valeur d’identité d’un ECID ne doit être composée que de nombres.</li></ul> | <ul><li>Si la valeur d’identité d’ECID ne comporte pas exactement 38 caractères, l’enregistrement est ignoré.</li><li>Si la valeur d’identité d’ECID contient des caractères non numériques, l’enregistrement est ignoré.</li></ul> |
 | Non ECID | La valeur d’identité ne peut pas dépasser 1 024 caractères. | Si la valeur d’identité dépasse 1 024 caractères, l’enregistrement est ignoré. |
+
+### Ingestion des espaces de noms d’identité
+
+À compter du 31 janvier 2023, Identity Service bloquera l’ingestion d’Adobe Analytics ID (AAID) pour les nouveaux clients. Cette identité est généralement ingérée via la variable [Source Adobe Analytics](../sources/connectors/adobe-applications/analytics.md) et le [Source Adobe Audience Manager](../sources//connectors/adobe-applications/audience-manager.md) et est redondant, car l’ECID représente le même navigateur web. Si vous souhaitez modifier cette configuration par défaut, contactez votre gestionnaire de compte.
 
 ## Étapes suivantes
 

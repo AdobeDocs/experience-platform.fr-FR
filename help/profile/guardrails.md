@@ -6,10 +6,10 @@ product: experience platform
 type: Documentation
 description: Adobe Experience Platform utilise un modèle de données hybride fortement dénormalisé qui diffère du modèle de données relationnelles traditionnel. Ce document fournit des limites d’utilisation et de débit par défaut pour vous aider à modéliser vos données Profile afin d’optimiser les performances du système.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 1b98a04f92833f5c906ec0081b35144cd47d77bc
+source-git-commit: b834e278f085adc5a4a90876727b6a0787b181e1
 workflow-type: tm+mt
-source-wordcount: '1950'
-ht-degree: 49%
+source-wordcount: '1989'
+ht-degree: 48%
 
 ---
 
@@ -87,8 +87,8 @@ Les barrières de sécurité suivantes se rapportent à la taille des données e
 | --- | --- | --- | --- |
 | Taille maximale d’ExperienceEvent | 10 Ko | Hard | **La taille maximale d’un événement est de 10 Ko.** L’ingestion se poursuit, mais tous les événements de plus de 10 Ko seront ignorés. |
 | Taille maximale d’enregistrement de profil | 100 Ko | Hard | **La taille maximale d’un enregistrement de profil est de 100 Ko.** L’ingestion se poursuit, mais les enregistrements de profil supérieurs à 100 Ko seront supprimés. |
-| Taille maximale du fragment de profil | 50 Mo | Hard | **La taille maximale d’un fragment de profil unique est de 50 Mo.** La segmentation, les exportations et les recherches peuvent échouer pour toutes les [fragment de profil](#profile-fragments) qui dépasse 50 Mo. |
-| Taille maximale de stockage du profil | 50 Mo | Soft | **La taille maximale d’un profil stocké est de 50 Mo.** Ajouter de nouvelles [fragments de profil](#profile-fragments) dans un profil de plus de 50 Mo affecte les performances du système. Par exemple, un profil peut contenir un fragment unique de 50 Mo ou plusieurs fragments répartis dans plusieurs jeux de données avec une taille totale combinée de 50 Mo. Toute tentative de stockage d’un profil avec un fragment unique de plus de 50 Mo ou plusieurs fragments dont la taille combinée est supérieure à 50 Mo aura une incidence sur les performances du système. |
+| Taille maximale du fragment de profil | 50 Mo | Hard | **La taille maximale d’un fragment de profil unique est de 50 Mo.** La segmentation, les exportations et les recherches peuvent échouer pour toutes les [fragment de profil](#profile-fragments) qui dépasse 50 Mo. |
+| Taille maximale de stockage du profil | 50 Mo | Soft | **La taille maximale d’un profil stocké est de 50 Mo.** Ajouter de nouvelles [fragments de profil](#profile-fragments) dans un profil de plus de 50 Mo affecte les performances du système. Par exemple, un profil peut contenir un fragment unique de 50 Mo ou plusieurs fragments répartis dans plusieurs jeux de données avec une taille totale combinée de 50 Mo. Toute tentative de stockage d’un profil avec un fragment unique de plus de 50 Mo ou plusieurs fragments dont la taille combinée est supérieure à 50 Mo aura une incidence sur les performances du système. |
 | Nombre de lots Profile ou ExperienceEvent ingérés par jour | 90 | Soft | **Le nombre maximal de lots Profile ou ExperienceEvent ingérés par jour est de 90.** Cela signifie que le total combiné des lots Profile et ExperienceEvent ingérés chaque jour ne peut pas dépasser 90. L’ingestion de lots supplémentaires affectera les performances du système. |
 
 {style=&quot;table-layout:auto&quot;}
@@ -110,6 +110,7 @@ Les barrières de sécurité décrites dans cette section font référence au no
 | Barrière de sécurité | Limite | Type de limite | Description |
 | --- | --- | --- | --- |
 | Segments par environnement de test | 4000 | Soft | Une organisation peut avoir plus de 4000 segments au total, à condition qu’il y ait moins de 4000 segments dans chaque sandbox individuelle. Toute tentative de création de segments supplémentaires peut affecter les performances du système. |
+| Segments Edge par environnement de test | 150 | Soft | Une organisation peut avoir plus de 150 segments de périphérie au total, à condition qu’il y ait moins de 150 segments de périphérie dans chaque environnement de test individuel. Toute tentative de création de segments Edge supplémentaires peut affecter les performances du système. |
 | Segments de diffusion en continu par environnement de test | 500 | Soft | Une organisation peut avoir plus de 500 segments en flux continu au total, à condition qu’il y ait moins de 500 segments en flux continu dans chaque environnement de test individuel. Toute tentative de création de segments de diffusion en continu supplémentaires peut affecter les performances du système. |
 | Segments par lot par environnement de test | 4 000 | Soft | Une organisation peut avoir plus de 4 000 segments par lot au total, à condition qu’il y ait moins de 4 000 segments par lot dans chaque environnement de test individuel. Toute tentative de création de segments par lot supplémentaires peut affecter les performances du système. |
 
