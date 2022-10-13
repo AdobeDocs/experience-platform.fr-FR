@@ -3,9 +3,9 @@ keywords: personnalisation cible;destination;destination cible Experience Platfo
 title: Connexion Adobe Target
 description: Adobe Target est une application qui permet la personnalisation et l’expérimentation en temps réel, grâce à l’IA, au niveau de toutes les interactions avec les clients entrants sur les sites web, les applications mobiles, etc.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: 769d3f14e858ed69c6bb50360da90e4e0816a377
+source-git-commit: 2dbc449d6074c5bbfc44f92de59dd8acc3bf275d
 workflow-type: tm+mt
-source-wordcount: '1005'
+source-wordcount: '1006'
 ht-degree: 38%
 
 ---
@@ -92,7 +92,7 @@ Pendant la [configuration](../../ui/connect-destination.md) de cette destination
 
 | Aucun flux de données sélectionné | Envoi de données sélectionné |
 |---|---|
-| <ul><li>[Segmentation Edge](../../../segmentation/ui/edge-segmentation.md) n’est pas prise en charge.</li><li>[Personnalisation de la même page et de la page suivante](../../ui/configure-personalization-destinations.md) ne sont pas prises en charge.</li><li>Vous pouvez partager des segments sur la connexion Adobe Target uniquement pour l’environnement de test de production.</li><li>Pour configurer la personnalisation de la prochaine session sans utiliser d’identifiant de flux de données, utilisez [at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html?lang=en).</li></ul> | <ul><li>La segmentation Edge fonctionne comme prévu.</li><li>[Personnalisation de la même page et de la page suivante](../../ui/configure-personalization-destinations.md) sont prises en charge.</li><li>Le partage de segment est pris en charge pour d’autres environnements de test.</li></ul> |
+| <ul><li>[Segmentation Edge](../../../segmentation/ui/edge-segmentation.md) n’est pas prise en charge.</li><li>[Personnalisation de la même page et de la page suivante](../../ui/configure-personalization-destinations.md) ne sont pas prises en charge.</li><li>Vous ne pouvez partager des segments avec la connexion Adobe Target que pour la variable *environnement de test de production par défaut*.</li><li>Pour configurer la personnalisation de la prochaine session sans utiliser d’identifiant de flux de données, utilisez [at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html?lang=en).</li></ul> | <ul><li>La segmentation Edge fonctionne comme prévu.</li><li>[Personnalisation de la même page et de la page suivante](../../ui/configure-personalization-destinations.md) sont prises en charge.</li><li>Le partage de segment est pris en charge pour d’autres environnements de test.</li></ul> |
 
 ### Activer les alertes {#enable-alerts}
 
