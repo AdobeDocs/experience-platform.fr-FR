@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;accueil;rubriques les plus consultées;gestion des données;droits de licence;licences;bonnes pratiques
 title: Bonnes pratiques relatives aux droits de licence de gestion des données
-description: Ce document décrit les bonnes pratiques à suivre et les outils que vous pouvez utiliser pour mieux gérer vos droits de licence avec Adobe Experience Platform.
+description: Découvrez les bonnes pratiques et les outils que vous pouvez utiliser pour mieux gérer vos droits de licence avec Adobe Experience Platform.
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: 02882957fc38058ff092938d631e290725d4bdc2
+source-git-commit: 5da2a6cfc9e9da6bbe6c6560577d22eed32c858c
 workflow-type: tm+mt
-source-wordcount: '2531'
-ht-degree: 100%
+source-wordcount: '2528'
+ht-degree: 98%
 
 ---
 
@@ -54,7 +54,7 @@ La disponibilité de ces mesures et la définition spécifique de chacune d’el
 
 ## Tableau de bord d’utilisation de la licence
 
-L’interface utilisateur d’Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher un instantané des données liées aux licences de votre entreprise pour Platform. Les données du tableau de bord s’affichent exactement comme elles apparaissent au moment précis où l’instantané a été pris. L’instantané n’est ni une approximation ni un échantillon des données et le tableau de bord n’est pas mis à jour en temps réel.
+L’interface utilisateur de Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher un instantané des données liées aux licences de votre entreprise pour Platform. Les données du tableau de bord s’affichent exactement comme elles apparaissent au moment précis où l’instantané a été pris. L’instantané n’est ni une approximation ni un échantillon des données et le tableau de bord n’est pas mis à jour en temps réel.
 
 Pour plus d’informations, consultez le guide sur l’[utilisation du tableau de bord d’utilisation de la licence dans l’interface utilisateur de Platform](../../dashboards/guides/license-usage.md#license-usage-dashboard-data). 
 
