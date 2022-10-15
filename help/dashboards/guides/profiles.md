@@ -4,10 +4,10 @@ title: Guide du tableau de bord des profils
 description: Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur les données Real-time Customer Profile de votre entreprise.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 18288130b98e13d824273426a860d97722c434de
+source-git-commit: 1755f5030f5730ca06ea718635ede9deb1188d21
 workflow-type: tm+mt
-source-wordcount: '4154'
-ht-degree: 8%
+source-wordcount: '3387'
+ht-degree: 9%
 
 ---
 
@@ -51,19 +51,19 @@ Sélectionner **[!UICONTROL Ajouter un widget]** pour accéder à la bibliothèq
 
 Dans la bibliothèque de widgets, vous pouvez parcourir la sélection de widgets de segment standard et personnalisés. Pour plus d’informations sur l’ajout de widgets, consultez la documentation de la bibliothèque de widgets sur la manière d’ajouter des widgets. [ajout d’un widget](../customize/widget-library.md#add-widgets).
 
-## (Version bêta) Informations sur l’efficacité des profils {#profile-efficacy-insights}
+<!-- ## (Beta) Profile efficacy insights {#profile-efficacy-insights}
 
 >[!IMPORTANT]
 >
->La fonctionnalité d’informations sur l’efficacité des profils est actuellement en version bêta et n’est pas disponible pour tous les utilisateurs. La documentation et les fonctionnalités peuvent changer.
+>The profile efficacy insight functionality is currently in beta and are not available to all users. The documentation and the functionality are subject to change.
 
-Le [!UICONTROL Efficacité] fournit des mesures sur la qualité et l’exhaustivité de vos données de profil grâce à l’utilisation de widgets d’efficacité de profil. Ces widgets illustrent en un coup d’oeil la composition de vos profils, les tendances d’exhaustivité au fil du temps et les évaluations de la qualité des données de votre profil.
+The [!UICONTROL Efficacy] tab provides metrics on the quality and completeness of your profile data through the use of profile efficacy widgets. These widgets illustrate at a glance the composition of your profiles, trends in completeness over time, and assessments on the quality of your profile data.
 
-![Le tableau de bord de l’efficacité des profils.](../images/profiles/attributes-quality-assessment.png)
+![The profile efficacy dashboard.](../images/profiles/attributes-quality-assessment.png)
 
-Voir [section widgets d’efficacité du profil](#profile-efficacy-widgets) pour plus d’informations sur les widgets actuellement disponibles.
+See the [profile efficacy widgets section](#profile-efficacy-widgets) for more information on the widgets currently available.
 
-La mise en page de ce tableau de bord peut également être personnalisée en sélectionnant [**[!UICONTROL Modifier le tableau de bord]**](../customize/modify.md) de la [!UICONTROL Présentation] .
+The layout of this dashboard is also customizable by selecting [**[!UICONTROL Modify dashboard]**](../customize/modify.md) from the [!UICONTROL Overview] tab. -->
 
 ## Parcourir les profils {#browse-profiles}
 
@@ -360,73 +360,73 @@ Comme le widget affiche le croisement visuel des définitions de segment, vous p
 ![Le tableau de bord Profils de l’interface utilisateur de Platform avec la liste déroulante Stratégie de fusion et les listes déroulantes de segments du widget sont mises en surbrillance.](../images/profiles/audience-overlap-by-merge-policy.png)
 
 
-## (Version bêta) Widgets d’efficacité des profils {#profile-efficacy-widgets}
+<!-- ## (Beta) Profile efficacy widgets {#profile-efficacy-widgets}
 
 >[!IMPORTANT]
 >
->Les widgets d’efficacité du profil sont actuellement en version bêta et ne sont pas disponibles pour tous les utilisateurs. La documentation et les fonctionnalités peuvent changer.
+>The profile efficacy widgets are currently in Beta and are not available to all users. The documentation and the functionality are subject to change.
 
-Adobe fournit plusieurs widgets pour évaluer l’exhaustivité des profils ingérés disponibles pour votre analyse des données. Chacun des widgets d’efficacité de profil peut être filtré par la stratégie de fusion. Pour modifier le filtre de stratégie de fusion, sélectionnez la variable[!UICONTROL Profils utilisant une stratégie de fusion] et sélectionnez la stratégie appropriée dans la liste disponible.
+Adobe provides multiple widgets to assess the completeness of the ingested profiles available for your data analysis. Each of the profile efficacy widgets can be filtered by the merge policy. To change the merge policy filter, select the[!UICONTROL Profiles using merge policy] dropdown and choose the appropriate policy from the available list.
 
-Pour en savoir plus sur chacun des widgets d’efficacité de profil, sélectionnez le nom d’un widget dans la liste suivante :
+To learn more about each of the profile efficacy widgets, select the name of a widget from the following list:
 
-* [[!UICONTROL Évaluation de la qualité des attributs]](#attributes-quality-assessment)
-* [[!UICONTROL Profils par exhaustivité]](#profiles-by-completeness)
-* [[!UICONTROL Tendance d’achèvement des profils]](#profiles-completeness-trend)
+* [[!UICONTROL Attribute quality assessment]](#attributes-quality-assessment)
+* [[!UICONTROL Profiles by completeness]](#profiles-by-completeness)
+* [[!UICONTROL Profiles completeness trend]](#profiles-completeness-trend)
 
-### (Version bêta) [!UICONTROL Évaluation de la qualité des attributs] {#attributes-quality-assessment}
+### (Beta) [!UICONTROL Attributes quality assessment] {#attributes-quality-assessment}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_attributesqualityassessment"
->title="Évaluation de la qualité des attributs"
->abstract="Ce widget affiche l’exhaustivité et la cardinalité de tous les profils en fonction de leurs attributs. Chaque ligne décrit un attribut. Le **Profils** indique le nombre de profils qui possèdent cet attribut et qui sont remplis avec des valeurs non nulles. Le **Complétude** Le pourcentage est déterminé par le nombre total de profils qui possèdent cet attribut et qui sont remplis de valeurs non nulles divisées par le nombre total de valeurs non vides dans les profils pour cet attribut. **Cardinalité** fournit le nombre total de valeurs non nulles uniques de cet attribut pour tous les attributs."
+>title="Attributes quality assessment"
+>abstract="This widget shows the completeness and cardinality of all profiles according to their attributes. Each row describes one attribute. The **Profiles** column provides the number of profiles that have this attribute and are filled with non-null values. The **Completeness** percentage is determined by the total number of profiles that have this attribute and are filled with non-null values divided by the total number of non-empty values in the profiles for that attribute. **Cardinality** provides the total number of unique non-null values of this attribute across all attributes."
 
-Le [!UICONTROL Évaluation de la qualité des attributs] widget affiche l’exhaustivité et la cardinalité de tous les profils en fonction de leurs attributs. Les données sont exactes jusqu’à la date du dernier traitement. Ces informations sont présentées sous la forme d’un tableau de quatre colonnes où chaque ligne du tableau représente un attribut unique.
+The [!UICONTROL Attribute quality assessment] widget shows the completeness and cardinality of all profiles according to their attributes. The data is accurate to the last processing date. This information is presented as a table with four columns where each row in the table represents a single attribute.
 
-| Colonne | Description |
+| Column  | Description  |
 |---|---|
-| Attribut | Nom de l’attribut. |
-| Profils | Le nombre de profils qui possèdent cet attribut et qui sont remplis par des valeurs non nulles. |
-| Complétude | Ce pourcentage est déterminé par le nombre total de profils qui possèdent cet attribut et qui sont renseignés avec des valeurs non nulles. Le nombre est calculé en divisant le nombre total de profils par le nombre total de valeurs non vides dans les profils pour cet attribut. |
-| Cardinalité | Le nombre total de **unique** valeurs non nulles de cet attribut. Elle est mesurée sur tous les profils. |
+| Attribute  | The name of the attribute.  |
+| Profiles  | The number of profiles that have this attribute and are filled with non-null values.  |
+| Completeness  | This percentage is determined by the total number of profiles that have this attribute and are filled with non-null values. The number is calculated by dividing the total number of profiles by the total number of non-empty values in the profiles for that attribute.  |
+| Cardinality  | The total number of **unique** non-null values of this attribute. It is measured across all profiles. |
 
-![Le widget d’évaluation de la qualité des attributs](../images/profiles/attributes-quality-assessment.png)
+![The attributes quality assessment widget](../images/profiles/attributes-quality-assessment.png)
 
-### (Version bêta) [!UICONTROL Profils par exhaustivité] {#profiles-by-completeness}
+### (Beta) [!UICONTROL Profiles by completeness] {#profiles-by-completeness}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_profilesbycompleteness"
->title="Profils par exhaustivité"
->abstract="Le graphique en anneau affiche le pourcentage des attributs de profil remplis de valeurs non nulles parmi tous les attributs observés. Il illustre la proportion de profils présentant une exhaustivité élevée, moyenne ou faible. Les profils d’exhaustivité élevée ont plus de 70 % de leurs attributs remplis. Les profils d’exhaustivité moyenne disposent de 30 à 70 % de leurs attributs renseignés. Les profils d’exhaustivité basse ont moins de 30 % de leurs attributs renseignés."
+>title="Profiles by completeness"
+>abstract="The donut chart displays the percentage of profile attributes that are filled with non-null values among all observed attributes. It illustrates the proportion of profiles that are of high, medium, or low completeness. High completeness profiles have more than 70% of their attributes filled. Medium completeness profiles have between 30% and 70% of their attributes filled. Low completeness profiles have less than 30% of their attributes filled."
 
-Le [!UICONTROL Profils par exhaustivité] crée un graphique en anneau d’exhaustivité du profil depuis la date du dernier traitement. L’exhaustivité d’un profil est mesurée par le pourcentage d’attributs remplis avec des valeurs non nulles parmi tous les attributs observés.
+The [!UICONTROL Profiles by completeness] widget creates a donut chart of profile completeness since the last processing date. The completeness of a profile is measured by the percentage of attributes that are filled with non-null values among all observed attributes.
 
-Ce widget affiche la proportion de profils présentant une exhaustivité élevée, moyenne ou faible. Par défaut, trois niveaux d’exhaustivité sont configurés :
+This widget shows the proportion of profiles that are of high, medium, or low completeness. By default, there are three levels of completeness configured: 
 
-* Haute exhaustivité : Les profils sont remplis à plus de 70 % de leurs attributs.
-* Paramètre d’exhaustivité moyenne : Les profils ont entre 30 et 70 % de leurs attributs renseignés.
-* Faible exhaustivité : Les profils sont remplis à moins de 30 % de leurs attributs.
+* High completeness: Profiles have more than 70% of their attributes filled. 
+* Medium completeness: Profiles have between 30% and 70% of their attributes filled. 
+* Low completeness: Profiles have less than 30% of their attributes filled. 
 
-![Les profils par widget d’exhaustivité](../images/profiles/profiles-by-completeness.png)
+![The profiles by completeness widget](../images/profiles/profiles-by-completeness.png)
 
-### (Version bêta) [!UICONTROL Tendance d’achèvement des profils] {#profiles-completeness-trend}
+### (Beta) [!UICONTROL Profiles completeness trend] {#profiles-completeness-trend}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_profilescompletenesstrend"
->title="Tendance d’achèvement des profils"
->abstract="Ce widget crée un diagramme de surface empilé pour décrire la tendance de l’exhaustivité des profils au fil du temps. La complexité est mesurée par le pourcentage d’attributs remplis avec des valeurs non nulles parmi tous les attributs observés."
+>title="Profiles completeness trend"
+>abstract="This widget creates a stacked area chart to depict the trend of profile completeness over time. Completeness is measured by the percentage of attributes that are filled with non-null values among all observed attributes."
 
-Ce widget crée un diagramme de surface empilé pour décrire la tendance de l’exhaustivité des profils au fil du temps. La complexité est mesurée par le pourcentage d’attributs remplis avec des valeurs non nulles parmi tous les attributs observés. Elle classe l’exhaustivité du profil comme une exhaustivité élevée, moyenne ou faible depuis la date du dernier traitement.
+This widget creates a stacked area chart to depict the trend of profile completeness over time. Completeness is measured by the percentage of attributes filled with non-null values among all observed attributes. It categorizes the profile completeness as high, medium, or low completeness since the last processing date.
 
-L’axe X représente le temps, l’axe Y le nombre de profils et les couleurs les trois niveaux d’exhaustivité du profil.
+The x-axis represents time, the y-axis represents the number of profiles, and the colors represent the three levels of profile completeness. 
 
-Les trois niveaux d&#39;exhaustivité sont les suivants :
+The three levels of completeness are:
 
-* Haute exhaustivité : Les profils comportent plus de 70 % des attributs renseignés.
-* Paramètre d’exhaustivité moyenne : Les profils comportent moins de 70 % et plus de 30 % des attributs renseignés.
-* Faible exhaustivité : Les profils comportent moins de 30 % des attributs renseignés.
+* High completeness: Profiles have more than 70% of attributes filled. 
+* Medium completeness: Profiles have less than 70% and more than 30% of attributes filled. 
+* Low completeness: Profiles have less than 30% of attributes filled.
 
-![Widget de tendance d’achèvement des profils](../images/profiles/profiles-completeness-trend.png)
+![The profiles completeness trend widget](../images/profiles/profiles-completeness-trend.png) -->
 
 ## Étapes suivantes
 
