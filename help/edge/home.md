@@ -4,9 +4,9 @@ description: Découvrez comment utiliser le SDK Web d’Adobe Experience Platfor
 keywords: SDK Web Adobe Experience Platform;SDK Web Platform;SDK Web;edge;Visitor.js;AppMeasurement.js;AT.js;DIL.js;sdk web;SDK;SDK web;Launch;launch
 exl-id: 1348144a-7d25-4c27-bc40-3daee2f043a6
 source-git-commit: 00801465435133fce29002c8bd0f2256745ba2c2
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '803'
-ht-degree: 64%
+ht-degree: 100%
 
 ---
 
@@ -14,18 +14,18 @@ ht-degree: 64%
 
 Le SDK Web d’Adobe Experience Platform est une bibliothèque JavaScript côté client qui permet aux clients d’Adobe Experience Cloud d’interagir avec les différents services d’[!DNL Experience Cloud] à travers Adobe Experience Platform Edge Network. Outre la bibliothèque JavaScript, il existe une [extension de balise](./extension/web-sdk-extension-configuration.md) pour vous aider à configurer votre SDK Web.
 
-Pour obtenir un guide détaillé sur la configuration du SDK Web avec des balises et l’envoi de données aux solutions, consultez notre [Tutoriel sur la mise en oeuvre de Adobe Experience Cloud avec le SDK Web](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html?lang=fr).
+Pour obtenir un guide détaillé sur la configuration du SDK Web avec des balises et l’envoi de données aux solutions, veuillez consultez notre [tutoriel sur l’implémentation d’Adobe Experience Cloud dans le SDK Web](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html?lang=fr).
 
 >[!IMPORTANT]
 >
 >Ce produit évolue et se développe constamment pour prendre en charge de plus en plus de cas d’utilisation. Pour connaître les dernières nouveautés et notre prise en charge actuelle, consultez la [page des cas d’utilisation pris en charge](https://github.com/orgs/adobe/projects/18/views/1).
 
-## Adobe Experience Edge
+## Adobe Experience Edge
 
-[!DNL Adobe Experience Platform Web SDK] fait partie de la collection qui constitue la variable [!DNL Adobe Experience Edge]. [!DNL Experience Edge] se compose des technologies suivantes :
+[!DNL Adobe Experience Platform Web SDK] fait partie de la collection qui constitue [!DNL Adobe Experience Edge]. [!DNL Experience Edge] se compose des technologies suivantes :
 
-* **[[!DNL Adobe Experience Platform Web SDK]](#overview):** Un SDK JavaScript et une extension de balise pour simplifier considérablement le déploiement [!DNL Adobe] technologies.
-* **[[!DNL Adobe Experience Platform Mobile SDK]](https://aep-sdks.gitbook.io/docs/getting-started/overview):** Une extension du SDK mobile v5 pour permettre aux clients d’utiliser la nouvelle méthodologie de déploiement
+* **[[!DNL Adobe Experience Platform Web SDK]](#overview) :** un SDK JavaScript et une extension de balise pour simplifier considérablement le déploiement de technologies [!DNL Adobe].
+* **[[!DNL Adobe Experience Platform Mobile SDK]](https://aep-sdks.gitbook.io/docs/getting-started/overview) :** une extension du SDK Mobile v5 pour permettre aux clients d’utiliser la nouvelle méthodologie de déploiement.
 * **[[!DNL Adobe Experience Platform Edge Network]](../server-api/overview.md) :** un réseau distribué mondial de serveurs offrant une nouvelle méthodologie de déploiement des produits [!DNL Adobe].
 
 [!DNL Adobe Experience Edge] est un nouveau cadre pour la collecte de données à faible latence, l’informatique enfichable et l’activation de données rapide sur tous les canaux adressables.
@@ -49,11 +49,11 @@ La vidéo suivante offre un aperçu d’Adobe Experience Platform [!DNL Web SDK]
 
 >[!VIDEO](https://video.tv.adobe.com/v/34141?quality=12&learn=on)
 
-## Bibliothèques remplacées par le SDK Web {#sdks}
+## Bibliothèques remplacées par le SDK Web {#sdks}
 
-Le SDK Web n’est pas seulement un wrapper des bibliothèques existantes. C&#39;est une toute nouvelle bibliothèque, écrite de toutes pièces pour incorporer les fonctionnalités des bibliothèques existantes. Son objectif est de mettre fin aux problèmes liés au déclenchement des balises dans le bon ordre, à l’incohérence avec les problèmes de contrôle de version des bibliothèques et à une meilleure gestion des dépendances. Il s’agit d’une nouvelle méthode d’implémentation, [open source](https://github.com/adobe/alloy), d’[!DNL Experience Cloud].
+Le SDK Web n’est pas seulement un wrapper des bibliothèques existantes. Il s’agit d’une toute nouvelle bibliothèque, écrite de A à Z pour intégrer les fonctionnalités des bibliothèques existantes. Son objectif est de mettre fin aux problèmes liés au déclenchement des balises dans le bon ordre, à l’incohérence avec les problèmes de contrôle de version des bibliothèques et à une meilleure gestion des dépendances. Il s’agit d’une nouvelle méthode d’implémentation, [open source](https://github.com/adobe/alloy), d’[!DNL Experience Cloud].
 
-Le SDK Web remplace les SDK suivants :
+Le SDK Web de Platform remplace les SDK suivants :
 
 * Visitor.js
 * AppMeasurement.js
@@ -66,15 +66,15 @@ La vidéo suivante présente Adobe Experience Platform [!DNL Web SDK] et Adobe E
 
 >[!VIDEO](https://video.tv.adobe.com/v/34148)
 
-## Migration des bibliothèques existantes vers le SDK Web {#migrating-to-web-sdk}
+## Migrer des bibliothèques existantes vers le SDK Web {#migrating-to-web-sdk}
 
-Pour simplifier votre migration depuis l’un des [bibliothèques existantes](#sdks) Adobe offre un chemin de mise à niveau simplifié vers le SDK Web. Il vous permet de migrer chaque page de votre site Web vers le SDK Web, sans avoir à migrer simultanément l’intégralité de votre site Web.
+Pour simplifier votre migration depuis l’une des [bibliothèques existantes](#sdks) vers le SDK Web, Adobe offre un chemin de mise à niveau simplifié vers le SDK Web. Il vous permet de migrer chaque page de votre site web vers le SDK Web, sans avoir à migrer l’intégralité de votre site Web en une seule fois..
 
-Cela signifie que vous pouvez utiliser le SDK Web sur une page et laisser les bibliothèques existantes sur les autres pages, jusqu’à ce que vous puissiez également les migrer.
+Vous pouvez donc utiliser le SDK Web sur une page et laisser les bibliothèques existantes sur les autres pages, jusqu’à ce que vous puissiez les migrer également.
 
-### Considérations relatives à la migration d’at.js vers le SDK Web {#considerations}
+### Considérations relatives à la migration d’at.js vers le SDK Web {#considerations}
 
-Avant de migrer des pages qui utilisent [!DNL at.js] dans le SDK Web, veillez à activer les options de configuration du SDK Web suivantes. Cela garantit que le profil du visiteur est conservé lors de la navigation à partir des pages avec [!DNL at.js ] aux pages utilisant le SDK Web.
+Avant de migrer des pages qui utilisent [!DNL at.js] dans le SDK Web, veillez à activer les options de configuration du SDK Web suivantes. Cela garantit que le profil du visiteur est conservé lors de la navigation à partir des pages avec [!DNL at.js ] aux pages utilisant le SDK Web.
 
 * [`idMigrationEnabled`](fundamentals/configuring-the-sdk.md#id-migration-enabled)
 * [`targetMigrationEnabled`](fundamentals/configuring-the-sdk.md#targetMigrationEnabled)
@@ -82,12 +82,12 @@ Avant de migrer des pages qui utilisent [!DNL at.js] dans le SDK Web, veillez à
 
 >[!IMPORTANT]
 >
->Les fonctionnalités Target suivantes ne sont pas prises en charge lors de la migration d’at.js vers le SDK Web :
-> * [Offres de redirection](https://experienceleague.adobe.com/docs/target/using/experiences/offers/offer-redirect.html?lang=en)
-> * [Prise en charge CNAME et inter-domaines](https://developer.adobe.com/target/implement/client-side/atjs/atjs-cookies/?lang=en)
+>Les fonctionnalités Target suivantes ne sont pas prises en charge lors de la migration d’at.js vers le SDK Web :
+> * [Offres de redirection](https://experienceleague.adobe.com/docs/target/using/experiences/offers/offer-redirect.html?lang=fr)
+> * [Prise en charge CNAME et inter-domaines](https://developer.adobe.com/target/implement/client-side/atjs/atjs-cookies/?lang=fr)
 
 
-Après la migration d’at.js vers le SDK Web, vous devez supprimer la variable `targetMigrationEnabled` de votre configuration.
+Après la migration d’at.js vers le SDK Web, vous devez supprimer l’option `targetMigrationEnabled` de votre configuration.
 
 
 
