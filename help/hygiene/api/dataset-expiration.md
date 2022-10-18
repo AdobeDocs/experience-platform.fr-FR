@@ -1,11 +1,11 @@
 ---
-title: Point de terminaison de l’API d’expiration du jeu de données
+title: Point d’entrée de l’API d’expiration du jeu de données
 description: Le point d’entrée /ttl de l’API Data Hygiene vous permet de planifier par programmation l’expiration des jeux de données dans Adobe Experience Platform.
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
 source-git-commit: 83149c4e6e8ea483133da4766c37886b8ebd7316
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1451'
-ht-degree: 72%
+ht-degree: 100%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 72%
 
 >[!IMPORTANT]
 >
->Actuellement, seules les organisations qui ont acheté l’Adobe Healthcare Shield disposent des capacités d’hygiène des données dans Adobe Experience Platform.
+>Actuellement, les fonctionnalités d’hygiène des données d’Adobe Experience Platform sont uniquement disponibles pour les organisations qui ont acheté Adobe Healthcare Shield.
 
 Le point d’entrée `/ttl` de l’API Data Hygiene vous permet de planifier des dates d’expiration pour les jeux de données dans Adobe Experience Platform.
 
@@ -103,7 +103,7 @@ Une réponse réussie répertorie les expirations de jeux de données obtenues. 
 
 | Propriété | Description |
 | --- | --- |
-| `totalRecords` | Nombre d’expirations de jeux de données qui correspondaient aux paramètres de l’appel de liste. |
+| `totalRecords` | Le nombre d’expirations de jeux de données qui correspondaient aux paramètres de l’appel de liste. |
 | `ttlDetails` | Contient les détails des expirations de jeux de données renvoyées. Pour plus d’informations sur les propriétés d’une expiration de jeu de données, consultez la section de réponse pour effectuer un [appel de recherche](#lookup). |
 
 {style=&quot;table-layout:auto&quot;}
@@ -126,7 +126,7 @@ GET /ttl/{DATASET_ID}
 
 **Requête**
 
-La requête suivante recherche les détails d’expiration du jeu de données. `62759f2ede9e601b63a2ee14`:
+La requête suivante recherche les détails d’expiration du jeu de données `62759f2ede9e601b63a2ee14` :
 
 ```shell
 curl -X GET \
@@ -164,16 +164,16 @@ Une réponse réussie renvoie les détails de l’expiration du jeu de données.
 | `expiry` | Date et heure planifiées de suppression du jeu de données. |
 | `updatedAt` | Date et heure de la dernière mise à jour de l’expiration. |
 | `updatedBy` | Dernier utilisateur à avoir mis à jour l’expiration. |
-| `displayName` | Nom d’affichage de la demande d’expiration. |
-| `description` | Description de la demande d’expiration. |
+| `displayName` | Le nom d’affichage de la requête d’expiration. |
+| `description` | Une description de la requête d’expiration. |
 
 {style=&quot;table-layout:auto&quot;}
 
 ### Balises d’expiration du catalogue
 
-Lors de l’utilisation de la variable [API Catalog](../../catalog/api/getting-started.md) pour rechercher les détails du jeu de données, si le jeu de données a une expiration principale, il sera répertorié sous `tags.adobe/hygiene/ttl`.
+Lors de l’utilisation de l’[API Catalog](../../catalog/api/getting-started.md) pour rechercher les détails du jeu de données, si le jeu de données a une expiration active, il sera répertorié sous `tags.adobe/hygiene/ttl`.
 
-Le fichier JSON suivant représente une réponse tronquée pour les détails d’un jeu de données du catalogue, qui est une valeur d’expiration de `32503680000000`. La valeur de la balise code l’expiration sous la forme d’un nombre entier de millisecondes écoulées depuis le début de l’époque Unix.
+Le fichier JSON suivant représente une réponse tronquée pour les détails d’un jeu de données du catalogue, dont la valeur d’expiration est de `32503680000000`. La valeur de la balise code l’expiration comme un nombre entier de millisecondes écoulées depuis le début de l’époque Unix.
 
 ```json
 {
@@ -191,9 +191,9 @@ Le fichier JSON suivant représente une réponse tronquée pour les détails d�
 }
 ```
 
-## Création ou mise à jour d’une expiration de jeu de données {#create-or-update}
+## Créer ou mettre à jour une expiration de jeu de données {#create-or-update}
 
-Vous pouvez créer ou mettre à jour une date d’expiration pour un jeu de données par le biais d’une requête de PUT.
+Vous pouvez créer ou mettre à jour une date d’expiration pour un jeu de données par le biais d’une requête PUT.
 
 **Format d’API**
 
@@ -207,7 +207,7 @@ PUT /ttl/{DATASET_ID}
 
 **Requête**
 
-La requête suivante planifie la suppression d’un jeu de données `5b020a27e7040801dedbf46e` à la fin de 2022 (heure de Greenwich). Si aucune expiration existante n’est trouvée pour le jeu de données, une nouvelle expiration est créée. Si le jeu de données a déjà une expiration en attente, cette expiration est mise à jour avec la nouvelle valeur `expiry` .
+La requête suivante planifie la suppression d’un jeu de données `5b020a27e7040801dedbf46e` à la fin de 2022 (heure de Greenwich). Si aucune expiration existante n’est trouvée pour le jeu de données, une nouvelle expiration sera créée. Si le jeu de données a déjà une expiration en attente, cette expiration sera mise à jour avec la nouvelle valeur `expiry`.
 
 ```shell
 curl -X PUT \
@@ -227,8 +227,8 @@ curl -X PUT \
 | Propriété | Description |
 | --- | --- |
 | `expiry` | Date et heure ISO 8601 indiquant le moment de la suppression du jeu de données. |
-| `displayName` | Nom d’affichage de la demande d’expiration. |
-| `description` | Description facultative de la demande d’expiration. |
+| `displayName` | Un nom d’affichage de la requête d’expiration. |
+| `description` | Une description facultative de la requête d’expiration. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -268,7 +268,7 @@ Vous pouvez annuler l’expiration d’un jeu de données par le biais d’une r
 
 >[!NOTE]
 >
->Seules les expirations de jeux de données dont l’état est `pending` peut être annulée. La tentative d’annulation d’une expiration qui a été exécutée ou est déjà annulée renvoie une erreur HTTP 404.
+>Seules les expirations de jeux de données dont le statut est `pending` peuvent être annulées. La tentative d’annulation d’une expiration qui a été exécutée ou est déjà annulée renvoie une erreur HTTP 404.
 
 **Format d’API**
 
@@ -284,7 +284,7 @@ DELETE /ttl/{EXPIRATION_ID}
 
 **Requête**
 
-La requête suivante annule l’expiration d’un jeu de données avec l’identifiant `SD5cfd7a11b25543a9bcd9ef647db3d8df`:
+La requête suivante annule l’expiration d’un jeu de données avec l’identifiant `SD5cfd7a11b25543a9bcd9ef647db3d8df` :
 
 ```shell
 curl -X DELETE \
@@ -297,11 +297,11 @@ curl -X DELETE \
 
 **Réponse**
 
-Une réponse réussie renvoie un état HTTP 204 (No Content), et l’attribut `status` est défini sur `cancelled`.
+Une réponse réussie renvoie un statut HTTP 204 (No Content), et l’attribut `status` de l’expiration est défini sur `cancelled`.
 
-## Récupération de l’historique de l’état d’expiration d’un jeu de données
+## Récupérer l’historique du statut d’expiration d’un jeu de données
 
-Vous pouvez rechercher l’historique de l’état d’expiration d’un jeu de données spécifique à l’aide du paramètre de requête . `include=history` dans une requête de recherche. Le résultat comprend des informations sur la création de l’expiration du jeu de données, les mises à jour qui ont été appliquées et son annulation ou son exécution (le cas échéant).
+Vous pouvez rechercher l’historique du statut d’expiration d’un jeu de données spécifique à l’aide du paramètre de requête `include=history` dans une requête de recherche. Le résultat comprend des informations sur la création de l’expiration du jeu de données, les mises à jour qui ont été appliquées et son annulation ou son exécution (le cas échéant).
 
 **Format d’API**
 
@@ -311,7 +311,7 @@ GET /ttl/{DATASET_ID}?include=history
 
 | Paramètre | Description |
 | --- | --- |
-| `{DATASET_ID}` | Identifiant du jeu de données dont vous souhaitez rechercher l’historique d’expiration. |
+| `{DATASET_ID}` | L’identifiant du jeu de données dont vous souhaitez consulter l’historique des expirations. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -370,10 +370,10 @@ Une réponse réussie renvoie les détails de l’expiration du jeu de données,
 | --- | --- |
 | `workorderId` | Identifiant de l’expiration du jeu de données. |
 | `datasetId` | Identifiant du jeu de données auquel cette expiration s’applique. |
-| `datasetName` | Nom d’affichage du jeu de données auquel cette expiration s’applique. |
-| `sandboxName` | Nom de l’environnement de test sous lequel se trouve le jeu de données cible. |
-| `displayName` | Nom d’affichage de la demande d’expiration. |
-| `description` | Description de la demande d’expiration. |
+| `datasetName` | Le nom d’affichage du jeu de données auquel cette expiration s’applique. |
+| `sandboxName` | Le nom de la sandbox sous lequel se trouve le jeu de données cible. |
+| `displayName` | Le nom d’affichage de la requête d’expiration. |
+| `description` | Une description de la requête d’expiration. |
 | `imsOrg` | Identifiant de l’organisation. |
 | `history` | Répertorie l’historique des mises à jour pour l’expiration sous la forme d’un tableau d’objets, chaque objet contenant les attributs `status`, `expiry`, `updatedAt` et `updatedBy` de l’expiration au moment de la mise à jour. |
 
@@ -389,10 +389,10 @@ Le tableau suivant décrit les paramètres de requête disponibles lorsque les [
 | --- | --- | --- |
 | `size` | Nombre entier compris entre 1 et 100 qui indique le nombre maximal d’expirations à renvoyer. La valeur par défaut est 25. | `size=50` |
 | `page` | Nombre entier qui indique la page des expirations à renvoyer. | `page=3` |
-| `orgId` | Correspond aux expirations de jeux de données dont l’ID d’organisation correspond à celui du paramètre . Cette valeur par défaut est celle de la variable `x-gw-ims-org-id` est ignoré, sauf si la requête fournit un jeton de service. | `orgId=885737B25DC460C50A49411B@AdobeOrg` |
+| `orgId` | Correspond aux expirations de jeux de données dont l’ID d’organisation correspond à celui du paramètre. Cette valeur par défaut est celle des en-têtes `x-gw-ims-org-id`, et est ignorée sauf si la requête fournit un jeton de service. | `orgId=885737B25DC460C50A49411B@AdobeOrg` |
 | `status` | Liste de statuts séparés par des virgules. Lorsqu’elle est incluse, la réponse correspond aux expirations de jeux de données dont le statut actuel fait partie de ceux répertoriés. | `status=pending,cancelled` |
 | `author` | Correspond aux expirations dont `created_by` correspond à la chaîne de recherche. Si la chaîne de recherche commence par `LIKE` ou `NOT LIKE`, le reste est traité comme un modèle de recherche SQL. Dans le cas contraire, l’intégralité de la chaîne de recherche est traitée comme une chaîne littérale qui doit correspondre exactement à l’intégralité du contenu d’un champ `created_by`. | `author=LIKE %john%` |
-| `sandboxName` | Correspond aux expirations de jeux de données dont le nom de l’environnement de test correspond exactement à l’argument . La valeur par défaut est le nom de l’environnement de test dans le `x-sandbox-name` en-tête . Utilisation `sandboxName=*` pour inclure les expirations de jeux de données de tous les environnements de test. | `sandboxName=dev1` |
+| `sandboxName` | Correspond aux expirations de jeux de données dont la sandbox correspond exactement à l’argument. La valeur par défaut est le nom de la sandbox dans l’en-tête `x-sandbox-name` de la requête. Utilisez `sandboxName=*` pour inclure les expirations de jeux de données de toutes les sandbox. | `sandboxName=dev1` |
 | `datasetId` | Correspond aux expirations qui s’appliquent à un jeu de données spécifique. | `datasetId=62b3925ff20f8e1b990a7434` |
 | `createdDate` | Correspond aux expirations qui ont été créées dans la fenêtre de 24 heures à partir de l’heure indiquée.<br><br>Notez que les dates sans heure (comme `2021-12-07`) représentent la date/heure au début de la journée. Ainsi, `createdDate=2021-12-07` fait référence à l’ensemble des expirations créées le 7 décembre 2021, de `00:00:00` à `23:59:59.999999999` (UTC). | `createdDate=2021-12-07` |
 | `createdFromDate` | Correspond aux expirations qui ont été créées à l’heure indiquée ou ultérieurement. | `createdFromDate=2021-12-07T00:00:00Z` |
