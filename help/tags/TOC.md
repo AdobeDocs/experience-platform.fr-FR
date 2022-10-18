@@ -5,9 +5,9 @@ breadcrumb-title: Balises
 user-guide-description: Découvrez comment déployer et gérer des balises d’analyse, de marketing et de publicité pour améliorer les expériences clients.
 feature: Tags
 solution: Data Collection
-source-git-commit: f6c22d260e1583dc035d1508ca3bce0d7f9de8bd
+source-git-commit: 48151842ffcba4082988d008f9370714da51ee05
 workflow-type: tm+mt
-source-wordcount: '408'
+source-wordcount: '409'
 ht-degree: 95%
 
 ---
@@ -127,6 +127,8 @@ ht-degree: 95%
       * Couche de données Google {#google-data-layer}
          * [Présentation](./extensions/web/google-data-layer/overview.md)
          * [Notes de mise à jour](./extensions/web/google-data-layer/release-notes.md)
+      * [!DNL Splunk] {#splunk}
+         * [Présentation](./extensions/web/splunk/overview.md)
       * [!DNL YouTube] Extension de suivi vidéo {#youtube}
          * [Présentation](./extensions/web/youtube/overview.md)
          * [Notes de mise à jour](./extensions/web/youtube/release-notes.md)
