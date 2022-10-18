@@ -1,12 +1,12 @@
 ---
 title: Présentation des flux de données
 description: Connectez votre intégration SDK Experience Platform côté client à des produits Adobe et à des destinations tierces.
-keywords: configuration;flux de données;datastreamId;edge;identifiant de flux de données;Paramètres d’environnement;edgeConfigId;identité;synchronisation des identifiants activée;Identifiant de conteneur de synchronisation d’identifiant;Sandbox;Diffusion d’entrée;Jeu de données d’événement;cible;code client;Jeton de propriété;Identifiant d’environnement cible;Destinations de cookie;Destinations d’url;identifiant de suite de rapports de blocs de paramètres Analytics;Préparation des données pour la collecte de données;Préparation des données;Mappeur;Mappeur XDM;Mappeur sur Edge;
+keywords: configuration;flux de données;datastreamId;edge;identifiant de flux de données;Paramètres d’environnement;edgeConfigId;identité;synchronisation des identifiants activée;Identifiant de conteneur de synchronisation d’identifiant;Sandbox;Diffusion d’entrée;Jeu de données d’événement;target;code client;Jeton de propriété;Identifiant d’environnement Target;Destinations de cookie;Destinations d’url;identifiant de suite de rapports de blocs de paramètres Analytics;Préparation des données pour la collecte de données;Préparation des données;Mappeur;Mappeur XDM;Mappeur sur Edge;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
 source-git-commit: 81b20d40d3511592125cba123fa070fc27aace5a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1789'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
@@ -18,7 +18,7 @@ Ce document décrit les étapes de configuration d’un flux de données dans l�
 
 ## Accéder à l’espace de travail [!UICONTROL Flux de données]
 
-Vous pouvez créer et gérer des flux de données dans l’interface utilisateur de la collecte de données ou l’interface utilisateur Experience Platform en sélectionnant **[!UICONTROL Datastreams]** dans le volet de navigation de gauche.
+Vous pouvez créer et gérer des flux de données dans l’interface utilisateur de collecte de données ou d’Experience Platform en sélectionnant **[!UICONTROL Flux de données]** dans le volet de navigation de gauche.
 
 ![Onglet Flux de données dans l’interface utilisateur](../assets/datastreams/overview/datastreams-tab.png)
 
@@ -106,7 +106,7 @@ Ce service contrôle si et comment les données sont envoyées à Adobe Audience
 
 >[!IMPORTANT]
 >
->Lors de l’activation d’un flux de données pour Platform, prenez note de l’environnement de test Platform que vous utilisez actuellement, tel qu’affiché dans le ruban supérieur de l’interface utilisateur.
+>Lors de l’activation d’un flux de données pour Platform, notez la sandbox Platform que vous utilisez actuellement, tel qu’affichée dans le ruban supérieur de l’interface utilisateur.
 >
 >![Sandbox sélectionné](../assets/datastreams/overview/platform-sandbox.png)
 >
@@ -121,9 +121,9 @@ Ce service contrôle si et comment les données sont envoyées à Adobe Experien
 | [!UICONTROL Jeu de données d’événement] | **(Obligatoire)** Sélectionnez le jeu de données de Platform vers lequel les données d’événement client seront diffusées. Ce schéma doit utiliser la [classe XDM ExperienceEvent](../../xdm/classes/experienceevent.md). |
 | [!UICONTROL Jeu de données de profil] | Sélectionnez le jeu de données de Platform auquel les données d’attribut du client seront envoyées. Ce schéma doit utiliser la [classe XDM Individual Profile](../../xdm/classes/individual-profile.md). |
 | [!UICONTROL Offer Decisioning] | Cochez cette case pour activer Offer Decisioning pour une mise en œuvre du SDK web de Platform. Consultez le guide sur l’[utilisation d’Offer Decisioning avec le SDK web de Platform](../personalization/offer-decisioning/offer-decisioning-overview.md) pour plus d’informations sur la mise en œuvre. <br><br> Pour plus d’informations sur les fonctionnalités d’Offer Decisioning, consultez la [Documentation d’Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started/starting-offer-decisioning.html?lang=fr). |
-| [!UICONTROL Segmentation Edge] | Cochez cette case pour activer la [segmentation Edge](../../segmentation/ui/edge-segmentation.md) de ce flux de données. Lorsque le SDK envoie des données par le biais d’un flux de données compatible avec la segmentation Edge, toutes les adhésions au segment mises à jour pour le profil en question sont renvoyées dans la réponse.<br><br>Cette option peut être utilisée conjointement avec [!UICONTROL Destinations de personnalisation] pour [Cas d’utilisation de la personnalisation de la page suivante](../../destinations/ui/configure-personalization-destinations.md)ou en combinaison avec [!UICONTROL Adobe Journey Optimizer]. |
+| [!UICONTROL Segmentation Edge] | Cochez cette case pour activer la [segmentation Edge](../../segmentation/ui/edge-segmentation.md) de ce flux de données. Lorsque le SDK envoie des données par le biais d’un flux de données compatible avec la segmentation Edge, toutes les adhésions au segment mises à jour pour le profil en question sont renvoyées dans la réponse.<br><br>Cette option peut être utilisée conjointement avec les [!UICONTROL destinations de personnalisation] pour les [cas d’utilisation de la personnalisation de la page suivante](../../destinations/ui/configure-personalization-destinations.md) ou en combinaison avec [!UICONTROL Adobe Journey Optimizer]. |
 | [!UICONTROL Destinations de personnalisation] | Lorsque vous activez cette fonction après avoir activé la case à cocher [!UICONTROL Segmentation Edge], cette option permet au flux de données de se connecter aux destinations de personnalisation, telles que [Personnalisation personnalisée](../../destinations/catalog/personalization/custom-personalization.md). <br><br>Consultez la documentation des destinations pour obtenir des instructions spécifiques sur la [configuration des destinations de personnalisation](../../destinations/ui/configure-personalization-destinations.md). |
-| [!UICONTROL Adobe Journey Optimizer] | Cochez cette case pour activer [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=fr) pour ce flux de données. <br><br> L’activation de cette option permet à l’ensemble de données de renvoyer du contenu personnalisé à partir de campagnes Web et d’entrée basées sur des applications dans [!DNL Adobe Journey Optimizer]. Cette option nécessite [!UICONTROL Segmentation Edge] pour être principal. If [!UICONTROL Segmentation Edge] n’est pas cochée, cette option est grisée. |
+| [!UICONTROL Adobe Journey Optimizer] | Cochez cette case pour activer [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=fr) pour ce flux de données. <br><br> L’activation de cette option permet au flux de données de renvoyer du contenu personnalisé à partir de campagnes entrantes web et basées sur des applications dans [!DNL Adobe Journey Optimizer]. Cette option nécessite [!UICONTROL Segmentation Edge] pour être active. Si [!UICONTROL Segmentation Edge] n’est pas cochée, cette option est grisée. |
 
 ### Paramètres d’Adobe Target {#target}
 
