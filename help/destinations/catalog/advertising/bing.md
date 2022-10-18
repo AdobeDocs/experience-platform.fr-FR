@@ -3,10 +3,10 @@ keywords: la publicité; bing;
 title: Connexion Microsoft Bing
 description: Avec la destination de connexion Microsoft Bing, vous pouvez exécuter le reciblage et l’audience des campagnes numériques ciblées dans Microsoft Display Advertising.
 exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
-source-git-commit: 812688043a7da943832b5798de0f433928634998
+source-git-commit: aec9708680c2a4cb3c70af12f95c67ec37b2e129
 workflow-type: tm+mt
-source-wordcount: '633'
-ht-degree: 12%
+source-wordcount: '622'
+ht-degree: 13%
 
 ---
 
@@ -69,7 +69,7 @@ Pendant la [configuration](../../ui/connect-destination.md) de cette destination
 
 * **[!UICONTROL Nom]**: Un nom par lequel vous reconnaîtrez cette destination à l’avenir.
 * **[!UICONTROL Description]**: Description qui vous aidera à identifier cette destination ultérieurement.
-* **[!UICONTROL Identifiant de compte]**: Votre [!DNL Bing Ads CID].
+* **[!UICONTROL Identifiant de compte]**: Votre [!DNL Bing Ads Customer ID] (CID). Votre ID de client est un entier, qui se trouve dans l’URL lorsque vous vous connectez. [!DNL Microsoft Advertising].
 
 ### Activer les alertes {#enable-alerts}
 
@@ -90,11 +90,9 @@ Lorsque vous avez terminé de fournir des détails sur votre connexion de destin
 
 Voir [Activation des données d’audience vers des destinations d’exportation de segments par flux](../../ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des segments d’audience vers cette destination.
 
-Dans le [Planification du segment](../../ui/activate-segment-streaming-destinations.md#scheduling) , vous devez mapper manuellement vos segments à l’identifiant de segment numérique correspondant dans la variable [!DNL Bing] destination. Renseignez l’identifiant numérique du segment à partir de [!DNL Bing] dans le [!UICONTROL ID de mappage] champ .
+Dans le [Planification du segment](../../ui/activate-segment-streaming-destinations.md#scheduling) , vous devez mapper manuellement le nom du segment dans la variable [!UICONTROL ID de mappage] champ . Cela permet de s’assurer que les métadonnées de segment sont correctement transmises à [!DNL Bing].
 
-![Image de l’interface utilisateur affichant l’écran de mappage de segments avec un exemple d’identifiant de mappage Bing](../../assets/catalog/advertising/bing/mapping-id.png)
-
-Si la variable [!UICONTROL ID de mappage] ne correspond pas à un identifiant de segment dans la destination Bing. Vous ne verrez pas les données d’audience attendues dans votre compte Bing.
+![Image de l’interface utilisateur montrant l’écran de planification des segments avec un exemple de mappage du nom du segment à l’identifiant de mappage Bing.](../../assets/catalog/advertising/bing/mapping-id.png)
 
 ## Données exportées {#exported-data}
 
