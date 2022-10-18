@@ -3,9 +3,9 @@ title: Point d’entrée de l’API de l’ordre de travail
 description: Le point d’entrée /workorder de l’API Data Hygiene vous permet de gérer par programmation les tâches de suppression des identités des clients.
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
 source-git-commit: 83149c4e6e8ea483133da4766c37886b8ebd7316
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '986'
-ht-degree: 49%
+ht-degree: 100%
 
 ---
 
@@ -13,15 +13,15 @@ ht-degree: 49%
 
 >[!IMPORTANT]
 >
->Actuellement, seules les organisations qui ont acheté l’Adobe Healthcare Shield disposent des capacités d’hygiène des données dans Adobe Experience Platform.
+>Actuellement, les fonctionnalités d’hygiène des données d’Adobe Experience Platform sont uniquement disponibles pour les organisations qui ont acheté Adobe Healthcare Shield.
 
-Le `/workorder` Dans l’API Data Hygiene, le point de terminaison permet de gérer par programmation les requêtes de suppression des consommateurs dans Adobe Experience Platform.
+Le point d’entrée `/workorder` dans l’API Data Hygiene vous permet de gérer par programmation les requêtes de suppression de consommateurs dans Adobe Experience Platform.
 
 ## Prise en main
 
 Le point d’entrée utilisé dans ce guide fait partie de lʼAPI Data Hygiene. Avant de continuer, consultez la [présentation](./overview.md) pour obtenir des liens vers la documentation associée, un guide de lecture des exemples d’appels API dans ce document et des informations importantes sur les en-têtes requis pour réussir des appels vers n’importe quelle API d’Experience Platform.
 
-## Création d’une requête de suppression de consommateur {#delete-consumers}
+## Créer une requête de suppression de consommateurs {#delete-consumers}
 
 Vous pouvez supprimer une ou plusieurs identités de clients d’un seul jeu de données ou de tous les jeux de données en effectuant une requête POST au point d’entrée `/workorder`.
 
@@ -75,15 +75,15 @@ curl -X POST \
 | --- | --- |
 | `action` | L’action à effectuer. La valeur doit être définie sur `delete_identity` pour les suppressions de consommateurs. |
 | `datasetId` | Si vous effectuez une suppression dans un seul jeu de données, cette valeur doit correspondre à l’identifiant du jeu de données en question. Si vous effectuez une suppression dans tous les jeux de données, définissez la valeur sur `ALL`.<br><br>Si vous spécifiez un seul jeu de données, une identité principale doit être définie pour le schéma de modèle de données d’expérience (XDM) associé au jeu de données. |
-| `displayName` | Nom d’affichage de la requête de suppression du consommateur. |
-| `description` | Description de la requête de suppression du client. |
+| `displayName` | Le nom d’affichage de la requête de suppression de consommateurs. |
+| `description` | Une description de la requête de suppression de consommateurs. |
 | `identities` | Un tableau contenant les identités d’au moins un utilisateur dont vous souhaitez supprimer les informations. Chaque identité se compose d’un [espace de noms d’identité](../../identity-service/namespaces.md) et d’une valeur :<ul><li>`namespace` : contient une seule propriété de chaîne, `code`, qui représente l’espace de noms d’identité. </li><li>`id` : la valeur de l’identité.</ul>Si `datasetId` spécifie un seul jeu de données, chaque entité sous `identities` doit utiliser le même espace de noms d’identité que l’identité principale du schéma.<br><br>Si `datasetId` est défini sur `ALL`, le tableau `identities` n’est limité à aucun espace de noms unique, car chaque jeu de données peut être différent. Toutefois, les requêtes sont toujours limitées aux espaces de noms disponibles pour l’organisation, comme indiqué par le [service d’identités](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces). |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Réponse**
 
-Une réponse réussie renvoie les détails de la suppression du client.
+Une réponse réussie renvoie les détails de la suppression de consommateurs.
 
 ```json
 {
@@ -104,20 +104,20 @@ Une réponse réussie renvoie les détails de la suppression du client.
 | Propriété | Description |
 | --- | --- |
 | `workorderId` | L’identifiant de l’ordre de suppression. Vous pouvez l’utiliser pour rechercher le statut de la suppression ultérieurement. |
-| `orgId` | ID d’organisation. |
-| `bundleId` | L’identifiant du lot auquel cet ordre de suppression est associé, utilisé à des fins de débogage. Plusieurs commandes de suppression sont regroupées pour être traitées par des services en aval. |
-| `action` | L’action effectuée par l’ordre de travail. Pour les suppressions par le client, la valeur est `identity-delete`. |
+| `orgId` | Votre identifiant d’organisation. |
+| `bundleId` | L’identifiant de l’offre groupée à laquelle cet ordre de suppression est associé, utilisé à des fins de débogage. Plusieurs ordres de suppression sont regroupés pour être traités par les services en aval. |
+| `action` | L’action effectuée par l’ordre de travail. Pour les suppressions de consommateurs, la valeur est `identity-delete`. |
 | `createdAt` | La date et l’heure de création de l’ordre de suppression. |
-| `updatedAt` | Horodatage de la dernière mise à jour de la commande de suppression. |
+| `updatedAt` | La date et l’heure de la dernière mise à jour de l’ordre de suppression. |
 | `status` | Le statut actuel de l’ordre de suppression. |
 | `createdBy` | L’utilisateur qui a créé l’ordre de suppression. |
-| `datasetId` | Identifiant du jeu de données sujet à la requête. Si la requête concerne tous les jeux de données, la valeur est définie sur `ALL`. |
+| `datasetId` | L’identifiant du jeu de données sujet à la requête. Si la requête porte sur tous les jeux de données, la valeur est définie sur `ALL`. |
 
 {style=&quot;table-layout:auto&quot;}
 
-## Récupération de l’état d’une suppression de consommateur (#lookup)
+## Récupérer le statut d’une suppression de consommateurs (#lookup)
 
-Après [création d’une requête de suppression client](#delete-consumers), vous pouvez vérifier son état à l’aide d’une requête de GET.
+Après la [création d’une requête de suppression de consommateurs](#delete-consumers), vous pouvez vérifier son statut à l’aide d’une requête GET.
 
 **Format d’API**
 
@@ -127,7 +127,7 @@ GET /workorder/{WORK_ORDER_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{WORK_ORDER_ID}` | Le `workorderId` de l’utilisateur que vous recherchez. |
+| `{WORK_ORDER_ID}` | Le `workorderId` de la suppression de consommateurs que vous recherchez. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -182,19 +182,19 @@ Une réponse réussie renvoie les détails de l’opération de suppression, y c
 | Propriété | Description |
 | --- | --- |
 | `workorderId` | L’identifiant de l’ordre de suppression. Vous pouvez l’utiliser pour rechercher le statut de la suppression ultérieurement. |
-| `orgId` | ID d’organisation. |
-| `bundleId` | L’identifiant du lot auquel cet ordre de suppression est associé, utilisé à des fins de débogage. Plusieurs commandes de suppression sont regroupées pour être traitées par des services en aval. |
-| `action` | L’action effectuée par l’ordre de travail. Pour les suppressions par le client, la valeur est `identity-delete`. |
+| `orgId` | Votre identifiant d’organisation. |
+| `bundleId` | L’identifiant de l’offre groupée à laquelle cet ordre de suppression est associé, utilisé à des fins de débogage. Plusieurs ordres de suppression sont regroupés pour être traités par les services en aval. |
+| `action` | L’action effectuée par l’ordre de travail. Pour les suppressions de consommateurs, la valeur est `identity-delete`. |
 | `createdAt` | La date et l’heure de création de l’ordre de suppression. |
-| `updatedAt` | Horodatage de la dernière mise à jour de la commande de suppression. |
+| `updatedAt` | La date et l’heure de la dernière mise à jour de l’ordre de suppression. |
 | `status` | Le statut actuel de l’ordre de suppression. |
 | `createdBy` | L’utilisateur qui a créé l’ordre de suppression. |
-| `datasetId` | Identifiant du jeu de données sujet à la requête. Si la requête concerne tous les jeux de données, la valeur est définie sur `ALL`. |
-| `productStatusDetails` | Tableau qui répertorie l’état actuel des processus en aval liés à la requête. Chaque objet de tableau contient les propriétés suivantes :<ul><li>`productName`: Nom du service en aval.</li><li>`productStatus`: État actuel du traitement de la requête du service en aval.</li><li>`createdAt`: Horodatage indiquant le moment où le statut le plus récent a été publié par le service.</li></ul> |
+| `datasetId` | L’identifiant du jeu de données sujet à la requête. Si la requête porte sur tous les jeux de données, la valeur est définie sur `ALL`. |
+| `productStatusDetails` | Un tableau qui répertorie le statut actuel des processus en aval liés à la requête. Chaque objet Tableau contient les propriétés suivantes :<ul><li>`productName` : le nom du service en aval.</li><li>`productStatus` : le statut actuel du traitement de la requête du service en aval.</li><li>`createdAt` : la date et l’heure auxquelles le statut le plus récent a été publié par le service.</li></ul> |
 
-## Mettre à jour une requête de suppression d’un client
+## Mettre à jour une requête de suppression de consommateurs
 
-Vous pouvez mettre à jour la variable `displayName` et `description` pour un client, supprimez en effectuant une requête de PUT.
+Vous pouvez mettre à jour le `displayName` et la `description` pour une suppression de consommateurs en effectuant une requête PUT.
 
 **Format d’API**
 
@@ -204,7 +204,7 @@ PUT /workorder{WORK_ORDER_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{WORK_ORDER_ID}` | Le `workorderId` de l’utilisateur que vous recherchez. |
+| `{WORK_ORDER_ID}` | Le `workorderId` de la suppression de consommateurs que vous recherchez. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -225,14 +225,14 @@ curl -X GET \
 
 | Propriété | Description |
 | --- | --- |
-| `displayName` | Nom d’affichage mis à jour pour la requête de suppression du consommateur. |
-| `description` | Description mise à jour de la requête de suppression du client. |
+| `displayName` | Un nom d’affichage mis à jour pour la requête de suppression de consommateurs. |
+| `description` | Une description mise à jour de la requête de suppression de consommateurs. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Réponse**
 
-Une réponse réussie renvoie les détails de la suppression du client.
+Une réponse réussie renvoie les détails de la suppression de consommateurs.
 
 ```json
 {
@@ -270,14 +270,14 @@ Une réponse réussie renvoie les détails de la suppression du client.
 | Propriété | Description |
 | --- | --- |
 | `workorderId` | L’identifiant de l’ordre de suppression. Vous pouvez l’utiliser pour rechercher le statut de la suppression ultérieurement. |
-| `orgId` | ID d’organisation. |
-| `bundleId` | L’identifiant du lot auquel cet ordre de suppression est associé, utilisé à des fins de débogage. Plusieurs commandes de suppression sont regroupées pour être traitées par des services en aval. |
-| `action` | L’action effectuée par l’ordre de travail. Pour les suppressions par le client, la valeur est `identity-delete`. |
+| `orgId` | Votre identifiant d’organisation. |
+| `bundleId` | L’identifiant de l’offre groupée à laquelle cet ordre de suppression est associé, utilisé à des fins de débogage. Plusieurs ordres de suppression sont regroupés pour être traités par les services en aval. |
+| `action` | L’action effectuée par l’ordre de travail. Pour les suppressions de consommateurs, la valeur est `identity-delete`. |
 | `createdAt` | La date et l’heure de création de l’ordre de suppression. |
-| `updatedAt` | Horodatage de la dernière mise à jour de la commande de suppression. |
+| `updatedAt` | La date et l’heure de la dernière mise à jour de l’ordre de suppression. |
 | `status` | Le statut actuel de l’ordre de suppression. |
 | `createdBy` | L’utilisateur qui a créé l’ordre de suppression. |
-| `datasetId` | Identifiant du jeu de données sujet à la requête. Si la requête concerne tous les jeux de données, la valeur est définie sur `ALL`. |
-| `productStatusDetails` | Tableau qui répertorie l’état actuel des processus en aval liés à la requête. Chaque objet de tableau contient les propriétés suivantes :<ul><li>`productName`: Nom du service en aval.</li><li>`productStatus`: État actuel du traitement de la requête du service en aval.</li><li>`createdAt`: Horodatage indiquant le moment où le statut le plus récent a été publié par le service.</li></ul> |
+| `datasetId` | L’identifiant du jeu de données sujet à la requête. Si la requête porte sur tous les jeux de données, la valeur est définie sur `ALL`. |
+| `productStatusDetails` | Un tableau qui répertorie le statut actuel des processus en aval liés à la requête. Chaque objet Tableau contient les propriétés suivantes :<ul><li>`productName` : le nom du service en aval.</li><li>`productStatus` : le statut actuel du traitement de la requête du service en aval.</li><li>`createdAt` : la date et l’heure auxquelles le statut le plus récent a été publié par le service.</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
