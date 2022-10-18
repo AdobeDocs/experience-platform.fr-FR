@@ -3,9 +3,9 @@ title: Guide de l’interface utilisateur de nettoyage de données
 description: Découvrez comment gérer les tâches de nettoyage de données dans l’interface utilisateur d’Adobe Experience Platform.
 exl-id: 7199151a-5390-4150-8a1d-daf53b7a1f5b
 source-git-commit: 762cd5eb33706a942f5df91005e4ae9157bb6af8
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '217'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -32,5 +32,5 @@ Pour accéder à l’espace de travail, sélectionnez **[!UICONTROL Nettoyage de
 Ensuite, vous pouvez parcourir les ordres de travail existants et configurer de nouvelles opérations d’nettoyage de données. Pour en savoir plus, consultez les sections suivantes de ce guide :
 
 * [Parcourir les ordres de travail existants](./browse.md)
-* [Création d’une requête d’expiration de jeu de données](./dataset-expiration.md)
-* [Création d’une requête de suppression de consommateur](./delete-consumer.md)
+* [Créer une requête d’expiration de jeu de données](./dataset-expiration.md)
+* [Créer une requête de suppression de consommateurs](./delete-consumer.md)
