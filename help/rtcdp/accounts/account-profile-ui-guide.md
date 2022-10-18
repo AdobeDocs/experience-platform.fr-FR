@@ -3,10 +3,10 @@ keywords: profil rtcdp;profils rtcdp;identités rtcdp;stratégies de fusion rtcd
 title: Guide de l’interface utilisateur des profils de compte
 description: Grâce aux profils de compte, l’édition B2B de Real-time Customer Data Platform vous permet d’unifier les informations de compte provenant de plusieurs sources. Ce guide fournit des détails sur l’interaction avec les profils de compte dans l’interface utilisateur d’Adobe Experience Platform.
 exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
-source-git-commit: 9119e6376228c3cec214977265abf0ce55093b64
+source-git-commit: 85d3e5f265fdbfd51f184d36205127f005e2b9df
 workflow-type: tm+mt
-source-wordcount: '1629'
-ht-degree: 73%
+source-wordcount: '1624'
+ht-degree: 74%
 
 ---
 
@@ -52,8 +52,6 @@ Pour en savoir plus sur la mise en correspondance des prospects avec les comptes
 
 Pour parcourir les profils de compte, commencez par sélectionner **[!UICONTROL Profils]** sous [!UICONTROL Comptes] dans le volet de navigation de gauche.
 
-![Sélection de profils dans le volet de navigation de gauche](images/b2b-account-browse.png)
-
 Dans l’onglet **[!UICONTROL Parcourir]**, vous pouvez explorer les profils de compte à l’aide d’un identifiant de compte provenant d’une source d’entreprise connectée ou en saisissant directement les détails de la source.
 
 ![Utiliser l’identifiant de compte pour explorer les profils](images/b2b-account-browse-by.png)
@@ -72,9 +70,9 @@ Cela ouvre la boîte de dialogue **[!UICONTROL Sélectionner la source]**, dans 
 
 Pour en savoir plus sur la connexion des sources d’entreprise, consultez la [présentation des sources](../sources/sources-overview.md).
 
-![Sélectionner le processus source](images/b2b-account-select-source.png)
-
 Vous pouvez choisir une source en sélectionnant le bouton radio en regard du nom de la connexion, puis en utilisant **[!UICONTROL Sélectionner]** pour revenir à l’onglet [!UICONTROL Parcourir].
+
+![Sélectionner le processus source](images/b2b-account-select-source.png)
 
 Une fois la source sélectionnée, vous devez saisir un **[!UICONTROL identifiant de compte]** associé à la source. Par exemple, pour sélectionner une source Salesforce, vous devez saisir un identifiant de compte à partir de l’instance Salesforce afin d’afficher le profil de compte associé à cet identifiant.
 
