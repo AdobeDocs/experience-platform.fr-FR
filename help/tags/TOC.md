@@ -5,10 +5,10 @@ breadcrumb-title: Balises
 user-guide-description: Découvrez comment déployer et gérer des balises d’analyse, de marketing et de publicité pour améliorer les expériences clients.
 feature: Tags
 solution: Data Collection
-source-git-commit: 48151842ffcba4082988d008f9370714da51ee05
+source-git-commit: d5e8e49e50d0c5792828140626b933a4f232dd00
 workflow-type: tm+mt
-source-wordcount: '409'
-ht-degree: 95%
+source-wordcount: '413'
+ht-degree: 94%
 
 ---
 
@@ -132,6 +132,8 @@ ht-degree: 95%
       * [!DNL YouTube] Extension de suivi vidéo {#youtube}
          * [Présentation](./extensions/web/youtube/overview.md)
          * [Notes de mise à jour](./extensions/web/youtube/release-notes.md)
+      * [!DNL Zendesk] Extension de l’API Events {#zendesk}
+         * [Présentation](./extensions/web/zendesk/overview.md)
    * [Extensions tierces](./extensions/3rd-party-extensions.md)
 * Développement d’extension {#extension-dev}
    * [Présentation](./extension-dev/overview.md)
