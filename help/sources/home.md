@@ -6,9 +6,9 @@ topic-legacy: overview
 description: Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous permettant de structurer, de libeller et d’améliorer les données entrantes à l’aide des services de Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, des bases de données, etc.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
 source-git-commit: 9eb7cdd08069a74a8f0680a8a2af7e7e950e83b7
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1111'
-ht-degree: 88%
+ht-degree: 100%
 
 ---
 
@@ -30,12 +30,12 @@ Experience Platform permet d’ingérer des données provenant d’autres applic
 
 - [Présentation de la source Adobe Audience Manager](connectors/adobe-applications/audience-manager.md)
 - [Créer une connexion source Adobe Audience Manager dans l’interface utilisateur](./tutorials/ui/create/adobe-applications/audience-manager.md)
-- [Adobe Analytics Classifications Data source - Aperçu](connectors/adobe-applications/classifications.md)
+- [Présentation de la source de données de classifications Adobe Analytics](connectors/adobe-applications/classifications.md)
 - [Créer une connexion de source de données de classifications Adobe Analytics dans l’interface utilisateur](./tutorials/ui/create/adobe-applications/classifications.md)
-- [Présentation de la source de données de la suite de rapports Adobe Analytics](connectors/adobe-applications/analytics.md)
+- [Présentation de source de données de la suite de rapports Adobe Analytics](connectors/adobe-applications/analytics.md)
 - [Créer une connexion source Adobe Analytics dans l’interface utilisateur](./tutorials/ui/create/adobe-applications/analytics.md)
-- [Présentation de la source Adobe Campaign Managed Cloud Services](connectors/adobe-applications/campaign.md)
-- [Création d’une connexion source Adobe Campaign Managed Cloud Services dans l’interface utilisateur](./tutorials/ui/create/adobe-applications/campaign.md)
+- [Présentation de la source Adobe Campaign Managed Cloud Services](connectors/adobe-applications/campaign.md)
+- [Créer une connexion source Adobe Campaign Managed Services à l’aide de l’interface utilisateur de Platform](./tutorials/ui/create/adobe-applications/campaign.md)
 - [Présentation de la source de collecte de données Adobe](connectors/adobe-applications/data-collection.md)
 - [Créer une connexion source Attributs du client dans l’interface utilisateur](./tutorials/ui/create/adobe-applications/customer-attributes.md)
 - [Présentation de la source [!DNL Marketo Engage]](connectors/adobe-applications/marketo/marketo.md)
@@ -171,15 +171,15 @@ Le tableau suivant décrit le comportement de l’interface utilisateur en fonct
 | **[!UICONTROL Gérer les sources]** activée | Outre les fonctions incluses dans **[!UICONTROL Afficher les sources]**, elle accorde un accès à l’option **[!UICONTROL Connecter une source]** dans **[!UICONTROL Catalogue]** et l’option **[!UICONTROL Sélectionner les données]** dans **[!UICONTROL Parcourir]**. **[!UICONTROL Gérer les sources]** vous permet également d’activer ou de désactiver **[!UICONTROL les flux de données]** et de modifier leurs planifications. |
 | **[!UICONTROL Afficher les sources]** désactivée et **[!UICONTROL Gérer les sources]** désactivée | Révoquez tous les accès aux sources. |
 
-Pour plus d’informations sur les autorisations disponibles accordées par le biais des autorisations d’Adobe, consultez la section [présentation du contrôle d’accès](../access-control/home.md).
+Pour plus d’informations sur les autorisations disponibles accordées par le biais des autorisations d’Adobe, consultez la [présentation du contrôle d’accès](../access-control/home.md).
 
 ### Contrôle d’accès basé sur les attributs pour les sources
 
-Le contrôle d’accès basé sur les attributs dans Adobe Experience Platform permet aux administrateurs de contrôler l’accès à des objets et/ou fonctionnalités spécifiques en fonction d’attributs.
+Le contrôle d’accès basé sur les attributs est une fonctionnalité d’Adobe Experience Platform qui permet aux administrateurs de contrôler l’accès à des objets et/ou fonctionnalités spécifiques en fonction d’attributs.
 
-Avec le contrôle d’accès basé sur les attributs, vous pouvez appliquer des configurations de mappage aux champs auxquels vous êtes autorisé à accéder. En outre, vous ne pouvez pas ingérer de données à un jeu de données si vous n’avez pas accès à tous les champs du jeu de données.
+Grâce au contrôle d’accès basé sur les attributs, vous pouvez appliquer des configurations de mappage aux champs pour lesquels vous disposez d’autorisations. En outre, vous ne pouvez pas ingérer de données dans un jeu de données si vous n’avez pas accès à tous les champs du jeu de données.
 
-Pour plus d’informations sur le contrôle d’accès basé sur les attributs, consultez la section [contrôle d’accès basé sur les attributs - Aperçu](../access-control/abac/overview.md).
+Pour plus d’informations sur le contrôle d’accès basé sur les attributs, consultez la [présentation du contrôle d’accès basé sur les attributs](../access-control/abac/overview.md).
 
 ## Conditions générales {#terms-and-conditions}
 
