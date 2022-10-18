@@ -5,9 +5,9 @@ hide: true
 hidefromtoc: true
 exl-id: d80a4be3-e072-4bb4-a56d-b34a20f88c78
 source-git-commit: c2ff0d5806e57f230b937e8754d40031fb4b2305
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '504'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 96%
 
 >[!IMPORTANT]
 >
->Ce point de terminaison représente la fonctionnalité bêta pour les suppressions de consommateurs. Pour connaître les dernières fonctionnalités, veuillez utiliser la variable [`/workorder` endpoint](./workorder.md) au lieu de .
+>Ce point d’entrée représente la fonctionnalité bêta pour les suppressions de consommateurs. Pour connaître les dernières fonctionnalités, veuillez utiliser le [`/workorder`point d’entrée](./workorder.md) à la place.
 
 L’API Data Hygiene vous permet de corriger ou de supprimer par programmation les données personnelles de vos clients stockées dans Adobe Experience Platform.
 
