@@ -1,28 +1,28 @@
 ---
-title: Présentation de l’hygiène des données
+title: Présentation de l’hygiène de données
 description: Le nettoyage de données d’Adobe Experience Platform vous permet de gérer le cycle de vie des données en mettant à jour ou en purgeant des enregistrements obsolètes ou inexacts.
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
 source-git-commit: 83149c4e6e8ea483133da4766c37886b8ebd7316
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '753'
-ht-degree: 26%
+ht-degree: 100%
 
 ---
 
-# Veille des données dans Adobe Experience Platform
+# Hygiène de données sur Adobe Experience Platform
 
 >[!IMPORTANT]
 >
->Actuellement, l’hygiène des données n’est disponible que pour les organisations qui ont acheté l’Adobe Healthcare Shield.
+>L’hygiène des données n’est actuellement disponible que pour les organisations qui ont acheté Adobe Healthcare Shield.
 
 Adobe Experience Platform offre un ensemble d’outils fiables pour gérer des opérations de données complexes et volumineuses afin d’orchestrer les expériences client. Les données étant ingérées dans le système au fil du temps, il devient de plus en plus important de gérer les banques de données pour que les données soient utilisées comme prévu, mises à jour lorsque des données incorrectes doivent être corrigées et supprimées lorsque les politiques d’entreprise le jugent nécessaire.
 
-Les fonctionnalités d’hygiène des données de Platform vous permettent de gérer vos données client stockées par le biais des éléments suivants :
+Les fonctionnalités d’hygiène des données de Platform vous permettent d’effectuer la gestion de vos données client stockées, et ce par les moyens suivants :
 
-* Planification de l’expiration automatisée des jeux de données
-* Suppression des données des consommateurs en fonction des identités ingérées
+* Planifier l’expiration automatisée des jeux de données
+* Supprimer les données des consommateurs en fonction des identités ingérées
 
-Ces activités peuvent être exécutées à l’aide du [[!UICONTROL Hygiène des données] Espace de travail de l’interface utilisateur](#ui) ou le [API Data Hygiene](#api). Lorsqu’une tâche d’hygiène des données s’exécute, le système fournit des mises à jour de transparence à chaque étape du processus. Voir la section sur [calendrier et transparence](#timelines-and-transparency) pour plus d’informations sur la représentation de chaque type de tâche dans le système.
+Ces activités peuvent être exécutées à l’aide de l’espace de travail de l’interface utilisateur [[!UICONTROL Hygiène des données]](#ui) ou de l’[API Data Hygiene](#api). Lorsqu’une tâche d’hygiène des données s’exécute, le système fournit des mises à jour de transparence à chaque étape du processus. Pour plus d’informations sur la représentation de chaque type de traitement dans le système, consultez la section sur [la chronologie et la transparence](#timelines-and-transparency).
 
 ## Espace de travail de l’interface utilisateur [!UICONTROL Nettoyage de données] {#ui}
 
@@ -34,40 +34,40 @@ Pour obtenir des instructions détaillées sur la gestion des tâches de nettoya
 
 L’interface utilisateur [!UICONTROL Nettoyage de données] repose sur l’API Data Hygiene, dont vous pouvez utiliser les points d’entrée directement si vous préférez automatiser les activités de nettoyage de données. Pour plus d’informations, consultez le [Guide de l’API Data Hygiene](./api/overview.md).
 
-## Chronologies et transparence
+## Chronologie et transparence
 
-Les demandes de suppression et d’expiration de jeux de données des clients disposent chacune de leurs propres chronologies de traitement et fournissent des mises à jour de transparence à des points clés de leurs workflows respectifs. Reportez-vous aux sections ci-dessous pour plus d’informations sur chaque type de tâche.
+Les requêtes de suppression de consommateurs et d’expiration de jeu de données disposent chacune de leur propre chronologie de traitement et fournissent des mises à jour de transparence à des points clés de leurs workflows respectifs. Reportez-vous aux sections ci-dessous pour plus d’informations sur chaque type de traitement.
 
 ### Expirations de jeux de données {#dataset-expiration-transparency}
 
-Ce qui suit se produit lorsqu’une [demande d’expiration du jeu de données](./ui/dataset-expiration.md) est créé :
+Ce qui suit se produit lorsqu’une [requête d’expiration de jeu de données](./ui/dataset-expiration.md) est créée :
 
-| Évaluation | Durée après expiration planifiée | Description |
+| Étape | Durée après expiration planifiée | Description |
 | --- | --- | --- |
-| La demande est envoyée | 0 heures | Un gestionnaire de données ou un analyste de la confidentialité envoie une demande pour qu’un jeu de données arrive à expiration à un moment donné. La requête est visible dans la variable [!UICONTROL Interface utilisateur de l’hygiène des données] une fois qu’il a été envoyé et reste dans un état en attente jusqu’à l’heure d’expiration planifiée, après laquelle la demande s’exécutera. |
-| Jeu de données déposé | 1 heure | Le jeu de données est supprimé de la variable [page d’inventaire du jeu de données](../catalog/datasets/user-guide.md) dans l’interface utilisateur. Les données du lac de données ne sont supprimées de manière réversible que jusqu’à la fin du processus, après quoi elles seront supprimées de manière irréversible. |
-| Nombre de profils mis à jour | 30 heures | La modification du nombre de profils provoquée par l’expiration du jeu de données est répercutée dans [widgets de tableau de bord](../dashboards/guides/profiles.md#profile-count-trend) et d’autres rapports. |
-| Segments mis à jour | 48 heures | Une fois les profils supprimés, tous les [segments](../segmentation/home.md) sont mises à jour pour refléter leur nouvelle taille. |
-| Parcours et destinations mis à jour | 50 heures | [Parcours](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journeys/journey.html), [campagnes](https://experienceleague.adobe.com/docs/journey-optimizer/using/campaigns/get-started-with-campaigns.html), et [destinations](../destinations/home.md) sont mises à jour en fonction des modifications apportées aux segments connexes. |
-| Fin de la suppression définitive | 14 jours | Toutes les données relatives au jeu de données sont fortement supprimées du lac de données. Le [statut de l&#39;hygiène](./ui/browse.md#view-details) qui a supprimé le jeu de données est mis à jour pour refléter cette situation. |
+| La requête a été soumise | 0 heure | Un gestionnaire de données ou un analyste de la confidentialité soumet une requête pour qu’un jeu de données arrive à expiration à un moment donné. La requête est visible dans l’[!UICONTROL interface utilisateur de l’hygiène des données] après avoir été soumise, et reste dans un statut en attente jusqu’à l’heure d’expiration planifiée, après quoi la requête s’exécutera. |
+| Jeu de données déposé | 1 heure | Le jeu de données est supprimé de la [page d’inventaire du jeu de données](../catalog/datasets/user-guide.md) dans l’interface utilisateur. Les données du lac de données sont uniquement supprimées de manière réversible et le resteront jusqu’à la fin du processus, après quoi elles seront supprimées définitivement. |
+| Nombre de profils mis à jour | 30 heures | Les modifications du nombre de profils provoquées par l’expiration du jeu de données sont appliquées dans les [widgets de tableau de bord](../dashboards/guides/profiles.md#profile-count-trend) et d’autres rapports. |
+| Segments mis à jour | 48 heures | Une fois les profils supprimés, tous les [segments](../segmentation/home.md) connexes sont mis à jour pour refléter leur nouvelle taille. |
+| Destinations et parcours mis à jour | 50 heures | Les [Parcours](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journeys/journey.html?lang=fr), [destinations](../destinations/home.md), et [campagnes](https://experienceleague.adobe.com/docs/journey-optimizer/using/campaigns/get-started-with-campaigns.html?lang=fr) sont mis à jour en fonction des modifications apportées aux segments connexes. |
+| Suppression définitive terminée | 14 jours | Toutes les données relatives au jeu de données sont supprimées définitivement du lac de données. Le [statut du traitement d’hygiène](./ui/browse.md#view-details) qui a supprimé le jeu de données est mis à jour pour refléter cette situation. |
 
 {style=&quot;table-layout:auto&quot;}
 
-### Suppressions des consommateurs {#consumer-delete-transparency}
+### Suppressions de consommateurs {#consumer-delete-transparency}
 
-Ce qui suit se produit lorsqu’une [requête de suppression du client](./ui/delete-consumer.md) est créé :
+Ce qui suit se produit lorsqu’une [requête de suppression de consommateurs](./ui/delete-consumer.md) est créée :
 
-| Évaluation | Durée après envoi de la requête | Description |
+| Étape | Durée après soumission de la requête | Description |
 | --- | --- | --- |
-| La demande est envoyée | 0 heures | Un gestionnaire de données ou un analyste de la confidentialité envoie une demande de suppression de consommateur. La requête est visible dans la variable [!UICONTROL Interface utilisateur de l’hygiène des données] après avoir été soumis. |
-| Mises à jour des recherches de profil | 3 heures | La modification du nombre de profils provoquée par l’identité supprimée est répercutée dans [widgets de tableau de bord](../dashboards/guides/profiles.md#profile-count-trend) et d’autres rapports. |
-| Segments mis à jour | 24 heures | Une fois les profils supprimés, tous les [segments](../segmentation/home.md) sont mises à jour pour refléter leur nouvelle taille. |
-| Parcours et destinations mis à jour | 26 heures | [Parcours](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journeys/journey.html), [campagnes](https://experienceleague.adobe.com/docs/journey-optimizer/using/campaigns/get-started-with-campaigns.html), et [destinations](../destinations/home.md) sont mises à jour en fonction des modifications apportées aux segments connexes. |
-| Enregistrements supprimés en douceur dans le lac de données | 7 jours | Les données sont supprimées de manière réversible du lac de données. |
-| Passage des données terminé | 14 jours | Le [statut de l&#39;hygiène](./ui/browse.md#view-details) mises à jour pour indiquer que la tâche est terminée, ce qui signifie que l’aspirateur de données a été terminé sur le lac de données et que les enregistrements pertinents ont été définitivement supprimés. |
+| La requête a été soumise | 0 heure | Un gestionnaire de données ou un analyste de la confidentialité soumet une requête de suppression de consommateurs. La requête est visible dans l’[!UICONTROL interface utilisateur de l’hygiène des données] après avoir été soumise. |
+| Mises à jour des recherches de profil | 3 heures | Les modifications du nombre de profils provoquées par l’identité supprimée sont appliquées dans les [widgets de tableau de bord](../dashboards/guides/profiles.md#profile-count-trend) et d’autres rapports. |
+| Segments mis à jour | 24 heures | Une fois les profils supprimés, tous les [segments](../segmentation/home.md) connexes sont mis à jour pour refléter leur nouvelle taille. |
+| Destinations et parcours mis à jour | 26 heures | [Campagnes](https://experienceleague.adobe.com/docs/journey-optimizer/using/campaigns/get-started-with-campaigns.html?lang=fr), [destinations](../destinations/home.md) et [parcours](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journeys/journey.html?lang=fr) sont mis à jour en fonction des modifications apportées aux segments connexes. |
+| Enregistrements supprimés de manière réversible dans le lac de données | 7 jours | Les données sont supprimées de manière réversible du lac de données. |
+| Aspiration des données terminée | 14 jours | Le [statut du traitement d’hygiène](./ui/browse.md#view-details) se met à jour pour indiquer que le traitement est terminé, ce qui signifie que l’aspiration de données est achevée dans le lac de données et que les enregistrements pertinents ont été définitivement supprimés. |
 
 {style=&quot;table-layout:auto&quot;}
 
 ## Étapes suivantes
 
-Ce document présente les fonctionnalités d’hygiène des données de Platform. Pour commencer à effectuer des demandes d’hygiène des données dans l’interface utilisateur, reportez-vous à la section [Guide de l’interface utilisateur](./ui/overview.md). Pour savoir comment créer des tâches d’hygiène des données par programmation, reportez-vous à la section [Guide de l’API d’hygiène des données](./api/overview.md)
+Ce document présente une vue d’ensemble des fonctionnalités d’hygiène des données de Platform. Pour commencer à effectuer des demandes d’hygiène des données dans l’interface utilisateur, reportez-vous au [guide de l’interface utilisateur](./ui/overview.md). Pour savoir comment créer des traitements d’hygiène des données par programmation, reportez-vous au [guide de l’API Data Hygiene](./api/overview.md).
