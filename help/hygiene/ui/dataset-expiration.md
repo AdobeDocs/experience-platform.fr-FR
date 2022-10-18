@@ -1,11 +1,11 @@
 ---
-title: Gérer les expirations de jeux de données
+title: Gérer des expirations de jeux de données
 description: Découvrez comment planifier l’expiration d’un jeu de données dans l’interface utilisateur d’Adobe Experience Platform.
 exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
 source-git-commit: d93036c26e9f1b86a82f4da4cce6f9e8152e3542
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '530'
-ht-degree: 76%
+ht-degree: 100%
 
 ---
 
@@ -13,9 +13,9 @@ ht-degree: 76%
 
 >[!IMPORTANT]
 >
->Actuellement, seules les organisations qui ont acheté l’Adobe Healthcare Shield disposent des capacités d’hygiène des données dans Adobe Experience Platform.
+>Actuellement, les fonctionnalités d’hygiène des données d’Adobe Experience Platform sont uniquement disponibles pour les organisations qui ont acheté Adobe Healthcare Shield.
 
-Le [[!UICONTROL Hygiène des données] workspace](./overview.md) dans l’interface utilisateur de Adobe Experience Platform vous permet de planifier des expirations pour les jeux de données. Lorsqu’un jeu de données atteint sa date d’expiration, le lac de données, le service d’identités et le profil client en temps réel lancent des processus distincts pour supprimer le contenu du jeu de données de leurs services respectifs. Une fois les données supprimées des trois services, l’expiration est marquée comme étant terminée.
+L’espace de travail [[!UICONTROL Hygiène des données]](./overview.md) dans l’interface utilisateur d’Adobe Experience Platform vous permet de planifier l’expiration des jeux de données. Lorsqu’un jeu de données atteint sa date d’expiration, le lac de données, le service d’identités et le profil client en temps réel lancent des processus distincts pour supprimer le contenu du jeu de données de leurs services respectifs. Une fois les données supprimées des trois services, l’expiration est marquée comme étant terminée.
 
 >[!WARNING]
 >
@@ -29,13 +29,13 @@ Pour créer une requête, sélectionnez **[!UICONTROL Créer une requête]** dan
 
 ![Image illustrant le bouton [!UICONTROL Créer une requête] sélectionné](../images/ui/ttl/create-request-button.png).
 
-La boîte de dialogue de création de requête s’affiche. Sous , **[!UICONTROL Action requise]** , sélectionnez **[!UICONTROL Supprimer un jeu de données]** pour mettre à jour les commandes disponibles pour la planification de l’expiration du jeu de données.
+La boîte de dialogue de création de requête s’affiche. Dans la section **[!UICONTROL Action demandée]**, sélectionnez **[!UICONTROL Supprimer le jeu de données]** pour mettre à jour les commandes disponibles pour la planification de l’expiration des jeux de données.
 
 ![Image illustrant le bouton [!UICONTROL Créer une requête] sélectionné](../images/ui/ttl/dataset-selected.png)
 
 ### Sélectionner une date et un jeu de données
 
-La boîte de dialogue de création de requête s’affiche. Sous , **[!UICONTROL Action requise]** , sélectionnez une date à laquelle le jeu de données doit être supprimé. Vous pouvez saisir la date manuellement (au format `mm/dd/yyyy`) ou sélectionner l’icône de calendrier (![image de l’icône de calendrier](../images/ui/ttl/calendar-icon.png)) pour sélectionner la date dans une boîte de dialogue.
+La boîte de dialogue de création de requête s’affiche. Dans la section **[!UICONTROL Action demandée]**, sélectionnez une date à laquelle vous souhaitez que le jeu de données soit supprimé. Vous pouvez saisir la date manuellement (au format `mm/dd/yyyy`) ou sélectionner l’icône de calendrier (![image de l’icône de calendrier](../images/ui/ttl/calendar-icon.png)) pour sélectionner la date dans une boîte de dialogue.
 
 ![Image illustrant la définition d’une date d’expiration pour un jeu de données](../images/ui/ttl/select-date.png)
 
@@ -49,7 +49,7 @@ Ensuite, sous **[!UICONTROL Détails du jeu de données]**, sélectionnez l’ic
 
 ### Envoyer la requête
 
-Le [!UICONTROL Détails du jeu de données] est renseignée afin d’inclure l’identité et le schéma Principaux du jeu de données sélectionné. Sous **[!UICONTROL Paramètres de requête]**, saisissez un nom et une description facultative pour la requête, suivie de **[!UICONTROL Envoyer]**.
+La section [!UICONTROL Détails du jeu de données] est renseignée afin d’inclure l’identité principale et le schéma du jeu de données sélectionné. Dans la section **[!UICONTROL Paramètres de la requête]**, saisissez un nom et une description facultative pour la requête, suivis d’**[!UICONTROL Envoyer]**.
 
 ![Image illustrant le bouton [!UICONTROL Envoyer] sélectionné](../images/ui/ttl/submit.png)
 
@@ -59,7 +59,7 @@ Une fois la requête soumise, un ordre de travail est créé et s’affiche dans
 
 >[!NOTE]
 >
->Consultez la section de présentation sur [calendrier et transparence](../home.md#dataset-expiration-transparency) pour plus d’informations sur le traitement des expirations de jeux de données une fois qu’elles sont exécutées.
+>Consultez la section de présentation sur [la chronologie et la transparence](../home.md#dataset-expiration-transparency) pour plus d’informations sur le traitement des expirations des jeux de données une fois qu’elles sont exécutées.
 
 ## Modifier ou annuler l’expiration d’un jeu de données
 
@@ -69,6 +69,6 @@ Dans la page des détails de l’expiration du jeu de données, le rail de droit
 
 ## Étapes suivantes
 
-Ce document explique comment planifier des expirations de jeux de données dans l’interface utilisateur d’Experience Platform. Pour plus d’informations sur l’exécution d’autres tâches de nettoyage de données dans l’interface utilisateur, consultez la [Présentation de l’interface utilisateur de nettoyage de données](./overview.md).
+Ce document explique comment planifier des expirations de jeux de données dans l’interface utilisateur d’Experience Platform. Pour plus d’informations sur l’exécution d’autres tâches d’hygiène de données dans l’interface utilisateur, consultez la [Présentation de l’interface utilisateur de l’hygiène de données](./overview.md).
 
 Pour découvrir comment planifier des expirations de jeux de données à l’aide de l’API Data Hygiene, consultez le [guide de point d’entrée d’expiration de jeu de données](../api/dataset-expiration.md).
