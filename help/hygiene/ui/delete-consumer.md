@@ -3,9 +3,9 @@ title: Supprimer des enregistrements de clients
 description: Découvrez comment supprimer des enregistrements de clients dans l’interface utilisateur d’Adobe Experience Platform.
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
 source-git-commit: 83149c4e6e8ea483133da4766c37886b8ebd7316
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1133'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 93%
 
 >[!IMPORTANT]
 >
->Actuellement, seules les organisations qui ont acheté l’Adobe Healthcare Shield disposent des capacités d’hygiène des données dans Adobe Experience Platform.
+>Actuellement, les fonctionnalités d’hygiène des données d’Adobe Experience Platform sont uniquement disponibles pour les organisations qui ont acheté Adobe Healthcare Shield.
 
 L’espace de travail [[!UICONTROL Nettoyage de données]](./overview.md) dans l’interface utilisateur d’Adobe Experience Platform, vous permet de supprimer les enregistrements des clients qui utilisent le service d’identités et le profil client en temps réel.
 
@@ -35,7 +35,7 @@ Pour lancer le processus, sélectionnez **[!UICONTROL Créer une requête]** dan
 
 ![Image illustrant le bouton [!UICONTROL Créer une requête] sélectionné](../images/ui/delete-consumer/create-request-button.png)
 
-La boîte de dialogue de création de requête s’affiche. Par défaut, la variable **[!UICONTROL Consommateur]** est sélectionnée sous la propriété **[!UICONTROL Action requise]** . Conservez la sélection de cette option.
+La boîte de dialogue de création de requête s’affiche. Par défaut, l’option **[!UICONTROL Consommateur]** est sélectionnée sous la section **[!UICONTROL Action demandée]**. Conservez la sélection de cette option.
 
 ![Image illustrant l’option Client sélectionnée dans la boîte de dialogue de création](../images/ui/delete-consumer/consumer-action.png)
 
@@ -60,12 +60,12 @@ Si vous souhaitez supprimer des données client de tous les jeux de données, s�
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_primaryidentity"
 >title="Identité principale"
->abstract="Une identité principale est un attribut qui lie un enregistrement au profil d’un client dans Experience Platform. Le champ d’identité principale d’un jeu de données est défini par le schéma sur lequel le jeu de données est basé. Dans cette colonne, vous devez indiquer le type (ou l’espace de noms) de l’identité principale du client, par exemple `email` pour les adresses e-mail et `ecid` pour les identifiants Experience Cloud. Pour en savoir plus, consultez le guide de l’interface utilisateur de nettoyage de données."
+>abstract="Une identité principale est un attribut qui lie un enregistrement au profil d’un client dans Experience Platform. Le champ d’identité principale d’un jeu de données est défini par le schéma sur lequel le jeu de données est basé. Dans cette colonne, vous devez indiquer le type (ou l’espace de noms) de l’identité principale du client, par exemple `email` pour les adresses e-mail et `ecid` pour les identifiants Experience Cloud. Pour en savoir plus, consultez le guide de l’interface utilisateur de l’hygiène de données."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_identityvalue"
 >title="Valeur de l’identité"
->abstract="Dans cette colonne, vous devez indiquer la valeur de l’identité principale du client, qui doit correspondre au type d’identité fourni dans la colonne de gauche. Si le type d’identité principale est `email`, la valeur doit correspondre à l’adresse électronique du client. Pour en savoir plus, consultez le guide de l’interface utilisateur de nettoyage de données."
+>abstract="Dans cette colonne, vous devez indiquer la valeur de l’identité principale du client, qui doit correspondre au type d’identité fourni dans la colonne de gauche. Si le type d’identité principale est `email`, la valeur doit correspondre à l’adresse électronique du client. Pour en savoir plus, consultez le guide de l’interface utilisateur de l’hygiène de données."
 
 Lors de la suppression des données client, vous devez fournir des informations d’identité afin que le système puisse identifier les enregistrements à supprimer. Pour les jeux de données de Platform, les enregistrements sont supprimés en fonction du champ **Identité principale** défini par le schéma du jeu de données.
 
@@ -140,7 +140,7 @@ Une fois la requête soumise, un ordre de travail est créé et s’affiche dans
 
 >[!NOTE]
 >
->Consultez la section de présentation sur [calendrier et transparence](../home.md#consumer-delete-transparency) pour plus d’informations sur le traitement des suppressions par les consommateurs une fois qu’elles sont exécutées.
+>Consultez la section de présentation sur [la chronologie et la transparence](../home.md#consumer-delete-transparency) pour plus d’informations sur le traitement des suppressions des consommateurs une fois qu’elles sont exécutées.
 
 ## Étapes suivantes
 
