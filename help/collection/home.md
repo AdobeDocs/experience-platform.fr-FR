@@ -5,10 +5,10 @@ title: Présentation de la collecte de données
 topic-legacy: overview
 description: Découvrez les différentes technologies impliquées dans la collecte de données relatives aux expériences client dans Adobe Experience Platform.
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 96ee731ce8de708b1671c40f1bbef9902495f3b4
 workflow-type: tm+mt
-source-wordcount: '469'
-ht-degree: 80%
+source-wordcount: '513'
+ht-degree: 73%
 
 ---
 
@@ -47,6 +47,8 @@ La compression de ces bibliothèques accélère la collecte de données et conso
 ## Platform Edge Network et flux de données {#edge}
 
 Platform Edge Network est un réseau de serveurs distribué dans le monde entier. Rapide et fiable, il est capable de recevoir et de traiter des données à très grande échelle. Grâce aux balises, vous pouvez mettre en place des [flux de données](../edge/datastreams/overview.md) pour des produits comme Adobe Target, Adobe Audience Manager et Adobe Analytics. Ces configurations vous permettent d‘activer les produits en question côté serveur sans modifier le code côté client.
+
+En outre, les flux de données sont intégrés à plusieurs fonctionnalités de Platform qui permettent de s’assurer que toutes les données sensibles que vous envoyez sont traitées de manière appropriée en ce qui concerne les politiques organisationnelles et les réglementations juridiques. Voir la section sur [gestion des données sensibles](../edge/datastreams/overview.md#sensitive) pour plus d’informations, voir la documentation sur les flux de données .
 
 ![Solutions de flux de données et d’Adobe](./images/home/adobe-solutions.png)
 
