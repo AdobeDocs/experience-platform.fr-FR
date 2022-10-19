@@ -6,9 +6,9 @@ description: Cet article illustre le processus de bout en bout d’activation de
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 1a09f5ff-0b04-413d-a9f6-57911a92b4e4
-source-git-commit: 9e191d52d8385d716ed312725f72bd85c1e4b72d
+source-git-commit: 8d67d89db6a8c179935b4fe709f91279860d464e
 workflow-type: tm+mt
-source-wordcount: '1488'
+source-wordcount: '1531'
 ht-degree: 14%
 
 ---
@@ -124,6 +124,10 @@ L’ID de la tâche d’exportation de segments se trouve dans la variable `id` 
 ## Étape 5 : Exécution de la tâche d’activation ad hoc {#activation-job}
 
 Adobe Experience Platform exécute des tâches de segmentation planifiées toutes les 24 heures. L’API d’activation ad hoc s’exécute en fonction des derniers résultats de segmentation.
+
+>[!IMPORTANT]
+>
+>Notez la contrainte ponctuelle suivante : Avant d’exécuter une tâche d’activation ad hoc, assurez-vous qu’au moins 20 minutes se sont écoulées entre le moment où le segment a été activé pour la première fois, selon le planning défini dans [Étape 3 - Création du flux d’activation dans l’interface utilisateur de Platform](#activation-flow).
 
 Avant d’exécuter une tâche d’activation ad hoc, assurez-vous que la tâche d’exportation de segments planifiée pour vos segments est terminée. Voir [surveillance des flux de données de destination](../../dataflows/ui/monitor-destinations.md) pour plus d’informations sur la manière de surveiller l’état des flux d’activation. Par exemple, si votre flux de données d’activation affiche une **[!UICONTROL Traitement]** , attendez qu’il se termine avant d’exécuter la tâche d’activation ad hoc.
 
