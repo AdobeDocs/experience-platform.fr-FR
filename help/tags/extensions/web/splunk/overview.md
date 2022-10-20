@@ -1,7 +1,7 @@
 ---
 title: Présentation De L’Extension Splunk
 description: Découvrez l’extension Splunk pour le transfert d’événement dans Adobe Experience Platform.
-source-git-commit: e6f0bdcdb11630730834e353064abb960d3d0ea1
+source-git-commit: cad6d78868ac89be325faa58f567b89869bfff02
 workflow-type: tm+mt
 source-wordcount: '1054'
 ht-degree: 2%
@@ -79,7 +79,7 @@ L’étape suivante consiste à mapper les propriétés d’événement Splunk a
 | [!UICONTROL Source] | La valeur source à affecter aux données d’événement. Par exemple, si vous envoyez des données à partir d’une application que vous développez, définissez cette clé sur le nom de l’application. |
 | [!UICONTROL Index] | Nom de l’index des données d’événement. L’index que vous spécifiez ici doit se trouver dans la liste des index autorisés si le paramètre index est défini pour le jeton. |
 | [!UICONTROL Heure] | Heure de l’événement. Le format d’heure par défaut est UNIX (au format `<sec>.<ms>`) et dépend du fuseau horaire local. Par exemple : `1433188255.500` indique 1433188255 secondes et 500 millisecondes après l’époque, ou lundi 1er juin 2015 à 7:50:17 h GMT. |
-| [!UICONTROL Champs] | Spécifiez un objet JSON brut ou un ensemble de paires clé-valeur contenant des champs personnalisés explicites à définir au moment de l’index.  Le `fields` ne s’applique pas aux données brutes.<br><br>Requêtes contenant les `fields` doit être envoyée à la propriété `/collector/event` point de terminaison , sinon ils ne seront pas indexés. Pour plus d’informations, voir la documentation Splunk sur [extraction de champs indexés](http://docs.splunk.com/Documentation/Splunk/8.2.5/Data/IFXandHEC). |
+| [!UICONTROL Champs] | Spécifiez un objet JSON brut ou un ensemble de paires clé-valeur contenant des champs personnalisés explicites à définir au moment de l’index.  Le `fields` ne s’applique pas aux données brutes.<br><br>Requêtes contenant les `fields` doit être envoyée à la propriété `/collector/event` point de terminaison , sinon ils ne seront pas indexés. Pour plus d’informations, voir la documentation Splunk sur [extraction de champs indexés](https://docs.splunk.com/Documentation/Splunk/8.2.5/Data/IFXandHEC). |
 
 ### Validation des données dans Splunk {#validate}
 
