@@ -5,9 +5,9 @@ title: Définition des champs d’énumération et des valeurs proposées dans l
 description: Découvrez comment définir des énumérations et des valeurs suggérées pour les champs de chaîne dans l’interface utilisateur de l’Experience Platform.
 topic-legacy: user guide
 exl-id: 67ec5382-31de-4f8d-9618-e8919bb5a472
-source-git-commit: 3b71f6b07345d7b1e08fa5a8b93abc3519606015
+source-git-commit: 1c1797a01a0a4e2cd355399d3f913cb81adf9006
 workflow-type: tm+mt
-source-wordcount: '1207'
+source-wordcount: '1217'
 ht-degree: 0%
 
 ---
@@ -21,9 +21,9 @@ ht-degree: 0%
 
 Dans le modèle de données d’expérience (XDM), un champ de chaîne peut se voir attribuer un jeu prédéfini de valeurs acceptées ou suggérées afin de mieux contrôler les valeurs ingérées dans ce champ ou leur comportement dans la segmentation.
 
-Un **enum** limite à un jeu prédéfini les valeurs pouvant être ingérées pour un champ de chaîne. Si vous tentez d’ingérer des données dans un champ d’énumération et que la valeur ne correspond à aucune de celles définies dans sa configuration, l’ingestion sera refusée.
+**[!UICONTROL Enumérations]** contraindre à un jeu prédéfini les valeurs pouvant être ingérées pour un champ de chaîne. Si vous tentez d’ingérer des données dans un champ d’énumération et que la valeur ne correspond à aucune de celles définies dans sa configuration, l’ingestion sera refusée.
 
-Contrairement aux énumérations, l’ajout de **valeurs suggérées** à un champ de chaîne ne limite pas les valeurs qu’il peut ingérer. Au lieu de cela, les valeurs suggérées affectent les valeurs prédéfinies disponibles dans la variable [Interface utilisateur de segmentation](../../../segmentation/ui/overview.md) lors de l’inclusion du champ de chaîne en tant qu’attribut.
+Contrairement aux énumérations, la variable **[!UICONTROL Valeurs proposées]** permet de représenter un ensemble de valeurs recommandées pour un champ de chaîne qui ne limite pas les valeurs qu’il peut ingérer. Au lieu de cela, les valeurs suggérées affectent les valeurs prédéfinies disponibles dans la variable [Interface utilisateur de segmentation](../../../segmentation/ui/overview.md) lors de l’inclusion du champ de chaîne en tant qu’attribut.
 
 When [définition d’un nouveau champ](./overview.md#define) dans l’interface utilisateur de Adobe Experience Platform et définissez le type sur [!UICONTROL Chaîne], vous avez la possibilité de définir une [enum](#enum) ou [valeurs suggérées](#suggested-values) pour ce champ.
 
