@@ -5,10 +5,10 @@ title: Évaluation des événements en temps quasi réel avec la segmentation pa
 topic-legacy: developer guide
 description: Ce document contient des exemples d’utilisation de la segmentation par flux avec l’API Adobe Experience Platform Segmentation Service.
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-source-git-commit: 654e141735b6882b4c0233b8e1c73d0838c8374e
+source-git-commit: 5a4a8a8b77d06890f212a457e599b66aa46d8b7e
 workflow-type: tm+mt
-source-wordcount: '1873'
-ht-degree: 34%
+source-wordcount: '1915'
+ht-degree: 33%
 
 ---
 
@@ -429,6 +429,8 @@ La segmentation par flux fonctionne sur toutes les données ingérées à l’ai
 ### Comment les segments sont-ils définis comme segmentation par lots ou par flux ?
 
 Un segment est défini comme une segmentation par lot ou par flux basée sur une combinaison de type de requête et de durée d’historique des événements. Vous trouverez une liste des segments qui seront évalués en tant que segment en continu dans la variable [section types de requête de segmentation par flux](#query-types).
+
+Notez que si un segment contient **both** an `inSegment` et une chaîne d’événement unique directe, elle ne peut pas être admissible pour la segmentation par flux. Si vous souhaitez que ce segment soit admissible pour la segmentation par flux, vous devez faire de la chaîne d’événement unique directe son propre segment.
 
 ### Pourquoi le nombre de segments &quot;total qualifié&quot; continue-t-il à augmenter alors que le nombre sous &quot;X derniers jours&quot; reste à zéro dans la section de détails du segment ?
 

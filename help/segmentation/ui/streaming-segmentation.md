@@ -5,9 +5,9 @@ title: Guide de l’interface utilisateur de la segmentation par flux
 topic-legacy: ui guide
 description: La segmentation par flux sur Adobe Experience Platform vous permet d’effectuer une segmentation en temps quasi réel tout en vous concentrant sur la richesse des données. Avec la segmentation par flux, la qualification de segment se produit désormais lorsque les données entrent dans Platform, ce qui évite d’avoir à planifier et à exécuter des tâches de segmentation. Grâce à cette fonctionnalité, la plupart des règles de segmentation peuvent désormais être évaluées au fur et à mesure que les données sont transmises à Platform, ce qui signifie que l’adhésion au segment sera conservée à jour sans exécuter les tâches de segmentation planifiées.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: 654e141735b6882b4c0233b8e1c73d0838c8374e
+source-git-commit: e6b5ea1878631fa88f907fd4aec64cf040e76e95
 workflow-type: tm+mt
-source-wordcount: '1273'
+source-wordcount: '1315'
 ht-degree: 0%
 
 ---
@@ -106,6 +106,8 @@ La segmentation par flux fonctionne sur toutes les données ingérées à l’ai
 ### Comment les segments sont-ils définis comme segmentation par lots ou par flux ?
 
 Un segment est défini comme une segmentation par lot ou par flux basée sur une combinaison de type de requête et de durée d’historique des événements. Vous trouverez une liste des segments qui seront évalués en tant que segment en continu dans la variable [section types de requête de segmentation par flux](#query-types).
+
+Notez que si un segment contient **both** an `inSegment` et une chaîne d’événement unique directe, elle ne peut pas être admissible pour la segmentation par flux. Si vous souhaitez que ce segment soit admissible pour la segmentation par flux, vous devez faire de la chaîne d’événement unique directe son propre segment.
 
 ### Pourquoi le nombre de segments &quot;total qualifié&quot; continue-t-il à augmenter alors que le nombre sous &quot;X derniers jours&quot; reste à zéro dans la section de détails du segment ?
 
