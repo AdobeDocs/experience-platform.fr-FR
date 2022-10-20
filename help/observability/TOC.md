@@ -1,12 +1,12 @@
 ---
 audience: user
 user-guide-title: Guide des Insights d’observabilité
-user-guide-description: Utilisez des mesures statistiques et des notifications d’événement pour surveiller les activités des Experience Platform.
+user-guide-description: Utilisez des mesures statistiques et des notifications d’événement pour surveiller les activités Experience Platform.
 feature: Observability
 source-git-commit: 5aa2be236d35f761a1e4d34fbe0bb28fd9087935
 workflow-type: tm+mt
 source-wordcount: '53'
-ht-degree: 79%
+ht-degree: 100%
 
 ---
 

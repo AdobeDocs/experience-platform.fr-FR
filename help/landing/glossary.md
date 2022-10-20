@@ -74,7 +74,7 @@ ht-degree: 12%
 
 **Identifiant de lot**: Un identifiant de lot est un identifiant généré par l’Adobe pour un lot de données.
 
-**Ingestion par lots**: L’ingestion par lots vous permet d’ingérer des données dans Experience Platform en tant que fichiers de lot. Les lots sont des unités de données composées d’un ou de plusieurs fichiers à ingérer en tant qu’unité unique.
+**Ingestion par lots**: L’ingestion par lots vous permet d’ingérer des données dans Experience Platform sous forme de fichiers de lot. Les lots sont des unités de données composées d’un ou de plusieurs fichiers à ingérer en tant qu’unité unique.
 
 **Segmentation par lots**: La segmentation par lots est une alternative à un processus continu de sélection de données et déplace toutes les données de profil à la fois via des définitions de segment pour produire les audiences correspondantes. Une fois créé, ce segment est enregistré et stocké afin de pouvoir être exporté en vue de son utilisation.
 

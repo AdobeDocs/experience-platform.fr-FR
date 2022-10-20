@@ -1,13 +1,13 @@
 ---
 audience: user
-user-guide-title: Aide de Adobe Experience Platform Debugger
-breadcrumb-title: Guide de Adobe Experience Platform Debugger
+user-guide-title: Aide Adobe Experience Platform Debugger
+breadcrumb-title: Guide d’Adobe Experience Platform Debugger
 user-guide-description: Parcourez vos pages web à la recherche de problèmes éventuels grâce à vos implémentations Experience Platform.
 feature: Debugger
 source-git-commit: df1a67e4b6f3d2eaeaba2b8d3c9b1588ee0b1461
 workflow-type: tm+mt
 source-wordcount: '58'
-ht-degree: 43%
+ht-degree: 60%
 
 ---
 

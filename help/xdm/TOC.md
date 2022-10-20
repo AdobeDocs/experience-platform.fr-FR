@@ -7,7 +7,7 @@ feature: Schemas
 source-git-commit: e476574e35ea18a50749009ffd1b4182941cc496
 workflow-type: tm+mt
 source-wordcount: '503'
-ht-degree: 85%
+ht-degree: 86%
 
 ---
 

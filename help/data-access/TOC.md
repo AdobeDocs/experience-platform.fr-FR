@@ -2,12 +2,12 @@
 audience: user
 user-guide-title: Adobe Experience Platform Data Access
 breadcrumb-title: Guide d’accès aux données
-user-guide-description: Recherchez les jeux de données ingérés et accédez-y dans Experience Platform.
+user-guide-description: Trouvez et accédez aux jeux de données ingérés dans Experience Platform.
 feature: Data Access
 source-git-commit: 2790ae0b0bbba454ded1a6a8f73e05500f531cda
 workflow-type: tm+mt
 source-wordcount: '38'
-ht-degree: 78%
+ht-degree: 100%
 
 ---
 

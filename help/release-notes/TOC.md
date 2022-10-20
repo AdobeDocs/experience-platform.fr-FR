@@ -2,11 +2,11 @@
 audience: user
 user-guide-title: Notes de mise à jour d’Adobe Experience Platform
 breadcrumb-title: Notes de mise à jour de Platform
-user-guide-description: Recherchez des notes de mise à jour mensuelles pour Adobe Experience Platform.
+user-guide-description: Trouvez les notes de mise à jour mensuelles pour Adobe Experience Platform.
 source-git-commit: ba0399b0d171c2e604b4de3b22f8568b5431bcf4
 workflow-type: tm+mt
 source-wordcount: '67'
-ht-degree: 88%
+ht-degree: 100%
 
 ---
 

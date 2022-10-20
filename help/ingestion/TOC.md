@@ -2,12 +2,12 @@
 audience: user
 user-guide-title: Aide d’Adobe Experience Platform Data Ingestion
 breadcrumb-title: Guide d’ingestion de données
-user-guide-description: Insérez vos données dans Experience Platform par lots ou par ingestion par flux.
+user-guide-description: Insérez vos données dans Experience Platform par ingestion en lot ou en flux continu.
 feature: Data Ingestion
 source-git-commit: ba0399b0d171c2e604b4de3b22f8568b5431bcf4
 workflow-type: tm+mt
 source-wordcount: '129'
-ht-degree: 88%
+ht-degree: 96%
 
 ---
 

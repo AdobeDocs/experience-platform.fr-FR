@@ -7,14 +7,14 @@ feature: Data Hygiene
 source-git-commit: 16eecb22a1bec89c7dbac2fcee566a2226cf897f
 workflow-type: tm+mt
 source-wordcount: '48'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
 
 # Hygiène des données {#hygiene}
 
-* [Présentation du nettoyage de données](./home.md)
+* [Présentation de l’hygiène de données](./home.md)
 * Interface utilisateur de nettoyage de données {#ui}
    * [Présentation](./ui/overview.md)
    * [Parcourir les ordres de travail existants](./ui/browse.md)
@@ -23,5 +23,5 @@ ht-degree: 95%
 * API Data Hygiene {#api}
    * [Présentation](./api/overview.md)
    * [Expirations de jeux de données](./api/dataset-expiration.md)
-   * [Suppressions des consommateurs](./api/workorder.md)
+   * [Suppressions de consommateurs](./api/workorder.md)
    * [Quota](./api/quota.md)

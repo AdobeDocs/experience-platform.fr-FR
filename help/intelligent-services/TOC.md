@@ -3,11 +3,11 @@ solution: Experience Platform
 audience: user
 user-guide-title: Aide d’Intelligent Services
 breadcrumb-title: Guide des services intelligents
-user-guide-description: Utilisez les services intelligents d’IA pour générer des scores, découvrir des informations et créer des segments à partir des données de vos événements marketing.
+user-guide-description: Utilisez les services intelligents d’IA pour générer des scores, découvrir des insights et créer des segments à partir des données de vos événements marketing.
 source-git-commit: ba0399b0d171c2e604b4de3b22f8568b5431bcf4
 workflow-type: tm+mt
 source-wordcount: '123'
-ht-degree: 86%
+ht-degree: 100%
 
 ---
 

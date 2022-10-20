@@ -2,12 +2,12 @@
 audience: user
 user-guide-title: Aide d’Adobe Experience Platform Query Service
 breadcrumb-title: Guide de Query Service
-user-guide-description: Utilisez SQL standard pour interroger les données du lac de données dans Experience Platform.
+user-guide-description: Utilisez le langage SQL standard pour interroger les données du lac de données dans Experience Platform.
 feature: Queries
 source-git-commit: 5aa2be236d35f761a1e4d34fbe0bb28fd9087935
 workflow-type: tm+mt
 source-wordcount: '217'
-ht-degree: 62%
+ht-degree: 69%
 
 ---
 
@@ -61,7 +61,7 @@ ht-degree: 62%
    - [Fonctions Spark SQL](sql/spark-sql-functions.md)
    - [Commandes de métadonnées](sql/metadata.md)
    - [Instructions préparées](sql/prepared-statements.md)
-   - [Exemples de jeux de données](sql/dataset-samples.md)
+   - [Échantillons de jeux de données](sql/dataset-samples.md)
 - Connexion des clients à Query Service {#clients}
    - [Présentation de la connexion des clients](clients/overview.md)
    - [Modes SSL](./clients/ssl-modes.md)
