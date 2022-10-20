@@ -6,10 +6,10 @@ product: experience platform
 type: Documentation
 description: Adobe Experience Platform utilise un modèle de données hybride fortement dénormalisé qui diffère du modèle de données relationnelles traditionnel. Ce document fournit des limites d’utilisation et de débit par défaut pour vous aider à modéliser vos données Profile afin d’optimiser les performances du système.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: b834e278f085adc5a4a90876727b6a0787b181e1
+source-git-commit: d6100f58b8ffd6251c3a58576a41dbfb75c3bb0c
 workflow-type: tm+mt
-source-wordcount: '1989'
-ht-degree: 48%
+source-wordcount: '1902'
+ht-degree: 50%
 
 ---
 
@@ -144,6 +144,4 @@ Lorsque vous rassemblez des données provenant de plusieurs sources, les straté
 
 ### Jeux de données de suite de rapports Adobe Analytics dans Platform {#aa-datasets}
 
-Un (1) jeu de données de suite de rapports Adobe Analytics maximum doit être activé pour Profile. Il s’agit d’une limite soft, ce qui signifie que vous pouvez activer plusieurs jeux de données Analytics pour Profile, mais elle n’est pas recommandée, car elle peut avoir des conséquences inattendues sur vos données. Cela est dû aux différences entre les schémas du modèle de données d’expérience (XDM), qui fournissent la structure sémantique des données dans Experience Platform et permettent une cohérence dans l’interprétation des données, ainsi que la nature personnalisable des eVars et des variables de conversion dans Adobe Analytics.
-
-Par exemple, dans Adobe Analytics, une seule organisation peut avoir plusieurs suites de rapports. Si la suite de rapports A désigne l’eVar 4 comme &quot;terme de recherche interne&quot; et que la suite de rapports B désigne l’eVar 4 comme &quot;domaine référent&quot;, ces valeurs seront toutes deux ingérées dans le même champ de Profile, ce qui entraînera une confusion et dégradera la qualité des données.
+Plusieurs suites de rapports peuvent être activées pour Profile tant que tous les conflits de données sont résolus. Vous pouvez utiliser la fonctionnalité Préparation de données pour résoudre les conflits de données entre les eVars, les listes et les props. Pour en savoir plus sur l’utilisation de la fonctionnalité de préparation des données, veuillez lire le [Guide de l’interface utilisateur du connecteur Adobe Analytics](../sources/tutorials/ui/create/adobe-applications/analytics.md).
