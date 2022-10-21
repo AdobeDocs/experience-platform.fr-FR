@@ -4,7 +4,7 @@ user-guide-title: Aide sur les tableaux de bord dʼAdobe Experience Platform
 breadcrumb-title: Guide des tableaux de bord
 user-guide-description: Découvrez comment visualiser les données dans Experience Platform via des tableaux de bord personnalisables.
 feature: Dashboards
-source-git-commit: 5aa2be236d35f761a1e4d34fbe0bb28fd9087935
+source-git-commit: 16ae8a16d8c4f7ec68a054e8d15a518f453a05c7
 workflow-type: tm+mt
 source-wordcount: '80'
 ht-degree: 87%
@@ -35,5 +35,5 @@ ht-degree: 87%
 * Intégrations d’applications {#integrations}
    * [Power BI](integrations/power-bi.md)
 * [Jeux de données de tableau de bord des requêtes](query.md)
-* [Modèle de données de connaissance de la plateforme de données clients (CDP)](cdp-insights-data-model.md)
+* [Modèle de données Real-time Customer Data Platform Insights](cdp-insights-data-model.md)
 * [Notes de mise à jour de Platform](https://docs.adobe.com/content/help/fr-FR/experience-platform/release-notes/latest.html)

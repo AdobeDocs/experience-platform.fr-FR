@@ -1,29 +1,29 @@
 ---
-title: Modèle de données de connaissance de la plateforme de données clients (CDP)
-description: Découvrez comment utiliser les requêtes SQL des modèles de données de statistiques CDP pour personnaliser vos propres rapports CDP pour vos cas d’utilisation de marketing et de KPI.
+title: Modèle de données Real-time Customer Data Platform Insights
+description: Découvrez comment utiliser les requêtes SQL avec les modèles de données Real-time Customer Data Platform Insights pour personnaliser vos propres rapports Real-Time CDP pour vos cas d’utilisation de marketing et d’indicateurs de performance clés.
 exl-id: 61bc7f23-9f79-4c75-a515-85dd9dda2d02
-source-git-commit: 2c96bfd2c1b541d30a72fcf2bac414ee06607456
+source-git-commit: 16ae8a16d8c4f7ec68a054e8d15a518f453a05c7
 workflow-type: tm+mt
-source-wordcount: '1066'
-ht-degree: 0%
+source-wordcount: '1105'
+ht-degree: 1%
 
 ---
 
-# Modèle de données de connaissance de la plateforme de données clients (CDP)
+# Modèle de données Real-time Customer Data Platform Insights
 
-La fonction Modèle de données de statistiques de la plateforme de données clients (CDP) expose les modèles de données et SQL qui alimentent les informations pour divers widgets de profil, de destination et de segmentation. Vous pouvez personnaliser ces modèles de requête SQL pour créer des rapports CDP pour vos cas d’utilisation d’indicateurs de performance clés (IPC) et marketing. Ces informations peuvent ensuite être utilisées comme widgets personnalisés pour vos tableaux de bord définis par l’utilisateur.
+La fonction Modèle de données Real-time Customer Data Platform Insights présente les modèles de données et SQL qui alimentent les insights pour divers widgets de profil, de destination et de segmentation. Vous pouvez personnaliser ces modèles de requête SQL afin de créer des rapports Real-Time CDP pour vos cas d’utilisation d’indicateurs de performance clés (IPC) et marketing. Ces insights peuvent ensuite être utilisées comme widgets personnalisés pour vos tableaux de bord définis par l’utilisateur. Pour en savoir plus, consultez la documentation sur les informations sur les rapports de magasin accélérées de requête . [comment créer un modèle de données d’informations sur les rapports via Query Service pour l’utiliser avec des données de magasin accélérées et des tableaux de bord définis par l’utilisateur](../query-service/query-accelerated-store/reporting-insights-data-model.md).
 
 ## Conditions préalables
 
 Ce guide nécessite une compréhension pratique de la fonction [fonction de tableaux de bord définis par l’utilisateur](./user-defined-dashboards.md). Veuillez lire la documentation avant de poursuivre avec ce guide.
 
-## Rapports d’informations sur la plateforme de données clients et cas d’utilisation
+## Rapports d’informations sur Real-Time CDP et cas d’utilisation
 
-Les rapports CDP fournissent des informations sur vos données de profil et sur leurs relations avec les segments et les destinations. Divers modèles de schémas étoiles ont été développés pour répondre à divers cas d’utilisation marketing courants et chaque modèle de données peut prendre en charge plusieurs cas d’utilisation.
+Les rapports Real-Time CDP fournissent des informations sur vos données de profil et sur leurs relations avec les segments et les destinations. Divers modèles de schémas étoiles ont été développés pour répondre à divers cas d’utilisation marketing courants et chaque modèle de données peut prendre en charge plusieurs cas d’utilisation.
 
 >[!IMPORTANT]
 >
->Les données utilisées pour les rapports CDP sont précises pour une stratégie de fusion choisie et issues de l’instantané quotidien le plus récent.
+>Les données utilisées pour les rapports Real-Time CDP sont exactes pour une stratégie de fusion choisie et pour l’instantané quotidien le plus récent.
 
 ### Modèle de profil {#profile-model}
 
