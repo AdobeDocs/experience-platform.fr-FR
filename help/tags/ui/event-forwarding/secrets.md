@@ -2,10 +2,10 @@
 title: Configuration de secrets dans le transfert d’événements
 description: Découvrez comment configurer des secrets dans l’interface utilisateur pour s’authentifier aux points de terminaison utilisés dans les propriétés de transfert d’événement.
 exl-id: eefd87d7-457f-422a-b159-5b428da54189
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 9f38925645ec4311f4a809a913fe51792e889105
 workflow-type: tm+mt
-source-wordcount: '1633'
-ht-degree: 78%
+source-wordcount: '1715'
+ht-degree: 74%
 
 ---
 
@@ -127,6 +127,12 @@ Une fenêtre contextuelle s’affiche pour vous informer que le secret doit êtr
 ![Fenêtre contextuelle d’autorisation Google](../../images/ui/event-forwarding/secrets/google-authorization.png)
 
 Une boîte de dialogue s’affiche, vous permettant de saisir les informations d’identification de votre compte Google. Suivez les invites pour accorder l’accès au transfert d’événement à vos données sous la portée sélectionnée. Une fois le processus d’autorisation terminé, le secret est créé.
+
+>[!IMPORTANT]
+>
+>Si votre entreprise dispose d’une stratégie de réauthentification définie pour les applications Google Cloud, les secrets créés ne seront pas actualisés correctement une fois l’authentification expirée (entre 1 et 24 heures selon la configuration de la stratégie).
+>
+>Pour résoudre ce problème, connectez-vous à la console d’administration de Google et accédez au **[!DNL App access control]** afin que vous puissiez marquer l’application de transfert d’événement (transfert d’événement Adobe Real-Time CDP) comme [!DNL Trusted]. Reportez-vous à la documentation Google sur [définition des durées de session pour les services cloud Google](https://support.google.com/a/answer/9368756) pour plus d’informations.
 
 ## Modifier un secret
 
