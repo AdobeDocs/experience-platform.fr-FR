@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: Découvrez comment créer une connexion source Adobe Analytics dans l’interface utilisateur pour importer des données client dans Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: e67b3a6f9f57a3971a5bfa755db3b1043bebc96b
+source-git-commit: 28e7f10529daa8df56534e6ada129a52d3f7604d
 workflow-type: tm+mt
-source-wordcount: '2301'
-ht-degree: 62%
+source-wordcount: '2345'
+ht-degree: 61%
 
 ---
 
@@ -45,6 +45,10 @@ Dans la catégorie des **[!UICONTROL applications Adobe]**, sélectionnez **[!UI
 ![catalog](../../../../images/tutorials/create/analytics/catalog.png)
 
 ### Sélectionner les données
+
+>[!IMPORTANT]
+>
+>Les suites de rapports répertoriées à l’écran peuvent provenir de différentes régions. Il vous incombe de comprendre les limites et les obligations de vos données, ainsi que la manière dont vous utilisez ces données dans Adobe Experience Platform entre les régions. Assurez-vous que votre entreprise l’autorise.
 
 Le **[!UICONTROL Ajout de données à la source Analytics]** vous fournit une liste de [!DNL Analytics] données de la suite de rapports avec laquelle créer une connexion source.
 
