@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: November 18, 2019
 author: crhoades, ens28527
 exl-id: 2c417c56-cc61-4788-b248-d98ea6cf89f0
-source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '1887'
-ht-degree: 75%
+ht-degree: 67%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 75%
 **Date de publication : 18 novembre 2019**
 
 Nouvelles fonctionnalités d’Adobe Experience Platform :
-* [[!DNL Real-time Customer Data Platform]](#rtcdp)
+* [[!DNL Real-Time Customer Data Platform]](#rtcdp)
 * [[!DNL Destinations]](#destinations)
 * [[!DNL Sources]](#sources)
 
@@ -27,15 +27,15 @@ Mises à jour des fonctionnalités existantes :
 * [[!DNL Real-time Customer Profile]](#profile)
 * [[!DNL Segmentation Service]](#segmentation)
 
-## [!DNL Real-time Customer Data Platform] {#rtcdp}
+## [!DNL Real-Time Customer Data Platform] {#rtcdp}
 
-Basée sur  Experience Platform, la plateforme de données clients en temps réel d’Adobe aide les entreprises à rassembler des données connues et inconnues pour activer les profils des clients avec une prise de décision intelligente tout au long du parcours client. La plateforme de données clients en temps réel associe plusieurs sources de données d’entreprise pour créer des profils unifiés en temps réel qui peuvent être utilisés pour offrir des expériences client personnalisées et individuelles sur tous les canaux et périphériques.
+Basé sur Adobe Experience Platform, Real-time Customer Data Platform (Real-Time CDP) aide les entreprises à rassembler des données connues et inconnues pour activer les profils clients avec une prise de décision intelligente tout au long du parcours client. Real-Time CDP combine plusieurs sources de données d’entreprise pour créer des profils unifiés en temps réel qui peuvent être utilisés pour offrir des expériences client personnalisées et individuelles sur tous les canaux et appareils.
 
-[!DNL Real-time Customer Data Platform] comprend des outils de gouvernance des données, de gestion des identités, de segmentation avancée et de science des données, de sorte que vous puissiez créer des profils et définir des audiences, et obtenir des informations riches tout en étant en mesure d’appliquer des politiques de gouvernance des données strictes.
+[!DNL Real-Time Customer Data Platform] comprend des outils de gouvernance des données, de gestion des identités, de segmentation avancée et de science des données, de sorte que vous puissiez créer des profils et définir des audiences, et obtenir des informations riches tout en étant en mesure d’appliquer des politiques de gouvernance des données strictes.
 
 Adobe se connecte à un vaste écosystème de partenaires, sans oublier les intégrations natives à Adobe Experience Cloud. Vous pouvez ainsi activer ces audiences en toute simplicité et proposer de superbes expériences client sur tous les canaux, de la personnalisation sur site ou in-app aux e-mails, médias achetés, centres d’appel, appareils connectés, etc.
 
-La plateforme CDP en temps réel vous permet :
+Avec Real-Time CDP, vous pouvez :
 
 * d’obtenir un aperçu unique de votre client grâce à la collecte en flux continu des données client de l’ensemble de l’entreprise ;
 * de gérer de manière responsable les profils avec des contrôles de confidentialité et de gouvernance fiables pour les identifiants connus et inconnus ;
@@ -48,27 +48,27 @@ Pour plus d’informations, voir [Documentation Real-time Customer Data Platform
 
 | Fonctionnalité | Description |
 |---|---|
-| Destinations  | Intégrations préconfigurées avec des plateformes de destination prises en charge par Adobe [!DNL Real-time Customer Data Platform] qui activent les données vers ces partenaires de manière transparente. Pour plus d’informations, consultez [Destinations](#destinations) ci-dessous. |
-| Tableau de bord de mesures de la page d’accueil | La page d’accueil de Real-time Customer Data Platform (CDP en temps réel) comprend un tableau de bord de mesures qui affiche des informations sur les profils et les segments. La page d’accueil contient également des liens vers des documents d’apprentissage. Consultez la section sur les [mesures de la plateforme de données clients en temps réel](#real-time-customer-data-platform-metrics) ci-dessous. |
+| Destinations  | Intégrations préconfigurées avec des plateformes de destination prises en charge par Adobe [!DNL Real-Time Customer Data Platform] qui activent les données vers ces partenaires de manière transparente. Pour plus d’informations, consultez [Destinations](#destinations) ci-dessous. |
+| Tableau de bord de mesures de la page d’accueil | La page d’accueil de Real-time Customer Data Platform (Real-Time CDP) comprend un tableau de bord de mesures qui affiche des informations sur les profils et les segments. La page d’accueil contient également des liens vers des documents d’apprentissage. Voir la section sur [Mesures Real-time Customer Data Platform](#real-time-customer-data-platform-metrics) ci-dessous. |
 | Sources | Vous pouvez envoyer des données à partir de différentes sources, notamment les solutions Adobe, le stockage dans le cloud, des logiciels tiers et la gestion de la relation client. Pour en savoir plus, consultez la section [Sources](#sources) ci-dessous. |
 
-**[!DNL Real-time Customer Data Platform]mesures**
+**[!DNL Real-Time Customer Data Platform]mesures**
 
-La page d’accueil de Real-time Customer Data Platform (plateforme de données clients en temps réel), qui comprend un tableau de bord de mesures, s’affiche lorsque vous vous connectez à la plateforme de données clients en temps réel.
+La page d’accueil de Real-time Customer Data Platform (Real-Time CDP), qui comprend un tableau de bord de mesures, s’affiche lorsque vous vous connectez à Real-Time CDP.
 
-La page d’accueil n’est qu’un des emplacements où les cartes de mesures apparaissent. La plateforme CDP en temps réel fournit des cartes de mesure tout au long de votre expérience. Ces mesures indiquent les données, les profils et les audiences de segments du système.
+La page d’accueil n’est qu’un des emplacements où les cartes de mesures apparaissent. Real-Time CDP fournit des cartes de mesure tout au long de votre expérience. Ces mesures indiquent les données, les profils et les audiences de segments du système.
 
-Si le système ne contient aucune donnée lorsque vous vous connectez à la plateforme CDP en temps réel, le tableau de bord de la page d’accueil n’apparaît pas. Dans ce cas, la page d’accueil propose des ressources pédagogiques pour une première expérience client. À mesure que les données sont collectées, le tableau de bord se met automatiquement à jour pour afficher des informations sur ces données.
+Si le système ne contient aucune donnée lorsque vous vous connectez à Real-Time CDP, le tableau de bord de la page d’accueil n’apparaît pas. Dans ce cas, la page d’accueil propose des ressources pédagogiques pour une première expérience client. À mesure que les données sont collectées, le tableau de bord se met automatiquement à jour pour afficher des informations sur ces données.
 
-Pour en savoir plus, consultez la [présentation des mesures de la plateforme de données clients en temps réel](../../rtcdp/home-page-dashboards.md)
+Pour en savoir plus, voir la section [Mesures Real-time Customer Data Platform - Aperçu](../../rtcdp/home-page-dashboards.md)
 
 ## [!DNL Destinations] {#destinations}
 
-[!DNL Destinations]Les sont des intégrations prédéfinies avec des plateformes de destination prises en charge par la plateforme de données clients en temps réel d’Adobe, qui activent les données vers ces partenaires de manière transparente. Pour plus d’informations, consultez la [présentation des destinations](../../destinations/home.md).
+[!DNL Destinations] sont des intégrations prédéfinies avec des plateformes de destination prises en charge par Real-time Customer Data Platform d’Adobe qui activent les données vers ces partenaires de manière transparente. Pour plus d’informations, consultez la [présentation des destinations](../../destinations/home.md).
 
 **Destinations disponibles**
 
-La version de novembre permet à la plateforme de données clients en temps réel d’Adobe de prendre en charge les destinations suivantes :
+Avec la version de novembre, Real-time Customer Data Platform d’Adobe prend en charge les destinations suivantes :
 
 * Publicité: [!DNL Google]
 * Marketing par e-mail : Adobe Campaign, [!DNL Salesforce Marketing Cloud], [!DNL Responsys], [!DNL Oracle Eloqua]

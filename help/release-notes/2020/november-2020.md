@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: November 10, 2020
 author: crhoades, ens25212
 exl-id: 29179b56-e49a-44e8-8c64-a7c383c2eaaf
-source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '2184'
 ht-degree: 27%
@@ -120,7 +120,7 @@ Dans [Real-time Customer Data Platform](../../rtcdp/overview.md), les destinatio
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
-| Mises à jour de l’UX des détails de la destination | Le workflow de destination de la plateforme des données clients en temps réel comprend désormais une surveillance en ligne afin que vous puissiez voir quelles activations par lots ont réussi. Cette fonctionnalité permet aux utilisateurs de résoudre les problèmes directement dans le workflow pour les destinations par lots au moyen d’alertes et d’un tableau de bord de surveillance afin de suivre les erreurs dans le pipeline de traitement. |
+| Mises à jour de l’UX des détails de la destination | Le workflow de destination Real-Time CDP comprend désormais une surveillance en ligne afin que vous puissiez voir quelles activations par lots ont réussi. Cette fonctionnalité permet aux utilisateurs de résoudre les problèmes directement dans le workflow pour les destinations par lots au moyen d’alertes et d’un tableau de bord de surveillance afin de suivre les erreurs dans le pipeline de traitement. |
 | Chiffrement de fichier | Pour les destinations basées sur des fichiers, les utilisateurs peuvent désormais ajouter un chiffrement à leurs fichiers exportés. |
 | Planification des fichiers | Pour les destinations de stockage dans le cloud et par courrier électronique, les utilisateurs peuvent créer une exportation unique ou créer des instantanés quotidiens. |
 | Champs obligatoires | Les utilisateurs peuvent marquer les champs comme obligatoires, en s’assurant que seuls les champs contenant le champ obligatoire sont exportés. |

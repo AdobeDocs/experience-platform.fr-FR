@@ -1,16 +1,16 @@
 ---
-title: Score prédictif de piste et de compte dans la plateforme CDP B2B en temps réel
+title: Score prédictif de piste et de compte dans Real-Time CDP B2B
 type: Documentation
 description: Présentation et informations supplémentaires sur la fonctionnalité de notation de compte et de piste prédictive dans la plateforme CDP B2B Experience Platform.
 exl-id: d3afbabb-005d-4537-831a-857c88043759
-source-git-commit: 99b3b2d73b87a64fcaa9ba51563c0942fc21a0dc
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '858'
 ht-degree: 9%
 
 ---
 
-# Score prédictif de piste et de compte dans la plateforme CDP B2B en temps réel
+# Score prédictif de piste et de compte dans Real-Time CDP B2B
 
 Les marketeurs B2B sont confrontés à de nombreux défis en haut de l’entonnoir marketing. Pour être efficaces, les spécialistes du marketing B2B doivent disposer d’un moyen automatisé de qualifier le grand nombre de personnes afin de pouvoir se concentrer sur les cibles à forte valeur ajoutée. La qualification doit être alignée sur le résultat commercial ultime, et pas seulement sur la conversion marketing.
 

@@ -6,10 +6,10 @@ last-update: March 10, 2020
 author: ens71067
 keywords: notes de mise à jour;
 exl-id: 407c2bac-4c8a-4939-b3dd-788250f15650
-source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '855'
-ht-degree: 73%
+ht-degree: 68%
 
 ---
 
@@ -39,8 +39,8 @@ Dans Adobe Experience Platform, la gouvernance des données désigne un ensemb
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
-| Application automatisée des stratégies d’utilisation des données pour [!DNL Real-time Customer Data Platform] | Les stratégies d’utilisation des données sont désormais appliquées dans le workflow d’activation des données vers les destinations. La gouvernance des données est aussi intégrée et appliquée lors de modifications affectant les activations existantes (telles que les modifications des libellés des jeux de données, des stratégies de fusion, des définitions de segment, etc.). |
-| Traçabilité des données pour l’application | Lorsqu’une stratégie d’utilisation des données est violée dans la plateforme de données clients en temps réel, l’interface utilisateur affiche une notification contenant des informations de traçabilité des données pour aider l’utilisateur à comprendre pourquoi les stratégies ont été violées et ce qu’il peut faire pour résoudre la violation. |
+| Application automatisée des stratégies d’utilisation des données pour [!DNL Real-Time Customer Data Platform] | Les stratégies d’utilisation des données sont désormais appliquées dans le workflow d’activation des données vers les destinations. La gouvernance des données est aussi intégrée et appliquée lors de modifications affectant les activations existantes (telles que les modifications des libellés des jeux de données, des stratégies de fusion, des définitions de segment, etc.). |
+| Traçabilité des données pour l’application | Lorsqu’une stratégie d’utilisation des données est enfreinte dans Real-Time CDP, l’interface utilisateur affiche une notification contenant des informations de traçabilité des données afin d’aider l’utilisateur à comprendre pourquoi les stratégies ont été violées et ce qu’il peut faire pour résoudre la violation. |
 
 
 **Problèmes connus**
@@ -76,8 +76,8 @@ De nouvelles destinations vous permettent d’activer vos données Adobe Experi
 
 | Destination | Description |
 |--- | ---|
-| Destinations de stockage dans le cloud | La plateforme CDP en temps réel peut désormais fournir vos segments sous forme de fichiers de données à vos [!DNL Amazon S3] ou des emplacements de stockage dans le cloud SFTP. Vous pouvez ainsi envoyer des audiences et leurs attributs de profils à vos systèmes internes au moyen de fichiers CSV ou séparés par des tabulations. |
-| Destinations publicitaires | Le [!DNL Google] la carte de destination est maintenant divisée en trois cartes de destination, pour les trois [!DNL Google] Plateformes actuellement prises en charge dans la plateforme de données clients en temps réel : [!DNL Google Ads], [!DNL Google Ad Manager], [!DNL Google] Affichage et vidéo 360. |
+| Destinations de stockage dans le cloud | Real-Time CDP peut désormais fournir vos segments sous forme de fichiers de données à votre [!DNL Amazon S3] ou des emplacements de stockage dans le cloud SFTP. Vous pouvez ainsi envoyer des audiences et leurs attributs de profils à vos systèmes internes au moyen de fichiers CSV ou séparés par des tabulations. |
+| Destinations publicitaires | Le [!DNL Google] la carte de destination est maintenant divisée en trois cartes de destination, pour les trois [!DNL Google] Plateformes actuellement prises en charge dans Real-Time CDP : [!DNL Google Ads], [!DNL Google Ad Manager], [!DNL Google] Affichage et vidéo 360. |
 
 Pour en savoir plus, consultez la [présentation des destinations](../../destinations/home.md)
 

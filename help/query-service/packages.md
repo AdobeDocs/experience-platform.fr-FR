@@ -1,9 +1,9 @@
 ---
 title: Packages Query Service
 description: Le document suivant décrit les packages de fonctionnalités et de produits disponibles pour Query Service et met en évidence les différences entre les requêtes ad hoc et les requêtes par lots.
-source-git-commit: 3d2802ff5cdb359b28da23a05d1d6831cc273a52
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '718'
+source-wordcount: '720'
 ht-degree: 8%
 
 ---
@@ -19,7 +19,7 @@ Adobe Experience Platform Query Service peut être divisé en deux fonctionnalit
 
 Les fonctionnalités de Query Service sont incluses dans les produits et modules complémentaires suivants :
 
-- **Applications basées sur des plateformes** (Real-time Customer Data Platform, Customer Journey Analytics et Adobe Journey Optimizer) : L’accès à Query Service pour exécuter des requêtes ad hoc est fourni dès le départ avec chaque variante et niveau d’applications basées sur Platform.
+- **Applications basées sur des plateformes** (Adobe Real-time Customer Data Platform, Adobe Customer Journey Analytics et Adobe Journey Optimizer) : L’accès à Query Service pour exécuter des requêtes ad hoc est fourni dès le départ avec chaque variante et niveau d’applications basées sur Platform.
 - **[!DNL Data Distiller]** (module complémentaire pouvant être acheté avec Adobe Real-Time CDP, Customer Journey Analytics et Adobe Journey Optimizer) : L’accès à Query Service pour exécuter des requêtes par lots est fourni avec [!DNL Data Distiller].
 
 Le tableau suivant décrit les principaux droits de Query Service en fonction de leur mode de création :
@@ -30,7 +30,7 @@ Le tableau suivant décrit les principaux droits de Query Service en fonction de
 | Cas d’utilisation pris en charge | <ul><li>Exploration &#x200B;</li><li>&#x200B; de détection des données</li><li>Validation des données</li><li>Expérimentation</li></ul> | <ul><li>Nettoyage</li><li>Forme</li><li>Manipulation</li><li>Enrichir</li></ul> |
 | Sémantique pris en charge | <ul><li>SELECT requêtes</li></ul> | <ul><li>Requêtes CTAS et ITAS</li></ul> |
 | Durée maximale d’exécution | 10 minutes | 24 heures |
-| Mesure de licence | **Concurrence des utilisateurs de la requête**: <ul><li>1 utilisateur simultané (CDP en temps réel, Adobe Journey Optimizer) &#x200B;</li><li>5 utilisateurs simultanés (Customer Journey Analytics) &#x200B;</li></ul> **Requête simultanée**: <ul><li>1 requête en cours d’exécution simultanée (toutes les applications) &#x200B;</li></ul> **Module complémentaire pour utilisateurs de requêtes ad hoc** peuvent être achetés pour augmenter les droits de requête ad hoc autorisés des clients. <ul><li>+5 utilisateurs simultanés supplémentaires par pack</li><li>+1 requête d’exécution simultanée supplémentaire par pack</li></ul> | **Heures de calcul**: <ul><li>Variable (définie selon les droits d’application du client)</li></ul> **Heures de calcul** mesure le temps nécessaire au moteur Query Service pour lire, traiter et écrire des données dans le lac de données lors de l’exécution d’une requête par lots. |
+| Mesure de licence | **Concurrence des utilisateurs de la requête**: <ul><li>1 utilisateur simultané (Real-Time CDP, Adobe Journey Optimizer) &#x200B;</li><li>5 utilisateurs simultanés (Customer Journey Analytics) &#x200B;</li></ul> **Requête simultanée**: <ul><li>1 requête en cours d’exécution simultanée (toutes les applications) &#x200B;</li></ul> **Module complémentaire pour utilisateurs de requêtes ad hoc** peuvent être achetés pour augmenter les droits de requête ad hoc autorisés des clients. <ul><li>+5 utilisateurs simultanés supplémentaires par pack</li><li>+1 requête d’exécution simultanée supplémentaire par pack</li></ul> | **Heures de calcul**: <ul><li>Variable (définie selon les droits d’application du client)</li></ul> **Heures de calcul** mesure le temps nécessaire au moteur Query Service pour lire, traiter et écrire des données dans le lac de données lors de l’exécution d’une requête par lots. |
 | Interface d’exécution de requête | <ul><li>UI Query Service</li><li>Interface utilisateur cliente tierce</li><li>[!DNL PostgresSQL] Interface utilisateur client</li></ul> | <ul><li>Interface utilisateur de la requête </li><li>Interface utilisateur cliente tierce</li><li>[!DNL PostgresSQL] Interface utilisateur client</li><li>API REST</li></ul> |
 | Résultats de la requête renvoyés via | Interface utilisateur du client | Jeu de données dérivé stocké dans le lac de données |
 | Limite de résultat | <ul><li>Interface utilisateur de requête - 100 lignes</li><li>Client tiers - 50 000</li><li>[!DNL PostgresSQL] client - 50 000</li></ul> | <ul><li>Interface utilisateur de requête (pas de limite supérieure pour les lignes)</li><li>Clients tiers (pas de limite supérieure aux lignes)</li><li>[!DNL PostgresSQL] client (aucune limite supérieure aux lignes)</li><li>API REST (pas de limite supérieure pour les lignes)</li></ul> |

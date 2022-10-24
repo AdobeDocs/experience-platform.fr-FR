@@ -3,9 +3,9 @@ title: Intégration de la prise en charge du TCF 2.0 de l’IAB à l’aide du S
 description: Découvrez comment configurer la prise en charge du TCF 2.0 de l’IAB pour votre site web sans utiliser de balises.
 seo-description: Learn how to set up IAB TCF 2.0 consent with Adobe Experience Platform Web SDK
 exl-id: 14f1802a-0f8d-487f-ae17-5daaaab05162
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '663'
+source-wordcount: '664'
 ht-degree: 0%
 
 ---
@@ -108,4 +108,4 @@ L’autre moyen d’ajouter des informations de consentement à chaque requête 
 
 ## Étapes suivantes
 
-Maintenant que vous avez appris à utiliser IAB TCF 2.0 avec l’extension SDK Web Platform, vous pouvez également choisir d’intégrer à d’autres solutions Adobe telles qu’Adobe Analytics ou la plateforme de données clients en temps réel. Voir [Présentation du Transparency and Consent Framework 2.0 de l’IAB](./overview.md) pour plus d’informations.
+Maintenant que vous avez appris à utiliser IAB TCF 2.0 avec l’extension SDK Web Platform, vous pouvez également choisir d’intégrer avec d’autres solutions Adobe telles qu’Adobe Analytics ou Adobe Real-time Customer Data Platform. Voir [Présentation du Transparency and Consent Framework 2.0 de l’IAB](./overview.md) pour plus d’informations.

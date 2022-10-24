@@ -5,9 +5,9 @@ title: Espaces de noms et schémas B2B
 topic-legacy: overview
 description: Ce document fournit un aperçu des espaces de noms personnalisés requis lors de la création d’un connecteur source B2B.
 exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
-source-git-commit: c6ba91f6aa64f02ac3571bb960d4005fdade3d57
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '1706'
+source-wordcount: '1707'
 ht-degree: 14%
 
 ---
@@ -18,7 +18,7 @@ Ce document fournit des informations sur la configuration sous-jacente des espac
 
 >[!IMPORTANT]
 >
->Vous devez avoir accès à [Real-time Customer Data Platform B2B Edition](../../../../rtcdp/b2b-overview.md) pour que les schémas B2B participent à [Real-time Customer Profile](../../../../profile/home.md).
+>Vous devez avoir accès à [Adobe Real-time Customer Data Platform version B2B](../../../../rtcdp/b2b-overview.md) pour que les schémas B2B participent à [Real-time Customer Profile](../../../../profile/home.md).
 
 ## Configuration des espaces de noms B2B et de l’utilitaire de génération automatique de schéma
 

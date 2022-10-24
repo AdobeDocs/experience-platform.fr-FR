@@ -1,10 +1,10 @@
 ---
 title: Définition d’une relation entre deux schémas dans Real-time Customer Data Platform B2B Edition
-description: Découvrez comment définir une relation multiple-à-un entre deux schémas dans l’édition B2B de Real-time Customer Data Platform.
+description: Découvrez comment définir une relation de type "plusieurs à un" entre deux schémas dans Adobe Real-time Customer Data Platform B2B Edition.
 exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
-source-git-commit: 86a230d746d6642437c4e37958c07a1186ebadc3
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '1401'
+source-wordcount: '1403'
 ht-degree: 6%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 6%
 >title="Schéma de référence"
 >abstract="Sélectionnez le schéma avec lequel vous souhaitez établir une relation. Selon la classe du schéma, il peut également exister des relations existantes avec d’autres entités dans le contexte B2B. Consultez la documentation pour découvrir comment les classes de schéma B2B se connectent entre elles."
 
-Real-time Customer Data Platform Édition B2B fournit plusieurs classes de modèle de données d’expérience (XDM) qui capturent les entités de données B2B fondamentales, y compris [comptes](../classes/b2b/business-account.md), [opportunités](../classes/b2b/business-opportunity.md), [campagnes](../classes/b2b/business-campaign.md), etc. En créant des schémas basés sur ces classes et en les activant pour une utilisation dans [Real-time Customer Profile](../../profile/home.md), vous pouvez fusionner des données provenant de sources disparates dans une représentation unifiée appelée schéma d’union.
+L’édition B2B d’Adobe Real-time Customer Data Platform fournit plusieurs classes de modèle de données d’expérience (XDM) qui capturent les entités de données B2B fondamentales, y compris [comptes](../classes/b2b/business-account.md), [opportunités](../classes/b2b/business-opportunity.md), [campagnes](../classes/b2b/business-campaign.md), etc. En créant des schémas basés sur ces classes et en les activant pour une utilisation dans [Real-time Customer Profile](../../profile/home.md), vous pouvez fusionner des données provenant de sources disparates dans une représentation unifiée appelée schéma d’union.
 
 Toutefois, les schémas d’union ne peuvent contenir que des champs capturés par des schémas qui partagent la même classe. C’est là que les relations de schéma entrent en jeu. En implémentant des relations dans vos schémas B2B, vous pouvez décrire la manière dont ces entités commerciales se relient les unes aux autres et peut inclure des attributs provenant de plusieurs classes dans les cas d’utilisation de la segmentation en aval.
 
@@ -24,7 +24,7 @@ Le diagramme suivant illustre la manière dont les différentes classes B2B peuv
 
 ![Relations de classe B2B](../images/tutorials/relationship-b2b/classes.png)
 
-Ce tutoriel décrit les étapes de définition d’une relation multiple-à-un entre deux schémas dans l’édition CDP B2B en temps réel.
+Ce tutoriel décrit les étapes de définition d’une relation multiple-à-un entre deux schémas dans Real-Time CDP B2B Edition.
 
 >[!NOTE]
 >
@@ -123,4 +123,4 @@ Si vous affichez la structure du schéma de destination, le marqueur de relation
 
 ## Étapes suivantes
 
-En suivant ce tutoriel, vous avez créé avec succès une relation multiple-à-un entre deux schémas à l’aide de la variable [!DNL Schema Editor]. Une fois que les données ont été ingérées à l’aide de jeux de données basés sur ces schémas et que ces données ont été activées dans l’entrepôt de données Profile, vous pouvez utiliser les attributs des deux schémas pour les cas d’utilisation de la segmentation multi-classe. Pour plus d’informations, consultez la documentation sur l’édition CDP B2B en temps réel .
+En suivant ce tutoriel, vous avez créé avec succès une relation multiple-à-un entre deux schémas à l’aide de la variable [!DNL Schema Editor]. Une fois que les données ont été ingérées à l’aide de jeux de données basés sur ces schémas et que ces données ont été activées dans l’entrepôt de données Profile, vous pouvez utiliser les attributs des deux schémas pour les cas d’utilisation de la segmentation multi-classe. Pour plus d’informations, consultez la documentation de Real-Time CDP B2B Edition .

@@ -2,9 +2,9 @@
 title: Intégration de la prise en charge du TCF 2.0 de l’IAB à l’aide de balises et de l’extension du SDK Web Platform
 description: Découvrez comment configurer le consentement du TCF 2.0 de l’IAB avec les balises et l’extension du SDK Web Adobe Experience Platform.
 exl-id: dc0e6b68-8257-4862-9fc4-50b370ef204f
-source-git-commit: f5270d1d1b9697173bc60d16c94c54d001ae175a
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '838'
+source-wordcount: '839'
 ht-degree: 0%
 
 ---
@@ -123,4 +123,4 @@ Lorsque des événements sont déclenchés après l’événement d’expérienc
 
 ## Étapes suivantes
 
-Maintenant que vous avez appris à utiliser IAB TCF 2.0 avec l’extension SDK Web Platform, vous pouvez également choisir d’intégrer à d’autres solutions Adobe telles qu’Adobe Analytics ou la plateforme de données clients en temps réel. Voir [Présentation du Transparency and Consent Framework 2.0 de l’IAB](./overview.md) pour plus d’informations.
+Maintenant que vous avez appris à utiliser IAB TCF 2.0 avec l’extension SDK Web Platform, vous pouvez également choisir d’intégrer avec d’autres solutions Adobe telles qu’Adobe Analytics ou Adobe Real-time Customer Data Platform. Voir [Présentation du Transparency and Consent Framework 2.0 de l’IAB](./overview.md) pour plus d’informations.

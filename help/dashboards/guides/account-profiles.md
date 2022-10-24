@@ -2,9 +2,9 @@
 title: Guide du tableau de bord des profils de compte
 description: Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur les profils de compte B2B de votre entreprise.
 exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
-source-git-commit: 19d6d3c03e6b3b0f9f82ceeee30816fa054261a3
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '1050'
+source-wordcount: '1052'
 ht-degree: 7%
 
 ---
@@ -17,7 +17,7 @@ Pour une présentation de toutes les fonctionnalités de l’interface utilisate
 
 ## Prise en main
 
-Vous devez avoir le droit de [Real-time Customer Data Platform B2B Edition](../../rtcdp/b2b-overview.md) afin d’accéder à l’objet B2B [!UICONTROL Profils de compte] tableau de bord.
+Vous devez avoir le droit de [Adobe Real-time Customer Data Platform version B2B](../../rtcdp/b2b-overview.md) afin d’accéder à l’objet B2B [!UICONTROL Profils de compte] tableau de bord.
 
 ## Données des profils de compte
 
@@ -45,7 +45,7 @@ Sélectionnez la [!UICONTROL Identifiant de profil] dans les résultats affiché
 
 ![L’onglet de navigation Profils de compte avec les résultats affichés et l’identifiant de profil mis en surbrillance.](../images/account-profiles/account-profiles-browse-tab.png)
 
-Les informations de profil du compte affichées sur la [!UICONTROL Détails] a été fusionné à partir de plusieurs fragments de profil pour former une vue unique du compte individuel. Consultez la documentation relative à [navigation dans les profils de compte dans Real-time Customer Data Platform](../../rtcdp/accounts/account-profile-ui-guide.md#browse-account-profiles) pour en savoir plus sur les fonctionnalités d’affichage des profils de compte dans l’interface utilisateur de Platform.
+Les informations de profil du compte affichées sur la [!UICONTROL Détails] a été fusionné à partir de plusieurs fragments de profil pour former une vue unique du compte individuel. Consultez la documentation relative à [navigation dans les profils de compte dans Adobe Real-time Customer Data Platform](../../rtcdp/accounts/account-profile-ui-guide.md#browse-account-profiles) pour en savoir plus sur les fonctionnalités d’affichage des profils de compte dans l’interface utilisateur de Platform.
 
 ## Le [!UICONTROL Profils de compte] [!UICONTROL Présentation] {#overview}
 

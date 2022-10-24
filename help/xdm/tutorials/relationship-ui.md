@@ -6,9 +6,9 @@ description: Ce document fournit un tutoriel sur la définition d’une relation
 topic-legacy: tutorial
 type: Tutorial
 exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
-source-git-commit: 86a230d746d6642437c4e37958c07a1186ebadc3
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '1172'
+source-wordcount: '1173'
 ht-degree: 22%
 
 ---
@@ -38,7 +38,7 @@ Ce document fournit un tutoriel sur la définition d’une relation entre deux s
 
 >[!NOTE]
 >
->Pour savoir comment créer une relation multiple-à-un dans Real-time Customer Data Platform B2B Edition, consultez le guide sur [création de relations B2B](./relationship-b2b.md).
+>Pour savoir comment créer une relation multiple-à-un dans Adobe Real-time Customer Data Platform B2B Edition, consultez le guide sur [création de relations B2B](./relationship-b2b.md).
 
 ## Prise en main
 
@@ -56,7 +56,7 @@ Vous devez avoir déjà créé les deux schémas qui seront définis dans la rel
 >
 >Pour établir une relation, les deux schémas doivent avoir défini des identités Principales et être activés pour [!DNL Real-time Customer Profile]. Voir la section sur [activation d’un schéma à utiliser dans Profile](./create-schema-ui.md#profile) dans le tutoriel sur la création de schémas si vous avez besoin de conseils sur la configuration de vos schémas en conséquence.
 
-Les relations de schéma sont représentées par un champ dédié dans une **schéma source** qui fait référence à un autre champ d’un **schéma de destination**. Dans les étapes suivantes, &quot;[!DNL Loyalty Members]&quot; sera le schéma source, tandis que &quot;[!DNL Hotels]&quot; agira comme schéma de destination.
+Les relations de schéma sont représentées par un champ dédié dans un **schéma source** qui fait référence à un autre champ d’un **schéma de destination**. Dans les étapes suivantes, &quot;[!DNL Loyalty Members]&quot; sera le schéma source, tandis que &quot;[!DNL Hotels]&quot; agira comme schéma de destination.
 
 À titre de référence, les sections suivantes décrivent la structure de chaque schéma utilisé dans ce tutoriel avant de définir une relation.
 

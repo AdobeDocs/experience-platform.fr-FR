@@ -1,12 +1,12 @@
 ---
 keywords: profil rtcdp;profils rtcdp;identités rtcdp;stratégies de fusion rtcdp;profil client en temps réel
-title: Présentation de Real-time Customer Profile dans la plateforme de données clients en temps réel
-description: Découvrez comment Real-time Customer Data Platform vous permet de générer des expériences coordonnées, cohérentes et pertinentes pour vos clients à l’aide de Real-time Customer Profile.
+title: Présentation de Real-time Customer Profile dans Real-Time CDP
+description: Découvrez comment Adobe Real-time Customer Data Platform vous permet de proposer à vos clients des expériences coordonnées, cohérentes et pertinentes à l’aide de Real-time Customer Profile.
 exl-id: de70948c-ffc1-49d3-a57c-25ad415752ff
-source-git-commit: 0aca080d9f2c39b8f0a1197e1048d1a77d5e7bc1
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '456'
-ht-degree: 48%
+source-wordcount: '457'
+ht-degree: 47%
 
 ---
 
@@ -14,15 +14,15 @@ ht-degree: 48%
 
 Le profil client en temps réel offre une vue d’ensemble de chaque client en combinant des données issues de plusieurs canaux, notamment des données en ligne, hors ligne, GRC et tierces. Chaque profil client vous permet de consolider vos données client disparates en une vue unifiée offrant un compte horodaté et exploitable de chaque interaction client.
 
-## Profils dans [!DNL Real-time Customer Data Platform]
+## Profils dans [!DNL Real-Time Customer Data Platform]
 
-[!DNL Real-time Customer Data Platform] vous permet de proposer des expériences coordonnées et cohérentes à vos clients, quel que soit l’endroit ou le moment où ils interagissent avec votre marque. Il n’est pas simple de fournir ces expériences personnalisées de manière pertinente et en temps opportun, mais cela est possible grâce au profil client en temps réel, composant d’Adobe Experience Platform.
+[!DNL Adobe Real-Time Customer Data Platform] vous permet de proposer des expériences coordonnées et cohérentes à vos clients, quel que soit l’endroit ou le moment où ils interagissent avec votre marque. Il n’est pas simple de fournir ces expériences personnalisées de manière pertinente et en temps opportun, mais cela est possible grâce au profil client en temps réel, composant d’Adobe Experience Platform.
 
-La plateforme de données clients en temps réel repose sur les Experience Platform et utilise de nombreuses fonctionnalités Experience Platform de base, notamment la création de profils. Ces vues agrégées d’un client individuel rassemblent des données provenant de vos nombreux canaux marketing et des divers systèmes actuellement utilisés par votre organisation pour stocker les données client.
+Real-Time CDP repose sur les Experience Platform et utilise de nombreuses fonctions et fonctionnalités Experience Platform de base, notamment la création de profils. Ces vues agrégées d’un client individuel rassemblent des données provenant de vos nombreux canaux marketing et des divers systèmes actuellement utilisés par votre organisation pour stocker les données client.
 
-## Améliorations des profils pour la plateforme CDP en temps réel, version B2B
+## Améliorations des profils pour Real-Time CDP, version B2B
 
-Outre les fonctionnalités de profil prises en charge par la plateforme de données clients en temps réel, vous pouvez utiliser la plateforme de données clients en temps réel, l’édition B2B, pour parcourir les informations importantes associées à une personne, telles qu’un compte et des opportunités. Pour en savoir plus sur les améliorations de profil pour la plateforme de données clients en temps réel, l’édition B2B, commencez par lire la [guide de navigation des profils](profile-browse.md).
+Outre les fonctionnalités de profil prises en charge par Real-Time CDP, vous pouvez utiliser Real-Time CDP, Édition B2B , pour parcourir les informations importantes associées à une personne, telles qu’un compte et des opportunités. Pour en savoir plus sur les améliorations de profil pour Real-Time CDP, Édition B2B, commencez par lire la [guide de navigation des profils](profile-browse.md).
 
 ## Identités et espaces de noms d’identité
 

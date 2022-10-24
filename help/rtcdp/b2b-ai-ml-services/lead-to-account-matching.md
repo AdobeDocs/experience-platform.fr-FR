@@ -1,16 +1,16 @@
 ---
-title: Conduire à la correspondance de comptes dans la plateforme CDP B2B en temps réel
+title: Conduire à la correspondance de comptes dans Real-Time CDP B2B
 type: Documentation
 description: Présentation et informations supplémentaires sur la fonctionnalité de correspondance de comptes dans la plateforme CDP B2B Experience Platform.
 exl-id: 2f853599-6bca-4ba6-bbba-131a49d8854e
-source-git-commit: 0b140e767dec0e703b3ab9c75b7a23c797804c66
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '616'
 ht-degree: 6%
 
 ---
 
-# Conduire à la correspondance de comptes dans la plateforme CDP B2B en temps réel
+# Conduire à la correspondance de comptes dans Real-Time CDP B2B
 
 ## Présentation {#overview}
 

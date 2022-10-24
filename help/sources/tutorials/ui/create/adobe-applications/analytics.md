@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Découvrez comment créer une connexion source Adobe Analytics dans l’interface utilisateur pour importer des données client dans Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 04a8ca33e712c00d687432ddf9ad82f5d1644db2
+source-git-commit: e67b3a6f9f57a3971a5bfa755db3b1043bebc96b
 workflow-type: tm+mt
-source-wordcount: '2302'
+source-wordcount: '2301'
 ht-degree: 62%
 
 ---
@@ -58,7 +58,7 @@ Plusieurs connexions entrantes peuvent être établies pour importer plusieurs s
 
 >[!NOTE]
 >
->Les données de plusieurs suites de rapports ne peuvent être activées pour Real-time Customer Data Profile que s’il n’existe aucun conflit de données, comme deux propriétés personnalisées (eVars, listes et props) ayant une signification différente.
+>Les données de plusieurs suites de rapports ne peuvent être activées pour Real-time Customer Profile que s’il n’existe aucun conflit de données, comme deux propriétés personnalisées (eVars, listes et props) ayant une signification différente.
 
 Pour créer une [!DNL Analytics] connexion source, sélectionnez une suite de rapports, puis sélectionnez **[!UICONTROL Suivant]** pour continuer.
 

@@ -3,10 +3,10 @@ keywords: Experience Platform;accueil;rubriques les plus consultées;gestion de
 title: Bonnes pratiques relatives aux droits de licence de gestion des données
 description: Découvrez les bonnes pratiques à suivre et les outils que vous pouvez utiliser pour mieux gérer vos droits de licence avec Adobe Experience Platform.
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: 5da2a6cfc9e9da6bbe6c6560577d22eed32c858c
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '2528'
-ht-degree: 100%
+source-wordcount: '2529'
+ht-degree: 98%
 
 ---
 
@@ -47,7 +47,7 @@ Lorsque vous acquérez une licence pour Experience Platform, vous recevez des d
 
 La mesure de [!DNL Profile Richness] varie en fonction de la licence que vous avez achetée. Deux calculs de [!DNL Profile Richness] sont disponibles :
 
-* La somme de toutes les données de production stockées dans Real-time Customer Data Platform (c’est-à-dire le service de profil et le service d’identités) à tout moment, divisée par l’[!DNL Addressable Audience]
+* La somme de toutes les données de production stockées dans Adobe Real-time Customer Data Platform (c’est-à-dire le service de profil et le service d’identité) à tout moment, divisée par le [!DNL Addressable Audience];
 * La somme de toutes les données stockées dans Platform (y compris, mais sans s’y limiter, le [!DNL Data Lake], le service de profil et le service d’identités) à tout moment et toutes les données que vous diffusez via Platform (au lieu de les stocker) au cours des 12 derniers mois, divisées par l’[!DNL Addressable Audience]
 
 La disponibilité de ces mesures et la définition spécifique de chacune d’elles varient en fonction des licences achetées par l’entreprise.

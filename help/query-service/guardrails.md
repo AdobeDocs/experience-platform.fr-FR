@@ -3,7 +3,7 @@ keywords: Experience Platform;requête;service de requête;dépannage;garde-fous
 title: Barrières de sécurité pour Query Service
 description: Ce document fournit des informations sur les limites d’utilisation des données de Query Service afin de vous aider à optimiser l’utilisation de vos requêtes.
 exl-id: 1ad5dcf4-d048-49ff-97e3-07040392b65b
-source-git-commit: e40a9fb0149e194de693a98e5d185860a255b5c4
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '1029'
 ht-degree: 7%
@@ -84,7 +84,7 @@ Le tableau ci-dessous fournit la description et les limites recommandées de la 
 
 | Barrière de sécurité | Limite | Type de limite | Description |
 |---|---|---|---|
-| Concurrence des requêtes | 4 | Hard | Pour s’assurer que les requêtes sur les données agrégées via l’API de création de rapports (y compris les requêtes qui améliorent les modèles de données comme les modèles de données CDP en temps réel) disposent des ressources pour s’exécuter efficacement, l’API de création de rapports effectue le suivi de l’utilisation des ressources en attribuant des emplacements simultanés à chaque requête. Le système place les requêtes dans une file d’attente et attend que les emplacements simultanés soient disponibles ou qu’ils puissent être diffusés à partir du cache. Quatre emplacements de requête simultanés au maximum sont disponibles à tout moment.<br>Si vous accédez à l’API de création de rapports par le biais d’un outil de BI et que vous avez besoin de davantage de simultanéité, un serveur de BI est requis. |
+| Concurrence des requêtes | 4 | Hard | Pour garantir que les requêtes sur les données agrégées via l’API de création de rapports (y compris les requêtes qui améliorent les modèles de données tels que les modèles de données Real-Time CDP) disposent des ressources pour s’exécuter efficacement, l’API de création de rapports effectue le suivi de l’utilisation des ressources en attribuant des emplacements simultanés à chaque requête. Le système place les requêtes dans une file d’attente et attend que les emplacements simultanés soient disponibles ou qu’ils puissent être diffusés à partir du cache. Quatre emplacements de requête simultanés au maximum sont disponibles à tout moment.<br>Si vous accédez à l’API de création de rapports par le biais d’un outil de BI et que vous avez besoin de davantage de simultanéité, un serveur de BI est requis. |
 
 {style=&quot;table-layout:auto&quot;}
 

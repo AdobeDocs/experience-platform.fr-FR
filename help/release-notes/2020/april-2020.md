@@ -6,7 +6,7 @@ last-update: April 13, 2020
 author: ens71067
 keywords: notes de mise à jour;
 exl-id: 0f68c71e-3c9d-453b-a953-1cd1b6ca2e35
-source-git-commit: e08deb8bea7f02639b680c4988522627de82bdee
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '983'
 ht-degree: 66%
@@ -93,12 +93,12 @@ Dans [Real-time Customer Data Platform](../../rtcdp/overview.md), les destinatio
 
 **Nouvelles destinations**
 
-La plateforme CDP en temps réel prend désormais en charge l’activation des données à plus de 50 [!DNL Experience Cloud Launch] extensions, activation d’analytics, de personnalisation et d’autres cas d’utilisation. Voir ci-dessous pour plus de détails :
+Real-Time CDP prend désormais en charge l’activation des données jusqu’à plus de 50 [!DNL Experience Cloud Launch] extensions, activation d’analytics, de personnalisation et d’autres cas d’utilisation. Voir ci-dessous pour plus de détails :
 
 | Documentation | Description |
 |--- | ---|
-| [Types et catégories de destination](../../destinations/destination-types.md) | Cet article explique la différence entre les connexions et les extensions dans l’interface de la plateforme de données clients en temps réel et recommande le moment auquel utiliser chacune de ces destinations. |
-| [Extensions d’Experience Platform Launch](../../destinations/catalog/launch-extensions/overview.md) | Cette page explique ce qui suit : [!DNL Launch] Les extensions sont , répertorie les cas d’utilisation et des liens vers la documentation pour chaque [!DNL Launch] dans la plateforme de données clients en temps réel. |
+| [Types et catégories de destination](../../destinations/destination-types.md) | Cet article explique la différence entre les connexions et les extensions dans l’interface de Real-Time CDP et recommande le moment auquel utiliser chacune de ces destinations. |
+| [Extensions d’Experience Platform Launch](../../destinations/catalog/launch-extensions/overview.md) | Cette page explique ce qui suit : [!DNL Launch] Les extensions sont , répertorie les cas d’utilisation et des liens vers la documentation pour chaque [!DNL Launch] dans Real-Time CDP. |
 
 Pour plus d’informations, reportez-vous à la [présentation des destinations](../../destinations/home.md).
 

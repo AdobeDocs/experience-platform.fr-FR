@@ -3,9 +3,9 @@ title: Connexion via l’API HTTP
 keywords: diffusion en continu;
 description: Utilisez la destination d’API HTTP dans Adobe Experience Platform pour envoyer des données de profil à un point de terminaison HTTP tiers afin d’exécuter vos propres analyses ou d’effectuer toute autre opération nécessaire sur les données de profil exportées hors d’Experience Platform.
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 75399d2fbe111a296479f8d3404d43c6ba0d50b5
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '2375'
+source-wordcount: '2376'
 ht-degree: 4%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 4%
 
 >[!IMPORTANT]
 >
-> Cette destination n’est disponible que pour [Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform.html) clients.
+> Cette destination n’est disponible que pour [Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform.html) clients.
 
 La destination de l’API HTTP est une [!DNL Adobe Experience Platform] destination de diffusion en continu qui vous aide à envoyer des données de profil à des points de terminaison HTTP tiers.
 

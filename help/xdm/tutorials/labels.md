@@ -2,10 +2,10 @@
 title: Gestion des étiquettes d’utilisation des données pour un schéma
 description: Découvrez comment ajouter des libellés d’utilisation des données aux champs de schéma du modèle de données d’expérience (XDM) dans l’interface utilisateur de Adobe Experience Platform.
 exl-id: 92284bf7-f034-46cc-b905-bdfb9fcd608a
-source-git-commit: 3d49b5c503ec0fd92f0639abf366d7652566fac7
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '736'
-ht-degree: 8%
+source-wordcount: '737'
+ht-degree: 5%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 8%
 
 >[!IMPORTANT]
 >
->L’étiquetage basé sur les schémas fait partie de [contrôle d’accès basé sur les attributs](../../access-control/abac/overview.md), actuellement disponible dans une version limitée pour les clients de santé basés aux États-Unis. Cette fonctionnalité sera disponible pour tous les clients Real-time Customer Data Platform dès son déploiement à grande échelle.
+>L’étiquetage basé sur les schémas fait partie de [contrôle d’accès basé sur les attributs](../../access-control/abac/overview.md), actuellement disponible dans une version limitée pour les clients de santé basés aux États-Unis. Cette fonctionnalité sera disponible pour tous les clients Adobe Real-time Customer Data Platform une fois qu’elle sera entièrement publiée.
 
 Toutes les données introduites dans Adobe Experience Platform sont contraintes par les schémas du modèle de données d’expérience (XDM). Ces données peuvent être soumises à des restrictions d’utilisation définies par votre organisation ou par des réglementations juridiques. Pour en tenir compte, la plateforme vous permet de restreindre l’utilisation de certains jeux de données et champs par l’utilisation de [libellés d’utilisation des données](../../data-governance/labels/overview.md).
 

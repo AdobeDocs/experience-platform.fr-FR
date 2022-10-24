@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Surveillance des tâches d’enrichissement de profil
 type: Tutorial
 exl-id: 096a2212-ed7f-4419-8ead-fa1ca01c2804
-source-git-commit: 1fed0cf37e7297c21330ebf51ae15054aa21c781
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '768'
-ht-degree: 4%
+ht-degree: 5%
 
 ---
 
@@ -93,7 +93,7 @@ Utilisez la variable **[!UICONTROL Afficher uniquement les échecs]** bascule po
 
 En suivant ce tutoriel, vous pouvez désormais contrôler et comprendre les mesures des tâches d’enrichissement de profil. Consultez les documents suivants pour plus d’informations :
 
-* [Comptes associés dans la plateforme CDP B2B en temps réel](/help/rtcdp/b2b-ai-ml-services/related-accounts.md)
+* [Comptes associés dans Real-Time CDP B2B](/help/rtcdp/b2b-ai-ml-services/related-accounts.md)
 * [Section « Comptes associés » du guide de l’interface utilisateur du profil de compte](/help/rtcdp/accounts/account-profile-ui-guide.md)
-* [Conduire à la correspondance de comptes dans la plateforme CDP B2B en temps réel](/help/rtcdp/b2b-ai-ml-services/lead-to-account-matching.md)
-* [Score prédictif de piste et de compte dans la plateforme CDP B2B en temps réel](/help/rtcdp/b2b-ai-ml-services/predictive-lead-and-account-scoring.md)
+* [Conduire à la correspondance de comptes dans Real-Time CDP B2B](/help/rtcdp/b2b-ai-ml-services/lead-to-account-matching.md)
+* [Score prédictif de piste et de compte dans Real-Time CDP B2B](/help/rtcdp/b2b-ai-ml-services/predictive-lead-and-account-scoring.md)

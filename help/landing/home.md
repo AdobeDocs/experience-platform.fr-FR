@@ -5,7 +5,7 @@ title: Présentation d’Adobe Experience Platform
 topic-legacy: getting started
 description: Adobe Experience Platform permet aux entreprises de centraliser et de normaliser les données clients avant dʼappliquer la science des données et le machine learning afin dʼaméliorer considérablement la conception et la diffusion dʼexpériences riches et personnalisées.
 exl-id: edcce353-338a-440e-99eb-a64e2abca579
-source-git-commit: 769e8e6e5d159254d34ad1d3e5e468c3b0bca10b
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '437'
 ht-degree: 100%
@@ -28,8 +28,8 @@ Pour commencer à en savoir plus sur un service [!DNL Platform] spécifique, rev
 
 Adobe a créé de nombreux services applicatifs sur Experience Platform. Vous trouverez la documentation de ces services dans leurs propres guides, dont les liens figurent ci-dessous :
 
-* [[!DNL Real-time Customer Data Platform (Real-time CDP)]](../rtcdp/overview.md)
-* [[!DNL Real-time Customer Data Platform (Real-time CDP) B2B Edition]](../rtcdp/b2b-overview.md)
+* [[!DNL Adobe Real-Time Customer Data Platform (Real-Time CDP)]](../rtcdp/overview.md)
+* [[!DNL Real-Time Customer Data Platform (Real-Time CDP) B2B Edition]](../rtcdp/b2b-overview.md)
 * [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer.html?lang=fr)
 * [[!DNL Customer Journey Analytics]](https://experienceleague.adobe.com/docs/customer-journey-analytics.html?lang=fr)
 * [[!DNL Journey Orchestration]](https://experienceleague.adobe.com/docs/journey-orchestration.html?lang=fr)

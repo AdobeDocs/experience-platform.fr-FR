@@ -5,10 +5,10 @@ title: Gestion des détails et des services supplémentaires pour un profil de p
 topic-legacy: user guide
 description: Ce document reprend les étapes nécessaires à la gestion des détails et des services supplémentaires pour un profil de produit dans Adobe Admin Console. Vous pouvez configurer les détails d’un profil et accéder aux services supplémentaires à partir du menu Paramètres du profil.
 exl-id: ac9c2213-f2fb-44be-9334-87fada8a4717
-source-git-commit: 2844ffd7270ffcc2fba4da08dda1aea238cf6c9f
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '303'
-ht-degree: 100%
+ht-degree: 98%
 
 ---
 
@@ -28,7 +28,7 @@ Le menu **[!UICONTROL Activer les services]** vous permet de modifier l’accès
 
 - [!DNL Data Science Workspace]
 - [!DNL Query Service]
-- L’interface utilisateur de [!DNL Real-Time Customer Data Platform] (pour la plateforme de données client en temps réel uniquement)
+- [!DNL Adobe Real-Time Customer Data Platform] Interface utilisateur (pour Real-Time CDP uniquement)
 - Interface utilisateur B2B
 
 Cliquez sur le bouton à droite d’un service particulier pour l’activer ou le désactiver. Vous pouvez également cocher la case **[!UICONTROL Tout activer]** pour activer ou désactiver tous les services répertoriés.
@@ -39,6 +39,6 @@ Lorsque vous avez terminé, sélectionnez **[!UICONTROL Enregistrer]**.
 
 Les clients éligibles à l’édition B2B ou B2P ont accès à l’interface utilisateur B2B. L’interface utilisateur B2B peut être fournie aux utilisateurs par le biais du menu [!UICONTROL Activer les services]. Sélectionnez le bouton bascule à côté de [!UICONTROL IU B2B] pour activer le service pour un profil de produit spécifique, puis sélectionnez **[!UICONTROL Enregistrer]**.
 
-L’option Activer/Désactiver de l’interface utilisateur B2B permet aux utilisateurs d’afficher les workflows B2B relatifs à la gestion des comptes et des opportunités, ainsi que de créer des segments liés au B2B. Pour plus d’informations, consultez la documentation sur [[!DNL Real-time Customer Data Platform B2B Edition]](../../rtcdp/b2b-overview.md).
+L’option Activer/Désactiver de l’interface utilisateur B2B permet aux utilisateurs d’afficher les workflows B2B relatifs à la gestion des comptes et des opportunités, ainsi que de créer des segments liés au B2B. Pour plus d’informations, consultez la documentation sur [[!DNL Adobe Real-Time Customer Data Platform B2B Edition]](../../rtcdp/b2b-overview.md).
 
 ![enable-b2b](../images/enable-b2b.png)

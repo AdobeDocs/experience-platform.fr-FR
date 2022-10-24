@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Un flux de données est une tâche planifiée qui récupère et ingère des données d’une source vers un jeu de données Platform. Ce tutoriel explique comment créer un flux de données pour une source CRM à l’aide de l’interface utilisateur de Platform.
 exl-id: e14eafa7-6594-48e6-ab7a-f6c928d1e5fb
-source-git-commit: a9a443eda060606be4394dfc2e2707fe18618160
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '1424'
+source-wordcount: '1425'
 ht-degree: 43%
 
 ---
@@ -89,7 +89,7 @@ Platform fournit des recommandations intelligentes pour les champs mappés autom
 
 >[!NOTE]
 >
->Si vous utilisez [!DNL Salesforce] dans le cadre de l’édition B2B de Real-time Customer Data Platform, reportez-vous à la section [[!DNL Salesforce] document de mappage de champs](../../../connectors/adobe-applications/mapping/salesforce.md) pour obtenir des conseils sur le mappage [!DNL Salesforce] des champs sources vers les champs cibles XDM appropriés.
+>Si vous utilisez [!DNL Salesforce] dans le cadre de l’édition B2B d’Adobe Real-time Customer Data Platform, reportez-vous à la section [[!DNL Salesforce] document de mappage de champs](../../../connectors/adobe-applications/mapping/salesforce.md) pour obtenir des conseils sur le mappage [!DNL Salesforce] des champs sources vers les champs cibles XDM appropriés.
 
 Une fois le mappage de vos données source réussi, sélectionnez **[!UICONTROL Suivant]**.
 

@@ -5,7 +5,7 @@ title: Création d’un profil produit dans Adobe Admin Console
 topic-legacy: user guide
 description: Ce document reprend toutes les étapes nécessaires à la création d’un profil produit dans la console Adobe Admin Console. Pour commencer la création d’un profil, accédez à l’onglet Profil de produits et cliquez sur Nouveau profil.
 exl-id: 47558f03-c3f7-4ead-affb-fcbfd7f1e918
-source-git-commit: 2844ffd7270ffcc2fba4da08dda1aea238cf6c9f
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '322'
 ht-degree: 100%
@@ -30,7 +30,7 @@ L’écran suivant vous invite à choisir les services Platform à inclure dans 
 
 Les clients éligibles à l’édition B2B ou B2P ont accès à l’interface utilisateur B2B. L’interface utilisateur B2B peut être fournie aux utilisateurs par le biais du menu [!UICONTROL Activer les services]. Sélectionnez le bouton bascule à côté de [!UICONTROL IU B2B] pour activer le service pour un profil de produit spécifique, puis sélectionnez **[!UICONTROL Enregistrer]**.
 
-L’option Activer/Désactiver de l’interface utilisateur B2B permet aux utilisateurs d’afficher les workflows B2B relatifs à la gestion des comptes et des opportunités, ainsi que de créer des segments liés au B2B. Pour plus d’informations, consultez la documentation sur [[!DNL Real-time Customer Data Platform B2B Edition]](../../rtcdp/b2b-overview.md).
+L’option Activer/Désactiver de l’interface utilisateur B2B permet aux utilisateurs d’afficher les workflows B2B relatifs à la gestion des comptes et des opportunités, ainsi que de créer des segments liés au B2B. Pour plus d’informations, consultez la documentation sur [[!DNL Adobe Real-Time Customer Data Platform B2B Edition]](../../rtcdp/b2b-overview.md).
 
 ![enable-b2b](../images/enable-b2b.png)
 

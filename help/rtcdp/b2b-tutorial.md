@@ -1,19 +1,19 @@
 ---
-keywords: RTCDP;CDP;Édition B2B;Real-time Customer Data Platform;real time customer data platform;real time cdp;b2b;cdp;
+keywords: RTCDP;CDP;Édition B2B;Real-time Customer Data Platform;plateforme de données client en temps réel;cdp en temps réel;b2b;cdp
 solution: Experience Platform
-title: Prise en main de l’édition B2B de Real-time Customer Data Platform
-description: Utilisez ce scénario type comme exemple lors de la configuration de votre implémentation de l’édition B2B de Real-time Customer Data Platform.
+title: Prise en main de Real-time Customer Data Platform B2B Edition
+description: Utilisez cet exemple de scénario comme exemple lors de la configuration de votre mise en oeuvre d’Adobe Real-time Customer Data Platform B2B Edition.
 exl-id: ad9ace46-9915-4b8f-913a-42e735859edf
-source-git-commit: eb71896ec049253266685fdc831f941e14f3268a
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '1205'
-ht-degree: 100%
+source-wordcount: '1206'
+ht-degree: 87%
 
 ---
 
-# Prise en main de l’édition B2B de Real-time Customer Data Platform
+# Prise en main de Real-time Customer Data Platform B2B Edition
 
-Ce document fournit un workflow de haut niveau de bout en bout pour la prise en main de l’édition B2B de Real-time Customer Data Platform (CDP), à l’aide d’un exemple de cas d’utilisation pour illustrer des concepts clés. 
+Ce document fournit un processus de haut niveau de bout en bout pour la prise en main de l’édition B2B de Real-time Customer Data Platform (CDP), à l’aide d’un exemple de cas d’utilisation pour illustrer des concepts clés.
 
 La société de technologie Bodea souhaite combiner des données relatives aux personnes et aux comptes provenant de différentes sources de données cloisonnées afin de cibler efficacement les clients avec un e-mail et une campagne publicitaire LinkedIn pour son nouveau produit. Bodea utilise Marketo Engage comme plateforme d’automatisation marketing et doit segmenter une audience spécifique à B2B à partir de plusieurs CRM contenant des données client. 
 
@@ -56,7 +56,7 @@ Le profil client en temps réel fusionne des données provenant de sources dispa
 
 ## Ingestion de données dans Experience Platform
 
-Ensuite, le marketeur Bodea utilise le [connecteur Marketo Engage](../sources/connectors/adobe-applications/marketo/marketo.md) pour ingérer des données dans Platform en vue de les utiliser dans des services en aval. Vous pouvez également ingérer des données à l’aide de l’une des sources approuvées pour l’édition B2B de Real-time CDP. 
+Ensuite, le marketeur Bodea utilise le [connecteur Marketo Engage](../sources/connectors/adobe-applications/marketo/marketo.md) pour ingérer des données dans Platform en vue de les utiliser dans des services en aval. Vous pouvez également ingérer des données à l’aide de l’une des sources approuvées pour Real-Time CDP B2B Edition.
 
 >[!NOTE]
 > 
@@ -84,7 +84,7 @@ Dans cet exemple, le segment trouve toutes les personnes qui travaillent dans le
 
 >[!NOTE]
 > 
->Pour plus d’informations sur la création de segments afin d’évaluer vos données, consultez le [guide de l’interface utilisateur du créateur de segments](../segmentation/ui/segment-builder.md). Pour des cas d’utilisation de la segmentation B2B plus spécifiques, reportez-vous à la [présentation de la segmentation pour l’édition B2B de Real-time CDP](./segmentation/b2b.md). 
+>Pour plus d’informations sur la création de segments afin d’évaluer vos données, consultez le [guide de l’interface utilisateur du créateur de segments](../segmentation/ui/segment-builder.md). Pour des cas d’utilisation de la segmentation B2B plus spécifiques, reportez-vous à la section [présentation de la segmentation pour Real-Time CDP B2B Edition](./segmentation/b2b.md).
 
 Le créateur de segments vous permet de créer une audience vendable à partir des données du profil client en temps réel et d’afficher les estimations de votre audience potentielle en fonction de la combinaison des attributs, événements et audiences existantes que vous avez définis. 
 
@@ -104,4 +104,4 @@ Le marketeur Bodea active le segment vers la destination Marketo, ce qui lui per
 
 ## Étapes suivantes
 
-En suivant ce tutoriel, vous avez exploité avec succès les différents services Adobe Experience Platform utilisés par l’édition B2B de Real-time CDP. Par conséquent, vous avez appris à ingérer, segmenter, évaluer et exporter vos données B2B en tant qu’audiences exploitables pouvant être engagées sur différents canaux. 
+En suivant ce tutoriel, vous avez exploité avec succès les différents services Adobe Experience Platform utilisés par Real-Time CDP B2B Edition. Par conséquent, vous avez appris à ingérer, segmenter, évaluer et exporter vos données B2B en tant qu’audiences exploitables pouvant être engagées sur différents canaux. 

@@ -1,24 +1,24 @@
 ---
 keywords: présentation des mesures ; Présentation des mesures rtcdp
-title: Page d’accueil et tableaux de bord de la plateforme de données client en temps réel
+title: Page d’accueil et tableaux de bord Real-time Customer Data Platform
 description: Tableaux de bord, page d’accueil et première expérience client d’Adobe Experience Platform
 exl-id: ced5b69c-5bb5-4e06-9cb4-938e36e6e5cc
-source-git-commit: ad0d38cbd249642d582a807c5679065827f57717
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '619'
-ht-degree: 74%
+source-wordcount: '620'
+ht-degree: 63%
 
 ---
 
-# [!DNL Real-time Customer Data Platform] page d’accueil et tableaux de bord
+# [!DNL Real-Time Customer Data Platform] page d’accueil et tableaux de bord
 
-La page d’accueil de Real-time Customer Data Platform (plateforme de données clients en temps réel), qui comprend un tableau de bord de mesures, s’affiche lorsque vous vous connectez à la plateforme de données clients en temps réel.
+La page d’accueil d’Adobe Real-time Customer Data Platform (Real-Time CDP), qui comprend un tableau de bord de mesures, s’affiche lorsque vous vous connectez à Real-Time CDP.
 
-La page d’accueil n’est qu’un des emplacements où les cartes de mesures apparaissent. La plateforme CDP en temps réel fournit des cartes de mesure tout au long de votre expérience. Ces mesures indiquent les données, les profils et les audiences de segments du système.
+La page d’accueil n’est qu’un des emplacements où les cartes de mesures apparaissent. Real-Time CDP fournit des cartes de mesure tout au long de votre expérience. Ces mesures indiquent les données, les profils et les audiences de segments du système.
 
 ![image](assets/home.png)
 
-Si le système ne contient aucune donnée lorsque vous vous connectez à la plateforme CDP en temps réel, le tableau de bord de la page d’accueil n’apparaît pas. Dans ce cas, la page d’accueil propose des ressources pédagogiques pour une première expérience client. Au fur et à mesure de la collecte des données (c’est-à-dire au fur et à mesure de la création <!--sources-->des jeux de données, profils, segments et destinations ainsi que de la transmission des données au système), le tableau de bord se met automatiquement à jour pour afficher les informations sur ces données<!-- in metric cards-->.
+Si le système ne contient aucune donnée lorsque vous vous connectez à Real-Time CDP, le tableau de bord de la page d’accueil n’apparaît pas. Dans ce cas, la page d’accueil propose des ressources pédagogiques pour une première expérience client. Au fur et à mesure de la collecte des données (c’est-à-dire au fur et à mesure de la création <!--sources-->des jeux de données, profils, segments et destinations ainsi que de la transmission des données au système), le tableau de bord se met automatiquement à jour pour afficher les informations sur ces données<!-- in metric cards-->.
 
 ## Affichage du tableau de bord de la page d’accueil
 
@@ -37,7 +37,7 @@ Some information is shown in different ways on both the leaderboard and metric c
 
    ![image](assets/recent.png)
 
-D’autres mesures, par exemple pour les profils et les segments, sont disponibles dans d’autres parties de la plateforme de données client en temps réel.
+D’autres mesures, par exemple pour les profils et les segments, sont disponibles dans d’autres parties de Real-time Customer Data Platform.
 
 ### Jeux de données
 
@@ -53,7 +53,7 @@ Ce compte utilise la [stratégie de fusion](profile/merge-policies.md) par défa
 
 Le nombre de profils est mis à jour une fois toutes les 24 heures.
 
-Pour plus d’informations sur les profils, consultez [Une vue unifiée de votre client dans la plateforme CDP en temps réel](profile/profile-overview.md).
+Pour plus d’informations sur les profils, voir [Une vue unifiée de votre client dans Real-Time CDP](profile/profile-overview.md).
 
 ### Segments
 
@@ -77,7 +77,7 @@ There is also a metric card that shows the percentage of successful records. Sel
 
 The number of successful profile records is updated hourly. 
 
-For more information about profiles, see [A unified view of your customer in Real-time CDP](profile/profile-overview.md).
+For more information about profiles, see [A unified view of your customer in Real-Time CDP](profile/profile-overview.md).
 
 ### Total profile records
 
@@ -89,7 +89,7 @@ The **[!UICONTROL Total profile records]** metric card shows the total number of
 
 Select **[!UICONTROL View profiles]** to see more details about the profile records.
 
-For more information about profiles, see [A unified view of your customer in Real-time CDP](profile/profile-overview.md).
+For more information about profiles, see [A unified view of your customer in Real-Time CDP](profile/profile-overview.md).
 
 For more information about viewing a specific profile, see [Profile viewer](profile/profile-viewer.md).
 

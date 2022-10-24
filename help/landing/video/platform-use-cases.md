@@ -7,9 +7,9 @@ doc-type: video
 activity: understand
 thumbnail: 32806.jpg
 exl-id: 400280bd-3366-4982-b5a6-9f68c85de5e0
-source-git-commit: f12baaa9d4b37f1101792a4ae479b5a62893eb68
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '73'
+source-wordcount: '74'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 Cette vidéo présente quatre cas pratiques clés d’Experience Platform :
 
-* Plateforme de données client en temps réel
+* Adobe Real-time Customer Data Platform
 * Renseignements sur les parcours clients
 * Diffusion et expérience cross-canal
 * Développement d’applications d’expérience client

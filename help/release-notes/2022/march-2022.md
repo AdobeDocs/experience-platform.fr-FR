@@ -2,10 +2,10 @@
 title: Notes de mise à jour de Adobe Experience Platform - Mars 2022
 description: Notes de mise à jour de mars 2022 pour Adobe Experience Platform.
 exl-id: 0d499aa6-e25d-4d34-ad32-5e4ab361cba1
-source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '1194'
-ht-degree: 98%
+ht-degree: 97%
 
 ---
 
@@ -47,7 +47,7 @@ Pour plus d’informations sur les journaux d’audit dans Platform, consultez l
 >
 >La fonctionnalité Comptes associés est disponible uniquement pour les clients de Real-Time CDP B2B Edition.
 
-Les entreprises B2B ont souvent leurs informations client stockées dans plusieurs systèmes, chacun ne contenant que des données partielles, voire conflictuelles, pour la même entité commerciale physique. Il est donc très difficile d’avoir une visualisation précise de leurs clients, ce qui réduit l’efficacité et l’efficience de leurs efforts de marketing et de vente B2B. Grâce à la fonctionnalité Comptes associés, [!DNL Real-time CDP B2B] vous montre désormais une liste de comptes similaires au compte que vous être en train de parcourir. Vous pouvez inclure les comptes associés dans vos définitions de segment pour élargir votre portée ou appliquer des critères plus larges dans vos segments.
+Les entreprises B2B ont souvent leurs informations client stockées dans plusieurs systèmes, chacun ne contenant que des données partielles, voire conflictuelles, pour la même entité commerciale physique. Il est donc très difficile d’avoir une visualisation précise de leurs clients, ce qui réduit l’efficacité et l’efficience de leurs efforts de marketing et de vente B2B. Grâce à la fonctionnalité Comptes associés, [!DNL Real-Time CDP B2B] vous montre désormais une liste de comptes similaires au compte que vous être en train de parcourir. Vous pouvez inclure les comptes associés dans vos définitions de segment pour élargir votre portée ou appliquer des critères plus larges dans vos segments.
 
 Pour en savoir plus sur cette fonctionnalité, consultez les pages de documentation suivantes :
 
@@ -55,7 +55,7 @@ Pour en savoir plus sur cette fonctionnalité, consultez les pages de documentat
 - [Section « Comptes associés » du guide de l’interface utilisateur du profil de compte](../../rtcdp/accounts/account-profile-ui-guide.md#related-accounts-tab)
 - [Comment utiliser les comptes associés dans les définitions de segment ?](../../rtcdp/segmentation/b2b.md#related-accounts)
 
-Pour en savoir plus sur Real-time CDP B2B Edition, consultez la [présentation](../../rtcdp/overview.md).
+Pour en savoir plus sur Real-Time CDP B2B Edition, voir [aperçu](../../rtcdp/overview.md).
 
 ## Alertes {#alerts}
 

@@ -3,10 +3,10 @@ keywords: destinations;destination;types de destinations
 title: Types et catégories de destination
 description: Découvrez les différents types et catégories de destinations dans Adobe Experience Platform.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '640'
-ht-degree: 36%
+source-wordcount: '642'
+ht-degree: 35%
 
 ---
 
@@ -35,9 +35,9 @@ Les destinations d’exportation de profils reçoivent des données brutes, souv
 
 >[!IMPORTANT]
 >
->Les destinations d’entreprise ou les destinations d’exportation de profils en continu sont disponibles pour [Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform.html) clients uniquement.
+>Les destinations d’entreprise ou les destinations d’exportation de profils en continu sont disponibles pour [Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform.html) clients uniquement.
 
-Utilisez les connecteurs de données de destination d’entreprise pour fournir des profils Real-time Customer Data Platform en temps quasi réel aux systèmes internes ou à d’autres systèmes tiers pour la synchronisation des données, l’analyse et d’autres cas d’utilisation d’enrichissement de profil.
+Utilisez les connecteurs de données de destination d’entreprise pour fournir des profils Adobe Real-time Customer Data Platform en temps quasi réel aux systèmes internes ou à d’autres systèmes tiers pour la synchronisation des données, l’analyse et d’autres cas d’utilisation d’enrichissement de profil.
 
 Ces destinations reçoivent des données de segment et de profil en tant que flux de données Experience Platform.
 

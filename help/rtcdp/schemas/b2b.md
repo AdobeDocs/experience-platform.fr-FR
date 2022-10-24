@@ -1,23 +1,23 @@
 ---
-title: Schémas dans l’édition B2B de Real-time Customer Data Platform
-description: Présentation du rôle des schémas de modèle de données d’expérience (XDM) dans l’édition B2B de Real-time Customer Data Platform.
+title: Schémas dans Real-time Customer Data Platform version B2B
+description: Présentation du rôle des schémas de modèle de données d’expérience (XDM) dans l’édition B2B d’Adobe Real-time Customer Data Platform.
 exl-id: 3b18d377-108f-443f-86ae-dc7537cf9013
-source-git-commit: 1a104d26b920082ee73178dd0ad7234ad43dec1a
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '235'
-ht-degree: 100%
+source-wordcount: '237'
+ht-degree: 45%
 
 ---
 
-# Schémas dans l’édition B2B de Real-time Customer Data Platform
+# Schémas dans Real-time Customer Data Platform version B2B
 
-L’édition B2B de Real-time Customer Data Platform offre plusieurs classes de [modèle de données d’expérience (XDM) standard](../../xdm/schema/composition.md#class) qui capturent des détails sur les entités de données B2B essentielles, telles que les comptes, les opportunités, les campagnes, etc. En outre, l’édition B2B de Real-time CDP permet de définir des relations multiples-à-un entre ces schémas afin qu’ils puissent participer à des cas d’utilisation de segmentation avancée.
+L’édition B2B d’Adobe Real-time Customer Data Platform offre plusieurs [Classes XDM (Experience Data Model)](../../xdm/schema/composition.md#class) qui capturent des détails sur les entités de données B2B essentielles, telles que les comptes, les opportunités, les campagnes, etc. En outre, l’édition B2B de Real-Time CDP vous permet de définir des relations multiples-à-un entre ces schémas afin qu’ils puissent participer à des cas d’utilisation de segmentation avancée.
 
 >[!IMPORTANT]
 >
->Pour pouvoir participer à [Real-time Customer Profile](../../profile/home.md), les schémas B2B doivent avoir accès à l’édition B2B de Real-time CDP.
+>Vous devez avoir accès à l’édition B2B de Real-Time CDP pour que les schémas B2B puissent participer à [Real-time Customer Profile](../../profile/home.md).
 
-Les classes standard suivantes sont fournies dans l’édition B2B de Real-time CDP :
+Les classes standard suivantes sont fournies dans Real-Time CDP B2B Edition :
 
 * [Compte d’entreprise XDM](../../xdm/classes/b2b/business-account.md)
 * [Relation avec la personne du compte d’entreprise XDM](../../xdm/classes/b2b/business-account-person-relation.md)

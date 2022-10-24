@@ -1,18 +1,18 @@
 ---
 keywords: Présentation de l’administration rtcdp;présentation de l’administration
 title: Présentation de l’administration Real-time Customer Data Platform
-description: Ce document présente les fonctionnalités d’administration de la plateforme de données client en temps réel, optimisée par Adobe Experience Platform.
+description: Ce document présente les fonctionnalités d’administration d’Adobe Real-time Customer Data Platform, optimisées par Adobe Experience Platform.
 exl-id: c5bdeac6-345a-4ef1-bc5a-a993f565b9d6
-source-git-commit: ad0d38cbd249642d582a807c5679065827f57717
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '282'
-ht-degree: 54%
+source-wordcount: '283'
+ht-degree: 33%
 
 ---
 
 # Présentation de l’administration Real-time Customer Data Platform
 
-Ce document présente les fonctionnalités d’administration d’ [!DNL Real-time Customer Data Platform], optimisée par Adobe Experience Platform.
+Ce document présente les fonctionnalités d’administration d’ [!DNL Adobe Real-Time Customer Data Platform], optimisée par Adobe Experience Platform.
 
 [!DNL Experience Platform] permet aux administrateurs de gérer le contrôle d’accès en fonction du rôle pour les utilisateurs, ainsi que de gérer les environnements de test virtuels pour le développement d’applications.
 
@@ -26,7 +26,7 @@ Pour en savoir plus sur le contrôle d’accès, voir [présentation du contrôl
 
 >[!IMPORTANT]
 >
->Pour obtenir un guide détaillé sur l’accès aux fonctionnalités de la plateforme CDP en temps réel, notamment sur l’activation de la visibilité dans l’interface utilisateur, suivez les étapes fournies dans le [guide d’utilisation du contrôle d’accès](../../access-control/ui/overview.md), plus particulièrement les sections sur la gestion des informations et des services supplémentaires pour un profil de produit.
+>Pour obtenir un guide détaillé sur l’octroi de l’accès aux fonctionnalités Real-Time CDP, notamment sur l’activation de la visibilité dans l’interface utilisateur, suivez les étapes fournies dans la section [guide d’utilisation du contrôle d’accès](../../access-control/ui/overview.md), en particulier pour la gestion des détails et des services supplémentaires pour un profil de produit.
 
 ## Environnements de test
 

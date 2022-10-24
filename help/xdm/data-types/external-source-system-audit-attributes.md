@@ -2,9 +2,9 @@
 title: Type de données Attributs d’audit du système de source externe
 description: Ce document présente un aperçu du type de données XDM (Extend Source Audit System Attributes) du modèle de données d’expérience (XDM).
 exl-id: ebdd8707-9675-4232-a5b7-4e4a481d706a
-source-git-commit: 7e07ba8b5d7bc7df809a9a122d2a58837c933674
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '216'
+source-wordcount: '217'
 ht-degree: 14%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 14%
 
 >[!NOTE]
 >
->Ce type de données est uniquement disponible pour les organisations qui ont accès à l’édition B2B de Real-time Customer Data Platform.
+>Ce type de données est uniquement disponible pour les organisations qui ont accès à l’édition B2B d’Adobe Real-time Customer Data Platform.
 
 [!UICONTROL Attributs d’audit du système de source externe] est un type de données XDM (Experience Data Model) standard qui capture les détails de l’audit sur un système source externe.
 

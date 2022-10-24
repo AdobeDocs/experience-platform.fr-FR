@@ -2,10 +2,10 @@
 title: Notes de mise à jour de Adobe Experience Platform - Avril 2022
 description: Notes de mise à jour d’avril 2022 pour Adobe Experience Platform.
 exl-id: 39233787-3089-4469-8363-b006ae41ae21
-source-git-commit: 6798c15b1cee781c41b9faf5cc6dcfa73090a60a
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '2916'
-ht-degree: 98%
+ht-degree: 96%
 
 ---
 
@@ -21,7 +21,7 @@ Mises à jour des fonctionnalités existantes dans Adobe Experience Platform 
 - [[!DNL Data Prep]](#data-prep)
 - [Destinations](#destinations)
 - [Modèle de données d’expérience (XDM)](#xdm)
-- [Édition B2B de Real-time Customer Data Platform](#B2B)
+- [Édition B2B de Real-Time Customer Data Platform](#B2B)
 - [Sources](#sources)
 
 ## [!DNL Dashboards] {#dashboards}
@@ -189,7 +189,7 @@ Pour plus d’informations sur les [!DNL Intelligent Services], consultez la [[!
 
 ### IA dédiée aux clients
 
-L’IA dédiée aux clients disponible dans Real-time Customer Data Platform est utilisée pour générer des scores de propension personnalisés tels que l’attrition et la conversion pour des profils individuels à grande échelle. Cette opération s’effectue sans qu’il soit nécessaire de transformer les besoins professionnels en un problème de machine learning ou d’avoir recours à un algorithme, à une formation ou à un déploiement.
+Customer AI disponible dans Real-time Customer Data Platform est utilisé pour générer des scores de propension personnalisés tels que l’attrition et la conversion pour des profils individuels à grande échelle. Cette opération s’effectue sans qu’il soit nécessaire de transformer les besoins professionnels en un problème de machine learning ou d’avoir recours à un algorithme, à une formation ou à un déploiement.
 
 **Fonctionnalités mises à jour**
 
@@ -200,9 +200,9 @@ L’IA dédiée aux clients disponible dans Real-time Customer Data Platform 
 
 Pour plus d’informations sur les [!DNL Intelligent Services], consultez [[!DNL Intelligent Services] la présentation](../../intelligent-services/home.md).
 
-## Édition B2B de Real-time Customer Data Platform {#B2B}
+## Édition B2B de Real-Time Customer Data Platform {#B2B}
 
-Basée sur Real-time Customer Data Platform (Real-time CDP), l’édition B2B de Real-time CDP a été conçue pour les professionnels du marketing travaillant dans un modèle de service business-to-business. Elle rassemble des données provenant de sources multiples et les combine en une vue unique des profils de comptes et d’utilisateurs. Ces données unifiées permettent aux professionnels du marketing de cibler précisément des audiences spécifiques afin de stimuler leur engagement sur tous les canaux disponibles.
+Basée sur Real-time Customer Data Platform (Real-Time CDP), Real-Time CDP B2B Edition est conçue spécifiquement pour les spécialistes du marketing qui opèrent dans un modèle de service business-to-business. Elle rassemble des données provenant de sources multiples et les combine en une vue unique des profils de comptes et d’utilisateurs. Ces données unifiées permettent aux professionnels du marketing de cibler précisément des audiences spécifiques afin de stimuler leur engagement sur tous les canaux disponibles.
 
 **Fonctionnalités mises à jour**
 
@@ -210,7 +210,7 @@ Basée sur Real-time Customer Data Platform (Real-time CDP), l’édition B2B de
 | --- | --- |
 | Prise en charge de la fonctionnalité `isDeleted` | Tous les jeux de données [!DNL Marketo], sauf `Activities` prennent désormais en charge le mappage `isDeleted`. Le nouveau mappage est automatiquement ajouté à vos flux de données B2B existants. Vous pouvez utiliser le mappage `isDeleted` pour filtrer les enregistrements supprimés afin que les données dans le [!DNL Data Lake] soient cohérentes avec les données sources. Consultez le [[!DNL Marketo] guide du mappage des champs](../../sources/connectors/adobe-applications/mapping/marketo.md) pour plus d’informations sur `isDeleted`. |
 
-Pour en savoir plus sur l’édition B2B de Real-time Customer Data Platform, consultez la [présentation B2B](../../rtcdp/b2b-overview.md).
+Pour en savoir plus sur Real-time Customer Data Platform B2B Edition, voir [Présentation B2B](../../rtcdp/b2b-overview.md).
 
 ## Sources {#sources}
 

@@ -5,9 +5,9 @@ title: Glossaire Adobe Experience Platform
 topic-legacy: getting started
 description: Glossaire reprenant la terminologie principale d’Experience Platform.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: c0f01efa224bffb5b435e2f247e793edfbc576b9
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '7428'
+source-wordcount: '7436'
 ht-degree: 12%
 
 ---
@@ -74,7 +74,7 @@ ht-degree: 12%
 
 **Identifiant de lot**: Un identifiant de lot est un identifiant généré par l’Adobe pour un lot de données.
 
-**Ingestion par lots**: L’ingestion par lots vous permet d’ingérer des données dans Experience Platform sous forme de fichiers de lot. Les lots sont des unités de données composées d’un ou de plusieurs fichiers à ingérer en tant qu’unité unique.
+**Ingestion par lots**: L’ingestion par lots vous permet d’ingérer des données dans Experience Platform en tant que fichiers de lot. Les lots sont des unités de données composées d’un ou de plusieurs fichiers à ingérer en tant qu’unité unique.
 
 **Segmentation par lots**: La segmentation par lots est une alternative à un processus continu de sélection de données et déplace toutes les données de profil à la fois via des définitions de segment pour produire les audiences correspondantes. Une fois créé, ce segment est enregistré et stocké afin de pouvoir être exporté en vue de son utilisation.
 
@@ -118,7 +118,7 @@ ht-degree: 12%
 
 **Libellé du contrat C5**: A `C5` le libellé d’utilisation des données Contrat indique que les données ne peuvent pas être utilisées pour le ciblage intersite de contenu ou de publicités en fonction des intérêts. Le ciblage en fonction des intérêts, ou personnalisation, se produit si les trois conditions suivantes sont remplies : Les données collectées sur site sont utilisées pour établir des inférences sur les intérêts d’un utilisateur ; est utilisé dans un autre contexte, par exemple sur un autre site ou une autre application ; et est utilisé pour sélectionner le contenu ou les publicités diffusés en fonction de ces inférences.
 
-**Libellé du contrat C6**: A `C6` le libellé d’utilisation des données Contrat indique que les données ne peuvent pas être utilisées pour le ciblage des publicités sur site. Le ciblage des publicités sur site inclut la sélection et la diffusion de publicités sur les sites web ou les applications de votre organisation, ou pour mesurer la diffusion et l’efficacité de ces publicités. Cela inclut l’utilisation de données précédemment collectées sur site sur l’intérêt des utilisateurs pour sélectionner des publicités, traiter les données sur les publicités affichées, le moment et le lieu de leur diffusion, et si les utilisateurs ont pris des mesures en rapport avec la publicité, comme sélectionner une publicité ou effectuer un achat.
+**Libellé du contrat C6**: A `C6` le libellé d’utilisation des données Contrat indique que les données ne peuvent pas être utilisées pour le ciblage des publicités sur site. Le ciblage des publicités sur site inclut la sélection et la diffusion de publicités sur les sites web ou les applications de votre organisation, ou pour mesurer la diffusion et l’efficacité de ces publicités. Cela inclut l’utilisation de données précédemment collectées sur site concernant l’intérêt des utilisateurs pour sélectionner des publicités, le traitement des données concernant les publicités affichées, le moment et le lieu de leur diffusion, et le fait de savoir si les utilisateurs ont pris des mesures en rapport avec la publicité, comme sélectionner une publicité ou effectuer un achat.
 
 **Libellé du contrat C7**: A `C7` le libellé d’utilisation des données Contrat indique que les données ne peuvent pas être utilisées pour le ciblage de contenu sur site. Le ciblage de contenu sur site inclut la sélection et la diffusion de contenu sur les sites web ou les applications de votre entreprise, ou pour mesurer la diffusion et l’efficacité de ce contenu. Cela inclut les informations précédemment collectées sur l’intérêt des utilisateurs à sélectionner le contenu, à traiter les données sur le contenu affiché, la fréquence ou la durée de sa diffusion, le moment et le lieu de sa diffusion, et si les utilisateurs ont pris des mesures relatives au contenu, par exemple en sélectionnant le contenu.
 
@@ -298,7 +298,7 @@ ht-degree: 12%
 
 **Fonctionnalité d’entrée**: Une fonctionnalité d’entrée est spécifiée dans le mappage des fonctionnalités et est utilisée par un modèle d’apprentissage automatique pour faire des prédictions.
 
-**[!DNL Intelligent Services]**: [!DNL Intelligent Services] par exemple [!DNL Attribution AI] et [!DNL Customer AI] sont des modèles d’apprentissage automatique basés sur l’intelligence artificielle qui nécessitent des Experience Platform (ou des applications reposant sur Platform telles que Real-time Customer Data Platform) pour fonctionner et fonctionner.
+**[!DNL Intelligent Services]**: [!DNL Intelligent Services] par exemple [!DNL Attribution AI] et [!DNL Customer AI] sont des modèles d’apprentissage automatique basés sur l’intelligence artificielle qui nécessitent des Experience Platform (ou des applications reposant sur Platform telles qu’Adobe Real-time Customer Data Platform) pour fonctionner.
 
 **Ciblage ou personnalisation en fonction des intérêts**: Le ciblage en fonction des intérêts, également appelé personnalisation, se produit si les trois conditions suivantes sont remplies :
 
@@ -414,7 +414,7 @@ ht-degree: 12%
 
 ## R
 
-**Real-time Customer Data Platform**: [!DNL Real-time Customer Data Platform] rassemble des données clients connues et inconnues afin de créer des profils clients de confiance avec une intégration simplifiée, une segmentation intelligente et une activation en temps réel sur le parcours client numérique.
+**Real-time Customer Data Platform**: Adobe Real-time Customer Data Platform (Real-Time CDP) rassemble des données clients connues et inconnues afin de créer des profils clients de confiance avec une intégration simplifiée, une segmentation intelligente et une activation en temps réel sur le parcours client numérique.
 
 **Real-time Customer Profile**: Real-time Customer Profile (parfois appelé Profile) offre une vue d’ensemble de chaque client en combinant des données issues de plusieurs canaux, notamment en ligne, hors ligne, CRM et tiers. Profile vous permet de consolider vos données client en profils individuels offrant des comptes horodatés exploitables de chaque interaction client.
 

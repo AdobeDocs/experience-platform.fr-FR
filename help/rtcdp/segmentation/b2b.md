@@ -1,17 +1,17 @@
 ---
-title: Cas d’utilisation de la segmentation pour l’édition B2B de la plateforme CDP en temps réel
-description: Présentation des différents cas d’utilisation de la plateforme CDP B2B en temps réel disponibles.
+title: Cas d’utilisation de la segmentation pour l’édition B2B de Real-time Customer Data Platform
+description: Présentation des différents cas d’utilisation de l’édition B2B d’Adobe Real-time Customer Data Platform disponibles.
 exl-id: 2a99b85e-71b3-4781-baf7-a4d5436339d3
-source-git-commit: 1fed0cf37e7297c21330ebf51ae15054aa21c781
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '1275'
+source-wordcount: '1283'
 ht-degree: 1%
 
 ---
 
 # Cas d’utilisation de la segmentation pour Real-time Customer Data Platform B2B Edition
 
-Ce document fournit des exemples de définitions de segment dans l’édition B2B de la plateforme CDP en temps réel et explique comment différents types d’attributs peuvent être combinés pour les cas d’utilisation B2B courants. Pour comprendre comment les destinations s’intègrent à votre workflow B2B, reportez-vous à la section [tutoriel de bout en bout](../b2b-tutorial.md#create-a-segment-to-evaluate-your-data).
+Ce document fournit des exemples de définitions de segment dans Adobe Real-time Customer Data Platform Édition B2B et explique comment différents types d’attributs peuvent être combinés pour les cas d’utilisation B2B courants. Pour comprendre comment les destinations s’intègrent à votre workflow B2B, reportez-vous à la section [tutoriel de bout en bout](../b2b-tutorial.md#create-a-segment-to-evaluate-your-data).
 
 >[!NOTE]
 >
@@ -36,7 +36,7 @@ Les classes B2B et leurs attributs sont ajoutés à un `B2B` dans l’espace de 
 
 Afin de créer efficacement des segments pour les cas d’utilisation B2B, il est important de posséder une connaissance approfondie du schéma et de comprendre à quoi ressemble le modèle de données. Il est également utile de connaître le chemin que les données empruntent d’un objet de données à un autre.
 
-L’image ci-dessous illustre les relations entre les classes B2B disponibles dans l’édition B2B de la plateforme CDP en temps réel.
+L’image ci-dessous illustre les relations entre les classes B2B disponibles dans Real-Time CDP B2B Edition.
 
 ![ERD de classe B2B](../assets/segmentation/b2b-classes.png)
 
@@ -114,4 +114,4 @@ Recherchez tous les profils dont le score de piste est supérieur à 80.
 
 ## Étapes suivantes {#next-steps}
 
-Après avoir lu cet aperçu, vous comprenez désormais les possibilités de segmentation disponibles à l’aide de la plateforme de données clients en temps réel, l’édition B2B. Pour plus d’informations sur Segmentation Service, consultez la [documentation sur la segmentation](../../segmentation/home.md).
+Après avoir lu cet aperçu, vous comprenez désormais les possibilités de segmentation disponibles avec Real-Time CDP, Edition B2B. Pour plus d’informations sur Segmentation Service, consultez la [documentation sur la segmentation](../../segmentation/home.md).

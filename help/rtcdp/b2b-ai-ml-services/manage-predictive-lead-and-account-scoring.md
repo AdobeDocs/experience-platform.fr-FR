@@ -1,16 +1,16 @@
 ---
-title: Gestion de la notation prédictive des pistes et des comptes dans la plateforme CDP B2B en temps réel
+title: Gestion des scores de piste et de compte prédictifs dans Real-Time CDP B2B
 type: Documentation
 description: Ce document fournit des informations sur la gestion de la fonctionnalité de notation de compte et de piste prédictive dans la plateforme CDP B2B Experience Platform.
 exl-id: fe7eb94e-5cf1-46bf-80e5-affe5735c998
-source-git-commit: 99b3b2d73b87a64fcaa9ba51563c0942fc21a0dc
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '1017'
+source-wordcount: '1018'
 ht-degree: 5%
 
 ---
 
-# Gestion des scores de piste et de compte prédictifs dans Real-time Customer Data Platform, Édition B2B
+# Gestion des scores de piste et de compte prédictifs dans Adobe Real-time Customer Data Platform, Édition B2B
 
 >[!NOTE]
 >
@@ -58,7 +58,7 @@ Pour configurer la période de prédiction, sélectionnez la flèche de liste d�
 
 La stratégie de fusion sélectionnée détermine la manière dont les valeurs de champ d’un profil de personne sont sélectionnées. À l’aide de la flèche de liste déroulante, sélectionnez la stratégie de fusion de votre choix, puis sélectionnez **[!UICONTROL Terminer]**.
 
-Le **[!UICONTROL La configuration de notation est terminée.]** s’affiche, confirmant que le nouveau score a été créé. **[!UICONTROL Cliquez sur OK]**.
+Le **[!UICONTROL La configuration de notation est terminée.]** s’affiche, confirmant que le nouveau score a été créé. Sélectionnez **[!UICONTROL OK]**.
 
 ![plas-score-complete](../assets/../b2b-ai-ml-services/assets/plas-score-complete.png)
 

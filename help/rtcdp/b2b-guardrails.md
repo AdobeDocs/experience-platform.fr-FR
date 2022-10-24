@@ -1,23 +1,23 @@
 ---
-keywords: profil;profil client en temps réel;dépannage;barrières de sécurité;directives;limite;entité;entité principale;entité de dimension;RTCDP;CDP;Édition B2B de Real-time Customer Data Platform;plateforme de données client en temps réel;cdp en temps réel;b2b;cdp;
-title: Barrières de sécurité par défaut pour l’édition B2B de Real-time Customer Data Platform
+keywords: profil;profil client en temps réel;dépannage;garde-fous;directives;limite;entité;entité Principale;entité de dimension;RTCDP;CDP;Édition B2B;Real-time Customer Data Platform;plateforme de données client en temps réel;cdp en temps réel;b2b;cdp;
+title: Barrières de sécurité par défaut pour Real-time Customer Data Platform version B2B
 type: Documentation
-description: Adobe Experience Platform utilise un modèle de données hybride fortement dénormalisé qui diffère du modèle de données relationnelles traditionnel. Ce document fournit des limites d’utilisation et de débit par défaut pour vous aider à modéliser vos données pour optimiser les performances du système à l’aide de l’édition B2B de Real-time Customer Data Platform.
+description: Adobe Experience Platform utilise un modèle de données hybride fortement dénormalisé qui diffère du modèle de données relationnelles traditionnel. Ce document fournit des limites d’utilisation et de débit par défaut pour vous aider à modéliser vos données pour optimiser les performances du système à l’aide de l’édition B2B d’Adobe Real-time Customer Data Platform.
 exl-id: 8eff8c3f-a250-4aec-92a1-719ce4281272
-source-git-commit: 9f00bff31f9e7d2da1294d3d1f24cba7870a4614
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '1601'
-ht-degree: 100%
+source-wordcount: '1602'
+ht-degree: 66%
 
 ---
 
-# Barrières de sécurité par défaut pour l’édition B2B de Real-time Customer Data Platform
+# Barrières de sécurité par défaut pour Real-time Customer Data Platform version B2B
 
 >[!NOTE]
 >
->Les limites décrites dans ce document représentent les modifications activées par l’édition B2B de Real-time Customer Data Platform. Pour obtenir une liste complète des limites par défaut pour l’édition B2B de Real-time CDP, combinez ces limites aux limites Adobe Experience Platform générales décrites dans la section [Barrières de sécurité de la documentation sur les données Real-time Customer Profile](../profile/guardrails.md).
+>Les limites décrites dans ce document représentent les modifications activées par Real-time Customer Data Platform B2B Edition. Pour obtenir une liste complète des limites par défaut de l’édition B2B de Real-Time CDP, combinez ces limites aux limites générales de Adobe Experience Platform décrites dans la section [Barrières de sécurité de la documentation sur les données Real-time Customer Profile](../profile/guardrails.md).
 
-L’édition B2B de Real-time Customer Data Platform vous permet de proposer des expériences cross-canal personnalisées basées sur des informations comportementales et des attributs du client sous la forme de profils client en temps réel et de profils de compte. Pour prendre en charge cette nouvelle approche des profils, Experience Platform utilise un modèle de données hybride fortement dénormalisé qui diffère du modèle de données relationnelles traditionnel.
+L’édition B2B de Real-time Customer Data Platform vous permet de proposer des expériences cross-canal personnalisées basées sur des informations comportementales et des attributs du client sous la forme de profils client en temps réel et de profils de compte. Pour prendre en charge cette nouvelle approche des profils, Experience Platform utilise un modèle de données hybride fortement dénormalisé qui diffère du modèle de données relationnelles traditionnel.
 
 Ce document fournit des limites d’utilisation et de débit par défaut pour vous aider à modéliser vos données pour optimiser les performances du système. Lors de la révision des barrières de sécurité suivantes, on suppose que vous avez correctement modélisé les données. Si vous avez des questions sur la manière de modéliser vos données, contactez votre représentant du service client.
 
@@ -45,11 +45,11 @@ Les barrières de sécurité suivantes fournissent des limites recommandées lor
 
 >[!NOTE]
 >
->Les limites de modèle de données décrites dans cette section représentent les modifications activées par l’édition B2B de Real-time Customer Data Platform. Pour obtenir une liste complète des limites par défaut pour l’édition B2B de Real-time CDP, combinez ces limites aux limites Adobe Experience Platform générales décrites dans la section [Barrières de sécurité de la documentation sur les données Real-time Customer Profile](../profile/guardrails.md).
+>Les limites de modèle de données décrites dans cette section représentent les modifications activées par Real-time Customer Data Platform B2B Edition. Pour obtenir une liste complète des limites par défaut de l’édition B2B de Real-Time CDP, combinez ces limites aux limites générales de Adobe Experience Platform décrites dans la section [Barrières de sécurité de la documentation sur les données Real-time Customer Profile](../profile/guardrails.md).
 
 | Barrière de sécurité | Limite | Type de limite | Description |
 | --- | --- | --- | --- |
-| Jeux de données de classe XDM standard de l’édition B2B de Real-time CDP | 60 | Soft | Il est recommandé d’utiliser au maximum 60 jeux de données qui exploitent les classes standard de modèle de données d’expérience (XDM) fournies par l’édition B2B de Real-time CDP. Pour obtenir la liste complète des classes XDM standard pour les cas d’utilisation B2B, reportez-vous à la section [schémas dans la documentation de l’édition B2B de Real-time CDP](schemas/b2b.md). <br/><br/>*Remarque : en raison de la nature du modèle de données hybride dénormalisé d’Experience Platform, la plupart des clients ne dépasse pas cette limite. Pour toute question sur la manière de modéliser vos données ou pour en savoir plus sur les limites personnalisées, contactez votre représentant de l’assistance clientèle.* |
+| Jeux de données de classe XDM standard Real-Time CDP B2B Edition | 60 | Soft | Il est recommandé d’utiliser un maximum de 60 jeux de données qui utilisent les classes XDM (Experience Data Model) standard fournies par Real-Time CDP B2B Edition. Pour obtenir la liste complète des classes XDM standard pour les cas d’utilisation B2B, reportez-vous à la section [schémas dans la documentation de Real-Time CDP B2B Edition](schemas/b2b.md). <br/><br/>*Remarque : en raison de la nature du modèle de données hybride dénormalisé d’Experience Platform, la plupart des clients ne dépasse pas cette limite. Pour toute question sur la manière de modéliser vos données ou pour en savoir plus sur les limites personnalisées, contactez votre représentant de l’assistance clientèle.* |
 | Anciennes relations à entités multiples | 20 | Soft | Il est recommandé d’établir au maximum 20 relations à entités multiples définies entre des entités principales et des entités de dimension. D’autres mappages de relation ne doivent pas être effectués tant qu’une relation existante n’est pas supprimée ou désactivée. |
 | Relations multiples-à-un par classe XDM | 2 | Soft | Il est recommandé de définir au maximum 2 relations multiples-à-un par classe XDM. Une relation supplémentaire ne doit pas être établie tant qu’une relation existante n’a pas été supprimée ou désactivée. Pour savoir comment créer une relation entre deux schémas, reportez-vous au tutoriel sur la [définition des relations de schéma B2B](../xdm/tutorials/relationship-b2b.md). |
 
@@ -57,7 +57,7 @@ Les barrières de sécurité suivantes fournissent des limites recommandées lor
 
 >[!NOTE]
 >
->Les limites de modèle de données décrites dans cette section représentent les modifications activées par l’édition B2B de Real-time Customer Data Platform. Pour obtenir une liste complète des limites par défaut pour l’édition B2B de Real-time CDP, combinez ces limites aux limites Adobe Experience Platform générales décrites dans la section [Barrières de sécurité de la documentation sur les données Real-time Customer Profile](../profile/guardrails.md).
+>Les limites de modèle de données décrites dans cette section représentent les modifications activées par Real-time Customer Data Platform B2B Edition. Pour obtenir une liste complète des limites par défaut de l’édition B2B de Real-Time CDP, combinez ces limites aux limites générales de Adobe Experience Platform décrites dans la section [Barrières de sécurité de la documentation sur les données Real-time Customer Profile](../profile/guardrails.md).
 
 | Barrière de sécurité | Limite | Type de limite | Description |
 | --- | --- | --- | --- |
@@ -77,7 +77,7 @@ Les barrières de sécurité suivantes se rapportent à la taille des données e
 
 >[!NOTE]
 >
->Les limites de taille des données décrites dans cette section représentent les modifications activées par l’édition B2B de Real-time Customer Data Platform. Pour obtenir une liste complète des limites par défaut pour l’édition B2B de Real-time CDP, combinez ces limites aux limites Adobe Experience Platform générales décrites dans la section [Barrières de sécurité de la documentation sur les données Real-time Customer Profile](../profile/guardrails.md).
+>Les limites de taille des données décrites dans cette section représentent les modifications activées par Real-time Customer Data Platform B2B Edition. Pour obtenir une liste complète des limites par défaut de l’édition B2B de Real-Time CDP, combinez ces limites aux limites générales de Adobe Experience Platform décrites dans la section [Barrières de sécurité de la documentation sur les données Real-time Customer Profile](../profile/guardrails.md).
 
 | Barrière de sécurité | Limite | Type de limite | Description |
 | --- | --- | --- | --- |
@@ -87,7 +87,7 @@ Les barrières de sécurité suivantes se rapportent à la taille des données e
 
 >[!NOTE]
 >
->Les limites de taille des données décrites dans cette section représentent les modifications activées par l’édition B2B de Real-time Customer Data Platform. Pour obtenir une liste complète des limites par défaut pour l’édition B2B de Real-time CDP, combinez ces limites aux limites Adobe Experience Platform générales décrites dans la section [Barrières de sécurité de la documentation sur les données Real-time Customer Profile](../profile/guardrails.md).
+>Les limites de taille des données décrites dans cette section représentent les modifications activées par Real-time Customer Data Platform B2B Edition. Pour obtenir une liste complète des limites par défaut de l’édition B2B de Real-Time CDP, combinez ces limites aux limites générales de Adobe Experience Platform décrites dans la section [Barrières de sécurité de la documentation sur les données Real-time Customer Profile](../profile/guardrails.md).
 
 | Barrière de sécurité | Limite | Type de limite | Description |
 | --- | --- | --- | --- |
@@ -101,7 +101,7 @@ Les barrières de sécurité décrites dans cette section font référence au no
 
 >[!NOTE]
 >
->Les limites de segmentation décrites dans cette section représentent les modifications activées par l’édition B2B de Real-time Customer Data Platform. Pour obtenir une liste complète des limites par défaut pour l’édition B2B de Real-time CDP, combinez ces limites aux limites Adobe Experience Platform générales décrites dans la section [Barrières de sécurité de la documentation sur les données Real-time Customer Profile](../profile/guardrails.md).
+>Les limites de segmentation décrites dans cette section représentent les modifications activées par Real-time Customer Data Platform B2B Edition. Pour obtenir une liste complète des limites par défaut de l’édition B2B de Real-Time CDP, combinez ces limites aux limites générales de Adobe Experience Platform décrites dans la section [Barrières de sécurité de la documentation sur les données Real-time Customer Profile](../profile/guardrails.md).
 
 | Barrière de sécurité | Limite | Type de limite | Description |
 | --- | --- | --- | --- |
@@ -109,7 +109,7 @@ Les barrières de sécurité décrites dans cette section font référence au no
 
 ## Étapes suivantes
 
-Les limites décrites dans ce document représentent les modifications activées par l’édition B2B de Real-time Customer Data Platform. Pour obtenir une liste complète des limites par défaut pour l’édition B2B de Real-time CDP, combinez ces limites aux limites Adobe Experience Platform générales décrites dans la section [Barrières de sécurité de la documentation sur les données Real-time Customer Profile](../profile/guardrails.md).
+Les limites décrites dans ce document représentent les modifications activées par Real-time Customer Data Platform B2B Edition. Pour obtenir une liste complète des limites par défaut de l’édition B2B de Real-Time CDP, combinez ces limites aux limites générales de Adobe Experience Platform décrites dans la section [Barrières de sécurité de la documentation sur les données Real-time Customer Profile](../profile/guardrails.md).
 
 ## Annexe
 

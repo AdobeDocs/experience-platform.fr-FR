@@ -1,12 +1,12 @@
 ---
 keywords: stratégies de fusion rtcdp;rtcdp stratégies de fusion
 title: Stratégies de fusion dans Real-time Customer Data Platform
-description: Utilisation de stratégies de fusion dans la plateforme de données client en temps réel
+description: Utilisation de stratégies de fusion dans Adobe Real-time Customer Data Platform
 exl-id: 1a9d9549-a7de-46d7-a23e-dd41829839c5
-source-git-commit: 5611a5abc7d1ed7781108b6f263e7550092b715d
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '156'
-ht-degree: 38%
+source-wordcount: '157'
+ht-degree: 32%
 
 ---
 

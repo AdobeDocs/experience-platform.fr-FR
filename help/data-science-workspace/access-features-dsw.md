@@ -5,9 +5,9 @@ title: Accès et fonctionnalités de Data Science Workspace
 topic-legacy: Access and features for data science workspace
 description: Le document suivant décrit les autorisations de Data Science Workspace et l’accès aux fonctionnalités.
 exl-id: 6759fea4-adb9-4e4e-9f3d-e0e8c885b1dd
-source-git-commit: 2ff2721f5420483ddc5caffd1eb0532df729e01b
+source-git-commit: e67b3a6f9f57a3971a5bfa755db3b1043bebc96b
 workflow-type: tm+mt
-source-wordcount: '684'
+source-wordcount: '688'
 ht-degree: 18%
 
 ---
@@ -24,7 +24,7 @@ Le document suivant décrit les autorisations de Data Science Workspace et l’a
 
 Pourquoi est-ce que je ne vois que l’onglet Services ?
 
-- Votre entreprise ne peut avoir droit qu’à Real-time Customer Data Platform (RTCDP) qui inclut le service Customer AI AI/ML.
+- Votre entreprise ne peut avoir droit qu’à Adobe Real-time Customer Data Platform (Real-Time CDP) qui inclut le service Customer AI AI/ML.
 
 Si vous ne parvenez pas à voir l’une des **Science des données** Pour utiliser les fonctionnalités de Data Science Workspace, contactez l’administrateur de votre société afin de vérifier si vous disposez d’une licence Adobe Experience Platform Intelligence.
 
@@ -59,7 +59,7 @@ Pour utiliser Data Science Workspace, l’autorisation « Gestion de Data Scien
 
 | Autorisation | Activé | Désactivé |
 |---|---|---|
-| Gestion de Data Science Workspace | Permet d’accéder à tous les services de Data Science Workspace. | L’accès aux API et à l’interface utilisateur de tous les services de Data Science Workspace est désactivé. Lorsque cette option est désactivée, sélectionnez la variable **Notebooks**, **Modèles**, et **Services** Les pages ne sont pas autorisées. <li>Accès à **Services** peut toujours être disponible via Real-time Customer Data Platform (RTCDP).</li> |
+| Gestion de Data Science Workspace | Permet d’accéder à tous les services de Data Science Workspace. | L’accès aux API et à l’interface utilisateur de tous les services de Data Science Workspace est désactivé. Lorsque cette option est désactivée, sélectionnez la variable **Notebooks**, **Modèles**, et **Services** Les pages ne sont pas autorisées. <li>Accès à **Services** peut toujours être disponible via Adobe Real-time Customer Data Platform (Real-Time CDP).</li> |
 
 ## Prise en charge des environnements de test
 

@@ -6,7 +6,7 @@ title: Dépannage des erreurs Attribution AI
 description: Trouvez des réponses aux erreurs courantes dans Attribution AI.
 type: Documentation
 exl-id: c2ff700a-1e36-4ba2-876c-9f8b56344241
-source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '167'
 ht-degree: 0%
@@ -19,7 +19,7 @@ Ce document répond aux questions les plus fréquemment posées sur Attribution 
 
 ## Impossible d’accéder à Attribution AI dans Chrome incognito
 
-Les erreurs de chargement en mode incognito de Google Chrome sont présentes en raison des mises à jour apportées aux paramètres de sécurité du mode incognito de Google. Le problème est en cours de traitement avec Chrome pour faire d’experience.adobe.com un domaine de confiance.
+Les erreurs de chargement en mode incognito de Google Chrome sont présentes en raison des mises à jour des paramètres de sécurité du mode incognito de Google Chrome. Le problème est en cours de traitement avec Chrome pour faire d’experience.adobe.com un domaine de confiance.
 
 <img src="./images/faq/error.PNG" width="500" /><br />
 
