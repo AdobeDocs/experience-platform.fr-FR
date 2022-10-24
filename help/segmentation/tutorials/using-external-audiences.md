@@ -5,9 +5,9 @@ title: Import et utilisation d'audiences externes
 description: Suivez ce tutoriel pour découvrir comment utiliser des audiences externes avec Adobe Experience Platform.
 topic-legacy: tutorial
 exl-id: 56fc8bd3-3e62-4a09-bb9c-6caf0523f3fe
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 13fd1e372a63b55c41893f41d1590d9dab9f7903
 workflow-type: tm+mt
-source-wordcount: '1471'
+source-wordcount: '1445'
 ht-degree: 5%
 
 ---
@@ -45,10 +45,6 @@ La première étape de l’utilisation d’audiences externes consiste à créer
 Pour créer un espace de noms d’identité, suivez les instructions de la section [guide d’espace de noms d’identité](../../identity-service/namespaces.md#manage-namespaces). Lors de la création de votre espace de noms d’identité, ajoutez les détails sources à l’espace de noms d’identité et marquez son [!UICONTROL Type] as a **[!UICONTROL Identifiant de non-personne]**.
 
 ![](../images/tutorials/external-audiences/identity-namespace-info.png)
-
->[!NOTE]
->
->Pour commencer à utiliser des espaces de noms personnalisés avec des audiences externes, vous devez créer un ticket de support. Pour plus d’informations, contactez votre représentant d’Adobe.
 
 ## Création d’un schéma pour les métadonnées de segment
 
