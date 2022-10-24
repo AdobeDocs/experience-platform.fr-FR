@@ -5,20 +5,25 @@ title: Mappage des champs pour la source du Marketo Engage
 topic-legacy: overview
 description: Les tableaux ci-dessous contiennent les mappages entre les champs des jeux de données Marketo et les champs XDM correspondants.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: be3ec7dc7e2089a8cee0b1577659e1ec0a465044
+source-git-commit: a0ca9cff43b6f8276268467fecf944c664992950
 workflow-type: tm+mt
-source-wordcount: '713'
-ht-degree: 11%
+source-wordcount: '746'
+ht-degree: 10%
 
 ---
 
-# [!DNL Marketo Engage] mappages de champs
+# [!DNL Marketo Engage] mappages de champs {#marketo-engage-field-mappings}
+
+>[!CONTEXTUALHELP]
+>id="platform_sources_marketo_mapping"
+>title="Mappages des champs sources Marketo"
+>abstract="Pour établir une connexion source entre Marketo et Platform, les champs de données source Marketo doivent être mappés à leurs champs XDM cibles appropriés avant d’être ingérés dans Platform."
 
 Les tableaux ci-dessous contiennent les mappages entre les champs des neuf [!DNL Marketo] jeux de données et leurs champs de modèle de données d’expérience (XDM) correspondants.
 
 >[!TIP]
 >
->Tous [!DNL Marketo] jeux de données, sauf `Activities` prise en charge désormais `isDeleted`. Vos flux de données existants incluront automatiquement `isDeleted`, mais n’ingère que l’indicateur pour les données nouvellement ingérées. Si vous souhaitez appliquer l’indicateur à toutes vos données historiques, vous devez arrêter vos flux de données existants et les recréer avec le nouveau mappage. Veuillez noter que si vous supprimez `isDeleted`, vous n’aurez plus accès à la fonctionnalité. Il est essentiel que le mappage soit conservé une fois qu’il est automatiquement renseigné.
+>Tous [!DNL Marketo] jeux de données, sauf `Activities` prise en charge désormais `isDeleted`. Vos flux de données existants incluront automatiquement `isDeleted`, mais n’ingère que l’indicateur pour les données nouvellement ingérées. Si vous souhaitez appliquer l’indicateur à toutes vos données historiques, vous devez arrêter vos flux de données existants et les recréer avec le nouveau mappage. Notez que si vous supprimez `isDeleted`, vous n’aurez plus accès à la fonctionnalité. Il est essentiel que le mappage soit conservé une fois qu’il est automatiquement renseigné.
 
 ## Activités {#activities}
 
