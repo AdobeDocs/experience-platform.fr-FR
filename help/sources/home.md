@@ -5,10 +5,10 @@ title: Présentation des connecteurs source
 topic-legacy: overview
 description: Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous permettant de structurer, de libeller et d’améliorer les données entrantes à l’aide des services de Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, des bases de données, etc.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 9eb7cdd08069a74a8f0680a8a2af7e7e950e83b7
-workflow-type: ht
-source-wordcount: '1111'
-ht-degree: 100%
+source-git-commit: 7bcdfb2a49e0c0b65282d401114754a4cc114ad8
+workflow-type: tm+mt
+source-wordcount: '1123'
+ht-degree: 98%
 
 ---
 
@@ -29,17 +29,19 @@ Les sources dans Experience Platform sont regroupées dans les catégories suiv
 Experience Platform permet d’ingérer des données provenant d’autres applications Adobe, notamment Adobe Analytics et Adobe Audience Manager. Pour plus d’informations, consultez les documents connexes suivants :
 
 - [Présentation de la source Adobe Audience Manager](connectors/adobe-applications/audience-manager.md)
-- [Créer une connexion source Adobe Audience Manager dans l’interface utilisateur](./tutorials/ui/create/adobe-applications/audience-manager.md)
+   - [Créer une connexion source Adobe Audience Manager dans l’interface utilisateur](./tutorials/ui/create/adobe-applications/audience-manager.md)
 - [Présentation de la source de données de classifications Adobe Analytics](connectors/adobe-applications/classifications.md)
-- [Créer une connexion de source de données de classifications Adobe Analytics dans l’interface utilisateur](./tutorials/ui/create/adobe-applications/classifications.md)
+   - [Créer une connexion de source de données de classifications Adobe Analytics dans l’interface utilisateur](./tutorials/ui/create/adobe-applications/classifications.md)
 - [Présentation de source de données de la suite de rapports Adobe Analytics](connectors/adobe-applications/analytics.md)
-- [Créer une connexion source Adobe Analytics dans l’interface utilisateur](./tutorials/ui/create/adobe-applications/analytics.md)
+   - [Créer une connexion source Adobe Analytics dans l’interface utilisateur](./tutorials/ui/create/adobe-applications/analytics.md)
 - [Présentation de la source Adobe Campaign Managed Cloud Services](connectors/adobe-applications/campaign.md)
-- [Créer une connexion source Adobe Campaign Managed Services à l’aide de l’interface utilisateur de Platform](./tutorials/ui/create/adobe-applications/campaign.md)
+   - [Créer une connexion source Adobe Campaign Managed Services à l’aide de l’interface utilisateur de Platform](./tutorials/ui/create/adobe-applications/campaign.md)
 - [Présentation de la source de collecte de données Adobe](connectors/adobe-applications/data-collection.md)
-- [Créer une connexion source Attributs du client dans l’interface utilisateur](./tutorials/ui/create/adobe-applications/customer-attributes.md)
+   - [Créer une connexion source Attributs du client dans l’interface utilisateur](./tutorials/ui/create/adobe-applications/customer-attributes.md)
 - [Présentation de la source [!DNL Marketo Engage]](connectors/adobe-applications/marketo/marketo.md)
-- [Créer une connexion source  [!DNL Marketo Engage]  dans l’interface utilisateur](./tutorials/ui/create/adobe-applications/marketo.md)
+   - [Créer une connexion source  [!DNL Marketo Engage]  dans l’interface utilisateur](./tutorials/ui/create/adobe-applications/marketo.md)
+- [Présentation de la source Adobe Workfront](connectors/adobe-applications/workfront.md)
+   - [Création d’une connexion source Workfront dans l’interface utilisateur](./tutorials/ui/create/adobe-applications/workfront.md)
 
 ### Publicité {#advertising}
 
