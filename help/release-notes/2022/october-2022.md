@@ -1,10 +1,10 @@
 ---
 title: Notes de mise à jour de Adobe Experience Platform - Octobre 2022
 description: Notes de mise à jour d’octobre 2022 pour Adobe Experience Platform.
-source-git-commit: 098b4b7a0dcd3ddfcd13f7dd473c4fa6832d23df
+source-git-commit: 0ea2718247792e997b7a90ab9027946e800c8157
 workflow-type: tm+mt
-source-wordcount: '609'
-ht-degree: 54%
+source-wordcount: '764'
+ht-degree: 52%
 
 ---
 
@@ -12,14 +12,13 @@ ht-degree: 54%
 
 **Date de publication : 26 octobre 2022**
 
-Nouvelles fonctionnalités d’Adobe Experience Platform :
-
 - [Clés gérées par le client](#cmk)
 
 Mises à jour des fonctionnalités existantes dans Adobe Experience Platform :
 
 - [Collecte de données](#data-collection)
 - [Modèle de données d’expérience (XDM)](#xdm)
+- [Query Service](#query-service)
 - [Sources](#sources)
 
 ## Clés gérées par le client {#cmk}
@@ -57,6 +56,21 @@ XDM est une spécification Open Source qui fournit des structures et des défini
 {style=&quot;table-layout:auto&quot;}
 
 Pour plus d’informations sur XDM dans Platform, consultez la [présentation du système XDM](../../xdm/home.md).
+
+## Query Service {#query-service}
+
+Query Service vous permet d’utiliser le langage SQL standard pour interroger les données dans le [!DNL Data Lake] d’Adobe Experience Platform. Vous pouvez joindre n’importe quel jeu de données à partir du [!DNL Data Lake] et capturer les résultats de la requête sous la forme d’un nouveau jeu de données à utiliser dans les rapports, dans Data Science Workspace ou pour l’ingestion dans Profil client en temps réel.
+
+**Fonctionnalités mises à jour**
+
+| Fonctionnalité | Description |
+| --- | --- |
+| Modèle de données d’insights de reporting accéléré de requête | Dans le cadre du SKU de Data Distiller, le magasin accéléré de requêtes vous permet de réduire le temps et la puissance de traitement requis pour obtenir des informations essentielles sur vos données. Avec le magasin accéléré de requêtes, vous pouvez créer un modèle de données personnalisé et/ou étendre sur les modèles de données Adobe Real-time Customer Data Platform existants pour améliorer vos informations de création de rapports et leurs visualisations. Voir [document d’informations sur les rapports de magasin accélérés de requête](https://experienceleague.adobe.com/docs/experience-platform/query/query-accelerated-store/reporting-insights-data-model.html) pour en savoir plus sur cette fonctionnalité. |
+
+{style=&quot;table-layout:auto&quot;}
+
+Pour plus d’informations sur Query Service, consultez la section [présentation de Query Service](../../query-service/home.md).
+Nouvelles fonctionnalités d’Adobe Experience Platform :
 
 ## Sources {#sources}
 
