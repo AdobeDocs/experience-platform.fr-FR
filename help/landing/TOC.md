@@ -3,10 +3,10 @@ audience: user
 user-guide-title: Présentation d’Adobe Experience Platform
 breadcrumb-title: Présentation d’Experience Platform
 user-guide-description: Découvrez comment Experience Platform est capable de fournir des expériences personnalisées à vos clients en temps réel.
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 24efebb89ba36f5047558acd368638f456356a9e
 workflow-type: tm+mt
-source-wordcount: '246'
-ht-degree: 93%
+source-wordcount: '248'
+ht-degree: 92%
 
 ---
 
@@ -59,6 +59,7 @@ ht-degree: 93%
    * Journaux d’audit {#audit-logs}
       * [Présentation](./governance-privacy-security/audit-logs/overview.md)
    * [Cryptage des données](./governance-privacy-security/encryption.md)
+   * [Clés gérées par le client](./governance-privacy-security/customer-managed-keys.md)
 * Utilisation de la licence et barrières de sécurité {#license}
    * [Bonnes pratiques relatives aux droits de licence de gestion des données](./license-usage-and-guardrails/data-management-best-practices.md)
    * [Tableau de bord d’utilisation de la licence](./license-usage-and-guardrails/license-usage-dashboard.md)
