@@ -3,10 +3,10 @@ keywords: Experience Platform;accueil;rubriques populaires;connecteur source Aud
 title: Création d’une connexion source Adobe Audience Manager dans l’interface utilisateur
 description: Ce tutoriel vous guide tout au long des étapes nécessaires à la création d’une connexion source pour Adobe Audience Manager afin d’importer les données d’événement d’expérience client dans Platform à l’aide de l’interface utilisateur.
 exl-id: 90c4a719-aaad-4687-afd8-7a1c0c56f744
-source-git-commit: 90a917ea2b623079f26c67b776dd46b62531c7da
+source-git-commit: 9cdb8933d166445bf41ed314d7ffc7d5762e1adb
 workflow-type: tm+mt
-source-wordcount: '523'
-ht-degree: 18%
+source-wordcount: '583'
+ht-degree: 25%
 
 ---
 
@@ -46,6 +46,10 @@ Une fois que vous avez identifié et sélectionné les segments que vous souhait
 ![select-data](../../../../images/tutorials/create/aam/select-data.png)
 
 Vous pouvez également sélectionner la variable **[!UICONTROL Sélectionner tous les segments]** et **[!UICONTROL Sélectionner toutes les caractéristiques]** des boîtes de dialogue. La sélection de tous les segments apporte les segments d’Audience Manager à Platform, tandis que la sélection de toutes les caractéristiques active toutes les caractéristiques propriétaires de l’Audience Manager.
+
+>[!WARNING]
+>
+>L’ingestion de populations de segments d’Audience Manager importantes a un impact direct sur le nombre total de profils lorsque vous envoyez un segment d’Audience Manager pour la première fois à Platform à l’aide de la source Audience Manager. Cela signifie que la sélection de tous les segments peut potentiellement entraîner un nombre de profils excédant vos droits d’utilisation de licence. Consultez les [prime d&#39;utilisation de licence](../../../../../dashboards/guides/license-usage.md) avant de poursuivre.
 
 Une fois que vous avez terminé, sélectionnez **[!UICONTROL Suivant]**
 
