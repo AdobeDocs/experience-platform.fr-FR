@@ -1,9 +1,9 @@
 ---
 title: Clés gérées par le client dans Adobe Experience Platform
 description: Découvrez comment configurer vos propres clés de chiffrement pour les données stockées dans Adobe Experience Platform.
-source-git-commit: f06f00f7581ccd7fe64f5292a53ebb0303c65069
+source-git-commit: 6fe0d72bcb3dbf1e1167f80724577ba3e0f741f4
 workflow-type: tm+mt
-source-wordcount: '1418'
+source-wordcount: '1416'
 ht-degree: 2%
 
 ---
@@ -65,7 +65,7 @@ Une fois que vous êtes parvenu au **[!DNL Review + create]** vous pouvez consul
 
 ![Configuration de base pour le coffre-fort de clé](../images/governance-privacy-security/customer-managed-keys/finish-creation.png)
 
-## Octroi d’une exception de pare-feu à Microsoft
+## Configuration des options de mise en réseau
 
 Si votre coffre-fort clé est configuré pour restreindre l’accès public à certains réseaux virtuels ou désactiver entièrement l’accès public, vous devez accorder à Microsoft une exception de pare-feu.
 
