@@ -1,10 +1,10 @@
 ---
 title: Notes de mise à jour de Adobe Experience Platform - Octobre 2022
 description: Notes de mise à jour d’octobre 2022 pour Adobe Experience Platform.
-source-git-commit: 0ea2718247792e997b7a90ab9027946e800c8157
+source-git-commit: 021a0833941f250475786bb8629542c50229b238
 workflow-type: tm+mt
-source-wordcount: '764'
-ht-degree: 52%
+source-wordcount: '916'
+ht-degree: 51%
 
 ---
 
@@ -17,6 +17,7 @@ ht-degree: 52%
 Mises à jour des fonctionnalités existantes dans Adobe Experience Platform :
 
 - [Collecte de données](#data-collection)
+- [Destinations](#destinations)
 - [Modèle de données d’expérience (XDM)](#xdm)
 - [Query Service](#query-service)
 - [Sources](#sources)
@@ -40,6 +41,27 @@ Adobe Experience Platform fournit une suite de technologies qui vous permetten
 | [!DNL Zendesk] extension pour le transfert d’événement | Vous pouvez désormais envoyer des données à [!DNL Zendesk] à l’aide d’une [transfert d’événement](../../tags/ui/event-forwarding/overview.md) extension . Voir [[!DNL Zendesk] présentation de l’extension](../../tags/extensions/web/zendesk/overview.md) pour plus d’informations. |
 
 {style=&quot;table-layout:auto&quot;}
+
+## [!DNL Destinations] {#destinations}
+
+Les [!DNL Destinations] sont des intégrations préconfigurées à des plateformes de destination qui permettent d’activer facilement des données provenant d’Adobe Experience Platform. Vous pouvez utiliser les destinations pour activer vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
+
+**Fonctionnalités nouvelles ou mises à jour**
+
+| Destination | Description |
+| ----------- | ----------- |
+| [[!DNL Line]](../../destinations/catalog/mobile-engagement/line.md) | Line est une plate-forme de communication populaire qui connecte les gens, les services et l&#39;information et est passée d&#39;une application de chat à un centre de divertissement, social et d&#39;activités quotidiennes. |
+| [[!DNL Microsoft Dynamics 365]](../../destinations/catalog/crm/microsoft-dynamics-365.md) | Microsoft Dynamics 365 est une plateforme d’applications métier cloud qui combine la planification des ressources de l’entreprise (ERP) et la gestion de la relation client (CRM), ainsi que des applications de productivité et des outils d’IA, afin d’offrir des opérations de bout en bout plus fluides et plus contrôlées, un meilleur potentiel de croissance et des coûts réduits. |
+
+{style=&quot;table-layout:auto&quot;}
+
+**Documentation nouvelle ou mise à jour**
+
+| Documentation | Description |
+| ----------- | ----------- |
+| [Barrières de sécurité des destinations](../../destinations/guardrails.md) | Cette page fournit les limites d’utilisation et de taux par défaut en ce qui concerne le comportement d’activation. |
+
+Pour des informations plus générales sur les destinations, consultez la [présentation des destinations](../../destinations/home.md).
 
 ## Modèle de données d’expérience (XDM) {#xdm}
 
