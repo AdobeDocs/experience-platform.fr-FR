@@ -5,9 +5,9 @@ title: Définition des champs d’énumération et des valeurs proposées dans l
 description: Découvrez comment définir des énumérations et des valeurs suggérées pour les champs de chaîne dans l’interface utilisateur de l’Experience Platform.
 topic-legacy: user guide
 exl-id: 67ec5382-31de-4f8d-9618-e8919bb5a472
-source-git-commit: 1c1797a01a0a4e2cd355399d3f913cb81adf9006
+source-git-commit: 89ada47cb6e0b204d8f2f19e7e9b6f31bf347964
 workflow-type: tm+mt
-source-wordcount: '1217'
+source-wordcount: '1257'
 ht-degree: 0%
 
 ---
@@ -28,6 +28,10 @@ Contrairement aux énumérations, la variable **[!UICONTROL Valeurs proposées]*
 When [définition d’un nouveau champ](./overview.md#define) dans l’interface utilisateur de Adobe Experience Platform et définissez le type sur [!UICONTROL Chaîne], vous avez la possibilité de définir une [enum](#enum) ou [valeurs suggérées](#suggested-values) pour ce champ.
 
 ![Image montrant l’option Énumération et valeurs proposées activée pour un champ de chaîne dans l’interface utilisateur](../../images/ui/fields/enum/enum-options-selected.png)
+
+Ce document explique comment définir des énumérations et des valeurs suggérées dans le [!UICONTROL Schémas] Espace de travail de l’interface utilisateur. Pour un aperçu rapide des énumérations et des valeurs suggérées, y compris la manière de les configurer dans l’interface utilisateur et de leurs effets en aval, regardez la vidéo suivante :
+
+>[!VIDEO](https://video.tv.adobe.com/v/3409501/?quality=12&learn=on)
 
 ## Définition d’une énumération {#enum}
 
