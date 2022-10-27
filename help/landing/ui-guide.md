@@ -5,9 +5,9 @@ title: Présentation de l’interface utilisateur Experience Platform
 topic-legacy: ui guide
 description: Adobe Experience Platform
 exl-id: 47f9a3fb-731d-4ade-8069-faaa18f224dc
-source-git-commit: 769e8e6e5d159254d34ad1d3e5e468c3b0bca10b
+source-git-commit: 9c450f340706040593dfea5292702c4b00dd9852
 workflow-type: tm+mt
-source-wordcount: '1812'
+source-wordcount: '1811'
 ht-degree: 2%
 
 ---
@@ -154,7 +154,7 @@ Le **[!UICONTROL Schémas]** vous permet de créer et de gérer des schémas de 
 
 Le **[!UICONTROL Jeux de données]** vous permet de créer et de gérer des jeux de données. Vous trouverez plus d’informations sur les jeux de données dans la section [guide d’utilisation des jeux de données](../catalog/datasets/user-guide.md).
 
-Le **[!UICONTROL Requêtes]** vous permet de créer et gérer des requêtes, de consigner des requêtes SQL effectuées par Adobe Experience Platform Query Service et d’afficher vos informations d’identification PostgreSQL. Vous trouverez plus d’informations sur les requêtes dans la section [Guide d’utilisation de Query Service](../query-service/ui/overview.md).
+Le **[!UICONTROL Requêtes]** permet de créer et de gérer des requêtes, de consigner des requêtes SQL effectuées par Adobe Experience Platform Query Service et d’afficher vos [!DNL PostgreSQL] informations d’identification. Vous trouverez plus d’informations sur les requêtes dans la section [Guide d’utilisation de Query Service](../query-service/ui/overview.md).
 
 Le **[!UICONTROL Surveillance]** vous permet de surveiller l’ingestion par lots et par flux. Vous trouverez plus d’informations sur la surveillance dans la section [guide d’utilisation de la surveillance de l’ingestion des données](../ingestion/quality/monitor-data-ingestion.md).
 

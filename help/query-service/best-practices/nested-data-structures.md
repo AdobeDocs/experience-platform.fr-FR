@@ -3,9 +3,9 @@ keywords: Experience Platform;service de requête;service de requête;structures
 title: Utilisation de structures de données imbriquées dans Query Service
 description: Ce document fournit un exemple de travail pour le traitement et la transformation des champs de données imbriqués à l’aide des instructions CTAS et INSERT INTO .
 exl-id: 593379fb-88ad-4b14-8d2e-aa6d18129974
-source-git-commit: b2b292dba0cf9ab9adbdff26aa61ef5a2cd5fe86
+source-git-commit: 9c450f340706040593dfea5292702c4b00dd9852
 workflow-type: tm+mt
-source-wordcount: '796'
+source-wordcount: '795'
 ht-degree: 2%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 Adobe Experience Platform Query Service prend en charge l’utilisation de champs de données imbriqués. La complexité des structures de données d’entreprise peut rendre la transformation ou le traitement de ces données compliqué. Ce document fournit des exemples de création, de traitement ou de transformation de jeux de données avec des types de données complexes, y compris des structures de données imbriquées.
 
-Query Service fournit une interface PostgreSQL permettant d’exécuter des requêtes SQL sur tous les jeux de données gérés par Experience Platform. Platform prend en charge l’utilisation de types de données primitifs ou complexes dans les colonnes de tableau comme struct, les tableaux, les cartes et les structs, les tableaux et les mappages profondément imbriqués. Les jeux de données peuvent également contenir des structures imbriquées dans lesquelles le type de données de colonne peut être aussi complexe qu’un tableau de structures imbriquées, ou une carte de mappages dans laquelle la valeur d’une paire clé-valeur peut être une structure avec plusieurs niveaux d’imbrication.
+Query Service fournit un [!DNL PostgreSQL] pour exécuter des requêtes SQL sur tous les jeux de données gérés par Experience Platform. Platform prend en charge l’utilisation de types de données primitifs ou complexes dans les colonnes de tableau comme struct, les tableaux, les cartes et les structs, les tableaux et les mappages profondément imbriqués. Les jeux de données peuvent également contenir des structures imbriquées dans lesquelles le type de données de colonne peut être aussi complexe qu’un tableau de structures imbriquées, ou une carte de mappages dans laquelle la valeur d’une paire clé-valeur peut être une structure avec plusieurs niveaux d’imbrication.
 
 ## Prise en main
 

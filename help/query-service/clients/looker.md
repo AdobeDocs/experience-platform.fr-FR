@@ -5,10 +5,10 @@ title: Connexion de Looker à Query Service
 topic-legacy: connect
 description: Ce document décrit les étapes à suivre pour connecter Looker à Adobe Experience Platform Query Service.
 exl-id: 806e9077-533a-4546-b5ca-8124751957f5
-source-git-commit: ad3e1b0de6dd3b82cc82f0dc3d0f36b12cd3899e
+source-git-commit: 75e97efcb68439f1b837af93b62c96f43e5d7a31
 workflow-type: tm+mt
-source-wordcount: '275'
-ht-degree: 12%
+source-wordcount: '313'
+ht-degree: 10%
 
 ---
 
@@ -22,15 +22,15 @@ Ce document décrit les étapes de connexion. [!DNL Looker] avec Adobe Experienc
 
 Après vous être connecté à [!DNL Looker], sélectionnez **[!DNL Admin]**, suivie de **[!DNL Connections]**.
 
-![](../images/clients/looker/click-admin-connections.png)
+![Le [!DNL Looker] tableau de bord avec connexions en surbrillance dans le menu déroulant Admin .](../images/clients/looker/click-admin-connections.png)
 
 Sur cette page, sélectionnez **[!DNL New Connection]**.
 
-![](../images/clients/looker/click-new-connection.png)
+![L’espace de travail Connexions avec la nouvelle connexion est mis en surbrillance.](../images/clients/looker/click-new-connection.png)
 
 À partir de là, vous pouvez remplir les détails des paramètres de connexion.
 
-![](../images/clients/looker/new-connection.png)
+![La page Paramètres de connexion d’une nouvelle connexion.](../images/clients/looker/new-connection.png)
 
 - **[!DNL Name]:** Nom de la connexion.
 - **[!DNL Dialect]:** Le dialecte utilisé pour la base de données SQL. [!DNL Query Service] uses **[!DNL PostgreSQL]**.
@@ -47,7 +47,7 @@ Pour plus d’informations sur la recherche de l’hôte et du port, du nom de l
 
 Après avoir saisi les détails de votre connexion, sélectionnez **[!DNL Test These Settings]** pour vous assurer que vos informations d’identification fonctionnent correctement. Si tel est le cas, un message indiquant que vous pouvez vous connecter s’affiche ci-dessous. Si votre connexion a réussi, sélectionnez **[!DNL Add Connection]** pour créer votre connexion.
 
-![](../images/clients/looker/click-test-connection.png)
+![La page Paramètres de connexion d’une nouvelle connexion avec Test de ces paramètres est mise en surbrillance.](../images/clients/looker/click-test-connection.png)
 
 ## Étapes suivantes
 

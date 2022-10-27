@@ -3,9 +3,9 @@ keywords: Experience Platform;accueil;rubriques populaires;service de requête;s
 title: Options SSL de Query Service
 description: Découvrez la prise en charge du protocole SSL pour les connexions tierces à Adobe Experience Platform Query Service et comment vous connecter à l’aide du mode SSL vérification-full.
 exl-id: 41b0a71f-165e-49a2-8a7d-d809f5f683ae
-source-git-commit: be877502f63fe08f17abe7cb0cf9f247394bf1ac
+source-git-commit: 75e97efcb68439f1b837af93b62c96f43e5d7a31
 workflow-type: tm+mt
-source-wordcount: '905'
+source-wordcount: '903'
 ht-degree: 1%
 
 ---
@@ -33,8 +33,8 @@ Les différentes `sslmode` les valeurs de paramètre offrent différents niveaux
 | `allow` | Partiel | Non | La sécurité n’est pas une priorité, la vitesse et une faible surcharge de traitement sont plus importantes. Ce mode opte uniquement pour le cryptage si le serveur insiste dessus. |
 | `prefer` | Partiel | Non | Le chiffrement n’est pas nécessaire, mais la communication sera chiffrée si le serveur le prend en charge. |
 | `require` | Oui | Non | Le chiffrement est requis pour toutes les communications. Le réseau est approuvé pour la connexion au serveur approprié. La validation du certificat SSL du serveur n’est pas requise. |
-| `verify-ca` | Oui | Dépend de la stratégie d’autorité de certification | Le chiffrement est requis pour toutes les communications. La validation du serveur est requise avant le partage des données. Pour ce faire, vous devez configurer un certificat racine dans votre répertoire racine PostgreSQL. [Vous trouverez ci-dessous des informations détaillées](#instructions) |
-| `verify-full` | Oui | Oui | Le chiffrement est requis pour toutes les communications. La validation du serveur est requise avant le partage des données. Pour ce faire, vous devez configurer un certificat racine dans votre répertoire racine PostgreSQL. [Vous trouverez ci-dessous des informations détaillées](#instructions). |
+| `verify-ca` | Oui | Dépend de la stratégie d’autorité de certification | Le chiffrement est requis pour toutes les communications. La validation du serveur est requise avant le partage des données. Pour ce faire, vous devez configurer un certificat racine dans votre [!DNL PostgreSQL] répertoire racine. [Vous trouverez ci-dessous des informations détaillées](#instructions) |
+| `verify-full` | Oui | Oui | Le chiffrement est requis pour toutes les communications. La validation du serveur est requise avant le partage des données. Pour ce faire, vous devez configurer un certificat racine dans votre [!DNL PostgreSQL] répertoire racine. [Vous trouverez ci-dessous des informations détaillées](#instructions). |
 
 >[!NOTE]
 >

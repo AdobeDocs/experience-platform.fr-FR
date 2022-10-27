@@ -5,10 +5,10 @@ title: Connexion de Postico à Query Service
 topic-legacy: connect
 description: Ce document contient le lien d’installation du client de sauvegarde Postico pour Adobe Experience Platform Query Service.
 exl-id: a19abfc8-b431-4e57-b44d-c6130041af4a
-source-git-commit: 910a38ccb556ec427584d9b522e29f6877d1c987
+source-git-commit: 75e97efcb68439f1b837af93b62c96f43e5d7a31
 workflow-type: tm+mt
-source-wordcount: '248'
-ht-degree: 7%
+source-wordcount: '291'
+ht-degree: 6%
 
 ---
 
@@ -24,7 +24,7 @@ Ce document décrit les étapes de connexion. [!DNL Postico] avec Adobe Experien
 
 Pour se connecter [!DNL Postico] à Query Service, ouvrez [!DNL Postico] et sélectionnez **[!DNL New Favorite]**.
 
-![](../images/clients/postico/open-postico.png)
+![Le [!DNL Postico] Interface utilisateur avec l’option Nouveau favori mise en surbrillance.](../images/clients/postico/open-postico.png)
 
 Vous pouvez désormais saisir des valeurs pour vous connecter à Adobe Experience Platform.
 
@@ -32,25 +32,25 @@ Pour plus d’informations sur la recherche du nom de la base de données, de l�
 
 Après avoir inséré vos informations d’identification, sélectionnez **[!DNL Connect]** pour vous connecter à Query Service.
 
-![](../images/clients/postico/authentication-details.png)
+![Boîte de dialogue Nouveau favori avec connexion mise en surbrillance.](../images/clients/postico/authentication-details.png)
 
 Après la connexion à Platform, vous pourrez voir la liste de toutes les relations précédemment établies avec Query Service.
 
-![](../images/clients/postico/show-queries.png)
+![Une liste des connexions dans la variable [!DNL Postico] Interface utilisateur.](../images/clients/postico/show-queries.png)
 
 ## Création d’instructions SQL
 
 Pour créer une requête SQL, sélectionnez et ouvrez &quot;Requête SQL&quot;.
 
-![](../images/clients/postico/create-query.png)
+![Le [!DNL Postico] Interface utilisateur avec le raccourci SQL Query mis en surbrillance.](../images/clients/postico/create-query.png)
 
 Une zone s’affiche et vous pouvez saisir la requête à exécuter à partir de celle-ci. Lorsque vous avez terminé, sélectionnez **[!DNL Execute Statement]** pour exécuter la requête.
 
-![](../images/clients/postico/run-statement.png)
+![L’éditeur SQL avec l’instruction d’exécution mise en surbrillance.](../images/clients/postico/run-statement.png)
 
 Un tableau s’affiche, indiquant les résultats de l’exécution de la requête terminée.
 
-![](../images/clients/postico/query-results.png)
+![Un tableau de résultats de l’exemple de requête.](../images/clients/postico/query-results.png)
 
 ## Étapes suivantes
 

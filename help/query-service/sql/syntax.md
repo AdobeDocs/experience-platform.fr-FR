@@ -5,9 +5,9 @@ title: Syntaxe SQL dans Query Service
 topic-legacy: syntax
 description: Ce document présente la syntaxe SQL prise en charge par Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 5ec37ee797ec297b2e5c275dc0e6091e4ee8ecae
+source-git-commit: 9c450f340706040593dfea5292702c4b00dd9852
 workflow-type: tm+mt
-source-wordcount: '3160'
+source-wordcount: '3156'
 ht-degree: 8%
 
 ---
@@ -449,7 +449,7 @@ L’exemple renvoie les éléments suivants :
 
 Ce deuxième exemple illustre le concept et l&#39;application de la `inline` fonction . Le modèle de données de l’exemple est illustré dans l’image ci-dessous.
 
-![Schéma de productListItems](../images/sql/productListItems.png)
+![Schéma de productListItems.](../images/sql/productListItems.png)
 
 **Exemple**
 
@@ -485,9 +485,9 @@ SET property_key = property_value
 
 Pour renvoyer la valeur d’un paramètre, utilisez `SET [property key]` sans `property_value`.
 
-## Commandes PostgreSQL
+## [!DNL PostgreSQL] commands
 
-Les sous-sections ci-dessous couvrent les commandes PostgreSQL prises en charge par Query Service.
+Les sous-sections ci-dessous couvrent la [!DNL PostgreSQL] Commandes prises en charge par Query Service.
 
 ### ANALYSER LE TABLEAU
 
@@ -677,7 +677,7 @@ Vous trouverez plus d’informations sur les paramètres de requête SELECT stan
 | Paramètres | Description |
 | ------ | ------ |
 | `TEMPORARY` ou `TEMP`. | Paramètre facultatif. Si spécifié, la table créée sera une table temporaire. |
-| `UNLOGGED` | Paramètre facultatif. Si spécifié, la table créée sera une table non enregistrée. Vous trouverez plus d’informations sur les tables non enregistrées dans la section [Documentation PostgreSQL](https://www.postgresql.org/docs/current/sql-createtable.html). |
+| `UNLOGGED` | Paramètre facultatif. Si spécifié, la table créée sera une table non enregistrée. Vous trouverez plus d’informations sur les tables non enregistrées dans la section [[!DNL PostgreSQL] documentation](https://www.postgresql.org/docs/current/sql-createtable.html). |
 | `new_table` | Nom de la table à créer. |
 
 **Exemple**

@@ -5,9 +5,9 @@ title: Connexion d’Aqua Data Studio à Query Service
 topic-legacy: connect
 description: Ce document décrit les étapes à suivre pour connecter Aqua Data Studio à Adobe Experience Platform Query Service.
 exl-id: 4770e221-48a7-45d8-80a4-60b5cbc0ec33
-source-git-commit: ad3e1b0de6dd3b82cc82f0dc3d0f36b12cd3899e
+source-git-commit: 75e97efcb68439f1b837af93b62c96f43e5d7a31
 workflow-type: tm+mt
-source-wordcount: '493'
+source-wordcount: '487'
 ht-degree: 10%
 
 ---
@@ -40,7 +40,7 @@ Le **[!DNL Register Server]** s’affiche. Sous , **[!DNL General]** onglet, sé
 - **[!DNL Host and Port]**: Le point de terminaison hôte et son port pour [!DNL Query Service]. Vous devez utiliser le port 80 pour vous connecter à [!DNL Query Service].
 - **[!DNL Database]:** La base de données qui sera utilisée. Utiliser la valeur des informations d’identification de l’interface utilisateur de Platform `dbname`: `prod:all`.
 
-![Onglet Général Aqua Data Studio avec les champs d’entrée requis mis en surbrillance.](../images/clients/aqua-data-studio/register-server-general-tab.png)
+![Le [!DNL Aqua Data Studio] Onglet Général avec les champs de saisie obligatoires en surbrillance.](../images/clients/aqua-data-studio/register-server-general-tab.png)
 
 ### [!DNL Query Service] informations
 
@@ -56,7 +56,7 @@ Sélectionnez ensuite le **[!DNL Driver]** . Sous **[!DNL Parameters]**, défini
 >
 >Voir [[!DNL Query Service] Documentation SSL](./ssl-modes.md) pour en savoir plus sur la prise en charge du protocole SSL pour les connexions tierces à Adobe Experience Platform Query Service et sur la connexion à l’aide de `verify-full` Mode SSL.
 
-![L’onglet Aqua Data Studio Driver avec le champ Paramètres mis en surbrillance.](../images/clients/aqua-data-studio/register-server-driver-tab.png)
+![Le [!DNL Aqua Data Studio] Onglet Pilote avec le champ Paramètres en surbrillance.](../images/clients/aqua-data-studio/register-server-driver-tab.png)
 
 Après avoir saisi les détails de votre connexion, sélectionnez **[!DNL Test Connection]** pour vous assurer que vos informations d’identification fonctionnent correctement. Si le test de connexion réussit, sélectionnez **[!DNL Save]** pour enregistrer votre serveur. Une boîte de dialogue de confirmation s’affiche pour confirmer la connexion et celle-ci s’affiche dans le tableau de bord. Vous pouvez désormais vous connecter au serveur et afficher ses objets de schéma.
 

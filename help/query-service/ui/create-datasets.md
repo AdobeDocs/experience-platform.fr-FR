@@ -6,10 +6,10 @@ topic-legacy: queries
 type: Tutorial
 description: Adobe Experience Platform Query Service permet la création de jeux de données à partir de l’interface utilisateur. Une fois qu’un jeu de données a été créé, il est accessible comme tout autre jeu de données du lac de données et utilisé pour divers cas d’utilisation.
 exl-id: 6f6c049d-f19f-4161-aeb4-3a01eca7dc75
-source-git-commit: 0c2cfe9b0bd839bdf662622283a7563c0417c9a9
+source-git-commit: 228ed51ea056d3593a59bc0eee8d9b767aa74489
 workflow-type: tm+mt
-source-wordcount: '476'
-ht-degree: 12%
+source-wordcount: '493'
+ht-degree: 11%
 
 ---
 
@@ -19,6 +19,8 @@ ht-degree: 12%
 
 ## Génération de jeux de données à partir de l’interface utilisateur de Adobe Experience Platform
 
+<!-- Screenshot for #3 will need to be updated if schedule queries is moved. -->
+
 Pour créer des jeux de données à partir de l’interface utilisateur de Adobe Experience Platform, procédez comme suit :
 
 1. Créez une requête à partir d&#39;un client connecté et validez la sortie. Pour savoir comment écrire des requêtes à l’aide de [!DNL Query Editor], lisez le [!DNL Query Editor] Guide de l’interface utilisateur [lors de l’écriture de requêtes](./user-guide.md#writing-queries).
@@ -27,13 +29,13 @@ Pour créer des jeux de données à partir de l’interface utilisateur de Adobe
 
 3. Dans le panneau Détails de la requête, sélectionnez **[!UICONTROL Jeu de données de sortie]**.
 
-   ![Sélectionner le jeu de données de sortie](../images/ui/create-datasets/output-dataset.png)
+   ![Onglet Modèle d’espace de travail Requêtes avec sélection d’un jeu de données de sortie en surbrillance.](../images/ui/create-datasets/output-dataset.png)
 
 4. Dans la boîte de dialogue qui s’affiche, saisissez un nom de jeu de données précédé de votre identifiant LDAP. Le nom du jeu de données ne doit pas nécessairement être unique ou compatible avec SQL. Notez que le nom de la table de votre jeu de données sera généré en fonction du nom du jeu de données que vous créez ici.
 
 5. Ensuite, saisissez une description pour votre jeu de données dans le [!UICONTROL Description] champ et sélectionnez **[!UICONTROL Exécuter la requête]**.
 
-   ![Exécuter la requête](../images/ui/create-datasets/run-query.png)
+   ![La boîte de dialogue Jeu de données de sortie avec les détails du jeu de données et la requête d’exécution mise en surbrillance](../images/ui/create-datasets/run-query.png)
 
 6. Une fois l’exécution de la requête terminée, accédez à **[!UICONTROL Jeux de données]** pour afficher le jeu de données que vous avez créé. Pour en savoir plus sur l’exécution d’actions courantes lors de l’utilisation de jeux de données dans l’interface utilisateur de Platform, voir la section [Guide de l’interface utilisateur des jeux de données](../../catalog/datasets/user-guide.md).
 

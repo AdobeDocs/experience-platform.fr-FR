@@ -5,16 +5,16 @@ title: Commandes de métadonnées PostgreSQL dans Query Service
 topic-legacy: metadata
 description: Liste des commandes PostgreSQL actuellement prises en charge pour interroger des métadonnées dans Adobe Experience Platform Query Service.
 exl-id: bfcbad55-3086-44c9-9938-6ba0504e747b
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 9c450f340706040593dfea5292702c4b00dd9852
 workflow-type: tm+mt
-source-wordcount: '338'
-ht-degree: 82%
+source-wordcount: '335'
+ht-degree: 78%
 
 ---
 
-# Commandes PostgreSQL de métadonnées dans Query Service
+# Métadonnées [!DNL PostgreSQL] Commandes dans Query Service
 
-Pour les métadonnées de votre jeu de données, les commandes PostgreSQL suivantes sont actuellement prises en charge pour l’interrogation :
+Pour les métadonnées de votre jeu de données, les éléments suivants [!DNL PostgreSQL] Les commandes sont actuellement prises en charge pour l’interrogation :
 
 >[!NOTE]
 >
@@ -43,4 +43,4 @@ Pour les métadonnées de votre jeu de données, les commandes PostgreSQL suivan
 
 Toutes les commandes qui commencent par `\d` peuvent être combinées. Par exemple, vous pouvez émettre `\dtsn` pour afficher une liste de tous les tableaux, les séquences et les schémas. `\d` en elle-même affiche toutes les tables visibles, les vues, les vues matérialisées et les séquences.
 
-Pour plus d’informations sur les commandes énumérées ci-dessus, consultez la documentation à l’adresse [postgresql.org](https://www.postgresql.org/docs/10/app-psql.html). Toutefois, sachez que toutes les options présentées dans la documentation PostgreSQL ne sont pas prises en charge par [!DNL Experience Platform].
+Pour plus d’informations sur les commandes énumérées ci-dessus, consultez la documentation à l’adresse [postgresql.org](https://www.postgresql.org/docs/10/app-psql.html). Toutefois, sachez que toutes les options affichées dans la variable [!DNL PostgreSQL] La documentation est prise en charge par [!DNL Experience Platform].

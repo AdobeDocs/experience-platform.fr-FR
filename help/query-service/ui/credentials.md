@@ -5,9 +5,9 @@ title: Guide des informations d’identification de Query Service
 topic-legacy: guide
 description: Adobe Experience Platform Query Service fournit une interface utilisateur qui peut être utilisée pour écrire et exécuter des requêtes, afficher des requêtes précédemment exécutées et accéder aux requêtes enregistrées par les utilisateurs au sein de votre organisation IMS.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: f3052745105df603e547535a12285b6c1d771fa6
+source-git-commit: e4526b515dc6f480136615f3aa78f38f3e43a60f
 workflow-type: tm+mt
-source-wordcount: '1186'
+source-wordcount: '1204'
 ht-degree: 2%
 
 ---
@@ -82,9 +82,9 @@ Le fichier de configuration JSON contient des informations telles que le nom du 
 
 Après avoir enregistré vos informations d’identification générées, sélectionnez **[!UICONTROL Fermer]**. Vous pouvez maintenant voir une liste de toutes vos informations d’identification qui ne expirent pas.
 
-![L’onglet Informations d’identification du tableau de bord Requêtes avec la section Informations d’identification non arrivant à expiration a été développé.](../images/ui/credentials/list-credentials.png)
+![L&#39;onglet Informations d&#39;identification du tableau de bord Requêtes avec la section Informations d&#39;identification non arrivant à expiration est mise en surbrillance.](../images/ui/credentials/list-credentials.png)
 
-Vous pouvez modifier ou supprimer vos informations d’identification non arrivant à expiration. Pour modifier des informations d’identification non expirantes, sélectionnez l’icône représentant un crayon (![](../images/ui/credentials/edit-icon.png)). Pour supprimer des informations d’identification non arrivant à expiration, sélectionnez l’icône de suppression (![](../images/ui/credentials/delete-icon.png)).
+Vous pouvez modifier ou supprimer vos informations d’identification non arrivant à expiration. Pour modifier des informations d’identification non expirantes, sélectionnez l’icône représentant un crayon (![Une icône en forme de crayon.](../images/ui/credentials/edit-icon.png)). Pour supprimer des informations d’identification non arrivant à expiration, sélectionnez l’icône de suppression (![Icône de corbeille.](../images/ui/credentials/delete-icon.png)).
 
 Lors de la modification d’informations d’identification non expirantes, un modal s’affiche. Vous pouvez fournir les détails suivants à mettre à jour :
 
@@ -102,7 +102,7 @@ Vous pouvez utiliser les informations d’identification arrivant à expiration 
 
 L’image indique l’emplacement de chaque paramètre trouvé dans l’interface utilisateur, à l’exception du mot de passe des informations d’identification non arrivant à expiration. Bien que les informations d’identification non expirantes soient fournies par leurs fichiers de configuration JSON, vous pouvez afficher vos informations d’identification arrivant à expiration sous le **Informations d’identification** dans l’interface utilisateur.
 
-![](../images/ui/credentials/expiring-credentials.png)
+![L&#39;onglet Informations d&#39;identification de l&#39;espace de travail Requêtes avec la section Informations d&#39;identification arrivant à expiration est mise en surbrillance.](../images/ui/credentials/expiring-credentials.png)
 
 Le tableau ci-dessous décrit les paramètres généralement requis pour se connecter à des clients externes.
 

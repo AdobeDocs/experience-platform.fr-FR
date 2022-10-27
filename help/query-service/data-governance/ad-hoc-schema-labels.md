@@ -2,9 +2,9 @@
 title: Prise en charge du contrôle d’accès basé sur les attributs pour les schémas ad hoc
 description: Un guide pour restreindre l’accès aux champs de données dans les schémas ad hoc générés via Adobe Experience Platform Query Service.
 exl-id: d675e3de-ab62-4beb-9360-1f6090397a17
-source-git-commit: d955473fb9123a6fc2384cde4073c713b921f582
+source-git-commit: 91f318596bf268aa93e8b2df9c13774aab76d13a
 workflow-type: tm+mt
-source-wordcount: '1037'
+source-wordcount: '1040'
 ht-degree: 8%
 
 ---
@@ -56,13 +56,13 @@ Pour modifier les libellés de données de votre schéma ad hoc, sélectionnez l
 
 ## Modification des libellés du schéma ou du champ
 
-Pour modifier les libellés de l’ensemble du schéma, sélectionnez l’icône représentant un crayon (![](../images/data-governance/edit-icon.png)) sur le côté du nom du schéma sous la propriété [!UICONTROL Étiquettes] .
+Pour modifier les libellés de l’ensemble du schéma, sélectionnez l’icône représentant un crayon (![Une icône en forme de crayon.](../images/data-governance/edit-icon.png)) sur le côté du nom du schéma sous la propriété [!UICONTROL Étiquettes] .
 
 ![La vue des libellés dans l’espace de travail des schémas avec l’icône en forme de crayon mise en surbrillance.](../images/data-governance/edit-entire-schema-labels.png)
 
 Pour appliquer un libellé à un champ existant, sélectionnez un ou plusieurs champs dans la liste, puis choisissez [!UICONTROL Modification des étiquettes de gouvernance] dans la barre latérale droite.
 
-![La vue des libellés dans l’espace de travail des schémas avec l’option &quot;Modifier les libellés de gouvernance&quot; mise en surbrillance dans la barre latérale de droits.](../images/data-governance/edit-governance-labels.png)
+![La vue des libellés dans l’espace de travail des schémas avec l’option &quot;Modifier les libellés de gouvernance&quot; mise en surbrillance dans la barre latérale droite.](../images/data-governance/edit-governance-labels.png)
 
 ## Fenêtre contextuelle Modifier les libellés
 

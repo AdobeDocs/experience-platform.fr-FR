@@ -5,9 +5,9 @@ title: Guide de dépannage de Query Service
 topic-legacy: troubleshooting
 description: Ce document contient des questions courantes et des réponses relatives à Query Service. Les rubriques incluent, l’exportation de données, les outils tiers et les erreurs PSQL.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 722d7144639d7280ef85c9bfc285e616e7d7fcce
+source-git-commit: 08272f72c71f775bcd0cd7fffcd2e4da90af9ccb
 workflow-type: tm+mt
-source-wordcount: '3755'
+source-wordcount: '3781'
 ht-degree: 4%
 
 ---
@@ -86,15 +86,15 @@ SELECT * FROM customers LIMIT 0;
 - Après vous être connecté à Experience Platform, sélectionnez **[!UICONTROL Jeux de données]** dans le volet de navigation de gauche de l’interface utilisateur à laquelle accéder [!UICONTROL Jeux de données] tableau de bord.
 - Jeux de données [!UICONTROL Parcourir] s’ouvre. Vous pouvez utiliser la barre de recherche pour affiner les options disponibles. Sélectionnez un jeu de données dans la liste affichée.
 
-![Jeu de données surligné dans l’interface utilisateur de Platform.](./images/troubleshooting/dataset-selection.png)
+![Le tableau de bord Jeux de données dans l’interface utilisateur de Platform avec la barre de recherche et un jeu de données mis en surbrillance.](./images/troubleshooting/dataset-selection.png)
 
-- Le [!UICONTROL Activité Jeux de données] s’affiche. Sélectionner [!UICONTROL Prévisualisation d’un jeu de données] pour ouvrir une boîte de dialogue du schéma XDM et une vue tabulaire des données aplaties du jeu de données sélectionné. Vous trouverez plus de détails dans la section [prévisualisation de la documentation d’un jeu de données](../catalog/datasets/user-guide.md#preview-a-dataset)
+- Le [!UICONTROL Activité Jeux de données] s’affiche. Sélectionner **[!UICONTROL Prévisualisation d’un jeu de données]** pour ouvrir une boîte de dialogue du schéma XDM et une vue tabulaire des données aplaties du jeu de données sélectionné. Vous trouverez plus de détails dans la section [prévisualisation de la documentation d’un jeu de données](../catalog/datasets/user-guide.md#preview-a-dataset)
 
-![Schéma XDM et vue tabulaire des données aplaties.](./images/troubleshooting/dataset-preview.png)
+![Onglet Activité du jeu de données du tableau de bord Jeux de données avec l’option Prévisualiser le jeu de données mise en surbrillance.](./images/troubleshooting/dataset-preview.png)
 
 - Sélectionnez un champ du schéma pour afficher son contenu dans une colonne aplatie. Le nom de la colonne s’affiche au-dessus de son contenu sur le côté droit de la page. Vous devez copier ce nom pour interroger ce jeu de données.
 
-![Nom de colonne d’un jeu de données imbriqué mis en surbrillance dans l’interface utilisateur.](./images/troubleshooting/column-name.png)
+![Schéma XDM et vue tabulaire des données aplaties. Le nom de colonne d’un jeu de données imbriqué est mis en surbrillance dans l’interface utilisateur.](./images/troubleshooting/column-name.png)
 
 Consultez la documentation pour obtenir des conseils complets sur [Comment travailler avec des structures de données imbriquées](./best-practices/nested-data-structures.md) à l’aide de Query Editor ou d’un client tiers.
 +++
@@ -124,7 +124,7 @@ Il peut y avoir plusieurs raisons pour qu’une requête soit bloquée pendant l
 - Utilisez votre Adobe ID et votre mot de passe enregistrés avec votre licence d’Adobe.
 - Sélectionner **[!UICONTROL Aide et assistance]** dans la barre de navigation supérieure.
 
-![Menu déroulant de la barre de navigation supérieure avec l’aide et la prise en charge surlignée.](./images/troubleshooting/help-and-support.png)
+![Le menu déroulant de la barre de navigation supérieure avec l’aide et l’assistance, l’assistance aux entreprises et le contact est mis en surbrillance.](./images/troubleshooting/help-and-support.png)
 
 Une bannière déroulante s’affiche avec une [!UICONTROL Aide et support] . Sélectionner **[!UICONTROL Contactez-nous]** pour ouvrir l’assistant virtuel de l’assistance clientèle Adobe ou sélectionnez **[!UICONTROL Support aux entreprises]** pour obtenir une aide dédiée aux grandes entreprises.
 +++

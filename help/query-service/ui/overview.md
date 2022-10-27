@@ -5,10 +5,10 @@ title: Guide de l’interface utilisateur de Query Service
 topic-legacy: guide
 description: Adobe Experience Platform Query Service fournit une interface utilisateur qui peut être utilisée pour écrire et exécuter des requêtes, afficher des requêtes précédemment exécutées et accéder aux requêtes enregistrées par les utilisateurs au sein de votre organisation IMS.
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: a887c502213e96d6af90af0859da78c2984f89a7
+source-git-commit: 0a44d15f9dfaf5100fa44e2e6442b1be23ee0ab0
 workflow-type: tm+mt
-source-wordcount: '662'
-ht-degree: 42%
+source-wordcount: '716'
+ht-degree: 31%
 
 ---
 
@@ -26,15 +26,15 @@ Le [!DNL Query Editor] permet d’écrire et d’exécuter des requêtes sans ut
 
 ![Zoomé en vue de la variable [!DNL Query Editor].](../images/ui/overview/query-editor.png)
 
-## Parcourir {#browse}
+## Modèles {#browse}
 
-L’onglet **[!UICONTROL Parcourir]** affiche les requêtes enregistrées par les utilisateurs de votre organisation. Il est utile de les voir comme des projets de requêtes, car les requêtes enregistrées ici peuvent encore être en cours de construction. Les requêtes affichées dans l’onglet **[!UICONTROL Parcourir]** s’affichent également sous la forme de requêtes exécutées dans l’onglet **[!UICONTROL Journal]** si elles ont été exécutées par [!DNL Query Service].
+Le **[!UICONTROL Modèles]** affiche les requêtes enregistrées par les utilisateurs de votre entreprise. Il est utile de les voir comme des projets de requêtes, car les requêtes enregistrées ici peuvent encore être en cours de construction. Requêtes affichées sur la page **[!UICONTROL Modèles]** s’affichent également sous la forme de requêtes exécutées dans **[!UICONTROL Journal]** s’ils ont été exécutés précédemment par [!DNL Query Service].
 
-![Un zoom dans l&#39;onglet Parcourir du tableau de bord Requêtes qui affiche plusieurs requêtes enregistrées.](../images/ui/overview/browse.png)
+![Un zoom dans l&#39;onglet Modèles du tableau de bord Requêtes qui affiche plusieurs requêtes enregistrées.](../images/ui/overview/templates.png)
 
 | Colonne | Description |
 | --- | --- |
-| **[!UICONTROL Nom]** | Nom de la requête créée par l’utilisateur. Vous pouvez sélectionner le nom d’ouverture de la requête dans le [!DNL Query Editor]. Vous pouvez également utiliser la barre de recherche pour effectuer une recherche sur le nom d’une requête. Les recherches sont sensibles à la casse. |
+| **[!UICONTROL Nom]** | Le champ name est soit le nom de la requête créé par l&#39;utilisateur, soit les premiers caractères de votre requête SQL. Toute requête créée à l’aide de l’interface utilisateur avec Query Editor est nommée dès le départ. Si la requête a été créée via l’API, alors le nom de la requête est un extrait de code SQL initial utilisé pour créer la requête. Vous pouvez sélectionner le nom de la requête à ouvrir dans le [!DNL Query Editor]. Vous pouvez également utiliser la barre de recherche pour rechercher la variable [!UICONTROL Nom] d’une requête. Les recherches sont sensibles à la casse. |
 | **[!UICONTROL SQL]** | Premiers caractères de la requête SQL. Placez le pointeur de la souris sur le code pour afficher la requête entière. |
 | **[!UICONTROL Modified by]** | Dernier utilisateur à avoir modifié la requête. Tout utilisateur de votre entreprise ayant accès à [!DNL Query Service] peut modifier des requêtes. |
 | **[!UICONTROL Dernière modification]** | Date et heure de la dernière modification apportée à la requête, dans le fuseau horaire du navigateur. |

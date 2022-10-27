@@ -6,9 +6,9 @@ topic-legacy: queries
 type: Tutorial
 description: Ce document présente les détails importants à connaître lors de l’écriture de requêtes dans Adobe Experience Platform Query Service.
 exl-id: a7076c31-8f7c-455e-9083-cbbb029c93bb
-source-git-commit: e33d59c4ac28f55ba6ae2fc073d02f8738159263
+source-git-commit: 9c450f340706040593dfea5292702c4b00dd9852
 workflow-type: tm+mt
-source-wordcount: '1048'
+source-wordcount: '1047'
 ht-degree: 47%
 
 ---
@@ -206,7 +206,7 @@ Après la connexion à Query Service, vous pouvez voir toutes vos tables disponi
 
 ### Affichage de tableau standard
 
-Le `\d` affiche la vue PostgreSQL standard pour répertorier les tables. Vous trouverez ci-dessous un exemple de sortie de cette commande :
+Le `\d` affiche la commande standard [!DNL PostgreSQL] pour répertorier les tables. Vous trouverez ci-dessous un exemple de sortie de cette commande :
 
 ```sql
              List of relations

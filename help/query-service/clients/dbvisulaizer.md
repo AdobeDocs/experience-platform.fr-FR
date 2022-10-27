@@ -5,9 +5,9 @@ title: Connexion de DbVisualizer à Query Service
 topic-legacy: connect
 description: Ce document décrit les étapes à suivre pour connecter DbVisualizer à Adobe Experience Platform Query Service.
 exl-id: badb0d89-1713-438c-8a9c-d1404051ff5f
-source-git-commit: 760b04499edd0374f1aae71600bef074a6f17531
+source-git-commit: 910522cc981bddba86f0a47ded48125c28712032
 workflow-type: tm+mt
-source-wordcount: '743'
+source-wordcount: '754'
 ht-degree: 1%
 
 ---
@@ -38,7 +38,7 @@ Utilisez la barre de recherche ou sélectionnez [!DNL PostgreSQL] dans la liste 
 
 Dans l&#39;espace de travail Connexion à la base de données , sélectionnez le **[!DNL Properties]** , suivie de la fonction **[!DNL Driver Properties]** dans la barre latérale de navigation.
 
-![Espace de travail Connexion à la base de données avec l’onglet Propriétés surligné.](../images/clients/dbvisualizer/driver-properties.png)
+![L’espace de travail Connexion à la base de données avec les propriétés et les propriétés du pilote est mis en surbrillance.](../images/clients/dbvisualizer/driver-properties.png)
 
 Les propriétés du pilote affichées dans le tableau ci-dessous sont recommandées pour activer l’utilisation de SSL avec DBVisualizer.
 
@@ -57,7 +57,7 @@ Les propriétés du pilote affichées dans le tableau ci-dessous sont recommand�
 
 Le `PGHOST` et `user` sont extraites de vos informations d’identification Adobe Experience Platform. Pour trouver vos informations d’identification, connectez-vous à l’interface utilisateur de Platform et sélectionnez **[!UICONTROL Requêtes]** à partir du volet de navigation de gauche, suivi de **[!UICONTROL Informations d’identification]**. Pour plus d’informations sur la recherche du nom de la base de données, de l’hôte, du port et des informations de connexion, consultez la section [guide des informations d’identification](../ui/credentials.md).
 
-![Tableau de bord des informations d’identification des requêtes Experience Platform avec les informations d’identification mises en surbrillance.](../images/clients/dbvisualizer/query-service-credentials-page.png)
+![La page Informations d’identification de l’espace de travail Requêtes Experience Platform avec les informations d’identification et les informations d’identification arrivant à expiration est mise en surbrillance.](../images/clients/dbvisualizer/query-service-credentials-page.png)
 
 [!DNL Query Service] propose également des informations d’identification non expirantes pour permettre une configuration unique avec des clients tiers. Consultez la documentation pour [instructions complètes sur la génération et l’utilisation des informations d’identification non arrivant à expiration](../ui/credentials.md#non-expiring-credentials).
 
@@ -75,7 +75,7 @@ Pour exiger une authentification par identifiant utilisateur et mot de passe cha
 
 Dans le panneau Authentification de connexion , cochez les deux options **[!DNL Require Userid]** et **[!DNL Require Password]** , puis sélectionnez **[!DNL Apply]**.
 
-![Panneau Authentification de connexion avec les cases à cocher Userid et Mot de passe mises en surbrillance.](../images/clients/dbvisualizer/connection-authentication.png)
+![Panneau Authentification pour [!DNL PostgreSQL] Connexion à la base de données avec les cases à cocher Exiger un identifiant utilisateur et un mot de passe mises en surbrillance.](../images/clients/dbvisualizer/connection-authentication.png)
 
 ## Connecter  à Platform
 
@@ -90,11 +90,11 @@ Pour établir une connexion, sélectionnez la variable **[!DNL Connection]** dan
 
 Après avoir saisi toutes les informations d’identification pertinentes, sélectionnez **[!DNL Connect]**.
 
-![L&#39;espace de travail Connexion à la base de données avec l&#39;onglet Connexion et le bouton Connexion mis en surbrillance.](../images/clients/dbvisualizer/connect.png)
+![Le [!DNL PostgreSQL] Espace de travail Connexion à la base de données avec l&#39;onglet Connexion et le bouton Connexion en surbrillance.](../images/clients/dbvisualizer/connect.png)
 
 Le [!DNL Connect] s’affiche à la première occasion de la session.
 
-![La boîte de dialogue Se connecter avec les champs de texte Identifiant utilisateur de la base de données et Mot de passe de la base de données est mise en surbrillance.](../images/clients/dbvisualizer/connect-dialog.png)
+![La connexion : [!DNL PostgreSQL] avec les champs de texte Database Userid et Database Password en surbrillance.](../images/clients/dbvisualizer/connect-dialog.png)
 
 Saisissez votre identifiant utilisateur et votre mot de passe, puis sélectionnez **[!DNL Connect]**. Un message s’affiche dans le journal pour confirmer la connexion.
 

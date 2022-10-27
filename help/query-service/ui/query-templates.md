@@ -2,7 +2,7 @@
 title: Modèles de requête
 description: Les modèles de requête sont des requêtes SQL enregistrées réutilisables qui peuvent être réutilisées par d’autres utilisateurs pour gagner du temps et des efforts. Ils peuvent être créés à l’aide de Query Editor ou de l’API Query Service et peuvent être utilisés sur tous les jeux de données Experience Platform.
 exl-id: e74d058f-bb89-45ed-83cc-2e3a33401270
-source-git-commit: b6aaa3baaf8b3ff139ba6ebc7f14ac283ad52241
+source-git-commit: e4526b515dc6f480136615f3aa78f38f3e43a60f
 workflow-type: tm+mt
 source-wordcount: '436'
 ht-degree: 2%
@@ -27,9 +27,11 @@ Vous pouvez créer des modèles de requête par le biais de deux méthodes, en a
 
 Consultez la documentation pour obtenir des instructions sur l’utilisation de Query Editor pour [write](./user-guide.md#query-authoring) et [enregistrement de requêtes](./user-guide.md#saving-queries). Une fois que vous avez nommé et enregistré votre requête, elle peut être réutilisée en tant que modèle de requête à partir du [!UICONTROL Parcourir] .
 
-Dans l’espace de travail Requêtes de l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Parcourir]** pour afficher la liste des requêtes enregistrées disponibles.
+Dans l’espace de travail Requêtes de l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Modèles]** pour afficher la liste des requêtes enregistrées disponibles.
 
-![Espace de travail des requêtes avec l’onglet Parcourir surligné.](../images/ui/query-templates/query-templates.png)
+<!-- This may need updating idf the Schedule are added to a separate Tab -->
+
+![Espace de travail des requêtes avec l’onglet Modèles mis en surbrillance.](../images/ui/query-templates/query-templates.png)
 
 Pour trouver les informations de modèle pertinentes, sélectionnez un modèle de requête dans la liste disponible afin d’ouvrir le panneau Détails.
 
