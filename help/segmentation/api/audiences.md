@@ -4,14 +4,20 @@ title: Point de terminaison de l’API Audiences
 topic-legacy: developer guide
 description: Le point de terminaison d’audiences dans l’API Adobe Experience Platform Segmentation Service vous permet de gérer par programmation les audiences pour votre organisation.
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
-source-git-commit: 322b9aa5b817276eb4b56daf6e410944591c1d51
+hide: true
+hidefromtoc: true
+source-git-commit: f4ec5b82a14579de5bf228011d14a849898be9f5
 workflow-type: tm+mt
-source-wordcount: '1492'
-ht-degree: 8%
+source-wordcount: '1515'
+ht-degree: 9%
 
 ---
 
 # Point de terminaison Audiences
+
+>[!IMPORTANT]
+>
+>Le point de terminaison de l’audience est actuellement en version bêta et n’est pas disponible pour tous les utilisateurs. La documentation et les fonctionnalités peuvent changer.
 
 Une audience est un groupe de personnes qui partagent des comportements et/ou des caractéristiques similaires. Ces collections de personnes peuvent être générées à l’aide de Adobe Experience Platform ou à partir de sources externes. Vous pouvez utiliser la variable `/audiences` point de terminaison dans l’API Segmentation, qui vous permet de récupérer, créer, mettre à jour et supprimer des audiences par programmation.
 
