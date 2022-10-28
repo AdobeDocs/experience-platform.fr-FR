@@ -1,26 +1,26 @@
 ---
 title: Clés gérées par le client dans Adobe Experience Platform
 description: Découvrez comment configurer vos propres clés de chiffrement pour les données stockées dans Adobe Experience Platform.
-source-git-commit: 6fe0d72bcb3dbf1e1167f80724577ba3e0f741f4
+source-git-commit: b778d5c81512e538f08989952f8727d1d694f66c
 workflow-type: tm+mt
-source-wordcount: '1416'
+source-wordcount: '1501'
 ht-degree: 2%
 
 ---
 
 # Clés gérées par le client dans Adobe Experience Platform
 
-Toutes les données stockées sur Adobe Experience Platform sont chiffrées au repos à l’aide de clés au niveau du système. Si vous utilisez une application reposant sur Platform, vous pouvez choisir d’utiliser vos propres clés de chiffrement, ce qui vous permet de mieux contrôler votre sécurité des données.
+Les données stockées sur Adobe Experience Platform sont chiffrées au repos à l’aide de clés au niveau du système. Si vous utilisez une application reposant sur Platform, vous pouvez choisir d’utiliser vos propres clés de chiffrement, ce qui vous permet de mieux contrôler votre sécurité des données.
 
 Ce document couvre le processus d’activation de la fonctionnalité de clés gérées par le client (CMK) dans Platform.
 
 ## Résumé du processus
 
-Le CMK est inclus dans les offres d&#39;Adobe du Bouclier de santé et du Bouclier de protection et de confidentialité. Une fois que votre entreprise a acheté l’une de ces offres, vous pouvez lancer un processus unique de configuration de la fonctionnalité.
+Le CMK est inclus dans les offres d&#39;Adobe du Bouclier de santé et du Bouclier de protection et de confidentialité. Une fois que votre entreprise a acheté une licence pour l’une de ces offres, vous pouvez lancer un processus unique de configuration de la fonctionnalité.
 
 >[!WARNING]
 >
->Après avoir configuré le CMK, vous ne pouvez pas revenir aux clés gérées par le système. Vous êtes responsable de la gestion sécurisée de vos clés et de vos clés dans [!DNL Azure] pour éviter de perdre l’accès à vos données.
+>Après avoir configuré le CMK, vous ne pouvez pas revenir aux clés gérées par le système. Il vous incombe de gérer vos clés en toute sécurité et de fournir l’accès à votre application Key Vault, KeyVault et CMK dans [!DNL Azure] pour éviter de perdre l’accès à vos données.
 
 Le processus est le suivant :
 
@@ -29,7 +29,7 @@ Le processus est le suivant :
 1. [Affectation de l’entité de service pour l’application CMK](#assign-to-role) à un rôle approprié pour le coffre-fort de clé.
 1. Utilisez les appels API pour [envoyer votre ID de clé de chiffrement à Adobe](#send-to-adobe).
 
-Une fois le processus de configuration terminé, toutes les données intégrées à Platform dans tous les environnements de test seront chiffrées à l’aide de votre [!DNL Azure] configuration de clé, spécifique à votre [[!DNL Cosmos DB]](https://docs.microsoft.com/fr-fr/azure/cosmos-db/) et [[!DNL Data Lake Storage]](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction) ressources. Utilisation de CMK [!DNL Azure]&#39;s [programme d&#39;aperçu public](https://azure.microsoft.com/en-ca/support/legal/preview-supplemental-terms/) pour rendre cela possible.
+Une fois le processus de configuration terminé, toutes les données intégrées à Platform dans tous les environnements de test seront chiffrées à l’aide de votre [!DNL Azure] configuration de clé, spécifique à votre [[!DNL Cosmos DB]](https://docs.microsoft.com/fr-fr/azure/cosmos-db/) et [[!DNL Data Lake Storage]](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction) ressources. Pour utiliser le CMK, vous utiliserez [!DNL Microsoft Azure] fonctionnalités qui peuvent faire partie de leur [programme d&#39;aperçu public](https://azure.microsoft.com/en-ca/support/legal/preview-supplemental-terms/).
 
 ## Créez un [!DNL Azure] Key Vault {#create-key-vault}
 
@@ -165,6 +165,10 @@ Le **[!UICONTROL Identifiant de clé]** affiche l’identifiant d’URI de la cl
 
 Une fois que vous avez obtenu l’URI de coffre-fort de clé, vous pouvez l’envoyer à l’aide d’une requête de POST au point de terminaison de configuration du CMK.
 
+>[!NOTE]
+>
+>Seule la coffre-fort et le nom de la clé sont stockés avec Adobe, et non avec la version de la clé.
+
 **Requête**
 
 ```shell
@@ -265,6 +269,10 @@ Le `status` peut avoir l’une des quatre valeurs ayant la signification suivant
 
 ## Étapes suivantes
 
-En suivant les étapes ci-dessus, vous avez activé le CMK pour votre organisation. Toutes les données ingérées dans Platform seront désormais chiffrées et déchiffrées à l’aide des clés de votre [!DNL Azure] Key Vault. Si vous souhaitez révoquer l’accès de Platform à vos données, vous pouvez supprimer le rôle d’utilisateur associé à l’application du coffre-fort clé dans [!DNL Azure].
+En suivant les étapes ci-dessus, vous avez activé le CMK pour votre organisation. Les données ingérées dans Platform seront désormais chiffrées et déchiffrées à l’aide des clés de votre [!DNL Azure] Key Vault. Si vous souhaitez révoquer l’accès de Platform à vos données, vous pouvez supprimer le rôle d’utilisateur associé à l’application du coffre-fort clé dans [!DNL Azure].
 
-Après la désactivation de l’accès à l’application, il faut entre deux et 24 heures pour que les données ne soient plus accessibles dans Platform. La même période s’applique pour que les données soient à nouveau disponibles lors de la réactivation de l’accès à l’application.
+Après avoir désactivé l’accès à l’application, il peut s’écouler de quelques minutes à 24 heures avant que les données ne soient plus accessibles dans Platform. Le même délai s’applique pour que les données soient à nouveau disponibles lors de la réactivation de l’accès à l’application.
+
+>[!WARNING]
+>
+>Une fois que l’application KeyVault, Key ou CMK est désactivée et que les données ne sont plus accessibles dans Platform, les opérations en aval liées à ces données ne seront plus possibles. Assurez-vous de comprendre les impacts en aval de la révocation de l’accès à vos données par Platform avant d’apporter des modifications à votre configuration.
