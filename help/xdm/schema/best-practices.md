@@ -5,9 +5,9 @@ title: Bonnes Pratiques Pour La Modélisation Des Données
 topic-legacy: overview
 description: Ce document présente les schémas du modèle de données d’expérience (XDM) ainsi que les blocs de création, principes et bonnes pratiques de la composition de schémas à utiliser dans Adobe Experience Platform.
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
-source-git-commit: c5ab8c12c4c5bd14d3504d60c654105ad36effe6
+source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
 workflow-type: tm+mt
-source-wordcount: '2698'
+source-wordcount: '2699'
 ht-degree: 3%
 
 ---
@@ -175,7 +175,7 @@ La seconde approche consiste à utiliser des schémas d’événement pour repr�
 **Inconvénients**
 
 * La segmentation devient plus complexe pour le cas d’utilisation prévu d’origine (identification de l’état des inscriptions les plus récentes des clients). Le segment a désormais besoin d’une logique supplémentaire pour marquer le dernier événement d’abonnement pour un client afin de vérifier son état.
-* Les événements risquent plus d’expirer automatiquement et d’être purgés de la banque de profils. Consultez le guide sur la [TTL de profil](../../profile/apply-ttl.md) pour plus d’informations.
+* Les événements risquent plus d’expirer automatiquement et d’être purgés de la banque de profils. Consultez le guide sur la [Expiration des événements d’expérience](../../profile/event-expirations.md) pour plus d’informations.
 
 ## Créer des schémas en fonction de vos entités catégorisées
 

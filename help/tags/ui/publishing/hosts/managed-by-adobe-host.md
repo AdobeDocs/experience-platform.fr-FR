@@ -2,10 +2,10 @@
 title: Présentation des hôtes gérés par Adobe
 description: Découvrez l’option d’hébergement par défaut pour le déploiement des versions de bibliothèques de balises dans Adobe Experience Platform.
 exl-id: 9042c313-b0d3-4f6e-963d-0051d760fd16
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
 workflow-type: tm+mt
 source-wordcount: '1173'
-ht-degree: 98%
+ht-degree: 90%
 
 ---
 
@@ -54,7 +54,7 @@ Une fois que votre version a été déployée sur l’hôte géré par Adobe, le
 >
 >Pour les hôtes gérés par Adobe, la première bibliothèque publiée dans un nouvel environnement peut prendre jusqu’à 5 minutes pour se propager dans le réseau mondial de diffusion de contenu.
 
-Lorsqu’un nœud de périphérie reçoit une requête pour un fichier en particulier (tel que la version de votre bibliothèque), il vérifie d’abord la valeur de la durée de vie du fichier. Si la durée de vie n’a pas expiré, les nœuds de périphérie diffusent la version mise en cache. Si la durée de vie a expiré, le nœud de périphérie demande une nouvelle copie à l’origine la plus proche, diffuse cette copie actualisée, puis met en cache la copie actualisée avec une nouvelle durée de vie.
+Lorsqu’un noeud de périphérie reçoit une requête pour un fichier spécifique (tel que la version de votre bibliothèque), il vérifie d’abord le délai d’expiration du fichier. Si le temps n’a pas expiré, le noeud Edge sert la version mise en cache. Si le temps a expiré, le noeud de périphérie demande une nouvelle copie à l’origine la plus proche, diffuse cette copie actualisée, puis met en cache la copie actualisée avec un nouveau délai d’expiration.
 
 >[!NOTE]
 >
@@ -76,7 +76,7 @@ Ces invalidations échelonnées du cache donnent aux groupes de serveurs d’ori
 
 Les versions de bibliothèque sont également mises en cache sur le navigateur à l’aide de l’en-tête HTTP `cache-control`. Lors de l’utilisation d’hôtes gérés par Adobe, vous n’avez aucun contrôle sur les en-têtes renvoyés dans les réponses de l’API. Par conséquent, le paramètre Adobe par défaut pour le caching est utilisé. En d’autres termes, vous ne pouvez pas utiliser d’en-têtes personnalisés pour les hôtes gérés par Adobe. Si vous avez besoin d’un en-tête `cache-control` personnalisé, vous pouvez envisager l’[auto-hébergement](self-hosting-libraries.md) à la place.
 
-La durée TTL (time-to-live) de la version de votre bibliothèque mise en cache par le navigateur (déterminée par l’en-tête `cache-control`) varie en fonction de l’environnement de balise utilisé :
+Délai d’expiration de la version de votre bibliothèque mise en cache par le navigateur (déterminé par la variable `cache-control` ) varie en fonction de l’environnement de balise utilisé :
 
 | Environnement | Valeur `cache-control` |
 | --- | --- |

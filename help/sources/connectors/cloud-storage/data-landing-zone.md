@@ -5,7 +5,7 @@ title: Source de la zone d’entrée de données
 topic-legacy: overview
 description: Découvrez comment connecter la zone d’entrée des données à Adobe Experience Platform
 exl-id: bdc10095-7de4-4183-bfad-a7b5c89197e3
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
 workflow-type: tm+mt
 source-wordcount: '817'
 ht-degree: 22%
@@ -16,7 +16,7 @@ ht-degree: 22%
 
 [!DNL Data Landing Zone] est une interface de stockage [!DNL Azure Blob] fournie par Adobe Experience Platform et qui vous permet d’accéder à une fonctionnalité de stockage de fichiers sécurisée basée sur le cloud pour importer des fichiers dans Platform. Vous avez accès à une [!DNL Data Landing Zone] conteneur par environnement de test et le volume total de données sur tous les conteneurs est limité au total des données fournies avec votre licence Produits et Services Platform. Tous les clients de Platform et ses services d’application tels que [!DNL Customer Journey Analytics], [!DNL Journey Orchestration], [!DNL Intelligent Services], et [!DNL Adobe Real-Time Customer Data Platform] sont configurés avec un [!DNL Data Landing Zone] conteneur par environnement de test. Vous pouvez lire et écrire des fichiers dans votre conteneur par le biais de [!DNL Azure Storage Explorer] ou votre interface de ligne de commande.
 
-[!DNL Data Landing Zone] prend en charge l’authentification SAS et ses données sont protégées par la norme [!DNL Azure Blob] des mécanismes de sécurité du stockage au repos et en transit. L’authentification SAS vous permet d’accéder en toute sécurité à votre [!DNL Data Landing Zone] Conteneur via une connexion Internet publique. Aucune modification réseau n’est requise pour accéder à votre [!DNL Data Landing Zone] , ce qui signifie que vous n’avez pas besoin de configurer de listes autorisées ou de configurations inter-régions pour votre réseau. Platform applique une durée de vie stricte de sept jours sur tous les fichiers chargés dans un [!DNL Data Landing Zone] conteneur. Tous les fichiers sont supprimés au bout de sept jours.
+[!DNL Data Landing Zone] prend en charge l’authentification SAS et ses données sont protégées par la norme [!DNL Azure Blob] des mécanismes de sécurité du stockage au repos et en transit. L’authentification SAS vous permet d’accéder en toute sécurité à votre [!DNL Data Landing Zone] Conteneur via une connexion Internet publique. Aucune modification réseau n’est requise pour accéder à votre [!DNL Data Landing Zone] , ce qui signifie que vous n’avez pas besoin de configurer de listes autorisées ou de configurations inter-régions pour votre réseau. Platform applique un délai d’expiration de sept jours strict pour tous les fichiers chargés dans un [!DNL Data Landing Zone] conteneur. Tous les fichiers sont supprimés au bout de sept jours.
 
 ## Contraintes de dénomination pour fichiers et répertoires
 

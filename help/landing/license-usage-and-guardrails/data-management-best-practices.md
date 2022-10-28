@@ -3,10 +3,10 @@ keywords: Experience Platform;accueil;rubriques les plus consultées;gestion de
 title: Bonnes pratiques relatives aux droits de licence de gestion des données
 description: Découvrez les bonnes pratiques à suivre et les outils que vous pouvez utiliser pour mieux gérer vos droits de licence avec Adobe Experience Platform.
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 9a8e247784dc51d7dc667b7467042399df700b3c
 workflow-type: tm+mt
-source-wordcount: '2529'
-ht-degree: 98%
+source-wordcount: '2134'
+ht-degree: 91%
 
 ---
 
@@ -88,12 +88,12 @@ Un ou plusieurs systèmes dans Platform peuvent ingérer les données, à savoir
 
 ### Quelles données conserver ?
 
-Vous pouvez appliquer à la fois des filtres d’ingestion de données et des règles d’expiration (également appelées Durée de vie « TTL ») pour supprimer les données devenues obsolètes pour vos cas d’utilisation. En règle générale, les données comportementales (telles que les données Analytics) consomment beaucoup plus de stockage que les données d’enregistrement (telles que les données de gestion de la relation client). Par exemple, pour de nombreux utilisateurs de Platform, les données comportementales constituent à elles seules jusqu’à 90 % des profils, par rapport aux données d’enregistrement. Par conséquent, la gestion des données comportementales est essentielle pour garantir la conformité aux droits de licence.
+Vous pouvez appliquer des filtres d’ingestion de données et des règles d’expiration pour supprimer les données devenues obsolètes pour vos cas d’utilisation. En règle générale, les données comportementales (telles que les données Analytics) consomment beaucoup plus de stockage que les données d’enregistrement (telles que les données de gestion de la relation client). Par exemple, pour de nombreux utilisateurs de Platform, les données comportementales constituent à elles seules jusqu’à 90 % des profils, par rapport aux données d’enregistrement. Par conséquent, la gestion des données comportementales est essentielle pour garantir la conformité aux droits de licence.
 
 Vous pouvez utiliser un certain nombre d’outils pour respecter vos droits d’utilisation de licence :
 
 * [Filtres d’ingestion](#ingestion-filters)
-* [Durée de vie du service de profil](#profile-service)
+* [Boutique de profils](#profile-service)
 
 ### Filtres d’ingestion {#ingestion-filters}
 
@@ -109,9 +109,7 @@ Les filtres d’ingestion vous permettent d’importer uniquement les données n
 
 {style=&quot;table-layout:auto&quot;}
 
-### Service de profil {#profile-service}
-
-La fonctionnalité de durée de vie (TTL) du service de profil vous permet d’appliquer une durée de vie aux données du magasin de profils. Cela permet au système de supprimer automatiquement les données dont la valeur a diminué au fil du temps.
+### Boutique de profils {#profile-service}
 
 Le magasin de profils comprend les composants suivants :
 
@@ -124,53 +122,20 @@ Le magasin de profils comprend les composants suivants :
 
 {style=&quot;table-layout:auto&quot;}
 
+
+
 #### Rapports sur la composition du magasin de profils
 
-Plusieurs rapports permettant de déterminer la composition du magasin de profils sont disponibles. Ces rapports vous aident à prendre des décisions éclairées sur la définition des durées de vie des profils et sur leur emplacement, afin d’optimiser l’utilisation des licences :
+Plusieurs rapports permettant de déterminer la composition du magasin de profils sont disponibles. Ces rapports vous aident à prendre des décisions éclairées sur la manière et l’emplacement de définir vos expirations d’événements d’expérience afin de mieux optimiser votre utilisation de licence :
 
-* **API Dataset Overlap Report** : indique les jeux de données qui contribuent le plus à l’audience adressable. Vous pouvez utiliser ce rapport pour identifier les jeux de données [!DNL ExperienceEvent] pour lesquels définir une durée de vie. Pour plus d’informations, consultez le tutoriel sur la [génération du rapport de chevauchement de jeux de données](../../profile/tutorials/dataset-overlap-report.md).
+* **API Dataset Overlap Report** : indique les jeux de données qui contribuent le plus à l’audience adressable. Vous pouvez utiliser ce rapport pour identifier lequel [!DNL ExperienceEvent] jeux de données pour lesquels définir une expiration. Pour plus d’informations, consultez le tutoriel sur la [génération du rapport de chevauchement de jeux de données](../../profile/tutorials/dataset-overlap-report.md).
 * **API Identity Overlap Report** : indique les espaces de noms d’identité qui contribuent le plus à l’audience adressable. Pour plus d’informations, consultez le tutoriel sur la [génération du rapport de chevauchement d’identités](../../profile/api/preview-sample-status.md#generate-the-identity-namespace-overlap-report).
-<!-- * **Unknown Profiles Report API**: Exposes the impact of applying pseudonymous TTL for different time thresholds. You can use this report to identify which pseudonymous TTL threshold to apply. See the tutorial on [generating the unknown profiles report](../../profile/api/preview-sample-status.md#generate-the-unknown-profiles-report) for more information.
+<!-- * **Unknown Profiles Report API**: Exposes the impact of applying pseudonymous expirations for different time thresholds. You can use this report to identify which pseudonymous expirations threshold to apply. See the tutorial on [generating the unknown profiles report](../../profile/api/preview-sample-status.md#generate-the-unknown-profiles-report) for more information.
 -->
 
-#### Durée de vie du jeu de données [!DNL ExperienceEvent] {#dataset-ttl}
+#### Expiration des événements d’expérience {#event-expirations}
 
-Vous pouvez appliquer une durée de vie à des jeux de données compatibles avec les profils afin de supprimer les données comportementales du magasin de profils qui n’ont plus de valeur pour vos cas d’utilisation. Une fois que la durée de vie est appliquée à un jeu de données compatible avec les profils, Platform supprime automatiquement les données qui ne sont plus nécessaires grâce à un processus en deux parties :
-
-* Désormais, la valeur d’expiration de durée de vie est appliquée à toutes les nouvelles données au moment de l’ingestion.
-* La valeur d’expiration de durée de vie est appliquée à toutes les données existantes dans le cadre d’une tâche de système de renvoi unique.
-
-La valeur de durée de vie de chaque événement provient généralement de la date et heure d’événement. Tous les événements antérieurs à la valeur d’expiration de durée de vie sont immédiatement abandonnés lors de l’exécution de la tâche de système. Tous les autres événements sont abandonnés lorsqu’ils se rapprochent de la valeur d’expiration de durée de vie indiquée dans la date et heure d’événement.
-
-Consultez l’exemple suivant pour mieux comprendre la durée de vie du jeu de données [!DNL ExperienceEvent].
-
-Si vous appliquez une valeur de durée de vie de 30 jours le 15 mai :
-
-* tous les nouveaux événements sont soumis à une durée de vie de 30 jours ;
-* tous les événements existants dont la date et heure sont antérieures au 15 avril sont immédiatement supprimés par une tâche de système ; 
-* les événements dont la date et heure sont postérieures au 15 avril ont une date d’expiration correspondant à la date et heure d’événement + les jours de durée de vie. Ainsi, un événement dont la date et heure correspondent au 18 avril est abandonné trois jours après le 15 mai.
-
->[!IMPORTANT]
->
->Une fois qu’une durée de vie est appliquée, toutes les données antérieures au nombre de jours de la durée de vie sélectionnée sont **supprimées de manière permanente** et ne peuvent pas être restaurées.
-
-Avant d’appliquer la durée de vie, vous devez vous assurer de conserver un intervalle de recherche en amont pour tous les segments situés dans la limite de durée de vie. Sinon, les résultats de segmentation peuvent être incorrects après l’application de la durée de vie. Par exemple, si vous appliquez une durée de vie de 30 jours aux données Adobe Analytics et une durée de vie de 365 jours aux données de transactions en magasin, le segment suivant produit des résultats incorrects :
-
-* Page produit affichée au cours des 60 derniers jours, suivie d’un achat en magasin
-* Ajout au panier suivi d’aucun achat au cours des 60 derniers jours.
-
-Inversement, le segment suivant génère toujours des résultats corrects :
-
-* Page produit affichée au cours des 14 derniers jours, suivie d’un achat en magasin
-* Page d’aide en ligne spécifique affichée au cours des 30 derniers jours
-* Achat hors ligne d’un produit au cours des 120 derniers jours
-* Ajout au panier suivi d’un achat au cours des 14 derniers jours.
-
->[!TIP]
->
->Vous pouvez, à des fins pratiques, conserver la même durée de vie pour tous les jeux de données. Ainsi, vous ne devez pas vous soucier de l’impact de la durée de vie sur les jeux de données dans la logique de segmentation.
-
-Pour plus d’informations sur l’application de la durée de vie aux données de profil, consultez la documentation sur la [durée de vie du service de profil](../../profile/apply-ttl.md).
+Cette fonctionnalité vous permet de supprimer automatiquement les données comportementales d’un jeu de données activé par Profile qui n’est plus utile pour vos cas d’utilisation. Consultez la présentation sur [Expiration des événements d’expérience](../../profile/event-expirations.md) pour plus d’informations sur le fonctionnement de ce processus une fois qu’il est activé pour un jeu de données.
 
 ## Résumé des bonnes pratiques pour la conformité de l’utilisation des licences {#best-practices}
 
@@ -179,7 +144,7 @@ Vous trouverez ci-dessous une liste des bonnes pratiques recommandées pour gara
 * Utilisez le [tableau de bord d’utilisation de la licence](../../dashboards/guides/license-usage.md) pour suivre et surveiller les tendances d’utilisation des clients. Vous pouvez ainsi anticiper les potentiels dépassements qui peuvent survenir.
 * Configurez les [filtres d’ingestion](#ingestion-filters) en identifiant les événements requis pour les cas d’utilisation de segmentation et de personnalisation. Cela vous permet d’envoyer uniquement les événements importants nécessaires aux cas d’utilisation.
 * Assurez-vous que vous n’avez [activé que les jeux de données pour le profil](#ingestion-filters) qui sont nécessaires aux d’utilisation de segmentation et de personnalisation.
-* Configurez une [[!DNL ExperienceEvent] durée de vie de jeu de données](#dataset-ttl) pour les données haute fréquence, telles que les données Web.
+* Configurez une [Expiration de l’événement d’expérience](#event-expirations) pour les données à haute fréquence, telles que les données web.
 * Vérifiez régulièrement les [rapports sur la composition de profils](#profile-store-composition-reports) pour déterminer la composition du magasin de profils. Cela vous permet de comprendre les sources de données qui contribuent le plus à la consommation de l’utilisation des licences.
 
 ## Résumé et disponibilité des fonctionnalités {#feature-summary}
@@ -191,7 +156,7 @@ Le tableau suivant présente la liste des fonctionnalités actuellement disponib
 | Fonctionnalité | Description |
 | --- | --- |
 | [Activation/désactivation de jeux de données pour le profil](../../catalog/datasets/user-guide.md) | Activez ou désactivez l’ingestion du jeu de données dans le service de profil |
-| Durée de vie du jeu de données [!DNL ExperienceEvent] | Appliquez une durée de vie d’expiration pour les jeux de données comportementaux dans le magasin de profils. Contactez votre représentant du service d’assistance Adobe. |
+| [Expiration des événements d’expérience](../../profile/event-expirations.md) | Appliquez un délai d’expiration pour tous les événements ingérés dans un jeu de données activé par Profile. Contactez votre représentant du support Adobe pour activer cette fonctionnalité. |
 | [Filtres de préparation de données Adobe Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md) | Appliquez des filtres [!DNL Kafka] pour exclure les données inutiles de l’ingestion |
 | [Filtres de connecteur source Adobe Audience Manager](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) | Appliquez des filtres de connexion source Audience Manager pour exclure les données inutiles de l’ingestion. |
 | [Filtres Alloy de données du SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=en#fundamentals) | Appliquez des filtres Alloy pour exclure les données inutiles de l’ingestion. |

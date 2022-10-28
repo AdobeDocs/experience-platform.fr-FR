@@ -5,10 +5,10 @@ title: Présentation de Segmentation Service
 topic-legacy: overview
 description: Découvrez Adobe Experience Platform Segmentation Service et le rôle qu’il occupe dans l’écosystème de Platform.
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
-source-git-commit: 52197a6c009fb5b0b6037a4fef3c98ad7c327e2e
+source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
 workflow-type: tm+mt
-source-wordcount: '1632'
-ht-degree: 100%
+source-wordcount: '1635'
+ht-degree: 97%
 
 ---
 
@@ -44,7 +44,7 @@ Pour plus d’informations sur la création de définitions de segment à l’ai
 >
 >Dans l’éventualité où un schéma est étendu, tous les chargements ultérieurs doivent mettre à jour les nouveaux champs ajoutés en conséquence. Pour plus d’informations sur la personnalisation du [!DNL Experience Data Model] (XDM), consultez le [tutoriel de l’éditeur de schémas](../xdm/tutorials/create-schema-ui.md).
 >
->En outre, si la durée de vie (TTL) est activée sur le jeu de données, cela peut affecter l’adhésion du segment créé. Pour plus d’informations sur la durée de vie et son impact sur la segmentation, consultez le [guide Profile Service TTL](../profile/apply-ttl.md).
+>En outre, si une valeur d’expiration d’événement d’expérience est activée sur le jeu de données, cela peut affecter l’appartenance du segment créé. Veuillez lire le guide sur [Expiration des événements d’expérience](../profile/event-expirations.md) pour plus d’informations sur la manière dont cette fonction peut affecter la segmentation.
 
 ## Évaluation de segments {#evaluate-segments}
 

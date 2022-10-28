@@ -3,9 +3,9 @@ keywords: Experience Platform;profil;profil client en temps réel;dépannage;API
 title: Aperçu de l’exemple d’état (aperçu du profil), point de terminaison de l’API
 description: L’aperçu de l’exemple de point de terminaison d’état de l’API Real-time Customer Profile vous permet de prévisualiser le dernier échantillon réussi de vos données de profil, de répertorier la distribution du profil par jeu de données et par identité, et de générer des rapports montrant le chevauchement des jeux de données, le chevauchement d’identités et les profils désassemblés.
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
-source-git-commit: 8a17648757b342bd8026382918ca41c469210b51
+source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
 workflow-type: tm+mt
-source-wordcount: '2875'
+source-wordcount: '2874'
 ht-degree: 5%
 
 ---
@@ -303,7 +303,7 @@ La réponse comprend une `data` avec des objets individuels contenant les détai
 
 ## Génération du rapport de chevauchement de jeux de données
 
-Le rapport de chevauchement de jeux de données offre une visibilité sur la composition de la banque de profils de votre entreprise en exposant les jeux de données qui contribuent le plus à votre audience adressable (profils fusionnés). En plus de fournir des informations sur vos données, ce rapport peut vous aider à prendre des mesures pour optimiser l’utilisation des licences, comme la définition d’un délai d’activation pour certains jeux de données.
+Le rapport de chevauchement de jeux de données offre une visibilité sur la composition de la banque de profils de votre entreprise en exposant les jeux de données qui contribuent le plus à votre audience adressable (profils fusionnés). En plus de fournir des informations sur vos données, ce rapport peut vous aider à prendre des mesures pour optimiser l’utilisation des licences, comme la définition d’expirations pour certains jeux de données.
 
 Vous pouvez générer le rapport de chevauchement de jeux de données en adressant une requête GET à la variable `/previewsamplestatus/report/dataset/overlap` point de terminaison .
 

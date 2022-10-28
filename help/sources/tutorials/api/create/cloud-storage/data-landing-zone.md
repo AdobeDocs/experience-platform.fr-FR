@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Découvrez comment connecter Adobe Experience Platform à Data Landing Zone à l’aide de l’API Flow Service.
 exl-id: bdb60ed3-7c63-4a69-975a-c6f1508f319e
-source-git-commit: b98afad74ef45cf3fabb9fa1ced283b2c768cef8
+source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
 workflow-type: tm+mt
-source-wordcount: '1222'
+source-wordcount: '1224'
 ht-degree: 20%
 
 ---
@@ -72,7 +72,7 @@ La réponse suivante renvoie des informations sur une zone d’entrée, y compri
 | Propriété | Description |
 | --- | --- |
 | `containerName` | Nom de la zone d’entrée que vous avez récupérée. |
-| `containerTTL` | Le paramètre de durée de vie appliqué à vos données dans la zone d’entrée. Tout ce qui se trouve dans une zone d’entrée donnée est supprimé au bout de sept jours. |
+| `containerTTL` | Délai d’expiration (en jours) appliqué à vos données dans la zone d’entrée. Tout ce qui se trouve dans une zone d’entrée donnée est supprimé au bout de sept jours. |
 
 ## Récupération [!DNL Data Landing Zone] informations
 
