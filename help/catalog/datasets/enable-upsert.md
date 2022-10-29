@@ -4,10 +4,10 @@ title: Activation d’un jeu de données pour les mises à jour de profil à l�
 type: Tutorial
 description: Ce tutoriel vous explique comment utiliser les API Adobe Experience Platform pour activer un jeu de données avec des fonctionnalités "d’insertion" afin d’effectuer des mises à jour des données de Real-time Customer Profile.
 exl-id: fc89bc0a-40c9-4079-8bfc-62ec4da4d16a
-source-git-commit: 5bd3e43e6b307cc1527e8734936c051fb4fc89c4
+source-git-commit: 1e83bc3eb2a2cc10ab945aebeef66d5108b568ea
 workflow-type: tm+mt
-source-wordcount: '1015'
-ht-degree: 28%
+source-wordcount: '1050'
+ht-degree: 27%
 
 ---
 
@@ -75,6 +75,8 @@ curl -X POST \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
+        "name": "Sample dataset",
+        "description: "A sample dataset with a sample description.",
         "fields": [],
         "schemaRef": {
             "id": "https://ns.adobe.com/{TENANT_ID}/schemas/31670881463308a46f7d2cb09762715",
@@ -249,6 +251,10 @@ Une requête de PATCH réussie renvoie un état HTTP 200 (OK) et un tableau cont
 ### Activation du jeu de données pour Profile et la publication {#enable-the-dataset}
 
 Un jeu de données existant peut être activé pour les mises à jour de profil et d’attribut à l’aide d’une seule requête de PATCH.
+
+>[!IMPORTANT]
+>
+>Lors de l’activation de votre jeu de données pour Profile, assurez-vous que le schéma auquel le jeu de données est associé est **également** Activé pour Profile. Si le schéma n’est pas activé pour Profile, le jeu de données **not** apparaissent en tant que profil activé dans l’interface utilisateur de Platform.
 
 **Format d’API**
 
