@@ -4,10 +4,10 @@ title: Présentation des alertes
 description: Découvrez les alertes dans Adobe Experience Platform, y compris la structure de la définition des règles d’alerte.
 feature: Alerts
 exl-id: c38a93c6-1618-4ef9-8f94-41c7ab4af43c
-source-git-commit: d82487f34c0879ed27ac55e42d70346f45806131
+source-git-commit: b1c82169056e66b9cdcf99f73daa7d37a3a01600
 workflow-type: tm+mt
-source-wordcount: '740'
-ht-degree: 100%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -82,6 +82,10 @@ Pour utiliser des alertes dans l’interface utilisateur de Platform, vous devez
 Avec l’autorisation Afficher les alertes, vous pouvez afficher les alertes reçues en sélectionnant l’icône représentant une cloche (![Icône de cloche](../images/alerts/overview/icon.png)) dans le coin supérieur droit.
 
 ![](../images/alerts/overview/ui.png)
+
+>[!NOTE]
+>
+> Sélectionnez une alerte pour accéder au tableau de bord associé afin d’obtenir des informations plus détaillées sur les raisons pour lesquelles l’alerte a été déclenchée.
 
 En outre, l’onglet [!UICONTROL Alertes] de l’interface utilisateur permet à chaque utilisateur de s’abonner à des types d’alerte spécifiques et permet aux administrateurs d’activer ou de désactiver complètement les règles d’alerte. Pour plus d’informations sur la gestion des alertes, consultez le [guide de l’interface utilisateur](./ui.md).
 
