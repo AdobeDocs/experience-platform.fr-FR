@@ -1,9 +1,9 @@
 ---
 title: Mappage d’un fichier CSV à un schéma XDM à l’aide de Recommendations généré par l’IA (bêta)
 description: Ce tutoriel explique comment mapper un fichier CSV à un schéma XDM à l’aide de recommandations générées par l’IA.
-source-git-commit: a8a7523c5b7f696ecc0ae89cb4e0474b44a222e7
+source-git-commit: d6f858af8bc44be74b1aaf12b973fb6818c1b2a5
 workflow-type: tm+mt
-source-wordcount: '1021'
+source-wordcount: '1043'
 ht-degree: 4%
 
 ---
@@ -35,13 +35,13 @@ Dans l’interface utilisateur de l’Experience Platform, sélectionnez **[!UIC
 
 Le **[!UICONTROL Mappage du schéma XDM CSV]** s’affiche, en commençant par **[!UICONTROL Détails du flux de données]** étape .
 
-Sélectionner **[!UICONTROL Création d’un nouveau schéma à l’aide de recommandations ML]**, provoquant l’affichage de nouveaux contrôles. Sélectionnez la classe appropriée pour les données CSV que vous souhaitez mapper ([!UICONTROL Profil] ou [!UICONTROL ExperienceEvent]) et utilisez le menu déroulant pour sélectionner le secteur industriel approprié à votre entreprise. Si votre organisation fonctionne sous une [business-to-business (B2B)](../../../xdm/tutorials/relationship-b2b.md) , sélectionnez le modèle **[!UICONTROL Données B2B]** .
+Sélectionner **[!UICONTROL Création d’un nouveau schéma à l’aide de recommandations ML]**, provoquant l’affichage de nouveaux contrôles. Sélectionnez la classe appropriée pour les données CSV que vous souhaitez mapper ([!UICONTROL Profil] ou [!UICONTROL ExperienceEvent]). Vous pouvez éventuellement utiliser le menu déroulant pour sélectionner le secteur d’activité approprié à votre entreprise ou laisser ce champ vide si les catégories fournies ne vous concernent pas. Si votre organisation fonctionne sous une [business-to-business (B2B)](../../../xdm/tutorials/relationship-b2b.md) , sélectionnez le modèle **[!UICONTROL Données B2B]** .
 
 ![Le [!UICONTROL Détails du flux de données] avec l’option de recommandation ML sélectionnée. [!UICONTROL Profil] est sélectionné pour la classe et [!UICONTROL Télécommunications] sélectionné pour le secteur](../../images/tutorials/map-csv-recommendations/select-class-and-industry.png)
 
 À partir de là, indiquez un nom pour le schéma qui sera créé à partir des données CSV, ainsi qu’un nom pour le jeu de données de sortie qui contiendra les données ingérées sous ce schéma.
 
-Vous pouvez éventuellement configurer les fonctionnalités supplémentaires suivantes pour le flux de données :
+Vous pouvez éventuellement configurer les fonctionnalités supplémentaires suivantes pour le flux de données avant de poursuivre :
 
 | Input name | Description |
 | --- | --- |
@@ -50,6 +50,8 @@ Vous pouvez éventuellement configurer les fonctionnalités supplémentaires sui
 | [!UICONTROL Ingestion partielle] | Lorsque cette option est activée, les enregistrements valides pour les nouvelles données de lot sont ingérés dans un seuil d’erreur spécifié. Ce seuil vous permet de configurer le pourcentage d’erreurs acceptables avant l’échec de l’ensemble du lot. |
 | [!UICONTROL Détails du flux de données] | Indiquez un nom et une description facultative du flux de données qui amènera les données CSV dans Platform. Un nom par défaut est automatiquement attribué au flux de données lors du démarrage de ce processus. La modification du nom est facultative. |
 | [!UICONTROL Alertes] | Effectuer une sélection dans une liste de [alertes in-product](../../../observability/alerts/overview.md) que vous souhaitez recevoir concernant l’état du flux de données une fois qu’il a été lancé. |
+
+{style=&quot;table-layout:auto&quot;}
 
 Lorsque vous avez terminé de configurer le flux de données, sélectionnez **[!UICONTROL Suivant]**.
 
@@ -81,7 +83,7 @@ Utilisez l’aperçu du mappage des champs pour modifier les mappages existants 
 
 ### Modifier des groupes de champs {#edit-field-groups}
 
-Les champs CSV sont automatiquement associés à des groupes de champs existants à l’aide de modèles ML. Si vous souhaitez modifier le groupe de champs d’un champ CSV particulier, sélectionnez **[!UICONTROL Modifier]** en regard de l’arborescence du schéma.
+Les champs CSV sont automatiquement mappés aux groupes de champs XDM existants à l’aide de modèles ML. Si vous souhaitez modifier le groupe de champs d’un champ CSV particulier, sélectionnez **[!UICONTROL Modifier]** en regard de l’arborescence du schéma.
 
 ![Le [!UICONTROL Modifier] sélectionné en regard de l’arborescence du schéma](../../images/tutorials/map-csv-recommendations/edit-schema-structure.png)
 
