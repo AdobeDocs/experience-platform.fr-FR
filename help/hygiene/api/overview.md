@@ -2,10 +2,10 @@
 title: Guide de l’API Data Hygiene
 description: Découvrez comment corriger ou supprimer par programmation les données personnelles des clients stockées dans Adobe Experience Platform.
 exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
-source-git-commit: 83149c4e6e8ea483133da4766c37886b8ebd7316
+source-git-commit: 6453ec6c98d90566449edaa0804ada260ae12bf6
 workflow-type: tm+mt
-source-wordcount: '400'
-ht-degree: 100%
+source-wordcount: '405'
+ht-degree: 94%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 100%
 
 >[!IMPORTANT]
 >
->Actuellement, les fonctionnalités d’hygiène des données d’Adobe Experience Platform sont uniquement disponibles pour les organisations qui ont acheté Adobe Healthcare Shield.
+>Les fonctionnalités d’hygiène des données de Adobe Experience Platform ne sont actuellement disponibles que pour les organisations qui ont acheté **Adobe Health Care Shield** ou **Adobe de la confidentialité et de la sécurité**.
 
 L’API Data Hygiene vous permet de corriger ou de supprimer par programmation les données personnelles des clients stockées dans Adobe Experience Platform, ainsi que de planifier des dates d’expiration pour les jeux de données. Ce guide décrit les étapes préalables requises pour utiliser l’API et contient des liens vers une documentation plus spécifique aux points d’entrée.
 

@@ -2,10 +2,10 @@
 title: Point d’entrée de l’API d’expiration du jeu de données
 description: Le point d’entrée /ttl de l’API Data Hygiene vous permet de planifier par programmation l’expiration des jeux de données dans Adobe Experience Platform.
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
-source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
+source-git-commit: 6453ec6c98d90566449edaa0804ada260ae12bf6
 workflow-type: tm+mt
-source-wordcount: '1451'
-ht-degree: 100%
+source-wordcount: '1456'
+ht-degree: 98%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 100%
 
 >[!IMPORTANT]
 >
->Actuellement, les fonctionnalités d’hygiène des données d’Adobe Experience Platform sont uniquement disponibles pour les organisations qui ont acheté Adobe Healthcare Shield.
+>Les fonctionnalités d’hygiène des données de Adobe Experience Platform ne sont actuellement disponibles que pour les organisations qui ont acheté **Adobe Health Care Shield** ou **Adobe de la confidentialité et de la sécurité**.
 
 Le point d’entrée `/ttl` de l’API Data Hygiene vous permet de planifier des dates d’expiration pour les jeux de données dans Adobe Experience Platform.
 

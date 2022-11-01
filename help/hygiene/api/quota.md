@@ -1,10 +1,10 @@
 ---
 title: Point d’entrée de l’API Quota
 description: Le point d’entrée /quota de l’API Data Hygiene vous permet de surveiller l’utilisation de l’hygiène des données par rapport aux limites mensuelles de quota de votre entreprise pour chaque type de traitement.
-source-git-commit: 364ada0c354ddba8a855945f4f806f5600f21416
-workflow-type: ht
-source-wordcount: '346'
-ht-degree: 100%
+source-git-commit: 6453ec6c98d90566449edaa0804ada260ae12bf6
+workflow-type: tm+mt
+source-wordcount: '352'
+ht-degree: 93%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 100%
 
 >[!IMPORTANT]
 >
->Actuellement, les fonctionnalités de nettoyage de données d’Adobe Experience Platform sont uniquement disponibles pour les organisations qui ont acheté Healthcare Shield.
+>Les fonctionnalités d’hygiène des données de Adobe Experience Platform ne sont actuellement disponibles que pour les organisations qui ont acheté **Adobe Health Care Shield** ou **Adobe de la confidentialité et de la sécurité**.
 
 Le point d’entrée `/quota` de l’API Data Hygiene vous permet de surveiller votre utilisation de l’hygiène des données par rapport aux limites de quota de votre entreprise pour chaque type de tâche.
 

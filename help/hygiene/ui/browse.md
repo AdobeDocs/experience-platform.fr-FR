@@ -2,10 +2,10 @@
 title: Parcourir les ordres de travail relatifs au nettoyage de données
 description: Découvrez comment afficher et gérer les ordres de travail de nettoyage de données existants dans l’interface utilisateur d’Adobe Experience Platform.
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
-source-git-commit: 83149c4e6e8ea483133da4766c37886b8ebd7316
-workflow-type: ht
-source-wordcount: '860'
-ht-degree: 100%
+source-git-commit: 6453ec6c98d90566449edaa0804ada260ae12bf6
+workflow-type: tm+mt
+source-wordcount: '865'
+ht-degree: 97%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 100%
 
 >[!IMPORTANT]
 >
->Actuellement, les fonctionnalités d’hygiène des données d’Adobe Experience Platform sont uniquement disponibles pour les organisations qui ont acheté Adobe Healthcare Shield.
+>Les fonctionnalités d’hygiène des données de Adobe Experience Platform ne sont actuellement disponibles que pour les organisations qui ont acheté **Adobe Health Care Shield** ou **Adobe de la confidentialité et de la sécurité**.
 
 Lorsqu’une demande d’hygiène de données est envoyée au système, un ordre de travail est créé pour exécuter la tâche demandée. Un ordre de travail représente un processus spécifique de nettoyage de données (par exemple, l’expiration planifiée d’un jeu de données), qui comprend le statut actuel et d’autres détails connexes.
 

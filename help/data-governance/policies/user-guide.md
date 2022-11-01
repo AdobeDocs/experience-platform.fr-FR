@@ -5,9 +5,9 @@ title: Gestion des stratégies d’utilisation des données dans l’interface u
 topic-legacy: policies
 description: La gouvernance des données d’Adobe Experience Platform fournit une interface utilisateur qui vous permet de créer et de gérer des stratégies d’utilisation des données. Ce document présente les actions que vous pouvez effectuer dans l’espace de travail Stratégies de l’interface utilisateur de l’Experience Platform.
 exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
-source-git-commit: 7f1e4bdf54314cab1f69619bcbb34216da94b17e
+source-git-commit: 6453ec6c98d90566449edaa0804ada260ae12bf6
 workflow-type: tm+mt
-source-wordcount: '1324'
+source-wordcount: '1330'
 ht-degree: 51%
 
 ---
@@ -83,7 +83,7 @@ L’onglet **[!UICONTROL Parcourir]** réapparaît et affiche désormais la nouv
 
 >[!IMPORTANT]
 >
->Actuellement, les politiques de consentement ne sont disponibles que pour les organisations qui ont acheté Healthcare Shield.
+>Actuellement, les stratégies de consentement ne sont disponibles que pour les organisations qui ont acheté **Adobe Health Care Shield** ou **Adobe de la confidentialité et de la sécurité**.
 
 Si vous choisissez de créer une stratégie de consentement, un nouvel écran s’affiche, vous permettant de configurer la nouvelle stratégie.
 

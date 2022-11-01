@@ -2,10 +2,10 @@
 title: Présentation de l’hygiène de données
 description: Le nettoyage de données d’Adobe Experience Platform vous permet de gérer le cycle de vie des données en mettant à jour ou en purgeant des enregistrements obsolètes ou inexacts.
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
-source-git-commit: 83149c4e6e8ea483133da4766c37886b8ebd7316
-workflow-type: ht
-source-wordcount: '753'
-ht-degree: 100%
+source-git-commit: 6453ec6c98d90566449edaa0804ada260ae12bf6
+workflow-type: tm+mt
+source-wordcount: '758'
+ht-degree: 97%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 100%
 
 >[!IMPORTANT]
 >
->L’hygiène des données n’est actuellement disponible que pour les organisations qui ont acheté Adobe Healthcare Shield.
+>L’hygiène des données n’est actuellement disponible que pour les organisations qui ont acheté **Adobe Health Care Shield** ou **Adobe de la confidentialité et de la sécurité**.
 
 Adobe Experience Platform offre un ensemble d’outils fiables pour gérer des opérations de données complexes et volumineuses afin d’orchestrer les expériences client. Les données étant ingérées dans le système au fil du temps, il devient de plus en plus important de gérer les banques de données pour que les données soient utilisées comme prévu, mises à jour lorsque des données incorrectes doivent être corrigées et supprimées lorsque les politiques d’entreprise le jugent nécessaire.
 
@@ -62,7 +62,7 @@ Ce qui suit se produit lorsqu’une [requête de suppression de consommateurs](.
 | La requête a été soumise | 0 heure | Un gestionnaire de données ou un analyste de la confidentialité soumet une requête de suppression de consommateurs. La requête est visible dans l’[!UICONTROL interface utilisateur de l’hygiène des données] après avoir été soumise. |
 | Mises à jour des recherches de profil | 3 heures | Les modifications du nombre de profils provoquées par l’identité supprimée sont appliquées dans les [widgets de tableau de bord](../dashboards/guides/profiles.md#profile-count-trend) et d’autres rapports. |
 | Segments mis à jour | 24 heures | Une fois les profils supprimés, tous les [segments](../segmentation/home.md) connexes sont mis à jour pour refléter leur nouvelle taille. |
-| Destinations et parcours mis à jour | 26 heures | [Campagnes](https://experienceleague.adobe.com/docs/journey-optimizer/using/campaigns/get-started-with-campaigns.html?lang=fr), [destinations](../destinations/home.md) et [parcours](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journeys/journey.html?lang=fr) sont mis à jour en fonction des modifications apportées aux segments connexes. |
+| Destinations et parcours mis à jour | 26 heures | [Campagnes](https://experienceleague.adobe.com/docs/journey-optimizer/using/campaigns/get-started-with-campaigns.html), [destinations](../destinations/home.md) et [parcours](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journeys/journey.html) sont mis à jour en fonction des modifications apportées aux segments connexes. |
 | Enregistrements supprimés de manière réversible dans le lac de données | 7 jours | Les données sont supprimées de manière réversible du lac de données. |
 | Aspiration des données terminée | 14 jours | Le [statut du traitement d’hygiène](./ui/browse.md#view-details) se met à jour pour indiquer que le traitement est terminé, ce qui signifie que l’aspiration de données est achevée dans le lac de données et que les enregistrements pertinents ont été définitivement supprimés. |
 
