@@ -1,18 +1,18 @@
 ---
-title: Informations sur les rapports de magasin accélérés par requête
-description: Découvrez comment créer un modèle de données d’informations sur les rapports via Query Service afin de l’utiliser avec des données de magasin accélérées et des tableaux de bord définis par l’utilisateur.
+title: Insights sur les rapports de magasin accélérés par requête
+description: Découvrez comment créer un modèle de données d’insights sur les rapports via Query Service afin de l’utiliser avec des données de magasin accélérées et des tableaux de bord définis par l’utilisateur.
 source-git-commit: 085c9f4e76de1aa3ea969eb0511ee1da43be59f0
 workflow-type: tm+mt
 source-wordcount: '1032'
-ht-degree: 0%
+ht-degree: 81%
 
 ---
 
-# Requête : informations de création de rapports de magasin accélérées
+# Insights sur les rapports de magasin accélérés par requête
 
-Le magasin d’accélération des requêtes vous permet de réduire le temps et la puissance de traitement requis pour obtenir des informations critiques à partir de vos données. En règle générale, les données sont traitées à intervalles réguliers (par exemple, toutes les heures ou tous les jours), lorsque des vues agrégées sont créées et font l’objet de rapports. L’analyse de ces rapports générés à partir de données agrégées fournit des informations destinées à améliorer les performances de l’entreprise. Le magasin d’accélération des requêtes fournit un service de cache, une simultanéité, une expérience interactive et une API sans état. Toutefois, il suppose que les données sont prétraitées et optimisées pour l’interrogation agrégée et non pour l’interrogation des données brutes.
+Le magasin d’accélération des requêtes vous permet de réduire le temps et la puissance de traitement requis pour obtenir des insights critiques à partir de vos données. En règle générale, les données sont traitées à intervalles réguliers (par exemple, toutes les heures ou tous les jours), lorsque des vues agrégées sont créées et font l’objet de rapports. L’analyse de ces rapports générés à partir de données agrégées fournit des insights destinés à améliorer les performances commerciales. Le magasin d’accélération des requêtes offre un service de cache, une simultanéité, une expérience interactive et une API sans état. Toutefois, il suppose que les données sont prétraitées et optimisées pour les requêtes agrégées et non pour les requêtes de données brutes.
 
-Le magasin accéléré de requêtes vous permet de créer un modèle de données personnalisé et/ou d’étendre sur des modèles de données Adobe Real-time Customer Data Platform existants. Vous pouvez ensuite interagir avec vos informations de création de rapports ou les incorporer dans un cadre de création de rapports/visualisation de votre choix. Consultez la documentation du modèle de données Real-time Customer Data Platform Insights pour savoir comment [personnaliser vos modèles de requête SQL pour créer des rapports Real-Time CDP pour vos cas d’utilisation d’indicateurs de performance clés (IPC) et marketing ;](../../dashboards/cdp-insights-data-model.md).
+Le magasin accéléré de requêtes vous permet de créer un modèle de données personnalisé et/ou d’étendre sur des modèles de données Adobe Real-time Customer Data Platform existants. Vous pouvez ensuite utiliser vos informations de rapports ou les incorporer dans un framework de création de rapports/visualisation de votre choix. Consultez la documentation du modèle de données Real-time Customer Data Platform Insights pour savoir comment [personnaliser vos modèles de requête SQL pour créer des rapports Real-Time CDP pour vos cas d’utilisation d’indicateurs de performance clés (IPC) et marketing ;](../../dashboards/cdp-insights-data-model.md).
 
 Le modèle de données Real-Time CDP de Adobe Experience Platform fournit des informations sur les profils, les segments et les destinations et active les tableaux de bord des informations Real-Time CDP. Ce document vous guide tout au long du processus de création de votre modèle de données d’informations sur les rapports et vous explique également comment étendre les modèles de données Real-Time CDP si nécessaire.
 
@@ -22,25 +22,25 @@ Ce tutoriel utilise des tableaux de bord définis par l’utilisateur pour visua
 
 ## Prise en main
 
-Le SKU de Data Distiller est nécessaire pour créer un modèle de données personnalisé pour vos informations sur les rapports et pour étendre les modèles de données Real-Time CDP qui contiennent des données Platform enrichies. Veuillez consulter la [packaging](../packages.md), [barrières de sécurité](../guardrails.md#query-accelerated-store), et [licences](../data-distiller/licence-usage.md) documentation relative au SKU de Data Distiller. Si vous ne disposez pas du SKU de Data Distiller, contactez votre représentant du service client Adobe pour plus d’informations.
+Le SKU de Data Distiller est nécessaire pour créer un modèle de données personnalisé pour vos informations sur les rapports et pour étendre les modèles de données Real-Time CDP qui contiennent des données Platform enrichies. Veuillez consulter le [packaging](../packages.md), les [barrières de sécurité](../guardrails.md#query-accelerated-store), et la documentation de la [licence](../data-distiller/licence-usage.md) relative au SKU de Data Distiller. Si vous ne disposez pas du SKU de Data Distiller, contactez votre représentant du service client Adobe pour plus d’informations.
 
-## Créer un modèle de données d’insights de reporting
+## Créer un modèle de données de rapport d’informations
 
 Ce tutoriel utilise un exemple de création d’un modèle de données d’informations sur l’audience. Si vous utilisez une ou plusieurs plateformes d’annonceurs pour atteindre votre audience, vous pouvez utiliser l’API de l’annonceur pour obtenir un nombre de correspondance approximatif de votre audience.
 
-Dès le départ, vous disposez d’un modèle de données initial issu de vos sources (potentiellement de votre API de plateforme publicitaire). Pour créer une vue globale de vos données brutes, créez un modèle d’informations sur les rapports comme décrit dans l’image ci-dessous. Cela permet à un jeu de données d’obtenir les limites supérieure et inférieure de la correspondance d’audience.
+Dès le départ, vous disposez d’un modèle de données initial issu de vos sources (potentiellement de l’API de la plateforme de votre annonceur). Pour créer une vue globale de vos données brutes, créez un modèle de rapport d’informations comme décrit dans l’image ci-dessous. Cela permet à un jeu de données d’obtenir les limites supérieure et inférieure de la correspondance d’audience.
 
 ![Schéma relationnel d’entité (ERD) du modèle utilisateur d’informations sur l’audience.](../images/query-accelerated-store/audience-insight-user-model.png)
 
-Dans cet exemple, la variable `externalaudiencereach` table/jeu de données est basé sur un identifiant et suit les limites inférieure et supérieure pour le nombre de correspondances. Le `externalaudiencemapping` le tableau/jeu de données de dimension mappe l’ID externe à une destination et à un segment sur Platform.
+Dans cet exemple, le `externalaudiencereach` tableau/jeu de données est basé sur un identifiant et suit les limites inférieure et supérieure pour le nombre de correspondances. Le `externalaudiencemapping` tableau/jeu de données de dimension mappe l’identifiant externe à une destination et à un segment sur Platform.
 
-## Création d’un modèle pour la création de rapports d’informations avec Data Distiller
+## Créer un modèle de rapport d’informations avec Data Distiller
 
-Créez ensuite un modèle d’informations sur les rapports (`audienceinsight` dans cet exemple) et utilisez la commande SQL `ACCOUNT=acp_query_batch and TYPE=QSACCEL` pour vous assurer qu’il est créé sur la boutique accélérée. Utilisez ensuite Query Service pour créer une `audienceinsight.audiencemodel` du schéma `audienceinsight` base de données.
+Créez ensuite un modèle de rapport d’informations (`audienceinsight` dans cet exemple) et utilisez la commande SQL `ACCOUNT=acp_query_batch and TYPE=QSACCEL` pour vous assurer qu’il est créé sur la boutique accélérée. Utilisez ensuite Query Service pour créer un schéma de `audienceinsight.audiencemodel` pour la base de données `audienceinsight`.
 
 >[!NOTE]
 >
->Le SKU de Data Distiller est requis pour la variable `ACCOUNT=acp_query_batch` . Sans cela, un modèle de données normal est créé sur le lac de données.
+>Le SKU de Data Distiller est requis pour la commande `ACCOUNT=acp_query_batch`. Sans celui-ci, un modèle de données normal est créé sur le lac de données.
 
 ```sql
 CREATE database audienceinsight WITH (TYPE=QSACCEL, ACCOUNT=acp_query_batch);
@@ -50,7 +50,7 @@ CREATE schema audienceinsight.audiencemodel;
 
 ## Créer des tableaux, des relations et renseigner des données
 
-Maintenant que vous avez créé votre `audienceinsight` modèle d’informations sur les rapports, créez la variable `externalaudiencereach` et `externalaudiencemapping` et établir des relations entre eux. Ensuite, utilisez le `ALTER TABLE` pour ajouter une contrainte de clé étrangère entre les tables et définir une relation. L’exemple SQL suivant montre comment procéder.
+Maintenant que vous avez créé votre modèle de rapport d’informations `audienceinsight`, créez les tableaux `externalaudiencereach` et `externalaudiencemapping` et établissez des relations entre eux. Ensuite, utilisez la commande `ALTER TABLE` pour ajouter une contrainte de clé étrangère entre les tableaux et définir une relation. L’exemple SQL suivant montre comment procéder.
 
 ```sql
 CREATE TABLE IF NOT exists audienceinsight.audiencemodel.externalaudiencereach
@@ -77,13 +77,13 @@ SELECT cast(null as int) segment_id,
 ALTER TABLE externalaudiencereach ADD  CONSTRAINT FOREIGN KEY (ext_custom_audience_id) REFERENCES externalaudiencemapping (ext_custom_audience_id) NOT enforced;
 ```
 
-Après l’exécution des deux `ALTER TABLE` , la relation entre les tables de faits et de dimensions est formée.
+Après l’exécution réussie des deux commandes `ALTER TABLE`, la relation entre les tableaux de faits et de dimensions est formée.
 
-Une fois les instructions exécutées, utilisez la variable `SHOW datagroups;` pour renvoyer une liste des jeux de données disponibles sur le magasin accéléré à partir du `audienceinsight.audiencemodel`. Vos résultats tabulés doivent être similaires à l’exemple fourni ci-dessous.
+Une fois les instructions exécutées, utilisez la commande `SHOW datagroups;` pour renvoyer une liste des jeux de données disponibles sur la boutique accélérée à partir du `audienceinsight.audiencemodel`. Vos résultats tabulés doivent être similaires à l’exemple fourni ci-dessous.
 
 >[!IMPORTANT]
 >
->Seules les données du magasin accéléré sont accessibles à partir du point de terminaison de l’API sans état de Query Service. `POST /data/foundation/query/accelerated-queries`.
+>Seules les données de la boutique accélérée sont accessibles à partir du point d’entrée `POST /data/foundation/query/accelerated-queries` de l’API sans état de Query Service.
 
 ```console
     Database     |    Schema     | GroupType |      ChildType       |        ChildName        | PhysicalParent |               ChildId               
@@ -92,9 +92,9 @@ Une fois les instructions exécutées, utilisez la variable `SHOW datagroups;` p
  audienceinsight | audiencemodel | QSACCEL   | Data Warehouse Table | externalaudiencereach   | true           | 1b941a6d-6214-4810-815c-81c497a0b636
 ```
 
-## Interrogation du modèle de données d’informations sur les rapports
+## Interroger le modèle de données de rapport d’informations
 
-Utilisez Query Service pour interroger les `audiencemodel.externalaudiencereach` table des dimensions. Vous trouverez ci-dessous un exemple de requête.
+Utilisez Query Service pour interroger le tableau des dimensions `audiencemodel.externalaudiencereach`. Vous trouverez ci-dessous un exemple de requête.
 
 ```sql
 SELECT a.ext_custom_audience_id,
@@ -128,13 +128,13 @@ ext_custom_audience_id | approximate_count_upper_bound
 
 ## Étendre votre modèle de données avec le modèle de données Real-Time CDP insights
 
-Vous pouvez étendre votre modèle d’audience avec des détails supplémentaires pour créer un tableau de dimension plus riche. Vous pouvez, par exemple, associer le nom du segment et le nom de la destination à l’identifiant de l’audience externe. Pour ce faire, utilisez Query Service pour créer ou actualiser un nouveau jeu de données et l’ajouter au modèle d’audience qui combine des segments et des destinations avec une identité externe. Le diagramme ci-dessous illustre le concept de cette extension de modèle de données.
+Vous pouvez étendre votre modèle d’audience avec des détails supplémentaires pour créer un tableau des dimensions plus riche. Vous pouvez, par exemple, mapper le nom du segment et le nom de la destination à l’identifiant de l’audience externe. Pour ce faire, utilisez Query Service pour créer ou actualiser un nouveau jeu de données et l’ajouter au modèle d’audience qui combine des segments et des destinations avec une identité externe. Le diagramme ci-dessous illustre le concept de cette extension de modèle de données.
 
 ![Diagramme ERD liant le modèle de données d’aperçu Real-Time CDP et le modèle de magasin accéléré Query.](../images/query-accelerated-store/updatingAudienceInsightUserModel.png)
 
-## Créer des tableaux de dimension pour étendre votre modèle d’informations sur les rapports
+## Créer des tableaux des dimensions pour étendre votre modèle de rapport d’informations
 
-Utilisez Query Service pour ajouter des attributs descriptifs clés des jeux de données de dimension Real-Time CDP enrichis au `audienceinsight` modèle de données et établir une relation entre votre table des faits et la nouvelle table des dimensions. Le code SQL ci-dessous explique comment intégrer des tableaux de dimensions existants à votre modèle de données d’informations sur les rapports.
+Utilisez Query Service pour ajouter des attributs descriptifs clés des jeux de données de dimension Real-Time CDP enrichis au `audienceinsight` modèle de données et établir une relation entre votre table des faits et la nouvelle table des dimensions. Le code SQL ci-dessous explique comment intégrer des tables de dimensions existantse à votre modèle de données d’insights sur les rapports.
 
 ```sql
 CREATE TABLE audienceinsight.audiencemodel.external_seg_dest_map AS
@@ -153,7 +153,7 @@ CREATE TABLE audienceinsight.audiencemodel.external_seg_dest_map AS
 ALTER TABLE externalaudiencereach  ADD  CONSTRAINT FOREIGN KEY (ext_custom_audience_id) REFERENCES external_seg_dest_map (ext_custom_audience_id) NOT enforced;
 ```
 
-Utilisez la variable `SHOW datagroups;` pour confirmer la création de la variable `external_seg_dest_map` table des dimensions.
+Utilisez la commande `SHOW datagroups;` pour confirmer la création de la table des dimensions `external_seg_dest_map`.
 
 ```console
     Database     |     Schema     | GroupType |      ChildType       |                ChildName  | PhysicalParent |               ChildId               
@@ -163,9 +163,9 @@ Utilisez la variable `SHOW datagroups;` pour confirmer la création de la variab
  audienceinsight | audiencemodel | QSACCEL   | Data Warehouse Table | externalaudiencereach      | true           | 4485c610-7424-4ed6-8317-eed0991b9727
 ```
 
-## Interrogation de votre modèle de données de rapports de magasin accéléré étendu
+## Interroger votre modèle de données d’insights de rapports de magasin accéléré et étendu
 
-Maintenant que la variable `audienceinsight` le modèle de données a été augmenté, il est prêt à être interrogé. Le code SQL suivant affiche la liste des destinations et des segments mappés.
+Maintenant que le modèle de données `audienceinsight` a été augmenté, celui-ci est prêt à être interrogé. Le code SQL suivant affiche la liste des destinations et des segments mappés.
 
 ```sql
 SELECT a.ext_custom_audience_id,
@@ -181,7 +181,7 @@ FROM   audiencemodel.externalaudiencereach1 AS a
 LIMIT  25; 
 ```
 
-La requête renvoie tous les jeux de données du magasin accéléré de requêtes :
+La requête renvoie tous les jeux de données du magasin accéléré de requêtes :
 
 ```console
 ext_custom_audience_id | destination_name |       segment_name        | destination_status | destination_id | segment_id 
@@ -223,8 +223,8 @@ ORDER BY b.destination_name
 LIMIT  5000
 ```
 
-L’image ci-dessous fournit un exemple des visualisations personnalisées possibles à l’aide de votre modèle de données d’informations sur les rapports.
+L’image ci-dessous fournit un exemple des visualisations personnalisées possibles à l’aide de votre modèle de données d’insights sur les rapports.
 
-![Un nombre de correspondances par widget de destination et de segment créé à partir du nouveau modèle de données d’informations sur les rapports.](../images/query-accelerated-store/user-defined-dashboard-widget.png)
+![Un nombre de correspondances par widget de destination et de segment créé à partir du nouveau modèle de données d’insights sur les rapports.](../images/query-accelerated-store/user-defined-dashboard-widget.png)
 
-Votre modèle de données personnalisé se trouve dans la liste des modèles de données disponibles dans l’espace de travail du tableau de bord défini par l’utilisateur. Voir [guide de tableau de bord défini par l’utilisateur](../../dashboards/user-defined-dashboards.md) pour obtenir des conseils sur l’utilisation de votre modèle de données personnalisé.
+Votre modèle de données personnalisé se trouve dans la liste des modèles de données disponibles dans l’espace de travail du tableau de bord défini par l’utilisateur. Voir le [guide de tableau de bord défini par l’utilisateur](../../dashboards/user-defined-dashboards.md) pour obtenir des conseils sur l’utilisation de votre modèle de données personnalisé.
