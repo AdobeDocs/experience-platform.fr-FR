@@ -1,16 +1,16 @@
 ---
-title: Configuration d’un flux de données
+title: Configurer un flux de données
 description: Connectez votre intégration SDK Experience Platform côté client à des produits Adobe et à des destinations tierces.
 source-git-commit: 82703fae72e8637bb7d5e08a6699d9e1466afd8b
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1658'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
-# Configuration d’un flux de données
+# Configurer un flux de données
 
-Ce document décrit les étapes à suivre pour configurer une [datastream](./overview.md) dans l’interface utilisateur.
+Ce document décrit les étapes de configuration d’un [flux de données](./overview.md) dans l’interface utilisateur.
 
 ## Accéder à l’espace de travail [!UICONTROL Flux de données]
 
@@ -18,7 +18,7 @@ Vous pouvez créer et gérer des flux de données dans l’interface utilisateur
 
 ![Onglet Flux de données dans l’interface utilisateur de collecte de données](../assets/datastreams/configure/datastreams-tab.png)
 
-L’onglet [!UICONTROL Flux de données] affiche une liste des flux de données existants, y compris leur nom convivial, leur identifiant et leur date de dernière modification. Sélectionnez le nom d’un flux de données sur [afficher ses détails et configurer des services ;](#view-details).
+L’onglet [!UICONTROL Flux de données] affiche une liste des flux de données existants, y compris leur nom convivial, leur identifiant et leur date de dernière modification. Sélectionnez le nom d’un flux de données pour [afficher les détails et configurer des services](#view-details).
 
 Sélectionnez l’icône « plus » (**…**) d’un flux de données spécifique afin d’afficher plus d’options. Sélectionnez **[!UICONTROL Modifier]** pour mettre à jour la [configuration de base](#configure) du flux de données ou sélectionnez **[!UICONTROL Supprimer]** pour supprimer le flux de données.
 
@@ -45,7 +45,7 @@ Sélectionnez **[!UICONTROL Options avancées]** pour afficher des commandes sup
 | [!UICONTROL Géolocalisation] | Détermine si les recherches GPS sont effectuées en fonction de l’adresse IP de l’utilisateur. Le paramètre par défaut **[!UICONTROL Aucun]** désactive les recherches GPS, tandis que le paramètre **[!UICONTROL Ville]** fournit les coordonnées GPS à deux décimales. |
 | [!UICONTROL Cookie interne d’identifiant] | Lorsqu’il est activé, ce paramètre indique à Edge Network de se référer à un cookie spécifié lors de la recherche d’un [identifiant d’appareil interne](../identity/first-party-device-ids.md), plutôt que de rechercher cette valeur dans le mappage d’identité.<br><br>Lors de l’activation de ce paramètre, vous devez indiquer le nom du cookie dans lequel l’identifiant doit être stocké. |
 | [!UICONTROL Synchronisation des identifiants tiers] | Les synchronisations des identifiants peuvent être regroupées en conteneurs afin de permettre l’exécution de différentes synchronisations d’identifiant à différents moments. Lorsqu’il est activé, ce paramètre vous permet de spécifier le conteneur des synchronisations d’identifiant à exécuter pour ce flux de données. |
-| [!UICONTROL Type d’accès] | Définit le type d’authentification que le réseau Edge accepte pour le flux de données. <ul><li>**[!UICONTROL Authentification mixte]** : lorsque cette option est activée, Edge Network accepte les demandes authentifiées et non authentifiées. Sélectionnez cette option lorsque vous prévoyez d’utiliser le SDK web ou le [SDK mobile](https://aep-sdks.gitbook.io/docs/), ainsi que l’[API Server](../../server-api/overview.md). </li><li>**[!UICONTROL Authentifié uniquement]** : lorsque cette option est activée, Edge Network accepte uniquement les demandes authentifiées. Sélectionnez cette option lorsque vous prévoyez d’utiliser uniquement l’API du serveur et que vous souhaitez empêcher le traitement des requêtes non authentifiées par le réseau Edge.</li></ul> |
+| [!UICONTROL Type d’accès] | Définit le type d’authentification qu’Edge Network accepte pour le train de données. <ul><li>**[!UICONTROL Authentification mixte]** : lorsque cette option est activée, Edge Network accepte les demandes authentifiées et non authentifiées. Sélectionnez cette option lorsque vous prévoyez d’utiliser le SDK web ou le [SDK mobile](https://aep-sdks.gitbook.io/docs/), ainsi que l’[API Server](../../server-api/overview.md). </li><li>**[!UICONTROL Authentifié uniquement]** : lorsque cette option est activée, Edge Network accepte uniquement les demandes authentifiées. électionnez cette option lorsque vous prévoyez d’utiliser uniquement l’API Server et que vous souhaitez empêcher le traitement des demandes non authentifiées par Edge Network.</li></ul> |
 
 Ensuite, si vous configurez le flux de données d’Experience Platform, suivez le tutoriel sur la [Préparation des données pour la collecte de données](./data-prep.md) afin de mapper les données à un schéma d’événement de Platform avant de revenir à ce guide. Sinon, sélectionnez **[!UICONTROL Enregistrer]** et passez à la section suivante.
 
