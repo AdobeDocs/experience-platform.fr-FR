@@ -5,9 +5,9 @@ user-guide-title: Aide du SDK web d’Adobe Experience Platform
 breadcrumb-title: Guide du SDK web
 user-guide-description: Interagissez avec les services Experience Cloud via le réseau Edge.
 feature: Web SDK
-source-git-commit: 2cec87d3f45b1b774925a9b669b53a958e65e57a
+source-git-commit: 15a1fd71bc5f00efdd475abd3385dc6bf4737a17
 workflow-type: tm+mt
-source-wordcount: '189'
+source-wordcount: '193'
 ht-degree: 81%
 
 ---
@@ -29,7 +29,7 @@ ht-degree: 81%
    * [Conseils sur le client User-Agent](fundamentals/user-agent-client-hints.md)
 * Flux de données {#datastreams}
    * [Présentation](./datastreams/overview.md)
-   * [Configuration d’un flux de données](./datastreams/configure.md)
+   * [Configurer un flux de données](./datastreams/configure.md)
    * [Préparation des données pour la collecte de données](./datastreams/data-prep.md)
 * Identité {#identity}
    * [Présentation](identity/overview.md)
@@ -46,6 +46,7 @@ ht-degree: 81%
       * [Envoi de données à Analytics](data-collection/adobe-analytics/sending-data-to-analytics.md)
 * Personnalisation {#personalization}
    * [Rendu de contenu personnalisé](personalization/rendering-personalization-content.md)
+   * [Personnalisation via une implémentation hybride](personalization/hybrid-personalization.md)
    * [Gestion du scintillement](personalization/manage-flicker.md)
    * Adobe Target {#adobe-target}
       * [Présentation](personalization/adobe-target/target-overview.md)
