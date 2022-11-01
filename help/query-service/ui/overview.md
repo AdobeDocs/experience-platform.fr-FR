@@ -5,10 +5,10 @@ title: Guide de l’interface utilisateur de Query Service
 topic-legacy: guide
 description: Adobe Experience Platform Query Service fournit une interface utilisateur qui peut être utilisée pour écrire et exécuter des requêtes, afficher des requêtes précédemment exécutées et accéder aux requêtes enregistrées par les utilisateurs au sein de votre organisation IMS.
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: 0a44d15f9dfaf5100fa44e2e6442b1be23ee0ab0
+source-git-commit: a085bac6b4ee825d534710ae91d6690fa076e873
 workflow-type: tm+mt
-source-wordcount: '716'
-ht-degree: 31%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -18,7 +18,7 @@ Adobe Experience Platform [!DNL Query Service] fournit une interface utilisateur
 
 ## [!DNL Query Editor]
 
-Le [!DNL Query Editor] permet d’écrire et d’exécuter des requêtes sans utiliser de client externe. Sélectionner **[!UICONTROL Créer une requête]** pour ouvrir le [!DNL Query Editor] et créez une requête. Vous pouvez également accéder au [!DNL Query Editor] en sélectionnant une requête dans le **[!UICONTROL Journal]** ou **[!UICONTROL Parcourir]** onglets. La sélection d’une requête exécutée ou enregistrée précédemment ouvre la [!DNL Query Editor] et afficher le SQL de la requête sélectionnée.
+Le [!DNL Query Editor] permet d’écrire et d’exécuter des requêtes sans utiliser de client externe. Sélectionner **[!UICONTROL Créer une requête]** pour ouvrir le [!DNL Query Editor] et créez une requête. Vous pouvez également accéder au [!DNL Query Editor] en sélectionnant une requête dans le **[!UICONTROL Journal]** ou **[!UICONTROL Modèles]** onglets. La sélection d’une requête exécutée ou enregistrée précédemment ouvre la [!DNL Query Editor] et afficher le SQL de la requête sélectionnée.
 
 ![Le tableau de bord Requêtes avec l’option Créer une requête mise en surbrillance.](../images/ui/overview/overview.png)
 
