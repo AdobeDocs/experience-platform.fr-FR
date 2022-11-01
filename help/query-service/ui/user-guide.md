@@ -5,10 +5,10 @@ title: Guide de l’interface utilisateur de Query Editor
 topic-legacy: query editor
 description: Query Editor est un outil interactif fourni par Adobe Experience Platform Query Service qui vous permet d’écrire, de valider et d’exécuter des requêtes pour les données d’expérience client dans l’interface utilisateur de l’Experience Platform. Query Editor prend en charge le développement de requête pour l’analyse et l’exploration de données. Il vous permet également d’exécuter des requêtes interactives à des fins de développement, ainsi que des requêtes non interactives pour renseigner les jeux de données dans Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 6cb28f8afa528849662fb416d81d155384a3de6c
+source-git-commit: 283c6ba323a327b0c525343a96a45a2412baa67b
 workflow-type: tm+mt
-source-wordcount: '2062'
-ht-degree: 27%
+source-wordcount: '2081'
+ht-degree: 26%
 
 ---
 
@@ -176,7 +176,7 @@ Le [!DNL Query Editor] fournit une fonction d’enregistrement qui vous permet d
 
 Toutes les requêtes exécutées depuis [!DNL Query Editor] sont capturés dans le tableau Journal. Vous pouvez utiliser la fonctionnalité de recherche dans l’onglet **[!UICONTROL Journal]** pour rechercher des exécutions de requête. Les requêtes enregistrées sont répertoriées dans la **[!UICONTROL Modèles]** .
 
-Pour plus d’informations, reportez-vous à la [Présentation de l’interface utilisateur de Query Service](./overview.md).
+Si une requête a été planifiée, la variable [!UICONTROL Requêtes planifiées] offre une meilleure visibilité via l’interface utilisateur pour ces tâches de requête. Voir [documentation sur la surveillance des requêtes](../monitor-queries.md) pour plus d’informations.
 
 >[!NOTE]
 >
