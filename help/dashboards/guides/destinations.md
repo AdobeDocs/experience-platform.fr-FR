@@ -4,10 +4,10 @@ title: Guide du tableau de bord des destinations
 description: Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur les destinations principales de votre entreprise.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 7f226a37996ab5e1fef432c6007d7d488f84ded6
+source-git-commit: fdfc2a2b0f1f5be0508741de0e70ad72fe07d79f
 workflow-type: tm+mt
-source-wordcount: '2829'
-ht-degree: 3%
+source-wordcount: '2828'
+ht-degree: 4%
 
 ---
 
@@ -19,7 +19,7 @@ Pour obtenir un aperçu des destinations, ainsi qu’un catalogue de toutes les 
 
 ## [!UICONTROL Destinations] données du tableau de bord {#destinations-dashboard-data}
 
-Le [!UICONTROL Destinations] Le tableau de bord affiche un instantané des destinations que votre entreprise a activées dans Experience Platform. Les données de lʼinstantané montrent les données exactement comme elles apparaissent au moment précis où lʼinstantané a été pris. En d’autres termes, l’instantané n’est pas une approximation ou un échantillon des données, et le tableau de bord des destinations n’est pas mis à jour en temps réel.
+Le tableau de bord des destinations affiche un instantané des destinations activées par votre entreprise dans Experience Platform. Les données de lʼinstantané montrent les données exactement comme elles apparaissent au moment précis où lʼinstantané a été pris. En d’autres termes, l’instantané n’est pas une approximation ou un échantillon des données, et le tableau de bord des destinations n’est pas mis à jour en temps réel.
 
 >[!NOTE]
 >
@@ -33,7 +33,7 @@ La date et l’heure de l’instantané le plus récent s’affichent en haut de
 
 >[!NOTE]
 >
->Si votre entreprise est une nouvelle société qui n’a pas encore de destinations principales, la variable [!UICONTROL Destinations] tableau de bord et [!UICONTROL Présentation] ne sont pas visibles. À la place, sélectionnez [!UICONTROL Destinations] dans le volet de navigation de gauche affiche le [!UICONTROL Catalogue] . Pour en savoir plus sur la variable [!UICONTROL Catalogue] , voir [[!UICONTROL Destinations] guide de workspace](../../destinations/ui/destinations-workspace.md).
+>Si votre entreprise est une nouvelle société qui n’a pas encore de destinations principales, le tableau de bord des destinations et [!UICONTROL Présentation] ne sont pas visibles. À la place, sélectionnez [!UICONTROL Destinations] dans le volet de navigation de gauche affiche le [!UICONTROL Catalogue] . Pour en savoir plus sur la variable [!UICONTROL Catalogue] , voir [[!UICONTROL Destinations] guide de workspace](../../destinations/ui/destinations-workspace.md).
 
 ![Présentation des destinations de l’interface utilisateur de Platform avec l’instantané le plus récent en surbrillance.](../images/destinations/snapshot-timestamp.png)
 
@@ -120,7 +120,7 @@ La date mise à jour affichée affiche la dernière fois que le segment a été 
 
 Si vous sélectionnez le nom d’un segment dans la liste affichée sur le widget, vous accédez aux détails du segment. Vous pouvez également sélectionner **[!UICONTROL Afficher tout]** pour accéder à l’onglet navigation des segments, sélectionnez ensuite le nom d’un segment afin d’en afficher les détails.
 
-Pour plus d’informations sur l’utilisation des segments dans Experience Platform, commencez par lire le [Présentation de Segmentation Service](../../segmentation/home.md).
+Pour plus d’informations sur l’utilisation des segments dans Experience Platform, reportez-vous à la section [Présentation de Segmentation Service](../../segmentation/home.md).
 
 ![Onglet Aperçu du tableau de bord Destinations avec le widget Segments récemment activés en surbrillance.](../images/destinations/recently-activated-segments.png)
 

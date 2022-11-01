@@ -3,10 +3,10 @@ keywords: Experience Platform;interface utilisateur;UI;tableaux de bord;tableau
 title: Modification des tableaux de bord Platform dans l’interface utilisateur
 description: Ce guide fournit des instructions détaillées pour personnaliser l’affichage des données Adobe Experience Platform de votre organisation dans les tableaux de bord.
 exl-id: 75e4aea7-b521-434d-9cd5-32a00d00550d
-source-git-commit: be2c38f37dd288f5035f1688be9d56abc2cd31a7
+source-git-commit: d5acc317a48aef94dd4d6e3ccea89d0d674c8b34
 workflow-type: tm+mt
-source-wordcount: '466'
-ht-degree: 100%
+source-wordcount: '467'
+ht-degree: 89%
 
 ---
 
@@ -28,7 +28,7 @@ Depuis n’importe quel tableau de bord (par exemple, le tableau de bord [!UICON
 
 ## Réorganisation de widgets
 
-Après avoir choisi de modifier le tableau de bord, vous pouvez réorganiser les widgets en sélectionnant le titre des widgets, puis en les faisant glisser et en les déposant dans l’ordre souhaité. Dans cet exemple, le widget **[!UICONTROL Tendance du nombre de profils]** est déplacé vers la ligne supérieure et le widget [!UICONTROL Nombre de profils] apparaît désormais dans la deuxième ligne.
+Après avoir choisi de modifier le tableau de bord, vous pouvez réorganiser les widgets en sélectionnant le titre des widgets, puis en les faisant glisser et en les déposant dans l’ordre souhaité. Dans cet exemple, la variable **[!UICONTROL Tendance du nombre de profils]** Le widget est déplacé vers la ligne supérieure et le **[!UICONTROL Nombre de profils]** le widget s’affiche désormais dans la deuxième ligne.
 
 ![](../images/customization/move-widget.png)
 
@@ -44,7 +44,7 @@ Vous pouvez également redimensionner un widget en sélectionnant le symbole d�
 
 ## Enregistrement des mises à jour de tableaux de bord
 
-Une fois les widgets déplacés et redimensionnés, sélectionnez **[!UICONTROL Enregistrer]** pour enregistrer les modifications et revenir à l’affichage principal du tableau de bord. Si vous ne souhaitez pas conserver vos modifications, sélectionnez **[!UICONTROL Annuler]** pour réinitialiser le tableau de bord et revenir à l’affichage principal du tableau de bord.
+Une fois les widgets déplacés et redimensionnés, sélectionnez **[!UICONTROL Enregistrer et quitter]** pour enregistrer vos modifications et revenir à la vue du tableau de bord principal. Si vous ne souhaitez pas conserver vos modifications, sélectionnez **[!UICONTROL Annuler]** pour réinitialiser le tableau de bord et revenir à l’affichage principal du tableau de bord.
 
 ![](../images/customization/save-changes.png)
 
