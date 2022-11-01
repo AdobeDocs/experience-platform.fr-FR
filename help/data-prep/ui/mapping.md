@@ -3,7 +3,7 @@ keywords: Experience Platform ; accueil ; rubriques populaires ; mapper csv�
 title: Guide de l’interface utilisateur de la préparation des données
 description: Ce document fournit des instructions sur la manière d’utiliser les fonctions de préparation des données dans l’interface utilisateur de Platform pour mapper des fichiers CSV à un schéma XDM.
 exl-id: fafa4aca-fb64-47ff-a97d-c18e58ae4dae
-source-git-commit: d0f5d1f55101ce15934289d4fcfd1f70c1b63fc7
+source-git-commit: d380b4d2a75efb1c34010a30c619649a7b99643c
 workflow-type: tm+mt
 source-wordcount: '1845'
 ht-degree: 90%
@@ -79,7 +79,7 @@ L’interface de **[!UICONTROL mappage]** vous fournit un outil complet pour map
 
 ![map-csv-to-xdm](../images/ui/mapping/map-csv-to-xdm.png)
 
-### Comprendre l’interface de mappage
+### Comprendre l’interface de mappage {#mapping-interface}
 
 L’interface de mappage comprend un tableau de bord qui fournit des informations sur l’intégrité de vos champs de mappage dans le contexte du workflow d’ingestion. Le tableau de bord affiche les détails suivants concernant vos champs de mappage :
 

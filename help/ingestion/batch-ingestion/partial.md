@@ -5,7 +5,7 @@ title: Présentation de l’ingestion par lots partielle
 topic-legacy: overview
 description: Ce document fournit un tutoriel pour la gestion de l’ingestion par lots partielle.
 exl-id: 25a34da6-5b7c-4747-8ebd-52ba516b9dc3
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: d380b4d2a75efb1c34010a30c619649a7b99643c
 workflow-type: tm+mt
 source-wordcount: '945'
 ht-degree: 46%
@@ -110,7 +110,7 @@ Désormais, vous pouvez transférer des données à l’aide du **Ajouter des do
 
 ### Utilisez le[!UICONTROL Mappage du fichier CSV au schéma XDM]Flux &quot; {#map-flow}
 
-Pour utiliser le[!UICONTROL Mappage du fichier CSV au schéma XDM]&quot;, suivez les étapes répertoriées dans la section [Mappage d’un tutoriel sur les fichiers CSV](../tutorials/map-a-csv-file.md). Une fois que vous avez atteint le **[!UICONTROL Ajouter des données]** , notez la **[!UICONTROL Ingestion partielle]** et **[!UICONTROL Diagnostics d’erreur]** champs.
+Pour utiliser le[!UICONTROL Mappage du fichier CSV au schéma XDM]&quot;, suivez les étapes répertoriées dans la section [Mappage d’un tutoriel sur les fichiers CSV](../tutorials/map-csv/overview.md). Une fois que vous avez atteint le **[!UICONTROL Ajouter des données]** , notez la **[!UICONTROL Ingestion partielle]** et **[!UICONTROL Diagnostics d’erreur]** champs.
 
 ![](../images/batch-ingestion/partial-ingestion/xdm-csv-workflow.png)
 

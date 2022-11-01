@@ -5,7 +5,7 @@ title: Guide de l’interface utilisateur des workflows
 topic-legacy: ui guide
 description: Découvrez comment suivre des processus en plusieurs étapes pour effectuer des opérations courantes dans l’interface utilisateur de Adobe Experience Platform.
 exl-id: f1a3ea83-09c9-48df-9493-62f03b403a95
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d380b4d2a75efb1c34010a30c619649a7b99643c
 workflow-type: tm+mt
 source-wordcount: '307'
 ht-degree: 2%
@@ -20,7 +20,7 @@ Le **[!UICONTROL Workflows]** dans l’interface utilisateur de Adobe Experience
 
 ## [!UICONTROL Ingestion des données]
 
-Le **[!UICONTROL Mappage du fichier CSV au schéma XDM]** workflow vous permet de charger et de convertir un fichier CSV en schéma de modèle de données d’expérience (XDM). Vous trouverez plus d’informations sur ce processus dans le tutoriel sur [mappage d’un fichier CSV à un schéma XDM](../ingestion/tutorials/map-a-csv-file.md).
+Le **[!UICONTROL Mappage du fichier CSV au schéma XDM]** workflow vous permet de charger et de convertir un fichier CSV en schéma de modèle de données d’expérience (XDM). Vous trouverez plus d’informations sur ce processus dans le tutoriel sur [mappage d’un fichier CSV à un schéma XDM](../ingestion/tutorials/map-csv/overview.md).
 
 Le **[!UICONTROL Création d’un jeu de données à partir d’un schéma]** workflow vous permet de créer un jeu de données à partir d’un schéma XDM existant. Vous trouverez plus d’informations sur ce workflow dans la section [guide d’utilisation des jeux de données](../catalog/datasets/user-guide.md#schema).
 

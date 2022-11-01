@@ -5,7 +5,7 @@ title: Préparation des données à utiliser dans les services intelligents
 topic-legacy: Intelligent Services
 description: Pour que les services intelligents découvrent des informations à partir de vos données d’événements marketing, les données doivent être enrichies sémantiquement et conservées dans une structure standard. Pour ce faire, les services intelligents utilisent des schémas de modèle de données d’expérience (XDM).
 exl-id: 17bd7cc0-da86-4600-8290-cd07bdd5d262
-source-git-commit: e33d59c4ac28f55ba6ae2fc073d02f8738159263
+source-git-commit: d380b4d2a75efb1c34010a30c619649a7b99643c
 workflow-type: tm+mt
 source-wordcount: '2936'
 ht-degree: 2%
@@ -356,7 +356,7 @@ Si vous ingérez des données à partir d’un fichier CSV local, vous pouvez pa
 
 #### Mappage et ingestion de données {#ingest}
 
-Après avoir créé un schéma et un jeu de données CEE, vous pouvez commencer à mapper vos tableaux de données au schéma et ingérer ces données dans Platform. Voir le tutoriel sur [mappage d’un fichier CSV à un schéma XDM](../ingestion/tutorials/map-a-csv-file.md) pour savoir comment effectuer cette opération dans l’interface utilisateur. Vous pouvez utiliser les [exemple de fichier JSON](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) pour tester le processus d’ingestion avant d’utiliser vos propres données.
+Après avoir créé un schéma et un jeu de données CEE, vous pouvez commencer à mapper vos tableaux de données au schéma et ingérer ces données dans Platform. Voir le tutoriel sur [mappage d’un fichier CSV à un schéma XDM](../ingestion/tutorials/map-csv/overview.md) pour savoir comment effectuer cette opération dans l’interface utilisateur. Vous pouvez utiliser les [exemple de fichier JSON](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) pour tester le processus d’ingestion avant d’utiliser vos propres données.
 
 Une fois qu’un jeu de données a été renseigné, le même jeu de données peut être utilisé pour ingérer des fichiers de données supplémentaires.
 

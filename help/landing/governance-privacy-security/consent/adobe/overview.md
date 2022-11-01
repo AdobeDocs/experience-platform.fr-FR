@@ -5,7 +5,7 @@ title: Traitement du consentement dans Adobe Experience Platform
 topic-legacy: getting started
 description: Découvrez comment traiter les signaux de consentement des clients dans Adobe Experience Platform à l’aide de la norme Adobe 2.0.
 exl-id: cd76a3f6-ae55-4d75-9b30-900fadb4664f
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: d380b4d2a75efb1c34010a30c619649a7b99643c
 workflow-type: tm+mt
 source-wordcount: '1567'
 ht-degree: 1%
@@ -100,7 +100,7 @@ Reportez-vous à la documentation du SDK Mobile pour [configuration de l’exten
 
 Vous pouvez ingérer des données de consentement conformes à XDM à partir d’un fichier CSV à l’aide de l’ingestion par lots. Cela peut s’avérer utile si vous disposez d’un journal des données de consentement collectées antérieurement qui doivent encore être intégrées à vos profils client.
 
-Suivez le tutoriel sur [mappage d’un fichier CSV à XDM](../../../../ingestion/tutorials/map-a-csv-file.md) pour savoir comment convertir vos champs de données en XDM et les ingérer dans Platform. Lorsque vous sélectionnez la variable [!UICONTROL Destination] pour le mappage, veillez à sélectionner la variable **[!UICONTROL Utilisation d’un jeu de données existant]** et choisissez l’option [!DNL Profile]Jeu de données de consentement activé que vous avez créé précédemment.
+Suivez le tutoriel sur [mappage d’un fichier CSV à XDM](../../../../ingestion/tutorials/map-csv/overview.md) pour savoir comment convertir vos champs de données en XDM et les ingérer dans Platform. Lorsque vous sélectionnez la variable [!UICONTROL Destination] pour le mappage, veillez à sélectionner la variable **[!UICONTROL Utilisation d’un jeu de données existant]** et choisissez l’option [!DNL Profile]Jeu de données de consentement activé que vous avez créé précédemment.
 
 ## Tester votre mise en oeuvre {#test-implementation}
 

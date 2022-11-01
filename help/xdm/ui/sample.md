@@ -4,7 +4,7 @@ title: Génération d’exemples de données pour un schéma XDM dans l’interf
 description: Découvrez comment générer des exemples de données JSON en fonction d’un schéma existant dans l’interface utilisateur de Adobe Experience Platform.
 topic-legacy: user guide
 exl-id: e60eedb2-2245-42cd-b574-43caf9e3426c
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d380b4d2a75efb1c34010a30c619649a7b99643c
 workflow-type: tm+mt
 source-wordcount: '336'
 ht-degree: 0%
@@ -27,6 +27,6 @@ Un exemple de fichier JSON est téléchargé par le navigateur. Vous pouvez dés
 
 Ce guide explique comment générer un exemple de fichier JSON à partir d’un schéma XDM dans l’interface utilisateur de Platform. Pour savoir comment générer des données d’exemple à l’aide de l’API Schema Registry, reportez-vous à la section [guide d’exemple de point de fin de données](../api/sample-data.md).
 
-Une fois que vous êtes prêt à commencer à ingérer des données, consultez le tutoriel sur [mappage d’un fichier CSV à XDM](../../ingestion/tutorials/map-a-csv-file.md) pour savoir comment mapper un fichier de données plat (tel qu’un fichier CSV) à un schéma XDM et l’ingérer dans Platform. Vous pouvez également établir une [connexion source](../../sources/home.md) pour importer vos données d’une source externe et les mapper à XDM.
+Une fois que vous êtes prêt à commencer à ingérer des données, consultez le tutoriel sur [mappage d’un fichier CSV à XDM](../../ingestion/tutorials/map-csv/overview.md) pour savoir comment mapper un fichier de données plat (tel qu’un fichier CSV) à un schéma XDM et l’ingérer dans Platform. Vous pouvez également établir une [connexion source](../../sources/home.md) pour importer vos données d’une source externe et les mapper à XDM.
 
 Pour plus d’informations sur les fonctionnalités de la variable [!UICONTROL Schémas] dans l’interface utilisateur, reportez-vous à la section [[!UICONTROL Schémas] présentation de workspace](./overview.md).

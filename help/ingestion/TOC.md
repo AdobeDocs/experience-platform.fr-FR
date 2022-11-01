@@ -4,10 +4,10 @@ user-guide-title: Aide d’Adobe Experience Platform Data Ingestion
 breadcrumb-title: Guide d’ingestion de données
 user-guide-description: Insérez vos données dans Experience Platform par ingestion en lot ou en flux continu.
 feature: Data Ingestion
-source-git-commit: ba0399b0d171c2e604b4de3b22f8568b5431bcf4
+source-git-commit: f77bbc60f2bc1f12970e8050ec6a924b9713f303
 workflow-type: tm+mt
-source-wordcount: '129'
-ht-degree: 96%
+source-wordcount: '145'
+ht-degree: 86%
 
 ---
 
@@ -26,7 +26,10 @@ ht-degree: 96%
    - [Ingestion par lots partielle](batch-ingestion/partial.md)
    - [Dépannage](batch-ingestion/troubleshooting.md)
 - Tutoriels {#tutorials}
-   - [Mappage d’un fichier CSV à XDM](tutorials/map-a-csv-file.md)
+   - Mappage d’un fichier CSV à XDM {#map-csv}
+      - [Présentation](./tutorials/map-csv/overview.md)
+      - [Mappage d’un fichier CSV à un schéma existant](./tutorials/map-csv/existing-schema.md)
+      - [Mappage d’un fichier CSV à l’aide de recommandations générées par l’IA](./tutorials/map-csv/recommendations.md)
    - [Ingestion de données par lots à l’aide de l’interface utilisateur](tutorials/ingest-batch-data.md)
    - [Créer une connexion en continu authentifiée](tutorials/create-authenticated-streaming-connection.md)
    - [Création d’une connexion en continu (API)](tutorials/create-streaming-connection.md)
