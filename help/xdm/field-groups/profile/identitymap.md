@@ -1,17 +1,15 @@
 ---
 keywords: Experience Platform;accueil;rubriques populaires;schéma;schéma;XDM;profil individuel;champs;schémas;schéma;identityMap;identityMap;carte d’identité;carte d’identité;conception de schéma;carte;carte;schéma d’union;union
-solution: Experience Platform
 title: Groupe de champs de schéma IdentityMap
 topic-legacy: overview
 description: Ce document présente la classe XDM Individual Profile.
 exl-id: c9928e85-ef1e-4739-ba1d-80505a9e60c3
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: c59b4bd7ccc61ef4f9dc8a963903e3ec495558ed
 workflow-type: tm+mt
-source-wordcount: '148'
-ht-degree: 36%
+source-wordcount: '116'
+ht-degree: 9%
 
 ---
-
 
 # [!UICONTROL IdentityMap] groupe de champs de schéma
 
@@ -21,10 +19,6 @@ ht-degree: 36%
 
 [!UICONTROL IdentityMap] est un groupe de champs de schéma standard pour la variable [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md). Le groupe de champs fournit un champ de mappage unique, qui contient un ensemble d’identités utilisateur saisies par espace de noms.
 
->[!WARNING]
->
->Le `IdentityMap` est automatiquement mis à jour par le système lors de l’ingestion des données d’identité. Afin dʼutiliser correctement ce champ pour le [profil client en temps réel](../../../profile/home.md), nʼessayez pas de mettre à jour manuellement le contenu du champ dans vos opérations de données.
-
 <img src="../../images/field-groups/identitymap.png" width="600" /><br />
 
-Pour plus d’informations sur les cas d’utilisation des mappages dʼidentités, consultez la section correspondante sur la page consacrée aux [principes de base de la composition des schémas](../../schema/composition.md#identityMap).
+Consultez la section sur les mappages d’identité dans la [principes de base de la composition des schémas](../../schema/composition.md#identityMap) pour plus d’informations sur leur cas d’utilisation, y compris leurs avantages et inconvénients.
