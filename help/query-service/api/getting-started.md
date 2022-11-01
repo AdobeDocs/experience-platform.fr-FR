@@ -5,9 +5,9 @@ title: Guide de l’API Query Service
 topic-legacy: query templates
 description: L’API Query Service permet aux développeurs d’interroger leurs données Adobe Experience Platform à l’aide de SQL standard. Suivez ce guide pour savoir comment effectuer des opérations clés à l’aide de l’API.
 exl-id: 2f4a156b-5623-419a-a9b2-72310f755708
-source-git-commit: 87789668da0cfdf86d3c47be6e4dc49282932180
+source-git-commit: 4f85f38e4870f0c2429a3a2a50bd7f95075c6be4
 workflow-type: tm+mt
-source-wordcount: '395'
+source-wordcount: '397'
 ht-degree: 53%
 
 ---
@@ -55,8 +55,7 @@ Maintenant que vous comprenez les en-têtes à utiliser, vous êtes prêt à com
 - [Requêtes planifiées](scheduled-queries.md)
 - [Exécutions pour les requêtes planifiées](runs-scheduled-queries.md)
 - [Modèles de requête](query-templates.md)
-
-<!-- - [Alert subscriptions](./alert-subscriptions.md) -->
+- [Abonnements aux alertes](./alert-subscriptions.md)
 
 ## Étapes suivantes
 

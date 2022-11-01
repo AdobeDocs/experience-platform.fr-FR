@@ -2,18 +2,16 @@
 keywords: Experience Platform;accueil;rubriques populaires;service de requête;service de requête;alerte;
 title: Point de terminaison de l’API des abonnements des alertes
 description: Ce guide fournit des exemples de requêtes et de réponses HTTP pour les différents appels API que vous pouvez effectuer au point de terminaison des abonnements aux alertes avec l’API Query Service.
-hide: true
-hidefromtoc: true
-source-git-commit: df894d8b52aff3708aa06e73d4c5ba3e1e501f10
+source-git-commit: 4f85f38e4870f0c2429a3a2a50bd7f95075c6be4
 workflow-type: tm+mt
 source-wordcount: '2289'
-ht-degree: 5%
+ht-degree: 7%
 
 ---
 
 # Point de terminaison de l’API des abonnements des alertes
 
-Adobe Experience Platform Query Service vous permet de vous abonner à des alertes pour les requêtes ad hoc et planifiées. Les alertes peuvent être reçues par courrier électronique, dans l’interface utilisateur de Platform ou les deux. Le contenu de la notification est le même pour les alertes in-Platform et les alertes par email. Actuellement, les alertes de requête ne peuvent être abonnées qu’à l’aide de la variable [API Query Service](https://developer.adobe.com/experience-platform-apis/references/query-service/).
+Adobe Experience Platform Query Service vous permet de vous abonner à des alertes pour les requêtes ad hoc et planifiées. Les alertes peuvent être reçues par e-mail, dans l’interface utilisateur de Platform ou les deux. Le contenu de la notification est le même pour les alertes in-Platform et les alertes par email. Actuellement, il n’est possible de s’abonner aux alertes de requêtes qu’à l’aide de l’[API Query Service](https://developer.adobe.com/experience-platform-apis/references/query-service/).
 
 >[!IMPORTANT]
 >
