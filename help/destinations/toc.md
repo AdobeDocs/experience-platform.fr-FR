@@ -4,9 +4,9 @@ user-guide-title: Guide des destinations
 user-guide-description: Activez vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
 description: Ce document répertorie la table des matières des destinations Adobe Experience Platform
 feature: Destinations
-source-git-commit: e345d43104752fe3d51ccd0d611701bd2beebe6a
+source-git-commit: 5c938f8158cfd16b8904ee1e7f67b6ce66b2e45c
 workflow-type: tm+mt
-source-wordcount: '955'
+source-wordcount: '963'
 ht-degree: 71%
 
 ---
@@ -41,6 +41,7 @@ ht-degree: 71%
    * [Modification des flux de données d’activation](./ui/edit-activation.md)
    * [Supprimer les destinations](./ui/delete-destinations.md)
    * [Surveiller les flux de données](./ui/monitor-dataflows.md)
+   * [(Version bêta) Configuration des options de formatage de fichier pour les destinations basées sur des fichiers](./ui/batch-destinations-file-formatting-options.md)
    * [Abonner aux alertes de destination contextuelles](ui/alerts.md)
 * Catalogue des destinations {#catalog}
    * [Présentation du catalogue des destinations](./catalog/overview.md)
@@ -107,7 +108,7 @@ ht-degree: 71%
       * [LISTE AUTORISÉE des adresses IP pour les destinations de stockage dans le cloud](./catalog/cloud-storage/ip-address-allow-list.md)
    * Destinations de gestion de la relation client {#crm}
       * [Connexion CRM Salesforce](./catalog/crm/salesforce.md)
-      * [Connexion à Microsoft Dynamics 365](./catalog/crm/microsoft-dynamics-365.md)
+      * [Connexion à Microsoft Dynamics 365](./catalog/crm/microsoft-dynamics-365.md)
       * [Connexion sortante](catalog/crm/outreach.md)
    * Destinations Data Management Platform {#data-management}
       * [Destinations Data Management Platform (DMP)](./catalog/data-management/overview.md)
@@ -136,7 +137,7 @@ ht-degree: 71%
       * [Connexion ligne](./catalog/mobile-engagement/line.md)
    * Destinations de personnalisation {#personalization}
       * [Présentation des destinations de personnalisation](./catalog/personalization/overview.md)
-      * [(Version bêta) Connexion Adobe Commerce](./catalog/personalization/adobe-commerce.md)
+      * [Connexion Adobe Commerce (version bêta)](./catalog/personalization/adobe-commerce.md)
       * [Connexion Adobe Target](./catalog/personalization/adobe-target-connection.md)
       * [Extension Adobe Target](./catalog/personalization/adobe-target.md)
       * [Extension Adobe Target v2](./catalog/personalization/adobe-target-v2.md)
