@@ -2,9 +2,9 @@
 title: (Version bêta) Exportation de jeux de données vers des destinations de stockage dans le cloud
 type: Tutorial
 description: Découvrez comment exporter des jeux de données de Adobe Experience Platform vers l’emplacement de stockage dans le cloud de votre choix.
-source-git-commit: 92e2d575d92b9d412f473610fc149663e815f5c3
+source-git-commit: 97a39e12d916e4fbd048c0fb9ddfa9bdfa10d438
 workflow-type: tm+mt
-source-wordcount: '1252'
+source-wordcount: '1309'
 ht-degree: 9%
 
 ---
@@ -68,6 +68,11 @@ Utilisez les cases à cocher situées à gauche des noms des jeux de données po
 ![Workflow d’exportation des jeux de données présentant l’étape Sélectionner les jeux de données permettant de sélectionner les jeux de données à exporter.](/help/destinations/assets/ui/export-datasets/select-datasets.png)
 
 ## Planification de l’exportation des jeux de données {#scheduling}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_datasets_exportoptions"
+>title="Options d’exportation de fichiers pour les jeux de données"
+>abstract="Sélectionner **Exportation de fichiers incrémentiels** pour n’exporter que les données ajoutées au jeu de données depuis la dernière exportation. <br> La première exportation incrémentielle de fichier inclut toutes les données du jeu de données, agissant comme un renvoi. Les futurs fichiers incrémentiels incluent uniquement les données qui ont été ajoutées au jeu de données depuis la première exportation."
 
 Dans le **[!UICONTROL Planification]** vous pouvez définir une date de début et une cadence d’exportation pour vos exportations de jeux de données.
 

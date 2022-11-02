@@ -1,7 +1,7 @@
 ---
 title: (Version bêta) Connexion au stockage dans le cloud Google
 description: Découvrez comment vous connecter au stockage dans le cloud Google et activer des segments ou exporter des jeux de données.
-source-git-commit: 56fd7a5ab58186367c729cb4ca8c3b4213c44900
+source-git-commit: 97a39e12d916e4fbd048c0fb9ddfa9bdfa10d438
 workflow-type: tm+mt
 source-wordcount: '888'
 ht-degree: 28%
@@ -58,7 +58,7 @@ Pour vous connecter à cette destination, procédez comme décrit dans le [tutor
 Pour vous authentifier à la destination, renseignez les champs requis et sélectionnez **[!UICONTROL Se connecter à la destination]**.
 
 * **[!UICONTROL Accès à l’ID de clé]**: Chaîne alphanumérique de 61 caractères utilisée pour authentifier votre [!DNL Google Cloud Storage] compte à Platform. Pour plus d’informations sur la manière d’obtenir cette valeur, lisez le [conditions préalables](#prerequisites) ci-dessus.
-* **[!UICONTROL Clé d’accès secrète]**: Chaîne codée en base 64 caractères de 40 caractères utilisée pour authentifier votre [!DNL Google Cloud Storage] compte à Platform. Pour plus d’informations sur la manière d’obtenir cette valeur, lisez le [conditions préalables](#prerequisites) ci-dessus.
+* **[!UICONTROL Clé d’accès secrète]**: Chaîne codée en base64 à 40 caractères utilisée pour authentifier votre [!DNL Google Cloud Storage] compte à Platform. Pour plus d’informations sur la manière d’obtenir cette valeur, lisez le [conditions préalables](#prerequisites) ci-dessus.
 * **[!UICONTROL Clé de chiffrement]**: Vous pouvez éventuellement joindre votre clé publique au format RSA pour ajouter un chiffrement à vos fichiers exportés. Votre clé publique doit être écrite en tant que [!DNL Base64-encoded] chaîne. Affichez un exemple d’une clé codée en base64 correctement formatée dans le lien de documentation ci-dessous. La partie centrale est raccourcie par concision.
 
    ![Image montrant un exemple d’une clé PGP correctement formatée et chiffrée en base64 dans l’interface utilisateur](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
