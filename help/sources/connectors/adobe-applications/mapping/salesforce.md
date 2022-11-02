@@ -3,10 +3,10 @@ keywords: Experience Platform;accueil;rubriques populaires;Salesforce;Salesforce
 title: Champs de mappage Salesforce
 description: Les tableaux ci-dessous contiennent les mappages entre les champs source Salesforce et leurs champs XDM correspondants.
 exl-id: 33ee76f2-0495-4acd-a862-c942c0fa3177
-source-git-commit: 948247c1ffbe10fa07ba1d03f1715fd707c6d836
+source-git-commit: 5e93a86d6bdbf66e6b4991e0e2bc4d3dfe90d2b5
 workflow-type: tm+mt
-source-wordcount: '291'
-ht-degree: 24%
+source-wordcount: '494'
+ht-degree: 14%
 
 ---
 
@@ -15,6 +15,8 @@ ht-degree: 24%
 Les tableaux ci-dessous contiennent les mappages entre les [!DNL Salesforce] champs source et leurs champs XDM correspondants.
 
 ## Contact {#contact}
+
+Lisez le [Présentation de XDM Individual Profile](../../../../xdm/classes/individual-profile.md) pour plus d’informations sur la classe XDM. Pour plus d’informations sur les groupes de champs XDM, consultez la section [Groupe de champs de schéma Détails de la personne professionnelle XDM](../../../../xdm/field-groups/profile/business-person-details.md) guide et [Groupe de champs de schéma XDM Business Person Components](../../../../xdm/field-groups/profile/business-person-components.md) guide.
 
 | Champ source | Chemin du champ XDM cible | Notes |
 | --- | --- | --- |
@@ -74,6 +76,8 @@ Les tableaux ci-dessous contiennent les mappages entre les [!DNL Salesforce] cha
 
 ## prospect {#lead}
 
+Lisez le [Présentation de XDM Individual Profile](../../../../xdm/classes/individual-profile.md) pour plus d’informations sur la classe XDM. Pour plus d’informations sur les groupes de champs XDM, consultez la section [Groupe de champs de schéma Détails de la personne professionnelle XDM](../../../../xdm/field-groups/profile/business-person-details.md) guide et [Groupe de champs de schéma XDM Business Person Components](../../../../xdm/field-groups/profile/business-person-components.md) guide.
+
 | Champ source | Chemin du champ XDM cible | Remarques |
 | --- | --- | --- |
 | `City` | `workAddress.city` |
@@ -122,6 +126,8 @@ Les tableaux ci-dessous contiennent les mappages entre les [!DNL Salesforce] cha
 {style=&quot;table-layout:auto&quot;}
 
 ## Compte {#account}
+
+Lisez le [Présentation des détails du compte d’entreprise XDM](../../../../xdm/classes/b2b/business-account.md) pour plus d’informations sur la classe XDM.
 
 | Champ source | Chemin du champ XDM cible | Remarques |
 | --- | --- | --- |
@@ -177,6 +183,8 @@ Les tableaux ci-dessous contiennent les mappages entre les [!DNL Salesforce] cha
 
 ## Opportunité {#opportunity}
 
+Lisez le [Présentation des opportunités commerciales XDM](../../../../xdm/classes/b2b/business-opportunity.md) pour plus d’informations sur la classe XDM.
+
 | Champ source | Chemin du champ XDM cible | Remarques |
 | --- | --- | --- |
 | `"Salesforce"` | `opportunityKey.sourceType` |
@@ -216,6 +224,8 @@ Les tableaux ci-dessous contiennent les mappages entre les [!DNL Salesforce] cha
 
 ## Rôle de contact d’opportunité {#opportunity-contact-role}
 
+Lisez le [Présentation de la classe de relation XDM Business Opportunity](../../../../xdm/classes/b2b/business-opportunity-person-relation.md) pour plus d’informations sur la classe XDM.
+
 | Champ source | Chemin du champ XDM cible | Remarques |
 | --- | --- | --- |
 | `"Salesforce"` | `opportunityPersonKey.sourceType` |
@@ -238,7 +248,9 @@ Les tableaux ci-dessous contiennent les mappages entre les [!DNL Salesforce] cha
 
 {style=&quot;table-layout:auto&quot;}
 
-## Campagne {#campaign}
+## Campaign {#campaign}
+
+Lisez le [Présentation de la classe XDM Business Campaign](../../../../xdm/classes/b2b/business-campaign.md) pour plus d’informations sur la classe XDM. Pour plus d’informations sur les groupes de champs XDM, consultez la section [Groupe de champs de schéma des détails de la campagne XDM](../../../../xdm/field-groups/b2b-campaign/details.md) guide.
 
 | Champ source | Chemin du champ XDM cible | Remarques |
 | --- | --- | --- |
@@ -269,6 +281,8 @@ Les tableaux ci-dessous contiennent les mappages entre les [!DNL Salesforce] cha
 
 ## membre de la campagne {#campaign-member}
 
+Lisez le [Présentation des membres XDM Business Campaign](../../../../xdm/classes/b2b/business-campaign-members.md) pour plus d’informations sur la classe XDM. Pour plus d’informations sur les groupes de champs XDM, consultez la section [Groupe de champs de détails du membre XDM Business Campaign](../../../../xdm/field-groups/b2b-campaign/details.md) document.
+
 | Champ source | Chemin du champ XDM cible | Remarques |
 | --- | --- | --- |
 | `"Salesforce"` | `campaignMemberKey.sourceType` |
@@ -292,6 +306,8 @@ Les tableaux ci-dessous contiennent les mappages entre les [!DNL Salesforce] cha
 | `Type` | `b2b.personType` |
 
 ## Relation de contact de compte {#account-contact-relation}
+
+Lisez le [Classe de relation de personne de compte professionnel XDM](../../../../xdm/classes/b2b/business-account-person-relation.md) pour plus d’informations sur la classe XDM.
 
 | Champ source | Chemin du champ XDM cible | Remarques |
 | --- | --- | --- |

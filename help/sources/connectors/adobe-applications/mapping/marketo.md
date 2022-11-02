@@ -5,10 +5,10 @@ title: Mappage des champs pour la source du Marketo Engage
 topic-legacy: overview
 description: Les tableaux ci-dessous contiennent les mappages entre les champs des jeux de données Marketo et les champs XDM correspondants.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: a0ca9cff43b6f8276268467fecf944c664992950
+source-git-commit: 5e93a86d6bdbf66e6b4991e0e2bc4d3dfe90d2b5
 workflow-type: tm+mt
-source-wordcount: '746'
-ht-degree: 10%
+source-wordcount: '952'
+ht-degree: 8%
 
 ---
 
@@ -28,6 +28,8 @@ Les tableaux ci-dessous contiennent les mappages entre les champs des neuf [!DNL
 ## Activités {#activities}
 
 Le [!DNL Marketo] source prend désormais en charge les activités standard supplémentaires. Pour utiliser des activités standard, vous devez mettre à jour votre schéma à l’aide du [utilitaire de génération automatique de schéma](../marketo/marketo-namespaces.md) car si vous créez des `activities` le flux de données sans mettre à jour votre schéma, les modèles de mappage échouent, car les nouveaux champs cibles ne seront pas présents dans votre schéma. Si vous choisissez de ne pas mettre à jour votre schéma, vous pouvez toujours créer un nouveau flux de données et ignorer les erreurs. Toutefois, les champs nouveaux ou mis à jour ne seront pas ingérés dans Platform.
+
+Consultez la documentation relative à [Classe XDM Experience Event](../../../../xdm/classes/experienceevent.md) pour plus d’informations sur la classe XDM et le ou les groupes de champs XDM.
 
 | Jeu de données source | Champ cible XDM | Notes |
 | -------------- | ---------------- | ----- |
@@ -136,6 +138,8 @@ Le [!DNL Marketo] source prend désormais en charge les activités standard supp
 
 ## Programmes {#programs}
 
+Lisez le [Présentation de XDM Business Campaign](../../../../xdm/classes/b2b/business-campaign.md) pour plus d’informations sur la classe XDM. Pour plus d’informations sur les groupes de champs XDM, consultez la section [Groupe de champs Détails de la campagne métier](../../../../xdm/field-groups/b2b-campaign/details.md) guide.
+
 | Jeu de données source | Champ cible XDM | Remarques |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `campaignKey.sourceType` |
@@ -164,6 +168,8 @@ Le [!DNL Marketo] source prend désormais en charge les activités standard supp
 {style=&quot;table-layout:auto&quot;}
 
 ## Abonnements au programme {#program-memberships}
+
+Lisez le [Présentation des membres XDM Business Campaign](../../../../xdm/classes/b2b/business-campaign-members.md) pour plus d’informations sur la classe XDM. Pour plus d’informations sur les groupes de champs XDM, consultez la section [Groupe de champs Détails du membre XDM Business Campaign](../../../../xdm/field-groups/b2b-campaign-members/details.md) guide.
 
 | Jeu de données source | Champ cible XDM | Remarques |
 | -------------- | ---------------- | ----- |
@@ -196,6 +202,8 @@ Le [!DNL Marketo] source prend désormais en charge les activités standard supp
 
 ## Sociétés {#companies}
 
+Lisez le [Présentation du compte d’entreprise XDM](../../../../xdm/classes/b2b/business-account.md) pour plus d’informations sur la classe XDM.
+
 | Jeu de données source | Champ cible XDM | Remarques |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `accountKey.sourceType` |
@@ -226,6 +234,8 @@ Le [!DNL Marketo] source prend désormais en charge les activités standard supp
 
 ## Listes statiques {#static-lists}
 
+Lisez le [Présentation de la liste XDM Business Marketing](../../../../xdm/classes/b2b/business-marketing-list.md) pour plus d’informations sur la classe XDM.
+
 | Jeu de données source | Champ cible XDM | Remarques |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `marketingListKey.sourceType` |
@@ -241,6 +251,8 @@ Le [!DNL Marketo] source prend désormais en charge les activités standard supp
 {style=&quot;table-layout:auto&quot;}
 
 ## Abonnements à des listes statiques {#static-list-memberships}
+
+Lisez le [Présentation des membres de la liste XDM Business Marketing](../../../../xdm/classes/b2b/business-marketing-list-members.md) pour plus d’informations sur la classe XDM.
 
 | Jeu de données source | Champ cible XDM | Remarques |
 | -------------- | ---------------- | ----- |
@@ -260,6 +272,8 @@ Le [!DNL Marketo] source prend désormais en charge les activités standard supp
 >[!IMPORTANT]
 >
 >Le jeu de données de comptes nommés n’est nécessaire qu’avec la fonctionnalité de marketing basé sur les comptes (ABM) de Marketo. Si vous n’utilisez pas ABM, vous n’avez pas besoin de configurer des mappages pour les comptes nommés.
+
+Lisez le [Présentation du compte d’entreprise XDM](../../../../xdm/classes/b2b/business-account.md) pour plus d’informations sur la classe XDM.
 
 | Jeu de données source | Champ cible XDM | Remarques |
 | -------------- | ---------------- | ----- |
@@ -286,6 +300,8 @@ Le [!DNL Marketo] source prend désormais en charge les activités standard supp
 {style=&quot;table-layout:auto&quot;}
 
 ## Opportunités {#opportunities}
+
+Lisez le [Présentation des opportunités commerciales XDM](../../../../xdm/classes/b2b/business-opportunity.md) pour plus d’informations sur la classe XDM.
 
 | Jeu de données source | Champ cible XDM | Remarques |
 | -------------- | ---------------- | ----- |
@@ -322,6 +338,8 @@ Le [!DNL Marketo] source prend désormais en charge les activités standard supp
 
 ## Rôles de contact d’opportunité {#opportunity-contact-roles}
 
+Lisez le [Présentation de la relation homme-opportunité commerciale XDM](../../../../xdm/classes/b2b/business-account-person-relation.md) pour plus d’informations sur la classe XDM.
+
 | Jeu de données source | Champ cible XDM | Remarques |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `opportunityPersonKey.sourceType` |
@@ -340,6 +358,8 @@ Le [!DNL Marketo] source prend désormais en charge les activités standard supp
 {style=&quot;table-layout:auto&quot;}
 
 ## Personnes {#persons}
+
+Lisez le [Présentation de XDM Individual Profile](../../../../xdm/classes/individual-profile.md) pour plus d’informations sur la classe XDM. Pour plus d’informations sur les groupes de champs XDM, consultez la section [Groupe de champs de schéma Détails de la personne professionnelle XDM](../../../../xdm/field-groups/profile/business-person-details.md) guide et [Groupe de champs de schéma XDM Business Person Components](../../../../xdm/field-groups/profile/business-person-components.md) guide.
 
 | Jeu de données source | Champ cible XDM | Remarques |
 | -------------- | ---------------- | ----- |
