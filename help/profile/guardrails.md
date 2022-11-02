@@ -6,10 +6,10 @@ product: experience platform
 type: Documentation
 description: Adobe Experience Platform utilise un modèle de données hybride fortement dénormalisé qui diffère du modèle de données relationnelles traditionnel. Ce document fournit des limites d’utilisation et de débit par défaut pour vous aider à modéliser vos données Profile afin d’optimiser les performances du système.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: d6100f58b8ffd6251c3a58576a41dbfb75c3bb0c
+source-git-commit: 67ed3e5a71231d9c243ca31693d2db70492bdb43
 workflow-type: tm+mt
-source-wordcount: '1902'
-ht-degree: 50%
+source-wordcount: '1905'
+ht-degree: 53%
 
 ---
 
@@ -136,7 +136,7 @@ Le modèle de la banque de données [!DNL Profile] se compose de deux types d’
 
 ### Fragments de profil
 
-Dans ce document, plusieurs barrières de sécurité font référence à des &quot;fragments de profil&quot;. Dans Experience Platform, plusieurs fragments de profil sont fusionnés pour former Real-time Customer Profile. Chaque fragment représente une identité Principale unique et les données d’enregistrement ou d’événement correspondantes pour cet identifiant dans un jeu de données donné. Pour en savoir plus sur les fragments de profil, reportez-vous à la section [Présentation des profils](home.md#profile-fragments-vs-merged-profiles).
+Dans ce document, plusieurs barrières de sécurité font référence à des &quot;fragments de profil&quot;. Dans Experience Platform, plusieurs fragments de profil sont fusionnés pour former Real-time Customer Profile. Chaque fragment représente une identité Principale unique et l’enregistrement ou le jeu complet de données d’événement correspondant pour cet identifiant dans un jeu de données donné. Pour en savoir plus sur les fragments de profil, reportez-vous à la section [Présentation des profils](home.md#profile-fragments-vs-merged-profiles).
 
 ### Stratégies de fusion {#merge-policies}
 
