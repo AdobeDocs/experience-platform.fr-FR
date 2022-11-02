@@ -3,9 +3,9 @@ keywords: destination de stockage dans le cloud;espace de stockage dans le cloud
 title: Présentation des destinations de stockage dans le cloud
 description: Adobe Experience Platform peut diffuser vos segments sous forme de fichiers de données vers vos emplacements de stockage dans le cloud Amazon S3, AWS Kinesis, Azure Event Hubs ou SFTP.
 exl-id: d29f0a6e-b323-4f78-bbd0-dee2f1e0fedb
-source-git-commit: 818c9a6f5cd39db1405827b657872b99254ad1e5
+source-git-commit: 4a4c82cc4528fe07bbdb75ae9f795bdbab48c089
 workflow-type: tm+mt
-source-wordcount: '295'
+source-wordcount: '309'
 ht-degree: 11%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 11%
 
 ## Présentation {#overview}
 
-Adobe Experience Platform peut fournir vos segments sous forme de fichiers de données aux emplacements de stockage dans le cloud. Vous pouvez ainsi envoyer des audiences et leurs attributs de profil à vos systèmes internes au moyen de fichiers CSV pour [!DNL Amazon S3], [!DNL Azure Blob] et SFTP. Pour [!DNL Amazon Kinesis] et [!DNL Azure Event Hubs] destinations, les données sont diffusées en continu hors de l’Experience Platform dans [!DNL JSON] format.
+Adobe Experience Platform peut fournir vos segments sous forme de fichiers de données aux emplacements de stockage dans le cloud. Vous pouvez ainsi envoyer des audiences et leurs attributs de profil à vos systèmes internes au moyen de fichiers CSV pour [!DNL Amazon S3], [!DNL Azure Blob], [!DNL Azure Data Lake Storage Gen2], [!DNL Data Landing Zone], [!DNL Google Cloud Storage]et SFTP. Pour [!DNL Amazon Kinesis] et [!DNL Azure Event Hubs] destinations, les données sont diffusées en continu hors de l’Experience Platform dans [!DNL JSON] format.
 
 ![Destinations de stockage dans le cloud Adobe](../../assets/catalog/cloud-storage/cloud-storage-destinations.png)
 
@@ -25,7 +25,10 @@ Adobe Experience Platform prend en charge les destinations de stockage dans le c
 * [Connexion à Amazon Kinesis](amazon-kinesis.md)
 * [Connexion Amazon S3](amazon-s3.md)
 * [Connexion Azure Blob](azure-blob.md)
+* [(Version bêta) Azure Data Lake Storage Gen2](adls-gen2.md)
 * [Connexion à Azure Event Hubs](azure-event-hubs.md)
+* [(Version bêta) Zone d’entrée des données](data-landing-zone.md)
+* [(Version bêta) Stockage dans le cloud Google](google-cloud-storage.md)
 * [Connexion SFTP](sftp.md)
 
 ## Connexion à une nouvelle destination de stockage dans le cloud {#connect-destination}
