@@ -1,0 +1,213 @@
+---
+title: Point de terminaison de requêtes accélérées
+description: Découvrez comment accéder à la banque de données accélérée avec requête sans état pour renvoyer rapidement des résultats basés sur des données agrégées. Ce document fournit un exemple de requête HTTP et de réponse pour le point de terminaison de requêtes accélérées de Query Service.
+source-git-commit: 2a9d40fc783feb78a1d5ad7eb615ceb40097eb89
+workflow-type: tm+mt
+source-wordcount: '567'
+ht-degree: 11%
+
+---
+
+# Point de terminaison de requêtes accélérées
+
+Dans le cadre du SKU de Data Distiller, la variable [API Query Service](https://developer.adobe.com/experience-platform-apis/references/query-service/) vous permet d’effectuer des requêtes sans état vers le magasin accéléré. Les résultats renvoyés sont basés sur des données agrégées. La diminution de la latence des résultats permet un échange plus interactif d’informations. Les API de requêtes accélérées sont également utilisées pour alimenter [tableaux de bord définis par l’utilisateur](../../dashboards/user-defined-dashboards.md).
+
+Avant de poursuivre avec ce guide, assurez-vous d’avoir lu et compris le [Guide de l’API Query Service](./getting-started.md) pour utiliser correctement l’API Query Service.
+
+## Prise en main
+
+Le SKU de Data Distiller est requis pour utiliser le magasin accéléré de requêtes. Veuillez consulter le [packaging](../packages.md), les [barrières de sécurité](../guardrails.md#query-accelerated-store), et la documentation de la [licence](../data-distiller/licence-usage.md) relative au SKU de Data Distiller. Si vous ne disposez pas du SKU de Data Distiller, contactez votre représentant du service client Adobe pour plus d’informations.
+
+Les sections suivantes détaillent les appels d’API nécessaires pour accéder de manière apatride au magasin accéléré de requêtes via l’API Query Service. Chaque appel inclut le format général d’API, un exemple de requête présentant les en-têtes requis et un exemple de réponse.
+
+## Exécution d’une requête accélérée {#run-accelerated-query}
+
+Envoyez une requête de POST au `/accelerated-queries` point de terminaison pour exécuter une requête accélérée. La requête est contenue directement dans le payload de la requête ou référencée avec un ID de modèle.
+
+**Format d’API**
+
+```shell
+POST /accelerated-queries
+```
+
+### Requête
+
+>[!IMPORTANT]
+>
+>Requêtes à la fonction `/accelerated-queries` Le point de terminaison nécessite une instruction SQL OU un ID de modèle, mais pas les deux. L’envoi des deux dans une requête provoque une erreur.
+
+La requête suivante envoie une requête SQL dans le corps de la requête au magasin accéléré.
+
+```shell
+curl -X POST https://platform.adobe.io/data/foundation/query/acceleated-queries
+ -H 'Authorization: {ACCESS_TOKEN}'
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
+ -H 'x-api-key: {API_KEY}'
+ -H 'x-sandbox-name: {SANDBOX_NAME}' \
+ -H 'Content-Type: application/json' \
+ -H 'Accept: application/json' \
+ -d '
+ {
+   "dbName": "acmesbox1:acmeacceldb:accmeaggschema",
+   "sql": "SELECT * FROM accounts;",
+   "name": "Sample Accelerated Query",
+   "description": "A sample of an accelerated query."
+ }
+'
+```
+
+Cette autre requête envoie un identifiant de modèle dans le corps de la requête au magasin accéléré. Le code SQL du modèle correspondant est utilisé pour interroger le magasin accéléré.
+
+```shell
+curl -X POST https://platform.adobe.io/data/foundation/query/acceleated-queries
+ -H 'Authorization: {ACCESS_TOKEN}'
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
+ -H 'x-api-key: {API_KEY}'
+ -H 'x-sandbox-name: {SANDBOX_NAME}' \
+ -H 'Content-Type: application/json' \
+ -H 'Accept: application/json' \
+ -d '
+ {
+   "dbName": "acmesbox1:acmeacceldb:accmeaggschema",
+   "templateId": "5d8228e7-4200-e3de-11e9-7f27416c5f0d",
+   "name": "Sample Accelerated Query",
+   "description": "A sample of an accelerated query."
+ }
+'
+```
+
+| Propriété | Description |
+|---|---|
+| `dbName` | Nom de la base de données vers laquelle vous effectuez une requête accélérée. La valeur de `dbName` doit prendre le format `{SANDBOX_NAME}:{ACCELERATED_STORE_DATABASE}.{ACCELERATED_STORE_SCHEMA}`. La base de données fournie doit exister dans le magasin accéléré, sinon la demande entraînera une erreur. Vous devez également vous assurer que la variable `x-sandbox-name` nom de l’en-tête et de l’environnement de test dans `dbName` se rapportent au même environnement de test. |
+| `sql` | Chaîne d’instruction SQL. La taille maximale autorisée est de 1000000 caractères. |
+| `templateId` | L’identifiant unique d’une requête créée et enregistrée en tant que modèle lorsqu’une demande de POST est envoyée à la variable `/templates` point de terminaison . |
+| `name` | Nom descriptif et convivial facultatif pour la requête accélérée. |
+| `description` | Un commentaire facultatif sur l’intention de la requête pour aider d’autres utilisateurs à comprendre son objectif. La taille maximale autorisée est de 1 000 octets. |
+
+**Réponse**
+
+Une réponse réussie renvoie un état HTTP 200 avec le schéma ad hoc créé par la requête.
+
+>[!NOTE]
+>
+>La réponse suivante a été tronquée pour des raisons de concision.
+
+```json
+{
+  "queryId": "315a0a66-0fbb-4810-bc30-484cea5e0f1e",
+  "resultsMeta": {
+    "_adhoc": {
+      "type": "object",
+      "meta:xdmType": "object",
+      "properties": {
+                "Units": {
+                    "type": "string",
+                    "meta:xdmType": "string",
+                    "default": null
+                },
+                "Industry_code_NZSIOC": {
+                    "type": "string",
+                    "meta:xdmType": "string",
+                    "default": null
+                },
+                "Industry_name_NZSIOC": {
+                    "type": "string",
+                    "meta:xdmType": "string",
+                    "default": null
+                },
+                "Variable_code": {
+                    "type": "string",
+                    "meta:xdmType": "string",
+                    "default": null
+                },
+                "Variable_name": {
+                    "type": "string",
+                    "meta:xdmType": "string",
+                    "default": null
+                },
+                "Industry_aggregation_NZSIOC": {
+                    "type": "string",
+                    "meta:xdmType": "string",
+                    "default": null
+                },
+                "Value": {
+                    "type": "string",
+                    "meta:xdmType": "string",
+                    "default": null
+                },
+                "Year": {
+                    "type": "string",
+                    "meta:xdmType": "string",
+                    "default": null
+                },
+                "Variable_category": {
+                    "type": "string",
+                    "meta:xdmType": "string",
+                    "default": null
+                },
+                "Industry_code_ANZSIC06": {
+                    "type": "string",
+                    "meta:xdmType": "string",
+                    "default": null
+                }
+            }
+        }
+    },
+  "results": [
+     {
+            "Units": "Dollars (millions)",
+            "Industry_code_NZSIOC": "CC411",
+            "Industry_name_NZSIOC": "Printing",
+            "Variable_code": "H26",
+            "Variable_name": "Fixed tangible assets",
+            "Industry_aggregation_NZSIOC": "Level 4",
+            "Value": "282",
+            "Year": "2020",
+            "Variable_category": "Financial position",
+            "Industry_code_ANZSIC06": "ANZSIC06 groups C161 and C162"
+        },
+        {
+            "Units": "Dollars (millions)",
+            "Industry_code_NZSIOC": "CC411",
+            "Industry_name_NZSIOC": "Printing",
+            "Variable_code": "H27",
+            "Variable_name": "Additions to fixed assets",
+            "Industry_aggregation_NZSIOC": "Level 4",
+            "Value": "35",
+            "Year": "2020",
+            "Variable_category": "Financial position",
+            "Industry_code_ANZSIC06": "ANZSIC06 groups C161 and C162"
+        },
+        {
+            "Units": "Dollars (millions)",
+            "Industry_code_NZSIOC": "CC411",
+            "Industry_name_NZSIOC": "Printing",
+            "Variable_code": "H28",
+            "Variable_name": "Disposals of fixed assets",
+            "Industry_aggregation_NZSIOC": "Level 4",
+            "Value": "9",
+            "Year": "2020",
+            "Variable_category": "Financial position",
+            "Industry_code_ANZSIC06": "ANZSIC06 groups C161 and C162"
+        },
+        ...
+    ],
+  "request": {
+    "dbName": "acmesbox1:acmeacceldb:accmeaggschema",
+    "sql": "SELECT * FROM accounts;",
+    "name": "Sample Accelerated Query",
+    "description": "A sample of an accelerated query."
+  }
+}
+```
+
+| Propriété | Description |
+|---|---|
+| `queryId` | La valeur de l’identifiant de la requête créée. |
+| `resultsMeta` | Cet objet contient les métadonnées pour chaque colonne renvoyée dans les résultats afin que les utilisateurs connaissent le nom et le type de chaque colonne. |
+| `resultsMeta._adhoc` | Schéma de modèle de données d’expérience ad hoc (XDM) avec des champs dont l’espace de noms est réservé à une utilisation par un seul jeu de données. |
+| `resultsMeta._adhoc.type` | Type de données du schéma ad hoc. |
+| `resultsMeta._adhoc.meta:xdmType` | Il s’agit d’une valeur générée par le système pour le type de champ XDM. Pour plus d’informations sur les types disponibles, consultez la documentation sur [types XDM disponibles](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/custom-fields-api.html). |
+| `resultsMeta._adhoc.properties` | Il s’agit des noms de colonne du jeu de données interrogé. |
+| `resultsMeta._adhoc.results` | Il s’agit des noms de lignes du jeu de données interrogé. Elles reflètent chacune des colonnes renvoyées. |
+
