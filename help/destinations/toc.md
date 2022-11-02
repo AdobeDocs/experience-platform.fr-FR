@@ -4,10 +4,10 @@ user-guide-title: Guide des destinations
 user-guide-description: Activez vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
 description: Ce document répertorie la table des matières des destinations Adobe Experience Platform
 feature: Destinations
-source-git-commit: 5c938f8158cfd16b8904ee1e7f67b6ce66b2e45c
+source-git-commit: d046c17a7b376f5c2e2f25c38fac0916ed2dba73
 workflow-type: tm+mt
-source-wordcount: '963'
-ht-degree: 71%
+source-wordcount: '985'
+ht-degree: 69%
 
 ---
 
@@ -35,6 +35,7 @@ ht-degree: 71%
       * [Activer les données d’audience vers les destinations de requête de profil](./ui/activate-profile-request-destinations.md)
       * [Configurez des destinations de personnalisation pour la personnalisation de la même page et de la page suivante.](./ui/configure-personalization-destinations.md)
       * [(Version bêta) Exportation de fichiers à la demande vers des destinations par lots à l’aide de l’interface utilisateur de l’Experience Platform](./ui/export-file-now.md)
+      * [(Version bêta) Exportation de jeux de données à l’aide de l’interface utilisateur Experience Platform](./ui/export-datasets.md)
    * [Afficher les détails de la destination](./ui/destination-details-page.md)
    * [Mettre à jour les comptes de destination](./ui/update-accounts.md)
    * [Supprimer les comptes de destination](./ui/delete-destination-account.md)
@@ -103,7 +104,10 @@ ht-degree: 71%
       * [Connexion à Amazon Kinesis](./catalog/cloud-storage/amazon-kinesis.md)
       * [Connexion Amazon S3](./catalog/cloud-storage/amazon-s3.md)
       * [Connexion Azure Blob](./catalog/cloud-storage/azure-blob.md)
+      * [(Version bêta) Azure Data Lake Storage Gen2](./catalog/cloud-storage/adls-gen2.md)
       * [Connexion à Azure Event Hubs](./catalog/cloud-storage/azure-event-hubs.md)
+      * [(Version bêta) Zone d’entrée des données](./catalog/cloud-storage/data-landing-zone.md)
+      * [(Version bêta) Stockage dans le cloud Google](./catalog/cloud-storage/google-cloud-storage.md)
       * [Connexion SFTP](./catalog/cloud-storage/sftp.md)
       * [LISTE AUTORISÉE des adresses IP pour les destinations de stockage dans le cloud](./catalog/cloud-storage/ip-address-allow-list.md)
    * Destinations de gestion de la relation client {#crm}
