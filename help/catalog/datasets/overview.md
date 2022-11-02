@@ -5,10 +5,10 @@ title: Présentation des jeux de données
 topic-legacy: datasets
 description: Ce document présente de manière générale les jeux de données dans Experience Platform.
 exl-id: 51ecefb0-a699-4b1a-80f1-26c6ba92fcbf
-source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
+source-git-commit: 02002c9530074b8b05664ff9eab5bc2fe4b7d5d4
 workflow-type: tm+mt
-source-wordcount: '711'
-ht-degree: 47%
+source-wordcount: '736'
+ht-degree: 45%
 
 ---
 
@@ -61,6 +61,7 @@ Voici une liste des services en aval qui utilisent des jeux de données pour div
 * [Adobe Experience Platform Segmentation Service](../../segmentation/home.md)[!DNL Real-time Customer Profile] : permet de créer des segments et de générer des audiences à partir de vos données Ces audiences peuvent ensuite être exportées vers leurs propres jeux de données dans la variable [!DNL Data Lake].
 * [Adobe Experience Platform Data Science Workspace](../../data-science-workspace/home.md) : utilise l’apprentissage automatique et l’intelligence artificielle pour découvrir des insights dans les jeux de données volumineux.
 * [Adobe Experience Platform Query Service](../../query-service/home.md): Permet d’utiliser SQL standard pour interroger des données dans [!DNL Experience Platform], en associant n’importe quel jeu de données dans [!DNL Data Lake] et capturer les résultats des requêtes en tant que nouveau jeu de données à utiliser dans les rapports, [!DNL Data Science Workspace]ou [!DNL Real-time Customer Profile].
+* [Service de destinations Adobe Experience Platform](../../destinations/home.md): Permet à [exportation de jeux de données](/help/destinations/ui/export-datasets.md) vers les destinations de stockage dans le cloud ou de marketing par e-mail de votre choix, pour les activités de création de rapports ou de science des données.
 
 ## Étapes suivantes
 

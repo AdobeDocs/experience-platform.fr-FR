@@ -5,10 +5,10 @@ topic-legacy: overview
 title: Présentation du contrôle d’accès
 description: Dans Adobe Experience Platform, le contrôle dʼaccès est fourni par le biais dʼAdobe Admin Console. Cette fonctionnalité exploite les profils de produit dans Admin Console, liant les utilisateurs à des autorisations et des environnements de test.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: a3ee014656f135a0701b33f938384d3ab4316a99
+source-git-commit: e2d3267715f693a321b2f4ce1bae0650f38c21d7
 workflow-type: tm+mt
-source-wordcount: '1392'
-ht-degree: 99%
+source-wordcount: '1419'
+ht-degree: 96%
 
 ---
 
@@ -103,7 +103,8 @@ Le tableau suivant décrit les autorisations disponibles pour [!DNL Experience P
 | [!DNL Sandbox Administration] | [!UICONTROL Réinitialisation d’un environnement de test] | Capacité à réinitialiser un environnement de test. |
 | [!DNL Destinations] | [!UICONTROL Gestion des destinations] | Accès à la lecture, la création, la modification et la désactivation des destinations. |
 | [!DNL Destinations] | [!UICONTROL Affichage des destinations] | Accès en lecture seule aux destinations disponibles dans l’onglet **[!UICONTROL Catalogue]** et aux destinations authentifiées dans l’onglet **[!UICONTROL Parcourir]**. |
-| [!DNL Destinations] | [!UICONTROL Activation des destinations] | Capacité à activer les données vers les destinations actives qui ont été créées. Cette autorisation nécessite dʼaccorder soit « Affichage des destinations » ou « Gestion des [!UICONTROL destinations »] à lʼutilisateur qui activera les destinations. |
+| [!DNL Destinations] | [!UICONTROL Activation des destinations] | Capacité à activer les données vers les destinations actives qui ont été créées. Cette autorisation nécessite : [!UICONTROL Affichage des destinations] ou [!UICONTROL Gestion des destinations] à l’utilisateur qui activera les destinations. |
+| [!DNL Destinations] | [!UICONTROL Gestion et activation des destinations de jeu de données] | Possibilité de lire, créer, modifier et désactiver les flux d’exportation des jeux de données. Possibilité d’activer des données vers des jeux de données principaux qui ont été créés. |
 | [!DNL Destinations] | [!UICONTROL Création de destinations] | Possibilité de créer des destinations à lʼaide du [SDK Destination Adobe Experience Platform](../destinations/destination-sdk/overview.md). |
 | [!DNL Data Ingestion] | [!UICONTROL Gestion des sources] | Accès à la lecture, la création, la modification et la désactivation des sources. |
 | [!DNL Data Ingestion] | [!UICONTROL Affichage des sources] | Accès en lecture seule aux sources disponibles dans l’onglet **[!UICONTROL Catalogue]** et aux sources authentifiées dans l’onglet **[!UICONTROL Parcourir]**. |

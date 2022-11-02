@@ -3,10 +3,10 @@ keywords: destinations;destination;types de destinations
 title: Types et catégories de destination
 description: Découvrez les différents types et catégories de destinations dans Adobe Experience Platform.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: c140e68467065d17f143850bfb8eefb3ac46443a
 workflow-type: tm+mt
-source-wordcount: '642'
-ht-degree: 35%
+source-wordcount: '675'
+ht-degree: 34%
 
 ---
 
@@ -66,6 +66,12 @@ En savoir plus sur la manière de procéder [configuration des destinations de p
 La vidéo ci-dessous vous montre les particularités des deux types de destinations :
 
 >[!VIDEO](https://video.tv.adobe.com/v/29707?quality=12)
+
+## (Version bêta) Destinations d’exportation de jeux de données {#dataset-export-destinations}
+
+Certaines destinations de stockage dans le cloud dans le catalogue des destinations prennent en charge les exportations de jeux de données. Utilisez ces destinations pour exporter des jeux de données bruts vers des emplacements de stockage dans le cloud.
+
+En savoir plus sur la manière de procéder [exportation de jeux de données](/help/destinations/ui/export-datasets.md).
 
 ## Extensions {#extensions}
 
