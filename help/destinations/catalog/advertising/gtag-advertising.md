@@ -3,14 +3,18 @@ keywords: gtag;google gtag;extension google;extension google gtag;GTAG
 title: Extension Google gtag
 description: L’extension gtag Google est une destination publicitaire de Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 exl-id: 14a466f2-78a0-4493-93cd-3dcdae048042
-source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
+source-git-commit: c3f6650df5fabe9736e4b11a43c41ae39f014425
 workflow-type: tm+mt
-source-wordcount: '490'
+source-wordcount: '529'
 ht-degree: 28%
 
 ---
 
 # Extension Google gtag {#gtag-advertising-extension}
+
+>[!IMPORTANT]
+>
+>L’extension Google gtag décrite ici a été abandonnée et remplacée par le [[!DNL Google Global Site Tag (gtag)]](https://exchange.adobe.com/apps/ec/101437/google-global-site-tag-gtag) extension développée par [!DNL Acronym]. Vous trouverez la variable [!DNL Google Global Site Tag (gtag)] dans l’extension [[!UICONTROL Balises]](../../../tags/home.md) dans l’interface utilisateur de la collecte de données ou l’interface utilisateur Experience Platform.
 
 ## Présentation {#overview}
 
@@ -32,7 +36,7 @@ Pour utiliser cette extension, vous devez accéder aux balises dans Adobe Experi
 
 Pour installer l’extension Google gtag :
 
-Dans le [Interface de Platform](https://platform.adobe.com/), accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Catalogue]**.
+Dans [l’interface de Platform](https://platform.adobe.com/), accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Catalogue]**.
 
 Sélectionnez l’extension dans le catalogue ou utilisez la barre de recherche.
 
