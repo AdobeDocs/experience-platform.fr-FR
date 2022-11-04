@@ -5,9 +5,9 @@ title: Guide de l’interface utilisateur d’Edge Segmentation
 topic-legacy: ui guide
 description: La segmentation Edge permet d’évaluer instantanément les segments dans Platform, ce qui permet d’utiliser des cas de personnalisation de page et de page suivante.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: 75583d9688f0c5ee0fe4627ce64b5436ca621aa1
+source-git-commit: d2196d4d9cae4bdec160ce0c028d354a0db21cb5
 workflow-type: tm+mt
-source-wordcount: '853'
+source-wordcount: '895'
 ht-degree: 1%
 
 ---
@@ -58,3 +58,11 @@ Une requête peut être évaluée avec une segmentation Edge si elle répond à 
 ## Étapes suivantes
 
 Ce guide explique comment évaluer les segments avec la segmentation Edge sur Adobe Experience Platform. Pour en savoir plus sur l’utilisation de l’interface utilisateur de l’Experience Platform, veuillez lire le [Guide d’utilisation de la segmentation](./overview.md). Pour savoir comment effectuer des actions similaires et utiliser des segments à l’aide d’API Experience Platform, consultez la page [Guide de l’API de segmentation Edge](../api/edge-segmentation.md).
+
+## Annexe
+
+La section suivante répertorie les questions fréquentes sur la segmentation Edge :
+
+### Combien de temps faut-il pour qu’un segment soit disponible sur le réseau Edge ?
+
+La disponibilité d’un segment sur le réseau Edge peut prendre jusqu’à une heure.

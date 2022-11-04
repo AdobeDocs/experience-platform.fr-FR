@@ -5,10 +5,10 @@ title: Segmentation Edge à l’aide de l’API
 topic-legacy: developer guide
 description: Ce document contient des exemples d’utilisation de la segmentation Edge avec l’API Adobe Experience Platform Segmentation Service.
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: de63939c44b338bb9632a57c74c095135f023d50
+source-git-commit: d2196d4d9cae4bdec160ce0c028d354a0db21cb5
 workflow-type: tm+mt
-source-wordcount: '1098'
-ht-degree: 7%
+source-wordcount: '1140'
+ht-degree: 6%
 
 ---
 
@@ -259,3 +259,11 @@ Une réponse réussie renvoie les détails de la définition de segment nouvelle
 Maintenant que vous savez comment créer des segments activés pour la segmentation Edge, vous pouvez les utiliser pour activer des cas d’utilisation de la personnalisation de la même page et de la page suivante.
 
 Pour savoir comment effectuer des actions similaires et utiliser des segments à l’aide de l’interface utilisateur d’Adobe Experience Platform, consultez le [guide d’utilisation du créateur de segments](../ui/segment-builder.md).
+
+## Annexe
+
+La section suivante répertorie les questions fréquentes sur la segmentation Edge :
+
+### Combien de temps faut-il pour qu’un segment soit disponible sur le réseau Edge ?
+
+La disponibilité d’un segment sur le réseau Edge peut prendre jusqu’à une heure.

@@ -5,9 +5,9 @@ title: Guide de l’interface utilisateur de la segmentation par flux
 topic-legacy: ui guide
 description: La segmentation par flux sur Adobe Experience Platform vous permet d’effectuer une segmentation en temps quasi réel tout en vous concentrant sur la richesse des données. Avec la segmentation par flux, la qualification de segment se produit désormais lorsque les données entrent dans Platform, ce qui évite d’avoir à planifier et à exécuter des tâches de segmentation. Grâce à cette fonctionnalité, la plupart des règles de segmentation peuvent désormais être évaluées au fur et à mesure que les données sont transmises à Platform, ce qui signifie que l’adhésion au segment sera conservée à jour sans exécuter les tâches de segmentation planifiées.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: e6b5ea1878631fa88f907fd4aec64cf040e76e95
+source-git-commit: 39e3b4df3e44200fd800b501ea7b7e06bf828054
 workflow-type: tm+mt
-source-wordcount: '1315'
+source-wordcount: '1338'
 ht-degree: 0%
 
 ---
@@ -95,7 +95,7 @@ Pour en savoir plus sur l’utilisation de l’interface utilisateur de Adobe Ex
 
 La section suivante répertorie les questions fréquentes sur la segmentation par flux :
 
-### La segmentation par flux &quot;non-qualification&quot; se produit-elle également en temps réel ?
+### La segmentation par flux est-elle &quot;non-qualification&quot; également effectuée en temps réel ?
 
 Pour la plupart des instances, l’inqualification de la segmentation par flux se produit en temps réel. Toutefois, les segments en flux continu qui utilisent des segments le font **not** non admissible en temps réel, mais non admissible après 24 heures.
 
@@ -116,3 +116,7 @@ Le nombre total de segments qualifiés est tiré de la tâche de segmentation qu
 Nombre sous &quot;X derniers jours&quot; **only** inclut les audiences qualifiées en segmentation par flux, et **only** augmente si vous avez diffusé des données en flux continu dans le système et qu’elles sont prises en compte dans cette définition de flux continu. Cette valeur est **only** s’affiche pour les segments en continu. Par conséquent, cette valeur **may** s’affiche comme 0 pour les segments par lot.
 
 Par conséquent, si vous constatez que le nombre sous &quot;X derniers jours&quot; est nul et que le graphique linéaire signale également zéro, vous avez la valeur **not** diffusion en continu de tous les profils dans le système qui répondent aux critères de ce segment.
+
+### Combien de temps faut-il pour qu’un segment soit disponible ?
+
+La disponibilité d’un segment peut prendre jusqu’à une heure.
