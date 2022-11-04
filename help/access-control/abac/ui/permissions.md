@@ -3,9 +3,9 @@ keywords: Experience Platform;accueil;rubriques populaires;contrôle d’accès;
 title: Gestion des autorisations de rôle du contrôle d’accès basé sur les attributs
 description: Ce document fournit des informations sur la configuration des autorisations pour un rôle dans l’interface Autorisations de Adobe Experience Cloud.
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
-source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
+source-git-commit: a94cf02a57bd91d2342b53ced7da98836343aa2b
 workflow-type: tm+mt
-source-wordcount: '899'
+source-wordcount: '966'
 ht-degree: 7%
 
 ---
@@ -147,9 +147,21 @@ Pour supprimer un groupe d’utilisateurs d’un rôle, sélectionnez l’option
 
 Le **[!UICONTROL Suppression d’un groupe d’utilisateurs]** s’affiche, vous invitant à confirmer la suppression.
 
-![flac-confirm-user-groups -delete](../../images/flac-ui/flac-confirm-user-groups-delete.png)
+![flac-confirm-user-groups-delete](../../images/flac-ui/flac-confirm-user-groups-delete.png)
 
 Vous revenez alors à la variable **[!UICONTROL Groupes d’utilisateurs]** .
+
+## Ajout d’utilisateurs à un Experience Platform par le biais d’un profil de produit
+
+Pour ajouter un utilisateur à un profil de produit, connectez-vous au Admin Console et sélectionnez **[!UICONTROL Ajout d’utilisateurs]**
+
+![product-profile-add-users](../../images/flac-ui/product-profile-add-users.png)
+
+Le **[!UICONTROL Ajout d’utilisateurs à votre équipe]** s’affiche. Saisissez l’adresse email, le prénom (facultatif) et le nom des utilisateurs (facultatif).
+
+Sélectionnez l’icône en forme de crayon pour sélectionner les produits et les groupes d’utilisateurs, puis sélectionnez **[!UICONTROL Adobe Experience Platform]**, puis sélectionnez **[!UICONTROL AEP-Default-All-Users]**, puis sélectionnez  **[!UICONTROL Enregistrer]**.
+
+![product-profile](../../images/flac-ui/product-profile.png)
 
 ## Étapes suivantes
 

@@ -3,10 +3,10 @@ keywords: Experience Platform;accueil;rubriques populaires;contrôle d’accès;
 title: Présentation du contrôle d’accès basé sur les attributs
 description: Ce document fournit des informations sur le contrôle d’accès basé sur les attributs dans Adobe Experience Platform.
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
-source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
+source-git-commit: a94cf02a57bd91d2342b53ced7da98836343aa2b
 workflow-type: tm+mt
-source-wordcount: '1653'
-ht-degree: 33%
+source-wordcount: '1777'
+ht-degree: 31%
 
 ---
 
@@ -25,7 +25,7 @@ Le contrôle d’accès basé sur les attributs implique les composants suivants
 | Terminologie | Définition |
 | --- | --- |
 | Attributs | Les attributs sont les identifiants qui indiquent la corrélation entre un utilisateur et les ressources Platform auxquelles il a accès. Les attributs peuvent être des métadonnées ajoutées à un objet, comme un libellé ajouté à un champ ou à un segment de schéma. Un administrateur définit des stratégies d’accès qui comprennent des attributs afin de gérer les autorisations d’accès des utilisateurs. |
-| Libellés | Les libellés vous permettent de classer les jeux de données et les champs en fonction des stratégies d’utilisation qui s’appliquent à ces données. Vous pouvez appliquer les libellés à tout moment, ce qui vous offre une certaine flexibilité quant à la manière dont vous choisissez de gérer les données. Les bonnes pratiques recommandent de libeller les données dès qu’elles sont ingérées dans  Platform, ou dès que les données sont disponibles pour une utilisation dans Platform. |
+| Libellés | Les étiquettes vous permettent de classer les jeux de données et les champs en fonction des stratégies d’utilisation qui s’appliquent à ces données. Vous pouvez appliquer les libellés à tout moment, ce qui vous offre une certaine flexibilité quant à la manière dont vous choisissez de gérer les données. Les bonnes pratiques recommandent de libeller les données dès qu’elles sont ingérées dans  Platform, ou dès que les données sont disponibles pour une utilisation dans Platform. |
 | Autorisations | Les autorisations incluent la possibilité d’afficher ou d’utiliser les fonctionnalités  Platform, telles que la création d’environnements de test, la définition de schémas et la gestion des jeux de données. |
 | Jeux d’autorisations | Les jeux d’autorisations représentent un groupe d’autorisations qu’un administrateur peut appliquer à un rôle. Un administrateur peut attribuer des jeux d’autorisations à un rôle au lieu d’affecter des autorisations individuelles. Vous pouvez ainsi créer des rôles personnalisés à partir d’un rôle prédéfini contenant un groupe d’autorisations. |
 | Stratégies | Les politiques sont des déclarations qui réunissent des attributs pour établir des actions permises et non admissibles. Les stratégies peuvent être locales ou globales et peuvent remplacer d’autres stratégies. |
@@ -56,6 +56,18 @@ Les sections suivantes fournissent des informations sur la manière dont le cont
 
  Platform exploite les profils de produit [Adobe Admin Console](https://adminconsole.adobe.com) pour lier les utilisateurs à des autorisations et des environnements de test. Les autorisations contrôlent l’accès à de nombreuses fonctionnalités de Platform, notamment la modélisation des données, la gestion des profils et l’administration des environnements de test. Une fois que votre organisation a activé le contrôle d’accès basé sur les attributs, vous pouvez commencer à utiliser les autorisations sur Adobe Experience Cloud, au lieu des profils de produit dans Adobe Admin Console, pour gérer les autorisations des utilisateurs, fonctionnalités, libellés et autres ressources de votre organisation.
 
+La disponibilité du contrôle d’accès basé sur les attributs est limitée pour les clients qui achètent des services de santé et/ou des canaux de confidentialité. Les fonctionnalités de cette fonctionnalité incluent :
+
+* Interface des autorisations : Fournit une interface permettant de définir les rôles utilisateur, les autorisations et les stratégies pour le contrôle d’accès basé sur les attributs.
+
+* Étiquetage : Ajoutez, modifiez et supprimez des libellés pour les rôles utilisateur, les champs de schéma, les segments et d’autres objets pris en charge afin d’exploiter les stratégies de contrôle d’accès.
+
+Les workflows d’administration pour toutes les applications Experience Platform de Admin Console vers la nouvelle interface d’autorisations sont en cours de basculement.
+
+>[!IMPORTANT]
+>
+>Les profils de produit sont automatiquement migrés vers l’interface d’autorisations lorsque votre entreprise est activée. Les profils de produit en Admin Console resteront inchangés pour l’instant. Veuillez **ne pas** modifiez vos profils de produit une fois que votre entreprise a été activée.
+
 Pour plus d’informations sur le contrôle d’accès, voir [présentation du contrôle d’accès](../home.md).
 
 ### Destinations {#destinations}
@@ -80,7 +92,7 @@ En tant qu’administrateur, vous pouvez utiliser des fonctionnalités de contr�
 
 Pour plus d’informations sur [!DNL Destinations], reportez-vous à la section [[!DNL Destinations] aperçu](../../destinations/home.md).
 
-### Service d’identités
+### Identity Service
 
 Adobe Experience Platform [!DNL Identity Service] vous permet de mieux connaître vos clients et leurs comportements, en établissant un lien entre les identités des différents appareils et systèmes, ce qui vous permet de proposer des expériences numériques personnelles et percutantes en temps réel.
 
