@@ -1,10 +1,11 @@
 ---
 title: Extension de transfert d’événement Zendesk
 description: Extension de transfert d’événement Zendesk pour Adobe Experience Platform.
-source-git-commit: ae585660bbf057f25e6f0dfc2520e6bb0af9d8d0
-workflow-type: ht
+exl-id: 22e94699-5b84-4a73-b007-557221d3e223
+source-git-commit: a9887535b12b8c4aeb39bb5a6646da88db4f0308
+workflow-type: tm+mt
 source-wordcount: '1286'
-ht-degree: 100%
+ht-degree: 98%
 
 ---
 
@@ -53,7 +54,7 @@ Sous **[!UICONTROL Domaine de Zendesk]**, saisissez la valeur de votre sous-doma
 
 ## Configurer une règle de transfert d’événement
 
-Commencez à créer une [règle](../../../ui/managing-resources/rules.md) de transfert d’événement et configurez ses conditions selon vos besoins. Lors de la sélection des actions de la règle, cliquez sur l’extension [!UICONTROL Splunk], puis sélectionnez le type d’action [!UICONTROL Créer un événement].
+Commencez à créer une [règle](../../../ui/managing-resources/rules.md) de transfert d’événement et configurez ses conditions selon vos besoins. Lors de la sélection des actions de la règle, sélectionnez l’événement [!UICONTROL Zendesk] , puis sélectionnez la variable [!UICONTROL Créer un événement] type d’action.
 
 ![Définir une règle](../../../images/extensions/zendesk/rule.png)
 

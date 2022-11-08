@@ -1,18 +1,15 @@
 ---
 title: Surveiller les requêtes
 description: Découvrez comment surveiller les requêtes via l’interface utilisateur de Query Service.
-source-git-commit: 283c6ba323a327b0c525343a96a45a2412baa67b
+exl-id: 4640afdd-b012-4768-8586-32f1b8232879
+source-git-commit: a9887535b12b8c4aeb39bb5a6646da88db4f0308
 workflow-type: tm+mt
-source-wordcount: '1051'
+source-wordcount: '1033'
 ht-degree: 1%
 
 ---
 
-# Surveiller les requêtes (version limitée)
-
->[!IMPORTANT]
->
->Cette fonctionnalité est actuellement une version limitée et disponible uniquement pour un petit nombre de clients.
+# Surveillance des requêtes
 
 Adobe Experience Platform offre une meilleure visibilité de l’état de toutes les tâches de requête via l’interface utilisateur. De [!UICONTROL Requêtes planifiées] vous pouvez maintenant trouver des informations importantes sur les exécutions de votre requête qui incluent l’état, les détails de planification et les messages/codes d’erreur en cas d’échec. Vous pouvez également vous abonner à des alertes pour les requêtes en fonction de leur état via l’interface utilisateur pour l’une de ces requêtes via [!UICONTROL Requêtes planifiées] .
 
@@ -59,7 +56,7 @@ Activez/désactivez les cases à cocher appropriées pour supprimer ou ajouter u
 
 ![Boîte de dialogue Personnaliser les paramètres du tableau .](./images/monitor-queries/customize-table-dialog.png)
 
-### Abonner aux alertes {#alert-subscription}
+### S’abonner aux alertes {#alert-subscription}
 
 Vous pouvez vous abonner à des alertes à l’aide du [!UICONTROL Requêtes planifiées] . Sélectionnez l’icône de notification d’alerte (![Icône d’alerte.](./images/monitor-queries/alerts-icon.png)) en regard d’un nom de requête pour ouvrir la variable [!UICONTROL Alertes] boîte de dialogue. Le [!UICONTROL Alertes] s’abonne aux notifications de l’interface utilisateur et aux alertes par courrier électronique. Les alertes reposent sur l’état de la requête. Trois options sont disponibles : `start`, `success`, et `failure`. Cochez la ou les cases correspondantes et sélectionnez **[!UICONTROL Enregistrer]** pour vous abonner.
 
@@ -126,4 +123,3 @@ Vous pouvez copier la requête SQL dans le presse-papiers à partir de cette vue
 Sélectionner **[!UICONTROL Requête]** pour revenir à l’écran des détails du planning, ou **[!UICONTROL Requêtes planifiées]** pour revenir au [!UICONTROL Requêtes planifiées] .
 
 ![L’écran des détails de l’exécution avec la requête mise en surbrillance.](./images/monitor-queries/return-navigation.png)
-
