@@ -1,12 +1,12 @@
 ---
+keywords: diffusion en continu; Destination HTTP
 title: Connexion via l’API HTTP
-keywords: diffusion en continu;
 description: Utilisez la destination d’API HTTP dans Adobe Experience Platform pour envoyer des données de profil à un point de terminaison HTTP tiers afin d’exécuter vos propres analyses ou d’effectuer toute autre opération nécessaire sur les données de profil exportées hors d’Experience Platform.
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: c65e8b4a4b3a3f9e546126258d3b9ca58de07081
 workflow-type: tm+mt
-source-wordcount: '2376'
-ht-degree: 4%
+source-wordcount: '2375'
+ht-degree: 12%
 
 ---
 
@@ -22,20 +22,20 @@ La destination de l’API HTTP est une [!DNL Adobe Experience Platform] destinat
 
 Pour envoyer des données de profil aux points de terminaison HTTP, vous devez d’abord [se connecter à la destination](#connect-destination) in [!DNL Adobe Experience Platform].
 
-## Cas d&#39;utilisation {#use-cases}
+## Cas d’utilisation {#use-cases}
 
 La destination de l’API HTTP vous permet d’exporter les données de profil XDM et les segments d’audience vers des points de terminaison HTTP génériques. Vous pouvez y exécuter vos propres analyses ou effectuer toute autre opération dont vous aurez besoin sur les données de profil exportées hors d’Experience Platform.
 
 Les points de terminaison HTTP peuvent être les systèmes des clients ou des solutions tierces.
 
-## Type et fréquence d&#39;export {#export-type-frequency}
+## Type et fréquence d’exportation {#export-type-frequency}
 
 Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la fréquence d’exportation des destinations.
 
 | Élément | Type | Notes |
 ---------|----------|---------|
 | Type d’exportation | **[!UICONTROL Basé sur les profils]** | Vous exportez tous les membres d’un segment, ainsi que les champs de schéma de votre choix (par exemple : l’adresse email, le numéro de téléphone, le nom), tel que sélectionné dans l’écran de mappage de la variable [workflow d’activation de destination](../../ui/activate-segment-streaming-destinations.md#mapping). |
-| Fréquence des exports | **[!UICONTROL Diffusion en continu]** | Les destinations de diffusion en continu sont &quot;toujours sur&quot; des connexions basées sur l’API. Dès qu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation des segments, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
+| Fréquence des exportations | **[!UICONTROL Diffusion en continu]** | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation des segments, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -86,7 +86,7 @@ curl --location --request POST 'https://some-api.com/token' \
 
 >[!IMPORTANT]
 > 
->Pour vous connecter à la destination, vous avez besoin de l’événement **[!UICONTROL Gestion des destinations]** [autorisation de contrôle d’accès](/help/access-control/home.md#permissions). Lisez le [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+>Pour vous connecter à la destination, vous devez disposer de l’[autorisation de contrôle d’accès](/help/access-control/home.md#permissions) **[!UICONTROL Gérer les destinations]**. Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
 Pour vous connecter à cette destination, procédez comme décrit dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md). Lors de la connexion à cette destination, vous devez fournir les informations suivantes :
 
@@ -138,7 +138,7 @@ Si vous sélectionnez la variable **[!UICONTROL Informations d’identification 
    * **[!UICONTROL Body Form Encoded]**: Dans ce cas, la variable [!DNL client ID] et [!DNL client secret] sont inclus *dans le corps de la requête* envoyé à votre destination. Pour consulter un exemple, reportez-vous à la section [Types d’authentification pris en charge](#supported-authentication-types) .
    * **[!UICONTROL Autorisation de base]**: Dans ce cas, la variable [!DNL client ID] et [!DNL client secret] sont inclus *dans un `Authorization` header* après avoir été codé en base64 et envoyé à votre destination. Pour consulter un exemple, reportez-vous à la section [Types d’authentification pris en charge](#supported-authentication-types) .
 
-### Renseignement des détails de destination {#destination-details}
+### Renseigner les détails de la destination {#destination-details}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_headers"
@@ -179,15 +179,15 @@ Pour configurer les détails de la destination, renseignez les champs obligatoir
 
 ### Activer les alertes {#enable-alerts}
 
-Vous pouvez activer les alertes pour recevoir des notifications sur l’état du flux de données vers votre destination. Sélectionnez une alerte dans la liste et abonnez-vous à des notifications concernant le statut de votre flux de données. Pour plus d’informations sur les alertes, consultez le guide sur les [abonnement aux alertes de destinations à l’aide de l’interface utilisateur](../../ui/alerts.md).
+Vous pouvez activer les alertes pour recevoir des notifications sur le statut de votre flux de données vers votre destination. Sélectionnez une alerte dans la liste et abonnez-vous à des notifications concernant le statut de votre flux de données. Pour plus d’informations sur les alertes, consultez le guide sur l’[abonnement aux alertes des destinations dans l’interface utilisateur](../../ui/alerts.md).
 
-Lorsque vous avez terminé de fournir des détails sur votre connexion de destination, sélectionnez **[!UICONTROL Suivant]**.
+Lorsque vous avez terminé de renseigner les détails sur votre connexion de destination, sélectionnez **[!UICONTROL Suivant]**.
 
 ## Activer des segments vers cette destination {#activate}
 
 >[!IMPORTANT]
 > 
->Pour activer les données, vous avez besoin de l’événement **[!UICONTROL Gestion des destinations]**, **[!UICONTROL Activation des destinations]**, **[!UICONTROL Afficher les profils]**, et **[!UICONTROL Affichage de segments]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez le [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+>Pour activer les données, vous avez besoin des [autorisations de contrôle d’accès](/help/access-control/home.md#permissions) pour les fonctions **[!UICONTROL Gérer les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]**, et **[!UICONTROL Afficher les segments]**. Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
 Voir [Activation des données d’audience vers des destinations d’exportation de profils en continu](../../ui/activate-streaming-profile-destinations.md) pour obtenir des instructions sur l’activation des segments d’audience vers cette destination.
 
