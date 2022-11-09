@@ -5,10 +5,10 @@ title: Glossaire des étiquettes dʼutilisation des données
 topic-legacy: labels
 description: Ce document décrit toutes les étiquettes dʼutilisation des données actuellement prises en charge par Adobe Experience Platform.
 exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
-source-git-commit: 1ab97c63bc169965ca759f2dd8b411c175559fb8
+source-git-commit: c29b6c7dc061ea910ebedcae1fa4beaa6def10b1
 workflow-type: tm+mt
-source-wordcount: '2083'
-ht-degree: 70%
+source-wordcount: '2117'
+ht-degree: 67%
 
 ---
 
@@ -30,17 +30,18 @@ Les étiquettes Contrat « C » sont utilisées pour catégoriser des données
 
 | Libellé | Définition |
 | --- | --- |
-| **C1** | Les données ne peuvent être exportées depuis Adobe Experience Cloud que sous une forme agrégée, sans inclure d’identifiants individuels ou d’appareil. [Plus d’informations...](#c1) |
-| **C2** | Les données ne peuvent pas être exportées vers un tiers. [Plus d’informations...](#c2) |
-| **C3** | Les données ne peuvent être combinées ou autrement utilisées avec des informations directement identifiables. [Plus d’informations...](#c3) |
-| **C4** | Les données ne peuvent pas être utilisées pour cibler des publicités ou du contenu, que ce soit sur site ou entre sites. [Plus d’informations...](#c4) |
-| **C5** | Les données ne peuvent pas être utilisées pour le ciblage intersite de contenu ou de publicités en fonction des intérêts. [Plus d’informations...](#c5) |
-| **C6** | Les données ne peuvent pas être utilisées pour le ciblage de publicités sur site. [Plus d’informations...](#c6) |
-| **C7** | Les données ne peuvent pas être utilisées pour le ciblage de contenu sur site. [Plus d’informations...](#c7) |
-| **C8** | Les données ne peuvent pas être utilisées pour mesurer les sites web ou les applications de votre entreprise. [Plus d’informations...](#c8) |
-| **C9** | Les données ne peuvent pas être utilisées dans les workflows Data Science. [Plus d’informations...](#c9) |
-| **C10** | Les données ne peuvent pas être utilisées pour lʼactivation de lʼidentité assemblée. [Plus d’informations...](#c10) |
-| **C11** | Les données ne peuvent pas être partagées avec les partenaires de correspondance de segment. [Plus d’informations...](#c11) |
+| [C1](#c1) | Les données ne peuvent être exportées depuis Adobe Experience Cloud que sous une forme agrégée, sans inclure d’identifiants individuels ou d’appareil. |
+| [C2](#c2) | Les données ne peuvent pas être exportées vers un tiers. |
+| [C3](#c3) | Les données ne peuvent être combinées ou autrement utilisées avec des informations directement identifiables. |
+| [C4](#c4) | Les données ne peuvent pas être utilisées pour cibler des publicités ou du contenu, que ce soit sur site ou entre sites. |
+| [C5](#c5) | Les données ne peuvent pas être utilisées pour le ciblage intersite de contenu ou de publicités en fonction des intérêts. |
+| [C6](#c6) | Les données ne peuvent pas être utilisées pour le ciblage de publicités sur site. |
+| [C7](#c7) | Les données ne peuvent pas être utilisées pour le ciblage de contenu sur site. |
+| [C8](#c8) | Les données ne peuvent pas être utilisées pour mesurer les sites web ou les applications de votre entreprise. |
+| [C9](#c9) | Les données ne peuvent pas être utilisées dans les workflows Data Science. |
+| [C10](#c10) | Les données ne peuvent pas être utilisées pour lʼactivation de lʼidentité assemblée. |
+| [C11](#c11) | Les données ne peuvent pas être partagées avec les partenaires de correspondance de segment. |
+| [C12](#c12) | Les données ne peuvent pas être exportées de quelque manière que ce soit. |
 
 ## Étiquettes Identité
 
@@ -78,7 +79,7 @@ Certaines données ne peuvent être exportées depuis Adobe Experience Cloud q
 
 #### C2 {#c2}
 
-Certains fournisseurs de données ont des clauses dans leurs contrats qui interdisent l’exportation de données à partir de l’endroit où elles ont été collectées à l’origine. Par exemple, les contrats de réseau social limitent souvent le transfert des données que vous recevez de leur part. L’étiquette C2 est plus restrictif que le [C1](#c1), qui ne requiert qu’une agrégation et des données anonymes.
+Certains fournisseurs de données ont des clauses dans leurs contrats qui interdisent l’exportation de données à partir de l’endroit où elles ont été collectées à l’origine. Par exemple, les contrats de réseau social limitent souvent le transfert des données que vous recevez de leur part. L’étiquette C2 est plus restrictive que [C1](#c1), qui ne nécessite qu’une agrégation et des données anonymes, mais qui est moins restrictif que [C12](#c12), qui empêche les exportations de données, quelle que soit la destination.
 
 #### C3 {#c3}
 
@@ -86,7 +87,7 @@ Certains fournisseurs de données ont des clauses dans leurs contrats qui interd
 
 #### C4 {#c4}
 
-C4 est l’étiquette la plus restrictive. Elle englobe les étiquettes [C5](#c5), [C6](#c6), et [C7](#c7).
+C4 englobe les libellés [C5](#c5), [C6](#c6), et [C7](#c7). Il s’agit de l’une des étiquettes les plus restrictives, juste après la [C12](#c12).
 
 #### C5 {#c5}
 
@@ -139,3 +140,7 @@ Certaines stratégies dʼutilisation des données limitent lʼutilisation de don
 #### C11 {#c11}
 
 La correspondance de segments d’Adobe Experience Platform vous permet de faire correspondre des segments propriétaires avec des préférences de confidentialité et de consentement, ce qui facilite la création enrichie de profils utilisateurs et les insights en aval. Le libellé C11 indique les données qui ne doivent pas être utilisées dans les processus [!DNL Segment Match]. Une fois que vous avez déterminé les jeux de données et/ou les champs que vous souhaitez exclure de la correspondance de segment et que vous avez ajouté le libellé C11 en conséquence, le libellé est automatiquement appliqué par le workflow Correspondance de segment.
+
+#### C12 {#c12}
+
+Les données avec ce libellé ne peuvent pas être exportées depuis Platform de quelque manière que ce soit. Les champs étiquetés C12 sont exclus des téléchargements CSV, de la consommation d’API et des workflows d’activation.
