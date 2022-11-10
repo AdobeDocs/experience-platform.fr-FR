@@ -3,9 +3,9 @@ keywords: Experience Platform;accueil;rubriques populaires;contrôle d’accès;
 title: Contrôle d’accès basé sur les attributs Création d’une stratégie
 description: Ce document fournit des informations sur la gestion des stratégies par le biais de l’interface Autorisations dans Adobe Experience Cloud.
 exl-id: 66820711-2db0-4621-908d-01187771de14
-source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
+source-git-commit: 1a755fa5480e036bde50617f01440cfabbaf64c2
 workflow-type: tm+mt
-source-wordcount: '661'
+source-wordcount: '678'
 ht-degree: 0%
 
 ---
@@ -44,7 +44,7 @@ Ensuite, sélectionnez la variable **Correspond à**.
 
 ![flac-policy-matches-menu-déroulant](../../images/flac-ui/flac-policy-matches-dropdown.png)
 
-Sélectionnez ensuite la liste déroulante **Utilisateur**.
+Sélectionnez ensuite dans la liste déroulante le type de libellé (**[!UICONTROL Libellé principal]** ou **[!UICONTROL Libellé personnalisé]**) pour correspondre au libellé attribué à l’utilisateur dans les rôles.
 
 ![flac-policy-user-dropdown](../../images/flac-ui/flac-policy-user-dropdown.png)
 
