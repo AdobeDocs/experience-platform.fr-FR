@@ -5,10 +5,10 @@ title: Gestion des stratégies d’utilisation des données dans l’interface u
 topic-legacy: policies
 description: La gouvernance des données d’Adobe Experience Platform fournit une interface utilisateur qui vous permet de créer et de gérer des stratégies d’utilisation des données. Ce document présente les actions que vous pouvez effectuer dans l’espace de travail Stratégies de l’interface utilisateur de l’Experience Platform.
 exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
-source-git-commit: 6453ec6c98d90566449edaa0804ada260ae12bf6
+source-git-commit: c314cba6b822e12aa0367e1377ceb4f6c9d07ac2
 workflow-type: tm+mt
-source-wordcount: '1330'
-ht-degree: 51%
+source-wordcount: '1408'
+ht-degree: 48%
 
 ---
 
@@ -96,7 +96,12 @@ Les stratégies de consentement se composent de deux composants logiques :
 * **[!UICONTROL If]**: La condition qui déclenchera la vérification de la stratégie. Cela peut être basé sur une certaine action marketing en cours, la présence de certains libellés d’utilisation des données ou une combinaison des deux.
 * **[!UICONTROL Alors]**: Attributs de consentement devant être présents pour qu’un profil soit inclus dans l’action qui a déclenché la stratégie.
 
-#### Configuration des conditions
+#### Configuration des conditions {#consent-conditions}
+
+>[!CONTEXTUALHELP]
+>id="platform_governance_policies_consentif"
+>title="Condition if"
+>abstract="Définissez d’abord les conditions qui déclencheront le contrôle de la stratégie. Les conditions peuvent inclure certaines actions marketing entreprises, certaines étiquettes de gouvernance des données présentes ou une combinaison des deux."
 
 Sous , **[!UICONTROL If]** , sélectionnez les actions marketing et/ou les libellés d’utilisation des données qui doivent déclencher cette stratégie. Sélectionner **[!UICONTROL Afficher tout]** et **[!UICONTROL Sélectionner des étiquettes]** pour afficher les listes complètes des actions marketing et des libellés disponibles, respectivement.
 
@@ -108,7 +113,12 @@ Si vous sélectionnez plusieurs conditions, vous pouvez utiliser l’icône qui 
 
 ![](../images/policies/and-or-selection.png)
 
-#### Sélectionner les attributs de consentement
+#### Sélectionner les attributs de consentement {#consent-attributes}
+
+>[!CONTEXTUALHELP]
+>id="platform_governance_policies_consentthen"
+>title="Alors, condition"
+>abstract="Une fois votre condition &quot;If&quot; définie, utilisez la section &quot;Then&quot; pour sélectionner au moins un attribut de consentement dans le schéma d’union. Il s’agit de l’attribut qui doit être présent pour que les profils soient inclus dans l’action régie par cette stratégie."
 
 Sous , **[!UICONTROL Alors]** , sélectionnez au moins un attribut de consentement dans le schéma d’union. Il s’agit de l’attribut qui doit être présent pour que les profils soient inclus dans l’action régie par cette stratégie. Vous pouvez choisir l’une des options fournies dans la liste ou sélectionner **[!UICONTROL Afficher tout]** pour sélectionner directement l’attribut dans le schéma d’union.
 

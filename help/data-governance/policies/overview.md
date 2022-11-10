@@ -5,14 +5,19 @@ title: Présentation des stratégies dʼutilisation des données
 topic-legacy: policies
 description: Des stratégies d’utilisation des données doivent être mises en œuvre pour que les libellés d’utilisation des données prennent en charge efficacement la conformité des données. Les stratégies d’utilisation des données sont des règles qui décrivent les types d’actions marketing que vous êtes autorisé ou non à effectuer sur des données d’Experience Platform.
 exl-id: 1b372aa5-3e49-4741-82dc-5701a4bc8469
-source-git-commit: 0c78b5dc420a1346c92bf9ed7864fa1733422a83
+source-git-commit: c314cba6b822e12aa0367e1377ceb4f6c9d07ac2
 workflow-type: tm+mt
-source-wordcount: '1121'
-ht-degree: 92%
+source-wordcount: '1180'
+ht-degree: 87%
 
 ---
 
-# Présentation des stratégies d’utilisation des données
+# Présentation des stratégies d’utilisation des données {#policies-overview}
+
+>[!CONTEXTUALHELP]
+>id="platform_governance_policies_restrictusage"
+>title="Limitation de l’utilisation des données"
+>abstract="Le type de stratégie d’utilisation des données évalue des actions marketing spécifiques appliquées aux libellés de gouvernance des données afin de limiter l’utilisation des données pour les activités marketing."
 
 Des stratégies d’utilisation des données doivent être mises en œuvre pour que les libellés d’utilisation des données prennent en charge efficacement la conformité des données. Les stratégies d’utilisation des données sont des règles qui décrivent les types d’actions marketing que vous êtes autorisé ou non à effectuer sur des données d’[!DNL Experience Platform].
 
@@ -20,6 +25,10 @@ Deux types de stratégies sont disponibles :
 
 * **[!UICONTROL Politique de gouvernance des données]**: Restreindre l’activation des données en fonction de l’action marketing en cours et des libellés d’utilisation des données transportés par les données en question.
 * **[!UICONTROL Stratégie de consentement]**: Filtrer les profils pouvant être activés sur [destinations](../../destinations/home.md) en fonction du consentement ou des préférences de vos clients
+
+>[!NOTE]
+>
+>Les stratégies d’utilisation des données ne doivent pas être confondues avec [stratégies de contrôle d’accès](../../access-control/abac/end-to-end-guide.md#policy), qui déterminent si certains utilisateurs de Platform de votre entreprise peuvent accéder à certains champs de données, et qui sont configurés via la variable [!UICONTROL Autorisations] .
 
 Ce document fournit une présentation de haut niveau des stratégies dʼutilisation des données et fournit des liens vers la documentation supplémentaire sur lʼutilisation des stratégies dans lʼUI ou lʼAPI.
 

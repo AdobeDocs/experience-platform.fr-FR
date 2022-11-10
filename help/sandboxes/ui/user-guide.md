@@ -5,10 +5,10 @@ title: Guide de l’interface utilisateur des environnements de test
 topic-legacy: user guide
 description: Ce document fournit la procédure à suivre pour réaliser différentes opérations associées aux environnements de test dans l’interface utilisateur d’Adobe Experience Platform.
 exl-id: b258c822-5182-4217-9d1b-8196d889740f
-source-git-commit: 2fb972b0ec8d1f679c6ce104a439265b5cc4d535
+source-git-commit: df0f543b18f008b656c5e411305c5243efa744ad
 workflow-type: tm+mt
-source-wordcount: '770'
-ht-degree: 16%
+source-wordcount: '816'
+ht-degree: 15%
 
 ---
 
@@ -36,7 +36,17 @@ Une fois qu’un environnement de test est sélectionné, l’écran actualise l
 
 ![sandbox-switch](../images/ui/sandbox-switched.png)
 
-## Création d’un nouvel environnement de test
+## Création d’un nouvel environnement de test {#create}
+
+>[!CONTEXTUALHELP]
+>id="platform_sandboxes_sandboxname"
+>title="Nom du sandbox"
+>abstract="Le nom de l’environnement de test est le texte utilisé sur le serveur principal pour créer un identifiant unique pour cet environnement de test."
+
+>[!CONTEXTUALHELP]
+>id="platform_sandboxes_sandboxtitle"
+>title="Titre du sandbox"
+>abstract="Le titre de l’environnement de test est le nom d’affichage qui représente l’environnement de test dans les menus et les listes déroulantes de l’interface utilisateur de l’Experience Platform."
 
 >[!NOTE]
 >

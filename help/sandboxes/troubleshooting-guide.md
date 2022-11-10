@@ -5,10 +5,10 @@ title: Guide de dépannage des environnements de test
 topic-legacy: troubleshooting guide
 description: Ce document apporte des réponses aux questions fréquentes sur les environnements de test dans Adobe Experience Platform.
 exl-id: 6a496509-a4e9-4e76-829b-32d67ccfcce6
-source-git-commit: 2a7b2040c221ff039f17f78d9ca712032d9fc02c
+source-git-commit: c314cba6b822e12aa0367e1377ceb4f6c9d07ac2
 workflow-type: tm+mt
-source-wordcount: '815'
-ht-degree: 44%
+source-wordcount: '857'
+ht-degree: 42%
 
 ---
 
@@ -22,7 +22,13 @@ Les environnements de test divisent une instance de plateforme unique en environ
 
 Les environnements de test sont des partitions virtuelles au sein d’une instance unique d’Experience Platform. Chaque environnement de test conserve sa propre bibliothèque indépendante de ressources Platform (qui comprend des schémas, des jeux de données, des profils, etc.). Tout le contenu et les actions réalisés dans un environnement de test sont limités à celui-ci et n’en affectent aucun autre. Pour plus d’informations, consultez la [Présentation des environnements de test](home.md).
 
-## Quels sont les types d’environnements de test disponibles et quelles sont leurs différences ?
+## Quels sont les types d’environnements de test disponibles et quelles sont leurs différences ? {#sandbox-types}
+
+>[!CONTEXTUALHELP]
+>id="platform_sandboxes_sandboxtypes"
+>title="Type de sandbox"
+>abstract="Le type d’environnement de test indique s’il s’agit d’un environnement de test de production ou de développement. Les environnements de test de production incluent des données actives et les environnements de test de développement sont utilisés pour les tests et le développement."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/sandbox/ui/user-guide.html#create" text="Création d’un environnement de test dans l’interface utilisateur"
 
 Deux types d’environnements de test sont disponibles dans Experience Platform :
 

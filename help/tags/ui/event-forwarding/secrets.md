@@ -2,9 +2,9 @@
 title: Configuration de secrets dans le transfert d’événements
 description: Découvrez comment configurer des secrets dans l’interface utilisateur pour s’authentifier aux points de terminaison utilisés dans les propriétés de transfert d’événement.
 exl-id: eefd87d7-457f-422a-b159-5b428da54189
-source-git-commit: 9f38925645ec4311f4a809a913fe51792e889105
+source-git-commit: c314cba6b822e12aa0367e1377ceb4f6c9d07ac2
 workflow-type: tm+mt
-source-wordcount: '1715'
+source-wordcount: '1766'
 ht-degree: 74%
 
 ---
@@ -37,6 +37,12 @@ Ce guide suppose que vous savez déjà comment gérer les ressources pour le tra
 Vous devez également posséder une compréhension pratique du flux de publication pour les balises et le transfert dʼévénement, y compris la manière dʼajouter des ressources à une bibliothèque et dʼinstaller une version de celle-ci sur votre site web à des fins de test. Pour plus dʼinformations, voir [présentation de la publication](../publishing/overview.md).
 
 ## Créer un secret {#create}
+
+>[!CONTEXTUALHELP]
+>id="platform_eventforwarding_secrets_environments"
+>title="Environnements pour les secrets"
+>abstract="Pour être utilisé par le transfert dʼévénement, un secret doit dʼabord être affecté à un environnement existant. Si aucun environnement n’est créé pour votre propriété de transfert d’événement, vous devez le configurer avant de continuer."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html?lang=fr" text="Présentation des environnements"
 
 Pour créer un secret, sélectionnez **[!UICONTROL Transfert d’événement]** dans le volet de navigation de gauche, ouvrez la propriété de transfert d’événement sous laquelle vous souhaitez ajouter le secret. Ensuite, sélectionnez **[!UICONTROL Secrets]** dans le volet de navigation de gauche, puis **[!UICONTROL Créer un secret]**.
 

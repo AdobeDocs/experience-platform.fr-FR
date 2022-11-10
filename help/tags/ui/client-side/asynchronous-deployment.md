@@ -2,14 +2,19 @@
 title: Déploiement asynchrone
 description: Découvrez comment déployer les bibliothèques de balises d’Adobe Experience Platform de manière asynchrone sur votre site web.
 exl-id: ed117d3a-7370-42aa-9bc9-2a01b8e7794e
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: c314cba6b822e12aa0367e1377ceb4f6c9d07ac2
 workflow-type: tm+mt
-source-wordcount: '1010'
-ht-degree: 100%
+source-wordcount: '1079'
+ht-degree: 94%
 
 ---
 
-# Déploiement asynchrone
+# Déploiement asynchrone {#asynchronous-deployment}
+
+>[!CONTEXTUALHELP]
+>id="platform_tags_asynchronous_deployment"
+>title="Déploiement asynchrone"
+>abstract="Si cette option est activée, lorsque cette balise de script est analysée, le navigateur commence à charger le fichier JavaScript, mais au lieu d’attendre que la bibliothèque soit chargée et exécutée, il continue à analyser et à effectuer le rendu du reste du document. Cela peut améliorer les performances des pages web, mais a des implications importantes en ce qui concerne l’exécution de certaines règles. Voir la documentation pour plus de détails."
 
 >[!NOTE]
 >
