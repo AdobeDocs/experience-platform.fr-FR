@@ -1,69 +1,69 @@
 ---
 keywords: Experience Platform;accueil;rubriques les plus consultées;Oracle Service Cloud;oracle service cloud
-title: Création d’une connexion à la source cloud Oracle Service dans l’interface utilisateur
-description: Découvrez comment créer une connexion source Oracle Service Cloud à l’aide de l’interface utilisateur de Adobe Experience Platform.
+title: Créer une connexion source Oracle Service Cloud dans l’interface utilisateur.
+description: Découvrez comment créer une connexion source Oracle Service Cloud à l’aide de l’interface utilisateur d’Adobe Experience Platform.
 source-git-commit: 8e4f2170489d7e4e73bbc726e3253fac97c9f9f3
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '500'
-ht-degree: 28%
+ht-degree: 100%
 
 ---
 
-# (Version bêta) Création d’une connexion source Oracle Service Cloud dans l’interface utilisateur
+# (Version bêta) Créer une connexion source Oracle Service Cloud dans l’interface utilisateur.
 
 >[!NOTE]
 >
->La source Oracle Service Cloud est en version bêta. Voir [présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de sources étiquetées bêta.
+>La source Oracle Service Cloud est en version bêta. Voir la [présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de sources étiquetées bêta. 
 
-Ce tutoriel décrit les étapes à suivre pour créer une connexion source Oracle Service Cloud à l’aide de l’interface utilisateur de Adobe Experience Platform.
+Ce tutoriel décrit les étapes à suivre pour créer une connexion source Oracle Service Cloud à l’aide de l’interface utilisateur d’Adobe Experience Platform. 
 
 ## Prise en main
 
-Ce tutoriel nécessite une compréhension pratique des composants suivants de l’Experience Platform :
+Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform : 
 
-* [[!DNL Experience Data Model (XDM)] Système](../../../../../xdm/home.md): Cadre normalisé selon lequel l’Experience Platform organise les données d’expérience client.
+* [[!DNL Experience Data Model (XDM)] Système](../../../../../xdm/home.md) : Cadre normalisé selon lequel Experience Platform organise les données d’expérience client. 
    * [Principes de base de la composition des schémas](../../../../../xdm/schema/composition.md) : découvrez les blocs de création de base des schémas XDM, y compris les principes clés et les bonnes pratiques en matière de composition de schémas.
    * [Tutoriel sur l’éditeur de schémas](../../../../../xdm/tutorials/create-schema-ui.md) : découvrez comment créer des schémas personnalisés à l’aide de l’interface utilisateur de l’éditeur de schémas.
 * [[!DNL Real-time Customer Profile]](../../../../../profile/home.md) : fournit un profil de consommateur unifié en temps réel, basé sur des données agrégées provenant de plusieurs sources.
 
-Si vous disposez déjà d’une connexion source Oracle Service Cloud valide, vous pouvez ignorer le reste de ce document et passer au tutoriel sur [configuration d’un flux de données](../../dataflow/customer-success.md)
+Si vous disposez déjà d’une connexion à la source Oracle Service Cloud valide, vous pouvez ignorer le reste de ce document et passer au tutoriel sur la [configuration d’un flux de données](../../dataflow/customer-success.md)
 
 ### Collecter les informations d’identification requises
 
-Pour accéder à votre compte Oracle Service Cloud sur [!DNL Platform], vous devez fournir les valeurs suivantes :
+Pour accéder au compte Oracle Service Cloud sur [!DNL Platform], vous devez fournir les valeurs suivantes :
 
 | Informations d’identification | Description |
 | ---------- | ----------- |
-| Hôte | URL d’hôte de votre instance Oracle Service Cloud. |
-| Nom d’utilisateur | Nom d’utilisateur de votre compte utilisateur Oracle Service Cloud. |
-| Mot de passe | Mot de passe de votre compte Oracle Service Cloud. |
+| Hôte | URL d’hôte de votre instance Oracle Service Cloud.  |
+| Nom d’utilisateur | Nom d’utilisateur de votre compte utilisateur Oracle Service Cloud.  |
+| Mot de passe | Mot de passe de votre compte Oracle Service Cloud.  |
 
-Pour plus d’informations sur l’authentification de votre compte Oracle Service Cloud, reportez-vous à la section [[!DNL Oracle] guide sur l&#39;authentification](https://docs.oracle.com/en/cloud/saas/b2c-service/20c/cxska/OKCS_Authenticate_and_Authorize.html).
+Pour plus d’informations sur l’authentification de votre compte Oracle Service Cloud, reportez-vous au guide [[!DNL Oracle]  sur l’authentification](https://docs.oracle.com/en/cloud/saas/b2c-service/20c/cxska/OKCS_Authenticate_and_Authorize.html ).
 
-## Connexion à votre compte Oracle Service Cloud
+## Se connecter à votre compte Oracle Service Cloud 
 
-Dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources]. Le [!UICONTROL Catalogue] affiche diverses sources pouvant être utilisées pour créer un compte.
+Dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources]. L’écran [!UICONTROL Catalogue] affiche diverses sources pouvant être utilisées pour créer un compte. 
 
 Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de votre écran. Vous pouvez également sélectionner la source de votre choix à l’aide de la barre de recherche.
 
-Sous , [!UICONTROL Succès des clients] catégorie, sélectionnez **[!UICONTROL Oracle Service Cloud]** puis sélectionnez **[!UICONTROL Ajouter des données]**.
+Dans la catégorie [!UICONTROL Succès clients], sélectionnez **[!UICONTROL Oracle Service Cloud]** puis sélectionnez **[!UICONTROL Ajouter des données]**. 
 
-![Le catalogue des sources avec la source Oracle Service Cloud mise en surbrillance.](../../../../images/tutorials/create/oracle-service-cloud/catalog.png)
+![Le catalogue des sources avec la source Oracle Service Cloud mise en surbrillance.](../../../../images/tutorials/create/oracle-service-cloud/catalog.png) 
 
-Le **[!UICONTROL Connexion à Oracle Service Cloud]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
+La page **[!UICONTROL Connexion à Oracle Service Cloud]** s’affiche.  Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
 
 ### Compte existant
 
-Pour connecter un compte existant, sélectionnez le compte Oracle Service Cloud auquel vous souhaitez vous connecter, puis sélectionnez **[!UICONTROL Suivant]** pour continuer.
+Pour connecter un compte existant, sélectionnez le compte Oracle Service Cloud auquel vous souhaitez vous connecter, puis sélectionnez **[!UICONTROL Suivant]** pour continuer. 
 
-![Interface du compte existant.](../../../../images/tutorials/create/oracle-service-cloud/existing.png)
+![Interface du compte existant.](../../../../images/tutorials/create/oracle-service-cloud/existing.png) 
 
 ### Nouveau compte
 
-Si vous utilisez de nouvelles informations d’identification, sélectionnez **[!UICONTROL Nouveau compte]**. Dans le formulaire de saisie qui s’affiche, indiquez un nom, une description facultative et vos informations d’identification Oracle Service Cloud. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Connecter à la source]** puis attendez que la nouvelle connexion s’établisse.
+Si vous utilisez de nouvelles informations d’identification, sélectionnez **[!UICONTROL Nouveau compte]**.  Dans le formulaire de saisie qui s’affiche, indiquez un nom, une description facultative et vos informations d’identification Oracle Service Cloud.  Lorsque vous avez terminé, sélectionnez **[!UICONTROL Se connecter à la source]** puis attendez que la nouvelle connexion s’établisse.
 
-![Nouvelle interface de compte avec des valeurs d’espace réservé pour .](../../../../images/tutorials/create/oracle-service-cloud/new.png)
+![Nouvelle interface de compte avec des valeurs d’espace réservé pour.](../../../../images/tutorials/create/oracle-service-cloud/new.png) 
 
 ## Étapes suivantes
 
-En suivant ce tutoriel, vous avez établi une connexion à votre compte Oracle Service Cloud. Vous pouvez maintenant passer au tutoriel suivant et [configurer un flux de données pour importer les données de succès client dans Platform ;](../../dataflow/crm.md).
+En suivant ce tutoriel, vous avez établi une connexion à votre compte Oracle Service Cloud.  Vous pouvez maintenant passer au tutoriel suivant et [configurer un flux de données pour importer des données de succès client dans Platform](../../dataflow/crm.md).
