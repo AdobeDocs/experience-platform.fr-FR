@@ -1,10 +1,11 @@
 ---
 title: Connecteur de destination Adobe Commerce (version bêta)
 description: Découvrez comment les marchands Adobe Commerce et Real-Time CDP peuvent personnaliser l’expérience d’achat en proposant du contenu et des promotions de sites hautement pertinents, personnalisés en fonction des segments des clients créés et gérés dans Real-Time CDP.
-source-git-commit: 0a6100f2aa98f5c40f2492dcfab79a991eded94b
+exl-id: f7aa3c6c-ba7a-440c-a4d7-5d7b50dbbc0d
+source-git-commit: a9887535b12b8c4aeb39bb5a6646da88db4f0308
 workflow-type: tm+mt
 source-wordcount: '691'
-ht-degree: 81%
+ht-degree: 99%
 
 ---
 
@@ -16,7 +17,7 @@ ht-degree: 81%
 > 
 >Le connecteur **[!UICONTROL Adobe Commerce]** est en version bêta et disponible uniquement pour un nombre restreint de clients.
 
-Le [!DNL Adobe Commerce] Le connecteur de destination vous permet de sélectionner un ou plusieurs segments Real-Time CDP à activer dans votre [!DNL Adobe Commerce] pour offrir une expérience personnalisée dynamique à vos clients. Within [!DNL Adobe Commerce], vous pouvez ensuite sélectionner ces segments Real-Time CDP pour personnaliser les offres uniques du panier, telles que &quot;Acheter 2 et 1 gratuitement&quot;. Vous pouvez également afficher des bannières principales et modifier le prix des produits au moyen d’offres promotionnelles, toutes personnalisées dans les segments Adobe Real-Time CDP.
+Le connecteur de destination [!DNL Adobe Commerce] vous permet de sélectionner un ou plusieurs segments Real-Time CDP à activer dans votre compte [!DNL Adobe Commerce] pour offrir une expérience personnalisée dynamique à vos clients. Dans [!DNL Adobe Commerce], vous pouvez ensuite sélectionner ces segments Real-Time CDP pour personnaliser les offres exceptionnelles du panier, telles que « Pour deux produits achetés, le troisième est offert ». Vous pouvez également afficher des bannières principales et modifier le prix des produits par le biais d’offres promotionnelles, toutes personnalisées en fonction des segments Adobe Real-Time CDP.
 
 <!--## Use cases {#use-cases}
 
@@ -36,7 +37,7 @@ To help you better understand how and when you should use the *YourDestination* 
 
 ## Conditions préalables {#prerequisites}
 
-Cette extension est disponible dans le catalogue des destinations pour certains clients bêta ayant acheté Real-Time CDP Prime ou Ultimate et Adobe Commerce.
+Cette extension est disponible dans le catalogue des destinations pour certains clients de la version Beta qui ont acheté Real-Time CDP Prime ou Ultimate et Adobe Commerce.
 
 Les clients bêta doivent avoir accès à :
 
@@ -90,7 +91,7 @@ Lisez [Activer des profils et des segments vers les destinations de requête de 
 
 ## Étapes suivantes dans [!DNL Adobe Commerce]
 
-Maintenant que vous avez configuré la variable [!DNL Commerce] dans Experience Platform, vous devez configurer la variable [!DNL Commerce Admin] pour importer les segments Real-Time CDP que vous avez créés. Consulter la [[!DNL Commerce] documentation](https://experienceleague.adobe.com/docs/commerce-admin/marketing/promotions/cart-rules/customer-segment-rtcdp.html) pour en savoir plus.
+Maintenant que vous avez configuré la destination [!DNL Commerce] dans Experience Platform, vous devez configurer [!DNL Commerce Admin] pour importer les segments Real-Time CDP que vous avez créés. Consulter la [[!DNL Commerce] documentation](https://experienceleague.adobe.com/docs/commerce-admin/marketing/promotions/cart-rules/customer-segment-rtcdp.html?lang=fr) pour en savoir plus.
 
 ## Validation de l’activation de l’audience dans Commerce {#exported-data}
 

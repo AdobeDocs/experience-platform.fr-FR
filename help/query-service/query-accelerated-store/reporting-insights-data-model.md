@@ -1,10 +1,11 @@
 ---
 title: Insights sur les rapports de magasin accélérés par requête
 description: Découvrez comment créer un modèle de données d’insights sur les rapports via Query Service afin de l’utiliser avec des données de magasin accélérées et des tableaux de bord définis par l’utilisateur.
-source-git-commit: 085c9f4e76de1aa3ea969eb0511ee1da43be59f0
+exl-id: 216d76a3-9ea3-43d3-ab6f-23d561831048
+source-git-commit: a9887535b12b8c4aeb39bb5a6646da88db4f0308
 workflow-type: tm+mt
 source-wordcount: '1032'
-ht-degree: 81%
+ht-degree: 100%
 
 ---
 
@@ -12,9 +13,9 @@ ht-degree: 81%
 
 Le magasin d’accélération des requêtes vous permet de réduire le temps et la puissance de traitement requis pour obtenir des insights critiques à partir de vos données. En règle générale, les données sont traitées à intervalles réguliers (par exemple, toutes les heures ou tous les jours), lorsque des vues agrégées sont créées et font l’objet de rapports. L’analyse de ces rapports générés à partir de données agrégées fournit des insights destinés à améliorer les performances commerciales. Le magasin d’accélération des requêtes offre un service de cache, une simultanéité, une expérience interactive et une API sans état. Toutefois, il suppose que les données sont prétraitées et optimisées pour les requêtes agrégées et non pour les requêtes de données brutes.
 
-Le magasin accéléré de requêtes vous permet de créer un modèle de données personnalisé et/ou d’étendre sur des modèles de données Adobe Real-time Customer Data Platform existants. Vous pouvez ensuite utiliser vos informations de rapports ou les incorporer dans un framework de création de rapports/visualisation de votre choix. Consultez la documentation du modèle de données Real-time Customer Data Platform Insights pour savoir comment [personnaliser vos modèles de requête SQL pour créer des rapports Real-Time CDP pour vos cas d’utilisation d’indicateurs de performance clés (IPC) et marketing ;](../../dashboards/cdp-insights-data-model.md).
+Le magasin d’accélération des requêtes vous permet de créer un modèle de données personnalisé et/ou d’étendre les modèles de données existants d’Adobe Real-time Customer Data Platform. Vous pouvez ensuite utiliser vos informations de rapports ou les incorporer dans un framework de création de rapports/visualisation de votre choix. Consultez la documentation du modèle de données Real-time Customer Data Platform Insights pour savoir comment [personnaliser vos modèles de requête SQL pour créer des rapports Real-Time CDP pour vos cas d’utilisation de marketing et d’indicateurs clés de performance (ICP)](../../dashboards/cdp-insights-data-model.md).
 
-Le modèle de données Real-Time CDP de Adobe Experience Platform fournit des informations sur les profils, les segments et les destinations et active les tableaux de bord des informations Real-Time CDP. Ce document vous guide tout au long du processus de création de votre modèle de données d’informations sur les rapports et vous explique également comment étendre les modèles de données Real-Time CDP si nécessaire.
+Le modèle de données Real-time CDP d’Adobe Experience Platform fournit des insights sur les profils, les segments et destinations et active les tableaux de bord d’insights de Real-time CDP. Ce document vous guide tout au long du processus de création de votre modèle de données des rapports insights et vous explique également comment étendre les modèles de données Real-time CDP selon les besoins.
 
 ## Conditions préalables
 
@@ -22,7 +23,7 @@ Ce tutoriel utilise des tableaux de bord définis par l’utilisateur pour visua
 
 ## Prise en main
 
-Le SKU de Data Distiller est nécessaire pour créer un modèle de données personnalisé pour vos informations sur les rapports et pour étendre les modèles de données Real-Time CDP qui contiennent des données Platform enrichies. Veuillez consulter le [packaging](../packages.md), les [barrières de sécurité](../guardrails.md#query-accelerated-store), et la documentation de la [licence](../data-distiller/licence-usage.md) relative au SKU de Data Distiller. Si vous ne disposez pas du SKU de Data Distiller, contactez votre représentant du service client Adobe pour plus d’informations.
+Le SKU Data Distiller est nécessaire pour créer un modèle de données personnalisé pour vos rapports d’insights et pour étendre les modèles de données Real-time CDP qui contiennent des données Platform enrichies. Veuillez consulter le [packaging](../packages.md), les [barrières de sécurité](../guardrails.md#query-accelerated-store), et la documentation de la [licence](../data-distiller/licence-usage.md) relative au SKU de Data Distiller. Si vous ne disposez pas du SKU de Data Distiller, contactez votre représentant du service client Adobe pour plus d’informations.
 
 ## Créer un modèle de données de rapport d’informations
 
@@ -126,15 +127,15 @@ ext_custom_audience_id | approximate_count_upper_bound
 (10 rows)
 ```
 
-## Étendre votre modèle de données avec le modèle de données Real-Time CDP insights
+## Étendez votre modèle de données avec le modèle de données d’insights Real-time CDP.
 
 Vous pouvez étendre votre modèle d’audience avec des détails supplémentaires pour créer un tableau des dimensions plus riche. Vous pouvez, par exemple, mapper le nom du segment et le nom de la destination à l’identifiant de l’audience externe. Pour ce faire, utilisez Query Service pour créer ou actualiser un nouveau jeu de données et l’ajouter au modèle d’audience qui combine des segments et des destinations avec une identité externe. Le diagramme ci-dessous illustre le concept de cette extension de modèle de données.
 
-![Diagramme ERD liant le modèle de données d’aperçu Real-Time CDP et le modèle de magasin accéléré Query.](../images/query-accelerated-store/updatingAudienceInsightUserModel.png)
+![Diagramme ERD liant le modèle de données d’insights Real-Time CDP au modèle de magasin d’accélération des requêtes.](../images/query-accelerated-store/updatingAudienceInsightUserModel.png)
 
-## Créer des tableaux des dimensions pour étendre votre modèle de rapport d’informations
+## Créer des tableaux des dimensions pour étendre votre modèle de rapport d’insights
 
-Utilisez Query Service pour ajouter des attributs descriptifs clés des jeux de données de dimension Real-Time CDP enrichis au `audienceinsight` modèle de données et établir une relation entre votre table des faits et la nouvelle table des dimensions. Le code SQL ci-dessous explique comment intégrer des tables de dimensions existantse à votre modèle de données d’insights sur les rapports.
+Utilisez Query Service pour ajouter des attributs descriptifs clés des jeux de données de dimension Real-Time CDP enrichis au modèle de données `audienceinsight` et établir une relation entre votre table des faits et la nouvelle table des dimensions. Le code SQL ci-dessous explique comment intégrer des tables de dimensions existantse à votre modèle de données d’insights sur les rapports.
 
 ```sql
 CREATE TABLE audienceinsight.audiencemodel.external_seg_dest_map AS

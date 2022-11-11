@@ -1,10 +1,11 @@
 ---
-title: Notes de mise à jour de Adobe Experience Platform - Octobre 2022
-description: Notes de mise à jour d’octobre 2022 pour Adobe Experience Platform.
-source-git-commit: 38eadb3a03577fde9651842e3aecc0291b14f0a0
+title: Notes de mise à jour d’octobre 2022 d’Adobe Experience Platform
+description: Les notes de mise à jour d’octobre 2022 pour Adobe Experience Platform.
+exl-id: 61ef2472-5e79-433f-9f60-b1245f619b42
+source-git-commit: a9887535b12b8c4aeb39bb5a6646da88db4f0308
 workflow-type: tm+mt
 source-wordcount: '1389'
-ht-degree: 35%
+ht-degree: 70%
 
 ---
 
@@ -24,9 +25,9 @@ Mises à jour des fonctionnalités existantes dans Adobe Experience Platform 
 
 ## Clés gérées par le client {#cmk}
 
-Toutes les données stockées sur Adobe Experience Platform sont chiffrées au repos à l’aide de clés au niveau du système. Si vous utilisez une application reposant sur Platform, vous pouvez désormais choisir d’utiliser vos propres clés de chiffrement, ce qui vous permet de mieux contrôler votre sécurité des données.
+Toutes les données stockées sur Adobe Experience Platform sont chiffrées au repos à l’aide de clés au niveau du système. Si vous utilisez une application reposant sur Platform, vous pouvez désormais choisir d’utiliser vos propres clés de chiffrement, ce qui vous permet de mieux contrôler la sécurité de vos données.
 
-Consultez la présentation sur [Clés gérées par le client](../../landing/governance-privacy-security/customer-managed-keys.md) pour plus d’informations sur la fonctionnalité.
+Consultez la présentation des [clés gérées par le client](../../landing/governance-privacy-security/customer-managed-keys.md) pour plus d’informations sur la fonctionnalité.
 
 ## Collecte de données {#data-collection}
 
@@ -36,9 +37,9 @@ Adobe Experience Platform fournit une suite de technologies qui vous permetten
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Gestion des données sensibles pour les flux de données | Les flux de données exploitent désormais plusieurs technologies Platform pour gérer de manière appropriée les données sensibles telles qu’elles sont mises en oeuvre par des réglementations telles que la Loi sur la transférabilité et la responsabilité de l’assurance-maladie (HIPAA). Voir la section sur [gestion des données sensibles dans les flux de données](../../edge/datastreams/overview.md#sensitive) pour plus d’informations. |
-| [!DNL Splunk] extension pour le transfert d’événement | Vous pouvez désormais envoyer des données à [!DNL Splunk] à l’aide d’une [transfert d’événement](../../tags/ui/event-forwarding/overview.md) extension . Voir [[!DNL Splunk] présentation de l’extension](../../tags/extensions/web/splunk/overview.md) pour plus d’informations. |
-| [!DNL Zendesk] extension pour le transfert d’événement | Vous pouvez désormais envoyer des données à [!DNL Zendesk] à l’aide d’une [transfert d’événement](../../tags/ui/event-forwarding/overview.md) extension . Voir [[!DNL Zendesk] présentation de l’extension](../../tags/extensions/web/zendesk/overview.md) pour plus d’informations. |
+| Gestion des données sensibles pour les flux de données | Les flux de données exploitent désormais plusieurs technologies Platform pour gérer de manière appropriée les données sensibles selon les applications des réglementations telles que le Health Insurance Portability and Accountability Act (HIPAA). Consultez la section relative à la [gestion des données sensibles dans les flux de données](../../edge/datastreams/overview.md#sensitive) pour plus d’informations. |
+| Extension [!DNL Splunk] pour le transfert d’événement | Vous pouvez désormais envoyer des données à [!DNL Splunk] à l’aide d’une extension de [transfert d’événement](../../tags/ui/event-forwarding/overview.md). Pour plus d’informations, consultez la présentation de l’extension [[!DNL Splunk] ](../../tags/extensions/web/splunk/overview.md). |
+| Extension [!DNL Zendesk] pour le transfert d’événement | Vous pouvez désormais envoyer des données à [!DNL Zendesk] à l’aide d’une extension de [transfert d’événement](../../tags/ui/event-forwarding/overview.md). Pour plus d’informations, consultez la présentation de l’extension [[!DNL Zendesk] ](../../tags/extensions/web/zendesk/overview.md). |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -59,9 +60,9 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 
 | Destination | Description |
 | ----------- | ----------- |
-| [[!DNL Line]](../../destinations/catalog/mobile-engagement/line.md) | Line est une plate-forme de communication populaire qui connecte les gens, les services et l&#39;information et est passée d&#39;une application de chat à un centre de divertissement, social et d&#39;activités quotidiennes. |
-| [[!DNL Microsoft Dynamics 365]](../../destinations/catalog/crm/microsoft-dynamics-365.md) | Microsoft Dynamics 365 est une plateforme d’applications métier cloud qui combine la planification des ressources de l’entreprise (ERP) et la gestion de la relation client (CRM), ainsi que des applications de productivité et des outils d’IA, afin d’offrir des opérations de bout en bout plus fluides et plus contrôlées, un meilleur potentiel de croissance et des coûts réduits. |
-| [[!DNL (Beta) Adobe Commerce]](../../destinations/catalog/personalization/adobe-commerce.md) | Le [!DNL (Beta) Adobe Commerce] Le connecteur de destination vous permet de sélectionner un ou plusieurs segments Real-Time CDP à activer dans votre [!DNL Adobe Commerce] pour offrir une expérience personnalisée dynamique à vos clients. Within [!DNL Adobe Commerce], vous pouvez ensuite sélectionner ces segments Real-Time CDP pour personnaliser les offres uniques du panier, telles que &quot;Acheter 2 et 1 gratuitement&quot;. Vous pouvez également afficher des bannières principales et modifier le prix des produits au moyen d’offres promotionnelles, toutes personnalisées dans les segments Adobe Real-Time CDP. |
+| [[!DNL Line]](../../destinations/catalog/mobile-engagement/line.md) | Line est une plateforme de communication populaire qui connecte les personnes, les services et l’information et est passée d’une application de chat à un centre de divertissement, social et d’activités quotidiennes. |
+| [[!DNL Microsoft Dynamics 365]](../../destinations/catalog/crm/microsoft-dynamics-365.md) | Microsoft Dynamics 365 est une plateforme d’applications métier cloud qui combine la planification des ressources de l’entreprise (ERP) et la gestion de la relation client (CRM), ainsi que des applications de productivité et des outils d’IA, afin d’offrir des opérations de bout en bout plus fluides et plus contrôlées, un meilleur potentiel de croissance et des coûts réduits. |
+| [[!DNL (Beta) Adobe Commerce]](../../destinations/catalog/personalization/adobe-commerce.md) | Le connecteur de destination [!DNL (Beta) Adobe Commerce] vous permet de sélectionner un ou plusieurs segments Real-Time CDP à activer dans votre compte [!DNL Adobe Commerce] pour offrir une expérience personnalisée dynamique à vos clients. Dans [!DNL Adobe Commerce], vous pouvez ensuite sélectionner ces segments Real-Time CDP pour personnaliser les offres exceptionnelles du panier, telles que « Pour deux produits achetés, le troisième est offert ». Vous pouvez également afficher des bannières principales et modifier le prix des produits par le biais d’offres promotionnelles, toutes personnalisées en fonction des segments Adobe Real-Time CDP. |
 | [[!DNL (Beta) Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md) | Créer une connexion sortante active vers [!DNL Azure Data Lake Storage Gen2] pour exporter régulièrement des fichiers de données de Adobe Experience Platform vers votre propre emplacement de stockage. Cette nouvelle destination bêta fournit une fonctionnalité améliorée d’exportation de fichiers et prend en charge les exportations de jeux de données. |
 | [[!DNL (Beta) Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md) | [!DNL Data Landing Zone] est un [!DNL Azure Blob] Interface de stockage configurée par Adobe Experience Platform, vous permettant d’accéder à une fonctionnalité de stockage de fichiers sécurisée basée sur le cloud pour exporter des fichiers en dehors de Platform. Cette nouvelle destination bêta fournit une fonctionnalité améliorée d’exportation de fichiers et prend en charge les exportations de jeux de données. |
 | [[!DNL (Beta) Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md) | Créer une connexion sortante active vers [!DNL Google Cloud Storage] pour exporter régulièrement des fichiers de données de Adobe Experience Platform dans vos propres compartiments. Cette nouvelle destination bêta fournit une fonctionnalité améliorée d’exportation de fichiers et prend en charge les exportations de jeux de données. |
@@ -75,7 +76,7 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 
 | Documentation | Description |
 | ----------- | ----------- |
-| [Barrières de sécurité des destinations](../../destinations/guardrails.md) | Cette page fournit les limites d’utilisation et de débit par défaut en ce qui concerne le comportement d’activation. |
+| [Barrières de sécurité des destinations](../../destinations/guardrails.md) | Cette page fournit des limites d’utilisation et de débit par défaut en ce qui concerne le comportement d’activation. |
 
 Pour des informations plus générales sur les destinations, consultez la [présentation des destinations](../../destinations/home.md).
 
@@ -87,8 +88,8 @@ XDM est une spécification Open Source qui fournit des structures et des défini
 
 | Type de composant | Nom | Description |
 | --- | --- | --- |
-| Type de données | [[!UICONTROL Informations détaillées sur la session]](https://github.com/adobe/xdm/blob/master/components/datatypes/sessiondetails.schema.json) | Mise à jour de la `authorized` d’un type booléen à une chaîne. `season` et `episode` ont été changées d’entiers en chaînes. |
-| Type de données | [[!UICONTROL Informations détaillées sur la publicité]](https://github.com/adobe/xdm/blob/master/components/datatypes/advertisingdetails.schema.json) | `name` a été renommé en `friendlyName`, et `ID` a été renommé en `name`. |
+| Type de données | [[!UICONTROL Informations détaillées sur la session]](https://github.com/adobe/xdm/blob/master/components/datatypes/sessiondetails.schema.json) | Mise à jour du champ `authorized` d’un type booléen en une chaîne. `season` et `episode` ont été changés d’entiers en chaînes. |
+| Type de données | [[!UICONTROL Informations détaillées sur la publicité]](https://github.com/adobe/xdm/blob/master/components/datatypes/advertisingdetails.schema.json) | `name` a été renommé `friendlyName` et `ID` a été renommé `name`. |
 | Type de données | [[!UICONTROL Informations détaillés sur les erreurs]](https://github.com/adobe/xdm/blob/master/components/datatypes/errordetails.schema.json) | `ID` a été renommé `name`. |
 
 {style=&quot;table-layout:auto&quot;}
@@ -104,11 +105,11 @@ Query Service vous permet d’utiliser le langage SQL standard pour interroger l
 | Fonctionnalité | Description |
 | --- | --- |
 | Surveillance des requêtes dans l’interface utilisateur de Platform | Query Service [!UICONTROL Requêtes planifiées] offre une meilleure visibilité de l’état de toutes les tâches de requête via l’interface utilisateur. Vous pouvez maintenant trouver des informations importantes sur l’état de vos exécutions de requête, y compris des messages d’erreur et des codes en cas d’échec, depuis [!UICONTROL Requêtes planifiées] . Vous pouvez également vous abonner à des alertes via l’interface utilisateur pour n’importe quelle requête en fonction de son état. Voir [Surveiller le document Requêtes](../../query-service/monitor-queries.md) pour en savoir plus sur cette fonctionnalité. |
-| Modèle de données d’insights de reporting accéléré de requête | Dans le cadre du SKU de Data Distiller, le magasin accéléré de requêtes vous permet de réduire le temps et la puissance de traitement requis pour obtenir des informations essentielles sur vos données. Avec le magasin accéléré de requêtes, vous pouvez créer un modèle de données personnalisé et/ou étendre sur les modèles de données Adobe Real-time Customer Data Platform existants pour améliorer vos informations de création de rapports et leurs visualisations. Voir [document d’informations sur les rapports de magasin accélérés de requête](../../query-service/query-accelerated-store/reporting-insights-data-model.md) pour en savoir plus sur cette fonctionnalité. |
+| Modèle de données d’insights de rapports accélérés par les requêtes | Dans le cadre du SKU Data Distiller, le magasin d’accélération des requêtes vous permet de réduire le temps et la puissance de traitement requis pour obtenir des insights importants à partir de vos données. Avec le magasin d’accélération des requêtes, vous pouvez créer un modèle de données personnalisé et/ou étendre les modèles de données Adobe Real-time Customer Data Platform existants pour améliorer vos insights de rapports et leurs visualisations. Consultez le [document sur les insights de rapports du magasin d’accélération des requêtes](../../query-service/query-accelerated-store/reporting-insights-data-model.md) pour en savoir plus sur cette fonctionnalité. |
 
 {style=&quot;table-layout:auto&quot;}
 
-Pour plus d’informations sur Query Service, consultez la section [présentation de Query Service](../../query-service/home.md).
+Pour plus d’informations sur Query Service, consultez la [présentation de Query Service](../../query-service/home.md).
 Nouvelles fonctionnalités d’Adobe Experience Platform :
 
 ## Sources {#sources}
@@ -121,7 +122,7 @@ Experience Platform fournit une API RESTful et une interface utilisateur intera
 
 | Fonctionnalité | Description |
 | --- | --- | 
-| Disponibilité bêta de la source Adobe Workfront | Utilisez la variable [Source Adobe Workfront](../../sources/connectors/adobe-applications/workfront.md) pour importer vos données Workfront dans Experience Platform et réaliser des cas d’utilisation, par exemple combiner vos enregistrements de travail avec des données tierces, appliquer des analyses d’historique et de série temporelle aux enregistrements de travail et interroger les données de travail à l’aide de SQL standard. Pour plus d’informations, consultez le guide sur [création d’une connexion source Workfront dans l’interface utilisateur](../../sources/tutorials/ui/create/adobe-applications/workfront.md). |
-| Disponibilité bêta de la source Oracle Service Cloud | Utilisez la source Oracle Service Cloud pour ingérer des données de votre compte Oracle Service Cloud vers Experience Platform. Pour plus d’informations, consultez la documentation relative à la [Source Oracle Service Cloud](../../sources/connectors/customer-success/oracle-service-cloud.md). |
+| Disponibilité Beta de la source Adobe Workfront | Utilisez la [source Adobe Workfront](../../sources/connectors/adobe-applications/workfront.md) pour importer vos données Workfront dans Experience Platform et réaliser des cas d’utilisation, par exemple combiner vos enregistrements de travail avec des données tierces, appliquer des analyses d’historique et de série temporelle aux enregistrements de travail et interroger les données de travail à l’aide de SQL standard. Pour plus d’informations, consultez le guide sur la [création d’une connexion source Workfront dans l’interface utilisateur](../../sources/tutorials/ui/create/adobe-applications/workfront.md). |
+| Disponibilité Beta de la source Oracle Service Cloud | Utilisez la source Oracle Service Cloud pour ingérer des données de votre compte Oracle Service Cloud vers Experience Platform. Pour plus d’informations, consultez la documentation relative à la [source Oracle Service Cloud](../../sources/connectors/customer-success/oracle-service-cloud.md). |
 
 Pour en savoir plus sur les sources, lisez la [présentation des sources](../../sources/home.md).
