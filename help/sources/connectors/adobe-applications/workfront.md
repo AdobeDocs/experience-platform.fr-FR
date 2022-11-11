@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;accueil;rubriques populaires;
 title: (Version bêta) Source Adobe Workfront
-description: Adobe Workfront est une application de gestion du travail marketing qui vous aide à gérer l’ensemble du cycle de vie du travail au même endroit. Workfront comprend des outils de reporting et d’analyse que vous pouvez utiliser pour mieux comprendre et optimiser le flux de travail dans votre entreprise.
+description: Adobe Workfront est une application de gestion du travail marketing qui vous permet de gérer l’ensemble du cycle de vie du travail en un seul endroit. Workfront comprend des outils de créations de rapports et d’analyse que vous pouvez utiliser pour mieux comprendre et optimiser le flux de travail dans votre entreprise.
 source-git-commit: 1af0863766e29c599e02f2a553d237bc62f455d2
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '281'
-ht-degree: 3%
+ht-degree: 100%
 
 ---
 
@@ -13,28 +13,28 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->La source Adobe Workfront est en version bêta. Voir [Présentation des sources](../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs bêta-étiquetés.
+>La source Adobe Workfront est en version bêta. Voir la [Présentation des sources](../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs étiquetés bêta.
 
-Adobe Workfront est une application de gestion du travail marketing qui vous aide à gérer l’ensemble du cycle de vie du travail au même endroit. Workfront comprend des outils de reporting et d’analyse que vous pouvez utiliser pour mieux comprendre et optimiser le flux de travail dans votre entreprise.
+Adobe Workfront est une application de gestion du travail marketing qui vous permet de gérer l’ensemble du cycle de vie du travail en un seul endroit. Workfront comprend des outils de créations de rapports et d’analyse que vous pouvez utiliser pour mieux comprendre et optimiser le flux de travail dans votre entreprise.
 
-L’intégration de Workfront au catalogue de sources Adobe Experience Platform vous permet d’importer vos données Workfront dans Experience Platform et d’exécuter des cas d’utilisation tels que :
+L’intégration de Workfront au catalogue de sources Adobe Experience Platform vous permet d’importer vos données Workfront dans Experience Platform et d’exécuter des cas d’utilisation tels que :
 
-* Combinez des enregistrements de travail à des données tierces.
-* Appliquez des analyses d’historique et de série temporelle aux enregistrements de travail.
-* Accès aux enregistrements de travail par le biais d’outils tiers de Business Intelligence, tels que [!DNL PowerBI].
-* Interrogation des données de travail à l’aide de SQL standard.
+* Associer des enregistrements de travail à des données tierces.
+* Appliquer des analyses d’historique et de série temporelle aux enregistrements de travail.
+* Accéder aux enregistrements de travail par le biais d’outils tiers de Business Intelligence, tels que [!DNL PowerBI].
+* Interroger les données de travail à l’aide du langage SQL standard.
 
-Les éléments de travail suivants et leurs attributs correspondants peuvent être inclus dans Experience Platform via la source Workfront :
+Les éléments de travail suivants et leurs attributs correspondants peuvent être inclus dans Experience Platform via la source Workfront :
 
 * Portefeuille
 * Programme
-* Projet  
+* Projet
 * Tâche
 * Tâche opérationnelle (questions)
 * Utilisateur
 
 La source Workfront diffuse toutes les nouvelles mises à jour de ces attributs et renvoie jusqu’à un an d’événements de changement historique. Une fois que vos données Workfront se trouvent dans un jeu de données Platform, vous pouvez utiliser [Query Service](../../../query-service/home.md) et d’autres outils pour analyser plus en détail vos données de travail ou les joindre à d’autres jeux de données, si nécessaire.
 
-## Connexion de Workfront à Platform à l’aide de l’interface utilisateur
+## Connectez Workfront à Platform à l’aide de l’interface utilisateur.
 
-Pour obtenir des instructions détaillées sur la manière d’importer vos données Workfront dans Platform, consultez le guide sur [création d’une connexion source pour importer vos données Workfront vers Platform](../../tutorials/ui/create/adobe-applications/workfront.md).
+Pour obtenir des instructions détaillées sur la manière d’importer vos données Workfront dans Platform, consultez le guide sur la [création d’une connexion source pour importer vos données Workfront dans Platform](../../tutorials/ui/create/adobe-applications/workfront.md).
