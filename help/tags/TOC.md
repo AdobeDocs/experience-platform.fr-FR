@@ -5,10 +5,10 @@ breadcrumb-title: Balises
 user-guide-description: Découvrez comment déployer et gérer des balises d’analyse, de marketing et de publicité pour améliorer les expériences clients.
 feature: Tags
 solution: Data Collection
-source-git-commit: 1879c8372e3ac1b813f53e445a139daa78ac8858
+source-git-commit: 67f3d27ebb17e1b1dc77dcd32246f407753c20df
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '416'
+ht-degree: 93%
 
 ---
 
@@ -124,6 +124,8 @@ ht-degree: 0%
       * [!DNL Marketo Munchkin] {#marketo}
          * [Présentation](./extensions/web/marketo/overview.md)
          * [Notes de mise à jour](./extensions/web/marketo/release-notes.md)
+      * Conversions améliorées de Google Ads {#google-ads-enhanced-conversions}
+         * [Présentation](./extensions/web/google-ads-enhanced-conversions/overview.md)
       * Couche de données Google {#google-data-layer}
          * [Présentation](./extensions/web/google-data-layer/overview.md)
          * [Notes de mise à jour](./extensions/web/google-data-layer/release-notes.md)
