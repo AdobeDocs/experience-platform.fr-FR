@@ -2,10 +2,10 @@
 title: Parcourir les ordres de travail relatifs au nettoyage de données
 description: Découvrez comment afficher et gérer les ordres de travail de nettoyage de données existants dans l’interface utilisateur d’Adobe Experience Platform.
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
-source-git-commit: 6453ec6c98d90566449edaa0804ada260ae12bf6
+source-git-commit: 4a6532bbd7a378e44e7c6139330420c0363a54af
 workflow-type: tm+mt
-source-wordcount: '865'
-ht-degree: 97%
+source-wordcount: '868'
+ht-degree: 95%
 
 ---
 
@@ -74,7 +74,7 @@ Les filtres suivants s’appliquent aux requêtes d’expiration de jeu de donn�
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_numberofidentities"
 >title="Nombre d’identités"
->abstract="Nombre d’identités qui ont été demandées à être supprimées dans le cadre de cet ordre de travail. Les identités incluses dans le nombre n’existent pas nécessairement dans les jeux de données affectés. Pour en savoir plus, consultez le guide de l’interface utilisateur de l’hygiène de données."
+>abstract="Nombre d’identités dont les enregistrements ont été demandés pour mise à jour ou suppression dans le cadre de cet ordre de travail. Les identités incluses dans le nombre n’existent pas nécessairement dans les jeux de données affectés. Pour en savoir plus, consultez le guide de l’interface utilisateur de l’hygiène de données."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_responsemessages"
