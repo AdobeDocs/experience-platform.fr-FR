@@ -2,10 +2,10 @@
 title: Présentation de l’hygiène de données
 description: Le nettoyage de données d’Adobe Experience Platform vous permet de gérer le cycle de vie des données en mettant à jour ou en purgeant des enregistrements obsolètes ou inexacts.
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
-source-git-commit: 850ab3c98fb27d1dcf98b02dfbef0c8ae3b2ad62
+source-git-commit: b76e1bc6d5b346c32ea09612e24b68c6636f7deb
 workflow-type: tm+mt
-source-wordcount: '821'
-ht-degree: 86%
+source-wordcount: '834'
+ht-degree: 84%
 
 ---
 
@@ -54,6 +54,10 @@ Ce qui suit se produit lorsqu’une [requête d’expiration de jeu de données]
 {style=&quot;table-layout:auto&quot;}
 
 ### Suppressions de consommateurs {#consumer-delete-transparency}
+
+>[!IMPORTANT]
+>
+>Les suppressions des consommateurs ne sont disponibles que pour les organisations qui ont acheté Adobe Healthcare Shield.
 
 Ce qui suit se produit lorsqu’une [requête de suppression de consommateurs](./ui/delete-consumer.md) est créée :
 

@@ -2,10 +2,10 @@
 title: Supprimer des enregistrements de clients
 description: Découvrez comment supprimer des enregistrements de clients dans l’interface utilisateur d’Adobe Experience Platform.
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-source-git-commit: 6453ec6c98d90566449edaa0804ada260ae12bf6
+source-git-commit: b76e1bc6d5b346c32ea09612e24b68c6636f7deb
 workflow-type: tm+mt
-source-wordcount: '1138'
-ht-degree: 97%
+source-wordcount: '1128'
+ht-degree: 98%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 97%
 
 >[!IMPORTANT]
 >
->Les fonctionnalités d’hygiène des données de Adobe Experience Platform ne sont actuellement disponibles que pour les organisations qui ont acheté **Adobe Health Care Shield** ou **Adobe de la confidentialité et de la sécurité**.
+>Les demandes de suppression de clients ne sont disponibles que pour les organisations qui ont acheté **Adobe Health Care Shield**.
 
 L’espace de travail [[!UICONTROL Nettoyage de données]](./overview.md) dans l’interface utilisateur d’Adobe Experience Platform, vous permet de supprimer les enregistrements des clients qui utilisent le service d’identités et le profil client en temps réel.
 

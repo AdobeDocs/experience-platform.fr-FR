@@ -2,20 +2,20 @@
 title: Point d’entrée de l’API de l’ordre de travail
 description: Le point d’entrée /workorder de l’API Data Hygiene vous permet de gérer par programmation les tâches de suppression des identités des clients.
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
-source-git-commit: 6453ec6c98d90566449edaa0804ada260ae12bf6
+source-git-commit: b76e1bc6d5b346c32ea09612e24b68c6636f7deb
 workflow-type: tm+mt
-source-wordcount: '991'
-ht-degree: 97%
+source-wordcount: '981'
+ht-degree: 98%
 
 ---
 
 # Point d’entrée de l’ordre de travail
 
+Le point d’entrée `/workorder` dans l’API Data Hygiene vous permet de gérer par programmation les requêtes de suppression de consommateurs dans Adobe Experience Platform.
+
 >[!IMPORTANT]
 >
->Les fonctionnalités d’hygiène des données de Adobe Experience Platform ne sont actuellement disponibles que pour les organisations qui ont acheté **Adobe Health Care Shield** ou **Adobe de la confidentialité et de la sécurité**.
-
-Le point d’entrée `/workorder` dans l’API Data Hygiene vous permet de gérer par programmation les requêtes de suppression de consommateurs dans Adobe Experience Platform.
+>Les demandes de suppression de clients ne sont disponibles que pour les organisations qui ont acheté **Adobe Health Care Shield**.
 
 ## Prise en main
 

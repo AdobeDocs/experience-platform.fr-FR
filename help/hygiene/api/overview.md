@@ -2,10 +2,10 @@
 title: Guide de l’API Data Hygiene
 description: Découvrez comment corriger ou supprimer par programmation les données personnelles des clients stockées dans Adobe Experience Platform.
 exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
-source-git-commit: 6453ec6c98d90566449edaa0804ada260ae12bf6
+source-git-commit: b76e1bc6d5b346c32ea09612e24b68c6636f7deb
 workflow-type: tm+mt
-source-wordcount: '405'
-ht-degree: 94%
+source-wordcount: '419'
+ht-degree: 90%
 
 ---
 
@@ -44,6 +44,10 @@ Ce document fournit un exemple d’appel API pour illustrer la manière dont vou
 Une expiration de jeu de données correspond à une action « supprimer un jeu de données » différée. En créant une expiration de jeu de données, vous spécifiez une heure ultérieure à laquelle ce jeu de données doit être supprimé. Consultez le [Guide de point d’entrée d’expiration de jeux de données](./dataset-expiration.md) pour plus d’informations sur la planification des expirations de jeux de données dans l’API.
 
 ## Suppressions de consommateurs
+
+>[!IMPORTANT]
+>
+>Les demandes de suppression des consommateurs ne sont disponibles que pour les organisations qui ont acheté Adobe Healthcare Shield.
 
 L’API Data Hygiene vous permet de supprimer tous les enregistrements associés à une identité de consommateur dans un ou tous les jeux de données. Toutes les tâches d’hygiène des données qui suppriment les identités des consommateurs sont représentées par un concept appelé ordre de travail. Consultez le [guide de point d’entrée d’ordre de travail](./workorder.md) pour plus d’informations sur l’utilisation des suppressions de consommateurs dans l’API.
 
