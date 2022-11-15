@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Guide de l’API Batch Ingestion
 description: Ce document fournit un guide complet aux développeurs qui utilisent les API d’ingestion par lots pour Adobe Experience Platform.
 exl-id: 4ca9d18d-1b65-4aa7-b608-1624bca19097
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 49281d6ef959c84c3da964f0a9e19859fd8901a5
 workflow-type: tm+mt
-source-wordcount: '2373'
-ht-degree: 78%
+source-wordcount: '2413'
+ht-degree: 77%
 
 ---
 
@@ -109,7 +109,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | L’identifiant du lot dans lequel vous souhaitez effectuer le chargement. |
 | `{DATASET_ID}` | L’identifiant du jeu de données de référence du lot. |
-| `{FILE_NAME}` | Le nom du fichier que vous souhaitez charger. Ce chemin d’accès au fichier est l’emplacement où le fichier sera enregistré côté Adobe. |
+| `{FILE_NAME}` | Le nom du fichier que vous souhaitez charger. Veillez à utiliser un nom de fichier unique afin de ne pas créer de conflit avec un autre fichier pour le lot de fichiers en cours d’envoi. |
 
 **Requête**
 
@@ -129,7 +129,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | Le chemin d’accès et le nom complets du fichier que vous tentez de charger. Ce chemin d’accès au fichier est le chemin d’accès au fichier local, tel que `Users/sample-user/Downloads/sample.json`. |
+| `{FILE_PATH_AND_NAME}` | Le chemin d’accès et le nom complets du fichier que vous tentez de charger. Ce chemin d’accès au fichier est le chemin d’accès au fichier local, tel que `acme/customers/campaigns/summer.json`. |
 
 **Réponse**
 
@@ -244,7 +244,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | L’identifiant du lot dans lequel vous souhaitez effectuer le chargement. |
 | `{DATASET_ID}` | L’identifiant du jeu de données de référence du lot. |
-| `{FILE_NAME}` | Le nom du fichier que vous souhaitez charger. Ce chemin d’accès au fichier est l’emplacement où le fichier sera enregistré côté Adobe. |
+| `{FILE_NAME}` | Le nom du fichier que vous souhaitez charger. Veillez à utiliser un nom de fichier unique afin de ne pas créer de conflit avec un autre fichier pour le lot de fichiers en cours d’envoi. |
 
 **Requête**
 
@@ -264,7 +264,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | Le chemin d’accès et le nom complets du fichier que vous tentez de charger. Ce chemin d’accès au fichier est le chemin d’accès au fichier local, tel que `Users/sample-user/Downloads/sample.json`. |
+| `{FILE_PATH_AND_NAME}` | Le chemin d’accès et le nom complets du fichier que vous tentez de charger. Ce chemin d’accès au fichier est le chemin d’accès au fichier local, tel que `acme/customers/campaigns/summer.parquet`. |
 
 **Réponse**
 
@@ -417,7 +417,7 @@ PATCH /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | L’identifiant du lot dans lequel vous souhaitez effectuer le chargement. |
 | `{DATASET_ID}` | L’identifiant du jeu de données de référence du lot. |
-| `{FILE_NAME}` | Le nom du fichier que vous souhaitez charger. Ce chemin d’accès au fichier est l’emplacement où le fichier sera enregistré côté Adobe. |
+| `{FILE_NAME}` | Le nom du fichier que vous souhaitez charger. Veillez à utiliser un nom de fichier unique afin de ne pas créer de conflit avec un autre fichier pour le lot de fichiers en cours d’envoi. |
 
 **Requête**
 
@@ -439,7 +439,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 | Paramètre | Description |
 | --------- | ----------- |
 | `{CONTENT_RANGE}` | En entiers, le début et la fin de la plage demandée. |
-| `{FILE_PATH_AND_NAME}` | Le chemin d’accès et le nom complets du fichier que vous tentez de charger. Ce chemin d’accès au fichier est le chemin d’accès au fichier local, tel que `Users/sample-user/Downloads/sample.json`. |
+| `{FILE_PATH_AND_NAME}` | Le chemin d’accès et le nom complets du fichier que vous tentez de charger. Ce chemin d’accès au fichier est le chemin d’accès au fichier local, tel que `acme/customers/campaigns/summer.json`. |
 
 
 **Réponse**
@@ -633,7 +633,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | L’identifiant du lot dans lequel vous souhaitez effectuer le chargement. |
 | `{DATASET_ID}` | L’identifiant du jeu de données de référence du lot. |
-| `{FILE_NAME}` | Le nom du fichier que vous souhaitez charger. Ce chemin d’accès au fichier est l’emplacement où le fichier sera enregistré côté Adobe. |
+| `{FILE_NAME}` | Le nom du fichier que vous souhaitez charger. Veillez à utiliser un nom de fichier unique afin de ne pas créer de conflit avec un autre fichier pour le lot de fichiers en cours d’envoi. |
 
 **Requête**
 
@@ -653,7 +653,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | Le chemin d’accès et le nom complets du fichier que vous tentez de charger. Ce chemin d’accès au fichier est le chemin d’accès au fichier local, tel que `Users/sample-user/Downloads/sample.json`. |
+| `{FILE_PATH_AND_NAME}` | Le chemin d’accès et le nom complets du fichier que vous tentez de charger. Ce chemin d’accès au fichier est le chemin d’accès au fichier local, tel que `acme/customers/campaigns/summer.csv`. |
 
 
 **Réponse**
@@ -855,7 +855,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | L’identifiant du lot dans lequel vous souhaitez effectuer le chargement. |
 | `{DATASET_ID}` | L’identifiant du jeu de données de référence du lot. |
-| `{FILE_NAME}` | Le nom du fichier que vous souhaitez charger. Ce chemin d’accès au fichier est l’emplacement où le fichier sera enregistré côté Adobe. |
+| `{FILE_NAME}` | Le nom du fichier que vous souhaitez charger. Veillez à utiliser un nom de fichier unique afin de ne pas créer de conflit avec un autre fichier pour le lot de fichiers en cours d’envoi. |
 
 **Requête**
 
@@ -875,7 +875,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | Le chemin d’accès et le nom complets du fichier que vous tentez de charger. Ce chemin d’accès au fichier est le chemin d’accès au fichier local, tel que `Users/sample-user/Downloads/sample.json`. |
+| `{FILE_PATH_AND_NAME}` | Le chemin d’accès et le nom complets du fichier que vous tentez de charger. Ce chemin d’accès au fichier est le chemin d’accès au fichier local, tel que `acme/customers/campaigns/summer.json`. |
 
 **Réponse**
 
