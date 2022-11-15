@@ -2,10 +2,10 @@
 title: Présentation de l’hygiène de données
 description: Le nettoyage de données d’Adobe Experience Platform vous permet de gérer le cycle de vie des données en mettant à jour ou en purgeant des enregistrements obsolètes ou inexacts.
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
-source-git-commit: b76e1bc6d5b346c32ea09612e24b68c6636f7deb
+source-git-commit: 7679de9d30c00873b279c5315aa652870d8c34fd
 workflow-type: tm+mt
-source-wordcount: '834'
-ht-degree: 84%
+source-wordcount: '886'
+ht-degree: 79%
 
 ---
 
@@ -20,7 +20,11 @@ Adobe Experience Platform offre un ensemble d’outils fiables pour gérer des o
 Les fonctionnalités d’hygiène des données de Platform vous permettent d’effectuer la gestion de vos données client stockées, et ce par les moyens suivants :
 
 * Planifier l’expiration automatisée des jeux de données
-* Supprimer les données des consommateurs en fonction des identités ingérées
+* Suppression de données client individuelles de vos enregistrements
+
+>[!IMPORTANT]
+>
+>Les suppressions par les consommateurs sont destinées à être utilisées pour la normalisation des données, la suppression des données anonymes ou la minimisation des données. Ils sont **not** à utiliser pour les demandes de droits des titulaires de données (conformité) en ce qui concerne les réglementations de confidentialité comme le Règlement général sur la protection des données (RGPD). Pour tous les cas d’utilisation de conformité, utilisez [Adobe Experience Platform Privacy Service](../privacy-service/home.md) au lieu de .
 
 Ces activités peuvent être exécutées à l’aide de l’espace de travail de l’interface utilisateur [[!UICONTROL Hygiène des données]](#ui) ou de l’[API Data Hygiene](#api). Lorsqu’une tâche d’hygiène des données s’exécute, le système fournit des mises à jour de transparence à chaque étape du processus. Pour plus d’informations sur la représentation de chaque type de traitement dans le système, consultez la section sur [la chronologie et la transparence](#timelines-and-transparency).
 
