@@ -1,9 +1,10 @@
 ---
 title: Extension Conversions améliorées de Google Ads
 description: Découvrez l’extension Conversions améliorées de Google Ads pour le transfert d’événement dans Adobe Experience Platform.
-source-git-commit: a279c44ef9df3aa9bfc7763b153b87bde0015d57
+exl-id: 65cdff40-276f-4481-9621-6c6861dbd412
+source-git-commit: 670e59a6111b7e4b7febca197d7e462ce5c14596
 workflow-type: tm+mt
-source-wordcount: '1295'
+source-wordcount: '1314'
 ht-degree: 1%
 
 ---
@@ -35,6 +36,10 @@ Les conversions améliorées tirent parti de la [!DNL Google Ads] API permettant
 >Pour associer l’événement de conversion côté client aux données propriétaires envoyées à partir du transfert d’événement, la variable `transaction_ID` doit être identique dans les deux appels . Pour plus d’informations sur l’emplacement où cette valeur doit être fournie pour chaque service, consultez les sections sur la configuration des actions de conversion pour [tags](#conversion-action-tags) et [transfert d’événement](#conversion-action-event-forwarding), respectivement.
 
 L’envoi d’événements de conversion impliquant une mise en oeuvre côté client et côté serveur, ce document décrit les étapes préalables à la configuration côté client. [[!DNL Google Global Site Tag] extension (gtag)](https://exchange.adobe.com/apps/ec/101437/google-global-site-tag-gtag) en plus de la fonction [!DNL Enhanced Conversions] extension pour le transfert d’événement.
+
+La vidéo suivante présente le [!DNL Enhanced Conversions] et décrit les étapes de mise en oeuvre à un niveau élevé :
+
+>[!VIDEO](https://video.tv.adobe.com/v/3411365?quality=12&learn=on)
 
 ## Envoi d’une conversion à l’aide de balises
 
