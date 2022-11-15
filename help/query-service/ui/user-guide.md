@@ -5,9 +5,9 @@ title: Guide de l’interface utilisateur de Query Editor
 topic-legacy: query editor
 description: Query Editor est un outil interactif fourni par Adobe Experience Platform Query Service qui vous permet d’écrire, de valider et d’exécuter des requêtes pour les données d’expérience client dans l’interface utilisateur de l’Experience Platform. Query Editor prend en charge le développement de requête pour l’analyse et l’exploration de données. Il vous permet également d’exécuter des requêtes interactives à des fins de développement, ainsi que des requêtes non interactives pour renseigner les jeux de données dans Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 283c6ba323a327b0c525343a96a45a2412baa67b
+source-git-commit: d71bab9839289a8a1df849025b6db1b2b497087d
 workflow-type: tm+mt
-source-wordcount: '2081'
+source-wordcount: '2106'
 ht-degree: 26%
 
 ---
@@ -64,7 +64,11 @@ Pour réduire le temps de développement, nous vous recommandons de développer 
 
 ![L’entrée de l’éditeur de requêtes affiche les suggestions de noms de tableau déroulant.](../images/ui/query-editor/tables-auto.png)
 
-### Bascule de configuration de l’interface utilisateur à saisie automatique {#auto-complete}
+### (Version bêta) Bascule de configuration de l’interface utilisateur à saisie automatique {#auto-complete}
+
+>[!IMPORTANT]
+>
+>Cette fonctionnalité est actuellement en version bêta et votre organisation n’y a peut-être pas encore accès. La fonctionnalité et la documentation peuvent être modifiées.
 
 Le [!DNL Query Editor] suggère automatiquement des mots-clés SQL potentiels ainsi que des détails de tableau ou de colonne pour la requête au fur et à mesure que vous l’écrivez. La fonction de saisie automatique est activée par défaut et peut être désactivée ou activée à tout moment en sélectionnant l’option [!UICONTROL Saisie automatique de la syntaxe] basculez sur le coin supérieur droit de l’éditeur de requêtes.
 
