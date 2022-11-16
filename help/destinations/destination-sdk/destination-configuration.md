@@ -2,10 +2,10 @@
 description: Cette configuration vous permet d’indiquer des informations de base telles que votre nom de destination, votre catégorie, votre description, votre logo, etc. Les paramètres de cette configuration déterminent également comment les utilisateurs d’Experience Platform s’authentifient pour votre destination, comment ils apparaissent dans l’interface utilisateur d’Experience Platform ainsi que les identités qui peuvent être exportées vers votre destination.
 title: Options de configuration de destination de diffusion en continu pour Destination SDK
 exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
-source-git-commit: 75399d2fbe111a296479f8d3404d43c6ba0d50b5
+source-git-commit: 21278b39a2dc12771449b9a471ea4182c6b999a3
 workflow-type: tm+mt
-source-wordcount: '1888'
-ht-degree: 92%
+source-wordcount: '1894'
+ht-degree: 88%
 
 ---
 
@@ -212,21 +212,21 @@ Utilisez les paramètres de la section `schemaConfig` pour activer l’étape de
 
 Les paramètres de cette section déterminent les identités acceptées par votre destination. Cette configuration renseigne également les identités et les attributs cibles dans l’[étape de mappage](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) de l’interface utilisateur dʼExperience Platform, où les utilisateurs mappent les identités et les attributs de leurs schémas XDM au schéma de votre destination.
 
-Vous devez indiquer quelles identités [!DNL Platform] les clients peuvent exporter vers votre destination. Voici quelques exemples : [!DNL Experience Cloud ID], e-mail haché, identifiant de l’appareil ([!DNL IDFA], [!DNL GAID]). Ces valeurs sont les suivantes : espaces de noms d’identité [!DNL Platform] que les clients peuvent mapper aux espaces de noms d’identité de votre destination. Vous pouvez également indiquer si les clients peuvent mapper des espaces de noms personnalisés à des identités prises en charge par votre destination.
+Vous devez indiquer quelles identités [!DNL Platform] les clients peuvent exporter vers votre destination. Voici quelques exemples : [!DNL Experience Cloud ID], e-mail haché, identifiant de l’appareil ([!DNL IDFA], [!DNL GAID]). Ces valeurs sont les suivantes : espaces de noms d’identité [!DNL Platform] que les clients peuvent mapper aux espaces de noms d’identité de votre destination. Vous pouvez également indiquer si les clients peuvent mapper des espaces de noms personnalisés à des identités prises en charge par votre destination (`acceptsCustomNamespaces: true`) et si les clients peuvent mapper des attributs XDM standard à des identités prises en charge par votre destination (`acceptsAttributes: true`).
 
 Les espaces de noms d’identité ne nécessitent pas de correspondance 1-1 entre [!DNL Platform] et votre destination.
 Par exemple, les clients peuvent mapper un espace de nom [!DNL Platform] [!DNL IDFA] à un espace de noms [!DNL IDFA] depuis votre destination ou mapper le même espace de noms [!DNL Platform] [!DNL IDFA] à un espace de noms [!DNL Customer ID] dans votre destination.
 
-En savoir plus dans la section [Présentation des espaces de noms d’identité](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=fr).
+En savoir plus sur les identités dans [Présentation d’Identity Namespace](/help/identity-service/namespaces.md).
 
 ![Rendre les identités cibles dans l’interface utilisateur](./assets/target-identities-ui.png)
 
 | Paramètre | Type | Description |
 |---------|----------|------|
-| `acceptsAttributes` | Booléen | Indique si votre destination accepte les attributs de profil standard. En règle générale, ces attributs apparaissent en surbrillance dans la documentation des partenaires. |
+| `acceptsAttributes` | Booléen | Indique si les clients peuvent mapper des attributs de profil standard à l’identité que vous configurez. |
 | `acceptsCustomNamespaces` | Booléen | Indique si les clients peuvent configurer des espaces de noms personnalisés dans votre destination. |
 | `transformation` | Chaîne | *Non affiché dans l’exemple de configuration*. Utilisé, par exemple, lorsque le client [!DNL Platform] dispose d’adresses électroniques simples en tant qu’attribut et que votre plateforme accepte les e-mails hachés uniquement. Dans cet objet, vous pouvez effectuer la transformation qui doit être appliquée (par exemple, transformer l’e-mail en minuscules, puis en hachage). Pour consulter un exemple, reportez-vous à la section `requiredTransformation` dans la [référence de l’API de configuration de destination](./destination-configuration-api.md#update). |
-| `acceptedGlobalNamespaces` | - | Utilisé si votre plateforme accepte les [espaces de noms d’identité standard](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=fr#standard-namespaces) (IDFA, par exemple), afin que vous puissiez empêcher les utilisateurs de Platform de sélectionner uniquement ces espaces de noms d’identité. |
+| `acceptedGlobalNamespaces` | - | Indique : [espaces de noms d’identité standard](/help/identity-service/namespaces.md#standard) (par exemple, les clients IDFA) peuvent mapper l’identité que vous configurez. <br> Lorsque vous utilisez `acceptedGlobalNamespaces`, vous pouvez employer `"requiredTransformation":"sha256(lower($))"` pour mettre en minuscules ou hacher des adresses e-mails ou des numéros de téléphone. |
 
 {style=&quot;table-layout:auto&quot;}
 
