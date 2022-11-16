@@ -5,9 +5,9 @@ title: Fonctions de mappage de prép de données
 topic-legacy: overview
 description: Ce document présente les fonctions de mappage utilisées avec Data Prep.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 66c3f4fc6da987f731f7b7e54f416c60fcc670d8
+source-git-commit: b7800dd67c2d16747815f2cb3311ca9b6d6fa342
 workflow-type: tm+mt
-source-wordcount: '4286'
+source-wordcount: '4337'
 ht-degree: 16%
 
 ---
@@ -234,6 +234,11 @@ Pour plus d’informations sur la fonction de copie d’objet, voir la section [
 {style=&quot;table-layout:auto&quot;}
 
 ### Fonctions de l’agent utilisateur {#user-agent}
+
+Toutes les fonctions de l’agent utilisateur contenues dans le tableau ci-dessous peuvent renvoyer l’une des valeurs suivantes :
+
+* Phone : appareil mobile avec un petit écran (généralement &lt; 7&quot;).
+* Mobile : périphérique mobile qui n’est pas encore identifié. Ce périphérique mobile peut être un lecteur électronique, une tablette, un téléphone, une montre, etc.
 
 >[!NOTE]
 >

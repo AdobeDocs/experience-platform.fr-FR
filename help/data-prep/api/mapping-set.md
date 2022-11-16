@@ -5,10 +5,10 @@ title: Point d’entré de l’API Mapping Sets
 topic-legacy: mapping sets
 description: Vous pouvez utiliser le point d’entrée `/mappingSets` dans l’API Adobe Experience Platform pour récupérer, créer, mettre à jour et valider par programmation des jeux de mappage.
 exl-id: a4e4ddcd-164e-42aa-b7d1-ba59d70da142
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: b7800dd67c2d16747815f2cb3311ca9b6d6fa342
 workflow-type: tm+mt
-source-wordcount: '807'
-ht-degree: 100%
+source-wordcount: '854'
+ht-degree: 94%
 
 ---
 
@@ -219,7 +219,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/mappingSets \
 | -------- | ----------- |
 | `outputSchema.schemaRef.id` | Identifiant du schéma XDM auquel vous faites référence. |
 | `outputSchema.schemaRef.contentType` | Détermine le format de réponse du schéma référencé. Vous trouverez plus d’informations sur ce champ dans le [guide de développement du registre des schémas](../../xdm/api/schemas.md#lookup). |
-| `mappings.sourceType` | Le type de source décrit comment la valeur sera extraite de la source vers la destination. |
+| `mappings.sourceType` | Le type de source décrit comment la valeur sera extraite de la source vers la destination. Le type de source prend en charge deux valeurs possibles : <ul><li>`ATTRIBUTE`: Le type de source `ATTRIBUTE` est utilisé lorsque l’attribut d’entrée provient d’un schéma source.</li><li>`EXPRESSION`: Le type de source `EXPRESSION` est utilisé lorsque le mapping est effectué à l’aide d’un champ calculé.</li></ul> **AVERTISSEMENT**: La définition incorrecte des valeurs de type source peut rendre vos jeux de mappages non modifiables. |
 | `mappings.source` | L’emplacement à partir duquel vous souhaitez mapper les données. |
 | `mappings.destination` | L’emplacement auquel vous souhaitez mapper les données. |
 
