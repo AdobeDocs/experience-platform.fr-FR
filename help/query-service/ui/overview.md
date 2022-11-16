@@ -5,10 +5,10 @@ title: Guide de l’interface utilisateur de Query Service
 topic-legacy: guide
 description: Adobe Experience Platform Query Service fournit une interface utilisateur qui peut être utilisée pour écrire et exécuter des requêtes, afficher des requêtes précédemment exécutées et accéder aux requêtes enregistrées par les utilisateurs au sein de votre organisation IMS.
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: a085bac6b4ee825d534710ae91d6690fa076e873
+source-git-commit: 3b6862dd3bb770df4a1549275f911dd81a178002
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1095'
+ht-degree: 21%
 
 ---
 
@@ -25,6 +25,29 @@ Le [!DNL Query Editor] permet d’écrire et d’exécuter des requêtes sans ut
 [!DNL Query Editor] fournit un espace de modification où vous pouvez commencer à saisir une requête. Au fur et à mesure que vous tapez, l’éditeur complète automatiquement les mots réservés SQL, les tables et les noms de champ dans les tables. Lorsque vous avez terminé d’écrire votre requête, sélectionnez l’option **Play** pour exécuter la requête. L’onglet **[!UICONTROL Console]** situé sous l’éditeur indique ce que fait actuellement , indiquant le moment où une requête a été renvoyée. [!DNL Query Service] L’onglet **[!UICONTROL Résultat]**, en regard de la Console, affiche les résultats de la requête. Voir [Guide de Query Editor](./user-guide.md) pour plus d’informations sur l’utilisation de la variable [!DNL Query Editor].
 
 ![Zoomé en vue de la variable [!DNL Query Editor].](../images/ui/overview/query-editor.png)
+
+## Requêtes planifiées {#scheduled-queries}
+
+Les requêtes qui ont déjà été enregistrées en tant que modèle peuvent être planifiées pour une exécution régulière. Lors de la planification d’une requête, vous pouvez choisir la fréquence des exécutions, la date de début et de fin, le jour de la semaine où la requête planifiée s’exécute, ainsi que le jeu de données vers lequel exporter la requête. Les plannings de requête sont définis à l’aide de Query Editor.
+
+Pour savoir comment planifier une requête via l’interface utilisateur, reportez-vous à la section [guide des requêtes planifiées](./user-guide.md#scheduled-queries). Pour savoir comment ajouter des plannings à l’aide de l’API, veuillez lire le [guide de point de terminaison des requêtes planifiées](../api/scheduled-queries.md).
+
+Une fois qu’une requête a été planifiée, elle apparaît dans la liste des requêtes planifiées de la variable [!UICONTROL Requêtes planifiées] . Vous trouverez des détails complets sur la requête, les exécutions, le créateur et les minutages en sélectionnant une requête planifiée dans la liste.
+
+![L’espace de travail Requêtes avec l’onglet Requêtes planifiées mis en surbrillance et qui affiche des lignes de plannings de requête.](../images/ui/overview/scheduled-queries.png)
+
+| Colonne | Description |
+| --- | --- |
+| **[!UICONTROL Nom]** | Le champ name correspond au nom du modèle ou aux premiers caractères de votre requête SQL. Toute requête créée à l’aide de l’interface utilisateur avec Query Editor est nommée dès le départ. Si la requête a été créée via l’API, alors le nom de la requête est un extrait de code SQL initial utilisé pour créer la requête. |
+| **[!UICONTROL Modèle]** | Nom du modèle de la requête. Sélectionnez un nom de modèle pour accéder à l’éditeur de requêtes. Le modèle de requête est affiché dans Query Editor à des fins pratiques. S’il n’existe aucun nom de modèle, la ligne est marquée d’un trait d’union et il n’est pas possible de rediriger vers l’éditeur de requêtes pour afficher la requête. |
+| **[!UICONTROL SQL]** | Fragment de la requête SQL. |
+| **[!UICONTROL Fréquence d’exécution]** | Il s’agit de la cadence d’exécution de votre requête. Les valeurs disponibles sont les suivantes : `Run once` et `Scheduled`. Les requêtes peuvent être filtrées en fonction de leur fréquence d’exécution. |
+| **[!UICONTROL Créé par]** | Nom de l’utilisateur qui a créé la requête. |
+| **[!UICONTROL Créé]** | Horodatage de création de la requête, au format UTC. |
+| **[!UICONTROL Horodatage de la dernière exécution]** | Horodatage le plus récent lors de l’exécution de la requête. Cette colonne indique si une requête a été exécutée conformément à son planning actuel. |
+| **[!UICONTROL État de la dernière exécution]** | Etat de la dernière exécution de la requête. Les trois valeurs d’état sont les suivantes : `successful` `failed` ou `in progress`. |
+
+Consultez la documentation pour plus d’informations sur la manière de [Surveillance des requêtes via l’interface utilisateur de Query Service](../monitor-queries.md).
 
 ## Modèles {#browse}
 
