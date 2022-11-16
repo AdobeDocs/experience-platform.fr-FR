@@ -3,10 +3,10 @@ title: Chiffrement des données dans Adobe Experience Platform
 topic-legacy: data protection
 description: Découvrez comment les données sont chiffrées en transit et au repos dans Adobe Experience Platform.
 exl-id: 184b2b2d-8cd7-4299-83f8-f992f585c336
-source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
+source-git-commit: d99a9081edc483831d56af3d838b67d9aba25bea
 workflow-type: tm+mt
-source-wordcount: '398'
-ht-degree: 6%
+source-wordcount: '396'
+ht-degree: 5%
 
 ---
 
@@ -37,7 +37,7 @@ Une fois les données introduites dans le système et [encrypted au repos](#at-r
 
 Les données ingérées et utilisées par Platform sont stockées dans le lac de données, un entrepôt de données hautement granulaire contenant toutes les données gérées par le système, indépendamment de l’origine ou du format de fichier. Toutes les données conservées dans le lac de données sont chiffrées, stockées et gérées dans un environnement isolé. [[!DNL Microsoft Azure Data Lake] Stockage](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction) qui est propre à votre organisation.
 
-Pour plus d’informations sur la façon dont les données au repos sont chiffrées dans Azure Data Lake Storage et Cosmos DB, voir la section [documentation Azure officielle](https://docs.microsoft.com/fr-fr/azure/data-lake-store/data-lake-store-encryption).
+Pour plus d’informations sur la façon dont les données au repos sont chiffrées dans Azure Data Lake Storage, reportez-vous à la section [documentation Azure officielle](https://learn.microsoft.com/en-us/azure/storage/common/storage-service-encryption).
 
 ## Étapes suivantes
 
