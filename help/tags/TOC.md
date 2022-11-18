@@ -5,9 +5,9 @@ breadcrumb-title: Balises
 user-guide-description: Découvrez comment déployer et gérer des balises d’analyse, de marketing et de publicité pour améliorer les expériences clients.
 feature: Tags
 solution: Data Collection
-source-git-commit: 67f3d27ebb17e1b1dc77dcd32246f407753c20df
+source-git-commit: a03ab5086f8f3935425da147f721dec42ced9d00
 workflow-type: tm+mt
-source-wordcount: '416'
+source-wordcount: '419'
 ht-degree: 93%
 
 ---
@@ -119,18 +119,20 @@ ht-degree: 93%
          * [Présentation](./extensions/web/core/overview.md)
          * [Transfert d’événement](./extensions/web/core/event-forwarding.md)
          * [Notes de mise à jour](./extensions/web/core/release-notes.md)
-      * [!DNL Mailchimp] Edge {#mailchimp-edge}
-         * [Aperçu](./extensions/web/mailchimp/overview.md)
-      * [!DNL Marketo Munchkin] {#marketo}
-         * [Présentation](./extensions/web/marketo/overview.md)
-         * [Notes de mise à jour](./extensions/web/marketo/release-notes.md)
       * Conversions améliorées de Google Ads {#google-ads-enhanced-conversions}
          * [Présentation](./extensions/web/google-ads-enhanced-conversions/overview.md)
       * Couche de données Google {#google-data-layer}
          * [Présentation](./extensions/web/google-data-layer/overview.md)
          * [Notes de mise à jour](./extensions/web/google-data-layer/release-notes.md)
+      * [!DNL Mailchimp] Edge {#mailchimp-edge}
+         * [Aperçu](./extensions/web/mailchimp/overview.md)
+      * [!DNL Marketo Munchkin] {#marketo}
+         * [Présentation](./extensions/web/marketo/overview.md)
+         * [Notes de mise à jour](./extensions/web/marketo/release-notes.md)
+      * [!UICONTROL Microsoft Azure] {#azure}
+         * [Aperçu](./extensions/web/azure/overview.md)
       * [!DNL Splunk] {#splunk}
-         * [Présentation](./extensions/web/splunk/overview.md)
+         * [Aperçu](./extensions/web/splunk/overview.md)
       * [!DNL YouTube] suivi vidéo {#youtube}
          * [Présentation](./extensions/web/youtube/overview.md)
          * [Notes de mise à jour](./extensions/web/youtube/release-notes.md)
