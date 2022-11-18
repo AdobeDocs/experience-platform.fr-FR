@@ -1,14 +1,19 @@
 ---
 title: Surveillance de l’utilisation de la licence de requête par lots
 description: L’interface utilisateur de Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur l’utilisation de la licence Data Distiller de votre entreprise.
-source-git-commit: 0a44d15f9dfaf5100fa44e2e6442b1be23ee0ab0
+exl-id: a1e365a0-cc65-4fd6-b36f-8d79b7d9ec7c
+source-git-commit: 9d543b5c7c7f39e809b6a13b8adc46b9a99f51c7
 workflow-type: tm+mt
-source-wordcount: '318'
+source-wordcount: '341'
 ht-degree: 11%
 
 ---
 
-# Surveiller l’utilisation des licences de requête par lots {#monitor-license-usage}
+# (Version bêta) Surveillance de l’utilisation des licences de requête par lots {#monitor-license-usage}
+
+>[!IMPORTANT]
+>
+>La possibilité de surveiller l’utilisation des licences de requête par lots via l’interface utilisateur est en version bêta. Ses fonctionnalités et sa documentation peuvent faire l’objet de modifications.
 
 L’interface utilisateur de Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur l’utilisation de la licence Query Service de votre entreprise.
 

@@ -1,18 +1,19 @@
 ---
 title: Exemples de jeux de données
 description: Les exemples de jeux de données de Query Service vous permettent de mener des requêtes exploratoires sur les données volumineuses avec un temps de traitement considérablement réduit au prix de la précision des requêtes. Ce guide fournit des informations sur la gestion de vos exemples pour le traitement approximatif des requêtes.
-source-git-commit: 3d2802ff5cdb359b28da23a05d1d6831cc273a52
+exl-id: 9e676d7c-c24f-4234-878f-3e57bf57af44
+source-git-commit: 9d543b5c7c7f39e809b6a13b8adc46b9a99f51c7
 workflow-type: tm+mt
-source-wordcount: '536'
+source-wordcount: '538'
 ht-degree: 0%
 
 ---
 
-# (Version bêta) Exemples de jeux de données
+# (Version limitée) Exemples de jeux de données
 
 >[!IMPORTANT]
 >
->La fonctionnalité d’exemples de jeux de données est en version bêta. Ses fonctionnalités et sa documentation peuvent faire l’objet de modifications.
+>La fonctionnalité d’exemples de jeux de données est actuellement dans une version limitée et n’est pas disponible pour tous les clients.
 
 Adobe Experience Platform Query Service fournit des jeux de données d’exemple dans le cadre de ses fonctionnalités approximatives de traitement des requêtes. Des exemples de jeux de données sont créés avec des exemples aléatoires uniformes issus de [!DNL Azure Data Lake Storage] (ADLS) les jeux de données utilisant uniquement un pourcentage d’enregistrements de l’original. Ce pourcentage est connu sous le nom de taux d’échantillonnage. Le réglage du taux d’échantillonnage pour contrôler l’équilibre de précision et de temps de traitement permet d’effectuer des requêtes exploratoires sur les données volumineuses avec un temps de traitement considérablement réduit, au détriment de la précision des requêtes.
 
