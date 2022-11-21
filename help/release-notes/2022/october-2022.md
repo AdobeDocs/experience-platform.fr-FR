@@ -2,9 +2,9 @@
 title: Notes de mise à jour d’octobre 2022 d’Adobe Experience Platform
 description: Les notes de mise à jour d’octobre 2022 pour Adobe Experience Platform.
 exl-id: 61ef2472-5e79-433f-9f60-b1245f619b42
-source-git-commit: a9887535b12b8c4aeb39bb5a6646da88db4f0308
+source-git-commit: 184ead059533d2706a5d3fca96dc082248955afe
 workflow-type: tm+mt
-source-wordcount: '1389'
+source-wordcount: '1352'
 ht-degree: 70%
 
 ---
@@ -123,6 +123,5 @@ Experience Platform fournit une API RESTful et une interface utilisateur intera
 | Fonctionnalité | Description |
 | --- | --- | 
 | Disponibilité Beta de la source Adobe Workfront | Utilisez la [source Adobe Workfront](../../sources/connectors/adobe-applications/workfront.md) pour importer vos données Workfront dans Experience Platform et réaliser des cas d’utilisation, par exemple combiner vos enregistrements de travail avec des données tierces, appliquer des analyses d’historique et de série temporelle aux enregistrements de travail et interroger les données de travail à l’aide de SQL standard. Pour plus d’informations, consultez le guide sur la [création d’une connexion source Workfront dans l’interface utilisateur](../../sources/tutorials/ui/create/adobe-applications/workfront.md). |
-| Disponibilité Beta de la source Oracle Service Cloud | Utilisez la source Oracle Service Cloud pour ingérer des données de votre compte Oracle Service Cloud vers Experience Platform. Pour plus d’informations, consultez la documentation relative à la [source Oracle Service Cloud](../../sources/connectors/customer-success/oracle-service-cloud.md). |
 
 Pour en savoir plus sur les sources, lisez la [présentation des sources](../../sources/home.md).
