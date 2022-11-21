@@ -2,10 +2,13 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;oracle;réponsys oracle;réponsys
 title: (Version bêta) Présentation de la source Oracle Responsys
 description: Découvrez comment connecter Oracle Responsys à Adobe Experience Platform à l’aide des API ou de l’interface utilisateur.
-source-git-commit: 071157110ef255bf0692c7b9e1db9fb86d930c2c
+hide: true
+hidefromtoc: true
+exl-id: 806ae7e2-d4af-47d5-a3aa-561b69acc836
+source-git-commit: 784ec5f799c591185620e8376a6980b4930d914a
 workflow-type: tm+mt
 source-wordcount: '274'
-ht-degree: 48%
+ht-degree: 51%
 
 ---
 
@@ -30,7 +33,7 @@ La documentation ci-dessous fournit des informations sur la connexion de [!DNL O
 ## Connexion [!DNL Oracle Responsys] vers Platform à l’aide d’API
 
 * [Création d’une connexion de base Responsys d’Oracle à l’aide de l’API Flow Service](../../tutorials/api/create/marketing-automation/oracle-responsys.md)
-* [Exploration des tableaux de données à l’aide de l’API Flow Service](../../tutorials/api/explore/tabular.md)
+* [Explorer des tables de données à l’aide de l’API Flow Service](../../tutorials/api/explore/tabular.md)
 * [Création d’un flux de données pour une source d’automatisation marketing à l’aide de l’API Flow Service](../../tutorials/api/collect/marketing-automation.md)
 
 ## Connexion [!DNL Oracle Responsys] vers Platform à l’aide de l’interface utilisateur

@@ -2,10 +2,13 @@
 keywords: Experience Platform;accueil;rubriques populaires;sources;connecteurs;oracle;
 title: (Version bêta) Création d’une connexion source Responsys Oracle à l’aide de l’interface utilisateur de Platform
 description: Découvrez comment connecter Adobe Experience Platform à Oracle Responsys à l’aide de l’interface utilisateur de Platform.
-source-git-commit: ff3cac5f18ea49b93b3d76e4cd8fb0d597d02be4
+hide: true
+hidefromtoc: true
+exl-id: 9ec5e1c2-3d9e-4729-be81-89a85d5ea782
+source-git-commit: 784ec5f799c591185620e8376a6980b4930d914a
 workflow-type: tm+mt
 source-wordcount: '485'
-ht-degree: 38%
+ht-degree: 40%
 
 ---
 
@@ -13,7 +16,7 @@ ht-degree: 38%
 
 >[!NOTE]
 >
->Le [!DNL Oracle Responsys] La source est en version bêta. Voir [Présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs bêta-étiquetés.
+>Le [!DNL Oracle Responsys] La source est en version bêta. Voir la [Présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs étiquetés bêta.
 
 Ce tutoriel décrit les étapes à suivre pour créer une [[!DNL Oracle Responsys]](../../../../connectors/marketing-automation/oracle-responsys.md) connexion source à l’aide de l’interface utilisateur de Adobe Experience Platform.
 
@@ -60,7 +63,7 @@ Pour utiliser un compte existant, sélectionnez le compte [!DNL Oracle Responsys
 
 ### Nouveau compte
 
-Pour créer un compte, sélectionnez **[!UICONTROL Nouveau compte]**, puis fournissez un nom, une description facultative et les valeurs appropriées pour votre [!DNL Oracle Responsys] informations d’identification. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Connecter à la source]** puis attendez que la nouvelle connexion s’établisse.
+Pour créer un compte, sélectionnez **[!UICONTROL Nouveau compte]**, puis fournissez un nom, une description facultative et les valeurs appropriées pour votre [!DNL Oracle Responsys] informations d’identification. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Se connecter à la source]** puis attendez que la nouvelle connexion s’établisse.
 
 ![Nouvel écran d’authentification de compte pour Oracle Responsys.](../../../../images/tutorials/create/oracle-eloqua/new.png)
 
