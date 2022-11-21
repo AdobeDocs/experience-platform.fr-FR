@@ -1,10 +1,11 @@
 ---
 title: (Version bêta) Connexion au stockage dans le cloud Google
 description: Découvrez comment vous connecter au stockage dans le cloud Google et activer des segments ou exporter des jeux de données.
-source-git-commit: 97a39e12d916e4fbd048c0fb9ddfa9bdfa10d438
+exl-id: ab274270-ae8c-4264-ba64-700b118e6435
+source-git-commit: f841b27a2d2700b0b68a386b89d1a5c62d3910ff
 workflow-type: tm+mt
-source-wordcount: '888'
-ht-degree: 28%
+source-wordcount: '867'
+ht-degree: 29%
 
 ---
 
@@ -59,9 +60,9 @@ Pour vous authentifier à la destination, renseignez les champs requis et sélec
 
 * **[!UICONTROL Accès à l’ID de clé]**: Chaîne alphanumérique de 61 caractères utilisée pour authentifier votre [!DNL Google Cloud Storage] compte à Platform. Pour plus d’informations sur la manière d’obtenir cette valeur, lisez le [conditions préalables](#prerequisites) ci-dessus.
 * **[!UICONTROL Clé d’accès secrète]**: Chaîne codée en base64 à 40 caractères utilisée pour authentifier votre [!DNL Google Cloud Storage] compte à Platform. Pour plus d’informations sur la manière d’obtenir cette valeur, lisez le [conditions préalables](#prerequisites) ci-dessus.
-* **[!UICONTROL Clé de chiffrement]**: Vous pouvez éventuellement joindre votre clé publique au format RSA pour ajouter un chiffrement à vos fichiers exportés. Votre clé publique doit être écrite en tant que [!DNL Base64-encoded] chaîne. Affichez un exemple d’une clé codée en base64 correctement formatée dans le lien de documentation ci-dessous. La partie centrale est raccourcie par concision.
+* **[!UICONTROL Clé de chiffrement]**: Vous pouvez éventuellement joindre votre clé publique au format RSA pour ajouter un chiffrement à vos fichiers exportés. Affichez un exemple de clé de chiffrement correctement formatée dans l’image ci-dessous.
 
-   ![Image montrant un exemple d’une clé PGP correctement formatée et chiffrée en base64 dans l’interface utilisateur](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+   ![Image montrant un exemple de clé PGP correctement formatée dans l’interface utilisateur](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
 Pour plus d’informations sur ces valeurs, consultez la section [Clés HMAC de stockage dans le cloud Google](https://cloud.google.com/storage/docs/authentication/hmackeys#overview) guide. Pour savoir comment générer votre propre identifiant de clé d’accès et votre clé d’accès secrète, reportez-vous à la section [[!DNL Google Cloud Storage] présentation de la source](/help/sources/connectors/cloud-storage/google-cloud-storage.md).
 

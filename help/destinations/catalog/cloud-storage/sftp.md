@@ -3,10 +3,10 @@ keywords: SFTP;sftp
 title: Connexion SFTP
 description: Créez une connexion sortante active à votre serveur SFTP afin d’exporter périodiquement des fichiers de données délimités de Adobe Experience Platform.
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: 56fd7a5ab58186367c729cb4ca8c3b4213c44900
+source-git-commit: f841b27a2d2700b0b68a386b89d1a5c62d3910ff
 workflow-type: tm+mt
-source-wordcount: '835'
-ht-degree: 16%
+source-wordcount: '812'
+ht-degree: 17%
 
 ---
 
@@ -64,7 +64,7 @@ Pour vous connecter à cette destination, procédez comme décrit dans le [tutor
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_sftp_rsa"
 >title="Clé publique RSA"
->abstract="Vous pouvez éventuellement joindre votre clé publique au format RSA pour ajouter un chiffrement à vos fichiers exportés. Votre clé publique doit être écrite en tant que chaîne codée Base64."
+>abstract="Vous pouvez éventuellement joindre votre clé publique au format RSA pour ajouter un chiffrement à vos fichiers exportés. Affichez un exemple de clé correctement formatée dans le lien de documentation ci-dessous."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_sftp_ssh"
@@ -78,9 +78,9 @@ Si vous sélectionnez la variable **[!UICONTROL Authentification de base]** sais
 * **[!UICONTROL Hôte]**: l’adresse de votre emplacement de stockage SFTP ;
 * **[!UICONTROL Nom d’utilisateur]**: Nom d’utilisateur pour se connecter à l’emplacement de stockage SFTP ;
 * **[!UICONTROL Mot de passe]**: Mot de passe pour se connecter à l’emplacement de stockage de votre SFTP.
-* **[!UICONTROL Clé de chiffrement]**: Vous pouvez éventuellement joindre votre clé publique au format RSA pour ajouter un chiffrement à vos fichiers exportés. Votre clé publique doit être écrite en tant que [!DNL Base64-encoded] chaîne. Affichez un exemple d’une clé codée en base64 correctement formatée dans le lien de documentation ci-dessous. La partie centrale est raccourcie par concision.
+* **[!UICONTROL Clé de chiffrement]**: Vous pouvez éventuellement joindre votre clé publique au format RSA pour ajouter un chiffrement à vos fichiers exportés. Affichez un exemple de clé de chiffrement correctement formatée dans l’image ci-dessous.
 
-![Image montrant un exemple d’une clé PGP correctement formatée et chiffrée en base64 dans l’interface utilisateur](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+   ![Image montrant un exemple de clé PGP correctement formatée dans l’interface utilisateur](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
 
 Si vous sélectionnez la variable **[!UICONTROL SFTP avec clé SSH]** type d’authentification pour se connecter à votre emplacement SFTP :
@@ -91,10 +91,9 @@ Si vous sélectionnez la variable **[!UICONTROL SFTP avec clé SSH]** type d’a
 * **[!UICONTROL Port]**: le port utilisé par votre emplacement de stockage SFTP ;
 * **[!UICONTROL Nom d’utilisateur]**: Nom d’utilisateur pour se connecter à l’emplacement de stockage SFTP ;
 * **[!UICONTROL Clé SSH]**: Clé SSH privée utilisée pour se connecter à l’emplacement de stockage de votre SFTP. La clé privée doit être formatée en tant que chaîne codée en Base64 et ne doit pas être protégée par un mot de passe.
-* **[!UICONTROL Clé de chiffrement]**: Vous pouvez éventuellement joindre votre clé publique au format RSA pour ajouter un chiffrement à vos fichiers exportés. Votre clé publique doit être écrite en tant que [!DNL Base64] chaîne codée.
-   * Exemple: `----BEGIN PGP PUBLIC KEY BLOCK---- {Base64-encoded string} ----END PGP PUBLIC KEY BLOCK----`. Voir ci-dessous un exemple de clé PGP correctement formatée, avec la partie centrale raccourcie pour plus de concision.
+* **[!UICONTROL Clé de chiffrement]**: Vous pouvez éventuellement joindre votre clé publique au format RSA pour ajouter un chiffrement à vos fichiers exportés. Affichez un exemple de clé de chiffrement correctement formatée dans l’image ci-dessous.
 
-      ![Clé PGP](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+   ![Image montrant un exemple de clé PGP correctement formatée dans l’interface utilisateur](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
 ### Détails de la destination {#destination-details}
 
