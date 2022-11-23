@@ -1,22 +1,25 @@
 ---
 title: Déterminer Un Score De Propension À L’Aide D’Un Modèle Prédictif Généré Par L’Apprentissage Automatique
 description: Découvrez comment utiliser Query Service pour appliquer votre modèle prédictif aux données de Platform. Ce document explique comment utiliser les données de Platform pour prédire la propension d’un client à acheter à chaque visite.
-source-git-commit: af1c8f94d1758b3a4e7ea00c46b0f9a71a01c6be
+exl-id: 29587541-50dd-405c-bc18-17947b8a5942
+source-git-commit: 40c27a52fdae2c7d38c5e244a6d1d6ae3f80f496
 workflow-type: tm+mt
-source-wordcount: '1294'
+source-wordcount: '1295'
 ht-degree: 0%
 
 ---
 
 # Déterminer un score de propension à l’aide d’un modèle prédictif généré par l’apprentissage automatique
 
-Grâce à Query Service, vous pouvez exploiter les données Experience Platform dans vos plateformes d’apprentissage automatique pour générer des modèles prédictifs tels que les scores de propension. Ce guide explique comment utiliser Query Service pour envoyer des données à votre plateforme d’apprentissage automatique afin d’entraîner un modèle dans un notebook de calcul. Le modèle formé peut être appliqué aux données à l’aide de SQL pour prédire la propension d’un client à acheter pour chaque visite.
+Grâce à Query Service, vous pouvez exploiter des modèles prédictifs, tels que les scores de propension, créés sur votre plateforme d’apprentissage automatique pour analyser les données Experience Platform.
+
+Ce guide explique comment utiliser Query Service pour envoyer des données à votre plateforme d’apprentissage automatique afin d’entraîner un modèle dans un notebook de calcul. Le modèle formé peut être appliqué aux données à l’aide de SQL pour prédire la propension d’un client à acheter pour chaque visite.
 
 ## Prise en main
 
 Dans le cadre de ce processus, vous devez entraîner un modèle d’apprentissage automatique. Ce document suppose une connaissance pratique d’un ou de plusieurs environnements d’apprentissage automatique.
 
-Cet exemple utilise [!DNL Jupyter Notebook] comme environnement de développement. Bien qu’il existe de nombreuses options disponibles, [!DNL Jupyter Notebook] est recommandé, car il s’agit d’une application web open source qui a de faibles exigences de calcul. Cela peut être [téléchargé sur le site officiel](https://jupyter.org/).
+Cet exemple utilise [!DNL Jupyter Notebook] en tant qu’environnement de développement. Bien qu’il existe de nombreuses options disponibles, [!DNL Jupyter Notebook] est recommandé, car il s’agit d’une application web open source qui a de faibles exigences de calcul. Cela peut être [téléchargé sur le site officiel](https://jupyter.org/).
 
 Si vous ne l’avez pas déjà fait, suivez les étapes de la section [connect [!DNL Jupyter Notebook] avec Adobe Experience Platform Query Service](../clients/jupyter-notebook.md) avant de poursuivre avec ce guide.
 
@@ -95,7 +98,7 @@ X = pd.DataFrame( np.concatenate((enc.transform(df_cat).toarray(),df[num_cols]),
 y = df['target']
 ```
 
-Les données définies comme `X` est tabulé et s’affiche comme suit :
+Les données définies comme `X` est tabularisé et s’affiche comme suit :
 
 ![Sortie tabularisée de X dans [!DNL Jupyter Notebook].](../images/use-cases/x-output-table.png)
 
@@ -322,5 +325,3 @@ Les précisions du modèle amorcé sont ensuite triées. Ensuite, les 10 et 90 q
 ![Commande d’impression permettant d’afficher l’intervalle de confiance du score de propension.](../images/use-cases/confidence-interval.png)
 
 La figure ci-dessus indique que si vous ne prenez que 1 000 lignes pour entraîner vos modèles, vous pouvez vous attendre à une baisse de précision entre 84 % et 88 % environ. Vous pouvez ajuster la variable `LIMIT` dans les requêtes Query Service en fonction de vos besoins pour garantir les performances des modèles.
-
-
