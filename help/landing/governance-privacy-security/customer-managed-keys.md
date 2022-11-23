@@ -1,10 +1,11 @@
 ---
 title: Clés gérées par le client dans Adobe Experience Platform
 description: Découvrez comment configurer vos propres clés de chiffrement pour les données stockées dans Adobe Experience Platform.
-source-git-commit: 02898f5143a7f4f48c64b22fb3c59a072f1e957d
-workflow-type: ht
-source-wordcount: '1493'
-ht-degree: 100%
+exl-id: cd33e6c2-8189-4b68-a99b-ec7fccdc9b91
+source-git-commit: 82a29cedfd12e0bc3edddeb26abaf36b0edea6df
+workflow-type: tm+mt
+source-wordcount: '1613'
+ht-degree: 92%
 
 ---
 
@@ -13,6 +14,14 @@ ht-degree: 100%
 Les données stockées sur Adobe Experience Platform sont chiffrées au repos à l’aide de clés au niveau du système. Si vous utilisez une application reposant sur Platform, vous pouvez choisir d’utiliser vos propres clés de chiffrement pour mieux contrôler la sécurité de vos données.
 
 Ce document décrit le processus d’activation de la fonctionnalité des clés gérées par le client (CMK) dans Platform.
+
+## Conditions préalables
+
+Pour activer le CMK, vous devez avoir accès à **all** des fonctionnalités suivantes dans [!DNL Microsoft Azure]:
+
+* [Stratégies de contrôle d’accès en fonction du rôle](https://learn.microsoft.com/en-us/azure/role-based-access-control/) (à ne pas confondre avec la même fonctionnalité dans Experience Platform)
+* [Suppression en douceur de Key Vault](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview)
+* [Protection par purge](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview#purge-protection)
 
 ## Résumé du processus
 
@@ -24,7 +33,7 @@ La fonction CMK est incluse dans les offres Adobe Healthcare Shield et Privacy a
 
 Le processus se présente comme suit :
 
-1. [Configurez un coffre  [!DNL Microsoft Azure]  Key Vault](#create-key-vault) en fonction des stratégies de votre entreprise, puis [générez une clé de chiffrement](#generate-a-key) qui sera à la fin partagée avec Adobe.
+1. [Configurez un coffre  [!DNL Azure]  Key Vault](#create-key-vault) en fonction des stratégies de votre entreprise, puis [générez une clé de chiffrement](#generate-a-key) qui sera à la fin partagée avec Adobe.
 1. Utilisez les appels d’API pour [configurer l’application CMK](#register-app) avec votre client [!DNL Azure].
 1. Utilisez les appels d’API pour [envoyer votre ID de clé de chiffrement à Adobe](#send-to-adobe) et lancez le processus d’activation de la fonctionnalité.
 1. [Vérifiez le statut de la configuration](#check-status) pour vous assurer que la fonction CMK a été activée.
@@ -97,11 +106,13 @@ La clé configurée apparaît dans la liste des clés du coffre.
 
 Une fois que votre coffre de clés est configuré, l’étape suivante consiste à enregistrer l’application CMK qui se connectera à votre client [!DNL Azure].
 
->[!NOTE]
->
->L’enregistrement de l’application CMK nécessite que vous exécutiez des appels vers les API Platform. Pour plus d’informations sur la collecte des en-têtes d’authentification requis pour effectuer ces appels, consultez le [guide d’authentification des API Platform](../../landing/api-authentication.md).
->
->Le guide d’authentification fournit des instructions sur la génération de votre propre valeur unique pour l’en-tête de requête `x-api-key`, toutes les opérations API de ce guide utilisent plutôt la valeur statique `acp_provisioning`. Cependant, vous devez toujours fournir vos propres valeurs pour `{ACCESS_TOKEN}` et `{ORG_ID}`.
+### Prise en main
+
+L’enregistrement de l’application CMK nécessite que vous exécutiez des appels vers les API Platform. Pour plus d’informations sur la collecte des en-têtes d’authentification requis pour effectuer ces appels, consultez le [guide d’authentification des API Platform](../../landing/api-authentication.md).
+
+Le guide d’authentification fournit des instructions sur la génération de votre propre valeur unique pour l’en-tête de requête `x-api-key`, toutes les opérations API de ce guide utilisent plutôt la valeur statique `acp_provisioning`. Cependant, vous devez toujours fournir vos propres valeurs pour `{ACCESS_TOKEN}` et `{ORG_ID}`.
+
+Dans tous les appels API présentés dans ce guide, `platform.adobe.io` est utilisé comme chemin racine, qui correspond par défaut à la région VA7. Si votre entreprise utilise une autre région, `platform` doit être suivie d’un tiret et du code de région affecté à votre organisation : `nld2` pour NLD2 ou `aus5` pour AUS5 (par exemple : `platform-aus5.adobe.io`). Si vous ne connaissez pas la région de votre entreprise, contactez votre administrateur système.
 
 ### Récupérer une URL d’authentification
 
@@ -183,7 +194,7 @@ curl -X POST \
         "imsOrgId": "{ORG_ID}",
         "configData": {
           "providerType": "AZURE_KEYVAULT",
-          "keyVaultIdentifier": "https://adobecmkexample.vault.azure.net/keys/adobeCMK-key/7c1d50lo28234cc895534c00d7eb4eb4"
+          "keyVaultKeyIdentifier": "https://adobecmkexample.vault.azure.net/keys/adobeCMK-key/7c1d50lo28234cc895534c00d7eb4eb4"
         }
       }'
 ```
@@ -193,7 +204,7 @@ curl -X POST \
 | `name` | Un nom pour la configuration. Veillez à mémoriser cette valeur, car il sera nécessaire de vérifier le statut de la configuration à une [étape ultérieure](#check-status). La valeur respecte la casse. |
 | `type` | Le type de configuration. Cette propriété doit être définie sur `BYOK_CONFIG`. |
 | `imsOrgId` | Votre identifiant d’organisation IMS. Il doit s’agir de la même valeur que celle fournie sous l’en-tête `x-gw-ims-org-id`. |
-| `configData` | Contient les détails suivants sur la configuration :<ul><li>`providerType` : Cette propriété doit être définie sur `AZURE_KEYVAULT`.</li><li>`keyVaultIdentifier` : URI de coffre de clés que vous avez copié [précédemment](#send-to-adobe).</li></ul> |
+| `configData` | Contient les détails suivants sur la configuration :<ul><li>`providerType` : Cette propriété doit être définie sur `AZURE_KEYVAULT`.</li><li>`keyVaultKeyIdentifier` : URI de coffre de clés que vous avez copié [précédemment](#send-to-adobe).</li></ul> |
 
 **Réponse**
 
