@@ -5,9 +5,9 @@ title: Création et modification de schémas dans l’interface utilisateur
 description: Découvrez les principes de base de la création et de l’édition de schémas dans l’interface utilisateur de l’Experience Platform.
 topic-legacy: user guide
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: a95e5cf02e993d6c761abd74c98c0967a89eb678
+source-git-commit: 3fc498de60256006d27ada72a7b5f4fff71c4472
 workflow-type: tm+mt
-source-wordcount: '2901'
+source-wordcount: '3156'
 ht-degree: 0%
 
 ---
@@ -138,7 +138,7 @@ L’éditeur de schémas vous permet d’ajouter des champs individuels directem
 
 >[!IMPORTANT]
 >
->Même si l’éditeur de schémas permet fonctionnellement d’ajouter des champs individuels directement à un schéma, cela ne change pas le fait que tous les champs d’un schéma XDM doivent être fournis par sa classe ou un groupe de champs compatible avec cette classe. Comme les sections ci-dessous l’expliquent, tous les champs individuels sont toujours associés à un groupe de champs comme étape clé lorsqu’ils sont ajoutés à un schéma.
+>Même si l’éditeur de schémas permet fonctionnellement d’ajouter des champs individuels directement à un schéma, cela ne change pas le fait que tous les champs d’un schéma XDM doivent être fournis par sa classe ou un groupe de champs compatible avec cette classe. Comme les sections ci-dessous l’expliquent, tous les champs individuels sont toujours associés à une classe ou à un groupe de champs comme étape clé lorsqu’ils sont ajoutés à un schéma.
 
 ### Ajouter des champs standard {#add-standard-fields}
 
@@ -172,7 +172,17 @@ Commencez à saisir le nom du champ que vous souhaitez ajouter, et le système c
 
 ![Nouveau champ](../../images/ui/resources/schemas/custom-field-search.png)
 
-À partir de là, indiquez un nom d’affichage et un type de données pour le champ. Sous **[!UICONTROL Attribuer un groupe de champs]**, vous devez sélectionner un groupe de champs pour le nouveau champ à associer. Commencez à saisir le nom du groupe de champs, et si vous avez déjà [création de groupes de champs personnalisés](./field-groups.md#create) elles s’affichent dans la liste déroulante. Vous pouvez également saisir un nom unique dans le champ pour créer un groupe de champs à la place.
+Après avoir fourni un nom d’affichage et un type de données pour le champ, l’étape suivante consiste à attribuer le champ à une ressource XDM parente. Si votre schéma utilise une classe personnalisée, vous pouvez choisir de [ajouter le champ à la classe affectée](#add-to-class) ou [groupe de champs](#add-to-field-group) au lieu de . Cependant, si votre schéma utilise une classe standard, vous ne pouvez affecter le champ personnalisé qu’à un groupe de champs.
+
+#### Affecter le champ à un groupe de champs personnalisé {#add-to-field-group}
+
+>[!NOTE]
+>
+>Cette section décrit uniquement comment affecter le champ à un groupe de champs personnalisé. Si vous souhaitez étendre un groupe de champs standard avec le nouveau champ personnalisé à la place, reportez-vous à la section sur [ajout de champs personnalisés aux groupes de champs standard](#custom-fields-for-standard-groups).
+
+Sous **[!UICONTROL Attribuer à]**, sélectionnez **[!UICONTROL Groupe de champs]**. Si votre schéma utilise une classe standard, il s’agit de la seule option disponible et elle est sélectionnée par défaut.
+
+Vous devez ensuite sélectionner un groupe de champs pour le nouveau champ à associer. Commencez à saisir le nom du groupe de champs dans la saisie de texte fournie. Si des groupes de champs personnalisés correspondent à l’entrée, ils s’affichent dans la liste déroulante. Vous pouvez également saisir un nom unique pour créer un groupe de champs.
 
 ![Sélectionner un groupe de champs](../../images/ui/resources/schemas/select-field-group.png)
 
@@ -180,7 +190,7 @@ Commencez à saisir le nom du champ que vous souhaitez ajouter, et le système c
 >
 >Si vous sélectionnez un groupe de champs personnalisé existant, tout autre schéma qui l’emploie héritera également du nouveau champ ajouté après avoir enregistré vos modifications. Pour cette raison, sélectionnez un groupe de champs existant uniquement si vous souhaitez ce type de propagation. Dans le cas contraire, vous devez choisir de créer un groupe de champs personnalisé.
 
-Lorsque vous avez terminé, sélectionnez **[!UICONTROL Appliquer]**.
+Après avoir sélectionné le groupe de champs dans la liste, sélectionnez **[!UICONTROL Appliquer]**.
 
 ![Appliquer le champ](../../images/ui/resources/schemas/apply-field.png)
 
@@ -192,7 +202,21 @@ Le nouveau champ est ajouté à la zone de travail et est un espace de noms sous
 >
 >Les autres champs fournis par le groupe de champs personnalisé sélectionné sont supprimés du schéma par défaut. Si vous souhaitez ajouter certains de ces champs au schéma, sélectionnez un champ appartenant au groupe, puis sélectionnez **[!UICONTROL Gestion des champs associés]** dans le rail de droite.
 
-#### Ajouter des champs personnalisés à la structure des groupes de champs standard {#custom-fields-for-standard-groups}
+#### Affectation du champ à une classe personnalisée {#add-to-class}
+
+Sous **[!UICONTROL Attribuer à]**, sélectionnez **[!UICONTROL Classe]**. Le champ d’entrée ci-dessous est remplacé par le nom de la classe personnalisée du schéma actuel, indiquant que le nouveau champ sera affecté à cette classe.
+
+![Le [!UICONTROL Classe] l’option étant sélectionnée pour la nouvelle affectation de champ.](../../images/ui/resources/schemas/assign-field-to-class.png)
+
+Poursuivez la configuration du champ selon vos besoins et sélectionnez **[!UICONTROL Appliquer]** lorsque vous avez terminé.
+
+![[!UICONTROL Appliquer] sélectionné pour le nouveau champ.](../../images/ui/resources/schemas/assign-field-to-class-apply.png)
+
+Le nouveau champ est ajouté à la zone de travail et est un espace de noms sous votre [identifiant du client](../../api/getting-started.md#know-your-tenant_id) pour éviter les conflits avec les champs XDM standard. Si vous sélectionnez le nom de la classe dans le rail de gauche, le nouveau champ s’affiche dans la structure de la classe.
+
+![Le nouveau champ appliqué à la structure de la classe personnalisée, représenté dans la zone de travail.](../../images/ui/resources/schemas/assign-field-to-class-applied.png)
+
+### Ajouter des champs personnalisés à la structure des groupes de champs standard {#custom-fields-for-standard-groups}
 
 Si le schéma sur lequel vous travaillez comporte un champ de type objet fourni par un groupe de champs standard, vous pouvez ajouter vos propres champs personnalisés à cet objet standard.
 
