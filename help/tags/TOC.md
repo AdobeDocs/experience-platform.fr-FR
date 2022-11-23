@@ -5,9 +5,9 @@ breadcrumb-title: Balises
 user-guide-description: Découvrez comment déployer et gérer des balises d’analyse, de marketing et de publicité pour améliorer les expériences clients.
 feature: Tags
 solution: Data Collection
-source-git-commit: a03ab5086f8f3935425da147f721dec42ced9d00
+source-git-commit: de09106f4446981176ca001f607d540b490de8d1
 workflow-type: tm+mt
-source-wordcount: '419'
+source-wordcount: '420'
 ht-degree: 93%
 
 ---
@@ -106,6 +106,8 @@ ht-degree: 93%
       * Adobe Target v2 {#target-v2}
          * [Présentation](./extensions/web/target-v2/overview.md)
          * [Notes de mise à jour](./extensions/web/target-v2/release-notes.md)
+      * [!DNL AWS] {#aws}
+         * [Présentation](./extensions/web/aws/overview.md)
       * [!DNL BrightCove] suivi vidéo {#brightcove}
          * [Présentation](./extensions/web/brightcove/overview.md)
          * [Notes de mise à jour](./extensions/web/brightcove/release-notes.md)
