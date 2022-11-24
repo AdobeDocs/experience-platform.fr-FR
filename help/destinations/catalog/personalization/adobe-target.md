@@ -3,10 +3,10 @@ keywords: extension target;target
 title: Extension Adobe Target
 description: L’extension Adobe Target est une destination de personnalisation dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 exl-id: 62f8c641-7942-41d5-bd86-681c2c5efa6c
-source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
+source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
 source-wordcount: '477'
-ht-degree: 27%
+ht-degree: 28%
 
 ---
 
@@ -32,7 +32,7 @@ Pour utiliser cette extension, vous devez accéder aux balises dans Adobe Experi
 
 Pour installer l’extension Adobe Target :
 
-Dans le [Interface de Platform](https://platform.adobe.com/), accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Catalogue]**.
+Dans [l’interface de Platform](https://platform.adobe.com/), accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Catalogue]**.
 
 Sélectionnez l’extension dans le catalogue ou utilisez la barre de recherche.
 
@@ -42,7 +42,7 @@ Sélectionnez la propriété de balise dans laquelle vous souhaitez installer l�
 
 Le workflow vous permet d’accéder à l’interface utilisateur de collecte de données pour terminer l’installation.
 
-Pour plus d’informations sur les options de configuration de l’extension, voir la section [Page d’extension Adobe Target](../../../tags/extensions/web/target/overview.md) dans la documentation sur les balises.
+Pour plus d’informations sur les options de configuration de l’extension, voir la section [Page d’extension Adobe Target](../../../tags/extensions/client/target/overview.md) dans la documentation sur les balises.
 
 Vous pouvez également installer l’extension directement dans le [Interface utilisateur de la collecte de données](https://experience.adobe.com/#/data-collection/). Consultez le guide sur la [ajout d’une nouvelle extension](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) pour plus d’informations.
 

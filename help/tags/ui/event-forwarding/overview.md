@@ -3,7 +3,7 @@ title: Présentation du transfert dʼévénements
 description: Découvrez Adobe Experience Platform, qui vous permet dʼutiliser Platform Edge Network afin dʼexécuter des tâches sans modifier votre implémentation de balises.
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: c7344d0ac5b65c6abae6a040304f27dc7cd77cbb
 workflow-type: tm+mt
 source-wordcount: '959'
 ht-degree: 96%
@@ -57,7 +57,7 @@ Toutes les propriétés de transfert d’événement répertorient **[!UICONTROL
 
 ### Extensions {#extensions}
 
-Le transfert d’événement possède son propre catalogue d’extensions compatibles, telles que l’extension [Core](../../extensions/web/core/event-forwarding.md) et l’extension [Adobe Cloud Connector](../../extensions/web/cloud-connector/overview.md). Vous pouvez afficher les extensions disponibles pour les propriétés de transfert d’événement dans l’interface utilisateur en sélectionnant **[!UICONTROL Extensions]** dans le volet de navigation de gauche, suivi de **[!UICONTROL Catalogue]**.
+Le transfert d’événement possède son propre catalogue d’extensions compatibles, telles que l’extension [Core](../../extensions/server/core/overview.md) et l’extension [Adobe Cloud Connector](../../extensions/server/cloud-connector/overview.md). Vous pouvez afficher les extensions disponibles pour les propriétés de transfert d’événement dans l’interface utilisateur en sélectionnant **[!UICONTROL Extensions]** dans le volet de navigation de gauche, suivi de **[!UICONTROL Catalogue]**.
 
 ![Extensions de transfert d’événement dans l’interface utilisateur de la collecte de données](../../images/ui/event-forwarding/overview/extensions.png)
 

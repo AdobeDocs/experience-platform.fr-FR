@@ -3,10 +3,10 @@ Keywords: ECID;ecid
 title: Extension du service Experience Cloud ID
 description: L’extension du service d’ID Experience Cloud est une destination de personnalisation dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 exl-id: 4cc49c14-66ec-43e0-a106-70d9c3646d87
-source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
+source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
 source-wordcount: '462'
-ht-degree: 14%
+ht-degree: 16%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 14%
 
 Cette extension met en oeuvre le [!DNL Experience Cloud] Service d’ID qui identifie les visiteurs sur l’ensemble des [!DNL Experience Cloud] solutions.
 
-[!DNL Experience Cloud] Le service d’ID est une extension de personnalisation de Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, voir [Page d’extension du service d’ID Experience Cloud](../../../tags/extensions/web/id-service/overview.md) dans la documentation sur les balises.
+[!DNL Experience Cloud] Le service d’ID est une extension de personnalisation de Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, voir [Page d’extension du service d’ID Experience Cloud](../../../tags/extensions/client/id-service/overview.md) dans la documentation sur les balises.
 
 Cette destination est une extension de balise. Pour plus d’informations sur le fonctionnement des extensions de balises dans Platform, voir [Présentation des extensions de balise](../launch-extensions/overview.md).
 
@@ -32,7 +32,7 @@ Pour utiliser cette extension, vous devez accéder aux balises dans Platform. Le
 
 Pour installer le [!DNL Experience Cloud] Extension du service d’ID :
 
-Dans le [Interface de Platform](https://platform.adobe.com/), accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Catalogue]**.
+Dans [l’interface de Platform](https://platform.adobe.com/), accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Catalogue]**.
 
 Sélectionnez l’extension dans le catalogue ou utilisez la barre de recherche.
 
@@ -42,7 +42,7 @@ Sélectionnez la propriété de balise dans laquelle vous souhaitez installer l�
 
 Le workflow vous permet d’accéder à l’interface utilisateur de collecte de données pour terminer l’installation.
 
-Pour plus d’informations sur les options de configuration de l’extension et la prise en charge de l’installation, voir [Page d’extension du service d’ID Experience Cloud](../../../tags/extensions/web/id-service/overview.md) dans la documentation sur les balises.
+Pour plus d’informations sur les options de configuration de l’extension et la prise en charge de l’installation, voir [Page d’extension du service d’ID Experience Cloud](../../../tags/extensions/client/id-service/overview.md) dans la documentation sur les balises.
 
 Vous pouvez également installer l’extension directement dans le [Interface utilisateur de la collecte de données](https://experience.adobe.com/#/data-collection/). Consultez le guide sur la [ajout d’une nouvelle extension](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) pour plus d’informations.
 

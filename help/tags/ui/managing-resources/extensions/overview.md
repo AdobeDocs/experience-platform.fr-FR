@@ -2,7 +2,7 @@
 title: Extensions
 description: Découvrez le fonctionnement des extensions de balises dans Adobe Experience Platform.
 exl-id: e911bedd-6c67-4339-91d7-839c8b00c153
-source-git-commit: f7edfa05e25c17f9ace34287c8a2d8426d0f36d4
+source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
 source-wordcount: '497'
 ht-degree: 100%
@@ -53,7 +53,7 @@ La page Extensions propose trois options d’affichage :
 
 Cliquez sur **[!UICONTROL Extensions]** pour afficher toutes les extensions installées. Vous pouvez également utiliser le catalogue pour afficher la liste de toutes les extensions disponibles et les extensions pour lesquelles des mises à jour sont disponibles.
 
-Pour plus dʼinformations sur les extensions développées par Adobe, voir [Référence des extensions](../../../extensions/web/overview.md).
+Pour plus dʼinformations sur les extensions développées par Adobe, voir [Référence des extensions](../../../extensions/client/overview.md).
 
 ## Ajouter une nouvelle extension {#add-a-new-extension}
 
@@ -86,4 +86,4 @@ Placez le pointeur de la souris sur une extension installée et cliquez sur **[!
 >
 >Certaines extensions ne nécessitent pas de configuration et ne proposent pas d’options de configuration.
 
-Chaque extension configurable possède des options uniques. Pour plus dʼinformations sur les options disponibles pour chaque extension Adobe, reportez-vous à la section [Référence des extensions](../../../extensions/web/overview.md).
+Chaque extension configurable possède des options uniques. Pour plus dʼinformations sur les options disponibles pour chaque extension Adobe, reportez-vous à la section [Référence des extensions](../../../extensions/client/overview.md).

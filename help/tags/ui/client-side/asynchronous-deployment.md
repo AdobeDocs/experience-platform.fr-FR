@@ -2,7 +2,7 @@
 title: Déploiement asynchrone
 description: Découvrez comment déployer les bibliothèques de balises d’Adobe Experience Platform de manière asynchrone sur votre site web.
 exl-id: ed117d3a-7370-42aa-9bc9-2a01b8e7794e
-source-git-commit: c314cba6b822e12aa0367e1377ceb4f6c9d07ac2
+source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
 source-wordcount: '1079'
 ht-degree: 94%
@@ -56,7 +56,7 @@ Tout d’abord, puisque le chargement de la bibliothèque peut prendre fin avant
 
 Ensuite, le chargement de la bibliothèque de balises peut se terminer avant ou après que l’événement de navigateur [`DOMContentLoaded`](https://developer.mozilla.org/fr-FR/docs/Web/Events/DOMContentLoaded) (DOM Ready) soit survenu.
 
-Pour ces deux raisons, il est important de montrer comment les types d&#39;événements [Library Loaded (Bibliothèque chargée)](../../extensions/web/core/overview.md#library-loaded-page-top), [Page Bottom (Bas de page)](../../extensions/web/core/overview.md#page-bottom), [DOM Ready (Prêt pour DOM)](../../extensions/web/core/overview.md#page-bottom), et [Window Loaded (Fenêtre chargée)](../../extensions/web/core/overview.md#window-loaded) provenant de l’extension Core fonctionnent lors du chargement asynchrone d’une bibliothèque.
+Pour ces deux raisons, il est important de montrer comment les types d&#39;événements [Library Loaded (Bibliothèque chargée)](../../extensions/client/core/overview.md#library-loaded-page-top), [Page Bottom (Bas de page)](../../extensions/client/core/overview.md#page-bottom), [DOM Ready (Prêt pour DOM)](../../extensions/client/core/overview.md#page-bottom), et [Window Loaded (Fenêtre chargée)](../../extensions/client/core/overview.md#window-loaded) provenant de l’extension Core fonctionnent lors du chargement asynchrone d’une bibliothèque.
 
 Si votre propriété de balise contient les quatre règles suivantes :
 

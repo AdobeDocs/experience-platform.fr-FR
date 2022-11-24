@@ -2,7 +2,7 @@
 title: Règles
 description: Découvrez le fonctionnement des extensions de balises dans Adobe Experience Platform.
 exl-id: 2beca2c9-72b7-4ea0-a166-50a3b8edb9cd
-source-git-commit: 85413e4a8b604dd9111ca4d47ad6a1ec49d8f547
+source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
 source-wordcount: '1973'
 ht-degree: 100%
@@ -41,7 +41,7 @@ Si un événement spécifié se produit, les conditions sont évaluées, puis le
 
 * **Conditions** : circonscrivez l’événement en configurant les conditions qui doivent être vraies pour qu’un événement déclenche la règle. Une exception est définie comme une condition NOT. Plusieurs conditions sont réunies par un opérateur AND.
 
-Les événements disponibles dépendent des extensions installées. Pour plus d’informations sur les événements dans l’extension Core, reportez-vous à [Types d’événements de l’extension Core](../../extensions/web/core/overview.md#core-extension-event-types).
+Les événements disponibles dépendent des extensions installées. Pour plus d’informations sur les événements dans l’extension Core, reportez-vous à [Types d’événements de l’extension Core](../../extensions/client/core/overview.md#core-extension-event-types).
 
 ### Actions (Then)
 

@@ -3,10 +3,10 @@ keywords: extension media analytics;media analytics;extension audio et vidéo
 title: Extension Adobe Media Analytics for Audio and Video
 description: L’extension Adobe Medium Analytics for Audio and Video est une destination d’analyse de Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 exl-id: bf33e3e8-a95b-47e3-a1dc-c8f68f80b080
-source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
+source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
 source-wordcount: '505'
-ht-degree: 26%
+ht-degree: 28%
 
 ---
 
@@ -32,7 +32,7 @@ Pour utiliser cette extension, vous devez accéder aux balises dans Adobe Experi
 
 Pour installer l’extension Adobe Analytics for Video, procédez de la façon suivante :
 
-Dans le [Interface de Platform](https://platform.adobe.com/), accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Catalogue]**.
+Dans [l’interface de Platform](https://platform.adobe.com/), accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Catalogue]**.
 
 Sélectionnez l’extension dans le catalogue ou utilisez la barre de recherche.
 
@@ -42,7 +42,7 @@ Sélectionnez la propriété de balise dans laquelle vous souhaitez installer l�
 
 Le workflow vous permet d’accéder à l’interface utilisateur de collecte de données pour terminer l’installation.
 
-Pour plus d’informations sur les options de configuration de l’extension, voir la section [Page de l’extension Adobe Medium Analytics for Audio and Video](../../../tags/extensions/web/media-analytics/overview.md) dans la documentation sur les balises.
+Pour plus d’informations sur les options de configuration de l’extension, voir la section [Page de l’extension Adobe Medium Analytics for Audio and Video](../../../tags/extensions/client/media-analytics/overview.md) dans la documentation sur les balises.
 
 Vous pouvez également installer l’extension directement dans le [Interface utilisateur de la collecte de données](https://experience.adobe.com/#/data-collection/). Consultez le guide sur la [ajout d’une nouvelle extension](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) pour plus d’informations.
 

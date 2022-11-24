@@ -2,7 +2,7 @@
 title: Guide de démarrage rapide
 description: Découvrez comment vous familiariser rapidement avec les balises dans Adobe Experience Platform.
 exl-id: 490ee344-3b18-4189-9293-2378f86fb10d
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
 source-wordcount: '1527'
 ht-degree: 92%
@@ -53,7 +53,7 @@ Pour plus d’informations sur la création de propriétés, reportez-vous à la
 
 Une extension est une intégration construite par Adobe ou ses partenaires qui ajoute de nouvelles options inépuisables pour les balises que vous pouvez déployer sur vos sites. Si vous considérez une balise comme un système dʼexploitation, les extensions sont les applications que vous installez afin de pouvoir effectuer les actions dont vous avez besoin.
 
-Toutes les nouvelles propriétés sont dotées de l’ [extension Core](../extensions/web/core/overview.md). Les propriétés mobiles sont dotées d’extensions supplémentaires. Lʼextension Core est construite par Adobe afin de fournir un solide ensemble de types dʼéléments de données par défaut pour votre couche de données et de types dʼévénements pour vos règles. La plupart des actions que vous souhaitez effectuer (obtenir un ECID, envoyer des balises [!DNL Adobe Analytics], charger la mbox globale [!DNL Target], etc.) proviennent des extensions que vous installez depuis le catalogue.
+Toutes les nouvelles propriétés sont dotées de l’ [extension Core](../extensions/client/core/overview.md). Les propriétés mobiles sont dotées d’extensions supplémentaires. Lʼextension Core est construite par Adobe afin de fournir un solide ensemble de types dʼéléments de données par défaut pour votre couche de données et de types dʼévénements pour vos règles. La plupart des actions que vous souhaitez effectuer (obtenir un ECID, envoyer des balises [!DNL Adobe Analytics], charger la mbox globale [!DNL Target], etc.) proviennent des extensions que vous installez depuis le catalogue.
 
 Ce qui rend les balises de Platform vraiment uniques, ce sont les extensions que chacun peut construire. Vous souhaitez déposer un pixel de remarketing Facebook sur votre site ? Découvrez l’extension créée par Facebook. Vous souhaitez la même pour Twitter ou LinkedIn ? Utilisez ces extensions. Vous souhaitez réaliser une enquête ? Jetez un œil à Question Pro ou Foresee. Vous souhaitez gérer la confidentialité et le consentement de vos utilisateurs finaux pour les aider avec [!DNL GDPR] ? Allez voir du côté d’Evidon et de Trust Arc. Vous souhaitez avoir des informations granulaires sur le comportement des utilisateurs individuels de votre site ? Clicktale peut vous être utile. Pour plus d’informations, consultez la section sur l’ [ajout d’une nouvelle extension](../ui/managing-resources/extensions/overview.md#add-a-new-extension).
 

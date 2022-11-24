@@ -3,10 +3,10 @@ keywords: extension Analytics;extension analytics;analytics de destination
 title: Extension Adobe Analytics
 description: L’extension Adobe Analytics est une destination d’analyse dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 exl-id: 95b6e079-09a6-4262-bd01-11f155286aa9
-source-git-commit: 468b9309c5184684c0b25c2656a9eef37715af53
+source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
 source-wordcount: '473'
-ht-degree: 20%
+ht-degree: 22%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 20%
 
 Adobe Analytics est une solution de pointe qui vous permet de comprendre vos clients en tant que personnes et d’orienter votre activité grâce aux renseignements sur vos clients.
 
-Adobe Analytics est une extension d’analyse de Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, voir [Présentation de l’extension Adobe Analytics](/help/tags/extensions/web/analytics/overview.md) dans la documentation Balises .
+Adobe Analytics est une extension d’analyse de Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, voir [Présentation de l’extension Adobe Analytics](/help/tags/extensions/client/analytics/overview.md) dans la documentation Balises .
 
 Cette destination est une extension de balise. Pour plus d’informations sur le fonctionnement des extensions de balises dans Platform, voir [Présentation des extensions de balise](../launch-extensions/overview.md).
 
@@ -32,7 +32,7 @@ Pour utiliser cette extension, vous devez accéder aux balises dans Platform. Le
 
 Pour installer l’extension Adobe Analytics :
 
-Dans le [Interface de Platform](https://platform.adobe.com/), accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Catalogue]**.
+Dans [l’interface de Platform](https://platform.adobe.com/), accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Catalogue]**.
 
 Sélectionnez l’extension dans le catalogue ou utilisez la barre de recherche.
 

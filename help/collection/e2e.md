@@ -2,7 +2,7 @@
 title: Présentation complète de la collecte de données
 description: Présentation générale de l’envoi de données d’événement aux solutions Adobe Experience Cloud à l’aide des fonctionnalités de collecte de données Adobe Experience Platform.
 exl-id: 01ddbb19-40bb-4cb5-bfca-b272b88008b3
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
 source-wordcount: '2619'
 ht-degree: 95%
@@ -212,7 +212,7 @@ La page de configuration d’événement s’affiche. Pour configurer un événe
 
 >[!NOTE]
 >
->Pour plus d’informations sur les différents types d’événements fournis par les extensions Web d’Adobe, y compris sur la manière de les configurer, consultez la [référence des extensions d’Adobe](../tags/extensions/web/overview.md) dans la documentation sur les balises.
+>Pour plus d’informations sur les différents types d’événements fournis par les extensions Web d’Adobe, y compris sur la manière de les configurer, consultez la [référence des extensions d’Adobe](../tags/extensions/client/overview.md) dans la documentation sur les balises.
 
 L’événement d’envoi de formulaire vous permet d’utiliser un [sélecteur CSS](https://www.w3schools.com/css/css_selectors.asp) pour référencer un élément spécifique à partir duquel la règle doit se déclencher. Dans l’exemple ci-dessous, l’ID `add-to-cart-form` est utilisé afin que cette règle ne se déclenche que pour le formulaire « Ajouter au panier ». Sélectionnez **[!UICONTROL Conserver les modifications]** pour ajouter l’événement à la règle.
 

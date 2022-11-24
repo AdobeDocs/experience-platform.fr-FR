@@ -2,7 +2,7 @@
 title: Secrets dans l’API Reactor
 description: Découvrez les principes de base de la configuration des secrets dans l’API Reactor en vue d’une utilisation dans le transfert d’événements.
 exl-id: 0298c0cd-9fba-4b54-86db-5d2d8f9ade54
-source-git-commit: 24e79c14268b9eab0e8286eb8cd1352c1dfcd1b6
+source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
 source-wordcount: '1241'
 ht-degree: 87%
@@ -131,7 +131,7 @@ Une fois l’artefact d’échange enregistré dans l’environnement, l’attri
 
 ## Référencer des secrets {#referencing-secrets}
 
-Pour référencer un secret, vous devez créer un élément de données de type « [!UICONTROL Secret] » (fourni par l’extension [[!UICONTROL Core]](../../extensions/web/core/overview.md)) sur une propriété de transfert d’événements. Lors de la configuration de cet élément de données, vous êtes invité à indiquer le secret à utiliser pour chaque environnement. Vous pouvez ensuite créer des règles qui référencent un élément de données secret, comme dans l’en-tête d’un appel HTTP.
+Pour référencer un secret, vous devez créer un élément de données de type « [!UICONTROL Secret] » (fourni par l’extension [[!UICONTROL Core]](../../extensions/client/core/overview.md)) sur une propriété de transfert d’événements. Lors de la configuration de cet élément de données, vous êtes invité à indiquer le secret à utiliser pour chaque environnement. Vous pouvez ensuite créer des règles qui référencent un élément de données secret, comme dans l’en-tête d’un appel HTTP.
 
 ![Élément de données secret](../../images/api/guides/secrets/data-element.png)
 

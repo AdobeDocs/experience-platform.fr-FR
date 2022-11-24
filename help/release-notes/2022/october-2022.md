@@ -2,7 +2,7 @@
 title: Notes de mise à jour d’octobre 2022 d’Adobe Experience Platform
 description: Les notes de mise à jour d’octobre 2022 pour Adobe Experience Platform.
 exl-id: 61ef2472-5e79-433f-9f60-b1245f619b42
-source-git-commit: 184ead059533d2706a5d3fca96dc082248955afe
+source-git-commit: c7344d0ac5b65c6abae6a040304f27dc7cd77cbb
 workflow-type: tm+mt
 source-wordcount: '1352'
 ht-degree: 70%
@@ -38,8 +38,8 @@ Adobe Experience Platform fournit une suite de technologies qui vous permetten
 | Fonctionnalité | Description |
 | --- | --- |
 | Gestion des données sensibles pour les flux de données | Les flux de données exploitent désormais plusieurs technologies Platform pour gérer de manière appropriée les données sensibles selon les applications des réglementations telles que le Health Insurance Portability and Accountability Act (HIPAA). Consultez la section relative à la [gestion des données sensibles dans les flux de données](../../edge/datastreams/overview.md#sensitive) pour plus d’informations. |
-| Extension [!DNL Splunk] pour le transfert d’événement | Vous pouvez désormais envoyer des données à [!DNL Splunk] à l’aide d’une extension de [transfert d’événement](../../tags/ui/event-forwarding/overview.md). Pour plus d’informations, consultez la présentation de l’extension [[!DNL Splunk] ](../../tags/extensions/web/splunk/overview.md). |
-| Extension [!DNL Zendesk] pour le transfert d’événement | Vous pouvez désormais envoyer des données à [!DNL Zendesk] à l’aide d’une extension de [transfert d’événement](../../tags/ui/event-forwarding/overview.md). Pour plus d’informations, consultez la présentation de l’extension [[!DNL Zendesk] ](../../tags/extensions/web/zendesk/overview.md). |
+| Extension [!DNL Splunk] pour le transfert d’événement | Vous pouvez désormais envoyer des données à [!DNL Splunk] à l’aide d’une extension de [transfert d’événement](../../tags/ui/event-forwarding/overview.md). Pour plus d’informations, consultez la présentation de l’extension [[!DNL Splunk] ](../../tags/extensions/server/splunk/overview.md). |
+| Extension [!DNL Zendesk] pour le transfert d’événement | Vous pouvez désormais envoyer des données à [!DNL Zendesk] à l’aide d’une extension de [transfert d’événement](../../tags/ui/event-forwarding/overview.md). Pour plus d’informations, consultez la présentation de l’extension [[!DNL Zendesk] ](../../tags/extensions/server/zendesk/overview.md). |
 
 {style=&quot;table-layout:auto&quot;}
 

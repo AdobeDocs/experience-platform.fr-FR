@@ -3,10 +3,10 @@ keywords: extension du DIL d’Audience Manager;gestionnaire d’audience de des
 title: Extension Audience Manager DIL
 description: L’extension Audience Manager DIL est une destination de plateforme de gestion des données (DMP) dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 exl-id: 7e1099de-0650-4ee2-b746-721afe194097
-source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
+source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
 source-wordcount: '514'
-ht-degree: 21%
+ht-degree: 22%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 21%
 
 Il s’agit de l’extension de la bibliothèque d’intégration des données (mise en œuvre côté client) d’Adobe Audience Manager. Remarque : cette extension n’est pas destinée à être utilisée pour le transfert côté serveur (SSF) des données Adobe Analytics. Pour SSF, utilisez l’extension Adobe Analytics. Important : À partir de la version 8.0, DIL dépend fortement de la variable [!DNL Experience Cloud] Service d’ID, version 3.3 ou ultérieure. Mettez en oeuvre les deux [!DNL Experience Cloud] Service d’ID et DIL pour un accès complet [!DNL Audience Manager] fonctionnalités d’intégration des données.
 
-[!DNL Audience Manager] DIL est une extension de Data Management Platform (DMP) dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, voir [Page d’extension d’Audience Manager](../../../tags/extensions/web/audience-manager/overview.md) dans la documentation sur les balises.
+[!DNL Audience Manager] DIL est une extension de Data Management Platform (DMP) dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, voir [Page d’extension d’Audience Manager](../../../tags/extensions/client/audience-manager/overview.md) dans la documentation sur les balises.
 
 Cette destination est une extension de balise. Pour plus d’informations sur le fonctionnement des extensions dans Platform, voir [Présentation des extensions de balise](../launch-extensions/overview.md).
 
@@ -32,7 +32,7 @@ Pour utiliser cette extension, vous devez accéder aux balises dans Adobe Experi
 
 Pour installer le [!DNL Audience Manager] Extension de DIL :
 
-Dans le [Interface de Platform](https://platform.adobe.com/), accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Catalogue]**.
+Dans [l’interface de Platform](https://platform.adobe.com/), accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Catalogue]**.
 
 Sélectionnez l’extension dans le catalogue ou utilisez la barre de recherche.
 
@@ -42,7 +42,7 @@ Sélectionnez la propriété dans laquelle vous souhaitez installer l’extensio
 
 Le workflow vous guide tout au long des étapes nécessaires pour terminer l’installation.
 
-Pour plus d’informations sur les options de configuration de l’extension, voir la section [Page d’extension d’Audience Manager](../../../tags/extensions/web/audience-manager/overview.md) dans la documentation sur les balises.
+Pour plus d’informations sur les options de configuration de l’extension, voir la section [Page d’extension d’Audience Manager](../../../tags/extensions/client/audience-manager/overview.md) dans la documentation sur les balises.
 
 Vous pouvez également installer l’extension directement dans le [Interface utilisateur de la collecte de données](https://experience.adobe.com/#/data-collection/). Consultez le guide sur la [ajout d’une nouvelle extension](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) pour plus d’informations.
 

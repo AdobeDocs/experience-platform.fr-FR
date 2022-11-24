@@ -2,10 +2,10 @@
 title: Notes de mise à jour relatives aux balises et au transfert d’événements
 description: Dernières notes de mise à jour concernant les balises et le transfert d’événement dans Adobe Experience Platform.
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: 12648469a1e06e316597fa46fb877f947c8ddb92
+source-git-commit: c7344d0ac5b65c6abae6a040304f27dc7cd77cbb
 workflow-type: tm+mt
 source-wordcount: '350'
-ht-degree: 20%
+ht-degree: 30%
 
 ---
 
@@ -13,9 +13,9 @@ ht-degree: 20%
 
 ## 26 octobre 2022
 
-* **Gestion des données sensibles pour les flux de données**: Les flux de données exploitent désormais plusieurs technologies Platform pour gérer de manière appropriée les données sensibles telles qu’elles sont mises en oeuvre par des réglementations telles que la Loi sur la transférabilité et la responsabilité de l’assurance-maladie (HIPAA). Voir la section sur [gestion des données sensibles dans les flux de données](../../edge/datastreams/overview.md#sensitive) pour plus d’informations.
-* **[!DNL Splunk]extension pour le transfert d’événement**: Vous pouvez désormais envoyer des données à [!DNL Splunk] à l’aide d’une [transfert d’événement](../ui/event-forwarding/overview.md) extension . Voir [[!DNL Splunk] présentation de l’extension](../extensions/web/splunk/overview.md) pour plus d’informations.
-* **[!DNL Zendesk]extension pour le transfert d’événement**: Vous pouvez désormais envoyer des données à [!DNL Zendesk] à l’aide d’une [transfert d’événement](../ui/event-forwarding/overview.md) extension . Voir [[!DNL Zendesk] présentation de l’extension](../extensions/web/zendesk/overview.md) pour plus d’informations.
+* **Gestion des données sensibles pour les flux de données**: Les flux de données exploitent désormais plusieurs technologies Platform pour gérer de manière appropriée les données sensibles telles qu’elles sont mises en oeuvre par des réglementations telles que la Loi sur la transférabilité et la responsabilité de l’assurance-maladie (HIPAA). Consultez la section relative à la [gestion des données sensibles dans les flux de données](../../edge/datastreams/overview.md#sensitive) pour plus d’informations.
+* Extension **[!DNL Splunk]pour le transfert d’événement**: Vous pouvez désormais envoyer des données à [!DNL Splunk] à l’aide d’une [transfert d’événement](../ui/event-forwarding/overview.md) extension . Pour plus d’informations, consultez la présentation de l’extension [[!DNL Splunk] ](../extensions/server/splunk/overview.md).
+* Extension **[!DNL Zendesk]pour le transfert d’événement**: Vous pouvez désormais envoyer des données à [!DNL Zendesk] à l’aide d’une [transfert d’événement](../ui/event-forwarding/overview.md) extension . Pour plus d’informations, consultez la présentation de l’extension [[!DNL Zendesk] ](../extensions/server/zendesk/overview.md).
 
 ## 28 septembre 2022
 
@@ -32,6 +32,6 @@ ht-degree: 20%
 
 De nouvelles extensions ont été publiées :
 
-* [Extension de balise de la couche de données Google](../extensions/web/google-data-layer/overview.md): Permet d’utiliser une couche de données Google dans l’implémentation de vos balises.
+* [Extension de balise de la couche de données Google](../extensions/client/google-data-layer/overview.md): Permet d’utiliser une couche de données Google dans l’implémentation de vos balises.
 * [Extension de transfert d’événement Conversions améliorées de Google Ads](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.108630.html): Permet d’améliorer les conversions Google Ads en temps réel.
-* [Extension de transfert d’événement Mailchimp](../extensions/web/mailchimp/overview.md): Envoie des événements à l’API marketing Mailchimp qui peuvent déclencher des courriers électroniques pour des campagnes, des parcours ou des transactions marketing Mailchimp.
+* [Extension de transfert d’événement Mailchimp](../extensions/server/mailchimp/overview.md): Envoie des événements à l’API marketing Mailchimp qui peuvent déclencher des courriers électroniques pour des campagnes, des parcours ou des transactions marketing Mailchimp.
