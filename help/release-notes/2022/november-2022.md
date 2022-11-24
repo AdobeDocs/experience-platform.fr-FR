@@ -1,7 +1,7 @@
 ---
 title: Notes de mise à jour de Adobe Experience Platform, novembre 2022
 description: Les notes de mise à jour de novembre 2022 pour Adobe Experience Platform.
-source-git-commit: 3c78fc1cbfcd00f0fd5facfdf07bbc2757f492fa
+source-git-commit: 9100597c94c21beb9d967f67061e18a9421c6674
 workflow-type: tm+mt
 source-wordcount: '454'
 ht-degree: 78%
@@ -40,7 +40,7 @@ XDM est une spécification Open Source qui fournit des structures et des défini
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Affecter des champs à des classes personnalisées lors de l’ajout direct à un schéma | When [ajout direct d’un champ individuel à un schéma](../../xdm/ui/resources/schemas.md#add-individual-fields), auparavant, vous ne pouviez affecter le champ qu’à un groupe de champs en tant que ressource parente. Désormais, en plus des groupes de champs, vous pouvez : [affecter le champ à une classe personnalisée](../../xdm/ui/resources/schemas.md.md#add-to-class) comme sa ressource parent à la place. |
+| Affecter des champs à des classes personnalisées lors de l’ajout direct à un schéma | When [ajout direct d’un champ individuel à un schéma](../../xdm/ui/resources/schemas.md#add-individual-fields), auparavant, vous ne pouviez affecter le champ qu’à un groupe de champs en tant que ressource parente. Désormais, en plus des groupes de champs, vous pouvez : [affecter le champ à une classe personnalisée](../../xdm/ui/resources/schemas.md#add-to-class) comme sa ressource parent à la place. |
 
 {style=&quot;table-layout:auto&quot;}
 
