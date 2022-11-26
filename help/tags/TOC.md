@@ -5,9 +5,9 @@ breadcrumb-title: Balises
 user-guide-description: Découvrez comment déployer et gérer des balises d’analyse, de marketing et de publicité pour améliorer les expériences clients.
 feature: Tags
 solution: Data Collection
-source-git-commit: ccfc46714069e8c29f1777dea5ba73e318c0a4a6
+source-git-commit: 32662a5586e0b0b0af7ef14ce27022216a76fac5
 workflow-type: tm+mt
-source-wordcount: '954'
+source-wordcount: '967'
 ht-degree: 75%
 
 ---
@@ -155,6 +155,7 @@ ht-degree: 75%
       * [Confidentialité différentielle](https://exchange.adobe.com/apps/ec/104535)
       * [Visionneuses Dynamic Media](https://exchange.adobe.com/apps/ec/103048)
       * [Aide EDDL](https://exchange.adobe.com/apps/ec/107691)
+      * [Facebook Pixel](https://exchange.adobe.com/apps/ec/102804)
       * [Flashtalking OneTag](https://exchange.adobe.com/apps/ec/101392)
       * [ForeSee](https://exchange.adobe.com/apps/ec/100164)
       * [Gainsight PX](https://exchange.adobe.com/apps/ec/103343)
@@ -210,6 +211,7 @@ ht-degree: 75%
          * [Aperçu](./extensions/server/aws/overview.md)
       * Base {#core}
          * [Présentation](./extensions/server/core/overview.md)
+      * [API de conversion facebook](https://exchange.adobe.com/apps/ec/105509)
       * Conversions améliorées de Google Ads {#google-ads-enhanced-conversions}
          * [Présentation](./extensions/server/google-ads-enhanced-conversions/overview.md)
       * [!DNL Mailchimp] Edge {#mailchimp}
