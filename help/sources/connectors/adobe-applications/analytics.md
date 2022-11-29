@@ -3,10 +3,10 @@ keywords: Experience Platform;accueil;rubriques populaires;Connecteur source Ana
 title: Connecteur source Adobe Analytics pour les données d’une suite de rapports
 description: Ce document présente Analytics et décrit les cas d’utilisation des données Analytics.
 exl-id: c4887784-be12-40d4-83bf-94b31eccdc2e
-source-git-commit: fd114a418668436efa17edb00f2849a10f2c8cd6
+source-git-commit: d94bbbd34b116f10098624d565c1ae285fc0461e
 workflow-type: tm+mt
-source-wordcount: '997'
-ht-degree: 21%
+source-wordcount: '1014'
+ht-degree: 19%
 
 ---
 
@@ -49,7 +49,9 @@ Le tableau ci-dessous décrit la latence attendue des données Analytics sur Pla
 | Nouvelles données pour [!DNL Real-time Customer Profile] (A4T) **not** enabled) | &lt; 2 minutes |
 | Nouvelles données pour [!DNL Real-time Customer Profile] (A4T) **is** enabled) | &lt; 15 minutes |
 | Nouvelles données pour le lac de données | &lt; 90 minutes |
-| Renvoi des données (13 mois de données ou 10 milliards d’événements, selon la valeur la plus faible) | &lt; 4 semaines |
+| Renvoi de moins de 10 milliards d’événements | &lt; 4 semaines |
+
+Le renvoi d’Analytics est défini par défaut sur 13 mois. La limite de 10 milliards d&#39;événements mentionnée dans le tableau ci-dessus est strictement en ce qui concerne la latence attendue.
 
 >[!NOTE]
 >
