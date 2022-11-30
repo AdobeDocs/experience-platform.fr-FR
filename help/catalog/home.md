@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform;accueil;rubriques populaires;service de catalogue;catalogue;Service de catalogue;emplacement des données;Emplacement des données;Gestion des données;gestion des données;Parenté;parenté;Catalogue;activer le jeu de données
 solution: Experience Platform
-title: Présentation du service de catalogue
+title: Présentation de Catalog service
 topic-legacy: overview
-description: Le service de catalogue constitue le système d’enregistrement de l’emplacement et de la liaison des données dans Adobe Experience Platform. Bien que toutes les données ingérées dans Experience Platform soient stockées dans le lac de données sous forme de fichiers et de répertoires, le catalogue renferme les métadonnées et la description de ces fichiers et répertoires à des fins de recherche et de surveillance.
+description: Le Catalog Service est le système d’enregistrement pour l’emplacement et la parenté des données au sein d’Adobe Experience Platform. Bien que toutes les données ingérées dans Experience Platform soient stockées dans le lac de données sous forme de fichiers et de répertoires, le catalogue renferme les métadonnées et la description de ces fichiers et répertoires à des fins de recherche et de surveillance.
 exl-id: ef0c173b-607b-41b8-8676-c54ae9472e23
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '805'
 ht-degree: 100%
 
 ---
 
-# Présentation d’[!DNL Catalog Service]
+# Présentation de [!DNL Catalog Service]
 
 Le [!DNL Catalog Service] est le système d’enregistrement pour l’emplacement et la parenté des données au sein d’Adobe Experience Platform. Bien que toutes les données ingérées dans [!DNL Experience Platform] soient stockées dans le [!DNL Data Lake] sous forme de fichiers et de répertoires, le [!DNL Catalog] renferme les métadonnées et la description de ces fichiers et répertoires à des fins de recherche et de surveillance.
 
@@ -48,7 +48,7 @@ Pour plus d’informations, consultez la [Présentation de l’ingestion de donn
 
 ## Objets du [!DNL Catalog]
 
-Comme indiqué dans la section précédente, le [!DNL Catalog] réalise le suivi des métadonnées pour plusieurs types de ressources et d’opérations utilisées par d’autres services [!DNL Platform]. Le [!DNL Catalog] conserve sa propre banque d’« objets » contenant ces métadonnées. [!DNL Catalog]Les objets sont des représentations interrogeables des [!DNL Platform] données de qui vous permettent de rechercher, surveiller et étiqueter vos données sans avoir à accéder aux données elles-mêmes.
+Comme indiqué dans la section précédente, le [!DNL Catalog] réalise le suivi des métadonnées pour plusieurs types de ressources et d’opérations utilisées par d’autres services [!DNL Platform]. Le [!DNL Catalog] conserve sa propre banque d’« objets » contenant ces métadonnées. Les objets du [!DNL Catalog] sont des représentations interrogeables des [!DNL Platform] données de qui vous permettent de rechercher, surveiller et étiqueter vos données sans avoir à accéder aux données elles-mêmes.
 
 Le tableau suivant décrit les différents types d’objets pris en charge par le [!DNL Catalog] :
 
