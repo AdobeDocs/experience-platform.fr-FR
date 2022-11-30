@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;accueil;rubriques les plus consultées;connexion en continu;créer une connexion en continu;guide d’api;tutoriel;créer une connexion en continu;ingestion en continu;ingestion ;
-title: Création d’une connexion en continu d’API HTTP à l’aide de l’API
-description: Ce tutoriel vous aidera à commencer à utiliser les API d’ingestion par flux, qui font partie des API d’Adobe Experience Platform Data Ingestion Service.
+title: Création d’une connexion en continu d’API HTTP à l’aide de l’API Flow Service
+description: Ce tutoriel explique comment créer une connexion en continu à l’aide de la source d’API HTTP pour les données brutes et XDM à l’aide de l’API Flow Service.
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-source-git-commit: d4889a302edbcdbe3f4a969a616c2fbc52f6c556
+source-git-commit: 26c967418e983322cc39aa799a681d258638d769
 workflow-type: tm+mt
-source-wordcount: '1415'
-ht-degree: 44%
+source-wordcount: '1424'
+ht-degree: 42%
 
 ---
 
@@ -259,10 +259,10 @@ Une réponse réussie renvoie un état HTTP 200 avec des informations détaill�
       "createdBy": "acme@AdobeID",
       "updatedBy": "acme@AdobeID",
       "createdClient": "{CREATED_CLIENT}",
-      "updatedClient": "{UPDATEDD_CLIENT}",
+      "updatedClient": "{UPDATED_CLIENT}",
       "sandboxId": "{SANDBOX_ID}",
       "sandboxName": "{SANDBOX_NAME}",
-      "imsOrgId": "{ORG_ID}}",
+      "imsOrgId": "{ORG_ID}",
       "name": "ACME Streaming Connection XDM Data",
       "description": "ACME streaming connection for customer data",
       "connectionSpec": {
