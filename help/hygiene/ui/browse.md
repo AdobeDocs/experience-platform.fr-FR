@@ -2,10 +2,10 @@
 title: Parcourir les ordres de travail relatifs au nettoyage de données
 description: Découvrez comment afficher et gérer les ordres de travail de nettoyage de données existants dans l’interface utilisateur d’Adobe Experience Platform.
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
-source-git-commit: 4a6532bbd7a378e44e7c6139330420c0363a54af
+source-git-commit: 70a2abcc4d6e27a89e77d68e7757e4876eaa4fc0
 workflow-type: tm+mt
 source-wordcount: '868'
-ht-degree: 95%
+ht-degree: 84%
 
 ---
 
@@ -31,7 +31,7 @@ Lorsque vous accédez pour la première fois à l’espace de travail **[!UICONT
 
 ![Image illustrant l’espace de travail [!UICONTROL Nettoyage de données] dans l’interface utilisateur de Platform](../images/ui/browse/work-order-list.png).
 
-La liste affiche uniquement les ordres de travail d’une catégorie à la fois. Sélectionnez **[!UICONTROL Consommateur]** pour afficher la liste des tâches de suppression des consommateurs, et **[!UICONTROL Jeu de données]** pour afficher une liste des expirations de jeux de données planifiées.
+La liste affiche uniquement les ordres de travail d’une catégorie à la fois. Sélectionner **[!UICONTROL Consommateur]** pour afficher la liste des tâches de suppression d’enregistrement, et **[!UICONTROL Jeu de données]** pour afficher une liste des expirations de jeux de données planifiées.
 
 ![Image illustrant l’onglet [!UICONTROL Jeu de données]](../images/ui/browse/dataset-tab.png).
 
@@ -41,9 +41,9 @@ Sélectionnez l’icône d’entonnoir (![image de l’icône d’entonnoir](../
 
 Selon le type d’ordre de travail que vous consultez, différentes options de filtre sont disponibles.
 
-### Filtres pour les suppressions de consommateurs
+### Filtres pour les suppressions d’enregistrement
 
-Les filtres suivants s’appliquent aux requêtes de suppression des consommateurs :
+Les filtres suivants s’appliquent aux demandes de suppression d’enregistrement :
 
 | Filtre | Description |
 | --- | --- |
@@ -78,8 +78,8 @@ Les filtres suivants s’appliquent aux requêtes d’expiration de jeu de donn�
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_responsemessages"
->title="Réponse de suppression du client"
->abstract="Lorsqu’un processus de suppression d’un consommateur reçoit une réponse du système, ces messages s’affichent sous la section **[!UICONTROL Résultat]**. Si un problème se produit alors qu’un ordre de travail est en cours de traitement, tous les messages d’erreur pertinents s’affichent dans cette section pour vous aider à résoudre le problème. Pour en savoir plus, consultez le guide de l’interface utilisateur de l’hygiène de données."
+>title="Réponse de suppression des enregistrements"
+>abstract="Lorsqu’un processus de suppression d’enregistrement reçoit une réponse du système, ces messages s’affichent sous le **[!UICONTROL Résultat]** . Si un problème se produit alors qu’un ordre de travail est en cours de traitement, tous les messages d’erreur pertinents s’affichent dans cette section pour vous aider à résoudre le problème. Pour en savoir plus, consultez le guide de l’interface utilisateur de l’hygiène de données."
 
 Sélectionnez l’identifiant d’un ordre de travail répertorié pour en afficher les détails.
 
@@ -87,11 +87,11 @@ Sélectionnez l’identifiant d’un ordre de travail répertorié pour en affic
 
 Différentes informations et commandes sont fournies en fonction du type d’ordre de travail sélectionné. Elles sont décrites dans les sections ci-dessous.
 
-### Détails de suppression de client {#consumer-delete}
+### Détails de suppression des enregistrements {#record-delete}
 
-Les détails d’une requête de suppression de consommateur incluent son statut actuel et le temps écoulé depuis que la requête a été effectuée. Chaque requête comprend également une section **[!UICONTROL Statut par service]** qui fournit des détails de statuts individuels sur chaque service en aval impliqué dans la suppression. Sur le rail de droite, vous pouvez utiliser des contrôles pour mettre à jour le nom et la description de l’ordre de travail.
+Les détails d’une requête de suppression d’enregistrement incluent son état actuel et le temps écoulé depuis que la requête a été effectuée. Chaque requête comprend également une section **[!UICONTROL Statut par service]** qui fournit des détails de statuts individuels sur chaque service en aval impliqué dans la suppression. Sur le rail de droite, vous pouvez utiliser des contrôles pour mettre à jour le nom et la description de l’ordre de travail.
 
-![Image illustrant la page de détails d’un ordre de travail de suppression de consommateur](../images/ui/browse/consumer-delete-details.png).
+![Image montrant la page de détails d’un ordre de travail de suppression d’enregistrement](../images/ui/browse/record-delete-details.png)
 
 ### Détails sur l’expiration du jeu de données {#dataset-expiration}
 
@@ -104,4 +104,4 @@ La page de détails d’une expiration de jeu de données fournit des informatio
 Ce guide explique comment afficher et gérer les ordres de travail de nettoyage de données existants dans l’interface utilisateur de Platform. Pour plus d’informations sur la création de vos propres ordres de travail, consultez la documentation suivante :
 
 * [Gérer des expirations de jeux de données](./dataset-expiration.md)
-* [Gérer les suppressions de consommateurs](./delete-consumer.md)
+* [Gérer les suppressions d’enregistrement](./record-delete.md)

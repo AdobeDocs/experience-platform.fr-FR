@@ -2,10 +2,10 @@
 title: Présentation de l’hygiène de données
 description: Le nettoyage de données d’Adobe Experience Platform vous permet de gérer le cycle de vie des données en mettant à jour ou en purgeant des enregistrements obsolètes ou inexacts.
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
-source-git-commit: 7679de9d30c00873b279c5315aa652870d8c34fd
+source-git-commit: 70a2abcc4d6e27a89e77d68e7757e4876eaa4fc0
 workflow-type: tm+mt
 source-wordcount: '886'
-ht-degree: 79%
+ht-degree: 72%
 
 ---
 
@@ -17,14 +17,14 @@ ht-degree: 79%
 
 Adobe Experience Platform offre un ensemble d’outils fiables pour gérer des opérations de données complexes et volumineuses afin d’orchestrer les expériences client. Les données étant ingérées dans le système au fil du temps, il devient de plus en plus important de gérer les banques de données pour que les données soient utilisées comme prévu, mises à jour lorsque des données incorrectes doivent être corrigées et supprimées lorsque les politiques d’entreprise le jugent nécessaire.
 
-Les fonctionnalités d’hygiène des données de Platform vous permettent d’effectuer la gestion de vos données client stockées, et ce par les moyens suivants :
+Les fonctionnalités d’hygiène des données de Platform vous permettent de gérer vos données stockées par le biais des éléments suivants :
 
 * Planifier l’expiration automatisée des jeux de données
-* Suppression de données client individuelles de vos enregistrements
+* Suppression d’enregistrements individuels d’un ou de tous les jeux de données
 
 >[!IMPORTANT]
 >
->Les suppressions par les consommateurs sont destinées à être utilisées pour la normalisation des données, la suppression des données anonymes ou la minimisation des données. Ils sont **not** à utiliser pour les demandes de droits des titulaires de données (conformité) en ce qui concerne les réglementations de confidentialité comme le Règlement général sur la protection des données (RGPD). Pour tous les cas d’utilisation de conformité, utilisez [Adobe Experience Platform Privacy Service](../privacy-service/home.md) au lieu de .
+>Les suppressions d’enregistrements sont destinées à être utilisées pour la normalisation des données, la suppression des données anonymes ou la minimisation des données. Ils sont **not** à utiliser pour les demandes de droits des titulaires de données (conformité) en ce qui concerne les réglementations de confidentialité comme le Règlement général sur la protection des données (RGPD). Pour tous les cas d’utilisation de conformité, utilisez [Adobe Experience Platform Privacy Service](../privacy-service/home.md) au lieu de .
 
 Ces activités peuvent être exécutées à l’aide de l’espace de travail de l’interface utilisateur [[!UICONTROL Hygiène des données]](#ui) ou de l’[API Data Hygiene](#api). Lorsqu’une tâche d’hygiène des données s’exécute, le système fournit des mises à jour de transparence à chaque étape du processus. Pour plus d’informations sur la représentation de chaque type de traitement dans le système, consultez la section sur [la chronologie et la transparence](#timelines-and-transparency).
 
@@ -40,7 +40,7 @@ L’interface utilisateur [!UICONTROL Nettoyage de données] repose sur l’API 
 
 ## Chronologie et transparence
 
-Les requêtes de suppression de consommateurs et d’expiration de jeu de données disposent chacune de leur propre chronologie de traitement et fournissent des mises à jour de transparence à des points clés de leurs workflows respectifs. Reportez-vous aux sections ci-dessous pour plus d’informations sur chaque type de traitement.
+Les demandes de suppression et d’expiration de jeux de données d’enregistrement ont chacune leur propre chronologie de traitement et fournissent des mises à jour de transparence à des points clés de leurs workflows respectifs. Reportez-vous aux sections ci-dessous pour plus d’informations sur chaque type de traitement.
 
 ### Expirations de jeux de données {#dataset-expiration-transparency}
 
@@ -57,17 +57,17 @@ Ce qui suit se produit lorsqu’une [requête d’expiration de jeu de données]
 
 {style=&quot;table-layout:auto&quot;}
 
-### Suppressions de consommateurs {#consumer-delete-transparency}
+### Suppressions d’enregistrements {#record-delete-transparency}
 
 >[!IMPORTANT]
 >
->Les suppressions des consommateurs ne sont disponibles que pour les organisations qui ont acheté Adobe Healthcare Shield.
+>Les suppressions de dossiers ne sont disponibles que pour les organisations qui ont acheté Adobe Healthcare Shield.
 
-Ce qui suit se produit lorsqu’une [requête de suppression de consommateurs](./ui/delete-consumer.md) est créée :
+Ce qui suit se produit lorsqu’une [requête de suppression d’enregistrement](./ui/record-delete.md) est créé :
 
 | Étape | Durée après soumission de la requête | Description |
 | --- | --- | --- |
-| La requête a été soumise | 0 heure | Un gestionnaire de données ou un analyste de la confidentialité soumet une requête de suppression de consommateurs. La requête est visible dans l’[!UICONTROL interface utilisateur de l’hygiène des données] après avoir été soumise. |
+| La requête a été soumise | 0 heure | Un gestionnaire de données ou un analyste de la confidentialité envoie une demande de suppression d’enregistrement. La requête est visible dans l’[!UICONTROL interface utilisateur de l’hygiène des données] après avoir été soumise. |
 | Mises à jour des recherches de profil | 3 heures | Les modifications du nombre de profils provoquées par l’identité supprimée sont appliquées dans les [widgets de tableau de bord](../dashboards/guides/profiles.md#profile-count-trend) et d’autres rapports. |
 | Segments mis à jour | 24 heures | Une fois les profils supprimés, tous les [segments](../segmentation/home.md) connexes sont mis à jour pour refléter leur nouvelle taille. |
 | Destinations et parcours mis à jour | 26 heures | [Campagnes](https://experienceleague.adobe.com/docs/journey-optimizer/using/campaigns/get-started-with-campaigns.html), [destinations](../destinations/home.md) et [parcours](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journeys/journey.html) sont mis à jour en fonction des modifications apportées aux segments connexes. |

@@ -2,10 +2,10 @@
 title: Guide de l’interface utilisateur de nettoyage de données
 description: Découvrez comment gérer les tâches de nettoyage de données dans l’interface utilisateur d’Adobe Experience Platform.
 exl-id: 7199151a-5390-4150-8a1d-daf53b7a1f5b
-source-git-commit: 762cd5eb33706a942f5df91005e4ae9157bb6af8
-workflow-type: ht
-source-wordcount: '217'
-ht-degree: 100%
+source-git-commit: 70a2abcc4d6e27a89e77d68e7757e4876eaa4fc0
+workflow-type: tm+mt
+source-wordcount: '216'
+ht-degree: 78%
 
 ---
 
@@ -14,14 +14,14 @@ ht-degree: 100%
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_privacyconsole_consumer"
 >title="Roue d’hygiène des données"
->abstract="Ce widget affiche le statut des tâches de suppression des clients de l’hygiène des données pour le délai sélectionnée. Pour plus d’informations sur vos processus d’hygiène des données, sélectionnez **Hygiène des données** dans le volet de navigation de gauche."
+>abstract="Ce widget affiche l’état des tâches de suppression d’enregistrement de l’hygiène des données pour la période sélectionnée. Pour plus d’informations sur vos processus d’hygiène des données, sélectionnez **Hygiène des données** dans le volet de navigation de gauche."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_privacyconsole_recents"
 >title="Parcourir les ordres de travail d’hygiène des données"
 >abstract="Ce widget affiche les cinq derniers ordres de travail d’hygiène des données créés ou mis à jour, selon l’option sélectionnée en haut à droite. Pour plus d’informations sur vos processus d’hygiène des données, sélectionnez **Hygiène des données** dans le volet de navigation de gauche."
 
-L’espace de travail **[!UICONTROL Nettoyage des données]** dans l’interface utilisateur d’Adobe Experience Platform vous permet de créer et de surveiller diverses tâches de nettoyage de données, notamment la suppression des identités des clients et la planification des expirations de jeux de données.
+Le **[!UICONTROL Hygiène des données]** workspace de l’interface utilisateur de Adobe Experience Platform vous permet de créer et de surveiller diverses tâches d’hygiène des données, notamment la suppression d’enregistrements et la planification de l’expiration des jeux de données.
 
 Ce guide explique comment gérer les tâches de nettoyage de données dans l’interface utilisateur de Platform. Pour plus d’informations sur l’exécution de ces tâches à l’aide d’appels API, consultez le [Guide de l’API Data Hygiene](../api/overview.md).
 
@@ -33,4 +33,4 @@ Ensuite, vous pouvez parcourir les ordres de travail existants et configurer de 
 
 * [Parcourir les ordres de travail existants](./browse.md)
 * [Créer une requête d’expiration de jeu de données](./dataset-expiration.md)
-* [Créer une requête de suppression de consommateurs](./delete-consumer.md)
+* [Création d’une requête de suppression d’enregistrement](./record-delete.md)

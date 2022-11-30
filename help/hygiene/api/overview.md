@@ -2,10 +2,10 @@
 title: Guide de l’API Data Hygiene
 description: Découvrez comment corriger ou supprimer par programmation les données personnelles des clients stockées dans Adobe Experience Platform.
 exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
-source-git-commit: 7679de9d30c00873b279c5315aa652870d8c34fd
+source-git-commit: da8b5d9fffdf8a176a4d70be5df5b3021cf0df7b
 workflow-type: tm+mt
-source-wordcount: '471'
-ht-degree: 80%
+source-wordcount: '469'
+ht-degree: 69%
 
 ---
 
@@ -43,16 +43,16 @@ Ce document fournit un exemple d’appel API pour illustrer la manière dont vou
 
 Une expiration de jeu de données correspond à une action « supprimer un jeu de données » différée. En créant une expiration de jeu de données, vous spécifiez une heure ultérieure à laquelle ce jeu de données doit être supprimé. Consultez le [Guide de point d’entrée d’expiration de jeux de données](./dataset-expiration.md) pour plus d’informations sur la planification des expirations de jeux de données dans l’API.
 
-## Suppressions de consommateurs
+## Suppressions d’enregistrements
 
 >[!IMPORTANT]
 >
->Les demandes de suppression de clients ne sont disponibles que pour les organisations qui ont acheté **Adobe Health Care Shield**.
+>Les demandes de suppression d’enregistrement ne sont disponibles que pour les organisations qui ont acheté **Adobe Health Care Shield**.
 >
 >
->Les suppressions par les consommateurs sont destinées à être utilisées pour la normalisation des données, la suppression des données anonymes ou la minimisation des données. Ils sont **not** à utiliser pour les demandes de droits des titulaires de données (conformité) en ce qui concerne les réglementations de confidentialité comme le Règlement général sur la protection des données (RGPD). Pour tous les cas d’utilisation de conformité, utilisez [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) au lieu de .
+>Les suppressions d’enregistrements sont destinées à être utilisées pour la normalisation des données, la suppression des données anonymes ou la minimisation des données. Ils sont **not** à utiliser pour les demandes de droits des titulaires de données (conformité) en ce qui concerne les réglementations de confidentialité comme le Règlement général sur la protection des données (RGPD). Pour tous les cas d’utilisation de conformité, utilisez [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) au lieu de .
 
-L’API Data Hygiene vous permet de supprimer tous les enregistrements associés à une identité de consommateur dans un ou tous les jeux de données. Toutes les tâches d’hygiène des données qui suppriment les identités des consommateurs sont représentées par un concept appelé ordre de travail. Consultez le [guide de point d’entrée d’ordre de travail](./workorder.md) pour plus d’informations sur l’utilisation des suppressions de consommateurs dans l’API.
+L’API Data Hygiene vous permet de supprimer tous les enregistrements associés à une identité dans un ou tous les jeux de données. Toutes les tâches d’hygiène des données qui suppriment les identités sont représentées par un concept appelé ordre de travail. Voir [guide de point de terminaison des commandes de travail](./workorder.md) pour plus d’informations sur l’utilisation des suppressions d’enregistrement dans l’API.
 
 ## Quota
 

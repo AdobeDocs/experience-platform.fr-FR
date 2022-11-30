@@ -1,10 +1,10 @@
 ---
 title: Présentation de la console de confidentialité
 description: Découvrez comment surveiller vos workflows liés à la confidentialité dans l’interface utilisateur de Adobe Experience Platform.
-source-git-commit: 4fa1b826d033ace6536af920b070e8eebbbf401c
+source-git-commit: 1fac36a0fd767add92283cd256d8bcea783ecf3b
 workflow-type: tm+mt
 source-wordcount: '406'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
@@ -32,7 +32,7 @@ La fonction de chaque widget est expliquée ci-dessous :
 
 | Nom du widget | Description |
 | --- | --- |
-| Statut de l’ordre de travail relatif à l’hygiène des données | Affiche les états des processus de suppression des consommateurs sous [Hygiène des données](../../hygiene/home.md) pour la période sélectionnée. Utilisez le menu déroulant pour modifier la période entre les 7 derniers jours, 14 et 30 jours. |
+| Statut de l’ordre de travail relatif à l’hygiène des données | Affiche les états des processus de suppression d’enregistrement sous [Hygiène des données](../../hygiene/home.md) pour la période sélectionnée. Utilisez le menu déroulant pour modifier la période entre les 7 derniers jours, 14 et 30 jours. |
 | Instructions d’hygiène des données récentes | Affiche la plus récente [Hygiène des données](../../hygiene/home.md) les ordres de travail en cours de traitement par le système. Utilisez la liste déroulante pour basculer entre les ordres de travail récemment créés et les ordres de travail récemment mis à jour. |
 | Actions les plus fréquentes | Affiche les actions les plus fréquentes sur Platform telles qu’elles sont capturées par [journaux d’audit](./audit-logs/overview.md) pour la période sélectionnée. Utilisez le menu déroulant pour modifier la période entre les 7 derniers jours, 14 et 30 jours. |
 | Les utilisateurs les plus principaux | Affiche les utilisateurs de Platform les plus principaux de votre entreprise, tels qu’ils ont été capturés par [journaux d’audit](./audit-logs/overview.md) pour la période sélectionnée. Utilisez le menu déroulant pour modifier la période entre les 7 derniers jours, 14 et 30 jours. |

@@ -1,21 +1,21 @@
 ---
-title: Supprimer des enregistrements de consommateurs à l’aide de l’API Data Hygiene
+title: Suppression d’enregistrements à l’aide de l’API Data Hygiene
 description: Découvrez comment corriger ou supprimer par programmation les données personnelles des clients stockées dans Adobe Experience Platform.
 hide: true
 hidefromtoc: true
 exl-id: d80a4be3-e072-4bb4-a56d-b34a20f88c78
-source-git-commit: c2ff0d5806e57f230b937e8754d40031fb4b2305
-workflow-type: ht
-source-wordcount: '504'
-ht-degree: 100%
+source-git-commit: da8b5d9fffdf8a176a4d70be5df5b3021cf0df7b
+workflow-type: tm+mt
+source-wordcount: '502'
+ht-degree: 95%
 
 ---
 
-# Supprimer des enregistrements de consommateurs à l’aide de l’API Data Hygiene
+# Suppression d’enregistrements à l’aide de l’API Data Hygiene
 
 >[!IMPORTANT]
 >
->Ce point d’entrée représente la fonctionnalité bêta pour les suppressions de consommateurs. Pour connaître les dernières fonctionnalités, veuillez utiliser le [`/workorder`point d’entrée](./workorder.md) à la place.
+>Ce point de terminaison représente la fonctionnalité bêta pour les suppressions d’enregistrements. Pour connaître les dernières fonctionnalités, veuillez utiliser le [`/workorder`point d’entrée](./workorder.md) à la place.
 
 L’API Data Hygiene vous permet de corriger ou de supprimer par programmation les données personnelles de vos clients stockées dans Adobe Experience Platform.
 
