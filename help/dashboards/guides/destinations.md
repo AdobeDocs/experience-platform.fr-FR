@@ -4,10 +4,10 @@ title: Guide du tableau de bord des destinations
 description: Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur les destinations principales de votre entreprise.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: fdfc2a2b0f1f5be0508741de0e70ad72fe07d79f
+source-git-commit: 66e8d3c594280d4b40cb2b6170544d4411220a6a
 workflow-type: tm+mt
-source-wordcount: '2828'
-ht-degree: 4%
+source-wordcount: '3031'
+ht-degree: 3%
 
 ---
 
@@ -54,6 +54,16 @@ Dans la bibliothèque de widgets, vous pouvez parcourir la sélection de widgets
 ## Widgets standard {#standard-widgets}
 
 Adobe fournit plusieurs widgets standard que vous pouvez utiliser pour visualiser différentes mesures liées à vos destinations et évaluer l’exhaustivité des segments disponibles pour votre analyse des données. Vous pouvez également créer des widgets personnalisés à partager avec votre organisation à l’aide de la variable [!UICONTROL Bibliothèque de widgets]. Pour en savoir plus sur la création de widgets personnalisés, commencez par lire le [Présentation de la bibliothèque de widgets](../customize/widget-library.md).
+
+### Conditions préalables {#prerequisites}
+
+Avant de poursuivre avec les descriptions des widgets standard, assurez-vous de bien connaître les définitions des termes clés suivants utilisés dans toute la documentation :
+
+* **Segment :** Un segment est **ensemble de règles** qui incluent des attributs et des données d’événement qui qualifient un certain nombre de profils en tant qu’audience.
+* **Audience**: Une audience est **l’ensemble des profils** qui répondent aux critères d’une définition de segment.
+* **Mappé/Mappage**: Le mappage des données est le processus de mappage des champs de données sources aux champs cibles associés dans une destination.
+* **Identité**: Une identité est un identifiant qui représente de manière unique un client individuel, tel qu’un identifiant de cookie, un identifiant d’appareil ou un identifiant de courrier électronique.
+* **Activer**: Activer est l’action entreprise par un utilisateur pour mapper un segment ou des profils à une destination telle que l’Oracle Eloqua, Google ou le Marketing Cloud Salesforce.
 
 Pour en savoir plus sur chacun des widgets standard disponibles, sélectionnez le nom d’un widget dans la liste suivante :
 
@@ -139,6 +149,8 @@ Vous pouvez afficher les détails d’un segment en le sélectionnant dans la li
 
 ![Le widget Segments récemment activés par destination .](../images/destinations/recently-activated-segments-by-destination.png)
 
+Consultez la section Conditions préalables pour [définitions des termes utilisés](#prerequisites) dans cette description.
+
 ### [!UICONTROL Tendance de la taille de l’audience] {#audience-size-trend}
 
 >[!CONTEXTUALHELP]
@@ -172,6 +184,8 @@ La liste déroulante Identifiant de destination filtre vos segments disponibles.
 La colonne Identités comptabilise le nombre d’identifiants source dans le segment qui peuvent correspondre à l’identifiant choisi dans la liste déroulante Identifiant du widget.
 
 ![Le widget Segments non mappés par identité .](../images/destinations/unmapped-segments-by-identity.png)
+
+Consultez la section Conditions préalables pour [définitions des termes utilisés](#prerequisites) dans cette description.
 
 ### [!UICONTROL Segments mappés par identité] {#mapped-segments-by-identity}
 
@@ -259,11 +273,13 @@ Le widget fournit un tableau à deux colonnes qui répertorie les principales pl
 
 ### [!UICONTROL Audiences activées sur toutes les destinations] {#activated-audiences-across-all-destinations}
 
-Le [!UICONTROL Audiences activées sur toutes les destinations] fournit le nombre total d’audiences activées sur toutes les destinations dans une seule mesure. Ce nombre est précis par rapport à l’instantané le plus récent.
+Le [!UICONTROL Audiences activées sur toutes les destinations] fournit le nombre total d’audiences activées sur toutes les destinations dans une seule mesure. Ce widget affiche le nombre d’audiences et non le nombre de segments. Ce nombre est précis par rapport à l’instantané le plus récent.
 
 ![Le widget Audiences activées sur toutes les destinations .](../images/destinations/activated-audiences-across-all-destinations.png)
 
-Sélectionner **[!UICONTROL Audiences]** pour accéder aux destinations [!UICONTROL Parcourir] . Cette page fournit une liste de toutes les destinations activées et diverses mesures pertinentes. Consultez la documentation pour [en savoir plus sur la [!UICONTROL Parcourir] tab](../../destinations/ui/destinations-workspace.md#browse).
+Sélectionner **[!UICONTROL Audiences]** pour accéder aux destinations [!UICONTROL Parcourir] . Cette page fournit une liste de toutes les destinations activées et diverses mesures pertinentes. Pour plus d’informations sur la variable [[!UICONTROL Parcourir] tab](../../destinations/ui/destinations-workspace.md#browse).
+
+Consultez la section Conditions préalables pour [définitions des termes utilisés](#prerequisites) dans cette description.
 
 ### [!UICONTROL Audiences activées] {#activated-audiences}
 
@@ -276,6 +292,8 @@ Sélectionner **[!UICONTROL Audiences]** pour accéder à la page de détails du
 ![La page de détails du tableau de bord des destinations avec l’onglet Données d’activation en surbrillance.](../images/destinations/activation-data-tab.png)
 
 Ce widget vous aide à comprendre la valeur de vos destinations en fonction du nombre d’audiences activées en un coup d’oeil. Il permet également d’accéder facilement à des informations plus détaillées pour une analyse plus approfondie.
+
+Consultez la section Conditions préalables pour [définitions des termes utilisés](#prerequisites) dans cette description.
 
 ## Étapes suivantes
 
