@@ -4,10 +4,10 @@ title: Guide de l’interface utilisateur des stratégies de fusion
 type: Documentation
 description: Lorsque vous rassemblez des données provenant de plusieurs sources dans Experience Platform, les stratégies de fusion sont les règles utilisées par Platform pour déterminer quelle est la priorité des données et quelles données seront combinées pour créer la vue unifiée. Ce guide fournit des instructions détaillées sur l’utilisation des stratégies de fusion à l’aide de l’interface utilisateur d’Adobe Experience Platform.
 exl-id: 0489217a-6a53-428c-a531-fd0a0e5bb71f
-source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
+source-git-commit: e94756254a24ecadd7359589cd14cfb0745c789c
 workflow-type: tm+mt
-source-wordcount: '2319'
-ht-degree: 100%
+source-wordcount: '2321'
+ht-degree: 99%
 
 ---
 
@@ -59,7 +59,7 @@ La première étape du flux de travaux vous permet de configurer votre stratégi
    * **[!UICONTROL Graphique privé]** : réalise des combinaisons d’identités basées sur votre graphique d’identités privé.
 * **[!UICONTROL Stratégie de fusion par défaut]** : un bouton de basculement qui vous permet de sélectionner cette stratégie de fusion ou non comme stratégie par défaut pour votre organisation. Si le sélecteur est activé, un avertissement s’affiche vous demandant de confirmer que vous souhaitez modifier la stratégie de fusion par défaut de votre organisation. Voir la [présentation des stratégies de fusion](overview.md) pour en savoir plus sur les stratégies de fusion par défaut.
    ![](../images/merge-policies/create-make-default.png)
-* **[!UICONTROL Stratégie de fusion Active-On-Edge]** : bouton de basculement qui vous permet de choisir si cette stratégie de fusion sera Active-On-Edge (active sur le bord). Pour garantir que tous les consommateurs de profils utilisent la même vue sur les bords, les stratégies de fusion peuvent être marquées comme Active-on-Edge (actives sur le bord). Pour qu’un segment soit Active-On-Edge (actif sur le bord) (marqué comme un segment de bord), il doit être lié à une stratégie de fusion marquée comme Active-on-Edge (active sur le bord). Si un segment n’est **pas** lié à une stratégie de fusion marquée comme Active-On-Edge (active sur le bord), le segment ne sera pas marqué comme Active-On-Edge (actif sur le bord), et sera marqué comme un segment en continu. En outre, chaque organisation IMS ne peut avoir qu’une **seule** stratégie de fusion Active-On-Edge (active sur le bord).
+* **[!UICONTROL Stratégie de fusion Active-On-Edge]** : bouton de basculement qui vous permet de choisir si cette stratégie de fusion sera Active-On-Edge (active sur le bord). Pour garantir que tous les consommateurs de profils utilisent la même vue sur les bords, les stratégies de fusion peuvent être marquées comme Active-on-Edge (actives sur le bord). Pour qu’un segment soit Active-On-Edge (actif sur le bord) (marqué comme un segment de bord), il doit être lié à une stratégie de fusion marquée comme Active-on-Edge (active sur le bord). Si un segment n’est **pas** lié à une stratégie de fusion marquée comme Active-On-Edge (active sur le bord), le segment ne sera pas marqué comme Active-On-Edge (actif sur le bord), et sera marqué comme un segment en continu. En outre, chaque environnement de test d’une organisation ne peut avoir que des **one** stratégie de fusion principale en périphérie.
 
 Une fois les champs obligatoires renseignés, vous pouvez sélectionner **[!UICONTROL Suivant]** pour poursuivre le flux de travaux.
 
