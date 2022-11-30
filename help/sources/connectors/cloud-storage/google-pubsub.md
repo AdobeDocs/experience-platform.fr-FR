@@ -5,7 +5,7 @@ title: Présentation du connecteur Google PubSub Source
 topic-legacy: overview
 description: Découvrez comment connecter Google PubSub à Adobe Experience Platform à l’aide des API ou de l’interface utilisateur.
 exl-id: 7c78173d-2639-47cb-8935-77fb7841a121
-source-git-commit: da7b6fe8f9d274b8e5f27138a1baf8caf63a0c01
+source-git-commit: 28c07150958c6ac22bf2a23537d5792b8990b2d3
 workflow-type: tm+mt
 source-wordcount: '174'
 ht-degree: 100%
@@ -16,7 +16,7 @@ ht-degree: 100%
 
 Adobe Experience Platform fournit une connectivité native aux fournisseurs de cloud tels que [!DNL AWS], [!DNL Google Cloud Platform] et [!DNL Azure], ce qui vous permet d’importer des données de ces systèmes dans Platform pour les utiliser dans des services et des destinations en aval.
 
-Les sources de stockage dans le cloud peuvent introduire vos propres données dans Platform sans avoir à les télécharger, les formater ou les transférer. Les données ingérées peuvent être formatées sous la forme XDM JSON, XDM Parquet ou délimitées. Chaque étape du processus est intégrée dans le processus Sources. Platform vous permet d’importer des données depuis [!DNL Azure Event Hubs] en temps réel.
+Les sources de stockage dans le cloud peuvent introduire vos propres données dans Platform sans avoir à les télécharger, les formater ou les transférer. Les données ingérées peuvent être formatées sous la forme XDM JSON, XDM Parquet ou délimitées. Chaque étape du processus est intégrée dans le processus Sources. Platform vous permet d’importer des données depuis [!DNL Google PubSub] en temps réel.
 
 ## Connecter [!DNL Google PubSub] à Platform
 
