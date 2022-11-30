@@ -5,9 +5,9 @@ breadcrumb-title: Balises
 user-guide-description: Découvrez comment déployer et gérer des balises d’analyse, de marketing et de publicité pour améliorer les expériences clients.
 feature: Tags
 solution: Data Collection
-source-git-commit: 32662a5586e0b0b0af7ef14ce27022216a76fac5
+source-git-commit: 05cc1388f4b32036e1c1ba76bfc584774acb014c
 workflow-type: tm+mt
-source-wordcount: '967'
+source-wordcount: '976'
 ht-degree: 75%
 
 ---
@@ -209,6 +209,7 @@ ht-degree: 75%
          * [Présentation](./extensions/server/cloud-connector/overview.md)
       * [!DNL AWS] {#aws}
          * [Aperçu](./extensions/server/aws/overview.md)
+      * [Connecteur cloud pour les Google Analytics](https://exchange.adobe.com/apps/ec/106542)
       * Base {#core}
          * [Présentation](./extensions/server/core/overview.md)
       * [API de conversion facebook](https://exchange.adobe.com/apps/ec/105509)
