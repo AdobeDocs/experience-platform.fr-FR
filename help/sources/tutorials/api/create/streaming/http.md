@@ -3,10 +3,10 @@ keywords: Experience Platform;accueil;rubriques les plus consultées;connexion e
 title: Création d’une connexion en continu d’API HTTP à l’aide de l’API Flow Service
 description: Ce tutoriel explique comment créer une connexion en continu à l’aide de la source d’API HTTP pour les données brutes et XDM à l’aide de l’API Flow Service.
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-source-git-commit: 26c967418e983322cc39aa799a681d258638d769
+source-git-commit: 2b3f8b7b0a19214a95a2ad76c9fecd70ffd91743
 workflow-type: tm+mt
-source-wordcount: '1424'
-ht-degree: 42%
+source-wordcount: '1472'
+ht-degree: 41%
 
 ---
 
@@ -132,7 +132,7 @@ Une réponse réussie renvoie un état HTTP 201 avec les détails de la nouvelle
 
 Les connexions authentifiées doivent être utilisées lorsque vous devez différencier les enregistrements provenant de sources approuvées et non approuvées. Les utilisateurs qui souhaitent envoyer des informations avec des informations d’identification personnelle (PII) doivent créer une connexion authentifiée lors de la diffusion d’informations vers Platform.
 
-Pour créer une connexion de base authentifiée, vous devez indiquer votre ID source et indiquer si l’authentification est requise lors de l’exécution d’une requête de POST à la variable `/connections` point de terminaison .
+Pour créer une connexion de base authentifiée, vous devez inclure la variable `authenticationRequired` dans votre requête et indiquez sa valeur en tant que `true`. Au cours de cette étape, vous pouvez également fournir un ID source pour votre connexion de base authentifiée. Ce paramètre est facultatif et utilisera la même valeur que la variable `name` , s’il n’est pas fourni.
 
 
 **Format d’API**
@@ -166,9 +166,9 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
      "auth": {
          "specName": "Streaming Connection",
          "params": {
-             "sourceId": "{SOURCE_ID}",
+             "sourceId": "Authenticated XDM streaming connection",
              "dataType": "xdm",
-             "name": "Sample connection",
+             "name": "Authenticated XDM streaming connection",
              "authenticationRequired": true
          }
      }
@@ -194,9 +194,9 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
      "auth": {
          "specName": "Streaming Connection",
          "params": {
-             "sourceId": "Sample connection",
+             "sourceId": "Authenticated raw streaming connection",
              "dataType": "raw",
-             "name": "Sample connection",
+             "name": "Authenticated raw streaming connection",
              "authenticationRequired": true
          }
      }
@@ -207,7 +207,7 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
 
 | Propriété | Description |
 | -------- | ----------- |
-| `auth.params.sourceId` | L’identifiant de la connexion en continu que vous souhaitez créer. |
+| `auth.params.sourceId` | Identifiant supplémentaire pouvant être utilisé lors de la création d’une connexion de base authentifiée. Ce paramètre est facultatif et utilisera la même valeur que la variable `name` , s’il n’est pas fourni. |
 | `auth.params.authenticationRequired` | Le paramètre qui spécifie que la connexion en continu créée |
 
 **Réponse**
