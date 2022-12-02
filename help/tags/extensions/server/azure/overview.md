@@ -2,9 +2,9 @@
 title: Présentation de l’extension Microsoft Azure
 description: Découvrez l’extension Microsoft Azure pour le transfert d’événement dans Adobe Experience Platform.
 exl-id: 2337d99d-861e-44e7-94ed-ba21ef28d815
-source-git-commit: 8b972841c8412d510fce4c970a09d9c1eecd401e
+source-git-commit: f6c11fadc0d8019044fbdd2923af00ce18ce39e1
 workflow-type: tm+mt
-source-wordcount: '938'
+source-wordcount: '937'
 ht-degree: 7%
 
 ---
@@ -35,7 +35,7 @@ L’extension n’ayant aucune propriété de configuration, elle est immédiate
 
 ## Configurer une règle de transfert d’événement {#rule}
 
-Commencez à créer une règle de transfert d’événement et configurez ses conditions selon vos besoins. Lors de la sélection des actions de la règle, sélectionnez **[!UICONTROL Microsoft Azure]** pour l’extension, puis sélectionnez **[!UICONTROL Envoi de données aux centres d’événements]** pour le type d’action.
+Commencez à créer une règle de transfert d’événement et configurez ses conditions selon vos besoins. Lors de la sélection des actions de la règle, sélectionnez **[!UICONTROL Microsoft Azure]** pour l’extension, puis sélectionnez **[!UICONTROL Envoi de données aux centres d’événements]** pour le type d’action .
 
 ![Le [!UICONTROL Envoi de données aux centres d’événements] type d’action sélectionné pour une règle dans l’interface utilisateur de la collecte de données.](../../../images/extensions/server/azure/select-action-type.png)
 
