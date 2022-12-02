@@ -3,10 +3,10 @@ keywords: Experience Platform;interface utilisateur;UI;tableaux de bord;tableau
 title: Widgets de tableaux de bord standard
 description: Ce guide fournit des instructions détaillées sur l’ajout de widgets standard à vos tableaux de bord Adobe Experience Platform.
 exl-id: 37353e73-b207-444a-b2b5-a20a3628086b
-source-git-commit: 89a0e2544a17fe10e6dfd7611b5223ca4fc55501
+source-git-commit: 0391c15e959ab25604a70c163fa7a5ed53e78993
 workflow-type: tm+mt
-source-wordcount: '403'
-ht-degree: 100%
+source-wordcount: '429'
+ht-degree: 93%
 
 ---
 
@@ -38,7 +38,7 @@ Les widgets standard de la catégorie sélectionnée s’affichent. Chaque widge
 >
 >Les widgets ne peuvent être ajoutés qu’au tableau de bord correspondant à la catégorie sélectionnée. Par exemple, seuls les widgets de la catégorie [!UICONTROL Profils] peuvent être ajoutés au tableau de bord [!UICONTROL Profils].
 
-![](../images/customization/standard-widgets.png)
+![Espace de travail de la bibliothèque de widgets avec l’onglet Standard et les catégories disponibles mises en surbrillance.](../images/customization/standard-widgets.png)
 
 ## Ajout d’un widget standard au tableau de bord
 
@@ -50,7 +50,7 @@ Pour choisir un widget standard à ajouter à votre tableau de bord, mettez le w
 
 Sélectionnez **[!UICONTROL Ajouter un widget]** pour ajouter les widgets sélectionnés à votre tableau de bord.
 
-![](../images/customization/add-widget.png)
+![Espace de travail de la bibliothèque de widgets avec un widget sélectionné, puis l’option Ajouter un widget et Annuler mise en surbrillance.](../images/customization/add-widget.png)
 
 ## Étapes suivantes
 

@@ -2,9 +2,9 @@
 title: Modèle de données Real-time Customer Data Platform Insights
 description: Découvrez comment utiliser les requêtes SQL avec les modèles de données Real-time Customer Data Platform Insights pour personnaliser vos propres rapports Real-Time CDP pour vos cas d’utilisation de marketing et d’indicateurs de performance clés.
 exl-id: 61bc7f23-9f79-4c75-a515-85dd9dda2d02
-source-git-commit: 16ae8a16d8c4f7ec68a054e8d15a518f453a05c7
+source-git-commit: 9f33ad0146b72f820530233b651370c43fafe713
 workflow-type: tm+mt
-source-wordcount: '1105'
+source-wordcount: '1109'
 ht-degree: 1%
 
 ---
@@ -81,10 +81,10 @@ GROUP BY adwh_dim_merge_policies.merge_policy_name;
 
 Le modèle d’espace de noms comprend les jeux de données suivants :
 
-- `adwh_fact_profile_by_namespace`
 - `adwh_dim_date`
-- `adwh_dim_namespaces`
+- `adwh_fact_profile_by_namespace`
 - `adwh_dim_merge_policies`
+- `adwh_dim_namespaces`
 
 L’image ci-dessous contient les champs de données appropriés dans chaque jeu de données.
 
@@ -149,9 +149,9 @@ GROUP BY
 Le modèle de segment comprend les jeux de données suivants :
 
 - `adwh_dim_date`
+- `adwh_fact_profile_by_segment`
 - `adwh_dim_merge_policies`
 - `adwh_dim_segments`
-- `adwh_fact_profile_by_segment`
 - `adwh_dim_br_segment_destinations`
 - `adwh_dim_destination`
 - `adwh_dim_destination_platform`
@@ -260,9 +260,9 @@ ORDER BY create_time desc, segment LIMIT 5;
 Le modèle namespace-segment comprend les jeux de données suivants :
 
 - `adwh_dim_date`
-- `adwh_dim_merge_policies`
 - `adwh_dim_namespaces`
 - `adwh_fact_profile_by_segment_and_namespace`
+- `adwh_dim_merge_policies`
 - `adwh_dim_segments`
 - `adwh_dim_br_segment_destinations`
 - `adwh_dim_destination`
@@ -270,7 +270,7 @@ Le modèle namespace-segment comprend les jeux de données suivants :
 
 L’image ci-dessous contient les champs de données appropriés dans chaque jeu de données.
 
-![Un identifiant d’utilisateur (ERD) du modèle de segment.](./images/cdp-insights/namespace-segment-model.png)
+![Un ERD du modèle namespace-segment.](./images/cdp-insights/namespace-segment-model.png)
 
 #### Profils par identité pour un cas d’utilisation de segment
 
@@ -300,13 +300,13 @@ GROUP BY adwh_dim_namespaces.namespace_description;
 Le modèle d’espace de noms de chevauchement est constitué des jeux de données suivants :
 
 - `adwh_dim_date`
-- `adwh_dim_namespaces`
+- `adwh_dim_overlap_namespaces`
 - `adwh_fact_profile_overlap_of_namespace`
 - `adwh_dim_merge_policies`
 
 L’image ci-dessous contient les champs de données appropriés dans chaque jeu de données.
 
-![Un identifiant d’utilisateur (ERD) du modèle de segment.](./images/cdp-insights/overlap-namespace-model.png)
+![Un ERD du modèle d’espace de noms de chevauchement.](./images/cdp-insights/overlap-namespace-model.png)
 
 #### Cas d’utilisation de chevauchement d’identités (profils)
 
@@ -364,7 +364,7 @@ SELECT Sum(overlap_col1) overlap_col1,
 L’espace de noms de chevauchement par modèle de segment est constitué des jeux de données suivants :
 
 - `adwh_dim_date`
-- `adwh_dim_namespaces`
+- `adwh_dim_overlap_namespaces`
 - `adwh_fact_profile_overlap_of_namespace_by_segment`
 - `adwh_dim_merge_policies`
 - `adwh_dim_segments`
@@ -374,7 +374,7 @@ L’espace de noms de chevauchement par modèle de segment est constitué des je
 
 L’image ci-dessous contient les champs de données appropriés dans chaque jeu de données.
 
-![Un identifiant d’utilisateur (ERD) du modèle de segment.](./images/cdp-insights/overlap-namespace-by-segment-model.png)
+![Un ERD de l’espace de noms de chevauchement par modèle de segment.](./images/cdp-insights/overlap-namespace-by-segment-model.png)
 
 #### Cas d’utilisation de chevauchement d’identités (segments)
 

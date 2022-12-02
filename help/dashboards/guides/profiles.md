@@ -4,9 +4,9 @@ title: Guide du tableau de bord des profils
 description: Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur les données Real-time Customer Profile de votre entreprise.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: fdfc2a2b0f1f5be0508741de0e70ad72fe07d79f
+source-git-commit: c4457d82c66be382ebb8619ce248f282fb45ed3a
 workflow-type: tm+mt
-source-wordcount: '3385'
+source-wordcount: '3416'
 ht-degree: 9%
 
 ---
@@ -35,7 +35,7 @@ Pour accéder au tableau de bord Profils dans l’interface utilisateur de Platf
 >
 >Si votre entreprise est une nouvelle entreprise de Platform et qu’elle ne dispose pas encore de jeux de données Profile principaux ni de stratégies de fusion créés, le tableau de bord Profils n’est pas visible. Au lieu de cela, la variable [!UICONTROL Présentation] Cet onglet affiche des liens et de la documentation pour vous aider à prendre en main Real-time Customer Profile.
 
-![](../images/profiles/dashboard-overview.png)
+![Le tableau de bord Profils Experience Platform avec les options Profils et Aperçu en surbrillance.](../images/profiles/dashboard-overview.png)
 
 ### Modification du tableau de bord des profils
 
@@ -142,7 +142,7 @@ Voir [section sur les stratégies de fusion plus tôt dans ce document](#merge-p
 >
 >Une autre raison courante est due aux différences entre le moment où l’instantané du tableau de bord est pris et le moment où l’exemple de tâche est exécuté pour la fonction [!UICONTROL Parcourir] . Vous pouvez voir quand la variable [!UICONTROL Nombre de profils] a été mis à jour pour la dernière fois en observant l’horodatage du widget. Pour en savoir plus sur la manière dont l’exemple de tâche est déclenché sur la page [!UICONTROL Parcourir] , voir [section sur le nombre de profils dans le guide de l’interface utilisateur de Real-time Customer Profile](https://experienceleague.adobe.com/docs/experience-platform/profile/ui/user-guide.html?lang=en#profile-count).
 
-![](../images/profiles/profile-count.png)
+![Le tableau de bord Profils Experience Platform avec le widget Nombre de profils mis en surbrillance.](../images/profiles/profile-count.png)
 
 ### [!UICONTROL Tendance du nombre de profils] {#profile-count-trend}
 
@@ -230,7 +230,7 @@ Pour plus d&#39;informations sur les fragments de profil, reportez-vous à la se
 
 Pour en savoir plus sur les identités, rendez-vous sur la page [Documentation du service Adobe Experience Platform Identity](../../identity-service/home.md).
 
-![](../images/profiles/identity-overlap.png)
+![Le tableau de bord Profils présente un aperçu du widget de chevauchement des identités mis en surbrillance.](../images/profiles/identity-overlap.png)
 
 ### [!UICONTROL Profils d’identité uniques] {#single-identity-profiles}
 

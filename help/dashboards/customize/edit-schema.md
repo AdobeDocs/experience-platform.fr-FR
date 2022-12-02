@@ -3,10 +3,10 @@ keywords: Experience Platform;interface utilisateur;UI;tableaux de bord;tableau
 title: Modification du schéma pour créer des widgets de tableaux de bord personnalisés
 description: Ce guide fournit des instructions détaillées relatives à la sélection des attributs et à la configuration du schéma de votre organisation dans le but de créer des widgets personnalisés pour les tableaux de bord d’Adobe Experience Platform.
 exl-id: a744eb24-5ba7-4971-9183-3f891e807863
-source-git-commit: 89a0e2544a17fe10e6dfd7611b5223ca4fc55501
+source-git-commit: 9b89effa6f90fb513fac9d0b826722ab05020036
 workflow-type: tm+mt
-source-wordcount: '467'
-ht-degree: 100%
+source-wordcount: '498'
+ht-degree: 89%
 
 ---
 
@@ -36,11 +36,13 @@ Avant de pouvoir créer des widgets personnalisés, vous devez sélectionner les
 >
 >Votre organisation peut sélectionner jusqu’à 20 attributs.
 
-Si votre organisation n’a sélectionné aucun attribut de profil, commencez par sélectionner **[!UICONTROL Modifier le schéma]** dans le coin supérieur droit de la bibliothèque de widgets.
+Si votre entreprise n’a sélectionné aucun attribut de profil, commencez par sélectionner **[!UICONTROL Configurer]** au centre de l’écran.
+
+![Onglet Personnalisé de l’espace de travail de la bibliothèque de widgets avec l’option Configurer mise en surbrillance.](../images/customization/configure-schema.png)
 
 Après la création d’au moins un attribut personnalisé, sélectionnez **[!UICONTROL Modifier le schéma]** pour afficher les attributs sélectionnés et en ajouter d’autres.
 
-![](../images/customization/edit-schema.png)
+![Onglet Personnalisé de l’espace de travail de la bibliothèque de widgets avec l’option Modifier le schéma mise en surbrillance.](../images/customization/edit-schema.png)
 
 ## Sélection d’un attribut
 
@@ -55,7 +57,7 @@ Après avoir choisi les attributs que vous souhaitez ajouter, sélectionnez **[!
 >[!WARNING]
 >Les attributs nouvellement sélectionnés sont disponibles après l’instantané quotidien suivant, lorsque l’actualisation des données est effectuée.
 
-![](../images/customization/select-attribute.png)
+![La boîte de dialogue permettant de sélectionner les attributs de schéma avec les attributs et de cliquer sur Enregistrer en surbrillance.](../images/customization/select-attribute.png)
 
 ## Étapes suivantes
 

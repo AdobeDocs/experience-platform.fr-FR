@@ -4,9 +4,9 @@ title: Guide du tableau de bord des segments
 description: Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur les segments que votre entreprise a créés.
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: 23df35d7d90b6674b089a842818dba83283a1646
+source-git-commit: e5a4fddbd7f5b14280e283871d8b66a2e2f2407d
 workflow-type: tm+mt
-source-wordcount: '2092'
+source-wordcount: '2105'
 ht-degree: 9%
 
 ---
@@ -35,7 +35,7 @@ Pour accéder au [!UICONTROL Segments] Tableau de bord dans l’interface utilis
 >
 >Si votre entreprise est une nouvelle entreprise de Platform et qu’elle ne dispose pas encore de jeux de données Profile principaux ni de stratégies de fusion créés, la variable [!UICONTROL Segments] tableau de bord n’est pas visible. Au lieu de cela, la variable [!UICONTROL Présentation] affiche des liens et de la documentation pour vous aider à commencer à utiliser la segmentation.
 
-![Onglet Aperçu du tableau de bord Segments .](../images/segments/dashboard-overview.png)
+![Onglet Aperçu du tableau de bord Segments avec les options Segments et Aperçu en surbrillance.](../images/segments/dashboard-overview.png)
 
 ### Modifiez le [!UICONTROL Segments] tableau de bord {#modify}
 
@@ -204,7 +204,7 @@ Le **[!UICONTROL Profils par identité]** widget affiche la ventilation des iden
 
 Sélectionner **[!UICONTROL Sous-titres]** pour ouvrir la boîte de dialogue des sous-titres automatiques.
 
-![La boîte de dialogue Profils par légendes d’identité .](../images/segments/profiles-by-identity.png)
+![La présentation du tableau de bord Segments avec le widget Profils par identité et l’option Sous-titres en surbrillance.](../images/segments/profiles-by-identity.png)
 
 Un modèle d’apprentissage automatique génère automatiquement des informations sur les données en analysant la distribution globale et les dimensions clés des données.
 

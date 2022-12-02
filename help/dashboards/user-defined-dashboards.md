@@ -2,10 +2,10 @@
 title: Tableaux de bord définis par l’utilisateur
 description: Découvrez comment créer et gérer des tableaux de bord personnalisés dans lesquels vous pouvez créer, ajouter et modifier des widgets personnalisés pour visualiser des mesures clés.
 exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 5d9428c4323e65c2605fd116160e160af7d9086d
 workflow-type: tm+mt
-source-wordcount: '939'
-ht-degree: 0%
+source-wordcount: '956'
+ht-degree: 1%
 
 ---
 
@@ -118,8 +118,12 @@ Les widgets peuvent être réorganisés et redimensionnés dans cet espace de tr
 
 Pour s’assurer que chaque requête d’un tableau de bord des insights Adobe Real-time Customer Data Platform dispose de suffisamment de ressources pour s’exécuter efficacement, l’API effectue le suivi de l’utilisation des ressources en attribuant des emplacements simultanés à chaque requête. Le système peut traiter jusqu’à quatre requêtes simultanées. Par conséquent, quatre emplacements de requête simultanés sont disponibles à tout moment. Les requêtes sont placées dans une file d’attente en fonction des emplacements de simultanéité, puis patientez dans la file d’attente jusqu’à ce que suffisamment d’emplacements de simultanéité soient disponibles.
 
-## Étapes suivantes
+## Étapes suivantes et ressources supplémentaires
 
 En lisant ce document, vous comprenez mieux comment créer un tableau de bord personnalisé et comment créer, modifier et mettre à jour des widgets personnalisés pour ce tableau de bord.
 
 Pour découvrir les mesures et visualisations préconfigurées disponibles pour la variable [profils](./guides/profiles.md#standard-widgets), [segments](./guides/segments.md#standard-widgets), et [destinations](./guides/destinations.md#standard-widgets) pour les tableaux de bord, consultez la liste des widgets standard dans leur documentation respective.
+
+Pour mieux comprendre les tableaux de bord définis par l’utilisateur dans Experience Platform, regardez la vidéo suivante :
+
+>[!VIDEO](https://video.tv.adobe.com/v/3409637?quality=12&learn=on)

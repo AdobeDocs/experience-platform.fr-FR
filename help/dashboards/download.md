@@ -4,10 +4,10 @@ title: Téléchargement de tableaux de bord Experience Platform au format PDF
 type: Documentation
 description: Enregistrez des copies des visualisations de vos tableaux de bord à l’aide de la fonctionnalité de téléchargement au format PDF disponible dans l’interface utilisateur d’Experience Platform.
 exl-id: 838e98a0-ce2e-4dcd-8c8f-d28ef2cb8315
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 5d9428c4323e65c2605fd116160e160af7d9086d
 workflow-type: tm+mt
-source-wordcount: '495'
-ht-degree: 100%
+source-wordcount: '580'
+ht-degree: 85%
 
 ---
 
@@ -25,7 +25,7 @@ Ce document résume la procédure de téléchargement de tableaux de bord à l�
 
 Pour commencer à télécharger un tableau de bord, accédez au tableau de bord que vous souhaitez télécharger (par exemple, le tableau de bord [!UICONTROL Profils]), puis sélectionnez le menu Plus d’options (**`...`**) dans le coin supérieur droit du tableau de bord. Cliquez ensuite sur **[!UICONTROL Télécharger]**.
 
-![](images/download/download-button.png)
+![Le tableau de bord Profils Experience Platform avec les points de suspension et la liste déroulante Télécharger mise en surbrillance.](images/download/download-button.png)
 
 ## Prévisualisation PDF
 
@@ -33,11 +33,11 @@ Après avoir cliqué sur **[!UICONTROL Télécharger]**, le menu d’impression 
 
 Le menu d’impression vous permet de prévisualiser le PDF qui sera enregistré. Le fichier PDF offre une véritable représentation des widgets du tableau de bord tels qu’ils apparaissent dans l’interface utilisateur de Platform. De plus, la taille du fichier PDF est automatiquement ajustée pour afficher tous les widgets du tableau de bord actuellement visibles sur une seule page.
 
-![](images/download/download-chrome-print.png)
+![L’aperçu du profil s’affichait sur une seule page avec le panneau Options d’impression à droite.](images/download/download-chrome-print.png)
 
 Le fichier PDF inclut un en-tête généré automatiquement, lequel contient le logo d’Experience Platform, le nom du tableau de bord, votre nom ainsi que la date et l’heure de téléchargement du tableau de bord. Ces informations sont en lecture seule et ne peuvent pas être modifiées dans le PDF.
 
-![](images/download/download-pdf.png)
+![Un gros plan de l’aperçu avant impression avec l’en-tête généré automatiquement mis en surbrillance.](images/download/download-pdf.png)
 
 ## Enregistrement au format PDF
 
@@ -47,7 +47,7 @@ Après avoir prévisualisé le PDF, sélectionnez **Enregistrer** pour choisir l
 >
 >Si nécessaire, vous pouvez utiliser la liste déroulante **Destination** pour sélectionner **Enregistrer en tant que PDF** si cette option n’est pas automatiquement sélectionnée.
 
-![](images/download/download-chrome-print-destination.png)
+![L’aperçu du profil s’affichait sur un format de page unique avec l’option d’impression Enregistrer en tant que PDF de la liste déroulante Destination mise en surbrillance.](images/download/download-chrome-print-destination.png)
 
 ## Personnalisation des fichiers PDF de tableaux de bord
 
@@ -55,11 +55,11 @@ Le fichier PDF généré correspond au tableau de bord visible dans l’interfac
 
 Par exemple, vous pouvez modifier l’aspect du tableau de bord des profils afin d’inclure plusieurs widgets pleine largeur empilés au-dessus de trois widgets standard.
 
-![](images/download/download-modify.png)
+![Le tableau de bord Profil affiche un widget allongé.](images/download/download-modify.png)
 
 Si vous choisissez de télécharger le tableau de bord mis à jour, une nouvelle prévisualisation du fichier PDF reprenant l’aspect du tableau de bord des profils personnalisés s’affiche. En outre, la taille du fichier PDF est automatiquement ajustée pour garantir l’inclusion de tous les widgets visibles dans un fichier PDF d’une seule page.
 
-![](images/download/download-chrome-print-modified.png)
+![L’aperçu du profil s’affichait sur une seule page avec le panneau Options d’impression à droite.](images/download/download-chrome-print-modified.png)
 
 Pour en savoir plus sur la personnalisation des tableaux de bord, commencez par lire la [présentation de la personnalisation des tableaux de bord](customize/overview.md).
 

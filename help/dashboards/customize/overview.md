@@ -3,10 +3,10 @@ keywords: Experience Platform;interface utilisateur;UI;tableaux de bord;tableau
 title: Présentation de la personnalisation des tableaux de bord
 description: Découvrez comment personnaliser les données affichées dans vos tableaux de bord Adobe Experience Platform.
 exl-id: efabdb61-4148-4b0e-b7a1-6e788b5e43a8
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 27252d547afd30acc7b334d5054f1350dc0031b7
 workflow-type: tm+mt
-source-wordcount: '457'
-ht-degree: 100%
+source-wordcount: '480'
+ht-degree: 95%
 
 ---
 
@@ -26,11 +26,11 @@ Sélectionnez **[!UICONTROL Modifier le tableau de bord]** dans les tableaux de 
 
 Dans la bibliothèque de widgets dʼExperience Platform, vous pouvez afficher tous les widgets [standard](#standard-widgets) et [personnalisés](#custom-widgets) disponibles pour votre organisation. Dans vos tableaux de bord (par exemple, le tableau de bord des profils), vous pouvez sélectionner **[!UICONTROL Modifier le tableau de bord]** afin dʼafficher le bouton **[!UICONTROL Bibliothèque de widgets]**.
 
-![](../images/customization/modify-dashboard.png)
+![Le tableau de bord Profils avec modification du tableau de bord est mis en surbrillance.](../images/customization/modify-dashboard.png)
 
 Sélectionnez **[!UICONTROL Bibliothèque de widgets]** pour ouvrir la bibliothèque de widgets et afficher toutes les mesures standard disponibles ou commencer à créer des widgets personnalisés.
 
-![](../images/customization/widget-library-button.png)
+![Le tableau de bord Profils avec la bibliothèque de widgets est mis en surbrillance.](../images/customization/widget-library-button.png)
 
 ### Widgets standard {#standard-widgets}
 
@@ -44,7 +44,7 @@ Les widgets personnalisés sont les widgets créés et partagés par les membres
 
 Pour connaître la procédure complète afin de créer vos propres widgets, reportez-vous au [guide des widgets personnalisés pour les tableaux de bord](custom-widgets.md).
 
-![](../images/customization/widget-library.png)
+![Espace de travail de la bibliothèque de widgets en surbrillance Standard et Personnalisé.](../images/customization/widget-library.png)
 
 #### Modification du schéma {#edit-schema}
 

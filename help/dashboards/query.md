@@ -4,10 +4,10 @@ title: Exploration, vérification et traitement des jeux de données de tableau 
 type: Documentation
 description: Découvrez comment utiliser Query Service pour explorer et traiter des jeux de données bruts alimentant les tableaux de bord de profils, de segments et de destinations dans Experience Platform.
 exl-id: 0087dcab-d5fe-4a24-85f6-587e9ae74fb8
-source-git-commit: 62e282138de8cf2d74b4a62f4ced39e3fb78001a
+source-git-commit: 4826731682bcaf5a43c7ce047220c1805d97243a
 workflow-type: tm+mt
-source-wordcount: '951'
-ht-degree: 50%
+source-wordcount: '970'
+ht-degree: 49%
 
 ---
 
@@ -49,7 +49,7 @@ La convention d’affectation des noms de ces jeux de données est **Profile-Sna
 
 Pour comprendre le schéma complet de chaque jeu de données d’exportation d’instantané de profil, vous pouvez prévisualiser et explorer les jeux de données [à l’aide de la visionneuse de jeux de données](../catalog/datasets/user-guide.md) dans l’interface utilisateur d’Experience Platform.
 
-![](images/query/profile-attribute.png)
+![Aperçu du jeu de données Profile-Snapshot-Export.](images/query/profile-attribute.png)
 
 #### Mappage des jeux de données d’attributs de profil aux ID de stratégie de fusion
 
@@ -72,7 +72,7 @@ La convention d’affectation des noms de ce jeu de données est **Segmentdefini
 
 Pour comprendre le schéma complet de chaque jeu de données d’exportation d’instantané de définition de segment, vous pouvez prévisualiser et explorer les jeux de données [à l’aide de la visionneuse de jeux de données](../catalog/datasets/user-guide.md) dans l’interface utilisateur d’Experience Platform.
 
-![](images/query/segment-metadata.png)
+![Aperçu du jeu de données de définition de segment-instantané-exportation.](images/query/segment-metadata.png)
 
 ### Jeu de données de métadonnées de destination
 
@@ -82,7 +82,7 @@ La convention d’affectation des noms de ce jeu de données est **DIM_Destinati
 
 Pour comprendre le schéma complet du jeu de données de destination DIM, vous pouvez prévisualiser et explorer le schéma [à l’aide de la visionneuse de jeux de données](../catalog/datasets/user-guide.md) dans l’interface utilisateur d’Experience Platform.
 
-![](images/query/destinations-metadata.png)
+![Aperçu du jeu de données DIM_Destination.](images/query/destinations-metadata.png)
 
 ## (Version bêta) Rapports sur les insights de la plateforme de données clients (CDP)
 
