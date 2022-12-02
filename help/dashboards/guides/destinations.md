@@ -4,7 +4,7 @@ title: Guide du tableau de bord des destinations
 description: Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur les destinations principales de votre entreprise.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 66e8d3c594280d4b40cb2b6170544d4411220a6a
+source-git-commit: d9e10271db52f61cdc3e4adc546fe05adadb5a46
 workflow-type: tm+mt
 source-wordcount: '3031'
 ht-degree: 3%
@@ -273,7 +273,13 @@ Le widget fournit un tableau à deux colonnes qui répertorie les principales pl
 
 ### [!UICONTROL Audiences activées sur toutes les destinations] {#activated-audiences-across-all-destinations}
 
-Le [!UICONTROL Audiences activées sur toutes les destinations] fournit le nombre total d’audiences activées sur toutes les destinations dans une seule mesure. Ce widget affiche le nombre d’audiences et non le nombre de segments. Ce nombre est précis par rapport à l’instantané le plus récent.
+Le [!UICONTROL Audiences activées sur toutes les destinations] fournit le nombre total d’audiences activées sur toutes les destinations dans une seule mesure.
+
+>[!NOTE]
+>
+>Ce widget affiche le nombre d’audiences et non le nombre de segments.
+
+Ce nombre est précis par rapport à l’instantané le plus récent.
 
 ![Le widget Audiences activées sur toutes les destinations .](../images/destinations/activated-audiences-across-all-destinations.png)
 
