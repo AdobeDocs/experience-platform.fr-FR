@@ -2,10 +2,10 @@
 title: Guide de l’interface utilisateur de nettoyage de données
 description: Découvrez comment gérer les tâches de nettoyage de données dans l’interface utilisateur d’Adobe Experience Platform.
 exl-id: 7199151a-5390-4150-8a1d-daf53b7a1f5b
-source-git-commit: 70a2abcc4d6e27a89e77d68e7757e4876eaa4fc0
+source-git-commit: d4073f18844de65b9181667d0332c0315ee1cc09
 workflow-type: tm+mt
-source-wordcount: '216'
-ht-degree: 78%
+source-wordcount: '218'
+ht-degree: 76%
 
 ---
 
@@ -13,8 +13,8 @@ ht-degree: 78%
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_privacyconsole_consumer"
->title="Roue d’hygiène des données"
->abstract="Ce widget affiche l’état des tâches de suppression d’enregistrement de l’hygiène des données pour la période sélectionnée. Pour plus d’informations sur vos processus d’hygiène des données, sélectionnez **Hygiène des données** dans le volet de navigation de gauche."
+>title="État des requêtes d’hygiène des données"
+>abstract="Ce widget affiche le nombre total de tâches de suppression d’enregistrements d’hygiène des données créées, ayant échoué et terminées. Pour plus d’informations sur vos processus d’hygiène des données, sélectionnez **Hygiène des données** dans le volet de navigation de gauche."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_privacyconsole_recents"
