@@ -6,10 +6,10 @@ description: Cet article illustre le processus de bout en bout d’activation de
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 1a09f5ff-0b04-413d-a9f6-57911a92b4e4
-source-git-commit: 8d67d89db6a8c179935b4fe709f91279860d464e
+source-git-commit: cdf96088be27cba1fb92f1348f002123614285fe
 workflow-type: tm+mt
-source-wordcount: '1531'
-ht-degree: 14%
+source-wordcount: '1563'
+ht-degree: 18%
 
 ---
 
@@ -25,15 +25,15 @@ ht-degree: 14%
 
 L’API d’activation ad hoc permet aux spécialistes du marketing d’activer par programmation les segments d’audience vers les destinations, de manière rapide et efficace, dans les cas où une activation immédiate est requise.
 
+Utilisez l’API d’activation ad hoc pour exporter des fichiers complets vers le système de réception de fichiers souhaité. L’activation des audiences ad hoc n’est prise en charge que par [destinations basées sur des fichiers de lots](../destination-types.md#file-based).
+
 Le diagramme ci-dessous illustre le workflow de bout en bout pour l’activation des segments via l’API d’activation ad hoc, y compris les tâches de segmentation qui ont lieu dans Platform toutes les 24 heures.
 
 ![activation ad hoc](../assets/api/ad-hoc-activation/ad-hoc-activation-overview.png)
 
->[!NOTE]
->
->L’activation des audiences ad hoc n’est prise en charge que par [destinations basées sur des fichiers de lots](../destination-types.md#file-based).
 
-## Cas d&#39;utilisation {#use-cases}
+
+## Cas d’utilisation {#use-cases}
 
 ### Ventes ou promotions de Flash
 
@@ -47,11 +47,11 @@ Un hôtel s&#39;attend à des conditions météorologiques favorables les jours 
 
 Les responsables informatiques peuvent utiliser l’API d’activation ad hoc Experience Platform pour exporter des segments à la demande, afin qu’ils puissent tester leur intégration personnalisée avec Adobe Experience Platform et s’assurer que tout fonctionne correctement.
 
-## Éléments de sécurité {#guardrails}
+## Barrières de sécurité {#guardrails}
 
 Gardez à l’esprit les barrières de sécurité suivantes lors de l’utilisation de l’API d’activation ad hoc.
 
-* Actuellement, chaque tâche d’activation ad hoc peut activer jusqu’à 80 segments. Si vous tentez d’activer plus de 80 segments par tâche, la tâche échouera. Ce comportement peut être modifié dans les prochaines versions.
+* Actuellement, chaque traitement d’activation ad hoc peut activer jusqu’à 80 segments. Si vous tentez d’activer plus de 80 segments par traitement, celui-ci échouera. Ce comportement peut faire l’objet de modifications dans les prochaines versions.
 * Les tâches d’activation ad hoc ne peuvent pas s’exécuter en parallèle avec les tâches planifiées [traitements d’exportation de segments](../../segmentation/api/export-jobs.md). Avant d’exécuter une tâche d’activation ad hoc, assurez-vous que la tâche d’exportation de segments planifiée est terminée. Voir [surveillance des flux de données de destination](../../dataflows/ui/monitor-destinations.md) pour plus d’informations sur la manière de surveiller l’état des flux d’activation. Par exemple, si votre flux de données d’activation affiche une **[!UICONTROL Traitement]** , attendez qu’il se termine avant d’exécuter la tâche d’activation ad hoc.
 * N’exécutez pas plusieurs tâches d’activation ad hoc simultanées par segment.
 
@@ -129,13 +129,13 @@ Adobe Experience Platform exécute des tâches de segmentation planifiées toute
 >
 >Notez la contrainte ponctuelle suivante : Avant d’exécuter une tâche d’activation ad hoc, assurez-vous qu’au moins 20 minutes se sont écoulées entre le moment où le segment a été activé pour la première fois, selon le planning défini dans [Étape 3 - Création du flux d’activation dans l’interface utilisateur de Platform](#activation-flow).
 
-Avant d’exécuter une tâche d’activation ad hoc, assurez-vous que la tâche d’exportation de segments planifiée pour vos segments est terminée. Voir [surveillance des flux de données de destination](../../dataflows/ui/monitor-destinations.md) pour plus d’informations sur la manière de surveiller l’état des flux d’activation. Par exemple, si votre flux de données d’activation affiche une **[!UICONTROL Traitement]** , attendez qu’il se termine avant d’exécuter la tâche d’activation ad hoc.
+Avant d’exécuter une tâche d’activation ad hoc, assurez-vous que la tâche d’exportation de segments planifiée pour vos segments est terminée. Voir [surveillance des flux de données de destination](../../dataflows/ui/monitor-destinations.md) pour plus d’informations sur la manière de surveiller l’état des flux d’activation. Par exemple, si votre flux de données d’activation affiche une **[!UICONTROL Traitement]** , attendez qu’il se termine avant d’exécuter la tâche d’activation ad hoc pour exporter un fichier complet.
 
 Une fois la tâche d’exportation de segments terminée, vous pouvez déclencher l’activation.
 
 >[!NOTE]
 >
->Actuellement, chaque tâche d’activation ad hoc peut activer jusqu’à 80 segments. Si vous tentez d’activer plus de 80 segments par tâche, la tâche échouera. Ce comportement peut être modifié dans les prochaines versions.
+>Actuellement, chaque traitement d’activation ad hoc peut activer jusqu’à 80 segments. Si vous tentez d’activer plus de 80 segments par traitement, celui-ci échouera. Ce comportement peut faire l’objet de modifications dans les prochaines versions.
 
 ### Requête {#request}
 
@@ -250,3 +250,4 @@ Lors de l’utilisation de l’API d’activation ad hoc, vous pouvez rencontrer
 ## Informations connexes {#related-information}
 
 * [Se connecter aux destinations par lots et activer des données à l’aide de l’API Flow Service](/help/destinations/api/connect-activate-batch-destinations.md)
+* [(Version bêta) Exportation de fichiers à la demande vers des destinations par lots à l’aide de l’interface utilisateur de l’Experience Platform](/help/destinations/ui/export-file-now.md)
