@@ -4,9 +4,9 @@ title: Créer une connexion de destination
 type: Tutorial
 description: Découvrez comment vous connecter à une destination dans Adobe Experience Platform, activer des alertes et configurer des actions marketing pour votre destination connectée.
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
-source-git-commit: 434b9ed4f64320b5fd73b752716cb34a8e48aec9
+source-git-commit: 606038116391e75ba4ffc36bab11757f963a8346
 workflow-type: tm+mt
-source-wordcount: '1106'
+source-wordcount: '1107'
 ht-degree: 4%
 
 ---
@@ -79,7 +79,7 @@ Selon la destination à laquelle vous vous connectez, vous devrez peut-être sai
 
 ![Image montrant les paramètres d’entrée obligatoires et facultatifs lors de la connexion à une destination de bureau de commerce.](../assets/ui/connect-destinations/connect-destination-trade-desk-example.png)
 
-### Configuration des options de formatage de fichier pour les fichiers exportés {#file-formatting-and-compression-options}
+### (Version bêta) Configuration des options de formatage de fichier pour les fichiers exportés {#file-formatting-and-compression-options}
 
 Pour les destinations basées sur des fichiers, vous pouvez configurer divers paramètres liés à la manière dont les fichiers exportés sont formatés et compressés. Pour plus d’informations sur toutes les options de formatage et de compression disponibles, consultez la section [Tutoriel sur la configuration des options de formatage de fichier pour les destinations basées sur des fichiers](/help/destinations/ui/batch-destinations-file-formatting-options.md).
 

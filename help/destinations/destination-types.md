@@ -3,10 +3,10 @@ keywords: destinations;destination;types de destinations
 title: Types et catégories de destination
 description: Découvrez les différents types et catégories de destinations dans Adobe Experience Platform.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: c140e68467065d17f143850bfb8eefb3ac46443a
+source-git-commit: 606038116391e75ba4ffc36bab11757f963a8346
 workflow-type: tm+mt
-source-wordcount: '675'
-ht-degree: 34%
+source-wordcount: '680'
+ht-degree: 33%
 
 ---
 
@@ -97,4 +97,4 @@ Les extensions s’avèrent utiles lorsque des données d’événement sont uti
 
 Les connexions et les extensions dans le [destinations](https://platform.adobe.com/destination/catalog) sont regroupées par catégorie de destination (**Publicité**, **Stockage dans le cloud**, **Plateformes d&#39;enquêtes**, **Marketing par e-mail**, etc.), en fonction de l’action marketing qu’ils vous aident à réaliser. Pour plus d’informations sur chaque catégorie, ainsi que sur les destinations incluses dans chaque catégorie, consultez la [documentation du catalogue des destinations](./catalog/overview.md).
 
-![Catégories de destination](./assets/destination-types/destination-categories-menu.png)
+![Catégories de destination mises en surbrillance dans la page de catalogue.](./assets/destination-types/destination-categories-menu.png)
