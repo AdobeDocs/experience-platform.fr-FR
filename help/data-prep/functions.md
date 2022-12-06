@@ -5,9 +5,9 @@ title: Fonctions de mappage de prép de données
 topic-legacy: overview
 description: Ce document présente les fonctions de mappage utilisées avec Data Prep.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: b7800dd67c2d16747815f2cb3311ca9b6d6fa342
+source-git-commit: 714ce6eb1a77559a7bd1691afeac4a96e0877717
 workflow-type: tm+mt
-source-wordcount: '4337'
+source-wordcount: '4367'
 ht-degree: 16%
 
 ---
@@ -20,7 +20,11 @@ Les fonctions de préparation de données peuvent être utilisées pour calculer
 
 Un nom de champ peut être n’importe quel identifiant légal, c’est-à-dire une séquence illimitée de lettres et de chiffres Unicode, commençant par une lettre, le symbole du dollar (`$`) ou le caractère de soulignement (`_`). Les noms de variables sont également sensibles à la casse.
 
-Si un nom de champ ne respecte pas cette convention, il doit être encadré de `${}`. Par exemple, si le nom du champ est &quot;Prénom&quot; ou &quot;Prénom&quot;, le nom doit être encapsulé comme `${First Name}` ou `${First.Name}` respectivement.
+Si un nom de champ ne respecte pas cette convention, il doit être encadré de `${}`. Par exemple, si le nom du champ est &quot;Prénom&quot; ou &quot;Prénom&quot;, le nom doit être encapsulé comme `${First Name}` ou `${First\.Name}` respectivement.
+
+>[!TIP]
+>
+>Lors de l’interaction avec des hiérarchies, si un attribut enfant comporte un point (`.`), vous devez utiliser une barre oblique inverse (`\`) pour échapper les caractères spéciaux. Pour plus d’informations, consultez le guide sur [échappement de caractères spéciaux](home.md#escape-special-characters).
 
 En outre, si un nom de champ est **any** des mots-clés réservés suivants, il doit être encapsulé avec `${}`:
 

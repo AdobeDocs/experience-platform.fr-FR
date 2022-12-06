@@ -5,10 +5,10 @@ title: Présentation de Data Prep
 topic-legacy: overview
 description: Ce document présente Data Prep dans Adobe Experience Platform.
 exl-id: f15eeb50-a531-4560-a524-1a670fbda706
-source-git-commit: d0f5d1f55101ce15934289d4fcfd1f70c1b63fc7
+source-git-commit: 61603d7516dbd859b0cce6c167c75aab42ca7171
 workflow-type: tm+mt
 source-wordcount: '788'
-ht-degree: 72%
+ht-degree: 74%
 
 ---
 
@@ -41,7 +41,7 @@ Les champs calculés permettent de créer des valeurs en fonction des attributs 
 
 Pour en savoir plus sur les champs calculés, consultez le [ des champs calculés](./functions.md#calculated-fields).
 
-### Échapper les caractères spéciaux
+### Échapper les caractères spéciaux {#escape-special-characters}
 
 Vous pouvez échapper les caractères spéciaux d’un champ à l’aide de la fonction `${...}`. Toutefois, les fichiers JSON contenant des champs avec un point (`.`) ne sont pas pris en charge par ce mécanisme. Lors de l’interaction avec des hiérarchies, si un attribut enfant comporte un point (`.`), vous devez utiliser une barre oblique inverse (`\`) pour échapper les caractères spéciaux. Par exemple : `address` est un objet qui contient l’attribut . `street.name`, il peut alors être appelé `address.street\.name` au lieu de `address.street.name`.
 
@@ -61,7 +61,7 @@ Diffusion en continu des upserts dans [!DNL Data Prep] vous permet d’envoyer d
 
 ## Contrôle d’accès basé sur les attributs dans [!DNL Data Prep]
 
-Le contrôle d’accès basé sur les attributs dans Adobe Experience Platform permet aux administrateurs de contrôler l’accès à des objets et/ou fonctionnalités spécifiques en fonction d’attributs.
+Le contrôle d’accès basé sur les attributs est une fonctionnalité d’Adobe Experience Platform qui permet aux administrateurs de contrôler l’accès à des objets et/ou fonctionnalités spécifiques en fonction d’attributs.
 
 Le contrôle d’accès basé sur les attributs permet de n’associer que les attributs auxquels vous avez accès. Les attributs auxquels vous n’avez pas accès ne peuvent être utilisés dans les mappages directs et les champs calculés. Par conséquent, si vous n’avez pas accès à un champ obligatoire, vous ne pouvez pas enregistrer un mappage. De plus, vous ne pouvez pas mapper des objets ou des tableaux d’objets si vous n’avez accès à aucun des attributs enfants. Cependant, vous pouvez mapper d’autres éléments dans le tableau d’objets ou d’objets individuellement.
 
