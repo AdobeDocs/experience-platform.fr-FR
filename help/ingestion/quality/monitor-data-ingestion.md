@@ -5,10 +5,10 @@ title: Surveillance de l’ingestion des données
 topic-legacy: overview
 description: Ce guide d’utilisation fournit des étapes détaillées sur la manière de surveiller vos données au sein de l’interface utilisateur d’Adobe Experience Platform. Ce guide nécessite que vous possédiez déjà un Adobe ID et un accès à Adobe Experience Platform.
 exl-id: 85711a06-2756-46f9-83ba-1568310c9f73
-source-git-commit: 3fadf7006c8ea058e469067b61950ed2d2d12e3f
+source-git-commit: dce7faa7fc680e37b537bf623c3a33e6c6e37169
 workflow-type: tm+mt
-source-wordcount: '618'
-ht-degree: 36%
+source-wordcount: '654'
+ht-degree: 34%
 
 ---
 
@@ -18,7 +18,18 @@ L’ingestion des données vous permet d’ingérer vos données dans Adobe Exp
 
 Ce guide d’utilisation décrit les étapes à suivre pour surveiller vos données dans l’interface utilisateur de Adobe Experience Platform. Ce guide nécessite que vous possédiez déjà un Adobe ID et un accès à Adobe Experience Platform.
 
-## Surveillance de l’ingestion des données en continu de bout en bout
+## Surveillance de l’ingestion des données en continu de bout en bout {#monitor-streaming-end-to-end-data-ingestion}
+
+>[!CONTEXTUALHELP]
+>id="platform_ingestion_streaming_ingestionrate"
+>title="Taux d&#39;ingestion"
+>abstract="Nombre d’événements traités avec succès par seconde."
+>text="Learn more in the documentation"
+>additional-url="http://www.adobe.com/go/monitor-dataflows-en" text="Surveillance des flux de données pour les sources dans l’interface utilisateur"
+
+>[!TIP]
+>
+>Pour calculer le total des événements à une date spécifique, utilisez l’expression de : `total events / day = ingestion rate * 60 * 60 * 24`.
 
 Dans le [Interface utilisateur Experience Platform](https://platform.adobe.com), sélectionnez **[!UICONTROL Surveillance]** dans le menu de navigation de gauche, suivi de **[!UICONTROL Diffusion en continu de bout en bout]**.
 
