@@ -2,10 +2,10 @@
 title: (Version bêta) Connexion au stockage dans le cloud Google
 description: Découvrez comment vous connecter au stockage dans le cloud Google et activer des segments ou exporter des jeux de données.
 exl-id: ab274270-ae8c-4264-ba64-700b118e6435
-source-git-commit: f841b27a2d2700b0b68a386b89d1a5c62d3910ff
+source-git-commit: a07557ec398631ece0c8af6ec7b32e0e8593e24b
 workflow-type: tm+mt
-source-wordcount: '867'
-ht-degree: 29%
+source-wordcount: '908'
+ht-degree: 27%
 
 ---
 
@@ -34,15 +34,15 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 Pour connecter Platform à [!DNL Google Cloud Storage], vous devez d’abord activer l’interopérabilité pour votre [!DNL Google Cloud Storage] compte . Pour accéder au paramètre d’interopérabilité, ouvrez [!DNL Google Cloud Platform] et sélectionnez **[!UICONTROL Paramètres]** de la **[!UICONTROL Stockage dans le cloud]** dans le panneau de navigation.
 
-![Tableau de bord de la plateforme Google Cloud avec espace de stockage et paramètres en surbrillance.](/help/sources/images/tutorials/create/google-cloud-storage/nav.png)
+![Tableau de bord de la plateforme Google Cloud avec espace de stockage et paramètres en surbrillance.](../../../sources/images/tutorials/create/google-cloud-storage/nav.png)
 
 Le **[!UICONTROL Paramètres]** s’affiche. À partir de là, vous pouvez voir des informations relatives à votre [!DNL Google] ID de projet et détails sur votre [!DNL Google Cloud Storage] compte . Pour accéder aux paramètres d’interopérabilité, sélectionnez **[!UICONTROL Interopérabilité]** dans l’en-tête supérieur.
 
-![Onglet Interopérabilité mis en surbrillance dans le tableau de bord de Google Cloud Platform.](/help/sources/images/tutorials/create/google-cloud-storage/project-access.png)
+![Onglet Interopérabilité mis en surbrillance dans le tableau de bord de Google Cloud Platform.](../../../sources/images/tutorials/create/google-cloud-storage/project-access.png)
 
 Le **[!UICONTROL Interopérabilité]** contient des informations sur l’authentification, les clés d’accès et le projet par défaut associé à votre compte de service. Pour générer un nouvel identifiant de clé d’accès et une clé d’accès secrète pour votre compte de service, sélectionnez **[!UICONTROL Création d’une clé pour un compte de service]**.
 
-![La commande Créer une clé pour un contrôle de compte de service est mise en surbrillance dans le tableau de bord Google Cloud Platform.](/help/sources/images/tutorials/create/google-cloud-storage/interoperability.png)
+![La commande Créer une clé pour un contrôle de compte de service est mise en surbrillance dans le tableau de bord Google Cloud Platform.](../../../sources/images/tutorials/create/google-cloud-storage/interoperability.png)
 
 Vous pouvez utiliser votre identifiant de clé d’accès nouvellement généré et votre clé d’accès secrète pour connecter votre [!DNL Google Cloud Storage] compte à Platform.
 
@@ -74,6 +74,8 @@ Pour configurer les détails de la destination, renseignez les champs obligatoir
 * **[!UICONTROL Description]** : facultatif. Vous pouvez, par exemple, mentionner la campagne pour laquelle vous utilisez cette destination.
 * **[!UICONTROL Nom du compartiment]**: Saisissez le nom du [!DNL Google Cloud Storage] compartiment à utiliser par cette destination.
 * **[!UICONTROL Chemin du dossier]**: Entrez le chemin d’accès au dossier de destination qui hébergera les fichiers exportés.
+* **[!UICONTROL Type de fichier]**: sélectionnez le format que l’Experience Platform doit utiliser pour les fichiers exportés. Lorsque vous sélectionnez la variable [!UICONTROL CSV] , vous pouvez également [configuration des options de formatage de fichier](../../ui/batch-destinations-file-formatting-options.md).
+* **[!UICONTROL Format de compression]**: sélectionnez le type de compression que l’Experience Platform doit utiliser pour les fichiers exportés.
 
 ### Activer les alertes {#enable-alerts}
 

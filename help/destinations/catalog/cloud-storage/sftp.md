@@ -3,10 +3,10 @@ keywords: SFTP;sftp
 title: Connexion SFTP
 description: Créez une connexion sortante active à votre serveur SFTP afin d’exporter périodiquement des fichiers de données délimités de Adobe Experience Platform.
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: f841b27a2d2700b0b68a386b89d1a5c62d3910ff
+source-git-commit: cb0b80f79a849d81216c5500c54b62ac5d85e2f6
 workflow-type: tm+mt
-source-wordcount: '812'
-ht-degree: 17%
+source-wordcount: '873'
+ht-degree: 16%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 17%
 >* Si vous n’avez pas encore créé de flux de données pour la variable **[!UICONTROL SFTP]** destination, veuillez utiliser la nouvelle **[!UICONTROL Version bêta SFTP]** carte pour exporter des fichiers vers **[!UICONTROL SFTP]**.
 
 
-![Image des deux cartes de destination SFTP dans une vue côte à côte.](/help/destinations/assets/catalog/cloud-storage/sftp/two-sftp-destination-cards.png)
+![Image des deux cartes de destination SFTP dans une vue côte à côte.](../../assets/catalog/cloud-storage/sftp/two-sftp-destination-cards.png)
 
 Améliorations de la nouvelle [!DNL SFTP] carte de destination :
 
@@ -104,6 +104,8 @@ Après avoir établi la connexion d’authentification à l’emplacement SFTP, 
 * **[!UICONTROL Nom]**: saisissez un nom qui vous aidera à identifier cette destination dans l’interface utilisateur de l’Experience Platform ;
 * **[!UICONTROL Description]**: saisissez une description pour cette destination ;
 * **[!UICONTROL Chemin du dossier]**: saisissez le chemin d’accès au dossier dans votre emplacement SFTP où les fichiers seront exportés.
+* **[!UICONTROL Type de fichier]**: sélectionnez le format que l’Experience Platform doit utiliser pour les fichiers exportés. Cette option n’est disponible que pour la variable **[!UICONTROL Version bêta SFTP]** destination. Lorsque vous sélectionnez la variable [!UICONTROL CSV] , vous pouvez également [configuration des options de formatage de fichier](../../ui/batch-destinations-file-formatting-options.md).
+* **[!UICONTROL Format de compression]**: sélectionnez le type de compression que l’Experience Platform doit utiliser pour les fichiers exportés. Cette option n’est disponible que pour la variable **[!UICONTROL Version bêta SFTP]** destination.
 
 ## Activer des segments vers cette destination {#activate}
 

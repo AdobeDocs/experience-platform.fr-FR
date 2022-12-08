@@ -1,10 +1,11 @@
 ---
 title: Destination de la zone d’entrée des données
 description: Découvrez comment vous connecter à Data Landing Zone pour activer des segments et exporter des jeux de données.
-source-git-commit: 56fd7a5ab58186367c729cb4ca8c3b4213c44900
+exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
+source-git-commit: a07557ec398631ece0c8af6ec7b32e0e8593e24b
 workflow-type: tm+mt
-source-wordcount: '946'
-ht-degree: 26%
+source-wordcount: '987'
+ht-degree: 25%
 
 ---
 
@@ -87,6 +88,8 @@ Pour configurer les détails de la destination, renseignez les champs obligatoir
 * **[!UICONTROL Nom]** : renseignez le nom de votre choix pour cette destination.
 * **[!UICONTROL Description]** : facultatif. Vous pouvez, par exemple, mentionner la campagne pour laquelle vous utilisez cette destination.
 * **[!UICONTROL Chemin du dossier]**: Entrez le chemin d’accès au dossier de destination qui hébergera les fichiers exportés.
+* **[!UICONTROL Type de fichier]**: sélectionnez le format que l’Experience Platform doit utiliser pour les fichiers exportés. Lorsque vous sélectionnez la variable [!UICONTROL CSV] , vous pouvez également [configuration des options de formatage de fichier](../../ui/batch-destinations-file-formatting-options.md).
+* **[!UICONTROL Format de compression]**: sélectionnez le type de compression que l’Experience Platform doit utiliser pour les fichiers exportés.
 
 ### Activer les alertes {#enable-alerts}
 
