@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: Découvrez comment créer une connexion source SFTP à l’aide de l’interface utilisateur de Adobe Experience Platform.
 exl-id: 1a00ed27-3c95-4e57-9f94-45ff256bf75c
-source-git-commit: ade0da445b18108a7f8720404cc7a65139ed42b1
+source-git-commit: bf665a0041db8a44c39c787bb1f0f1100f61e135
 workflow-type: tm+mt
-source-wordcount: '680'
-ht-degree: 23%
+source-wordcount: '785'
+ht-degree: 22%
 
 ---
 
@@ -19,9 +19,9 @@ Ce tutoriel décrit les étapes à suivre pour créer une [!DNL SFTP] connexion 
 
 ## Prise en main
 
-Ce tutoriel nécessite une compréhension pratique des composants suivants de Platform :
+Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Platform : 
 
-* [[!DNL Experience Data Model (XDM)] Système](../../../../../xdm/home.md): Cadre normalisé selon lequel l’Experience Platform organise les données d’expérience client.
+* [[!DNL Experience Data Model (XDM)] Système](../../../../../xdm/home.md) : Cadre normalisé selon lequel Experience Platform organise les données d’expérience client. 
    * [Principes de base de la composition des schémas](../../../../../xdm/schema/composition.md) : découvrez les blocs de création de base des schémas XDM, y compris les principes clés et les bonnes pratiques en matière de composition de schémas.
    * [Tutoriel sur l’éditeur de schémas](../../../../../xdm/tutorials/create-schema-ui.md) : découvrez comment créer des schémas personnalisés à l’aide de l’interface utilisateur de l’éditeur de schémas.
 * [[!DNL Real-time Customer Profile]](../../../../../profile/home.md) : fournit un profil de consommateur unifié en temps réel, basé sur des données agrégées provenant de plusieurs sources.
@@ -44,6 +44,7 @@ Pour vous connecter à [!DNL SFTP], vous devez fournir des valeurs pour les prop
 | `password` | Le mot de passe de votre [!DNL SFTP] serveur. |
 | `privateKeyContent` | Contenu de clé privée SSH codée en Base64. Le type de clé OpenSSH doit être classé en tant que RSA ou DSA. |
 | `passPhrase` | L’expression de passe ou le mot de passe pour déchiffrer la clé privée si le fichier de clé ou le contenu de la clé est protégé par une expression de passe. Si PrivateKeyContent est protégé par mot de passe, ce paramètre doit être utilisé avec comme valeur le mot de passe de PrivateKeyContent. |
+| `maxConcurrentConnections` | Ce paramètre vous permet de spécifier une limite maximale pour le nombre de connexions simultanées que Platform va créer lors de la connexion à votre serveur SFTP. Vous devez définir cette valeur sur une valeur inférieure à la limite définie par SFTP. **Remarque**: Lorsque ce paramètre est activé pour un compte SFTP existant, il n’affecte que les flux de données futurs et non les flux de données existants. |
 
 Une fois que vous avez rassemblé les informations d’identification requises, vous pouvez suivre les étapes ci-dessous pour créer une [!DNL SFTP] pour vous connecter à Platform.
 
@@ -55,7 +56,7 @@ Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le cô
 
 Sous , [!UICONTROL Stockage dans le cloud] catégorie, sélectionnez **[!UICONTROL SFTP]** puis sélectionnez **[!UICONTROL Ajouter des données]**.
 
-![catalogue](../../../../images/tutorials/create/sftp/catalog.png)
+![Catalogue des sources Experience Platform avec la source SFTP sélectionnée.](../../../../images/tutorials/create/sftp/catalog.png)
 
 Le **[!UICONTROL Connexion à SFTP]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
 
@@ -63,17 +64,19 @@ Le **[!UICONTROL Connexion à SFTP]** s’affiche. Sur cette page, vous pouvez u
 
 Pour connecter un compte existant, sélectionnez le compte FTP ou SFTP auquel vous souhaitez vous connecter, puis sélectionnez **[!UICONTROL Suivant]** pour continuer.
 
-![existant](../../../../images/tutorials/create/sftp/existing.png)
+![Liste des comptes SFTP existants sur l’interface utilisateur Experience Platform.](../../../../images/tutorials/create/sftp/existing.png)
 
 ### Nouveau compte
 
 Si vous créez un compte, sélectionnez **[!UICONTROL Nouveau compte]**, puis fournissez un nom et une description facultative de votre nouvelle [!DNL SFTP] compte .
 
+![Nouvel écran de compte pour SFTP](../../../../images/tutorials/create/sftp/new.png)
+
 #### Authentification avec mot de passe
 
 [!DNL SFTP] prend en charge différents types d’authentification pour l’accès. Sous **[!UICONTROL Authentification du compte]** select **[!UICONTROL Mot de passe]** et indiquez ensuite les valeurs host et port auxquelles se connecter, ainsi que votre nom d’utilisateur et votre mot de passe.
 
-![connect-password](../../../../images/tutorials/create/sftp/password.png)
+![Nouvel écran de compte pour la source SFTP à l’aide de l’authentification de base](../../../../images/tutorials/create/sftp/password.png)
 
 #### Authentification à l’aide de la clé publique SSH
 
@@ -83,7 +86,7 @@ Pour utiliser des informations d’identification SSH basées sur des clés publ
 >
 >SFTP prend en charge une clé OpenSSH de type RSA ou DSA. Assurez-vous que le contenu de votre fichier clé commence par `"-----BEGIN [RSA/DSA] PRIVATE KEY-----"` et se termine par `"-----END [RSA/DSA] PRIVATE KEY-----"`. Si le fichier de clé privée est un fichier au format PPK, utilisez l’outil PuTTY pour effectuer une conversion de PPK au format OpenSSH.
 
-![connect-ssh](../../../../images/tutorials/create/sftp/ssh-public-key.png)
+![Nouvel écran de compte pour la source SFTP à l’aide de la clé publique SSH.](../../../../images/tutorials/create/sftp/ssh.png)
 
 | Informations d’identification | Description |
 | ---------- | ----------- |
