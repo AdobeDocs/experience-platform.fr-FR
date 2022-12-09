@@ -5,9 +5,9 @@ title: Guide des informations d’identification de Query Service
 topic-legacy: guide
 description: Adobe Experience Platform Query Service fournit une interface utilisateur qui peut être utilisée pour écrire et exécuter des requêtes, afficher des requêtes précédemment exécutées et accéder aux requêtes enregistrées par les utilisateurs au sein de votre organisation IMS.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: 344602a0e828d140ea386daf30a25b8f595f8d04
+source-git-commit: f52e1d49fd090c398d34a3d9c2b5d1746c319eb4
 workflow-type: tm+mt
-source-wordcount: '1225'
+source-wordcount: '1317'
 ht-degree: 2%
 
 ---
@@ -35,7 +35,15 @@ Le **[!UICONTROL Expiration des informations d’identification]** fournit les i
 - **[!UICONTROL Nom d’utilisateur]**: Nom d’utilisateur que vous utiliserez pour vous connecter à Query Service.
 - **[!UICONTROL Mot de passe]**: mot de passe que vous utiliserez pour vous connecter à Query Service.
 - **[!UICONTROL PSQL, commande]**: Une commande qui a automatiquement inséré toutes les informations pertinentes pour vous connecter à Query Service à l’aide de PSQL sur la ligne de commande.
-- **[!UICONTROL Expires]**: Date d’expiration des informations d’identification arrivant à expiration. Les informations d’identification expirent 24 heures après leur génération.
+- **[!UICONTROL Expires]**: Date et heure d’expiration des informations d’identification arrivant à expiration. La durée de validité par défaut du jeton est de 24 heures, mais elle peut être modifiée dans les paramètres avancés du Admin Console.
+
+>[!TIP]
+>
+>Pour modifier la durée de vie de la session pour votre connexion d’informations d’identification arrivant à expiration à Query Service, accédez à la [Admin Console](https://adminconsole.adobe.com/) et sélectionnez les options suivantes à l’écran : **Paramètres** > **Confidentialité et sécurité** > **Paramètres d’authentification** > **Paramètres avancés** > **Durée de session maximale**.
+>
+>![L’onglet Paramètres du Admin Console avec la confidentialité et la sécurité, les paramètres d’authentification et la durée de session maximale est mis en surbrillance.](../images/ui/credentials/max-session-life.png)
+>
+>Pour plus d’informations sur le [Paramètres avancés](https://helpx.adobe.com/enterprise/using/authentication-settings.html#advanced-settings) proposé par Admin Console.
 
 ## Informations d’identification non arrivant à expiration {#non-expiring-credentials}
 
