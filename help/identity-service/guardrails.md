@@ -3,14 +3,14 @@ keywords: Experience Platform;identité;service d’identité;dépannage;garde-f
 title: Barrières de sécurité pour Identity Service
 description: Ce document fournit des informations sur l’utilisation et les limites de taux pour les données Identity Service afin de vous aider à optimiser l’utilisation du graphique d’identités.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: e6d0f0d0bc3de2f6da4e4269811d254db4fa3303
+source-git-commit: 672d98135492350ab6e12eec51649e6e5a7e4923
 workflow-type: tm+mt
-source-wordcount: '445'
+source-wordcount: '490'
 ht-degree: 11%
 
 ---
 
-# Barrières de sécurité pour [!DNL Identity Service] data
+# Barrières de sécurité pour les [!DNL Identity Service]données
 
 Ce document fournit des informations sur l’utilisation et les limites de taux pour [!DNL Identity Service] pour vous aider à optimiser l’utilisation du graphique d’identités. Lors de la révision des barrières de sécurité suivantes, on suppose que vous avez correctement modélisé les données. Si vous avez des questions sur la manière de modéliser vos données, contactez votre représentant du service client.
 
@@ -31,7 +31,7 @@ Le tableau suivant décrit les limites statiques appliquées aux données d’id
 
 | Barrière de sécurité | Limite | Notes |
 | --- | --- | --- |
-| Nombre d’identités dans un graphique | 150 | La limite est appliquée au niveau de l’environnement de test. Le graphique d’identités ne sera pas mis à jour une fois la limite atteinte. |
+| Nombre d’identités dans un graphique | 150 | La limite est appliquée au niveau de l’environnement de test. Le graphique d’identités ne sera pas mis à jour une fois la limite atteinte. **Remarque**: Nombre maximal d’identités dans un graphique d’identités **pour un profil fusionné individuel** est de 50. Les profils fusionnés basés sur des graphiques d’identités comportant plus de 50 identités sont exclus de Real-time Customer Profile. Pour plus d’informations, consultez le guide sur [Barrières de sécurité pour les données de profil](../profile/guardrails.md). |
 | Nombre d’identités dans un enregistrement XDM | 20 | Le nombre minimum d’enregistrements XDM requis est de deux. |
 | Nombre d’espaces de noms personnalisés | Aucun | Il n’existe aucune limite au nombre d’espaces de noms personnalisés que vous pouvez créer. |
 | Nombre de graphiques | Aucun | Il n’existe aucune limite au nombre de graphiques d’identités que vous pouvez créer. |
