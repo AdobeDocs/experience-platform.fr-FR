@@ -5,9 +5,9 @@ breadcrumb-title: Balises
 user-guide-description: Découvrez comment déployer et gérer des balises d’analyse, de marketing et de publicité pour améliorer les expériences clients.
 feature: Tags
 solution: Data Collection
-source-git-commit: bf5346214fad66b3f470c74620b608d71639b85a
+source-git-commit: f2106d1e5bc0442df4d0ba84323821f6f2d9b1c7
 workflow-type: tm+mt
-source-wordcount: '971'
+source-wordcount: '965'
 ht-degree: 75%
 
 ---
@@ -213,11 +213,12 @@ ht-degree: 75%
       * [Connecteur cloud pour les Google Analytics](https://exchange.adobe.com/apps/ec/106542)
       * Base {#core}
          * [Présentation](./extensions/server/core/overview.md)
-      * [API de conversion facebook](https://exchange.adobe.com/apps/ec/105509)
       * Conversions améliorées de Google Ads {#google-ads-enhanced-conversions}
          * [Présentation](./extensions/server/google-ads-enhanced-conversions/overview.md)
       * [!DNL Mailchimp] Edge {#mailchimp}
-         * [Présentation](./extensions/server/mailchimp/overview.md)
+         * [Aperçu](./extensions/server/mailchimp/overview.md)
+      * [!DNL Meta Conversions API] {#meta}
+         * [Aperçu](./extensions/server/meta/overview.md)
       * [!UICONTROL Microsoft Azure] {#azure}
          * [Présentation](./extensions/server/azure/overview.md)
       * [Pega Customer Decision Hub](https://exchange.adobe.com/apps/ec/107597)

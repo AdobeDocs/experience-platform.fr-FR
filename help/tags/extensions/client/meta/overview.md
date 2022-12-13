@@ -1,9 +1,9 @@
 ---
 title: Présentation de l’extension Meta Pixel
 description: Découvrez l’extension de balise Meta Pixel dans Adobe Experience Platform.
-source-git-commit: 87376172f89858bfa883084461544a2c50ba5009
+source-git-commit: a47e35a1b8c7ce2b0fa4ffe30fcdc7d22fc0f4c5
 workflow-type: tm+mt
-source-wordcount: '741'
+source-wordcount: '760'
 ht-degree: 2%
 
 ---
@@ -14,11 +14,9 @@ ht-degree: 2%
 
 Le [!DNL Meta Pixel] l’extension de balise vous permet d’exploiter [!DNL Pixel] fonctionnalités de vos bibliothèques de balises côté client. Ce document explique comment installer l’extension et utiliser ses fonctionnalités dans une [règle](../../../ui/managing-resources/rules.md).
 
-<!-- (To include when Conversions API extension doc is published)
 >[!NOTE]
 >
->If you are trying to send server-side events to [!DNL Meta] rather than from the client side, use the [[!DNL Meta Conversions API] extension](../../server/meta/overview.md) instead.
--->
+>Si vous essayez d’envoyer des événements côté serveur à [!DNL Meta] plutôt que du côté client, utilisez la variable [[!DNL Meta Conversions API] extension](../../server/meta/overview.md) au lieu de .
 
 ## Conditions préalables
 
