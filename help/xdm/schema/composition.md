@@ -5,7 +5,7 @@ title: Principes de base de la composition des schémas
 topic-legacy: overview
 description: Ce document présente les schémas du modèle de données d’expérience (XDM) ainsi que les blocs de création, principes et bonnes pratiques de la composition de schémas à utiliser dans Adobe Experience Platform.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: a95e5cf02e993d6c761abd74c98c0967a89eb678
+source-git-commit: bd40388d710f8b135c0d36716b0ec59c8c9b78ee
 workflow-type: tm+mt
 source-wordcount: '4103'
 ht-degree: 26%
@@ -253,7 +253,7 @@ Les plages valides de ces types scalaires peuvent être limitées davantage à c
 
 >[!NOTE]
 >
->Le type de champ « map » permet des données de paires clé-valeur, y compris plusieurs valeurs pour une clé unique. Les mappages sont disponibles dans les classes XDM standard et les groupes de champs, mais vous pouvez également définir des mappages personnalisés à l’aide de l’API Schema Registry. Voir le tutoriel sur [définition de champs personnalisés](../tutorials/custom-fields-api.md#maps) pour plus d’informations.
+>Le type de champ « map » permet des données de paires clé-valeur, y compris plusieurs valeurs pour une clé unique. Les mappages sont disponibles dans les classes XDM standard et les groupes de champs, mais vous pouvez également définir des mappages personnalisés à l’aide de l’API Schema Registry. Voir le tutoriel sur [définition de champs personnalisés](../tutorials/custom-fields-api.md#custom-maps) pour plus d’informations.
 
 ## Exemple de composition
 

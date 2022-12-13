@@ -5,7 +5,7 @@ title: Contraintes de type de champ XDM
 topic-legacy: overview
 description: Référence pour les contraintes de type de champ dans le modèle de données d’expérience (XDM), y compris les autres formats de sérialisation auxquels elles peuvent être mappées et comment définir vos propres types de champ dans l’API.
 exl-id: 63839a28-6d26-46f1-8bbf-b524e82ac4df
-source-git-commit: a3b4dd65b22bb04bcba52c44a09030f51454a9c8
+source-git-commit: bd40388d710f8b135c0d36716b0ec59c8c9b78ee
 workflow-type: tm+mt
 source-wordcount: '663'
 ht-degree: 12%
@@ -130,7 +130,7 @@ Les sections ci-dessous décrivent comment chaque type XDM est mappé à d’aut
 >
 >Parmi les types XDM standard répertoriés dans les tableaux ci-dessous, la variable [!UICONTROL Carte] est également inclus. Les cartes sont utilisées dans les schémas standard lorsque les données sont représentées sous la forme de clés qui mappent à certaines valeurs ou lorsque les clés ne peuvent pas raisonnablement être incluses dans un schéma statique et doivent être traitées comme des valeurs de données.
 >
->De nombreux composants XDM standard utilisent des types de mappage. Vous pouvez également [Définition des champs de mappage personnalisés](../tutorials/custom-fields-api.md#maps) si vous le souhaitez. L’inclusion du type de mappage dans les tableaux ci-dessous a pour but de vous aider à déterminer comment mapper vos données existantes à XDM si elles sont actuellement stockées dans l’un des formats répertoriés ci-dessous.
+>De nombreux composants XDM standard utilisent des types de mappage. Vous pouvez également [Définition des champs de mappage personnalisés](../tutorials/custom-fields-api.md#custom-maps) si vous le souhaitez. L’inclusion du type de mappage dans les tableaux ci-dessous a pour but de vous aider à déterminer comment mapper vos données existantes à XDM si elles sont actuellement stockées dans l’un des formats répertoriés ci-dessous.
 
 ### Parquet, Spark SQL et Java {#parquet}
 
