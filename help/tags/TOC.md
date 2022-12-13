@@ -5,9 +5,9 @@ breadcrumb-title: Balises
 user-guide-description: Découvrez comment déployer et gérer des balises d’analyse, de marketing et de publicité pour améliorer les expériences clients.
 feature: Tags
 solution: Data Collection
-source-git-commit: f6c11fadc0d8019044fbdd2923af00ce18ce39e1
+source-git-commit: bf5346214fad66b3f470c74620b608d71639b85a
 workflow-type: tm+mt
-source-wordcount: '976'
+source-wordcount: '971'
 ht-degree: 75%
 
 ---
@@ -155,7 +155,6 @@ ht-degree: 75%
       * [Confidentialité différentielle](https://exchange.adobe.com/apps/ec/104535)
       * [Visionneuses Dynamic Media](https://exchange.adobe.com/apps/ec/103048)
       * [Aide EDDL](https://exchange.adobe.com/apps/ec/107691)
-      * [Facebook Pixel](https://exchange.adobe.com/apps/ec/102804)
       * [Flashtalking OneTag](https://exchange.adobe.com/apps/ec/101392)
       * [ForeSee](https://exchange.adobe.com/apps/ec/100164)
       * [Gainsight PX](https://exchange.adobe.com/apps/ec/103343)
@@ -173,6 +172,8 @@ ht-degree: 75%
          * [Présentation](./extensions/client/marketo/overview.md)
          * [Notes de mise à jour](./extensions/client/marketo/release-notes.md)
       * [Gestionnaire des propriétés de Principal](https://exchange.adobe.com/apps/ec/102992)
+      * [!DNL Meta Pixel] {#meta}
+         * [Présentation](./extensions/client/meta/overview.md)
       * [Moniteur](https://exchange.adobe.com/apps/ec/106544)
       * [SDK Nielsen Digital](https://exchange.adobe.com/apps/ec/101361)
       * [Gestion du consentement OneTrust pour les cookies](https://exchange.adobe.com/apps/ec/100340)
@@ -300,3 +301,4 @@ ht-degree: 75%
    * [Notes de mise à jour 2020](./release-notes/2020.md)
    * [Notes de mise à jour 2019](./release-notes/2019.md)
    * [Notes de mise à jour 2018](./release-notes/2018.md)
+
