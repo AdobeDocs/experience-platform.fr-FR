@@ -2,14 +2,20 @@
 title: Notes de mise à jour relatives aux balises et au transfert d’événements
 description: Dernières notes de mise à jour concernant les balises et le transfert d’événement dans Adobe Experience Platform.
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: c7344d0ac5b65c6abae6a040304f27dc7cd77cbb
+source-git-commit: 892d22a88546ff270af4f5b253a013015349898b
 workflow-type: tm+mt
-source-wordcount: '350'
-ht-degree: 30%
+source-wordcount: '418'
+ht-degree: 32%
 
 ---
 
 # Notes de mise à jour relatives aux balises et au transfert d’événement
+
+## 23 novembre 2022
+
+* **[!DNL AWS]extension pour le transfert d’événement**: Vous pouvez désormais envoyer des données à [!DNL Amazon Web Services] ([!DNL AWS]) en utilisant un [transfert d’événement](../../tags/ui/event-forwarding/overview.md) extension . Pour plus d’informations, consultez la présentation de l’extension [[!DNL AWS] ](../../tags/extensions/server/aws/overview.md).
+* Extension **[!DNL Google Ads Enhanced Conversions]pour le transfert d’événement**: Vous pouvez désormais envoyer des données de conversion à [!DNL Google Ads] à l’aide d’une [transfert d’événement](../../tags/ui/event-forwarding/overview.md) extension . Pour plus d’informations, consultez la présentation de l’extension [[!DNL Google Ads Enhanced Conversions] ](../../tags/extensions/server/google-ads-enhanced-conversions/overview.md).
+* Extension **[!DNL Microsoft Azure]pour le transfert d’événement**: Vous pouvez désormais envoyer des données à [!DNL Microsoft Azure] à l’aide d’une [transfert d’événement](../../tags/ui/event-forwarding/overview.md) extension . Pour plus d’informations, consultez la présentation de l’extension [[!DNL Microsoft Azure] ](../../tags/extensions/server/azure/overview.md).
 
 ## 26 octobre 2022
 
