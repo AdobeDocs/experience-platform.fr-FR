@@ -3,22 +3,22 @@ keywords: Experience Platform;accueil;rubriques populaires;contrôle d’accès;
 title: Parcourir le contrôle d’accès basé sur les attributs
 description: Ce document fournit des informations sur l’utilisation de l’interface Autorisations dans Adobe Experience Cloud.
 exl-id: 39634bde-8858-44a6-b39a-776846654fc1
-source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '346'
+source-wordcount: '347'
 ht-degree: 21%
 
 ---
 
 # Guide des autorisations
 
-Les autorisations sont la zone de Adobe Experience Cloud dans laquelle les administrateurs peuvent définir des rôles utilisateur et des stratégies d’accès afin de gérer les autorisations d’accès pour les fonctionnalités et les objets au sein d’une application de produit.
+[!UICONTROL Autorisations] est la zone de Adobe Experience Cloud dans laquelle les administrateurs peuvent définir des rôles utilisateur et des stratégies d’accès afin de gérer les autorisations d’accès pour les fonctionnalités et les objets au sein d’une application de produit.
 
-Avec des autorisations, vous pouvez configurer les éléments suivants :
+Avec [!UICONTROL Autorisations], vous pouvez configurer :
 
+* [Stratégies d’accès](./policies.md)
 * [Libellés](./labels.md)
 * [Autorisations](./permissions.md)
-* [Stratégies](./permissions.md)
 * [Rôles](./roles.md)
 * [Sandbox](./sandboxes.md)
 * [Utilisateurs](./users.md)

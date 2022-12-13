@@ -1,18 +1,22 @@
 ---
 keywords: Experience Platform;accueil;rubriques populaires;contrôle d’accès;contrôle d’accès basé sur les attributs;ABAC
-title: Contrôle d’accès basé sur les attributs Création d’une stratégie
-description: Ce document fournit des informations sur la gestion des stratégies par le biais de l’interface Autorisations dans Adobe Experience Cloud.
+title: Gestion des stratégies de contrôle d’accès
+description: Ce document fournit des informations sur la gestion des stratégies de contrôle d’accès via l’interface Autorisations de Adobe Experience Cloud.
 exl-id: 66820711-2db0-4621-908d-01187771de14
-source-git-commit: 1a755fa5480e036bde50617f01440cfabbaf64c2
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '678'
+source-wordcount: '726'
 ht-degree: 0%
 
 ---
 
-# Gestion des stratégies
+# Gestion des stratégies de contrôle d’accès
 
-Les politiques sont des déclarations qui réunissent des attributs pour établir des actions permises et non admissibles. Les stratégies peuvent être locales ou globales et peuvent remplacer d’autres stratégies.
+Les politiques de contrôle d&#39;accès sont des déclarations qui rassemblent les attributs pour établir les actions permises et non autorisées. Les stratégies d’accès peuvent être locales ou globales et peuvent remplacer d’autres stratégies.
+
+>[!IMPORTANT]
+>
+>Les stratégies d’accès ne doivent pas être confondues avec les stratégies d’utilisation des données, qui contrôlent la manière dont les données sont utilisées dans Adobe Experience Platform au lieu des utilisateurs de votre entreprise qui y ont accès. Consultez le guide de création [stratégies d’utilisation des données](../../../data-governance/policies/create.md) pour plus d’informations.
 
 ## Création d’une stratégie
 

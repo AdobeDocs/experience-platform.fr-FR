@@ -3,10 +3,10 @@ keywords: Experience Platform;accueil;rubriques populaires;contrôle d’accès;
 title: Présentation du contrôle d’accès basé sur les attributs
 description: Ce document fournit des informations sur le contrôle d’accès basé sur les attributs dans Adobe Experience Platform.
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
-source-git-commit: a94cf02a57bd91d2342b53ced7da98836343aa2b
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '1777'
-ht-degree: 31%
+source-wordcount: '1826'
+ht-degree: 30%
 
 ---
 
@@ -15,6 +15,10 @@ ht-degree: 31%
 Le contrôle d’accès basé sur les attributs est une fonctionnalité d’Adobe Experience Platform qui permet aux administrateurs de contrôler l’accès à des objets et/ou fonctionnalités spécifiques en fonction d’attributs. Les attributs peuvent être des métadonnées ajoutées à un objet, comme un libellé ajouté à un champ ou à un segment de schéma. Un administrateur définit des stratégies d’accès qui comprennent des attributs afin de gérer les autorisations d’accès des utilisateurs.
 
 Cette fonctionnalité vous permet d’étiqueter les champs de schéma du modèle de données d’expérience (XDM) avec des libellés qui définissent les portées d’utilisation des données ou de l’organisation. En parallèle, les administrateurs peuvent utiliser l’interface d’administration des utilisateurs et des rôles pour définir des stratégies d’accès autour des champs de schéma XDM et mieux gérer l’accès attribué aux utilisateurs ou groupes d’utilisateurs (utilisateurs internes, externes ou tiers). Enfin, le contrôle d’accès basé sur les attributs permet aux administrateurs de gérer l’accès à des segments spécifiques.
+
+>[!IMPORTANT]
+>
+>Le contrôle d’accès basé sur les attributs ne doit pas être confondu avec les fonctionnalités de gouvernance des données des Experience Platform, qui vous permettent d’utiliser des libellés et des stratégies pour contrôler la manière dont les données sont utilisées dans Platform plutôt que les utilisateurs de votre organisation qui y ont accès. Voir [présentation de la gouvernance des données](../../data-governance/home.md) pour plus d’informations.
 
 Grâce au contrôle d’accès basé sur les attributs, les administrateurs de votre organisation peuvent contrôler l’accès des utilisateurs aux données personnelles sensibles (SPD), aux informations d’identification personnelle (PII) et au type de données personnalisé dans tous les workflows et ressources Platform. Les administrateurs peuvent définir des rôles d’utilisateur qui n’ont accès qu’à des champs spécifiques et aux données correspondant à ces champs.
 

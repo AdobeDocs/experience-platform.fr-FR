@@ -5,16 +5,20 @@ title: Gestion des stratégies d’utilisation des données dans l’interface u
 topic-legacy: policies
 description: La gouvernance des données d’Adobe Experience Platform fournit une interface utilisateur qui vous permet de créer et de gérer des stratégies d’utilisation des données. Ce document présente les actions que vous pouvez effectuer dans l’espace de travail Stratégies de l’interface utilisateur de l’Experience Platform.
 exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
-source-git-commit: 5776c691b7f3ec4cb544de59cf6beef162285399
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '1407'
-ht-degree: 48%
+source-wordcount: '1411'
+ht-degree: 47%
 
 ---
 
 # Gestion des stratégies d’utilisation des données dans l’interface utilisateur
 
-La gouvernance des données d’Adobe Experience Platform fournit une interface utilisateur qui vous permet de créer et de gérer des stratégies d’utilisation des données. Ce document présente les actions que vous pouvez effectuer dans la variable **Stratégies** de l’espace de travail [!DNL Experience Platform] de l’interface utilisateur.
+Ce document explique comment utiliser la variable **[!UICONTROL Stratégies]** espace de travail dans l’interface utilisateur de Adobe Experience Platform pour créer et gérer des stratégies d’utilisation des données.
+
+>[!NOTE]
+>
+>Pour plus d’informations sur la gestion des stratégies de contrôle d’accès dans l’interface utilisateur, reportez-vous à la section [Guide de l’interface utilisateur du contrôle d’accès basé sur les attributs](../../access-control/abac/ui/policies.md) au lieu de .
 
 >[!IMPORTANT]
 >

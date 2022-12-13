@@ -3,12 +3,12 @@ keywords: Experience Platform;accueil;rubriques populaires;dule;DULE
 solution: Experience Platform
 title: Présentation des stratégies dʼutilisation des données
 topic-legacy: policies
-description: Des stratégies d’utilisation des données doivent être mises en œuvre pour que les libellés d’utilisation des données prennent en charge efficacement la conformité des données. Les stratégies d’utilisation des données sont des règles qui décrivent les types d’actions marketing que vous êtes autorisé ou non à effectuer sur des données d’Experience Platform.
+description: Les stratégies d’utilisation des données sont des règles qui décrivent les types d’actions marketing que vous êtes autorisé ou non à effectuer sur les données de Adobe Experience Platform.
 exl-id: 1b372aa5-3e49-4741-82dc-5701a4bc8469
-source-git-commit: c314cba6b822e12aa0367e1377ceb4f6c9d07ac2
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '1180'
-ht-degree: 87%
+source-wordcount: '1164'
+ht-degree: 85%
 
 ---
 

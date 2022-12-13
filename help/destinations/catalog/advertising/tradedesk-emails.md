@@ -2,10 +2,10 @@
 title: (Version bêta) Bureau commercial - Connexion CRM
 description: Activez les profils dans votre compte de bureau Commerce pour le ciblage et la suppression des audiences en fonction des données CRM.
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
-source-git-commit: a761ab634dce31bd0a06297f703d9d815c2f0ea2
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
 source-wordcount: '1041'
-ht-degree: 11%
+ht-degree: 17%
 
 ---
 
@@ -39,7 +39,7 @@ Selon le type d’ID que vous ingérez dans Adobe Experience Platform, vous deve
 
 ## Identités prises en charge {#supported-identities}
 
-[!DNL The Trade Desk] prend en charge l’activation des identités décrites dans le tableau ci-dessous. En savoir plus sur [identités](/help/identity-service/namespaces.md).
+[!DNL The Trade Desk] prend en charge l’activation des identités décrites dans le tableau ci-dessous. En savoir plus sur les [identités](/help/identity-service/namespaces.md).
 
 Adobe Experience Platform prend en charge le texte brut et les adresses électroniques hachées SHA256. Suivez les instructions de la section Exigences de correspondance des identifiants et utilisez les espaces de noms appropriés pour le texte brut et les adresses électroniques hachées, respectivement.
 
@@ -64,14 +64,14 @@ Si vous choisissez de hacher vous-même les adresses électroniques, veillez à 
    * Le point (. (Code ASCII 46). Par exemple, normaliser `jane.doe@gmail.com` to `janedoe@gmail.com`.
    * Le signe plus (+ (code ASCII 43)) et tous les caractères suivants. Par exemple, normaliser `janedoe+home@gmail.com` to `janedoe@gmail.com`.
 
-## Type et fréquence d&#39;export {#export-type-frequency}
+## Type et fréquence d’exportation {#export-type-frequency}
 
 Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la fréquence d’exportation des destinations.
 
 | Élément | Type | Notes |
 ---------|----------|---------|
 | Type d’exportation | **[!UICONTROL Exportation des segments]** | Vous exportez tous les membres d’un segment (audience) avec les identifiants (email ou email haché) utilisés dans la destination du bureau de commerce. |
-| Fréquence des exports | **[!UICONTROL Lot quotidien]** | Comme un profil est mis à jour dans Experience Platform en fonction de l’évaluation des segments, le profil (identités) est mis à jour une fois par jour en aval de la plateforme de destination. En savoir plus sur [téléchargements par lots](https://experienceleague.adobe.com/docs/experience-platform/destinations/destination-types.html?lang=en#file-based). |
+| Fréquence des exportations | **[!UICONTROL Lot quotidien]** | Comme un profil est mis à jour dans Experience Platform en fonction de l’évaluation des segments, le profil (identités) est mis à jour une fois par jour en aval de la plateforme de destination. En savoir plus sur [téléchargements par lots](https://experienceleague.adobe.com/docs/experience-platform/destinations/destination-types.html?lang=en#file-based). |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -86,8 +86,8 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 Avant de pouvoir envoyer ou activer des données d’audience vers une destination, vous devez configurer une connexion à votre propre plateforme de destination. Pendant la [configuration](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=en) de cette destination, vous devez fournir les informations suivantes :
 
 * **[!UICONTROL Type de compte]**: Veuillez choisir la **[!UICONTROL Compte existant]** .
-* **[!UICONTROL Nom]**: Un nom par lequel vous reconnaîtrez cette destination à l’avenir.
-* **[!UICONTROL Description]**: Description qui vous aidera à identifier cette destination ultérieurement.
+* **[!UICONTROL Nom]** : un nom par lequel vous reconnaîtrez cette destination à l’avenir.
+* **[!UICONTROL Description]** : une description qui vous aidera à identifier cette destination à l’avenir.
 * **[!UICONTROL Identifiant publicitaire]**: your [!DNL Trade Desk Advertiser ID], qui peut être partagé par votre [!DNL Trade Desk] Gestionnaire de compte ou sous [!DNL Advertiser Preferences] dans le [!DNL Trade Desk] Interface utilisateur.
 
 Lors de la connexion à la destination, la définition d’une stratégie de gouvernance des données est complètement facultative. Veuillez consulter l’Experience Platform [présentation de la gouvernance des données](https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html?lang=en) pour plus d’informations.
@@ -131,4 +131,4 @@ Pour vérifier que les données sont correctement exportées depuis l’Experien
 
 ## Utilisation et gouvernance des données {#data-usage-governance}
 
-Lors de la gestion de vos données, toutes les destinations [!DNL Adobe Experience Platform] se conforment aux stratégies d’utilisation des données. Pour obtenir des informations détaillées sur la manière dont [!DNL Adobe Experience Platform] applique la gouvernance des données, voir [Présentation de la gouvernance des données](/help/data-governance/home.md).
+Lors de la gestion de vos données, toutes les destinations [!DNL Adobe Experience Platform] se conforment aux stratégies d’utilisation des données. Pour obtenir des informations détaillées sur la manière dont [!DNL Adobe Experience Platform] applique la gouvernance des données, lisez la [présentation de la gouvernance des données](/help/data-governance/home.md).

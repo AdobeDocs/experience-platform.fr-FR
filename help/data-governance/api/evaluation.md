@@ -5,16 +5,16 @@ title: Points d’entrée de l’API Policy Evaluation
 topic-legacy: developer guide
 description: Une fois les actions marketing créées et les stratégies définies, vous pouvez utiliser l’API Policy Service pour déterminer si certaines actions ne respectent pas les stratégies. Les contraintes renvoyées prennent la forme d’un ensemble de stratégies qui seraient enfreintes si l’action marketing était appliquée aux données spécifiées contenant les libellés d’utilisation des données.
 exl-id: f9903939-268b-492c-aca7-63200bfe4179
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '1540'
-ht-degree: 100%
+source-wordcount: '1542'
+ht-degree: 98%
 
 ---
 
 # Points d’entrée de l’évaluation des stratégies
 
-Une fois les actions marketing créées et les stratégies définies, vous pouvez utiliser l’API [!DNL Policy Service] pour déterminer si certaines actions ne respectent pas les stratégies. Les contraintes renvoyées prennent la forme d’un ensemble de stratégies qui seraient enfreintes si l’action marketing était appliquée aux données spécifiées contenant les libellés d’utilisation des données.
+Une fois les actions marketing créées et les stratégies d’utilisation des données définies, vous pouvez utiliser la variable [!DNL Policy Service] API permettant d’évaluer si des stratégies sont violées par certaines actions. Les contraintes renvoyées prennent la forme d’un ensemble de stratégies qui seraient enfreintes si l’action marketing était appliquée aux données spécifiées contenant les libellés d’utilisation des données.
 
 Par défaut, seules les stratégies dont l’état est défini sur `ENABLED` participent à l’évaluation. Vous pouvez cependant utiliser le paramètre de requête `?includeDraft=true` pour inclure des stratégies `DRAFT` dans l’évaluation.
 

@@ -5,16 +5,20 @@ title: Gestion des étiquettes dʼutilisation des données pour les jeux de donn
 topic-legacy: developer guide
 description: LʼAPI Dataset Service vous permet dʼappliquer et de modifier des étiquettes dʼutilisation pour les jeux de données. LʼAPI fait partie des fonctionnalités de catalogue de données dʼAdobe Experience Platform, mais est distinct de lʼAPI Catalog Service qui gère les métadonnées du jeu de données.
 exl-id: 24a8d870-eb81-4255-8e47-09ae7ad7a721
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 7e4c2ef8089276829604c9d8a8dd20a122b18c7a
 workflow-type: tm+mt
-source-wordcount: '803'
-ht-degree: 100%
+source-wordcount: '816'
+ht-degree: 91%
 
 ---
 
 # Gestion des étiquettes dʼutilisation des données pour les jeux de données à lʼaide dʼAPI
 
 [[!DNL Dataset Service API]](https://www.adobe.io/experience-platform-apis/references/dataset-service/) vous permet dʼappliquer et de modifier des étiquettes dʼutilisation pour les jeux de données. LʼAPI fait partie des fonctionnalités de catalogue de données dʼAdobe Experience Platform, mais est distinct de lʼAPI [!DNL Catalog Service] qui gère les métadonnées du jeu de données.
+
+>[!IMPORTANT]
+>
+>L’application d’étiquettes au niveau du jeu de données est uniquement prise en charge pour les cas d’utilisation de la gouvernance des données. Si vous essayez de créer des stratégies d’accès pour les données, vous devez [appliquer des libellés au schéma ;](../../xdm/tutorials/labels.md) sur lequel le jeu de données est basé. Consultez la présentation sur [contrôle d’accès basé sur les attributs](../../access-control/abac/overview.md) pour plus d’informations.
 
 Ce document explique la gestion des étiquettes pour les jeux de données et les champs à lʼaide de [!DNL Dataset Service API]. Pour obtenir des instructions sur la gestion des étiquettes dʼutilisation des données elles-mêmes à lʼaide dʼappels API, consultez le [guide de point d’entrée des étiquettes](../api/labels.md) pour [!DNL Policy Service API].
 
@@ -155,10 +159,6 @@ Une réponse réussie renvoie le jeu de libellés mis à jour pour le jeu de don
 
 ## Étapes suivantes
 
-En lisant ce document, vous avez appris la gestion des étiquettes dʼutilisation des données pour les jeux de données et les champs à lʼaide de lʼAPI [!DNL Dataset Service].
-
-Une fois que vous avez ajouté des étiquettes dʼutilisation des données au niveau du jeu de données et du champ, vous pouvez commencer à ingérer des données dans [!DNL Experience Platform]. Pour en savoir plus, commencez par lire la [documentation sur l’ingestion de données](../../ingestion/home.md).
-
-Désormais, vous pouvez également définir des stratégies d’utilisation des données en fonction des libellés que vous avez appliqués. Pour plus d’informations, consultez la [présentation des stratégies d’utilisation des données](../policies/overview.md).
+En lisant ce document, vous avez appris la gestion des étiquettes dʼutilisation des données pour les jeux de données et les champs à lʼaide de lʼAPI [!DNL Dataset Service]. Vous pouvez maintenant définir [stratégies d’utilisation des données](../policies/overview.md) et [stratégies de contrôle d’accès](../../access-control/abac/ui/policies.md) selon les libellés que vous avez appliqués.
 
 Pour plus dʼinformations sur la gestion des jeux de données dans [!DNL Experience Platform], consultez la [présentation des jeux de données](../../catalog/datasets/overview.md).

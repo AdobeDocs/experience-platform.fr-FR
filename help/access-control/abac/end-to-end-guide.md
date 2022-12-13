@@ -2,25 +2,29 @@
 keywords: Experience Platform;accueil;rubriques populaires;contrôle d’accès;contrôle d’accès basé sur les attributs;
 title: Guide de bout en bout du contrôle d’accès basé sur les attributs
 description: Ce document fournit un guide de bout en bout sur le contrôle d’accès basé sur les attributs dans Adobe Experience Platform.
-source-git-commit: 0035f4611f2c269bb36f045c3c57e6e7bad7c013
+exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '2382'
-ht-degree: 5%
+source-wordcount: '2427'
+ht-degree: 6%
 
 ---
 
 # Guide de bout en bout du contrôle d’accès basé sur les attributs
 
-Le contrôle d’accès basé sur les attributs est une fonctionnalité de Adobe Experience Platform qui offre aux clients multi-marques et soucieux de la confidentialité une plus grande flexibilité pour gérer l’accès des utilisateurs. L’accès à des objets individuels, tels que les champs de schéma et les segments, peut être accordé/refusé avec des stratégies basées sur les attributs et le rôle de l’objet. Cette fonctionnalité vous permet d’accorder ou de révoquer l’accès à des objets individuels pour des utilisateurs de Platform spécifiques de votre entreprise.
+Le contrôle d’accès basé sur les attributs est une fonctionnalité de Adobe Experience Platform qui offre aux clients multi-marques et soucieux de la confidentialité une plus grande flexibilité pour gérer l’accès des utilisateurs. L’accès à des objets individuels, tels que les champs de schéma et les segments, peut être accordé/refusé avec des stratégies basées sur les attributs et le rôle de l’objet. Cette fonctionnalité vous permet d’accorder ou de révoquer l’accès à des objets individuels pour des utilisateurs Platform spécifiques au sein de votre organisation.
 
-Cette fonctionnalité vous permet de classer les champs de schéma, les segments, etc. avec des libellés qui définissent les portées d’utilisation des données ou de l’organisation. Vous pouvez appliquer ces mêmes étiquettes aux parcours, aux offres et aux autres objets de Adobe Journey Optimizer. En parallèle, les administrateurs peuvent définir des stratégies d’accès concernant les champs de schéma XDM et mieux gérer les utilisateurs ou les groupes (utilisateurs internes, externes ou tiers) pouvant accéder à ces champs.
+Cette fonctionnalité vous permet de classer les champs de schéma, les segments, etc. avec des libellés qui définissent les portées d’utilisation des données ou de l’organisation. Vous pouvez appliquer ces mêmes étiquettes aux parcours, aux offres et aux autres objets de Adobe Journey Optimizer. En parallèle, les administrateurs peuvent définir des stratégies d’accès concernant les champs de schéma du modèle de données d’expérience (XDM) et mieux gérer les utilisateurs ou les groupes (utilisateurs internes, externes ou tiers) pouvant accéder à ces champs.
 
+>[!NOTE]
+>
+>Ce document se concentre sur le cas d’utilisation des stratégies de contrôle d’accès. Si vous tentez de configurer des stratégies pour régir la variable **use** de données plutôt que de connaître les utilisateurs de Platform ayant accès à ces données, consultez le guide de bout en bout sur [gouvernance des données](../../data-governance/e2e.md) au lieu de .
 
 ## Prise en main
 
 Ce tutoriel nécessite une connaissance pratique des composants Platform suivants :
 
-* [[!DNL Experience Data Model (XDM)] Système](../../xdm/home.md): Cadre normalisé selon lequel l’Experience Platform organise les données d’expérience client.
+* [[!DNL Experience Data Model (XDM)] Système](../../xdm/home.md) : Cadre normalisé selon lequel Experience Platform organise les données d’expérience client. 
    * [Principes de base de la composition des schémas](../../xdm/schema/composition.md) : découvrez les blocs de création de base des schémas XDM, y compris les principes clés et les bonnes pratiques en matière de composition de schémas.
    * [Tutoriel sur l’éditeur de schémas](../../xdm/tutorials/create-schema-ui.md) : découvrez comment créer des schémas personnalisés à l’aide de l’interface utilisateur de l’éditeur de schémas.
 * [Service de segmentation Adobe Experience Platform](../../segmentation/home.md) : moteur de segmentation de [!DNL Platform] utilisé pour créer des segments d’audience à partir de vos profils clients en fonction du comportement et des attributs des clients.
@@ -61,7 +65,7 @@ L’espace de travail Autorisations de l’interface utilisateur de Platform s�
 >[!CONTEXTUALHELP]
 >id="platform_permissions_labels_about"
 >title="Que sont les étiquettes ?"
->abstract="Les libellés vous permettent de classer les jeux de données et les champs en fonction des stratégies d’utilisation qui s’appliquent à ces données. Platform fournit plusieurs libellés d’utilisation des données &quot;de base&quot; définis par l’Adobe, qui couvrent un large éventail de restrictions courantes applicables à la gouvernance des données. Par exemple, les étiquettes Sensibles &quot;S&quot; telles que RHD (données d’intégrité réglementées) vous permettent de catégoriser les données qui font référence aux informations d’intégrité protégées (PHI). Vous pouvez également définir vos propres étiquettes personnalisées en fonction des besoins de votre entreprise."
+>abstract="Les étiquettes vous permettent de classer les jeux de données et les champs en fonction des stratégies d’utilisation qui s’appliquent à ces données. Platform fournit plusieurs libellés d’utilisation des données &quot;de base&quot; définis par l’Adobe, qui couvrent un large éventail de restrictions courantes applicables à la gouvernance des données. Par exemple, les étiquettes Sensibles &quot;S&quot; telles que RHD (données d’intégrité réglementées) vous permettent de catégoriser les données qui font référence aux informations d’intégrité protégées (PHI). Vous pouvez également définir vos propres étiquettes personnalisées en fonction des besoins de votre entreprise."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=en#understanding-data-usage-labels" text="Présentation des libellés d’utilisation des données"
 
 >[!CONTEXTUALHELP]

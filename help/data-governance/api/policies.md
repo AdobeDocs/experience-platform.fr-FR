@@ -1,24 +1,24 @@
 ---
 keywords: Experience Platform;accueil;rubriques populaires Application des stratégies;Application basée sur lʼAPI;gouvernance des données
 solution: Experience Platform
-title: Point de terminaison de l’API des stratégies d’utilisation des données
+title: Point de terminaison de l’API des stratégies de gouvernance des données
 topic-legacy: developer guide
-description: Les stratégies d’utilisation des données sont des règles adoptées par votre organisation qui décrivent les types d’actions marketing que vous êtes autorisé ou non à effectuer sur les données au sein d’Experience Platform. Le point d’entrée « /policies » est utilisé pour tous les appels API liés à lʼaffichage, la création, la mise à jour ou la suppression des stratégies dʼutilisation des données.
+description: Les stratégies de gouvernance des données sont des règles adoptées par votre organisation qui décrivent les types d’actions marketing que vous êtes autorisé ou non à effectuer sur les données d’Experience Platform. Le point de terminaison /policies est utilisé pour tous les appels d’API liés à l’affichage, la création, la mise à jour ou la suppression de stratégies de gouvernance des données.
 exl-id: 62a6f15b-4c12-4269-bf90-aaa04c147053
-source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '1840'
-ht-degree: 98%
+source-wordcount: '1865'
+ht-degree: 91%
 
 ---
 
-# Point de terminaison des stratégies d’utilisation des données
+# Point d’entrée des stratégies de gouvernance des données
 
-Les stratégies d’utilisation des données sont des règles qui décrivent les types d’actions marketing que vous êtes autorisé ou non à effectuer sur des données d’[!DNL Experience Platform]. Le point d’entrée `/policies` dans [!DNL Policy Service API] vous permet de gérer par programme les stratégies dʼutilisation des données pour votre entreprise.
+Les stratégies de gouvernance des données sont des règles qui décrivent les types d’actions marketing que vous êtes autorisé ou non à effectuer sur les données au sein de . [!DNL Experience Platform]. Le `/policies` du point de terminaison [!DNL Policy Service API] vous permet de gérer par programmation les stratégies de gouvernance des données pour votre entreprise.
 
 >[!IMPORTANT]
 >
->Ce point de terminaison ne doit pas être confondu avec la variable `/policies` du point de terminaison [API Access Control](../../access-control/abac/api/policies.md), qui permet de gérer les stratégies de contrôle d’accès.
+>Les stratégies de gouvernance ne doivent pas être confondues avec les stratégies de contrôle d’accès, qui déterminent les attributs de données spécifiques accessibles par certains utilisateurs de Platform dans votre organisation. Reportez-vous à la section `/policies` guide de point d’entrée pour [API Access Control](../../access-control/abac/api/policies.md) pour plus d’informations sur la gestion par programmation des stratégies de contrôle d’accès.
 
 ## Prise en main
 
@@ -611,7 +611,7 @@ Vous pouvez confirmer la suppression de la stratégie en la recherchant à lʼai
 
 ## Récupération dʼune liste de stratégies de base activées {#list-enabled-core}
 
-Par défaut, seules les stratégies dʼutilisation des données activées participent à lʼévaluation. Vous pouvez récupérer une liste de stratégies de base actuellement activées par votre organisation en réalisant une requête GET au point d’entrée `/enabledCorePolicies`.
+Par défaut, seules les stratégies de gouvernance des données activées participent à l’évaluation. Vous pouvez récupérer une liste de stratégies de base actuellement activées par votre organisation en réalisant une requête GET au point d’entrée `/enabledCorePolicies`.
 
 **Format d’API**
 
@@ -663,7 +663,7 @@ Une réponse réussie renvoie la liste des stratégies de base activées sous un
 
 ## Mise à jour de la liste des stratégies de base activées {#update-enabled-core}
 
-Par défaut, seules les stratégies dʼutilisation des données activées participent à lʼévaluation. En réalisant une requête PUT au point d’entrée `/enabledCorePolicies`, vous pouvez mettre à jour la liste des stratégies de base activées pour votre organisation en un seul appel.
+Par défaut, seules les stratégies de gouvernance des données activées participent à l’évaluation. En réalisant une requête PUT au point d’entrée `/enabledCorePolicies`, vous pouvez mettre à jour la liste des stratégies de base activées pour votre organisation en un seul appel.
 
 >[!NOTE]
 >

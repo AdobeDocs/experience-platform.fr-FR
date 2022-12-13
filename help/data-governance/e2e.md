@@ -1,9 +1,10 @@
 ---
 title: Guide de bout en bout de la gouvernance des données
 description: Suivez le processus complet pour appliquer des contraintes d’utilisation des données pour les champs et les jeux de données dans Adobe Experience Platform.
-source-git-commit: c8b2dba9b1e305f826830b8341bf1a6dde4e2da2
+exl-id: f18ae032-027a-4c97-868b-e04753237c81
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '1447'
+source-wordcount: '1513'
 ht-degree: 2%
 
 ---
@@ -16,7 +17,7 @@ Pour contrôler quelles actions marketing peuvent être effectuées sur certains
 1. [Configuration et activation des stratégies de gouvernance des données](#policy) qui déterminent quels types de données étiquetées peuvent être utilisés pour certaines actions marketing.
 1. [Application d’actions marketing à vos destinations](#destinations) pour indiquer les stratégies qui s’appliquent aux données envoyées vers ces destinations.
 
-Une fois la configuration des libellés, des stratégies et des actions marketing terminée, vous pouvez [test de l’application de la stratégie](#test) pour s’assurer qu’il fonctionne comme prévu.
+Une fois la configuration des libellés, des stratégies de gouvernance et des actions marketing terminée, vous pouvez [test de l’application de la stratégie](#test) pour s’assurer qu’il fonctionne comme prévu.
 
 Ce guide décrit l’ensemble du processus de configuration et d’application d’une stratégie de gouvernance des données dans l’interface utilisateur de Platform. Pour des informations plus détaillées sur les fonctionnalités utilisées dans ce guide, consultez la documentation de présentation sur les rubriques suivantes :
 
@@ -24,6 +25,10 @@ Ce guide décrit l’ensemble du processus de configuration et d’application d
 * [Libellés d’utilisation des données](./labels/overview.md)
 * [Stratégies d’utilisation des données](./policies/overview.md)
 * [Application des stratégies](./enforcement/overview.md)
+
+>[!NOTE]
+>
+>Ce guide se concentre sur la configuration et l’application des stratégies pour la manière dont les données sont utilisées ou activées dans Experience Platform. Si vous essayez de restreindre **access** Pour accéder aux données proprement dites de certains utilisateurs de Platform au sein de votre organisation, consultez le guide de bout en bout sur la [contrôle d’accès basé sur les attributs](../access-control/abac/end-to-end-guide.md) au lieu de . Le contrôle d’accès basé sur les attributs utilise également des étiquettes et des stratégies, mais pour un cas d’utilisation différent de celui de la gouvernance des données.
 
 ## Application de libellés {#labels}
 

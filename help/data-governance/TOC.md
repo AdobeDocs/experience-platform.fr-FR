@@ -2,12 +2,12 @@
 audience: user
 user-guide-title: Aide sur la gouvernance des données d’Adobe Experience Platform
 breadcrumb-title: Guide de gouvernance des données
-user-guide-description: Faites respecter les restrictions d’utilisation des données au moyen d’étiquettes, d’actions marketing et de stratégies.
+user-guide-description: Application des restrictions d’utilisation des données au moyen de libellés, d’actions marketing et de stratégies de gouvernance.
 feature: Data Governance
-source-git-commit: c84926fe88ab02503220ca377170521077dc517e
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '96'
-ht-degree: 97%
+source-wordcount: '97'
+ht-degree: 83%
 
 ---
 

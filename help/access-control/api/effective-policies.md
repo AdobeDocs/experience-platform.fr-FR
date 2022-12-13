@@ -3,18 +3,18 @@ keywords: Experience Platform;accueil;rubriques populaires;stratégies effectiv
 solution: Experience Platform
 title: Point d’entrée de lʼAPI Effective Policies
 topic-legacy: developer guide
-description: Le contrôle d’accès dans Adobe Experience Platform vous permet de gérer les rôles et les autorisations pour diverses fonctionnalités de Platform à l’aide d’Adobe Admin Console. Ce document sert de guide sur la manière dʼafficher des stratégies effectives à lʼaide de lʼAPI Access Control pour Adobe Experience Platform.
+description: Découvrez comment afficher des stratégies d’accès efficaces à l’aide de l’API Access Control for Adobe Experience Platform.
 exl-id: 555d73db-115d-4f4c-8bd2-b91477799591
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '320'
-ht-degree: 100%
+source-wordcount: '295'
+ht-degree: 80%
 
 ---
 
 # Point d’entrée des stratégies effectives
 
-Pour afficher des stratégies efficaces pour l’utilisateur actuel, envoyez une requête POST au point de terminaison `/acl/effective-policies` dans l’API [!DNL Access Control] Les autorisations et les types de ressources que vous souhaitez récupérer doivent être fournis dans le payload de la requête sous la forme de tableau. Ceci est illustré dans l’exemple d’appel API ci-dessous.
+Pour afficher les stratégies de contrôle d’accès efficaces pour l’utilisateur actuel, envoyez une requête de POST à la variable `/acl/effective-policies` du point de terminaison [!DNL Access Control] API. Les autorisations et les types de ressources que vous souhaitez récupérer doivent être fournis dans le payload de la requête sous la forme de tableau. Ceci est illustré dans l’exemple d’appel API ci-dessous.
 
 **Format d’API**
 
@@ -65,7 +65,7 @@ Une réponse réussie renvoie des informations sur les autorisations et les type
 
 ## Étapes suivantes
 
-Ce document décrit comment passer des appels à lʼAPI [!DNL Access Control] pour renvoyer des informations sur les autorisations actives et les stratégies associées pour les types de ressources. Pour plus dʼinformations sur le contrôle dʼaccès dʼ[!DNL Experience Platform], consultez la [présentation du contrôle dʼaccès](../home.md).
+Ce document décrit comment effectuer des appels à la fonction [!DNL Access Control] API pour renvoyer des informations sur les autorisations principales et les stratégies d’accès associées pour les types de ressources. Pour plus dʼinformations sur le contrôle dʼaccès dʼ[!DNL Experience Platform], consultez la [présentation du contrôle dʼaccès](../home.md).
 
 ## Annexe
 

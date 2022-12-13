@@ -5,10 +5,10 @@ title: Glossaire des étiquettes dʼutilisation des données
 topic-legacy: labels
 description: Ce document décrit toutes les étiquettes dʼutilisation des données actuellement prises en charge par Adobe Experience Platform.
 exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
-source-git-commit: c29b6c7dc061ea910ebedcae1fa4beaa6def10b1
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '2117'
-ht-degree: 67%
+source-wordcount: '2108'
+ht-degree: 64%
 
 ---
 
@@ -20,9 +20,9 @@ ht-degree: 67%
 >abstract="Il existe plusieurs catégories de libellés d’utilisation des données. Les étiquettes définies par l’Adobe comprennent les étiquettes de contrat, les étiquettes d’identité et les étiquettes sensibles. Les libellés définis par votre organisation sont classés comme des libellés personnalisés."
 >text="See the data usage labels glossary for more information on these label types."
 
-Les libellés d’utilisation des données vous permettent de classer les jeux de données et les champs en fonction des stratégies d’utilisation qui s’appliquent à ces données. Adobe Experience Platform Data Governance fournit de multiples étiquettes dʼutilisation des données de base prêtes à lʼemploi que vous pouvez utiliser pour commencer à classer vos données.
+Les libellés d’utilisation des données vous permettent de classer les jeux de données et les champs en fonction des [politiques de gouvernance](../policies/overview.md) et [stratégies de contrôle d’accès](../../access-control/abac/overview.md) qui s’appliquent à ces données. Adobe Experience Platform fournit de multiples étiquettes dʼutilisation des données de base prêtes à lʼemploi que vous pouvez utiliser pour commencer à classer vos données.
 
-Ce document décrit les étiquettes dʼutilisation des données de base actuellement fournies par [!DNL Experience Platform]. Vous trouverez plus d’informations sur la gouvernance des données dans la [présentation de la gouvernance des données](../home.md).
+Ce document décrit les libellés d’utilisation des données de base actuellement fournis par Experience Platform.
 
 ## Étiquettes Contrat
 
@@ -135,7 +135,7 @@ Certains contrats prévoient des interdictions explicites sur l’utilisation de
 
 #### C10 {#c10}
 
-Certaines stratégies dʼutilisation des données limitent lʼutilisation de données dʼidentité assemblées pour la personnalisation. Lʼétiquette C10 est automatiquement appliquée aux segments si leurs stratégies de fusion utilisent lʼoption « graphique privé ».
+Certaines stratégies de gouvernance des données limitent l’utilisation de données d’identité regroupées pour la personnalisation. Lʼétiquette C10 est automatiquement appliquée aux segments si leurs stratégies de fusion utilisent lʼoption « graphique privé ».
 
 #### C11 {#c11}
 

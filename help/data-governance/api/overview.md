@@ -5,10 +5,10 @@ title: Guide de l’API Policy Service
 topic-legacy: developer guide
 description: L’API Policy Service permet aux développeurs de gérer les libellés et les stratégies d’utilisation des données dans Experience Platform. Suivez ce guide pour savoir comment effectuer des opérations clés à l’aide de l’API.
 exl-id: 23c05670-7107-4b96-bc24-0a51b5d267b2
-source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '504'
-ht-degree: 100%
+source-wordcount: '545'
+ht-degree: 86%
 
 ---
 
@@ -30,7 +30,13 @@ Les actions marketing (également appelées cas dʼutilisation marketing), dans 
 
 ## Stratégies
 
-Les stratégies d’utilisation des données sont des règles qui décrivent les types d’actions marketing que vous êtes autorisé ou non à effectuer sur des données d’[!DNL Experience Platform]. Une stratégie est définie par les éléments suivants :
+Les stratégies de gouvernance des données sont des règles qui décrivent les types d’actions marketing que vous êtes autorisé ou non à effectuer sur les données au sein de . [!DNL Experience Platform].
+
+>[!NOTE]
+>
+>Les stratégies de gouvernance des données ne doivent pas être confondues avec les stratégies de contrôle d’accès, qui déterminent les attributs de données spécifiques accessibles à certains utilisateurs de Platform dans votre organisation. Consultez le guide sur la [contrôle d’accès basé sur les attributs](../../access-control/abac/overview.md) pour plus d’informations.
+
+Une politique de gouvernance des données est définie par les éléments suivants :
 
 1. Une action marketing spécifique
 1. Le ou les libellé(s) d’utilisation des données envers lesquels l’action ne peut pas être exécutée

@@ -5,9 +5,9 @@ title: Glossaire Adobe Experience Platform
 topic-legacy: getting started
 description: Glossaire reprenant la terminologie principale d’Experience Platform.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: b9b33a6c1df0810db32f3253205221fed8957dd5
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '7435'
+source-wordcount: '7433'
 ht-degree: 12%
 
 ---
@@ -106,7 +106,7 @@ ht-degree: 12%
 
 **Console**: Dans [!DNL Query Service], la console fournit des informations sur l’état et le fonctionnement d’une requête. La console affiche l’état de la connexion à [!DNL Query Service], les opérations de requête en cours d’exécution et les messages d’erreur qui en résultent.
 
-**Étiquettes Contrat (&quot;C&quot;)**: Les libellés d’utilisation des données Contrat (&quot;C&quot;) sont utilisés pour classer les données qui ont des obligations contractuelles ou qui sont liées aux politiques de gouvernance des données d’un client.
+**Étiquettes Contrat (&quot;C&quot;)**: Les libellés d’utilisation des données Contrat (&quot;C&quot;) sont utilisés pour classer les données qui ont des obligations contractuelles ou qui sont liées aux politiques de gouvernance des données de votre entreprise.
 
 **Libellé du contrat C1**: A `C1` L’étiquette d’utilisation des données Contrat indique que les données peuvent uniquement être exportées à partir de Adobe Experience Cloud dans un formulaire agrégé sans inclure d’identifiants individuels ou d’appareil. Par exemple, les données provenant des réseaux sociaux.
 
@@ -502,7 +502,7 @@ ht-degree: 12%
 
 **Connecteur source**: Les connecteurs source (également appelés sources) aident les utilisateurs à ingérer facilement des données provenant de plusieurs sources, ce qui permet de structurer, d’étiqueter et d’améliorer les données à l’aide de services Experience Platform. Les données peuvent être ingérées à partir de différentes sources, comme le stockage dans le cloud, les logiciels tiers et les systèmes de gestion de la relation client.
 
-**Connexion en continu**: Une connexion en continu est un point de terminaison unique fourni par Adobe et lié à l’organisation IMS d’un client pour diffuser des données dans Experience Platform.
+**Connexion en continu**: Une connexion en continu est un point de terminaison unique fourni par Adobe et lié à votre organisation pour diffuser des données dans Experience Platform.
 
 **Espace de noms d’identité standard**: Les espaces de noms d’identité standard sont des espaces de noms d’identité prédéfinis fournis par Adobe, qui représentent les solutions standard couramment utilisées pour identifier les clients.
 

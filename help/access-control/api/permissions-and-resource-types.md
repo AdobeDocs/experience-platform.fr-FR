@@ -3,18 +3,18 @@ keywords: Experience Platform;accueil;rubriques populaires;autorisations de con
 solution: Experience Platform
 title: Point d’entrée de l’API de référence
 topic-legacy: developer guide
-description: Le contrôle d’accès dans Adobe Experience Platform vous permet de gérer les rôles et les autorisations pour diverses fonctionnalités de Platform à l’aide d’Adobe Admin Console. Vous pouvez répertorier les noms de tous les types de ressources et autorisations en effectuant une requête GET au point d’entrée /acl/reference dans l’API Access Control. Ces noms peuvent ensuite être utilisés dans les appels API pour afficher des stratégies efficaces pour l’utilisateur actuel.
+description: Le point de terminaison de référence de l’API Access Control vous permet d’afficher les noms des autorisations disponibles et des types de ressources, qui peuvent ensuite être utilisés pour afficher des stratégies de contrôle d’accès efficaces pour l’utilisateur actuel.
 exl-id: 18d84d54-9258-4451-9aa8-7c647b45a8da
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '195'
-ht-degree: 100%
+source-wordcount: '165'
+ht-degree: 67%
 
 ---
 
 # Point d’entrée de référence
 
-Vous pouvez répertorier les noms de tous les types d’autorisations et de ressources en envoyant une requête GET au point de terminaison `/acl/reference`. Ces noms peuvent ensuite être utilisés dans les appels API pour [afficher des stratégies efficaces](./effective-policies.md) pour l’utilisateur actuel.
+Vous pouvez répertorier les noms de tous les types d’autorisations et de ressources en envoyant une requête GET au point de terminaison `/acl/reference`. Ces noms peuvent ensuite être utilisés dans les appels API à [Affichage des stratégies de contrôle d’accès efficaces](./effective-policies.md) pour l’utilisateur actuel.
 
 Une autorisation est une stratégie gérée à l’aide d’Adobe Admin Console et mettant en correspondance zéro, une ou plusieurs stratégies de type ressource. Un type de ressource est une stratégie activant des fonctionnalités de lecture, d’écriture et/ou de suppression pour un type spécifique de ressources de [!DNL Platform] (comme des jeux de données ou des schémas).
 

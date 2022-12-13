@@ -1,23 +1,27 @@
 ---
 keywords: Experience Platform;accueil;rubriques populaires;gouvernance des données;stratégie d’utilisation des données
 solution: Experience Platform
-title: Création d’une stratégie d’utilisation des données dans l’API
+title: Création d’une stratégie de gouvernance des données dans l’API
 topic-legacy: policies
 type: Tutorial
-description: L’API Policy Service vous permet de créer et de gérer des stratégies d’utilisation des données afin de déterminer quelles actions marketing peuvent être entreprises concernant les données qui contiennent certains libellés d’utilisation. Ce document fournit un tutoriel détaillé sur la création d’une stratégie à l’aide de l’API Policy Service.
+description: Découvrez comment créer une stratégie de gouvernance des données à l’aide de l’API Policy Service.
 exl-id: 8483f8a1-efe8-4ebb-b074-e0577e5a81a4
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '1217'
-ht-degree: 100%
+source-wordcount: '1200'
+ht-degree: 91%
 
 ---
 
-# Création d’une stratégie d’utilisation des données dans l’API
+# Création d’une stratégie de gouvernance des données dans l’API
 
-L’[API Policy Service](https://www.adobe.io/experience-platform-apis/references/policy-service/) vous permet de créer et de gérer des stratégies d’utilisation des données afin de déterminer quelles actions marketing peuvent être entreprises concernant les données qui contiennent certains libellés d’utilisation.
+Le [API Policy Service](https://www.adobe.io/experience-platform-apis/references/policy-service/) vous permet de créer et de gérer des stratégies de gouvernance des données afin de déterminer quelles actions marketing peuvent être entreprises concernant les données qui contiennent certains libellés d’utilisation des données.
 
-Ce document fournit un tutoriel détaillé sur la création d’une stratégie à l’aide de l’API [!DNL Policy Service]. Pour consulter un guide plus complet sur les différentes opérations disponibles dans l’API, référez-vous au [guide de développement de Policy Service](../api/getting-started.md).
+Ce document fournit un tutoriel détaillé sur la création d’une stratégie de gouvernance à l’aide du [!DNL Policy Service] API.
+
+>[!NOTE]
+>
+>Pour savoir comment créer une stratégie de contrôle d’accès, voir `/policies` guide de point d’entrée pour [API Access Control](../../access-control/abac/api/policies.md). Pour savoir comment créer une stratégie de consentement, voir [guide de l’interface utilisateur des stratégies](./user-guide.md#consent-policy).
 
 ## Prise en main
 

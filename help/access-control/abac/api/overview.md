@@ -2,12 +2,12 @@
 keywords: Experience Platform;accueil;rubriques populaires;api;contrôle d’accès basé sur les attributs;contrôle d’accès basé sur les attributs
 solution: Experience Platform
 title: Guide de l’API de contrôle d’accès basé sur les attributs
-description: L’API de contrôle d’accès basé sur les attributs vous permet de gérer par programmation les rôles et les stratégies dans Adobe Experience Platform. Suivez ce guide pour savoir comment effectuer des opérations clés à l’aide de l’API.
+description: L’API de contrôle d’accès basé sur les attributs vous permet de gérer par programmation les rôles et les stratégies d’accès dans Adobe Experience Platform. Suivez ce guide pour savoir comment effectuer des opérations clés à l’aide de l’API.
 exl-id: 0fc32354-4869-4392-9501-b1dbea1bc55e
-source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '393'
-ht-degree: 27%
+source-wordcount: '450'
+ht-degree: 23%
 
 ---
 
@@ -16,6 +16,10 @@ ht-degree: 27%
 Le contrôle d’accès basé sur les attributs est une fonctionnalité d’Adobe Experience Platform qui permet aux administrateurs de contrôler l’accès à des objets et/ou fonctionnalités spécifiques en fonction d’attributs. Les attributs peuvent être des métadonnées ajoutées à un objet, comme un libellé ajouté à un champ ou à un segment de schéma. Un administrateur définit des stratégies d’accès qui comprennent des attributs afin de gérer les autorisations d’accès des utilisateurs.
 
 L’API de contrôle d’accès basé sur les attributs est utilisée pour accéder aux rôles, aux produits, aux catégories d’autorisations et aux jeux d’autorisations dans Adobe Experience Platform, fournissant une interface utilisateur et une API RESTful à partir desquelles toutes les ressources de bibliothèque disponibles sont accessibles.
+
+>[!IMPORTANT]
+>
+>Le contrôle d’accès basé sur les attributs ne doit pas être confondu avec les fonctionnalités de gouvernance des données des Experience Platform, qui vous permettent d’utiliser des libellés et des stratégies pour contrôler la manière dont les données sont utilisées dans Platform plutôt que les utilisateurs de votre organisation qui y ont accès. Voir [Guide de l’API Policy Service](../../../data-governance/api/overview.md) pour savoir comment utiliser ces fonctionnalités par programmation.
 
 Ces points d’entrée sont décrits ci-dessous. Consultez le guide de chaque point d’entrée pour plus de détails et reportez-vous au [guide de prise en main](./getting-started.md) pour obtenir des informations importantes sur les en-têtes nécessaires, la lecture des exemples d’appels d’API, etc.
 

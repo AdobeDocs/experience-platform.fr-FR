@@ -3,16 +3,16 @@ keywords: Experience Platform;accueil;rubriques populaires;contrôle d’accès;
 title: Gestion des étiquettes de contrôle d’accès basé sur les attributs
 description: Ce document fournit des informations sur la gestion des libellés par le biais de l’interface Autorisations dans Adobe Experience Cloud.
 exl-id: c790f09c-fda6-48bf-95db-3f5053cd882e
-source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '171'
+source-wordcount: '173'
 ht-degree: 23%
 
 ---
 
 # Gestion des étiquettes
 
-Les libellés vous permettent de classer les jeux de données et les champs en fonction des stratégies d’utilisation qui s’appliquent à ces données. Vous pouvez appliquer les libellés à tout moment, ce qui vous offre une certaine flexibilité quant à la manière dont vous choisissez de gérer les données. Les bonnes pratiques recommandent de libeller les données dès qu’elles sont ingérées dans  Platform, ou dès que les données sont disponibles pour une utilisation dans Platform.
+Les libellés vous permettent de classer les jeux de données et les champs en fonction de l’utilisation et des stratégies d’accès qui s’appliquent à ces données. Vous pouvez appliquer les libellés à tout moment, ce qui vous offre une certaine flexibilité quant à la manière dont vous choisissez de gérer les données. Les bonnes pratiques recommandent de libeller les données dès qu’elles sont ingérées dans  Platform, ou dès que les données sont disponibles pour une utilisation dans Platform.
 
 ## Créer un nouveau libellé {#create-new-label}
 
