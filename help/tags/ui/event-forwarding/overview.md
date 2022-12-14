@@ -3,10 +3,10 @@ title: Présentation du transfert dʼévénements
 description: Découvrez Adobe Experience Platform, qui vous permet dʼutiliser Platform Edge Network afin dʼexécuter des tâches sans modifier votre implémentation de balises.
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: c7344d0ac5b65c6abae6a040304f27dc7cd77cbb
+source-git-commit: d48b746b477ffa6977ce04b72fe77e8ddb95d691
 workflow-type: tm+mt
-source-wordcount: '959'
-ht-degree: 96%
+source-wordcount: '996'
+ht-degree: 91%
 
 ---
 
@@ -89,7 +89,7 @@ Dans les règles de balises, les éléments de données sont segmentés en unit�
 
 #### Séquence des actions de règle {#action-sequencing}
 
-La section [!UICONTROL Actions] d’une règle de transfert d’événements est toujours exécutée de manière séquentielle. Assurez-vous que l’ordre des actions est correct lorsque vous enregistrez une règle. Cette séquence d’exécution ne peut pas être exécutée de manière asynchrone, à la différence des balises.
+La section [!UICONTROL Actions] d’une règle de transfert d’événements est toujours exécutée de manière séquentielle. Par exemple, si une règle comporte deux actions, la deuxième action ne commence pas l’exécution tant que l’action précédente n’est pas terminée (et dans les cas où une réponse est attendue à partir d’un point de terminaison, ce point de terminaison a répondu). Assurez-vous que l’ordre des actions est correct lorsque vous enregistrez une règle. Cette séquence d’exécution ne peut pas être exécutée de manière asynchrone comme elle le peut avec les règles de balise.
 
 ## Secrets {#secrets}
 
