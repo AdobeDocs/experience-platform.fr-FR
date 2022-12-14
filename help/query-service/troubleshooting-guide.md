@@ -5,9 +5,9 @@ title: Guide de dépannage de Query Service
 topic-legacy: troubleshooting
 description: Ce document contient des questions courantes et des réponses relatives à Query Service. Les rubriques incluent, l’exportation de données, les outils tiers et les erreurs PSQL.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 08272f72c71f775bcd0cd7fffcd2e4da90af9ccb
+source-git-commit: deb9f314d5eaadebe2f3866340629bad5f39c60d
 workflow-type: tm+mt
-source-wordcount: '3781'
+source-wordcount: '4362'
 ht-degree: 4%
 
 ---
@@ -38,14 +38,19 @@ Cette section contient des informations sur les performances, les limites et les
 +++Réponse La fonction de saisie automatique est une cause potentielle. La fonction traite certaines commandes de métadonnées qui peuvent parfois ralentir l’éditeur lors de la modification des requêtes.
 +++
 
-### Puis-je utiliser Postman pour l’API Query Service ?
+### Puis-je utiliser [!DNL Postman] pour l’API Query Service ?
 
-+++Répondez Oui, vous pouvez visualiser et interagir avec tous les services d’API Adobe à l’aide de Postman (une application tierce gratuite). Regardez la [Guide de configuration de Postman](https://video.tv.adobe.com/v/28832) pour obtenir des instructions détaillées sur la configuration d’un projet dans la console Adobe Developer et l’acquisition de toutes les informations d’identification nécessaires à l’utilisation avec Postman. Consultez la documentation officielle pour [conseils sur le démarrage, l’exécution et le partage de collections Postman](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
++++Réponse Oui, vous pouvez visualiser tous les services API d’Adobe et interagir avec eux à l’aide de [!DNL Postman] (une application tierce gratuite). Regardez la [[!DNL Postman] guide de configuration](https://video.tv.adobe.com/v/28832) pour obtenir des instructions détaillées sur la configuration d’un projet dans la console Adobe Developer et l’acquisition de toutes les informations d’identification nécessaires à l’utilisation avec [!DNL Postman]. Consultez la documentation officielle pour [conseils sur le démarrage, l’exécution et le partage [!DNL Postman] collections](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
 +++
 
 ### Existe-t-il une limite au nombre maximum de lignes renvoyées par une requête via l’interface utilisateur ?
 
 +++Réponse Oui, Query Service applique en interne une limite de 50 000 lignes, sauf si une limite explicite est spécifiée en externe. Reportez-vous aux conseils relatifs à [exécution de requête interactive](./best-practices/writing-queries.md#interactive-query-execution) pour plus d’informations.
++++
+
+### Puis-je utiliser des requêtes pour mettre à jour des lignes ?
+
++++Réponse Dans les requêtes par lots, la mise à jour d’une ligne dans le jeu de données n’est pas prise en charge.
 +++
 
 ### Existe-t-il une limite de taille des données pour le résultat obtenu à partir d’une requête ?
@@ -77,6 +82,11 @@ SELECT * FROM customers LIMIT 0;
 ### Y a-t-il un problème ou un impact sur les performances de Query Service si plusieurs requêtes s’exécutent simultanément ?
 
 +++Réponse Non. Query Service dispose d’une fonctionnalité de mise à l’échelle automatique qui garantit que les requêtes simultanées n’ont aucun impact perceptible sur les performances du service.
++++
+
+### Puis-je utiliser des mots-clés réservés comme nom de colonne ?
+
++++Réponse Certains mots-clés réservés ne peuvent pas être utilisés comme nom de colonne, tels que : `ORDER`, `GROUP BY`, `WHERE`, `DISTINCT`. Si vous souhaitez utiliser ces mots-clés, vous devez ajouter une séquence d’échappement à ces colonnes.
 +++
 
 ### Comment puis-je trouver un nom de colonne à partir d’un jeu de données hiérarchique ?
@@ -451,6 +461,76 @@ WHERE T2.ID IS NULL
 ### Puis-je créer un jeu de données à l’aide d’une requête CTAS avec un nom de soulignement double comme celui affiché dans l’interface utilisateur ? Par exemple : `test_table_001`.
 
 +++Réponse Non, il s’agit d’une limitation intentionnelle entre les Experience Platform qui s’applique à tous les services Adobe, y compris Query Service. Un nom comportant deux traits de soulignement est acceptable en tant que schéma et nom de jeu de données, mais le nom de table du jeu de données ne peut contenir qu’un seul trait de soulignement.
++++
+
+### Combien de requêtes simultanées pouvez-vous exécuter à la fois ?
+
++++Réponse Il n’existe aucune limite de simultanéité des requêtes, car les requêtes par lots s’exécutent en tant que tâches principales. Cependant, une limite de délai d’expiration de requête est définie sur 24 heures.
++++
+
+### Y a-t-il un tableau de bord d’activité dans lequel vous pouvez voir les activités de requête et l’état ?
+
++++Réponse Il existe des fonctionnalités de surveillance et d’alerte permettant de vérifier les statuts et les activités de requête. Voir [Intégration du journal d’audit de Query Service](./data-governance/audit-log-guide.md) et le [logs de requête](./ui/overview.md#log) documents pour plus d’informations.
++++
+
+### Existe-t-il un moyen de restaurer les mises à jour ? Par exemple, en cas d’erreur ou si certains calculs doivent être reconfigurés lors de l’écriture de données dans Platform, comment ce scénario doit-il être géré ?
+
++++Réponse Actuellement, nous ne prenons pas en charge les restaurations ou les mises à jour de cette manière.
++++
+
+### Comment optimiser les requêtes dans Adobe Experience Platform ?
+
++++Réponse Le système ne possède pas d’index, car il ne s’agit pas d’une base de données, mais d’autres optimisations sont en place, liées à l’entrepôt de données. Les options suivantes sont disponibles pour régler vos requêtes :
+
+- Filtre temporel basé sur les données de série temporelle.
+- Optimisation de la notification push pour le type de données struct.
+- Optimisation du coût et de la mémoire push pour les tableaux et les types de données de mappage.
+- Traitement incrémentiel à l’aide d’instantanés.
+- Format de données persistant.
++++
+
+### Les connexions peuvent-elles être limitées à certains aspects de Query Service ou s’agit-il d’une solution &quot;tout ou rien&quot; ?
+
++++Réponse Query Service est une solution &quot;tout ou rien&quot;. Un accès partiel ne peut pas être fourni.
++++
+
+### Puis-je restreindre les données que Query Service peut utiliser ou accède-t-il simplement à l’ensemble du lac de données Adobe Experience Platform ?
+
++++Répondez Oui, vous pouvez restreindre l’interrogation des jeux de données avec un accès en lecture seule.
++++
+
+### Quelles autres options existe-t-il pour limiter les données auxquelles Query Service peut accéder ?
+
++++Réponse Il existe trois approches pour restreindre l’accès. Ils sont les suivants :
+
+- Utilisez les instructions SELECT uniquement et accordez aux jeux de données un accès en lecture seule. Attribuez également l’autorisation de gestion des requêtes.
+- Utilisez des instructions SELECT/INSERT/CREATE et accordez aux jeux de données un accès en écriture. Attribuez également l’autorisation de gestion des requêtes.
+- Utilisez un compte d’intégration avec les suggestions précédentes et attribuez l’autorisation d’intégration de requête.
+
++++
+
+### Une fois les données renvoyées par Query Service, existe-t-il des vérifications pouvant être exécutées par Platform pour s’assurer qu’elles n’ont renvoyé aucune donnée protégée ?
+
+- Query Service prend en charge le contrôle d’accès basé sur les attributs. Vous pouvez restreindre l’accès aux données au niveau de la colonne/de la feuille et/ou au niveau du struct. Consultez la documentation pour en savoir plus sur le contrôle d’accès basé sur les attributs.
+
+### Puis-je spécifier un mode SSL pour la connexion à un client tiers ? Par exemple, puis-je utiliser &quot;verify-full&quot; avec Power BI ?
+
++++Répondez Oui, les modes SSL sont pris en charge. Voir [Documentation sur les modes SSL](./clients/ssl-modes.md) pour une ventilation des différents modes SSL disponibles et du niveau de protection qu’ils offrent.
++++
+
+### Utilisons-nous TLS 1.2 pour toutes les connexions des clients Power BI au service de requête ?
+
++++Répondez Oui. Les données en transit sont toujours conformes au protocole HTTPS. La version actuellement prise en charge est TLS1.2.
++++
+
+### Une connexion établie sur le port 80 utilise-t-elle toujours https ?
+
++++Répondez Oui, une connexion établie sur le port 80 utilise toujours SSL. Vous pouvez également utiliser le port 5432.
++++
+
+### Puis-je contrôler l’accès à des jeux de données et à des colonnes spécifiques pour une connexion particulière ? Comment est-ce configuré ?
+
++++Réponse Oui, le contrôle d’accès basé sur les attributs est appliqué s’il est configuré. Voir [contrôle d’accès basé sur les attributs - Aperçu](../access-control/abac/overview.md) pour plus d’informations.
 +++
 
 ## Exportation des données {#exporting-data}
