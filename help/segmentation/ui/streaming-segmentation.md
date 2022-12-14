@@ -5,9 +5,9 @@ title: Guide de l’interface utilisateur de la segmentation par flux
 topic-legacy: ui guide
 description: La segmentation par flux sur Adobe Experience Platform vous permet d’effectuer une segmentation en temps quasi réel tout en vous concentrant sur la richesse des données. Avec la segmentation par flux, la qualification de segment se produit désormais lorsque les données entrent dans Platform, ce qui évite d’avoir à planifier et à exécuter des tâches de segmentation. Grâce à cette fonctionnalité, la plupart des règles de segmentation peuvent désormais être évaluées au fur et à mesure que les données sont transmises à Platform, ce qui signifie que l’adhésion au segment sera conservée à jour sans exécuter les tâches de segmentation planifiées.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: 39e3b4df3e44200fd800b501ea7b7e06bf828054
+source-git-commit: 8c7c1273feb2033bf338f7669a9b30d9459509f7
 workflow-type: tm+mt
-source-wordcount: '1338'
+source-wordcount: '1371'
 ht-degree: 0%
 
 ---
@@ -49,6 +49,8 @@ Une définition de segment sera **not** être activé pour la segmentation par f
 
 - La définition de segment inclut des segments ou des caractéristiques Adobe Audience Manager (AAM).
 - La définition de segment comprend plusieurs entités (requêtes d’entités multiples).
+- La définition de segment comprend une combinaison d’un événement unique et d’un événement `inSegment` .
+   - Toutefois, si le segment contenu dans la variable `inSegment` est un événement de profil uniquement, la définition de segment **will** être activé pour la segmentation par flux.
 
 Veuillez noter que les instructions suivantes s’appliquent lors de la segmentation par flux :
 
@@ -73,7 +75,7 @@ Un graphique linéaire se trouve en dessous, qui indique le nombre de nouvelles 
 
 >[!NOTE]
 >
->Un segment est considéré comme qualifié s’il passe de l’absence d’état à la réalisation ou s’il passe de la sortie à la réalisation. Un segment est considéré comme non qualifié s’il passe de la réalisation à la sortie ou s’il existe à la sortie.
+>Un segment est considéré comme qualifié s’il passe de l’absence d’état à la réalisation ou s’il passe de la sortie à la réalisation. Un segment est considéré comme non qualifié s’il passe de la réalisation à la sortie ou s’il est existant à la sortie.
 >
 >Vous trouverez plus d’informations sur ces statuts dans le tableau des statuts du [présentation de la segmentation](./overview.md#browse).
 
@@ -95,7 +97,7 @@ Pour en savoir plus sur l’utilisation de l’interface utilisateur de Adobe Ex
 
 La section suivante répertorie les questions fréquentes sur la segmentation par flux :
 
-### La segmentation par flux est-elle &quot;non-qualification&quot; également effectuée en temps réel ?
+### La segmentation par flux &quot;non-qualification&quot; se produit-elle également en temps réel ?
 
 Pour la plupart des instances, l’inqualification de la segmentation par flux se produit en temps réel. Toutefois, les segments en flux continu qui utilisent des segments le font **not** non admissible en temps réel, mais non admissible après 24 heures.
 

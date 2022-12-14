@@ -5,9 +5,9 @@ title: Segmentation Edge à l’aide de l’API
 topic-legacy: developer guide
 description: Ce document contient des exemples d’utilisation de la segmentation Edge avec l’API Adobe Experience Platform Segmentation Service.
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: d2196d4d9cae4bdec160ce0c028d354a0db21cb5
+source-git-commit: 8c7c1273feb2033bf338f7669a9b30d9459509f7
 workflow-type: tm+mt
-source-wordcount: '1140'
+source-wordcount: '1187'
 ht-degree: 6%
 
 ---
@@ -60,6 +60,11 @@ Pour qu’un segment soit évalué à l’aide de la segmentation Edge, la requ�
 | Requête qui fait référence à une carte | Toute définition de segment qui fait référence à un mappage de propriétés. | Les personnes qui ont ajouté leur panier en fonction de données de segment externes. | `chain(xEvent, timestamp, [A: WHAT(eventType = "addToCart") WHERE(externalSegmentMapProperty.values().exists(stringProperty="active"))])` |
 
 En outre, le segment **must** être lié à une stratégie de fusion principale. Pour plus d’informations sur les stratégies de fusion, consultez la section [guide des stratégies de fusion](../../profile/api/merge-policies.md).
+
+Une définition de segment sera **not** être activé pour la segmentation edge dans les scénarios suivants :
+
+- La définition de segment comprend une combinaison d’un événement unique et d’un événement `inSegment` .
+   - Toutefois, si le segment contenu dans la variable `inSegment` est un événement de profil uniquement, la définition de segment **will** être activé pour la segmentation edge.
 
 ## Récupération de tous les segments activés pour la segmentation Edge
 

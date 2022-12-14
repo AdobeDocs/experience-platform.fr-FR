@@ -5,10 +5,10 @@ title: Évaluation des événements en temps quasi réel avec la segmentation pa
 topic-legacy: developer guide
 description: Ce document contient des exemples d’utilisation de la segmentation par flux avec l’API Adobe Experience Platform Segmentation Service.
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-source-git-commit: 30a12fee487609b4c85ba342963bb915e8152195
+source-git-commit: 8c7c1273feb2033bf338f7669a9b30d9459509f7
 workflow-type: tm+mt
-source-wordcount: '1938'
-ht-degree: 33%
+source-wordcount: '1971'
+ht-degree: 32%
 
 ---
 
@@ -87,6 +87,8 @@ Une définition de segment sera **not** être activé pour la segmentation par f
 
 - La définition de segment inclut des segments ou des caractéristiques Adobe Audience Manager (AAM).
 - La définition de segment comprend plusieurs entités (requêtes d’entités multiples).
+- La définition de segment comprend une combinaison d’un événement unique et d’un événement `inSegment` .
+   - Toutefois, si le segment contenu dans la variable `inSegment` est un événement de profil uniquement, la définition de segment **will** être activé pour la segmentation par flux.
 
 Veuillez noter que les instructions suivantes s’appliquent lors de la segmentation par flux :
 
@@ -418,7 +420,7 @@ Pour savoir comment effectuer des actions similaires et utiliser des segments à
 
 La section suivante répertorie les questions fréquentes sur la segmentation par flux :
 
-### La segmentation par flux &quot;non-qualification&quot; se produit-elle également en temps réel ?
+### La segmentation par flux est-elle &quot;non-qualification&quot; également effectuée en temps réel ?
 
 Pour la plupart des instances, l’inqualification de la segmentation par flux se produit en temps réel. Toutefois, les segments en flux continu qui utilisent des segments le font **not** non admissible en temps réel, mais non admissible après 24 heures.
 
