@@ -4,9 +4,9 @@ title: Guide du tableau de bord des profils
 description: Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur les données Real-time Customer Profile de votre entreprise.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: c4457d82c66be382ebb8619ce248f282fb45ed3a
+source-git-commit: af01ac288a8afe59105be5859b2d40de5e346963
 workflow-type: tm+mt
-source-wordcount: '3416'
+source-wordcount: '3381'
 ht-degree: 9%
 
 ---
@@ -275,14 +275,19 @@ Le [!UICONTROL Tendance des profils non segmentés] Le widget fournit une repré
 
 ### [!UICONTROL Profils non segmentés par identité] {#unsegmented-profiles-by-identity}
 
+>!![NOTE]
+Le widget Profils non segmentés par identité a été abandonné en octobre 2022 et n’est plus disponible.
+
+<!-- 
+
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_unsegmentedprofilesbyidentity"
->title="Profils non segmentés par identité"
->abstract="Ce widget classe le nombre total de profils non segmentés en fonction de leur identifiant unique."
+>title="Unsegmented profiles by identity"
+>abstract="This widget categorizes the total number of unsegmented profiles by their unique identifier."
 
-Le [!UICONTROL Profils non segmentés par identité] widget classe le nombre total de profils non segmentés en fonction de leur identifiant unique. Les données sont visualisées dans un graphique à barres afin de faciliter la comparaison.
+The [!UICONTROL Unsegmented Profiles by Identity] widget categorizes the total number of unsegmented profiles by their unique identifier. The data is visualized in a bar chart for ease of comparison. 
 
-![Le widget Profils non segmentés par identité .](../images/profiles/unsegmented-profiles-by-identity.png)
+![The Unsegmented Profiles by Identity widget.](../images/profiles/unsegmented-profiles-by-identity.png) -->
 
 ### [!UICONTROL Audiences] {#audiences}
 
@@ -318,8 +323,7 @@ Le [!UICONTROL Rapport de chevauchement d’audiences] s’affiche. Cette boîte
 ![Boîte de dialogue Rapport de chevauchement d’audiences .](../images/profiles/profiles-audience-overlap-report-dialog.png)
 
 >[!NOTE]
->
->Sélectionnez la **[!UICONTROL Chevauchement]** en-tête de colonne pour modifier le classement des résultats entre le plus haut au plus bas ou le plus bas au plus haut.
+Sélectionnez la **[!UICONTROL Chevauchement]** en-tête de colonne pour modifier le classement des résultats entre le plus haut au plus bas ou le plus bas au plus haut.
 
 Pour télécharger l&#39;intégralité du rapport au format PDF, sélectionnez le menu d&#39;options (**`...`**) suivie de **[!UICONTROL Télécharger]**.
 
