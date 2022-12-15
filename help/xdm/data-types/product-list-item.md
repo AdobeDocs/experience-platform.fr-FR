@@ -5,10 +5,10 @@ title: Type de données d’élément de liste de produits
 topic-legacy: overview
 description: Ce document fournit un aperçu du type de données XDM de l’élément de liste de produits.
 exl-id: 056fdb5b-6782-4e29-9d62-90b270c05795
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 43157ed2b633561213e67f011835449d70ead4fc
 workflow-type: tm+mt
-source-wordcount: '289'
-ht-degree: 17%
+source-wordcount: '370'
+ht-degree: 14%
 
 ---
 
@@ -22,14 +22,18 @@ Les valeurs capturées dans ce type de données peuvent différer de l’enregis
 
 | Propriété | Type de données | Description |
 | --- | --- | --- |
+| `selectedOptions` | Tableau d’objets | Contient les options personnalisées sélectionnées pour un produit configurable. Chaque élément de liste est un objet avec les propriétés suivantes :<ul><li>`attribute`: Nom de l’attribut configurable.</li><li>`value`: La valeur de l’attribut .</li></ul> |
 | `SKU` | [!UICONTROL Chaîne] | Unité de gestion des stocks (SKU), l’identifiant unique d’un produit défini par le fournisseur. |
 | `_id` | [!UICONTROL Chaîne] | Identifiant de l’élément de ligne pour cette entrée de produit. Le produit lui-même est identifié via `product`. |
 | `currencyCode` | [!UICONTROL Chaîne] | Le [ISO 4217](https://www.iso.org/iso-4217-currency-codes.html) code de devise alphabétique utilisé pour évaluer le produit. |
+| `discountAmount` | [!UICONTROL Double] | Si le produit est actualisé, cela représente la différence entre le prix normal et le prix spécial du produit. |
 | `name` | [!UICONTROL Chaîne] | Nom d’affichage du produit tel qu’il est présenté à l’utilisateur pour cette consultation de produit. |
 | `priceTotal` | [!UICONTROL Double] | Prix total de l’article de ligne de produit. |
 | `product` | [!UICONTROL Chaîne] (URI) | L’URI `$id` du schéma XDM qui capture le produit lui-même. |
 | `productAddMethod` | [!UICONTROL Chaîne] | Méthode utilisée par le visiteur pour ajouter un produit à la liste. |
+| `productImageUrl` | [!UICONTROL Chaîne] | URL de l’image principale du produit. |
 | `quantity` | [!UICONTROL Nombre entier] | Nombre d’unités du produit que le client a indiqué. |
+| `unitOfMeasureCode` | [!UICONTROL Chaîne] | Le standard [code unité de mesure](https://ucum.org/ucum) pour le produit, en fonction de la variable `quantity` . |
 
 {style=&quot;table-layout:auto&quot;}
 
