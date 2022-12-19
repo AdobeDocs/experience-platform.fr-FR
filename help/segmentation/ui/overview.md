@@ -5,9 +5,9 @@ title: Guide de l’interface utilisateur de Segmentation Service
 topic-legacy: ui guide
 description: Adobe Experience Platform Segmentation Service fournit une interface utilisateur pour la création et la gestion des définitions de segment.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: d2790ddab74f989ebb5ca522ce44323033c53911
 workflow-type: tm+mt
-source-wordcount: '2375'
+source-wordcount: '2397'
 ht-degree: 17%
 
 ---
@@ -66,11 +66,11 @@ Sélectionnez la **[!UICONTROL Parcourir]** pour afficher une liste de toutes le
 
 ![](../images/ui/overview/segment-browse-all.png)
 
-Cet affichage répertorie des informations sur la définition de segment, notamment la ventilation, la perte de clientèle, le nombre de profils, la méthode d’évaluation, la date de création et la date de dernière modification.
+Cet affichage répertorie des informations sur la définition de segment, y compris le nombre de profils, la date de création et la date de dernière modification.
 
-La ventilation présente un graphique à barres indiquant le pourcentage de profils appartenant à chacun des états suivants : [!UICONTROL Réalisé], [!UICONTROL Existant], et [!UICONTROL Quitter]. En outre, la ventilation affichée dans la variable [!UICONTROL Parcourir] est la ventilation la plus précise de l’état du segment. Si ce nombre diffère de ce qui est indiqué dans la variable [!UICONTROL Présentation] , vous devez utiliser les nombres de la variable [!UICONTROL Parcourir] comme bonne source d’informations, puisque la variable [!UICONTROL Présentation] les numéros d’onglets ne sont mis à jour qu’une seule fois par jour.
+Vous pouvez ajouter des champs supplémentaires à cet affichage en sélectionnant IMAGE. Ces champs supplémentaires comprennent la ventilation, la perte de clientèle, la méthode d’évaluation et l’ID de tâche.
 
-![](../images/ui/overview/segment-browse-breakdown.png)
+Si la ventilation est sélectionnée, l’affichage affiche un graphique à barres indiquant le pourcentage de profils appartenant à chacun des états suivants : [!UICONTROL Réalisé], [!UICONTROL Existant], et [!UICONTROL Quitter]. En outre, la ventilation affichée dans la variable [!UICONTROL Parcourir] est la ventilation la plus précise de l’état du segment. Si ce nombre diffère de ce qui est indiqué dans la variable [!UICONTROL Présentation] , vous devez utiliser les nombres de la variable [!UICONTROL Parcourir] comme bonne source d’informations, puisque la variable [!UICONTROL Présentation] les numéros d’onglets ne sont mis à jour qu’une seule fois par jour.
 
 | État | Description |
 | ------ | ----------- |
