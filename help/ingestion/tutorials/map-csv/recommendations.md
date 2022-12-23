@@ -3,9 +3,9 @@ title: Mapper un fichier CSV à un schéma XDM à l’aide de recommandations g�
 description: Ce tutoriel explique comment mapper un fichier CSV à un schéma XDM à l’aide de recommandations générées par l’IA.
 exl-id: 1daedf0b-5a25-4ca5-ae5d-e9ee1eae9e4d
 source-git-commit: a9887535b12b8c4aeb39bb5a6646da88db4f0308
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1043'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -42,7 +42,7 @@ Sélectionner **[!UICONTROL Créer un nouveau schéma à l’aide de recommandat
 
 À partir de là, indiquez un nom pour le schéma qui sera créé à partir des données CSV, ainsi qu’un nom pour le jeu de données de sortie qui contiendra les données ingérées sous ce schéma.
 
-Vous pouvez éventuellement configurer les fonctionnalités supplémentaires suivantes pour le flux de données avant de poursuivre :
+Vous pouvez éventuellement configurer les fonctionnalités supplémentaires suivantes pour le flux de données :
 
 | Nom d’entrée | Description |
 | --- | --- |
@@ -84,7 +84,7 @@ Utilisez l’aperçu du mappage des champs pour modifier les mappages existants 
 
 ### Modifier des groupes de champs {#edit-field-groups}
 
-Les champs CSV sont automatiquement mappés aux groupes de champs XDM existants à l’aide de modèles ML. Si vous souhaitez modifier le groupe de champs d’un champ CSV particulier, sélectionnez **[!UICONTROL Modifier]** à côté de l’arborescence du schéma.
+Les champs CSV sont automatiquement mappés à des groupes de champs existants à l’aide de modèles ML. Si vous souhaitez modifier le groupe de champs d’un champ CSV particulier, sélectionnez **[!UICONTROL Modifier]** à côté de l’arborescence du schéma.
 
 ![Le bouton [!UICONTROL Modifier] sélectionné à côté de l’arborescence du schéma](../../images/tutorials/map-csv-recommendations/edit-schema-structure.png)
 
