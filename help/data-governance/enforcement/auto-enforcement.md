@@ -8,7 +8,7 @@ exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
 source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
 source-wordcount: '1727'
-ht-degree: 64%
+ht-degree: 96%
 
 ---
 
@@ -39,11 +39,11 @@ Le diagramme suivant illustre la procédure d’intégration des politiques dans
 
 ![](../images/enforcement/enforcement-flow.png)
 
-Lorsqu’un segment est activé pour la première fois, [!DNL Policy Service] recherche les stratégies applicables en fonction des facteurs suivants :
+Lorsqu’un segment est activé pour la première fois, [!DNL Policy Service] vérifie les stratégies applicables en fonction des facteurs suivants :
 
 * Les libellés d’utilisation des données ont été appliquées aux champs et aux jeux de données du segment à activer.
 * Objectif marketing de la destination.
-* Profils qui ont consenti à être inclus dans l’activation du segment, en fonction des stratégies de consentement configurées.
+* Les profils qui ont consenti à être inclus dans l’activation des segments, sur la base de vos politiques de consentement configurées.
 
 >[!NOTE]
 >
@@ -66,14 +66,14 @@ Dans Experience Platform, l’application des stratégies est concernée par la
 1. Les groupes de profils sont divisés en **segments** en fonction d’attributs communs.
 1. Les segments sont activés pour les **destinations** en aval.
 
-Chaque étape de la chronologie ci-dessus représente une entité pouvant contribuer à l’application des stratégies, comme indiqué dans le tableau ci-dessous :
+Chaque étape de la chronologie ci-dessus représente une entité qui peut contribuer à l’application de la politique, comme indiqué dans le tableau ci-dessous :
 
 | Étape relative à la parenté des données | Rôle dans l’application des stratégies |
 | --- | --- |
-| Jeu de données | Les jeux de données contiennent des libellés d’utilisation des données (appliquées au niveau du jeu de données ou du champ) qui définissent les cas d’utilisation pour lesquels l’intégralité du jeu de données ou des champs spécifiques peuvent être utilisés. Des violations de stratégie se produisent si un jeu de données ou un champ contenant certains libellés est utilisé à des fins limitées par une stratégie.<br><br>Tous les attributs de consentement collectés auprès de vos clients sont également stockés dans des jeux de données. Si vous avez accès aux stratégies de consentement, tous les profils qui ne répondent pas aux exigences d’attribut de consentement de vos stratégies seront exclus des segments qui sont activés vers une destination. |
+| Jeu de données | Les jeux de données contiennent des libellés d’utilisation des données (appliquées au niveau du jeu de données ou du champ) qui définissent les cas d’utilisation pour lesquels l’intégralité du jeu de données ou des champs spécifiques peuvent être utilisés. Des violations de stratégie se produisent si un jeu de données ou un champ contenant certains libellés est utilisé à des fins limitées par une stratégie.<br><br>Tous les attributs de consentement collectés auprès de vos clients sont également stockés dans des jeux de données. Si vous avez accès aux politiques de consentement, tous les profils qui ne répondent pas aux exigences d’attribut de consentement de vos politiques seront exclus des segments qui sont activés vers une destination. |
 | Stratégie de fusion | Les stratégies de fusion sont les règles utilisées par Platform pour déterminer le classement par priorité des données lors de la fusion de fragments provenant de plusieurs jeux de données. Des violations de stratégie se produisent si vos stratégies de fusion sont configurées de telle sorte que les jeux de données dotés de libellés limités sont activés pour une destination. Pour plus d’informations, consultez la [présentation des stratégies de fusion](../../profile/merge-policies/overview.md). |
 | Segment | Les règles de segment définissent les attributs à inclure dans les profils clients. En fonction des champs inclus dans une définition de segment, le segment hérite des libellés d’utilisation appliqués pour ces champs. Des violations de stratégie se produisent si vous activez un segment dont les libellés hérités sont limités par les stratégies applicables de la destination cible, en fonction de son cas d’utilisation marketing. |
-| Destination | Lors de la configuration d’une destination, une action marketing (parfois appelée cas d’utilisation marketing) peut être définie. Ce cas pratique correspond à une action marketing définie dans une stratégie. En d’autres termes, l’action marketing que vous définissez pour une destination détermine les stratégies d’utilisation des données et de consentement applicables à cette destination.<br><br>Des violations de stratégie d’utilisation des données se produisent si vous activez un segment dont les libellés d’utilisation sont limités pour l’action marketing de la destination cible.<br><br>(Version bêta) Lorsqu’un segment est activé, tous les profils qui ne contiennent pas les attributs de consentement requis pour l’action marketing (tels que définis par vos stratégies de consentement) sont exclus de l’audience activée. |
+| Destination | Lors de la configuration d’une destination, une action marketing (parfois appelée cas d’utilisation marketing) peut être définie. Ce cas d’utilisation correspond à une action marketing telle que définie dans une politique. En d’autres termes, l’action marketing que vous définissez comme une destination détermine les politiques d’utilisation des données et de consentement applicables à cette destination.<br><br>Des violations de politique d’utilisation des données se produisent si vous activez un segment dont les libellés d’utilisation sont limités pour l’action marketing de la destination cible.<br><br>(Version bêta) Lorsqu’un segment est activé, tous les profils qui ne contiennent pas les attributs de consentement requis pour l’action marketing (tels que définis par vos politique de consentement) sont exclus de l’audience activée. |
 
 >[!IMPORTANT]
 >
@@ -83,12 +83,12 @@ Chaque étape de la chronologie ci-dessus représente une entité pouvant contri
 
 Lorsque des violations de stratégie se produisent, les messages qui s’affichent dans l’interface utilisateur fournissent des outils utiles à l’exploration de la parenté des données contribuant à la violation afin de résoudre le problème. Vous trouverez plus de détails dans la section suivante.
 
-## Messages d’application de stratégie {#enforcement}
+## Messages d’application de politique {#enforcement}
 
-Les sections ci-dessous décrivent les différents messages d’application de la stratégie qui apparaissent dans l’interface utilisateur de Platform :
+Les sections ci-dessous décrivent les différents messages d’application de politique qui apparaissent dans l’interface utilisateur de Platform :
 
 * [Violation de la politique d’utilisation des données](#data-usage-violation)
-* [Évaluation des stratégies de consentement](#consent-policy-evaluation)
+* [Évaluation des politiques de consentement](#consent-policy-evaluation)
 
 ### Violation de la politique d’utilisation des données {#data-usage-violation}
 
@@ -114,49 +114,49 @@ Sélectionnez **[!UICONTROL Mode Liste]** pour afficher la parenté des données
 
 ![](../images/enforcement/list-view.png)
 
-### Évaluation des stratégies de consentement {#consent-policy-evaluation}
+### Évaluation des politiques de consentement {#consent-policy-evaluation}
 
-Si vous avez [création de stratégies de consentement](../policies/user-guide.md#consent-policy) et activent un segment vers une destination, vous pouvez voir comment vos stratégies de consentement affectent le pourcentage de profils inclus dans l’activation.
+Si vous avez [créé des politiques de consentement](../policies/user-guide.md#consent-policy) et que vous activez un segment vers une destination, vous pouvez voir comment vos politiques de consentement affectent le pourcentage de profils inclus dans l’activation.
 
-#### Évaluation de la pré-activation
+#### Évaluation préalable à l’activation
 
-Une fois que vous avez atteint le **[!UICONTROL Réviser]** étape lorsque [activation d’une destination](../../destinations/ui/activation-overview.md), sélectionnez **[!UICONTROL Affichage des stratégies appliquées]**.
+Une fois que vous avez atteint l’étape **[!UICONTROL Réviser]** lors de l’[activation d’une destination](../../destinations/ui/activation-overview.md), sélectionnez **[!UICONTROL Affichage des politiques appliquées]**.
 
-![Bouton Afficher les stratégies appliquées dans le processus d’activation de la destination](../images/enforcement/view-applied-policies.png)
+![Bouton Afficher les politiques appliquées dans le workflow d’activation de la destination](../images/enforcement/view-applied-policies.png)
 
-Une boîte de dialogue de vérification de stratégie s’affiche, vous montrant un aperçu de la manière dont vos stratégies de consentement affectent l’audience approuvée des segments activés.
+Une boîte de dialogue de vérification de politique s’affiche, vous montrant un aperçu de la manière dont vos politiques de consentement affectent l’audience consentante des segments activés.
 
-![Boîte de dialogue de vérification de la stratégie de consentement dans l’interface utilisateur de Platform](../images/enforcement/consent-policy-check.png)
+![Boîte de dialogue de vérification de la politique de consentement dans l’interface utilisateur de Platform](../images/enforcement/consent-policy-check.png)
 
-La boîte de dialogue affiche l’audience approuvée pour un segment à la fois. Pour afficher l’évaluation des stratégies pour un autre segment, utilisez le menu déroulant situé au-dessus du diagramme pour en sélectionner un dans la liste.
+La boîte de dialogue affiche l’audience consentante pour un segment à la fois. Pour afficher l’évaluation des politiques pour un autre segment, utilisez le menu déroulant situé au-dessus du diagramme pour en sélectionner un dans la liste.
 
-![Sélecteur de segment dans la boîte de dialogue de vérification de stratégie](../images/enforcement/segment-switcher.png)
+![Sélecteur de segment dans la boîte de dialogue de vérification des politiques](../images/enforcement/segment-switcher.png)
 
-Utilisez le rail de gauche pour basculer entre les stratégies de consentement applicables pour le segment sélectionné. Les stratégies qui ne sont pas sélectionnées sont représentées dans le[!UICONTROL Autres politiques]&quot; du diagramme.
+Utilisez le rail de gauche pour basculer entre les politiques de consentement applicables pour le segment sélectionné. Les politiques qui ne sont pas sélectionnées sont représentées dans la section « [!UICONTROL Autres politiques] » du diagramme.
 
-![Sélecteur de stratégie dans la boîte de dialogue de vérification de stratégie](../images/enforcement/policy-switcher.png)
+![Sélecteur de politique dans la boîte de dialogue de vérification des politiques](../images/enforcement/policy-switcher.png)
 
-Le diagramme affiche le chevauchement entre trois groupes de profils :
+Le diagramme affiche le chevauchement entre trois groupes de profils :
 
 1. Profils qui remplissent les critères du segment sélectionné
-1. Profils qui remplissent les critères de la stratégie de consentement sélectionnée
-1. Profils qui remplissent les critères des autres stratégies de consentement applicables pour le segment (appelés &quot;[!UICONTROL Autres politiques]&quot; dans le diagramme)
+1. Profils qui remplissent les critères de la politique de consentement sélectionnée
+1. Profils qui remplissent les critères des autres politiques de consentement applicables pour le segment (appelées « [!UICONTROL Autres politiques] » dans le diagramme)
 
-Les profils qui remplissent les critères pour les trois groupes ci-dessus représentent l’audience approuvée pour le segment sélectionné, résumée dans le rail de droite.
+Les profils qui remplissent les critères pour les trois groupes ci-dessus représentent l’audience consentante pour le segment sélectionné, résumée dans le rail de droite.
 
-![Section Résumé de la boîte de dialogue de vérification de stratégie](../images/enforcement/summary.png)
+![Section résumé de la boîte de dialogue de vérification des politiques](../images/enforcement/summary.png)
 
 Passez la souris sur l’une des audiences du diagramme pour afficher le nombre de profils qu’il contient.
 
-![Mise en surbrillance d’une section de diagramme dans la boîte de dialogue de vérification de stratégie](../images/enforcement/highlight-segment.png)
+![Mise en surbrillance d’une section de diagramme dans la boîte de dialogue de vérification des politiques](../images/enforcement/highlight-segment.png)
 
 L’audience consentante est représentée par le chevauchement central du diagramme et peut être mise en surbrillance comme les autres sections.
 
-![Mettre en surbrillance l’audience autorisée dans le diagramme](../images/enforcement/consented-audience.png)
+![L’audience consentante mise en surbrillance dans le diagramme](../images/enforcement/consented-audience.png)
 
 #### Application d’exécution de flux
 
-Lorsque les données sont activées vers une destination, les détails de l’exécution du flux indiquent le nombre d’identités qui ont été exclues en raison de stratégies de consentement principal.
+Lorsque les données sont activées vers une destination, les détails de l’exécution du flux indiquent le nombre d’identités qui ont été exclues en raison de politiques de consentement actives.
 
 ![Mesures d’identités exclues pour une exécution de flux de données](../images/enforcement/dataflow-run-enforcement.png)
 

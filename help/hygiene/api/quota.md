@@ -5,7 +5,7 @@ exl-id: 91858a13-e5ce-4b36-a69c-9da9daf8cd66
 source-git-commit: 1c6a5df6473e572cae88a5980fe0db9dfcf9944e
 workflow-type: tm+mt
 source-wordcount: '350'
-ht-degree: 82%
+ht-degree: 88%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 82%
 
 >[!IMPORTANT]
 >
->Les fonctionnalités d’hygiène des données de Adobe Experience Platform ne sont actuellement disponibles que pour les organisations qui ont acheté **Adobe Health Care Shield** ou **Adobe de la confidentialité et de la sécurité**.
+>Actuellement, les fonctionnalités d’hygiène des données d’Adobe Experience Platform sont uniquement disponibles pour les organisations qui ont acheté **Adobe Healthcare Shield** ou **Adobe Privacy &amp; Security Shield**.
 
 Le point d’entrée `/quota` de l’API Data Hygiene vous permet de surveiller votre utilisation de l’hygiène des données par rapport aux limites de quota de votre entreprise pour chaque type de tâche.
 

@@ -3,7 +3,7 @@ title: Déploiement asynchrone
 description: Découvrez comment déployer les bibliothèques de balises d’Adobe Experience Platform de manière asynchrone sur votre site web.
 exl-id: ed117d3a-7370-42aa-9bc9-2a01b8e7794e
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1079'
 ht-degree: 100%
 

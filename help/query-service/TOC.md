@@ -7,7 +7,7 @@ feature: Queries
 source-git-commit: b8c2a9ab44274e2719e7178119a58f14d0442955
 workflow-type: tm+mt
 source-wordcount: '232'
-ht-degree: 65%
+ht-degree: 98%
 
 ---
 
@@ -17,11 +17,11 @@ ht-degree: 65%
 - [Présentation de Query Service](home.md)
 - [Package Query Service](packages.md)
 - [Barrières de sécurité de Query Service](guardrails.md)
-- Distiller de données {#data-distiller}
+- Data Distiller {#data-distiller}
    - [Utilisation des licences](data-distiller/licence-usage.md)
 - Prise en main {#get-started}
    - [Conditions préalables](get-started/prerequisites.md)
-- Cas pratiques {#use-cases}
+- Cas d’utilisation {#use-cases}
    - [Navigation abandonnée](use-cases/abandoned-browse.md)
    - [Analyse des activités avec Adobe Target](use-cases/activity-analysis-with-adobe-target.md)
    - [Analyse de l’attribution](use-cases/attribution-analysis.md)
@@ -44,20 +44,20 @@ ht-degree: 65%
    - [Modèles de requête](ui/query-templates.md)
    - [Utilisation des informations dʼidentification de Query Service](ui/credentials.md)
    - [Génération des jeux de données à partir de résultats de requête](ui/create-datasets.md)
-- [Surveillance des requêtes](monitor-queries.md)
-- Magasin accéléré de requêtes{#query-accelerated-store}
-   - [Modèle de données d’insights de reporting](query-accelerated-store/reporting-insights-data-model.md)
+- [Surveiller les requêtes](monitor-queries.md)
+- Boutique de requêtes accélérées{#query-accelerated-store}
+   - [Modèle de données d’insights de rapports](query-accelerated-store/reporting-insights-data-model.md)
 - Bonnes pratiques {#best-practices}
    - [Directives générales pour l’exécution des requêtes](best-practices/writing-queries.md)
    - [Conseils pour l’organisation des ressources de données](./best-practices/organize-data-assets.md)
    - [Utilisation de structures de données imbriquées](best-practices/nested-data-structures.md)
-   - [aplatissement des structures de données imbriquées](best-practices/flatten-nested-data.md)
+   - [Aplatir les structures de données imbriquées](best-practices/flatten-nested-data.md)
    - [Bloc anonyme](best-practices/anonymous-block.md)
    - [Chargement incrémentiel](best-practices/incremental-load.md)
    - [Dédoublonnage des données](best-practices/deduplication.md)
 - Attributs dérivés {#derived-attributes}
    - [Présentation](derived-attributes/overview.md)
-   - [Cas d’utilisation des décimales](derived-attributes/deciles-use-case.md)
+   - [Cas d’utilisation des déciles](derived-attributes/deciles-use-case.md)
 - Exemples de requêtes {#sample-queries}
    - [Exemples de requêtes dʼévénements dʼexpérience](sample-queries/experience-event.md)
    - [Exemples de requêtes Adobe Analytics](sample-queries/adobe-analytics.md)
@@ -68,7 +68,7 @@ ht-degree: 65%
    - [Fonctions Spark SQL](sql/spark-sql-functions.md)
    - [Commandes de métadonnées](sql/metadata.md)
    - [Instructions préparées](sql/prepared-statements.md)
-   - [Échantillons de jeux de données](sql/dataset-samples.md)
+   - [Exemples de jeux de données](sql/dataset-samples.md)
 - Connexion des clients à Query Service {#clients}
    - [Présentation de la connexion des clients](clients/overview.md)
    - [Modes SSL](./clients/ssl-modes.md)
@@ -84,8 +84,8 @@ ht-degree: 65%
 - Gouvernance des données {#data-governance}
    - [Présentation](data-governance/overview.md)
    - [Guide du journal d’audit](data-governance/audit-log-guide.md)
-   - [Identités dans les jeux de données de schémas ad hoc](data-governance/ad-hoc-schema-identities.md)
+   - [Identités dans les jeux de données à schéma ad hoc](data-governance/ad-hoc-schema-identities.md)
    - [Prise en charge du contrôle d’accès basé sur les attributs pour les schémas ad hoc](./data-governance/ad-hoc-schema-labels.md)
 - [Guide de dépannage](troubleshooting-guide.md)
 - [Référence d’API](https://www.adobe.io/experience-platform-apis/references/query-service/)
-- [Notes de mise à jour de Platform](https://docs.adobe.com/content/help/fr-FR/experience-platform/release-notes/latest.html)
+- [Notes de mise à jour de Platform](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=fr)

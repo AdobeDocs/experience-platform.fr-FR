@@ -8,7 +8,7 @@ exl-id: 1b372aa5-3e49-4741-82dc-5701a4bc8469
 source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
 source-wordcount: '1164'
-ht-degree: 85%
+ht-degree: 97%
 
 ---
 
@@ -16,28 +16,28 @@ ht-degree: 85%
 
 >[!CONTEXTUALHELP]
 >id="platform_governance_policies_restrictusage"
->title="Limitation de l’utilisation des données"
->abstract="Le type de stratégie d’utilisation des données évalue des actions marketing spécifiques appliquées aux libellés de gouvernance des données afin de limiter l’utilisation des données pour les activités marketing."
+>title="Limiter l’utilisation des données"
+>abstract="Le type de stratégie d’utilisation des données évalue les actions de marketing spécifiques appliquées aux étiquettes de gouvernance des données afin de limiter l’utilisation des données pour les activités de marketing."
 
 Des stratégies d’utilisation des données doivent être mises en œuvre pour que les libellés d’utilisation des données prennent en charge efficacement la conformité des données. Les stratégies d’utilisation des données sont des règles qui décrivent les types d’actions marketing que vous êtes autorisé ou non à effectuer sur des données d’[!DNL Experience Platform].
 
-Deux types de stratégies sont disponibles :
+Deux types de stratégies sont disponibles :
 
-* **[!UICONTROL Politique de gouvernance des données]**: Restreindre l’activation des données en fonction de l’action marketing en cours et des libellés d’utilisation des données transportés par les données en question.
-* **[!UICONTROL Stratégie de consentement]**: Filtrer les profils pouvant être activés sur [destinations](../../destinations/home.md) en fonction du consentement ou des préférences de vos clients
+* **[!UICONTROL Politique de gouvernance des données]** : limiter l’activation des données en fonction de l’action marketing réalisée et des étiquettes d’utilisation des données portées par les données en question.
+* **[!UICONTROL Politique de consentement]** : filtrer les profils qui peuvent être activés vers [destinations](../../destinations/home.md) en fonction du consentement ou des préférences de vos clients.
 
 >[!NOTE]
 >
->Les stratégies d’utilisation des données ne doivent pas être confondues avec [stratégies de contrôle d’accès](../../access-control/abac/end-to-end-guide.md#policy), qui déterminent si certains utilisateurs de Platform de votre entreprise peuvent accéder à certains champs de données, et qui sont configurés via la variable [!UICONTROL Autorisations] .
+>Les stratégies d’utilisation des données ne doivent pas être confondues avec les [stratégies de contrôle d’accès](../../access-control/abac/end-to-end-guide.md#policy), qui déterminent si certains utilisateur et utilisatrices de Platform dans votre organisation peuvent accéder à certains champs de données, et sont configurées via l’onglet [!UICONTROL Autorisations].
 
-Ce document fournit une présentation de haut niveau des stratégies dʼutilisation des données et fournit des liens vers la documentation supplémentaire sur lʼutilisation des stratégies dans lʼUI ou lʼAPI.
+Ce document fournit une présentation de haut niveau des stratégies dʼutilisation des données et fournit des liens vers la documentation supplémentaire sur lʼutilisation des stratégies dans lʼinterface utilisateur ou lʼAPI.
 
 ## Actions marketing {#marketing-actions}
 
 Les actions marketing (également appelées cas dʼutilisation marketing), dans le contexte du cadre de gouvernance des données, sont des actions quʼun utilisateur de données [!DNL Experience Platform] peut entreprendre et pour lesquelles votre entreprise souhaite restreindre lʼutilisation des données. En tant que telle, une stratégie dʼutilisation des données est définie par les éléments suivants :
 
 1. Une action marketing spécifique
-2. Les conditions dans lesquelles cette action n’est pas exécutée
+2. Les conditions dans lesquelles l’exécution de cette action est limitée
 
 Un exemple d’action marketing peut être le souhait d’exporter un jeu de données vers un service tiers. S’il existe une stratégie en place indiquant que des types de données spécifiques (comme les informations d’identification personnelle ou PII) ne peuvent pas être exportés et que vous tentez d’exporter un jeu de données contenant un libellé « I » (données d’identité), vous recevez une réponse de [!DNL Policy Service] vous informant qu’une stratégie d’utilisation des données a été enfreinte.
 
@@ -49,7 +49,7 @@ Lorsque des données sont utilisées dans le service de votre organisation, les 
 
 >[!NOTE]
 >
->Vous pouvez configurer des cas d’utilisation marketing sur des destinations afin d’automatiser l’application des stratégies. Voir [documentation sur les destinations](../../destinations/home.md) pour plus d’informations sur les options de configuration de votre destination spécifique.
+>Vous pouvez configurer des cas d’utilisation marketing sur des destinations afin d’automatiser l’application des stratégies. Consultez la [documentation sur les destinations](../../destinations/home.md) pour plus d’informations sur les options de configuration de votre destination spécifique.
 
 Voir l’annexe du présent document pour obtenir une liste des [actions marketing définies par Adobe disponibles](#core-actions). Vous pouvez également définir vos propres actions marketing personnalisées à l’aide de l’API [!DNL Policy Service] ou de l’interface utilisateur d’[!DNL Experience Platform]. Vous trouverez plus d’informations sur l’utilisation des actions marketing et des stratégies dans la section suivante.
 

@@ -5,7 +5,7 @@ exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
 source-git-commit: 70a2abcc4d6e27a89e77d68e7757e4876eaa4fc0
 workflow-type: tm+mt
 source-wordcount: '868'
-ht-degree: 84%
+ht-degree: 87%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 84%
 
 >[!IMPORTANT]
 >
->Les fonctionnalités d’hygiène des données de Adobe Experience Platform ne sont actuellement disponibles que pour les organisations qui ont acheté **Adobe Health Care Shield** ou **Adobe de la confidentialité et de la sécurité**.
+>Actuellement, les fonctionnalités d’hygiène des données d’Adobe Experience Platform sont uniquement disponibles pour les organisations qui ont acheté **Adobe Healthcare Shield** ou **Adobe Privacy &amp; Security Shield**.
 
 Lorsqu’une demande d’hygiène de données est envoyée au système, un ordre de travail est créé pour exécuter la tâche demandée. Un ordre de travail représente un processus spécifique de nettoyage de données (par exemple, l’expiration planifiée d’un jeu de données), qui comprend le statut actuel et d’autres détails connexes.
 

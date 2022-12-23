@@ -6,7 +6,7 @@ exl-id: 75e4aea7-b521-434d-9cd5-32a00d00550d
 source-git-commit: 338aa6849f58b3c0fd6c871f1e199ebf6a73d115
 workflow-type: tm+mt
 source-wordcount: '510'
-ht-degree: 82%
+ht-degree: 91%
 
 ---
 
@@ -28,7 +28,7 @@ Depuis n’importe quel tableau de bord (par exemple, le tableau de bord [!UICON
 
 ## Réorganisation de widgets
 
-Après avoir choisi de modifier le tableau de bord, vous pouvez réorganiser les widgets en sélectionnant le titre des widgets, puis en les faisant glisser et en les déposant dans l’ordre souhaité. Dans cet exemple, la variable **[!UICONTROL Tendance du nombre de profils]** Le widget est déplacé vers la ligne supérieure et le **[!UICONTROL Nombre de profils]** le widget s’affiche désormais dans la deuxième ligne.
+Après avoir choisi de modifier le tableau de bord, vous pouvez réorganiser les widgets en sélectionnant le titre des widgets, puis en les faisant glisser et en les déposant dans l’ordre souhaité. Dans cet exemple, le widget **[!UICONTROL Tendance du nombre de profils]** est déplacé vers la ligne supérieure et le widget **[!UICONTROL Nombre de profils]** apparaît sur la deuxième ligne.
 
 ![Le tableau de bord Profils avec deux widgets réorganisés mis en surbrillance.](../images/customization/move-widget.png)
 
@@ -44,7 +44,7 @@ Vous pouvez également redimensionner un widget en sélectionnant le symbole d�
 
 ## Enregistrement des mises à jour de tableaux de bord
 
-Une fois les widgets déplacés et redimensionnés, sélectionnez **[!UICONTROL Enregistrer et quitter]** pour enregistrer vos modifications et revenir à la vue du tableau de bord principal. Si vous ne souhaitez pas conserver vos modifications, sélectionnez **[!UICONTROL Annuler]** pour réinitialiser le tableau de bord et revenir à l’affichage principal du tableau de bord.
+Une fois que vous avez déplacé et redimensionné les widgets, sélectionnez **[!UICONTROL Enregistrer et quitter]** pour enregistrer les modifications et revenir à la vue principale du tableau de bord. Si vous ne souhaitez pas conserver vos modifications, sélectionnez **[!UICONTROL Annuler]** pour réinitialiser le tableau de bord et revenir à l’affichage principal du tableau de bord.
 
 ![Le tableau de bord Profils avec les options Annuler et Enregistrer et quitter est mis en surbrillance.](../images/customization/save-changes.png)
 

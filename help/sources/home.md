@@ -8,7 +8,7 @@ exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
 source-git-commit: 784ec5f799c591185620e8376a6980b4930d914a
 workflow-type: tm+mt
 source-wordcount: '1123'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -35,7 +35,7 @@ Experience Platform permet d’ingérer des données provenant d’autres applic
 - [Présentation de source de données de la suite de rapports Adobe Analytics](connectors/adobe-applications/analytics.md)
    - [Créer une connexion source Adobe Analytics dans l’interface utilisateur](./tutorials/ui/create/adobe-applications/analytics.md)
 - [Présentation de la source Adobe Campaign Managed Cloud Services](connectors/adobe-applications/campaign.md)
-   - [Créer une connexion source Adobe Campaign Managed Services à l’aide de l’interface utilisateur de Platform](./tutorials/ui/create/adobe-applications/campaign.md)
+   - [Créer une connexion source Adobe Campaign Managed Cloud Services à l’aide de l’interface utilisateur de Platform](./tutorials/ui/create/adobe-applications/campaign.md)
 - [Présentation de la source de collecte de données Adobe](connectors/adobe-applications/data-collection.md)
    - [Créer une connexion source Attributs du client dans l’interface utilisateur](./tutorials/ui/create/adobe-applications/customer-attributes.md)
 - [Présentation de la source [!DNL Marketo Engage]](connectors/adobe-applications/marketo/marketo.md)

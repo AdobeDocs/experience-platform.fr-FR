@@ -5,7 +5,7 @@ exl-id: f7aa3c6c-ba7a-440c-a4d7-5d7b50dbbc0d
 source-git-commit: 638a778d1d999ab6a1726333f9cde0a0b4fad57b
 workflow-type: tm+mt
 source-wordcount: '691'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -91,9 +91,9 @@ Lisez [Activer des profils et des segments vers les destinations de requête de 
 
 ## Étapes suivantes dans [!DNL Adobe Commerce]
 
-Maintenant que vous avez configuré la destination [!DNL Commerce] dans Experience Platform, vous devez configurer [!DNL Commerce Admin] pour importer les segments Real-Time CDP que vous avez créés. Consulter la [[!DNL Commerce] documentation](https://experienceleague.adobe.com/docs/commerce-admin/marketing/promotions/cart-rules/customer-segment-rtcdp.html?lang=fr) pour en savoir plus.
+Maintenant que vous avez configuré la destination [!DNL Commerce] dans Experience Platform, vous devez configurer [!DNL Commerce Admin] pour importer les segments Real-Time CDP que vous avez créés. Consultez la [[!DNL Commerce] documentation](https://experienceleague.adobe.com/docs/commerce-admin/marketing/promotions/cart-rules/customer-segment-rtcdp.html?lang=fr) pour en savoir plus.
 
-## Validation de l’activation de l’audience dans Commerce {#exported-data}
+## Valider l’activation de l’audience dans Commerce {#exported-data}
 
 Une fois les segments Real-Time CDP activés dans votre compte [!DNL Adobe Commerce], ces segments sont disponibles dans le [!DNL Admin] lorsque vous créez une règle de prix de panier :
 

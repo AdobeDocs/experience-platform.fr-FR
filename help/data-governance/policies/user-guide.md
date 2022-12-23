@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform;accueil;rubriques populaires;gouvernance des données;guide d’utilisation des stratégies d’utilisation des données
 solution: Experience Platform
-title: Gestion des stratégies d’utilisation des données dans l’interface utilisateur
+title: Gestion des politiques d’utilisation des données dans l’interface utilisateur
 topic-legacy: policies
-description: La gouvernance des données d’Adobe Experience Platform fournit une interface utilisateur qui vous permet de créer et de gérer des stratégies d’utilisation des données. Ce document présente les actions que vous pouvez effectuer dans l’espace de travail Stratégies de l’interface utilisateur de l’Experience Platform.
+description: La gouvernance des données d’Adobe Experience Platform fournit une interface utilisateur qui vous permet de créer et de gérer des politiques d’utilisation des données. Ce document offre une vue d’ensemble des actions que vous pouvez effectuer dans l’espace de travail Stratégies de l’interface utilisateur d’Experience Platform.
 exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
 source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
 source-wordcount: '1411'
-ht-degree: 47%
+ht-degree: 95%
 
 ---
 
-# Gestion des stratégies d’utilisation des données dans l’interface utilisateur
+# Gestion des politiques d’utilisation des données dans l’interface utilisateur
 
 Ce document explique comment utiliser la variable **[!UICONTROL Stratégies]** espace de travail dans l’interface utilisateur de Adobe Experience Platform pour créer et gérer des stratégies d’utilisation des données.
 
@@ -37,7 +37,7 @@ Dans l’interface utilisateur [!DNL Experience Platform], cliquez sur **[!UICON
 
 ![](../images/policies/browse-policies.png)
 
-Si vous avez accès aux stratégies de consentement, sélectionnez la variable **[!UICONTROL Stratégies de consentement]** pour les afficher dans la [!UICONTROL Parcourir] .
+Si vous avez accès aux stratégies de consentement, activez le bouton (bascule) **[!UICONTROL Stratégies de consentement]** pour les afficher dans l’onglet [!UICONTROL Parcourir].
 
 ![](../images/policies/consent-policy-toggle.png)
 
@@ -47,17 +47,17 @@ Cliquez sur une stratégie répertoriée pour en afficher la description et le t
 
 ## Création dʼune stratégie personnalisée {#create-policy}
 
-Pour créer une stratégie d’utilisation des données personnalisée, cliquez sur **[!UICONTROL Créer une stratégie]** dans le coin supérieur droit de l’onglet **[!UICONTROL Parcourir]** dans l’espace de travail **[!UICONTROL Stratégies]**.
+Pour créer une politique d’utilisation des données personnalisée, cliquez sur **[!UICONTROL Créer une politique]** dans le coin supérieur droit de l’onglet **[!UICONTROL Parcourir]** dans l’espace de travail **[!UICONTROL Politiques]**.
 
 ![](../images/policies/create-policy-button.png)
 
-Selon que vous faites partie de la version bêta des stratégies de consentement, l’un des événements suivants se produit :
+Selon que vous fassiez partie de la version bêta des stratégies de consentement, l’un des événements suivants se produit :
 
-* Si vous ne faites pas partie de la version bêta, vous êtes immédiatement amené au processus pour [création d’une stratégie de gouvernance des données](#create-governance-policy).
-* Si vous faites partie de la version bêta, une boîte de dialogue vous offre une option supplémentaire pour [création d’une stratégie de consentement](#consent-policy).
+* Si vous ne faites pas partie de la version bêta, vous êtes immédiatement redirigé(e) vers le workflow pour [créer une stratégie de gouvernance des données](#create-governance-policy).
+* Si vous faites partie de la version bêta, une boîte de dialogue vous offre une option supplémentaire pour [créer une stratégie de consentement](#consent-policy).
    ![](../images/policies/choose-policy-type.png)
 
-### Création d’une stratégie de gouvernance des données {#create-governance-policy}
+### Créer une stratégie de gouvernance des données {#create-governance-policy}
 
 Le workflow de **[!UICONTROL création de stratégies]** s’affiche. Commencez par fournir un nom et une description à la nouvelle stratégie.
 
@@ -83,37 +83,37 @@ L’onglet **[!UICONTROL Parcourir]** réapparaît et affiche désormais la nouv
 
 ![](../images/policies/created-policy.png)
 
-### Création d’une stratégie de consentement {#consent-policy}
+### Créer une stratégie de consentement {#consent-policy}
 
 >[!IMPORTANT]
 >
 >Les stratégies de consentement ne sont disponibles que pour les organisations qui ont acheté **Adobe Health Care Shield** ou **Adobe de la confidentialité et de la sécurité**.
 
-Si vous choisissez de créer une stratégie de consentement, un nouvel écran s’affiche, vous permettant de configurer la nouvelle stratégie.
+Si vous choisissez de créer une stratégie de consentement, un nouvel écran vous permettant de configurer la nouvelle stratégie s’affiche.
 
 ![](../images/policies/consent-policy-dialog.png)
 
-Pour pouvoir utiliser des stratégies de consentement, des attributs de consentement doivent être présents dans vos données de profil. Consultez le guide sur la [traitement du consentement dans Experience Platform](../../landing/governance-privacy-security/consent/adobe/overview.md) pour obtenir des instructions détaillées sur la manière d’inclure les attributs requis dans votre schéma d’union.
+Pour pouvoir utiliser des stratégies de consentement, des attributs de consentement doivent être présents dans vos données de profil. Consultez le guide sur le [traitement du consentement dans Experience Platform](../../landing/governance-privacy-security/consent/adobe/overview.md) pour obtenir des instructions détaillées sur la manière d’inclure les attributs obligatoires dans votre schéma d’union.
 
-Les stratégies de consentement se composent de deux composants logiques :
+Les stratégies de consentement se composent de deux éléments logiques :
 
-* **[!UICONTROL If]**: La condition qui déclenchera la vérification de la stratégie. Cela peut être basé sur une certaine action marketing en cours, la présence de certains libellés d’utilisation des données ou une combinaison des deux.
-* **[!UICONTROL Alors]**: Attributs de consentement devant être présents pour qu’un profil soit inclus dans l’action qui a déclenché la stratégie.
+* **[!UICONTROL Si]** : la condition qui déclenchera la vérification de la stratégie. Elle peut dépendre d’une certaine action marketing en cours, de la présence de certains libellés d’utilisation des données ou d’une combinaison des deux.
+* **[!UICONTROL Alors]** : attributs de consentement devant être présents pour qu’un profil soit inclus dans l’action qui a déclenché la stratégie.
 
-#### Configuration des conditions {#consent-conditions}
+#### Configurer les conditions {#consent-conditions}
 
 >[!CONTEXTUALHELP]
 >id="platform_governance_policies_consentif"
->title="Condition if"
->abstract="Définissez d’abord les conditions qui déclencheront le contrôle de la stratégie. Les conditions peuvent inclure certaines actions marketing entreprises, certaines étiquettes de gouvernance des données présentes ou une combinaison des deux."
+>title="Condition Si"
+>abstract="Définissez d’abord les conditions qui déclencheront la vérification de la stratégie. Les conditions peuvent inclure certaines actions marketing entreprises, certaines étiquettes de gouvernance des données présentes ou une combinaison des deux."
 
-Sous , **[!UICONTROL If]** , sélectionnez les actions marketing et/ou les libellés d’utilisation des données qui doivent déclencher cette stratégie. Sélectionner **[!UICONTROL Afficher tout]** et **[!UICONTROL Sélectionner des étiquettes]** pour afficher les listes complètes des actions marketing et des libellés disponibles, respectivement.
+Sous la section **[!UICONTROL Si]**, sélectionnez les actions marketing et/ou les libellés d’utilisation des données qui doivent déclencher cette stratégie. Sélectionnez **[!UICONTROL Afficher tout]** et **[!UICONTROL Sélectionner des libellés]** pour afficher les listes complètes des actions marketing et des libellés disponibles, respectivement.
 
 Une fois que vous avez ajouté au moins une condition, vous pouvez sélectionner **[!UICONTROL Ajouter une condition]** pour continuer à ajouter d’autres conditions si nécessaire, en choisissant le type de condition approprié dans la liste déroulante.
 
 ![](../images/policies/add-condition.png)
 
-Si vous sélectionnez plusieurs conditions, vous pouvez utiliser l’icône qui s’affiche entre elles pour changer la relation conditionnelle entre &quot;AND&quot; et &quot;OR&quot;.
+Si vous sélectionnez plusieurs conditions, vous pouvez utiliser l’icône qui s’affiche entre elles pour changer la relation conditionnelle entre « ET » et « OU ».
 
 ![](../images/policies/and-or-selection.png)
 
@@ -121,16 +121,16 @@ Si vous sélectionnez plusieurs conditions, vous pouvez utiliser l’icône qui 
 
 >[!CONTEXTUALHELP]
 >id="platform_governance_policies_consentthen"
->title="Alors, condition"
->abstract="Une fois votre condition &quot;If&quot; définie, utilisez la section &quot;Then&quot; pour sélectionner au moins un attribut de consentement dans le schéma d’union. Il s’agit de l’attribut qui doit être présent pour que les profils soient inclus dans l’action régie par cette stratégie."
+>title="Condition Alors"
+>abstract="Une fois votre condition « Si » définie, utilisez la section « Alors » pour sélectionner au moins un attribut de consentement dans le schéma d’union. Il s’agit de l’attribut qui doit être présent pour que les profils soient inclus dans l’action régie par cette stratégie."
 
-Sous , **[!UICONTROL Alors]** , sélectionnez au moins un attribut de consentement dans le schéma d’union. Il s’agit de l’attribut qui doit être présent pour que les profils soient inclus dans l’action régie par cette stratégie. Vous pouvez choisir l’une des options fournies dans la liste ou sélectionner **[!UICONTROL Afficher tout]** pour sélectionner directement l’attribut dans le schéma d’union.
+Sous la section **[!UICONTROL Alors]**, sélectionnez au moins un attribut de consentement dans le schéma d’union. Il s’agit de l’attribut qui doit être présent pour que les profils soient inclus dans l’action régie par cette stratégie. Vous pouvez choisir l’une des options fournies dans la liste ou sélectionner **[!UICONTROL Afficher tout]** pour sélectionner directement l’attribut dans le schéma d’union.
 
-Lors de la sélection de l’attribut de consentement, sélectionnez les valeurs de l’attribut que vous souhaitez que cette stratégie recherche.
+Lors de la sélection de l’attribut de consentement, sélectionnez les valeurs de l’attribut que vous souhaitez que cette stratégie vérifie.
 
 ![](../images/policies/select-schema-field.png)
 
-Après avoir sélectionné au moins un attribut de consentement, la variable **[!UICONTROL Propriétés de la stratégie]** mises à jour du panneau pour afficher l’estimation du nombre de profils autorisés en vertu de cette stratégie, y compris le pourcentage de la banque de profils totale. Cette estimation est automatiquement mise à jour lorsque vous ajustez la configuration de la stratégie.
+Après avoir sélectionné au moins un attribut de consentement, le panneau **[!UICONTROL Propriétés de la stratégie]** se met à jour pour afficher le nombre estimé de profils qui seraient autorisés par cette stratégie, y compris le pourcentage du total de la boutique de profils. Cette estimation est automatiquement mise à jour lorsque vous ajustez la configuration de la stratégie.
 
 ![](../images/policies/audience-preview.png)
 
@@ -138,21 +138,21 @@ Pour ajouter d’autres attributs de consentement à la stratégie, sélectionne
 
 ![](../images/policies/add-result.png)
 
-Vous pouvez continuer à ajouter et à ajuster des conditions et des attributs de consentement à la stratégie, si nécessaire. Lorsque vous êtes satisfait de la configuration, indiquez un nom et une description facultative de la stratégie avant de sélectionner **[!UICONTROL Enregistrer]**.
+Vous pouvez continuer à ajouter et à ajuster des conditions et des attributs de consentement à la stratégie, si nécessaire. Lorsque vous êtes satisfait(e) de la configuration, indiquez un nom et une description facultative pour la stratégie avant de sélectionner **[!UICONTROL Enregistrer]**.
 
 ![](../images/policies/name-and-save.png)
 
-La stratégie de consentement est maintenant créée et son état est défini sur [!UICONTROL Désactivé] par défaut. Pour activer immédiatement la stratégie, sélectionnez l’option **[!UICONTROL État]** bascule dans le rail de droite.
+La stratégie de consentement est maintenant créée et son état est défini sur [!UICONTROL Désactivé] par défaut. Pour activer immédiatement la stratégie, activez le bouton **[!UICONTROL Statut]** dans le rail de droite.
 
 ![](../images/policies/enable-consent-policy.png)
 
-#### Vérification de l’application des stratégies
+#### Vérifier l’application des stratégies
 
-Après avoir créé et activé une stratégie de consentement, vous pouvez prévisualiser l’impact de cette stratégie sur vos audiences consentantes lors de l’activation de segments vers les destinations. Voir la section sur [évaluation des stratégies de consentement](../enforcement/auto-enforcement.md#consent-policy-evaluation) pour plus d’informations.
+Après avoir créé et activé une stratégie de consentement, vous pouvez prévisualiser l’impact de cette règle sur vos audiences consentantes lors de l’activation de segments vers les destinations. Voir la section sur l’[évaluation des stratégies de consentement](../enforcement/auto-enforcement.md#consent-policy-evaluation) pour plus d’informations.
 
 ## Activation ou désactivation d’une stratégie {#enable}
 
-Toutes les stratégies d’utilisation des données (y compris les stratégies de base fournies par Adobe) sont désactivées par défaut. Pour qu’une stratégie individuelle soit prise en compte pour l’application, vous devez l’activer manuellement via l’API ou l’interface utilisateur.
+Toutes les stratégies d’utilisation des données (y compris les stratégies de base fournies par Adobe) sont désactivées par défaut. Pour qu’une stratégie individuelle soit prise en compte pour son application, vous devez l’activer manuellement par le biais de l’API ou de l’interface utilisateur.
 
 Vous pouvez activer ou désactiver les stratégies à partir de l’onglet **[!UICONTROL Parcourir]** dans l’espace de travail **[!UICONTROL Stratégies]**. Sélectionnez une stratégie personnalisée dans la liste pour afficher ses détails à droite. Sous **[!UICONTROL État]**, sélectionnez le bouton d’activation/désactivation pour activer ou désactiver la stratégie.
 
