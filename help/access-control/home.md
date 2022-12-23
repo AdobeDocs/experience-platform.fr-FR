@@ -3,18 +3,18 @@ keywords: Experience Platform;accueil;rubriques populaires;contrôle dʼaccès;
 solution: Experience Platform
 topic-legacy: overview
 title: Présentation du contrôle d’accès
-description: Dans Adobe Experience Platform, le contrôle dʼaccès est fourni par le biais dʼAdobe Admin Console. Cette fonctionnalité exploite les profils de produit dans Admin Console, liant les utilisateurs à des autorisations et des environnements de test.
+description: Dans Adobe Experience Platform, le contrôle dʼaccès est fourni par le biais dʼAdobe Admin Console. Cette fonctionnalité exploite les profils de produit dans Admin Console, liant les utilisateurs à des autorisations et des sandbox.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
 source-git-commit: e2d3267715f693a321b2f4ce1bae0650f38c21d7
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1419'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
 # Présentation du contrôle d’accès
 
-Dans [!DNL Experience Platform], le contrôle dʼaccès est fourni par le biais dʼ[Adobe Admin Console](https://adminconsole.adobe.com). Cette fonctionnalité exploite les profils de produit dans [!DNL Admin Console], liant les utilisateurs à des autorisations et des environnements de test.
+Dans [!DNL Experience Platform], le contrôle dʼaccès est fourni par le biais dʼ[Adobe Admin Console](https://adminconsole.adobe.com). Cette fonctionnalité exploite les profils de produit dans [!DNL Admin Console], liant les utilisateurs à des autorisations et des sandbox.
 
 ## Hiérarchie et workflow du contrôle d’accès
 
@@ -30,7 +30,7 @@ Un workflow de haut niveau d’obtention et d’attribution d’autorisations d�
 - L’administrateur se connecte à [Adobe Admin Console](#adobe-admin-console) et sélectionne **Adobe Experience Platform** depuis la liste de produits sur la page d’aperçu.
 - L’administrateur peut afficher les [profils de produit](#product-profiles) par défaut ou créer de nouveaux profils de produit clients si nécessaire.
 - L’administrateur peut modifier les autorisations et les utilisateurs pour tout profil de produit existant.
-- Lors de la création ou de la modification dʼun profil de produit, lʼadministrateur ajoute les utilisateurs au profil à lʼaide de lʼonglet **[!UICONTROL Utilisateurs]**, et accorde des autorisations à ces utilisateurs (comme « [!UICONTROL Lecture des jeux de données] » ou « [!UICONTROL Gestion des schémas] ») en y accédant depuis lʼonglet **[!UICONTROL Autorisations]**. De même, l’administrateur peut attribuer des accès aux environnements de test à l’aide du même onglet Autorisations.
+- Lors de la création ou de la modification dʼun profil de produit, lʼadministrateur ajoute les utilisateurs au profil à lʼaide de lʼonglet **[!UICONTROL Utilisateurs]**, et accorde des autorisations à ces utilisateurs (comme « [!UICONTROL Lecture des jeux de données] » ou « [!UICONTROL Gestion des schémas] ») en y accédant depuis lʼonglet **[!UICONTROL Autorisations]**. De même, l’administrateur peut attribuer des accès aux sandbox à l’aide du même onglet Autorisations.
 - Lorsque les utilisateurs se connectent à lʼinterface utilisateur dʼ[!DNL Experience Platform], leur accès aux fonctionnalités [!DNL Platform] est géré par les autorisations qui leur ont été accordées à lʼétape 2. Par exemple, si un utilisateur ne dispose pas de lʼautorisation « [!UICONTROL Affichage des jeux de données] », lʼonglet **[!UICONTROL Jeux de données]** nʼapparaîtra pas dans le menu latéral pour cet utilisateur.
 
 Pour obtenir des instructions plus détaillées sur la manière de gérer le contrôle dʼaccès dans [!DNL Experience Platform], consultez le [guide dʼutilisation du contrôle dʼaccès](./ui/overview.md).
@@ -43,34 +43,34 @@ Adobe Admin Console permet de centraliser la gestion des droits et accès de vos
 
 ### Profils de produit
 
-Dans [!DNL Admin Console], des autorisations sont attribuées à des utilisateurs grâce à lʼutilisation des profils de produit. Les profils de produit vous permettent d’accorder des autorisations à un ou plusieurs utilisateurs, mais aussi de contenir leur accès aux environnements de test qui leur sont attribués par le biais des profils de produit. Il est possible d’attribuer un ou plusieurs profils de produit appartenant à votre organisation.
+Dans [!DNL Admin Console], des autorisations sont attribuées à des utilisateurs grâce à lʼutilisation des profils de produit. Les profils de produit vous permettent d’accorder des autorisations à un ou plusieurs utilisateurs, mais aussi de contenir leur accès aux sandbox qui leur sont attribuées par le biais des profils de produit. Il est possible d’attribuer un ou plusieurs profils de produit appartenant à votre organisation.
 
 ### Profils de produit par défaut
 
-[!DNL Experience Platform] sʼaccompagne de deux profils de produit préconfigurés par défaut. Le tableau suivant décrit les fonctionnalités fournies dans chaque profil par défaut, notamment, l’environnement de test auquel ils accordent l’accès ainsi que les autorisations qu’ils accordent au sein de l’environnement de test.
+[!DNL Experience Platform] sʼaccompagne de deux profils de produit préconfigurés par défaut. Le tableau suivant décrit les fonctionnalités fournies dans chaque profil par défaut, notamment, la sandbox à laquelle ils accordent l’accès ainsi que les autorisations qu’ils accordent au sein de la sandbox.
 
-| Profil de produit | Accès aux environnements de test | Autorisations |
+| Profil de produit | Accès aux sandbox | Autorisations |
 | --- | --- | --- |
 | Tous les accès de la production par défaut | Production | Toutes les autorisations applicables à [!DNL Experience Platform] à lʼexception des autorisations Sandbox Administration. |
 | Administrateurs Sandbox | S.O. | Fournit un accès uniquement aux autorisations Sandbox Administration. |
 
-## Environnements de test et autorisations
+## Sandbox et autorisations
 
-Les environnements de test hors production sont une forme de virtualisation des données qui vous permet d’isoler des données des autres environnements de test et qui est généralement utilisée à des fins d’expériences de développement, de test ou d’évaluations. Les autorisations dʼun profil de produit donnent aux utilisateurs du profil lʼaccès aux fonctionnalités de [!DNL Platform] dans les environnements de test auxquels ils se sont vus accorder lʼaccès. Une licence Experience Platform par défaut vous accorde cinq environnements de test (un de production et quatre de non-production). Vous pouvez ajouter des packs de dix environnements de test de non-production jusquʼà un maximum de 75 environnements de test au total. Contactez votre administrateur dʼorganisation IMS ou votre représentant commercial Adobe pour plus de détails.
+Les sandbox hors production sont une forme de virtualisation des données qui vous permet d’isoler des données des autres sandbox et qui est généralement utilisée à des fins d’expériences de développement, de test ou d’évaluations. Les autorisations dʼun profil de produit donnent aux utilisateurs du profil lʼaccès aux fonctionnalités de [!DNL Platform] dans les sandbox auxquelles ils se sont vus accorder lʼaccès. Une licence Experience Platform par défaut vous accorde cinq sandbox (un de production et quatre de non-production). Vous pouvez ajouter des packs de dix sandbox de non-production jusquʼà un maximum de 75 sandbox au total. Contactez votre administrateur dʼorganisation IMS ou votre représentant commercial Adobe pour plus de détails.
 
-Pour plus dʼinformations sur les environnements de test dans [!DNL Experience Platform], reportez-vous à la [présentation des environnements de test](../sandboxes/home.md).
+Pour plus dʼinformations sur les sandbox dans [!DNL Experience Platform], reportez-vous à la [présentation des sandbox](../sandboxes/home.md).
 
-### Accès aux environnements de test
+### Accès aux sandbox
 
-L’accès aux environnements de test est géré par l’intermédiaire des profils de produit. Pour obtenir des instructions détaillées sur la manière dont activer l’accès à un environnement de test pour un profil de produit, consultez le [guide d’utilisation du contrôle d’accès](./ui/overview.md).
+L’accès aux sandbox est géré par l’intermédiaire des profils de produit. Pour obtenir des instructions détaillées sur la manière dont activer l’accès à une sandbox pour un profil de produit, consultez le [guide d’utilisation du contrôle d’accès](./ui/overview.md).
 
-Les utilisateurs peuvent se voir accorder l’accès à un ou plusieurs environnements de test au sein d’un profil de produit. Si un utilisateur fait partie de deux profils de produit ou plus, cet utilisateur aura accès à tous les environnements de test inclus dans ces profils.
+Les utilisateurs peuvent se voir accorder l’accès à un ou plusieurs sandbox au sein d’un profil de produit. Si un utilisateur fait partie de deux profils de produit ou plus, cet utilisateur aura accès à toutes les sandbox incluses dans ces profils.
 
-L’autorisation « Gestion des environnements de test » permet aux utilisateurs de gérer, d’afficher ou de réinitialiser des environnements de test.
+Ce document vous a montré comment gérer les sandbox dans l’interface utilisateur d’Experience Platform.
 
 ### Autorisations {#permissions}
 
-L’onglet Autorisations au sein d’un profil de produit affiche les environnements de test et les autorisations actives pour ce profil :
+L’onglet Autorisations au sein d’un profil de produit affiche les sandbox et les autorisations actives pour ce profil :
 
 ![présentation-autorisations](./images/permissions.png)
 
@@ -97,14 +97,14 @@ Le tableau suivant décrit les autorisations disponibles pour [!DNL Experience P
 | [!DNL Profile Management] | [!UICONTROL Évaluation dʼun segment sur une audience] | Capacité à générer des profils pour une audience en évaluant une définition de segment. |
 | [!DNL Identities] | [!UICONTROL Gestion des espaces de noms d’identité] | Accès à la lecture, la création, la modification et la suppression des espaces de noms d’identité. |
 | [!DNL Identities] | [!UICONTROL Affichages des espaces de noms d’identité] | Accès en lecture seule aux espaces de noms d’identité. |
-| [!DNL Identities] | [!UICONTROL Affichage d’un graphique d’identités] | Accès en lecture seule aux graphiques d’identités. |
-| [!DNL Sandbox Administration] | [!UICONTROL Gestion des environnements de test] | Accès à la lecture, la création, la modification et la suppression des environnements de test. |
-| [!DNL Sandbox Administration] | [!UICONTROL Affichage des environnements de test] | Accès en lecture seule aux environnements de test appartenant à votre organisation. |
-| [!DNL Sandbox Administration] | [!UICONTROL Réinitialisation d’un environnement de test] | Capacité à réinitialiser un environnement de test. |
+| [!DNL Identities] | [!UICONTROL Afficher un graphique d’identité] | Accès en lecture seule aux graphiques d’identité. |
+| [!DNL Sandbox Administration] | [!UICONTROL Gestion des sandbox] | Accès à la lecture, la création, la modification et la suppression des sandbox. |
+| [!DNL Sandbox Administration] | [!UICONTROL Affichage des sandbox] | Accès en lecture seule aux sandbox appartenant à votre organisation. |
+| [!DNL Sandbox Administration] | [!UICONTROL Réinitialisation d’une sandbox] | Capacité à réinitialiser une sandbox. |
 | [!DNL Destinations] | [!UICONTROL Gestion des destinations] | Accès à la lecture, la création, la modification et la désactivation des destinations. |
 | [!DNL Destinations] | [!UICONTROL Affichage des destinations] | Accès en lecture seule aux destinations disponibles dans l’onglet **[!UICONTROL Catalogue]** et aux destinations authentifiées dans l’onglet **[!UICONTROL Parcourir]**. |
-| [!DNL Destinations] | [!UICONTROL Activation des destinations] | Capacité à activer les données vers les destinations actives qui ont été créées. Cette autorisation nécessite : [!UICONTROL Affichage des destinations] ou [!UICONTROL Gestion des destinations] à l’utilisateur qui activera les destinations. |
-| [!DNL Destinations] | [!UICONTROL Gestion et activation des destinations de jeu de données] | Possibilité de lire, créer, modifier et désactiver les flux d’exportation des jeux de données. Possibilité d’activer des données vers des jeux de données principaux qui ont été créés. |
+| [!DNL Destinations] | [!UICONTROL Activation des destinations] | Capacité à activer les données vers les destinations actives qui ont été créées. Cette autorisation nécessite d’accorder soit [!UICONTROL Afficher les destinations] ou [!UICONTROL Gérer les destinations] à l’utilisateur ou utilisatrice qui activera les destinations. |
+| [!DNL Destinations] | [!UICONTROL Gérer et activer des destinations de jeu de données] | Possibilité de lire, créer, modifier et désactiver les flux d’exportation des jeux de données. Possibilité d’activer les données vers les jeux de données actifs qui ont été créés. |
 | [!DNL Destinations] | [!UICONTROL Création de destinations] | Possibilité de créer des destinations à lʼaide du [SDK Destination Adobe Experience Platform](../destinations/destination-sdk/overview.md). |
 | [!DNL Data Ingestion] | [!UICONTROL Gestion des sources] | Accès à la lecture, la création, la modification et la désactivation des sources. |
 | [!DNL Data Ingestion] | [!UICONTROL Affichage des sources] | Accès en lecture seule aux sources disponibles dans l’onglet **[!UICONTROL Catalogue]** et aux sources authentifiées dans l’onglet **[!UICONTROL Parcourir]**. |
