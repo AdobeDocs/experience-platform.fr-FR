@@ -1,28 +1,29 @@
 ---
-title: Point de terminaison de requêtes accélérées
-description: Découvrez comment accéder à la banque de données accélérée avec requête sans état pour renvoyer rapidement des résultats basés sur des données agrégées. Ce document fournit un exemple de requête HTTP et de réponse pour le point de terminaison de requêtes accélérées de Query Service.
-source-git-commit: 2a9d40fc783feb78a1d5ad7eb615ceb40097eb89
-workflow-type: tm+mt
+title: Point d’entrée de requêtes accélérées
+description: Découvrez comment accéder sans état à la boutique accélérée de requêtes pour renvoyer rapidement des résultats basés sur des données agrégées. Ce document fournit un exemple de requête HTTP et de réponse pour le point d’entrée de requêtes accélérées de Query Service.
+exl-id: 29ea4d25-9c46-4b29-a6d7-45ac33dcb0fb
+source-git-commit: a9887535b12b8c4aeb39bb5a6646da88db4f0308
+workflow-type: ht
 source-wordcount: '567'
-ht-degree: 11%
+ht-degree: 100%
 
 ---
 
-# Point de terminaison de requêtes accélérées
+# Point d’entrée de requêtes accélérées
 
-Dans le cadre du SKU de Data Distiller, la variable [API Query Service](https://developer.adobe.com/experience-platform-apis/references/query-service/) vous permet d’effectuer des requêtes sans état vers le magasin accéléré. Les résultats renvoyés sont basés sur des données agrégées. La diminution de la latence des résultats permet un échange plus interactif d’informations. Les API de requêtes accélérées sont également utilisées pour alimenter [tableaux de bord définis par l’utilisateur](../../dashboards/user-defined-dashboards.md).
+Dans le cadre du SKU Data Distiller, l’[API Query Service](https://developer.adobe.com/experience-platform-apis/references/query-service/) vous permet d’effectuer des requêtes sans état vers la boutique accélérée. Les résultats renvoyés sont basés sur des données agrégées. La diminution de la latence des résultats permet un échange plus interactif d’informations. Les API de requêtes accélérées sont également utilisées pour alimenter les [tableaux de bord définis par l’utilisateur](../../dashboards/user-defined-dashboards.md).
 
-Avant de poursuivre avec ce guide, assurez-vous d’avoir lu et compris le [Guide de l’API Query Service](./getting-started.md) pour utiliser correctement l’API Query Service.
+Avant de poursuivre avec ce guide, assurez-vous d’avoir lu et compris le [guide de l’API Query Service](./getting-started.md) pour utiliser correctement l’API Query Service.
 
 ## Prise en main
 
-Le SKU de Data Distiller est requis pour utiliser le magasin accéléré de requêtes. Veuillez consulter le [packaging](../packages.md), les [barrières de sécurité](../guardrails.md#query-accelerated-store), et la documentation de la [licence](../data-distiller/licence-usage.md) relative au SKU de Data Distiller. Si vous ne disposez pas du SKU de Data Distiller, contactez votre représentant du service client Adobe pour plus d’informations.
+Le SKU Data Distiller est requis pour utiliser la boutique de requêtes accélérées. Veuillez consulter le [packaging](../packages.md), les [barrières de sécurité](../guardrails.md#query-accelerated-store), et la documentation de la [licence](../data-distiller/licence-usage.md) relative au SKU de Data Distiller. Si vous ne disposez pas du SKU de Data Distiller, contactez votre représentant du service client Adobe pour plus d’informations.
 
-Les sections suivantes détaillent les appels d’API nécessaires pour accéder de manière apatride au magasin accéléré de requêtes via l’API Query Service. Chaque appel inclut le format général d’API, un exemple de requête présentant les en-têtes requis et un exemple de réponse.
+Les sections suivantes détaillent les appels d’API nécessaires pour accéder sans état à la boutique de requêtes accélérées via l’API Query Service. Chaque appel inclut le format général d’API, un exemple de requête présentant les en-têtes requis et un exemple de réponse.
 
-## Exécution d’une requête accélérée {#run-accelerated-query}
+## Exécuter une requête accélérée {#run-accelerated-query}
 
-Envoyez une requête de POST au `/accelerated-queries` point de terminaison pour exécuter une requête accélérée. La requête est contenue directement dans le payload de la requête ou référencée avec un ID de modèle.
+Envoyez une requête POST au point d’entrée `/accelerated-queries` pour exécuter une requête accélérée. La requête est contenue directement dans la payload de la requête ou référencée avec un identifiant de modèle.
 
 **Format d’API**
 
@@ -34,9 +35,9 @@ POST /accelerated-queries
 
 >[!IMPORTANT]
 >
->Requêtes à la fonction `/accelerated-queries` Le point de terminaison nécessite une instruction SQL OU un ID de modèle, mais pas les deux. L’envoi des deux dans une requête provoque une erreur.
+>Les requêtes au point d’entrée `/accelerated-queries` nécessitent une instruction SQL OU un identifiant de modèle, mais pas les deux. L’envoi des deux dans une requête provoque une erreur.
 
-La requête suivante envoie une requête SQL dans le corps de la requête au magasin accéléré.
+La requête suivante envoie une requête SQL dans le corps de la requête à la boutique accélérée.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/query/acceleated-queries
@@ -56,7 +57,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/acceleated-queries
 '
 ```
 
-Cette autre requête envoie un identifiant de modèle dans le corps de la requête au magasin accéléré. Le code SQL du modèle correspondant est utilisé pour interroger le magasin accéléré.
+Cette autre requête envoie un identifiant de modèle dans le corps de la requête à la boutique accélérée. Le code SQL du modèle correspondant est utilisé pour envoyer une requête à la boutique accélérée.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/query/acceleated-queries
@@ -78,15 +79,15 @@ curl -X POST https://platform.adobe.io/data/foundation/query/acceleated-queries
 
 | Propriété | Description |
 |---|---|
-| `dbName` | Nom de la base de données vers laquelle vous effectuez une requête accélérée. La valeur de `dbName` doit prendre le format `{SANDBOX_NAME}:{ACCELERATED_STORE_DATABASE}.{ACCELERATED_STORE_SCHEMA}`. La base de données fournie doit exister dans le magasin accéléré, sinon la demande entraînera une erreur. Vous devez également vous assurer que la variable `x-sandbox-name` nom de l’en-tête et de l’environnement de test dans `dbName` se rapportent au même environnement de test. |
-| `sql` | Chaîne d’instruction SQL. La taille maximale autorisée est de 1000000 caractères. |
-| `templateId` | L’identifiant unique d’une requête créée et enregistrée en tant que modèle lorsqu’une demande de POST est envoyée à la variable `/templates` point de terminaison . |
+| `dbName` | Nom de la base de données vers laquelle vous effectuez une requête accélérée. La valeur de `dbName` doit prendre le format `{SANDBOX_NAME}:{ACCELERATED_STORE_DATABASE}.{ACCELERATED_STORE_SCHEMA}`. La base de données fournie doit exister dans la boutique accélérée, sinon la requête entraînera une erreur. Vous devez également vous assurer que l’en-tête `x-sandbox-name` et le nom de la sandbox dans `dbName` se rapportent à la même sandbox. |
+| `sql` | Chaîne d’instruction SQL. La taille maximale autorisée est de 1 000 000 caractères. |
+| `templateId` | L’identifiant unique d’une requête créée et enregistrée en tant que modèle lorsqu’une demande POST est envoyée au point d’entrée `/templates`. |
 | `name` | Nom descriptif et convivial facultatif pour la requête accélérée. |
-| `description` | Un commentaire facultatif sur l’intention de la requête pour aider d’autres utilisateurs à comprendre son objectif. La taille maximale autorisée est de 1 000 octets. |
+| `description` | Commentaire facultatif sur l’intention de la requête pour aider d’autres utilisateurs à comprendre son objectif. La taille maximale autorisée est de 1 000 octets. |
 
 **Réponse**
 
-Une réponse réussie renvoie un état HTTP 200 avec le schéma ad hoc créé par la requête.
+Une réponse réussie renvoie un statut HTTP 200 avec le schéma ad hoc créé par la requête.
 
 >[!NOTE]
 >
@@ -204,10 +205,9 @@ Une réponse réussie renvoie un état HTTP 200 avec le schéma ad hoc créé pa
 | Propriété | Description |
 |---|---|
 | `queryId` | La valeur de l’identifiant de la requête créée. |
-| `resultsMeta` | Cet objet contient les métadonnées pour chaque colonne renvoyée dans les résultats afin que les utilisateurs connaissent le nom et le type de chaque colonne. |
-| `resultsMeta._adhoc` | Schéma de modèle de données d’expérience ad hoc (XDM) avec des champs dont l’espace de noms est réservé à une utilisation par un seul jeu de données. |
+| `resultsMeta` | Cet objet contient les métadonnées pour chaque colonne renvoyée dans les résultats afin que les utilisateurs et utilisatrices connaissent le nom et le type de chaque colonne. |
+| `resultsMeta._adhoc` | Schéma de modèle de données d’expérience (XDM) ad hoc avec des champs dont l’espace de nom est réservé à une utilisation par un seul jeu de données. |
 | `resultsMeta._adhoc.type` | Type de données du schéma ad hoc. |
-| `resultsMeta._adhoc.meta:xdmType` | Il s’agit d’une valeur générée par le système pour le type de champ XDM. Pour plus d’informations sur les types disponibles, consultez la documentation sur [types XDM disponibles](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/custom-fields-api.html). |
-| `resultsMeta._adhoc.properties` | Il s’agit des noms de colonne du jeu de données interrogé. |
-| `resultsMeta._adhoc.results` | Il s’agit des noms de lignes du jeu de données interrogé. Elles reflètent chacune des colonnes renvoyées. |
-
+| `resultsMeta._adhoc.meta:xdmType` | Il s’agit d’une valeur générée par le système pour le type de champ XDM. Pour plus d’informations sur les types disponibles, consultez la documentation sur les [types XDM disponibles](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/custom-fields-api.html?lang=fr). |
+| `resultsMeta._adhoc.properties` | Il s’agit des noms des colonnes du jeu de données interrogé. |
+| `resultsMeta._adhoc.results` | Il s’agit des noms des lignes du jeu de données interrogé. Ils reflètent chacune des colonnes renvoyées. |
