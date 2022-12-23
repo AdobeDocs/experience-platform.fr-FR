@@ -3,15 +3,15 @@ title: Afficher les tableaux de bord configurés
 description: Affichez une liste des tableaux de bord configurés de votre entreprise dans l’interface utilisateur d’Experience Platform.
 exl-id: b1fdb1aa-2d09-4c21-9c84-be379f34a9b7
 source-git-commit: bc3db67b5b9e3bfb98571541d6e4dd2ca19b3303
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '202'
-ht-degree: 65%
+ht-degree: 100%
 
 ---
 
 # Afficher les tableaux de bord configurés
 
-Si plusieurs tableaux de bord sont disponibles dans Adobe Experience Platform pour votre entreprise, vous pouvez consulter l’inventaire des tableaux de bord dans l’interface utilisateur.
+Si votre organisation dispose de plusieurs tableaux de bord dans Adobe Experience Platform, vous pouvez les consulter dans l’inventaire des tableaux de bord de l’interface utilisateur (IU).
 
 Pour afficher les tableaux de bord que votre entreprise a configurés, sélectionnez **[!UICONTROL Tableaux de bord]** dans le volet de navigation de gauche, puis sélectionnez l’onglet **[!UICONTROL Parcourir]**.
 
@@ -27,4 +27,4 @@ Lorsqu’il est sélectionné, le tableau de bord s’ouvre soit dans l’interf
 
 ## Créer des tableaux de bord personnalisés
 
-Les tableaux de bord Adobe Experience Platform vous permettent de créer et de gérer des tableaux de bord personnalisés dans lesquels vous pouvez créer, ajouter et modifier des widgets personnalisés pour visualiser les mesures clés pertinentes pour votre entreprise. Voir [Guide des tableaux de bord définis par l’utilisateur](./user-defined-dashboards.md) pour obtenir des instructions complètes sur la création et la configuration de tableaux de bord personnalisés.
+Les Tableaux de bord Adobe Experience Platform vous permettent de créer et de gérer des tableaux de bord personnalisés dans lesquels vous pouvez créer, ajouter et modifier des widgets personnalisés pour visualiser les mesures clés pertinentes pour votre organisation. Voir le [guide des tableaux de bord définis par l’utilisateur](./user-defined-dashboards.md) pour obtenir des instructions complètes sur la création et la configuration de tableaux de bord personnalisés.
