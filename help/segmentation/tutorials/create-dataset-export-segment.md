@@ -6,10 +6,10 @@ topic-legacy: tutorial
 type: Tutorial
 description: Ce tutoriel décrit les étapes nécessaires à la création d’un jeu de données qui peut être utilisé pour exporter un segment ciblé à l’aide de l’interface utilisateur d’Experience Platform.
 exl-id: 1cd16e43-b050-42ba-a894-d7ea477b65f3
-source-git-commit: 44d7e11e79ed0e6041ff2e4438ddb7141ae3532d
+source-git-commit: f7d204442c8bc2355671ba2adffff4c40ce08784
 workflow-type: tm+mt
-source-wordcount: '714'
-ht-degree: 29%
+source-wordcount: '757'
+ht-degree: 25%
 
 ---
 
@@ -27,8 +27,7 @@ Pour exporter un segment, le jeu de données doit être basé sur la variable [!
 
 Pour afficher les schémas d’union dans l’interface utilisateur, sélectionnez **[!UICONTROL Profils]** dans le volet de navigation de gauche, puis sélectionnez **[!UICONTROL Schéma d’union]** comme illustré ci-dessous.
 
-![Onglet de schéma d’union dans l’interface utilisateur d’Experience Platform](../images/tutorials/segment-export-dataset/union.png)
-
+![L’onglet Schéma d’union est mis en surbrillance.](../images/tutorials/segment-export-dataset/union.png)
 
 ## Espace de travail des jeux de données
 
@@ -40,17 +39,17 @@ Sélectionner **[!UICONTROL Jeux de données]** dans le volet de navigation de g
 >
 >Sélectionnez l’icône de filtre en regard de la barre de recherche pour utiliser les fonctionnalités de filtrage afin de n’afficher que les jeux de données activés pour [!DNL Real-time Customer Profile].
 
-![Affichage des jeux de données](../images/tutorials/segment-export-dataset/browse.png)
+![L’espace de travail des jeux de données s’affiche.](../images/tutorials/segment-export-dataset/browse.png)
 
 ## Création d’un jeu de données
 
 Pour créer un jeu de données, sélectionnez **[!UICONTROL Créer un jeu de données]**.
 
-![Sélectionner Créer un jeu de données](../images/tutorials/segment-export-dataset/create-dataset.png)
+![Le bouton Créer un jeu de données est mis en surbrillance.](../images/tutorials/segment-export-dataset/create-dataset.png)
 
 Dans l’écran suivant, sélectionnez **[!UICONTROL Création d’un jeu de données à partir d’un schéma]**.
 
-![Sélectionner la source de données](../images/tutorials/segment-export-dataset/create-from-schema.png)
+![L’option Créer un jeu de données à partir d’un schéma est mise en surbrillance.](../images/tutorials/segment-export-dataset/create-from-schema.png)
 
 ## Sélection du schéma d’union XDM Individual Profile
 
@@ -62,20 +61,21 @@ Pour sélectionner le [!DNL XDM Individual Profile Union Schema] pour l’utilis
 
 Sélectionnez le bouton radio en regard de **[!UICONTROL XDM Individual Profile]**, puis sélectionnez **[!UICONTROL Suivant]**.
 
-![Sélectionner un schéma](../images/tutorials/segment-export-dataset/select-schema.png)
+![Le schéma XDM Individual Profile est mis en surbrillance.](../images/tutorials/segment-export-dataset/select-schema.png)
 
 ## Configuration d’un jeu de données
 
 Sur l’écran suivant, vous devez donner un nom à votre jeu de données. Vous pouvez également ajouter une description facultative.
 
 **Remarques sur les noms des jeux de données :**
+
 * Les noms des jeux de données doivent être courts et descriptifs afin qu’ils puissent être facilement retrouvés par la suite dans la bibliothèque.
 * Les noms des jeux de données doivent être uniques, ce qui signifie qu’ils doivent également être suffisamment précis pour ne pas être réutilisés à l’avenir.
 * Il est recommandé de fournir des informations supplémentaires sur le jeu de données à l’aide du champ de description, car cela peut aider d’autres utilisateurs à différencier les jeux de données à l’avenir.
 
 Une fois que le jeu de données comporte un nom et une description, sélectionnez **[!UICONTROL Terminer]**.
 
-![Configurer un jeu de données](../images/tutorials/segment-export-dataset/configure-dataset.png)
+![La page Configurer le jeu de données s’affiche. Les options de configuration sont mises en surbrillance.](../images/tutorials/segment-export-dataset/configure-dataset.png)
 
 ## Activité du jeu de données
 
@@ -83,7 +83,7 @@ Une fois le jeu de données créé, la page d’activité de ce jeu de données 
 
 Le rail de droite contient des informations relatives à votre nouveau jeu de données, telles que l’identifiant du jeu de données, le nom, la description, le schéma, etc. Prêtez attention à l’**[!UICONTROL identifiant du jeu de données]** : cette valeur est indispensable pour terminer le workflow d’exportation du segment ciblé.
 
-![Activité du jeu de données](../images/tutorials/segment-export-dataset/activity.png)
+![La page de l’activité du jeu de données s’affiche. L’identifiant du jeu de données est mis en surbrillance, car cette valeur doit être notée pour les étapes suivantes.](../images/tutorials/segment-export-dataset/activity.png)
 
 ## Étapes suivantes
 

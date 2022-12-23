@@ -5,9 +5,9 @@ title: Import et utilisation d'audiences externes
 description: Suivez ce tutoriel pour découvrir comment utiliser des audiences externes avec Adobe Experience Platform.
 topic-legacy: tutorial
 exl-id: 56fc8bd3-3e62-4a09-bb9c-6caf0523f3fe
-source-git-commit: 13fd1e372a63b55c41893f41d1590d9dab9f7903
+source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
 workflow-type: tm+mt
-source-wordcount: '1445'
+source-wordcount: '1621'
 ht-degree: 5%
 
 ---
@@ -44,7 +44,7 @@ La première étape de l’utilisation d’audiences externes consiste à créer
 
 Pour créer un espace de noms d’identité, suivez les instructions de la section [guide d’espace de noms d’identité](../../identity-service/namespaces.md#manage-namespaces). Lors de la création de votre espace de noms d’identité, ajoutez les détails sources à l’espace de noms d’identité et marquez son [!UICONTROL Type] as a **[!UICONTROL Identifiant de non-personne]**.
 
-![](../images/tutorials/external-audiences/identity-namespace-info.png)
+![L’identifiant de non-personne est mis en surbrillance dans le modal Créer un espace de noms d’identité .](../images/tutorials/external-audiences/identity-namespace-info.png)
 
 ## Création d’un schéma pour les métadonnées de segment
 
@@ -52,19 +52,19 @@ Après avoir créé un espace de noms d’identité, vous devez créer un nouvea
 
 Pour commencer à composer un schéma, sélectionnez d’abord **[!UICONTROL Schémas]** sur la barre de navigation de gauche, suivie de la fonction **[!UICONTROL Créer un schéma]** dans le coin supérieur droit de l’espace de travail des schémas. À partir de là, sélectionnez **[!UICONTROL Parcourir]** pour afficher une sélection complète des types de schémas disponibles.
 
-![](../images/tutorials/external-audiences/create-schema-browse.png)
+![Les options Créer un schéma et Parcourir sont mises en surbrillance.](../images/tutorials/external-audiences/create-schema-browse.png)
 
 Puisque vous créez une définition de segment, qui est une classe prédéfinie, sélectionnez **[!UICONTROL Utilisation d’une classe existante]**. Maintenant, sélectionnez le **[!UICONTROL Définition de segment]** , suivie de **[!UICONTROL Attribuer une classe]**.
 
-![](../images/tutorials/external-audiences/assign-class.png)
+![La classe de définition de segment est mise en surbrillance.](../images/tutorials/external-audiences/assign-class.png)
 
 Maintenant que votre schéma a été créé, vous devez spécifier le champ qui contiendra l’identifiant du segment. Ce champ doit être marqué comme identité Principale et affecté aux espaces de noms que vous avez précédemment créés.
 
-![](../images/tutorials/external-audiences/mark-primary-identifier.png)
+![Les cases à cocher permettant de marquer le champ sélectionné comme identité Principale sont mises en surbrillance dans l’éditeur de schémas.](../images/tutorials/external-audiences/mark-primary-identifier.png)
 
 Après avoir marqué la variable `_id` champ comme identité Principale, sélectionnez le titre du schéma, suivi du bouton bascule intitulé **[!UICONTROL Profil]**. Sélectionner **[!UICONTROL Activer]** pour activer le schéma pour [!DNL Real-time Customer Profile].
 
-![](../images/tutorials/external-audiences/schema-profile.png)
+![La bascule permettant d’activer le schéma pour Profile est mise en surbrillance dans l’éditeur de schémas.](../images/tutorials/external-audiences/schema-profile.png)
 
 Désormais, ce schéma est activé pour Profile, avec la Principale identification affectée à l’espace de noms d’identité non-personne que vous avez créé. Par conséquent, cela signifie que les métadonnées de segment importées dans Platform à l’aide de ce schéma seront ingérées dans Profile sans être fusionnées avec d’autres données de profil liées aux personnes.
 
@@ -74,11 +74,11 @@ Après avoir configuré le schéma, vous devez créer un jeu de données pour le
 
 Pour créer un jeu de données, suivez les instructions de la section [guide d’utilisation des jeux de données](../../catalog/datasets/user-guide.md#create). Vous devez suivre le **[!UICONTROL Création d’un jeu de données à partir d’un schéma]** , à l’aide du schéma que vous avez créé précédemment.
 
-![](../images/tutorials/external-audiences/select-schema.png)
+![Le schéma sur lequel vous souhaitez baser votre jeu de données est mis en surbrillance.](../images/tutorials/external-audiences/select-schema.png)
 
 Après avoir créé le jeu de données, continuez à suivre les instructions de la section [guide d’utilisation des jeux de données](../../catalog/datasets/user-guide.md#enable-profile) pour activer ce jeu de données pour Real-time Customer Profile.
 
-![](../images/tutorials/external-audiences/dataset-profile.png)
+![Le bouton d’activation du schéma pour Profile est mis en surbrillance dans la page d’activité du jeu de données .](../images/tutorials/external-audiences/dataset-profile.png)
 
 ## Configuration et importation des données d’audience
 
@@ -94,7 +94,7 @@ Pour créer une connexion en continu, vous pouvez suivre les instructions de la 
 
 Une fois que vous avez créé votre connexion en continu, vous avez accès à votre point de terminaison de diffusion en continu unique auquel vous pouvez envoyer vos données. Pour savoir comment envoyer des données à ces points de terminaison, veuillez lire le [tutoriel sur la diffusion en continu de données d’enregistrement](../../ingestion/tutorials/streaming-record-data.md#ingest-data).
 
-![](../images/tutorials/external-audiences/get-streaming-endpoint.png)
+![Le point de terminaison de la connexion en continu est mis en surbrillance dans la page des détails de la source.](../images/tutorials/external-audiences/get-streaming-endpoint.png)
 
 ## Structure des métadonnées d’audience
 
@@ -151,7 +151,7 @@ Vous trouverez ci-dessous un exemple des métadonnées de la payload d’audienc
 
 Une fois les audiences importées configurées, elles peuvent être utilisées dans le cadre du processus de segmentation. Pour rechercher des audiences externes, accédez au créateur de segments, puis sélectionnez **[!UICONTROL Audiences]** dans le **[!UICONTROL Champs]** .
 
-![](../images/tutorials/external-audiences/external-audiences.png)
+![Le sélecteur d’audiences externes du créateur de segments est mis en surbrillance.](../images/tutorials/external-audiences/external-audiences.png)
 
 ## Étapes suivantes
 
@@ -165,15 +165,15 @@ Outre l’utilisation de métadonnées d’audience externe importées et leur u
 
 Pour commencer à composer un schéma, sélectionnez d’abord **[!UICONTROL Schémas]** sur la barre de navigation de gauche, suivie de la fonction **[!UICONTROL Créer un schéma]** dans le coin supérieur droit de l’espace de travail des schémas. À partir de là, sélectionnez **[!UICONTROL XDM Individual Profile]**.
 
-![](../images/tutorials/external-audiences/create-schema-profile.png)
+![La zone XDM Individual Profile est mise en surbrillance.](../images/tutorials/external-audiences/create-schema-profile.png)
 
 Maintenant que le schéma a été créé, vous devez ajouter le groupe de champs d’appartenance au segment dans le cadre du schéma. Pour ce faire, sélectionnez [!UICONTROL Détails de l’adhésion au segment], suivie de [!UICONTROL Ajouter des groupes de champs].
 
-![](../images/tutorials/external-audiences/segment-membership-details.png)
+![Le groupe de champs Détails de l’appartenance au segment est mis en surbrillance.](../images/tutorials/external-audiences/segment-membership-details.png)
 
 De plus, assurez-vous que le schéma est marqué pour **[!UICONTROL Profil]**. Pour ce faire, vous devez marquer un champ comme identité Principale.
 
-![](../images/tutorials/external-audiences/external-segment-profile.png)
+![La bascule permettant d’activer le schéma pour Profile est mise en surbrillance dans l’éditeur de schémas.](../images/tutorials/external-audiences/external-segment-profile.png)
 
 ### Configuration du jeu de données
 
@@ -181,11 +181,11 @@ Après avoir créé votre schéma, vous devez créer un jeu de données.
 
 Pour créer un jeu de données, suivez les instructions de la section [guide d’utilisation des jeux de données](../../catalog/datasets/user-guide.md#create). Vous devez suivre le **[!UICONTROL Création d’un jeu de données à partir d’un schéma]** , à l’aide du schéma que vous avez créé précédemment.
 
-![](../images/tutorials/external-audiences/select-schema.png)
+![Le schéma que vous utilisez pour créer la base de données est mis en surbrillance.](../images/tutorials/external-audiences/select-schema.png)
 
 Après avoir créé le jeu de données, continuez à suivre les instructions de la section [guide d’utilisation des jeux de données](../../catalog/datasets/user-guide.md#enable-profile) pour activer ce jeu de données pour Real-time Customer Profile.
 
-![](../images/tutorials/external-audiences/dataset-profile.png)
+![Le bouton d’activation du schéma pour Profile est mis en surbrillance dans le workflow de création de jeux de données .](../images/tutorials/external-audiences/dataset-profile.png)
 
 ## Configurer et importer des données d’appartenance à une audience externe
 
@@ -201,7 +201,7 @@ Pour créer une connexion en continu, vous pouvez suivre les instructions de la 
 
 Une fois que vous avez créé votre connexion en continu, vous avez accès à votre point de terminaison de diffusion en continu unique auquel vous pouvez envoyer vos données. Pour savoir comment envoyer des données à ces points de terminaison, veuillez lire le [tutoriel sur la diffusion en continu de données d’enregistrement](../../ingestion/tutorials/streaming-record-data.md#ingest-data).
 
-![](../images/tutorials/external-audiences/get-streaming-endpoint.png)
+![Le point de terminaison de la connexion en continu est mis en surbrillance dans la page des détails de la source.](../images/tutorials/external-audiences/get-streaming-endpoint.png)
 
 ## Structure de l’adhésion au segment
 

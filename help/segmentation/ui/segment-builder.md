@@ -5,14 +5,14 @@ title: Guide de l’interface utilisateur du créateur de segments
 topic-legacy: ui guide
 description: Le créateur de segments de l’interface utilisateur de Adobe Experience Platform fournit un espace de travail riche qui vous permet d’interagir avec les éléments de données Profile. L’espace de travail fournit des commandes intuitives pour la création et la modification de règles, telles que le glisser-déposer de mosaïques utilisées pour représenter les propriétés des données.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 1d70aee1bd225268b8f2a2d1dc24d446bb4ce633
+source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
 workflow-type: tm+mt
-source-wordcount: '3082'
+source-wordcount: '3101'
 ht-degree: 30%
 
 ---
 
-# Guide de l’interface utilisateur du [!DNL Segment Builder]
+# Guide de l’interface utilisateur de [!DNL Segment Builder]
 
 [!DNL Segment Builder] fournit un espace de travail riche qui vous permet d’interagir avec [!DNL Profile] éléments de données. L’espace de travail fournit des commandes intuitives pour la création et la modification de règles, telles que le glisser-déposer de mosaïques utilisées pour représenter les propriétés des données.
 
@@ -55,7 +55,7 @@ Vous pouvez ensuite facilement faire glisser et déposer des [!DNL ExperienceEve
 
 Par défaut, seuls les champs de schéma renseignés de votre banque de données s’affichent. Cela inclut &quot;[!UICONTROL Types d’événement]&quot;. Si la variable[!UICONTROL Types d’événement]&quot; liste n’est pas visible ou vous ne pouvez sélectionner que &quot;[!UICONTROL Quelconque]&quot; en tant que &quot;[!UICONTROL Type d’événement]&quot;, sélectionnez la variable **icône d’engrenage** en regard de **[!UICONTROL Champs]**, puis sélectionnez **[!UICONTROL Afficher le schéma XDM complet]** under **[!UICONTROL Champs disponibles]**. Sélectionnez la **icône d’engrenage** pour revenir à la **[!UICONTROL Champs]** et vous devriez maintenant pouvoir afficher plusieurs[!UICONTROL Types d’événement]&quot; et les champs de schéma, qu’ils contiennent des données ou non.
 
-![](../images/ui/segment-builder/show-populated.png)
+![Les boutons radio qui vous permettent d’afficher uniquement les champs contenant des données ou d’afficher tous les champs XDM sont mis en surbrillance.](../images/ui/segment-builder/show-populated.png)
 
 #### Jeux de données de suites de rapports Adobe Analytics
 
@@ -76,7 +76,7 @@ Supposons, par exemple, que vous ayez deux suites de rapports avec les variables
 | eVar3 | URL | Nom de la page |
 | eVar4 | Termes de recherche | Nom du produit |
 | event1 | Clics | Page Views |
-| event2 | Pages vues | Ajouts au panier |
+| event2 | Page Views | Ajouts au panier |
 | event3 | Ajouts au panier | Passages en caisse |
 | event4 | Achats | Achats |
 
@@ -105,7 +105,7 @@ Vous pouvez passer la souris sur l’option ⓘ située à côté d’une audien
 
 ![Image montrant le fonctionnement de la hiérarchie de dossiers pour les audiences.](../images/ui/segment-builder/audience-folder-structure.png)
 
-Vous pouvez également rechercher des audiences à l’aide de la barre de recherche qui utilise [Syntaxe de recherche de Lucene](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax). Dans l’onglet **[!UICONTROL Audiences]**, si vous sélectionnez un dossier de niveau supérieur, la barre de recherche s’affiche et vous permet de faire une recherche dans ce dossier. Les résultats de la recherche ne commencent à s’afficher que lorsque des mots entiers sont saisis. Par exemple, pour trouver une audience nommée `Online Shoppers`, commencez à saisir &quot;Online&quot; dans la barre de recherche. Une fois que le mot « Online » a été complètement saisi, les résultats de la recherche contenant ce mot apparaissent.
+Vous pouvez également rechercher des audiences à l’aide de la barre de recherche qui utilise [Syntaxe de recherche de Lucene](https://docs.microsoft.com/fr-fr/azure/search/query-lucene-syntax). Dans l’onglet **[!UICONTROL Audiences]**, si vous sélectionnez un dossier de niveau supérieur, la barre de recherche s’affiche et vous permet de faire une recherche dans ce dossier. Les résultats de la recherche ne commencent à s’afficher que lorsque des mots entiers sont saisis. Par exemple, pour trouver une audience nommée `Online Shoppers`, commencez à saisir &quot;Online&quot; dans la barre de recherche. Une fois que le mot « Online » a été complètement saisi, les résultats de la recherche contenant ce mot apparaissent.
 
 ## Canevas du créateur de règles {#rule-builder-canvas}
 

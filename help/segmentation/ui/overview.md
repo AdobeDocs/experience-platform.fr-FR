@@ -5,10 +5,10 @@ title: Guide de l’interface utilisateur de Segmentation Service
 topic-legacy: ui guide
 description: Adobe Experience Platform Segmentation Service fournit une interface utilisateur pour la création et la gestion des définitions de segment.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: d2790ddab74f989ebb5ca522ce44323033c53911
+source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
 workflow-type: tm+mt
-source-wordcount: '2397'
-ht-degree: 17%
+source-wordcount: '2647'
+ht-degree: 19%
 
 ---
 
@@ -35,15 +35,15 @@ Dans l’interface utilisateur de l’Experience Platform, sélectionnez **[!UIC
 
 >[!NOTE]
 >
->Si votre entreprise est une nouvelle entreprise de Platform et qu’elle ne dispose pas encore de jeux de données Profile principaux ni de stratégies de fusion créés, la variable [!UICONTROL Segments] tableau de bord n’est pas visible. Au lieu de cela, la variable [!UICONTROL Présentation] affiche des liens et de la documentation pour vous aider à commencer à utiliser les segments.
+>Si votre organisation débute sur Platform et n’a pas encore de jeux de données de profils actifs ou de stratégies de fusion créés, le tableau de bord [!UICONTROL Segments] n’est pas visible. Au lieu de cela, la variable [!UICONTROL Présentation] affiche des liens et de la documentation pour vous aider à commencer à utiliser les segments.
 
-### [!UICONTROL Tableau de bord de segments] {#segments-dashboard}
+### Tableau de bord des [!UICONTROL segments] {#segments-dashboard}
 
 Le **[!UICONTROL Segments]** le tableau de bord décrit les mesures clés liées aux données de segment de votre entreprise.
 
 Pour en savoir plus, rendez-vous sur la page [guide du tableau de bord des segments](../../dashboards/guides/segments.md).
 
-![](../../dashboards/images/segments/dashboard-overview.png)
+![Le tableau de bord du segment s’affiche. Il affiche divers widgets, notamment la taille de l’audience, les profils par identité, la superposition des identités et la tendance de changement de la taille de l’audience.](../../dashboards/images/segments/dashboard-overview.png)
 
 ## Parcourir {#browse}
 
@@ -60,15 +60,15 @@ Pour en savoir plus, rendez-vous sur la page [guide du tableau de bord des segme
 >[!CONTEXTUALHELP]
 >id="platform_segments_browse_addallsegmentstoschedule"
 >title="Ajouter tous les segments à planifier"
->abstract="Activez cette option pour inclure tous les segments d’évaluation par lots dans la mise à jour planifiée quotidienne à 15h30 UTC. Désactivez la suppression de tous les segments de la mise à jour planifiée."
+>abstract="Activez cette option pour inclure tous les segments d’évaluation par lot dans la mise à jour planifiée quotidienne. Désactivez la suppression de tous les segments de la mise à jour planifiée."
 
 Sélectionnez la **[!UICONTROL Parcourir]** pour afficher une liste de toutes les définitions de segment pour votre organisation.
 
-![](../images/ui/overview/segment-browse-all.png)
+![L’écran de navigation des segments s’affiche. Une liste de tous les segments appartenant à l’organisation s’affiche.](../images/ui/overview/segment-browse-all.png)
 
 Cet affichage répertorie des informations sur la définition de segment, y compris le nombre de profils, la date de création et la date de dernière modification.
 
-Vous pouvez ajouter des champs supplémentaires à cet affichage en sélectionnant IMAGE. Ces champs supplémentaires comprennent la ventilation, la perte de clientèle, la méthode d’évaluation et l’ID de tâche.
+Vous pouvez ajouter des champs supplémentaires à cet affichage en sélectionnant ![l’icône d’attribut de filtre](../images/ui/overview/filter-attribute.png). Ces champs supplémentaires comprennent la ventilation, la perte de clientèle, la méthode d’évaluation et l’ID de tâche.
 
 Si la ventilation est sélectionnée, l’affichage affiche un graphique à barres indiquant le pourcentage de profils appartenant à chacun des états suivants : [!UICONTROL Réalisé], [!UICONTROL Existant], et [!UICONTROL Quitter]. En outre, la ventilation affichée dans la variable [!UICONTROL Parcourir] est la ventilation la plus précise de l’état du segment. Si ce nombre diffère de ce qui est indiqué dans la variable [!UICONTROL Présentation] , vous devez utiliser les nombres de la variable [!UICONTROL Parcourir] comme bonne source d’informations, puisque la variable [!UICONTROL Présentation] les numéros d’onglets ne sont mis à jour qu’une seule fois par jour.
 
@@ -82,7 +82,7 @@ L’attrition représente le pourcentage de profils qui changent dans une défin
 
 La méthode d’évaluation peut être soit par flux, soit par lot, soit par périphérie. Les segments par flux sont constamment évalués au fur et à mesure que les données entrent dans le système. Les segments par lot sont évalués selon un planning établi. Les segments Edge sont évalués en temps réel, ce qui permet d’utiliser les mêmes cas de personnalisation de page et de page suivante.
 
-![](../images/ui/overview/segment-browse-segments.png)
+![Les segments de la page de navigation des segments sont mis en surbrillance.](../images/ui/overview/segment-browse-segments.png)
 
 En haut de la page se trouvent les options permettant d’ajouter tous les segments à un planning et de créer un nouveau segment.
 
@@ -90,11 +90,11 @@ Basculement **[!UICONTROL Ajouter tous les segments à planifier]** active la se
 
 Sélection **[!UICONTROL Créer un segment]** vous emmènera au créateur de segments. Pour en savoir plus sur la création de segments, consultez la section sur [création d’un segment dans le guide d’utilisation](#create-segment).
 
-![](../images/ui/overview/segment-browse-top.png)
+![La barre de navigation supérieure de la page de navigation du segment est mise en surbrillance. Cette barre contient un bouton permettant d’ajouter tous les segments à un planning et un bouton permettant de créer un segment.](../images/ui/overview/segment-browse-top.png)
 
 La barre latérale droite contient des informations sur tous les segments de l’organisation, répertoriant le nombre total de segments, la date de dernière évaluation, la date d’évaluation suivante, ainsi qu’une ventilation des segments par méthode d’évaluation.
 
-![](../images/ui/overview/segment-browse-segment-info.png)
+![La barre latérale droite de la page de navigation du segment est mise en surbrillance. Des informations sur les segments de l’organisation s’affichent. Cela inclut des informations telles que le nombre total de segments, l’heure de la dernière évaluation, l’heure de la prochaine évaluation, ainsi qu’une ventilation des différents types de segments.](../images/ui/overview/segment-browse-segment-info.png)
 
 La sélection de la ligne de la définition de segment fournit un résumé de la définition de segment, y compris des options permettant de modifier ou de supprimer le segment, d’activer le segment vers une destination, l’audience qualifiée pour le segment, la taille totale de l’audience, en plus du nom du segment, de la description, de la méthode d’évaluation, de la date de création et de la date de dernière modification.
 
@@ -102,7 +102,7 @@ La sélection de la ligne de la définition de segment fournit un résumé de la
 >
 > Vous aurez **not** peut supprimer un segment utilisé dans une activation de destination.
 
-![](../images/ui/overview/segment-browse-details.png)
+![Des détails sur le segment sélectionné s’affichent. Cela inclut des détails sur le nombre de profils qualifiés, la répartition en pourcentage des profils qualifiés par rapport au total des profils, la date de la dernière évaluation.](../images/ui/overview/segment-browse-details.png)
 
 ## Détails de la définition de segment {#segment-details}
 
@@ -110,7 +110,7 @@ Pour afficher plus d’informations sur une définition de segment spécifique, 
 
 La page des détails du segment s’affiche. En haut se trouve un résumé de la définition de segment, des informations sur la taille d’audience qualifiée, ainsi que les destinations pour lesquelles le segment est activé.
 
-![](../images/ui/overview/segment-details-summary.png)
+![La page de détails de la définition de segment s’affiche. Le résumé du segment, l’audience totale dans le segment et les cartes de destinations activées sont mis en surbrillance.](../images/ui/overview/segment-details-summary.png)
 
 ### Synthèse des segments {#segment-summary}
 
@@ -118,7 +118,7 @@ Le **[!UICONTROL Synthèse des segments]** fournit des informations telles que l
 
 De plus, vous avez la possibilité d’activer le segment vers une destination ou de le modifier. Sélection **[!UICONTROL Activer la destination]** vous permet d’activer le segment vers une destination. Pour plus d’informations sur l’activation d’un segment vers une destination, veuillez lire le [présentation de l’activation](../../destinations/ui/activation-overview.md).
 
-![](../images/ui/overview/segment-details-activate.png)
+![Le bouton Activer à la destination est mis en surbrillance.](../images/ui/overview/segment-details-activate.png)
 
 Sélection **[!UICONTROL Modifier le segment]** vous emmènera au [!DNL Segment Builder]. Pour plus d’informations sur l’utilisation de la variable [!DNL Segment Builder] espace de travail, veuillez lire [[!DNL Segment Builder] guide de l’utilisateur](./segment-builder.md).
 
@@ -158,13 +158,13 @@ La taille de l’échantillon de l’analyse dépend du nombre total d’entité
 
 Informations plus détaillées sur chaque [!DNL Profile] peut être consulté en sélectionnant la variable [!DNL Profile] ID. Pour en savoir plus sur les détails d’un profil, veuillez lire le [[!DNL Real-time Customer Profile] guide de l’utilisateur](../../profile/ui/user-guide.md#profile-detail).
 
-![](../images/ui/overview/segment-details-profiles.png)
+![Les exemples de profils pour la définition de segment sont mis en surbrillance. Les exemples d’informations de profil incluent l’identifiant du profil, le prénom, le nom et l’adresse électronique de la personne.](../images/ui/overview/segment-details-profiles.png)
 
 ## Créer un segment {#create-segment}
 
 Sélection **[!UICONTROL Créer un segment]** dans le coin supérieur droit s’ouvre sur la [!DNL Segment Builder] espace de travail dans lequel vous pouvez commencer à créer une définition de segment.
 
-![](../images/ui/overview/segment-browse-create.png)
+![Sur la page de navigation Segment , le bouton Créer un segment est mis en surbrillance.](../images/ui/overview/segment-browse-create.png)
 
 ### [!DNL Segment Builder] un espace de travail
 
@@ -172,7 +172,7 @@ Sélection **[!UICONTROL Créer un segment]** dans le coin supérieur droit s’
 
 Pour plus d’informations sur l’utilisation de la variable [!DNL Segment Builder] espace de travail, veuillez lire [[!DNL Segment Builder] guide de l’utilisateur](./segment-builder.md).
 
-![](../images/ui/overview/segment-builder.png)
+![L’espace de travail du créateur de segments s’affiche.](../images/ui/overview/segment-builder.png)
 
 ## Segmentation planifiée {#scheduled-segmentation}
 
@@ -186,11 +186,11 @@ Vous pouvez activer les définitions de segment pour une évaluation planifiée 
 
 >[!NOTE]
 >
->L’évaluation planifiée peut être activée pour les environnements de test avec un maximum de cinq (5) stratégies de fusion pour [!DNL XDM Individual Profile]. Si votre organisation dispose de plus de cinq stratégies de fusion pour [!DNL XDM Individual Profile] dans un seul environnement de test, vous ne pourrez pas utiliser l’évaluation planifiée.
+>L’évaluation planifiée peut être activée pour les sandbox avec un maximum de cinq (5) stratégies de fusion pour [!DNL XDM Individual Profile]. Si votre organisation compte plus de cinq stratégies de fusion pour [!DNL XDM Individual Profile] dans une seul sandbox, vous ne pourrez pas procéder à l’évaluation planifiée.
 
 Actuellement, les plannings ne peuvent être créés qu’à l’aide de l’API. Pour obtenir des instructions détaillées sur la création, la modification et l’utilisation des plannings à l’aide de l’API, suivez le tutoriel relatif à l’évaluation et à l’accès aux résultats de segmentation, en particulier la section sur [l’évaluation planifiée à l’aide de l’API](../tutorials/evaluate-a-segment.md#scheduled-evaluation).
 
-![](../images/ui/overview/segment-browse-scheduled.png)
+![La bascule Ajouter tous les segments à une planification est mise en surbrillance sur la page Parcourir des segments .](../images/ui/overview/segment-browse-scheduled.png)
 
 ## Audiences {#audiences}
 
@@ -266,7 +266,7 @@ Le **[!UICONTROL Détails du jeu de données]** fournit des informations telles 
 
 Pour en savoir plus sur les jeux de données, veuillez lire le [présentation du jeu de données](../../catalog/datasets/overview.md).
 
-## Segmentation par flux {#streaming-segmentation}
+## Segmentation en flux continu {#streaming-segmentation}
 
 La segmentation par flux est la possibilité d’effectuer une segmentation sur [!DNL Platform] en temps quasi réel, tout en se concentrant sur la richesse des données. Avec la segmentation par flux, la qualification de segment se produit maintenant lorsque les données entrent dans [!DNL Platform], ce qui évite d’avoir à planifier et à exécuter des tâches de segmentation.
 
@@ -274,11 +274,11 @@ Vous trouverez plus d’informations sur la segmentation par flux dans la sectio
 
 >[!NOTE]
 >
->Pour que la segmentation par flux fonctionne, vous devez activer la segmentation planifiée pour l’organisation. Pour plus d’informations sur l’activation de la segmentation planifiée, reportez-vous à la section [la section segmentation par flux de ce guide d’utilisation ;](#scheduled-segmentation).
+>Pour que la segmentationen flux continu fonctionne, vous devez activer la segmentation planifiée pour l’organisation. Pour plus d’informations sur l’activation de la segmentation planifiée, reportez-vous à la section [la section segmentation par flux de ce guide d’utilisation ;](#scheduled-segmentation).
 
 ## Segmentation Edge {#edge-segmentation}
 
-La segmentation Edge permet d’évaluer instantanément les segments dans Platform, ce qui permet d’utiliser des cas de personnalisation de page et de page suivante.
+La segmentation Edge permet d’évaluer les segments dans Adobe Experience Platform instantanément sur le serveur Edge, en activant les cas d’utilisation de la personnalisation sur une même page et sur la page suivante.
 
 Vous trouverez plus d’informations sur la segmentation Edge dans la section [Guide de l’interface utilisateur de segmentation Edge](./edge-segmentation.md)
 
@@ -290,7 +290,7 @@ Vous trouverez plus d’informations sur la segmentation Edge dans la section [G
 
 Une fois le segment créé, il est analysé par la gouvernance des données de Adobe Experience Platform afin de s’assurer qu’il n’y a aucune violation de stratégie dans le segment. Voir [Présentation de la gouvernance des données](../../data-governance/home.md) pour plus d’informations.
 
-![](../images/ui/overview/segment-dule-policy-violations.png)
+![Les violations de stratégie pour le segment s’affichent.](../images/ui/overview/segment-dule-policy-violations.png)
 
 ## Étapes suivantes et ressources supplémentaires {#next-steps}
 
