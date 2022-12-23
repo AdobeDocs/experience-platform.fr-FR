@@ -1,118 +1,118 @@
 ---
-keywords: Experience Platform;accueil;rubriques les plus consultées;guide d’utilisation des environnements de test;guide sandbox
+keywords: Experience Platform;accueil;rubriques les plus consultées;guide d’utilisation des sandbox;guide des sandbox
 solution: Experience Platform
-title: Guide de l’interface utilisateur des environnements de test
+title: Guide de l’interface utilisateur des sandbox
 topic-legacy: user guide
-description: Ce document fournit la procédure à suivre pour réaliser différentes opérations associées aux environnements de test dans l’interface utilisateur d’Adobe Experience Platform.
+description: Ce document fournit la procédure à suivre pour réaliser différentes opérations associées aux sandbox dans l’interface utilisateur d’Adobe Experience Platform.
 exl-id: b258c822-5182-4217-9d1b-8196d889740f
 source-git-commit: df0f543b18f008b656c5e411305c5243efa744ad
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '816'
-ht-degree: 15%
+ht-degree: 100%
 
 ---
 
-# Guide de l’interface utilisateur des environnements de test
+# Guide de l’interface utilisateur des sandbox
 
-Ce document fournit la procédure à suivre pour réaliser différentes opérations associées aux environnements de test dans l’interface utilisateur d’Adobe Experience Platform.
+Ce document fournit la procédure à suivre pour réaliser différentes opérations associées aux sandbox dans l’interface utilisateur d’Adobe Experience Platform.
 
-## Affichage des environnements de test
+## Affichage des sandbox
 
-Dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Environnements de test]** dans le volet de navigation de gauche, puis sélectionnez **[!UICONTROL Parcourir]** pour ouvrir le [!UICONTROL Environnements de test] tableau de bord. Le tableau de bord répertorie tous les environnements de test disponibles pour votre organisation, y compris leurs types respectifs (production ou développement).
+Dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Sandbox]** dans le volet de navigation de gauche, puis sélectionnez **[!UICONTROL Parcourir]** pour ouvrir le tableau de bord [!UICONTROL Sandbox]. Le tableau de bord répertorie toutes les sandbox disponibles pour votre organisation, y compris leurs types respectifs (production ou développement).
 
-![view-sandbox](../images/ui/view-sandboxes.png)
+![afficher-sandbox](../images/ui/view-sandboxes.png)
 
-## Basculer entre des environnements de test
+## Basculer entre des sandbox
 
-L’indicateur sandbox se trouve dans l’en-tête supérieur de l’interface utilisateur de Platform et affiche le titre de l’environnement de test dans lequel vous vous trouvez actuellement, sa région et son type.
+L’indicateur sandbox se trouve dans l’en-tête supérieur de l’interface utilisateur de Platform et affiche le titre de la sandbox dans laquelle vous vous trouvez actuellement, sa région et son type.
 
-![indicateur sandbox](../images/ui/sandbox-indicator.png)
+![indicateur-sandbox](../images/ui/sandbox-indicator.png)
 
-Pour passer d’un environnement de test à un autre, sélectionnez l’indicateur sandbox et sélectionnez l’environnement de test de votre choix dans la liste déroulante.
+Pour passer d’une sandbox à l’autre, cliquez sur l’indicateur sandbox et sélectionnez la sandbox souhaitée depuis la liste déroulante.
 
 ![sélecteur-interface](../images/ui/switcher-interface.png)
 
-Une fois qu’un environnement de test est sélectionné, l’écran actualise l’environnement de test que vous avez sélectionné et le met à jour.
+Une fois qu’une sandbox est sélectionnée, l’écran actualise la sandbox que vous avez sélectionnée et la met à jour.
 
-![sandbox-switch](../images/ui/sandbox-switched.png)
+![basculement-sandbox](../images/ui/sandbox-switched.png)
 
-## Création d’un nouvel environnement de test {#create}
+## Créer une sandbox {#create}
 
 >[!CONTEXTUALHELP]
 >id="platform_sandboxes_sandboxname"
->title="Nom du sandbox"
->abstract="Le nom de l’environnement de test est le texte utilisé sur le serveur principal pour créer un identifiant unique pour cet environnement de test."
+>title="Nom de la sandbox"
+>abstract="Le nom de la sandbox est le texte utilisé sur le serveur principal pour créer un identifiant unique pour cette sandbox."
 
 >[!CONTEXTUALHELP]
 >id="platform_sandboxes_sandboxtitle"
->title="Titre du sandbox"
->abstract="Le titre de l’environnement de test est le nom d’affichage qui représente l’environnement de test dans les menus et les listes déroulantes de l’interface utilisateur de l’Experience Platform."
+>title="Titre de la sandbox"
+>abstract="Le titre de la sandbox est le nom d’affichage qui représente la sandbox dans les menus et les listes déroulantes de l’interface utilisateur d’Experience Platform."
 
 >[!NOTE]
 >
->Lorsqu’un nouvel environnement de test est créé, vous devez d’abord l’ajouter à votre profil de produit dans [Adobe Admin Console](https://adminconsole.adobe.com/) avant de commencer à utiliser le nouvel environnement de test. Consultez la documentation relative à [gestion des autorisations pour un profil de produit](../../access-control/ui/permissions.md) pour plus d’informations sur la configuration d’un environnement de test à un profil de produit.
+>Lorsqu’une nouvelle sandbox est créée, vous devez d’abord l’ajouter à votre profil de produit dans [Adobe Admin Console](https://adminconsole.adobe.com/) avant de commencer à utiliser la nouvelle sandbox. Consultez la documentation relative à la [gestion des autorisations pour un profil de produit](../../access-control/ui/permissions.md) pour plus d’informations sur la configuration d’une sandbox en fonction d’un profil de produit.
 
-La vidéo suivante présente un aperçu rapide de l’utilisation des environnements de test dans Experience Platform.
+La vidéo suivante présente un aperçu rapide de l’utilisation des sanbdox dans Experience Platform.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29838/?quality=12&learn=on)
 
-Pour créer un environnement de test, sélectionnez **[!UICONTROL Création d’un environnement de test]** dans le coin supérieur droit de l’écran.
+Pour créer une nouvelle sandbox, sélectionnez **[!UICONTROL Créer une sandbox]** dans le coin supérieur droit de l’écran.
 
-![create-sandbox](../images/ui/create-sandbox.png)
+![créer-sandbox](../images/ui/create-sandbox.png)
 
-Le **[!UICONTROL Création d’un environnement de test]** s’affiche. Si vous créez un environnement de test de développement, sélectionnez **[!UICONTROL Développement]** dans le panneau déroulant. Pour créer un environnement de test de production, sélectionnez **[!UICONTROL Production]**.
+La boîte de dialogue **[!UICONTROL Créer une sandbox]** s’affiche. Si vous créez une sandbox de développement, sélectionnez **[!UICONTROL Développement]** dans le panneau déroulant. Pour créer une nouvelle sandbox de production, sélectionnez **[!UICONTROL Production]**.
 
-![sandbox-type](../images/ui/sandbox-type.png)
+![type-sandbox](../images/ui/sandbox-type.png)
 
-Après avoir sélectionné le type , indiquez un nom et un titre à votre environnement de test. Le titre est censé être lisible par l’utilisateur et doit être suffisamment descriptif pour permettre son identification rapide. Le nom de l’environnement de test est un identifiant entièrement en minuscules à utiliser dans les appels API. Il doit donc être unique et concis. Le nom de l’environnement de test doit commencer par une lettre, comporter au maximum 256 caractères et se composer uniquement de caractères alphanumériques et de tirets (-).
+Après avoir sélectionné le type, indiquez un nom et un titre à votre sandbox. Le titre est prévu pour être lu par un utilisateur ou une utilisatrice et doit être suffisamment descriptif pour permettre son identification rapide. Le nom de la sandbox est un identifiant entièrement en minuscules à utiliser dans les appels API qui se doit donc d’être unique et concis. Le nom de la sandbox doit commencer par une lettre, comporter au maximum 256 caractères et se composer uniquement de caractères alphanumériques et de tirets (-).
 
 Lorsque vous avez terminé, cliquez sur **[!UICONTROL Créer]**.
 
 ![sandbox-info](../images/ui/sandbox-info.png)
 
-Une fois la création de l’environnement de test terminée, actualisez la page pour que le nouvel environnement de test apparaisse dans la variable **[!UICONTROL Environnements de test]** tableau de bord avec le statut &quot;[!UICONTROL Création]&quot;. Les nouveaux environnements de test prennent environ 30 secondes pour être configurés par le système, après quoi leur état passe à &quot;[!UICONTROL Principal]&quot;.
+Lorsque vous avez terminé de créer la sandbox, actualisez la page pour que la nouvelle sandbox apparaisse dans le tableau de bord **[!UICONTROL Sandbox]** avec le statut « [!UICONTROL En cours de création] ». Il faut environ 30 secondes pour que le système approvisionne les nouvelles sandbox, auquel cas leur statut passera à « [!UICONTROL Actif] ».
 
-![new-sandbox](../images/ui/new-sandbox.png)
+![nouvelle-sandbox](../images/ui/new-sandbox.png)
 
-## Réinitialisation d’un environnement de test
+## Réinitialiser une sandbox
 
 >[!WARNING]
 >
->Voici une liste d’exceptions qui peut vous empêcher de réinitialiser l’environnement de test de production par défaut ou un environnement de test de production créé par l’utilisateur : <ul><li>L’environnement de test de production par défaut ne peut pas être réinitialisé si le graphique d’identités hébergé dans l’environnement de test est également utilisé par Adobe Analytics pour la variable [Analyses entre appareils (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html?lang=fr) fonction .</li><li>L’environnement de test de production par défaut ne peut pas être réinitialisé si le graphique d’identités hébergé dans l’environnement de test est également utilisé par Adobe Audience Manager pour la variable [Destinations basées sur les personnes (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html?lang=fr).</li><li>L’environnement de test de production par défaut ne peut pas être réinitialisé s’il contient des données pour les fonctionnalités des analyses entre appareils et des analyses entre appareils (PBD).</li><li>Un environnement de test de production créé par l’utilisateur et utilisé pour le partage bidirectionnel de segments avec Adobe Audience Manager ou Audience Core Service peut être réinitialisé après un message d’avertissement.</li></ul>
+>Voici une liste d’exceptions qui peuvent vous empêcher de réinitialiser la sandbox de production par défaut ou une sandbox de production créée par l’utilisateur ou l’utilisatrice : <ul><li>La sandbox de production par défaut ne peut pas être réinitialisée si le graphique d’identités hébergé dans la sandbox est également utilisé par Adobe Analytics pour la fonctionnalité [Analyses sur l’ensemble des appareils (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html?lang=fr).</li><li>La sandbox de production par défaut ne peut pas être réinitialisée si le graphique d’identités hébergé dans la sandbox est également utilisé par Adobe Audience Manager pour les [Destinations basées sur les personnes (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html?lang=fr).</li><li>La sandbox de production par défaut ne peut pas être réinitialisée si elle contient des données pour les fonctionnalités CDA et PBD en même temps.</li><li>Une sandbox de production créée par l’utilisateur ou l’utilisatrice et utilisée pour le partage bidirectionnel de segments avec Adobe Audience Manager ou Audience Core Service peut être réinitialisée après un message d’avertissement.</li></ul>
 
-La réinitialisation d’un environnement de test de production ou de développement supprime toutes les ressources associées à cet environnement de test (schémas, jeux de données, etc.), tout en conservant le nom de l’environnement de test et les autorisations associées. Cet environnement de test « propre » reste disponible avec le même nom auprès des utilisateurs qui y ont accès.
+La réinitialisation d’une sandbox de production ou de développement supprime toutes les ressources associées à cette sandbox (schémas, jeux de données, etc.) tout en conservant le nom et les autorisations associées de la sandbox. Cette sandbox « propre » reste disponible avec le même nom auprès des utilisateurs qui y ont accès.
 
-Sélectionnez l’environnement de test à réinitialiser dans la liste des environnements de test. Dans le panneau de navigation de droite qui s’affiche, sélectionnez **[!UICONTROL Réinitialisation des environnements de test]**.
+Sélectionnez la sandbox à réinitialiser dans la liste des sandbox. Dans le panneau de navigation de droite qui s’affiche, sélectionnez **[!UICONTROL Réinitialisation de la sandbox]**.
 
 ![reset](../images/ui/reset.png)
 
-Une boîte de dialogue s’affiche, vous invitant à confirmer votre choix. Sélectionner **[!UICONTROL Continuer]** pour continuer.
+Une boîte de dialogue s’affiche vous invitant à confirmer votre choix. Sélectionnez **[!UICONTROL Continuer]** pour continuer.
 
-![reset-warning](../images/ui/reset-warning.png)
+![avertissement-réinitialisation](../images/ui/reset-warning.png)
 
-Dans la fenêtre de confirmation finale, saisissez le nom de l’environnement de test dans la boîte de dialogue et sélectionnez **[!UICONTROL Réinitialiser]**.
+Dans la fenêtre de confirmation finale, saisissez le nom de la sandbox dans la boîte de dialogue et sélectionnez **[!UICONTROL Réinitialiser]**.
 
-![reset-confirm](../images/ui/reset-confirm.png)
+![confirmation-réinitialisation](../images/ui/reset-confirm.png)
 
-## Suppression d’un environnement de test
+## Supprimer une sandbox
 
 >[!WARNING]
 >
->Vous ne pouvez pas supprimer l’environnement de test de production par défaut. Cependant, tout environnement de test de production créé par l’utilisateur utilisé pour le partage bidirectionnel de segments avec [!DNL Audience Manager] ou [!DNL Audience Core Service] peut être supprimé après un message d’avertissement.
+>Vous ne pouvez pas supprimer la sandbox de production par défaut. Cependant, toute sandbox de production créée par l’utilisateur ou l’utilisatrice utilisée pour le partage bidirectionnel de segments avec [!DNL Audience Manager] ou [!DNL Audience Core Service] peut être supprimée après un message d’avertissement.
 
-La suppression d’un environnement de test de production ou de développement supprime définitivement toutes les ressources associées à cet environnement de test, y compris les autorisations.
+La suppression d’une sandbox de production ou de développement supprime définitivement toutes les ressources associées à cette sandbox, y compris les autorisations.
 
-Sélectionnez l’environnement de test à supprimer dans la liste des environnements de test. Dans le panneau de navigation de droite qui s’affiche, sélectionnez **[!UICONTROL Supprimer]**.
+Sélectionnez la sandbox à supprimer dans la liste des sandbox. Dans le panneau de navigation de droite qui s’affiche, sélectionnez **[!UICONTROL Supprimer]**.
 
 ![delete](../images/ui/delete.png)
 
-Une boîte de dialogue s’affiche, vous invitant à confirmer votre choix. Sélectionner **[!UICONTROL Continuer]** pour continuer.
+Une boîte de dialogue s’affiche vous invitant à confirmer votre choix. Sélectionnez **[!UICONTROL Continuer]** pour continuer.
 
-![delete-warning](../images/ui/delete-warning.png)
+![avertissement-suppression](../images/ui/delete-warning.png)
 
-Dans la fenêtre de confirmation finale, saisissez le nom de l’environnement de test dans la boîte de dialogue et sélectionnez  **[!UICONTROL Continuer]**.
+Dans la fenêtre de confirmation finale, saisissez le nom de la sandbox dans la boîte de dialogue et sélectionnez **[!UICONTROL Continuer]**.
 
-![delete-confirm](../images/ui/delete-confirm.png)
+![confirmation-suppression](../images/ui/delete-confirm.png)
 
 ## Étapes suivantes
 
