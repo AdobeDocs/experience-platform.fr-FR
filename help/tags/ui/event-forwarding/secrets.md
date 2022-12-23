@@ -1,11 +1,11 @@
 ---
 title: Configuration de secrets dans le transfert d’événements
-description: Découvrez comment configurer des secrets dans l’interface utilisateur pour s’authentifier aux points de terminaison utilisés dans les propriétés de transfert d’événement.
+description: Découvrez comment configurer des secrets dans lʼinterface utilisateur afin de vous authentifier aux points dʼentrée utilisés dans les propriétés de transfert dʼévénement.
 exl-id: eefd87d7-457f-422a-b159-5b428da54189
 source-git-commit: c314cba6b822e12aa0367e1377ceb4f6c9d07ac2
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1766'
-ht-degree: 74%
+ht-degree: 100%
 
 ---
 
@@ -19,12 +19,12 @@ Il existe actuellement trois types de secret pris en charge :
 | --- | --- |
 | [!UICONTROL Jeton] | Chaîne unique de caractères représentant une valeur de jeton dʼauthentification connue et comprise par les deux systèmes. |
 | [!UICONTROL HTTP] | Contient deux attributs de chaîne pour un nom dʼutilisateur et un mot de passe, respectivement. |
-| [!UICONTROL OAuth2] | Contient plusieurs attributs pour la prise en charge de [type d’octroi des informations d’identification client](https://datatracker.ietf.org/doc/html/rfc6749#section-1.3.4) pour le [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) spécification d’authentification. Le système vous demande les informations requises, puis gère le renouvellement de ces jetons pour vous à un intervalle spécifié. |
-| [!UICONTROL Google OAuth 2] | Contient plusieurs attributs pour la prise en charge de [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) spécification d’authentification à utiliser dans [API Google Ads](https://developers.google.com/google-ads/api/docs/oauth/overview) et [Pub/Sub API](https://cloud.google.com/pubsub/docs/reference/service_apis_overview). Le système vous demande les informations requises, puis gère le renouvellement de ces jetons pour vous à un intervalle spécifié. |
+| [!UICONTROL OAuth 2] | Contient plusieurs attributs pour prendre en charge le [type d’octroi des informations d’identification du client](https://datatracker.ietf.org/doc/html/rfc6749#section-1.3.4) pour la spécification d’authentification [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749). Le système vous demande les informations requises, puis gère le renouvellement de ces jetons pour vous à un intervalle spécifié. |
+| [!UICONTROL Google OAuth 2] | Contient plusieurs attributs pour prendre en charge la spécification d’authentification [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) pour une utilisation dans l’[API Google Ads](https://developers.google.com/google-ads/api/docs/oauth/overview) et l’[API Pub/Sub](https://cloud.google.com/pubsub/docs/reference/service_apis_overview). Le système vous demande les informations requises, puis gère le renouvellement de ces jetons pour vous à un intervalle spécifié. |
 
 {style=&quot;table-layout:auto&quot;}
 
-Ce guide fournit un aperçu général de la configuration des secrets pour un transfert d’événement ([!UICONTROL Edge]) dans l’interface utilisateur de l’Experience Platform ou l’interface utilisateur de collecte de données.
+Ce guide fournit une présentation générale de la configuration des secrets pour une propriété de transfert dʼévénement ([!UICONTROL Edge]) dans lʼinterface utilisateur d’Experience Platform ou l’interface utilisateur de la collecte de données.
 
 >[!NOTE]
 >
@@ -32,7 +32,7 @@ Ce guide fournit un aperçu général de la configuration des secrets pour un tr
 
 ## Conditions préalables
 
-Ce guide suppose que vous savez déjà comment gérer les ressources pour le transfert de balises et d’événements dans l’interface utilisateur, y compris comment créer un élément de données et une règle de transfert d’événement. Si vous avez besoin dʼune présentation, consultez le guide sur la [gestion des ressources](../managing-resources/overview.md).
+Avant dʼutiliser ce guide, assurez-vous au préalable de savoir comment gérer les ressources pour les balises et le transfert dʼévénement dans lʼinterface utilisateur, y compris comment créer un élément de données et une règle de transfert dʼévénement. Si vous avez besoin dʼune présentation, consultez le guide sur la [gestion des ressources](../managing-resources/overview.md).
 
 Vous devez également posséder une compréhension pratique du flux de publication pour les balises et le transfert dʼévénement, y compris la manière dʼajouter des ressources à une bibliothèque et dʼinstaller une version de celle-ci sur votre site web à des fins de test. Pour plus dʼinformations, voir [présentation de la publication](../publishing/overview.md).
 
@@ -44,7 +44,7 @@ Vous devez également posséder une compréhension pratique du flux de publicati
 >abstract="Pour être utilisé par le transfert dʼévénement, un secret doit dʼabord être affecté à un environnement existant. Si aucun environnement n’est créé pour votre propriété de transfert d’événement, vous devez le configurer avant de continuer."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html?lang=fr" text="Présentation des environnements"
 
-Pour créer un secret, sélectionnez **[!UICONTROL Transfert d’événement]** dans le volet de navigation de gauche, ouvrez la propriété de transfert d’événement sous laquelle vous souhaitez ajouter le secret. Ensuite, sélectionnez **[!UICONTROL Secrets]** dans le volet de navigation de gauche, puis **[!UICONTROL Créer un secret]**.
+Pour créer un secret, sélectionnez **[!UICONTROL Transfert d’événement]** dans la navigation de gauche, puis ouvrez la propriété de transfert d’événement sous laquelle vous souhaitez ajouter le secret. Ensuite, sélectionnez **[!UICONTROL Secrets]** dans le volet de navigation de gauche, puis **[!UICONTROL Créer un secret]**.
 
 ![Création dʼun secret](../../images/ui/event-forwarding/secrets/create-new-secret.png)
 
@@ -72,7 +72,7 @@ Pour chaque environnement ajouté, vous devez attribuer un nouveau nom unique po
 
 * [[!UICONTROL Jeton]](#token)
 * [[!UICONTROL HTTP]](#http)
-* [[!UICONTROL OAuth2]](#oauth2)
+* [[!UICONTROL OAuth 2]](#oauth2)
 * [[!UICONTROL Google OAuth 2]](#google-oauth2)
 
 ### [!UICONTROL Jeton] {#token}
@@ -91,11 +91,11 @@ Pour créer un secret HTTP, sélectionnez **[!UICONTROL HTTP simple]** dans la l
 
 ![Secret HTTP](../../images/ui/event-forwarding/secrets/http-secret.png)
 
-### [!UICONTROL OAuth2] {#oauth2}
+### [!UICONTROL OAuth 2] {#oauth2}
 
-Pour créer un secret OAuth2, sélectionnez **[!UICONTROL OAuth2]** dans la liste déroulante **[!UICONTROL Type]**. Dans les champs qui s’affichent ci-dessous, fournissez vos [[!UICONTROL ID client] et [!UICONTROL Secret du client]](https://www.oauth.com/oauth2-servers/client-registration/client-id-secret/), ainsi que vos [[!UICONTROL URL du jeton]](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) pour votre intégration OAuth. Le [!UICONTROL URL du jeton] dans l’interface utilisateur est une concaténation entre l’hôte du serveur d’autorisations et le chemin d’accès au jeton.
+Pour créer un secret OAuth 2, sélectionnez **[!UICONTROL OAuth 2]** dans la liste déroulante **[!UICONTROL Type]**. Dans les champs qui s’affichent en-dessous, fournissez votre [[!UICONTROL Identifiant client] et votre [!UICONTROL Secret client]](https://www.oauth.com/oauth2-servers/client-registration/client-id-secret/), ainsi que votre [[!UICONTROL URL du jeton]](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) pour votre intégration OAuth. Le champ [!UICONTROL URL du jeton] dans l’interface utilisateur est une concaténation entre l’hôte du serveur d’autorisation et le chemin du jeton.
 
-![Secret OAuth2](../../images/ui/event-forwarding/secrets/oauth-secret-1.png)
+![Secret OAuth 2](../../images/ui/event-forwarding/secrets/oauth-secret-1.png)
 
 Sous **[!UICONTROL Options d’identification]**, vous pouvez fournir d’autres options d’identification telles que `scope` et `audience` sous la forme de paires clé-valeur. Pour ajouter des paires clé-valeur supplémentaires, sélectionnez **[!UICONTROL Ajouter une autre]**.
 
@@ -115,30 +115,30 @@ Par exemple, si le décalage d’actualisation est défini sur la valeur par dé
 
 Lorsque vous avez terminé, sélectionnez **[!UICONTROL Créer un secret]** pour enregistrer le secret.
 
-![Enregistrer le décalage OAuth2](../../images/ui/event-forwarding/secrets/oauth-secret-4.png)
+![Enregistrer le décalage OAuth 2](../../images/ui/event-forwarding/secrets/oauth-secret-4.png)
 
 ### [!UICONTROL Google OAuth 2] {#google-oauth2}
 
-Pour créer un secret Google OAuth 2, sélectionnez **[!UICONTROL Google OAuth 2]** de la **[!UICONTROL Type]** menu déroulant. Sous **[!UICONTROL Portées]**, sélectionnez les API Google auxquelles vous souhaitez accorder l’accès à l’aide de ce secret. Les produits suivants sont actuellement pris en charge :
+Pour créer un secret Google OAuth 2, sélectionnez **[!UICONTROL Google OAuth 2]** dans la liste déroulante **[!UICONTROL Type]**. Sous **[!UICONTROL Portées]**, sélectionnez les API Google auxquelles vous souhaitez accorder l’accès à l’aide de ce secret. Les produits suivants sont actuellement pris en charge :
 
 * [API Google Ads](https://developers.google.com/google-ads/api/docs/oauth/overview)
-* [Pub/Sub API](https://cloud.google.com/pubsub/docs/reference/service_apis_overview)
+* [API Pub/Sub](https://cloud.google.com/pubsub/docs/reference/service_apis_overview)
 
 Lorsque vous avez terminé, sélectionnez **[!UICONTROL Créer un secret]**.
 
 ![Secret Google OAuth 2](../../images/ui/event-forwarding/secrets/google-oauth.png)
 
-Une fenêtre contextuelle s’affiche pour vous informer que le secret doit être autorisé manuellement via Google. Sélectionner **[!UICONTROL Créer et autoriser]** pour continuer.
+Une fenêtre contextuelle s’affiche pour vous informer que le secret doit être autorisé manuellement via Google. Sélectionnez **[!UICONTROL Créer et autoriser]** pour continuer.
 
 ![Fenêtre contextuelle d’autorisation Google](../../images/ui/event-forwarding/secrets/google-authorization.png)
 
-Une boîte de dialogue s’affiche, vous permettant de saisir les informations d’identification de votre compte Google. Suivez les invites pour accorder l’accès au transfert d’événement à vos données sous la portée sélectionnée. Une fois le processus d’autorisation terminé, le secret est créé.
+Une boîte de dialogue s’affiche et vous permet de saisir les informations d’identification de votre compte Google. Suivez les invites pour accorder l’accès au transfert d’événement à vos données sous la portée sélectionnée. Une fois le processus d’autorisation terminé, le secret est créé.
 
 >[!IMPORTANT]
 >
->Si votre entreprise dispose d’une stratégie de réauthentification définie pour les applications Google Cloud, les secrets créés ne seront pas actualisés correctement une fois l’authentification expirée (entre 1 et 24 heures selon la configuration de la stratégie).
+>Si votre organisation a défini une politique de réauthentification pour les applications Google Cloud, les secrets créés ne seront pas actualisés avec succès après l’expiration de l’authentification (entre 1 et 24 heures selon la configuration de la politique).
 >
->Pour résoudre ce problème, connectez-vous à la console d’administration de Google et accédez au **[!DNL App access control]** afin que vous puissiez marquer l’application de transfert d’événement (transfert d’événement Adobe Real-Time CDP) comme [!DNL Trusted]. Reportez-vous à la documentation Google sur [définition des durées de session pour les services cloud Google](https://support.google.com/a/answer/9368756) pour plus d’informations.
+>Pour résoudre ce problème, connectez-vous à l’Admin Console Google et accédez à la page **[!DNL App access control]** afin de marquer l’application de transfert d’événement (Adobe Real-Time CDP Event Forwarding) comme [!DNL Trusted]. Reportez-vous à la documentation Google sur comment [définir des durées de session pour les services Google Cloud](https://support.google.com/a/answer/9368756) pour plus d’informations.
 
 ## Modifier un secret
 
@@ -161,8 +161,8 @@ Vous pouvez réessayer ou actualiser un échange secret depuis l’écran d’é
 | Type de secret | Protocole de nouvel essai |
 | --- | --- |
 | [!UICONTROL Jeton] | Sélectionnez **[!UICONTROL Échange secret]** pour réessayer l’échange secret. Cette commande n’est disponible que lorsqu’un environnement est attaché au secret. |
-| [!UICONTROL HTTP] | Si aucun environnement n’est associé au secret, sélectionnez **[!UICONTROL Échange secret]** afin d’échanger les informations d’identification vers base64. Si un environnement est joint, sélectionnez Sélectionner . **[!UICONTROL Secret Exchange et déploiement]** pour échanger vers base64 et déployer le secret. |
-| [!UICONTROL OAuth2] | Sélectionnez **[!UICONTROL Générer un jeton]** pour échanger les informations d’identification et renvoyer un jeton d’accès du fournisseur d’authentification. |
+| [!UICONTROL HTTP] | Si aucun environnement n’est associé au secret, sélectionnez **[!UICONTROL Échange secret]** afin d’échanger les informations d’identification vers base64. Si un environnement est joint, sélectionnez **[!UICONTROL Échanger et déployer le secret]** pour passer en base64 et déployer le secret. |
+| [!UICONTROL OAuth 2] | Sélectionnez **[!UICONTROL Générer un jeton]** pour échanger les informations d’identification et renvoyer un jeton d’accès du fournisseur d’authentification. |
 
 ## Supprimer un secret
 
