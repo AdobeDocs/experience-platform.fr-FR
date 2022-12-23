@@ -1,32 +1,32 @@
 ---
 keywords: Experience Platform;profil;profil client en temps réel;dépannage;API;activer un jeu de données
-title: Activation d’un jeu de données pour les mises à jour de profil à l’aide d’API
+title: Activer un jeu de données pour les mises à jour de profil à l’aide d’API
 type: Tutorial
-description: Ce tutoriel vous explique comment utiliser les API Adobe Experience Platform pour activer un jeu de données avec des fonctionnalités "d’insertion" afin d’effectuer des mises à jour des données de Real-time Customer Profile.
+description: Ce tutoriel vous explique comment utiliser les API Adobe Experience Platform pour activer un jeu de données avec des fonctionnalités « d’upsert » pour faire les mises à jour des données de Profil client en temps réel.
 exl-id: fc89bc0a-40c9-4079-8bfc-62ec4da4d16a
 source-git-commit: 132407af947b97a1925799a1fb5e12caa2b0410c
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1050'
-ht-degree: 27%
+ht-degree: 100%
 
 ---
 
-# Activation d’un jeu de données pour les mises à jour de profil à l’aide d’API
+# Activer un jeu de données pour les mises à jour de profil à l’aide d’API
 
-Ce tutoriel décrit le processus d’activation d’un jeu de données avec des fonctionnalités &quot;d’insertion&quot; afin d’effectuer des mises à jour des données de Real-time Customer Profile. Cela inclut les étapes de création d’un nouveau jeu de données et de configuration d’un jeu de données existant.
+Ce tutoriel décrit le processus d’activation d’un jeu de données avec des fonctionnalités « d’upsert » pour faire les mises à jour des données de Profil client en temps réel. Ceci inclut les étapes de création d’un nouveau jeu de données et la configuration d’un jeu de données existant.
 
 >[!NOTE]
 >
->Le workflow d’insertion ne fonctionne que pour l’ingestion par lots. L’ingestion par flux est **not** pris en charge.
+>Le workflow d’upsert ne fonctionne que pour l’ingestion par lots. L’ingestion en flux continu n’est **pas** prise en charge.
 
 ## Prise en main
 
-Ce tutoriel nécessite une compréhension pratique de plusieurs services Adobe Experience Platform impliqués dans la gestion des jeux de données activés pour Profile. Avant de commencer ce tutoriel, veuillez consulter la documentation relative à ces [!DNL Platform] services :
+Ce tutoriel nécessite une connaissance pratique des différents services Adobe Experience Platform impliqués dans la gestion des jeux de données activés pour Profil. Avant de commencer ce tutoriel, consultez la documentation relative à ces services [!DNL Platform] associés :
 
 - [[!DNL Real-time Customer Profile]](../../profile/home.md) : fournit un profil de consommateur unifié en temps réel, basé sur des données agrégées provenant de plusieurs sources.
-- [[!DNL Catalog Service]](../../catalog/home.md): Une API RESTful qui vous permet de créer des jeux de données et de les configurer pour [!DNL Real-time Customer Profile] et [!DNL Identity Service].
+- [[!DNL Catalog Service]](../../catalog/home.md) : une API RESTful qui vous permet de créer des jeux de données et de les configurer pour [!DNL Real-time Customer Profile] et [!DNL Identity Service].
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md) : cadre normalisé selon lequel [!DNL Platform] organise les données de l’expérience client.
-- [Ingestion par lots](../../ingestion/batch-ingestion/overview.md): L’API Batch Ingestion vous permet d’ingérer des données dans Experience Platform sous forme de fichiers de lot.
+- [Ingestion par lots](../../ingestion/batch-ingestion/overview.md) : l’API d’ingestion par lots vous permet d’ingérer des données dans Experience Platform sous forme de fichiers par lots.
 
 Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour passer avec succès des appels à des API Platform.
 
@@ -42,19 +42,19 @@ Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [
 - `x-api-key: {API_KEY}`
 - `x-gw-ims-org-id: {ORG_ID}`
 
-Toutes les requêtes contenant un payload (POST, PUT, PATCH) nécessitent une `Content-Type` en-tête . La valeur correcte de cet en-tête s’affiche dans les exemples de requêtes, le cas échéant.
+Toutes les requêtes contenant une payload (POST, PUT, PATCH) nécessitent un en-tête `Content-Type` supplémentaire : La valeur correcte de cet en-tête s’affiche dans les exemples de requêtes, le cas échéant.
 
-Dans [!DNL Experience Platform], toutes les ressources sont isolées dans des environnements de test virtuels spécifiques. Toutes les requêtes envoyées à [!DNL Platform] Les API requièrent une `x-sandbox-name` qui spécifie le nom de l’environnement de test dans lequel l’opération aura lieu. Pour plus d’informations sur les environnements de test dans [!DNL Platform], consultez la [documentation de présentation des environnements de test](../../sandboxes/home.md).
+Dans [!DNL Experience Platform], toutes les ressources sont isolées dans des sandbox virtuelles spécifiques. Toutes les requêtes envoyées aux API [!DNL Platform] nécessitent un en-tête `x-sandbox-name` spécifiant le nom de la sandbox dans laquelle l’opération sera effectuée. Pour plus d’informations sur les sandbox dans [!DNL Platform], consultez la [documentation de présentation des sansdbox](../../sandboxes/home.md).
 
-## Création d’un jeu de données activé pour les mises à jour de profil
+## Créer un jeu de données activé pour les mises à jour de profil
 
-Lors de la création d’un jeu de données, vous pouvez activer ce jeu de données pour Profile et activer les fonctionnalités de mise à jour au moment de la création.
+Lors de la création d’un jeu de données, vous pouvez activer ce jeu de données pour le profil et activer les fonctionnalités de mise à jour.
 
 >[!NOTE]
 >
->Pour créer un jeu de données activé par Profile, vous devez connaître l’identifiant d’un schéma XDM existant activé pour Profile. Pour plus d’informations sur la recherche ou la création d’un schéma activé pour Profile, reportez-vous au tutoriel sur la [création d’un schéma à l’aide de l’API Schema Registry](../../xdm/tutorials/create-schema-api.md).
+>Pour créer un nouveau jeu de données activé pour Profil, vous devez connaître l’identifiant d’un schéma XDM existant et activé pour Profil. Pour plus d’informations sur la recherche ou la création d’un schéma activé pour Profil, reportez-vous au tutoriel sur la [création d’un schéma à l’aide de l’API Schema Registry](../../xdm/tutorials/create-schema-api.md).
 
-Pour créer un jeu de données activé pour Profile et les mises à jour, utilisez une requête de POST au `/dataSets` point de terminaison .
+Pour créer un jeu de données activé pour le profil et les mises à jour, utilisez une requête POST au point d’entrée `/dataSets`.
 
 **Format d’API**
 
@@ -64,7 +64,7 @@ POST /dataSets
 
 **Requête**
 
-En incluant la variable `unifiedIdentity` et le `unifiedProfile` under `tags` dans le corps de la requête, le jeu de données sera activé pour [!DNL Profile] lors de la création. Dans le `unifiedProfile` tableau, ajout `isUpsert:true` ajoutera la possibilité pour le jeu de données de prendre en charge les mises à jour.
+En incluant à la fois le `unifiedIdentity` et le `unifiedProfile` sous `tags` dans le corps de la requête, le jeu de données sera activé pour [!DNL Profile] à la création. Dans le tableau `unifiedProfile`, l’ajout de `isUpsert:true` permettra au jeu de données de prendre en charge les mises à jour.
 
 ```shell
 curl -X POST \
@@ -96,8 +96,8 @@ curl -X POST \
 
 | Propriété | Description |
 | -------- | ----------- |
-| `schemaRef.id` | L’identifiant de la variable [!DNL Profile]schéma activé sur lequel le jeu de données sera basé. |
-| `{TENANT_ID}` | L’espace de noms dans la variable [!DNL Schema Registry] qui contient des ressources appartenant à votre organisation. Voir [TENANT_ID](../../xdm/api/getting-started.md#know-your-tenant-id) de la section [!DNL Schema Registry] guide de développement pour plus d’informations. |
+| `schemaRef.id` | L’ID du schéma activé pour [!DNL Profile] sur lequel le jeu de données sera basé. |
+| `{TENANT_ID}` | L’espace de noms dans [!DNL Schema Registry] qui contient les ressources appartenant à votre organisation. Pour plus d’informations, consultez la section [TENANT_ID](../../xdm/api/getting-started.md#know-your-tenant-id) du guide de développement [!DNL Schema Registry]. |
 
 **Réponse**
 
@@ -109,17 +109,17 @@ Une réponse réussie affiche un tableau contenant l’identifiant du jeu de don
 ] 
 ```
 
-## Configuration d’un jeu de données existant {#configure-an-existing-dataset}
+## Configurer un jeu de données existant {#configure-an-existing-dataset}
 
-Les étapes suivantes expliquent comment configurer un jeu de données activé par Profile existant pour la fonctionnalité de mise à jour (insertion).
+Les étapes suivantes expliquent comment configurer un jeu de données existant activé pour un profil pour permettre une mise à jour (upsert).
 
 >[!NOTE]
 >
->Pour configurer un jeu de données activé par Profile existant en vue de sa mise à jour, vous devez d’abord désactiver le jeu de données pour Profile, puis le réactiver avec le `isUpsert` balise . Si le jeu de données existant n’est pas activé pour Profile, vous pouvez passer directement aux étapes de [activation du jeu de données pour Profile et upsert](#enable-the-dataset). Si vous n’êtes pas sûr, les étapes suivantes vous montrent comment vérifier si le jeu de données est déjà activé.
+>Pour configurer un jeu de données existant activé pour un profil en vue de sa mise à jour, vous devez d’abord désactiver le jeu de données pour le profil puis le réactiver avec la balise `isUpsert`. Si le jeu de données existant n’est pas activé pour le profil, vous pouvez passer directement aux étapes d’[activation du jeu de données pour le profil et l’upsert](#enable-the-dataset). Si vous n’êtes pas sûr, les étapes suivantes vous montrent comment vérifier si le jeu de données est déjà activé.
 
-### Vérifiez si le jeu de données est activé pour Profile.
+### Vérifier si le jeu de données est activé pour le profil
 
-En utilisant la variable [!DNL Catalog] API, vous pouvez examiner un jeu de données existant pour déterminer s’il est activé pour une utilisation dans [!DNL Real-time Customer Profile]. L’appel suivant récupère les détails d’un jeu de données via son identifiant.
+En utilisant l’API [!DNL Catalog], vous pouvez examiner un jeu de données existant et déterminer s’il est activé pour une utilisation dans [!DNL Real-time Customer Profile]. L’appel suivant récupère les détails d’un jeu de données via son identifiant.
 
 **Format d’API**
 
@@ -192,15 +192,15 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a27
 }
 ```
 
-Sous , `tags` , vous pouvez voir que `unifiedProfile` est présent avec la valeur `enabled:true`. Par conséquent, [!DNL Real-time Customer Profile] est activé pour ce jeu de données.
+Sous la propriété `tags`, vous pouvez voir que `unifiedProfile` est présent avec la valeur `enabled:true`. Par conséquent, [!DNL Real-time Customer Profile] est activé pour ce jeu de données.
 
-### Désactivation du jeu de données pour Profile
+### Désactiver le jeu de données pour Profil
 
-Pour configurer un jeu de données activé par Profile pour les mises à jour, vous devez d’abord désactiver la variable `unifiedProfile` et `unifiedIdentity` puis réactivez-les avec les balises `isUpsert` balise . Cette opération s’effectue à l’aide de deux demandes de PATCH, une pour la désactivation et une pour la réactivation.
+Pour configurer un jeu de données activé pour le profil pour les mises à jour, vous devez d’abord désactiver les balises `unifiedProfile` et `unifiedIdentity` puis les réactiver avec la balise `isUpsert`. Cette opération s’effectue à l’aide de deux requêtes PATCH, une pour la désactivation et une pour la réactivation.
 
 >[!WARNING]
 >
->Les données ingérées dans le jeu de données alors qu’il est désactivé ne seront pas ingérées dans le magasin de profils. Vous devez éviter d’ingérer des données dans le jeu de données jusqu’à ce qu’il ait été réactivé pour Profile.
+>Les données ingérées dans le jeu de données alors qu’il est désactivé ne seront pas ingérées dans la banque de profils. Vous devez éviter d’ingérer des données dans le jeu de données jusqu’à ce qu’il ait été réactivé pour Profil.
 
 **Format d’API**
 
@@ -210,11 +210,11 @@ PATCH /dataSets/{DATASET_ID}
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{DATASET_ID}` | L’identifiant du jeu de données que vous souhaitez mettre à jour. |
+| `{DATASET_ID}` | Identifiant du jeu de données à mettre à jour. |
 
 **Requête**
 
-Le premier corps de requête de PATCH comprend une `path` to `unifiedProfile` et un `path` to `unifiedIdentity`, en définissant la variable `value` to `enabled:false` pour ces deux chemins afin de désactiver les balises.
+Le premier corps de requête PATCH comprend un `path` vers `unifiedProfile` et un `path` vers `unifiedIdentity`, qui définissent `value` sur `enabled:false` pour ces deux chemins afin de désactiver les balises.
 
 ```shell
 curl -X PATCH https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a27e7040801dedbf46e \
@@ -239,7 +239,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a2
 
 **Réponse**
 
-Une requête de PATCH réussie renvoie un état HTTP 200 (OK) et un tableau contenant l’identifiant du jeu de données mis à jour. Cet identifiant doit correspondre à celui envoyé dans la requête PATCH. Le `unifiedProfile` et `unifiedIdentity` Les balises ont désormais été désactivées.
+Une requête PATCH réussie renvoie un statut HTTP 200 (OK) et un tableau contenant l’identifiant du jeu de données mis à jour. Cet identifiant doit correspondre à celui envoyé dans la requête PATCH. Les balises `unifiedProfile` et `unifiedIdentity` ont désormais été désactivées.
 
 ```json
 [
@@ -247,13 +247,13 @@ Une requête de PATCH réussie renvoie un état HTTP 200 (OK) et un tableau cont
 ]
 ```
 
-### Activation du jeu de données pour Profile et la publication {#enable-the-dataset}
+### Activer le jeu de données pour Profil et upsert {#enable-the-dataset}
 
-Un jeu de données existant peut être activé pour les mises à jour de profil et d’attribut à l’aide d’une seule requête de PATCH.
+Un jeu de données existant peut être activé pour les mises à jour de Profil et d’attribut à l’aide d’une seule requête PATCH.
 
 >[!IMPORTANT]
 >
->Lors de l’activation de votre jeu de données pour Profile, assurez-vous que le schéma auquel le jeu de données est associé est **également** Activé pour Profile. Si le schéma n’est pas activé pour Profile, le jeu de données **not** apparaissent en tant que profil activé dans l’interface utilisateur de Platform.
+>Lors de l’activation de votre jeu de données pour Profil, assurez-vous que le schéma auquel le jeu de données est associé est **également** activé pour Profil. Si le schéma n’est pas activé pour Profil, le jeu de données n’apparaîtra **pas** en tant qu’activé pour Profil dans l’interface utilisateur de Platform.
 
 **Format d’API**
 
@@ -267,7 +267,7 @@ PATCH /dataSets/{DATASET_ID}
 
 **Requête**
 
-Le corps de la requête comprend un `path` to `unifiedProfile` définition de la variable `value` pour inclure la variable `enabled` et `isUpsert` balises, toutes deux définies sur `true`, et a `path` to `unifiedIdentity` définition de la variable `value` pour inclure la variable `enabled` balise définie sur `true`.
+Le corps de la requête comprend un `path` vers `unifiedProfile` qui définit `value` pour inclure les balises `enabled` et `isUpsert`, toutes deux définies sur `true`, et un `path` vers `unifiedIdentity` qui définit `value` pour inclure la balise `enabled` définie sur `true`.
 
 ```shell
 curl -X PATCH https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a27e7040801dedbf46e \
@@ -297,7 +297,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a2
 
 **Réponse**
 
-Une requête de PATCH réussie renvoie un état HTTP 200 (OK) et un tableau contenant l’identifiant du jeu de données mis à jour. Cet identifiant doit correspondre à celui envoyé dans la requête PATCH. Le `unifiedProfile` et `unifiedIdentity` ont été activés et configurés pour les mises à jour d’attributs.
+Une requête PATCH réussie renvoie un statut HTTP 200 (OK) et un tableau contenant l’identifiant du jeu de données mis à jour. Cet identifiant doit correspondre à celui envoyé dans la requête PATCH. Les balises `unifiedProfile` et `unifiedIdentity` ont maintenant été activées et configurées pour les mises à jour d’attributs.
 
 ```json
 [
@@ -307,4 +307,4 @@ Une requête de PATCH réussie renvoie un état HTTP 200 (OK) et un tableau cont
 
 ## Étapes suivantes
 
-Votre profil et votre jeu de données activé pour l’insertion peuvent désormais être utilisés par les workflows d’ingestion par lots pour mettre à jour les données de profil. Pour en savoir plus sur l’ingestion de données dans Adobe Experience Platform, commencez par lire le [présentation de l’ingestion des données](../../ingestion/home.md).
+Votre jeu de données activé pour Profil et upsert peut désormais être utilisé par les workflows d’ingestion par lots pour mettre à jour les données de profil. Pour en savoir plus sur l’ingestion de données dans Adobe Experience Platform, commencez par lire la [présentation de l’ingestion des données](../../ingestion/home.md).
