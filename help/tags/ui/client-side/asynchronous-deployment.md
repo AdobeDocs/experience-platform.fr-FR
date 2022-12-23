@@ -3,9 +3,9 @@ title: Déploiement asynchrone
 description: Découvrez comment déployer les bibliothèques de balises d’Adobe Experience Platform de manière asynchrone sur votre site web.
 exl-id: ed117d3a-7370-42aa-9bc9-2a01b8e7794e
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1079'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 94%
 >[!CONTEXTUALHELP]
 >id="platform_tags_asynchronous_deployment"
 >title="Déploiement asynchrone"
->abstract="Si cette option est activée, lorsque cette balise de script est analysée, le navigateur commence à charger le fichier JavaScript, mais au lieu d’attendre que la bibliothèque soit chargée et exécutée, il continue à analyser et à effectuer le rendu du reste du document. Cela peut améliorer les performances des pages web, mais a des implications importantes en ce qui concerne l’exécution de certaines règles. Voir la documentation pour plus de détails."
+>abstract="Si cette option est activée, lorsque cette balise script est analysée, le navigateur commencera à charger le fichier JavaScript, mais au lieu d’attendre que la bibliothèque soit chargée et exécutée, il continuera à analyser et à rendre le reste du document. Cela peut améliorer les performances des pages web, mais a des implications importantes en ce qui concerne l’exécution de certaines règles. Voir la documentation pour plus de détails."
 
 >[!NOTE]
 >
@@ -52,11 +52,11 @@ Cela indique au navigateur que, lorsque cette balise script est analysée, il do
 
 Comme décrit ci-dessus, dans le cas des déploiements synchrones, le navigateur suspend l’analyse et le rendu de la page pendant le chargement et l’exécution de la bibliothèque de balises Adobe Experience Platform. D’autre part, dans le cas des déploiements asynchrones, le navigateur poursuit l’analyse et le rendu de la page pendant le chargement de la bibliothèque. La variabilité du moment où le chargement de la bibliothèque de balises peut prendre fin par rapport à l’analyse et au rendu de la page doit être prise en compte.
 
-Tout d’abord, puisque le chargement de la bibliothèque peut prendre fin avant ou après l’analyse et l’exécution du bas de la page, vous ne devriez plus appeler `_satellite.pageBottom()` depuis votre code de page (`_satellite` ne sera disponible qu&#39;une fois la bibliothèque chargée). Ceci est expliqué dans [Chargement asynchrone du code incorporé aux balises](#loading-the-tags-embed-code-asynchronously).
+Tout d’abord, puisque le chargement de la bibliothèque peut prendre fin avant ou après l’analyse et l’exécution du bas de la page, vous ne devriez plus appeler `_satellite.pageBottom()` depuis votre code de page (`_satellite` ne sera disponible qu’une fois la bibliothèque chargée). Ceci est expliqué dans [Chargement asynchrone du code incorporé aux balises](#loading-the-tags-embed-code-asynchronously).
 
 Ensuite, le chargement de la bibliothèque de balises peut se terminer avant ou après que l’événement de navigateur [`DOMContentLoaded`](https://developer.mozilla.org/fr-FR/docs/Web/Events/DOMContentLoaded) (DOM Ready) soit survenu.
 
-Pour ces deux raisons, il est important de montrer comment les types d&#39;événements [Library Loaded (Bibliothèque chargée)](../../extensions/client/core/overview.md#library-loaded-page-top), [Page Bottom (Bas de page)](../../extensions/client/core/overview.md#page-bottom), [DOM Ready (Prêt pour DOM)](../../extensions/client/core/overview.md#page-bottom), et [Window Loaded (Fenêtre chargée)](../../extensions/client/core/overview.md#window-loaded) provenant de l’extension Core fonctionnent lors du chargement asynchrone d’une bibliothèque.
+Pour ces deux raisons, il est important de montrer comment les types d’événements [Library Loaded (Bibliothèque chargée)](../../extensions/client/core/overview.md#library-loaded-page-top), [Page Bottom (Bas de page)](../../extensions/client/core/overview.md#page-bottom), [DOM Ready (Prêt pour DOM)](../../extensions/client/core/overview.md#page-bottom), et [Window Loaded (Fenêtre chargée)](../../extensions/client/core/overview.md#window-loaded) provenant de l’extension Core fonctionnent lors du chargement asynchrone d’une bibliothèque.
 
 Si votre propriété de balise contient les quatre règles suivantes :
 
@@ -72,8 +72,8 @@ Règle A → Règle B → Règle C → Règle D
 Bien que l’ordre soit toujours suivi, il se peut que certaines règles soient exécutées immédiatement lorsque le chargement de la bibliothèque de balises se termine, tandis que d’autres pourront être exécutées ultérieurement. Les actions suivantes se produisent lorsque le chargement de la bibliothèque de balises se termine :
 
 1. La règle A est exécutée immédiatement.
-1. Si l’événement de navigateur `DOMContentLoaded` (DOM Ready (Prêt pour DOM)) est déjà survenu, la règle B et la règle C sont exécutées immédiatement. Dans le cas contraire, les règles B et C sont exécutées ultérieurement lorsque l’événement de navigateur [`DOMContentLoaded`](https://developer.mozilla.org/en-US/docs/Web/Events/DOMContentLoaded) survient.
-1. Si l’événement de navigateur [`load`](https://developer.mozilla.org/fr-FR/docs/Web/Events/load) (Window Loaded [Fenêtre chargée]) est déjà survenu, la règle D est exécutée immédiatement. Dans le cas contraire, la règle D est exécutée ultérieurement lorsque l’événement de navigateur [`load`](https://developer.mozilla.org/en-US/docs/Web/Events/load) survient. Veillez noter que si vous avez installé la bibliothèque de balises conformément aux instructions, le chargement de la bibliothèque se termine *toujours* avant la survenue de l’événement de navigateur [`load`](https://developer.mozilla.org/en-US/docs/Web/Events/load).
+1. Si l’événement de navigateur `DOMContentLoaded` (DOM Ready (Prêt pour DOM)) est déjà survenu, la règle B et la règle C sont exécutées immédiatement. Dans le cas contraire, les règles B et C sont exécutées ultérieurement lorsque l’événement de navigateur [`DOMContentLoaded`](https://developer.mozilla.org/fr-FR/docs/Web/Events/DOMContentLoaded) survient.
+1. Si l’événement de navigateur [`load`](https://developer.mozilla.org/fr-FR/docs/Web/Events/load) (Window Loaded [Fenêtre chargée]) est déjà survenu, la règle D est exécutée immédiatement. Dans le cas contraire, la règle D est exécutée ultérieurement lorsque l’événement de navigateur [`load`](https://developer.mozilla.org/fr-FR/docs/Web/Events/load) survient. Veillez noter que si vous avez installé la bibliothèque de balises conformément aux instructions, le chargement de la bibliothèque se termine *toujours* avant la survenue de l’événement de navigateur [`load`](https://developer.mozilla.org/fr-FR/docs/Web/Events/load).
 
 Lorsque vous appliquez ces principes à votre propre site web, tenez compte des points suivants :
 
