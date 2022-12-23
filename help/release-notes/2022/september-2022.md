@@ -1,10 +1,11 @@
 ---
-title: Notes de mise à jour de Adobe Experience Platform - Septembre 2022
-description: Notes de mise à jour de septembre 2022 pour Adobe Experience Platform.
-source-git-commit: 4f85f38e4870f0c2429a3a2a50bd7f95075c6be4
-workflow-type: tm+mt
+title: Notes de mise à jour d’Adobe Experience Platform - Septembre 2022
+description: Les notes de mise à jour de septembre 2022 pour Adobe Experience Platform.
+exl-id: a7a4dcf8-2cf3-4e39-879d-bdfcbacb737a
+source-git-commit: a9887535b12b8c4aeb39bb5a6646da88db4f0308
+workflow-type: ht
 source-wordcount: '2934'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -41,7 +42,7 @@ Grâce au contrôle d’accès basé sur les attributs, les administrateurs de v
 | Fonctionnalité | Description |
 | --- | --- |
 | Contrôle d’accès basé sur les attributs | Le contrôle d’accès basé sur les attributs vous permet de libeller les segments et champs de schéma de modèle de données d’expérience (XDM) avec des libellés qui définissent les limites d’utilisation de l’organisation ou des données. En parallèle, les administrateurs peuvent utiliser l’interface d’administration des utilisateurs et des rôles pour définir des stratégies d’accès relatives aux segments et champs de schéma XDM. Ainsi, ils peuvent mieux gérer l’accès accordé aux utilisateurs ou groupes d’utilisateurs (utilisateurs internes, externes ou tiers). Pour plus d’informations, consultez la [présentation du contrôle d’accès basé sur les attributs](../../access-control/abac/overview.md). |
-| Autorisations | La zone dédiée aux autorisations dans Experience Cloud permet aux administrateurs de définir des rôles d’utilisateur et des stratégies d’accès. Ils peuvent ainsi gérer les autorisations d’accès aux fonctionnalités et objets dans une application de produit. Grâce aux autorisations, vous pouvez créer et gérer des rôles, attribuer les autorisations de ressources souhaitées pour ces rôles et créer des politiques afin d’exploiter les libellés et définir quels rôles utilisateur ont accès à des ressources Platform spécifiques. Les autorisations vous permettent également de gérer les libellés, les sandbox et les utilisateurs associés à un rôle spécifique. Pour plus d’informations, consultez le [guide de l’interface utilisateur des autorisations](../../access-control/abac/ui/browse.md). |
+| Autorisations | La zone dédiée aux autorisations dans Experience Cloud permet aux administrateurs de définir des rôles d’utilisateur et des politiques d’accès. Ils peuvent ainsi gérer les autorisations d’accès aux fonctionnalités et objets dans une application de produit. Grâce aux autorisations, vous pouvez créer et gérer des rôles, attribuer les autorisations de ressources souhaitées pour ces rôles et créer des politiques afin d’exploiter les libellés et définir quels rôles utilisateur ont accès à des ressources Platform spécifiques. Les autorisations vous permettent également de gérer les libellés, les sandbox et les utilisateurs associés à un rôle spécifique. Pour plus d’informations, consultez le [guide de l’interface utilisateur des autorisations](../../access-control/abac/ui/browse.md). |
 
 Pour plus d’informations sur le contrôle d’accès basé sur les attributs, consultez la [présentation du contrôle d’accès basé sur les attributs](../../access-control/abac/overview.md). Pour consulter un guide complet sur le workflow de contrôle d’accès basé sur les attributs, reportez-vous au [guide complet du contrôle d’accès basé sur les attributs](../../access-control/abac/end-to-end-guide.md).
 
@@ -62,7 +63,7 @@ Consultez la [présentation de l’IA dédiée à l’attribution](../../intelli
 
 ### IA dédiée aux clients
 
-Customer AI disponible dans Real-time Customer Data Platform est utilisé pour générer des scores de propension personnalisés tels que l’attrition et la conversion pour des profils individuels à grande échelle.
+L’IA dédiée aux clients disponible dans Real-time Customer Data Platform est utilisée pour générer des scores de propension personnalisés tels que l’attrition et la conversion pour des profils individuels à grande échelle.
 
 | Fonctionnalité | Description |
 | --- | --- |
@@ -216,7 +217,7 @@ Query Service vous permet d’utiliser le langage SQL standard pour interroger l
 | Fonctionnalité | Description |
 | --- | --- |
 | API d’abonnement aux alertes | Adobe Experience Platform Query Service vous permet de vous abonner à des alertes pour les requêtes ad hoc et planifiées. Les alertes peuvent être reçues par e-mail, dans l’interface utilisateur de Platform ou les deux. Actuellement, il n’est possible de s’abonner aux alertes de requêtes qu’à l’aide de l’[API Query Service](https://developer.adobe.com/experience-platform-apis/references/query-service/). |
-| Échantillons de jeux de données | Les échantillons de jeux de données Query Service vous permettent de mener des requêtes exploratoires sur les données volumineuses avec un temps de traitement considérablement réduit, mais au prix de la précision des requêtes. Pour en savoir plus, consultez le [guide d’échantillons de jeux de données](../../query-service/sql/dataset-samples.md). |
+| Exemples de jeux de données | Les échantillons de jeux de données Query Service vous permettent de mener des requêtes exploratoires sur les données volumineuses avec un temps de traitement considérablement réduit, mais au prix de la précision des requêtes. Pour en savoir plus, consultez le [guide d’échantillons de jeux de données](../../query-service/sql/dataset-samples.md). |
 
 Pour plus d’informations sur [!DNL Query Service], consultez la [[!DNL Query Service] présentation](../../query-service/home.md).
 
