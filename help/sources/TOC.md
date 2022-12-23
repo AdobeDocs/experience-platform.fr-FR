@@ -5,9 +5,9 @@ breadcrumb-title: Guide des connecteurs sources
 user-guide-description: Ingérez des données à partir de diverses sources. Découvrez comment structurer, étiqueter et améliorer les données déjà ingérées.
 feature: Sources
 source-git-commit: 46c9ec0c561f7ed3e38f05ef7b1e3ffec0eaed57
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '860'
-ht-degree: 83%
+ht-degree: 100%
 
 ---
 
@@ -17,10 +17,10 @@ ht-degree: 83%
 - [Présentation des sources](home.md)
 - Connecteurs source disponibles {#connectors}
    - Applications Adobe {#adobe-applications}
-      - [Source des classifications Analytics](connectors/adobe-applications/classifications.md)
+      - [Source Analytics Classifications](connectors/adobe-applications/classifications.md)
       - [Source Analytics](connectors/adobe-applications/analytics.md)
-      - [Source de l’Audience Manager](connectors/adobe-applications/audience-manager.md)
-      - [Source Adobe Campaign Managed Cloud Services](connectors/adobe-applications/campaign.md)
+      - [Source Audience Manager](connectors/adobe-applications/audience-manager.md)
+      - [Source Adobe Campaign Managed Cloud Services](connectors/adobe-applications/campaign.md)
       - [Source des attributs du client](connectors/adobe-applications/customer-attributes.md)
       - [Source de collecte de données](connectors/adobe-applications/data-collection.md)
       - [Source Workfront](connectors/adobe-applications/workfront.md)
@@ -93,12 +93,12 @@ ht-degree: 83%
    - Automatisation du marketing {#marketing-automation}
       - [Connecteur HubSpot](connectors/marketing-automation/hubspot.md)
       - [Connecteur Mailchimp](connectors/marketing-automation/mailchimp.md)
-      - [Connecteur Eloqua Oracle](connectors/marketing-automation/oracle-eloqua.md)
-      - [Oracle Connecteur Responsys](connectors/marketing-automation/oracle-responsys.md)
+      - [Connecteur Oracle Eloqua](connectors/marketing-automation/oracle-eloqua.md)
+      - [Connecteur Oracle Responsys](connectors/marketing-automation/oracle-responsys.md)
       - [Salesforce Marketing Cloud](connectors/marketing-automation/salesforce-marketing-cloud.md)
    - Paiements {#payments}
       - [Connecteur PayPal](connectors/payments/paypal.md)
-      - [Connecteur carré](connectors/payments/square.md)
+      - [Connecteur Square](connectors/payments/square.md)
    - Protocoles {#protocols}
       - [Connecteur OData générique](connectors/protocols/odata.md)
       - [Connecteur API REST générique](connectors/protocols/generic-rest.md)
@@ -118,7 +118,7 @@ ht-degree: 83%
          - [Azure Data Lake Storage Gen2](tutorials/api/create/cloud-storage/adls-gen2.md)
          - [Azure Event Hubs](tutorials/api/create/cloud-storage/eventhub.md)
          - [Azure File Storage](tutorials/api/create/cloud-storage/azure-file-storage.md)
-         - [Zone d’entrée des données](tutorials/api/create/cloud-storage/data-landing-zone.md)
+         - [Data Landing Zone](tutorials/api/create/cloud-storage/data-landing-zone.md)
          - [FTP](tutorials/api/create/cloud-storage/ftp.md)
          - [Google Cloud Storage](tutorials/api/create/cloud-storage/google.md)
          - [Google PubSub](tutorials/api/create/cloud-storage/google-pubsub.md)
@@ -164,10 +164,10 @@ ht-degree: 83%
          - [Membres MailChimp](tutorials/api/create/marketing-automation/mailchimp-members.md)
          - [Oracle Eloqua](tutorials/api/create/marketing-automation/oracle-eloqua.md)
          - [Oracle Responsys](tutorials/api/create/marketing-automation/oracle-responsys.md)
-         - [Marketing Cloud Salesforce](tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
+         - [Salesforce Marketing Cloud](tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
       - Paiements {#payments}
          - [PayPal](tutorials/api/create/payments/paypal.md)
-         - [Carré](tutorials/api/create/payments/square.md)
+         - [Square](tutorials/api/create/payments/square.md)
       - Protocoles {#protocols}
          - [OData générique](tutorials/api/create/protocols/odata.md)
          - [REST API générique](tutorials/api/create/protocols/generic-rest.md)
@@ -183,7 +183,7 @@ ht-degree: 83%
       - [Explorer des données d’automatisation du marketing](tutorials/api/explore/marketing-automation.md)
       - [Explorer des données de paiement](tutorials/api/explore/payments.md)
       - [Explorer des données de protocole](tutorials/api/explore/protocols.md)
-      - [Exploration des tableaux de données](tutorials/api/explore/tabular.md)
+      - [Explorer des tables de données](tutorials/api/explore/tabular.md)
    - Collecter des données {#collect}
       - [Collecter des données publicitaires](tutorials/api/collect/advertising.md)
       - [Collecter des données de stockage dans le cloud](tutorials/api/collect/cloud-storage.md)
@@ -196,7 +196,7 @@ ht-degree: 83%
       - [Collecter des données de protocole](tutorials/api/collect/protocols.md)
       - [Collecter des données de diffusion en continu](tutorials/api/collect/streaming.md)
    - [Ingestion à la demande](tutorials/api/on-demand-ingestion.md)
-   - [Filtrage des données au niveau de la source](tutorials/api/filter.md)
+   - [Filtrer des données au niveau de la source](tutorials/api/filter.md)
    - [Surveiller les flux de données](tutorials/api/monitor.md)
    - [Mettre à jour des comptes](tutorials/api/update.md)
    - [Mettre à jour des flux de données](tutorials/api/update-dataflows.md)
@@ -214,7 +214,7 @@ ht-degree: 83%
          - [Marketo Engage](tutorials/ui/create/adobe-applications/marketo.md)
          - [Workfront](tutorials/ui/create/adobe-applications/workfront.md)
       - Publicité {#advertising}
-         - [Publicités Google](tutorials/ui/create/advertising/ads.md)
+         - [Google Ads](tutorials/ui/create/advertising/ads.md)
       - Analytics {#analytics}
          - [Mixpanel](tutorials/ui/create/analytics/mixpanel.md)
       - Stockage dans le cloud {#cloud-storage}
@@ -223,11 +223,11 @@ ht-degree: 83%
          - [Apache HDFS](tutorials/ui/create/cloud-storage/hdfs.md)
          - [Azure Data Lake Storage Gen2](tutorials/ui/create/cloud-storage/adls-gen2.md)
          - [Azure Blob](tutorials/ui/create/cloud-storage/blob.md)
-         - [Centre d’événements Azure](tutorials/ui/create/cloud-storage/eventhub.md)
-         - [Stockage de fichiers Azure](tutorials/ui/create/cloud-storage/azure-file-storage.md)
-         - [Zone d’entrée des données](tutorials/ui/create/cloud-storage/data-landing-zone.md)
+         - [Azure Event Hubs](tutorials/ui/create/cloud-storage/eventhub.md)
+         - [Azure File Storage](tutorials/ui/create/cloud-storage/azure-file-storage.md)
+         - [Data Landing Zone](tutorials/ui/create/cloud-storage/data-landing-zone.md)
          - [FTP](tutorials/ui/create/cloud-storage/ftp.md)
-         - [Stockage dans le cloud Google](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
+         - [Google Cloud Storage](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
          - [Google PubSub](tutorials/ui/create/cloud-storage/google-pubsub.md)
          - [Oracle Object Storage](tutorials/ui/create/cloud-storage/oracle-object-storage.md)
          - [SFTP](tutorials/ui/create/cloud-storage/sftp.md)
@@ -237,7 +237,7 @@ ht-degree: 83%
       - CRM {#crm}
          - [Microsoft Dynamics](tutorials/ui/create/crm/dynamics.md)
          - [Salesforce](tutorials/ui/create/crm/salesforce.md)
-         - [GRC de Veeva](tutorials/ui/create/crm/veeva.md)
+         - [Veeva CRM](tutorials/ui/create/crm/veeva.md)
          - [Zoho CRM](tutorials/ui/create/crm/zoho.md)
       - Succès client {#customer-success}
          - [Oracle Service Cloud](tutorials/ui/create/customer-success/oracle-service-cloud.md)
@@ -248,9 +248,9 @@ ht-degree: 83%
          - [Amazon Redshift](tutorials/ui/create/databases/redshift.md)
          - [Apache Hive sur Azure HDInsights](tutorials/ui/create/databases/hive.md)
          - [Apache Spark sur Azure HDInsights](tutorials/ui/create/databases/spark.md)
-         - [Data Explorer Azure](tutorials/ui/create/databases/data-explorer.md)
+         - [Azure Data Explorer](tutorials/ui/create/databases/data-explorer.md)
          - [Azure Synapse Analytics](tutorials/ui/create/databases/synapse-analytics.md)
-         - [Stockage de table Azure](tutorials/ui/create/databases/ats.md)
+         - [Azure Table Storage](tutorials/ui/create/databases/ats.md)
          - [Couchbase](tutorials/ui/create/databases/couchbase.md)
          - [Google BigQuery](tutorials/ui/create/databases/bigquery.md)
          - [Greenplum](tutorials/ui/create/databases/greenplum.md)
@@ -274,10 +274,10 @@ ht-degree: 83%
          - [Membres Mailchimp](tutorials/ui/create/marketing-automation/mailchimp-members.md)
          - [Oracle Eloqua](tutorials/ui/create/marketing-automation/oracle-eloqua.md)
          - [Oracle Responsys](tutorials/ui/create/marketing-automation/oracle-responsys.md)
-         - [Marketing Cloud Salesforce](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
+         - [Salesforce Marketing Cloud](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
       - Paiements {#payments}
          - [PayPal](tutorials/ui/create/payments/paypal.md)
-         - [Carré](tutorials/ui/create/payments/square.md)
+         - [Square](tutorials/ui/create/payments/square.md)
       - Protocoles {#protocols}
          - [OData générique](tutorials/ui/create/protocols/odata.md)
       - Diffusion en continu {#streaming}
@@ -287,7 +287,7 @@ ht-degree: 83%
       - [Flux de données de connexion Analytics](tutorials/ui/dataflow/analytics.md)
       - [Flux de données de connexion à lʼespace de stockage par lots](tutorials/ui/dataflow/batch/cloud-storage.md)
       - [Flux de données de connexion à lʼespace de stockage de diffusion en continu](tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
-      - [Flux de données de connexion de consentement et de préférences](tutorials/ui/dataflow/consent-and-preferences.md)
+      - [Flux de données de connexion de consentement et préférences](tutorials/ui/dataflow/consent-and-preferences.md)
       - [Flux de données de connexion CRM](tutorials/ui/dataflow/crm.md)
       - [Flux de données de connexion au succès client](tutorials/ui/dataflow/customer-success.md)
       - [Flux de données de connexion à la base de données](tutorials/ui/dataflow/databases.md)
@@ -295,7 +295,7 @@ ht-degree: 83%
       - [Flux de données de connexion à l’automatisation marketing](tutorials/ui/dataflow/marketing-automation.md)
       - [Flux de données de connexion aux paiements](tutorials/ui/dataflow/payments.md)
       - [Flux de données de connexion au protocole](tutorials/ui/dataflow/protocols.md)
-   - [Création d’un flux de données de sources à l’aide de modèles dans l’interface utilisateur](tutorials/ui/templates.md)
+   - [Créer un flux de données de sources à l’aide de modèles dans l’interface utilisateur](tutorials/ui/templates.md)
    - [Surveiller les flux de données par lots](tutorials/ui/monitor.md)
    - [Surveiller les flux de données de diffusion en continu](tutorials/ui/monitor-streaming.md)
    - [Mettre à jour des comptes](tutorials/ui/update.md)
@@ -305,13 +305,13 @@ ht-degree: 83%
    - [S’abonner aux alertes sur les sources](tutorials/ui/alerts.md)
 - Sources en libre-service (SDK par lots) {#sdk}
    - [Présentation](sources-sdk/overview.md)
-   - Configuration de votre spécification de connexion {#config}
+   - Configurer votre spécification de connexion {#config}
       - [Options de configuration](sources-sdk/config/config.md)
       - [Configurer la spécification d’authentification](sources-sdk/config/authspec.md)
       - [Configurer la spécification source](sources-sdk/config/sourcespec.md)
       - [Configurer la spécification d’exploration](sources-sdk/config/explorespec.md)
    - Guide de l’API des sources en libre-service (SDK par lots) {#self-serve-api}
-      - [Présentation de l’API Sources en libre-service (SDK par lot)](sources-sdk/api/api-overview.md)
+      - [Présentation de l’API des sources en libre-service (SDK par lots)](sources-sdk/api/api-overview.md)
       - [Prise en main](sources-sdk/api/getting-started.md)
       - [Créer une spécification de connexion](sources-sdk/api/create.md)
       - [Mettre à jour une spécification de connexion](sources-sdk/api/update-connection-specs.md)
@@ -321,8 +321,8 @@ ht-degree: 83%
       - [Documenter une source dans Adobe Experience Platform](sources-sdk/documentation/doc-overview.md)
       - [Utiliser l’interface web GitHub pour créer une page de documentation sur les sources](sources-sdk/documentation/github.md)
       - [Utiliser un éditeur de texte dans votre environnement local pour créer une page de documentation sur les sources](sources-sdk/documentation/text-editor.md)
-      - [Modèle d’API en libre-service de documentation](sources-sdk/documentation/template.md)
-      - [Modèle d’interface utilisateur en libre-service de la documentation](sources-sdk/documentation/ui-template.md)
+      - [Modèle d’API de libre-service de documentation](sources-sdk/documentation/template.md)
+      - [Modèle d’interface utilisateur de libre-service de documentation](sources-sdk/documentation/ui-template.md)
 - [Notifications d’exécution de flux](notifications.md)
 - [Liste autorisée d’adresses IP](ip-address-allow-list.md)
 - [Questions fréquentes](./troubleshooting.md)
