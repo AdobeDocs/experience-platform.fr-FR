@@ -5,9 +5,9 @@ user-guide-description: Activez vos données connues et inconnues pour les campa
 description: Ce document répertorie la table des matières des destinations Adobe Experience Platform
 feature: Destinations
 source-git-commit: d046c17a7b376f5c2e2f25c38fac0916ed2dba73
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '985'
-ht-degree: 69%
+ht-degree: 100%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 69%
    * [Supprimer les flux de données de destination](./api/delete-destination-dataflow.md)
 * Guides d’interface utilisateur {#ui}
    * [Espace de travail des destinations](./ui/destinations-workspace.md)
-   * [Créer une connexion de destination](./ui/connect-destination.md)
+   * [Créer une connexion à une destination](./ui/connect-destination.md)
    * Activer les données d’audience vers les destinations {#activate}
       * [Présentation de l’activation](./ui/activation-overview.md)
       * [Activer les données d’audience vers des destinations d’exportation de segments de diffusion en continu](./ui/activate-segment-streaming-destinations.md)
@@ -34,16 +34,16 @@ ht-degree: 69%
       * [Activer les données d’audience vers des destinations d’exportation de profils par lots](./ui/activate-batch-profile-destinations.md)
       * [Activer les données d’audience vers les destinations de requête de profil](./ui/activate-profile-request-destinations.md)
       * [Configurez des destinations de personnalisation pour la personnalisation de la même page et de la page suivante.](./ui/configure-personalization-destinations.md)
-      * [(Version bêta) Exportation de fichiers à la demande vers des destinations par lots à l’aide de l’interface utilisateur de l’Experience Platform](./ui/export-file-now.md)
-      * [(Version bêta) Exportation de jeux de données à l’aide de l’interface utilisateur Experience Platform](./ui/export-datasets.md)
+      * [(Version bêta) Exporter des fichiers à la demande vers des destinations par lots à l’aide de l’interface utilisateur Experience Platform](./ui/export-file-now.md)
+      * [(Version bêta) Exporter des jeux de données à l’aide de l’interface utilisateur Experience Platform](./ui/export-datasets.md)
    * [Afficher les détails de la destination](./ui/destination-details-page.md)
    * [Mettre à jour les comptes de destination](./ui/update-accounts.md)
    * [Supprimer les comptes de destination](./ui/delete-destination-account.md)
-   * [Modification des flux de données d’activation](./ui/edit-activation.md)
+   * [Modifier des flux de données d’activation](./ui/edit-activation.md)
    * [Supprimer les destinations](./ui/delete-destinations.md)
    * [Surveiller les flux de données](./ui/monitor-dataflows.md)
-   * [(Version bêta) Configuration des options de formatage de fichier pour les destinations basées sur des fichiers](./ui/batch-destinations-file-formatting-options.md)
-   * [Abonner aux alertes de destination contextuelles](ui/alerts.md)
+   * [(Beta) Configurer des options de formatage de fichier pour les destinations basées sur des fichiers](./ui/batch-destinations-file-formatting-options.md)
+   * [S’abonner aux alertes de destination contextuelles](ui/alerts.md)
 * Catalogue des destinations {#catalog}
    * [Présentation du catalogue des destinations](./catalog/overview.md)
    * Destinations Adobe {#adobe}
@@ -52,13 +52,13 @@ ht-degree: 69%
       * [Partage de segments Experience Platform](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=fr)
    * Destinations publicitaires {#advertising}
       * [Présentation des destinations publicitaires](./catalog/advertising/overview.md)
-      * [Connexion Adobe Advertising Cloud](./catalog/advertising/adobe-advertising-cloud-connection.md)
+      * [Connexion Adobe Advertising Cloud](./catalog/advertising/adobe-advertising-cloud-connection.md)
       * [Extension Adobe Advertising Cloud](./catalog/advertising/adobe-advertising-cloud.md)
       * [Extension Awin Advertiser Conversion Tag](./catalog/advertising/awin-conversiontag.md)
       * [Extension Awin Advertiser Mastertag](./catalog/advertising/awin-mastertag.md)
       * [Extension Bing Ads Universal Event Tracking (UET)](./catalog/advertising/bing-ads.md)
       * [Extension Branch](./catalog/advertising/branch.md)
-      * [(Version bêta) Connexion aux critères](./catalog/advertising/criteo.md)
+      * [(Version bêta) Connexion Criteo](./catalog/advertising/criteo.md)
       * [Extension DoubleClick Floodlight (Version Beta)](./catalog/advertising/doubleclick-floodlight.md)
       * [Extension Pixel Facebook](./catalog/advertising/facebook-pixel.md)
       * [Extension Flashtalking OneTag](./catalog/advertising/flashtalking.md)
@@ -74,8 +74,8 @@ ht-degree: 69%
       * [Extension Pinterest Conversion Tracking](./catalog/advertising/pinterest-extension.md)
       * [Connexion Liste des Clients Pinterest](./catalog/advertising/pinterest.md)
       * [(Version bêta) Connexion à Snapchat Ads](./catalog/advertising/snap-inc.md)
-      * [Connexion Trade Desk](./catalog/advertising/tradedesk.md)
-      * [(Version bêta) Connexion CRM du bureau de commerce](./catalog/advertising/tradedesk-emails.md)
+      * [Connexion à The Trade Desk](./catalog/advertising/tradedesk.md)
+      * [(Version bêta) Connexion CRM à The Trade Desk](./catalog/advertising/tradedesk-emails.md)
       * [Extension Twitter Universal Website Tag](./catalog/advertising/twitter-uwt.md)
       * [Connexion Yahoo/Verizon DataX](./catalog/advertising/datax.md)
    * Destinations Analytics {#analytics}
@@ -101,17 +101,17 @@ ht-degree: 69%
       * [Extension Yext Conversion Tracking](./catalog/analytics/yext.md)
    * Destinations de stockage dans le cloud {#cloud-storage}
       * [Présentation des destinations de stockage dans le cloud](./catalog/cloud-storage/overview.md)
-      * [Connexion à Amazon Kinesis](./catalog/cloud-storage/amazon-kinesis.md)
+      * [Connexion Amazon Kinesis](./catalog/cloud-storage/amazon-kinesis.md)
       * [Connexion Amazon S3](./catalog/cloud-storage/amazon-s3.md)
       * [Connexion Azure Blob](./catalog/cloud-storage/azure-blob.md)
-      * [(Version bêta) Azure Data Lake Storage Gen2](./catalog/cloud-storage/adls-gen2.md)
-      * [Connexion à Azure Event Hubs](./catalog/cloud-storage/azure-event-hubs.md)
-      * [(Version bêta) Zone d’entrée des données](./catalog/cloud-storage/data-landing-zone.md)
-      * [(Version bêta) Stockage dans le cloud Google](./catalog/cloud-storage/google-cloud-storage.md)
+      * [Azure Data Lake Storage Gen2 (version Bêta)](./catalog/cloud-storage/adls-gen2.md)
+      * [Connexion Azure Event Hubs](./catalog/cloud-storage/azure-event-hubs.md)
+      * [Data Landing Zone (version Bêta)](./catalog/cloud-storage/data-landing-zone.md)
+      * [Google Cloud Storage (version Bêta)](./catalog/cloud-storage/google-cloud-storage.md)
       * [Connexion SFTP](./catalog/cloud-storage/sftp.md)
-      * [LISTE AUTORISÉE des adresses IP pour les destinations de stockage dans le cloud](./catalog/cloud-storage/ip-address-allow-list.md)
-   * Destinations de gestion de la relation client {#crm}
-      * [Connexion CRM Salesforce](./catalog/crm/salesforce.md)
+      * [Liste autorisée d’adresses IP pour les destinations de stockage dans le cloud](./catalog/cloud-storage/ip-address-allow-list.md)
+   * Destinations de la gestion de la relation client (CRM) {#crm}
+      * [Connexion CRM à Salesforce](./catalog/crm/salesforce.md)
       * [Connexion à Microsoft Dynamics 365](./catalog/crm/microsoft-dynamics-365.md)
       * [Connexion sortante](catalog/crm/outreach.md)
    * Destinations Data Management Platform {#data-management}
@@ -125,11 +125,11 @@ ht-degree: 69%
    * Destinations du marketing par e-mail {#email-marketing}
       * [Présentation des destinations du marketing par e-mail](./catalog/email-marketing/overview.md)
       * [Connexion Adobe Campaign](./catalog/email-marketing/adobe-campaign.md)
-      * [Connexion Adobe Campaign Managed Cloud Services](./catalog/email-marketing/adobe-campaign-managed-services.md)
+      * [Connexion à Adobe Campaign Managed Cloud Services](./catalog/email-marketing/adobe-campaign-managed-services.md)
       * [Connexion Orale Eloqua](./catalog/email-marketing/oracle-eloqua.md)
       * [Connexion Oracle Responsys](./catalog/email-marketing/oracle-responsys.md)
-      * [(API) Connexion au Marketing Cloud Salesforce](./catalog/email-marketing/salesforce-marketing-cloud-exact-target.md)
-      * [(Fichiers) Connexion au Marketing Cloud Salesforce](./catalog/email-marketing/salesforce-marketing-cloud.md)
+      * [(API) Connexion à Salesforce Marketing Cloud](./catalog/email-marketing/salesforce-marketing-cloud-exact-target.md)
+      * [(Fichiers) Connexion à Salesforce Marketing Cloud](./catalog/email-marketing/salesforce-marketing-cloud.md)
       * [Connexion à SendGrid](./catalog/email-marketing/sendgrid.md)
    * Extensions de balises {#launch-extensions}
       * [Présentation des extensions de balises](./catalog/launch-extensions/overview.md)
@@ -138,7 +138,7 @@ ht-degree: 69%
       * [Connexion Attributs Airship](./catalog/mobile-engagement/airship-attributes.md)
       * [Connexion Balises Airship](./catalog/mobile-engagement/airship-tags.md)
       * [Connexion Braze](./catalog/mobile-engagement/braze.md)
-      * [Connexion ligne](./catalog/mobile-engagement/line.md)
+      * [Connexion à la ligne](./catalog/mobile-engagement/line.md)
    * Destinations de personnalisation {#personalization}
       * [Présentation des destinations de personnalisation](./catalog/personalization/overview.md)
       * [Connexion Adobe Commerce (version bêta)](./catalog/personalization/adobe-commerce.md)
@@ -160,8 +160,8 @@ ht-degree: 69%
       * [Connexion des audiences correspondantes linkedIn](./catalog/social/linkedin.md)
       * [Connexion [!DNL Twitter Custom Audiences]](./catalog/social/twitter.md)
    * Destinations de diffusion en continu {#streaming}
-      * [Connexion via l’API HTTP](./catalog/streaming/http-destination.md)
-      * [LISTE AUTORISÉE d’adresses IP pour les destinations de diffusion en continu](./catalog/streaming/ip-address-allow-list.md)
+      * [Connexion API HTTP](./catalog/streaming/http-destination.md)
+      * [Liste autorisée d’adresses IP pour les destinations en flux continu](./catalog/streaming/ip-address-allow-list.md)
    * Destinations d’enquête {#survey}
       * [Présentation des destinations d’enquête](./catalog/survey/overview.md)
       * [Destination de l’extension Foresee](./catalog/survey/foresee.md)
@@ -182,9 +182,9 @@ ht-degree: 69%
    * Fonctionnalité de Destination SDK {#functionality}
       * [Options de configuration](./destination-sdk/configuration-options.md)
       * [Configuration de destination de diffusion en continu](./destination-sdk/destination-configuration.md)
-      * [Configuration des destinations basées sur des fichiers](./destination-sdk/file-based-destination-configuration.md)
-      * [Spécifications de serveur et de modèle pour les destinations de diffusion en continu](./destination-sdk/server-and-template-configuration.md)
-      * [Spécifications de fichier et serveur de destinations basées sur des fichiers](./destination-sdk/server-and-file-configuration.md)
+      * [Configuration de destinations basées sur des fichiers](./destination-sdk/file-based-destination-configuration.md)
+      * [Spécifications de serveur et de modèle pour les destinations en flux continu](./destination-sdk/server-and-template-configuration.md)
+      * [Spécifications de serveur et de fichier pour les destinations basées sur des fichiers](./destination-sdk/server-and-file-configuration.md)
       * [Format des messages](./destination-sdk/message-format.md)
       * [Gérer les métadonnées d’audience](./destination-sdk/audience-metadata-management.md)
       * Authentification {#authentication}
@@ -206,26 +206,26 @@ ht-degree: 69%
             * [Opérations de l’API pour le rendu du modèle](./destination-sdk/render-template-api.md)
             * [Opérations de l’API pour les tests de destination](./destination-sdk/destination-testing-api.md)
             * [Opérations de l’API pour la génération d’un profil type](./destination-sdk/sample-profile-generation-api.md)
-         * API de test de destination basé sur les fichiers {#file-based-destination-testing-api}
-            * [API de test de destination basé sur des fichiers - Aperçu](./destination-sdk/file-based-destination-testing-overview.md)
+         * API de test de destination basée sur les fichiers {#file-based-destination-testing-api}
+            * [Présentation de l’API de test de destination basée sur des fichiers](./destination-sdk/file-based-destination-testing-overview.md)
             * [Générer des exemples de profils en fonction d’un schéma source](./destination-sdk/file-based-sample-profile-generation-api.md)
-            * [Test de votre destination basée sur des fichiers avec des exemples de profils](./destination-sdk/file-based-destination-testing-api.md)
-            * [Affichage des résultats détaillés de l’activation](./destination-sdk/file-based-destination-results-api.md)
-            * [Validation des champs de client modélisés](./destination-sdk/file-based-render-template-api.md)
+            * [Testez votre destination basée sur des fichiers avec des exemples de profils](./destination-sdk/file-based-destination-testing-api.md)
+            * [Consulter les résultats détaillés de l’activation](./destination-sdk/file-based-destination-results-api.md)
+            * [Valider les champs client générés par le modèle](./destination-sdk/file-based-render-template-api.md)
    * Guides {#guides}
       * [Utiliser Destination SDK pour configurer une destination de diffusion en continu](./destination-sdk/configure-destination-instructions.md)
-      * [Utiliser la Destination SDK pour configurer une destination basée sur des fichiers](./destination-sdk/configure-file-based-destination-instructions.md)
+      * [Utiliser Destination SDK pour configurer une destination basée sur des fichiers](./destination-sdk/configure-file-based-destination-instructions.md)
       * [Envoyer pour révision une destination créée dans Destination SDK](./destination-sdk/submit-destination.md)
-      * Configuration de destinations basées sur des fichiers {#configure-file-based-destinations}
-         * [Configuration des options de formatage de fichier](/help/destinations/destination-sdk/guides/batch/configure-file-formatting-options.md)
-         * [Configuration d’une destination Amazon S3 avec des options de formatage de fichier prédéfinies et une configuration de nom de fichier personnalisée](../destinations/destination-sdk/guides/batch/configure-amazon-s3-destination-with-predefined-file-formatting.md)
-         * [Configuration d’une destination Amazon S3 avec nom de fichier personnalisé et options de mise en forme](../destinations/destination-sdk/guides/batch/configure-amazon-s3-destination-with-custom-file-formatting.md)
-         * [Configuration d’une destination de stockage Azure Blob avec des options de formatage de fichier personnalisées et une configuration de nom de fichier personnalisée](../destinations/destination-sdk/guides/batch/configure-blob-destination-with-custom-file-formatting.md)
-         * [Configuration d’une destination de stockage Azure Data Lake avec des options de formatage de fichier personnalisées et une configuration de nom de fichier personnalisée](../destinations/destination-sdk/guides/batch/configure-adls-destination-with-custom-file-formatting.md)
-         * [Configuration d’une destination de zone d’entrée de données (DLZ) avec des options de formatage de fichier personnalisées et une configuration de nom de fichier personnalisée](../destinations/destination-sdk/guides/batch/configure-dlz-destination-with-custom-file-formatting.md)
-         * [Configuration d’une destination SFTP avec des options de formatage de fichier prédéfinies et une configuration de nom de fichier personnalisée](../destinations/destination-sdk/guides/batch/configure-sftp-destination-with-predefined-file-formatting.md)
+      * Configurer les destinations basées sur des fichiers {#configure-file-based-destinations}
+         * [Configurer les options de formatage de fichiers](/help/destinations/destination-sdk/guides/batch/configure-file-formatting-options.md)
+         * [Configurer une destination Amazon S3 avec des options de formatage de fichiers prédéfinies et une configuration personnalisée des noms de fichiers](../destinations/destination-sdk/guides/batch/configure-amazon-s3-destination-with-predefined-file-formatting.md)
+         * [Configurer une destination Amazon S3 avec un nom de fichier et des options de formatage personnalisés](../destinations/destination-sdk/guides/batch/configure-amazon-s3-destination-with-custom-file-formatting.md)
+         * [Configurer une destination Azure Blob Storage avec des options de formatage de fichiers personnalisées et une configuration des noms de fichiers personnalisée](../destinations/destination-sdk/guides/batch/configure-blob-destination-with-custom-file-formatting.md)
+         * [Configurer une destination Azure Data Lake Storage avec des options de formatage de fichiers personnalisées et une configuration des noms de fichiers personnalisée](../destinations/destination-sdk/guides/batch/configure-adls-destination-with-custom-file-formatting.md)
+         * [Configurer une destination Data Landing Zone (DLZ) avec des options de formatage de fichiers personnalisées et une configuration des noms de fichiers personnalisée](../destinations/destination-sdk/guides/batch/configure-dlz-destination-with-custom-file-formatting.md)
+         * [Configurer une destination SFTP avec des options de formatage de fichiers prédéfinies et une configuration de noms de fichiers personnalisée](../destinations/destination-sdk/guides/batch/configure-sftp-destination-with-predefined-file-formatting.md)
    * Référence {#reference}
-      * [Limitation de débit et stratégie de reprise pour les destinations de diffusion en continu](./destination-sdk/rate-limiting-retry-policy.md)
+      * [Politique de limitation du débit et de réessai pour les destinations en flux continu](./destination-sdk/rate-limiting-retry-policy.md)
       * [Fonctions de transformation prises en charge](./destination-sdk/supported-functions.md)
    * Documenter votre destination {#document-destination}
       * [Documenter votre destination dans Adobe Experience Platform](./destination-sdk/docs-framework/documentation-instructions.md)
