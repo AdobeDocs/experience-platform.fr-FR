@@ -5,10 +5,10 @@ title: Création et modification de classes dans l’interface utilisateur
 description: Découvrez comment créer et modifier des classes dans l’interface utilisateur de l’Experience Platform.
 topic-legacy: user guide
 exl-id: 1b4c3996-2319-45dd-9edd-a5bcad46578b
-source-git-commit: c83b5616f46f6f7d752979fa66a66fad16f16102
+source-git-commit: 7b642744f12ec33ff45a4b41cdb57bfe37396a56
 workflow-type: tm+mt
-source-wordcount: '999'
-ht-degree: 4%
+source-wordcount: '893'
+ht-degree: 5%
 
 ---
 
@@ -50,10 +50,6 @@ Vous pouvez maintenant commencer. [ajout de champs à la classe](#add-fields), q
 
 ## Modification d’une classe existante {#edit}
 
->[!IMPORTANT]
->
->Les classes personnalisées créées après le 30 avril 2022 ne peuvent pas être modifiées directement et un correctif est actuellement en cours de développement. Pour pallier ce problème, vous pouvez : [création d’un groupe de champs personnalisé](./field-groups.md) et réutilisez-le pour chaque schéma qui utilise la classe personnalisée que vous souhaitez étendre. Les classes personnalisées créées avant le 30 avril 2022 ne sont pas affectées par cette limitation.
-
 >[!NOTE]
 >
 >Seules les classes personnalisées définies par votre organisation peuvent être entièrement modifiées et personnalisées. Pour les classes de base définies par Adobe, seuls les noms d’affichage de leurs champs peuvent être modifiés dans le contexte de schémas individuels. Voir la section sur [modification des noms d’affichage des champs de schéma](./schemas.md#display-names) pour plus d’informations.
@@ -73,10 +69,6 @@ Le [!DNL Schema Editor] s’affiche, avec la structure du schéma affichée dans
 ![](../../images/ui/resources/classes/edit.png)
 
 ## Ajout de champs à une classe {#add-fields}
-
->[!IMPORTANT]
->
->Les classes personnalisées créées après le 30 avril 2022 ne peuvent pas être modifiées directement et un correctif est actuellement en cours de développement. Pour pallier ce problème, vous pouvez : [création d’un groupe de champs personnalisé](./field-groups.md) et réutilisez-le pour chaque schéma qui utilise la classe personnalisée que vous souhaitez étendre. Les classes personnalisées créées avant le 30 avril 2022 ne sont pas affectées par cette limitation.
 
 Une fois que vous disposez d’un schéma qui utilise une classe personnalisée ouverte dans le [!UICONTROL Éditeur de schéma], vous pouvez commencer à ajouter des champs à la classe . Pour ajouter un nouveau champ, sélectionnez le champ **plus (+)** en regard du nom du schéma.
 
