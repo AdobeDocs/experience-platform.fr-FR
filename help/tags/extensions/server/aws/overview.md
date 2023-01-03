@@ -2,9 +2,9 @@
 title: Présentation de l’extension AWS
 description: Découvrez l’extension AWS pour le transfert d’événement dans Adobe Experience Platform.
 exl-id: 826a96aa-2d64-4a8b-88cf-34a0b6c26df5
-source-git-commit: bfbad3c11df64526627e4ce2d766b527df678bca
+source-git-commit: b4ff3dbc9c62dceefdf2b842cafa65132dde41fc
 workflow-type: tm+mt
-source-wordcount: '837'
+source-wordcount: '847'
 ht-degree: 8%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 8%
 >
 >Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
-[[!DNL Amazon Web Services] ([!DNL AWS])](https://aws.amazon.com/) est une plateforme de cloud computing qui offre un large éventail de services tels que l’informatique distribuée, le stockage de base de données, la diffusion de contenu et la gestion de la relation client (CRM).
+[[!DNL Amazon Web Services] ([!DNL AWS])](https://aws.amazon.com/) est une plateforme de cloud computing qui offre un large éventail de services tels que l’informatique distribuée, le stockage de base de données, la diffusion de contenu et les services d’intégration de logiciels en tant que service (SaaS) pour la gestion de la relation client (CRM) et la planification des ressources de l’entreprise (ERP).
 
 Le [!DNL AWS] [transfert d’événement](../../../ui/event-forwarding/overview.md) les leviers d’extension [[!DNL Amazon Kinesis Data Streams]](https://docs.aws.amazon.com/streams/latest/dev/introduction.html) pour envoyer des événements depuis Adobe Experience Platform Edge Network vers [!DNL AWS] pour un traitement ultérieur. Ce guide explique comment installer l’extension et utiliser ses fonctionnalités dans une règle de transfert d’événement.
 
@@ -23,7 +23,7 @@ Le [!DNL AWS] [transfert d’événement](../../../ui/event-forwarding/overview.
 
 Vous devez disposer d’un [!DNL AWS] compte avec un compte existant [!DNL Kinesis] flux de données afin d’utiliser cette extension. Si vous ne disposez pas d’un flux de données préexistant, reportez-vous à la section [!DNL AWS] documentation sur [création d’un nouveau flux de données à l’aide de la fonction [!DNL AWS] Console de gestion](https://docs.aws.amazon.com/streams/latest/dev/how-do-i-create-a-stream.html).
 
-## Installer l’extension {#install}
+## Installation l’extension {#install}
 
 Pour installer le [!DNL AWS] , accédez à l’interface utilisateur de la collecte de données ou à l’interface utilisateur Experience Platform et sélectionnez **[!UICONTROL Transfert d’événement]** dans le volet de navigation de gauche. À partir de là, sélectionnez une propriété à laquelle ajouter l’extension ou créez une propriété à la place.
 
