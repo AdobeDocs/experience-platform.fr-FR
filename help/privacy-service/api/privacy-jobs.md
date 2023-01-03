@@ -5,10 +5,10 @@ title: Point de terminaison de l’API Privacy Jobs
 topic-legacy: developer guide
 description: Découvrez comment gérer les tâches de confidentialité pour les applications Experience Cloud à l’aide de l’API Privacy Service.
 exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
-source-git-commit: b126726aa7f7fe6070693fdecfdac1ec66050aa9
+source-git-commit: 3bb0fc7b2807889d0a759e81c8ff728de3c0cbde
 workflow-type: tm+mt
-source-wordcount: '1429'
-ht-degree: 66%
+source-wordcount: '1451'
+ht-degree: 64%
 
 ---
 
@@ -37,7 +37,7 @@ GET /jobs?regulation={REGULATION}&page={PAGE}&size={SIZE}
 
 | Paramètre | Description |
 | --- | --- |
-| `{REGULATION}` | Le type de réglementation pour lequel vous souhaitez effectuer une requête. Les valeurs acceptées sont les suivantes : <ul><li>`gdpr` (Union européenne)</li><li>`ccpa` (Californie)</li><li>`lgpd_bra` (Brésil)</li><li>`nzpa_nzl` (Nouvelle-Zélande)</li><li>`pdpa_tha` (Thaïlande)</li></ul> |
+| `{REGULATION}` | Le type de réglementation pour lequel vous souhaitez effectuer une requête. Les valeurs acceptées sont les suivantes : <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpra_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`nzpa_nzl`</li><li>`pdpa_tha`</li><li>`vcdpa_usa`</li></ul><br>Consultez la présentation sur [réglementations prises en charge](../regulations/overview.md) pour plus d’informations sur les réglementations de confidentialité que représentent les valeurs ci-dessus. |
 | `{PAGE}` | La page de données à afficher à l’aide d’une numérotation basée sur 0. La valeur par défaut est de `0`. |
 | `{SIZE}` | Le nombre de résultats à afficher sur chaque page. `1` est la valeur par défaut et `100` est le maximum. Dépasser le maximum entraîne le code d’erreur 400 dans l’API. |
 
@@ -161,7 +161,7 @@ curl -X POST \
 | `priority` | Une propriété facultative utilisée par Adobe Analytics qui définit la priorité de traitement des requêtes. Les valeurs acceptées sont `normal` et `low`. Si la valeur `priority` est omise, le comportement par défaut est `normal`. |
 | `analyticsDeleteMethod` | Une propriété facultative qui précise la façon dont Adobe Analytics doit traiter les données personnelles. Deux valeurs possibles sont acceptées pour cet attribut : <ul><li>`anonymize` : toutes les données référencées par la collection donnée des identifiants d’utilisateur sont anonymes. Il s’agit du comportement par défaut si `analyticsDeleteMethod` est omis.</li><li>`purge` : l’ensemble des données est complètement supprimé.</li></ul> |
 | `mergePolicyId` | Lors de l’exécution de demandes d’accès à des informations personnelles pour Real-time Customer Profile (`profileService`), vous pouvez éventuellement fournir l’identifiant de la variable [stratégie de fusion](../../profile/merge-policies/overview.md) que vous souhaitez utiliser pour la combinaison d’identifiants. En spécifiant une stratégie de fusion, les demandes d’accès à des informations personnelles peuvent inclure des informations de segment lors du renvoi de données sur un client. Une seule stratégie de fusion peut être spécifiée par requête. Si aucune stratégie de fusion n’est fournie, les informations de segmentation ne sont pas incluses dans la réponse. |
-| `regulation` **(Obligatoire)** | La réglementation de la tâche de confidentialité. Les valeurs suivantes sont acceptées : <ul><li>`gdpr` (Union européenne)</li><li>`ccpa` (Californie)</li><li>`lgpd_bra` (Brésil)</li><li>`nzpa_nzl` (Nouvelle-Zélande)</li><li>`pdpa_tha` (Thaïlande)</li></ul> |
+| `regulation` **(Obligatoire)** | La réglementation de la tâche de confidentialité. Les valeurs suivantes sont acceptées : <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpra_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`nzpa_nzl`</li><li>`pdpa_tha`</li><li>`vcdpa_usa`</li></ul><br>Consultez la présentation sur [réglementations prises en charge](../regulations/overview.md) pour plus d’informations sur les réglementations de confidentialité que représentent les valeurs ci-dessus. |
 
 {style=&quot;table-layout:auto&quot;}
 

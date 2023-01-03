@@ -5,10 +5,10 @@ title: Gestion des tâches liées à la confidentialité dans l’interface util
 topic-legacy: UI guide
 description: Découvrez comment utiliser l’interface utilisateur du Privacy Service pour coordonner et surveiller les demandes d’accès à des informations personnelles dans différentes applications Experience Cloud.
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
-source-git-commit: 82dea48c732b3ddea957511c22f90bbd032ed9b7
+source-git-commit: 3bb0fc7b2807889d0a759e81c8ff728de3c0cbde
 workflow-type: tm+mt
-source-wordcount: '1100'
-ht-degree: 61%
+source-wordcount: '1151'
+ht-degree: 59%
 
 ---
 
@@ -24,13 +24,25 @@ Le tableau de bord de la variable [!DNL Privacy Service] L’interface utilisate
 
 ### Type de réglementation
 
-[!DNL Privacy Service] prend en charge les demandes de tâche pour plusieurs réglementations de confidentialité :
+[!DNL Privacy Service] prend en charge les demandes de tâche pour plusieurs réglementations de confidentialité. Le tableau suivant répertorie les réglementations prises en charge et leur libellé correspondant, tel qu’il est représenté dans l’interface utilisateur :
 
-* Le [!DNL California Consumer Privacy Act] ([!UICONTROL CCPA])
-* L&#39;Union européenne [!DNL General Data Protection Regulation] ([!UICONTROL RGPD])
-* Thaïlande [!DNL Personal Data Protection Act] ([!UICONTROL PDPA_THA])
-* Le Brésil [!DNL Lei Geral de Proteção de Dados] ([!UICONTROL LGPD_BRA])
-* La Nouvelle-Zélande [!DNL Privacy Act] ([!UICONTROL NZPA_NZL])
+| Libellé de l’interface utilisateur | Régulation |
+| --- | --- |
+| [!UICONTROL CCPA] | La variable [!DNL California Consumer Privacy Act] |
+| [!UICONTROL RGPD] | L&#39;Union européenne [!DNL General Data Protection Regulation] |
+| [!UICONTROL PDPA_THA] | Thaïlande [!DNL Personal Data Protection Act] |
+| [!UICONTROL LGPD_BRA] | Le Brésil [!DNL Lei Geral de Proteção de Dados] |
+| [!UICONTROL NZPA_NZL] | La Nouvelle-Zélande [!DNL Privacy Act] |
+| [!UICONTROL VCDPA_USA] | La variable [!DNL Virginia Consumer Data Protection Act] |
+| [!UICONTROL CPRA_USA] | La variable [!DNL California Consumer Privacy Rights Act (CPRA)] |
+| [!UICONTROL APA_AUS] | La variable [!DNL Australia Privacy Act (Privacy Act)] |
+| [!UICONTROL HIPAA_AUS] | La variable [!DNL Health Insurance Portability and Accountability Act] |
+
+{style=&quot;table-layout:auto&quot;}
+
+>[!NOTE]
+>
+>Consultez la présentation sur [réglementations de confidentialité prises en charge](../regulations/overview.md) pour plus d’informations sur le contexte juridique de chaque réglementation.
 
 Les tâches pour chaque type de réglementation sont suivies séparément. Pour passer d’un type de réglementation à un autre, sélectionnez l’option **[!UICONTROL Type de réglementation]** menu déroulant et sélectionnez la réglementation souhaitée dans la liste.
 

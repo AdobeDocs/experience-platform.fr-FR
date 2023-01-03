@@ -5,10 +5,10 @@ title: Présentation d’Identity Namespace
 topic-legacy: overview
 description: Les espaces de noms d’identité sont des composants du Service d’identités qui servent d’indicateurs du contexte auquel une identité se rapporte. Par exemple, ils distinguent une valeur de "name@email.com" comme adresse électronique ou "443522" comme identifiant CRM numérique.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: 3e073d2c45f88c56473ccc2e3d18a2bbedd4f254
+source-git-commit: 3bb0fc7b2807889d0a759e81c8ff728de3c0cbde
 workflow-type: tm+mt
-source-wordcount: '1627'
-ht-degree: 20%
+source-wordcount: '1642'
+ht-degree: 18%
 
 ---
 
@@ -22,7 +22,7 @@ L’utilisation des espaces de noms d’identité nécessite une compréhension 
 
 - [[!DNL Real-time Customer Profile]](../profile/home.md): Fournit un profil client unifié en temps réel basé sur des données agrégées provenant de plusieurs sources.
 - [[!DNL Identity Service]](./home.md) : profitez d’une meilleure compréhension de vos clients et de leurs comportements en rapprochant des identités entre appareils et systèmes.
-- [[!DNL Privacy Service]](../privacy-service/home.md) : les espaces de noms d’identité sont utilisés pour se conformer au Règlement général sur la protection des données (RGPD), les demandes de RGPD peuvent être faites par rapport à un espace de noms d’identité.
+- [[!DNL Privacy Service]](../privacy-service/home.md): Les espaces de noms d’identité sont utilisés dans les demandes de conformité pour les réglementations de confidentialité juridiques telles que le Règlement général sur la protection des données (RGPD). Chaque demande d’accès à des informations personnelles est relative à un espace de noms afin d’identifier les données des consommateurs qui doivent être affectées.
 
 ## Compréhension des espaces de noms d’identité
 
