@@ -2,10 +2,10 @@
 title: Point d’entrée des composants de règle
 description: Découvrez comment effectuer des appels au point d’entrée /rule_components dans l’API Reactor.
 exl-id: 8a878a89-7f41-45fc-88f3-17f0f743e29c
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: e602f78470fe4eeb2a42e6333ba52096d8a9fe8a
 workflow-type: tm+mt
-source-wordcount: '1205'
-ht-degree: 98%
+source-wordcount: '1190'
+ht-degree: 95%
 
 ---
 
@@ -305,22 +305,22 @@ Vous pouvez créer un composant de règle en effectuant une requête POST.
 **Format d’API**
 
 ```http
-POST /rules/{RULE_ID}/rule_components
+POST /properties/{PROPERTY_ID}/rule_components
 ```
 
 | Paramètre | Description |
 | --- | --- |
-| `RULE_ID` | `id` de la règle pour laquelle vous définissez un composant de règle. |
+| `PROPERTY_ID` | Le `id` de la propriété sous laquelle vous définissez le composant de règle. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Requête**
 
-La requête suivante crée un composant de règle pour la règle spécifiée. L’appel associe également le composant de règle à une extension existante par le biais de la propriété `relationships`. Pour plus d’informations, consultez le guide sur les [relations](../guides/relationships.md).
+La requête suivante crée un composant de règle. Dans la payload, la variable `relationships` associe le composant à des règles spécifiques et à une extension existante. Pour plus d’informations, consultez le guide sur la [relation](../guides/relationships.md).
 
 ```shell
 curl -X POST \
-  https://reactor.adobe.io/rules/RLf7b4f416b2e04ae1ba857ae681fee5bc/rule_components \
+  https://reactor.adobe.io/properties/PR97596432a82549ceb8e2a5d9df05c0e1/rule_components \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -366,7 +366,7 @@ curl -X POST \
 | `attributes.rule_order` | Nombre entier indiquant la priorité de déclenchement de la règle associée. |
 | `attributes.settings` | Un objet JSON de paramétrage représenté sous la forme d’une chaîne. |
 | `attributes.timeout` | Nombre entier indiquant le délai d’expiration de l’action exécutée en séquence. |
-| `relationships` | Objet qui établit les relations nécessaires pour le composant de règle. Deux relations doivent être établies : <ol><li>`extension` : l’extension qui définit ce composant de règle. Il doit s’agir de la même extension que celle du package d’extension indiqué par `delegate_descriptor_id`.</li><li>`rules` : la règle sous laquelle ce composant est défini. Doit être le même ID de règle que celui fourni dans le chemin d’accès de la requête.</li></ol>Pour plus d’informations générales sur les relations, consultez le [guide sur les relations](../guides/relationships.md). |
+| `relationships` | Objet qui établit les relations nécessaires pour le composant de règle. Deux relations doivent être établies : <ol><li>`extension` : l’extension qui définit ce composant de règle. Il doit s’agir de la même extension que celle du package d’extension indiqué par `delegate_descriptor_id`.</li><li>`rules` : la règle sous laquelle ce composant est défini.</li></ol>Pour plus d’informations générales sur les relations, consultez le [guide sur les relations](../guides/relationships.md). |
 | `type` | Le type de ressource en cours de création. Pour ce point d&#39;entrée, la valeur doit être `rule_components`. |
 
 {style=&quot;table-layout:auto&quot;}
