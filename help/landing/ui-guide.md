@@ -5,7 +5,7 @@ title: Présentation de l’interface utilisateur Experience Platform
 topic-legacy: ui guide
 description: Adobe Experience Platform
 exl-id: 47f9a3fb-731d-4ade-8069-faaa18f224dc
-source-git-commit: 9c450f340706040593dfea5292702c4b00dd9852
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1811'
 ht-degree: 2%
@@ -32,7 +32,7 @@ Le tableau de bord des mesures fournit des cartes qui vous donnent des informati
 
 Le **[!UICONTROL Jeux de données]** La section indique le nombre de jeux de données au sein de votre organisation IMS. Ce nombre est mis à jour lors de la création d’un jeu de données. Vous trouverez plus d’informations sur les jeux de données dans la section [présentation des jeux de données](../catalog/datasets/overview.md).
 
-Le **[!UICONTROL Profils]** indique le nombre total de personnes avec des profils au sein de votre organisation IMS, à l’exception des fragments de profil. Ce nombre total de personnes représente l’audience adressable totale et est mis à jour toutes les 24 heures. Vous trouverez plus d’informations sur les profils dans la section [Présentation de Real-time Customer Profile](../profile/home.md).
+Le **[!UICONTROL Profils]** indique le nombre total de personnes avec des profils au sein de votre organisation IMS, à l’exception des fragments de profil. Ce nombre total de personnes représente l’audience adressable totale et est mis à jour toutes les 24 heures. Vous trouverez plus d’informations sur les profils dans la section [Présentation de Real-Time Customer Profile](../profile/home.md).
 
 Le **[!UICONTROL Segments]** indique le nombre total de segments créés dans votre organisation IMS. Ce nombre est mis à jour lors de la création d’un segment. Vous trouverez plus d’informations sur les segments dans la section [Présentation de Segmentation Service](../segmentation/home.md).
 
@@ -128,7 +128,7 @@ Le **[!UICONTROL Destinations]** vous permet de créer, de mettre à jour et de 
 
 ### [!UICONTROL Client]
 
-Le **[!UICONTROL Profils]** vous permet de parcourir les profils client, d’afficher les mesures de profil, de créer et de gérer des stratégies de fusion et d’afficher les schémas d’union. Pour en savoir plus sur l’utilisation de la variable [!UICONTROL Profils] , veuillez lire la section [[!DNL Profile] guide de l’utilisateur](../profile/ui/user-guide.md). Vous trouverez plus d’informations sur Real-time Customer Profile dans la section [Présentation de Real-time Customer Profile](../profile/home.md).
+Le **[!UICONTROL Profils]** vous permet de parcourir les profils client, d’afficher les mesures de profil, de créer et de gérer des stratégies de fusion et d’afficher les schémas d’union. Pour en savoir plus sur l’utilisation de la variable [!UICONTROL Profils] , veuillez lire la section [[!DNL Profile] guide de l’utilisateur](../profile/ui/user-guide.md). Vous trouverez plus d’informations sur Real-time Customer Profile dans la section [Présentation de Real-Time Customer Profile](../profile/home.md).
 
 Le **[!UICONTROL Segments]** vous permet de créer et de gérer des définitions de segment. Pour en savoir plus sur l’utilisation de la variable [!UICONTROL Segments] , veuillez lire la section [guide d’utilisation de la segmentation](../segmentation/ui/overview.md). Vous trouverez plus d’informations sur Segmentation Service dans la section [Présentation de Segmentation Service](../segmentation/home.md).
 

@@ -2,7 +2,7 @@
 title: Cas d’utilisation des attributs dérivés basés sur des déciles
 description: Ce guide décrit les étapes requises pour utiliser Query Service afin de créer des attributs dérivés basés sur des déciles à utiliser avec vos données de profil.
 exl-id: 0ec6b511-b9fd-4447-b63d-85aa1f235436
-source-git-commit: c1ec6f949bd0ab9ec3b1ccc58baf74d8c71deca0
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1508'
 ht-degree: 3%
@@ -11,7 +11,7 @@ ht-degree: 3%
 
 # Cas d’utilisation des attributs dérivés basés sur un décile
 
-Les attributs dérivés facilitent les cas d’utilisation complexes pour l’analyse de données du lac de données qui peuvent être utilisées avec d’autres services Platform en aval ou publiées dans vos données Real-time Customer Profile.
+Les attributs dérivés facilitent les cas d’utilisation complexes pour l’analyse de données à partir du lac de données qui peuvent être utilisées avec d’autres services Platform en aval ou publiées dans vos données Real-time Customer Profile.
 
 Cet exemple de cas d’utilisation montre comment créer des attributs dérivés basés sur des déciles à utiliser avec vos données Real-time Customer Profile. En prenant l’exemple d’un scénario de fidélité des compagnies aériennes, ce guide vous explique comment créer un jeu de données qui utilise des déciles catégoriques pour segmenter et créer des audiences en fonction d’attributs de classement.
 
@@ -27,7 +27,7 @@ Les concepts clés suivants sont illustrés :
 
 Ce guide nécessite une compréhension pratique de [exécution de requête dans Query Service](../best-practices/writing-queries.md) et les composants suivants de Adobe Experience Platform :
 
-* [Présentation de Real-time Customer Profile](../../profile/home.md): Fournit un profil client en temps réel unifié basé sur des données agrégées provenant de plusieurs sources.
+* [Présentation de Real-Time Customer Profile](../../profile/home.md): Fournit un profil client en temps réel unifié basé sur des données agrégées provenant de plusieurs sources.
 * [Principes de base de la composition des schémas](../../xdm/schema/composition.md): Cette section présente les schémas de modèle de données d’expérience (XDM) et les blocs de création, les principes et les bonnes pratiques pour la composition de schémas.
 * [Comment activer un schéma pour Real-time Customer Profile](../../profile/tutorials/add-profile-data.md): Ce tutoriel décrit les étapes nécessaires à l’ajout de données à Real-time Customer Profile.
 * [Définition d’un type de données personnalisé](../../xdm/api/data-types.md): Les types de données sont utilisés comme champs de type référence dans des classes ou des groupes de champs de schéma et permettent l’utilisation cohérente d’une structure à plusieurs champs qui peut être incluse n’importe où dans le schéma.
@@ -67,7 +67,7 @@ Le tableau suivant affiche les exemples de données contenus dans la variable `_
 | C435678623 | sfeldmark1vr@studiopress.com | 2022-01-01 | STATUS_MILES | Nouveau membre | 5000 | FLYER |
 | B789279247 | pgalton32n@barnesandnoble.com | 2022-02-01 | AWARD_MILES | JFK-FRA | 7500 | SILVER |
 | B789279247 | pgalton32n@barnesandnoble.com | 2022-02-01 | STATUS_MILES | JFK-FRA | 7500 | SILVER |
-| B789279247 | pgalton32n@barnesandnoble.com | 2022-02-10 | AWARD_MILES | FRA-JFK | 5 000 | SILVER |
+| B789279247 | pgalton32n@barnesandnoble.com | 2022-02-10 | AWARD_MILES | FRA-JFK | 5000 | SILVER |
 | A123487284 | rritson1zn@sciencedaily.com | 2022-01-07 | STATUS_MILES | Nouvelle carte de crédit | 10000 | FLYER |
 
 {style=&quot;table-layout:auto&quot;}
@@ -82,7 +82,7 @@ Créez un &quot;schéma de décision de fidélité aérienne&quot; pour créer u
 
 ### Activation du schéma pour Real-time Customer Profile
 
-Les données ingérées dans Experience Platform pour être utilisées par Real-time Customer Profile doivent être conformes à [un schéma de modèle de données d’expérience (XDM) activé pour Profile ;](../../xdm/ui/resources/schemas.md). Pour qu’un schéma soit activé pour Profile, il doit implémenter la classe XDM ExperienceEvent ou XDM Individual Profile.
+Les données ingérées dans Experience Platform pour être utilisées par Real-time Customer Profile doivent être conformes à la section [un schéma de modèle de données d’expérience (XDM) activé pour Profile ;](../../xdm/ui/resources/schemas.md). Pour qu’un schéma soit activé pour Profile, il doit implémenter la classe XDM ExperienceEvent ou XDM Individual Profile.
 
 [Activation de votre schéma pour une utilisation dans Real-time Customer Profile à l’aide de l’API Schema Registry](../../xdm/tutorials/create-schema-api.md) ou le [Interface utilisateur de l’éditeur de schémas](../../xdm/tutorials/create-schema-ui.md).  Vous trouverez des instructions détaillées sur l’activation d’un schéma pour Profile dans leur documentation respective.
 
@@ -295,8 +295,8 @@ Une corrélation entre le numéro de classement et le centile est garantie dans 
 
 ### Exécuter le modèle de requête
 
-Exécutez la requête pour renseigner le jeu de données de décile. Vous pouvez également enregistrer la requête en tant que modèle et la planifier pour qu’elle s’exécute à un rythme. Lors de l’enregistrement en tant que modèle, la requête peut également être mise à jour afin d’utiliser le modèle de création et d’insertion qui fait référence au modèle `table_exists` . Plus d’informations sur l’utilisation de la variable `table_exists`se trouve dans la fonction [Guide de syntaxe SQL](../sql/syntax.md#table-exists).
+Exécutez la requête pour renseigner le jeu de données de décile. Vous pouvez également enregistrer la requête en tant que modèle et la planifier pour qu’elle s’exécute à un rythme. Lors de l’enregistrement en tant que modèle, la requête peut également être mise à jour afin d’utiliser le modèle de création et d’insertion qui fait référence au modèle `table_exists` . Informations supplémentaires sur l’utilisation de la variable `table_exists`se trouve dans la fonction [Guide de syntaxe SQL](../sql/syntax.md#table-exists).
 
 ## Étapes suivantes
 
-L’exemple de cas d’utilisation fourni ci-dessus met en évidence les étapes à suivre pour rendre les attributs de décile disponibles dans Real-time Customer Profile. Cela permet à Segmentation Service, soit par le biais d’une interface utilisateur, soit via une API RESTful, de générer des audiences en fonction de ces compartiments déciles. Voir [Présentation de Segmentation Service](../../segmentation/home.md) pour plus d’informations sur la création, l’évaluation et l’accès aux segments.
+L’exemple de cas d’utilisation fourni ci-dessus met en évidence les étapes à suivre pour rendre les attributs de décile disponibles dans Real-Time Customer Profile. Cela permet à Segmentation Service, soit par le biais d’une interface utilisateur, soit via une API RESTful, de générer des audiences en fonction de ces compartiments déciles. Voir [Présentation de Segmentation Service](../../segmentation/home.md) pour plus d’informations sur la création, l’évaluation et l’accès aux segments.

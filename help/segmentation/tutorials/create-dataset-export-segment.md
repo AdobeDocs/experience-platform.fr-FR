@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: Ce tutoriel décrit les étapes nécessaires à la création d’un jeu de données qui peut être utilisé pour exporter un segment ciblé à l’aide de l’interface utilisateur d’Experience Platform.
 exl-id: 1cd16e43-b050-42ba-a894-d7ea477b65f3
-source-git-commit: f7d204442c8bc2355671ba2adffff4c40ce08784
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '757'
 ht-degree: 25%
@@ -37,7 +37,7 @@ Sélectionner **[!UICONTROL Jeux de données]** dans le volet de navigation de g
 
 >[!NOTE]
 >
->Sélectionnez l’icône de filtre en regard de la barre de recherche pour utiliser les fonctionnalités de filtrage afin de n’afficher que les jeux de données activés pour [!DNL Real-time Customer Profile].
+>Sélectionnez l’icône de filtre en regard de la barre de recherche pour utiliser les fonctionnalités de filtrage afin de n’afficher que les jeux de données activés pour [!DNL Real-Time Customer Profile].
 
 ![L’espace de travail des jeux de données s’affiche.](../images/tutorials/segment-export-dataset/browse.png)
 
@@ -57,7 +57,7 @@ Pour sélectionner le [!DNL XDM Individual Profile Union Schema] pour l’utilis
 
 >[!NOTE]
 >
->Bien que les schémas d’union participent par définition à Real-time Customer Profile, ils sont répertoriés comme &quot;Non activé&quot; en raison du fait qu’ils ne sont pas activés pour Profile de la même manière que les schémas traditionnels.
+>Bien que les schémas d’union participent par définition à Real-Time Customer Profile, ils sont répertoriés comme &quot;Non activé&quot; en raison du fait qu’ils ne sont pas activés pour Profile de la même manière que les schémas traditionnels.
 
 Sélectionnez le bouton radio en regard de **[!UICONTROL XDM Individual Profile]**, puis sélectionnez **[!UICONTROL Suivant]**.
 

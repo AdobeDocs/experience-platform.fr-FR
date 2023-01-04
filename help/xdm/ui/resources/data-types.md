@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: Découvrez comment créer et modifier des types de données dans l’interface utilisateur de l’Experience Platform.
 exl-id: 2c917154-c425-463c-b8c8-04ba37d9247b
-source-git-commit: 14128b247b003a54cb0d91167bb46fccf16ed799
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1162'
 ht-degree: 0%
@@ -56,7 +56,7 @@ Ce tutoriel crée un type de données qui décrit une propriété &quot;restaura
 
 >[!NOTE]
 >
->Une fois qu’un type de données existant est utilisé dans un schéma qui a été activé pour une utilisation dans Real-time Customer Profile, seules des modifications non destructives peuvent être apportées par la suite à ce type de données. Voir [règles d’évolution des schémas](../../schema/composition.md#evolution) pour plus d’informations.
+>Une fois qu’un type de données existant est utilisé dans un schéma qui a été activé pour une utilisation dans Real-Time Customer Profile, seules des modifications non destructives peuvent être apportées par la suite à ce type de données. Voir [règles d’évolution des schémas](../../schema/composition.md#evolution) pour plus d’informations.
 
 Seuls les types de données personnalisés définis par votre organisation peuvent être modifiés. Pour réduire la liste affichée, sélectionnez l’icône de filtre (![Icône Filtrer](../../images/ui/resources/data-types/filter.png)) pour afficher les commandes de filtrage basées sur [!UICONTROL Propriétaire]. Sélectionner **[!UICONTROL Client]** pour afficher uniquement les types de données personnalisés appartenant à votre organisation.
 
@@ -66,7 +66,7 @@ Sélectionnez le type de données à modifier dans la liste pour ouvrir le rail 
 
 ## Ajouter des champs au type de données {#add-fields}
 
-Pour commencer à ajouter des champs au type de données, sélectionnez la variable **plus (+)** en regard du champ de niveau racine dans la zone de travail. Un nouveau champ s’affiche ci-dessous et le rail de droite se met à jour pour afficher les commandes du nouveau champ.
+Pour commencer à ajouter des champs au type de données, sélectionnez la variable **plus (+)** en regard du champ de niveau racine dans la zone de travail. Un nouveau champ s’affiche en dessous et le rail de droite se met à jour pour afficher les commandes du nouveau champ.
 
 ![](../../images/ui/resources/data-types/new-field.png)
 

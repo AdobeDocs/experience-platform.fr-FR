@@ -4,7 +4,7 @@ title: Guide du tableau de bord des segments
 description: Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur les segments créés par votre organisation.
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: e5a4fddbd7f5b14280e283871d8b66a2e2f2407d
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2105'
 ht-degree: 98%
@@ -99,7 +99,7 @@ Pour en savoir plus sur chacun des widgets standards disponibles, sélectionnez 
 
 Le widget **[!UICONTROL Taille de l’audience]** affiche le nombre total de profils fusionnés dans le segment sélectionné au moment de la prise de l’instantané. Ce nombre est le résultat de l’application de la stratégie de fusion de segments à vos données de profil afin de fusionner les fragments de profil pour former un seul profil pour chaque individu du segment.
 
-Pour plus d’informations sur les fragments et les profils fusionnés, reportez-vous à la section [Présentation de Profil client en temps réel](../../profile/home.md).
+Pour plus d&#39;informations sur les fragments et les profils fusionnés, reportez-vous à la section [Présentation de Real-Time Customer Profile](../../profile/home.md).
 
 ![Présentation du tableau de bord Segments avec le widget Taille de l’audience en surbrillance.](../images/segments/audience-size.png)
 

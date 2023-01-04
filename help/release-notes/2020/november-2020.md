@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: November 10, 2020
 author: crhoades, ens25212
 exl-id: 29179b56-e49a-44e8-8c64-a7c383c2eaaf
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2184'
-ht-degree: 27%
+ht-degree: 26%
 
 ---
 
@@ -29,7 +29,7 @@ Mises à jour des fonctionnalités existantes :
 - [[!DNL Data Science Workspace]](#dsw)
 - [[!DNL Destinations] Service](#destinations)
 - [[!DNL Intelligent Services]](#intelligent-services)
-- [[!DNL Real-time Customer Profile]](#profile)
+- [[!DNL Real-Time Customer Profile]](#profile)
 - [[!DNL Sources]](#sources)
 
 ## Migration du lac de données Adobe Experience Platform {#migration}
@@ -40,14 +40,14 @@ Pour plus d’informations, veuillez lire la [Guide de migration du lac de donn�
 
 ## [!DNL Access control] {#access-control}
 
-[!DNL Experience Platform] exploite les profils de produit [Adobe Admin Console](https://adminconsole.adobe.com) pour lier les utilisateurs à des autorisations et des environnements de test. Les autorisations contrôlent l’accès à de nombreuses fonctionnalités de Platform, notamment la modélisation des données, la gestion des profils et l’administration des environnements de test.
+[!DNL Experience Platform] exploite les profils de produit [Adobe Admin Console](https://adminconsole.adobe.com) pour lier les utilisateurs à des autorisations et des sandbox. Les autorisations contrôlent l’accès à de nombreuses fonctionnalités de Platform, notamment la modélisation des données, la gestion des profils et l’administration des environnements de test.
 
 **Fonctionnalités clés**
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
 | Autorisations | Dans le [!DNL Admin Console], l’onglet dans un [!DNL Platform] le profil de produit vous permet de personnaliser ce qui [!DNL Platform] Les fonctionnalités sont disponibles pour les utilisateurs associés à ce profil. Les catégories d’autorisations disponibles sont les suivantes : **[!UICONTROL Modélisation des données]**, **[!UICONTROL Data Management]**, **[!UICONTROL Gestion des profils]**, **[!UICONTROL Identity Management]**, **[!UICONTROL Surveillance des données]**, **[!UICONTROL Sandbox Administration]**, **[!UICONTROL Destinations]**, **[!UICONTROL Ingestion des données]**, **[!UICONTROL Data Science Workspace]**, **[!UICONTROL Query Service]**, et **[!UICONTROL Gouvernance des données]**. |
-| Accès aux environnements de test | L’onglet **[!UICONTROL Autorisations]** d’un profil de produit peut accorder aux utilisateurs l’accès à des environnements de test spécifiques. [!DNL Platform] Consultez la section sur les [environnements de test](#sandboxes) ci-dessous pour plus d’informations. |
+| Accès aux sandbox | L’onglet **[!UICONTROL Autorisations]** d’un profil de produit peut accorder aux utilisateurs l’accès à des environnements de test spécifiques. [!DNL Platform] Consultez la section sur les [environnements de test](#sandboxes) ci-dessous pour plus d’informations. |
 
 Pour plus d’informations, consultez la [présentation du contrôle d’accès](../../access-control/home.md).
 
@@ -60,7 +60,7 @@ Pour plus d’informations, consultez la [présentation du contrôle d’accès]
 | Fonctionnalité | Description |
 | ------- | ----------- |
 | Bibliothèque d’offres centralisée | Interface dans laquelle vous créez et gérez les différents éléments qui composent vos offres, et définissez leurs règles et contraintes. |
-| Moteur de décision d’offre | Le moteur de décision d’offre tire parti de [!DNL Platform] data et [!DNL Real-time Customer Profiles], ainsi que la bibliothèque des offres, afin de sélectionner l’heure, les clients et les canaux auxquels les offres seront diffusées. |
+| Moteur de décision d’offre | Le moteur de décision d’offre tire parti de [!DNL Platform] data et [!DNL Real-Time Customer Profiles], ainsi que la bibliothèque des offres, afin de sélectionner l’heure, les clients et les canaux auxquels les offres seront diffusées. |
 
 Pour plus d’informations, reportez-vous à la section [[!DNL Offer Decisioning]](https://experienceleague.adobe.com/docs/offer-decisioning/using/offer-decisioning-home.html?lang=fr) documentation.
 
@@ -181,7 +181,7 @@ Pour plus d’informations, veuillez lire la [Présentation de Customer AI](../.
 
 ## Profil client en temps réel {#profile}
 
-Adobe Experience Platform vous permet d’offrir aux clients des expériences coordonnées, cohérentes et pertinentes, quel que soit l’endroit ou le moment où ils interagissent avec votre marque. Profil client en temps réel offre une vue d’ensemble de chaque client qui combine des données issues de plusieurs canaux, notamment des données en ligne, hors ligne, CRM et tierces. [!DNL Profile] vous permet de consolider vos données client disparates en une vue unifiée offrant un compte horodaté et exploitable de chaque interaction client.
+Adobe Experience Platform vous permet d’offrir aux clients des expériences coordonnées, cohérentes et pertinentes, quel que soit l’endroit ou le moment où ils interagissent avec votre marque. Real-Time Customer Profile offre une vue d’ensemble de chaque client qui combine des données issues de plusieurs canaux, notamment des données en ligne, hors ligne, CRM et tierces. [!DNL Profile] vous permet de consolider vos données client disparates en une vue unifiée offrant un compte horodaté et exploitable de chaque interaction client.
 
 **Fonctionnalités clés**
 
@@ -190,7 +190,7 @@ Adobe Experience Platform vous permet d’offrir aux clients des expériences 
 | Workflow des stratégies de fusion mis à jour | Platform a mis à niveau la configuration de la stratégie de fusion vers un nouveau workflow par étapes. Ce workflow permet aux utilisateurs de rassembler des fragments de données provenant de plusieurs jeux de données Profile et de définir la priorité de la manière dont les données sont fusionnées dans ces jeux de données afin de créer une vue d’ensemble exhaustive de chaque individu. Les utilisateurs peuvent fusionner des jeux de données XDM Individual Profile sélectionnés en sélectionnant la méthode de fusion appropriée (ordre d’horodatage ou priorité du jeu de données) et en ajoutant des jeux de données ExperienceEvent aux jeux de données Profile. |
 | Vue du schéma d’union | Dans l’interface utilisateur de l’Experience Platform, les utilisateurs peuvent trouver plus facilement des informations concernant tous les schémas et jeux de données contribuant au schéma d’union, ainsi que des attributs de clé de surface tels que les champs d’identité et de relation. Ces mises à jour améliorent la possibilité de dépanner et de valider que les profils sont correctement configurés, que les identités sont correctement regroupées et que les données ont été ingérées avec succès. |
 
-Pour plus d’informations sur Real-time Customer Profile, notamment des tutoriels et des bonnes pratiques pour travailler avec [!DNL Profile] data, veuillez lire la [Présentation de Real-time Customer Profile](../../profile/home.md).
+Pour plus d’informations sur Real-time Customer Profile, notamment des tutoriels et des bonnes pratiques pour travailler avec [!DNL Profile] data, veuillez lire la [Présentation de Real-Time Customer Profile](../../profile/home.md).
 
 ## [!DNL Sources] {#sources}
 

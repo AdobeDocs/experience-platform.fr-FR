@@ -2,7 +2,7 @@
 title: Type de données source B2B
 description: Ce document présente un aperçu du type de données XDM (Source Experience Data Model) B2B.
 exl-id: 01b7d41c-1ab6-4cbc-b9b3-77b6af69faf3
-source-git-commit: edf7afc5db219430232a3226dc691570b50a32bd
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '273'
 ht-degree: 8%
@@ -13,7 +13,7 @@ ht-degree: 8%
 
 [!UICONTROL Source B2B] est un type de données XDM (Experience Data Model) standard qui représente un identifiant composite pour une entité B2B (telle qu’une [account](../classes/b2b/business-account.md), un [occasion](../classes/b2b/business-opportunity.md)ou un [campaign](../classes/b2b/business-campaign.md)).
 
-Lorsque vous vous fiez uniquement aux identifiants basés sur des chaînes, il peut y avoir des chevauchements entre les identifiants sur plusieurs systèmes (par exemple, une opportunité peut se voir attribuer un identifiant de chaîne sur un système CRM, mais ce même identifiant peut faire référence à une opportunité complètement différente). Cela peut entraîner des conflits de données lors de la fusion des données dans [Real-time Customer Profile](../../profile/home.md).
+Lorsque vous vous fiez uniquement aux identifiants basés sur des chaînes, il peut y avoir des chevauchements entre les identifiants sur plusieurs systèmes (par exemple, une opportunité peut se voir attribuer un identifiant de chaîne sur un système CRM, mais ce même identifiant peut faire référence à une opportunité complètement différente). Cela peut entraîner des conflits de données lors de la fusion des données dans [Profil client en temps réel](../../profile/home.md).
 
 Le [!UICONTROL Source B2B] Le type de données vous permet d’utiliser l’identifiant de chaîne d’origine d’une entité et de le combiner avec des informations contextuelles spécifiques à la source afin de vous assurer qu’il reste entièrement unique dans le système Platform, quelle que soit la source d’où il provient.
 

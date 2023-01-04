@@ -6,7 +6,7 @@ description: Ce document fournit un tutoriel sur la définition d’une relation
 topic-legacy: tutorial
 type: Tutorial
 exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1173'
 ht-degree: 22%
@@ -32,7 +32,7 @@ ht-degree: 22%
 
 Comprendre les relations entre vos clients et leurs interactions avec votre marque sur divers canaux est un aspect important d’Adobe Experience Platform. Définir ces relations au sein de la structure de votre [!DNL Experience Data Model] Les schémas (XDM) vous permettent d’obtenir des informations complexes sur les données de vos clients.
 
-Bien que les relations de schéma puissent être déduites par l’utilisation du schéma d’union et [!DNL Real-time Customer Profile], cela s’applique uniquement aux schémas qui partagent la même classe. Pour établir une relation entre deux schémas appartenant à des classes différentes, un champ de relation dédié doit être ajouté à un schéma source, qui référence l’identité d’un schéma de destination.
+Bien que les relations de schéma puissent être déduites par l’utilisation du schéma d’union et [!DNL Real-Time Customer Profile], cela s’applique uniquement aux schémas qui partagent la même classe. Pour établir une relation entre deux schémas appartenant à des classes différentes, un champ de relation dédié doit être ajouté à un schéma source, qui référence l’identité d’un schéma de destination.
 
 Ce document fournit un tutoriel sur la définition d’une relation entre deux schémas à l’aide de l’éditeur de schémas dans la variable [!DNL Experience Platform] de l’interface utilisateur. Les étapes de la définition des relations de schémas à l’aide de l’API sont décrites dans le tutoriel sur la [définition d’une relation à l’aide de l’API Schema Registry](relationship-api.md).
 
@@ -54,7 +54,7 @@ Vous devez avoir déjà créé les deux schémas qui seront définis dans la rel
 
 >[!IMPORTANT]
 >
->Pour établir une relation, les deux schémas doivent avoir défini des identités Principales et être activés pour [!DNL Real-time Customer Profile]. Voir la section sur [activation d’un schéma à utiliser dans Profile](./create-schema-ui.md#profile) dans le tutoriel sur la création de schémas si vous avez besoin de conseils sur la configuration de vos schémas en conséquence.
+>Pour établir une relation, les deux schémas doivent avoir défini des identités Principales et être activés pour [!DNL Real-Time Customer Profile]. Voir la section sur [activation d’un schéma à utiliser dans Profile](./create-schema-ui.md#profile) dans le tutoriel sur la création de schémas si vous avez besoin de conseils sur la configuration de vos schémas en conséquence.
 
 Les relations de schéma sont représentées par un champ dédié dans un **schéma source** qui fait référence à un autre champ d’un **schéma de destination**. Dans les étapes suivantes, &quot;[!DNL Loyalty Members]&quot; sera le schéma source, tandis que &quot;[!DNL Hotels]&quot; agira comme schéma de destination.
 
@@ -62,7 +62,7 @@ Les relations de schéma sont représentées par un champ dédié dans un **sch�
 
 ### [!DNL Loyalty Members] schema
 
-Le schéma source &quot;[!DNL Loyalty Members]&quot; est basé sur la variable [!DNL XDM Individual Profile] et est le schéma qui a été créé dans le tutoriel pour [création d’un schéma dans l’interface utilisateur](create-schema-ui.md). Il comprend un `loyalty` sous `_tenantId` qui comprend plusieurs champs spécifiques à la fidélité. Un de ces champs, `loyaltyId`, sert d’identité Principale pour le schéma sous le [!UICONTROL Email] espace de noms. Comme vous pouvez le voir sous **[!UICONTROL Propriétés du schéma]**, ce schéma a été activé pour une utilisation dans [!DNL Real-time Customer Profile].
+Le schéma source &quot;[!DNL Loyalty Members]&quot; est basé sur la variable [!DNL XDM Individual Profile] et est le schéma qui a été créé dans le tutoriel pour [création d’un schéma dans l’interface utilisateur](create-schema-ui.md). Il comprend un `loyalty` sous `_tenantId` qui comprend plusieurs champs spécifiques à la fidélité. Un de ces champs, `loyaltyId`, sert d’identité Principale pour le schéma sous le [!UICONTROL Email] espace de noms. Comme vous pouvez le voir sous **[!UICONTROL Propriétés du schéma]**, ce schéma a été activé pour une utilisation dans [!DNL Real-Time Customer Profile].
 
 ![](../images/tutorials/relationship/loyalty-members.png)
 
@@ -80,7 +80,7 @@ Pour participer à une relation, le schéma de destination doit avoir une identi
 >
 >Pour savoir comment créer des espaces de noms d’identité personnalisés, reportez-vous à la section [Documentation d’Identity Service](../../identity-service/namespaces.md#manage-namespaces).
 
-Une fois l’identité Principale définie, le schéma de destination doit être activé pour [!DNL Real-time Customer Profile].
+Une fois l’identité Principale définie, le schéma de destination doit être activé pour [!DNL Real-Time Customer Profile].
 
 ![Activation pour Profile](../images/tutorials/relationship/hotel-profile.png)
 

@@ -5,7 +5,7 @@ title: Définition des champs d’identité dans l’interface utilisateur
 description: Découvrez comment définir un champ d’identité dans l’interface utilisateur de l’Experience Platform.
 topic-legacy: user guide
 exl-id: 11a53345-4c3f-4537-b3eb-ee7a5952df2a
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '575'
 ht-degree: 9%
@@ -18,11 +18,11 @@ Dans le modèle de données d’expérience (XDM), un champ d’identité repré
 
 ## Conditions préalables
 
-Les champs d’identité sont un composant essentiel de la manière dont les graphiques d’identités client sont créés dans Platform, ce qui affecte finalement la manière dont Real-time Customer Profile fusionne des fragments de données disparates pour obtenir une vue d’ensemble complète du client. Avant de définir des champs d’identité dans vos schémas, reportez-vous à la documentation suivante pour en savoir plus sur les services clés et les concepts liés aux champs d’identité :
+Les champs d’identité sont un composant essentiel de la manière dont les graphiques d’identités client sont créés dans Platform, ce qui affecte finalement la manière dont Real-Time Customer Profile fusionne des fragments de données disparates pour obtenir une vue d’ensemble complète du client. Avant de définir des champs d’identité dans vos schémas, reportez-vous à la documentation suivante pour en savoir plus sur les services clés et les concepts liés aux champs d’identité :
 
 * [Adobe Experience Platform Identity Service](../../../identity-service/home.md) : associe les identités des appareils et des systèmes, en liant les jeux de données en fonction des champs d’identité définis par les schémas XDM auxquels ils se conforment.
    * [Espaces de noms d’identité](../../../identity-service/namespaces.md) : définissent les différents types d’informations d’identité qui peuvent être associés à une seule personne et constituent un composant obligatoire pour chaque champ d’identité.
-* [Real-time Customer Profile](../../../profile/home.md): tire parti des graphiques d’identités des clients pour fournir un profil client unifié basé sur des données agrégées provenant de plusieurs sources, mis à jour en temps quasi réel.
+* [Profil client en temps réel](../../../profile/home.md): tire parti des graphiques d’identités des clients pour fournir un profil client unifié basé sur des données agrégées provenant de plusieurs sources, mis à jour en temps quasi réel.
 
 ## Définition d’un champ d’identité
 
@@ -34,7 +34,7 @@ D’autres contrôles s’affichent après avoir coché la case. Si vous souhait
 
 >[!NOTE]
 >
->Un schéma unique peut comporter de nombreux champs d’identité définis, mais ne peut comporter qu’une seule identité Principale. Tous les champs d’identité (Principaux ou non) contribuent au graphique d’identités pour un client individuel, mais Real-time Customer Profile utilise uniquement la Principale identité comme source de vérité lors de la fusion de fragments de données. Si vous souhaitez activer un schéma à utiliser dans Profile, une identité Principale doit être définie pour le schéma.
+>Un schéma unique peut comporter de nombreux champs d’identité définis, mais ne peut comporter qu’une seule identité Principale. Tous les champs d’identité (Principaux ou non) contribuent au graphique d’identités pour un client individuel, mais Real-Time Customer Profile utilise uniquement l’identité Principale comme source de vérité lors de la fusion de fragments de données. Si vous souhaitez activer un schéma à utiliser dans Profile, une identité Principale doit être définie pour le schéma.
 
 Sous **[!UICONTROL Espace de noms d’identité]**, utilisez le menu déroulant pour sélectionner l’espace de noms approprié pour le champ d’identité. Les espaces de noms standard fournis par Adobe sont répertoriés, ainsi que les espaces de noms personnalisés définis par votre organisation.
 

@@ -5,7 +5,7 @@ title: Point de terminaison de l’API des tâches d’exportation de segments
 topic-legacy: developer guide
 description: Les tâches d’exportation sont des processus asynchrones utilisés pour conserver les membres du segment d’audience dans des jeux de données. Vous pouvez utiliser le point de terminaison /export/jobs dans l’API Adobe Experience Platform Segmentation Service, qui vous permet de récupérer, créer et annuler des tâches d’exportation par programmation.
 exl-id: 5b504a4d-291a-4969-93df-c23ff5994553
-source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1682'
 ht-degree: 35%
@@ -18,7 +18,7 @@ Les tâches d’exportation sont des processus asynchrones utilisés pour conser
 
 >[!NOTE]
 >
->Ce guide couvre l’utilisation des traitements d’exportation dans la variable [!DNL Segmentation API]. Pour plus d’informations sur la gestion des traitements d’exportation pour [!DNL Real-time Customer Profile] data, voir le guide sur [tâches d’exportation dans l’API Profile](../../profile/api/export-jobs.md)
+>Ce guide couvre l’utilisation des traitements d’exportation dans la variable [!DNL Segmentation API]. Pour plus d’informations sur la gestion des traitements d’exportation pour [!DNL Real-Time Customer Profile] data, voir le guide sur [tâches d’exportation dans l’API Profile](../../profile/api/export-jobs.md)
 
 ## Prise en main
 

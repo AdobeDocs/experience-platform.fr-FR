@@ -5,7 +5,7 @@ title: Prise en main des API Adobe Experience Platform
 topic-legacy: api guide
 description: Adobe Experience Platform fournit des services d’API étroitement liés les uns aux autres. Ce guide contient des informations sur les services disponibles, les en-têtes requis pour les opérations CRUD, les messages d’erreur, les collections Postman et des exemples d’appels API.
 exl-id: a362bcb4-a908-43a8-abd3-0e1d21cb9117
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1379'
 ht-degree: 30%
@@ -130,7 +130,7 @@ Pour plus d’informations sur des points de terminaison spécifiques dans les A
 | [[!DNL Policy Service] Guide de l’API](.././data-governance/api/overview.md) <br> (Gouvernance des données) | Le [!DNL Policy Service] L’API vous permet de créer et de gérer des libellés et des stratégies d’utilisation des données afin de déterminer quelles actions marketing peuvent être entreprises concernant les données qui contiennent certains libellés d’utilisation des données. Pour appliquer des libellés aux jeux de données et aux champs, reportez-vous à la section [[!DNL Dataset Service] API](.././data-governance/labels/dataset-api.md) guide |
 | [[!DNL Privacy Service] Guide des API](.././privacy-service/api/getting-started.md) | Le [!DNL Privacy Service] L’API permet aux développeurs de créer et de gérer des demandes de clients pour accéder à leurs données personnelles ou les supprimer dans des applications Experience Cloud, conformément aux réglementations légales en matière de confidentialité. |
 | [[!DNL Query Service] Guide des API](.././query-service/api/getting-started.md) | Le [!DNL Query Service] L’API permet aux développeurs d’interroger leurs données Adobe Experience Platform à l’aide de SQL standard. |
-| [[!DNL Real-time Customer Profile] Guide des API](.././profile/api/overview.md) | L’API Real-time Customer Profile permet aux développeurs d’explorer et d’utiliser les données de profil, notamment d’afficher des profils, de créer et de mettre à jour des stratégies de fusion, d’exporter ou d’échantillonner des données de profil et de supprimer des données de profil qui ne sont plus requises ou qui ont été ajoutées par erreur. |
+| [[!DNL Real-Time Customer Profile] Guide des API](.././profile/api/overview.md) | L’API Real-time Customer Profile permet aux développeurs d’explorer et d’utiliser les données de profil, notamment d’afficher des profils, de créer et de mettre à jour des stratégies de fusion, d’exporter ou d’échantillonner des données de profil et de supprimer des données de profil qui ne sont plus requises ou qui ont été ajoutées par erreur. |
 | [Guide de l’API Sandbox](.././sandboxes/api/getting-started.md) | L’API Sandbox permet aux développeurs de gérer par programmation les environnements de test virtuels isolés dans Adobe Experience Platform. |
 | [[!DNL Schema Registry] Guide de l’API](.././xdm/api/overview.md) <br> (XDM) | Le [!DNL Schema Registry] L’API permet aux développeurs de gérer par programmation tous les schémas et les ressources XDM (Experience Data Model) associées dans Adobe Experience Platform. |
 | [[!DNL Segmentation Service] Guide des API](.././segmentation/api/overview.md) | Le [!DNL Segmentation Service] L’API permet aux développeurs de gérer par programmation les opérations de segmentation dans Adobe Experience Platform. Cela inclut la création de segments et la génération d’audiences à partir de vos données Real-time Customer Profile. |

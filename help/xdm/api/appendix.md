@@ -5,7 +5,7 @@ title: Annexe du guide de l’API Schema Registry
 description: Ce document fournit des informations supplémentaires relatives au travail avec l’API Schema Registry.
 topic-legacy: developer guide
 exl-id: 2ddc7fe8-dd0b-4cf9-8561-e89fcdadbfce
-source-git-commit: 2871108b67d3d84f1578e80e9c087444ff407820
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '984'
 ht-degree: 34%
@@ -115,7 +115,7 @@ Le tableau ci-dessous contient une comparaison côte à côte affichant les cham
 
 Adobe Experience Platform est conçu de manière à fonctionner avec plusieurs solutions et services possédant chacun leurs propres défis et limitations techniques (par exemple, la manière dont certaines technologies traitent les caractères spéciaux). Le mode de compatibilité a été développé dans le but de surpasser ces limites.
 
-Le plus [!DNL Experience Platform] services, y compris [!DNL Catalog], [!DNL Data Lake], et [!DNL Real-time Customer Profile] use [!DNL Compatibility Mode] au lieu de XDM standard. Le [!DNL Schema Registry] L’API utilise également [!DNL Compatibility Mode], et les exemples de ce document sont tous affichés à l’aide de [!DNL Compatibility Mode].
+Le plus [!DNL Experience Platform] services, y compris [!DNL Catalog], [!DNL Data Lake], et [!DNL Real-Time Customer Profile] use [!DNL Compatibility Mode] au lieu de XDM standard. Le [!DNL Schema Registry] L’API utilise également [!DNL Compatibility Mode], et les exemples de ce document sont tous affichés à l’aide de [!DNL Compatibility Mode].
 
 Il est utile de savoir qu’un mappage a lieu entre le XDM standard et la manière dont il est opérationnalisé dans [!DNL Experience Platform], mais cela ne devrait pas affecter votre utilisation de [!DNL Platform] services.
 

@@ -5,7 +5,7 @@ title: Points d’entrée de l’API Policy Evaluation
 topic-legacy: developer guide
 description: Une fois les actions marketing créées et les stratégies définies, vous pouvez utiliser l’API Policy Service pour déterminer si certaines actions ne respectent pas les stratégies. Les contraintes renvoyées prennent la forme d’un ensemble de stratégies qui seraient enfreintes si l’action marketing était appliquée aux données spécifiées contenant les libellés d’utilisation des données.
 exl-id: f9903939-268b-492c-aca7-63200bfe4179
-source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1542'
 ht-degree: 98%
@@ -682,6 +682,6 @@ Une réponse réussie renvoie un tableau reprenant les résultats de l’évalua
 ]
 ```
 
-## Évaluation des stratégies pour [!DNL Real-time Customer Profile]
+## Évaluation des stratégies pour [!DNL Real-Time Customer Profile]
 
-L’API [!DNL Policy Service] peut également servir à vérifier les violations de stratégie impliquant l’utilisation de segments de [!DNL Real-time Customer Profile]. Pour plus d’informations, consultez le tutoriel sur l’[application de la conformité à l’utilisation des données pour les segments d’audience](../../segmentation/tutorials/governance.md).
+L’API [!DNL Policy Service] peut également servir à vérifier les violations de stratégie impliquant l’utilisation de segments de [!DNL Real-Time Customer Profile]. Pour plus d’informations, consultez le tutoriel sur l’[application de la conformité à l’utilisation des données pour les segments d’audience](../../segmentation/tutorials/governance.md).

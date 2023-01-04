@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Prise en main de Real-time Customer Data Platform B2B Edition
 description: Utilisez cet exemple de scénario comme exemple lors de la configuration de votre mise en oeuvre d’Adobe Real-time Customer Data Platform B2B Edition.
 exl-id: ad9ace46-9915-4b8f-913a-42e735859edf
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1206'
-ht-degree: 87%
+ht-degree: 83%
 
 ---
 
@@ -46,7 +46,7 @@ L’utilitaire de génération automatique a défini la structure de modèle de 
 > 
 >Si vous n’utilisez pas l’utilitaire de génération automatique ou si une nouvelle relation doit être créée, consultez le tutoriel sur la [création de relations entre les schémas B2B](../xdm/tutorials/relationship-b2b.md).
 
-Le profil client en temps réel fusionne des données provenant de sources disparates afin de créer des profils consolidés des principales entités B2B. Puisque les profils sont générés en fonction d’une seule classe, l’utilitaire de génération automatique configure des relations entre les schémas en fonction de cas d’utilisation métier courants. Par conséquent, l’équipe Bodea est maintenant prête à ingérer des données en fonction de leurs schémas B2B. 
+Real-Time Customer Profile fusionne des données provenant de sources disparates afin de créer des profils consolidés de principales entités B2B. Puisque les profils sont générés en fonction d’une seule classe, l’utilitaire de génération automatique configure des relations entre les schémas en fonction de cas d’utilisation métier courants. Par conséquent, l’équipe Bodea est maintenant prête à ingérer des données en fonction de leurs schémas B2B. 
 
 >[!NOTE]
 > 
@@ -86,7 +86,7 @@ Dans cet exemple, le segment trouve toutes les personnes qui travaillent dans le
 > 
 >Pour plus d’informations sur la création de segments afin d’évaluer vos données, consultez le [guide de l’interface utilisateur du créateur de segments](../segmentation/ui/segment-builder.md). Pour des cas d’utilisation de la segmentation B2B plus spécifiques, reportez-vous à la section [présentation de la segmentation pour Real-Time CDP B2B Edition](./segmentation/b2b.md).
 
-Le créateur de segments vous permet de créer une audience vendable à partir des données du profil client en temps réel et d’afficher les estimations de votre audience potentielle en fonction de la combinaison des attributs, événements et audiences existantes que vous avez définis. 
+Le créateur de segments vous permet de créer une audience vendable à partir des données de Real-Time Customer Profile et d’afficher les estimations de votre audience potentielle en fonction de la combinaison des attributs, événements et audiences existantes que vous avez définies.
 
 ## Activation de vos données évaluées vers une destination
 

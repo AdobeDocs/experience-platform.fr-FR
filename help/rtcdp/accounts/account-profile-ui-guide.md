@@ -3,10 +3,10 @@ keywords: profil rtcdp;profils rtcdp;identités rtcdp;stratégies de fusion rtcd
 title: Guide de l’interface utilisateur des profils de compte
 description: Grâce aux profils de compte, l’édition B2B d’Adobe Real-time Customer Data Platform permet d’unifier les informations de compte provenant de plusieurs sources. Ce guide fournit des détails sur l’interaction avec les profils de compte dans l’interface utilisateur d’Adobe Experience Platform.
 exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1625'
-ht-degree: 60%
+ht-degree: 58%
 
 ---
 
@@ -126,7 +126,7 @@ L’onglet **[!UICONTROL Personnes]** fournit une liste des personnes associées
 >
 >L’onglet [!UICONTROL Personnes] affiche une liste comportant au maximum 25 personnes associées au compte. Pour les comptes comptant plus de 25 personnes associées, le système affiche un échantillonnage aléatoire de 25 enregistrements.
 
-Outre l’affichage d’un instantané des informations du contact, chaque personne répertoriée inclut également un **[!UICONTROL Identifiant de profil]** sous forme de lien cliquable qui vous permet d’explorer le profil client en temps réel de cet utilisateur. Pour en savoir plus sur l’affichage des profils clients individuels liés à vos comptes, consultez le guide pour [exploration des profils dans Real-Time CDP, édition B2B](../profile/profile-browse.md).
+En plus de vous montrer un instantané des informations du contact, chaque personne répertoriée inclut également un **[!UICONTROL Identifiant de profil]**, qui est un lien cliquable qui vous permet d’explorer le profil client en temps réel de cette personne. Pour en savoir plus sur l’affichage des profils clients individuels liés à vos comptes, consultez le guide pour [exploration des profils dans Real-Time CDP, édition B2B](../profile/profile-browse.md).
 
 ![Onglet Personnes](images/b2b-account-people.png)
 

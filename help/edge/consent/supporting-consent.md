@@ -3,7 +3,7 @@ title: Prise en charge des préférences de consentement du client à l’aide d
 description: Découvrez comment prendre en charge les préférences de consentement avec le SDK Web de Adobe Experience Platform.
 keywords: consentement;defaultConsent;consentement par défaut;setConsent;groupe de champs Confidentialité du profil;groupe de champs Confidentialité des événements d’expérience;groupe de champs Confidentialité ;
 exl-id: 647e4a84-4a66-45d6-8b05-d78786bca63a
-source-git-commit: 16c8972333fa67fa2e308445f4ad6282510370d1
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '950'
 ht-degree: 31%
@@ -138,7 +138,7 @@ alloy("setConsent", {
 });
 ```
 
-Lorsque le consentement est défini de cette manière, Real-time Customer Profile est mis à jour avec les informations de consentement. Pour que cela fonctionne, le schéma XDM du profil doit contenir le [Groupe de champs de schéma Confidentialité du profil](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/profile/profile-privacy.schema.md). Lors de l’envoi d’événements, les informations de consentement de l’IAB doivent être ajoutées manuellement à l’objet XDM d’événement. Le SDK n’inclut pas automatiquement les informations de consentement dans les événements. Pour envoyer les informations de consentement dans les événements, la variable [Groupe de champs Confidentialité des événements d’expérience](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/experience-event/experienceevent-privacy.schema.md) doit être ajouté au schéma Experience Event.
+Lorsque le consentement est défini de cette manière, Real-Time Customer Profile est mis à jour avec les informations de consentement. Pour que cela fonctionne, le schéma XDM du profil doit contenir le [Groupe de champs de schéma Confidentialité du profil](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/profile/profile-privacy.schema.md). Lors de l’envoi d’événements, les informations de consentement de l’IAB doivent être ajoutées manuellement à l’objet XDM d’événement. Le SDK n’inclut pas automatiquement les informations de consentement dans les événements. Pour envoyer les informations de consentement dans les événements, la variable [Groupe de champs Confidentialité des événements d’expérience](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/experience-event/experienceevent-privacy.schema.md) doit être ajouté au schéma Experience Event.
 
 ## Envoi de plusieurs normes dans une même requête
 

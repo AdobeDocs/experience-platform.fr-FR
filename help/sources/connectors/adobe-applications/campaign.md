@@ -2,10 +2,11 @@
 keywords: Experience Platform;accueil;rubriques populaires;Adobe Campaign Managed Cloud Services;campagne;services gérés de campagne
 title: Adobe Campaign Managed Cloud Services
 description: Découvrez comment connecter des Cloud Services gérés Campaign à Platform à l’aide de l’interface utilisateur
-source-git-commit: 99f65889aecf8c045dbb72053ebaca9429c3ebe1
+exl-id: 8f18bf73-ebf1-4b4e-a12b-964faa0e24cc
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '663'
-ht-degree: 8%
+ht-degree: 11%
 
 ---
 
@@ -13,7 +14,7 @@ ht-degree: 8%
 
 Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous permettant de structurer, de libeller et d’améliorer les données entrantes à l’aide des services de Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, des bases de données, etc.
 
-Adobe Campaign Managed Cloud Services fournit une plateforme Managed Services pour la conception d’expériences client cross-canal et fournit un environnement pour l’orchestration visuelle des campagnes, la gestion des interactions en temps réel et l’exécution cross-canal. Visitez le [Documentation d’Adobe Campaign v8](https://experienceleague.adobe.com/docs/campaign/campaign-v8/campaign-home.html?lang=en) pour plus d’informations.
+Adobe Campaign Managed Cloud Services fournit une plateforme Managed Services pour la conception d’expériences client cross-canal et fournit un environnement pour l’orchestration visuelle des campagnes, la gestion des interactions en temps réel et l’exécution cross-canal. Visitez le [Documentation d’Adobe Campaign v8](https://experienceleague.adobe.com/docs/campaign/campaign-v8/campaign-home.html?lang=fr) pour plus d’informations.
 
 La source Adobe Campaign Managed Cloud Services vous permet d’importer les données des logs de diffusion et de tracking d’Adobe Campaign v8 dans Adobe Experience Platform.
 
@@ -61,7 +62,7 @@ Créez ensuite un schéma XDM ExperienceEvent pour les logs de diffusion et les 
 
 >[!NOTE]
 >
->Votre schéma XDM ExperienceEvent doit être activé dans Profile pour ingérer vos données Campaign vers [!DNL Real-time Customer Profile].
+>Votre schéma XDM ExperienceEvent doit être activé dans Profile pour ingérer vos données Campaign vers [!DNL Real-Time Customer Profile].
 
 Pour obtenir des instructions détaillées sur la création d’un schéma, consultez le guide sur [création d’un schéma XDM dans l’interface utilisateur](../../../xdm/tutorials/create-schema-ui.md).
 

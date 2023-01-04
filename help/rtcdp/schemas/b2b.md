@@ -2,7 +2,7 @@
 title: Schémas dans Real-time Customer Data Platform version B2B
 description: Présentation du rôle des schémas de modèle de données d’expérience (XDM) dans l’édition B2B d’Adobe Real-time Customer Data Platform.
 exl-id: 3b18d377-108f-443f-86ae-dc7537cf9013
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '237'
 ht-degree: 45%
@@ -15,7 +15,7 @@ L’édition B2B d’Adobe Real-time Customer Data Platform offre plusieurs [Cla
 
 >[!IMPORTANT]
 >
->Vous devez avoir accès à l’édition B2B de Real-Time CDP pour que les schémas B2B puissent participer à [Real-time Customer Profile](../../profile/home.md).
+>Vous devez avoir accès à l’édition B2B de Real-Time CDP pour que les schémas B2B puissent participer à [Profil client en temps réel](../../profile/home.md).
 
 Les classes standard suivantes sont fournies dans Real-Time CDP B2B Edition :
 

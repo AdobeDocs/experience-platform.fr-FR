@@ -5,7 +5,7 @@ title: Présentation du langage de requête de profil (PQL)
 topic-legacy: developer guide
 description: Ce guide présente un aperçu général de PQL, couvre les instructions de formatage et apporte des exemples d’expressions PQL.
 exl-id: 4f7ab50e-89a3-42db-b74a-c6f2d86c9bcb
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '715'
 ht-degree: 89%
@@ -14,7 +14,7 @@ ht-degree: 89%
 
 # [!DNL Profile Query Language] (PQL) - Aperçu
 
-[!DNL Profile Query Language] (PQL) est un [!DNL Experience Data Model] Langage de requête compatible (XDM) conçu pour prendre en charge la définition et l’exécution de requêtes de segmentation pour [!DNL Real-time Customer Profile] data.
+[!DNL Profile Query Language] (PQL) est un [!DNL Experience Data Model] Langage de requête compatible (XDM) conçu pour prendre en charge la définition et l’exécution de requêtes de segmentation pour [!DNL Real-Time Customer Profile] data.
 
 Ce guide présente un aperçu général de PQL, couvre les instructions de formatage et apporte des exemples d’expressions PQL.
 

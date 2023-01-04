@@ -3,10 +3,10 @@ keywords: Experience Platform;dépannage;barrières de sécurité;conseils;
 title: Barrières de sécurité pour l’ingestion des données
 description: Ce document fournit des conseils sur les barrières de sécurité pour l’ingestion de données dans Adobe Experience Platform.
 exl-id: f07751cb-f9d3-49ab-bda6-8e6fec59c337
-source-git-commit: fa0ddc4c0053018d013c14c568ebb2fd231f4bd2
-workflow-type: ht
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+workflow-type: tm+mt
 source-wordcount: '546'
-ht-degree: 100%
+ht-degree: 98%
 
 ---
 
@@ -40,5 +40,5 @@ Le tableau suivant décrit les barrières de sécurité à prendre en compte lor
 
 Pour plus d’informations sur les barrières de sécurité des données et du traitement dans Experience Platform, consultez la documentation suivante :
 
-* [Barrières de sécurité pour les données Real-time Customer Profile](../profile/guardrails.md)
+* [Barrières de sécurité pour les données Real-time Customer Profile](../profile/guardrails.md)
 * [Barrières de sécurité pour les données Identity Service](../identity-service/guardrails.md)

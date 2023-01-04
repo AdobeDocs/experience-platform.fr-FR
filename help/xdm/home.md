@@ -5,10 +5,10 @@ title: Présentation du système XDM
 topic-legacy: overview
 description: La normalisation et l’interopérabilité sont les concepts clés d’Adobe Experience Platform. Le modèle de données d’expérience (XDM), optimisé par Adobe, vise à normaliser les données d’expérience client et à définir des schémas pour la gestion de l’expérience client.
 exl-id: 294d5f02-850f-47ea-9333-8b94a0bb291e
-source-git-commit: a95e5cf02e993d6c761abd74c98c0967a89eb678
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2087'
-ht-degree: 100%
+ht-degree: 92%
 
 ---
 
@@ -110,23 +110,23 @@ Pour plus d’informations sur le catalogue, consultez la [présentation du serv
 
 Adobe Experience Platform Query Service vous permet d’utiliser le langage SQL standard pour interroger les données d’Experience Platform afin de prendre en charge de nombreux cas d’utilisation différents.
 
-Une fois qu’un schéma a été composé et qu’un jeu de données faisant référence à ce schéma a été créé, les données sont ingérées et stockées dans le lac de données. Grâce à Query Service, vous pouvez joindre n’importe quel jeu de données du lac de données et capturer les résultats de la requête sous forme de nouveau jeu de données à utiliser dans un compte rendu des performances, dans le cadre de l’apprentissage automatique ou pour une ingestion dans Real-time Customer Profile.
+Une fois qu’un schéma a été composé et qu’un jeu de données faisant référence à ce schéma a été créé, les données sont ingérées et stockées dans le lac de données. Grâce à Query Service, vous pouvez joindre n’importe quel jeu de données du lac de données et capturer les résultats de la requête sous la forme d’un nouveau jeu de données à utiliser dans les rapports, l’apprentissage automatique ou pour ingestion dans Real-Time Customer Profile.
 
 Pour plus d’informations sur le service, consultez la [présentation de Query Service](../query-service/home.md).
 
-### Real-time Customer Profile
+### Profil client en temps réel
 
-Real-time Customer Profile fournit un profil de consommateur centralisé pour une gestion d’expérience ciblée et personnalisée. Chaque profil contient des données agrégées sur tous les systèmes ainsi que des comptes horodatés exploitables d’événements impliquant les personnes concernées par l’un des systèmes que vous utilisez avec Experience Platform.
+Real-Time Customer Profile offre un profil client centralisé pour une gestion d’expérience ciblée et personnalisée. Chaque profil contient des données agrégées sur tous les systèmes ainsi que des comptes horodatés exploitables d’événements impliquant les personnes concernées par l’un des systèmes que vous utilisez avec Experience Platform.
 
-Real-time Customer Profile utilise des données sous forme de schémas basées sur les classes [!UICONTROL XDM Individual Profile] ou [!UICONTROL XDM ExperienceEvent], et répond aux requêtes en fonction de ces données. Profile ne prend pas en charge l’utilisation de schémas basés sur d’autres classes.
+Real-Time Customer Profile utilise des données au format schéma basées sur la variable [!UICONTROL XDM Individual Profile] et [!UICONTROL XDM ExperienceEvent] et répond aux requêtes en fonction de ces données. Profile ne prend pas en charge l’utilisation de schémas basés sur d’autres classes.
 
-Le système conserve une instance de chaque profil client, fusionnant les données pour former une « source unique de vérité » pour l’individu. Ces données unifiées sont représentées par un « schéma d’union »; (parfois appelé « vue d’union »;). Un schéma d’union agrège les champs de tous les schémas qui mettent en œuvre la même classe dans un seul et même schéma.  Lors de la composition d’un schéma à l’aide de l’interface utilisateur ou d’une API, vous pouvez activer le schéma pour une utilisation avec Real-time Customer Profile et le marquer pour l’inclure d’union. Le schéma balisé participe alors à la définition de schéma transmise à Profile.
+Le système conserve une instance de chaque profil client, fusionnant les données pour former une « source unique de vérité » pour l’individu. Ces données unifiées sont représentées par un « schéma d’union »; (parfois appelé « vue d’union »;). Un schéma d’union agrège les champs de tous les schémas qui mettent en œuvre la même classe dans un seul et même schéma.  Lors de la composition d’un schéma à l’aide de l’interface utilisateur ou de l’API, vous pouvez activer le schéma à utiliser avec Real-Time Customer Profile et le marquer pour l’inclure dans l’union. Le schéma balisé participe alors à la définition de schéma transmise à Profile.
 
-Alors que les données [!UICONTROL XDM Individual Profile] et [!UICONTROL XDM ExperienceEvent] sont ingérées dans le lac de données, Real-time Customer Profile ingère quant à lui toutes les données qui ont été activées pour utilisation. Plus la quantité d’interactions et de détails ingérés est élevée, plus les profils deviennent robustes.
+As [!UICONTROL XDM Individual Profile] et [!UICONTROL XDM ExperienceEvent] Les données sont ingérées dans le lac de données. Real-time Customer Profile ingère toutes les données qui ont été activées pour son utilisation. Plus la quantité d’interactions et de détails ingérés est élevée, plus les profils deviennent robustes.
 
-Les données [!UICONTROL XDM Individual Profile] permettent de guider et d’exécuter les actions sur n’importe quel canal ou intégration de produit Adobe. Associées à un riche historique de données sur les comportements et les interactions, ces données peuvent être utilisées pour alimenter le machine learning. L’API Real-time Customer Profile peut aussi être utilisée pour enrichir les fonctionnalités des solutions tierces, des solutions CRM et des solutions propriétaires.
+Les données [!UICONTROL XDM Individual Profile] permettent de guider et d’exécuter les actions sur n’importe quel canal ou intégration de produit Adobe. Associées à un riche historique de données sur les comportements et les interactions, ces données peuvent être utilisées pour alimenter le machine learning. L’API Real-Time Customer Profile peut également être utilisée pour enrichir les fonctionnalités des solutions tierces, des solutions CRM et des solutions propriétaires.
 
-Pour plus d’informations, consultez la [présentation de Real-time Customer Profile](../profile/home.md).
+Voir [Présentation de Real-Time Customer Profile](../profile/home.md) pour plus d’informations.
 
 ### Data Science Workspace
 

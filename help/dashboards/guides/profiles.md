@@ -1,21 +1,21 @@
 ---
 keywords: Experience Platform;profil;profil client en temps réel;interface utilisateur;interface utilisateur;personnalisation;tableau de bord Profil;tableau de bord
 title: Guide du tableau de bord Profils
-description: Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur les données de profil client en temps réel de votre organisation.
+description: Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur les données Real-time Customer Profile de votre entreprise.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: af01ac288a8afe59105be5859b2d40de5e346963
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '3381'
-ht-degree: 98%
+ht-degree: 94%
 
 ---
 
 # Tableau de bord des [!UICONTROL profils]
 
-L’interface utilisateur d’Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur vos données [!DNL Real-time Customer Profile], présentées ainsi lors d’un instantané quotidien. Ce guide explique comment accéder au tableau de bord Profils et l’utiliser dans l’interface utilisateur. Il fournit également des informations sur les mesures affichées dans le tableau de bord.
+L’interface utilisateur d’Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur vos données [!DNL Real-Time Customer Profile], présentées ainsi lors d’un instantané quotidien. Ce guide explique comment accéder au tableau de bord Profils et l’utiliser dans l’interface utilisateur. Il fournit également des informations sur les mesures affichées dans le tableau de bord.
 
-Pour une présentation de toutes les fonctionnalités de profil de l’interface utilisateur d’Experience Platform, reportez-vous à la section [Guide de l’interface utilisateur du profil client en temps réel](../../profile/ui/user-guide.md).
+Pour une présentation de toutes les fonctionnalités de profil de l’interface utilisateur de l’Experience Platform, reportez-vous à la section [Guide de l’interface utilisateur de Real-Time Customer Profile](../../profile/ui/user-guide.md).
 
 ## Données du tableau de bord Profils
 
@@ -33,7 +33,7 @@ Pour accéder au tableau de bord Profils dans l’interface utilisateur de Platf
 
 >[!NOTE]
 >
->Si votre organisation débute avec Platform et ne dispose pas encore de jeux de données ou de stratégies de fusion de profil actifs, le tableau de bord Profils n’est pas visible. À la place, l’onglet [!UICONTROL Aperçu] affiche des liens et de la documentation pour vous aider à prendre en main le profil client en temps réel.
+>Si votre organisation débute avec Platform et ne dispose pas encore de jeux de données ou de stratégies de fusion de profil actifs, le tableau de bord Profils n’est pas visible. Au lieu de cela, la variable [!UICONTROL Présentation] Cet onglet affiche des liens et de la documentation pour vous aider à prendre en main Real-time Customer Profile.
 
 ![Le tableau de bord Profils Experience Platform avec les options Profils et Aperçu en surbrillance.](../images/profiles/dashboard-overview.png)
 
@@ -73,7 +73,7 @@ Pour en savoir plus sur les fonctionnalités d’affichage des profils fournies 
 
 ## Stratégies de fusion {#merge-policies}
 
-Les mesures affichées dans le tableau de bord Profils reposent sur les stratégies de fusion appliquées à vos données profil client en temps réel. Lorsque des données sont rassemblées à partir de plusieurs sources pour créer le profil client, les données peuvent contenir des valeurs en conflit. Par exemple, un jeu de données peut désigner un(e) client(e) comme « célibataire » tandis qu’un autre jeu de données peut désigner le/la client(e) comme « marié(e) ». La tâche de la stratégie de fusion consiste à déterminer les données à prioriser et à afficher dans le cadre du profil.
+Les mesures affichées dans le tableau de bord Profils reposent sur les stratégies de fusion appliquées à vos données Real-Time Customer Profile. Lorsque des données sont rassemblées à partir de plusieurs sources pour créer le profil client, les données peuvent contenir des valeurs en conflit. Par exemple, un jeu de données peut désigner un(e) client(e) comme « célibataire » tandis qu’un autre jeu de données peut désigner le/la client(e) comme « marié(e) ». La tâche de la stratégie de fusion consiste à déterminer les données à prioriser et à afficher dans le cadre du profil.
 
 Pour plus d’informations sur les stratégies de fusion, notamment sur la création, la modification et la déclaration d’une stratégie de fusion par défaut pour votre organisation, reportez-vous à la [présentation des stratégies de fusion](../../profile/merge-policies/overview.md).
 
@@ -140,7 +140,7 @@ Pour en savoir plus, consultez la [section sur les stratégies de fusion plus ha
 >
 >Le widget [!UICONTROL Nombre de profils] peut afficher un nombre différent du nombre de profils affiché dans l’onglet [!UICONTROL Parcourir] dans la section [!UICONTROL Profils] de l’interface utilisateur pour plusieurs raisons. La raison la plus courante est que l’onglet [!UICONTROL Parcourir] référence le nombre total de profils fusionnés en fonction de la stratégie de fusion par défaut de votre organisation, tandis que le widget [!UICONTROL Nombre de profils] référence le nombre total de profils fusionnés en fonction de la stratégie de fusion que vous avez sélectionnée pour afficher dans le tableau de bord.
 >
->Une autre raison courante est due aux différences entre le moment où l’instantané du tableau de bord est pris et le moment où l’exemple de tâche est exécuté pour l’onglet [!UICONTROL Parcourir]. Vous pouvez voir quand le widget [!UICONTROL Nombre de profils] a été mis à jour pour la dernière fois en regardant la date et l’heure sur le widget. Pour en savoir plus sur la manière dont l’exemple de tâche est déclenché sur l’onglet [!UICONTROL Parcourir], voir la [section sur le nombre de profils dans le guide de l’interface utilisateur du profil client en temps réel](https://experienceleague.adobe.com/docs/experience-platform/profile/ui/user-guide.html?lang=fr#profile-count).
+>Une autre raison courante est due aux différences entre le moment où l’instantané du tableau de bord est pris et le moment où l’exemple de tâche est exécuté pour l’onglet [!UICONTROL Parcourir]. Vous pouvez voir quand le widget [!UICONTROL Nombre de profils] a été mis à jour pour la dernière fois en regardant la date et l’heure sur le widget. Pour en savoir plus sur la manière dont l’exemple de tâche est déclenché sur la page [!UICONTROL Parcourir] , voir [section sur le nombre de profils dans le guide de l’interface utilisateur de Real-time Customer Profile](https://experienceleague.adobe.com/docs/experience-platform/profile/ui/user-guide.html?lang=fr#profile-count).
 
 ![Le tableau de bord Profils Experience Platform avec le widget Nombre de profils mis en surbrillance.](../images/profiles/profile-count.png)
 
@@ -226,7 +226,7 @@ Le widget **[!UICONTROL Chevauchement des identités]** utilise un diagramme de 
 
 Utilisez les menus déroulants du widget pour sélectionner les identités à comparer. Les cercles affichent le nombre total relatif de profils qui contiennent chaque identité. Le nombre de profils contenant les deux identités est représenté par la taille du chevauchement entre les cercles. Si un(e) client(e) interagit avec votre marque sur plusieurs canaux, plusieurs identités seront associées à ce(tte) client(e) individuel(le). Par conséquent, il est probable que votre organisation dispose de plusieurs profils contenant des fragments provenant de plusieurs identités.
 
-Pour plus d’informations sur les fragments de profil, reportez-vous à la section sur les [fragments de profil par rapport aux profils fusionnés](https://experienceleague.adobe.com/docs/experience-platform/profile/home.html?lang=fr#profile-fragments-vs-merged-profiles) dans la présentation du profil client en temps réel.
+Pour plus d&#39;informations sur les fragments de profil, reportez-vous à la section sur [fragments de profil par rapport aux profils fusionnés](https://experienceleague.adobe.com/docs/experience-platform/profile/home.html?lang=fr#profile-fragments-vs-merged-profiles) dans la présentation de Real-time Customer Profile.
 
 Pour en savoir plus sur les identités, consultez la [documentation du Service d’identités Adobe Experience Platform](../../identity-service/home.md).
 
@@ -434,4 +434,4 @@ The three levels of completeness are:
 
 ## Étapes suivantes
 
-En suivant ce document, vous devriez maintenant pouvoir localiser le tableau de bord des profils et comprendre les mesures affichées dans les widgets disponibles. Pour en savoir plus sur l’utilisation des données [!DNL Profile] de l’interface utilisateur d’Experience Platform, reportez-vous au [guide de l’interface utilisateur de profil client en temps réel](../../profile/ui/user-guide.md).
+En suivant ce document, vous devriez maintenant pouvoir localiser le tableau de bord des profils et comprendre les mesures affichées dans les widgets disponibles. Pour en savoir plus sur l’utilisation de [!DNL Profile] données de l’interface utilisateur de l’Experience Platform, reportez-vous à la section [Guide de l’interface utilisateur de Real-Time Customer Profile](../../profile/ui/user-guide.md).

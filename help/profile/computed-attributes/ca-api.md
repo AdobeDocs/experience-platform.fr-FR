@@ -5,7 +5,7 @@ topic-legacy: guide
 type: Documentation
 description: Dans Adobe Experience Platform, les attributs calculés sont des fonctions utilisées pour agréger les données au niveau de l’événement en attributs au niveau du profil. Ces fonctions sont automatiquement calculées afin de pouvoir être utilisées au niveau de la segmentation, de l’activation et de la personnalisation. Ce guide explique comment créer, afficher, mettre à jour et supprimer des attributs calculés à l’aide de l’API Real-time Customer Profile.
 exl-id: 6b35ff63-590b-4ef5-ab39-c36c39ab1d58
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2275'
 ht-degree: 65%
@@ -24,7 +24,7 @@ Pour en savoir plus sur les attributs calculés, commencez par lire le [présent
 
 ## Prise en main
 
-Le point de terminaison API utilisé dans ce guide fait partie de la variable [API Real-time Customer Profile](https://www.adobe.com/go/profile-apis-en).
+Le point de terminaison API utilisé dans ce guide fait partie de la variable [API Real-Time Customer Profile](https://www.adobe.com/go/profile-apis-en).
 
 Avant de poursuivre, veuillez consulter la section [Guide de prise en main de l’API Profile](../api/getting-started.md) pour obtenir des liens vers la documentation recommandée, un guide de lecture des exemples d’appels API qui apparaissent dans ce document, ainsi que des informations importantes concernant les en-têtes requis pour réussir les appels à une API Experience Platform.
 

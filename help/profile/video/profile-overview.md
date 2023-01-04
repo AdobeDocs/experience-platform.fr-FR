@@ -1,5 +1,5 @@
 ---
-title: Présentation vidéo de Real-time Customer Profile
+title: Présentation vidéo du profil client en temps réel
 description: Cette vidéo fournit une compréhension de base de Real-time Customer Profile dans Adobe Experience Platform et explique comment parcourir les profils dans l’interface utilisateur de Platform.
 product: experience platform
 type: Documentation
@@ -9,16 +9,16 @@ audience: all
 doc-type: video
 activity: understand
 exl-id: cdc91194-771f-4026-808f-97d70db436d9
-source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '117'
-ht-degree: 18%
+ht-degree: 15%
 
 ---
 
-# Présentation du profil client en temps réel
+# Présentation de Real-Time Customer Profile
 
-Cette vidéo fournit une compréhension de base de Real-time Customer Profile dans Adobe Experience Platform et explique comment les données provenant de plusieurs sources sont rassemblées afin de former un profil centralisé pour chaque client. Pour en savoir plus sur les fonctionnalités et les fonctionnalités de Real-time Customer Profile, veuillez commencer par lire la section [Présentation de Real-time Customer Profile](../home.md).
+Cette vidéo fournit une compréhension de base de Real-time Customer Profile dans Adobe Experience Platform et explique comment les données provenant de plusieurs sources sont rassemblées afin de former un profil centralisé pour chaque client. Pour en savoir plus sur les fonctionnalités et les fonctionnalités de Real-time Customer Profile, veuillez commencer par lire la section [Présentation de Real-Time Customer Profile](../home.md).
 
 >[!NOTE]
 >

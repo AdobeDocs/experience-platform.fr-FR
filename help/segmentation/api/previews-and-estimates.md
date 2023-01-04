@@ -5,7 +5,7 @@ title: Points de terminaison de l’API d’aperçu et d’estimation
 topic-legacy: developer guide
 description: Au fur et à mesure que la définition de segment est développée, vous pouvez utiliser les outils d’estimation et de prévisualisation dans Adobe Experience Platform pour afficher des informations de niveau résumé afin de vous assurer que vous isolez l’audience attendue.
 exl-id: 2c204f29-825f-4a5e-a7f6-40fc69263614
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '978'
 ht-degree: 21%
@@ -22,7 +22,7 @@ Au fur et à mesure que vous développez une définition de segment, vous pouvez
 
 >[!NOTE]
 >
->Pour accéder à des mesures similaires liées aux données de Real-time Customer Profile, telles que le nombre total de fragments de profil et de profils fusionnés dans des espaces de noms spécifiques ou l’ensemble de l’entrepôt de données Profile, reportez-vous à la section [guide de point de terminaison de l’aperçu du profil (aperçu de l’état de l’exemple)](../../profile/api/preview-sample-status.md), fait partie du guide de développement de l’API Profile.
+>Pour accéder à des mesures similaires liées aux données de Real-Time Customer Profile, telles que le nombre total de fragments de profil et de profils fusionnés dans des espaces de noms spécifiques ou l’ensemble de l’entrepôt de données Profile, reportez-vous à la section [guide de point de terminaison de l’aperçu du profil (aperçu de l’état de l’exemple)](../../profile/api/preview-sample-status.md), fait partie du guide de développement de l’API Profile.
 
 ## Prise en main
 

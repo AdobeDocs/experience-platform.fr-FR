@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;profil;profil client en temps réel;interface utilisateur;personnalisation;détails du profil;détails
 title: Personnalisation des détails du profil dans l’interface utilisateur
-description: Ce guide fournit des instructions détaillées pour personnaliser la manière dont les données de Real-time Customer Profile s’affichent dans l’interface utilisateur de Adobe Experience Platform.
+description: Ce guide fournit des instructions détaillées pour personnaliser la manière dont les données de Real-Time Customer Profile s’affichent dans l’interface utilisateur de Adobe Experience Platform.
 topic-legacy: guide
 exl-id: 76cf8420-cc50-4a56-9f6d-5bfc01efcdb3
-source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1350'
 ht-degree: 0%
 
 ---
 
-# Personnalisation détaillée du [!DNL Real-time Customer Profile] {#profile-detail-customization}
+# Personnalisation détaillée du [!DNL Real-Time Customer Profile] {#profile-detail-customization}
 
-Dans l’interface utilisateur de Adobe Experience Platform, vous pouvez afficher et interagir avec [!DNL Real-time Customer Profile] données sous la forme de profils client. Les informations de profil affichées dans l’interface utilisateur ont été fusionnées à partir de plusieurs fragments de profil afin de former une vue unique de chaque client. Cela inclut des détails tels que les attributs de base, les identités liées et les préférences de canal. Les champs par défaut affichés dans les profils peuvent également être modifiés au niveau de l&#39;organisation pour afficher les préférences. [!DNL Profile] attributs. Ce guide fournit des instructions détaillées pour personnaliser la manière dont [!DNL Profile] Les données s’affichent dans l’interface utilisateur de Platform.
+Dans l’interface utilisateur de Adobe Experience Platform, vous pouvez afficher et interagir avec [!DNL Real-Time Customer Profile] données sous la forme de profils client. Les informations de profil affichées dans l’interface utilisateur ont été fusionnées à partir de plusieurs fragments de profil afin de former une vue unique de chaque client. Cela inclut des détails tels que les attributs de base, les identités liées et les préférences de canal. Les champs par défaut affichés dans les profils peuvent également être modifiés au niveau de l&#39;organisation pour afficher les préférences. [!DNL Profile] attributs. Ce guide fournit des instructions détaillées pour personnaliser la manière dont [!DNL Profile] Les données s’affichent dans l’interface utilisateur de Platform.
 
 Pour obtenir un guide complet sur l’interface utilisateur des profils, consultez la page [Guide de l’interface utilisateur de Profile](user-guide.md).
 

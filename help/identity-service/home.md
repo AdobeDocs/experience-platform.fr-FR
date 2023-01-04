@@ -5,10 +5,10 @@ title: Présentation dʼIdentity Service
 topic-legacy: overview
 description: Adobe Experience Platform Identity Service vous permet de mieux connaître vos clients et leurs comportements, en établissant un lien entre les identités des différents appareils et systèmes, ce qui vous permet de proposer des expériences numériques personnelles et percutantes en temps réel.
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
-source-git-commit: 3e073d2c45f88c56473ccc2e3d18a2bbedd4f254
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1839'
-ht-degree: 96%
+ht-degree: 93%
 
 ---
 
@@ -52,7 +52,7 @@ Prenons un exemple courant de relation entre un consommateur et votre marque :
 
 ![Combinaison d’identités sur Platform](./images/identity-service-stitching.png)
 
-Pour résumer, [!DNL Identity Service] vous permet de dresser le portrait complet de votre client en agrégeant des données connexes qui pourraient autrement être éparpillées sur différents systèmes. Les relations d’identité définies et maintenues par [!DNL Identity Service] sont exploitées par le profil client en temps réel pour dresser le portrait complet d’un client et de ses interactions avec votre marque. Pour plus d’informations, consultez la [présentation de Real-time Customer Profile](../profile/home.md).
+Pour résumer, [!DNL Identity Service] vous permet de dresser le portrait complet de votre client en agrégeant des données connexes qui pourraient autrement être éparpillées sur différents systèmes. Les relations identitaires qui [!DNL Identity Service] Les définitions et les maintenances sont utilisées par Real-time Customer Profile pour obtenir une vue d’ensemble complète d’un client et de ses interactions avec votre marque. Pour plus d’informations, voir [Présentation de Real-Time Customer Profile](../profile/home.md).
 
 ### Cas d’utilisation
 
@@ -134,7 +134,7 @@ Par exemple, en désignant les champs de numéro de téléphone comme des champs
 
 ### Configuration dʼun jeu de données pour [!DNL Identity Service]
 
-Pendant le processus dʼingestion par flux, [!DNL Identity Service ]extrait automatiquement les données dʼidentité des données dʼenregistrement et de série temporelle. Cependant, les données doivent être activées pour [!DNL Identity Service] avant de pouvoir être ingérées. Pour plus d’informations, consultez le tutoriel sur la [configuration d’un jeu de données pour Real-time Customer Profile et Identity Service à l’aide des API](../profile/tutorials/dataset-configuration.md).
+Pendant le processus dʼingestion par flux, [!DNL Identity Service ]extrait automatiquement les données dʼidentité des données dʼenregistrement et de série temporelle. Cependant, les données doivent être activées pour [!DNL Identity Service] avant de pouvoir être ingérées. Voir le tutoriel sur  [configuration d’un jeu de données pour Real-time Customer Profile et Identity Service à l’aide des API](../profile/tutorials/dataset-configuration.md) pour plus d’informations.
 
 ### Envoi de données à [!DNL Identity Service]
 

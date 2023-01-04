@@ -6,7 +6,7 @@ last-update: March 10, 2020
 author: ens71067
 keywords: notes de mise à jour;
 exl-id: 407c2bac-4c8a-4939-b3dd-788250f15650
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '855'
 ht-degree: 68%
@@ -111,7 +111,7 @@ Adobe Experience Platform peut ingérer des données à partir de sources extern
 | ------- | ----------- |
 | Signaux obsolètes du connecteur d’Adobe Audience Manager | Les données au niveau du signal d’Audience Manager ne seront plus envoyées. Notez que l’adhésion aux segments pour les Caractéristiques et les Segments sera toujours incluse. Suite à ce changement, les jeux de données entrants ne seront plus générés. |
 | Jeux de données renommés | Les jeux de données générés par le connecteur d’Audience Manager ont des noms et des descriptions à jour. |
-| Activer [!DNL Profile] bascule dans Audience Manager | [!DNL Profile] la bascule peut être activée ou désactivée pour convertir le jeu de données en [!DNL Real-time Customer Profile]. La bascule est activée par défaut. |
+| Activer [!DNL Profile] bascule dans Audience Manager | [!DNL Profile] la bascule peut être activée ou désactivée pour convertir le jeu de données en [!DNL Real-Time Customer Profile]. La bascule est activée par défaut. |
 | Prise en charge de l’interface utilisateur pour les systèmes de stockage dans le cloud | Nouveau connecteur source pour [!DNL Azure Data Lake Storage Gen2] dans l’interface utilisateur. |
 | Prise en charge de l’interface utilisateur pour les systèmes de gestion de la relation client | Nouveau connecteur source pour [!DNL HubSpot], [!DNL Salesforce Service Cloud], et [!DNL ServiceNow] dans l’interface utilisateur. |
 | Prise en charge de l’interface utilisateur pour les systèmes de base de données | Nouveau connecteur source pour [!DNL AWS Redshift], [!DNL Google BigQuery], [!DNL MariaDB], [!DNL Microsoft SQL Server], et [!DNL MySQL] dans l’interface utilisateur. |

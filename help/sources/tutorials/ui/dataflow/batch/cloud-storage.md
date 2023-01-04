@@ -3,10 +3,10 @@ keywords: Experience Platform;accueil;rubriques les plus consultées;flux de don
 title: Configuration d’un flux de données pour ingérer des données par lots à partir d’une source de stockage dans le cloud dans l’interface utilisateur
 description: Ce tutoriel explique comment configurer un nouveau flux de données pour ingérer des données par lots à partir d’une source de stockage dans le cloud dans l’interface utilisateur.
 exl-id: b327bbea-039d-4c04-afd3-f1d6a5f902a6
-source-git-commit: 0910de76d817eea7c7c3cb2b988d81268b3e5812
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1795'
-ht-degree: 28%
+ht-degree: 32%
 
 ---
 
@@ -20,12 +20,12 @@ Ce tutoriel décrit les étapes de configuration d’un flux de données pour im
 >
 >Pour créer un flux de données permettant d’importer des données par lots à partir d’un espace de stockage dans le cloud, vous devez déjà avoir accès à une source de stockage dans le cloud authentifiée. Si vous n’avez pas accès à , accédez au [présentation des sources](../../../../home.md#cloud-storage) pour obtenir la liste des sources de stockage dans le cloud avec lesquelles vous pouvez créer un compte.
 
-Ce tutoriel nécessite une compréhension pratique des composants suivants de l’Experience Platform :
+Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform : 
 
-* [[!DNL Experience Data Model (XDM)] Système](../../../../../xdm/home.md): Cadre normalisé selon lequel l’Experience Platform organise les données d’expérience client.
+* [[!DNL Experience Data Model (XDM)] Système](../../../../../xdm/home.md) : Cadre normalisé selon lequel Experience Platform organise les données d’expérience client. 
    * [Principes de base de la composition des schémas](../../../../../xdm/schema/composition.md) : découvrez les blocs de création de base des schémas XDM, y compris les principes clés et les bonnes pratiques en matière de composition de schémas.
    * [Tutoriel sur l’éditeur de schémas](../../../../../xdm/tutorials/create-schema-ui.md) : découvrez comment créer des schémas personnalisés à l’aide de l’interface utilisateur de l’éditeur de schémas.
-* [[!DNL Real-time Customer Profile]](../../../../../profile/home.md) : fournit un profil de consommateur unifié en temps réel, basé sur des données agrégées provenant de plusieurs sources.
+* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md) : fournit un profil de consommateur unifié en temps réel, basé sur des données agrégées provenant de plusieurs sources.
 
 ### Formats de fichiers pris en charge
 
@@ -36,7 +36,7 @@ Les sources de stockage dans le cloud pour les données par lots prennent en cha
 * [!DNL Apache Parquet]: Les fichiers de données au format parquet doivent être compatibles avec XDM.
 * Fichiers compressés : Les fichiers JSON et délimités peuvent être compressés comme suit : `bzip2`, `gzip`, `deflate`, `zipDeflate`, `tarGzip`, et `tar`.
 
-## Ajout de données
+## Ajouter des données
 
 Après avoir créé votre compte de stockage dans le cloud, la variable **[!UICONTROL Ajouter des données]** s’affiche, fournissant une interface vous permettant d’explorer la hiérarchie des fichiers de stockage dans le cloud et de sélectionner le dossier ou le fichier spécifique à importer dans Platform.
 
@@ -172,7 +172,7 @@ Lorsque vous avez terminé de configurer votre planning d’ingestion, sélectio
 
 L’écran de **[!UICONTROL Révision]** s’affiche, vous permettant dʼexaminer votre nouveau flux de données avant sa création. Les détails sont regroupés dans les catégories suivantes :
 
-* **[!UICONTROL Connexion]**: Affiche le type de source, le chemin d’accès approprié du fichier source choisi et la quantité de colonnes qu’il contient.
+* **[!UICONTROL Connexion]** : affiche le type de source, le chemin d’accès correspondant au fichier source choisi et le nombre de colonnes au sein de ce fichier source.
 * **[!UICONTROL Attribuer des champs de jeu de données et de mappage]** : affiche le jeu de données dans lequel les données sources sont ingérées, y compris le schéma auquel le jeu de données se conforme.
 * **[!UICONTROL Planification]**: Affiche la période, la fréquence et l’intervalle principaux du planning d’ingestion.
 
@@ -183,9 +183,9 @@ Une fois que vous avez examiné votre flux de données, cliquez sur **[!UICONTRO
 
 ## Étapes suivantes
 
-En suivant ce tutoriel, vous avez créé un flux de données pour importer des données d’un espace de stockage cloud externe et vous avez obtenu des informations sur la surveillance des jeux de données. Pour en savoir plus sur la création de flux de données, vous pouvez compléter votre apprentissage en regardant la vidéo ci-dessous. En outre, les données entrantes peuvent désormais être utilisées par les utilisateurs en aval. [!DNL Platform] des services tels que [!DNL Real-time Customer Profile] et [!DNL Data Science Workspace]. Consultez les documents suivants pour plus d’informations :
+En suivant ce tutoriel, vous avez créé un flux de données pour importer des données d’un espace de stockage cloud externe et vous avez obtenu des informations sur la surveillance des jeux de données. Pour en savoir plus sur la création de flux de données, vous pouvez compléter votre apprentissage en regardant la vidéo ci-dessous. En outre, les données entrantes peuvent désormais être utilisées par les utilisateurs en aval. [!DNL Platform] des services tels que [!DNL Real-Time Customer Profile] et [!DNL Data Science Workspace]. Consultez les documents suivants pour plus d’informations :
 
-* [Présentation de [!DNL Real-time Customer Profile]](../../../../../profile/home.md)
+* [Présentation de [!DNL Real-Time Customer Profile]](../../../../../profile/home.md)
 * [Présentation de [!DNL Data Science Workspace]](../../../../../data-science-workspace/home.md)
 
 >[!WARNING]

@@ -4,7 +4,7 @@ title: Configuration d’un champ d’attribut calculé
 topic-legacy: guide
 type: Documentation
 description: Les attributs calculés sont des fonctions utilisées pour regrouper des données au niveau de l’événement en attributs au niveau du profil. Pour configurer un attribut calculé, vous devez d’abord identifier le champ dans lequel la valeur d’attribut calculé sera conservée. Ce champ peut être créé à l’aide d’un groupe de champs de schéma pour ajouter le champ à un schéma existant, ou en sélectionnant un champ que vous avez déjà défini dans un schéma.
-source-git-commit: 6e0f7578d0818f88e13b963f64cb2de6729f0574
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '859'
 ht-degree: 44%
@@ -30,7 +30,7 @@ Le workflow de ce tutoriel utilise une [!DNL Profile]schéma -enabled et suit le
 
 ## Affichage d’un schéma
 
-Les étapes suivantes utilisent l’interface utilisateur de Adobe Experience Platform pour localiser un schéma, ajouter un groupe de champs et définir un champ. Si vous préférez utiliser la variable [!DNL Schema Registry] API, reportez-vous à la section [Guide de développement du registre des schémas](../../xdm/api/getting-started.md) pour savoir comment créer un groupe de champs, ajouter un groupe de champs à un schéma et activer un schéma à utiliser avec [!DNL Real-time Customer Profile].
+Les étapes suivantes utilisent l’interface utilisateur de Adobe Experience Platform pour localiser un schéma, ajouter un groupe de champs et définir un champ. Si vous préférez utiliser la variable [!DNL Schema Registry] API, reportez-vous à la section [Guide de développement du registre des schémas](../../xdm/api/getting-started.md) pour savoir comment créer un groupe de champs, ajouter un groupe de champs à un schéma et activer un schéma à utiliser avec [!DNL Real-Time Customer Profile].
 
 Dans l’interface utilisateur, cliquez sur **[!UICONTROL Schémas]** dans le rail de gauche et utilisez la barre de recherche dans l’onglet **[!UICONTROL Parcourir]** pour trouver rapidement le schéma que vous souhaitez mettre à jour.
 

@@ -1,14 +1,14 @@
 ---
-title: Notes de mise à jour d’Adobe Experience Platform Septembre 2019
-description: Notes de mise à jour de septembre 2019 pour Adobe Experience Platform.
+title: Notes de mise à jour d’Adobe Experience Platform - Septembre 2019
+description: Les notes de mise à jour de septembre 2019 pour Adobe Experience Platform.
 doc-type: release notes
 last-update: September 13, 2019
 author: ens28527
 exl-id: 7f503046-a3b4-4fdb-833c-4205b6e9fa04
-source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '536'
-ht-degree: 55%
+ht-degree: 57%
 
 ---
 
@@ -36,7 +36,7 @@ Pour plus d’informations, consultez la [documentation sur Data Ingestion](../.
 
 ## [!DNL Data Science Workspace] {#dsw}
 
-Adobe Experience Platform [!DNL Data Science Workspace] est un service entièrement géré au sein d’ [!DNL Experience Platform] qui permet aux spécialistes des données de générer en toute transparence des informations à partir de données et de contenu sur les solutions Adobe et les systèmes tiers en créant et en mettant en oeuvre des modèles d’apprentissage automatique. [!DNL Data Science Workspace] est étroitement intégré à et alimente le cycle de vie de la science des données de bout en bout, y compris l’exploration et la préparation des données XDM, puis le développement et la mise en œuvre de modèles pour enrichir automatiquement avec des insights d’apprentissage automatique.[!DNL Platform][!DNL Real-time Customer Profile]
+Adobe Experience Platform [!DNL Data Science Workspace] est un service entièrement géré au sein d’ [!DNL Experience Platform] qui permet aux spécialistes des données de générer en toute transparence des informations à partir de données et de contenu sur les solutions Adobe et les systèmes tiers en créant et en mettant en oeuvre des modèles d’apprentissage automatique. [!DNL Data Science Workspace] est étroitement intégré à et alimente le cycle de vie de la science des données de bout en bout, y compris l’exploration et la préparation des données XDM, puis le développement et la mise en œuvre de modèles pour enrichir automatiquement avec des insights d’apprentissage automatique.[!DNL Platform][!DNL Real-Time Customer Profile]
 
 **Nouvelles fonctionnalités**
 
@@ -56,7 +56,7 @@ Pour plus d’informations, consultez la section [Présentation de Data Science 
 
 ## [!DNL Query Service] {#query}
 
-[!DNL Query Service] permet d’utiliser des commandes SQL standard pour rechercher des données dans Adobe Experience Platform afin de prendre en charge divers cas d’utilisation d’analyse et de gestion des données. Il s’agit d’un outil sans serveur qui vous permet de joindre des jeux de données à partir de la variable [!DNL Data Lake] et capturer les résultats de la requête en tant que nouveau jeu de données à utiliser dans les rapports, [!DNL Data Science Workspace]ou pour l’ingestion dans [!DNL Real-time Customer Profile].
+[!DNL Query Service] permet d’utiliser des commandes SQL standard pour rechercher des données dans Adobe Experience Platform afin de prendre en charge divers cas d’utilisation d’analyse et de gestion des données. Il s’agit d’un outil sans serveur qui vous permet de joindre des jeux de données à partir de la variable [!DNL Data Lake] et capturer les résultats de la requête en tant que nouveau jeu de données à utiliser dans les rapports, [!DNL Data Science Workspace]ou pour l’ingestion dans [!DNL Real-Time Customer Profile].
 
 Vous pouvez utiliser [!DNL Query Service] pour créer des écosystèmes d’analyse des données, en créant une image des clients sur leurs différents canaux d’interaction. Ces canaux peuvent inclure les systèmes de point de vente, le Web, les applications mobiles ou les systèmes de gestion de la relation client (CRM).
 

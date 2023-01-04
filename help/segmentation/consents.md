@@ -5,7 +5,7 @@ title: Respect du consentement dans les segments
 topic-legacy: overview
 description: Découvrez comment honorer les préférences de consentement des clients pour la collecte et le partage de données personnelles dans les opérations de segmentation.
 exl-id: fe851ce3-60db-4984-a73c-f9c5964bfbad
-source-git-commit: bd312024a1a3fb6da840a38d6e9d19fcbd6eab5a
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '675'
 ht-degree: 2%
@@ -23,8 +23,8 @@ Si un client a retiré ou refusé le consentement pour le partage de ses donnée
 Le respect des valeurs de consentement du client nécessite une compréhension des différentes [!DNL Adobe Experience Platform] les services impliqués. Avant de commencer ce tutoriel, assurez-vous de bien connaître les services suivants :
 
 * [[!DNL Experience Data Model (XDM)]](../xdm/home.md) : framework normalisé selon lequel Platform organise les données de l’expérience client.
-* [[!DNL Real-time Customer Profile]](../profile/home.md): Fournit un profil client unifié en temps réel basé sur des données agrégées provenant de plusieurs sources.
-* [[!DNL Adobe Experience Platform Segmentation Service]](./home.md): Permet de créer des segments d’audience à partir de [!DNL Real-time Customer Profile] data.
+* [[!DNL Real-Time Customer Profile]](../profile/home.md): Fournit un profil client unifié en temps réel basé sur des données agrégées provenant de plusieurs sources.
+* [[!DNL Adobe Experience Platform Segmentation Service]](./home.md): Permet de créer des segments d’audience à partir de [!DNL Real-Time Customer Profile] data.
 
 ## Champs de schéma de consentement
 

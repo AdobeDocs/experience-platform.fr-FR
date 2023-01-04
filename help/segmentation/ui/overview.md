@@ -5,7 +5,7 @@ title: Guide de l’interface utilisateur de Segmentation Service
 topic-legacy: ui guide
 description: Adobe Experience Platform Segmentation Service fournit une interface utilisateur pour la création et la gestion des définitions de segment.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2647'
 ht-degree: 19%
@@ -21,7 +21,7 @@ ht-degree: 19%
 L’utilisation des définitions de segment nécessite une compréhension des différentes [!DNL Experience Platform] services impliqués dans la segmentation. Avant de lire ce guide d’utilisation, veuillez consulter la documentation relative aux services suivants :
 
 - [[!DNL Segmentation Service]](../home.md): [!DNL Segmentation Service] permet de diviser les données stockées dans [!DNL Experience Platform] qui se rapporte aux individus (tels que les clients, les prospects, les utilisateurs ou les organisations) en groupes plus petits.
-- [[!DNL Real-time Customer Profile]](../../profile/home.md) : fournit un profil de consommateur unifié en temps réel, basé sur des données agrégées provenant de plusieurs sources.
+- [[!DNL Real-Time Customer Profile]](../../profile/home.md) : fournit un profil de consommateur unifié en temps réel, basé sur des données agrégées provenant de plusieurs sources.
 - [[!DNL Adobe Experience Platform Identity Service]](../../identity-service/home.md): Permet la création de profils client en rapprochant des identités de sources de données disparates ingérées dans [!DNL Platform].
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md) : cadre normalisé selon lequel [!DNL Platform] organise les données de l’expérience client. Pour utiliser au mieux la segmentation, veillez à ce que vos données soient ingérées en tant que profils et événements en fonction des [bonnes pratiques pour la modélisation des données](../../xdm/schema/best-practices.md).
 
@@ -156,7 +156,7 @@ La taille de l’échantillon de l’analyse dépend du nombre total d’entité
 | 1 à 20 millions | 1 million |
 | Plus de 20 millions | 5 % du total |
 
-Informations plus détaillées sur chaque [!DNL Profile] peut être consulté en sélectionnant la variable [!DNL Profile] ID. Pour en savoir plus sur les détails d’un profil, veuillez lire le [[!DNL Real-time Customer Profile] guide de l’utilisateur](../../profile/ui/user-guide.md#profile-detail).
+Informations plus détaillées sur chaque [!DNL Profile] peut être consulté en sélectionnant la variable [!DNL Profile] ID. Pour en savoir plus sur les détails d’un profil, veuillez lire le [[!DNL Real-Time Customer Profile] guide de l’utilisateur](../../profile/ui/user-guide.md#profile-detail).
 
 ![Les exemples de profils pour la définition de segment sont mis en surbrillance. Les exemples d’informations de profil incluent l’identifiant du profil, le prénom, le nom et l’adresse électronique de la personne.](../images/ui/overview/segment-details-profiles.png)
 
@@ -176,7 +176,7 @@ Pour plus d’informations sur l’utilisation de la variable [!DNL Segment Buil
 
 ## Segmentation planifiée {#scheduled-segmentation}
 
-Une fois les définitions de segment créées, vous pouvez les évaluer par le biais d’une évaluation sur demande ou planifiée (continue). Évaluation signifie se déplacer [!DNL Real-time Customer Profile] données par le biais de définitions de segment afin de produire les audiences correspondantes. Une fois créées, les audiences sont enregistrées et stockées afin de pouvoir être exportées à l&#39;aide de [!DNL Experience Platform] API.
+Une fois les définitions de segment créées, vous pouvez les évaluer par le biais d’une évaluation sur demande ou planifiée (continue). Évaluation signifie se déplacer [!DNL Real-Time Customer Profile] données par le biais de définitions de segment afin de produire les audiences correspondantes. Une fois créées, les audiences sont enregistrées et stockées afin de pouvoir être exportées à l&#39;aide de [!DNL Experience Platform] API.
 
 L’évaluation sur demande nécessite l’utilisation de l’API pour effectuer l’évaluation et créer des audiences selon les besoins, alors que l’évaluation planifiée (également appelée « segmentation planifiée ») vous permet de créer un planning récurrent pour évaluer les définitions de segment à un moment précis (au maximum, une fois par jour).
 
@@ -294,6 +294,6 @@ Une fois le segment créé, il est analysé par la gouvernance des données de A
 
 ## Étapes suivantes et ressources supplémentaires {#next-steps}
 
-Le [!DNL Segmentation Service] L’interface utilisateur fournit un processus riche qui vous permet d’isoler les audiences commercialisables de [!DNL Real-time Customer Profile] data.
+Le [!DNL Segmentation Service] L’interface utilisateur fournit un processus riche qui vous permet d’isoler les audiences commercialisables de [!DNL Real-Time Customer Profile] data.
 
 Pour en savoir plus sur [!DNL Segmentation Service], veuillez continuer à lire la documentation. Pour savoir comment utiliser la variable [!DNL Segmentation Service] API, veuillez lire la [[!DNL Segmentation Service] guide de développement](../api/overview.md).

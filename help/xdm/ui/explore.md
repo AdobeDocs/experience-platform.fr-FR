@@ -6,7 +6,7 @@ description: Découvrez comment explorer les schémas, classes, groupes de champ
 topic-legacy: tutorial
 type: Tutorial
 exl-id: b527b2a0-e688-4cfe-a176-282182f252f2
-source-git-commit: ddf66ab277e5882afe7ffbdd87ee5df958c3e7b0
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1022'
 ht-degree: 0%
@@ -29,7 +29,7 @@ Sur le [!UICONTROL Parcourir] vous pouvez utiliser l’icône de filtre (![Image
 
 Par exemple, pour filtrer la liste afin de n’afficher que les types de données standard fournis par Adobe, sélectionnez **[!UICONTROL Type de données]** et **[!UICONTROL Adobe]** sous le **[!UICONTROL Type]** et **[!UICONTROL Propriétaire]** , respectivement.
 
-Le **[!UICONTROL Inclus dans Profile]** activer/désactiver permet de filtrer les résultats afin d’afficher uniquement les ressources utilisées dans les schémas qui ont été activés pour une utilisation dans [Real-time Customer Profile](../../profile/home.md).
+Le **[!UICONTROL Inclus dans Profile]** activer/désactiver permet de filtrer les résultats afin d’afficher uniquement les ressources utilisées dans les schémas qui ont été activés pour une utilisation dans [Profil client en temps réel](../../profile/home.md).
 
 ![](../images/ui/explore/filter.png)
 

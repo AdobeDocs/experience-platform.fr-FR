@@ -5,14 +5,14 @@ title: Présentation de la source d’Audience Manager
 topic-legacy: overview
 description: La source Adobe Audience Manager diffuse les données propriétaires collectées dans Audience Manager vers Adobe Experience Platform.
 exl-id: be90db33-69e1-4f42-9d1a-4f8f26405f0f
-source-git-commit: 37e810ce6faf40f9980841b2c9d6eb29e8b0e82a
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1059'
 ht-degree: 22%
 
 ---
 
-# Source de l’Audience Manager
+# Source Audience Manager
 
 La source Adobe Audience Manager diffuse les données propriétaires collectées dans Adobe Audience Manager pour activation dans Adobe Experience Platform. La source d’Audience Manager ingère deux types de données vers Platform :
 
@@ -83,5 +83,5 @@ Vous pouvez également vérifier l’utilisation du profil dont votre compte dis
 | Données Audience Manager | Type | Latence | Remarques |
 | --- | --- | --- | --- |
 | Données en temps réel | Événements | &lt;25 minutes | Temps nécessaire pour que la capture sur le noeud Audience Manager Edge apparaisse dans le lac de données. |
-| Données en temps réel | Mises à jour des profils | &lt;10 minutes | Temps nécessaire pour accéder à Real-time Customer Profile. |
+| Données en temps réel | Mises à jour des profils | &lt;10 minutes | Temps d’accès dans Real-time Customer Profile. |
 | Données en temps réel et intégrées | Mises à jour des profils | 24 à 36 heures | Temps écoulé entre la capture via les données Edge DCS/PCS et les données intégrées, en cours de traitement dans un profil utilisateur, et l’affichage dans Real-time Customer Profile. Actuellement, ces données ne se trouvent pas directement dans le lac de données. Le basculement de profil peut être activé pour que les jeux de données de profil d’Audience Manager assimilent directement ces données dans Real-time Customer Profile. |

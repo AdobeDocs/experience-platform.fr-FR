@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: Découvrez comment créer une connexion source pour votre système local pour importer des fichiers locaux dans Platform
 exl-id: 9ce15362-c30d-40cc-9d9c-caa650579390
-source-git-commit: 08805ed0d89d3d6908ddccdafda55d2f862e727e
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '770'
-ht-degree: 70%
+ht-degree: 74%
 
 ---
 
@@ -19,12 +19,12 @@ Ce tutoriel décrit les étapes de création d’un connecteur source de chargem
 
 ## Prise en main
 
-Ce tutoriel nécessite une compréhension pratique des composants suivants de Platform :
+Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Platform : 
 
 * [[!DNL Experience Data Model (XDM)] Système](../../../../../xdm/home.md) : Le cadre normalisé par lequel Platform organise les données d’expérience client.
    * [Principes de base de la composition des schémas](../../../../../xdm/schema/composition.md) : découvrez les blocs de création de base des schémas XDM, y compris les principes clés et les bonnes pratiques en matière de composition de schémas.
    * [Tutoriel sur l’éditeur de schémas](../../../../../xdm/tutorials/create-schema-ui.md) : découvrez comment créer des schémas personnalisés à l’aide de l’interface utilisateur de l’éditeur de schémas.
-* [[!DNL Real-time Customer Profile]](../../../../../profile/home.md) : fournit un profil de consommateur unifié en temps réel, basé sur des données agrégées provenant de plusieurs sources.
+* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md) : fournit un profil de consommateur unifié en temps réel, basé sur des données agrégées provenant de plusieurs sources.
 
 ## Chargement de fichiers locaux dans Platform
 
@@ -86,10 +86,10 @@ Une fois vos jeux de mappages prêts, sélectionnez **[!UICONTROL Terminer]** et
 
 ![mappage](../../../../images/tutorials/create/local/mapping.png)
 
-## Surveillance de l’ingestion des données
+## Surveiller l’ingestion des données
 
 Une fois votre fichier CSV mappé et créé, vous pouvez surveiller les données ingérées à l’aide du tableau de bord de surveillance. Pour plus d’informations, consultez le tutoriel sur [surveillance des flux de données de sources dans l’interface utilisateur](../../../../../dataflows/ui/monitor-sources.md).
 
 ## Étapes suivantes
 
-En suivant ce tutoriel, vous avez mappé un fichier CSV plat à un schéma XDM et l’avez ingéré dans Platform. Ces données peuvent désormais être utilisées en aval. [!DNL Platform] des services tels que [!DNL Real-time Customer Profile]. Consultez la présentation pour [[!DNL Real-time Customer Profile]](../../../../../profile/home.md) pour plus d’informations.
+En suivant ce tutoriel, vous avez mappé un fichier CSV plat à un schéma XDM et l’avez ingéré dans Platform. Ces données peuvent désormais être utilisées par les services de [!DNL Platform] en aval, comme [!DNL Real-Time Customer Profile]. Pour de plus d’informations, rendez-vous sur la présentation de [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md).

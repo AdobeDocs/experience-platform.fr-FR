@@ -2,20 +2,20 @@
 keywords: Experience Platform;profil;profil client en temps réel;dépannage;API;activer un jeu de données
 title: Configurer un jeu de données pour le profil et le Service d’identités à l’aide d’API
 type: Tutorial
-description: Ce tutoriel vous explique comment activer un jeu de données à utiliser avec Profil client en temps réel et Service d’identités à l’aide des API Adobe Experience Platform.
+description: Ce tutoriel vous explique comment activer un jeu de données à utiliser avec Real-Time Customer Profile et Identity Service à l’aide des API Adobe Experience Platform.
 exl-id: a115e126-6775-466d-ad7e-ee36b0b8b49c
-source-git-commit: 132407af947b97a1925799a1fb5e12caa2b0410c
-workflow-type: ht
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+workflow-type: tm+mt
 source-wordcount: '1073'
-ht-degree: 100%
+ht-degree: 94%
 
 ---
 
 # Activer un jeu de données pour [!DNL Profile] et [!DNL Identity Service] à l’aide des API
 
-Ce tutoriel décrit le processus d’activation d’un jeu de données en vue de son utilisation dans [!DNL Real-time Customer Profile] et [!DNL Identity Service]. Il est composé des étapes suivantes :
+Ce tutoriel décrit le processus d’activation d’un jeu de données en vue de son utilisation dans [!DNL Real-Time Customer Profile] et [!DNL Identity Service]. Il est composé des étapes suivantes :
 
-1. Activer un jeu de données à utiliser dans [!DNL Real-time Customer Profile] à l’aide de l’une des deux options suivantes :
+1. Activer un jeu de données à utiliser dans [!DNL Real-Time Customer Profile] à l’aide de l’une des deux options suivantes :
    - [Créer un nouveau jeu de données](#create-a-dataset-enabled-for-profile-and-identity)
    - [Configurer un jeu de données existant](#configure-an-existing-dataset)
 1. [Ingestion de données dans le jeu de données](#ingest-data-into-the-dataset)
@@ -24,11 +24,11 @@ Ce tutoriel décrit le processus d’activation d’un jeu de données en vue de
 
 ## Prise en main
 
-Ce tutoriel nécessite une connaissance pratique des différents services Adobe Experience Platform impliqués dans la gestion des jeux de données activés pour Profil. Avant de commencer ce tutoriel, veuillez consulter la documentation relative à ces services de [!DNL Platform] :
+Ce tutoriel nécessite une connaissance pratique des différents services Adobe Experience Platform impliqués dans la gestion des jeux de données activés pour Profil. Avant de commencer ce tutoriel, consultez la documentation relative à ces services [!DNL Platform] associés :
 
-- [[!DNL Real-time Customer Profile]](../../profile/home.md) : fournit un profil de consommateur unifié en temps réel, basé sur des données agrégées provenant de plusieurs sources.
-- [[!DNL Identity Service]](../../identity-service/home.md) : permet d’activer [!DNL Real-time Customer Profile] en établissant un lien entre les identités des sources de données disparates ingérées dans [!DNL Platform].
-- [[!DNL Catalog Service]](../../catalog/home.md) : API RESTful qui vous permet de créer des jeux de données et de les configurer pour [!DNL Real-time Customer Profile] et [!DNL Identity Service].
+- [[!DNL Real-Time Customer Profile]](../../profile/home.md) : fournit un profil de consommateur unifié en temps réel, basé sur des données agrégées provenant de plusieurs sources.
+- [[!DNL Identity Service]](../../identity-service/home.md) : permet d’activer [!DNL Real-Time Customer Profile] en établissant un lien entre les identités des sources de données disparates ingérées dans [!DNL Platform].
+- [[!DNL Catalog Service]](../../catalog/home.md) : API RESTful qui vous permet de créer des jeux de données et de les configurer pour [!DNL Real-Time Customer Profile] et [!DNL Identity Service].
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md) : cadre normalisé selon lequel [!DNL Platform] organise les données de l’expérience client.
 
 Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour passer avec succès des appels à des API Platform.
@@ -45,13 +45,13 @@ Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [
 - `x-api-key: {API_KEY}`
 - `x-gw-ims-org-id: {ORG_ID}`
 
-Toutes les requêtes contenant une payload (POST, PUT, PATCH) requièrent un en-tête `Content-Type` supplémentaire. La valeur correcte de cet en-tête s’affiche dans les exemples de requêtes, le cas échéant.
+Toutes les requêtes contenant une payload (POST, PUT, PATCH) nécessitent un en-tête `Content-Type` supplémentaire : La valeur correcte de cet en-tête s’affiche dans les exemples de requêtes, le cas échéant.
 
 Dans [!DNL Experience Platform], toutes les ressources sont isolées dans des sandbox virtuelles spécifiques. Toutes les requêtes envoyées aux API [!DNL Platform] nécessitent un en-tête `x-sandbox-name` spécifiant le nom de la sandbox dans laquelle l’opération sera effectuée. Pour plus d’informations sur les sandbox dans [!DNL Platform], consultez la [documentation de présentation des sandbox](../../sandboxes/home.md).
 
 ## Créer un jeu de données activé pour Profile et Service d’identités {#create-a-dataset-enabled-for-profile-and-identity}
 
-Vous pouvez activer un jeu de données pour Profil client en temps réel et Service d’identités dès sa création ou à tout moment après sa création. Si vous souhaitez activer un jeu de données déjà créé, suivez les étapes de [configuration d’un jeu de données existant](#configure-an-existing-dataset) qui se trouvent plus bas dans ce document.
+Vous pouvez activer un jeu de données pour Real-Time Customer Profile et Identity Service dès sa création ou à tout moment après la création du jeu de données. Si vous souhaitez activer un jeu de données déjà créé, suivez les étapes de [configuration d’un jeu de données existant](#configure-an-existing-dataset) qui se trouvent plus bas dans ce document.
 
 >[!NOTE]
 >
@@ -107,11 +107,11 @@ Une réponse réussie affiche un tableau contenant l’identifiant du jeu de don
 
 ## Configurer un jeu de données existant {#configure-an-existing-dataset}
 
-Les étapes suivantes expliquent comment activer un jeu de données précédemment créé pour [!DNL Real-time Customer Profile] et [!DNL Identity Service]. Si vous avez déjà créé un jeu de données activé pour Profile, passez à l’étape de l’[ingestion de données](#ingest-data-into-the-dataset).
+Les étapes suivantes expliquent comment activer un jeu de données précédemment créé pour [!DNL Real-Time Customer Profile] et [!DNL Identity Service]. Si vous avez déjà créé un jeu de données activé pour Profile, passez à l’étape de l’[ingestion de données](#ingest-data-into-the-dataset).
 
 ### Vérifier si le jeu de données est activé {#check-if-the-dataset-is-enabled}
 
-À l’aide de l’API [!DNL Catalog], vous pouvez examiner un jeu de données existant afin de déterminer s’il est activé pour une utilisation dans [!DNL Real-time Customer Profile] et [!DNL Identity Service]. L’appel suivant récupère les détails d’un jeu de données via son identifiant.
+À l’aide de l’API [!DNL Catalog], vous pouvez examiner un jeu de données existant afin de déterminer s’il est activé pour une utilisation dans [!DNL Real-Time Customer Profile] et [!DNL Identity Service]. L’appel suivant récupère les détails d’un jeu de données via son identifiant.
 
 **Format d’API**
 
@@ -185,7 +185,7 @@ curl -X GET \
 }
 ```
 
-Sous la propriété `tags`, vous pouvez voir que `unifiedProfile` et `unifiedIdentity` sont tous les deux présents et affichent la valeur `enabled:true`. Par conséquent, [!DNL Real-time Customer Profile] et [!DNL Identity Service] sont activés pour ce jeu de données, respectivement.
+Sous la propriété `tags`, vous pouvez voir que `unifiedProfile` et `unifiedIdentity` sont tous les deux présents et affichent la valeur `enabled:true`. Par conséquent, [!DNL Real-Time Customer Profile] et [!DNL Identity Service] sont activés pour ce jeu de données, respectivement.
 
 ### Activer le jeu de données {#enable-the-dataset}
 
@@ -230,14 +230,14 @@ Une requête PATCH réussie renvoie un état HTTP 200 (OK) et un tableau conten
 
 ## Ingérer des données dans le jeu de données {#ingest-data-into-the-dataset}
 
-[!DNL Real-time Customer Profile] et [!DNL Identity Service] utilisent tous deux des données XDM lors de leur ingestion dans un jeu de données. Pour apprendre à charger des données dans un jeu de données, reportez-vous au tutoriel sur la [création d’un jeu de données à l’aide d’API](../../catalog/datasets/create.md). Lors de la planification des données à envoyer à votre jeu de données activé pour [!DNL Profile], tenez compte des bonnes pratiques suivantes :
+[!DNL Real-Time Customer Profile] et [!DNL Identity Service] utilisent tous deux des données XDM lors de leur ingestion dans un jeu de données. Pour apprendre à charger des données dans un jeu de données, reportez-vous au tutoriel sur la [création d’un jeu de données à l’aide d’API](../../catalog/datasets/create.md). Lors de la planification des données à envoyer à votre jeu de données activé pour [!DNL Profile], tenez compte des bonnes pratiques suivantes :
 
 - Incluez toutes les données à utiliser comme critères de segmentation.
 - Incluez autant d’identifiants que vous pouvez en valider à partir des données de profil afin d’optimiser le graphique d’identités. Cela permet à [!DNL Identity Service] de regrouper plus efficacement les identités à l’échelle des jeux de données.
 
-## Confirmer l’ingestion des données par [!DNL Real-time Customer Profile] {#confirm-data-ingest-by-real-time-customer-profile}
+## Confirmer l’ingestion des données par [!DNL Real-Time Customer Profile] {#confirm-data-ingest-by-real-time-customer-profile}
 
-Lors du premier chargement de données vers un nouveau jeu de données ou dans le cadre d’un processus impliquant un nouveau ETL ou une nouvelle source de données, il est recommandé de vérifier soigneusement les données afin de s’assurer qu’elles ont été chargées comme prévu. Grâce à l’API Access [!DNL Real-time Customer Profile], vous pouvez récupérer des données de lots lors de leur chargement dans un jeu de données. Si vous ne parvenez pas à récupérer les entités attendues, il se peut que votre jeu de données ne soit pas activé pour [!DNL Real-time Customer Profile]. Une fois que vous avez confirmé que votre jeu de données a été activé, assurez-vous que le format et les identifiants des données sources répondent à vos attentes. Pour obtenir des instructions détaillées sur l’utilisation de l’API [!DNL Real-time Customer Profile] pour accéder aux données [!DNL Profile], reportez-vous au [guide de point d’entrée des entités](../../profile/api/entities.md), également appelé l’API « [!DNL Profile Access] ».
+Lors du premier chargement de données vers un nouveau jeu de données ou dans le cadre d’un processus impliquant un nouveau ETL ou une nouvelle source de données, il est recommandé de vérifier soigneusement les données afin de s’assurer qu’elles ont été chargées comme prévu. Grâce à l’API Access [!DNL Real-Time Customer Profile], vous pouvez récupérer des données de lots lors de leur chargement dans un jeu de données. Si vous ne parvenez pas à récupérer les entités attendues, il se peut que votre jeu de données ne soit pas activé pour [!DNL Real-Time Customer Profile]. Une fois que vous avez confirmé que votre jeu de données a été activé, assurez-vous que le format et les identifiants des données sources répondent à vos attentes. Pour obtenir des instructions détaillées sur l’utilisation de l’API [!DNL Real-Time Customer Profile] pour accéder aux données [!DNL Profile], reportez-vous au [guide de point d’entrée des entités](../../profile/api/entities.md), également appelé l’API « [!DNL Profile Access] ».
 
 ## Confirmer l’ingestion des données par le Service d’identités {#confirm-data-ingest-by-identity-service}
 

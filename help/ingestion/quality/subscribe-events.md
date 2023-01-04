@@ -5,7 +5,7 @@ title: Notifications d’ingestion de données
 topic-legacy: overview
 description: Pour faciliter la surveillance du processus d’ingestion, Adobe Experience Platform permet de s’abonner à un ensemble d’événements publiés par chaque étape du processus, vous informant de l’état des données ingérées et des échecs possibles.
 exl-id: fd34e1ab-f6f6-44f0-88ee-7020e9322c39
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '677'
 ht-degree: 28%
@@ -16,7 +16,7 @@ ht-degree: 28%
 
 Le processus d’ingestion de données dans Adobe Experience Platform se compose de plusieurs étapes. Une fois que vous avez identifié les fichiers de données qui doivent être ingérés dans [!DNL Platform], le processus d’ingestion commence et chaque étape se produit consécutivement jusqu’à ce que les données soient correctement ingérées ou échouent. Il est possible d’initier le processus d’ingestion à l’aide de l’[API Data Ingestion d’Adobe ](https://www.adobe.io/experience-platform-apis/references/data-ingestion/) ou de l’interface utilisateur Experience Platform.[!DNL Experience Platform]
 
-Données chargées dans [!DNL Platform] Pour atteindre sa destination, la variable [!DNL Data Lake] ou le [!DNL Real-time Customer Profile] entrepôt de données. Chaque étape implique le traitement des données, leur validation, puis leur stockage avant de passer à l’étape suivante. En fonction de la quantité de données ingérée, ce processus peut devenir chronophage et il existe toujours une possibilité qu’il échoue en raison d’erreurs de validation, de sémantique ou de traitement. En cas d’échec, les problèmes de données doivent être résolus, puis l’ensemble du processus d’ingestion doit être redémarré en utilisant des fichiers de données corrigés.
+Données chargées dans [!DNL Platform] Pour atteindre sa destination, la variable [!DNL Data Lake] ou le [!DNL Real-Time Customer Profile] entrepôt de données. Chaque étape implique le traitement des données, leur validation, puis leur stockage avant de passer à l’étape suivante. En fonction de la quantité de données ingérée, ce processus peut devenir chronophage et il existe toujours une possibilité qu’il échoue en raison d’erreurs de validation, de sémantique ou de traitement. En cas d’échec, les problèmes de données doivent être résolus, puis l’ensemble du processus d’ingestion doit être redémarré en utilisant des fichiers de données corrigés.
 
 Pour faciliter la surveillance du processus d’ingestion, [!DNL Experience Platform] permet de s’abonner à un ensemble d’événements publiés à chaque étape du processus, vous informant du statut des données ingérées et des échecs possibles.
 
@@ -86,8 +86,8 @@ Le tableau suivant répertorie les notifications d’état d’ingestion de donn
 | --- | ---------------- | ------ | ----------------- |
 | `ing_load_success` | [!DNL Data Ingestion] | success | Un lot a été ingéré avec succès dans un jeu de données dans la variable [!DNL Data Lake]. |
 | `ing_load_failure` | [!DNL Data Ingestion] | failure | Échec de l’ingestion d’un lot dans un jeu de données au sein de la variable [!DNL Data Lake]. |
-| `ps_load_success` | [!DNL Real-time Customer Profile] | success | Un lot a bien été ingéré dans la variable [!DNL Profile] entrepôt de données. |
-| `ps_load_failure` | [!DNL Real-time Customer Profile] | failure | Échec de l’ingestion d’un lot dans la variable [!DNL Profile] entrepôt de données. |
+| `ps_load_success` | [!DNL Real-Time Customer Profile] | success | Un lot a bien été ingéré dans la variable [!DNL Profile] entrepôt de données. |
+| `ps_load_failure` | [!DNL Real-Time Customer Profile] | failure | Échec de l’ingestion d’un lot dans la variable [!DNL Profile] entrepôt de données. |
 | `ig_load_success` | [!DNL Identity Service] | success | Les données ont bien été chargées dans le graphique d’identités. |
 | `ig_load_failure` | [!DNL Identity Service] | failure | Échec du chargement des données dans le graphique d’identités. |
 

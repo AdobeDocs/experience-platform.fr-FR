@@ -5,7 +5,7 @@ title: Guide de l’interface utilisateur du créateur de segments
 topic-legacy: ui guide
 description: Le créateur de segments de l’interface utilisateur de Adobe Experience Platform fournit un espace de travail riche qui vous permet d’interagir avec les éléments de données Profile. L’espace de travail fournit des commandes intuitives pour la création et la modification de règles, telles que le glisser-déposer de mosaïques utilisées pour représenter les propriétés des données.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '3101'
 ht-degree: 30%
@@ -254,7 +254,7 @@ Vous trouverez plus d’informations sur les différentes méthodes d’évaluat
 
 ## Étapes suivantes {#next-steps}
 
-Le créateur de segments fournit un processus riche qui vous permet d’isoler les audiences commercialisables des [!DNL Real-time Customer Profile] data. Après avoir lu ce guide, vous devriez maintenant pouvoir :
+Le créateur de segments fournit un processus riche qui vous permet d’isoler les audiences commercialisables des [!DNL Real-Time Customer Profile] data. Après avoir lu ce guide, vous devriez maintenant pouvoir :
 
 - créer des définitions de segment en utilisant une combinaison d’attributs, d’événements et d’audiences existants comme blocs de création ;
 - utiliser les conteneurs et les canevas du créateur de règles pour contrôler l’ordre d’exécution des règles de segmentation ;

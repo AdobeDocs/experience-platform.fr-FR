@@ -5,7 +5,7 @@ title: Définition des champs de relation dans l’interface utilisateur
 description: Découvrez comment définir un champ de relation dans l’interface utilisateur de l’Experience Platform.
 topic-legacy: user guide
 exl-id: 8a6be545-0edb-4b9c-b164-e44a7a5f54f5
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '249'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Définition des champs de relation dans l’interface utilisateur
 
-Dans le modèle de données d’expérience (XDM), un [schéma d’union](../../schema/composition.md#union) est une vue unifiée de tous les schémas appartenant à la même classe qui ont également été activés pour [Real-time Customer Profile](../../../profile/home.md). Le schéma d’union est exploité par Profile afin de construire une représentation complète d’un client à partir de données d’expérience disparates.
+Dans le modèle de données d’expérience (XDM), un [schéma d’union](../../schema/composition.md#union) est une vue unifiée de tous les schémas appartenant à la même classe qui ont également été activés pour [Profil client en temps réel](../../../profile/home.md). Le schéma d’union est exploité par Profile afin de construire une représentation complète d’un client à partir de données d’expérience disparates.
 
 Dans certains cas, vous ingérez peut-être des données qui ne font pas nécessairement partie d’un profil, mais qui sont néanmoins liées au profil. Un exemple de ce type de données serait un champ &quot;hôtel préféré&quot; pour un client. Puisque les attributs de l’hôtel préféré d’une personne ne sont pas les attributs de la personne elle-même, un hôtel est mieux représenté par un schéma distinct basé sur une classe personnalisée plutôt que par un schéma distinct. [!DNL XDM Individual Profile].
 

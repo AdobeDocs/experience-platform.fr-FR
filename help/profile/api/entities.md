@@ -3,22 +3,22 @@ keywords: Experience Platform;profil;profil client en temps réel;dépannage;API
 title: Point d’entrée de l’API Entités (accès au profil)
 topic-legacy: guide
 type: Documentation
-description: Adobe Experience Platform vous permet d’accéder aux données Real-time Customer Profile à l’aide des API RESTful ou de l’interface utilisateur. Ce guide explique comment accéder aux entités, plus communément appelées "profils", à l’aide de l’API Profile.
+description: Adobe Experience Platform vous permet d’accéder aux données de Real-time Customer Profile à l’aide des API RESTful ou de l’interface utilisateur. Ce guide explique comment accéder aux entités, plus communément appelées "profils", à l’aide de l’API Profile.
 exl-id: 06a1a920-4dc4-4468-ac15-bf4a6dc885d4
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1732'
-ht-degree: 90%
+ht-degree: 89%
 
 ---
 
 # Point de terminaison des entités (accès au profil)
 
-Adobe Experience Platform vous permet d’accéder à [!DNL Real-time Customer Profile] données à l’aide des API RESTful ou de l’interface utilisateur. Ce guide explique comment accéder aux entités, plus communément appelées « profils », à l’aide de l’API. Pour plus d’informations sur l’accès aux profils à l’aide de la variable [!DNL Platform] Interface utilisateur, reportez-vous à la section [Guide d’utilisation de Profile](../ui/user-guide.md).
+Adobe Experience Platform vous permet d’accéder à [!DNL Real-Time Customer Profile] données à l’aide des API RESTful ou de l’interface utilisateur. Ce guide explique comment accéder aux entités, plus communément appelées « profils », à l’aide de l’API. Pour plus d’informations sur l’accès aux profils à l’aide de la variable [!DNL Platform] Interface utilisateur, reportez-vous à la section [Guide d’utilisation de Profile](../ui/user-guide.md).
 
 ## Prise en main
 
-Le point d’entrée dʼAPI utilisé dans ce guide fait partie de [[!DNL Real-time Customer Profile API]](https://www.adobe.com/go/profile-apis-en). Avant de continuer, consultez le [guide de prise en main](getting-started.md) pour obtenir des liens vers la documentation associée, un guide de lecture des exemples dʼappels API dans ce document et des informations importantes sur les en-têtes requis pour réussir des appels à nʼimporte quel API dʼ[!DNL Experience Platform].
+Le point d’entrée dʼAPI utilisé dans ce guide fait partie de [[!DNL Real-Time Customer Profile API]](https://www.adobe.com/go/profile-apis-en). Avant de continuer, consultez le [guide de prise en main](getting-started.md) pour obtenir des liens vers la documentation associée, un guide de lecture des exemples dʼappels API dans ce document et des informations importantes sur les en-têtes requis pour réussir des appels à nʼimporte quel API dʼ[!DNL Experience Platform].
 
 ## Accès aux données de profil par identité
 
@@ -888,7 +888,7 @@ Les résultats sont paginés lors de la récupération des événements de séri
 
 ## Étapes suivantes
 
-En suivant ce guide, vous avez réussi à accéder à [!DNL Real-time Customer Profile] champs de données, profils et données de série temporelle. Pour savoir comment accéder à d’autres ressources de données stockées dans [!DNL Platform], reportez-vous à la section [Présentation de Data Access](../../data-access/home.md).
+En suivant ce guide, vous avez réussi à accéder à [!DNL Real-Time Customer Profile] champs de données, profils et données de série temporelle. Pour savoir comment accéder à d’autres ressources de données stockées dans [!DNL Platform], reportez-vous à la section [Présentation de Data Access](../../data-access/home.md).
 
 ## Annexe {#appendix}
 

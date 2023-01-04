@@ -1,11 +1,11 @@
 ---
-title: Notes de mise à jour de Adobe Experience Platform - Septembre 2021
-description: Notes de mise à jour de septembre 2021 pour Adobe Experience Platform.
+title: Notes de mise à jour d’Adobe Experience Platform - Septembre 2021
+description: Les notes de mise à jour de septembre 2021 pour Adobe Experience Platform.
 exl-id: 96375409-803f-45af-805e-900207d972e4
-source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '377'
-ht-degree: 96%
+ht-degree: 95%
 
 ---
 
@@ -27,7 +27,7 @@ Adobe Experience Platform Data Ingestion représente les diverses méthodes qu
 
 | Fonctionnalité | Description |
 |------- | -----------|
-| Mise à jour upsert ou correction des enregistrements de profil à l’aide de l’ingestion par lots | Real-time Customer Profile permet désormais de mettre à jour les attributs de profil dans les données d’enregistrements de profils individuels via l’ingestion par lots. Pour en savoir plus, consultez le [Guide du développeur de l’ingestion par lots](../../ingestion/batch-ingestion/api-overview.md). |
+| Mise à jour upsert ou correction des enregistrements de profil à l’aide de l’ingestion par lots | Real-Time Customer Profile permet désormais de mettre à jour les attributs de profil dans les données d’enregistrement de profil individuelles par ingestion par lots. Pour en savoir plus, consultez le [Guide du développeur de l’ingestion par lots](../../ingestion/batch-ingestion/api-overview.md). |
 
 Pour en savoir plus sur l’ingestion de données dans Platform, consultez la [Documentation de Data Ingestion](../../ingestion/home.md).
 

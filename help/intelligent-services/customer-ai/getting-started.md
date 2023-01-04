@@ -6,7 +6,7 @@ title: Prise en main de Customer AI
 topic-legacy: Getting started
 description: Ce guide fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés.
 exl-id: 90c9a83a-8e66-4239-b2d6-2049a6319b25
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 165e5ccae5ca78b3912fef1ba0b3fd4567e231fb
 workflow-type: tm+mt
 source-wordcount: '652'
 ht-degree: 62%
@@ -20,7 +20,7 @@ Les guides sur Customer AI nécessitent une compréhension pratique des différe
 - [Présentation du système de modèle de données d’expérience (XDM)](../../xdm/home.md): XDM est le cadre de base qui permet [!DNL Adobe Experience Cloud], optimisée par un Experience Platform, pour diffuser le message approprié à la bonne personne, sur le bon canal, exactement au bon moment. La méthodologie sur laquelle Experience Platform repose, à savoir le système XDM, rend les schémas de modèles de données d’expérience opérationnels pour qu’ils soient utilisés par les services de Platform.
 - [Principes de base de la composition des schémas](../../xdm/schema/composition.md) : ce document présente les schémas XDM ainsi que les blocs de création, les principes et les bonnes pratiques pour la composition de schémas à utiliser dans [!DNL Adobe Experience Platform].
 - [Création de schémas](../../xdm/tutorials/create-schema-ui.md) : ce tutoriel décrit les étapes de la création d’un schéma à l’aide de l’éditeur de schémas dans Experience Platform.
-- [Présentation de Real-time Customer Profile](../../rtcdp/overview.md): Basé sur [!DNL Adobe Experience Platform], Adobe Real-time Customer Data Platform (Real-Time CDP) aide les entreprises à rassembler des données connues et inconnues pour activer les profils clients avec une prise de décision intelligente tout au long du parcours client. Real-Time CDP combine plusieurs sources de données d’entreprise pour créer des profils unifiés en temps réel qui peuvent être utilisés pour offrir des expériences client personnalisées et individuelles sur tous les canaux et appareils.
+- [Présentation de Real-Time Customer Profile](../../rtcdp/overview.md): Basé sur [!DNL Adobe Experience Platform], Adobe Real-time Customer Data Platform (Real-Time CDP) aide les entreprises à rassembler des données connues et inconnues pour activer les profils clients avec une prise de décision intelligente tout au long du parcours client. Real-Time CDP combine plusieurs sources de données d’entreprise pour créer des profils unifiés en temps réel qui peuvent être utilisés pour offrir des expériences client personnalisées et individuelles sur tous les canaux et appareils.
 - [Présentation de Segmentation Service](../../segmentation/home.md) : la segmentation est le processus consistant à définir des attributs ou des comportements spécifiques partagés par un sous-ensemble de profils de votre magasin de profils afin d’identifier un groupe de clients potentiels dans votre base. Par exemple, dans une campagne par e-mail intitulée « Avez-vous oublié d’acheter vos baskets ? », vous souhaitez peut-être connaître l’audience de tous les utilisateurs ayant recherché des baskets au cours des 30 derniers jours sans effectuer d’achat. En utilisant différents segments, vous pouvez vous concentrer sur les différentes audiences afin de fournir une expérience marketing plus personnalisée.
 - [Guide d’utilisation du créateur de segments](../../segmentation/tutorials/create-a-segment.md) : Platform vous permet de créer des segments et d’y accéder en toute facilité, ainsi que d’utiliser différents blocs de création pour caractériser vos segments avec plus de précision.
 
@@ -48,7 +48,7 @@ Dans Experience Platform, toutes les ressources sont isolées dans des environn
 
 Ce guide fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels API, consultez la section sur la [lecture d’exemples d’appels API](../../landing/troubleshooting.md) dans le guide de dépannage d’Experience Platform.
 
-## Contrôle d&#39;accès {#access-control}
+## Contrôle d’accès {#access-control}
 
 Lors de l’utilisation du contrôle d’accès, la variable **Affichage de Customer AI** et **Gestion de Customer AI** Les privilèges permettent d’accéder à différentes fonctionnalités de Customer AI. Le **Gestion de Customer AI** permission vous permet de **create**,**update**, **delete**, **enable** ou **disable** une instance pendant **Affichage de Customer AI** vous permet de le lire ou de le visualiser. Le **create**, **update** et **delete** Les actions sont enregistrées par les journaux d’audit.
 

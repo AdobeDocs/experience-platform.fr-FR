@@ -5,10 +5,11 @@ solution: Experience Platform
 product: experience platform
 type: Documentation
 description: En savoir plus sur l’utilisation par défaut de l’activation des données et les limites de débit.
-source-git-commit: 69496d2e00ce866413786160d4524cabd03ae350
-workflow-type: ht
+exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+workflow-type: tm+mt
 source-wordcount: '1198'
-ht-degree: 100%
+ht-degree: 98%
 
 ---
 
@@ -33,7 +34,7 @@ Ce document comprend deux types de limites par défaut :
 
 ## Limites d’activation {#activation-limits}
 
-Les barrières de sécurité suivantes fournissent des limites recommandées lors de l’activation des données Real-time Customer Profile vers les destinations.
+Les barrières de sécurité suivantes fournissent des limites recommandées lors de l’activation des données Real-Time Customer Profile vers les destinations.
 
 ### Barrières de sécurité générales de l’activation {#general-activation-guardrails}
 
@@ -121,5 +122,5 @@ Consultez les informations sur les barrières de sécurité pour d’autres serv
 
 * Barrières de sécurité pour l’[ingestion des données](/help/ingestion/guardrails.md)
 * Barrières de sécurité pour les [[!DNL Identity Service] données](/help/identity-service/guardrails.md)
-* Barrières de sécurité pour les [[!DNL Real-time Customer Profile] données](/help/profile/guardrails.md)
+* Barrières de sécurité pour les [[!DNL Real-Time Customer Profile] données](/help/profile/guardrails.md)
 * Barrières de sécurité pour les [[!DNL Query Service] données](/help/query-service/guardrails.md)

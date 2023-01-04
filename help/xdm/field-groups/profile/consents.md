@@ -4,7 +4,7 @@ title: Groupe de champs de schéma de contenu et de préférences
 topic-legacy: overview
 description: Ce document présente un aperçu du groupe de champs de schéma Contenus et Préférences .
 exl-id: ec592102-a9d3-4cac-8b94-58296a138573
-source-git-commit: 04e778d3318d60733772c2042c8bb272f0c87d5c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '941'
 ht-degree: 0%
@@ -109,7 +109,7 @@ Le fichier JSON suivant illustre un exemple du type de données que la variable 
 >* Si le consentement ou la préférence au niveau du canal n’est pas définie ou si le client s’est inscrit, alors les consentements ou préférences équivalents dans `idSpecific` sont honorés.
 
 
-Chaque clé dans la variable `idSpecific` représente un espace de noms d’identité spécifique reconnu par le service Adobe Experience Platform Identity. Bien que vous puissiez définir vos propres espaces de noms personnalisés pour classer différents identifiants, il est recommandé d’utiliser l’un des espaces de noms standard fournis par Identity Service pour réduire les tailles de stockage pour Real-time Customer Profile. Pour plus d’informations sur les espaces de noms d’identité, voir [présentation de l’espace de noms d’identité](../../../identity-service/namespaces.md) dans la documentation d’Identity Service.
+Chaque clé dans la variable `idSpecific` représente un espace de noms d’identité spécifique reconnu par le service Adobe Experience Platform Identity. Bien que vous puissiez définir vos propres espaces de noms personnalisés pour classer différents identifiants, il est recommandé d’utiliser l’un des espaces de noms standard fournis par Identity Service pour réduire les tailles de stockage pour Real-Time Customer Profile. Pour plus d’informations sur les espaces de noms d’identité, voir [présentation de l’espace de noms d’identité](../../../identity-service/namespaces.md) dans la documentation d’Identity Service.
 
 Les clés de chaque objet d’espace de noms représentent les valeurs d’identité uniques pour lesquelles le client a défini des préférences. Chaque valeur d’identité peut contenir un ensemble complet de consentements et de préférences, formatés de la même manière que `consents`.
 
@@ -182,7 +182,7 @@ Voir le tutoriel sur [création d’un schéma dans l’interface utilisateur](h
 
 >[!IMPORTANT]
 >
->Si vous souhaitez envoyer des données de consentement à [!DNL Real-time Customer Profile], vous devez créer une [!DNL Profile]Schéma activé en fonction de la variable [!DNL XDM Individual Profile] qui contient la classe [!UICONTROL Consentements et préférences] groupe de champs. Le jeu de données que vous créez à partir de ce schéma doit également être activé pour [!DNL Profile]. Reportez-vous aux tutoriels liés ci-dessus pour connaître les étapes spécifiques liées à [!DNL Real-time Customer Profile] conditions requises pour les schémas et les jeux de données.
+>Si vous souhaitez envoyer des données de consentement à [!DNL Real-Time Customer Profile], vous devez créer une [!DNL Profile]Schéma activé en fonction de la variable [!DNL XDM Individual Profile] qui contient la classe [!UICONTROL Consentements et préférences] groupe de champs. Le jeu de données que vous créez à partir de ce schéma doit également être activé pour [!DNL Profile]. Reportez-vous aux tutoriels liés ci-dessus pour connaître les étapes spécifiques liées à [!DNL Real-Time Customer Profile] conditions requises pour les schémas et les jeux de données.
 >
 >En outre, vous devez également vous assurer que vos stratégies de fusion sont configurées pour prioriser le ou les jeux de données qui contiennent les dernières données de consentement et de préférence, afin que les profils client soient correctement mis à jour. Consultez la présentation sur [stratégies de fusion](../../../rtcdp/profile/merge-policies.md) pour plus d’informations.
 

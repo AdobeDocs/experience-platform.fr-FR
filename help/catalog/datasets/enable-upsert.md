@@ -2,18 +2,18 @@
 keywords: Experience Platform;profil;profil client en temps réel;dépannage;API;activer un jeu de données
 title: Activer un jeu de données pour les mises à jour de profil à l’aide d’API
 type: Tutorial
-description: Ce tutoriel vous explique comment utiliser les API Adobe Experience Platform pour activer un jeu de données avec des fonctionnalités « d’upsert » pour faire les mises à jour des données de Profil client en temps réel.
+description: Ce tutoriel vous explique comment utiliser les API Adobe Experience Platform pour activer un jeu de données avec des fonctionnalités "d’insertion" afin d’effectuer des mises à jour des données Real-time Customer Profile.
 exl-id: fc89bc0a-40c9-4079-8bfc-62ec4da4d16a
-source-git-commit: 132407af947b97a1925799a1fb5e12caa2b0410c
-workflow-type: ht
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+workflow-type: tm+mt
 source-wordcount: '1050'
-ht-degree: 100%
+ht-degree: 95%
 
 ---
 
 # Activer un jeu de données pour les mises à jour de profil à l’aide d’API
 
-Ce tutoriel décrit le processus d’activation d’un jeu de données avec des fonctionnalités « d’upsert » pour faire les mises à jour des données de Profil client en temps réel. Ceci inclut les étapes de création d’un nouveau jeu de données et la configuration d’un jeu de données existant.
+Ce tutoriel décrit le processus d’activation d’un jeu de données avec des fonctionnalités &quot;d’insertion&quot; afin d’effectuer des mises à jour des données de Real-time Customer Profile. Ceci inclut les étapes de création d’un nouveau jeu de données et la configuration d’un jeu de données existant.
 
 >[!NOTE]
 >
@@ -23,8 +23,8 @@ Ce tutoriel décrit le processus d’activation d’un jeu de données avec des 
 
 Ce tutoriel nécessite une connaissance pratique des différents services Adobe Experience Platform impliqués dans la gestion des jeux de données activés pour Profil. Avant de commencer ce tutoriel, consultez la documentation relative à ces services [!DNL Platform] associés :
 
-- [[!DNL Real-time Customer Profile]](../../profile/home.md) : fournit un profil de consommateur unifié en temps réel, basé sur des données agrégées provenant de plusieurs sources.
-- [[!DNL Catalog Service]](../../catalog/home.md) : une API RESTful qui vous permet de créer des jeux de données et de les configurer pour [!DNL Real-time Customer Profile] et [!DNL Identity Service].
+- [[!DNL Real-Time Customer Profile]](../../profile/home.md) : fournit un profil de consommateur unifié en temps réel, basé sur des données agrégées provenant de plusieurs sources.
+- [[!DNL Catalog Service]](../../catalog/home.md) : une API RESTful qui vous permet de créer des jeux de données et de les configurer pour [!DNL Real-Time Customer Profile] et [!DNL Identity Service].
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md) : cadre normalisé selon lequel [!DNL Platform] organise les données de l’expérience client.
 - [Ingestion par lots](../../ingestion/batch-ingestion/overview.md) : l’API d’ingestion par lots vous permet d’ingérer des données dans Experience Platform sous forme de fichiers par lots.
 
@@ -119,7 +119,7 @@ Les étapes suivantes expliquent comment configurer un jeu de données existant 
 
 ### Vérifier si le jeu de données est activé pour le profil
 
-En utilisant l’API [!DNL Catalog], vous pouvez examiner un jeu de données existant et déterminer s’il est activé pour une utilisation dans [!DNL Real-time Customer Profile]. L’appel suivant récupère les détails d’un jeu de données via son identifiant.
+En utilisant l’API [!DNL Catalog], vous pouvez examiner un jeu de données existant et déterminer s’il est activé pour une utilisation dans [!DNL Real-Time Customer Profile]. L’appel suivant récupère les détails d’un jeu de données via son identifiant.
 
 **Format d’API**
 
@@ -192,7 +192,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a27
 }
 ```
 
-Sous la propriété `tags`, vous pouvez voir que `unifiedProfile` est présent avec la valeur `enabled:true`. Par conséquent, [!DNL Real-time Customer Profile] est activé pour ce jeu de données.
+Sous la propriété `tags`, vous pouvez voir que `unifiedProfile` est présent avec la valeur `enabled:true`. Par conséquent, [!DNL Real-Time Customer Profile] est activé pour ce jeu de données.
 
 ### Désactiver le jeu de données pour Profil
 

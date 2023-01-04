@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: Adobe Experience Platform vous permet d’importer facilement des données sous forme de fichiers par lots sous la forme de fichiers Parquet ou de données conformes à un schéma de modèle de données d’expérience (XDM) connu.
 exl-id: a4a7358d-b117-4d81-8cb0-3dbbfeccdcbd
-source-git-commit: e7fc8a168a48cc6fadda62efda9ee9eb3025ab51
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1322'
 ht-degree: 56%
@@ -75,23 +75,23 @@ Un jeu de données vide a désormais été créé et vous avez été renvoyé à
 
 Sur le côté droit de l’espace de travail des jeux de données, le **[!UICONTROL Infos]** onglet contenant des informations relatives à votre nouveau jeu de données, telles que l’identifiant du jeu de données, le nom, la description, le nom de la table, le schéma, la diffusion en continu et la source. L’onglet Informations contient également des informations sur le moment où le jeu de données a été créé et sa date de dernière modification.
 
-L’onglet Informations contient également un bouton activer/désactiver de **[!UICONTROL Profile]** qui permet d’activer votre jeu de données pour l’utiliser avec [!DNL Real-time Customer Profile]. Utilisation de ce bouton bascule et [!DNL Real-time Customer Profile], sera expliqué plus en détail dans la section qui suit.
+L’onglet Informations contient également un bouton activer/désactiver de **[!UICONTROL Profile]** qui permet d’activer votre jeu de données pour l’utiliser avec [!DNL Real-Time Customer Profile]. Utilisation de ce bouton bascule et [!DNL Real-Time Customer Profile], sera expliqué plus en détail dans la section qui suit.
 
 ![Activité du jeu de données](../images/tutorials/ingest-batch-data/sample-dataset.png)
 
-## Activation du jeu de données pour [!DNL Real-time Customer Profile]
+## Activation du jeu de données pour [!DNL Real-Time Customer Profile]
 
 Les jeux de données sont utilisés pour ingérer des données dans [!DNL Experience Platform], et ces données sont finalement utilisées pour identifier des individus et rassembler des informations provenant de sources multiples. Cette information assemblée s&#39;appelle une [!DNL Real-Time Customer Profile]. Pour [!DNL Platform] pour savoir quelles informations doivent être incluses dans la variable [!DNL Real-Time Profile], les jeux de données peuvent être marqués pour inclusion à l’aide de la variable **[!UICONTROL Profil]** bascule.
 
 Par défaut, ce bouton est désactivé. Si vous choisissez d’activer [!DNL Profile], toutes les données ingérées dans le jeu de données seront utilisées pour aider à identifier un individu et à assembler ses [!DNL Real-Time Profile].
 
-Pour en savoir plus sur [!DNL Real-time Customer Profile] et en utilisant des identités, veuillez consulter la section [Identity Service](../../identity-service/home.md) documentation.
+Pour en savoir plus sur [!DNL Real-Time Customer Profile] et en utilisant des identités, veuillez consulter la section [Identity Service](../../identity-service/home.md) documentation.
 
-Pour activer le jeu de données pour [!DNL Real-time Customer Profile], cliquez sur le bouton **[!UICONTROL Profil]** bascule dans le **[!UICONTROL Infos]** .
+Pour activer le jeu de données pour [!DNL Real-Time Customer Profile], cliquez sur le bouton **[!UICONTROL Profil]** bascule dans le **[!UICONTROL Infos]** .
 
 ![Bascule des profils](../images/tutorials/ingest-batch-data/dataset-profile-toggle.png)
 
-Une boîte de dialogue s’affiche vous demandant de confirmer que vous souhaitez activer le jeu de données pour [!DNL Real-time Customer Profile].
+Une boîte de dialogue s’affiche vous demandant de confirmer que vous souhaitez activer le jeu de données pour [!DNL Real-Time Customer Profile].
 
 ![Boîte de dialogue d’activation de Profile](../images/tutorials/ingest-batch-data/enable-dataset-for-profile.png)
 

@@ -3,7 +3,7 @@ keywords: segments rtcdp;rtcdp du créateur de segments;segment rtcdp;segment rt
 title: IA dédiée aux clients dans Real-time Customer Data Platform
 description: Présentation de Customer AI et de la manière dont il peut contribuer à générer des scores pour des résultats spécifiques tels que les conversions ou la perte de clientèle.
 exl-id: 40210196-3c02-4d82-8692-628f2a46b3b5
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '305'
 ht-degree: 8%

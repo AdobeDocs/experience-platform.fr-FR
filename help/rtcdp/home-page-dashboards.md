@@ -3,7 +3,7 @@ keywords: présentation des mesures ; Présentation des mesures rtcdp
 title: Page d’accueil et tableaux de bord Real-time Customer Data Platform
 description: Tableaux de bord, page d’accueil et première expérience client d’Adobe Experience Platform
 exl-id: ced5b69c-5bb5-4e06-9cb4-938e36e6e5cc
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '620'
 ht-degree: 63%
@@ -47,7 +47,7 @@ Pour plus d’informations sur les jeux de données, consultez la [présentation
 
 ### Profils
 
-Le **[!UICONTROL Profils]** count affiche le nombre total de personnes avec des profils dans la variable [!DNL Real-time Customer Profile]. Il n’inclut pas les fragments de profil. Il s’agit de votre audience adressable totale.
+Le **[!UICONTROL Profils]** count affiche le nombre total de personnes avec des profils dans la variable [!DNL Real-Time Customer Profile]. Il n’inclut pas les fragments de profil. Il s’agit de votre audience adressable totale.
 
 Ce compte utilise la [stratégie de fusion](profile/merge-policies.md) par défaut telle que définie dans la configuration de la stratégie de fusion du profil unifié.
 

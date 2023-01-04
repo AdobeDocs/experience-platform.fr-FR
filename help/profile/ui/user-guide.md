@@ -1,26 +1,26 @@
 ---
 keywords: Experience Platform;profil;profil client en temps réel;dépannage;API;profil unifié;profil unifié;unifié;profil;unifié;profil;rtcp;activer le profil;activer le profil;schéma d’union;PROFIL D’UNION;profil d’union
-title: Guide de l’interface utilisateur de Real-time Customer Profile
+title: Guide de l’interface utilisateur de Real-Time Customer Profile
 topic-legacy: guide
-description: Real-time Customer Profile offre une vue d’ensemble de chaque client en combinant des données issues de plusieurs canaux, notamment des données en ligne, hors ligne, CRM et tierces. Ce document sert de guide pour interagir avec Real-time Customer Profile dans l’interface utilisateur d’Adobe Experience Platform.
+description: Real-Time Customer Profile offre une vue d’ensemble de chaque client, en combinant des données issues de plusieurs canaux, notamment des données en ligne, hors ligne, CRM et tierces. Ce document sert de guide pour interagir avec Real-time Customer Profile dans l’interface utilisateur de Adobe Experience Platform.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1951'
-ht-degree: 11%
+ht-degree: 8%
 
 ---
 
-# Guide de l’interface utilisateur de [!DNL Real-time Customer Profile]
+# Guide de l’interface utilisateur de [!DNL Real-Time Customer Profile]
 
-[!DNL Real-time Customer Profile] offre une vue d’ensemble de chaque client en combinant des données issues de plusieurs canaux, notamment des données en ligne, hors ligne, CRM et tierces. Ce document sert de guide pour interagir avec [!DNL Real-time Customer Profile] données dans l’interface utilisateur de Adobe Experience Platform.
+[!DNL Real-Time Customer Profile] offre une vue d’ensemble de chaque client en combinant des données issues de plusieurs canaux, notamment des données en ligne, hors ligne, CRM et tierces. Ce document sert de guide pour interagir avec [!DNL Real-Time Customer Profile] données dans l’interface utilisateur de Adobe Experience Platform.
 
 ## Prise en main
 
-Ce guide de l’interface utilisateur nécessite une compréhension des différentes [!DNL Experience Platform] services impliqués dans la gestion [!DNL Real-time Customer Profiles]. Avant de lire ce guide ou de travailler dans l’interface utilisateur, consultez la documentation relative aux services suivants :
+Ce guide de l’interface utilisateur nécessite une compréhension des différentes [!DNL Experience Platform] services impliqués dans la gestion [!DNL Real-Time Customer Profiles]. Avant de lire ce guide ou de travailler dans l’interface utilisateur, consultez la documentation relative aux services suivants :
 
-* [[!DNL Real-time Customer Profile] aperçu](../home.md): Fournit un profil client en temps réel unifié basé sur des données agrégées provenant de plusieurs sources.
-* [[!DNL Identity Service]](../../identity-service/home.md): Active [!DNL Real-time Customer Profile] en rapprochant des identités de sources de données disparates lors de leur ingestion dans [!DNL Platform].
+* [[!DNL Real-Time Customer Profile] aperçu](../home.md): Fournit un profil client en temps réel unifié basé sur des données agrégées provenant de plusieurs sources.
+* [[!DNL Identity Service]](../../identity-service/home.md): Active [!DNL Real-Time Customer Profile] en rapprochant des identités de sources de données disparates lors de leur ingestion dans [!DNL Platform].
 * [[!DNL Experience Data Model (XDM)]](../../xdm/home.md) : cadre normalisé selon lequel [!DNL Platform] organise les données de l’expérience client.
 
 ## [!UICONTROL Vue d’ensemble]
@@ -29,7 +29,7 @@ Dans l’interface utilisateur de l’Experience Platform, sélectionnez **[!UIC
 
 >[!NOTE]
 >
->Si votre entreprise est une nouvelle entreprise de Platform et qu’elle ne dispose pas encore de jeux de données Profile principaux ni de stratégies de fusion créés, la variable [!UICONTROL Profils] tableau de bord n’est pas visible. À la place, l’onglet [!UICONTROL Aperçu] affiche des liens et de la documentation pour vous aider à prendre en main le profil client en temps réel.
+>Si votre entreprise est une nouvelle entreprise de Platform et qu’elle ne dispose pas encore de jeux de données Profile principaux ni de stratégies de fusion créés, la variable [!UICONTROL Profils] tableau de bord n’est pas visible. Au lieu de cela, la variable [!UICONTROL Présentation] Cet onglet affiche des liens et de la documentation pour vous aider à prendre en main Real-time Customer Profile.
 
 ### Tableau de bord du profil {#profile-dashboard}
 
@@ -171,7 +171,7 @@ Pour plus d’informations sur les stratégies de fusion, consultez [Présentati
 
 ## Schéma d’union {#union-schema}
 
-À partir de la page principale **[!UICONTROL Profils]** , sélectionnez **[!UICONTROL Schéma d’union]** pour afficher les schémas d’union disponibles pour vos données ingérées. Un schéma d’union est une combinaison de tous les [!DNL Experience Data Model] Champs (XDM) de la même classe, dont les schémas ont été activés pour une utilisation dans [!DNL Real-time Customer Profile].
+À partir de la page principale **[!UICONTROL Profils]** , sélectionnez **[!UICONTROL Schéma d’union]** pour afficher les schémas d’union disponibles pour vos données ingérées. Un schéma d’union est une combinaison de tous les [!DNL Experience Data Model] Champs (XDM) de la même classe, dont les schémas ont été activés pour une utilisation dans [!DNL Real-Time Customer Profile].
 
 Pour plus d’informations sur les schémas d’union, consultez la section [guide de l’interface utilisateur de schéma d’union](union-schema.md).
 
@@ -179,4 +179,4 @@ Pour plus d’informations sur les schémas d’union, consultez la section [gui
 
 ## Étapes suivantes
 
-En lisant ce guide, vous savez comment afficher et gérer les données de profil de votre entreprise à l’aide de l’interface utilisateur d’Experience Platform. Pour plus d’informations sur l’utilisation des données de profil à l’aide des API Experience Platform, reportez-vous à la section [Guide de l’API Real-time Customer Profile](../api/overview.md).
+En lisant ce guide, vous savez comment afficher et gérer les données de profil de votre entreprise à l’aide de l’interface utilisateur d’Experience Platform. Pour plus d’informations sur l’utilisation des données de profil à l’aide des API Experience Platform, reportez-vous à la section [Guide de l’API Real-Time Customer Profile](../api/overview.md).

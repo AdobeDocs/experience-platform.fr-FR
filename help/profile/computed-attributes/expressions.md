@@ -5,7 +5,7 @@ topic-legacy: guide
 type: Documentation
 description: Les attributs calculés sont des fonctions utilisées pour regrouper des données au niveau de l’événement en attributs au niveau du profil. Ces fonctions nécessitent l’utilisation d’expressions PQL (Profile Query Language) valides. Ce guide décrit certaines des expressions PQL les plus couramment utilisées pour les attributs calculés.
 exl-id: 7c80e2d3-919a-47f9-a59f-833a70f02a8f
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '965'
 ht-degree: 4%
@@ -43,8 +43,8 @@ Le tableau suivant fournit des détails sur les expressions de requête courante
 | Minimum de la propriété numérique sur les téléchargements de chaque produit téléchargé, au cours des 7 derniers jours, indexé par produit. | xEvent[(l’horodatage a lieu &lt; 7 jours avant maintenant) et eventType=&quot;download&quot;].groupBy(product).map((K, G) => mapEntry(K, G.min(commerce.order.priceTotal)) | Profil et EE[] | Carte[Chaîne, Entier] ou Carte[Chaîne, double] |
 | Maximum de la propriété numérique sur les téléchargements de chaque produit téléchargé, au cours des 7 derniers jours, indexé par produit. | xEvent[(l’horodatage a lieu &lt; 7 jours avant maintenant) et eventType=&quot;download&quot;].groupBy(product).map((K, G) => mapEntry(K, G.max(commerce.order.priceTotal)) | Profil et EE[] | Carte[Chaîne, Entier] ou Carte[Chaîne, double] |
 | Expression numérique sur le profil, sans référencer d’événements. | if(person.gender = &quot;female&quot;, 60, 65) | Profile | Entier ou double |
-| Expression booléenne sur le profil, ne faisant pas référence aux événements. | person.birthYear >= 2000 | Profil | Booléen |
-| Expression de chaîne sur le profil, sans référencer d’événements. | if(homeAddress.countryCode dans [&quot;US&quot;, &quot;MX&quot;, &quot;CA&quot;], &quot;NA&quot;, &quot;LIGNE&quot;) | Profil | Chaîne |
+| Expression booléenne sur le profil, ne faisant pas référence aux événements. | person.birthYear >= 2000 | Profile | Booléen |
+| Expression de chaîne sur le profil, sans référencer d’événements. | if(homeAddress.countryCode dans [&quot;US&quot;, &quot;MX&quot;, &quot;CA&quot;], &quot;NA&quot;, &quot;LIGNE&quot;) | Profile | Chaîne |
 
 ## Expressions de lots
 

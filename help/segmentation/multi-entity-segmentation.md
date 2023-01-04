@@ -5,28 +5,28 @@ title: Présentation de la segmentation d’entités multiples
 topic-legacy: overview
 description: La segmentation d’entités multiples est la capacité à élargir les données de profil grâce à des données supplémentaires basées sur les produits, les magasins et d’autres classes hors profil. Une fois connectées, les données des classes supplémentaires deviennent disponibles comme si elles étaient des données natives du schéma Profile.
 exl-id: 01a37fdc-2abe-4a84-b7da-fcbd141ff51f
-source-git-commit: d036ca8c3a378494f776c2bbb05e9d687bd2e201
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '699'
-ht-degree: 14%
+ht-degree: 16%
 
 ---
 
 # Présentation de la segmentation d’entités multiples
 
-La segmentation d’entités multiples est une fonctionnalité avancée disponible dans Adobe Experience Platform. [!DNL Segmentation Service]. Cette fonctionnalité vous permet d’étendre [!DNL Real-time Customer Profile] données contenant des données &quot;non-personnes&quot; supplémentaires (également appelées &quot;entités de dimension&quot;) que votre organisation peut définir, telles que des données relatives aux produits ou aux magasins. La segmentation d’entités multiples offre une certaine souplesse lors de la définition de segments d’audience en fonction de données pertinentes pour vos besoins commerciaux uniques. Elle peut être exécutée sans expertise dans l’interrogation de bases de données. Avec la segmentation d’entités multiples, vous pouvez ajouter des données clés à vos segments sans avoir à apporter des modifications coûteuses aux flux de données ou attendre une fusion de données dorsales.
+La segmentation d’entités multiples est une fonctionnalité avancée disponible dans Adobe Experience Platform. [!DNL Segmentation Service]. Cette fonctionnalité vous permet d’étendre [!DNL Real-Time Customer Profile] données contenant des données &quot;non-personnes&quot; supplémentaires (également appelées &quot;entités de dimension&quot;) que votre organisation peut définir, telles que des données relatives aux produits ou aux magasins. La segmentation d’entités multiples offre une certaine souplesse lors de la définition de segments d’audience en fonction de données pertinentes pour vos besoins commerciaux uniques. Elle peut être exécutée sans expertise dans l’interrogation de bases de données. Avec la segmentation d’entités multiples, vous pouvez ajouter des données clés à vos segments sans avoir à apporter des modifications coûteuses aux flux de données ou attendre une fusion de données dorsales.
 
 ## Prise en main
 
 La segmentation d’entités multiples nécessite une compréhension pratique des différents services Adobe Experience Platform impliqués dans la segmentation. Avant de poursuivre avec ce guide, consultez la documentation suivante :
 
-* [[!DNL Real-time Customer Profile]](../profile/home.md): Fournit un profil client unifié en temps réel, basé sur des données agrégées provenant de plusieurs sources.
+* [[!DNL Real-Time Customer Profile]](../profile/home.md) : fournit un profil de consommateur en temps réel unifié basé sur des données agrégées provenant de plusieurs sources.
    * [Protections des profils](../profile/guardrails.md): Bonnes pratiques pour la création de modèles de données pris en charge par [!DNL Profile].
-* [[!DNL Adobe Experience Platform Segmentation Service]](./home.md): Permet de créer des segments à partir de [!DNL Real-time Customer Profile] data.
+* [[!DNL Adobe Experience Platform Segmentation Service]](./home.md): Permet de créer des segments à partir de [!DNL Real-Time Customer Profile] data.
 * [[!DNL Experience Data Model (XDM)]](../xdm/home.md) : framework normalisé selon lequel Experience Platform organise les données de l’expérience client.
    * [Principes de base de la composition des schémas](../xdm/schema/composition.md#union): Découvrez les bonnes pratiques pour composer des schémas à utiliser dans Experience Platform. Pour utiliser au mieux la segmentation, veillez à ce que vos données soient ingérées en tant que profils et événements en fonction des [bonnes pratiques pour la modélisation des données](../xdm/schema/best-practices.md).
 
-## Cas d&#39;utilisation
+## Cas d’utilisation
 
 Pour illustrer la valeur de la segmentation d’entités multiples, prenez en compte trois cas d’utilisation marketing standard qui illustrent les défis présents dans la plupart des applications marketing :
 

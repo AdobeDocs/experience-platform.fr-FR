@@ -5,10 +5,10 @@ topic-legacy: guide
 type: Documentation
 description: Dans l’interface utilisateur de Adobe Experience Platform, vous pouvez facilement afficher n’importe quel schéma d’union au sein de votre organisation et prévisualiser les champs, les identités, les relations et les schémas de contribution d’une classe spécifique. Ce guide fournit des informations détaillées sur la manière d’afficher et d’explorer les schémas d’union à l’aide de l’interface utilisateur de Platform.
 exl-id: 52af0d77-e37d-4ed8-9dee-71a50b337b4e
-source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1199'
-ht-degree: 5%
+ht-degree: 4%
 
 ---
 
@@ -20,15 +20,15 @@ Dans l’interface utilisateur de Adobe Experience Platform, vous pouvez facilem
 
 Ce guide de l’interface utilisateur nécessite une compréhension des différentes [!DNL Experience Platform] services impliqués dans la gestion des données de Real-time Customer Profile. Avant de lire ce guide ou de travailler dans l’interface utilisateur, consultez la documentation relative aux services suivants :
 
-* [[!DNL Real-time Customer Profile]](../home.md) : fournit un profil de consommateur unifié en temps réel, basé sur des données agrégées provenant de plusieurs sources.
-* [[!DNL Identity Service]](../../identity-service/home.md): Active [!DNL Real-time Customer Profile] en rapprochant des identités de sources de données disparates lors de leur ingestion dans [!DNL Platform].
+* [[!DNL Real-Time Customer Profile]](../home.md) : fournit un profil de consommateur unifié en temps réel, basé sur des données agrégées provenant de plusieurs sources.
+* [[!DNL Identity Service]](../../identity-service/home.md): Active [!DNL Real-Time Customer Profile] en rapprochant des identités de sources de données disparates lors de leur ingestion dans [!DNL Platform].
 * [[!DNL Experience Data Model (XDM)]](../../xdm/home.md) : cadre normalisé selon lequel [!DNL Platform] organise les données de l’expérience client.
 
 ## Présentation des schémas d’union
 
-Real-time Customer Profile vous permet de créer des profils robustes et centralisés contenant des attributs du client et des événements horodatés pour chaque interaction client sur les systèmes intégrés à Adobe Experience Platform. Le format et la structure de ces données sont fournis par les schémas du modèle de données d’expérience (XDM), chaque schéma étant basé sur une classe XDM et contenant des champs compatibles avec cette classe.
+Real-Time Customer Profile vous permet de créer des profils robustes et centralisés contenant des attributs du client et des événements horodatés pour chaque interaction client sur les systèmes intégrés à Adobe Experience Platform. Le format et la structure de ces données sont fournis par les schémas du modèle de données d’expérience (XDM), chaque schéma étant basé sur une classe XDM et contenant des champs compatibles avec cette classe.
 
-Les schémas peuvent être créés pour plusieurs cas d’utilisation, référençant la même classe mais contenant des champs spécifiques à leur utilisation. Lorsqu’un schéma est activé pour Profile, il fait partie d’un schéma d’union. En d’autres termes, les schémas d’union sont composés de plusieurs schémas qui partagent la même classe et qui ont été activés pour Profile. Le schéma d’union permet de visualiser une fusion de tous les champs contenus dans les schémas partageant la même classe. Real-time Customer Profile utilise le schéma d’union pour créer une vue d’ensemble de chaque client.
+Les schémas peuvent être créés pour plusieurs cas d’utilisation, référençant la même classe mais contenant des champs spécifiques à leur utilisation. Lorsqu’un schéma est activé pour Profile, il fait partie d’un schéma d’union. En d’autres termes, les schémas d’union sont composés de plusieurs schémas qui partagent la même classe et qui ont été activés pour Profile. Le schéma d’union permet de visualiser une fusion de tous les champs contenus dans les schémas partageant la même classe. Real-Time Customer Profile utilise le schéma d’union pour créer une vue d’ensemble de chaque client.
 
 L’utilisation des schémas d’union nécessite une compréhension approfondie des schémas XDM. Pour plus d’informations, veuillez commencer par lire la [principes de base de la composition des schémas](../../xdm/schema/composition.md).
 

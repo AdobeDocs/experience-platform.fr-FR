@@ -5,7 +5,7 @@ title: Espaces de noms et schémas B2B
 topic-legacy: overview
 description: Ce document fournit un aperçu des espaces de noms personnalisés requis lors de la création d’un connecteur source B2B.
 exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1707'
 ht-degree: 14%
@@ -18,7 +18,7 @@ Ce document fournit des informations sur la configuration sous-jacente des espac
 
 >[!IMPORTANT]
 >
->Vous devez avoir accès à [Adobe Real-time Customer Data Platform version B2B](../../../../rtcdp/b2b-overview.md) pour que les schémas B2B participent à [Real-time Customer Profile](../../../../profile/home.md).
+>Vous devez avoir accès à [Adobe Real-time Customer Data Platform version B2B](../../../../rtcdp/b2b-overview.md) pour que les schémas B2B participent à [Profil client en temps réel](../../../../profile/home.md).
 
 ## Configuration des espaces de noms B2B et de l’utilitaire de génération automatique de schéma
 
@@ -105,7 +105,7 @@ Le tableau suivant contient des informations sur la configuration sous-jacente d
 >
 >Faites défiler vers la gauche ou vers la droite pour consulter l’intégralité du tableau.
 
-| Nom du schéma | Classe de base | Groupes de champs | [!DNL Profile] schéma in | Identité principale | Espace de noms d’identité Principal | Identité Secondaire | Espace de noms d’identité Secondaire | Relation | Notes |
+| Nom du schéma | Classe de base | Groupes de champs | [!DNL Profile] schéma in | Identité principale | Espace de noms d’identité Principal | Identité secondaire | Espace de noms d’identité Secondaire | Relation | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | Compte B2B | [Compte d’entreprise XDM](../../../../xdm/classes/b2b/business-account.md) | Détails du compte commercial XDM | Activé | `accountKey.sourceKey` dans la classe de base | Compte B2B | `extSourceSystemAudit.externalKey.sourceKey` dans la classe de base | Compte B2B | <ul><li>`accountParentKey.sourceKey` dans le groupe de champs Détails du compte d’entreprise XDM</li><li>Propriété de destination : `/accountKey/sourceKey`</li><li>Type : un-à-un</li><li>Schéma de référence : Compte B2B</li><li>Espace de noms : Compte B2B</li></ul> |
 | Personne B2B | [XDM Individual Profile](../../../../xdm/classes/individual-profile.md) | <ul><li>Détails de professionnel XDM</li><li>Composants de professionnel XDM</li><li>IdentityMap</li><li>Détails du consentement et des préférences</li></ul> | Activé | `b2b.personKey.sourceKey` dans le groupe de champs Détails de la personne professionnelle XDM | Personne B2B | <ol><li>`extSourceSystemAudit.externalKey.sourceKey` du groupe de champs Détails de la personne active XDM</li><li>`workEmail.address` du groupe de champs Détails de la personne active XDM</ol></li> | <ol><li>Personne B2B</li><li>E-mail</li></ol> | <ul><li>`personComponents.sourceAccountKey.sourceKey` du groupe de champs Composants de personne professionnelle XDM</li><li>Type : Multiple-à-un</li><li>Schéma de référence : Compte B2B</li><li>Espace de noms : Compte B2B</li><li>Propriété de destination : accountKey.sourceKey</li><li>Nom de la relation à partir du schéma actuel : Compte</li><li>Nom de la relation à partir du schéma de référence : Personnes</li></ul> |

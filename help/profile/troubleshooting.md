@@ -1,22 +1,22 @@
 ---
 keywords: Experience Platform;profil;profil client en temps réel;dépannage;API
-title: Guide de dépannage de Real-time Customer Profile
+title: Guide de dépannage de Real-Time Customer Profile
 topic-legacy: guide
 type: Documentation
 description: Ce document fournit des réponses aux questions fréquentes sur Real-time Customer Profile, ainsi qu’un guide de dépannage pour les erreurs courantes lors de l’utilisation des données de profil à l’aide de Adobe Experience Platform.
 exl-id: 0b340025-093b-41e4-8053-969a8e80e889
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1007'
 ht-degree: 5%
 
 ---
 
-# Guide de dépannage de Real-time Customer Profile
+# Guide de dépannage de Real-Time Customer Profile
 
 Ce document fournit des réponses aux questions fréquentes sur Real-time Customer Profile, ainsi qu’un guide de dépannage pour les erreurs courantes. Pour toute question ou dépannage concernant les autres services d’Adobe Experience Platform, consultez le [guide de dépannage d’Experience Platform](../landing/troubleshooting.md).
 
-Le [!DNL Real-time Customer Profile] offre une vision holistique de chaque client en combinant des données issues de plusieurs canaux, notamment des données en ligne, hors ligne, CRM et tierces. Cela permet aux marketeurs d’offrir aux clients des expériences coordonnées, cohérentes et pertinentes sur plusieurs canaux.
+Le [!DNL Real-Time Customer Profile] offre une vision holistique de chaque client en combinant des données issues de plusieurs canaux, notamment des données en ligne, hors ligne, CRM et tierces. Cela permet aux marketeurs d’offrir aux clients des expériences coordonnées, cohérentes et pertinentes sur plusieurs canaux.
 
 ## FAQ
 
@@ -32,7 +32,7 @@ Si vous ne connaissez pas XDM, commencez par la méthode [Présentation de XDM](
 
 ### Où les données de profil sont-elles stockées ?
 
-Real-time Customer Profile conserve sa propre banque de données (appelée &quot;banque de profils&quot;), à l’écart du lac de données qui contient d’autres données Platform ingérées.
+Real-Time Customer Profile conserve sa propre banque de données (appelée &quot;banque de profils&quot;), à l’écart du lac de données qui contient d’autres données de Platform ingérées.
 
 ### Si j’ai déjà ingéré des données dans Platform, puis-je les rendre disponibles dans la banque de profils ?
 
@@ -58,7 +58,7 @@ Vous pouvez également afficher la liste de vos segments sous la variable **[!UI
 
 ## Codes d’erreur
 
-Voici une liste des messages d’erreur que vous pouvez rencontrer lors de l’utilisation de l’API Real-time Customer Profile. Si l’erreur que vous rencontrez n’est pas répertoriée ici, vous pouvez la trouver dans la [Guide de dépannage de Platform](../landing/troubleshooting.md) au lieu de .
+Vous trouverez ci-dessous une liste des messages d’erreur que vous pouvez rencontrer lors de l’utilisation de l’API Real-Time Customer Profile. Si l’erreur que vous rencontrez n’est pas répertoriée ici, vous pouvez la trouver dans la [Guide de dépannage de Platform](../landing/troubleshooting.md) au lieu de .
 
 ### Impossible de rechercher le schéma de l’attribut calculé pour le chemin d’accès fourni
 

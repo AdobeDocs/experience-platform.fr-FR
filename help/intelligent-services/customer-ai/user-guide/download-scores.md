@@ -6,10 +6,10 @@ title: Scores de téléchargement dans Customer AI
 topic-legacy: Downloading scores
 description: Customer AI vous permet de télécharger des scores au format de fichier Parquet.
 exl-id: 08f05565-3fd4-4089-9c41-32467f0be751
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 165e5ccae5ca78b3912fef1ba0b3fd4567e231fb
 workflow-type: tm+mt
 source-wordcount: '961'
-ht-degree: 87%
+ht-degree: 82%
 
 ---
 
@@ -25,7 +25,7 @@ De plus, pour accéder aux scores dans Customer AI, vous devez disposer d’une 
 
 Actuellement, il existe deux manières de télécharger les scores Customer AI :
 
-1. Si vous souhaitez télécharger les scores au niveau individuel et/ou si Real-time Customer Profile n’est pas activé, commencez par chercher [l’identifiant de votre jeu de données](#dataset-id).
+1. Si vous souhaitez télécharger les scores au niveau individuel et/ou si Real-Time Customer Profile n’est pas activé, commencez par accéder à [recherche de votre identifiant de jeu de données](#dataset-id).
 2. Si Profile est activé et que vous souhaitez télécharger les segments que vous avez configurés à l’aide de Customer AI, [téléchargez un segment configuré avec Customer AI](#segment).
 
 ## Chercher l’identifiant de votre jeu de données {#dataset-id}
@@ -286,7 +286,7 @@ Vous pouvez aussi télécharger vos données de score en exportant votre audienc
 
 >[!IMPORTANT]
 >
->Afin d’utiliser cette méthode d’exportation, Real-time Customer Profile doit être activé pour le jeu de données.
+>Afin d’utiliser cette méthode d’exportation, Real-Time Customer Profile doit être activé pour le jeu de données.
 
 La section [Exportation d’un segment](../../../segmentation/tutorials/evaluate-a-segment.md) du guide d’évaluation des segments décrit les étapes requises pour exporter un jeu de données d’audience. Le guide décrit les étapes suivantes et fournit des exemples de celles-ci :
 

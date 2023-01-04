@@ -6,10 +6,10 @@ title: Entrée et sortie dans Customer AI
 topic-legacy: Getting started
 description: En savoir plus sur les événements, les entrées et les sorties requis utilisés par Customer AI.
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
-source-git-commit: e0e96a52e30f5c34e0695c3e291bed9b6c085e00
+source-git-commit: 165e5ccae5ca78b3912fef1ba0b3fd4567e231fb
 workflow-type: tm+mt
 source-wordcount: '3195'
-ht-degree: 17%
+ht-degree: 15%
 
 ---
 
@@ -44,7 +44,7 @@ Le tableau suivant présente la terminologie courante utilisée dans ce document
 | [Groupes de champs](../../xdm/schema/composition.md) | Composant qui définit un ou plusieurs champs d’un schéma. Les groupes de champs imposent la manière dont leurs champs apparaissent dans la hiérarchie du schéma et présentent donc la même structure dans chaque schéma dans lequel ils sont inclus. Les groupes de champs ne sont compatibles qu’avec des classes spécifiques, identifiées par leurs `meta:intendedToExtend` attribut. |
 | [Type de données](../../xdm/schema/composition.md) | Composant pouvant également fournir un ou plusieurs champs pour un schéma. Cependant, contrairement aux groupes de champs, les types de données ne sont pas limités à une classe particulière. Ainsi, les types de données constituent une option plus souple pour décrire des structures de données communes réutilisables sur plusieurs schémas avec des classes potentiellement différentes. Les types de données décrits dans ce document sont pris en charge par les schémas CEE et Adobe Analytics. |
 | Churn | Mesure du pourcentage des comptes qui annulent ou choisissent de ne pas renouveler leurs abonnements. Un taux de perte de clientèle élevé peut avoir une incidence négative sur les recettes mensuelles récurrentes et peut également indiquer un mécontentement à l’égard d’un produit ou d’un service. |
-| [Real-time Customer Profile](../../profile/home.md) | Real-time Customer Profile fournit un profil de consommateur centralisé pour une gestion d’expérience ciblée et personnalisée. Chaque profil contient des données agrégées sur tous les systèmes ainsi que des comptes horodatés exploitables d’événements impliquant les personnes concernées par l’un des systèmes que vous utilisez avec Experience Platform. |
+| [Profil client en temps réel](../../profile/home.md) | Real-Time Customer Profile offre un profil client centralisé pour une gestion d’expérience ciblée et personnalisée. Chaque profil contient des données agrégées sur tous les systèmes ainsi que des comptes horodatés exploitables d’événements impliquant les personnes concernées par l’un des systèmes que vous utilisez avec Experience Platform. |
 
 ## Données d’entrée de Customer AI
 
@@ -72,7 +72,7 @@ Pour afficher un groupe de champs dans l’interface utilisateur de Platform, s�
 
 | Groupe de champs | Type d’événement | Chemin du champ XDM |
 | --- | --- | --- |
-| [!UICONTROL Informations commerciales] | ordre | <li> commerce.order.purchaseID </li> <li> productListItems.SKU </li> |
+| [!UICONTROL Informations commerciales] | commande | <li> commerce.order.purchaseID </li> <li> productListItems.SKU </li> |
 |  | productListViews | <li> commerce.productListViews.value </li> <li> productListItems.SKU </li> |
 |  | checkouts | <li> commerce.checkouts.value </li> <li> productListItems.SKU </li> |
 |  | purchases | <li> commerce.purchases.value </li> <li> productListItems.SKU </li> |
@@ -140,9 +140,9 @@ Dans cette section, différents scénarios pour les instances de Customer AI son
 
 Les types d’événements répertoriés ci-dessous sont requis pour une sortie optimale de Customer AI avec cet objectif de prédiction particulier. Il est possible d’exclure un événement obligatoire en fonction de votre objectif de prédiction. Toutefois, l’exclusion de plusieurs événements peut entraîner des résultats médiocres.
 
-- ordre
+- commande
 - checkouts
-- achats
+- purchases
 - webVisit
 - recherche
 
@@ -158,9 +158,9 @@ L’un des éléments restants [types d’événement](#standard-events) peut ê
 
 Les types d’événements répertoriés ci-dessous sont requis pour une sortie optimale de Customer AI avec cet objectif de prédiction particulier. Il est possible d’exclure un événement obligatoire en fonction de votre objectif de prédiction. Toutefois, l’exclusion de plusieurs événements peut entraîner des résultats médiocres.
 
-- ordre
+- commande
 - checkouts
-- achats
+- purchases
 - webVisit
 - recherche
 
@@ -180,9 +180,9 @@ L’un des éléments restants [types d’événement](#standard-events) peut ê
 
 Les types d’événements répertoriés ci-dessous sont requis pour une sortie optimale de Customer AI avec cet objectif de prédiction particulier. Il est possible d’exclure un événement obligatoire en fonction de votre objectif de prédiction. Toutefois, l’exclusion de plusieurs événements peut entraîner des résultats médiocres.
 
-- ordre
+- commande
 - checkouts
-- achats
+- purchases
 - webVisit
 - recherche
 
@@ -198,9 +198,9 @@ L’un des éléments restants [types d’événement](#standard-events) peut ê
 
 Les types d’événements répertoriés ci-dessous sont requis pour une sortie optimale de Customer AI avec cet objectif de prédiction particulier. Il est possible d’exclure un événement obligatoire en fonction de votre objectif de prédiction. Toutefois, l’exclusion de plusieurs événements peut entraîner des résultats médiocres.
 
-- ordre
+- commande
 - checkouts
-- achats
+- purchases
 - webVisit
 - recherche
 
@@ -233,9 +233,9 @@ L’un des éléments restants [types d’événement](#standard-events) peut ê
 
 Les types d’événements répertoriés ci-dessous sont requis pour une sortie optimale de Customer AI avec cet objectif de prédiction particulier. Il est possible d’exclure un événement obligatoire en fonction de votre objectif de prédiction. Toutefois, l’exclusion de plusieurs événements peut entraîner des résultats médiocres.
 
-- ordre
+- commande
 - checkouts
-- achats
+- purchases
 - webVisit
 - applicationCloses
 - applicationCrashes
@@ -263,7 +263,7 @@ Lorsque vous configurez une nouvelle instance d’IA dédiée aux clients, `audi
 
 ## Données de sortie de Customer AI
 
-Customer AI génère plusieurs attributs pour les profils individuels supposés éligibles. Il existe deux façons d’utiliser le score (sortie) en fonction de ce que vous avez mis en service. Si vous disposez d’un jeu de données activé pour Real-time Customer Profile, vous pouvez utiliser les informations de Real-time Customer Profile dans la variable [Créateur de segments](../../segmentation/ui/segment-builder.md). Si vous ne disposez pas d’un jeu de données activé pour Profile, vous pouvez [Téléchargez la sortie de Customer AI](./user-guide/download-scores.md) jeu de données disponible sur le lac de données.
+Customer AI génère plusieurs attributs pour les profils individuels supposés éligibles. Il existe deux façons d’utiliser le score (sortie) en fonction de ce que vous avez mis en service. Si vous disposez d’un jeu de données activé pour Real-Time Customer Profile, vous pouvez utiliser des informations provenant de Real-time Customer Profile dans la variable [Créateur de segments](../../segmentation/ui/segment-builder.md). Si vous ne disposez pas d’un jeu de données activé pour Profile, vous pouvez [Téléchargez la sortie de Customer AI](./user-guide/download-scores.md) jeu de données disponible sur le lac de données.
 
 Vous trouverez le jeu de données de sortie sous **Jeux de données** dans Platform. Tous les jeux de données de sortie de Customer AI commencent par le nom . **Scores Customer AI - Name_of_app**. De même, tous les schémas de sortie de Customer AI commencent par le nom . **Schéma Customer AI - Name_of_app**.
 
@@ -287,7 +287,7 @@ Le tableau ci-dessous décrit les différents attributs trouvés dans les sortie
 >[!NOTE]
 >
 > - Customer AI utilise uniquement des données mises à jour pour suivre une formation et une notation plus poussées. De même, lorsque vous demandez la suppression de données, Customer AI s’abstient d’utiliser les données supprimées.
-> - L’IA dédiée aux clients utilise les jeux de données Platform. Pour prendre en charge les demandes de droits des consommateurs qu’une marque peut recevoir, les marques doivent utiliser le Privacy Service Platform pour soumettre les demandes d’accès et de suppression des clients afin de supprimer leurs données dans le lac de données, Service d’identités et Profil client en temps réel.
+> - L’IA dédiée aux clients utilise les jeux de données Platform. Pour prendre en charge les demandes de droits des consommateurs qu’une marque peut recevoir, les marques doivent utiliser le Privacy Service Platform pour soumettre les demandes d’accès et de suppression des clients afin de supprimer leurs données dans le lac de données, Identity Service et Real-Time Customer Profile.
 > - Tous les jeux de données que nous utilisons pour l’entrée/la sortie des modèles suivront les directives de Platform. Le chiffrement des données de Platform s’applique aux données au repos et en transit. Consultez la documentation pour en savoir plus sur le [chiffrement des données](../../../help/landing/governance-privacy-security/encryption.md)
 
 

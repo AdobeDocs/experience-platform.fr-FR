@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: Ce tutoriel utilise l’API Flow Service pour vous guider tout au long des étapes d’ingestion de données Apache Parquet à partir d’un système de stockage dans le cloud tiers.
 exl-id: fb1b19d6-16bb-4a5f-9e81-f537bac95041
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1095'
 ht-degree: 47%
@@ -428,7 +428,7 @@ Une réponse réussie renvoie l’identifiant (`id`) du flux de données nouvell
 
 ## Étapes suivantes
 
-En suivant ce tutoriel, vous avez créé un connecteur source pour collecter des données Parquet à partir de votre système de stockage cloud tiers sur une base planifiée. Les données entrantes peuvent désormais être utilisées par les services [!DNL Platform] en aval tels que [!DNL Real-time Customer Profile] et [!DNL Data Science Workspace]. Consultez les documents suivants pour plus d’informations :
+En suivant ce tutoriel, vous avez créé un connecteur source pour collecter des données Parquet à partir de votre système de stockage cloud tiers sur une base planifiée. Les données entrantes peuvent désormais être utilisées par les services [!DNL Platform] en aval tels que [!DNL Real-Time Customer Profile] et [!DNL Data Science Workspace]. Consultez les documents suivants pour plus d’informations :
 
-- [Présentation du profil client en temps réel](../../../profile/home.md)
+- [Présentation de Real-Time Customer Profile](../../../profile/home.md)
 - [Présentation de Data Science Workspace](../../../data-science-workspace/home.md)

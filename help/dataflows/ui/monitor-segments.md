@@ -5,7 +5,7 @@ title: Surveillance des flux de données pour les segments dans l’interface ut
 topic-legacy: overview
 type: Tutorial
 exl-id: 32fd2ba1-0ff0-4ea7-8d55-80d53eebc02f
-source-git-commit: c762e3925245f517cdcecb17a80378141f80fa86
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1923'
 ht-degree: 5%
@@ -14,7 +14,7 @@ ht-degree: 5%
 
 # Surveillance des flux de données pour les segments dans l’interface utilisateur
 
-Segmentation Service vous permet de créer des segments et des audiences à partir de vos données Real-time Customer Profile dans Adobe Experience Platform. Platform fournit des flux de données pour suivre de manière transparente ce flux de données de sources vers des destinations.
+Segmentation Service vous permet de créer des segments et des audiences à partir de vos données de profil client en temps réel dans Adobe Experience Platform. Platform fournit des flux de données pour suivre de manière transparente ce flux de données de sources vers des destinations.
 
 Le tableau de bord de surveillance fournit une représentation visuelle de l’activité des données dans un segment, y compris l’état de la segmentation de vos données. Ce tutoriel explique comment utiliser le tableau de bord de surveillance pour surveiller la segmentation de vos données à l’aide de l’interface utilisateur de l’Experience Platform, ce qui vous permet de suivre l’état des tâches d’activation, d’évaluation et d’exportation des segments.
 

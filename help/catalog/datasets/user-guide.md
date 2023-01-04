@@ -5,10 +5,10 @@ title: Guide de l’interface utilisateur des jeux de données
 topic-legacy: datasets
 description: Découvrez comment exécuter des actions courantes lors de l’utilisation de jeux de données dans l’interface utilisateur de Adobe Experience Platform.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1476'
-ht-degree: 39%
+ht-degree: 38%
 
 ---
 
@@ -24,7 +24,7 @@ Ce guide d’utilisation nécessite une compréhension professionnelle des compo
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md) : cadre normalisé selon lequel [!DNL Experience Platform] organise les données de l’expérience client.
    * [Principes de base de la composition des schémas](../../xdm/schema/composition.md) : découvrez les blocs de création de base des schémas XDM, y compris les principes clés et les bonnes pratiques en matière de composition de schémas.
    * [Éditeur de schéma](../../xdm/tutorials/create-schema-ui.md): Découvrez comment créer vos propres schémas XDM personnalisés à l’aide du [!DNL Schema Editor] dans le [!DNL Platform] de l’interface utilisateur.
-* [[!DNL Real-time Customer Profile]](../../profile/home.md) : fournit un profil de consommateur unifié en temps réel, basé sur des données agrégées provenant de plusieurs sources.
+* [[!DNL Real-Time Customer Profile]](../../profile/home.md) : fournit un profil de consommateur unifié en temps réel, basé sur des données agrégées provenant de plusieurs sources.
 * [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md): Veillez à la conformité aux réglementations, aux restrictions et aux politiques concernant l’utilisation des données clients.
 
 ## Affichage des jeux de données {#view-datasets}
@@ -108,7 +108,7 @@ L’étape **[!UICONTROL Ajouter les données]** apparaît. Téléchargez le fic
 
 ## Activation d’un jeu de données pour Real-time Customer Profile {#enable-profile}
 
-Chaque jeu de données a la possibilité d’enrichir les profils clients des données qu’ils ingèrent. Pour ce faire, le schéma auquel le jeu de données adhère doit être compatible avec [!DNL Real-time Customer Profile]. Un schéma compatible répond aux critères suivants :
+Chaque jeu de données a la possibilité d’enrichir les profils clients des données qu’ils ingèrent. Pour ce faire, le schéma auquel le jeu de données adhère doit être compatible avec [!DNL Real-Time Customer Profile]. Un schéma compatible répond aux critères suivants :
 
 * Le schéma comporte au moins un attribut défini comme propriété d’identité.
 * Le schéma comporte au moins une propriété d’identité définie comme identité principale.

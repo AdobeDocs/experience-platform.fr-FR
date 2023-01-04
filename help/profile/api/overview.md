@@ -1,24 +1,24 @@
 ---
 keywords: Experience Platform;profil;profil client en temps réel;dépannage;API;profil unifié;profil unifié;unifié;profil;unifié;profil;rtcp;activer le profil;activer le profil
-title: Guide de l’API Real-time Customer Profile
+title: Guide de l’API Real-Time Customer Profile
 description: L’API Real-time Customer Profile permet aux développeurs d’explorer et d’utiliser les données de profil, notamment d’afficher les profils, de créer et de mettre à jour des stratégies de fusion, d’exporter ou d’échantillonner des données de profil, ainsi que de supprimer les données de profil qui ne sont plus requises ou qui ont été ajoutées par erreur. Suivez ce guide pour savoir comment effectuer des opérations clés à l’aide de l’API.
 exl-id: ce39b95b-cff7-46cf-a14c-8203017c8826
-source-git-commit: 9f00bff31f9e7d2da1294d3d1f24cba7870a4614
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '961'
 ht-degree: 32%
 
 ---
 
-# Guide de l’API [!DNL Real-time Customer Profile]
+# Guide de l’API [!DNL Real-Time Customer Profile]
 
-[!DNL Real-time Customer Profile] offre une vue d’ensemble de chaque client dans Adobe Experience Platform. [!DNL Profile] vous permet de consolider diverses données clients provenant de plusieurs canaux, comme les données en ligne, hors ligne, CRM et tierces, en une vue unifiée offrant un compte horodaté et exploitable de chaque interaction client.
+[!DNL Real-Time Customer Profile] offre une vue d’ensemble de chaque client dans Adobe Experience Platform. [!DNL Profile] vous permet de consolider diverses données clients provenant de plusieurs canaux, comme les données en ligne, hors ligne, CRM et tierces, en une vue unifiée offrant un compte horodaté et exploitable de chaque interaction client.
 
-Le [!DNL Real-time Customer Profile] L’API comprend plusieurs points de terminaison, décrits ci-dessous. Consultez le guide de chaque point d’entrée pour plus de détails et reportez-vous au [guide de prise en main](getting-started.md) pour obtenir des informations importantes sur les en-têtes nécessaires, la lecture des exemples d’appels d’API, etc.
+Le [!DNL Real-Time Customer Profile] L’API comprend plusieurs points de terminaison, décrits ci-dessous. Consultez le guide de chaque point d’entrée pour plus de détails et reportez-vous au [guide de prise en main](getting-started.md) pour obtenir des informations importantes sur les en-têtes nécessaires, la lecture des exemples d’appels d’API, etc.
 
-Pour afficher tous les points de terminaison disponibles et les opérations CRUD, rendez-vous sur la page [Échange de référence de l’API Real-time Customer Profile](https://www.adobe.com/go/profile-apis-en).
+Pour afficher tous les points de terminaison disponibles et les opérations CRUD, rendez-vous sur la page [Échange de référence de l’API Real-Time Customer Profile](https://www.adobe.com/go/profile-apis-en).
 
-Pour obtenir un guide sur l’utilisation de [!DNL Real-time Customer Profile] des [!DNL Experience Platform] Interface utilisateur, reportez-vous à la section [Guide d’utilisation de Profile](../ui/user-guide.md).
+Pour obtenir un guide sur l’utilisation de [!DNL Real-Time Customer Profile] des [!DNL Experience Platform] Interface utilisateur, reportez-vous à la section [Guide d’utilisation de Profile](../ui/user-guide.md).
 
 ## (Alpha) Attributs calculés {#computed-attributes}
 
@@ -34,29 +34,29 @@ Vous pouvez créer, afficher, modifier et supprimer des attributs calculés à l
 
 ## Projections de périphérie {#edge-projections}
 
-Adobe Experience Platform permet de personnaliser en temps réel les expériences client en rendant les données facilement accessibles sur des serveurs situés stratégiquement, appelés « périphéries ». Le [!DNL Real-time Customer Profile] L’API fournit des points de terminaison pour utiliser les périphéries à travers des composants appelés &quot;projections&quot;. Cela inclut des configurations de projection permettant de définir quelles données doivent être projetées sur chaque périphérie, ainsi que des destinations de projection permettant de déterminer la direction d’une projection. Pour obtenir des informations détaillées sur l’utilisation des projections de périphérie, veuillez consulter la section [guide des configurations de projection et des points de fin de destinations](edge-projections.md).
+Adobe Experience Platform permet de personnaliser en temps réel les expériences client en rendant les données facilement accessibles sur des serveurs situés stratégiquement, appelés « périphéries ». Le [!DNL Real-Time Customer Profile] L’API fournit des points de terminaison pour utiliser les périphéries à travers des composants appelés &quot;projections&quot;. Cela inclut des configurations de projection permettant de définir quelles données doivent être projetées sur chaque périphérie, ainsi que des destinations de projection permettant de déterminer la direction d’une projection. Pour obtenir des informations détaillées sur l’utilisation des projections de périphérie, veuillez consulter la section [guide des configurations de projection et des points de fin de destinations](edge-projections.md).
 
 ## Entités (accès au [!DNL Profile]) {#entities}
 
-Grâce à Adobe Experience Platform, vous pouvez accéder à [!DNL Real-time Customer Profile] données à l’aide des API RESTful ou de l’interface utilisateur. Pour savoir comment accéder aux entités, plus communément appelées &quot;profils&quot;, à l’aide de l’API, suivez les étapes décrites dans la section [guide de point d’entrée des entités](entities.md). Pour accéder aux profils à l’aide de la fonction [!DNL Platform] IU, voir [Guide d’utilisation de Profile](../ui/user-guide.md).
+Grâce à Adobe Experience Platform, vous pouvez accéder à [!DNL Real-Time Customer Profile] données à l’aide des API RESTful ou de l’interface utilisateur. Pour savoir comment accéder aux entités, plus communément appelées &quot;profils&quot;, à l’aide de l’API, suivez les étapes décrites dans la section [guide de point d’entrée des entités](entities.md). Pour accéder aux profils à l’aide de la fonction [!DNL Platform] IU, voir [Guide d’utilisation de Profile](../ui/user-guide.md).
 
 ## Tâches d’exportation (exportation de [!DNL Profile]) {#profile-export}
 
-[!DNL Real-time Customer Profile] les données peuvent être exportées vers un jeu de données pour un traitement ultérieur, par exemple pour l’exportation de segments d’audience en vue de l’activation ou d’attributs de profil pour la création de rapports. Les tâches d’exportation pour les segments d’audience font partie du [!DNL Adobe Experience Platform Segmentation Service] API, veuillez lire la [guide d’entrée des tâches d’exportation de segmentation](../../profile/api/export-jobs.md) pour en savoir plus. Pour obtenir des instructions détaillées sur la création et la gestion de tâches d’exportation pour les attributs de profil, consultez la section [guide de point de fin des traitements d’export](export-jobs.md).
+[!DNL Real-Time Customer Profile] les données peuvent être exportées vers un jeu de données pour un traitement ultérieur, par exemple pour l’exportation de segments d’audience en vue de l’activation ou d’attributs de profil pour la création de rapports. Les tâches d’exportation pour les segments d’audience font partie du [!DNL Adobe Experience Platform Segmentation Service] API, veuillez lire la [guide d’entrée des tâches d’exportation de segmentation](../../profile/api/export-jobs.md) pour en savoir plus. Pour obtenir des instructions détaillées sur la création et la gestion de tâches d’exportation pour les attributs de profil, consultez la section [guide de point de fin des traitements d’export](export-jobs.md).
 
 ## Stratégies de fusion {#merge-policies}
 
-Lorsque vous rassemblez des données provenant de plusieurs sources dans [!DNL Experience Platform], les stratégies de fusion sont les règles qui [!DNL Platform] utilise pour déterminer comment les données seront hiérarchisées et quelles données seront combinées afin de créer des profils client individuels. En utilisant la variable [!DNL Real-time Customer Profile] API, vous pouvez créer des stratégies de fusion, gérer des stratégies existantes et définir une stratégie de fusion par défaut pour votre organisation. Pour utiliser des stratégies de fusion à l’aide de l’API, consultez la page [guide de point de terminaison des stratégies de fusion](merge-policies.md).
+Lorsque vous rassemblez des données provenant de plusieurs sources dans [!DNL Experience Platform], les stratégies de fusion sont les règles qui [!DNL Platform] utilise pour déterminer comment les données seront hiérarchisées et quelles données seront combinées afin de créer des profils client individuels. En utilisant la variable [!DNL Real-Time Customer Profile] API, vous pouvez créer des stratégies de fusion, gérer des stratégies existantes et définir une stratégie de fusion par défaut pour votre organisation. Pour utiliser des stratégies de fusion à l’aide de l’API, consultez la page [guide de point de terminaison des stratégies de fusion](merge-policies.md).
 
 Pour en savoir plus sur les stratégies de fusion et leur rôle dans Platform, veuillez commencer par lire la section [présentation des stratégies de fusion](../merge-policies/overview.md).
 
 ## Prévisualisation des exemples de statut (prévisualisation du [!DNL Profile]) {#profile-preview}
 
-Lorsque des données sont ingérées dans Platform, un exemple de tâche est exécuté pour mettre à jour le nombre de profils et d’autres mesures liées aux données de Real-time Customer Profile. Les résultats de cet exemple de tâche peuvent être affichés à l’aide de la fonction `/previewsamplestatus` point de terminaison, qui fait partie de l’API Real-time Customer Profile. Ce point de terminaison peut également être utilisé pour répertorier les distributions de profil par jeu de données et espace de noms d’identité, ainsi que pour générer plusieurs rapports afin de mieux comprendre la composition de la banque de profils de votre entreprise.  Pour commencer à utiliser la méthode `/profilepreviewstatus` point de fin, reportez-vous à la section [prévisualisation d’un exemple de guide de point de terminaison d’état](preview-sample-status.md).
+Lorsque des données sont ingérées dans Platform, un exemple de tâche est exécuté pour mettre à jour le nombre de profils et d’autres mesures liées aux données de Real-Time Customer Profile. Les résultats de cet exemple de tâche peuvent être affichés à l’aide de la fonction `/previewsamplestatus` point de terminaison, qui fait partie de l’API Real-time Customer Profile. Ce point de terminaison peut également être utilisé pour répertorier les distributions de profil par jeu de données et espace de noms d’identité, ainsi que pour générer plusieurs rapports afin de mieux comprendre la composition de la banque de profils de votre entreprise.  Pour commencer à utiliser la méthode `/profilepreviewstatus` point de fin, reportez-vous à la section [prévisualisation d’un exemple de guide de point de terminaison d’état](preview-sample-status.md).
 
 ## Tâches de système Profile {#profile-system-jobs}
 
-Données activées pour les profils ingérées dans [!DNL Platform] est stocké dans la variable [!DNL Data Lake] ainsi que la variable [!DNL Real-time Customer Profile] entrepôt de données. Il peut parfois être nécessaire de supprimer un jeu de données ou un lot du [!DNL Profile] stocker afin de supprimer les données dont vous n’avez plus besoin ou qui ont été ajoutées par erreur. Cela nécessite l’utilisation de l’API pour créer une [!DNL Profile System Job], également appelé &quot;[!DNL delete request]&quot;, qui peut être modifié, surveillé ou supprimé si nécessaire. Pour savoir comment utiliser les requêtes de suppression à l’aide de la méthode `/system/jobs` du point de terminaison [!DNL Real-time Customer Profile] API, suivez les étapes décrites dans la section [guide de point d’entrée des tâches du système de profil](profile-system-jobs.md).
+Données activées pour les profils ingérées dans [!DNL Platform] est stocké dans la variable [!DNL Data Lake] ainsi que la variable [!DNL Real-Time Customer Profile] entrepôt de données. Il peut parfois être nécessaire de supprimer un jeu de données ou un lot du [!DNL Profile] stocker afin de supprimer les données dont vous n’avez plus besoin ou qui ont été ajoutées par erreur. Cela nécessite l’utilisation de l’API pour créer une [!DNL Profile System Job], également appelé &quot;[!DNL delete request]&quot;, qui peut être modifié, surveillé ou supprimé si nécessaire. Pour savoir comment utiliser les requêtes de suppression à l’aide de la méthode `/system/jobs` du point de terminaison [!DNL Real-Time Customer Profile] API, suivez les étapes décrites dans la section [guide de point d’entrée des tâches du système de profil](profile-system-jobs.md).
 
 ## Mise à jour des attributs de profil {#update-profile}
 
@@ -64,4 +64,4 @@ Il peut parfois être nécessaire de mettre à jour les données du magasin de p
 
 ## Étapes suivantes {#next-steps}
 
-Pour commencer à lancer des appels à l’aide de la variable [!DNL Real-time Customer Profile] API, lisez la [guide de prise en main](getting-started.md) sélectionnez ensuite l’un des guides de point de terminaison pour savoir comment utiliser des [!DNL Profile]Points de terminaison liés. Pour utiliser [!DNL Profile] à l’aide de la variable [!DNL Experience Platform] Interface utilisateur, reportez-vous à la section [Guide d’utilisation de Real-time Customer Profile](../ui/user-guide.md).
+Pour commencer à lancer des appels à l’aide de la variable [!DNL Real-Time Customer Profile] API, lisez la [guide de prise en main](getting-started.md) sélectionnez ensuite l’un des guides de point de terminaison pour savoir comment utiliser des [!DNL Profile]Points de terminaison liés. Pour utiliser [!DNL Profile] à l’aide de la variable [!DNL Experience Platform] Interface utilisateur, reportez-vous à la section [Guide d’utilisation de Real-Time Customer Profile](../ui/user-guide.md).

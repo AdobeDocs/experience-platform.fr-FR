@@ -5,7 +5,7 @@ title: Point de terminaison de l’API de mesures
 topic-legacy: developer guide
 description: Découvrez comment récupérer les mesures d’observabilité dans Experience Platform à l’aide de l’API Observability Insights.
 exl-id: 08d416f0-305a-44e2-a2b7-d563b2bdd2d2
-source-git-commit: dc7deab2c9fe1a1fa151731fceeb3c239dd18878
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1409'
 ht-degree: 29%
@@ -230,9 +230,9 @@ Le tableau suivant décrit les mesures pour Adobe Experience Platform [!DNL Id
 
 {style=&quot;table-layout:auto&quot;}
 
-#### [!DNL Real-time Customer Profile] {#profile}
+#### [!DNL Real-Time Customer Profile] {#profile}
 
-Le tableau suivant décrit les mesures pour [!DNL Real-time Customer Profile].
+Le tableau suivant décrit les mesures pour [!DNL Real-Time Customer Profile].
 
 | Mesure d’insights | Description | Paramètre de requête d’identifiant |
 | ---- | ---- | ---- |

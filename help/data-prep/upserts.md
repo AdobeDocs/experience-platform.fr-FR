@@ -3,10 +3,10 @@ keywords: Experience Platform;accueil;rubriques les plus consultées;prép de do
 title: Envoi De Mises À Jour De Ligne Partielles Au Service De Profil À L’Aide De La Préparation De Données
 description: Ce document fournit des informations sur la manière d’envoyer des mises à jour de lignes partielles au service Profile à l’aide de la préparation de données.
 exl-id: f9f9e855-0f72-4555-a4c5-598818fc01c2
-source-git-commit: 4e24552c441c9096ef1139df66ad07d89f08a5d6
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1169'
-ht-degree: 9%
+ht-degree: 8%
 
 ---
 
@@ -24,7 +24,7 @@ Cette présentation d’ nécessite une compréhension professionnelle des compo
 
 * [[!DNL Data Prep]](./home.md): [!DNL Data Prep] permet aux ingénieurs de données de mapper, transformer et valider des données vers et à partir du modèle de données d’expérience (XDM).
 * [[!DNL Identity Service]](../identity-service/home.md) : profitez d’une meilleure compréhension de vos clients et de leurs comportements en rapprochant des identités entre appareils et systèmes.
-* [Real-time Customer Profile](../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
+* [Profil client en temps réel](../profile/home.md): Fournit un profil client unifié en temps réel basé sur des données agrégées provenant de plusieurs sources.
 * [Sources](../sources/home.md) : Experience Platform permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de Platform.
 
 ## Utilisation de serveurs de diffusion en continu dans [!DNL Data Prep] {#streaming-upserts-in-data-prep}
@@ -54,7 +54,7 @@ Si de nouvelles identités doivent être liées, vous devez créer et transmettr
 
 #### Champs obligatoires dans les schémas associés au jeu de données d’identité {#identity-dataset-required-fileds}
 
-Si votre schéma contient des champs obligatoires, la validation du jeu de données doit être supprimée pour permettre [!DNL Identity Service] pour ne recevoir que les identités. Vous pouvez supprimer la validation en appliquant le `disabled` à la valeur `acp_validationContext` . Voir l&#39;exemple ci-dessous:
+Si votre schéma contient des champs obligatoires, la validation du jeu de données doit être supprimée pour permettre [!DNL Identity Service] pour ne recevoir que les identités. Vous pouvez supprimer la validation en appliquant le `disabled` à la valeur `acp_validationContext` . Voir l’exemple ci-dessous:
 
 ```shell
 curl -X POST 'https://platform.adobe.io/data/foundation/catalog/dataSets/62257bef7a75461948ebcaaa' \

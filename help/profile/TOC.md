@@ -1,23 +1,23 @@
 ---
 audience: user
-user-guide-title: Guide du profil client en temps réel
+user-guide-title: Guide de Real-Time Customer Profile
 user-guide-description: Fusionnez les données client pour créer une vue unifiée des interactions client entre les canaux.
 feature: Profiles
-source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '135'
-ht-degree: 97%
+ht-degree: 92%
 
 ---
 
 
-# [!DNL Real-time Customer Profile] {#profile}
+# [!DNL Real-Time Customer Profile] {#profile}
 
 * [Présentation du [!DNL Profile]](home.md)
 * [Présentation du profil (vidéo)](video/profile-overview.md)
 * [[!DNL Profile] et barrières de sécurité de la segmentation](guardrails.md)
 * [Tableau de bord [!DNL Profile]](ui/profile-dashboard.md)
-* [Expiration des événements d’expérience](event-expirations.md)
+* [Expirations des événements d’expérience](event-expirations.md)
 * [!DNL Profile] API {#api}
    * [Présentation](api/overview.md)
    * [Prise en main](api/getting-started.md)
@@ -50,4 +50,4 @@ ht-degree: 97%
 * [Traitement des demandes d’accès à des informations personnelles](privacy.md)
 * [Guide de dépannage du [!DNL Profile]](troubleshooting.md)
 * [Référence de l’API Profile](https://www.adobe.com/go/profile-apis-en)
-* [Notes de mise à jour de Platform](https://docs.adobe.com/content/help/fr-FR/experience-platform/release-notes/latest.html)
+* [Notes de mise à jour de Platform](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=fr)

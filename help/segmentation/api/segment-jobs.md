@@ -5,7 +5,7 @@ title: Point de terminaison de l’API de tâches de segmentation
 topic-legacy: developer guide
 description: Le point de terminaison des tâches de segmentation de l’API Adobe Experience Platform Segmentation Service vous permet de gérer par programmation les tâches de segmentation pour votre organisation.
 exl-id: 105481c2-1c25-4f0e-8fb0-c6577a4616b3
-source-git-commit: cb28f52029ac63e4d2c7c210c6199adcd855cf5a
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1511'
 ht-degree: 24%
@@ -14,7 +14,7 @@ ht-degree: 24%
 
 # Point de terminaison des tâches de segmentation
 
-Une tâche de segmentation est un processus asynchrone qui crée un segment d’audience à la demande. Il fait référence à une [définition de segment](./segment-definitions.md), ainsi que la variable [stratégies de fusion](../../profile/api/merge-policies.md) contrôle [!DNL Real-time Customer Profile] fusionne des attributs qui se chevauchent dans vos fragments de profil. Lorsqu’une tâche de segmentation se termine avec succès, vous pouvez collecter diverses informations sur le segment, telles que les erreurs qui se sont produites au cours du traitement et la taille finale de votre audience.
+Une tâche de segmentation est un processus asynchrone qui crée un segment d’audience à la demande. Il fait référence à une [définition de segment](./segment-definitions.md), ainsi que la variable [stratégies de fusion](../../profile/api/merge-policies.md) contrôle [!DNL Real-Time Customer Profile] fusionne des attributs qui se chevauchent dans vos fragments de profil. Lorsqu’une tâche de segmentation se termine avec succès, vous pouvez collecter diverses informations sur le segment, telles que les erreurs qui se sont produites au cours du traitement et la taille finale de votre audience.
 
 Ce guide fournit des informations pour vous aider à mieux comprendre les tâches de segmentation et inclut des exemples d’appels API pour exécuter des actions de base à l’aide de l’API.
 

@@ -2,22 +2,22 @@
 title: Modèles de rapport Power BI pour les tableaux de bord de Platform
 description: Utilisez les modèles de rapport pour explorer les données d’Experience Platform à l’aide de Power BI.
 exl-id: fb98a79f-3d82-4e11-b08a-b7cb06414462
-source-git-commit: 36fc6f996b4ffd33f542eb9be4fbc50f3fcdd1cb
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1472'
-ht-degree: 100%
+ht-degree: 96%
 
 ---
 
 # Modèles de rapport Power BI pour les tableaux de bord
 
-La fonctionnalité de modèles de rapport Power BI vous permet de créer des rapports attrayants remplis de données provenant d’Adobe Experience Platform. Le processus d’installation simplifié installe automatiquement les widgets standard pour Real-time Customer Profile, la segmentation et les destinations. L’installation connecte également Power BI à vos modèles de données afin que vous puissiez facilement personnaliser et étendre vos modèles de rapport. Ces rapports peuvent être partagés dans l’ensemble de l’organisation sans que les destinataires aient besoin d’informations d’identification pour votre organisation IMS sur Platform.
+La fonctionnalité de modèles de rapport Power BI vous permet de créer des rapports attrayants remplis de données provenant d’Adobe Experience Platform. Le processus d’installation simplifié installe automatiquement les widgets standard pour Real-Time Customer Profile, la segmentation et les destinations. L’installation connecte également Power BI à vos modèles de données afin que vous puissiez facilement personnaliser et étendre vos modèles de rapport. Ces rapports peuvent être partagés dans l’ensemble de l’organisation sans que les destinataires aient besoin d’informations d’identification pour votre organisation IMS sur Platform.
 
 Ce document explique comment connecter Adobe Experience Platform à l’application Power BI et utiliser des modèles de rapport pour partager des insights de données Platform clés avec des utilisateurs externes.
 
 ## Prise en main
 
-Avant de poursuivre ce tutoriel, il est recommandé de bien comprendre la [composition des schémas](../../xdm/schema/composition.md) dans Experience Platform et comment les attributs sont inclus dans Real-time Customer Profile via le [schéma d’union](../../xdm/schema/composition.md#union).
+Avant de poursuivre ce tutoriel, il est recommandé de bien comprendre les [composition du schéma](../../xdm/schema/composition.md) dans Experience Platform et comment les attributs sont inclus dans Real-time Customer Profile via la variable [schéma d’union](../../xdm/schema/composition.md#union).
 
 Pour installer l’intégration de l’application Power BI, les utilisateurs doivent avoir au préalable acquis les autorisations Platform suivantes :
 

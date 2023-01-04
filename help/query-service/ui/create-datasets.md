@@ -6,16 +6,16 @@ topic-legacy: queries
 type: Tutorial
 description: Query Service d’Adobe Experience Platform permet de créer des jeux de données à partir de l’interface utilisateur. Une fois qu’un jeu de données est créé, il est possible d’y accéder comme à tout autre jeu de données du lac de données et de l’utiliser pour divers cas d’utilisation.
 exl-id: 6f6c049d-f19f-4161-aeb4-3a01eca7dc75
-source-git-commit: 5ea5d48119eb3d7c1e66233f3b2629c1049d0784
-workflow-type: ht
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+workflow-type: tm+mt
 source-wordcount: '493'
-ht-degree: 100%
+ht-degree: 95%
 
 ---
 
 # Générer des jeux de données à partir des résultats dans [!DNL Query Service]
 
-[!DNL Query Service] vous permet d’utiliser des requêtes pour générer des jeux de données dans le [!DNL Data Lake]. Ces jeux de données peuvent ensuite être utilisés comme entrée pour d’autres requêtes ou dans d’autres services tels que [!DNL Data Science Workspace], profil client en temps réel, ou [!DNL Analysis Workspace].
+[!DNL Query Service] vous permet d’utiliser des requêtes pour générer des jeux de données dans le [!DNL Data Lake]. Ces jeux de données peuvent ensuite être utilisés comme entrée pour d’autres requêtes ou dans d’autres services tels que [!DNL Data Science Workspace], Real-time Customer Profile ou [!DNL Analysis Workspace].
 
 ## Générer des jeux de données à partir de l’interface utilisateur d’Adobe Experience Platform
 

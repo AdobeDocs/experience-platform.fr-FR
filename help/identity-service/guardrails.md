@@ -3,10 +3,10 @@ keywords: Experience Platform;identité;service d’identité;dépannage;garde-f
 title: Barrières de sécurité pour Identity Service
 description: Ce document fournit des informations sur l’utilisation et les limites de taux pour les données Identity Service afin de vous aider à optimiser l’utilisation du graphique d’identités.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: 672d98135492350ab6e12eec51649e6e5a7e4923
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '490'
-ht-degree: 11%
+ht-degree: 15%
 
 ---
 
@@ -18,8 +18,8 @@ Ce document fournit des informations sur l’utilisation et les limites de taux 
 
 Les services Experience Platform suivants sont impliqués dans la modélisation des données d’identité :
 
-* [Identités](home.md): Associez les identités à partir de sources de données disparates lors de leur ingestion dans Platform.
-* [[!DNL Real-time Customer Profile]](../profile/home.md): Créez des profils consommateurs unifiés à l’aide de données provenant de plusieurs sources.
+* [Identités](home.md) : associez les identités à partir de sources de données disparates lors de leur ingestion dans Platform.
+* [[!DNL Real-Time Customer Profile]](../profile/home.md) : créez des profils clients unifiés à l’aide de données provenant de plusieurs sources.
 
 ## Limites du modèle de données
 

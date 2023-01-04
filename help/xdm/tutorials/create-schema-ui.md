@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: Ce tutoriel décrit les étapes de création d’un schéma à l’aide de l’éditeur de schémas d’Experience Platform.
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '3754'
 ht-degree: 12%
@@ -29,7 +29,7 @@ Ce tutoriel nécessite une compréhension pratique des différents aspects de Ad
 
 * [[!DNL Experience Data Model (XDM)]](../home.md) : cadre normalisé selon lequel [!DNL Platform] organise les données de l’expérience client.
    * [Principes de base de la composition des schémas](../schema/composition.md): Présentation des schémas XDM et de leurs blocs de création, notamment les classes, les groupes de champs de schéma, les types de données et les champs individuels.
-* [[!DNL Real-time Customer Profile]](../../profile/home.md) : fournit un profil de consommateur unifié en temps réel, basé sur des données agrégées provenant de plusieurs sources.
+* [[!DNL Real-Time Customer Profile]](../../profile/home.md) : fournit un profil de consommateur unifié en temps réel, basé sur des données agrégées provenant de plusieurs sources.
 
 ## Ouvrez le [!UICONTROL Schémas] workspace {#browse}
 
@@ -201,7 +201,7 @@ Lors de la définition de champs dans la variable [!DNL Schema Editor], vous pou
 | [!UICONTROL Tableau] | Indique que le champ contient un tableau de valeurs, chacune avec le type de données spécifié. Par exemple, l’utilisation de cette contrainte sur un champ avec un type de données &quot;[!UICONTROL Chaîne]&quot; indique que le champ contiendra un tableau de chaînes. |
 | [!UICONTROL Énumération] | Indique que ce champ doit contenir l’une des valeurs d’une liste énumérée de valeurs possibles. |
 | [!UICONTROL Identité] | Indique que ce champ est un champ d’identité. Vous trouverez plus d’informations sur les champs d’identité [dans la suite de ce tutoriel](#identity-field). |
-| [!UICONTROL Relation] | Bien que les relations de schéma puissent être déduites par l’utilisation du schéma d’union et [!DNL Real-time Customer Profile], cela s’applique uniquement aux schémas qui partagent la même classe. Le [!UICONTROL Relation] La contrainte indique que ce champ fait référence à l’identité Principale d’un schéma basée sur une classe différente, impliquant une relation entre les deux schémas. Voir le tutoriel sur [définition d’une relation](./relationship-ui.md) pour plus d’informations. |
+| [!UICONTROL Relation] | Bien que les relations de schéma puissent être déduites par l’utilisation du schéma d’union et [!DNL Real-Time Customer Profile], cela s’applique uniquement aux schémas qui partagent la même classe. Le [!UICONTROL Relation] La contrainte indique que ce champ fait référence à l’identité Principale d’un schéma basée sur une classe différente, ce qui implique une relation entre les deux schémas. Voir le tutoriel sur [définition d’une relation](./relationship-ui.md) pour plus d’informations. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -291,11 +291,11 @@ Après application de la modification, l’icône pour `loyaltyId` affiche un sy
 
 Désormais, toutes les données ingérées dans la variable `loyaltyId` sera utilisé pour aider à identifier cet individu et à assembler une vue unique de ce client. Pour en savoir plus sur l’utilisation des identités dans [!DNL Experience Platform], veuillez consulter la section [[!DNL Identity Service]](../../identity-service/home.md) documentation.
 
-## Activation du schéma à utiliser dans [!DNL Real-time Customer Profile] {#profile}
+## Activation du schéma à utiliser dans [!DNL Real-Time Customer Profile] {#profile}
 
-[[!DNL Real-time Customer Profile]](../../profile/home.md) tire parti des données d’identité dans [!DNL Experience Platform] afin de fournir une vue d’ensemble de chaque client. Le service crée des profils robustes de 360° d’attributs du client, ainsi que des comptes horodatés de chaque interaction que les clients ont eue avec n’importe quel système intégré à [!DNL Experience Platform].
+[[!DNL Real-Time Customer Profile]](../../profile/home.md) tire parti des données d’identité dans [!DNL Experience Platform] afin de fournir une vue d’ensemble de chaque client. Le service crée des profils robustes de 360° d’attributs du client, ainsi que des comptes horodatés de chaque interaction que les clients ont eue avec n’importe quel système intégré à [!DNL Experience Platform].
 
-Pour qu’un schéma puisse être utilisé avec [!DNL Real-time Customer Profile], une identité Principale doit être définie pour celui-ci. Vous recevrez un message d’erreur si vous tentez d’activer un schéma sans d’abord définir une identité Principale.
+Pour qu’un schéma puisse être utilisé avec [!DNL Real-Time Customer Profile], une identité Principale doit être définie pour celui-ci. Vous recevrez un message d’erreur si vous tentez d’activer un schéma sans d’abord définir une identité Principale.
 
 <img src="../images/tutorials/create-schema/missing_primary_identity.png" width="600" /><br>
 
@@ -311,7 +311,7 @@ Sélectionner **[!UICONTROL Profil]** et une fenêtre contextuelle s’affiche, 
 
 >[!WARNING]
 >
->Une fois qu’un schéma a été activé pour [!DNL Real-time Customer Profile] et enregistré, il ne peut pas être désactivé.
+>Une fois qu’un schéma a été activé pour [!DNL Real-Time Customer Profile] et enregistré, il ne peut pas être désactivé.
 
 Sélectionner **[!UICONTROL Activer]** pour confirmer votre choix. Vous pouvez sélectionner la variable **[!UICONTROL Profil]** basculez à nouveau pour désactiver le schéma si vous le souhaitez, mais une fois le schéma enregistré pendant [!DNL Profile] est activée, elle ne peut plus être désactivée.
 

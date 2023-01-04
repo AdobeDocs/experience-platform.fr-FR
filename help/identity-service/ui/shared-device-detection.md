@@ -5,7 +5,7 @@ description: La détection des appareils partagés identifie les différents uti
 hide: true
 hidefromtoc: true
 exl-id: 36318163-ba07-4209-b1be-dc193ab7ba41
-source-git-commit: 75362c67e1a8a31a449cb4c9dd618515325d36f0
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1363'
 ht-degree: 10%
@@ -92,7 +92,7 @@ When [!DNL Shared Device Detection] est activé, [!DNL Profile] définit l’ide
 
 Un **événement d’expérience authentifié** est une action effectuée par un utilisateur lorsqu’il est connecté à un appareil. Pour les événements d’expérience authentifiés, l’identité Principale est **Espace de noms d’identité utilisateur** (ID de connexion). Un **événement d’expérience non authentifié** est une action effectuée par un utilisateur qui n’est pas connecté à un appareil. Pour les événements d’expérience non authentifiés, l’identité Principale est **Espace de noms d’identité partagée** (ECID).
 
-Pour plus d’informations, consultez la [[!DNL Real-time Customer Profile] présentation](../../profile/home.md).
+Pour plus d’informations, consultez la [[!DNL Real-Time Customer Profile] présentation](../../profile/home.md).
 
 ## Interface utilisateur des périphériques partagés
 

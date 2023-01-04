@@ -2,10 +2,11 @@
 keywords: Experience Platform;accueil;rubriques populaires;
 title: (Version bêta) Créer une connexion source Adobe Workfront dans l’interface utilisateur
 description: Ce tutoriel décrit les étapes à suivre pour créer une connexion source Adobe Workfront afin d’importer vos données Workfront dans Adobe Experience Platform à l’aide de l’interface utilisateur.
-source-git-commit: 1af0863766e29c599e02f2a553d237bc62f455d2
-workflow-type: ht
+exl-id: f82e852a-c9d1-4ecc-bc54-2b39d3b4cc1e
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+workflow-type: tm+mt
 source-wordcount: '771'
-ht-degree: 100%
+ht-degree: 97%
 
 ---
 
@@ -26,8 +27,8 @@ Ce tutoriel décrit les étapes à suivre pour créer une connexion source Adobe
 Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform : 
 
 * [Système de modèle de données d’expérience (XDM)](../../../../../xdm/home.md) : cadre normalisé selon lequel Experience Platform organise les données d’expérience client.
-* [Real-time Customer Profile](../../../../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
-* [Sandboxes](../../../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuelles qui divisent une instance de Platform unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
+* [Profil client en temps réel](../../../../../profile/home.md): Fournit un profil client en temps réel unifié basé sur des données agrégées provenant de plusieurs sources.
+* [Sandbox](../../../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuelles qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
 
 ## Créer une connexion source Workfront dans l’interface utilisateur
 

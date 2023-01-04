@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: Découvrez comment créer une connexion source dans l’interface utilisateur pour importer les données de profil des attributs du client dans Adobe Experience Platform.
 exl-id: 66bdab8f-c00e-4ebe-8b8e-f9e12cf86bbe
-source-git-commit: b1b820c93ff1731b797f2b5e3ace7d2d6995b98b
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '623'
 ht-degree: 39%
@@ -76,7 +76,7 @@ L’écran de [!UICONTROL Révision] s’affiche, vous permettant dʼexaminer vo
 
 ## Étapes suivantes
 
-Une fois la connexion créée, un schéma et un jeu de données cibles sont automatiquement créés pour contenir les données entrantes. Une fois l’ingestion initiale terminée, les données de profil d’attributs du client peuvent être utilisées par les services Platform en aval, tels que [!DNL Real-time Customer Profile] et [!DNL Segmentation Service]. Consultez les documents suivants pour plus d’informations :
+Une fois la connexion créée, un schéma et un jeu de données cibles sont automatiquement créés pour contenir les données entrantes. Une fois l’ingestion initiale terminée, les données de profil d’attributs du client peuvent être utilisées par les services Platform en aval, tels que [!DNL Real-Time Customer Profile] et [!DNL Segmentation Service]. Consultez les documents suivants pour plus d’informations :
 
-* [Présentation de [!DNL Real-time Customer Profile]](../../../../../profile/home.md)
+* [Présentation de [!DNL Real-Time Customer Profile]](../../../../../profile/home.md)
 * [Présentation de [!DNL Segmentation Service]](../../../../../segmentation/home.md)

@@ -5,10 +5,10 @@ title: Application automatique des stratégies
 topic-legacy: guide
 description: Ce document présente l’application automatique des stratégies d’utilisation de données lors de l’activation de segments vers des destinations dans Experience Platform.
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1727'
-ht-degree: 96%
+ht-degree: 93%
 
 ---
 
@@ -29,7 +29,7 @@ Une fois que les données sont étiquetées et que les stratégies d’utilisati
 Ce guide nécessite une compréhension pratique des divers services Platform impliqués dans l’application automatique. Consultez la documentation suivante pour en savoir plus avant de poursuivre avec ce guide :
 
 * [Gouvernance des données d’Adobe Experience Platform](../home.md) : cadre en fonction duquel Platform applique la conformité de l’utilisation des données à l’aide des libellés et des stratégies.
-* [Real-time Customer Profile](../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
+* [Profil client en temps réel](../../profile/home.md): Fournit un profil client en temps réel unifié basé sur des données agrégées provenant de plusieurs sources.
 * [Service de segmentation Adobe Experience Platform](../../segmentation/home.md) : moteur de segmentation de [!DNL Platform] utilisé pour créer des segments d’audience à partir de vos profils clients en fonction du comportement et des attributs des clients.
 * [Destinations](../../destinations/home.md) : les destinations sont des intégrations préconfigurées aux applications couramment utilisées. Elles permettent l’activation transparente des données de Platform pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée, etc.
 
@@ -57,7 +57,7 @@ Lorsqu’un segment est activé pour la première fois, [!DNL Policy Service] v�
 
 La parenté des données joue un rôle essentiel dans la façon dont les stratégies sont appliquées dans Platform. D’une façon générale, la parenté des données fait référence à l’origine d’un jeu de données ainsi qu’à son évolution (ou à son déplacement) au fil du temps.
 
-Dans le cadre de la gouvernance des données, la parenté permet aux libellés d’utilisation des données de se propager des jeux de données aux services en aval qui utilisent leurs données, comme le profil client en temps réel et les destinations. Cela permet d’évaluer et d’appliquer les stratégies à plusieurs points clés du parcours des données par l’intermédiaire de Platform et fournit un contexte aux consommateurs de données quant aux raisons pour lesquelles une violation de stratégie a eu lieu.
+Dans le contexte de la gouvernance des données, la traçabilité permet aux libellés d’utilisation des données de se propager des jeux de données aux services en aval qui utilisent leurs données, tels que Real-time Customer Profile et les destinations. Cela permet d’évaluer et d’appliquer les stratégies à plusieurs points clés du parcours des données par l’intermédiaire de Platform et fournit un contexte aux consommateurs de données quant aux raisons pour lesquelles une violation de stratégie a eu lieu.
 
 Dans Experience Platform, l’application des stratégies est concernée par la parenté suivante :
 

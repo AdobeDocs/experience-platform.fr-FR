@@ -5,7 +5,7 @@ title: Guide de dépannage du système XDM
 description: Trouvez des réponses aux questions fréquentes sur le modèle de données d’expérience (XDM), y compris les étapes pour résoudre les erreurs d’API courantes.
 topic-legacy: troubleshooting
 exl-id: a0c7c661-bee8-4f66-ad5c-f669c52c9de3
-source-git-commit: 5ffc93c8715d1184b2a239c1d631b117a531e5c1
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2060'
 ht-degree: 33%
@@ -42,7 +42,7 @@ Pour plus d’informations, voir [identification des ressources](api/getting-sta
 
 ### Quand un schéma commence-t-il à éviter les modifications avec rupture ?
 
-Des modifications avec rupture peuvent être apportées à un schéma tant qu’il n’a jamais été utilisé pour la création d’un jeu de données ou activé pour être utilisé dans [[!DNL Real-time Customer Profile]](../profile/home.md). Une fois qu’un schéma a été utilisé pour la création d’un jeu de données ou activé pour être utilisé avec [!DNL Real-time Customer Profile], les règles de [Evolution des schémas](schema/composition.md#evolution) sont strictement appliquées par le système.
+Des modifications avec rupture peuvent être apportées à un schéma tant qu’il n’a jamais été utilisé pour la création d’un jeu de données ou activé pour être utilisé dans [[!DNL Real-Time Customer Profile]](../profile/home.md). Une fois qu’un schéma a été utilisé pour la création d’un jeu de données ou activé pour être utilisé avec [!DNL Real-Time Customer Profile], les règles de [Evolution des schémas](schema/composition.md#evolution) sont strictement appliquées par le système.
 
 ### Quelle est la taille maximale d’un type de champ long ?
 
@@ -72,24 +72,24 @@ Pour plus d’informations sur la gestion des identités dans l’interface util
 
 ### Mon schéma a-t-il besoin d’une identité principale ?
 
-Les identités Principal sont facultatives, car les schémas peuvent n’avoir aucun ou l’un d’eux. Cependant, un schéma doit avoir une identité principale afin de pouvoir être utilisé dans [!DNL Real-time Customer Profile]. Pour plus d’informations, consultez la section [Identité](./tutorials/create-schema-ui.md#identity-field) du tutoriel de l’éditeur de schémas.
+Les identités Principal sont facultatives, car les schémas peuvent n’avoir aucun ou l’un d’eux. Cependant, un schéma doit avoir une identité principale afin de pouvoir être utilisé dans [!DNL Real-Time Customer Profile]. Pour plus d’informations, consultez la section [Identité](./tutorials/create-schema-ui.md#identity-field) du tutoriel de l’éditeur de schémas.
 
-### Comment activer un schéma pour l’utiliser dans [!DNL Real-time Customer Profile]?
+### Comment activer un schéma pour l’utiliser dans [!DNL Real-Time Customer Profile]?
 
-Les schémas peuvent être utilisés dans [[!DNL Real-time Customer Profile]](../profile/home.md) en ajoutant une balise &quot;union&quot; dans la variable `meta:immutableTags` du schéma. Activation d’un schéma avec [!DNL Profile] peut être effectué à l’aide de l’API ou de l’interface utilisateur.
+Les schémas peuvent être utilisés dans [[!DNL Real-Time Customer Profile]](../profile/home.md) en ajoutant une balise &quot;union&quot; dans la variable `meta:immutableTags` du schéma. Activation d’un schéma avec [!DNL Profile] peut être effectué à l’aide de l’API ou de l’interface utilisateur.
 
 #### Activation d’un schéma existant pour [!DNL Profile] utilisation de l’API
 
 Effectuez une requête PATCH pour mettre à jour le schéma et ajoutez l’attribut `meta:immutableTags` sous forme de tableau contenant la valeur « union ». Si la mise à jour se déroule correctement, la réponse affichera le schéma mis à jour qui contient désormais la balise union.
 
-Pour plus d’informations sur l’utilisation de l’API pour activer un schéma à utiliser dans [!DNL Real-time Customer Profile], reportez-vous à la section [syndicats](./api/unions.md) du document [!DNL Schema Registry] guide de développement.
+Pour plus d’informations sur l’utilisation de l’API pour activer un schéma à utiliser dans [!DNL Real-Time Customer Profile], reportez-vous à la section [syndicats](./api/unions.md) du document [!DNL Schema Registry] guide de développement.
 
 #### Activation d’un schéma existant pour [!DNL Profile] utilisation de l’interface utilisateur
 
 Dans [!DNL Experience Platform], sélectionnez **[!UICONTROL Schémas]** dans le volet de navigation de gauche, et sélectionnez le nom du schéma que vous souhaitez activer dans la liste des schémas. Ensuite, dans la partie droite de l’éditeur, sous **[!UICONTROL Propriétés du schéma]**, sélectionnez **[!UICONTROL Profil]** pour l’activer.
 
 
-Pour plus d’informations, consultez la section sur l’[utilisation dans Real-time Customer Profile](./tutorials/create-schema-ui.md#profile) dans le tutoriel de l’éditeur de schémas.
+Pour plus d’informations, voir la section sur [Utilisation dans Real-time Customer Profile](./tutorials/create-schema-ui.md#profile) dans le [!UICONTROL Éditeur de schéma] tutoriel .
 
 ### Puis-je modifier directement un schéma d’union ?
 
@@ -230,9 +230,9 @@ Selon le point de terminaison que vous utilisez, la variable `detailed-message` 
 
 Pour obtenir la liste des en-têtes Accept compatibles pour les différentes requêtes API, veuillez vous référer aux sections correspondantes dans le [guide de développement du registre des schémas](./api/overview.md).
 
-### [!DNL Real-time Customer Profile] errors
+### [!DNL Real-Time Customer Profile] errors
 
-Les messages d’erreur suivants sont associés aux opérations impliquées dans l’activation des schémas de [!DNL Real-time Customer Profile]. Voir [syndicats](./api/unions.md) dans la section [!DNL Schema Registry] Guide de l’API pour plus d’informations.
+Les messages d’erreur suivants sont associés aux opérations impliquées dans l’activation des schémas de [!DNL Real-Time Customer Profile]. Voir [syndicats](./api/unions.md) dans la section [!DNL Schema Registry] Guide de l’API pour plus d’informations.
 
 #### Il doit y avoir un descripteur d’identité de référence
 

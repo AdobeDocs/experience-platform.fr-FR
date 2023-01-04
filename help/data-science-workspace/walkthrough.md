@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Cours sur Data Science Workspace
 description: Ce document fournit un lien et une description pour le cours Adobe Experience Platform Data Science Workspace.
 exl-id: d814846e-52a9-46c6-831a-3399241959f2
-source-git-commit: 7733fe16984cacf04c1070e92673a7ee19eaea47
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '439'
 ht-degree: 2%
@@ -36,7 +36,7 @@ Les résultats d’apprentissage suivants sont abordés dans le cours Data Scien
 - Méthodes utilisées pour former et noter un modèle
 - Le rôle des hyper-paramètres dans le développement de modèles
 - Publication de modèles formés en tant que service
-- Utilisation de Data Science Workspace pour enrichir vos données Real-time Customer Profile
+- Utilisation de Data Science Workspace pour enrichir vos données de profil client en temps réel
 - Comment créer un segment en continu avec la sortie de votre modèle
 
 ## Leçons
@@ -61,7 +61,7 @@ Le cours Data Science Workspace est divisé en cinq leçons.
 
 ### Leçon 5
 
-**Consommez et diffusez Data Science Insights (11 minutes) :** Découvrez comment les sorties du modèle Data Science Workspace peuvent être utilisées dans Real-time Customer Profile pour offrir des expériences personnalisées avec les applications et services Adobe.
+**Consommez et diffusez Data Science Insights (11 minutes) :** Découvrez comment les sorties du modèle Data Science Workspace peuvent être utilisées dans Real-Time Customer Profile pour offrir des expériences personnalisées avec les applications et services Adobe.
 
 ## Étapes suivantes
 

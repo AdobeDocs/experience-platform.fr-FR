@@ -3,10 +3,10 @@ keywords: Experience Platform;accueil;rubriques populaires;connecteur source Aud
 title: Création d’une connexion source Adobe Audience Manager dans l’interface utilisateur
 description: Ce tutoriel vous guide tout au long des étapes nécessaires à la création d’une connexion source pour Adobe Audience Manager afin d’importer les données d’événement d’expérience client dans Platform à l’aide de l’interface utilisateur.
 exl-id: 90c4a719-aaad-4687-afd8-7a1c0c56f744
-source-git-commit: 9cdb8933d166445bf41ed314d7ffc7d5762e1adb
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '583'
-ht-degree: 25%
+ht-degree: 28%
 
 ---
 
@@ -62,11 +62,11 @@ Le [!UICONTROL Réviser] s’affiche, ce qui vous permet de passer en revue vos 
 
 ![review](../../../../images/tutorials/create/aam/review.png)
 
-Une fois que vous avez examiné votre flux de données, sélectionnez **[!UICONTROL Terminer]** et accorder un certain temps pour la création du flux de données.
+Une fois que vous avez vérifié votre flux de données, sélectionnez **[!UICONTROL Terminer]** et patientez quelques instants le temps que le flux de données soit créé.
 
 ## Étapes suivantes
 
 Lorsqu’un flux de données d’Audience Manager est principal, les données entrantes sont automatiquement ingérées dans les profils clients en temps réel. Vous pouvez désormais utiliser ces données entrantes et créer des segments d’audience à l’aide de Platform Segmentation Service. Consultez les documents suivants pour plus d’informations :
 
-* [Présentation du profil client en temps réel](../../../../../profile/home.md)
+* [Présentation de Real-Time Customer Profile](../../../../../profile/home.md)
 * [Présentation de Segmentation Service](../../../../../segmentation/home.md)

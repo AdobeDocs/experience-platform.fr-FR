@@ -5,7 +5,7 @@ title: Point de terminaison de l’API Classes
 description: Le point de terminaison /classes de l’API Schema Registry vous permet de gérer par programmation les classes XDM dans votre application d’expérience.
 topic-legacy: developer guide
 exl-id: 7beddb37-0bf2-4893-baaf-5b292830f368
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1532'
 ht-degree: 24%
@@ -255,7 +255,7 @@ Vous pouvez définir une classe personnalisée sous le `tenant` en effectuant un
 >
 >Lors de la composition d’un schéma basé sur une classe personnalisée que vous avez définie, vous ne pourrez pas utiliser les groupes de champs standard. Chaque groupe de champs définit les classes avec lesquelles il est compatible. `meta:intendedToExtend` attribut. Une fois que vous commencez à définir des groupes de champs compatibles avec votre nouvelle classe (en utilisant la variable `$id` de votre nouvelle classe dans le `meta:intendedToExtend` champ du groupe de champs), vous pourrez réutiliser ces groupes de champs chaque fois que vous définissez un schéma qui met en oeuvre la classe que vous avez définie. Reportez-vous aux sections de la section [création de groupes de champs](./field-groups.md#create) et [création de schémas](./schemas.md#create) pour plus d’informations.
 >
->Si vous prévoyez d’utiliser des schémas basés sur des classes personnalisées dans Real-time Customer Profile, il est également important de garder à l’esprit que les schémas d’union ne sont construits que sur la base de schémas qui partagent la même classe. Si vous souhaitez inclure un schéma de classe personnalisée dans l’union pour une autre classe comme [!UICONTROL XDM Individual Profile] ou [!UICONTROL XDM ExperienceEvent], vous devez établir une relation avec un autre schéma qui emploie cette classe. Voir le tutoriel sur [établissement d’une relation entre deux schémas dans l’API](../tutorials/relationship-api.md) pour plus d’informations.
+>Si vous prévoyez d’utiliser des schémas basés sur des classes personnalisées dans Real-Time Customer Profile, il est également important de garder à l’esprit que les schémas d’union ne sont construits que sur la base de schémas qui partagent la même classe. Si vous souhaitez inclure un schéma de classe personnalisée dans l’union pour une autre classe comme [!UICONTROL XDM Individual Profile] ou [!UICONTROL XDM ExperienceEvent], vous devez établir une relation avec un autre schéma qui emploie cette classe. Voir le tutoriel sur [établissement d’une relation entre deux schémas dans l’API](../tutorials/relationship-api.md) pour plus d’informations.
 
 **Format d’API**
 

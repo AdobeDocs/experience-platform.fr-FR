@@ -4,10 +4,10 @@ title: Règles d’alerte standard
 description: Ce document couvre les règles d’alerte prédéfinies fournies par Experience Platform.
 feature: Alerts
 exl-id: b4af1c15-b1bc-4e4b-a447-09cc17a63988
-source-git-commit: 44e337778bbfe901687383418981dbae83b356a7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '922'
-ht-degree: 83%
+ht-degree: 82%
 
 ---
 
@@ -54,7 +54,7 @@ Les règles d’alerte suivantes sont spécifiques au [service d’identités](.
 
 ## Profil client en temps réel
 
-Les règles d’alerte suivantes sont spécifiques au [profil client en temps réel](../../profile/home.md) :
+Les règles d’alerte suivantes sont spécifiques à [Profil client en temps réel](../../profile/home.md):
 
 | Abonnement aux événements I/O | Règle d’alerte | Description |
 | --- | --- | --- |

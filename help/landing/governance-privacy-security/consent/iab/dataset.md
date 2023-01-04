@@ -5,7 +5,7 @@ title: Création de jeux de données pour la capture des données de consentemen
 topic-legacy: privacy events
 description: Ce document décrit les étapes de configuration des deux jeux de données requis pour collecter les données de consentement du TCF 2.0 de l’IAB.
 exl-id: 36b2924d-7893-4c55-bc33-2c0234f1120e
-source-git-commit: 656d772335c2f5ae58b471b31bfbd6dfa82490cd
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1655'
 ht-degree: 3%
@@ -18,7 +18,7 @@ Pour que Adobe Experience Platform traite les données de consentement des clien
 
 Plus précisément, deux jeux de données sont nécessaires pour capturer les données de consentement TCF 2.0 :
 
-* Un jeu de données basé sur la variable [!DNL XDM Individual Profile] , activée pour une utilisation dans [!DNL Real-time Customer Profile].
+* Un jeu de données basé sur la variable [!DNL XDM Individual Profile] , activée pour une utilisation dans [!DNL Real-Time Customer Profile].
 * Un jeu de données basé sur la variable [!DNL XDM ExperienceEvent] classe .
 
 >[!IMPORTANT]
@@ -35,7 +35,7 @@ Ce tutoriel nécessite une compréhension du fonctionnement des composants suiva
    * [Notions de base de la composition du schéma](../../../../xdm/schema/composition.md) : en savoir plus sur les blocs de création de base des schémas XDM.
 * [Service Adobe Experience Platform Identity](../../../../identity-service/home.md): Permet de lier les identités des clients à partir de vos sources de données disparates entre appareils et systèmes.
    * [Espaces de noms d’identité](../../../../identity-service/namespaces.md): Les données d’identité du client doivent être fournies sous un espace de noms d’identité spécifique reconnu par Identity Service.
-* [Real-time Customer Profile](../../../../profile/home.md): Exploitation [!DNL Identity Service] pour vous permettre de créer des profils client détaillés à partir de vos jeux de données en temps réel. [!DNL Real-time Customer Profile] Profile extrait les données du lac de données et conserve les profils clients dans sa propre banque de données distincte.
+* [Profil client en temps réel](../../../../profile/home.md): Exploitation [!DNL Identity Service] pour vous permettre de créer des profils client détaillés à partir de vos jeux de données en temps réel. [!DNL Real-Time Customer Profile] Profile extrait les données du lac de données et conserve les profils clients dans sa propre banque de données distincte.
 
 ## Groupes de champs TCF 2.0 {#field-groups}
 
@@ -45,7 +45,7 @@ Les sections ci-dessous expliquent la structure de chacun de ces groupes de cham
 
 ### Groupe de champs de profil {#profile-field-group}
 
-Pour les schémas basés sur [!DNL XDM Individual Profile], la variable [!UICONTROL Détails du consentement IAB TCF 2.0] le groupe de champs fournit un champ de type map unique, `identityPrivacyInfo`, qui mappe les identités des clients à leurs préférences de consentement TCF. Ce groupe de champs doit être inclus dans un schéma basé sur les enregistrements qui est activé pour Real-time Customer Profile afin que l’application automatique soit effectuée.
+Pour les schémas basés sur [!DNL XDM Individual Profile], la variable [!UICONTROL Détails du consentement IAB TCF 2.0] le groupe de champs fournit un champ de type map unique, `identityPrivacyInfo`, qui mappe les identités des clients à leurs préférences de consentement TCF. Ce groupe de champs doit être inclus dans un schéma basé sur les enregistrements activé pour Real-Time Customer Profile afin que l’application automatique soit effectuée.
 
 Voir [guide de référence](../../../../xdm/field-groups/profile/iab.md) pour ce groupe de champs afin d’en savoir plus sur sa structure et son cas d’utilisation.
 
@@ -67,7 +67,7 @@ Dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Schémas
 
 >[!NOTE]
 >
->Si vous souhaitez utiliser des schémas XDM existants pour capturer des données de consentement à la place, vous pouvez modifier ces schémas au lieu d’en créer de nouveaux. Cependant, si un schéma existant a été activé pour une utilisation dans Real-time Customer Profile, son identité Principale ne peut pas être un champ directement identifiable qui est interdit d’utilisation dans des publicités basées sur des intérêts, telles qu’une adresse électronique. Consultez votre service juridique si vous ne savez pas quels champs sont restreints.
+>Si vous souhaitez utiliser des schémas XDM existants pour capturer des données de consentement à la place, vous pouvez modifier ces schémas au lieu d’en créer de nouveaux. Cependant, si un schéma existant a été activé pour une utilisation dans Real-Time Customer Profile, son identité Principale ne peut pas être un champ directement identifiable qui est interdit d’utilisation dans des publicités basées sur des intérêts, telles qu’une adresse électronique. Consultez votre service juridique si vous ne savez pas quels champs sont restreints.
 >
 >En outre, lors de la modification de schémas existants, seules des modifications additive (insécables) peuvent être effectuées. Consultez la section sur la [principes d’évolution des schémas](../../../../xdm/schema/composition.md#evolution) pour plus d’informations.
 
@@ -97,11 +97,11 @@ Après avoir fourni un nom et une description, vous pouvez éventuellement ajout
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/add-field-group-profile.png)
 
-Si vous modifiez un schéma existant qui a déjà été activé pour une utilisation dans [!DNL Real-time Customer Profile], sélectionnez **[!UICONTROL Enregistrer]** pour confirmer vos modifications avant de passer à la section sur [création d’un jeu de données basé sur votre schéma de consentement](#dataset). Si vous créez un nouveau schéma, continuez à suivre les étapes décrites dans la sous-section ci-dessous.
+Si vous modifiez un schéma existant qui a déjà été activé pour une utilisation dans [!DNL Real-Time Customer Profile], sélectionnez **[!UICONTROL Enregistrer]** pour confirmer vos modifications avant de passer à la section sur [création d’un jeu de données basé sur votre schéma de consentement](#dataset). Si vous créez un nouveau schéma, continuez à suivre les étapes décrites dans la sous-section ci-dessous.
 
-#### Activation du schéma à utiliser dans [!DNL Real-time Customer Profile]
+#### Activation du schéma à utiliser dans [!DNL Real-Time Customer Profile]
 
-Pour que Platform associe les données de consentement qu’il reçoit à des profils client spécifiques, le schéma de consentement doit être activé pour une utilisation dans [!DNL Real-time Customer Profile].
+Pour que Platform associe les données de consentement qu’il reçoit à des profils client spécifiques, le schéma de consentement doit être activé pour une utilisation dans [!DNL Real-Time Customer Profile].
 
 >[!NOTE]
 >
@@ -158,7 +158,7 @@ Une fois les groupes de champs dont vous avez besoin ajoutés, terminez en séle
 
 ## Création de jeux de données basés sur vos schémas de consentement {#datasets}
 
-Pour chacun des schémas requis décrits ci-dessus, vous devez créer un jeu de données qui assimilera en fin de compte les données de consentement de vos clients. Le jeu de données basé sur le schéma d’enregistrement doit être activé pour [!DNL Real-time Customer Profile], tandis que le jeu de données basé sur le schéma de série temporelle **should not** be [!DNL Profile]-enabled.
+Pour chacun des schémas requis décrits ci-dessus, vous devez créer un jeu de données qui assimilera en fin de compte les données de consentement de vos clients. Le jeu de données basé sur le schéma d’enregistrement doit être activé pour [!DNL Real-Time Customer Profile], tandis que le jeu de données basé sur le schéma de série temporelle **should not** be [!DNL Profile]-enabled.
 
 Pour commencer, sélectionnez **[!UICONTROL Jeux de données]** dans le volet de navigation de gauche, puis sélectionnez **[!UICONTROL Création d’un jeu de données]** dans le coin supérieur droit.
 
@@ -176,7 +176,7 @@ L’étape **[!UICONTROL Configurer le jeu de données]** apparaît. Attribuez u
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/dataset-configure.png)
 
-La page des détails du nouveau jeu de données s’affiche. Si le jeu de données est basé sur votre schéma de série temporelle, le processus est terminé. Si le jeu de données est basé sur votre schéma d’enregistrement, la dernière étape du processus consiste à activer le jeu de données à utiliser dans [!DNL Real-time Customer Profile].
+La page des détails du nouveau jeu de données s’affiche. Si le jeu de données est basé sur votre schéma de série temporelle, le processus est terminé. Si le jeu de données est basé sur votre schéma d’enregistrement, la dernière étape du processus consiste à activer le jeu de données à utiliser dans [!DNL Real-Time Customer Profile].
 
 Dans le rail de droite, sélectionnez la variable **[!UICONTROL Profil]** bascule, puis sélectionnez **[!UICONTROL Activer]** dans la fenêtre contextuelle de confirmation pour activer le schéma pour [!DNL Profile].
 
@@ -188,7 +188,7 @@ Suivez les étapes ci-dessus pour créer à nouveau un jeu de données basé sur
 
 En suivant ce tutoriel, vous avez créé au moins un jeu de données qui peut désormais être utilisé pour collecter les données de consentement du client :
 
-* Jeu de données basé sur des enregistrements activé pour une utilisation dans Real-time Customer Profile. **(Obligatoire)**
+* Jeu de données basé sur des enregistrements activé pour une utilisation dans Real-Time Customer Profile. **(Obligatoire)**
 * Jeu de données basé sur des séries temporelles qui n’est pas activé pour [!DNL Profile]. (Facultatif)
 
 Vous pouvez maintenant revenir à la [Présentation du TCF 2.0 de l’IAB](./overview.md#merge-policies) pour poursuivre le processus de configuration de la conformité de Platform pour TCF 2.0.

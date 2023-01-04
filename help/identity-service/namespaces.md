@@ -5,7 +5,7 @@ title: Présentation d’Identity Namespace
 topic-legacy: overview
 description: Les espaces de noms d’identité sont des composants du Service d’identités qui servent d’indicateurs du contexte auquel une identité se rapporte. Par exemple, ils distinguent une valeur de "name@email.com" comme adresse électronique ou "443522" comme identifiant CRM numérique.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: 3bb0fc7b2807889d0a759e81c8ff728de3c0cbde
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1642'
 ht-degree: 18%
@@ -20,13 +20,13 @@ Les espaces de noms d’identité sont des composants d’[[!DNL Identity Servic
 
 L’utilisation des espaces de noms d’identité nécessite une compréhension des différents services d’Adobe Experience Platform impliqués. Avant de commencer à travailler avec les espaces de noms d’identité, veuillez consulter la documentation relative aux services suivants :
 
-- [[!DNL Real-time Customer Profile]](../profile/home.md): Fournit un profil client unifié en temps réel basé sur des données agrégées provenant de plusieurs sources.
+- [[!DNL Real-Time Customer Profile]](../profile/home.md): Fournit un profil client unifié en temps réel basé sur des données agrégées provenant de plusieurs sources.
 - [[!DNL Identity Service]](./home.md) : profitez d’une meilleure compréhension de vos clients et de leurs comportements en rapprochant des identités entre appareils et systèmes.
 - [[!DNL Privacy Service]](../privacy-service/home.md): Les espaces de noms d’identité sont utilisés dans les demandes de conformité pour les réglementations de confidentialité juridiques telles que le Règlement général sur la protection des données (RGPD). Chaque demande d’accès à des informations personnelles est relative à un espace de noms afin d’identifier les données des consommateurs qui doivent être affectées.
 
 ## Compréhension des espaces de noms d’identité
 
-Une identité complète est composée d’une valeur d’identifiant et d’un espace de noms. Lors de la mise en correspondance de données d’enregistrement entre des fragments de profil, comme lorsque [!DNL Real-time Customer Profile] fusionne les données de profil ; la valeur d’identité et l’espace de noms doivent correspondre.
+Une identité complète est composée d’une valeur d’identifiant et d’un espace de noms. Lors de la mise en correspondance de données d’enregistrement entre des fragments de profil, comme lorsque [!DNL Real-Time Customer Profile] fusionne les données de profil ; la valeur d’identité et l’espace de noms doivent correspondre.
 
 Par exemple, deux fragments de profil peuvent contenir des identifiants Principaux différents, mais ils partagent la même valeur pour l’espace de noms &quot;Email&quot;. [!DNL Platform] est capable de voir que ces fragments sont en fait la même personne et rassemble les données dans le graphique d’identités de l’individu.
 

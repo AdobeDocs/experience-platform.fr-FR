@@ -5,7 +5,7 @@ title: Connecteur Marketo Engage
 topic-legacy: overview
 description: Ce document présente le connecteur source du Marketo Engage, y compris des informations sur son authentification, son mappage et sa latence de données.
 exl-id: 063ec5d9-d643-4141-bf6d-878273f22b33
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '631'
 ht-degree: 13%
@@ -22,7 +22,7 @@ Avec le [!DNL Marketo] connecteur source, vous pouvez importer des données B2B 
 
 >[!IMPORTANT]
 >
->Vous devez avoir accès à [Adobe Real-time Customer Data Platform version B2B](../../../../rtcdp/b2b-overview.md) pour utiliser tous les jeux de données Marketo à des fins de segmentation avec la variable [Real-time Customer Profile](../../../../profile/home.md). Sans l’édition B2B de Real-Time CDP, vous pouvez toujours utiliser la source Marketo pour importer les données des personnes et des jeux de données d’activités dans Real-time Customer Profile à des fins de segmentation.
+>Vous devez avoir accès à [Adobe Real-time Customer Data Platform version B2B](../../../../rtcdp/b2b-overview.md) pour utiliser tous les jeux de données Marketo à des fins de segmentation avec la variable [Profil client en temps réel](../../../../profile/home.md). Sans l’édition B2B de Real-Time CDP, vous pouvez toujours utiliser la source Marketo pour importer les données des personnes et des jeux de données d’activités dans Real-time Customer Profile à des fins de segmentation.
 
 Ce document présente la [!DNL Marketo] connecteur source, y compris des informations sur l’authentification du connecteur, comment mapper [!DNL Marketo] des champs vers le modèle de données d’expérience (XDM) et la latence des données du connecteur.
 
@@ -71,7 +71,7 @@ Le tableau suivant décrit la latence attendue pour l’introduction de [!DNL Ma
 
 | Destination | Latence attendue |
 | ----------- | ---------------- |
-| [!DNL Real-time Customer Profile] | &lt; 1 minute |
+| [!DNL Real-Time Customer Profile] | &lt; 1 minute |
 | Lac de données | &lt; 60 minutes |
 
 ## Étapes suivantes et ressources supplémentaires

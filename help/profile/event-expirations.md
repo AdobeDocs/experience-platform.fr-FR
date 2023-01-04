@@ -4,16 +4,16 @@ solution: Experience Platform
 title: Expirations des événements d’expérience
 description: Ce document fournit des instructions générales sur la configuration des délais d’expiration pour des événements d’expérience individuels dans un jeu de données Adobe Experience Platform.
 exl-id: a91f2cd2-3a5d-42e6-81c3-0ec5bc644f5f
-source-git-commit: faf9e72f77f04b20d2399749eaacdb9ebdf412dc
-workflow-type: ht
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+workflow-type: tm+mt
 source-wordcount: '466'
-ht-degree: 100%
+ht-degree: 94%
 
 ---
 
 # Expirations des événements d’expérience
 
-Dans Adobe Experience Platform, vous pouvez configurer des délais d’expiration pour tous les événements d’expérience ingérés dans un jeu de données activé pour un [profil client en temps réel](./home.md). Vous pouvez ainsi supprimer automatiquement des données du magasin de profils qui ne sont plus utiles pour vos cas d’utilisation.
+Dans Adobe Experience Platform, vous pouvez configurer des délais d’expiration pour tous les événements d’expérience ingérés dans un jeu de données activé pour [Profil client en temps réel](./home.md). Vous pouvez ainsi supprimer automatiquement des données du magasin de profils qui ne sont plus utiles pour vos cas d’utilisation.
 
 Les expirations d’événements d’expérience ne peuvent pas être configurées via l’interface utilisateur ou les API de Platform. Vous devez plutôt contacter l’assistance afin d’activer les expirations d’événements d’expérience sur vos jeux de données requis.
 

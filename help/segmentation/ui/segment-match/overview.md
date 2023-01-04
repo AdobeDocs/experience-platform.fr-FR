@@ -5,7 +5,7 @@ title: Présentation de la correspondance de segment
 topic-legacy: overview
 description: La correspondance de segment est un service de partage de segments dans Adobe Experience Platform qui permet à deux utilisateurs ou plus de Platform d’échanger des données de segment de manière sécurisée, gérée et respectueuse de la confidentialité.
 exl-id: 4e6ec2e0-035a-46f4-b171-afb777c14850
-source-git-commit: 2329065b938d97f48a23be5250fec535355db770
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1998'
 ht-degree: 6%
@@ -37,7 +37,7 @@ La première étape de la prise en main d’ [!DNL Segment Match] est de vous as
 
 Les espaces de noms d’identité sont un composant de [Service Adobe Experience Platform Identity](../../../identity-service/home.md). Chaque identité client contient un espace de noms associé qui indique le contexte de l’identité. Par exemple, un espace de noms peut distinguer une valeur de &quot;name&quot;.<span>@email.com&quot; comme adresse email ou &quot;443522&quot; comme identifiant CRM numérique.
 
-Une identité complète est composée d’une valeur d’identifiant et d’un espace de noms. Lors de la correspondance de données d’enregistrement entre des fragments de profil (par exemple, lorsque [!DNL Real-time Customer Profile] fusionne les données de profil), la valeur d’identité et l’espace de noms doivent correspondre.
+Une identité complète est composée d’une valeur d’identifiant et d’un espace de noms. Lors de la correspondance de données d’enregistrement entre des fragments de profil (par exemple, lorsque [!DNL Real-Time Customer Profile] fusionne les données de profil), la valeur d’identité et l’espace de noms doivent correspondre.
 
 Dans le contexte de [!DNL Segment Match], les espaces de noms sont utilisés dans le processus de chevauchement lors du partage de données.
 
@@ -204,4 +204,4 @@ En lisant ce document, vous avez acquis une compréhension de la [!DNL Segment M
 
 * [[!DNL Segmentation Service]](../../home.md)
 * [[!DNL Identity Service]](../../../identity-service/home.md)
-* [Présentation de [!DNL Real-time Customer Profile]](../../../profile/home.md)
+* [Présentation de [!DNL Real-Time Customer Profile]](../../../profile/home.md)

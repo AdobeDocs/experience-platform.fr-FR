@@ -2,7 +2,7 @@
 title: Groupe de champs de schéma des composants de personne professionnelle XDM
 description: Ce document fournit un aperçu du groupe de champs de schéma XDM Business Person Components.
 exl-id: 965b89f4-59f5-43f4-8778-3549e15b44d4
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '552'
 ht-degree: 7%
@@ -13,7 +13,7 @@ ht-degree: 7%
 
 [!UICONTROL Composants de personne active XDM] est un groupe de champs de schéma standard pour la variable [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md) qui capture plusieurs enregistrements source pour une personne, ainsi que d’autres attributs requis pour la segmentation des personnes.
 
-Lorsqu’un profil est créé pour une personne au moyen de la fonction [Real-time Customer Profile](../../../profile/home.md) dans l’édition B2B de Real-Time CDP, les informations utilisées pour créer ce profil peuvent potentiellement provenir de nombreux enregistrements source. Par exemple, si une personne travaille pour deux sociétés différentes, de nombreux systèmes de gestion de la relation client créent intentionnellement une copie en double de cette personne afin qu’une copie soit liée à la Société A, tandis que l’autre est liée à la Société B. Lorsque vous incorporez ces données dans Adobe Experience Platform, ce groupe de champs est utilisé pour fusionner ces différents enregistrements source en une seule représentation.
+Lorsqu’un profil est créé pour une personne au moyen de la fonction [Profil client en temps réel](../../../profile/home.md) dans l’édition B2B de Real-Time CDP, les informations utilisées pour créer ce profil peuvent potentiellement provenir de nombreux enregistrements source. Par exemple, si une personne travaille pour deux sociétés différentes, de nombreux systèmes de gestion de la relation client créent intentionnellement une copie en double de cette personne afin qu’une copie soit liée à la Société A, tandis que l’autre est liée à la Société B. Lorsque vous incorporez ces données dans Adobe Experience Platform, ce groupe de champs est utilisé pour fusionner ces différents enregistrements source en une seule représentation.
 
 Le groupe de champs fournit un niveau racine `personComponents` qui est un tableau d’objets. Chaque objet du tableau représente un enregistrement source différent.
 

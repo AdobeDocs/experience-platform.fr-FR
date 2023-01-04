@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: Un flux de données est une tâche planifiée qui récupère et ingère des données d’une source vers un jeu de données Platform. Ce tutoriel décrit les étapes de configuration d’un nouveau flux de données à l’aide de votre connecteur de base de stockage dans le cloud.
 exl-id: 75deead6-ef3c-48be-aed2-c43d1f432178
-source-git-commit: 38f64f2ba0b40a20528aac6efff0e2fd6bc12ed2
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1055'
-ht-degree: 20%
+ht-degree: 25%
 
 ---
 
@@ -32,9 +32,9 @@ Ce tutoriel nécessite une compréhension du fonctionnement des composants suiva
 - [[!DNL Experience Data Model (XDM)] Système](../../../../../xdm/home.md) : le cadre normalisé en fonction duquel [!DNL Experience Platform] organise les données d’expérience client.
    - [Principes de base de la composition des schémas](../../../../../xdm/schema/composition.md) : découvrez les blocs de création de base des schémas XDM, y compris les principes clés et les bonnes pratiques en matière de composition de schémas.
    - [Tutoriel sur l’éditeur de schémas](../../../../../xdm/tutorials/create-schema-ui.md) : découvrez comment créer des schémas personnalisés à l’aide de l’interface utilisateur de l’éditeur de schémas.
-- [[!DNL Real-time Customer Profile]](../../../../../profile/home.md) : fournit un profil de consommateur unifié en temps réel, basé sur des données agrégées provenant de plusieurs sources.
+- [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md) : fournit un profil de consommateur unifié en temps réel, basé sur des données agrégées provenant de plusieurs sources.
 
-## Ajout de données
+## Ajouter des données
 
 Après avoir créé votre authentification pour votre compte de stockage dans le cloud de diffusion en continu, la variable **[!UICONTROL Sélectionner des données]** s’affiche, fournissant une interface vous permettant de sélectionner le flux de données que vous allez apporter à Platform.
 
@@ -126,7 +126,7 @@ L’écran de **[!UICONTROL Révision]** s’affiche, vous permettant dʼexamine
 - **[!UICONTROL Connexion]**: Affiche le nom de votre compte, le type de source et d’autres informations diverses spécifiques à la source de stockage dans le cloud de diffusion en continu que vous utilisez.
 - **[!UICONTROL Attribution de champs de jeu de données et de mappage]**: Affiche le jeu de données et le schéma cible que vous utilisez pour votre flux de données.
 
-Une fois que vous avez examiné votre flux de données, sélectionnez **[!UICONTROL Terminer]** et accorder un certain temps pour la création du flux de données.
+Une fois que vous avez vérifié votre flux de données, sélectionnez **[!UICONTROL Terminer]** et patientez quelques instants le temps que le flux de données soit créé.
 
 ![review](../../../../images/tutorials/dataflow/cloud-storage/streaming/review.png)
 
@@ -136,7 +136,7 @@ Une fois votre flux de données de stockage dans le cloud en continu créé, vou
 
 ## Étapes suivantes
 
-En suivant ce tutoriel, vous avez créé un flux de données pour diffuser des données à partir d’une source de stockage dans le cloud. Ces données entrantes peuvent désormais être utilisées par les services de Platform en aval, comme [!DNL Real-time Customer Profile] et [!DNL Data Science Workspace]. Consultez les documents suivants pour plus d’informations :
+En suivant ce tutoriel, vous avez créé un flux de données pour diffuser des données à partir d’une source de stockage dans le cloud. Ces données entrantes peuvent désormais être utilisées par les services de Platform en aval, comme [!DNL Real-Time Customer Profile] et [!DNL Data Science Workspace]. Consultez les documents suivants pour plus d’informations :
 
-- [Présentation de [!DNL Real-time Customer Profile]](../../../../../profile/home.md)
+- [Présentation de [!DNL Real-Time Customer Profile]](../../../../../profile/home.md)
 - [Présentation de [!DNL Data Science Workspace]](../../../../../data-science-workspace/home.md)

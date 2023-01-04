@@ -2,7 +2,7 @@
 title: Personnalisation par Offer decisioning
 description: Découvrez comment utiliser l’API serveur pour diffuser et générer des expériences personnalisées via Offer Decisioning.
 exl-id: 5348cd3e-08db-4778-b413-3339cb56b35a
-source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '555'
 ht-degree: 2%
@@ -33,7 +33,7 @@ Voir [guide sur l’ajout de services à un flux de données](../edge/datastream
 
 Le [!DNL Offer Decision Engine] utilise les données Adobe Experience Platform et [Profils client en temps réel](../profile/home.md), ainsi que la variable [!DNL Offer Library], afin de diffuser des offres aux bons clients et canaux au bon moment.
 
-Pour en savoir plus sur la variable [!DNL Offer Decisioning Engine], voir la section dédiée [documentation](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started-decision/starting-offer-decisioning.html).
+Pour en savoir plus sur la variable [!DNL Offer Decisioning Engine], voir la section dédiée [documentation](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started-decision/starting-offer-decisioning.html?lang=fr).
 
 Après [configuration de votre flux de données](#configure-your-datastream), vous devez définir les portées de décision à utiliser dans votre campagne de personnalisation.
 

@@ -1,8 +1,8 @@
 ---
 title: Attributs dérivés
-description: Les attributs dérivés offrent un moyen pratique de générer des attributs de votre choix qui peuvent être actualisés à n’importe quel rythme régulier et éventuellement publiés dans vos données Real-time Customer Profile. Ce document présente l’utilisation de Query Service pour créer des attributs dérivés à utiliser avec vos données de profil.
+description: Les attributs dérivés offrent un moyen pratique de générer des attributs de votre choix qui peuvent être actualisés à n’importe quel rythme régulier et éventuellement publiés dans vos données Real-Time Customer Profile. Ce document présente l’utilisation de Query Service pour créer des attributs dérivés à utiliser avec vos données de profil.
 exl-id: 5d52b268-e2a3-411c-8242-3aa32e759937
-source-git-commit: 61e0895484b8005e2109056d51557f609fecaf97
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '752'
 ht-degree: 0%
@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Attributs dérivés
 
-La fonction Attributs dérivés fournit un moyen pratique de générer des attributs de votre choix à partir d’autres informations disponibles dans le lac de données. Ces attributs peuvent être actualisés à n’importe quel rythme régulier et éventuellement publiés dans vos données Real-time Customer Profile. Les attributs dérivés répondent à la nécessité de créer des attributs complexes tels que le décile, le percentile et le quartile par rapport à des attributs plus simples tels que le maximum, le décompte et la moyenne. Ces attributs peuvent être calculés spécifiquement pour un utilisateur individuel ou pour une entité commerciale. Vous pouvez ainsi dériver des attributs qui peuvent être directement accrédités à un identifiant, tels que les adresses électroniques, les identifiants d’appareil et les numéros de téléphone, et aussi dériver des attributs indirectement associés à cet utilisateur ou ce profil d’entreprise.
+La fonction Attributs dérivés fournit un moyen pratique de générer des attributs de votre choix à partir d’autres informations disponibles dans le lac de données. Ces attributs peuvent être actualisés à n’importe quel rythme régulier et éventuellement publiés dans vos données Real-Time Customer Profile. Les attributs dérivés répondent à la nécessité de créer des attributs complexes tels que le décile, le percentile et le quartile par rapport à des attributs plus simples tels que le maximum, le décompte et la moyenne. Ces attributs peuvent être calculés spécifiquement pour un utilisateur individuel ou pour une entité commerciale. Vous pouvez ainsi dériver des attributs qui peuvent être directement accrédités à un identifiant, tels que les adresses électroniques, les identifiants d’appareil et les numéros de téléphone, et aussi dériver des attributs indirectement associés à cet utilisateur ou ce profil d’entreprise.
 
 Des attributs dérivés sont nécessaires pour divers cas d’utilisation lorsque des données sont analysées sur le lac de données. Ces données peuvent ensuite être marquées pour une utilisation dans Real-time Customer Profile et utilisées dans des cas d’utilisation en aval, comme la création d’audiences fortement ciblées. Voici quelques cas d’utilisation potentiels de cette fonctionnalité :
 

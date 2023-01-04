@@ -5,7 +5,7 @@ title: Traitement du consentement dans Adobe Experience Platform
 topic-legacy: getting started
 description: Découvrez comment traiter les signaux de consentement des clients dans Adobe Experience Platform à l’aide de la norme Adobe 2.0.
 exl-id: cd76a3f6-ae55-4d75-9b30-900fadb4664f
-source-git-commit: d380b4d2a75efb1c34010a30c619649a7b99643c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1567'
 ht-degree: 1%
@@ -28,7 +28,7 @@ Ce guide nécessite une compréhension pratique des différents services Experie
 
 * [Modèle de données d’expérience (XDM)](../../../../xdm/home.md) : framework normalisé selon lequel Experience Platform organise les données d’expérience client.
 * [Service Adobe Experience Platform Identity](../../../../identity-service/home.md): Résout le problème fondamental posé par la fragmentation des données d’expérience client en rapprochant les identités entre les appareils et les systèmes.
-* [Real-time Customer Profile](../../../../profile/home.md): Utilisations [!DNL Identity Service] fonctionnalités pour créer des profils client détaillés à partir de vos jeux de données en temps réel. Real-time Customer Profile extrait des données du lac de données et conserve les profils clients dans sa propre banque de données distincte.
+* [Profil client en temps réel](../../../../profile/home.md): Utilisations [!DNL Identity Service] fonctionnalités pour créer des profils client détaillés à partir de vos jeux de données en temps réel. Real-Time Customer Profile extrait les données du lac de données et conserve les profils clients dans sa propre banque de données distincte.
 * [SDK Web Adobe Experience Platform](../../../../edge/home.md): Bibliothèque JavaScript côté client qui vous permet d’intégrer divers services Platform à votre site web destiné aux clients.
    * [Commandes de consentement du SDK](../../../../edge/consent/supporting-consent.md): Présentation du cas d’utilisation des commandes du SDK liées au consentement présentée dans ce guide.
 * [Adobe Experience Platform Segmentation Service](../../../../segmentation/home.md): Permet de diviser les données de Real-time Customer Profile en groupes d’individus partageant des caractéristiques similaires et réagissant de la même manière aux stratégies marketing.

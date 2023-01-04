@@ -5,7 +5,7 @@ title: Glossaire Adobe Experience Platform
 topic-legacy: getting started
 description: Glossaire reprenant la terminologie principale d’Experience Platform.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: 3bb0fc7b2807889d0a759e81c8ff728de3c0cbde
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '7919'
 ht-degree: 12%
@@ -408,7 +408,7 @@ ht-degree: 12%
 
 **Données de profil**: Les données de profil font référence à toutes les données qui se trouvent dans la banque de données Profile.
 
-**Entrepôt de données de profil**: La banque de données Profile (parfois appelée banque de données Profile) est un système de stockage de données distinct du lac de données, utilisé par Real-time Customer Profile pour créer et stocker des profils.
+**Entrepôt de données de profil**: La banque de données Profile (parfois appelée banque de données Profile) est un système de stockage de données distinct du lac de données, utilisé par Real-Time Customer Profile pour créer et stocker des profils.
 
 **Entités de profil**: Les entités de profil représentent les attributs relatifs à une personne, généralement un client. Les entités appartenant à cette catégorie doivent être représentées par des schémas basés sur la variable [!DNL XDM Individual Profile] classe . Voir aussi : Accès au profil
 
@@ -430,7 +430,7 @@ ht-degree: 12%
 
 **Real-time Customer Data Platform**: Adobe Real-time Customer Data Platform (Real-Time CDP) rassemble des données clients connues et inconnues afin de créer des profils clients de confiance avec une intégration simplifiée, une segmentation intelligente et une activation en temps réel sur le parcours client numérique.
 
-**Real-time Customer Profile**: Real-time Customer Profile (parfois appelé Profile) offre une vue d’ensemble de chaque client en combinant des données issues de plusieurs canaux, notamment en ligne, hors ligne, CRM et tiers. Profile vous permet de consolider vos données client en profils individuels offrant des comptes horodatés exploitables de chaque interaction client.
+**Profil client en temps réel**: Real-Time Customer Profile (parfois appelé Profile) offre une vue d’ensemble de chaque client en combinant des données issues de plusieurs canaux, notamment en ligne, hors ligne, CRM et tiers. Profile vous permet de consolider vos données client en profils individuels offrant des comptes horodatés exploitables de chaque interaction client.
 
 **Recette**: Une recette est le terme d’Adobe pour une spécification de modèle. Il s’agit d’un conteneur de niveau supérieur qui représente des processus d’apprentissage automatique spécifiques, des algorithmes d’IA, une logique de traitement et des paramètres de configuration nécessaires pour créer et exécuter un modèle formé et ainsi aider à résoudre des problèmes d’entreprise spécifiques.
 
@@ -522,9 +522,9 @@ ht-degree: 12%
 
 **Ingestion par flux**: L’ingestion par flux vous permet d’envoyer en temps réel des données de périphériques côté client et côté serveur vers Experience Platform.
 
-**Segmentation par flux**: La segmentation par flux est un processus continu de sélection des données qui met à jour les segments en réponse à l’activité des utilisateurs. Une fois qu’un segment a été créé et enregistré, la définition de segment est appliquée aux données d’entrée [!DNL Real-time Customer Profile]. Les ajouts et les suppressions de segments sont traités régulièrement, ce qui vous permet de vous assurer que votre ciblage d’audience reste pertinent.
+**Segmentation par flux**: La segmentation par flux est un processus continu de sélection des données qui met à jour les segments en réponse à l’activité des utilisateurs. Une fois qu’un segment a été créé et enregistré, la définition de segment est appliquée aux données d’entrée [!DNL Real-Time Customer Profile]. Les ajouts et les suppressions de segments sont traités régulièrement, ce qui vous permet de vous assurer que votre ciblage d’audience reste pertinent.
 
-**Vue du système**: La vue système est une représentation visuelle des jeux de données source qui transitent par [!DNL Real-time Customer Profile] vers les destinations.
+**Vue du système**: La vue système est une représentation visuelle des jeux de données source qui transitent par [!DNL Real-Time Customer Profile] vers les destinations.
 
 ## T
 
@@ -540,7 +540,7 @@ ht-degree: 12%
 
 ## U
 
-**Schéma d’union**: Un schéma d’union est une consolidation des schémas qui partagent la même classe et qui ont été activés pour [!DNL Real-time Customer Profile]. Plusieurs schémas d’union peuvent exister pour une organisation, mais il ne peut y avoir qu’un seul schéma d’union par classe.
+**Schéma d’union**: Un schéma d’union est une consolidation des schémas qui partagent la même classe et qui ont été activés pour [!DNL Real-Time Customer Profile]. Plusieurs schémas d’union peuvent exister pour une organisation, mais il ne peut y avoir qu’un seul schéma d’union par classe.
 
 ## V
 

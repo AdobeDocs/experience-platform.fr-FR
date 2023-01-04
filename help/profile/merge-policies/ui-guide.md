@@ -4,10 +4,10 @@ title: Guide de l’interface utilisateur des stratégies de fusion
 type: Documentation
 description: Lorsque vous rassemblez des données provenant de plusieurs sources dans Experience Platform, les stratégies de fusion sont les règles utilisées par Platform pour déterminer quelle est la priorité des données et quelles données seront combinées pour créer la vue unifiée. Ce guide fournit des instructions détaillées sur l’utilisation des stratégies de fusion à l’aide de l’interface utilisateur d’Adobe Experience Platform.
 exl-id: 0489217a-6a53-428c-a531-fd0a0e5bb71f
-source-git-commit: e94756254a24ecadd7359589cd14cfb0745c789c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2321'
-ht-degree: 99%
+ht-degree: 97%
 
 ---
 
@@ -24,8 +24,8 @@ Pour en savoir plus sur les stratégies de fusion et le rôle qu’elles jouent 
 
 Ce guide nécessite une compréhension pratique de plusieurs fonctions [!DNL Experience Platform] importantes. Avant de lire ce guide d’utilisation, veuillez consulter la documentation relative aux services suivants :
 
-* [Real-time Customer Profile](../home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
-* [Adobe Experience Platform Identity Service](../../identity-service/home.md): permet d’obtenir un profil client en temps réel en rassemblant des identités de sources de données disparates ingérées dans [!DNL Platform].
+* [Profil client en temps réel](../home.md): Fournit un profil client en temps réel unifié basé sur des données agrégées provenant de plusieurs sources.
+* [Service Adobe Experience Platform Identity](../../identity-service/home.md): Permet à Real-time Customer Profile de relier les identités de sources de données disparates ingérées dans [!DNL Platform].
 * [Modèle de données d’expérience (XDM)](../../xdm/home.md) : cadre normalisé selon lequel [!DNL Platform] organise les données d’expérience client.
 
 ## Affichage des stratégies de fusion {#view-merge-policies}

@@ -6,10 +6,10 @@ topic-legacy: tutorial
 type: Tutorial
 description: Le guide suivant décrit les étapes requises pour créer et publier un modèle d’apprentissage automatique.
 exl-id: f71e5a17-9952-411e-8e6a-aab46bc4c006
-source-git-commit: ff8a3612f34d6547577564ba40261052cd78ef01
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1076'
-ht-degree: 16%
+ht-degree: 12%
 
 ---
 
@@ -96,6 +96,6 @@ Une fois que vous avez publié un modèle en tant que service, vous pouvez confi
 
 Adobe Experience Platform [!DNL Data Science Workspace] fournit les outils et les ressources nécessaires pour créer, évaluer et utiliser des modèles d’apprentissage automatique afin de générer des prévisions et des insights sur les données. Lorsque des insights d’apprentissage automatique sont ingérés dans une [!DNL Profile]Jeu de données compatible, ces mêmes données sont également ingérées en tant que [!DNL Profile] enregistrements pouvant ensuite être segmentés à l’aide de [!DNL Adobe Experience Platform Segmentation Service].
 
-À mesure que les données de profil et de série temporelle sont ingérées, Real-time Customer Profile décide automatiquement d’inclure ou d’exclure ces données des segments par le biais d’un processus continu appelé la segmentation par flux, avant de les fusionner avec les données existantes et de mettre à jour la vue d’union. Par conséquent, vous pouvez instantanément effectuer des calculs et prendre des décisions pour offrir aux clients de meilleures expériences personnalisées lorsqu’ils interagissent avec votre marque.
+À mesure que les données de profil et de série temporelle sont ingérées, Real-Time Customer Profile décide automatiquement d’inclure ou d’exclure ces données des segments par le biais d’un processus continu appelé segmentation par flux, avant de les fusionner avec les données existantes et de mettre à jour la vue d’union. Par conséquent, vous pouvez instantanément effectuer des calculs et prendre des décisions pour offrir aux clients de meilleures expériences personnalisées lorsqu’ils interagissent avec votre marque.
 
 Consultez le tutoriel pour [enrichissement de Real-time Customer Profile avec des insights d’apprentissage automatique](./enrich-profile.md) pour en savoir plus sur l’utilisation des insights d’apprentissage automatique.

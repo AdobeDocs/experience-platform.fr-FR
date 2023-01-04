@@ -3,16 +3,16 @@ keywords: Experience Platform;interface utilisateur;UI;tableaux de bord;tableau
 title: Modification du schéma pour créer des widgets de tableaux de bord personnalisés
 description: Ce guide fournit des instructions détaillées relatives à la sélection des attributs et à la configuration du schéma de votre organisation dans le but de créer des widgets personnalisés pour les tableaux de bord d’Adobe Experience Platform.
 exl-id: a744eb24-5ba7-4971-9183-3f891e807863
-source-git-commit: 9b89effa6f90fb513fac9d0b826722ab05020036
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '498'
-ht-degree: 89%
+ht-degree: 74%
 
 ---
 
 # Modification du schéma pour créer des widgets personnalisés
 
-Pour créer des widgets personnalisés pour les tableaux de bord d’Adobe Experience Platform, vous devez d’abord identifier les attributs Real-time Customer Profile sur lesquels les widgets seront basés.
+Pour créer des widgets personnalisés pour les tableaux de bord Adobe Experience Platform, vous devez d’abord identifier les attributs Real-Time Customer Profile sur lesquels les widgets seront basés.
 
 Ce guide fournit des instructions détaillées pour modifier le schéma de votre organisation en sélectionnant des attributs, afin de créer des widgets de tableaux de bord personnalisés.
 
@@ -30,7 +30,7 @@ Ce guide nécessite l’accès à la [!UICONTROL bibliothèque de widgets] d’E
 
 Dans la bibliothèque de widgets, l’onglet **[!UICONTROL Personnalisé]** vous permet de créer des widgets et de les partager avec d’autres utilisateurs de votre organisation afin de personnaliser l’aspect de vos tableaux de bord.
 
-Avant de pouvoir créer des widgets personnalisés, vous devez sélectionner les attributs Real-time Customer Profile pour garantir l’inclusion des données dans l’instantané quotidien.
+Avant de pouvoir créer des widgets personnalisés, les attributs Real-Time Customer Profile doivent être sélectionnés pour s’assurer que les données sont incluses dans l’instantané quotidien.
 
 >[!IMPORTANT]
 >
@@ -61,4 +61,4 @@ Après avoir choisi les attributs que vous souhaitez ajouter, sélectionnez **[!
 
 ## Étapes suivantes
 
-Après lecture de ce guide, vous êtes en mesure d’accéder à la bibliothèque de widgets et de sélectionner des attributs Real-time Customer Profile pour configurer votre schéma. Une fois les attributs de profil sélectionnés, vous pouvez démarrer la [création de widgets personnalisés pour vos tableaux de bord](custom-widgets.md).
+Après avoir lu ce guide, vous pouvez accéder à la bibliothèque de widgets et sélectionner les attributs de profil client en temps réel pour configurer votre schéma. Une fois les attributs de profil sélectionnés, vous pouvez démarrer la [création de widgets personnalisés pour vos tableaux de bord](custom-widgets.md).

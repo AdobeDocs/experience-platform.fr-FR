@@ -2,7 +2,7 @@
 title: Sources dans Real-time Customer Data Platform version B2B
 description: Présentation du rôle des sources dans l’édition B2B d’Adobe Real-time Customer Data Platform.
 exl-id: eeea4b2e-67c5-4491-9b8e-4b8987e44777
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '250'
 ht-degree: 0%
@@ -23,7 +23,7 @@ Voir [Présentation des connecteurs source](../../sources/home.md) pour plus d�
 
 >[!IMPORTANT]
 >
->Vous devez avoir accès à [Real-time Customer Data Platform B2B Edition](../../rctcdp/../rtcdp/b2b-overview.md) pour que les schémas B2B participent à [Real-time Customer Profile](../proile/../../profile/home.md).
+>Vous devez avoir accès à [Real-time Customer Data Platform B2B Edition](../../rctcdp/../rtcdp/b2b-overview.md) pour que les schémas B2B participent à [Profil client en temps réel](../proile/../../profile/home.md).
 
 Les documents suivants fournissent des informations supplémentaires sur l’utilisation de [!DNL Marketo] pour importer des données B2B dans Platform :
 

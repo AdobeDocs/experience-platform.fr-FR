@@ -3,10 +3,10 @@ keywords: destinations;destination;types de destinations
 title: Types et catégories de destination
 description: Découvrez les différents types et catégories de destinations dans Adobe Experience Platform.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: 606038116391e75ba4ffc36bab11757f963a8346
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '680'
-ht-degree: 98%
+ht-degree: 93%
 
 ---
 
@@ -22,7 +22,7 @@ Dans Adobe Experience Platform, nous faisons la distinction entre deux types de 
 
 ## Connexions {#connections}
 
-Les destinations **[!UICONTROL Exportation de profils]**, **[!UICONTROL Exportation de segments en flux continu]** et **[!DNL Edge Personalization]** d’Adobe Experience Platform capturent des données d’événements, les combinent avec d’autres sources de données pour former le [Profil client en temps réel](../profile/home.md), appliquent une segmentation et exportent des segments et des profils qualifiés vers des destinations.
+**[!UICONTROL Exportation de profils]**, **[!UICONTROL Exportation de segments en flux continu]**, et **[!DNL Edge Personalization]** les destinations dans Adobe Experience Platform capturent les données d’événement, les combinent à d’autres sources de données pour former la variable [Profil client en temps réel](../profile/home.md), appliquez une segmentation et exportez des segments et des profils qualifiés vers les destinations.
 
 ## Destinations d’exportation de profils {#profile-export}
 

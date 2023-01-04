@@ -5,10 +5,10 @@ title: Applications Privacy Service et Experience Cloud
 topic-legacy: overview
 description: Ce document fournit une référence pour la configuration de différentes applications Experience Cloud pour les opérations liées à la confidentialité.
 exl-id: da21c15f-0b99-4eb7-ac9a-f0fe5e3ba842
-source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '888'
-ht-degree: 37%
+ht-degree: 36%
 
 ---
 

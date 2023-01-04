@@ -3,10 +3,10 @@ keywords: Experience Platform;interface utilisateur;UI;tableaux de bord;tableau
 title: Présentation de la personnalisation des tableaux de bord
 description: Découvrez comment personnaliser les données affichées dans vos tableaux de bord Adobe Experience Platform.
 exl-id: efabdb61-4148-4b0e-b7a1-6e788b5e43a8
-source-git-commit: 27252d547afd30acc7b334d5054f1350dc0031b7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '480'
-ht-degree: 95%
+ht-degree: 89%
 
 ---
 
@@ -48,7 +48,7 @@ Pour connaître la procédure complète afin de créer vos propres widgets, repo
 
 #### Modification du schéma {#edit-schema}
 
-Pour créer un [widget personnalisé](#custom-widgets) pour vos tableaux de bord, vous devez dʼabord identifier lʼattribut de profil client en temps réel sur lequel le widget sera basé.
+Pour créer une [widget personnalisé](#custom-widgets) pour vos tableaux de bord, vous devez d’abord identifier l’attribut Real-time Customer Profile sur lequel le widget sera basé.
 
 Pour obtenir des instructions détaillées sur la modification du schéma de votre organisation afin de créer des widgets personnalisés pour les tableaux de bord, consultez le guide de [modification du schéma de votre tableau de bord](edit-schema.md).
 

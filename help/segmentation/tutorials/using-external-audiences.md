@@ -5,10 +5,10 @@ title: Import et utilisation d'audiences externes
 description: Suivez ce tutoriel pour découvrir comment utiliser des audiences externes avec Adobe Experience Platform.
 topic-legacy: tutorial
 exl-id: 56fc8bd3-3e62-4a09-bb9c-6caf0523f3fe
-source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1621'
-ht-degree: 5%
+ht-degree: 3%
 
 ---
 
@@ -20,8 +20,8 @@ Adobe Experience Platform prend en charge la possibilité d’importer une audie
 
 Ce tutoriel nécessite une compréhension pratique des différentes [!DNL Adobe Experience Platform] services impliqués dans la création de segments d’audience. Avant de commencer ce tutoriel, veuillez consulter la documentation relative aux services suivants :
 
-- [Segmentation Service](../home.md) : vous permet de créer des segments ciblés depuis des données de Real-time Customer Profile.
-- [Real-time Customer Profile](../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
+- [Segmentation Service](../home.md): Permet de créer des segments d’audience à partir de données Real-time Customer Profile.
+- [Profil client en temps réel](../../profile/home.md): Fournit un profil client en temps réel unifié basé sur des données agrégées provenant de plusieurs sources.
 - [Modèle de données d’expérience (XDM)](../../xdm/home.md) : cadre normalisé selon lequel Experience Platform organise les données d’expérience client. Pour utiliser au mieux la segmentation, veillez à ce que vos données soient ingérées en tant que profils et événements en fonction des [bonnes pratiques pour la modélisation des données](../../xdm/schema/best-practices.md).
 - [Jeu de données](../../catalog/datasets/overview.md) : la structure de stockage et de gestion pour la persistance des données dans Experience Platform.
 - [Ingestion par flux](../../ingestion/streaming-ingestion/overview.md): Comment Experience Platform ingère et stocke des données à partir de périphériques côté client et côté serveur en temps réel.
@@ -62,7 +62,7 @@ Maintenant que votre schéma a été créé, vous devez spécifier le champ qui 
 
 ![Les cases à cocher permettant de marquer le champ sélectionné comme identité Principale sont mises en surbrillance dans l’éditeur de schémas.](../images/tutorials/external-audiences/mark-primary-identifier.png)
 
-Après avoir marqué la variable `_id` champ comme identité Principale, sélectionnez le titre du schéma, suivi du bouton bascule intitulé **[!UICONTROL Profil]**. Sélectionner **[!UICONTROL Activer]** pour activer le schéma pour [!DNL Real-time Customer Profile].
+Après avoir marqué la variable `_id` champ comme identité Principale, sélectionnez le titre du schéma, suivi du bouton bascule intitulé **[!UICONTROL Profil]**. Sélectionner **[!UICONTROL Activer]** pour activer le schéma pour [!DNL Real-Time Customer Profile].
 
 ![La bascule permettant d’activer le schéma pour Profile est mise en surbrillance dans l’éditeur de schémas.](../images/tutorials/external-audiences/schema-profile.png)
 

@@ -5,7 +5,7 @@ title: Présentation de Data Ingestion
 topic-legacy: overview
 description: Ce document présente les trois principales manières dont les données sont ingérées dans Platform, avec des liens vers leur documentation de présentation respectives pour plus d’informations.
 exl-id: c189dd4a-5c59-4189-a18c-a3e45a9ff01d
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '461'
 ht-degree: 100%
@@ -46,6 +46,6 @@ Ce document vous a présenté brièvement les différents aspects de [!DNL Data 
 
 >[!WARNING]
 >
->Le terme « Profil unifié » utilisé dans la vidéo suivante est obsolète. Les termes [!DNL "Profile"] ou [!DNL "Real-time Customer Profile"] sont les termes appropriés utilisés dans la documentation dʼ[!DNL Experience Platform]. Reportez-vous à la documentation pour connaître les dernières fonctionnalités.
+>Le terme « Profil unifié » utilisé dans la vidéo suivante est obsolète. Les termes [!DNL "Profile"] ou [!DNL "Real-Time Customer Profile"] sont les termes appropriés utilisés dans la documentation dʼ[!DNL Experience Platform]. Reportez-vous à la documentation pour connaître les dernières fonctionnalités.
 
 >[!VIDEO](https://video.tv.adobe.com/v/27106?quality=12&learn=on)

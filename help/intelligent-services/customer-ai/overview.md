@@ -7,10 +7,10 @@ topic-legacy: Customer AI Overview
 description: Customer AI est utilisé pour générer des scores de propension personnalisés tels que les taux d’attrition et de conversion de profils individuels à grande échelle. Cette opération s’effectue sans qu’il soit nécessaire de transformer les besoins professionnels en un problème d’apprentissage automatique ou d’avoir recours à un algorithme, à une formation ou à un déploiement.
 landing-page-description: Customer AI est utilisé pour générer des scores de propension personnalisés tels que les taux d’attrition et de conversion de profils individuels à grande échelle.
 exl-id: 3e668103-e2a2-4ce6-a40a-8029a6aaa8dd
-source-git-commit: 6c0e001419dc78d4ff87bebd0604c7add07b635f
+source-git-commit: 165e5ccae5ca78b3912fef1ba0b3fd4567e231fb
 workflow-type: tm+mt
 source-wordcount: '553'
-ht-degree: 67%
+ht-degree: 65%
 
 ---
 
@@ -30,7 +30,7 @@ Customer AI est conçu pour :
 - proposer des modèles de propension des clients à haute précision pour une segmentation et un ciblage plus forts ;
 - faciliter la compréhension des facteurs d’influence et la probabilité derrière certains comportements des clients ;
 - Fournissez des options personnalisables pour les cas d’utilisation et les données uniques de votre entreprise.
-- améliorer Real-time Customer Profile grâce aux scores de propension des clients, comme les taux d’attrition et de conversion ;
+- Améliorez Real-time Customer Profile grâce aux scores de propension des clients tels que l’attrition et la conversion.
 - améliorer les profils client avec des facteurs d’influence pour les scores de propension ;
 - créer des segments de clientèle en fonction de facteurs d’influence et de scores de propension.
 

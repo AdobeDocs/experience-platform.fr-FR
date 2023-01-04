@@ -4,7 +4,7 @@ title: Génération du rapport de chevauchement de jeux de données
 type: Tutorial
 description: Ce tutoriel décrit les étapes nécessaires à la génération du rapport de chevauchement de jeux de données à l’aide de l’API Real-time Customer Profile.
 exl-id: 90894ed3-b09e-435d-a9e3-18fd6dc8e907
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '888'
 ht-degree: 2%
@@ -17,7 +17,7 @@ Le rapport de chevauchement de jeux de données offre une visibilité sur la com
 
 En plus de fournir des informations sur vos données, ce rapport peut vous aider à prendre des mesures pour optimiser l’utilisation de votre licence, comme définir une limite de durée de vie de certaines données.
 
-Ce tutoriel décrit les étapes nécessaires à la génération du rapport de chevauchement de jeux de données à l’aide du [!DNL Real-time Customer Profile] et interprétez les résultats pour votre organisation.
+Ce tutoriel décrit les étapes nécessaires à la génération du rapport de chevauchement de jeux de données à l’aide du [!DNL Real-Time Customer Profile] et interprétez les résultats pour votre organisation.
 
 ## Prise en main
 

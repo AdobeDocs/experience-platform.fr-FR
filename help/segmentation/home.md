@@ -5,7 +5,7 @@ title: Présentation de Segmentation Service
 topic-legacy: overview
 description: Découvrez Adobe Experience Platform Segmentation Service et le rôle qu’il occupe dans l’écosystème de Platform.
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
-source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1635'
 ht-degree: 97%
@@ -14,7 +14,7 @@ ht-degree: 97%
 
 # Présentation de [!DNL Segmentation Service]
 
-Adobe Experience Platform [!DNL Segmentation Service] propose une interface utilisateur et une API RESTful qui vous permettent de créer des segments et de générer des audiences à partir de vos données [!DNL Real-time Customer Profile]. Ces segments sont configurés et conservés de manière centralisée sur [!DNL Platform] et sont facilement accessibles depuis n’importe quelle solution Adobe.
+Adobe Experience Platform [!DNL Segmentation Service] propose une interface utilisateur et une API RESTful qui vous permettent de créer des segments et de générer des audiences à partir de vos données [!DNL Real-Time Customer Profile]. Ces segments sont configurés et conservés de manière centralisée sur [!DNL Platform] et sont facilement accessibles depuis n’importe quelle solution Adobe.
 
 Ce document offre une présentation de [!DNL Segmentation Service] et de son rôle dans Adobe Experience Platform.
 
@@ -63,7 +63,7 @@ Platform prend actuellement en charge trois méthodes d’évaluation des segmen
 
 ### Segmentation par flux {#streaming}
 
-La segmentation par flux est un processus continu de sélection des données qui met à jour vos segments en réponse à l’activité des utilisateurs. Une fois qu’un segment a été créé et enregistré, la définition de segment est appliquée aux données d’entrée [!DNL Real-time Customer Profile]. Les ajouts et les suppressions de segments sont traités régulièrement, ce qui vous permet de vous assurer que votre ciblage d’audience reste pertinent.
+La segmentation par flux est un processus continu de sélection des données qui met à jour vos segments en réponse à l’activité des utilisateurs. Une fois qu’un segment a été créé et enregistré, la définition de segment est appliquée aux données d’entrée [!DNL Real-Time Customer Profile]. Les ajouts et les suppressions de segments sont traités régulièrement, ce qui vous permet de vous assurer que votre ciblage d’audience reste pertinent.
 
 Pour plus d’informations sur la segmentation par flux, consultez la [documentation sur la segmentation par flux](./api/streaming-segmentation.md).
 
@@ -160,7 +160,7 @@ En attribuant une variable à l’attribut de l’État d’achat, votre segment
 
 ## Segmentation d’entités multiples {#multi-entity}
 
-Grâce à la fonction de segmentation d’entités multiples avancée, vous pouvez élargir les données [!DNL Real-time Customer Profile] avec des données supplémentaires basées sur des produits, des boutiques ou d’autres personnes non-personnes, également appelées entités « de dimension ». Par conséquent, [!DNL Segmentation Service] peut accéder à d’autres champs pendant la définition de segment comme s’ils étaient natifs de la banque de données de [!DNL Profile]. La segmentation d’entités multiples offre une certaine souplesse dans l’identification des audiences en fonction des données qui correspondent à vos propres besoins commerciaux. Pour plus d’informations, notamment sur les cas d’utilisation et les workflows, consultez le [guide de segmentation d’entités multiples](multi-entity-segmentation.md).
+Grâce à la fonction de segmentation d’entités multiples avancée, vous pouvez élargir les données [!DNL Real-Time Customer Profile] avec des données supplémentaires basées sur des produits, des boutiques ou d’autres personnes non-personnes, également appelées entités « de dimension ». Par conséquent, [!DNL Segmentation Service] peut accéder à d’autres champs pendant la définition de segment comme s’ils étaient natifs de la banque de données de [!DNL Profile]. La segmentation d’entités multiples offre une certaine souplesse dans l’identification des audiences en fonction des données qui correspondent à vos propres besoins commerciaux. Pour plus d’informations, notamment sur les cas d’utilisation et les workflows, consultez le [guide de segmentation d’entités multiples](multi-entity-segmentation.md).
 
 ## [!DNL Segmentation Service] types de données
 
@@ -168,7 +168,7 @@ Grâce à la fonction de segmentation d’entités multiples avancée, vous pouv
 
 ## Étapes suivantes
 
-[!DNL Segmentation Service] fournit un workflow consolidé pour créer des segments à partir de données de [!DNL Real-time Customer Profile]. En résumé :
+[!DNL Segmentation Service] fournit un workflow consolidé pour créer des segments à partir de données de [!DNL Real-Time Customer Profile]. En résumé :
 
 - La [!DNL Segmentation] est le processus de définition d’un sous-ensemble de profils de votre banque de profils, ce qui vous permet de caractériser le comportement ou les attributs d’un groupe commercialisable souhaité. [!DNL Segmentation Service] rend ce processus possible.
 - Lors de la planification d’un segment, gardez à l’esprit que les segments peuvent être référencés à partir de n’importe quel autre segment et combinés avec lui.

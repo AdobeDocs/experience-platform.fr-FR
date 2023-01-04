@@ -2,7 +2,7 @@
 title: Groupe de champs de schéma des détails de campagne commerciale XDM
 description: Ce document présente un aperçu du groupe de champs Détails de la campagne XDM Business.
 exl-id: 3ef6c0b9-cba1-449e-8868-46446c00465f
-source-git-commit: 7805e4c45a48070adefbaba25a57140efc3e86b1
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '366'
 ht-degree: 7%
@@ -29,7 +29,7 @@ ht-degree: 7%
 | `expectedResponse` | [!UICONTROL Chaîne] | Réponse attendue pour la campagne. |
 | `integrationPartnerName` | [!UICONTROL Chaîne] | Nom du partenaire qui a intégré cette campagne. |
 | `isActive` | [!UICONTROL Booléen] | Indique si cette campagne est principale. |
-| `isDeleted` | [!UICONTROL Booléen] | Indique si cette campagne a été supprimée dans Marketo Engage.<br><br>Lors de l’utilisation de la variable [Connecteur source Marketo](../../../sources/connectors/adobe-applications/marketo/marketo.md), tous les enregistrements supprimés dans Marketo sont automatiquement répercutés dans Real-time Customer Profile. Cependant, les enregistrements relatifs à ces profils peuvent toujours persister dans le lac de données. En définissant `isDeleted` to `true`, vous pouvez utiliser ce champ pour filtrer les enregistrements qui ont été supprimés de vos sources lors de l’interrogation du lac de données. |
+| `isDeleted` | [!UICONTROL Booléen] | Indique si cette campagne a été supprimée dans Marketo Engage.<br><br>Lors de l’utilisation de la variable [Connecteur source Marketo](../../../sources/connectors/adobe-applications/marketo/marketo.md), les enregistrements supprimés dans Marketo sont automatiquement répercutés dans Real-time Customer Profile. Cependant, les enregistrements relatifs à ces profils peuvent toujours persister dans le lac de données. En définissant `isDeleted` to `true`, vous pouvez utiliser ce champ pour filtrer les enregistrements qui ont été supprimés de vos sources lors de l’interrogation du lac de données. |
 | `lastActivityDate` | [!UICONTROL DateTime] | Horodatage ISO 8601 de la dernière activité associée à la campagne. |
 | `timeZone` | [!UICONTROL Chaîne] | Fuseau horaire dans lequel la campagne fonctionne. |
 | `timeZoneDelivery` | [!UICONTROL Chaîne] | Fuseau horaire de la diffusion dans laquelle la campagne fonctionne. |

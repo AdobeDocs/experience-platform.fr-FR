@@ -5,7 +5,7 @@ title: Annexe du guide de l’API Privacy Service
 topic-legacy: developer guide
 description: Ce document contient des informations supplémentaires sur l’utilisation de l’API Privacy Service.
 exl-id: 7099e002-b802-486e-8863-0630d66e330f
-source-git-commit: 1a84ebfa0ad7801e14896dffd28302f057ae171d
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '485'
 ht-degree: 77%
@@ -69,11 +69,11 @@ Le tableau suivant indique les valeurs acceptées pour la spécification d’un 
 | Adobe Audience Manager | `AudienceManager` |
 | Adobe Campaign | `campaign` |
 | Adobe Experience Platform (lac de données) | `aepDataLake` |
-| Adobe Experience Platform (Real-time Customer Profile) | `profileService` |
+| Adobe Experience Platform (profil client en temps réel) | `profileService` |
 | Adobe Primetime Authentication | `primetimeAuthentication` |
 | Adobe Target | `target` |
 | Attributs du client (CRS) | `CRS` |
-| Service d’identités | `identity` |
+| Identity Service | `identity` |
 | Marketo Engage | `marketo` |
 
 {style=&quot;table-layout:auto&quot;}

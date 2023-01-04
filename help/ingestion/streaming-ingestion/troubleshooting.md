@@ -5,7 +5,7 @@ title: Guide de dépannage de l’ingestion en flux continu
 topic-legacy: troubleshooting
 description: Ce document répond aux questions les plus fréquentes sur l’ingestion par flux sur Adobe Experience Platform.
 exl-id: 5d5deccf-25b8-44c9-ae27-9a4713ced274
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1025'
 ht-degree: 69%
@@ -46,9 +46,9 @@ Lorsque la validation synchrone n’est pas prise en charge pour l’emplacement
 
 [!DNL Experience Platform] prend en charge la collecte de données sécurisée. Lorsque la collecte de données authentifiées est activée, les clients doivent envoyer un jeton JSON Web Token (JWT) et leur ID d’organisation IMS en tant qu’en-têtes de requête. Pour plus d’informations sur la manière d’envoyer des données authentifiées à [!DNL Platform], consultez le guide sur la [collecte de données authentifiées](../tutorials/create-authenticated-streaming-connection.md).
 
-### Quelle est la latence de diffusion des données en continu vers ? [!DNL Real-time Customer Profile]?
+### Quelle est la latence de diffusion des données en continu vers ? [!DNL Real-Time Customer Profile]?
 
-Les événements diffusés en continu sont généralement reflétés dans [!DNL Real-time Customer Profile] en moins de 60 secondes. Les latences réelles peuvent varier en raison du volume de données, de la taille du message et des limitations de bande passante.
+Les événements diffusés en continu sont généralement reflétés dans [!DNL Real-Time Customer Profile] en moins de 60 secondes. Les latences réelles peuvent varier en raison du volume de données, de la taille du message et des limitations de bande passante.
 
 ### Puis-je inclure plusieurs messages dans la même requête d’API ?
 
@@ -94,9 +94,9 @@ Le fichier JSON suivant est un exemple d’objet de réponse pour une requête d
 }
 ```
 
-### Pourquoi mes messages envoyés ne sont-ils pas reçus par [!DNL Real-time Customer Profile]?
+### Pourquoi mes messages envoyés ne sont-ils pas reçus par [!DNL Real-Time Customer Profile]?
 
-If [!DNL Real-time Customer Profile] rejette un message, probablement en raison d’informations d’identité incorrectes. Cela peut être le résultat d’une valeur ou d’un espace de noms d’identité non valide.
+If [!DNL Real-Time Customer Profile] rejette un message, probablement en raison d’informations d’identité incorrectes. Cela peut être le résultat d’une valeur ou d’un espace de noms d’identité non valide.
 
 Il existe deux types d’espace de noms d’identité : par défaut et personnalisé. Lors de l’utilisation d’espaces de noms personnalisés, assurez-vous que l’espace de noms a été enregistré dans [!DNL Identity Service]. Pour plus d’informations sur l’utilisation des espaces de noms par défaut et personnalisés, consultez la [présentation des espaces de noms d’identité](../../identity-service/namespaces.md).
 

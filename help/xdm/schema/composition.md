@@ -5,7 +5,7 @@ title: Principes de base de la composition des schémas
 topic-legacy: overview
 description: Ce document présente les schémas du modèle de données d’expérience (XDM) ainsi que les blocs de création, principes et bonnes pratiques de la composition de schémas à utiliser dans Adobe Experience Platform.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: bd40388d710f8b135c0d36716b0ec59c8c9b78ee
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '4103'
 ht-degree: 26%
@@ -58,7 +58,7 @@ Les schémas d’enregistrement et de série temporelle contiennent tous deux un
 
 Les schémas sont utilisés pour ingérer des données dans [!DNL Experience Platform]. Ces données sont finalement utilisées par plusieurs services pour créer une vue unique et unifiée d’une entité individuelle. Il est donc important, lors de la réflexion sur les schémas, de réfléchir aux identités des clients et aux champs qui peuvent être utilisés pour identifier un sujet, quel que soit l’origine des données.
 
-Pour faciliter ce processus, les champs clés de vos schémas peuvent être marqués comme identités. Lors de l’ingestion des données, les données de ces champs sont insérées dans le[!UICONTROL Graphique d’identités]&quot; pour cette personne. Les données du graphique sont ensuite accessibles par [[!DNL Real-time Customer Profile]](../../profile/home.md) et autres [!DNL Experience Platform] services pour offrir une vue d’ensemble de chaque client.
+Pour faciliter ce processus, les champs clés de vos schémas peuvent être marqués comme identités. Lors de l’ingestion des données, les données de ces champs sont insérées dans le[!UICONTROL Graphique d’identités]&quot; pour cette personne. Les données du graphique sont ensuite accessibles par [[!DNL Real-Time Customer Profile]](../../profile/home.md) et autres [!DNL Experience Platform] services pour offrir une vue d’ensemble de chaque client.
 
 Champs généralement marqués comme &quot;&quot;[!UICONTROL Identité]&quot; inclure : adresse email, numéro de téléphone, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=fr), ID de gestion de la relation client ou d’autres champs d’identifiant uniques. Vous devez également tenir compte des identifiants uniques propres à votre organisation, car ils peuvent être bons &quot;[!UICONTROL Identité]&quot; également.
 
@@ -114,7 +114,7 @@ Comme le montre l’exemple ci-dessus, chaque clé du `identityMap` représente 
 
 >[!NOTE]
 >
->Valeur booléenne indiquant si la valeur est une identité Principale (`primary`) peut également être fournie pour chaque valeur d’identité. Les identités Principal ne doivent être définies que pour les schémas destinés à être utilisés dans [!DNL Real-time Customer Profile]. Voir la section sur [schémas d’union](#union) pour plus d’informations.
+>Valeur booléenne indiquant si la valeur est une identité Principale (`primary`) peut également être fournie pour chaque valeur d’identité. Les identités Principal ne doivent être définies que pour les schémas destinés à être utilisés dans [!DNL Real-Time Customer Profile]. Voir la section sur [schémas d’union](#union) pour plus d’informations.
 
 ### Principes d’évolution des schémas {#evolution}
 
@@ -149,7 +149,7 @@ Si un champ a été utilisé pour ingérer des données et qu’il n’a pas ét
 Lorsque vous définissez un champ précédemment facultatif selon les besoins, tenez compte des points suivants :
 
 1. Si vous interrogez des données historiques et écrivez les résultats dans un nouveau jeu de données, certaines lignes échouent car elles contiennent des valeurs nulles pour le champ requis.
-1. Si le champ participe à [Real-time Customer Profile](../../profile/home.md) et si vous exportez des données avant de les définir selon les besoins, la valeur peut être nulle pour certains profils.
+1. Si le champ participe à [Profil client en temps réel](../../profile/home.md) et si vous exportez des données avant de les définir selon les besoins, la valeur peut être nulle pour certains profils.
 1. Vous pouvez utiliser l’API Schema Registry pour afficher un journal des modifications horodaté pour toutes les ressources XDM dans Platform, y compris les nouveaux champs obligatoires. Consultez le guide sur la [point d’entrée du journal d’audit](../api/audit-log.md) pour plus d’informations.
 
 ### Schémas et ingestion de données
@@ -273,9 +273,9 @@ while [!DNL Experience Platform] permet de composer des schémas pour des cas d�
 
 ![](../images/schema-composition/union.png)
 
-En activant un schéma à utiliser avec [!DNL Real-time Customer Profile], il sera inclus dans l’union pour ce type de classe. [!DNL Profile] fournit des profils robustes et centralisés des attributs du client ainsi qu’un compte horodaté de chaque événement que le client a eu sur n’importe quel système intégré à [!DNL Platform]. [!DNL Profile] utilise la vue d’union pour représenter ces données et fournir une vue d’ensemble de chaque client.
+En activant un schéma à utiliser avec [!DNL Real-Time Customer Profile], il sera inclus dans l’union pour ce type de classe. [!DNL Profile] fournit des profils robustes et centralisés des attributs du client ainsi qu’un compte horodaté de chaque événement que le client a eu sur n’importe quel système intégré à [!DNL Platform]. [!DNL Profile] utilise la vue d’union pour représenter ces données et fournir une vue d’ensemble de chaque client.
 
-Pour plus d’informations sur l’utilisation de [!DNL Profile], reportez-vous à la section [Présentation de Real-time Customer Profile](../../profile/home.md).
+Pour plus d’informations sur l’utilisation de [!DNL Profile], reportez-vous à la section [Présentation de Real-Time Customer Profile](../../profile/home.md).
 
 ## Mappage des fichiers de données à des schémas XDM
 

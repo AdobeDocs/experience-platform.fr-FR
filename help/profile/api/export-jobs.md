@@ -3,18 +3,18 @@ keywords: Experience Platform;profil;profil client en temps réel;dépannage;API
 title: Point de terminaison de l’API des tâches d’exportation de profils
 topic-legacy: guide
 type: Documentation
-description: Real-time Customer Profile vous permet de créer une vue unique de clients individuels dans Adobe Experience Platform en rassemblant des données provenant de plusieurs sources, y compris des données d’attributs et des données comportementales. Les données de profil peuvent ensuite être exportées vers un jeu de données en vue d’un traitement ultérieur.
+description: Real-Time Customer Profile vous permet de créer une vue unique de clients individuels dans Adobe Experience Platform en rassemblant des données provenant de plusieurs sources, y compris des données d’attributs et des données comportementales. Les données de profil peuvent ensuite être exportées vers un jeu de données en vue d’un traitement ultérieur.
 exl-id: d51b1d1c-ae17-4945-b045-4001e4942b67
-source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1519'
-ht-degree: 68%
+ht-degree: 61%
 
 ---
 
 # Point de terminaison des tâches d’exportation de profils
 
-[!DNL Real-time Customer Profile] vous permet d’établir une vue unique des clients individuels en rassemblant des données issues de plusieurs sources, y compris des données d’attributs et des données comportementales. Les données de profil peuvent ensuite être exportées vers un jeu de données en vue d’un traitement ultérieur. Par exemple, les segments d’audience provenant de [!DNL Profile] Les données peuvent être exportées pour activation et les attributs de profil peuvent être exportés pour création de rapports.
+[!DNL Real-Time Customer Profile] vous permet d’établir une vue unique des clients individuels en rassemblant des données issues de plusieurs sources, y compris des données d’attributs et des données comportementales. Les données de profil peuvent ensuite être exportées vers un jeu de données en vue d’un traitement ultérieur. Par exemple, les segments d’audience provenant de [!DNL Profile] Les données peuvent être exportées pour activation et les attributs de profil peuvent être exportés pour création de rapports.
 
 Ce document fournit des instructions étape par étape pour la création et la gestion de tâches d’exportation à l’aide du [API de profil](https://www.adobe.com/go/profile-apis-en).
 
@@ -26,11 +26,11 @@ Outre la création d’une tâche d’exportation, vous pouvez également accéd
 
 ## Prise en main
 
-Les points d’entrée d’API utilisés dans ce guide font partie de l’[!DNL Real-time Customer Profile]API. Avant de continuer, consultez le [guide de prise en main](getting-started.md) pour obtenir des liens vers la documentation associée, un guide de lecture des exemples dʼappels API dans ce document et des informations importantes sur les en-têtes requis pour réussir des appels à nʼimporte quel API dʼ[!DNL Experience Platform].
+Les points d’entrée d’API utilisés dans ce guide font partie de l’[!DNL Real-Time Customer Profile]API. Avant de continuer, consultez le [guide de prise en main](getting-started.md) pour obtenir des liens vers la documentation associée, un guide de lecture des exemples dʼappels API dans ce document et des informations importantes sur les en-têtes requis pour réussir des appels à nʼimporte quel API dʼ[!DNL Experience Platform].
 
 ## Création d’une tâche d’exportation
 
-Export [!DNL Profile] Les données nécessitent d’abord la création d’un jeu de données dans lequel les données seront exportées, puis le lancement d’une nouvelle tâche d’exportation. Ces deux étapes peuvent être réalisées à l’aide des API Experience Platform, la première utilisant l’API Catalog Service et la seconde utilisant l’API Real-time Customer Profile. Les sections suivantes contiennent des instructions détaillées sur l’exécution de chaque étape.
+Export [!DNL Profile] Les données nécessitent d’abord la création d’un jeu de données dans lequel les données seront exportées, puis le lancement d’une nouvelle tâche d’exportation. Ces deux étapes peuvent être réalisées à l’aide des API Experience Platform, la première utilisant l’API Catalog Service, la seconde utilisant l’API Real-time Customer Profile. Les sections suivantes contiennent des instructions détaillées sur l’exécution de chaque étape.
 
 ### Créer un jeu de données cible
 
@@ -86,7 +86,7 @@ Une réponse réussie renvoie un tableau contenant l’ID unique, en lecture seu
 
 ### Lancement d’une tâche d’exportation {#initiate}
 
-Une fois que vous disposez d’un jeu de données d’union persistant, vous pouvez créer une tâche d’exportation afin de conserver les données Profile dans le jeu de données, en effectuant une requête POST sur le point de terminaison `/export/jobs` dans l’API Real-time Customer Profile et en fournissant les informations sur les données que vous souhaitez exporter dans le corps de la requête.
+Une fois que vous disposez d’un jeu de données d’union persistant, vous pouvez créer une tâche d’exportation afin de conserver les données de profil dans le jeu de données en envoyant une requête de POST au `/export/jobs` point de terminaison dans l’API Real-time Customer Profile et fournissant les détails des données que vous souhaitez exporter dans le corps de la requête.
 
 **Format d’API**
 
@@ -437,7 +437,7 @@ Une fois l’exportation terminée, vos données sont disponibles dans le lac de
 
 Pour obtenir des instructions détaillées sur l’utilisation de l’API Data Access afin d’accéder aux fichiers de lot et les télécharger, suivez le [tutoriel portant sur l’accès aux données](../../data-access/tutorials/dataset-data.md).
 
-Vous pouvez également accéder aux données Real-time Customer Profile correctement exportées à l’aide d’Adobe Experience Platform Query Service. Grâce à l’interface utilisateur ou à l’API RESTful, Query Service vous permet d’écrire, de valider et d’exécuter des requêtes sur des données du lac de données.
+Vous pouvez également accéder aux données Real-time Customer Profile correctement exportées à l’aide de Adobe Experience Platform Query Service. Grâce à l’interface utilisateur ou à l’API RESTful, Query Service vous permet d’écrire, de valider et d’exécuter des requêtes sur des données du lac de données.
 
 Pour plus d’informations sur la manière d’interroger des données d’audience, consultez la [documentation sur Query Service](../../query-service/home.md).
 

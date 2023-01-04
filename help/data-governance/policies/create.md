@@ -6,7 +6,7 @@ topic-legacy: policies
 type: Tutorial
 description: Découvrez comment créer une stratégie de gouvernance des données à l’aide de l’API Policy Service.
 exl-id: 8483f8a1-efe8-4ebb-b074-e0577e5a81a4
-source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1200'
 ht-degree: 91%
@@ -423,6 +423,6 @@ Une réponse réussie renvoie un état HTTP 200 (OK) et les détails de la stra
 
 En suivant ce tutoriel, vous avez créé une stratégie d’utilisation des données pour une action marketing. Vous pouvez maintenant continuer avec le tutoriel sur l’[application des stratégies d’utilisation des données](../enforcement/api-enforcement.md) afin d’apprendre à rechercher les violations de stratégie et à les traiter dans votre application d’expérience.
 
-Pour plus d’informations sur les différentes opérations disponibles dans l’API [!DNL Policy Service], consultez le [guide de développement de Policy Service](../api/getting-started.md). Pour plus d’informations sur l’application des stratégies pour les données du [!DNL Real-time Customer Profile], consultez le tutoriel sur l’[application de la conformité de l’utilisation des données aux segments d’audience](../../segmentation/tutorials/governance.md).
+Pour plus d’informations sur les différentes opérations disponibles dans l’API [!DNL Policy Service], consultez le [guide de développement de Policy Service](../api/getting-started.md). Pour plus d’informations sur l’application des stratégies pour les données du [!DNL Real-Time Customer Profile], consultez le tutoriel sur l’[application de la conformité de l’utilisation des données aux segments d’audience](../../segmentation/tutorials/governance.md).
 
 Pour découvrir comment gérer les stratégies d’utilisation dans l’interface utilisateur [!DNL Experience Platform], consultez le [guide d’utilisation des stratégies](user-guide.md).

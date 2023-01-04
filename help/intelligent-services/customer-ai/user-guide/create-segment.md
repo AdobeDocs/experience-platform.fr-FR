@@ -6,10 +6,10 @@ title: Création de segments client avec des scores prédéfinis
 topic-legacy: Create a segment
 description: Lorsqu’une opération de prédiction se termine, les scores de propension prévus sont automatiquement utilisés par les Profils. L’enrichissement des profils avec les scores Customer AI permet de créer des segments client pour trouver des audiences en fonction de leurs scores de propension. Cette section décrit les étapes à suivre pour créer des segments à l’aide du créateur de segments.
 exl-id: ac81f798-f599-4a8d-af25-c00c92e74b4e
-source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
+source-git-commit: 165e5ccae5ca78b3912fef1ba0b3fd4567e231fb
 workflow-type: tm+mt
 source-wordcount: '318'
-ht-degree: 83%
+ht-degree: 78%
 
 ---
 
@@ -19,7 +19,7 @@ Lorsqu’une opération de prédiction se termine, les scores de propension pré
 
 >[!IMPORTANT]
 >
->Afin d’utiliser cette méthode, Real-time Customer Profile doit être activé pour le jeu de données.
+>Pour utiliser cette méthode, Real-Time Customer Profile doit être activé pour le jeu de données.
 
 Dans l’interface utilisateur de Platform, cliquez sur **[!UICONTROL Segments]** dans le volet de navigation de gauche, puis cliquez sur **[!UICONTROL Créer un segment]**.
 

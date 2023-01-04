@@ -5,7 +5,7 @@ title: Guide de l’API Schema Registry
 description: L’API Schema Registry permet aux développeurs de gérer par programmation tous les schémas et toutes les ressources XDM (Experience Data Model) associées dans Adobe Experience Platform. Suivez ce guide pour savoir comment effectuer des opérations clés à l’aide de l’API.
 topic-legacy: developer guide
 exl-id: 9e693d29-303e-462a-a1e2-93c0d517b8e3
-source-git-commit: 2a58236031834bbe298576e2fcab54b04ec16ac3
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1084'
 ht-degree: 9%
@@ -54,7 +54,7 @@ Les descripteurs sont des ensembles de métadonnées affectés à des champs sp�
 
 ## Unions
 
-Bien que Platform vous permette de composer des schémas pour des cas d’utilisation particuliers, il vous permet également de composer une &quot;union&quot; de schémas appartenant à une classe spécifique. Un schéma d’union agrège les champs de tous les schémas qui partagent la même classe en une seule représentation. En activant un schéma à utiliser avec [Real-time Customer Profile](../../profile/home.md), ce schéma est inclus dans l’union pour sa classe particulière. Par conséquent, les schémas d’union ne peuvent pas être modifiés directement et peuvent uniquement être affectés par l’inclusion ou l’exclusion de schémas à utiliser dans Profile.
+Bien que Platform vous permette de composer des schémas pour des cas d’utilisation particuliers, il vous permet également de composer une &quot;union&quot; de schémas appartenant à une classe spécifique. Un schéma d’union agrège les champs de tous les schémas qui partagent la même classe en une seule représentation. En activant un schéma à utiliser avec [Profil client en temps réel](../../profile/home.md), ce schéma est inclus dans l’union pour sa classe particulière. Par conséquent, les schémas d’union ne peuvent pas être modifiés directement et peuvent uniquement être affectés par l’inclusion ou l’exclusion de schémas à utiliser dans Profile.
 
 Pour savoir comment afficher les unions dans l’API Schema Registry, reportez-vous à la section [guide de point de terminaison des unions](./unions.md).
 

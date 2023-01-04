@@ -3,10 +3,10 @@ keywords: Experience Platform;Zendesk;sources;connecteurs;connecteurs source;sdk
 title: Création d’une connexion source Zendesk dans l’interface utilisateur
 description: Découvrez comment créer une connexion source Zendesk à l’aide de l’interface utilisateur de Adobe Experience Platform.
 exl-id: 75d303b0-2dcd-4202-987c-fe3400398d90
-source-git-commit: 795c98fb555f79afd7a7035a23a9989cc734a1e1
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '797'
-ht-degree: 32%
+ht-degree: 36%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 32%
 
 >[!NOTE]
 >
->Le [!DNL Zendesk] La source est en version bêta. Voir [présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de sources étiquetées bêta.
+>La source [!DNL Zendesk] est en version Beta. Voir la [présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de sources étiquetées bêta. 
 
 Ce tutoriel décrit les étapes à suivre pour créer une [!DNL Zendesk] connexion source à l’aide de l’interface utilisateur de Adobe Experience Platform.
 
@@ -25,7 +25,7 @@ Ce tutoriel nécessite une compréhension du fonctionnement des composants suiva
 * [[!DNL Experience Data Model (XDM)] Système](../../../../../xdm/home.md) : le cadre normalisé en fonction duquel [!DNL Experience Platform] organise les données d’expérience client.
    * [Principes de base de la composition des schémas](../../../../../xdm/schema/composition.md) : découvrez les blocs de création de base des schémas XDM, y compris les principes clés et les bonnes pratiques en matière de composition de schémas.
    * [Tutoriel sur l’éditeur de schémas](../../../../../xdm/tutorials/create-schema-ui.md) : découvrez comment créer des schémas personnalisés à l’aide de l’interface utilisateur de l’éditeur de schémas.
-* [[!DNL Real-time Customer Profile]](../../../../../profile/home.md) : fournit un profil de consommateur unifié en temps réel, basé sur des données agrégées provenant de plusieurs sources.
+* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md) : fournit un profil de consommateur unifié en temps réel, basé sur des données agrégées provenant de plusieurs sources.
 
 ### Collecter les informations d’identification requises
 
@@ -80,7 +80,7 @@ Une fois votre source authentifiée, la page se met à jour dans une arborescenc
 
 ## Étapes suivantes
 
-En suivant ce tutoriel, vous avez authentifié et créé une connexion source entre vos [!DNL Zendesk] compte et plateforme. Vous pouvez maintenant passer au tutoriel suivant et [créer un flux de données pour importer les données de succès client dans Platform ;](../../dataflow/customer-success.md).
+En suivant ce tutoriel, vous avez authentifié et avez créé une connexion source entre votre compte [!DNL Zendesk] et Platform. Vous pouvez maintenant passer au tutoriel suivant et [créer un flux de données pour importer les données de succès client dans Platform ;](../../dataflow/customer-success.md).
 
 ## Ressources supplémentaires
 

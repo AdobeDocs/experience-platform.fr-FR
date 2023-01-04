@@ -5,7 +5,7 @@ title: Présentation de l’ingestion par flux
 topic-legacy: overview
 description: L’ingestion par flux pour Adobe Experience Platform fournit aux utilisateurs une méthode pour envoyer en temps réel des données de périphériques côté client et côté serveur vers Experience Platform.
 exl-id: 851f15fd-7ac5-4a9f-934d-6b907057da87
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '348'
 ht-degree: 17%
@@ -18,7 +18,7 @@ L’ingestion par flux pour Adobe Experience Platform fournit aux utilisateurs u
 
 ## Que pouvez-vous faire avec l’ingestion par flux ?
 
-Adobe Experience Platform vous permet de générer des expériences coordonnées, cohérentes et pertinentes en générant une [!DNL Real-time Customer Profile] pour chacun de vos clients. L’ingestion par flux joue un rôle clé dans la création de ces profils en vous permettant de diffuser des [!DNL Profile] dans la variable [!DNL Data Lake] avec le moins de latence possible.
+Adobe Experience Platform vous permet de générer des expériences coordonnées, cohérentes et pertinentes en générant une [!DNL Real-Time Customer Profile] pour chacun de vos clients. L’ingestion par flux joue un rôle clé dans la création de ces profils en vous permettant de diffuser des [!DNL Profile] dans la variable [!DNL Data Lake] avec le moins de latence possible.
 
 La vidéo suivante est conçue pour vous aider à comprendre l’ingestion par flux et décrit les concepts ci-dessus.
 
@@ -32,7 +32,7 @@ Pour plus d’informations, consultez le [guide de création d’une connexion e
 
 ### Diffusion vers les jeux de données
 
-Une fois que vous êtes certain que vos données sont propres, vous pouvez activer vos jeux de données pour [!DNL Real-time Customer Profile] et [!DNL Identity Service].
+Une fois que vous êtes certain que vos données sont propres, vous pouvez activer vos jeux de données pour [!DNL Real-Time Customer Profile] et [!DNL Identity Service].
 
 Pour plus d’informations sur l’activation d’un jeu de données pour [!DNL Profile] et [!DNL Identity Service], veuillez lire la [configuration d’un guide de jeu de données](../../profile/tutorials/dataset-configuration.md).
 
@@ -40,7 +40,7 @@ Pour plus d’informations sur l’activation d’un jeu de données pour [!DNL 
 
 | Destination | Latence attendue |
 | --------- | ---------------- |
-| Real-time Customer Profile | &lt; 1 minute |
+| Profil client en temps réel | &lt; 1 minute |
 | Lac de données | &lt; 60 minutes |
 
 ## Instructions de requête par seconde (RPS) sur l’ingestion par flux

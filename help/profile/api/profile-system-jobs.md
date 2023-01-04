@@ -3,9 +3,9 @@ keywords: Experience Platform;profil;profil client en temps réel;dépannage;API
 title: Point d’entrée de l’API des tâches de système de profil
 topic-legacy: guide
 type: Documentation
-description: Adobe Experience Platform vous permet de supprimer un jeu de données ou un lot de la banque de profils afin de supprimer les données Real-time Customer Profile devenues inutiles ou ajoutées par erreur. Pour ce faire, vous devez utiliser l’API Profile afin de créer une tâche de système Profile ou de supprimer une requête.
+description: Adobe Experience Platform vous permet de supprimer un jeu de données ou un lot de la banque de profils afin de supprimer les données Real-Time Customer Profile devenues inutiles ou ajoutées par erreur. Pour ce faire, vous devez utiliser l’API Profile afin de créer une tâche de système Profile ou de supprimer une requête.
 exl-id: 75ddbf2f-9a54-424d-8569-d6737e9a590e
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1316'
 ht-degree: 68%
@@ -14,7 +14,7 @@ ht-degree: 68%
 
 # Point de terminaison des tâches du système Profile (requêtes de suppression)
 
-Adobe Experience Platform vous permet d’ingérer des données provenant de plusieurs sources et de créer des profils fiables pour les clients individuels. Données ingérées dans [!DNL Platform] est stocké dans la variable [!DNL Data Lake], et si les jeux de données ont été activés pour Profile, ces données sont stockées dans la variable [!DNL Real-time Customer Profile] entrepôt de données également. Il peut parfois être nécessaire de supprimer un jeu de données ou un lot de la banque de données Profile pour supprimer les données devenues inutiles ou ajoutées par erreur. Cela nécessite l’utilisation de la variable [!DNL Real-time Customer Profile] API pour créer une [!DNL Profile] tâche système, ou `delete request`, qui peut également être modifié, surveillé ou supprimé si nécessaire.
+Adobe Experience Platform vous permet d’ingérer des données provenant de plusieurs sources et de créer des profils fiables pour les clients individuels. Données ingérées dans [!DNL Platform] est stocké dans la variable [!DNL Data Lake], et si les jeux de données ont été activés pour Profile, ces données sont stockées dans la variable [!DNL Real-Time Customer Profile] entrepôt de données également. Il peut parfois être nécessaire de supprimer un jeu de données ou un lot de la banque de données Profile pour supprimer les données devenues inutiles ou ajoutées par erreur. Cela nécessite l’utilisation de la variable [!DNL Real-Time Customer Profile] API pour créer une [!DNL Profile] tâche système, ou `delete request`, qui peut également être modifié, surveillé ou supprimé si nécessaire.
 
 >[!NOTE]
 >
@@ -22,7 +22,7 @@ Adobe Experience Platform vous permet d’ingérer des données provenant de p
 
 ## Prise en main
 
-Le point d’entrée dʼAPI utilisé dans ce guide fait partie de [[!DNL Real-time Customer Profile API]](https://www.adobe.com/go/profile-apis-en). Avant de continuer, consultez le [guide de prise en main](getting-started.md) pour obtenir des liens vers la documentation associée, un guide de lecture des exemples d’appels API dans ce document et des informations importantes sur les en-têtes requis pour réussir des appels vers n’importe quelle API d’Experience Platform.
+Le point d’entrée dʼAPI utilisé dans ce guide fait partie de [[!DNL Real-Time Customer Profile API]](https://www.adobe.com/go/profile-apis-en). Avant de continuer, consultez le [guide de prise en main](getting-started.md) pour obtenir des liens vers la documentation associée, un guide de lecture des exemples d’appels API dans ce document et des informations importantes sur les en-têtes requis pour réussir des appels vers n’importe quelle API d’Experience Platform.
 
 ## Affichage des requêtes de suppression
 

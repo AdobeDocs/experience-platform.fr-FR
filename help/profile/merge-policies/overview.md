@@ -4,10 +4,10 @@ title: Présentation des stratégies de fusion
 type: Documentation
 description: Adobe Experience Platform permet de rassembler des données issues de plusieurs sources et de les combiner pour obtenir une vue complète de chacun de vos clients. Les stratégies de fusion sont les règles utilisées par Platform pour déterminer la priorité des données et les données qui seront combinées pour créer cette vue unifiée.
 exl-id: a8ef527a-cfee-4129-9973-e8a212a3ad1e
-source-git-commit: 965993bece32eeb0db6e7a9eab3131816a9de5cd
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1265'
-ht-degree: 97%
+ht-degree: 94%
 
 ---
 
@@ -21,8 +21,8 @@ Adobe Experience Platform permet de rassembler des données issues de plusieur
 
 Ce guide nécessite une compréhension pratique de plusieurs fonctions [!DNL Experience Platform] importantes. Avant de suivre ce guide et d’utiliser des stratégies de fusion, consultez la documentation des services suivants :
 
-* [Real-time Customer Profile](../home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
-* [Adobe Experience Platform Identity Service](../../identity-service/home.md): permet d’obtenir un profil client en temps réel en rassemblant des identités de sources de données disparates ingérées dans [!DNL Platform].
+* [Profil client en temps réel](../home.md): Fournit un profil client en temps réel unifié basé sur des données agrégées provenant de plusieurs sources.
+* [Service Adobe Experience Platform Identity](../../identity-service/home.md): Permet à Real-time Customer Profile de relier les identités de sources de données disparates ingérées dans [!DNL Platform].
 * [Modèle de données d’expérience (XDM)](../../xdm/home.md) : cadre normalisé selon lequel [!DNL Platform] organise les données d’expérience client.
 
 ## Comprendre les stratégies de fusion

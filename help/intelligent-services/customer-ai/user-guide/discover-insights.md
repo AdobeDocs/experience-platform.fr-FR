@@ -6,7 +6,7 @@ title: Découvrez les informations sur Customer AI
 topic-legacy: Discovering insights
 description: Ce document sert de guide pour interagir avec les insights d’instance de service dans l’interface utilisateur d’Intelligent Services Customer AI.
 exl-id: 8aaae963-4029-471e-be9b-814147a5f160
-source-git-commit: 417b3f885f75f107d2db06331053917a76c904c4
+source-git-commit: 165e5ccae5ca78b3912fef1ba0b3fd4567e231fb
 workflow-type: tm+mt
 source-wordcount: '2079'
 ht-degree: 31%
@@ -151,7 +151,7 @@ En sélectionnant le **[!UICONTROL Créer un segment]** dans l’un des comparti
 
 >[!NOTE]
 >
->Le **[!UICONTROL Créer un segment]** n’est disponible que si Real-time Customer Profile est activé pour le jeu de données. Pour plus d’informations sur l’activation de Real-time Customer Profile, consultez la page [Présentation de Real-time Customer Profile](../../../rtcdp/overview.md).
+>Le **[!UICONTROL Créer un segment]** n’est disponible que si Real-time Customer Profile est activé pour le jeu de données. Pour plus d’informations sur l’activation de Real-time Customer Profile, consultez la page [Présentation de Real-Time Customer Profile](../../../rtcdp/overview.md).
 
 ![Cliquez sur Créer un segment](../images/insights/influential-factors-create-segment.png)
 
