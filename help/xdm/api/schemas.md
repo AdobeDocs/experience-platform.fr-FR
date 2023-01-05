@@ -5,7 +5,7 @@ title: Point d’entrée de l’API Schemas
 description: Le point de terminaison /schemas de l’API Schema Registry vous permet de gérer par programmation les schémas XDM dans votre application d’expérience.
 topic-legacy: developer guide
 exl-id: d0bda683-9cd3-412b-a8d1-4af700297abf
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 666f424355fd1104971bb1566b72e207d00f4a56
 workflow-type: tm+mt
 source-wordcount: '1468'
 ht-degree: 22%
@@ -374,7 +374,7 @@ L’une des opérations de PATCH les plus courantes consiste à ajouter des grou
 **Format d’API**
 
 ```http
-PATCH /tenant/schema/{SCHEMA_ID} 
+PATCH /tenant/schemas/{SCHEMA_ID} 
 ```
 
 | Paramètre | Description |
@@ -465,7 +465,7 @@ Pour qu’un schéma puisse participer à [Profil client en temps réel](../../p
 **Format d’API**
 
 ```http
-PATCH /tenant/schema/{SCHEMA_ID} 
+PATCH /tenant/schemas/{SCHEMA_ID} 
 ```
 
 | Paramètre | Description |
