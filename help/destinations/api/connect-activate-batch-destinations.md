@@ -3,10 +3,9 @@ keywords: Experience Platform;accueil;rubriques populaires
 solution: Experience Platform
 title: Se connecter aux destinations par lots et activer des données à l’aide de l’API Flow Service
 description: Cette section contient des instructions détaillées sur l’utilisation de l’API Flow Service pour créer un espace de stockage par lots dans le cloud ou une destination de marketing par e-mail dans Experience Platform et activer les données.
-topic-legacy: tutorial
 type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
 source-wordcount: '3420'
 ht-degree: 92%

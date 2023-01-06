@@ -3,10 +3,9 @@ keywords: Experience Platform;api de destination;activation ad hoc;activation de
 solution: Experience Platform
 title: Activation des segments d’audience vers des destinations par lots via l’API d’activation ad hoc
 description: Cet article illustre le processus de bout en bout d’activation des segments d’audience par le biais de l’API d’activation ad hoc, y compris les tâches de segmentation qui ont lieu avant l’activation.
-topic-legacy: tutorial
 type: Tutorial
 exl-id: 1a09f5ff-0b04-413d-a9f6-57911a92b4e4
-source-git-commit: cdf96088be27cba1fb92f1348f002123614285fe
+source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
 source-wordcount: '1563'
 ht-degree: 18%
@@ -250,4 +249,4 @@ Lors de l’utilisation de l’API d’activation ad hoc, vous pouvez rencontrer
 ## Informations connexes {#related-information}
 
 * [Se connecter aux destinations par lots et activer des données à l’aide de l’API Flow Service](/help/destinations/api/connect-activate-batch-destinations.md)
-* [(Version bêta) Exportation de fichiers à la demande vers des destinations par lots à l’aide de l’interface utilisateur de l’Experience Platform](/help/destinations/ui/export-file-now.md)
+* [(Version bêta) Exporter des fichiers à la demande vers des destinations par lots à l’aide de l’interface utilisateur Experience Platform](/help/destinations/ui/export-file-now.md)

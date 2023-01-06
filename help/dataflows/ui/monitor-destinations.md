@@ -3,10 +3,9 @@ keywords: Experience Platform;accueil;rubriques les plus consultées;comptes de 
 description: Les destinations vous permettent d’activer vos données de Adobe Experience Platform vers d’innombrables partenaires externes. Ce tutoriel explique comment surveiller les flux de données pour vos destinations à l’aide de l’interface utilisateur de l’Experience Platform.
 solution: Experience Platform
 title: Surveillance des flux de données pour les destinations dans l’interface utilisateur
-topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
 source-wordcount: '3211'
 ht-degree: 2%

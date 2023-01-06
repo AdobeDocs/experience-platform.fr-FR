@@ -2,10 +2,9 @@
 keywords: Experience Platform;accueil;rubriques populaires;ETL;etl;workflow etl;workflow ETL
 solution: Experience Platform
 title: Workflow ETL
-topic-legacy: overview
 description: Différents outils d’extraction, de transformation et de chargement (ETL) peuvent avoir des formats différents, mais la plupart présentent des fonctionnalités similaires pour faciliter la combinaison de plusieurs sources de données.
 exl-id: 09de6c50-ad04-4d7c-99e6-33784fb0dd58
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
 source-wordcount: '213'
 ht-degree: 84%

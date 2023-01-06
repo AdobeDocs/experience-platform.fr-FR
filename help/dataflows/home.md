@@ -2,10 +2,9 @@
 keywords: Experience Platform;accueil;rubriques populaires;flux de données;flux des données;données;surveillance;surveillance de flux de données;surveillance des flux de données;surveiller;surveiller les flux de données;surveiller des flux de données;flux;service de flux;
 solution: Experience Platform
 title: Présentation des flux de données
-topic-legacy: overview
 description: Ce document présente les flux de données et décrit leur utilisation dans Adobe Experience Platform.
 exl-id: 8fe08ffa-f095-4e9f-8bab-d060985f0236
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
 source-wordcount: '238'
 ht-degree: 85%

@@ -2,10 +2,9 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;contrôler les identités;contrôler les flux de données;flux de données;identités
 description: Adobe Experience Platform Identity Service vous offre la possibilité de mieux connaître vos clients et leur comportement en établissant un lien entre les identités des différents appareils et systèmes, ce qui vous permet de proposer des expériences numériques personnelles et percutantes en temps réel. Ce tutoriel explique comment surveiller les flux de données avec des identités à l’aide de l’interface utilisateur de l’Experience Platform.
 title: Surveillance des flux de données pour les identités dans l’interface utilisateur
-topic-legacy: overview
 type: Tutorial
 exl-id: 735b0e52-74f6-47fe-98c6-e12a633b6f57
-source-git-commit: cfbc977efd09bba0927bf8b03147e40671eb362e
+source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
 source-wordcount: '1149'
 ht-degree: 14%

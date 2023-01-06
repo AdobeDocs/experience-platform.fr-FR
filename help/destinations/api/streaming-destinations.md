@@ -3,13 +3,12 @@ keywords: Experience Platform;accueil;rubriques les plus consultées ; Tutoriels
 solution: Experience Platform
 title: Connexion aux destinations en continu et activation des données à l’aide de l’API Flow Service dans Adobe Experience Platform
 description: Ce document couvre la création de destinations de diffusion en continu à l’aide de l’API Adobe Experience Platform.
-topic-legacy: tutorial
 type: Tutorial
 exl-id: 3e8d2745-8b83-4332-9179-a84d8c0b4400
-source-git-commit: 183830318a3dd5012f27a73a8dd2753638aff83f
+source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
 source-wordcount: '2241'
-ht-degree: 55%
+ht-degree: 57%
 
 ---
 
@@ -17,11 +16,11 @@ ht-degree: 55%
 
 >[!IMPORTANT]
 > 
->Pour vous connecter à une destination, vous avez besoin de l’événement **[!UICONTROL Gestion des destinations]** [autorisation de contrôle d’accès](/help/access-control/home.md#permissions).
+>Pour vous connecter à une destination, vous devez disposer de l’**[!UICONTROL autorisation de contrôle d’accès]** [Gérer les destinations](/help/access-control/home.md#permissions).
 >
->Pour activer les données, vous avez besoin de l’événement **[!UICONTROL Gestion des destinations]**, **[!UICONTROL Activation des destinations]**, **[!UICONTROL Afficher les profils]**, et **[!UICONTROL Affichage de segments]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions).
+>Pour activer les données, vous avez besoin des **[!UICONTROL autorisations de contrôle d’accès]** pour les fonctions **[!UICONTROL Gérer les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]**, et [Afficher les segments](/help/access-control/home.md#permissions).
 >
->Lisez le [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+>Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
 Ce tutoriel explique comment utiliser les appels API pour se connecter à vos données Adobe Experience Platform et créer une connexion à une destination de stockage dans le cloud en continu ([Amazon Kinesis](../catalog/cloud-storage/amazon-kinesis.md) ou [Centre d’événements Azure](../catalog/cloud-storage/azure-event-hubs.md)), créez un flux de données vers la nouvelle destination créée et activez les données vers la nouvelle destination créée.
 
@@ -474,7 +473,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 | Propriété | Description |
 | --------- | ----------- |
 | `{DATAFLOW_ID}` | Dans l’URL, utilisez l’identifiant du flux de données que vous avez créé à l’étape précédente. |
-| `{ETAG}` | Obtenez la variable `{ETAG}` de la réponse de l’étape précédente, [Création d’un flux de données](#create-dataflow). Le format de réponse de l’étape précédente comporte des guillemets d’échappement. Vous devez utiliser les valeurs sans séquence d’échappement dans l’en-tête de la requête. Voir l&#39;exemple ci-dessous: <br> <ul><li>Exemple de réponse : `"etag":""7400453a-0000-1a00-0000-62b1c7a90000""`</li><li>Valeur à utiliser dans votre requête : `"etag": "7400453a-0000-1a00-0000-62b1c7a90000"`</li></ul> <br> La valeur de la balise dʼentité est mise à jour à chaque mise à jour réussie d’un flux de données. |
+| `{ETAG}` | Obtenez la variable `{ETAG}` de la réponse de l’étape précédente, [Création d’un flux de données](#create-dataflow). Le format de réponse de l’étape précédente comporte des guillemets d’échappement. Vous devez utiliser les valeurs sans séquence d’échappement dans l’en-tête de la requête. Voir l’exemple ci-dessous: <br> <ul><li>Exemple de réponse : `"etag":""7400453a-0000-1a00-0000-62b1c7a90000""`</li><li>Valeur à utiliser dans votre requête : `"etag": "7400453a-0000-1a00-0000-62b1c7a90000"`</li></ul> <br> La valeur de la balise dʼentité est mise à jour à chaque mise à jour réussie d’un flux de données. |
 | `{SEGMENT_ID}` | Indiquez l’identifiant du segment que vous souhaitez exporter vers cette destination. Pour récupérer les identifiants des segments que vous souhaitez activer, voir [récupérer une définition de segment](https://www.adobe.io/experience-platform-apis/references/segmentation/#operation/retrieveSegmentDefinitionById) dans la référence de l’API Experience Platform. |
 | `{PROFILE_ATTRIBUTE}` | Par exemple : `"person.lastName"` |
 | `op` | Appel d’opération utilisé pour définir l’action nécessaire pour mettre à jour la connexion. Les opérations comprennent : `add`, `replace` et `remove`. Pour ajouter un segment à un flux de données, utilisez l’opération `add`. |

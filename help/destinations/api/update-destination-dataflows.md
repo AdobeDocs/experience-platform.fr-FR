@@ -2,11 +2,10 @@
 keywords: Experience Platform;accueil;rubriques populaires;service de flux;mettre à jour les flux de données de destination
 solution: Experience Platform
 title: Mettre à jour des flux de données de destination à l’aide de l’API Flow Service
-topic-legacy: overview
 type: Tutorial
 description: Ce tutoriel décrit les étapes de mise à jour d’un flux de données de destination. Découvrez comment activer ou désactiver le flux de données, mettre à jour ses informations de base ou ajouter et supprimer des segments et des attributs à l’aide de l’API Flow Service.
 exl-id: 3f69ad12-940a-4aa1-a1ae-5ceea997a9ba
-source-git-commit: c35a29d4e9791b566d9633b651aecd2c16f88507
+source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
 source-wordcount: '2408'
 ht-degree: 40%

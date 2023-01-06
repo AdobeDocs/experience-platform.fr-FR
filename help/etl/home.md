@@ -2,10 +2,9 @@
 keywords: Experience Platform;accueil;rubriques populaires;ETL;etl;intégrations etl;intégrations ETL
 solution: Experience Platform
 title: Développement d’intégrations ETL pour Adobe Experience Platform
-topic-legacy: overview
 description: Le guide d’intégration ETL décrit les étapes générales de la création de connecteurs sécurisés et haute performance pour Experience Platform et l’ingestion de données dans Platform.
 exl-id: 7d29b61c-a061-46f8-a31f-f20e4d725655
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
 source-wordcount: '4075'
 ht-degree: 100%
@@ -56,19 +55,19 @@ Ce guide fournit des exemples d’appels API pour démontrer comment formater vo
 
 ### Collecte des valeurs des en-têtes requis
 
-Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [tutoriel d’authentification](https://www.adobe.com/go/platform-api-authentication-en). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
+Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [tutoriel d’authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key : `{API_KEY}`
 - x-gw-ims-org-id : `{ORG_ID}`
 
-Dans [!DNL Experience Platform], toutes les ressources sont isolées dans des environnements de test virtuels spécifiques. Toutes les requêtes envoyées aux API [!DNL Platform] nécessitent un en-tête spécifiant le nom de l’environnement de test dans lequel l’opération sera effectuée :
+Dans [!DNL Experience Platform], toutes les ressources sont isolées dans des sandbox virtuelles spécifiques. Toutes les requêtes envoyées aux API [!DNL Platform] nécessitent un en-tête spécifiant le nom de la sandbox dans laquelle l’opération sera effectuée :
 
 - x-sandbox-name : `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Pour plus d’informations sur les environnements de test dans [!DNL Platform], consultez la [documentation de présentation des environnements de test](../sandboxes/home.md).
+>Pour plus d’informations sur les sandbox dans [!DNL Platform], consultez la [documentation de présentation des sandbox](../sandboxes/home.md).
 
 Toutes les requêtes contenant un payload (POST, PUT, PATCH) requièrent un en-tête supplémentaire :
 

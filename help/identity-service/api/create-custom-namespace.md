@@ -2,10 +2,9 @@
 keywords: Experience Platform;accueil;rubriques populaires;espace de noms;espaces de noms;espaces de noms;espace de noms;espace de noms d’identité;espace de noms d’identité;identité;identité
 solution: Experience Platform
 title: Création d’un espace de noms personnalisé dans l’API Identity Service
-topic-legacy: API guide
 description: À l’aide de l’API Identity Namespace, vous pouvez créer un espace de noms personnalisé qui sera disponible uniquement pour votre organisation.
 exl-id: 6015a225-4508-49cc-9dda-fb9f73a8746c
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: ad9fb0bcc7bca55da432c72adc94d49e3c63ad6e
 workflow-type: tm+mt
 source-wordcount: '120'
 ht-degree: 57%

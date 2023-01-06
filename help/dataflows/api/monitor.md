@@ -2,11 +2,10 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;flux de données de surveillance;api de service de flux;service de flux
 solution: Experience Platform
 title: Surveiller les flux de données à l’aide de l’API Flow Service
-topic-legacy: overview
 type: Tutorial
 description: Ce tutoriel décrit les étapes de surveillance de l’exhaustivité, des erreurs et des mesures relatives aux données d’exécution de flux à l’aide de l’API Flow Service.
 exl-id: c4b2db97-eba4-460d-8c00-c76c666ed70e
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
 source-wordcount: '718'
 ht-degree: 60%

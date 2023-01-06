@@ -2,10 +2,9 @@
 keywords: Experience Platform;accueil;rubriques populaires;espace de noms d’identité;espace de noms d’identité
 solution: Experience Platform
 title: Guide de dépannage d’Identity Service
-topic-legacy: troubleshooting
 description: Ce document fournit des réponses aux questions fréquentes sur Adobe Experience Platform Identity Service, ainsi qu’un guide de dépannage pour les erreurs courantes.
 exl-id: dac31bc3-7003-46d6-9d41-9f6fd3645c2c
-source-git-commit: 3d308d18c926cabdf0bd4b52c0623d8ec9428ee8
+source-git-commit: ad9fb0bcc7bca55da432c72adc94d49e3c63ad6e
 workflow-type: tm+mt
 source-wordcount: '2180'
 ht-degree: 80%
@@ -229,7 +228,7 @@ Cette erreur indique que votre jeton d’accès n’est pas valide. Les jetons d
 }
 ```
 
-Cette erreur indique que votre jeton d’accès n’est pas valide. Les jetons d’accès expirent toutes les 24 heures et doivent être régénérés pour continuer à utiliser [!DNL Platform] API. Pour obtenir des instructions sur la génération de jetons d’accès, consultez le [tutoriel sur l’authentification](https://www.adobe.com/go/platform-api-authentication-en).
+Cette erreur indique que votre jeton d’accès n’est pas valide. Les jetons d’accès expirent toutes les 24 heures et doivent être régénérés pour continuer à utiliser [!DNL Platform] API. Pour obtenir des instructions sur la génération de jetons d’accès, consultez le [tutoriel sur l’authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr).
 
 ### Le jeton utilisateur n’a pas de contexte de produit valide
 
@@ -241,7 +240,7 @@ Cette erreur indique que votre jeton d’accès n’est pas valide. Les jetons d
 }
 ```
 
-Ce message d’erreur s’affiche lorsque votre jeton d’accès n’a pas été généré à partir d’une [!DNL Experience Platform] intégration. Voir [tutoriel sur l’authentification](https://www.adobe.com/go/platform-api-authentication-en) pour obtenir des instructions sur la génération de jetons d’accès pour une [!DNL Experience Platform] intégration.
+Ce message d’erreur s’affiche lorsque votre jeton d’accès n’a pas été généré à partir d’une [!DNL Experience Platform] intégration. Voir [tutoriel sur l’authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr) pour obtenir des instructions sur la génération de jetons d’accès pour une [!DNL Experience Platform] intégration.
 
 ### Erreur interne lors de l’obtention du XID natif à partir d’un code d’identité et d’espace de noms
 

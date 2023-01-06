@@ -2,10 +2,9 @@
 keywords: Experience Platform;accueil;rubriques populaires;espace de noms;espaces de noms;espaces de noms;espace de noms;espace de noms d’identité;espace de noms d’identité;identité;identité;service d’identité
 solution: Experience Platform
 title: Présentation d’Identity Namespace
-topic-legacy: overview
 description: Les espaces de noms d’identité sont des composants du Service d’identités qui servent d’indicateurs du contexte auquel une identité se rapporte. Par exemple, ils distinguent une valeur de "name@email.com" comme adresse électronique ou "443522" comme identifiant CRM numérique.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ad9fb0bcc7bca55da432c72adc94d49e3c63ad6e
 workflow-type: tm+mt
 source-wordcount: '1642'
 ht-degree: 18%

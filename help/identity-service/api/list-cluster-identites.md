@@ -2,10 +2,9 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;identités de liste;liste de clusters
 solution: Experience Platform
 title: Liste de toutes les identités d’un cluster
-topic-legacy: API guide
 description: Les identités qui sont liées dans un graphique d’identités, et ce quel que soit l’espace de noms, sont considérées comme faisant partie du même « cluster » dans ce graphique d’identités. Les options ci-dessous permettent d’accéder à tous les membres du cluster.
 exl-id: 0fb9eac9-2dc2-4881-8598-02b3053d0b31
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 6d01bb4c5212ed1bb69b9a04c6bfafaad4b108f9
 workflow-type: tm+mt
 source-wordcount: '359'
 ht-degree: 95%

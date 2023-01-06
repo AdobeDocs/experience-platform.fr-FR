@@ -2,10 +2,9 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;profils de surveillance;flux de données de surveillance;flux de données;profil;profil client en temps réel ;
 description: Real-Time Customer Profile vous permet d’obtenir une vue d’ensemble de chaque client en combinant des données issues de plusieurs canaux, notamment en ligne, hors ligne, CRM et tiers. Ce tutoriel explique comment surveiller les flux de données avec des profils à l’aide de l’interface utilisateur de l’Experience Platform.
 title: Surveillance des flux de données pour les profils dans l’interface utilisateur
-topic-legacy: overview
 type: Tutorial
 exl-id: 00b624b2-f6d1-4ef2-abf2-52cede89b684
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
 source-wordcount: '1074'
 ht-degree: 9%
