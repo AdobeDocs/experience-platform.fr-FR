@@ -2,10 +2,9 @@
 keywords: Experience Platform;accueil;rubriques populaires;mapper csv;mapper le fichier csv;mapper le fichier csv à xdm;mapper csv à xdm;guide de lʼui;mappeur;mappage;data prep;préparation des données;préparer des données;
 solution: Experience Platform
 title: Gestion des formats de données avec la préparation des données
-topic-legacy: overview
 description: Ce document donne un aperçu de la manière dont différents types de données sont traités dans la préparation des données.
 exl-id: 4ad253b7-3f83-48cd-9c46-8b5ba627c09e
-source-git-commit: 15afb221a3576b7a37ea02195549f246833b800d
+source-git-commit: d39ae3a31405b907f330f5d54c91b95c0f999eee
 workflow-type: tm+mt
 source-wordcount: '575'
 ht-degree: 98%

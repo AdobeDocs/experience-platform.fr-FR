@@ -2,10 +2,9 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;préparation de données;guide d’api;jeux de mappages;
 solution: Experience Platform
 title: Point d’entré de l’API Mapping Sets
-topic-legacy: mapping sets
 description: Vous pouvez utiliser le point d’entrée `/mappingSets` dans l’API Adobe Experience Platform pour récupérer, créer, mettre à jour et valider par programmation des jeux de mappage.
 exl-id: a4e4ddcd-164e-42aa-b7d1-ba59d70da142
-source-git-commit: b7800dd67c2d16747815f2cb3311ca9b6d6fa342
+source-git-commit: d39ae3a31405b907f330f5d54c91b95c0f999eee
 workflow-type: tm+mt
 source-wordcount: '854'
 ht-degree: 94%

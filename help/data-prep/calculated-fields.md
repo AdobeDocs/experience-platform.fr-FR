@@ -2,10 +2,9 @@
 keywords: Experience Platform;accueil;rubriques populaires;mapper csv;mapper le fichier csv;mapper le fichier csv à xdm;mapper csv à xdm;guide de lʼui;mappeur;mappage;data prep;préparation des données;préparer des données;
 solution: Experience Platform
 title: Présentation de Data Prep
-topic-legacy: overview
 description: Ce document présente Data Prep dans Adobe Experience Platform.
 exl-id: 9bef5c3b-368d-4492-bdef-64e67fc25bfd
-source-git-commit: 89a0e2544a17fe10e6dfd7611b5223ca4fc55501
+source-git-commit: d39ae3a31405b907f330f5d54c91b95c0f999eee
 workflow-type: tm+mt
 source-wordcount: '241'
 ht-degree: 100%
