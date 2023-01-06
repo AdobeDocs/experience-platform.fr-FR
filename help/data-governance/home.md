@@ -2,13 +2,12 @@
 keywords: Experience Platform;accueil;rubriques populaires;DULE;dule
 solution: Experience Platform
 title: Présentation de la gouvernance des données
-topic-legacy: overview
 description: La gouvernance des données d’Adobe Experience Platform vous permet de gérer les données clients et de garantir la conformité aux réglementations, aux restrictions et aux stratégies applicables à l’utilisation des données. Elle joue un rôle clé dans Experience Platform à différents niveaux, notamment dans le catalogage, la traçabilité des données, l’étiquetage de l’utilisation des données, les politiques d’utilisation des données et le contrôle de l’utilisation des données lors d’activités marketing
 exl-id: 00ca6bc2-1c58-4ea2-8bb5-30fd3fa5944a
-source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
+source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
 workflow-type: tm+mt
 source-wordcount: '1479'
-ht-degree: 84%
+ht-degree: 88%
 
 ---
 
@@ -82,10 +81,10 @@ Des stratégies d’utilisation des données doivent être mises en œuvre pour 
 
 Un exemple d’action marketing peut être le souhait d’exporter un jeu de données vers un service tiers. Si une stratégie est en place indiquant que les informations d’identification personnelle (PII) ne peuvent pas être exportées et qu’une étiquette &quot;I&quot; (données d’identité) a été appliquée au jeu de données, [!DNL Policy Service] empêche toute action qui exporterait ce jeu de données vers une destination tierce. Si l’une de ces tentatives d’action se produit, Policy Service envoie un message vous informant qu’une stratégie d’utilisation des données a été enfreinte.
 
-Deux types de stratégies sont disponibles :
+Deux types de stratégies sont disponibles :
 
-* **[!UICONTROL Politique de gouvernance des données]**: Restreindre l’activation des données en fonction de l’action marketing en cours et des libellés d’utilisation des données transportés par les données en question.
-* **[!UICONTROL Stratégie de consentement]**: Filtrer les profils pouvant être activés sur [destinations](../destinations/home.md) selon le consentement ou les préférences de vos clients.
+* **[!UICONTROL Politique de gouvernance des données]** : limiter l’activation des données en fonction de l’action marketing réalisée et des étiquettes d’utilisation des données portées par les données en question.
+* **[!UICONTROL Politique de consentement]** : filtrer les profils qui peuvent être activés vers [destinations](../destinations/home.md) en fonction du consentement ou des préférences de vos clients..
 
 Une fois que les libellés d’utilisation des données ont été appliqués, les gestionnaires de données peuvent créer des stratégies à l’aide de l’API [!DNL Policy Service] ou de l’interface utilisateur d’[!DNL Experience Platform]. Pour plus d’informations sur les stratégies d’utilisation des données et les actions marketing, consultez la [présentation des stratégies](./policies/overview.md).
 
@@ -119,7 +118,7 @@ Le tableau suivant présente les termes clés liés à la gouvernance des donné
 | **Ciblage en fonction des intérêts** | Le ciblage en fonction des intérêts, également appelé personnalisation, se produit si les trois conditions suivantes sont remplies : Les données collectées sur site sont utilisées pour établir des inférences sur l’intérêt d’un utilisateur, dans un autre contexte, comme sur un autre site ou une autre application (hors site), et sont utilisées pour sélectionner le contenu ou les publicités diffusés en fonction de ces inférences. |
 | **Action marketing** | Dans le cadre de la gouvernance des données, une action marketing est une action entreprise par un utilisateur de données [!DNL Experience Platform] pour laquelle il est nécessaire de vérifier les violations des stratégies d’utilisation des données. |
 | **Stratégie** | Dans le cadre de la gouvernance des données, une stratégie est une règle qui décrit le type d’actions marketing que vous pouvez effectuer ou non sur des données spécifiques. |
-| **Étiquettes Sensibles** | Les étiquettes Sensibles &quot;S&quot; sont utilisées pour catégoriser les données que vous et votre organisation considérez comme sensibles. |
+| **Étiquettes Sensibles** | Les libellés sensibles « S » sont utilisés pour classer les données que vous et votre entreprise considérez comme sensibles. |
 
 ## Ressources supplémentaires
 
