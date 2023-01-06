@@ -1,14 +1,13 @@
 ---
 keywords: Experience Platform;profil;profil client en temps réel;dépannage;API;profil unifié;Profil unifié;unifié;Profil;rtcp;graphiques XDM
 title: Solutions d’accessibilité personnalisées pour Experience Platform
-topic-legacy: guide
 type: Documentation
 description: En savoir plus sur les solutions d’accessibilité personnalisées dans l’interface utilisateur d’Adobe Experience Platform.
 exl-id: cb5ad99e-8a95-4c9e-aae6-1d0036ecf052
-source-git-commit: 7f4202c9c4a132ed9d74c495f6608357eac8003f
+source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
 workflow-type: tm+mt
-source-wordcount: '1615'
-ht-degree: 94%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 

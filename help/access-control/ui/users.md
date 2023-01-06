@@ -2,13 +2,12 @@
 keywords: Experience Platform;accueil;rubriques populaires;profil produit
 solution: Experience Platform
 title: Gestion des utilisateurs pour un profil de produit
-topic-legacy: user guide
 description: Ce document vous explique comment gérer les utilisateurs dʼun profil de produit dans lʼinterface utilisateur dʼAdobe Experience Platform.
 exl-id: 1a35f2e4-cb33-4625-92ec-98e615607a8b
-source-git-commit: 58655e5ff2c4d3a3b36c5067f2e99c021410c697
+source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
 workflow-type: tm+mt
-source-wordcount: '191'
-ht-degree: 100%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 

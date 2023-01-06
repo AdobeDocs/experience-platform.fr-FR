@@ -2,13 +2,12 @@
 keywords: Experience Platform;accueil;rubriques populaires;dépannage;contrôle dʼaccès
 solution: Experience Platform
 title: Guide de dépannage du contrôle dʼaccès
-topic-legacy: troubleshooting guide
 description: Ce document répond aux questions fréquentes sur le contrôle d’accès dans Adobe Experience Platform.
 exl-id: c299c0c4-dbee-4e6d-8af4-2446444bed69
-source-git-commit: 79ffdf35e27d74a64ea8e25544fdeeb293b58306
+source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
 workflow-type: tm+mt
-source-wordcount: '408'
-ht-degree: 78%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -36,4 +35,4 @@ Pour plus d’informations sur le contrôle d’accès en fonction du rôle, con
 
 ## Qu’advient-il des autorisations après la migration d’Adobe IO vers Business ID ?
 
-Le contrôle d’accès utilise un ID utilisateur (un ID unique interne attribué à un utilisateur) pour accorder des autorisations. Lorsqu’une organisation est migrée d’Adobe ID vers Business ID, toutes les autorisations définies pour ses utilisateurs seront perdues car l’ID utilisateur change et le contrôle d’accès utilisera l’ID utilisateur nouvellement généré. Si votre entreprise est migrée vers un identifiant professionnel, contactez votre représentant d’Adobe pour migrer votre identifiant utilisateur d’Adobe ID vers un identifiant professionnel.
+Le contrôle d’accès utilise un identifiant d’utilisateur (un identifiant unique interne attribué à un utilisateur) pour accorder des autorisations. Lorsqu’une organisation est migrée d’Adobe ID vers Business ID, toutes les autorisations définies pour ses utilisateurs seront perdues car l’identifiant d’utilisateur change et le contrôle d’accès utilisera l’identifiant d’utilisateur nouvellement généré. Si votre entreprise est migrée vers un Business ID, contactez votre représentant Adobe pour migrer votre identifiant d’utilisateur d’Adobe ID vers un Business ID.

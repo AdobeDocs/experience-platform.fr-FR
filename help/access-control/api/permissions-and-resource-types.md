@@ -2,13 +2,12 @@
 keywords: Experience Platform;accueil;rubriques populaires;autorisations de contrôle d’accès;types de ressources de contrôle d’accès;api de contrôle d’accès
 solution: Experience Platform
 title: Point d’entrée de l’API de référence
-topic-legacy: developer guide
 description: Le point de terminaison de référence de l’API Access Control vous permet d’afficher les noms des autorisations disponibles et des types de ressources, qui peuvent ensuite être utilisés pour afficher des stratégies de contrôle d’accès efficaces pour l’utilisateur actuel.
 exl-id: 18d84d54-9258-4451-9aa8-7c647b45a8da
-source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
+source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
 workflow-type: tm+mt
-source-wordcount: '165'
-ht-degree: 67%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 

@@ -2,13 +2,12 @@
 keywords: Experience Platform;accueil;rubriques populaires;stratégies effectives;api contrôle dʼaccès
 solution: Experience Platform
 title: Point d’entrée de lʼAPI Effective Policies
-topic-legacy: developer guide
 description: Découvrez comment afficher des stratégies d’accès efficaces à l’aide de l’API Access Control for Adobe Experience Platform.
 exl-id: 555d73db-115d-4f4c-8bd2-b91477799591
-source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
+source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
 workflow-type: tm+mt
-source-wordcount: '295'
-ht-degree: 80%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 

@@ -1,14 +1,13 @@
 ---
 keywords: Experience Platform;profil;profil client en temps réel;dépannage;API;profil unifié;Profil unifié;unifié;Profil;rtcp;graphiques XDM
 title: Fonctionnalités d’accessibilité générales dans Platform
-topic-legacy: guide
 type: Documentation
 description: En savoir plus sur les fonctionnalités d’accessibilité générales prises en charge par Adobe Experience Platform, notamment la navigation au clavier, le contraste et les palettes de couleurs, ainsi que la prise en charge des technologies d’assistance.
 exl-id: 4b7e2f2b-af51-4376-8a63-16c921cc7135
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
 workflow-type: tm+mt
-source-wordcount: '484'
-ht-degree: 100%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
