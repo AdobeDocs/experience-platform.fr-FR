@@ -2,11 +2,10 @@
 keywords: Experience Platform;JupyterLab;recette;notebooks;Data Science Workspace;rubriques les plus consultées;créer une recette
 solution: Experience Platform
 title: Création d’un modèle à l’aide de notebooks JupyterLab
-topic-legacy: tutorial
 type: Tutorial
 description: Ce tutoriel vous guide tout au long des étapes requises pour créer une recette à l’aide du modèle de créateur de recettes des notebooks JupyterLab.
 exl-id: d3f300ce-c9e8-4500-81d2-ea338454bfde
-source-git-commit: b4dabd36f54cc571b78a6c6c9535f9f08c403b64
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '2119'
 ht-degree: 34%
@@ -127,7 +126,7 @@ Cette étape utilise le [cadre de données pandas](https://pandas.pydata.org/pan
 >
 > Dans le notebook Recipe Builder, les données sont chargées via le chargeur de données `platform_sdk`.
 
-### [!DNL Platform] SDK {#platform-sdk}
+### SDK [!DNL Platform] {#platform-sdk}
 
 Pour un tutoriel détaillé sur l’utilisation du chargeur de données `platform_sdk`, consultez le [guide SDK Platform](../authoring/platform-sdk.md). Ce tutoriel fournit des informations sur l’authentification de création, la lecture et l’écriture basiques de données.
 

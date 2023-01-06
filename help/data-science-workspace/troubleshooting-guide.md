@@ -2,13 +2,12 @@
 keywords: Experience Platform;dépannage;Data Science Workspace;rubriques les plus consultées
 solution: Experience Platform
 title: Guide de dépannage de Data Science Workspace
-topic-legacy: Troubleshooting
 description: Ce document fournit des réponses aux questions fréquentes sur Adobe Experience Platform Data Science Workspace.
 exl-id: fbc5efdc-f166-4000-bde2-4aa4b0318b38
-source-git-commit: ec42d80e695ccf57c10c539ae1b5104c7948c473
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '1470'
-ht-degree: 21%
+ht-degree: 19%
 
 ---
 
@@ -50,7 +49,7 @@ La section **Confidentialité et sécurité** s’affiche. Cliquez ensuite sur *
 
 ![paramètres avancés de Chrome](./images/faq/cookies.png)
 
-Enfin, faites basculer « Bloquer les cookies tiers » sur « Désactivé ».
+Enfin, faites basculer &quot;Bloquer les cookies tiers&quot; sur &quot;Désactivé&quot;.
 
 ![paramètres avancés de Chrome](./images/faq/toggle-off.png)
 
@@ -58,7 +57,7 @@ Enfin, faites basculer « Bloquer les cookies tiers » sur « Désactivé »
 >
 >Vous pouvez également désactiver les cookies tiers et ajouter des [*.]ds.adobe.net à la liste autorisée.
 
-Saisissez « chrome://flags/ » dans votre barre d’adresse. Recherchez et désactivez l’indicateur intitulé *« SameSite by default cookies »* en utilisant le menu déroulant sur la droite.
+Accédez à &quot;chrome://flags/&quot; dans votre barre d’adresse. Recherchez et désactivez l’indicateur intitulé *&quot;Cookies samesite par défaut&quot;* en utilisant le menu déroulant sur la droite.
 
 ![désactiver l’indicateur samesite](./images/faq/samesite-flag.png)
 

@@ -2,11 +2,10 @@
 keywords: Experience Platform;Noter un modèle;Data Science Workspace;rubriques les plus consultées;API d’apprentissage automatique sensei
 solution: Experience Platform
 title: Notation d’un modèle à l’aide de l’API d’apprentissage automatique de Sensei
-topic-legacy: tutorial
 type: Tutorial
 description: Ce tutoriel vous explique comment tirer parti des API d’apprentissage automatique de Sensei pour créer une expérience et une exécution d’expérience.
 exl-id: 202c63b0-86d8-4a82-8ec8-d144a8911d08
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '554'
 ht-degree: 87%

@@ -2,10 +2,9 @@
 keywords: Experience Platform;guide de développement;Data Science Workspace;rubriques les plus consultées;apprentissage automatique en temps réel ;
 solution: Experience Platform
 title: Prise en main de l’apprentissage automatique en temps réel
-topic-legacy: Getting started
 description: Le document suivant décrit les étapes requises pour créer un modèle d’apprentissage automatique en temps réel dans Adobe Experience Platform.
 exl-id: 90a1c580-f6e7-4517-aa1e-da5092fbc4a2
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '438'
 ht-degree: 1%
@@ -41,7 +40,7 @@ Pour commencer à utiliser l’apprentissage automatique en temps réel, vous de
 
 Pour en savoir plus sur l’utilisation d’un jeu de données externe, tel que le chargement de données dans votre [!DNL JupyterLab] environnement, consultez le tutoriel sur [analyse de vos données à l’aide de notebooks](../jupyterlab/analyze-your-data.md#external-data).
 
-### Création d’un nouveau jeu de données
+### Créer un nouveau jeu de données
 
 Pour créer un jeu de données à utiliser dans l’apprentissage automatique en temps réel, vous avez besoin d’un schéma de données pour votre jeu de données. Ensuite, vous devez ingérer des données à l’aide du schéma que vous avez créé. Utilisez les tutoriels suivants pour créer et renseigner un jeu de données pour [!DNL Platform]:
 

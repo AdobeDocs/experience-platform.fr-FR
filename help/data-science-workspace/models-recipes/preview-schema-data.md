@@ -2,11 +2,10 @@
 keywords: Experience Platform;prévisualiser les données de schéma;Data Science Workspace;rubriques les plus consultées
 solution: Experience Platform
 title: Aperçu du schéma et du jeu de données de ventes au détail
-topic-legacy: tutorial
 type: Tutorial
 description: Le document suivant décrit la prévisualisation des schémas et des jeux de données sur Adobe Experience Platform.
 exl-id: dca9835b-4f76-42cc-b262-b20323bf4356
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '236'
 ht-degree: 25%

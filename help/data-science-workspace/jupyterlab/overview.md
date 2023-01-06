@@ -2,10 +2,9 @@
 keywords: Experience Platform;JupyterLab;notebooks;Data Science Workspace;rubriques les plus consultées;jupyterlab
 solution: Experience Platform
 title: Présentation de l’interface utilisateur de JupyterLab
-topic-legacy: Overview
 description: JupyterLab est une interface utilisateur web pour Project Jupyter et est étroitement intégré à Adobe Experience Platform. Il fournit un environnement de développement interactif permettant aux spécialistes des données de travailler avec des notebooks, du code et des données Jupyter. Ce document présente JupyterLab et ses fonctionnalités ainsi que des instructions pour effectuer des actions courantes.
 exl-id: 13786fbd-ef16-49cd-8bcf-46320c33e902
-source-git-commit: 1d3981c67c86f93394acf49b61bd29154e9653e8
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '1821'
 ht-degree: 59%
@@ -187,7 +186,7 @@ Certains modèles de notebook sont limités à des noyaux spécifiques. La dispo
         <th><strong>Vide</strong></th>
         <th><strong>Démarrage</strong></th>
         <th><strong>Ventes au détail</strong></th>
-        <th><strong>Créateur de recettes</strong></th>
+        <th><strong>Recipe Builder</strong></th>
         <th><strong>[!DNL Query Service]</strong></th>
         <th><strong>Événements XDM</strong></th>
         <th><strong>Requêtes XDM</strong></th>

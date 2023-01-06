@@ -2,10 +2,9 @@
 keywords: Experience Platform;guide de développement;point de terminaison;Data Science Workspace;rubriques les plus consultées;informations;api d’apprentissage automatique sensei
 solution: Experience Platform
 title: Point de terminaison de l’API Insights
-topic-legacy: Developer guide
 description: Les insights contiennent des mesures qui permettent à un scientifique de données d’évaluer et de choisir des modèles ML optimaux en affichant les mesures d’évaluation appropriées.
 exl-id: 603546d6-5686-4b59-99a7-90ecc0db8de3
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '515'
 ht-degree: 96%

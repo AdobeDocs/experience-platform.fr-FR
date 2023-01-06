@@ -2,11 +2,10 @@
 keywords: Experience Platform;noter un modèle;Data Science Workspace;rubriques populaires;ui;opération de notation;résultats de notation
 solution: Experience Platform
 title: Notation d’un modèle dans l’interface utilisateur de Data Science Workspace
-topic-legacy: tutorial
 type: Tutorial
 description: La notation dans Adobe Experience Platform Data Science Workspace peut être réalisée en alimentant un modèle formé existant avec des données d’entrée. Les résultats de la notation sont ensuite stockés et consultables dans un jeu de données de sortie spécifié sous la forme d’un nouveau lot.
 exl-id: 00d6a872-d71a-47f4-8625-92621d4eed56
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '648'
 ht-degree: 35%

@@ -1,11 +1,10 @@
 ---
 keywords: Experience Platform;tutoriel;pipeline de fonctionnalités;Data Science Workspace;rubriques les plus consultées
 title: Création d’un pipeline de fonctionnalités à l’aide du SDK de création de modèles
-topic-legacy: tutorial
 type: Tutorial
 description: Adobe Experience Platform vous permet de créer et de créer des pipelines de fonctionnalités personnalisés pour réaliser l’ingénierie de fonctionnalités à grande échelle via Sensei Machine Learning Framework Runtime. Ce document décrit les différentes classes trouvées dans un pipeline de fonctionnalités et fournit un tutoriel détaillé sur la création d’un pipeline de fonctionnalités personnalisé à l’aide du SDK Model Authoring dans PySpark.
 exl-id: c2c821d5-7bfb-4667-ace9-9566e6754f98
-source-git-commit: 441d7822f287fabf1b06cdf3f6982f9c910387a8
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '1441'
 ht-degree: 30%

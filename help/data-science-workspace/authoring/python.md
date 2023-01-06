@@ -2,11 +2,10 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;accès aux données;sdk python;api d’accès aux données;lire python;écrire python
 solution: Experience Platform
 title: Accès aux données à l’aide de Python dans Data Science Workspace
-topic-legacy: tutorial
 type: Tutorial
 description: Le document suivant contient des exemples d’accès aux données en Python à utiliser dans Data Science Workspace.
 exl-id: 75aafd58-634a-4df3-a2f0-9311f93deae4
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '420'
 ht-degree: 2%

@@ -2,10 +2,9 @@
 keywords: Experience Platform;guide de développement;point de terminaison;Data Science Workspace;rubriques populaires;modèles;api d’apprentissage automatique sensei
 solution: Experience Platform
 title: Point de terminaison de l’API Modèles
-topic-legacy: Developer guide
 description: Un modèle est une instance d’une recette d’apprentissage automatique formée à l’aide de données historiques et de configurations dans le but de résoudre un cas d’usage commercial.
 exl-id: e66119a9-9552-497c-9b3a-b64eb3b51fcf
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '864'
 ht-degree: 65%

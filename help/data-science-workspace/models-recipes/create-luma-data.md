@@ -2,14 +2,13 @@
 keywords: Experience Platform;données web luma;Data Science Workspace;rubriques les plus consultées;recettes;données de démonstration;données web de démonstration;données luma
 solution: Experience Platform
 title: Création de jeux de données et de schémas web Luma
-topic-legacy: tutorial
 type: Tutorial
 description: Ce tutoriel vous fournit les prérequis et les ressources requis pour le modèle de propension aux démonstrations Luma.
 exl-id: a791e532-1116-4407-b745-fd6c2ac0d8f7
-source-git-commit: f57ca64c34f569f4402cb998af72e1e9022510ca
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '466'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -31,7 +30,7 @@ Ce tutoriel vous fournit les prérequis et les ressources requis pour tous les a
 
 ## Téléchargement des ressources {#assets}
 
-Le tutoriel suivant utilise un modèle personnalisé de propension à l’achat de Luma. Avant de poursuivre : [télécharger les ressources requises ;](https://experienceleague.adobe.com/docs/platform-learn/assets/DSW-course-sample-assets.zip?lang=en) dossier zip. Ce dossier contient :
+Le tutoriel suivant utilise un modèle personnalisé de propension à l’achat de Luma. Avant de poursuivre : [télécharger les ressources requises ;](https://experienceleague.adobe.com/docs/platform-learn/assets/DSW-course-sample-assets.zip?lang=en) dossier zip. Ce dossier contient les éléments suivants :
 
 - notebook de modèle de propension à l’achat
 - notebook utilisé pour ingérer des données dans un jeu de données de formation et de notation (un sous-ensemble des données web Luma).

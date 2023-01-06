@@ -2,10 +2,9 @@
 keywords: Experience Platform;guide de développement;SDK;création de modèles;Data Science Workspace;rubriques les plus consultées;test
 solution: Experience Platform
 title: SDK de création de modèles
-topic-legacy: Overview
 description: Le SDK de création de modèles vous permet de développer des pipelines de fonctionnalités et des recettes d’apprentissage automatique personnalisés qui peuvent être utilisés dans Adobe Experience Platform Data Science Workspace, ce qui vous permet de fournir des modèles implémentables dans PySpark et Spark (Scala).
 exl-id: c7577f93-a64f-49b7-a76d-71f21d619052
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '977'
 ht-degree: 70%

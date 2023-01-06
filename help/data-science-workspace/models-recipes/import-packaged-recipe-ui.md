@@ -2,11 +2,10 @@
 keywords: Experience Platform;importer une recette empaquetée;Data Science Workspace;rubriques populaires;recettes;ui;créer un moteur
 solution: Experience Platform
 title: Importation d’une recette empaquetée dans l’interface utilisateur de Data Science Workspace
-topic-legacy: tutorial
 type: Tutorial
 description: Ce tutoriel explique comment configurer et importer une recette empaquetée à l’aide de l’exemple de ventes au détail fourni. Après avoir terminé ce tutoriel, vous serez prêt à créer, à former et à évaluer un modèle dans Adobe Experience Platform Data Science Workspace.
 exl-id: 2556e1f0-3f9c-4884-a699-06c041d5c4d1
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '1833'
 ht-degree: 39%

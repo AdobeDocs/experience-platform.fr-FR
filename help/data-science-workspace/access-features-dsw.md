@@ -2,10 +2,9 @@
 keywords: Experience Platform;accueil;Data Science Workspace;rubriques les plus consultées;contrôle d’accès;environnement de test;module d’intelligence;fonctionnalités dsw;accès dsw;intelligence Adobe Experience Platform;intelligence;module d’intelligence aep
 solution: Experience Platform
 title: Accès et fonctionnalités de Data Science Workspace
-topic-legacy: Access and features for data science workspace
 description: Le document suivant décrit les autorisations de Data Science Workspace et l’accès aux fonctionnalités.
 exl-id: 6759fea4-adb9-4e4e-9f3d-e0e8c885b1dd
-source-git-commit: e67b3a6f9f57a3971a5bfa755db3b1043bebc96b
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '688'
 ht-degree: 18%
@@ -51,7 +50,7 @@ Le tableau suivant présente certaines des différences clés entre les droits d
 | Prise en charge de l’apprentissage profond pour les modèles Tensorflow (GPU Compute). |  | X |
 | Calcul distribué basé sur Spark pour entraîner et noter des jeux de données volumineux (10 MM + lignes). |  | X |
 
-## Contrôle d&#39;accès
+## Contrôle d’accès
 
 Le contrôle d’accès d’Experience Platform est géré à l’aide d’[Adobe Admin Console](https://adminconsole.adobe.com). Cette fonctionnalité exploite les profils de produit dans Admin Console, liant les utilisateurs à des autorisations et des environnements de test. Pour plus d’informations, consultez la [présentation du contrôle d’accès](../access-control/home.md).
 

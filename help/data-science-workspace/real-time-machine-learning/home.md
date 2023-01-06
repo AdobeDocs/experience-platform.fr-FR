@@ -2,10 +2,9 @@
 keywords: Experience Platform;guide de développement;Data Science Workspace;rubriques les plus consultées;apprentissage automatique en temps réel ;
 solution: Experience Platform
 title: Présentation de l’apprentissage automatique en temps réel
-topic-legacy: Overview
 description: L’apprentissage automatique en temps réel peut considérablement améliorer la pertinence de votre contenu d’expérience numérique pour vos utilisateurs finaux. Pour ce faire, vous pouvez tirer parti de l’inférencement en temps réel et de l’apprentissage continu sur Experience Edge.
 exl-id: 23eb1877-1bdf-4982-b58c-cfb58467035a
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '549'
 ht-degree: 5%

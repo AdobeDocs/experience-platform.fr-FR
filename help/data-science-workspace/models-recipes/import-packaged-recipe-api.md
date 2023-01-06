@@ -2,11 +2,10 @@
 keywords: Experience Platform;importer une recette empaquetée;Data Science Workspace;rubriques populaires;recettes;api;apprentissage automatique sensei;créer un moteur
 solution: Experience Platform
 title: Importation d’une recette empaquetée à l’aide de l’API d’apprentissage automatique de Sensei
-topic-legacy: tutorial
 type: Tutorial
 description: Ce tutoriel utilise l’API Sensei Machine Learning pour créer un moteur, aussi appelé recette dans l’interface utilisateur.
 exl-id: c8dde30b-5234-448d-a597-f1c8d32f23d4
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '1007'
 ht-degree: 62%

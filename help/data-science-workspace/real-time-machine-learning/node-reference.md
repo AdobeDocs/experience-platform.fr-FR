@@ -2,10 +2,9 @@
 keywords: Experience Platform;guide de développement;Data Science Workspace;rubriques les plus consultées;apprentissage automatique en temps réel;référence de noeud ;
 solution: Experience Platform
 title: Référence des noeuds d’apprentissage automatique en temps réel
-topic-legacy: Nodes reference
 description: Un noeud est l’unité fondamentale de laquelle des graphiques sont formés. Chaque noeud effectue une tâche spécifique et peut être lié ensemble à l’aide de liens afin de former un graphique représentant un pipeline ML. La tâche effectuée par un noeud représente une opération sur les données d’entrée, telle qu’une transformation des données ou un schéma, ou une inférence d’apprentissage automatique. Le noeud sort la valeur transformée ou déduite au(x) noeud(s) suivant(s).
 exl-id: 67fe26b5-ce03-4a9a-ad45-783b2acf8d92
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '678'
 ht-degree: 1%
@@ -132,7 +131,7 @@ msg6 = model_train.process(msg5)
 
 ### Fractionner
 
-Utilisez le noeud suivant pour fractionner votre cadre de données en formation et test en transmettant `train_size` ou `test_size`. Cette opération renvoie un cadre de données avec un multi-index. Vous pouvez accéder aux jeux de données de formation et de test à l’aide de l’exemple suivant, `msg5.data.xs(“train”)`.
+Utilisez le noeud suivant pour fractionner votre cadre de données en formation et test en transmettant `train_size` ou `test_size`. Cette opération renvoie un cadre de données avec un multi-index. Vous pouvez accéder aux jeux de données de formation et de test à l’aide de l’exemple suivant, `msg5.data.xs("train")`.
 
 ```python
 splitter = Split(params={"train_size": 0.7})

@@ -2,10 +2,9 @@
 keywords: Experience Platform;JupyterLab;notebooks;Data Science Workspace;rubriques populaires;%dataset;mode interactif;mode batch;Sdk Spark;sdk python;accès aux données;accès aux données du notebook
 solution: Experience Platform
 title: Accès aux données dans les notebooks Jupyterlab
-topic-legacy: Developer Guide
 description: Ce guide porte sur l’utilisation des notebooks Jupyter, conçus dans Data Science Workspace pour accéder à vos données.
 exl-id: 2035a627-5afc-4b72-9119-158b95a35d32
-source-git-commit: 9e41db60580146fa90542ed00ceedd4eecb88b47
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '3294'
 ht-degree: 24%
@@ -46,15 +45,15 @@ Lors de la lecture de jeux de données avec des notebooks PySpark et Scala, vous
 
 | Nombre de lignes | 1 000 | 10 000 | 100 000 | 1M | 2M |
 | ----------------------- | ------ | ------ | ----- | ----- | ----- |
-| Taille sur le disque (Mo) | 18,73 | 187,5 | 308 | 3000 | 6050 |
-| SDK (en secondes) | 20,3 | 86,8 | 63 | 659 | 1315 |
+| Taille sur le disque (Mo) | 18.73 | 187.5 | 308 | 3000 | 6050 |
+| SDK (en secondes) | 20.3 | 86.8 | 63 | 659 | 1315 |
 
 **schéma ad hoc :** Vous devriez être en mesure de lire un maximum de 5 millions de lignes (~5,6 Go de données sur le disque) de données non XDM (ad hoc) en moins de 14 minutes. L’ajout de lignes supplémentaires peut entraîner des erreurs.
 
 | Nombre de lignes | 1 000 | 10 000 | 100 000 | 1M | 2M | 3M | 5M |
 | ----------------------- | ------- | ------- | ----- | ----- | ----- | ----- | ------ |
-| Taille sur le disque (en Mo) | 1,21 | 11,72 | 115 | 1120 | 2250 | 3380 | 5630 |
-| SDK (en secondes) | 7,27 | 9,04 | 27,3 | 180 | 346 | 487 | 819 |
+| Taille sur le disque (en Mo) | 1.21 | 11.72 | 115 | 1120 | 2250 | 3380 | 5630 |
+| SDK (en secondes) | 7.27 | 9.04 | 27.3 | 180 | 346 | 487 | 819 |
 
 ### Limites de données des notebooks R
 
@@ -62,15 +61,15 @@ Lors de la lecture de jeux de données avec des notebooks PySpark et Scala, vous
 
 | Nombre de lignes | 1 000 | 10 000 | 100 000 | 1M |
 | ----------------------- | ------ | ------ | ----- | ----- |
-| Taille sur le disque (Mo) | 18,73 | 187,5 | 308 | 3 000 |
-| Noyau R (en secondes) | 14,03 | 69,6 | 86,8 | 775 |
+| Taille sur le disque (Mo) | 18.73 | 187.5 | 308 | 3000 |
+| Noyau R (en secondes) | 14.03 | 69.6 | 86.8 | 775 |
 
 **schéma ad hoc :** Vous devriez pouvoir lire un maximum de 3 millions de lignes de données ad hoc (293 Mo de données sur le disque) en environ 10 minutes.
 
 | Nombre de lignes | 1 000 | 10 000 | 100 000 | 1M | 2M | 3M |
 | ----------------------- | ------- | ------- | ----- | ----- | ----- | ----- |
-| Taille sur le disque (en Mo) | 0,082 | 0,612 | 9.0 | 91 | 188 | 293 |
-| SDK R (en secondes) | 7,7 | 4,58 | 35,9 | 233 | 470,5 | 603 |
+| Taille sur le disque (en Mo) | 0.082 | 0.612 | 9.0 | 91 | 188 | 293 |
+| SDK R (en secondes) | 7.7 | 4.58 | 35.9 | 233 | 470.5 | 603 |
 
 ### PySpark ([!DNL Python] Limites des données du notebook (noyau) : {#pyspark-data-limits}
 
@@ -78,17 +77,17 @@ Lors de la lecture de jeux de données avec des notebooks PySpark et Scala, vous
 
 | Nombre de lignes | 1 000 | 10 000 | 100 000 | 1M | 2M | 3M | 5M | 10M | 50M | 100M | 500M |
 |-------------------------|--------|--------|-------|-------|-------|-------|---------|---------|----------|--------|--------|
-| Taille du disque | 2,93 Mo | 4,38 Mo | 29,02 | 2.69 Go | 5.39 Go | 8.09 Go | 13.42 Go | 26.82 Go | 134.24 Go | 268.39 Go | 1,31 To |
-| SDK (mode interactif) | 33s | 32,4 s | 55.1 s | 253.5s | 489.2s | 729.6s | 1206.8s | - | - | - | - |
-| SDK (mode batch) | 815.8s | 492.8s | 379.1s | 637,4 s | 624.5s | 869.2s | 1104.1s | 1 786 s | 5387.2s | 10624.6s | 50547s |
+| Taille du disque | 2.93 Mo | 4.38 Mo | 29.02 | 2.69 Go | 5.39 Go | 8.09 Go | 13.42 Go | 26.82 Go | 134.24 Go | 268.39 Go | 1.31TB |
+| SDK (mode interactif) | 33s | 32.4s | 55.1s | 253.5s | 489.2s | 729.6s | 1206.8s | - | - | - | - |
+| SDK (mode batch) | 815.8s | 492.8s | 379.1s | 637.4s | 624.5s | 869.2s | 1104.1s | 1786s | 5387.2s | 10624.6s | 50547s |
 
 **schéma ad hoc :** En mode interactif, vous devriez être en mesure de lire un maximum de 5 millions de lignes (~5,36 Go de données sur le disque) de données non XDM en moins de 3 minutes. En mode Lot , vous devriez pouvoir lire un maximum de 1 milliard de lignes (~1,05 To de données sur le disque) de données non XDM en environ 18 minutes.
 
 | Nombre de lignes | 1 000 | 10 000 | 100 000 | 1M | 2M | 3M | 5M | 10M | 50M | 100M | 500M | 1B |
 |--------------|--------|---------|---------|-------|-------|-------|--------|--------|---------|--------|---------|-------|
-| Taille du disque | 1,12 Mo | 11,24 Mo | 109,48 Mo | 2.69 Go | 2.14 Go | 3.21 Go | 5.36 Go | 10.71 Go | 53.58 Go | 107.52 Go | 535.88 Go | 1,05 To |
-| Mode interactif SDK (en secondes) | 28.2 s | 18.6s | 20,8 s | 20,9 s | 23,8 s | 21,7 s | 24,7 s | - | - | - | - | - |
-| Mode batch du SDK (en secondes) | 428.8s | 578.8s | 641.4 s | 538.5s | 630,9 s | 467.3s | 411s | 675s | 702s | 719.2s | 1022.1s | 1122.3s |
+| Taille du disque | 1.12 Mo | 11.24 Mo | 109.48 Mo | 2.69 Go | 2.14 Go | 3.21 Go | 5.36 Go | 10.71 Go | 53.58 Go | 107.52 Go | 535.88 Go | 1.05TB |
+| Mode interactif SDK (en secondes) | 28.2s | 18.6s | 20.8s | 20.9s | 23.8s | 21.7s | 24.7s | - | - | - | - | - |
+| Mode batch du SDK (en secondes) | 428.8s | 578.8s | 641.4s | 538.5s | 630.9s | 467.3s | 411s | 675s | 702s | 719.2s | 1022.1s | 1122.3s |
 
 ### [!DNL Spark] Limites des données du notebook (noyau Scala) : {#scala-data-limits}
 
@@ -96,17 +95,17 @@ Lors de la lecture de jeux de données avec des notebooks PySpark et Scala, vous
 
 | Nombre de lignes | 1 000 | 10 000 | 100 000 | 1M | 2M | 3M | 5M | 10M | 50M | 100M | 500M |
 |---------------|--------|--------|-------|-------|-------|-------|---------|---------|----------|--------|--------|
-| Taille du disque | 2,93 Mo | 4,38 Mo | 29,02 | 2.69 Go | 5.39 Go | 8.09 Go | 13.42 Go | 26.82 Go | 134.24 Go | 268.39 Go | 1,31 To |
-| Mode interactif SDK (en secondes) | 37,9 s | 22,7 s | 45.6s | 231,7 s | 444,7 s | 660.6s | 1 100 s | - | - | - | - |
-| Mode batch du SDK (en secondes) | 374.4 s | 398.5s | 527s | 487.9s | 588.9s | 829 s | 939.1s | 1 441 s | 5473.2s | 10118.8 | 49207.6 |
+| Taille du disque | 2.93 Mo | 4.38 Mo | 29.02 | 2.69 Go | 5.39 Go | 8.09 Go | 13.42 Go | 26.82 Go | 134.24 Go | 268.39 Go | 1.31TB |
+| Mode interactif SDK (en secondes) | 37.9s | 22.7s | 45.6s | 231.7s | 444.7s | 660.6s | 1100s | - | - | - | - |
+| Mode batch du SDK (en secondes) | 374.4s | 398.5s | 527s | 487.9s | 588.9s | 829s | 939.1s | 1441s | 5473.2s | 10118.8 | 49207.6 |
 
 **schéma ad hoc :** En mode interactif, vous devriez être en mesure de lire un maximum de 5 millions de lignes (~5,36 Go de données sur le disque) de données non XDM en moins de 3 minutes. En mode batch, vous devriez pouvoir lire un maximum de 1 milliard de lignes (~1,05 To de données sur le disque) de données non XDM en environ 16 minutes.
 
 | Nombre de lignes | 1 000 | 10 000 | 100 000 | 1M | 2M | 3M | 5M | 10M | 50M | 100M | 500M | 1B |
 |--------------|--------|---------|---------|-------|-------|-------|---------|---------|---------|--------|---------|-------|
-| Taille du disque | 1,12 Mo | 11,24 Mo | 109,48 Mo | 2.69 Go | 2.14 Go | 3.21 Go | 5.36 Go | 10.71 Go | 53.58 Go | 107.52 Go | 535.88 Go | 1,05 To |
-| Mode interactif SDK (en secondes) | 35,7 s | 31 s | 19.5s | 25.3 | 23 s | 33.2s | 25.5s | - | - | - | - | - |
-| Mode batch du SDK (en secondes) | 448.8s | 459,7 s | 519s | 475.8s | 599.9s | 347.6s | 407.8s | 397 s | 518.8s | 487.9s | 760.2s | 975.4 s |
+| Taille du disque | 1.12 Mo | 11.24 Mo | 109.48 Mo | 2.69 Go | 2.14 Go | 3.21 Go | 5.36 Go | 10.71 Go | 53.58 Go | 107.52 Go | 535.88 Go | 1.05TB |
+| Mode interactif SDK (en secondes) | 35.7s | 31s | 19.5s | 25.3s | 23s | 33.2s | 25.5s | - | - | - | - | - |
+| Mode batch du SDK (en secondes) | 448.8s | 459.7s | 519s | 475.8s | 599.9s | 347.6s | 407.8s | 397s | 518.8s | 487.9s | 760.2s | 975.4s |
 
 ## notebooks Python {#python-notebook}
 
