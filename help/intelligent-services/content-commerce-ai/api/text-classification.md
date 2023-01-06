@@ -2,10 +2,9 @@
 keywords: classification de texte;classification de texte
 solution: Experience Platform
 title: Classification de texte dans l’API Content and Commerce AI
-topic-legacy: Developer guide
 description: Lorsqu’un fragment de texte est fourni, le service de classification de texte peut le classer dans une ou plusieurs étiquettes. La classification peut être une seule étiquette, plusieurs étiquettes ou hiérarchique.
 exl-id: f240519a-0d83-4309-91e4-4e48be7955a1
-source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
+source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
 workflow-type: tm+mt
 source-wordcount: '441'
 ht-degree: 5%

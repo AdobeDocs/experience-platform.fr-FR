@@ -2,10 +2,9 @@
 keywords: Experience Platform;accueil;services intelligents;rubriques les plus consultées;service intelligent;service intelligent
 solution: Experience Platform
 title: Préparation des données à utiliser dans les services intelligents
-topic-legacy: Intelligent Services
 description: Pour que les services intelligents découvrent des informations à partir de vos données d’événements marketing, les données doivent être enrichies sémantiquement et conservées dans une structure standard. Pour ce faire, les services intelligents utilisent des schémas de modèle de données d’expérience (XDM).
 exl-id: 17bd7cc0-da86-4600-8290-cd07bdd5d262
-source-git-commit: d380b4d2a75efb1c34010a30c619649a7b99643c
+source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
 workflow-type: tm+mt
 source-wordcount: '2936'
 ht-degree: 2%
@@ -183,13 +182,13 @@ Le tableau suivant fournit des exemples de canaux marketing mappés à la variab
 | Canal | `@type` | `mediaType` | `mediaAction` |
 | --- | --- | --- | --- |
 | Recherche payante | https:/<span>/ns.adobe.com/xdm/channel-types/search | paid | clicks |
-| Social - Marketing | https:/<span>/ns.adobe.com/xdm/channel-types/social | earned | clics |
-| Afficher  | https:/<span>/ns.adobe.com/xdm/channel-types/display | paid | clics |
-| E-mail | https:/<span>/ns.adobe.com/xdm/channel-types/email | paid | clics |
-| Référent interne | https:/<span>/ns.adobe.com/xdm/channel-types/direct | owned | clics |
+| Social - Marketing | https:/<span>/ns.adobe.com/xdm/channel-types/social | earned | clicks |
+| Afficher  | https:/<span>/ns.adobe.com/xdm/channel-types/display | paid | clicks |
+| E-mail | https:/<span>/ns.adobe.com/xdm/channel-types/email | paid | clicks |
+| Référent interne | https:/<span>/ns.adobe.com/xdm/channel-types/direct | owned | clicks |
 | Afficher la vue publicitaire | https:/<span>/ns.adobe.com/xdm/channel-types/display | paid | impressions |
-| Redirection du code QR | https:/<span>/ns.adobe.com/xdm/channel-types/direct | owned | clics |
-| Mobile | https:/<span>/ns.adobe.com/xdm/channel-types/mobile | owned | clics |
+| Redirection du code QR | https:/<span>/ns.adobe.com/xdm/channel-types/direct | owned | clicks |
+| Mobile | https:/<span>/ns.adobe.com/xdm/channel-types/mobile | owned | clicks |
 
 ### Champs recommandés
 

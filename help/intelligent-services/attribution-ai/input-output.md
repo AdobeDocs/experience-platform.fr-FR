@@ -2,10 +2,9 @@
 keywords: Experience Platform;prise en main;Attribution;rubriques populaires;entrée d’Attribution AI;sortie d’Attribution AI ;
 feature: Attribution AI
 title: Entrée et sortie dans Attribution AI
-topic-legacy: Input and Output data for Attribution AI
 description: Le document suivant décrit les différentes entrées et sorties utilisées dans Attribution AI.
 exl-id: d6dbc9ee-0c1a-4a5f-b922-88c7a36a5380
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
 workflow-type: tm+mt
 source-wordcount: '2504'
 ht-degree: 14%

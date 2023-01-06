@@ -3,13 +3,12 @@ keywords: Experience Platform;prise en main;service clientèle;rubriques les plu
 solution: Experience Platform, Real-time Customer Data Platform
 feature: Customer AI
 title: Entrée et sortie dans Customer AI
-topic-legacy: Getting started
 description: En savoir plus sur les événements, les entrées et les sorties requis utilisés par Customer AI.
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
-source-git-commit: 165e5ccae5ca78b3912fef1ba0b3fd4567e231fb
+source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
 workflow-type: tm+mt
 source-wordcount: '3195'
-ht-degree: 15%
+ht-degree: 17%
 
 ---
 
@@ -39,8 +38,8 @@ Le tableau suivant présente la terminologie courante utilisée dans ce document
 | Terme | Définition |
 | --- | --- |
 | [Modèle de données d’expérience (XDM)](../../xdm/home.md) | XDM est le cadre de base qui permet à Adobe Experience Cloud, optimisé par Adobe Experience Platform, de diffuser le message approprié à la bonne personne, sur le bon canal, exactement au bon moment. La méthodologie sur laquelle Experience Platform repose, à savoir le système XDM, rend les schémas de modèles de données d’expérience opérationnels pour qu’ils soient utilisés par les services de Platform. |
-| Schéma XDM | Experience Platform utilise des schémas pour décrire la structure des données de manière cohérente et réutilisable. En définissant les données de manière cohérente sur l’ensemble des systèmes, il est plus simple de leur donner du sens et donc d’en tirer profit. Avant que les données puissent être ingérées dans Platform, un schéma doit être composé pour décrire la structure des données et fournir des contraintes au type de données pouvant être contenues dans chaque champ. Les schémas se composent d’une classe XDM de base et de zéro ou plusieurs groupes de champs de schéma. |
-| Classe XDM | Tous les schémas XDM décrivent des données pouvant être catégorisées en tant qu’enregistrement ou série temporelle. Le comportement des données d’un schéma est défini par la classe du schéma, qui est affectée à un schéma lors de sa création initiale. Les classes XDM décrivent le plus petit nombre de propriétés qu’un schéma doit contenir pour représenter un comportement de données spécifique. |
+| Schéma XDM | Experience Platform utilise des schémas pour décrire la structure des données de manière cohérente et réutilisable. En définissant les données de manière cohérente sur l’ensemble des systèmes, il est plus simple de leur donner du sens et donc d’en tirer profit. Avant que les données puissent être ingérées dans Platform, il est nécessaire de composer un schéma pour décrire la structure des données et fournir des contraintes au type de données pouvant être contenues dans chaque champ. Les schémas se composent d’une classe XDM de base et de zéro ou plusieurs groupes de champs de schéma. |
+| Classe XDM | Tous les schémas XDM décrivent des données pouvant être catégorisées en tant qu’enregistrement ou série temporelle. Le comportement des données d’un schéma est défini par la classe du schéma attribuée à celui-ci lorsqu’il est créé pour la première fois. Les classes XDM décrivent le plus petit nombre de propriétés qu’un schéma doit contenir pour représenter un comportement de données spécifique. |
 | [Groupes de champs](../../xdm/schema/composition.md) | Composant qui définit un ou plusieurs champs d’un schéma. Les groupes de champs imposent la manière dont leurs champs apparaissent dans la hiérarchie du schéma et présentent donc la même structure dans chaque schéma dans lequel ils sont inclus. Les groupes de champs ne sont compatibles qu’avec des classes spécifiques, identifiées par leurs `meta:intendedToExtend` attribut. |
 | [Type de données](../../xdm/schema/composition.md) | Composant pouvant également fournir un ou plusieurs champs pour un schéma. Cependant, contrairement aux groupes de champs, les types de données ne sont pas limités à une classe particulière. Ainsi, les types de données constituent une option plus souple pour décrire des structures de données communes réutilisables sur plusieurs schémas avec des classes potentiellement différentes. Les types de données décrits dans ce document sont pris en charge par les schémas CEE et Adobe Analytics. |
 | Churn | Mesure du pourcentage des comptes qui annulent ou choisissent de ne pas renouveler leurs abonnements. Un taux de perte de clientèle élevé peut avoir une incidence négative sur les recettes mensuelles récurrentes et peut également indiquer un mécontentement à l’égard d’un produit ou d’un service. |

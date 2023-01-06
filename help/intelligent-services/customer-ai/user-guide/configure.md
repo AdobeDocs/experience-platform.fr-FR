@@ -3,13 +3,12 @@ keywords: Experience Platform;guide de l’utilisateur;service clientèle;rubriq
 solution: Experience Platform, Real-time Customer Data Platform
 feature: Customer AI
 title: Configuration d’une instance Customer AI
-topic-legacy: Instance creation
 description: Les services AI/ML fournissent Customer AI en tant que service Adobe Sensei simple d’utilisation pouvant être configuré pour différents cas d’utilisation. Les sections suivantes décrivent les étapes de configuration d’une instance de Customer AI.
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
-source-git-commit: 165e5ccae5ca78b3912fef1ba0b3fd4567e231fb
+source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
 workflow-type: tm+mt
 source-wordcount: '3342'
-ht-degree: 12%
+ht-degree: 11%
 
 ---
 
@@ -81,7 +80,7 @@ L’aperçu du jeu de données contient des données telles que l’heure de la 
 
 Sélectionner **[!UICONTROL Enregistrer]** pour enregistrer vos brouillons au fur et à mesure que vous vous déplacez dans le workflow. Vous pouvez également enregistrer les configurations de modèle de brouillon et passer à l’étape suivante du workflow. Utilisation **[!UICONTROL Enregistrer et continuer]** pour créer et enregistrer des brouillons lors des configurations de modèle. Cette fonctionnalité vous permet de créer et d’enregistrer des brouillons de la configuration du modèle. Elle est particulièrement utile lorsque vous devez définir de nombreux champs dans le workflow de configuration.
 
-![Le workflow Créer de l’onglet Customer AI des Data Science Services avec les options Enregistrer et Enregistrer et continuer est mis en surbrillance.](../images/user-guide/cai-save-and-exit.png)
+![Le workflow Créer de l’onglet Customer AI des Data Science Services avec les options Enregistrer et Enregistrer et continuer en surbrillance.](../images/user-guide/cai-save-and-exit.png)
 
 ### Complétude du jeu de données {#dataset-completeness}
 

@@ -2,10 +2,9 @@
 keywords: Experience Platform;prise en main;contenu;commerce ai;contenu et commerce ai
 solution: Experience Platform
 title: Prise en main de Content and Commerce AI
-topic-legacy: Getting started
 description: Content and Commerce AI utilise des API d’Adobe I/O. Pour lancer des appels aux API Adobe I/O et à l’intégration de la console I/O, vous devez d’abord suivre le tutoriel sur l’authentification.
 exl-id: e7b0e9bb-a1f1-479c-9e9b-46991f2942e2
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
 workflow-type: tm+mt
 source-wordcount: '592'
 ht-degree: 15%
@@ -50,7 +49,7 @@ Vous êtes redirigé et invité à sélectionner un fichier d’environnement su
 
 ![](./images/click-open.png)
 
-Vous êtes redirigé vers le *Gestion des environnements* avec un nouveau nom d’environnement renseigné. Sélectionnez le nom de l’environnement pour afficher et modifier les variables disponibles dans Postman. Vous devez toujours renseigner manuellement la variable `JWT_TOKEN` et `ACCESS_TOKEN`. Ces valeurs doivent avoir été obtenues lors de la [tutoriel sur l’authentification](https://www.adobe.com/go/platform-api-authentication-en).
+Vous êtes redirigé vers le *Gestion des environnements* avec un nouveau nom d’environnement renseigné. Sélectionnez le nom de l’environnement pour afficher et modifier les variables disponibles dans Postman. Vous devez toujours renseigner manuellement la variable `JWT_TOKEN` et `ACCESS_TOKEN`. Ces valeurs doivent avoir été obtenues lors de la [tutoriel sur l’authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr).
 
 ![](./images/re-direct.png)
 

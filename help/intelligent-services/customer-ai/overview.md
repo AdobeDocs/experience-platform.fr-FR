@@ -3,11 +3,10 @@ keywords: Experience Platform;présentation;service clientèle;rubriques les plu
 solution: Experience Platform, Real-time Customer Data Platform
 feature: Customer AI
 title: Présentation de Customer AI
-topic-legacy: Customer AI Overview
 description: Customer AI est utilisé pour générer des scores de propension personnalisés tels que les taux d’attrition et de conversion de profils individuels à grande échelle. Cette opération s’effectue sans qu’il soit nécessaire de transformer les besoins professionnels en un problème d’apprentissage automatique ou d’avoir recours à un algorithme, à une formation ou à un déploiement.
 landing-page-description: Customer AI est utilisé pour générer des scores de propension personnalisés tels que les taux d’attrition et de conversion de profils individuels à grande échelle.
 exl-id: 3e668103-e2a2-4ce6-a40a-8029a6aaa8dd
-source-git-commit: 165e5ccae5ca78b3912fef1ba0b3fd4567e231fb
+source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
 workflow-type: tm+mt
 source-wordcount: '553'
 ht-degree: 65%

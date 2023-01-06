@@ -3,10 +3,9 @@ keywords: Experience Platform;télécharger des scores;service clientèle;rubriq
 solution: Experience Platform, Real-time Customer Data Platform
 feature: Customer AI
 title: Scores de téléchargement dans Customer AI
-topic-legacy: Downloading scores
 description: Customer AI vous permet de télécharger des scores au format de fichier Parquet.
 exl-id: 08f05565-3fd4-4089-9c41-32467f0be751
-source-git-commit: 165e5ccae5ca78b3912fef1ba0b3fd4567e231fb
+source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
 workflow-type: tm+mt
 source-wordcount: '961'
 ht-degree: 82%

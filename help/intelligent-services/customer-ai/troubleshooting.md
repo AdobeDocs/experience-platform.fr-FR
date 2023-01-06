@@ -3,11 +3,10 @@ keywords: Experience Platform;prise en main;service clientèle;rubriques les plu
 solution: Experience Platform, Real-time Customer Data Platform
 feature: Customer AI
 title: Dépannage des erreurs de Customer AI
-topic-legacy: Getting started
 description: Trouvez des réponses aux erreurs courantes de Customer AI.
 type: Documentation
 exl-id: 37ff4e85-da92-41ca-afd4-b7f3555ebd43
-source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
+source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
 workflow-type: tm+mt
 source-wordcount: '529'
 ht-degree: 0%
@@ -26,7 +25,7 @@ Dans le cas où **[!UICONTROL En échec]** ou **[!UICONTROL Problème de formati
 
 ## Impossible d’accéder à Customer AI dans Chrome incognito
 
-Les erreurs de chargement en mode incognito de Google Chrome sont présentes en raison des mises à jour apportées aux paramètres de sécurité du mode incognito de Google. Le problème est en cours de traitement avec Chrome pour faire d’experience.adobe.com un domaine de confiance.
+Les erreurs de chargement en mode incognito de Google Chrome sont présentes en raison des mises à jour des paramètres de sécurité du mode incognito de Google Chrome. Le problème est en cours de traitement avec Chrome pour faire d’experience.adobe.com un domaine de confiance.
 
 <img src="./images/errors/error.PNG" width="500" /><br />
 
