@@ -5,7 +5,7 @@ title: Guide de l’interface utilisateur des jeux de données
 topic-legacy: datasets
 description: Découvrez comment exécuter des actions courantes lors de l’utilisation de jeux de données dans l’interface utilisateur de Adobe Experience Platform.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 1509d14c0acbf7136d5869d6de2ee2cf9fad450a
 workflow-type: tm+mt
 source-wordcount: '1476'
 ht-degree: 38%
@@ -127,7 +127,7 @@ Pour activer un jeu de données pour Profile, accédez à son **[!UICONTROL Acti
 
 Les libellés d’utilisation des données vous permettent de classer les jeux de données et les champs en fonction des stratégies d’utilisation qui s’appliquent à ces données. Pour en savoir plus sur les libellés, consultez la [Présentation de la gouvernance des données](../../data-governance/home.md) ou reportez-vous au [guide d’utilisation des libellés d’utilisation des données](../../data-governance/labels/overview.md) pour savoir comment appliquer des libellés à vos jeux de données.
 
-## Suppression d’un jeu de données
+## Suppression d’un jeu de données {#delete}
 
 Vous pouvez supprimer un jeu de données en accédant d’abord à son écran **[!UICONTROL Activité du jeu de données]**. Sélectionnez ensuite **[!UICONTROL Suppression d’un jeu de données]** pour le supprimer.
 
