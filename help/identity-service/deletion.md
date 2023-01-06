@@ -1,9 +1,9 @@
 ---
 title: Suppression dans Identity Service
 description: Ce document présente les différents mécanismes que vous pouvez utiliser pour supprimer vos données d’identité dans Experience Platform et explique clairement comment les graphiques d’identités peuvent être affectés.
-source-git-commit: 506d47035622e45f72a8d92aeff6c5ec4e3d0856
+source-git-commit: 17e39f6e9d6e62e22f867de91d571593ba945c71
 workflow-type: tm+mt
-source-wordcount: '1333'
+source-wordcount: '1318'
 ht-degree: 12%
 
 ---
@@ -49,7 +49,7 @@ Le tableau ci-dessous présente la répartition des différences entre la suppre
 | Cas d’utilisation acceptés | Demandes d’accès à des informations personnelles (RGPD, CCPA) uniquement. | Gestion des données stockées dans Experience Platform. |
 | Latence estimée | Jours à semaines | Days |
 | Services concernés | La suppression d’identité unique dans Privacy Service vous permet de choisir si les données seront supprimées d’Identity Service, de Real-Time Customer Profile ou du lac de données. | La suppression d’identité unique dans l’ hygiène des données supprime les données sélectionnées dans Identity Service, Real-Time Customer Profile et le lac de données. |
-| Modèles de suppression | Supprimez une identité d’Identity Service. | Supprimez complètement une identité et tous ses liens correspondants d’Identity Service, de tous les jeux de données ou d’un seul jeu de données. |
+| Modèles de suppression | Supprimez une identité d’Identity Service. | Supprimez une identité d’Identity Service. |
 
 {style=&quot;table-layout:auto&quot;}
 
