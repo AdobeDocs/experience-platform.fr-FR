@@ -2,10 +2,9 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;surveillance;surveiller;flux de données;surveiller l’ingestion;ingestion de données;ingestion de données;afficher les enregistrements;afficher les lots ;
 solution: Experience Platform
 title: Surveillance de l’ingestion des données
-topic-legacy: overview
 description: Ce guide d’utilisation fournit des étapes détaillées sur la manière de surveiller vos données au sein de l’interface utilisateur d’Adobe Experience Platform. Ce guide nécessite que vous possédiez déjà un Adobe ID et un accès à Adobe Experience Platform.
 exl-id: 85711a06-2756-46f9-83ba-1568310c9f73
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '654'
 ht-degree: 34%

@@ -2,11 +2,10 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;ingestion;ingérer des données par lots;tutoriel;ingestion par lots;tutoriel;guide de l’interface utilisateur
 solution: Experience Platform
 title: Ingestion de données dans un Experience Platform
-topic-legacy: tutorial
 type: Tutorial
 description: Adobe Experience Platform vous permet d’importer facilement des données sous forme de fichiers par lots sous la forme de fichiers Parquet ou de données conformes à un schéma de modèle de données d’expérience (XDM) connu.
 exl-id: a4a7358d-b117-4d81-8cb0-3dbbfeccdcbd
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '1322'
 ht-degree: 56%

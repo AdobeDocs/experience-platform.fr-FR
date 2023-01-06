@@ -2,14 +2,13 @@
 keywords: Experience Platform;accueil;rubriques populaires;connexion en continu authentifiée;connexion en continu;créer une connexion en continu authentifiée;créer une connexion en continu authentifiée;ingestion en continu;ingestion ;
 solution: Experience Platform
 title: Création d’une connexion en continu authentifiée
-topic-legacy: tutorial
 type: Tutorial
 description: La collecte de données authentifiées permet aux services Adobe Experience Platform, tels que Real-time Customer Profile et Identity Service, de différencier les enregistrements provenant de sources approuvées de ceux provenant de sources non approuvées.
 exl-id: 14228cd9-4508-4605-8f50-04a74f1c6236
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
-source-wordcount: '117'
-ht-degree: 23%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 

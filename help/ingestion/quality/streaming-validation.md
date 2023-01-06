@@ -2,11 +2,10 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;diffusion en continu;ingestion par flux;validation de l’ingestion par flux;validation;validation de l’ingestion par flux;valider;validation synchrone;validation synchrone;validation asynchrone;validation asynchrone
 solution: Experience Platform
 title: Validation de l’ingestion par flux
-topic-legacy: tutorial
 type: Tutorial
 description: 'L’ingestion par flux vous permet de charger vos données vers Adobe Experience Platform à l’aide de points de terminaison en continu en temps réel. Les API d’ingestion par flux prennent en charge deux modes de validation : synchrone et asynchrone.'
 exl-id: 6e9ac943-6d73-44de-a13b-bef6041d3834
-source-git-commit: ec8eb0e805f7127dd8712fc3fe08057d1d8c10c1
+source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '917'
 ht-degree: 83%
@@ -36,13 +35,13 @@ Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [
 - x-api-key : `{API_KEY}`
 - x-gw-ims-org-id : `{ORG_ID}`
 
-Toutes les ressources dans [!DNL Experience Platform], y compris ceux appartenant à la variable [!DNL Schema Registry], sont isolés dans des environnements de test virtuels spécifiques. Toutes les requêtes envoyées aux API [!DNL Platform] nécessitent un en-tête spécifiant le nom de l’environnement de test dans lequel l’opération sera effectuée :
+Toutes les ressources dans [!DNL Experience Platform], y compris ceux appartenant à la variable [!DNL Schema Registry], sont isolés dans des environnements de test virtuels spécifiques. Toutes les requêtes envoyées aux API [!DNL Platform] nécessitent un en-tête spécifiant le nom de la sandbox dans laquelle l’opération sera effectuée :
 
 - x-sandbox-name : `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Pour plus d’informations sur les environnements de test dans [!DNL Platform], consultez la [documentation de présentation des environnements de test](../../sandboxes/home.md).
+>Pour plus d’informations sur les sandbox dans [!DNL Platform], consultez la [documentation de présentation des sandbox](../../sandboxes/home.md).
 
 Toutes les requêtes contenant un payload (POST, PUT, PATCH) requièrent un en-tête supplémentaire :
 
@@ -206,7 +205,7 @@ Cette section contient des informations relatives à la signification des diffé
 | ----------- | ------------- |
 | 200 | Réussite. Dans le cas d’une validation synchrone, cela signifie que la réponse a passé les contrôles de validation. Dans le cas d’une validation asynchrone, cela signifie que la réponse a simplement bien reçu le message. Les utilisateurs peuvent identifier l’état du message final en observant le jeu de données. |
 | 400 | Erreur. Une erreur s’est produite avec votre demande. Un message d’erreur contenant plus de détails est reçu des services de validation par flux. |
-| 401 | Erreur. Votre requête n’est pas autorisée, il vous faudra effectuer la requête avec un jeton porteur. Pour plus d’informations sur la manière dont demander l’accès, consultez ce [tutoriel](https://www.adobe.com/go/platform-api-authentication-en) ou cet [article de blog](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f). |
+| 401 | Erreur. Votre requête n’est pas autorisée, il vous faudra effectuer la requête avec un jeton porteur. Pour plus d’informations sur la manière dont demander l’accès, consultez ce [tutoriel](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr) ou cet [article de blog](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f). |
 | 500 | Erreur. Une erreur système interne s’est produite. |
 | 501 | Erreur. Cela signifie que la validation synchrone n’est **pas** prise en charge pour cet emplacement. |
 | 503 | Erreur. Le service est actuellement indisponible. Nous conseillons aux clients de réessayer au moins trois fois en utilisant une stratégie de backoff exponentiel. |

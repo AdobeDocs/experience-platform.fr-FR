@@ -2,13 +2,12 @@
 keywords: Experience Platform;accueil;rubriques populaires;notifications d’ingestion de données;notifications;événements d’abonnement;événements d’état d’ingestion de données;événements d’état;abonner;notifications d’état;
 solution: Experience Platform
 title: Notifications d’ingestion de données
-topic-legacy: overview
 description: Pour faciliter la surveillance du processus d’ingestion, Adobe Experience Platform permet de s’abonner à un ensemble d’événements publiés par chaque étape du processus, vous informant de l’état des données ingérées et des échecs possibles.
 exl-id: fd34e1ab-f6f6-44f0-88ee-7020e9322c39
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
-source-wordcount: '677'
-ht-degree: 28%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 

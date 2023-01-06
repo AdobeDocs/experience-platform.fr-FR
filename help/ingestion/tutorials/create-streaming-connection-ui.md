@@ -2,14 +2,13 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;connexion en continu;créer une connexion en continu;guide de l’interface utilisateur;tutoriel;créer une connexion en continu;ingestion en continu;ingestion ;
 solution: Experience Platform
 title: Création d’une connexion en continu à l’aide de l’interface utilisateur
-topic-legacy: tutorial
 type: Tutorial
 description: Ce guide de l’interface utilisateur vous aidera à créer une connexion en continu à l’aide d’Adobe Experience Platform.
 exl-id: af485890-61b1-4c83-8af9-a55e8ed6d69a
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
-source-wordcount: '134'
-ht-degree: 56%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 

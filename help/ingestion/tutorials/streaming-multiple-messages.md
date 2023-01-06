@@ -2,14 +2,13 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;ingestion par flux;ingestion;diffusion en continu de plusieurs messages;plusieurs messages ;
 solution: Experience Platform
 title: Envoi de plusieurs messages dans une seule requête HTTP
-topic-legacy: tutorial
 type: Tutorial
 description: Ce document fournit un tutoriel sur l’envoi de plusieurs messages à Adobe Experience Platform dans une seule requête HTTP à l’aide de l’ingestion par flux.
 exl-id: 04045090-8a2c-42b6-aefa-09c043ee414f
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
-source-wordcount: '1493'
-ht-degree: 75%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 

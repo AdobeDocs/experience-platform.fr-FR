@@ -2,11 +2,10 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;ingestion par flux;ingestion;données de série temporelle;données de série temporelle de diffusion en continu ;
 solution: Experience Platform
 title: Diffusion en continu de données de séries temporelles à l’aide des API d’ingestion en flux continu
-topic-legacy: tutorial
 type: Tutorial
 description: Ce tutoriel vous aidera à commencer à utiliser les API d’ingestion par flux, qui font partie des API d’Adobe Experience Platform Data Ingestion Service.
 exl-id: 720b15ea-217c-4c13-b68f-41d17b54d500
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '1204'
 ht-degree: 66%

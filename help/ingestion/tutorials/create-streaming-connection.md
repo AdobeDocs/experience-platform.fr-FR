@@ -2,14 +2,13 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;connexion en continu;créer une connexion en continu;guide d’api;tutoriel;créer une connexion en continu;ingestion en continu;ingestion ;
 solution: Experience Platform
 title: Création d’une connexion en continu à l’aide de l’API
-topic-legacy: tutorial
 type: Tutorial
 description: Ce tutoriel vous aidera à commencer à utiliser les API d’ingestion par flux, qui font partie des API d’Adobe Experience Platform Data Ingestion Service.
 exl-id: 23c03ace-795f-4a92-a220-c47ee86cec64
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
-source-wordcount: '128'
-ht-degree: 65%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 

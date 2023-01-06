@@ -2,10 +2,9 @@
 keywords: Experience Platform;accueil;rubriques populaires;Qualité des données;Qualité;Qualité;Validation prise en charge;Validation;Validation prise en charge ;
 solution: Experience Platform
 title: Qualité des données
-topic-legacy: overview
 description: Le document suivant résume les comportements de vérification et de validation pris en charge pour l’ingestion par lots et par flux dans Adobe Experience Platform.
 exl-id: 7ef40859-235a-4759-9492-c63e5fd80c8e
-source-git-commit: 7857b9a82dc1b5e12c9f8d757f6967b926124ec4
+source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '425'
 ht-degree: 57%

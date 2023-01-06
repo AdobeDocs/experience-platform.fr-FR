@@ -2,13 +2,12 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;ingestion par lots;ingestion par lots;ingestion partielle;ingestion partielle;récupération d’une erreur;récupérer une erreur;erreur;ingestion par lots partielle;ingestion par lots partielle;ingestion;ingestion;diagnostics d’erreur;récupérer les diagnostics d’erreur;obtenir des diagnostics d’erreur;obtenir une erreur;obtenir des erreurs;récupérer des erreurs;récupérer des erreurs;
 solution: Experience Platform
 title: Récupération des diagnostics d’erreur d’ingestion de données
-topic-legacy: overview
 description: Ce document fournit des informations sur la surveillance de l’ingestion par lots, la gestion des erreurs d’ingestion par lots partielle, ainsi qu’une référence pour les types d’ingestion par lots partielle.
 exl-id: b885fb00-b66d-453b-80b7-8821117c2041
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
-source-wordcount: '979'
-ht-degree: 40%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 

@@ -2,10 +2,9 @@
 keywords: Experience Platform;accueil;rubriques populaires
 solution: Experience Platform
 title: Connecteurs source
-topic-legacy: overview
 description: Les connexions source vous permettent d’authentifier vos systèmes de stockage et vos services CRM, de définir des heures d’ingestion et de gérer le débit d’ingestion des données.
 exl-id: 6e4f1688-6fe8-4ee7-996e-bcdf942cea17
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '135'
 ht-degree: 82%

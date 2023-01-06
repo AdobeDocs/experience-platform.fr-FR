@@ -2,14 +2,13 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;ingestion par flux;ingestion;données d’enregistrement;données d’enregistrement de diffusion en continu;données d’enregistrement ;
 solution: Experience Platform
 title: Diffusion en continu de données d’enregistrement à l’aide des API d’ingestion en flux continu
-topic-legacy: tutorial
 type: Tutorial
 description: Ce tutoriel vous aidera à commencer à utiliser les API d’ingestion par flux, qui font partie des API d’Adobe Experience Platform Data Ingestion Service.
 exl-id: 097dfd5a-4e74-430d-8a12-cac11b1603aa
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
-source-wordcount: '1025'
-ht-degree: 73%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 

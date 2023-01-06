@@ -2,13 +2,12 @@
 keywords: Experience Platform;accueil;rubriques populaires;ingestion des données;emplacement des données;Emplacement Des Données;Gestion des données;gestion des données;Traçabilité;traçabilité;lot;Lot;données ingérées
 solution: Experience Platform
 title: Présentation de Data Ingestion
-topic-legacy: overview
 description: Ce document présente les trois principales manières dont les données sont ingérées dans Platform, avec des liens vers leur documentation de présentation respectives pour plus d’informations.
 exl-id: c189dd4a-5c59-4189-a18c-a3e45a9ff01d
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
-source-wordcount: '461'
-ht-degree: 100%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
