@@ -2,13 +2,12 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;Adobe Experience Platform;guide d’utilisation;guide de l’interface utilisateur des workflows;guide d’interface utilisateur des workflows;workflows;guide d’utilisation des workflows ;
 solution: Experience Platform
 title: Guide de l’interface utilisateur des workflows
-topic-legacy: ui guide
 description: Découvrez comment suivre des processus en plusieurs étapes pour effectuer des opérations courantes dans l’interface utilisateur de Adobe Experience Platform.
 exl-id: f1a3ea83-09c9-48df-9493-62f03b403a95
-source-git-commit: d380b4d2a75efb1c34010a30c619649a7b99643c
+source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
 workflow-type: tm+mt
 source-wordcount: '307'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -18,7 +17,7 @@ Le **[!UICONTROL Workflows]** dans l’interface utilisateur de Adobe Experience
 
 ![workflows](./images/workflows/workflows.png)
 
-## [!UICONTROL Ingestion des données]
+## [!UICONTROL Ingestion de données]
 
 Le **[!UICONTROL Mappage du fichier CSV au schéma XDM]** workflow vous permet de charger et de convertir un fichier CSV en schéma de modèle de données d’expérience (XDM). Vous trouverez plus d’informations sur ce processus dans le tutoriel sur [mappage d’un fichier CSV à un schéma XDM](../ingestion/tutorials/map-csv/overview.md).
 

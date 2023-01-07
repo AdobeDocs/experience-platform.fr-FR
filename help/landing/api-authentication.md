@@ -2,11 +2,10 @@
 keywords: Experience Platform;accueil;rubriques populaires;Authentification;accès
 solution: Experience Platform
 title: Authentification et accès aux API Experience Platform
-topic-legacy: tutorial
 type: Tutorial
 description: Ce document fournit un tutoriel détaillé pour accéder à un compte de développeur Adobe Experience Platform afin d’effectuer des appels API Experience Platform.
 exl-id: dfe8a7be-1b86-4d78-a27e-87e4ed8b3d42
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
 workflow-type: tm+mt
 source-wordcount: '1272'
 ht-degree: 18%
@@ -81,7 +80,7 @@ L’écran **[!UICONTROL Ajouter une API]** s’affiche. Sélectionnez l’icôn
 >
 >A une certaine étape du processus lié ci-dessus, votre navigateur télécharge automatiquement une clé privée et un certificat public associé. Notez où cette clé privée est stockée sur votre ordinateur, puisqu’elle est requise à une étape ultérieure de ce tutoriel.
 
-### Collecte des informations d’identification
+### Collectez les informations d’identification de .
 
 Une fois l’API ajoutée au projet, la variable **[!UICONTROL API Experience Platform]** La page du projet affiche les informations d’identification suivantes, requises dans tous les appels aux API Experience Platform :
 
@@ -203,4 +202,4 @@ Si votre réponse est similaire à celle illustrée ci-dessous, vos informations
 
 En lisant ce document, vous avez rassemblé et testé avec succès vos informations d’identification d’accès pour les API Platform. Vous pouvez désormais suivre les exemples d’appels API fournis dans le [documentation](../landing/documentation/overview.md).
 
-Outre les valeurs d’authentification que vous avez collectées dans ce tutoriel, de nombreuses API Platform nécessitent également un `{SANDBOX_NAME}` à fournir en tant qu’en-tête. Pour plus d’informations, consultez la [présentation des environnements de test](../sandboxes/home.md).
+Outre les valeurs d’authentification que vous avez collectées dans ce tutoriel, de nombreuses API Platform nécessitent également un `{SANDBOX_NAME}` à fournir en tant qu’en-tête. Pour plus d’informations, consultez la [Présentation des sandbox](../sandboxes/home.md).

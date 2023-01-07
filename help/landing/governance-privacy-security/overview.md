@@ -2,10 +2,9 @@
 keywords: Experience Platform;accueil;rubriques populaires
 solution: Experience Platform
 title: Présentation de la gouvernance, de la confidentialité et de la sécurité
-topic-legacy: overview
 description: Adobe Experience Platform fournit plusieurs services et outils qui vous permettent de contrôler en toute confiance vos données d’expérience collectées afin de respecter vos pratiques commerciales, vos obligations légales et votre processus de développement.
 exl-id: 1ab5a436-c5dd-4e7a-aba1-549f0613f224
-source-git-commit: f456b28016af6d2978933deac68f45c2f8d37f80
+source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
 workflow-type: tm+mt
 source-wordcount: '855'
 ht-degree: 18%
@@ -70,9 +69,9 @@ L’intégrité et la sécurité de vos données sont indispensables à votre en
 
 Toutes les données de Platform sont chiffrées en transit et au repos. Consultez le document sur [cryptage des données dans Platform](./encryption.md) pour plus d’informations.
 
-### Contrôle d&#39;accès {#access-control}
+### Contrôle d’accès {#access-control}
 
-Experience Platform utilise Adobe Admin Console pour fournir un contrôle d’accès en fonction du rôle à diverses fonctionnalités de Platform. Cette fonctionnalité exploite les profils de produit dans Admin Console, liant les utilisateurs à des autorisations et des environnements de test.
+Experience Platform utilise Adobe Admin Console pour fournir un contrôle d’accès en fonction du rôle à diverses fonctionnalités de Platform. Cette fonctionnalité exploite les profils de produit dans Admin Console, liant les utilisateurs à des autorisations et des sandbox.
 
 Pour plus d’informations, consultez la [présentation du contrôle d’accès](../../access-control/home.md).
 
@@ -82,7 +81,7 @@ Experience Platform est conçu pour enrichir les applications d’expérience n
 
 Pour répondre aux besoins de flexibilité en matière de développement, Experience Platform fournit des environnements de test qui divisent une instance de plateforme unique en environnements virtuels distincts pour vous aider à développer vos applications d’expérience numérique en fonction de votre propre cycle de vie de développement.
 
-Pour plus d’informations, consultez la [présentation des environnements de test](../../sandboxes/home.md).
+Pour plus d’informations, consultez la [Présentation des sandbox](../../sandboxes/home.md).
 
 ## Étapes suivantes
 
