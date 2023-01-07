@@ -6,10 +6,10 @@ description: Ce document fournit un tutoriel sur la définition d’une relation
 topic-legacy: tutorial
 type: Tutorial
 exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 3b16c0766c7d54b18ceea4c9f40ccb370b9f9685
 workflow-type: tm+mt
-source-wordcount: '1173'
-ht-degree: 22%
+source-wordcount: '1109'
+ht-degree: 16%
 
 ---
 
@@ -32,7 +32,7 @@ ht-degree: 22%
 
 Comprendre les relations entre vos clients et leurs interactions avec votre marque sur divers canaux est un aspect important d’Adobe Experience Platform. Définir ces relations au sein de la structure de votre [!DNL Experience Data Model] Les schémas (XDM) vous permettent d’obtenir des informations complexes sur les données de vos clients.
 
-Bien que les relations de schéma puissent être déduites par l’utilisation du schéma d’union et [!DNL Real-Time Customer Profile], cela s’applique uniquement aux schémas qui partagent la même classe. Pour établir une relation entre deux schémas appartenant à des classes différentes, un champ de relation dédié doit être ajouté à un schéma source, qui référence l’identité d’un schéma de destination.
+Bien que les relations de schéma puissent être déduites par l’utilisation du schéma d’union et [!DNL Real-Time Customer Profile], cela s’applique uniquement aux schémas qui partagent la même classe. Pour établir une relation entre deux schémas appartenant à des classes différentes, un champ de relation dédié doit être ajouté à un schéma source, qui référence l’identité de l’autre schéma associé.
 
 Ce document fournit un tutoriel sur la définition d’une relation entre deux schémas à l’aide de l’éditeur de schémas dans la variable [!DNL Experience Platform] de l’interface utilisateur. Les étapes de la définition des relations de schémas à l’aide de l’API sont décrites dans le tutoriel sur la [définition d’une relation à l’aide de l’API Schema Registry](relationship-api.md).
 
@@ -48,7 +48,7 @@ Ce tutoriel nécessite une compréhension pratique de [!DNL XDM System] et de l�
 * [Principes de base de composition des schémas](../schema/composition.md) : une présentation des blocs de création de schémas XDM.
 * [Créez un schéma à l’aide du [!DNL Schema Editor]](create-schema-ui.md): Un tutoriel sur les principes de base de l’utilisation de la fonction [!DNL Schema Editor].
 
-## Définition d’un schéma source et de destination
+## Définition d’un schéma source et de référence
 
 Vous devez avoir déjà créé les deux schémas qui seront définis dans la relation. À des fins de démonstration, ce tutoriel crée une relation entre les membres du programme de fidélité d’une organisation (définis dans un &quot;[!DNL Loyalty Members]&quot;&quot; et leur hôtel préféré (défini dans un &quot;)[!DNL Hotels]&quot;).
 
@@ -56,55 +56,39 @@ Vous devez avoir déjà créé les deux schémas qui seront définis dans la rel
 >
 >Pour établir une relation, les deux schémas doivent avoir défini des identités Principales et être activés pour [!DNL Real-Time Customer Profile]. Voir la section sur [activation d’un schéma à utiliser dans Profile](./create-schema-ui.md#profile) dans le tutoriel sur la création de schémas si vous avez besoin de conseils sur la configuration de vos schémas en conséquence.
 
-Les relations de schéma sont représentées par un champ dédié dans un **schéma source** qui fait référence à un autre champ d’un **schéma de destination**. Dans les étapes suivantes, &quot;[!DNL Loyalty Members]&quot; sera le schéma source, tandis que &quot;[!DNL Hotels]&quot; agira comme schéma de destination.
+Les relations de schéma sont représentées par un champ dédié dans un **schéma source** qui pointe vers un autre champ dans un **schéma de référence**. Dans les étapes suivantes, &quot;[!DNL Loyalty Members]&quot; sera le schéma source, tandis que &quot;[!DNL Hotels]&quot; agira comme schéma de référence.
 
-À titre de référence, les sections suivantes décrivent la structure de chaque schéma utilisé dans ce tutoriel avant de définir une relation.
+Les sections suivantes décrivent la structure de chaque schéma utilisé dans ce tutoriel avant la définition d’une relation.
 
 ### [!DNL Loyalty Members] schema
 
-Le schéma source &quot;[!DNL Loyalty Members]&quot; est basé sur la variable [!DNL XDM Individual Profile] et est le schéma qui a été créé dans le tutoriel pour [création d’un schéma dans l’interface utilisateur](create-schema-ui.md). Il comprend un `loyalty` sous `_tenantId` qui comprend plusieurs champs spécifiques à la fidélité. Un de ces champs, `loyaltyId`, sert d’identité Principale pour le schéma sous le [!UICONTROL Email] espace de noms. Comme vous pouvez le voir sous **[!UICONTROL Propriétés du schéma]**, ce schéma a été activé pour une utilisation dans [!DNL Real-Time Customer Profile].
+Le schéma source &quot;[!DNL Loyalty Members]&quot; est basé sur la variable [!DNL XDM Individual Profile] , contenant un champ qui décrit les membres d’un programme de fidélité. Un de ces champs, `personalEmail.addess`, sert d’identité Principale pour le schéma sous le [!UICONTROL Email] espace de noms. Comme vous pouvez le voir sous **[!UICONTROL Propriétés du schéma]**, ce schéma a été activé pour une utilisation dans [!DNL Real-Time Customer Profile].
 
 ![](../images/tutorials/relationship/loyalty-members.png)
 
 ### [!DNL Hotels] schema
 
-Le schéma de destination &quot;[!DNL Hotels]&quot; est basé sur un[!DNL Hotels]&quot; et contient des champs qui décrivent un hôtel.
+Le schéma de référence &quot;[!DNL Hotels]&quot; est basé sur un[!DNL Hotels]&quot; et contient des champs qui décrivent un hôtel. Pour participer à une relation, une identité Principale doit également être définie pour le schéma de référence et activée pour [!UICONTROL Profil]. Dans ce cas, `_tenantId.hotelId`agit comme l’identité Principale du schéma, à l’aide d’un &quot;[!DNL Hotel ID]&quot; identity namespace.
 
-![](../images/tutorials/relationship/hotels.png)
-
-Pour participer à une relation, le schéma de destination doit avoir une identité Principale. Dans cet exemple, la variable `hotelId` est utilisé comme identité Principale, à l’aide d’un espace de noms d’identité personnalisé &quot;ID d’hôtel&quot;.
-
-![Identité Principale de l&#39;hôtel](../images/tutorials/relationship/hotel-identity.png)
+![Activation pour Profile](../images/tutorials/relationship/hotels.png)
 
 >[!NOTE]
 >
 >Pour savoir comment créer des espaces de noms d’identité personnalisés, reportez-vous à la section [Documentation d’Identity Service](../../identity-service/namespaces.md#manage-namespaces).
 
-Une fois l’identité Principale définie, le schéma de destination doit être activé pour [!DNL Real-Time Customer Profile].
-
-![Activation pour Profile](../images/tutorials/relationship/hotel-profile.png)
-
-## Création d’un groupe de champs de schéma de relation
+## Création d’un groupe de champs de relation
 
 >[!NOTE]
 >
->Cette étape n’est nécessaire que si votre schéma source ne dispose pas d’un champ de type chaîne dédié à utiliser comme référence au schéma de destination. Si ce champ est déjà défini dans votre schéma source, passez à l’étape suivante de la [définition d’un champ de relation](#relationship-field).
+>Cette étape n’est nécessaire que si votre schéma source ne dispose pas d’un champ de type chaîne dédié à utiliser comme pointeur vers l’identité Principale du schéma de référence. Si ce champ est déjà défini dans votre schéma source, passez à l’étape suivante de la [définition d’un champ de relation](#relationship-field).
 
-Pour définir une relation entre deux schémas, le schéma source doit disposer d’un champ dédié à utiliser comme référence au schéma de destination. Vous pouvez ajouter ce champ au schéma source en créant un nouveau groupe de champs de schéma.
+Pour définir une relation entre deux schémas, le schéma source doit disposer d’un champ dédié qui indiquera l’identité Principale du schéma de référence. Vous pouvez ajouter ce champ au schéma source en créant un nouveau groupe de champs de schéma ou en étendant un autre existant.
 
-Commencez par sélectionner **[!UICONTROL Ajouter]** dans le **[!UICONTROL Groupes de champs]** .
-
-![](../images/tutorials/relationship/loyalty-add-field-group.png)
-
-Le [!UICONTROL Ajouter un groupe de champs] s’affiche. À partir de là, sélectionnez **[!UICONTROL Créer un groupe de champs]**. Dans les champs de texte qui s&#39;affichent, saisissez le nom d&#39;affichage et la description du nouveau groupe de champs. Sélectionner **[!UICONTROL Ajouter des groupes de champs]** lorsque vous avez terminé.
-
-![](../images/tutorials/relationship/create-field-group.png)
-
-Le canevas réapparaît avec &quot;[!DNL Favorite Hotel]&quot; apparaissant dans la variable **[!UICONTROL Groupes de champs]** . Sélectionnez le nom du groupe de champs, puis sélectionnez **[!UICONTROL Ajouter un champ]** en regard du niveau racine `Loyalty Members` champ .
+Dans le cas de la fonction [!DNL Loyalty Members] schéma, un nouveau `preferredHotel` sera ajouté pour indiquer l’hôtel préféré du membre du programme de fidélité pour les visites de la société. Sélectionnez d’abord l’icône Plus (**+**) en regard du nom du schéma source.
 
 ![](../images/tutorials/relationship/loyalty-add-field.png)
 
-Un nouveau champ s’affiche dans la zone de travail sous `_tenantId` espace de noms. Sous **[!UICONTROL Propriétés du champ]**, indiquez un nom de champ et un nom d’affichage pour le champ, puis définissez son type sur &quot;[!UICONTROL Chaîne]&quot;.
+Un nouvel espace réservé de champ s’affiche dans la zone de travail. Sous **[!UICONTROL Propriétés du champ]**, indiquez un nom de champ et un nom d’affichage pour le champ, puis définissez son type sur &quot;[!UICONTROL Chaîne]&quot;. Sous **[!UICONTROL Attribuer à]**, sélectionnez un groupe de champs existant à étendre ou saisissez un nom unique pour créer un groupe de champs. Dans ce cas, un nouveau &quot;[!DNL Preferred Hotel]&quot; est créé.
 
 ![](../images/tutorials/relationship/relationship-field-details.png)
 
@@ -112,7 +96,7 @@ Lorsque vous avez terminé, sélectionnez **[!UICONTROL Appliquer]**.
 
 ![](../images/tutorials/relationship/relationship-field-apply.png)
 
-La mise à jour `favoriteHotel` s’affiche dans la zone de travail. Sélectionner **[!UICONTROL Enregistrer]** pour finaliser les modifications apportées au schéma.
+La mise à jour `preferredHotel` apparaît dans la zone de travail, située sous un `_tenantId` car il s’agit d’un champ personnalisé. Sélectionner **[!UICONTROL Enregistrer]** pour finaliser les modifications apportées au schéma.
 
 ![](../images/tutorials/relationship/relationship-field-save.png)
 
@@ -124,15 +108,15 @@ Une fois que le champ de référence dédié de votre schéma source est défini
 >
 >Les étapes ci-dessous expliquent comment définir un champ de relation à l’aide des commandes de rail droit dans la zone de travail. Si vous avez accès à l’édition B2B de Real-Time CDP, vous pouvez également définir une relation un-à-un à l’aide de la variable [même boîte de dialogue](./relationship-b2b.md#relationship-field) comme lors de la création de relations multiples-à-un.
 
-Sélectionnez la `favoriteHotel` dans la zone de travail, puis faites défiler l’écran vers le bas sous **[!UICONTROL Propriétés du champ]** jusqu’à ce que la variable **[!UICONTROL Relation]** s’affiche. Cochez la case pour afficher les paramètres requis pour la configuration d’un champ de relation.
+Sélectionnez la `preferredHotel` dans la zone de travail, puis faites défiler l’écran vers le bas sous **[!UICONTROL Propriétés du champ]** jusqu’à ce que la variable **[!UICONTROL Relation]** s’affiche. Cochez la case pour afficher les paramètres requis pour la configuration d’un champ de relation.
 
 ![](../images/tutorials/relationship/relationship-checkbox.png)
 
-Sélectionnez la liste déroulante pour **[!UICONTROL Schéma de référence]** et sélectionnez le schéma de destination de la relation (&quot;[!DNL Hotels]&quot; dans cet exemple). Si le schéma de destination est activé pour [!DNL Profile], la variable **[!UICONTROL Espace de noms d’identité de référence]** est automatiquement défini sur l’espace de noms de l’identité Principale du schéma de destination. Si aucune identité principale n’est définie pour le schéma, vous devez sélectionner manuellement l’espace de noms que vous prévoyez d’utiliser dans le menu déroulant. Sélectionner **[!UICONTROL Appliquer]** lorsque vous avez terminé.
+Sélectionnez la liste déroulante pour **[!UICONTROL Schéma de référence]** et sélectionnez le schéma de référence de la relation (&quot;[!DNL Hotels]&quot; dans cet exemple). Sous **[!UICONTROL Espace de noms d’identité de référence]**, sélectionnez l’espace de noms du champ d’identité du schéma de référence (ici : &quot;[!DNL Hotel ID]&quot;). Sélectionner **[!UICONTROL Appliquer]** lorsque vous avez terminé.
 
 ![](../images/tutorials/relationship/reference-schema-id-namespace.png)
 
-Le `favoriteHotel` est maintenant mis en surbrillance en tant que relation dans la zone de travail, affichant le nom et l’espace de noms d’identité de référence du schéma de destination. Sélectionner **[!UICONTROL Enregistrer]** pour enregistrer vos modifications et terminer le processus.
+Le `preferredHotel` est maintenant mis en surbrillance en tant que relation dans la zone de travail, affichant le nom du schéma de référence. Sélectionner **[!UICONTROL Enregistrer]** pour enregistrer vos modifications et terminer le processus.
 
 ![](../images/tutorials/relationship/relationship-save.png)
 

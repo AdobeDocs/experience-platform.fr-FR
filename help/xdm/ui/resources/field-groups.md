@@ -5,9 +5,9 @@ title: Création et modification de groupes de champs de schéma dans l’interf
 description: Découvrez comment créer et modifier des groupes de champs de schéma dans l’interface utilisateur de l’Experience Platform.
 topic-legacy: user guide
 exl-id: 928d70a6-0468-4fb7-a53a-6686ac77f2a3
-source-git-commit: 1d4eba9f566dc1926afd7886c6ad2808ed91ea13
+source-git-commit: 57e7386ad631f2ce3d9b28d2532655a2668bdcaa
 workflow-type: tm+mt
-source-wordcount: '781'
+source-wordcount: '802'
 ht-degree: 0%
 
 ---
@@ -34,11 +34,13 @@ Une fois que le schéma est ouvert dans le [!DNL Schema Editor], sélectionnez *
 
 ![](../../images/ui/resources/field-groups/add-field-group.png)
 
-Une boîte de dialogue s’affiche, affichant une liste des groupes de champs existants pour votre organisation. Dans la partie supérieure de la boîte de dialogue, sélectionnez **[!UICONTROL Créer un groupe de champs]**. Vous pouvez fournir ici un **[!UICONTROL Nom d’affichage]** et **[!UICONTROL Description]** pour le groupe de champs. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Ajouter un groupe de champs]**.
+Dans la boîte de dialogue qui s’affiche, sélectionnez **[!UICONTROL Créer un groupe de champs]**. Vous pouvez fournir ici un **[!UICONTROL Nom d’affichage]** et **[!UICONTROL Description]** pour le groupe de champs. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Ajouter des groupes de champs]**.
 
 ![](../../images/ui/resources/field-groups/create-field-group.png)
 
 Le [!DNL Schema Editor] réapparaît, avec le nouveau groupe de champs répertorié dans le rail de gauche. Puisqu’il s’agit d’un nouveau groupe de champs, il ne fournit actuellement aucun champ au schéma et le canevas reste donc inchangé. Vous pouvez maintenant commencer. [ajout de champs au groupe de champs](#add-fields).
+
+![](../../images/ui/resources/field-groups/field-group-added.png)
 
 ## Modifier un groupe de champs existant {#edit}
 
@@ -58,13 +60,17 @@ Une fois le schéma ouvert dans l’éditeur, vous pouvez commencer. [ajout de c
 >
 >Cette section porte sur l’ajout de champs à des groupes de champs personnalisés. Pour plus d’informations sur l’ajout de champs personnalisés à des groupes de champs standard, reportez-vous à la section [guide de l’interface utilisateur des schémas](./schemas.md#custom-fields-for-standard-groups).
 
-Pour ajouter des champs à un groupe de champs personnalisé dans le [!DNL Schema Editor], sélectionnez tout d’abord le nom du groupe de champs dans le rail de gauche, puis sélectionnez la variable **plus (+)** en regard du nom du schéma dans la zone de travail.
+Pour ajouter des champs à un groupe de champs personnalisé, commencez par sélectionner l’option **plus (+)** en regard du nom du schéma dans la zone de travail.
 
 ![](../../images/ui/resources/field-groups/add-field.png)
 
-A **[!UICONTROL Nouveau champ]** apparaît dans la zone de travail et le rail de droite se met à jour pour afficher les commandes permettant de configurer les propriétés du champ. Consultez le guide sur la [définition des champs dans l’interface utilisateur](../fields/overview.md#define) pour connaître les étapes spécifiques à la configuration et à l’ajout du champ au groupe de champs.
+A **[!UICONTROL Nouveau champ]** apparaît dans la zone de travail et le rail de droite se met à jour pour afficher les commandes permettant de configurer les propriétés du champ. Consultez le guide sur la [définition des champs dans l’interface utilisateur](../fields/overview.md#define) pour obtenir des instructions spécifiques sur la configuration de différents types de champ.
 
-Continuez à ajouter autant de champs que nécessaire au groupe de champs. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Enregistrer]** pour enregistrer le schéma et le groupe de champs.
+Sous **[!UICONTROL Attribuer à]**, sélectionnez la variable **[!UICONTROL Groupe de champs]** , puis utilisez la liste déroulante pour sélectionner le groupe de champs de votre choix dans la liste. Vous pouvez commencer à saisir le nom du groupe de champs pour affiner les résultats.
+
+![](../../images/ui/resources/field-groups/select-field-group.png)
+
+Une fois le champ ajouté au schéma, il est affecté au groupe de champs sélectionné. Continuez à ajouter autant de champs que nécessaire au groupe de champs. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Enregistrer]** pour enregistrer le schéma et le groupe de champs.
 
 ![](../../images/ui/resources/field-groups/complete-field-group.png)
 

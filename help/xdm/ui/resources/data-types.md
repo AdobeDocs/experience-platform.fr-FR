@@ -6,9 +6,9 @@ topic-legacy: tutorial
 type: Tutorial
 description: Découvrez comment créer et modifier des types de données dans l’interface utilisateur de l’Experience Platform.
 exl-id: 2c917154-c425-463c-b8c8-04ba37d9247b
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 81f700f7c68ba9ff2fc0a99bf62031bf3fe0c95f
 workflow-type: tm+mt
-source-wordcount: '1162'
+source-wordcount: '1156'
 ht-degree: 0%
 
 ---
@@ -66,7 +66,7 @@ Sélectionnez le type de données à modifier dans la liste pour ouvrir le rail 
 
 ## Ajouter des champs au type de données {#add-fields}
 
-Pour commencer à ajouter des champs au type de données, sélectionnez la variable **plus (+)** en regard du champ de niveau racine dans la zone de travail. Un nouveau champ s’affiche en dessous et le rail de droite se met à jour pour afficher les commandes du nouveau champ.
+Pour commencer à ajouter des champs au type de données, sélectionnez la variable **plus (+)** en regard du champ de niveau racine dans la zone de travail. Un nouveau champ s’affiche ci-dessous et le rail de droite se met à jour pour afficher les commandes du nouveau champ.
 
 ![](../../images/ui/resources/data-types/new-field.png)
 
@@ -88,11 +88,11 @@ Cela montre à quel point les types de données peuvent être flexibles pour dé
 
 Une fois que vous avez terminé d’ajouter des champs au type de données, sélectionnez **[!UICONTROL Enregistrer]** pour enregistrer vos modifications et ajouter le type de données au [!DNL Schema Library].
 
-## Ajouter le type de données à une classe ou à un groupe de champs
+## Ajout du type de données à un schéma
 
 Une fois que vous avez créé un type de données, vous pouvez commencer à l’utiliser dans vos schémas. Les schémas XDM étant composés d’une classe et de zéro ou plusieurs groupes de champs, les champs fournis par un type de données ne peuvent pas être ajoutés directement à un schéma. Ils doivent être inclus dans une classe ou un groupe de champs.
 
-Suivez d’abord les étapes décrites dans la section [ajout d’un champ à une classe](./classes.md#add-fields) ou [ajout d’un champ à un groupe de champs](./field-groups.md#add-fields). Lorsque vous choisissez la variable **[!UICONTROL Type]** pour le nouveau champ, sélectionnez le nom de votre type de données dans le menu déroulant.
+Suivez d’abord les étapes décrites dans la section [ajout d’un champ à une classe](./classes.md#add-fields) ou [ajout d’un champ à un groupe de champs](./field-groups.md#add-fields). Vous pouvez également commencer [ajout direct d’un champ à un schéma](./schemas.md#add-individual-fields) et sélectionnez la classe ou le groupe de champs parent à partir de là. Lorsque vous choisissez la variable **[!UICONTROL Type]** pour le nouveau champ, sélectionnez le nom de votre type de données dans le menu déroulant.
 
 ## Conversion d’un objet à plusieurs champs en un type de données {#convert}
 
@@ -102,7 +102,7 @@ Pour convertir un champ de type objet en type de données, sélectionnez le cham
 
 ![](../../images/ui/resources/data-types/convert-object.png)
 
-Le canevas met à jour le type de données du champ à partir de &quot;[!UICONTROL Objet]&quot; au nouveau type de données. Les sous-champs comportent également de petites icônes de verrouillage, indiquant qu’ils ne sont plus des champs individuels, mais qu’ils font partie d’un type de données à champs multiples. Cette structure peut désormais être réutilisée dans d’autres classes et groupes de champs en sélectionnant ce type de données dans le **[!UICONTROL Type]** de la liste déroulante lors de la définition d’un nouveau champ.
+Le canevas met à jour le type de données du champ à partir de &quot;[!UICONTROL Objet]&quot; au nouveau type de données. Cette structure peut désormais être réutilisée dans d’autres classes et groupes de champs en sélectionnant ce type de données dans le **[!UICONTROL Type]** de la liste déroulante lors de la définition d’un nouveau champ.
 
 ![](../../images/ui/resources/data-types/converted.png)
 

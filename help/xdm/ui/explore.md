@@ -1,31 +1,31 @@
 ---
 keywords: Experience Platform;accueil;rubriques populaires;ui;IU;XDM;système XDM;modèle de données d’expérience;modèle de données d’expérience;modèle de données d’expérience;modèle de données;modèle de données;explorer;classe;groupe de champs;type de données;schéma;
 solution: Experience Platform
-title: Exploration des ressources XDM dans l’interface utilisateur
+title: Exploration des ressources de schéma dans l’interface utilisateur
 description: Découvrez comment explorer les schémas, classes, groupes de champs de schéma et types de données existants dans l’interface utilisateur de l’Experience Platform.
 topic-legacy: tutorial
 type: Tutorial
 exl-id: b527b2a0-e688-4cfe-a176-282182f252f2
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 744d87c82b7e7e06782c6c1b9db2ec46a5444d28
 workflow-type: tm+mt
-source-wordcount: '1022'
+source-wordcount: '957'
 ht-degree: 0%
 
 ---
 
-# Exploration des ressources XDM dans l’interface utilisateur
+# Exploration des ressources de schéma dans l’interface utilisateur
 
-Dans Adobe Experience Platform, toutes les ressources du modèle de données d’expérience (XDM) sont stockées dans la variable [!DNL Schema Library], y compris les ressources standard fournies par Adobe et les ressources personnalisées définies par votre organisation. Dans l’interface utilisateur de l’Experience Platform, vous pouvez afficher la structure et les champs de tout schéma, classe, groupe de champs de schéma ou type de données existant dans la variable [!DNL Schema Library]. Cela s’avère particulièrement utile lors de la planification et de la préparation de l’ingestion de données, dans la mesure où l’interface utilisateur fournit des informations sur les types de données attendus et les cas d’utilisation de chaque champ fourni par ces ressources XDM.
+Dans Adobe Experience Platform, toutes les ressources de schéma du modèle de données d’expérience (XDM) sont stockées dans la variable [!DNL Schema Library], y compris les ressources standard fournies par Adobe et les ressources personnalisées définies par votre organisation. Dans l’interface utilisateur de l’Experience Platform, vous pouvez afficher la structure et les champs de tout schéma, classe, groupe de champs ou type de données existant dans la variable [!DNL Schema Library]. Cela s’avère particulièrement utile lors de la planification et de la préparation de l’ingestion de données, dans la mesure où l’interface utilisateur fournit des informations sur les types de données attendus et les cas d’utilisation de chaque champ fourni par ces ressources XDM.
 
 Ce tutoriel décrit les étapes à suivre pour explorer les schémas, classes, groupes de champs et types de données existants dans l’interface utilisateur de l’Experience Platform.
 
-## Recherche d’une ressource XDM {#lookup}
+## Recherche d’une ressource de schéma {#lookup}
 
-Dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Schémas]** dans le volet de navigation de gauche. Le [!UICONTROL Schémas] workspace fournit une **[!UICONTROL Parcourir]** pour explorer toutes les ressources XDM existantes dans votre entreprise, ainsi que des onglets dédiés supplémentaires pour l’exploration. **[!UICONTROL Classes]**, **[!UICONTROL Groupes de champs]**, et **[!UICONTROL Types de données]** spécifiquement.
+Dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Schémas]** dans le volet de navigation de gauche. Le [!UICONTROL Schémas] workspace fournit une **[!UICONTROL Parcourir]** pour explorer tous les schémas de votre organisation, ainsi que d’autres onglets dédiés à l’exploration. **[!UICONTROL Classes]**, **[!UICONTROL Groupes de champs]**, et **[!UICONTROL Types de données]** respectivement.
 
 ![](../images/ui/explore/tabs.png)
 
-Sur le [!UICONTROL Parcourir] vous pouvez utiliser l’icône de filtre (![Image de l’icône de filtre](../images/ui/explore/icon.png)) pour afficher les commandes dans le rail de gauche afin de réduire les résultats répertoriés.
+Icône Filtrer (![Image de l’icône de filtre](../images/ui/explore/icon.png)) affiche des commandes dans le rail de gauche pour réduire les résultats répertoriés. Les contrôles affichés diffèrent selon le type de ressource répertoriée.
 
 Par exemple, pour filtrer la liste afin de n’afficher que les types de données standard fournis par Adobe, sélectionnez **[!UICONTROL Type de données]** et **[!UICONTROL Adobe]** sous le **[!UICONTROL Type]** et **[!UICONTROL Propriétaire]** , respectivement.
 
@@ -33,15 +33,15 @@ Le **[!UICONTROL Inclus dans Profile]** activer/désactiver permet de filtrer le
 
 ![](../images/ui/explore/filter.png)
 
-Vous pouvez également utiliser la barre de recherche pour affiner davantage les résultats. Lorsque vous recherchez un terme, les principaux éléments représentent des ressources dont les noms correspondent à la requête. Sous ces éléments, sous **[!UICONTROL Champs standard]**, toutes les ressources contenant des champs correspondant à la requête seront répertoriées. Cela vous permet de rechercher des ressources XDM en fonction du type de données qu’elles contiennent, sans avoir à connaître au préalable le nom de la ressource.
+Lors de la mise en liste des ressources sur la variable **[!UICONTROL Classes]**, **[!UICONTROL Groupes de champs]** ou **[!UICONTROL Types de données]** onglets, vous pouvez sélectionner **[!UICONTROL Adobe]** pour afficher uniquement les ressources standard ou **[!UICONTROL Client]** pour afficher uniquement les ressources créées par votre organisation.
+
+![](../images/ui/explore/filter-data-type.png)
+
+Vous pouvez également utiliser la barre de recherche pour affiner davantage les résultats.
 
 ![](../images/ui/explore/search.png)
 
 Les ressources affichées dans les résultats de recherche sont triées d’abord par correspondances de titre, puis par correspondances de description. En retour, plus le nombre de correspondances de mot dans l’une de ces catégories est élevé, plus la ressource apparaît dans la liste.
-
->[!NOTE]
->
->Pour les ressources XDM standard, la fonction de recherche renvoie uniquement les champs individuels contenant une `xdm` espace de noms. Les champs qui se trouvent sous un autre espace de noms (tel que votre identifiant de tenant) ne sont renvoyés que s’ils sont contenus dans une ressource personnalisée.
 
 Une fois que vous avez trouvé la ressource à explorer, sélectionnez son nom dans la liste pour afficher sa structure dans la zone de travail.
 

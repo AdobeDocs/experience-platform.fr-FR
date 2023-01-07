@@ -5,20 +5,20 @@ title: Création et modification de classes dans l’interface utilisateur
 description: Découvrez comment créer et modifier des classes dans l’interface utilisateur de l’Experience Platform.
 topic-legacy: user guide
 exl-id: 1b4c3996-2319-45dd-9edd-a5bcad46578b
-source-git-commit: 7b642744f12ec33ff45a4b41cdb57bfe37396a56
+source-git-commit: a854a40034666159fabca550227efe9f3a47fb53
 workflow-type: tm+mt
-source-wordcount: '893'
+source-wordcount: '901'
 ht-degree: 5%
 
 ---
 
 # Création et modification de classes dans l’interface utilisateur
 
-Dans le modèle de données d’expérience (XDM), les classes définissent les aspects comportementaux des données qu’un schéma contiendra (enregistrement ou série temporelle). En outre, les classes décrivent le plus petit de nombres de propriétés communes que tous les schémas basés sur cette classe doivent inclure et fournir une manière de fusionner plusieurs jeux de données compatibles.
+Dans Adobe Experience Platform, une classe de schéma définit les aspects comportementaux des données que le schéma contiendra (enregistrement ou série temporelle). En outre, les classes décrivent le plus petit de nombres de propriétés communes que tous les schémas basés sur cette classe doivent inclure et fournir une manière de fusionner plusieurs jeux de données compatibles.
 
-Adobe fournit plusieurs classes XDM standard (&quot;core&quot;), y compris [!DNL XDM Individual Profile] et [!DNL XDM ExperienceEvent]. Outre ces classes principales, vous pouvez créer vos propres classes personnalisées afin de décrire des cas d’utilisation plus spécifiques à votre organisation.
+Adobe fournit plusieurs classes standard (&quot;core&quot;) de modèle de données d’expérience (XDM), y compris [!DNL XDM Individual Profile] et [!DNL XDM ExperienceEvent]. Outre ces classes principales, vous pouvez créer vos propres classes personnalisées afin de décrire des cas d’utilisation plus spécifiques à votre organisation.
 
-Ce document présente comment créer, modifier et gérer des classes personnalisées dans l’interface utilisateur de Adobe Experience Platform.
+Ce document présente la création, la modification et la gestion des classes personnalisées dans l’interface utilisateur de l’Experience Platform.
 
 ## Conditions préalables
 
@@ -32,7 +32,7 @@ Dans le **[!UICONTROL Schémas]** espace de travail, sélectionnez **[!UICONTROL
 
 ![](../../images/ui/resources/classes/browse-classes.png)
 
-Une boîte de dialogue s’affiche, vous permettant de sélectionner une classe dans la liste des classes disponibles. Dans la partie supérieure de la boîte de dialogue, sélectionnez **[!UICONTROL Création d’une classe]**. Vous pouvez ensuite attribuer à votre nouvelle classe un nom d’affichage (un nom court, descriptif, unique et convivial pour la classe), une description et un comportement pour les données que le schéma définira (&quot;[!UICONTROL Enregistrement]&quot; ou &quot;[!UICONTROL Série temporelle]&quot;).
+Une boîte de dialogue s’affiche, vous permettant de sélectionner une classe dans la liste des classes disponibles. Dans la partie supérieure de la boîte de dialogue, sélectionnez **[!UICONTROL Création d’une classe]**. Vous pouvez ensuite attribuer à votre nouvelle classe un nom d’affichage (un nom court, descriptif, unique et convivial pour la classe), une description et un comportement pour les données que le schéma définira (**[!UICONTROL Enregistrement]** ou **[!UICONTROL Série temporelle]**).
 
 Lorsque vous avez terminé, sélectionnez **[!UICONTROL Attribuer une classe]**.
 
@@ -78,9 +78,11 @@ Une fois que vous disposez d’un schéma qui utilise une classe personnalisée 
 >
 >Gardez à l’esprit que tous les champs que vous ajoutez à une classe seront utilisés dans tous les schémas qui utilisent cette classe. Vous devez donc soigneusement examiner les champs qui seront utiles dans tous les cas d’utilisation de schéma. Si vous envisagez d’ajouter un champ qui ne peut être utilisé que dans certains schémas sous cette classe, vous pouvez envisager de l’ajouter à ces schémas en [création d’un groupe de champs](./field-groups.md#create) au lieu de .
 
-A **[!UICONTROL Nouveau champ]** apparaît dans la zone de travail et le rail de droite se met à jour pour afficher les commandes permettant de configurer les propriétés du champ. Consultez le guide sur la [définition des champs dans l’interface utilisateur](../fields/overview.md#define) pour obtenir des instructions spécifiques sur la configuration et l’ajout du champ à la classe .
+A **[!UICONTROL Nouveau champ]** apparaît dans la zone de travail et le rail de droite se met à jour pour afficher les commandes permettant de configurer les propriétés du champ. Sous **[!UICONTROL Attribuer à]**, sélectionnez **[!UICONTROL Classe]**.
 
-Continuez à ajouter autant de champs que nécessaire à la classe . Lorsque vous avez terminé, sélectionnez **[!UICONTROL Enregistrer]** pour enregistrer le schéma et la classe.
+![](../../images/ui/resources/classes/assign-to-class.png)
+
+Consultez le guide sur la [définition des champs dans l’interface utilisateur](../fields/overview.md#define) pour obtenir des instructions spécifiques sur la configuration et l’ajout du champ à la classe . Continuez à ajouter autant de champs que nécessaire à la classe . Lorsque vous avez terminé, sélectionnez **[!UICONTROL Enregistrer]** pour enregistrer le schéma et la classe.
 
 ![](../../images/ui/resources/classes/save.png)
 

@@ -2,9 +2,9 @@
 title: Définition d’une relation entre deux schémas dans Real-time Customer Data Platform B2B Edition
 description: Découvrez comment définir une relation de type "plusieurs à un" entre deux schémas dans Adobe Real-time Customer Data Platform B2B Edition.
 exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 1c2aabaaeadb41631fc75783db739bb34a3f53cc
 workflow-type: tm+mt
-source-wordcount: '1403'
+source-wordcount: '1391'
 ht-degree: 6%
 
 ---
@@ -123,4 +123,4 @@ Si vous affichez la structure du schéma de destination, le marqueur de relation
 
 ## Étapes suivantes
 
-En suivant ce tutoriel, vous avez créé avec succès une relation multiple-à-un entre deux schémas à l’aide de la variable [!DNL Schema Editor]. Une fois que les données ont été ingérées à l’aide de jeux de données basés sur ces schémas et que ces données ont été activées dans l’entrepôt de données Profile, vous pouvez utiliser les attributs des deux schémas pour les cas d’utilisation de la segmentation multi-classe. Pour plus d’informations, consultez la documentation de Real-Time CDP B2B Edition .
+En suivant ce tutoriel, vous avez créé avec succès une relation multiple-à-un entre deux schémas à l’aide de la variable [!DNL Schema Editor]. Une fois que les données ont été ingérées à l’aide de jeux de données basés sur ces schémas et que ces données ont été activées dans l’entrepôt de données Profile, vous pouvez utiliser les attributs des deux schémas pour [cas d’utilisation de la segmentation multi-classe](../../rtcdp/segmentation/b2b.md).

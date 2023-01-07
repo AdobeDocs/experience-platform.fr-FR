@@ -5,7 +5,7 @@ title: Définition des champs d’objet dans l’interface utilisateur
 description: Découvrez comment définir un champ de type objet dans l’interface utilisateur de l’Experience Platform.
 topic-legacy: user guide
 exl-id: 5b7b3cf0-7f11-4e15-af87-09127f4423a5
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: fe3d9a3fc473e7ca13f0e0c2f222bcc1b1a991c4
 workflow-type: tm+mt
 source-wordcount: '309'
 ht-degree: 0%
@@ -29,8 +29,6 @@ Pour ajouter un sous-champ, sélectionnez le champ **plus (+)** en regard du cha
 ![](../../images/ui/fields/special/object-add-field.png)
 
 Une fois que vous avez configuré le sous-champ et sélectionné **[!UICONTROL Appliquer]**, vous pouvez continuer à ajouter des champs à l’objet à l’aide du même processus. Vous pouvez également ajouter des sous-champs qui sont des objets eux-mêmes, ce qui vous permet d’imbriquer les champs aussi profondément que vous le souhaitez.
-
-![](../../images/ui/fields/special/object-nested.png)
 
 Une fois la construction de l’objet terminée, vous pouvez constater que vous souhaitez réutiliser sa structure dans différentes classes et groupes de champs. Dans ce cas, vous pouvez choisir de convertir l’objet en un type de données. Voir la section sur [conversion d’objets en types de données](../resources/data-types.md#convert) pour plus d’informations, voir le guide de l’interface utilisateur des types de données .
 

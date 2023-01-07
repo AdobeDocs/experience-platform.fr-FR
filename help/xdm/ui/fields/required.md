@@ -3,7 +3,7 @@ keywords: Experience Platform;accueil;rubriques les plus consultées;api;API;XDM
 title: Définition des champs obligatoires dans l’interface utilisateur
 description: Découvrez comment définir un champ XDM obligatoire dans l’interface utilisateur de l’Experience Platform.
 exl-id: 3a5885a0-6f07-42f3-b521-053083d5b556
-source-git-commit: 11dcb1a824020a5b803621025863e95539ab4d71
+source-git-commit: fe3d9a3fc473e7ca13f0e0c2f222bcc1b1a991c4
 workflow-type: tm+mt
 source-wordcount: '362'
 ht-degree: 0%
@@ -28,7 +28,7 @@ Si le champ est un attribut de niveau racine sous l’objet ID du client, son ch
 
 Toutefois, si un champ obligatoire est imbriqué dans un objet qui n’est pas marqué comme obligatoire, le champ imbriqué n’apparaît pas sous **[!UICONTROL Champs obligatoires]** dans le rail de gauche.
 
-Dans l’exemple ci-dessous, la variable `loyaltyId` est défini selon les besoins, mais son objet parent `loyalty` ne l’est pas. Dans ce cas, aucune erreur de validation ne se produirait si `loyalty` a été exclu lors de l’ingestion de données, même si le champ enfant `loyaltyId` est marqué comme requis. En d’autres termes, `loyalty` est facultatif ; il doit contenir un `loyaltyId` dans l’événement qu’il est inclus.
+Dans l’exemple ci-dessous, la variable `internalSKU` est défini selon les besoins, mais son objet parent `SKUs` ne l’est pas. Dans ce cas, aucune erreur de validation ne se produirait si `SKUs` est exclu lors de l’ingestion de données, même si le champ enfant `internalSKU` est marqué comme requis. En d’autres termes, `SKUs` est facultatif ; il doit contenir un `internalSKU` dans l’événement qu’il est inclus.
 
 ![Champ obligatoire imbriqué](../../images/ui/fields/required/nested.png)
 
