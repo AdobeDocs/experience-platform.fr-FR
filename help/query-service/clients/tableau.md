@@ -2,10 +2,9 @@
 keywords: Experience Platform;accueil;rubriques populaires;tableau;Tableau;service de requête;service de requête;se connecter au service de requête ;
 solution: Experience Platform
 title: Connexion de Tableau à Query Service
-topic-legacy: connect
 description: Ce document décrit les étapes à suivre pour connecter Tableau à Adobe Experience Platform Query Service.
 exl-id: f380aacd-5091-41bc-97ca-593e0b1670fd
-source-git-commit: 9c450f340706040593dfea5292702c4b00dd9852
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '302'
 ht-degree: 2%

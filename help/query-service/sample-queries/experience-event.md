@@ -2,11 +2,10 @@
 keywords: Experience Platform;accueil;rubriques populaires;service de requête;service de requête;requêtes experienceevent;requête experienceevent;requête Experience Event;
 solution: Experience Platform
 title: Exemples de requêtes pour les événements d’expérience
-topic-legacy: queries
 type: Tutorial
 description: Le document suivant fournit des exemples de requêtes impliquant des événements d’expérience dans Adobe Experience Platform Query Service.
 exl-id: e6793a03-e474-4ae4-acb2-a052ff1c6d68
-source-git-commit: d79d466602d77f8a3eb1162ee67572973b3e08c7
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '320'
 ht-degree: 58%

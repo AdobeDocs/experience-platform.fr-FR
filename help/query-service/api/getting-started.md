@@ -2,11 +2,10 @@
 keywords: Experience Platform;accueil;rubriques populaires;query service;Query service;requête
 solution: Experience Platform
 title: Guide de l’API Query Service
-topic-legacy: query templates
 description: L’API Query Service permet aux développeurs d’interroger leurs données Adobe Experience Platform à l’aide de SQL standard. Suivez ce guide pour savoir comment effectuer des opérations clés à l’aide de l’API.
 exl-id: 2f4a156b-5623-419a-a9b2-72310f755708
-source-git-commit: 9f458a327c0b72a5984161f13f02d09b7a2e610e
-workflow-type: ht
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+workflow-type: tm+mt
 source-wordcount: '399'
 ht-degree: 100%
 

@@ -2,10 +2,9 @@
 keywords: Experience Platform;accueil;rubriques populaires;service de requête;service de requête;Power BI;Power bi;se connecter au service de requête;
 solution: Experience Platform
 title: Connexion de Power BI à Query Service
-topic-legacy: connect
 description: Ce document décrit les étapes à suivre pour connecter Power BI à Adobe Experience Platform Query Service.
 exl-id: 8fcd3056-aac7-4226-a354-ed7fb8fe9ad7
-source-git-commit: 75e97efcb68439f1b837af93b62c96f43e5d7a31
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '1059'
 ht-degree: 1%

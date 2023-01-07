@@ -2,10 +2,9 @@
 keywords: Experience Platform;accueil;rubriques populaires;service de requête;guide api;service de requête;comptes de service de requête;comptes ;
 solution: Experience Platform
 title: Point de terminaison de l’API Comptes
-topic-legacy: connection parameters
 description: Vous pouvez créer un compte Query Service pour le compte persistant .
 exl-id: 1667f4a5-e6e5-41e9-8f9d-6d2c63c7d7d6
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '495'
 ht-degree: 5%

@@ -2,13 +2,12 @@
 keywords: Experience Platform;accueil;rubriques populaires;service de requête;exécuter des requêtes planifiées;exécuter une requête planifiée;service de requête;requêtes planifiées;requête planifiée;
 solution: Experience Platform
 title: Point de terminaison de l’API des exécutions de requête planifiées
-topic-legacy: runs for scheduled queries
 description: Les sections suivantes décrivent les différents appels d’API que vous pouvez effectuer pour exécuter des requêtes planifiées avec l’API Query Service.
 exl-id: 1e69b467-460a-41ea-900c-00348c3c923c
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '696'
-ht-degree: 88%
+ht-degree: 90%
 
 ---
 
@@ -16,7 +15,7 @@ ht-degree: 88%
 
 ## Exemples d’appels API
 
-Maintenant que vous comprenez les en-têtes à utiliser, vous êtes prêt à commencer à lancer des appels au [!DNL Query Service] API. Les sections suivantes décrivent les différents appels API que vous pouvez effectuer à l’aide de la variable [!DNL Query Service] API. Chaque appel inclut le format général d’API, un exemple de requête présentant les en-têtes requis et un exemple de réponse.
+Maintenant que vous savez quels en-têtes utiliser, vous êtes prêt(e) à commencer à lancer des appels à l’API [!DNL Query Service]. Les sections suivantes décrivent les différents appels API que vous pouvez effectuer à l’aide de la variable [!DNL Query Service] API. Chaque appel inclut le format général d’API, un exemple de requête présentant les en-têtes requis et un exemple de réponse.
 
 ### Récupération d’une liste de toutes les exécutions pour une requête planifiée spécifiée
 

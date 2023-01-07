@@ -2,10 +2,9 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;service de requête;service de requête;observateur;observateur;se connecter au service de requête;
 solution: Experience Platform
 title: Connexion de Looker à Query Service
-topic-legacy: connect
 description: Ce document décrit les étapes à suivre pour connecter Looker à Adobe Experience Platform Query Service.
 exl-id: 806e9077-533a-4546-b5ca-8124751957f5
-source-git-commit: 75e97efcb68439f1b837af93b62c96f43e5d7a31
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '313'
 ht-degree: 10%

@@ -1,14 +1,13 @@
 ---
-keywords: Experience Platform;accueil;rubriques populaires;service de requête;service de requête;requête;éditeur de requêtes;éditeur de requêtes;éditeur de requêtes;éditeur de requêtes
+keywords: Experience Platform; accueil;rubriques populaires;query service;Query Service;requête;éditeur de requêtes;éditeur de requêtes;éditeur de requêtes;
 solution: Experience Platform
 title: Guide des informations d’identification de Query Service
-topic-legacy: guide
-description: Adobe Experience Platform Query Service fournit une interface utilisateur qui peut être utilisée pour écrire et exécuter des requêtes, afficher des requêtes précédemment exécutées et accéder aux requêtes enregistrées par les utilisateurs au sein de votre organisation IMS.
+description: Adobe Experience Platform Query Service présente une interface utilisateur qui permet d’écrire et d’exécuter des requêtes, de voir les requêtes précédemment exécutées et d’accéder aux requêtes enregistrées par les utilisateurs au sein de votre organisation IMS.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: f52e1d49fd090c398d34a3d9c2b5d1746c319eb4
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '1317'
-ht-degree: 2%
+ht-degree: 5%
 
 ---
 

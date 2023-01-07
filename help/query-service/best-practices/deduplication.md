@@ -2,11 +2,10 @@
 keywords: Experience Platform;accueil;rubriques populaires;service de requête;service de requête;déduplication des données;déduplication ;
 solution: Experience Platform
 title: Déduplication des données dans Query Service
-topic-legacy: queries
 type: Tutorial
 description: 'Ce document présente des exemples de requêtes de sous-sélection et d’échantillon complet pour dédupliquer trois cas d’utilisation courants : Événements d’expérience, achats et mesures.'
 exl-id: 46ba6bb6-67d4-418b-8420-f2294e633070
-source-git-commit: b140037ed5f055a8e7c583540910cc6b18bbf0bd
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '624'
 ht-degree: 15%

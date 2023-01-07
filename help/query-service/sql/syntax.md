@@ -2,10 +2,9 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;service de requête;Query service;syntaxe sql;sql;ctas;CTAS;Créer une table comme sélection
 solution: Experience Platform
 title: Syntaxe SQL dans Query Service
-topic-legacy: syntax
 description: Ce document présente la syntaxe SQL prise en charge par Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 9c450f340706040593dfea5292702c4b00dd9852
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '3156'
 ht-degree: 8%
@@ -447,7 +446,7 @@ L’exemple renvoie les éléments suivants :
 2  b Spark SQL
 ```
 
-Ce deuxième exemple illustre le concept et l&#39;application de la `inline` fonction . Le modèle de données de l’exemple est illustré dans l’image ci-dessous.
+Ce deuxième exemple illustre le concept et l&#39;application de la méthode `inline` fonction . Le modèle de données de l’exemple est illustré dans l’image ci-dessous.
 
 ![Schéma de productListItems.](../images/sql/productListItems.png)
 
@@ -461,7 +460,7 @@ Les valeurs provenant de la variable `source_dataset` sont utilisés pour rempli
 
 | SKU | _experience | quantity | priceTotal |
 |---------------------|-----------------------------------|----------|--------------|
-| product-id-1 | (&quot;(&quot;(&quot;(A,pass,B,NULL)&quot;)&quot;)&quot;) | 5 | 10,5 |
+| product-id-1 | (&quot;(&quot;(&quot;(A,pass,B,NULL)&quot;)&quot;)&quot;) | 5 | 10.5 |
 | product-id-5 | (&quot;(&quot;(&quot;(A, pass, B,NULL)&quot;)&quot;)&quot;) |  |  |
 | product-id-2 | (&quot;(&quot;(&quot;(AF, C, D, NULL)&quot;)&quot;)&quot;) | 6 | 40 |
 | product-id-4 | (&quot;(&quot;(&quot;(BM, pass, NA,NULL)&quot;)&quot;)&quot;) | 3 | 12 |

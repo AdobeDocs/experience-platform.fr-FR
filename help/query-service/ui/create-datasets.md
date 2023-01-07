@@ -2,11 +2,10 @@
 keywords: Experience Platform;accueil;rubriques populaires;query service;Query service;générer des jeux de données;générer un jeu de données;créer un jeu de données;
 solution: Experience Platform
 title: Générer des jeux de données à partir de résultats dans Query Service
-topic-legacy: queries
 type: Tutorial
 description: Query Service d’Adobe Experience Platform permet de créer des jeux de données à partir de l’interface utilisateur. Une fois qu’un jeu de données est créé, il est possible d’y accéder comme à tout autre jeu de données du lac de données et de l’utiliser pour divers cas d’utilisation.
 exl-id: 6f6c049d-f19f-4161-aeb4-3a01eca7dc75
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '493'
 ht-degree: 95%

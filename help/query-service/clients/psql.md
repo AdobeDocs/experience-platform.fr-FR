@@ -2,10 +2,9 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;PSQL;psqlconnect to query service;Query service;query service;
 solution: Experience Platform
 title: Connexion de PSQL à Query Service
-topic-legacy: connect
 description: PSQL est une interface de ligne de commande qui s’affiche lorsque vous installez PostgreSQL sur votre machine. Vous pouvez l’installer en suivant ces instructions.
 exl-id: ceb07128-409e-42be-8143-0cf681d435de
-source-git-commit: 4d9e6ce81809c6e6ee1188177a937ac8fc609996
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '294'
 ht-degree: 11%

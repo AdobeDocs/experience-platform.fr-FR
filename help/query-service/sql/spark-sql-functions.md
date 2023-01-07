@@ -2,10 +2,9 @@
 keywords: Experience Platform;accueil;rubriques populaires;service de requête;service de requête;spark sql;Spark sql;spark;fonctions spark sql;fonctions
 solution: Experience Platform
 title: Fonctions Spark SQL dans Query Service
-topic-legacy: spark sql functions
 description: Cette documentation contient des informations sur les fonctions Spark SQL qui étendent les fonctionnalités de SQL.
 exl-id: 59e6d82b-3317-456d-8c56-3efd5978433a
-source-git-commit: f291c0db5b751227e979e70ea8f91a0c133ecf34
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '3866'
 ht-degree: 1%
@@ -150,7 +149,7 @@ Pour plus d’informations sur les fonctions, notamment leur syntaxe, leur utili
 | [`weekofyear`](https://spark.apache.org/docs/latest/api/sql/index.html#weekofyear) | Renvoie la semaine de l&#39;année pour une date donnée |
 | [`year`](https://spark.apache.org/docs/latest/api/sql/index.html#year) | Renvoie l’année de la chaîne |
 
-### Tableaux {#arrays}
+### Ensembles {#arrays}
 
 | Fonction | Description |
 | -------- | ----------- |

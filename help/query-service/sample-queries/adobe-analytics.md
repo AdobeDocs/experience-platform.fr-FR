@@ -2,10 +2,9 @@
 keywords: Experience Platform;accueil;rubriques populaires;service de requête;service de requête;exemples de requêtes;exemple de requête;adobe analytics;
 solution: Experience Platform
 title: Exemples de requêtes pour les données Adobe Analytics
-topic-legacy: queries
 description: Les données des suites de rapports Adobe Analytics sélectionnées sont transformées en XDM ExperienceEvent et ingérées dans Adobe Experience Platform en tant que jeux de données. Ce document décrit un certain nombre de cas d’utilisation dans lesquels Query Service utilise ces données et inclut des exemples de requêtes conçues pour fonctionner avec vos jeux de données Adobe Analytics.
 exl-id: 96da3713-c7ab-41b3-9a9d-397756d9dd07
-source-git-commit: e0cdfc514a9e1277134d4c0d5396fc0bdf9d9958
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '975'
 ht-degree: 41%

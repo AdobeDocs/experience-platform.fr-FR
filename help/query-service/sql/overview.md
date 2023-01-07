@@ -2,10 +2,9 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;service de requête;service de requête;sql;référence sql;
 solution: Experience Platform
 title: Référence SQL de Query Service
-topic-legacy: reference
 description: Adobe Experience Platform Query Service permet d’utiliser le langage SQL ANSI standard pour les instructions SELECT et d’autres commandes limitées.
 exl-id: 81d7d440-c51b-46a8-8690-0c0637826077
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '78'
 ht-degree: 32%

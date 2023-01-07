@@ -2,10 +2,9 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;service de requête;Query Service;guide de dépannage;faq;dépannage;
 solution: Experience Platform
 title: Guide de dépannage de Query Service
-topic-legacy: troubleshooting
 description: Ce document contient des questions courantes et des réponses relatives à Query Service. Les rubriques incluent, l’exportation de données, les outils tiers et les erreurs PSQL.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 491aadf161bd822cb40a5ef5dd107831bca1d2c4
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '4383'
 ht-degree: 5%

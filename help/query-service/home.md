@@ -2,10 +2,9 @@
 keywords: Experience Platform;accueil;rubriques populaires;query service;Query service;requête
 solution: Experience Platform
 title: Présentation de Query Service
-topic-legacy: overview
 description: Ce document donne une vue d’ensemble du rôle de Query Service dans Experience Platform.
 exl-id: fdaefc12-a97d-4e4e-9aed-d3dbd0f43ea0
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '722'
 ht-degree: 87%
