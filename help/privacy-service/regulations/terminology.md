@@ -2,10 +2,9 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;RGPD;rgpd;CCPA;ccpa;PDPA;pdpa;LGPD;lgpd;aperçu;réglementation;réglementation;réglementations;réglementations;confidentialité;confidentialité;confidentialité
 solution: Experience Platform
 title: Terminologie des règlements sur la confidentialité
-topic-legacy: troubleshooting
 description: Ce document fournit des définitions des termes clés liés aux réglementations de confidentialité prises en charge par Adobe Experience Cloud.
 exl-id: 9c0a7d26-0571-41d4-8cf5-6356025d51ef
-source-git-commit: 65ff39c99eee98654daee89c86d6047dc055c196
+source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '1513'
 ht-degree: 10%

@@ -1,11 +1,10 @@
 ---
 keywords: Experience Platform;profil;profil client en temps réel;dépannage;API
 title: Prise en main de l’API Real-time Customer Profile
-topic-legacy: guide
 type: Documentation
 description: Le guide de prise en main de l’API Profile décrit les concepts clés et les fonctionnalités de base dont vous avez besoin pour utiliser les points de terminaison de l’API Real-Time Customer Profile afin d’effectuer des opérations CRUD de base sur les données de Profile.
 exl-id: 7e30610a-a7e7-43ab-a45d-fd84ef6e36ef
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '411'
 ht-degree: 51%

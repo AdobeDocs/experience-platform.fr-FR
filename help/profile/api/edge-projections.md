@@ -1,11 +1,10 @@
 ---
 keywords: Experience Platform;profil;profil client en temps réel;dépannage;API
 title: Points de terminaison de l’API de projection Edge
-topic-legacy: guide
 type: Documentation
 description: Adobe Experience Platform vous permet de proposer des expériences coordonnées, cohérentes et personnalisées à vos clients sur plusieurs canaux en temps réel, en rendant les données appropriées facilement disponibles et mises à jour en continu au fur et à mesure des changements. Pour ce faire, il utilise des périphéries, un serveur géographiquement placé qui stocke les données et les rend facilement accessibles aux applications.
 exl-id: ce429164-8e87-412d-9a9d-e0d4738c7815
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '1959'
 ht-degree: 86%

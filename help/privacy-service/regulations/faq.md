@@ -2,10 +2,9 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;RGPD;rgpd;CCPA;ccpa;PDPA;pdpa;LGPD;lgpd;faq;FAQ;réglementation;réglementation;réglementations;réglementation;confidentialité;confidentialité;confidentialité
 solution: Experience Platform
 title: FAQ sur les réglementations de confidentialité
-topic-legacy: troubleshooting
 description: Ce document répond aux questions les plus fréquemment posées sur les réglementations de confidentialité légales prises en charge et leur mise en oeuvre dans Adobe Experience Cloud.
 exl-id: ec553e53-664b-4e18-abb1-4e4063fdd2c9
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '1599'
 ht-degree: 35%
@@ -48,7 +47,7 @@ Les informations personnelles peuvent aussi inclure les renseignements liés à 
 * L’historique des recherches
 * Les informations relatives à l’interaction d’un client avec un site web, une application ou une publicité
 
-Bien que les réglementations relatives à la vie privée couvrent un large éventail d’informations personnelles, les termes du contrat standard de l’Adobe stipulent que les informations personnelles sensibles (telles que le numéro de sécurité sociale, les informations de permis de conduire, les informations de compte financier et les données biométriques) sont généralement interdites d’importation et d’utilisation dans les applications Experience Cloud.
+Même si les réglementations de confidentialité couvrent un large éventail d&#39;informations personnelles, les termes du contrat standard de l&#39;Adobe stipulent que les informations personnelles sensibles (telles que le numéro de sécurité sociale, les informations de permis de conduire, les informations de compte financier et les données biométriques) sont généralement interdites d&#39;importation et d&#39;utilisation dans les applications Experience Cloud.
 
 ### Quelle est la différence entre le contrôleur des données et le responsable du traitement des données ?
 
@@ -58,7 +57,7 @@ A **contrôleur de données** est la personne ou l’organisation qui a le p
 
 ### Quelle est la différence entre le consentement explicite et le consentement univoque du sujet des données ?
 
-**Consentement explicite** désigne une norme de consentement qui implique une indication précise, éclairée et sans ambiguïté des souhaits du sujet des données sous forme orale ou écrite. En d’autres termes, le sujet des données doit littéralement et explicitement dire &quot;J’accepte&quot; ou &quot;Je suis d’accord&quot; pour que le consentement soit considéré comme explicite. En outre, il doit être aussi facile de retirer le consentement que de le donner.
+**Consentement explicite** fait référence à une norme de consentement qui implique une indication spécifique, éclairée et sans ambiguïté des souhaits du sujet des données sous forme orale ou écrite. En d’autres termes, le sujet des données doit littéralement et explicitement dire &quot;J’accepte&quot; ou &quot;Je suis d’accord&quot; pour que le consentement soit considéré comme explicite. En outre, il doit être aussi facile de retirer le consentement que de le donner.
 
 **Consentement non ambigu (implicite)** fait référence au consentement qui n’a pas été donné explicitement par le sujet des données, mais qui n’en est pas moins sans ambiguïté dans sa nature. Par exemple, lors du processus d’inscription à un site web d’entreprise, un avis est donné qu’en fournissant une adresse électronique, le sujet des données accepte de recevoir des emails sur des offres spéciales. Si le sujet des données lit l&#39;avis, la discrimination positive consistant à entrer dans son email est suffisante pour être considérée comme un consentement univoque.
 
@@ -81,7 +80,7 @@ De nombreuses réglementations de confidentialité stipulent que si un sujet des
 
 En supposant que l’entreprise ait collecté des informations personnelles et qu’elle puisse authentifier ou vérifier l’identité d’un consommateur particulier, les réglementations de confidentialité permettent de remplir un délai spécifique pour une demande de consommateur. Le tableau suivant ventile les délais applicables pour chaque réglementation, avec des notes sur certaines exceptions :
 
-| Régulation | Fenêtre de conformité | Remarques |
+| Régulation | Fenêtre de conformité | Notes |
 | --- | --- | --- |
 | CCPA (Californie) | 45 jours |  |
 | RGPD (Union européenne) | 30 jours | Si la demande est complexe ou si de nombreuses demandes ont été effectuées par le même sujet de données, la demande peut être étendue à 60 jours. |

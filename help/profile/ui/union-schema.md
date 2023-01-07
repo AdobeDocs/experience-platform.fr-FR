@@ -1,11 +1,10 @@
 ---
 keywords: Experience Platform;profil;profil client en temps réel;profil unifié;profil unifié;unifié;profil;unifié;profil;rtcp;activer le profil;activer le profil;schéma d’union;PROFIL D’UNION;profil d’union
 title: Guide de l’interface utilisateur des schémas d’union
-topic-legacy: guide
 type: Documentation
 description: Dans l’interface utilisateur de Adobe Experience Platform, vous pouvez facilement afficher n’importe quel schéma d’union au sein de votre organisation et prévisualiser les champs, les identités, les relations et les schémas de contribution d’une classe spécifique. Ce guide fournit des informations détaillées sur la manière d’afficher et d’explorer les schémas d’union à l’aide de l’interface utilisateur de Platform.
 exl-id: 52af0d77-e37d-4ed8-9dee-71a50b337b4e
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '1199'
 ht-degree: 4%

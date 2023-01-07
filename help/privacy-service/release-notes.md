@@ -2,13 +2,12 @@
 keywords: Experience Platform;accueil;rubriques populaires
 solution: Experience Platform
 title: Notes de mise à jour de Privacy Service
-topic-legacy: release notes
 description: Notes de mise à jour les plus récentes pour Adobe Experience Platform Privacy Service.
 exl-id: 66ee38f1-f0d5-44ff-823d-d1b8a9765c6d
-source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
+source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '553'
-ht-degree: 58%
+ht-degree: 54%
 
 ---
 
@@ -62,7 +61,7 @@ Ce document contient des informations sur les nouvelles fonctionnalités de Adob
 | Fonctionnalité | Description |
 | --- | --- |
 | Demande de tableau de bord de mesures | Le nouveau tableau de bord des mesures dans la variable [!DNL Privacy Service] L’interface utilisateur offre une visibilité sur les demandes RGPD envoyées, erronées et terminées. |
-| Créateur de requêtes | Afin de répondre aux besoins des organisations ayant des utilisateurs techniques et non techniques pour l’envoi de demandes RGPD, une fonctionnalité « Créer une requête » a été ajoutée à l’interface utilisateur. La fonctionnalité d’envoi de fichier JSON est toujours disponible dans la [!DNL Privacy Service] IU pour les organisations qui préfèrent continuer à l’utiliser. |
+| Créateur de requêtes | Pour répondre aux besoins des organisations ayant des utilisateurs techniques et non techniques qui envoient des demandes en vertu du RGPD, une fonctionnalité &quot;Créer une demande&quot; a été ajoutée à l’interface utilisateur. La fonctionnalité d’envoi de fichier JSON est toujours disponible dans la [!DNL Privacy Service] IU pour les organisations qui préfèrent continuer à l’utiliser. |
 | Notifications d’événements liés à une tâche RGPD | Les notifications d’événements relatives à des états de tâches RGPD sont un élément essentiel à de nombreux workflows. Alors que les notifications étaient précédemment diffusées à l’aide de notifications par e-mail individuelles, les notifications d’événements RGPD sont des messages tirant parti des événements d’Adobe I/O, envoyés à un webhook configuré pour faciliter l’automatisation des requêtes de tâches. [!DNL Privacy Service]Les utilisateurs de l’interface utilisateur de peuvent s’abonner aux événements RGPD d’Adobe I/O pour recevoir des mises à jour lorsqu’un produit ou la tâche RGPD est terminée. |
 
 ## 18 avril 2019
