@@ -5,10 +5,10 @@ title: Guide de dépannage de Query Service
 topic-legacy: troubleshooting
 description: Ce document contient des questions courantes et des réponses relatives à Query Service. Les rubriques incluent, l’exportation de données, les outils tiers et les erreurs PSQL.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: deb9f314d5eaadebe2f3866340629bad5f39c60d
+source-git-commit: 491aadf161bd822cb40a5ef5dd107831bca1d2c4
 workflow-type: tm+mt
-source-wordcount: '4362'
-ht-degree: 4%
+source-wordcount: '4383'
+ht-degree: 5%
 
 ---
 
@@ -278,7 +278,7 @@ SELECT count(1) FROM myTableName
 
 Vous devez également consulter la documentation pour obtenir des conseils sur la manière d’effectuer [requêtes planifiées dans l’interface utilisateur](./ui/user-guide.md#scheduled-queries) et [l’API](./api/scheduled-queries.md).
 
-Voici une liste des considérations à prendre en compte pour les requêtes planifiées lors de l’utilisation de la variable [!DNL Query Editor]. Elles ne s’appliquent pas au [!DNL Query Service] API :<br/>Vous pouvez uniquement ajouter un planning à une requête qui a déjà été créée, enregistrée et exécutée.<br/>You **cannot** ajoutez un planning à une requête paramétrée.<br/>Requêtes planifiées **cannot** contiennent un bloc anonyme.<br/>Vous pouvez uniquement planifier **one** modèle de requête à l’aide de l’interface utilisateur. Si vous souhaitez ajouter des plannings supplémentaires à un modèle de requête, vous devez utiliser l’API . Si une planification a déjà été ajoutée à l’aide de l’API, vous ne pourrez pas ajouter d’autres planifications à l’aide de l’interface utilisateur.
+Voici une liste des considérations à prendre en compte pour les requêtes planifiées lors de l’utilisation de la variable [!DNL Query Editor]. Elles ne s’appliquent pas à l’API [!DNL Query Service] :<br/>Vous pouvez uniquement ajouter un planning à une requête qui a déjà été créée, enregistrée et exécutée.<br/>Vous **ne pouvez pas** ajouter un planning à une requête paramétrée.<br/>Les requêtes planifiées **ne peuvent pas** contenir un bloc anonyme.<br/>Vous pouvez uniquement planifier **one** modèle de requête à l’aide de l’interface utilisateur. Si vous souhaitez ajouter des plannings supplémentaires à un modèle de requête, vous devez utiliser l’API . Si une planification a déjà été ajoutée à l’aide de l’API, vous ne pourrez pas ajouter d’autres planifications à l’aide de l’interface utilisateur.
 +++
 
 ### Que signifie l’erreur &quot;Limite de session atteinte&quot; ?
@@ -531,6 +531,11 @@ WHERE T2.ID IS NULL
 ### Puis-je contrôler l’accès à des jeux de données et à des colonnes spécifiques pour une connexion particulière ? Comment est-ce configuré ?
 
 +++Réponse Oui, le contrôle d’accès basé sur les attributs est appliqué s’il est configuré. Voir [contrôle d’accès basé sur les attributs - Aperçu](../access-control/abac/overview.md) pour plus d’informations.
++++
+
+### Query Service prend-il en charge la commande &quot;INSERT OVERWRITE INTO&quot; ?
+
++++Réponse Non, Query Service ne prend pas en charge la commande &quot;INSERT OVERWRITE INTO&quot;.
 +++
 
 ## Exportation des données {#exporting-data}
