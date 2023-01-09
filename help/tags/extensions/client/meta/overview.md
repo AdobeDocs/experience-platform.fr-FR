@@ -1,9 +1,10 @@
 ---
 title: Présentation de l’extension Meta Pixel
 description: Découvrez l’extension de balise Meta Pixel dans Adobe Experience Platform.
-source-git-commit: a47e35a1b8c7ce2b0fa4ffe30fcdc7d22fc0f4c5
+exl-id: c5127bbc-6fe7-438f-99f1-6efdbe7d092e
+source-git-commit: 24001da61306a00d295bf9441c55041e20f488c0
 workflow-type: tm+mt
-source-wordcount: '760'
+source-wordcount: '834'
 ht-degree: 2%
 
 ---
@@ -14,15 +15,13 @@ ht-degree: 2%
 
 Le [!DNL Meta Pixel] l’extension de balise vous permet d’exploiter [!DNL Pixel] fonctionnalités de vos bibliothèques de balises côté client. Ce document explique comment installer l’extension et utiliser ses fonctionnalités dans une [règle](../../../ui/managing-resources/rules.md).
 
->[!NOTE]
->
->Si vous essayez d’envoyer des événements côté serveur à [!DNL Meta] plutôt que du côté client, utilisez la variable [[!DNL Meta Conversions API] extension](../../server/meta/overview.md) au lieu de .
-
 ## Conditions préalables
 
 Pour utiliser l’extension, vous devez disposer d’un [!DNL Meta] compte avec accès à [!DNL Ads Manager]. Plus précisément, vous devez [créer [!DNL Meta Pixel]](https://www.facebook.com/business/help/952192354843755) et copiez ses [!DNL Pixel ID] l’extension peut donc être configurée sur votre compte. Si vous disposez déjà d’une [!DNL Meta Pixel], vous pouvez utiliser son identifiant à la place.
 
-## Installer l’extension
+Il est vivement recommandé d’utiliser [!DNL Meta Pixel] en combinaison avec la propriété [!DNL Meta Conversions API] partager et envoyer les mêmes événements du côté client et du côté serveur, respectivement, car cela peut aider à récupérer les événements qui n’ont pas été sélectionnés par [!DNL Meta Pixel]. Consultez le guide sur la [[!DNL Meta Conversions API] extension pour le transfert d’événement](../../client/meta/overview.md) pour savoir comment l’intégrer à vos mises en oeuvre côté serveur. Notez que votre entreprise doit avoir accès à [transfert d’événement](../../../ui/event-forwarding/overview.md) afin d’utiliser l’extension côté serveur.
+
+## Installation l’extension
 
 Pour installer le [!DNL Meta Pixel] , accédez à l’interface utilisateur de la collecte de données ou à l’interface utilisateur Experience Platform et sélectionnez **[!UICONTROL Balises]** dans le volet de navigation de gauche. À partir de là, sélectionnez une propriété à laquelle ajouter l’extension ou créez une propriété à la place.
 
@@ -36,7 +35,7 @@ Dans la vue de configuration qui s’affiche, vous devez fournir la variable [!D
 >
 >L’utilisation d’un élément de données vous donne la possibilité de modifier dynamiquement la variable [!DNL Pixel] ID utilisé en fonction d’autres facteurs, tels que l’environnement de génération. Voir la section de l’annexe sur [en utilisant différents [!DNL Pixel] ID pour différents environnements](#id-data-element) pour plus d’informations.
 
-Vous pouvez également éventuellement fournir un ID d’événement à associer à l’extension. Elle permet de dédupliquer des événements identiques entre les [!DNL Meta Pixel] et le [!DNL Meta Conversions API]. Voir [!DNL Meta] documentation sur [gestion des doublons [!DNL Pixel] et [!DNL Conversions API] events](https://developers.facebook.com/docs/marketing-api/conversions-api/deduplicate-pixel-and-server-events/) pour plus d’informations.
+Vous pouvez également éventuellement fournir un ID d’événement à associer à l’extension. Elle permet de dédupliquer des événements identiques entre les [!DNL Meta Pixel] et le [!DNL Meta Conversions API]. Pour plus d’informations, reportez-vous à la section sur [déduplication des événements](../../server/meta/overview.md#event-deduplication) dans la présentation du [!DNL Conversions API] extension .
 
 Lorsque vous avez terminé, sélectionnez **[!UICONTROL Enregistrer]**
 
@@ -64,7 +63,9 @@ Une fois la version mise à jour déployée sur votre site web, vous pouvez conf
 
 ## Étapes suivantes
 
-Ce guide explique comment envoyer des données à [!DNL Meta] en utilisant la variable [!DNL Meta Pixel] extension de balise. Pour plus d’informations sur les balises en Experience Platform, reportez-vous à la section [présentation des balises](../../../home.md).
+Ce guide explique comment envoyer des données à [!DNL Meta] en utilisant la variable [!DNL Meta Pixel] extension de balise. Si vous envisagez d’envoyer également des événements côté serveur à [!DNL Meta], vous pouvez maintenant procéder à l’installation et à la configuration de la variable [[!DNL Conversions API] extension de transfert d’événement](../../server/meta/overview.md).
+
+Pour plus d’informations sur les balises en Experience Platform, reportez-vous à la section [présentation des balises](../../../home.md).
 
 ## Annexe : Utilisez différentes [!DNL Pixel] ID pour différents environnements {#id-data-element}
 
@@ -77,4 +78,3 @@ L’exemple suivant renvoie un faux identifiant de production. `exampleProductio
 ```js
 return (turbine.environment.stage === "production" ? 'exampleProductionKey' : 'exampleTestKey');
 ```
-
