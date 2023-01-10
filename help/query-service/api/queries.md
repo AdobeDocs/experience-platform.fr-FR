@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Point de terminaison de l’API de requêtes
 description: Les sections suivantes passent en revue les appels que vous pouvez effectuer à l’aide du point de terminaison /query de l’API Query Service.
 exl-id: d6273e82-ce9d-4132-8f2b-f376c6712882
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: e0287076cc9f1a843d6e3f107359263cd98651e6
 workflow-type: tm+mt
-source-wordcount: '676'
-ht-degree: 94%
+source-wordcount: '825'
+ht-degree: 75%
 
 ---
 
@@ -42,6 +42,7 @@ Vous trouverez ci-dessous une liste des paramètres de requête disponibles pour
 | `property` | Filtrez les résultats en fonction des champs. Les filtres **doivent** être précédés d’une séquence d’échappement HTML. Des virgules sont utilisées pour combiner plusieurs ensembles de filtres. Les champs `created`, `updated`, `state` et `id` sont pris en charge. Les opérateurs `>` (supérieur à), `<` (inférieur à), `>=` (supérieur ou égal à), `<=` (inférieur ou égal à), `==` (égal à), `!=` (différent de) et `~` (contient). Par exemple, `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` renvoie toutes les requêtes avec l’identifiant spécifié. |
 | `excludeSoftDeleted` | Indique s’il faut inclure une requête ayant été supprimée de manière réversible. Par exemple, `excludeSoftDeleted=false` inclut **des** requêtes supprimées de manière réversible. (*booléenne, valeur par défaut : true*) |
 | `excludeHidden` | Indique si les requêtes formulées par l’utilisateur doivent être affichées. Si cette valeur est définie sur false, cela **inclut** les requêtes qui ne sont pas formulées par l’utilisateur telles que les définitions CURSOR, FETCH ou les requêtes de métadonnées. (*booléenne, valeur par défaut : true*) |
+| `isPrevLink` | Le `isPrevLink` Le paramètre de requête est utilisé pour la pagination. Les résultats de l’appel API sont triés à l’aide de leur `created` l’horodatage et la variable `orderby` . Lors de la navigation dans les pages de résultats, `isPrevLink` est défini sur true lorsque vous effectuez une pagination à l’envers. L’ordre de la requête est alors inversé. Voir les liens &quot;suivant&quot; et &quot;prev&quot; comme exemples. |
 
 **Requête**
 
@@ -128,7 +129,7 @@ POST /queries
 
 **Requête**
 
-La requête suivante crée une requête configurée en fonction des valeurs fournies dans le payload :
+La requête suivante crée une requête, avec une instruction SQL fournie dans le payload :
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/query/queries \
@@ -139,7 +140,27 @@ curl -X POST https://platform.adobe.io/data/foundation/query/queries \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
  -d '{
         "dbName": "prod:all",
-        "sql": "SELECT * FROM accounts;",
+        "sql": "SELECT account_balance FROM user_data WHERE $user_id;",
+        "queryParameters": {
+            $user_id : {USER_ID}
+            }
+        "name": "Sample Query",
+        "description": "Sample Description"
+    }  
+```
+
+L’exemple de requête ci-dessous crée une requête à l’aide d’un identifiant de modèle de requête existant.
+
+```shell
+curl -X POST https://platform.adobe.io/data/foundation/query/queries \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}' \
+ -d '{
+        "dbName": "prod:all",
+        "templateID": "f7cb5155-29da-4b95-8131-8c5deadfbe7f",
         "name": "Sample Query",
         "description": "Sample Description"
     }  
@@ -151,6 +172,10 @@ curl -X POST https://platform.adobe.io/data/foundation/query/queries \
 | `sql` | La requête SQL que vous souhaitez créer. |
 | `name` | Nom de la requête SQL. |
 | `description` | Description de la requête SQL. |
+| `queryParameters` | Une valeur key appariant pour remplacer toute valeur paramétrée dans l’instruction SQL. Elle n’est requise que **if** vous utilisez des remplacements de paramètres dans le SQL que vous fournissez. Aucune vérification du type de valeur ne sera effectuée sur ces paires clé-valeur. |
+| `templateId` | Identifiant unique d’une requête préexistante. Vous pouvez fournir ceci au lieu d’une instruction SQL. |
+| `insertIntoParameters` | (Facultatif) Si cette propriété est définie, cette requête sera convertie en requête INSERT INTO . |
+| `ctasParameters` | (Facultatif) Si cette propriété est définie, cette requête sera convertie en requête CTAS. |
 
 **Réponse**
 

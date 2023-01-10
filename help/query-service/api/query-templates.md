@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Point de terminaison de l’API de modèles de requête
 description: Ce guide décrit les différents appels d’API de modèle de requête que vous pouvez effectuer à l’aide de l’API Query Service.
 exl-id: 14cd7907-73d2-478f-8992-da3bdf08eacc
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: e0287076cc9f1a843d6e3f107359263cd98651e6
 workflow-type: tm+mt
-source-wordcount: '668'
-ht-degree: 89%
+source-wordcount: '894'
+ht-degree: 65%
 
 ---
 
@@ -129,15 +129,19 @@ curl -X POST https://platform.adobe.io/data/foundation/query/query-templates
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
  -d '{
-        "sql": "SELECT * FROM accounts;",
-        "name": "Sample query template"
+        "sql": "SELECT account_balance FROM user_data WHERE user_id='$user_id';",
+        "name": "Sample query template",
+        "queryParameters": {
+            user_id : {USER_ID}
+            }
     }'
 ```
 
 | Propriété | Description |
 | -------- | ----------- |
-| `sql` | La requête SQL que vous souhaitez créer. |
+| `sql` | La requête SQL que vous souhaitez créer. Vous pouvez utiliser SQL standard ou un remplacement de paramètre. Pour utiliser un remplacement de paramètre dans le SQL, vous devez ajouter en préfixe la clé de paramètre avec une `$`. Par exemple : `$key`et indiquez les paramètres utilisés dans le SQL en tant que paires clé-valeur JSON dans la variable `queryParameters` champ . Les valeurs transmises ici seront les paramètres par défaut utilisés dans le modèle. Si vous souhaitez remplacer ces paramètres, vous devez les remplacer dans la requête du POST. |
 | `name` | Le nom du modèle de requête. |
+| `queryParameters` | Une valeur key appariant pour remplacer toute valeur paramétrée dans l’instruction SQL. Elle n’est requise que **if** vous utilisez des remplacements de paramètres dans le SQL que vous fournissez. Aucune vérification du type de valeur ne sera effectuée sur ces paires clé-valeur. |
 
 **Réponse**
 
@@ -145,7 +149,7 @@ Une réponse réussie renvoie un état HTTP 202 (Accepted) avec les détails du
 
 ```json
 {
-    "sql": "SELECT * FROM accounts;",
+    "sql": "SELECT account_balance FROM user_data WHERE user_id='$user_id';",
     "name": "Sample query template",
     "id": "0094d000-9062-4e6a-8fdb-05606805f08f",
     "updated": "2020-01-09T00:20:09.670Z",
@@ -265,8 +269,9 @@ curl -X PUT https://platform.adobe.io/data/foundation/query/query-templates/0094
 
 | Propriété | Description |
 | -------- | ----------- |
-| `sql` | La requête SQL que vous souhaitez mettre à jour. |
-| `name` | Le nom de la requête planifiée. |
+| `sql` | La requête SQL que vous souhaitez créer. Vous pouvez utiliser SQL standard ou un remplacement de paramètre. Pour utiliser un remplacement de paramètre dans le SQL, vous devez ajouter en préfixe la clé de paramètre avec une `$`. Par exemple : `$key`et indiquez les paramètres utilisés dans le SQL en tant que paires clé-valeur JSON dans la variable `queryParameters` champ . Les valeurs transmises ici seront les paramètres par défaut utilisés dans le modèle. Si vous souhaitez remplacer ces paramètres, vous devez les remplacer dans la requête du POST. |
+| `name` | Le nom du modèle de requête. |
+| `queryParameters` | Une valeur key appariant pour remplacer toute valeur paramétrée dans l’instruction SQL. Elle n’est requise que **if** vous utilisez des remplacements de paramètres dans le SQL que vous fournissez. Aucune vérification du type de valeur ne sera effectuée sur ces paires clé-valeur. |
 
 **Réponse**
 
