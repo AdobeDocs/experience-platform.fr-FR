@@ -2,10 +2,10 @@
 title: Présentation de lʼextension Adobe Media Analytics (3.x SDK) for Audio and Video
 description: Découvrez lʼextension Adobe Media Analytics (SDK 3.x) for Audio and Video dans Adobe Experience Platform.
 exl-id: 7289d57d-7e7f-4832-9469-3b5a62183a32
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: e21ed1e9fd0c2678551cfc664b611076c198a157
 workflow-type: tm+mt
-source-wordcount: '764'
-ht-degree: 100%
+source-wordcount: '752'
+ht-degree: 98%
 
 ---
 
@@ -24,7 +24,7 @@ L’extension Media Analytics (MA) ajoute le SDK principal JavaScript Media (SDK
 
 >[!IMPORTANT]
 >
->Cette extension est déployée avec le SDK Media 3.x, qui n’a pas de compatibilité descendante avec le SDK Media 2.x. Si votre page utilise déjà le SDK Media 2.x, utilisez l’[extension Adobe Media Analytics for Audio and Video](../media-analytics/overview.md) au lieu de cette extension.
+>Cette extension est déployée avec le SDK Media 3.x, qui n’a pas de compatibilité descendante avec le SDK Media 2.x. La version 2.x étant obsolète, mettez-la à jour vers la version 3.x.
 
 Après avoir inclus les trois extensions mentionnées ci-dessus dans votre projet acceptant les balises, vous pouvez procéder de deux façons :
 
