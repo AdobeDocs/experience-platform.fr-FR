@@ -3,7 +3,7 @@ title: Installation du SDK Web de Adobe Experience Platform
 description: Découvrez la procédure d’installation du SDK Web d’Experience Platform.
 keywords: installation du sdk web;installation du sdk web;internet explorer;promesse;package npm
 exl-id: b1de7ca1-d0d2-4661-a273-a1acf29afcd5
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: c3476d7f9e758678cdf270ab55f8b85c0614b546
 workflow-type: tm+mt
 source-wordcount: '924'
 ht-degree: 31%
@@ -20,7 +20,7 @@ Il existe trois façons d’utiliser le SDK Web de Adobe Experience Platform pri
 
 ## Option 1 : Installation de l’extension de balise
 
-Pour obtenir de la documentation sur l’extension de balise, reportez-vous à la section [documentation de lancement](../../tags/extensions/client/sdk/overview.md)
+Pour obtenir de la documentation sur l’extension de balise, reportez-vous à la section [Documentation sur les balises](../../tags/extensions/client/sdk/overview.md)
 
 ## Option 2 : Installation de la version autonome prédéfinie
 
@@ -145,7 +145,7 @@ alloy("sendEvent", { ... });
 
 ### Prise en charge d’Internet Explorer
 
-Le SDK Adobe Experience Platform utilise des promesses, qui sont une méthode de communication de l’achèvement des tâches asynchrones. Le [Promesse](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) La mise en oeuvre utilisée par le SDK est prise en charge en mode natif par tous les navigateurs cibles, à l’exception de [!DNL Internet Explorer]. Pour utiliser le SDK sur [!DNL Internet Explorer], vous devez avoir `window.Promise` [polyfillé](https://remysharp.com/2010/10/08/what-is-a-polyfill).
+Le SDK Adobe Experience Platform utilise des promesses, qui sont une méthode de communication de l’achèvement des tâches asynchrones. Le [Promesse](https://developer.mozilla.org/fr-FR/docs/Web/JavaScript/Reference/Global_Objects/Promise) La mise en oeuvre utilisée par le SDK est prise en charge en mode natif par tous les navigateurs cibles, à l’exception de [!DNL Internet Explorer]. Pour utiliser le SDK sur [!DNL Internet Explorer], vous devez avoir `window.Promise` [polyfillé](https://remysharp.com/2010/10/08/what-is-a-polyfill).
 
 Une bibliothèque que vous pouvez utiliser pour polyfiller la promesse est promesse-polyfill. Voir [documentation promo-polyfill](https://www.npmjs.com/package/promise-polyfill) pour plus d’informations sur la procédure d’installation avec NPM.
 
