@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Principes de base de la composition des schémas
 description: Ce document présente les schémas du modèle de données d’expérience (XDM) ainsi que les blocs de création, principes et bonnes pratiques de la composition de schémas à utiliser dans Adobe Experience Platform.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: b67349baa909cc59f3ff1d7aac22f7926f2b36ff
 workflow-type: tm+mt
-source-wordcount: '4103'
+source-wordcount: '4108'
 ht-degree: 26%
 
 ---
@@ -87,7 +87,7 @@ Voici un exemple de carte d’identité simple :
   "email": [
     {
       "id": "jsmith@example.com",
-      "primary": false
+      "primary": true
     }
   ],
   "ECID": [
@@ -100,10 +100,10 @@ Voici un exemple de carte d’identité simple :
       "primary": false
     }
   ],
-  "loyaltyId": [
+  "CRMID": [
     {
       "id": "2e33192000007456-0365c00000000000",
-      "primary": true
+      "primary": false
     }
   ]
 }
@@ -197,7 +197,7 @@ Les groupes de champs définissent la ou les classes avec lesquelles ils sont co
 
 [!DNL Experience Platform] inclut de nombreux groupes de champs d’Adobe standard tout en permettant aux fournisseurs de définir des groupes de champs pour leurs utilisateurs et aux utilisateurs individuels de définir des groupes de champs pour leurs propres concepts spécifiques.
 
-Par exemple, pour capturer des détails tels que &quot;[!UICONTROL Prénom]&quot; et &quot;[!UICONTROL Adresse du domicile]&quot; pour votre &quot;[!UICONTROL Loyalty Members]&quot;, vous pouvez utiliser des groupes de champs standard qui définissent ces concepts communs. Toutefois, les concepts spécifiques à des cas d’utilisation moins courants (tels que &quot;[!UICONTROL Niveau du programme de fidélité]&quot;) n’ont souvent pas de groupe de champs prédéfini. Dans ce cas, vous devez définir votre propre groupe de champs pour capturer ces informations.
+Par exemple, pour capturer des détails tels que &quot;[!UICONTROL Prénom]&quot; et &quot;[!UICONTROL Adresse du domicile]&quot; pour votre &quot;[!UICONTROL Loyalty Members]&quot;, vous pouvez utiliser des groupes de champs standard qui définissent ces concepts communs. Toutefois, les concepts plus spécifiques à votre organisation (tels que les détails du programme de fidélité personnalisés ou les attributs de produit) qui peuvent ne pas être couverts par les groupes de champs standard. Dans ce cas, vous devez définir votre propre groupe de champs pour capturer ces informations.
 
 >[!NOTE]
 >
