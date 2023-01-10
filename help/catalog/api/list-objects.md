@@ -2,10 +2,9 @@
 keywords: Experience Platform;accueil;rubriques populaires;filtre;filtre;filtrer les données;filtrer les données
 solution: Experience Platform
 title: Objets Catalogue de listes
-topic-legacy: developer guide
 description: Vous pouvez récupérer une liste de tous les objets disponibles d’un type spécifique à l’aide d’un seul appel API. Une bonne pratique consiste à inclure des filtres qui limitent la taille de la réponse.
 exl-id: 2c65e2bc-4ddd-445a-a52d-6ceb1153ccea
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
 source-wordcount: '242'
 ht-degree: 53%

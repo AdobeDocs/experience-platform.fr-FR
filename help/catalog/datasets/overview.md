@@ -2,10 +2,9 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;emplacement des données;emplacement des données;gestion des données;gestion des données;traçabilité;traçabilité;type de données;types de données;type de données
 solution: Experience Platform
 title: Présentation des jeux de données
-topic-legacy: datasets
 description: Ce document présente de manière générale les jeux de données dans Experience Platform.
 exl-id: 51ecefb0-a699-4b1a-80f1-26c6ba92fcbf
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
 source-wordcount: '784'
 ht-degree: 93%

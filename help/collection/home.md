@@ -2,10 +2,9 @@
 keywords: Experience Platform;accueil;rubriques populaires;collecte de données;lancement;sdk web
 solution: Experience Platform
 title: Présentation de la collecte de données
-topic-legacy: overview
 description: Découvrez les différentes technologies impliquées dans la collecte de données relatives aux expériences client dans Adobe Experience Platform.
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
 source-wordcount: '514'
 ht-degree: 69%

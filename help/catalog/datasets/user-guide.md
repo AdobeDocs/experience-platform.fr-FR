@@ -2,10 +2,9 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;activer le jeu de données;jeu de données;jeu de données
 solution: Experience Platform
 title: Guide de l’interface utilisateur des jeux de données
-topic-legacy: datasets
 description: Découvrez comment exécuter des actions courantes lors de l’utilisation de jeux de données dans l’interface utilisateur de Adobe Experience Platform.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 1509d14c0acbf7136d5869d6de2ee2cf9fad450a
+source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
 source-wordcount: '1476'
 ht-degree: 38%

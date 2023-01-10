@@ -2,10 +2,9 @@
 keywords: Experience Platform;accueil;rubriques populaires;catalogue;api;remplacer un objet
 solution: Experience Platform
 title: Remplacement d’un objet de catalogue
-topic-legacy: developer guide
 description: Vous pouvez remplacer les contenus d’un objet Catalog à l’aide d’une requête PUT, dans lequel l’intégralité des ressources est remplacée par le payload de la requête.
 exl-id: cd98d13c-5261-4bff-b5db-af5f06d093c9
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
 source-wordcount: '173'
 ht-degree: 60%

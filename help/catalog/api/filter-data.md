@@ -2,10 +2,9 @@
 keywords: Experience Platform;accueil;rubriques populaires;filtre;filtre;filtrer les données;filtrer les données;filtrer les données;période
 solution: Experience Platform
 title: Filtrage des données du catalogue à l’aide des paramètres de requête
-topic-legacy: developer guide
 description: L’API Catalog Service permet de filtrer les données de réponse à l’aide de paramètres de requête de demande. En ce qui concerne le catalogue, l’une des bonnes pratiques consiste à utiliser des filtres dans tous les appels API, réduisant ainsi la charge de l’API et contribuant à améliorer les performances globales.
 exl-id: 0cdb5a7e-527b-46be-9ad8-5337c8dc72b7
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
 source-wordcount: '2121'
 ht-degree: 87%

@@ -2,10 +2,9 @@
 keywords: Experience Platform;accueil;rubriques populaires;accès aux données;sdk python;sdk spark;api data access;exporter;exporter
 solution: Experience Platform
 title: Guide de l’API Data Access
-topic-legacy: developer guide
 description: L’API Data Access prend en charge Adobe Experience Platform en fournissant aux développeurs une interface RESTful axée sur la découverte et l’accessibilité des jeux de données ingérés dans Experience Platform.
 exl-id: 278ec322-dafa-4e3f-ae45-2d20459c5653
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
 source-wordcount: '524'
 ht-degree: 85%
