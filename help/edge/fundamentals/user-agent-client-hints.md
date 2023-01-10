@@ -2,13 +2,13 @@
 title: Conseils sur le client User-Agent
 description: Découvrez le fonctionnement des conseils client User-Agent dans le SDK Web
 keywords: user-agent;conseils client; string; chaîne de l’agent-utilisateur ; faible entropie; entropie élevée
-source-git-commit: 6c974d1a646ff1f3a8f7ad9d67a6840391fc739e
+exl-id: a909b1d1-be9d-43ba-bb4b-d28b0c609f65
+source-git-commit: 4a2ae40fc64c4340ddb05db881c2176bb2aedc46
 workflow-type: tm+mt
-source-wordcount: '1081'
-ht-degree: 7%
+source-wordcount: '1065'
+ht-degree: 8%
 
 ---
-
 
 # Conseils sur le client User-Agent
 
@@ -37,7 +37,7 @@ Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like 
 | Version du système d’exploitation | 10.15.7 |
 | Appareil | Intel Mac OS X 10_15_7 |
 
-## Cas d&#39;utilisation {#use-cases}
+## Cas d’utilisation {#use-cases}
 
 [!DNL User-Agent] Les chaînes ont longtemps été utilisées pour fournir aux équipes de marketing et de développement des informations importantes sur la manière dont les navigateurs, les systèmes d’exploitation et les périphériques affichent le contenu du site, ainsi que sur la manière dont les utilisateurs interagissent avec les sites web.
 
@@ -58,7 +58,7 @@ Malgré l&#39;objectif important, [!DNL User-Agent] les chaînes sont destinées
 
 La solution qu&#39;ils ont développée s&#39;appelle [Conseils sur le client User-Agent](https://developer.chrome.com/docs/privacy-sandbox/user-agent/). Les conseils aux clients permettent toujours aux sites web de collecter les informations nécessaires sur les navigateurs, les systèmes d’exploitation et les appareils, tout en offrant une protection accrue contre les méthodes de suivi secrètes, telles que l’empreinte digitale.
 
-Les conseils aux clients permettent aux propriétaires de sites web d’accéder à une grande partie des mêmes informations disponibles dans la variable [!DNL User-Agent] mais d’une manière plus respectueuse de la vie privée.
+Les conseils clients permettent aux propriétaires de site web d’accéder aux mêmes informations que celles disponibles dans la chaîne [!DNL User-Agent], mais d’une manière plus respectueuse de la vie privée.
 
 Lorsque les navigateurs modernes envoient un utilisateur vers un serveur web, l’ensemble des [!DNL User-Agent] est envoyée à chaque demande, qu’elle soit requise ou non. Les conseils du client, en revanche, imposent un modèle dans lequel le serveur doit demander au navigateur les informations supplémentaires qu’il souhaite connaître sur le client. Lors de la réception de cette requête, le navigateur peut appliquer ses propres stratégies ou sa propre configuration utilisateur pour déterminer les données renvoyées. Au lieu d’exposer l’ensemble [!DNL User-Agent] pour toutes les requêtes, l’accès est désormais géré de manière explicite et auditable.
 
@@ -116,13 +116,7 @@ Si vous n’activez pas les indicateurs client à forte entropie dans votre envi
 
 ### Rapports Adobe Analytics reposant sur des indices client à forte entropie {#analytics}
 
-Les rapports Adobe Analytics suivants ne fonctionneront pas lorsque les indices client à forte entropie sont désactivés.
-
-* [Browser](https://experienceleague.adobe.com/docs/analytics/components/dimensions/browser.html) (Navigateur)
-* [Type de navigateur](https://experienceleague.adobe.com/docs/analytics/components/dimensions/browser-type.html)
-* [Operating system (Système d’exploitation)](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-systems.html)
-* [Types de systèmes d’exploitation](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-system-types.html)
-* [Dimensions mobiles](https://experienceleague.adobe.com/docs/analytics/components/dimensions/mobile-dimensions.html)
+Le [Système d’exploitation](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-systems.html) dimension inclut la version du système d’exploitation stockée en tant qu’indice client à forte entropie. Si les indices des clients à forte entropie ne sont pas activés, la version du système d’exploitation peut être inexacte pour les accès collectés à partir des navigateurs Chromium.
 
 ### Caractéristiques d’Audience Manager reposant sur des indices client à forte entropie {#aam}
 
