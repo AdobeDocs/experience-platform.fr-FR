@@ -279,7 +279,7 @@ ht-degree: 75%
       * [Configurations d’application](./api/endpoints/app-configurations.md)
       * [Événements d’audit](./api/endpoints/audit-events.md)
       * [Rappels](./api/endpoints/callbacks.md)
-      * [Remarques](./api/endpoints/notes.md)
+      * [Notes](./api/endpoints/notes.md)
       * [Profile](./api/endpoints/profile.md)
       * [Recherche](./api/endpoints/search.md)
       * [Secrets](./api/endpoints/secrets.md)

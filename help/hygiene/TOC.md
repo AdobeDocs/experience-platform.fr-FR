@@ -2,12 +2,12 @@
 audience: user
 user-guide-title: Aide du nettoyage de données
 breadcrumb-title: Guide de nettoyage de données
-user-guide-description: Supprimez des enregistrements individuels et planifiez les expirations de jeux de données dans Experience Platform pour la normalisation des données, la suppression des données anonymes et la minimisation des données.
+user-guide-description: Supprimez des enregistrements individuels et planifiez les expirations de jeux de données dans Experience Platform pour le nettoyage des données, la suppression des données anonymes et la minimisation des données.
 feature: Data Hygiene
 source-git-commit: 70a2abcc4d6e27a89e77d68e7757e4876eaa4fc0
 workflow-type: tm+mt
 source-wordcount: '52'
-ht-degree: 55%
+ht-degree: 92%
 
 ---
 

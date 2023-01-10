@@ -5,7 +5,7 @@ breadcrumb-title: Guide d’Adobe Experience Platform Debugger
 user-guide-description: Parcourez vos pages web à la recherche de problèmes éventuels grâce à vos implémentations Experience Platform.
 feature: Debugger
 source-git-commit: 6362cef0dc33f4b1f9cf8560dae50e602ce6ad80
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '62'
 ht-degree: 100%
 

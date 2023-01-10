@@ -1,12 +1,12 @@
 ---
 keywords: RTCDP;CDP;Real-time Customer Data Platform;plateforme de données client en temps réel;cdp en temps réel;cdp;rtcdp
 title: Exemple de cas d’utilisation pour l’édition B2B de Real-time Customer Data Platform
-description: Cet exemple de scénario fournit un exemple de configuration de votre mise en oeuvre d’Adobe Real-time Customer Data Platform B2B Edition.
+description: Cet exemple de scénario fournit un exemple de configuration de votre implémentation de l’édition B2B de Real-Time Customer Data Platform.
 exl-id: 15505980-ac33-44b2-8989-c08cbabd212b
 source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '1135'
-ht-degree: 83%
+ht-degree: 85%
 
 ---
 

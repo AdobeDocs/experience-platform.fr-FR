@@ -7,7 +7,7 @@ feature: Data Ingestion
 source-git-commit: f77bbc60f2bc1f12970e8050ec6a924b9713f303
 workflow-type: tm+mt
 source-wordcount: '145'
-ht-degree: 86%
+ht-degree: 95%
 
 ---
 
@@ -28,7 +28,7 @@ ht-degree: 86%
 - Tutoriels {#tutorials}
    - Mappage d’un fichier CSV à XDM {#map-csv}
       - [Présentation](./tutorials/map-csv/overview.md)
-      - [Mappage d’un fichier CSV à un schéma existant](./tutorials/map-csv/existing-schema.md)
+      - [Mapper un fichier CSV à un schéma existant](./tutorials/map-csv/existing-schema.md)
       - [Mappage d’un fichier CSV à l’aide de recommandations générées par l’IA](./tutorials/map-csv/recommendations.md)
    - [Ingestion de données par lots à l’aide de l’interface utilisateur](tutorials/ingest-batch-data.md)
    - [Créer une connexion en continu authentifiée](tutorials/create-authenticated-streaming-connection.md)

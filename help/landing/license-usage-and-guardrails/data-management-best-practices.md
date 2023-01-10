@@ -6,7 +6,7 @@ exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
 source-git-commit: 9a8e247784dc51d7dc667b7467042399df700b3c
 workflow-type: tm+mt
 source-wordcount: '2134'
-ht-degree: 91%
+ht-degree: 92%
 
 ---
 
@@ -133,7 +133,7 @@ Plusieurs rapports permettant de déterminer la composition du magasin de profil
 <!-- * **Unknown Profiles Report API**: Exposes the impact of applying pseudonymous expirations for different time thresholds. You can use this report to identify which pseudonymous expirations threshold to apply. See the tutorial on [generating the unknown profiles report](../../profile/api/preview-sample-status.md#generate-the-unknown-profiles-report) for more information.
 -->
 
-#### Expiration des événements d’expérience {#event-expirations}
+#### Expirations des événements d’expérience {#event-expirations}
 
 Cette fonctionnalité vous permet de supprimer automatiquement les données comportementales d’un jeu de données activé par Profile qui n’est plus utile pour vos cas d’utilisation. Consultez la présentation sur [Expiration des événements d’expérience](../../profile/event-expirations.md) pour plus d’informations sur le fonctionnement de ce processus une fois qu’il est activé pour un jeu de données.
 
@@ -156,10 +156,10 @@ Le tableau suivant présente la liste des fonctionnalités actuellement disponib
 | Fonctionnalité | Description |
 | --- | --- |
 | [Activation/désactivation de jeux de données pour le profil](../../catalog/datasets/user-guide.md) | Activez ou désactivez l’ingestion du jeu de données dans le service de profil |
-| [Expiration des événements d’expérience](../../profile/event-expirations.md) | Appliquez un délai d’expiration pour tous les événements ingérés dans un jeu de données activé par Profile. Contactez votre représentant du support Adobe pour activer cette fonctionnalité. |
+| [Expirations des événements d’expérience](../../profile/event-expirations.md) | Appliquez un délai d’expiration pour tous les événements ingérés dans un jeu de données activé par Profile. Contactez votre représentant du support Adobe pour activer cette fonctionnalité. |
 | [Filtres de préparation de données Adobe Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md) | Appliquez des filtres [!DNL Kafka] pour exclure les données inutiles de l’ingestion |
 | [Filtres de connecteur source Adobe Audience Manager](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) | Appliquez des filtres de connexion source Audience Manager pour exclure les données inutiles de l’ingestion. |
-| [Filtres Alloy de données du SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=en#fundamentals) | Appliquez des filtres Alloy pour exclure les données inutiles de l’ingestion. |
+| [Filtres Alloy de données du SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=fr#fundamentals) | Appliquez des filtres Alloy pour exclure les données inutiles de l’ingestion. |
 | [Filtres de données de transfert d’événement](../../tags/ui/event-forwarding/overview.md) | Appliquez des filtres [!DNL Kafka] côté serveur pour exclure les données inutiles de l’ingestion.  Pour plus d’informations, consultez la documentation sur les [règles de balise](../../tags/ui/managing-resources/rules.md). |
 | [Interface utilisateur du tableau de bord d’utilisation de la licence](../../dashboards/guides/license-usage.md#license-usage-dashboard-data) | Affichez un instantané des données liées aux licences de l’entreprise pour Experience Platform. |
 | [API Dataset Overlap Report](../../profile/tutorials/dataset-overlap-report.md) | Génère les jeux de données qui contribuent le plus à l’audience adressable. |
