@@ -2,13 +2,12 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;Azure synapse Analytics;azure synapse Analytics;Synapse;synapse
 solution: Experience Platform
 title: Présentation du connecteur source Azure synapse Analytics
-topic-legacy: overview
 description: Découvrez comment connecter Azure synapse Analytics à Adobe Experience Platform à l’aide des API ou de l’interface utilisateur.
 exl-id: 5b94ae74-e5a7-40e9-a952-41eddf06dcde
-source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '240'
-ht-degree: 55%
+ht-degree: 58%
 
 ---
 
@@ -22,12 +21,12 @@ Adobe Experience Platform permet d’ingérer des données à partir de source
 
 Une liste d’adresses IP doit être ajoutée à une liste autorisée avant d’utiliser les connecteurs source. Si vous n’ajoutez pas vos adresses IP spécifiques à une région à votre liste autorisée, des erreurs ou une absence de performances peuvent se produire lors de l’utilisation de sources. Voir la page [Liste autorisée d’adresses IP](../../ip-address-allow-list.md) pour plus d’informations.
 
-La documentation ci-dessous fournit des informations sur la connexion de [!DNL Azure Synapse Analytics] à à l’aide d’API ou de l’interface utilisateur :[!DNL Platform]
+La documentation ci-dessous fournit des informations sur la connexion d’[!DNL Azure Synapse Analytics] à à l’aide d’API ou de l’interface utilisateur :[!DNL Platform]
 
 ## Connecter [!DNL Azure Synapse Analytics] à [!DNL Platform] à lʼaide dʼAPI
 
 - [Création d’une connexion de base Analytics d’Azure synapse à l’aide de l’API Flow Service](../../tutorials/api/create/databases/synapse-analytics.md)
-- [Exploration des tableaux de données à l’aide de l’API Flow Service](../../tutorials/api/explore/tabular.md)
+- [Explorer des tableaux de données à l’aide de l’API Flow Service](../../tutorials/api/explore/tabular.md)
 - [Création d’un flux de données pour une source de base de données à l’aide de l’API Flow Service](../../tutorials/api/collect/database-nosql.md)
 
 ## Connecter [!DNL Azure Synapse Analytics] à [!DNL Platform] à lʼaide de l’interface utilisateur

@@ -2,10 +2,9 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;segmentation;Segmentation;Segmentation Service;pql;PQL;langage de requête de profil;fonctions de chaîne;chaîne;
 solution: Experience Platform
 title: Fonctions de chaîne PQL
-topic-legacy: developer guide
 description: Le langage de requête de profil (PQL) offre des fonctions pour faciliter l’interaction avec les chaînes.
 exl-id: 9fd79d86-0802-4312-abce-f6ef5ba5bb34
-source-git-commit: 1c9ed96cdbd9e670bd1f05467e33e8dab5bc2121
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '840'
 ht-degree: 88%

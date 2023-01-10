@@ -2,10 +2,9 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;connecteur Attributs du client
 solution: Experience Platform
 title: Présentation du connecteur source des attributs du client
-topic-legacy: overview
 description: Découvrez comment connecter les attributs du client à Adobe Experience Platform à l’aide des API ou de l’interface utilisateur
 exl-id: 63765ecd-ddb5-4992-a3de-d53f054bfb28
-source-git-commit: 541cc87f218a6ef3dcca37573f6d0f9cf560edfb
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '411'
 ht-degree: 19%
@@ -14,7 +13,7 @@ ht-degree: 19%
 
 # Connecteur Attributs du client
 
-Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous permettant de structurer, de libeller et d’améliorer les données entrantes à l’aide des services de Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, des bases de données, etc.
+Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les bases de données, etc.
 
 [[!DNL Customer Attributes]](https://experienceleague.adobe.com/docs/core-services/interface/services/customer-attributes/attributes.html?lang=en) dans Experience Cloud vous permet de charger vos données d’entreprise capturées à partir d’une base de données de gestion de la relation client (CRM). Vous pouvez transférer les données dans une source de données d’attributs du client dans Experience Cloud, puis les utiliser dans Adobe Analytics et Adobe Target.
 

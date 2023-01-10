@@ -2,11 +2,10 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;DB2;db2;IBM DB2;ibm db2
 solution: Experience Platform
 title: Création d’une connexion source IBM DB2 dans l’interface utilisateur
-topic-legacy: overview
 type: Tutorial
 description: Découvrez comment créer une connexion source IBM DB2 à l’aide de l’interface utilisateur de Adobe Experience Platform.
 exl-id: 69c99f94-9cb9-43ff-9315-ce166ab35a60
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '536'
 ht-degree: 38%

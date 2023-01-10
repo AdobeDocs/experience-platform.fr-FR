@@ -2,10 +2,9 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;segmentation;Segmentation;Segmentation Service;pql;PQL;langage de requête de profil;fonctions de comparaison;comparaison;
 solution: Experience Platform
 title: Fonctions de comparaison PQL
-topic-legacy: developer guide
 description: Les fonctions de comparaison sont utilisées pour comparer différentes expressions et valeurs, renvoyant "true" ou "false" en conséquence.
 exl-id: 15f106c7-b88b-4042-b925-703e2a309573
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '326'
 ht-degree: 85%

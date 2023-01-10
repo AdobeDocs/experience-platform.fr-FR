@@ -1,14 +1,13 @@
 ---
-keywords: Experience Platform;accueil;rubriques populaires;schéma;schéma;XDM;profil individuel;champs;schémas;schéma;identityMap;identityMap;carte d’identité;carte d’identité;conception de schéma;carte;carte;schéma d’union;union
+keywords: Experience Platform;accueil;rubriques populaires;schéma;Schéma;XDM;profil individuel;champs;schémas;Schémas;identityMap;mappage d’identités;Mappage d’identités;conception de schéma;mappage;Mappage;schéma d’union;union
 solution: Experience Platform
 title: Classe XDM Individual Profile
-topic-legacy: overview
 description: Ce document présente la classe XDM Individual Profile.
 exl-id: 83b22462-79ce-4024-aa50-a9bd800c0f81
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
 source-wordcount: '598'
-ht-degree: 32%
+ht-degree: 38%
 
 ---
 

@@ -2,14 +2,13 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;redshift;Redshift;Amazon Redshift;amazon redshift
 solution: Experience Platform
 title: Création d’une connexion de base de Redshift Amazon à l’aide de l’API Flow Service
-topic-legacy: overview
 type: Tutorial
 description: Découvrez comment connecter Adobe Experience Platform à Amazon Redshift à l’aide de l’API Flow Service.
 exl-id: 2728ce08-05c9-4dca-af1d-d2d1b266c5d9
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '477'
-ht-degree: 51%
+ht-degree: 61%
 
 ---
 
@@ -103,7 +102,7 @@ curl -X POST \
 
 **Réponse**
 
-Une réponse réussie renvoie la connexion nouvellement créée, y compris son identifiant unique (`id`). Cet identifiant est nécessaire pour explorer vos données dans le tutoriel suivant.
+Une réponse réussie renvoie la nouvelle connexion, y compris son identifiant de connexion unique (`id`). Cet identifiant est nécessaire pour explorer vos données dans le tutoriel suivant.
 
 ```json
 {
@@ -114,7 +113,7 @@ Une réponse réussie renvoie la connexion nouvellement créée, y compris son i
 
 ## Étapes suivantes
 
-En suivant ce tutoriel, vous avez créé une [!DNL Amazon Redshift] connexion de base à l’aide de [!DNL Flow Service] API. Vous pouvez utiliser cet identifiant de connexion de base dans les tutoriels suivants :
+Ce tutoriel vous a permis de créer une connexion de base [!DNL Amazon Redshift] à l’aide de l’API [!DNL Flow Service]. Vous pouvez utiliser cet identifiant de connexion de base dans les tutoriels suivants : 
 
-* [Explorez la structure et le contenu de vos tableaux de données à l’aide du [!DNL Flow Service] API](../../explore/tabular.md)
+* [Explorez la structure et le contenu de vos tableaux de données à l’aide de l’API  [!DNL Flow Service] .](../../explore/tabular.md)
 * [Créez un flux de données pour importer des données de base de données dans Platform à l’aide de la fonction [!DNL Flow Service] API](../../collect/database-nosql.md)

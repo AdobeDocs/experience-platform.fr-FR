@@ -2,11 +2,10 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;paypal;Paypal
 solution: Experience Platform
 title: Création d’une connexion à la source PayPal dans l’interface utilisateur
-topic-legacy: overview
 type: Tutorial
 description: Découvrez comment créer une connexion source PayPal à l’aide de l’interface utilisateur de Adobe Experience Platform.
 exl-id: bbd3f634-cb28-45d8-9b7b-ed3873101882
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '453'
 ht-degree: 53%

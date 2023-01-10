@@ -2,13 +2,12 @@
 keywords: Experience Platform;accueil;rubriques populaires;environnement de test;environnement de test;test
 solution: Experience Platform
 title: Présentation des environnements de test
-topic-legacy: overview
 description: Les environnements de test constituent des partitions virtuelles au sein d’une instance d’Experience Platform unique, ce qui permet une intégration transparente au processus de développement de vos applications d’expérience numérique.
 exl-id: b760a979-8134-4a44-8433-ec6fb49bc508
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1005'
-ht-degree: 60%
+ht-degree: 86%
 
 ---
 
@@ -22,19 +21,19 @@ Ce document présente de manière générale les environnements de test dans Exp
 
 ## Fonctionnement des environnements de test
 
-Les environnements de test constituent des partitions virtuelles au sein d’une instance d’Experience Platform unique, ce qui permet une intégration transparente au processus de développement de vos applications d’expérience numérique. Tout le contenu et les actions réalisés dans un environnement de test sont limités à celui-ci et n’en affectent aucun autre. Deux types d’environnements de test sont pris en charge sur Experience Platform :
+Les environnements de test constituent des partitions virtuelles au sein d’une instance d’Experience Platform unique, ce qui permet une intégration transparente au processus de développement de vos applications d’expérience numérique. Tout le contenu et les actions réalisés dans une sandbox sont limités à celle-ci et n’en affectent aucun autre. Deux types d’environnements de test sont pris en charge sur Experience Platform :
 
-* **Environnement de test de production**: Un environnement de test de production est conçu pour être utilisé avec des profils dans votre environnement de production. Platform vous permet de créer plusieurs environnements de test de production afin de fournir les fonctionnalités appropriées aux données tout en maintenant l’isolation opérationnelle. Cette fonctionnalité vous permet de dédier des environnements de test de production spécifiques à des secteurs d’activité, des marques, des projets ou des régions distincts. Les environnements de test de production prennent en charge un volume de profils de production allant jusqu’à votre licence [!DNL Profile] engagement (mesuré de manière cumulée sur tous vos environnements de test de production autorisés). Vous avez le droit d’utiliser un profil de moyenne sous licence par autorisé [!DNL Profile] (mesuré de manière cumulée sur tous vos environnements de test de production autorisés).
-* **Environnement de test de développement**: Un environnement de test de développement est un environnement de test qui peut être utilisé exclusivement à des fins de développement et de test avec des profils hors production. Les environnements de test de développement prennent en charge un volume de profils hors production pouvant atteindre 10 % de votre licence [!DNL Profile] engagement (mesuré de manière cumulée sur tous vos environnements de test de développement autorisés). Vous avez le droit de :
-   * une richesse moyenne de profil hors production de 75 kilo-octets par profil hors production autorisé (mesurée de manière cumulative sur tous vos environnements de test de développement autorisés) ;
-   * une tâche de segmentation par lots par jour, par environnement de test de développement ;
-   * Une moyenne de 120 [!DNL Profile] appels API, par [!DNL Profile], par an (mesuré de manière cumulée sur tous vos environnements de développement autorisés).
+* **Sandbox de production** : une sandbox de production est conçue pour être utilisée avec des profils dans votre environnement de production. Platform vous permet de créer plusieurs sandbox de production afin de fournir les fonctionnalités appropriées aux données tout en maintenant l’isolation opérationnelle. Cette fonctionnalité vous permet de dédier des sandbox de production spécifiques à des secteurs d’activité, des marques, des projets ou des régions distincts. Les sandbox de production prennent en charge un volume de profils de production allant jusqu’à votre engagement sous licence de [!DNL Profile] (mesuré de manière cumulée sur toutes vos sandbox de production autorisées). Vous avez le droit d’utiliser un profil moyen sous licence par [!DNL Profile] autorisé (mesuré de manière cumulée sur toutes vos sandbox de production autorisées).
+* **Sandbox de développement** : une sandbox de développement est une sandbox qui peut être utilisée exclusivement à des fins de développement et de test avec des profils hors production. Les sandbox de développement prennent en charge un volume de profils hors production pouvant atteindre 10 % de votre engagement sous licence de [!DNL Profile] (mesuré de manière cumulée sur toutes vos sandbox de développement autorisées). Vos droits incluent jusqu’à :
+   * une richesse moyenne de profil hors production de 75 kilo-octets par profil hors production autorisé (mesurée de manière cumulative sur toutes vos sandbox de développement autorisées) ;
+   * une tâche de segmentation par lots par jour, par sandbox de développement ;
+   * une moyenne de 120 appels API [!DNL Profile], par [!DNL Profile], par an (mesurée de manière cumulée sur toutes vos sandbox de développement autorisées).
 
 Une instance Experience Platform prend en charge plusieurs environnements de test de production et de développement, chaque environnement de test conservant sa propre bibliothèque indépendante de ressources Platform (y compris les schémas, les jeux de données, les profils, etc.). En outre, les environnements de test de production et de développement disposent d’une fonctionnalité de réinitialisation qui supprime de l’environnement de test toutes les ressources créées par les clients. Les environnements de test de développement ne peuvent pas être convertis en environnements de test de production.
 
-Une licence d’Experience Platform par défaut vous accorde un total de cinq environnements de test que vous pouvez classer en tant que production ou développement. Vous pouvez attribuer une licence à des modules supplémentaires de 10 environnements de test, jusqu’à 75 environnements de test au total. Ces environnements de test supplémentaires peuvent être utilisés pour créer des environnements de test de production et de développement. Contactez votre administrateur dʼorganisation IMS ou votre représentant commercial Adobe pour plus de détails.
+Une licence Experience Platform par défaut vous accorde un total de cinq sandbox que vous pouvez classer en tant que production ou développement. Vous pouvez ajouter des packs de 10 sandbox jusquʼà un maximum de 75 sandbox au total. Ces environnements de test supplémentaires peuvent être utilisés pour créer des environnements de test de production et de développement. Contactez votre administrateur dʼorganisation IMS ou votre représentant commercial Adobe pour plus de détails.
 
-Enfin, l’environnement de test de production par défaut est le premier environnement de test de production créé lors de la première création d’une organisation IMS. L’environnement de test de production par défaut vous permet d’ingérer ou d’utiliser des données de Platform, ainsi que d’accepter des requêtes qui n’incluent pas de valeurs pour un nom d’environnement de test ou un ID d’environnement de test.
+Enfin, l’environnement de test de production par défaut est le premier environnement de test de production créé lors de la première création d’une organisation IMS. La sandbox de production par défaut vous permet d’ingérer ou d’utiliser des données de Platform, ainsi que d’accepter des requêtes qui n’incluent pas de valeurs pour un nom de sandbox ou un identifiant de sandbox.
 
 >[!NOTE]
 >

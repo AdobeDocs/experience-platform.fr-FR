@@ -2,13 +2,12 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;schéma;XDM;ExperienceEvent;champs;schémas;schémas;conception de schéma;groupe de champs;groupe de champs;appareil;commerce;échange;échange
 solution: Experience Platform
 title: Groupe de champs de schéma Détails sur l’entrée du périphérique
-topic-legacy: overview
 description: Ce document fournit une vue d’ensemble du groupe de champs Détails du commerce d’appareil.
 exl-id: 744557be-0297-453f-9134-9d0f4ef2df4d
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '178'
-ht-degree: 11%
+ht-degree: 16%
 
 ---
 

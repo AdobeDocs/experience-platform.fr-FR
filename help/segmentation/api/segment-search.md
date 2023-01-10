@@ -1,10 +1,9 @@
 ---
 keywords: Experience Platform;segmentation;service de segmentation;dépannage;API;seg;segment;segment;recherche;recherche;recherche de segments;
 title: Point de terminaison de l’API de recherche de segments
-topic-legacy: guide
 description: Dans l’API Adobe Experience Platform Segmentation Service, la recherche de segments est utilisée pour rechercher les champs contenus dans diverses sources de données et les renvoyer en temps quasi réel. Ce guide fournit des informations pour vous aider à mieux comprendre la recherche de segments et inclut des exemples d’appels API pour effectuer des actions de base à l’aide de l’API.
 exl-id: bcafbed7-e4ae-49c0-a8ba-7845d8ad663b
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1201'
 ht-degree: 45%
@@ -100,7 +99,7 @@ GET /search/entities?schema.name={SCHEMA}&namespace={NAMESPACE}&entityId={ENTITY
 | ---------- | ----------- | 
 | `schema.name={SCHEMA}` | **(Obligatoire)** Où {SCHEMA} contient la valeur de classe de schéma associée aux objets de recherche. Actuellement, seul `_xdm.context.segmentdefinition` est pris en charge. |
 | `namespace={NAMESPACE}` | **(Obligatoire)** Où {NAMESPACE} contient l’espace de noms dans lequel vous souhaitez effectuer des recherches. |
-| `s={SEARCH_TERM}` | *(Facultatif)* Où {SEARCH_TERM} contient une requête conforme à l’implémentation Microsoft de [Syntaxe de recherche de Lucene](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax). Si aucun terme de recherche n’est spécifié, tous les enregistrements associés à `schema.name` seront renvoyés. Vous trouverez une explication plus détaillée dans la section [annexe](#appendix) de ce document. |
+| `s={SEARCH_TERM}` | *(Facultatif)* Où {SEARCH_TERM} contient une requête conforme à l’implémentation Microsoft de [Syntaxe de recherche de Lucene](https://docs.microsoft.com/fr-fr/azure/search/query-lucene-syntax). Si aucun terme de recherche n’est spécifié, tous les enregistrements associés à `schema.name` seront renvoyés. Vous trouverez une explication plus détaillée dans la section [annexe](#appendix) de ce document. |
 | `entityId={ENTITY_ID}` | *(Facultatif)* Limite votre recherche à dans le dossier désigné, spécifié avec {ENTITY_ID}. |
 | `limit={LIMIT}` | *(Facultatif)* Où {LIMIT} représente le nombre de résultats de recherche à renvoyer. La valeur par défaut est 50. |
 | `page={PAGE}` | *(Facultatif)* Où {PAGE} représente le numéro de page utilisé pour paginer les résultats de la requête recherchée. Veuillez noter que le numéro de page commence à **0**. |
@@ -261,4 +260,4 @@ Le tableau suivant répertorie les détails du fonctionnement des requêtes de r
 | &quot;hotel airport&quot;\~5 | Recherche de proximité. Ce type de recherche permet de rechercher des termes proches les uns des autres dans un document. Par exemple, l’expression `"hotel airport"~5` trouvera les termes « hotel » et « airport » à moins de 5 mots l’un de l’autre dans un document. |
 | `/a[0-9]+b$/` | Recherche avec expressions régulières. Ce type de recherche trouve une correspondance basée sur le contenu entre les barres obliques « / », comme indiqué dans la classe RegExp. Par exemple, pour rechercher des documents contenant « motel » ou « hotel », spécifiez `/[mh]otel/`. Les recherches avec expressions régulières sont comparées à des mots uniques. |
 
-Pour obtenir une documentation plus détaillée sur la syntaxe des requêtes, veuillez lire la [documentation sur la syntaxe Lucene](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax).
+Pour obtenir une documentation plus détaillée sur la syntaxe des requêtes, veuillez lire la [documentation sur la syntaxe Lucene](https://docs.microsoft.com/fr-fr/azure/search/query-lucene-syntax).

@@ -2,11 +2,10 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;base de données;base de données tierce
 solution: Experience Platform
 title: Créez un flux de données pour les sources de base de données à l’aide de l’API Flow Service.
-topic-legacy: overview
 type: Tutorial
 description: Ce tutoriel décrit les étapes à suivre pour récupérer des données d’une base de données et les ingérer dans Platform à l’aide des connecteurs source et des API.
 exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1386'
 ht-degree: 95%

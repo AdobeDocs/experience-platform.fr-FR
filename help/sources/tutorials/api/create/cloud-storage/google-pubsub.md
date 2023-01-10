@@ -2,14 +2,13 @@
 keywords: Experience Platform;accueil;rubriques populaires;Google PubSub;google pubsub
 solution: Experience Platform
 title: Créer une connexion source Google PubSub à l’aide de l’API Flow Service
-topic-legacy: overview
 type: Tutorial
 description: Découvrez comment connecter Adobe Experience Platform à un compte Google PubSub à l’aide de l’API Flow Service.
 exl-id: f5b8f9bf-8a6f-4222-8eb2-928503edb24f
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '724'
-ht-degree: 100%
+ht-degree: 97%
 
 ---
 
@@ -34,7 +33,7 @@ Pour que [!DNL Flow Service] puisse se connecter à [!DNL PubSub], vous devez fo
 | ---------- | ----------- |
 | `projectId` | Identifiant de projet requis pour authentifier [!DNL PubSub]. |
 | `credentials` | Informations d’identification ou clé requises pour authentifier [!DNL PubSub]. |
-| `connectionSpec.id` | La spécification de connexion renvoie les propriétés du connecteur d’une source, y compris les spécifications d’authentification liées à la création des connexions de base cibles et sources. L’identifiant de spécification de connexion [!DNL PubSub] est : `70116022-a743-464a-bbfe-e226a7f8210c`. |
+| `connectionSpec.id` | La spécification de connexion renvoie les propriétés du connecteur d’une source, y compris les spécifications d’authentification liées à la création des connexions cible de base et source. L’identifiant de spécification de connexion [!DNL PubSub] est : `70116022-a743-464a-bbfe-e226a7f8210c`. |
 
 Pour plus d’informations sur ces valeurs, voir le document d’[[!DNL PubSub] authentification](https://cloud.google.com/pubsub/docs/authentication). Pour utiliser l’authentification par compte de service, consultez le [[!DNL PubSub] Guide de création de comptes de service](https://cloud.google.com/docs/authentication/production#create_service_account) pour savoir comment générer vos informations d’identification.
 

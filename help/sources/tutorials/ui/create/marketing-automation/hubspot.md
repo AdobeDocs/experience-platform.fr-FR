@@ -2,11 +2,10 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;zone réactive;zone réactive
 solution: Experience Platform
 title: Création d’une connexion à la source HubSpot dans l’interface utilisateur
-topic-legacy: overview
 type: Tutorial
 description: Découvrez comment créer une connexion source HubSpot à l’aide de l’interface utilisateur de Adobe Experience Platform.
 exl-id: 452b7290-b9e8-4728-8b58-0e0c76bd9449
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '468'
 ht-degree: 51%

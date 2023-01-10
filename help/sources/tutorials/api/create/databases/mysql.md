@@ -2,14 +2,13 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;MySQL;mysql
 solution: Experience Platform
 title: Créez un [!DNL MySQL] Connexion de base à l’aide de l’API Flow Service
-topic-legacy: overview
 type: Tutorial
 description: Découvrez comment connecter Adobe Experience Platform à MySQL à l’aide de l’API Flow Service.
 exl-id: 273da568-84ed-4a3d-bfea-0f5b33f1551a
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '450'
-ht-degree: 59%
+ht-degree: 64%
 
 ---
 
@@ -101,8 +100,8 @@ Une réponse réussie renvoie les détails de la connexion de base que vous vene
 
 ## Étapes suivantes
 
-En suivant ce tutoriel, vous avez créé une [!DNL MySQL]connexion de base à l’aide de [!DNL Flow Service] API. Vous pouvez utiliser cet identifiant de connexion de base dans les tutoriels suivants :
+En suivant ce tutoriel, vous avez créé une [!DNL MySQL]connexion de base à l’aide de [!DNL Flow Service] API. Vous pouvez utiliser cet identifiant de connexion de base dans les tutoriels suivants : 
 
-* [Explorez la structure et le contenu de vos tableaux de données à l’aide du [!DNL Flow Service] API](../../explore/tabular.md)
+* [Explorez la structure et le contenu de vos tableaux de données à l’aide de l’API  [!DNL Flow Service] .](../../explore/tabular.md)
 * [Créez un flux de données pour importer des données de base de données dans Platform à l’aide de la fonction [!DNL Flow Service] API](../../collect/database-nosql.md)
 

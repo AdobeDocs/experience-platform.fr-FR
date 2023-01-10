@@ -2,14 +2,13 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;Snowflake;snowflake
 solution: Experience Platform
 title: Création d’une connexion de base de Snowflake à l’aide de l’API Flow Service
-topic-legacy: overview
 type: Tutorial
 description: Découvrez comment connecter Adobe Experience Platform à Snowflake à l’aide de l’API Flow Service.
 exl-id: 0ef34d30-7b4c-43f5-8e2e-cde05da05aa5
-source-git-commit: b1c0c3ea0d7170f76728de06e05787b7c9aaffe9
+source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '532'
-ht-degree: 45%
+ht-degree: 50%
 
 ---
 
@@ -104,7 +103,7 @@ Une réponse réussie renvoie la nouvelle connexion de , y compris son identifia
 }
 ```
 
-En suivant ce tutoriel, vous avez créé une [!DNL Snowflake] connexion de base à l’aide de [!DNL Flow Service] API. Vous pouvez utiliser cet identifiant de connexion de base dans les tutoriels suivants :
+En suivant ce tutoriel, vous avez créé une [!DNL Snowflake] connexion de base à l’aide de [!DNL Flow Service] API. Vous pouvez utiliser cet identifiant de connexion de base dans les tutoriels suivants : 
 
-* [Explorez la structure et le contenu de vos tableaux de données à l’aide du [!DNL Flow Service] API](../../explore/tabular.md)
+* [Explorez la structure et le contenu de vos tableaux de données à l’aide de l’API  [!DNL Flow Service] .](../../explore/tabular.md)
 * [Créez un flux de données pour importer des données de base de données dans Platform à l’aide de la fonction [!DNL Flow Service] API](../../collect/database-nosql.md)

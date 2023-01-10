@@ -2,13 +2,12 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;schéma;XDM;profil individuel;champs;schémas;schémas;conception de schéma;mixin;mixins;détails de travail;travail de profil;
 solution: Experience Platform
 title: Groupe de champs de schéma Détails du contact professionnel
-topic-legacy: overview
 description: Ce document présente un aperçu du groupe de champs de schéma Détails du contact du travail .
 exl-id: 0133622c-e95f-4833-b2f8-3694d41751b4
-source-git-commit: afe748d443aad7b6da5b348cd569c9e806e4419b
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '193'
-ht-degree: 12%
+ht-degree: 17%
 
 ---
 

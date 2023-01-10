@@ -2,10 +2,9 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;schéma;schéma;XDM;champs;schémas;schémas;télécoms;abonnement;type de données;type de données;type de données;
 solution: Experience Platform
 title: Type de données d'abonnement aux télécommunications
-topic-legacy: overview
 description: Ce document présente un aperçu du type de données XDM (Modèle de données d’expérience d’abonnement aux services de télécommunication).
 exl-id: d67915b6-daaa-489f-81b4-bd3dbe0ffa44
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '611'
 ht-degree: 20%

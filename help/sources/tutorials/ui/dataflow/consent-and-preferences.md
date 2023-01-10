@@ -2,11 +2,10 @@
 keywords: Experience Platform;accueil;rubriques populaires;consentement et préférences;consentement;onetrust;OneTrust
 solution: Experience Platform
 title: Création d’un flux de données à l’aide d’une source de consentement et de préférences dans l’interface utilisateur
-topic-legacy: overview
 type: Tutorial
 description: Un flux de données est une tâche planifiée qui récupère et ingère des données d’une source vers un jeu de données Platform. Ce tutoriel explique comment créer un flux de données pour une source de consentement et de préférences à l’aide de l’interface utilisateur de Platform.
 exl-id: 340b5945-baa1-4f79-88fa-2572606f6083
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '1425'
 ht-degree: 48%

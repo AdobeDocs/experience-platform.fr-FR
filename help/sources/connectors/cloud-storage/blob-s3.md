@@ -2,10 +2,9 @@
 keywords: Experience Platform;accueil;rubriques populaires;Azure Blob;Amazon S3;blob;Blob;S3;s3
 solution: Experience Platform
 title: Présentation des connecteurs source Azure Blob et Amazon S3
-topic-legacy: overview
 description: Découvrez comment connecter Azure Blob et Amazon S3 à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur.
 exl-id: 43a60d4d-1947-43c7-9a13-8e4094ca3604
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '140'
 ht-degree: 28%

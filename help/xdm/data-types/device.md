@@ -2,10 +2,9 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;schéma;schéma;XDM;champs;schémas;schémas;appareil;type de données;type de données;type de données
 solution: Experience Platform
 title: Type de données du périphérique
-topic-legacy: overview
 description: Ce document présente le type de données XDM de l’appareil.
 exl-id: 049a2ca1-6bc3-4b9c-832a-77102e8a0ed2
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '329'
 ht-degree: 18%

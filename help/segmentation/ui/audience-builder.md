@@ -2,11 +2,11 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;Segmentation Service;segmentation;service de segmentation;guide de l’utilisateur;guide de l’interface utilisateur d’audience;générateur d’audience;audience;guide de l’interface utilisateur d’audience
 solution: Experience Platform
 title: Guide de l’interface utilisateur d’Audiences
-topic-legacy: ui guide
 description: Audience Builder de l’interface utilisateur de Adobe Experience Platform fournit un espace de travail riche qui vous permet d’interagir avec les éléments de données Profile. L’espace de travail fournit des contrôles intuitifs pour la création et la modification d’audiences pour votre organisation.
 hide: true
 hidefromtoc: true
-source-git-commit: f71d49b576059e687c337cbacd6dd3d525e97834
+exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1321'
 ht-degree: 1%

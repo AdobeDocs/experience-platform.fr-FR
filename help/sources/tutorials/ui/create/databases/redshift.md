@@ -2,11 +2,10 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;Amazon Redshift;amazon redshift;Redshift;redshift
 solution: Experience Platform
 title: Création d’une connexion source de redirection Amazon dans l’interface utilisateur
-topic-legacy: overview
 type: Tutorial
 description: Découvrez comment créer une connexion source Amazon Redshift à l’aide de l’interface utilisateur de Adobe Experience Platform.
 exl-id: 4faf3200-673b-4a20-8f94-d049e800444b
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '473'
 ht-degree: 55%

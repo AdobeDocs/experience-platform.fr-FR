@@ -2,19 +2,18 @@
 keywords: Experience Platform;accueil;rubriques populaires;BigQuery;bigquery;Google BigQuery;google bigquery
 solution: Experience Platform
 title: Présentation du connecteur source Google BigQuery
-topic-legacy: overview
 description: Découvrez comment connecter Google BigQuery à Adobe Experience Platform à l’aide des API ou de l’interface utilisateur.
 exl-id: 35c61382-a909-47f4-a937-15cb725ecbe3
-source-git-commit: 7a62dcf1e9712d3c0c0d148b953e50dc11c91f1b
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '387'
-ht-degree: 34%
+ht-degree: 36%
 
 ---
 
 # [!DNL Google BigQuery]
 
-Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous permettant de structurer, de libeller et d’améliorer les données entrantes à l’aide des services de Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, des bases de données, etc.
+Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les bases de données, etc.
 
 [!DNL Experience Platform] prend en charge l’ingestion de données provenant d’une base de données tierce. Platform peut se connecter à différents types de bases de données comme les entrepôts relationnels, NoSQL ou de données. La prise en charge des fournisseurs de base de données inclut [!DNL Google BigQuery].
 
@@ -47,7 +46,7 @@ La documentation ci-dessous fournit des informations sur la connexion de [!DNL G
 ### Utiliser les API
 
 - [Création d’une connexion de base Google BigQuery à l’aide de l’API Flow Service](../../tutorials/api/create/databases/bigquery.md)
-- [Exploration des tableaux de données à l’aide de l’API Flow Service](../../tutorials/api/explore/tabular.md)
+- [Explorer des tableaux de données à l’aide de l’API Flow Service](../../tutorials/api/explore/tabular.md)
 - [Création d’un flux de données pour une source de base de données à l’aide de l’API Flow Service](../../tutorials/api/collect/database-nosql.md)
 
 ### Utiliser l’interface utilisateur

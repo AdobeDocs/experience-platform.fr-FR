@@ -2,13 +2,12 @@
 keywords: Experience Platform;accueil;rubriques populaires;HDFS;hdfs;Apache HDFS;apache hdfs
 solution: Experience Platform
 title: Présentation du connecteur source Apache HDFS
-topic-legacy: overview
 description: Découvrez comment connecter Apache HDFS à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur.
 exl-id: 1f156f7b-a19d-4dcf-a51d-ab6cb396d8f7
-source-git-commit: 1f9948d6e419ee5d6a021a589378f7aa990b7291
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '391'
-ht-degree: 72%
+ht-degree: 74%
 
 ---
 
@@ -16,7 +15,7 @@ ht-degree: 72%
 
 >[!NOTE]
 >
->Le connecteur Apache HDFS est en version bêta. Voir [Présentation des sources](../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs bêta-étiquetés.
+>Le connecteur Apache HDFS est en version bêta. Voir la [Présentation des sources](../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs étiquetés Beta.
 
 Adobe Experience Platform fournit une connectivité native pour les fournisseurs cloud tels qu’AWS, [!DNL Google Cloud Platform] et [!DNL Azure], ce qui vous permet d’importer vos données à partir de ces systèmes. Les données ingérées peuvent être formatées au format JSON, Parquet ou délimitées. La prise en charge des fournisseurs de stockage dans le cloud inclut [!DNL Apache] HDFS.
 

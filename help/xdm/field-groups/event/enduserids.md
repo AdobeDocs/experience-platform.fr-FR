@@ -2,13 +2,12 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;schéma;XDM;ExperienceEvent;champs;schémas;schémas;conception de schéma;groupe de champs;groupe de champs;endserids;utilisateur final;id;
 solution: Experience Platform
 title: Groupe de champs de schéma Détails de l’ID utilisateur final
-topic-legacy: overview
 description: Ce document présente un aperçu du groupe de champs Détails de l’ID de l’utilisateur final.
 exl-id: ff5b74f4-7700-4d10-821e-b50f80ea8c05
-source-git-commit: e33d59c4ac28f55ba6ae2fc073d02f8738159263
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '226'
-ht-degree: 11%
+ht-degree: 15%
 
 ---
 

@@ -2,10 +2,9 @@
 keywords: Experience Platform;accueil;rubriques populaires;connecteur source Marketo;espaces de noms;schémas;b2b;B2B
 solution: Experience Platform
 title: Espaces de noms et schémas B2B
-topic-legacy: overview
 description: Ce document fournit un aperçu des espaces de noms personnalisés requis lors de la création d’un connecteur source B2B.
 exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1707'
 ht-degree: 14%

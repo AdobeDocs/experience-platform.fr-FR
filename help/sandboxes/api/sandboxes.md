@@ -2,13 +2,12 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;guide de développement des environnements de test
 solution: Experience Platform
 title: Point de terminaison de l’API de gestion des environnements de test
-topic-legacy: developer guide
 description: Le point de terminaison /sandbox dans l’API Sandbox vous permet de gérer par programmation les environnements de test dans Adobe Experience Platform.
 exl-id: 0ff653b4-3e31-4ea5-a22e-07e18795f73e
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1489'
-ht-degree: 51%
+ht-degree: 54%
 
 ---
 
@@ -194,7 +193,7 @@ Une réponse réussie renvoie les détails de l’environnement de test, y compr
 
 >[!NOTE]
 >
->Lorsqu’un nouvel environnement de test est créé, vous devez d’abord l’ajouter à votre profil de produit dans [Adobe Admin Console](https://adminconsole.adobe.com/) avant de commencer à utiliser le nouvel environnement de test. Consultez la documentation relative à [gestion des autorisations pour un profil de produit](../../access-control/ui/permissions.md) pour plus d’informations sur la configuration d’un environnement de test à un profil de produit.
+>Lorsqu’une nouvelle sandbox est créée, vous devez d’abord l’ajouter à votre profil de produit dans [Adobe Admin Console](https://adminconsole.adobe.com/) avant de commencer à utiliser la nouvelle sandbox. Consultez la documentation relative à la [gestion des autorisations pour un profil de produit](../../access-control/ui/permissions.md) pour plus d’informations sur la configuration d’une sandbox en fonction d’un profil de produit.
 
 Vous pouvez créer un environnement de test de développement ou de production en adressant une requête de POST à la variable `/sandboxes` point de terminaison .
 
@@ -351,7 +350,7 @@ Une réponse réussie renvoie un état HTTP 200 (OK) avec les détails de l’e
 }
 ```
 
-## Réinitialisation d’un environnement de test {#reset}
+## Réinitialiser une sandbox {#reset}
 
 Les environnements de test disposent d’une fonctionnalité de &quot;réinitialisation d’usine&quot; qui supprime toutes les ressources autres que les ressources par défaut d’un environnement de test. Vous pouvez réinitialiser un environnement de test en effectuant une requête PUT comprenant le `name` de l’environnement de test dans le chemin d’accès de la requête.
 
@@ -476,7 +475,7 @@ Une réponse réussie renvoie les détails de l’environnement de test mis à j
 }
 ```
 
-## Suppression d’un environnement de test {#delete}
+## Supprimer une sandbox {#delete}
 
 >[!IMPORTANT]
 >

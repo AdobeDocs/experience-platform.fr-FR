@@ -2,11 +2,10 @@
 keywords: Experience Platform;accueil;rubriques populaires;données de stockage cloud;diffusion en continu de données;diffusion en continu
 solution: Experience Platform
 title: Création d’un flux de données en flux continu pour les données brutes à l’aide de l’API Flow Service
-topic-legacy: overview
 type: Tutorial
 description: Ce tutoriel décrit les étapes à suivre pour récupérer des données en continu et les introduire dans Platform à l’aide des connecteurs source et des API.
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1099'
 ht-degree: 55%

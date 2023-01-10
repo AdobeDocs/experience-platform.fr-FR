@@ -2,10 +2,9 @@
 keywords: Experience Platform;accueil;rubriques populaires;champs de mappage Analytics;mappage analytics
 solution: Experience Platform
 title: Mappage des champs pour le connecteur source Adobe Analytics
-topic-legacy: overview
 description: Adobe Experience Platform vous permet d’ingérer des données Adobe Analytics par le biais de la source Analytics. Certaines données ingérées par ADC peuvent être mappées directement des champs Analytics aux champs du modèle de données d’expérience (XDM), tandis que d’autres nécessitent des transformations et des fonctions spécifiques pour être mappées avec succès.
 exl-id: 15dc1368-5cf1-42e1-9683-d5158f8aa2db
-source-git-commit: e33d59c4ac28f55ba6ae2fc073d02f8738159263
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '3431'
 ht-degree: 97%
@@ -243,7 +242,7 @@ Le tableau suivant comprend des colonnes qui indiquent le nom du champ Analytics
 | visit_referrer | _experience.analytics.session.web.webReferrer.URL | chaîne | Premier référent de la visite. |
 | visit_search_page_num | _experience.analytics.session.search.pageDepth | entier | Premier nom de page de la visite. |
 | post_prop1 - post_prop75 | _experience.analytics.customDimensions.listprops.prop1 - _experience.analytics.customDimensions.listprops.prop75 | objet | Variables de trafic personnalisées 1 - 75. |
-| post_hier1 - post_hier5 | _experience.analytics.customDimensions.hierarchies.hier1 - _experience.analytics.customDimensions.hierarchies.hier5 | objet | Utilisé par les variables de hiérarchie et contient une liste délimitée de valeurs. | {values (array), délimiteur (string)} |
+| post_hier1 - post_hier5 | _experience.analytics.customDimensions.hierarchies.hier1 - _experience.analytics.customDimensions.hierarchies.hier5 | objet | Utilisé par les variables de hiérarchie et contient une liste délimitée de valeurs. | {values (array), delimiter (string)} |
 | post_mvvar1 - post_mvvar3 | _experience.analytics.customDimensions.lists.list1.list[] - _experience.analytics.customDimensions.lists.list3.list[] | tableau | Liste de valeurs variables. Contient une liste délimitée de valeurs personnalisées, selon l’implémentation. | {value (string), key (string)} |
 | post_cookies | environment.browserDetails.cookiesEnabled | booléen | Variable utilisée dans la dimension Prise en charge des cookies. |
 | post_event_list | commerce.purchases, commerce.productViews, commerce.productListOpens, commerce.checkouts, commerce.productListAdds, commerce.productListRemovals, commerce.productListViews | objet | Événements de commerce standard déclenchés à l’accès. | {id (string), value (number)} |

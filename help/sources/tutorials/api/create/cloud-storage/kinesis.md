@@ -2,14 +2,13 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;Kinesis;Genesis;Amazon Kinesis;Amazon kinesis
 solution: Experience Platform
 title: Création d’une connexion source Kinesis Amazon à l’aide de l’API Flow Service
-topic-legacy: overview
 type: Tutorial
 description: Découvrez comment connecter Adobe Experience Platform à une source Kinesis Amazon à l’aide de l’API Flow Service.
 exl-id: 64da8894-12ac-45a0-b03e-fe9b6aa435d3
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '730'
-ht-degree: 67%
+ht-degree: 68%
 
 ---
 
@@ -37,7 +36,7 @@ Pour [!DNL Flow Service] pour vous connecter à [!DNL Amazon Kinesis] , vous dev
 | `region` | La région de votre [!DNL Kinesis] compte . Consultez le guide sur la [Ajout d’adresses IP à votre liste autorisée](../../../../ip-address-allow-list.md) pour plus d’informations sur les régions. |
 | `connectionSpec.id` | La spécification de connexion renvoie les propriétés du connecteur d’une source, y compris les spécifications d’authentification liées à la création des connexions de base et source. L’identifiant de spécification de connexion [!DNL Kinesis] est : `86043421-563b-46ec-8e6c-e23184711bf6`. |
 
-Pour plus d’informations sur [!DNL Kinesis] les clés d&#39;accès et leur génération, voir à ce sujet [[!DNL AWS] Guide de gestion des clés d’accès pour les utilisateurs IAM](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
+Pour plus d’informations sur [!DNL Kinesis] les clés d&#39;accès et leur génération, voir à ce sujet [[!DNL AWS] Guide de gestion des clés d’accès pour les utilisateurs IAM](https://docs.aws.amazon.com/fr_fr/IAM/latest/UserGuide/id_credentials_access-keys.html).
 
 ### Utiliser les API Platform
 

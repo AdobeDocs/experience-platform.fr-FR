@@ -2,13 +2,12 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;schéma;XDM;champs;schémas;schémas;points ciblés;interaction;point ciblé;type de données;type de données;type de données;type de données
 solution: Experience Platform
 title: Type de données d’interaction du point ciblé
-topic-legacy: overview
 description: Ce document présente le type de données XDM de l’interaction Point ciblé.
 exl-id: 398f56d9-1802-458d-b565-4096beb5b014
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '188'
-ht-degree: 11%
+ht-degree: 13%
 
 ---
 
@@ -20,7 +19,7 @@ ht-degree: 11%
 
 | Propriété | Type de données | Description |
 | --- | --- | --- |
-| `poiDetail` | [[!UICONTROL Détails des points ciblés]](./poi-details.md) | Décrit les détails du point ciblé qui a provoqué l’événement. |
+| `poiDetail` | [[!UICONTROL Détails sur le point ciblé]](./poi-details.md) | Décrit les détails du point ciblé qui a provoqué l’événement. |
 | `poiEntries` | Objet | Décrit le nombre de fois où une personne est entrée dans le point ciblé. Contient deux propriétés : <ul><li>`id`: Identifiant unique de la mesure.</li><li>`value`: Valeur quantifiable de la mesure.</li></ul> |
 | `poiExits` | Objet | Décrit le nombre de fois où une personne a quitté le point ciblé. Contient deux propriétés : <ul><li>`id`: Identifiant unique de la mesure.</li><li>`value`: Valeur quantifiable de la mesure.</li></ul> |
 

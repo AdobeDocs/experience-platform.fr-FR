@@ -2,10 +2,9 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;schéma;schéma;xdm;modèle de données d’expérience;espace de noms;espace de noms;mode de compatibilité;xed;
 solution: Experience Platform
 title: Espace de noms dans le modèle de données d’expérience (XDM)
-topic-legacy: overviews
 description: Découvrez comment l’espace de noms dans le modèle de données d’expérience (XDM) vous permet d’étendre vos schémas et d’empêcher les collisions de champs lorsque différents composants de schéma sont rassemblés.
 exl-id: b351dfaf-5219-4750-a7a9-cf4689a5b736
-source-git-commit: bcffd3d38cecba38e1e57a44ce0febfd2cf0f8fb
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '630'
 ht-degree: 1%

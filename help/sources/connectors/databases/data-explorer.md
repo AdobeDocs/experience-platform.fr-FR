@@ -2,13 +2,12 @@
 keywords: Experience Platform;accueil;rubriques populaires;Data Explorer Azure;explorateur de données Azure
 solution: Experience Platform
 title: Présentation de la source de Data Explorer Azure
-topic-legacy: overview
 description: Découvrez comment connecter Azure Data Explorer à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur.
 exl-id: 869bd8bb-51e6-4e0c-a3ec-ff083dda5789
-source-git-commit: 1e2644b7d83a0bcb7175f27d7c4859c0efba4060
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '203'
-ht-degree: 38%
+ht-degree: 42%
 
 ---
 
@@ -22,12 +21,12 @@ Différents types de bases de données tierces sont pris en charge, y compris le
 
 Une liste d’adresses IP doit être ajoutée à une liste autorisée avant d’utiliser les connecteurs source. Si vous n’ajoutez pas vos adresses IP spécifiques à une région à votre liste autorisée, des erreurs ou une absence de performances peuvent se produire lors de l’utilisation de sources. Voir la page [Liste autorisée d’adresses IP](../../ip-address-allow-list.md) pour plus d’informations.
 
-La documentation ci-dessous fournit des informations sur la connexion de [!DNL Azure Data Explorer] à à l’aide d’API ou de l’interface utilisateur :[!DNL Platform]
+La documentation ci-dessous fournit des informations sur la connexion d’[!DNL Azure Data Explorer] à à l’aide d’API ou de l’interface utilisateur :[!DNL Platform]
 
 ## Connecter [!DNL Azure Data Explorer] à [!DNL Platform] à lʼaide dʼAPI
 
 - [Création d’une connexion de base de Data Explorer Azure à l’aide de l’API Flow Service](../../tutorials/api/create/databases/data-explorer.md)
-- [Exploration des tableaux de données à l’aide de l’API Flow Service](../../tutorials/api/explore/tabular.md)
+- [Explorer des tableaux de données à l’aide de l’API Flow Service](../../tutorials/api/explore/tabular.md)
 - [Création d’un flux de données pour une source de base de données à l’aide de l’API Flow Service](../../tutorials/api/collect/database-nosql.md)
 
 ## Connecter [!DNL Azure Data Explorer] à [!DNL Platform] à lʼaide de l’interface utilisateur

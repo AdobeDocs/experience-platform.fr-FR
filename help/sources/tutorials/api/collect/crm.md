@@ -2,11 +2,10 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;crm;CRM
 solution: Experience Platform
 title: Créer un flux de données pour les sources CRM à l’aide de l’API Flow Service
-topic-legacy: overview
 type: Tutorial
 description: Ce tutoriel décrit les étapes à suivre pour récupérer des données d’un système CRM tiers et les importer dans Platform à l’aide des connecteurs source et des API.
 exl-id: b07dd640-bce6-4699-9d2b-b7096746934a
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1347'
 ht-degree: 95%

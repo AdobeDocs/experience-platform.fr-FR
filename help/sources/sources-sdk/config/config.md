@@ -1,10 +1,9 @@
 ---
 keywords: Experience Platform;accueil;rubriques populaires;sources;connecteurs;connecteurs source;sdk sources;sdk;SDK
 title: Options de configuration dans les sources en libre-service (SDK par lots)
-topic-legacy: overview
 description: Ce document présente les configurations que vous devez préparer pour utiliser les sources en libre-service (SDK par lots).
 exl-id: a41b3b80-599a-47ed-a391-419721be5aa2
-source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '297'
 ht-degree: 23%

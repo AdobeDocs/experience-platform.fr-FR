@@ -2,11 +2,10 @@
 keywords: Experience Platform;accueil;rubriques populaires;ui;XDM;système XDM;modèle de données d’expérience;modèle de données d’expérience;modèle de données d’expérience;modèle de données;modèle de données;registre des schémas;schéma;schéma;schémas;schémas;créer;type de données;types de données;types de données;schéma;schéma
 solution: Experience Platform
 title: Création et modification de types de données à l’aide de l’interface utilisateur
-topic-legacy: tutorial
 type: Tutorial
 description: Découvrez comment créer et modifier des types de données dans l’interface utilisateur de l’Experience Platform.
 exl-id: 2c917154-c425-463c-b8c8-04ba37d9247b
-source-git-commit: 81f700f7c68ba9ff2fc0a99bf62031bf3fe0c95f
+source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
 workflow-type: tm+mt
 source-wordcount: '1156'
 ht-degree: 0%

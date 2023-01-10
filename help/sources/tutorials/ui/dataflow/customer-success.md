@@ -2,11 +2,10 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;configurer le flux de données;connecteur de succès client
 solution: Experience Platform
 title: Création d’un flux de données à l’aide d’une source de succès client dans l’interface utilisateur
-topic-legacy: overview
 type: Tutorial
 description: Un flux de données est une tâche planifiée qui récupère et ingère des données d’une source vers un jeu de données Platform. Ce tutoriel décrit les étapes à suivre pour créer un flux de données pour une source de succès client à l’aide de l’interface utilisateur de Platform.
 exl-id: d348a7f8-6302-45f1-9961-bab56ad0407e
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '1397'
 ht-degree: 49%

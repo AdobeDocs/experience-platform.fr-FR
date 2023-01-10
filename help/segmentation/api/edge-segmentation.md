@@ -2,10 +2,9 @@
 keywords: Experience Platform;accueil;rubriques populaires;segmentation;Segmentation;Segmentation Service;segmentation edge;segmentation Edge;diffusion en flux continu edge;
 solution: Experience Platform
 title: Effectuer une segmentation Edge à l’aide de l’API
-topic-legacy: developer guide
 description: Ce document contient des exemples d’utilisation de la segmentation Edge avec l’API Segmentation Service Adobe Experience Platform.
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1187'
 ht-degree: 96%

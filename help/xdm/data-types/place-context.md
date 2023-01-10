@@ -2,10 +2,9 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;schéma;schéma;XDM;champs;schémas;schémas;schéma;contexte de lieu;contexte de lieu;type de données;type de données;type de données;
 solution: Experience Platform
 title: Type de données contextuelles de l’emplacement
-topic-legacy: overview
 description: Ce document fournit un aperçu du type de données XDM de contexte d’emplacement.
 exl-id: d7cf7366-0136-49ee-84d2-ec663db66eb4
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '186'
 ht-degree: 14%

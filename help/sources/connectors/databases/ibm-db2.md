@@ -2,13 +2,12 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;IBM DB2;ibm db2;DB2;db2
 solution: Experience Platform
 title: Présentation du connecteur source IBM DB2
-topic-legacy: overview
 description: Découvrez comment connecter IBM DB2 à Adobe Experience Platform à l’aide des API ou de l’interface utilisateur.
 exl-id: 939e0151-fc07-4963-8ea2-0432dee713eb
-source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '229'
-ht-degree: 22%
+ht-degree: 31%
 
 ---
 
@@ -16,7 +15,7 @@ ht-degree: 22%
 
 >[!NOTE]
 >
->Le connecteur IBM DB2 est en version bêta. Voir [Présentation des sources](../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs bêta-étiquetés.
+>Le connecteur IBM DB2 est en version bêta. Voir la [Présentation des sources](../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs étiquetés Beta.
 
 Adobe Experience Platform fournit une connectivité native aux fournisseurs de base de données tels que [!DNL Microsoft], MySQL et [!DNL Azure]. Vous pouvez importer vos données de ces systèmes dans [!DNL Platform].
 
@@ -31,7 +30,7 @@ La documentation ci-dessous fournit des informations sur la connexion d’IBM DB
 ## Connectez IBM DB2 à [!DNL Platform] utilisation des API
 
 - [Création d’une connexion de base IBM DB2 à l’aide de l’API Flow Service](../../tutorials/api/create/databases/ibm-db2.md)
-- [Exploration des tableaux de données à l’aide de l’API Flow Service](../../tutorials/api/explore/tabular.md)
+- [Explorer des tableaux de données à l’aide de l’API Flow Service](../../tutorials/api/explore/tabular.md)
 - [Création d’un flux de données pour une source de base de données à l’aide de l’API Flow Service](../../tutorials/api/collect/database-nosql.md)
 
 ## Connectez IBM DB2 à [!DNL Platform] utilisation de l’interface utilisateur

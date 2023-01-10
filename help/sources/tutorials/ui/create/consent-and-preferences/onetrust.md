@@ -2,14 +2,13 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;onetrust;OneTrust
 solution: Experience Platform
 title: (Version bêta) Création d’une connexion à la source OneTrust dans l’interface utilisateur
-topic-legacy: overview
 type: Tutorial
 description: Découvrez comment créer une connexion source OneTrust à l’aide de l’interface utilisateur de Adobe Experience Platform.
 exl-id: 6af0604d-cbb6-4c8e-b017-3eb82ec6ee1c
-source-git-commit: cfc6e7cb3877f3b5f716b7f82e7c2d308ef5ed10
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '527'
-ht-degree: 36%
+ht-degree: 38%
 
 ---
 
@@ -17,7 +16,7 @@ ht-degree: 36%
 
 >[!NOTE]
 >
->Le [!DNL OneTrust Integration] La source est en version bêta. Ses fonctionnalités et sa documentation peuvent faire l’objet de modifications. Pour plus d’informations sur l’utilisation de sources marquées d’une version bêta, voir la section [présentation des sources](../../../../home.md#terms-and-conditions).
+>La source [!DNL OneTrust Integration] est en version Beta. Ses fonctionnalités et sa documentation peuvent faire l’objet de modifications. Pour plus d’informations sur l’utilisation de sources marquées d’une version bêta, voir la section [présentation des sources](../../../../home.md#terms-and-conditions).
 
 Ce tutoriel décrit les étapes à suivre pour créer une [[!DNL OneTrust Integration]](https://my.onetrust.com/s/contactsupport?language=en_US) connexion source pour ingérer des données de consentement historiques et planifiées dans Adobe Experience Platform à l’aide de l’interface utilisateur de Platform.
 
@@ -37,7 +36,7 @@ Pour vous connecter [!DNL OneTrust Integration] sur Platform, vous devez fournir
 
 | Informations d’identification | Description | Exemple |
 | --- | --- | --- |
-| Nom de l’hôte | L’environnement à partir duquel la variable [!DNL OneTrust Integration] Les données doivent être extraites. | `https://uat.onetrust.com/` |
+| Nom de l’hôte. | L’environnement à partir duquel la variable [!DNL OneTrust Integration] Les données doivent être extraites. | `https://uat.onetrust.com/` |
 | URL de test d’autorisation | (Facultatif) L’URL du test d’autorisation est utilisée pour valider les informations d’identification lors de la création d’une connexion de base. Si elles ne sont pas fournies, les informations d’identification sont automatiquement vérifiées à l’étape de création de la connexion source. |  |
 | Jeton d’accès | Le jeton d’accès qui correspond à votre [!DNL OneTrust Integration] compte . | `ZGFkZDMyMjFhMmEyNDQ2ZGFhNTdkZjNkZjFmM2IyOWE6QjlUSERVUTNjOFVsRmpEZTJ6Vk9oRnF3Sk8xNlNtcm4=` |
 

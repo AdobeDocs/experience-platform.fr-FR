@@ -2,14 +2,13 @@
 keywords: Experience Platform;accueil;rubriques populaires;OData générique;odata générique
 solution: Experience Platform
 title: Création d’une connexion de base OData générique à l’aide de l’API Flow Service
-topic-legacy: overview
 type: Tutorial
 description: Découvrez comment connecter Generic OData à Adobe Experience Platform à l’aide de l’API Flow Service.
 exl-id: 45b302cb-1a43-4fab-a8a2-cb4e1ee129f9
-source-git-commit: 1e2644b7d83a0bcb7175f27d7c4859c0efba4060
+source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '433'
-ht-degree: 66%
+ht-degree: 71%
 
 ---
 
@@ -101,7 +100,7 @@ Une réponse réussie renvoie la nouvelle connexion de , y compris son identifia
 
 ## Étapes suivantes
 
-En suivant ce tutoriel, vous avez créé une [!DNL Generic REST OData] connexion de base à l’aide de [!DNL Flow Service] API. Vous pouvez utiliser cet identifiant de connexion de base dans les tutoriels suivants :
+En suivant ce tutoriel, vous avez créé une [!DNL Generic REST OData] connexion de base à l’aide de [!DNL Flow Service] API. Vous pouvez utiliser cet identifiant de connexion de base dans les tutoriels suivants : 
 
-* [Explorez la structure et le contenu de vos tableaux de données à l’aide du [!DNL Flow Service] API](../../explore/tabular.md)
+* [Explorez la structure et le contenu de vos tableaux de données à l’aide de l’API  [!DNL Flow Service] .](../../explore/tabular.md)
 * [Créez un flux de données pour importer les données de protocoles à Platform à l’aide de la variable [!DNL Flow Service] API](../../collect/protocols.md)

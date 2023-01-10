@@ -1,10 +1,9 @@
 ---
 keywords: Experience Platform;accueil;rubriques populaires;sources;connecteurs;connecteurs source;sdk sources;sdk;SDK
 title: Mise à jour d’une spécification de connexion à l’aide de l’API Flow Service
-topic-legacy: developer guide
 description: Vous pouvez mettre à jour les propriétés d’une spécification de connexion par le biais d’une opération de PUT.
 exl-id: fcb00521-8fc2-491e-aa35-6e0f9b730dd4
-source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '118'
 ht-degree: 14%

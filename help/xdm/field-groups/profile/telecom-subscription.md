@@ -2,13 +2,12 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;schéma;XDM;profil individuel;champs;schémas;schémas;télécommunications;abonnement;télécommunications;conception de schéma;groupe de champs;groupe de champs;groupe de champs;
 solution: Experience Platform
 title: Groupe de champs de schéma d’abonnement aux télécommunications
-topic-legacy: overview
 description: Ce document présente un aperçu du groupe de champs Schéma d'abonnement aux télécommunications .
 exl-id: 00c20081-09d0-425c-9894-0f957558bd43
-source-git-commit: 64e76c456ac5f59a2a1996e58eda405f1b27efa8
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '730'
-ht-degree: 11%
+ht-degree: 12%
 
 ---
 

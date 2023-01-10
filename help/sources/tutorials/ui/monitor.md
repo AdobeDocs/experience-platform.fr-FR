@@ -3,10 +3,9 @@ keywords: Experience Platform;accueil;rubriques les plus consultées;comptes de 
 description: Les connecteurs source d’Adobe Experience Platform permettent d’ingérer des données externes selon un calendrier précis. Ce tutoriel décrit les étapes à suivre pour afficher les flux de données existants à partir de l’espace de travail Sources .
 solution: Experience Platform
 title: Surveillance des flux de données dans l’interface utilisateur
-topic-legacy: overview
 type: Tutorial
 exl-id: 5fc4d98b-811e-42e7-8342-0cdac1027ca5
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '85'
 ht-degree: 48%

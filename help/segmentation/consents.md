@@ -2,10 +2,9 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;exclusion;segmentation;service de segmentation;service de segmentation;droit d’opposition;droit d’opposition;droit d’opposition;droit d’opposition;consentement;partage;collecte;droit d’opposition
 solution: Experience Platform
 title: Respect du consentement dans les segments
-topic-legacy: overview
 description: Découvrez comment honorer les préférences de consentement des clients pour la collecte et le partage de données personnelles dans les opérations de segmentation.
 exl-id: fe851ce3-60db-4984-a73c-f9c5964bfbad
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '675'
 ht-degree: 2%

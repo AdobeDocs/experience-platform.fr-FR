@@ -1,13 +1,12 @@
 ---
 keywords: Experience Platform;accueil;rubriques les plus consultées;API REST générique
 title: Création d’une connexion à la source de l’API REST générique dans l’interface utilisateur
-topic-legacy: overview
 type: Tutorial
 description: Découvrez comment créer une connexion source de l’API REST générique à l’aide de l’interface utilisateur de Adobe Experience Platform.
-source-git-commit: 94809a8e98c8de7a9a474fb5543b590fc51cb075
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '637'
-ht-degree: 33%
+ht-degree: 38%
 
 ---
 
@@ -15,13 +14,13 @@ ht-degree: 33%
 
 >[!NOTE]
 >
-> Le [!DNL Generic REST API] La source est en version bêta. Voir [Présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs bêta-étiquetés.
+> La source [!DNL Generic REST API] est en version Beta. Voir la [Présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs étiquetés Beta.
 
 Ce tutoriel décrit les étapes à suivre pour créer une [!DNL Generic REST API] connecteur source à l’aide de l’interface utilisateur de Adobe Experience Platform.
 
 ## Prise en main
 
-Ce tutoriel nécessite une compréhension pratique des composants suivants de Platform :
+Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Platform : 
 
 * [Sources](../../../../home.md) : Experience Platform permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de Platform.
 * [Sandbox](../../../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuelles qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
@@ -37,7 +36,7 @@ Pour accéder à [!DNL Generic REST API] sur Platform, vous devez fournir des in
 | Hôte | URL d’hôte de la source à laquelle vous effectuez votre demande. Cette valeur est requise et ne peut pas être ignorée à l’aide du remplacement du paramètre de requête. |
 | URL du test d’autorisation | (Facultatif) L’URL du test d’autorisation est utilisée pour valider les informations d’identification lors de la création d’une connexion de base. Si elles ne sont pas fournies, les informations d’identification sont automatiquement vérifiées à l’étape de création de la connexion source. |
 | Identifiant client | (Facultatif) Identifiant client associé à votre compte utilisateur. |
-| Client secret | (Facultatif) Le secret client associé à votre compte utilisateur. |
+| Secret client | (Facultatif) Le secret client associé à votre compte utilisateur. |
 | Jeton d’accès | Informations d’identification d’authentification Principales utilisées pour accéder à votre application. Le jeton d’accès représente l’autorisation de votre application, pour accéder à certains aspects des données d’un utilisateur. Cette valeur est requise et ne peut pas être ignorée à l’aide du remplacement du paramètre de requête. |
 | Jeton d’actualisation | (Facultatif) Jeton utilisé pour générer un nouveau jeton d’accès, lorsque le jeton d’accès a expiré. |
 | URL du jeton d’accès | (Facultatif) Le point de terminaison URL utilisé pour récupérer votre jeton d’accès. |

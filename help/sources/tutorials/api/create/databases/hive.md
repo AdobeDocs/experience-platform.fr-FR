@@ -2,14 +2,13 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;ruche Apache;ruche;Hive
 solution: Experience Platform
 title: Création d’une Apache Hive sur une connexion de base Azure HDInsights à l’aide de l’API Flow Service
-topic-legacy: overview
 type: Tutorial
 description: Découvrez comment connecter Apache Hive sur Azure HDInsights à Adobe Experience Platform à l’aide de l’API Flow Service.
 exl-id: e1469a29-6f61-47ba-995e-39f06ee4a4a4
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '487'
-ht-degree: 53%
+ht-degree: 60%
 
 ---
 
@@ -17,7 +16,7 @@ ht-degree: 53%
 
 >[!NOTE]
 >
->Le [!DNL Apache Hive] on [!DNL Azure HDInsights] Le connecteur est en version bêta. Voir [Présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs bêta-étiquetés.
+>Le [!DNL Apache Hive] on [!DNL Azure HDInsights] Le connecteur est en version bêta. Voir la [Présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs étiquetés Beta.
 
 Une connexion de base représente la connexion authentifiée entre une source et Adobe Experience Platform.
 
@@ -107,7 +106,7 @@ Une réponse réussie renvoie les détails de la connexion nouvellement créée,
 
 ## Étapes suivantes
 
-En suivant ce tutoriel, vous avez créé une [!DNL Apache Hive] on [!DNL Azure HDInsights] connexion de base à l’aide de [!DNL Flow Service] API. Vous pouvez utiliser cet identifiant de connexion de base dans les tutoriels suivants :
+En suivant ce tutoriel, vous avez créé une [!DNL Apache Hive] on [!DNL Azure HDInsights] connexion de base à l’aide de [!DNL Flow Service] API. Vous pouvez utiliser cet identifiant de connexion de base dans les tutoriels suivants : 
 
-* [Explorez la structure et le contenu de vos tableaux de données à l’aide du [!DNL Flow Service] API](../../explore/tabular.md)
+* [Explorez la structure et le contenu de vos tableaux de données à l’aide de l’API  [!DNL Flow Service] .](../../explore/tabular.md)
 * [Créez un flux de données pour importer des données de base de données dans Platform à l’aide de la fonction [!DNL Flow Service] API](../../collect/database-nosql.md)

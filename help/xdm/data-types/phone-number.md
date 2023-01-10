@@ -2,10 +2,9 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;schéma;schéma;XDM;champs;schémas;schémas;numéroTéléphone;xdm:numéroDeTéléphone;typeDeDonnées;type de données;type de données;
 solution: Experience Platform
 title: Type de données de numéro de téléphone
-topic-legacy: overview
 description: Ce document fournit un aperçu du type de données XDM Phone Number.
 exl-id: b84e48f9-bbb4-4b8b-9476-4bc1c455ecfd
-source-git-commit: 7f694310b17ab257eae459003bb820f7221bb55e
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '213'
 ht-degree: 10%

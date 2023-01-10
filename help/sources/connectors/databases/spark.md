@@ -2,13 +2,12 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;Apache Spark;spark apache;Azure HDInsights;statistiques Azure
 solution: Experience Platform
 title: Présentation d’Apache Spark sur Azure HDInsights Source Connector
-topic-legacy: overview
 description: Découvrez comment connecter Apache Spark sur Azure HDInsights à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur.
 exl-id: c4a2a14e-5e16-44b7-b3f1-a98b7229f69e
-source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '271'
-ht-degree: 39%
+ht-degree: 46%
 
 ---
 
@@ -16,7 +15,7 @@ ht-degree: 39%
 
 >[!NOTE]
 >
->Le [!DNL Apache Spark] on [!DNL Azure HDInsights] Le connecteur est en version bêta. Voir [Présentation des sources](../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs bêta-étiquetés.
+>Le [!DNL Apache Spark] on [!DNL Azure HDInsights] Le connecteur est en version bêta. Voir la [Présentation des sources](../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs étiquetés Beta.
 
 Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous permettant de structurer, de libeller et d’améliorer les données entrantes à l’aide des services [!DNL Platform]. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, des bases de données, etc.
 
@@ -31,7 +30,7 @@ La documentation ci-dessous fournit des informations sur la connexion. [!DNL Apa
 ## Connexion [!DNL Apache Spark] on [!DNL Azure HDInsights] to [!DNL Platform] utilisation des API
 
 - [Créez une connexion de base Apache Spark sur Azure HDInsights à l’aide de l’API Flow Service](../../tutorials/api/create/databases/spark.md)
-- [Exploration des tableaux de données à l’aide de l’API Flow Service](../../tutorials/api/explore/tabular.md)
+- [Explorer des tableaux de données à l’aide de l’API Flow Service](../../tutorials/api/explore/tabular.md)
 - [Création d’un flux de données pour une source de base de données à l’aide de l’API Flow Service](../../tutorials/api/collect/database-nosql.md)
 
 ## Connexion [!DNL Apache Spark] on [!DNL Azure HDInsights] to [!DNL Platform] utilisation de l’interface utilisateur

@@ -2,11 +2,10 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;OData;odata;Generic Open Data Protocol
 solution: Experience Platform
 title: Création d’une connexion source OData générique dans l’interface utilisateur
-topic-legacy: overview
 type: Tutorial
 description: Découvrez comment créer une connexion source Generic Open Data Protocol à l’aide de l’interface utilisateur de Adobe Experience Platform.
 exl-id: aad6b6f7-622c-4ab6-bf6d-1221fe1132d1
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '452'
 ht-degree: 53%

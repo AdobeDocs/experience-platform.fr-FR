@@ -2,11 +2,10 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;diffusion en continu;connecteur de stockage dans le cloud;espace de stockage dans le cloud
 solution: Experience Platform
 title: Création d’un flux de données en continu pour une source de stockage dans le cloud dans l’interface utilisateur
-topic-legacy: overview
 type: Tutorial
 description: Un flux de données est une tâche planifiée qui récupère et ingère des données d’une source vers un jeu de données Platform. Ce tutoriel décrit les étapes de configuration d’un nouveau flux de données à l’aide de votre connecteur de base de stockage dans le cloud.
 exl-id: 75deead6-ef3c-48be-aed2-c43d1f432178
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
 source-wordcount: '1055'
 ht-degree: 25%

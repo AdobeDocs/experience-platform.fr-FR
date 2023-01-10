@@ -2,11 +2,10 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;Stockage de fichier Azure;Connecteur de stockage de fichiers Azure
 solution: Experience Platform
 title: Création d’une connexion à la source de stockage de fichiers Azure dans l’interface utilisateur
-topic-legacy: overview
 type: Tutorial
 description: Découvrez comment créer une connexion source de stockage de fichiers Azure à l’aide de l’interface utilisateur de Adobe Experience Platform.
 exl-id: 25d483b6-3975-4e80-9dbe-28b7b91cb063
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '470'
 ht-degree: 49%

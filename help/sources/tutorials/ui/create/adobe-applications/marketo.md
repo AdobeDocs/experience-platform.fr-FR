@@ -2,11 +2,10 @@
 keywords: Experience Platform;accueil;rubriques populaires;connecteur source Marketo;connecteur Marketo;source Marketo;Marketo
 solution: Experience Platform
 title: Créer un connecteur source Marketo Engage dans l’interface utilisateur
-topic-legacy: overview
 type: Tutorial
 description: Ce tutoriel décrit les étapes à suivre pour créer un connecteur source Marketo Engage dans l’interface utilisateur afin d’importer des données B2B dans Adobe Experience Platform.
 exl-id: a6aa596b-9cfa-491e-86cb-bd948fb561a8
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '1473'
 ht-degree: 92%

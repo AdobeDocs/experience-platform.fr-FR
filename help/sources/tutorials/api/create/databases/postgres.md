@@ -2,14 +2,13 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;PostgreSQL;postgresql;PSQL;psql
 solution: Experience Platform
 title: Création d’une connexion de base PostgreSQL à l’aide de l’API Flow Service
-topic-legacy: overview
 type: Tutorial
 description: Découvrez comment connecter Adobe Experience Platform à PostgreSQL à l’aide de l’API Flow Service.
 exl-id: 5225368a-08c1-421d-aec2-d50ad09ae454
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '509'
-ht-degree: 52%
+ht-degree: 56%
 
 ---
 
@@ -113,7 +112,7 @@ Une réponse réussie renvoie l’identifiant unique (`id`) de la connexion de b
 
 ## Étapes suivantes
 
-En suivant ce tutoriel, vous avez créé une [!DNL PostgreSQL] connexion de base à l’aide de [!DNL Flow Service] API. Vous pouvez utiliser cet identifiant de connexion de base dans les tutoriels suivants :
+En suivant ce tutoriel, vous avez créé une [!DNL PostgreSQL] connexion de base à l’aide de [!DNL Flow Service] API. Vous pouvez utiliser cet identifiant de connexion de base dans les tutoriels suivants : 
 
-* [Explorez la structure et le contenu de vos tableaux de données à l’aide du [!DNL Flow Service] API](../../explore/tabular.md)
+* [Explorez la structure et le contenu de vos tableaux de données à l’aide de l’API  [!DNL Flow Service] .](../../explore/tabular.md)
 * [Créez un flux de données pour importer des données de base de données dans Platform à l’aide de la fonction [!DNL Flow Service] API](../../collect/database-nosql.md)

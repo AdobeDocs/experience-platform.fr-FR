@@ -1,13 +1,12 @@
 ---
 solution: Experience Platform
 title: Modèle de données du secteur de la vente au détail
-topic-legacy: overview
 description: Affichez un modèle de données normalisé pour le secteur de la vente au détail, compatible avec le modèle de données d’expérience (XDM) à utiliser dans Adobe Experience Platform.
 exl-id: 40cbb243-668b-4280-815f-1f94a06b6b87
-source-git-commit: 2d7314f11837ca5c5ca1411553f20f58c4cad1ec
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '522'
-ht-degree: 15%
+ht-degree: 16%
 
 ---
 

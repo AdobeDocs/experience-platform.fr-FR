@@ -2,13 +2,12 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;Veeva CRM;veeva crm;veeva;crm
 solution: Experience Platform
 title: Présentation du connecteur source CRM Veeva
-topic-legacy: overview
 description: Découvrez comment connecter Veeva CRM à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur.
 exl-id: fcd7af48-e66a-4313-bbfe-73301d335c67
-source-git-commit: ec0d6be6fde8ea7a0378769810079e3e62e9fd60
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '224'
-ht-degree: 73%
+ht-degree: 76%
 
 ---
 
@@ -22,12 +21,12 @@ Experience Platform prend en charge l’ingestion de données provenant d’un 
 
 Une liste d’adresses IP doit être ajoutée à une liste autorisée avant d’utiliser les connecteurs source. Si vous n’ajoutez pas vos adresses IP spécifiques à une région à votre liste autorisée, des erreurs ou une absence de performances peuvent se produire lors de l’utilisation de sources. Voir la page [Liste autorisée d’adresses IP](../../ip-address-allow-list.md) pour plus d’informations.
 
-La documentation ci-dessous fournit des informations sur la connexion de [!DNL Veeva CRM] à Platform à l’aide d’API ou de l’interface utilisateur :
+La documentation ci-dessous fournit des informations sur la connexion d’[!DNL Veeva CRM] à Platform à l’aide d’API ou de l’interface utilisateur :
 
 ## Connecter [!DNL Veeva CRM] à [!DNL Platform] à lʼaide dʼAPI
 
 - [Créer une connexion de base CRM Veeva à l’aide de l’API Flow Service](../../tutorials/api/create/crm/veeva.md)
-- [Exploration des tableaux de données à l’aide de l’API Flow Service](../../tutorials/api/explore/tabular.md)
+- [Explorer des tableaux de données à l’aide de l’API Flow Service](../../tutorials/api/explore/tabular.md)
 - [Créer un flux de données pour une source CRM à l’aide de l’API Flow Service](../../tutorials/api/collect/crm.md)
 
 ## Connecter [!DNL Veeva CRM] à [!DNL Platform] à lʼaide de l’interface utilisateur

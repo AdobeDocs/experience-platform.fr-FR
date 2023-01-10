@@ -3,9 +3,8 @@ keywords: Experience Platform;accueil;rubriques les plus consultées;api;API;XDM
 solution: Experience Platform
 title: Définition des champs d’énumération et des valeurs proposées dans l’interface utilisateur
 description: Découvrez comment définir des énumérations et des valeurs suggérées pour les champs de chaîne dans l’interface utilisateur de l’Experience Platform.
-topic-legacy: user guide
 exl-id: 67ec5382-31de-4f8d-9618-e8919bb5a472
-source-git-commit: 89ada47cb6e0b204d8f2f19e7e9b6f31bf347964
+source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
 workflow-type: tm+mt
 source-wordcount: '1257'
 ht-degree: 0%

@@ -2,10 +2,9 @@
 solution: Experience Platform
 title: Exportation des schémas XDM dans l’interface utilisateur
 description: Découvrez comment exporter un schéma existant vers un autre environnement de test ou organisation IMS dans l’interface utilisateur de Adobe Experience Platform.
-topic-legacy: user guide
 type: Tutorial
 exl-id: c467666d-55bc-4134-b8f4-7758d49c4786
-source-git-commit: 2a58236031834bbe298576e2fcab54b04ec16ac3
+source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
 workflow-type: tm+mt
 source-wordcount: '496'
 ht-degree: 0%

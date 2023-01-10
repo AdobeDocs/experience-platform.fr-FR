@@ -2,11 +2,10 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;flow service;mettre à jour des comptes
 solution: Experience Platform
 title: Mettre à jour des comptes à l’aide de l’API Flow Service
-topic-legacy: overview
 type: Tutorial
 description: Ce tutoriel décrit les étapes à suivre pour mettre à jour les détails et les informations d’identification d’un compte à l’aide de l’API Flow Service.
 exl-id: a93385fd-ed36-457f-8882-41e37f6f209d
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '523'
 ht-degree: 100%

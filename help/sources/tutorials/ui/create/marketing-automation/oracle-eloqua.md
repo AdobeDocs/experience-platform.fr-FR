@@ -2,13 +2,12 @@
 keywords: Experience Platform;accueil;rubriques populaires;sources;connecteurs;oracle;oracle eloqua;éloqua
 solution: Experience Platform
 title: Création d’une connexion source Eloqua d’Oracle à l’aide de l’interface utilisateur de Platform
-topic-legacy: tutorial
 description: Découvrez comment connecter Adobe Experience Platform à Oracle Eloqua à l’aide de l’interface utilisateur de Platform.
 exl-id: c4431d85-5948-4122-9a99-dbacdde5a09f
-source-git-commit: 4c3988ea839c1d1843529eabcb0725f5b12feccc
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '466'
-ht-degree: 37%
+ht-degree: 66%
 
 ---
 
@@ -18,16 +17,16 @@ Ce tutoriel décrit les étapes à suivre pour créer une [!DNL Oracle Eloqua] c
 
 ## Prise en main
 
-Ce guide nécessite une compréhension pratique des composants suivants de Platform :
+Ce guide nécessite une connaissance pratique des composants suivants de Platform :
 
-* [Sources](../../../../home.md): Platform permet d’ingérer des données à partir de diverses sources tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services Platform.
-* [Sandbox](../../../../../sandboxes/home.md) : Platform fournit des sandbox virtuelles qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
+* [Sources](../../../../home.md) : Platform permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de Platform.
+* [Sandbox](../../../../../sandboxes/home.md) : Platform fournit des sandbox virtuelles qui divisent une instance de Platform unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
 
-Si vous disposez déjà d’une authentification [!DNL Oracle Eloqua] sur Platform, vous pouvez ignorer le reste de ce document et passer au tutoriel sur [création d’un flux de données pour importer des données d’automatisation du marketing dans Platform](../../dataflow/marketing-automation.md).
+Si vous disposez déjà d’un compte authentifié [!DNL Oracle Eloqua] sur Platform, alors vous pouvez ignorer le reste de ce document et passer au tutoriel sur comment [créer un flux de données pour apporter les données d’automatisation du marketing à Platform](../../dataflow/marketing-automation.md).
 
 ### Collecter les informations d’identification requises
 
-Pour vous connecter [!DNL Oracle Eloqua] sur Platform, vous devez fournir des valeurs pour les propriétés d’authentification suivantes :
+Pour connecter [!DNL Oracle Eloqua] à Platform, vous devez fournir des valeurs pour les propriétés d’authentification suivantes :
 
 | Informations d’identification | Description |
 | --- | --- |
@@ -35,7 +34,7 @@ Pour vous connecter [!DNL Oracle Eloqua] sur Platform, vous devez fournir des va
 | Nom d’utilisateur | Le nom d’utilisateur de votre [!DNL Oracle Eloqua] compte . Le nom d’utilisateur doit être formaté en tant que `siteName + \\ + username`où `siteName` est le nom de l’entreprise à laquelle vous vous êtes connecté. [!DNL Oracle Eloqua] et `username` est votre nom d’utilisateur. Par exemple, votre nom d’utilisateur de connexion peut être : `adobe\\emily`. |
 | Mot de passe | Le mot de passe correspondant à votre [!DNL Oracle Eloqua] nom d’utilisateur. |
 
-Pour plus d’informations sur les informations d’authentification pour [!DNL Oracle Eloqua], reportez-vous à la section [[!DNL Oracle Eloqua] guide sur l&#39;authentification](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/Authentication_Basic.html).
+Pour plus d’informations sur les informations d’authentification pour [!DNL Oracle Eloqua], consultez le [[!DNL Oracle Eloqua] guide sur l’authentification](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/Authentication_Basic.html).
 
 Une fois que vous avez rassemblé les informations d’identification requises, vous pouvez suivre la procédure ci-dessous et lier votre compte [!DNL Oracle Eloqua] à Platform.
 
@@ -65,4 +64,4 @@ Si vous créez un compte, sélectionnez **[!UICONTROL Nouveau compte]**, puis fo
 
 ## Étapes suivantes
 
-En suivant ce tutoriel, vous avez authentifié et créé une connexion source entre vos [!DNL Oracle Eloqua] compte et plateforme. Vous pouvez maintenant passer au tutoriel suivant et [créer un flux de données pour importer des données d’automatisation du marketing dans Platform ;](../../dataflow/marketing-automation.md).
+En suivant ce tutoriel, vous avez authentifié et avez créé une connexion source entre votre compte [!DNL Oracle Eloqua] et Platform. Vous pouvez maintenant passer au tutoriel suivant et [créer un flux de données pour apporter les données d’automatisation du marketing à Platform](../../dataflow/marketing-automation.md).

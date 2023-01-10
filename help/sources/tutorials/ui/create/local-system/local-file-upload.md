@@ -2,11 +2,10 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;système local;téléchargement de fichiers;mapper csv;mapper le fichier csv;mapper le fichier csv à xdm;mapper csv à xdm;guide ui;
 solution: Experience Platform
 title: Création d’un connecteur source de téléchargement de fichier local dans l’interface utilisateur
-topic-legacy: overview
 type: Tutorial
 description: Découvrez comment créer une connexion source pour votre système local pour importer des fichiers locaux dans Platform
 exl-id: 9ce15362-c30d-40cc-9d9c-caa650579390
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '770'
 ht-degree: 74%

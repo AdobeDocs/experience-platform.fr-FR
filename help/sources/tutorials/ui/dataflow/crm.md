@@ -2,11 +2,10 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;schéma crm;crm;CRM;flux de données;flux de données
 solution: Experience Platform
 title: Création d’un flux de données à l’aide d’une source CRM dans l’interface utilisateur
-topic-legacy: overview
 type: Tutorial
 description: Un flux de données est une tâche planifiée qui récupère et ingère des données d’une source vers un jeu de données Platform. Ce tutoriel explique comment créer un flux de données pour une source CRM à l’aide de l’interface utilisateur de Platform.
 exl-id: e14eafa7-6594-48e6-ab7a-f6c928d1e5fb
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '1425'
 ht-degree: 48%

@@ -2,11 +2,10 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;flow service;API;api;supprimer;supprimer des flux de données
 solution: Experience Platform
 title: Supprimer un flux de données à l’aide de l’API Flow Service
-topic-legacy: overview
 type: Tutorial
 description: Découvrez comment supprimer des flux de données de lots et de diffusion en continu à l’aide de l’API Flow Service.
 exl-id: ea9040b1-3a40-493d-86f0-27deef09df07
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '324'
 ht-degree: 100%

@@ -2,10 +2,9 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;schéma;groupe de champs;groupe de champs;groupes de champs;groupes de champs;type de données;types de données;types de données;type de données;conception de schéma;type de données;type de données;type de données;schémas;schémas;conception de schémas;mappage;carte;carte
 solution: Experience Platform
 title: Contraintes de type de champ XDM
-topic-legacy: overview
 description: Référence pour les contraintes de type de champ dans le modèle de données d’expérience (XDM), y compris les autres formats de sérialisation auxquels elles peuvent être mappées et comment définir vos propres types de champ dans l’API.
 exl-id: 63839a28-6d26-46f1-8bbf-b524e82ac4df
-source-git-commit: bd40388d710f8b135c0d36716b0ec59c8c9b78ee
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '663'
 ht-degree: 12%

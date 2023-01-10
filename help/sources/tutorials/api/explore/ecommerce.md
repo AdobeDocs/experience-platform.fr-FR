@@ -2,10 +2,9 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;commerce électronique;commerce électronique
 solution: Experience Platform
 title: Exploration d’une connexion eCommerce à l’aide de l’API Flow Service
-topic-legacy: overview
 description: Ce tutoriel utilise l’API Flow Service pour explorer les connexions eCommerce.
 exl-id: 832ce399-6c9f-40da-8e7c-5434503c16b6
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '573'
 ht-degree: 35%

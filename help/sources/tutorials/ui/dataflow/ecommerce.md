@@ -2,11 +2,10 @@
 keywords: Experience Platform;accueil;rubriques populaires;connecteur eCommerce;eCommerce
 solution: Experience Platform
 title: Création d’un flux de données à l’aide d’une source de commerce électronique dans l’interface utilisateur
-topic-legacy: overview
 type: Tutorial
 description: Un flux de données est une tâche planifiée qui récupère et ingère des données d’une source vers un jeu de données Platform. Ce tutoriel décrit les étapes à suivre pour créer un flux de données pour une source de commerce électronique à l’aide de l’interface utilisateur de Platform.
 exl-id: ee1382c5-78ac-4765-8883-0a922772bb20
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
 source-wordcount: '1386'
 ht-degree: 50%

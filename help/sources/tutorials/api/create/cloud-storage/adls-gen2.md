@@ -2,14 +2,13 @@
 keywords: Experience Platform;accueil;rubriques populaires;Azure Data Lake Storage Gen2;stockage Azure Data Lake;stockage Azure Data Lake;Azure
 solution: Experience Platform
 title: Création d’une connexion de base Azure Data Lake Storage Gen2 à l’aide de l’API Flow Service
-topic-legacy: overview
 type: Tutorial
 description: Découvrez comment connecter Adobe Experience Platform à Azure Data Lake Storage Gen2 à l’aide de l’API Flow Service.
 exl-id: cad5e2a0-e27c-4130-9ad8-888352c92f04
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '511'
-ht-degree: 40%
+ht-degree: 41%
 
 ---
 
@@ -34,7 +33,7 @@ Pour [!DNL Flow Service] pour vous connecter à ADLS Gen2, vous devez fournir de
 
 | Informations d’identification | Description |
 | ---------- | ----------- |
-| `url` | Point de terminaison d’ADLS Gen2. Le modèle de point de terminaison est le suivant : `https://<accountname>.dfs.core.windows.net`. |
+| `url` | Point de terminaison d’ADLS Gen2. Le modèle de point d’entrée est le suivant : `https://<accountname>.dfs.core.windows.net`. |
 | `servicePrincipalId` | ID client de l’application. |
 | `servicePrincipalKey` | Clé de l’application. |
 | `tenant` | Les informations du client qui contiennent votre application. |

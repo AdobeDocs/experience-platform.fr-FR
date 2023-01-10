@@ -2,13 +2,12 @@
 keywords: Experience Platform;accueil;rubriques populaires;Microsoft Dynamics;dynamique microsoft;dynamique;Dynamics
 solution: Experience Platform
 title: Présentation du connecteur source Microsoft Dynamics
-topic-legacy: overview
 description: Découvrez comment connecter Microsoft Dynamics à Adobe Experience Platform à l’aide des API ou de l’interface utilisateur.
 exl-id: 6ca162ce-2016-4270-b741-301cf4230233
-source-git-commit: 4fbf1b9a55c755d0bac9e15efbf6bdb25fa24deb
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '282'
-ht-degree: 59%
+ht-degree: 62%
 
 ---
 
@@ -37,12 +36,12 @@ Pour plus d’informations sur les règles de mappage de champs entre les [!DNL 
 - [Marketing](../adobe-applications/mapping/dynamics.md#marketing-list)
 - [Membres de la liste marketing](../adobe-applications/mapping/dynamics.md#marketing-list-members)
 
-La documentation ci-dessous fournit des informations sur la connexion de [!DNL Microsoft Dynamics] à à l’aide d’API ou de l’interface utilisateur :[!DNL Platform]
+La documentation ci-dessous fournit des informations sur la connexion d’[!DNL Microsoft Dynamics] à à l’aide d’API ou de l’interface utilisateur :[!DNL Platform]
 
 ## Connecter [!DNL Microsoft Dynamics] à [!DNL Platform] à lʼaide dʼAPI
 
 - [Création d’une connexion de base Microsoft Dynamics à l’aide de l’API Flow Service](../../tutorials/api/create/crm/ms-dynamics.md)
-- [Exploration des tableaux de données à l’aide de l’API Flow Service](../../tutorials/api/explore/tabular.md)
+- [Explorer des tableaux de données à l’aide de l’API Flow Service](../../tutorials/api/explore/tabular.md)
 - [Créer un flux de données pour une source CRM à l’aide de l’API Flow Service](../../tutorials/api/collect/crm.md)
 
 ## Connecter [!DNL Microsoft Dynamics] à [!DNL Platform] à lʼaide de l’interface utilisateur

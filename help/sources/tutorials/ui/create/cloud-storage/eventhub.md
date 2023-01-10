@@ -2,11 +2,10 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;centres d’événements Azure;centres d’événements;centres d’événements Azure
 solution: Experience Platform
 title: Création d’une connexion source Azure Event Hubs dans l’interface utilisateur
-topic-legacy: overview
 type: Tutorial
 description: Découvrez comment créer une connexion source Azure Event Hubs à l’aide de l’interface utilisateur de Adobe Experience Platform.
 exl-id: 7e67e213-8ccb-4fa5-b09f-ae77aba8614c
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '498'
 ht-degree: 39%

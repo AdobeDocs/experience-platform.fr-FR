@@ -2,11 +2,10 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;stockage d’objet Oracle;stockage d’objet oracle
 solution: Experience Platform
 title: Création d’une connexion source de stockage d’objet Oracle dans l’interface utilisateur
-topic-legacy: overview
 type: Tutorial
 description: Découvrez comment créer une connexion source de stockage d’objets d’Oracle à l’aide de l’interface utilisateur de Adobe Experience Platform.
 exl-id: 32284163-5dde-4171-8977-f76ceeebcef2
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '462'
 ht-degree: 46%

@@ -2,10 +2,9 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;segmentation;Segmentation;Segmentation Service;pql;PQL;langage de requête de profil;fonctions de filtre;filtrer;
 solution: Experience Platform
 title: Fonctions de filtre PQL
-topic-legacy: developer guide
 description: Les fonctions de filtre sont utilisées pour filtrer les données à l’intérieur des tableaux dans le langage de requête de profil (PQL).
 exl-id: 09d66be3-30dc-4488-84a1-cfd09c44470d
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '220'
 ht-degree: 81%

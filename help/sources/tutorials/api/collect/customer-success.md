@@ -2,11 +2,10 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;collecter le succès client;succès client
 solution: Experience Platform
 title: Créez un flux de données pour les sources de succès client à l’aide de l’API Flow Service
-topic-legacy: overview
 type: Tutorial
 description: Ce tutoriel décrit les étapes à suivre pour récupérer des données d’un système de succès client et les ingérer dans Platform à l’aide des connecteurs source et des API.
 exl-id: 0fae04d0-164b-4113-a274-09677f4bbde5
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1237'
 ht-degree: 94%

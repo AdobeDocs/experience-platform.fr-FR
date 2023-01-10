@@ -2,14 +2,13 @@
 keywords: Experience Platform;accueil;rubriques populaires;Data Explorer Azure;Data Explorer Azure;Data Explorer Azure
 solution: Experience Platform
 title: Création d’une connexion de base de Data Explorer Azure à l’aide de l’API Flow Service
-topic-legacy: overview
 type: Tutorial
 description: Découvrez comment connecter Azure Data Explorer à Adobe Experience Platform à l’aide de l’API Flow Service.
 exl-id: 1b17bbb0-1f7b-4d89-a158-ad269e6edf30
-source-git-commit: 1e2644b7d83a0bcb7175f27d7c4859c0efba4060
+source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '522'
-ht-degree: 52%
+ht-degree: 59%
 
 ---
 
@@ -114,7 +113,7 @@ Une réponse réussie renvoie les détails de la connexion nouvellement créée,
 
 ## Étapes suivantes
 
-En suivant ce tutoriel, vous avez créé une [!DNL Azure Data Explorer] connexion de base à l’aide de [!DNL Flow Service] API. Vous pouvez utiliser cet identifiant de connexion de base dans les tutoriels suivants :
+Ce tutoriel vous a permis de créer une connexion de base [!DNL Azure Data Explorer] à l’aide de l’API [!DNL Flow Service]. Vous pouvez utiliser cet identifiant de connexion de base dans les tutoriels suivants : 
 
-* [Explorez la structure et le contenu de vos tableaux de données à l’aide du [!DNL Flow Service] API](../../explore/tabular.md)
+* [Explorez la structure et le contenu de vos tableaux de données à l’aide de l’API  [!DNL Flow Service] .](../../explore/tabular.md)
 * [Créez un flux de données pour importer des données de base de données dans Platform à l’aide de la fonction [!DNL Flow Service] API](../../collect/database-nosql.md)

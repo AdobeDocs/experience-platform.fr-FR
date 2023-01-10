@@ -2,10 +2,9 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;segmentation;Segmentation;Service Segmentation;segmentation par diffusion en flux continu;Segmentation par diffusion en flux continu;Évaluation continue;
 solution: Experience Platform
 title: Évaluer les événements en temps quasi réel grâce à la segmentation en flux continu
-topic-legacy: developer guide
 description: Ce document contient des exemples d’utilisation de la segmentation par diffusion en flux continu avec l’API du service de segmentation Adobe Experience Platform.
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1971'
 ht-degree: 98%

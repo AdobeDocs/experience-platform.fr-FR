@@ -3,10 +3,9 @@ keywords: Experience Platform;accueil;rubriques les plus consultées ; analytics
 description: Découvrez comment créer un connecteur source Adobe Analytics dans l’interface utilisateur pour importer des données de classification dans Adobe Experience Platform.
 solution: Experience Platform
 title: Création d’une connexion source Adobe Analytics pour les données de classification dans l’interface utilisateur
-topic-legacy: overview
 type: Tutorial
 exl-id: d606720d-f1ca-47cc-919b-643a8fc61e07
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '660'
 ht-degree: 25%

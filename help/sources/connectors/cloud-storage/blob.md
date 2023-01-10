@@ -2,10 +2,9 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;Blob;blob;Azure Blob;blob azure
 solution: Experience Platform
 title: Présentation du connecteur source Azure Blob
-topic-legacy: overview
 description: Découvrez comment connecter Azure Blob à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur.
 exl-id: 62adc74f-3570-42c7-9ae6-3ddbc09eccc7
-source-git-commit: 251da91844311d08766ee2407ae0b775d4ac6aba
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '469'
 ht-degree: 64%

@@ -2,19 +2,18 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;schéma crm;crm;CRM;Salesforce;Salesforce
 solution: Experience Platform
 title: Présentation du connecteur source Salesforce
-topic-legacy: overview
 description: Découvrez comment connecter Salesforce à Adobe Experience Platform à l’aide des API ou de l’interface utilisateur.
 exl-id: 597778ad-3cf8-467c-ad5b-e2850967fdeb
-source-git-commit: e178e0df2653b8cb0d4176734be7cb421098e225
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '900'
-ht-degree: 18%
+ht-degree: 21%
 
 ---
 
 # Connecteur [!DNL Salesforce]
 
-Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous permettant de structurer, de libeller et d’améliorer les données entrantes à l’aide des services de Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, des bases de données, etc.
+Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les bases de données, etc.
 
 Experience Platform prend en charge l’ingestion de données provenant d’un système tiers de gestion de la relation client (CRM). La prise en charge des fournisseurs de gestion de la relation client inclut [!DNL Salesforce].
 
@@ -86,15 +85,15 @@ Le [!DNL Runner] s’affiche. À partir de là, assurez-vous que toutes les case
 
 Une requête réussie crée les espaces de noms et les schémas B2B conformément aux spécifications bêta.
 
-## Connexion [!DNL Salesforce] vers Platform à l’aide d’API
+## Connecter [!DNL Salesforce] à Platform à l’aide d’API
 
-La documentation ci-dessous fournit des informations sur la connexion de [!DNL Salesforce] à Platform à l’aide d’API ou de l’interface utilisateur :
+La documentation ci-dessous fournit des informations sur la connexion d’[!DNL Salesforce] à Platform à l’aide d’API ou de l’interface utilisateur :
 
 - [Création d’une connexion de base Salesforce à l’aide de l’API Flow Service](../../tutorials/api/create/crm/salesforce.md)
-- [Exploration des tableaux de données à l’aide de l’API Flow Service](../../tutorials/api/explore/tabular.md)
+- [Explorer des tableaux de données à l’aide de l’API Flow Service](../../tutorials/api/explore/tabular.md)
 - [Créer un flux de données pour une source CRM à l’aide de l’API Flow Service](../../tutorials/api/collect/crm.md)
 
-## Connexion [!DNL Salesforce] vers Platform à l’aide de l’interface utilisateur
+## Connecter [!DNL Salesforce] à Platform à l’aide de l’interface utilisateur
 
 - [Création d’une connexion source Salesforce dans l’interface utilisateur](../../tutorials/ui/create/crm/salesforce.md)
 - [Créer un flux de données pour une connexion CRM dans l’interface utilisateur](../../tutorials/ui/dataflow/crm.md)

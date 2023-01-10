@@ -2,11 +2,10 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;connecteur de protocole
 solution: Experience Platform
 title: Création d’un flux de données à l’aide d’une source de protocoles dans l’interface utilisateur
-topic-legacy: overview
 type: Tutorial
 description: Un flux de données est une tâche planifiée qui récupère et ingère des données d’une source vers un jeu de données Platform. Ce tutoriel décrit les étapes à suivre pour créer un flux de données pour une source de protocoles à l’aide de l’interface utilisateur de Platform.
 exl-id: 94631a78-14ea-41d7-876c-468634dfc6c1
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
 source-wordcount: '1385'
 ht-degree: 50%

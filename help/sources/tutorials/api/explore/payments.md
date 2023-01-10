@@ -2,10 +2,9 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;paiement
 solution: Experience Platform
 title: Exploration d’un système de paiement à l’aide de l’API Flow Service
-topic-legacy: overview
 description: Ce tutoriel utilise l’API Flow Service pour explorer les demandes de paiement.
 exl-id: 7d0231de-46c0-49df-8a10-aeb42a2c8822
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '597'
 ht-degree: 39%
@@ -43,7 +42,7 @@ Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [
 * x-api-key : `{API_KEY}`
 * x-gw-ims-org-id : `{ORG_ID}`
 
-Toutes les ressources qui se trouvent dans [!DNL Experience Platform], y compris celles liées à la [!DNL Flow Service], sont isolées dans des environnements de test virtuels spécifiques. Toutes les requêtes envoyées aux API [!DNL Platform] nécessitent un en-tête spécifiant le nom de l’environnement de test dans lequel l’opération sera effectuée :
+Toutes les ressources qui se trouvent dans [!DNL Experience Platform], y compris celles liées à la [!DNL Flow Service], sont isolées dans des environnements de test virtuels spécifiques. Toutes les requêtes envoyées aux API [!DNL Platform] nécessitent un en-tête spécifiant le nom de la sandbox dans laquelle l’opération sera effectuée :
 
 * x-sandbox-name : `{SANDBOX_NAME}`
 

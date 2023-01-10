@@ -2,10 +2,9 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;schéma;schéma;XDM;champs;schémas;schémas;environnement;type de données;type de données;type de données
 solution: Experience Platform
 title: Type de données d’environnement
-topic-legacy: overview
 description: Ce document fournit un aperçu du type de données XDM d’environnement.
 exl-id: ec806ee5-ed65-4148-9dbe-e297d9e8cd73
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '468'
 ht-degree: 18%

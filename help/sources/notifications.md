@@ -3,9 +3,8 @@ keywords: Experience Platform;accueil;rubriques les plus consultées ; notificat
 description: En vous abonnant aux événements Adobe I/O, vous pouvez utiliser des webhooks pour recevoir des notifications concernant les états d’exécution de flux de vos connexions source. Ces notifications contiennent des informations sur le succès de votre exécution de flux ou les erreurs qui ont contribué à l’échec d’une exécution.
 solution: Experience Platform
 title: Notifications d’exécution de flux
-topic-legacy: overview
 exl-id: 0f1cde97-3030-4b8e-be08-21f64e78b794
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '786'
 ht-degree: 17%

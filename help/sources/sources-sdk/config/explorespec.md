@@ -1,10 +1,9 @@
 ---
 keywords: Experience Platform;accueil;rubriques populaires;sources;connecteurs;connecteurs source;sdk sources;sdk;SDK
 title: Configuration des spécifications d’exploration pour les sources en libre-service (SDK par lots)
-topic-legacy: overview
 description: Ce document présente les configurations que vous devez préparer pour utiliser les sources en libre-service (SDK par lots).
 exl-id: 423a7e56-9dd1-4071-bd26-ee4f9f206122
-source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '258'
 ht-degree: 7%

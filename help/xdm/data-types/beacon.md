@@ -2,13 +2,12 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;schéma;schéma;XDM;champs;schémas;schémas;balise;détails d’interaction;type de données;type de données;type de données
 solution: Experience Platform
 title: Type de données de balise
-topic-legacy: overview
 description: Ce document présente la classe XDM Individual Profile.
 exl-id: a3767c8d-a009-49b4-81a4-b084b6e5101a
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '253'
-ht-degree: 12%
+ht-degree: 16%
 
 ---
 

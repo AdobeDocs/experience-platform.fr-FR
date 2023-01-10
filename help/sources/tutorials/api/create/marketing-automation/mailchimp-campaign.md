@@ -2,10 +2,9 @@
 keywords: Experience Platform;accueil;rubriques populaires;sources;connecteurs;connecteurs source;sdk sources;sdk;SDK
 solution: Experience Platform
 title: Créer un flux de données pour une campagne Mailchimp à l’aide de l’API Flow Service
-topic-legacy: tutorial
 description: Découvrez comment connecter Adobe Experience Platform à une campagne MailChimp à l’aide de l’API Flow Service.
 exl-id: fd4821c7-6fe1-4cad-8e13-3549dbe0ce98
-source-git-commit: 23a6f8ee23fb67290a5bcba2673a87ce74c9e1d3
+source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '1942'
 ht-degree: 85%

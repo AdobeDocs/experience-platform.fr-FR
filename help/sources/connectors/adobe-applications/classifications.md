@@ -2,10 +2,9 @@
 keywords: Experience Platform;accueil;rubriques populaires;Connecteur source des classifications Adobe Analytics
 solution: Experience Platform
 title: Connecteur source Adobe Analytics pour les données de classification
-topic-legacy: overview
 description: Découvrez comment connecter Analytics Classifications à Platform à l’aide de l’interface utilisateur
 exl-id: c26002df-dce4-415e-93e9-268e0efebc9f
-source-git-commit: 32a6d0311169486b1273129c0ee87c242bee1e47
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '181'
 ht-degree: 29%

@@ -2,13 +2,12 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;schéma;schéma;XDM;ExperienceEvent;champs;schémas;schémas;conception de schéma;groupe de champs;groupe de champs;groupe de champs;
 solution: Experience Platform
 title: Groupe de champs de schéma Détails du canal
-topic-legacy: overview
 description: Ce document présente un aperçu du groupe de champs de schéma Détails du canal .
 exl-id: b8ec2f57-6882-466e-9b22-61fb2178fb1e
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '146'
-ht-degree: 13%
+ht-degree: 19%
 
 ---
 

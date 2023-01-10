@@ -2,10 +2,9 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;stockage de fichiers Azure;stockage de fichiers Azure
 solution: Experience Platform
 title: Présentation du connecteur source de stockage de fichiers Azure
-topic-legacy: overview
 description: Découvrez comment connecter le stockage de fichiers Azure à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur.
 exl-id: 0a5e9df6-9760-4eeb-86d5-d92d77df3d2b
-source-git-commit: 446436346e3368d98eb990dba1000ac0974b84dc
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '409'
 ht-degree: 83%
@@ -35,7 +34,7 @@ La liste suivante inclut les contraintes dont vous devez tenir compte lorsque vo
 
 ## Connexion [!DNL Azure File Storage] to [!DNL Platform]
 
-La documentation ci-dessous fournit des informations sur la connexion de [!DNL Azure File Storage] à à l’aide d’API ou de l’interface utilisateur :[!DNL Platform]
+La documentation ci-dessous fournit des informations sur la connexion d’[!DNL Azure File Storage] à à l’aide d’API ou de l’interface utilisateur :[!DNL Platform]
 
 ### Utiliser les API
 

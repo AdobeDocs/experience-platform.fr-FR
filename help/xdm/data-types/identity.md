@@ -2,10 +2,9 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;schéma;schéma;XDM;champs;schémas;schémas;identité;type de données;type de données;type de données
 solution: Experience Platform
 title: Type de données d’identification
-topic-legacy: overview
 description: Ce document fournit un aperçu du type de données XDM d’identité.
 exl-id: fb02b6b4-255b-442f-895c-600022231a1c
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '287'
 ht-degree: 16%

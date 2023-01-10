@@ -2,10 +2,9 @@
 keywords: Experience Platform;accueil;rubriques populaires;sources;connecteurs;connecteurs source;sdk sources;sdk;SDK
 solution: Experience Platform
 title: Créez une connexion source aux membres MailChimp à l’aide de l’interface utilisateur de Platform.
-topic-legacy: tutorial
 description: Découvrez comment connecter Adobe Experience Platform aux membres MailChimp à l’aide de l’interface utilisateur de Platform.
 exl-id: dc620ef9-624d-4fc9-8475-bb475ea86eb7
-source-git-commit: 430b544835956ec0b212fb44d48beaae46afdd2e
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '682'
 ht-degree: 93%

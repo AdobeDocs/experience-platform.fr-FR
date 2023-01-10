@@ -2,10 +2,9 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;segmentation;Segmentation;Segmentation Service;plannings;planification;api;API;
 solution: Experience Platform
 title: Point de terminaison de l’API Schedules
-topic-legacy: developer guide
 description: Les planifications sont un outil qui peut être utilisé pour exécuter automatiquement des tâches de segmentation par lots une fois par jour.
 exl-id: 92477add-2e7d-4d7b-bd81-47d340998ff1
-source-git-commit: 84026b447eea00955bc9e6482b81ae1aad3c312e
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '2011'
 ht-degree: 23%
@@ -368,8 +367,8 @@ Dans une chaîne d’expression cron, le premier champ représente les secondes,
 
 | Nom du champ | Obligatoire | Valeurs possibles | Caractères spéciaux autorisés |
 | ---------- | -------- | --------------- | -------------------------- |
-| Seconds | Oui | 0 à 59 | `, - * /` |
-| Minutes | Oui | 0 à 59 | `, - * /` |
+| Seconds | Oui | 0-59 | `, - * /` |
+| Minutes | Oui | 0-59 | `, - * /` |
 | Heures | Oui | 0-23 | `, - * /` |
 | Jour du mois | Oui | 1-31 | `, - * ? / L W` |
 | Mois | Oui | 1-12, JAN-DEC | `, - * /` |

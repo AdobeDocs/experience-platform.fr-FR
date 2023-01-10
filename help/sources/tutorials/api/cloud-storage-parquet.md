@@ -2,11 +2,10 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;connexion à la source de données
 solution: Experience Platform
 title: Ingestion de données parquet à partir d’un système de stockage cloud tiers à l’aide de l’API Flow Service
-topic-legacy: overview
 type: Tutorial
 description: Ce tutoriel utilise l’API Flow Service pour vous guider tout au long des étapes d’ingestion de données Apache Parquet à partir d’un système de stockage dans le cloud tiers.
 exl-id: fb1b19d6-16bb-4a5f-9e81-f537bac95041
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1095'
 ht-degree: 47%

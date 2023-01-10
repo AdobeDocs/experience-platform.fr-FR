@@ -3,9 +3,8 @@ keywords: Experience Platform;rubriques populaires;XDM;système XDM;profil indiv
 solution: Experience Platform
 title: Guide de dépannage du système XDM
 description: Trouvez des réponses aux questions fréquentes sur le modèle de données d’expérience (XDM), y compris les étapes pour résoudre les erreurs d’API courantes.
-topic-legacy: troubleshooting
 exl-id: a0c7c661-bee8-4f66-ad5c-f669c52c9de3
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
 source-wordcount: '2060'
 ht-degree: 33%

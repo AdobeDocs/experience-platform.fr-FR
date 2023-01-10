@@ -1,10 +1,9 @@
 ---
 keywords: Experience Platform;accueil;rubriques populaires;sources;connecteurs;connecteurs source;sdk sources;sdk;SDK
 title: Mise à jour des spécifications de flux à l’aide de l’API Flow Service
-topic-legacy: developer guide
 description: Le document suivant décrit les étapes à suivre pour récupérer et mettre à jour les spécifications de flux à l’aide de l’API Flow Service pour les sources en libre-service (SDK par lots).
 exl-id: 67a0cd3e-ac18-43a4-aa22-8f6376d5cc3f
-source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '408'
 ht-degree: 17%

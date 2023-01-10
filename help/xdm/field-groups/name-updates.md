@@ -2,10 +2,9 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;schéma;XDM;ExperienceEvent;champs;schémas;schémas;conception de schéma;groupe de champs;groupe de champs;endserids;utilisateur final;id;mises à jour;utilisateur final
 solution: Experience Platform
 title: Mises à jour du nom du groupe de champs de schéma
-topic-legacy: overview
 description: Liste des modifications récentes de nom de groupe de champs de schéma XDM.
 exl-id: 2c775b86-7262-4f05-b421-c626867de0a4
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '287'
 ht-degree: 12%

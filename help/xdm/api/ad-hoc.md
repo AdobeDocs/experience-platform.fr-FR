@@ -3,9 +3,8 @@ keywords: Experience Platform;accueil;rubriques populaires;api;API;XDM;système 
 solution: Experience Platform
 title: Schémas ad hoc
 description: Dans des cas spécifiques, il peut être nécessaire de créer un schéma XDM avec des champs dont l’espace de noms est réservé à une utilisation par un seul jeu de données. On parle alors de schéma ad hoc.
-topic-legacy: developer guide
 exl-id: 8ee43bdc-3f16-4ec9-b17a-9942e4599023
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
 source-wordcount: '146'
 ht-degree: 15%

@@ -2,11 +2,10 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;espace de stockage Google;stockage dans le cloud Google;GCS;gcs
 solution: Experience Platform
 title: Création d’une connexion à la source de stockage dans le cloud Google dans l’interface utilisateur
-topic-legacy: overview
 type: Tutorial
 description: Découvrez comment créer une connexion source de stockage dans le cloud Google à l’aide de l’interface utilisateur de Adobe Experience Platform.
 exl-id: 3258ccd7-757c-4c4a-b7bb-0e8c9de3b50a
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '594'
 ht-degree: 39%

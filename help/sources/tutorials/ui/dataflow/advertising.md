@@ -2,11 +2,10 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;configurer le flux de données;connecteur publicitaire
 solution: Experience Platform
 title: Création d’un flux de données à l’aide d’une source Advertising dans l’interface utilisateur
-topic-legacy: overview
 type: Tutorial
 description: Un flux de données est une tâche planifiée qui récupère et ingère des données d’une source vers un jeu de données Platform. Ce tutoriel décrit les étapes à suivre pour créer un flux de données pour une source publicitaire à l’aide de l’interface utilisateur de Platform.
 exl-id: 8dd1d809-e812-4a13-8831-189726b2430e
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '1387'
 ht-degree: 50%

@@ -2,13 +2,12 @@
 keywords: Experience Platform;accueil;rubriques populaires;schéma;schéma;XDM;profil individuel;champs;schémas;schémas;détails personnels;conception de schéma;groupe de champs;groupe de champs;groupe de champs;
 solution: Experience Platform
 title: Groupe de champs de schéma Détails du contact personnel
-topic-legacy: overview
 description: Ce document présente un aperçu du groupe de champs de schéma Détails du contact personnel .
 exl-id: a78d9aee-ecf6-45a9-b270-cdad5b800a86
-source-git-commit: afe748d443aad7b6da5b348cd569c9e806e4419b
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '169'
-ht-degree: 16%
+ht-degree: 21%
 
 ---
 

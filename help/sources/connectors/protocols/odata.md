@@ -2,13 +2,12 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;OData;odata;oData;Generic OData;odata générique
 solution: Experience Platform
 title: Présentation générique de la source OData
-topic-legacy: overview
 description: Découvrez comment connecter Generic OData à Adobe Experience Platform à l’aide des API ou de l’interface utilisateur.
 exl-id: ff50f883-d4fd-4f32-a9d6-fe4624a32e24
-source-git-commit: 1e2644b7d83a0bcb7175f27d7c4859c0efba4060
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '221'
-ht-degree: 55%
+ht-degree: 59%
 
 ---
 
@@ -22,12 +21,12 @@ Adobe Experience Platform permet d’ingérer des données à partir de source
 
 Une liste d’adresses IP doit être ajoutée à une liste autorisée avant d’utiliser les connecteurs source. Si vous n’ajoutez pas vos adresses IP spécifiques à une région à votre liste autorisée, des erreurs ou une absence de performances peuvent se produire lors de l’utilisation de sources. Voir la page [Liste autorisée d’adresses IP](../../ip-address-allow-list.md) pour plus d’informations.
 
-La documentation ci-dessous fournit des informations sur la connexion de [!DNL Generic OData] à à l’aide d’API ou de l’interface utilisateur :[!DNL Platform]
+La documentation ci-dessous fournit des informations sur la connexion d’[!DNL Generic OData] à à l’aide d’API ou de l’interface utilisateur :[!DNL Platform]
 
 ## Connecter [!DNL Generic OData] à [!DNL Platform] à lʼaide dʼAPI
 
 - [Création d’une connexion de base OData générique à l’aide de l’API Flow Service](../../tutorials/api/create/protocols/odata.md)
-- [Exploration des tableaux de données à l’aide de l’API Flow Service](../../tutorials/api/explore/tabular.md)
+- [Explorer des tableaux de données à l’aide de l’API Flow Service](../../tutorials/api/explore/tabular.md)
 - [Création d’un flux de données pour une source de protocoles à l’aide de l’API Flow Service](../../tutorials/api/collect/protocols.md)
 
 ## Connecter [!DNL Generic OData] à [!DNL Platform] à lʼaide de l’interface utilisateur

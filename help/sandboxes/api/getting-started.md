@@ -2,10 +2,9 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;guide de développement des environnements de test
 solution: Experience Platform
 title: Prise en main de l’API Sandbox
-topic-legacy: developer guide
 description: L’API Sandbox permet aux développeurs de gérer par programmation les environnements de test dans Adobe Experience Platform. Suivez ce guide pour savoir comment effectuer des opérations clés à l’aide de l’API.
 exl-id: 1ae27f30-2f89-4bfa-887d-a5def17b5cbc
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '376'
 ht-degree: 89%

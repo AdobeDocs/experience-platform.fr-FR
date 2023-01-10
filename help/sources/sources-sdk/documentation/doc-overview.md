@@ -2,10 +2,9 @@
 keywords: Experience Platform;accueil;rubriques populaires;sources;connecteurs;connecteurs source;sdk sources;sdk;SDK
 solution: Experience Platform
 title: Document source
-topic-legacy: overview
 description: La dernière étape avant que votre nouvelle source puisse être mise en ligne dans Adobe Experience Platform consiste à documenter votre nouvelle source.
 exl-id: 80daadb1-127f-4f42-8bc9-fb89a7898462
-source-git-commit: adf7dbe5e32310fee680f996ffbde0fd6ddd993a
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '411'
 ht-degree: 3%

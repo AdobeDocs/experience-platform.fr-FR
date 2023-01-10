@@ -2,10 +2,9 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;segmentation;Segmentation;Segmentation Service;pql;PQL;langage de requête de profil;fonctions de mappage;mapper;
 solution: Experience Platform
 title: Fonctions de mappage PQL
-topic-legacy: developer guide
 description: Le langage de requête de profil (PQL) offre des fonctions pour faciliter l’interaction avec des cartes.
 exl-id: f23616f2-c0dd-40ce-8cfc-c757542fbd05
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '173'
 ht-degree: 81%

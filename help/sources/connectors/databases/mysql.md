@@ -2,13 +2,12 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;MySQL;mysql;My sql;My SQL
 solution: Experience Platform
 title: Présentation du connecteur source MySQL
-topic-legacy: overview
 description: Découvrez comment connecter MySQL à Adobe Experience Platform à l’aide des API ou de l’interface utilisateur.
 exl-id: a18e8e69-880f-4bee-b339-726091d6f858
-source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '235'
-ht-degree: 45%
+ht-degree: 49%
 
 ---
 
@@ -27,7 +26,7 @@ La documentation ci-dessous fournit des informations sur la connexion de MySQL �
 ## Connectez MySQL à [!DNL Platform] utilisation des API
 
 - [Création d’une connexion de base MySQL à l’aide de l’API Flow Service](../../tutorials/api/create/databases/mysql.md)
-- [Exploration des tableaux de données à l’aide de l’API Flow Service](../../tutorials/api/explore/tabular.md)
+- [Explorer des tableaux de données à l’aide de l’API Flow Service](../../tutorials/api/explore/tabular.md)
 - [Création d’un flux de données pour une source de base de données à l’aide de l’API Flow Service](../../tutorials/api/collect/database-nosql.md)
 
 ## Connectez MySQL à [!DNL Platform] utilisation de l’interface utilisateur

@@ -2,10 +2,9 @@
 keywords: Experience Platform;accueil;rubriques populaires;Azure Data Lake Storage Gen2;ADLS-Gen2;adls gen2;ADLS Gen2
 solution: Experience Platform
 title: Présentation du connecteur source Azure Data Lake Storage Gen2
-topic-legacy: overview
 description: Découvrez comment connecter Azure Data Lake Storage Gen2 à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur.
 exl-id: 424d7278-44d9-4653-82c0-eb21cbb9b623
-source-git-commit: 72c3000022db68284836cc7f2248154493100913
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '476'
 ht-degree: 72%
@@ -39,7 +38,7 @@ La liste suivante inclut les contraintes dont vous devez tenir compte lorsque vo
 
 ## Connexion [!DNL Azure Data Lake Storage Gen2] to [!DNL Platform]
 
-La documentation ci-dessous fournit des informations sur la connexion de [!DNL Azure Data Lake Storage Gen2] à à l’aide d’API ou de l’interface utilisateur :[!DNL Platform]
+La documentation ci-dessous fournit des informations sur la connexion d’[!DNL Azure Data Lake Storage Gen2] à à l’aide d’API ou de l’interface utilisateur :[!DNL Platform]
 
 ### Utiliser les API
 

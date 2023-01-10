@@ -2,14 +2,13 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;espace de stockage Google;stockage dans Google cloud;Google;Google
 solution: Experience Platform
 title: Création d’une connexion de base de stockage dans le cloud Google à l’aide de l’API Flow Service
-topic-legacy: overview
 type: Tutorial
 description: Découvrez comment connecter Adobe Experience Platform à un compte de stockage dans le cloud Google à l’aide de l’API Flow Service.
 exl-id: 321d15eb-82c0-45a7-b257-1096c6db6b18
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '470'
-ht-degree: 52%
+ht-degree: 61%
 
 ---
 
@@ -37,7 +36,7 @@ Pour [!DNL Flow Service] pour vous connecter à [!DNL Google Cloud Storage] , vo
 | `accessKeyId` | Chaîne alphanumérique de 61 caractères utilisée pour authentifier votre [!DNL Google Cloud Storage] compte à Platform. |
 | `secretAccessKey` | Chaîne codée en base 64 caractères de 40 caractères utilisée pour authentifier votre [!DNL Google Cloud Storage] compte à Platform. |
 
-Pour plus d’informations sur ces valeurs, voir [Clés HMAC de stockage dans le cloud Google](https://cloud.google.com/storage/docs/authentication/hmackeys#overview) guide. Pour savoir comment générer votre propre identifiant de clé d’accès et votre clé d’accès secrète, reportez-vous à la section [[!DNL Google Cloud Storage] aperçu](../../../../connectors/cloud-storage/google-cloud-storage.md).
+Pour plus d’informations sur ces valeurs, consultez le guide [Clés HMAC de Google Cloud Storage](https://cloud.google.com/storage/docs/authentication/hmackeys#overview). Pour savoir comment générer votre propre identifiant de clé d’accès et votre clé d’accès secrète, reportez-vous à la section [[!DNL Google Cloud Storage] Présentation de la ](../../../../connectors/cloud-storage/google-cloud-storage.md).
 
 ### Utiliser les API Platform
 

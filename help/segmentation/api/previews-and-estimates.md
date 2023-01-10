@@ -2,10 +2,9 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;segmentation;Segmentation;Service de segmentation;aperçus;estimations;aperçus et estimations;estimations et aperçus;api;API;
 solution: Experience Platform
 title: Points de terminaison de l’API d’aperçu et d’estimation
-topic-legacy: developer guide
 description: Au fur et à mesure que la définition de segment est développée, vous pouvez utiliser les outils d’estimation et de prévisualisation dans Adobe Experience Platform pour afficher des informations de niveau résumé afin de vous assurer que vous isolez l’audience attendue.
 exl-id: 2c204f29-825f-4a5e-a7f6-40fc69263614
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '978'
 ht-degree: 21%

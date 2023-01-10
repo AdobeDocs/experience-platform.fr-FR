@@ -2,11 +2,10 @@
 keywords: Experience Platform;accueil;rubriques populaires;
 solution: Experience Platform
 title: Connexion d’une zone d’entrée de données à Adobe Experience Platform à l’aide de l’API Flow Service
-topic-legacy: overview
 type: Tutorial
 description: Découvrez comment connecter Adobe Experience Platform à Data Landing Zone à l’aide de l’API Flow Service.
 exl-id: bdb60ed3-7c63-4a69-975a-c6f1508f319e
-source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1224'
 ht-degree: 20%

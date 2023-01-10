@@ -1,14 +1,13 @@
 ---
 keywords: Experience Platform;accueil;rubriques les plus consultées;Snowflake
 title: Création d’une connexion à la source du Snowflake dans l’interface utilisateur
-topic-legacy: overview
 type: Tutorial
 description: Découvrez comment créer une connexion source de Snowflake à l’aide de l’interface utilisateur de Adobe Experience Platform.
 exl-id: fb2038b9-7f27-4818-b5de-cc8072122127
-source-git-commit: ac7910c971fbedf3afebd87633f814d597260cae
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '445'
-ht-degree: 36%
+ht-degree: 41%
 
 ---
 
@@ -18,7 +17,7 @@ Ce tutoriel décrit les étapes à suivre pour créer une [!DNL Snowflake] conne
 
 ## Prise en main
 
-Ce tutoriel nécessite une compréhension pratique des composants suivants de Platform :
+Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Platform : 
 
 * [Sources ](../../../../home.md): [!DNL Experience Platform]permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services [!DNL Platform].
 * [Sandbox](../../../../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuelles qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
@@ -58,7 +57,7 @@ Pour connecter un compte existant, sélectionnez le compte Snowflake auquel vous
 
 ### Nouveau compte
 
-Si vous utilisez de nouvelles informations d’identification, sélectionnez **[!UICONTROL Nouveau compte]**. Dans le formulaire de saisie qui s’affiche, indiquez un nom, une description facultative et vos informations d’identification de Snowflake. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Connexion]** puis accorder un certain temps pour établir la nouvelle connexion.
+Si vous utilisez de nouvelles informations d’identification, sélectionnez **[!UICONTROL Nouveau compte]**.  Dans le formulaire de saisie qui s’affiche, indiquez un nom, une description facultative et vos informations d’identification de Snowflake. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Connexion]** puis accorder un certain temps pour établir la nouvelle connexion.
 
 ![](../../../../images/tutorials/create/snowflake/new.png)
 

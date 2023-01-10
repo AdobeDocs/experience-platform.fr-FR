@@ -2,11 +2,10 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;connecteur d’automatisation marketing
 solution: Experience Platform
 title: Création d’un flux de données à l’aide d’une source d’automatisation marketing dans l’interface utilisateur
-topic-legacy: overview
 type: Tutorial
 description: Un flux de données est une tâche planifiée qui récupère et ingère des données d’une source vers un jeu de données Platform. Ce tutoriel explique comment créer un flux de données pour une source d’automatisation marketing à l’aide de l’interface utilisateur de Platform.
 exl-id: 8d31fc2d-b952-44f7-98e7-f51b0acc19ed
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
 source-wordcount: '1395'
 ht-degree: 49%

@@ -2,13 +2,12 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;schéma;XDM;ExperienceEvent;champs;schémas;schémas;conception de schéma;groupe de champs;groupe de champs;environnement;détails de l’environnement;
 solution: Experience Platform
 title: Groupe de champs de schéma Détails de l’environnement
-topic-legacy: overview
 description: Ce document présente un aperçu du groupe de champs Détails de l’environnement ExperienceEvent .
 exl-id: 1d25b98f-66ac-443f-9b1c-dfd20a168c59
-source-git-commit: afe748d443aad7b6da5b348cd569c9e806e4419b
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '215'
-ht-degree: 10%
+ht-degree: 14%
 
 ---
 

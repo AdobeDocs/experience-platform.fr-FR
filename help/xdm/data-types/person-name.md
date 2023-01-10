@@ -2,10 +2,9 @@
 keywords: Experience Platform;accueil;rubriques populaires;schéma;schéma;XDM;champs;schémas;schémas;fullName;xdm:fullName;nom de personne;nom;type de données;type de données;type de données;type de données
 solution: Experience Platform
 title: Type de données du nom de personne
-topic-legacy: overview
 description: Ce document fournit un aperçu du type de données XDM du nom de personne.
 exl-id: 5cf55fb1-b6b0-4d1c-93c3-7e2b7766599e
-source-git-commit: 7f694310b17ab257eae459003bb820f7221bb55e
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '256'
 ht-degree: 21%

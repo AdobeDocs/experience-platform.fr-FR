@@ -2,11 +2,10 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;conformité de l’utilisation des données;application;application de la conformité de l’utilisation des données;service de segmentation;segmentation;segmentation;segmentation
 solution: Experience Platform
 title: Application de la conformité de l’utilisation des données à un segment d’audience à l’aide d’API
-topic-legacy: tutorial
 type: Tutorial
 description: Ce tutoriel décrit les étapes à suivre pour appliquer la conformité de l’utilisation des données aux segments ciblés de Real-Time Customer Profile à l’aide des API.
 exl-id: 2299328c-d41a-4fdc-b7ed-72891569eaf2
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1368'
 ht-degree: 54%

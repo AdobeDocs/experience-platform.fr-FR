@@ -3,10 +3,9 @@ keywords: Experience Platform;accueil;rubriques les plus consultées;mettre à j
 description: Ce tutoriel décrit les étapes de mise à jour d’un planning de flux de données, y compris sa fréquence d’ingestion et son taux d’intervalle, à l’aide de l’espace de travail Sources .
 solution: Experience Platform
 title: Mise à jour d’un flux de données de connexion source dans l’interface utilisateur
-topic-legacy: overview
 type: Tutorial
 exl-id: 0499a2a3-5a22-47b1-ac0e-76a432bd26c0
-source-git-commit: 6a9ad0ce5d664e3b32cab4183b54fabd5d9d19e3
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '724'
 ht-degree: 14%
@@ -48,7 +47,7 @@ Pour mettre à jour les informations de votre flux de données, sélectionnez **
 
 ![update-dataflow](../../images/tutorials/update-dataflows/update-dataflow.png)
 
-### Ajout de données
+### Ajouter des données
 
 L’étape [!UICONTROL Ajouter les données] apparaît. Sélectionnez le format de données approprié pour examiner le contenu des données sélectionnées, puis sélectionnez **[!UICONTROL Suivant]** pour continuer.
 

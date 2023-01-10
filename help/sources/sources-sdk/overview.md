@@ -2,10 +2,9 @@
 keywords: Experience Platform;accueil;rubriques populaires;sources;connecteurs;connecteurs source;sdk sources;sdk;SDK
 solution: Experience Platform
 title: Présentation des sources en libre-service (SDK par lots)
-topic-legacy: overview
 description: Les sources en libre-service Adobe Experience Platform (SDK par lots) sont un ensemble d’API de configuration qui vous permettent d’intégrer une source basée sur l’API REST à l’aide de l’API Flow Service pour importer vos données dans Experience Platform.
 exl-id: 5d5449ad-a1ba-402b-a281-0b2d8b704f32
-source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '596'
 ht-degree: 8%
