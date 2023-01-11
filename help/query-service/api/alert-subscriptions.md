@@ -3,10 +3,10 @@ keywords: Experience Platform;accueil;rubriques populaires;Query Service;Query 
 title: Point d’entrée de l’API des abonnements aux alertes
 description: Ce guide fournit des exemples de requêtes et de réponses HTTP pour les différents appels API que vous pouvez effectuer au point d’entrée des abonnements aux alertes avec l’API Query Service.
 exl-id: 30ac587a-2286-4a52-9199-7a2a8acd5362
-source-git-commit: a9887535b12b8c4aeb39bb5a6646da88db4f0308
-workflow-type: ht
-source-wordcount: '2289'
-ht-degree: 100%
+source-git-commit: 8673b6ceb9386677171334ce99d39c93e5e8159c
+workflow-type: tm+mt
+source-wordcount: '2668'
+ht-degree: 90%
 
 ---
 
@@ -50,7 +50,23 @@ Récupérer une liste de toutes les alertes pour une sandbox d’organisation en
 
 ```http
 GET /alert-subscriptions
+GET /alert-subscriptions?{QUERY_PARAMETERS}
 ```
+
+| Propriété | Description |
+| --------- | ----------- |
+| `{QUERY_PARAMETERS}` | (Facultatif) Les paramètres ajoutés au chemin de requête configurant les résultats renvoyés dans la réponse. Plusieurs paramètres peuvent être inclus et séparés par des esperluettes (&amp;). Les paramètres disponibles sont répertoriés ci-dessous. |
+
+**Paramètres de requête**
+
+Vous trouverez ci-dessous une liste des paramètres de requête disponibles pour répertorier les requêtes. Tous ces paramètres sont facultatifs. En effectuant un appel vers ce point de terminaison sans paramètres, vous récupérerez toutes les requêtes disponibles pour votre organisation.
+
+| Paramètre | Description |
+| --------- | ----------- |
+| `orderby` | Champ qui spécifie l’ordre des résultats. Les champs `created` et `updated` sont pris en charge. Ajoutez le nom de la propriété en préfixe `+` pour les variables ascendantes et `-` pour l’ordre décroissant. La valeur par défaut est de `-created`. Notez que le signe plus (`+`) doit être échappé avec `%2B`. Par exemple `%2Bcreated` est la valeur d’un ordre créé croissant. |
+| `pagesize` | Utilisez ce paramètre pour contrôler le nombre d’enregistrements que vous souhaitez récupérer de l’appel API par page. La limite par défaut est définie sur le maximum de 50 enregistrements par page. |
+| `page` | Indiquez le numéro de page des résultats renvoyés pour lesquels vous souhaitez afficher les enregistrements. |
+| `property` | Filtrez les résultats selon les champs sélectionnés. Les filtres **doivent** être précédés d’une séquence d’échappement HTML. Des virgules sont utilisées pour combiner plusieurs ensembles de filtres. Les propriétés suivantes permettent de filtrer : <ul><li>identifiant</li><li>assetId</li><li>statut</li><li>alertType</li></ul> Les opérateurs pris en charge sont les suivants : `==` (égal à). Par exemple : `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` renvoie l’alerte avec un ID correspondant. |
 
 **Requête**
 
@@ -136,9 +152,9 @@ Une réponse réussie renvoie un état HTTP 200 et le tableau `alerts` avec les 
 | Propriété | Description |
 | -------- | ----------- |
 | `alerts.assetId` | L’identifiant de la requête qui a associé l’alerte à une requête spécifique. |
-| `alerts.id` | Nom de l’alerte. Ce nom est généré par le service d’alertes et est utilisé sur le tableau de bord des alertes. Le nom de l’alerte comprend le dossier dans lequel l’alerte est stockée, le `alertType` et l’identifiant de flux. Vous trouverez des informations sur les alertes disponibles dans la [documentation du tableau de bord des alertes Platform](../../observability/alerts/ui.md). |
-| `alerts.status` | L’alerte a quatre valeurs de statut : `enabled`, `enabling`, `disabled`, et `disabling`. Une alerte écoute activement les événements, est mise en pause pour une utilisation ultérieure tout en conservant tous les abonnés et paramètres pertinents, ou passe d’un état à l’autre. |
-| `alerts.alertType` | Le type d’alerte. Une alerte peut avoir trois valeurs : <ul><li>`start` : avertit un utilisateur ou une utilisatrice lorsque l’exécution de la requête a commencé.</li><li>`success` : avertit l’utilisateur ou l’utilisatrice une fois la requête terminée.</li><li>`failure` : avertit l’utilisateur ou l’utilisatrice en cas d’échec de la requête.</li></ul> |
+| `alerts.id` | Nom de l’alerte. Ce nom est généré par le service d’alertes et est utilisé sur le tableau de bord des alertes. Le nom de l’alerte comprend le dossier dans lequel l’alerte est stockée, le `alertType` et l’ID de flux. Vous trouverez des informations sur les alertes disponibles dans la section [Documentation du tableau de bord des alertes Platform](../../observability/alerts/ui.md). |
+| `alerts.status` | L’alerte a quatre valeurs de statut : `enabled`, `enabling`, `disabled` et `disabling`. Une alerte écoute activement les événements, est mise en pause pour une utilisation ultérieure tout en conservant tous les abonnés et paramètres pertinents, ou passe d’un état à l’autre. |
+| `alerts.alertType` | Le type d’alerte. Une alerte peut avoir trois valeurs : <ul><li>`start` : avertit un utilisateur ou une utilisatrice du démarrage de l’exécution de la requête.</li><li>`success` : avertit l’utilisateur ou l’utilisatrice une fois la requête terminée.</li><li>`failure` : avertit l’utilisateur ou l’utilisatrice en cas d’échec de la requête.</li></ul> |
 | `alerts._links` | Fournit des informations sur les méthodes et points d’entrée disponibles qui peuvent être utilisés pour récupérer, mettre à jour, modifier ou supprimer des informations relatives à cet identifiant d’alerte. |
 | `_page` | L’objet contient des propriétés pour décrire l’ordre, la taille, le nombre total de pages et la page active. |
 | `_links` | L’objet contient des références URI qui peuvent être utilisées pour obtenir la page de ressources suivante ou précédente. |
@@ -267,7 +283,7 @@ Une réponse réussie renvoie un état HTTP de 200 et le tableau `alerts` qui co
 | `assetId` | L’alerte est associée à cet identifiant. L’ID peut être un ID de requête ou un ID de planning. |
 | `id` | Nom de l’alerte. Ce nom est généré par le service d’alertes et est utilisé sur le tableau de bord des alertes. Le nom de l’alerte comprend le dossier dans lequel l’alerte est stockée, le `alertType` et l’ID de flux. Vous trouverez des informations sur les alertes disponibles dans la section [Documentation du tableau de bord des alertes Platform](../../observability/alerts/ui.md). |
 | `status` | L’alerte a quatre valeurs de statut : `enabled`, `enabling`, `disabled` et `disabling`. Une alerte écoute activement les événements, est mise en pause pour une utilisation ultérieure tout en conservant tous les abonnés et paramètres pertinents, ou passe d’un état à l’autre. |
-| `alertType` | Chaque alerte peut avoir trois types d’alerte différents. Les voici : <ul><li>`start` : avertit un utilisateur ou une utilisatrice du démarrage de l’exécution de la requête.</li><li>`success` : avertit l’utilisateur ou l’utilisatrice de la fin de la requête.</li><li>`failure` : avertit l’utilisateur ou l’utilisatrice en cas d’échec de la requête.</li></ul> |
+| `alertType` | Chaque alerte peut avoir trois types d’alerte différents. Les voici : <ul><li>`start` : avertit un utilisateur ou une utilisatrice du démarrage de l’exécution de la requête.</li><li>`success` : avertit l’utilisateur ou l’utilisatrice une fois la requête terminée.</li><li>`failure` : avertit l’utilisateur ou l’utilisatrice en cas d’échec de la requête.</li></ul> |
 | `subscriptions.emailNotifications` | Tableau d’adresses électroniques enregistrées par Adobe pour les utilisateurs et utilisatrices qui se sont abonnés pour recevoir des e-mails pour l’alerte. |
 | `subscriptions.inContextNotifications` | Tableau d’adresses électroniques enregistrées par Adobe pour les utilisateurs et utilisatrices qui sont abonnés aux notifications de l’interface utilisateur pour l’alerte. |
 
@@ -284,7 +300,7 @@ GET /alert-subscriptions/{SCHEDULE_ID}/{ALERT_TYPE}
 
 | Paramètres | Description |
 | -------- | ----------- |
-| `ALERT_TYPE` | Chaque alerte peut avoir trois types d’alerte différents. Les voici : <ul><li>`start` : avertit un utilisateur ou une utilisatrice du démarrage de l’exécution de la requête.</li><li>`success` : avertit l’utilisateur ou l’utilisatrice de la fin de la requête.</li><li>`failure` : avertit l’utilisateur ou l’utilisatrice en cas d’échec de la requête.</li></ul> |
+| `ALERT_TYPE` | Cette propriété décrit l’état d’exécution de la requête qui déclenche une alerte. La réponse inclura uniquement des informations d’abonnement aux alertes pour les alertes de ce type. Chaque alerte peut avoir trois types d’alerte différents. Les voici : <ul><li>`start` : avertit un utilisateur ou une utilisatrice du démarrage de l’exécution de la requête.</li><li>`success` : avertit l’utilisateur ou l’utilisatrice une fois la requête terminée.</li><li>`failure` : avertit l’utilisateur ou l’utilisatrice en cas d’échec de la requête.</li></ul> |
 | `QUERY_ID` | Identifiant unique de la requête à mettre à jour. |
 | `SCHEDULE_ID` | Identifiant unique de la requête planifiée à mettre à jour. |
 
@@ -353,7 +369,7 @@ Une réponse réussie renvoie un statut HTTP de 200 et toutes les alertes auxque
 | Propriété | Description |
 | -------- | ----------- |
 | `assetId` | L’identifiant de la requête qui a associé l’alerte à une requête spécifique. |
-| `alertType` | Le type d’alerte. Une alerte peut avoir trois valeurs : <ul><li>`start` : avertit un utilisateur ou une utilisatrice du démarrage de l’exécution de la requête.</li><li>`success` : avertit l’utilisateur ou l’utilisatrice de la fin de la requête.</li><li>`failure` : avertit l’utilisateur ou l’utilisatrice en cas d’échec de la requête.</li></ul> |
+| `alertType` | Le type d’alerte. Une alerte peut avoir trois valeurs : <ul><li>`start` : avertit un utilisateur ou une utilisatrice du démarrage de l’exécution de la requête.</li><li>`success` : avertit l’utilisateur ou l’utilisatrice une fois la requête terminée.</li><li>`failure` : avertit l’utilisateur ou l’utilisatrice en cas d’échec de la requête.</li></ul> |
 | `subscriptions` | Objet utilisé pour transmettre les identifiants d’adresse électronique enregistrée par Adobe associés aux alertes, ainsi que les canaux via lesquels les utilisateurs et utilisatrices recevront les alertes. |
 | `subscriptions.inContextNotifications` | Tableau d’adresses électroniques enregistrées par Adobe pour les utilisateurs et utilisatrices qui sont abonnés aux notifications de l’interface utilisateur pour l’alerte. |
 | `subscriptions.emailNotifications` | Tableau d’adresses électroniques enregistrées par Adobe pour les utilisateurs et utilisatrices qui se sont abonnés pour recevoir des e-mails pour l’alerte. |
@@ -371,6 +387,10 @@ GET /alert-subscriptions/user-subscriptions/{EMAIL_ID}
 | Paramètres | Description |
 | -------- | ----------- |
 | `{EMAIL_ID}` | Adresse électronique enregistrée dans un compte Adobe permettant d’identifier les utilisateurs et utilisatrices abonnés aux alertes. |
+| `orderby` | Champ qui spécifie l’ordre des résultats. Les champs `created` et `updated` sont pris en charge. Ajoutez le nom de la propriété en préfixe `+` pour les variables ascendantes et `-` pour l’ordre décroissant. La valeur par défaut est de `-created`. Notez que le signe plus (`+`) doit être échappé avec `%2B`. Par exemple `%2Bcreated` est la valeur d’un ordre créé croissant. |
+| `pagesize` | Utilisez ce paramètre pour contrôler le nombre d’enregistrements que vous souhaitez récupérer de l’appel API par page. La limite par défaut est définie sur le maximum de 50 enregistrements par page. |
+| `page` | Indiquez le numéro de page des résultats renvoyés pour lesquels vous souhaitez afficher les enregistrements. |
+| `property` | Filtrez les résultats selon les champs sélectionnés. Les filtres **doivent** être précédés d’une séquence d’échappement HTML. Des virgules sont utilisées pour combiner plusieurs ensembles de filtres. Les propriétés suivantes permettent de filtrer : <ul><li>identifiant</li><li>assetId</li><li>statut</li><li>alertType</li></ul> Les opérateurs pris en charge sont les suivants : `==` (égal à). Par exemple : `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` renvoie l’alerte avec un ID correspondant. |
 
 **Requête**
 
@@ -482,7 +502,7 @@ Une réponse réussie renvoie un statut HTTP 200 et le tableau `items` avec les 
 | `name` | Nom de l’alerte. Ce nom est généré par le service d’alertes et est utilisé sur le tableau de bord des alertes. Le nom de l’alerte comprend le dossier dans lequel l’alerte est stockée, le `alertType` et l’ID de flux. Vous trouverez des informations sur les alertes disponibles dans la section [Documentation du tableau de bord des alertes Platform](../../observability/alerts/ui.md). |
 | `assetId` | L’identifiant de la requête qui a associé l’alerte à une requête spécifique. |
 | `status` | L’alerte a quatre valeurs de statut : `enabled`, `enabling`, `disabled` et `disabling`. Une alerte écoute activement les événements, est mise en pause pour une utilisation ultérieure tout en conservant tous les abonnés et paramètres pertinents, ou passe d’un état à l’autre. |
-| `alertType` | Le type d’alerte. Une alerte peut avoir trois valeurs : <ul><li>`start` : avertit un utilisateur ou une utilisatrice du démarrage de l’exécution de la requête.</li><li>`success` : avertit l’utilisateur ou l’utilisatrice de la fin de la requête.</li><li>`failure` : avertit l’utilisateur ou l’utilisatrice en cas d’échec de la requête.</li></ul> |
+| `alertType` | Le type d’alerte. Une alerte peut avoir trois valeurs : <ul><li>`start` : avertit un utilisateur ou une utilisatrice du démarrage de l’exécution de la requête.</li><li>`success` : avertit l’utilisateur ou l’utilisatrice une fois la requête terminée.</li><li>`failure` : avertit l’utilisateur ou l’utilisatrice en cas d’échec de la requête.</li></ul> |
 | `subscriptions` | Objet utilisé pour transmettre les identifiants d’adresse électronique enregistrée par Adobe associés aux alertes, ainsi que les canaux via lesquels les utilisateurs et utilisatrices recevront les alertes. |
 | `subscriptions.inContextNotifications` | Valeur booléenne déterminant la manière dont les utilisateurs et utilisatrices reçoivent les notifications d’alerte. Une valeur `true` confirme que les alertes doivent être fournies via l’interface utilisateur. Une valeur `false` garantit que les utilisateurs et utilisatrices ne sont pas avertis par ce canal. |
 | `subscriptions.emailNotifications` | Valeur booléenne déterminant la manière dont les utilisateurs et utilisatrices reçoivent les notifications d’alerte. Une valeur `true` confirme que les alertes doivent être fournies par e-mail. Une valeur `false` garantit que les utilisateurs et utilisatrices ne sont pas avertis par ce canal. |
@@ -527,7 +547,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/alert-subscriptions
 | Propriété | Description |
 | -------- | ----------- |
 | `assetId` | L’alerte est associée à cet identifiant. L’ID peut être un ID de requête ou un ID de planning. |
-| `alertType` | Le type d’alerte. Une alerte peut avoir trois valeurs : <ul><li>`start` : avertit un utilisateur ou une utilisatrice lorsque l’exécution de la requête a commencé.</li><li>`success` : avertit l’utilisateur ou l’utilisatrice une fois la requête terminée.</li><li>`failure` : avertit l’utilisateur ou l’utilisatrice en cas d’échec de la requête.</li></ul> |
+| `alertType` | Le type d’alerte. Une alerte peut avoir trois valeurs : <ul><li>`start` : avertit un utilisateur ou une utilisatrice du démarrage de l’exécution de la requête.</li><li>`success` : avertit l’utilisateur ou l’utilisatrice une fois la requête terminée.</li><li>`failure` : avertit l’utilisateur ou l’utilisatrice en cas d’échec de la requête.</li></ul> |
 | `subscriptions` | Objet utilisé pour transmettre les identifiants d’adresse électronique enregistrée par Adobe associés aux alertes, ainsi que les canaux via lesquels les utilisateurs et utilisatrices recevront les alertes. |
 | `subscriptions.emailIds` | Un tableau d’adresses e-mail pour identifier les utilisateurs et utilisatrices qui doivent recevoir les alertes. Les adresses e-mail **doivent** être enregistrées sur un compte Adobe. |
 | `subscriptions.inContextNotifications` | Valeur booléenne déterminant la manière dont les utilisateurs et utilisatrices reçoivent les notifications d’alerte. Une valeur `true` confirme que les alertes doivent être fournies via l’interface utilisateur. Une valeur `false` garantit que les utilisateurs et utilisatrices ne sont pas avertis par ce canal. |
@@ -580,7 +600,7 @@ Une réponse réussie renvoie le statut HTTP 202 (Accepté) avec les détails de
 
 | Propriété | Description |
 | -------- | ----------- |
-| `id` | Nom de l’alerte. Ce nom est généré par le service d’alertes et est utilisé sur le tableau de bord des alertes. Le nom de l’alerte comprend le dossier qui stocke l’alerte, le `alertType`, et l’identifiant du flux. Vous trouverez des informations sur les alertes disponibles dans la [documentation du tableau de bord des alertes Platform](../../observability/alerts/ui.md). |
+| `id` | Nom de l’alerte. Ce nom est généré par le service d’alertes et est utilisé sur le tableau de bord des alertes. Le nom de l’alerte comprend le dossier dans lequel l’alerte est stockée, le `alertType` et l’ID de flux. Vous trouverez des informations sur les alertes disponibles dans la [documentation du tableau de bord des alertes Platform](../../observability/alerts/ui.md). |
 | `_links` | Fournit des informations sur les méthodes et points d’entrée disponibles qui peuvent être utilisés pour récupérer, mettre à jour, modifier ou supprimer des informations relatives à cet identifiant d’alerte. |
 
 ## Activer ou désactiver une alerte {#enable-or-disable-alert}
@@ -596,7 +616,7 @@ PATCH /alert-subscriptions/{SCHEDULE_ID}/{ALERT_TYPE}
 
 | Paramètres | Description |
 | -------- | ----------- |
-| `ALERT_TYPE` | Le type d’alerte. Une alerte peut avoir trois valeurs : <ul><li>`start` : avertit un utilisateur ou une utilisatrice lorsque l’exécution de la requête a commencé.</li><li>`success` : avertit l’utilisateur ou l’utilisatrice une fois la requête terminée.</li><li>`failure` : avertit l’utilisateur ou l’utilisatrice en cas d’échec de la requête.</li></ul>Vous devez spécifier le type d’alerte actuel dans l’espace de noms du point d’entrée afin de le modifier. |
+| `ALERT_TYPE` | Le type d’alerte. Une alerte peut avoir trois valeurs : <ul><li>`start` : avertit un utilisateur ou une utilisatrice du démarrage de l’exécution de la requête.</li><li>`success` : avertit l’utilisateur ou l’utilisatrice une fois la requête terminée.</li><li>`failure` : avertit l’utilisateur ou l’utilisatrice en cas d’échec de la requête.</li></ul>Vous devez spécifier le type d’alerte actuel dans l’espace de noms du point d’entrée afin de le modifier. |
 | `QUERY_ID` | Identifiant unique de la requête à mettre à jour. |
 | `SCHEDULE_ID` | Identifiant unique de la requête planifiée à mettre à jour. |
 
@@ -640,9 +660,9 @@ Une réponse réussie renvoie le statut HTTP 200 avec des détails sur le statut
 
 | Propriété | Description |
 | -------- | ----------- |
-| `id` | Nom de l’alerte. Ce nom est généré par le service d’alertes et est utilisé sur le tableau de bord des alertes. Le nom de l’alerte comprend le dossier dans lequel l’alerte est stockée, le `alertType` et l’identifiant de flux. Vous trouverez des informations sur les alertes disponibles dans la [documentation du tableau de bord des alertes Platform](../../observability/alerts/ui.md). |
+| `id` | Nom de l’alerte. Ce nom est généré par le service d’alertes et est utilisé sur le tableau de bord des alertes. Le nom de l’alerte comprend le dossier dans lequel l’alerte est stockée, le `alertType` et l’ID de flux. Vous trouverez des informations sur les alertes disponibles dans la [documentation du tableau de bord des alertes Platform](../../observability/alerts/ui.md). |
 | `assetId` | L’alerte est associée à cet identifiant. L’ID peut être un ID de requête ou un ID de planning. |
-| `alertType` | Chaque alerte peut avoir trois types d’alerte différents. Les voici : <ul><li>`start` : avertit un utilisateur ou une utilisatrice lorsque l’exécution de la requête a commencé.</li><li>`success` : avertit l’utilisateur ou l’utilisatrice une fois la requête terminée.</li><li>`failure` : avertit l’utilisateur ou l’utilisatrice en cas d’échec de la requête.</li></ul> |
+| `alertType` | Chaque alerte peut avoir trois types d’alerte différents. Les voici : <ul><li>`start` : avertit un utilisateur ou une utilisatrice du démarrage de l’exécution de la requête.</li><li>`success` : avertit l’utilisateur ou l’utilisatrice une fois la requête terminée.</li><li>`failure` : avertit l’utilisateur ou l’utilisatrice en cas d’échec de la requête.</li></ul> |
 | `status` | L’alerte a quatre valeurs de statut : `enabled`, `enabling`, `disabled`, et `disabling`. Une alerte écoute activement les événements, est mise en pause pour une utilisation ultérieure tout en conservant tous les abonnés et paramètres pertinents, ou passe d’un état à l’autre. |
 
 ## Supprimer l’alerte d’une requête et d’un type d’alerte spécifiques {#delete-alert-info-by-id-and-alert-type}
@@ -656,7 +676,7 @@ DELETE /alert-subscriptions/{SCHEDULE_ID}/{ALERT_TYPE}
 
 | Paramètres | Description |
 | -------- | ----------- |
-| `ALERT_TYPE` | Le type d’alerte. Une alerte peut avoir trois valeurs : <ul><li>`start` : avertit un utilisateur ou une utilisatrice lorsque l’exécution de la requête a commencé.</li><li>`success` : avertit l’utilisateur ou l’utilisatrice une fois la requête terminée.</li><li>`failure` : avertit l’utilisateur ou l’utilisatrice en cas d’échec de la requête.</li></ul> La requête DELETE s’applique uniquement au type d’alerte spécifique fourni. |
+| `ALERT_TYPE` | Le type d’alerte. Une alerte peut avoir trois valeurs : <ul><li>`start` : avertit un utilisateur ou une utilisatrice du démarrage de l’exécution de la requête.</li><li>`success` : avertit l’utilisateur ou l’utilisatrice une fois la requête terminée.</li><li>`failure` : avertit l’utilisateur ou l’utilisatrice en cas d’échec de la requête.</li></ul> La requête DELETE s’applique uniquement au type d’alerte spécifique fourni. |
 | `QUERY_ID` | Identifiant unique de la requête à mettre à jour. |
 | `SCHEDULE_ID` | Identifiant unique de la requête planifiée à mettre à jour. |
 

@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Point de terminaison de l’API de requêtes
 description: Les sections suivantes passent en revue les appels que vous pouvez effectuer à l’aide du point de terminaison /query de l’API Query Service.
 exl-id: d6273e82-ce9d-4132-8f2b-f376c6712882
-source-git-commit: e0287076cc9f1a843d6e3f107359263cd98651e6
+source-git-commit: 08e19149a84273231c6261d2a4e09584dfb6e38d
 workflow-type: tm+mt
-source-wordcount: '825'
-ht-degree: 75%
+source-wordcount: '868'
+ht-degree: 66%
 
 ---
 
@@ -140,9 +140,9 @@ curl -X POST https://platform.adobe.io/data/foundation/query/queries \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
  -d '{
         "dbName": "prod:all",
-        "sql": "SELECT account_balance FROM user_data WHERE $user_id;",
+        "sql": "SELECT account_balance FROM user_data WHERE user_id='$user_id';",
         "queryParameters": {
-            $user_id : {USER_ID}
+            user_id : {USER_ID}
             }
         "name": "Sample Query",
         "description": "Sample Description"
@@ -295,9 +295,9 @@ Une réponse réussie renvoie un état HTTP 200 avec des informations détaill�
 >
 >Vous pouvez utiliser la valeur de `_links.cancel` pour [annuler la requête créée](#cancel-a-query).
 
-### Annulation d’une requête
+### Annulation ou suppression différée d’une requête
 
-Vous pouvez demander la suppression d’une requête spécifiée en effectuant une requête PATCH vers le point de terminaison `/queries` et en fournissant la valeur `id` de la requête dans le chemin d’accès de la requête.
+Vous pouvez demander l’annulation ou la suppression différée d’une requête spécifiée en adressant une requête de PATCH à la fonction `/queries` point de terminaison et spécification de la requête `id` dans le chemin d’accès de la requête.
 
 **Format d’API**
 
@@ -305,9 +305,9 @@ Vous pouvez demander la suppression d’une requête spécifiée en effectuant u
 PATCH /queries/{QUERY_ID}
 ```
 
-| Propriété | Description |
+| Paramètre | Description |
 | -------- | ----------- |
-| `{QUERY_ID}` | La valeur `id` de la requête que vous souhaitez annuler. |
+| `{QUERY_ID}` | Le `id` de la requête sur laquelle vous souhaitez effectuer l’opération. |
 
 
 **Requête**
@@ -328,7 +328,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/queries/4d64cd49-c
 
 | Propriété | Description |
 | -------- | ----------- |
-| `op` | Pour annuler la requête, vous devez définir le paramètre op avec la valeur `cancel `. |
+| `op` | Type d’opération à effectuer sur la ressource. Les valeurs acceptées sont `cancel` et `soft_delete`. Pour annuler la requête, vous devez définir le paramètre op avec la valeur `cancel `. Notez que l’opération de suppression progressive empêche le renvoi de la requête lors de requêtes de GET, mais ne la supprime pas du système. |
 
 **Réponse**
 

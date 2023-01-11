@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Point de terminaison de l’API Requêtes planifiées
 description: Les sections suivantes décrivent les différents appels d’API que vous pouvez effectuer pour les requêtes planifiées avec l’API Query Service.
 exl-id: f57dbda5-da50-4812-a924-c8571349f1cd
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: 2ad86b0cf3cdc89825501b94bd609df751026420
 workflow-type: tm+mt
-source-wordcount: '1113'
-ht-degree: 79%
+source-wordcount: '1139'
+ht-degree: 73%
 
 ---
 
@@ -311,7 +311,7 @@ La requête PATCH prend en charge deux chemins d’accès différents : `/state
 
 ### Mise à jour de l’état de la requête planifiée
 
-Vous pouvez utiliser `/state` pour mettre à jour l’état de la requête planifiée sélectionnée - ACTIF ou INACTIF. Pour mettre à jour l’état, vous devez définir la valeur sur `enable` ou sur `disable`.
+Vous pouvez mettre à jour l’état de la requête planifiée sélectionnée en définissant la variable `path` de `/state` et le `value` comme `enable` ou `disable`.
 
 **Format d’API**
 
@@ -347,6 +347,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d6
 
 | Propriété | Description |
 | -------- | ----------- |
+| `op` | L’opération à effectuer selon le planning de la requête. La valeur acceptée est `replace`. |
 | `path` | Chemin d’accès de la valeur que vous souhaitez mettre à jour. Dans ce cas, puisque vous mettez à jour l’état de la requête planifiée, vous devez définir la valeur de `path` sur `/state`. |
 | `value` | Valeur mise à jour de `/state`. Cette valeur peut être définie sur `enable` ou sur `disable` pour activer ou désactiver la requête planifiée. |
 
@@ -363,7 +364,7 @@ Une réponse réussie renvoie un état HTTP 202 (Accepted) avec le message suiv
 
 ### Mise à jour du planning de la requête planifiée
 
-Vous pouvez utiliser `/schedule/schedule` pour mettre à jour le planning cron de la requête planifiée. Pour plus d’informations sur les plannings cron, consultez la documentation sur le [format d’expression cron](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html).
+Vous pouvez mettre à jour le planning cron de la requête planifiée en définissant la variable `path` de `/schedule/schedule` dans le corps de la requête. Pour plus d’informations sur les plannings cron, consultez la documentation sur le [format d’expression cron](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html).
 
 **Format d’API**
 
@@ -398,6 +399,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d6
 
 | Propriété | Description |
 | -------- | ----------- |
+| `op` | L’opération à effectuer selon le planning de la requête. La valeur acceptée est `replace`. |
 | `path` | Chemin d’accès de la valeur que vous souhaitez mettre à jour. Dans ce cas, puisque vous mettez à jour le planning de la requête planifiée, vous devez définir la valeur de `path` sur `/schedule/schedule`. |
 | `value` | Valeur mise à jour de `/schedule`. Cette valeur doit se présenter sous la forme d’un planning cron. Dans cet exemple, la requête planifiée s’exécutera toutes les heures à la 45e minute. |
 
