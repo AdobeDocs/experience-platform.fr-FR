@@ -5,7 +5,7 @@ title: Connexion d’une zone d’entrée de données à Adobe Experience Platfo
 type: Tutorial
 description: Découvrez comment connecter Adobe Experience Platform à Data Landing Zone à l’aide de l’API Flow Service.
 exl-id: bdb60ed3-7c63-4a69-975a-c6f1508f319e
-source-git-commit: 249f2076dd55a589c638648eb25214036a47c05a
+source-git-commit: b1021f985626157895d7350e941238c3197db0b6
 workflow-type: tm+mt
 source-wordcount: '1224'
 ht-degree: 20%
@@ -36,7 +36,7 @@ La première étape de l’utilisation des API pour accéder à [!DNL Data Landi
 **Format d’API**
 
 ```http
-GET /connectors/landingzone?type=user_drop_zone
+GET /data/foundation/connectors/landingzone?type=user_drop_zone
 ```
 
 | En-têtes | Description |
