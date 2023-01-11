@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Espace de noms dans le modèle de données d’expérience (XDM)
 description: Découvrez comment l’espace de noms dans le modèle de données d’expérience (XDM) vous permet d’étendre vos schémas et d’empêcher les collisions de champs lorsque différents composants de schéma sont rassemblés.
 exl-id: b351dfaf-5219-4750-a7a9-cf4689a5b736
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: edd285c3d0638b606876c015dffb18309887dfb5
 workflow-type: tm+mt
-source-wordcount: '630'
+source-wordcount: '634'
 ht-degree: 1%
 
 ---
@@ -27,7 +27,7 @@ Les sections suivantes montrent comment les espaces de noms sont affectés dans 
 
 La syntaxe XDM standard fournit des informations sur la représentation des espaces de noms dans les schémas (y compris [comment ils sont traduits dans Adobe Experience Platform](#compatibility)).
 
-Utilisations XDM standard [JSON-LD](https://json-ld.org/) pour affecter des espaces de noms aux champs. Cet espace de noms se présente sous la forme d’un URI (tel que `https://ns.adobe.com/xdm` pour le `xdm` ) ou sous la forme d’un préfixe short configuré dans la variable `@context` d’un schéma.
+Utilisations XDM standard [JSON-LD](https://www.w3.org/TR/json-ld11/#basic-concepts) pour affecter des espaces de noms aux champs. Cet espace de noms se présente sous la forme d’un URI (tel que `https://ns.adobe.com/xdm` pour le `xdm` ) ou sous la forme d’un préfixe short configuré dans la variable `@context` d’un schéma.
 
 Voici un exemple de schéma pour un produit dans la syntaxe XDM standard. À l’exception de `@id` (l’identifiant unique tel que défini par la spécification JSON-LD), chaque champ sous `properties` commence par un espace de noms et se termine par le nom du champ. Si vous utilisez un préfixe de raccourci défini sous `@context`, l’espace de noms et le nom du champ sont séparés par deux points (`:`). Si vous n’utilisez pas de préfixe, l’espace de noms et le nom du champ sont séparés par une barre oblique (`/`).
 
@@ -75,7 +75,7 @@ Voici un exemple de schéma pour un produit dans la syntaxe XDM standard. À l�
 | Propriété | Description |
 | --- | --- |
 | `@context` | Objet qui définit le raccourci et les préfixes qui peuvent être utilisés à la place d’un URI d’espace de noms complet sous `properties`. |
-| `@id` | Identifiant unique de l’enregistrement tel que défini par la variable [Spécification JSON-LD](https://json-ld.org/spec/latest/json-ld/#node-identifiers). |
+| `@id` | Identifiant unique de l’enregistrement tel que défini par la variable [Spécification JSON-LD](https://www.w3.org/TR/json-ld11/#node-identifiers). |
 | `xdm:sku` | Exemple de champ qui utilise un préfixe abrégé pour désigner un espace de noms. Dans ce cas, `xdm` est l’espace de noms (`https://ns.adobe.com/xdm`), et `sku` est le nom du champ. |
 | `https://ns.adobe.com/xdm/channels/application` | Exemple de champ qui utilise l’URI d’espace de noms complet. Dans ce cas, `https://ns.adobe.com/xdm/channels` est l’espace de noms, et `application` est le nom du champ. |
 | `https://ns.adobe.com/vendorA/product/stockNumber` | Les champs fournis par les ressources du fournisseur utilisent leurs propres espaces de noms uniques. Dans cet exemple, `https://ns.adobe.com/vendorA/product` est l’espace de noms du fournisseur ; et `stockNumber` est le nom du champ. |
