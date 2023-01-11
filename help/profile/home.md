@@ -3,10 +3,10 @@ keywords: Experience Platform;profil;profil client en temps réel;dépannage;AP
 title: Présentation du profil client en temps réel
 description: Real-Time Customer Profile fusionne des données provenant de diverses sources et permet d’accéder à ces données sous la forme de profils client individuels et d’événements de série temporelle associés. Cette fonctionnalité permet aux spécialistes marketing d’offrir à leur audience des expériences coordonnées, cohérentes et pertinentes sur plusieurs canaux.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+source-git-commit: 737a67b7e30f770d65751b1a924d8378af8bde52
 workflow-type: tm+mt
-source-wordcount: '2046'
-ht-degree: 90%
+source-wordcount: '2098'
+ht-degree: 87%
 
 ---
 
@@ -26,7 +26,7 @@ Le [!DNL Real-Time Customer Profile] fusionne les données de divers systèmes d
 
 ### Composition de l’entité de profil
 
-Un profil client en temps réel est composé d’une entité principale, appelée **Principale entité**, et diverses entités annexes. L’entité principale est composée de caractéristiques, de comportements et d’appartenances aux segments d’un profil. D’autres entités permettent au moteur de segmentation d’utiliser des données en dehors de l’entité principale du profil, et incluent les éléments suivants :
+Un profil client en temps réel est composé d’une entité principale, appelée **Principale entité**, et diverses entités annexes. Dans le contexte de l’Experience Platform, l’entité Principale est généralement une **entité de profil**, qui est composé des caractéristiques, des comportements et des appartenances aux segments d’une personne individuelle. D’autres entités permettent au moteur de segmentation d’utiliser des données en dehors de l’entité principale du profil, et incluent les éléments suivants :
 
 - **Entité dimensionnelle** : l’entité utilisée pour simplifier le processus de modélisation des données pour les informations partagées entre les événements ou les enregistrements de profil. On parle également d’entité de recherche ou d’entité de classification.
 - **Entité B2B** : entités qui décrivent la relation du profil avec les comptes et opportunités business-to-business.
@@ -36,6 +36,11 @@ Un profil client en temps réel est composé d’une entité principale, appelé
 >[!IMPORTANT]
 >
 >Étant donné que les entités dimensionnelles et B2B n’existent qu’en dehors de l’entité principale, elles sont uniquement utilisées pour la segmentation par lots.
+
+Les entités Dimensionnel et B2B sont liées à l’entité Principale par le biais de **relations de schéma**. Pour plus d’informations, consultez la documentation suivante :
+
+- [Création d’une relation de schéma un-à-un pour les entités de recherche](../xdm/tutorials/relationship-ui.md)
+- [Création d’une relation de schéma multiple-à-un pour les entités B2B](../xdm/tutorials/relationship-b2b.md)
 
 ### Banque de données de profil
 

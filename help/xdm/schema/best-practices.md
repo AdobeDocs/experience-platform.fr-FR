@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Bonnes Pratiques Pour La Modélisation Des Données
 description: Ce document présente les schémas du modèle de données d’expérience (XDM) ainsi que les blocs de création, principes et bonnes pratiques de la composition de schémas à utiliser dans Adobe Experience Platform.
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: 6327f5e6cb64a46c502613dd6074d84ed1fdd32b
 workflow-type: tm+mt
-source-wordcount: '2699'
+source-wordcount: '2722'
 ht-degree: 3%
 
 ---
@@ -50,7 +50,7 @@ Une fois que vous avez créé un ERD pour identifier les entités essentielles q
 | Catégorie | Description |
 | --- | --- |
 | Entités de profil | Les entités de profil représentent les attributs relatifs à une personne, généralement un client. Les entités appartenant à cette catégorie doivent être représentées par des schémas basés sur la variable **[!DNL XDM Individual Profile]class**. |
-| Entités de recherche | Les entités de recherche représentent des concepts qui peuvent être associés à une personne, mais qui ne peuvent pas être directement utilisés pour identifier la personne. Les entités appartenant à cette catégorie doivent être représentées par des schémas basés sur **classes personnalisées**. |
+| Entités de recherche | Les entités de recherche représentent des concepts qui peuvent être associés à une personne, mais qui ne peuvent pas être directement utilisés pour identifier la personne. Les entités appartenant à cette catégorie doivent être représentées par des schémas basés sur **classes personnalisées** et sont liés à des profils et des événements au moyen de [relations de schéma](../tutorials/relationship-ui.md). |
 | Entités d’événement | Les entités d’événement représentent des concepts liés aux actions qu’un client peut entreprendre, aux événements système ou à tout autre concept dans lequel vous souhaitez peut-être suivre les modifications au fil du temps. Les entités appartenant à cette catégorie doivent être représentées par des schémas basés sur la variable **[!DNL XDM ExperienceEvent]class**. |
 
 {style=&quot;table-layout:auto&quot;}
@@ -186,7 +186,7 @@ La catégorie sous laquelle une entité a été triée doit déterminer la class
 
 * Les entités de profil doivent utiliser la variable [!DNL XDM Individual Profile] classe .
 * Les entités d’événement doivent utiliser la variable [!DNL XDM ExperienceEvent] classe .
-* Les entités de recherche doivent utiliser des classes XDM personnalisées définies par votre organisation.
+* Les entités de recherche doivent utiliser des classes XDM personnalisées définies par votre organisation. Les entités de profil et d’événement peuvent ensuite référencer ces entités de recherche par le biais des relations de schéma.
 
 >[!NOTE]
 >

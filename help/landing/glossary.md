@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Glossaire Adobe Experience Platform
 description: Glossaire reprenant la terminologie principale d’Experience Platform.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
+source-git-commit: 6327f5e6cb64a46c502613dd6074d84ed1fdd32b
 workflow-type: tm+mt
-source-wordcount: '7919'
+source-wordcount: '7929'
 ht-degree: 12%
 
 ---
@@ -327,7 +327,7 @@ ht-degree: 12%
 
 **Bibliothèque**: Dans le contexte des balises, une bibliothèque est un ensemble de logiques commerciales qui contient des instructions sur le comportement de la bibliothèque de balises sur l’appareil client.
 
-**Entités de recherche**: Dans le contexte de la modélisation des données, les entités de recherche représentent des concepts qui peuvent être associés à une personne, mais qui ne peuvent pas être directement utilisés pour identifier la personne. Les entités appartenant à cette catégorie doivent être représentées par des schémas basés sur des classes XDM (Experience Data Model) personnalisées.
+**Entités de recherche**: Dans le contexte de la modélisation des données, les entités de recherche représentent des concepts qui peuvent être associés à une personne, mais qui ne peuvent pas être directement utilisés pour identifier la personne. Les entités qui appartiennent à cette catégorie doivent être représentées par des schémas basés sur des classes XDM (Experience Data Model) personnalisées et liées à une entité de profil via une [relation de schéma](../xdm/tutorials/relationship-ui.md).
 
 ## M
 
