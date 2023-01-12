@@ -4,10 +4,10 @@ title: Règles d’alerte standard
 description: Ce document couvre les règles d’alerte prédéfinies fournies par Experience Platform.
 feature: Alerts
 exl-id: b4af1c15-b1bc-4e4b-a447-09cc17a63988
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 6650894c145fd1f42731fd5ed8aeb6e38062aa61
 workflow-type: tm+mt
-source-wordcount: '922'
-ht-degree: 82%
+source-wordcount: '961'
+ht-degree: 79%
 
 ---
 
@@ -73,7 +73,7 @@ Les règles d’alerte suivantes sont spécifiques à [Segmentation Service](../
 | --- | --- | --- |
 | Informations relatives à la tâche d’évaluation de segments | Début de la tâche relative aux segments | Cette alerte se déclenche lorsqu’une tâche d’évaluation de segments commence à traiter des données. |
 | Informations relatives à la tâche d’évaluation de segments | Réussite de la tâche relative aux segments | Cette alerte se déclenche lorsqu’une tâche d’évaluation de segments se termine avec succès. |
-| Retards, échecs et erreurs relatifs à la tâche d’évaluation de segments | Retard de la tâche relative aux segments | Cette alerte se déclenche lorsqu’une tâche d’évaluation de segments dure plus de 150 minutes. |
+| Retards, échecs et erreurs relatifs à la tâche d’évaluation de segments | Retard de la tâche relative aux segments | Cette alerte se déclenche lorsqu’une tâche d’évaluation de segments dure plus de 150 minutes. <br> L’un des états suivants s’affiche : <br>- FIRING - La condition de l’échec ou du retard a été remplie (envisagez-la dans un état PRINCIPAL). <br>- INACTIVE - La condition n’a pas été remplie ou n’a pas été résolue (envisagez-la dans un état RÉSOLU). |
 | Retards, échecs et erreurs relatifs à la tâche d’évaluation de segments | Échec de la tâche relative aux segments | Cette alerte se déclenche lorsqu’une tâche d’évaluation de segments génère une erreur. |
 | Retards, échecs et erreurs relatifs à la tâche d’évaluation de segments | Définition de segments désactivée | Cette alerte se déclenche lorsqu’une définition de segments est désactivée en raison d’une erreur interne. Cette action déclenche automatiquement un dispositif d’urgence pour qu’une équipe d’ingénieurs Adobe enquête sur le problème. Cette alerte a pour seul but d’être informative et ne nécessite aucune action de votre part. |
 
