@@ -2,7 +2,7 @@
 title: Définition d’une relation entre deux schémas dans Real-time Customer Data Platform B2B Edition
 description: Découvrez comment définir une relation de type "plusieurs à un" entre deux schémas dans Adobe Real-time Customer Data Platform B2B Edition.
 exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
-source-git-commit: 1c2aabaaeadb41631fc75783db739bb34a3f53cc
+source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
 workflow-type: tm+mt
 source-wordcount: '1391'
 ht-degree: 6%
@@ -40,11 +40,11 @@ Ce tutoriel nécessite une compréhension pratique de [!DNL XDM System] et de l�
 * [Principes de base de composition des schémas](../schema/composition.md) : une présentation des blocs de création de schémas XDM.
 * [Créez un schéma à l’aide du [!DNL Schema Editor]](create-schema-ui.md): Tutoriel abordant les principes de base de la création et de la modification de schémas dans l’interface utilisateur.
 
-## Définition d’un schéma source et de destination
+## Définition d’un schéma source et de référence
 
 Vous devez avoir déjà créé les deux schémas qui seront définis dans la relation. À des fins de démonstration, ce tutoriel crée une relation entre les opportunités commerciales (définies dans un &quot;[!DNL Opportunities]&quot;&quot; et leur compte d’entreprise associé (défini dans un &quot;[!DNL Accounts]&quot;).
 
-Les relations de schéma sont représentées par un champ dédié dans un **schéma source** qui fait référence au champ d’identité Principal d’un **schéma de destination**. Dans les étapes suivantes, &quot;[!DNL Opportunities]&quot; sert de schéma source, tandis que &quot;[!DNL Accounts]&quot; agit comme schéma de destination.
+Les relations de schéma sont représentées par un champ dédié dans un **schéma source** qui fait référence au champ d’identité Principal d’un **schéma de référence**. Dans les étapes suivantes, &quot;[!DNL Opportunities]&quot; sert de schéma source, tandis que &quot;[!DNL Accounts]&quot; agit comme schéma de référence.
 
 ### Comprendre les identités dans les relations B2B
 
@@ -53,7 +53,7 @@ Les relations de schéma sont représentées par un champ dédié dans un **sch�
 >title="Espace de noms d’identité de référence"
 >abstract="L’espace de noms (type) du champ d’identité Principal du schéma de référence. Le schéma de référence doit disposer d’un champ d’identité Principal établi pour pouvoir participer à une relation. Consultez la documentation pour en savoir plus sur les identités dans les relations B2B."
 
-Pour établir une relation, le schéma de destination doit avoir une identité Principale définie. Lors de la définition d’une identité Principale pour une entité B2B, gardez à l’esprit que les identifiants d’entité basés sur des chaînes peuvent se chevaucher si vous les collectez sur différents systèmes ou emplacements, ce qui peut entraîner des conflits de données dans Platform.
+Pour établir une relation, le schéma de référence doit avoir une identité Principale définie. Lors de la définition d’une identité Principale pour une entité B2B, gardez à l’esprit que les identifiants d’entité basés sur des chaînes peuvent se chevaucher si vous les collectez sur différents systèmes ou emplacements, ce qui peut entraîner des conflits de données dans Platform.
 
 Pour ce faire, toutes les classes B2B standard contiennent des champs &quot;clés&quot; conformes à la [[!UICONTROL Source B2B] type de données](../data-types/b2b-source.md). Ce type de données fournit des champs pour un identifiant de chaîne pour l’entité B2B, ainsi que d’autres informations contextuelles sur la source de l’identifiant. Un de ces champs, `sourceKey`, concatène les valeurs des autres champs du type de données afin de produire un identifiant totalement unique pour l’entité. Ce champ doit toujours être utilisé comme identité Principale pour les schémas d’entité B2B.
 
@@ -75,7 +75,7 @@ Comme vous pouvez le voir sous **[!UICONTROL Propriétés du schéma]**, ce sch�
 
 ### [!DNL Accounts] schema
 
-Le schéma de destination &quot;[!DNL Accounts]&quot; est basé sur la variable [!UICONTROL Compte XDM] classe . Au niveau racine `accountKey` contient le champ `sourceKey` qui agit comme son identité Principale sous un espace de noms personnalisé appelé [!DNL B2B Account]. Ce schéma a également été activé pour une utilisation dans Profile.
+Le schéma de référence &quot;[!DNL Accounts]&quot; est basé sur la variable [!UICONTROL Compte XDM] classe . Au niveau racine `accountKey` contient le champ `sourceKey` qui agit comme son identité Principale sous un espace de noms personnalisé appelé [!DNL B2B Account]. Ce schéma a également été activé pour une utilisation dans Profile.
 
 ![Schéma des comptes](../images/tutorials/relationship-b2b/accounts.png)
 
@@ -91,11 +91,11 @@ Le schéma de destination &quot;[!DNL Accounts]&quot; est basé sur la variable 
 >title="Nom de la relation à partir du schéma de référence"
 >abstract="Libellé qui décrit la relation entre le schéma de référence et le schéma actuel (par exemple, &quot;Opportunités liées&quot;). Ce libellé est utilisé dans Profile et Segmentation pour donner un contexte aux données des entités B2B associées. Consultez la documentation pour en savoir plus sur la création de relations de schéma B2B."
 
-Pour définir une relation entre deux schémas, le schéma source doit disposer d’un champ dédié qui référence l’identité Principale du schéma de destination. Les classes B2B standard incluent des champs source clés dédiés pour les entités commerciales les plus courantes. Par exemple, la variable [!UICONTROL Opportunités commerciales XDM] contient les champs de clé source pour un compte associé (`accountKey`) et une campagne associée (`campaignKey`). Cependant, vous pouvez également ajouter d’autres [!UICONTROL Source B2B] des champs du schéma à l’aide de groupes de champs personnalisés si vous avez besoin de plus que les composants par défaut.
+Pour définir une relation entre deux schémas, le schéma source doit disposer d’un champ dédié qui indique l’identité Principale du schéma de référence. Les classes B2B standard incluent des champs source clés dédiés pour les entités commerciales les plus courantes. Par exemple, la variable [!UICONTROL Opportunités commerciales XDM] contient les champs de clé source pour un compte associé (`accountKey`) et une campagne associée (`campaignKey`). Cependant, vous pouvez également ajouter d’autres [!UICONTROL Source B2B] des champs du schéma à l’aide de groupes de champs personnalisés si vous avez besoin de plus que les composants par défaut.
 
 >[!NOTE]
 >
->Actuellement, seules les relations de type &quot;plusieurs à un&quot; et &quot;un à un&quot; peuvent être définies d’un schéma source à un schéma de destination. Pour les relations de type &quot;un à plusieurs&quot;, vous devez définir le champ de relation dans le schéma qui représente le &quot;plusieurs&quot;.
+>Actuellement, seules les relations multiples-un et un-à-un peuvent être définies d’un schéma source à un schéma de référence. Pour les relations de type &quot;un à plusieurs&quot;, vous devez définir le champ de relation dans le schéma qui représente le &quot;plusieurs&quot;.
 
 Pour définir un champ de relation, sélectionnez l’icône de flèche (![Icône Flèche](../images/tutorials/relationship-b2b/arrow.png)) en regard du champ en question dans la zone de travail. Dans le cas de la fonction [!DNL Opportunities] schéma, il s’agit de la propriété `accountKey.sourceKey` étant donné que l’objectif est d’établir une relation multiple-à-un avec un compte.
 
@@ -105,11 +105,11 @@ Une boîte de dialogue s’affiche, vous permettant de spécifier les détails d
 
 ![Boîte de dialogue de relation](../images/tutorials/relationship-b2b/relationship-dialog.png)
 
-Sous **[!UICONTROL Schéma de référence]**, utilisez la barre de recherche pour trouver le nom du schéma de destination. Lorsque vous mettez en surbrillance le nom du schéma de destination, la variable **[!UICONTROL Espace de noms d’identité de référence]** est automatiquement mis à jour vers l’espace de noms de l’identité Principale du schéma.
+Sous **[!UICONTROL Schéma de référence]**, utilisez la barre de recherche pour trouver le nom du schéma de référence. Lorsque vous mettez en surbrillance le nom du schéma de référence, la variable **[!UICONTROL Espace de noms d’identité de référence]** est automatiquement mis à jour vers l’espace de noms de l’identité Principale du schéma.
 
 ![Schéma de référence](../images/tutorials/relationship-b2b/reference-schema.png)
 
-Sous **[!UICONTROL Nom De La Relation À Partir Du Schéma Actuel]** et **[!UICONTROL Nom de la relation du schéma de référence]**, attribuez des noms conviviaux à la relation dans le contexte des schémas source et de destination, respectivement. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Enregistrer]** pour appliquer les modifications et enregistrer le schéma.
+Sous **[!UICONTROL Nom De La Relation À Partir Du Schéma Actuel]** et **[!UICONTROL Nom de la relation du schéma de référence]**, attribuez des noms conviviaux à la relation dans le contexte des schémas source et de référence, respectivement. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Enregistrer]** pour appliquer les modifications et enregistrer le schéma.
 
 ![Nom de la relation](../images/tutorials/relationship-b2b/relationship-name.png)
 
@@ -117,7 +117,7 @@ Le canevas réapparaît, le champ de relation étant désormais marqué du nom c
 
 ![Relation appliquée](../images/tutorials/relationship-b2b/relationship-applied.png)
 
-Si vous affichez la structure du schéma de destination, le marqueur de relation s’affiche en regard du champ d’identité Principal du schéma et dans le rail de gauche.
+Si vous affichez la structure du schéma de référence, le marqueur de relation s’affiche en regard du champ d’identité Principal du schéma et dans le rail de gauche.
 
 ![Marqueur de relation du schéma de destination](../images/tutorials/relationship-b2b/destination-relationship.png)
 

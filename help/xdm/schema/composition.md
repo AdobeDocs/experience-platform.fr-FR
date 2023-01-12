@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Principes de base de la composition des schémas
 description: Ce document présente les schémas du modèle de données d’expérience (XDM) ainsi que les blocs de création, principes et bonnes pratiques de la composition de schémas à utiliser dans Adobe Experience Platform.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: b67349baa909cc59f3ff1d7aac22f7926f2b36ff
+source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
 workflow-type: tm+mt
 source-wordcount: '4108'
 ht-degree: 26%
@@ -76,7 +76,7 @@ L’inconvénient principal de l’utilisation de `identityMap` est que les iden
 
 >[!NOTE]
 >
->Un schéma qui utilise `identityMap` peut être utilisé comme schéma source dans une relation, mais ne peut pas être utilisé comme schéma de destination. Cela est dû au fait que tous les schémas de destination doivent avoir une identité visible qui peut être mappée dans un champ de référence dans le schéma source. Reportez-vous au guide de l’interface utilisateur sur [relations](../tutorials/relationship-ui.md) pour plus d’informations sur les exigences des schémas source et de destination.
+>Un schéma qui utilise `identityMap` peut être utilisé comme schéma source dans une relation, mais ne peut pas être utilisé comme schéma de référence. Cela est dû au fait que tous les schémas de référence doivent avoir une identité visible qui peut être mappée dans un champ de référence dans le schéma source. Reportez-vous au guide de l’interface utilisateur sur [relations](../tutorials/relationship-ui.md) pour plus d’informations sur les exigences des schémas source et de référence.
 
 Cependant, les cartes d’identité peuvent s’avérer particulièrement utiles si vous rassemblez des données provenant de sources qui stockent les identités (telles que [!DNL Airship] ou Adobe Audience Manager) ou lorsqu’il existe un nombre variable d’identités pour un schéma. En outre, les cartes d’identité sont requises si vous utilisez la variable [SDK Adobe Experience Platform Mobile](https://aep-sdks.gitbook.io/docs/).
 

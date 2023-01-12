@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Guide de dépannage du système XDM
 description: Trouvez des réponses aux questions fréquentes sur le modèle de données d’expérience (XDM), y compris les étapes pour résoudre les erreurs d’API courantes.
 exl-id: a0c7c661-bee8-4f66-ad5c-f669c52c9de3
-source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
+source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
 workflow-type: tm+mt
-source-wordcount: '2060'
-ht-degree: 33%
+source-wordcount: '2074'
+ht-degree: 31%
 
 ---
 
@@ -269,7 +269,13 @@ Ce message d’erreur s’affiche lorsque vous tentez d’activer un schéma pou
 }
 ```
 
-Pour activer les schémas qui contiennent des descripteurs de relation à utiliser dans [!DNL Profile], l’espace de noms du champ source et l’espace de noms Principal du champ cible doivent être identiques. Ce message d’erreur s’affiche lorsque vous essayez d’activer un schéma qui contient un espace de noms incompatible avec son descripteur d’identité de référence. Pour résoudre ce problème, il faut s’assurer que la valeur `xdm:namespace` du champ d’identité du schéma de destination correspond à celle de la propriété `xdm:identityNamespace` dans le descripteur d’identité de référence du champ source.
+>[!NOTE]
+>
+>Pour cette erreur, le &quot;schéma destination&quot; fait référence au schéma de référence dans la relation.
+
+Pour activer les schémas qui contiennent des descripteurs de relation à utiliser dans [!DNL Profile], l’espace de noms du champ source et l’espace de noms Principal du champ de référence doivent être identiques. Ce message d’erreur s’affiche lorsque vous essayez d’activer un schéma qui contient un espace de noms incompatible avec son descripteur d’identité de référence.
+
+Assurez-vous que la variable `xdm:namespace` la valeur du champ d’identité du schéma de référence correspond à celle de la propriété `xdm:identityNamespace` dans le descripteur d’identité de référence du champ source pour résoudre ce problème.
 
 Pour obtenir la liste des codes d’espace de noms d’identité standard, reportez-vous à la section sur [espaces de noms standard](../identity-service/namespaces.md) dans la présentation de l’espace de noms d’identité.
 

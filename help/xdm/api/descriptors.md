@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Point de terminaison de l’API Descripteurs
 description: Le point de terminaison /descriptors de l’API Schema Registry vous permet de gérer par programmation les descripteurs XDM dans votre application d’expérience.
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
+source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
 workflow-type: tm+mt
 source-wordcount: '1900'
-ht-degree: 47%
+ht-degree: 46%
 
 ---
 
@@ -385,15 +385,15 @@ Les descripteurs de relation décrivent une relation entre deux schémas différ
 | `xdm:sourceSchema` | L’URI `$id` du schéma dans lequel le descripteur est défini. |
 | `xdm:sourceVersion` | La version principale du schéma source. |
 | `xdm:sourceProperty` | Chemin vers le champ du schéma source dans lequel la relation est définie. Doit commencer et non se terminer par un « / ». N’incluez pas « properties » dans le chemin (par exemple, « /personalEmail/address » au lieu de « /properties/personalEmail/properties/address »). |
-| `xdm:destinationSchema` | L’URI `$id` du schéma de destination avec lequel ce descripteur définit une relation. |
-| `xdm:destinationVersion` | La version principale du schéma de destination. |
-| `xdm:destinationProperty` | Chemin facultatif vers un champ cible dans le schéma de destination. Si cette propriété est omise, le champ cible est déterminé par les champs qui contiennent un descripteur d’identité de référence correspondant (voir ci-dessous). |
+| `xdm:destinationSchema` | Le `$id` URI du schéma de référence avec lequel ce descripteur définit une relation. |
+| `xdm:destinationVersion` | La version majeure du schéma de référence. |
+| `xdm:destinationProperty` | Chemin facultatif vers un champ cible dans le schéma de référence. Si cette propriété est omise, le champ cible est déterminé par les champs qui contiennent un descripteur d’identité de référence correspondant (voir ci-dessous). |
 
 {style=&quot;table-layout:auto&quot;}
 
 #### Descripteur d’identité de référence
 
-Les descripteurs d’identité de référence fournissent un contexte de référence à l’identité Principale d’un champ de schéma, ce qui permet de le référencer par des champs dans d’autres schémas. Un champ d’identité Principal doit déjà être défini pour le schéma de destination avant qu’il ne puisse être référencé par d’autres schémas via ce descripteur.
+Les descripteurs d’identité de référence fournissent un contexte de référence à l’identité Principale d’un champ de schéma, ce qui permet de le référencer par des champs dans d’autres schémas. Un champ d’identité Principal doit déjà être défini pour le schéma de référence avant qu’il ne puisse être référencé par d’autres schémas via ce descripteur.
 
 ```json
 {
@@ -410,7 +410,7 @@ Les descripteurs d’identité de référence fournissent un contexte de référ
 | `@type` | Le type de descripteur en cours de définition. Pour un descripteur d’identité de référence, cette valeur doit être définie sur `xdm:descriptorReferenceIdentity`. |
 | `xdm:sourceSchema` | L’URI `$id` du schéma dans lequel le descripteur est défini. |
 | `xdm:sourceVersion` | La version principale du schéma source. |
-| `xdm:sourceProperty` | Chemin d’accès au champ du schéma source qui sera utilisé pour faire référence au schéma de destination. Doit commencer et non se terminer par un « / ». N’incluez pas &quot;properties&quot; dans le chemin (par exemple, `/personalEmail/address` au lieu de `/properties/personalEmail/properties/address`). |
+| `xdm:sourceProperty` | Chemin d’accès au champ du schéma source qui sera utilisé pour faire référence au schéma de référence. Doit commencer et non se terminer par un « / ». N’incluez pas &quot;properties&quot; dans le chemin (par exemple, `/personalEmail/address` au lieu de `/properties/personalEmail/properties/address`). |
 | `xdm:identityNamespace` | Le code d’espace de noms d’identité de la propriété source. |
 
 {style=&quot;table-layout:auto&quot;}

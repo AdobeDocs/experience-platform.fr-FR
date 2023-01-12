@@ -5,9 +5,9 @@ title: Exploration des ressources de schéma dans l’interface utilisateur
 description: Découvrez comment explorer les schémas, classes, groupes de champs de schéma et types de données existants dans l’interface utilisateur de l’Experience Platform.
 type: Tutorial
 exl-id: b527b2a0-e688-4cfe-a176-282182f252f2
-source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
+source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
 workflow-type: tm+mt
-source-wordcount: '957'
+source-wordcount: '958'
 ht-degree: 0%
 
 ---
@@ -98,7 +98,7 @@ Les champs d’identité sont mis en surbrillance dans la zone de travail avec u
 
 Si vous examinez un schéma qui contient un champ de relation, le champ sera répertorié dans le rail de gauche sous **[!UICONTROL Relations]**. Sélectionnez le nom du champ de relation dans le rail de gauche pour afficher le champ dans la zone de travail, quelle que soit la profondeur d’imbrication.
 
-Les champs de relation sont également surlignés de manière unique dans la zone de travail, indiquant le nom du schéma de destination auquel le champ fait référence. Si vous sélectionnez le nom du champ de relation, vous pouvez afficher l’espace de noms d’identité de l’identité Principale du schéma de destination dans le rail de droite.
+Les champs de relation sont également surlignés de manière unique dans la zone de travail, indiquant le nom du schéma de référence auquel le champ est lié. Si vous sélectionnez le nom du champ de relation, vous pouvez afficher l’espace de noms d’identité de l’identité Principale du schéma de référence dans le rail de droite.
 
 ![](../images/ui/explore/relationship-field.png)
 

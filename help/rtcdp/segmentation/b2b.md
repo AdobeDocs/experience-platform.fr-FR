@@ -2,7 +2,7 @@
 title: Cas d’utilisation de la segmentation pour l’édition B2B de Real-time Customer Data Platform
 description: Présentation des différents cas d’utilisation de l’édition B2B d’Adobe Real-time Customer Data Platform disponibles.
 exl-id: 2a99b85e-71b3-4781-baf7-a4d5436339d3
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
 workflow-type: tm+mt
 source-wordcount: '1283'
 ht-degree: 1%
@@ -42,7 +42,7 @@ L’image ci-dessous illustre les relations entre les classes B2B disponibles da
 
 Comme votre modèle de données peut être complexe, vous pouvez utiliser l’interface utilisateur de Platform pour afficher une représentation visuelle plus détaillée de votre modèle de données afin de vous aider à trouver les attributs appropriés à votre cas d’utilisation. Pour commencer, accédez à l’interface utilisateur de Platform et sélectionnez Schémas dans le volet de navigation de gauche.
 
-Sélectionnez le schéma approprié dans la liste disponible et sélectionnez la relation appropriée dans la [!UICONTROL Composition] rail latéral. Dans l’exemple ci-dessous, la sélection de la relation &quot;Personne&quot; révèle quel attribut du schéma actuel fait référence au schéma &quot;Personne&quot; associé (s’il s’agit du schéma source de la relation), ou est référencé par le schéma &quot;Personne&quot; (s’il s’agit du schéma de destination de la relation).
+Sélectionnez le schéma approprié dans la liste disponible et sélectionnez la relation appropriée dans la [!UICONTROL Composition] rail latéral. Dans l’exemple ci-dessous, la sélection de la relation &quot;Personne&quot; révèle quel attribut du schéma actuel fait référence au schéma &quot;Personne&quot; associé (s’il s’agit du schéma source de la relation), ou est référencé par le schéma &quot;Personne&quot; (s’il s’agit du schéma de référence de la relation).
 
 ![exemple de clé source utilisant la relation personnes dans l’espace de travail du schéma](../assets/segmentation/source-key-schema-relationship-example.png)
 
