@@ -1,10 +1,10 @@
 ---
 title: Suppression dans Identity Service
 description: Ce document présente les différents mécanismes que vous pouvez utiliser pour supprimer vos données d’identité dans Experience Platform et explique clairement comment les graphiques d’identités peuvent être affectés.
-source-git-commit: 17e39f6e9d6e62e22f867de91d571593ba945c71
+source-git-commit: da1ce4560d28d43db47318883f9656cebb2eb487
 workflow-type: tm+mt
-source-wordcount: '1318'
-ht-degree: 12%
+source-wordcount: '1207'
+ht-degree: 13%
 
 ---
 
@@ -30,7 +30,7 @@ Le document ci-dessous fait référence aux fonctions suivantes d’Experience P
 
 ## Suppression d’une seule identité
 
-Les demandes de suppression d’identité unique vous permettent de supprimer une identité dans un graphique, ce qui entraîne la suppression des liens liés à une seule identité utilisateur associée à un espace de noms d’identité. Vous pouvez utiliser [Assurance des données](../hygiene/home.md) pour la normalisation des données, la suppression des données anonymes ou la minimisation des données que vous avez collectées. Pour les cas d’utilisation tels que les demandes de suppression des données par les clients et la conformité aux réglementations de confidentialité comme le Règlement général sur la protection des données (RGPD), vous pouvez utiliser les mécanismes fournis par [Privacy Service](../privacy-service/home.md).
+Les demandes de suppression d’identité unique vous permettent de supprimer une identité dans un graphique, ce qui entraîne la suppression des liens liés à une seule identité utilisateur associée à un espace de noms d’identité. Vous pouvez utiliser les mécanismes fournis par [Privacy Service](../privacy-service/home.md) pour des cas d’utilisation tels que les demandes de suppression de données de la part des clients et la conformité aux réglementations de confidentialité comme le Règlement général sur la protection des données (RGPD).
 
 Les sections ci-dessous décrivent les mécanismes que vous pouvez utiliser pour les demandes de suppression d’identité uniques dans Experience Platform.
 
@@ -38,18 +38,14 @@ Les sections ci-dessous décrivent les mécanismes que vous pouvez utiliser pour
 
 Privacy Service traite les demandes de clients souhaitant accéder à leurs données personnelles, en refuser la vente, ou les effacer comme le stipulent les réglementations de confidentialité telles que le Règlement général sur la protection des données (RGPD) et le California Consumer Privacy Act (CCPA). Avec Privacy Service, vous pouvez envoyer des requêtes de tâche à l’aide de l’API ou de l’interface utilisateur. Lorsqu’Experience Platform reçoit une demande de suppression de la part de Privacy Service, Platform envoie une confirmation à Privacy Service pour confirmer que la demande a été reçue et que les données concernées ont été marquées pour suppression. La suppression de l’identité individuelle est basée sur l’espace de noms et/ou la valeur d’identifiant fournis. En outre, la suppression a lieu pour tous les environnements de test associés à une organisation donnée. Pour plus d’informations, consultez le guide sur [traitement des demandes d’accès à des informations personnelles dans Identity Service](privacy.md).
 
-### Suppression d’une seule identité dans le [!UICONTROL Hygiène des données] workspace
+Le tableau ci-dessous fournit une ventilation de la suppression d’identité unique en Privacy Service :
 
-Le [[!UICONTROL Hygiène des données] workspace](../hygiene/ui/overview.md) Dans l’interface utilisateur de Platform, vous pouvez supprimer les enregistrements de consommateurs qui participent à Identity Service et à Real-time Customer Profile. Pour obtenir un guide complet sur l’utilisation de la variable [!UICONTROL Hygiène des données] workspace, consultez le tutoriel sur [suppression des enregistrements de consommateurs](../hygiene/ui/record-delete.md).
-
-Le tableau ci-dessous présente la répartition des différences entre la suppression d’une identité unique en Privacy Service et l’hygiène des données :
-
-| Suppression d’une identité unique | Privacy Service | Hygiène des données |
-| --- | --- | --- |
-| Cas d’utilisation acceptés | Demandes d’accès à des informations personnelles (RGPD, CCPA) uniquement. | Gestion des données stockées dans Experience Platform. |
-| Latence estimée | Jours à semaines | Days |
-| Services concernés | La suppression d’identité unique dans Privacy Service vous permet de choisir si les données seront supprimées d’Identity Service, de Real-Time Customer Profile ou du lac de données. | La suppression d’identité unique dans l’ hygiène des données supprime les données sélectionnées dans Identity Service, Real-Time Customer Profile et le lac de données. |
-| Modèles de suppression | Supprimez une identité d’Identity Service. | Supprimez une identité d’Identity Service. |
+| Suppression d’une identité unique | Privacy Service |
+| --- | --- |
+| Cas d’utilisation acceptés | Demandes d’accès à des informations personnelles (RGPD, CCPA) uniquement. |
+| Latence estimée | Jours à semaines |
+| Services concernés | La suppression d’identité unique dans Privacy Service vous permet de choisir si les données seront supprimées d’Identity Service, de Real-Time Customer Profile ou du lac de données. |
+| Modèles de suppression | Supprimez une identité d’Identity Service. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -93,3 +89,22 @@ Vous trouverez ci-dessous un aperçu des impacts potentiels des suppressions sur
 ## Étapes suivantes
 
 Ce document couvrait les différents mécanismes que vous pouvez utiliser pour supprimer des identités et des jeux de données sur Experience Platform. Ce document décrit également comment les suppressions d’identité et de jeux de données peuvent avoir un impact sur les graphiques d’identités. Pour plus d’informations sur Identity Service, consultez la [Présentation d’Identity Service](home.md).
+
+<!--
+
+You can use [Data hygiene](../hygiene/home.md) for data cleansing, removing anonymous data, or data minimization for the data that you have collected.
+
+### Single identity deletion in the [!UICONTROL Data Hygiene] workspace
+
+The [[!UICONTROL Data Hygiene] workspace](../hygiene/ui/overview.md) in the Platform UI allows you to delete consumer records that are participating in Identity Service and Real-Time Customer Profile. For a comprehensive guide on using the [!UICONTROL Data Hygiene] workspace, see the tutorial on [deleting consumer records](../hygiene/ui/record-delete.md).
+
+The table below provides a breakdown of differences between single identity deletion in Privacy Service and Data hygiene:
+
+| Single identity deletion | Privacy Service | Data hygiene |
+| --- | --- | --- |
+| Accepted use cases | Data privacy requests (GDPR, CCPA) only. | Management of data stored in Experience Platform. |
+| Estimated latency | Days to weeks | Days |
+| Services impacted | Single identity deletion in Privacy Service allows you to select whether data will be deleted from Identity Service, Real-Time Customer Profile, or data lake. | Single identity deletion in Data hygiene deletes the selected data across Identity Service, Real-Time Customer Profile, and data lake. |
+| Deletion patterns | Delete an identity from Identity Service. | Delete an identity from Identity Service. |
+
+-->
