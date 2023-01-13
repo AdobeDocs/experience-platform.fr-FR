@@ -5,10 +5,10 @@ title: Création d’une connexion à la source de stockage dans le cloud Google
 type: Tutorial
 description: Découvrez comment créer une connexion source de stockage dans le cloud Google à l’aide de l’interface utilisateur de Adobe Experience Platform.
 exl-id: 3258ccd7-757c-4c4a-b7bb-0e8c9de3b50a
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: 648dcd04de1f88318e3e771d5f044ac5b5ddaf2d
 workflow-type: tm+mt
-source-wordcount: '594'
-ht-degree: 39%
+source-wordcount: '567'
+ht-degree: 40%
 
 ---
 
@@ -31,7 +31,7 @@ Si vous disposez déjà d’une connexion GCS valide, vous pouvez ignorer le res
 
 [!DNL Experience Platform] prend en charge les formats de fichiers suivants à ingérer à partir de stockages externes :
 
-* Valeurs séparées par des délimiteurs (DSV) : La prise en charge des fichiers de données au format DSV est actuellement limitée aux valeurs séparées par des virgules. La valeur des en-têtes de champ des fichiers au format DSV ne doit être composée que de caractères alphanumériques et de traits de soulignement. La prise en charge des fichiers DSV généraux sera assurée à l’avenir.
+* Valeurs séparées par des délimiteurs (DSV) : N’importe quelle valeur de caractère unique peut être utilisée comme délimiteur pour les fichiers de données au format DSV.
 * Notation d’objet JavaScript (JSON) : Les fichiers de données au format JSON doivent être conformes à XDM.
 * Apache Parquet : Les fichiers de données au format parquet doivent être conformes à XDM.
 
