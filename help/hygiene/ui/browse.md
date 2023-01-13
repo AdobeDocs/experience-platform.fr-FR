@@ -2,9 +2,9 @@
 title: Parcourir les ordres de travail relatifs au nettoyage de données
 description: Découvrez comment afficher et gérer les ordres de travail de nettoyage de données existants dans l’interface utilisateur d’Adobe Experience Platform.
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
-source-git-commit: 70a2abcc4d6e27a89e77d68e7757e4876eaa4fc0
+source-git-commit: a20afcd95d47e38ccdec9fba9e772032e212d7a4
 workflow-type: tm+mt
-source-wordcount: '868'
+source-wordcount: '865'
 ht-degree: 87%
 
 ---
@@ -104,4 +104,4 @@ La page de détails d’une expiration de jeu de données fournit des informatio
 Ce guide explique comment afficher et gérer les ordres de travail de nettoyage de données existants dans l’interface utilisateur de Platform. Pour plus d’informations sur la création de vos propres ordres de travail, consultez la documentation suivante :
 
 * [Gérer des expirations de jeux de données](./dataset-expiration.md)
-* [Gérer les suppressions d’enregistrement](./record-delete.md)
+<!-- * [Manage record deletes](./record-delete.md) -->
