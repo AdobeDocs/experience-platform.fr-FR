@@ -2,10 +2,10 @@
 title: Publication d’une extension
 description: Découvrez comment effectuer une publication publique ou privée d’une extension de balise dans Adobe Experience Platform.
 exl-id: a5eb6902-4b0f-4717-a431-a290c50fb5a6
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 8862a911f09d47c3a2260faba045f3c79826b52c
 workflow-type: tm+mt
-source-wordcount: '321'
-ht-degree: 100%
+source-wordcount: '319'
+ht-degree: 98%
 
 ---
 
@@ -36,4 +36,4 @@ Si vous souhaitez publier directement votre extension pour une disponibilité pr
 
 Une fois la publication privée terminée, vous pouvez demander à Adobe de la publier publiquement. Votre extension sera ainsi disponible dans le catalogue public. Tout utilisateur de la Collecte de données peut installer votre extension sur nʼimporte quelle propriété.
 
-Veuillez remplir le [formulaire de demande de publication publique](https://adobe.allegiancetech.com/cgi-bin/qwebcorporate.dll?idx=7DRB5U) pour commencer le processus de publication.
+Veuillez remplir le [formulaire de demande de publication publique](https://experiencecloudpanel.adobe.com/c/r/DCExtensionReleaseRequest) pour commencer le processus de publication.
