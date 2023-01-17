@@ -7,7 +7,7 @@ exl-id: 24a8d870-eb81-4255-8e47-09ae7ad7a721
 source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
 workflow-type: tm+mt
 source-wordcount: '816'
-ht-degree: 91%
+ht-degree: 100%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 91%
 
 >[!IMPORTANT]
 >
->L’application d’étiquettes au niveau du jeu de données est uniquement prise en charge pour les cas d’utilisation de la gouvernance des données. Si vous essayez de créer des stratégies d’accès pour les données, vous devez [appliquer des libellés au schéma ;](../../xdm/tutorials/labels.md) sur lequel le jeu de données est basé. Consultez la présentation sur [contrôle d’accès basé sur les attributs](../../access-control/abac/overview.md) pour plus d’informations.
+>L’application de libellés au niveau du jeu de données est uniquement prise en charge pour les cas d’utilisation de la gouvernance des données. Si vous essayez de créer des stratégies d’accès pour les données, vous devez [appliquer des libellés au schéma](../../xdm/tutorials/labels.md) sur lequel le jeu de données est basé. Consultez la présentation du [contrôle d’accès basé sur les attributs](../../access-control/abac/overview.md) pour plus d’informations.
 
 Ce document explique la gestion des étiquettes pour les jeux de données et les champs à lʼaide de [!DNL Dataset Service API]. Pour obtenir des instructions sur la gestion des étiquettes dʼutilisation des données elles-mêmes à lʼaide dʼappels API, consultez le [guide de point d’entrée des étiquettes](../api/labels.md) pour [!DNL Policy Service API].
 
@@ -80,7 +80,7 @@ Une réponse réussie renvoie les étiquettes dʼutilisation des données qui on
 | `labels` | Liste dʼétiquettes dʼutilisation des données qui ont été appliquées au jeu de données. |
 | `optionalLabels` | Liste de champs individuels au sein du jeu de données auxquels sont appliquées des étiquettes dʼutilisation de données. |
 
-## Application dʼétiquettes à un jeu de données {#apply}
+## Appliquer des libellés à un jeu de données {#apply}
 
 Vous pouvez créer un ensemble dʼétiquettes pour un jeu de données en les fournissant dans la payload dʼune requête POST ou PUT à lʼAPI [!DNL Dataset Service]. Lʼutilisation de lʼune ou lʼautre de ces méthodes supprime les étiquettes existantes et les remplace par celles fournies dans la payload.
 
@@ -158,6 +158,6 @@ Une réponse réussie renvoie le jeu de libellés mis à jour pour le jeu de don
 
 ## Étapes suivantes
 
-En lisant ce document, vous avez appris la gestion des étiquettes dʼutilisation des données pour les jeux de données et les champs à lʼaide de lʼAPI [!DNL Dataset Service]. Vous pouvez maintenant définir [stratégies d’utilisation des données](../policies/overview.md) et [stratégies de contrôle d’accès](../../access-control/abac/ui/policies.md) selon les libellés que vous avez appliqués.
+En lisant ce document, vous avez appris la gestion des libellés dʼutilisation des données pour les jeux de données et les champs à lʼaide de lʼAPI [!DNL Dataset Service]. Vous pouvez maintenant définir les [stratégies d’utilisation des données](../policies/overview.md) et les [stratégies de contrôle d’accès](../../access-control/abac/ui/policies.md) selon les libellés que vous avez appliqués.
 
 Pour plus dʼinformations sur la gestion des jeux de données dans [!DNL Experience Platform], consultez la [présentation des jeux de données](../../catalog/datasets/overview.md).

@@ -5,7 +5,7 @@ exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
 source-git-commit: a20afcd95d47e38ccdec9fba9e772032e212d7a4
 workflow-type: tm+mt
 source-wordcount: '607'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -40,7 +40,7 @@ L’interface utilisateur [!UICONTROL Nettoyage de données] repose sur l’API 
 
 ## Chronologie et transparence
 
-Les demandes de suppression et d’expiration de jeux de données d’enregistrement ont chacune leur propre chronologie de traitement et fournissent des mises à jour de transparence à des points clés de leurs workflows respectifs.
+Les requêtes de suppression d’enregistrements et d’expiration de jeux de données disposent chacune de leur propre chronologie de traitement et fournissent des mises à jour de transparence à des points clés de leurs workflows respectifs.
 
 <!-- ### Dataset expirations {#dataset-expiration-transparency} -->
 

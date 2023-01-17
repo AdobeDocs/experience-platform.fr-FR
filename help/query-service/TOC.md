@@ -7,7 +7,7 @@ feature: Queries
 source-git-commit: b8c2a9ab44274e2719e7178119a58f14d0442955
 workflow-type: tm+mt
 source-wordcount: '232'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -45,7 +45,7 @@ ht-degree: 98%
    - [Utilisation des informations dʼidentification de Query Service](ui/credentials.md)
    - [Génération des jeux de données à partir de résultats de requête](ui/create-datasets.md)
 - [Surveiller les requêtes](monitor-queries.md)
-- Boutique de requêtes accélérées{#query-accelerated-store}
+- Boutique de requêtes accélérées {#query-accelerated-store}
    - [Modèle de données d’insights de rapports](query-accelerated-store/reporting-insights-data-model.md)
 - Bonnes pratiques {#best-practices}
    - [Directives générales pour l’exécution des requêtes](best-practices/writing-queries.md)

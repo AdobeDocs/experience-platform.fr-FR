@@ -7,7 +7,7 @@ exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
 source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
 workflow-type: tm+mt
 source-wordcount: '2108'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -19,9 +19,9 @@ ht-degree: 97%
 >abstract="Il existe plusieurs catégories de libellés d’utilisation des données. Les libellés définis par Adobe comprennent les libellés de contrat, les libellés d’identité et les libellés sensibles. Les libellés définis par votre organisation sont classés comme des libellés personnalisés."
 >text="See the data usage labels glossary for more information on these label types."
 
-Les libellés d’utilisation des données vous permettent de classer les jeux de données et les champs en fonction des [politiques de gouvernance](../policies/overview.md) et [stratégies de contrôle d’accès](../../access-control/abac/overview.md) qui s’appliquent à ces données. Adobe Experience Platform fournit de multiples étiquettes dʼutilisation des données de base prêtes à lʼemploi que vous pouvez utiliser pour commencer à classer vos données.
+Les libellés d’utilisation des données vous permettent de classer les jeux de données et les champs en fonction des [stratégies de gourvenance](../policies/overview.md) et [des stratégies de contrôle d’accès](../../access-control/abac/overview.md) qui s’appliquent à ces données. Adobe Experience Platform fournit de multiples libellés dʼutilisation des données de base prêtes à lʼemploi que vous pouvez utiliser pour commencer à classer vos données.
 
-Ce document décrit les libellés d’utilisation des données de base actuellement fournis par Experience Platform.
+Ce document décrit les libellés dʼutilisation des données de base actuellement fournies par Experience Platform.
 
 ## Étiquettes Contrat
 
@@ -134,7 +134,7 @@ Certains contrats prévoient des interdictions explicites sur l’utilisation de
 
 #### C10 {#c10}
 
-Certaines stratégies de gouvernance des données limitent l’utilisation de données d’identité regroupées pour la personnalisation. Lʼétiquette C10 est automatiquement appliquée aux segments si leurs stratégies de fusion utilisent lʼoption « graphique privé ».
+Certaines stratégies de gouvernance des données limitent lʼutilisation de données dʼidentité assemblées pour la personnalisation. Le libellé C10 est automatiquement appliqué aux segments si leurs stratégies de fusion utilisent lʼoption « graphique privé ».
 
 #### C11 {#c11}
 

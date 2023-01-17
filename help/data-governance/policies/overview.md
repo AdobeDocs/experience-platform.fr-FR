@@ -2,12 +2,12 @@
 keywords: Experience Platform;accueil;rubriques populaires;dule;DULE
 solution: Experience Platform
 title: Présentation des stratégies dʼutilisation des données
-description: Les stratégies d’utilisation des données sont des règles qui décrivent les types d’actions marketing que vous êtes autorisé ou non à effectuer sur les données de Adobe Experience Platform.
+description: Les stratégies d’utilisation des données sont des règles qui décrivent les types d’actions marketing que vous êtes autorisé(e) ou non à effectuer sur des données dans Adobe Experience Platform.
 exl-id: 1b372aa5-3e49-4741-82dc-5701a4bc8469
 source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
 workflow-type: tm+mt
 source-wordcount: '1164'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -22,8 +22,8 @@ Des stratégies d’utilisation des données doivent être mises en œuvre pour 
 
 Deux types de stratégies sont disponibles :
 
-* **[!UICONTROL Politique de gouvernance des données]** : limiter l’activation des données en fonction de l’action marketing réalisée et des étiquettes d’utilisation des données portées par les données en question.
-* **[!UICONTROL Politique de consentement]** : filtrer les profils qui peuvent être activés vers [destinations](../../destinations/home.md) en fonction du consentement ou des préférences de vos clients.
+* **[!UICONTROL Stratégie de gouvernance des données]** : permet de restreindre l’activation des données en fonction de l’action marketing en cours et des étiquettes d’utilisation des données associées aux données en question.
+* **[!UICONTROL Stratégie de consentement]** : filtrez les profils pouvant être activés sur les [destinations](../../destinations/home.md) selon le consentement ou les préférences de vos clients.
 
 >[!NOTE]
 >
@@ -90,7 +90,7 @@ Le tableau ci-dessous décrit les principales actions marketing prêtes à l’e
 
 | Action marketing | Description |
 | --- | --- |
-| Intégration | Action qui utilise des données à des fins d’analyse, telles que la mesure, l’analyse et le compte rendu des performances de l’utilisation par les clients des sites ou applications de votre organisation. |
+| Analytics | Action qui utilise des données à des fins d’analyse, telles que la mesure, l’analyse et le compte rendu des performances de l’utilisation par les clients des sites ou applications de votre organisation. |
 | Combinaison avec des données directement identifiables | Action qui combine des informations d’identification personnelle (PII) avec des données anonymes. Les contrats relatifs aux données provenant de réseaux publicitaires, de serveurs de publicités et de fournisseurs de données tiers comportent souvent des interdictions contractuelles spécifiques concernant l’utilisation de ces données avec des données directement identifiables. |
 | Ciblage intersite | Action qui utilise des données pour le ciblage publicitaire intersite. La combinaison de données provenant de plusieurs sites, y compris une combinaison de données sur site et de données hors site ou une combinaison de données provenant de plusieurs sources hors site, est appelée données intersites. Les données intersites sont généralement collectées et traitées afin d’établir des inférences sur les intérêts des utilisateurs. |
 | Science des données | Action qui utilise les données pour les workflows relatifs à la science des données. Certains contrats prévoient des interdictions explicites sur l’utilisation des données pour la science des données. Parfois, elles sont formulées en des termes qui interdisent l’utilisation de données pour l’intelligence artificielle (AI), l’apprentissage automatique (ML) ou la modélisation. |

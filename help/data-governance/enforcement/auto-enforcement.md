@@ -7,7 +7,7 @@ exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
 source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
 workflow-type: tm+mt
 source-wordcount: '1727'
-ht-degree: 93%
+ht-degree: 97%
 
 ---
 
@@ -15,13 +15,13 @@ ht-degree: 93%
 
 >[!IMPORTANT]
 >
->L’application automatique des stratégies n’est disponible que pour les organisations qui ont acheté **Adobe Health Care Shield** ou **Adobe de la confidentialité et de la sécurité**.
+>L’application automatique des stratégies n’est actuellement disponible que pour les organisations qui ont acheté **Adobe Healthcare Shield** ou **Adobe Privacy &amp; Security Shield**.
 
-Une fois que les données sont étiquetées et que les stratégies d’utilisation des données sont définies, vous pouvez appliquer les stratégies d’utilisation des données. Lors de l’activation des segments d’audience vers les destinations, Adobe Experience Platform applique automatiquement les stratégies d’utilisation en cas de violation.
+Une fois que les données sont libellées et que les stratégies d’utilisation sont définies, vous pouvez appliquer les stratégies d’utilisation des données. Lors de l’activation des segments d’audience vers les destinations, Adobe Experience Platform applique automatiquement les stratégies d’utilisation en cas de violation.
 
 >[!NOTE]
 >
->Ce document se concentre sur l’application des politiques de gouvernance des données et de consentement. Pour plus d’informations sur les stratégies de contrôle d’accès, consultez la documentation sur [contrôle d’accès basé sur les attributs](../../access-control/abac/overview.md).
+>Ce document se concentre sur l’application des stratégies de gouvernance des données et de consentement. Pour plus d’informations sur les stratégies de contrôle d’accès, consultez la documentation sur le [contrôle d’accès basé sur les attributs](../../access-control/abac/overview.md).
 
 ## Conditions préalables
 

@@ -7,17 +7,17 @@ exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
 source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
 workflow-type: tm+mt
 source-wordcount: '1411'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
 # Gestion des politiques d’utilisation des données dans l’interface utilisateur
 
-Ce document explique comment utiliser la variable **[!UICONTROL Stratégies]** espace de travail dans l’interface utilisateur de Adobe Experience Platform pour créer et gérer des stratégies d’utilisation des données.
+Ce document explique comment utiliser l’espace de travail **[!UICONTROL Stratégies]** dans l’interface utilisateur d’Adobe Experience Platform pour créer et gérer des stratégies d’utilisation des données.
 
 >[!NOTE]
 >
->Pour plus d’informations sur la gestion des stratégies de contrôle d’accès dans l’interface utilisateur, reportez-vous à la section [Guide de l’interface utilisateur du contrôle d’accès basé sur les attributs](../../access-control/abac/ui/policies.md) au lieu de .
+>Pour plus d’informations sur la gestion des stratégies de contrôle d’accès dans l’interface utilisateur, reportez-vous au [guide de l’interface utilisateur du contrôle d’accès basé sur les attributs](../../access-control/abac/ui/policies.md).
 
 >[!IMPORTANT]
 >
@@ -86,7 +86,7 @@ L’onglet **[!UICONTROL Parcourir]** réapparaît et affiche désormais la nouv
 
 >[!IMPORTANT]
 >
->Les stratégies de consentement ne sont disponibles que pour les organisations qui ont acheté **Adobe Health Care Shield** ou **Adobe de la confidentialité et de la sécurité**.
+>Les stratégies de consentement ne sont disponibles que pour les organisations qui ont acheté **Adobe Healthcare Shield** ou **Adobe Privacy &amp; Security Shield**.
 
 Si vous choisissez de créer une stratégie de consentement, un nouvel écran vous permettant de configurer la nouvelle stratégie s’affiche.
 
@@ -197,7 +197,7 @@ Si l’action marketing n’est utilisée par aucune stratégie d’utilisation 
 
 ## Étapes suivantes
 
-Ce document offre un aperçu de la gestion des stratégies d’utilisation des données dans l’interface utilisateur [!DNL Experience Platform]. Pour savoir comment gérer les stratégies à l’aide de l’[!DNL Policy Service API], consultez le [guide du développement](../api/getting-started.md). Pour plus d’informations sur l’application des stratégies d’utilisation des données, voir la [présentation de l’application des stratégies](../enforcement/overview.md).
+Ce document offre un aperçu de la gestion des stratégies d’utilisation des données dans l’interface utilisateur [!DNL Experience Platform]. Pour savoir comment gérer les stratégies à l’aide de l’[!DNL Policy Service API], consultez le [guide du développement](../api/getting-started.md). Pour plus d’informations sur l’application des stratégies d’utilisation des données, voir la [présentation de l’application des politiques](../enforcement/overview.md).
 
 La vidéo qui suit montre comment utiliser les stratégies d’utilisation dans l’interface utilisateur [!DNL Experience Platform] :
 

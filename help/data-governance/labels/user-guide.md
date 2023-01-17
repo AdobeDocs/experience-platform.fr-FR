@@ -7,19 +7,19 @@ exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
 source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
 workflow-type: tm+mt
 source-wordcount: '1306'
-ht-degree: 86%
+ht-degree: 100%
 
 ---
 
 # Gestion des libellés d’utilisation des données dans l’interface utilisateur
 
-Ce guide d’utilisation détaille la procédure d’utilisation des libellés d’utilisation des données dans l’interface utilisateur [!DNL Experience Platform]. 
+Ce guide d’utilisation détaille la procédure d’utilisation des libellés d’utilisation des données dans l’interface utilisateur [!DNL Experience Platform].
 
-## Gestion des libellés au niveau du jeu de données
+## Gérer les libellés au niveau du jeu de données
 
 >[!IMPORTANT]
 >
->L’application d’étiquettes au niveau du jeu de données est uniquement prise en charge pour les cas d’utilisation de la gouvernance des données. Si vous essayez de créer des stratégies d’accès pour les données, vous devez [appliquer des libellés au schéma ;](../../xdm/tutorials/labels.md) sur lequel le jeu de données est basé. Consultez la présentation sur [contrôle d’accès basé sur les attributs](../../access-control/abac/overview.md) pour plus d’informations.
+>L’application de libellés au niveau du jeu de données est uniquement prise en charge pour les cas d’utilisation de la gouvernance des données. Si vous essayez de créer des stratégies d’accès pour les données, vous devez [appliquer des libellés au schéma](../../xdm/tutorials/labels.md) sur lequel le jeu de données est basé. Consultez la présentation sur le [contrôle d’accès basé sur les attributs](../../access-control/abac/overview.md) pour plus d’informations.
 
 Pour gérer les libellés d’utilisation des données au niveau du jeu de données, vous devez sélectionner un jeu de données existant ou en créer un nouveau. Après vous être connecté à Adobe Experience Platform, sélectionnez **[!UICONTROL Jeux de données]** dans le volet de navigation de gauche pour ouvrir l’espace de travail **[!UICONTROL Jeux de données]**. Cette page répertorie tous les jeux de données créés appartenant à votre organisation, ainsi que des détails utiles relatifs à chaque jeu de données.
 
@@ -77,11 +77,11 @@ L’option **[!UICONTROL Afficher les libellés hérités]** est activée par d�
 
 ![Masquer les libellés hérités](../images/labels/inherited-labels.png)
 
-## Gestion des libellés au niveau du champ du jeu de données
+## Gérer les libellés au niveau du champ du jeu de données
 
 >[!IMPORTANT]
 >
->L’application d’étiquettes au niveau du champ du jeu de données n’est prise en charge que pour les cas d’utilisation de la gouvernance des données. Si vous essayez de créer des stratégies d’accès pour les données, vous devez [appliquer des libellés au schéma ;](../../xdm/tutorials/labels.md) sur lequel le jeu de données est basé. Consultez la présentation sur [contrôle d’accès basé sur les attributs](../../access-control/abac/overview.md) pour plus d’informations.
+>L’application de libellés au niveau du champ du jeu de données n’est prise en charge que pour les cas d’utilisation de la gouvernance des données. Si vous essayez de créer des stratégies d’accès pour les données, vous devez [appliquer les libellés au schéma](../../xdm/tutorials/labels.md) sur lequel le jeu de données est basé. Pour plus d’informations, consultez la présentation du [contrôle d’accès basé sur les attributs](../../access-control/abac/overview.md).
 
 En poursuivant le processus d’[ajout et de modification des libellés d’utilisation des données au niveau du jeu de données](#add-labels), vous pouvez également gérer les libellés au niveau du champ dans l’espace de travail **[!UICONTROL Gouvernance des données]** pour ce jeu de données.
 
@@ -107,18 +107,18 @@ Vous pouvez répéter ces étapes pour continuer à ajouter et à modifier des l
 
 Il est important de se rappeler que l’héritage se déplace uniquement du niveau supérieur vers le niveau inférieur (jeu de données → champs), ce qui signifie que les libellés appliqués au niveau du champ ne sont pas propagés à d’autres champs ou jeux de données.
 
-## Gestion des libellés au niveau du schéma
+## Gérer les libellés au niveau du schéma
 
-Vous pouvez ajouter des libellés directement à un ou plusieurs champs de ce schéma. Tous les champs appliqués au niveau du schéma se propageront à tous les jeux de données en fonction de ce schéma.
+Vous pouvez ajouter des libellés directement à un schéma ou à des champs de ce schéma. Tous les champs appliqués au niveau du schéma se propagent à tous les jeux de données basés sur ce schéma.
 
-Voir le tutoriel sur [gestion des libellés au niveau du schéma](../../xdm/tutorials/labels.md) pour plus d’informations.
+Pour plus d’informations, consultez le tutoriel sur la [gestion des libellés au niveau du schéma](../../xdm/tutorials/labels.md).
 
-## Gestion des libellés personnalisés {#manage-custom-labels}
+## Gérer les libellés personnalisés {#manage-custom-labels}
 
 >[!CONTEXTUALHELP]
 >id="platform_governance_createlabels"
->title="Créer des étiquettes"
->abstract="Les libellés vous permettent de classer les jeux de données et les champs en fonction des politiques d’utilisation qui s’appliquent à ces données. Platform fournit un ensemble standard de libellés que vous pouvez utiliser, mais vous pouvez également créer des libellés personnalisés spécifiques à votre organisation."
+>title="Créer des libellés"
+>abstract="Les libellés vous permettent de classer les jeux de données et les champs en fonction des stratégies d’utilisation qui s’appliquent à ces données. Platform fournit un ensemble standard de libellés que vous pouvez utiliser, mais vous pouvez également créer des libellés personnalisés spécifiques à votre organisation."
 
 Vous pouvez créer vos propres libellés d’utilisation personnalisés dans l’espace de travail **[!UICONTROL Stratégies]** de l’interface utilisateur [!DNL Experience Platform]. Sélectionnez **[!UICONTROL Stratégies]** dans le volet de navigation de gauche, puis cliquez sur **[!UICONTROL Libellés]** pour afficher une liste des libellés existants. À partir de là, cliquez sur **[!UICONTROL Créer un libellé]**.
 

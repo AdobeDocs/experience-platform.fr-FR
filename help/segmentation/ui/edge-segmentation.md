@@ -7,7 +7,7 @@ exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '939'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
@@ -52,10 +52,10 @@ Une requête peut être évaluée avec une segmentation Edge si elle répond à 
 | Segment de segments | Toute définition de segment contenant un ou plusieurs segments par lots ou en diffusion en flux continu. | Personnes qui vivent aux États-Unis et qui se trouvent dans le segment « segment existant ». | `homeAddress.countryCode = "US" and inSegment("existing segment")` |
 | Requête qui fait référence à une carte | Toute définition de segment qui fait référence à une carte de propriétés. | Personnes ayant effectué un ajout à leur panier en fonction de données de segment externes. | `chain(xEvent, timestamp, [A: WHAT(eventType = "addToCart") WHERE(externalSegmentMapProperty.values().exists(stringProperty="active"))])` |
 
-Une définition de segment sera **not** être activé pour la segmentation edge dans les scénarios suivants :
+Une définition de segment ne sera **pas** activée pour la segmentation Edge dans les scénarios suivants :
 
-- La définition de segment comprend une combinaison d’un événement unique et d’un événement `inSegment` .
-   - Toutefois, si le segment contenu dans la variable `inSegment` est un événement de profil uniquement, la définition de segment **will** être activé pour la segmentation edge.
+- La définition de segment comprend une combinaison d’un événement unique et d’un événement `inSegment`.
+   - Toutefois, si le segment contenu dans l’événement `inSegment` est un segment de profil uniquement, la définition de segment **sera** activée pour la segmentation Edge.
 
 ## Étapes suivantes
 

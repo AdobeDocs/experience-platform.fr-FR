@@ -7,7 +7,7 @@ exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1495'
-ht-degree: 89%
+ht-degree: 91%
 
 ---
 
@@ -48,8 +48,8 @@ Une définition de segment ne sera **pas** activée pour la segmentation en flux
 
 - La définition de segment inclut des segments ou des caractéristiques Adobe Audience Manager (AAM).
 - La définition de segment comprend plusieurs entités (requêtes d’entités multiples).
-- La définition de segment comprend une combinaison d’un événement unique et d’un événement `inSegment` .
-   - Toutefois, si le segment contenu dans la variable `inSegment` est un événement de profil uniquement, la définition de segment **will** être activé pour la segmentation par flux.
+- La définition de segment comprend une combinaison d’un événement unique et d’un événement `inSegment`.
+   - Toutefois, si le segment contenu dans l’événement `inSegment` est un segment de profil uniquement, la définition de segment **sera activée** pour la segmentation en flux continu.
 
 Veuillez noter que les instructions suivantes s’appliquent lors de la segmentation en flux continu :
 
@@ -90,7 +90,7 @@ Pour plus d’informations sur les définitions de segment, consultez la section
 
 Ce guide d’utilisation explique le fonctionnement des définitions de segment activées pour la segmentation en flux continu sur Adobe Experience Platform et comment surveiller les segments activés pour la segmentation en flux continu.
 
-Pour en savoir plus sur l’utilisation de l’interface utilisateur d&#39;Adobe Experience Platform, veuillez lire le [guide d’utilisation de la segmentation](./overview.md).
+Pour en savoir plus sur l’utilisation de l’interface utilisateur d’Adobe Experience Platform, veuillez lire le [guide d’utilisation de la segmentation](./overview.md).
 
 ## Annexe
 

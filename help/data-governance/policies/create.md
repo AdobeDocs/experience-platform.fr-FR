@@ -1,26 +1,26 @@
 ---
 keywords: Experience Platform;accueil;rubriques populaires;gouvernance des données;stratégie d’utilisation des données
 solution: Experience Platform
-title: Création d’une stratégie de gouvernance des données dans l’API
+title: Créer une stratégie de gouvernance des données dans l’API
 type: Tutorial
-description: Découvrez comment créer une stratégie de gouvernance des données à l’aide de l’API Policy Service.
+description: Découvrez comment créer une stratégie de gouvernance des données à l’aide de l’API Policy Service.
 exl-id: 8483f8a1-efe8-4ebb-b074-e0577e5a81a4
 source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
 workflow-type: tm+mt
 source-wordcount: '1200'
-ht-degree: 91%
+ht-degree: 100%
 
 ---
 
-# Création d’une stratégie de gouvernance des données dans l’API
+# Créer une stratégie de gouvernance des données dans l’API
 
-Le [API Policy Service](https://www.adobe.io/experience-platform-apis/references/policy-service/) vous permet de créer et de gérer des stratégies de gouvernance des données afin de déterminer quelles actions marketing peuvent être entreprises concernant les données qui contiennent certains libellés d’utilisation des données.
+L’[API Policy Service](https://www.adobe.io/experience-platform-apis/references/policy-service/) vous permet de créer et de gérer des stratégies de gouvernance des données afin de déterminer quelles actions marketing peuvent être appliquées aux données qui contiennent certains libellés d’utilisation des données.
 
-Ce document fournit un tutoriel détaillé sur la création d’une stratégie de gouvernance à l’aide du [!DNL Policy Service] API.
+Ce document fournit un tutoriel détaillé sur la création d’une stratégie de gouvernance à l’aide de l’API [!DNL Policy Service].
 
 >[!NOTE]
 >
->Pour savoir comment créer une stratégie de contrôle d’accès, voir `/policies` guide de point d’entrée pour [API Access Control](../../access-control/abac/api/policies.md). Pour savoir comment créer une stratégie de consentement, voir [guide de l’interface utilisateur des stratégies](./user-guide.md#consent-policy).
+>Pour savoir comment créer une stratégie de contrôle d’accès, consultez le guide du point d’entrée `/policies` pour l’[API de contrôle d’accès](../../access-control/abac/api/policies.md). Pour savoir comment créer une stratégie de consentement, consultez le [guide de l’interface utilisateur des stratégies](./user-guide.md#consent-policy).
 
 ## Prise en main
 
@@ -29,7 +29,7 @@ Ce tutoriel nécessite une compréhension pratique des concepts clés suivants, 
 * [Adobe Experience Platform Data Governance](../home.md) : cadre en fonction duquel [!DNL Platform] applique la conformité d’utilisation des données.
    * [Libellés d’utilisation des données](../labels/overview.md) : les libellés d’utilisation des données sont appliqués aux champs de données XDM, spécifiant les restrictions d’accès à ces données.
 * [[!DNL Experience Data Model (XDM)]](../../xdm/home.md) : Cadre normalisé selon lequel [!DNL Platform] organise les données de l’expérience client.
-* [Environnements de test](../../sandboxes/home.md) : [!DNL Experience Platform] fournit des environnements de test virtuels qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
+* [Sandbox](../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuelles qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
 
 Avant de commencer ce tutoriel, consultez le [guide de développement](../api/getting-started.md) pour obtenir les informations importantes à connaître afin d’effectuer avec succès des appels vers l’API [!DNL Policy Service], y compris les en-têtes requis et la méthode de lecture d’exemples d’appels API.
 

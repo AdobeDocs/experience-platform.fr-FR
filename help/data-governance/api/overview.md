@@ -7,13 +7,13 @@ exl-id: 23c05670-7107-4b96-bc24-0a51b5d267b2
 source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
 workflow-type: tm+mt
 source-wordcount: '545'
-ht-degree: 86%
+ht-degree: 100%
 
 ---
 
 # Guide de l’API [!DNL Policy Service]
 
-La gouvernance des données d’Adobe Experience Platform vous permet de gérer les données clients et de garantir la conformité aux réglementations, aux restrictions et aux stratégies applicables à l’utilisation des données. Elle joue un rôle clé dans [!DNL Experience Platform], et ce, à différents niveaux, notamment dans le catalogage, la traçabilité des données, l’étiquetage d’utilisation des données, les stratégies d’utilisation des données et le contrôle de l’utilisation des données lors d’actions marketing.
+La gouvernance des données d’Adobe Experience Platform vous permet de gérer les données clients et de garantir la conformité aux réglementations, aux restrictions et aux stratégies applicables à l’utilisation des données. Elle joue un rôle clé dans [!DNL Experience Platform], et ce, à différents niveaux, notamment dans le catalogage, la traçabilité des données, l’étiquetage d’utilisation des données, les politiques d’utilisation des données et le contrôle de l’utilisation des données lors d’actions marketing.
 
 L’API [!DNL Policy Service] fournit plusieurs points d’entrée vous permettant de gérer par programmation les libellés et les stratégies d’utilisation des données, ainsi que d’évaluer les actions marketing en cas de violation de ces stratégies. Ces points d’entrée sont décrits ci-dessous. Consultez le guide de chaque point d’entrée pour plus de détails et reportez-vous au [guide de prise en main](./getting-started.md) pour obtenir des informations importantes sur les en-têtes nécessaires, la lecture des exemples d’appels d’API, etc.
 
@@ -29,13 +29,13 @@ Les actions marketing (également appelées cas dʼutilisation marketing), dans 
 
 ## Stratégies
 
-Les stratégies de gouvernance des données sont des règles qui décrivent les types d’actions marketing que vous êtes autorisé ou non à effectuer sur les données au sein de . [!DNL Experience Platform].
+Les stratégies de gouvernance des données sont des règles qui décrivent les types d’actions marketing que vous êtes autorisé(e) ou non à effectuer sur des données dans [!DNL Experience Platform].
 
 >[!NOTE]
 >
->Les stratégies de gouvernance des données ne doivent pas être confondues avec les stratégies de contrôle d’accès, qui déterminent les attributs de données spécifiques accessibles à certains utilisateurs de Platform dans votre organisation. Consultez le guide sur la [contrôle d’accès basé sur les attributs](../../access-control/abac/overview.md) pour plus d’informations.
+>Elles ne doivent pas être confondues avec les stratégies de contrôle d’accès, qui déterminent les attributs de données spécifiques accessibles par certains utilisateurs et utilisatrices de Platform dans votre organisation. Pour plus d’informations, consultez le guide sur le [contrôle d’accès basé sur les attributs](../../access-control/abac/overview.md).
 
-Une politique de gouvernance des données est définie par les éléments suivants :
+Une stratégie de gouvernance des données est définie par les éléments suivants :
 
 1. Une action marketing spécifique
 1. Le ou les libellé(s) d’utilisation des données envers lesquels l’action ne peut pas être exécutée
