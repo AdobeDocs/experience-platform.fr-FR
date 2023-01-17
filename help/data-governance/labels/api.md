@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Gestion des étiquettes dʼutilisation des données à lʼaide dʼAPI
 description: LʼAPI Dataset Service vous permet dʼappliquer et de modifier des étiquettes dʼutilisation pour les jeux de données. LʼAPI fait partie des fonctionnalités de catalogue de données dʼAdobe Experience Platform, mais est distinct de lʼAPI Catalog Service qui gère les métadonnées du jeu de données.
 source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1141'
 ht-degree: 100%
 
@@ -284,7 +284,7 @@ Une réponse réussie renvoie les étiquettes dʼutilisation des données qui on
 - contentType : indique le format et la version du schéma. Pour plus d’informations, reportez-vous à la section [contrôle de version des schémas](../../xdm/api/getting-started.md#versioning) du guide de l’API XDM.
 - schemaPath : le chemin d’accès à la propriété de schéma en question, écrit dans la syntaxe [JSON Pointer](../../landing/api-fundamentals.md#json-pointer).
 
-## Application dʼétiquettes à un jeu de données {#apply-dataset-labels}
+## Appliquer des libellés à un jeu de données {#apply-dataset-labels}
 
 Vous pouvez créer un ensemble dʼétiquettes pour un jeu de données en les fournissant dans la payload dʼune requête POST ou PUT à lʼAPI [!DNL Dataset Service]. Lʼutilisation de lʼune ou lʼautre de ces méthodes supprime les étiquettes existantes et les remplace par celles fournies dans la payload.
 
