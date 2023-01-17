@@ -5,9 +5,9 @@ title: Présentation du contrôle d’accès
 description: Dans Adobe Experience Platform, le contrôle dʼaccès est fourni par le biais dʼAdobe Admin Console. Cette fonctionnalité exploite les profils de produit dans Admin Console, liant les utilisateurs à des autorisations et des sandbox.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
 source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
-workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+workflow-type: ht
+source-wordcount: '1419'
+ht-degree: 100%
 
 ---
 
@@ -17,15 +17,15 @@ Dans [!DNL Experience Platform], le contrôle dʼaccès est fourni par le biais 
 
 ## Hiérarchie et workflow du contrôle d’accès
 
-Pour configurer le contrôle dʼaccès dans [!DNL Experience Platform], vous devez posséder des droits dʼadministrateur pour une organisation qui dispose dʼune intégration de produit [!DNL Experience Platform]. Le rôle minimum qui permet d’accorder ou de retirer des autorisations est un administrateur de profils de produit. Les autres rôles d’administrateur qui peuvent gérer des autorisations sont les administrateurs de produit (qui peuvent gérer tous les profils au sein d’un produit) et les administrateurs système (aucune restriction). Pour en savoir plus, consultez l’article d’Adobe Help Center sur les [rôles administratifs](https://helpx.adobe.com/fr/enterprise/using/admin-roles.html).
+Pour configurer le contrôle dʼaccès dans [!DNL Experience Platform], vous devez posséder des droits dʼadministrateur pour une organisation qui dispose dʼune intégration de produit [!DNL Experience Platform]. Le rôle minimum qui permet d’accorder ou de retirer des autorisations est un administrateur de profils de produit. Les autres rôles d’administrateur qui peuvent gérer des autorisations sont les administrateurs de produit (qui peuvent gérer tous les profils au sein d’un produit) et les administrateurs système (aucune restriction). Pour en savoir plus, consultez l’article du Centre d’aide Adobe sur les [rôles administratifs](https://helpx.adobe.com/fr/enterprise/using/admin-roles.html).
 
 >[!NOTE]
 >
->À partir de là, toute mention du terme « administrateur » dans ce document désigne un administrateur de profils de produit ou d’un niveau supérieur (comme indiqué ci-dessus).
+>À partir de maintenant, le terme « administrateur » dans ce document désigne un administrateur de profils de produit ou d’un niveau supérieur (comme indiqué ci-dessus).
 
 Un workflow de haut niveau d’obtention et d’attribution d’autorisations d’accès peut se résumer de la manière suivante :
 
-- Après lʼoctroi de la licence pour Adobe Experience Platform, ou pour une application/service dʼapplication utilisant Experience Platform, un courrier électronique est envoyé à lʼadministrateur spécifié lors de lʼoctroi de la licence.
+- Après lʼattribution dʼune licence pour Adobe Experience Platform, ou pour une application/un service applicatif qui utilise Experience Platform, un e-mail est envoyé à lʼadministrateur spécifié lors de lʼattribution de la licence.
 - L’administrateur se connecte à [Adobe Admin Console](#adobe-admin-console) et sélectionne **Adobe Experience Platform** depuis la liste de produits sur la page d’aperçu.
 - L’administrateur peut afficher les [profils de produit](#product-profiles) par défaut ou créer de nouveaux profils de produit clients si nécessaire.
 - L’administrateur peut modifier les autorisations et les utilisateurs pour tout profil de produit existant.
@@ -42,7 +42,7 @@ Adobe Admin Console permet de centraliser la gestion des droits et accès de vos
 
 ### Profils de produit
 
-Dans [!DNL Admin Console], des autorisations sont attribuées à des utilisateurs grâce à lʼutilisation des profils de produit. Les profils de produit vous permettent d’accorder des autorisations à un ou plusieurs utilisateurs, mais aussi de contenir leur accès aux sandbox qui leur sont attribuées par le biais des profils de produit. Il est possible d’attribuer un ou plusieurs profils de produit appartenant à votre organisation.
+Dans [!DNL Admin Console], des autorisations sont attribuées à des utilisateurs grâce à lʼutilisation des profils de produit. Les profils de produit vous permettent d’accorder des autorisations à un ou plusieurs utilisateurs, mais aussi de contenir leur accès aux sandbox qui leur sont attribués par le biais des profils de produit. Il est possible d’attribuer un ou plusieurs profils de produit appartenant à votre organisation.
 
 ### Profils de produit par défaut
 
@@ -79,7 +79,7 @@ Le tableau suivant décrit les autorisations disponibles pour [!DNL Experience P
 
 | Catégorie | Autorisation | Description |
 | --- | --- | --- |
-| [!DNL Data Modeling] | [!UICONTROL Gestion des schémas] | Accès à la lecture, la création, la modification et la suppression des schémas et des ressources associées. |
+| [!DNL Data Modeling] | [!UICONTROL Gestion des schémas] | Accès pour lire, créer, modifier et supprimer des schémas et des ressources associées. |
 | [!DNL Data Modeling] | [!UICONTROL Affichage des schémas] | Accès en lecture seule aux schémas et aux ressources associées. |
 | [!DNL Data Modeling] | [!UICONTROL Gestion des relations] | Accès à la lecture, la création, la modification et la suppression des relations de schéma. |
 | [!DNL Data Modeling] | [!UICONTROL Gestion des métadonnées dʼidentité] | Accès à la lecture, la création, la modification et la suppression des métadonnées dʼidentité pour les schémas. |
@@ -109,7 +109,7 @@ Le tableau suivant décrit les autorisations disponibles pour [!DNL Experience P
 | [!DNL Data Ingestion] | [!UICONTROL Affichage des sources] | Accès en lecture seule aux sources disponibles dans l’onglet **[!UICONTROL Catalogue]** et aux sources authentifiées dans l’onglet **[!UICONTROL Parcourir]**. |
 | [!DNL Data Ingestion] | [!DNL Manage Audience Share Connections] | Accès à la création, lʼacceptation et le refus des négociations entre partenaires afin de connecter deux organisations IMS et dʼactiver les flux [!DNL Segment Match]. |
 | [!DNL Data Ingestion] | [!DNL Manage Audience Share] | Accès à la lecture, la création, la modification et la publication de flux [!DNL Segment Match] avec des partenaires actifs. |
-| [!DNL Data Science Workspace] | [!UICONTROL Gestion de Data Science Workspace] | Accès à la lecture, la création, la modification et la suppression dans [!DNL Data Science Workspace]. |
+| [!DNL Data Science Workspace] | [!UICONTROL Gestion de l’espace de travail de science des données] | Accès à la lecture, la création, la modification et la suppression dans [!DNL Data Science Workspace]. |
 | Gouvernance des données | [!UICONTROL Application dʼétiquettes dʼutilisation des données] | Accès à la lecture, la création et la suppression des étiquettes dʼutilisation des données. |
 | Gouvernance des données | [!UICONTROL Gestion des stratégies dʼutilisation des données] | Accès à la lecture, la création, la modification et la suppression des stratégies dʼutilisation des données. |
 | Gouvernance des données | [!UICONTROL Affichage des stratégies dʼutilisation des données] | Accès en lecture seule pour les stratégies dʼutilisation des données appartenant à votre organisation. |
