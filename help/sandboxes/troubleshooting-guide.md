@@ -5,7 +5,7 @@ title: Guide de dépannage des sandbox
 description: Ce document apporte des réponses aux questions fréquentes sur les sandbox dans Adobe Experience Platform.
 exl-id: 6a496509-a4e9-4e76-829b-32d67ccfcce6
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '857'
 ht-degree: 100%
 
