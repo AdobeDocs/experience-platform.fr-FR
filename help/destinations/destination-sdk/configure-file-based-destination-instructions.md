@@ -1,15 +1,15 @@
 ---
 description: Cette page répertorie et décrit les étapes de configuration d’une destination basée sur des fichiers à l’aide de Destination SDK.
-title: Utiliser la Destination SDK pour configurer une destination basée sur des fichiers
+title: Utiliser Destination SDK pour configurer une destination basée sur des fichiers
 exl-id: 84d73452-88e4-4e0f-8fc7-d0d8e10f9ff5
-source-git-commit: 29962e07aa50c97b6098f4c892facf48508d28cf
+source-git-commit: 0d58d949ff24b9059d6afe81de354da0783ec8a4
 workflow-type: tm+mt
-source-wordcount: '516'
-ht-degree: 83%
+source-wordcount: '694'
+ht-degree: 78%
 
 ---
 
-# Utiliser la Destination SDK pour configurer une destination basée sur des fichiers
+# Utiliser Destination SDK pour configurer une destination basée sur des fichiers
 
 ## Présentation {#overview}
 
@@ -261,27 +261,35 @@ Selon que vous spécifiez `"authenticationRule": "CUSTOMER_AUTHENTICATION"` ou `
 * Si vous avez sélectionné `"authenticationRule": "PLATFORM_AUTHENTICATION"`, reportez-vous à la section [Configuration de l’authentification](./authentication-configuration.md#when-to-use).
 
 
-<!-- ## Step 5: Test your destination {#test-destination}
+## Étape 5 : tester votre destination {#test-destination}
 
-After setting up your destination using the configuration endpoints in the previous steps, you can use the [destination testing tool](./create-template.md) to test the integration between Adobe Experience Platform and your destination.
+Une fois votre destination configurée à l’aide des points d’entrée de configuration dans les étapes précédentes, vous pouvez utiliser l’[outil de test des destinations](./file-based-destination-testing-overview.md) afin de tester l’intégration entre Adobe Experience Platform et votre destination.
 
-As part of the process to test your destination, you must use the Experience Platform UI to create segments, which you will activate to your destination. Refer to the two resources below for instructions how to create segments in Experience Platform:
+Dans le cadre du processus de test de votre destination, vous devez utiliser l’interface utilisateur d’Experience Platform pour créer des segments que vous activerez vers votre destination. Pour plus d’informations sur la création de segments dans Experience Platform, consultez les deux ressources ci-dessous :
 
-* [Create a segment documentation page](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html?lang=en#create-segment)
-* [Create a segment video walkthrough](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en) -->
+* [Créer une page de documentation sur les segments](/help/segmentation/ui/overview.md#create-segment)
+* [Créer un segment (présentation vidéo détaillée)](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=fr)
 
-## Étape 5 : publier la destination {#publish-destination}
+## Étape 6 : publier votre destination {#publish-destination}
 
 >[!NOTE]
 >
 >Cette étape n’est pas requise si vous créez une destination privée à des fins personnelles et que vous ne souhaitez pas la publier dans le catalogue de destinations pour que d’autres clients puissent l’utiliser.
 
-Une fois la destination configurée et testée, utilisez l’[API de publication de destinations](./destination-publish-api.md) pour envoyer votre configuration à Adobe pour révision.
+Une fois votre destination configurée et testée, utilisez l’[API de publication de destination](./destination-publish-api.md) afin d’envoyer votre configuration à Adobe pour révision.
 
-## Étape 6 : documenter la destination {#document-destination}
+## Étape 7 : documenter votre destination {#document-destination}
 
 >[!NOTE]
 >
 >Cette étape n’est pas requise si vous créez une destination privée à des fins personnelles et que vous ne souhaitez pas la publier dans le catalogue de destinations pour que d’autres clients puissent l’utiliser.
 
 Si vous êtes un fournisseur de logiciels indépendant (ISV) ou un intégrateur de système (SI) créant une [intégration personnalisée](./overview.md#productized-custom-integrations), utilisez le [processus de documentation en libre-service](./docs-framework/documentation-instructions.md) pour créer une page de documentation du produit pour votre destination dans le [Catalogue des destinations Experience Platform](/help/destinations/catalog/overview.md).
+
+## Étape 8 : Envoyer la destination pour la révision de l’Adobe {#submit-for-review}
+
+>[!NOTE]
+>
+>Cette étape n’est pas requise si vous créez une destination privée à des fins personnelles et que vous ne souhaitez pas la publier dans le catalogue de destinations pour que d’autres clients puissent l’utiliser.
+
+Enfin, avant que la destination puisse être publiée dans le catalogue des Experience Platform et visible par tous les clients Experience Platform, vous devez envoyer officiellement la destination pour la révision de l’Adobe. Obtention d’informations complètes sur la procédure à suivre [envoyer pour révision une destination productisée créée en Destination SDK](/help/destinations/destination-sdk/submit-destination.md).

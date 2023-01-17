@@ -2,10 +2,10 @@
 description: Cette page répertorie et décrit les étapes de configuration d’une destination de diffusion en continu à l’aide de Destination SDK.
 title: Utiliser Destination SDK pour configurer une destination de diffusion en continu
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
-source-git-commit: abc9b9857e4a93a334440e855ca0ae562c695df1
+source-git-commit: 0d58d949ff24b9059d6afe81de354da0783ec8a4
 workflow-type: tm+mt
-source-wordcount: '752'
-ht-degree: 91%
+source-wordcount: '825'
+ht-degree: 82%
 
 ---
 
@@ -169,7 +169,7 @@ Une fois votre destination configurée à l’aide des points d’entrée de con
 
 Dans le cadre du processus de test de votre destination, vous devez utiliser l’interface utilisateur d’Experience Platform pour créer des segments que vous activerez vers votre destination. Pour plus d’informations sur la création de segments dans Experience Platform, consultez les deux ressources ci-dessous :
 
-* [Créer une page de documentation sur les segments](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html?lang=fr#create-segment)
+* [Créer une page de documentation sur les segments](/help/segmentation/ui/overview.md#create-segment)
 * [Créer un segment (présentation vidéo détaillée)](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=fr)
 
 ## Étape 7 : publier votre destination {#publish-destination}
@@ -187,3 +187,11 @@ Une fois votre destination configurée et testée, utilisez l’[API de publicat
 >Cette étape n’est pas requise si vous créez une destination privée à des fins personnelles et que vous ne souhaitez pas la publier dans le catalogue de destinations pour que d’autres clients puissent l’utiliser.
 
 Si vous êtes un fournisseur de logiciels indépendant (ISV) ou un intégrateur de système (SI) créant une [intégration personnalisée](./overview.md#productized-custom-integrations), utilisez le [processus de documentation en libre-service](./docs-framework/documentation-instructions.md) pour créer une page de documentation du produit pour votre destination dans le [Catalogue des destinations Experience Platform](/help/destinations/catalog/overview.md).
+
+## Étape 9 : Envoyer la destination pour la révision de l’Adobe {#submit-for-review}
+
+>[!NOTE]
+>
+>Cette étape n’est pas requise si vous créez une destination privée à des fins personnelles et que vous ne souhaitez pas la publier dans le catalogue de destinations pour que d’autres clients puissent l’utiliser.
+
+Enfin, avant que la destination puisse être publiée dans le catalogue des Experience Platform et visible par tous les clients Experience Platform, vous devez envoyer officiellement la destination pour la révision de l’Adobe. Obtention d’informations complètes sur la procédure à suivre [envoyer pour révision une destination productisée créée en Destination SDK](/help/destinations/destination-sdk/submit-destination.md).
