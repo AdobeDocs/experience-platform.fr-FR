@@ -3,14 +3,18 @@ keywords: Experience Platform;accueil;rubriques les plus consultées;Zone d’en
 title: Connexion de la zone d’entrée des données à Platform à l’aide de l’interface utilisateur
 description: Découvrez comment créer un connecteur source de zone d’entrée de données à l’aide de l’interface utilisateur de Platform.
 exl-id: 653c9958-5d89-4b0c-af3d-a3e74aa47a08
-source-git-commit: fb16ea940ef394a15dd24fe703239b4487fafb18
+source-git-commit: d57060ddeed64d3863f71ac1ea34ccc5c97265ea
 workflow-type: tm+mt
-source-wordcount: '606'
+source-wordcount: '631'
 ht-degree: 22%
 
 ---
 
-# Connexion [!DNL Data Landing Zone] vers Platform à l’aide de l’interface utilisateur
+# Connecter [!DNL Data Landing Zone] à Platform à l’aide de l’interface utilisateur
+
+>[!IMPORTANT]
+>
+>Cette page est spécifique aux [!DNL Data Landing Zone] *source* connecteur dans Experience Platform. Pour plus d’informations sur la connexion à la variable [!DNL Data Landing Zone] *destination* connecteur, voir [[!DNL Data Landing Zone] page de documentation de destination](/help/destinations/catalog/cloud-storage/data-landing-zone.md).
 
 [!DNL Data Landing Zone] est une fonctionnalité sécurisée de stockage de fichiers dans le cloud pour importer des fichiers dans Adobe Experience Platform. Les données sont automatiquement supprimées de la variable [!DNL Data Landing Zone] après sept jours.
 
