@@ -5,7 +5,7 @@ title: Point d’entrée de l’API des actions marketing
 description: Dans le cadre de la gouvernance des données Adobe Experience Platform, une action marketing est une action entreprise par un utilisateur de données Experience Platform pour laquelle il est nécessaire de vérifier les violations des stratégies d’utilisation des données.
 exl-id: bc16b318-d89c-4fe6-bf5a-1a4255312f54
 source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '732'
 ht-degree: 100%
 
