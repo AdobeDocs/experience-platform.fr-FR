@@ -1,17 +1,17 @@
 ---
-title: Notes de mise à jour de Adobe Experience Platform, novembre 2022
+title: Notes de mise à jour d’Adobe Experience Platform – Novembre 2022
 description: Les notes de mise à jour de novembre 2022 pour Adobe Experience Platform.
 exl-id: 1048cfae-6e7a-4d05-a004-c5c095a17fc4
 source-git-commit: ccfc46714069e8c29f1777dea5ba73e318c0a4a6
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '454'
-ht-degree: 78%
+ht-degree: 100%
 
 ---
 
 # Notes de mise à jour d’Adobe Experience Platform
 
-**Date de publication : 23 novembre 2022**
+**Date de publication : 23 novembre 2022.**
 
 Mises à jour des fonctionnalités existantes dans Adobe Experience Platform :
 
@@ -27,11 +27,11 @@ Adobe Experience Platform fournit une suite de technologies qui vous permetten
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Extension [!DNL AWS] pour le transfert d’événement | Vous pouvez désormais envoyer des données à [!DNL Amazon Web Services] ([!DNL AWS]) en utilisant un [transfert d’événement](../../tags/ui/event-forwarding/overview.md) extension . Pour plus d’informations, consultez la présentation de l’extension [[!DNL AWS] ](../../tags/extensions/server/aws/overview.md). |
-| Extension [!DNL Google Ads Enhanced Conversions] pour le transfert d’événement | Vous pouvez désormais envoyer des données de conversion à [!DNL Google Ads] à l’aide d’une [transfert d’événement](../../tags/ui/event-forwarding/overview.md) extension . Pour plus d’informations, consultez la présentation de l’extension [[!DNL Google Ads Enhanced Conversions] ](../../tags/extensions/server/google-ads-enhanced-conversions/overview.md). |
-| Extension [!DNL Microsoft Azure] pour le transfert d’événement | Vous pouvez désormais envoyer des données à [!DNL Microsoft Azure] à l’aide d’une extension de [transfert d’événement](../../tags/ui/event-forwarding/overview.md). Pour plus d’informations, consultez la présentation de l’extension [[!DNL Microsoft Azure] ](../../tags/extensions/server/azure/overview.md). |
+| Extension [!DNL AWS] pour le transfert d’événement | Vous pouvez désormais envoyer des données à [!DNL Amazon Web Services] ([!DNL AWS]) à l’aide d’une extension de [transfert d’événement](../../tags/ui/event-forwarding/overview.md). Pour plus d’informations, consultez la présentation de l’extension [[!DNL AWS] ](../../tags/extensions/server/aws/overview.md). |
+| Extension [!DNL Google Ads Enhanced Conversions] pour le transfert d’événement | Vous pouvez désormais envoyer des données de conversion à [!DNL Google Ads] à l’aide d’une extension de [transfert d’événement](../../tags/ui/event-forwarding/overview.md). Pour plus d’informations, consultez la présentation de l’extension [[!DNL Google Ads Enhanced Conversions] ](../../tags/extensions/server/google-ads-enhanced-conversions/overview.md). |
+| Extension [!DNL Microsoft Azure] pour le transfert d’événement | Vous pouvez désormais envoyer des données à [!DNL Microsoft Azure] à l’aide d’une extension de [transfert d’événement](../../tags/ui/event-forwarding/overview.md). Pour plus d’informations, consultez la présentation de l’extension [[!DNL Microsoft Azure] ](../../tags/extensions/server/azure/overview.md). |
 
-Pour plus d’informations sur les fonctionnalités de collecte de données de Platform, voir la section [présentation de la collecte de données](../../collection/home.md).
+Pour plus d’informations sur les fonctionnalités de collecte de données de Platform, consultez la [présentation de la collecte de données](../../collection/home.md).
 
 ## Modèle de données d’expérience (XDM) {#xdm}
 
@@ -41,7 +41,7 @@ XDM est une spécification Open Source qui fournit des structures et des défini
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Affecter des champs à des classes personnalisées lors de l’ajout direct à un schéma | When [ajout direct d’un champ individuel à un schéma](../../xdm/ui/resources/schemas.md#add-individual-fields), auparavant, vous ne pouviez affecter le champ qu’à un groupe de champs en tant que ressource parente. Désormais, en plus des groupes de champs, vous pouvez : [affecter le champ à une classe personnalisée](../../xdm/ui/resources/schemas.md#add-to-class) comme sa ressource parent à la place. |
+| Attribuer des champs à des classes personnalisées lors de l’ajout direct à un schéma | Auparavant, lorsque vous [ajoutiez directement un champ individuel à un schéma](../../xdm/ui/resources/schemas.md#add-individual-fields), vous ne pouviez attribuer le champ qu’à un groupe de champs en tant que sa ressource parente. Désormais, en plus des groupes de champs, vous pouvez [attribuer le champ à une classe personnalisée](../../xdm/ui/resources/schemas.md#add-to-class) en tant que sa ressource parente. |
 
 {style=&quot;table-layout:auto&quot;}
 
