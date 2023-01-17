@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform;accueil;Data Science Workspace;rubriques populaires;data science workspace;science des données
+keywords: Experience Platform;accueil;Espace de travail de science des données;rubriques populaires;espace de travail de science des donnée;science des données
 solution: Experience Platform
-title: Présentation de Data Science Workspace
-description: Ce guide présente les concepts clés de Data Science Workspace dans Adobe Experience Platform.
+title: Présentation de l’espace de travail de science des données
+description: Ce guide présente les concepts clés de l’espace de travail de science des données dans Adobe Experience Platform.
 exl-id: bef25073-0dfb-453d-8c32-7f44d917d62d
 source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2388'
 ht-degree: 100%
 
 ---
 
-# Présentation de Data Science Workspace
+# Présentation de l’espace de travail de science des données
 
 [!DNL Data Science Workspace] dans Adobe Experience Platform utilise lʼapprentissage automatique et lʼintelligence artificielle pour exploiter les informations contenues dans vos données. Intégré à Adobe Experience Platform, [!DNL Data Science Workspace] vous aide à obtenir des prévisions en utilisant votre contenu et des ressources de données de lʼensemble des solutions Adobe.
 
@@ -102,7 +102,7 @@ Dans le cadre du processus d’exploration des données, vous pouvez également 
 
 ### Expérimentation
 
-Data Science Workspace offre une flexibilité exceptionnelle au processus d’expérimentation. Commencez par votre recette. Créez ensuite une instance distincte, en utilisant le même algorithme principal associé à des caractéristiques uniques, telles que des paramètres d’optimisation. Vous pouvez créer autant d’instances que vous le souhaitez, en formant et en notant chaque instance autant de fois que vous le souhaitez. Lorsque vous les formez, [!DNL Data Science Workspace] suit les recettes, les instances de recette et les instances formées, ainsi que les mesures dʼévaluation, afin que vous nʼayez pas à le faire.
+L’espace de travail de science des données offre une flexibilité exceptionnelle au processus d’expérimentation. Commencez par votre recette. Créez ensuite une instance distincte, en utilisant le même algorithme principal associé à des caractéristiques uniques, telles que des paramètres d’optimisation. Vous pouvez créer autant d’instances que vous le souhaitez, en formant et en notant chaque instance autant de fois que vous le souhaitez. Lorsque vous les formez, [!DNL Data Science Workspace] suit les recettes, les instances de recette et les instances formées, ainsi que les mesures dʼévaluation, afin que vous nʼayez pas à le faire.
 
 ### Mise en œuvre
 
@@ -187,7 +187,7 @@ Plus important encore, [!DNL Data Science Workspace] place les fonctionnalités 
 
 L’alliance de l’expertise en matière de marques et des prouesses d’Adobe en matière d’apprentissage automatique et d’IA permet aux entreprises de développer la valeur de l’entreprise et la fidélité à la marque en donnant aux clients ce qu’ils veulent, avant qu’ils ne le demandent.
 
-Pour plus d’informations, comme un processus quotidien complet, commencez par lire la documentation de [présentation de Data Science Workspace](./walkthrough.md).
+Pour plus d’informations, comme un processus quotidien complet, commencez par lire la documentation de [présentation de l’espace de travail de science des données](./walkthrough.md).
 
 ## Ressources supplémentaires
 
