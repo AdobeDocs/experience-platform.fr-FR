@@ -5,7 +5,7 @@ title: Présentation de Data Access
 description: Data Access prend en charge Adobe Experience Platform en fournissant aux utilisateurs des outils axés sur la découverte et lʼaccessibilité des jeux de données Platform ingérés.
 exl-id: 76e3585b-44df-412e-9ac3-aeca5f85d403
 source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '185'
 ht-degree: 100%
 
@@ -21,11 +21,11 @@ ht-degree: 100%
 
 Retrouvez des informations détaillées sur lʼutilisation de lʼAPI [!DNL Data Access] pour la connexion à [!DNL Platform] dans le [guide de développement de Data Access](api.md).
 
-## Accès aux données dans Data Science Workspace
+## Accès aux données dans l’espace de travail de science des données
 
-Vous pouvez lire et écrire dans des jeux de données à lʼaide de [!DNL Python] et de [!DNL Spark] pour le développement de recettes et de modèles dans Data Science Workspace. Pour en savoir plus sur lʼaccès à vos données, consultez la documentation sur lʼ[accès aux données Python](../data-science-workspace/authoring/python.md) ou sur lʼ[accès aux données Spark](../data-science-workspace/authoring/spark.md).
+Vous pouvez lire et écrire dans des jeux de données à lʼaide de [!DNL Python] et de [!DNL Spark] pour le développement de recettes et de modèles dans l’espace de travail de science des données. Pour en savoir plus sur lʼaccès à vos données, consultez la documentation sur lʼ[accès aux données Python](../data-science-workspace/authoring/python.md) ou sur lʼ[accès aux données Spark](../data-science-workspace/authoring/spark.md).
 
-Pour plus dʼinformations sur [!DNL Data Science Workspace], commencez par lire la [présentation de Data Science Workspace](../data-science-workspace/home.md).
+Pour plus dʼinformations sur [!DNL Data Science Workspace], commencez par lire la [présentation de l’espace de travail de science des données](../data-science-workspace/home.md).
 
 ## Abonnement aux événements d’ingestion de données
 
