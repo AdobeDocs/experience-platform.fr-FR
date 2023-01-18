@@ -2,10 +2,10 @@
 description: Cette page fournit toutes les informations dont vous avez besoin pour soumettre une révision d’une destination productisée créée à l’aide de Destination SDK.
 title: Envoyer pour révision une destination productisée créée en Destination SDK
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
-source-git-commit: e68ae7d1cb87d078d9fce5a5df501cc6ce944403
+source-git-commit: 1eab40687c599d37c71b919bc3a4aeae274b0a49
 workflow-type: tm+mt
-source-wordcount: '683'
-ht-degree: 65%
+source-wordcount: '928'
+ht-degree: 42%
 
 ---
 
@@ -29,23 +29,25 @@ Pour que votre destination puisse être publiée dans le [catalogue des destinat
 Cette page répertorie toutes les informations dont vous avez besoin pour envoyer ou mettre à jour une destination créée à l’aide dʼAdobe Experience Platform Destination SDK. Pour envoyer une destination dans Adobe Experience Platform, adressez un e-mail à <aepdestsdk@adobe.com> et précisez les informations suivantes :
 
 * Une description des cas d’utilisation que votre destination résout. Cela n’est pas nécessaire si vous mettez à jour une configuration de destination existante.
-* Des résultats de test après avoir utilisé le point dʼentrée de l’API de destination de test pour effectuer un appel HTTP vers votre destination. Communiquez à Adobe les informations suivantes :
-   * Un appel API effectué vers votre point dʼentrée de destination.
-   * La réponse de l’API reçue de votre point dʼentrée de destination.
+* Des résultats de test après avoir utilisé le point dʼentrée de l’API de destination de test pour effectuer un appel HTTP vers votre destination. Partagez avec l’Adobe un appel API effectué à votre point de terminaison de destination et la réponse de l’API reçue de votre point de terminaison de destination.
+* Autres exigences pour les destinations basées sur des fichiers :
+   * Partagez une requête et un exemple de réponse après avoir utilisé l’API de test sur [tester votre destination basée sur des fichiers avec des exemples de profils ;](/help/destinations/destination-sdk/file-based-destination-testing-api.md).
+   * Joignez un fichier d’exemple généré par votre destination et exporté vers votre emplacement de stockage.
+   * Envoyez une forme de BAT indiquant que vous avez correctement ingéré le fichier exporté à partir de l’emplacement de stockage dans votre système.
 * La preuve que vous avez envoyé une demande de publication de destination pour votre destination à l’aide de l’[API de publication de destination](./destination-publish-api.md).
 * Une requête de tirage de documentation, suivant les instructions décrites dans la section [processus de documentation en libre-service](./docs-framework/documentation-instructions.md).
 * Un fichier image qui s’affichera sous forme de logo sur votre carte de destination dans le catalogue des destinations dʼExperience Platform.
 
 Vous trouverez des informations détaillées sur chaque élément dans les sections ci-dessous :
 
-## Description du cas d’utilisation
+## Description du cas d’utilisation {#use-case-description}
 
 Fournissez une description des cas d’utilisation que votre destination résout pour les clients Experience Platform. Vos descriptions peuvent être similaires aux cas d’utilisation des partenaires existants :
 
 * [Pinterest](/help/destinations/catalog/advertising/pinterest.md): Créez des audiences à partir des listes de clients, des personnes qui ont visité votre site ou des personnes qui ont déjà interagi avec votre contenu sur Pinterest.
 * [Yahoo Data X](/help/destinations/catalog/advertising/datax.md#use-cases): Les API DataX sont disponibles pour les annonceurs qui souhaitent cibler un groupe d’audience spécifique en dehors des adresses électroniques dans Verizon Media (VMG). Elles peuvent rapidement créer un nouveau segment et pousser le groupe d’audience souhaité à l’aide de l’API en temps quasi réel de VMG.
 
-## Résultats du test après l’utilisation de l’API de destination du test
+## Résultats du test après l’utilisation de l’API de destination du test {#testing-api-response}
 
 Fournissez les résultats du test après avoir utilisé le point dʼentrée de l’[API de destination du test](./test-destination.md) pour effectuer un appel HTTP vers votre destination. Cela inclut :
 
@@ -215,15 +217,35 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 }
 ```
 
-## Preuve dʼenvoi dʼune demande de publication de destination
+## Autres exigences pour les destinations basées sur des fichiers {#additional-file-based-destination-requirements}
+
+Pour les destinations basées sur des fichiers, vous devez fournir un BAT supplémentaire que vous avez correctement configuré votre destination. Veillez à inclure les éléments ci-dessous :
+
+### Test de la réponse de l’API {#testing-api-response-file-based}
+
+Inclure une requête et un exemple de réponse après avoir utilisé l’API de test pour [tester votre destination basée sur des fichiers avec des exemples de profils ;](/help/destinations/destination-sdk/file-based-destination-testing-api.md).
+
+### Joindre le fichier exporté {#attach-exported-file}
+
+Dans votre [courrier électronique d’envoi](#download-sample-email), joignez un fichier CSV qui a été exporté dans votre emplacement de stockage par la destination que vous avez configurée.
+
+### Preuve d’ingestion réussie {#proof-of-successful-ingestion}
+
+Enfin, vous devez fournir une forme de preuve que les données ont bien été ingérées dans votre système après leur exportation vers l’emplacement de stockage que vous avez fourni. Veuillez fournir tous les éléments ci-dessous :
+
+* Captures d’écran ou courte capture d’écran dans laquelle vous prenez le fichier manuellement à partir de l’emplacement de stockage et l’ingérez dans votre système.
+* Captures d’écran ou courte capture d’écran dans laquelle l’interface utilisateur de votre système confirme que le nom de fichier généré par l’Experience Platform a bien été ingéré dans votre système.
+* Des lignes de journal de votre système qui peuvent être corrélées avec le nom de fichier ou avec les données générées par Experience Platform.
+
+## Preuve dʼenvoi dʼune demande de publication de destination {#destination-publishing-request-proof}
 
 Une fois votre destination testée, vous devez utiliser l’[API de publication de destination](./destination-publish-api.md) pour envoyer la destination à Adobe pour examen et publication.
 
 Indiquez l’identifiant de la demande de publication pour votre destination. Pour plus d’informations sur la manière de récupérer l’identifiant de la demande de publication, consultez la section [Liste des demandes de publication de destination](./destination-publish-api.md#retrieve-list).
 
-## Documentation de destination PR (demande de tirage) pour les intégrations personnalisées
+## Documentation de destination PR (demande de tirage) pour les intégrations personnalisées {#documentation-pr}
 
-Si vous êtes un fournisseur de logiciels indépendant (ISV) ou un intégrateur de système (SI) créant une [intégration personnalisée](./overview.md#productized-custom-integrations), utilisez le [processus de documentation en libre-service](./docs-framework/documentation-instructions.md) pour créer une page de documentation du produit pour votre destination. Dans le cadre du processus d’envoi, indiquez la demande de tirage (PR) pour votre documentation de destination.
+Si vous êtes un fournisseur de logiciels indépendant (ISV) ou un intégrateur de système (SI), créez une [intégration productive](./overview.md#productized-custom-integrations), vous devez utiliser la variable [processus de documentation en libre-service](./docs-framework/documentation-instructions.md) pour créer une page de documentation du produit pour votre destination. Dans le cadre du processus d’envoi, indiquez la demande de tirage (PR) pour votre documentation de destination.
 
 ## Logo de votre destination {#logo}
 
@@ -233,6 +255,6 @@ Les exigences relatives aux images sont les suivantes :
 * **Format** : `SVG`
 * **Taille** : moins de 2 Mo
 
-## Télécharger un exemple d’e-mail
+## Télécharger un exemple d’e-mail {#download-sample-email}
 
 [Téléchargez](./assets/sample-email-submit-destination.rtf) un exemple d’e-mail contenant toutes les informations que vous devez fournir à Adobe.
