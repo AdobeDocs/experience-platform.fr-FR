@@ -3,10 +3,10 @@ keywords: Experience Platform;accueil;rubriques populaires;contrôle d’accès;
 title: Guide de bout en bout du contrôle d’accès basé sur les attributs
 description: Ce document fournit un guide de bout en bout sur le contrôle d’accès basé sur les attributs dans Adobe Experience Platform.
 exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
-source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
+source-git-commit: bf6fd07404ac6d937aa8660a0de024173f24f5c9
 workflow-type: tm+mt
-source-wordcount: '2427'
-ht-degree: 6%
+source-wordcount: '2425'
+ht-degree: 11%
 
 ---
 
@@ -44,7 +44,7 @@ Vous allez :
 
 * [Étiqueter les rôles de vos utilisateurs](#label-roles): Utilisez l’exemple d’un prestataire de santé (ACME Business Group) dont le groupe marketing travaille avec des agences externes.
 * [Étiqueter vos ressources (champs de schéma et segments)](#label-resources): Attribuez le **[!UICONTROL PHI/Données d’intégrité réglementées]** libellé aux ressources de schéma et aux segments.
-* [Créez la stratégie qui les reliera.](#policy): Créez une stratégie pour lier les libellés de vos ressources aux libellés de votre rôle, en refusant l’accès aux champs de schéma et aux segments. Cela refusera l’accès au champ de schéma et au segment dans tous les environnements de test pour les utilisateurs qui n’ont pas de libellés correspondants.
+* [Créez la stratégie qui les reliera.](#policy): Créez une stratégie pour lier les libellés de vos ressources aux libellés de votre rôle, en refusant l’accès aux champs de schéma et aux segments. Cela permet d’accéder au champ de schéma et au segment dans tous les environnements de test pour les utilisateurs qui disposent d’étiquettes correspondantes.
 
 ## Autorisations
 
@@ -65,19 +65,19 @@ L’espace de travail Autorisations de l’interface utilisateur de Platform s�
 >[!CONTEXTUALHELP]
 >id="platform_permissions_labels_about"
 >title="Que sont les étiquettes ?"
->abstract="Les étiquettes vous permettent de classer les jeux de données et les champs en fonction des stratégies d’utilisation qui s’appliquent à ces données. Platform fournit plusieurs libellés d’utilisation des données &quot;de base&quot; définis par l’Adobe, qui couvrent un large éventail de restrictions courantes applicables à la gouvernance des données. Par exemple, les étiquettes Sensibles &quot;S&quot; telles que RHD (données d’intégrité réglementées) vous permettent de catégoriser les données qui font référence aux informations d’intégrité protégées (PHI). Vous pouvez également définir vos propres étiquettes personnalisées en fonction des besoins de votre entreprise."
+>abstract="Les libellés vous permettent de classer les jeux de données et les champs en fonction des stratégies d’utilisation qui s’appliquent à ces données. Platform fournit plusieurs libellés d’utilisation des données &quot;de base&quot; définis par l’Adobe, qui couvrent un large éventail de restrictions courantes applicables à la gouvernance des données. Par exemple, les étiquettes Sensibles &quot;S&quot; telles que RHD (données d’intégrité réglementées) vous permettent de catégoriser les données qui font référence aux informations d’intégrité protégées (PHI). Vous pouvez également définir vos propres étiquettes personnalisées en fonction des besoins de votre entreprise."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=en#understanding-data-usage-labels" text="Présentation des libellés d’utilisation des données"
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_labels_about_create"
 >title="Créer un libellé"
 >abstract="Vous pouvez créer vos propres étiquettes personnalisées en fonction des besoins de votre entreprise. Les étiquettes personnalisées peuvent être utilisées pour appliquer à vos données des configurations de gouvernance des données et de contrôle d’accès."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=en#manage-labels" text="Gestion des libellés personnalisés"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=en#manage-labels" text="Gérer les libellés personnalisés"
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_roles_about"
 >title="Quels sont les rôles ?"
->abstract="Les rôles sont des moyens de catégoriser les types d’utilisateurs qui interagissent avec votre instance Platform et sont des blocs élémentaires des stratégies de contrôle d’accès. Un rôle possède un ensemble donné d’autorisations et les membres de votre organisation peuvent être affectés à un ou plusieurs rôles, selon la portée de l’accès en lecture ou en écriture dont ils ont besoin."
+>abstract="Les rôles sont des moyens de classer les types d’utilisateurs qui interagissent avec votre instance Platform et constituent des blocs élémentaires des politiques de contrôle d’accès. Un rôle possède un jeu d’autorisations déterminé et les membres de votre organisation peuvent être affectés à un ou plusieurs rôles, selon la portée de l’accès en lecture ou en écriture dont ils ont besoin."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=en" text="Gestion des rôles"
 
 >[!CONTEXTUALHELP]
@@ -157,7 +157,7 @@ Répétez les étapes ci-dessus avec **[!UICONTROL Insuline &lt;50]**.
 >[!CONTEXTUALHELP]
 >id="platform_permissions_policies_about"
 >title="Que sont les politiques ?"
->abstract="Les politiques sont des déclarations qui réunissent des attributs pour établir des actions permises et non admissibles. Chaque organisation s’accompagne d’une stratégie par défaut que vous devez activer pour définir des règles pour les ressources telles que les segments et les champs de schéma. Les stratégies par défaut ne peuvent pas être modifiées ni supprimées. Toutefois, les stratégies par défaut peuvent être activées ou désactivées."
+>abstract="Les stratégies sont des déclarations qui réunissent des attributs pour établir des actions autorisées et non autorisées. Chaque organisation s’accompagne d’une stratégie par défaut que vous devez activer pour définir des règles pour les ressources telles que les segments et les champs de schéma. Les stratégies par défaut ne peuvent pas être modifiées ni supprimées. Toutefois, les stratégies par défaut peuvent être activées ou désactivées."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=en" text="Gestion des stratégies"
 
 >[!CONTEXTUALHELP]
@@ -217,7 +217,7 @@ Sélectionner **[!UICONTROL Les éléments suivants sont faux :]** puis sélecti
 
 >[!TIP]
 >
->Une ressource est la ressource ou l’objet auquel un sujet peut ou ne peut pas accéder. Les ressources peuvent être des segments ou des schémas.
+>Une ressource est un actif ou un objet auquel un sujet peut ou ne peut pas accéder. Les ressources peuvent être des segments ou des schémas.
 
 Pour refuser l’accès aux segments, utilisez la flèche de liste déroulante et sélectionnez **[!UICONTROL Refuser l’accès à]** puis sélectionnez **[!UICONTROL Aucune ressource sélectionnée]**. Ensuite, sélectionnez **[!UICONTROL Segment]** puis sélectionnez **[!UICONTROL Tous]**.
 
