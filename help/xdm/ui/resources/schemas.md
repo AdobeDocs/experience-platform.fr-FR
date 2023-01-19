@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Création et modification de schémas dans l’interface utilisateur
 description: Découvrez les principes de base de la création et de l’édition de schémas dans l’interface utilisateur de l’Experience Platform.
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
+source-git-commit: 3dffa9687f3429b970e8fceebd6864a5b61ead21
 workflow-type: tm+mt
-source-wordcount: '3156'
+source-wordcount: '3203'
 ht-degree: 0%
 
 ---
@@ -26,6 +26,10 @@ Ce guide explique comment créer, modifier et gérer des schémas de modèle de 
 Ce guide nécessite une compréhension pratique du système XDM. Reportez-vous à la section [Présentation de XDM](../../home.md) pour une présentation du rôle de XDM dans l’écosystème Experience Platform, et de [principes de base de la composition des schémas](../../schema/composition.md) pour un aperçu de la création des schémas.
 
 ## Création d&#39;un schéma {#create}
+
+>[!NOTE]
+>
+>Cette section explique comment créer manuellement un nouveau schéma dans l’interface utilisateur. Si vous ingérez des données CSV dans Platform, vous pouvez choisir de [mapper ces données à un schéma XDM créé par des recommandations générées par l’IA](../../../ingestion/tutorials/map-csv/recommendations.md) (actuellement en version bêta) sans avoir à créer manuellement le schéma.
 
 Dans le [!UICONTROL Schémas] espace de travail, sélectionnez **[!UICONTROL Créer un schéma]** dans le coin supérieur droit. Dans la liste déroulante qui s’affiche, vous pouvez choisir entre **[!UICONTROL XDM Individual Profile]** et **[!UICONTROL XDM ExperienceEvent]** comme classe de base du schéma. Vous pouvez également sélectionner **[!UICONTROL Parcourir]** pour effectuer une sélection dans la liste complète des classes disponibles, ou [créer une classe personnalisée](./classes.md#create) au lieu de .
 

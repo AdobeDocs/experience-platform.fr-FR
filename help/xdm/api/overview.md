@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Guide de l’API Schema Registry
 description: L’API Schema Registry permet aux développeurs de gérer par programmation tous les schémas et toutes les ressources XDM (Experience Data Model) associées dans Adobe Experience Platform. Suivez ce guide pour savoir comment effectuer des opérations clés à l’aide de l’API.
 exl-id: 9e693d29-303e-462a-a1e2-93c0d517b8e3
-source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
+source-git-commit: 3dffa9687f3429b970e8fceebd6864a5b61ead21
 workflow-type: tm+mt
-source-wordcount: '1084'
-ht-degree: 9%
+source-wordcount: '1118'
+ht-degree: 8%
 
 ---
 
@@ -29,7 +29,9 @@ Pour afficher tous les points de terminaison disponibles et les opérations CRUD
 
 Les schémas XDM représentent et valident la structure et le format des données ingérées dans Platform. Un schéma est composé d’une classe et de zéro ou plusieurs groupes de champs de schéma. Vous pouvez créer, afficher, modifier et supprimer des schémas à l’aide du `/schemas` point de terminaison . Pour savoir comment utiliser ce point de terminaison, voir [guide de point d’entrée des schémas](./schemas.md).
 
-Pour obtenir un guide détaillé sur la création d’un schéma complet dans l’API Schema Registry, notamment sur la création et l’ajout de groupes de champs et de types de données, reportez-vous à la section [Tutoriel sur la création de schémas d’API](../tutorials/create-schema-api.md).
+Pour obtenir un guide détaillé sur la création manuelle d’un schéma complet dans l’API Schema Registry, y compris la création et l’ajout de groupes de champs et de types de données, reportez-vous à la section [Tutoriel sur la création de schémas d’API](../tutorials/create-schema-api.md).
+
+Si vous ingérez des données CSV, reportez-vous à la section sur [Conversion CSV en schéma](#csv-to-schema).
 
 ## Comportements
 
@@ -62,6 +64,10 @@ Pour savoir comment afficher les unions dans l’API Schema Registry, reportez-v
 Vous pouvez générer automatiquement un schéma XDM à l’aide d’un fichier CSV comme modèle, ce qui vous permet de créer des modèles pour importer en bloc des champs de schéma et de réduire le travail manuel de l’API ou de l’interface utilisateur.
 
 Voir [Guide du point de terminaison de conversion de schéma au format CSV](./export.md) pour plus d’informations.
+
+>[!NOTE]
+>
+>Vous pouvez également utiliser l’interface utilisateur pour [mappage d’un fichier CSV à un schéma à l’aide de recommandations générées par l’IA](../../ingestion/tutorials/map-csv/recommendations.md) (actuellement en version bêta).
 
 ## Exporter {#export}
 

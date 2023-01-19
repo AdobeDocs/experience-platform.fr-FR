@@ -5,10 +5,10 @@ title: Création d’un schéma à l’aide de l’API Schema Registry
 type: Tutorial
 description: Ce tutoriel utilise l’API Schema Registry pour vous guider tout au long des étapes de composition d’un schéma à l’aide d’une classe standard.
 exl-id: fa487a5f-d914-48f6-8d1b-001a60303f3d
-source-git-commit: 030874e91b88b18f7de0cc2d12200243b7ed1d31
+source-git-commit: 3dffa9687f3429b970e8fceebd6864a5b61ead21
 workflow-type: tm+mt
-source-wordcount: '2556'
-ht-degree: 41%
+source-wordcount: '2588'
+ht-degree: 40%
 
 ---
 
@@ -17,6 +17,10 @@ ht-degree: 41%
 Le [!DNL Schema Registry] est utilisé pour accéder à la variable [!DNL Schema Library] dans Adobe Experience Platform. Le [!DNL Schema Library] contient les ressources mises à votre disposition par Adobe, [!DNL Experience Platform] partenaires et fournisseurs dont vous utilisez les applications. Le registre fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les ressources disponibles de la bibliothèque sont accessibles.
 
 Ce tutoriel utilise la méthode [!DNL Schema Registry] API pour vous guider dans les étapes de composition d’un schéma à l’aide d’une classe standard. Si vous préférez utiliser l’interface utilisateur dans [!DNL Experience Platform], la variable [Tutoriel de l’éditeur de schémas](create-schema-ui.md) fournit des instructions détaillées pour exécuter des actions similaires dans l’éditeur de schémas.
+
+>[!NOTE]
+>
+>Si vous ingérez des données CSV dans Platform, vous pouvez [mapper ces données à un schéma XDM créé par des recommandations générées par l’IA](../../ingestion/tutorials/map-csv/recommendations.md) (actuellement en version bêta) sans avoir à créer manuellement le schéma.
 
 ## Prise en main
 

@@ -5,9 +5,9 @@ title: Création d’un schéma à l’aide de l’éditeur de schémas
 type: Tutorial
 description: Ce tutoriel décrit les étapes de création d’un schéma à l’aide de l’éditeur de schémas d’Experience Platform.
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
-source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
+source-git-commit: 3dffa9687f3429b970e8fceebd6864a5b61ead21
 workflow-type: tm+mt
-source-wordcount: '3893'
+source-wordcount: '3924'
 ht-degree: 10%
 
 ---
@@ -16,11 +16,13 @@ ht-degree: 10%
 
 L’interface utilisateur de Adobe Experience Platform vous permet de créer et de gérer des [!DNL Experience Data Model] Schémas (XDM) dans une zone de travail visuelle interactive appelée [!DNL Schema Editor]. Ce tutoriel explique comment créer un schéma à l’aide du [!DNL Schema Editor].
 
+À des fins de démonstration, les étapes de ce tutoriel impliquent la création d’un exemple de schéma qui décrit les membres d’un programme de fidélité des clients. Bien que vous puissiez utiliser ces étapes pour créer un schéma différent à vos propres fins, il est recommandé de suivre d’abord la création de l’exemple de schéma pour découvrir les fonctionnalités de [!DNL Schema Editor].
+
 >[!NOTE]
 >
->À des fins de démonstration, les étapes de ce tutoriel impliquent la création d’un exemple de schéma qui décrit les membres d’un programme de fidélité des clients. Bien que vous puissiez utiliser ces étapes pour créer un schéma différent à vos propres fins, il est recommandé de suivre d’abord la création de l’exemple de schéma pour découvrir les fonctionnalités de [!DNL Schema Editor].
-
-Si vous préférez composer un schéma à l’aide de la méthode [!DNL Schema Registry] à la place, commencez par lire la variable [[!DNL Schema Registry] guide de développement](../api/getting-started.md) avant de lancer le tutoriel sur [création d’un schéma à l’aide de l’API](create-schema-api.md).
+>Si vous ingérez des données CSV dans Platform, vous pouvez [mapper ces données à un schéma XDM créé par des recommandations générées par l’IA](../../ingestion/tutorials/map-csv/recommendations.md) (actuellement en version bêta) sans avoir à créer manuellement le schéma.
+>
+>Si vous préférez composer un schéma à l’aide de la méthode [!DNL Schema Registry] API, commencez par lire la [[!DNL Schema Registry] guide de développement](../api/getting-started.md) avant de lancer le tutoriel sur [création d’un schéma à l’aide de l’API](create-schema-api.md).
 
 ## Prise en main
 
@@ -212,7 +214,7 @@ Lors de la définition de champs dans la variable [!DNL Schema Editor], vous pou
 | [!UICONTROL Tableau] | Indique que le champ contient un tableau de valeurs, chacune avec le type de données spécifié. Par exemple, l’utilisation de cette contrainte sur un champ avec un type de données &quot;[!UICONTROL Chaîne]&quot; indique que le champ contiendra un tableau de chaînes. |
 | [!UICONTROL Énumération et valeurs proposées] | Une énumération indique que ce champ doit contenir l&#39;une des valeurs d&#39;une liste énumérée de valeurs possibles. Vous pouvez également utiliser cette option pour fournir une liste des valeurs suggérées pour un champ de chaîne sans contraindre le champ à ces valeurs. |
 | [!UICONTROL Identité] | Indique que ce champ est un champ d’identité. Vous trouverez plus d’informations sur les champs d’identité [dans la suite de ce tutoriel](#identity-field). |
-| [!UICONTROL Relation] | Bien que les relations de schéma puissent être déduites par l’utilisation du schéma d’union et [!DNL Real-Time Customer Profile], cela s’applique uniquement aux schémas qui partagent la même classe. Le [!UICONTROL Relation] La contrainte indique que ce champ fait référence à l’identité Principale d’un schéma basée sur une classe différente, impliquant une relation entre les deux schémas. Voir le tutoriel sur [définition d’une relation](./relationship-ui.md) pour plus d’informations. |
+| [!UICONTROL Relation] | Bien que les relations de schéma puissent être déduites par l’utilisation du schéma d’union et [!DNL Real-Time Customer Profile], cela s’applique uniquement aux schémas qui partagent la même classe. Le [!UICONTROL Relation] La contrainte indique que ce champ fait référence à l’identité Principale d’un schéma basée sur une classe différente, ce qui implique une relation entre les deux schémas. Voir le tutoriel sur [définition d’une relation](./relationship-ui.md) pour plus d’informations. |
 
 {style=&quot;table-layout:auto&quot;}
 
