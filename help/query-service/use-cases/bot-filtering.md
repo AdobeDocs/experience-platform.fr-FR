@@ -2,7 +2,7 @@
 title: Filtrage des robots dans Query Service avec apprentissage automatique
 description: Ce document fournit une vue d’ensemble de l’utilisation de Query Service et de l’apprentissage automatique pour déterminer l’activité des robots et filtrer leurs actions sur le véritable trafic des visiteurs du site Web en ligne.
 exl-id: fc9dbc5c-874a-41a9-9b60-c926f3fd6e76
-source-git-commit: 8a7c04ebe8fe372dbf686fddc92867e938a93614
+source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
 workflow-type: tm+mt
 source-wordcount: '899'
 ht-degree: 6%
@@ -23,7 +23,7 @@ Ce document fournit un aperçu et des exemples détaillés des requêtes de filt
 
 Dans le cadre de ce processus, vous devez entraîner un modèle d’apprentissage automatique. Ce document suppose une connaissance pratique d’un ou de plusieurs environnements d’apprentissage automatique.
 
-Cet exemple utilise [!DNL Jupyter Notebook] en tant qu’environnement de développement. Bien qu’il existe de nombreuses options disponibles, [!DNL Jupyter Notebook] est recommandé, car il s’agit d’une application web open source qui a de faibles exigences de calcul. Cela peut être [téléchargé sur le site officiel](https://jupyter.org/).
+Cet exemple utilise [!DNL Jupyter Notebook] comme environnement de développement. Bien qu’il existe de nombreuses options disponibles, [!DNL Jupyter Notebook] est recommandé, car il s’agit d’une application web open source qui a de faibles exigences de calcul. Cela peut être [téléchargé sur le site officiel](https://jupyter.org/).
 
 ## Utilisation [!DNL Query Service] pour définir un seuil pour une activité de robot
 

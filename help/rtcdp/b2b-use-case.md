@@ -3,10 +3,10 @@ keywords: RTCDP;CDP;Real-time Customer Data Platform;plateforme de données clie
 title: Exemple de cas d’utilisation pour l’édition B2B de Real-time Customer Data Platform
 description: Cet exemple de scénario fournit un exemple de configuration de votre implémentation de l’édition B2B de Real-Time Customer Data Platform.
 exl-id: 15505980-ac33-44b2-8989-c08cbabd212b
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
 workflow-type: tm+mt
 source-wordcount: '1135'
-ht-degree: 85%
+ht-degree: 83%
 
 ---
 
@@ -42,7 +42,7 @@ Au cours du mois dernier, `p2@townsend.com` a visité la nouvelle page produit e
 
 ## Le problème
 
-Secteur 1 vient de lancer un nouveau logiciel et souhaite en effectuer la vente incitative auprès des meilleurs clients de Bodea. Bodea lance une campagne marketing avec cette audience cible spécifique en tête.
+Line 1 vient de sortir un nouveau logiciel et souhaite le vendre à la clientèle de premier rang existante de Bodea. Bodea lance une campagne marketing avec cette audience cible spécifique en tête.
 
 Les informations pertinentes au sujet de Townsend étant enregistrées comme Compte 1 dans Marketo 1 et Compte 2 dans Marketo 2, l’équipe marketing de Bodea est incapable d’utiliser efficacement les informations compartimentées.
 
@@ -87,7 +87,7 @@ En utilisant les destinations Marketo Engage et LinkedIn, Bodea dispose d’une 
 
 ## Étapes suivantes
 
-En lisant ce document, vous avez maintenant découvert les types d’objectifs et de problèmes qui peuvent être résolus à l’aide de Real-Time CDP B2B Edition.
+En lisant ce document, vous avez maintenant découvert les types d’objectifs et de problèmes qui peuvent être résolus à l’aide de l’édition B2B de Real-Time CDP.
 
 La documentation suivante est recommandée pour améliorer votre compréhension des fonctionnalités spécifiques au B2B :
 

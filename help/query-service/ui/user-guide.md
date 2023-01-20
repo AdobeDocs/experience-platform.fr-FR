@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Guide de l’interface utilisateur de Query Editor
 description: Query Editor est un outil interactif fourni par Adobe Experience Platform Query Service. Il permet d’écrire, de valider et d’exécuter des requêtes pour les données d’expérience client dans l’interface utilisateur d’Experience Platform. Query Editor prend en charge le développement de requête pour l’analyse et l’exploration de données. Il vous permet également d’exécuter des requêtes interactives à des fins de développement, ainsi que des requêtes non interactives pour renseigner les jeux de données dans Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
-source-wordcount: '2100'
-ht-degree: 98%
+source-wordcount: '1715'
+ht-degree: 87%
 
 ---
 
@@ -115,57 +115,17 @@ Ce panneau présente également des métadonnées utiles, telles que la dernièr
 
 ### Requêtes planifiées {#scheduled-queries}
 
->[!IMPORTANT]
->
->Vous trouverez ci-dessous une liste des limitations des requêtes planifiées lorsque vous utilisez l’éditeur de requêtes. Elles ne s’appliquent pas à l’API [!DNL Query Service] :<br/>Vous pouvez uniquement ajouter un planning à une requête qui a déjà été créée, enregistrée et exécutée.<br/>Vous **ne pouvez pas** ajouter un planning à une requête paramétrée.<br/>Les requêtes planifiées **ne peuvent pas** contenir un bloc anonyme.
+Les requêtes qui ont été enregistrées en tant que modèle peuvent être planifiées à partir de l’éditeur de requêtes. Vous pouvez ainsi automatiser les exécutions de requête exécutées sur une cadence personnalisée. Vous pouvez planifier des requêtes en fonction de la fréquence, de la date et de l’heure, et choisir également un jeu de données de sortie pour vos résultats, si nécessaire. Les plannings de requête peuvent également être désactivés ou supprimés via l’interface utilisateur.
 
-Les plannings sont définis à partir du Query Editor. Toutefois, seules les requêtes qui ont déjà été enregistrées en tant que modèle peuvent être planifiées. Pour ajouter un planning à une requête, sélectionnez un modèle de requête dans l’onglet [!UICONTROL Modèles] ou [!UICONTROL Requêtes planifiées] pour accéder au Query Editor.
+Les plannings sont définis à partir du Query Editor. Vous trouverez ci-dessous une liste des limitations des requêtes planifiées lorsque vous utilisez l’éditeur de requêtes. Elles ne s’appliquent pas au [!DNL Query Service] API :
 
-Pour savoir comment ajouter des plannings à l’aide de l’API, veuillez lire le [guide de point d’entrée des requêtes planifiées](../api/scheduled-queries.md).
+- Vous pouvez uniquement ajouter un planning à une requête qui a déjà été créée, enregistrée et exécutée.
+- Vous **ne pouvez pas** ajouter un planning à une requête paramétrée.
+- Les requêtes planifiées **ne peuvent pas** contenir un bloc anonyme.
 
-Lorsqu’une requête enregistrée est accessible à partir du Query Editor, l’onglet [!UICONTROL Plannings] s’affiche sous le nom de la requête. Sélectionnez **[!UICONTROL Plannings]**.
+Consultez la documentation sur les plannings de requête pour savoir comment [création de plannings de requête dans l’interface utilisateur](./query-schedules.md). Pour savoir comment ajouter des plannings à l’aide de l’API, vous pouvez également lire le [guide de point de terminaison des requêtes planifiées](../api/scheduled-queries.md).
 
-![Query Editor avec l’onglet Plannings en surbrillance.](../images/ui/query-editor/schedules-tab.png)
-
-L’espace de travail des plannings s’affiche. Sélectionnez **[!UICONTROL Ajouter un planning]** pour créer un planning.
-
-![Espace de travail Planning du Query Editor avec l’option Ajouter un planning mise en surbrillance.](../images/ui/query-editor/add-schedule.png)
-
-La page Détails du planning s’affiche. Sur cette page, vous pouvez choisir la fréquence de la requête planifiée, la date de début et de fin, le jour de la semaine où la requête planifiée sera exécutée, ainsi que le jeu de données vers lequel exporter la requête.
-
-![Le panneau Détails du planning est mis en surbrillance.](../images/ui/query-editor/schedule-details.png)
-
-Vous pouvez choisir les options suivantes pour **[!UICONTROL Fréquence]** :
-
-- **[!UICONTROL Horaire]** : la requête planifiée s’exécute toutes les heures pour la période que vous avez sélectionnée.
-- **[!UICONTROL Quotidien]** : la requête planifiée s’exécute tous les X jours à l’heure et à la période que vous avez sélectionnées. Notez que l’heure sélectionnée est indiquée en **UTC**, et non dans votre fuseau horaire local.
-- **[!UICONTROL Hebdomadaire]** : la requête sélectionnée sera exécutée aux jours de la semaine, à l’heure et à la période que vous avez sélectionnés. Notez que l’heure sélectionnée est indiquée en **UTC**, et non dans votre fuseau horaire local.
-- **[!UICONTROL Mensuel]** : la requête sélectionnée s’exécute tous les mois au jour, à l’heure et à la période que vous avez sélectionnés. Notez que l’heure sélectionnée est indiquée en **UTC**, et non dans votre fuseau horaire local.
-- **[!UICONTROL Annuel]** : la requête sélectionnée s’exécute chaque année au jour, au mois, à l’heure et à la période que vous avez sélectionnés. Notez que l’heure sélectionnée est indiquée en **UTC**, et non dans votre fuseau horaire local.
-
-Pour le jeu de données, vous avez la possibilité d’en utiliser un existant ou d’en créer un nouveau.
-
->[!IMPORTANT]
->
-> Puisque vous utilisez un jeu de données existant ou que vous en créez un nouveau, vous n’avez **pas** besoin d’inclure `INSERT INTO` ou `CREATE TABLE AS SELECT` dans le cadre de la requête, puisque les jeux de données sont déjà définis. L’inclusion de `INSERT INTO` ou `CREATE TABLE AS SELECT` dans le cadre de vos requêtes planifiées entraînera une erreur.
-
-Après avoir confirmé tous ces détails, sélectionnez **[!UICONTROL Enregistrer]** pour créer un planning. L’espace de travail des plannings affiche les détails du planning nouvellement créé, y compris l’ID du planning, le planning lui-même et le jeu de données de sortie du planning. Vous pouvez utiliser l’ID de planning pour rechercher plus d’informations sur les exécutions de la requête planifiée elle-même. Pour en savoir plus, veuillez lire le [guide des points d’entrée d’exécution de requête planifiée](../api/runs-scheduled-queries.md).
-
-![Espace de travail des plannings avec le nouveau planning mis en surbrillance.](../images/ui/query-editor/schedules-workspace.png)
-
-#### Supprimer ou désactiver un planning {#delete-schedule}
-
-Vous pouvez supprimer ou désactiver un planning dans l’espace de travail des plannings. Vous devez sélectionner un modèle de requête à partir de l’onglet [!UICONTROL Modèles] ou de l’onglet [!UICONTROL Requêtes planifiées] pour accéder à l’éditeur de requêtes et sélectionner **[!UICONTROL Planning]** pour accéder à l’espace de travail des plannings.
-
-Sélectionnez un planning dans les lignes des plannings disponibles. Vous pouvez activer ou désactiver la requête planifiée à l’aide du bouton d’activation.
-
->[!IMPORTANT]
->
->Vous devez désactiver le planning avant de pouvoir supprimer un planning pour une requête.
-
-Sélectionnez **[!UICONTROL Supprimer un planning]** pour supprimer le planning désactivé.
-
-![L’espace de travail des plannings avec l’option Désactiver le planning et Supprimer le planning est en surbrillance.](../images/ui/query-editor/delete-schedule.png)
+Toutes les requêtes planifiées sont ajoutées à la liste dans la variable [!UICONTROL Requêtes planifiées] . Depuis cet espace de travail, vous pouvez surveiller l’état de toutes les tâches de requête planifiées via l’interface utilisateur. Sur le [!UICONTROL Requêtes planifiées] vous pouvez trouver des informations importantes sur les exécutions de requête et vous abonner aux alertes. Les informations disponibles incluent l’état, les détails de planification et les codes/messages d’erreur en cas d’échec de l’exécution. Voir [Surveiller le document des requêtes planifiées](./monitor-queries.md) pour plus d’informations.
 
 ### Enregistrement des requêtes {#saving-queries}
 
@@ -179,7 +139,7 @@ Le [!DNL Query Editor] offre une fonction de sauvegarde qui vous permet d’enre
 
 Toutes les requêtes exécutées à partir du [!DNL Query Editor] sont capturées dans le tableau Journal. Vous pouvez utiliser la fonctionnalité de recherche dans l’onglet **[!UICONTROL Journal]** pour rechercher des exécutions de requête. Les requêtes enregistrées sont répertoriées dans l’onglet **[!UICONTROL Modèles]**.
 
-Si une requête a été planifiée, alors l’onglet [!UICONTROL Requêtes planifiées] offre une meilleure visibilité à travers l’interface utilisateur pour ces tâches de requête. Pour plus d’informations, consultez la [documentation sur la surveillance des requêtes](../monitor-queries.md).
+Si une requête a été planifiée, alors l’onglet [!UICONTROL Requêtes planifiées] offre une meilleure visibilité à travers l’interface utilisateur pour ces tâches de requête. Pour plus d’informations, consultez la [documentation sur la surveillance des requêtes](./monitor-queries.md).
 
 >[!NOTE]
 >

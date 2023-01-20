@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guide de l’IU de Query Service
 description: Adobe Experience Platform Query Service présente une interface utilisateur qui permet d’écrire et d’exécuter des requêtes, de voir les requêtes précédemment exécutées et d’accéder aux requêtes enregistrées par les utilisateurs au sein de votre organisation IMS.
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
 source-wordcount: '1095'
 ht-degree: 86%
@@ -46,7 +46,7 @@ Une fois qu’une requête a été planifiée, elle apparaît dans la liste des 
 | **[!UICONTROL La date et l’heure de la dernière exécution]** | La date et l’heure les plus récentes auxquelles la requête a été exécutée. Cette colonne met en évidence si une requête a été exécutée conformément à son planning actuel. |
 | **[!UICONTROL Statut de la dernière exécution]** | Statut de la dernière exécution de la requête. Les trois valeurs de statut sont les suivantes : `successful` `failed` ou `in progress`. |
 
-Consultez la documentation pour plus d’informations sur la manière de [Surveillance des requêtes via l’interface utilisateur de Query Service](../monitor-queries.md).
+Consultez la documentation pour plus d’informations sur la manière de [Surveillance des requêtes via l’interface utilisateur de Query Service](./monitor-queries.md).
 
 ## Modèles {#browse}
 

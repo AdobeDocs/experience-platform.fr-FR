@@ -5,10 +5,10 @@ title: Directives générales pour l’exécution de requête dans Query Service
 type: Tutorial
 description: Ce document présente les détails importants à connaître lors de l’écriture de requêtes dans Adobe Experience Platform Query Service.
 exl-id: a7076c31-8f7c-455e-9083-cbbb029c93bb
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
-source-wordcount: '1047'
-ht-degree: 47%
+source-wordcount: '1072'
+ht-degree: 46%
 
 ---
 
@@ -311,7 +311,7 @@ LIMIT 50;
 
 ## Déduplication
 
-Query Service prend en charge le dédoublonnage des données ou la suppression des doublons de lignes des données. Pour plus d’informations sur la déduplication, veuillez lire la section [Guide de déduplication de Query Service](./deduplication.md).
+Query Service prend en charge le dédoublonnage des données ou la suppression des doublons de lignes des données. Pour plus d’informations sur la déduplication, veuillez lire la section [Guide de déduplication de Query Service](../essential-concepts/deduplication.md).
 
 ## Calcul des fuseaux horaires dans Query Service
 
@@ -325,4 +325,7 @@ Pour plus d’exemples de requêtes pouvant être utilisées dans Query Service,
 
 - [Analytics insights](../use-cases/analytics-insights.md)
 - [Analyse des activités avec Adobe Target](../use-cases/activity-analysis-with-adobe-target.md)
-- [Exemples de requêtes ExperienceEvent](../sample-queries/experience-event.md).
+- [Créer un rapport de tendance d’événements](../use-cases/trended-report-of-events.md)
+- [Afficher un rapport de cumul d’un visiteur](../use-cases/roll-up-report-of-a-visitor.md)
+- [Répertorier les pages vues d’un utilisateur](../use-cases/list-visitor-sessions.md)
+- [Répertorier les visiteurs selon leur nombre de pages vues](../use-cases/visitors-by-number-of-page-views.md)

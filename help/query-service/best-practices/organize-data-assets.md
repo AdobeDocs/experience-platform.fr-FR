@@ -2,7 +2,7 @@
 title: Bonnes pratiques pour l’organisation des ressources de données dans Query Service
 description: Ce document décrit un moyen logique d’organiser les données pour faciliter leur utilisation avec Query Service.
 exl-id: 12d6af99-035a-4f80-b7c0-c6413aa50697
-source-git-commit: 36fc6f996b4ffd33f542eb9be4fbc50f3fcdd1cb
+source-git-commit: d3ea7ee751962bb507c91e1afea0da35da60a66d
 workflow-type: tm+mt
 source-wordcount: '788'
 ht-degree: 0%
@@ -170,4 +170,4 @@ DROP SCHEMA databaseA.schema2;
 
 ## Étapes suivantes
 
-En lisant ce document, vous comprenez mieux les bonnes pratiques concernant l’organisation et la structure de vos ressources de données à utiliser avec Adobe Experience Platform Query Service. Il est recommandé de continuer à en apprendre davantage sur les bonnes pratiques de Query Service en lisant la section [documentation sur la déduplication des données](./deduplication.md).
+En lisant ce document, vous comprenez mieux les bonnes pratiques concernant l’organisation et la structure de vos ressources de données à utiliser avec Adobe Experience Platform Query Service. Il est recommandé de continuer à en apprendre davantage sur les bonnes pratiques de Query Service en lisant la section [documentation sur la déduplication des données](../essential-concepts/deduplication.md).

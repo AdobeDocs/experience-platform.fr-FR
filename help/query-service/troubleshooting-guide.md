@@ -1,17 +1,17 @@
 ---
 keywords: Experience Platform;accueil;rubriques les plus consultées;service de requête;Query Service;guide de dépannage;questions fréquentes;dépannage;
 solution: Experience Platform
-title: Guide de dépannage de Query Service
+title: Questions fréquentes
 description: Ce document contient les questions les plus fréquentes et les réponses associées concernant Query Service. Les rubriques incluent l’exportation de données, les outils tiers et les erreurs PSQL.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
 source-wordcount: '4383'
 ht-degree: 99%
 
 ---
 
-# Guide de dépannage de [!DNL Query Service]
+# Questions fréquentes
 
 Ce document fournit des réponses aux questions fréquentes sur Query Service et fournit une liste des codes d’erreur courants lors de l’utilisation de Query Service. Pour toute question ou dépannage concernant les autres services d’Adobe Experience Platform, consultez le [guide de dépannage d’Experience Platform](../landing/troubleshooting.md).
 
@@ -116,7 +116,7 @@ Les étapes suivantes décrivent comment afficher une vue tabulaire d’un jeu d
 
 ![Schéma XDM et vue tabulaire des données aplaties. Le nom de colonne d’un jeu de données imbriqué est mis en surbrillance dans l’interface utilisateur.](./images/troubleshooting/column-name.png)
 
-Consultez la documentation pour obtenir des conseils complets sur [comment travailler avec des structures de données imbriquées](./best-practices/nested-data-structures.md) à l’aide de Query Editor ou d’un client tiers.
+Consultez la documentation pour obtenir des conseils complets sur [comment travailler avec des structures de données imbriquées](./essential-concepts/nested-data-structures.md) à l’aide de Query Editor ou d’un client tiers.
 +++
 
 ### Comment accélérer une requête sur un jeu de données contenant des tableaux ?
@@ -156,7 +156,7 @@ Une bannière déroulante s’affiche avec une section [!UICONTROL Aide et assis
 +++Réponse
 La fonction de bloc anonyme vous permet d’enchaîner une ou plusieurs instructions SQL exécutées de manière séquentielle. Les blocs anonymes permettent également de gérer les exceptions.
 
-Pour en savoir plus, consultez la [documentation sur les blocs anonymes](./best-practices/anonymous-block.md).
+Pour en savoir plus, consultez la [documentation sur les blocs anonymes](./essential-concepts/anonymous-block.md).
 +++
 
 ### Comment mettre en œuvre l’attribution personnalisée dans Query Service ?
@@ -245,7 +245,7 @@ AS SELECT '1' as _id,
 ### Comment traiter rapidement les nouvelles données qui entrent chaque jour dans le système ?
 
 +++Réponse
-Vous pouvez utiliser la clause [`SNAPSHOT`](./sql/syntax.md#snapshot-clause) pour lire de manière incrémentielle les données d’une table en fonction d’un identifiant d’instantané. Ceci est idéal pour une utilisation avec le modèle de conception de [chargement incrémentiel](./best-practices/incremental-load.md) qui traite uniquement les informations du jeu de données qui ont été créées ou modifiées depuis la dernière exécution du chargement. Cela permet d’augmenter l’efficacité du traitement et peut être utilisé avec le traitement des données en flux continu et par lots.
+Vous pouvez utiliser la clause [`SNAPSHOT`](./sql/syntax.md#snapshot-clause) pour lire de manière incrémentielle les données d’une table en fonction d’un identifiant d’instantané. Ceci est idéal pour une utilisation avec le modèle de conception de [chargement incrémentiel](./essential-concepts/incremental-load.md) qui traite uniquement les informations du jeu de données qui ont été créées ou modifiées depuis la dernière exécution du chargement. Cela permet d’augmenter l’efficacité du traitement et peut être utilisé avec le traitement des données en flux continu et par lots.
 +++
 
 ### Pourquoi y a-t-il une différence entre les nombres affichés dans l’interface utilisateur du profil et les nombres calculés à partir du jeu de données d’exportation du profil ?

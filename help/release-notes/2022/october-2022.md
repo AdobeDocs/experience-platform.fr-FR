@@ -2,7 +2,7 @@
 title: Notes de mise à jour d’octobre 2022 d’Adobe Experience Platform
 description: Les notes de mise à jour d’octobre 2022 pour Adobe Experience Platform.
 exl-id: 61ef2472-5e79-433f-9f60-b1245f619b42
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
 source-wordcount: '1352'
 ht-degree: 97%
@@ -104,8 +104,8 @@ Query Service vous permet d’utiliser le langage SQL standard pour interroger l
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Surveiller des requêtes via l’interface utilisateur de Platform | L’onglet [!UICONTROL Requêtes planifiées] de Query Service offre une visibilité améliorée du statut de tous les traitements de requêtes à travers l’interface utilisateur. Vous pouvez maintenant retrouver des informations importantes sur le statut de vos exécutions de requête, y compris des messages d’erreur et des codes en cas d’échec, depuis l’onglet [!UICONTROL Requêtes planifiées]. Via l’interface utilisateur, vous pouvez également vous abonner à des alertes pour n’importe laquelle de ces requêtes, en fonction de son statut. Consultez le [document sur la surveillance des requêtes](../../query-service/monitor-queries.md) pour en savoir plus sur cette fonctionnalité. |
-| Modèle de données d’insights de rapports accélérés par les requêtes | Dans le cadre du SKU Data Distiller, le magasin d’accélération des requêtes vous permet de réduire le temps et la puissance de traitement requis pour obtenir des insights importants à partir de vos données. Avec le magasin d’accélération des requêtes, vous pouvez créer un modèle de données personnalisé et/ou étendre les modèles de données Adobe Real-time Customer Data Platform existants pour améliorer vos insights de rapports et leurs visualisations. Consultez le [document sur les insights de rapports du magasin d’accélération des requêtes](../../query-service/query-accelerated-store/reporting-insights-data-model.md) pour en savoir plus sur cette fonctionnalité. |
+| Surveiller des requêtes via l’interface utilisateur de Platform | L’onglet [!UICONTROL Requêtes planifiées] de Query Service offre une visibilité améliorée du statut de tous les traitements de requêtes à travers l’interface utilisateur. Vous pouvez maintenant retrouver des informations importantes sur le statut de vos exécutions de requête, y compris des messages d’erreur et des codes en cas d’échec, depuis l’onglet [!UICONTROL Requêtes planifiées]. Via l’interface utilisateur, vous pouvez également vous abonner à des alertes pour n’importe laquelle de ces requêtes, en fonction de son statut. Consultez le [document sur la surveillance des requêtes](../../query-service/ui/monitor-queries.md) pour en savoir plus sur cette fonctionnalité. |
+| Modèle de données d’insights de rapports accélérés par les requêtes | Dans le cadre du SKU Data Distiller, le magasin d’accélération des requêtes vous permet de réduire le temps et la puissance de traitement requis pour obtenir des insights importants à partir de vos données. Avec le magasin d’accélération des requêtes, vous pouvez créer un modèle de données personnalisé et/ou étendre les modèles de données Adobe Real-time Customer Data Platform existants pour améliorer vos insights de rapports et leurs visualisations. Consultez le [document sur les insights de rapports du magasin d’accélération des requêtes](../../query-service/data-distiller/query-accelerated-store/reporting-insights-data-model.md) pour en savoir plus sur cette fonctionnalité. |
 
 {style=&quot;table-layout:auto&quot;}
 

@@ -4,10 +4,10 @@ user-guide-title: Aide d’Adobe Experience Platform Query Service
 breadcrumb-title: Guide de Query Service
 user-guide-description: Utilisez le langage SQL standard pour interroger les données du lac de données dans Experience Platform.
 feature: Queries
-source-git-commit: b8c2a9ab44274e2719e7178119a58f14d0442955
+source-git-commit: 3d549b14571be7ec3455da0e23181951cb991a9d
 workflow-type: tm+mt
-source-wordcount: '232'
-ht-degree: 100%
+source-wordcount: '264'
+ht-degree: 70%
 
 ---
 
@@ -17,58 +17,30 @@ ht-degree: 100%
 - [Présentation de Query Service](home.md)
 - [Package Query Service](packages.md)
 - [Barrières de sécurité de Query Service](guardrails.md)
-- Data Distiller {#data-distiller}
-   - [Utilisation des licences](data-distiller/licence-usage.md)
 - Prise en main {#get-started}
    - [Conditions préalables](get-started/prerequisites.md)
+- Data Distiller {#data-distiller}
+   - [Utilisation des licences](data-distiller/licence-usage.md)
+   - Boutique de requêtes accélérées {#query-accelerated-store}
+      - [Envoi de requêtes accélérées](data-distiller/query-accelerated-store/send-accelerated-queries.md)
+      - [Guide du modèle de données des insights de reporting](data-distiller/query-accelerated-store/reporting-insights-data-model.md)
+   - Attributs dérivés {#derived-attributes}
+      - [Présentation](data-distiller/derived-attributes/overview.md)
+      - [Création d’attributs dérivés basés sur des déciles](data-distiller/derived-attributes/decile-based-derived-attributes.md)
 - Cas d’utilisation {#use-cases}
    - [Navigation abandonnée](use-cases/abandoned-browse.md)
    - [Analyse des activités avec Adobe Target](use-cases/activity-analysis-with-adobe-target.md)
    - [Analyse de l’attribution](use-cases/attribution-analysis.md)
    - [Filtrage des robots](use-cases/bot-filtering.md)
-   - [Informations sur les analyses web et mobiles](use-cases/analytics-insights.md)
+   - [Créer un rapport de tendance d’événements](use-cases/trended-report-of-events.md)
+   - [Attributs dérivés basés sur la décile](use-cases/deciles-use-case.md)
+   - [Répertorier les pages vues d’un utilisateur](use-cases/list-visitor-sessions.md)
+   - [Répertorier les visiteurs selon leurs pages vues](use-cases/visitors-by-number-of-page-views.md)
    - [Score de propension](use-cases/propensity-score.md)
    - [SQLAlchemy](use-cases/sqlalchemy.md)
-- API Query Service {#api}
-   - [Prise en main](api/getting-started.md)
-   - [Requêtes](api/queries.md)
-   - [Paramètres de connexion](api/connection-parameters.md)
-   - [Requêtes planifiées](api/scheduled-queries.md)
-   - [Exécutions pour les requêtes planifiées](api/runs-scheduled-queries.md)
-   - [Modèles de requête](api/query-templates.md)
-   - [Requêtes accélérées](api/accelerated-queries.md)
-   - [Abonnements aux alertes](api/alert-subscriptions.md)
-- UI Query Service {#ui}
-   - [Présentation de l’interface utilisateur](ui/overview.md)
-   - [Guide d’utilisation de Query Editor](ui/user-guide.md)
-   - [Modèles de requête](ui/query-templates.md)
-   - [Utilisation des informations dʼidentification de Query Service](ui/credentials.md)
-   - [Génération des jeux de données à partir de résultats de requête](ui/create-datasets.md)
-- [Surveiller les requêtes](monitor-queries.md)
-- Boutique de requêtes accélérées {#query-accelerated-store}
-   - [Modèle de données d’insights de rapports](query-accelerated-store/reporting-insights-data-model.md)
-- Bonnes pratiques {#best-practices}
-   - [Directives générales pour l’exécution des requêtes](best-practices/writing-queries.md)
-   - [Conseils pour l’organisation des ressources de données](./best-practices/organize-data-assets.md)
-   - [Utilisation de structures de données imbriquées](best-practices/nested-data-structures.md)
-   - [Aplatir les structures de données imbriquées](best-practices/flatten-nested-data.md)
-   - [Bloc anonyme](best-practices/anonymous-block.md)
-   - [Chargement incrémentiel](best-practices/incremental-load.md)
-   - [Dédoublonnage des données](best-practices/deduplication.md)
-- Attributs dérivés {#derived-attributes}
-   - [Présentation](derived-attributes/overview.md)
-   - [Cas d’utilisation des déciles](derived-attributes/deciles-use-case.md)
-- Exemples de requêtes {#sample-queries}
-   - [Exemples de requêtes dʼévénements dʼexpérience](sample-queries/experience-event.md)
-   - [Exemples de requêtes Adobe Analytics](sample-queries/adobe-analytics.md)
-- Référence SQL {#sql}
-   - [Présentation de SQL](sql/overview.md)
-   - [Syntaxe SQL](sql/syntax.md)
-   - [Fonctions définies par Adobe](sql/adobe-defined-functions.md)
-   - [Fonctions Spark SQL](sql/spark-sql-functions.md)
-   - [Commandes de métadonnées](sql/metadata.md)
-   - [Instructions préparées](sql/prepared-statements.md)
-   - [Exemples de jeux de données](sql/dataset-samples.md)
+   - [Renvoi et utilisation de variables de marchandisage à partir de données d’analyse](use-cases/merchandising-variables.md)
+   - [Afficher le rapport de cumul pour un visiteur](use-cases/roll-up-report-of-a-visitor.md)
+   - [Informations sur les analyses web et mobiles](use-cases/analytics-insights.md)
 - Connexion des clients à Query Service {#clients}
    - [Présentation de la connexion des clients](clients/overview.md)
    - [Modes SSL](./clients/ssl-modes.md)
@@ -81,11 +53,45 @@ ht-degree: 100%
    - [PSQL](clients/psql.md)
    - [RStudio](clients/rstudio.md)
    - [Tableau](clients/tableau.md)
+- UI Query Service {#ui}
+   - [Présentation de l’interface utilisateur](ui/overview.md)
+   - [Guide d’utilisation de Query Editor](ui/user-guide.md)
+   - [Modèles de requête](ui/query-templates.md)
+   - [Planifications de requête](ui/query-schedules.md)
+   - [Surveillance des requêtes planifiées](ui/monitor-queries.md)
+   - [Guide d’identification](ui/credentials.md)
+   - [Génération de jeux de données de sortie à partir des résultats de requête](ui/create-datasets.md)
+- Points d’entrée de l’API Query Service {#api}
+   - [Prise en main](api/getting-started.md)
+   - [Requêtes](api/queries.md)
+   - [Paramètres de connexion](api/connection-parameters.md)
+   - [Plannings](api/scheduled-queries.md)
+   - [Exécutions pour les requêtes planifiées](api/runs-scheduled-queries.md)
+   - [Modèles de requête](api/query-templates.md)
+   - [Requêtes accélérées](api/accelerated-queries.md)
+   - [Abonnements aux alertes](api/alert-subscriptions.md)
 - Gouvernance des données {#data-governance}
    - [Présentation](data-governance/overview.md)
    - [Guide du journal d’audit](data-governance/audit-log-guide.md)
    - [Identités dans les jeux de données à schéma ad hoc](data-governance/ad-hoc-schema-identities.md)
    - [Prise en charge du contrôle d’accès basé sur les attributs pour les schémas ad hoc](./data-governance/ad-hoc-schema-labels.md)
-- [Guide de dépannage](troubleshooting-guide.md)
+- Bonnes pratiques {#best-practices}
+   - [Exécution de la requête](best-practices/writing-queries.md)
+   - [Organisation des ressources de données](./best-practices/organize-data-assets.md)
+- Concepts essentiels {#essential-concepts}
+   - [Utilisation de structures de données imbriquées](essential-concepts/nested-data-structures.md)
+   - [Aplatir les structures de données imbriquées](essential-concepts/flatten-nested-data.md)
+   - [Bloc anonyme](essential-concepts/anonymous-block.md)
+   - [Chargement incrémentiel](essential-concepts/incremental-load.md)
+   - [Dédoublonnage des données](essential-concepts/deduplication.md)
+   - [Exemples de jeux de données](essential-concepts/dataset-samples.md)
+- Référence SQL {#sql}
+   - [Présentation de SQL](sql/overview.md)
+   - [Syntaxe SQL](sql/syntax.md)
+   - [Fonctions définies par Adobe](sql/adobe-defined-functions.md)
+   - [Fonctions Spark SQL](sql/spark-sql-functions.md)
+   - [Commandes de métadonnées](sql/metadata.md)
+   - [Instructions préparées](sql/prepared-statements.md)
+- [Questions fréquentes](troubleshooting-guide.md)
 - [Référence d’API](https://www.adobe.io/experience-platform-apis/references/query-service/)
 - [Notes de mise à jour de Platform](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=fr)

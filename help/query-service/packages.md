@@ -1,7 +1,8 @@
 ---
 title: Packages Query Service
 description: Le document suivant décrit les packages de fonctionnalités et de produits disponibles pour Query Service et met en évidence les différences entre les requêtes ad hoc et les requêtes par lots.
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+exl-id: ba472d9e-afe6-423d-9abd-13ecea43f04f
+source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
 workflow-type: tm+mt
 source-wordcount: '720'
 ht-degree: 8%
@@ -42,7 +43,7 @@ Le tableau suivant décrit les principaux droits de Query Service en fonction de
 
 {style=&quot;table-layout:auto&quot;}
 
-## Contrôle d&#39;accès
+## Contrôle d’accès
 
 Le contrôle d’accès de l’Experience Platform est géré à l’aide de la variable [Adobe Admin Console](https://adminconsole.adobe.com/) où les profils de produit lient les utilisateurs à des autorisations et des environnements de test. Pour plus d’informations, consultez la [présentation du contrôle d’accès](../access-control/home.md).
 

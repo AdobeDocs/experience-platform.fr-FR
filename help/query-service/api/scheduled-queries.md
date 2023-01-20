@@ -1,17 +1,17 @@
 ---
 keywords: Experience Platform;accueil;rubriques populaires;service de requête;service de requête;requêtes planifiées;requête planifiée;
 solution: Experience Platform
-title: Point de terminaison de l’API Requêtes planifiées
+title: Point de terminaison des planifications
 description: Les sections suivantes décrivent les différents appels d’API que vous pouvez effectuer pour les requêtes planifiées avec l’API Query Service.
 exl-id: f57dbda5-da50-4812-a924-c8571349f1cd
-source-git-commit: 2ad86b0cf3cdc89825501b94bd609df751026420
+source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
-source-wordcount: '1139'
+source-wordcount: '1136'
 ht-degree: 73%
 
 ---
 
-# Point de terminaison des requêtes planifiées
+# Point de terminaison des planifications
 
 ## Exemples d’appels API
 

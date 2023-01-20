@@ -3,7 +3,7 @@ keywords: Experience Platform;service de requête;service de requête;requête
 title: Exemple de cas d’utilisation pour Adobe Experience Platform Query Service
 description: Exemple de bout en bout montrant la versatilité et les avantages de Adobe Experience Platform Query Service.
 exl-id: 00bdae47-71b7-44ea-9365-a1d64c88d2bf
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
 source-wordcount: '712'
 ht-degree: 3%
@@ -73,11 +73,11 @@ Adobe Experience Platform fournit un référentiel de données et les outils né
 
 ## Étapes suivantes
 
-En lisant ce document, vous devriez maintenant comprendre comment [!DNL Query Service] impacte non seulement la qualité de vos données et la facilité de la segmentation, mais également leur importance dans votre architecture de données pour l’ensemble du workflow de bout en bout. Pour des exemples SQL plus applicables qui utilisent Adobe Analytics avec [!DNL Query Service], reportez-vous à la section [Exemple de documentation sur les requêtes Adobe Analytics](../sample-queries/adobe-analytics.md).
+En lisant ce document, vous devriez maintenant comprendre comment [!DNL Query Service] impacte non seulement la qualité de vos données et la facilité de la segmentation, mais également leur importance dans votre architecture de données pour l’ensemble du workflow de bout en bout. Pour des exemples SQL plus applicables qui utilisent Adobe Analytics avec [!DNL Query Service], reportez-vous à la section [Cas d’utilisation des variables de marchandisage Adobe Analytics](./merchandising-variables.md).
 
 Autres documents présentant les avantages de [!DNL Query Service] Pour consulter les informations stratégiques de votre entreprise, reportez-vous à la section [cas d’utilisation du filtrage de robots](./bot-filtering.md) par exemple.
 
-Vous pouvez également consulter ces documents qui vous permettront de mieux comprendre [!DNL Query Service] fonctionnalités :
+Vous pouvez également utiliser ces documents pour mieux comprendre [!DNL Query Service] fonctionnalités :
 
 * [Conseils pour l’exécution des requêtes](../best-practices/writing-queries.md)
 * [Conseils pour l’organisation des ressources de données](../best-practices/organize-data-assets.md).

@@ -2,10 +2,10 @@
 title: Intégration du journal d’audit de Query Service
 description: Les journaux d’audit de Query Service conservent des enregistrements pour diverses actions de l’utilisateur afin de former un journal d’audit pour la résolution des problèmes ou le respect des politiques de gestion des données d’entreprise et des exigences réglementaires. Ce tutoriel présente un aperçu des fonctionnalités de journal d’audit spécifiques à Query Service.
 exl-id: 5fdc649f-3aa1-4337-965f-3f733beafe9d
-source-git-commit: 40de87ae407884d4ec7c75215fc7319721fbe1d0
+source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
 workflow-type: tm+mt
 source-wordcount: '935'
-ht-degree: 2%
+ht-degree: 8%
 
 ---
 
@@ -17,7 +17,7 @@ Pour en savoir plus sur l’interface utilisateur des journaux d’audit, report
 
 ## Conditions préalables
 
-Vous devez avoir la variable [!DNL Data Governance] [!UICONTROL Afficher le journal d’activité utilisateur] autorisation activée pour afficher le tableau de bord du journal d’audit dans l’interface utilisateur de Platform. L’autorisation est activée via l’Adobe [Admin Console](https://adminconsole.adobe.com/). Contactez l’administrateur de votre entreprise si vous ne disposez pas des privilèges d’administrateur pour activer cette autorisation. Consultez la documentation sur le contrôle d’accès pour [instructions complètes sur l’ajout d’autorisations via Admin Console](../../access-control/home.md).
+Vous devez avoir la variable [!DNL Data Governance] [!UICONTROL Afficher le journal d’activité utilisateur] autorisation activée pour afficher le tableau de bord du journal d’audit dans l’interface utilisateur de Platform. L’autorisation est activée via l’[Admin Console](https://adminconsole.adobe.com/) d’Adobe. Contactez l’administrateur ou administratrice de votre organisation si vous ne disposez pas des privilèges d’administrateur pour activer cette autorisation. Consultez la documentation sur le contrôle d’accès pour des [instructions complètes sur l’ajout d’autorisations via Admin Console](../../access-control/home.md).
 
 ## [!DNL Query Service] catégories du journal d’audit {#audit-log-categories}
 
@@ -35,13 +35,13 @@ Pour effectuer un audit pour [!DNL Query Service] activités, sélectionnez **[!
 
 ![Le tableau de bord du journal d’audit de l’interface utilisateur de Platform avec &quot;Audits&quot; dans le volet de navigation de gauche et les contrôles de filtre mis en surbrillance.](../images/audit-log/filter-controls.png)
 
-Dans la [!UICONTROL Audits] tableau de bord [!UICONTROL Journal d’activité] vous pouvez filtrer toutes les actions de Platform enregistrées selon l’une des options [!DNL Query Service] catégories. Les résultats du journal peuvent être filtrés davantage en fonction de la période pendant laquelle ils ont été exécutés, de l’action/de la fonction entreprise ou de l’utilisateur ayant déclenché la requête. Consultez la documentation du journal d’audit pour [instructions complètes sur la manière de filtrer les journaux en fonction de la catégorie, de l’action, de l’utilisateur et de l’état](../../landing/governance-privacy-security/audit-logs/overview.md#managing-audit-logs-in-the-ui).
+Dans la [!UICONTROL Audits] tableau de bord [!UICONTROL Journal d’activité] , vous pouvez filtrer toutes les actions de Platform enregistrées selon l’une des [!DNL Query Service] catégories. Les résultats du journal peuvent être filtrés davantage en fonction de la période pendant laquelle ils ont été exécutés, de l’action/de la fonction entreprise ou de l’utilisateur ayant déclenché la requête. Consultez la documentation du journal d’audit pour [instructions complètes sur la manière de filtrer les journaux en fonction de la catégorie, de l’action, de l’utilisateur et de l’état](../../landing/governance-privacy-security/audit-logs/overview.md#managing-audit-logs-in-the-ui).
 
 Les données du journal d’audit renvoyées contiennent les informations suivantes sur toutes les requêtes qui répondent aux critères de filtrage de votre choix.
 
 | Nom de la colonne | Description |
 |---|---|
-| [!UICONTROL Horodatage] | La date et l’heure exactes de l’action effectuée dans une `month/day/year hour:minute AM/PM` format. |
+| [!UICONTROL Date et heure] | La date et l’heure exactes de l’action effectuée dans une `month/day/year hour:minute AM/PM` format. |
 | [!UICONTROL Nom de la ressource] | La valeur de la variable [!UICONTROL Nom de la ressource] dépend de la catégorie choisie comme filtre. Lors de l’utilisation de la variable [!UICONTROL Requête planifiée] catégorie il s’agit de la **nom du planning**. Lors de l’utilisation de la variable [!UICONTROL Modèle de requête] catégorie, il s’agit de la **nom du modèle**. Lors de l’utilisation de la variable [!UICONTROL Requête] catégorie, il s’agit de la **session ID** |
 | [!UICONTROL Catégorie] | Ce champ correspond à la catégorie que vous avez sélectionnée dans la liste déroulante des filtres. |
 | [!UICONTROL Action] | Il peut s’agir de créer, supprimer, mettre à jour ou exécuter . Les actions disponibles dépendent de la catégorie choisie comme filtre. |
@@ -82,7 +82,7 @@ Les filtres disponibles varient en fonction de la catégorie sélectionnée dans
 | Catégorie | Voir [[!DNL Query Service] catégories du journal d’audit](#audit-log-categories) pour obtenir une liste complète des catégories disponibles. |
 | Action | En ce qui concerne [!DNL Query Service] catégories d’audit, la mise à jour est une **modification du formulaire existant**, la suppression correspond à la propriété **suppression du planning ou du modèle**, créer est **création d’un nouveau planning ou d’un nouveau modèle**, et l’exécution est **exécution d’une requête**. |
 | Utilisateur | Saisissez l’ID utilisateur complet (par exemple, johndoe@acme.com) à filtrer par utilisateur. |
-| État | Le [!UICONTROL Autoriser], [!UICONTROL Succès], et [!UICONTROL Échec] Les options filtrent les journaux en fonction de l’état ou de l’état de l’événement, tandis que la variable [!UICONTROL Refuser] l’option sera filtrée. **all** journaux. |
+| Statut | Le [!UICONTROL Autoriser], [!UICONTROL Succès], et [!UICONTROL Échec] Les options filtrent les journaux en fonction de l’état ou de l’état de l’événement, tandis que la variable [!UICONTROL Refuser] l’option sera filtrée. **all** journaux. |
 | Date | Sélectionnez une date de début et/ou une date de fin pour définir une période en fonction de laquelle filtrer les résultats. |
 
 ## Étapes suivantes

@@ -2,16 +2,16 @@
 title: Modèle de données Real-time Customer Data Platform Insights
 description: Découvrez comment utiliser les requêtes SQL avec les modèles de données Real-time Customer Data Platform Insights pour personnaliser vos propres rapports Real-Time CDP pour vos cas d’utilisation de marketing et d’indicateurs de performance clés.
 exl-id: 61bc7f23-9f79-4c75-a515-85dd9dda2d02
-source-git-commit: 9f33ad0146b72f820530233b651370c43fafe713
+source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
 workflow-type: tm+mt
 source-wordcount: '1109'
-ht-degree: 1%
+ht-degree: 7%
 
 ---
 
 # Modèle de données Real-time Customer Data Platform Insights
 
-La fonction Modèle de données Real-time Customer Data Platform Insights présente les modèles de données et SQL qui alimentent les insights pour divers widgets de profil, de destination et de segmentation. Vous pouvez personnaliser ces modèles de requête SQL afin de créer des rapports Real-Time CDP pour vos cas d’utilisation d’indicateurs de performance clés (IPC) et marketing. Ces insights peuvent ensuite être utilisées comme widgets personnalisés pour vos tableaux de bord définis par l’utilisateur. Pour en savoir plus, consultez la documentation sur les informations sur les rapports de magasin accélérées de requête . [comment créer un modèle de données d’informations sur les rapports via Query Service pour l’utiliser avec des données de magasin accélérées et des tableaux de bord définis par l’utilisateur](../query-service/query-accelerated-store/reporting-insights-data-model.md).
+La fonction Modèle de données Real-time Customer Data Platform Insights présente les modèles de données et SQL qui alimentent les insights pour divers widgets de profil, de destination et de segmentation. Vous pouvez personnaliser ces modèles de requête SQL afin de créer des rapports Real-Time CDP pour vos cas d’utilisation d’indicateurs de performance clés (IPC) et marketing. Ces insights peuvent ensuite être utilisées comme widgets personnalisés pour vos tableaux de bord définis par l’utilisateur. Pour en savoir plus, consultez la documentation sur les informations sur les rapports de magasin accélérées de requête . [comment créer un modèle de données d’informations sur les rapports via Query Service pour l’utiliser avec des données de magasin accélérées et des tableaux de bord définis par l’utilisateur](../query-service/data-distiller/query-accelerated-store/reporting-insights-data-model.md).
 
 ## Conditions préalables
 
@@ -92,7 +92,7 @@ L’image ci-dessous contient les champs de données appropriés dans chaque jeu
 
 #### Profils par cas d’utilisation d’identité
 
-Le [!UICONTROL Profils par identité] widget affiche la ventilation des identités pour tous les profils fusionnés de votre banque de profils. Voir [[!UICONTROL Profils par identité] documentation du widget](./guides/profiles.md#profiles-by-identity) pour plus d’informations.
+Le widget [!UICONTROL Profils par identité] affiche la répartition des identités pour tous les profils fusionnés de votre banque de profils. Voir [[!UICONTROL Profils par identité] documentation du widget](./guides/profiles.md#profiles-by-identity) pour plus d’informations.
 
 Le SQL qui génère la variable [!UICONTROL Profils par identité] Le widget est visible dans la section réductible ci-dessous.
 
@@ -239,7 +239,7 @@ FROM
 
 #### Cas d’utilisation des segments récemment activés
 
-La logique de la variable [!UICONTROL Segments récemment activés] fournit une liste des segments mappés le plus récemment à une destination. Cette liste fournit un instantané des segments et des destinations activement utilisés dans le système et peut vous aider à résoudre les problèmes de mappages erronés. Voir [[!UICONTROL Segments récemment activés] documentation du widget](./guides/destinations.md#recently-activated-segments) pour plus d’informations.
+La logique de la variable [!UICONTROL Segments récemment activés] fournit une liste des segments mappés le plus récemment à une destination. Cette liste fournit un instantané des segments et des destinations utilisés actuellement dans le système et peut aider à corriger les mappages erronés. Voir [[!UICONTROL Segments récemment activés] documentation du widget](./guides/destinations.md#recently-activated-segments) pour plus d’informations.
 
 Le SQL qui génère la variable [!UICONTROL Segments récemment activés] Le widget est visible dans la section réductible ci-dessous.
 

@@ -2,7 +2,7 @@
 title: Notes de mise à jour d’Adobe Experience Platform - Septembre 2022
 description: Les notes de mise à jour de septembre 2022 pour Adobe Experience Platform.
 exl-id: a7a4dcf8-2cf3-4e39-879d-bdfcbacb737a
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
 source-wordcount: '2934'
 ht-degree: 98%
@@ -25,7 +25,7 @@ Mises à jour des fonctionnalités existantes dans Adobe Experience Platform 
 - [Collecte de données](#data-collection)
 - [Destinations](#destinations)
 - [Modèle de données d’expérience (XDM)](#xdm)
-- [Identity Service](#identity-service)
+- [Service d’identités](#identity-service)
 - [Query Service](#query-service)
 - [Sources](#sources)
 
@@ -56,18 +56,18 @@ L’IA dédiée à l’attribution est utilisée pour attribuer des crédits aux
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Enregistrer une instance de brouillon | Cette nouvelle fonctionnalité permet aux analystes marketing d’enregistrer un modèle de configuration en tant qu’instance de brouillon et de continuer à la modifier jusqu’à ce qu’elle soit terminée avant la formation et la notation. Les scénarios où cette fonctionnalité est utile incluent notamment : lorsqu’un utilisateur dispose de plusieurs champs à définir dans le workflow, mais qu’il ne peut pas les terminer en raison de contraintes de temps. Un autre scénario se produit lorsqu’une ou plusieurs statistiques de jeux de données sont en cours de traitement et ne sont pas encore disponibles. Lisez le [Guide de l’utilisateur de l’IA dédiée à l’attribution](../../intelligent-services/attribution-ai/user-guide.md#governance-policies) pour en savoir plus. |
+| Enregistrer une instance de brouillon | Cette nouvelle fonctionnalité permet aux analystes marketing d’enregistrer un modèle de configuration en tant qu’instance de brouillon et de continuer à la modifier jusqu’à ce qu’elle soit terminée avant la formation et la notation. Les scénarios où cette fonctionnalité est utile incluent notamment le suivant : lorsqu’un utilisateur dispose de plusieurs champs à définir dans le workflow, mais qu’il ne peut pas les terminer en raison de contraintes de temps. Un autre scénario se produit lorsqu’une ou plusieurs statistiques de jeux de données sont en cours de traitement et ne sont pas encore disponibles. Lisez le [Guide de l’utilisateur de l’IA dédiée à l’attribution](../../intelligent-services/attribution-ai/user-guide.md#governance-policies) pour en savoir plus. |
 | Politiques de gouvernance | Une fois que les utilisateurs se sont engagés à créer une instance par le biais du workflow de configuration, le nouveau service d’application des politiques vérifie s’il existe des violations des politiques de l’utilisation des données et affiche les détails dans une fenêtre contextuelle. Il garantit que les opérations de données et les actions marketing sont conformes aux politiques d’utilisation des données configurées sur Adobe Experience Platform. |
 
 Consultez la [présentation de l’IA dédiée à l’attribution](../../intelligent-services/attribution-ai/overview.md) pour plus d’informations. Pour plus d’informations sur les politiques de gouvernance des données, consultez la [présentation des politiques](../../data-governance/policies/overview.md).
 
 ### IA dédiée aux clients
 
-L’IA dédiée aux clients disponible dans Real-time Customer Data Platform est utilisée pour générer des scores de propension personnalisés tels que l’attrition et la conversion pour des profils individuels à grande échelle.
+L’IA dédiée aux clients disponible dans Real-time Customer Data Platform est utilisée pour générer des scores de propension personnalisés tels que l’attrition et la conversion pour des profils individuels à grande échelle.
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Enregistrer une instance de brouillon | Cette nouvelle fonctionnalité permet aux analystes marketing d’enregistrer un modèle de configuration en tant qu’instance de brouillon et de continuer à la modifier jusqu’à ce qu’elle soit terminée avant la formation et la notation. Les scénarios où cette fonctionnalité est utile incluent notamment : lorsqu’un utilisateur dispose de plusieurs champs à définir dans le workflow, mais qu’il ne peut pas les terminer en raison de contraintes de temps. Un autre scénario se produit lorsqu’une ou plusieurs statistiques de jeux de données sont en cours de traitement et ne sont pas encore disponibles. Lisez le [Guide de l’utilisateur de l’IA dédiée aux clients](../../intelligent-services/customer-ai/user-guide/configure.md#governance-policies) pour en savoir plus. |
+| Enregistrer une instance de brouillon | Cette nouvelle fonctionnalité permet aux analystes marketing d’enregistrer un modèle de configuration en tant qu’instance de brouillon et de continuer à la modifier jusqu’à ce qu’elle soit terminée avant la formation et la notation. Les scénarios où cette fonctionnalité est utile incluent notamment le suivant : lorsqu’un utilisateur dispose de plusieurs champs à définir dans le workflow, mais qu’il ne peut pas les terminer en raison de contraintes de temps. Un autre scénario se produit lorsqu’une ou plusieurs statistiques de jeux de données sont en cours de traitement et ne sont pas encore disponibles. Lisez le [Guide de l’utilisateur de l’IA dédiée aux clients](../../intelligent-services/customer-ai/user-guide/configure.md#governance-policies) pour en savoir plus. |
 | Politiques de gouvernance | Une fois que les utilisateurs se sont engagés à créer une instance par le biais du workflow de configuration, le nouveau service d’application des politiques vérifie s’il existe des violations des politiques de l’utilisation des données et affiche les détails dans une fenêtre contextuelle. Il garantit que les opérations de données et les actions marketing sont conformes aux politiques d’utilisation des données configurées sur Adobe Experience Platform. |
 
 Consultez la [présentation de l’IA dédiée aux clients](../../intelligent-services/customer-ai/overview.md) pour plus d’informations. Pour plus d’informations sur les politiques de gouvernance des données, consultez la [présentation des politiques](../../data-governance/policies/overview.md).
@@ -80,7 +80,7 @@ Experience Platform vous permet d’auditer l’activité des utilisateurs pour 
 
 | Fonctionnalité | Nom | Description |
 | --- | --- | --- |
-| Ressources ajoutées | <ul><li>Instance IA dédiée à l’attribution</li><li>Instance IA dédiée aux clients</li><li>Flux de données</li></ul> | Les ressources du journal d’audit sont automatiquement enregistrées lorsque l’activité se produit. Si la fonctionnalité est activée, vous ne devez pas activer manuellement la collecte des journaux. |
+| Ressources ajoutées | <ul><li>Instance IA dédiée à l’attribution</li><li>Instance IA dédiée aux clients</li><li>Train de données</li></ul> | Les ressources du journal d’audit sont automatiquement enregistrées lorsque l’activité se produit. Si la fonctionnalité est activée, vous ne devez pas activer manuellement la collecte des journaux. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -88,7 +88,7 @@ Pour plus d’informations sur les différents types d’événements spécifiqu
 
 ## [!DNL Dashboards] {#dashboards}
 
-Adobe Experience Platform fournit de nombreux tableaux de bord grâce auxquels vous pouvez afficher des insights importants sur les données de votre organisation, telles quʼelles sont capturées lors dʼinstantanés quotidiens.
+Adobe Experience Platform fournit de nombreux tableaux de bord grâce auxquels vous pouvez afficher des nformationsimportantes sur les données de votre organisation, telles quʼelles sont capturées lors dʼinstantanés quotidiens.
 
 | Fonctionnalité | Description |
 | --- | --- |
@@ -97,7 +97,7 @@ Adobe Experience Platform fournit de nombreux tableaux de bord grâce auxquels
 | Modèle de données d’insights Customer Data Platform | La fonctionnalité Modèle de données d’insights Customer Data Platform (CDP) expose les modèles de données et SQL qui alimentent les insights pour divers widgets de profil, de destination et de segmentation. Vous pouvez personnaliser ces modèles de requête SQL pour créer des rapports CDP pour vos cas d’utilisation de marketing et d’indicateurs clés de performance. Ces insights peuvent ensuite être utilisées comme widgets personnalisés pour vos tableaux de bord définis par l’utilisateur. Lisez le [guide de fonctionnalité du modèle de données d’insights CDP](../../dashboards/cdp-insights-data-model.md) pour en savoir plus. |
 | Widget de rapport de chevauchements d’audience | Ce widget est disponible pour les deux tableaux de bord [!UICONTROL Profils] et [!UICONTROL Segments]. Le rapport fournit une liste d’audiences classées selon les pourcentages de chevauchement les plus élevés ou les plus bas pour le segment sélectionné. Dans le tableau de bord [!UICONTROL Profils], vous pouvez filtrer et afficher le chevauchement de vos audiences par stratégie de fusion de tous les segments disponibles. Les tableaux de bord [!UICONTROL Segments] vous permettent de filtrer le chevauchement des audiences selon un segment spécifique.<br>Utilisez cette analyse pour créer de nouveaux segments hautement performants et éviter d’envoyer la même audience vers différentes destinations. Le rapport permet également d’identifier les insights masqués afin d’améliorer la segmentation ou de localiser les profils uniques à rechercher. Lisez les guides des widgets [profils](../../dashboards/guides/profiles.md#audience-overlap-report) et [segments](../../dashboards/guides/segments.md#audience-overlap-report) pour en savoir plus. |
 
-Pour plus d’informations sur les [!DNL Dashboards], consultez la [[!DNL Dashboards] présentation](../../dashboards/home.md).
+Pour plus d’informations sur Query Service [!DNL Dashboards], consultez la [[!DNL Dashboards] présentation](../../dashboards/home.md) de Query Service.
 
 ## Collecte de données {#data-collection}
 
@@ -109,7 +109,7 @@ Adobe Experience Platform fournit une suite de technologies qui vous permetten
 | --- | --- |
 | Intégration de la navigation de gauche dans l’interface utilisateur de Platform | Toutes les fonctionnalités qui étaient auparavant exclusives à l’interface utilisateur de collecte de données (y compris les balises, le transfert d’événement et les flux de données) sont désormais disponibles via la navigation de gauche dans Experience Platform, sous la catégorie **[!UICONTROL Collecte de données]**. Il n’est donc pas nécessaire de basculer entre les interfaces utilisateur lors de l’utilisation des fonctionnalités de collecte de données dans Platform. |
 | Attribution utilisateur dans les balises et le transfert d’événement | Lors de l’énumération des [!UICONTROL propriétés] disponibles dans les balises et le transfert d’événement, chaque propriété répertoriée indique désormais à quand remonte sa dernière mise à jour et quel utilisateur l’a effectuée. |
-| [[!DNL Snap Conversions API] extension](https://exchange.adobe.com/apps/ec/108550) pour le transfert d’événement | Vous pouvez désormais envoyer des données à l’[!DNL Snapchat Conversions API] à l’aide d’une extension de [transfert d’événement](../../tags/ui/event-forwarding/overview.md). Pour plus d’informations sur la configuration et l’utilisation de l’API, voir la [[!DNL Snapchat Marketing API] documentation dédiée](https://marketingapi.snapchat.com/docs/conversion.html). |
+| [[!DNL Snap Conversions API] Extension](https://exchange.adobe.com/apps/ec/108550) Snap Conversions API pour le transfert d’événement | Vous pouvez désormais envoyer des données à [!DNL Snapchat Conversions API] à l’aide d’une extension de [transfert d’événement](../../tags/ui/event-forwarding/overview.md). Pour plus d’informations sur l’authentification et l’utilisation de l’API, voir la [[!DNL Snapchat Marketing API] documentation](https://marketingapi.snapchat.com/docs/conversion.html) Snapchat Marketing API dédiée.  |
 | [[!DNL User-Agent Client Hints] dans le SDK Web](../../edge/fundamentals/user-agent-client-hints.md) | Le SDK Web prend désormais en charge [[!DNL User-Agent Client Hints]](https://developer.chrome.com/docs/privacy-sandbox/user-agent/). Les conseils clients permettent aux propriétaires de site web d’accéder aux mêmes informations que celles disponibles dans la chaîne [!DNL User-Agent], mais d’une manière plus respectueuse de la vie privée. |
 | [Migration page par page du SDK Web](../../edge/home.md#migrating-to-web-sdk) | Vous pouvez désormais migrer vos propriétés web existantes à partir d’autres bibliothèques Experience Cloud, telles que [!DNL at.js], vers le SDK Web, une page à la fois. Vous pouvez ainsi adopter une approche progressive dans la migration du SDK Web, sans qu’il soit nécessaire de migrer toutes vos pages à la fois. |
 
@@ -194,11 +194,11 @@ XDM est une spécification Open Source qui fournit des structures et des défini
 
 Pour plus d’informations sur XDM dans Platform, consultez la [présentation du système XDM](../../xdm/home.md).
 
-## Identity Service {#identity-service}
+## Service d’identités {#identity-service}
 
 Proposer des expériences numériques pertinentes nécessite une compréhension complète de votre client. Cela devient plus difficile lorsque les données de vos clients sont fragmentées entre plusieurs systèmes, chaque client semble donc posséder plusieurs « identités ».
 
-Adobe Experience Platform Identity Service vous permet de mieux connaître vos clients et leurs comportements, en établissant un lien entre les identités des différents appareils et systèmes, ce qui vous permet de proposer des expériences numériques personnelles et percutantes en temps réel.
+Le Service d&#39;identités d&#39;Adobe Experience Platform vous permet de mieux connaître vos clients et leurs comportements, en établissant un lien entre les identités des différents appareils et systèmes, ce qui vous permet de proposer des expériences digitales personnelles et percutantes en temps réel.
 
 **Fonctionnalités mises à jour**
 
@@ -217,9 +217,9 @@ Query Service vous permet d’utiliser le langage SQL standard pour interroger l
 | Fonctionnalité | Description |
 | --- | --- |
 | API d’abonnement aux alertes | Adobe Experience Platform Query Service vous permet de vous abonner à des alertes pour les requêtes ad hoc et planifiées. Les alertes peuvent être reçues par e-mail, dans l’interface utilisateur de Platform ou les deux. Actuellement, il n’est possible de s’abonner aux alertes de requêtes qu’à l’aide de l’[API Query Service](https://developer.adobe.com/experience-platform-apis/references/query-service/). |
-| Exemples de jeux de données | Les échantillons de jeux de données Query Service vous permettent de mener des requêtes exploratoires sur les données volumineuses avec un temps de traitement considérablement réduit, mais au prix de la précision des requêtes. Pour en savoir plus, consultez le [guide d’échantillons de jeux de données](../../query-service/sql/dataset-samples.md). |
+| Exemples de jeux de données | Les échantillons de jeux de données Query Service vous permettent de mener des requêtes exploratoires sur les données volumineuses avec un temps de traitement considérablement réduit, mais au prix de la précision des requêtes. Pour en savoir plus, consultez le [guide d’échantillons de jeux de données](../../query-service/essential-concepts/dataset-samples.md). |
 
-Pour plus d’informations sur [!DNL Query Service], consultez la [[!DNL Query Service] présentation](../../query-service/home.md).
+Pour plus d’informations sur Query Service [!DNL Query Service], consultez la [[!DNL Query Service] présentation](../../query-service/home.md) de Query Service.
 
 Pour en savoir plus, consultez la [documentation sur les alertes de requêtes](../../query-service/api/alert-subscriptions.md).
 
