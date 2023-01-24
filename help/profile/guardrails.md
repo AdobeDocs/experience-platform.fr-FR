@@ -6,10 +6,10 @@ product: experience platform
 type: Documentation
 description: Adobe Experience Platform utilise un modèle de données hybride fortement dénormalisé qui diffère du modèle de données relationnelles traditionnel. Ce document fournit des limites d’utilisation et de débit par défaut pour vous aider à modéliser vos données de profil afin d’optimiser les performances du système.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 6327f5e6cb64a46c502613dd6074d84ed1fdd32b
+source-git-commit: 1c092cd66a8a96623359a0e56de76e2a3d077c8d
 workflow-type: tm+mt
-source-wordcount: '1954'
-ht-degree: 90%
+source-wordcount: '1982'
+ht-degree: 89%
 
 ---
 
@@ -90,6 +90,7 @@ Les barrières de sécurité suivantes se rapportent à la taille des données e
 | Taille maximale du fragment de profil | 50 Mo | Hard | **La taille maximale d’un fragment de profil est de 50 Mo.** La segmentation, les exportations et les recherches peuvent échouer pour tout [fragment de profil](#profile-fragments) qui dépasse 50 Mo. |
 | Taille maximale de stockage du profil | 50 Mo | Soft | **La taille maximale d’un profil stocké est de 50 Mo.** Ajouter de nouveaux [fragments de profil](#profile-fragments) dans un profil de plus de 50 Mo affecte les performances du système. Par exemple, un profil peut contenir un fragment unique de 50 Mo ou plusieurs fragments répartis sur plusieurs jeux de données avec une taille totale de 50 Mo. Toute tentative de stockage d’un profil avec un fragment de plus de 50 Mo ou plusieurs fragments dont la taille totale est supérieure à 50 Mo aura une incidence sur les performances du système. |
 | Nombre de lots Profile ou ExperienceEvent ingérés par jour | 90 | Soft | **Le nombre maximal de lots Profile ou ExperienceEvent ingérés par jour est de 90.** Cela signifie que le total combiné des lots Profile et ExperienceEvent ingérés chaque jour ne peut pas dépasser 90. L’ingestion de lots supplémentaires affectera les performances du système. |
+| Nombre d’ExperienceEvents par enregistrement de profil | 5000 | Soft | **Le nombre maximal d’ExperienceEvents par enregistrement de profil est de 5 000.** Les profils comportant plus de 5 000 ExperienceEvents **not** être pris en compte pour la segmentation ; |
 
 {style=&quot;table-layout:auto&quot;}
 
