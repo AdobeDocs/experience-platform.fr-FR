@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Création et modification de groupes de champs de schéma dans l’interface utilisateur
 description: Découvrez comment créer et modifier des groupes de champs de schéma dans l’interface utilisateur de l’Experience Platform.
 exl-id: 928d70a6-0468-4fb7-a53a-6686ac77f2a3
-source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
+source-git-commit: 542ad49f475ac9586da506a8afa5408e83262121
 workflow-type: tm+mt
-source-wordcount: '802'
+source-wordcount: '839'
 ht-degree: 0%
 
 ---
@@ -63,7 +63,11 @@ Pour ajouter des champs à un groupe de champs personnalisé, commencez par sél
 
 ![](../../images/ui/resources/field-groups/add-field.png)
 
-A **[!UICONTROL Nouveau champ]** apparaît dans la zone de travail et le rail de droite se met à jour pour afficher les commandes permettant de configurer les propriétés du champ. Consultez le guide sur la [définition des champs dans l’interface utilisateur](../fields/overview.md#define) pour obtenir des instructions spécifiques sur la configuration de différents types de champ.
+Un **[!UICONTROL Champ sans titre]** un espace réservé apparaît dans la zone de travail et le rail de droite se met à jour pour afficher les commandes permettant de configurer les propriétés du champ. Consultez le guide sur la [définition des champs dans l’interface utilisateur](../fields/overview.md#define) pour obtenir des instructions spécifiques sur la configuration de différents types de champ.
+
+Sous **[!UICONTROL Attribuer à]**, sélectionnez la variable **[!UICONTROL Groupe de champs]** , puis utilisez la liste déroulante pour sélectionner le groupe de champs de votre choix dans la liste. Vous pouvez commencer à saisir le nom du groupe de champs pour affiner les résultats.
+
+![](../../images/ui/resources/field-groups/select-field-group.png)
 
 Sous **[!UICONTROL Attribuer à]**, sélectionnez la variable **[!UICONTROL Groupe de champs]** , puis utilisez la liste déroulante pour sélectionner le groupe de champs de votre choix dans la liste. Vous pouvez commencer à saisir le nom du groupe de champs pour affiner les résultats.
 
