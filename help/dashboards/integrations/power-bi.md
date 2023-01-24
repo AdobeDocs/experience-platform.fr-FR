@@ -2,10 +2,10 @@
 title: Modèles de rapport Power BI pour les tableaux de bord de Platform
 description: Utilisez les modèles de rapport pour explorer les données d’Experience Platform à l’aide de Power BI.
 exl-id: fb98a79f-3d82-4e11-b08a-b7cb06414462
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: fa4fc154f57243250dec9bdf9557db13ef7768e8
 workflow-type: tm+mt
 source-wordcount: '1472'
-ht-degree: 96%
+ht-degree: 93%
 
 ---
 
@@ -32,7 +32,7 @@ Vous devez également disposer d’un compte Power BI pour suivre ce tutoriel. P
 
 >[!NOTE]
 >
->Pour que l’onglet Tableaux de bord s’affiche dans le volet de navigation de gauche de l’interface utilisateur de Platform et que la vue Inventaire des tableaux de bord soit visible, vous devez avoir accès à l’un des tableaux de bord Profil, Segmentation ou Destination dans le cadre de votre licence Platform.
+>Pour que l’onglet Tableaux de bord s’affiche dans le volet de navigation de gauche de l’interface utilisateur de Platform et que la vue Inventaire du tableau de bord soit visible, vous devez avoir accès à l’un des tableaux de bord Profil, Segmentation ou Destination dans le cadre de votre licence Platform.
 
 ## Installation de l’intégration de l’application Power BI
 

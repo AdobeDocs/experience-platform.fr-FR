@@ -1,7 +1,7 @@
 ---
 title: Présentation de Data Distiller
 description: Résumé des limites d’utilisation de Data Distiller pour les données de Query Service par rapport à vos droits de licence.
-source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
+source-git-commit: fa4fc154f57243250dec9bdf9557db13ef7768e8
 workflow-type: tm+mt
 source-wordcount: '553'
 ht-degree: 0%
@@ -12,15 +12,15 @@ ht-degree: 0%
 
 Data Distiller est une offre de package qui comprend un sous-ensemble des fonctionnalités de Adobe Experience Platform. Data Distiller vous permet d’effectuer une préparation des données post-ingestion (comme le nettoyage, la mise en forme et la manipulation) pour un profil client en temps réel ou des cas d’utilisation analytiques en exécutant des requêtes par lots dans Query Service. Votre utilisation de Data Distiller dépend de votre licence actuelle et continue d’au moins l’une des versions suivantes : Adobe Real-time Customer Data Platform, Customer Journey Analytics et/ou Adobe Journey Optimizer.
 
-## Utilisation des licences {#licence-usage}
+## Utilisation des licences {#license-usage}
 
-Voir [Document d’utilisation des licences Data Distiller](./licence-usage.md) pour afficher des informations importantes sur l’utilisation des licences Query Service de votre entreprise.
+Voir [Document d’utilisation des licences Data Distiller](./license-usage.md) pour afficher des informations importantes sur l’utilisation des licences Query Service de votre entreprise.
 
 ## Paramètres de plage {#scoping-parameters}
 
-Les paramètres de portée sont des limites d’utilisation qui se rapportent à la portée du cas d’utilisation proposé, tel que défini par votre capacité de licence. Sans modules complémentaires, les paramètres de portée du Distiller de données sont les suivants :
+Les paramètres de plage sont des limites d’utilisation qui se rapportent à la portée de votre cas d’utilisation proposé tel que défini par votre capacité de licence. Sans modules complémentaires, les paramètres de portée du Distiller de données sont les suivants :
 
-* **Heures de calcul**: Vous pouvez utiliser PSQL ou l’API Query Service pour exécuter des requêtes par lots exécutées dans n’importe quel environnement de test (planifié ou non) pour analyser et écrire des données. Cela utilise les heures calculées par an qui vous sont attribuées, telles que définies dans le processus de définition de la portée de votre contrat de licence. Total des heures de calcul est cumulé dans tous les environnements de test.
+* **Heures de calcul**: Vous pouvez utiliser PSQL ou l’API Query Service pour exécuter des requêtes par lots exécutées dans n’importe quel environnement de test (planifié ou non) pour analyser et écrire des données. Cette opération utilise les heures calculées attribuées par an, telles qu’elles sont déterminées dans le processus de définition de la portée de votre contrat de licence. Total des heures de calcul est cumulé dans tous les environnements de test.
 * **Données ingérées**: Les données ingérées dans Adobe Experience Platform qui peuvent être interrogées à l’aide de Data Distiller sont soumises aux limites décrites dans votre licence actuelle à Adobe Real-time Customer Data Platform, Customer Journey Analytics et/ou Adobe Journey Optimizer.
 * **Stockage du lac de données**: Le stockage du lac de données fourni dans votre licence actuelle à Adobe Real-time Customer Data Platform, Customer Journey Analytics et/ou Adobe Journey Optimizer peut également être utilisé avec Data Distiller. Data Lake Storage est une fonctionnalité partagée.
 * **Utilisateurs de Query Service**: Le nombre d’utilisateurs de Query Service décrit dans votre licence actuelle d’Adobe Real-time Customer Data Platform, de Customer Journey Analytics et/ou de Adobe Journey Optimizer peut également être utilisé avec Data Distiller. Les utilisateurs de Query Service sont une fonctionnalité partagée.

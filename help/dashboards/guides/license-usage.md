@@ -4,7 +4,7 @@ title: Tableau de bord d’utilisation de la licence Guide
 description: Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur l’utilisation des licences de votre entreprise.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 255de9b9e83c11aeed747a3c0cdb7bd7a7949bd2
+source-git-commit: fa4fc154f57243250dec9bdf9557db13ef7768e8
 workflow-type: tm+mt
 source-wordcount: '935'
 ht-degree: 16%
@@ -41,7 +41,7 @@ Pour choisir un environnement de test à afficher dans le tableau de bord, séle
 
 La création de rapports de consommation pour les environnements de test est cumulative pour tous les environnements de test du même type. En d’autres termes, la sélection [!UICONTROL Production] ou [!UICONTROL Développement] fournit des rapports sur la consommation pour tous les environnements de test de production ou de développement, respectivement.
 
-![Onglet Aperçu du tableau de bord de l’utilisation de la licence avec le sélecteur d’environnements de test en surbrillance.](../images/license-usage/select-sandbox.png)
+![Onglet Aperçu de l’utilisation de la licence avec le sélecteur d’environnements de test en surbrillance.](../images/license-usage/select-sandbox.png)
 
 >[!WARNING]
 >
@@ -68,7 +68,7 @@ Le tableau de bord de l’utilisation des licences est constitué de widgets qui
 
 Chaque widget affiche un graphique linéaire qui compare les chiffres réels de votre entreprise au total disponible avec les licences de votre entreprise et fournit un pourcentage de l’utilisation totale.
 
-![L’onglet Aperçu du tableau de bord de l’utilisation de la licence avec le graphique linéaire du widget Exemple de mesure de l’utilisation de la licence mis en surbrillance.](../images/license-usage/widgets.png)
+![L’onglet Aperçu du tableau de bord de l’utilisation de la licence avec le graphique linéaire du widget de mesure de l’utilisation de l’exemple de licence mis en surbrillance.](../images/license-usage/widgets.png)
 
 ## Mesures disponibles
 
@@ -85,10 +85,10 @@ La disponibilité de ces mesures et la définition spécifique de chacune d’el
 |---|---|
 | <ul><li>Adobe Experience Platform:OD LITE</li><li>Adobe Experience Platform:OD STANDARD</li><li>Adobe Experience Platform:OD HEAVY</li></ul> | [Adobe Experience Platform](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform.html) |
 | <ul><li>Adobe Experience Platform:OD</li></ul> | [Experience Platform, services d’application et services intelligents](https://helpx.adobe.com/legal/product-descriptions/exp-platform-app-svcs.html) |
-| <ul><li>RT CUSTOMOMENT DATA PLATFORM:OD</li><li>RT CUSTOMER DATA PLATFORM:OD PRFL À 10M</li><li>RT CUSTOMER DATA PLATFORM:OD PRFL À 50M</li></ul> | [Adobe Real-time Customer Data Platform](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) |
+| <ul><li>RT CUSTOMOMENT DATA PLATFORM:OD</li><li>RT CUSTOMER DATA PLATFORM:OD PRFL À 10M</li><li>RT CUSTOMER DATA PLATFORM:OD PRFL À 50M</li></ul> | [Adobe Real-time Customer Data Platform](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform.html) |
 | <ul><li>ACTIVATION AEP:OD</li><li>AEP:OD ACTIVATION PRFL À 10M</li><li>AEP:PRFL D’ACTIVATION OD JUSQU’À 50 M</li></ul> | [Activation de Adobe Experience Platform](https://helpx.adobe.com/fr/legal/product-descriptions/adobe-experience-platform0.html) |
 | <ul><li>AEP:INTELLIGENCE OD</li></ul> | [Adobe Experience Platform Intelligence](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform-intelligence---product-description.html) |
-| <ul><li>Journey Optimizer SELECT:OD</li><li>Journey Optimizer PRIME : OD</li><li>Journey Optimizer ULTIMATE:OD</li><li>UNP AJO PRIME STARTER:OD</li><li>UNP AJO ULTIMATE STARTER:OD</li><li>UNP Real-Time CDP : ORCHESTRATION DU PROFIL OD</li></ul> | [Adobe Journey Optimizer](https://helpx.adobe.com/legal/product-descriptions/adobe-journey-optimizer.html) |
+| <ul><li>Journey Optimizer SELECT:OD</li><li>Journey Optimizer PRIME : OD</li><li>Journey Optimizer ULTIMATE:OD</li><li>UNP AJO PRIME STARTER:OD</li><li>UNP AJO ULTIMATE STARTER:OD</li><li>UNP Real-Time CDP : ORCHESTRATION DU PROFIL OD</li></ul> | [Adobe Journey Optimizer](https://helpx.adobe.com/fr/legal/product-descriptions/adobe-journey-optimizer.html) |
 
 >[!WARNING]
 >

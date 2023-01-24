@@ -2,7 +2,7 @@
 title: Guide d’informations sur les rapports de magasin accélérés de requête
 description: Découvrez comment créer un modèle de données d’insights sur les rapports via Query Service afin de l’utiliser avec des données de magasin accélérées et des tableaux de bord définis par l’utilisateur.
 exl-id: 216d76a3-9ea3-43d3-ab6f-23d561831048
-source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
+source-git-commit: fa4fc154f57243250dec9bdf9557db13ef7768e8
 workflow-type: tm+mt
 source-wordcount: '1034'
 ht-degree: 97%
@@ -23,7 +23,7 @@ Ce tutoriel utilise des tableaux de bord définis par l’utilisateur pour visua
 
 ## Prise en main
 
-Le SKU Data Distiller est nécessaire pour créer un modèle de données personnalisé pour vos rapports d’insights et pour étendre les modèles de données Real-time CDP qui contiennent des données Platform enrichies. Veuillez consulter le [packaging](../../packages.md), les [barrières de sécurité](../../guardrails.md#query-accelerated-store), et la documentation de la [licence](../../data-distiller/licence-usage.md) relative au SKU de Data Distiller. Si vous ne disposez pas du SKU de Data Distiller, contactez votre représentant du service client Adobe pour plus d’informations.
+Le SKU Data Distiller est nécessaire pour créer un modèle de données personnalisé pour vos rapports d’insights et pour étendre les modèles de données Real-time CDP qui contiennent des données Platform enrichies. Veuillez consulter le [packaging](../../packages.md), les [barrières de sécurité](../../guardrails.md#query-accelerated-store), et la documentation de la [licence](../../data-distiller/license-usage.md) relative au SKU de Data Distiller. Si vous ne disposez pas du SKU de Data Distiller, contactez votre représentant du service client Adobe pour plus d’informations.
 
 ## Créer un modèle de données de rapport d’informations
 

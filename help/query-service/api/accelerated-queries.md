@@ -2,8 +2,8 @@
 title: Point d’entrée de requêtes accélérées
 description: Découvrez comment accéder sans état à la boutique accélérée de requêtes pour renvoyer rapidement des résultats basés sur des données agrégées. Ce document fournit un exemple de requête HTTP et de réponse pour le point d’entrée de requêtes accélérées de Query Service.
 exl-id: 29ea4d25-9c46-4b29-a6d7-45ac33dcb0fb
-source-git-commit: a9887535b12b8c4aeb39bb5a6646da88db4f0308
-workflow-type: ht
+source-git-commit: fa4fc154f57243250dec9bdf9557db13ef7768e8
+workflow-type: tm+mt
 source-wordcount: '567'
 ht-degree: 100%
 
@@ -17,7 +17,7 @@ Avant de poursuivre avec ce guide, assurez-vous d’avoir lu et compris le [guid
 
 ## Prise en main
 
-Le SKU Data Distiller est requis pour utiliser la boutique de requêtes accélérées. Veuillez consulter le [packaging](../packages.md), les [barrières de sécurité](../guardrails.md#query-accelerated-store), et la documentation de la [licence](../data-distiller/licence-usage.md) relative au SKU de Data Distiller. Si vous ne disposez pas du SKU de Data Distiller, contactez votre représentant du service client Adobe pour plus d’informations.
+Le SKU Data Distiller est requis pour utiliser la boutique de requêtes accélérées. Veuillez consulter le [packaging](../packages.md), les [barrières de sécurité](../guardrails.md#query-accelerated-store), et la documentation de la [licence](../data-distiller/license-usage.md) relative au SKU de Data Distiller. Si vous ne disposez pas du SKU de Data Distiller, contactez votre représentant du service client Adobe pour plus d’informations.
 
 Les sections suivantes détaillent les appels d’API nécessaires pour accéder sans état à la boutique de requêtes accélérées via l’API Query Service. Chaque appel inclut le format général d’API, un exemple de requête présentant les en-têtes requis et un exemple de réponse.
 

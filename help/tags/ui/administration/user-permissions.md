@@ -2,10 +2,10 @@
 title: Autorisations d’utilisateur relatives aux balises
 description: Découvrez les différents types d’autorisations relatives aux balises disponibles et quelques stratégies d’implémentation de base pour différents cas d’utilisation commerciale.
 exl-id: 9b48847a-6133-4dbd-b17d-e7b88152ad7d
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: fa4fc154f57243250dec9bdf9557db13ef7768e8
 workflow-type: tm+mt
 source-wordcount: '1308'
-ht-degree: 93%
+ht-degree: 91%
 
 ---
 
@@ -68,7 +68,7 @@ Les droits d’entreprise s’appliquent aux autorisations qui s’appliquent à
 | --- | --- |
 | **Gérer les propriétés** | Ce droit autorise les actions suivantes :<ul><li>Création de propriétés</li><li>Modification des métadonnées et des paramètres au niveau de la propriété</li><li>Suppression des propriétés</li></ul>Les administrateurs assument généralement ce rôle. Pour plus dʼinformations, voir la [documentation sur les propriétés](companies-and-properties.md). |
 | **Développer des extensions** | Permet de créer et de modifier des packages dʼextensions dont lʼentreprise dispose, y compris les versions privées et les demandes de version publique. |
-| **Gérer les configurations d&#39;application** | Cette option nʼest disponible que si vous disposez dʼune licence pour Adobe Journey Optimizer ou pour une autre solution qui accorde lʼaccès aux messages push et dans lʼapplication mobile.  Cela permet de gérer les applications dont Experience Cloud a connaissance, ainsi que les informations d’identification push nécessaires pour communiquer avec le service Firebase Cloud Messaging et le service de notification push Apple. |
+| **Gérer les configurations d&#39;application** | Cette option n’est disponible que si vous disposez d’une licence pour Adobe Journey Optimizer ou d’une autre solution qui accorde l’accès aux messages in-app et push mobiles.  Cela permet de gérer les applications dont Experience Cloud a connaissance, ainsi que les informations d’identification push nécessaires pour communiquer avec le service Firebase Cloud Messaging et le service de notification push Apple. |
 
 {style=&quot;table-layout:auto&quot;}
 
