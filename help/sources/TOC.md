@@ -4,10 +4,10 @@ user-guide-title: Aide sur les connecteurs source d’Adobe Experience Platfor
 breadcrumb-title: Guide des connecteurs sources
 user-guide-description: Ingérez des données à partir de diverses sources. Découvrez comment structurer, étiqueter et améliorer les données déjà ingérées.
 feature: Sources
-source-git-commit: 46c9ec0c561f7ed3e38f05ef7b1e3ffec0eaed57
+source-git-commit: 79773c35cf70bc967b29a8bcca729106bd7dd4f0
 workflow-type: tm+mt
-source-wordcount: '860'
-ht-degree: 100%
+source-wordcount: '872'
+ht-degree: 98%
 
 ---
 
@@ -59,6 +59,7 @@ ht-degree: 100%
    - CRM {#crm}
       - [Connecteur Microsoft Dynamics](connectors/crm/ms-dynamics.md)
       - [Connecteur Salesforce](connectors/crm/salesforce.md)
+      - [Connecteur SugarCRM](connectors/crm/sugarcrm.md)
       - [Connecteur Veeva CRM](connectors/crm/veeva.md)
       - [Connecteur Zoho CRM](connectors/crm/zoho.md)
    - Succès client {#customer-success}
@@ -129,6 +130,8 @@ ht-degree: 100%
       - CRM {#crm}
          - [Microsoft Dynamics](tutorials/api/create/crm/ms-dynamics.md)
          - [Salesforce](tutorials/api/create/crm/salesforce.md)
+         - [Comptes et contacts CRM Sugar](tutorials/api/create/crm/sugarcrm-accounts-contacts.md)
+         - [Événements SugarCRM](tutorials/api/create/crm/sugarcrm-events.md)
          - [Veeva CRM](tutorials/api/create/crm/veeva.md)
          - [Zoho CRM](tutorials/api/create/crm/zoho.md)
       - Succès client {#customer-success}
@@ -237,6 +240,8 @@ ht-degree: 100%
       - CRM {#crm}
          - [Microsoft Dynamics](tutorials/ui/create/crm/dynamics.md)
          - [Salesforce](tutorials/ui/create/crm/salesforce.md)
+         - [Comptes et contacts CRM Sugar](tutorials/ui/create/crm/sugarcrm-accounts-contacts.md)
+         - [Événements SugarCRM](tutorials/ui/create/crm/sugarcrm-events.md)
          - [Veeva CRM](tutorials/ui/create/crm/veeva.md)
          - [Zoho CRM](tutorials/ui/create/crm/zoho.md)
       - Succès client {#customer-success}
