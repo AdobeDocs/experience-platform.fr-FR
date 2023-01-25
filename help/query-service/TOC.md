@@ -4,9 +4,9 @@ user-guide-title: Aide d’Adobe Experience Platform Query Service
 breadcrumb-title: Guide de Query Service
 user-guide-description: Utilisez le langage SQL standard pour interroger les données du lac de données dans Experience Platform.
 feature: Queries
-source-git-commit: a43947f87337e235eb059db6f497999bc4ede74d
+source-git-commit: 3c91e39958a9cba001ae0f0ac70f920263fa041d
 workflow-type: tm+mt
-source-wordcount: '265'
+source-wordcount: '267'
 ht-degree: 70%
 
 ---
@@ -59,6 +59,7 @@ ht-degree: 70%
    - [Guide d’utilisation de Query Editor](ui/user-guide.md)
    - [Modèles de requête](ui/query-templates.md)
    - [Planifications de requête](ui/query-schedules.md)
+   - [Journaux de requête](ui/query-logs.md)
    - [Surveillance des requêtes planifiées](ui/monitor-queries.md)
    - [Guide d’identification](ui/credentials.md)
    - [Génération de jeux de données de sortie à partir des résultats de requête](ui/create-datasets.md)

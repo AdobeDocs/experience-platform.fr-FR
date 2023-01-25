@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Guide de l’IU de Query Service
 description: Adobe Experience Platform Query Service présente une interface utilisateur qui permet d’écrire et d’exécuter des requêtes, de voir les requêtes précédemment exécutées et d’accéder aux requêtes enregistrées par les utilisateurs au sein de votre organisation IMS.
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: 8a5f741b8992bc61cb25864a6695e55768e7aac2
+source-git-commit: 5a027200efc22051cca6d4c041e857b2abc7d96f
 workflow-type: tm+mt
-source-wordcount: '1117'
-ht-degree: 79%
+source-wordcount: '1135'
+ht-degree: 78%
 
 ---
 
@@ -63,7 +63,7 @@ L’onglet **[!UICONTROL Modèles]** affiche les requêtes enregistrées par les
 
 Voir [modèles de requête](./query-templates.md) documentation pour plus d’informations sur les modèles dans l’interface utilisateur de Platform.
 
-## Journal
+## Journal {#log}
 
 L’onglet **[!UICONTROL Journal]** fournit une liste de requêtes qui ont été exécutées précédemment. Par défaut, le journal répertorie les requêtes dans l’ordre chronologique décroissant.
 
@@ -81,6 +81,8 @@ L’onglet **[!UICONTROL Journal]** fournit une liste de requêtes qui ont été
 
 >!![Note]
 Sélectionnez l’icône de crayon (![Une icône en forme de crayon.](../images/ui/overview/edit-icon.png)) de n’importe quelle ligne du journal de requête pour accéder à la variable [!DNL Query Editor]. La requête est prérenseignée pour faciliter la modification.
+
+Voir [documentation sur les journaux de requête](./query-logs.md) pour plus d’informations sur les fichiers journaux générés automatiquement par un événement de requête.
 
 ## Informations d’identification
 
