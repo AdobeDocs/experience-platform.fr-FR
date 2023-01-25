@@ -2,10 +2,10 @@
 title: Modèles de requête
 description: Les modèles de requête sont des requêtes SQL enregistrées réutilisables qui peuvent être réutilisées par d’autres utilisateurs et utilisatrices pour économiser du temps et des efforts. Ils peuvent être créés à l’aide de Query Editor ou de l’API Query Service et peuvent être utilisés sur tous les jeux de données Experience Platform.
 exl-id: e74d058f-bb89-45ed-83cc-2e3a33401270
-source-git-commit: a085bac6b4ee825d534710ae91d6690fa076e873
-workflow-type: ht
-source-wordcount: '436'
-ht-degree: 100%
+source-git-commit: d5d69134627b1a162691bda95732d989bd6e3469
+workflow-type: tm+mt
+source-wordcount: '504'
+ht-degree: 86%
 
 ---
 
@@ -27,6 +27,8 @@ Vous pouvez créer des modèles de requête par le biais de deux méthodes, en a
 
 Consultez la documentation pour obtenir des instructions sur l’utilisation de Query Editor pour [écrire](./user-guide.md#query-authoring) et [enregistrer des requêtes](./user-guide.md#saving-queries). Une fois que vous avez nommé et enregistré votre requête, elle peut être réutilisée en tant que modèle de requête à partir de l’onglet [!UICONTROL Modèles].
 
+## Parcourir les modèles de requête {#browse}
+
 Dans l’espace de travail Requêtes de l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Modèles]** pour afficher la liste des requêtes enregistrées disponibles.
 
 ![Espace de travail des requêtes avec l’onglet Modèles mis en surbrillance.](../images/ui/query-templates/query-templates.png)
@@ -34,6 +36,13 @@ Dans l’espace de travail Requêtes de l’interface utilisateur de Platform, s
 Pour trouver les informations de modèle pertinentes, sélectionnez un modèle de requête dans la liste disponible afin d’ouvrir le panneau de détails.
 
 ![Panneau de détails de l’espace de travail des requêtes avec l’identifiant de requête en surbrillance.](../images/ui/query-templates/details-panel.png)
+
+Dans le panneau Détails, vous pouvez exécuter quatre actions distinctes :
+
+* Sélectionner **[!UICONTROL Jeu de données de sortie]** pour modifier le jeu de données de sortie pour le modèle sélectionné.
+* Sélectionner **[!UICONTROL Afficher le planning]** pour accéder au [!UICONTROL Planifications] . Cette vue contient toutes les informations de planification associées à la requête.
+* Sélectionner **[!UICONTROL Supprimer la requête]** pour supprimer le modèle.
+* Sélectionnez le nom du modèle pour accéder à l’éditeur de requêtes dans lequel le code SQL est prérenseigné pour modification.
 
 ### Utiliser l’API Query Service pour créer un modèle
 

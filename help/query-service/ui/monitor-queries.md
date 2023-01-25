@@ -2,10 +2,10 @@
 title: Surveillance des requêtes planifiées
 description: Découvrez comment surveiller les requêtes via l’interface utilisateur de Query Service.
 exl-id: 4640afdd-b012-4768-8586-32f1b8232879
-source-git-commit: 7b5a22d849f0f46a9ff14843c594b743bbd01c9d
+source-git-commit: d4966eea90884cea8fbb4b72be8d9625d5745d57
 workflow-type: tm+mt
-source-wordcount: '1044'
-ht-degree: 98%
+source-wordcount: '1204'
+ht-degree: 74%
 
 ---
 
@@ -15,7 +15,7 @@ Adobe Experience Platform offre une meilleure visibilité du statut de toutes le
 
 ## [!UICONTROL Requêtes planifiées]
 
-L’onglet [!UICONTROL Requêtes planifiées] fournit un aperçu des requêtes exécutées et planifiées. L’espace de travail contient toutes vos requêtes CTAS et ITAS qui sont planifiées pour s’exécuter ou qui ont été exécutées au moins une fois. Vous trouverez des détails sur l’exécution pour toutes les requêtes planifiées, ainsi que des codes d’erreur et des messages pour les requêtes en échec.
+Le [!UICONTROL Requêtes planifiées] fournit un aperçu de toutes vos requêtes CTAS et ITAS planifiées. Vous trouverez des détails sur l’exécution pour toutes les requêtes planifiées, ainsi que des codes d’erreur et des messages pour toutes les requêtes ayant échoué.
 
 Pour accéder à l’onglet [!UICONTROL Requêtes planifiées], sélectionnez **[!UICONTROL Requêtes]** dans la barre de navigation de gauche, suivi de **[!UICONTROL Requêtes planifiées]**
 
@@ -29,14 +29,14 @@ Le tableau ci-dessous décrit chaque colonne disponible.
 
 | Colonne | Description |
 |---|---|
-| Nom | Le champ nom correspond soit au nom du modèle, soit aux premiers caractères de votre requête SQL. Toute requête créée à l’aide de l’interface utilisateur avec le Query Editor est nommée dès le départ. Si la requête a été créée via l’API, le nom de la requête est un extrait du SQL initial utilisé pour créer la requête. |
-| Modèle | Nom du modèle de la requête. Sélectionnez un nom de modèle pour accéder à l’éditeur de requêtes. Le modèle de requête est affiché dans l’éditeur de requêtes pour plus de commodité. S’il n’existe aucun nom de modèle, la ligne est marquée d’un trait d’union et il n’est pas possible d’effectuer une redirection vers l’éditeur de requêtes pour afficher la requête. |
-| SQL | Fragment de la requête SQL. |
-| Fréquence d’exécution | Il s’agit de la cadence d’exécution de votre requête. Les valeurs disponibles sont `Run once` et `Scheduled`. Les requêtes peuvent être filtrées en fonction de leur fréquence d’exécution. |
-| Créé par | Nom de la personne qui a créé la requête. |
-| Créé | La date et l’heure de création de la requête, au format UTC. |
-| La date et l’heure de la dernière exécution | La date et l’heure les plus récentes auxquelles la requête a été exécutée. Cette colonne met en évidence si une requête a été exécutée conformément à son planning actuel. |
-| Statut de la dernière exécution | Statut de la dernière exécution de la requête. Les trois valeurs de statut sont les suivantes : `successful` `failed` ou `in progress`. |
+| **[!UICONTROL Nom]** | Le champ nom correspond soit au nom du modèle, soit aux premiers caractères de votre requête SQL. Toute requête créée à l’aide de l’interface utilisateur avec le Query Editor est nommée dès le départ. Si la requête a été créée via l’API, son nom devient un fragment de code SQL initial utilisé pour créer la requête. Sélectionnez un élément dans la [!UICONTROL Nom] pour voir la liste de toutes les exécutions associées à la requête. Pour plus d’informations, voir [détails du planning des exécutions de requête](#query-runs) . |
+| **[!UICONTROL Modèle]** | Nom du modèle de la requête. Sélectionnez un nom de modèle pour accéder à l’éditeur de requêtes. Le modèle de requête est affiché dans l’éditeur de requêtes pour plus de commodité. S’il n’existe aucun nom de modèle, la ligne est marquée d’un trait d’union et il n’est pas possible d’effectuer une redirection vers l’éditeur de requêtes pour afficher la requête. |
+| **[!UICONTROL SQL]** | Fragment de la requête SQL. |
+| **[!UICONTROL Fréquence d’exécution]** | Il s’agit de la cadence d’exécution de votre requête. Les valeurs disponibles sont `Run once` et `Scheduled`. Les requêtes peuvent être filtrées en fonction de leur fréquence d’exécution. |
+| **[!UICONTROL Créé par]** | Nom de la personne qui a créé la requête. |
+| **[!UICONTROL Créé]** | La date et l’heure de création de la requête, au format UTC. |
+| **[!UICONTROL La date et l’heure de la dernière exécution]** | La date et l’heure les plus récentes auxquelles la requête a été exécutée. Cette colonne met en évidence si une requête a été exécutée conformément à son planning actuel. |
+| **[!UICONTROL Statut de la dernière exécution]** | Statut de la dernière exécution de la requête. Les valeurs d’état sont les suivantes : `Success`, `Failed`, `In progress`, et `No runs`. |
 
 >[!TIP]
 >
@@ -64,7 +64,7 @@ Vous pouvez vous abonner à des alertes à partir de l’onglet [!UICONTROL Requ
 
 Voir [documentation de l’API d’abonnements des alertes](../api/alert-subscriptions.md) pour plus d’informations.
 
-### Filtrer des requêtes
+### Filtrer des requêtes {#filter}
 
 Vous pouvez filtrer les requêtes selon la fréquence d’exécution. Dans l’onglet [!UICONTROL Requêtes planifiées], sélectionnez l’icône de filtre (![Icône Filtrer](../images/ui/monitor-queries/filter-icon.png)) pour ouvrir la barre latérale du filtre.
 
@@ -80,7 +80,7 @@ Sélectionnez l’une des cases de filtrage des fréquences d’exécution suiva
 
 Une fois que vos critères de filtre sont activés, sélectionnez **[!UICONTROL Masquer les filtres]** pour fermer le panneau de filtrage.
 
-## Détails du planning des exécutions de requête
+## Détails du planning des exécutions de requête {#query-runs}
 
 Sélectionnez un nom de requête pour accéder à la page des détails du planning. Cette vue fournit une liste de toutes les exécutions exécutées dans le cadre de cette requête planifiée. Les informations fournies incluent l’heure de début et de fin, le statut et le jeu de données utilisé.
 
@@ -90,23 +90,23 @@ Ces informations apparaissent dans un tableau à cinq colonnes. Chaque ligne ind
 
 | Nom de la colonne | Description |
 |---|---|
-| ID d’exécution de requête | ID pour l’exécution de requête quotidienne. |
-| Démarrage de l’exécution de requête | Date et heure de l’exécution de la requête. Affichée au format UTC. |
-| Fin de l’exécution de requête | Date et heure de la fin de la requête. Affichée au format UTC. |
-| Statut | Statut de la dernière exécution de la requête. Les trois valeurs de statut sont les suivantes : `successful`, `failed` ou `in progress`. |
-| Jeu de données | Jeu de données présent dans l’exécution. |
+| **[!UICONTROL ID d’exécution de requête]** | ID pour l’exécution de requête quotidienne. Sélectionnez la **[!UICONTROL Identifiant d’exécution de requête]** pour accéder au [!UICONTROL Présentation de l’exécution de requête]. |
+| **[!UICONTROL Démarrage de l’exécution de requête]** | Date et heure de l’exécution de la requête. Affichée au format UTC. |
+| **[!UICONTROL Fin de l’exécution de requête]** | Date et heure de la fin de la requête. Affichée au format UTC. |
+| **[!UICONTROL Statut]** | Statut de la dernière exécution de la requête. Les trois valeurs de statut sont les suivantes : `successful` `failed` ou `in progress`. |
+| **[!UICONTROL Jeu de données]** | Jeu de données présent dans l’exécution. |
 
 Les détails de la requête en cours de planification sont visibles dans le panneau [!UICONTROL Propriétés]. Ce panneau comprend l’ID de requête initial, le type de client, le nom du modèle, la requête SQL et la cadence du planning.
 
 ![Page de détails du planning avec le panneau Propriétés mis en surbrillance.](../images/ui/monitor-queries/properties-panel.png)
 
-### Détails de l’exécution
-
 Sélectionnez un ID d’exécution de requête pour accéder à la page des détails de l’exécution et afficher les informations de la requête.
 
 ![Écran des détails du planning avec un ID d’exécution mis en surbrillance.](../images/ui/monitor-queries/navigate-to-run-details.png)
 
-Cette vue fournit des informations sur les exécutions individuelles pour cette requête planifiée et une ventilation plus détaillée du statut d’exécution. Cette page inclut également les informations sur le client et les détails des erreurs ayant provoqué l’échec de la requête.
+## Présentation de l’exécution de requête {#query-run-overview}
+
+Le [!UICONTROL Présentation de l’exécution de requête] fournit des informations sur les exécutions individuelles pour cette requête planifiée et une ventilation plus détaillée de l’état d’exécution. Cette page contient également les informations sur le client et les détails des erreurs qui ont pu entraîner l’échec de la requête.
 
 ![Écran de détails de l’exécution avec la section de présentation mise en surbrillance.](../images/ui/monitor-queries/query-run-details.png)
 
@@ -117,6 +117,20 @@ La section du statut de la requête indique le code d’erreur et le message cor
 Vous pouvez copier la requête SQL dans le presse-papiers à partir de cette vue. Sélectionnez l’icône de copie en haut à droite du fragment de code SQL pour copier la requête. Un message contextuel confirme que le code a été copié.
 
 ![Écran des détails de l’exécution avec l’icône de copie SQL mise en surbrillance.](../images/ui/monitor-queries/copy-sql.png)
+
+### Exécution des détails des requêtes avec bloc anonyme {#anonymous-block-queries}
+
+Les requêtes qui utilisent des blocs anonymes pour comprendre leurs instructions SQL sont séparées dans leurs requêtes individuelles. Vous pouvez ainsi inspecter individuellement les détails de l’exécution pour chaque bloc de requête.
+
+Les blocs anonymes sont identifiés à l’aide d’une `$$` avant la requête. Voir [document de bloc anonyme](../essential-concepts/anonymous-block.md) pour en savoir plus sur les blocs anonymes dans query service.
+
+Les requêtes de bloc anonymes ont des onglets à gauche de l’état d’exécution. Sélectionnez un onglet pour afficher les détails de l’exécution.
+
+![La vue d&#39;ensemble Exécution de la requête affiche une requête bloquée anonyme. Les onglets de requête multiples sont mis en surbrillance.](../images/ui/monitor-queries/anonymous-block-overview.png)
+
+En cas d’échec d’une requête bloquée anonyme, vous pouvez trouver le code d’erreur correspondant à ce bloc spécifique via cette interface utilisateur.
+
+![La vue d&#39;ensemble Exécution de la requête affiche une requête bloquée anonyme avec le code d&#39;erreur pour un seul bloc en surbrillance.](../images/ui/monitor-queries/anonymous-block-failed-query.png)
 
 Sélectionnez **[!UICONTROL Requête]** pour revenir à l’écran des détails du planning, ou **[!UICONTROL Requêtes planifiées]** pour revenir à l’onglet [!UICONTROL Requêtes planifiées].
 

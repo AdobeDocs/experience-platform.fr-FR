@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Guide de l’IU de Query Service
 description: Adobe Experience Platform Query Service présente une interface utilisateur qui permet d’écrire et d’exécuter des requêtes, de voir les requêtes précédemment exécutées et d’accéder aux requêtes enregistrées par les utilisateurs au sein de votre organisation IMS.
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
+source-git-commit: 8a5f741b8992bc61cb25864a6695e55768e7aac2
 workflow-type: tm+mt
-source-wordcount: '1095'
-ht-degree: 86%
+source-wordcount: '1117'
+ht-degree: 79%
 
 ---
 
@@ -61,6 +61,8 @@ L’onglet **[!UICONTROL Modèles]** affiche les requêtes enregistrées par les
 | **[!UICONTROL Modifié par]** | Dernier utilisateur à avoir modifié la requête. Tout utilisateur de votre organisation ayant accès à [!DNL Query Service] peut modifier les requêtes. |
 | **[!UICONTROL Dernière modification]** | Date et heure de la dernière modification apportée à la requête, dans le fuseau horaire du navigateur. |
 
+Voir [modèles de requête](./query-templates.md) documentation pour plus d’informations sur les modèles dans l’interface utilisateur de Platform.
+
 ## Journal
 
 L’onglet **[!UICONTROL Journal]** fournit une liste de requêtes qui ont été exécutées précédemment. Par défaut, le journal répertorie les requêtes dans l’ordre chronologique décroissant.
@@ -69,13 +71,16 @@ L’onglet **[!UICONTROL Journal]** fournit une liste de requêtes qui ont été
 
 | Colonne | Description |
 | --- | --- |
-| **[!UICONTROL Nom]** | Nom de la requête, composé des premiers caractères de la requête SQL. La sélection du nom ouvre le [!DNL Query Editor] et vous permet de modifier la requête. Vous pouvez utiliser la barre de recherche pour effectuer une recherche sur le nom d’une requête. Les recherches sont sensibles à la casse. |
-| **[!UICONTROL Créé par]** | Nom de la personne qui a créé la requête. |
-| **[!UICONTROL Client]** | Client utilisé pour la requête. |
-| **[!UICONTROL Jeu de données]** | Jeu de données d’entrée utilisé par la requête. Cliquez sur le jeu de données pour accéder à l’écran des détails du jeu de données d’entrée. |
+| **[!UICONTROL Nom]** | Nom de la requête, composé des premiers caractères de la requête SQL. Sélectionnez le nom du modèle à ouvrir. [!UICONTROL Détails du journal de requête] pour cette exécution. Vous pouvez utiliser la barre de recherche pour effectuer une recherche sur le nom d’une requête. Les recherches sont sensibles à la casse. |
+| **[!UICONTROL Heure de début]** | Heure à laquelle la requête a été exécutée. |
+| **[!UICONTROL Durée complète]** | Heure à laquelle la requête s’est exécutée. |
 | **[!UICONTROL Statut]** | Statut actuel de la requête. |
-| **[!UICONTROL Dernière exécution]** | Moment de la dernière exécution de la requête. Vous pouvez trier la liste par ordre croissant ou décroissant en cliquant sur la flèche au-dessus de cette colonne. |
-| **[!UICONTROL Temps d’exécution]** | Temps nécessaire pour l’exécution de la requête. |
+| **[!UICONTROL Jeu de données]** | Jeu de données d’entrée utilisé par la requête. Cliquez sur le jeu de données pour accéder à l’écran des détails du jeu de données d’entrée. |
+| **[!UICONTROL Client]** | Client utilisé pour la requête. |
+| **[!UICONTROL Créé par]** | Nom de la personne qui a créé la requête. |
+
+>!![Note]
+Sélectionnez l’icône de crayon (![Une icône en forme de crayon.](../images/ui/overview/edit-icon.png)) de n’importe quelle ligne du journal de requête pour accéder à la variable [!DNL Query Editor]. La requête est prérenseignée pour faciliter la modification.
 
 ## Informations d’identification
 

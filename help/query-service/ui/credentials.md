@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Guide des informations d’identification de Query Service
 description: Adobe Experience Platform Query Service présente une interface utilisateur qui permet d’écrire et d’exécuter des requêtes, de voir les requêtes précédemment exécutées et d’accéder aux requêtes enregistrées par les utilisateurs au sein de votre organisation IMS.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: d5d69134627b1a162691bda95732d989bd6e3469
 workflow-type: tm+mt
-source-wordcount: '1317'
-ht-degree: 5%
+source-wordcount: '1330'
+ht-degree: 6%
 
 ---
 
@@ -28,11 +28,11 @@ Vous pouvez utiliser des informations d’identification arrivant à expiration 
 
 Le **[!UICONTROL Expiration des informations d’identification]** fournit les informations suivantes :
 
-- **[!UICONTROL Hôte]**: Nom de l’hôte auquel vous vous connectez. Pour la connexion à Query Service, cela inclut le nom de l’organisation IMS que vous utilisez actuellement.
-- **[!UICONTROL Port]**: Numéro de port de l’hôte auquel vous vous connectez.
-- **[!UICONTROL Base]**: Nom de la base de données à laquelle vous vous connectez.
-- **[!UICONTROL Nom d’utilisateur]**: Nom d’utilisateur que vous utiliserez pour vous connecter à Query Service.
-- **[!UICONTROL Mot de passe]**: mot de passe que vous utiliserez pour vous connecter à Query Service.
+- **[!UICONTROL Hôte]**: Nom de l’hôte auquel connecter votre client. Le nom de votre organisation est alors intégré dans le ruban supérieur de l’interface utilisateur de Platform.
+- **[!UICONTROL Port]**: Numéro de port de l’hôte auquel se connecter.
+- **[!UICONTROL Base]**: Nom de la base de données à laquelle connecter un client.
+- **[!UICONTROL Nom d’utilisateur]**: Nom d’utilisateur utilisé pour se connecter à Query Service.
+- **[!UICONTROL Mot de passe]**: Mot de passe utilisé pour se connecter à Query Service. Les mots de passe de l’interface utilisateur ont été hachés pour des raisons de sécurité. Sélectionnez l’icône de copie (![Icône Copier.](../images/ui/credentials/copy-icon.png)) pour copier vos informations d’identification complètes et non hachées dans le presse-papiers.
 - **[!UICONTROL PSQL, commande]**: Une commande qui a automatiquement inséré toutes les informations pertinentes pour vous connecter à Query Service à l’aide de PSQL sur la ligne de commande.
 - **[!UICONTROL Expires]**: Date et heure d’expiration des informations d’identification arrivant à expiration. La durée de validité par défaut du jeton est de 24 heures, mais elle peut être modifiée dans les paramètres avancés du Admin Console.
 
@@ -129,7 +129,7 @@ Le tableau ci-dessous décrit les paramètres généralement requis pour se conn
 | **Port** | port du serveur/hôte auquel vous vous connectez. <ul><li>Cette valeur est utilisée pour les informations d’identification arrivant à expiration et les informations d’identification non arrivant à expiration. Elle se trouve sous **[!UICONTROL Port]** dans le [!UICONTROL EXPIRATION DES INFORMATIONS D’IDENTIFICATION] . Exemple de valeur pour le port : `80`.</ul></li> |
 | **Base de données** | La base de données à laquelle vous vous connectez. <ul><li>Cette valeur est utilisée pour les informations d’identification arrivant à expiration et les informations d’identification non arrivant à expiration et se trouve sous **[!UICONTROL Base]** dans le [!UICONTROL EXPIRATION DES INFORMATIONS D’IDENTIFICATION] . Exemple de valeur pour la base de données : `prod:all`.</ul></li> |
 | **Nom d’utilisateur** | Nom d’utilisateur de l’utilisateur qui se connecte au client externe. <ul><li>Cette valeur est utilisée pour les informations d’identification arrivant à expiration et les informations d’identification non arrivant à expiration. Il prend la forme d’une chaîne alphanumérique avant `@AdobeOrg`. Cette valeur se trouve sous **[!UICONTROL Nom d’utilisateur]**.</li></ul> |
-| **Mot de passe** | Mot de passe de l’utilisateur qui se connecte au client externe. <ul><li>Si vous utilisez des informations d’identification arrivant à expiration, vous pouvez le trouver sous **[!UICONTROL Mot de passe]** dans le [!UICONTROL EXPIRATION DES INFORMATIONS D’IDENTIFICATION] .</li><li>Si vous utilisez des informations d’identification qui ne expirent pas, cette valeur correspond aux arguments concaténés de l’ID de compte technique et aux informations d’identification extraites du fichier JSON de configuration. La valeur du mot de passe se présente comme suit : `{technicalAccountId}:{credential}`.</li></ul> |
+| **Mot de passe** | Mot de passe de l’utilisateur qui se connecte au client externe. <ul><li>Si vous utilisez des informations d’identification arrivant à expiration, vous pouvez le trouver sous **[!UICONTROL Mot de passe]** dans le [!UICONTROL EXPIRATION DES INFORMATIONS D’IDENTIFICATION] .</li><li>Si vous utilisez des informations d’identification qui ne expirent pas, cette valeur correspond aux arguments concaténés de l’ID de compte technique et aux informations d’identification extraites du fichier JSON de configuration. La valeur du mot de passe se présente comme suit : `{technicalAccountId}:{credential}`. </li></ul> |
 
 ## Étapes suivantes
 
