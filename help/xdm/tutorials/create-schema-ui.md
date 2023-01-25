@@ -5,9 +5,9 @@ title: Création d’un schéma à l’aide de l’éditeur de schémas
 type: Tutorial
 description: Ce tutoriel décrit les étapes de création d’un schéma à l’aide de l’éditeur de schémas d’Experience Platform.
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
-source-git-commit: 3dffa9687f3429b970e8fceebd6864a5b61ead21
+source-git-commit: 9f39130c8d470b236764993f7ebca9c1cdc748bb
 workflow-type: tm+mt
-source-wordcount: '3924'
+source-wordcount: '3947'
 ht-degree: 10%
 
 ---
@@ -212,7 +212,7 @@ Lors de la définition de champs dans la variable [!DNL Schema Editor], vous pou
 | --- | --- |
 | [!UICONTROL Obligatoire] | Indique que le champ est requis pour l’ingestion des données. Toute donnée chargée dans un ensemble de données basé sur ce schéma qui ne contient pas ce champ sera défaillante lors de l’ingestion. |
 | [!UICONTROL Tableau] | Indique que le champ contient un tableau de valeurs, chacune avec le type de données spécifié. Par exemple, l’utilisation de cette contrainte sur un champ avec un type de données &quot;[!UICONTROL Chaîne]&quot; indique que le champ contiendra un tableau de chaînes. |
-| [!UICONTROL Énumération et valeurs proposées] | Une énumération indique que ce champ doit contenir l&#39;une des valeurs d&#39;une liste énumérée de valeurs possibles. Vous pouvez également utiliser cette option pour fournir une liste des valeurs suggérées pour un champ de chaîne sans contraindre le champ à ces valeurs. |
+| [!UICONTROL Énumération et valeurs proposées] | Une énumération indique que ce champ doit contenir l&#39;une des valeurs d&#39;une liste énumérée de valeurs possibles. Vous pouvez également utiliser cette option pour fournir une liste des valeurs suggérées pour un champ de chaîne sans contraindre le champ à ces valeurs. Consultez le guide sur la [définition des énumérations et des valeurs proposées](../ui/fields/enum.md) pour plus d’informations sur la gestion de ces types de champs dans l’interface utilisateur. |
 | [!UICONTROL Identité] | Indique que ce champ est un champ d’identité. Vous trouverez plus d’informations sur les champs d’identité [dans la suite de ce tutoriel](#identity-field). |
 | [!UICONTROL Relation] | Bien que les relations de schéma puissent être déduites par l’utilisation du schéma d’union et [!DNL Real-Time Customer Profile], cela s’applique uniquement aux schémas qui partagent la même classe. Le [!UICONTROL Relation] La contrainte indique que ce champ fait référence à l’identité Principale d’un schéma basée sur une classe différente, ce qui implique une relation entre les deux schémas. Voir le tutoriel sur [définition d’une relation](./relationship-ui.md) pour plus d’informations. |
 

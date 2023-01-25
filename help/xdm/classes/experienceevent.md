@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Classe XDM ExperienceEvent
 description: Ce document présente la classe XDM ExperienceEvent et décrit les bonnes pratiques pour la modélisation des données d’événement.
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
+source-git-commit: f7a6f53c0993348c9a0fc0f935a9d02d54389311
 workflow-type: tm+mt
-source-wordcount: '1830'
-ht-degree: 95%
+source-wordcount: '1853'
+ht-degree: 93%
 
 ---
 
@@ -25,7 +25,7 @@ La classe [!DNL XDM ExperienceEvent] elle-même fournit plusieurs champs tempore
 | --- | --- |
 | `_id`<br>**(Obligatoire)** | Identifiant de chaîne unique pour lʼévénement. Ce champ permet de déterminer l’unicité d’un événement individuel, d’éviter la duplication des données et de rechercher cet événement dans les services en aval. Dans certains cas, `_id` peut être un [Identifiant universel unique (UUID)](https://tools.ietf.org/html/rfc4122) ou un [Identifiant global unique (GUID)](https://docs.microsoft.com/fr-fr/dotnet/api/system.guid?view=net-5.0).<br><br>Si vous diffusez des données en continu à partir dʼune connexion source ou si vous ingérez directement à partir d’un fichier parquet, vous devez générer cette valeur en concaténant une certaine combinaison de champs qui rendent l’événement unique, comme un identifiant principal, un horodatage, un type d’événement, etc. La valeur concaténée doit être une chaîne formatée `uri-reference`, ce qui signifie que tout caractère deux-points doit être supprimé. La valeur concaténée doit ensuite être hachée à l’aide de lʼalgorithme SHA-256 ou d’un autre de votre choix.<br><br>Il est important de distinguer que **ce champ ne représente pas une identité liée à une personne individuelle**, mais plutôt lʼenregistrement de données lui-même. Les données d’identité relatives à une personne doivent plutôt être reléguées dans des [champs d’identité](../schema/composition.md#identity) fournis par des groupes de champs compatibles. |
 | `eventMergeId` | Si vous utilisez le [SDK web Adobe Experience Platform](../../edge/home.md) pour lʼingestion des données, cela représente l’identifiant du lot ingéré à l’origine de la création de l’enregistrement. Ce champ est automatiquement renseigné par le système lors de l’ingestion des données. L’utilisation de ce champ en dehors du cadre d’une implémentation du SDK web n’est pas prise en charge. |
-| `eventType` | Chaîne indiquant le type ou la catégorie de l’événement. Ce champ peut être utilisé pour distinguer différents types d’événements au sein dʼun même schéma et dʼun même jeu de données. Par exemple, pour une société active dans la vente au détail, vous pouvez souhaiter distinguer un événement de consultation de produit d’un événement dʼajout au panier.<br><br>Les valeurs standard de cette propriété sont fournies dans la [section annexe](#eventType), y compris des descriptions de leur cas d’utilisation prévu. Ce champ est une énumération extensible, ce qui signifie que vous pouvez également utiliser vos propres chaînes de type d’événement pour classer les événements dont vous effectuez le suivi.La propriété <br><br>`eventType` vous limite à l’utilisation d’un seul événement par accès sur votre application. Par conséquent, vous devez utiliser des champs calculés pour indiquer au système quel événement est le plus important. Pour plus d’informations, consultez la section dédiée aux [bonnes pratiques relatives aux champs calculés](#calculated). |
+| `eventType` | Chaîne indiquant le type ou la catégorie de l’événement. Ce champ peut être utilisé pour distinguer différents types d’événements au sein dʼun même schéma et dʼun même jeu de données. Par exemple, pour une société active dans la vente au détail, vous pouvez souhaiter distinguer un événement de consultation de produit d’un événement dʼajout au panier.<br><br>Les valeurs standard de cette propriété sont fournies dans la [section annexe](#eventType), y compris des descriptions de leur cas d’utilisation prévu. Ce champ est une énumération extensible, ce qui signifie que vous pouvez également utiliser vos propres chaînes de type d’événement pour classer les événements dont vous effectuez le suivi. Vous pouvez également [désactiver l’une des valeurs suggérées standard ;](../ui/fields/enum.md#standard-fields) pour ce champ s’ils ne correspondent pas à vos cas d’utilisation.La propriété <br><br>`eventType` vous limite à l’utilisation d’un seul événement par accès sur votre application. Par conséquent, vous devez utiliser des champs calculés pour indiquer au système quel événement est le plus important. Pour plus d’informations, consultez la section dédiée aux [bonnes pratiques relatives aux champs calculés](#calculated). |
 | `producedBy` | Valeur de chaîne qui décrit le déclencheur ou l’origine de l’événement. Ce champ peut être utilisé, si nécessaire, pour filtrer certains déclencheurs d’événements à des fins de segmentation.<br><br>Certaines valeurs suggérées pour cette propriété sont indiquées dans la [section annexe](#producedBy). Ce champ est une énumération extensible, ce qui signifie que vous pouvez également utiliser vos propres chaînes pour représenter différents déclencheurs d’événements. |
 | `identityMap` | Champ de mappage contenant un jeu d’identités d’espace de noms pour l’individu auquel l’événement s’applique. Ce champ est automatiquement mis à jour par le système lors de l’ingestion des données d’identité. Pour utiliser correctement ce champ pour [Profil client en temps réel](../../profile/home.md), ne tentez pas de mettre à jour manuellement le contenu du champ dans vos opérations de données.<br /><br />Pour plus d’informations sur les cas d’utilisation des mappages dʼidentités, consultez la section correspondante sur la page consacrée aux [principes de base de la composition des schémas](../schema/composition.md#identityMap). |
 | `timestamp`<br>**(Obligatoire)** | Horodatage ISO 8601 du moment où l’événement s’est produit, formaté selon la norme [RFC 3339 (section 5.6)](https://tools.ietf.org/html/rfc3339#section-5.6). Cet horodatage doit se produire dans le passé. Pour connaître les bonnes pratiques relatives à l’utilisation de ce champ, consultez la section ci-dessous relative aux [horodatages](#timestamps). |
@@ -86,9 +86,9 @@ Adobe fournit plusieurs groupes de champs standard à utiliser avec la classe [!
 
 La section suivante contient des informations supplémentaires sur la classe [!UICONTROL XDM ExperienceEvent].
 
-### Valeurs acceptées pour `eventType` {#eventType}
+### Valeurs suggérées pour `eventType` {#eventType}
 
-Le tableau suivant décrit les valeurs acceptées pour `eventType`, ainsi que leurs définitions :
+Le tableau suivant décrit les valeurs suggérées standard pour `eventType`, ainsi que leurs définitions :
 
 | Valeur | Définition |
 | --- | --- |
@@ -148,7 +148,7 @@ Le tableau suivant décrit les valeurs acceptées pour `eventType`, ainsi que le
 
 ### Valeurs suggérées pour `producedBy` {#producedBy}
 
-Le tableau suivant présente quelques-unes des valeurs acceptées pour `producedBy` :
+Le tableau suivant décrit les valeurs suggérées standard pour `producedBy`:
 
 | Valeur | Définition |
 | --- | --- |

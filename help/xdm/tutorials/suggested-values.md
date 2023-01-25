@@ -2,10 +2,10 @@
 title: Gestion des valeurs proposées dans l’API
 description: Découvrez comment ajouter des valeurs suggérées à un champ de chaîne dans l’API Schema Registry.
 exl-id: 96897a5d-e00a-410f-a20e-f77e223bd8c4
-source-git-commit: 2f916ea4b05ca67c2b9e603512d732a2a3f7a3b2
+source-git-commit: b1ef2de1e6f9c6168a5ee2a62b55812123783a3a
 workflow-type: tm+mt
-source-wordcount: '658'
-ht-degree: 1%
+source-wordcount: '942'
+ht-degree: 6%
 
 ---
 
@@ -69,11 +69,11 @@ Vous pouvez également définir un champ de chaîne qui ne contient pas de `enum
 
 Puisque la chaîne n’a pas de `enum` tableau pour définir des contraintes, son `meta:enum` peut être étendue pour inclure de nouvelles valeurs.
 
-<!-- ## Manage suggested values for standard fields
+## Gestion des valeurs suggérées pour les champs standard
 
-For existing standard fields, you can [add suggested values](#add-suggested-standard) or [remove suggested values](#remove-suggested-standard). -->
+Pour les champs standard existants, vous pouvez : [ajouter des valeurs suggérées](#add-suggested-standard) ou [désactiver les valeurs suggérées](#disable-suggested-standard).
 
-## Ajout de valeurs suggérées à un champ standard {#add-suggested-standard}
+### Ajout de valeurs suggérées à un champ standard {#add-suggested-standard}
 
 Pour étendre la variable `meta:enum` d’un champ de chaîne standard, vous pouvez créer une [descripteur de nom convivial](../api/descriptors.md#friendly-name) pour le champ en question dans un schéma particulier.
 
@@ -151,19 +151,25 @@ Après l’application du descripteur, le registre des schémas répond avec ce 
 >}
 >```
 
-<!-- ### Remove suggested values {#remove-suggested-standard}
+### Désactivation des valeurs proposées pour un champ standard {#disable-suggested-standard}
 
-If a standard string field has predefined suggested values, you can remove any values that you do not wish to see in segmentation. This is done through by creating a [friendly name descriptor](../api/descriptors.md#friendly-name) for the schema that includes an `xdm:excludeMetaEnum` property.
+Si un champ de chaîne standard comporte des valeurs suggérées prédéfinies sous `meta:enum`, vous pouvez désactiver toutes les valeurs que vous ne souhaitez pas voir dans la segmentation. Pour ce faire, créez une [descripteur de nom convivial](../api/descriptors.md#friendly-name) pour le schéma qui comprend une `xdm:excludeMetaEnum` .
 
-**API format**
+>[!IMPORTANT]
+>
+>Vous pouvez uniquement désactiver les valeurs suggérées pour les champs standard qui n’ont pas de contraintes d’énumération correspondantes. En d’autres termes, si le champ comporte une `enum` tableau, puis `meta:excludeMetaEnum` n’aura aucun effet.
+>
+>Voir la section sur [règles d’évolution pour les énumérations et les valeurs suggérées](../ui/fields/enum.md#evolution) pour plus d’informations sur les restrictions d’édition des champs existants.
+
+**Format d’API**
 
 ```http
 POST /tenant/descriptors
 ```
 
-**Request**
+**Requête**
 
-The following request removes the suggested values "[!DNL Web Form Filled Out]" and "[!DNL Media ping]" for `eventType` in a schema based on the [XDM ExperienceEvent class](../classes/experienceevent.md).
+La requête suivante désactive les valeurs suggérées &quot;[!DNL Web Form Filled Out]&quot; et &quot;[!DNL Media ping]&quot; pour `eventType` dans un schéma basé sur la fonction [Classe XDM ExperienceEvent](../classes/experienceevent.md).
 
 ```shell
 curl -X POST \
@@ -185,19 +191,19 @@ curl -X POST \
       }'
 ```
 
-| Property | Description |
+| Propriété | Description |
 | --- | --- |
-| `@type` | The type of descriptor being defined. For a friendly name descriptor, this value must be set to `xdm:alternateDisplayInfo`. |
-| `xdm:sourceSchema` | The `$id` URI of the schema where the descriptor is being defined. |
-| `xdm:sourceVersion` | The major version of the source schema. |
-| `xdm:sourceProperty` | The path to the specific property whose suggested values you want to manage. The path should begin with a slash (`/`) and not end with one. Do not include `properties` in the path (for example, use `/personalEmail/address` instead of `/properties/personalEmail/properties/address`). |
-| `meta:excludeMetaEnum` | An object that describes the suggested values that should be excluded for the field in segmentation. The key and value for each entry must match those included in the original `meta:enum` of the field in order for the entry to be excluded.  |
+| `@type` | Le type de descripteur en cours de définition. Pour un descripteur de nom convivial, cette valeur doit être définie sur `xdm:alternateDisplayInfo`. |
+| `xdm:sourceSchema` | L’URI `$id` du schéma dans lequel le descripteur est défini. |
+| `xdm:sourceVersion` | La version principale du schéma source. |
+| `xdm:sourceProperty` | Chemin d’accès à la propriété spécifique dont vous souhaitez gérer les valeurs suggérées. Le chemin doit commencer par une barre oblique (`/`) et ne pas se terminer par un. Ne pas inclure `properties` dans le chemin (par exemple, utilisez `/personalEmail/address` au lieu de `/properties/personalEmail/properties/address`). |
+| `meta:excludeMetaEnum` | Objet décrivant les valeurs suggérées qui doivent être exclues pour le champ de la segmentation. La clé et la valeur de chaque entrée doivent correspondre à celles incluses dans l’original. `meta:enum` du champ pour que la saisie soit exclue. |
 
-{style="table-layout:auto"}
+{style=&quot;table-layout:auto&quot;}
 
-**Response**
+**Réponse**
 
-A successful response returns HTTP status 201 (Created) and the details of the newly created descriptor. The suggested values included under `xdm:excludeMetaEnum` will now be hidden from the Segmentation UI.
+Une réponse réussie renvoie un état HTTP 201 (Created) et les détails du nouveau descripteur. Les valeurs proposées incluses sous `xdm:excludeMetaEnum` sera désormais masqué dans l’interface utilisateur de segmentation.
 
 ```json
 {
@@ -211,7 +217,7 @@ A successful response returns HTTP status 201 (Created) and the details of the n
   "meta:containerId": "tenant",
   "@id": "f3a1dfa38a4871cf4442a33074c1f9406a593407"
 }
-``` -->
+```
 
 ## Gestion des valeurs proposées pour un champ personnalisé {#suggested-custom}
 
