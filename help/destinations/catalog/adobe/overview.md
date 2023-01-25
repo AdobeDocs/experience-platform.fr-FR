@@ -3,10 +3,10 @@ keywords: destinations;solutions experience cloud ; cible;destination cible; clo
 title: Présentation des destinations Adobe
 description: Gérez l’expérience de vos clients en connectant vos données dans Platform à d’autres solutions Adobe Experience Cloud pour le ciblage publicitaire, la personnalisation, l’automatisation du marketing, etc.
 exl-id: 15a22a93-b4d6-4b94-bc6c-3634920c7689
-source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
+source-git-commit: 4ac73a83188a11900f38307ca8d743de4c186fdb
 workflow-type: tm+mt
-source-wordcount: '218'
-ht-degree: 32%
+source-wordcount: '230'
+ht-degree: 31%
 
 ---
 
@@ -24,7 +24,10 @@ Pour comprendre la différence entre les connexions et les extensions, voir [Con
 
 ### Connexions
 
+* [Connexion Adobe Advertising Cloud DSP](/help/destinations/catalog/advertising/adobe-advertising-cloud-connection.md)
 * [Connexion Adobe Campaign](../email-marketing/adobe-campaign.md)
+* [Connexion Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md)
+* [(Version bêta) Audiences Experience Cloud](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
 * [Connexion Marketo Engage](/help/destinations/catalog/adobe/marketo-engage.md)
 
 ### Extensions
