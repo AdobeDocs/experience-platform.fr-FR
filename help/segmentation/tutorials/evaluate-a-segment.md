@@ -5,10 +5,10 @@ title: Évaluation et accès aux résultats des segments
 type: Tutorial
 description: Suivez ce tutoriel pour savoir comment évaluer les segments et accéder aux résultats des segments à l’aide de l’API Adobe Experience Platform Segmentation Service.
 exl-id: 47702819-f5f8-49a8-a35d-034ecac4dd98
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 378f9260703d388976054431a76ac285724a9ae3
 workflow-type: tm+mt
-source-wordcount: '1595'
-ht-degree: 63%
+source-wordcount: '1615'
+ht-degree: 64%
 
 ---
 
@@ -23,7 +23,7 @@ Ce tutoriel nécessite une compréhension pratique des différentes [!DNL Adobe 
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): Fournit un profil client unifié en temps réel basé sur des données agrégées provenant de plusieurs sources.
 - [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): Permet de créer des segments d’audience à partir de [!DNL Real-Time Customer Profile] data.
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md) : framework normalisé selon lequel Platform organise les données de l’expérience client. Pour utiliser au mieux la segmentation, veillez à ce que vos données soient ingérées en tant que profils et événements en fonction des [bonnes pratiques pour la modélisation des données](../../xdm/schema/best-practices.md).
-- [Sandbox](../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuelles qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
+- [Sandbox](../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuelles qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
 
 ### En-têtes requis
 
@@ -130,6 +130,10 @@ L’exemple suivant illustre l’attribut `segmentMembership` pour chaque enregi
 | -------- | ----------- |
 | `lastQualificationTime` | La date et l’heure auxquelles l’appartenance au segment a été affirmée et le profil est entré dans le segment ou en est sorti. |
 | `status` | L’état de la participation au segment dans le cadre de la requête actuelle. Doit être égal à l’une des valeurs connues suivantes : <ul><li>`existing` : l’entité reste dans le segment.</li><li>`realized` : l’entité entre dans le segment.</li><li>`exited` : l’entité quitte le segment.</li></ul> |
+
+>[!NOTE]
+>
+>Toute adhésion au segment qui figure dans la variable `exited` de plus de 30 jours, en fonction de la variable `lastQualificationTime`, sera sujet à suppression.
 
 ## Accès aux résultats de segmentation
 

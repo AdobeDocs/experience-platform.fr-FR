@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Groupe de champs de schéma Détails de l’appartenance à un segment
 description: Ce document présente un aperçu du groupe de champs Détails de l’appartenance au segment .
 exl-id: 4d463f3a-2247-4307-8afe-9527e7fd72a7
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: fda47171cde3f58f48ee721357923017918a7d4e
 workflow-type: tm+mt
-source-wordcount: '430'
+source-wordcount: '470'
 ht-degree: 8%
 
 ---
@@ -75,11 +75,15 @@ Voici un exemple : `segmentMembership` mappage renseigné par le système pour u
 | --- | --- |
 | `xdm:version` | Version du segment pour lequel ce profil s’est qualifié. |
 | `xdm:lastQualificationTime` | Horodatage de la dernière fois que ce profil s’est qualifié pour le segment. |
-| `xdm:validUntil` | Horodatage indiquant le moment où l’appartenance au segment ne doit plus être considérée comme valide. |
+| `xdm:validUntil` | Horodatage indiquant le moment où l’appartenance au segment ne doit plus être considérée comme valide. Pour les audiences externes, si ce champ n’est pas défini, l’appartenance au segment sera conservée uniquement pendant 30 jours à partir de la variable `lastQualificationTime`. |
 | `xdm:status` | Un champ de chaîne qui indique si l’appartenance au segment a été réalisée dans le cadre de la requête actuelle. Les valeurs suivantes sont acceptées : <ul><li>`existing`: Le profil faisait déjà partie du segment avant la demande et continue de conserver son adhésion.</li><li>`realized`: Le profil entre dans le segment dans le cadre de la requête actuelle.</li><li>`exited`: Le profil quitte le segment dans le cadre de la requête actuelle.</li></ul> |
 | `xdm:payload` | Certaines adhésions aux segments incluent une payload qui décrit les valeurs supplémentaires directement liées à l’appartenance. Un seul payload d’un type donné peut être fourni pour chaque appartenance. `xdm:payloadType` indique le type de payload (`boolean`, `number`, `propensity`ou `string`), tandis que sa propriété frère fournit la valeur du type de charge utile. |
 
 {style=&quot;table-layout:auto&quot;}
+
+>[!NOTE]
+>
+>Toute adhésion au segment qui figure dans la variable `exited` de plus de 30 jours, en fonction de la variable `lastQualificationTime`, sera sujet à suppression.
 
 Pour plus d’informations sur le groupe de champs, reportez-vous au référentiel XDM public :
 

@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Import et utilisation d'audiences externes
 description: Suivez ce tutoriel pour découvrir comment utiliser des audiences externes avec Adobe Experience Platform.
 exl-id: 56fc8bd3-3e62-4a09-bb9c-6caf0523f3fe
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 57586104f1119f5cda926faf286c1663fbb0b240
 workflow-type: tm+mt
-source-wordcount: '1621'
-ht-degree: 3%
+source-wordcount: '1664'
+ht-degree: 4%
 
 ---
 
@@ -257,3 +257,7 @@ Vous trouverez ci-dessous un exemple de payload de l’appartenance à une audie
 | `xdmEntity._id` | Identifiant approprié utilisé pour identifier de manière unique l’enregistrement dans le jeu de données. |
 | `{TENANT_NAME}.identities` | Cette section est utilisée pour connecter le groupe de champs des identités personnalisées aux utilisateurs que vous avez précédemment importés. |
 | `segmentMembership.{IDENTITY_NAMESPACE}` | Il s’agit du libellé de l’espace de noms d’identité personnalisée créé précédemment. Par exemple, si vous appelez votre espace de noms d’identité &quot;externalAudience&quot;, vous l’utilisez comme clé du tableau . |
+
+>[!NOTE]
+>
+>Par défaut, les appartenances aux audiences externes ne sont conservées que pendant 30 jours. Pour les conserver pendant plus de 30 jours, utilisez la variable `validUntil` lors de l’ingestion de vos données d’audience. Pour plus d&#39;informations sur ce champ, veuillez lire le guide sur [Groupes de champs de schéma Détails de l’appartenance aux segments](../../xdm/field-groups/profile/segmentation.md).
