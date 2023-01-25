@@ -1,14 +1,11 @@
 ---
-keywords: Experience Platform;accueil;rubriques les plus consultées;espace de stockage Google;stockage dans Google cloud;Google;Google
-solution: Experience Platform
 title: Création d’une connexion de base de stockage dans le cloud Google à l’aide de l’API Flow Service
-type: Tutorial
 description: Découvrez comment connecter Adobe Experience Platform à un compte de stockage dans le cloud Google à l’aide de l’API Flow Service.
 exl-id: 321d15eb-82c0-45a7-b257-1096c6db6b18
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 3636b785d82fa2e49f76825650e6159be119f8b4
 workflow-type: tm+mt
-source-wordcount: '470'
-ht-degree: 61%
+source-wordcount: '560'
+ht-degree: 51%
 
 ---
 
@@ -35,6 +32,8 @@ Pour [!DNL Flow Service] pour vous connecter à [!DNL Google Cloud Storage] , vo
 | ---------- | ----------- |
 | `accessKeyId` | Chaîne alphanumérique de 61 caractères utilisée pour authentifier votre [!DNL Google Cloud Storage] compte à Platform. |
 | `secretAccessKey` | Chaîne codée en base 64 caractères de 40 caractères utilisée pour authentifier votre [!DNL Google Cloud Storage] compte à Platform. |
+| `bucketName` | Le nom de votre [!DNL Google Cloud Storage] du compartiment. Vous devez spécifier un nom de compartiment si vous souhaitez donner accès à un sous-dossier spécifique de votre espace de stockage dans le cloud. |
+| `folderPath` | Chemin d’accès au dossier auquel vous souhaitez accorder l’accès. |
 
 Pour plus d’informations sur ces valeurs, consultez le guide [Clés HMAC de Google Cloud Storage](https://cloud.google.com/storage/docs/authentication/hmackeys#overview). Pour savoir comment générer votre propre identifiant de clé d’accès et votre clé d’accès secrète, reportez-vous à la section [[!DNL Google Cloud Storage] Présentation de la ](../../../../connectors/cloud-storage/google-cloud-storage.md).
 
@@ -48,6 +47,10 @@ Une connexion de base conserve les informations échangées entre votre source e
 
 Pour créer un identifiant de connexion de base, envoyez une requête POST au point d’entrée `/connections` et indiquez vos informations d’authentification [!DNL Google Cloud Storage] dans les paramètres de la requête.
 
+>[!TIP]
+>
+>Au cours de cette étape, vous pouvez également désigner les sous-dossiers auxquels votre compte aura accès en définissant le nom du compartiment et le chemin d’accès au sous-dossier.
+
 **Format d’API**
 
 ```http
@@ -60,33 +63,37 @@ La requête suivante permet de créer une connexion de base pour [!DNL Google Cl
 
 ```shell
 curl -X POST \
-    'https://platform.adobe.io/data/foundation/flowservice/connections' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "name": "Google Cloud Storage connection",
-        "description": "Connector for Google Cloud Storage",
-        "auth": {
-            "specName": "Basic Authentication for google-cloud",
-            "params": {
-                "accessKeyId": "accessKeyId",
-                "secretAccessKey": "secretAccessKey"
-            }
-        },
-        "connectionSpec": {
-            "id": "32e8f412-cdf7-464c-9885-78184cb113fd",
-            "version": "1.0"
-        }
-    }'
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "Google Cloud Storage connection",
+      "description": "Connector for Google Cloud Storage",
+      "auth": {
+          "specName": "Basic Authentication for google-cloud",
+          "params": {
+              "accessKeyId": "accessKeyId",
+              "secretAccessKey": "secretAccessKey",
+              "bucketName": "acme-google-cloud-bucket",
+              "folderPath": "/acme/customers/sales"
+          }
+      },
+      "connectionSpec": {
+          "id": "32e8f412-cdf7-464c-9885-78184cb113fd",
+          "version": "1.0"
+      }
+  }'
 ```
 
 | Propriété | Description |
 | -------- | ----------- |
 | `auth.params.accessKeyId` | L’identifiant de la clé d’accès associé à votre [!DNL Google Cloud Storage] compte . |
 | `auth.params.secretAccessKey` | La clé d’accès secrète associée à votre [!DNL Google Cloud Storage] compte . |
+| `auth.params.bucketName` | Le nom de votre [!DNL Google Cloud Storage] du compartiment. Vous devez spécifier un nom de compartiment si vous souhaitez accorder l’accès à un sous-dossier spécifique de votre espace de stockage dans le cloud. |
+| `auth.params.folderPath` | Chemin d’accès au dossier auquel vous souhaitez accorder l’accès. |
 | `connectionSpec.id` | Le [!DNL Google Cloud Storage] identifiant de spécification de connexion : `32e8f412-cdf7-464c-9885-78184cb113fd` |
 
 **Réponse**
