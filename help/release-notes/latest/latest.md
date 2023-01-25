@@ -2,22 +2,39 @@
 title: Notes de mise à jour d’Adobe Experience Platform
 description: Dernières notes de mise à jour pour Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: f8e8ec0fb13fc988d47bb3bbe85f953e66b33f13
+source-git-commit: d2808ee4cd952e9739d4d346e08a96fa9d49ccc5
 workflow-type: tm+mt
-source-wordcount: '453'
-ht-degree: 100%
+source-wordcount: '1370'
+ht-degree: 39%
 
 ---
 
 # Notes de mise à jour d’Adobe Experience Platform
 
-**Date de publication : 23 novembre 2022.**
+**Date de publication : 25 janvier 2023**
 
 Mises à jour des fonctionnalités existantes dans Adobe Experience Platform :
 
+- [Assurance](#assurance)
 - [Collecte de données](#data-collection)
 - [Modèle de données d’expérience (XDM)](#xdm)
+- [Profil client en temps réel](#profile)
+- [Segmentation Service](#segmentation)
 - [Sources](#sources)
+
+## Assurance {#assurance}
+
+Adobe Assurance vous permet d’inspecter, de tester, de simuler et de valider la manière dont vous collectez des données ou diffusez des expériences dans votre application mobile.
+
+**Fonctionnalités nouvelles ou mises à jour**
+
+| Fonctionnalité | Description |
+| ------- | ----------- |
+| Éditeur de validation | De nouvelles améliorations ont été apportées à l’éditeur de validation. Ces améliorations incluent des colonnes de validation, de nouveaux outils de création de code et des vues améliorées. |
+
+{style=&quot;table-layout:auto&quot;}
+
+Pour plus d’informations sur Assurance, veuillez lire la section [Documentation d’assurance](https://developer.adobe.com/client-sdks/documentation/platform-assurance/).
 
 ## Collecte de données {#data-collection}
 
@@ -27,11 +44,10 @@ Adobe Experience Platform fournit une suite de technologies qui vous permetten
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Extension [!DNL AWS] pour le transfert d’événement | Vous pouvez désormais envoyer des données à [!DNL Amazon Web Services] ([!DNL AWS]) à l’aide d’une extension de [transfert d’événement](../../tags/ui/event-forwarding/overview.md). Pour plus d’informations, consultez la présentation de l’extension [[!DNL AWS] ](../../tags/extensions/server/aws/overview.md). |
-| Extension [!DNL Google Ads Enhanced Conversions] pour le transfert d’événement | Vous pouvez désormais envoyer des données de conversion à [!DNL Google Ads] à l’aide d’une extension de [transfert d’événement](../../tags/ui/event-forwarding/overview.md). Pour plus d’informations, consultez la présentation de l’extension [[!DNL Google Ads Enhanced Conversions] ](../../tags/extensions/server/google-ads-enhanced-conversions/overview.md). |
-| Extension [!DNL Microsoft Azure] pour le transfert d’événement | Vous pouvez désormais envoyer des données à [!DNL Microsoft Azure] à l’aide d’une extension de [transfert d’événement](../../tags/ui/event-forwarding/overview.md). Pour plus d’informations, consultez la présentation de l’extension [[!DNL Microsoft Azure] ](../../tags/extensions/server/azure/overview.md). |
+| Nouvel écran d’accueil | La page d’accueil de l’interface utilisateur de collecte de données a été mise à jour afin d’inclure des informations d’intégration et des liens utiles pour rationaliser la productivité. Cela inclut :<ol><li>Documentation et workflows recommandés pour commencer</li><li>Propriétés, règles et éléments de données récents</li><li>Extensions populaires</li><li>Nouvelles mises à jour d’extension avec une fonction d’installation rapide</li></ol> |
+| Envoi de données à [!DNL Google Ads] utilisation du transfert d’événement | Vous pouvez désormais utiliser la variable [[!DNL Google Ads Enhanced Conversions] Extension d’API](../../tags/extensions/server/google-ads-enhanced-conversions/overview.md) pour le transfert d’événement, combiné avec [Google Oauth 2 secrets](../../tags/ui/event-forwarding/secrets.md#google-oauth2), pour envoyer en toute sécurité des données côté serveur à [!DNL Google Ads] en temps réel. |
 
-Pour plus d’informations sur les fonctionnalités de collecte de données de Platform, consultez la [présentation de la collecte de données](../../collection/home.md).
+{style=&quot;table-layout:auto&quot;}
 
 ## Modèle de données d’expérience (XDM) {#xdm}
 
@@ -41,22 +57,76 @@ XDM est une spécification Open Source qui fournit des structures et des défini
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Attribuer des champs à des classes personnalisées lors de l’ajout direct à un schéma | Auparavant, lorsque vous [ajoutiez directement un champ individuel à un schéma](../../xdm/ui/resources/schemas.md#add-individual-fields), vous ne pouviez attribuer le champ qu’à un groupe de champs en tant que sa ressource parente. Désormais, en plus des groupes de champs, vous pouvez [attribuer le champ à une classe personnalisée](../../xdm/ui/resources/schemas.md#add-to-class) en tant que sa ressource parente. |
+| Désactivation des valeurs suggérées pour les champs de chaîne | Vous pouvez désormais [désactiver les valeurs suggérées individuelles pour les champs de chaîne](../../xdm/ui/fields/enum.md) dans le [!UICONTROL Schémas] workspace, y compris ceux des composants standard. Cette fonctionnalité est disponible uniquement pour les champs avec des valeurs suggérées et n’est pas prise en charge pour les contraintes d’énumération. |
+
+**Nouveaux composants XDM**
+
+| Type de composant | Nom | Description |
+| --- | --- | --- |
+| Classe | [[!UICONTROL Conversion]](https://github.com/adobe/xdm/blob/master/components/classes/conversion.schema.json) | Classe permettant d’effectuer le suivi des données de conversion telles que les conversions de devise. |
+| Groupe de champs | [[!UICONTROL Détails sur le taux de conversion de devise]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/conversion/currency-conversion-details.schema.json) | Un groupe de champs pour la variable [!UICONTROL Conversion] , capturant des détails supplémentaires liés à la conversion de devise. |
+| Groupe de champs | [[!UICONTROL Mappage des résultats d’évaluation des stratégies de consentement avec les métadonnées]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-consentResultsv2.schema.jsonn) | Capture les détails du résultat de l’évaluation de plusieurs stratégies de consentement, y compris les informations de métadonnées sur les entrées de stratégie de consentement et qui existent. |
+
+**Composants XDM mis à jour**
+
+| Type de composant | Nom | Description |
+| --- | --- | --- |
+| Type de données | [[!UICONTROL Informations détaillées sur la publicité]](https://github.com/adobe/xdm/blob/master/components/datatypes/advertisingdetails.schema.json) | Le `ID` a été renommé `name`, et le précédent `name` est maintenant `friendlyName`. |
+| Type de données | [[!UICONTROL Détails de la proposition de décision]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/decisioning/proposition-detail.schema.json) | Ajout d’une `selectionStrategy` qui capture les détails d’une stratégie de sélection. |
+| Groupe de champs | [[!UICONTROL Événement d’expérience - Interactions de propositions]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/decisioning/experienceevent-proposition-interaction.schema.json) | Le groupe de champs est désormais compatible avec la variable [!UICONTROL Événement d’étape de parcours] classe . |
+| Type de données | [[!UICONTROL Informations détaillés sur les erreurs]](https://github.com/adobe/xdm/blob/master/components/datatypes/errordetails.schema.json) | Le `ID` a été renommé `name`. |
+| Type de données | [[!UICONTROL Informations sur les médias]](https://github.com/adobe/xdm/blob/master/components/datatypes/media.schema.json) | Annulation d’une modification du modèle de la propriété de segment vidéo. |
+| Type de données | [[!UICONTROL Informations détaillées sur les données de la QoE]](https://github.com/adobe/xdm/blob/master/components/datatypes/qoedatadetails.schema.json) | Suppression de la fonction `droppedFrameCount` champ . |
+| Type de données | [[!UICONTROL Informations détaillées sur la session]](https://github.com/adobe/xdm/blob/master/components/datatypes/sessiondetails.schema.json) | Renommé `isAuthorized` champ à `authorized`, et mise à jour de ses `type` à une chaîne lorsqu’il s’agissait auparavant d’une valeur booléenne. |
+| Type de données | [[!UICONTROL Expédition]](https://github.com/adobe/xdm/blob/master/components/datatypes/shipping.schema.json) | Ajout de plusieurs nouveaux champs : `shipDate`, `trackingNumber`, et `trackingURL`. |
+| Groupe de champs | [[!UICONTROL Champs d’entité AJO]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/ajo-entity-mixins.schema.json) | Ajout de plusieurs nouveaux champs : `journeyNodeID`, `journeyNodeName`, et `journeyModeType`. |
+| Groupe de champs | [[!UICONTROL Événement d’expérience client]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/experienceevent-consumer.schema.json) | Le groupe de champs est désormais également compatible avec la variable [!UICONTROL Mesures récapitulatives] classe . |
+| Groupe de champs | [[!UICONTROL Déclencheurs de produits]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/product-triggers.schema.json) | Le `productTriggers` est maintenant imbriqué sous un `weather` . |
+| Groupe de champs | [[!UICONTROL Déclencheurs relatifs]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/relative-triggers.schema.json) | Le `relativeTriggers` est maintenant imbriqué sous un `weather` . |
+| Groupe de champs | [[!UICONTROL Déclencheurs Conditions extrêmes]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/severe-triggers.schema.json) | Le `severeTriggers` est maintenant imbriqué sous un `weather` . |
+| Groupe de champs | [[!UICONTROL Déclencheurs météo]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/severe-triggers.schema.json) | Le `weatherTriggers` est maintenant imbriqué sous un `weather` . |
+| Groupe de champs | [[!UICONTROL Comptes professionnels associés XDM]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/account/related-accounts.schema.json) | Le groupe de champs est maintenant stable. |
 
 {style=&quot;table-layout:auto&quot;}
 
 Pour plus d’informations sur XDM dans Platform, consultez la [présentation du système XDM](../../xdm/home.md).
 
+## Profil client en temps réel {#profile}
+
+Adobe Experience Platform vous permet d’offrir aux clients des expériences coordonnées, cohérentes et pertinentes, quel que soit l’endroit ou le moment où ils interagissent avec votre marque. Real-Time Customer Profile offre une vue d’ensemble de chaque client qui combine des données issues de plusieurs canaux, notamment des données en ligne, hors ligne, CRM et tierces. Le Profil vous permet de consolider vos données client en une vue unifiée offrant un compte horodaté et exploitable de chaque interaction client.
+
+**Dépréciation à venir** {#deprecation}
+
+Pour supprimer la redondance dans le cycle de vie de l’adhésion au segment, la variable `Existing` est obsolète de la [carte d’appartenance aux segments](../../xdm/field-groups/profile/segmentation.md) fin mars 2023. Une annonce de suivi contiendra la date exacte d’obsolescence.
+
+Les profils qualifiés dans un segment sont représentés comme suit : `Realized` et les profils disqualifiés continueront à être représentés comme `Exited`. Cela permettra d’obtenir la parité avec les destinations basées sur des fichiers avec `Active` et `Expired` états des segments.
+
+Cette modification peut avoir un impact sur vous si vous utilisez [destinations d’entreprise](../../destinations/destination-types.md#streaming-profile-export) (Amazon Kinesis, Azure Event Hubs, API HTTP) et ont mis en place des processus en aval automatisés, en fonction des `Existing` statut. Vérifiez vos intégrations en aval si c’est le cas pour vous. Si vous souhaitez identifier les profils nouvellement qualifiés au-delà d’un certain temps, envisagez d’utiliser une combinaison de la variable `Realized` et le `lastQualificationTime` dans votre carte d’appartenance aux segments. Pour plus d’informations, contactez votre représentant Adobe.
+
+Pour en savoir plus sur Real-time Customer Profile, notamment des tutoriels et des bonnes pratiques concernant l’utilisation des données de profil, commencez par lire la section [Présentation de Real-Time Customer Profile](../../profile/home.md).
+
+## Segmentation Service {#segmentation}
+
+[!DNL Segmentation Service] définit un sous-ensemble particulier de profils en décrivant les critères qui identifient un groupe de clients potentiels de votre base. Les segments peuvent être basés sur des données d’enregistrement (telles que des informations démographiques) ou des événements de séries temporelles représentant les interactions des clients avec votre marque.
+
+**Fonctionnalités nouvelles ou mises à jour**
+
+| Fonctionnalité | Description |
+| ------- | ----------- |
+| Expiration de l’appartenance à un segment généré par Platform | Toute adhésion au segment qui figure dans la variable `Exited` d’un état de plus de 30 jours, en fonction de la variable `lastQualificationTime` sera sujette à suppression. |
+| Expiration de l’appartenance à une audience externe | Par défaut, les appartenances aux audiences externes sont conservées pendant 30 jours. Pour les conserver plus longtemps, utilisez le `validUntil` lors de l’ingestion des données d’audience. |
+
+{style=&quot;table-layout:auto&quot;}
+
+Pour plus d’informations sur [!DNL Segmentation Service], consultez la [présentation de la segmentation](../../segmentation/home.md).
+
 ## Sources {#sources}
 
-Adobe Experience Platform peut ingérer des données à partir de sources externes tout en vous permettant de structurer, d’étiqueter et d’améliorer ces données à l’aide des services de Platform. Vous pouvez ingérer des données à partir de diverses sources telles que les applications Adobe, le stockage dans le cloud, des logiciels tiers et votre système de gestion de la relation client.
+Adobe Experience Platform peut ingérer des données à partir de sources externes et vous permet de structurer, d’étiqueter et d’améliorer ces données à l’aide des services Platform. Vous pouvez ingérer des données à partir de diverses sources telles que les applications Adobe, le stockage dans le cloud, des logiciels tiers et votre système de gestion de la relation client.
 
 Experience Platform fournit une API RESTful et une interface utilisateur interactive qui vous permet de configurer facilement des connexions source à différents fournisseurs de données. Ces connexions source vous permettent de vous authentifier et de vous connecter à des services de gestion de la relation client et à des systèmes de stockage externes, de définir des heures d’ingestion et de gérer le débit d’ingestion des données.
 
-**Fonctionnalités mises à jour**
-
 | Fonctionnalité | Description |
-| --- | --- | 
-| Disponibilité Beta de la source Oracle Service Cloud | Utilisez la source Oracle Service Cloud pour ingérer des données de votre compte Oracle Service Cloud vers Experience Platform. Pour plus d’informations, consultez la documentation relative à la [source Oracle Service Cloud](../../sources/connectors/customer-success/oracle-service-cloud.md). |
-
-Pour en savoir plus sur les sources, lisez la [présentation des sources](../../sources/home.md).
+| --- | --- |
+| Autoriser l’accès des utilisateurs aux sous-dossiers des sources de stockage dans le cloud | Vous pouvez désormais définir l’accès à un sous-dossier spécifique de votre source de stockage dans le cloud lors de la création d’un compte. Une fois créés, les utilisateurs ne pourront accéder qu’aux données du sous-dossier autorisé. Cette fonctionnalité est disponible pour les sources de stockage dans le cloud suivantes : [Stockage Azure Blob](../../sources/connectors/cloud-storage/blob.md), [Stockage dans le cloud Google](../../sources/connectors/cloud-storage/google-cloud-storage.md), [Google PubSub](../../sources/connectors/cloud-storage/google-pubsub.md), et [SFTP](../../sources/connectors/cloud-storage/sftp.md). |
+| Disponibilité bêta de [!DNL SugarCRM] | [!DNL SugarCRM] Les sources sont désormais disponibles en version bêta. Utilisez la variable [!DNL SugarCRM Accounts & Contacts] et le [!DNL SugarCRM Events] sources pour importer des données à partir de vos [!DNL SugarCRM] compte à Experience Platform. Pour plus d’informations, reportez-vous à la section [[!DNL SugarCRM] aperçu](../../sources/connectors/crm/sugarcrm.md). |
