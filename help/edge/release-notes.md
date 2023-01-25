@@ -3,9 +3,9 @@ title: Notes de mise à jour du SDK web Adobe Experience Platform
 description: Notes de mise à jour les plus récentes pour le SDK Web Adobe Experience Platform.
 keywords: SDK Web Adobe Experience Platform;SDK Web Platform;SDK Web;notes de mise à jour;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: f406ad74da00a7f4bf7ef1b52bee59cd91435d8f
+source-git-commit: 6009592d47cf8f3d0d31e919aff0552e370b2063
 workflow-type: tm+mt
-source-wordcount: '1388'
+source-wordcount: '1470'
 ht-degree: 2%
 
 ---
@@ -15,6 +15,19 @@ ht-degree: 2%
 
 Ce document couvre les notes de mise à jour du SDK Web de Adobe Experience Platform.
 Pour obtenir les dernières notes de mise à jour sur l’extension de balise du SDK Web, reportez-vous à la section [Notes de mise à jour de l’extension de balise SDK Web](extension/web-sdk-ext-release-notes.md).
+
+## Version 2.14.0 - 25 janvier 2023
+
+**Nouvelles fonctionnalités**
+
+* (Version bêta) Ajout de la prise en charge des surfaces et des propositions AJO.
+
+**Correctifs et améliorations**
+
+* Correction d’un problème lié aux actions de code personnalisé du VEC d’Adobe Target en raison duquel le code était injecté dans un autre emplacement que avec [!DNL at.js].
+* Correction d’un problème en raison duquel, dans certains cas extrêmes, l’en-tête &quot;référent&quot; n’était pas correctement défini sur les requêtes envoyées au réseau Edge.
+* Correction d’un problème en raison duquel [conseil client de l’agent utilisateur](fundamentals/user-agent-client-hints.md) peut être définie sur un type incorrect.
+* Correction d’un problème en raison duquel `placeContext.localTime` ne correspondait pas au schéma.
 
 ## Version 2.13.1 - 13 octobre 2022
 
