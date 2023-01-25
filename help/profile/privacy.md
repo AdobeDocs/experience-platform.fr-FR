@@ -5,10 +5,10 @@ title: Traitement des demandes d’accès à des informations personnelles dans 
 type: Documentation
 description: Adobe Experience Platform Privacy Service traite les demandes des clients en matière dʼaccès, de retrait du consentement à la vente ou de suppression de leurs données personnelles conformément aux nombreuses réglementations en matière de confidentialité. Ce document couvre les concepts essentiels liés au traitement des demandes d’accès à des informations personnelles pour Real-time Customer Profile.
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: d41606e4df297d11b4e0e755363d362e075e862c
 workflow-type: tm+mt
-source-wordcount: '1563'
-ht-degree: 30%
+source-wordcount: '1573'
+ht-degree: 27%
 
 ---
 
@@ -26,7 +26,7 @@ Ce document couvre les concepts essentiels associés au traitement des demandes 
 
 ## Prise en main
 
-Une connaissance concrète des services [!DNL Experience Platform] suivants est recommandée avant la lecture de ce guide :
+Ce guide nécessite une compréhension pratique des éléments suivants : [!DNL Platform] composants :
 
 * [[!DNL Privacy Service]](../privacy-service/home.md) : gère les demandes de clients souhaitant accéder à leurs données personnelles, en refuser la vente ou les effacer dans différentes applications Adobe Experience Cloud.
 * [[!DNL Identity Service]](../identity-service/home.md) : résout le problème fondamental de la fragmentation des données d’expérience client en rapprochant les identités entre les appareils et les systèmes.
@@ -48,7 +48,7 @@ Les sections ci-dessous décrivent comment effectuer des demandes d’accès à 
 >
 >Privacy Service ne peut traiter que [!DNL Profile] données utilisant une stratégie de fusion qui n’effectue pas de combinaison d’identités. Voir la section sur [limites des stratégies de fusion](#merge-policy-limitations) pour plus d’informations.
 >
->Il est également important de noter que le temps nécessaire à l’exécution d’une demande d’accès à des informations personnelles ne peut pas être garanti. Si des modifications se produisent dans votre [!DNL Profile] pendant le traitement d’une demande, il n’est pas non plus garanti que ces enregistrements soient ou non traités.
+>Veuillez noter que le temps nécessaire à l’exécution d’une demande d’accès à des informations personnelles **cannot** être garanti. Si des modifications se produisent dans votre [!DNL Profile] pendant le traitement d’une demande, il n’est pas non plus garanti que ces enregistrements soient ou non traités.
 
 ### Utilisation de l’API
 
@@ -65,6 +65,8 @@ En outre, le tableau `include` de la payload de requête doit inclure les valeur
 >Voir la section sur [demandes de profil et demandes d’identité](#profile-v-identity) plus loin dans ce document pour plus d’informations sur les effets de l’utilisation de `ProfileService` et `identity` dans le `include` tableau.
 
 La requête suivante crée une tâche de confidentialité pour les données d’un seul client dans la variable [!DNL Profile] magasin. Deux valeurs d’identité sont fournies pour le client dans la variable `userIDs` tableau ; une utilisant la norme `Email` espace de noms d’identité, et l’autre à l’aide d’un espace de noms personnalisé `Customer_ID` espace de noms. Elle inclut également la valeur de produit pour [!DNL Profile] (`ProfileService`) dans la variable `include` tableau :
+
+**Requête**
 
 ```shell
 curl -X POST \
@@ -108,6 +110,56 @@ curl -X POST \
 >[!IMPORTANT]
 >
 >Platform traite les demandes d’accès à des informations personnelles dans toutes les [sandbox](../sandboxes/home.md) appartenant à votre organisation. Par conséquent, tout en-tête `x-sandbox-name` inclus dans la demande est ignoré par le système. 
+
+**Réponse du produit**
+
+Pour Profile Service, une fois la tâche de confidentialité terminée, une réponse est renvoyée au format JSON avec les informations concernant les ID utilisateur demandés.
+
+```json
+{
+    "privacyResponse": {
+        "jobId": "7467850f-9698-11ed-8635-355435552164",
+        "response": [
+            {
+                "sandbox": "prod",
+                "mergePolicyId": "none",
+                "result": {
+                    "person": {
+                        "gender": "female"           
+                    },
+                    "personalEmail": {
+                        "address": "ajones@acme.com",
+                    },
+                    "identityMap": {
+                        "crmid": [
+                            {
+                                "id": "5b7db37a-bc7a-46a2-a63e-2cfe7e1cc068"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "sandbox": "prod",
+                "mergePolicyId": "none",
+                "result": {
+                    "person": {
+                        "gender": "male"
+                    },
+                    "id": 12345678,
+                    "identityMap": {
+                        "crmid": [
+                            {
+                                "id": "e9d439f2-f5e4-4790-ad67-b13dbd89d52e"
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}
+```
 
 ### Utiliser l’interface utilisateur
 
@@ -161,6 +213,6 @@ Privacy Service ne peut traiter que [!DNL Profile] données utilisant une strat�
 >
 ## Étapes suivantes
 
-En lisant ce document, vous avez découvert les concepts importants liés au traitement des demandes d’accès à des informations personnelles dans [!DNL Experience Platform]. Il est recommandé de continuer la lecture de la documentation fournie dans ce guide afin de mieux comprendre comment gérer les données d’identité et créer des tâches concernant la confidentialité.
+En lisant ce document, vous avez découvert les concepts importants liés au traitement des demandes d’accès à des informations personnelles dans [!DNL Experience Platform]. Pour mieux comprendre comment gérer les données d’identité et créer des tâches de confidentialité, veuillez continuer à lire la documentation fournie dans ce guide.
 
 Pour plus d’informations sur le traitement des demandes d’accès à des informations personnelles pour [!DNL Platform] ressources non utilisées par [!DNL Profile], voir le document sur [traitement des demandes d’accès à des informations personnelles dans le lac de données](../catalog/privacy.md).
