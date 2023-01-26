@@ -1,10 +1,10 @@
 ---
 title: Notes de mise à jour de Adobe Experience Platform, janvier 2023
 description: Notes de mise à jour de janvier 2023 pour Adobe Experience Platform.
-source-git-commit: fbdd3a3270e8aad95cb12281bcd4623a88b13f47
+source-git-commit: 08ad27303b88826fd7e0fcc0a8b3d498de58c260
 workflow-type: tm+mt
-source-wordcount: '1995'
-ht-degree: 30%
+source-wordcount: '1848'
+ht-degree: 32%
 
 ---
 
@@ -74,10 +74,6 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
     <tr>
         <td><b>Correctif ou amélioration</b></td>
         <td><b>Description</b></td>
-    </tr>
-    <tr>
-        <td>Validation de l’interface utilisateur et de l’API pour les mappages requis et les mappages en double (PLAT-123316)</td>
-        <td>La validation est désormais appliquée comme suit dans l’interface utilisateur et l’API lors de la <a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#mapping">champs de mappage</a> dans le workflow d’activation des destinations :<ul><li><b>Mappings requis</b>: Si la destination a été configurée par le développeur de destination avec les mappages requis (par exemple, la variable <a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/advertising/google-ad-manager-360-connection.html?lang=en">Google Ad Manager 360</a> destination), ces mappages requis doivent être ajoutés par l’utilisateur lors de l’activation des données vers la destination. </li><li><b>Duplication des mappages</b>: Dans l'étape de mapping du workflow d'activation, vous pouvez ajouter des valeurs en double dans les champs sources, mais pas dans les champs cibles. Consultez le tableau ci-dessous pour obtenir un exemple de combinaisons de mappage autorisées et interdites. <br><table><thead><tr><th>Autorisé/interdit</th><th>Champ source</th><th>Champ cible</th></tr></thead><tbody><tr><td>Autorisée</td><td><ul><li>email.address</li><li>email.address</li></ul></td><td><ul><li>emailalias1</li><li>email alias2</li></ul></td></tr><tr><td>Interdit</td><td><ul><li>email.address</li><li>hashed.emails</li></ul></td><td><ul><li>emailalias1</li><li>emailalias1</li></ul></td></tr></tbody></table> </li></ul></td>
     </tr>
     <tr>
         <td>Mise à jour du comportement d’exportation vers des destinations basées sur des fichiers (PLAT-123316)</td>
