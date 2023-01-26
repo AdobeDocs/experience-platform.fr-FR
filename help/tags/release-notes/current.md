@@ -2,14 +2,23 @@
 title: Notes de mise à jour relatives aux balises et au transfert d’événements
 description: Dernières notes de mise à jour concernant les balises et le transfert d’événement dans Adobe Experience Platform.
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: 892d22a88546ff270af4f5b253a013015349898b
+source-git-commit: 18599d223733cb151c7517abb77b1745d2e634b7
 workflow-type: tm+mt
-source-wordcount: '418'
-ht-degree: 88%
+source-wordcount: '497'
+ht-degree: 75%
 
 ---
 
 # Notes de mise à jour relatives aux balises et au transfert d’événements
+
+## 25 janvier 2022
+
+* **Nouvel écran d’accueil**: La page d’accueil de l’interface utilisateur de collecte de données a été mise à jour afin d’inclure des informations d’intégration et des liens utiles pour rationaliser la productivité. Cela inclut :
+   1. Documentation et workflows recommandés pour commencer
+   1. Propriétés, règles et éléments de données récents
+   1. Extensions populaires
+   1. Nouvelles mises à jour d’extension avec une fonction d’installation rapide
+* **Envoi de données à [!DNL Google Ads] utilisation du transfert d’événement**: Vous pouvez désormais utiliser la variable [[!DNL Google Ads Enhanced Conversions] Extension d’API](../extensions/server/google-ads-enhanced-conversions/overview.md) pour le transfert d’événement, combiné avec [Google Oauth 2 secrets](../ui/event-forwarding/secrets.md#google-oauth2), pour envoyer en toute sécurité des données côté serveur à [!DNL Google Ads] en temps réel.
 
 ## 23 novembre 2022
 
