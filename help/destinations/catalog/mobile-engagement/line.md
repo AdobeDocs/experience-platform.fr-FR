@@ -2,35 +2,36 @@
 keywords: mobile;destinations d’engagement mobile;LINE;destination d’engagement mobile LINE
 title: Connexion LINE
 description: La destination LINE vous permet d’ajouter des profils à votre segment Platform et de fournir des expériences personnalisées aux utilisateurs connectés.
-source-git-commit: b15ad6339cb342d754e3a78e0d68b232a94a835e
+last-substantial-update: 2022-11-08T00:00:00Z
+exl-id: 9981798a-61f2-4a09-9a33-57e63eb36d43
+source-git-commit: 83778bc5d643f69e0393c0a7767fef8a4e8f66e9
 workflow-type: tm+mt
 source-wordcount: '1183'
-ht-degree: 6%
+ht-degree: 46%
 
 ---
-
 
 # Connexion [!DNL LINE]
 
 ## Présentation {#overview}
 
-[[!DNL LINE]](https://line.me/en/) est une plate-forme de communication populaire qui connecte les gens, les services et l&#39;information et est passée d&#39;une application de chat à un centre de divertissement, social et d&#39;activités quotidiennes.
+[[!DNL LINE]](https://line.me/en/) est une plateforme de communication populaire qui connecte les personnes, les services et l’information et est passée d’une application de chat à un centre de divertissement, social et d’activités quotidiennes.
 
 Ceci [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) tire parti de [[!DNL LINE] API de messagerie](https://developers.line.biz/en/reference/messaging-api/). Vous pouvez activer les profils de vos segments Experience Platform en tant que connexions dans [!DNL LINE] pour vos besoins professionnels.
 
 [!DNL LINE] utilise les jetons du porteur comme mécanisme d’authentification pour communiquer avec [!DNL LINE] API de messagerie. Instructions pour vous authentifier à votre [!DNL LINE] L’instance est plus loin, dans [Authentification à la destination](#authenticate) .
 
-## Cas d&#39;utilisation {#use-cases}
+## Cas d’utilisation {#use-cases}
 
 En tant que marketeur, vous pouvez cibler les utilisateurs dans une destination d’engagement mobile, avec des segments intégrés à [!DNL Adobe Experience Platform]. De plus, vous pouvez leur proposer des expériences personnalisées, en fonction des attributs de leur [!DNL Adobe Experience Platform] profils, dès que les segments et les profils sont mis à jour dans [!DNL Adobe Experience Platform].
 
 ## Conditions préalables {#prerequisites}
 
-### [!DNL LINE] conditions préalables {#prerequisites-destination}
+### Conditions préalables de [!DNL LINE] {#prerequisites-destination}
 
-Notez les conditions préalables suivantes dans [!DNL LINE], afin d’exporter des données de Platform vers votre [!DNL LINE] compte :
+Notez les conditions préalables suivantes dans [!DNL LINE], afin d’exporter des données de Platform vers votre compte [!DNL LINE] :
 
-#### Vous devez avoir une [!DNL LINE] account {#prerequisites-account}
+#### Vous devez avoir un compte [!DNL LINE]. {#prerequisites-account}
 
 Vous devez vous enregistrer et créer une [!DNL LINE] , si vous n’en avez pas déjà un. Pour créer un compte :
 
@@ -53,21 +54,21 @@ Reportez-vous à la section [[!DNL LINE] documentation](https://developers.line.
 
 ## Identités prises en charge {#supported-identities}
 
-[!DNL LINE] prend en charge la mise à jour et l’exportation des identités décrites dans le tableau ci-dessous. En savoir plus sur [identités](/help/identity-service/namespaces.md).
+[!DNL LINE] prend en charge la mise à jour et l’exportation des identités décrites dans le tableau ci-dessous. En savoir plus sur les [identités](/help/identity-service/namespaces.md).
 
 | Identité cible | Description |
 |---|---|
 | ID pour les annonceurs (IFA) | Sélectionnez l’identifiant de l’identité cible des annonceurs (IFA) lorsque les identités source sont IFA *(Apple ID pour les annonceurs)* ou les espaces de noms GAID *(Google Advertising ID). |
 | ID utilisateur LINE | Sélectionnez l’identité cible UserID lorsque les identités source sont des identifiants utilisateur LINE. |
 
-## Type et fréquence d&#39;export {#export-type-frequency}
+## Type et fréquence d’exportation {#export-type-frequency}
 
 Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la fréquence d’exportation des destinations.
 
 | Élément | Type | Notes |
 ---------|----------|---------|
 | Type d’exportation | **[!UICONTROL Basé sur les profils]** | Vous exportez tous les membres d’un segment (audience) avec les identifiants (nom, numéro de téléphone ou autres) utilisés dans la variable [!DNL LINE] destination. |
-| Fréquence des exports | **[!UICONTROL Diffusion en continu]** | Les destinations de diffusion en continu sont &quot;toujours sur&quot; des connexions basées sur l’API. Dès qu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation des segments, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
+| Fréquence des exportations | **[!UICONTROL Diffusion en continu]** | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation des segments, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -75,48 +76,48 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 >[!IMPORTANT]
 >
->Pour vous connecter à la destination, vous avez besoin de l’événement **[!UICONTROL Gestion des destinations]** [autorisation de contrôle d’accès](/help/access-control/home.md#permissions). Lisez le [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+>Pour vous connecter à la destination, vous devez disposer de l’[autorisation de contrôle d’accès](/help/access-control/home.md#permissions) **[!UICONTROL Gérer les destinations]**. Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
 Pour vous connecter à cette destination, procédez comme décrit dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md). Dans le workflow de configuration des destinations, renseignez les champs répertoriés dans les deux sections ci-dessous.
 
-Within **[!UICONTROL Destinations]** > **[!UICONTROL Catalogue]** rechercher [!DNL LINE]. Vous pouvez également la localiser sous le **[!UICONTROL Engagement mobile]** catégorie.
+Dans **[!UICONTROL Destinations]** > **[!UICONTROL Catalogue]**, recherchez [!DNL LINE]. Vous pouvez également la localiser sous le **[!UICONTROL Engagement mobile]** catégorie.
 
-### Authentification à la destination {#authenticate}
+### S’authentifier auprès de la destination {#authenticate}
 
-Pour vous authentifier à la destination, sélectionnez **[!UICONTROL Se connecter à la destination]**.
-![Capture d’écran de l’interface utilisateur de Platform montrant comment vous authentifier.](../../assets/catalog/mobile-engagement/line/authenticate-destination.png)
+Pour vous authentifier auprès de la destination, sélectionnez **[!UICONTROL Se connecter à la destination]**.
+![Capture d’écran montrant comment s’authentifier sur l’interface utilisateur de Platform.](../../assets/catalog/mobile-engagement/line/authenticate-destination.png)
 
 Renseignez les champs obligatoires ci-dessous.
 * **[!UICONTROL Jeton de porteur]**: Votre [!DNL LINE Channel access token (long-lived)] de la [!DNL LINE] console de développement. Reportez-vous à la section [rassembler les informations](#gather-credentials) .
 
-Si les détails fournis sont valides, l’interface utilisateur affiche une **[!UICONTROL Connecté]** avec une coche verte. Vous pouvez ensuite passer à l’étape suivante.
+Si les détails fournis sont valides, l’interface utilisateur affiche un statut **[!UICONTROL Connecté]** avec une coche verte. Vous pouvez ensuite passer à l’étape suivante.
 
-### Renseignement des détails de destination {#destination-details}
+### Renseigner les détails de la destination {#destination-details}
 
 Pour configurer les détails de la destination, renseignez les champs obligatoires et facultatifs ci-dessous. Un astérisque situé en regard d’un champ de l’interface utilisateur indique que le champ est obligatoire.
 ![Capture d’écran de l’interface utilisateur de Platform montrant les détails de destination.](../../assets/catalog/mobile-engagement/line/destination-details.png)
 
-* **[!UICONTROL Nom]**: Un nom par lequel vous reconnaîtrez cette destination à l’avenir.
-* **[!UICONTROL Description]**: Description qui vous aidera à identifier cette destination ultérieurement.
+* **[!UICONTROL Nom]** : un nom par lequel vous reconnaîtrez cette destination à l’avenir.
+* **[!UICONTROL Description]** : une description qui vous aidera à identifier cette destination à l’avenir.
 * **[!UICONTROL Type d’audience]**: Sélectionner **[!UICONTROL ID pour les annonceurs (IFA)]** si les identités que vous souhaitez exporter sont de type *ID pour les annonceurs (IFA)*. Sélectionner **[!UICONTROL ID utilisateur LINE]** si les identités que vous souhaitez exporter sont de type *ID utilisateur LINE*. Reportez-vous à la section [Identités prises en charge](#supported-identities) pour plus d’informations sur les types d’identité.
 
 ### Activer les alertes {#enable-alerts}
 
-Vous pouvez activer les alertes pour recevoir des notifications sur l’état du flux de données vers votre destination. Sélectionnez une alerte dans la liste et abonnez-vous à des notifications concernant le statut de votre flux de données. Pour plus d’informations sur les alertes, consultez le guide sur les [abonnement aux alertes de destinations à l’aide de l’interface utilisateur](../../ui/alerts.md).
+Vous pouvez activer les alertes pour recevoir des notifications sur le statut de votre flux de données vers votre destination. Sélectionnez une alerte dans la liste et abonnez-vous à des notifications concernant le statut de votre flux de données. Pour plus d’informations sur les alertes, consultez le guide sur l’[abonnement aux alertes des destinations dans l’interface utilisateur](../../ui/alerts.md).
 
-Lorsque vous avez terminé de fournir des détails sur votre connexion de destination, sélectionnez **[!UICONTROL Suivant]**.
+Lorsque vous avez terminé de renseigner les détails sur votre connexion de destination, sélectionnez **[!UICONTROL Suivant]**.
 
 ## Activer des segments vers cette destination {#activate}
 
 >[!IMPORTANT]
 >
->Pour activer les données, vous avez besoin de l’événement **[!UICONTROL Gestion des destinations]**, **[!UICONTROL Activation des destinations]**, **[!UICONTROL Afficher les profils]**, et **[!UICONTROL Affichage de segments]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez le [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+>Pour activer les données, vous avez besoin des [autorisations de contrôle d’accès](/help/access-control/home.md#permissions) pour les fonctions **[!UICONTROL Gérer les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]**, et **[!UICONTROL Afficher les segments]**. Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
-Lecture [Activation des profils et des segments vers des destinations d’exportation de segments en continu](/help/destinations/ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des segments d’audience vers cette destination.
+Consultez [Activer les profils et les segments vers les destinations d’exportation de segments de diffusion en continu](/help/destinations/ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des segments d’audience vers cette destination.
 
-### Mise en correspondance des attributs et des identités {#map}
+### Mapper les attributs et les identités {#map}
 
-Pour envoyer correctement vos données d’audience de Adobe Experience Platform vers le [!DNL LINE] destination, vous devez passer par l’étape de mappage des champs. Le mappage consiste à créer un lien entre vos champs de schéma de modèle de données d’expérience (XDM) dans votre compte Platform et leurs équivalents de la destination cible. Pour mapper correctement vos champs XDM à [!DNL LINE] champs de destination, procédez comme suit :
+Pour envoyer correctement vos données d’audience d’Adobe Experience Platform vers la destination [!DNL LINE], vous devez passer par l’étape de mappage des champs. Le mappage consiste à créer un lien entre vos champs de schéma de modèle de données d’expérience (XDM) dans votre compte Platform et leurs équivalents issus de la destination cible. Pour mapper correctement vos champs XDM vers les champs de destination [!DNL LINE], procédez comme suit :
 
 Selon votre identité source, le ou les espaces de noms d’identité cible suivants doivent être mappés : | Identité cible | Champ source | Champ cible | | — | — | — | | ID pour les annonceurs (IFA) | `IDFA` ou `GAID` | `LineId` | | ID utilisateur LINE | `UserID` | `LineId` |
 
@@ -126,11 +127,11 @@ Si vos identités cibles sont *ID utilisateur LINE* vous aurez besoin des élém
 Si votre identité cible est *ID pour les annonceurs (IFA)* vous aurez besoin des éléments suivants :
 ![Exemple de capture d’écran de l’interface utilisateur de Platform montrant le mappage de Target lors de l’utilisation d’un identifiant pour les annonceurs (IFA) pour les identités cibles.](../../assets/catalog/mobile-engagement/line/mappings-idfa.png)
 
-## Validation de l’exportation des données {#exported-data}
+## Valider l’exportation des données {#exported-data}
 
 Si l’exportation des données est réussie hors de l’Experience Platform, la variable [!DNL LINE] la destination crée une nouvelle audience dans [!DNL LINE] à l’aide du nom du segment sélectionné.
 
-Pour vérifier que vous avez correctement configuré la destination, procédez comme suit :
+Pour vérifier que vous avez correctement configuré la destination, procédez comme suit :
 
 1. Dans [!DNL LINE], connectez-vous au [Console de gestion](https://manager.line.biz/).
 
@@ -145,4 +146,4 @@ Exemple de configuration dans [!DNL LINE] est illustré ci-dessous :
 
 ## Utilisation et gouvernance des données {#data-usage-governance}
 
-Lors de la gestion de vos données, toutes les destinations [!DNL Adobe Experience Platform] se conforment aux stratégies d’utilisation des données. Pour obtenir des informations détaillées sur la manière dont [!DNL Adobe Experience Platform] applique la gouvernance des données, voir [Présentation de la gouvernance des données](/help/data-governance/home.md).
+Lors de la gestion de vos données, toutes les destinations [!DNL Adobe Experience Platform] se conforment aux stratégies d’utilisation des données. Pour obtenir des informations détaillées sur la manière dont [!DNL Adobe Experience Platform] applique la gouvernance des données, lisez la [présentation de la gouvernance des données](/help/data-governance/home.md).
