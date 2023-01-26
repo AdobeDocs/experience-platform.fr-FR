@@ -3,10 +3,10 @@ keywords: destinations;adobe experience platform;plateforme;présentation des de
 title: Présentation des destinations
 description: Les destinations sont des intégrations préconfigurées à des plateformes de destination qui permettent dʼactiver facilement des données provenant dʼAdobe Experience Platform. Vous pouvez utiliser les destinations dans Adobe Experience Platform pour activer vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: 842aaa7104b277cf415d1ed9ee2744a200c07ce8
+source-git-commit: 944f307ecb4cf174c9f9818ded17546057f445e4
 workflow-type: tm+mt
 source-wordcount: '633'
-ht-degree: 37%
+ht-degree: 43%
 
 ---
 
@@ -15,6 +15,13 @@ ht-degree: 37%
 ![Bannière de présentation des destinations](./assets/overview/destinations-overview-banner.png)
 
 Les **[!DNL Destinations]** sont des intégrations préconfigurées à des plateformes de destination qui permettent d’activer facilement des données provenant d’Adobe Experience Platform. Vous pouvez utiliser les destinations pour activer vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
+
+<div id="recs-overview-body-1"></div>
+<div id="recs-overview-body-2"></div>
+<div id="recs-overview-body-3"></div>
+<div id="recs-overview-body-4"></div>
+<div id="recs-overview-body-5"></div>
+<div id="recs-overview-body-6"></div>
 
 ## Destinations et sources {#destinations-and-sources}
 
@@ -57,9 +64,9 @@ Pour plus d’informations sur les contrôles d’accès, consultez le [Guide de
 
 ### Contrôle d’accès basé sur les attributs pour les destinations {#attribute-based-access}
 
-Le contrôle d’accès basé sur les attributs dans Adobe Experience Platform permet aux administrateurs de contrôler l’accès à des objets et/ou fonctionnalités spécifiques en fonction d’attributs.
+Le contrôle d’accès basé sur les attributs est une fonctionnalité d’Adobe Experience Platform qui permet aux administrateurs de contrôler l’accès à des objets et/ou fonctionnalités spécifiques en fonction d’attributs.
 
-Avec le contrôle d’accès basé sur les attributs, vous pouvez appliquer des configurations de mappage aux champs auxquels vous êtes autorisé à accéder. De plus, vous ne pouvez pas exporter des données vers une destination si vous n’avez pas accès à tous les champs du jeu de données.
+Grâce au contrôle d’accès basé sur les attributs, vous pouvez appliquer des configurations de mappage aux champs pour lesquels vous disposez d’autorisations. De plus, vous ne pouvez pas exporter des données vers une destination si vous n’avez pas accès à tous les champs du jeu de données.
 
 Pour plus d’informations sur le fonctionnement des destinations avec les contrôles d’accès basés sur les attributs, consultez la section [contrôle d’accès basé sur les attributs - Aperçu](../access-control/abac/overview.md#destinations).
 
