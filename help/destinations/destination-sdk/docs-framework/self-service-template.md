@@ -2,10 +2,10 @@
 title: Modèle de libre-service de documentation // Remplacer par le nom de votre destination
 description: Utilisez ce modèle pour créer une documentation publique pour votre destination dans le catalogue Adobe Experience Platform. // Remplacer par le paragraphe dans la section Aperçu
 exl-id: 99700474-8bf6-4176-acc1-38814e17c995
-source-git-commit: 46e8f6cf3e135b31dc508274598f9d76df857c8f
+source-git-commit: 49b3553c3e408d2dfbca491b1df71be1d4aefaae
 workflow-type: tm+mt
-source-wordcount: '1488'
-ht-degree: 7%
+source-wordcount: '1534'
+ht-degree: 28%
 
 ---
 
@@ -29,7 +29,7 @@ ht-degree: 7%
 >
 >Cette page de documentation a été créée par la fonction *YourDestination* l&#39;équipe. Pour toute demande de mise à jour ou de renseignements, contactez-les directement à l’adresse *Ajouter un lien ou une adresse électronique où vous pouvez accéder pour obtenir des mises à jour, par exemple `support@YourDestination.com`.*
 
-## Cas d&#39;utilisation {#use-cases}
+## Cas d’utilisation {#use-cases}
 
 Pour vous aider à mieux comprendre comment et à quel moment utiliser la variable *YourDestination* destination, voici des exemples de cas d’utilisation que les clients Adobe Experience Platform peuvent résoudre à l’aide de cette destination.
 
@@ -60,7 +60,7 @@ Pour vous aider à mieux comprendre comment et à quel moment utiliser la variab
 
 *Ajoutez des informations dans cette section sur les identités prises en charge par votre destination. Nous avons prérempli le tableau avec certaines valeurs standard. Supprimez les valeurs qui ne s’appliquent pas à votre destination et celles qui ne sont pas préremplies.*
 
-*YourDestination* prend en charge l’activation des identités décrites dans le tableau ci-dessous. En savoir plus sur [identités](/help/identity-service/namespaces.md).
+*YourDestination* prend en charge l’activation des identités décrites dans le tableau ci-dessous. En savoir plus sur les [identités](/help/identity-service/namespaces.md).
 
 | Identité cible | Description | Considérations |
 |---|---|---|
@@ -73,7 +73,7 @@ Pour vous aider à mieux comprendre comment et à quel moment utiliser la variab
 
 {style=&quot;table-layout:auto&quot;}
 
-## Type et fréquence d&#39;export {#export-type-frequency}
+## Type et fréquence d’exportation {#export-type-frequency}
 
 *Dans le tableau, conservez uniquement les lignes correspondant à votre destination. Vous devez avoir une ligne pour le type Export et une ligne pour la Fréquence d&#39;export. Supprimez les valeurs qui ne s’appliquent pas à votre destination.*
 
@@ -82,9 +82,10 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 | Élément | Type | Notes |
 ---------|----------|---------|
 | Type d’exportation | **[!UICONTROL Exportation des segments]** | Vous exportez tous les membres d’un segment (audience) avec les identifiants (nom, numéro de téléphone ou autres) utilisés dans la variable *YourDestination* destination. |
-| Type d’exportation | **[!UICONTROL Basé sur les profils]** | Vous exportez tous les membres d’un segment, ainsi que les champs de schéma de votre choix (par exemple : adresse électronique, numéro de téléphone, nom), tel que sélectionné dans l’écran de sélection des attributs de profil de la fonction [workflow d’activation de destination](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
-| Fréquence des exports | **[!UICONTROL Diffusion en continu]** | Les destinations de diffusion en continu sont &quot;toujours sur&quot; des connexions basées sur l’API. Dès qu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation des segments, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
-| Fréquence des exports | **[!UICONTROL Lot]** | Les destinations de lot exportent des fichiers vers des plateformes en aval par incréments de trois, six, huit, douze ou vingt-quatre heures. En savoir plus sur [destinations basées sur des fichiers de lots](/help/destinations/destination-types.md#file-based). |
+| Type d’exportation | **[!UICONTROL Basé sur les profils]** | Vous exportez tous les membres d’un segment, ainsi que les champs de schéma de votre choix (par exemple : adresse électronique, numéro de téléphone, nom), tel que sélectionné dans l’écran de sélection des attributs de profil du [workflow d’activation de destination](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
+| Type d’exportation | **[!UICONTROL Exportation des jeux de données]** | Vous exportez des jeux de données bruts qui ne sont pas groupés ou structurés selon les intérêts ou les qualifications de l’audience. |
+| Fréquence des exportations | **[!UICONTROL Diffusion en continu]** | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation des segments, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
+| Fréquence des exportations | **[!UICONTROL Lot]** | Les destinations par lots exportent des fichiers vers des plateformes en aval par incréments de trois, six, huit, douze ou vingt-quatre heures. En savoir plus sur les [destinations basées sur des fichiers par lots](/help/destinations/destination-types.md#file-based). |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -92,11 +93,11 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 >[!IMPORTANT]
 > 
->Pour vous connecter à la destination, vous avez besoin de l’événement **[!UICONTROL Gestion des destinations]** [autorisation de contrôle d’accès](/help/access-control/home.md#permissions). Lisez le [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+>Pour vous connecter à la destination, vous devez disposer de l’[autorisation de contrôle d’accès](/help/access-control/home.md#permissions) **[!UICONTROL Gérer les destinations]**. Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
 Pour vous connecter à cette destination, procédez comme décrit dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md). Dans le workflow de configuration des destinations, renseignez les champs répertoriés dans les deux sections ci-dessous.
 
-### Authentification à la destination {#authenticate}
+### S’authentifier auprès de la destination {#authenticate}
 
 *Ajoutez les champs que les clients doivent renseigner lors de l’authentification à votre destination. Ces champs sont spécifiques à la destination et dépendent de votre configuration dans Destination SDK. Les champs de votre destination peuvent ne pas être identiques à ceux répertoriés ci-dessous. Veuillez également inclure une capture d’écran similaire à l’exemple de capture d’écran ci-dessous.*
 
@@ -106,7 +107,7 @@ Pour vous authentifier à la destination, renseignez les champs requis et sélec
 
 * **[!UICONTROL Jeton de porteur]**: Renseignez le jeton porteur pour vous authentifier à la destination.
 
-### Renseignement des détails de destination {#destination-details}
+### Renseigner les détails de la destination {#destination-details}
 
 *Ajoutez les champs que les clients doivent renseigner lors de la configuration d’une nouvelle destination. Ces champs sont spécifiques à la destination et dépendent de votre configuration dans Destination SDK. Les champs de votre destination peuvent ne pas être identiques à ceux répertoriés ci-dessous. Veuillez également inclure une capture d’écran similaire à l’exemple de capture d’écran ci-dessous.*
 
@@ -114,29 +115,31 @@ Pour configurer les détails de la destination, renseignez les champs obligatoir
 
 ![Exemple de capture d’écran montrant comment remplir les détails de votre destination](/help/destinations/destination-sdk/docs-framework/assets/configure-destination-details.png)
 
-* **[!UICONTROL Nom]**: Un nom par lequel vous reconnaîtrez cette destination à l’avenir.
-* **[!UICONTROL Description]**: Description qui vous aidera à identifier cette destination ultérieurement.
+* **[!UICONTROL Nom]** : un nom par lequel vous reconnaîtrez cette destination à l’avenir.
+* **[!UICONTROL Description]** : une description qui vous aidera à identifier cette destination à l’avenir.
 * **[!UICONTROL Identifiant de compte]**: Votre *YourDestination* ID de compte.
 
 ### Activer les alertes {#enable-alerts}
 
-Vous pouvez activer les alertes pour recevoir des notifications sur l’état du flux de données vers votre destination. Sélectionnez une alerte dans la liste et abonnez-vous à des notifications concernant le statut de votre flux de données. Pour plus d’informations sur les alertes, consultez le guide sur les [abonnement aux alertes de destinations à l’aide de l’interface utilisateur](../../ui/alerts.md).
+Vous pouvez activer les alertes pour recevoir des notifications sur le statut de votre flux de données vers votre destination. Sélectionnez une alerte dans la liste et abonnez-vous à des notifications concernant le statut de votre flux de données. Pour plus d’informations sur les alertes, consultez le guide sur les [abonnement aux alertes de destinations à l’aide de l’interface utilisateur](../../ui/alerts.md).
 
-Lorsque vous avez terminé de fournir des détails sur votre connexion de destination, sélectionnez **[!UICONTROL Suivant]**.
+Lorsque vous avez terminé de renseigner les détails sur votre connexion de destination, sélectionnez **[!UICONTROL Suivant]**.
 
 ## Activer des segments vers cette destination {#activate}
 
 >[!IMPORTANT]
 > 
->Pour activer les données, vous avez besoin de l’événement **[!UICONTROL Gestion des destinations]**, **[!UICONTROL Activation des destinations]**, **[!UICONTROL Afficher les profils]**, et **[!UICONTROL Affichage de segments]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez le [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+>Pour activer les données, vous avez besoin des [autorisations de contrôle d’accès](/help/access-control/home.md#permissions) pour les fonctions **[!UICONTROL Gérer les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]**, et **[!UICONTROL Afficher les segments]**. Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
-*Supprimer le cas échéant : si vous documentez une nouvelle destination de diffusion en continu, conservez le premier paragraphe ci-dessous. Si vous documentez une nouvelle destination basée sur des fichiers, conservez le deuxième paragraphe.*
+*Supprimer le cas échéant : si vous documentez une nouvelle destination de diffusion en continu, conservez le premier paragraphe ci-dessous. Si vous documentez une nouvelle destination basée sur des fichiers, conservez le deuxième paragraphe. Si vous documentez une destination qui exporte des jeux de données, conservez le troisième paragraphe.*
 
-Lecture [Activation des profils et des segments vers des destinations d’exportation de segments en continu](/help/destinations/ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des segments d’audience vers cette destination.
+Consultez [Activer les profils et les segments vers les destinations d’exportation de segments de diffusion en continu](/help/destinations/ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des segments d’audience vers cette destination.
 
 Lecture [Activation des données d’audience vers des destinations d’exportation de profils par lots](/help/destinations/ui/activate-batch-profile-destinations.md) pour obtenir des instructions sur l’activation des segments d’audience vers cette destination.
 
-### Mise en correspondance des attributs et des identités {#map}
+Lecture [(Version bêta) Exportation de jeux de données](/help/destinations/ui/export-datasets.md) pour obtenir des instructions détaillées sur l’exportation de jeux de données vers cette destination.
+
+### Mapper les attributs et les identités {#map}
 
 *Ajoutez des informations sur les mappages pris en charge entre les champs source et cible dans l’étape Mappage du workflow d’activation. Votre destination peut prendre en charge l’exportation d’attributs de profil, d’espaces de noms d’identité ou des deux. Certains champs peuvent être obligatoires. Les attributs Target peuvent être prédéfinis ou personnalisés. Appelez les avertissements importants et utilisez des exemples, de préférence avec des captures d’écran. Voici deux exemples de pages de destination que vous pouvez utiliser comme référence :*
 
