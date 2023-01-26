@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Fonctions de mappage de prép de données
 description: Ce document présente les fonctions de mappage utilisées avec Data Prep.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: d39ae3a31405b907f330f5d54c91b95c0f999eee
+source-git-commit: 4a033d782c2cc4a42edacf0abc146bd128fdb07c
 workflow-type: tm+mt
-source-wordcount: '4367'
+source-wordcount: '4398'
 ht-degree: 16%
 
 ---
@@ -138,10 +138,10 @@ Les tableaux suivants répertorient toutes les fonctions de mappage prises en ch
 
 | Fonction | Description | Paramètres | Syntaxe | Expression | Exemple de résultat |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
-| is_empty | Vérifie si un objet est vide ou non. | <ul><li>INPUT : **Obligatoire** L’objet que vous essayez de vérifier est vide.</li></ul> | is_empty(INPUT) | `is_empty([1, 2, 3])` | false |
-| array_to_object | Crée une liste d’objets. | <ul><li>INPUT : **Obligatoire** Groupement de paires clé-tableau.</li></ul> | array_to_object(INPUT) | exemple de besoin | exemple de besoin |
+| is_empty | Vérifie si un objet est vide ou non. | <ul><li>INPUT : **Obligatoire** L’objet que vous essayez de vérifier est vide.</li></ul> | is_empty(INPUT) | `is_empty([1, null, 2, 3])` | false |
+| array_to_object | Crée une liste d’objets. | <ul><li>INPUT : **Obligatoire** Groupement de paires clé-tableau.</li></ul> | array_to_object(INPUT) | `arrays_to_objects('sku', explode("id1\|id2", '\\|'), 'price', [22.5,14.35])` | [{ &quot;sku&quot;: &quot;id1&quot;, &quot;price&quot; : 22.5 }, { &quot;sku&quot; : &quot;id2&quot;, &quot;price&quot; : 14.35 }] |
 | to_object | Crée un objet basé sur les paires clé/valeur plate données. | <ul><li>INPUT : **Obligatoire** Liste plate de paires clé/valeur.</li></ul> | to_object(INPUT) | to_object &#x200B;(&quot;firstName&quot;, &quot;John&quot;, &quot;lastName&quot;, &quot;Doe&quot;) | `{"firstName": "John", "lastName": "Doe"}` |
-| str_to_object | Crée un objet à partir de la chaîne d’entrée. | <ul><li>STRING: **Obligatoire** Chaîne analysée pour créer un objet.</li><li>VALUE_DELIMITER: *Facultatif* Délimiteur qui sépare un champ de la valeur. Le délimiteur par défaut est `:`.</li><li>FIELD_DELIMITER : *Facultatif* Délimiteur qui sépare les paires valeur-champ. Le délimiteur par défaut est `,`.</li></ul> | str_to_object &#x200B;(STRING, VALUE_DELIMITER, FIELD_DELIMITER) | str_to_object(&quot;firstName=John,lastName=Doe,phone=123 456 7890&quot;, &quot;=&quot;, &quot;,&quot;) | `{"firstName": "John", "lastName": "Doe", "phone": "123 456 7890"}` |
+| str_to_object | Crée un objet à partir de la chaîne d’entrée. | <ul><li>STRING: **Obligatoire** Chaîne analysée pour créer un objet.</li><li>VALUE_DELIMITER: *Facultatif* Délimiteur qui sépare un champ de la valeur. Le délimiteur par défaut est `:`.</li><li>FIELD_DELIMITER : *Facultatif* Délimiteur qui sépare les paires valeur-champ. Le délimiteur par défaut est `,`.</li></ul> | str_to_object &#x200B;(STRING, VALUE_DELIMITER, FIELD_DELIMITER) **Remarque**: Vous pouvez utiliser la variable `get()` fonction avec `str_to_object()` pour récupérer les valeurs des clés dans la chaîne. | <ul><li>Exemple #1 : str_to_object(&quot;firstName - John ; lastName - ; - 123 345 7890&quot;, &quot;-&quot;, &quot;;&quot;)</li><li>Exemple #2 : str_to_object(&quot;firstName - John ; lastName - ; phone - 123 456 7890&quot;, &quot;-&quot;, &quot;;&quot;).get(&quot;firstName&quot;)</li></ul> | <ul><li>Exemple #1 :`{"firstName": "John", "lastName": "Doe", "phone": "123 456 7890"}`</li><li>Exemple #2 : &quot;John&quot;</li></ul> |
 | contains_key | Vérifie si l’objet existe dans les données source. **Remarque :** Cette fonction remplace le `is_set()` fonction . | <ul><li>INPUT : **Obligatoire** Chemin à vérifier s’il existe dans les données source.</li></ul> | contains_key(INPUT) | contains_key(&quot;evars.evar.field1&quot;) | vrai |
 | nullify | Définit la valeur de l’attribut sur `null`. Vous devez l’utiliser lorsque vous ne souhaitez pas copier le champ dans le schéma cible. |  | nullify() | nullify() | `null` |
 | get_keys | Analyse les paires clé/valeur et renvoie toutes les clés. | <ul><li>OBJECT : **Obligatoire** Objet à partir duquel les clés seront extraites.</li></ul> | get_keys(OBJECT) | get_keys({&quot;book1&quot;: &quot;Fierté et préjugé&quot;, &quot;livre2&quot; : &quot;1984&quot;}) | `["book1", "book2"]` |
