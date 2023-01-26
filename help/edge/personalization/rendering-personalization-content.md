@@ -3,20 +3,20 @@ title: Rendu de contenu personnalisé à l’aide du SDK Web de Adobe Experience
 description: Découvrez comment effectuer le rendu du contenu personnalisé avec le SDK Web de Adobe Experience Platform.
 keywords: personnalisation;renderDecisions;sendEvent;décisionScopes;propositions;
 exl-id: 6a3252ca-cdec-48a0-a001-2944ad635805
-source-git-commit: 0d8e19d8428191cc0c6c56e629e8c5528a96115c
+source-git-commit: c75a8bdeaba67259b5f4b4ce025d5e128d763040
 workflow-type: tm+mt
-source-wordcount: '924'
-ht-degree: 3%
+source-wordcount: '962'
+ht-degree: 4%
 
 ---
 
 # Rendu de contenu personnalisé
 
-Le SDK Web de Adobe Experience Platform prend en charge la récupération de contenu personnalisé à partir des solutions de personnalisation d’Adobe, y compris [Adobe Target](https://business.adobe.com/products/target/adobe-target.html) et [offer decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=fr).
+Le SDK Web de Adobe Experience Platform prend en charge la récupération de contenu personnalisé à partir des solutions de personnalisation d’Adobe, y compris [Adobe Target](https://business.adobe.com/fr/products/target/adobe-target.html), [offer decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=fr) et [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/get-started.html?lang=fr).
 
 En outre, le SDK Web offre des fonctionnalités de personnalisation de même page et page suivante par le biais de destinations de personnalisation Adobe Experience Platform, telles que [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) et le [connexion à la personnalisation personnalisée](../../destinations/catalog/personalization/custom-personalization.md). Pour savoir comment configurer Experience Platform pour la personnalisation de la même page et de la page suivante, reportez-vous à la section [guide dédié](../../destinations/ui/configure-personalization-destinations.md).
 
-Contenu créé dans Adobe Target [Compositeur d’expérience visuelle](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) peut être récupéré et rendu automatiquement par le SDK. Contenu créé dans Adobe Target [Compositeur d’expérience d’après les formulaires](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html) ou Offer decisioning ne peut pas être rendu automatiquement par le SDK. Vous devez plutôt demander ce contenu à l’aide du SDK, puis effectuer vous-même le rendu manuel du contenu.
+Contenu créé dans Adobe Target [Compositeur d’expérience visuelle](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) et Adobe Journey Optimizer [Interface utilisateur de Campaign web](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html) peut être récupéré et rendu automatiquement par le SDK. Contenu créé dans Adobe Target [Compositeur d’expérience d’après les formulaires](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=fr) ou Offer decisioning ne peut pas être rendu automatiquement par le SDK. Vous devez plutôt demander ce contenu à l’aide du SDK, puis effectuer vous-même le rendu manuel du contenu.
 
 ## Rendu automatique du contenu
 
@@ -107,7 +107,7 @@ Dans l’exemple, la variable `renderDecisions` n’était pas définie sur `tru
 
 Si vous avez plutôt défini la variable `renderDecisions` option à `true` lors de l’envoi de l’événement, le SDK aurait tenté d’effectuer le rendu de toutes les propositions éligibles pour le rendu automatique (comme décrit précédemment). Par conséquent, chaque objet de proposition aurait sa `renderAttempted` définie sur `true`. Dans ce cas, il n’est pas nécessaire d’effectuer le rendu manuel de ces propositions.
 
-Jusqu’à présent, nous n’avons parlé que du contenu de personnalisation éligible au rendu automatique (c’est-à-dire de tout contenu créé dans le compositeur d’expérience visuelle Adobe Target). Pour récupérer un contenu de personnalisation _not_ éligible au rendu automatique, vous devez demander le contenu en renseignant la variable `decisionScopes` lors de l’envoi de l’événement. Une portée est une chaîne qui identifie une proposition particulière que vous souhaitez récupérer du serveur.
+Jusqu’à présent, nous n’avons parlé que du contenu de personnalisation éligible au rendu automatique (c’est-à-dire tout contenu créé dans le compositeur d’expérience visuelle Adobe Target ou l’interface utilisateur de Adobe Journey Optimizer Web Campaign). Pour récupérer un contenu de personnalisation _not_ éligible au rendu automatique, vous devez demander le contenu en renseignant la variable `decisionScopes` lors de l’envoi de l’événement. Une portée est une chaîne qui identifie une proposition particulière que vous souhaitez récupérer du serveur.
 
 Voici un exemple :
 
@@ -303,7 +303,7 @@ Le `applyPropositions` vous permet de générer ou d’exécuter un tableau de p
 
 >[!IMPORTANT]
 >
->Si des propositions pour la `__view__` étaient rendues au chargement de la page, leurs `renderAttempted` L’indicateur sera défini sur `true`. Le `applyPropositions` ne restituera pas à nouveau la variable `__view__` propositions d’étendue qui ont la variable `renderAttempted: true` Indicateur.
+>Si des propositions pour la `__view__` la portée (ou une surface web) étaient rendues au chargement de la page, leurs `renderAttempted` L’indicateur sera défini sur `true`. Le `applyPropositions` ne restituera pas à nouveau la variable `__view__` propositions de portée (ou de surface web) qui ont la variable `renderAttempted: true` Indicateur.
 
 ### Cas d’utilisation 1 : Rendre les propositions de vue d’application d’une seule page
 
