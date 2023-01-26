@@ -1,14 +1,18 @@
 ---
 title: Journaux de requête
 description: Les logs de requête sont générés automatiquement chaque fois qu’une requête est exécutée et sont disponibles via l’interface utilisateur pour faciliter la résolution des problèmes. Ce document explique comment utiliser et parcourir la section Journaux de Query Service de l’interface utilisateur.
-source-git-commit: 22deca5f9bcf6bcf97cca01b97fce9d22800b767
+source-git-commit: 95d3604a9589a4d0db7e426dd000ddec9cd4f2ce
 workflow-type: tm+mt
-source-wordcount: '521'
+source-wordcount: '585'
 ht-degree: 3%
 
 ---
 
 # Journaux de requête
+
+>[!IMPORTANT]
+>
+>Certaines fonctionnalités de logs de requête sont actuellement dans une version limitée et ne sont pas disponibles pour tous les clients. Votre interface utilisateur peut apparaître légèrement différemment sans icône de modification. En outre, le processus de sélection d’un nom de requête peut permettre d’accéder à l’éditeur de requêtes au lieu de la fonction [!UICONTROL Détails du journal de requête] vue.
 
 Adobe Experience Platform conserve un journal de tous les événements de requête qui se produisent par le biais de l’API et de l’interface utilisateur. Ces informations sont disponibles dans l’interface utilisateur de Query Service à partir du [!UICONTROL Journaux] .
 
@@ -39,6 +43,10 @@ Chaque ligne représente les données du journal d’une exécution de requête 
 Dans le panneau des détails du journal, vous pouvez sélectionner un nouveau jeu de données de sortie et voir ou copier la requête SQL complète utilisée dans l’exécution.
 
 ![Espace de travail Journal des requêtes avec une ligne sélectionnée et le jeu de données de sortie et la requête SQL mise en surbrillance.](../images/ui/query-log/edit-output-dataset.png)
+
+>[!IMPORTANT]
+>
+>Certaines fonctionnalités de logs de requête sont actuellement dans une version limitée et ne sont pas disponibles pour tous les clients.
 
 Vous pouvez également sélectionner un nom de modèle de requête à partir du champ [!UICONTROL Nom] pour accéder directement à la variable [!UICONTROL Détails du journal de requête] vue.
 
