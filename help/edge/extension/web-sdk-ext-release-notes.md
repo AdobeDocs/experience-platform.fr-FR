@@ -2,7 +2,7 @@
 title: Notes de mise à jour de l’extension SDK Web Adobe Experience Platform
 description: Extension de balise SDK Web Adobe Experience Platform
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 47e92e4e7475a23c5c65085db57dfc7a2822b8b6
+source-git-commit: 5ec1ede39489ce48fc20739030884ec3811a8426
 workflow-type: tm+mt
 source-wordcount: '1528'
 ht-degree: 40%
@@ -14,7 +14,7 @@ ht-degree: 40%
 
 Ce document couvre les notes de mise à jour de l’extension de balise SDK Web Adobe Experience Platform. Pour obtenir les dernières notes de mise à jour sur le SDK lui-même, voir la section [Notes de mise à jour du SDK Web Platform](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
 
-## Version 2.15.0 - 25 janvier 2023
+## Version 2.15.1 - 26 janvier 2023
 
 * Correction d’un problème en raison duquel les utilisateurs n’ayant pas accès aux flux de données ne pouvaient pas modifier la configuration de l’extension.
 * Ajout de la prise en charge des surfaces dans le `sendEvent` action.
