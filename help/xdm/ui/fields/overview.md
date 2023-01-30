@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Définition des champs XDM dans l’interface utilisateur
 description: Découvrez comment définir des champs XDM dans l’interface utilisateur de l’Experience Platform.
 exl-id: 2adb03d4-581b-420e-81f8-e251cf3d9fb9
-source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
+source-git-commit: f1a8bcc7c1ba33d74e1f687b4cfd83bddce2fadc
 workflow-type: tm+mt
-source-wordcount: '1374'
-ht-degree: 5%
+source-wordcount: '1407'
+ht-degree: 4%
 
 ---
 
@@ -44,7 +44,7 @@ Selon que vous ajoutez directement un champ à un schéma ou à sa classe consti
 
 ## Définition des propriétés d’un champ {#define}
 
-Après avoir sélectionné la variable **plus (+)** , une **[!UICONTROL Nouveau champ]** apparaît dans la zone de travail, située dans un espace de noms d’objet associé à votre identifiant de tenant unique (comme illustré ci-dessous `_tenantId` dans l’exemple ci-dessous). Tous les champs personnalisés ajoutés à un schéma sont automatiquement placés dans cet espace de noms afin d’éviter tout conflit avec d’autres champs provenant de classes et de groupes de champs fournis par l’Adobe.
+Après avoir sélectionné la variable **plus (+)** , une **[!UICONTROL Champ sans titre]** un espace réservé apparaît dans la zone de travail.
 
 ![](../../images/ui/fields/overview/new-field.png)
 
@@ -52,8 +52,8 @@ Dans le rail de droite sous **[!UICONTROL Propriétés du champ]**, vous pouvez 
 
 | Propriété du champ | Description |
 | --- | --- |
-| [!UICONTROL Nom du champ] | Nom explicite unique du champ. Notez que le nom du champ ne peut pas être modifié une fois le schéma enregistré.<br><br>Le nom doit idéalement être écrit en CamelCase. Il peut contenir des caractères alphanumériques, des tirets ou des traits de soulignement, mais il **may not** commencer par un trait de soulignement.<ul><li>**Correct**: `fieldName`</li><li>**Acceptable :** `field_name2`, `Field-Name`, `field-name_3`</li><li>**Incorrect**: `_fieldName`</li></ul> |
-| [!UICONTROL Nom d’affichage] | Nom convivial du champ. |
+| [!UICONTROL Nom du champ] | Nom explicite unique du champ. Notez que le nom du champ ne peut pas être modifié une fois le schéma enregistré. Cette valeur est utilisée pour identifier et référencer le champ dans le code et dans d’autres applications en aval.<br><br>Le nom doit idéalement être écrit en CamelCase. Il peut contenir des caractères alphanumériques, des tirets ou des traits de soulignement, mais il **may not** commencer par un trait de soulignement.<ul><li>**Correct**: `fieldName`</li><li>**Acceptable :** `field_name2`, `Field-Name`, `field-name_3`</li><li>**Incorrect**: `_fieldName`</li></ul> |
+| [!UICONTROL Nom d’affichage] | Nom d’affichage du champ. Il s’agit du nom qui sera utilisé pour représenter le champ dans le canevas de l’éditeur de schémas. |
 | [!UICONTROL Type] | Le type de données que le champ contiendra. Dans ce menu déroulant, vous pouvez sélectionner l’une des options suivantes : [types scalaires standard](../../schema/field-constraints.md) pris en charge par XDM ou l’un des champs multiples [types de données](../resources/data-types.md) qui ont été précédemment définis dans la variable [!DNL Schema Registry].<br><br>Vous pouvez également sélectionner **[!UICONTROL Recherche de type avancé]** pour rechercher et filtrer les types de données existants et localiser plus facilement le type souhaité. |
 
 {style=&quot;table-layout:auto&quot;}
@@ -70,7 +70,7 @@ Une fois que vous avez terminé de configurer le champ, sélectionnez **[!UICONT
 
 ![](../../images/ui/fields/overview/field-details.png)
 
-Le canevas se met à jour pour afficher le nom et le type du champ. Le rail de droite répertorie désormais le chemin d’accès du champ en plus de ses autres propriétés.
+Le canevas se met à jour pour afficher le champ nouvellement ajouté, situé dans un objet dont l’espace de noms correspond à votre identifiant de tenant unique (comme illustré ci-dessous). `_tenantId` dans l’exemple ci-dessous). Tous les champs personnalisés ajoutés à un schéma sont automatiquement placés dans cet espace de noms afin d’éviter tout conflit avec d’autres champs provenant de classes et de groupes de champs fournis par l’Adobe. Le rail de droite répertorie désormais le chemin d’accès du champ en plus de ses autres propriétés.
 
 ![](../../images/ui/fields/overview/field-added.png)
 

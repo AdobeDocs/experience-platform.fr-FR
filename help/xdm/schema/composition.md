@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Principes de base de la composition des schémas
 description: Ce document présente les schémas du modèle de données d’expérience (XDM) ainsi que les blocs de création, principes et bonnes pratiques de la composition de schémas à utiliser dans Adobe Experience Platform.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
+source-git-commit: f1a8bcc7c1ba33d74e1f687b4cfd83bddce2fadc
 workflow-type: tm+mt
-source-wordcount: '4108'
+source-wordcount: '4119'
 ht-degree: 26%
 
 ---
@@ -215,11 +215,11 @@ Pour obtenir la liste la plus récente des groupes de champs XDM standard dispon
 
 ### Type de données {#data-type}
 
-Les types de données sont utilisés comme types de champ de référence dans des classes ou des schémas de la même manière que des champs littéraux de base. La principale différence réside dans le fait que les types de données peuvent définir plusieurs sous-champs. Tout comme un groupe de champs, un type de données permet l’utilisation cohérente d’une structure à plusieurs champs, mais offre plus de flexibilité qu’un groupe de champs, car un type de données peut être inclus n’importe où dans un schéma en l’ajoutant en tant que &quot;type de données&quot; d’un champ.
+Les types de données sont utilisés comme types de champ de référence dans des classes ou des schémas de la même manière que des champs littéraux de base. La principale différence réside dans le fait que les types de données peuvent définir plusieurs sous-champs. Ils peuvent définir plusieurs sous-champs de la même manière que les groupes de champs, mais la principale différence est que les types de données peuvent être inclus n’importe où dans un schéma en l’ajoutant comme &quot;type de données&quot; d’un champ. Bien que les groupes de champs ne soient compatibles qu’avec certaines classes, les types de données peuvent être inclus dans n’importe quelle classe parent ou groupe de champs.
 
 [!DNL Experience Platform] fournit un certain nombre de types de données courants dans le cadre du [!DNL Schema Registry] pour prendre en charge l’utilisation de modèles standard pour la description de structures de données courantes. Cela est expliqué plus en détail dans la section [!DNL Schema Registry] des tutoriels, où il devient plus clair lorsque vous parcourez les étapes de définition des types de données.
 
-La capture d’écran suivante montre comment les types de données sont représentés dans l’interface utilisateur de Platform. Un des champs fournis par la variable [!UICONTROL Détails démographiques] Le groupe de champs utilise le paramètre &quot;[!UICONTROL Nom de la personne]&quot; type de données, comme indiqué par le texte qui suit la barre verticale (`|`) en regard du nom du champ. Ce type de données particulier fournit plusieurs sous-champs relatifs au nom d’une personne, un concept qui peut être réutilisé pour d’autres champs où le nom d’une personne doit être capturé.
+La capture d’écran suivante montre comment les types de données sont représentés dans l’interface utilisateur de Platform. Un des champs fournis par la variable [!UICONTROL Détails démographiques] Le groupe de champs utilise le paramètre &quot;[!UICONTROL Objet]&quot; type de données, comme indiqué par le texte qui suit la barre verticale (`|`) en regard du nom du champ. Ce type de données particulier fournit plusieurs sous-champs relatifs au nom d’une personne, un concept qui peut être réutilisé pour d’autres champs où le nom d’une personne doit être capturé.
 
 ![](../images/schema-composition/data-type.png)
 

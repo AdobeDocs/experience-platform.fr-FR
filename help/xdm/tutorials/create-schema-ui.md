@@ -5,9 +5,9 @@ title: Création d’un schéma à l’aide de l’éditeur de schémas
 type: Tutorial
 description: Ce tutoriel décrit les étapes de création d’un schéma à l’aide de l’éditeur de schémas d’Experience Platform.
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
-source-git-commit: 9f39130c8d470b236764993f7ebca9c1cdc748bb
+source-git-commit: ecf757e98c3da568173d161aa5d4701881ec2337
 workflow-type: tm+mt
-source-wordcount: '3947'
+source-wordcount: '3985'
 ht-degree: 10%
 
 ---
@@ -177,8 +177,10 @@ Sélectionnez la **plus (+)** en regard de l’icône `loyaltyTier` pour commenc
 
 Chaque champ nécessite les informations suivantes :
 
-* **[!UICONTROL Nom du champ]:** Nom du champ, écrit en majuscules. Exemple : loyaltyLevel
-* **[!UICONTROL Nom d’affichage]:** Nom du champ, écrit en majuscules de titre. Exemple : Loyalty Level
+* **[!UICONTROL Nom du champ]:** Nom du champ, de préférence écrit en CamelCase. Aucun espace n’est autorisé. Il s’agit du nom utilisé pour référencer le champ dans le code et dans d’autres applications en aval.
+   * Exemple : loyaltyLevel
+* **[!UICONTROL Nom d’affichage]:** Nom du champ, écrit en majuscules de titre. Il s’agit du nom qui s’affiche dans la zone de travail lors de l’affichage ou de la modification du schéma.
+   * Exemple : Loyalty Level
 * **[!UICONTROL Type]:** Type de données du champ. Cela inclut les types scalaires de base et tous les types de données définis dans la variable [!DNL Schema Registry]. Exemples : [!UICONTROL Chaîne], [!UICONTROL Entier], [!UICONTROL Booléen], [!UICONTROL Personne], [!UICONTROL Adresse], [!UICONTROL Numéro de téléphone], etc.
 * **[!UICONTROL Description]:** Une description facultative du champ doit être incluse avec un maximum de 200 caractères.
 
