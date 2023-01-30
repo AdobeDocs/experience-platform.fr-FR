@@ -4,16 +4,16 @@ solution: Experience Platform
 title: Guide de l’interface utilisateur du créateur de segments
 description: Le créateur de segments de l’interface utilisateur de Adobe Experience Platform fournit un espace de travail riche qui vous permet d’interagir avec les éléments de données Profile. L’espace de travail fournit des commandes intuitives pour la création et la modification de règles, telles que le glisser-déposer de mosaïques utilisées pour représenter les propriétés des données.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 28b9458d29ce69bcbfdff53c0cb6bd7f427e4a2e
 workflow-type: tm+mt
-source-wordcount: '3101'
-ht-degree: 30%
+source-wordcount: '3258'
+ht-degree: 28%
 
 ---
 
 # Guide de l’interface utilisateur de [!DNL Segment Builder]
 
-[!DNL Segment Builder] fournit un espace de travail riche qui vous permet d’interagir avec [!DNL Profile] éléments de données. L’espace de travail fournit des commandes intuitives pour la création et la modification de règles, telles que le glisser-déposer de mosaïques utilisées pour représenter les propriétés des données.
+Le [!DNL Segment Builder] offre un vaste espace de travail qui vous permet d’interagir avec les éléments de données de [!DNL Profile]. L’espace de travail fournit des commandes intuitives pour la création et la modification de règles, telles que le glisser-déposer de mosaïques utilisées pour représenter les propriétés des données.
 
 ![L’interface utilisateur du créateur de segments s’affiche.](../images/ui/segment-builder/segment-builder.png)
 
@@ -125,6 +125,22 @@ Lors de la sélection d’une valeur pour l’attribut, une liste de valeurs d�
 Si vous sélectionnez une valeur dans cette liste d’énumérations, elle est entourée d’une bordure pleine. Toutefois, pour les champs qui utilisent `meta:enum` (soft) , vous pouvez également sélectionner une valeur qui est **not** dans la liste des énumérations. Si vous créez votre propre valeur, elle est entourée d’une bordure en pointillés, avec un avertissement indiquant que cette valeur ne figure pas dans la liste d’énumération.
 
 ![Un avertissement s’affiche si vous insérez une valeur qui ne fait pas partie de la liste d’énumération.](../images/ui/segment-builder/enum-warning.png)
+
+Si vous créez plusieurs valeurs, vous pouvez toutes les ajouter en même temps à l’aide du téléchargement en masse. Sélectionnez la ![icône plus](../images/ui/segment-builder/plus-icon.png) pour afficher le **[!UICONTROL Ajouter des valeurs en bloc]** de la fenêtre contextuelle.
+
+![L’icône plus est mise en surbrillance, affichant le bouton que vous pouvez sélectionner pour accéder à la fenêtre contextuelle de téléchargement en bloc.](../images/ui/segment-builder/add-bulk-values.png)
+
+Sur le **[!UICONTROL Ajouter des valeurs en bloc]** vous pouvez transférer un fichier CSV ou TSV.
+
+![La fenêtre contextuelle Ajouter des valeurs s’affiche en bloc. La boîte de dialogue que vous pouvez sélectionner pour charger un fichier CSV ou TSV est mise en surbrillance.](../images/ui/segment-builder/bulk-values-popover.png)
+
+Vous pouvez également ajouter manuellement des valeurs séparées par des virgules.
+
+![La fenêtre contextuelle Ajouter des valeurs s’affiche en bloc. La boîte de dialogue que vous pouvez utiliser pour insérer des valeurs et les valeurs ajoutées sont mises en surbrillance.](../images/ui/segment-builder/bulk-values-comma-separated.png)
+
+250 valeurs au maximum sont autorisées. Si vous dépassez ce montant, vous devrez supprimer certaines valeurs avant d’en ajouter d’autres.
+
+![Un avertissement indiquant que vous avez atteint le nombre maximum de valeurs s’affiche.](../images/ui/segment-builder/maximum-values.png)
 
 ### Ajout d’audiences
 

@@ -1,9 +1,9 @@
 ---
-title: Notes de mise à jour de Adobe Experience Platform, janvier 2023
+title: Notes de mise à jour d’Adobe Experience Platform
 description: Notes de mise à jour de janvier 2023 pour Adobe Experience Platform.
-source-git-commit: 855ce02dc371621cd8a4b02348e1e74a573123f3
+source-git-commit: 39d00824a17fd0b72de84425e5753945ad454b20
 workflow-type: tm+mt
-source-wordcount: '1911'
+source-wordcount: '1948'
 ht-degree: 31%
 
 ---
@@ -148,8 +148,9 @@ Pour en savoir plus sur Real-time Customer Profile, notamment des tutoriels et d
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
-| Expiration de l’appartenance à un segment généré par Platform | Toute adhésion au segment qui figure dans la variable `Exited` d’un état de plus de 30 jours, en fonction de la variable `lastQualificationTime` sera sujette à suppression. |
+| Importation de valeurs en bloc dans le créateur de segments | Le créateur de segments prend désormais en charge l’importation de plusieurs valeurs, soit en chargeant un fichier CSV ou TSV, soit en insérant manuellement des valeurs séparées par des virgules. Vous trouverez plus d’informations dans la section [Guide du créateur de segments](../../segmentation/ui/segment-builder.md#rule-builder-canvas). |
 | Expiration de l’appartenance à une audience externe | Par défaut, les appartenances aux audiences externes sont conservées pendant 30 jours. Pour les conserver plus longtemps, utilisez le `validUntil` lors de l’ingestion des données d’audience. |
+| Expiration de l’appartenance à un segment généré par Platform | Toute adhésion au segment qui figure dans la variable `Exited` d’un état de plus de 30 jours, en fonction de la variable `lastQualificationTime` sera sujette à suppression. |
 
 {style=&quot;table-layout:auto&quot;}
 
