@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Présentation du contrôle d’accès
 description: Dans Adobe Experience Platform, le contrôle dʼaccès est fourni par le biais dʼAdobe Admin Console. Cette fonctionnalité exploite les profils de produit dans Admin Console, liant les utilisateurs à des autorisations et des sandbox.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
-workflow-type: ht
-source-wordcount: '1419'
-ht-degree: 100%
+source-git-commit: 56f1cbc622450b154e6e29a8116789b316901f66
+workflow-type: tm+mt
+source-wordcount: '1473'
+ht-degree: 96%
 
 ---
 
@@ -79,6 +79,12 @@ Le tableau suivant décrit les autorisations disponibles pour [!DNL Experience P
 
 | Catégorie | Autorisation | Description |
 | --- | --- | --- |
+| [!DNL Alerts] | [!UICONTROL Afficher l’historique des alertes] | Accès en lecture seule à l’historique des alertes. |
+| [!DNL Alerts] | [!UICONTROL Résoudre les alertes] | Accès à la lecture, la modification et la suppression des alertes. |
+| [!DNL Alerts] | [!UICONTROL Affichage des alertes] | Accès en lecture seule aux alertes. |
+| [!DNL Alerts] | [!UICONTROL Gérer les alertes] | Accès à la lecture, la création, la modification et la suppression de l’historique des alertes. |
+| [!DNL Data Hygiene] | [!UICONTROL Afficher l’hygiène des données] | Accès en lecture seule à l’hygiène des données. |
+| [!DNL Data Hygiene] | [!UICONTROL Gestion de l’hygiène des données] | Accès à la lecture, la création, la modification et la suppression de l’hygiène des données. |
 | [!DNL Data Modeling] | [!UICONTROL Gestion des schémas] | Accès pour lire, créer, modifier et supprimer des schémas et des ressources associées. |
 | [!DNL Data Modeling] | [!UICONTROL Affichage des schémas] | Accès en lecture seule aux schémas et aux ressources associées. |
 | [!DNL Data Modeling] | [!UICONTROL Gestion des relations] | Accès à la lecture, la création, la modification et la suppression des relations de schéma. |
@@ -94,9 +100,9 @@ Le tableau suivant décrit les autorisations disponibles pour [!DNL Experience P
 | [!DNL Profile Management] | [!UICONTROL Affichage des stratégies de fusion] | Accès en lecture seule aux stratégies de fusion disponibles. |
 | [!DNL Profile Management] | [!UICONTROL Exportation de l’audience pour un segment] | Capacité à exporter un segment ciblé évalué vers un jeu de données. |
 | [!DNL Profile Management] | [!UICONTROL Évaluation dʼun segment sur une audience] | Capacité à générer des profils pour une audience en évaluant une définition de segment. |
-| [!DNL Identities] | [!UICONTROL Gestion des espaces de noms d’identité] | Accès à la lecture, la création, la modification et la suppression des espaces de noms d’identité. |
-| [!DNL Identities] | [!UICONTROL Affichages des espaces de noms d’identité] | Accès en lecture seule aux espaces de noms d’identité. |
-| [!DNL Identities] | [!UICONTROL Afficher un graphique d’identité] | Accès en lecture seule aux graphiques d’identité. |
+| [!DNL Identity Management] | [!UICONTROL Gestion des espaces de noms d’identité] | Accès à la lecture, la création, la modification et la suppression des espaces de noms d’identité. |
+| [!DNL Identity Management] | [!UICONTROL Affichages des espaces de noms d’identité] | Accès en lecture seule aux espaces de noms d’identité. |
+| [!DNL Identity Management] | [!UICONTROL Afficher un graphique d’identité] | Accès en lecture seule aux graphiques d’identité. |
 | [!DNL Sandbox Administration] | [!UICONTROL Gestion des sandbox] | Accès à la lecture, la création, la modification et la suppression des sandbox. |
 | [!DNL Sandbox Administration] | [!UICONTROL Affichage des sandbox] | Accès en lecture seule aux sandbox appartenant à votre organisation. |
 | [!DNL Sandbox Administration] | [!UICONTROL Réinitialisation d’une sandbox] | Capacité à réinitialiser une sandbox. |
