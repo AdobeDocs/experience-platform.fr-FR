@@ -4,10 +4,10 @@ title: Activer les données d’audience vers des destinations d’exportation d
 type: Tutorial
 description: Comment activer les données d’audience disponibles dans Adobe Experience Platform en envoyant des segments vers des destinations de profils par lots.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: e2318509236fad5054ce82b384f399dd6cbbdc34
+source-git-commit: 9bde403338187409892d76de68805535de03d59f
 workflow-type: tm+mt
-source-wordcount: '3414'
-ht-degree: 99%
+source-wordcount: '3537'
+ht-degree: 94%
 
 ---
 
@@ -463,19 +463,29 @@ En tant que solution temporaire, si vous devez ajouter des espaces de noms d’i
 
 Sur la page **[!UICONTROL Vérifier]**, vous pouvez voir un résumé de votre sélection. Sélectionnez **[!UICONTROL Annuler]** pour interrompre le flux, **[!UICONTROL Précédent]** pour modifier vos paramètres ou **[!UICONTROL Terminer]** pour confirmer votre sélection et commencer à envoyer les données à la destination.
 
->[!IMPORTANT]
->
->Au cours de cette étape, Adobe Experience Platform recherche les violations de la stratégie d’utilisation des données. Vous trouverez ci-dessous un exemple de violation de la stratégie. Vous ne pouvez pas terminer le processus d’activation des segments tant que vous n’avez pas résolu la violation. Pour plus d’informations sur la résolution des violations de stratégie, voir [Application des stratégies](../../rtcdp/privacy/data-governance-overview.md#enforcement) dans la section documentation sur la gouvernance des données.
+![Résumé de la sélection dans l’étape de révision.](/help/destinations/assets/ui/activate-batch-profile-destinations/review.png)
 
-![Image montrant un exemple de violation de la politique de données.](../assets/common/data-policy-violation.png)
+### Évaluation des politiques de consentement {#consent-policy-evaluation}
 
-Si aucune violation de politique n’a été détectée, sélectionnez **[!UICONTROL Terminer]** pour confirmer la sélection et commencer à envoyer des données à la destination.
+Si votre entreprise a acheté **Adobe Health Care Shield** ou **Adobe de la confidentialité et de la sécurité**, sélectionnez **[!UICONTROL Affichage des stratégies de consentement applicables]** pour identifier les stratégies de consentement appliquées et le nombre de profils inclus dans l’activation qui en résulte. En savoir plus [évaluation des stratégies de consentement](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) pour plus d’informations.
 
-![Image présentant l’écran de révision du workflow d’activation du segment.](../assets/ui/activate-batch-profile-destinations/review.png)
+### Vérifications des stratégies d’utilisation des données {#data-usage-policy-checks}
+
+Dans le **[!UICONTROL Réviser]** , Experience Platform recherche également les violations de stratégie d’utilisation des données. Vous trouverez ci-dessous un exemple de violation de la stratégie. Vous ne pouvez pas terminer le processus d’activation des segments tant que vous n’avez pas résolu la violation. Pour plus d’informations sur la résolution des violations de stratégie, reportez-vous à la section [violations de la stratégie d’utilisation des données](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) dans la section documentation sur la gouvernance des données .
+
+![violation de la stratégie de données](../assets/common/data-policy-violation.png)
+
+### Filtrer des segments {#filter-segments}
+
+En outre, au cours de cette étape, vous pouvez utiliser les filtres disponibles sur la page pour afficher uniquement les segments dont la planification ou le mappage a été mis à jour dans le cadre de ce workflow. Vous pouvez également basculer entre les colonnes du tableau que vous souhaitez afficher.
+
+![Enregistrement de l’écran montrant les filtres de segments disponibles dans l’étape de révision.](/help/destinations/assets/ui/activate-batch-profile-destinations/filter-segments-batch-review.gif)
+
+Si vous êtes satisfait de votre sélection et qu’aucune violation de stratégie n’a été détectée, sélectionnez **[!UICONTROL Terminer]** pour confirmer votre sélection et commencer à envoyer des données à la destination.
 
 ## Vérifier l’activation des segments {#verify}
 
-Pour les destinations de marketing par e-mail et celles de stockage dans le cloud, Adobe Experience Platform crée un fichier `.csv` dans l’emplacement de stockage indiqué. Attendez-vous à ce qu’un nouveau fichier soit créé dans votre emplacement de stockage selon le planning défini dans le workflow. Le format de fichier par défaut est :
+Pour les destinations de marketing par e-mail et celles de stockage dans le cloud, Adobe Experience Platform crée un fichier `.csv` dans l’emplacement de stockage indiqué. Attendez-vous à ce qu’un nouveau fichier soit créé dans votre emplacement de stockage selon le planning défini dans le workflow. Le format de fichier par défaut est présenté ci-dessous, mais vous pouvez : [modifier les composants du nom de fichier ;](#file-names):
 `<destinationName>_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv`
 
 Par exemple, si vous avez sélectionné une fréquence d’exportation quotidienne, les fichiers que vous recevrez pendant trois jours consécutifs peuvent ressembler à ceci :

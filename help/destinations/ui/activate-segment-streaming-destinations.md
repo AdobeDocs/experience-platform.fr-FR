@@ -4,10 +4,10 @@ title: Activer les données d’audience vers des destinations d’exportation d
 type: Tutorial
 description: Découvrez comment activer les données d’audience que vous avez dans Adobe Experience Platform en mappant les segments aux destinations de diffusion en continu de segments.
 exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
-source-git-commit: 70670f7aec2ab6a5594f5e69672236c7bcc3ce81
+source-git-commit: 9bde403338187409892d76de68805535de03d59f
 workflow-type: tm+mt
-source-wordcount: '811'
-ht-degree: 36%
+source-wordcount: '935'
+ht-degree: 31%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 36%
 
 >[!IMPORTANT]
 > 
->Pour activer les données, vous avez besoin de l’événement **[!UICONTROL Gestion des destinations]**, **[!UICONTROL Activation des destinations]**, **[!UICONTROL Afficher les profils]**, et **[!UICONTROL Affichage de segments]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez le [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+>Pour activer les données, vous avez besoin des [autorisations de contrôle d’accès](/help/access-control/home.md#permissions) pour les fonctions **[!UICONTROL Gérer les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]**, et **[!UICONTROL Afficher les segments]**. Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
 ## Présentation {#overview}
 
@@ -25,7 +25,7 @@ Cet article explique le workflow requis pour activer les données d’audience d
 
 Pour activer des données vers des destinations, vous devez avoir réussi à vous [connecter à une destination](./connect-destination.md). Si vous ne l’avez pas déjà fait, accédez au [catalogue de destinations](../catalog/overview.md), parcourez les destinations prises en charge et configurez la destination que vous souhaitez utiliser.
 
-## Sélectionnez votre destination {#select-destination}
+## Sélectionner votre destination {#select-destination}
 
 1. Accédez à **[!UICONTROL Connexions et destinations]**, puis sélectionnez l’onglet **[!UICONTROL Catalogue]**.
 
@@ -47,7 +47,7 @@ Utilisez les cases à cocher situées à gauche des noms de segment pour sélect
 
 ![Sélectionnez des segments](../assets/ui/activate-segment-streaming-destinations/select-segments.png)
 
-## Mise en correspondance des attributs et des identités {#mapping}
+## Mapper les attributs et les identités {#mapping}
 
 >[!IMPORTANT]
 >
@@ -59,7 +59,7 @@ Certaines destinations de diffusion en continu de segments nécessitent que vous
 
    ![Ajouter un nouveau mappage](../assets/ui/activate-segment-streaming-destinations/add-new-mapping.png)
 
-1. Sélectionnez la flèche située à droite du **[!UICONTROL Champ source]** entrée .
+1. Sélectionnez la flèche située à droite de l’entrée **[!UICONTROL Champ source]**.
 
    ![Sélectionner le champ source](../assets/ui/activate-segment-streaming-destinations/select-source-field.png)
 
@@ -125,15 +125,25 @@ Pour afficher tous les segments activés vers votre destination, utilisez l’op
 
 Sur la page **[!UICONTROL Vérifier]**, vous pouvez voir un résumé de votre sélection. Sélectionnez **[!UICONTROL Annuler]** pour interrompre le flux, **[!UICONTROL Précédent]** pour modifier vos paramètres ou **[!UICONTROL Terminer]** pour confirmer votre sélection et commencer à envoyer les données à la destination.
 
->[!IMPORTANT]
->
->Au cours de cette étape, Adobe Experience Platform recherche les violations de la stratégie d’utilisation des données. Vous trouverez ci-dessous un exemple de violation de la stratégie. Vous ne pouvez pas terminer le processus d’activation des segments tant que vous n’avez pas résolu la violation. Pour plus d’informations sur la résolution des violations de stratégie, voir [Application des stratégies](../../rtcdp/privacy/data-governance-overview.md#enforcement) dans la section documentation sur la gouvernance des données.
+![Résumé de la sélection dans l’étape de révision.](/help/destinations/assets/ui/activate-segment-streaming-destinations/review.png)
+
+### Évaluation des politiques de consentement {#consent-policy-evaluation}
+
+Si votre entreprise a acheté **Adobe Health Care Shield** ou **Adobe de la confidentialité et de la sécurité**, sélectionnez **[!UICONTROL Affichage des stratégies de consentement applicables]** pour identifier les stratégies de consentement appliquées et le nombre de profils inclus dans l’activation qui en résulte. En savoir plus [évaluation des stratégies de consentement](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) pour plus d’informations.
+
+### Vérifications des stratégies d’utilisation des données {#data-usage-policy-checks}
+
+Dans le **[!UICONTROL Réviser]** , Experience Platform recherche également les violations de stratégie d’utilisation des données. Vous trouverez ci-dessous un exemple de violation de la stratégie. Vous ne pouvez pas terminer le processus d’activation des segments tant que vous n’avez pas résolu la violation. Pour plus d’informations sur la résolution des violations de stratégie, reportez-vous à la section [violations de la stratégie d’utilisation des données](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) dans la section documentation sur la gouvernance des données .
 
 ![violation de la stratégie de données](../assets/common/data-policy-violation.png)
 
-Si aucune violation de stratégie n’a été détectée, sélectionnez **[!UICONTROL Terminer]** pour confirmer la sélection et commencer à envoyer des données à la destination.
+### Filtrer des segments {#filter-segments}
 
-![Révision](../assets/ui/activate-segment-streaming-destinations/review.png)
+En outre, au cours de cette étape, vous pouvez utiliser les filtres disponibles sur la page pour afficher uniquement les segments dont la planification ou le mappage a été mis à jour dans le cadre de ce workflow. Vous pouvez également basculer entre les colonnes du tableau que vous souhaitez afficher.
+
+![Enregistrement de l’écran montrant les filtres de segments disponibles dans l’étape de révision.](/help/destinations/assets/ui/activate-segment-streaming-destinations/filter-segments-review-step.gif)
+
+Si vous êtes satisfait de votre sélection et qu’aucune violation de stratégie n’a été détectée, sélectionnez **[!UICONTROL Terminer]** pour confirmer votre sélection et commencer à envoyer des données à la destination.
 
 ## Vérifier l’activation des segments {#verify}
 
