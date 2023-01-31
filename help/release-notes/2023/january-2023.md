@@ -1,10 +1,10 @@
 ---
 title: Notes de mise à jour de Adobe Experience Platform, janvier 2023
 description: Notes de mise à jour de janvier 2023 pour Adobe Experience Platform.
-source-git-commit: b3b496cb6c7ab82455efcbea2b08089ce8ea3184
+source-git-commit: f7bcd009882d9753638ba2ce692df9fe80287641
 workflow-type: tm+mt
-source-wordcount: '1949'
-ht-degree: 31%
+source-wordcount: '2294'
+ht-degree: 29%
 
 ---
 
@@ -14,6 +14,7 @@ ht-degree: 31%
 
 Mises à jour des fonctionnalités existantes dans Adobe Experience Platform :
 
+- [[!DNL Artificial Intelligence and Machine Learning Services]](#ai/ml-services)
 - [Assurance](#assurance)
 - [Collecte de données](#data-collection)
 - [[!DNL Destinations]](#destinations)
@@ -21,6 +22,39 @@ Mises à jour des fonctionnalités existantes dans Adobe Experience Platform 
 - [Profil client en temps réel](#profile)
 - [Segmentation Service](#segmentation)
 - [Sources](#sources)
+
+## Intelligence artificielle/Services d’apprentissage automatique {#ai-ml}
+
+Les services d’intelligence artificielle et d’apprentissage automatique permettent aux analystes et aux spécialistes du marketing d’exploiter la puissance de l’IA/ML dans les cas d’utilisation de l’expérience client. Cela permet aux analystes marketing de configurer des prédictions, sans avoir besoin d’expertise en sciences des données, spécifiques aux besoins d’une entreprise à l’aide de configurations au niveau de l’entreprise.
+
+### IA dédiée à l’attribution
+
+Attribution AI est utilisé pour attribuer des crédits aux points de contact qui génèrent des événements de conversion. Il peut aider les spécialistes du marketing à quantifier l’impact publicitaire de chaque point de contact marketing sur le parcours client.
+
+**Fonctionnalités mises à jour**
+
+| Fonctionnalité | Description |
+| ------- | ----------- |
+| Préparation du HIPAA | Les clients de Healthcare Shield peuvent désormais recevoir, utiliser, gérer ou transmettre des informations de santé protégées dans Attribution AI et dans certaines autres applications basées sur des Experience Platform. Healthcare Shield est destiné aux clients du secteur de la santé qui sont soit une entité couverte, soit une entreprise associée sous la HIPAA. Pour plus d’informations, consultez la documentation sur [HIPAA et produits et services d’Adobe](https://www.adobe.com/trust/compliance/hipaa-ready.html) |
+| Modifier des colonnes de jeux de données de score supplémentaires | Vous pouvez désormais ajouter ou supprimer des colonnes de jeux de données de score supplémentaires (colonnes de rapports) lorsque vous modifiez des modèles existants. Cela permet d’étendre la flexibilité des scores d’attribution afin de vous fournir des informations sur les dimensions supplémentaires une fois qu’un modèle a déjà été créé. Voir [Guide de l’interface utilisateur d’attribution](../../intelligent-services/attribution-ai/user-guide.md) pour en savoir plus. |
+
+{style=&quot;table-layout:auto&quot;}
+
+Veuillez consulter la [Services AI/ML](../../intelligent-services/attribution-ai/overview.md) pour plus d’informations.
+
+### IA dédiée aux clients
+
+Customer AI pour Real-time Customer Data Platform est utilisé pour générer des scores de propension personnalisés tels que l’attrition et la conversion pour des profils individuels à grande échelle. Cette opération s’effectue sans qu’il soit nécessaire de transformer les besoins professionnels en un problème de machine learning ou d’avoir recours à un algorithme, à une formation ou à un déploiement.
+
+**Fonctionnalités mises à jour**
+
+| Fonctionnalité | Description |
+| ------- | ----------- |
+| Préparation du HIPAA | Les clients de Healthcare Shield peuvent désormais recevoir, utiliser, gérer ou transmettre des informations d’intégrité protégées dans Customer AI pour Real-time Customer Data Platform et certaines autres applications basées sur des Experience Platform. Healthcare Shield est destiné aux clients du secteur de la santé qui sont soit une entité couverte, soit une entreprise associée sous la HIPAA. Pour plus d’informations, voir la documentation sur [HIPAA et produits et services d’Adobe](https://www.adobe.com/trust/compliance/hipaa-ready.html) |
+
+{style=&quot;table-layout:auto&quot;}
+
+Veuillez consulter la [Services AI/ML](../../intelligent-services/customer-ai/overview.md) pour plus d’informations.
 
 ## Assurance {#assurance}
 
