@@ -4,7 +4,7 @@ feature: Attribution AI
 title: Analyse des scores d’attribution à l’aide de Query Service
 description: Découvrez comment utiliser Adobe Experience Platform Query Service pour analyser les scores Attribution AI.
 exl-id: 35d7f6f2-a118-4093-8dbc-cb020ec35e90
-source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
+source-git-commit: 66d20dc1141ff33211635ba74d320350f8b27fb7
 workflow-type: tm+mt
 source-wordcount: '589'
 ht-degree: 0%
@@ -25,7 +25,7 @@ Chaque ligne des données représente une conversion, au cours de laquelle les i
 
 Dans l’interface utilisateur de Adobe Experience Platform, sélectionnez **[!UICONTROL Jeux de données]** dans le volet de navigation de gauche. Le **[!UICONTROL Jeux de données]** s’affiche. Sélectionnez ensuite le **[!UICONTROL Parcourir]** et recherchez le jeu de données de sortie pour vos scores Attribution AI.
 
-![Accès à votre instance](./images/aai-query/datasets_browse.png)
+![Accès à votre modèle](./images/aai-query/datasets_browse.png)
 
 Sélectionnez votre jeu de données de sortie. La page d’activité du jeu de données s’affiche.
 
@@ -305,7 +305,7 @@ Cette requête aplatit la colonne struct en plusieurs colonnes uniques et éclat
 
 >[!TIP]
 >
-> Dans cet exemple, vous devez remplacer `{COLUMN_NAME}` en plus de `_tenantId` et `your_score_output_dataset`. Le `COLUMN_NAME` peut prendre les valeurs des noms de colonne transmis (colonnes de rapports) facultatifs qui ont été ajoutés lors de la configuration de votre instance Attribution AI. Consultez votre schéma de sortie de notation pour trouver la variable `{COLUMN_NAME}` valeurs nécessaires pour terminer cette requête.
+> Dans cet exemple, vous devez remplacer `{COLUMN_NAME}` en plus de `_tenantId` et `your_score_output_dataset`. Le `COLUMN_NAME` peut prendre les valeurs des noms de colonne transmis (colonnes de rapports) facultatifs qui ont été ajoutés lors de la configuration de votre modèle Attribution AI. Consultez votre schéma de sortie de notation pour trouver la variable `{COLUMN_NAME}` valeurs nécessaires pour terminer cette requête.
 
 ```sql
 SELECT 

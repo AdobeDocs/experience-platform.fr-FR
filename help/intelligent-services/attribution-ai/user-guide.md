@@ -4,9 +4,9 @@ feature: Attribution AI
 title: Guide de l’interface utilisateur Attribution AI
 description: Ce document sert de guide pour interagir avec Attribution AI dans l’interface utilisateur d’Intelligent Services.
 exl-id: 32e1dd07-31a8-41c4-88df-8893ff773f79
-source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
+source-git-commit: 66d20dc1141ff33211635ba74d320350f8b27fb7
 workflow-type: tm+mt
-source-wordcount: '2960'
+source-wordcount: '2443'
 ht-degree: 35%
 
 ---
@@ -17,41 +17,41 @@ Dans le cadre d’Intelligent Services, Attribution AI est un service d’attrib
 
 Ce document sert de guide pour interagir avec Attribution AI dans l’interface utilisateur d’Intelligent Services.
 
-## Création d’une instance
+## Création d’un modèle
 
 Dans le [!DNL Adobe Experience Platform] Interface utilisateur, sélectionnez **[!UICONTROL Services]** dans le volet de navigation de gauche. Le navigateur **[!UICONTROL Services]** apparaît et affiche les services intelligents Adobe disponibles. Dans le conteneur pour Attribution AI, sélectionnez **[!UICONTROL Ouvrir]**.
 
-![Accès à votre instance](./images/user-guide/open_Attribution_ai.png)
+![Accès à votre modèle](./images/user-guide/open_Attribution_ai.png)
 
-La page de service d’Attribution AI s’affiche. Cette page répertorie les instances de service d’Attribution AI et affiche les informations les concernant, notamment le nom de l’instance, les événements de conversion, la fréquence à laquelle l’instance est exécutée et l’état de la dernière mise à jour.
+La page de service d’Attribution AI s’affiche. Cette page répertorie les modèles de service d’Attribution AI et affiche des informations les concernant, notamment le nom du modèle, les événements de conversion, la fréquence d’exécution du modèle et l’état de la dernière mise à jour.
 
-Vous trouverez la variable **[!UICONTROL Nombre total d’événements de conversion notés]** mesure située dans le coin inférieur droit de la **[!UICONTROL Créer une instance]** conteneur. Cette mesure effectue le suivi du nombre total d’événements de conversion marqués par Attribution AI pour l’année civile en cours, y compris tous les environnements de test et toutes les instances de service supprimées.
+Vous trouverez la variable **[!UICONTROL Nombre total d’événements de conversion notés]** mesure située dans le coin inférieur droit de la **[!UICONTROL Créer un modèle]** conteneur. Cette mesure effectue le suivi du nombre total d’événements de conversion marqués par Attribution AI pour l’année civile en cours, y compris tous les environnements de test et les modèles de service supprimés.
 
 ![total des conversions](./images/user-guide/total_conversions.png)
 
-Les instances de service peuvent être modifiées, clonées et supprimées à l’aide des commandes situées dans la partie droite de l’interface utilisateur. Pour afficher ces commandes, sélectionnez une instance parmi les **[!UICONTROL Instances de service]**. Les contrôles contiennent les informations suivantes :
+Les modèles de service peuvent être modifiés, clonés et supprimés à l’aide des commandes situées dans la partie droite de l’interface utilisateur. Pour afficher ces commandes, sélectionnez un modèle parmi les **[!UICONTROL Modèles de service]**. Les contrôles contiennent les informations suivantes :
 
-- **[!UICONTROL Modifier]**: Sélection **[!UICONTROL Modifier]** permet de modifier une instance de service existante. Vous pouvez modifier le nom, la description, l’état et la fréquence de notation de l’instance.
-- **[!UICONTROL Cloner]**: Sélection **[!UICONTROL Cloner]** copie l’instance de service sélectionnée. Vous pouvez ensuite modifier le workflow pour effectuer des ajustements mineurs et le renommer en nouvelle instance.
-- **[!UICONTROL Supprimer]**: Vous pouvez supprimer une instance de service, y compris les exécutions historiques. Le jeu de données de sortie correspondant sera supprimé de Platform. Toutefois, les scores synchronisés dans Real-time Customer Profile ne sont pas supprimés.
+- **[!UICONTROL Modifier]**: Sélection **[!UICONTROL Modifier]** vous permet de modifier un modèle de service existant. Vous pouvez modifier le nom, la description, l’état, la fréquence de notation du modèle et d’autres colonnes de jeux de données de score.
+- **[!UICONTROL Cloner]**: Sélection **[!UICONTROL Cloner]** copie le modèle de service sélectionné. Vous pouvez ensuite modifier le workflow pour effectuer des ajustements mineurs et le renommer en tant que nouveau modèle.
+- **[!UICONTROL Supprimer]**: Vous pouvez supprimer un modèle de service, y compris les exécutions historiques. Le jeu de données de sortie correspondant sera supprimé de Platform. Toutefois, les scores synchronisés dans Real-time Customer Profile ne sont pas supprimés.
 - **[!UICONTROL Source de données]**: Lien vers le jeu de données utilisé. Si plusieurs jeux de données sont utilisés par Attribution AI, &quot;Multiple&quot; suivi du nombre de jeux de données s’affiche. Lorsque vous sélectionnez l’hyperlien, la fenêtre contextuelle d’aperçu des jeux de données s’affiche.
 - **[!UICONTROL Détails de la dernière exécution]**: Cette option n’est affichée que lorsqu’une exécution échoue. Vous trouverez ici des informations sur les raisons pour lesquelles l’exécution a échoué, telles que les codes d’erreur.
 
 ![Volet latéral](./images/user-guide/multiple-datasets-pane.png)
 
-- **[!UICONTROL Événements de conversion]**: Aperçu rapide des événements de conversion configurés pour cette instance.
+- **[!UICONTROL Événements de conversion]**: Aperçu rapide des événements de conversion configurés pour ce modèle.
 - **[!UICONTROL Intervalle de recherche en amont]**: La période que vous avez définie indiquant le nombre de jours avant l’inclusion des points de contact de l’événement de conversion.
-- **[!UICONTROL Points de contact]**: Liste de tous les points de contact que vous avez définis lors de la création de cette instance.
+- **[!UICONTROL Points de contact]**: Liste de tous les points de contact que vous avez définis lors de la création de ce modèle.
 
 ![](./images/user-guide/side_panel_2.png)
 
-Sélectionner **[!UICONTROL Créer une instance]** pour commencer.
+Sélectionner **[!UICONTROL Créer un modèle]** pour commencer.
 
-![Création d’une instance](./images/user-guide/landing_page.png)
+![Créer un modèle](./images/user-guide/landing_page.png)
 
-Ensuite, la page de configuration d’Attribution AI s’affiche, où vous pouvez fournir un nom et une description facultative de votre instance de service.
+Ensuite, la page de configuration d’Attribution AI s’affiche, où vous pouvez fournir un nom et une description facultative de votre modèle de service.
 
-![attribution d’un nom à une instance](./images/user-guide/naming_instance.png)
+![attribution d’un nom à un modèle](./images/user-guide/naming_instance.png)
 
 ## Sélectionner les données {#select-data}
 
@@ -227,7 +227,7 @@ Pour modifier l’heure de la journée où vous souhaitez que la notation soit e
 
 ### Colonnes de jeu de données de score supplémentaires (facultatif)
 
-Par défaut, un jeu de données de score est créé pour chaque instance de service dans un schéma standard. Vous pouvez choisir d’ajouter des colonnes supplémentaires en fonction de vos configurations Événement de conversion et Point de contact à la sortie du jeu de données de notation. Commencez par sélectionner des colonnes dans votre jeu de données d’entrée, puis faites-les glisser et déposez-les pour modifier l’ordre en maintenant le bouton gauche de la souris enfoncé sur l’icône de hamburger.
+Par défaut, un jeu de données de score est créé pour chaque modèle de service dans un schéma standard. Vous pouvez choisir d’ajouter des colonnes supplémentaires en fonction de vos configurations Événement de conversion et Point de contact à la sortie du jeu de données de notation. Commencez par sélectionner des colonnes dans votre jeu de données d’entrée, puis faites-les glisser et déposez-les pour modifier l’ordre en maintenant le bouton gauche de la souris enfoncé sur l’icône de hamburger.
 
 ![ajout de colonne de jeu de données de score](./images/user-guide/Add-score-dataset.png)
 
@@ -264,44 +264,6 @@ Pour vous assurer d’obtenir le modèle le plus précis possible, il est import
 Une fois la fenêtre de formation sélectionnée, sélectionnez **[!UICONTROL Terminer]** dans le coin supérieur droit. Prévoyez un certain temps pour le traitement des données. Une fois cette opération terminée, une boîte de dialogue s’affiche, confirmant que la configuration de l’instance est terminée. Sélectionner **[!UICONTROL Ok]** pour être redirigé vers le **[!UICONTROL Instances de service]** où vous pouvez voir votre instance de service.
 
 ![configuration terminée](./images/user-guide/instance_setup_complete.png)
-
-## Politiques de gouvernance
-
-Une fois que vous avez parcouru le workflow pour créer une instance et envoyer la configuration du modèle, la variable [application des stratégies](/help/data-governance/enforcement/auto-enforcement.md) vérifie s’il existe des violations. Si une violation de stratégie se produit, une fenêtre contextuelle s’affiche indiquant qu’une ou plusieurs stratégies ont été violées. Cela permet de vous assurer que vos opérations de données et vos actions marketing dans Platform sont conformes aux politiques d’utilisation des données.
-
-![fenêtre contextuelle affichant une violation de stratégie](./images/user-guide/policy-violation-popover-aai.png)
-
-La fenêtre contextuelle fournit des informations spécifiques sur la violation. Vous pouvez résoudre ces violations par le biais de paramètres de stratégie et d’autres mesures qui ne sont pas directement liés au workflow de configuration. Par exemple, vous pouvez modifier les étiquettes afin que certains champs soient autorisés à être utilisés à des fins de science des données. Vous pouvez également modifier la configuration de modèle elle-même afin qu’elle n’utilise rien avec un libellé. Consultez la documentation pour en savoir plus sur la configuration [policies](/help/data-governance/policies/overview.md).
-
-## Contrôle d’accès basé sur attribut
-
->[!IMPORTANT]
->
->Le contrôle d’accès basé sur les attributs est actuellement disponible dans une version limitée uniquement.
-
-[Le contrôle d’accès basé sur les attributs est une fonctionnalité d’Adobe Experience Platform qui permet aux administrateurs de contrôler l’accès à des objets et/ou fonctionnalités spécifiques en fonction d’attributs.](../../../help/access-control/abac/overview.md) Les attributs peuvent être des métadonnées ajoutées à un objet, comme un libellé ajouté à un champ ou à un segment de schéma. Un administrateur définit des stratégies d’accès qui comprennent des attributs afin de gérer les autorisations d’accès des utilisateurs.
-
-Cette fonctionnalité vous permet d’étiqueter les champs de schéma d’un modèle de données d’expérience (XDM) avec des libellés définissant l’utilisation de l’organisation ou des données. En parallèle, les administrateurs peuvent utiliser l’interface d’administration des utilisateurs et des rôles pour définir des politiques d’accès relatives aux champs de schéma XDM. Cela permet ainsi une meilleure gestion des accès accordés aux utilisateurs ou aux groupes d’utilisateurs (utilisateurs internes, externes ou tiers). Enfin, le contrôle d’accès basé sur les attributs permet aux administrateurs de gérer l’accès à des segments spécifiques.
-
-Grâce au contrôle d’accès basé sur les attributs, les administrateurs peuvent contrôler l’accès des utilisateurs aux données personnelles sensibles (SPD) et aux informations d’identification personnelle (PII) sur l’ensemble des workflows et ressources de Platform. Les administrateurs peuvent définir des rôles utilisateur ayant accès uniquement à des champs et données spécifiques qui correspondent à ces champs.
-
-En raison du contrôle d’accès basé sur les attributs, certains champs et certaines fonctionnalités peuvent avoir un accès limité et ne pas être disponibles pour certaines instances de service Attribution AI. Par exemple, &quot;Identité&quot;, &quot;Définition de score&quot; et &quot;Cloner&quot;.
-
-En haut de l’espace de travail Attribution AI **page insights**, les détails affichés dans la barre latérale ont un accès restreint.
-
-![Espace de travail Attribution AI avec les champs de schéma restreints mis en surbrillance.](./images/user-guide/access-restricted.png)
-
-Si vous sélectionnez des jeux de données avec des schémas restreints sur la variable **[!UICONTROL Workflow Créer une instance]** , un signe d’avertissement s’affiche en regard du nom du jeu de données avec le message : [!UICONTROL Les informations restreintes sont exclues].
-
-![Espace de travail Attribution AI avec les champs de jeu de données restreint mis en surbrillance.](./images/user-guide/restricted-info-excluded.png)
-
-Lorsque vous prévisualisez des jeux de données avec un schéma limité sur l’objet **[!UICONTROL Workflow Créer une instance]** , un avertissement s’affiche pour vous informer que [!UICONTROL En raison des restrictions d’accès, certaines informations ne s’affichent pas dans l’aperçu du jeu de données.]
-
-![L’espace de travail Attribution AI avec les résultats des champs de schéma prévisualisés restreints est mis en surbrillance.](./images/user-guide/restricted-dataset-preview.png)
-
-Après avoir créé une instance contenant des informations restreintes, passez à la **[!UICONTROL Définition d’un objectif]** , un avertissement s’affiche en haut de l’écran : [!UICONTROL En raison des restrictions d’accès, certaines informations ne s’affichent pas dans la configuration.]
-
-![Espace de travail Attribution AI avec les champs restreints des résultats de l’instance mis en surbrillance.](./images/user-guide/information-not-displayed-save-and-exit.png)
 
 ## Étapes suivantes
 

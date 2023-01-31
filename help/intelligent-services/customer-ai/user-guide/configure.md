@@ -5,10 +5,10 @@ feature: Customer AI
 title: Configuration d’une instance Customer AI
 description: Les services AI/ML fournissent Customer AI en tant que service Adobe Sensei simple d’utilisation pouvant être configuré pour différents cas d’utilisation. Les sections suivantes décrivent les étapes de configuration d’une instance de Customer AI.
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
-source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
+source-git-commit: 6aff88c0bc5cd15b8b3ffb32458402e1edc873c8
 workflow-type: tm+mt
-source-wordcount: '3342'
-ht-degree: 11%
+source-wordcount: '2828'
+ht-degree: 8%
 
 ---
 
@@ -250,46 +250,6 @@ Si l’instance est créée avec succès, une opération de prédiction se décl
 >Selon le volume des données d’entrée, les opérations de prédiction peuvent durer jusqu’à 24 heures.
 
 En suivant cette section, vous avez configuré une instance de Customer AI et exécuté une opération de prédiction. Une fois l’exécution terminée, les insights notés renseignent automatiquement les profils avec les scores prévus si le bouton bascule du profil est activé. Veuillez patienter jusqu’à 24 heures avant de passer à la section suivante de ce tutoriel.
-
-## Politiques de gouvernance
-
-Une fois que vous avez parcouru le workflow pour créer une instance et envoyer la configuration du modèle, la variable [application des stratégies](/help/data-governance/enforcement/auto-enforcement.md) vérifie s’il existe des violations. Si une violation de stratégie se produit, une fenêtre contextuelle s’affiche indiquant qu’une ou plusieurs stratégies ont été violées. Cela permet de vous assurer que vos opérations de données et vos actions marketing dans Platform sont conformes aux politiques d’utilisation des données.
-
-![fenêtre contextuelle affichant une violation de stratégie](../images/user-guide/policy-violation-popover-cai.png)
-
-La fenêtre contextuelle fournit des informations spécifiques sur la violation. Vous pouvez résoudre ces violations par le biais de paramètres de stratégie et d’autres mesures qui ne sont pas directement liés au workflow de configuration. Par exemple, vous pouvez modifier les étiquettes afin que certains champs soient autorisés à être utilisés à des fins de science des données. Vous pouvez également modifier la configuration de modèle elle-même afin qu’elle n’utilise rien avec un libellé. Consultez la documentation pour en savoir plus sur la configuration [policies](/help/data-governance/policies/overview.md).
-
-## Contrôle d’accès basé sur attribut
-
->[!IMPORTANT]
->
->Le contrôle d’accès basé sur les attributs est actuellement disponible dans une version limitée uniquement.
-
-[Le contrôle d’accès basé sur les attributs est une fonctionnalité d’Adobe Experience Platform qui permet aux administrateurs de contrôler l’accès à des objets et/ou fonctionnalités spécifiques en fonction d’attributs.](../../../access-control/abac/overview.md) Les attributs peuvent être des métadonnées ajoutées à un objet, comme un libellé ajouté à un champ ou à un segment de schéma. Un administrateur définit des stratégies d’accès qui comprennent des attributs afin de gérer les autorisations d’accès des utilisateurs.
-
-Cette fonctionnalité vous permet d’étiqueter les champs de schéma d’un modèle de données d’expérience (XDM) avec des libellés définissant l’utilisation de l’organisation ou des données. En parallèle, les administrateurs peuvent utiliser l’interface d’administration des utilisateurs et des rôles pour définir des politiques d’accès relatives aux champs de schéma XDM. Cela permet ainsi une meilleure gestion des accès accordés aux utilisateurs ou aux groupes d’utilisateurs (utilisateurs internes, externes ou tiers). Enfin, le contrôle d’accès basé sur les attributs permet aux administrateurs de gérer l’accès à des segments spécifiques.
-
-Grâce au contrôle d’accès basé sur les attributs, les administrateurs de votre organisation peuvent contrôler l’accès des utilisateurs aux données personnelles sensibles (SPD) et aux informations d’identification personnelle (PII) sur l’ensemble des workflows et ressources de Platform. Les administrateurs peuvent définir des rôles d’utilisateur qui n’ont accès qu’à des champs spécifiques et aux données correspondant à ces champs.
-
-En raison du contrôle d’accès basé sur les attributs, certains champs et certaines fonctionnalités ont un accès limité et ne sont pas disponibles pour certaines instances de service Customer AI. Par exemple, &quot;Identité&quot;, &quot;Définition de score&quot; et &quot;Cloner&quot;.
-
-![L’espace de travail Customer AI avec les champs restreints de l’instance de service est mis en surbrillance.](../images/user-guide/unavailable-functionalities.png)
-
-En haut de l’espace de travail de Customer AI **page insights**, notez que les détails de la barre latérale, de la définition de score, de l’identité et des attributs de profil affichent tous &quot;Accès limité&quot;.
-
-![Espace de travail Customer AI avec les champs restreints du schéma mis en surbrillance.](../images/user-guide/access-restricted.png)
-
-<!-- If you select datasets with restricted schemas on the **[!UICONTROL Create instance workflow]** page, a warning sign appears next to the dataset name with the message: [!UICONTROL Restricted information is excluded].
-
-![The Customer AI workspace with the restricted fields of the selected datasets results highlighted.](../images/user-guide/restricted-info-excluded.png) -->
-
-Lorsque vous prévisualisez des jeux de données avec un schéma limité sur l’objet **[!UICONTROL Workflow Créer une instance]** , un avertissement s’affiche pour vous informer que [!UICONTROL En raison des restrictions d’accès, certaines informations ne s’affichent pas dans l’aperçu du jeu de données.]
-
-![L’espace de travail Customer AI avec les champs restreints des jeux de données d’aperçu avec les résultats de schéma limités mis en surbrillance.](../images/user-guide/restricted-dataset-preview-save-and-exit-cai.png)
-
-Après avoir créé une instance contenant des informations restreintes, passez à la **[!UICONTROL Définition d’un objectif]** , un avertissement s’affiche en haut de l’écran : [!UICONTROL En raison des restrictions d’accès, certaines informations ne s’affichent pas dans la configuration.]
-
-![L’espace de travail Customer AI avec les champs restreints de l’instance de service est mis en surbrillance.](../images/user-guide/information-not-displayed-save-and-exit.png)
 
 ## Étapes suivantes {#next-steps}
 

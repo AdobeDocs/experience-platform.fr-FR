@@ -5,10 +5,10 @@ feature: Customer AI
 title: Prise en main de Customer AI
 description: Ce guide fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés.
 exl-id: 90c9a83a-8e66-4239-b2d6-2049a6319b25
-source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
+source-git-commit: 596921163bf64d11545dcde49039bcdd07c253dd
 workflow-type: tm+mt
-source-wordcount: '652'
-ht-degree: 62%
+source-wordcount: '572'
+ht-degree: 71%
 
 ---
 
@@ -46,12 +46,6 @@ Dans Experience Platform, toutes les ressources sont isolées dans des environn
 ### Lecture d’exemples d’appels API
 
 Ce guide fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels API, consultez la section sur la [lecture d’exemples d’appels API](../../landing/troubleshooting.md) dans le guide de dépannage d’Experience Platform.
-
-## Contrôle d’accès {#access-control}
-
-Lors de l’utilisation du contrôle d’accès, la variable **Affichage de Customer AI** et **Gestion de Customer AI** Les privilèges permettent d’accéder à différentes fonctionnalités de Customer AI. Le **Gestion de Customer AI** permission vous permet de **create**,**update**, **delete**, **enable** ou **disable** une instance pendant **Affichage de Customer AI** vous permet de le lire ou de le visualiser. Le **create**, **update** et **delete** Les actions sont enregistrées par les journaux d’audit.
-
-Consultez la documentation pour en savoir plus [attribution d’autorisations pour le contrôle d’accès](../../../help/access-control/home.md) ou comment [utiliser les journaux d’audit pour surveiller l’accès et l’activité ;](../../../help/landing/governance-privacy-security/audit-logs/overview.md).
 
 ## Étapes suivantes
 
