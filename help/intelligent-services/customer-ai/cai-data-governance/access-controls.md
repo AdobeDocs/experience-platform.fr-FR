@@ -4,7 +4,7 @@ solution: Experience Platform
 feature: Customer AI
 title: Contrôle d’accès pour Customer AI
 description: Ce document fournit des informations sur le contrôle d’accès basé sur les attributs pour Customer AI.
-source-git-commit: 66d20dc1141ff33211635ba74d320350f8b27fb7
+source-git-commit: 6f386d859b8553050ead266fad0e473c7cf7095e
 workflow-type: tm+mt
 source-wordcount: '516'
 ht-degree: 37%
@@ -42,8 +42,8 @@ Après avoir créé un modèle contenant des informations restreintes, passez à
 
 Lors de l’utilisation du contrôle d’accès, la variable **Affichage de Customer AI** et **Gestion de Customer AI** Les privilèges permettent d’accéder à différentes fonctionnalités de Customer AI. Le **Gestion de Customer AI** permission vous permet de **create**,**update**, **delete**, **enable** ou **disable** un modèle pendant **Affichage de Customer AI** vous permet de le lire ou de le visualiser. Le **create**, **update** et **delete** Les actions sont enregistrées par les journaux d’audit.
 
-Consultez la documentation pour en savoir plus [attribution d’autorisations pour le contrôle d’accès](../../../help/access-control/home.md) ou comment [utiliser les journaux d’audit pour surveiller l’accès et l’activité ;](../../../help/landing/governance-privacy-security/audit-logs/overview.md).
+Consultez la documentation pour en savoir plus [attribution d’autorisations pour le contrôle d’accès](../../../access-control/home.md) ou comment [utiliser les journaux d’audit pour surveiller l’accès et l’activité ;](../../../landing/governance-privacy-security/audit-logs/overview.md).
 
 ## Étapes suivantes
 
-En lisant ce guide, les principes du contrôle dʼaccès dans [!DNL Experience Platform] vous ont été présentés. Vous pouvez désormais poursuivre en consultant le [guide dʼutilisation du contrôle dʼaccès](./ui/overview.md) pour obtenir des instructions détaillées sur lʼutilisation dʼ[!DNL Admin Console] afin de créer des profils de produit et attribuer des autorisations dans [!DNL Platform].
+En lisant ce guide, les principes du contrôle dʼaccès dans [!DNL Experience Platform] vous ont été présentés. Vous pouvez désormais poursuivre en consultant le [guide dʼutilisation du contrôle dʼaccès](../overview.md) pour obtenir des instructions détaillées sur lʼutilisation dʼ[!DNL Admin Console] afin de créer des profils de produit et attribuer des autorisations dans [!DNL Platform].

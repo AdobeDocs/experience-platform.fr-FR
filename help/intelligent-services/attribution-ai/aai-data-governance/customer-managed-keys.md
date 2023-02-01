@@ -1,9 +1,8 @@
 ---
 keywords: insights;attribution ai;informations sur l’attribution;service de requête AAI;requêtes d’attribution;scores d’attribution Clés gérées par le client dans AAI
-feature: Customer-Managed Keys in Attribution AI
 title: Clés gérées par le client
 description: Découvrez comment configurer les clés gérées par le client pour Attribution AI.
-source-git-commit: 3b1cc7ca710071df9de06428f7eed2993219ae1a
+source-git-commit: f80cdd553c36ee10cfbf07c5cbbb14e9a4ae6757
 workflow-type: tm+mt
 source-wordcount: '168'
 ht-degree: 24%

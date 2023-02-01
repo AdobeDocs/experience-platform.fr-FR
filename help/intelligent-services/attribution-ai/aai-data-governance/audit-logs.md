@@ -1,12 +1,11 @@
 ---
 keywords: insights;attribution ai;informations sur l’attribution;service de requête AAI;requêtes d’attribution;scores d’attribution
-feature: Attribution AI audit logs
-title: Présentation des journaux d’audit
+title: Aperçu des journaux d’audit dans Attribution AI
 description: Découvrez comment afficher et gérer les journaux d’audit dans Attribution AI.
-source-git-commit: 3b1cc7ca710071df9de06428f7eed2993219ae1a
+source-git-commit: a68d4634c6341f27673fdd70d96f7e214032b5a9
 workflow-type: tm+mt
-source-wordcount: '274'
-ht-degree: 37%
+source-wordcount: '268'
+ht-degree: 38%
 
 ---
 
@@ -16,11 +15,11 @@ Pour accroître la transparence et la visibilité des activités exécutées dan
 
 Pour faire simple, un journal d’audit indique qui a effectué quelle action et quand. Chaque action enregistrée dans un journal contient des métadonnées qui indiquent le type d’action, la date et l’heure, l’ID d’e-mail de l’utilisateur qui a exécuté l’action et des attributs supplémentaires liés au type d’action. Il effectue le suivi des actions de création, de mise à jour et de suppression effectuées par les utilisateurs dans Attribution AI.
 
-[Logs d’audit sélectionnés dans l’espace de travail Attribution AI](../../attribution-ai/images/data-governance/audit-logs-cai.png)
+<!-- [The audit logs selected in the Attribution AI workspace](../../../attribution-ai/aai-data-governance/images/data-governance/audit-logs-cai.png) -->
 
 ## Accéder aux journaux d’audit
 
 Lorsque la fonction est activée pour votre organisation, les journaux d’audit sont automatiquement collectés au fur et à mesure de l’activité. Vous n’avez pas besoin d’activer manuellement la collecte des journaux.
 
-Pour afficher et exporter les journaux d’audit, l’autorisation de contrôle d’accès Accès aux journaux d’audit doit avoir été accordée dans Adobe Console. Pour savoir comment gérer les autorisations individuelles pour les fonctionnalités Attribution AI, reportez-vous à la section [documentation sur le contrôle d’accès](../../attribution-ai/access-controls.md).
+Pour afficher et exporter les journaux d’audit, l’autorisation de contrôle d’accès Accès aux journaux d’audit doit avoir été accordée dans Adobe Console. Pour savoir comment gérer les autorisations individuelles pour les fonctionnalités Attribution AI, reportez-vous à la section [documentation sur le contrôle d’accès](../aai-data-governance/access-controls.md).
 

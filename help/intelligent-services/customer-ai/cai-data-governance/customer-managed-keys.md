@@ -1,12 +1,11 @@
 ---
 keywords: insights;customer ai;customer ai insights;service de requêtes AAI;requêtes de customer ai;scores de customer ai ; Clés gérées par le client dans CAI
-feature: Customer-Managed Keys in Customer AI
-title: Clés gérées par le client
+title: Clés gérées par le client dans Customer AI.
 description: Découvrez comment configurer des clés gérées par le client pour Customer AI.
-source-git-commit: 3b1cc7ca710071df9de06428f7eed2993219ae1a
+source-git-commit: f80cdd553c36ee10cfbf07c5cbbb14e9a4ae6757
 workflow-type: tm+mt
-source-wordcount: '170'
-ht-degree: 24%
+source-wordcount: '173'
+ht-degree: 21%
 
 ---
 
