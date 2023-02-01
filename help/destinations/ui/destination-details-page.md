@@ -3,10 +3,10 @@ keywords: destinations;destination;page des détails des destinations;page des d
 title: Afficher les détails de la destination
 description: La page de détails d’une destination individuelle fournit un aperçu des détails de destination. Les détails de la destination incluent le nom de destination, l’identifiant, les segments mappés à la destination et les contrôles permettant de modifier l’activation et d’activer et désactiver le flux de données.
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: a6fe0f5a0c4f87ac265bf13cb8bba98252f147e0
+source-git-commit: 165d8719cbf5d4b0555d5b9ef84252e3cbd82d42
 workflow-type: tm+mt
-source-wordcount: '718'
-ht-degree: 7%
+source-wordcount: '799'
+ht-degree: 21%
 
 ---
 
@@ -24,11 +24,11 @@ Dans l’interface utilisateur de Adobe Experience Platform, vous pouvez affiche
 
 Suivez les étapes ci-dessous pour afficher plus de détails sur une destination existante.
 
-1. Connectez-vous au [Interface utilisateur Experience Platform](https://platform.adobe.com/) et sélectionnez **[!UICONTROL Destinations]** dans la barre de navigation de gauche. Sélectionner **[!UICONTROL Parcourir]** dans l’en-tête supérieur pour afficher vos destinations existantes.
+1. Connectez-vous à l’[interface utilisateur Experience Platform](https://platform.adobe.com/) et sélectionnez **[!UICONTROL Destinations]** dans la barre de navigation de gauche. Sélectionner **[!UICONTROL Parcourir]** dans l’en-tête supérieur pour afficher vos destinations existantes.
 
    ![Parcourir les destinations](../assets/ui/details-page/browse-destinations.png)
 
-1. Icône Sélectionner le filtre ![Icône Filtre](../assets/ui/details-page/filter.png) en haut à gauche pour lancer le panneau de tri. Le panneau de tri fournit une liste de toutes vos destinations. Vous pouvez sélectionner plusieurs destinations dans la liste pour afficher une sélection filtrée de flux de données associés à la destination sélectionnée.
+1. Sélectionnez l’icône filtre ![Icône Filtre](../assets/ui/details-page/filter.png) en haut à gauche pour lancer le panneau de tri. Le panneau de tri fournit une liste de toutes vos destinations. Vous pouvez sélectionner plusieurs destinations dans la liste pour afficher une sélection filtrée de flux de données associés à la destination sélectionnée.
 
    ![Filtrage des destinations](../assets/ui/details-page/filter-destinations.png)
 
@@ -50,7 +50,7 @@ Le tableau suivant couvre les contrôles et les détails fournis par le rail de 
 
 | Élément de rail de droite | Description |
 | --- | --- |
-| [!UICONTROL Activation des segments] | Sélectionnez ce contrôle pour modifier les segments qui sont mappés à la destination, mettre à jour les plannings d’exportation ou ajouter et supprimer des attributs et des identités mappés. Voir les guides sur [activation des données d’audience pour segmenter les destinations de diffusion en continu](./activate-segment-streaming-destinations.md), [activation des données d’audience vers des destinations basées sur un profil de lot](./activate-batch-profile-destinations.md), et [activation des données d’audience vers des destinations basées sur un profil de diffusion en continu](./activate-streaming-profile-destinations.md) pour plus d’informations. |
+| [!UICONTROL Activer les segments] | Sélectionnez ce contrôle pour modifier les segments qui sont mappés à la destination, mettre à jour les plannings d’exportation ou ajouter et supprimer des attributs et des identités mappés. Voir les guides sur [activation des données d’audience pour segmenter les destinations de diffusion en continu](./activate-segment-streaming-destinations.md), [activation des données d’audience vers des destinations basées sur un profil de lot](./activate-batch-profile-destinations.md), et [activation des données d’audience vers des destinations basées sur un profil de diffusion en continu](./activate-streaming-profile-destinations.md) pour plus d’informations. |
 | [!UICONTROL Supprimer] | Permet de supprimer ce flux de données et annule le mappage des segments qui ont été activés auparavant, le cas échéant. |
 | [!UICONTROL Nom de la destination] | Ce champ peut être modifié afin de mettre à jour le nom de la destination. |
 | [!UICONTROL Description] | Ce champ peut être modifié pour mettre à jour ou ajouter une description facultative à la destination. |
@@ -78,15 +78,21 @@ Le [!UICONTROL Exécutions de flux de données] fournit des données de mesure s
 
 >[!NOTE]
 >
->* La fonctionnalité de surveillance des destinations est actuellement prise en charge pour toutes les destinations dans Experience Platform. *Sauf* la valeur [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) et [Personnalisation personnalisée](/help/destinations/catalog/personalization/custom-personalization.md) destinations.
+>* La fonctionnalité de surveillance des destinations est actuellement prise en charge pour toutes les destinations dans Experience Platform. *Sauf* la valeur [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md), [Personnalisation personnalisée](/help/destinations/catalog/personalization/custom-personalization.md) et [Audiences Experience Cloud](/help/destinations/catalog/adobe/experience-cloud-audiences.md) destinations.
 >* Pour le [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [Centre d’événements Azure](/help/destinations/catalog/cloud-storage/azure-event-hubs.md), et [API HTTP](/help/destinations/catalog/streaming/http-destination.md) destinations, les identités exclues ne sont actuellement pas affichées.
 
 
 ![Vue des exécutions du flux de données](../assets/ui/details-page/dataflow-runs.png)
 
+### Durée des exécutions du flux de données {#dataflow-runs-duration}
+
+Il existe un problème connu dans la durée affichée des exécutions du flux de données. Lorsque la variable **[!UICONTROL Durée de traitement]** indiqué pour la plupart des exécutions de flux de données, soit environ quatre heures, comme illustré dans l’image ci-dessous, le temps de traitement réel pour toute exécution de flux de données est beaucoup plus court. Les fenêtres d’exécution du flux de données restent ouvertes plus longtemps dans l’cas où l’Experience Platform doit réessayer d’effectuer des appels vers la destination.
+
+![Image de la page Exécution du flux de données avec la colonne Temps de traitement mise en surbrillance.](/help/destinations/assets/ui/details-page/processing-time-dataflow-run.png)
+
 ## [!UICONTROL Données d’activation] {#activation-data}
 
-Le [!UICONTROL Données d’activation] Cet onglet affiche la liste des segments qui ont été mappés à la destination, y compris leur date de début et de fin (le cas échéant), ainsi que d’autres informations pertinentes pour l’exportation des données, telles que le type d’exportation, la planification et la fréquence. Pour afficher les détails d’un segment particulier, sélectionnez son nom dans la liste.
+L’onglet [!UICONTROL Données d’activation] affiche la liste des segments qui ont été mappés à la destination, y compris leur date de début et de fin (le cas échéant), ainsi que d’autres informations pertinentes pour l’exportation des données, telles que le type d’exportation, la planification et la fréquence. Pour afficher les détails d’un segment spécifique, sélectionnez son nom dans la liste.
 
 >[!TIP]
 >
