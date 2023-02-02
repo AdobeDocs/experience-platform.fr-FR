@@ -4,10 +4,10 @@ user-guide-title: Aide sur les connecteurs source d’Adobe Experience Platfor
 breadcrumb-title: Guide des connecteurs sources
 user-guide-description: Ingérez des données à partir de diverses sources. Découvrez comment structurer, étiqueter et améliorer les données déjà ingérées.
 feature: Sources
-source-git-commit: 2d9cd6ed1db7bcbbe9b35c154e09a6b03f9a132d
+source-git-commit: 33aeeb58e5bfa2c1553a5c49fee07dc5020f4efb
 workflow-type: tm+mt
-source-wordcount: '875'
-ht-degree: 98%
+source-wordcount: '928'
+ht-degree: 92%
 
 ---
 
@@ -329,6 +329,15 @@ ht-degree: 98%
       - [Utiliser un éditeur de texte dans votre environnement local pour créer une page de documentation sur les sources](sources-sdk/documentation/text-editor.md)
       - [Modèle d’API de libre-service de documentation](sources-sdk/documentation/template.md)
       - [Modèle d’interface utilisateur de libre-service de documentation](sources-sdk/documentation/ui-template.md)
+   - SDK de diffusion en continu {#streaming-sdk}
+      - [Prise en main des sources en libre-service (SDK de diffusion en continu)](sources-sdk/streaming/getting-started.md)
+      - [Création d’une spécification de connexion pour une source de diffusion en continu](sources-sdk/streaming/create.md)
+      - [Mise à jour d’une spécification de connexion pour une source de diffusion en continu](sources-sdk/streaming/update-connection-specs.md)
+      - [Mise à jour de la spécification du flux de diffusion en continu](sources-sdk/streaming/update-flow-specs.md)
+      - [Test et envoi de votre spécification de connexion pour vérification](sources-sdk/streaming/submit.md)
+      - [Document de votre source (SDK de diffusion)](sources-sdk/streaming/document-streaming.md)
+      - [Modèle de diffusion en continu d’API en libre-service de documentation](sources-sdk/streaming/streaming-template-api.md)
+      - [Modèle de diffusion en continu de l’interface utilisateur en libre-service de la documentation](sources-sdk/streaming/streaming-template-ui.md)
 - [Notifications d’exécution de flux](notifications.md)
 - [Liste autorisée d’adresses IP](ip-address-allow-list.md)
 - [Questions fréquentes](./troubleshooting.md)
