@@ -2,10 +2,10 @@
 title: Connexion à  [!DNL Google Ad Manager 360]  (Version bêta)
 description: Google Ad Manager 360 est une plateforme de diffusion d’annonces de Google qui donne aux éditeurs les moyens de gérer l’affichage des annonces sur leurs sites web, en vidéo et dans les applications mobiles.
 exl-id: 3251145a-3e4d-40aa-b120-d79c8c9c7cae
-source-git-commit: 97a39e12d916e4fbd048c0fb9ddfa9bdfa10d438
-workflow-type: ht
-source-wordcount: '914'
-ht-degree: 100%
+source-git-commit: ec4d064f90348f9eafb1d0fe4b9df5e102295507
+workflow-type: tm+mt
+source-wordcount: '926'
+ht-degree: 85%
 
 ---
 
@@ -46,7 +46,7 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 | Élément | Type | Notes |
 ---------|----------|---------|
 | Type d’exportation | **[!UICONTROL Basé sur les profils]** | Vous exportez tous les membres d’un segment, ainsi que les champs de schéma applicables (par exemple votre PPID), tels que choisis dans l’écran de sélection des attributs de profil du [workflow d’activation de destination](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
-| Fréquence des exportations | **[!UICONTROL Lot]** | Les destinations par lots exportent des fichiers vers des plateformes en aval par incréments de trois, six, huit, douze ou vingt-quatre heures. En savoir plus sur les [destinations basées sur des fichiers de lots](/help/destinations/destination-types.md#file-based). |
+| Fréquence des exportations | **[!UICONTROL Lot]** | Les destinations par lots exportent des fichiers vers des plateformes en aval par incréments de trois, six, huit, douze ou vingt-quatre heures. En savoir plus sur les [destinations basées sur des fichiers par lots](/help/destinations/destination-types.md#file-based). |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -54,19 +54,15 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 ### Liste autorisée {#allow-listing}
 
+La liste autorisée est obligatoire avant de configurer votre première destination [!DNL Google Ad Manager 360] dans Platform. Veillez à terminer le processus de liste autorisée décrit ci-dessous, avant de créer votre destination.
+
 >[!NOTE]
 >
->La liste autorisée est obligatoire avant de configurer votre première destination [!DNL Google Ad Manager] dans Platform. Veuillez vous assurer que [!DNL Google] a complété le processus de liste autorisée décrit ci-dessous avant de créer une destination.
+>L’exception à cette règle concerne les [Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html?lang=fr) clients. Si vous avez déjà créé une connexion à cette destination Google dans Audience Manager, il n’est pas nécessaire de passer à nouveau par le processus de liste autorisée et vous pouvez passer directement aux étapes suivantes.
 
->[!IMPORTANT]
->
->Google a simplifié le processus de connexion des plateformes de gestion d’audience externes à Google Ad Manager 360. Vous pouvez maintenant suivre le processus de liaison à Google Ad Manager 360 en libre-service. Lire [Segments des plateformes de gestion de données](https://support.google.com/admanager/answer/3289669?hl=fr) dans la documentation de Google. Vous devriez avoir à portée de main les identifiants répertoriés ci-dessous.
+1. Suivez les étapes décrites dans la section [Documentation de Google Ad Manager](https://support.google.com/admanager/answer/3289669?hl=fr) pour ajouter Adobe en tant que plateforme de gestion des données liée (DMP).
+2. Dans le [!DNL Google Ad Manager] , accédez à **[!UICONTROL Administration]** > **[!UICONTROL Paramètres globaux]** > **[!UICONTROL Paramètres réseau]**, puis activez la variable **[!UICONTROL Accès API]** curseur.
 
-* **Identifiant de compte** : l’identifiant du compte Adobe avec Google. Identifiant de compte : 87933855.
-* **Identifiant client** : l’identifiant client d’Adobe avec Google. Identifiant client : 89690775.
-* **Code réseau** : il s’agit de votre identifiant réseau [!DNL Google Ad Manager], que l’on trouve sous **[!UICONTROL Admin > Paramètres globaux]** dans l’interface Google, ainsi que dans l’URL.
-* **Identifiant du lien d’audience** : il s’agit d’un identifiant spécifique associé à votre réseau [!DNL Google Ad Manager] (et non votre [!DNL Network code]), que l’on trouve également sous **[!UICONTROL Admin > Paramètres globaux]** dans l’interface de Google.
-* Votre type de compte. DFP de Google ou AdX buyer.
 
 ## Se connecter à la destination {#connect}
 
@@ -91,12 +87,12 @@ Pour configurer les détails de la destination, renseignez les champs obligatoir
 
 * **[!UICONTROL Nom]** : renseignez le nom de votre choix pour cette destination.
 * **[!UICONTROL Description]** : facultatif. Vous pouvez, par exemple, mentionner la campagne pour laquelle vous utilisez cette destination.
+* **[!UICONTROL Chemin d’accès au dossier]** : saisissez le chemin d’accès au dossier de destination qui héberge les fichiers exportés.
 * **[!UICONTROL Nom du compartiment]** : saisissez le nom du compartiment [!DNL Google Cloud Storage] que cette destination doit utiliser.
-* **[!UICONTROL Chemin d’accès au dossier]** : saisissez le chemin d’accès au dossier de destination qui hébergera les fichiers exportés.
-* **[!UICONTROL ID de compte]** : renseignez votre ID de lien d’audience avec [!DNL Google].
-* **[!UICONTROL Type de compte]** : sélectionnez une option, en fonction de votre compte avec Google :
-   * Utiliser `DFP by Google` pour [!DNL DoubleClick] pour les éditeurs
+* **[!UICONTROL Identifiant de compte]**: Saisissez votre [!DNL Audience Link ID] de votre [!DNL Google] compte . Il s’agit d’un identifiant spécifique associé à votre [!DNL Google Ad Manager] réseau (et non votre [!DNL Network code]). Vous pouvez trouver ceci sous **[!UICONTROL Admin > Paramètres globaux]** dans le [!DNL Google Ad Manager] .
+* **[!UICONTROL Type de compte]**: Sélectionnez une option, en fonction de votre [!DNL Google] compte :
    * Utiliser `AdX buyer` pour [!DNL Google AdX]
+   * Utiliser `DFP by Google` pour [!DNL DoubleClick] pour les éditeurs
 
 ### Activer les alertes {#enable-alerts}
 
@@ -127,3 +123,12 @@ Ces mappages sont exigés par [!DNL Google Ad Manager 360] et sont automatiqueme
 ## Données exportées {#exported-data}
 
 Pour vérifier si l’exportation des données a été réalisée, vérifiez votre compartiment [!DNL Google Cloud Storage] et assurez-vous que les fichiers exportés contiennent les populations de profils attendues.
+
+## Dépannage {#troubleshooting}
+
+Si vous rencontrez des erreurs lors de l’utilisation de cette destination et que vous devez atteindre Adobe ou Google, gardez à portée de main les identifiants suivants.
+
+Il s’agit des ID de compte Google de l’Adobe :
+
+* **[!UICONTROL Identifiant de compte]**: 87933855
+* **[!UICONTROL ID de client]**: 89690775

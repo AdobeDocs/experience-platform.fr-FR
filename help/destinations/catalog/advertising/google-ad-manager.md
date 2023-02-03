@@ -3,10 +3,10 @@ keywords: google ad manager;google ad;doubleclick;DoubleClick AdX;DoubleClick;Go
 title: Connexion Google Ad Manager
 description: Google Ad Manager, anciennement appelé DoubleClick for Publishers ou DoubleClick AdX, est une plateforme de service publicitaire de Google qui donne aux éditeurs les moyens de gérer l’affichage des publicités sur leurs sites web, par le biais de vidéos et dans des applications mobiles.
 exl-id: e93f1bd5-9d29-43a1-a9a6-8933f9d85150
-source-git-commit: 94cd05ca8b5c8331b1b49e5172daf499918d2320
-workflow-type: ht
-source-wordcount: '955'
-ht-degree: 100%
+source-git-commit: ec4d064f90348f9eafb1d0fe4b9df5e102295507
+workflow-type: tm+mt
+source-wordcount: '890'
+ht-degree: 87%
 
 ---
 
@@ -58,18 +58,10 @@ Si vous souhaitez créer votre première destination avec [!DNL Google Ad Manage
 
 ### Liste autorisée {#allow-listing}
 
->[!NOTE]
->
->La liste autorisée est obligatoire avant de configurer votre première destination [!DNL Google Ad Manager] dans Platform. Veuillez vous assurer que [!DNL Google] a bien complété le processus de liste autorisée décrit ci-dessous avant de créer une destination.
->Une exception à cette règle s’applique aux clients d’[Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html?lang=fr). Si vous avez déjà créé une connexion à cette destination Google dans Audience Manager, il n’est pas nécessaire de passer à nouveau par le processus de liste autorisée et vous pouvez passer directement aux étapes suivantes.
+La liste autorisée est obligatoire avant de configurer votre première destination [!DNL Google Ad Manager] dans Platform. Veillez à terminer le processus de liste autorisée décrit ci-dessous, avant de créer votre destination.
 
-Avant de créer la destination [!DNL Google Ad Manager] dans Platform, vous devez contacter [!DNL Google] pour qu’Adobe soit placé sur la liste des fournisseurs de données autorisés et pour que votre compte soit ajouté à la liste autorisée. Contactez [!DNL Google] et fournissez les informations suivantes :
-
-* **Identifiant de compte** : il s’agit de l’identifiant de compte Adobe avec Google. Identifiant de compte : 87933855.
-* **Identifiant client** : il s’agit de l’identifiant client Adobe avec Google. Identifiant client : 89690775.
-* **Code réseau** : il s’agit de votre identifiant réseau [!DNL Google Ad Manager], qui se trouve sous **[!UICONTROL Admin > Paramètres généraux]** dans l’interface Google, ainsi que dans l’URL.
-* **Identifiant du lien d’audience** : il s’agit d’un identifiant spécifique associé à votre réseau [!DNL Google Ad Manager] (et non votre [!DNL Network code]), qui se trouve également sous **[!UICONTROL Admin > Paramètres généraux]** dans l’interface Google.
-* Votre type de compte. DFP de Google ou AdX buyer.
+1. Suivez les étapes décrites dans la section [Documentation de Google Ad Manager](https://support.google.com/admanager/answer/3289669?hl=fr) pour ajouter Adobe en tant que plateforme de gestion des données liée (DMP).
+2. Dans le [!DNL Google Ad Manager] , accédez à **[!UICONTROL Administration]** > **[!UICONTROL Paramètres globaux]** > **[!UICONTROL Paramètres réseau]**, puis activez la variable **[!UICONTROL Accès API]** curseur.
 
 ## Se connecter à la destination {#connect}
 
@@ -85,10 +77,11 @@ Pendant la [configuration](../../ui/connect-destination.md) de cette destination
 
 * **[!UICONTROL Nom]** : renseignez le nom de votre choix pour cette destination.
 * **[!UICONTROL Description]** : facultatif. Vous pouvez, par exemple, mentionner la campagne pour laquelle vous utilisez cette destination.
+* **[!UICONTROL Identifiant de compte]**: Saisissez votre [!DNL Audience Link ID] de votre [!DNL Google] compte . Il s’agit d’un identifiant spécifique associé à votre [!DNL Google Ad Manager] réseau (et non votre [!DNL Network code]). Vous pouvez trouver ceci sous **[!UICONTROL Admin > Paramètres globaux]** dans le [!DNL Google Ad Manager] .
 * **[!UICONTROL Type de compte]** : sélectionnez une option, en fonction de votre compte avec Google :
-   * Utilisez `DFP by Google` pour [!DNL DoubleClick] for Publishers
+   * Utiliser `DFP by Google` pour [!DNL DoubleClick] pour les éditeurs
    * Utiliser `AdX buyer` pour [!DNL Google AdX]
-* **[!UICONTROL Identifiant de compte]** : renseignez votre identifiant de lien d’audience avec [!DNL Google].
+
 
 >[!NOTE]
 >
@@ -111,3 +104,12 @@ Voir [Activer les données d’audience vers des destinations d’exportation de
 ## Données exportées {#exported-data}
 
 Pour vérifier si les données ont bien été exportées vers la destination [!DNL Google Ad Manager], vérifiez votre compte [!DNL Google Ad Manager]. Si l’activation a réussi, les audiences sont renseignées dans votre compte.
+
+## Dépannage {#troubleshooting}
+
+Si vous rencontrez des erreurs lors de l’utilisation de cette destination et que vous devez atteindre Adobe ou Google, gardez à portée de main les identifiants suivants.
+
+Il s’agit des ID de compte Google de l’Adobe :
+
+* **[!UICONTROL Identifiant de compte]**: 87933855
+* **[!UICONTROL ID de client]**: 89690775
