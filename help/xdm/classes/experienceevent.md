@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Classe XDM ExperienceEvent
 description: Ce document présente la classe XDM ExperienceEvent et décrit les bonnes pratiques pour la modélisation des données d’événement.
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: f7a6f53c0993348c9a0fc0f935a9d02d54389311
+source-git-commit: e4e87fdb5f6dfbca882f924d38397a904d8b0cff
 workflow-type: tm+mt
-source-wordcount: '1853'
-ht-degree: 93%
+source-wordcount: '1865'
+ht-degree: 92%
 
 ---
 
@@ -42,7 +42,7 @@ Le champ racine `timestamp` d’un schéma d’événement peut **uniquement** r
 
 Par exemple, si une entreprise active dans le secteur du voyage et de l’hôtellerie modélise un événement de réservation de vol, le champ `timestamp` au niveau de la classe représente lʼheure à laquelle l’événement de réservation a été observé. D’autres horodatages liés à l’événement, tels que la date de début de la réservation de voyage, doivent être capturés dans des champs distincts fournis par des groupes de champs standard ou personnalisés.
 
-![](../images/classes/experienceevent/timestamps.png)
+![Un exemple de schéma d’événement d’expérience avec réservation de vol et Date de début en surbrillance.](../images/classes/experienceevent/timestamps.png)
 
 En séparant l’horodatage au niveau de la classe des autres valeurs datetime associées dans vos schémas d’événement, vous pouvez implémenter des cas d’utilisation de segmentation flexibles tout en conservant un compte horodaté des parcours client dans votre application d’expérience.
 
