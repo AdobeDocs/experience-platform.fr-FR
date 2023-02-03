@@ -1,7 +1,7 @@
 ---
 title: Notes de mise à jour de Adobe Experience Platform, janvier 2023
 description: Notes de mise à jour de janvier 2023 pour Adobe Experience Platform.
-source-git-commit: 667e868f2faba3ac3f241a2e2cd04d6de67f48c7
+source-git-commit: c60c58e563a324c4f8f90eac04686f2190e8448d
 workflow-type: tm+mt
 source-wordcount: '2444'
 ht-degree: 27%
@@ -25,7 +25,7 @@ Mises à jour des fonctionnalités existantes dans Adobe Experience Platform 
 
 ## Intelligence artificielle/Services d’apprentissage automatique {#ai-ml}
 
-Les services d’intelligence artificielle et d’apprentissage automatique permettent aux analystes et aux spécialistes du marketing d’exploiter la puissance de l’IA/ML dans les cas d’utilisation de l’expérience client. Cela permet aux analystes marketing de configurer des prédictions, sans avoir besoin d’expertise en sciences des données, spécifiques aux besoins d’une entreprise à l’aide de configurations au niveau de l’entreprise.
+Les services d’intelligence artificielle et d’apprentissage automatique permettent aux analystes et aux spécialistes du marketing d’exploiter la puissance de l’IA/ML dans les cas d’utilisation de l’expérience client. Cela permet aux analystes marketing de configurer des prédictions, sans avoir besoin d’expertise en sciences des données, spécifiques aux besoins d’une entreprise utilisant des configurations au niveau de l’entreprise.
 
 ### IA dédiée à l’attribution
 
@@ -99,7 +99,7 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 
 | Fonction | Description |
 | ----------- | ----------- |
-| Amélioration de la stratégie de consentement des médias payants pour les intégrations avec les destinations de diffusion en continu | Une amélioration de [application de la stratégie de consentement](/help/data-governance/enforcement/auto-enforcement.md) on [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations) pour les cas d’utilisation de l’activation de médias payants. Lorsque les profils ne sont plus qualifiés pour une stratégie de consentement, l’Experience Platform communique désormais de manière proactive sa sortie de stratégie aux destinations de diffusion en continu. <br> <b>Remarque</b>: Cette fonctionnalité est disponible uniquement pour les clients de **[!UICONTROL Protection de la vie privée et protection]** et ceux de **[!UICONTROL Bouclier de santé]**. |
+| Amélioration de la stratégie de consentement des médias payants pour les intégrations avec les destinations de diffusion en continu | Un [amélioration de l’application des stratégies de consentement](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-enhancement) on [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations) pour les cas d’utilisation de l’activation de médias payants. Lorsque les profils ne sont plus qualifiés pour une stratégie de consentement, l’Experience Platform communique désormais de manière proactive sa sortie de stratégie aux destinations de diffusion en continu. <br> <b>Remarque</b>: Cette fonctionnalité est disponible uniquement pour les clients de **[!UICONTROL Protection de la vie privée et protection]** et ceux de **[!UICONTROL Bouclier de santé]**. |
 | Nouvelles options de délimiteur pour les connecteurs de destination de stockage dans le cloud bêta | Trois nouvelles options de délimiteur (deux points) `:`, Pipe, point-virgule `;`) sont désormais disponibles pour les nouvelles destinations de stockage dans le cloud bêta - [(Version bêta) Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [(Version bêta) Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md), [(Version bêta) Azure Data Lake Storage Gen2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [(Version bêta) Zone d’entrée des données](/help/destinations/catalog/cloud-storage/data-landing-zone.md), [(Version bêta) Stockage dans le cloud Google](/help/destinations/catalog/cloud-storage/google-cloud-storage.md), [(Version bêta) SFTP](/help/destinations/catalog/cloud-storage/sftp.md). <br> En savoir plus sur la prise en charge [options de formatage de fichier](/help/destinations/ui/batch-destinations-file-formatting-options.md) pour les destinations basées sur des fichiers. |
 | Nouveau paramètre facultatif disponible dans [Champs de données client](/help/destinations/destination-sdk/destination-configuration.md#customer-data-fields) configurations dans [Destination SDK](/help/destinations/destination-sdk/overview.md) | `unique`: Utilisez ce paramètre lorsque vous devez créer un champ de données client dont la valeur doit être unique pour tous les flux de données de destination configurés par l’organisation d’un utilisateur. <br> Par exemple, la variable **[!UICONTROL Alias d’intégration]** dans le champ [[!UICONTROL Personnalisation personnalisée]](/help/destinations/catalog/personalization/custom-personalization.md#parameters) destination doit être unique, ce qui signifie que deux flux de données distincts vers cette destination ne peuvent pas avoir la même valeur pour ce champ. |
 
