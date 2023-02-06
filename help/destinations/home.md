@@ -3,10 +3,10 @@ keywords: destinations;adobe experience platform;plateforme;présentation des de
 title: Présentation des destinations
 description: Les destinations sont des intégrations préconfigurées à des plateformes de destination qui permettent dʼactiver facilement des données provenant dʼAdobe Experience Platform. Vous pouvez utiliser les destinations dans Adobe Experience Platform pour activer vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: 944f307ecb4cf174c9f9818ded17546057f445e4
+source-git-commit: 25f1b2197e5b10b04668d16bff3a6ce48cfad5fc
 workflow-type: tm+mt
-source-wordcount: '633'
-ht-degree: 43%
+source-wordcount: '755'
+ht-degree: 34%
 
 ---
 
@@ -35,7 +35,7 @@ L’une des principales fonctionnalités de Platform est l’ingestion de vos do
 
 ## Commandes {#controls}
 
-Les commandes de l’[espace de travail des destinations](./ui/destinations-workspace.md) vous permettent d’effectuer les opérations suivantes :
+Les contrôles dans la variable [espace de travail des destinations](./ui/destinations-workspace.md) vous permettent de :
 
 * parcourir le catalogue des plateformes de destination dans lesquelles vous pouvez activer vos données ;
 * créer, modifier, activer et désactiver des flux de données vers les destinations du catalogue ;
@@ -45,7 +45,7 @@ Les commandes de l’[espace de travail des destinations](./ui/destinations-work
 
 ## Types et catégories de destination {#types-and-categories}
 
-Pour plus d’informations, consultez la [présentation des types et catégories de destination](./destination-types.md).
+Avec Experience Platform, vous pouvez activer des données vers différents types de destinations, afin de répondre à vos cas d’utilisation d’activation. Les destinations vont des intégrations basées sur les API aux intégrations avec les systèmes de réception de fichiers, aux destinations de recherche de profil, etc. Pour plus d’informations sur toutes les destinations disponibles, voir [Types et catégories de destination - Aperçu](./destination-types.md).
 
 ## Destinations et contrôles d’accès {#access-controls}
 
@@ -69,6 +69,12 @@ Le contrôle d’accès basé sur les attributs est une fonctionnalité d’Adob
 Grâce au contrôle d’accès basé sur les attributs, vous pouvez appliquer des configurations de mappage aux champs pour lesquels vous disposez d’autorisations. De plus, vous ne pouvez pas exporter des données vers une destination si vous n’avez pas accès à tous les champs du jeu de données.
 
 Pour plus d’informations sur le fonctionnement des destinations avec les contrôles d’accès basés sur les attributs, consultez la section [contrôle d’accès basé sur les attributs - Aperçu](../access-control/abac/overview.md#destinations).
+
+## Surveillance des destinations {#destinations-monitoring}
+
+Après avoir établi une connexion à une destination et terminé le workflow d’activation, vous pouvez surveiller les exportations de données vers votre système de réception. Lisez le [guide sur la surveillance des flux de données vers les destinations dans l’interface utilisateur](/help/dataflows/ui/monitor-destinations.md) pour plus d’informations.
+
+Vous pouvez également vérifier si les données arrivent à votre destination avec succès. La plupart des pages de documentation de destination du catalogue ont une *Validation de la section d’exportation des données*, qui indique comment vous pouvez archiver la plateforme de destination sur laquelle les données sont importées depuis l’Experience Platform.
 
 ## Restrictions de gouvernance des données concernant l’activation des données vers les destinations {#data-governance}
 

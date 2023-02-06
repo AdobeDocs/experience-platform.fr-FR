@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Présentation de la visionneuse de graphiques d’identités
 description: Un graphique d’identités est une carte des relations entre différentes identités pour un client spécifique, qui vous fournit une représentation visuelle de la manière dont votre client interagit avec votre marque sur différents canaux.
 exl-id: ccd5f8d8-595b-4636-9191-553214e426bd
-source-git-commit: 6d01bb4c5212ed1bb69b9a04c6bfafaad4b108f9
+source-git-commit: 25f1b2197e5b10b04668d16bff3a6ce48cfad5fc
 workflow-type: tm+mt
 source-wordcount: '1037'
 ht-degree: 9%
@@ -35,7 +35,7 @@ L’utilisation de la visionneuse de graphiques d’identités nécessite une co
 - **Lien (edge) :** Un lien ou un bord représente la connexion entre les identités.
 - **Graphique (grappe) :** Un graphique ou un cluster est un groupe d’identités et de liens qui représentent une personne.
 
-## Accès à la visionneuse de graphiques d’identités
+## Accès à la visionneuse de graphiques d’identités {#access-identity-graph-viewer}
 
 Pour utiliser la visionneuse de graphiques d’identités dans l’interface utilisateur, sélectionnez **[!UICONTROL Identités]** dans le volet de navigation de gauche, puis sélectionnez l’option **[!UICONTROL Graphique d’identités]** . Dans la **[!UICONTROL Espace de noms d’identité]** , cliquez sur l’écran **[!UICONTROL Sélectionner un espace de noms d’identité]** pour rechercher l’espace de noms que vous avez l’intention d’utiliser.
 

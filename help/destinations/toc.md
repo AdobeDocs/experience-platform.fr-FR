@@ -4,10 +4,10 @@ user-guide-title: Guide des destinations
 user-guide-description: Activez vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
 description: Ce document répertorie la table des matières des destinations Adobe Experience Platform
 feature: Destinations
-source-git-commit: f89c6a11199bff2d91414e8370c1fd9693308fc6
+source-git-commit: 25f1b2197e5b10b04668d16bff3a6ce48cfad5fc
 workflow-type: tm+mt
-source-wordcount: '992'
-ht-degree: 99%
+source-wordcount: '1016'
+ht-degree: 96%
 
 ---
 
@@ -17,6 +17,10 @@ ht-degree: 99%
 * [Présentation des destinations](./home.md)
 * [Types et catégories de destination](./destination-types.md)
 * [Barrières de sécurité des destinations (activation)](./guardrails.md)
+* Fonctionnement des destinations {#how-destinations-work}
+   * [Paramètres d’exportation configurables et communs des destinations](./how-destinations-work/destinations-configurations.md)
+   * [Comportement d’exportation de profils pour différents types de destinations](./how-destinations-work/profile-export-behavior.md)
+   * [Gestion des identités dans le workflow d’activation des destinations](./how-destinations-work/identity-handling.md)
 * Tutoriels sur les API {#api}
    * [Se connecter aux destinations de diffusion en continu et activer les données à l’aide de l’API Flow Service](./api/streaming-destinations.md)
    * [Se connecter à l’espace de stockage par lots et aux destinations de marketing par e-mail et activer les données à l’aide de l’API Flow Service](./api/connect-activate-batch-destinations.md)
