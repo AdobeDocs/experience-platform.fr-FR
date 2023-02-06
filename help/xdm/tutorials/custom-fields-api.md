@@ -2,9 +2,9 @@
 title: Définition des champs XDM dans l’API Schema Registry
 description: Découvrez comment définir différents champs lors de la création de ressources XDM (Experience Data Model) personnalisées dans l’API Schema Registry.
 exl-id: d79332e3-8448-42af-b250-882bcb0f1e7d
-source-git-commit: f7a6f53c0993348c9a0fc0f935a9d02d54389311
+source-git-commit: a3140d5216857ef41c885bbad8c69d91493b619d
 workflow-type: tm+mt
-source-wordcount: '1202'
+source-wordcount: '1199'
 ht-degree: 3%
 
 ---
@@ -101,7 +101,7 @@ Vous pouvez éventuellement fournir des étiquettes destinées aux clients pour 
 
 >[!NOTE]
 >
->Le `meta:enum` la valeur est **not** déclarer une énumération ou piloter toute validation de données par elle-même. Dans la plupart des cas, les chaînes fournies sous `meta:enum` sont également fournis sous `enum` pour s’assurer que les données sont limitées. Cependant, il existe certains cas d’utilisation où `meta:enum` est fourni sans qu’un `enum` tableau. Voir le tutoriel sur [définition des valeurs suggérées dans l’API](../tutorials/suggested-values.md) pour plus d’informations.
+>Le `meta:enum` la valeur est **not** déclarer une énumération ou piloter toute validation de données par elle-même. Dans la plupart des cas, les chaînes fournies sous `meta:enum` sont également fournis sous `enum` pour s’assurer que les données sont limitées. Cependant, il existe certains cas d’utilisation où `meta:enum` est fourni sans qu’un `enum` tableau. Voir le tutoriel sur [définition des valeurs proposées](../tutorials/suggested-values.md) pour plus d’informations.
 
 Vous pouvez éventuellement fournir un `default` pour indiquer la propriété par défaut `enum` valeur que le champ utilisera si aucune valeur n’est fournie.
 

@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Point de terminaison de l’API Descripteurs
 description: Le point de terminaison /descriptors de l’API Schema Registry vous permet de gérer par programmation les descripteurs XDM dans votre application d’expérience.
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: f7a6f53c0993348c9a0fc0f935a9d02d54389311
+source-git-commit: a3140d5216857ef41c885bbad8c69d91493b619d
 workflow-type: tm+mt
-source-wordcount: '1956'
-ht-degree: 44%
+source-wordcount: '1900'
+ht-degree: 46%
 
 ---
 
@@ -357,7 +357,7 @@ Les descripteurs de nom convivial permettent à l’utilisateur de modifier la v
 | `xdm:title` | Le nouveau titre que vous souhaitez afficher pour ce champ, écrit en Casse Titre. |
 | `xdm:description` | Vous pouvez ajouter une description facultative avec le titre. |
 | `meta:enum` | Si le champ indiqué par `xdm:sourceProperty` est un champ de chaîne, `meta:enum` peut être utilisé pour ajouter des valeurs suggérées pour le champ dans l’interface utilisateur de segmentation. Il est important de noter que `meta:enum` ne déclare pas d’énumération ni ne fournit de validation de données pour le champ XDM.<br><br>Cela ne doit être utilisé que pour les champs XDM principaux définis par Adobe. Si la propriété source est un champ personnalisé défini par votre organisation, vous devez modifier le `meta:enum` par le biais d’une requête de PATCH à la ressource parente du champ. |
-| `meta:excludeMetaEnum` | Si le champ indiqué par `xdm:sourceProperty` est un champ de chaîne dont les valeurs suggérées existantes sont fournies sous une `meta:enum` , vous pouvez inclure cet objet dans un descripteur de nom convivial pour exclure certaines ou toutes ces valeurs de la segmentation. La clé et la valeur de chaque entrée doivent correspondre à celles incluses dans l’original. `meta:enum` du champ pour que la saisie soit exclue.<br><br>Il est important de noter que vous ne pouvez exclure que les valeurs des champs de chaîne qui contiennent **valeurs proposées uniquement**. Si le champ de chaîne contient des valeurs réelles `enum` les contraintes, les valeurs suggérées associées ne peuvent pas être désactivées. `enum` les champs des ressources personnalisées définies par votre organisation peuvent être modifiés par le biais de demandes de PATCH, mais `enum` Les champs des ressources définies par l’Adobe standard ne peuvent pas être supprimés. |
+| `meta:excludeMetaEnum` | Si le champ indiqué par `xdm:sourceProperty` est un champ de chaîne dont les valeurs suggérées existantes sont fournies sous une `meta:enum` , vous pouvez inclure cet objet dans un descripteur de nom convivial pour exclure certaines ou toutes ces valeurs de la segmentation. La clé et la valeur de chaque entrée doivent correspondre à celles incluses dans l’original. `meta:enum` du champ pour que la saisie soit exclue. |
 
 {style=&quot;table-layout:auto&quot;}
 
