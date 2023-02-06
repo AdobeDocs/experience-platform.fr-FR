@@ -1,7 +1,7 @@
 ---
 title: Comportement d’exportation de profils
 description: Découvrez comment le comportement d’exportation de profils varie entre les différents modèles d’intégration pris en charge dans les destinations Experience Platform.
-source-git-commit: 1c844d86834ef78d1206a8698dbcbfe2fae49661
+source-git-commit: 07b92bc06f28bc37673ae71a45ff0e76de9bce9b
 workflow-type: tm+mt
 source-wordcount: '2926'
 ht-degree: 24%
@@ -126,7 +126,7 @@ Une exportation de profil vers la destination peut être déterminée par un pro
 
 Du point de vue des attributs de profil, toute modification des trois attributs mappés ci-dessus déterminera une exportation de destination.
 
->[!BEGINSHADEBOX]
+>[!ENDSHADEBOX]
 
 ## Destinations de lot (basées sur des fichiers) {#file-based-destinations}
 
