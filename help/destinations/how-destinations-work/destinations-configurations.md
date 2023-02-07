@@ -1,10 +1,10 @@
 ---
 title: Paramètres d’exportation configurables et communs des destinations
 description: Découvrez les paramètres d’exportation des destinations configurables au niveau de la destination, fixes et impossibles à modifier.
-source-git-commit: 04322d10a88b27d5641ab9474c8387945aab9982
+source-git-commit: 372231ab4fc1148c1c2c0c5fdbfd3cd5328b17cc
 workflow-type: tm+mt
-source-wordcount: '829'
-ht-degree: 3%
+source-wordcount: '845'
+ht-degree: 2%
 
 ---
 
@@ -63,5 +63,7 @@ En savoir plus sur les différentes options et étapes disponibles dans le workf
 ## Étapes suivantes {#next-steps}
 
 Après avoir lu ce document, vous savez désormais quels paramètres d’exportation des destinations sont communs à tous les types de destination, lesquels peuvent être configurés par les développeurs à un niveau de destination spécifique, et quels paramètres peuvent être modifiés par les utilisateurs dans le processus d’activation.
+
+Vous pouvez ensuite lire des informations plus détaillées sur la variable [modèles de comportement d’exportation courants par type de destination](/help/destinations/how-destinations-work/profile-export-behavior.md).
 
 Pour les développeurs de destinations, vous pouvez : [prise en main](/help/destinations/destination-sdk/getting-started.md) avec Destination SDK. Pour les utilisateurs qui souhaitent activer des données, vous pouvez extraire toutes les destinations disponibles dans la variable [catalogue](/help/destinations/catalog/overview.md).

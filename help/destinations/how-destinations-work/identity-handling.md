@@ -1,9 +1,9 @@
 ---
 title: Gestion des identités dans le workflow d’activation des destinations
 description: Découvrez comment l’exportation d’identité est gérée dans le workflow d’activation, en fonction du type de destination.
-source-git-commit: 6ccf26cbdbbe675d0d731f59cee589d63ca6f8ad
+source-git-commit: 372231ab4fc1148c1c2c0c5fdbfd3cd5328b17cc
 workflow-type: tm+mt
-source-wordcount: '1174'
+source-wordcount: '1186'
 ht-degree: 3%
 
 ---
@@ -107,3 +107,5 @@ Lors de la configuration d’un flux de données comme décrit dans la documenta
 Après avoir lu ce document, vous savez maintenant comment déterminer les identités prises en charge ou requises pour des destinations individuelles. Vous savez également comment fonctionne la sélection d’identité pour chaque type de destination.
 
 Ensuite, vous pouvez savoir à propos de [paramètres d’exportation](/help/destinations/how-destinations-work/destinations-configurations.md) les destinations sont communes aux types de destination, qui peuvent être configurés par les développeurs au niveau d’une destination individuelle et quels paramètres peuvent être modifiés par les utilisateurs dans le processus d’activation.
+
+Vous pouvez également extraire toutes les destinations disponibles dans le [catalogue](/help/destinations/catalog/overview.md).

@@ -1,9 +1,9 @@
 ---
 title: Comportement d’exportation de profils
 description: Découvrez comment le comportement d’exportation de profils varie entre les différents modèles d’intégration pris en charge dans les destinations Experience Platform.
-source-git-commit: 07b92bc06f28bc37673ae71a45ff0e76de9bce9b
+source-git-commit: 372231ab4fc1148c1c2c0c5fdbfd3cd5328b17cc
 workflow-type: tm+mt
-source-wordcount: '2926'
+source-wordcount: '2944'
 ht-degree: 24%
 
 ---
@@ -87,9 +87,9 @@ Du point de vue des attributs de profil, toute modification apportée aux quatre
 
 ## Destinations basées sur des API de diffusion en continu {#streaming-api-based-destinations}
 
-Le comportement d’exportation de profils pour les destinations de diffusion en continu telles que Facebook, le bureau commercial et d’autres intégrations basées sur des API est identique à ce qui précède.
+Le comportement d’exportation de profils pour les destinations de diffusion en continu telles que Facebook, le bureau commercial et d’autres intégrations basées sur les API est très similaire au comportement décrit ci-dessus pour les destinations d’entreprise.
 
-Exemples de destinations : publicité, réseaux sociaux, etc.
+Les destinations appartenant à la variable [catégories sociales et publicitaires](/help/destinations/destination-types.md#categories) dans le catalogue.
 
 Experience Platform optimise le comportement d’exportation de profils vers votre destination de diffusion en continu, afin de n’exporter que les données vers des destinations basées sur l’API de diffusion en continu lorsque des mises à jour pertinentes d’un profil se sont produites à la suite de la qualification du segment ou d’autres événements significatifs. Les profils sont exportés vers votre destination dans les situations suivantes :
 
