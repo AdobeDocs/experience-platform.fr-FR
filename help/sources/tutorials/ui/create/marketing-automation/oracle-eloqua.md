@@ -1,19 +1,17 @@
 ---
-keywords: Experience Platform;accueil;rubriques populaires;sources;connecteurs;oracle;oracle eloqua;éloqua
-solution: Experience Platform
 title: Création d’une connexion source Eloqua d’Oracle à l’aide de l’interface utilisateur de Platform
 description: Découvrez comment connecter Adobe Experience Platform à Oracle Eloqua à l’aide de l’interface utilisateur de Platform.
 exl-id: c4431d85-5948-4122-9a99-dbacdde5a09f
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: e8f54f06ad3431227e140219a9960e8e04f83ccc
 workflow-type: tm+mt
-source-wordcount: '466'
-ht-degree: 66%
+source-wordcount: '521'
+ht-degree: 59%
 
 ---
 
 # Créez un [!DNL Oracle Eloqua] Connexion source à l’aide de l’interface utilisateur de Platform
 
-Ce tutoriel décrit les étapes à suivre pour créer une [!DNL Oracle Eloqua] connecteur source à l’aide de l’interface utilisateur de Adobe Experience Platform.
+Ce tutoriel décrit les étapes à suivre pour créer une [!DNL Oracle Eloqua] connexion source à l’aide de l’interface utilisateur de Adobe Experience Platform.
 
 ## Prise en main
 
@@ -30,8 +28,8 @@ Pour connecter [!DNL Oracle Eloqua] à Platform, vous devez fournir des valeurs 
 
 | Informations d’identification | Description |
 | --- | --- |
-| Point d’entrée | Le point de terminaison de votre [!DNL Oracle Eloqua]. |
-| Nom d’utilisateur | Le nom d’utilisateur de votre [!DNL Oracle Eloqua] compte . Le nom d’utilisateur doit être formaté en tant que `siteName + \\ + username`où `siteName` est le nom de l’entreprise à laquelle vous vous êtes connecté. [!DNL Oracle Eloqua] et `username` est votre nom d’utilisateur. Par exemple, votre nom d’utilisateur de connexion peut être : `adobe\\emily`. |
+| Point d’entrée | Le point de terminaison de votre [!DNL Oracle Eloqua] serveur. [!DNL Oracle Eloqua] prend en charge plusieurs centres de données. Pour trouver votre point de terminaison, connectez-vous au [[!DNL Oracle Eloqua] interface](https://login.eloqua.com) avec vos informations d’identification, puis copiez la partie URL de base à partir de l’URL de redirection. Le format de votre modèle d’URL est le suivant : `xxx.xx.eloqua.com` et doivent être saisies sans `http` ou `https`. |
+| Nom d’utilisateur | Le nom d’utilisateur de votre [!DNL Oracle Eloqua] serveur. Le nom d’utilisateur doit être formaté en tant que `siteName + \\ + username`où `siteName` est le nom de l’entreprise à laquelle vous vous êtes connecté. [!DNL Oracle Eloqua] et `username` est votre nom d’utilisateur. Par exemple, votre nom d’utilisateur de connexion peut être : `Eloqua\Andy`. **Remarque**: Vous devez utiliser une seule barre oblique inverse (`\`) lors de l’utilisation de l’interface utilisateur, car l’interface utilisateur Experience Platform ajoute automatiquement une barre oblique inverse supplémentaire (`\`) lors de la saisie d’un nom d’utilisateur. |
 | Mot de passe | Le mot de passe correspondant à votre [!DNL Oracle Eloqua] nom d’utilisateur. |
 
 Pour plus d’informations sur les informations d’authentification pour [!DNL Oracle Eloqua], consultez le [[!DNL Oracle Eloqua] guide sur l’authentification](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/Authentication_Basic.html).

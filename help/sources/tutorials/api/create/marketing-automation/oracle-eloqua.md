@@ -1,14 +1,11 @@
 ---
-keywords: Experience Platform;accueil;rubriques populaires;oracle;éloqua;oracle eloqua
-solution: Experience Platform
 title: Création d’une connexion de base Eloqua d’Oracle à l’aide de l’API Flow Service
-type: Tutorial
 description: Découvrez comment connecter Adobe Experience Platform à Oracle Eloqua à l’aide de l’API Flow Service.
 exl-id: 866e408f-6e0b-4e81-9ad8-9d74c485c89a
-source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
+source-git-commit: e8f54f06ad3431227e140219a9960e8e04f83ccc
 workflow-type: tm+mt
-source-wordcount: '567'
-ht-degree: 79%
+source-wordcount: '558'
+ht-degree: 81%
 
 ---
 

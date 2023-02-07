@@ -1,19 +1,17 @@
 ---
-keywords: Experience Platform;accueil;rubriques populaires;oracle;oracle eloqua;éloqua
-solution: Experience Platform
 title: Présentation d’Oracle Eloqua Connector
 description: Découvrez comment connecter Oracle Eloqua à Adobe Experience Platform à l’aide des API ou de l’interface utilisateur.
 exl-id: ebe16bff-4c89-4d45-9973-e5aa13b61a36
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: e8f54f06ad3431227e140219a9960e8e04f83ccc
 workflow-type: tm+mt
-source-wordcount: '227'
-ht-degree: 78%
+source-wordcount: '218'
+ht-degree: 81%
 
 ---
 
 # Connecteur [!DNL Oracle Eloqua]
 
-Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous permettant de structurer, de libeller et d’améliorer les données entrantes à l’aide des services [!DNL Platform]. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, des bases de données, etc.
+Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous permettant de structurer, de libeller et d’améliorer les données entrantes à l’aide des services [!DNL Platform]. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les bases de données, etc.
 
 Experience Platform prend en charge l’ingestion de données provenant d’un système tiers d’automatisation du marketing. La prise en charge des fournisseurs d’automatisation marketing inclut [!DNL Oracle Eloqua].
 
