@@ -4,14 +4,18 @@ solution: Experience Platform
 title: Point de terminaison de l’API Products
 description: Le point de terminaison /products de l’API Attribute-Based Access Control vous permet de gérer les produits par programmation dans Adobe Experience Platform.
 exl-id: 44ee9a9d-7a13-4d59-a1a9-97764dbd3763
-source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
+source-git-commit: 16d85a2a4ee8967fc701a3fe631c9daaba9c9d70
 workflow-type: tm+mt
-source-wordcount: '492'
-ht-degree: 17%
+source-wordcount: '515'
+ht-degree: 25%
 
 ---
 
 # Point d’entrée Produits
+
+>[!NOTE]
+>
+>Si un jeton utilisateur est transmis, l’utilisateur du jeton doit disposer d’un rôle &quot;d’administrateur org&quot; pour l’organisation demandée.
 
 Le `/products` Le point de terminaison de l’API de contrôle d’accès basé sur les attributs vous permet de gérer par programmation les produits, ainsi que les catégories d’autorisations et les jeux d’autorisations associés aux produits de votre entreprise.
 
@@ -235,6 +239,6 @@ Une réponse réussie renvoie les jeux d’autorisations associés à l’ID de 
 | `id` | Identifiant correspondant au jeu d’autorisations interrogé. |
 | `name` | Nom correspondant du jeu d’autorisations interrogé. |
 | `category` | La catégorie d’autorisation disponible. |
-| `permissions` | Les autorisations incluent la possibilité d’afficher ou d’utiliser les fonctionnalités  Platform, telles que la création d’environnements de test, la définition de schémas et la gestion des jeux de données. |
+| `permissions` | Les autorisations incluent la possibilité d’afficher ou d’utiliser les fonctionnalités Platform, telles que la création de sandbox, la définition de schémas et la gestion des jeux de données. |
 | `permissions.resource` | Ressource ou objet auquel un sujet peut ou ne peut pas accéder. Les ressources peuvent être des fichiers, des applications, des serveurs ou même des API. |
 | `permissions.actions` | Action autorisée d’un sujet par rapport à une ressource interrogée. Les valeurs possibles sont les suivantes : `view`, `read`, `create`, `edit`, et `delete` |

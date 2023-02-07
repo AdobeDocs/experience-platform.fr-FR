@@ -4,14 +4,18 @@ solution: Experience Platform
 title: Point de terminaison de l’API Access Control Policies
 description: Le point de terminaison /policies de l’API de contrôle d’accès basé sur les attributs vous permet de gérer par programmation les stratégies dans Adobe Experience Platform.
 exl-id: 07690f43-fdd9-4254-9324-84e6bd226743
-source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
+source-git-commit: 16d85a2a4ee8967fc701a3fe631c9daaba9c9d70
 workflow-type: tm+mt
-source-wordcount: '1412'
+source-wordcount: '1435'
 ht-degree: 10%
 
 ---
 
 # Point de terminaison des stratégies de contrôle d’accès
+
+>[!NOTE]
+>
+>Si un jeton utilisateur est transmis, l’utilisateur du jeton doit disposer d’un rôle &quot;d’administrateur org&quot; pour l’organisation demandée.
 
 Les politiques de contrôle d&#39;accès sont des déclarations qui rassemblent les attributs pour établir les actions permises et non autorisées. Ces politiques peuvent être locales ou globales et peuvent remplacer d’autres politiques. Le `/policies` Le point de terminaison de l’API de contrôle d’accès basé sur les attributs vous permet de gérer par programmation les stratégies, y compris des informations sur les règles qui les régissent, ainsi que leurs conditions d’objet respectives.
 
@@ -456,7 +460,7 @@ Une réponse réussie renvoie l’identifiant de stratégie interrogé avec une 
 }
 ```
 
-## Suppression d’une stratégie {#delete}
+## Supprimer une politique {#delete}
 
 Pour supprimer une stratégie, envoyez une requête de DELETE à la fonction `/policies` point de terminaison tout en fournissant l’identifiant de la stratégie que vous souhaitez supprimer.
 

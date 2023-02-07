@@ -4,14 +4,18 @@ solution: Experience Platform
 title: Point d’entrée de lʼAPI Effective Policies
 description: Découvrez comment afficher des stratégies d’accès efficaces à l’aide de l’API Access Control for Adobe Experience Platform.
 exl-id: 555d73db-115d-4f4c-8bd2-b91477799591
-source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
+source-git-commit: 16d85a2a4ee8967fc701a3fe631c9daaba9c9d70
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '318'
+ht-degree: 74%
 
 ---
 
 # Point d’entrée des stratégies effectives
+
+>[!NOTE]
+>
+>Si un jeton utilisateur est transmis, l’utilisateur du jeton doit disposer d’un rôle &quot;d’administrateur org&quot; pour l’organisation demandée.
 
 Pour afficher les stratégies de contrôle d’accès efficaces pour l’utilisateur actuel, envoyez une requête de POST à la variable `/acl/effective-policies` du point de terminaison [!DNL Access Control] API. Les autorisations et les types de ressources que vous souhaitez récupérer doivent être fournis dans le payload de la requête sous la forme de tableau. Ceci est illustré dans l’exemple d’appel API ci-dessous.
 

@@ -4,14 +4,18 @@ solution: Experience Platform
 title: Point d’entrée de l’API de référence
 description: Le point de terminaison de référence de l’API Access Control vous permet d’afficher les noms des autorisations disponibles et des types de ressources, qui peuvent ensuite être utilisés pour afficher des stratégies de contrôle d’accès efficaces pour l’utilisateur actuel.
 exl-id: 18d84d54-9258-4451-9aa8-7c647b45a8da
-source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
+source-git-commit: 16d85a2a4ee8967fc701a3fe631c9daaba9c9d70
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '188'
+ht-degree: 59%
 
 ---
 
 # Point d’entrée de référence
+
+>[!NOTE]
+>
+>Si un jeton utilisateur est transmis, l’utilisateur du jeton doit disposer d’un rôle &quot;d’administrateur org&quot; pour l’organisation demandée.
 
 Vous pouvez répertorier les noms de tous les types d’autorisations et de ressources en envoyant une requête GET au point de terminaison `/acl/reference`. Ces noms peuvent ensuite être utilisés dans les appels API à [Affichage des stratégies de contrôle d’accès efficaces](./effective-policies.md) pour l’utilisateur actuel.
 
