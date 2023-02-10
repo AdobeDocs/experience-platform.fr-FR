@@ -2,16 +2,20 @@
 title: Clés gérées par le client dans Adobe Experience Platform
 description: Découvrez comment configurer vos propres clés de chiffrement pour les données stockées dans Adobe Experience Platform.
 exl-id: cd33e6c2-8189-4b68-a99b-ec7fccdc9b91
-source-git-commit: 47b3de5035f93f8a4288a0fec0a9111a979d7442
+source-git-commit: ca92839bd2a775ae323da5d5d0750b2026f8052d
 workflow-type: tm+mt
-source-wordcount: '1603'
-ht-degree: 93%
+source-wordcount: '1618'
+ht-degree: 92%
 
 ---
 
 # Clés gérées par le client dans Adobe Experience Platform
 
 Les données stockées sur Adobe Experience Platform sont chiffrées au repos à l’aide de clés au niveau du système. Si vous utilisez une application reposant sur Platform, vous pouvez choisir d’utiliser vos propres clés de chiffrement pour mieux contrôler la sécurité de vos données.
+
+>[!NOTE]
+>
+>Les données du lac de données Adobe Experience Platform et du magasin de profils (CosmosDB) sont chiffrés à l’aide de CMK.
 
 Ce document décrit le processus d’activation de la fonctionnalité des clés gérées par le client (CMK) dans Platform.
 
