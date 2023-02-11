@@ -1,10 +1,10 @@
 ---
 title: Notes de mise à jour de Adobe Experience Platform, janvier 2023
 description: Notes de mise à jour de janvier 2023 pour Adobe Experience Platform.
-source-git-commit: c60c58e563a324c4f8f90eac04686f2190e8448d
+source-git-commit: 6388c72aa0be8f5f91efaaa6a0edd22f3eb99de8
 workflow-type: tm+mt
-source-wordcount: '2444'
-ht-degree: 27%
+source-wordcount: '2432'
+ht-degree: 28%
 
 ---
 
@@ -130,7 +130,7 @@ XDM est une spécification Open Source qui fournit des structures et des défini
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Désactivation des valeurs suggérées pour les champs de chaîne | Vous pouvez désormais [désactiver les valeurs suggérées individuelles pour les champs de chaîne](../../xdm/ui/fields/enum.md) dans le [!UICONTROL Schémas] workspace, y compris ceux des composants standard. Cette fonctionnalité est disponible uniquement pour les champs avec des valeurs suggérées et n’est pas prise en charge pour les contraintes d’énumération. |
+| Améliorations du nom d’affichage de l’arborescence des schémas | Auparavant, les noms de champ s’affichaient dans l’interface utilisateur, mais désormais, les noms d’affichage des champs de schéma sur le canevas de schéma sont plus conviviaux à lire. |
 
 **Nouveaux composants XDM**
 
