@@ -2,10 +2,10 @@
 description: Cette page fournit toutes les informations dont vous avez besoin pour soumettre une révision d’une destination productisée créée à l’aide de Destination SDK.
 title: Envoyer pour révision une destination productisée créée en Destination SDK
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
-source-git-commit: 1eab40687c599d37c71b919bc3a4aeae274b0a49
+source-git-commit: 73f1faaffd4a77c9c09eccf00d5a0ff98580b232
 workflow-type: tm+mt
-source-wordcount: '928'
-ht-degree: 42%
+source-wordcount: '1012'
+ht-degree: 38%
 
 ---
 
@@ -28,7 +28,8 @@ Pour que votre destination puisse être publiée dans le [catalogue des destinat
 
 Cette page répertorie toutes les informations dont vous avez besoin pour envoyer ou mettre à jour une destination créée à l’aide dʼAdobe Experience Platform Destination SDK. Pour envoyer une destination dans Adobe Experience Platform, adressez un e-mail à <aepdestsdk@adobe.com> et précisez les informations suivantes :
 
-* Une description des cas d’utilisation que votre destination résout. Cela n’est pas nécessaire si vous mettez à jour une configuration de destination existante.
+* Une description des cas d’utilisation que votre destination résout. Cela n’est nécessaire que si vous envoyez une nouvelle configuration de destination.
+* Description de la raison de l’envoi vers la destination. Cela n’est nécessaire que si vous mettez à jour une configuration de destination existante.
 * Des résultats de test après avoir utilisé le point dʼentrée de l’API de destination de test pour effectuer un appel HTTP vers votre destination. Partagez avec l’Adobe un appel API effectué à votre point de terminaison de destination et la réponse de l’API reçue de votre point de terminaison de destination.
 * Autres exigences pour les destinations basées sur des fichiers :
    * Partagez une requête et un exemple de réponse après avoir utilisé l’API de test sur [tester votre destination basée sur des fichiers avec des exemples de profils ;](/help/destinations/destination-sdk/file-based-destination-testing-api.md).
@@ -46,6 +47,14 @@ Fournissez une description des cas d’utilisation que votre destination résout
 
 * [Pinterest](/help/destinations/catalog/advertising/pinterest.md): Créez des audiences à partir des listes de clients, des personnes qui ont visité votre site ou des personnes qui ont déjà interagi avec votre contenu sur Pinterest.
 * [Yahoo Data X](/help/destinations/catalog/advertising/datax.md#use-cases): Les API DataX sont disponibles pour les annonceurs qui souhaitent cibler un groupe d’audience spécifique en dehors des adresses électroniques dans Verizon Media (VMG). Elles peuvent rapidement créer un nouveau segment et pousser le groupe d’audience souhaité à l’aide de l’API en temps quasi réel de VMG.
+
+## Raison de la mise à jour {#reason-for-update}
+
+>[!NOTE]
+>
+>Cette section n’est nécessaire que lorsque vous mettez à jour une configuration existante.
+
+Fournissez une brève description du problème résolu par votre envoi pour la destination existante. Par exemple, votre envoi peut mettre à jour le nom, la description et le logo de votre destination au fur et à mesure que vous passez de la version bêta à la mise à disposition générale. Ou, votre envoi peut corriger un bogue détecté dans votre configuration de destination.
 
 ## Résultats du test après l’utilisation de l’API de destination du test {#testing-api-response}
 
