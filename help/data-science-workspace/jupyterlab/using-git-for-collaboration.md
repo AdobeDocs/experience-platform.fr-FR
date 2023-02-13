@@ -1,20 +1,20 @@
 ---
-keywords: Experience Platform;JupyterLab;notebooks;Data Science Workspace;rubriques les plus consultées;Git;Github
+keywords: Experience Platform;JupyterLab;notebooks;Espace de travail de science des données;rubriques populaires;Git;Github
 solution: Experience Platform
-title: Collaboration dans JupyterLab à l’aide de Git
+title: Collaborer dans JupyterLab à l’aide de Git
 type: Tutorial
-description: Git est un système de contrôle de version distribué qui permet d’effectuer le suivi des modifications du code source pendant le développement du logiciel. Git est préinstallé dans l’environnement JupyterLab de Data Science Workspace.
+description: Git est un système de contrôle de version distribué qui permet d’effectuer le suivi des modifications du code source pendant le développement du logiciel. Git est préinstallé dans l’environnement JupyterLab d’espace de travail de science des données.
 exl-id: d7b766f7-b97d-4007-bc53-b83742425047
 source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '284'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
-# Collaboration dans [!DNL JupyterLab] using [!DNL Git]
+# Collaborer dans [!DNL JupyterLab] à l’aide de [!DNL Git]
 
-[!DNL Git] est un système de contrôle de version distribué permettant d’effectuer le suivi des modifications du code source au cours du développement logiciel. Git est préinstallé dans le [!DNL Data Science Workspace JupyterLab] environnement.
+[!DNL Git] est un système de contrôle de version distribué qui permet d’effectuer le suivi des modifications du code source pendant le développement du logiciel. Git est préinstallé dans l’environnement [!DNL Data Science Workspace JupyterLab].
 
 ## Conditions préalables
 
@@ -22,35 +22,35 @@ ht-degree: 1%
 >
 > Le serveur Git que vous souhaitez utiliser doit être accessible via Internet.
 
-Le [!DNL Data Science Workspace JupyterLab] est un environnement hébergé qui n’est pas déployé dans le pare-feu de votre entreprise. Par conséquent, le serveur Git auquel vous vous connectez doit être accessible à partir d’Internet public. Il peut s’agir d’un référentiel public ou privé sur [GitHub](https://github.com/) ou une autre instance d’une [!DNL Git] serveur que vous avez décidé de vous héberger vous-même.
+L’environnement [!DNL Data Science Workspace JupyterLab] est un environnement hébergé qui n’est pas déployé dans le pare-feu de votre entreprise. Par conséquent, le serveur Git auquel vous vous connectez doit être accessible à partir d’une connexion Internet publique. Il peut s’agir d’un référentiel public ou privé sur [GitHub](https://github.com/) ou d’une autre instance d’un serveur [!DNL Git] que vous avez décidé d’héberger vous-même.
 
-## Connexion [!DNL Git] au [!DNL Data Science Workspace JupyterLab Notebooks] environnement
+## Connecter [!DNL Git] à l’environnement [!DNL Data Science Workspace JupyterLab Notebooks]
 
-Commencer par lancer [!DNL Adobe Experience Platform] et en accédant à la [[!DNL JupyterLabs Notebooks]](https://platform.adobe.com/notebooks/jupyterLab) environnement.
+Commencez par lancer [!DNL Adobe Experience Platform] et par accéder à l’environnement [[!DNL JupyterLabs Notebooks]](https://platform.adobe.com/notebooks/jupyterLab).
 
-Within [!DNL JupyterLab], sélectionnez **[!UICONTROL Fichier]** survolez **[!UICONTROL Nouveau]**. Dans la liste déroulante qui s’affiche, sélectionnez **[!UICONTROL Terminal]**.
+Dans [!DNL JupyterLab], sélectionnez **[!UICONTROL Fichier]**, puis pointez sur **[!UICONTROL Nouveau]**. Dans la liste déroulante qui s’affiche, sélectionnez **[!UICONTROL Terminal]**.
 
 ![Navigation dans JupyterLab](../images/jupyterlab/tutorials/open-terminal.png)
 
-Ensuite, dans *Terminal* accédez à votre espace de travail à l’aide de la commande suivante : `cd my-workspace`.
+Dans *Terminal*, accédez ensuite à votre espace de travail à l’aide de la commande suivante : `cd my-workspace`.
 
 ![espace de travail cd](../images/jupyterlab/tutorials/find-workspace.png)
 
 >[!TIP]
 >
-> Pour afficher la liste des commandes git disponibles, lancez la commande : `git -help` dans votre terminal.
+> Pour afficher la liste des commandes Git disponibles, lancez la commande `git -help` dans votre terminal.
 
-Ensuite, clonez le référentiel que vous souhaitez utiliser à l’aide de la fonction `git clone` . Cloner votre projet à l’aide d’une `https://` URL plutôt que `ssh://`.
+Ensuite, clonez le référentiel que vous souhaitez utiliser à l’aide de la commande `git clone`. Clonez votre projet à l’aide d’une URL `https://` plutôt que `ssh://`.
 
 **Exemple** :
 
 `git clone https://github.com/adobe/experience-platform-dsw-reference.git`
 
-![clone](../images/jupyterlab/tutorials/git-collaboration.png)
+![cloner](../images/jupyterlab/tutorials/git-collaboration.png)
 
 >[!NOTE]
 >
-> Pour effectuer toute opération d’écriture (`git push` par exemple) les commandes de configuration suivantes doivent être exécutées pour chaque nouvelle session. Notez également que toute commande push demande un nom d’utilisateur et un mot de passe.
+> Pour effectuer toute opération d’écriture (`git push` par exemple), les commandes de configuration suivantes doivent être exécutées pour chaque nouvelle session. Notez également que toute commande push demande un nom d’utilisateur et un mot de passe.
 >
 >`git config --global user.email "you@example.com"`
 >
