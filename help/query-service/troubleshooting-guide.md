@@ -7,7 +7,7 @@ exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
 source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
 source-wordcount: '4383'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -42,7 +42,7 @@ C’est peut être dû à la fonction de saisie automatique. La fonction traite 
 ### Puis-je utiliser [!DNL Postman] pour l’API Query Service ?
 
 +++Réponse
-Oui, vous pouvez visualiser tous les services API d’Adobe et interagir avec eux à l’aide de [!DNL Postman] (une application tierce gratuite). Regardez le [[!DNL Postman] guide de configuration](https://video.tv.adobe.com/v/28832) pour obtenir des instructions détaillées sur la configuration d’un projet dans l’Adobe Developer Console et l’acquisition de toutes les informations d’identification nécessaires à l’utilisation avec [!DNL Postman]. Consultez la documentation officielle pour obtenir des [conseils sur le démarrage, l’exécution et le partage de collections  [!DNL Postman] ](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
+Oui, vous pouvez visualiser tous les services API d’Adobe et interagir avec eux à l’aide de [!DNL Postman] (une application tierce gratuite). Regardez le [[!DNL Postman] guide de configuration](https://video.tv.adobe.com/v/28832) pour obtenir des instructions détaillées sur la configuration d’un projet dans l’Adobe Developer Console et l’acquisition de toutes les informations d’identification nécessaires à l’utilisation avec [!DNL Postman]. Consultez la documentation officielle pour obtenir des [conseils sur le démarrage, l’exécution et le partage de collections [!DNL Postman] ](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
 +++
 
 ### Existe-t-il un nombre maximal de lignes renvoyées par une requête via l’interface utilisateur ?
@@ -579,9 +579,10 @@ Oui, une connexion établie sur le port 80 utilise toujours SSL. Vous pouvez ég
 Oui, le contrôle d’accès basé sur les attributs est appliqué s’il est configuré. Pour plus d’informations, consultez la [présentation du contrôle d’accès basé sur les attributs](../access-control/abac/overview.md).
 +++
 
-### Query Service prend-il en charge la commande &quot;INSERT OVERWRITE INTO&quot; ?
+### Query Service prend-il en charge la commande « INSERT OVERWRITE INTO » ?
 
-+++Réponse Non, Query Service ne prend pas en charge la commande &quot;INSERT OVERWRITE INTO&quot;.
++++Réponse
+Non, Query Service ne prend pas en charge la commande « INSERT OVERWRITE INTO ».
 +++
 
 ## Exportation des données {#exporting-data}

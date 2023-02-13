@@ -5,7 +5,7 @@ exl-id: a7a4dcf8-2cf3-4e39-879d-bdfcbacb737a
 source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
 source-wordcount: '2934'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -56,7 +56,7 @@ L’IA dédiée à l’attribution est utilisée pour attribuer des crédits aux
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Enregistrer une instance de brouillon | Cette nouvelle fonctionnalité permet aux analystes marketing d’enregistrer un modèle de configuration en tant qu’instance de brouillon et de continuer à la modifier jusqu’à ce qu’elle soit terminée avant la formation et la notation. Les scénarios où cette fonctionnalité est utile incluent notamment le suivant : lorsqu’un utilisateur dispose de plusieurs champs à définir dans le workflow, mais qu’il ne peut pas les terminer en raison de contraintes de temps. Un autre scénario se produit lorsqu’une ou plusieurs statistiques de jeux de données sont en cours de traitement et ne sont pas encore disponibles. Lisez le [Guide de l’utilisateur de l’IA dédiée à l’attribution](../../intelligent-services/attribution-ai/user-guide.md#governance-policies) pour en savoir plus. |
+| Enregistrer une instance de brouillon | Cette nouvelle fonctionnalité permet aux analystes marketing d’enregistrer un modèle de configuration en tant qu’instance de brouillon et de continuer à la modifier jusqu’à ce qu’elle soit terminée avant la formation et la notation. Les scénarios où cette fonctionnalité est utile incluent notamment le suivant : lorsqu’un utilisateur dispose de plusieurs champs à définir dans le workflow, mais qu’il ne peut pas les terminer en raison de contraintes de temps. Un autre scénario se produit lorsqu’une ou plusieurs statistiques de jeux de données sont en cours de traitement et ne sont pas encore disponibles. Lisez le [Guide de l’utilisateur de l’IA dédiée à l’attribution](../../intelligent-services/attribution-ai/user-guide.md#governance-policies) pour en savoir plus. |
 | Politiques de gouvernance | Une fois que les utilisateurs se sont engagés à créer une instance par le biais du workflow de configuration, le nouveau service d’application des politiques vérifie s’il existe des violations des politiques de l’utilisation des données et affiche les détails dans une fenêtre contextuelle. Il garantit que les opérations de données et les actions marketing sont conformes aux politiques d’utilisation des données configurées sur Adobe Experience Platform. |
 
 Consultez la [présentation de l’IA dédiée à l’attribution](../../intelligent-services/attribution-ai/overview.md) pour plus d’informations. Pour plus d’informations sur les politiques de gouvernance des données, consultez la [présentation des politiques](../../data-governance/policies/overview.md).
@@ -67,7 +67,7 @@ L’IA dédiée aux clients disponible dans Real-time Customer Data Platform est
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Enregistrer une instance de brouillon | Cette nouvelle fonctionnalité permet aux analystes marketing d’enregistrer un modèle de configuration en tant qu’instance de brouillon et de continuer à la modifier jusqu’à ce qu’elle soit terminée avant la formation et la notation. Les scénarios où cette fonctionnalité est utile incluent notamment le suivant : lorsqu’un utilisateur dispose de plusieurs champs à définir dans le workflow, mais qu’il ne peut pas les terminer en raison de contraintes de temps. Un autre scénario se produit lorsqu’une ou plusieurs statistiques de jeux de données sont en cours de traitement et ne sont pas encore disponibles. Lisez le [Guide de l’utilisateur de l’IA dédiée aux clients](../../intelligent-services/customer-ai/user-guide/configure.md#governance-policies) pour en savoir plus. |
+| Enregistrer une instance de brouillon | Cette nouvelle fonctionnalité permet aux analystes marketing d’enregistrer un modèle de configuration en tant qu’instance de brouillon et de continuer à la modifier jusqu’à ce qu’elle soit terminée avant la formation et la notation. Les scénarios où cette fonctionnalité est utile incluent notamment le suivant : lorsqu’un utilisateur dispose de plusieurs champs à définir dans le workflow, mais qu’il ne peut pas les terminer en raison de contraintes de temps. Un autre scénario se produit lorsqu’une ou plusieurs statistiques de jeux de données sont en cours de traitement et ne sont pas encore disponibles. Lisez le [Guide de l’utilisateur de l’IA dédiée aux clients](../../intelligent-services/customer-ai/user-guide/configure.md#governance-policies) pour en savoir plus. |
 | Politiques de gouvernance | Une fois que les utilisateurs se sont engagés à créer une instance par le biais du workflow de configuration, le nouveau service d’application des politiques vérifie s’il existe des violations des politiques de l’utilisation des données et affiche les détails dans une fenêtre contextuelle. Il garantit que les opérations de données et les actions marketing sont conformes aux politiques d’utilisation des données configurées sur Adobe Experience Platform. |
 
 Consultez la [présentation de l’IA dédiée aux clients](../../intelligent-services/customer-ai/overview.md) pour plus d’informations. Pour plus d’informations sur les politiques de gouvernance des données, consultez la [présentation des politiques](../../data-governance/policies/overview.md).
@@ -198,7 +198,7 @@ Pour plus d’informations sur XDM dans Platform, consultez la [présentation du
 
 Proposer des expériences numériques pertinentes nécessite une compréhension complète de votre client. Cela devient plus difficile lorsque les données de vos clients sont fragmentées entre plusieurs systèmes, chaque client semble donc posséder plusieurs « identités ».
 
-Le Service d&#39;identités d&#39;Adobe Experience Platform vous permet de mieux connaître vos clients et leurs comportements, en établissant un lien entre les identités des différents appareils et systèmes, ce qui vous permet de proposer des expériences digitales personnelles et percutantes en temps réel.
+Le Service d’identités d’Adobe Experience Platform vous permet de mieux connaître vos clients et leurs comportements, en établissant un lien entre les identités des différents appareils et systèmes, ce qui vous permet de proposer des expériences digitales personnelles et percutantes en temps réel.
 
 **Fonctionnalités mises à jour**
 
@@ -210,7 +210,7 @@ Pour en savoir plus sur Identity Service, consultez la [présentation d’Identi
 
 ## Query Service {#query-service}
 
-Query Service vous permet d’utiliser le langage SQL standard pour interroger les données dans le [!DNL Data Lake] d’Adobe Experience Platform. Vous pouvez joindre n’importe quel jeu de données à partir du [!DNL Data Lake] et capturer les résultats de la requête en tant que nouveau jeu de données à utiliser dans les rapports, Data Science Workspace ou pour ingestion dans Real-time Customer Profile.
+Query Service vous permet d’utiliser le langage SQL standard pour interroger les données dans le [!DNL Data Lake] d’Adobe Experience Platform. Vous pouvez joindre n’importe quel jeu de données à partir du [!DNL Data Lake] et capturer les résultats de la requête sous la forme d’un nouveau jeu de données à utiliser dans les rapports, dans l’espace de travail de science des données ou pour l’ingestion dans Real-Time Customer Profile.
 
 **Fonctionnalités mises à jour**
 
@@ -233,7 +233,7 @@ Experience Platform fournit une API RESTful et une interface utilisateur intera
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Impact de la population de segments d’Audience Manager sur Real-time Customer Profile | L’ingestion de populations de segments d’Audience Manager importantes a un impact direct sur le nombre total de profils lorsque vous envoyez un segment d’Audience Manager pour la première fois à Platform à l’aide de la source Audience Manager. Cela signifie que la sélection de tous les segments peut potentiellement entraîner un nombre de profils excédant vos droits d’utilisation de licence. Pour plus d’informations, reportez-vous à la [présentation de la source Audience Manager](../../sources/connectors/adobe-applications/audience-manager.md). Pour plus d’informations sur l’utilisation de votre licence, consultez la documentation sur l’[utilisation du tableau de bord de l’utilisation des licences](../../dashboards/guides/license-usage.md). |
+| Impact de la population de segments d’Audience Manager sur un profil client en temps réel | L’ingestion de populations de segments d’Audience Manager importantes a un impact direct sur le nombre total de profils lorsque vous envoyez un segment d’Audience Manager pour la première fois à Platform à l’aide de la source Audience Manager. Cela signifie que la sélection de tous les segments peut potentiellement entraîner un nombre de profils excédant vos droits d’utilisation de licence. Pour plus d’informations, reportez-vous à la [présentation de la source Audience Manager](../../sources/connectors/adobe-applications/audience-manager.md). Pour plus d’informations sur l’utilisation de votre licence, consultez la documentation sur l’[utilisation du tableau de bord de l’utilisation des licences](../../dashboards/guides/license-usage.md). |
 | Prise en charge d’Adobe Campaign Managed Cloud Service | Utilisez la source Adobe Campaign Managed Cloud Service pour importer vos données de logs de diffusion et de tracking Adobe Campaign 8.4 dans Experience Platform. Pour plus d’informations, lisez le guide sur la [création d’une connexion source Adobe Campaign Managed Cloud Service dans l’interface utilisateur](../../sources/tutorials/ui/create/adobe-applications/campaign.md). |
 | Prise en charge des API pour l’ingestion à la demande des sources de lots | Utilisez l’ingestion à la demande pour créer des exécutions de flux ad hoc pour un flux de données donné à l’aide de l’API [!DNL Flow Service]. Les exécutions de flux créées doivent être définies sur une ingestion unique. Pour plus d’informations, consultez le guide sur la [création d’une exécution de flux pour l’ingestion à la demande à l’aide de l’API](../../sources/tutorials/api/on-demand-ingestion.md). |
 | Prise en charge de l’API pour la reprise des exécutions de flux de données ayant échoué pour les sources de lots | Utilisez l’opération `re-trigger` pour essayer à nouveau de transmettre votre flux de données ayant échoué via l’API. Pour plus d’informations, lisez le guide sur la [reprise des exécutions de flux de données ayant échoué à l’aide de l’API](../../sources/tutorials/api/retry-flows.md). |

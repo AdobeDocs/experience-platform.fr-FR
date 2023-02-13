@@ -5,7 +5,7 @@ exl-id: 61ef2472-5e79-433f-9f60-b1245f619b42
 source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
 source-wordcount: '1352'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -76,7 +76,7 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 
 | Documentation | Description |
 | ----------- | ----------- |
-| [Barrières de sécurité des destinations](../../destinations/guardrails.md) | Cette page fournit des limites d’utilisation et de débit par défaut en ce qui concerne le comportement d’activation. |
+| [Mécanismes de sécurisation des destinations](../../destinations/guardrails.md) | Cette page fournit des limites d’utilisation et de débit par défaut en ce qui concerne le comportement d’activation. |
 
 Pour des informations plus générales sur les destinations, consultez la [présentation des destinations](../../destinations/home.md).
 
@@ -98,7 +98,7 @@ Pour plus d’informations sur XDM dans Platform, consultez la [présentation du
 
 ## Query Service {#query-service}
 
-Query Service vous permet d’utiliser le langage SQL standard pour interroger les données dans le [!DNL Data Lake] d’Adobe Experience Platform. Vous pouvez joindre n’importe quel jeu de données à partir du [!DNL Data Lake] et capturer les résultats de la requête en tant que nouveau jeu de données à utiliser dans les rapports, Data Science Workspace ou pour ingestion dans Real-time Customer Profile.
+Query Service vous permet d’utiliser le langage SQL standard pour interroger les données dans le [!DNL Data Lake] d’Adobe Experience Platform. Vous pouvez joindre n’importe quel jeu de données à partir du [!DNL Data Lake] et capturer les résultats de la requête sous la forme d’un nouveau jeu de données à utiliser dans les rapports, dans l’espace de travail de science des données ou pour l’ingestion dans Real-Time Customer Profile.
 
 **Fonctionnalités mises à jour**
 

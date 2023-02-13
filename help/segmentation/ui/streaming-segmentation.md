@@ -7,7 +7,7 @@ exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1495'
-ht-degree: 91%
+ht-degree: 100%
 
 ---
 
@@ -29,19 +29,19 @@ La segmentation en flux continu sur [!DNL Adobe Experience Platform] permet aux 
 
 >[!NOTE]
 >
->Pour que la segmentationen flux continu fonctionne, vous devez activer la segmentation planifiée pour l’organisation. Pour plus d’informations sur l’activation de la segmentation planifiée, reportez-vous à [la section sur la segmentation en flux continu dans le guide d’utilisation sur la segmentation](./overview.md#scheduled-segmentation).
+>Pour que la segmentation en flux continu fonctionne, vous devez activer la segmentation planifiée pour l’organisation. Pour plus d’informations sur l’activation de la segmentation planifiée, reportez-vous à [la section sur la segmentation en flux continu dans le guide d’utilisation sur la segmentation](./overview.md#scheduled-segmentation).
 
 Une requête est automatiquement évaluée avec la segmentation en flux continu si elle répond à l’un des critères suivants :
 
 | Type de requête | Détails | Exemple |
 | ---------- | ------- | ------- |
 | Événement unique | Toute définition de segment qui fait référence à un seul événement entrant sans restriction temporelle. | ![Un exemple d’événement unique s’affiche.](../images/ui/streaming-segmentation/incoming-hit.png) |
-| Événement unique dans une fenêtre temporelle relative | Toute définition de segment qui fait référence à un seul événement entrant. | ![Un exemple d’événement unique dans une fenêtre de temps relative s’affiche.](../images/ui/streaming-segmentation/relative-hit-success.png) |
+| Événement unique dans une fenêtre temporelle relative | Toute définition de segment qui fait référence à un seul événement entrant. | ![Un exemple d’événement unique dans une fenêtre temporelle relative s’affiche.](../images/ui/streaming-segmentation/relative-hit-success.png) |
 | Événement unique avec une fenêtre temporelle | Toute définition de segment qui fait référence à un seul événement entrant avec une fenêtre temporelle. | ![Un exemple d’événement unique avec une fenêtre temporelle s’affiche.](../images/ui/streaming-segmentation/historic-time-window.png) |
 | Profil uniquement | Toute définition de segment qui ne fait référence qu’à un attribut de profil. |  |
 | Événement unique avec un attribut de profil | Toute définition de segment qui fait référence à un seul événement entrant, sans restriction temporelle, et à un ou plusieurs attributs de profil. **Remarque :** la requête est immédiatement évaluée lorsque l’événement arrive. Toutefois, dans le cas d’un événement de profil, il doit attendre 24 heures pour être incorporé. | ![Un exemple d’événement unique avec un attribut de profil s’affiche.](../images/ui/streaming-segmentation/profile-hit.png) |
-| Événement unique avec un attribut de profil dans une fenêtre temporelle relative | Toute définition de segment qui fait référence à un seul événement entrant et à un ou plusieurs attributs de profil. | ![Un exemple d’événement unique avec un attribut de profil dans une fenêtre de temps relative s’affiche.](../images/ui/streaming-segmentation/profile-relative-success.png) |
-| Segment de segments | Toute définition de segment contenant un ou plusieurs segments par lots ou en diffusion en flux continu. **Remarque :** si un segment est utilisé, la disqualification du profil se produit **toutes les 24 heures**. | ![Un exemple de segment s’affiche.](../images/ui/streaming-segmentation/two-batches.png) |
+| Événement unique avec un attribut de profil dans une fenêtre temporelle relative | Toute définition de segment qui fait référence à un seul événement entrant et à un ou plusieurs attributs de profil. | ![Un exemple d’événement unique avec un attribut de profil dans une fenêtre temporelle relative s’affiche.](../images/ui/streaming-segmentation/profile-relative-success.png) |
+| Segment de segments | Toute définition de segment contenant un ou plusieurs segments par lots ou en diffusion en flux continu. **Remarque :** si un segment est utilisé, la disqualification du profil se produit **toutes les 24 heures**. | ![Un exemple d’un segment de segments s’affiche.](../images/ui/streaming-segmentation/two-batches.png) |
 | Plusieurs événements avec un attribut de profil | Toute définition de segment qui fait référence à plusieurs événements **au cours des dernières 24 heures** et (éventuellement) comporte un ou plusieurs attributs de profil. | ![Un exemple de plusieurs événements avec un attribut de profil s’affiche.](../images/ui/streaming-segmentation/event-history-success.png) |
 
 Une définition de segment ne sera **pas** activée pour la segmentation en flux continu dans les scénarios suivants :
@@ -82,7 +82,7 @@ Un graphique linéaire se trouve en dessous, qui indique le nombre de nouvelles 
 
 Vous trouverez des informations supplémentaires sur la dernière évaluation de segment en sélectionnant la bulle d’informations à côté de **[!UICONTROL Total qualifié]**.
 
-![La bulle d&#39;informations pour le Total des profils qualifiés a été sélectionnée. Cette option affiche des informations sur l’heure d’évaluation du dernier segment.](../images/ui/streaming-segmentation/info-bubble.png)
+![La bulle d’informations pour le total des profils qualifiés est sélectionnée. Cette option affiche des informations sur l’heure d’évaluation du dernier segment.](../images/ui/streaming-segmentation/info-bubble.png)
 
 Pour plus d’informations sur les définitions de segment, consultez la section précédente sur les [détails sur la définition de segment](#segment-details).
 
