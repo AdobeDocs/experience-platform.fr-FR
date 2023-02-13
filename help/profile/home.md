@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;profil;profil client en temps réel;dépannage;API;profil unifié;Profil unifié;unifié;Profil;rtcp;graphiques XDM
-title: Présentation du profil client en temps réel
-description: Real-Time Customer Profile fusionne des données provenant de diverses sources et permet d’accéder à ces données sous la forme de profils client individuels et d’événements de série temporelle associés. Cette fonctionnalité permet aux spécialistes marketing d’offrir à leur audience des expériences coordonnées, cohérentes et pertinentes sur plusieurs canaux.
+title: Vue d’ensemble de Real-Time Customer Profile
+description: Le profil client en temps réel fusionne des données provenant de diverses sources et permet d’accéder à ces données sous la forme de profils clients individuels et d’événements de séries temporelles associés. Cette fonctionnalité permet aux spécialistes marketing d’offrir à leur audience des expériences coordonnées, cohérentes et pertinentes sur plusieurs canaux.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
 source-git-commit: 737a67b7e30f770d65751b1a924d8378af8bde52
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2098'
-ht-degree: 87%
+ht-degree: 100%
 
 ---
 
@@ -16,9 +16,9 @@ Adobe Experience Platform vous permet d’offrir aux clients des expériences 
 
 ## Le [!DNL Profile] dans Experience Platform
 
-La relation entre Real-Time Customer Profile et d’autres services dans Experience Platform est mise en évidence dans le diagramme suivant :
+La relation entre le profil client en temps réel et les autres services dans Experience Platform est mise en évidence dans le schéma suivant :
 
-![Relation entre Real-Time Customer Profile et d’autres services dans Adobe Experience Platform. Ce diagramme montre que Profil est l’un des principaux composants d’Adobe Experience Platform.](images/profile-overview/profile-in-platform.png)
+![La relation entre le profil client en temps réel et les autres services d’Adobe Experience Platform. Ce diagramme montre que Profil est l’un des principaux composants d’Adobe Experience Platform.](images/profile-overview/profile-in-platform.png)
 
 ## Présentation des profils
 
@@ -26,7 +26,7 @@ Le [!DNL Real-Time Customer Profile] fusionne les données de divers systèmes d
 
 ### Composition de l’entité de profil
 
-Un profil client en temps réel est composé d’une entité principale, appelée **Principale entité**, et diverses entités annexes. Dans le contexte de l’Experience Platform, l’entité Principale est généralement une **entité de profil**, qui est composé des caractéristiques, des comportements et des appartenances aux segments d’une personne individuelle. D’autres entités permettent au moteur de segmentation d’utiliser des données en dehors de l’entité principale du profil, et incluent les éléments suivants :
+Un profil client en temps réel est composé d’une entité principale, appelée l’**entité principale**, et de diverses entités annexes. Dans le contexte d’Experience Platform, l’entité principale est généralement une **entité de profil**, qui est composée des caractéristiques, des comportements et des appartenances à un segment d’une personne individuelle. D’autres entités permettent au moteur de segmentation d’utiliser des données en dehors de l’entité principale du profil, et incluent les éléments suivants :
 
 - **Entité dimensionnelle** : l’entité utilisée pour simplifier le processus de modélisation des données pour les informations partagées entre les événements ou les enregistrements de profil. On parle également d’entité de recherche ou d’entité de classification.
 - **Entité B2B** : entités qui décrivent la relation du profil avec les comptes et opportunités business-to-business.
@@ -37,10 +37,10 @@ Un profil client en temps réel est composé d’une entité principale, appelé
 >
 >Étant donné que les entités dimensionnelles et B2B n’existent qu’en dehors de l’entité principale, elles sont uniquement utilisées pour la segmentation par lots.
 
-Les entités Dimensionnel et B2B sont liées à l’entité Principale par le biais de **relations de schéma**. Pour plus d’informations, consultez la documentation suivante :
+Les entités dimensionnelles et B2B sont liées à l’entité principale par le biais de **relations de schéma**. Pour plus d’informations, reportez-vous à la documentation suivante :
 
-- [Création d’une relation de schéma un-à-un pour les entités de recherche](../xdm/tutorials/relationship-ui.md)
-- [Création d’une relation de schéma multiple-à-un pour les entités B2B](../xdm/tutorials/relationship-b2b.md)
+- [Créer une relation de schéma un-à-un pour les entités de recherche](../xdm/tutorials/relationship-ui.md)
+- [Créer une relation de schéma plusieurs-à-un pour les entités B2B](../xdm/tutorials/relationship-b2b.md)
 
 ### Banque de données de profil
 
@@ -50,11 +50,11 @@ Le magasin du profil utilise une infrastructure de base de données Microsoft Az
 
 ### Garde-fous de profil
 
-Experience Platform fournit une série de barrières de sécurité pour vous aider à éviter de créer des [Schémas de modèle de données d’expérience (XDM)](../xdm/home.md) que Real-Time Customer Profile ne peut pas prendre en charge. Cela inclut des limites souples qui entraîneront une dégradation des performances, ainsi que des limites strictes qui entraîneront des erreurs et des pannes système. Pour plus d’informations, dont une liste de directives et des cas d’utilisation, consultez la documentation sur les [Garde-fous de profil](guardrails.md).
+Experience Platform propose une série de barrières de sécurité pour vous permettre d’éviter de créer des [schémas de modèle de données d’expérience (XDM)](../xdm/home.md) qui ne peuvent pas être pris en charge par le profil client en temps réel. Cela inclut des limites souples qui entraîneront une dégradation des performances, ainsi que des limites strictes qui entraîneront des erreurs et des pannes système. Pour plus d’informations, dont une liste de directives et des cas d’utilisation, consultez la documentation sur les [Garde-fous de profil](guardrails.md).
 
 ### Tableau de bord du profil {#profile-dashboard}
 
-L’interface utilisateur de l’Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur vos données Real-Time Customer Profile, telles qu’elles sont capturées lors d’un instantané quotidien. Pour découvrir comment accéder au tableau de bord du [!DNL Profile] et savoir comment l’utiliser dans l’interface utilisateur, ainsi que pour obtenir des informations détaillées sur les mesures affichées dans le tableau de bord, reportez-vous au [Guide de l’interface utilisateur du tableau de bord du profil](ui/profile-dashboard.md).
+L’interface utilisateur d’Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur vos données de profil client en temps réel. Celles-ci sont présentées telles qu’elles sont capturées lors d’instantanés quotidiens. Pour découvrir comment accéder au tableau de bord du [!DNL Profile] et savoir comment l’utiliser dans l’interface utilisateur, ainsi que pour obtenir des informations détaillées sur les mesures affichées dans le tableau de bord, reportez-vous au [Guide de l’interface utilisateur du tableau de bord du profil](ui/profile-dashboard.md).
 
 ### Fragments de profil contre profils fusionnés {#profile-fragments-vs-merged-profiles}
 
@@ -62,7 +62,7 @@ Chaque profil client est composé de plusieurs fragments de profil qui ont été
 
 En d’autres termes, les fragments de profil représentent une identité principale unique et les données [enregistrement](#record-data) ou [événement](#time-series-events) correspondantes pour cet identifiant au sein d’un jeu de données spécifique.
 
-Lorsque les données provenant de plusieurs sources entrent en conflit (par exemple, si un fragment classe le client comme étant « célibataire » tandis qu’un autre le classe comme étant « marié »), la [stratégie de fusion](#merge-policies) détermine quelles informations doivent être prioritaires et être incluses dans le profil de l’individu. Par conséquent, il est probable que le nombre total de fragments de profil au sein de Platform soit toujours supérieur au nombre total de profils fusionnés, chaque profil étant composé de fragments multiples issus de multiples jeux de données.
+Lorsque les données provenant de plusieurs jeux de données entrent en conflit (par exemple, si un fragment classe le client comme étant « célibataire » tandis qu’un autre le classe comme étant « marié »), la [stratégie de fusion](#merge-policies) détermine quelles informations doivent être prioritaires et être incluses dans le profil de l’individu. Par conséquent, il est probable que le nombre total de fragments de profil au sein de Platform soit toujours supérieur au nombre total de profils fusionnés, chaque profil étant composé de fragments multiples issus de multiples jeux de données.
 
 ### Données d’enregistrement {#record-data}
 
@@ -112,7 +112,7 @@ Afin d’offrir à vos clients des expériences coordonnées, cohérentes et per
 
 ## Ingestion de données dans le [!DNL Profile]
 
-Vous pouvez configurer [!DNL Platform] pour envoyer les données d’enregistrement et de série temporelle au [!DNL Profile]. Cela est compatible avec l’ingestion par lots et l’ingestion par flux en temps réel. Pour plus d’informations, consultez le tutoriel décrivant comment [ajouter des données à Real-time Customer Profile ;](tutorials/add-profile-data.md).
+Vous pouvez configurer [!DNL Platform] pour envoyer les données d’enregistrement et de série temporelle au [!DNL Profile]. Cela est compatible avec l’ingestion par lots et l’ingestion par flux en temps réel. Pour plus d’informations, consultez le tutoriel décrivant comment [ajouter des données au profil client en temps réel](tutorials/add-profile-data.md).
 
 >[!NOTE]
 >
@@ -120,7 +120,7 @@ Vous pouvez configurer [!DNL Platform] pour envoyer les données d’enregistrem
 
 ### Mesures d’ingestion de profil
 
-Observability Insights vous permet d’afficher les mesures clés dans Adobe Experience Platform. Outre les statistiques d’utilisation relatives à [!DNL Experience Platform] et les indicateurs de performances pour diverses fonctionnalités de [!DNL Platform], des mesures spécifiques liées au profil vous permettent d’obtenir des éclairages sur les taux de requêtes entrantes, les taux d’ingestion réussie, les tailles d’enregistrements ingérés, etc. Pour en savoir plus, commencez par lire le [Présentation de l’API Observability Insights](../observability/api/overview.md)et pour obtenir la liste complète des mesures de Real-time Customer Profile, consultez la documentation sur [mesures disponibles](../observability/api/metrics.md#available-metrics).
+Observability Insights vous permet d’afficher les mesures clés dans Adobe Experience Platform. Outre les statistiques d’utilisation relatives à [!DNL Experience Platform] et les indicateurs de performances pour diverses fonctionnalités de [!DNL Platform], des mesures spécifiques liées au profil vous permettent d’obtenir des éclairages sur les taux de requêtes entrantes, les taux d’ingestion réussie, les tailles d’enregistrements ingérés, etc. Pour en savoir plus, consultez tout d’abord la [présentation de l’API Observability Insights](../observability/api/overview.md) et pour obtenir une liste complète des mesures du profil client en temps réel, consultez la documentation sur les [mesures disponibles](../observability/api/metrics.md#available-metrics).
 
 ## Mise à jour des données du magasin de profils
 
@@ -144,4 +144,4 @@ La gouvernance des données est gérée sur plusieurs points. Il s’agit notamm
 
 ## Étapes suivantes et ressources supplémentaires
 
-Pour en savoir plus sur l’utilisation des données de Real-time Customer Profile à l’aide de l’interface utilisateur de l’Experience Platform ou de l’API Profile, commencez par lire le [Guide de l’interface utilisateur de Profile](ui/user-guide.md) ou [Guide de développement d’API](api/overview.md), respectivement.
+Pour en savoir plus sur l’utilisation des données du profil client en temps réel à l’aide de l’interface utilisateur d’Experience Platform ou de l’API Profile, commencez par consulter respectivement le [guide de l’interface utilisateur Profil](ui/user-guide.md) ou le [guide de développement de l’API](api/overview.md).
