@@ -1,19 +1,19 @@
 ---
-keywords: Experience Platform;accueil;rubriques les plus consultées;données ingérées;dépannage;faq;Ingestion;ingestion par lots;ingestion par lots;ingestion par lots
+keywords: Experience Platform;accueil;rubriques les plus consultées;données ingérées;dépannage;questions fréquentes;Ingestion;Ingestion par lots;ingestion par lots;
 solution: Experience Platform
 title: Guide de dépannage de l’ingestion par lots
 description: Cette documentation vous aidera à répondre aux questions fréquentes sur les API Batch Data Ingestion d’Adobe Experience Platform.
 exl-id: 0a750d7e-a4ee-4a79-a697-b4b732478b2b
 source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
-workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+workflow-type: ht
+source-wordcount: '1416'
+ht-degree: 100%
 
 ---
 
 # Guide de dépannage de l’ingestion par lots
 
-Cette documentation vous aidera à répondre aux questions les plus fréquemment posées concernant Adobe Experience Platform [!DNL Batch Data Ingestion] API.
+Cette documentation vous aidera à répondre aux questions fréquentes sur les API [!DNL Batch Data Ingestion] d’Adobe Experience Platform.
 
 ## Appels API par lots
 
@@ -57,9 +57,9 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
     }'
 ```
 
-### Pourquoi les données transférées n’apparaissent-elles pas dans le jeu de données ?
+### Pourquoi les données téléchargées n’apparaissent-elles pas dans le jeu de données ?
 
-Pour que les données apparaissent dans le jeu de données, le lot doit être marqué comme terminé. Tous les fichiers à ingérer doivent être chargés avant de marquer le lot comme terminé. Vous trouverez ci-dessous un exemple de marquage d’un lot comme terminé :
+Pour que les données apparaissent dans le jeu de données, le lot doit être marqué comme terminé. Tous les fichiers à ingérer doivent être téléchargés avant de marquer le lot comme terminé. Vous trouverez ci-dessous un exemple de marquage d’un lot comme terminé :
 
 ```shell
 curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}?action=COMPLETE" \
@@ -182,7 +182,7 @@ Au cours de son cycle de vie, un lot peut passer par les états suivants :
 | État | Données écrites au format maître | Description |
 | ------ | ---------------------- | ----------- |
 | Abandonné |  | Le client n’a pas terminé le lot dans le délai prévu. |
-| Interrompu |  | Le client a explicitement appelé, via la fonction [!DNL Batch Data Ingestion] API, opération d’abandon pour le lot spécifié. Une fois que le lot a atteint l’état Chargé, il ne peut plus être abandonné. |
+| Interrompu |  | Le client a explicitement demandé, via les API [!DNL Batch Data Ingestion], une opération d’abandon pour le lot spécifié. Une fois que le lot a atteint l’état Chargé, il ne peut plus être abandonné. |
 | Actif/Réussite | x | Le lot a été promu de l’évaluation au format maître. Il est désormais disponible pour la consommation en aval. **Remarque :** Actif et Réussite sont interchangeables. |
 | Archivé |  | Le lot a été archivé dans un stockage hors ligne. |
 | Échoué/Échec |  | État final résultant d’une configuration incorrecte et/ou de mauvaises données. Une erreur exploitable est enregistrée, ainsi que le lot, pour permettre aux clients de corriger et de renvoyer les données. **Remarque :** Échoué et Échec sont interchangeables. |
@@ -204,7 +204,7 @@ Lorsqu’un lot se trouve dans l’état « Nouvelle tentative », cela signif
 
 ### En quoi consiste l’état « Bloqué » d’un lot ?
 
-Lorsqu’un lot se trouve dans &quot;Bloqué&quot;, cela signifie que [!DNL Data Ingestion Services] éprouve des difficultés à ingérer le lot et toutes les reprises ont été épuisées.
+Lorsqu’un lot se trouve dans l’état « Bloqué », cela signifie que [!DNL Data Ingestion Services] rencontre des difficultés à ingérer le lot et que toutes les nouvelles tentatives sont épuisées.
 
 ### En quoi consiste l’état « Chargement » d’un lot ?
 
@@ -239,7 +239,7 @@ Une fois les erreurs corrigées, le lot peut à nouveau être chargé.
 
 ### Comment supprimer les lots ?
 
-Au lieu de supprimer directement de [!DNL Catalog], les lots doivent être supprimés à l’aide de l’une des méthodes fournies ci-dessous :
+Au lieu de les supprimer directement de [!DNL Catalog], les lots doivent être supprimés à l’aide de l’une des méthodes fournies ci-dessous :
 
 1. Si le lot est en cours, il doit être abandonné.
 2. Si le lot est passé au format maître, son format doit être rétabli.
@@ -250,11 +250,11 @@ Les mesures suivantes sont disponibles pour les lots à l’état Actif/Réussit
 
 | Mesure | Description |
 | ------ | ----------- |
-| inputByteSize | Nombre total d’octets intermédiaires pour [!DNL Data Ingestion Services] pour traiter. |
-| inputRecordSize | Le nombre total de lignes évaluées pour [!DNL Data Ingestion Services] pour traiter. |
-| outputByteSize | Le nombre total d’octets générés par [!DNL Data Ingestion Services] to [!DNL Data Lake]. |
-| outputRecordSize | Le nombre total de lignes générées par [!DNL Data Ingestion Services] to [!DNL Data Lake]. |
-| partitionCount | Le nombre total de partitions écrites dans [!DNL Data Lake]. |
+| inputByteSize | Nombre total d’octets évalués pour le traitement par [!DNL Data Ingestion Services]. |
+| inputRecordSize | Nombre total de lignes évaluées pour le traitement par [!DNL Data Ingestion Services]. |
+| outputByteSize | Nombre total d’octets générés par [!DNL Data Ingestion Services] vers [!DNL Data Lake]. |
+| outputRecordSize | Nombre total de lignes générées par [!DNL Data Ingestion Services] vers [!DNL Data Lake]. |
+| partitionCount | Nombre total de partitions écrites dans [!DNL Data Lake]. |
 
 ### Pourquoi les mesures ne sont-elles pas disponibles pour certains lots ?
 
