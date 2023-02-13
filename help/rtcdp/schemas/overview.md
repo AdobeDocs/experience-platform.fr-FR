@@ -1,18 +1,18 @@
 ---
 title: Schémas dans Real-time Customer Data Platform
-description: Présentation du rôle des schémas de modèle de données d’expérience (XDM) dans Adobe Real-time Customer Data Platform.
+description: Présentation du rôle des schémas de modèle de données d’expérience (XDM) dans Adobe Real-Time Customer Data Platform.
 exl-id: e56873d2-825d-4c0f-a0fe-1ae6e83438f0
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '146'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 # Schémas dans Real-time Customer Data Platform
 
-Toutes les données introduites dans Adobe Real-time Customer Data Platform doivent être conformes à une structure standard dénormalisée afin qu’elles soient reconnues et exploitées par les fonctionnalités et fonctionnalités en aval. Le modèle de données d’expérience (XDM) est la structure standard qui fournit cette structure sous la forme de schémas.
+Toutes les données introduites dans Adobe Real-time Customer Data Platform doivent être conformes à une structure standard dénormalisée afin qu’elles soient reconnues et exploitées par les fonctionnalités en aval. Le modèle de données d’expérience (XDM) est le framework standard qui fournit cette structure sous la forme de schémas.
 
 Après avoir créé des schémas, vous pouvez mapper la structure des données à XDM afin qu’elles puissent être ingérées dans le système.
 
-Pour plus d’informations sur XDM et la gestion des schémas dans l’interface utilisateur, reportez-vous à la section [Documentation XDM](../../xdm/home.md). Si vous utilisez l’édition B2B de la plateforme client en temps réel, consultez le document sur [schémas dans Real-Time CDP version B2B](./b2b.md) pour plus d’informations sur les applications spécifiques B2B pour XDM.
+Pour plus d’informations sur XDM et la gestion des schémas dans l’interface utilisateur, reportez-vous à la [documentation XDM](../../xdm/home.md). Si vous utilisez l’édition B2B de Real-Time Customer Platform, consultez le document sur les [schémas dans Real-Time CDP édition B2B](./b2b.md) pour plus d’informations sur les applications spécifiques B2B pour XDM.
