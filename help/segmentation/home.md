@@ -5,9 +5,9 @@ title: Présentation de Segmentation Service
 description: Découvrez Adobe Experience Platform Segmentation Service et le rôle qu’il occupe dans l’écosystème de Platform.
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1635'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -43,9 +43,9 @@ Pour plus d’informations sur la création de définitions de segment à l’ai
 >
 >Dans l’éventualité où un schéma est étendu, tous les chargements ultérieurs doivent mettre à jour les nouveaux champs ajoutés en conséquence. Pour plus d’informations sur la personnalisation du [!DNL Experience Data Model] (XDM), consultez le [tutoriel de l’éditeur de schémas](../xdm/tutorials/create-schema-ui.md).
 >
->En outre, si une valeur d’expiration d’événement d’expérience est activée sur le jeu de données, cela peut affecter l’appartenance du segment créé. Veuillez lire le guide sur [Expiration des événements d’expérience](../profile/event-expirations.md) pour plus d’informations sur la manière dont cette fonction peut affecter la segmentation.
+>En outre, si une valeur d’expiration de l’événement d’expérience est activée sur le jeu de données, cela peut affecter l’abonnement du segment créé. Veuillez lire le guide sur l’[expiration des événements d’expérience](../profile/event-expirations.md) pour plus d’informations sur la manière dont cette fonctionnalité peut affecter la segmentation.
 
-## Évaluation de segments {#evaluate-segments}
+## Évaluer les segments {#evaluate-segments}
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation"
@@ -60,9 +60,9 @@ Pour plus d’informations sur la création de définitions de segment à l’ai
 
 Platform prend actuellement en charge trois méthodes d’évaluation des segments : segmentation par flux, segmentation par lots et segmentation Edge.
 
-### Segmentation par flux {#streaming}
+### Segmentation en flux continu {#streaming}
 
-La segmentation par flux est un processus continu de sélection des données qui met à jour vos segments en réponse à l’activité des utilisateurs. Une fois qu’un segment a été créé et enregistré, la définition de segment est appliquée aux données d’entrée [!DNL Real-Time Customer Profile]. Les ajouts et les suppressions de segments sont traités régulièrement, ce qui vous permet de vous assurer que votre ciblage d’audience reste pertinent.
+La segmentation par diffusion en continu est un processus continu de sélection des données qui met à jour vos segments en réponse à l’activité des utilisateurs. Une fois qu’un segment a été créé et enregistré, la définition de segment est appliquée aux données d’entrée [!DNL Real-Time Customer Profile]. Les ajouts et les suppressions de segments sont traités régulièrement, ce qui vous permet de vous assurer que votre ciblage d’audience reste pertinent.
 
 Pour plus d’informations sur la segmentation par flux, consultez la [documentation sur la segmentation par flux](./api/streaming-segmentation.md).
 
