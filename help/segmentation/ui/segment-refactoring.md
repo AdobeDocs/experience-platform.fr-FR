@@ -1,30 +1,30 @@
 ---
-keywords: Experience Platform;accueil;rubriques les plus consultées;segmentation;Segmentation;créateur de segments;créateur de segments
+keywords: Experience Platform;accueil;rubriques populaires;segmentation;Segmentation;créateur de segments;Créateur de segments
 solution: Experience Platform
-title: Guide de l’interface utilisateur des contraintes de temps de segmentation restructurée
+title: Guide de l’interface utilisateur des contraintes de temps de la segmentation refactorisées
 description: Le créateur de segments offre un vaste espace de travail qui vous permet d’interagir avec les éléments de données de profil. L’espace de travail fournit des commandes intuitives pour la création et la modification de règles, telles que le glisser-déposer de mosaïques utilisées pour représenter les propriétés des données.
 exl-id: 3a352d46-829f-4a58-b676-73c3147f792c
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '297'
-ht-degree: 11%
+ht-degree: 100%
 
 ---
 
 # Refactorisation des contraintes de temps
 
-La version d’octobre 2020 pour Adobe Experience Platform a introduit des modifications de performances dans Adobe Experience Platform Segmentation Service, qui ajoutent de nouvelles restrictions à l’utilisation des opérateurs logiques OR et AND. Ces modifications concerneront les segments nouvellement créés ou modifiés effectués à l’aide de l’interface utilisateur du créateur de segments. Ce guide explique comment atténuer ces modifications.
+La version d’octobre 2020 d’Adobe Experience Platform a introduit des modifications de performances dans Adobe Experience Platform Segmentation Service, qui ajoutent de nouvelles restrictions à l’utilisation des opérateurs logiques OR et AND. Ces modifications concerneront les segments nouvellement créés ou modifiés à l’aide de l’interface utilisateur du créateur de segments. Ce guide explique comment atténuer ces modifications.
 
-Avant la version d’octobre 2020, toutes les contraintes temporelles au niveau des règles, des groupes et des événements faisaient référence de manière redondante au même horodatage. Afin de clarifier l’utilisation des contraintes de temps, les contraintes de temps au niveau de la règle et au niveau du groupe ont été supprimées. Pour tenir compte de cette modification, toutes les contraintes de temps doivent être réécrites en tant que contraintes de temps au niveau de l’événement.
+Avant la version d’octobre 2020, toutes les contraintes de temps au niveau des règles, des groupes et des événements faisaient référence de manière redondante à la même date et heure. Afin de clarifier l’utilisation des contraintes de temps, les contraintes de temps au niveau des règles et des groupes ont été supprimées. Pour tenir compte de ce changement, toutes les contraintes de temps doivent être réécrites en tant que contraintes de temps au niveau des événements.
 
-Auparavant, plusieurs règles de contrainte temporelle pouvaient être associées à un événement individuel.
+Auparavant, un événement individuel pouvait être associé à plusieurs règles de contrainte de temps.
 
-![L’ancien style des contraintes temporelles est mis en surbrillance dans le créateur de segments.](../images/ui/segment-refactoring/former-time-constraint.png)
+![L’ancien style des contraintes de temps est mis en surbrillance dans le créateur de segments.](../images/ui/segment-refactoring/former-time-constraint.png)
 
-Comme vous pouvez le constater, ce segment présente deux contraintes au niveau de la règle : Un pour &quot;[!UICONTROL Aujourd&#39;hui]&quot; et l’autre pour &quot;[!UICONTROL Hier]&quot;.
+Comme vous pouvez le constater, ce segment présente deux contraintes au niveau de la règle : Un pour « [!UICONTROL Aujourd’hui] » et l’autre pour « [!UICONTROL Hier] ».
 
-Le segment précédent est équivalent au segment suivant : les deux contraintes de temps au niveau de l’événement ont été connectées à l’aide d’un opérateur AND. La première contrainte temporelle de niveau événement fait référence à un événement de clic dont le nom est égal à &quot;Formation&quot; et se produit aujourd’hui, tandis que la seconde contrainte temporelle de niveau événement fait référence à un événement de clic dont le nom est égal à &quot;Animaux&quot; et qui s’est produit hier.
+Le segment précédent est équivalent au segment suivant : les deux contraintes de temps au niveau de l’événement ont été connectées à l’aide d’un opérateur AND. La première contrainte de temps au niveau de l’événement fait référence à un événement de clic dont le nom est « Training » et qui se produit aujourd’hui, tandis que la deuxième contrainte de temps au niveau de l’événement fait référence à un événement de clic dont le nom est « Pets » et qui s’est produit hier.
 
-![Le nouveau style des contraintes temporelles est mis en surbrillance dans le créateur de segments.](../images/ui/segment-refactoring/time-constraint-1.png) ![Le nouveau style des contraintes temporelles est mis en surbrillance dans le créateur de segments.](../images/ui/segment-refactoring/time-constraint-2.png)
+![Le nouveau style des contraintes de temps est mis en surbrillance dans le créateur de segments.](../images/ui/segment-refactoring/time-constraint-1.png) ![Le nouveau style des contraintes de temps est mis en surbrillance dans le créateur de segments.](../images/ui/segment-refactoring/time-constraint-2.png)
 
-Cette refactorisation des contraintes de temps affecte également les contraintes de temps qui sont connectées à l’aide d’un opérateur OU.
+Cette refactorisation des contraintes de temps affecte également les contraintes de temps qui sont connectées à l’aide d’un opérateur OR.
