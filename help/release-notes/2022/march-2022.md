@@ -1,11 +1,11 @@
 ---
-title: Notes de mise à jour de Adobe Experience Platform - Mars 2022
-description: Notes de mise à jour de mars 2022 pour Adobe Experience Platform.
+title: Notes de mise à jour d’Adobe Experience Platform - Mars 2022
+description: Les notes de mise à jour de mars 2022 pour Adobe Experience Platform.
 exl-id: 0d499aa6-e25d-4d34-ad32-5e4ab361cba1
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1194'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -55,7 +55,7 @@ Pour en savoir plus sur cette fonctionnalité, consultez les pages de documentat
 - [Section « Comptes associés » du guide de l’interface utilisateur du profil de compte](../../rtcdp/accounts/account-profile-ui-guide.md#related-accounts-tab)
 - [Comment utiliser les comptes associés dans les définitions de segment ?](../../rtcdp/segmentation/b2b.md#related-accounts)
 
-Pour en savoir plus sur Real-Time CDP B2B Edition, voir [aperçu](../../rtcdp/overview.md).
+Pour en savoir plus sur Real-Time CDP édition B2B, consultez la [présentation](../../rtcdp/overview.md).
 
 ## Alertes {#alerts}
 
@@ -75,7 +75,7 @@ Pour plus d’informations sur les alertes dans Platform, consultez l’[aperçu
 
 Adobe Experience Platform fournit de nombreux [!DNL dashboards] grâce auxquels vous pouvez afficher des informations importantes sur les données de votre entreprise, telles quʼelles sont capturées lors dʼinstantanés quotidiens.
 
-### Tableaux de bord du profil
+### Tableaux de bord des profils
 
 Le tableau de bord des profils affiche un instantané des données d’attribut (d’enregistrement) dont votre entreprise dispose dans la banque de profils d’Experience Platform.
 
@@ -121,7 +121,7 @@ Pour plus d’informations sur la collecte de données dans Platform, consultez 
 
 ## Query Service {#query-service}
 
-[!DNL Query Service] vous permet d’utiliser le langage SQL standard pour interroger les données dans le [!DNL Data Lake] d’Adobe Experience Platform. Vous pouvez joindre n’importe quel jeu de données à partir du [!DNL Data Lake] et capturer les résultats de la requête en tant que nouveau jeu de données à utiliser dans les rapports, Data Science Workspace ou pour ingestion dans Real-time Customer Profile.
+[!DNL Query Service] vous permet d’utiliser le langage SQL standard pour interroger les données dans le [!DNL Data Lake] d’Adobe Experience Platform. Vous pouvez joindre n’importe quel jeu de données à partir du [!DNL Data Lake] et capturer les résultats de la requête sous la forme d’un nouveau jeu de données à utiliser dans les rapports, dans l’espace de travail de science des données ou pour l’ingestion dans Real-Time Customer Profile.
 
 **Fonctionnalités mises à jour**
 
