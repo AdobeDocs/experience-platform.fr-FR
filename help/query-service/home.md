@@ -5,9 +5,9 @@ title: Présentation de Query Service
 description: Ce document donne une vue d’ensemble du rôle de Query Service dans Experience Platform.
 exl-id: fdaefc12-a97d-4e4e-9aed-d3dbd0f43ea0
 source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '722'
-ht-degree: 87%
+ht-degree: 100%
 
 ---
 
@@ -21,7 +21,7 @@ Adobe Experience Platform ingère des données à partir de sources diverses. 
 
 ## Utilisation de [!DNL Query Service]
 
-[!DNL Query Service] fournit une interface utilisateur et une API RESTful à partir desquelles vous pouvez créer des requêtes SQL pour mieux analyser vos données. L’interface utilisateur vous permet d’écrire et d’exécuter des requêtes, de visualiser des requêtes précédemment exécutées et d’accéder à des requêtes enregistrés par des utilisateurs au sein de votre organisation IMS. L’interface utilisateur est conçue pour être utilisée en tant qu’environnement de test pour vos requêtes avant de les exécuter sur votre jeu de données plus vaste. Pour plus dʼinformations sur lʼutilisation du service interactif dans [!DNL Platform], consultez le [guide de lʼinterface utilisateur de Query Service](ui/overview.md). L’API RESTful offre une expérience similaire vous permettant d’écrire et d’exécuter par programmation des requêtes, de planifier des requêtes pour les utiliser et les répéter plus tard, ainsi que de créer des modèles pour les requêtes que vous souhaitez écrire. Pour plus dʼinformations sur lʼutilisation de lʼAPI [!DNL Query Service], reportez-vous au [guide de développement de Query Service](api/getting-started.md).
+[!DNL Query Service] fournit une interface utilisateur et une API RESTful à partir desquelles vous pouvez créer des requêtes SQL pour mieux analyser vos données. L’interface utilisateur vous permet d’écrire et d’exécuter des requêtes, de visualiser des requêtes précédemment exécutées et d’accéder à des requêtes enregistrés par des utilisateurs au sein de votre organisation IMS. L’interface utilisateur est conçue pour être utilisée en tant que sandbox pour vos requêtes avant de les exécuter sur votre jeu de données plus vaste. Pour plus dʼinformations sur lʼutilisation du service interactif dans [!DNL Platform], consultez le [guide de lʼinterface utilisateur de Query Service](ui/overview.md). L’API RESTful offre une expérience similaire vous permettant d’écrire et d’exécuter par programmation des requêtes, de planifier des requêtes pour les utiliser et les répéter plus tard, ainsi que de créer des modèles pour les requêtes que vous souhaitez écrire. Pour plus dʼinformations sur lʼutilisation de lʼAPI [!DNL Query Service], reportez-vous au [guide de développement de Query Service](api/getting-started.md).
 
 ## [!DNL Query Service] et les services de [!DNL Experience Platform]
 
@@ -37,11 +37,11 @@ Adobe Experience Platform [!DNL Segmentation Service] permet aux utilisateurs 
 
 ## Cas d’utilisation
 
-[!DNL Query Service] offre une approche flexible de votre traitement des données qui a de nombreux objectifs. Elle peut, entre autres, alléger la charge de la segmentation des marketeurs et contribuer à générer des audiences exploitables et des informations commerciales significatives. Les cas d’utilisation suivants présentent des exemples plus détaillés de la puissance de [!DNL Query Service].
+[!DNL Query Service] offre une approche flexible du traitement des données qui répond à de nombreux objectifs. Il peut, entre autres, soulager les spécialistes marketing de la charge de la segmentation et contribuer à générer des audiences exploitables et des insights commerciaux significatifs. Les cas d’utilisation suivants présentent des exemples plus détaillés de la puissance de [!DNL Query Service].
 
-### Abandon de navigation dans Adobe Analytics
+### Abandon de la navigation dans Adobe Analytics
 
-Ceci [l’exemple d’abandon de navigation se concentre sur l’utilisation d’Adobe [!DNL Analytics]](./use-cases/abandoned-browse.md) pour créer une audience exploitable particulière. [!DNL Query Service] prend en charge une logique complexe de segmentation afin de calculer divers attributs personnalisés à utiliser en aval ou de simplifier considérablement la création de vos segments.
+Cet [exemple d’abandon de la navigation est centré sur l’utilisation des données Adobe [!DNL Analytics]](./use-cases/abandoned-browse.md) pour créer une audience exploitable particulière. [!DNL Query Service] prend en charge une logique complexe de segmentation afin de calculer divers attributs personnalisés à utiliser en aval ou de simplifier considérablement la création de vos segments.
 
 ### Tableaux de bord Looker BI
 
