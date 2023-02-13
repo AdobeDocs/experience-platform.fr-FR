@@ -5,9 +5,9 @@ title: Présentation des flux de données
 description: Ce document présente les flux de données et décrit leur utilisation dans Adobe Experience Platform.
 exl-id: 8fe08ffa-f095-4e9f-8bab-d060985f0236
 source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '238'
-ht-degree: 85%
+ht-degree: 100%
 
 ---
 
@@ -17,13 +17,13 @@ Dans Adobe Experience Platform, les données sont ingérées à partir d’une
 
 ## Utilisation des flux de données
 
-Les flux de données sont une représentation des tâches de données qui déplacent ces dernières dans Platform. Ces flux de données sont configurés sur différents services, ce qui permet de déplacer les données des connecteurs sources vers les jeux de données cibles, où elles sont ensuite utilisées par Identity Service et Real-time Customer Profile avant d’être finalement activées vers les destinations.
+Les flux de données sont une représentation des tâches de données qui déplacent ces dernières dans Platform. Ces flux de données sont configurés sur différents services, ce qui permet de déplacer les données des connecteurs sources vers les jeux de données cibles, où elles sont ensuite utilisées par Identity Service et le profil client en temps réel avant d’être finalement activées vers les destinations.
 
 Pour en savoir plus sur l’utilisation des flux de données dans les connecteurs sources, consultez la [présentation des sources](../sources/home.md).
 
 ## Préparation des données
 
-La préparation des données permet aux ingénieurs de données de mapper, transformer et valider les données vers et à partir du modèle de données d’expérience (XDM).
+La préparation des données permet aux ingénieur(e)s de données de mapper, de transformer et de valider les données vers et à partir du modèle de données d’expérience (XDM).
 
 Pour en savoir plus sur la préparation des données après leur ingestion, consultez la [présentation de la préparation des données](../data-prep/home.md).
 
