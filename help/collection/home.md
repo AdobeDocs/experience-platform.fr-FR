@@ -5,9 +5,9 @@ title: Présentation de la collecte de données
 description: Découvrez les différentes technologies impliquées dans la collecte de données relatives aux expériences client dans Adobe Experience Platform.
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
 source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '514'
-ht-degree: 69%
+ht-degree: 100%
 
 ---
 
@@ -21,7 +21,7 @@ La collecte de données est prise en charge pour les sources côté client suiva
 * Applications mobiles natives
 * Applications OTT (over-the-top)
 
-La collecte de données se concentre sur la découverte et l’accessibilité des jeux de données ingérés, notamment :
+La collecte de données se concentre sur la capacité de découverte et l’accessibilité des jeux de données ingérés, ce qui comprend :
 
 * [Adobe Experience Platform Edge Network](https://experienceleague.adobe.com/docs/web-sdk-learn/tutorials/introduction-to-web-sdk-and-edge-network.html?lang=fr)
 * [Balises](../tags/home.md)
@@ -33,11 +33,11 @@ La collecte de données se concentre sur la découverte et l’accessibilité de
 * [Modèle de données d’expérience (XDM)](../xdm/home.md)
 * [Adobe Experience Platform Identity Service](../identity-service/home.md)
 
-Ce guide présente de manière approfondie la collecte de données et son fonctionnement pour envoyer des données aux produits Adobe Experience Cloud et aux applications non Adobes par le biais de Platform Edge Network.
+Ce guide présente de manière approfondie la collecte de données et son fonctionnement pour envoyer des données aux produits Adobe Experience Cloud et aux applications non Adobe par le biais de Platform Edge Network.
 
 ## Balises, SDK Web et SDK Mobile
 
-Le SDK Web de Platform et le SDK Mobile de Platform réduisent et compressent toutes les bibliothèques de produits d’Adobe dans un seul kit de développement pour les plateformes web et mobiles, respectivement. Ils peuvent être implémentés à l’aide de code brut ou en utilisant [tags](../tags/home.md) via l’interface utilisateur de collecte de données ou l’interface utilisateur de Adobe Experience Platform.
+Le SDK Web de Platform et le SDK Mobile de Platform réduisent et compressent toutes les bibliothèques de produits d’Adobe dans un seul kit de développement pour les plateformes web et mobiles, respectivement. Ils peuvent être implémentés à l’aide de code brut ou en utilisant des [balises](../tags/home.md) via l’interface utilisateur Data Collection ou l’interface utilisateur Adobe Experience Platform.
 
 La compression de ces bibliothèques accélère la collecte de données et consolide les opérations dans un flux unique, reliant les appareils côté client à Platform Edge Network.
 
@@ -47,7 +47,7 @@ La compression de ces bibliothèques accélère la collecte de données et conso
 
 Platform Edge Network est un réseau de serveurs distribué dans le monde entier. Rapide et fiable, il est capable de recevoir et de traiter des données à très grande échelle. Grâce aux balises, vous pouvez mettre en place des [flux de données](../edge/datastreams/overview.md) pour des produits comme Adobe Target, Adobe Audience Manager et Adobe Analytics. Ces configurations vous permettent d‘activer les produits en question côté serveur sans modifier le code côté client.
 
-En outre, les flux de données sont intégrés à plusieurs fonctionnalités de Platform qui permettent de s’assurer que toutes les données sensibles que vous envoyez sont traitées de manière appropriée en ce qui concerne les politiques organisationnelles et les réglementations juridiques. Voir la section sur [gestion des données sensibles](../edge/datastreams/overview.md#sensitive) pour plus d’informations, voir la documentation sur les flux de données .
+En outre, les flux de données sont intégrés à plusieurs fonctionnalités Platform qui permettent de s’assurer que toutes les données sensibles que vous envoyez sont traitées de manière appropriée et en respect des politiques organisationnelles et des réglementations juridiques. Consultez la section sur [la gestion des données sensibles](../edge/datastreams/overview.md#sensitive) dans la documentation sur les flux de données pour plus d’informations.
 
 ![Solutions de flux de données et d’Adobe](./images/home/adobe-solutions.png)
 
@@ -63,11 +63,11 @@ En outre, les flux de données sont intégrés à plusieurs fonctionnalités de 
 
 >[!NOTE]
 >
->Le transfert d’événement est une fonctionnalité payante qui n’est incluse que dans l’offre Connexions Adobe Real-time Customer Data Platform .
+>Le transfert d’événement est une fonctionnalité payante uniquement incluse dans l’offre Adobe Real-Time Customer Data Platform Connections.
 
 ## Étapes suivantes
 
-Ce document fournit un aperçu général du fonctionnement de la collecte de données pour automatiser le processus d’envoi des données d’expérience client collectées à des produits Adobe et à des destinations tierces.
+Ce document fournit une présentation détaillée du fonctionnement de la collecte de données pour automatiser le processus d’envoi de vos données d’expérience client collectées à des produits Adobe et à des destinations tierces.
 
 ![Framework de collecte de données](./images/home/collection.png)
 
