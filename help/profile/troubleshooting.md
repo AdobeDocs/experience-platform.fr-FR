@@ -1,63 +1,63 @@
 ---
-keywords: Experience Platform;profil;profil client en temps réel;dépannage;API
+keywords: Experience Platform;profil;real-time customer profile;dépannage;API
 title: Guide de dépannage de Real-Time Customer Profile
 type: Documentation
-description: Ce document fournit des réponses aux questions fréquentes sur Real-time Customer Profile, ainsi qu’un guide de dépannage pour les erreurs courantes lors de l’utilisation des données de profil à l’aide de Adobe Experience Platform.
+description: Ce document fournit des réponses aux questions fréquentes sur Real-time Customer Profile, ainsi qu’un guide de dépannage pour les erreurs courantes lors de l’utilisation des données de profil à l’aide d’Adobe Experience Platform.
 exl-id: 0b340025-093b-41e4-8053-969a8e80e889
 source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1007'
-ht-degree: 5%
+ht-degree: 100%
 
 ---
 
 # Guide de dépannage de Real-Time Customer Profile
 
-Ce document fournit des réponses aux questions fréquentes sur Real-time Customer Profile, ainsi qu’un guide de dépannage pour les erreurs courantes. Pour toute question ou dépannage concernant les autres services d’Adobe Experience Platform, consultez le [guide de dépannage d’Experience Platform](../landing/troubleshooting.md).
+Ce document fournit des réponses aux questions fréquentes sur Real-Time Customer Profile, ainsi qu’un guide de dépannage pour les erreurs courantes. Pour toute question ou dépannage concernant les autres services d’Adobe Experience Platform, consultez le [guide de dépannage d’Experience Platform](../landing/troubleshooting.md).
 
-Le [!DNL Real-Time Customer Profile] offre une vision holistique de chaque client en combinant des données issues de plusieurs canaux, notamment des données en ligne, hors ligne, CRM et tierces. Cela permet aux marketeurs d’offrir aux clients des expériences coordonnées, cohérentes et pertinentes sur plusieurs canaux.
+[!DNL Real-Time Customer Profile] offre une vision holistique de chaque client en combinant des données issues de plusieurs canaux, notamment des données en ligne, hors ligne, CRM et tierces. Cette fonctionnalité permet aux professionnels du marketing d’offrir à leur audience des expériences coordonnées, cohérentes et pertinentes sur plusieurs canaux.
 
 ## FAQ
 
-Vous trouverez ci-dessous une liste de réponses aux questions fréquentes sur Real-time Customer Profile.
+Vous trouverez ci-dessous une liste de réponses aux questions les plus fréquemment posées à propos de Real-Time Customer Profile.
 
-### Quels types de données sont acceptés pour Real-time Customer Profile ?
+### Quels types de données sont acceptés pour Real-Time Customer Profile ?
 
-Profile accepte les deux **record** et **série temporelle** tant que les données en question contiennent au moins une valeur d’identité qui associe les données à une personne individuelle unique.
+Profile accepte aussi bien les données d’**enregistrement** que les données de **série temporelle**, tant que les données en question contiennent au moins une valeur d’identité qui les associe à une personne individuelle unique.
 
-Comme tous les services Platform, Profile nécessite que ses données soient structurées sémantiquement sous un schéma de modèle de données d’expérience (XDM). Ce schéma doit, à son tour, comporter une **Principale identité** définie et activée pour une utilisation dans Profile.
+Comme tous les services Platform, Profile nécessite que ses données soient structurées sémantiquement sous un schéma de modèle de données d’expérience (XDM). Ce schéma doit, à son tour, comporter une **identité principale** définie et activée pour une utilisation dans Profile.
 
-Si vous ne connaissez pas XDM, commencez par la méthode [Présentation de XDM](../xdm/home.md) pour en savoir plus. Voir ensuite le guide d’utilisation XDM pour savoir comment [définition des champs d’identité](../xdm/tutorials/create-schema-ui.md#identity-field) et [activation d’un schéma pour Profile](../xdm/tutorials/create-schema-ui.md#profile).
+Si vous ne connaissez pas XDM, commencez par consulter la [Présentation de XDM](../xdm/home.md) pour en savoir plus. Ensuite, consultez le guide d’utilisation XDM pour savoir comment [définir des champs d’identité](../xdm/tutorials/create-schema-ui.md#identity-field) et [activer un schéma pour Profile](../xdm/tutorials/create-schema-ui.md#profile).
 
-### Où les données de profil sont-elles stockées ?
+### Où les données Profile sont-elles stockées ?
 
-Real-Time Customer Profile conserve sa propre banque de données (appelée &quot;banque de profils&quot;), à l’écart du lac de données qui contient d’autres données de Platform ingérées.
+Real-Time Customer Profile conserve sa propre banque de données (appelée « banque de profils ») à l’écart du lac de données qui contient d’autres données ingérées de Platform.
 
 ### Si j’ai déjà ingéré des données dans Platform, puis-je les rendre disponibles dans la banque de profils ?
 
-Si des données ont été ingérées dans un jeu de données autre que Profile, vous devez ingérer à nouveau ces données dans un jeu de données activé par Profile afin de le rendre disponible dans la banque de données Profile. Il est possible d’activer un jeu de données existant pour Profile, mais toutes les données ingérées avant cette configuration n’apparaîtront toujours pas dans la banque de données Profile.
+Si des données ont été ingérées dans un jeu de données non lié à Profile, vous devez ingérer à nouveau ces données dans un jeu de données activé pour Profile afin de le rendre disponible dans la banque de données de profils. Il est possible d’activer un jeu de données existant pour Profile, mais toutes les données ingérées avant cette configuration n’apparaîtront toujours pas dans la banque de profils.
 
-Si vous souhaitez ajouter des données précédemment ingérées à la banque de profils, suivez le [tutoriel sur la configuration des jeux de données](./tutorials/dataset-configuration.md) pour créer un nouveau jeu de données ou convertir un jeu de données existant à activer pour Profile, puis ingérer à nouveau les données de votre choix dans ce jeu de données.
+Si vous souhaitez ajouter des données précédemment ingérées à la banque de profils, suivez le [tutoriel sur la configuration des jeux de données](./tutorials/dataset-configuration.md) pour créer un nouveau jeu de données ou convertir un jeu de données existant à activer pour Profile, puis ingérez à nouveau les données de votre choix dans ce jeu de données.
 
-### Comment puis-je afficher mes données de profil ingérées ?
+### Comment puis-je afficher mes données de profil ingérées ?
 
-Il existe plusieurs méthodes d’affichage des données de profil, selon que vous utilisez l’API ou l’interface utilisateur.
+Il existe plusieurs façon d’afficher les données de Profile, selon que vous utilisez l’API ou l’interface utilisateur.
 
 #### Utilisation de l’API
 
-Si vous connaissez les identifiants des entités de profil auxquelles vous souhaitez accéder, vous pouvez utiliser la variable `/entities` Point de terminaison (Accès au profil) dans l’API Profile pour rechercher ces entités. Voir la section sur [entities](./api/entities.md) pour plus d’informations.
+Si vous connaissez les identifiants des entités de profil auxquelles vous souhaitez accéder, vous pouvez utiliser le Point d’entrée `/entities` (Accès au profil) dans l’API Profile pour rechercher ces entités. Consultez la section sur les [entités](./api/entities.md) dans le guide de développement pour plus d’informations.
 
-Vous pouvez également utiliser l’API Adobe Experience Platform Segmentation Service pour accéder aux profils individuels des clients qui sont qualifiés pour une adhésion à un segment. Voir [Présentation de Segmentation Service](../segmentation/home.md) pour plus d’informations.
+Vous pouvez également utiliser l’API Adobe Experience Platform Segmentation Service pour accéder aux profils individuels des clients qui se qualifient pour l’appartenance à un segment. Pour plus d’informations, consultez la [présentation de Segmentation Service](../segmentation/home.md).
 
-#### Utiliser l’interface utilisateur
+#### Utilisation de l’interface utilisateur
 
-Dans l’interface utilisateur de l’Experience Platform, la variable **[!UICONTROL Parcourir]** dans le **[!UICONTROL Profils]** workspace vous permet d’afficher le nombre total de profils et de rechercher des profils individuels en fonction de leur valeur d’identité. Voir [Guide d’utilisation de Profile](./ui/user-guide.md) pour plus d’informations.
+Dans l’interface utilisateur d’Experience Platform, l’onglet **[!UICONTROL Parcourir]** dans l’espace de travail **[!UICONTROL Profils]** vous permet d’afficher le nombre total de profils et de rechercher des profils individuels en fonction de leur valeur d’identité. Pour plus d’informations, consultez le [guide d’utilisation de Profile](./ui/user-guide.md).
 
-Vous pouvez également afficher la liste de vos segments sous la variable **[!UICONTROL Parcourir]** dans le **[!UICONTROL Segments]** workspace. Après la sélection d’un segment, un exemple de profils qualifiés pour ce segment s’affiche. Vous pouvez ensuite sélectionner l’un de ces profils répertoriés pour en afficher les détails. Voir [Présentation de l’interface utilisateur de segmentation](../segmentation/ui/overview.md) pour plus d’informations.
+Vous pouvez également afficher la liste de vos segments sous l’onglet **[!UICONTROL Parcourir]** dans l’espace de travail **[!UICONTROL Segments]**. Après avoir sélectionné un segment, un exemple de profils qualifiés pour ce segment s’affiche. Vous pouvez ensuite sélectionner l’un des profils répertoriés pour en afficher les détails. Pour plus d’informations, consultez la [Présentation de l’interface utilisateur Segmentation](../segmentation/ui/overview.md),
 
 ## Codes d’erreur
 
-Vous trouverez ci-dessous une liste des messages d’erreur que vous pouvez rencontrer lors de l’utilisation de l’API Real-Time Customer Profile. Si l’erreur que vous rencontrez n’est pas répertoriée ici, vous pouvez la trouver dans la [Guide de dépannage de Platform](../landing/troubleshooting.md) au lieu de .
+Voici une liste des messages d’erreur que vous pouvez rencontrer lors de l’utilisation de l’API Real-Time Customer Profile. Si l’erreur que vous rencontrez n’est pas répertoriée ici, vous pouvez la trouver dans le [Guide de dépannage de Platform](../landing/troubleshooting.md).
 
 ### Impossible de rechercher le schéma de l’attribut calculé pour le chemin d’accès fourni
 
@@ -68,11 +68,11 @@ Vous trouverez ci-dessous une liste des messages d’erreur que vous pouvez renc
 }
 ```
 
-Lors de la création d’un attribut calculé, cette erreur se produit lorsque le système n’a pas pu trouver le schéma fourni dans le payload de la requête. Assurez-vous que vous avez fourni l’identifiant de tenant correct dans le rapport `path` et que les valeurs de `schema.name` est un nom de schéma valide.
+Lors de la création d’un nouvel attribut calculé, cette erreur se produit lorsque le système n’a pas pu trouver le schéma fourni dans la payload de la requête. Assurez-vous que vous avez fourni l’identifiant client correct dans les propriétés `path` de la payload et que les valeurs de `schema.name` sont des noms de schéma valides.
 
-Si vous ne connaissez pas votre identifiant de tenant, vous pouvez le récupérer en suivant les étapes de la section [Guide de développement du registre des schémas](../xdm/api/getting-started.md).
+Si vous ne connaissez pas votre identifiant client, vous pouvez le récupérer en suivant les étapes présentées dans le [Guide de développement du registre des schémas](../xdm/api/getting-started.md).
 
-### La fonction portant le même nom existe déjà pour le schéma spécifié ou definedOn
+### Une fonction portant le même nom existe déjà pour le schéma spécifié ou definedOn
 
 ```json
 {
@@ -81,9 +81,9 @@ Si vous ne connaissez pas votre identifiant de tenant, vous pouvez le récupére
 }
 ```
 
-Lors de la création d’un attribut calculé, cette erreur survient lorsque la variable `name` est déjà utilisée pour le schéma indiqué sous `schema.name`. Remplacez la valeur par un nom unique avant de réessayer.
+Lors de la création d’un attribut calculé, cette erreur survient lorsque la propriété `name` donnée est déjà utilisée pour le schéma indiqué sous `schema.name`. Remplacez la valeur par un nom unique avant de réessayer.
 
-### Le schéma de retour de l’expression n’est pas identique au schéma de l’attribut calculé dans le schéma XDM
+### Le schéma de retour de l’expression n’est pas identique au schéma de l’attribut calculé dans le schéma XDM.
 
 ```json
 {
@@ -92,9 +92,9 @@ Lors de la création d’un attribut calculé, cette erreur survient lorsque la 
 }
 ```
 
-Lors de la création d’un attribut calculé, cette erreur survient lorsque la variable `name` est déjà utilisée pour le schéma indiqué sous `schema.name`. Remplacez la valeur par un nom unique avant de réessayer.
+Lors de la création d’un nouvel attribut calculé, cette erreur survient lorsque la propriété `name` donnée est déjà utilisée pour le schéma indiqué sous `schema.name`. Remplacez la valeur par un nom unique avant de réessayer.
 
-### Requête de suppression non valide (Tâche du système de profil)
+### Requête de suppression non valide (Tâche système de Profile)
 
 ```json
 {
@@ -103,9 +103,9 @@ Lors de la création d’un attribut calculé, cette erreur survient lorsque la 
 }
 ```
 
-Cette erreur se produit lorsqu’une charge utile non valide est fournie pour une tâche de suppression du système. Assurez-vous de fournir un jeu de données ou un identifiant de lot valide sous le `dataSetID` ou `batchID` , respectivement. Voir la section sur [création d’une requête de suppression](./api/profile-system-jobs.md#create-a-delete-request) pour plus d’informations, voir le guide de développement de Profile .
+Cette erreur se produit lorsqu’une payload non valide est fournie pour une tâche système de suppression. Assurez-vous de fournir un jeu de données ou un identifiant de lot valide sous la propriété `dataSetID` ou `batchID` de la payload. Pour plus d’informations, consultez la section sur la [création d’une requête de suppression](./api/profile-system-jobs.md#create-a-delete-request) dans le guide de développement de Profile.
 
-### Lot introuvable pour le jeu de données de profil
+### Lot introuvable pour le jeu de données du profil
 
 ```json
 {
@@ -121,9 +121,9 @@ Cette erreur se produit lorsqu’une charge utile non valide est fournie pour un
 }
 ```
 
-Cette erreur se produit lorsqu’un lot valide est introuvable lors de la tentative de création d’une requête de suppression pour les données de profil. Vérifiez que vous avez saisi l’identifiant correct pour un jeu de données activé par Profile avant de réessayer.
+Cette erreur se produit lorsqu’un lot valide est introuvable lors de la tentative de création d’une requête de suppression pour les données de Profile. Vérifiez que vous avez saisi l’identifiant correct pour un jeu de données activé pour Profile avant de réessayer.
 
-### La destination de projection n&#39;a pas encore été créée.
+### La destination de projection n’a pas encore été créée.
 
 ```json
 {
@@ -133,7 +133,7 @@ Cette erreur se produit lorsqu’un lot valide est introuvable lors de la tentat
 }
 ```
 
-Cette erreur se produit lorsque la variable `destinationId` fourni dans une `POST /config/projections` requête non valide. Vérifiez deux fois que vous avez fourni un ID de destination valide avant de réessayer. Pour créer une destination, suivez les étapes décrites dans la section [Guide de développement de profil](./api/edge-projections.md#create-a-destination).
+Cette erreur se produit lorsque la variable `destinationId` fournie dans une requête `POST /config/projections` est non valide. Vérifiez bien que vous avez fourni un ID de destination valide avant de réessayer. Pour créer une nouvelle destination, suivez les étapes décrites dans le [Guide du développement de Profile](./api/edge-projections.md#create-a-destination).
 
 ### Type de média non pris en charge
 
@@ -145,9 +145,9 @@ Cette erreur se produit lorsque la variable `destinationId` fourni dans une `POS
 }
 ```
 
-Cette erreur se produit lors de l’envoi d’une demande de POST ou de PUT avec un en-tête Content-Type non valide. Vérifiez deux fois que vous fournissez une valeur Content-Type valide pour le point de terminaison que vous utilisez.
+Cette erreur se produit lors de l’envoi d’une requête POST ou PUT avec un en-tête Type de contenu non valide. Vérifiez bien que vous fournissez une valeur Type de contenu valide pour le point d’entrée que vous utilisez.
 
-La plupart des points de terminaison Profile acceptent &quot;application/json&quot; pour leur en-tête Content-Type, avec les exceptions suivantes :
+La plupart des points d’entrée de Profile acceptent « application/json » pour leur en-tête Type de contenu, avec les exceptions suivantes :
 
 | Point d’entrée | Content-Type |
 | --- | --- |
