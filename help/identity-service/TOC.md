@@ -5,9 +5,9 @@ breadcrumb-title: Guide de Platform Identity Service
 user-guide-description: Associez les identités des clients, quel que soit l’appareil ou le système utilisé, afin d’offrir des expériences numériques personnalisées.
 feature: Identities
 source-git-commit: ed091c95952b731ce1f7567b99a1072a8be2b4a5
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '112'
-ht-degree: 91%
+ht-degree: 100%
 
 ---
 
@@ -29,9 +29,9 @@ ht-degree: 91%
 - UI Identity Service {#ui}
    - [Graphique d’identités observateur](ui/identity-graph-viewer.md)
    - [Détection des appareils partagés](ui/shared-device-detection.md)
-   - [Définition des champs d’identité dans l’interface utilisateur](ui/label-identities.md)
+   - [Définir des champs d’identité dans l’interface utilisateur](ui/label-identities.md)
 - [Présentation d’ECID](ecid.md)
-- [Suppression dans Identity Service](deletion.md)
+- [Suppressions dans Identity Service](deletion.md)
 - [Traitement des demandes d’accès à des informations personnelles](privacy.md)
 - [Guide de dépannage](troubleshooting-guide.md)
 - [Référence d’API](https://www.adobe.io/experience-platform-apis/references/identity-service)
