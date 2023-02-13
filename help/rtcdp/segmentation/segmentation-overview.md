@@ -1,20 +1,20 @@
 ---
-keywords: la segmentation; segmentation rtcdp;segmentation de la plateforme de données client en temps réel
-title: Service de segmentation dans Real-time Customer Data Platform
-description: La plateforme de données clients en temps réel d’Adobe repose sur Adobe Experience Platform et utilise de nombreux services et fonctionnalités d’Experience Platform. Grâce au service de segmentation, vous pouvez proposer un marketing sur mesure en divisant vos clients en groupes restreints aux caractéristiques similaires.
+keywords: segmentation;segmentation rtcdp;segmentation de real time customer data platform
+title: Service de segmentation de Real-Time Customer Data Platform
+description: Real-Time Customer Data Platform d’Adobe repose sur Adobe Experience Platform et utilise de nombreux services et fonctionnalités d’Experience Platform. Grâce au service de segmentation, vous pouvez proposer un marketing sur mesure en divisant vos clients en groupes restreints aux caractéristiques similaires.
 exl-id: 140667c0-e288-40c4-8c45-c275e348b84a
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '540'
-ht-degree: 31%
+ht-degree: 100%
 
 ---
 
-# [!DNL Segmentation Service] in [!DNL Real-Time Customer Data Platform]
+# [!DNL Segmentation Service] dans [!DNL Real-Time Customer Data Platform]
 
-[!DNL Adobe Real-Time Customer Data Platform] (Real-Time CDP) vous permet d’importer des données provenant de plusieurs sources afin de générer une expérience coordonnée et cohérente pour vos clients. La diffusion de campagnes marketing personnalisées pertinentes peut être réalisée à l’aide du [!DNL Segmentation Service], fait partie de Adobe Experience Platform.
+[!DNL Adobe Real-Time Customer Data Platform] (Real-Time CDP) permet de rassembler des données issues de plusieurs sources afin de générer une expérience coordonnée et cohérente pour vos clients. Avec le [!DNL Segmentation Service], composant d’Adobe Experience Platform, il est possible de réaliser des campagnes marketing personnalisées et pertinentes.
 
-Real-Time CDP repose sur Adobe Experience Platform et utilise de nombreuses [!DNL Experience Platform] services et fonctionnalités. En utilisant la variable [!DNL Segmentation Service], vous pouvez proposer un marketing sur mesure en divisant vos clients en groupes plus petits avec des caractéristiques similaires.
+Real-Time CDP repose sur Adobe Experience Platform et utilise de nombreux services et fonctionnalités d’[!DNL Experience Platform]. Grâce à [!DNL Segmentation Service], vous pouvez proposer un marketing sur mesure en divisant vos clients en groupes restreints aux caractéristiques similaires.
 
 ## Segmentation
 
@@ -26,30 +26,30 @@ La segmentation est le processus consistant à définir des attributs ou des com
 
 ## IA dédiée aux clients
 
-Customer AI, inclus dans Real-time Customer Data Platform, vous permet de générer des prédictions client au niveau individuel avec des explications.
+L’IA dédiée aux clients, incluse dans Real-time Customer Data Platform, vous permet de générer des prédictions client au niveau individuel avec des explications.
 
-À l’aide de facteurs d’influence, Customer AI peut vous indiquer ce qu’un client est susceptible de faire et pourquoi. De plus, vous pouvez tirer parti des prédictions et des informations de Customer AI pour personnaliser les expériences client en diffusant les offres et messages les plus appropriés. Customer AI peut vous aider à :
+À l’aide de facteurs d’influence, Customer AI peut vous indiquer ce qu’un client est susceptible de faire et pourquoi. De plus, vous pouvez tirer parti des prédictions et des informations de l’IA dédiée aux clients pour personnaliser les expériences client en diffusant les offres et les messages les plus appropriés. L’IA dédiée aux clients peut vous aider à :
 
-* Fournir des modèles de propension des clients à haute précision pour une segmentation et un ciblage plus forts.
-* Comprendre les facteurs d’influence et la probabilité derrière certains comportements des clients.
-* Offrir des options personnalisables pour les cas d’utilisation et les données uniques de votre entreprise.
-* Amélioration de Real-time Customer Profile avec des scores de propension des clients tels que l’attrition et la conversion.
-* Amélioration des profils client avec des facteurs d’influence pour les scores de propension.
-* Création de segments de clients en fonction de facteurs d’influence et de scores de propension.
+* proposer des modèles de propension des clients à haute précision pour une segmentation et un ciblage plus forts ;
+* comprendre les facteurs d’influence et la probabilité derrière certains comportements des clients ;
+* offrir des options personnalisables pour les cas d’utilisation et les données uniques de votre entreprise ;
+* améliorer Real-time Customer Profile grâce aux scores de propension des clients, comme les taux d’attrition et de conversion ;
+* améliorer les profils client avec des facteurs d’influence pour les scores de propension ;
+* créer des segments de clients en fonction de facteurs d’influence et de scores de propension.
 
-Customer AI se trouve dans la variable **[!UICONTROL Services]** sous **[!UICONTROL Services Adobe]**.
+L’IA dédiée aux clients se trouve dans l’onglet **[!UICONTROL Services]** sous **[!UICONTROL Services Adobe]**.
 
-![Emplacement de Customer AI](../assets/overview/rtcdp-customer-ai.png)
+![Emplacement de l’IA dédiée aux clients](../assets/overview/rtcdp-customer-ai.png)
 
 ### Prise en main de Customer AI
 
-Pour commencer à utiliser Customer AI, vous devez suivre le [tutoriel sur la préparation des données](../../intelligent-services/data-preparation.md) et configurez le schéma d’entrée en fonction de votre cas d’utilisation. Ensuite, vous devrez [configuration d’une instance Customer AI](../../intelligent-services/customer-ai/user-guide/configure.md). Après la configuration d’une instance, un modèle est généré, où vous pouvez [afficher vos insights et scores ;](../../intelligent-services/customer-ai/user-guide/discover-insights.md). En utilisant les données générées à partir de votre modèle, vous pouvez créer des segments pour l’activation pilotée par les données.
+Pour commencer à utiliser l’IA dédiée aux clients, vous devez suivre le [tutoriel sur la préparation des données](../../intelligent-services/data-preparation.md) et configurer le schéma d’entrée en fonction de votre cas d’utilisation. Ensuite, vous devrez [configurer une instance IA dédiée aux clients](../../intelligent-services/customer-ai/user-guide/configure.md). Après la configuration d’une instance, un modèle est généré, où vous pouvez [afficher vos insights et vos scores](../../intelligent-services/customer-ai/user-guide/discover-insights.md). En utilisant les données générées à partir de votre modèle, vous pouvez créer des segments pour l’activation pilotée par les données.
 
-Pour en savoir plus sur Customer AI, commencez par consulter le [Présentation de Customer AI](../../intelligent-services/customer-ai/overview.md). En outre, la vidéo suivante montre comment Customer AI enrichit les profils clients avec des propensions basées sur l’IA et renforce la segmentation et le ciblage des clients.
+Pour en savoir plus sur l’IA dédiée aux clients, commencez par consulter la [présentation de l’IA dédiée aux clients](../../intelligent-services/customer-ai/overview.md). En outre, la vidéo suivante montre comment l’IA dédiée aux clients enrichit les profils clients avec des propensions basées sur l’IA et renforce la segmentation et le ciblage des clients.
 
 >[!VIDEO](https://video.tv.adobe.com/v/40374/?quality=12&learn=on)
 
 
 ## Étapes suivantes
 
-Après avoir lu cet aperçu, vous devez maintenant comprendre comment Real-Time CDP utilise [!DNL Segmentation Service] pour améliorer la personnalisation et la personnalisation des campagnes marketing. Pour plus d’informations sur la variable [!DNL Segmentation Service], veuillez lire la [Documentation sur la segmentation](../../segmentation/home.md).
+Après avoir lu cette présentation, vous devriez maintenant comprendre comment Real-time CDP utilise [!DNL Segmentation Service] pour améliorer l’adaptation et la personnalisation des campagnes marketing. Pour plus d’informations sur [!DNL Segmentation Service], consultez la [documentation sur la segmentation](../../segmentation/home.md).
