@@ -2,12 +2,12 @@
 audience: user
 user-guide-title: Adobe Experience Platform Segmentation Service
 breadcrumb-title: Guide de Segmentation Service
-user-guide-description: Créez des segments et générez des audiences à partir de vos données de profil client en temps réel.
+user-guide-description: Créez des segments et générez des audiences à partir de vos données Real-Time Customer Profile.
 feature: Segments
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '166'
-ht-degree: 69%
+ht-degree: 100%
 
 ---
 
@@ -30,15 +30,15 @@ ht-degree: 69%
    - [Segmentation en flux continu](api/streaming-segmentation.md)
 - Interface utilisateur de segmentation {#ui}
    - [Présentation](ui/overview.md)
-   - [Audience Builder](ui/audience-builder.md)
+   - [Créateur d’audience](ui/audience-builder.md)
    - [Tableau de bord des segments](ui/segment-dashboard.md)
    - [Créateur de segments](ui/segment-builder.md)
    - [Segmentation Edge](ui/edge-segmentation.md)
-   - [Segmentation par flux](ui/streaming-segmentation.md)
-   - [Segmentation par flux (Vidéo)](video/streaming-segmentation-overview.md)
-   - [Refactorisation des contraintes de temps](ui/segment-refactoring.md)
-   - Segment Match {#segment-match}
-      - [Correspondance de segment - Aperçu](ui/segment-match/overview.md)
+   - [Segmentation en flux continu](ui/streaming-segmentation.md)
+   - [Segmentation en flux continu (Vidéo)](video/streaming-segmentation-overview.md)
+   - [Remaniement des contraintes de temps](ui/segment-refactoring.md)
+   - Correspondance de segments {#segment-match}
+      - [Vue d’ensemble de la correspondance de segments](ui/segment-match/overview.md)
       - [Dépannage](ui/segment-match/troubleshooting.md)
 - [Respect du consentement](consents.md)
 - [Segmentation d’entités multiples](multi-entity-segmentation.md)
@@ -59,10 +59,10 @@ ht-degree: 69%
 - Tutoriels {#tutorials}
    - [Création d’un segment](tutorials/create-a-segment.md)
    - [Création d’un segment (Vidéo)](video/create-segment.md)
-   - [Création d’un segment dynamique (vidéo)](video/create-a-dynamic-segment.md)
-   - [Création d’un segment d’entités multiples (vidéo)](video/create-multi-entity-segments.md)
+   - [Créer un segment dynamique (vidéo)](video/create-a-dynamic-segment.md)
+   - [Créer un segment d’entités multiples (vidéo)](video/create-multi-entity-segments.md)
    - [Évaluation d’un segment](tutorials/evaluate-a-segment.md)
-   - [Import et utilisation d&#39;audiences externes](tutorials/using-external-audiences.md)
+   - [Import et utilisation d’audiences externes](tutorials/using-external-audiences.md)
    - [Création d’un jeu de données pour exporter des données](tutorials/create-dataset-export-segment.md)
    - [Application de la conformité à l’utilisation des données pour les segments](tutorials/governance.md)
 - [Référence d’API](https://www.adobe.io/experience-platform-apis/references/segmentation/)
