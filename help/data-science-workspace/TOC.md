@@ -1,23 +1,23 @@
 ---
 audience: user
-user-guide-title: Aide d’Adobe Experience Platform Data Science Workspace
-breadcrumb-title: Guide de Data Science Workspace
+user-guide-title: Aide de l’espace de travail de science des données d’Adobe Experience Platform
+breadcrumb-title: Guide de l’espace de travail de science des données
 user-guide-description: Utilisez le machine learning pour développer, entraîner et évaluer des modèles et des recettes avec des ordinateurs portables équipés d’Adobe Sensei et de JupyterLab.
 feature: Data Science Workspace
 solution: Experience Platform
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '236'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
 
-# Data Science Workspace {#data-science-workspace}
+# Espace de travail de science des données {#data-science-workspace}
 
-* [Présentation de Data Science Workspace](home.md)
-* [Accès à Data Science Workspace et fonctionnalités associées](access-features-dsw.md)
-* [Présentation détaillée de Data Science Workspace](walkthrough.md)
+* [Présentation de l’espace de travail de science des données](home.md)
+* [Accès à l’espace de travail de science des données et fonctionnalités associées](access-features-dsw.md)
+* [Présentation détaillée de l’espace de travail de science des données](walkthrough.md)
 * Notebooks JupyterLab {#jupyterlab}
    * [Présentation](jupyterlab/overview.md)
    * [Accès aux données](jupyterlab/access-notebook-data.md)
@@ -32,7 +32,7 @@ ht-degree: 96%
    * [MLInstances (recettes)](api/mlinstances.md)
    * [Expériences](api/experiments.md)
    * [Modèles](api/models.md)
-   * [MLService](api/mlservices.md)
+   * [MLServices](api/mlservices.md)
    * [Insights](api/insights.md)
    * [Annexe](api/appendix.md)
 * Recettes préconfigurées {#pre-built-recipes}
@@ -58,7 +58,7 @@ ht-degree: 96%
    * [Notation d’un modèle (interface utilisateur)](models-recipes/score-model-ui.md)
    * [Notation d’un modèle (API)](models-recipes/score-model-api.md)
    * [Optimisation d’un modèle](models-recipes/optimize-model.md)
-   * [Enrichissement de Real-Time Customer Profile avec des insights d’apprentissage automatique](models-recipes/enrich-profile.md)
+   * [Enrichir Real-Time Customer Profile avec des insights de machine learning](models-recipes/enrich-profile.md)
    * [Publication d’un modèle en tant que service (interface utilisateur)](models-recipes/publish-model-service-ui.md)
    * [Publication d’un modèle en tant que service (API)](models-recipes/publish-model-service-api.md)
    * [Planification de la formation et de la notation automatisées d’un service (interface utilisateur)](models-recipes/schedule-models-ui.md)
