@@ -1,29 +1,29 @@
 ---
-keywords: Experience Platform;guide de développement;Data Science Workspace;rubriques les plus consultées;apprentissage automatique en temps réel;référence de noeud ;
+keywords: Experience Platform;guide de développement;Espace de travail de science des données;rubriques populaires;machine learning en temps réel;référence de nœud;
 solution: Experience Platform
-title: Référence des noeuds d’apprentissage automatique en temps réel
-description: Un noeud est l’unité fondamentale de laquelle des graphiques sont formés. Chaque noeud effectue une tâche spécifique et peut être lié ensemble à l’aide de liens afin de former un graphique représentant un pipeline ML. La tâche effectuée par un noeud représente une opération sur les données d’entrée, telle qu’une transformation des données ou un schéma, ou une inférence d’apprentissage automatique. Le noeud sort la valeur transformée ou déduite au(x) noeud(s) suivant(s).
+title: Référence des nœuds de machine learning en temps réel
+description: Un nœud est l’unité fondamentale à partir de laquelle des graphiques sont formés. Chaque nœud effectue une tâche spécifique et ces nœuds peuvent être liés ensemble à l’aide de liens afin de former un graphique représentant un pipeline ML. La tâche effectuée par un nœud représente une opération sur les données d’entrée, telle qu’une transformation des données ou un schéma, ou une inférence de machine learning. Le nœud sort la valeur transformée ou déduite pour le ou les nœuds suivants.
 exl-id: 67fe26b5-ce03-4a9a-ad45-783b2acf8d92
 source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '678'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
-# Référence du noeud d’apprentissage automatique en temps réel (Alpha)
+# Référence des nœuds de machine learning en temps réel (Alpha)
 
 >[!IMPORTANT]
 >
->L’apprentissage automatique en temps réel n’est pas encore disponible pour tous les utilisateurs. Cette fonctionnalité est en version alpha et est encore en cours de test. Ce document peut faire l’objet de modifications.
+>Le machine learning en temps réel n’est pas encore disponible pour tous les utilisateurs et utilisatrices. Cette fonctionnalité est en version alpha et est encore en cours de test. Ce document est sujet à modification.
 
-Un noeud est l’unité fondamentale de laquelle des graphiques sont formés. Chaque noeud effectue une tâche spécifique et peut être lié ensemble à l’aide de liens afin de former un graphique représentant un pipeline ML. La tâche effectuée par un noeud représente une opération sur les données d’entrée, telle qu’une transformation des données ou un schéma, ou une inférence d’apprentissage automatique. Le noeud sort la valeur transformée ou déduite au(x) noeud(s) suivant(s).
+Un nœud est l’unité fondamentale à partir de laquelle des graphiques sont formés. Chaque nœud effectue une tâche spécifique et ces nœuds peuvent être liés ensemble à l’aide de liens afin de former un graphique représentant un pipeline ML. La tâche effectuée par un nœud représente une opération sur les données d’entrée, telle qu’une transformation des données ou un schéma, ou une inférence de machine learning. Le nœud sort la valeur transformée ou déduite pour le ou les nœuds suivants.
 
-Le guide suivant décrit les bibliothèques de noeuds prises en charge pour l’apprentissage automatique en temps réel.
+Le guide suivant décrit les bibliothèques de nœuds prises en charge pour le machine learning en temps réel.
 
-## Découverte des noeuds à utiliser dans votre pipeline ML
+## Découvrir les nœuds à utiliser dans votre pipeline ML
 
-Copiez le code suivant dans une [!DNL Python] notebook pour afficher tous les noeuds disponibles.
+Copiez le code suivant dans un notebook [!DNL Python] pour afficher tous les nœuds disponibles.
 
 ```python
 from pprint import pprint
@@ -51,13 +51,13 @@ pprint(nf.discover_nodes())
  'Split': 'rtml_nodelibs.nodes.standard.preprocessing.splitter.Split'}
 ```
 
-## Noeuds standard
+## Nœuds standard
 
-Les noeuds standard s’appuient sur les bibliothèques de science de données open source telles que Pandas et ScikitLearn.
+Les nœuds standard s’appuient sur les bibliothèques de science de données open source telles que Pandas et ScikitLearn.
 
 ### ModelUpload
 
-Le noeud ModelUpload est un noeud d’Adobe interne qui prend un model_path et charge le modèle du chemin d’accès du modèle local vers la banque d’objets blob d’apprentissage automatique en temps réel.
+Le nœud ModelUpload est un nœud Adobe interne qui prend un model_path et charge le modèle depuis le chemin du modèle local vers le magasin d‘objets blob de machine learning en temps réel.
 
 ```python
 model = ModelUpload(params={'model_path': model_path})
@@ -69,11 +69,11 @@ model_id = msg_model.model['model_id']
 
 ### ONNXNode
 
-ONNXNode est un noeud d’Adobe interne qui utilise un ID de modèle pour extraire le modèle ONNX pré-entraîné et l’utilise pour noter les données entrantes.
+ONNXNode est un nœud Adobe interne qui prend un identifiant de modèle pour extraire le modèle ONNX pré-entraîné et l’utilise pour noter les données entrantes.
 
 >[!TIP]
 >
->Indiquez les colonnes dans l’ordre selon lequel vous souhaitez que les données soient envoyées au modèle ONNX pour que le score soit effectué.
+>Indiquez les colonnes dans l’ordre selon lequel vous souhaitez que les données soient envoyées au modèle ONNX pour qu’une note soit attribuée.
 
 ```python
 node_model_score = ONNXNode(params={"features": ['browser', 'device', 'login_page', 'product_page', 'search_page'], "model_id": model_id})
@@ -81,9 +81,9 @@ node_model_score = ONNXNode(params={"features": ['browser', 'device', 'login_pag
 
 ### Pandas {#pandas}
 
-Le noeud pandas suivant vous permet d’importer n’importe quel `pd.DataFrame` ou toute fonction générale de niveau supérieur pandas. Pour en savoir plus sur les méthodes Pandas, consultez la section [Documentation sur les méthodes de pandas](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html). Pour plus d’informations sur les fonctions de niveau supérieur, consultez la section [Guide de référence de l’API pandas pour les fonctions générales](https://pandas.pydata.org/pandas-docs/stable/reference/general_functions.html).
+Le nœud Pandas suivant vous permet d’importer n’importe quelle méthode `pd.DataFrame` ou n’importe quelle fonction générale de niveau supérieur Pandas. Pour en savoir plus sur les méthodes Pandas, consultez la [documentation sur les méthodes Pandas](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html). Pour plus d’informations sur les fonctions de niveau supérieur, consultez le [guide de référence de l’API Pandas pour les fonctions générales](https://pandas.pydata.org/pandas-docs/stable/reference/general_functions.html).
 
-Le noeud ci-dessous utilise `"import": "map"` pour importer le nom de la méthode sous la forme d’une chaîne dans les paramètres, puis en saisissant les paramètres sous la forme d’une fonction map . L’exemple ci-dessous effectue cette opération en utilisant `{"arg": {"Desktop": 1, "Mobile": 0}, "na_action": 0}`. Une fois la carte en place, vous avez la possibilité de définir `inplace` as `True` ou `False`. Définir `inplace` as `True` ou `False` selon que vous souhaitez appliquer ou non une transformation statique. Par défaut `"inplace": False` crée une colonne. La prise en charge d’un nouveau nom de colonne doit être ajoutée dans une version ultérieure. La dernière ligne `cols` peut être un nom de colonne unique ou une liste de colonnes. Indiquez les colonnes sur lesquelles vous souhaitez appliquer la transformation. Dans cet exemple `device` est spécifié.
+Le nœud ci-dessous utilise `"import": "map"` pour importer le nom de la méthode sous la forme d’une chaîne dans les paramètres, puis saisit les paramètres sous la forme d’une fonction map. L’exemple ci-dessous effectue cette opération en utilisant `{"arg": {"Desktop": 1, "Mobile": 0}, "na_action": 0}`. Une fois le mappage en place, vous avez la possibilité de définir `inplace` comme `True` ou `False`. Définissez `inplace` comme `True` ou `False` selon que vous souhaitez appliquer ou non une transformation sur place. Par défaut `"inplace": False` crée une colonne. La prise en charge d’un nouveau nom de colonne doit être ajoutée dans une version ultérieure. La dernière ligne `cols` peut être un nom de colonne unique ou une liste de colonnes. Indiquez les colonnes sur lesquelles vous souhaitez appliquer la transformation. Dans cet exemple, `device` est spécifié.
 
 ```python
 #  df["device"] = df["device"].map({"Desktop":1, "Mobile":0}, na_action=0)
@@ -104,7 +104,7 @@ node_browser_apply = Pandas(params={"import": "map",
 
 ### ScikitLearn
 
-Le noeud ScikitLearn vous permet d’importer n’importe quel modèle ou scaler ScikitLearn ML. Pour plus d’informations sur l’une des valeurs utilisées dans l’exemple, reportez-vous au tableau ci-dessous :
+Le nœud ScikitLearn vous permet d’importer n’importe quel modèle ou scaler ScikitLearn ML. Pour plus d’informations sur les valeurs utilisées dans l’exemple, consultez le tableau ci-dessous :
 
 ```python
 model_train = ScikitLearn(params={
@@ -121,17 +121,17 @@ msg6 = model_train.process(msg5)
 
 | Valeur | Description |
 | --- | --- |
-| fonctionnalités | Fonctionnalités d’entrée du modèle (liste des chaînes). <br> Par exemple: `browser`, `device`, `login_page`, `product_page`, `search_page` |
-| label | Nom de la colonne cible (chaîne). |
-| mode | Train/test (chaîne). |
-| model_path | Chemin d’accès local au modèle d’enregistrement au format unique. |
-| params.model | Chemin d’accès absolu à l’importation du modèle (chaîne), par exemple : `sklearn.linear_model.LogisticRegression`. |
-| params.model_params | hyperparamètres du modèle, voir [API sklearn (map/dict)](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html) pour plus d’informations. |
-| node_instance.process(data_message_from_previous_node) | La méthode `process()` prend DataMsg du noeud précédent et applique la transformation. Cela dépend du noeud actif utilisé. |
+| fonctionnalités | Fonctionnalités d’entrée du modèle (liste des chaînes). <br> Par exemple : `browser`, `device`, `login_page`, `product_page`, `search_page` |
+| libellé | Nom de la colonne cible (chaîne). |
+| mode | Entraînement/test (chaîne). |
+| model_path | Chemin d’accès à l’enregistrement local du modèle au format onnx. |
+| params.model | Chemin d’accès absolu d’importation au modèle (chaîne de caractères), par exemple : `sklearn.linear_model.LogisticRegression`. |
+| params.model_params | Hyperparamètres du modèle, consulter la documentation [API sklearn (map/dict)](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html) pour plus d’informations. |
+| node_instance.process(data_message_from_previous_node) | La méthode `process()` prend DataMsg à partir du nœud précédent et applique la transformation. Cela dépend du nœud actuellement utilisé. |
 
 ### Fractionner
 
-Utilisez le noeud suivant pour fractionner votre cadre de données en formation et test en transmettant `train_size` ou `test_size`. Cette opération renvoie un cadre de données avec un multi-index. Vous pouvez accéder aux jeux de données de formation et de test à l’aide de l’exemple suivant, `msg5.data.xs("train")`.
+Utilisez le nœud suivant pour partager votre Dataframe en entraînement et test en transmettant `train_size` ou `test_size`. Cette opération renvoie un Dataframe avec un multi-index. Vous pouvez accéder aux dataframes d’entraînement et de test à l’aide de l’exemple suivant, `msg5.data.xs("train")`.
 
 ```python
 splitter = Split(params={"train_size": 0.7})
@@ -140,4 +140,4 @@ msg5 = splitter.process(msg4)
 
 ## Étapes suivantes
 
-L’étape suivante consiste à créer des noeuds à utiliser dans la notation d’un modèle d’apprentissage automatique en temps réel. Pour plus d’informations, consultez la [Guide d’utilisation du notebook d’apprentissage automatique en temps réel](./rtml-authoring-notebook.md).
+L’étape suivante consiste à créer des nœuds à utiliser dans la notation d’un modèle de machine learning en temps réel. Pour plus d’informations, consultez le [Guide d’utilisation du notebook de machine learning en temps réel](./rtml-authoring-notebook.md).
