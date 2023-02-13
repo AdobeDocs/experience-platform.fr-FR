@@ -1,11 +1,11 @@
 ---
-title: Notes de mise à jour de Adobe Experience Platform - Avril 2022
-description: Notes de mise à jour d’avril 2022 pour Adobe Experience Platform.
+title: Notes de mise à jour d’Adobe Experience Platform - Avril 2022
+description: Les notes de mise à jour d’avril 2022 pour Adobe Experience Platform.
 exl-id: 39233787-3089-4469-8363-b006ae41ae21
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2916'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -63,13 +63,13 @@ Consultez la documentation pour plus d’informations sur les tableaux de bord [
 
 Dans Platform, les données sont ingérées à partir de nombreuses sources différentes, analysées dans le système et activées pour un large éventail de destinations. En offrant de la transparence au niveau des flux de données, Platform facilite le processus de suivi de ce flux de données potentiellement non linéaire.
 
-Les flux de données sont une représentation des tâches qui déplacent des données dans Platform. Ces flux de données sont configurés sur différents services, ce qui permet de déplacer les données des connecteurs sources vers les jeux de données cibles, où elles sont ensuite utilisées par Identity Service et Real-time Customer Profile avant d’être finalement activées vers les destinations.
+Les flux de données sont une représentation des tâches qui déplacent des données dans Platform. Ces flux de données sont configurés sur différents services, ce qui permet de déplacer les données des connecteurs sources vers les jeux de données cibles, où elles sont ensuite utilisées par Identity Service et le profil client en temps réel avant d’être finalement activées vers les destinations.
 
 **Nouvelles fonctionnalités**
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
-| Tableau de bord de segments | Vous pouvez désormais utiliser le tableau de bord de surveillance pour surveiller les flux de données des segments. Pour en savoir plus, consultez le guide sur la [surveillance des segments dans lʼinterface utilisateur](../../dataflows/ui/monitor-segments.md). |
+| Tableau de bord des segments | Vous pouvez désormais utiliser le tableau de bord de surveillance pour surveiller les flux de données des segments. Pour en savoir plus, consultez le guide sur la [surveillance des segments dans lʼinterface utilisateur](../../dataflows/ui/monitor-segments.md). |
 
 Pour des informations plus générales sur les flux de données, consultez la [présentation des flux de données](../../dataflows/home.md). Pour en savoir plus sur la segmentation, consultez la [présentation de la segmentation](../../segmentation/home.md).
 
@@ -84,7 +84,7 @@ Pour des informations plus générales sur les flux de données, consultez la [p
 | Prise en charge de la source Adobe Analytics | La source Adobe Analytics prend désormais en charge les fonctionnalités de préparation de données. Celles-ci vous permettent de mapper vos données de suite de rapports Analytics à un schéma XDM cible lors de la création d’un flux de données. Pour plus d’informations, consultez le tutoriel sur la [création d’une connexion source Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md). |
 | Prise en charge de l’importation de règles de mappage existantes | Vous pouvez désormais importer des règles de mappage à partir d’un flux de données existant afin d’accélérer vos configurations de flux de données et de limiter les erreurs. Pour plus d’informations, consultez le tutoriel sur l’[importation de règles de mappage existantes](../../data-prep/ui/mapping.md). |
 
-Pour plus d’informations sur la [!DNL Data Prep], consultez [[!DNL Data Prep] la présentation](../../data-prep/home.md).
+Pour plus d’informations sur Query Service [!DNL Data Prep], consultez la [[!DNL Data Prep] présentation](../../data-prep/home.md) de Query Service.
 
 ## [!DNL Destinations] {#destinations}
 
@@ -132,7 +132,7 @@ XDM est une spécification Open Source qui fournit des structures et des défini
 
 | Type de composant | Nom | Description |
 | --- | --- | --- |
-| Schéma global | [[!UICONTROL Demande d’opération de nettoyage de données]](https://github.com/adobe/xdm/blob/master/schemas/hygiene/aep-hygiene-ops-record.schema.json) | Capture les détails d’une demande de nettoyage des données pour supprimer ou modifier des enregistrements dans un jeu de données ou un environnement de test spécifié. |
+| Schéma global | [[!UICONTROL Demande d’opération de nettoyage de données]](https://github.com/adobe/xdm/blob/master/schemas/hygiene/aep-hygiene-ops-record.schema.json) | Capture les détails d’une demande de nettoyage des données pour supprimer ou modifier des enregistrements dans un jeu de données ou une sandbox spécifiée. |
 | Descripteur | [[!UICONTROL Descripteur de granularité de série temporelle]](https://github.com/adobe/xdm/blob/master/schemas/descriptors/time-series/descriptorTimeSeriesGranularity.schema.json) | Indique la granularité des données récapitulatives et de série temporelle. Lorsqu’il est appliqué à un schéma, le champ `timestamp` du schéma est la première date et heure d’une période de cette granularité. |
 | Classe | [[!UICONTROL Mesures récapitulatives XDM]](https://github.com/adobe/xdm/blob/master/components/classes/summary_metrics.schema.json) | Fournit des mesures préalablement résumées avec des dimensions de regroupement, telles que les résultats d’une instruction SQL SELECT avec GROUP BY. |
 | Groupe de champs | [[!UICONTROL Mappage des résultats d’évaluation des stratégies de consentement]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-consentResults.schema.json) | Capture le résultat de l’évaluation de la stratégie de consentement pour un individu. |
@@ -185,11 +185,11 @@ L’IA dédiée à l’attribution est utilisée pour attribuer des crédits aux
 | ------- | ----------- |
 | Prise en charge de jeux de données multiples | La fonctionnalité de jeux de données multiples prend désormais en charge tous les jeux de données d’événement d’expérience, ainsi que la sélection du mappage d’identité comme identité. Les clients peuvent sélectionner le mappage d’identité et les ID associés, à condition que les jeux de données disposent d’un espace de noms d’identité commun. L’IA dédiée à l’attribution prend en charge les schémas suivants : Adobe Analytics, événement d’expérience, événement d’expérience de client. Pour plus d’informations sur la prise en charge de jeux de données multiples dans l’IA dédiée à l’attribution, consultez le [guide d’utilisation de l’IA dédiée à l’attribution](../../intelligent-services/attribution-ai/user-guide.md). |
 
-Pour plus d’informations sur les [!DNL Intelligent Services], consultez la [[!DNL Intelligent Services] présentation](../../intelligent-services/home.md).
+Pour plus d’informations sur Query Service [!DNL Intelligent Services], consultez la [[!DNL Intelligent Services] présentation](../../intelligent-services/home.md) de Query Service.
 
 ### IA dédiée aux clients
 
-L’IA dédiée aux clients disponible dans Real-time Customer Data Platform est utilisée pour générer des scores de propension personnalisés tels que l’attrition et la conversion pour des profils individuels à grande échelle. Cette opération s’effectue sans qu’il soit nécessaire de transformer les besoins professionnels en un problème de machine learning ou d’avoir recours à un algorithme, à une formation ou à un déploiement.
+L’IA dédiée aux clients disponible dans Real-time Customer Data Platform est utilisée pour générer des scores de propension personnalisés tels que l’attrition et la conversion pour des profils individuels à grande échelle. Cette opération s’effectue sans qu’il soit nécessaire de transformer les besoins professionnels en un problème de machine learning ou d’avoir recours à un algorithme, à une formation ou à un déploiement.
 
 **Fonctionnalités mises à jour**
 
@@ -198,11 +198,11 @@ L’IA dédiée aux clients disponible dans Real-time Customer Data Platform 
 | Prise en charge de jeux de données multiples | La fonctionnalité de jeux de données multiples prend désormais en charge tous les jeux de données d’événement d’expérience, ainsi que la sélection du mappage d’identité comme identité. Les clients peuvent sélectionner le mappage d’identité et les ID associés, à condition que les jeux de données disposent d’un espace de noms d’identité commun. L’IA dédiée aux clients prend en charge les schémas suivants : Adobe Analytics, Événement d’experience, Événement d’experience consommateur et le schéma Adobe Audience Manager. Pour plus d’informations sur la prise en charge de jeux de données multiples dans l’IA dédiée aux clients, consultez le [guide d’utilisation de l’IA dédiée aux clients](../../intelligent-services/customer-ai/user-guide/configure.md). |
 | Nouvelles mesures d’évaluation de modèle dans l’IA dédiée aux clients | Les nouveaux graphiques de gains dans l’IA dédiée aux clients permettent aux professionnels du marketing de déterminer la taille du groupe à cibler en fonction de leur budget et de leurs objectifs de retour sur investissement. Les nouveaux graphiques de courbe d’élévation évaluent la qualité du modèle, offrant ainsi une meilleure visibilité sur la courbe d’élévation obtenue par rapport à un ciblage aléatoire. Pour plus d’informations, consultez le document [découvrir des informations avec l’IA dédiée aux clients](../../intelligent-services/customer-ai/user-guide/discover-insights.md). |
 
-Pour plus d’informations sur les [!DNL Intelligent Services], consultez [[!DNL Intelligent Services] la présentation](../../intelligent-services/home.md).
+Pour plus d’informations sur Query Service [!DNL Intelligent Services], consultez la [[!DNL Intelligent Services] présentation](../../intelligent-services/home.md) de Query Service.
 
 ## Édition B2B de Real-Time Customer Data Platform {#B2B}
 
-Basée sur Real-time Customer Data Platform (Real-Time CDP), Real-Time CDP B2B Edition est conçue spécifiquement pour les spécialistes du marketing qui opèrent dans un modèle de service business-to-business. Elle rassemble des données provenant de sources multiples et les combine en une vue unique des profils de comptes et d’utilisateurs. Ces données unifiées permettent aux professionnels du marketing de cibler précisément des audiences spécifiques afin de stimuler leur engagement sur tous les canaux disponibles.
+Basée sur Real-time Customer Data Platform (Real-time CDP), l’édition B2B de Real-time CDP a été conçue pour les professionnels du marketing travaillant dans un modèle de service business-to-business. Elle rassemble des données provenant de sources multiples et les combine en une vue unique des profils de comptes et d’utilisateurs. Ces données unifiées permettent aux professionnels du marketing de cibler précisément des audiences spécifiques afin de stimuler leur engagement sur tous les canaux disponibles.
 
 **Fonctionnalités mises à jour**
 
@@ -210,7 +210,7 @@ Basée sur Real-time Customer Data Platform (Real-Time CDP), Real-Time CDP B2B E
 | --- | --- |
 | Prise en charge de la fonctionnalité `isDeleted` | Tous les jeux de données [!DNL Marketo], sauf `Activities` prennent désormais en charge le mappage `isDeleted`. Le nouveau mappage est automatiquement ajouté à vos flux de données B2B existants. Vous pouvez utiliser le mappage `isDeleted` pour filtrer les enregistrements supprimés afin que les données dans le [!DNL Data Lake] soient cohérentes avec les données sources. Consultez le [[!DNL Marketo] guide du mappage des champs](../../sources/connectors/adobe-applications/mapping/marketo.md) pour plus d’informations sur `isDeleted`. |
 
-Pour en savoir plus sur Real-time Customer Data Platform B2B Edition, voir [Présentation B2B](../../rtcdp/b2b-overview.md).
+Pour en savoir plus sur l’édition B2B de Real-time Customer Data Platform, consultez la [présentation B2B](../../rtcdp/b2b-overview.md).
 
 ## Sources {#sources}
 
@@ -222,7 +222,7 @@ Experience Platform fournit une API RESTful et une interface utilisateur intera
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Prise en charge de [!DNL OneTrust Integration] | Vous pouvez désormais utiliser la source [!DNL OneTrust Integration] pour ingérer les données de consentement et de préférences du compte [!DNL OneTrust] vers Platform. Pour plus d’informations, consultez la documentation sur la [création d’une  [!DNL OneTrust Integration]  connexion source](../../sources/connectors/consent-and-preferences/onetrust.md). |
+| Prise en charge de [!DNL OneTrust Integration] | Vous pouvez désormais utiliser la source [!DNL OneTrust Integration] pour ingérer les données de consentement et de préférences du compte [!DNL OneTrust] vers Platform. Pour plus d’informations, consultez la documentation sur la [création d’une [!DNL OneTrust Integration] connexion source](../../sources/connectors/consent-and-preferences/onetrust.md). |
 | Prise en charge de [!DNL Square] | Vous pouvez désormais utiliser la source [!DNL Square] pour ingérer les données des paiements à partir du compte [!DNL Square] vers Platform. |
 | Prise en charge de la suppression des flux de données d’attributs du client | Vous pouvez désormais supprimer les flux de données créés à l’aide du connecteur source d’attributs du client. |
 
