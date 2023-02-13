@@ -5,9 +5,9 @@ title: Guide de dépannage du contrôle dʼaccès
 description: Ce document répond aux questions fréquentes sur le contrôle d’accès dans Adobe Experience Platform.
 exl-id: c299c0c4-dbee-4e6d-8af4-2446444bed69
 source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
-workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+workflow-type: ht
+source-wordcount: '408'
+ht-degree: 100%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 Ce document répond aux questions fréquentes sur le contrôle d’accès dans Adobe Experience Platform. Pour les questions et le dépannage relatifs aux autres services [!DNL Platform], consultez le [guide de dépannage dʼExperience Platform](../landing/troubleshooting.md).
 
-[!DNL Experience Platform] exploite les profils de produit dans [Adobe Admin Console](https://adminconsole.adobe.com) pour fournir des contrôles d’accès en fonction du rôle, en liant les utilisateurs à des autorisations et des environnements de test.  Pour plus d’informations, consultez la [présentation du contrôle d’accès](home.md).
+[!DNL Experience Platform] exploite les profils de produit dans [Adobe Admin Console](https://adminconsole.adobe.com) pour fournir des contrôles d’accès en fonction du rôle, en liant les utilisateurs à des autorisations et des sandbox.  Pour plus d’informations, consultez la [présentation du contrôle d’accès](home.md).
 
 ## Où puis-je trouver mes autorisations d’accès actuelles ?
 
@@ -33,6 +33,6 @@ Les autorisations sont regroupées et classées en fonction des fonctionnalités
 
 Pour plus d’informations sur le contrôle d’accès en fonction du rôle, consultez la [présentation du contrôle d’accès](home.md).
 
-## Qu’advient-il des autorisations après la migration d’Adobe IO vers Business ID ?
+## Qu’advient-il des autorisations après la migration d’Adobe IO vers Business ID ?
 
 Le contrôle d’accès utilise un identifiant d’utilisateur (un identifiant unique interne attribué à un utilisateur) pour accorder des autorisations. Lorsqu’une organisation est migrée d’Adobe ID vers Business ID, toutes les autorisations définies pour ses utilisateurs seront perdues car l’identifiant d’utilisateur change et le contrôle d’accès utilisera l’identifiant d’utilisateur nouvellement généré. Si votre entreprise est migrée vers un Business ID, contactez votre représentant Adobe pour migrer votre identifiant d’utilisateur d’Adobe ID vers un Business ID.
