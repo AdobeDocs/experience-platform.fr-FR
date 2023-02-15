@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Expirations des événements d’expérience
 description: Ce document fournit des instructions générales sur la configuration des délais d’expiration pour des événements d’expérience individuels dans un jeu de données Adobe Experience Platform.
 exl-id: a91f2cd2-3a5d-42e6-81c3-0ec5bc644f5f
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 0fce883528abc62075914abc4a8f81d2bff8f2e6
 workflow-type: tm+mt
-source-wordcount: '466'
-ht-degree: 94%
+source-wordcount: '488'
+ht-degree: 90%
 
 ---
 
@@ -26,7 +26,7 @@ Les expirations d’événements d’expérience ne peuvent pas être configuré
 Une fois que les expirations d’événement d’expérience ont été activées sur un jeu de données activé pour un profil, Platform applique automatiquement les valeurs d’expiration pour chaque événement capturé dans un processus en deux étapes :
 
 1. La valeur d’expiration de toutes les nouvelles données ingérées dans le jeu de données est appliquée au moment de l’ingestion en fonction de la date et de l’heure de l’événement.
-1. La valeur dʼexpiration sera appliquée rétroactivement à toutes les données existantes du jeu de données en tant que traitement système unique de renvoi. Une fois que la valeur dʼexpiration a été placée sur le jeu de données, les événements plus anciens que la valeur dʼexpiration seront immédiatement ignorés dès que le traitement système s’exécutera. Tous les autres événements seront ignorés dès quʼils atteindront leurs valeurs dʼexpiration à partir de la date et de lʼheure de lʼévénement.
+1. La valeur dʼexpiration sera appliquée rétroactivement à toutes les données existantes du jeu de données en tant que traitement système unique de renvoi. Une fois que la valeur dʼexpiration a été placée sur le jeu de données, les événements plus anciens que la valeur dʼexpiration seront immédiatement ignorés dès que le traitement système s’exécutera. Tous les autres événements seront ignorés dès quʼils atteindront leurs valeurs dʼexpiration à partir de la date et de lʼheure de lʼévénement. Lorsque tous les événements d’expérience ont été supprimés, si le profil ne comporte plus d’attributs de profil, le profil n’existera plus.
 
 >[!WARNING]
 >
