@@ -1,10 +1,11 @@
 ---
 title: Configurer un flux de données
 description: Connectez votre intégration SDK Experience Platform côté client à des produits Adobe et à des destinations tierces.
-source-git-commit: 82703fae72e8637bb7d5e08a6699d9e1466afd8b
-workflow-type: ht
+exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
+source-git-commit: aa271fed242d03ecac6025721c2566a3b550b6bb
+workflow-type: tm+mt
 source-wordcount: '1658'
-ht-degree: 100%
+ht-degree: 98%
 
 ---
 
@@ -38,11 +39,11 @@ Si vous configurez ce flux de données pour l’utiliser dans Experience Platfor
 
 Sélectionnez **[!UICONTROL Options avancées]** pour afficher des commandes supplémentaires permettant de configurer le flux de données.
 
-![Options de configuration avancées](../assets/datastreams/configure/advanced-options.png)
+![Options de configuration avancées](../assets/datastreams/configure/advanced-options.png) {#advanced-options}
 
 | Paramètre | Description |
 | --- | --- |
-| [!UICONTROL Géolocalisation] | Détermine si les recherches GPS sont effectuées en fonction de l’adresse IP de l’utilisateur. Le paramètre par défaut **[!UICONTROL Aucun]** désactive les recherches GPS, tandis que le paramètre **[!UICONTROL Ville]** fournit les coordonnées GPS à deux décimales. |
+| [!UICONTROL Géolocalisation] | Détermine si des recherches de géolocalisation ont lieu en fonction de l’adresse IP de l’utilisateur. Le paramètre par défaut **[!UICONTROL Aucun]** désactive les recherches Géo, tandis que la fonction **[!UICONTROL Ville]** fournit les coordonnées GPS à deux décimales. |
 | [!UICONTROL Cookie interne d’identifiant] | Lorsqu’il est activé, ce paramètre indique à Edge Network de se référer à un cookie spécifié lors de la recherche d’un [identifiant d’appareil interne](../identity/first-party-device-ids.md), plutôt que de rechercher cette valeur dans le mappage d’identité.<br><br>Lors de l’activation de ce paramètre, vous devez indiquer le nom du cookie dans lequel l’identifiant doit être stocké. |
 | [!UICONTROL Synchronisation des identifiants tiers] | Les synchronisations des identifiants peuvent être regroupées en conteneurs afin de permettre l’exécution de différentes synchronisations d’identifiant à différents moments. Lorsqu’il est activé, ce paramètre vous permet de spécifier le conteneur des synchronisations d’identifiant à exécuter pour ce flux de données. |
 | [!UICONTROL Type d’accès] | Définit le type d’authentification qu’Edge Network accepte pour le train de données. <ul><li>**[!UICONTROL Authentification mixte]** : lorsque cette option est activée, Edge Network accepte les demandes authentifiées et non authentifiées. Sélectionnez cette option lorsque vous prévoyez d’utiliser le SDK web ou le [SDK mobile](https://aep-sdks.gitbook.io/docs/), ainsi que l’[API Server](../../server-api/overview.md). </li><li>**[!UICONTROL Authentifié uniquement]** : lorsque cette option est activée, Edge Network accepte uniquement les demandes authentifiées. électionnez cette option lorsque vous prévoyez d’utiliser uniquement l’API Server et que vous souhaitez empêcher le traitement des demandes non authentifiées par Edge Network.</li></ul> |
