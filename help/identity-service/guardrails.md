@@ -3,16 +3,16 @@ keywords: Experience Platform;identité;service d’identité;dépannage;garde-f
 title: Barrières de sécurité pour Identity Service
 description: Ce document fournit des informations sur l’utilisation et les limites de taux pour les données Identity Service afin de vous aider à optimiser l’utilisation du graphique d’identités.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: b5368382b42f478f6019c5ee925e56ec91ea6930
 workflow-type: tm+mt
 source-wordcount: '490'
 ht-degree: 15%
 
 ---
 
-# Barrières de sécurité pour les [!DNL Identity Service]données
+# Mécanismes de sécurisation pour les [!DNL Identity Service]données
 
-Ce document fournit des informations sur l’utilisation et les limites de taux pour [!DNL Identity Service] pour vous aider à optimiser l’utilisation du graphique d’identités. Lors de la révision des barrières de sécurité suivantes, on suppose que vous avez correctement modélisé les données. Si vous avez des questions sur la manière de modéliser vos données, contactez votre représentant du service client.
+Ce document fournit des informations sur l’utilisation et les limites de taux pour [!DNL Identity Service] pour vous aider à optimiser l’utilisation du graphique d’identités. Lors de la révision des mécanismes de sécurisation suivants, on suppose que vous avez correctement modélisé les données. Si vous avez des questions sur la manière de modéliser vos données, contactez votre représentant du service client.
 
 ## Prise en main
 
@@ -48,7 +48,7 @@ Le tableau suivant décrit les règles existantes que vous devez suivre pour gar
 
 ### Ingestion des espaces de noms d’identité
 
-À compter du 31 janvier 2023, Identity Service bloquera l’ingestion d’Adobe Analytics ID (AAID) pour les nouveaux clients. Cette identité est généralement ingérée via la variable [Source Adobe Analytics](../sources/connectors/adobe-applications/analytics.md) et le [Source Adobe Audience Manager](../sources//connectors/adobe-applications/audience-manager.md) et est redondant, car l’ECID représente le même navigateur web. Si vous souhaitez modifier cette configuration par défaut, contactez votre gestionnaire de compte.
+À compter du 31 mars 2023, Identity Service bloquera l’ingestion d’Adobe Analytics ID (AAID) pour les nouveaux clients. Cette identité est généralement ingérée via la variable [Source Adobe Analytics](../sources/connectors/adobe-applications/analytics.md) et le [Source Adobe Audience Manager](../sources//connectors/adobe-applications/audience-manager.md) et est redondant, car l’ECID représente le même navigateur web. Si vous souhaitez modifier cette configuration par défaut, contactez votre gestionnaire de compte.
 
 ## Étapes suivantes
 
