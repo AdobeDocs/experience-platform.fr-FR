@@ -2,10 +2,10 @@
 description: Utilisez les configurations d’authentification prises en charge dans Adobe Experience Platform Destination SDK pour authentifier les utilisateurs et activer les données vers votre point d’entrée de destination.
 title: Configuration de l’authentification
 exl-id: 33eaab24-f867-4744-b424-4ba71727373c
-source-git-commit: 9b4c7da5aa02ae27608c2841b1d825445ac3015e
+source-git-commit: 59ac7749d788d8527da3578ec140248f7acf8e98
 workflow-type: tm+mt
-source-wordcount: '446'
-ht-degree: 91%
+source-wordcount: '498'
+ht-degree: 83%
 
 ---
 
@@ -18,8 +18,9 @@ La configuration d’authentification que vous sélectionnez détermine la mani�
 Adobe Experience Platform Destination SDK prend en charge plusieurs types d’authentification :
 
 * [Authentification du porteur](#bearer)
+* [Authentification de base](#basic)
 * [Authentification [!DNL Amazon S3]](#s3)
-* [[!DNL Azure Blob] Stockage](#blob)
+* [[!DNL Azure Blob]Stockage ](#blob)
 * [[!DNL Azure Data Lake Storage]](#adls)
 * [[!DNL Google Cloud Storage]](#gcs)
 * [SFTP avec clé SSH](#sftp-ssh)
@@ -34,6 +35,22 @@ Pour plus d’informations sur la configuration de l’authentification pour cha
 
 * [Configurations d’authentification pour les destinations de diffusion en continu](destination-configuration.md#customer-authentication-configurations)
 * [Configurations dʼauthentification pour les destinations basées sur des fichiers](file-based-destination-configuration.md#customer-authentication-configurations)
+
+## Authentification de base {#basic}
+
+L’authentification de base est prise en charge pour les destinations de diffusion en continu dans Experience Platform.
+
+Lorsque vous configurez le type d’authentification de base, les utilisateurs doivent saisir un nom d’utilisateur et un mot de passe pour se connecter à votre destination.
+
+Pour configurer l’authentification de base pour votre destination, configurez la variable `customerAuthenticationConfigurations` via la section `/destinations` point de terminaison comme illustré ci-dessous :
+
+```json
+"customerAuthenticationConfigurations":[
+   {
+      "authType":"BASIC"
+   }
+]
+```
 
 ## Authentification du porteur {#bearer}
 

@@ -2,9 +2,9 @@
 description: Cette configuration vous permet d’indiquer des informations de base telles que votre nom de destination, votre catégorie, votre description, votre logo, etc. Les paramètres de cette configuration déterminent également comment les utilisateurs d’Experience Platform s’authentifient pour votre destination, comment ils apparaissent dans l’interface utilisateur d’Experience Platform ainsi que les identités qui peuvent être exportées vers votre destination.
 title: Options de configuration de destination de diffusion en continu pour Destination SDK
 exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
-source-git-commit: f0f2ed2059cbbb017dbbbdc0d1f215abee17f514
+source-git-commit: 59ac7749d788d8527da3578ec140248f7acf8e98
 workflow-type: tm+mt
-source-wordcount: '1894'
+source-wordcount: '1907'
 ht-degree: 88%
 
 ---
@@ -152,7 +152,7 @@ Les utilisateurs sélectionnent **[!UICONTROL Se connecter à la destination]** 
 | Paramètre | Type | Description |
 |---------|----------|------|
 | `customerAuthenticationConfigurations` | Chaîne | Indique la configuration utilisée pour authentifier les clients Experience Platform sur votre serveur. Consultez `authType` ci-dessous pour les valeurs acceptées. |
-| `authType` | Chaîne | Les valeurs acceptées pour les destinations de diffusion en continu sont les suivantes :<ul><li>`BEARER`. Si votre destination prend en charge l’authentification du porteur, définissez `"authType":"Bearer"` et  `"authenticationRule":"CUSTOMER_AUTHENTICATION"` dans la [section de diffusion de destination](./destination-configuration.md).</li><li>`OAUTH2`. Si votre destination prend en charge l’authentification OAuth 2, définissez `"authType":"OAUTH2"` et ajoutez les champs requis pour OAuth 2, comme indiqué à la page [Authentification OAuth 2 de Destination SDK](./oauth2-authentication.md). En outre, définissez `"authenticationRule":"CUSTOMER_AUTHENTICATION"` dans la [section de diffusion de destination](./destination-configuration.md).</li> |
+| `authType` | Chaîne | Les valeurs acceptées pour les destinations de diffusion en continu sont les suivantes :<ul><li>`BASIC`. Si votre destination prend en charge l’authentification de base, définissez `"authType":"Basic"` et  `"authenticationRule":"CUSTOMER_AUTHENTICATION"` dans le [section de diffusion de destination](./destination-configuration.md).</li><li>`BEARER`. Si votre destination prend en charge l’authentification du porteur, définissez `"authType":"Bearer"` et  `"authenticationRule":"CUSTOMER_AUTHENTICATION"` dans la [section de diffusion de destination](./destination-configuration.md).</li><li>`OAUTH2`. Si votre destination prend en charge l’authentification OAuth 2, définissez `"authType":"OAUTH2"` et ajoutez les champs requis pour OAuth 2, comme indiqué à la page [Authentification OAuth 2 de Destination SDK](./oauth2-authentication.md). En outre, définissez `"authenticationRule":"CUSTOMER_AUTHENTICATION"` dans la [section de diffusion de destination](./destination-configuration.md).</li> |
 
 {style=&quot;table-layout:auto&quot;}
 
