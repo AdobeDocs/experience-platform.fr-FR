@@ -1,9 +1,9 @@
 ---
 title: Comportement d’exportation de profils
 description: Découvrez comment le comportement d’exportation de profils varie entre les différents modèles d’intégration pris en charge dans les destinations Experience Platform.
-source-git-commit: 372231ab4fc1148c1c2c0c5fdbfd3cd5328b17cc
+source-git-commit: 5d404d723ea0b7cc72c5188dcff1f59a1874cfe2
 workflow-type: tm+mt
-source-wordcount: '2944'
+source-wordcount: '2979'
 ht-degree: 24%
 
 ---
@@ -169,11 +169,11 @@ Selon les informations de la section ci-dessus, le comportement d’exportation 
 
 **Exports de fichiers complets**
 
-La population totale du segment est exportée tous les jours.
+La population principale totale du segment est exportée tous les jours.
 
 | Ce qui détermine une exportation de destination | Éléments inclus dans le fichier exporté |
 |---------|----------|
-| <ul><li>Le planning d’exportation défini dans l’interface utilisateur ou l’API et l’action de l’utilisateur (en sélectionnant [Exporter le fichier maintenant](/help/destinations/ui/export-file-now.md) dans l’interface utilisateur ou à l’aide de la fonction [API d’activation ad hoc](/help/destinations/api/ad-hoc-activation-api.md)) déterminent le début d’une exportation de destination.</li><li>Toute modification de l’appartenance à un segment d’un profil, qu’il soit admissible ou non dans le segment, qualifie un profil à inclure dans les exportations incrémentielles.</li></ul> | Dans les exportations complètes de fichiers, l’ensemble de la population de profils d’un segment, selon la dernière évaluation de segment, est inclus avec chaque exportation de fichiers. Les dernières valeurs pour chaque attribut XDM sélectionné pour l’exportation sont également incluses en tant que colonnes dans chaque fichier. |
+| <ul><li>Le planning d’exportation défini dans l’interface utilisateur ou l’API et l’action de l’utilisateur (en sélectionnant [Exporter le fichier maintenant](/help/destinations/ui/export-file-now.md) dans l’interface utilisateur ou à l’aide de la fonction [API d’activation ad hoc](/help/destinations/api/ad-hoc-activation-api.md)) déterminent le début d’une exportation de destination.</li><li>Toute modification de l’appartenance à un segment d’un profil, qu’il soit admissible ou non dans le segment, qualifie un profil à inclure dans les exportations incrémentielles.</li></ul> | Dans les exportations complètes de fichiers, la population principale de profils d’un segment, basée sur la dernière évaluation de segment, est incluse avec chaque exportation de fichiers. Les dernières valeurs pour chaque attribut XDM sélectionné pour l’exportation sont également incluses en tant que colonnes dans chaque fichier. Notez que les profils à l’état de sortie ne sont pas inclus dans l’exportation du fichier. |
 
 {style=&quot;table-layout:fixed&quot;}
 
@@ -183,7 +183,7 @@ Dans le premier export de fichier, après avoir configuré le workflow d&#39;act
 
 | Ce qui détermine une exportation de destination | Éléments inclus dans le fichier exporté |
 |---------|----------|
-| <ul><li>Le planning d’exportation défini dans l’interface utilisateur ou l’API détermine le début d’une exportation de destination.</li><li>Toute modification de l’appartenance à un segment d’un profil, qu’il soit admissible ou non dans le segment, qualifie un profil à inclure dans les exportations incrémentielles. Modifications des attributs ou des mappages d’identité d’un profil *ne pas* qualifier un profil à inclure dans les exportations incrémentielles.</li></ul> | Profils pour lesquels l’appartenance au segment a changé, ainsi que les informations les plus récentes pour chaque attribut XDM sélectionné pour l’exportation. |
+| <ul><li>Le planning d’exportation défini dans l’interface utilisateur ou l’API détermine le début d’une exportation de destination.</li><li>Toute modification de l’appartenance à un segment d’un profil, qu’il soit admissible ou non dans le segment, qualifie un profil à inclure dans les exportations incrémentielles. Modifications des attributs ou des mappages d’identité d’un profil *ne pas* qualifier un profil à inclure dans les exportations incrémentielles.</li></ul> | <p>Profils pour lesquels l’appartenance au segment a changé, ainsi que les informations les plus récentes pour chaque attribut XDM sélectionné pour l’exportation.</p><p>Les profils avec le statut de sortie sont inclus dans les exportations de destination, si la variable `segmentMembership.status` Le champ XDM est sélectionné à l’étape de mappage.</p> |
 
 {style=&quot;table-layout:fixed&quot;}
 
