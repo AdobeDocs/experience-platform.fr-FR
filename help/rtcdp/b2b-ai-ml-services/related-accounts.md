@@ -3,10 +3,10 @@ title: Comptes associés dans Real-Time CDP B2B Edition
 type: Documentation
 description: Présentation et informations supplémentaires sur la fonction des comptes associés dans Real-Time CDP Experience Platform B2B.
 exl-id: 37fd2cdb-87c0-4e5e-9599-ad4f397f7c28
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 5d1488b26391d8ac758a2968194a6d070ad5b561
 workflow-type: tm+mt
-source-wordcount: '386'
-ht-degree: 25%
+source-wordcount: '433'
+ht-degree: 22%
 
 ---
 
@@ -31,6 +31,16 @@ Avec les comptes associés, [!DNL Real-Time CDP B2B] affiche désormais la liste
 ![Écran affichant les comptes associés dans l’interface utilisateur de l’Experience Platform.](/help/rtcdp/b2b-ai-ml-services/assets/related-accounts-in-ui.png)
 
 Utilisez cette fonction pour afficher les profils de compte associés pour un profil de compte dans l’interface utilisateur de l’Experience Platform, puis inclure les comptes associés dans vos définitions de segment afin d’élargir votre portée ou d’appliquer des critères plus larges dans vos segments.
+
+## Activation du service de comptes associé {#enable}
+
+Pour activer le service, sélectionnez **[!UICONTROL Profils]** dans la barre latérale suivie de **[!UICONTROL Paramètres]**.
+
+![Interface utilisateur de l’Experience Platform qui met en surbrillance les profils et les paramètres.](../assets/../b2b-ai-ml-services/assets/related-account-settings.png)
+
+Sélectionner le bouton bascule en regard de [!UICONTROL Activation des comptes associés] pour activer le service, puis sélectionnez **[!UICONTROL Enregistrer]**.
+
+![L’écran Paramètres du compte met en surbrillance la bascule et l’enregistrement.](../assets/../b2b-ai-ml-services/assets/related-account-toggle.png)
 
 ## Fonctionnement {#how-it-works}
 
