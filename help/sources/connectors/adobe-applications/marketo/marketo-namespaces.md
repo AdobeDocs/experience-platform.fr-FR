@@ -1,17 +1,19 @@
 ---
-keywords: Experience Platform;accueil;rubriques populaires;connecteur source Marketo;espaces de noms;schémas;b2b;B2B
-solution: Experience Platform
 title: Espaces de noms et schémas B2B
 description: Ce document fournit un aperçu des espaces de noms personnalisés requis lors de la création d’un connecteur source B2B.
 exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: fa3f937862dd8b6078f73b2a172b3fb5db652dc7
 workflow-type: tm+mt
-source-wordcount: '1707'
+source-wordcount: '1727'
 ht-degree: 14%
 
 ---
 
 # Espaces de noms et schémas B2B
+
+>[!NOTE]
+>
+>Vous pouvez utiliser des modèles dans l’interface utilisateur de Adobe Experience Platform pour accélérer la création de ressources pour les données B2B et B2C. Pour plus d’informations, consultez le guide sur [utilisation de modèles dans l’interface utilisateur de Platform](../../../tutorials/ui/templates.md).
 
 Ce document fournit des informations sur la configuration sous-jacente des espaces de noms et des schémas à utiliser avec des sources B2B. Ce document fournit également des détails sur la configuration de votre utilitaire d’automatisation Postman requis pour générer des espaces de noms et des schémas B2B.
 

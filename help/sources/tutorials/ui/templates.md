@@ -1,21 +1,28 @@
 ---
-keywords: Experience Platform;accueil;rubriques populaires;
 description: Adobe Experience Platform fournit des modèles préconfigurés que vous pouvez utiliser pour accélérer votre processus d’ingestion de données. Les modèles comprennent des ressources générées automatiquement telles que des schémas, des jeux de données, des règles de mappage, des identités, des espaces de noms d’identité et des flux de données que vous pouvez utiliser lors de l’importation de données d’une source vers Experience Platform.
-title: (Alpha) Créer un flux de données de sources à l’aide de modèles dans l’interface utilisateur
+title: (Version bêta) Création d’un flux de données de sources à l’aide de modèles dans l’interface utilisateur
+badge1: "Beta"
 hide: true
 hidefromtoc: true
-source-git-commit: d6d8281d1be1468b0c2b7474b80be96949dc7d4c
-workflow-type: ht
-source-wordcount: '1184'
-ht-degree: 100%
+exl-id: 48aa36ca-656d-4b9d-954c-48c8da9df1e9
+source-git-commit: c4cb3783cbbab6f9bf25ffaa5b27a200c555b181
+workflow-type: tm+mt
+source-wordcount: '1337'
+ht-degree: 76%
 
 ---
 
-# (Alpha) Créer un flux de données de sources à l’aide de modèles dans l’interface utilisateur
+# (Version bêta) Création d’un flux de données de sources à l’aide de modèles dans l’interface utilisateur
 
 >[!IMPORTANT]
 >
->Les modèles sont en version Alpha et ne sont actuellement pris en charge que par la [[!DNL Marketo Engage] source](../../connectors/adobe-applications/marketo/marketo.md). La documentation et les fonctionnalités peuvent changer.
+>Les modèles sont en version bêta et sont pris en charge par les sources suivantes :
+>
+>* [[!DNL Marketo Engage]](../../connectors/adobe-applications/marketo/marketo.md)
+>* [[!DNL Microsoft Dynamics]](../../connectors/crm/ms-dynamics.md)
+>* [[!DNL Salesforce]](../../connectors/crm/salesforce.md)
+>
+>La documentation et les fonctionnalités peuvent changer.
 
 Adobe Experience Platform fournit des modèles préconfigurés que vous pouvez utiliser pour accélérer votre processus d’ingestion de données. Les modèles comprennent des ressources générées automatiquement telles que des schémas, des jeux de données, des identités, des règles de mappage, des espaces de noms d’identité et des flux de données que vous pouvez utiliser lors de l’importation de données d’une source vers Experience Platform.
 
@@ -25,7 +32,7 @@ Avec les modèles, vous pouvez :
 * Minimiser les erreurs qui peuvent se produire pendant le processus d’ingestion manuelle des données.
 * Mettre à jour les ressources générées automatiquement à tout moment en fonction de vos cas d’utilisation.
 
-Le tutoriel suivant décrit les étapes à suivre pour utiliser des modèles dans l’interface utilisateur de Platform à l’aide de la [[!DNL Marketo Engage] source](../../connectors/adobe-applications/marketo/marketo.md).
+Le tutoriel suivant décrit les étapes à suivre pour utiliser des modèles dans l’interface utilisateur de Platform.
 
 ## Prise en main
 
@@ -43,11 +50,11 @@ Ce tutoriel nécessite une compréhension du fonctionnement des composants suiva
 >abstract="Sélectionnez le type d’entreprise approprié à votre cas d’utilisation. Votre accès peut varier en fonction de votre compte d’abonnement Real-time Customer Data Platform."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html?lang=fr" text="Présentation de Real-Time CDP"
 
-Dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources]. L’écran [!UICONTROL Catalogue] affiche diverses sources pouvant être utilisées pour créer un compte.
+Dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à la fonction [!UICONTROL Sources] workspace et afficher un catalogue de sources disponibles dans Experience Platform.
 
-Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de votre écran. Vous pouvez également sélectionner la source de votre choix à l’aide de la barre de recherche.
+Utilisez la variable *[!UICONTROL Catégories]* pour filtrer les sources par catégorie. Vous pouvez également saisir un nom de source dans la barre de recherche pour trouver une source spécifique dans le catalogue.
 
-Dans la catégorie des [!UICONTROL Applications Adobe], sélectionnez **[!UICONTROL Marketo Engage]**, puis **[!UICONTROL Ajouter des données]**.
+Accédez au [!UICONTROL Adobe des applications] pour afficher la catégorie [!DNL Marketo Engage] carte source, puis sélectionnez [!UICONTROL Ajouter des données] pour commencer.
 
 ![Un catalogue de l’espace de travail des sources avec la source de Marketo Engage mise en surbrillance.](../../images/tutorials/templates/catalog.png)
 
@@ -64,21 +71,25 @@ Pour utiliser des ressources générées automatiquement, sélectionnez **[!UICO
 
 L’étape d’authentification s’affiche et vous invite à créer un compte ou à utiliser un compte existant.
 
-#### Compte existant
+>[!BEGINTABS]
+
+>[!TAB Utiliser un compte existant]
 
 Pour utiliser un compte existant, sélectionnez [!UICONTROL Compte existant] puis sélectionnez le compte à utiliser dans la liste qui s’affiche.
 
 ![La page de sélection d’un compte existant avec la liste des comptes existants auxquels vous pouvez accéder.](../../images/tutorials/templates/existing-account.png)
 
-#### Nouveau compte
+>[!TAB Création d’un compte]
 
 Pour créer un compte, sélectionnez **[!UICONTROL Nouveau compte]**, puis fournissez les informations de connexion source et les informations d’authentification du compte. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Connexion à la source]**, puis patientez quelques instants le temps que la nouvelle connexion sʼétablisse.
 
 ![La page d’authentification d’un nouveau compte avec les détails de connexion source et les informations d’authentification du compte.](../../images/tutorials/templates/new-account.png)
 
+>[!ENDTABS]
+
 ### Sélectionner des modèles
 
-Une fois votre compte authentifié et sélectionné, une liste de modèles s’affiche. Sélectionnez l’icône d’aperçu à côté du nom d’un modèle pour prévisualiser les données d’exemple du modèle.
+Selon le type d’entreprise sélectionné, une liste de modèles s’affiche. Sélectionner l’icône d’aperçu ![icône d’aperçu](../../images/tutorials/templates/preview-icon.png) en regard d’un nom de modèle pour prévisualiser les exemples de données du modèle.
 
 ![Une liste de modèles avec l’icône d’aperçu mise en surbrillance.](../../images/tutorials/templates/templates.png)
 
@@ -95,6 +106,22 @@ Si vous sélectionnez un ou des éléments partiels dans la liste des modèles d
 >Les modèles déjà utilisés seront désactivés de la sélection.
 
 ![La liste des modèles avec le modèle Rôle de contact d’opportunité sélectionné.](../../images/tutorials/templates/select-template.png)
+
+### Définissez un planning
+
+Le [!DNL Microsoft Dynamics] et le [!DNL Salesforce] les sources prennent toutes deux en charge la planification des flux de données.
+
+Utilisez l’interface de planification pour configurer un planning d’ingestion pour vos flux de données. Définissez la fréquence d’ingestion sur **Une fois** pour créer une ingestion unique.
+
+![Interface de planification pour les modèles Dynamics et Salesforce.](../../images/tutorials/templates/schedule.png)
+
+Vous pouvez également définir la fréquence d’ingestion sur **Minute**, **Heure**, **Jour** ou **Semaine**. Si vous planifiez votre flux de données pour plusieurs assimilations, vous devez définir un intervalle pour établir une période entre chaque ingestion. Par exemple, une fréquence d’ingestion définie sur **Heure** et un intervalle défini sur **15** signifie que votre flux de données est planifié pour ingérer des données chaque **15 heures**.
+
+Au cours de cette étape, vous pouvez également activer **renvoyer** et définissez une colonne pour l’ingestion incrémentielle des données. Le renvoi est utilisé pour ingérer des données historiques, tandis que la colonne que vous définissez pour l’ingestion incrémentielle permet de différencier les nouvelles données des données existantes.
+
+Une fois que vous avez terminé la configuration de votre planning d’ingestion, sélectionnez **[!UICONTROL Terminer]**.
+
+![Interface de planification pour les modèles Dynamics et Salesforce avec renvoi activé.](../../images/tutorials/templates/backfill.png)
 
 ### Vérifier les ressources {#review-assets}
 
