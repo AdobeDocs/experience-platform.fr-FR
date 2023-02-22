@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Présentation des connecteurs source
 description: Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les bases de données, etc.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: e4fa36ebbb52ba0e5b37cda8d220e571d8afa4aa
+source-git-commit: d8cd69524d984fdb828447287f3f4a4fe5913d61
 workflow-type: tm+mt
-source-wordcount: '1123'
-ht-degree: 100%
+source-wordcount: '1133'
+ht-degree: 99%
 
 ---
 
@@ -39,6 +39,7 @@ Experience Platform permet d’ingérer des données provenant d’autres applic
    - [Créer une connexion source Attributs du client dans l’interface utilisateur](./tutorials/ui/create/adobe-applications/customer-attributes.md)
 - [Présentation de la source [!DNL Marketo Engage]](connectors/adobe-applications/marketo/marketo.md)
    - [Créer une connexion source  [!DNL Marketo Engage]  dans l’interface utilisateur](./tutorials/ui/create/adobe-applications/marketo.md)
+   - [Créez un [!DNL Marketo Engage] connexion source et flux de données pour les données d’activité personnalisées](./tutorials/ui/create/adobe-applications/marketo-custom-activities.md)
 - [Présentation de la source Adobe Workfront](connectors/adobe-applications/workfront.md)
    - [Créer une connexion source Workfront dans l’interface utilisateur](./tutorials/ui/create/adobe-applications/workfront.md)
 
