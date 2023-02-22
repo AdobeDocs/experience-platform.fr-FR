@@ -3,10 +3,10 @@ title: Conseils sur le client User-Agent
 description: Découvrez le fonctionnement des conseils client User-Agent dans le SDK Web
 keywords: user-agent;conseils client; string; chaîne de l’agent-utilisateur ; faible entropie; entropie élevée
 exl-id: a909b1d1-be9d-43ba-bb4b-d28b0c609f65
-source-git-commit: 4a2ae40fc64c4340ddb05db881c2176bb2aedc46
+source-git-commit: faeec4288948012fabeb25d0a0ce5a3b45f563ec
 workflow-type: tm+mt
-source-wordcount: '1065'
-ht-degree: 8%
+source-wordcount: '1132'
+ht-degree: 10%
 
 ---
 
@@ -116,16 +116,13 @@ Si vous n’activez pas les indicateurs client à forte entropie dans votre envi
 
 ### Rapports Adobe Analytics reposant sur des indices client à forte entropie {#analytics}
 
-Le [Système d’exploitation](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-systems.html) dimension inclut la version du système d’exploitation stockée en tant qu’indice client à forte entropie. Si les indices des clients à forte entropie ne sont pas activés, la version du système d’exploitation peut être inexacte pour les accès collectés à partir des navigateurs Chromium.
+Le [Système d’exploitation](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-systems.html?lang=fr) dimension inclut la version du système d’exploitation stockée en tant qu’indice client à forte entropie. Si les indices des clients à forte entropie ne sont pas activés, la version du système d’exploitation peut être inexacte pour les accès collectés à partir des navigateurs Chromium.
 
 ### Caractéristiques d’Audience Manager reposant sur des indices client à forte entropie {#aam}
 
-Si vos caractéristiques d’Audience Manager utilisent l’une des propriétés suivantes, vous devez activer les conseils client à forte entropie. Sinon, les caractéristiques cesseront de fonctionner.
+[!DNL Google] a mis à jour la variable [!DNL Chrome] de la fonction du navigateur afin de minimiser les informations collectées via l’ `User-Agent` en-tête . Par conséquent, les clients Audience Manager qui utilisent [DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=en) ne recevra plus d’informations fiables sur les caractéristiques basées sur [clés au niveau de la plateforme](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-device-targeting.html?lang=fr).
 
-* Version du système d’exploitation
-* Modèle de périphérique
-* Fabricant de l’appareil
-* Fournisseur du périphérique
+Les clients Audiences Manager qui utilisent des clés au niveau de la plateforme pour le ciblage doivent passer à [SDK Web Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/edge/home.html?lang=fr) au lieu de [DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=en)et activez [Conseils client à forte entropie](#enabling-high-entropy-client-hints) pour continuer à recevoir des données de caractéristiques fiables.
 
 ## Activation des conseils client à forte entropie {#enabling-high-entropy-client-hints}
 
