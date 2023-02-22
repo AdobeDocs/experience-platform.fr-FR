@@ -1,10 +1,10 @@
 ---
 title: Notes de mise à jour d’Adobe Experience Platform
 description: Notes de mise à jour de février 2023 pour Adobe Experience Platform.
-source-git-commit: 38c9325e2eb5d396472ea55ca082083040d6e590
+source-git-commit: ff276de35ca2aaeec168f4c4386d849f3352ad57
 workflow-type: tm+mt
-source-wordcount: '817'
-ht-degree: 35%
+source-wordcount: '987'
+ht-degree: 36%
 
 ---
 
@@ -14,10 +14,31 @@ ht-degree: 35%
 
 Mises à jour des fonctionnalités existantes dans Adobe Experience Platform :
 
+- [[!DNL Destinations]](#destinations)
 - [Modèle de données d’expérience (XDM)](#xdm)
 - [Query Service](#query-service)
 - [Comptes associés dans Real-Time CDP B2B Edition](#related-accounts)
 - [Sources](#sources)
+
+## [!DNL Destinations] {#destinations}
+
+Les [!DNL Destinations] sont des intégrations préconfigurées à des plateformes de destination qui permettent d’activer facilement des données provenant d’Adobe Experience Platform. Vous pouvez utiliser les destinations pour activer vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
+
+**Fonctionnalités nouvelles ou mises à jour** {#destinations-new-updated-features}
+
+| Fonctionnalité | Description |
+| ----------- | ----------- |
+| [Amélioration de la stratégie de consentement](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-enhancement) pour les intégrations avec [destinations basées sur des fichiers (par lots)](/help/destinations/destination-types.md#file-based) | <p> Lorsque les profils ne sont plus qualifiés pour une stratégie de consentement, l’Experience Platform communique désormais de manière proactive sa sortie de stratégie vers des destinations basées sur des fichiers. Cela suit le [version de février 2023](/help/release-notes/2023/january-2023.md#destinations-new-updated-functionality) de la même fonctionnalité pour les destinations de diffusion en continu. </p> <p> <b>Remarque</b>: Cette fonctionnalité est disponible uniquement pour les clients de **[!UICONTROL Protection de la vie privée et protection]** et ceux de **[!UICONTROL Bouclier de santé]**. </p> |
+
+{style=&quot;table-layout:auto&quot;}
+
+**Documentation nouvelle ou mise à jour** {#destinations-new-updated-documentation}
+
+| Documentation | Description |
+| ----------- | ----------- |
+| Fonctionnement de la documentation sur les destinations | <p>Nous avons publié trois nouveaux articles explicatifs sur le fonctionnement des destinations, sur la base des questions courantes des utilisateurs :</p> <p><ul><li>[Paramètres d’exportation configurables et communs des destinations](/help/destinations/how-destinations-work/destinations-configurations.md)</li><li>[Comportement d’exportation de profils pour différents types de destinations](/help/destinations/how-destinations-work/profile-export-behavior.md)</li><li>[Gestion des identités dans le workflow d’activation des destinations](/help/destinations/how-destinations-work/identity-handling.md)</li></p> |
+
+Pour des informations plus générales sur les destinations, consultez la [présentation des destinations](../../destinations/home.md).
 
 ## Modèle de données d’expérience (XDM) {#xdm}
 
