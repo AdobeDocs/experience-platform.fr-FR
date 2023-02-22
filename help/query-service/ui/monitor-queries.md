@@ -2,10 +2,10 @@
 title: Surveillance des requêtes planifiées
 description: Découvrez comment surveiller les requêtes via l’interface utilisateur de Query Service.
 exl-id: 4640afdd-b012-4768-8586-32f1b8232879
-source-git-commit: 26765c7f8daadabe325d2d519543c0fcd92c7717
+source-git-commit: 5e6fa112ccca7405c3dfd0653d3d6cad8b9ed2af
 workflow-type: tm+mt
-source-wordcount: '1230'
-ht-degree: 73%
+source-wordcount: '1204'
+ht-degree: 74%
 
 ---
 
@@ -118,11 +118,7 @@ Vous pouvez copier la requête SQL dans le presse-papiers à partir de cette vue
 
 ![Écran des détails de l’exécution avec l’icône de copie SQL mise en surbrillance.](../images/ui/monitor-queries/copy-sql.png)
 
-### (Version limitée) Exécuter les détails des requêtes avec bloc anonyme {#anonymous-block-queries}
-
->[!IMPORTANT]
->
->La fonction de surveillance des requêtes qui affiche les détails d’exécution des requêtes bloquées anonymes est actuellement dans une version limitée et n’est pas disponible pour tous les clients.
+### Exécution des détails des requêtes avec bloc anonyme {#anonymous-block-queries}
 
 Les requêtes qui utilisent des blocs anonymes pour comprendre leurs instructions SQL sont séparées dans leurs requêtes individuelles. Vous pouvez ainsi inspecter individuellement les détails de l’exécution pour chaque bloc de requête.
 
