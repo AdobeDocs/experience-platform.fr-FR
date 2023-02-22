@@ -4,7 +4,7 @@ description: Découvrez comment ajouter individuellement des champs provenant de
 hide: true
 hidefromtoc: true
 exl-id: 0499ff30-a602-419b-b9d3-2defdd4354a7
-source-git-commit: 1d4eba9f566dc1926afd7886c6ad2808ed91ea13
+source-git-commit: 07faf4dd749219a955df720a8c740427113a5de2
 workflow-type: tm+mt
 source-wordcount: '1208'
 ht-degree: 0%
@@ -27,7 +27,7 @@ Ce guide décrit les différentes méthodes d’ajout de champs individuels à u
 
 Ce tutoriel suppose que vous connaissez les [composition des schémas XDM](../schema/composition.md) et comment utiliser l’éditeur de schémas dans l’interface utilisateur de Platform. Pour poursuivre, vous devez lancer le processus de [création d’un nouveau schéma](./resources/schemas.md) et l’affecter à une classe standard avant de poursuivre avec ce guide.
 
-## Supprimer les champs ajoutés des groupes de champs standard
+## Supprimer les champs ajoutés des groupes de champs standard {#remove-field-group}
 
 Après avoir ajouté un groupe de champs standard à un schéma, vous pouvez supprimer tous les champs standard dont vous n’avez pas besoin.
 

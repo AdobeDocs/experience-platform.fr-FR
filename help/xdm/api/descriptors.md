@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Point de terminaison de l’API Descripteurs
 description: Le point de terminaison /descriptors de l’API Schema Registry vous permet de gérer par programmation les descripteurs XDM dans votre application d’expérience.
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: a3140d5216857ef41c885bbad8c69d91493b619d
+source-git-commit: 81b53d2bd84eacb32999b957bee9b5e9aa77d5f7
 workflow-type: tm+mt
 source-wordcount: '1900'
 ht-degree: 46%
@@ -417,7 +417,7 @@ Les descripteurs d’identité de référence fournissent un contexte de référ
 
 #### Descripteur de champ obsolète
 
-Vous pouvez [abandon d’un champ dans une ressource XDM personnalisée](../tutorials/field-deprecation.md#custom) en ajoutant une `meta:status` définie sur `deprecated` sur le champ en question. Toutefois, si vous souhaitez abandonner les champs fournis par les ressources XDM standard dans vos schémas, vous pouvez affecter un descripteur de champ obsolète au schéma en question pour obtenir le même effet. En utilisant la variable [correct `Accept` header](../tutorials/field-deprecation.md#verify-deprecation), vous pouvez ensuite afficher les champs standard obsolètes pour un schéma lors de sa recherche dans l’API.
+Vous pouvez [abandon d’un champ dans une ressource XDM personnalisée](../tutorials/field-deprecation-api.md#custom) en ajoutant une `meta:status` définie sur `deprecated` sur le champ en question. Toutefois, si vous souhaitez abandonner les champs fournis par les ressources XDM standard dans vos schémas, vous pouvez affecter un descripteur de champ obsolète au schéma en question pour obtenir le même effet. En utilisant la variable [correct `Accept` header](../tutorials/field-deprecation-api.md#verify-deprecation), vous pouvez ensuite afficher les champs standard obsolètes pour un schéma lors de sa recherche dans l’API.
 
 ```json
 {

@@ -4,10 +4,10 @@ user-guide-title: Aide du système de modèle de données d’expérience (XDM)
 breadcrumb-title: Guide de modèle de données d’expérience (XDM)
 user-guide-description: Utilisez les classes des modèles de données d’expérience (XDM) et les groupes de champs de schéma pour normaliser les données d’expérience.
 feature: Schemas
-source-git-commit: fda856051af104ca6363274d93ca65807f9881a3
+source-git-commit: 81b53d2bd84eacb32999b957bee9b5e9aa77d5f7
 workflow-type: tm+mt
-source-wordcount: '508'
-ht-degree: 83%
+source-wordcount: '518'
+ht-degree: 81%
 
 ---
 
@@ -193,7 +193,8 @@ ht-degree: 83%
    * [Ajout de champs spécifiques à un schéma (API)](./tutorials/specific-fields-api.md)
    * [Définition de champs personnalisés (API)](./tutorials/custom-fields-api.md)
    * [Ajout de valeurs suggérées à un champ (API)](tutorials/suggested-values.md)
-   * [Obsolescence d’un champ XDM](tutorials/field-deprecation.md)
+   * [Obsolescence d’un champ XDM dans l’interface utilisateur](tutorials/field-deprecation-ui.md)
+   * [Obsolescence d’un champ XDM dans l’API](tutorials/field-deprecation-api.md)
    * [Définir une relation de schéma dans l’interface utilisateur](tutorials/relationship-ui.md)
    * [Définir une relation de schéma dans l’API](tutorials/relationship-api.md)
    * [Définition d’une relation de schéma dans Real-Time CDP B2B Edition](tutorials/relationship-b2b.md)
