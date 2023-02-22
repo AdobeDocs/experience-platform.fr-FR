@@ -2,10 +2,10 @@
 title: Création dʼune liste Exchange pour une extension
 description: Découvrez comment ajouter votre extension au catalogue public dans Adobe Experience Platform.
 exl-id: 0395fc99-5e2b-46d6-a067-f8f167733e02
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: fcc586034317fb31122721fa9754b580c761a1da
 workflow-type: tm+mt
-source-wordcount: '1162'
-ht-degree: 100%
+source-wordcount: '1209'
+ht-degree: 82%
 
 ---
 
@@ -21,13 +21,17 @@ Adobe Experience Platform comporte un catalogue unique et unifié dans lequel 
 1. **Extensions privées** : il s’agit d’extensions terminées conçues pour la production, mais qui ont été développées par d’autres utilisateurs au sein de votre société et qui ne sont disponibles que pour les utilisateurs au sein de votre société.
 1. **Extensions de développement** : ces extensions sont en développement actif et ne sont disponibles qu’au sein de votre entreprise et uniquement sur une propriété spécifiquement désignée comme propriété de développement.
 
-En dehors des extensions du catalogue de produits, certaines extensions ont également des listes dans [Experience Cloud Exchange Marketplace](https://exchange.adobe.com/experiencecloud.experience-platform-launch.html#product).
+Les extensions du catalogue de produits ne sont pas répertoriées dans le catalogue de produits. Les extensions publiques ont également des listes dans le [Experience Cloud Exchange App Marketplace](https://exchange.adobe.com/apps/browse/ec).
 
-Ces listes permettent aux développeurs d’extensions de publier des descriptions de fonctionnalité, de fournir des liens vers la documentation et de commercialiser des extensions auprès des utilisateurs potentiels qui ne connaissent pas votre société ou les fonctionnalités de votre extension. Dans ce marché, votre extension comportera une liste publique qui pourra être consultée sans que l’utilisateur ne soit authentifié sur Platform.  De nombreux développeurs trouvent avantageux de développer une liste autorisée Exchange, mais cette étape n’est pas obligatoire.
+Ces listes permettent aux développeurs d’extensions de publier des descriptions de fonctionnalité, de fournir des liens vers la documentation et de commercialiser des extensions auprès des utilisateurs potentiels qui ne connaissent pas votre société ou les fonctionnalités de votre extension. Dans ce marché, votre extension comportera une liste publique qui pourra être consultée sans que l’utilisateur ne soit authentifié sur Platform. Pour les extensions publiques, la création de cette liste Exchange est une étape requise.
 
-Si vous ne disposez pas d’une société pour charger et tester votre package d’extension, vous devez vous inscrire au programme Exchange et commencer une liste.  Cela déclenchera la création d’un compte d’entreprise (cela prend du temps, vous recevrez un e-mail une fois cette opération terminée) que vous pourrez utiliser pour charger et tester votre extension.  Vous ne serez pas tenu de rendre la liste publique.
+>[!TIP]
+>
+>Lorsque votre liste Exchange est publiée, un lien est automatiquement ajouté au contenu de la liste, ce qui permet à vos clients et prospects de cliquer sur et `Connect with publisher` pour plus d’informations sur vos produits et services. Votre adresse électronique de contact ne s’affiche pas, car ces messages vous seront transférés par le système Exchange.
 
-Si vous disposez déjà d’un compte d’entreprise ou si vous ne prévoyez pas de terminer votre liste, vous pouvez ignorer le reste de cette étape et passer à [charger et tester votre extension](./upload-and-test.md).
+Si vous ne disposez pas d’une société pour charger et tester votre package d’extension, vous devez vous inscrire au programme Exchange et commencer une liste. Cela déclenchera la création d’un compte d’entreprise (cela prend du temps, vous recevrez un e-mail une fois cette opération terminée) que vous pourrez utiliser pour charger et tester votre extension. Là encore, les listes Exchange ne sont requises que pour les extensions publiques.
+
+Si vous disposez déjà d’un compte d’entreprise ou si vous n’avez pas besoin d’une liste Exchange (extensions privées uniquement), vous pouvez ignorer le reste de cette étape et passer à [téléchargement et test de votre extension](./upload-and-test.md).
 
 ## Créer une liste
 
@@ -39,16 +43,16 @@ Si vous disposez déjà d’un compte d’entreprise ou si vous ne prévoyez pas
 
 1. Connectez-vous au [site Exchange Partner](https://partners.adobe.com/exchangeprogram/experiencecloud). Une fois connecté, cliquez sur le lien **App Manager** en regard de votre nom.
 1. Sélectionnez lʼonglet **Créer une application**, puis sélectionnez **Créer une application** pour une solution personnalisée ou sélectionnez un modèle approprié.
-1. Fournissez les informations relatives à votre liste. Pour plus d’informations sur App Manager, consultez l’[article](https://adobeexchangeec.zendesk.com/hc/en-us/articles/360024197931) complet. La description de lʼextension doit renseigner précisément sur les fonctionnalités et lʼutilité de celle-ci. La description constitue votre espace marketing pour lʼapplication. Faites connaître votre extension ici au moyen de descriptions claires, de liens vers des pages de destination de votre site, des documents dʼaide ou des adresses e-mail de support, etc. Bien que lʼespace réservé pour lʼextension soit limité, votre liste Exchange vous offre lʼopportunité de promouvoir à la fois votre extension et votre société. Voici quelques suggestions pour mettre en valeur votre extension :
-   - **Icône d’application** : Assurez-vous que l’icône de la liste Exchange présente les dimensions appropriées, 512 x 512 pour png ou proportions 1:1 pour jpg.
+1. Fournissez les informations relatives à votre liste. Pour plus d’informations sur App Manager, consultez la documentation complète [article](https://adobeexchangeec.zendesk.com/hc/en-us/articles/360024197931). La description de lʼextension doit renseigner précisément sur les fonctionnalités et lʼutilité de celle-ci. La description constitue votre espace marketing pour lʼapplication. Faites connaître votre extension ici au moyen de descriptions claires, de liens vers des pages de destination de votre site, des documents dʼaide ou des adresses e-mail de support, etc. Bien que lʼespace réservé pour lʼextension soit limité, votre liste Exchange vous offre lʼopportunité de promouvoir à la fois votre extension et votre société. Voici quelques suggestions pour mettre en valeur votre extension :
+   - **Icône de l’application** - Assurez-vous que l’icône de la liste Exchange présente les dimensions appropriées, 512 x 512 pour png ou proportions 1:1 pour jpg.
 
       >[!NOTE]
       >
       >Il sʼagit dʼun format de fichier différent de celui que vous utilisez dans votre code dʼextension. L’extension elle-même contiendra un fichier svg en tant qu’[icône](../manifest.md).
 
-   - **Image en vedette** : captez lʼattention en utilisant une image qui, à elle seule, présentera votre marque et mettra en évidence votre application. L’image en vedette est celle qui s’affiche lorsqu’une personne partage un lien vers votre liste Exchange ou publie des articles à ce sujet sur les médias sociaux. Elle doit donc représenter fidèlement votre marque.
+   - **Image en vedette** - Retenez l’attention en utilisant une image autonome qui présentera votre marque et mettra en évidence votre application. L’image en vedette est celle qui s’affiche lorsqu’une personne partage un lien vers votre liste Exchange ou publie des articles à ce sujet sur les médias sociaux. Elle doit donc représenter fidèlement votre marque.
    - **Logo de l’éditeur de l’appli** : il s’agit du logo de votre entreprise. Vérifiez que l’icône a les dimensions appropriées, soit 1 280 x 720 ou 2 560 x 1 440 (16:9) au format png ou jpg.
-   - **Instructions de configuration** : informez les clients sur la manière de configurer votre extension Adobe Experience Platform. Assurez-vous qu’ils comprennent tous les paramètres requis et les étapes suivantes lorsque votre [vue de configuration](../configuration.md) apparaît immédiatement après l’installation de votre extension dans une propriété. 
+   - **Instructions de configuration** : informez les clients sur la manière de configurer votre extension Adobe Experience Platform. Assurez-vous qu’ils comprennent tous les paramètres requis et les étapes suivantes lorsque votre [vue de configuration](../configuration.md) apparaît immédiatement après l’installation de votre extension dans une propriété.
    - **Balises** : sur la première page de la modification de votre liste, veillez à inclure le mot « Launch » dans le champ « Balises personnalisées ». Votre extension apparaîtra alors dans les résultats de recherche de balises dans le marketplace Exchange :
       ![](../images/getting-started/custom-tags.jpg)
    - **Environnements de test** : lʼaccès aux solutions Adobe sʼeffectue via un compte Sandbox, au moyen duquel vous avez accès à une version fonctionnelle dʼAdobe Experience Platform. Ces comptes sandbox sont demandés lorsque vous créez votre liste d’applications. Dans la section **Connexions**, sélectionnez les connexions spécifiques relatives à l’application que vous avez créée (votre extension Balise) et lorsque vous appuyez sur **Enregistrer**, la demande d’environnement de test est générée si nécessaire.
