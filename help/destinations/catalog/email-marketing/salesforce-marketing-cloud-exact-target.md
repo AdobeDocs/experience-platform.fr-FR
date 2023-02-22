@@ -3,10 +3,10 @@ keywords: e-mail;e-mail;destinations d’e-mail;salesforce;api salesforce destin
 title: (API) Connexion à Salesforce Marketing Cloud
 description: La destination de Marketing Cloud Salesforce (anciennement connue sous le nom d’ExactTarget) vous permet d’exporter les données de votre compte et de les activer dans le Marketing Cloud Salesforce pour répondre aux besoins de votre entreprise.
 exl-id: 0cf068e6-8a0a-4292-a7ec-c40508846e27
-source-git-commit: d75c272b3c86e25d3f162c630963c10e8206bd9d
+source-git-commit: 5a9b7af3b009f8529f2e473b17f77c54de35003e
 workflow-type: tm+mt
-source-wordcount: '2434'
-ht-degree: 29%
+source-wordcount: '2464'
+ht-degree: 28%
 
 ---
 
@@ -44,7 +44,9 @@ Notez les conditions préalables suivantes pour exporter des données de Platfor
 
 #### Vous devez avoir un compte [!DNL Salesforce Marketing Cloud]. {#prerequisites-account}
 
-Contactez votre [!DNL Salesforce Account Executive] pour vous abonner au [!DNL Salesforce Marketing Cloud Account Engagement] produit si vous ne l’avez pas déjà.
+A [!DNL Salesforce Marketing Cloud] avec un abonnement au [Engagement du compte Marketing Cloud](https://www.salesforce.com/products/marketing-cloud/marketing-automation/) est obligatoire pour continuer.
+
+Contacter pour [[!DNL Salesforce] Assistance](https://www.salesforce.com/company/contact-us/?d=cta-glob-footer-10) si vous n’avez pas de [!DNL Salesforce Marketing Cloud] ou votre compte ne contient pas le [!DNL Marketing Cloud Account Engagement] abonnement au produit.
 
 #### Création d’attributs dans [!DNL Salesforce Marketing Cloud] {#prerequisites-attribute}
 
