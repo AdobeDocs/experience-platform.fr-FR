@@ -4,10 +4,10 @@ user-guide-title: Guide des destinations
 user-guide-description: Activez vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
 description: Ce document répertorie la table des matières des destinations Adobe Experience Platform
 feature: Destinations
-source-git-commit: 25f1b2197e5b10b04668d16bff3a6ce48cfad5fc
+source-git-commit: 593179cb919d464084973d154098c6fdffcc3471
 workflow-type: tm+mt
-source-wordcount: '1016'
-ht-degree: 96%
+source-wordcount: '1031'
+ht-degree: 95%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 96%
 
 * [Présentation des destinations](./home.md)
 * [Types et catégories de destination](./destination-types.md)
-* [Barrières de sécurité des destinations (activation)](./guardrails.md)
+* [Mécanismes de sécurisation des destinations (activation)](./guardrails.md)
 * Fonctionnement des destinations {#how-destinations-work}
    * [Paramètres d’exportation configurables et communs des destinations](./how-destinations-work/destinations-configurations.md)
    * [Comportement d’exportation de profils pour différents types de destinations](./how-destinations-work/profile-export-behavior.md)
@@ -40,6 +40,7 @@ ht-degree: 96%
       * [Configurez des destinations de personnalisation pour la personnalisation de la même page et de la page suivante.](./ui/configure-personalization-destinations.md)
       * [(Version bêta) Exporter des fichiers à la demande vers des destinations par lots à l’aide de l’interface utilisateur Experience Platform](./ui/export-file-now.md)
       * [(Version bêta) Exporter des jeux de données à l’aide de l’interface utilisateur Experience Platform](./ui/export-datasets.md)
+      * [(Version bêta) Utilisation de l’attribut XDM de l’heure de la dernière qualification dans les nouvelles destinations de stockage dans le cloud bêta](./ui/activate-last-qualification-time.md)
    * [Afficher les détails de la destination](./ui/destination-details-page.md)
    * [Mettre à jour les comptes de destination](./ui/update-accounts.md)
    * [Supprimer les comptes de destination](./ui/delete-destination-account.md)
