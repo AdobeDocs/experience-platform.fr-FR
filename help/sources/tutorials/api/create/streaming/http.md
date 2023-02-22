@@ -3,10 +3,10 @@ keywords: Experience Platform;accueil;rubriques les plus consultées;connexion e
 title: Création d’une connexion en continu d’API HTTP à l’aide de l’API Flow Service
 description: Ce tutoriel explique comment créer une connexion en continu à l’aide de la source d’API HTTP pour les données brutes et XDM à l’aide de l’API Flow Service.
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 6b78ed695bca5912c9af4371a8423fdcd7471bde
 workflow-type: tm+mt
-source-wordcount: '1472'
-ht-degree: 41%
+source-wordcount: '1496'
+ht-degree: 40%
 
 ---
 
@@ -208,7 +208,7 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
 | Propriété | Description |
 | -------- | ----------- |
 | `auth.params.sourceId` | Identifiant supplémentaire pouvant être utilisé lors de la création d’une connexion de base authentifiée. Ce paramètre est facultatif et utilisera la même valeur que la variable `name` , s’il n’est pas fourni. |
-| `auth.params.authenticationRequired` | Le paramètre qui spécifie que la connexion en continu créée |
+| `auth.params.authenticationRequired` | Ce paramètre indique si la connexion en continu nécessite une authentification ou non. If `authenticationRequired` est défini sur `true` l’authentification doit ensuite être fournie pour la connexion en continu. If `authenticationRequired` est défini sur `false` l’authentification n’est alors pas requise. |
 
 **Réponse**
 

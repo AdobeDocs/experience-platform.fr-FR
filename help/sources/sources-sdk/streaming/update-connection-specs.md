@@ -3,7 +3,7 @@ title: Mise à jour d’une spécification de connexion pour le SDK de diffusion
 description: Le document suivant décrit les étapes à suivre pour établir une spécification de connexion à l’aide de l’API Flow Service pour les sources en libre-service (SDK de diffusion en continu).
 hide: true
 hidefromtoc: true
-source-git-commit: 4254e5373586399be35f4a8b8c40c83b7d60afa4
+source-git-commit: 6b78ed695bca5912c9af4371a8423fdcd7471bde
 workflow-type: tm+mt
 source-wordcount: '143'
 ht-degree: 4%
@@ -73,6 +73,7 @@ PUT -X GET \
         "providerId": "521eee4d-8cbe-4906-bb48-fb6bd4450033",
         "sourceSpec": {
           "attributes": {
+            "authRequired": false,
             "uiAttributes": {
               "documentationLink": "http://www.adobe.com/go/understanding-data-streaming-ingestion-en",
               "isSource": true,
@@ -128,6 +129,7 @@ Un appel réussi renvoie les détails de la spécification de connexion mis à j
       "type": "generic-streaming",
       "sourceSpec": {
         "attributes": {
+          "authRequired": false,
           "uiAttributes": {
             "documentationLink": "http://www.adobe.com/go/understanding-data-streaming-ingestion-en",
             "isSource": true,

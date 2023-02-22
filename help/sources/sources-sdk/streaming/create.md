@@ -3,7 +3,7 @@ title: Création d’une spécification de connexion pour le SDK de diffusion en
 description: Le document suivant décrit les étapes à suivre pour créer une spécification de connexion à l’aide de l’API Flow Service et intégrer une nouvelle source par le biais de sources en libre-service.
 hide: true
 hidefromtoc: true
-source-git-commit: f91ebcf8e27fd7d9019c5bb6d270b89fd08785ef
+source-git-commit: 6b78ed695bca5912c9af4371a8423fdcd7471bde
 workflow-type: tm+mt
 source-wordcount: '751'
 ht-degree: 38%
@@ -75,9 +75,8 @@ Une fois que vous avez rassemblé les artefacts requis, copiez et collez le mod�
       }
     }
   },
-  "authSpec": [
-
-  ],
+  "authSpec": [],
+  "name": "generic-streaming",
   "permissionsInfo": {
     "view": [
       {
@@ -98,8 +97,10 @@ Une fois que vous avez rassemblé les artefacts requis, copiez et collez le mod�
       }
     ]
   },
+  "providerId": "521eee4d-8cbe-4906-bb48-fb6bd4450033",
   "sourceSpec": {
     "attributes": {
+      "authRequired": false,
       "uiAttributes": {
         "documentationLink": "http://www.adobe.com/go/understanding-data-streaming-ingestion-en",
         "isSource": true,
@@ -108,16 +109,16 @@ Une fois que vous avez rassemblé les artefacts requis, copiez et collez le mod�
           "key": "streaming"
         },
         "icon": {
-          "key": "Generic-Streaming"
+          "key": "generic"
         },
         "description": {
-          "text": "Generic Streaming Connector"
+          "text": "Generic Streaming For Authentication Testing 2"
         },
         "label": {
-          "text": "Generic"
+          "text": "Generic Streaming For Authentication Testing 2"
         },
         "frequency": {
-          "text": "streaming"
+          "text": "Generic Streaming"
         }
       }
     }
@@ -253,6 +254,7 @@ Une réponse réussie renvoie la spécification de connexion nouvellement créé
       "type": "generic-streaming",
       "sourceSpec": {
         "attributes": {
+          "authRequired": false,
           "uiAttributes": {
             "documentationLink": "http://www.adobe.com/go/understanding-data-streaming-ingestion-en",
             "isSource": true,
