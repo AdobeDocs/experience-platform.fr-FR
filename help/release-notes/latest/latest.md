@@ -1,10 +1,10 @@
 ---
 title: Notes de mise à jour d’Adobe Experience Platform
 description: Notes de mise à jour de février 2023 pour Adobe Experience Platform.
-source-git-commit: 2084583823acb5d5d16ea5bfdbfff98a7c5ac490
+source-git-commit: 66ca8d3972045cffe4a1614f638546f4e7838680
 workflow-type: tm+mt
-source-wordcount: '952'
-ht-degree: 36%
+source-wordcount: '1137'
+ht-degree: 37%
 
 ---
 
@@ -45,10 +45,31 @@ Pour des informations plus générales sur les destinations, consultez la [prés
 XDM est une spécification Open Source qui fournit des structures et des définitions communes (schémas) pour les données introduites dans Adobe Experience Platform. En adhérant aux normes XDM, toutes les données d’expérience client peuvent être intégrées dans une représentation commune afin de fournir des informations plus rapidement et de manière plus intégrée. Vous pouvez obtenir des informations précieuses à partir des actions des clients, définir des types de clients par le biais de segments et utiliser les attributs du client à des fins de personnalisation.
 
 **Fonctionnalités mises à jour**
-&#x200B; | Fonctionnalité | Description | | — | — | | Dépréciation des champs via l’interface utilisateur | Vous pouvez désormais abandonner les champs de vos schémas une fois les données ingérées. L’obsolescence des champs XDM vous permet de supprimer des champs de l’interface utilisateur tout en les conservant pour les utiliser. Si nécessaire, vous pouvez afficher à nouveau les champs obsolètes. Les segments, requêtes ou solutions en aval qui référencent ces champs s’exécuteront normalement. |
+&#x200B; | Fonctionnalité | Description | | — | — | | Dépréciation des champs via l’interface utilisateur | Vous pouvez désormais [abandonner les champs de vos schémas une fois les données ingérées](../../xdm/tutorials/field-deprecation-ui.md). L’obsolescence des champs XDM vous permet de supprimer des champs de l’interface utilisateur tout en les conservant pour les utiliser. Si nécessaire, vous pouvez afficher à nouveau les champs obsolètes. Les segments, requêtes ou solutions en aval qui référencent ces champs s’exécuteront normalement. |
 
-{style=&quot;table-layout:auto&quot;} &#x200B; Pour plus d’informations sur XDM dans Platform, lisez la section [Présentation du système XDM](../../xdm/home.md). &#x200B;
-<!-- Field deprecation: https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/field-deprecation.html -->
+{style=&quot;table-layout:auto&quot;}
+
+**Nouveaux composants XDM**
+
+| Type de composant | Nom | Description |
+| --- | --- | --- |
+| Classe | [[!UICONTROL Profil XDM Individual Prospect]](https://github.com/adobe/xdm/pull/1669/files) | La classe XDM Individual Prospect Profile inclut des identifiants fournis par les partenaires. |
+
+{style=&quot;table-layout:auto&quot;}
+
+**Composants XDM mis à jour**
+
+| Type de composant | Nom | Description |
+| --- | --- | --- |
+| Groupe de champs | [!UICONTROL Contraintes de limitation de fréquence] | Le [!UICONTROL Contraintes de limitation de fréquence] le groupe de champs a été [mise à jour afin de prendre en charge les événements de répétition et personnalisés](https://github.com/adobe/xdm/pull/1641/files). |
+| Type de données | [!UICONTROL Référent web] | Les propriétés du référent web ont été [mis à jour pour inclure `xdm:linkName` et `xdm:linkRegion`](https://github.com/adobe/xdm/pull/1666/files). Respectivement, il s’agit du nom et de la région de l’élément de HTML sélectionné sur la page précédente. |
+| Groupe de champs | [!UICONTROL Adobe CJM ExperienceEvent - informations sur l’interaction du message] | [Le [!UICONTROL URL du dispositif de suivi] champ ajouté](https://github.com/adobe/xdm/pull/1665/files) au [!UICONTROL Adobe de CJM ExperienceEvent]. Ce dispositif de suivi fournit l’URL sélectionnée par l’utilisateur. |
+| Groupe de champs | [!UICONTROL Adobe CJM ExperienceEvent - Détails de l’interaction du message] | [Le champ vide `meta:enum` La propriété a été supprimée.](https://github.com/adobe/xdm/pull/1668/files) de l’URL [!UICONTROL Type de suivi] champ . |
+| Type de données | [!UICONTROL Informations sur les médias] | [Le modèle regex de `videoSegment` dans [!UICONTROL Informations sur les médias] datatype a été supprimé.](https://github.com/adobe/xdm/pull/1667/files). |
+
+{style=&quot;table-layout:auto&quot;}
+
+Pour plus d’informations sur XDM dans Platform, lisez le [Présentation du système XDM](../../xdm/home.md).
 
 ## Query Service {#query-service}
 
