@@ -1,9 +1,9 @@
 ---
 title: Notes de mise à jour d’Adobe Experience Platform
 description: Notes de mise à jour de février 2023 pour Adobe Experience Platform.
-source-git-commit: ff276de35ca2aaeec168f4c4386d849f3352ad57
+source-git-commit: 2084583823acb5d5d16ea5bfdbfff98a7c5ac490
 workflow-type: tm+mt
-source-wordcount: '987'
+source-wordcount: '952'
 ht-degree: 36%
 
 ---
@@ -17,7 +17,7 @@ Mises à jour des fonctionnalités existantes dans Adobe Experience Platform 
 - [[!DNL Destinations]](#destinations)
 - [Modèle de données d’expérience (XDM)](#xdm)
 - [Query Service](#query-service)
-- [Comptes associés dans Real-Time CDP B2B Edition](#related-accounts)
+- [Édition B2B de Real-Time Customer Data Platform](#b2b)
 - [Sources](#sources)
 
 ## [!DNL Destinations] {#destinations}
@@ -47,7 +47,7 @@ XDM est une spécification Open Source qui fournit des structures et des défini
 **Fonctionnalités mises à jour**
 &#x200B; | Fonctionnalité | Description | | — | — | | Dépréciation des champs via l’interface utilisateur | Vous pouvez désormais abandonner les champs de vos schémas une fois les données ingérées. L’obsolescence des champs XDM vous permet de supprimer des champs de l’interface utilisateur tout en les conservant pour les utiliser. Si nécessaire, vous pouvez afficher à nouveau les champs obsolètes. Les segments, requêtes ou solutions en aval qui référencent ces champs s’exécuteront normalement. |
 
-&#x200B; Pour plus d’informations sur XDM dans Platform, lisez la section [Présentation du système XDM](../../xdm/home.md). &#x200B;
+{style=&quot;table-layout:auto&quot;} &#x200B; Pour plus d’informations sur XDM dans Platform, lisez la section [Présentation du système XDM](../../xdm/home.md). &#x200B;
 <!-- Field deprecation: https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/field-deprecation.html -->
 
 ## Query Service {#query-service}
@@ -57,20 +57,16 @@ Query Service vous permet d’utiliser le langage SQL standard pour interroger l
 **Fonctionnalités mises à jour**
 &#x200B; | Fonctionnalité | Description | | — | — | | Activation des jeux de données pour les profils avec SQL | Utilisez des LIBELLÉS dans les requêtes CTAS pour rendre un jeu de données &quot;profile enabled&quot;, ou utilisez ALTER pour mettre à jour les jeux de données existants à activer pour le profil. | | Surveillance des requêtes planifiées | Utilisez l’onglet Requêtes planifiées pour trouver des informations importantes sur les exécutions de requête et vous abonner aux alertes. Surveillez les requêtes pour connaître les détails du planning, l’état et les messages/codes d’erreur en cas d’échec.  | | Active/désactive la fonction de saisie automatique | Éliminez certaines commandes de métadonnées et améliorez les temps de traitement en activant la fonction de saisie semi-automatique de l’éditeur de requêtes. Cette fonctionnalité suggère automatiquement les mots-clés SQL potentiels et les détails du tableau pour la requête au fur et à mesure que vous l’écrivez. | | Exemples de jeux de données | Spécifiez un taux d’échantillonnage dans votre requête et utilisez des exemples de jeux de données pour créer un échantillon aléatoire uniforme ou créez des exemples conditionnels en fonction de critères spécifiques. |
 
-&#x200B; Pour plus d’informations sur Query Services, reportez-vous à la section [Présentation de Query Service](../../query-service/home.md). &#x200B;
+{style=&quot;table-layout:auto&quot;} &#x200B; Pour plus d’informations sur Query Services, reportez-vous à la section [Présentation de Query Service](../../query-service/home.md). &#x200B;
 <!-- Links for QS feature docs after release day: -->
 <!-- Enable datasets for profile with SQL link: https://experienceleague.adobe.com/docs/experience-platform/query/sql/syntax.html#create-table-as-select -->
 <!-- Monitor scheduled queries link: https://experienceleague.adobe.com/docs/experience-platform/query/monitor-queries.html  -->
 <!-- Toggle auto-complete feature link: https://experienceleague.adobe.com/docs/experience-platform/query/ui/user-guide.html#auto-complete -->
 <!-- dataset samples: https://experienceleague.adobe.com/docs/experience-platform/query/essential-concepts/dataset-samples.html -->
 
-## Comptes associés dans Real-Time CDP B2B Edition {#related-accounts}
+## Édition B2B de Real-Time Customer Data Platform {#b2b}
 
->[!NOTE]
->
->La fonctionnalité Comptes associés est disponible uniquement pour les clients de Real-Time CDP B2B Edition.
-
-Comptes associés, [!DNL Real-Time CDP B2B] vous permet d’afficher la liste des comptes similaires au compte que vous parcourez. Vous pouvez inclure les comptes associés dans vos définitions de segment pour élargir votre portée ou appliquer des critères plus larges dans vos segments.
+Basée sur Real-time Customer Data Platform (Real-time CDP), l’édition B2B de Real-time CDP a été conçue pour les professionnels du marketing travaillant dans un modèle de service business-to-business. Elle rassemble des données provenant de sources multiples et les combine en une vue unique des profils de comptes et d’utilisateurs. Ces données unifiées permettent aux professionnels du marketing de cibler précisément des audiences spécifiques afin de stimuler leur engagement sur tous les canaux disponibles.
 
 **Fonctionnalités mises à jour**
 
@@ -79,12 +75,6 @@ Comptes associés, [!DNL Real-Time CDP B2B] vous permet d’afficher la liste de
 | Activation du service de comptes associés | La nouvelle fonction de basculement vous permet d’activer le service de comptes associé sur votre compte. Pour plus d’informations, consultez le guide sur [activation du service de comptes associé](../../rtcdp/b2b-ai-ml-services/related-accounts.md#enable). |
 
 {style=&quot;table-layout:auto&quot;}
-
-Pour en savoir plus sur les fonctions de comptes connexes, consultez les pages de documentation suivantes :
-
-- [Présentation des comptes associés dans Real-Time CDP B2B Edition](../../rtcdp/b2b-ai-ml-services/related-accounts.md)
-- [Section « Comptes associés » du guide de l’interface utilisateur du profil de compte](../../rtcdp/accounts/account-profile-ui-guide.md#related-accounts-tab)
-- [Comment utiliser les comptes associés dans les définitions de segment ?](../../rtcdp/segmentation/b2b.md#related-accounts)
 
 Pour en savoir plus sur l’édition B2B de Real-Time CDP, lisez le [Présentation de Real-Time CDP B2B Edition](../../rtcdp/overview.md).
 
