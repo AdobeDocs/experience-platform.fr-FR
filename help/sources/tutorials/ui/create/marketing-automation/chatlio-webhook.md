@@ -2,10 +2,10 @@
 title: Création d’une connexion à la source de Chrome dans l’interface utilisateur
 description: Découvrez comment créer une connexion source Chatlio à l’aide de l’interface utilisateur de Adobe Experience Platform.
 badge: "Version bêta"
-source-git-commit: 4a2ed14a55736a9dde1adbb8c7996a5659216ec8
+source-git-commit: c35daa60db315f1ed04ed6424464f1ae7bfb4243
 workflow-type: tm+mt
 source-wordcount: '1168'
-ht-degree: 20%
+ht-degree: 22%
 
 ---
 
@@ -111,7 +111,7 @@ L’écran de **[!UICONTROL Révision]** s’affiche, vous permettant dʼexamine
 * **[!UICONTROL Connexion]** : affiche le type de source, le chemin d’accès correspondant au fichier source choisi et le nombre de colonnes au sein de ce fichier source.
 * **[!UICONTROL Attribuer des champs de jeu de données et de mappage]** : affiche le jeu de données dans lequel les données sources sont ingérées, y compris le schéma auquel le jeu de données se conforme.
 
-Une fois que vous avez examiné votre flux de données, cliquez sur **[!UICONTROL Terminer]** et accorder un certain temps pour la création du flux de données.
+Une fois que vous avez vérifié votre flux de données, sélectionnez **[!UICONTROL Terminer]** et patientez quelques instants le temps que le flux de données soit créé.
 
 ![L’étape de révision du processus des sources.](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/review.png)
 

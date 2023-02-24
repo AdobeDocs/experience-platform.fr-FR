@@ -4,9 +4,9 @@ user-guide-title: Aide sur les connecteurs source d’Adobe Experience Platfor
 breadcrumb-title: Guide des connecteurs sources
 user-guide-description: Ingérez des données à partir de diverses sources. Découvrez comment structurer, étiqueter et améliorer les données déjà ingérées.
 feature: Sources
-source-git-commit: e880a643150de5cc2d2fb3948b15888da54f7244
+source-git-commit: 0108d0dcb130e17007faeaa08f97e5c13d71578f
 workflow-type: tm+mt
-source-wordcount: '937'
+source-wordcount: '940'
 ht-degree: 91%
 
 ---
@@ -39,6 +39,7 @@ ht-degree: 91%
       - [Connecteur Google Ads](connectors/advertising/ads.md)
    - Analytics {#analytics}
       - [Connecteur Mixpanel](connectors/analytics/mixpanel.md)
+      - [Pendo](connectors/analytics/pendo-webhook.md)
    - Stockage dans le cloud {#cloud-storage}
       - [Connecteur Amazon Kinesis](connectors/cloud-storage/kinesis.md)
       - [Connecteur Amazon S3](connectors/cloud-storage/s3.md)
@@ -113,6 +114,7 @@ ht-degree: 91%
          - [Google Ads](tutorials/api/create/advertising/ads.md)
       - Analytics {#analytics}
          - [Mixpanel](tutorials/api/create/analytics/mixpanel.md)
+         - [Pendo](tutorials/api/create/analytics/pendo-webhook.md)
       - Stockage dans le cloud {#cloud-storage}
          - [Amazon Kinesis](tutorials/api/create/cloud-storage/kinesis.md)
          - [Amazon S3](tutorials/api/create/cloud-storage/s3.md)
@@ -226,6 +228,7 @@ ht-degree: 91%
          - [Google Ads](tutorials/ui/create/advertising/ads.md)
       - Analytics {#analytics}
          - [Mixpanel](tutorials/ui/create/analytics/mixpanel.md)
+         - [Pendo](tutorials/ui/create/analytics/pendo-webhook.md)
       - Stockage dans le cloud {#cloud-storage}
          - [Amazon Kinesis](tutorials/ui/create/cloud-storage/kinesis.md)
          - [Amazon S3](tutorials/ui/create/cloud-storage/s3.md)
