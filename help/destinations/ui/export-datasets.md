@@ -3,10 +3,10 @@ title: (Version bêta) Exporter des jeux de données vers des destinations d’e
 type: Tutorial
 description: Découvrez comment exporter des jeux de données d’Adobe Experience Platform vers l’emplacement d’espace de stockage de votre choix.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: a9887535b12b8c4aeb39bb5a6646da88db4f0308
-workflow-type: ht
-source-wordcount: '1309'
-ht-degree: 100%
+source-git-commit: aebb1494a6ed667730997048d30a2ca3e00f9452
+workflow-type: tm+mt
+source-wordcount: '1335'
+ht-degree: 96%
 
 ---
 
@@ -19,7 +19,9 @@ ht-degree: 100%
 >* Cette fonctionnalité est disponible pour les clients qui ont acheté les packages Real-Time CDP Prime et Ultimate. Pour plus dʼinformations, contactez votre représentant commercial Adobe.
 
 
-Cet article explique le processus obligatoire pour l’exportation de [jeux de données](/help/catalog/datasets/overview.md) d’Adobe Experience Platform à l’emplacement de l’espace de stockage de votre choix, comme [!DNL Amazon S3], les emplacements SFTP ou [!DNL Google Cloud Storage].
+Cet article explique le workflow requis pour l’exportation [jeux de données](/help/catalog/datasets/overview.md) de Adobe Experience Platform à l’emplacement de stockage de votre choix dans le cloud, par exemple [!DNL Amazon S3], emplacements SFTP ou [!DNL Google Cloud Storage] en utilisant l’interface utilisateur de l’Experience Platform.
+
+Vous pouvez également utiliser les API Experience Platform pour exporter des jeux de données. Lisez le [tutoriel sur l’API d’exportation de jeux de données](/help/destinations/api/export-datasets.md) pour plus d’informations.
 
 ## Quand activer des segments ou exporter des jeux de données {#when-to-activate-segments-or-activate-datasets}
 
