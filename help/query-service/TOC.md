@@ -4,10 +4,10 @@ user-guide-title: Aide d’Adobe Experience Platform Query Service
 breadcrumb-title: Guide de Query Service
 user-guide-description: Utilisez le langage SQL standard pour interroger les données du lac de données dans Experience Platform.
 feature: Queries
-source-git-commit: 3c91e39958a9cba001ae0f0ac70f920263fa041d
+source-git-commit: 135691e0d2b77cc8e2581ff3a614fe26c7969cdd
 workflow-type: tm+mt
-source-wordcount: '267'
-ht-degree: 70%
+source-wordcount: '270'
+ht-degree: 69%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 70%
 
 - [Présentation de Query Service](home.md)
 - [Package Query Service](packages.md)
-- [Barrières de sécurité de Query Service](guardrails.md)
+- [Mécanismes de sécurisation de Query Service](guardrails.md)
 - Prise en main {#get-started}
    - [Conditions préalables](get-started/prerequisites.md)
 - Data Distiller {#data-distiller}
@@ -27,6 +27,7 @@ ht-degree: 70%
       - [Guide du modèle de données des insights de reporting](data-distiller/query-accelerated-store/reporting-insights-data-model.md)
    - Attributs dérivés {#derived-attributes}
       - [Présentation](data-distiller/derived-attributes/overview.md)
+      - [Flux SQL transparent](data-distiller/derived-attributes/seamless-sql-flow.md)
       - [Création d’attributs dérivés basés sur des déciles](data-distiller/derived-attributes/decile-based-derived-attributes.md)
 - Cas d’utilisation {#use-cases}
    - [Navigation abandonnée](use-cases/abandoned-browse.md)

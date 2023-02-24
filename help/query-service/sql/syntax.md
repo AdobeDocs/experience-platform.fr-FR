@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Syntaxe SQL dans Query Service
 description: Ce document présente la syntaxe SQL prise en charge par Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: c26a60f0d0fc9f5b7253851baf73e1a3edfffe0f
+source-git-commit: 3907efa2e8c20671e283c1e5834fc7224ee12f9e
 workflow-type: tm+mt
-source-wordcount: '3355'
+source-wordcount: '3406'
 ht-degree: 8%
 
 ---
@@ -173,18 +173,19 @@ SELECT statement 1
 SELECT statement 2
 ```
 
-### CREATE TABLE AS SELECT
+### CREATE TABLE AS SELECT {#create-table-as-select}
 
 La syntaxe suivante définit une `CREATE TABLE AS SELECT` Requête (CTAS) :
 
 ```sql
-CREATE TABLE table_name [ WITH (schema='target_schema_title', rowvalidation='false') ] AS (select_query)
+CREATE TABLE table_name [ WITH (schema='target_schema_title', rowvalidation='false', label='PROFILE') ] AS (select_query)
 ```
 
 | Paramètres | Description |
 | ----- | ----- |
 | `schema` | Titre du schéma XDM. Utilisez cette clause uniquement si vous souhaitez utiliser un schéma XDM existant pour le nouveau jeu de données créé par la requête CTAS. |
 | `rowvalidation` | (Facultatif) Indique si l’utilisateur souhaite une validation au niveau des lignes de tous les nouveaux lots ingérés pour le jeu de données nouvellement créé. La valeur par défaut est `true`. |
+| `label` | Lorsque vous créez un jeu de données avec une requête CTAS, utilisez ce libellé avec la valeur de `profile` pour étiqueter votre jeu de données comme étant activé pour profile. Cela signifie que votre jeu de données est automatiquement marqué pour le profil lors de sa création. Pour plus d’informations sur l’utilisation de la fonction `label`. |
 | `select_query` | A `SELECT` . La syntaxe de la variable `SELECT` La requête se trouve dans la variable [Section SELECT query](#select-queries). |
 
 **Exemple**
@@ -192,7 +193,7 @@ CREATE TABLE table_name [ WITH (schema='target_schema_title', rowvalidation='fal
 ```sql
 CREATE TABLE Chairs AS (SELECT color, count(*) AS no_of_chairs FROM Inventory i WHERE i.type=="chair" GROUP BY i.color)
 
-CREATE TABLE Chairs WITH (schema='target schema title') AS (SELECT color, count(*) AS no_of_chairs FROM Inventory i WHERE i.type=="chair" GROUP BY i.color)
+CREATE TABLE Chairs WITH (schema='target schema title', label='PROFILE') AS (SELECT color, count(*) AS no_of_chairs FROM Inventory i WHERE i.type=="chair" GROUP BY i.color)
 
 CREATE TABLE Chairs AS (SELECT color FROM Inventory SNAPSHOT SINCE 123)
 ```
