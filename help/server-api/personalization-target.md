@@ -2,9 +2,9 @@
 title: Personnalisation via Adobe Target
 description: Découvrez comment utiliser l’API serveur pour diffuser et générer des expériences personnalisées créées dans Adobe Target.
 exl-id: c9e2f7ef-5022-4dc4-82b4-ecc210f27270
-source-git-commit: 3730a9a20644291db844ecfad88355daa4a1cba7
+source-git-commit: 091d5440d7346861b7c882fa0a17bd03d528e438
 workflow-type: tm+mt
-source-wordcount: '744'
+source-wordcount: '620'
 ht-degree: 3%
 
 ---
@@ -17,7 +17,7 @@ L’API Edge Network Server peut fournir et générer des expériences personnal
 
 >[!IMPORTANT]
 >
->Expériences de personnalisation créées par l’intermédiaire de la fonction [Compositeur d’expérience visuelle de Target (VEC)](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=en) ne sont pas entièrement pris en charge par l’API serveur. L’API serveur peut **retrieve** les activités créées par le compositeur d’expérience visuelle, mais l’API du serveur ne peut pas **render** activités créées par le compositeur d’expérience visuelle. Si vous souhaitez effectuer le rendu des activités créées par VEC, implémentez . [personnalisation hybride](../edge/personalization/hybrid-personalization.md) à l’aide du SDK Web et de l’API Edge Network Server.
+>Expériences de personnalisation créées par l’intermédiaire de la fonction [Compositeur d’expérience visuelle de Target (VEC)](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=fr) ne sont pas entièrement pris en charge par l’API serveur. L’API serveur peut **retrieve** les activités créées par le compositeur d’expérience visuelle, mais l’API du serveur ne peut pas **render** activités créées par le compositeur d’expérience visuelle. Si vous souhaitez effectuer le rendu des activités créées par VEC, implémentez . [personnalisation hybride](../edge/personalization/hybrid-personalization.md) à l’aide du SDK Web et de l’API Edge Network Server.
 
 ## Configuration de votre flux de données {#configure-your-datastream}
 
@@ -28,15 +28,6 @@ Voir [guide sur l’ajout de services à un flux de données](../edge/datastream
 Lors de la configuration de votre flux de données, vous pouvez (éventuellement) fournir des valeurs pour [!DNL Property Token], [!DNL Target Environment ID], et [!DNL Target Third Party ID Namespace].
 
 ![Image de l’interface utilisateur affichant l’écran de configuration du service de flux de données, avec Adobe Target sélectionné](assets/target-datastream.png)
-
-Vous pouvez choisir parmi les options suivantes : [!DNL Analytics Logging] options :
-
-* **[!DNL Server Side]**: Il s’agit de l’option par défaut pour [[!DNL A4T]](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=fr). Lorsque cette option est sélectionnée, chaque fois que le contenu de personnalisation est renvoyé par Target, la variable [!DNL A4T] Les données sont automatiquement envoyées à Analytics, en fonction de la réponse du moteur de personnalisation Target.
-* **[!DNL Client Side]**: Lorsque cette option est sélectionnée, chaque fois que le contenu de personnalisation est renvoyé par Target, la variable [!DNL A4T] Les données sont renvoyées à l’application appelante. Si vous avez l’intention d’enregistrer ces données dans Analytics, vous devez vous assurer qu’elles sont signalées lors d’un appel ultérieur à [!DNL Analytics].
-
-   >[!IMPORTANT]
-   >
-   >En plus de la sélection **[!UICONTROL Côté client]** dans la configuration de Target, vous devez également désactiver Analytics pour que le réseau Edge renvoie la variable [!DNL A4T] renvoie les informations à la réponse.
 
 
 ## Paramètres personnalisés {#custom-parameters}
