@@ -2,9 +2,9 @@
 title: Création d’une connexion source Customer.io et d’un flux de données dans l’interface utilisateur
 description: Découvrez comment créer une connexion source Customer.io à l’aide de l’interface utilisateur de Adobe Experience Platform.
 badge: "Version bêta"
-source-git-commit: 7ec7900f8a2fe3d7ad63ac061f286657c4a6b4d8
+source-git-commit: f2f3279b5c68cd636ca7da0fe2221e1b0a94fbad
 workflow-type: tm+mt
-source-wordcount: '1231'
+source-wordcount: '1233'
 ht-degree: 20%
 
 ---
@@ -64,13 +64,13 @@ Dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Sources]
 
 Utilisez la variable *[!UICONTROL Catégories]* pour filtrer les sources par catégorie. Vous pouvez également saisir un nom de source dans la barre de recherche pour trouver une source spécifique dans le catalogue.
 
-Accédez au [!UICONTROL Automatisation du marketing] pour afficher la catégorie [!DNL Customer.io] carte source. Pour commencer, sélectionnez [!UICONTROL Ajouter des données].
+Accédez au [!UICONTROL Automatisation du marketing] pour afficher la catégorie [!DNL Customer.io] carte source. Pour commencer, sélectionnez **[!UICONTROL Ajouter des données]**.
 
 ![Copie d’écran de l’interface utilisateur de Platform pour le catalogue avec carte Customer.io](../../../../images/tutorials/create/marketing-automation/customerio-webhook/catalog.png)
 
 ## Sélectionner les données {#select-data}
 
-Le **[!UICONTROL Sélectionner des données]** s’affiche, fournissant une interface vous permettant de sélectionner les données que vous apportez à Platform.
+Le **[!UICONTROL Sélectionner des données]** s’affiche, fournissant une interface vous permettant de sélectionner les données à importer dans Platform.
 
 * La partie gauche de l’interface est un navigateur qui vous permet d’afficher les flux de données disponibles dans votre compte ;
 * La partie droite de l’interface vous permet de prévisualiser jusqu’à 100 lignes de données à partir d’un fichier JSON.
