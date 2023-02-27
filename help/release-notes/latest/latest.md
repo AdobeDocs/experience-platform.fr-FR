@@ -1,16 +1,16 @@
 ---
 title: Notes de mise à jour d’Adobe Experience Platform
 description: Notes de mise à jour de février 2023 pour Adobe Experience Platform.
-source-git-commit: deb8512d3c585512520dae04e555c6497d74ba4c
+source-git-commit: 72ae96f72bfffe376fec5c0e1dcf79406cb86a26
 workflow-type: tm+mt
-source-wordcount: '1137'
-ht-degree: 39%
+source-wordcount: '1171'
+ht-degree: 38%
 
 ---
 
 # Notes de mise à jour d’Adobe Experience Platform
 
-**Date de publication : 22 février 2023**
+**Date de mise à jour : 22 février 2023**
 
 Mises à jour des fonctionnalités existantes dans Adobe Experience Platform :
 
@@ -82,20 +82,14 @@ Query Service vous permet d’utiliser le langage SQL standard pour interroger l
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Activation des jeux de données pour les profils avec SQL | Utilisez des LIBELLÉS dans des requêtes CTAS pour rendre un jeu de données &#39;profil activé&#39; ou utilisez ALTER pour mettre à jour les jeux de données existants à activer pour le profil. |
-| Surveillance des requêtes planifiées | Utilisez l’onglet Requêtes planifiées pour trouver des informations importantes sur les exécutions de requête et vous abonner aux alertes. Surveillez les requêtes pour connaître les détails du planning, l’état et les messages/codes d’erreur en cas d’échec. |
-| Activation/désactivation de la fonction de saisie automatique | Éliminez certaines commandes de métadonnées et améliorez les temps de traitement en activant la fonction de saisie semi-automatique de l’éditeur de requêtes. Cette fonctionnalité suggère automatiquement les mots-clés SQL potentiels et les détails du tableau pour la requête au fur et à mesure que vous l’écrivez. |
-| Exemples de jeux de données | Spécifiez un taux d’échantillonnage dans votre requête et utilisez des exemples de jeux de données pour créer un échantillon aléatoire uniforme ou créez des exemples conditionnels en fonction de critères spécifiques. |
+| Activation des jeux de données pour les profils avec SQL | [Utiliser des LIBELLÉS dans les requêtes CTAS pour rendre un jeu de données &quot;profile enabled&quot;](../../query-service/sql/syntax.md#create-table-as-select)ou utilisez ALTER pour mettre à jour les jeux de données existants à activer pour le profil. Vous pouvez utiliser cette structure SQL étendue pour offrir une prise en charge transparente des attributs dérivés pour vos cas d’utilisation professionnels de profil client en temps réel. Voir [Flux SQL transparent pour le document d’attributs dérivés](../../query-service/data-distiller/derived-attributes/seamless-sql-flow.md) pour plus d’informations. |
+| Surveillance des requêtes planifiées | Utilisez la variable [Onglet Requêtes planifiées](../../query-service/ui/monitor-queries.md) pour trouver des informations importantes sur les exécutions de vos requêtes et vous abonner aux alertes. Surveillez les requêtes pour connaître les détails du planning, l’état et les messages/codes d’erreur en cas d’échec. |
+| Activation/désactivation de la fonction de saisie automatique | Élimination de certaines commandes de métadonnées et amélioration des temps de traitement par [activation/désactivation de la fonction de saisie semi-automatique de Query Editor](../../query-service/ui/user-guide.md#auto-complete). Cette fonctionnalité suggère automatiquement les mots-clés SQL potentiels et les détails du tableau pour la requête au fur et à mesure que vous l’écrivez. |
+| Exemples de jeux de données | Spécifiez un taux d’échantillonnage dans votre requête et [utiliser des exemples de jeux de données pour créer un exemple aléatoire uniforme ;](../../query-service/essential-concepts/dataset-samples.md)ou créer des exemples conditionnels en fonction de critères spécifiques. |
 
 {style=&quot;table-layout:auto&quot;}
 
 Pour plus d’informations sur Query Service, consultez la section [présentation de Query Service](../../query-service/home.md).
-
-<!-- Links for QS feature docs after release day: -->
-<!-- Enable datasets for profile with SQL link: https://experienceleague.adobe.com/docs/experience-platform/query/sql/syntax.html#create-table-as-select -->
-<!-- Monitor scheduled queries link: https://experienceleague.adobe.com/docs/experience-platform/query/monitor-queries.html  -->
-<!-- Toggle auto-complete feature link: https://experienceleague.adobe.com/docs/experience-platform/query/ui/user-guide.html#auto-complete -->
-<!-- dataset samples: https://experienceleague.adobe.com/docs/experience-platform/query/essential-concepts/dataset-samples.html -->
 
 ## Édition B2B de Real-Time Customer Data Platform {#b2b}
 
