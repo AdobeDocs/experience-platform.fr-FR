@@ -1,10 +1,10 @@
 ---
 title: Notes de mise à jour d’Adobe Experience Platform
 description: Notes de mise à jour de février 2023 pour Adobe Experience Platform.
-source-git-commit: 66ca8d3972045cffe4a1614f638546f4e7838680
+source-git-commit: deb8512d3c585512520dae04e555c6497d74ba4c
 workflow-type: tm+mt
 source-wordcount: '1137'
-ht-degree: 37%
+ht-degree: 39%
 
 ---
 
@@ -45,9 +45,12 @@ Pour des informations plus générales sur les destinations, consultez la [prés
 XDM est une spécification Open Source qui fournit des structures et des définitions communes (schémas) pour les données introduites dans Adobe Experience Platform. En adhérant aux normes XDM, toutes les données d’expérience client peuvent être intégrées dans une représentation commune afin de fournir des informations plus rapidement et de manière plus intégrée. Vous pouvez obtenir des informations précieuses à partir des actions des clients, définir des types de clients par le biais de segments et utiliser les attributs du client à des fins de personnalisation.
 
 **Fonctionnalités mises à jour**
-&#x200B; | Fonctionnalité | Description | | — | — | | Dépréciation des champs via l’interface utilisateur | Vous pouvez désormais [abandonner les champs de vos schémas une fois les données ingérées](../../xdm/tutorials/field-deprecation-ui.md). L’obsolescence des champs XDM vous permet de supprimer des champs de l’interface utilisateur tout en les conservant pour les utiliser. Si nécessaire, vous pouvez afficher à nouveau les champs obsolètes. Les segments, requêtes ou solutions en aval qui référencent ces champs s’exécuteront normalement. |
 
+| Fonctionnalité | Description |
+| --- | --- |
+| Dépréciation des champs via l’interface utilisateur | Vous pouvez désormais [abandonner les champs de vos schémas une fois les données ingérées](../../xdm/tutorials/field-deprecation-ui.md). L’obsolescence des champs XDM vous permet de supprimer des champs de l’interface utilisateur tout en les conservant pour les utiliser. Si nécessaire, vous pouvez afficher à nouveau les champs obsolètes. Les segments, requêtes ou solutions en aval qui référencent ces champs s’exécuteront normalement. |
 
+{style=&quot;table-layout:auto&quot;}
 
 **Nouveaux composants XDM**
 
@@ -76,9 +79,18 @@ Pour plus d’informations sur XDM dans Platform, lisez le [Présentation du sys
 Query Service vous permet d’utiliser le langage SQL standard pour interroger les données dans le [!DNL Data Lake] d’Adobe Experience Platform. Vous pouvez joindre n’importe quel jeu de données du lac de données et capturer les résultats de la requête sous la forme d’un nouveau jeu de données à utiliser dans les rapports, Data Science Workspace ou pour ingestion dans Real-Time Customer Profile.
 
 **Fonctionnalités mises à jour**
-&#x200B; | Fonctionnalité | Description | | — | — | | Activation des jeux de données pour les profils avec SQL | Utilisez des LIBELLÉS dans les requêtes CTAS pour rendre un jeu de données &quot;profile enabled&quot;, ou utilisez ALTER pour mettre à jour les jeux de données existants à activer pour le profil. | | Surveillance des requêtes planifiées | Utilisez l’onglet Requêtes planifiées pour trouver des informations importantes sur les exécutions de requête et vous abonner aux alertes. Surveillez les requêtes pour connaître les détails du planning, l’état et les messages/codes d’erreur en cas d’échec.  | | Active/désactive la fonction de saisie automatique | Éliminez certaines commandes de métadonnées et améliorez les temps de traitement en activant la fonction de saisie semi-automatique de l’éditeur de requêtes. Cette fonctionnalité suggère automatiquement les mots-clés SQL potentiels et les détails du tableau pour la requête au fur et à mesure que vous l’écrivez. | | Exemples de jeux de données | Spécifiez un taux d’échantillonnage dans votre requête et utilisez des exemples de jeux de données pour créer un échantillon aléatoire uniforme ou créez des exemples conditionnels en fonction de critères spécifiques. |
 
-&#x200B; Pour plus d’informations sur Query Services, reportez-vous à la section [Présentation de Query Service](../../query-service/home.md). &#x200B;
+| Fonctionnalité | Description |
+| --- | --- |
+| Activation des jeux de données pour les profils avec SQL | Utilisez des LIBELLÉS dans des requêtes CTAS pour rendre un jeu de données &#39;profil activé&#39; ou utilisez ALTER pour mettre à jour les jeux de données existants à activer pour le profil. |
+| Surveillance des requêtes planifiées | Utilisez l’onglet Requêtes planifiées pour trouver des informations importantes sur les exécutions de requête et vous abonner aux alertes. Surveillez les requêtes pour connaître les détails du planning, l’état et les messages/codes d’erreur en cas d’échec. |
+| Activation/désactivation de la fonction de saisie automatique | Éliminez certaines commandes de métadonnées et améliorez les temps de traitement en activant la fonction de saisie semi-automatique de l’éditeur de requêtes. Cette fonctionnalité suggère automatiquement les mots-clés SQL potentiels et les détails du tableau pour la requête au fur et à mesure que vous l’écrivez. |
+| Exemples de jeux de données | Spécifiez un taux d’échantillonnage dans votre requête et utilisez des exemples de jeux de données pour créer un échantillon aléatoire uniforme ou créez des exemples conditionnels en fonction de critères spécifiques. |
+
+{style=&quot;table-layout:auto&quot;}
+
+Pour plus d’informations sur Query Service, consultez la section [présentation de Query Service](../../query-service/home.md).
+
 <!-- Links for QS feature docs after release day: -->
 <!-- Enable datasets for profile with SQL link: https://experienceleague.adobe.com/docs/experience-platform/query/sql/syntax.html#create-table-as-select -->
 <!-- Monitor scheduled queries link: https://experienceleague.adobe.com/docs/experience-platform/query/monitor-queries.html  -->
