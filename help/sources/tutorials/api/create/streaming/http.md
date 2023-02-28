@@ -3,10 +3,10 @@ keywords: Experience Platform;accueil;rubriques les plus consultées;connexion e
 title: Création d’une connexion en continu d’API HTTP à l’aide de l’API Flow Service
 description: Ce tutoriel explique comment créer une connexion en continu à l’aide de la source d’API HTTP pour les données brutes et XDM à l’aide de l’API Flow Service.
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-source-git-commit: 6b78ed695bca5912c9af4371a8423fdcd7471bde
+source-git-commit: 7ff297973f951d7bfd940983bf4fa39dcc9f1542
 workflow-type: tm+mt
-source-wordcount: '1496'
-ht-degree: 40%
+source-wordcount: '1544'
+ht-degree: 39%
 
 ---
 
@@ -475,6 +475,8 @@ POST /flows
 
 >[!TAB Sans transformations]
 
+La requête suivante crée un flux de données en continu pour l’API HTTP sans transformation de données.
+
 ```shell
 curl -X POST \
   'https://platform.adobe.io/data/foundation/flowservice/flows' \
@@ -500,6 +502,10 @@ curl -X POST \
 ```
 
 >[!TAB Avec transformations]
+
+Les requêtes suivantes créent un flux de données en continu pour l’API HTTP avec des transformations de mappage appliquées à vos données.
+
+Lors de la création d’un flux de données avec des transformations, la variable `name` ne peut pas être modifié. Cette valeur doit toujours être définie sur `Mapping`.
 
 ```shell
 curl -X POST \
