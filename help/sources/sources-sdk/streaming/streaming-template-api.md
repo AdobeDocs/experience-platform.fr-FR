@@ -3,10 +3,10 @@ title: Modèle de documentation en libre-service pour l’API du SDK de diffusio
 description: Découvrez comment importer des données en continu d’une source vers Adobe Experience Platform à l’aide de l’API Flow Service.
 hide: true
 hidefromtoc: true
-source-git-commit: 7744fef9751212a40f8f20df52812d38130c42fc
+source-git-commit: eb317f38499a32b1a6eb072ec74e68cdfebf994f
 workflow-type: tm+mt
-source-wordcount: '1775'
-ht-degree: 43%
+source-wordcount: '1699'
+ht-degree: 42%
 
 ---
 
@@ -55,7 +55,7 @@ Le tutoriel suivant vous guide tout au long des étapes de création d’un *VOT
 
 ### Créer une connexion source {#source-connection}
 
-Pour créer une connexion source à votre source de diffusion en continu, envoyez une demande de POST à la fonction `/sourceConnections` point d’entrée du [!DNL Flow Service] API tout en fournissant un nom pour votre connexion, l’identifiant de spécification de connexion de votre source et le format de vos données.
+Créez une connexion source en adressant une requête de POST à la fonction [!DNL Flow Service] API, tout en fournissant l’identifiant de spécification de connexion de votre source, des détails tels que le nom et la description, ainsi que le format de vos données.
 
 **Format d’API**
 
@@ -259,9 +259,6 @@ La dernière étape pour obtenir des données de *VOTRE SOURCE* à Platform cons
 * [Identifiant de mappage](#mapping)
 
 Un flux de données est chargé de planifier et de collecter les données provenant d’une source. Vous pouvez créer un flux de données en exécutant une requête POST et en fournissant les valeurs mentionnées précédemment dans la payload.
-
-Pour planifier une ingestion, vous devez d’abord définir la valeur de l’heure de début en temps Unix en secondes. Vous devez ensuite définir la valeur de fréquence sur l’une des cinq options suivantes : `once`, `minute`, `hour`, `day` ou `week`. La valeur interval désigne toutefois la période entre deux ingestion consécutives, la création d’une ingestion unique ne nécessite pas de définition d’un intervalle. Pour toutes les autres fréquences, la valeur de l’intervalle doit être égale ou supérieure à `15`.
-
 
 **Format d’API**
 
