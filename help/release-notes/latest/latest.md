@@ -1,9 +1,9 @@
 ---
 title: Notes de mise à jour d’Adobe Experience Platform
 description: Notes de mise à jour de février 2023 pour Adobe Experience Platform.
-source-git-commit: 72ae96f72bfffe376fec5c0e1dcf79406cb86a26
+source-git-commit: ccd3df0bc045f98306901b2d734cf17262275f18
 workflow-type: tm+mt
-source-wordcount: '1171'
+source-wordcount: '1316'
 ht-degree: 38%
 
 ---
@@ -14,11 +14,30 @@ ht-degree: 38%
 
 Mises à jour des fonctionnalités existantes dans Adobe Experience Platform :
 
+- [Collecte de données](#data-collection)
 - [[!DNL Destinations]](#destinations)
 - [Modèle de données d’expérience (XDM)](#xdm)
 - [Query Service](#query-service)
 - [Édition B2B de Real-Time Customer Data Platform](#b2b)
 - [Sources](#sources)
+
+## Collecte de données {#data-collection}
+
+Adobe Experience Platform fournit une suite de technologies qui vous permettent de collecter des données d’expérience client côté client. Vous pouvez ensuite les envoyer à Adobe Experience Platform Edge Network pour les enrichir, les transformer et les distribuer vers des destinations Adobe ou autres qu’Adobe.
+
+### Assurance {#assurance}
+
+Adobe Assurance vous permet d’inspecter, de tester, de simuler et de valider la manière dont vous collectez des données ou diffusez des expériences dans votre application mobile.
+
+**Fonctionnalités nouvelles ou mises à jour**
+
+| Fonctionnalité | Description |
+| ------- | ----------- |
+| API publiques | Les API Adobe Assurance sont désormais disponibles. Les API d’assurance sont un ensemble d’API qui permettent aux utilisateurs de tester et de déboguer leurs propres applications web et mobiles, lorsqu’elles sont équipées de l’extension Adobe Assurance avec le SDK mobile. Pour en savoir plus sur les API d’assurance, veuillez lire la section [Présentation de l’API Assurance](https://developer.adobe.com/adobe-assurance-public-apis/). |
+
+{style=&quot;table-layout:auto&quot;}
+
+Pour plus d’informations sur Assurance, veuillez lire la section [Documentation d’assurance](https://developer.adobe.com/client-sdks/documentation/platform-assurance/).
 
 ## [!DNL Destinations] {#destinations}
 
