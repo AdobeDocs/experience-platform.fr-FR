@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Point de terminaison de l’API de définitions de segment
 description: Le point de terminaison des définitions de segment de l’API Adobe Experience Platform Segmentation Service vous permet de gérer par programmation les définitions de segment pour votre organisation.
 exl-id: e7811b96-32bf-4b28-9abb-74c17a71ffab
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 9aa86b8d541836504be6b8667a2e069116c6002c
 workflow-type: tm+mt
-source-wordcount: '1188'
-ht-degree: 49%
+source-wordcount: '1261'
+ht-degree: 48%
 
 ---
 
@@ -178,6 +178,17 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
             "format": "pql/text",
             "value": "workAddress.country = \"US\""
         },
+        "evaluationInfo": {
+            "batch": {
+                "enabled": true
+            },
+            "continuous": {
+                "enabled": false
+            },
+            "synchronous": {
+                "enabled": false
+            }
+        },
         "schema": {
             "name": "_xdm.context.profile"
         },
@@ -189,6 +200,8 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 | Propriété | Description |
 | -------- | ----------- |
 | `name` | **Obligatoire.** Un nom unique qui fait référence au segment. |
+| `description` | Description de la définition de segment que vous créez. |
+| `evaluationInfo` | Type de segment que vous créez. Si vous souhaitez créer un segment par lot, définissez `evaluationInfo.batch.enabled` pour être vrai. Si vous souhaitez créer un segment en continu, définissez `evaluationInfo.continuous.enabled` pour être vrai. Si vous souhaitez créer un segment Edge, définissez `evaluationInfo.synchronous.enabled` pour être vrai. Si ce champ n’est pas renseigné, le segment est créé en tant que **batch** segment. |
 | `schema` | **Obligatoire.** Le schéma associé aux entités du segment. Se compose d’un champ `id` ou `name`. |
 | `expression` | **Obligatoire.** Une entité qui contient des champs d’informations à propos de la définition de segment. |
 | `expression.type` | Indique le type d’expression. Actuellement, seul « PQL » est pris en charge. |
@@ -251,7 +264,7 @@ Une réponse réussie renvoie un état HTTP 200 avec les détails de la défini
 | Propriété | Description |
 | -------- | ----------- |
 | `id` | Identifiant généré par le système de la définition de segment que vous venez de créer. |
-| `evaluationInfo` | Objet généré par le système qui indique le type d’évaluation que la définition de segment va subir. Il peut s’agir d’une segmentation par lots, continue (également appelée diffusion en continu) ou synchrone. |
+| `evaluationInfo` | Objet qui indique le type d’évaluation que la définition de segment va subir. Il peut s’agir d’une segmentation par lots, par flux (également appelée continue) ou par périphérie (également appelée synchrone). |
 
 ## Récupération d’une définition de segment spécifique {#get}
 
@@ -333,7 +346,7 @@ Une réponse réussie renvoie un état HTTP 200 avec les informations détaill�
 | `expression.format` | Indique la structure de l’expression en valeur. Actuellement, le format suivant est pris en charge : <ul><li>`pql/text` : une représentation textuelle d’une définition de segment, selon la grammaire PQL publiée.  Par exemple : `workAddress.stateProvince = homeAddress.stateProvince`.</li></ul> |
 | `expression.value` | Une expression conforme au type indiqué dans `expression.format`. |
 | `description` | Une description lisible par l’utilisateur de la définition. |
-| `evaluationInfo` | Objet généré par le système qui indique le type d’évaluation, de lot, continu (également appelé diffusion en continu) ou synchrone, auquel la définition de segment sera soumise. |
+| `evaluationInfo` | Objet qui indique le type d’évaluation, de lot, de diffusion en continu (également appelé continue) ou de périphérie (également appelé synchrone), auquel la définition de segment sera appliquée. |
 
 ## Récupération en masse de définitions de segment {#bulk-get}
 
@@ -466,7 +479,7 @@ Une réponse réussie renvoie un état HTTP 207 avec les définitions de segment
 | `expression.format` | Indique la structure de l’expression en valeur. Actuellement, le format suivant est pris en charge : <ul><li>`pql/text` : une représentation textuelle d’une définition de segment, selon la grammaire PQL publiée.  Par exemple : `workAddress.stateProvince = homeAddress.stateProvince`.</li></ul> |
 | `expression.value` | Une expression conforme au type indiqué dans `expression.format`. |
 | `description` | Une description lisible par l’utilisateur de la définition. |
-| `evaluationInfo` | Objet généré par le système qui indique le type d’évaluation, de lot, continu (également appelé diffusion en continu) ou synchrone, auquel la définition de segment sera soumise. |
+| `evaluationInfo` | Objet qui indique le type d’évaluation, de lot, de diffusion en continu (également appelé continue) ou de périphérie (également appelé synchrone), auquel la définition de segment sera appliquée. |
 
 ## Suppression d’une définition de segment spécifique {#delete}
 
@@ -474,7 +487,7 @@ Vous pouvez demander la suppression d’une définition de segment spécifique e
 
 >[!NOTE]
 >
-> Vous aurez **not** peut supprimer un segment utilisé dans une activation de destination.
+> Vous **ne pourrez pas** supprimer un segment utilisé dans une activation de destination.
 
 **Format d’API**
 

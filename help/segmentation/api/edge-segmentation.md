@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Effectuer une segmentation Edge à l’aide de l’API
 description: Ce document contient des exemples d’utilisation de la segmentation Edge avec l’API Segmentation Service Adobe Experience Platform.
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 1c4da50b2c211aae06d6702d75e5650447fae0eb
 workflow-type: tm+mt
 source-wordcount: '1187'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -60,10 +60,10 @@ Pour qu’un segment soit évalué à l’aide de la segmentation Edge, la requ�
 
 En outre, le segment **doit** être lié à une stratégie de fusion activée sur le serveur Edge. Pour plus d’informations sur les stratégies de fusion, consultez le [guide des stratégies de fusion](../../profile/api/merge-policies.md).
 
-Une définition de segment sera **not** être activé pour la segmentation edge dans les scénarios suivants :
+Une définition de segment ne sera **pas** activée pour la segmentation Edge dans les scénarios suivants :
 
-- La définition de segment comprend une combinaison d’un événement unique et d’un événement `inSegment` .
-   - Toutefois, si le segment contenu dans la variable `inSegment` est un événement de profil uniquement, la définition de segment **will** être activé pour la segmentation edge.
+- La définition de segment comprend une combinaison d’un événement unique et d’un événement `inSegment`.
+   - Toutefois, si le segment contenu dans l’événement `inSegment` est un segment de profil uniquement, la définition de segment **sera** activée pour la segmentation Edge.
 
 ## Récupérer tous les segments activés pour la segmentation Edge
 
@@ -212,6 +212,17 @@ curl -X POST \
         "type": "PQL",
         "format": "pql/text",
         "value": "select var1 from xEvent where var1._experience.analytics.endUser.firstWeb.webPageDetails.isHomePage = true"
+    },
+    "evaluationInfo": {
+        "batch": {
+            "enabled": false
+        },
+        "continuous": {
+            "enabled": false
+        },
+        "synchronous": {
+            "enabled": true
+        }
     }
 }'
 ```

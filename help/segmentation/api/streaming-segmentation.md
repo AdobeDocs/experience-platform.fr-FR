@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Évaluer les événements en temps quasi réel grâce à la segmentation en flux continu
 description: Ce document contient des exemples d’utilisation de la segmentation par diffusion en flux continu avec l’API du service de segmentation Adobe Experience Platform.
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 1c4da50b2c211aae06d6702d75e5650447fae0eb
 workflow-type: tm+mt
 source-wordcount: '1971'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -86,8 +86,8 @@ Une définition de segment ne sera **pas** activée pour la segmentation en flux
 
 - La définition de segment inclut des segments ou des caractéristiques Adobe Audience Manager (AAM).
 - La définition de segment comprend plusieurs entités (requêtes d’entités multiples).
-- La définition de segment comprend une combinaison d’un événement unique et d’un événement `inSegment` .
-   - Toutefois, si le segment contenu dans la variable `inSegment` est un événement de profil uniquement, la définition de segment **will** être activé pour la segmentation par flux.
+- La définition de segment comprend une combinaison d’un événement unique et d’un événement `inSegment`.
+   - Toutefois, si le segment contenu dans l’événement `inSegment` est un segment de profil uniquement, la définition de segment **sera activée** pour la segmentation en flux continu.
 
 Veuillez noter que les instructions suivantes s’appliquent lors de la segmentation en flux continu :
 
@@ -244,6 +244,17 @@ curl -X POST \
         "type": "PQL",
         "format": "pql/text",
         "value": "select var1 from xEvent where var1._experience.analytics.endUser.firstWeb.webPageDetails.isHomePage = true"
+    },
+    "evaluationInfo": {
+        "batch": {
+            "enabled": false
+        },
+        "continuous": {
+            "enabled": true
+        },
+        "synchronous": {
+            "enabled": false
+        }
     }
 }'
 ```
