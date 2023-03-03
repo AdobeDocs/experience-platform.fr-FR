@@ -1,16 +1,16 @@
 ---
-keywords: destinations;adobe experience platform;plateforme;présentation des destinations;activer les données;activer;activer
+keywords: destinations;adobe experience platform;platform;présentation des destinations;activer les données;activer;
 title: Présentation des destinations
 description: Les destinations sont des intégrations préconfigurées à des plateformes de destination qui permettent dʼactiver facilement des données provenant dʼAdobe Experience Platform. Vous pouvez utiliser les destinations dans Adobe Experience Platform pour activer vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
 source-git-commit: 25f1b2197e5b10b04668d16bff3a6ce48cfad5fc
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '755'
-ht-degree: 34%
+ht-degree: 100%
 
 ---
 
-# Présentation de [!DNL Destinations] {#overview}
+# Présentation des [!DNL Destinations] {#overview}
 
 ![Bannière de présentation des destinations](./assets/overview/destinations-overview-banner.png)
 
@@ -25,38 +25,38 @@ Les **[!DNL Destinations]** sont des intégrations préconfigurées à des plate
 
 ## Destinations et sources {#destinations-and-sources}
 
-L’une des principales fonctionnalités de Platform est l’ingestion de vos données propriétaires et leur activation en fonction des besoins de votre entreprise. Utilisation [sources](../sources/home.md) pour ingérer des données dans Platform et des destinations afin d’exporter des données de Platform.
+L’une des principales fonctionnalités de Platform consiste à ingérer vos données propriétaires et à les activer en fonction des besoins de votre entreprise. Utilisez des [sources](../sources/home.md) pour ingérer des données dans Platform et des destinations pour exporter des données depuis Platform.
 
 ## Étapes des destinations {#steps}
 
-* Choisissez parmi les [catalogue en libre-service](./catalog/overview.md) de toutes les destinations disponibles dans Platform.
-* Utilisez les destinations pour envoyer des profils ou des segments aux plateformes d’automatisation marketing, de publicité numérique, etc.
+* Effectuez un choix parmi un [catalogue en libre-service](./catalog/overview.md) de toutes les destinations disponibles dans Platform.
+* Utilisez les destinations pour envoyer des profils ou des segments aux plateformes d’automatisation marketing, de publicité digitale, etc.
 * Planifiez régulièrement des exportations de données vers les destinations de votre choix.
 
 ## Commandes {#controls}
 
-Les contrôles dans la variable [espace de travail des destinations](./ui/destinations-workspace.md) vous permettent de :
+Les commandes de l’[espace de travail des destinations](./ui/destinations-workspace.md) vous permettent d’effectuer les opérations suivantes :
 
 * parcourir le catalogue des plateformes de destination dans lesquelles vous pouvez activer vos données ;
 * créer, modifier, activer et désactiver des flux de données vers les destinations du catalogue ;
-* Créez un compte dans un emplacement de stockage ou liez Platform au compte dans la plateforme de destination ;
+* créer un compte dans un emplacement de stockage ou lier Platform au compte dans la plateforme des destinations ;
 * sélectionner les segments à activer vers les destinations ;
 * sélectionner les [champs XDM](../xdm/home.md) à exporter lors de l’activation de segments vers des destinations de marketing par e-mail.
 
 ## Types et catégories de destination {#types-and-categories}
 
-Avec Experience Platform, vous pouvez activer des données vers différents types de destinations, afin de répondre à vos cas d’utilisation d’activation. Les destinations vont des intégrations basées sur les API aux intégrations avec les systèmes de réception de fichiers, aux destinations de recherche de profil, etc. Pour plus d’informations sur toutes les destinations disponibles, voir [Types et catégories de destination - Aperçu](./destination-types.md).
+Avec Experience Platform, vous pouvez activer des données vers différents types de destinations, afin de répondre à vos cas d’utilisation d’activation. Les destinations vont des intégrations basées sur les API aux intégrations avec les systèmes de réception de fichiers, en passant par les destinations de recherche de profil, etc. Pour plus d’informations sur toutes les destinations disponibles, voir [Présentation des types et catégories de destination](./destination-types.md).
 
 ## Destinations et contrôles d’accès {#access-controls}
 
-La fonctionnalité de destinations de Platform fonctionne avec les autorisations de contrôle d’accès de Adobe Experience Platform. Selon le niveau d’autorisation de l’utilisateur, vous pouvez afficher, gérer et activer les destinations. Pour plus d’informations sur les autorisations individuelles, consultez [Contrôle d’accès dans Adobe Experience Platform](../access-control/home.md) et faites défiler la page vers le bas.
+La fonctionnalité de destinations de Platform fonctionne avec les autorisations de contrôle d’accès d’Adobe Experience Platform. Selon le niveau d’autorisation de l’utilisateur, vous pouvez afficher, gérer et activer les destinations. Pour plus d’informations sur les autorisations individuelles, consultez [Contrôle d’accès dans Adobe Experience Platform](../access-control/home.md) et faites défiler la page vers le bas.
 
-Le tableau suivant décrit les combinaisons d’autorisations et d’autorisations requises pour effectuer certaines actions sur les destinations :
+Le tableau suivant décrit les autorisations et combinaisons d’autorisations requises pour effectuer certaines actions sur les destinations :
 
 | Niveau d’autorisation | Description |
 | ---- | ----|
-| **[!UICONTROL Gestion des destinations]** | Pour vous connecter aux destinations, vous avez besoin de l’événement **[!UICONTROL Gestion des destinations]** [autorisation de contrôle d’accès](/help/access-control/home.md#permissions). |
-| **[!UICONTROL Gestion des destinations]**, **[!UICONTROL Activation des destinations]**, **[!UICONTROL Afficher les profils]**, et **[!UICONTROL Affichage de segments]** | Pour activer des segments vers des destinations, vous avez besoin de l’événement **[!UICONTROL Gestion des destinations]**, **[!UICONTROL Activation des destinations]**, **[!UICONTROL Afficher les profils]**, et **[!UICONTROL Affichage de segments]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). |
+| **[!UICONTROL Gérer les destinations]** | Pour vous connecter aux destinations, vous avez besoin de l’[autorisation de contrôle d’accès](/help/access-control/home.md#permissions) **[!UICONTROL Gérer les destinations]**. |
+| **[!UICONTROL Gérer les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** | Pour activer les segments vers les destinations, vous avez besoin des [autorisations de contrôle d’accès](/help/access-control/home.md#permissions) **[!UICONTROL Gérer les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]**. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -66,35 +66,35 @@ Pour plus d’informations sur les contrôles d’accès, consultez le [Guide de
 
 Le contrôle d’accès basé sur les attributs est une fonctionnalité d’Adobe Experience Platform qui permet aux administrateurs de contrôler l’accès à des objets et/ou fonctionnalités spécifiques en fonction d’attributs.
 
-Grâce au contrôle d’accès basé sur les attributs, vous pouvez appliquer des configurations de mappage aux champs pour lesquels vous disposez d’autorisations. De plus, vous ne pouvez pas exporter des données vers une destination si vous n’avez pas accès à tous les champs du jeu de données.
+Grâce au contrôle d’accès basé sur les attributs, vous pouvez appliquer des configurations de mappage aux champs pour lesquels vous disposez d’autorisations. En outre, vous ne pouvez pas exporter de données vers une destination si vous n’avez pas accès à tous les champs du jeu de données.
 
-Pour plus d’informations sur le fonctionnement des destinations avec les contrôles d’accès basés sur les attributs, consultez la section [contrôle d’accès basé sur les attributs - Aperçu](../access-control/abac/overview.md#destinations).
+Pour plus d’informations sur le fonctionnement des destinations avec les contrôles d’accès basés sur les attributs, consultez la section [Présentation du contrôle d’accès basé sur les attributs](../access-control/abac/overview.md#destinations).
 
 ## Surveillance des destinations {#destinations-monitoring}
 
 Après avoir établi une connexion à une destination et terminé le workflow d’activation, vous pouvez surveiller les exportations de données vers votre système de réception. Lisez le [guide sur la surveillance des flux de données vers les destinations dans l’interface utilisateur](/help/dataflows/ui/monitor-destinations.md) pour plus d’informations.
 
-Vous pouvez également vérifier si les données arrivent à votre destination avec succès. La plupart des pages de documentation de destination du catalogue ont une *Validation de la section d’exportation des données*, qui indique comment vous pouvez archiver la plateforme de destination sur laquelle les données sont importées depuis l’Experience Platform.
+Vous pouvez également vérifier si les données arrivent à votre destination. La plupart des pages de documentation des destinations du catalogue ont une *section Valider l’exportation des données*, qui indique comment vous pouvez vérifier dans la plateforme de destination que les données sont importées depuis Experience Platform.
 
 ## Restrictions de gouvernance des données concernant l’activation des données vers les destinations {#data-governance}
 
-La gouvernance des données est appliquée pour les destinations de Platform par le biais :
+La gouvernance des données est appliquée aux destinations de Platform par le biais des actions suivantes :
 
-* *Actions marketing* que vous pouvez sélectionner dans le processus de création de destinations ;
-* *Stratégies d’utilisation des données* qui limitent l’activation des données contenant certains libellés d’utilisation vers les destinations avec certaines actions marketing.
+* *Actions marketing* que vous pouvez sélectionner dans le workflow de création de destinations ;
+* *Politiques d’utilisation des données* qui limitent l’activation des données contenant certains libellés d’utilisation vers les destinations avec certaines actions marketing.
 
-Pour plus d’informations sur la gouvernance des données dans Platform, consultez la documentation sur la gouvernance des données dans Platform . [actions marketing](../data-governance/policies/overview.md) et [résolution des violations de stratégie de données](../data-governance/enforcement/auto-enforcement.md).
+Consultez la documentation sur la gouvernance des données dans Platform pour plus d’informations sur les [actions marketing](../data-governance/policies/overview.md) et la [résolution des violations de politiques de données](../data-governance/enforcement/auto-enforcement.md).
 
-Pour plus d’informations sur la sélection d’actions marketing dans le processus de création de destination, consultez les pages suivantes pour les différents types de destination dans Platform :
+Pour plus d’informations sur la sélection d’actions marketing dans le workflow de création de destination, consultez les pages suivantes pour les différents types de destinations dans Platform :
 
 * [Destinations publicitaires - Google Ad Manager ](./catalog/advertising/google-ad-manager.md)
-* [Destinations publicitaires - Publicités Google](./catalog/advertising/google-ads-destination.md)
+* [Destinations publicitaires - Google Ads](./catalog/advertising/google-ads-destination.md)
 * [Destinations publicitaires - Google Display &amp; Video 360 ](./catalog/advertising/google-dv360.md)
 * [Destinations de stockage dans le cloud](./catalog/cloud-storage/overview.md)
 * [Destinations de marketing par e-mail ](./catalog/email-marketing/overview.md)
 * [Destinations sociales ](./catalog/social/overview.md)
 
-Pour plus d’informations sur les violations de stratégie de données dans le processus d’activation des segments, voir **[!UICONTROL Réviser]** dans les guides suivants :
+Pour plus d’informations sur les violations de politique de données dans le workflow d’activation des segments, voir l’étape **[!UICONTROL Révision]** dans les guides suivants :
 
 * [Activer les données d’audience vers des destinations d’exportation de segments de diffusion en continu](./ui/activate-segment-streaming-destinations.md#review)
 * [Activer les données d’audience vers des destinations d’exportation de segments de diffusion en continu](./ui/activate-streaming-profile-destinations.md#review)
