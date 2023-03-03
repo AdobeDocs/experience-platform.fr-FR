@@ -1,30 +1,30 @@
 ---
-keywords: Experience Platform;gouvernance des données;accès à l’attribution;rubriques les plus consultées
+keywords: Experience Platform;gouvernance des données;attribution AI;rubriques les plus consultées
 solution: Experience Platform
 feature: Attribution AI
-title: Gouvernance des données dans Attribution AI
-description: Adobe Experience Platform fournit plusieurs services et outils qui vous permettent de contrôler en toute confiance vos données d’expérience collectées afin de respecter vos pratiques commerciales, vos obligations légales et votre processus de développement.
+title: Gouvernance des données dans Attribution AI
+description: Adobe Experience Platform fournit plusieurs services et outils qui vous permettent de contrôler en toute confiance vos données d’expérience collectées afin de respecter vos pratiques commerciales, vos obligations légales et votre processus de développement.
 source-git-commit: 3b1cc7ca710071df9de06428f7eed2993219ae1a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '221'
-ht-degree: 9%
+ht-degree: 100%
 
 ---
 
-# Attribution AI et gouvernance des données
+# Attribution AI et gouvernance des données
 
-Tous les paramètres liés à la gouvernance des données dans Attribution AI sont hérités de Adobe Experience Platform.
+Tous les paramètres liés à la gouvernance des données dans Attribution AI sont hérités d’Adobe Experience Platform.
 
 ## Gouvernance des données {#governance}
 
-L’intégration entre la gouvernance des données Attribution AI et Adobe Experience Platform vous permet de contrôler et de comprendre vos données tout au long de son parcours via Platform. Cela implique de maintenir la qualité des données, la liaison des données, le catalogage des données, etc.
+L’intégration entre la gouvernance des données d’Attribution AI et d’Adobe Experience Platform vous permet de contrôler et de comprendre vos données tout au long de leur parcours via Platform. Cela implique de maintenir la qualité des données, le lignage des données, le catalogage des données, etc.
 
-Les libellés d’utilisation des données et les stratégies créés sur les jeux de données consommés par Platform peuvent être affichés dans le workflow de configuration Attribution AI. Ces libellés arrêtent ou avertissent les utilisateurs qui utilisent des champs étiquetés.
+Les stratégies et les libellés d’utilisation des données créés sur les jeux de données consommés par Platform peuvent être affichés dans le workflow de configuration d’Attribution AI. Ces libellés arrêtent ou avertissent les utilisateurs et utilisatrices qui utilisent des champs libellés.
 
-Cette intégration vous permet de gérer la conformité plus efficacement. Les gestionnaires de données de votre entreprise peuvent définir des stratégies pour restreindre l’utilisation. Par conséquent, vous pouvez utiliser des données conformes aux stratégies définies par les gestionnaires de données. Lisez la documentation sur [Étiquettes et stratégies](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-dataviews/data-governance.html?lang=fr) pour en savoir plus.
+Cette intégration vous permet de gérer la conformité plus efficacement. Les gestionnaires de données de votre entreprise peuvent définir des politiques pour restreindre l’utilisation. Par conséquent, vous pouvez utiliser des données conformes aux stratégies définies par les gestionnaires de données. Lisez la documentation sur les [Libellés et stratégies](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-dataviews/data-governance.html?lang=fr) pour en savoir plus.
 
-Vous pouvez en savoir plus sur cette fonctionnalité ici :
+Vous pouvez en savoir plus sur cette fonctionnalité ici :
 
-[Prise en main dans Attribution AI](../../attribution-ai/getting-started.md)
-[Adobe Experience Platform et applications](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/platform-applications.html)
-[Diagrammes d’architecture Adobe Experience Cloud](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/experience-cloud.html)
+[Prise en main dans Attribution AI](../../attribution-ai/getting-started.md)
+[Adobe Experience Platform et applications](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/platform-applications.html?lang=fr)
+[Diagrammes d’architecture d’Adobe Experience Cloud](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/experience-cloud.html?lang=fr)
