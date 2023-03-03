@@ -3,137 +3,138 @@ keywords: Experience Platform;accueil;rubriques populaires;contrôle d’accès
 title: Gestion des stratégies de contrôle d’accès
 description: Ce document fournit des informations sur la gestion des stratégies de contrôle d’accès via l’interface Autorisations de Adobe Experience Cloud.
 exl-id: 66820711-2db0-4621-908d-01187771de14
-source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
+source-git-commit: 504c73fc73ce41f2c1b3159478fc7fe9b4d20a9d
 workflow-type: tm+mt
-source-wordcount: '726'
-ht-degree: 86%
+source-wordcount: '251'
+ht-degree: 31%
 
 ---
 
 # Gestion des stratégies de contrôle d’accès
 
-Les politiques de contrôle d&#39;accès sont des déclarations qui rassemblent les attributs pour établir les actions permises et non autorisées. Les stratégies d’accès peuvent être locales ou globales et peuvent remplacer d’autres stratégies.
+Les politiques de contrôle d&#39;accès sont des déclarations qui rassemblent les attributs pour établir les actions permises et non autorisées. Les stratégies d’accès peuvent être locales ou globales et peuvent remplacer d’autres stratégies. Adobe fournit une stratégie par défaut qui peut être activée immédiatement ou dès que votre entreprise est prête à commencer à contrôler l’accès à des objets spécifiques en fonction de libellés. La stratégie par défaut utilise les libellés appliqués aux ressources pour refuser l’accès, sauf si les utilisateurs disposent d’un rôle avec un libellé correspondant.
 
 >[!IMPORTANT]
 >
 >Les stratégies d’accès ne doivent pas être confondues avec les stratégies d’utilisation des données, qui contrôlent la manière dont les données sont utilisées dans Adobe Experience Platform au lieu des utilisateurs de votre entreprise qui y ont accès. Consultez le guide de création [stratégies d’utilisation des données](../../../data-governance/policies/create.md) pour plus d’informations.
 
-## Création d’une stratégie
+<!-- ## Create a new policy
 
-Pour créer une stratégie, sélectionnez l’onglet **[!UICONTROL Stratégies]** dans la barre latérale et sélectionnez **[!UICONTROL Créer une stratégie]**.
+To create a new policy, select the **[!UICONTROL Policies]** tab in the sidebar and select **[!UICONTROL Create Policy]**.
 
 ![flac-new-policy](../../images/flac-ui/flac-new-policy.png)
 
-La boîte de dialogue **[!UICONTROL Créer une stratégie]** s’affiche, vous invitant à saisir un nom et une description facultative. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Confirmer]**.
+The **[!UICONTROL Create a new policy]** dialog appears, prompting you to enter a name, and an optional description. When finished, select **[!UICONTROL Confirm]**.
 
 ![flac-create-new-policy](../../images/flac-ui/flac-create-new-policy.png)
 
-À l’aide de la flèche de liste déroulante, choisissez si vous souhaitez **Autoriser l’accès à** (![flac-allow-access-to](../../images/flac-ui/flac-permit-access-to.png)) une ressource ou **Refuser l’accès à** (![flac-deny-access-to](../../images/flac-ui/flac-deny-access-to.png)) une ressource.
+Using the dropdown arrow select if you would like to **Permit access to** (![flac-permit-access-to](../../images/flac-ui/flac-permit-access-to.png)) a resource or **Deny access to** (![flac-deny-access-to](../../images/flac-ui/flac-deny-access-to.png)) a resource.
 
-Sélectionnez ensuite la ressource que vous souhaitez inclure dans la stratégie à l’aide du menu déroulant et recherchez le type d’accès, en lecture ou en écriture.
+Next, select the resource that you would like to include in the policy using the dropdown menu and search access type, read or write.
 
 ![flac-flac-policy-resource-dropdown](../../images/flac-ui/flac-policy-resource-dropdown.png)
 
-Ensuite, à l’aide de la flèche déroulante, sélectionnez la condition que vous souhaitez appliquer à cette stratégie, **La valeur suivante est vraie :** (![flac-policy-true](../../images/flac-ui/flac-policy-true.png)) ou **La valeur suivante est fausse :** (![flac-policy-false](../../images/flac-ui/flac-policy-false.png)).
+Next, using the dropdown arrow select the condition you would like to apply to this policy, **The following being true** (![flac-policy-true](../../images/flac-ui/flac-policy-true.png)) or **The following being false** (![flac-policy-false](../../images/flac-ui/flac-policy-false.png)).
 
-Sélectionnez l’icône Plus pour **Ajouter une expression de correspondances** ou **Ajouter un groupe d’expressions** pour la ressource.
+Select the plus icon to **Add matches expression** or **Add expression group** for the resource. 
 
 ![flac-policy-expression](../../images/flac-ui/flac-policy-expression.png)
 
-Dans la liste déroulante, sélectionnez la **Ressource**.
+Using the dropdown, select the **Resource**.
 
 ![flac-policy-resource-dropdown](../../images/flac-ui/flac-policy-resource-dropdown-1.png)
 
-Ensuite, sélectionnez dans la liste déroulante les **Correspondances**.
+Next, using the dropdown select the **Matches**.
 
 ![flac-policy-matches-dropdown](../../images/flac-ui/flac-policy-matches-dropdown.png)
 
-Sélectionnez ensuite dans la liste déroulante le type de libellé (**[!UICONTROL Libellé principal]** ou **[!UICONTROL Libellé personnalisé]**) pour correspondre au libellé attribué à l’utilisateur ou l’utilisatrice dans les rôles.
+Next, using the dropdown, select the type of label (**[!UICONTROL Core label]** or **[!UICONTROL Custom label]**) to match the label assigned to the User in roles.
 
 ![flac-policy-user-dropdown](../../images/flac-ui/flac-policy-user-dropdown.png)
 
-Enfin, sélectionnez la **Sandbox** à laquelle vous souhaitez appliquer les conditions de la stratégie, à l’aide du menu déroulant.
+Finally, select the **Sandbox** that you would like the policy conditions to apply to, using the dropdown menu.
 
 ![flac-policy-sandboxes-dropdown](../../images/flac-ui/flac-policy-sandboxes-dropdown.png)
 
-Sélectionnez **Ajouter une ressource** pour ajouter d’autres ressources. Une fois l’opération terminée, sélectionnez **[!UICONTROL Enregistrer et quitter]**.
+Select **Add resource** to add more resources. Once finished, select **[!UICONTROL Save and exit]**.
 
 ![flac-policy-save-and-exit](../../images/flac-ui/flac-policy-save-and-exit.png)
 
-La nouvelle stratégie a été créée avec succès et vous êtes redirigé vers l’onglet **[!UICONTROL Stratégies]**, où la nouvelle stratégie apparaît dans la liste.
+The new policy is successfully created, and you are redirected to the **[!UICONTROL Policies]** tab, where you will see the newly created policy appear in the list. 
 
 ![flac-policy-saved](../../images/flac-ui/flac-policy-saved.png)
 
-## Modification d’une stratégie
+## Edit a policy
 
-Pour modifier une stratégie existante, sélectionnez-la dans l’onglet **[!UICONTROL Stratégies]**. Vous pouvez également utiliser l’option de filtrage pour filtrer les résultats afin de trouver la stratégie à modifier.
+To edit an existing policy, select the policy from the **[!UICONTROL Policies]** tab. Alternatively, use the filter option to filter the results to find the policy you want to edit.
 
 ![flac-policy-select](../../images/flac-ui/flac-policy-select.png)
 
-Sélectionnez ensuite les points de suspension (`…`) à côté du nom des stratégies. Une liste déroulante affiche alors les commandes permettant de modifier, désactiver, supprimer ou dupliquer le rôle. Sélectionnez Modifier dans la liste déroulante.
+Next, select the ellipsis (`…`) next to the policies name, and a dropdown displays controls to edit, deactivate, delete, or duplicate the role. Select edit from the dropdown.
 
 ![flac-policy-edit](../../images/flac-ui/flac-policy-edit.png)
 
-L’écran des autorisations de stratégie s’affiche. Effectuez les mises à jour, puis sélectionnez **[!UICONTROL Enregistrer et quitter]**.
+The policy permissions screen appears. Make the updates then select **[!UICONTROL Save and exit]**.
 
 ![flac-policy-save-and-exit](../../images/flac-ui/flac-policy-save-and-exit.png)
 
-La stratégie a été mise à jour avec succès et vous êtes redirigé vers l’onglet **[!UICONTROL Stratégies]**.
+The policy is successfully updated, and you are redirected to the **[!UICONTROL Policies]** tab.
 
-## Duplication de stratégie
+## Duplicate a policy
 
-Pour dupliquer une stratégie existante, sélectionnez-la dans l’onglet **[!UICONTROL Stratégies]**. Vous pouvez également utiliser l’option de filtrage pour filtrer les résultats afin de trouver la stratégie à modifier.
+To duplicate an existing policy, select the policy from the **[!UICONTROL Policies]** tab. Alternatively, use the filter option to filter the results to find the policy you want to edit.
 
 ![flac-policy-select](../../images/flac-ui/flac-policy-select.png)
 
-Sélectionnez ensuite les points de suspension (`…`) à côté du nom des stratégies. Une liste déroulante affiche alors les commandes permettant de modifier, désactiver, supprimer ou dupliquer le rôle. Sélectionnez Dupliquer dans la liste déroulante.
+Next, select the ellipsis (`…`) next to a policies name, and a dropdown displays controls to edit, deactivate, delete, or duplicate the role. Select duplicate from the dropdown.
 
 ![flac-policy-duplicate](../../images/flac-ui/flac-policy-duplicate.png)
 
-La boîte de dialogue **[!UICONTROL Dupliquer une stratégie]** s’affiche, vous invitant à confirmer la duplication.
+The **[!UICONTROL Duplicate policy]** dialog appears, prompting you to confirm the duplication. 
 
 ![flac-policy-duplicate-confirm](../../images/flac-ui/flac-duplicate-confirm.png)
 
-La nouvelle stratégie apparaît dans la liste sous la forme d’une copie de l’originale sur l’onglet **[!UICONTROL Stratégies]**.
+The new policy appears in the list as a copy of the original on the **[!UICONTROL Policies]** tab.
 
 ![flac-role-duplicate-saved](../../images/flac-ui/flac-role-duplicate-saved.png)
 
-## Supprimer une politique
+## Delete a policy
 
-Pour supprimer une politique existante, sélectionnez-la dans l’onglet **[!UICONTROL Politiques]**. Vous pouvez également utiliser l’option de filtrage pour filtrer les résultats afin de trouver la politique à supprimer.
+To delete an existing policy, select the policy from the **[!UICONTROL Policies]** tab. Alternatively, use the filter option to filter the results to find the policy you want to delete.
 
 ![flac-policy-select](../../images/flac-ui/flac-policy-select.png)
 
-Sélectionnez ensuite les points de suspension (`…`) à côté du nom des politiques, et une liste déroulante affiche les contrôles permettant de modifier, désactiver, supprimer ou dupliquer le rôle. Sélectionnez Supprimer dans la liste déroulante.
+Next, select the ellipsis (`…`) next to a policies name, and a dropdown displays controls to edit, deactivate, delete, or duplicate the role. Select delete from the dropdown.
 
 ![flac-policy-delete](../../images/flac-ui/flac-policy-delete.png)
 
-La boîte de dialogue **[!UICONTROL Supprimer une politique d’utilisateur]** s’affiche, vous invitant à confirmer la suppression.
+The **[!UICONTROL Delete user policy]** dialog appears, prompting you to confirm the deletion. 
 
 ![flac-policy-delete-confirm](../../images/flac-ui/flac-policy-delete-confirm.png)
 
-Vous revenez alors à l’onglet **[!UICONTROL Politiques]** et une fenêtre contextuelle de confirmation de suppression s’affiche.
+You are returned to the **[!UICONTROL policies]** tab and a confirmation of deletion pop over appears.
 
-![flac-policy-delete-confirmation](../../images/flac-ui/flac-policy-delete-confirmation.png)
+![flac-policy-delete-confirmation](../../images/flac-ui/flac-policy-delete-confirmation.png) -->
 
 ## Activer une politique
 
-Pour activer une politique existante, sélectionnez-la dans l’onglet **[!UICONTROL Politiques]**. Vous pouvez également utiliser l’option de filtrage pour filtrer les résultats afin de trouver la politique à supprimer.
+Pour activer une politique existante, sélectionnez-la dans l’onglet **[!UICONTROL Politiques]**.
 
-![flac-policy-select](../../images/flac-ui/flac-policy-select.png)
+![flac-policy-select](../../images/abac-end-to-end-user-guide/abac-policies-page.png)
 
 Sélectionnez ensuite les points de suspension (`…`) à côté du nom des politiques, et une liste déroulante affiche les contrôles permettant de modifier, désactiver, supprimer ou dupliquer le rôle. Sélectionnez Activer dans la liste déroulante.
 
-![flac-policy-activate](../../images/flac-ui/flac-policy-delete.png)
+![flac-policy-activate](../../images/abac-end-to-end-user-guide/abac-policies-activate.png)
 
-La boîte de dialogue **[!UICONTROL Activer une politique d’utilisateur]** s’affiche, vous invitant à confirmer l’activation.
+Le **[!UICONTROL Activer la stratégie]** s’affiche, vous invitant à confirmer l’activation.
 
-![flac-policy-activate-confirm](../../images/flac-ui/flac-policy-activate-confirm.png)
+![flac-policy-activate-confirm](../../images/abac-end-to-end-user-guide/abac-activate-policies-dialog.png)
+
 
 Vous revenez alors à l’onglet **[!UICONTROL Politiques]** et une fenêtre contextuelle de confirmation de l’activation s’affiche. Le statut de la politique s’affiche comme actif.
 
-![flac-policy-activated](../../images/flac-ui/flac-policy-activated.png)
+![flac-policy-activated](../../images/abac-end-to-end-user-guide/abac-policies-confirm-activate.png)
 
 ## Étapes suivantes
 
-Après avoir créé une nouvelle politique, vous pouvez passer à l’étape suivante pour [gérer les autorisations pour un rôle](permissions.md).
+Une fois la stratégie activée, vous pouvez passer à l’étape suivante en sélectionnant [gestion des autorisations pour un rôle](permissions.md).
