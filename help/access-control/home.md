@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;accueil;rubriques populaires;contrôle dʼaccès;adobe admin console
+keywords: Experience Platform;accueil;rubriques populaires;contrôle dʼaccès;adobe admin console
 solution: Experience Platform
 title: Présentation du contrôle d’accès
-description: Dans Adobe Experience Platform, le contrôle dʼaccès est fourni par le biais dʼAdobe Admin Console. Cette fonctionnalité exploite les profils de produit dans Admin Console, liant les utilisateurs à des autorisations et des sandbox.
+description: Dans Adobe Experience Platform, le contrôle dʼaccès est fourni par le biais dʼAdobe Admin Console. Cette fonctionnalité exploite les profils de produit dans l’Admin Console, liant les utilisateurs et utilisatrices à des autorisations et des sandbox.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
 source-git-commit: 56f1cbc622450b154e6e29a8116789b316901f66
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1473'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -51,7 +51,7 @@ Dans [!DNL Admin Console], des autorisations sont attribuées à des utilisateur
 | Profil de produit | Accès aux sandbox | Autorisations |
 | --- | --- | --- |
 | Tous les accès de la production par défaut | Production | Toutes les autorisations applicables à [!DNL Experience Platform] à lʼexception des autorisations Sandbox Administration. |
-| Administrateurs Sandbox | S.O. | Fournit un accès uniquement aux autorisations Sandbox Administration. |
+| Administrateurs Sandbox | S/O | Fournit un accès uniquement aux autorisations Sandbox Administration. |
 
 ## Sandbox et autorisations
 
@@ -84,7 +84,7 @@ Le tableau suivant décrit les autorisations disponibles pour [!DNL Experience P
 | [!DNL Alerts] | [!UICONTROL Affichage des alertes] | Accès en lecture seule aux alertes. |
 | [!DNL Alerts] | [!UICONTROL Gérer les alertes] | Accès à la lecture, la création, la modification et la suppression de l’historique des alertes. |
 | [!DNL Data Hygiene] | [!UICONTROL Afficher l’hygiène des données] | Accès en lecture seule à l’hygiène des données. |
-| [!DNL Data Hygiene] | [!UICONTROL Gestion de l’hygiène des données] | Accès à la lecture, la création, la modification et la suppression de l’hygiène des données. |
+| [!DNL Data Hygiene] | [!UICONTROL Gérer l’hygiène des données] | Accès à la lecture, la création, la modification et la suppression de lʼhygiène des données. |
 | [!DNL Data Modeling] | [!UICONTROL Gestion des schémas] | Accès pour lire, créer, modifier et supprimer des schémas et des ressources associées. |
 | [!DNL Data Modeling] | [!UICONTROL Affichage des schémas] | Accès en lecture seule aux schémas et aux ressources associées. |
 | [!DNL Data Modeling] | [!UICONTROL Gestion des relations] | Accès à la lecture, la création, la modification et la suppression des relations de schéma. |
