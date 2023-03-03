@@ -7,7 +7,7 @@ exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
 source-git-commit: 28b9458d29ce69bcbfdff53c0cb6bd7f427e4a2e
 workflow-type: tm+mt
 source-wordcount: '3258'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -126,19 +126,19 @@ Si vous sélectionnez une valeur dans cette liste d’énumérations, elle sera 
 
 ![Avertissement qui s’affiche si vous insérez une valeur qui ne fait pas partie de la liste d’énumérations.](../images/ui/segment-builder/enum-warning.png)
 
-Si vous créez plusieurs valeurs, vous pouvez toutes les ajouter en même temps à l’aide du téléchargement en masse. Sélectionnez la ![icône plus](../images/ui/segment-builder/plus-icon.png) pour afficher le **[!UICONTROL Ajouter des valeurs en bloc]** de la fenêtre contextuelle.
+Si vous créez plusieurs valeurs, vous pouvez toutes les ajouter en même temps à l’aide du téléchargement massif. Sélectionnez l’![icône plus](../images/ui/segment-builder/plus-icon.png) pour afficher la fenêtre contextuelle **[!UICONTROL Ajouter des valeurs en bloc]**.
 
-![L’icône plus est mise en surbrillance, affichant le bouton que vous pouvez sélectionner pour accéder à la fenêtre contextuelle de téléchargement en bloc.](../images/ui/segment-builder/add-bulk-values.png)
+![L’icône plus est mise en surbrillance, affichant le bouton que vous pouvez sélectionner pour accéder à la fenêtre contextuelle de téléchargement massif.](../images/ui/segment-builder/add-bulk-values.png)
 
-Sur le **[!UICONTROL Ajouter des valeurs en bloc]** vous pouvez transférer un fichier CSV ou TSV.
+Sur la fenêtre contextuelle **[!UICONTROL Ajouter des valeurs en bloc]**, vous pouvez télécharger un fichier CSV ou TSV.
 
-![La fenêtre contextuelle Ajouter des valeurs s’affiche en bloc. La boîte de dialogue que vous pouvez sélectionner pour charger un fichier CSV ou TSV est mise en surbrillance.](../images/ui/segment-builder/bulk-values-popover.png)
+![La fenêtre contextuelle Ajouter des valeurs en bloc s’affiche. La boîte de dialogue que vous pouvez sélectionner pour télécharger un fichier CSV ou TSV est mise en surbrillance.](../images/ui/segment-builder/bulk-values-popover.png)
 
 Vous pouvez également ajouter manuellement des valeurs séparées par des virgules.
 
-![La fenêtre contextuelle Ajouter des valeurs s’affiche en bloc. La boîte de dialogue que vous pouvez utiliser pour insérer des valeurs et les valeurs ajoutées sont mises en surbrillance.](../images/ui/segment-builder/bulk-values-comma-separated.png)
+![La fenêtre contextuelle Ajouter des valeurs en bloc s’affiche. La boîte de dialogue que vous pouvez utiliser pour insérer des valeurs et les valeurs ajoutées sont mises en surbrillance.](../images/ui/segment-builder/bulk-values-comma-separated.png)
 
-250 valeurs au maximum sont autorisées. Si vous dépassez ce montant, vous devrez supprimer certaines valeurs avant d’en ajouter d’autres.
+Veuillez noter qu’un maximum de 250 valeurs est autorisé. Si vous dépassez ce nombre, vous devrez supprimer certaines valeurs avant d’en ajouter d’autres.
 
 ![Un avertissement indiquant que vous avez atteint le nombre maximum de valeurs s’affiche.](../images/ui/segment-builder/maximum-values.png)
 

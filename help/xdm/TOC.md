@@ -7,7 +7,7 @@ feature: Schemas
 source-git-commit: 81b53d2bd84eacb32999b957bee9b5e9aa77d5f7
 workflow-type: tm+mt
 source-wordcount: '518'
-ht-degree: 81%
+ht-degree: 98%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 81%
    * [Contraintes des types de champs XDM](schema/field-constraints.md)
    * [Espace de noms dans XDM](./schema/namespaces.md)
    * Modèles de données du secteur {#industries}
-      * [Présentation](./schema/industries/overview.md)
+      * [Aperçu](./schema/industries/overview.md)
       * [Vente au détail](./schema/industries/retail.md)
       * [Services financiers](./schema/industries/financial.md)
       * [Soins de santé](./schema/industries/healthcare.md)
@@ -33,11 +33,11 @@ ht-degree: 81%
    * [XDM Individual Profile](./classes/individual-profile.md)
    * [XDM ExperienceEvent](./classes/experienceevent.md)
    * [Médicaments](./classes/medication.md)
-   * [Payer](./classes/payer.md)
+   * [Débiteur](./classes/payer.md)
    * [Plan](./classes/plan.md)
    * [Stratégie](./classes/policy.md)
    * [Produit](./classes/product.md)
-   * [Fournisseur](./classes/provider.md)
+   * [Prestataire](./classes/provider.md)
    * [Définition de segment](./classes/segment-definition.md)
    * Classes B2B {#b2b}
       * [Compte d’entreprise XDM](./classes/b2b/business-account.md)
@@ -63,7 +63,7 @@ ht-degree: 81%
       * [Composants de professionnel XDM](./field-groups/profile/business-person-components.md)
       * [Détails de professionnel XDM](./field-groups/profile/business-person-details.md)
    * XDM ExperienceEvent {#event}
-      * [Extension complète Adobe Analytics](./field-groups/event/analytics-full-extension.md)
+      * [Extension complète Adobe Analytics](./field-groups/event/analytics-full-extension.md)
       * [Détails de la publicité](./field-groups/event/advertising-details.md)
       * [Détails de l’application](./field-groups/event/application-details.md)
       * [Transferts de solde](./field-groups/event/balance-transfers.md)
@@ -82,14 +82,14 @@ ht-degree: 81%
       * [Détails de la demande de devis](./field-groups/event/quote-request-details.md)
       * [Informations sur la réservation](./field-groups/event/reservation-details.md)
       * [Informations sur l’outil de site](./field-groups/event/sitetool-details.md)
-      * [Recherche de site d’assistance](./field-groups/event/support-site-search.md)
+      * [Recherche sur le site d’assistance](./field-groups/event/support-site-search.md)
       * [Informations sur la mise à niveau](./field-groups/event/upgrade-details.md)
       * [Informations sur les prestations supplémentaires](./field-groups/event/upsell-details.md)
       * [Informations web](./field-groups/event/web-details.md)
    * XDM Business Campaign {#b2b-campaign}
-      * [Détails des campagnes commerciales XDM](./field-groups/b2b-campaign/details.md)
+      * [Détails de XDM Business Campaign](./field-groups/b2b-campaign/details.md)
    * Membres de XDM Business Campaign {#b2b-campaign-members}
-      * [Détails sur les membres de campagne commerciale XDM](./field-groups/b2b-campaign-members/details.md)
+      * [Détails des membres de XDM Business Campaign](./field-groups/b2b-campaign-members/details.md)
    * Médicaments {#medication}
       * [Médicaments](./field-groups/medication/healthcare-medication.md)
    * Plan {#plan}
@@ -129,7 +129,7 @@ ht-degree: 81%
    * [Identité](./data-types/identity.md)
    * [Impressions](./data-types/impressions.md)
    * [Détails d’implémentation](./data-types/implementation-details.md)
-   * [Recherche de site interne](./data-types/internal-site-search.md)
+   * [Recherche interne au site](./data-types/internal-site-search.md)
    * [Paire clé-valeur](./data-types/key-value-pair.md)
    * [Marketing](./data-types/marketing.md)
    * [Mesure](./data-types/measure.md)
@@ -151,7 +151,7 @@ ht-degree: 81%
    * [Interaction web](./data-types/web-interaction.md)
    * [Informations sur la page web](./data-types/webpage-details.md)
 * Interface utilisateur des [!UICONTROL Schémas] {#ui}
-   * [Présentation](./ui/overview.md)
+   * [Aperçu](./ui/overview.md)
    * [Explorer des ressources XDM](./ui/explore.md)
    * Créer et modifier des ressources {#resources}
       * [Schémas](./ui/resources/schemas.md)
@@ -159,7 +159,7 @@ ht-degree: 81%
       * [Groupes de champs](./ui/resources/field-groups.md)
       * [Types de données](./ui/resources/data-types.md)
    * Définir des champs {#fields}
-      * [Présentation](./ui/fields/overview.md)
+      * [Aperçu](./ui/fields/overview.md)
       * [Champs obligatoires](./ui/fields/required.md)
       * [Champs d’objet](./ui/fields/object.md)
       * [Champs de tableau](./ui/fields/array.md)
@@ -170,7 +170,7 @@ ht-degree: 81%
    * [Générer des exemples de données XDM](./ui/sample.md)
    * [Exporter des schémas XDM](./ui/export.md)
 * API Schema Registry {#api}
-   * [Présentation](api/overview.md)
+   * [Aperçu](api/overview.md)
    * [Prise en main](api/getting-started.md)
    * [Schémas](api/schemas.md)
    * [Comportements](api/behaviors.md)
@@ -190,16 +190,16 @@ ht-degree: 81%
 * Tutoriels {#tutorials}
    * [Créer un schéma dans l’interface utilisateur](tutorials/create-schema-ui.md)
    * [Créer un schéma dans l’API](tutorials/create-schema-api.md)
-   * [Ajout de champs spécifiques à un schéma (API)](./tutorials/specific-fields-api.md)
-   * [Définition de champs personnalisés (API)](./tutorials/custom-fields-api.md)
-   * [Ajout de valeurs suggérées à un champ (API)](tutorials/suggested-values.md)
-   * [Obsolescence d’un champ XDM dans l’interface utilisateur](tutorials/field-deprecation-ui.md)
+   * [Ajouter des champs spécifiques à un schéma (API)](./tutorials/specific-fields-api.md)
+   * [Définir des champs personnalisés (API)](./tutorials/custom-fields-api.md)
+   * [Ajouter des valeurs suggérées à un champ (API)](tutorials/suggested-values.md)
+   * [Rendre obsolète un champ XDM dans l’interface utilisateur](tutorials/field-deprecation-ui.md)
    * [Obsolescence d’un champ XDM dans l’API](tutorials/field-deprecation-api.md)
    * [Définir une relation de schéma dans l’interface utilisateur](tutorials/relationship-ui.md)
    * [Définir une relation de schéma dans l’API](tutorials/relationship-api.md)
-   * [Définition d’une relation de schéma dans Real-Time CDP B2B Edition](tutorials/relationship-b2b.md)
-   * [Gestion des libellés d’utilisation des données pour un schéma](tutorials/labels.md)
-   * [Création d’un schéma ad hoc](tutorials/ad-hoc.md)
+   * [Définir une relation de schéma dans l’édition B2B de Real-Time CDP](tutorials/relationship-b2b.md)
+   * [Gérer les libellés d’utilisation des données pour un schéma](tutorials/labels.md)
+   * [Créer un schéma ad hoc](tutorials/ad-hoc.md)
 * [Guide de dépannage](troubleshooting-guide.md)
 * [Référence d’API](https://www.adobe.io/experience-platform-apis/references/schema-registry/)
 * [Notes de mise à jour de Platform](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=fr)

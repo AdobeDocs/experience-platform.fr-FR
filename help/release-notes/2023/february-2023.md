@@ -4,7 +4,7 @@ description: Notes de mise à jour de février 2023 pour Adobe Experience Platfo
 source-git-commit: 0935a50527800b255901f8047051c47b45ab33b8
 workflow-type: tm+mt
 source-wordcount: '1317'
-ht-degree: 37%
+ht-degree: 45%
 
 ---
 
@@ -27,7 +27,7 @@ Adobe Experience Platform fournit une suite de technologies qui vous permetten
 
 ### Assurance {#assurance}
 
-Adobe Assurance vous permet d’inspecter, de tester, de simuler et de valider la manière dont vous collectez des données ou diffusez des expériences dans votre application mobile.
+Adobe Assurance permet de contrôler, de tester, de simuler et de valider la manière dont vous collectez les données ou dont les expériences sont accomplies dans l’application mobile.
 
 **Fonctionnalités nouvelles ou mises à jour**
 
@@ -37,7 +37,7 @@ Adobe Assurance vous permet d’inspecter, de tester, de simuler et de valider l
 
 {style=&quot;table-layout:auto&quot;}
 
-Pour plus d’informations sur Assurance, veuillez lire la section [Documentation d’assurance](https://developer.adobe.com/client-sdks/documentation/platform-assurance/).
+Pour plus d’informations sur l’assurance, consultez la [documentation sur l’assurance](https://developer.adobe.com/client-sdks/documentation/platform-assurance/).
 
 ## [!DNL Destinations] {#destinations}
 
@@ -47,7 +47,7 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 
 | Fonctionnalité | Description |
 | ----------- | ----------- |
-| [Amélioration de la stratégie de consentement](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-enhancement) pour les intégrations avec [destinations basées sur des fichiers (par lots)](/help/destinations/destination-types.md#file-based) | <p> Lorsque les profils ne sont plus qualifiés pour une stratégie de consentement, l’Experience Platform communique désormais de manière proactive sa sortie de stratégie vers des destinations basées sur des fichiers. Cela suit le [version de février 2023](/help/release-notes/2023/january-2023.md#destinations-new-updated-functionality) de la même fonctionnalité pour les destinations de diffusion en continu. </p> <p> <b>Remarque</b>: Cette fonctionnalité est disponible uniquement pour les clients de **[!UICONTROL Protection de la vie privée et protection]** et ceux de **[!UICONTROL Bouclier de santé]**. </p> |
+| [Amélioration de la stratégie de consentement](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-enhancement) pour les intégrations avec [destinations basées sur des fichiers (par lots)](/help/destinations/destination-types.md#file-based) | <p> Lorsque les profils ne sont plus qualifiés pour une stratégie de consentement, l’Experience Platform communique désormais de manière proactive sa sortie de stratégie vers des destinations basées sur des fichiers. Cela suit le [version de février 2023](/help/release-notes/2023/january-2023.md#destinations-new-updated-functionality) de la même fonctionnalité pour les destinations de diffusion en continu. </p> <p> <b>Remarque</b> : cette fonctionnalité est disponible uniquement pour les clients et clientes de **[!UICONTROL Privacy and Security Shield]** et celles et ceux de **[!UICONTROL Healthcare Shield]**. </p> |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -55,7 +55,7 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 
 | Documentation | Description |
 | ----------- | ----------- |
-| Fonctionnement de la documentation sur les destinations | <p>Nous avons publié trois nouveaux articles explicatifs sur le fonctionnement des destinations, sur la base des questions courantes des utilisateurs :</p> <p><ul><li>[Paramètres d’exportation configurables et communs des destinations](/help/destinations/how-destinations-work/destinations-configurations.md)</li><li>[Comportement d’exportation de profils pour différents types de destinations](/help/destinations/how-destinations-work/profile-export-behavior.md)</li><li>[Gestion des identités dans le workflow d’activation des destinations](/help/destinations/how-destinations-work/identity-handling.md)</li></p> |
+| Fonctionnement de la documentation sur les destinations | <p>Nous avons publié trois nouveaux articles explicatifs sur le fonctionnement des destinations, sur la base des questions courantes des utilisateurs :</p> <p><ul><li>[Paramètres d’exportation configurables et communs des destinations](/help/destinations/how-destinations-work/destinations-configurations.md)</li><li>[Comportement d’exportation de profils selon les types de destinations](/help/destinations/how-destinations-work/profile-export-behavior.md)</li><li>[Gestion des identités dans le workflow d’activation des destinations](/help/destinations/how-destinations-work/identity-handling.md)</li></p> |
 
 Pour des informations plus générales sur les destinations, consultez la [présentation des destinations](../../destinations/home.md).
 
@@ -102,9 +102,9 @@ Query Service vous permet d’utiliser le langage SQL standard pour interroger l
 | Fonctionnalité | Description |
 | --- | --- |
 | Activation des jeux de données pour les profils avec SQL | [Utiliser des LIBELLÉS dans les requêtes CTAS pour rendre un jeu de données &quot;profile enabled&quot;](../../query-service/sql/syntax.md#create-table-as-select)ou utilisez ALTER pour mettre à jour les jeux de données existants à activer pour le profil. Vous pouvez utiliser cette structure SQL étendue pour offrir une prise en charge transparente des attributs dérivés pour vos cas d’utilisation professionnels de profil client en temps réel. Voir [Flux SQL transparent pour le document d’attributs dérivés](../../query-service/data-distiller/derived-attributes/seamless-sql-flow.md) pour plus d’informations. |
-| Surveillance des requêtes planifiées | Utilisez la variable [Onglet Requêtes planifiées](../../query-service/ui/monitor-queries.md) pour trouver des informations importantes sur les exécutions de vos requêtes et vous abonner aux alertes. Surveillez les requêtes pour connaître les détails du planning, l’état et les messages/codes d’erreur en cas d’échec. |
+| Surveiller les requêtes planifiées | Utilisez la variable [Onglet Requêtes planifiées](../../query-service/ui/monitor-queries.md) pour trouver des informations importantes sur les exécutions de vos requêtes et vous abonner aux alertes. Surveillez les requêtes pour connaître les détails du planning, l’état et les messages/codes d’erreur en cas d’échec. |
 | Activation/désactivation de la fonction de saisie automatique | Élimination de certaines commandes de métadonnées et amélioration des temps de traitement par [activation/désactivation de la fonction de saisie semi-automatique de Query Editor](../../query-service/ui/user-guide.md#auto-complete). Cette fonctionnalité suggère automatiquement les mots-clés SQL potentiels et les détails du tableau pour la requête au fur et à mesure que vous l’écrivez. |
-| Exemples de jeux de données | Spécifiez un taux d’échantillonnage dans votre requête et [utiliser des exemples de jeux de données pour créer un exemple aléatoire uniforme ;](../../query-service/essential-concepts/dataset-samples.md)ou créer des exemples conditionnels en fonction de critères spécifiques. |
+| Échantillon de jeux de données | Spécifiez un taux d’échantillonnage dans votre requête et [utiliser des exemples de jeux de données pour créer un exemple aléatoire uniforme ;](../../query-service/essential-concepts/dataset-samples.md)ou créer des exemples conditionnels en fonction de critères spécifiques. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -127,7 +127,7 @@ Pour en savoir plus sur l’édition B2B de Real-Time CDP, lisez le [Présentati
 
 ## Sources {#sources}
 
-Adobe Experience Platform peut ingérer des données à partir de sources externes et vous permet de structurer, d’étiqueter et d’améliorer ces données à l’aide des services Platform. Vous pouvez ingérer des données à partir de diverses sources telles que les applications Adobe, le stockage dans le cloud, des logiciels tiers et votre système de gestion de la relation client.
+Adobe Experience Platform peut ingérer des données à partir de sources externes tout en vous permettant de structurer, d’étiqueter et d’améliorer ces données à l’aide des services de Platform. Vous pouvez ingérer des données à partir de diverses sources telles que les applications Adobe, le stockage dans le cloud, des logiciels tiers et votre système de gestion de la relation client.
 
 Experience Platform fournit une API RESTful et une interface utilisateur interactive qui vous permet de configurer facilement des connexions source à différents fournisseurs de données. Ces connexions source vous permettent de vous authentifier et de vous connecter à des services de gestion de la relation client et à des systèmes de stockage externes, de définir des heures d’ingestion et de gérer le débit d’ingestion des données.
 

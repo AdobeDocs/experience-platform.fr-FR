@@ -8,7 +8,7 @@ exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
 source-git-commit: a3140d5216857ef41c885bbad8c69d91493b619d
 workflow-type: tm+mt
 source-wordcount: '3962'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -22,7 +22,7 @@ L’interface utilisateur d’Adobe Experience Platform vous permet de créer et
 >
 >Si vous ingérez des données CSV dans Platform, vous pouvez [mapper ces données à un schéma XDM créé par des recommandations générées par l’IA](../../ingestion/tutorials/map-csv/recommendations.md) (actuellement en version bêta) sans avoir à créer manuellement le schéma.
 >
->Si vous préférez composer un schéma à l’aide de la méthode [!DNL Schema Registry] API, commencez par lire la [[!DNL Schema Registry] guide de développement](../api/getting-started.md) avant de lancer le tutoriel sur [création d’un schéma à l’aide de l’API](create-schema-api.md).
+>Si vous préférez composer un schéma à l’aide de l’API [!DNL Schema Registry], veuillez commencer par lire le [[!DNL Schema Registry] guide du développeur](../api/getting-started.md) avant de vous lancer dans le tutoriel sur la [création d’un schéma à l’aide de l’API](create-schema-api.md).
 
 ## Prise en main
 
@@ -177,7 +177,7 @@ Sélectionnez l’icône **plus (+)** à côté de l’objet `loyaltyTier` pour 
 
 Chaque champ nécessite les informations suivantes :
 
-* **[!UICONTROL Nom du champ]:** Nom du champ, de préférence écrit en CamelCase. Aucun espace n’est autorisé. Il s’agit du nom utilisé pour référencer le champ dans le code et dans d’autres applications en aval.
+* **[!UICONTROL Nom du champ] :** le nom du champ, écrit de façon à ce que les mots soient liés sans espace ni ponctuation, et en mettant en capitale la première lettre de chaque mot (Camel Case). Aucune espace n’est autorisé. Il s’agit du nom utilisé pour référencer le champ dans le code et dans d’autres applications en aval.
    * Exemple : loyaltyLevel
 * **[!UICONTROL Nom d’affichage] :** le nom du champ, écrit avec la première lettre de chaque mot important en majuscule (Title Case). Il s’agit du nom qui s’affiche dans la zone de travail lors de l’affichage ou de la modification du schéma.
    * Exemple : Loyalty Level

@@ -5,7 +5,7 @@ exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
 source-git-commit: 2b11fb87523c777d5c2d855e97a4af78a8483abe
 workflow-type: tm+mt
 source-wordcount: '497'
-ht-degree: 75%
+ht-degree: 100%
 
 ---
 
@@ -13,24 +13,24 @@ ht-degree: 75%
 
 ## 25 janvier 2023
 
-* **Nouvel écran d’accueil**: La page d’accueil de l’interface utilisateur de collecte de données a été mise à jour afin d’inclure des informations d’intégration et des liens utiles pour rationaliser la productivité. Cela inclut :
+* **Nouvel écran d’accueil** : la page d’accueil de l’interface utilisateur de collecte de données a été mise à jour afin d’inclure des informations d’intégration et des liens utiles pour optimiser la productivité. Cela inclut :
    1. Documentation et workflows recommandés pour commencer
    1. Propriétés, règles et éléments de données récents
    1. Extensions populaires
-   1. Nouvelles mises à jour d’extension avec une fonction d’installation rapide
-* **Envoi de données à [!DNL Google Ads] utilisation du transfert d’événement**: Vous pouvez désormais utiliser la variable [[!DNL Google Ads Enhanced Conversions] Extension d’API](../extensions/server/google-ads-enhanced-conversions/overview.md) pour le transfert d’événement, combiné avec [Google Oauth 2 secrets](../ui/event-forwarding/secrets.md#google-oauth2), pour envoyer en toute sécurité des données côté serveur à [!DNL Google Ads] en temps réel.
+   1. Nouvelles mises à jour des extensions avec une fonction d’installation rapide
+* **Envoi de données à [!DNL Google Ads] à l’aide du transfert d’événement** : vous pouvez désormais utiliser l’[[!DNL Google Ads Enhanced Conversions] extension d’API](../extensions/server/google-ads-enhanced-conversions/overview.md) pour le transfert d’événement, combiné avec les [secrets Google Oauth 2](../ui/event-forwarding/secrets.md#google-oauth2), pour envoyer en toute sécurité des données côté serveur à [!DNL Google Ads] en temps réel.
 
 ## 23 novembre 2022
 
 * Extension **[!DNL AWS] pour le transfert d’événement** : vous pouvez désormais envoyer des données à [!DNL Amazon Web Services] ([!DNL AWS]) à l’aide d’une extension de [transfert d’événement](../../tags/ui/event-forwarding/overview.md). Pour plus d’informations, consultez la [[!DNL AWS] présentation de l’extension](../../tags/extensions/server/aws/overview.md).
-* **[!DNL Google Ads Enhanced Conversions]extension pour le transfert d’événement**: Vous pouvez désormais envoyer des données de conversion à [!DNL Google Ads] à l’aide d’une [transfert d’événement](../../tags/ui/event-forwarding/overview.md) extension . Pour plus d’informations, consultez la [[!DNL Google Ads Enhanced Conversions] présentation de l’extension](../../tags/extensions/server/google-ads-enhanced-conversions/overview.md).
-* **[!DNL Microsoft Azure]extension pour le transfert d’événement**: Vous pouvez désormais envoyer des données à [!DNL Microsoft Azure] à l’aide d’une [transfert d’événement](../../tags/ui/event-forwarding/overview.md) extension . Pour plus d’informations, consultez la [[!DNL Microsoft Azure] présentation de l’extension](../../tags/extensions/server/azure/overview.md).
+* Extension **[!DNL Google Ads Enhanced Conversions] pour le transfert d’événement** : vous pouvez désormais envoyer des données de conversion à [!DNL Google Ads] à l’aide d’une extension de [transfert d’événement](../../tags/ui/event-forwarding/overview.md). Pour plus d’informations, consultez la [[!DNL Google Ads Enhanced Conversions] présentation de l’extension](../../tags/extensions/server/google-ads-enhanced-conversions/overview.md).
+* Extension **[!DNL Microsoft Azure] pour le transfert d’événement** : vous pouvez désormais envoyer des données à [!DNL Microsoft Azure] à l’aide d’une extension de [transfert d’événement](../../tags/ui/event-forwarding/overview.md). Pour plus d’informations, consultez la [[!DNL Microsoft Azure] présentation de l’extension](../../tags/extensions/server/azure/overview.md).
 
 ## 26 octobre 2022
 
 * **Gestion des données sensibles pour les flux de données** : les flux de données exploitent désormais plusieurs technologies Platform pour gérer de manière appropriée les données sensibles selon les applications des réglementations telles que le Health Insurance Portability and Accountability Act (HIPAA). Consultez la section relative à la [gestion des données sensibles dans les flux de données](../../edge/datastreams/overview.md#sensitive) pour plus d’informations.
 * Extension **[!DNL Splunk] pour le transfert d’événement** : vous pouvez désormais envoyer des données à [!DNL Splunk] à l’aide d’une extension de [transfert d’événement](../ui/event-forwarding/overview.md). Pour plus d’informations, consultez la [[!DNL Splunk] présentation de l’extension](../extensions/server/splunk/overview.md).
-* **[!DNL Zendesk]extension pour le transfert d’événement**: Vous pouvez désormais envoyer des données à [!DNL Zendesk] à l’aide d’une [transfert d’événement](../ui/event-forwarding/overview.md) extension . Pour plus d’informations, consultez la [[!DNL Zendesk] présentation de l’extension](../extensions/server/zendesk/overview.md).
+* Extension **[!DNL Zendesk] pour le transfert d’événement** : vous pouvez désormais envoyer des données à [!DNL Zendesk] à l’aide d’une extension de [transfert d’événement](../ui/event-forwarding/overview.md). Pour plus d’informations, consultez la [[!DNL Zendesk] présentation de l’extension](../extensions/server/zendesk/overview.md).
 
 ## 28 septembre 2022
 

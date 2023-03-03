@@ -7,7 +7,7 @@ feature: Sources
 source-git-commit: 0108d0dcb130e17007faeaa08f97e5c13d71578f
 workflow-type: tm+mt
 source-wordcount: '940'
-ht-degree: 91%
+ht-degree: 98%
 
 ---
 
@@ -117,7 +117,7 @@ ht-degree: 91%
          - [Pendo](tutorials/api/create/analytics/pendo-webhook.md)
       - Stockage dans le cloud {#cloud-storage}
          - [Amazon Kinesis](tutorials/api/create/cloud-storage/kinesis.md)
-         - [Amazon S3](tutorials/api/create/cloud-storage/s3.md)
+         - [Amazon S3](tutorials/api/create/cloud-storage/s3.md)
          - [Apache HDFS](tutorials/api/create/cloud-storage/hdfs.md)
          - [Azure Blob](tutorials/api/create/cloud-storage/blob.md)
          - [Azure Data Lake Storage Gen2](tutorials/api/create/cloud-storage/adls-gen2.md)
@@ -134,7 +134,7 @@ ht-degree: 91%
       - CRM {#crm}
          - [Microsoft Dynamics](tutorials/api/create/crm/ms-dynamics.md)
          - [Salesforce](tutorials/api/create/crm/salesforce.md)
-         - [Comptes et contacts CRM Sugar](tutorials/api/create/crm/sugarcrm-accounts-contacts.md)
+         - [Comptes et contacts SugarCRM](tutorials/api/create/crm/sugarcrm-accounts-contacts.md)
          - [Événements SugarCRM](tutorials/api/create/crm/sugarcrm-events.md)
          - [Veeva CRM](tutorials/api/create/crm/veeva.md)
          - [Zoho CRM](tutorials/api/create/crm/zoho.md)
@@ -212,7 +212,7 @@ ht-degree: 91%
    - [Réessayer les exécutions de flux de données ayant échoué](tutorials/api/retry-flows.md)
    - [Supprimer des comptes](tutorials/api/delete.md)
    - [Supprimer des flux de données](tutorials/api/delete-dataflows.md)
-   - [Ingestion de données chiffrées](tutorials/api/encrypt-data.md)
+   - [Ingérer des données chiffrées](tutorials/api/encrypt-data.md)
 - Tutoriels sur l’interface utilisateur {#ui-tutorials}
    - Créer une connexion source {#create}
       - Applications Adobe {#adobe-applications}
@@ -231,7 +231,7 @@ ht-degree: 91%
          - [Pendo](tutorials/ui/create/analytics/pendo-webhook.md)
       - Stockage dans le cloud {#cloud-storage}
          - [Amazon Kinesis](tutorials/ui/create/cloud-storage/kinesis.md)
-         - [Amazon S3](tutorials/ui/create/cloud-storage/s3.md)
+         - [Amazon S3](tutorials/ui/create/cloud-storage/s3.md)
          - [Apache HDFS](tutorials/ui/create/cloud-storage/hdfs.md)
          - [Azure Data Lake Storage Gen2](tutorials/ui/create/cloud-storage/adls-gen2.md)
          - [Azure Blob](tutorials/ui/create/cloud-storage/blob.md)
@@ -249,7 +249,7 @@ ht-degree: 91%
       - CRM {#crm}
          - [Microsoft Dynamics](tutorials/ui/create/crm/dynamics.md)
          - [Salesforce](tutorials/ui/create/crm/salesforce.md)
-         - [Comptes et contacts CRM Sugar](tutorials/ui/create/crm/sugarcrm-accounts-contacts.md)
+         - [Comptes et contacts SugarCRM](tutorials/ui/create/crm/sugarcrm-accounts-contacts.md)
          - [Événements SugarCRM](tutorials/ui/create/crm/sugarcrm-events.md)
          - [Veeva CRM](tutorials/ui/create/crm/veeva.md)
          - [Zoho CRM](tutorials/ui/create/crm/zoho.md)
@@ -320,7 +320,7 @@ ht-degree: 91%
    - [Supprimer des flux de données](tutorials/ui/delete.md)
    - [S’abonner aux alertes sur les sources](tutorials/ui/alerts.md)
 - Sources en libre-service (SDK par lots) {#sdk}
-   - [Présentation](sources-sdk/overview.md)
+   - [Aperçu](sources-sdk/overview.md)
    - Configurer votre spécification de connexion {#config}
       - [Options de configuration](sources-sdk/config/config.md)
       - [Configurer la spécification d’authentification](sources-sdk/config/authspec.md)
@@ -339,15 +339,15 @@ ht-degree: 91%
       - [Utiliser un éditeur de texte dans votre environnement local pour créer une page de documentation sur les sources](sources-sdk/documentation/text-editor.md)
       - [Modèle d’API de libre-service de documentation](sources-sdk/documentation/template.md)
       - [Modèle d’interface utilisateur de libre-service de documentation](sources-sdk/documentation/ui-template.md)
-   - SDK de diffusion en continu {#streaming-sdk}
-      - [Prise en main des sources en libre-service (SDK de diffusion en continu)](sources-sdk/streaming/getting-started.md)
-      - [Création d’une spécification de connexion pour une source de diffusion en continu](sources-sdk/streaming/create.md)
-      - [Mise à jour d’une spécification de connexion pour une source de diffusion en continu](sources-sdk/streaming/update-connection-specs.md)
-      - [Mise à jour de la spécification du flux de diffusion en continu](sources-sdk/streaming/update-flow-specs.md)
-      - [Test et envoi de votre spécification de connexion pour vérification](sources-sdk/streaming/submit.md)
-      - [Document de votre source (SDK de diffusion)](sources-sdk/streaming/document-streaming.md)
-      - [Modèle de diffusion en continu d’API en libre-service de documentation](sources-sdk/streaming/streaming-template-api.md)
-      - [Modèle de diffusion en continu de l’interface utilisateur en libre-service de la documentation](sources-sdk/streaming/streaming-template-ui.md)
+   - SDK de streaming {#streaming-sdk}
+      - [Prise en main des sources en libre-service (SDK de streaming)](sources-sdk/streaming/getting-started.md)
+      - [Créer une spécification de connexion pour une source de streaming](sources-sdk/streaming/create.md)
+      - [Mettre à jour une spécification de connexion pour une source de streaming](sources-sdk/streaming/update-connection-specs.md)
+      - [Mettre à jour la spécification du flux de streaming](sources-sdk/streaming/update-flow-specs.md)
+      - [Tester et envoyer votre spécification de connexion pour vérification](sources-sdk/streaming/submit.md)
+      - [Documenter votre source (SDK de streaming)](sources-sdk/streaming/document-streaming.md)
+      - [Documentation en libre-service de modèle d’API de streaming](sources-sdk/streaming/streaming-template-api.md)
+      - [Documentation en libre-service de modèle d’interface utilisateur de streaming](sources-sdk/streaming/streaming-template-ui.md)
 - [Notifications d’exécution de flux](notifications.md)
 - [Liste autorisée d’adresses IP](ip-address-allow-list.md)
 - [Questions fréquentes](./troubleshooting.md)
