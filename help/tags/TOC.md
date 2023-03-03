@@ -6,7 +6,7 @@ user-guide-description: Découvrez comment déployer et gérer des balises d’a
 feature: Tags
 solution: Data Collection
 source-git-commit: e34661f70a3550e579afe5133d85f76b1125e004
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '961'
 ht-degree: 100%
 
@@ -20,9 +20,9 @@ ht-degree: 100%
    * [Guide de démarrage rapide](./quick-start/quick-start.md)
    * [Guides de mise en œuvre](./quick-start/implementation-guides.md)
 * Guides d’interface utilisateur {#ui}
-   * [Présentation](./ui/managing-resources/overview.md)
+   * [Aperçu](./ui/managing-resources/overview.md)
    * Extensions {#extensions}
-      * [Présentation](./ui/managing-resources/extensions/overview.md)
+      * [Aperçu](./ui/managing-resources/extensions/overview.md)
       * [Mises à niveau des extensions](./ui/managing-resources/extensions/extension-upgrade.md)
    * [Éléments de données](./ui/managing-resources/data-elements.md)
    * [Règles](./ui/managing-resources/rules.md)
@@ -32,14 +32,14 @@ ht-degree: 100%
    * [Suppression de ressources](./ui/managing-resources/delete-resources.md)
    * [Supprimer des ressources d’une bibliothèque](./ui/managing-resources/remove-resources-from-library.md)
 * Publication {#publish}
-   * [Présentation](./ui/publishing/overview.md)
+   * [Aperçu](./ui/publishing/overview.md)
    * [Flux de publication](./ui/publishing/publishing-flow.md)
    * Hôtes {#hosts}
-      * [Présentation](./ui/publishing/hosts/hosts-overview.md)
+      * [Aperçu](./ui/publishing/hosts/hosts-overview.md)
       * [Hôtes gérés par Adobe](./ui/publishing/hosts/managed-by-adobe-host.md)
       * [Hôtes SFTP](./ui/publishing/hosts/sftp-host.md)
    * Environnements {#environments}
-      * [Présentation](./ui/publishing/environments.md)
+      * [Aperçu](./ui/publishing/environments.md)
       * [Test des codes incorporés à l’aide du débogeur Adobe Experience Platform](./ui/publishing/embed-code-testing.md)
    * [Versions](./ui/publishing/builds.md)
    * [Bibliothèques](./ui/publishing/libraries.md)
@@ -47,74 +47,74 @@ ht-degree: 100%
    * [Republication de bibliothèque](./ui/publishing/republish.md)
    * [Prise en charge du réseau CDN Premium (bêta)](./ui/publishing/premium-cdn.md)
 * Informations côté client {#client-side}
-   * [Présentation](./ui/client-side/overview.md)
+   * [Aperçu](./ui/client-side/overview.md)
    * [Déploiement asynchrone](./ui/client-side/asynchronous-deployment.md)
    * [Référence d’objet par satellite](./ui/client-side/satellite-object.md)
    * [Déploiement de balises JavaScript pour la gestion du consentement client](./ui/client-side/consent.md)
    * [Prise en charge de la stratégie de sécurité du contenu (CSP)](./ui/client-side/content-security-policy.md)
    * [Prise en charge de l’intégrité des sous-ressources (SRI)](./ui/client-side/sri.md)
 * Transfert d’événement {#event-forwarding}
-   * [Présentation](./ui/event-forwarding/overview.md)
+   * [Aperçu](./ui/event-forwarding/overview.md)
    * [Prise en main](./ui/event-forwarding/getting-started.md)
    * [Configuration des secrets](./ui/event-forwarding/secrets.md)
    * [Surveillance (bêta)](./ui/event-forwarding/monitoring.md)
 * Administration {#admin}
-   * [Présentation](./ui/administration/overview.md)
+   * [Aperçu](./ui/administration/overview.md)
    * [Sociétés et propriétés](./ui/administration/companies-and-properties.md)
    * [Autorisations utilisateur](./ui/administration/user-permissions.md)
 * Extensions {#extensions}
-   * [Présentation](./extensions/overview.md)
+   * [Aperçu](./extensions/overview.md)
    * Extensions de balise (côté client) {#client}
-      * [Présentation](./extensions/client/overview.md)
+      * [Aperçu](./extensions/client/overview.md)
       * [Mesures de vitesse du site accessibles](https://exchange.adobe.com/apps/ec/103053)
       * [Activity Map Customizer](https://exchange.adobe.com/apps/ec/101531)
       * [Actualisation de page d’action](https://exchange.adobe.com/apps/ec/102848)
       * [Suivi d’Adform Website](https://exchange.adobe.com/apps/ec/103195)
       * [Adobe Advertising Cloud](https://exchange.adobe.com/apps/ec/100155)
       * Adobe Analytics {#analytics}
-         * [Présentation](./extensions/client/analytics/overview.md)
+         * [Aperçu](./extensions/client/analytics/overview.md)
          * [Modules partagés](./extensions/client/analytics/shared-modules.md)
          * [Notes de mise à jour](./extensions/client/analytics/release-notes.md)
       * [Adobe Analytics et Adobe Target](https://exchange.adobe.com/apps/ec/105363/6sense-for-analytics-and-target)
       * [Adobe Analytics et Microsoft Dynamics](https://exchange.adobe.com/apps/ec/102966)
       * [Adobe Analytics et Salesforce](https://exchange.adobe.com/apps/ec/101530)
       *  Adobe Analytics Product String {#product-string}
-         * [Présentation](./extensions/client/product-string/overview.md)
+         * [Aperçu](./extensions/client/product-string/overview.md)
          * [Notes de mise à jour](./extensions/client/product-string/release-notes.md)
       * [Créateur de chaînes de produit Adobe Analytics](https://exchange.adobe.com/apps/ec/101461)
       * Adobe Audience Manager {#audience-manager}
-         * [Présentation](./extensions/client/audience-manager/overview.md)
+         * [Aperçu](./extensions/client/audience-manager/overview.md)
       * Adobe Client Data Layer (ACDL) {#client-data-layer}
-         * [Présentation](./extensions/client/client-data-layer/overview.md)
+         * [Aperçu](./extensions/client/client-data-layer/overview.md)
          * [Notes de mise à jour](./extensions/client/client-data-layer/release-notes.md)
       * Adobe ContextHub {#contexthub}
-         * [Présentation](./extensions/client/contexthub/overview.md)
+         * [Aperçu](./extensions/client/contexthub/overview.md)
       * [Adobe Experience Manager Forms](https://exchange.adobe.com/apps/ec/107493)
       * Service Adobe Experience Cloud ID {#id-service}
-         * [Présentation](./extensions/client/id-service/overview.md)
+         * [Aperçu](./extensions/client/id-service/overview.md)
          * [Notes de mise à jour](./extensions/client/id-service/release-notes.md)
       * Démo Adobe Experience Platform {#platform-demo}
-         * [Présentation](./extensions/client/platform-demo/overview.md)
+         * [Aperçu](./extensions/client/platform-demo/overview.md)
       * SDK web Adobe Experience Platform {#sdk}
-         * [Présentation](./extensions/client/sdk/overview.md)
+         * [Aperçu](./extensions/client/sdk/overview.md)
       * des statistiques sur les ressources Adobe Experience Manager {#asset-insights}
-         * [Présentation](./extensions/client/asset-insights/overview.md)
+         * [Aperçu](./extensions/client/asset-insights/overview.md)
          * [Notes de mise à jour](./extensions/client/asset-insights/release-notes.md)
       * [Adobe Fonts](https://exchange.adobe.com/apps/ec/101538)
       *  Adobe Media Analytics for Audio and Video {#media-analytics}
-         * [Présentation](./extensions/client/media-analytics/overview.md)
+         * [Aperçu](./extensions/client/media-analytics/overview.md)
          * [Notes de mise à jour](./extensions/client/media-analytics/release-notes.md)
       * Adobe Media Analytics (3.x SDK) {#media-analytics-3x}
-         * [Présentation](./extensions/client/media-analytics-3x/overview.md)
+         * [Aperçu](./extensions/client/media-analytics-3x/overview.md)
          * [Notes de mise à jour](./extensions/client/media-analytics-3x/release-notes.md)
       * Confidentialité Adobe {#privacy}
-         * [Présentation](./extensions/client/privacy/overview.md)
+         * [Aperçu](./extensions/client/privacy/overview.md)
       * [Sélecteur de suite de rapports Adobe](https://exchange.adobe.com/apps/ec/100640)
       * Adobe Target {#target}
-         * [Présentation](./extensions/client/target/overview.md)
+         * [Aperçu](./extensions/client/target/overview.md)
          * [Notes de mise à jour](./extensions/client/target/release-notes.md)
       * Adobe Target v2 {#target-v2}
-         * [Présentation](./extensions/client/target-v2/overview.md)
+         * [Aperçu](./extensions/client/target-v2/overview.md)
          * [Notes de mise à jour](./extensions/client/target-v2/release-notes.md)
       * [Adobe Target Toolkit](https://exchange.adobe.com/apps/ec/100640)
       * [Advertising Cloud](https://exchange.adobe.com/apps/ec/100640)
@@ -128,23 +128,23 @@ ht-degree: 100%
       * [Bing Ads Universal Event Tracking](https://exchange.adobe.com/apps/ec/100154)
       * [Branche](https://exchange.adobe.com/apps/ec/101382)
       * [!DNL BrightCove] suivi vidéo {#brightcove}
-         * [Présentation](./extensions/client/brightcove/overview.md)
+         * [Aperçu](./extensions/client/brightcove/overview.md)
          * [Notes de mise à jour](./extensions/client/brightcove/release-notes.md)
       * [CallTrackingMetrics](https://exchange.adobe.com/apps/ec/107695)
       * [Identifiant de source de canal](https://exchange.adobe.com/apps/ec/101412)
       * [Cheetah Experiences](https://exchange.adobe.com/apps/ec/102759)
       * [Clicktale](https://exchange.adobe.com/apps/ec/100082)
       * Plugins Analytics courants {#plugins}
-         * [Présentation](./extensions/client/plugins/overview.md)
+         * [Aperçu](./extensions/client/plugins/overview.md)
          * [Notes de mise à jour](./extensions/client/plugins/release-notes.md)
       * Modules externes SDK Web courants {#web-sdk-plugins}
-         * [Présentation](./extensions/client/web-sdk-plugins/overview.md)
+         * [Aperçu](./extensions/client/web-sdk-plugins/overview.md)
          * [Notes de mise à jour](./extensions/client/web-sdk-plugins/release-notes.md)
       * [Concat](https://exchange.adobe.com/apps/ec/104690)
       * [ContentSquare](https://exchange.adobe.com/apps/ec/100364)
       * [Gestion du consentement des cookies par Usercentrics CMP v2](https://exchange.adobe.com/apps/ec/107037)
       * Base {#core}
-         * [Présentation](./extensions/client/core/overview.md)
+         * [Aperçu](./extensions/client/core/overview.md)
          * [Notes de mise à jour](./extensions/client/core/release-notes.md)
       * [Custom Debug Logger](https://exchange.adobe.com/apps/ec/104698)
       * [Reconnaissance client](https://exchange.adobe.com/apps/ec/100688)
@@ -160,7 +160,7 @@ ht-degree: 100%
       * [Gainsight PX](https://exchange.adobe.com/apps/ec/103343)
       * [Engagement prédictif Genesys](https://exchange.adobe.com/apps/ec/106148)
       * Couche de données Google {#google-data-layer}
-         * [Présentation](./extensions/client/google-data-layer/overview.md)
+         * [Aperçu](./extensions/client/google-data-layer/overview.md)
          * [Notes de mise à jour](./extensions/client/google-data-layer/release-notes.md)
       * [Google Global Site Tag (gtag)](https://exchange.adobe.com/apps/ec/101437/google-global-site-tag-gtag)
       * [InMoment](https://exchange.adobe.com/apps/ec/100847)
@@ -169,11 +169,11 @@ ht-degree: 100%
       * [KickFire](https://exchange.adobe.com/apps/ec/101621)
       * [Table de mappage](https://exchange.adobe.com/apps/ec/103136)
       * [!DNL Marketo Munchkin] {#marketo}
-         * [Présentation](./extensions/client/marketo/overview.md)
+         * [Aperçu](./extensions/client/marketo/overview.md)
          * [Notes de mise à jour](./extensions/client/marketo/release-notes.md)
       * [Gestionnaire des propriétés principales](https://exchange.adobe.com/apps/ec/102992)
       * [!DNL Meta Pixel] {#meta}
-         * [Présentation](./extensions/client/meta/overview.md)
+         * [Aperçu](./extensions/client/meta/overview.md)
       * [Monita](https://exchange.adobe.com/apps/ec/106544)
       * [Nielsen Digital SDK](https://exchange.adobe.com/apps/ec/101361)
       * [Gestion du consentement OneTrust pour les cookies](https://exchange.adobe.com/apps/ec/100340)
@@ -202,38 +202,38 @@ ht-degree: 100%
       * [Yext Conversion Tracking](https://exchange.adobe.com/apps/ec/103174)
       * [[!DNL Youtube] Lecture](https://exchange.adobe.com/apps/ec/103174)
       * [!DNL YouTube] suivi vidéo {#youtube}
-         * [Présentation](./extensions/client/youtube/overview.md)
+         * [Aperçu](./extensions/client/youtube/overview.md)
          * [Notes de mise à jour](./extensions/client/youtube/release-notes.md)
    * Extensions de transfert d’événement (côté serveur) {#server}
-      * [Présentation](./extensions/server/overview.md)
+      * [Aperçu](./extensions/server/overview.md)
       *  Adobe Experience Platform Cloud Connector {#cloud-connector}
-         * [Présentation](./extensions/server/cloud-connector/overview.md)
+         * [Aperçu](./extensions/server/cloud-connector/overview.md)
          * [Notes de mise à jour](./extensions/server/cloud-connector/release-notes.md)
       * [!DNL AWS] {#aws}
-         * [Présentation](./extensions/server/aws/overview.md)
+         * [Aperçu](./extensions/server/aws/overview.md)
       * [Connecteur cloud pour Google Analytics](https://exchange.adobe.com/apps/ec/106542)
       * Base {#core}
-         * [Présentation](./extensions/server/core/overview.md)
+         * [Aperçu](./extensions/server/core/overview.md)
       * Conversions améliorées de Google Ads {#google-ads-enhanced-conversions}
-         * [Présentation](./extensions/server/google-ads-enhanced-conversions/overview.md)
+         * [Aperçu](./extensions/server/google-ads-enhanced-conversions/overview.md)
       * [!DNL Mailchimp] Edge {#mailchimp}
          * [Aperçu](./extensions/server/mailchimp/overview.md)
       * [!DNL Meta Conversions API] {#meta}
          * [Aperçu](./extensions/server/meta/overview.md)
       * [!UICONTROL Microsoft Azure] {#azure}
-         * [Présentation](./extensions/server/azure/overview.md)
+         * [Aperçu](./extensions/server/azure/overview.md)
       * [Pega Customer Decision Hub](https://exchange.adobe.com/apps/ec/107597)
       * [Snap Conversions API](https://exchange.adobe.com/apps/ec/108550)
       * [!DNL Splunk] {#splunk}
-         * [Présentation](./extensions/server/splunk/overview.md)
+         * [Aperçu](./extensions/server/splunk/overview.md)
       * API des événements [!DNL Zendesk] {#zendesk}
-         * [Présentation](./extensions/server/zendesk/overview.md)
+         * [Aperçu](./extensions/server/zendesk/overview.md)
 * Développement d’extension {#extension-dev}
-   * [Présentation](./extension-dev/overview.md)
+   * [Aperçu](./extension-dev/overview.md)
    * [Prise en main](./extension-dev/getting-started.md)
    * [Navigateurs pris en charge](./extension-dev/browsers.md)
    * Processus de soumission {#submit}
-      * [Présentation](./extension-dev/submit/overview.md)
+      * [Aperçu](./extension-dev/submit/overview.md)
       * [Configuration de la société](./extension-dev/submit/setup.md)
       * [Octroyer un accès utilisateur](./extension-dev/submit/access.md)
       * [Développer une extension](./extension-dev/submit/develop.md)
@@ -263,7 +263,7 @@ ht-degree: 100%
    * [Variable sans Turbine](./extension-dev/turbine.md)
    * [Norme de rétrocompatibilité](./extension-dev/backwards-compatibility.md)
 * API Reactor {#api}
-   * [Présentation](./api/overview.md)
+   * [Aperçu](./api/overview.md)
    * [Prise en main](./api/getting-started.md)
    * Points d’entrée {#endpoints}
       * [Sociétés](./api/endpoints/companies.md)
