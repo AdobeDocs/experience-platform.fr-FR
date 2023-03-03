@@ -1,9 +1,9 @@
 ---
 title: Comportement d’exportation de profils
 description: Découvrez comment le comportement d’exportation de profils varie entre les différents modèles d’intégration pris en charge dans les destinations Experience Platform.
-source-git-commit: 5d404d723ea0b7cc72c5188dcff1f59a1874cfe2
+source-git-commit: 90964189396b3b89f35a96eb4c04e248dc34b9b4
 workflow-type: tm+mt
-source-wordcount: '2979'
+source-wordcount: '2954'
 ht-degree: 97%
 
 ---
@@ -173,7 +173,7 @@ La population principale totale du segment est exportée tous les jours.
 
 | Ce qui détermine une exportation de destination | Éléments inclus dans le fichier exporté |
 |---------|----------|
-| <ul><li>Le planning d’exportation défini dans l’interface utilisateur ou l’API et l’action de l’utilisateur ou de l’utilisatrice (qui sélectionne [Exporter le fichier maintenant](/help/destinations/ui/export-file-now.md) dans l’IU ou qui utilise l’[API d’activation ad hoc](/help/destinations/api/ad-hoc-activation-api.md)) déterminent le début d’une exportation de destination.</li><li>Toute modification de l’appartenance à un segment d’un profil, qu’il remplisse les critères pour le segment ou non, qualifie un profil pour être inclus dans les exportations incrémentielles.</li></ul> | Dans les exportations complètes de fichiers, la population principale de profils d’un segment, basée sur la dernière évaluation de segment, est incluse avec chaque exportation de fichiers. Les dernières valeurs pour chaque attribut XDM sélectionné pour l’exportation sont également incluses en tant que colonnes dans chaque fichier. Notez que les profils à l’état de sortie ne sont pas inclus dans l’exportation du fichier. |
+| <ul><li>Le planning d’exportation défini dans l’interface utilisateur ou l’API et l’action de l’utilisateur ou de l’utilisatrice (qui sélectionne [Exporter le fichier maintenant](/help/destinations/ui/export-file-now.md) dans l’IU ou qui utilise l’[API d’activation ad hoc](/help/destinations/api/ad-hoc-activation-api.md)) déterminent le début d’une exportation de destination.</li></ul> | Dans les exportations complètes de fichiers, la population principale de profils d’un segment, basée sur la dernière évaluation de segment, est incluse avec chaque exportation de fichiers. Les dernières valeurs pour chaque attribut XDM sélectionné pour l’exportation sont également incluses en tant que colonnes dans chaque fichier. Notez que les profils à l’état de sortie ne sont pas inclus dans l’exportation du fichier. |
 
 {style=&quot;table-layout:fixed&quot;}
 
