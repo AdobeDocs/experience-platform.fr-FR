@@ -5,9 +5,9 @@ user-guide-title: Aide d’Intelligent Services
 breadcrumb-title: Guide des services intelligents
 user-guide-description: Utilisez les services intelligents d’IA pour générer des scores, découvrir des insights et créer des segments à partir des données de vos événements marketing.
 source-git-commit: 5448333a68560aeb83e8f31a36c75c539fc4bf1b
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '149'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 93%
 - [Présentation des services intelligents](home.md)
 - [Préparation des données en vue de leur utilisation dans les services intelligents](data-preparation.md)
 - Attribution AI {#attribution-ai}
-   - [Présentation](attribution-ai/overview.md)
+   - [Aperçu](attribution-ai/overview.md)
    - [Prise en main d’Attribution AI](attribution-ai/getting-started.md)
    - [Entrée et sortie](attribution-ai/input-output.md)
    - [Guide de l’interface utilisateur](attribution-ai/user-guide.md)
@@ -29,10 +29,10 @@ ht-degree: 93%
       - [Clés gérées par le client](attribution-ai/aai-data-governance/customer-managed-keys.md)
       - [Gouvernance des données](attribution-ai/aai-data-governance/data-governance.md)
       - [Politiques de gouvernance](attribution-ai/aai-data-governance/governance-policies.md)
-   - [Analysez des scores à lʼaide de Query Service](attribution-ai/aai-query-service.md)
+   - [Analyser des scores à lʼaide de Query Service](attribution-ai/aai-query-service.md)
    - [Résolution des problèmes](attribution-ai/troubleshooting.md)
 - IA dédiée au contenu et au commerce (bêta) {#content-commerce-ai}
-   - [Présentation](content-commerce-ai/overview.md)
+   - [Aperçu](content-commerce-ai/overview.md)
    - [Prise en main](content-commerce-ai/getting-started.md)
    - API IA dédiée au contenu et au commerce {#api}
       - [Extraction des couleurs](content-commerce-ai/api/color-extraction.md)
@@ -41,7 +41,7 @@ ht-degree: 93%
       - [Similarité visuelle](content-commerce-ai/api/visual-similarity.md)
       - [Détection de texte et reconnaissance optique de caractères](content-commerce-ai/api/optical-character-recognition.md)
 - Customer AI {#customer-ai}
-   - [Présentation](customer-ai/overview.md)
+   - [Aperçu](customer-ai/overview.md)
    - [Prise en main de Customer AI](customer-ai/getting-started.md)
    - [Entrée et sortie](customer-ai/input-output.md)
    - Guides de lʼinterface utilisateur {#user-guide}
@@ -56,4 +56,4 @@ ht-degree: 93%
       - [Clés gérées par le client](customer-ai/cai-data-governance/customer-managed-keys.md)
       - [Gouvernance des données](customer-ai/cai-data-governance/data-governance.md)
       - [Politiques de gouvernance](customer-ai/cai-data-governance/governance-policies.md)
-- [Notes de mise à jour de Platform](https://docs.adobe.com/content/help/fr-FR/experience-platform/release-notes/latest.html)
+- [Notes de mise à jour de Platform](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=fr)
