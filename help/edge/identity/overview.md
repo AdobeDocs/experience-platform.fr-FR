@@ -3,9 +3,9 @@ title: Données d’identité dans le SDK Web de Platform
 description: Découvrez comment récupérer et gérer les Adobe Experience Cloud ID (ECID) à l’aide du SDK Web de Adobe Experience Platform.
 keywords: Identité;identité propriétaire;service d’identité;identité tierce;migration des identifiants;identifiant visiteur;identité tierce;thirdPartyCookiesEnabled;idMigrationEnabled;getIdentity;synchroniser les identités;syncIdentity;sendEvent;identityMap;Principal;ecid;espace de noms d’identité;idd’espace de noms;authenticationState;hashEnabled;
 exl-id: 03060cdb-becc-430a-b527-60c055c2a906
-source-git-commit: d6aed404828d06bf223f348dd97960652b05933a
+source-git-commit: 0edd9422d6ea1b8e3aeaba1b24bc38b42ca809d8
 workflow-type: tm+mt
-source-wordcount: '1356'
+source-wordcount: '1404'
 ht-degree: 2%
 
 ---
@@ -114,6 +114,8 @@ Chaque objet d’identité du tableau identities contient les propriétés suiva
 | `authenticationState` | Chaîne | **(Obligatoire)** L’état d’authentification de l’ID. Les valeurs possibles sont les suivantes : `ambiguous`, `authenticated` et `loggedOut`. |
 | `primary` | Booléen | Détermine si cette identité doit être utilisée comme Principal fragment dans le profil. Par défaut, l’ECID est défini comme identifiant Principal de l’utilisateur. Cette valeur est définie par défaut sur `false` si vous l’ignorez. |
 
+En utilisant la variable `identityMap` pour identifier les appareils ou les utilisateurs, le résultat obtenu est le même que pour l’utilisation de la variable [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/setcustomerids.html?lang=en) de la méthode [!DNL ID Service API]. Voir [Documentation de l’API du service d’ID](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/get-set.html?lang=en) pour plus d’informations.
+
 ## Migration de l’API visiteur vers ECID
 
 Lors de la migration depuis à l’aide de l’API visiteur, vous pouvez également migrer les cookies AMCV existants. Pour activer la migration ECID, définissez la variable `idMigrationEnabled` dans la configuration. La migration des identifiants permet les cas d’utilisation suivants :
@@ -128,4 +130,4 @@ Lorsque des données au format XDM sont envoyées en Audience Manager, ces donn�
 
 ## Utilisation dans le transfert d’événement
 
-Si vous avez actuellement [transfert d’événement](../../tags/ui/event-forwarding/overview.md) activée et utilisent `appmeasurement.js` et `visitor.js`, vous pouvez conserver la fonction de transfert d’événement activée, ce qui ne posera aucun problème. Sur le serveur principal, Adobe récupère tous les segments AAM et les ajoute à l’appel à Analytics. Si l’appel à Analytics contient ces segments, Analytics n’appelle pas l’Audience Manager pour transférer aucune donnée. Il n’y a donc pas de collecte de données double. Il n’est pas non plus nécessaire d’avoir des conseils sur l’emplacement lors de l’utilisation du SDK Web, car les mêmes points de fin de segmentation sont appelés dans le serveur principal.
+Si vous avez actuellement [transfert d’événement](../../tags/ui/event-forwarding/overview.md) activée et utilisent `appmeasurement.js` et `visitor.js`, vous pouvez conserver la fonction de transfert d’événement activée, ce qui ne posera aucun problème. Sur le serveur principal, Adobe récupère tous les segments AAM et les ajoute à l’appel à Analytics. Si l’appel à Analytics contient ces segments, Analytics n’appelle aucune Audience Manager pour transférer des données. Il n’y a donc pas de collecte de données double. Il n’est pas non plus nécessaire d’avoir des conseils sur l’emplacement lors de l’utilisation du SDK Web, car les mêmes points de fin de segmentation sont appelés dans le serveur principal.
