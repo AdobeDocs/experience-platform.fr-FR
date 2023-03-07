@@ -4,10 +4,10 @@ title: Guide du tableau de bord Profils
 description: Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur les données Real-time Customer Profile de votre entreprise.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: a28c1c00fd0b33af3b797ecf2b4d45154dedc823
 workflow-type: tm+mt
-source-wordcount: '3381'
-ht-degree: 94%
+source-wordcount: '3385'
+ht-degree: 92%
 
 ---
 
@@ -117,7 +117,7 @@ Pour en savoir plus sur chacun des widgets standards disponibles, sélectionnez 
 * [[!UICONTROL Profils à identité unique]](#single-identity-profiles)
 * [[!UICONTROL Profils à identité unique par identité]](#single-identity-profiles-by-identity)
 * [[!UICONTROL Profils non segmentés]](#unsegmented-profiles)
-* [[!UICONTROL Tendance des profils non segmentés]](#unsegmented-profiles-trend)
+* [[!UICONTROL Les profils non segmentés changent de tendance]](#unsegmented-profiles-change-trend)
 * [[!UICONTROL Profils non segmentés par identité]](#unsegmented-profiles-by-identity)
 * [[!UICONTROL Audiences]](#audiences)
 * [[!UICONTROL Audiences mappées au statut de destination]](#audiences-mapped-to-destination-status)
@@ -262,21 +262,22 @@ Le widget [!UICONTROL Profils non segmentés] fournit le nombre total de profils
 
 ![Widget Profils non segmentés.](../images/profiles/unsegmented-profiles.png)
 
-### [!UICONTROL Tendance des profils non segmentés] {#unsegmented-profiles-trend}
+### [!UICONTROL Les profils non segmentés changent de tendance] {#unsegmented-profiles-change-trend}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_unsegmentedprofilestrend"
 >title="Tendance des profils non segmentés"
 >abstract="Ce widget fournit une représentation graphique linéaire du nombre de profils qui ne sont associés à aucun segment sur une période donnée. La tendance des profils non associés à un segment peut être visualisée sur des périodes de 30 jours, 90 jours et 12 mois."
 
-Le widget [!UICONTROL Tendance des profils non segmentés] fournit une représentation graphique linéaire du nombre de profils qui ne sont associés à aucun segment sur une période donnée. La tendance des profils non associés à un segment peut être visualisée sur des périodes de 30 jours, 90 jours et 12 mois. La période est sélectionnée dans un menu déroulant du widget. Le nombre de profils est reflété sur l’axe des ordonnées et la période sur l’axe des abscisses.
+Le [!UICONTROL Les profils non segmentés changent de tendance] widget utilise un graphique linéaire pour illustrer le nombre de profils ajoutés depuis le dernier instantané quotidien qui ne sont associés à aucun segment. La tendance de changement des profils non associés à un segment peut être visualisée sur des périodes de 30 jours, 90 jours et 12 mois. La période est sélectionnée dans un menu déroulant du widget. Le nombre de profils est reflété sur l’axe des ordonnées et la période sur l’axe des abscisses.
 
-![Widget Tendance des profils non segmentés.](../images/profiles/unsegmented-profiles-trend.png)
+![Les profils non segmentés changent de widget de tendance.](../images/profiles/unsegmented-profiles-change-trend.png)
 
 ### [!UICONTROL Profils non segmentés par identité] {#unsegmented-profiles-by-identity}
 
->!![NOTE]
-Le widget Profils non segmentés par identité a été abandonné en octobre 2022 et n’est plus disponible.
+>[!NOTE]
+>
+>Le widget Profils non segmentés par identité a été abandonné en octobre 2022 et n’est plus disponible.
 
 <!-- 
 
@@ -323,7 +324,8 @@ La boîte de dialogue [!UICONTROL Rapport de chevauchement des audiences] s’af
 ![Boîte de dialogue Rapport de chevauchement des audiences.](../images/profiles/profiles-audience-overlap-report-dialog.png)
 
 >[!NOTE]
-Sélectionnez l’en-tête de colonne **[!UICONTROL Chevauchement]** pour modifier le classement des résultats, du plus haut au plus bas ou du plus bas au plus haut.
+>
+>Sélectionnez l’en-tête de colonne **[!UICONTROL Chevauchement]** pour modifier le classement des résultats, du plus haut au plus bas ou du plus bas au plus haut.
 
 Pour télécharger l’intégralité du rapport au format PDF, sélectionnez le menu d’options (**`...`**), puis **[!UICONTROL Télécharger]**.
 
