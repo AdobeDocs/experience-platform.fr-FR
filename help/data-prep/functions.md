@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Fonctions de mappage de prép de données
 description: Ce document présente les fonctions de mappage utilisées avec Data Prep.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 2584e804674cc54f9cdd0b3a28ee6fb1600b6216
+source-git-commit: da7eff7966679635efa71cbbd33768ef4f412241
 workflow-type: tm+mt
-source-wordcount: '4392'
+source-wordcount: '4557'
 ht-degree: 15%
 
 ---
@@ -64,7 +64,7 @@ Les tableaux suivants répertorient toutes les fonctions de mappage prises en ch
 | est égal à | Compare deux chaînes pour confirmer si elles sont égales. Cette fonction est sensible à la casse. | <ul><li>STRING1 : **Obligatoire** Première chaîne à comparer.</li><li>STRING2 : **Obligatoire** La deuxième chaîne que vous souhaitez comparer.</li></ul> | STRING1. &#x200B;equals( &#x200B; STRING2) | &quot;string1&quot;. &#x200B;est égal à &#x200B;(&quot;STRING1&quot;) | false |
 | equalsIgnoreCase | Compare deux chaînes pour confirmer si elles sont égales. Cette fonction est **not** sensible à la casse. | <ul><li>STRING1 : **Obligatoire** Première chaîne à comparer.</li><li>STRING2 : **Obligatoire** La deuxième chaîne que vous souhaitez comparer.</li></ul> | STRING1. &#x200B;equalsIgnoreCase &#x200B;(STRING2) | &quot;string1&quot;. &#x200B;equalsIgnoreCase &#x200B;(&quot;STRING1) | vrai |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Fonctions d’expressions régulières
 
@@ -73,7 +73,7 @@ Les tableaux suivants répertorient toutes les fonctions de mappage prises en ch
 | extract_regex | Extrait les groupes de la chaîne d’entrée, en fonction d’une expression régulière. | <ul><li>STRING: **Obligatoire** Chaîne à partir de laquelle vous extrayez les groupes.</li><li>REGEX : **Obligatoire** L’expression régulière que vous souhaitez que le groupe corresponde.</li></ul> | extract_regex(STRING, REGEX) | extract_regex &#x200B;(&quot;E259,E259B_009,1_1&quot; &#x200B;, &quot;([^,]+),[^,]*,([^,]+)&quot;) | [&quot;E259,E259B_009,1_1&quot;, &quot;E259&quot;, &quot;1_1&quot;] |
 | matches_regex | Vérifie si la chaîne correspond à l’expression régulière saisie. | <ul><li>STRING: **Obligatoire** La chaîne que vous cochez correspond à l’expression régulière.</li><li>REGEX : **Obligatoire** Expression régulière par rapport à laquelle vous effectuez une comparaison.</li></ul> | matches_regex(STRING, REGEX) | matches_regex(&quot;E259,E259B_009,1_1&quot;, &quot;([^,]+),[^,]*,([^,]+)&quot;) | vrai |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Fonctions de hachage {#hashing}
 
@@ -89,7 +89,7 @@ Les tableaux suivants répertorient toutes les fonctions de mappage prises en ch
 | md5 | Prend une entrée et produit une valeur de hachage à l’aide de MD5. | <ul><li>INPUT : **Obligatoire** Texte brut à hacher.</li><li>CHARSET : *Facultatif* Nom du jeu de caractères. Les valeurs possibles sont UTF-8, UTF-16, ISO-8859-1 et US-ASCII. </li></ul> | md5(INPUT, CHARSET) | md5(&quot;my text&quot;, &quot;UTF-8&quot;) | d3b96ce8c9fb4 &#x200B; e9bd0198d03ba6852c7 |
 | crc32 | Prend une entrée utilise un algorithme de vérification de redondance cyclique (CRC) pour produire un code cyclique 32 bits. | <ul><li>INPUT : **Obligatoire** Texte brut à hacher.</li><li>CHARSET : *Facultatif* Nom du jeu de caractères. Les valeurs possibles sont UTF-8, UTF-16, ISO-8859-1 et US-ASCII.</li></ul> | crc32(INPUT, CHARSET) | crc32(&quot;my text&quot;, &quot;UTF-8&quot;) | 8df92e80 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Fonctions d’URL {#url}
 
@@ -104,8 +104,10 @@ Les tableaux suivants répertorient toutes les fonctions de mappage prises en ch
 | get_url_port | Renvoie le port de l’URL donnée. Si l’entrée n’est pas valide, elle renvoie null. | <ul><li>URL : **Obligatoire** URL à partir de laquelle le port doit être extrait.</li></ul> | get_url_port(URL) | get_url_port &#x200B;(&quot;sftp://example.com//home/ &#x200B; joe/employee.csv&quot;) | 22 |
 | get_url_path | Renvoie le chemin d’accès de l’URL donnée. Par défaut, le chemin complet est renvoyé. | <ul><li>URL : **Obligatoire** URL à partir de laquelle le chemin d’accès doit être extrait.</li><li>FULL_PATH : *Facultatif* Une valeur boolean qui détermine si le chemin complet est renvoyé. S’il est défini sur false, seule la fin du chemin est renvoyée.</li></ul> | get_url_path &#x200B;(URL, FULL_PATH) | get_url_path &#x200B;(&quot;sftp://example.com// &#x200B; home/joe/employee.csv&quot;) | &quot;//home/joe/ &#x200B; employee.csv&quot; |
 | get_url_query_str | Renvoie la chaîne de requête d’une URL donnée sous la forme d’un mappage de nom de chaîne de requête et de valeur de chaîne de requête. | <ul><li>URL : **Obligatoire** URL à partir de laquelle vous essayez d’obtenir la chaîne de requête.</li><li>ANCRAGE : **Obligatoire** Détermine ce qui sera fait avec l’ancre dans la chaîne de requête. Peut être l’une des trois valeurs suivantes : &quot;keep&quot; (conserver), &quot;remove&quot; (supprimer) ou &quot;append&quot; (ajouter).<br><br>Si la valeur est &quot;preserve&quot;, l’ancre est associée à la valeur renvoyée.<br>Si la valeur est &quot;remove&quot;, l’ancre est supprimée de la valeur renvoyée.<br>Si la valeur est &quot;append&quot;, l’ancre est renvoyée sous la forme d’une valeur distincte.</li></ul> | get_url_query_str &#x200B;(URL, ANCHOR) | get_url_query_str &#x200B;(&quot;foo://example.com:8042 &#x200B;/over/here?name= &#x200B; furet#nose&quot;, &quot;keep&quot;)<br>get_url_query_str &#x200B;(&quot;foo://example.com:8042 &#x200B;/over/here?name= &#x200B; furet#nose&quot;, &quot;remove&quot;)<br>get_url_query_str &#x200B;(&quot;foo://example.com &#x200B;:8042/over/here &#x200B;?name=ferret#nose&quot;, &quot;append&quot;) | `{"name": "ferret#nose"}`<br>`{"name": "ferret"}`<br>`{"name": "ferret", "_anchor_": "nose"}` |
+| get_url_encoded | Cette fonction utilise une URL comme entrée et remplace ou code les caractères spéciaux avec des caractères ASCII. Pour plus d’informations sur les caractères spéciaux, veuillez lire la section [liste de caractères spéciaux](#special-characters) dans l’annexe du présent document. | <ul><li>URL : **Obligatoire** L’URL d’entrée avec des caractères spéciaux que vous souhaitez remplacer ou coder avec des caractères ASCII.</li></ul> | get_url_encoded(URL) | get_url_encoded(&quot;https</span>://example.com/partner_asia-pacifique_2022&quot;) | https%3A%2F%2Fexample.com%2Fpartner_asia-pacifique_2022 |
+| get_url_décoded | Cette fonction utilise une URL comme entrée et décode les caractères ASCII en caractères spéciaux.  Pour plus d’informations sur les caractères spéciaux, veuillez lire la section [liste de caractères spéciaux](#special-characters) dans l’annexe du présent document. | <ul><li>URL : **Obligatoire** URL d’entrée contenant des caractères ASCII que vous souhaitez décoder en caractères spéciaux.</li></ul> | get_url_décoded(URL) | get_url_décoded(&quot;https%3A%2F%2Fexample.com%2Fpartner_asia-pacifique_2022&quot;) | https</span>://example.com/partner_asia-pacifique_2022 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Fonctions de date et d’heure {#date-and-time}
 
@@ -128,7 +130,7 @@ Les tableaux suivants répertorient toutes les fonctions de mappage prises en ch
 | zone_date_to_utc | Convertit une date de n’importe quel fuseau horaire en date en UTC. | <ul><li>DATE : **Obligatoire** La date que vous essayez de convertir.</li></ul> | zone_date_to_utc &#x200B;(DATE) | `zone_date_to_utc&#x200B;(2019-10-17T11:55:&#x200B;12 PST` | `2019-10-17T19:55:12Z` |
 | zone_date_to_zone | Convertit une date d’un fuseau horaire en un autre fuseau horaire. | <ul><li>DATE : **Obligatoire** La date que vous essayez de convertir.</li><li>ZONE : **Obligatoire** Fuseau horaire auquel vous essayez de convertir la date.</li></ul> | zone_date_to_zone &#x200B;(DATE, ZONE) | `zone_date_to_utc&#x200B;(now(), "Europe/Paris")` | `2021-10-26T15:43:59Z` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Hiérarchies - Objets {#objects}
 
@@ -147,7 +149,7 @@ Les tableaux suivants répertorient toutes les fonctions de mappage prises en ch
 | get_keys | Analyse les paires clé/valeur et renvoie toutes les clés. | <ul><li>OBJECT : **Obligatoire** Objet à partir duquel les clés seront extraites.</li></ul> | get_keys(OBJECT) | get_keys({&quot;book1&quot;: &quot;Fierté et préjugé&quot;, &quot;livre2&quot; : &quot;1984&quot;}) | `["book1", "book2"]` |
 | get_values | Analyse les paires clé/valeur et renvoie la valeur de la chaîne, en fonction de la clé donnée. | <ul><li>STRING: **Obligatoire** Chaîne à analyser.</li><li>CLÉ : **Obligatoire** Clé pour laquelle la valeur doit être extraite.</li><li>VALUE_DELIMITER: **Obligatoire** Délimiteur qui sépare le champ de la valeur. Si l’une des variables `null` ou une chaîne vide est fournie, cette valeur est `:`.</li><li>FIELD_DELIMITER : *Facultatif* Délimiteur qui sépare les paires champ-valeur. Si l’une des variables `null` ou une chaîne vide est fournie, cette valeur est `,`.</li></ul> | get_values(STRING, KEY, VALUE_DELIMITER, FIELD_DELIMITER) | get_values(\&quot;firstName - John , lastName - Cena , phone - 555 420 8692\&quot;, \&quot;firstName\&quot;, \&quot;-\&quot;, \&quot;,\&quot;) | John |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Pour plus d’informations sur la fonction de copie d’objet, voir la section [below](#object-copy).
 
@@ -169,7 +171,7 @@ Pour plus d’informations sur la fonction de copie d’objet, voir la section [
 | upsert_array_append | Cette fonction est utilisée pour ajouter tous les éléments du tableau d’entrée entier à la fin du tableau dans Profile. Cette fonction est **only** applicable pendant les mises à jour. Si elle est utilisée dans le contexte d’insertions, cette fonction renvoie l’entrée telle quelle. | <ul><li>ARRAY : **Obligatoire** Tableau à ajouter au tableau dans le profil.</li></ul> | upsert_array_append(ARRAY) | `upsert_array_append([123, 456])` | [123, 456] |
 | upsert_array_replace | Cette fonction est utilisée pour remplacer des éléments d’un tableau. Cette fonction est **only** applicable pendant les mises à jour. Si elle est utilisée dans le contexte d’insertions, cette fonction renvoie l’entrée telle quelle. | <ul><li>ARRAY : **Obligatoire** Tableau à remplacer dans le profil.</li></li> | upsert_array_replace(ARRAY) | `upsert_array_replace([123, 456], 1)` | [123, 456] |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Opérateurs logiques {#logical-operators}
 
@@ -182,7 +184,7 @@ Pour plus d’informations sur la fonction de copie d’objet, voir la section [
 | decode | Étant donné qu’une clé et une liste de paires clé-valeur sont aplaties dans un tableau, la fonction renvoie la valeur si la clé est trouvée ou renvoie une valeur par défaut si elle est présente dans le tableau. | <ul><li>CLÉ : **Obligatoire** Clé à mettre en correspondance.</li><li>OPTIONS : **Obligatoire** Tableau aplati de paires clé/valeur. Vous pouvez éventuellement placer une valeur par défaut à la fin.</li></ul> | decode(KEY, OPTIONS) | decode(stateCode, &quot;ca&quot;, &quot;California&quot;, &quot;pa&quot;, &quot;Pennsylvania&quot;, &quot;N/A&quot;) | Si le code d’état donné est &quot;ca&quot;, &quot;California&quot;.<br>Si le code d&#39;état donné est &quot;pa&quot;, &quot;Pennsylvania&quot;.<br>Si stateCode ne correspond pas à ce qui suit, &quot;S/O&quot;. |
 | iif | Évalue une expression booléenne donnée et renvoie la valeur spécifiée en fonction du résultat. | <ul><li>EXPRESSION : **Obligatoire** L’expression booléenne en cours d’évaluation.</li><li>TRUE_VALUE : **Obligatoire** Valeur renvoyée si l’expression est évaluée comme vraie.</li><li>FALSE_VALUE : **Obligatoire** Valeur renvoyée si l’expression est évaluée comme false.</li></ul> | iif(EXPRESSION, TRUE_VALUE, FALSE_VALUE) | iif(&quot;s&quot;.equalsIgnoreCase(&quot;S&quot;), &quot;True&quot;, &quot;False&quot;) | &quot;True&quot; |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Agrégation {#aggregation}
 
@@ -195,7 +197,7 @@ Pour plus d’informations sur la fonction de copie d’objet, voir la section [
 | min | Renvoie le minimum des arguments donnés. Utilise l’ordre naturel. | <ul><li>OPTIONS : **Obligatoire** Un ou plusieurs objets pouvant être comparés.</li></ul> | min(OPTIONS) | min(3, 1, 4) | 1 |
 | max | Renvoie le maximum des arguments donnés. Utilise l’ordre naturel. | <ul><li>OPTIONS : **Obligatoire** Un ou plusieurs objets pouvant être comparés.</li></ul> | max(OPTIONS) | max(3, 1, 4) | 4 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Conversions de type {#type-conversions}
 
@@ -210,7 +212,7 @@ Pour plus d’informations sur la fonction de copie d’objet, voir la section [
 | to_float | Convertit une chaîne en chaîne flottante. | <ul><li>STRING: **Obligatoire** Chaîne à convertir en flottante.</li></ul> | to_float(STRING) | to_float(&quot;12.3456&quot;) | 12.34566 |
 | to_integer | Convertit une chaîne en entier. | <ul><li>STRING: **Obligatoire** Chaîne à convertir en entier.</li></ul> | to_integer(STRING) | to_integer(&quot;12&quot;) | 12 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Fonctions JSON {#json}
 
@@ -222,7 +224,7 @@ Pour plus d’informations sur la fonction de copie d’objet, voir la section [
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | json_to_object | Désérialisez le contenu JSON à partir de la chaîne donnée. | <ul><li>STRING: **Obligatoire** Chaîne JSON à désérialiser.</li></ul> | json_to_object &#x200B;(STRING) | json_to_object &#x200B;({&quot;info&quot;:{&quot;firstName&quot;:&quot;John&quot;,&quot;lastName&quot;: &quot;Doe&quot;}) | Objet représentant le fichier JSON. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Opérations spéciales {#special-operations}
 
@@ -234,7 +236,7 @@ Pour plus d’informations sur la fonction de copie d’objet, voir la section [
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | uuid /<br>guid | Génère un identifiant pseudo-aléatoire. |  | uuid()<br>guid() | uuid()<br>guid() | 7c0267d2-bb74-4e1a-9275-3bf4fcda5f4<br>c7016dc7-3163-43f7-afc7-2e1c9c206333 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Fonctions de l’agent utilisateur {#user-agent}
 
@@ -250,7 +252,7 @@ Toutes les fonctions de l’agent utilisateur contenues dans le tableau ci-desso
 | Fonction | Description | Paramètres | Syntaxe | Expression | Exemple de résultat |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | ua_os_name | Extrait le nom du système d’exploitation de la chaîne de l’agent utilisateur. | <ul><li>USER_AGENT : **Obligatoire** Chaîne de l’agent utilisateur.</li></ul> | ua_os_name &#x200B;(USER_AGENT) | ua_os_name &#x200B;(&quot;Mozilla/5.0 (iPhone); Processeur iPhone OS 5_1_1 comme Mac OS X) AppleWebKit/534.46 (KHTML, comme Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | iOS |
-| ua_os_version_major | Extrait la version principale du système d’exploitation de la chaîne de l’agent utilisateur. | <ul><li>USER_AGENT : **Obligatoire** Chaîne de l’agent utilisateur.</li></ul> | ua_os_version_major &#x200B;(USER_AGENT) | ua_os_version_major &#x200B; s(&quot;Mozilla/5.0 (iPhone); Processeur iPhone OS 5_1_1 comme Mac OS X) AppleWebKit/534.46 (KHTML, comme Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | iOS 5 |
+| ua_os_version_major | Extrait la version principale du système d’exploitation de la chaîne de l’agent utilisateur. | <ul><li>USER_AGENT : **Obligatoire** Chaîne de l’agent utilisateur.</li></ul> | ua_os_version_major &#x200B;(USER_AGENT) | ua_os_version_major &#x200B; s(&quot;Mozilla/5.0 (iPhone); Processeur iPhone OS 5_1_1 comme Mac OS X) AppleWebKit/534.46 (KHTML, comme Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | iOS 5 |
 | ua_os_version | Extrait la version du système d’exploitation de la chaîne de l’agent utilisateur. | <ul><li>USER_AGENT : **Obligatoire** Chaîne de l’agent utilisateur.</li></ul> | ua_os_version &#x200B;(USER_AGENT) | ua_os_version &#x200B;(&quot;Mozilla/5.0 (iPhone); Processeur iPhone OS 5_1_1 comme Mac OS X) AppleWebKit/534.46 (KHTML, comme Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | 5.1.1 |
 | ua_os_name_version | Extrait le nom et la version du système d’exploitation de la chaîne de l’agent utilisateur. | <ul><li>USER_AGENT : **Obligatoire** Chaîne de l’agent utilisateur.</li></ul> | ua_os_name_version &#x200B;(USER_AGENT) | ua_os_name_version &#x200B;(&quot;Mozilla/5.0 (iPhone); Processeur iPhone OS 5_1_1 comme Mac OS X) AppleWebKit/534.46 (KHTML, comme Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | iOS 5.1.1 |
 | ua_agent_version | Extrait la version de l’agent de la chaîne de l’agent utilisateur. | <ul><li>USER_AGENT : **Obligatoire** Chaîne de l’agent utilisateur.</li></ul> | ua_agent_version &#x200B;(USER_AGENT) | ua_agent_version &#x200B;(&quot;Mozilla/5.0 (iPhone); Processeur iPhone OS 5_1_1 comme Mac OS X) AppleWebKit/534.46 (KHTML, comme Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | 5.1 |
@@ -258,7 +260,7 @@ Toutes les fonctions de l’agent utilisateur contenues dans le tableau ci-desso
 | ua_agent_name | Extrait le nom de l’agent de la chaîne de l’agent utilisateur. | <ul><li>USER_AGENT : **Obligatoire** Chaîne de l’agent utilisateur.</li></ul> | ua_agent_name &#x200B;(USER_AGENT) | ua_agent_name &#x200B;(&quot;Mozilla/5.0 (iPhone); Processeur iPhone OS 5_1_1 comme Mac OS X) AppleWebKit/534.46 (KHTML, comme Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | Safari |
 | ua_device_class | Extrait la classe device de la chaîne user agent. | <ul><li>USER_AGENT : **Obligatoire** Chaîne de l’agent utilisateur.</li></ul> | ua_device_class &#x200B;(USER_AGENT) | ua_device_class &#x200B;(&quot;Mozilla/5.0 (iPhone); Processeur iPhone OS 5_1_1 comme Mac OS X) AppleWebKit/534.46 (KHTML, comme Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | Téléphone |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Copie d’objet {#object-copy}
 
@@ -302,3 +304,43 @@ Pour que le mappage automatique fonctionne, les conditions préalables suivantes
 * Les nouveaux attributs doivent avoir des noms correspondants dans le schéma source et le schéma XDM.
 
 Si aucune des conditions préalables n’est remplie, vous devez mapper manuellement le schéma source au schéma XDM à l’aide de la préparation des données.
+
+## Annexe
+
+Vous trouverez ci-dessous des informations supplémentaires sur l’utilisation des fonctions de mappage de la préparation de données
+
+### Caractères spéciaux {#special-characters}
+
+Le tableau ci-dessous présente une liste de caractères réservés et les caractères codés correspondants.
+
+| Caractère réservé | Caractère codé |
+| --- | --- |
+| space | %20 |
+| ! | %21 |
+|  » | %22 |
+| # | %23 |
+| $ | %24 |
+| % | %25 |
+| &amp; | %26 |
+| &#39; | %27 |
+| ( | %28 |
+| ) | %29 |
+| * | %2A |
+| + | %2B |
+|  ; | %2C |
+| / | %2F |
+| : | %3A |
+|   | %3B |
+| &lt; | %3C |
+| = | %3D |
+| > | %3E |
+| ? | %3F |
+| @ | %40 |
+| [ | %5B |
+| | | %5C |
+| ] | %5D |
+| ^ | %5E |
+| ` | %60 |
+| ~ | %7E |
+
+{style="table-layout:auto"}
