@@ -4,10 +4,10 @@ user-guide-title: Guide des destinations
 user-guide-description: Activez vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
 description: Ce document répertorie la table des matières des destinations Adobe Experience Platform
 feature: Destinations
-source-git-commit: 92000a9276d0ec379414de22f36865a04ab9a359
+source-git-commit: 94f682487630867aff2d1cb1898d62980055cdb4
 workflow-type: tm+mt
-source-wordcount: '1034'
-ht-degree: 95%
+source-wordcount: '1038'
+ht-degree: 98%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 95%
 * [Mécanismes de sécurisation des destinations (activation)](./guardrails.md)
 * Fonctionnement des destinations {#how-destinations-work}
    * [Paramètres d’exportation configurables et communs des destinations](./how-destinations-work/destinations-configurations.md)
-   * [Comportement d’exportation de profils pour différents types de destinations](./how-destinations-work/profile-export-behavior.md)
+   * [Comportement d’exportation de profils selon les types de destinations](./how-destinations-work/profile-export-behavior.md)
    * [Gestion des identités dans le workflow d’activation des destinations](./how-destinations-work/identity-handling.md)
 * Tutoriels sur les API {#api}
    * [Se connecter aux destinations de diffusion en continu et activer les données à l’aide de l’API Flow Service](./api/streaming-destinations.md)
@@ -54,8 +54,9 @@ ht-degree: 95%
    * [Présentation du catalogue des destinations](./catalog/overview.md)
    * Destinations Adobe {#adobe}
       * [Présentation des destinations Adobe](./catalog/adobe/overview.md)
-      * [(Version bêta) Audiences Experience Cloud](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
+      * [(Version bêta) Audiences Experience Cloud](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
       * [Connexion Marketo Engage](./catalog/adobe/marketo-engage.md)
+      * [Connexion à Marketo Measure Ultimate](./catalog/adobe/marketo-measure-ultimate.md)
       * [Partage de segments Experience Platform](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=fr)
    * Destinations publicitaires {#advertising}
       * [Présentation des destinations publicitaires](./catalog/advertising/overview.md)
@@ -160,7 +161,7 @@ ht-degree: 95%
       * [Extension KickFire](./catalog/personalization/kickfire.md)
       * [Extension Marketo Web Personalization](./catalog/personalization/marketo-web-personalization.md)
       * [Connexion à Pega Customer Decision Hub](./catalog/personalization/pega.md)
-      * [Connexion à un profil Pega](./catalog/personalization/pega-profile.md)
+      * [Connexion à Pega Profile](./catalog/personalization/pega-profile.md)
    * Destinations sociales {#social}
       * [Présentation des destinations sociales](./catalog/social/overview.md)
       * [Extension Adobe Livefyre](./catalog/social/adobe-livefyre.md)
@@ -184,7 +185,7 @@ ht-degree: 95%
       * [Extension Medallia](./catalog/voice/medallia.md)
       * [Extension Talk URL Inbox](./catalog/voice/talkurl.md)
 * Destination SDK {#destination-sdk}
-   * [Présentation](./destination-sdk/overview.md)
+   * [Aperçu](./destination-sdk/overview.md)
    * [Conditions préalables à l’intégration](./destination-sdk/integration-prerequisites.md)
    * [Prise en main](./destination-sdk/getting-started.md)
    * Fonctionnalité de Destination SDK {#functionality}

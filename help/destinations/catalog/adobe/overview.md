@@ -3,16 +3,16 @@ keywords: destinations;solutions experience cloud ; cible;destination cible; clo
 title: Présentation des destinations Adobe
 description: Gérez l’expérience de vos clients en connectant vos données dans Platform à d’autres solutions Adobe Experience Cloud pour le ciblage publicitaire, la personnalisation, l’automatisation du marketing, etc.
 exl-id: 15a22a93-b4d6-4b94-bc6c-3634920c7689
-source-git-commit: 4ac73a83188a11900f38307ca8d743de4c186fdb
+source-git-commit: e3039944fff96bbb060fd800d7bbb032084c5010
 workflow-type: tm+mt
-source-wordcount: '230'
-ht-degree: 31%
+source-wordcount: '234'
+ht-degree: 32%
 
 ---
 
 # Présentation des destinations Adobe {#adobe-destinations}
 
-## Présentation {#overview}
+## Aperçu {#overview}
 
 Gérez l’expérience de vos clients en connectant vos données dans Adobe Experience Platform à d’autres solutions Adobe Experience Cloud pour le ciblage publicitaire, la personnalisation, l’automatisation du marketing, etc.
 
@@ -27,8 +27,9 @@ Pour comprendre la différence entre les connexions et les extensions, voir [Con
 * [Connexion Adobe Advertising Cloud DSP](/help/destinations/catalog/advertising/adobe-advertising-cloud-connection.md)
 * [Connexion Adobe Campaign](../email-marketing/adobe-campaign.md)
 * [Connexion Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md)
-* [(Version bêta) Audiences Experience Cloud](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
+* [(Version bêta) Audiences Experience Cloud](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
 * [Connexion Marketo Engage](/help/destinations/catalog/adobe/marketo-engage.md)
+* [Connexion à Marketo Measure Ultimate](/help/destinations/catalog/adobe/marketo-measure-ultimate.md)
 
 ### Extensions
 
