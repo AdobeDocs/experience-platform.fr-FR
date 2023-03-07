@@ -3,16 +3,16 @@ keywords: destinations;destination;page des détails des destinations;page des d
 title: Afficher les détails de la destination
 description: La page de détails d’une destination individuelle fournit un aperçu des détails de destination. Les détails de la destination incluent le nom de destination, l’identifiant, les segments mappés à la destination et les contrôles permettant de modifier l’activation et d’activer et désactiver le flux de données.
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: a84d67e433d70cc6194ca20abc656e4b141d42a6
+source-git-commit: 0a300660ce0fc53c403d2ceeb3d4d7d2c32ac117
 workflow-type: tm+mt
-source-wordcount: '802'
-ht-degree: 21%
+source-wordcount: '912'
+ht-degree: 19%
 
 ---
 
 # Afficher les détails de la destination
 
-## Présentation {#overview}
+## Aperçu {#overview}
 
 Dans l’interface utilisateur de Adobe Experience Platform, vous pouvez afficher et surveiller les attributs et les activités de vos destinations. Ces détails incluent le nom et l’identifiant de la destination, des commandes pour activer ou désactiver les destinations, etc. Les détails incluent également des mesures pour les enregistrements de profil activés, les identités activées, en échec et exclues, ainsi qu’un historique des exécutions de flux de données.
 
@@ -64,7 +64,7 @@ Le tableau suivant couvre les contrôles et les détails fournis par le rail de 
 | [!UICONTROL Créé par] | Indique l’utilisateur qui a créé cette destination. |
 | [!UICONTROL Créé] | Indique la date et l’heure (UTC) de création de cette destination. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## [!UICONTROL Activé]/[!UICONTROL Désactivé] basculer {#enabled-disabled-toggle}
 
@@ -86,9 +86,23 @@ Le [!UICONTROL Exécutions de flux de données] fournit des données de mesure s
 
 ### Durée des exécutions du flux de données {#dataflow-runs-duration}
 
-Il existe un problème connu dans la durée affichée des exécutions du flux de données. Lorsque la variable **[!UICONTROL Durée de traitement]** indiqué pour la plupart des exécutions de flux de données, soit environ quatre heures, comme illustré dans l’image ci-dessous, le temps de traitement réel pour toute exécution de flux de données est beaucoup plus court. Les fenêtres d’exécution du flux de données restent ouvertes plus longtemps dans l’cas où l’Experience Platform doit réessayer d’effectuer des appels vers la destination.
+Il existe une différence dans la durée affichée des exécutions de flux de données entre les destinations en flux continu et celles basées sur des fichiers.
 
-![Image de la page Exécution du flux de données avec la colonne Temps de traitement mise en surbrillance.](/help/destinations/assets/ui/details-page/processing-time-dataflow-run.png)
+### Destinations de diffusion en continu {#streaming}
+
+Lorsque la variable **[!UICONTROL Durée de traitement]** indiqué pour la plupart des exécutions de flux de données en continu est d’environ quatre heures, comme illustré dans l’image ci-dessous, le temps de traitement réel pour toute exécution de flux de données est beaucoup plus court. Les fenêtres d’exécution du flux de données restent ouvertes pendant plus longtemps si l’Experience Platform doit réessayer d’effectuer des appels vers la destination et s’assurer qu’il ne manque pas de données arrivées tardivement pendant la même période.
+
+![Image de la page Exécution du flux de données avec la colonne Temps de traitement mise en surbrillance pour une destination de diffusion en continu.](/help/destinations/assets/ui/details-page/processing-time-dataflow-run-streaming.png)
+
+Pour plus d’informations, reportez-vous à la section [le flux de données s’exécute dans les destinations de diffusion en continu.](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-streaming-destinations) dans la documentation de surveillance.
+
+### Destinations basées sur des fichiers {#file-based}
+
+Pour les flux de données qui s’exécutent sur des destinations basées sur des fichiers, la variable **[!UICONTROL Durée de traitement]** dépend de la taille des données exportées et de la charge du système. Notez également que le flux de données s’exécute vers des destinations basées sur des fichiers sont ventilés par segment.
+
+![Image de la page Flux de données s’exécutant avec la colonne Temps de traitement mise en surbrillance pour une destination basée sur un fichier.](/help/destinations/assets/ui/details-page/processing-time-dataflow-run-file-based.png)
+
+Pour plus d’informations, reportez-vous à la section [le flux de données s’exécute dans des destinations par lots (basées sur des fichiers).](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) dans la documentation de surveillance.
 
 ## [!UICONTROL Données d’activation] {#activation-data}
 
