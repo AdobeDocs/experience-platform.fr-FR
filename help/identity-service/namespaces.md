@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Présentation d’Identity Namespace
 description: Les espaces de noms d’identité sont des composants du Service d’identités qui servent d’indicateurs du contexte auquel une identité se rapporte. Par exemple, ils distinguent une valeur de "name@email.com" comme adresse électronique ou "443522" comme identifiant CRM numérique.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: ad9fb0bcc7bca55da432c72adc94d49e3c63ad6e
+source-git-commit: 482de6a50d14b9de095014b070ce400a2fd273cc
 workflow-type: tm+mt
-source-wordcount: '1642'
-ht-degree: 18%
+source-wordcount: '1681'
+ht-degree: 27%
 
 ---
 
@@ -62,23 +62,28 @@ Les espaces de noms standard suivants sont fournis pour être utilisés par tout
 | ------------ | ----------- |
 | AdCloud | Espace de noms qui représente l’Adobe d’AdCloud. |
 | Adobe Analytics (identifiant hérité) | Espace de noms représentant Adobe Analytics. Consultez le document suivant sur [Espaces de noms Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/gdpr-namespaces.html?lang=en#namespaces) pour plus d’informations. |
-| Apple IDFA (ID pour les annonceurs) | Espace de noms représentant l’Apple ID pour les annonceurs. Consultez le document suivant sur [publicités basées sur les intérêts](https://support.apple.com/fr-fr/HT202074) pour plus d’informations. |
+| IDFA Apple (ID pour les annonceurs) | Un espace de noms représentant l’ID Apple pour les annonceurs. Pour plus d’informations, consultez le document sur les [annonces basées sur les intérêts](https://support.apple.com/fr-fr/HT202074). |
 | Service de notification push Apple | Espace de noms représentant les identités collectées à l’aide du service de notification push Apple. Consultez le document suivant sur [Service de notification push Apple](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html#//apple_ref/doc/uid/TP40008194-CH8-SW1) pour plus d’informations. |
 | CORE | Espace de noms représentant Adobe Audience Manager. Cet espace de noms peut également être référencé par son nom hérité : &quot;Adobe AudienceManager&quot;. Consultez le document suivant sur [ID d’Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/data-privacy-reference/data-privacy-ids.html?lang=en#aam-ids) pour plus d’informations. |
-| ECID | Espace de noms qui représente l’ECID. Cet espace de noms peut également être référencé par les alias suivants : &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Consultez le document suivant sur [ECID](./ecid.md) pour plus d’informations. |
+| ECID | Espace de noms qui représente l’ECID. Cet espace de noms peut également être référencé par les alias suivants : « ID Adobe Marketing Cloud », « ID Adobe Experience Cloud », « ID Adobe Experience Platform ». Consultez le document suivant sur [ECID](./ecid.md) pour plus d’informations. |
 | E-mail | Espace de noms représentant une adresse électronique. Ce type d’espace de noms est souvent associé à une seule personne et peut donc être utilisé pour identifier cette personne sur différents canaux. |
-| Emails (SHA256, avec mise en minuscules) | Espace de noms pour l’adresse électronique préhachée. Les valeurs fournies dans cet espace de noms sont converties en minuscules avant le hachage avec SHA256. Les espaces de début et de fin doivent être supprimés avant qu’une adresse email ne soit normalisée. Ce paramètre ne peut pas être modifié rétroactivement. Consultez le document suivant sur [Prise en charge du hachage SHA-256](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html?lang=en#hashing-support) pour plus d’informations. |
+| E-mails (SHA256, en minuscules) | Un espace de noms pour adresse électronique préhachée. Les valeurs fournies dans cet espace de noms sont converties en minuscules avant le hachage en SHA-256. Les espaces de début et de fin doivent être supprimés avant qu’une adresse e-mail ne soit normalisée. Ce paramètre ne peut pas être modifié rétroactivement. Consultez le document suivant sur [Prise en charge du hachage SHA-256](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html?lang=fr#hashing-support) pour plus d’informations. |
 | Firebase Cloud Messaging | Espace de noms représentant les identités collectées à l’aide de Google Firebase Cloud Messaging pour notifications push. Consultez le document suivant sur [Google Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging) pour plus d’informations. |
-| Google Ad ID (GAID) | Espace de noms qui représente un identifiant Google Advertising. Consultez le document suivant sur [Google Advertising ID](https://support.google.com/googleplay/android-developer/answer/6048248?hl=en) pour plus d’informations. |
+| Google Ad ID (GAID) | Un espace de noms représentant un ID Google Advertising. Pour plus d’informations, consultez le document suivant sur l’[ID Google Advertising](https://support.google.com/googleplay/android-developer/answer/6048248?hl=fr). |
 | Google Click ID | Espace de noms représentant un identifiant de clic Google. Consultez le document suivant sur [Suivi des clics dans Google Ads](https://developers.google.com/adwords/api/docs/guides/click-tracking) pour plus d’informations. |
 | Téléphone | Espace de noms qui représente un numéro de téléphone. Ce type d’espace de noms est souvent associé à une seule personne et peut donc être utilisé pour identifier cette personne sur différents canaux. |
 | Téléphone (E.164) | Espace de noms qui représente les numéros de téléphone bruts qui doivent être hachés au format E.164. Le format E.164 comprend un signe plus (`+`), un numéro de téléphone international, un numéro de téléphone local et un numéro de téléphone. Par exemple : `(+)(country code)(area code)(phone number)`. |
 | Téléphone (SHA256) | Espace de noms qui représente les numéros de téléphone qui doivent être hachés à l’aide de SHA256. Vous devez supprimer les symboles, les lettres et les zéros de début. Vous devez également ajouter le code d’appel de pays comme préfixe. |
-| Téléphone (SHA256_E.164) | Espace de noms qui représente les numéros de téléphone bruts qui doivent être hachés au format SHA256 et E.164. |
+| Téléphone (SHA256_E.164) | Un espace de noms représentant des numéros de téléphone bruts qui doivent être hachés au format SHA256 et E.164. |
 | TNTID | Espace de noms représentant Adobe Target. Consultez le document suivant sur [Cible](https://experienceleague.adobe.com/docs/target/using/target-home.html?lang=fr) pour plus d’informations. |
 | Windows AID | Espace de noms qui représente un identifiant Windows Advertising. Consultez le document suivant sur [Identifiant Windows Advertising](https://docs.microsoft.com/en-us/uwp/api/windows.system.userprofile.advertisingmanager.advertisingid?view=winrt-19041) pour plus d’informations. |
 
-### Affichage des espaces de noms d’identité
+### Affichage des espaces de noms d’identité {#view-identity-namespaces}
+
+>[!CONTEXTUALHELP]
+>id="platform_identity_view_integration_identities"
+>title="Affichage des identités d’intégration"
+>abstract="Les identités d’intégration sont des espaces de noms utilisés pour établir une connexion avec d’autres systèmes et ne sont pas utilisés dans la résolution d’identité ou pour assembler des identités. <br> Ces identités sont masquées par défaut. Utilisez le bouton d’activation/désactivation pour afficher les espaces de noms d’intégration."
 
 Pour afficher les espaces de noms d’identité dans l’interface utilisateur, sélectionnez **[!UICONTROL Identités]** dans le volet de navigation de gauche, puis sélectionnez **[!UICONTROL Parcourir]**.
 
