@@ -1,10 +1,10 @@
 ---
 title: Création d’une connexion source Marketo Engage et d’un flux de données pour les données d’activité personnalisée dans l’interface utilisateur
 description: Ce tutoriel décrit les étapes à suivre pour créer une connexion source Marketo Engage et un flux de données dans l’interface utilisateur afin d’importer des données d’activités personnalisées dans Adobe Experience Platform.
-source-git-commit: d049a29d4c39fa41917e8da1dde530966f4cbaf4
+source-git-commit: e584fbdfa64516a0dad1e7b99eb347f18e59d6d5
 workflow-type: tm+mt
-source-wordcount: '1365'
-ht-degree: 23%
+source-wordcount: '1481'
+ht-degree: 22%
 
 ---
 
@@ -26,7 +26,7 @@ Ce tutoriel nécessite une compréhension du fonctionnement des composants suiva
    * [Créer et modifier des schémas dans l’interface utilisateur](../../../../../xdm/ui/resources/schemas.md) : découvrez comment créer et modifier des schémas dans l’interface utilisateur.
 * [Espaces de noms d’identité](../../../../../identity-service/namespaces.md) : les espaces de noms d’identité sont des composants d’[!DNL Identity Service] qui servent d’indicateurs du contexte auquel une identité se rapporte. Une identité complète est composée d’une valeur d’identifiant et d’un espace de noms.
 * [[!DNL Real-Time Customer Profile]](/help/profile/home.md) : fournit un profil de consommateur unifié en temps réel, basé sur des données agrégées provenant de plusieurs sources.
-* [Sandbox](../../../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuelles qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
+* [Sandbox](../../../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
 
 ## Récupération des détails de votre activité personnalisée
 
@@ -145,9 +145,30 @@ Une fois que vous avez révisé votre flux de données, sélectionnez **[!UICONT
 
 ![L’étape de révision finale qui résume les informations sur la connexion, le jeu de données et les champs de mappage.](../../../../images/tutorials/create/marketo-custom-activities/review.png)
 
->[!NOTE]
->
->Une fois l’ingestion terminée, le jeu de données ingéré contient toutes les activités, y compris les activités standard et personnalisées de votre [!DNL Marketo] instance. Pour sélectionner vos enregistrements d’activité personnalisés sur Platform, vous devez utiliser [Query Service](../../../../../query-service/home.md) et fournissez les prédicats appropriés.
+### Ajout d’activités personnalisées à un flux de données d’activités existant {#add-to-existing-dataflows}
+
+Pour ajouter des données d’activité personnalisées à un flux de données existant, modifiez les mappages d’un flux de données d’activité existant avec les données d’activité personnalisées que vous souhaitez ingérer. Vous pouvez ainsi ingérer une activité personnalisée dans le même jeu de données d’activités existant. Pour plus d’informations sur la mise à jour des mappages d’un flux de données existant, consultez le guide sur [mise à jour des flux de données dans l’interface utilisateur](../../update-dataflows.md).
+
+### Utilisation [!DNL Query Service] pour filtrer les activités pour les activités personnalisées {#query-service-filter}
+
+Une fois votre flux de données terminé, vous pouvez utiliser [Query Service](../../../../../query-service/home.md) pour filtrer les activités pour vos données d’activité personnalisées.
+
+Lorsque des activités personnalisées sont ingérées dans Platform, le nom de l’API de l’activité personnalisée devient automatiquement son `eventType`. Utilisation `eventType={API_NAME}` pour filtrer les données d’activité personnalisées.
+
+```sql
+SELECT * FROM with_custom_activities_ds_today WHERE eventType='aepCustomActivityDemo1' 
+```
+
+Utilisez la variable `IN` pour filtrer plusieurs activités personnalisées :
+
+```sql
+SELECT * FROM $datasetName WHERE eventType='{API_NAME}'
+SELECT * FROM $datasetName WHERE eventType IN ('aepCustomActivityDemo1', 'aepCustomActivityDemo2')
+```
+
+L’image ci-dessous illustre un exemple d’instruction SQL dans la variable [Éditeur de requêtes](../../../../../query-service/ui/user-guide.md) qui filtre les données d’activité personnalisées.
+
+![Interface utilisateur de Platform affichant un exemple de requête pour des activités personnalisées.](../../../../images/tutorials/create/marketo-custom-activities/queries.png)
 
 ## Étapes suivantes
 
