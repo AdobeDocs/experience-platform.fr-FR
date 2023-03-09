@@ -4,14 +4,14 @@ solution: Experience Platform
 title: Définition des champs d’identité dans l’interface utilisateur
 description: Découvrez comment définir un champ d’identité dans l’interface utilisateur de l’Experience Platform.
 exl-id: 11a53345-4c3f-4537-b3eb-ee7a5952df2a
-source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
+source-git-commit: 857c1d4f74b6352e90f9c97ef22d686a883e3563
 workflow-type: tm+mt
-source-wordcount: '577'
-ht-degree: 9%
+source-wordcount: '610'
+ht-degree: 10%
 
 ---
 
-# Définition des champs d’identité dans l’interface utilisateur
+# Définir des champs d’identité dans l’interface utilisateur
 
 Dans le modèle de données d’expérience (XDM), un champ d’identité représente un champ qui peut être utilisé pour identifier une personne individuelle liée à un événement d’enregistrement ou de série temporelle. Ce document explique comment définir un champ d’identité dans l’interface utilisateur de Adobe Experience Platform.
 
@@ -23,7 +23,12 @@ Les champs d’identité sont un composant essentiel de la manière dont les gra
    * [Espaces de noms d’identité](../../../identity-service/namespaces.md) : définissent les différents types d’informations d’identité qui peuvent être associés à une seule personne et constituent un composant obligatoire pour chaque champ d’identité.
 * [Profil client en temps réel](../../../profile/home.md): tire parti des graphiques d’identités des clients pour fournir un profil client unifié basé sur des données agrégées provenant de plusieurs sources, mis à jour en temps quasi réel.
 
-## Définition d’un champ d’identité
+## Définition d’un champ d’identité {#define-a-identity-field}
+
+>[!CONTEXTUALHELP]
+>id="platform_schemas_identityField_primaryIdentityRestriction"
+>title="Restrictions à l’identité Principale"
+>abstract="Ce schéma utilise un groupe de champs destiné à être utilisé dans une connexion source spécifique. La connexion nécessite que identityMap soit utilisé comme identité Principale et l’a défini automatiquement."
 
 When [définition d’un nouveau champ](./overview.md#define) dans l’interface utilisateur, vous pouvez la définir comme un champ d’identité en sélectionnant l’option **[!UICONTROL Identité]** dans le rail de droite.
 

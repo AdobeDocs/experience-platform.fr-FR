@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Principes de base de la composition des schémas
 description: Ce document présente les schémas du modèle de données d’expérience (XDM) ainsi que les blocs de création, principes et bonnes pratiques de la composition de schémas à utiliser dans Adobe Experience Platform.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: f1a8bcc7c1ba33d74e1f687b4cfd83bddce2fadc
+source-git-commit: a3f38a18693e0ef4bc93765c090eafd56dcd15d3
 workflow-type: tm+mt
-source-wordcount: '4119'
+source-wordcount: '4140'
 ht-degree: 26%
 
 ---
@@ -191,6 +191,11 @@ Pour obtenir la liste la plus récente des classes XDM standard disponibles, rep
 >title="Groupe de champs"
 >abstract="Les groupes de champs sont des composants réutilisables qui vous permettent d’étendre les schémas avec des attributs supplémentaires. La plupart des groupes de champs ne sont compatibles qu’avec certaines classes. Vous pouvez utiliser des groupes de champs standard définis par Adobe ou vous pouvez définir manuellement vos propres groupes de champs personnalisés. Consultez la documentation pour en savoir plus sur l’implication des groupes de champs dans la composition des schémas."
 
+>[!CONTEXTUALHELP]
+>id="platform_schemas_fieldgroup_requiredFieldgroup"
+>title="Groupe de champs requis"
+>abstract="Ce groupe de champs est requis par la source que vous utilisez. Pour cette raison, vous ne pouvez pas la supprimer de votre schéma."
+
 Un groupe de champs est un composant réutilisable qui définit un ou plusieurs champs qui implémentent certaines fonctions telles que les détails personnels, les préférences d’hôtel ou l’adresse. Les groupes de champs sont destinés à être inclus dans le cadre d’un schéma qui met en oeuvre une classe compatible.
 
 Les groupes de champs définissent la ou les classes avec lesquelles ils sont compatibles en fonction du comportement des données qu’ils représentent (enregistrement ou série temporelle). Cela signifie que tous les groupes de champs ne sont pas disponibles pour toutes les classes.
@@ -327,7 +332,7 @@ Lors de la conception de vos schémas, vous devez tenir compte de certains facte
 | Augmente l’imbrication | Imbrication ou non d’imbrication |
 | Crée des regroupements de champs logiques | Les champs sont placés à des emplacements ad hoc. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 #### Objets
 
