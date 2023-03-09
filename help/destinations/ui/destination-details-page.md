@@ -3,10 +3,10 @@ keywords: destinations;destination;page des détails des destinations;page des d
 title: Afficher les détails de la destination
 description: La page de détails d’une destination individuelle fournit un aperçu des détails de destination. Les détails de la destination incluent le nom de destination, l’identifiant, les segments mappés à la destination et les contrôles permettant de modifier l’activation et d’activer et désactiver le flux de données.
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: 0a300660ce0fc53c403d2ceeb3d4d7d2c32ac117
+source-git-commit: dcbc0c3ef87be0bc296992819c9b1bc3ba6317e4
 workflow-type: tm+mt
-source-wordcount: '912'
-ht-degree: 19%
+source-wordcount: '926'
+ht-degree: 18%
 
 ---
 
@@ -79,7 +79,7 @@ Le [!UICONTROL Exécutions de flux de données] fournit des données de mesure s
 >[!NOTE]
 >
 >* La fonctionnalité de surveillance des destinations est actuellement prise en charge pour toutes les destinations dans Experience Platform. *Sauf* la valeur [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md), [Personnalisation personnalisée](/help/destinations/catalog/personalization/custom-personalization.md) et [Audiences Experience Cloud](/help/destinations/catalog/adobe/experience-cloud-audiences.md) destinations.
->* Pour le [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [Centre d’événements Azure](/help/destinations/catalog/cloud-storage/azure-event-hubs.md), et [API HTTP](/help/destinations/catalog/streaming/http-destination.md) les destinations, les identités exclues, en échec et activées ne sont actuellement pas affichées.
+>* Pour le [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [Centre d’événements Azure](/help/destinations/catalog/cloud-storage/azure-event-hubs.md), et [API HTTP](/help/destinations/catalog/streaming/http-destination.md) destinations, les mesures liées aux identités exclues, en échec et activées sont estimées. Des volumes plus importants de données d’activation augmentent la précision des mesures.
 
 
 ![Vue des exécutions du flux de données](../assets/ui/details-page/dataflow-runs.png)
