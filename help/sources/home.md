@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Présentation des connecteurs source
 description: Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les bases de données, etc.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: f92a42a5d53121cc3338432a3cd975f0aa29b9a8
+source-git-commit: fd82f109b8af665540e2ff30e92c6546ef9f3d2c
 workflow-type: tm+mt
-source-wordcount: '1133'
-ht-degree: 99%
+source-wordcount: '1322'
+ht-degree: 84%
 
 ---
 
@@ -184,11 +184,21 @@ Le tableau suivant décrit le comportement de l’interface utilisateur en fonct
 
 Pour plus d’informations sur les autorisations disponibles accordées par le biais des autorisations d’Adobe, consultez la [présentation du contrôle d’accès](../access-control/home.md).
 
-### Contrôle d’accès basé sur les attributs pour les sources
+### Contrôle d’accès basé sur les attributs
 
 Le contrôle d’accès basé sur les attributs est une fonctionnalité d’Adobe Experience Platform qui permet aux administrateurs de contrôler l’accès à des objets et/ou fonctionnalités spécifiques en fonction d’attributs.
 
 Grâce au contrôle d’accès basé sur les attributs, vous pouvez appliquer des configurations de mappage aux champs pour lesquels vous disposez d’autorisations. En outre, vous ne pouvez pas ingérer de données dans un jeu de données si vous n’avez pas accès à tous les champs du jeu de données.
+
+#### Prise en charge du contrôle d’accès basé sur les attributs dans les sources [!BADGE Nouvelle fonctionnalité]
+
+>[!TIP]
+>
+>Le contrôle d’accès basé sur les attributs fonctionne comme suit : **rôles** sont créées pour classer les types d’utilisateurs qui interagissent avec votre instance Platform. **Étiquettes** sont appliquées à **rôles** pour désigner l’accès à ce rôle. **Étiquettes** sont également appliquées aux ressources telles que les champs de schéma et les segments. Pour qu’un utilisateur puisse accéder à certains champs et segments de schéma, ils doivent être ajoutés à la variable *un rôle avec le même libellé affecté à la ressource interrogée ;*. Pour plus d’informations, reportez-vous à la section [guide de bout en bout du contrôle d’accès basé sur les attributs](../access-control/abac/end-to-end-guide.md).
+
+- Appliquez des libellés aux champs de schéma pour définir l’accès à des champs de schéma spécifiques de votre entreprise. Une fois l’accès à des champs de schéma spécifiques établi, les utilisateurs ne pourront créer des mappages que pour les champs auxquels ils ont accès.
+- Les utilisateurs ne disposant pas des rôles appropriés ne pourront pas créer ni mettre à jour des flux de données avec des mappages qui impliquent des champs de schéma inaccessibles. En outre, les utilisateurs non autorisés ne peuvent pas mettre à jour, supprimer, activer ou désactiver les flux de données existants avec des champs de schéma inaccessibles.
+- En outre, un flux de données doit avoir exactement le même identifiant de schéma et la même version dans son mappage, son jeu de données cible et sa connexion cible.
 
 Pour plus d’informations sur le contrôle d’accès basé sur les attributs, consultez la [présentation du contrôle d’accès basé sur les attributs](../access-control/abac/overview.md).
 
