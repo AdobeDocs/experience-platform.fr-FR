@@ -1,19 +1,19 @@
 ---
 audience: user
-user-guide-title: Aide sur les balises d’administration dans Adobe Experience Platform
-breadcrumb-title: Guide des balises d’administration
-user-guide-description: Utilisez les balises administratives pour gérer les taxonomies des métadonnées. Découvrez comment créer des catégories de balises et des balises.
-source-git-commit: c72b2244e7905c3823fd60212c071614222d0c4f
+user-guide-title: Aide sur les balises unifiées dans Adobe Experience Platform
+breadcrumb-title: Guide des balises unifiées
+user-guide-description: Utilisez des balises unifiées pour gérer les taxonomies de métadonnées. Découvrez comment créer des catégories de balises et des balises.
+source-git-commit: de258d0e9fe8304b239633c6901a62e3d7b9e214
 workflow-type: tm+mt
-source-wordcount: '37'
+source-wordcount: '39'
 ht-degree: 0%
 
 ---
 
 
-# Balises administratives {#administrative-tags}
+# Balises unifiées (version bêta){#administrative-tags}
 
-* [Présentation des balises d’administration](overview.md)
-* Interface utilisateur des balises d’administration {#ui}
+* [Présentation des balises unifiées (version bêta)](overview.md)
+* Interface utilisateur des balises unifiées {#ui}
    * [Gestion des balises](ui/managing-tags.md)
    * [Catégories de balises](ui/tags-categories.md)

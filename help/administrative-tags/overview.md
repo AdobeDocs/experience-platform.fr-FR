@@ -1,15 +1,15 @@
 ---
 keywords: Experience Platform;accueil;rubriques populaires;balises unifiées;balises ;
-title: (Version bêta) Aperçu des balises unifiées
+title: Aperçu des balises unifiées (version bêta)
 description: Ce document fournit des informations sur les balises unifiées dans Adobe Experience Platform
-source-git-commit: 6f9787909b8155d2bf032b4a42483f2cb4d44eb4
+source-git-commit: de258d0e9fe8304b239633c6901a62e3d7b9e214
 workflow-type: tm+mt
 source-wordcount: '607'
 ht-degree: 1%
 
 ---
 
-# (Version bêta) Présentation des balises unifiées
+# Présentation des balises unifiées (version bêta)
 
 >[!IMPORTANT]
 >
