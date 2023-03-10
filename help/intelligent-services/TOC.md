@@ -4,10 +4,10 @@ audience: user
 user-guide-title: Aide d’Intelligent Services
 breadcrumb-title: Guide des services intelligents
 user-guide-description: Utilisez les services intelligents d’IA pour générer des scores, découvrir des insights et créer des segments à partir des données de vos événements marketing.
-source-git-commit: a98639851e7245b9cbd6fe42b35b4730dd19c3f8
+source-git-commit: 56f0ea4ee1fcefecb317eb2a078b01f7a9767c52
 workflow-type: tm+mt
-source-wordcount: '141'
-ht-degree: 92%
+source-wordcount: '140'
+ht-degree: 93%
 
 ---
 
@@ -31,13 +31,13 @@ ht-degree: 92%
       - [Politiques de gouvernance](attribution-ai/aai-data-governance/governance-policies.md)
    - [Analyser des scores à lʼaide de Query Service](attribution-ai/aai-query-service.md)
    - [Résolution des problèmes](attribution-ai/troubleshooting.md)
-- Balisage de contenu {#content-tagging-ai}
-   - [Aperçu](content-tagging/overview.md)
-   - [Prise en main](content-tagging/getting-started.md)
-   - API d’IA dédiée au balisage de contenu{#api}
-      - [Balisage des couleurs](content-tagging/api/color-tagging.md)
-      - [Balisage des mots-clés](content-tagging/api/keyword-tagging.md)
-      - [Détection de texte et reconnaissance optique de caractères](content-tagging/api/optical-character-recognition.md)
+- Balisage de contenu {#content-commerce-ai}
+   - [Aperçu](content-commerce-ai/overview.md)
+   - [Prise en main](content-commerce-ai/getting-started.md)
+   - API de balisage de contenu{#api}
+      - [Balisage des couleurs](content-commerce-ai/api/color-tagging.md)
+      - [Balisage des mots-clés](content-commerce-ai/api/keyword-tagging.md)
+      - [Détection de texte et reconnaissance optique de caractères](content-commerce-ai/api/optical-character-recognition.md)
 - Customer AI {#customer-ai}
    - [Aperçu](customer-ai/overview.md)
    - [Prise en main de Customer AI](customer-ai/getting-started.md)
