@@ -1,8 +1,8 @@
 ---
 keywords: Experience Platform;catégories de balises;balises ;
 title: Catégories de balises
-description: Ce document fournit des informations sur la gestion des catégories de balises d’administration dans Adobe Experience Cloud.
-source-git-commit: f184e94350a79936cbbd9072791650af99fa945f
+description: Ce document fournit des informations sur la gestion des catégories de balises unifiées dans Adobe Experience Cloud.
+source-git-commit: 6f9787909b8155d2bf032b4a42483f2cb4d44eb4
 workflow-type: tm+mt
 source-wordcount: '417'
 ht-degree: 0%
