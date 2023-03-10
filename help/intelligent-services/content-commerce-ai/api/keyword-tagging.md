@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;prise en main;contenu;forum commercial;balisage de contenu;balisage de mot-clé;balisage de mot-clé
+keywords: Experience Platform;prise en main;contenu;balisage de contenu;balisage de mots-clés;balisage de mots-clés
 solution: Experience Platform
 title: Balisage de mots-clés dans l’API de balisage de contenu
 description: Le service de balisage de mots-clés, lorsqu’il reçoit un document texte, extrait automatiquement les mots-clés ou les expressions-clés qui décrivent le mieux l’objet du document. Pour extraire des mots-clés, une combinaison d’algorithmes de reconnaissance d’entité nommée (NER) et de balisage de mot-clé non supervisé est utilisée.
 exl-id: 56a2da96-5056-4702-9110-a1dfec56f0dc
-source-git-commit: b124ed97da8bde2a7fc4f10d350c81a47e096f29
+source-git-commit: a42bb4af3ec0f752874827c5a9bf70a66beb6d91
 workflow-type: tm+mt
-source-wordcount: '453'
+source-wordcount: '450'
 ht-degree: 6%
 
 ---

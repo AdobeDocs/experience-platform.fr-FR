@@ -1,12 +1,12 @@
 ---
-keywords: Experience Cloud;prise en main;forum sur le contenu et le commerce;rubriques les plus consultées;services intelligents;cai
+keywords: Experience Cloud;prise en main;balisage de contenu;rubriques les plus consultées;services intelligents
 solution: Experience Platform
 title: Présentation du balisage de contenu
-description: Content and Commerce AI est un ensemble de services d’IA qui vous permet d’extraire des fonctionnalités intelligentes de votre contenu, d’organiser, de rationaliser le flux de contenu et de proposer à vos clients des expériences plus percutantes et personnalisées.
+description: Le balisage de contenu est un ensemble de services d’IA qui vous permet d’extraire des fonctionnalités intelligentes de votre contenu, d’organiser, de rationaliser le flux de contenu et de proposer à vos clients des expériences plus percutantes et personnalisées.
 exl-id: 65c527d7-b1bd-414f-aba1-8445676a7052
-source-git-commit: b124ed97da8bde2a7fc4f10d350c81a47e096f29
+source-git-commit: a42bb4af3ec0f752874827c5a9bf70a66beb6d91
 workflow-type: tm+mt
-source-wordcount: '324'
+source-wordcount: '319'
 ht-degree: 1%
 
 ---
