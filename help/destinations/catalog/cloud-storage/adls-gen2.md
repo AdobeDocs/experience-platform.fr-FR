@@ -2,9 +2,9 @@
 title: (Version bêta) Connexion à Azure Data Lake Storage Gen2
 description: Découvrez comment vous connecter à Azure Data Lake Storage Gen2 pour activer des segments et exporter des jeux de données.
 exl-id: d265a02d-c901-4b39-8714-fe9ecdbb5bb1
-source-git-commit: a07557ec398631ece0c8af6ec7b32e0e8593e24b
+source-git-commit: 010818b56154067402a7cd66f489dd2080142e53
 workflow-type: tm+mt
-source-wordcount: '683'
+source-wordcount: '680'
 ht-degree: 90%
 
 ---
@@ -28,7 +28,7 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 | Type d’exportation | **[!UICONTROL Basé sur les profils]** | Vous exportez tous les membres d’un segment, ainsi que les champs de schéma applicables (par exemple votre PPID), tels que choisis dans l’écran de sélection des attributs de profil du [workflow d’activation de destination](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
 | Fréquence des exportations | **[!UICONTROL Lot]** | Les destinations par lots exportent des fichiers vers des plateformes en aval par incréments de trois, six, huit, douze ou vingt-quatre heures. En savoir plus sur les [destinations basées sur des fichiers par lots](/help/destinations/destination-types.md#file-based). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Conditions préalables {#prerequisites}
 
@@ -44,7 +44,7 @@ Pour vous connecter à cette destination, procédez comme décrit dans le [tutor
 
 Pour vous authentifier à la destination, renseignez les champs requis et sélectionnez **[!UICONTROL Se connecter à la destination]**.
 
-* **[!UICONTROL URL]** : le point d’entrée pour [!DNL Azure Data Lake Storage Gen2]. Le modèle de point d’entrée est le suivant : `https://<accountname>.dfs.core.windows.net`.
+* **[!UICONTROL URL]** : le point d’entrée pour [!DNL Azure Data Lake Storage Gen2]. Le modèle de point d’entrée est le suivant : `abfss://<container>@<accountname>.dfs.core.windows.net`.
 * **[!UICONTROL Client]** : les informations du client qui contiennent votre application.
 * **[!UICONTROL Identifiant principal du service]** : identifiant client de l’application.
 * **[!UICONTROL Clé principale du service]** : clé de l’application.
