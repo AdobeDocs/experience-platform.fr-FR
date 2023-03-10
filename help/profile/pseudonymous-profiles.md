@@ -5,9 +5,9 @@ title: Expiration des données de profil pseudonyme
 description: Ce document fournit des conseils généraux sur la configuration de l’expiration des données pour les profils pseudonymes dans Adobe Experience Platform.
 hide: true
 hidefromtoc: true
-source-git-commit: 3f776255ca858a86f501fd587c44fe176c45e103
+source-git-commit: a6173860adda4bd71c94750e5cce6dd4cbe820c6
 workflow-type: tm+mt
-source-wordcount: '876'
+source-wordcount: '886'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ L’expiration des données de profil pseudonyme ne peut pas être configurée v
 
 - Les types d&#39;identité à prendre en compte pour les suppressions de profil Pseudonyme.
    - Par exemple : `ECID` uniquement, `AAID` uniquement ou une combinaison de `ECID` et `AAID`.
-- Le temps d’attente avant la suppression d’un profil pseudonyme. La recommandation par défaut pour les clients est de 30 jours. Cependant, cette valeur peut varier en fonction de votre cas d’utilisation.
+- Le temps d’attente avant la suppression d’un profil pseudonyme. La recommandation par défaut pour les clients est de 14 jours. Cependant, cette valeur peut varier en fonction de votre cas d’utilisation.
 - Nombre de profils actuels par rapport au nombre de profils de licence.
 
 ## Questions fréquentes {#faq}
@@ -37,10 +37,10 @@ La section suivante répertorie les questions fréquentes sur l’expiration des
 
 ### Quels utilisateurs doivent utiliser l’expiration des données de profils pseudonymes ?
 
-- Si vous utilisez un connecteur qui envoie directement des données de leur source vers Platform.
+- Si vous utilisez une source de diffusion en continu qui envoie directement des données à Platform.
 - Si vous disposez d’un site web qui diffuse en masse des clients non authentifiés.
 - Si vos jeux de données contiennent un nombre de profils excessif et que vous avez confirmé que ce nombre excessif de profils est dû à un type d’identité basé sur des cookies anonymes.
-   - Pour le déterminer, vous devez utiliser le rapport de chevauchement des types d’identité. Vous trouverez plus d’informations sur ce rapport sous LIEN
+   - Pour le déterminer, vous devez utiliser le rapport de chevauchement des types d’identité. Vous trouverez plus d’informations sur ce rapport dans la section [section de rapport sur les chevauchements d’identités](./api/preview-sample-status.md#identity-overlap-report) de l’exemple de guide d’API d’état de l’aperçu.
 
 ### Quels sont les avertissements que vous devez connaître avant d’utiliser l’expiration des données de profils pseudonymes ?
 

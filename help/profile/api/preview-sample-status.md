@@ -3,7 +3,7 @@ keywords: Experience Platform;profil;profil client en temps réel;dépannage;API
 title: Aperçu de l’exemple d’état (aperçu du profil), point de terminaison de l’API
 description: L’aperçu de l’exemple de point de terminaison d’état de l’API Real-time Customer Profile vous permet de prévisualiser le dernier échantillon réussi de vos données de profil, de répertorier la distribution du profil par jeu de données et par identité, et de générer des rapports montrant le chevauchement des jeux de données, le chevauchement d’identités et les profils désassemblés.
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: a6173860adda4bd71c94750e5cce6dd4cbe820c6
 workflow-type: tm+mt
 source-wordcount: '2874'
 ht-degree: 5%
@@ -369,7 +369,7 @@ Ce rapport fournit les informations suivantes :
 * 107 profils sont constitués uniquement de données issues d’un jeu de données. `5eeda0032af7bb19162172a7`.
 * Il y a un total de 454 642 profils dans l’organisation.
 
-## Génération du rapport de chevauchement des espaces de noms d’identité
+## Génération du rapport de chevauchement des espaces de noms d’identité {#identity-overlap-report}
 
 Le rapport sur le chevauchement des espaces de noms d’identité offre une visibilité sur la composition de la banque de profils de votre entreprise en exposant les espaces de noms d’identité qui contribuent le plus à votre audience adressable (profils fusionnés). Cela inclut les espaces de noms d’identité standard fournis par Adobe, ainsi que les espaces de noms d’identité personnalisés définis par votre organisation.
 
