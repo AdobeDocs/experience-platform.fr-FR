@@ -4,14 +4,19 @@ solution: Experience Platform
 title: Gestion des politiques d’utilisation des données dans l’interface utilisateur
 description: La gouvernance des données d’Adobe Experience Platform fournit une interface utilisateur qui vous permet de créer et de gérer des politiques d’utilisation des données. Ce document offre une vue d’ensemble des actions que vous pouvez effectuer dans l’espace de travail Stratégies de l’interface utilisateur d’Experience Platform.
 exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
-source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
+source-git-commit: e539b1e165227d9a888bfe12d8205e285b3ce259
 workflow-type: tm+mt
-source-wordcount: '1411'
+source-wordcount: '1413'
 ht-degree: 100%
 
 ---
 
-# Gestion des politiques d’utilisation des données dans l’interface utilisateur
+# Gestion des politiques d’utilisation des données dans l’interface utilisateur {#user-guide}
+
+>[!CONTEXTUALHELP]
+>id="platform_privacyConsole_dataUsagePolicies_description"
+>title="Description"
+>abstract=""
 
 Ce document explique comment utiliser l’espace de travail **[!UICONTROL Stratégies]** dans l’interface utilisateur d’Adobe Experience Platform pour créer et gérer des stratégies d’utilisation des données.
 
@@ -83,6 +88,11 @@ L’onglet **[!UICONTROL Parcourir]** réapparaît et affiche désormais la nouv
 ![](../images/policies/created-policy.png)
 
 ### Créer une stratégie de consentement {#consent-policy}
+
+>[!CONTEXTUALHELP]
+>id="platform_privacyConsole_dataUsagePolicies_instructions"
+>title="Instructions"
+>abstract=""
 
 >[!IMPORTANT]
 >

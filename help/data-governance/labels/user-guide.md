@@ -4,14 +4,19 @@ solution: Experience Platform
 title: Gestion des libellés d’utilisation des données dans l’interface utilisateur
 description: Ce guide détaille la procédure d’utilisation des libellés d’utilisation des données dans l’interface utilisateur d’Adobe Experience Platform.
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
-source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
+source-git-commit: e539b1e165227d9a888bfe12d8205e285b3ce259
 workflow-type: tm+mt
-source-wordcount: '1306'
+source-wordcount: '1308'
 ht-degree: 100%
 
 ---
 
-# Gestion des libellés d’utilisation des données dans l’interface utilisateur
+# Gestion des libellés d’utilisation des données dans l’interface utilisateur {#user-guide}
+
+>[!CONTEXTUALHELP]
+>id="platform_privacyConsole_dataGovernance_description"
+>title="Description"
+>abstract=""
 
 Ce guide d’utilisation détaille la procédure d’utilisation des libellés d’utilisation des données dans l’interface utilisateur [!DNL Experience Platform].
 
@@ -77,7 +82,12 @@ L’option **[!UICONTROL Afficher les libellés hérités]** est activée par d�
 
 ![Masquer les libellés hérités](../images/labels/inherited-labels.png)
 
-## Gérer les libellés au niveau du champ du jeu de données
+## Gérer les libellés au niveau du champ du jeu de données {#manage-labels-at-dataset-field-level}
+
+>[!CONTEXTUALHELP]
+>id="platform_privacyConsole_dataGovernance_instructions"
+>title="Instructions"
+>abstract=""
 
 >[!IMPORTANT]
 >

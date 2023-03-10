@@ -4,14 +4,19 @@ solution: Experience Platform
 title: Présentation des libellés d’utilisation des données
 description: Découvrez comment les libellés d’utilisation des données sont utilisés pour appliquer la conformité en matière de gouvernance des données dans Adobe Experience Platform.
 exl-id: 4f113000-b9a1-4dfb-9502-6a5d08f0b26f
-source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
+source-git-commit: e539b1e165227d9a888bfe12d8205e285b3ce259
 workflow-type: tm+mt
-source-wordcount: '680'
+source-wordcount: '682'
 ht-degree: 100%
 
 ---
 
-# Présentation des libellés d’utilisation des données
+# Présentation des libellés d’utilisation des données {#overview}
+
+>[!CONTEXTUALHELP]
+>id="platform_privacyConsole_dataUsageLabels_description"
+>title="Description"
+>abstract=""
 
 Adobe Experience Platform vous permet d’appliquer des libellés d’utilisation des données aux jeux de données et aux champs, en les classant en fonction des [stratégies de gouvernance des données](../policies/overview.md) et des [stratégies de contrôle d’accès](../../access-control/abac/ui/policies.md) associées.
 
@@ -42,6 +47,11 @@ Pour plus d’informations sur le fonctionnement de l’application automatique 
 Pour savoir comment des contrôles d‘exportation de données spécifiques se mappent aux libellés d’utilisation des données dans [!DNL Platform], consultez la [documentation sur Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=fr#aam-data-export-control-in-aep).
 
 ## Gestion des libellés d’utilisation des données dans [!DNL Experience Platform] {#manage-labels}
+
+>[!CONTEXTUALHELP]
+>id="platform_privacyConsole_dataUsageLabels_instructions"
+>title="Instructions"
+>abstract=""
 
 Vous pouvez gérer les libellés d’utilisation des données à l’aide des API [!DNL Experience Platform] ou de l’interface utilisateur. Consultez les sous-sections ci-dessous pour plus de détails sur chaque option.
 

@@ -4,14 +4,19 @@ solution: Experience Platform
 title: Gestion des tâches liées à la confidentialité dans l’interface utilisateur du Privacy Service
 description: Découvrez comment utiliser l’interface utilisateur du Privacy Service pour coordonner et surveiller les demandes d’accès à des informations personnelles dans différentes applications Experience Cloud.
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+source-git-commit: e539b1e165227d9a888bfe12d8205e285b3ce259
 workflow-type: tm+mt
-source-wordcount: '1151'
+source-wordcount: '1150'
 ht-degree: 59%
 
 ---
 
-# Gestion des tâches de confidentialité dans l’interface utilisateur de Privacy Service
+# Gestion des tâches de confidentialité dans l’interface utilisateur de Privacy Service {#user-guide}
+
+>[!CONTEXTUALHELP]
+>id="platform_privacyConsole_requests_description"
+>title="Description"
+>abstract=""
 
 Ce document décrit les étapes à suivre pour créer et gérer des demandes d’accès à des informations personnelles à l’aide de la méthode [!DNL Privacy Service] de l’interface utilisateur.
 
@@ -37,7 +42,7 @@ Le tableau de bord de la variable [!DNL Privacy Service] L’interface utilisate
 | [!UICONTROL APA_AUS] | La variable [!DNL Australia Privacy Act (Privacy Act)] |
 | [!UICONTROL HIPAA_AUS] | La variable [!DNL Health Insurance Portability and Accountability Act] |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >
@@ -93,7 +98,12 @@ Si une solution a fourni des données supplémentaires, elles peuvent être cons
 
 Pour télécharger l’ensemble des données de tâche sous forme de fichier CSV, sélectionnez **[!UICONTROL Exportation au format CSV]** dans le coin supérieur droit de la boîte de dialogue.
 
-## Création d’une nouvelle requête de tâche de confidentialité
+## Création d’une nouvelle requête de tâche de confidentialité {#create-a-new-privacy-job-request}
+
+>[!CONTEXTUALHELP]
+>id="platform_privacyConsole_requests_instructions"
+>title="Instructions"
+>abstract=""
 
 >[!NOTE]
 >

@@ -2,20 +2,25 @@
 title: Gérer des expirations de jeux de données
 description: Découvrez comment planifier l’expiration d’un jeu de données dans l’interface utilisateur d’Adobe Experience Platform.
 exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: e539b1e165227d9a888bfe12d8205e285b3ce259
 workflow-type: tm+mt
-source-wordcount: '535'
-ht-degree: 94%
+source-wordcount: '537'
+ht-degree: 100%
 
 ---
 
-# Gérer des expirations de jeux de données
+# Gérer des expirations de jeux de données {#dataset-expiration}
+
+>[!CONTEXTUALHELP]
+>id="platform_privacyConsole_scheduleDatasetExpiration_description"
+>title="Description"
+>abstract=""
 
 >[!IMPORTANT]
 >
 >Actuellement, les fonctionnalités d’hygiène des données d’Adobe Experience Platform sont uniquement disponibles pour les organisations qui ont acheté **Adobe Healthcare Shield** ou **Adobe Privacy &amp; Security Shield**.
 
-L’espace de travail [[!UICONTROL Hygiène des données]](./overview.md) dans l’interface utilisateur d’Adobe Experience Platform vous permet de planifier l’expiration des jeux de données. Lorsqu’un jeu de données atteint sa date d’expiration, le lac de données, Identity Service et Real-Time Customer Profile commencent des processus distincts pour supprimer le contenu du jeu de données de leurs services respectifs. Une fois les données supprimées des trois services, l’expiration est marquée comme étant terminée.
+L’espace de travail [[!UICONTROL Hygiène des données]](./overview.md) dans l’interface utilisateur d’Adobe Experience Platform vous permet de planifier l’expiration des jeux de données. Lorsqu’un jeu de données atteint sa date d’expiration, le lac de données, Identity Service et Real-Time Customer Profile lancent des processus distincts pour supprimer le contenu du jeu de données de leurs services respectifs. Une fois les données supprimées des trois services, l’expiration est marquée comme étant terminée.
 
 >[!WARNING]
 >
@@ -23,7 +28,12 @@ L’espace de travail [[!UICONTROL Hygiène des données]](./overview.md) dans l
 
 Ce document explique comment planifier et gérer des expirations de jeux de données dans l’interface utilisateur de Platform.
 
-## Planifier l’expiration d’un jeu de données
+## Planifier l’expiration d’un jeu de données {#schedule-dataset-expiration}
+
+>[!CONTEXTUALHELP]
+>id="platform_privacyConsole_scheduleDatasetExpiration_instructions"
+>title="Instructions"
+>abstract=""
 
 Pour créer une requête, sélectionnez **[!UICONTROL Créer une requête]** dans la page principale de l’espace de travail.
 
