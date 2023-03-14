@@ -4,7 +4,7 @@ title: Gestion des autorisations de rôle du contrôle d’accès basé sur les 
 description: Ce document fournit des informations sur la configuration des autorisations pour un rôle dans l’interface Autorisations d’Adobe Experience Cloud.
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
 source-git-commit: a94cf02a57bd91d2342b53ced7da98836343aa2b
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '966'
 ht-degree: 100%
 
@@ -71,7 +71,7 @@ Pour supprimer un libellé d’un rôle, sélectionnez l’icône **X** à côt�
 
 ## Gestion des sandbox pour le rôle
 
-Sélectionnez l’onglet **[!UICONTROL Sandbox]** pour ouvrir la page sandbox des rôles. Vous trouverez ici une liste des sandbox qui ont été ajoutées au rôle.
+Sélectionnez l’onglet **[!UICONTROL Sandbox]** pour ouvrir la page sandbox des rôles. Vous trouverez ici une liste des sandbox qui ont été ajoutés au rôle.
 
 ![flac-sandboxes](../../images/flac-ui/flac-sandboxes.png)
 

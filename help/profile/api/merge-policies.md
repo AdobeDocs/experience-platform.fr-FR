@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;profil;profil client en temps réel;dépannage;API
+keywords: Experience Platform;profil;real-time customer profile;dépannage;API
 title: Point de terminaison de l’API de stratégies de fusion
 type: Documentation
 description: Adobe Experience Platform permet de rassembler des données issues de plusieurs sources et de les combiner pour obtenir une vue complète de chacun de vos clients. Lorsque vous rassemblez ces données, les stratégies de fusion sont les règles utilisées par Platform pour déterminer la priorité des données et les données qui seront combinées pour créer une vue unifiée.
@@ -7,7 +7,7 @@ exl-id: fb49977d-d5ca-4de9-b185-a5ac1d504970
 source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '2472'
-ht-degree: 70%
+ht-degree: 71%
 
 ---
 

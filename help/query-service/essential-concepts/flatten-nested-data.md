@@ -4,7 +4,7 @@ title: Aplatir les structures de données imbriquées à utiliser avec les outil
 description: Ce document explique comment aplatir les schémas XDM pour toutes les tables et vues au cours d’une session lors de l’utilisation d’outils BI tiers avec Query Service.
 exl-id: 7e534c0a-db6c-463e-85da-88d7b2534ece
 source-git-commit: 1c590350c9d519dba60375b92de7bbbbd77961dc
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '857'
 ht-degree: 100%
 

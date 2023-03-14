@@ -74,7 +74,7 @@ Votre package d’extension sera ensuite téléchargé et le téléchargeur vous
 
 >[!NOTE]
 >
->Pendant le téléchargement ou l’application de correctifs, les modules d’extension sont placés en attente tandis que le système extrait le module et le déploie de manière asynchrone. Pendant ce processus, vous pouvez interroger la variable `extension_package` ID pour son état à l’aide de l’API et dans l’interface utilisateur. Une carte d’extension apparaît dans le catalogue portant la mention En attente.
+>Pendant le téléchargement ou l’application de correctifs, les packages d’extension sont placés en attente tandis que le système extrait le module et le déploie de manière asynchrone. Pendant ce processus, vous pouvez interroger la variable `extension_package` ID pour son état à l’aide de l’API et dans l’interface utilisateur. Une carte d’extension apparaît dans le catalogue portant la mention En attente.
 
 >[!NOTE]
 >

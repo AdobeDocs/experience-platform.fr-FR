@@ -8,7 +8,7 @@ exl-id: bf401f3a-b088-4cbd-9a64-224294b797b9
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '863'
-ht-degree: 39%
+ht-degree: 42%
 
 ---
 
@@ -70,7 +70,7 @@ Plusieurs réglementations juridiques et organisationnelles donnent aux utilisat
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
-| Prise en charge de LGPD (Brésil) | Des emplois dans le domaine de la vie privée peuvent maintenant être créés sous l&#39;égide du Brésil [!DNL Lei Geral de Proteção de Dados] (LGPD). Ces tâches sont suivies sous le code de réglementation. `lgpd_bra`. |
+| Respect de la loi LGPD (Brésil) | Des tâches relatives à la confidentialité peuvent maintenant être créées dans le cadre de la réglementation brésilienne [!DNL Lei Geral de Proteção de Dados] (LGPD). Ces tâches sont suivies sous le code de réglementation `lgpd_bra`. |
 
 Voir [Présentation du Privacy Service](../../privacy-service/home.md) pour plus d’informations sur le service.
 

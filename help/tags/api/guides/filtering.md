@@ -4,7 +4,7 @@ description: Découvrez comment filtrer les résultats lorsque les ressources so
 exl-id: 8a91f3dd-4ead-4a10-abb1-e71acb0d73b6
 source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
-source-wordcount: '556'
+source-wordcount: '553'
 ht-degree: 100%
 
 ---
@@ -38,7 +38,7 @@ GET {ENDPOINT}?filter[{ATTRIBUTE_NAME}]={OPERATOR} {VALUE}
 | `{OPERATOR}` | L’opérateur qui détermine la manière dont les résultats sont évalués en fonction de la valeur `{VALUE}` fournie. Les opérateurs pris en charge sont répertoriés dans la [section annexe](#supported-operators). |
 | `{VALUE}` | Valeur en fonction de laquelle comparer les résultats renvoyés. Lors de la comparaison relative à l’égalité à l’aide de l’opérateur `EQ`, la valeur doit avoir une correspondance exacte et sensible à la casse pour être incluse dans la réponse. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Requête**
 

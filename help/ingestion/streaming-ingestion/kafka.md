@@ -6,8 +6,8 @@ description: Le connecteur de flux pour Adobe Experience Platform est basé su
 exl-id: 062963e5-c727-4c2c-97db-8a9a5a7d903c
 source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '188'
+ht-degree: 29%
 
 ---
 

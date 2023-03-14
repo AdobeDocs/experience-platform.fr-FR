@@ -17,14 +17,14 @@ ht-degree: 26%
 **Date de publication : 14 octobre 2020**
 
 - [Préparation des données](#data-prep)
-- [Profil client en temps réel](#profile)
+- [Real-time Customer Profile](#profile)
 - [Segmentation Service](#segmentation)
 - [Sources](#sources)
 - [Temps jusqu’à la valeur](#time-to-value)
 
 ## Préparation des données {#data-prep}
 
-La préparation des données permet aux ingénieurs de données de mapper, transformer et valider les données vers et à partir du modèle de données d’expérience (XDM).
+La préparation des données permet aux ingénieur(e)s de données de mapper, de transformer et de valider les données vers et à partir du modèle de données d’expérience (XDM).
 
 **Fonctionnalités clés**
 

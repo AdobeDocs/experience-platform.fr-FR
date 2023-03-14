@@ -4,7 +4,7 @@ description: Ce document présente un aperçu du groupe de champs de schéma d�
 exl-id: b5e17f4a-a582-4059-bbcb-435d46932775
 source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
 workflow-type: tm+mt
-source-wordcount: '894'
+source-wordcount: '888'
 ht-degree: 100%
 
 ---
@@ -33,7 +33,7 @@ Le groupe de champs fournit un seul objet `_experience` à un schéma, qui conti
 | `event1to100`<br><br>`event101to200`<br><br>`event201to300`<br><br>`event301to400`<br><br>`event401to500`<br><br>`event501to100`<br><br>`event601to700`<br><br>`event701to800`<br><br>`event801to900`<br><br>`event901to1000` | Objet | Le groupe de champs fournit des champs d’objet pour capturer jusqu’à 1 000 événements personnalisés. Pour plus d’informations sur ces champs, consultez la [sous-section ci-dessous](#events). |
 | `session` | Objet | Capture des informations sur la session qui a déclenché l’événement. Pour plus d’informations sur le contenu de cet objet, consultez la [sous-section ci-dessous](#session). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## `customDimensions` {#custom-dimensions}
 
@@ -51,7 +51,7 @@ Le groupe de champs fournit un seul objet `_experience` à un schéma, qui conti
 | `postalCode` | Chaîne | Code postal fourni par le client. |
 | `stateProvince` | Chaîne | Emplacement de province ou d’État fourni par le client. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## `endUser` {#end-user}
 

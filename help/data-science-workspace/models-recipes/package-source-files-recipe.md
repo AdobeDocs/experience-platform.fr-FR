@@ -3,16 +3,16 @@ keywords: Experience Platform;fichiers source de package;Data Science Workspace;
 solution: Experience Platform
 title: Regroupement des fichiers source dans une recette
 type: Tutorial
-description: Ce tutoriel explique comment regrouper les fichiers source fournis d’exemples de ventes au détail dans un fichier d’archives, pouvant être utilisé pour créer une recette dans Adobe Experience Platform Data Science Workspace en suivant le processus d’importation des recettes dans l’interface utilisateur ou à l’aide de l’API.
+description: Ce tutoriel explique comment regrouper les fichiers sources fournis d’exemples de ventes au détail dans un fichier d’archives, pouvant être utilisé pour créer une recette dans l’espace de travail de science des données d’Adobe Experience Platform en suivant le processus d’importation des recettes dans l’interface utilisateur ou à l’aide de l’API.
 exl-id: 199b8127-4f1b-43a4-82e6-58cb70fcdc08
 source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '1159'
-ht-degree: 50%
+ht-degree: 48%
 
 ---
 
-# Regroupement des fichiers source dans une recette
+# Regroupement des fichiers sources dans une recette
 
 Ce tutoriel explique comment regrouper les fichiers source d’exemples de ventes au détail fournis dans un fichier d’archive, qui peut être utilisé pour créer une recette dans Adobe Experience Platform. [!DNL Data Science Workspace] en suivant le workflow d’importation des recettes dans l’interface utilisateur ou à l’aide de l’API.
 
@@ -68,9 +68,9 @@ Notez les valeurs de l’hôte Docker, du nom d’utilisateur et du mot de passe
 >
 >L’URL source est fournie après avoir suivi les étapes décrites ci-dessous. Le fichier de configuration est expliqué dans les tutoriels suivants qui se trouvent dans [étapes suivantes](#next-steps).
 
-### Regroupement des fichiers source
+### Regroupement des fichiers sources
 
-Commencez par obtenir l’exemple de code de base trouvé dans le référentiel <a href="https://github.com/adobe/experience-platform-dsw-reference" target="_blank">Experience Platform Data Science Workspace Reference.</a>
+Commencez par obtenir l’exemple de code de base trouvé dans le référentiel <a href="https://github.com/adobe/experience-platform-dsw-reference" target="_blank">Référence de l’espace de travail de science des données d’Experience Platform.</a>
 
 - [Création d’une image Python Docker](#python-docker)
 - [Création d’une image R Docker](#r-docker)
@@ -199,7 +199,7 @@ Copiez cette URL et passez aux [étapes suivantes](#next-steps).
 
 ## Étapes suivantes {#next-steps}
 
-Ce tutoriel a passé en revue le regroupement de fichiers source dans une recette, étape préalable à l’importation d’une recette dans [!DNL Data Science Workspace]. Vous devez maintenant disposer d’une image Docker dans Azure Container Registry avec l’URL d’image correspondante. Vous êtes maintenant prêt à commencer le tutoriel sur l’importation d’une recette empaquetée dans [!DNL Data Science Workspace]. Sélectionnez l’un des liens du tutoriel ci-dessous pour commencer:
+Ce tutoriel a passé en revue le regroupement de fichiers source dans une recette, l’étape prérequise pour importer une recette dans [!DNL Data Science Workspace]. Vous devez maintenant disposer d’une image Docker dans Azure Container Registry avec l’URL d’image correspondante. Vous êtes maintenant prêt à commencer le tutoriel sur l’importation d’une recette empaquetée dans [!DNL Data Science Workspace]. Sélectionnez l’un des liens du tutoriel ci-dessous pour commencer:
 
 - [Importation d’une recette empaquetée dans l’interface utilisateur](./import-packaged-recipe-ui.md)
 - [Importation d’une recette empaquetée à l’aide de l’API](./import-packaged-recipe-api.md)

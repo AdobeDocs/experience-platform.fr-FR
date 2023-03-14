@@ -6,7 +6,7 @@ description: Adobe Experience Platform vous permet d’ingérer des données Ado
 exl-id: 15dc1368-5cf1-42e1-9683-d5158f8aa2db
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '3431'
+source-wordcount: '3419'
 ht-degree: 97%
 
 ---
@@ -122,7 +122,7 @@ Le tableau suivant comprend des colonnes qui indiquent le nom du champ Analytics
 | videopausetime | media.mediaTimed.pauseTime | objet | <!-- MISSING --> | {id (string), value (number)} |
 | videosecondssincelastcall | media.mediaTimed.primaryAssetViewDetails.sessionTimeout | entier |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Champs de mappage fractionné.
 
@@ -134,7 +134,7 @@ Ces champs ont une source unique, mais ils sont mappés à **plusieurs** emplace
 | mobileosversion | environment.operatingSystem, environment.operatingSystemVersion | chaîne | Version du système d’exploitation mobile. |
 | videoadlength | advertising.adAssetReference._xmpDM.duration | entier | Durée de la publicité vidéo. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Champs de mappage générés
 
@@ -194,7 +194,7 @@ Le tableau suivant comprend des colonnes qui indiquent le nom du champ Analytics
 | videochapter | media.mediaTimed.mediaChapter.chapterAssetReference._xmpDM.duration | entier | Nom de chapitre vidéo. |
 | videolength | media.mediaTimed.primaryAssetReference._xmpDM.duration | entier | Durée de la vidéo. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Champs de mappage avancé
 
@@ -274,4 +274,4 @@ Le tableau suivant comprend des colonnes qui indiquent le nom du champ Analytics
 | visit_search_engine | _experience.analytics.session.search.searchEngine | chaîne | Identifiant numérique du premier moteur de recherche de la visite. |
 | visit_start_time_gmt | _experience.analytics.session.timestamp | entier | Horodatage du premier accès de la visite (heure Unix). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

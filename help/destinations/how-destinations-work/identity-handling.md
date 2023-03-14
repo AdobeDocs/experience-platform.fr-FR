@@ -2,7 +2,7 @@
 title: Gestion des identités dans le workflow d’activation des destinations
 description: Découvrez comment l’exportation d’identités est gérée dans le workflow d’activation, en fonction du type de destination.
 source-git-commit: 372231ab4fc1148c1c2c0c5fdbfd3cd5328b17cc
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1186'
 ht-degree: 100%
 

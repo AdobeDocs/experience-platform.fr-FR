@@ -2,10 +2,10 @@
 title: Notes de mise à jour de l’extension Adobe Target v2
 description: Notes de mise à jour les plus récentes pour l’extension de balise Adobe Target v2 dans Adobe Experience Platform.
 exl-id: c1a04e62-026d-4b16-aa70-bc6d5dbe6b2d
-source-git-commit: e086359916b3aeef73ba9c98e1bfa13da5a974cd
+source-git-commit: ffbb68c9c84b834984e1adb2640d8806ce9f9962
 workflow-type: tm+mt
-source-wordcount: '628'
-ht-degree: 91%
+source-wordcount: '650'
+ht-degree: 88%
 
 ---
 
@@ -18,6 +18,12 @@ ht-degree: 91%
 ## v0.19.2 (14 février 2023)
 
 - Correction d’un problème en raison duquel le délai d’expiration était défini sur un élément de données.
+
+## v0.19.1 (3 février 2023)
+
+- Mise à jour pour la prise en charge de `at.js` v2.10.1.
+- Les paramètres de mbox personnalisés client prennent désormais correctement en charge la notation par points.
+- Les appels de diffusion ne sont plus effectués dans le VEC
 
 ## v0.19.0 (19 septembre 2022)
 

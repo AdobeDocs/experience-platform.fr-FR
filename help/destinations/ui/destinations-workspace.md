@@ -4,8 +4,8 @@ title: Espace de travail des destinations
 description: 'L’espace de travail des destinations se compose de cinq sections : Vue d’ensemble, Catalogue, Parcourir, Comptes et Vue du système. Elles sont décrites dans les sections ci-dessous.'
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
 source-git-commit: 69e1f065cb3b302c4b144f39c84179075379f648
-workflow-type: ht
-source-wordcount: '1223'
+workflow-type: tm+mt
+source-wordcount: '1217'
 ht-degree: 100%
 
 ---
@@ -53,7 +53,7 @@ Les cartes de destination contiennent des options de commande principales et sec
 | [!UICONTROL Afficher les flux de données] | Affichez les flux d’activation de données qui existent pour une destination. |
 | [!UICONTROL Afficher la documentation] | Ouvre un lien vers la page de documentation de cette destination spécifique, pour plus d’informations et pour vous aider à la configurer. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ![Commandes sur la carte des destinations](../assets/ui/workspace/destination-card-options.png)
 
@@ -84,7 +84,7 @@ L’onglet **[!UICONTROL Comptes]** vous montre les détails des connexions que 
 | [!UICONTROL Destinations] | Représente le nombre de flux de données de destination uniques réussis et connectés avec des informations de base créées pour une destination. |
 | [!UICONTROL Autorisé] | La date à laquelle la connexion à cette destination a été autorisée. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## [!UICONTROL Parcourir] {#browse}
 

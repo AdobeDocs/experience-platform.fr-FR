@@ -4,14 +4,14 @@ title: Options de configuration des destinations basées sur des fichiers pour l
 exl-id: 6b0a0398-6392-470a-bb27-5b34b0062793
 source-git-commit: 74f617afe8a0f678d43fb7b949d43cef25e78b9d
 workflow-type: tm+mt
-source-wordcount: '3012'
-ht-degree: 59%
+source-wordcount: '2982'
+ht-degree: 58%
 
 ---
 
 # Configuration de destinations basées sur des fichiers {#destination-configuration}
 
-## Présentation {#overview}
+## Aperçu {#overview}
 
 Cette configuration vous permet d’indiquer les informations essentielles pour votre destination basée sur des fichiers, telles que votre nom de destination, votre catégorie, votre description, etc. Les paramètres de cette configuration déterminent également comment les utilisateurs d’Experience Platform s’authentifient pour votre destination, comment ils apparaissent dans l’interface utilisateur d’Experience Platform ainsi que les identités qui peuvent être exportées vers votre destination. Vous pouvez également utiliser cette configuration pour afficher les options liées au type de fichier, au format de fichier ou aux paramètres de compression des fichiers exportés.
 
@@ -323,7 +323,7 @@ Vous trouverez ci-dessous un exemple d’une destination Amazon S3 personnalisé
 | `maxProfileAttributes` | Chaîne | Indique le nombre maximal d’attributs de profil que les clients peuvent exporter vers la destination. La valeur par défaut est `2000`. |
 | `maxIdentityAttributes` | Chaîne | Indique le nombre maximal d’espaces de noms d’identité que les clients peuvent exporter vers la destination. La valeur par défaut est `10`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Configurations de l’authentification du client {#customer-authentication-configurations}
 
@@ -572,7 +572,7 @@ Vous pouvez accéder aux entrées client des champs de données client et les ut
 | `enum` | Chaîne | Rend le champ personnalisé sous forme de menu déroulant et répertorie les options disponibles pour l’utilisateur. |
 | `default` | Chaîne | Définit la valeur par défaut d’une liste `enum`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Attributs de l’interface utilisateur {#ui-attributes}
 
@@ -600,7 +600,7 @@ Cette section fait référence aux éléments de l’interface utilisateur dans 
 | `monitoringSupported` | Booléen | Indique si la connexion de destination est incluse dans la [surveillance de l’interface utilisateur](../ui/destinations-workspace.md#browse). Lorsque vous définissez ce paramètre sur `true`, l’option **[!UICONTROL Afficher dans la surveillance]** s’affiche sur la page de navigation de destination. |
 | `frequency` | Chaîne | Fait référence au type d’exportation des données pris en charge par la destination. Définissez sur `Batch` pour les destinations basées sur des fichiers. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Diffusion de destination {#destination-delivery}
 
@@ -630,7 +630,7 @@ Le `deliveryMatchers` est facultative et peut être utilisée si vous spécifiez
 | `authenticationRule` | Chaîne | Indique comment les clients [!DNL Platform] se connectent à votre destination. Les valeurs acceptées sont les suivantes : `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION` ou `NONE`. <br> <ul><li>Utilisez `CUSTOMER_AUTHENTICATION` si les clients Platform se connectent à votre système par l’une des méthodes suivantes : <ul><li>`"authType": "S3"`</li><li>`"authType":"AZURE_CONNECTION_STRING"`</li><li>`"authType":"AZURE_SERVICE_PRINCIPAL"`</li><li>`"authType":"SFTP_WITH_SSH_KEY"`</li><li>`"authType":"SFTP_WITH_PASSWORD"`</li></ul> </li><li> Utilisez `PLATFORM_AUTHENTICATION` s’il existe un système d’authentification global entre Adobe et votre destination et que le client [!DNL Platform] n’a pas besoin de fournir d’informations d’authentification pour se connecter à votre destination. Dans ce cas, vous devez créer des informations d’identification à l’aide de la configuration des [Informations d’identification](./credentials-configuration-api.md). </li><li>Utilisez `NONE` si aucune authentification n’est requise pour envoyer des données à votre plateforme de destination. </li></ul> |
 | `destinationServerId` | Chaîne | Le `instanceId` de [configuration du serveur de destination](./server-and-file-configuration.md) que vous [created](/help/destinations/destination-sdk/destination-server-api.md#create-file-based) pour cette destination. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Configuration du mappage de segments {#segment-mapping}
 
@@ -692,7 +692,7 @@ Vous pouvez créer des champs de schéma statiques codés en dur ou spécifier u
 | `segmentRequired` | Booléen | Utilisez toujours `segmentRequired:true`. |
 | `identityRequired` | Booléen | Utilisez `true` si les utilisateurs doivent être en mesure de mapper des espaces de noms d’identité d’Experience Platform à votre schéma souhaité. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Configuration de schéma dynamique dans l’étape de mappage {#dynamic-schema-configuration}
 
@@ -724,7 +724,7 @@ Utilisez les paramètres de la section  `dynamicSchemaConfig` pour récupérer d
 | `value` | Chaîne | Nom du schéma à afficher dans l’interface utilisateur d’Experience Platform, à l’étape de mappage. |
 | `responseFormat` | Chaîne | Toujours définie sur `SCHEMA` lors de la définition d’un schéma personnalisé. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Mappings requis {#required-mappings}
 
@@ -775,7 +775,7 @@ Utilisez les paramètres décrits dans le tableau ci-dessous si vous souhaitez a
 | `requiredMappings.source` | Chaîne | Indique le champ source requis. |
 | `requiredMappings.destination` | Chaîne | Indique le champ de destination requis. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Identités et attributs {#identities-and-attributes}
 
@@ -857,7 +857,7 @@ Cette section fait référence aux paramètres de dénomination des fichiers et 
 | `filenameConfig.defaultFilenameAppendOptions` | Chaîne | *Obligatoire*. Macros de nom de fichier par défaut présélectionnées que les utilisateurs peuvent décocher.<br><br> Les macros de cette liste sont un sous-ensemble de celles définies dans la variable `allowedFilenameAppendOptions`. |
 | `filenameConfig.defaultFilename` | Chaîne | *Facultatif*. Définit les macros de nom de fichier par défaut pour les fichiers exportés. Ils ne peuvent pas être remplacés par les utilisateurs. <br><br>Toute macro définie par `allowedFilenameAppendOptions` sera annexé après l’événement `defaultFilename` macros. <br><br>If `defaultFilename` est vide, vous devez définir au moins une macro dans `allowedFilenameAppendOptions`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Configuration du nom de fichier {#file-name-configuration}
 
@@ -870,18 +870,18 @@ Utilisez les macros de configuration des noms de fichier pour définir les noms 
 
 | Macro | Libellé de l’interface utilisateur | Description | Exemple |
 |---|---|---|---|
-| `DESTINATION` | [!UICONTROL Destination] | Nom de la destination dans l’interface utilisateur. | Amazon S3 |
+| `DESTINATION` | [!UICONTROL Destination] | Nom de la destination dans l’interface utilisateur. | Amazon S3 |
 | `SEGMENT_ID` | [!UICONTROL Identifiant de segment] | Identifiant de segment unique généré par Platform | ce5c5482-2813-4a80-99bc-57113f6acde2 |
 | `SEGMENT_NAME` | [!UICONTROL Nom du segment] | Nom de segment défini par l’utilisateur | abonné VIP |
 | `DESTINATION_INSTANCE_ID` | [!UICONTROL Identifiant de destination] | Identifiant unique généré par Platform de l’instance de destination. | 7b891e5f-025a-4f0d-9e73-1919e71da3b0 |
 | `DESTINATION_INSTANCE_NAME` | [!UICONTROL Nom de la destination] | Nom défini par l’utilisateur de l’instance de destination. | Ma destination publicitaire 2022 |
 | `ORGANIZATION_NAME` | [!UICONTROL Nom de l’organisation] | Nom de l’organisation du client dans Adobe Experience Platform. | Mon nom d’organisation |
-| `SANDBOX_NAME` | [!UICONTROL Nom de la sandbox] | Nom de l’environnement de test utilisé par le client. | prod |
+| `SANDBOX_NAME` | [!UICONTROL Nom du sandbox] | Nom de l’environnement de test utilisé par le client. | prod |
 | `DATETIME` / `TIMESTAMP` | [!UICONTROL Date et heure] | `DATETIME` et `TIMESTAMP` les deux définissent le moment où le fichier a été généré, mais dans des formats différents. <br><br><ul><li>`DATETIME` utilise le format suivant : YYYYMMDD_HHMMSS.</li><li>`TIMESTAMP` utilise le format Unix à 10 chiffres. </li></ul> `DATETIME` et `TIMESTAMP` s’excluent mutuellement et ne peuvent pas être utilisés simultanément. | <ul><li>`DATETIME`: 20220509_210543</li><li>`TIMESTAMP`: 1652131584</li></ul> |
 | `CUSTOM_TEXT` | [!UICONTROL Texte personnalisé] | Texte personnalisé défini par l’utilisateur à inclure dans le nom du fichier. Ne peut pas être utilisé dans `defaultFilename`. | My_Custom_Text |
 | `TIMESTAMP` | [!UICONTROL Date et heure] | Horodatage à 10 chiffres de l’heure de génération du fichier, au format Unix. | 1652131584 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ![Image de l’interface utilisateur affichant l’écran de configuration du nom de fichier avec les macros présélectionnées](assets/file-name-configuration.png)
 
@@ -915,7 +915,7 @@ Vous pouvez utiliser le paramètre `backfillHistoricalProfileData` dans la confi
 |---------|----------|------|
 | `backfillHistoricalProfileData` | Booléen | Contrôle si les données de profil historiques sont exportées lorsque les segments sont activés vers la destination. <br> <ul><li> `true` : [!DNL Platform] envoie les profils utilisateur historiques qualifiés pour le segment avant l’activation du segment. </li><li> `false` : [!DNL Platform] inclut uniquement les profils utilisateur qui remplissent les critères pour le segment une fois le segment activé. </li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Comment cette configuration connecte toutes les informations nécessaires à votre destination {#connecting-all-configurations}
 

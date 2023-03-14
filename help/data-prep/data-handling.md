@@ -106,6 +106,6 @@ Le tableau suivant indique les lettres de modèle définies pour les chaînes de
 | O | Décalage du fuseau horaire | Texte | GMT+8 |
 | Q/q | Trimestre de l’année | Nombre/Texte | 3; 03; T3; 3e trimestre |
 
-## Cartes {#maps}
+## Mappages {#maps}
 
 Les mappages ne sont actuellement pas pris en charge dans [!DNL Data Prep].

@@ -5,7 +5,7 @@ feature: Attribution AI
 title: Contrôle d’accès pour Attribution AI
 description: Ce document fournit des informations sur le contrôle d’accès basé sur les attributs pour Attribution AI.
 source-git-commit: d82fd8dd5efbe314c09d32905f8ab964640cc11a
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '490'
 ht-degree: 100%
 

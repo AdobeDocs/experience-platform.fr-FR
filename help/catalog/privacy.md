@@ -145,7 +145,7 @@ La section suivante explique comment effectuer des demandes d’accès à des in
 >
 >Le délai de traitement dʼune demande dʼaccès à des informations personnelles ne peut être garanti. Si des modifications se produisent dans le lac de données alors qu’une demande est toujours en cours de traitement, le fait que ces enregistrements soient traités ou non ne peut pas non plus être garanti.
 
-### Utiliser l’interface utilisateur
+### Utilisation de l’interface utilisateur
 
 Lors de la création de requêtes de tâche dans l’interface utilisateur, veillez à sélectionner **[!UICONTROL Lac de données AEP]** under **[!UICONTROL Produits]** afin de traiter les tâches pour les données stockées dans le lac de données.
 
@@ -200,7 +200,7 @@ curl -X POST \
 
 >[!IMPORTANT]
 >
->Platform traite les demandes d’accès à des informations personnelles dans toutes les [sandbox](../sandboxes/home.md) appartenant à votre organisation. Par conséquent, tout en-tête `x-sandbox-name` inclus dans la demande est ignoré par le système. 
+>Platform traite les demandes d’accès à des informations personnelles dans tous les [sandbox](../sandboxes/home.md) appartenant à votre organisation. Par conséquent, tout en-tête `x-sandbox-name` inclus dans la demande est ignoré par le système. 
 
 ## Traitement des demandes de suppression
 

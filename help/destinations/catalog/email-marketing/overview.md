@@ -67,7 +67,7 @@ Consultez les articles de destination de marketing par e-mail individuels pour d
 * [Adobe Campaign](adobe-campaign.md)
 * [Oracle Eloqua](oracle-eloqua.md)
 * [Oracle Responsys](oracle-responsys.md)
-* [Marketing Cloud Salesforce](salesforce-marketing-cloud.md)
+* [Salesforce Marketing Cloud](salesforce-marketing-cloud.md)
 
 ## Activer les segments vers des destinations de marketing par e-mail {#activate}
 

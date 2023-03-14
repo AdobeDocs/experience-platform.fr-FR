@@ -4,7 +4,7 @@ description: Découvrez comment effectuer des appels au point d’entrée /rule_
 exl-id: 8a878a89-7f41-45fc-88f3-17f0f743e29c
 source-git-commit: e602f78470fe4eeb2a42e6333ba52096d8a9fe8a
 workflow-type: tm+mt
-source-wordcount: '1190'
+source-wordcount: '1157'
 ht-degree: 95%
 
 ---
@@ -25,7 +25,7 @@ Les composants de règle possèdent trois types de base :
 | Conditions | Une condition correspond à une évaluation déterminant si certains critères sont satisfaits avant l’exécution d’actions. Une fois qu’un événement se produit, les conditions sont évaluées. Les actions de la règle ne s’exécutent que si toutes les conditions sont remplies. |
 | Actions | Il s’agit des actions que la règle doit effectuer, telles que l’envoi d’une balise Adobe Analytics, la récupération d’un identifiant visiteur personnalisé ou le déclenchement d’une mBox spécifique. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Un composant de règle appartient à une règle exactement. Une règle peut (et doit) contenir de nombreux composants de règle.
 
@@ -49,7 +49,7 @@ GET /rules/{RULE_ID}/rule_components
 | --- | --- |
 | `RULE_ID` | `id` de la règle dont vous souhaitez répertorier les composants. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >
@@ -188,7 +188,7 @@ GET /rule_components/{RULE_COMPONENT_ID}
 | --- | --- |
 | `RULE_COMPONENT_ID` | `id` du composant de règle que vous souhaitez rechercher. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Requête**
 
@@ -312,7 +312,7 @@ POST /properties/{PROPERTY_ID}/rule_components
 | --- | --- |
 | `PROPERTY_ID` | Le `id` de la propriété sous laquelle vous définissez le composant de règle. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Requête**
 
@@ -359,7 +359,7 @@ curl -X POST \
 
 | Propriété | Description |
 | --- | --- |
-| `attributes.delegate_descriptor_id` | **(Obligatoire)** Les types de composants de règle que vous pouvez définir sont fournis par les [packages d’extension](./extension-packages.md). Lorsque vous créez un composant de règle, vous devez fournir un identifiant de descripteur délégué pour indiquer le module d’extension sur lequel ce composant de règle est basé, le type du composant (événement, condition ou action) ainsi que le nom du composant spécifique tel que défini par l’extension (comme l’événement « Cliquer sur » dans l’extension Core).<br><br>Pour plus d’informations, consultez le guide sur les [ID de descripteur de délégué](../guides/delegate-descriptor-ids.md). |
+| `attributes.delegate_descriptor_id` | **(Obligatoire)** Les types de composants de règle que vous pouvez définir sont fournis par les [packages d’extension](./extension-packages.md). Lorsque vous créez un composant de règle, vous devez fournir un identifiant de descripteur délégué pour indiquer le package d’extension sur lequel ce composant de règle est basé, le type du composant (événement, condition ou action) ainsi que le nom du composant spécifique tel que défini par l’extension (comme l’événement « Cliquer sur » dans l’extension Core).<br><br>Pour plus d’informations, consultez le guide sur les [ID de descripteur de délégué](../guides/delegate-descriptor-ids.md). |
 | `attributes.name` | **(Obligatoire)** Nom compréhensible pour le composant de règle. |
 | `attributes.delay_next` | Valeur booléenne qui indique s’il faut retarder les actions ultérieures. |
 | `attributes.order` | Nombre entier indiquant l’ordre de chargement du composant par type. |
@@ -369,7 +369,7 @@ curl -X POST \
 | `relationships` | Objet qui établit les relations nécessaires pour le composant de règle. Deux relations doivent être établies : <ol><li>`extension` : l’extension qui définit ce composant de règle. Il doit s’agir de la même extension que celle du package d’extension indiqué par `delegate_descriptor_id`.</li><li>`rules` : la règle sous laquelle ce composant est défini.</li></ol>Pour plus d’informations générales sur les relations, consultez le [guide sur les relations](../guides/relationships.md). |
 | `type` | Le type de ressource en cours de création. Pour ce point d&#39;entrée, la valeur doit être `rule_components`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Réponse**
 
@@ -485,7 +485,7 @@ PATCH /rule_components/{RULE_COMPONENT_ID}
 | --- | --- |
 | `RULE_COMPONENT_ID` | `id` du composant de règle que vous souhaitez mettre à jour. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Requête**
 
@@ -516,7 +516,7 @@ curl -X PATCH \
 | `id` | `id` du composant de règle que vous souhaitez mettre à jour. Cela doit correspondre à la valeur `{RULE_COMPONENT_ID}` fournie dans le chemin d’accès de la requête. |
 | `type` | Le type de ressource en cours de mise à jour. Pour ce point d’entrée, la valeur doit être `rule_components`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Réponse**
 
@@ -628,7 +628,7 @@ DELETE /rule_components/{RULE_COMPONENT_ID}
 | --- | --- |
 | `RULE_COMPONENT_ID` | `id` du composant de règle que vous souhaitez supprimer. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Requête**
 
@@ -668,7 +668,7 @@ GET  /rule_components/{RULE_COMPONENT_ID}/rules
 | --- | --- |
 | `{RULE_COMPONENT_ID}` | `id` du composant de règle dont vous souhaitez répertorier les règles. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Requête**
 
@@ -772,7 +772,7 @@ GET /rule_components/{RULE_COMPONENT_ID}/extension
 | --- | --- |
 | `{RULE_COMPONENT_ID}` | `id` du composant de règle dont vous souhaitez rechercher lʼextension. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Requête**
 
@@ -892,7 +892,7 @@ GET /rule_components/{RULE_COMPONENT_ID}/origin
 | --- | --- |
 | `{RULE_COMPONENT_ID}` | `id` du composant de règle dont vous souhaitez rechercher lʼorigine. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Requête**
 

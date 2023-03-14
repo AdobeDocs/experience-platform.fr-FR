@@ -6,8 +6,8 @@ description: Le contrôle d’accès dans Adobe Experience Platform vous perme
 exl-id: ca403bef-6d62-4ca9-bba6-d1280ac63171
 source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '339'
+ht-degree: 96%
 
 ---
 

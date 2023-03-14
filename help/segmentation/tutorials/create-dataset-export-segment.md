@@ -40,7 +40,7 @@ Sélectionner **[!UICONTROL Jeux de données]** dans le volet de navigation de g
 
 ![L’espace de travail des jeux de données s’affiche.](../images/tutorials/segment-export-dataset/browse.png)
 
-## Création d’un jeu de données
+## Créer un jeu de données
 
 Pour créer un jeu de données, sélectionnez **[!UICONTROL Créer un jeu de données]**.
 

@@ -3,7 +3,7 @@ keywords: Experience Platform;recette de ventes au détail;Data Science Workspac
 solution: Experience Platform
 title: Création d’un schéma et d’un jeu de données de vente au détail
 type: Tutorial
-description: Ce tutoriel vous présente les prérequis et les ressources nécessaires à tous les autres tutoriels Data Science Workspace d’Adobe Experience Platform. Une fois que vous aurez terminé, les jeux de données et le schéma de vente au détail seront disponibles pour vous et les membres de votre organisation IMS sur Experience Platform.
+description: Ce tutoriel vous présente les prérequis et les ressources nécessaires à tous les autres tutoriels sur l’espace de travail de science des données d’Adobe Experience Platform. Une fois que vous aurez terminé, les jeux de données et le schéma de vente au détail seront disponibles pour vous et les membres de votre organisation IMS sur Experience Platform.
 exl-id: 1b868c8c-7c92-4f99-8486-54fd7aa1af48
 source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
@@ -28,7 +28,7 @@ Avant de commencer ce tutoriel, vous devez disposer des éléments suivants :
    - Client secret: `{CLIENT_SECRET}`
    - Client certificate: `{PRIVATE_KEY}`
 - Exemples de données et de fichiers source pour la [Recette des ventes au détail](../pre-built-recipes/retail-sales.md). Téléchargez les ressources requises pour ceci et d’autres [!DNL Data Science Workspace] tutoriels à partir de [Adobe du référentiel Git public](https://github.com/adobe/experience-platform-dsw-reference/).
-- [ >= 2.7](https://www.python.org/downloads/)[!DNL Python] et les paquets Python suivants :
+- [ >= 2.7](https://www.python.org/downloads/)[!DNL Python] et les packages Python suivants :
    - [pip](https://pypi.org/project/pip/)
    - [PyYAML](https://pyyaml.org/)
    - [dictor](https://pypi.org/project/dictor/)
@@ -112,5 +112,5 @@ Vous avez également ingéré avec succès des données d’exemple de ventes au
 Pour continuer à travailler sur les données ingérées, procédez de la façon suivante :
 - [Analyse de vos données à l’aide des notebooks Jupyter](../jupyterlab/analyze-your-data.md)
    - Utilisez les notebooks Jupyter dans Data Science Workspace pour accéder à vos données, les explorer, les visualiser et les comprendre.
-- [Regroupez les fichiers source dans une recette](./package-source-files-recipe.md)
+- [Regroupez les fichiers sources dans une recette](./package-source-files-recipe.md)
    - Suivez ce tutoriel pour apprendre à importer votre propre modèle dans [!DNL Data Science Workspace] en regroupant les fichiers source dans un fichier Recette pouvant être importé.

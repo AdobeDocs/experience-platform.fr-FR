@@ -23,7 +23,7 @@ Ce tutoriel utilise des tableaux de bord définis par l’utilisateur pour visua
 
 ## Prise en main
 
-Le SKU Data Distiller est nécessaire pour créer un modèle de données personnalisé pour vos rapports d’insights et pour étendre les modèles de données Real-time CDP qui contiennent des données Platform enrichies. Veuillez consulter le [packaging](../../packages.md), les [barrières de sécurité](../../guardrails.md#query-accelerated-store), et la documentation de la [licence](../../data-distiller/license-usage.md) relative au SKU de Data Distiller. Si vous ne disposez pas du SKU de Data Distiller, contactez votre représentant du service client Adobe pour plus d’informations.
+Le SKU Data Distiller est nécessaire pour créer un modèle de données personnalisé pour vos rapports d’insights et pour étendre les modèles de données Real-time CDP qui contiennent des données Platform enrichies. Veuillez consulter le [packaging](../../packages.md), les [mécanismes de sécurisation](../../guardrails.md#query-accelerated-store), et la documentation de la [licence](../../data-distiller/license-usage.md) relative au SKU de Data Distiller. Si vous ne disposez pas du SKU de Data Distiller, contactez votre représentant du service client Adobe pour plus d’informations.
 
 ## Créer un modèle de données de rapport d’informations
 

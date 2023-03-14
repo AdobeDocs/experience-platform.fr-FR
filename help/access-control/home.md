@@ -5,7 +5,7 @@ title: Présentation du contrôle d’accès
 description: Dans Adobe Experience Platform, le contrôle dʼaccès est fourni par le biais dʼAdobe Admin Console. Cette fonctionnalité exploite les profils de produit dans l’Admin Console, liant les utilisateurs et utilisatrices à des autorisations et des sandbox.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
 source-git-commit: 56f1cbc622450b154e6e29a8116789b316901f66
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1473'
 ht-degree: 100%
 
@@ -46,7 +46,7 @@ Dans [!DNL Admin Console], des autorisations sont attribuées à des utilisateur
 
 ### Profils de produit par défaut
 
-[!DNL Experience Platform] sʼaccompagne de deux profils de produit préconfigurés par défaut. Le tableau suivant décrit les fonctionnalités fournies dans chaque profil par défaut, notamment, la sandbox à laquelle ils accordent l’accès ainsi que les autorisations qu’ils accordent au sein de la sandbox.
+[!DNL Experience Platform] sʼaccompagne de deux profils de produit préconfigurés par défaut. Le tableau suivant décrit les fonctionnalités fournies dans chaque profil par défaut, notamment, le sandbox auquel ils accordent l’accès ainsi que les autorisations qu’ils accordent au sein du sandbox.
 
 | Profil de produit | Accès aux sandbox | Autorisations |
 | --- | --- | --- |
@@ -55,21 +55,21 @@ Dans [!DNL Admin Console], des autorisations sont attribuées à des utilisateur
 
 ## Sandbox et autorisations
 
-Les sandbox hors production sont une forme de virtualisation des données qui vous permet d’isoler des données des autres sandbox et qui est généralement utilisée à des fins d’expériences de développement, de test ou d’évaluations. Les autorisations dʼun profil de produit donnent aux utilisateurs du profil lʼaccès aux fonctionnalités de [!DNL Platform] dans les sandbox auxquelles ils se sont vus accorder lʼaccès. Une licence Experience Platform par défaut vous accorde cinq sandbox (un de production et quatre de non-production). Vous pouvez ajouter des packs de dix sandbox de non-production jusquʼà un maximum de 75 sandbox au total. Contactez votre administrateur dʼorganisation IMS ou votre représentant commercial Adobe pour plus de détails.
+Les sandbox hors production sont une forme de virtualisation des données qui vous permet d’isoler des données des autres sandbox et qui est généralement utilisée à des fins d’expériences de développement, de test ou d’évaluations. Les autorisations dʼun profil de produit donnent aux utilisateurs du profil lʼaccès aux fonctionnalités de [!DNL Platform] dans les sandbox auxquels ils se sont vus accorder lʼaccès. Une licence Experience Platform par défaut vous accorde cinq sandbox (un de production et quatre hors production). Vous pouvez ajouter des packs de dix sandbox hors production jusquʼà un maximum de 75 sandbox au total. Contactez votre administrateur dʼorganisation IMS ou votre représentant commercial Adobe pour plus de détails.
 
 Pour plus dʼinformations sur les sandbox dans [!DNL Experience Platform], reportez-vous à la [présentation des sandbox](../sandboxes/home.md).
 
 ### Accès aux sandbox
 
-L’accès aux sandbox est géré par l’intermédiaire des profils de produit. Pour obtenir des instructions détaillées sur la manière dont activer l’accès à une sandbox pour un profil de produit, consultez le [guide d’utilisation du contrôle d’accès](./ui/overview.md).
+L’accès aux sandbox est géré par l’intermédiaire des profils de produit. Pour obtenir des instructions détaillées sur la manière d’activer l’accès à un sandbox pour un profil de produit, consultez le [guide d’utilisation du contrôle d’accès](./ui/overview.md).
 
-Les utilisateurs peuvent se voir accorder l’accès à un ou plusieurs sandbox au sein d’un profil de produit. Si un utilisateur fait partie de deux profils de produit ou plus, cet utilisateur aura accès à toutes les sandbox incluses dans ces profils.
+Les utilisateurs peuvent se voir accorder l’accès à un ou plusieurs sandbox au sein d’un profil de produit. Si un utilisateur fait partie de deux profils de produit ou plus, cet utilisateur aura accès à tous les sandbox inclus dans ces profils.
 
-Ce document vous a montré comment gérer les sandbox dans l’interface utilisateur d’Experience Platform.
+L’autorisation « Gestion des sandbox » permet aux utilisateurs de gérer, d’afficher ou de réinitialiser des sandbox.
 
 ### Autorisations {#permissions}
 
-L’onglet Autorisations au sein d’un profil de produit affiche les sandbox et les autorisations actives pour ce profil :
+L’onglet Autorisations au sein d’un profil de produit affiche les sandbox et les autorisations actifs pour ce profil :
 
 ![présentation-autorisations](./images/permissions.png)
 
@@ -105,7 +105,7 @@ Le tableau suivant décrit les autorisations disponibles pour [!DNL Experience P
 | [!DNL Identity Management] | [!UICONTROL Afficher un graphique d’identité] | Accès en lecture seule aux graphiques d’identité. |
 | [!DNL Sandbox Administration] | [!UICONTROL Gestion des sandbox] | Accès à la lecture, la création, la modification et la suppression des sandbox. |
 | [!DNL Sandbox Administration] | [!UICONTROL Affichage des sandbox] | Accès en lecture seule aux sandbox appartenant à votre organisation. |
-| [!DNL Sandbox Administration] | [!UICONTROL Réinitialisation d’une sandbox] | Capacité à réinitialiser une sandbox. |
+| [!DNL Sandbox Administration] | [!UICONTROL Réinitialisation d’un sandbox] | Capacité à réinitialiser un sandbox. |
 | [!DNL Destinations] | [!UICONTROL Gestion des destinations] | Accès à la lecture, la création, la modification et la désactivation des destinations. |
 | [!DNL Destinations] | [!UICONTROL Affichage des destinations] | Accès en lecture seule aux destinations disponibles dans l’onglet **[!UICONTROL Catalogue]** et aux destinations authentifiées dans l’onglet **[!UICONTROL Parcourir]**. |
 | [!DNL Destinations] | [!UICONTROL Activation des destinations] | Capacité à activer les données vers les destinations actives qui ont été créées. Cette autorisation nécessite d’accorder soit [!UICONTROL Afficher les destinations] ou [!UICONTROL Gérer les destinations] à l’utilisateur ou utilisatrice qui activera les destinations. |

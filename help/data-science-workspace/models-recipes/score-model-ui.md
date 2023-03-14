@@ -3,12 +3,12 @@ keywords: Experience Platform;noter un modèle;Data Science Workspace;rubriques 
 solution: Experience Platform
 title: Notation d’un modèle dans l’interface utilisateur de Data Science Workspace
 type: Tutorial
-description: La notation dans Adobe Experience Platform Data Science Workspace peut être réalisée en alimentant un modèle formé existant avec des données d’entrée. Les résultats de la notation sont ensuite stockés et consultables dans un jeu de données de sortie spécifié sous la forme d’un nouveau lot.
+description: La notation dans l’espace de travail de science des données d’Adobe Experience Platform peut être réalisée en alimentant un modèle formé existant avec des données d’entrée. Les résultats de la notation sont ensuite stockés et consultables dans un jeu de données de sortie spécifié sous la forme d’un nouveau lot.
 exl-id: 00d6a872-d71a-47f4-8625-92621d4eed56
 source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '648'
-ht-degree: 35%
+ht-degree: 32%
 
 ---
 
@@ -95,4 +95,4 @@ Pour consulter l’ensemble des résultats de la notation, sélectionnez la vari
 
 ## Étapes suivantes
 
-Ce tutoriel vous a expliqué les étapes à suivre pour noter les données à l’aide d’un modèle formé dans [!DNL Data Science Workspace]. Suivez le tutoriel sur la [publication d’un modèle en tant que service dans l’interface utilisateur](./publish-model-service-ui.md) pour permettre aux utilisateurs de votre organisation de noter des données en leur fournissant un accès facile à un service d’apprentissage automatique.
+Ce tutoriel vous a expliqué les étapes à suivre pour noter des données à l’aide d’un modèle formé dans [!DNL Data Science Workspace]. Suivez le tutoriel sur la [publication d’un modèle en tant que service dans l’interface utilisateur](./publish-model-service-ui.md) pour permettre aux utilisateurs de votre organisation de noter des données en leur fournissant un accès facile à un service d’apprentissage automatique.

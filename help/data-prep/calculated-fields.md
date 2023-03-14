@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;accueil;rubriques populaires;mapper csv;mapper le fichier csv;mapper le fichier csv à xdm;mapper csv à xdm;guide de lʼui;mappeur;mappage;data prep;préparation des données;préparer des données;
 solution: Experience Platform
-title: Présentation de Data Prep
+title: Présentation de la préparation des données
 description: Ce document présente Data Prep dans Adobe Experience Platform.
 exl-id: 9bef5c3b-368d-4492-bdef-64e67fc25bfd
 source-git-commit: d39ae3a31405b907f330f5d54c91b95c0f999eee
@@ -11,7 +11,7 @@ ht-degree: 100%
 
 ---
 
-# Les champs calculés
+# Champs calculés
 
 Les champs calculés permettent de créer des valeurs en fonction des attributs du schéma d’entrée. Ces valeurs peuvent ensuite être affectées à des attributs dans le schéma cible. Vous pouvez également leur fournir un nom et une description pour en faciliter la référence.
 

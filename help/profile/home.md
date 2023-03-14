@@ -4,7 +4,7 @@ title: Vue d’ensemble de Real-Time Customer Profile
 description: Le profil client en temps réel fusionne des données provenant de diverses sources et permet d’accéder à ces données sous la forme de profils clients individuels et d’événements de séries temporelles associés. Cette fonctionnalité permet aux spécialistes marketing d’offrir à leur audience des expériences coordonnées, cohérentes et pertinentes sur plusieurs canaux.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
 source-git-commit: 737a67b7e30f770d65751b1a924d8378af8bde52
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '2098'
 ht-degree: 100%
 
@@ -48,9 +48,9 @@ Bien que le [!DNL Real-Time Customer Profile] traite les données ingérées et 
 
 Le magasin du profil utilise une infrastructure de base de données Microsoft Azure Cosmos et le lac de données de Platform utilise l’espace de stockage Microsoft Azure Data Lake.
 
-### Garde-fous de profil
+### Mécanismes de sécurisation de profil
 
-Experience Platform propose une série de barrières de sécurité pour vous permettre d’éviter de créer des [schémas de modèle de données d’expérience (XDM)](../xdm/home.md) qui ne peuvent pas être pris en charge par le profil client en temps réel. Cela inclut des limites souples qui entraîneront une dégradation des performances, ainsi que des limites strictes qui entraîneront des erreurs et des pannes système. Pour plus d’informations, dont une liste de directives et des cas d’utilisation, consultez la documentation sur les [Garde-fous de profil](guardrails.md).
+Experience Platform propose une série de mécanismes de sécurisation pour vous permettre d’éviter de créer des [schémas de modèle de données d’expérience (XDM)](../xdm/home.md) qui ne peuvent pas être pris en charge par le profil client en temps réel. Cela inclut des limites souples qui entraîneront une dégradation des performances, ainsi que des limites strictes qui entraîneront des erreurs et des pannes système. Pour plus d’informations, dont une liste de directives et des cas d’utilisation, consultez la documentation sur les [Mécanismes de sécurisation de profil](guardrails.md).
 
 ### Tableau de bord du profil {#profile-dashboard}
 

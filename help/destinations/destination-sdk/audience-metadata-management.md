@@ -4,7 +4,7 @@ title: Gérer les métadonnées d’audience
 exl-id: 795e8adb-c595-4ac5-8d1a-7940608d01cd
 source-git-commit: 92bca3600d854540fd2badd925e453fba41601a7
 workflow-type: tm+mt
-source-wordcount: '1046'
+source-wordcount: '1040'
 ht-degree: 100%
 
 ---
@@ -69,7 +69,7 @@ Notez que dans certains exemples les champs de macro tels que `{{authData.access
 | `validate` | Exécute des validations pour tous les champs de la configuration du modèle avant d’effectuer un appel vers l’API du partenaire. Par exemple, vous pouvez vérifier que l’identifiant de compte de l’utilisateur est saisi correctement. |
 | `notify` | S’applique uniquement aux destinations basées sur des fichiers. Inclut tous les composants requis (URL, méthode HTTP, en-têtes, requête et corps de réponse) pour effectuer un appel HTTP vers votre API afin de vous informer de la réussite des exportations de fichiers. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Exemple de diffusion en continu 1 {#example-1}
 
@@ -540,4 +540,4 @@ Afin de transmettre des informations telles que des identifiants de segment, des
 | `{{body.segments[0].segment.id}}` | Renvoie l’identifiant unique de l’audience créée, sous la forme de la valeur de la clé `externalAudienceId`. |
 | `{{error.message}}` | Renvoie un message d’erreur qui sera visible pour les utilisateurs dans l’interface utilisateur d’Experience Platform. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

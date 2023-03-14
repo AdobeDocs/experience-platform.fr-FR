@@ -4,7 +4,7 @@ feature: Attribution AI
 title: Politiques de gouvernance pour Attribution AI
 description: Adobe Experience Platform fournit plusieurs services et outils qui vous permettent de contrôler en toute confiance les données d’expérience collectées.
 source-git-commit: 2cce166592c4d4b7f9d62bc3385fb8ccdd74c958
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '190'
 ht-degree: 100%
 

@@ -37,7 +37,7 @@ L&#39;extension de balise « *Adobe Analytics* » pour Adobe Experience Pla
 
 ### Adobe Experience Manager (AEM)
 
-1. Activez [AEM Asset Insights](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html). Dans AEM, sélectionnez **[!UICONTROL Outils > Ressources]**, puis ouvrez le panneau **[!UICONTROL Configuration des statistiques]**.
+1. Activez [AEM Asset Insights](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html?lang=fr). Dans AEM, sélectionnez **[!UICONTROL Outils > Ressources]**, puis ouvrez le panneau **[!UICONTROL Configuration des statistiques]**.
 
 1. Désactivez le suivi UUID.
 
@@ -61,7 +61,7 @@ L’intégration recommandée de [Platform](https://experienceleague.adobe.com/d
 
 ### Activer Asset Insight dans AEM
 
-Pour obtenir des instructions sur l’activation d’Assets Insights, consultez le [guide de l’utilisateur Experience Manager 6.5 Assets](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html).
+Pour obtenir des instructions sur l’activation d’Assets Insights, consultez le [guide de l’utilisateur Experience Manager 6.5 Assets](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html?lang=fr).
 
 ### Activer le suivi UUID pour Assets
 
@@ -132,7 +132,7 @@ Configurez trois règles comme décrit ci-dessus :
 
    * Il n’y a jamais eu de ressource dans la zone d’affichage du navigateur.
 
-   * Aucune ressource sur la page n’était configurée avec [Statistiques sur les ressources](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html) activé dans AEM.
+   * Aucune ressource sur la page n’était configurée avec [Statistiques sur les ressources](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html?lang=fr) activé dans AEM.
 
 **Clics**
 
@@ -142,7 +142,7 @@ Configurez trois règles comme décrit ci-dessus :
 
 Dans la requête d’image Analytics qui en résulte (à partir de la page suivante), si `a.assets.idlist` contient les identifiants de ressource sur la page de destination et que `a.assets.clickedid` contient l’identifiant de la ressource ayant fait l’objet d’un clic sur la page d’origine, la règle fonctionne correctement.
 
-Si `a.assets.clickedid` n’est pas dans la requête d’image, c’est certainement parce que la ressource ayant fait l’objet d’un clic n’avait pas activé [Statistiques sur les ressources](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html) dans AEM.
+Si `a.assets.clickedid` n’est pas dans la requête d’image, c’est certainement parce que la ressource ayant fait l’objet d’un clic n’avait pas activé [Statistiques sur les ressources](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html?lang=fr) dans AEM.
 
 **Clics sans destination**
 
@@ -152,4 +152,4 @@ Si `a.assets.clickedid` n’est pas dans la requête d’image, c’est certaine
 
 Dans la demande d’image Analytics qui en résulte, si `a.assets.clickedid` comporte l’identifiant de ressource, la règle fonctionne correctement.
 
-Si `a.assets.clickedid` n’est pas dans la requête d’image, c’est certainement parce que [Statistiques sur les ressources](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html) n’était pas activé sur la ressource ayant fait l’objet d’un clic dans AEM.
+Si `a.assets.clickedid` n’est pas dans la requête d’image, c’est certainement parce que [Statistiques sur les ressources](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html?lang=fr) n’était pas activé sur la ressource ayant fait l’objet d’un clic dans AEM.

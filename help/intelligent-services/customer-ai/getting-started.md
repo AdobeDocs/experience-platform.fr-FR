@@ -35,13 +35,13 @@ Une combinaison d’appels API est nécessaire pour télécharger les scores de 
 - x-api-key : `{API_KEY}`
 - x-gw-ims-org-id: `{ORG_ID}`
 
-Dans Experience Platform, toutes les ressources sont isolées dans des environnements de test virtuels spécifiques. Toutes les requêtes envoyées aux API Platform nécessitent un en-tête spécifiant le nom de l’environnement de test dans lequel l’opération sera effectuée :
+Dans Experience Platform, toutes les ressources sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes envoyées aux API Platform nécessitent un en-tête spécifiant le nom du sandbox dans lequel l’opération sera effectuée :
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Pour plus d’informations sur les environnements de test dans Platform, consultez la [documentation de présentation des environnements de test](../../sandboxes/home.md).
+>Pour plus d’informations sur les sandbox dans Platform, consultez la [documentation de présentation des sandbox](../../sandboxes/home.md).
 
 ### Lecture d’exemples d’appels API
 

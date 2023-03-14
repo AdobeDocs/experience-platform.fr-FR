@@ -5,7 +5,7 @@ description: Ce guide fournit des exemples de requêtes et de réponses HTTP pou
 exl-id: 30ac587a-2286-4a52-9199-7a2a8acd5362
 source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
-source-wordcount: '2667'
+source-wordcount: '2661'
 ht-degree: 89%
 
 ---
@@ -42,9 +42,9 @@ Les alertes suivantes s’appliquent sans abonnement aux alertes :
 
 Les sections suivantes décrivent les différents appels API que vous pouvez effectuer à l’aide de l’API Query Service. Chaque appel inclut le format général d’API, un exemple de requête présentant les en-têtes requis et un exemple de réponse.
 
-## Récupérer une liste de toutes les alertes pour une organisation et une sandbox {#get-list-of-org-alert-subs}
+## Récupérer une liste de toutes les alertes pour une organisation et un sandbox {#get-list-of-org-alert-subs}
 
-Récupérer une liste de toutes les alertes pour une sandbox d’organisation en envoyant une requête GET au point d’entrée `/alert-subscriptions`.
+Récupérer une liste de toutes les alertes pour un sandbox d’organisation en envoyant une requête GET au point d’entrée `/alert-subscriptions`.
 
 **Format d’API**
 
@@ -82,7 +82,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/query/alert-subscriptions
 
 **Réponse**
 
-Une réponse réussie renvoie un état HTTP 200 et le tableau `alerts` avec les informations de pagination et de version. Le tableau `alerts` contient les détails de toutes les alertes pour une organisation et une sandbox spécifique. Trois alertes au maximum sont disponibles par réponse, une alerte par type d’alerte est contenue dans le corps de la réponse.
+Une réponse réussie renvoie un état HTTP 200 et le tableau `alerts` avec les informations de pagination et de version. Le tableau `alerts` contient les détails de toutes les alertes pour une organisation et un sandbox spécifique. Trois alertes au maximum sont disponibles par réponse, une alerte par type d’alerte est contenue dans le corps de la réponse.
 
 >[!NOTE]
 >
@@ -553,7 +553,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/alert-subscriptions
 | `subscriptions.inContextNotifications` | Valeur booléenne déterminant la manière dont les utilisateurs et utilisatrices reçoivent les notifications d’alerte. Une valeur `true` confirme que les alertes doivent être fournies via l’interface utilisateur. Une valeur `false` garantit que les utilisateurs et utilisatrices ne sont pas avertis par ce canal. |
 | `subscriptions.emailNotifications` | Valeur booléenne déterminant la manière dont les utilisateurs et utilisatrices reçoivent les notifications d’alerte. Une valeur `true` confirme que les alertes doivent être fournies par e-mail. Une valeur `false` garantit que les utilisateurs et utilisatrices ne sont pas avertis par ce canal. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Réponse**
 
@@ -643,7 +643,7 @@ curl -X PATCH 'https://platform.adobe.io/data/foundation/query/alert-subscriptio
 | `path` | Cette valeur concerne l’espace de nom dans le point d’entrée. Actuellement, la seule valeur acceptée est `/status`. |
 | `value` | Dans une requête PATCH réussie, cela modifie la valeur `status` de l’alerte. Actuellement, les valeurs acceptées sont `enable` ou `disable`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Réponse**
 

@@ -4,7 +4,7 @@ description: Le point d’entrée /ttl de l’API Data Hygiene vous permet de p
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
-source-wordcount: '1456'
+source-wordcount: '1426'
 ht-degree: 98%
 
 ---
@@ -49,7 +49,7 @@ GET /ttl?{QUERY_PARAMETERS}
 | --- | --- |
 | `{QUERY_PARAMETERS}` | Une liste de paramètres de requête facultatifs avec plusieurs paramètres séparés par des caractères `&`. Les paramètres courants comprennent `size` et `page` à des fins de pagination. Pour obtenir la liste complète des paramètres de requête pris en charge, consultez la [section Annexe](#query-params). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Requête**
 
@@ -106,7 +106,7 @@ Une réponse réussie répertorie les expirations de jeux de données obtenues. 
 | `totalRecords` | Le nombre d’expirations de jeux de données qui correspondaient aux paramètres de l’appel de liste. |
 | `ttlDetails` | Contient les détails des expirations de jeux de données renvoyées. Pour plus d’informations sur les propriétés d’une expiration de jeu de données, consultez la section de réponse pour effectuer un [appel de recherche](#lookup). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Rechercher l’expiration d’un jeu de données {#lookup}
 
@@ -122,7 +122,7 @@ GET /ttl/{DATASET_ID}
 | --- | --- |
 | `{DATASET_ID}` | L’identifiant du jeu de données dont vous souhaitez rechercher l’expiration. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Requête**
 
@@ -167,7 +167,7 @@ Une réponse réussie renvoie les détails de l’expiration du jeu de données.
 | `displayName` | Le nom d’affichage de la requête d’expiration. |
 | `description` | Une description de la requête d’expiration. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Balises d’expiration du catalogue
 
@@ -230,7 +230,7 @@ curl -X PUT \
 | `displayName` | Un nom d’affichage de la requête d’expiration. |
 | `description` | Une description facultative de la requête d’expiration. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Réponse**
 
@@ -260,7 +260,7 @@ Une réponse réussie renvoie les détails de l’expiration du jeu de données,
 | `updatedAt` | Date et heure de la dernière mise à jour de l’expiration. |
 | `updatedBy` | Dernier utilisateur à avoir mis à jour l’expiration. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Annuler l’expiration d’un jeu de données {#delete}
 
@@ -280,7 +280,7 @@ DELETE /ttl/{EXPIRATION_ID}
 | --- | --- |
 | `{EXPIRATION_ID}` | Le `workorderId` de l’expiration du jeu de données que vous souhaitez annuler. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Requête**
 
@@ -313,7 +313,7 @@ GET /ttl/{DATASET_ID}?include=history
 | --- | --- |
 | `{DATASET_ID}` | L’identifiant du jeu de données dont vous souhaitez consulter l’historique des expirations. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Requête**
 
@@ -371,13 +371,13 @@ Une réponse réussie renvoie les détails de l’expiration du jeu de données,
 | `workorderId` | Identifiant de l’expiration du jeu de données. |
 | `datasetId` | Identifiant du jeu de données auquel cette expiration s’applique. |
 | `datasetName` | Le nom d’affichage du jeu de données auquel cette expiration s’applique. |
-| `sandboxName` | Le nom de la sandbox sous lequel se trouve le jeu de données cible. |
+| `sandboxName` | Le nom du sandbox sous lequel se trouve le jeu de données cible. |
 | `displayName` | Le nom d’affichage de la requête d’expiration. |
 | `description` | Une description de la requête d’expiration. |
 | `imsOrg` | Identifiant de l’organisation. |
 | `history` | Répertorie l’historique des mises à jour pour l’expiration sous la forme d’un tableau d’objets, chaque objet contenant les attributs `status`, `expiry`, `updatedAt` et `updatedBy` de l’expiration au moment de la mise à jour. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Annexe
 
@@ -392,7 +392,7 @@ Le tableau suivant décrit les paramètres de requête disponibles lorsque les [
 | `orgId` | Correspond aux expirations de jeux de données dont l’ID d’organisation correspond à celui du paramètre. Cette valeur par défaut est celle des en-têtes `x-gw-ims-org-id`, et est ignorée sauf si la requête fournit un jeton de service. | `orgId=885737B25DC460C50A49411B@AdobeOrg` |
 | `status` | Liste de statuts séparés par des virgules. Lorsqu’elle est incluse, la réponse correspond aux expirations de jeux de données dont le statut actuel fait partie de ceux répertoriés. | `status=pending,cancelled` |
 | `author` | Correspond aux expirations dont `created_by` correspond à la chaîne de recherche. Si la chaîne de recherche commence par `LIKE` ou `NOT LIKE`, le reste est traité comme un modèle de recherche SQL. Dans le cas contraire, l’intégralité de la chaîne de recherche est traitée comme une chaîne littérale qui doit correspondre exactement à l’intégralité du contenu d’un champ `created_by`. | `author=LIKE %john%` |
-| `sandboxName` | Correspond aux expirations de jeux de données dont la sandbox correspond exactement à l’argument. La valeur par défaut est le nom de la sandbox dans l’en-tête `x-sandbox-name` de la requête. Utilisez `sandboxName=*` pour inclure les expirations de jeux de données de toutes les sandbox. | `sandboxName=dev1` |
+| `sandboxName` | Correspond aux expirations de jeux de données dont le sandbox correspond exactement à l’argument. La valeur par défaut est le nom du sandbox dans l’en-tête `x-sandbox-name` de la requête. Utilisez `sandboxName=*` pour inclure les expirations de jeux de données de tous les sandbox. | `sandboxName=dev1` |
 | `datasetId` | Correspond aux expirations qui s’appliquent à un jeu de données spécifique. | `datasetId=62b3925ff20f8e1b990a7434` |
 | `createdDate` | Correspond aux expirations qui ont été créées dans la fenêtre de 24 heures à partir de l’heure indiquée.<br><br>Notez que les dates sans heure (comme `2021-12-07`) représentent la date/heure au début de la journée. Ainsi, `createdDate=2021-12-07` fait référence à l’ensemble des expirations créées le 7 décembre 2021, de `00:00:00` à `23:59:59.999999999` (UTC). | `createdDate=2021-12-07` |
 | `createdFromDate` | Correspond aux expirations qui ont été créées à l’heure indiquée ou ultérieurement. | `createdFromDate=2021-12-07T00:00:00Z` |
@@ -402,4 +402,4 @@ Le tableau suivant décrit les paramètres de requête disponibles lorsque les [
 | `completedDate` / `completedToDate` / `completedFromDate` | Correspond aux expirations qui ont été effectuées au cours de l’intervalle spécifié. | `completedToDate=2021-11-11-06:00` |
 | `expiryDate` / `expiryToDate` / `expiryFromDate` | Correspond aux expirations qui doivent être exécutées ou qui ont déjà été exécutées au cours de l’intervalle spécifié. | `expiryFromDate=2099-01-01&expiryToDate=2100-01-01` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

@@ -2,12 +2,12 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;guide de développement des environnements de test
 solution: Experience Platform
 title: Guide de l’API Sandbox
-description: Les environnements de test d’Adobe Experience Platform fournissent des environnements de développement isolés qui vous permettent de tester des fonctionnalités, d’exécuter des opérations et de créer des configurations personnalisées sans affecter votre environnement de production.
+description: Les sandbox d’Adobe Experience Platform fournissent des environnements de développement isolés qui vous permettent de tester des fonctionnalités, d’exécuter des opérations et de créer des configurations personnalisées sans affecter votre environnement de production.
 exl-id: c77e96dc-d138-4126-bbb0-b67beb0a02d6
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '330'
-ht-degree: 36%
+ht-degree: 38%
 
 ---
 
@@ -27,7 +27,7 @@ Un environnement de test est une partition virtuelle au sein d’une instance un
 
 ## Types de sandbox
 
-Actuellement, les types d’environnements de test pris en charge sur Experience Platform sont les environnements de test de production et de développement. Une licence Platform par défaut vous accorde un total de cinq sandbox que vous pouvez classer en tant que production ou développement. Vous pouvez ajouter des packs de 10 sandbox jusquʼà un maximum de 75 sandbox au total. Voir [guide de point de terminaison des types sandbox](./types.md) pour savoir comment afficher les types d’environnements de test pris en charge pour votre organisation dans l’API.
+Actuellement, les types d’environnements de test pris en charge sur Experience Platform sont les environnements de test de production et de développement. Une licence Platform par défaut vous accorde un total de cinq sandbox que vous pouvez classer en tant que production ou développement. Vous pouvez ajouter des packs de 10 sandbox jusquʼà 75 sandbox maximum au total. Voir [guide de point de terminaison des types sandbox](./types.md) pour savoir comment afficher les types d’environnements de test pris en charge pour votre organisation dans l’API.
 
 ## Étapes suivantes
 

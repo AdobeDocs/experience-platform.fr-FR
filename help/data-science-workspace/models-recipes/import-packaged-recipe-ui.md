@@ -3,22 +3,22 @@ keywords: Experience Platform;importer une recette empaquetée;Data Science Work
 solution: Experience Platform
 title: Importation d’une recette empaquetée dans l’interface utilisateur de Data Science Workspace
 type: Tutorial
-description: Ce tutoriel explique comment configurer et importer une recette empaquetée à l’aide de l’exemple de ventes au détail fourni. Après avoir terminé ce tutoriel, vous serez prêt à créer, à former et à évaluer un modèle dans Adobe Experience Platform Data Science Workspace.
+description: Ce tutoriel explique comment configurer et importer une recette empaquetée à l’aide de l’exemple de ventes au détail fourni. Après avoir terminé ce tutoriel, vous serez prêt à créer, à former et à évaluer un modèle dans l’espace de travail de science des données d’Adobe Experience Platform.
 exl-id: 2556e1f0-3f9c-4884-a699-06c041d5c4d1
 source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '1833'
-ht-degree: 39%
+ht-degree: 38%
 
 ---
 
 # Importation d’une recette empaquetée dans l’interface utilisateur de Data Science Workspace
 
-Ce tutoriel explique comment configurer et importer une recette empaquetée à l’aide de l’exemple de ventes au détail fourni. Après avoir terminé ce tutoriel, vous serez prêt à créer, à former et à évaluer un modèle dans Adobe Experience Platform [!DNL Data Science Workspace].
+Ce tutoriel explique comment configurer et importer une recette empaquetée à l’aide de l’exemple de ventes au détail fourni. D’ici la fin de ce tutoriel, vous serez prêt à créer, former et évaluer un modèle dans Adobe Experience Platform. [!DNL Data Science Workspace].
 
 ## Conditions préalables
 
-Ce tutoriel nécessite une recette empaquetée sous la forme d’une URL d’image Docker. Pour plus d’informations, consultez le tutoriel expliquant comment [Former une recette empaquetée à partir de fichiers source](./package-source-files-recipe.md).
+Ce tutoriel nécessite une recette empaquetée sous la forme d’une URL d’image Docker. Pour plus d’informations, consultez le tutoriel expliquant comment [Former une recette empaquetée à partir de fichiers sources](./package-source-files-recipe.md).
 
 ## Workflow de l’interface utilisateur
 
@@ -132,7 +132,7 @@ Le **Configurer** pour la **Importation de recette** le workflow s’affiche. Sa
 
 >[!NOTE]
 >
-> Dans le tutoriel [Former une recette empaquetée à partir de fichiers source](./package-source-files-recipe.md), une URL Docker a été fournie à la fin de la création de la recette Ventes au détail à l’aide de fichiers source Python.
+> Dans le tutoriel [Former une recette empaquetée à partir de fichiers sources](./package-source-files-recipe.md), une URL Docker a été fournie à la fin de la création de la recette Ventes au détail à l’aide de fichiers sources Python.
 
 Une fois que vous avez activé la variable **Sélectionner la source** collez l’URL Docker correspondant à la recette empaquetée créée à l’aide de [!DNL Python] fichiers source dans le **[!UICONTROL URL source]** champ . Importez ensuite le fichier de configuration fourni en le faisant glisser et en le déposant, ou utilisez le **Navigateur** du système de fichiers. Le fichier de configuration fourni se trouve ici : `experience-platform-dsw-reference/recipes/python/retail/retail.config.json`. Sélectionner **[!UICONTROL Python]** dans le **Exécution** déroulant et **[!UICONTROL Classification]** dans le **Type** déroulant. Une fois que tout a été rempli, sélectionnez **[!UICONTROL Suivant]** dans le coin supérieur droit pour passer à **Gestion des schémas**.
 
@@ -166,7 +166,7 @@ Le **Configurer** pour la **Importation de recette** le workflow s’affiche. Sa
 
 >[!NOTE]
 >
-> Dans le tutoriel [Former une recette empaquetée à partir de fichiers source](./package-source-files-recipe.md), une URL Docker a été fournie à la fin de la création de la recette Ventes au détail à l’aide de fichiers source R.
+> Dans le tutoriel [Former une recette empaquetée à partir de fichiers sources](./package-source-files-recipe.md), une URL Docker a été fournie à la fin de la création de la recette Ventes au détail à l’aide de fichiers sources R.
 
 Une fois que vous avez activé la variable **Sélectionner la source** collez l’URL Docker correspondant à la recette empaquetée créée à l’aide de fichiers source R dans la **[!UICONTROL URL source]** champ . Importez ensuite le fichier de configuration fourni en le faisant glisser et en le déposant, ou utilisez le **Navigateur** du système de fichiers. Le fichier de configuration fourni se trouve ici : `experience-platform-dsw-reference/recipes/R/Retail\ -\ GradientBoosting/retail.config.json`. Sélectionner **[!UICONTROL R]** dans le **Exécution** déroulant et **[!UICONTROL Classification]** dans le **Type** déroulant. Une fois que tout a été rempli, sélectionnez **[!UICONTROL Suivant]** dans le coin supérieur droit pour passer à **Gestion des schémas**.
 

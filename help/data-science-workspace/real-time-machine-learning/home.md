@@ -5,7 +5,7 @@ title: Vue d’ensemble du machine learning en temps réel
 description: Le machine learning en temps réel peut considérablement améliorer la pertinence de votre contenu d’expérience digitale pour vos utilisateurs finaux. Ce résultat est obtenu par l’utilisation de l’inférence en temps réel et de l’apprentissage continu sur Experience Edge.
 exl-id: 23eb1877-1bdf-4982-b58c-cfb58467035a
 source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '549'
 ht-degree: 100%
 

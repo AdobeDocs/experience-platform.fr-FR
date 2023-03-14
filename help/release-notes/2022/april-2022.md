@@ -3,8 +3,8 @@ title: Notes de mise à jour d’Adobe Experience Platform - Avril 2022
 description: Les notes de mise à jour d’avril 2022 pour Adobe Experience Platform.
 exl-id: 39233787-3089-4469-8363-b006ae41ae21
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
-workflow-type: ht
-source-wordcount: '2916'
+workflow-type: tm+mt
+source-wordcount: '2904'
 ht-degree: 100%
 
 ---
@@ -55,7 +55,7 @@ Les widgets suivants sont disponibles via la bibliothèque de widgets dans leurs
 | ------- | --------- | ----------- |
 | Nettoyage de l’appartenance aux segments de profils orphelins | Profils et utilisation de la licence | Le service de profil supprime désormais tous les jours les membres de segments restants, ce qui permet d’obtenir une représentation plus précise de vos profils dans votre système. Ce nettoyage intervient après la suppression de tous les fragments de profil d’un profil donné. En conséquence, les deux mesures suivantes peuvent afficher des chiffres inférieurs : « Audience adressable » dans le tableau de bord de l’utilisation des licences et « Nombre de profils » dans le tableau de bord des profils. En effet, ces mesures incluaient des fragments de segment restants avant la publication de cette version. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Consultez la documentation pour plus d’informations sur les tableaux de bord [[!DNL Profiles]](../../dashboards/guides/profiles.md), [[!DNL Destinations]](../../dashboards/guides/destinations.md) et [[!DNL Segments]](../../dashboards/guides/segments.md).
 
@@ -126,13 +126,13 @@ XDM est une spécification Open Source qui fournit des structures et des défini
 | --- | --- |
 | Ajout ou suppression de champs standard individuels d’un schéma | L’interface utilisateur de l’éditeur de schéma vous permet désormais d’ajouter des parties de groupes de champs standard à vos schémas, offrant ainsi une plus grande flexibilité pour les champs que vous choisissez d’inclure sans avoir à créer intégralement des ressources personnalisées.<br><br>Vous pouvez désormais également définir des champs personnalisés ad hoc directement dans la structure du schéma et les affecter à un groupe de champs personnalisés existant ou nouveau, sans devoir créer ou modifier le groupe de champs au préalable.<br><br>Consultez le guide sur la [création et modification de schémas dans l’interface utilisateur](../../xdm/ui/resources/schemas.md) pour plus d’informations sur ces nouveaux processus. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Nouveaux composants XDM**
 
 | Type de composant | Nom | Description |
 | --- | --- | --- |
-| Schéma global | [[!UICONTROL Demande d’opération de nettoyage de données]](https://github.com/adobe/xdm/blob/master/schemas/hygiene/aep-hygiene-ops-record.schema.json) | Capture les détails d’une demande de nettoyage des données pour supprimer ou modifier des enregistrements dans un jeu de données ou une sandbox spécifiée. |
+| Schéma global | [[!UICONTROL Demande d’opération de nettoyage de données]](https://github.com/adobe/xdm/blob/master/schemas/hygiene/aep-hygiene-ops-record.schema.json) | Capture les détails d’une demande de nettoyage des données pour supprimer ou modifier des enregistrements dans un jeu de données ou un sandbox spécifié. |
 | Descripteur | [[!UICONTROL Descripteur de granularité de série temporelle]](https://github.com/adobe/xdm/blob/master/schemas/descriptors/time-series/descriptorTimeSeriesGranularity.schema.json) | Indique la granularité des données récapitulatives et de série temporelle. Lorsqu’il est appliqué à un schéma, le champ `timestamp` du schéma est la première date et heure d’une période de cette granularité. |
 | Classe | [[!UICONTROL Mesures récapitulatives XDM]](https://github.com/adobe/xdm/blob/master/components/classes/summary_metrics.schema.json) | Fournit des mesures préalablement résumées avec des dimensions de regroupement, telles que les résultats d’une instruction SQL SELECT avec GROUP BY. |
 | Groupe de champs | [[!UICONTROL Mappage des résultats d’évaluation des stratégies de consentement]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-consentResults.schema.json) | Capture le résultat de l’évaluation de la stratégie de consentement pour un individu. |
@@ -151,7 +151,7 @@ XDM est une spécification Open Source qui fournit des structures et des défini
 | Extension (Workfront) | [[!UICONTROL Attributs du programme de travail]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/program.schema.json) | Capture les détails liés à un programme de travail. |
 | Extension (Workfront) | [[!UICONTROL Attributs de projet de travail]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/project.schema.json) | Capture les détails liés à un projet de travail. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Composants XDM mis à jour**
 
@@ -167,7 +167,7 @@ XDM est une spécification Open Source qui fournit des structures et des défini
 | Extension (Workfront) | [[!UICONTROL Attributs de tâche de travail]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/task.schema.json) | Plusieurs champs ont été ajoutés. |
 | Extension (Workfront) | [[!UICONTROL Objet de travail]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/workobject.schema.json) | Nouveaux champs pour le type d’objet parent et les champs de formulaire personnalisé. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Pour plus d’informations sur XDM dans Platform, consultez la [présentation du système XDM](../../xdm/home.md).
 

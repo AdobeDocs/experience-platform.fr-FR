@@ -6,7 +6,7 @@ description: Comment activer les données d’audience disponibles dans Adobe Ex
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
 source-git-commit: 7d680567cee8b47532bb66434e2f0582cde68532
 workflow-type: tm+mt
-source-wordcount: '3595'
+source-wordcount: '3592'
 ht-degree: 92%
 
 ---
@@ -183,9 +183,9 @@ Le nom de destination et l’identifiant de segment ne peuvent pas être supprim
 | **[!UICONTROL Identifiant de destination]** | L’identifiant du flux de données de destination que vous utilisez pour exporter le segment. <br> **Remarque** : cette option d’ajout de nom de fichier est disponible uniquement pour les clients bêta qui participent au programme bêta de la fonctionnalité d’exportation améliorée de fichiers. Contactez votre représentant Adobe ou l’assistance clientèle si vous souhaitez accéder au programme bêta. |
 | **[!UICONTROL Nom de la destination]** | Nom du flux de données de destination que vous utilisez pour exporter le segment. <br> **Remarque** : cette option d’ajout de nom de fichier est disponible uniquement pour les clients bêta qui participent au programme bêta de la fonctionnalité d’exportation améliorée de fichiers. Contactez votre représentant Adobe ou l’assistance clientèle si vous souhaitez accéder au programme bêta. |
 | **[!UICONTROL Nom de l’organisation]** | Nom de votre organisation dans Experience Platform. <br> **Remarque** : cette option d’ajout de nom de fichier est disponible uniquement pour les clients bêta qui participent au programme bêta de la fonctionnalité d’exportation améliorée de fichiers. Contactez votre représentant Adobe ou l’assistance clientèle si vous souhaitez accéder au programme bêta. |
-| **[!UICONTROL Nom de la sandbox]** | Identifiant de la sandbox que vous utilisez pour exporter le segment. <br> **Remarque** : cette option d’ajout de nom de fichier est disponible uniquement pour les clients bêta qui participent au programme bêta de la fonctionnalité d’exportation améliorée de fichiers. Contactez votre représentant Adobe ou l’assistance clientèle si vous souhaitez accéder au programme bêta. |
+| **[!UICONTROL Nom du sandbox]** | Identifiant du sandbox que vous utilisez pour exporter le segment. <br> **Remarque** : cette option d’ajout de nom de fichier est disponible uniquement pour les clients bêta qui participent au programme bêta de la fonctionnalité d’exportation améliorée de fichiers. Contactez votre représentant Adobe ou l’assistance clientèle si vous souhaitez accéder au programme bêta. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Sélectionnez **[!UICONTROL Appliquer les modifications]** pour confirmer votre sélection.
 

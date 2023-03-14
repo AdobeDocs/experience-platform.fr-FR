@@ -4,7 +4,7 @@ description: Découvrez comment effectuer des appels au point dʼentrée /notes 
 exl-id: fa3bebc0-215e-4515-87b9-d195c9ab76c1
 source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
-source-wordcount: '527'
+source-wordcount: '515'
 ht-degree: 100%
 
 ---
@@ -58,7 +58,7 @@ GET /{RESOURCE_TYPE}/{RESOURCE_ID}/notes
 | `RESOURCE_TYPE` | Type de ressource pour lequel vous récupérez des notes. Doit être lʼune des valeurs suivantes : <ul><li>`data_elements`</li><li>`extensions`</li><li>`libraries`</li><li>`properties`</li><li>`rule_components`</li><li>`rules`</li></ul> |
 | `RESOURCE_ID` | `id` de la ressource spécifique dont vous souhaitez répertorier les notes. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Requête**
 
@@ -133,7 +133,7 @@ GET /notes/{NOTE_ID}
 | --- | --- |
 | `NOTE_ID` | Champ `id` de la note que vous souhaitez rechercher. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Requête**
 
@@ -200,7 +200,7 @@ POST /{RESOURCE_TYPE}/{RESOURCE_ID}/notes
 | `RESOURCE_TYPE` | Type de ressource pour lequel vous créez une note. Doit être lʼune des valeurs suivantes : <ul><li>`data_elements`</li><li>`extensions`</li><li>`libraries`</li><li>`properties`</li><li>`rule_components`</li><li>`rules`</li></ul> |
 | `RESOURCE_ID` | Champ `id` de la ressource spécifique pour laquelle vous souhaitez créer une note. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Requête**
 
@@ -228,7 +228,7 @@ curl -X POST \
 | `type` | **(Obligatoire)** Type de ressource mis à jour. Pour ce point dʼentrée, la valeur doit être `notes`. |
 | `attributes.text` | **(Obligatoire)** Texte qui comprend la note. Chaque note est limitée à 512 caractères Unicode. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Réponse**
 

@@ -3,8 +3,8 @@ title: Configuration de secrets dans le transfert d’événements
 description: Découvrez comment configurer des secrets dans lʼinterface utilisateur afin de vous authentifier aux points dʼentrée utilisés dans les propriétés de transfert dʼévénement.
 exl-id: eefd87d7-457f-422a-b159-5b428da54189
 source-git-commit: c314cba6b822e12aa0367e1377ceb4f6c9d07ac2
-workflow-type: ht
-source-wordcount: '1766'
+workflow-type: tm+mt
+source-wordcount: '1763'
 ht-degree: 100%
 
 ---
@@ -22,7 +22,7 @@ Il existe actuellement trois types de secret pris en charge :
 | [!UICONTROL OAuth 2] | Contient plusieurs attributs pour prendre en charge le [type d’octroi des informations d’identification du client](https://datatracker.ietf.org/doc/html/rfc6749#section-1.3.4) pour la spécification d’authentification [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749). Le système vous demande les informations requises, puis gère le renouvellement de ces jetons pour vous à un intervalle spécifié. |
 | [!UICONTROL Google OAuth 2] | Contient plusieurs attributs pour prendre en charge la spécification d’authentification [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) pour une utilisation dans l’[API Google Ads](https://developers.google.com/google-ads/api/docs/oauth/overview) et l’[API Pub/Sub](https://cloud.google.com/pubsub/docs/reference/service_apis_overview). Le système vous demande les informations requises, puis gère le renouvellement de ces jetons pour vous à un intervalle spécifié. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Ce guide fournit une présentation générale de la configuration des secrets pour une propriété de transfert dʼévénement ([!UICONTROL Edge]) dans lʼinterface utilisateur d’Experience Platform ou l’interface utilisateur de la collecte de données.
 

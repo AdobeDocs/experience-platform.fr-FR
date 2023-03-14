@@ -7,7 +7,7 @@ exl-id: ab269c24-97ac-4da9-9b6c-7d2dde61f0dc
 source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
 workflow-type: tm+mt
 source-wordcount: '619'
-ht-degree: 66%
+ht-degree: 69%
 
 ---
 
@@ -39,13 +39,13 @@ Le téléchargement des scores Attribution AI s’effectue par le biais d’une 
 - x-api-key : `{API_KEY}`
 - x-gw-ims-org-id: `{ORG_ID}`
 
-Dans Experience Platform, toutes les ressources sont isolées dans des environnements de test virtuels spécifiques. Toutes les requêtes envoyées aux API Platform nécessitent un en-tête spécifiant le nom de l’environnement de test dans lequel l’opération sera effectuée :
+Dans Experience Platform, toutes les ressources sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes envoyées aux API Platform nécessitent un en-tête spécifiant le nom du sandbox dans lequel l’opération sera effectuée :
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Pour plus d’informations sur les environnements de test dans Platform, consultez la [documentation de présentation des environnements de test](../../sandboxes/home.md).
+>Pour plus d’informations sur les sandbox dans Platform, consultez la [documentation de présentation des sandbox](../../sandboxes/home.md).
 
 ### Lecture d’exemples d’appels API
 
@@ -55,7 +55,7 @@ Ce guide fournit des exemples d’appels API pour démontrer comment formater vo
 
 Lors de l’utilisation du contrôle d’accès en fonction du rôle, la variable **Afficher Attribution AI** et **Gestion d’Attribution AI** Les privilèges donnent accès à différentes fonctionnalités d’Attribution AI. Le **Gestion d’Attribution AI** vous permet de **create**, **clone**, **edit**, **delete**, **enable** ou **disable** une instance pendant **Afficher Attribution AI** vous permet de **read** ou **view** c&#39;est le cas. Le **create**, **edit** et **delete** Les actions sont enregistrées par les journaux d’audit.
 
-Consultez la documentation pour en savoir plus [attribution d’autorisations pour le contrôle d’accès](../../../help/access-control/home.md) ou comment [utiliser les journaux d’audit pour surveiller l’accès et l’activité ;](../../../help/landing/governance-privacy-security/audit-logs/overview.md).
+Consultez la documentation pour apprendre à [attribuer des autorisations pour le contrôle d’accès](../../../help/access-control/home.md) ou comment [utiliser les journaux d’audit pour surveiller l’accès et l’activité](../../../help/landing/governance-privacy-security/audit-logs/overview.md).
 
 ## Étapes suivantes {#next-steps}
 

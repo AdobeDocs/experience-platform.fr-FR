@@ -5,7 +5,7 @@ title: Guide de dépannage du contrôle dʼaccès
 description: Ce document répond aux questions fréquentes sur le contrôle d’accès dans Adobe Experience Platform.
 exl-id: c299c0c4-dbee-4e6d-8af4-2446444bed69
 source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '408'
 ht-degree: 100%
 

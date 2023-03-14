@@ -278,7 +278,7 @@ Une réponse réussie renvoie le statut du traitement.
 L’attribut `status` peut avoir l’une des quatre valeurs ayant la signification suivante :
 
 1. `RUNNING` : vérifie que Platform a la possibilité d’accéder à la clé et au coffre de clés.
-1. `UPDATE_EXISTING_RESOURCES` : le système ajoute le coffre de clés et le nom des clés aux magasins de données de toutes les sandbox de votre entreprise.
+1. `UPDATE_EXISTING_RESOURCES` : le système ajoute le coffre de clés et le nom des clés aux magasins de données de tous les sandbox de votre entreprise.
 1. `COMPLETED` : le coffre de clés et le nom des clés ont été ajoutés aux magasins de données.
 1. `FAILED` : un problème s’est produit, principalement lié à la configuration de la clé, du coffre de clés ou de l’application multi-utilisateur.
 

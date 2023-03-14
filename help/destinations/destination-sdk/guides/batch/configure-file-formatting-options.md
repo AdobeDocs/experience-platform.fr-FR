@@ -1,16 +1,17 @@
 ---
-description: Configuration des options de formatage de fichier pour les destinations basées sur des fichiers
+description: Configurer des options de formatage de fichier pour les destinations basées sur des fichiers
 title: Découvrez comment utiliser Destination SDK pour configurer les options de formatage de fichier pour les destinations basées sur des fichiers.
-source-git-commit: 9b4c7da5aa02ae27608c2841b1d825445ac3015e
+exl-id: e61c7989-1123-4b3b-9781-a6097cd0e2b4
+source-git-commit: a9887535b12b8c4aeb39bb5a6646da88db4f0308
 workflow-type: tm+mt
-source-wordcount: '932'
-ht-degree: 2%
+source-wordcount: '929'
+ht-degree: 3%
 
 ---
 
-# Configuration des options de formatage de fichier pour les destinations basées sur des fichiers
+# Configurer des options de formatage de fichier pour les destinations basées sur des fichiers
 
-## Présentation {#overview}
+## Aperçu {#overview}
 
 Destination SDK vous permet d’ajuster considérablement les options de formatage et de compression de vos fichiers exportés, afin de répondre à toutes les exigences en aval de votre emplacement de stockage.
 
@@ -713,7 +714,7 @@ Pour illustrer cette limitation, envisagez d’exporter un fichier avec les vale
 | Michael | Rose | États-Unis | NY |
 | James | Smith |  | null |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Cela entraînerait une sortie comme illustré ci-dessous. Notez comment la valeur nulle de la table est incorrectement exportée sous forme de guillemet avec échappement.
 

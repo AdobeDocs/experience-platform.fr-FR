@@ -55,7 +55,7 @@ Vous pouvez utiliser deux méthodes pour obtenir les versions finalisées à aut
 
 #### Téléchargement
 
-Les versions peuvent être diffusées sous la forme d’un fichier .zip empaqueté (avec chiffrement facultatif). Vous pouvez ensuite décompresser le fichier et insérer le contenu dans le cycle de publication pour le placer sur vos propres serveurs.
+Les versions peuvent être diffusées sous la forme d’un fichier .zip empaqueté (avec chiffrement facultatif). Vous pouvez ensuite décompresser le package et insérer le contenu dans le cycle de publication pour le placer sur vos propres serveurs.
 
 Utilisez un hôte [Managed by Adobe](self-hosting-libraries.md) (Géré par Adobe) et sélectionnez l’option [Archive](../environments.md) dans votre environnement. L’environnement vous fournit un lien de téléchargement. Chaque fois qu’une version est créée, vous pouvez la récupérer à partir du lien de téléchargement de l’environnement.
 

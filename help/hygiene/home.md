@@ -4,7 +4,7 @@ description: Le nettoyage de données d’Adobe Experience Platform vous permet 
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
 source-git-commit: a20afcd95d47e38ccdec9fba9e772032e212d7a4
 workflow-type: tm+mt
-source-wordcount: '607'
+source-wordcount: '604'
 ht-degree: 100%
 
 ---
@@ -55,7 +55,7 @@ Ce qui suit se produit lorsqu’une [requête d’expiration de jeu de données]
 | Destinations et parcours mis à jour | 50 heures | Les [Parcours](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journeys/journey.html?lang=fr), [destinations](../destinations/home.md), et [campagnes](https://experienceleague.adobe.com/docs/journey-optimizer/using/campaigns/get-started-with-campaigns.html?lang=fr) sont mis à jour en fonction des modifications apportées aux segments connexes. |
 | Suppression définitive terminée | 14 jours | Toutes les données relatives au jeu de données sont supprimées définitivement du lac de données. Le [statut du traitement d’hygiène](./ui/browse.md#view-details) qui a supprimé le jeu de données est mis à jour pour refléter cette situation. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 <!-- ### Record deletes {#record-delete-transparency}
 

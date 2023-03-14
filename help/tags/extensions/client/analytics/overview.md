@@ -293,7 +293,7 @@ Important : L’utilisation d’une action « Set Variables » (Définir des 
 
 #### eVars
 
-Définissez une ou plusieurs [eVars](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar.html).
+Définissez une ou plusieurs [eVars](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar.html?lang=fr).
 
 1. Sélectionnez une eVar dans la liste déroulante.
 1. Indiquez si vous souhaitez définir l’eVar comme valeur (Set As) ou copier une autre eVar (Duplicate From).

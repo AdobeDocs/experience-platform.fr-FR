@@ -4,7 +4,7 @@ title: Utiliser des structures de données imbriquées dans Query Service
 description: Ce document fournit un exemple de travail pour le traitement et la transformation des champs de données imbriqués à l’aide des instructions CTAS et INSERT INTO.
 exl-id: 593379fb-88ad-4b14-8d2e-aa6d18129974
 source-git-commit: d3ea7ee751962bb507c91e1afea0da35da60a66d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '795'
 ht-degree: 100%
 

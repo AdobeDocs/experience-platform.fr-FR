@@ -4,7 +4,7 @@ description: Les notes de mise à jour de septembre 2022 pour Adobe Experience
 exl-id: a7a4dcf8-2cf3-4e39-879d-bdfcbacb737a
 source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
-source-wordcount: '2934'
+source-wordcount: '2916'
 ht-degree: 100%
 
 ---
@@ -82,7 +82,7 @@ Experience Platform vous permet d’auditer l’activité des utilisateurs pour 
 | --- | --- | --- |
 | Ressources ajoutées | <ul><li>Instance IA dédiée à l’attribution</li><li>Instance IA dédiée aux clients</li><li>Train de données</li></ul> | Les ressources du journal d’audit sont automatiquement enregistrées lorsque l’activité se produit. Si la fonctionnalité est activée, vous ne devez pas activer manuellement la collecte des journaux. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Pour plus d’informations sur les différents types d’événements spécifiques aux ressources suivis par les journaux d’audit dans Platform, reportez-vous à la [présentation des journaux d’audit](../../landing/governance-privacy-security/audit-logs/overview.md).
 
@@ -113,7 +113,7 @@ Adobe Experience Platform fournit une suite de technologies qui vous permetten
 | [[!DNL User-Agent Client Hints] dans le SDK Web](../../edge/fundamentals/user-agent-client-hints.md) | Le SDK Web prend désormais en charge [[!DNL User-Agent Client Hints]](https://developer.chrome.com/docs/privacy-sandbox/user-agent/). Les conseils clients permettent aux propriétaires de site web d’accéder aux mêmes informations que celles disponibles dans la chaîne [!DNL User-Agent], mais d’une manière plus respectueuse de la vie privée. |
 | [Migration page par page du SDK Web](../../edge/home.md#migrating-to-web-sdk) | Vous pouvez désormais migrer vos propriétés web existantes à partir d’autres bibliothèques Experience Cloud, telles que [!DNL at.js], vers le SDK Web, une page à la fois. Vous pouvez ainsi adopter une approche progressive dans la migration du SDK Web, sans qu’il soit nécessaire de migrer toutes vos pages à la fois. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 <!-- | [[!DNL Adobe Journey Optimizer] support for datastreams](../../edge/datastreams/overview.md#aep)| The Adobe Experience Platform service for datastreams now supports [!DNL Adobe Journey Optimizer]. This option allows you to use web and app-based inbound channels in [!DNL Adobe Journey Optimizer].|
 -->
@@ -130,7 +130,7 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 | ----------- | ----------- |
 | Destination SDK | Destination SDK offre désormais une prise en charge complète des partenaires et des clients qui créent des destinations standardisées ou privées par lots (ou basées sur les fichiers). Pour plus d’informations, consultez les pages de documentation suivantes : <ul><li>[Présentation de Destination SDK](/help/destinations/destination-sdk/overview.md)</li><li>[Configurer une destination basée sur des fichiers](/help/destinations/destination-sdk/configure-file-based-destination-instructions.md)</li><li>[Configurer des options de formatage de fichier pour les destinations basées sur des fichiers](/help/destinations/destination-sdk/configure-file-based-destination-instructions.md)</li><li>[Testez vos destinations basées sur des fichiers](/help/destinations/destination-sdk/file-based-destination-testing-overview.md)</li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Fonctionnalités nouvelles ou mises à jour**
 
@@ -139,7 +139,7 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 | [[!DNL Adobe Campaign Managed Cloud Services]](../../destinations/catalog/email-marketing/adobe-campaign-managed-services.md) | Adobe Campaign Managed Cloud Services offre une plateforme pour concevoir des expériences client cross-canal ainsi qu’un environnement pour l’orchestration visuelle de campagnes, la gestion d’interactions en temps réel et l’exécution cross-canal. [Prise en main de Campaign](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html?lang=fr). Notez que cette intégration fonctionne avec [Adobe Campaign version 8.4 ou ultérieure](https://experienceleague.adobe.com/docs/campaign/campaign-v8/new/release-notes.html?lang=fr#release-8-4-1). |
 | [[!DNL Salesforce CRM]](../../destinations/catalog/crm/salesforce.md) | La destination [!DNL Salesforce CRM] a été mise à jour afin de prendre en charge à la fois les mises à jour des contacts et des prospects, ainsi que des améliorations des performances pour des mises à jour plus rapides. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Documentation nouvelle ou mise à jour**
 
@@ -168,7 +168,7 @@ XDM est une spécification Open Source qui fournit des structures et des défini
 | Groupe de champs | [[!UICONTROL Informations détaillées sur les médias]](https://github.com/adobe/xdm/blob/master/components/datatypes/mediadetails.schema.json) | Effectue le suivi des informations sur les médias. |
 | Groupe de champs | [[!UICONTROL Adobe CJM ExperienceEvent - Surfaces]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/surfaces.schema.json) | Décrit les surfaces des événements d’expérience dans Adobe Journey Optimizer. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Composants XDM mis à jour**
 
@@ -190,7 +190,7 @@ XDM est une spécification Open Source qui fournit des structures et des défini
 | (Multiple) | (Multiple) | Les entités Adobe Journey Optimizer ont été [stabilisées](https://github.com/adobe/xdm/pull/1625/files). |
 | (Multiple) | (Multiple) | Les espaces de nommage de certains champs dans plusieurs composants expérimentaux ont été [mis à jour par souci de cohérence](https://github.com/adobe/xdm/pull/1626/files). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Pour plus d’informations sur XDM dans Platform, consultez la [présentation du système XDM](../../xdm/home.md).
 

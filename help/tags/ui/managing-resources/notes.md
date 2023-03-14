@@ -9,7 +9,7 @@ ht-degree: 100%
 
 ---
 
-# Remarques
+# Notes
 
 >[!NOTE]
 >

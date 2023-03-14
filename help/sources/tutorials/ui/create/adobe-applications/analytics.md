@@ -7,7 +7,7 @@ description: Découvrez comment créer une connexion source Adobe Analytics dan
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
 source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
-source-wordcount: '2345'
+source-wordcount: '2384'
 ht-degree: 61%
 
 ---
@@ -21,8 +21,8 @@ Ce tutoriel décrit les étapes à suivre pour créer une connexion source Adobe
 Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform : 
 
 * [Système de modèle de données d’expérience (XDM)](../../../../../xdm/home.md) : cadre normalisé selon lequel Experience Platform organise les données d’expérience client.
-* [Profil client en temps réel](../../../../../profile/home.md): Fournit un profil client en temps réel unifié basé sur des données agrégées provenant de plusieurs sources.
-* [Sandboxes](../../../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuelles qui divisent une instance de Platform unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
+* [Profil client en temps réel](../../../../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
+* [Sandbox](../../../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
 
 ### Terminologie clé
 
@@ -67,7 +67,7 @@ Pour créer une [!DNL Analytics] connexion source, sélectionnez une suite de ra
 
 ![](../../../../images/tutorials/create/analytics/add-data.png)
 
-<!---Analytics Report Suites can be configured for one sandbox at a time. To import the same Report Suite into a different sandbox, the dataset flow will have to be deleted and instantiated again via configuration for a different sandbox.--->
+&lt;!: les suites de rapports Analytics peuvent être configurées pour un environnement de test à la fois. Pour importer la même suite de rapports dans un environnement de test différent, le flux du jeu de données doit être supprimé et instancié à nouveau via la configuration pour un autre environnement de test.—>
 
 ### Mappage
 

@@ -12,7 +12,7 @@ ht-degree: 90%
 
 # Présentation des destinations Analytics {#analytics-destinations}
 
-## Présentation {#overview}
+## Aperçu {#overview}
 
 Les destinations d’analyse effectuent le suivi de la manière dont les visiteurs interagissent avec le contenu de votre site et collectent des données afin de comprendre le comportement de votre audience. Ces plateformes vous fournissent des insights uniques sur l’engagement et la conversion de vos visiteurs les plus précieux.
 

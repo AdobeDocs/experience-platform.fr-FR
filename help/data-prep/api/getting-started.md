@@ -16,7 +16,7 @@ Ce guide de développement décrit les étapes à suivre pour effectuer diverses
 
 L’utilisation de ce guide de développement nécessite une compréhension pratique des différents services Adobe Experience Platform impliqués dans l’utilisation de [!DNL Data Prep]. Avant de commencer à utiliser l’API [!DNL Data Prep], consultez la documentation relative aux services suivants :
 
-- [Préparation de données](../home.md) : la préparation des données permet aux ingénieurs de données de mapper, transformer et valider les données vers et à partir du modèle de données d’expérience (XDM).
+- [Préparation de données](../home.md) : la préparation des données permet aux ingénieur(e)s de données de mapper, de transformer et de valider les données vers et à partir du modèle de données d’expérience (XDM).
 - [[!DNL Adobe Experience Platform Data Ingestion]](../../ingestion/home.md) : méthodes par lesquelles les données peuvent être envoyées à [!DNL Experience Platform].
 - [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md) : cadre normalisé selon lequel [!DNL Experience Platform] organise les données de l’expérience client.
 

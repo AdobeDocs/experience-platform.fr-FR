@@ -3,7 +3,7 @@ title: Bloc anonyme dans Query Service
 description: Le bloc anonyme est une syntaxe SQL prise en charge par Adobe Experience Platform Query Service, qui permet d’exécuter efficacement une séquence de requêtes.
 exl-id: ec497475-9d2b-43aa-bcf4-75a430590496
 source-git-commit: d3ea7ee751962bb507c91e1afea0da35da60a66d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '515'
 ht-degree: 100%
 

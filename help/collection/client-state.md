@@ -129,7 +129,7 @@ L’appelant doit explicitement activer la prise en charge du stockage de l’é
 | Attribut | Type | Description |
 | --- | --- | --- |
 | `cookiesEnabled` | Booléen | Lorsque ce paramètre est défini, la prise en charge des cookies est activée. La valeur par défaut est `false`. |
-| `domain` | Chaîne | Requis quand `cookiesEnabled: true`. Domaine de niveau supérieur sur lequel les cookies doivent être écrits. Edge Network utilise cette valeur pour décider si l’état peut être conservé sous forme de cookies. |
+| `domain` | Chaîne | Obligatoire lorsque `cookiesEnabled: true`. Domaine de niveau supérieur sur lequel les cookies doivent être écrits. Edge Network utilise cette valeur pour décider si l’état peut être conservé sous forme de cookies. |
 
 Bien que la prise en charge des cookies soit activée à l’aide de l’indicateur `cookiesEnabled`, Adobe Experience Platform Edge Network écrira uniquement les entrées d’état si le domaine de niveau supérieur de la requête correspond au `domain` spécifié par l’appelant. En cas de non-correspondance, les entrées sont renvoyées dans un objet Handle `state:store`.
 

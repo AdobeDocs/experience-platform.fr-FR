@@ -3,7 +3,7 @@ keywords: insights;ia dédiée à l’attributon;insights sur l’IA dédiée à
 title: Clés gérées par le client
 description: Découvrez comment configurer les clés gérées par le client ou la cliente pour l’IA dédiée à l’attribution.
 source-git-commit: f80cdd553c36ee10cfbf07c5cbbb14e9a4ae6757
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '168'
 ht-degree: 100%
 

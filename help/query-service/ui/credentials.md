@@ -11,7 +11,7 @@ ht-degree: 6%
 
 ---
 
-# Guide d’identification
+# Guide sur les informations d’identification
 
 Adobe Experience Platform Query Service vous permet de vous connecter à des clients externes. Vous pouvez vous connecter à ces clients externes à l’aide d’informations d’identification arrivant à expiration ou d’informations d’identification non arrivant à expiration.
 

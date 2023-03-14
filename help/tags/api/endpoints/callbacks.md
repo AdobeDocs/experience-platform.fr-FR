@@ -4,7 +4,7 @@ description: Découvrez comment effectuer des appels vers le point dʼentrée /c
 exl-id: dd980f91-89e3-4ba0-a6fc-64d66b288a22
 source-git-commit: 7f3b9ef9270b7748bc3366c8c39f503e1aee2100
 workflow-type: tm+mt
-source-wordcount: '621'
+source-wordcount: '600'
 ht-degree: 97%
 
 ---
@@ -51,7 +51,7 @@ GET  /properties/{PROPERTY_ID}/callbacks
 | --- | --- |
 | `{PROPERTY_ID}` | `id` de la propriété dont vous souhaitez répertorier les rappels. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >
@@ -130,7 +130,7 @@ GET /callbacks/{CALLBACK_ID}
 | --- | --- |
 | `CALLBACK_ID` | Champ `id` du rappel que vous souhaitez rechercher. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Requête**
 
@@ -194,7 +194,7 @@ POST /properties/{PROPERTY_ID}/callbacks
 | --- | --- |
 | `PROPERTY_ID` | Champ `id` de la [propriété](./properties.md) sous laquelle vous définissez le rappel. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Requête**
 
@@ -223,7 +223,7 @@ curl -X POST \
 | `url` | Destination URL du message de rappel. LʼURL doit utiliser lʼextension de protocole HTTPS. |
 | `subscriptions` | Tableau de chaînes indiquant les types dʼévénements dʼaudit qui déclencheront le rappel. Pour obtenir la liste des types dʼévénements possibles, reportez-vous au [guide du point dʼentrée des événements dʼaudit](./audit-events.md). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Réponse**
 
@@ -275,7 +275,7 @@ PATCH /callbacks/{CALLBACK_ID}
 | --- | --- |
 | `CALLBACK_ID` | Champ `id` du rappel que vous souhaitez mettre à jour. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Requête**
 
@@ -310,7 +310,7 @@ curl -X PATCH \
 | `id` | Champ `id` du rappel que vous souhaitez mettre à jour. Cela doit correspondre à la valeur `{CALLBACK_ID}` fournie dans le chemin dʼaccès à la demande. |
 | `type` | Le type de ressource en cours de mise à jour. Pour ce point d’entrée, la valeur doit être `callbacks`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Réponse**
 
@@ -363,7 +363,7 @@ DELETE /callbacks/{CALLBACK_ID}
 | --- | --- |
 | `CALLBACK_ID` | Champ `id` du rappel que vous souhaitez supprimer. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Requête**
 

@@ -7,13 +7,13 @@ exl-id: 09d66be3-30dc-4488-84a1-cfd09c44470d
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '220'
-ht-degree: 81%
+ht-degree: 80%
 
 ---
 
 # Fonctions de filtre
 
-Fonctions de filtre sont utilisés pour filtrer les données dans des tableaux dans [!DNL Profile Query Language] (PQL). Vous trouverez plus d’informations sur les autres fonctions PQL dans la section [[!DNL Profile Query Language] aperçu](./overview.md).
+Les fonctions de filtre sont utilisées pour filtrer les données dans les tableaux de [!DNL Profile Query Language] (PQL). Vous trouverez plus d’informations sur les autres fonctions PQL dans la section [[!DNL Profile Query Language] aperçu](./overview.md).
 
 ## Filtrer
 

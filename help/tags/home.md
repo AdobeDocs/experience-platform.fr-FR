@@ -31,7 +31,7 @@ Les balises sont proposées aux clients [!DNL Adobe Experience Cloud] en tant qu
 
 ### Extensions {#extensions}
 
-Une extension est un module de code (JavaScript, HTML et CSS) qui étend les fonctionnalités des balises. Créez, gérez et mettez à jour vos intégrations à l’aide d’une interface en libre-service ou presque. Vous pouvez considérer les extensions comme des applications que vous utilisez pour exécuter vos tâches.
+Une extension est un package de code (JavaScript, HTML et CSS) qui étend les fonctionnalités des balises. Créez, gérez et mettez à jour vos intégrations à l’aide d’une interface en libre-service ou presque. Vous pouvez considérer les extensions comme des applications que vous utilisez pour exécuter vos tâches.
 
 ### Catalogue d’extensions {#extension-catalog}
 
@@ -64,7 +64,7 @@ Le processus de publication permet aux équipes de publier du code sur les pages
 * Environnements de développement illimités.
 * Processus délibéré, basé sur des autorisations, pour fusionner des bibliothèques entre elles.
 
-### API ouvertes. {#open-apis}
+### API ouvertes {#open-apis}
 
 Automatisez la mise en œuvre de technologies individuelles ou dʼun groupe de technologies.
 

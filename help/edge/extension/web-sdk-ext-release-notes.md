@@ -3,7 +3,7 @@ title: Notes de mise à jour de l’extension du SDK Web Adobe Experience Plat
 description: Extension de la balise SDK Web Adobe Experience Platform
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
 source-git-commit: 5ec1ede39489ce48fc20739030884ec3811a8426
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1528'
 ht-degree: 100%
 
@@ -153,7 +153,7 @@ Contient la version 2.3.0 de la bibliothèque SDK Web Adobe Experience Platfo
 
 ## Version 2.1.1 - 26 août 2020
 
-* Correction d’un problème en raison duquel les environnements de test Adobe Experience Platform sur la vue Objet XDM s’affichaient incorrectement. Si, lors de l’utilisation de cette version de l’extension, un environnement de test attendu n’est pas affiché dans la liste, l’utilisateur doit vérifier auprès de son administrateur Adobe Experience Platform pour s’assurer que les autorisations d’accès sont correctement définies.
+* Correction d’un problème en raison duquel les sandbox Adobe Experience Platform sur la vue Objet XDM s’affichaient incorrectement. Si, lors de l’utilisation de cette version de l’extension, un sandbox attendu n’est pas affiché dans la liste, l’utilisateur doit vérifier auprès de son administrateur Adobe Experience Platform pour s’assurer que les autorisations d’accès sont correctement définies.
 
 ## Version 2.1.0 - 5 août 2020
 

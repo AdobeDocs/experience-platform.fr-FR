@@ -5,8 +5,8 @@ title: Bonnes pratiques de modélisation des données
 description: Ce document présente les schémas du modèle de données d’expérience (XDM) ainsi que les blocs de création, principes et bonnes pratiques de la composition de schémas à utiliser dans Adobe Experience Platform.
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
 source-git-commit: 6327f5e6cb64a46c502613dd6074d84ed1fdd32b
-workflow-type: ht
-source-wordcount: '2722'
+workflow-type: tm+mt
+source-wordcount: '2713'
 ht-degree: 100%
 
 ---
@@ -53,7 +53,7 @@ Une fois que vous avez créé un ERD pour identifier les entités essentielles q
 | Entités de recherche | Les entités de recherche représentent des concepts qui peuvent être associés à une personne, mais qui ne peuvent pas être directement utilisés pour identifier la personne. Les entités appartenant à cette catégorie doivent être représentées par des schémas basés sur des **classes personnalisées**, et sont liées à des profils et des événements au moyen de [relations de schéma](../tutorials/relationship-ui.md). |
 | Entités d’événement | Les entités d’événement représentent des concepts liés aux actions qu’un client ou un cliente peut entreprendre, aux événements système ou à tout autre concept dans lequel vous souhaitez peut-être suivre les modifications au fil du temps. Les entités appartenant à cette catégorie doivent être représentées par des schémas basés sur la classe **[!DNL XDM ExperienceEvent]**. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Considérations pour le tri des entités
 
@@ -88,7 +88,7 @@ Si vous souhaitez analyser la manière dont certains attributs au sein d’une e
 | 1234567 | Ajouter | 486502 | 1 | 1er oct., 10 h 41 |
 | 1234567 | Ajouter | 910482 | 5 | 3 oct., 14 h 15 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 #### Cas d’utilisation de segmentation
 
@@ -131,7 +131,7 @@ Le tableau suivant décrit certaines relations d’entité courantes et les cat�
 | Clients et comptes de fidélité | Un à un | Un seul client ne peut avoir qu’un seul compte de fidélité, et vice versa. Comme il s’agit d’une relation un-à-un, les clients et les comptes de fidélité représentent tous deux des entités de profil. |
 | Clients et abonnements | Un à plusieurs | Un seul client peut avoir plusieurs abonnements. Puisque l’entreprise ne s’intéresse qu’aux abonnements actuels d’un client, les clients sont une entité de profil, tandis que les abonnements sont une entité de recherche. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Avantages et inconvénients de différentes classes d’entités {#pros-and-cons}
 

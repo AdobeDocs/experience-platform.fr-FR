@@ -7,11 +7,11 @@ exl-id: 4770e221-48a7-45d8-80a4-60b5cbc0ec33
 source-git-commit: 3ffb535e9a6648f037678acebba0de5f2088e79e
 workflow-type: tm+mt
 source-wordcount: '565'
-ht-degree: 6%
+ht-degree: 11%
 
 ---
 
-# Connexion [!DNL Aqua Data Studio] vers Query Service
+# Connecter [!DNL Aqua Data Studio] à Query Service
 
 Ce document décrit les étapes de connexion. [!DNL Aqua Data Studio] avec Adobe Experience Platform [!DNL Query Service].
 
@@ -23,7 +23,7 @@ Ce guide nécessite que vous ayez déjà accès à [!DNL Aqua Data Studio] et vo
 >
 >Il y a [!DNL Windows] et [!DNL macOS] versions de [!DNL Aqua Data Studio]. Les captures d’écran de ce guide ont été réalisées à l’aide de la méthode [!DNL macOS] application de bureau . Il peut y avoir des incohérences mineures dans l’interface utilisateur entre les versions.
 
-Pour acquérir les informations d’identification nécessaires à la connexion [!DNL Aqua Data Studio] pour être Experience Platform, vous devez avoir accès au [!UICONTROL Requêtes] dans l’interface utilisateur de Platform. Contactez votre administrateur de l’organisation IMS si vous n’avez pas actuellement accès à la variable [!UICONTROL Requêtes] workspace.
+Pour acquérir les informations d’identification nécessaires à la connexion de [!DNL Aqua Data Studio] à Experience Platform, vous devez avoir accès à l’espace de travail Requêtes dans l’interface utilisateur de Platform.  Contactez votre administrateur de l’organisation IMS si vous n’avez pas actuellement accès à la variable [!UICONTROL Requêtes] workspace.
 
 ## Enregistrement du serveur {#register-server}
 

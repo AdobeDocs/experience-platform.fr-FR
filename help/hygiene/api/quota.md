@@ -4,8 +4,8 @@ description: Le point d’entrée /quota de l’API Data Hygiene vous permet d
 exl-id: 91858a13-e5ce-4b36-a69c-9da9daf8cd66
 source-git-commit: 1c6a5df6473e572cae88a5980fe0db9dfcf9944e
 workflow-type: tm+mt
-source-wordcount: '350'
-ht-degree: 88%
+source-wordcount: '347'
+ht-degree: 89%
 
 ---
 
@@ -83,4 +83,4 @@ Une réponse réussie renvoie les détails de vos quotas d’hygiène des donné
 | --- | --- |
 | `quotas` | Répertorie les informations relatives aux quotas pour chaque type de traitement en matière d’hygiène des données. Chaque objet Quota contient les propriétés suivantes :<ul><li>`name` : le type de traitement d’hygiène des données :<ul><li>`expirationDatasetQuota` : expirations de jeux de données</li><li>`deleteIdentityWorkOrderDatasetQuota`: Suppressions d’enregistrements</li></ul></li><li>`description` : description du type de traitement d’hygiène des données.</li><li>`consumed` : le nombre de traitements de ce type s’exécutent sur la période mensuelle en cours.</li><li>`quota` : limite de quota pour ce type de traitement. Pour les suppressions et mises à jour d’enregistrement, cela représente le nombre de tâches pouvant être exécutées pour chaque période mensuelle. Pour les expirations de jeux de données, cela représente le nombre de traitements pouvant être simultanément actifs à un moment donné.</li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

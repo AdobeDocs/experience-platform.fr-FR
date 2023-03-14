@@ -17,7 +17,7 @@ Avant de poursuivre avec ce guide, assurez-vous d’avoir lu et compris le [guid
 
 ## Prise en main
 
-Le SKU Data Distiller est requis pour utiliser la boutique de requêtes accélérées. Veuillez consulter le [packaging](../packages.md), les [barrières de sécurité](../guardrails.md#query-accelerated-store), et la documentation de la [licence](../data-distiller/license-usage.md) relative au SKU de Data Distiller. Si vous ne disposez pas du SKU de Data Distiller, contactez votre représentant du service client Adobe pour plus d’informations.
+Le SKU Data Distiller est requis pour utiliser la boutique de requêtes accélérées. Veuillez consulter le [packaging](../packages.md), les [mécanismes de sécurisation](../guardrails.md#query-accelerated-store), et la documentation de la [licence](../data-distiller/license-usage.md) relative au SKU de Data Distiller. Si vous ne disposez pas du SKU de Data Distiller, contactez votre représentant du service client Adobe pour plus d’informations.
 
 Les sections suivantes détaillent les appels d’API nécessaires pour accéder sans état à la boutique de requêtes accélérées via l’API Query Service. Chaque appel inclut le format général d’API, un exemple de requête présentant les en-têtes requis et un exemple de réponse.
 
@@ -79,7 +79,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/acceleated-queries
 
 | Propriété | Description |
 |---|---|
-| `dbName` | Nom de la base de données vers laquelle vous effectuez une requête accélérée. La valeur de `dbName` doit prendre le format `{SANDBOX_NAME}:{ACCELERATED_STORE_DATABASE}.{ACCELERATED_STORE_SCHEMA}`. La base de données fournie doit exister dans la boutique accélérée, sinon la requête entraînera une erreur. Vous devez également vous assurer que l’en-tête `x-sandbox-name` et le nom de la sandbox dans `dbName` se rapportent à la même sandbox. |
+| `dbName` | Nom de la base de données vers laquelle vous effectuez une requête accélérée. La valeur de `dbName` doit prendre le format `{SANDBOX_NAME}:{ACCELERATED_STORE_DATABASE}.{ACCELERATED_STORE_SCHEMA}`. La base de données fournie doit exister dans la boutique accélérée, sinon la requête entraînera une erreur. Vous devez également vous assurer que l’en-tête `x-sandbox-name` et le nom du sandbox dans `dbName` se rapportent au même sandbox. |
 | `sql` | Chaîne d’instruction SQL. La taille maximale autorisée est de 1 000 000 caractères. |
 | `templateId` | L’identifiant unique d’une requête créée et enregistrée en tant que modèle lorsqu’une demande POST est envoyée au point d’entrée `/templates`. |
 | `name` | Nom descriptif et convivial facultatif pour la requête accélérée. |

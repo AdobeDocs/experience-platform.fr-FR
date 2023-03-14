@@ -4,7 +4,7 @@ description: Découvrez la manière dont les erreurs sont traitées dans lʼAPI 
 exl-id: 336c0ced-1067-4519-94e1-85aea700fce6
 source-git-commit: f3c23665229a83d6c63c7d6026ebf463069d8ad9
 workflow-type: tm+mt
-source-wordcount: '1068'
+source-wordcount: '1062'
 ht-degree: 100%
 
 ---
@@ -49,7 +49,7 @@ Les réponses dʼerreur visent à se conformer à la [spécification des erreurs
 | `source` | Objet contenant des références à la source de lʼerreur, incluant éventuellement lʼun des membres suivants :<ul><li>`pointer` : chaîne [JSON Pointer (RFC6901)](https://datatracker.ietf.org/doc/html/rfc6901) qui référence lʼentité associée dans le document de requête (`/data` pour un objet de données principal ou `/data/attributes/title` pour un attribut spécifique, par exemple).</li></ul> |
 | `meta` | Objet contenant des métadonnées non standard sur lʼerreur. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Référence dʼerreur
 
@@ -107,4 +107,4 @@ Le tableau suivant répertorie les différentes erreurs que l’API peut renvoye
 | `upgraded-extension-required` | Une fois que vous avez installé une mise à niveau dʼextension, vous devez lʼinclure dans toutes les bibliothèques jusquʼà ce que la mise à niveau atteigne la production. Cela ne sʼapplique pas si lʼextension nʼa pas encore été publiée. |
 | `upstream-build-required` | Une version réussie de la bibliothèque en amont est nécessaire avant de pouvoir créer celle-ci. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

@@ -7,8 +7,8 @@ description: Ce tutoriel vous aidera à commencer à utiliser les API d’ingest
 exl-id: 23c03ace-795f-4a92-a220-c47ee86cec64
 source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '128'
+ht-degree: 65%
 
 ---
 

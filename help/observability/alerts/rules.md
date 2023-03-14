@@ -6,8 +6,8 @@ feature: Alerts
 exl-id: b4af1c15-b1bc-4e4b-a447-09cc17a63988
 source-git-commit: 6650894c145fd1f42731fd5ed8aeb6e38062aa61
 workflow-type: tm+mt
-source-wordcount: '961'
-ht-degree: 79%
+source-wordcount: '943'
+ht-degree: 78%
 
 ---
 
@@ -29,7 +29,7 @@ Les règles d’alerte suivantes sont spécifiques à l’[Ingestion des donnée
 | Retards, échecs et erreurs de l’exécution du flux de sources | Retard d’ingestion | Cette alerte se déclenche lorsqu’une exécution de flux d’ingestion par lots dure plus de 150 minutes. |
 | Retards, échecs et erreurs de l’exécution du flux de sources | Échec de l’ingestion | Cette alerte se déclenche lorsque le rapport entre les enregistrements en échec et tous les enregistrements dépasse un seuil de 0,5 %. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Si vous vous êtes déjà abonné au type d’alerte suivant, vous ne recevrez plus d’alertes, car cette alerte est obsolète :
 
@@ -37,7 +37,7 @@ Si vous vous êtes déjà abonné au type d’alerte suivant, vous ne recevrez p
 | --- | --- | --- |
 | Retards, échecs et erreurs de l’exécution du flux de sources | Absence d’ingestion | Cette alerte vous envoie un message si l’ingestion est retardée de plus de sept heures et qu’aucune donnée n’est ingérée dans Platform. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Service d’identités
 
@@ -50,9 +50,9 @@ Les règles d’alerte suivantes sont spécifiques au [service d’identités](.
 | Retards, échecs et erreurs de l’ingestion d’identités | Retard d’exécution du flux du service d’identités | Cette alerte se déclenche lorsqu’une exécution du flux du service d’identités dure plus de 150 minutes. |
 | Retards, échecs et erreurs de l’ingestion d’identités | Échec de l’exécution du flux du service d’identités | Cette alerte se déclenche lorsqu’une erreur se produit lors de l’ingestion de données dans le service d’identités. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-## Profil client en temps réel
+## Real-time Customer Profile
 
 Les règles d’alerte suivantes sont spécifiques à [Profil client en temps réel](../../profile/home.md):
 
@@ -63,7 +63,7 @@ Les règles d’alerte suivantes sont spécifiques à [Profil client en temps r�
 | Retards, échecs et erreurs de l’ingestion de profils | Retard d’exécution du flux de profils | Cette alerte se déclenche lorsque le chargement des données du lac de données dans le profil dure plus de 150 minutes. |
 | Retards, échecs et erreurs de l’ingestion de profils | Échec de l’exécution du flux de profils | Cette alerte se déclenche lorsqu’une erreur se produit lors de l’ingestion de données dans le profil. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Segmentation
 
@@ -77,7 +77,7 @@ Les règles d’alerte suivantes sont spécifiques à [Segmentation Service](../
 | Retards, échecs et erreurs relatifs à la tâche d’évaluation de segments | Échec de la tâche relative aux segments | Cette alerte se déclenche lorsqu’une tâche d’évaluation de segments génère une erreur. |
 | Retards, échecs et erreurs relatifs à la tâche d’évaluation de segments | Définition de segments désactivée | Cette alerte se déclenche lorsqu’une définition de segments est désactivée en raison d’une erreur interne. Cette action déclenche automatiquement un dispositif d’urgence pour qu’une équipe d’ingénieurs Adobe enquête sur le problème. Cette alerte a pour seul but d’être informative et ne nécessite aucune action de votre part. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Destinations
 
@@ -91,7 +91,7 @@ Les règles d’alerte suivantes sont spécifiques aux [destinations](../../dest
 | Délais, échecs et erreurs de l’exécution du flux de destinations | Échec de l’exécution du flux de destinations | Cette alerte se déclenche lorsqu’une erreur se produit lors de l’activation d’un segment vers une destination. |
 | Délais, échecs et erreurs de l’exécution du flux de destinations | Le taux d’ID ignorés dépasse le seuil | Cette alerte se déclenche lorsque le rapport entre les identifiants ignorés et le nombre total d’identifiants dépasse un seuil. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Query Service
 

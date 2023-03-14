@@ -6,8 +6,8 @@ description: En savoir plus sur les solutions d’accessibilité personnalisées
 exl-id: cb5ad99e-8a95-4c9e-aae6-1d0036ecf052
 source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1615'
+ht-degree: 94%
 
 ---
 

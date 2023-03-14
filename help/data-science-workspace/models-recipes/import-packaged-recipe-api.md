@@ -31,7 +31,7 @@ Un moteur contient des algorithmes d’apprentissage automatique et une logique 
 
 ## Prise en main
 
-Ce tutoriel nécessite un fichier de recette empaqueté sous la forme d’une URL Docker. Suivez le tutoriel [Former une recette empaquetée à partir de fichiers source](./package-source-files-recipe.md) pour savoir comment créer un fichier de recette empaquetée ou fournir votre fichier.
+Ce tutoriel nécessite un fichier de recette empaqueté sous la forme d’une URL Docker. Suivez le tutoriel [Former une recette empaquetée à partir de fichiers sources](./package-source-files-recipe.md) pour savoir comment créer un fichier de recette empaquetée ou fournir votre fichier.
 
 - `{DOCKER_URL}` : adresse URL vers une image Docker d’un service intelligent.
 

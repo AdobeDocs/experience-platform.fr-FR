@@ -137,7 +137,7 @@ Un attribut calculé créé avec succès renvoie un état HTTP 200 (OK) et un c
 |---|---|
 | `id` | Un identifiant unique, en lecture seule, généré par le système que vous pouvez utiliser pour faire référence à l’attribut calculé pendant les autres opérations API. |
 | `imsOrgId` | L’organisation IMS associée à l’attribut calculé doit correspondre à la valeur envoyée dans la requête. |
-| `sandbox` | L’objet Environnement de test contient des détails sur l’environnement de test sur lequel l’attribut calculé a été configuré. Ces informations sont tirées de l’en-tête de l’environnement de test envoyé dans la requête. Pour plus d’informations, consultez la [présentation des environnements de test](../../sandboxes/home.md). |
+| `sandbox` | L’objet Sandbox contient des détails sur le sandbox sur lequel l’attribut calculé a été configuré. Ces informations sont tirées de l’en-tête du sandbox envoyé dans la requête. Pour plus d’informations, consultez la [présentation des sandbox](../../sandboxes/home.md). |
 | `positionPath` | Un tableau contenant le `path` déconstruit vers le champ envoyé dans la requête. |
 | `returnSchema.meta:xdmType` | Le type du champ dans lequel l’attribut calculé sera stocké. |
 | `definedOn` | Un tableau affichant les schémas d’union sur lesquels l’attribut calculé a été défini. Contient un objet par schéma d’union, ce qui signifie qu’il peut y avoir plusieurs objets dans le tableau si l’attribut calculé a été ajouté à plusieurs schémas selon différentes classes. |
@@ -265,7 +265,7 @@ Un attribut calculé créé avec succès renvoie un état HTTP 200 (OK) et un c
 |---|---|
 | `id` | Un identifiant unique, en lecture seule, généré par le système que vous pouvez utiliser pour faire référence à l’attribut calculé pendant les autres opérations API. |
 | `imsOrgId` | L’organisation IMS associée à l’attribut calculé doit correspondre à la valeur envoyée dans la requête. |
-| `sandbox` | L’objet Environnement de test contient des détails sur l’environnement de test sur lequel l’attribut calculé a été configuré. Ces informations sont tirées de l’en-tête de l’environnement de test envoyé dans la requête. Pour plus d’informations, consultez la [présentation des environnements de test](../../sandboxes/home.md). |
+| `sandbox` | L’objet Sandbox contient des détails sur le sandbox sur lequel l’attribut calculé a été configuré. Ces informations sont tirées de l’en-tête du sandbox envoyé dans la requête. Pour plus d’informations, consultez la [présentation des sandbox](../../sandboxes/home.md). |
 | `positionPath` | Un tableau contenant le `path` déconstruit vers le champ envoyé dans la requête. |
 | `returnSchema.meta:xdmType` | Le type du champ dans lequel l’attribut calculé sera stocké. |
 | `definedOn` | Un tableau affichant les schémas d’union sur lesquels l’attribut calculé a été défini. Contient un objet par schéma d’union, ce qui signifie qu’il peut y avoir plusieurs objets dans le tableau si l’attribut calculé a été ajouté à plusieurs schémas selon différentes classes. |

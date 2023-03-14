@@ -1,11 +1,11 @@
 ---
-description: Cette page décrit comment vous authentifier et commencer à utiliser Adobe Experience Platform Destination SDK. Vous y trouverez des instructions sur la manière d’obtenir des informations d’authentification Adobe I/O, un nom de sandbox et l’autorisation de contrôle d’accès de création de destinations.
+description: Cette page décrit comment vous authentifier et commencer à utiliser Adobe Experience Platform Destination SDK. Vous y trouverez des instructions sur la manière d’obtenir des informations d’authentification Adobe I/O, un nom de sandbox et l’autorisation de contrôle d’accès de création de destinations.
 title: Prise en main de Destination SDK
 exl-id: f22c37a8-202d-49ac-9af0-545dfa9af8fd
 source-git-commit: 557db5b7eefdd7902895e428f7bc34e3ad8a6f58
 workflow-type: tm+mt
 source-wordcount: '612'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 98%
 
 ## Présentation {#overview}
 
-Cette page décrit comment vous authentifier et commencer à utiliser Adobe Experience Platform Destination SDK. Vous y trouverez des instructions sur la manière d’obtenir des informations d’authentification Adobe I/O, un nom de sandbox et l’autorisation de contrôle d’accès de création de destinations.
+Cette page décrit comment vous authentifier et commencer à utiliser Adobe Experience Platform Destination SDK. Vous y trouverez des instructions sur la manière d’obtenir des informations d’authentification Adobe I/O, un nom de sandbox et l’autorisation de contrôle d’accès de création de destinations.
 
 ## Terminologie {#terminology}
 
@@ -46,9 +46,9 @@ You now have the required authentication headers `x-api-key: {API_KEY}`, `x-gw-i
 
 -->
 
-## Propriété de la destination et de la sandbox {#destination-ownership}
+## Propriété de la destination et du sandbox {#destination-ownership}
 
-Dans Experience Platform, toutes les ressources sont isolées dans des sandbox virtuelles spécifiques. Les requêtes vers Destination SDK nécessitent des en-têtes qui spécifient le nom de la sandbox dans laquelle l’opération a lieu :
+Dans Experience Platform, toutes les ressources sont isolées dans des sandbox virtuels spécifiques. Les requêtes vers Destination SDK nécessitent des en-têtes qui spécifient le nom du sandbox dans lequel l’opération a lieu :
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -69,16 +69,16 @@ Pour plus d’informations, consultez les documents suivants sur le contrôle d�
 ## Remarques complémentaires {#additional-considerations}
 
 * Toute modification apportée aux configurations de destination, quʼil sʼagisse de créer ou de modifier une configuration de destination, doit être examinée et approuvée par Adobe. Vos modifications ne sont appliquées dans vos destinations qu’une fois la révision terminée.
-* Seuls les utilisateurs appartenant à la même organisation et ayant accès à la sandbox peuvent modifier la configuration de destination.
+* Seuls les utilisateurs appartenant à la même organisation et ayant accès au sandbox peuvent modifier la configuration de destination.
 
 ## Étapes suivantes {#next-steps}
 
-En suivant les étapes décrites dans cet article, vous avez obtenu des informations d’authentification pour Adobe I/O, un nom de sandbox et l’autorisation de contrôle d’accès de création de destinations. Lʼétape suivante consiste à configurer une destination à l’aide de Destination SDK.
+En suivant les étapes décrites dans cet article, vous avez obtenu des informations d’authentification pour Adobe I/O, un nom de sandbox et l’autorisation de contrôle d’accès de création de destinations. Lʼétape suivante consiste à configurer une destination à l’aide de Destination SDK.
 
 * Consultez les guides de configuration suivants, en fonction du type de destination :
 
    * [Utiliser Destination SDK pour configurer une destination de diffusion en continu](./configure-destination-instructions.md)
-   * [Utiliser la Destination SDK pour configurer une destination basée sur des fichiers](./configure-file-based-destination-instructions.md)
+   * [Utiliser Destination SDK pour configurer une destination basée sur des fichiers](./configure-file-based-destination-instructions.md)
 
 * Pour toutes les opérations, reportez-vous à la section [Documentation de l’API de création de destinations](https://www.adobe.io/experience-platform-apis/references/destination-authoring/).
 * Utilisez la [Collection Postman de l’API de création de destinations](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Destination%20Authoring%20API.postman_collection.json) pour configurer votre destination à l’aide des points de terminaison de l’API Destination SDK. Pour commencer à utiliser Postman, suivez les [étapes dʼimportation des environnements et des collections](https://learning.postman.com/docs/getting-started/importing-and-exporting-data/) et consultez le [Guide vidéo de création de l’environnement Postman](https://video.tv.adobe.com/v/28832).

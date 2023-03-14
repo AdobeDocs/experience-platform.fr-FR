@@ -5,7 +5,7 @@ title: Guide de dépannage d’Identity Service
 description: Ce document fournit des réponses aux questions fréquentes sur Adobe Experience Platform Identity Service, ainsi qu’un guide de dépannage pour les erreurs courantes.
 exl-id: dac31bc3-7003-46d6-9d41-9f6fd3645c2c
 source-git-commit: ad9fb0bcc7bca55da432c72adc94d49e3c63ad6e
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '2180'
 ht-degree: 100%
 

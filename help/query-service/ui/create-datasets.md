@@ -8,11 +8,11 @@ exl-id: 6f6c049d-f19f-4161-aeb4-3a01eca7dc75
 source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
 source-wordcount: '493'
-ht-degree: 93%
+ht-degree: 94%
 
 ---
 
-# Génération de jeux de données de sortie à partir des résultats de requête
+# Générer des jeux de données de sortie à partir des résultats de requête
 
 [!DNL Query Service] vous permet d’utiliser des requêtes pour générer des jeux de données dans le [!DNL Data Lake]. Ces jeux de données peuvent ensuite être utilisés comme entrée pour d’autres requêtes ou dans d’autres services tels que [!DNL Data Science Workspace], Real-time Customer Profile ou [!DNL Analysis Workspace].
 

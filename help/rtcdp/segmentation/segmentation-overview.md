@@ -4,7 +4,7 @@ title: Service de segmentation de Real-Time Customer Data Platform
 description: Real-Time Customer Data Platform d’Adobe repose sur Adobe Experience Platform et utilise de nombreux services et fonctionnalités d’Experience Platform. Grâce au service de segmentation, vous pouvez proposer un marketing sur mesure en divisant vos clients en groupes restreints aux caractéristiques similaires.
 exl-id: 140667c0-e288-40c4-8c45-c275e348b84a
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '540'
 ht-degree: 100%
 

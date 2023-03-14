@@ -36,7 +36,7 @@ Sélectionnez **[!UICONTROL Bibliothèque de widgets]** pour ouvrir la biblioth�
 
 ![La vue Modifier le tableau de bord avec la bibliothèque de widgets mise en surbrillance.](../images/customization/widget-library-button.png)
 
-## Ajout de widgets {#add-widgets}
+## Ajouter des widgets {#add-widgets}
 
 Dans la [!UICONTROL Bibliothèque de widgets], sélectionnez un widget dans la liste des widgets standard ou personnalisés disponibles. Une coche dans le coin du widget indique votre sélection.
 

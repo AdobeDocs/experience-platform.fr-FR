@@ -3,8 +3,8 @@ title: Gérer les autorisations pour Privacy Service
 description: Découvrez comment gérer les autorisations utilisateur pour Adobe Experience Platform Privacy Service à l’aide d’Adobe Admin Console.
 exl-id: 6aa81850-48d7-4fff-95d1-53b769090649
 source-git-commit: ebcfdc9f73fc9120cf3819169d72bd828d0b35a6
-workflow-type: ht
-source-wordcount: '964'
+workflow-type: tm+mt
+source-wordcount: '961'
 ht-degree: 100%
 
 ---
@@ -37,7 +37,7 @@ Le tableau suivant décrit les autorisations disponibles pour Privacy Service a
 | [!UICONTROL Autorisations de désinscription de la vente] | [!UICONTROL Autorisation de lecture - Désinscription de la vente] | Détermine si l’utilisateur ou l’utilisatrice peut afficher les requêtes de désinscription à la vente existantes, ainsi que leurs détails. |
 | [!UICONTROL Autorisations de désinscription de la vente] | [!UICONTROL Droit d’écriture - Désinscription de la vente] | Détermine si un utilisateur ou une utilisatrice peut créer de nouvelles requêtes de désinscription de la vente. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Gérer les autorisations {#manage}
 

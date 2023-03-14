@@ -4,7 +4,7 @@ description: Découvrez les différents types d’autorisations relatives aux ba
 exl-id: 9b48847a-6133-4dbd-b17d-e7b88152ad7d
 source-git-commit: fa4fc154f57243250dec9bdf9557db13ef7768e8
 workflow-type: tm+mt
-source-wordcount: '1308'
+source-wordcount: '1299'
 ht-degree: 91%
 
 ---
@@ -58,7 +58,7 @@ Le tableau suivant décrit les droits de propriété disponibles et les fonction
 | **Gérer les extensions** | Ce droit autorise les actions suivantes : <ul><li>Installation de nouvelles extensions sur une propriété</li><li>Modification de la configuration d’une extension déjà installée</li><li>Suppression d’une extension</li></ul>Consultez la documentation de présentation des extensions pour [plus dʼinformations sur les extensions](../managing-resources/extensions/overview.md). Ce rôle appartient généralement au service informatique ou au marketing, selon votre organisation. |
 | **Gérer les environnements** | Permet de créer et de modifier des environnements. Pour plus dʼinformations, consultez la [documentation sur les environnements](../publishing/environments.md). Ce rôle appartient généralement au groupe informatique. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Droits d’entreprise
 
@@ -70,7 +70,7 @@ Les droits d’entreprise s’appliquent aux autorisations qui s’appliquent à
 | **Développer des extensions** | Permet de créer et de modifier des packages dʼextensions dont lʼentreprise dispose, y compris les versions privées et les demandes de version publique. |
 | **Gérer les configurations d&#39;application** | Cette option n’est disponible que si vous disposez d’une licence pour Adobe Journey Optimizer ou d’une autre solution qui accorde l’accès aux messages in-app et push mobiles.  Cela permet de gérer les applications dont Experience Cloud a connaissance, ainsi que les informations d’identification push nécessaires pour communiquer avec le service Firebase Cloud Messaging et le service de notification push Apple. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Autorisations utilisateur totales
 
@@ -117,7 +117,7 @@ Le tableau suivant fournit quelques exemples des types de rôles que vous pouvez
 | Le développeur d’extensions | développe des extensions et peut les soumettre pour approbation, mais ne peut pas les publier ni les ajouter aux propriétés existantes. | Inclusion automatique | <ul><li>Développer</li></ul> | <ul><li>Gérer les propriétés</li><li>Développement dʼextensions</li></ul> |
 | Le super utilisateur | fait tout. | Inclusion automatique | <ul><li>Développer</li><li>Approuver</li><li>Publier</li><li>Gérer les extensions</li><li>Gérer les environnements</li></ul> | <ul><li>Gérer les propriétés</li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Étapes suivantes
 

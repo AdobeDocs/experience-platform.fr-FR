@@ -6,7 +6,7 @@ description: Octroyez aux utilisateurs la possibilité dʼafficher, de modifier 
 exl-id: 2e50790f-b3ab-4851-a9a5-7cb98bf98ce3
 source-git-commit: fa4fc154f57243250dec9bdf9557db13ef7768e8
 workflow-type: tm+mt
-source-wordcount: '645'
+source-wordcount: '642'
 ht-degree: 32%
 
 ---
@@ -59,7 +59,7 @@ La matrice de contrôle d’accès suivante présente une répartition des autor
 | [!DNL Profiles],<br/>[!DNL Segments],<br/>[!DNL Destinations] tableaux de bord.<br/>Possibilité de modifier des schémas de widget d’ajouter de nouveaux attributs pour la personnalisation de widgets | **Gestion du tableau de bord standard REQUIS** | **REQUIS (pour chaque tableau de bord respectif)** | S.O. | S.O. |
 | [!DNL License Usage Dashboard] | S.O. | S.O. | S.O. | ACTIVÉ |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Ajout d’autorisations à votre profil de produit
 

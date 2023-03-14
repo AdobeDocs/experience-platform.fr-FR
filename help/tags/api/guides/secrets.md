@@ -4,8 +4,8 @@ description: Découvrez les principes de base de la configuration des secrets da
 exl-id: 0298c0cd-9fba-4b54-86db-5d2d8f9ade54
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
-source-wordcount: '1241'
-ht-degree: 87%
+source-wordcount: '1232'
+ht-degree: 89%
 
 ---
 
@@ -21,7 +21,7 @@ Actuellement, trois types de secrets pris en charge sont identifiés dans le nom
 | `simple-http` | Contient deux attributs de chaîne pour un nom dʼutilisateur et un mot de passe, respectivement. |
 | `oauth2-client_credentials` | Contient plusieurs attributs pour la prise en charge de la spécification d’authentification [OAuth](https://datatracker.ietf.org/doc/html/rfc6749). Le transfert d’événements vous demande les informations requises, puis gère le renouvellement de ces jetons pour vous selon un intervalle spécifié. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Ce guide fournit un aperçu général de la configuration des secrets pour une utilisation dans le transfert d’événements. Pour obtenir des instructions détaillées sur la gestion des secrets dans l’API Reactor, et notamment un exemple JSON de la structure d’un secret, reportez-vous au [guide des points d’entrée des secrets](../endpoints/secrets.md).
 
@@ -42,7 +42,7 @@ Les secrets disposant d’une valeur `type_of` de `token` ne requièrent qu’un
 | --- | --- | --- |
 | `token` | Chaîne | Jeton secret compris par le système de destination. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Le jeton est stocké en tant que valeur statique, et par conséquent les propriétés `expires_at` et `refresh_at` du secret sont définies sur `null` lorsque le secret est créé.
 
@@ -55,7 +55,7 @@ Les secrets disposant d’une valeur `type_of` de `simple-http` nécessitent les
 | `username` | Chaîne | Nom d’utilisateur. |
 | `password` | Chaîne | Mot de passe. Cette valeur n’est pas incluse dans la réponse de l’API. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Lorsque le secret est créé, les deux attributs sont échangés avec un encodage BASE64 de `username:password`. Après l’échange, les propriétés `expires_at` et `refresh_at` du secret sont définies sur `null`.
 

@@ -6,8 +6,8 @@ description: Ce document présente la classe XDM ExperienceEvent et décrit les 
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
 source-git-commit: a3140d5216857ef41c885bbad8c69d91493b619d
 workflow-type: tm+mt
-source-wordcount: '1842'
-ht-degree: 94%
+source-wordcount: '1836'
+ht-degree: 95%
 
 ---
 
@@ -30,7 +30,7 @@ La classe [!DNL XDM ExperienceEvent] elle-même fournit plusieurs champs tempore
 | `identityMap` | Champ de mappage contenant un jeu d’identités d’espace de noms pour l’individu auquel l’événement s’applique. Ce champ est automatiquement mis à jour par le système lors de l’ingestion des données d’identité. Pour utiliser correctement ce champ pour [Profil client en temps réel](../../profile/home.md), ne tentez pas de mettre à jour manuellement le contenu du champ dans vos opérations de données.<br /><br />Pour plus d’informations sur les cas d’utilisation des mappages dʼidentités, consultez la section correspondante sur la page consacrée aux [principes de base de la composition des schémas](../schema/composition.md#identityMap). |
 | `timestamp`<br>**(Obligatoire)** | Horodatage ISO 8601 du moment où l’événement s’est produit, formaté selon la norme [RFC 3339 (section 5.6)](https://tools.ietf.org/html/rfc3339#section-5.6). Cet horodatage doit se produire dans le passé. Pour connaître les bonnes pratiques relatives à l’utilisation de ce champ, consultez la section ci-dessous relative aux [horodatages](#timestamps). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Bonnes pratiques relatives à la modélisation des événements
 
@@ -144,7 +144,7 @@ Le tableau suivant décrit les valeurs acceptées pour `eventType`, ainsi que le
 | `web.webinteraction.linkClicks` | Un lien a été sélectionné une ou plusieurs fois. |
 | `web.webpagedetails.pageViews` | Une page web a été consultée une ou plusieurs fois. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Valeurs suggérées pour `producedBy` {#producedBy}
 

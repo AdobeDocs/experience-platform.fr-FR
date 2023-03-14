@@ -4,7 +4,7 @@ description: Les notes de mise à jour d’octobre 2022 pour Adobe Experience P
 exl-id: 61ef2472-5e79-433f-9f60-b1245f619b42
 source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
-source-wordcount: '1352'
+source-wordcount: '1337'
 ht-degree: 100%
 
 ---
@@ -41,7 +41,7 @@ Adobe Experience Platform fournit une suite de technologies qui vous permetten
 | Extension [!DNL Splunk] pour le transfert d’événement | Vous pouvez désormais envoyer des données à [!DNL Splunk] à l’aide d’une extension de [transfert d’événement](../../tags/ui/event-forwarding/overview.md). Pour plus d’informations, consultez la présentation de l’extension [[!DNL Splunk] ](../../tags/extensions/server/splunk/overview.md). |
 | Extension [!DNL Zendesk] pour le transfert d’événement | Vous pouvez désormais envoyer des données à [!DNL Zendesk] à l’aide d’une extension de [transfert d’événement](../../tags/ui/event-forwarding/overview.md). Pour plus d’informations, consultez la présentation de l’extension [[!DNL Zendesk] ](../../tags/extensions/server/zendesk/overview.md). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## [!DNL Destinations] {#destinations}
 
@@ -54,7 +54,7 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 | Exportations de jeux de données (version Beta) | La [fonctionnalité d’exportation des jeux de données en version Beta](/help/destinations/ui/export-datasets.md) vous permet d’exporter des données de première génération (comme défini dans la [description du produit Real-time Customer Data Platform](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)) depuis Adobe Experience Platform vers vos propres systèmes clients externes, via l’interface utilisateur des destinations. Vous pouvez ainsi extraire des données d’Experience Platform avec un workflow sans code, ou à faible code, vers six destinations de stockage dans le cloud (répertoriées dans le tableau ci-dessous) à des fins d’analyse et de conformité. |
 | Amélioration des capacités d’exportation de fichiers (version Beta) | Vous pouvez désormais bénéficier d’une fonctionnalité de personnalisation améliorée lors de l’exportation de fichiers en dehors d’Experience Platform : <br><ul><li>[Options de dénomination de fichier](/help/destinations/ui/activate-batch-profile-destinations.md#file-names) supplémentaires.</li><li>Possibilité de définir des en-têtes de fichier personnalisés dans vos fichiers exportés via l’[étape de mappage améliorée](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).</li><li>[Possibilité de personnaliser le formatage des fichiers de données exportés au format CSV](/help/destinations/ui/batch-destinations-file-formatting-options.md).</li></ul> <br> Cette fonctionnalité est prise en charge par les six nouvelles cartes de stockage cloud Beta répertoriées dans le tableau ci-dessous. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Fonctionnalités nouvelles ou mises à jour**
 
@@ -70,7 +70,7 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 | [[!DNL (Beta) Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md#changelog) | Deux cartes de destination [!DNL Azure Blob] apparaissent désormais côte à côte dans le catalogue des destinations pour les personnes participant à la phase Beta. La nouvelle destination Beta offre une fonctionnalité améliorée d’exportation de fichiers et prend en charge les exportations de jeux de données. |
 | [[!DNL (Beta) SFTP]](../../destinations/catalog/cloud-storage/sftp.md#changelog) | Deux cartes de destination [!DNL SFTP] apparaissent désormais côte à côte dans le catalogue des destinations pour les personnes participant à la phase Beta. La nouvelle destination Beta offre une fonctionnalité améliorée d’exportation de fichiers et prend en charge les exportations de jeux de données. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Documentation nouvelle ou mise à jour**
 
@@ -92,7 +92,7 @@ XDM est une spécification Open Source qui fournit des structures et des défini
 | Type de données | [[!UICONTROL Informations détaillées sur la publicité]](https://github.com/adobe/xdm/blob/master/components/datatypes/advertisingdetails.schema.json) | `name` a été renommé `friendlyName` et `ID` a été renommé `name`. |
 | Type de données | [[!UICONTROL Informations détaillés sur les erreurs]](https://github.com/adobe/xdm/blob/master/components/datatypes/errordetails.schema.json) | `ID` a été renommé `name`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Pour plus d’informations sur XDM dans Platform, consultez la [présentation du système XDM](../../xdm/home.md).
 
@@ -107,7 +107,7 @@ Query Service vous permet d’utiliser le langage SQL standard pour interroger l
 | Surveiller des requêtes via l’interface utilisateur de Platform | L’onglet [!UICONTROL Requêtes planifiées] de Query Service offre une visibilité améliorée du statut de tous les traitements de requêtes à travers l’interface utilisateur. Vous pouvez maintenant retrouver des informations importantes sur le statut de vos exécutions de requête, y compris des messages d’erreur et des codes en cas d’échec, depuis l’onglet [!UICONTROL Requêtes planifiées]. Via l’interface utilisateur, vous pouvez également vous abonner à des alertes pour n’importe laquelle de ces requêtes, en fonction de son statut. Consultez le [document sur la surveillance des requêtes](../../query-service/ui/monitor-queries.md) pour en savoir plus sur cette fonctionnalité. |
 | Modèle de données d’insights de rapports accélérés par les requêtes | Dans le cadre du SKU Data Distiller, le magasin d’accélération des requêtes vous permet de réduire le temps et la puissance de traitement requis pour obtenir des insights importants à partir de vos données. Avec le magasin d’accélération des requêtes, vous pouvez créer un modèle de données personnalisé et/ou étendre les modèles de données Adobe Real-time Customer Data Platform existants pour améliorer vos insights de rapports et leurs visualisations. Consultez le [document sur les insights de rapports du magasin d’accélération des requêtes](../../query-service/data-distiller/query-accelerated-store/reporting-insights-data-model.md) pour en savoir plus sur cette fonctionnalité. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Pour plus d’informations sur Query Service, consultez la [présentation de Query Service](../../query-service/home.md).
 Nouvelles fonctionnalités d’Adobe Experience Platform :

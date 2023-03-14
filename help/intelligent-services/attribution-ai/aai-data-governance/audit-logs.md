@@ -3,7 +3,7 @@ keywords: insights;IA dédiée à l’attrbution;informations sur l’IA dédié
 title: Vue d’ensemble des journaux d’audit dans l’IA dédiée à l’attribution
 description: Découvrez comment afficher et gérer les journaux d’audit dans l’IA dédiée à l’attribution.
 source-git-commit: a68d4634c6341f27673fdd70d96f7e214032b5a9
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '268'
 ht-degree: 100%
 

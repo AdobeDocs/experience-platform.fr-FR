@@ -4,7 +4,7 @@ title: Options de configuration de destination de diffusion en continu pour Dest
 exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
 source-git-commit: 59ac7749d788d8527da3578ec140248f7acf8e98
 workflow-type: tm+mt
-source-wordcount: '1907'
+source-wordcount: '1883'
 ht-degree: 88%
 
 ---
@@ -131,7 +131,7 @@ Voici un exemple de configuration d’une destination fictive de diffusion en co
 | `description` | Chaîne | Fournissez une description de votre carte de destination dans le catalogue des destinations Experience Platform. N’utilisez pas plus de 4 à 5 phrases. |
 | `status` | Chaîne | Indique le statut du cycle de vie de la carte de destination. Les valeurs acceptées sont `TEST`, `PUBLISHED` et `DELETED`. Utilisez `TEST` lorsque vous configurez votre destination pour la première fois. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Configurations de l’authentification du client {#customer-authentication-configurations}
 
@@ -154,7 +154,7 @@ Les utilisateurs sélectionnent **[!UICONTROL Se connecter à la destination]** 
 | `customerAuthenticationConfigurations` | Chaîne | Indique la configuration utilisée pour authentifier les clients Experience Platform sur votre serveur. Consultez `authType` ci-dessous pour les valeurs acceptées. |
 | `authType` | Chaîne | Les valeurs acceptées pour les destinations de diffusion en continu sont les suivantes :<ul><li>`BASIC`. Si votre destination prend en charge l’authentification de base, définissez `"authType":"Basic"` et  `"authenticationRule":"CUSTOMER_AUTHENTICATION"` dans le [section de diffusion de destination](./destination-configuration.md).</li><li>`BEARER`. Si votre destination prend en charge l’authentification du porteur, définissez `"authType":"Bearer"` et  `"authenticationRule":"CUSTOMER_AUTHENTICATION"` dans la [section de diffusion de destination](./destination-configuration.md).</li><li>`OAUTH2`. Si votre destination prend en charge l’authentification OAuth 2, définissez `"authType":"OAUTH2"` et ajoutez les champs requis pour OAuth 2, comme indiqué à la page [Authentification OAuth 2 de Destination SDK](./oauth2-authentication.md). En outre, définissez `"authenticationRule":"CUSTOMER_AUTHENTICATION"` dans la [section de diffusion de destination](./destination-configuration.md).</li> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Champs de données client {#customer-data-fields}
 
@@ -176,7 +176,7 @@ Utilisez cette section pour demander aux utilisateurs de renseigner des champs p
 | `enum` | Chaîne | Rend le champ personnalisé sous forme de menu déroulant et répertorie les options disponibles pour l’utilisateur. |
 | `pattern` | Chaîne | Impose un modèle pour le champ personnalisé, le cas échéant. Utilisez des expressions régulières pour appliquer un modèle. Par exemple, si vos identifiants de client n’incluent pas de chiffres ou de traits de soulignement, saisissez `^[A-Za-z]+$` dans ce champ. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Attributs de l’interface utilisateur {#ui-attributes}
 
@@ -191,7 +191,7 @@ Cette section fait référence aux éléments de l’interface utilisateur dans 
 | `connectionType` | Chaîne | `Server-to-server` est actuellement la seule option disponible. |
 | `frequency` | Chaîne | Fait référence au type d’exportation des données pris en charge par la destination. Valeurs prises en charge : <ul><li>`Streaming`</li><li>`Batch`</li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Configuration du schéma dans l’étape de mappage {#schema-configuration}
 
@@ -206,7 +206,7 @@ Utilisez les paramètres de la section `schemaConfig` pour activer l’étape de
 | `segmentRequired` | Booléen | Utilisez toujours `segmentRequired:true`. |
 | `identityRequired` | Booléen | Utilisez `true` si les utilisateurs doivent être en mesure de mapper des espaces de noms d’identité d’Experience Platform à votre schéma souhaité. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Identités et attributs {#identities-and-attributes}
 
@@ -228,7 +228,7 @@ En savoir plus sur les identités dans [Présentation d’Identity Namespace](/h
 | `transformation` | Chaîne | *Non affiché dans l’exemple de configuration*. Utilisé, par exemple, lorsque le client [!DNL Platform] dispose d’adresses électroniques simples en tant qu’attribut et que votre plateforme accepte les e-mails hachés uniquement. Dans cet objet, vous pouvez effectuer la transformation qui doit être appliquée (par exemple, transformer l’e-mail en minuscules, puis en hachage). Pour consulter un exemple, reportez-vous à la section `requiredTransformation` dans la [référence de l’API de configuration de destination](./destination-configuration-api.md#update). |
 | `acceptedGlobalNamespaces` | - | Indique : [espaces de noms d’identité standard](/help/identity-service/namespaces.md#standard) (par exemple, les clients IDFA) peuvent mapper l’identité que vous configurez. <br> Lorsque vous utilisez `acceptedGlobalNamespaces`, vous pouvez employer `"requiredTransformation":"sha256(lower($))"` pour mettre en minuscules ou hacher des adresses e-mails ou des numéros de téléphone. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Diffusion de destination {#destination-delivery}
 
@@ -237,7 +237,7 @@ En savoir plus sur les identités dans [Présentation d’Identity Namespace](/h
 | `authenticationRule` | Chaîne | Indique comment les clients [!DNL Platform] se connectent à votre destination. Les valeurs acceptées sont les suivantes : `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`. <br> <ul><li>Utilisez `CUSTOMER_AUTHENTICATION` si les clients Platform se connectent à votre système par le biais d’un nom d’utilisateur et d’un mot de passe, d’un jeton porteur ou d’une autre méthode d’authentification. Par exemple, sélectionnez cette option si vous avez également sélectionné `authType: OAUTH2` ou `authType:BEARER` dans `customerAuthenticationConfigurations`. </li><li> Utilisez `PLATFORM_AUTHENTICATION` s’il existe un système d’authentification global entre Adobe et votre destination et que le client [!DNL Platform] n’a pas besoin de fournir d’informations d’authentification pour se connecter à votre destination. Dans ce cas, vous devez créer des informations d’identification à l’aide de la configuration des [Informations d’identification](./credentials-configuration-api.md). </li><li>Utilisez `NONE` si aucune authentification n’est requise pour envoyer des données à votre plateforme de destination. </li></ul> |
 | `destinationServerId` | Chaîne | L’`instanceId` de la [configuration du serveur de destination](./destination-server-api.md) utilisé pour cette destination. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Configuration du mappage de segments {#segment-mapping}
 
@@ -297,7 +297,7 @@ Vous pouvez utiliser le paramètre `backfillHistoricalProfileData` dans la confi
 |---------|----------|------|
 | `backfillHistoricalProfileData` | Booléen | Contrôle si les données de profil historiques sont exportées lorsque les segments sont activés vers la destination. <br> <ul><li> `true` : [!DNL Platform] envoie les profils utilisateur historiques qualifiés pour le segment avant l’activation du segment. </li><li> `false` : [!DNL Platform] inclut uniquement les profils utilisateur qui remplissent les critères pour le segment une fois le segment activé. </li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Comment cette configuration connecte toutes les informations nécessaires à votre destination {#connecting-all-configurations}
 

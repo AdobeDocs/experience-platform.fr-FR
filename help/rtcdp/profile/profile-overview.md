@@ -4,7 +4,7 @@ title: Présentation de Real-Time Customer Profile dans Real-Time CDP
 description: Découvrez comment Adobe Real-Time Customer Data Platform vous permet de générer des expériences coordonnées, cohérentes et pertinentes pour vos clients à l’aide de Real-Time Customer Profile.
 exl-id: de70948c-ffc1-49d3-a57c-25ad415752ff
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '457'
 ht-degree: 100%
 

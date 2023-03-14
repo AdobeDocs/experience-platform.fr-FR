@@ -7,8 +7,8 @@ type: Tutorial
 exl-id: bef01000-909a-4594-8cf4-b9dbe0b358d5
 source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
 workflow-type: tm+mt
-source-wordcount: '828'
-ht-degree: 81%
+source-wordcount: '819'
+ht-degree: 80%
 
 ---
 
@@ -85,7 +85,7 @@ curl -X POST \
 | `$ref` | Comportement des données pour la nouvelle classe. Pour les classes ad hoc, cette valeur doit être définie sur `https://ns.adobe.com/xdm/data/adhoc`. |
 | `properties._adhoc` | Objet contenant les champs personnalisés de la classe, exprimés en paires clé-valeur des noms de champ et des types de données. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Réponse**
 
@@ -148,7 +148,7 @@ Une réponse réussie renvoie les détails de la nouvelle classe, en remplaçant
 | --- | --- |
 | `$id` | URI qui sert d’identifiant unique généré par le système et en lecture seule pour la nouvelle classe ad hoc. Cette valeur est utilisée à l’étape suivante de la création d’un schéma ad hoc. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Création d’un schéma ad hoc
 
@@ -241,7 +241,7 @@ GET /tenant/schemas/{SCHEMA_ID}
 | --- | --- |
 | `{SCHEMA_ID}` | URI `$id` encodé URL ou `meta:altId` du schéma ad hoc auquel vous souhaitez accéder. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Requête**
 

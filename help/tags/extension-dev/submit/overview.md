@@ -21,7 +21,7 @@ L’envoi d’une extension au catalogue de collecte de données dans Adobe Exp
 1. [Octroyer un accès utilisateur pour le développement d’extensions](./access.md)
 1. [Développement d’une extension](./develop.md)
 1. [Créer une liste Exchange](./create-listing.md)
-1. Créer un pack d’extension
+1. Créer un package d’extension
 1. [Télécharger et tester votre extension](./upload-and-test.md)
 1. [Publier votre extension](./release.md)
 

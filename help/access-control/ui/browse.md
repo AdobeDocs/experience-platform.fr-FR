@@ -6,14 +6,14 @@ description: Ce document couvre les étapes nécessaires pour parcourir lʼespac
 exl-id: 1d3c894e-b412-43ba-ba91-ddfa35303d73
 source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '317'
+ht-degree: 100%
 
 ---
 
 # Sélection dʼun profil de produit pour gérer ses autorisations de contrôle dʼaccès
 
-Afin de configurer le contrôle dʼaccès à [!DNL Experience Platform] via Adobe Admin Console, vous devez être administrateur dʼune organisation IMS disposant dʼun abonnement à [!DNL Experience Platform]. Bien qu’Adobe prenne en charge des hiérarchies d’administrateurs flexibles pour les organisations IMS, vous devez disposer de droits d’administrateur système, d’administrateur produit, ou d’administrateur de profil de produit pour configurer le contrôle d’accès. Pour en savoir plus, consultez l’article d’Adobe Help Center sur les [rôles administratifs](https://helpx.adobe.com/fr/enterprise/using/admin-roles.html).
+Afin de configurer le contrôle dʼaccès à [!DNL Experience Platform] via Adobe Admin Console, vous devez être administrateur dʼune organisation IMS disposant dʼun abonnement à [!DNL Experience Platform]. Bien qu’Adobe prenne en charge des hiérarchies d’administrateurs flexibles pour les organisations IMS, vous devez disposer de droits d’administrateur système, d’administrateur produit, ou d’administrateur de profil de produit pour configurer le contrôle d’accès. Pour en savoir plus, consultez l’article du Centre d’aide Adobe sur les [rôles administratifs](https://helpx.adobe.com/fr/enterprise/using/admin-roles.html).
 
 Si vous ne disposez pas de droits d’administrateur, contactez votre administrateur système pour obtenir l’accès.
 

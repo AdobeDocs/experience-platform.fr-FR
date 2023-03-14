@@ -6,8 +6,8 @@ description: Ce document reprend les étapes nécessaires à la gestion des dét
 exl-id: ac9c2213-f2fb-44be-9334-87fada8a4717
 source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '303'
+ht-degree: 98%
 
 ---
 

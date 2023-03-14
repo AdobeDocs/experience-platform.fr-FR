@@ -4,7 +4,7 @@ description: Découvrez comment afficher et gérer les ordres de travail de nett
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
 source-git-commit: a20afcd95d47e38ccdec9fba9e772032e212d7a4
 workflow-type: tm+mt
-source-wordcount: '865'
+source-wordcount: '862'
 ht-degree: 87%
 
 ---
@@ -62,7 +62,7 @@ Les filtres suivants s’appliquent aux requêtes d’expiration de jeu de donn�
 | [!UICONTROL Date d’expiration] | Filtrez les demandes relatives à l’expiration du jeu de données en fonction de la date de suppression planifiée pour le jeu de données en question. |
 | [!UICONTROL Date de mise à jour] | Filtrez en fonction de la date de la dernière mise à jour de l’ordre de travail. Les créations et les expirations sont comptées comme des mises à jour. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Afficher les détails d’un ordre de travail {#view-details}
 

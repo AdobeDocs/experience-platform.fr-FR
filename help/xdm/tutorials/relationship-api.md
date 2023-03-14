@@ -6,8 +6,8 @@ type: Tutorial
 exl-id: ef9910b5-2777-4d8b-a6fe-aee51d809ad5
 source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
 workflow-type: tm+mt
-source-wordcount: '1398'
-ht-degree: 32%
+source-wordcount: '1383'
+ht-degree: 33%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 32%
 
 Comprendre les relations entre vos clients et leurs interactions avec votre marque sur divers canaux est un aspect important d’Adobe Experience Platform. Définir ces relations au sein de la structure de votre [!DNL Experience Data Model] Les schémas (XDM) vous permettent d’obtenir des informations complexes sur les données de vos clients.
 
-Bien que les relations de schéma puissent être déduites par l’utilisation du schéma d’union et [!DNL Real-Time Customer Profile], cela s’applique uniquement aux schémas qui partagent la même classe. Pour établir une relation entre deux schémas appartenant à des classes différentes, un champ de relation dédié doit être ajouté à un **schéma source**, qui indique l’identité d’un **schéma de référence**.
+Bien que les relations de schéma puissent être déduites par l’utilisation du schéma d’union et [!DNL Real-Time Customer Profile], cela s’applique uniquement aux schémas partageant la même classe. Pour établir une relation entre deux schémas appartenant à des classes différentes, un champ de relation dédié doit être ajouté à un **schéma source**, qui indique l’identité d’un **schéma de référence**.
 
 >[!NOTE]
 >
@@ -30,7 +30,7 @@ Ce tutoriel nécessite une compréhension pratique de [!DNL Experience Data Mode
 * [Système XDM en Experience Platform](../home.md): Présentation de XDM et de son implémentation dans [!DNL Experience Platform].
    * [Principes de base de composition des schémas](../schema/composition.md) : une présentation des blocs de création de schémas XDM.
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
-* [Environnements de test](../../sandboxes/home.md) : [!DNL Experience Platform] fournit des environnements de test virtuels qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
+* [Sandbox](../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
 Avant de commencer ce tutoriel, veuillez consulter le [guide de développement](../api/getting-started.md) pour trouver les informations importantes à connaître afin d’effectuer avec succès des appels vers l’API [!DNL Schema Registry] Cela inclut votre `{TENANT_ID}`, le concept de « conteneurs » et les en-têtes requis pour effectuer des requêtes (avec une attention particulière à l’en-tête et à ses valeurs possibles).[!DNL Accept]
 
@@ -232,7 +232,7 @@ Une réponse réussie renvoie les détails du nouveau groupe de champs créé.
 | --- | --- |
 | `$id` | Identifiant unique généré par le système et en lecture seule du nouveau groupe de champs. Il prend la forme d’un URI. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Enregistrez la variable `$id` URI du groupe de champs à utiliser à l’étape suivante de l’ajout du groupe de champs au schéma source.
 
@@ -250,7 +250,7 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 | --- | --- |
 | `{SCHEMA_ID}` | L’URI `$id` encodé URL ou `meta:altId` du schéma source. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Requête**
 
@@ -281,7 +281,7 @@ curl -X PATCH \
 | `path` | Le chemin d’accès au champ de schéma où la nouvelle ressource sera ajoutée. Lors de l’ajout de groupes de champs aux schémas, la valeur doit être &quot;/allOf/-&quot;. |
 | `value.$ref` | Le `$id` du groupe de champs à ajouter. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Réponse**
 
@@ -385,7 +385,7 @@ curl -X POST \
 | `sourceProperty` | Le chemin d’accès au champ dans le schéma source qui sera utilisé pour faire référence à l’identité Principale du schéma de référence. |
 | `xdm:identityNamespace` | L’espace de noms d’identité du champ de référence. Il doit s’agir du même espace de noms que l’identité Principale du schéma de référence. Pour plus d’informations, voir [Présentation des espaces de noms d’identité](../../identity-service/home.md). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Réponse**
 
@@ -446,7 +446,7 @@ curl -X POST \
 | `xdm:destinationVersion` | Numéro de version du schéma de référence. |
 | `xdm:destinationProperty` | Le chemin d’accès au champ d’identité Principal dans le schéma de référence. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Réponse
 

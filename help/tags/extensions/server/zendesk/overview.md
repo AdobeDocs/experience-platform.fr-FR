@@ -4,8 +4,8 @@ description: Extension de transfert d’événement Zendesk pour Adobe Experien
 exl-id: 22e94699-5b84-4a73-b007-557221d3e223
 source-git-commit: bfbad3c11df64526627e4ce2d766b527df678bca
 workflow-type: tm+mt
-source-wordcount: '1286'
-ht-degree: 98%
+source-wordcount: '1271'
+ht-degree: 100%
 
 ---
 
@@ -26,7 +26,7 @@ Vous devez également rassembler les détails suivants pour votre configuration 
 | Sous-domaine | Lors du processus d’enregistrement, un **sous-domaine** unique est créé spécifiquement pour le compte. Reportez-vous à la [documentation Zendesk](https://developer.zendesk.com/documentation/ticketing/working-with-oauth/creating-and-using-oauth-tokens-with-the-api/) pour plus d’informations. | `xxxxx.zendesk.com` (où `xxxxx` est la valeur fournie lors de la création du compte) |
 | Jeton API | Zendesk utilise des jetons porteur comme mécanisme d’authentification pour communiquer avec l’API Zendesk. Après vous être connecté au portail Zendesk, générez un jeton API. Reportez-vous à la [documentation Zendesk](https://support.zendesk.com/hc/en-us/articles/4408889192858-Generating-a-new-API-token) pour plus d’informations. | `cwWyOtHAv12w4dhpiulfe9BdZFTz3OKaTSzn2QvV` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Enfin, vous devez créer un secret de transfert d’événement pour le jeton API. Définissez le type de secret sur **[!UICONTROL Jeton]**, puis définissez la valeur sur le jeton API que vous avez collecté à partir de votre configuration Zendesk. Reportez-vous à la documentation relative aux [secrets du transfert d’événement](../../../ui/event-forwarding/secrets.md) pour plus d’informations sur la configuration des secrets.
 
@@ -54,7 +54,7 @@ Sous **[!UICONTROL Domaine de Zendesk]**, saisissez la valeur de votre sous-doma
 
 ## Configurer une règle de transfert d’événement
 
-Commencez à créer une [règle](../../../ui/managing-resources/rules.md) de transfert d’événement et configurez ses conditions selon vos besoins. Lors de la sélection des actions de la règle, sélectionnez l’événement [!UICONTROL Zendesk] , puis sélectionnez la variable [!UICONTROL Créer un événement] type d’action.
+Commencez à créer une [règle](../../../ui/managing-resources/rules.md) de transfert d’événement et configurez ses conditions selon vos besoins. Lors de la sélection des actions de la règle, cliquez sur l’extension [!UICONTROL Zendesk], puis sélectionnez le type d’action [!UICONTROL Créer un événement].
 
 ![Définir une règle](../../../images/extensions/server/zendesk/rule.png)
 
@@ -78,7 +78,7 @@ Les clés suivantes peuvent être référencées dans l’objet `event` lors du 
 | `created_at` | Chaîne | `arc.event.xdm.timestamp` | Un horodatage ISO-8601 indiquant l’heure à laquelle l’événement a été créé. | Non | (S/O) |
 | `properties` | Objet | `arc.event.xdm._extconndev.EventProperties` | Un objet JSON personnalisé contenant des détails sur l’événement. | Oui | (S/O) |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >
@@ -99,7 +99,7 @@ Les clés suivantes peuvent être référencées dans l’objet `profile` lors d
 | `identifiers` | Tableau | `arc.event.xdm._extconndev.identifiers` | Un tableau contenant au moins un identifiant. Chaque identifiant se compose d’un type et d’une valeur. | Oui | Reportez-vous à la [documentation Zendesk](https://developer.zendesk.com/api-reference/custom-data/profiles_api/profiles_api/#identifiers-array) pour plus d’informations sur le tableau `identifiers`. Tous les champs et valeurs doivent être uniques. |
 | `attributes` | Objet | `arc.event.xdm._extconndev.attrbutes` | Objet contenant des propriétés définies par l’utilisateur à propos de la personne. | Non | Reportez-vous à la [documentation Zendesk](https://developer.zendesk.com/documentation/custom-data/profiles/anatomy-of-a-profile/#attributes) pour plus d’informations sur les attributs de profil. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Valider des données dans Zendesk {#validate}
 
@@ -125,7 +125,7 @@ En fonction du type de compte, le Zendesk [!DNL Events API] peut gérer le nombr
 | [!DNL Enterprise] | 750 |
 | [!DNL Enterprise Plus] | 1000 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Reportez-vous à la [documentation Zendesk](https://developer.zendesk.com/api-reference/ticketing/account-configuration/usage_limits/#:~:text=API%20requests%20made%20by%20Zendesk%20apps%20are%20subject,sources%20for%20the%20account%2C%20including%20internal%20product%20requests.) pour plus d’informations sur ces limites.
 
@@ -141,7 +141,7 @@ Lors de l’utilisation ou de la configuration de l’extension, les erreurs ci-
 | 403 | **Autorisations insuffisantes :** cette erreur se produit lorsque des autorisations suffisantes pour accéder à la ressource ne sont pas fournies. | Vérifiez que les autorisations requises ont été fournies. | `{"error": [{"code":"PermissionDenied","title": "Insufficient permisssions to perform operation"}]}` |
 | 429 | **Trop de requêtes :** Cette erreur se produit lorsque la limite d’enregistrement de l’objet de point d’entrée a été dépassée. | Reportez-vous à la section ci-dessus sur les [limites de requête](#limits) pour plus d’informations sur les seuils par limite. | `{"error": [{"code":"TooManyRequests","title": "Too Many Requests"}]}` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Étapes suivantes
 

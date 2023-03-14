@@ -6,8 +6,8 @@ description: En savoir plus sur les fonctionnalités d’accessibilité généra
 exl-id: 4b7e2f2b-af51-4376-8a63-16c921cc7135
 source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '484'
+ht-degree: 100%
 
 ---
 

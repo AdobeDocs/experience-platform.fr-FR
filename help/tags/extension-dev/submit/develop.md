@@ -39,7 +39,7 @@ Il existe également un certain nombre d’outils npm pour vous aider à dévelo
 * Lʼ[outil Tag Extension Scaffold](https://www.npmjs.com/package/@adobe/reactor-scaffold) vous aide à créer facilement un projet de démarrage sur votre ordinateur local.
 * [Tag Extension Sandbox](https://www.npmjs.com/package/@adobe/reactor-sandbox) vous aide à valider vos vues et modules dʼextension sur votre ordinateur local.
 * [Tag Extension Packager](https://www.npmjs.com/package/@adobe/reactor-packager) est un utilitaire de ligne de commande permettant de transformer une extension de balise en fichier zip.
-* [Tag Extension Uploader](https://www.npmjs.com/package/@adobe/reactor-uploader) est un outil interactif de ligne de commande qui vous permet de saisir les informations dʼidentification de votre compte technique et de télécharger votre module dʼextension vers les balises.
+* [Tag Extension Uploader](https://www.npmjs.com/package/@adobe/reactor-uploader) est un outil interactif de ligne de commande qui vous permet de saisir les informations dʼidentification de votre compte technique et de télécharger votre package dʼextension vers les balises.
 * [Tag Extension Releaser](https://www.npmjs.com/package/@adobe/reactor-releaser) est un outil de ligne de commande interactif qui vous permet de déployer votre extension pour une disponibilité privée.
 
 ## Exemples d’extensions

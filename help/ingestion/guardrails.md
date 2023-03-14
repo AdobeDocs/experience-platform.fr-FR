@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform;dépannage;barrières de sécurité;conseils;
-title: Barrières de sécurité pour l’ingestion des données
-description: Ce document fournit des conseils sur les barrières de sécurité pour l’ingestion de données dans Adobe Experience Platform.
+keywords: Experience Platform;dépannage;mécanismes de sécurisation;conseils;
+title: Mécanismes de sécurisation pour l’ingestion des données
+description: Ce document fournit des conseils sur les mécanismes de sécurisation pour l’ingestion de données dans Adobe Experience Platform.
 exl-id: f07751cb-f9d3-49ab-bda6-8e6fec59c337
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
@@ -10,15 +10,15 @@ ht-degree: 98%
 
 ---
 
-# Barrières de sécurité pour l’ingestion des données
+# Mécanismes de sécurisation pour l’ingestion des données
 
-Les barrières de sécurité sont des seuils qui fournissent des conseils pour l’utilisation des données et du système, l’optimisation des performances et la prévention des erreurs ou des résultats inattendus dans Adobe Experience Platform. Les barrières de sécurité peuvent faire référence à l’utilisation ou la consommation de données et de traitement par rapport à vos droits de licence.
+Les mécanismes de sécurisation sont des seuils qui fournissent des conseils pour l’utilisation des données et du système, l’optimisation des performances et la prévention des erreurs ou des résultats inattendus dans Adobe Experience Platform. Les mécanismes de sécurisation peuvent faire référence à l’utilisation ou la consommation de données et de traitement par rapport à vos droits de licence.
 
-Ce document fournit des conseils sur les barrières de sécurité pour l’ingestion de données dans Adobe Experience Platform.
+Ce document fournit des conseils sur les mécanismes de sécurisation pour l’ingestion de données dans Adobe Experience Platform.
 
-## Barrières de sécurité pour l’ingestion par lots
+## Mécanismes de sécurisation pour l’ingestion par lots
 
-Le tableau suivant décrit les barrières de sécurité à prendre en compte lors de l’utilisation de l’[API d’ingestion par lots](./batch-ingestion/overview.md) ou de sources :
+Le tableau suivant décrit les mécanismes de sécurisation à prendre en compte lors de l’utilisation de l’[API d’ingestion par lots](./batch-ingestion/overview.md) ou de sources :
 
 | Type d’ingestion | Instructions | Notes |
 | --- | --- | --- |
@@ -27,9 +27,9 @@ Le tableau suivant décrit les barrières de sécurité à prendre en compte lor
 | Ingestion par lots vers le profil | <ul><li>Vous pouvez ingérer jusqu’à 120 Go de données par heure.</li><li>La taille maximale d’une classe d’enregistrement est de 100 Ko (soft).</li><li>La taille maximale d’une classe ExperienceEvent est de 10 Ko (soft).</li><li>La taille maximale d’un seul enregistrement est de 1 Mo.</li></ul> |
 | Nombre de lots Profile ou ExperienceEvent ingérés par jour | **Le nombre maximal de lots Profile ou ExperienceEvent ingérés par jour est de 90.** Cela signifie que le total combiné des lots Profile et ExperienceEvent ingérés chaque jour ne peut pas dépasser 90. L’ingestion de lots supplémentaires affectera les performances du système. | C’est une limite conditionnelle. Limite conditionnelle : il est possible d’aller au-delà d’une limite conditionnelle. Cependant, ces limites fournissent une orientation recommandée pour les performances du système. |
 
-## Barrières de sécurité pour l’ingestion en flux continu
+## Mécanismes de sécurisation pour l’ingestion en flux continu
 
-Le tableau suivant décrit les barrières de sécurité à prendre en compte lors de l’utilisation de l’[API d’ingestion en flux continu](./streaming-ingestion/overview.md) ou sources en flux continu :
+Le tableau suivant décrit les mécanismes de sécurisation à prendre en compte lors de l’utilisation de l’[API d’ingestion en flux continu](./streaming-ingestion/overview.md) ou sources en flux continu :
 
 | Type d’ingestion | Instructions | Notes |
 | --- | --- | --- |
@@ -38,7 +38,7 @@ Le tableau suivant décrit les barrières de sécurité à prendre en compte lor
 
 ## Étapes suivantes
 
-Pour plus d’informations sur les barrières de sécurité des données et du traitement dans Experience Platform, consultez la documentation suivante :
+Pour plus d’informations sur les mécanismes de sécurisation des données et du traitement dans Experience Platform, consultez la documentation suivante :
 
 * [Barrières de sécurité pour les données Real-time Customer Profile](../profile/guardrails.md)
-* [Barrières de sécurité pour les données Identity Service](../identity-service/guardrails.md)
+* [Mécanismes de sécurisation pour les données Identity Service](../identity-service/guardrails.md)

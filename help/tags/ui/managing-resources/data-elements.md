@@ -260,5 +260,5 @@ Voici quelques cas d’utilisation courants :
 Vous devez créer des éléments de données personnalisés supplémentaires si vous avez déjà utilisé l’un des éléments de données suivants :
 
 * URI
-* Protocole
+* Protocol
 * Hostname
