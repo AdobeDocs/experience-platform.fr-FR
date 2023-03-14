@@ -4,9 +4,9 @@ user-guide-title: Guide des destinations
 user-guide-description: Activez vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
 description: Ce document répertorie la table des matières des destinations Adobe Experience Platform
 feature: Destinations
-source-git-commit: 0dbd050a9057f491537777ab539bfc687f8c89cb
+source-git-commit: 09f7a3f4c1fde5d12f91308342f2c44f67ff961b
 workflow-type: tm+mt
-source-wordcount: '1037'
+source-wordcount: '1039'
 ht-degree: 97%
 
 ---
@@ -122,6 +122,7 @@ ht-degree: 97%
       * [Connexion CRM à Salesforce](./catalog/crm/salesforce.md)
       * [Connexion à Microsoft Dynamics 365](./catalog/crm/microsoft-dynamics-365.md)
       * [Connexion sortante](catalog/crm/outreach.md)
+      * [Connexion Zendesk](catalog/crm/zendesk.md)
    * Destinations Data Management Platform {#data-management}
       * [Destinations Data Management Platform (DMP)](./catalog/data-management/overview.md)
       * [Extension Audience Manager DIL](./catalog/data-management/aam-dil-extension.md)
