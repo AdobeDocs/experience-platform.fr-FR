@@ -3,10 +3,10 @@ keywords: flux en continu; destination HTTP
 title: Connexion API HTTP
 description: Utilisez la destination API HTTP dans Adobe Experience Platform pour envoyer des données de profil vers un point d’entrée HTTP tiers afin d’exécuter vos propres analyses ou toute autre opération dont vous pourriez avoir besoin sur les données de profil exportées hors d’Experience Platform.
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 01e4a32222bb94ab87751b2375ad616e5b5c0738
+source-git-commit: b6d7ae987bbc97b3f58bd10ef181145ae89aa63e
 workflow-type: tm+mt
-source-wordcount: '2535'
-ht-degree: 91%
+source-wordcount: '2436'
+ht-degree: 95%
 
 ---
 
@@ -158,7 +158,7 @@ Si vous sélectionnez le type d’authentification **[!UICONTROL Informations d�
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_includesegmenttimestamps"
 >title="Inclure la date et l’heure de segment"
->abstract="Activez ce bouton si vous souhaitez que l’exportation de données inclue la date et l’heure UNIX de la création et des mises à jour des segments, ainsi que la date et l’heure UNIX du mappage des segments à la destination pour l’activation. Consultez la documentation pour un exemple d’exportation de données avec cette option sélectionnée.<p>contenu de la première puce</p><p>contenu de la seconde puce</p><ul><li>Article 1 de la liste.</li><li>Elément de liste 2.</li></ul> - Plus de lignes de texte. - Encore plus de lignes de texte. Test de mise en forme pour voir si nous pouvons : <br>Utiliser le formatage des HTMLS</p><p>Vous pouvez également utiliser des balises de paragraphe. Il s’agit de la première ligne.</p><p>Et d’autres balises de paragraphe, pour la deuxième ligne.</p><p>Toutes les balises de paragraphe. Pour la ligne 3.</p>Enfin un test pour inclure des liens avec Markdown [https://experienceleague.adobe.com/docs/experience-platform/destinations/home.html](lien absolu) et HTML <a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/home.html?lang=fr">texte du lien</a> Syntaxe.Enfin, un test pour inclure des liens avec Markdown [../overview.md](liens relatifs) et HTML <a href="../overview.md">texte du lien relatif</a> syntaxe."
+>abstract="Activez ce bouton si vous souhaitez que l’exportation de données inclue la date et l’heure UNIX de la création et des mises à jour des segments, ainsi que la date et l’heure UNIX du mappage des segments à la destination pour l’activation. Consultez la documentation pour un exemple d’exportation de données avec cette option sélectionnée."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_queryparameters"
