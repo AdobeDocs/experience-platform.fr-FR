@@ -5,9 +5,9 @@ title: Expiration des données de profil pseudonyme
 description: Ce document fournit des conseils généraux sur la configuration de l’expiration des données pour les profils pseudonymes dans Adobe Experience Platform.
 hide: true
 hidefromtoc: true
-source-git-commit: ab5eb1e7a3f2c20efcb44b1699a5938f6d54fa04
+source-git-commit: 6ba219162f6fde37d8bd258c43ed1bdbbbcdf569
 workflow-type: tm+mt
-source-wordcount: '885'
+source-wordcount: '875'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,6 @@ L’expiration des données de profil pseudonyme ne peut pas être configurée v
 - Les espaces de noms d’identité à prendre en compte pour le profil pseudonyme suppriment.
    - Par exemple : `ECID` uniquement, `AAID` uniquement ou une combinaison de `ECID` et `AAID`.
 - Le temps d’attente avant la suppression d’un profil pseudonyme. La recommandation par défaut pour les clients est de 14 jours. Cependant, cette valeur peut varier en fonction de votre cas d’utilisation.
-- Nombre de profils actuels par rapport au nombre de profils de licence.
 
 ## Questions fréquentes {#faq}
 
