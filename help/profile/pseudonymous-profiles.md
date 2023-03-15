@@ -5,9 +5,9 @@ title: Expiration des données de profil pseudonyme
 description: Ce document fournit des conseils généraux sur la configuration de l’expiration des données pour les profils pseudonymes dans Adobe Experience Platform.
 hide: true
 hidefromtoc: true
-source-git-commit: a6173860adda4bd71c94750e5cce6dd4cbe820c6
+source-git-commit: ab5eb1e7a3f2c20efcb44b1699a5938f6d54fa04
 workflow-type: tm+mt
-source-wordcount: '886'
+source-wordcount: '885'
 ht-degree: 0%
 
 ---
@@ -17,8 +17,8 @@ ht-degree: 0%
 
 Dans Adobe Experience Platform, un profil est pris en compte pour l’expiration des données pseudonymes s’il répond aux conditions suivantes :
 
-- Les types d’identité du profil assemblé correspondent à ce que le client a spécifié comme type d’identité pseudonyme ou inconnu.
-   - Par exemple, si le type d’identité du profil est `ECID`, `GAID`ou `AAID`. Le profil assemblé ne comporte aucun identifiant provenant d’un autre type d’identité. Dans cet exemple, un profil assemblé effectue les opérations suivantes : **not** posséder une identité de courrier électronique ou de gestion de la relation client.
+- Les espaces de noms d’identité du profil assemblé correspondent à ce que le client a spécifié comme espace de noms d’identité pseudonyme ou inconnu.
+   - Par exemple, si l’espace de noms d’identité du profil est `ECID`, `GAID`ou `AAID`. Le profil assemblé ne comporte aucun identifiant provenant d’un autre espace de noms d’identité. Dans cet exemple, un profil assemblé effectue les opérations suivantes : **not** posséder une identité de courrier électronique ou de gestion de la relation client.
 - Aucune activité n’a eu lieu au cours d’une période définie par l’utilisateur. L’activité est définie par les événements d’expérience ingérés ou les mises à jour des attributs de profil initiées par le client.
    - Par exemple, un nouvel événement de page vue ou une nouvelle mise à jour d’attribut de page est considéré comme une activité. Cependant, une mise à jour de l’adhésion au segment non initiée par l’utilisateur est **not** considérée comme une activité. Actuellement, pour calculer l’expiration des données, le suivi au niveau du profil est basé sur le moment de l’ingestion.
 
@@ -26,7 +26,7 @@ Dans Adobe Experience Platform, un profil est pris en compte pour l’expiration
 
 L’expiration des données de profil pseudonyme ne peut pas être configurée via l’interface utilisateur de Platform ou les API. Pour activer cette fonctionnalité, vous devez plutôt contacter l’assistance technique. Lorsque vous contactez l’assistance, incluez les informations suivantes :
 
-- Les types d&#39;identité à prendre en compte pour les suppressions de profil Pseudonyme.
+- Les espaces de noms d’identité à prendre en compte pour le profil pseudonyme suppriment.
    - Par exemple : `ECID` uniquement, `AAID` uniquement ou une combinaison de `ECID` et `AAID`.
 - Le temps d’attente avant la suppression d’un profil pseudonyme. La recommandation par défaut pour les clients est de 14 jours. Cependant, cette valeur peut varier en fonction de votre cas d’utilisation.
 - Nombre de profils actuels par rapport au nombre de profils de licence.
@@ -37,10 +37,10 @@ La section suivante répertorie les questions fréquentes sur l’expiration des
 
 ### Quels utilisateurs doivent utiliser l’expiration des données de profils pseudonymes ?
 
-- Si vous utilisez une source de diffusion en continu qui envoie directement des données à Platform.
+- Si vous utilisez le SDK Web pour envoyer directement des données à Platform.
 - Si vous disposez d’un site web qui diffuse en masse des clients non authentifiés.
-- Si vos jeux de données contiennent un nombre de profils excessif et que vous avez confirmé que ce nombre excessif de profils est dû à un type d’identité basé sur des cookies anonymes.
-   - Pour le déterminer, vous devez utiliser le rapport de chevauchement des types d’identité. Vous trouverez plus d’informations sur ce rapport dans la section [section de rapport sur les chevauchements d’identités](./api/preview-sample-status.md#identity-overlap-report) de l’exemple de guide d’API d’état de l’aperçu.
+- Si vos jeux de données contiennent un nombre excessif de profils et que vous avez confirmé que ce nombre excessif de profils est dû à un espace de noms d’identité basé sur des cookies anonymes.
+   - Pour le déterminer, vous devez utiliser le rapport de chevauchement des espaces de noms d’identité. Vous trouverez plus d’informations sur ce rapport dans la section [section de rapport sur les chevauchements d’identités](./api/preview-sample-status.md#identity-overlap-report) de l’exemple de guide d’API d’état de l’aperçu.
 
 ### Quels sont les avertissements que vous devez connaître avant d’utiliser l’expiration des données de profils pseudonymes ?
 
@@ -62,9 +62,9 @@ L’expiration des données de profil anonyme fonctionne sur un **sandbox** nive
 
 #### Types d’identité
 
-L’expiration des données d’événement d’expérience supprime les événements **only** selon l’horodatage de l’enregistrement d’événement. Les types d’identité inclus sont les suivants : **ignored** à des fins d’expiration.
+L’expiration des données d’événement d’expérience supprime les événements **only** selon l’horodatage de l’enregistrement d’événement. Les espaces de noms d’identité inclus sont les suivants : **ignored** à des fins d’expiration.
 
-Expiration des données de profil pseudonyme **only** prend en compte les profils qui comportent des graphiques d’identités qui contiennent des types d’identités sélectionnés par le client, tels que `ECID`, `AAID`ou d’autres types de cookies. Si le profil contient **any** type d’identité supplémentaire qui était **not** dans la liste sélectionnée du client, le profil effectue les opérations suivantes : **not** être supprimées.
+Expiration des données de profil pseudonyme **only** prend en compte les profils qui comportent des graphiques d’identités qui contiennent des espaces de noms d’identité sélectionnés par le client, tels que `ECID`, `AAID`ou d’autres types de cookies. Si le profil contient **any** espace de noms d’identité supplémentaire qui était **not** dans la liste sélectionnée du client, le profil effectue les opérations suivantes : **not** être supprimées.
 
 #### Éléments supprimés
 
