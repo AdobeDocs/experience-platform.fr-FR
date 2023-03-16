@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Application automatique des stratégies
 description: Ce document présente l’application automatique des stratégies d’utilisation de données lors de l’activation de segments vers des destinations dans Experience Platform.
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-source-git-commit: 30d8cc73128cff444ce06a8ab913aeb8fa816ed1
+source-git-commit: d0113390f49ba7ba7ecbbc40bdcd750a26040006
 workflow-type: tm+mt
 source-wordcount: '1887'
 ht-degree: 97%
@@ -119,7 +119,7 @@ Si vous avez [créé des politiques de consentement](../policies/user-guide.md#c
 
 #### Amélioration de la stratégie de consentement pour les médias achetés {#consent-policy-enhancement}
 
-Amélioration de l’application de la stratégie de consentement sur les destinations de lot et de diffusion en continu, y compris les activations de médias payants. Cette amélioration est disponible pour les clients de Privacy and Security Shield ou de Healthcare Shield, et supprime de manière proactive les profils des destinations par lots et par flux à mesure que l’état du consentement change. Elle garantit également que les modifications du consentement sont propagées immédiatement afin que la bonne audience soit toujours ciblée.
+Amélioration de l’application de la stratégie de consentement sur [batch](../../destinations/destination-types.md#file-based) et [diffusion en continu](../../destinations/destination-types.md#streaming-destinations) des destinations, y compris des activations de médias payants, ont été effectuées. Cette amélioration est disponible pour les clients de Privacy and Security Shield ou de Healthcare Shield, et supprime de manière proactive les profils des destinations par lots et par flux à mesure que l’état du consentement change. Elle garantit également que les modifications du consentement sont propagées immédiatement afin que la bonne audience soit toujours ciblée.
 
 Ces améliorations permettent une plus grande confiance dans votre stratégie marketing, car elles éliminent la nécessité pour les spécialistes marketing d’ajouter manuellement des attributs de consentement à l’expression de leur segment. Cela permet de s’assurer qu’aucun profil n’est ciblé par inadvertance pour une expérience marketing une fois que le consentement a été retiré ou qu’il n’est plus éligible pour une politique de consentement. Les politiques de consentement marketing qui définissent les règles de gestion des données de consentement ou de préférence dans divers workflows marketing sont désormais automatiquement appliquées dans les workflows d’activation dans les solutions en aval.
 
