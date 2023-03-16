@@ -1,38 +1,38 @@
 ---
-title: Obsolescence d’un champ XDM dans l’API
-description: Découvrez comment abandonner les champs de modèle de données d’expérience (XDM) dans l’API Schema Registry.
+title: Rendre obsolète un champ XDM dans l’API
+description: Découvrez comment rendre obsolètes les champs de modèle de données d’expérience (XDM) dans l’API Schema Registry.
 exl-id: e49517c4-608d-4e05-8466-75724ca984a8
 source-git-commit: f9f783b75bff66d1bf3e9c6d1ed1c543bd248302
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '588'
-ht-degree: 10%
+ht-degree: 100%
 
 ---
 
-# Obsolescence d’un champ XDM dans l’API
+# Rendre obsolète un champ XDM dans l’API
 
-Dans le modèle de données d’expérience (XDM), vous pouvez abandonner un champ dans un schéma ou une ressource personnalisée à l’aide de la variable [API Schema Registry](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). En cas d’obsolescence d’un champ, il est masqué dans les interfaces utilisateur en aval, telles que la fonction [!UICONTROL Profils] workspace et Customer Journey Analytics, mais il s’agit d’une modification constante qui n’a pas d’incidence négative sur les flux de données existants.
+Dans le modèle de données d’expérience (XDM), vous pouvez rendre obsolète un champ dans un schéma ou une ressource personnalisée à l’aide de l’[API Schema Registry](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). En cas d’obsolescence d’un champ, il est masqué dans les IU en aval, telles que l’espace de travail des [!UICONTROL Profils] et Customer Journey Analytics, mais il s’agit d’une modification sans rupture qui n’a pas d’incidence négative sur les flux de données existants.
 
-Ce document explique comment abandonner les champs pour différentes ressources XDM. Pour savoir comment abandonner un champ XDM à l’aide de l’éditeur de schémas dans l’interface utilisateur de l’Experience Platform, consultez le tutoriel sur [abandon d’un champ XDM dans l’interface utilisateur](./field-deprecation-ui.md).
+Ce document explique comment rendre obsolètes les champs pour différentes ressources XDM. Pour savoir comment rendre obsolète un champ XDM à l’aide de l’éditeur de schémas dans l’IU d’Experience Platform, consultez le tutoriel sur l’[obsolescence d’un champ XDM dans l’IU](./field-deprecation-ui.md).
 
 ## Prise en main
 
-Ce tutoriel nécessite des appels à l’API Schema Registry. Veuillez consulter la section [guide de développement](../api/getting-started.md) pour obtenir des informations importantes à connaître afin d’effectuer ces appels d’API. Cela inclut votre `{TENANT_ID}`, le concept de « conteneurs » et les en-têtes requis pour effectuer des requêtes (avec une attention particulière à l’en-tête et à ses valeurs possibles).`Accept`
+Ce tutoriel nécessite d’effectuer des appels à l’API Schema Registry. Consultez le [guide de développement](../api/getting-started.md) pour obtenir des informations importantes que vous devez connaître pour effectuer ces appels API. Cela inclut votre `{TENANT_ID}`, le concept de « conteneurs » et les en-têtes requis pour effectuer des requêtes (avec une attention particulière à l’en-tête `Accept` et à ses valeurs possibles).
 
-## Obsolescence d’un champ personnalisé {#custom}
+## Rendre obsolète un champ personnalisé {#custom}
 
-Pour abandonner un champ dans une classe personnalisée, un groupe de champs ou un type de données personnalisé, mettez à jour la ressource personnalisée par le biais d’une requête de PUT ou de PATCH et ajoutez l’attribut . `meta:status: deprecated` sur le champ en question.
+Pour rendre obsolète un champ dans une classe, un groupe de champs ou un type de données personnalisés, mettez à jour la ressource personnalisée par le biais d’une requête PUT ou PATCH et ajoutez l’attribut `meta:status: deprecated` au champ en question.
 
 >[!NOTE]
 >
->Pour obtenir des informations générales sur la mise à jour des ressources personnalisées dans XDM, consultez la documentation suivante :
+>Pour obtenir des informations générales sur la mise à jour des ressources personnalisées dans XDM, consultez la documentation suivante :
 >
 >* [Mettre à jour une classe](../api/classes.md#patch)
 >* [Mettre à jour un groupe de champs](../api/field-groups.md#patch)
->* [Mise à jour d’un type de données](../api/data-types.md#patch)
+>* [Mettre à jour un type de données](../api/data-types.md#patch)
 
 
-L’exemple d’appel API ci-dessous rend obsolète un champ dans un type de données personnalisé.
+L’exemple d’appel API ci-dessous rend obsolète un champ dans un type de données personnalisées.
 
 **Format d’API**
 
@@ -42,7 +42,7 @@ PATCH /tenant/datatypes/{DATA_TYPE_ID}
 
 **Requête**
 
-La requête suivante rend obsolète le `expansionArea` champ d’un type de données qui décrit une propriété de l’emplacement.
+La requête suivante rend obsolète le champ `expansionArea` d’un type de données qui décrit une propriété immobilière.
 
 ```shell
 curl -X PATCH \
@@ -63,7 +63,7 @@ curl -X PATCH \
 
 **Réponse**
 
-Une réponse réussie renvoie les détails de mise à jour de la ressource personnalisée, avec le champ obsolète contenant un `meta:status` valeur de `deprecated`. La réponse ci-dessous a été réduite pour gagner de l’espace.
+Une réponse réussie renvoie les détails de mise à jour de la ressource personnalisée, avec le champ obsolète contenant une valeur `meta:status` de `deprecated`. La réponse ci-dessous a été réduite pour gagner de l’espace.
 
 ```json
 {
@@ -163,13 +163,13 @@ Une réponse réussie renvoie les détails de mise à jour de la ressource perso
 }
 ```
 
-## Obsolescence d’un champ standard dans un schéma {#standard}
+## Rendre obsolète un champ standard dans un schéma {#standard}
 
-Les champs des classes standard, des groupes de champs et des types de données ne peuvent pas être directement obsolètes. À la place, vous pouvez abandonner leur utilisation dans les schémas individuels qui utilisent ces ressources standard à l’aide d’un descripteur.
+Les champs des classes, des groupes de champs et des types de données standard ne peuvent pas être directement rendus obsolètes. À la place, vous pouvez rendre obsolète leur utilisation dans les schémas individuels qui utilisent ces ressources standard à l’aide d’un descripteur.
 
-### Création d’un descripteur d’obsolescence de champ {#create-descriptor}
+### Créer un descripteur d’obsolescence de champ {#create-descriptor}
 
-Pour créer un descripteur pour les champs de schéma que vous souhaitez rendre obsolètes, envoyez une requête de POST au `/tenant/descriptors` point de terminaison .
+Pour créer un descripteur pour les champs de schéma que vous souhaitez rendre obsolètes, envoyez une requête POST au point d’entrée `/tenant/descriptors`.
 
 **Format d’API**
 
@@ -197,10 +197,10 @@ curl -X POST \
 
 | Propriété | Description |
 | --- | --- |
-| `@type` | Type de descripteur. Pour un descripteur d’obsolescence de champ, cette valeur doit être définie sur `xdm:descriptorDeprecated`. |
-| `xdm:sourceSchema` | L’URI `$id` du schéma auquel vous appliquez le descripteur. |
-| `xdm:sourceVersion` | Version du schéma auquel vous appliquez le descripteur. Doit être défini sur `1`. |
-| `xdm:sourceProperty` | Le chemin d’accès à la propriété dans le schéma auquel vous appliquez le descripteur. Si vous souhaitez appliquer le descripteur à plusieurs propriétés, vous pouvez fournir une liste de chemins sous la forme d’un tableau (par exemple, `["/firstName", "/lastName"]`). |
+| `@type` | Le type de descripteur. Pour un descripteur d’obsolescence de champ, cette valeur doit être définie sur `xdm:descriptorDeprecated`. |
+| `xdm:sourceSchema` | L’`$id` de l’URI du schéma auquel vous appliquez le descripteur. |
+| `xdm:sourceVersion` | La version du schéma auquel vous appliquez le descripteur. Doit être définie sur `1`. |
+| `xdm:sourceProperty` | Le chemin d’accès à la propriété dans le schéma auquel vous appliquez le descripteur. Si vous souhaitez appliquer le descripteur à plusieurs propriétés, vous pouvez fournir une liste de chemins d’accès sous la forme d’un tableau (par exemple, `["/firstName", "/lastName"]`). |
 
 **Réponse**
 
@@ -219,9 +219,9 @@ curl -X POST \
 }
 ```
 
-### Vérification du champ obsolète {#verify-deprecation}
+### Vérifier le champ obsolète {#verify-deprecation}
 
-Une fois le descripteur appliqué, vous pouvez vérifier si le champ a été abandonné en recherchant le schéma en question tout en utilisant la variable `Accept` en-tête .
+Une fois le descripteur appliqué, vous pouvez vérifier si le champ est obsolète en recherchant le schéma en question tout en utilisant l’en-tête `Accept` approprié.
 
 >[!NOTE]
 >
@@ -235,7 +235,7 @@ GET /tenant/schemas
 
 **Requête**
 
-Pour inclure des informations sur les champs obsolètes dans la réponse de l’API, vous devez définir la variable `Accept` en-tête à `application/vnd.adobe.xed-deprecatefield+json; version=1`.
+Pour inclure des informations sur les champs obsolètes dans la réponse API, vous devez définir l’en-tête `Accept` sur `application/vnd.adobe.xed-deprecatefield+json; version=1`.
 
 ```shell
 curl -X GET \
@@ -249,7 +249,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie les détails du schéma, avec le champ obsolète contenant un `meta:status` valeur de `deprecated`. La réponse ci-dessous a été réduite pour gagner de l’espace.
+Une réponse réussie renvoie les détails du schéma, avec le champ obsolète contenant une valeur `meta:status` de `deprecated`. La réponse ci-dessous a été réduite pour gagner de l’espace.
 
 ```json
 "faxPhone": {
@@ -266,4 +266,4 @@ Une réponse réussie renvoie les détails du schéma, avec le champ obsolète c
 
 ## Étapes suivantes
 
-Ce document explique comment abandonner les champs XDM à l’aide de l’API Schema Registry. Pour plus d’informations sur la configuration des champs pour les ressources personnalisées, consultez le guide sur [définition des champs XDM dans l’API](./custom-fields-api.md). Pour plus d’informations sur la gestion des descripteurs, voir [guide de point de terminaison des descripteurs](../api/descriptors.md).
+Ce document explique comment rendre obsolètes les champs XDM à l’aide de l’API Schema Registry. Pour plus d’informations sur la configuration des champs pour les ressources personnalisées, consultez le guide sur la [définition des champs XDM dans l’API](./custom-fields-api.md). Pour plus d’informations sur la gestion des descripteurs, consultez le [guide de point d’entrée des descripteurs](../api/descriptors.md).
