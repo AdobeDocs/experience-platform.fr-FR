@@ -6,7 +6,7 @@ description: Les tableaux ci-dessous contiennent les mappages entre les champs d
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '952'
+source-wordcount: '922'
 ht-degree: 100%
 
 ---
@@ -133,7 +133,7 @@ Consultez la documentation relative à la [classe d’événement d’expérienc
 | `directMarketing.emailSent.testVariantName` | `directMarketing.emailSent.testVariantName` |
 | `directMarketing.emailSent.automationRunID` | `directMarketing.emailSent.automationRunID` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Programmes {#programs}
 
@@ -164,7 +164,7 @@ Lisez la [présentation de XDM Business Campaign](../../../../xdm/classes/b2b/bu
 | `endDate` | `campaignEndDate` |
 | `marketoIsDeleted` | `isDeleted` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Abonnements au programme {#program-memberships}
 
@@ -197,7 +197,7 @@ Lisez la [présentation des membres XDM Business Campaign](../../../../xdm/class
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
 | `marketoIsDeleted` | `isDeleted` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Sociétés {#companies}
 
@@ -229,7 +229,7 @@ Lisez la [présentation des comptes professionnels XDM](../../../../xdm/classes/
 | `iif(mktoCdpParentOrgId != null && mktoCdpParentOrgId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", concat(mktoCdpParentOrgId, ".mkto_org"), "sourceKey", concat(mktoCdpParentOrgId, ".mkto_org@${MUNCHKIN_ID}.Marketo")), null)` | `accountParentKey` |
 | `marketoIsDeleted` | `isDeleted` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Listes statiques {#static-lists}
 
@@ -247,7 +247,7 @@ Lisez la [présentation de la liste XDM Business Marketing](../../../../xdm/clas
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
 | `marketoIsDeleted` | `isDeleted` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Abonnements à des listes statiques {#static-list-memberships}
 
@@ -264,7 +264,7 @@ Lisez la [Présentation des membres de la liste XDM Business Marketing](../../
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `marketoIsDeleted` | `isDeleted` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Comptes désignés {#named-accounts}
 
@@ -296,7 +296,7 @@ Lisez la [Présentation des comptes professionnels XDM](../../../../xdm/classes/
 | `sourceType` | `accountSourceType` |
 | `marketoIsDeleted` | `isDeleted` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Opportunités {#opportunities}
 
@@ -333,7 +333,7 @@ Lisez la [Présentation des opportunités commerciales XDM](../../../../xdm/clas
 | `nextStep` | `nextStep` |
 | `marketoIsDeleted` | `isDeleted` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Rôles de contact d’opportunité {#opportunity-contact-roles}
 
@@ -354,7 +354,7 @@ Lisez la [Présentation de la relation Personne-opportunité commerciale XDM](..
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
 | `marketoIsDeleted` | `isDeleted` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Personnes {#persons}
 
@@ -412,7 +412,7 @@ Lisez la [Présentation du Profil individuel XDM](../../../../xdm/classes/indivi
 | `iif(mktoCdpCnvContactPersonId != null && mktoCdpCnvContactPersonId != \"\", to_object(\"sourceType\", \"Marketo\", \"sourceInstanceID\", \"${MUNCHKIN_ID}\", \"sourceID\", mktoCdpCnvContactPersonId, \"sourceKey\", concat(mktoCdpCnvContactPersonId,\"@${MUNCHKIN_ID}.Marketo\")), null)` | `b2b.convertedContactKey` | Il s’agit d’un champ calculé. |
 | `iif(mktoCdpCnvContactPersonId != null && mktoCdpCnvContactPersonId != \"\", to_object(\"sourceType\", \"Marketo\", \"sourceInstanceID\", \"${MUNCHKIN_ID}\", \"sourceID\", mktoCdpCnvContactPersonId, \"sourceKey\", concat(mktoCdpCnvContactPersonId,\"@${MUNCHKIN_ID}.Marketo\")), null)` | `personComponents.sourceConvertedContactKey` | Il s’agit d’un champ calculé. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >

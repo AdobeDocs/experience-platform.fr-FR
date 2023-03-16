@@ -1,12 +1,12 @@
 ---
 audience: user
 user-guide-title: Aide de l’espace de travail de science des données d’Adobe Experience Platform
-breadcrumb-title: Guide de l’espace de travail de science des données
+breadcrumb-title: Guide de Data Science Workspace
 user-guide-description: Utilisez le machine learning pour développer, entraîner et évaluer des modèles et des recettes avec des ordinateurs portables équipés d’Adobe Sensei et de JupyterLab.
 feature: Data Science Workspace
 solution: Experience Platform
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '236'
 ht-degree: 100%
 
@@ -50,7 +50,7 @@ ht-degree: 100%
    * [Création de jeux de données et de schémas Luma de démonstration](models-recipes/create-luma-data.md)
    * [Création de jeux de données et de schéma de ventes au détail](models-recipes/create-retails-sales-dataset.md)
    * [Prévisualisation des schémas et des jeux de données](models-recipes/preview-schema-data.md)
-   * [Regroupement des fichiers source dans une recette](models-recipes/package-source-files-recipe.md)
+   * [Regroupement des fichiers sources dans une recette](models-recipes/package-source-files-recipe.md)
    * [Importation d’une recette empaquetée (interface utilisateur)](models-recipes/import-packaged-recipe-ui.md)
    * [Importation d’une recette empaquetée (API)](models-recipes/import-packaged-recipe-api.md)
    * [Formation et évaluation d’un modèle (interface utilisateur)](models-recipes/train-evaluate-model-ui.md)

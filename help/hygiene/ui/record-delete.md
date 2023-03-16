@@ -7,11 +7,11 @@ hidefromtoc: true
 source-git-commit: a20afcd95d47e38ccdec9fba9e772032e212d7a4
 workflow-type: tm+mt
 source-wordcount: '1184'
-ht-degree: 56%
+ht-degree: 61%
 
 ---
 
-# Suppression d’enregistrements
+# Supprimer des enregistrements
 
 Le [[!UICONTROL Hygiène des données] workspace](./overview.md) dans l’interface utilisateur de Adobe Experience Platform vous permet de supprimer les enregistrements qui participent à Identity Service et à Real-Time Customer Profile. Ces enregistrements peuvent être liés à des consommateurs individuels ou à toute autre entité incluse dans le graphique d’identités.
 
@@ -20,7 +20,7 @@ Le [[!UICONTROL Hygiène des données] workspace](./overview.md) dans l’interf
 >Les demandes de suppression d’enregistrement ne sont disponibles que pour les organisations qui ont acheté **Adobe Health Care Shield**.
 >
 >
->Les suppressions d’enregistrements sont destinées à être utilisées pour la normalisation des données, la suppression des données anonymes ou la minimisation des données. Ils sont **not** à utiliser pour les demandes de droits des titulaires de données (conformité) en ce qui concerne les réglementations de confidentialité comme le Règlement général sur la protection des données (RGPD). Pour tous les cas d’utilisation de conformité, utilisez [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) au lieu de .
+>Les suppressions d’enregistrements sont destinées au nettoyage des données, à la suppression des données anonymes ou à la minimisation des données. Elles ne sont **pas** destinées aux demandes de droits des titulaires de données (conformité) en ce qui concerne les réglementations de confidentialité comme le Règlement général sur la protection des données (RGPD). Pour tous les cas d’utilisation de conformité, utilisez plutôt [Adobe Experience Platform Privacy Service](../../privacy-service/home.md).
 
 ## Conditions préalables
 

@@ -6,7 +6,7 @@ exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
 source-git-commit: 004f6183f597132629481e3792b5523317b7fb2f
 workflow-type: tm+mt
 source-wordcount: '1726'
-ht-degree: 13%
+ht-degree: 27%
 
 ---
 
@@ -65,32 +65,32 @@ L’espace de travail Autorisations de l’interface utilisateur de Platform s�
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_labels_about"
->title="Que sont les étiquettes ?"
->abstract="Les libellés vous permettent de classer les jeux de données et les champs en fonction des stratégies d’utilisation qui s’appliquent à ces données. Platform fournit plusieurs libellés d’utilisation des données &quot;de base&quot; définis par l’Adobe, qui couvrent un large éventail de restrictions courantes applicables à la gouvernance des données. Par exemple, les étiquettes Sensibles &quot;S&quot; telles que RHD (données d’intégrité réglementées) vous permettent de catégoriser les données qui font référence aux informations d’intégrité protégées (PHI). Vous pouvez également définir vos propres étiquettes personnalisées en fonction des besoins de votre entreprise."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=en#understanding-data-usage-labels" text="Présentation des libellés d’utilisation des données"
+>title="Que sont les libellés ?"
+>abstract="Les libellés vous permettent de classer les jeux de données et les champs en fonction des stratégies d’utilisation qui s’appliquent à ces données. Platform fournit plusieurs libellés d’utilisation des données « de base » définis par Adobe, qui couvrent un large éventail de restrictions courantes applicables à la gouvernance des données. Les libellés « S » (Sensibles) tels que DSR (données réglementées en matière de santé) servent à catégoriser les données qui font référence aux informations de santé protégées (ISP). Vous pouvez également définir vos propres libellés personnalisés en fonction des besoins de votre entreprise."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=fr#comprendre-les-libell%C3%A9s-d%E2%80%99utilisation-des-donn%C3%A9es" text="Présentation des libellés d’utilisation des données"
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_labels_about_create"
 >title="Créer un libellé"
->abstract="Vous pouvez créer vos propres étiquettes personnalisées en fonction des besoins de votre entreprise. Les étiquettes personnalisées peuvent être utilisées pour appliquer à vos données des configurations de gouvernance des données et de contrôle d’accès."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=en#manage-labels" text="Gérer les libellés personnalisés"
+>abstract="Vous pouvez créer vos propres libellés personnalisés selon les besoins de votre entreprise. Les libellés personnalisés peuvent être utilisées pour appliquer à vos données à la fois des configurations de gouvernance des données et de contrôle d’accès."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=fr#manage-labels" text="Gérer les libellés personnalisés"
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_roles_about"
->title="Quels sont les rôles ?"
+>title="Que sont les rôles ?"
 >abstract="Les rôles sont des moyens de classer les types d’utilisateurs qui interagissent avec votre instance Platform et constituent des blocs élémentaires des politiques de contrôle d’accès. Un rôle possède un jeu d’autorisations déterminé et les membres de votre organisation peuvent être affectés à un ou plusieurs rôles, selon la portée de l’accès en lecture ou en écriture dont ils ont besoin."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=en" text="Gestion des rôles"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=fr" text="Gérer les rôles"
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_roles_about_create"
->title="Créer un nouveau rôle"
->abstract="Vous pouvez créer un nouveau rôle pour mieux classer les utilisateurs qui accèdent à votre instance Platform. Par exemple, vous pouvez créer un rôle pour une équipe de marketing interne et appliquer l’étiquette RHD à ce rôle, ce qui permet à votre équipe de marketing interne d’accéder aux informations d’intégrité protégées (PHI). Vous pouvez également créer un rôle pour une agence externe et refuser l’accès à ce rôle aux données d’identification personnelle en n’appliquant pas le libellé du RHD à ce rôle."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=en#create-a-new-role" text="Création d’un rôle"
+>title="Créer un rôle"
+>abstract="Vous pouvez créer un rôle pour mieux classer les utilisateurs et utilisatrices qui ont accès à votre instance Platform. Par exemple, vous pouvez créer un rôle pour une équipe marketing interne et lui appliquer le libellé RHD. Cela permettra à l’équipe d’accéder aux informations de santé protégées (ISP). Vous pouvez également créer un rôle pour une agence externe et refuser l’accès à ce rôle aux données ISP en vous abstenant d’appliquer le libellé RHD à ce rôle."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=fr#create-a-new-role" text="Créer un rôle"
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_roles_details"
 >title="Présentation des rôles"
->abstract="La boîte de dialogue de présentation des rôles affiche les ressources et les environnements de test auxquels un rôle donné est autorisé à accéder."
+>abstract="La boîte de dialogue de présentation des rôles affiche les ressources et les sandbox auxquelles un rôle donné peut accéder."
 
 Les rôles sont des moyens de catégoriser les types d’utilisateurs qui interagissent avec votre instance Platform et sont des blocs élémentaires des stratégies de contrôle d’accès. Un rôle possède un ensemble donné d’autorisations et les membres de votre organisation peuvent être affectés à un ou plusieurs rôles, selon la portée de l’accès dont ils ont besoin.
 

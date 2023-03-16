@@ -6,7 +6,7 @@ exl-id: 5d51edaa-ecba-4ac0-8d3c-49010466b9a5
 source-git-commit: d450dc7b0dc0303c9d33c3e8e003659e3140cf5b
 workflow-type: tm+mt
 source-wordcount: '845'
-ht-degree: 14%
+ht-degree: 17%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 14%
 
 Adobe Experience Platform vous permet de vous abonner à des alertes basées sur des événements concernant les activités Adobe Experience Platform. Les alertes réduisent ou éliminent la nécessité d’interroger l’[[!DNL Observability Insights] API](../../../observability/api/overview.md) afin de vérifier si une tâche est terminée, si un certain jalon a été atteint dans un processus ou si des erreurs se sont produites.
 
-Vous pouvez vous abonner à des alertes lors de la création d’un flux de données pour recevoir des messages d’alerte concernant l’état, la réussite ou l’échec de votre exécution de flux.
+Vous pouvez vous abonner aux alertes lors de la création d’un flux de données pour recevoir des messages d’alerte concernant le statut, le succès ou l’échec de l’exécution de votre flux de données.
 
 Ce document décrit les étapes à suivre pour s’abonner à des messages d’alerte pour les flux de données de vos sources.
 
@@ -57,7 +57,7 @@ Sélectionnez les alertes auxquelles vous souhaitez vous abonner, puis sélectio
 
 Pour obtenir des instructions détaillées sur la création d’un flux de données de sources dans l’interface utilisateur, consultez les guides suivants :
 
-* [Publicité](./dataflow/advertising.md)
+* [Advertising](./dataflow/advertising.md)
 * [Stockage dans le cloud](./dataflow/batch/cloud-storage.md)
 * [CRM](./dataflow/crm.md)
 * [Base de données](./dataflow/databases.md)
@@ -103,7 +103,7 @@ Pour plus d’informations sur la gestion des erreurs de flux de données, consu
 
 Les alertes de vos flux de données vous sont également envoyées par courrier électronique. Sélectionnez le nom du flux de données dans le corps de l’email pour afficher plus d’informations sur votre flux de données.
 
-![email](../../images/tutorials/alerts/email.png)
+![e-mail](../../images/tutorials/alerts/email.png)
 
 Tout comme l’alerte de l’interface utilisateur, la variable [!UICONTROL Présentation de l’exécution du flux de données] s’affiche, vous fournissant une interface permettant d’enquêter sur les erreurs associées à votre flux de données.
 

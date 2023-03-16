@@ -1,16 +1,16 @@
 ---
-title: (Version bêta) Exportation de fichiers à la demande vers des destinations par lots à l’aide de l’interface utilisateur de l’Experience Platform
+title: (Version bêta) Exporter des fichiers à la demande vers des destinations par lots à l’aide de l’interface utilisateur Experience Platform
 type: Tutorial
 description: Découvrez comment exporter des fichiers à la demande vers des destinations par lots à l’aide de l’interface utilisateur de l’Experience Platform.
 exl-id: 0cbe5089-b73d-4584-8451-2fc34d47c357
 source-git-commit: 29962e07aa50c97b6098f4c892facf48508d28cf
 workflow-type: tm+mt
 source-wordcount: '743'
-ht-degree: 14%
+ht-degree: 22%
 
 ---
 
-# (Version bêta) Exportation de fichiers à la demande vers des destinations par lots à l’aide de l’interface utilisateur de l’Experience Platform
+# (Version bêta) Exporter des fichiers à la demande vers des destinations par lots à l’aide de l’interface utilisateur Experience Platform
 
 >[!IMPORTANT]
 >
@@ -19,7 +19,7 @@ ht-degree: 14%
 
 >[!IMPORTANT]
 > 
->Pour activer les données, vous avez besoin de l’événement **[!UICONTROL Gestion des destinations]**, **[!UICONTROL Activation des destinations]**, **[!UICONTROL Afficher les profils]**, et **[!UICONTROL Affichage de segments]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez le [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+>Pour activer les données, vous avez besoin des [autorisations de contrôle d’accès](/help/access-control/home.md#permissions) pour les fonctions **[!UICONTROL Gérer les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]**, et **[!UICONTROL Afficher les segments]**. Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
 ## **[!UICONTROL Exporter le fichier maintenant]** aperçu {#overview}
 

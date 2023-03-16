@@ -5,8 +5,8 @@ description: Créez une connexion sortante en temps réel à votre stockage Amaz
 exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
 source-git-commit: ce20c273cb6a87264363c03611ccfdfb783e595f
 workflow-type: tm+mt
-source-wordcount: '1958'
-ht-degree: 63%
+source-wordcount: '1949'
+ht-degree: 66%
 
 ---
 
@@ -43,7 +43,7 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 | Type d’exportation | **[!UICONTROL Basé sur les profils]** | Vous exportez tous les membres d’un segment, ainsi que les champs de schéma de votre choix (par exemple : adresse électronique, numéro de téléphone, nom), tel que sélectionné dans l’écran de sélection des attributs de profil du [workflow d’activation de destination](../../ui/activate-batch-profile-destinations.md#select-attributes). |
 | Fréquence des exportations | **[!UICONTROL Diffusion en continu]** | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation des segments, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Liste autorisée d’adresses IP {#ip-address-allowlist}
 
@@ -86,7 +86,7 @@ L’exemple ci-dessous présente les droits d’accès minimaux requis pour expo
 | `kinesis:PutRecord` | Action qui écrit un enregistrement de données unique dans un flux de données Kinesis. |
 | `kinesis:PutRecords` | Action qui écrit plusieurs enregistrements de données dans un flux de données Kinesis au cours d’un seul appel. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Pour plus d’informations sur le contrôle de l’accès à [!DNL Kinesis] flux de données, lisez ce qui suit : [[!DNL Kinesis] document](https://docs.aws.amazon.com/streams/latest/dev/controlling-access.html).
 
@@ -163,15 +163,15 @@ Dans tous les cas décrits ci-dessus, seuls les profils pour lesquels des mises 
 
 Remarque : tous les attributs mappés sont exportés pour un profil, quel que soit l’emplacement des modifications. Ainsi, dans l’exemple ci-dessus, tous les attributs mappés pour ces cinq nouveaux profils seront exportés même si les attributs eux-mêmes restent inchangés.
 
-### Ce qui détermine une exportation de données et ce qui est inclus dans l’exportation {#what-determines-export-what-is-included}
+### Ce qui détermine une exportation de données et ce qui est inclus dans l’exportation. {#what-determines-export-what-is-included}
 
 En ce qui concerne les données exportées pour un profil donné, il est important de comprendre les deux concepts différents de *ce qui détermine l’exportation des données vers votre [!DNL Amazon Kinesis] destination* et *les données incluses dans l’exportation ;*.
 
 | Ce qui détermine une exportation de destination | Éléments inclus dans l’exportation de destination |
 |---------|----------|
-| <ul><li>Les attributs et segments mappés servent de repère pour une exportation de destination. Cela signifie que si un segment mappé change d’état (de nul à réalisé ou de réalisé/existant à sorti), ou qu’un attribut mappé est mis à jour, une exportation de destination est déclenchée.</li><li>Puisque les identités ne peuvent actuellement pas être mappées à [!DNL Amazon Kinesis] les destinations, les modifications de toute identité sur un profil donné déterminent également les exportations de destination.</li><li>Toute modification pour un attribut est considérée comme une mise à jour, qu’il s’agisse ou non de la même valeur. Cela signifie qu’une réécriture sur un attribut est considérée comme une modification, même si la valeur elle-même n’a pas changé.</li></ul> | <ul><li>Le `segmentMembership` inclut le segment mappé dans le flux de données d’activation, pour lequel l’état du profil a changé suite à un événement de qualification ou de sortie de segment. Notez que d’autres segments non mappés pour lesquels le profil est qualifié peuvent faire partie de l’exportation de destination, si ces segments appartiennent au même type. [stratégie de fusion](/help/profile/merge-policies/overview.md) comme segment mappé dans le flux de données d’activation. </li><li>Toutes les identités dans la variable `identityMap` sont également inclus (l’Experience Platform ne prend actuellement pas en charge le mappage d’identité dans la variable [!DNL Amazon Kinesis] destination).</li><li>Seuls les attributs mappés sont inclus dans l’exportation de destination.</li></ul> |
+| <ul><li>Les attributs et segments mappés servent de repère pour une exportation de destination. Cela signifie que si un segment mappé change d’état (de nul à réalisé ou de réalisé/existant à sorti), ou qu’un attribut mappé est mis à jour, une exportation de destination est déclenchée.</li><li>Puisque les identités ne peuvent actuellement pas être mappées à [!DNL Amazon Kinesis] les destinations, les modifications de toute identité sur un profil donné déterminent également les exportations de destination.</li><li>Toute modification pour un attribut est considérée comme une mise à jour, qu’il s’agisse ou non de la même valeur. Cela signifie qu’une réécriture sur un attribut est considérée comme une modification, même si la valeur elle-même n’a pas changé.</li></ul> | <ul><li>L’objet `segmentMembership` inclut le segment mappé dans le flux de données d’activation, pour lequel le statut du profil a changé suite à un événement de qualification ou de sortie de segment. Notez que d’autres segments non mappés pour lesquels le profil s’est qualifié peuvent faire partie de l’exportation de destination, si ces segments appartiennent à la même [politique de fusion](/help/profile/merge-policies/overview.md) que le segment mappé dans le flux de données d’activation. </li><li>Toutes les identités dans la variable `identityMap` sont également inclus (l’Experience Platform ne prend actuellement pas en charge le mappage d’identité dans la variable [!DNL Amazon Kinesis] destination).</li><li>Seuls les attributs mappés sont inclus dans l’exportation de destination.</li></ul> |
 
-{style=&quot;table-layout:fixed&quot;}
+{style="table-layout:fixed"}
 
 Par exemple, considérez ce flux de données comme un [!DNL Amazon Kinesis] destination où trois segments sont sélectionnés dans le flux de données et quatre attributs sont mappés à la destination.
 
