@@ -1,10 +1,10 @@
 ---
 title: Notes de mise à jour d’Adobe Experience Platform
-description: Notes de mise à jour de février 2023 pour Adobe Experience Platform.
+description: Les notes de mise à jour de février 2023 pour Adobe Experience Platform.
 source-git-commit: ccd3df0bc045f98306901b2d734cf17262275f18
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1316'
-ht-degree: 38%
+ht-degree: 100%
 
 ---
 
@@ -27,17 +27,17 @@ Adobe Experience Platform fournit une suite de technologies qui vous permetten
 
 ### Assurance {#assurance}
 
-Adobe Assurance vous permet d’inspecter, de tester, de simuler et de valider la manière dont vous collectez des données ou diffusez des expériences dans votre application mobile.
+Adobe Assurance permet de contrôler, de tester, de simuler et de valider la manière dont vous collectez les données ou dont les expériences sont accomplies dans l’application mobile.
 
 **Fonctionnalités nouvelles ou mises à jour**
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
-| API publiques | Les API Adobe Assurance sont désormais disponibles. Les API d’assurance sont un ensemble d’API qui permettent aux utilisateurs de tester et de déboguer leurs propres applications web et mobiles, lorsqu’elles sont équipées de l’extension Adobe Assurance avec le SDK mobile. Pour en savoir plus sur les API d’assurance, veuillez lire la section [Présentation de l’API Assurance](https://developer.adobe.com/adobe-assurance-public-apis/). |
+| API publiques | Les API d’Adobe Assurance sont désormais disponibles. Les API Assurance sont un ensemble d’API qui permettent aux utilisateurs et utilisatrices de tester et de déboguer leurs propres applications web et mobiles, lorsqu’elles sont équipées de l’extension Adobe Assurance avec le SDK mobile. Pour en savoir plus sur les API Assurance, consultez lire la [présentation de l’API Assurance](https://developer.adobe.com/adobe-assurance-public-apis/). |
 
 {style=&quot;table-layout:auto&quot;}
 
-Pour plus d’informations sur Assurance, veuillez lire la section [Documentation d’assurance](https://developer.adobe.com/client-sdks/documentation/platform-assurance/).
+Pour plus d’informations sur l’assurance, consultez la [documentation sur l’assurance](https://developer.adobe.com/client-sdks/documentation/platform-assurance/).
 
 ## [!DNL Destinations] {#destinations}
 
@@ -47,7 +47,7 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 
 | Fonctionnalité | Description |
 | ----------- | ----------- |
-| [Amélioration de la stratégie de consentement](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-enhancement) pour les intégrations avec [destinations basées sur des fichiers (par lots)](/help/destinations/destination-types.md#file-based) | <p> Lorsque les profils ne sont plus qualifiés pour une stratégie de consentement, l’Experience Platform communique désormais de manière proactive sa sortie de stratégie vers des destinations basées sur des fichiers. Cela suit le [version de février 2023](/help/release-notes/2023/january-2023.md#destinations-new-updated-functionality) de la même fonctionnalité pour les destinations de diffusion en continu. </p> <p> <b>Remarque</b>: Cette fonctionnalité est disponible uniquement pour les clients de **[!UICONTROL Protection de la vie privée et protection]** et ceux de **[!UICONTROL Bouclier de santé]**. </p> |
+| [Amélioration de la politique de consentement](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-enhancement) pour les intégrations avec les [destinations basées sur des fichiers (par lots)](/help/destinations/destination-types.md#file-based) | <p> Lorsque les profils ne sont plus qualifiés pour une politique de consentement, Experience Platform communique désormais de manière proactive sa sortie de politique aux destinations basées sur des fichiers. Cela suit la [version de février 2023](/help/release-notes/2023/january-2023.md#destinations-new-updated-functionality) de la même fonctionnalité pour les destinations de diffusion en continu. </p> <p> <b>Remarque</b> : cette fonctionnalité est disponible uniquement pour les clientes et clients de **[!UICONTROL Privacy and Security Shield]** et celles et ceux de **[!UICONTROL Healthcare Shield]**. </p> |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -55,7 +55,7 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 
 | Documentation | Description |
 | ----------- | ----------- |
-| Fonctionnement de la documentation sur les destinations | <p>Nous avons publié trois nouveaux articles explicatifs sur le fonctionnement des destinations, sur la base des questions courantes des utilisateurs :</p> <p><ul><li>[Paramètres d’exportation configurables et communs des destinations](/help/destinations/how-destinations-work/destinations-configurations.md)</li><li>[Comportement d’exportation de profils pour différents types de destinations](/help/destinations/how-destinations-work/profile-export-behavior.md)</li><li>[Gestion des identités dans le workflow d’activation des destinations](/help/destinations/how-destinations-work/identity-handling.md)</li></p> |
+| Documentation sur le fonctionnement des destinations | <p>Nous avons publié trois nouveaux articles explicatifs sur le fonctionnement des destinations, basés sur les questions courantes des utilisateurs et utilisatrices :</p> <p><ul><li>[Paramètres d’exportation configurables et communs des destinations](/help/destinations/how-destinations-work/destinations-configurations.md)</li><li>[Comportement d’exportation de profils selon les types de destinations](/help/destinations/how-destinations-work/profile-export-behavior.md)</li><li>[Gestion des identités dans le workflow d’activation des destinations](/help/destinations/how-destinations-work/identity-handling.md)</li></p> |
 
 Pour des informations plus générales sur les destinations, consultez la [présentation des destinations](../../destinations/home.md).
 
@@ -67,7 +67,7 @@ XDM est une spécification Open Source qui fournit des structures et des défini
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Dépréciation des champs via l’interface utilisateur | Vous pouvez désormais [abandonner les champs de vos schémas une fois les données ingérées](../../xdm/tutorials/field-deprecation-ui.md). L’obsolescence des champs XDM vous permet de supprimer des champs de l’interface utilisateur tout en les conservant pour les utiliser. Si nécessaire, vous pouvez afficher à nouveau les champs obsolètes. Les segments, requêtes ou solutions en aval qui référencent ces champs s’exécuteront normalement. |
+| Obsolescence de champ via l’IU | Vous pouvez désormais [rendre obsolète les champs de vos schémas une fois les données ingérées](../../xdm/tutorials/field-deprecation-ui.md). L’obsolescence des champs XDM vous permet de supprimer des champs de la vue de l’IU tout en les conservant pour les utiliser. Si nécessaire, vous pouvez afficher à nouveau les champs obsolètes. Les segments, requêtes ou solutions en aval qui font référence à ces champs s’exécuteront normalement. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -75,7 +75,7 @@ XDM est une spécification Open Source qui fournit des structures et des défini
 
 | Type de composant | Nom | Description |
 | --- | --- | --- |
-| Classe | [[!UICONTROL Profil XDM Individual Prospect]](https://github.com/adobe/xdm/pull/1669/files) | La classe XDM Individual Prospect Profile inclut des identifiants fournis par les partenaires. |
+| Classe | [[!UICONTROL XDM Individual Prospect Profile]](https://github.com/adobe/xdm/pull/1669/files) | La classe XDM Individual Prospect Profile inclut des identifiants fournis par les partenaires. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -83,28 +83,28 @@ XDM est une spécification Open Source qui fournit des structures et des défini
 
 | Type de composant | Nom | Description |
 | --- | --- | --- |
-| Groupe de champs | [!UICONTROL Contraintes de limitation de fréquence] | Le [!UICONTROL Contraintes de limitation de fréquence] le groupe de champs a été [mise à jour afin de prendre en charge les événements de répétition et personnalisés](https://github.com/adobe/xdm/pull/1641/files). |
-| Type de données | [!UICONTROL Référent web] | Les propriétés du référent web ont été [mis à jour pour inclure `xdm:linkName` et `xdm:linkRegion`](https://github.com/adobe/xdm/pull/1666/files). Respectivement, il s’agit du nom et de la région de l’élément de HTML sélectionné sur la page précédente. |
-| Groupe de champs | [!UICONTROL Adobe CJM ExperienceEvent - informations sur l’interaction du message] | [Le [!UICONTROL URL du dispositif de suivi] champ ajouté](https://github.com/adobe/xdm/pull/1665/files) au [!UICONTROL Adobe de CJM ExperienceEvent]. Ce dispositif de suivi fournit l’URL sélectionnée par l’utilisateur. |
-| Groupe de champs | [!UICONTROL Adobe CJM ExperienceEvent - Détails de l’interaction du message] | [Le champ vide `meta:enum` La propriété a été supprimée.](https://github.com/adobe/xdm/pull/1668/files) de l’URL [!UICONTROL Type de suivi] champ . |
-| Type de données | [!UICONTROL Informations sur les médias] | [Le modèle regex de `videoSegment` dans [!UICONTROL Informations sur les médias] datatype a été supprimé.](https://github.com/adobe/xdm/pull/1667/files). |
+| Groupe de champs | [!UICONTROL Contraintes de limitation de la fréquence] | Le groupe de champs [!UICONTROL Contraintes de limitation de la fréquence] a été [mis à jour pour prendre en charge les événements personnalisés et de répétition](https://github.com/adobe/xdm/pull/1641/files). |
+| Type de données | [!UICONTROL Référent web] | Les propriétés du référent web ont été [mises à jour pour inclure `xdm:linkName` et `xdm:linkRegion`](https://github.com/adobe/xdm/pull/1666/files). Respectivement, il s’agit du nom et de la région de l’élément HTML sélectionné sur la page précédente. |
+| Groupe de champs | [!UICONTROL Adobe CJM ExperienceEvent - Informations sur l’interaction des messages] | [Le champ [!UICONTROL URL du dispositif de suivi] a été ajouté](https://github.com/adobe/xdm/pull/1665/files) à [!UICONTROL Adobe CJM ExperienceEvent]. Ce dispositif de suivi fournit l’URL sélectionnée par l’utilisateur ou l’utilisatrice. |
+| Groupe de champs | [!UICONTROL Adobe CJM ExperienceEvent - Informations sur l’interaction des messages] | [La propriété vide `meta:enum` a été supprimée](https://github.com/adobe/xdm/pull/1668/files) du champ [!UICONTROL Type de suivi] de l’URL. |
+| Type de données | [!UICONTROL Informations sur les médias] | [Le modèle RegEx de la propriété `videoSegment` dans le type de données [!UICONTROL Informations sur les médias] a été supprimé](https://github.com/adobe/xdm/pull/1667/files). |
 
 {style=&quot;table-layout:auto&quot;}
 
-Pour plus d’informations sur XDM dans Platform, lisez le [Présentation du système XDM](../../xdm/home.md).
+Pour plus d’informations sur XDM dans Platform, consultez la [présentation du système XDM](../../xdm/home.md).
 
 ## Query Service {#query-service}
 
-Query Service vous permet d’utiliser le langage SQL standard pour interroger les données dans le [!DNL Data Lake] d’Adobe Experience Platform. Vous pouvez joindre n’importe quel jeu de données du lac de données et capturer les résultats de la requête sous la forme d’un nouveau jeu de données à utiliser dans les rapports, Data Science Workspace ou pour ingestion dans Real-Time Customer Profile.
+Query Service vous permet d’utiliser le langage SQL standard pour interroger les données dans le [!DNL Data Lake] d’Adobe Experience Platform. Vous pouvez joindre n’importe quel jeu de données à partir du lac de données et capturer les résultats de la requête sous la forme d’un nouveau jeu de données à utiliser dans les rapports, dans l’espace de travail de science des données ou à ingérer en tant que profil client en temps réel.
 
 **Fonctionnalités mises à jour**
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Activation des jeux de données pour les profils avec SQL | [Utiliser des LIBELLÉS dans les requêtes CTAS pour rendre un jeu de données &quot;profile enabled&quot;](../../query-service/sql/syntax.md#create-table-as-select)ou utilisez ALTER pour mettre à jour les jeux de données existants à activer pour le profil. Vous pouvez utiliser cette structure SQL étendue pour offrir une prise en charge transparente des attributs dérivés pour vos cas d’utilisation professionnels de profil client en temps réel. Voir [Flux SQL transparent pour le document d’attributs dérivés](../../query-service/data-distiller/derived-attributes/seamless-sql-flow.md) pour plus d’informations. |
-| Surveillance des requêtes planifiées | Utilisez la variable [Onglet Requêtes planifiées](../../query-service/ui/monitor-queries.md) pour trouver des informations importantes sur les exécutions de vos requêtes et vous abonner aux alertes. Surveillez les requêtes pour connaître les détails du planning, l’état et les messages/codes d’erreur en cas d’échec. |
-| Activation/désactivation de la fonction de saisie automatique | Élimination de certaines commandes de métadonnées et amélioration des temps de traitement par [activation/désactivation de la fonction de saisie semi-automatique de Query Editor](../../query-service/ui/user-guide.md#auto-complete). Cette fonctionnalité suggère automatiquement les mots-clés SQL potentiels et les détails du tableau pour la requête au fur et à mesure que vous l’écrivez. |
-| Exemples de jeux de données | Spécifiez un taux d’échantillonnage dans votre requête et [utiliser des exemples de jeux de données pour créer un exemple aléatoire uniforme ;](../../query-service/essential-concepts/dataset-samples.md)ou créer des exemples conditionnels en fonction de critères spécifiques. |
+| Activer les jeux de données pour les profils avec SQL | [Utilisez des libellés dans les requêtes CTAS afin qu’un jeu de données soit « activé pour le profil »](../../query-service/sql/syntax.md#create-table-as-select), ou utilisez Modifier pour mettre à jour les jeux de données existants à activer pour le profil. Vous pouvez utiliser cette structure SQL étendue pour offrir une prise en charge transparente des attributs dérivés pour vos cas d’utilisation professionnels de profil client en temps réel. Consultez le [document sur le flux SQL transparent pour les attributs dérivés](../../query-service/data-distiller/derived-attributes/seamless-sql-flow.md) pour plus d’informations. |
+| Surveiller les requêtes planifiées | Utilisez l’[onglet Requêtes planifiées](../../query-service/ui/monitor-queries.md) pour trouver des informations importantes sur les exécutions de vos requêtes et vous abonner aux alertes. Surveillez les requêtes pour connaître les détails du planning, le statut et les messages ou codes d’erreur en cas d’échec. |
+| Activer la fonction de saisie automatique | Éliminez certaines commandes de métadonnées et améliorez les temps de traitement en [activant la fonction de saisie automatique de Query Editor](../../query-service/ui/user-guide.md#auto-complete). Cette fonctionnalité suggère automatiquement des mots-clés SQL potentiels ainsi que des détails de table pour la requête au fur et à mesure que vous l’écrivez. |
+| Échantillons de jeux de données | Spécifiez un taux d’échantillonnage dans votre requête et [utilisez des échantillons de jeux de données pour créer un exemple aléatoire uniforme](../../query-service/essential-concepts/dataset-samples.md), ou créez des échantillons conditionnels en fonction de critères spécifiques. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -118,15 +118,15 @@ Basée sur Real-time Customer Data Platform (Real-time CDP), l’édition B2B de
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Activation du service de comptes associés | La nouvelle fonction de basculement vous permet d’activer le service de comptes associé sur votre compte. Pour plus d’informations, consultez le guide sur [activation du service de comptes associé](../../rtcdp/b2b-ai-ml-services/related-accounts.md#enable). |
+| Activer le service de comptes associés | La nouvelle fonction de basculement vous permet d’activer le service de comptes associés sur votre compte. Pour plus d’informations, consultez le guide sur l’[activation du service de comptes associés](../../rtcdp/b2b-ai-ml-services/related-accounts.md#enable). |
 
 {style=&quot;table-layout:auto&quot;}
 
-Pour en savoir plus sur l’édition B2B de Real-Time CDP, lisez le [Présentation de Real-Time CDP B2B Edition](../../rtcdp/overview.md).
+Pour en savoir plus sur Real-time CDP B2B Edition, consultez la [présentation de Real-time CDP B2B Edition](../../rtcdp/overview.md).
 
 ## Sources {#sources}
 
-Adobe Experience Platform peut ingérer des données à partir de sources externes et vous permet de structurer, d’étiqueter et d’améliorer ces données à l’aide des services Platform. Vous pouvez ingérer des données à partir de diverses sources telles que les applications Adobe, le stockage dans le cloud, des logiciels tiers et votre système de gestion de la relation client.
+Adobe Experience Platform peut ingérer des données à partir de sources externes tout en vous permettant de structurer, d’étiqueter et d’améliorer ces données à l’aide des services de Platform. Vous pouvez ingérer des données à partir de diverses sources telles que les applications Adobe, le stockage dans le cloud, des logiciels tiers et votre système de gestion de la relation client.
 
 Experience Platform fournit une API RESTful et une interface utilisateur interactive qui vous permet de configurer facilement des connexions source à différents fournisseurs de données. Ces connexions source vous permettent de vous authentifier et de vous connecter à des services de gestion de la relation client et à des systèmes de stockage externes, de définir des heures d’ingestion et de gérer le débit d’ingestion des données.
 
@@ -134,9 +134,9 @@ Experience Platform fournit une API RESTful et une interface utilisateur intera
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Désigner l’accès au niveau de l’abonnement avec [!DNL Google PubSub] | Vous pouvez désormais définir l’accès à un abonnement à une rubrique spécifique lors de l’utilisation de la propriété [!DNL Google PubSub] source en fournissant l’ID d’abonnement lors de l’authentification. Pour plus d’informations, reportez-vous à la section [!DNL Google PubSub] tutoriel sur l’authentification [utilisation de l’API Flow Service](../../sources/tutorials/api/create/cloud-storage/google-pubsub.md) ou [Interface utilisateur de Platform](../../sources/tutorials/ui/create/cloud-storage/google-pubsub.md). |
-| Ingestion de données d’activité personnalisées à partir de [!DNL Marketo] | Vous pouvez désormais importer des données d’activité personnalisées depuis votre [!DNL Marketo] à l’Experience Platform. Pour ingérer des données d’activité personnalisées, vous devez configurer des groupes de champs d’activités personnalisés dans le schéma Activités B2B et créer un flux de données à l’aide du jeu de données des activités. Une fois le flux de données terminé, le jeu de données ingéré contiendra les activités standard et personnalisées de votre [!DNL Marketo] instance. Vous pouvez ensuite utiliser [Query Service](../../query-service/home.md) pour accéder aux enregistrements d’activité personnalisés sur Platform. Pour plus d’informations, consultez le guide sur [création d’un flux de données pour les données d’activité personnalisées](../../sources/tutorials/ui/create/adobe-applications/marketo-custom-activities.md). |
-| Exclure les comptes non réclamés de [!DNL Marketo] | Vous pouvez maintenant configurer si vous souhaitez exclure ou inclure des comptes non réclamés de l’ingestion lors de la création d’un flux de données pour les données d’entreprise. Pour plus d’informations, consultez le guide sur [création d’une connexion source et d’un flux de données pour [!DNL Marketo]](../../sources/tutorials/ui/create/adobe-applications/marketo.md). |
+| Désigner l’accès au niveau de l’abonnement avec [!DNL Google PubSub] | Vous pouvez désormais définir l’accès à un abonnement à une rubrique spécifique lors de l’utilisation de la source [!DNL Google PubSub] en fournissant l’ID d’abonnement lors de l’authentification. Pour plus d’informations, reportez-vous au tutoriel sur l’authentification [!DNL Google PubSub] [à l’aide de l’API Flow Service](../../sources/tutorials/api/create/cloud-storage/google-pubsub.md) ou de l’[IU de Platform](../../sources/tutorials/ui/create/cloud-storage/google-pubsub.md). |
+| Ingérer des données d’activité personnalisées à partir de [!DNL Marketo] | Vous pouvez désormais importer des données d’activité personnalisées depuis votre instance [!DNL Marketo] vers Experience Platform. Pour ingérer des données d’activité personnalisées, vous devez configurer des groupes de champs d’activités personnalisées dans le schéma Activités B2B et créer un flux de données à l’aide du jeu de données des activités. Une fois le flux de données terminé, le jeu de données ingéré contiendra les activités standard et personnalisées de votre instance [!DNL Marketo]. Vous pouvez ensuite utiliser [Query Service](../../query-service/home.md) pour accéder aux enregistrements d’activités personnalisées sur Platform. Pour plus d’informations, consultez le guide sur la [création d’un flux de données pour les données d’activités personnalisées](../../sources/tutorials/ui/create/adobe-applications/marketo-custom-activities.md). |
+| Exclure les comptes non réclamés de [!DNL Marketo] | Vous pouvez maintenant configurer si vous souhaitez exclure ou inclure les comptes non réclamés de l’ingestion lors de la création d’un flux de données pour les données d’entreprise. Pour plus d’informations, consultez le guide sur la [création d’une connexion source et d’un flux de données pour [!DNL Marketo]](../../sources/tutorials/ui/create/adobe-applications/marketo.md). |
 
 {style=&quot;table-layout:auto&quot;}
 
