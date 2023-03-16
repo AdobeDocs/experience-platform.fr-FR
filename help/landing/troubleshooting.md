@@ -4,10 +4,11 @@ solution: Experience Platform
 title: FAQ et guide de dépannage d’Adobe Experience Platform
 description: Trouvez des réponses aux questions fréquemment posées et obtenez un guide afin de résoudre les problèmes courants dans Experience Platform.
 landing-page-description: Trouvez des réponses aux questions fréquemment posées et obtenez un guide afin de résoudre les problèmes courants dans Experience Platform.
+short-description: Find answers to frequently asked questions and a guide for troubleshooting common errors in Experience Platform.
 type: Documentation
 exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
-source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
-workflow-type: ht
+source-git-commit: b21367814e38fb5ee017709a29b39de982d59d24
+workflow-type: tm+mt
 source-wordcount: '1851'
 ht-degree: 100%
 
