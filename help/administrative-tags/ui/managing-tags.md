@@ -1,138 +1,138 @@
 ---
-keywords: Experience Platform;gestion des balises;balises ;
+keywords: Experience Platform;gestion des balises;balises;
 title: Gestion des balises unifiées
 description: Ce document fournit des informations sur la gestion des balises unifiées dans Adobe Experience Cloud
 source-git-commit: 6f9787909b8155d2bf032b4a42483f2cb4d44eb4
 workflow-type: tm+mt
 source-wordcount: '1070'
-ht-degree: 0%
+ht-degree: 98%
 
 ---
 
 # Guide de gestion des balises
 
-Les balises vous permettent de gérer des taxonomies de métadonnées afin de classer les objets métier pour une découverte et une catégorisation plus simples. Les balises peuvent aider à identifier des attributs taxonomiques importants pour les audiences avec lesquelles vos équipes travailleront, afin qu’elles puissent les trouver plus rapidement et également regrouper des audiences communes dans un descripteur. Vous devez identifier les catégories de balises courantes, telles que les régions géographiques, les unités opérationnelles, les lignes de produits, les projets, les équipes, les périodes (trimestres, mois, années) ou toute autre catégorie qui peut aider à donner du sens à votre équipe et à faciliter la découverte d’audiences. 
+Les balises permettent de gérer des taxonomies de métadonnées afin de classer les objets d’entreprise pour une découverte et un classement plus simples. Les balises permettent d’identifier les attributs taxonomiques importants des audiences utilisées par vos équipes. Ces dernières peuvent ainsi les trouver plus rapidement et également regrouper des audiences communes à l’aide d’un descripteur. Vous devez identifier les catégories de balises courantes, telles que les régions géographiques, les unités commerciales, les lignes de produits, les projets, les équipes, les périodes (trimestres, mois, années) ou toute autre catégorie qui peut aider à donner du sens à votre équipe et à faciliter la découverte d’audiences. 
 
-## Création d&#39;une balise {#create-tag}
+## Créer une balise {#create-tag}
 
-Pour créer une balise, sélectionnez **[!UICONTROL tags]** dans le volet de navigation de gauche, sélectionnez la catégorie de balise de votre choix.
+Pour créer une balise, sélectionnez **[!UICONTROL balises]** dans le volet de navigation de gauche, puis cliquez sur la catégorie de balises de votre choix.
 
-![Sélectionner une catégorie de balise](./images/tag-selection.png)
+![Sélection d’une catégorie de balises.](./images/tag-selection.png)
 
-Sélectionner **[!UICONTROL Créer une balise]** pour créer une balise.
+Sélectionnez **[!UICONTROL Créer une balise]** pour effectuer l’action éponyme.
 
-![Création d’une balise](./images/new-tag.png)
+![Création d’une balise.](./images/new-tag.png)
 
-Le **[!UICONTROL Créer une balise]** s’affiche, vous invitant à saisir un nom de balise unique. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Enregistrer]**.
+La boîte de dialogue **[!UICONTROL Créer une balise]** s’affiche et vous invite à saisir un nom de balise unique. Lorsque vous avez terminé, cliquez sur **[!UICONTROL Enregistrer]**.
 
-![Boîte de dialogue Créer une balise avec un nouveau nom de balise](./images/create-tag-dialog.png)
+![La boîte de dialogue Créer une balise avec un nouveau nom de balise.](./images/create-tag-dialog.png)
 
-La nouvelle balise a été créée avec succès et vous êtes redirigé vers l’écran des balises où la balise nouvellement créée apparaît dans la liste.
+La nouvelle balise a été créée avec succès et nous vous redirigeons vers l’écran des balises, où la nouvelle balise apparaît dans la liste.
 
-![Balise nouvellement créée pour la catégorie de balise](./images/new-tag-listed.png)
+![Balise nouvellement créée dans la catégorie de balises.](./images/new-tag-listed.png)
 
-## Modification d’une balise {#edit-tag}
+## Modifier une balise {#edit-tag}
 
-La modification d’une balise permet de corriger des fautes d’orthographe, de nommer des mises à jour de convention ou de terminologie. La modification d’une balise permet de conserver son association avec les objets dans lesquels elle est actuellement appliquée.
+Modifiez une balise pour corriger les fautes d’orthographe, ou appliquer la convention de nommage ou la terminologie la plus récente. La modification d’une balise conserve son association avec les objets où elle est actuellement appliquée.
 
-Pour modifier une balise existante, sélectionnez les points de suspension (`...`) en regard du nom de la balise que vous souhaitez modifier. Une liste déroulante affiche des commandes permettant de modifier, de déplacer ou d’archiver la balise. Sélectionner **[!UICONTROL Modifier]** dans la liste déroulante.
+Pour modifier une balise existante, procédez comme suit : dans la liste des catégories de balises, cliquez sur les points de suspension (`...`) en regard du nom de la balise que vous souhaitez modifier. Une liste déroulante affiche différentes commandes permettant de modifier, de déplacer ou d’archiver la balise. Sélectionnez **[!UICONTROL Modifier]** dans la liste déroulante.
 
-![Action Modifier affichée dans la liste déroulante](./images/edit-action.png)
+![L’action Modifier est affichée dans la liste déroulante.](./images/edit-action.png)
 
-Le **[!UICONTROL Modifier la balise]** s’affiche, vous invitant à modifier le nom de la balise. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Enregistrer]**.
+La boîte de dialogue **[!UICONTROL Modifier la balise]** s’affiche et vous invite à modifier le nom de la balise. Lorsque vous avez terminé, cliquez sur **[!UICONTROL Enregistrer]**.
 
-![Boîte de dialogue Modifier la balise avec le nom de balise mis à jour](./images/edit-dialog.png)
+![Boîte de dialogue Modifier la balise avec le nom de balise mis à jour.](./images/edit-dialog.png)
 
-Le nom de la balise a été mis à jour. Vous êtes redirigé vers l’écran des balises où la balise mise à jour apparaît dans la liste.
+Le nom de la balise a été mis à jour. Nous vous redirigeons vers l’écran des balises, où la balise mise à jour apparaît dans la liste.
 
-![Balise mise à jour pour la catégorie de balise](./images/updated-tag-listed.png)
+![Balise mise à jour dans la catégorie de balises.](./images/updated-tag-listed.png)
 
-## Déplacer une balise entre des catégories {#move-tag}
+## Déplacer une balise entre catégories {#move-tag}
 
-Les balises peuvent être déplacées vers d’autres catégories de balises. Le déplacement d’une balise conserve son association avec les objets dans lesquels elle est actuellement appliquée.
+Les balises peuvent être déplacées vers d’autres catégories de balises. Le déplacement d’une balise conserve son association avec tous les objets où elle est actuellement appliquée.
 
-Pour déplacer une balise existante, sélectionnez les points de suspension (`...`) en regard du nom de la balise que vous souhaitez déplacer. Une liste déroulante affiche des commandes permettant de modifier, de déplacer ou d’archiver la balise. Sélectionner **[!UICONTROL Modifier]** dans la liste déroulante.
+Pour déplacer une balise existante, procédez comme suit : dans la liste des catégories de balises, cliquez sur les points de suspension (`...`) en regard du nom de la balise que vous souhaitez déplacer. Une liste déroulante affiche différentes commandes permettant de modifier, de déplacer ou d’archiver la balise. Cliquez sur **[!UICONTROL Modifier]** dans la liste déroulante.
 
-![Action Déplacer affichée dans la liste déroulante](./images/move-action.png)
+![L’action Déplacer s’affiche dans la liste déroulante.](./images/move-action.png)
 
-Le **[!UICONTROL Balise de déplacement]** s’affiche, vous invitant à sélectionner la catégorie de balises dans laquelle la balise sélectionnée doit être déplacée.
+La boîte de dialogue **[!UICONTROL Déplacer la balise]** s’affiche et vous invite à sélectionner la catégorie de balises dans laquelle la balise sélectionnée doit être déplacée.
 
-Vous pouvez faire défiler la liste et la sélectionner dans la liste, ou utiliser la fonction de recherche pour saisir le nom de la catégorie. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Déplacer]**.
+Vous pouvez faire défiler la liste et sélectionner la catégorie de votre choix ou utiliser la fonctionnalité de recherche en saisissant le nom de la catégorie. Lorsque vous avez terminé, cliquez sur **[!UICONTROL Déplacer]**.
 
-![Déplacer la boîte de dialogue de balise avec les critères de recherche pour trouver la catégorie de balise](./images/move-dialog.png)
+![La boîte de dialogue Déplacer la balise avec les critères de recherche pour trouver la catégorie de balises.](./images/move-dialog.png)
 
-La balise a été déplacée avec succès et vous êtes redirigé vers l’écran des balises où la liste des balises mise à jour s’affiche et où la balise n’apparaît plus.
+La balise a été déplacée avec succès et nous vous redirigeons vers l’écran des balises : la liste des balises mise à jour s’affiche et la balise n’y apparaît plus.
 
-![Mise à jour de la liste des balises pour la catégorie de balises actuelle](./images/current-tag-category.png)
+![Liste des balises mise à jour dans la catégorie de balises actuelle.](./images/current-tag-category.png)
 
-La balise apparaît désormais dans la catégorie de balise précédemment sélectionnée.
+La balise se trouve désormais dans la catégorie de balises précédemment sélectionnée.
 
-![Liste de balises pour la catégorie de balises sélectionnée pour déplacer la balise.](./images/moved-to-tag-category.png)
+![Liste des balises dans la catégorie de balises sélectionnée pour déplacer la balise.](./images/moved-to-tag-category.png)
 
-## Archivage d’une balise {#archive-tag}
+## Archiver une balise {#archive-tag}
 
-L’état d’une balise peut être basculé entre principal et archivé. Les balises archivées ne sont pas supprimées des objets où elles ont déjà été appliquées, mais elles ne peuvent plus être appliquées aux nouveaux objets. Pour chaque balise, le même état est reflété dans tous les objets. Ceci s’avère particulièrement utile lorsque vous souhaitez conserver les associations actuelles d’objets de balise, mais que vous ne souhaitez pas que la balise soit utilisée à l’avenir.
+Le statut d’une balise peut être défini sur actif ou archivé. Les balises archivées ne sont pas supprimées des objets où elles ont déjà été appliquées, mais elles ne peuvent plus être appliquées aux nouveaux objets. Le statut d’une balise est le même dans tous les objets. Ceci s’avère particulièrement utile lorsque vous souhaitez conserver les associations actuelles entre la balise et ses objets, mais que vous ne souhaitez pas que la balise soit utilisée à l’avenir.
 
-Pour archiver une balise existante, sélectionnez les points de suspension (`...`) en regard du nom de la balise que vous souhaitez archiver. Une liste déroulante affiche des commandes permettant de modifier, de déplacer ou d’archiver la balise. Sélectionner **[!UICONTROL Archiver]** dans la liste déroulante.
+Pour archiver une balise existante, procédez comme suit : dans la liste des catégories de balises, sélectionnez les points de suspension (`...`) en regard du nom de la balise que vous souhaitez archiver. Une liste déroulante affiche différentes commandes permettant de modifier, de déplacer ou d’archiver la balise. Cliquez sur **[!UICONTROL Archiver]** dans la liste déroulante.
 
-![Action d’archivage affichée dans la liste déroulante](./images/archive-action.png)
+![Action d’archivage affichée dans la liste déroulante.](./images/archive-action.png)
 
-Le **[!UICONTROL Balise d’archivage]** s’affiche, vous invitant à confirmer l’archive de balise. Sélectionner **[!UICONTROL Archiver]**.
+La boîte de dialogue **[!UICONTROL Archiver la balise]** s’affiche et vous invite à confirmer l’opération. Cliquez sur **[!UICONTROL Archiver]**.
 
-![Boîte de dialogue de balise d’archive demandant confirmation](./images/archive-dialog.png)
+![La boîte de dialogue Archiver la balise s’affiche pour confirmer l’opération.](./images/archive-dialog.png)
 
-La balise est archivée avec succès et vous êtes redirigé vers l’écran des balises. La liste des balises mise à jour affiche désormais l’état de la balise sous la forme `Archived`.
+La balise est archivée avec succès et nous vous redirigeons vers l’écran des balises. La liste des balises mise à jour affiche désormais le statut suivant pour la balise : `Archived`.
 
-![Mise à jour de la liste des balises pour la catégorie de balises active affichant la balise comme archivée.](./images/archive-status.png)
+![Liste des balises mise à jour dans la catégorie de balises active, avec la balise affichant le statut Archivé.](./images/archive-status.png)
 
 ## Restaurer une balise archivée {#restore-archived-tag}
 
-Si vous souhaitez appliquer une `Archived` pour créer des objets, la balise doit se trouver dans une balise `Active` état. La restauration d’une balise archivée renvoie une balise à l’adresse `Active` état.
+Si vous souhaitez appliquer une balise au statut `Archived` pour créer des objets, le statut de la balise doit être le suivant : `Active`. Si une balise archivée est restaurée, son statut passe à : `Active`.
 
-Pour restaurer une balise archivée, sélectionnez les points de suspension (`...`) en regard du nom de la balise à restaurer. Une liste déroulante affiche les commandes permettant de restaurer ou de supprimer la balise. Sélectionner **[!UICONTROL Restaurer]** dans la liste déroulante.
+Pour restaurer une balise archivée, procédez comme suit : dans la liste des catégories de balises, cliquez sur les points de suspension (`...`) en regard du nom de la balise à restaurer. Une liste déroulante affiche les commandes permettant de restaurer ou de supprimer la balise. Cliquez sur **[!UICONTROL Restaurer]** dans la liste déroulante.
 
-![Restaurer l’action affichée dans la liste déroulante](./images/restore-action.png)
+![L’action de restauration s’affiche dans la liste déroulante.](./images/restore-action.png)
 
-Le **[!UICONTROL Restaurer la balise]** s’affiche, vous invitant à confirmer la restauration de la balise. Sélectionner **[!UICONTROL Restaurer]**.
+La boîte de dialogue **[!UICONTROL Restaurer la balise]** s’affiche et vous invite à confirmer l’opération. Cliquez sur **[!UICONTROL Restaurer]**.
 
-![Restaurer la boîte de dialogue de balise demandant confirmation](./images/restore-dialog.png)
+![La boîte de dialogue Restaurer la balise s’affiche pour confirmer l’opération.](./images/restore-dialog.png)
 
-La balise est restaurée avec succès et vous êtes redirigé vers l’écran des balises. La liste des balises mise à jour affiche désormais l’état de la balise sous la forme `Active`.
+La balise est restaurée avec succès et nous vous redirigeons vers l’écran des balises. Dans la liste des balises mise à jour qui s’affiche, la balise possède maintenant le statut suivant : `Active`.
 
-![Mise à jour de la liste des balises pour la catégorie de balises active affichant la balise comme principale](./images/restored-active-status.png)
+![Liste des balises mise à jour dans la catégorie de balises active, avec la balise dotée du statut Actif.](./images/restored-active-status.png)
 
-## Suppression d’une balise {#delete-tag}
+## Supprimer une balise {#delete-tag}
 
 >[!NOTE]
 >
->Seules les balises qui se trouvent dans un `Archived` et ne sont associés à aucun objet peuvent être supprimés.
+>Seules les balises dont le statut est `Archived` et qui ne sont associées à aucun objet peuvent être supprimées.
 
-La suppression d’une balise la supprime complètement du système.
+La suppression d’une balise l’élimine complètement du système.
 
-Pour supprimer une balise archivée, sélectionnez les points de suspension (`...`) en regard du nom de la balise que vous souhaitez supprimer. Une liste déroulante affiche les commandes permettant de restaurer ou de supprimer la balise. Sélectionner **[!UICONTROL Supprimer]** dans la liste déroulante.
+Pour supprimer une balise archivée, procédez comme suit : dans la liste des catégories de balises, cliquez sur les points de suspension (`...`) en regard du nom de la balise que vous souhaitez supprimer. Une liste déroulante affiche les commandes permettant de restaurer ou de supprimer la balise. Cliquez sur **[!UICONTROL Supprimer]** dans la liste déroulante.
 
-![Action de suppression affichée dans la liste déroulante](./images/delete-action.png)
+![L’action Supprimer s’affiche dans la liste déroulante.](./images/delete-action.png)
 
-Le **[!UICONTROL Supprimer la balise]** s’affiche, vous invitant à confirmer la suppression de la balise. Sélectionnez **[!UICONTROL Supprimer]**.
+La boîte de dialogue **[!UICONTROL Supprimer la balise]** s’affiche et vous invite à confirmer l’opération. Sélectionnez **[!UICONTROL Supprimer]**.
 
-![Boîte de dialogue de suppression des balises demandant confirmation](./images/delete-dialog.png)
+![La boîte de dialogue Supprimer la balise s’affiche pour confirmer l’opération.](./images/delete-dialog.png)
 
-La balise a été supprimée avec succès et vous êtes redirigé vers l’écran des balises. La balise n’apparaît plus dans la liste et a été complètement supprimée.
+La balise a été supprimée avec succès et nous vous redirigeons vers l’écran des balises. La balise n’apparaît plus dans la liste et a été complètement supprimée du système.
 
-![La liste des balises mise à jour de la catégorie de balises active qui affiche la balise n’apparaît plus dans la liste.](./images/deleted-updated-list.png)
+![La liste des balises mise à jour dans la catégorie de balises active, qui ne contient plus la balise.](./images/deleted-updated-list.png)
 
-## Affichage des objets balisés {#view-tagged}
+## Afficher les objets balisés {#view-tagged}
 
-Chaque balise comporte une page de détails accessible à partir de l’inventaire des balises. Cette page répertorie tous les objets auxquels cette balise est actuellement appliquée, ce qui permet aux utilisateurs d’afficher en une seule vue les objets associés provenant de différentes applications et fonctionnalités.
+Chaque balise comporte une page de détails, accessible à partir de l’inventaire des balises. Cette page répertorie tous les objets où la balise est actuellement appliquée. Les utilisateurs et les utilisatrices peuvent ainsi consulter en un seul endroit tous les objets associés à différentes applications et fonctionnalités.
 
-Pour afficher la liste des objets balisés, recherchez la balise dans une catégorie de balise, puis sélectionnez la balise.
+Pour afficher la liste des objets balisés, recherchez la balise dans une catégorie de balises, puis sélectionnez la balise.
 
-![Sélection de balises dans la catégorie de balises](./images/view-tag-selection.png)
+![Sélection d’une balise dans la catégorie de balises.](./images/view-tag-selection.png)
 
-Le [!UICONTROL Objets balisés] s’affiche, indiquant un inventaire des objets balisés.
+La page des [!UICONTROL Objets balisés] s’affiche.
 
-![Inventaire des objets balisés](./images/tagged-objects.png)
+![Inventaire des objets balisés.](./images/tagged-objects.png)
 
 ## Étapes suivantes
 
-Vous avez maintenant appris à gérer les balises. Pour un aperçu général des balises dans Experience Platform, reportez-vous à la section [documentation sur les balises](../overview.md).
+La gestion des balises n’a à présent plus de secret pour vous. Pour une présentation générale des balises dans Experience Platform, consultez la [documentation de présentation des balises](../overview.md).

@@ -8,7 +8,7 @@ feature: Web SDK
 source-git-commit: b53be9f2f2d55d5f9e8081fb0ca6732dcc2a8c11
 workflow-type: tm+mt
 source-wordcount: '209'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
@@ -32,7 +32,7 @@ ht-degree: 94%
    * [Configurer un train de données](./datastreams/configure.md)
    * [Préparation des données pour la collecte de données](./datastreams/data-prep.md)
    * Enrichissement des données {#data-enrichment}
-      * [Données météo par canal météo](./datastreams/data-enrichment/weather.md)
+      * [Données météo par The Weather Channel](./datastreams/data-enrichment/weather.md)
       * [Mappages des champs de données météo](./datastreams/data-enrichment/weather-reference.md)
 * Identité {#identity}
    * [Aperçu](identity/overview.md)

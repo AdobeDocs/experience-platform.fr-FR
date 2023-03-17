@@ -6,7 +6,7 @@ hidefromtoc: true
 source-git-commit: a1babf70a7a4e20f3e535741c95ac927597c9f48
 workflow-type: tm+mt
 source-wordcount: '967'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
@@ -16,7 +16,7 @@ Adobe Experience Platform vous permet d’ingérer des fichiers chiffrés par 
 
 Le processus d’ingestion des données chiffrées est le suivant :
 
-1. [Créer une paire de clés de chiffrement à l’aide des API d’Experience Platform](#create-encryption-key-pair). La paire de clés de chiffrement se compose d’une clé privée et d’une clé publique. Une fois créée, vous pouvez copier ou télécharger la clé publique, ainsi que son identifiant de clé publique correspondant et sa date d’expiration. Au cours de ce processus, la clé privée sera stockée par Experience Platform dans un coffre sécurisé. **REMARQUE :** La clé publique de la réponse est encodée en Base64 et doit être déchiffrée avant utilisation.
+1. [Créer une paire de clés de chiffrement à l’aide des API d’Experience Platform](#create-encryption-key-pair). La paire de clés de chiffrement se compose d’une clé privée et d’une clé publique. Une fois créée, vous pouvez copier ou télécharger la clé publique, ainsi que son identifiant de clé publique correspondant et sa date d’expiration. Au cours de ce processus, la clé privée sera stockée par Experience Platform dans un coffre sécurisé. **REMARQUE :** la clé publique de la réponse est codée en Base64 et doit être déchiffrée avant utilisation.
 2. Utilisez la clé publique pour chiffrer le fichier de données à ingérer.
 3. Placez votre fichier chiffré dans votre espace de stockage dans le cloud.
 4. Une fois le fichier chiffré prêt, [créez une connexion source et un flux de données pour votre source d’espace de stockage dans le cloud](#create-a-dataflow-for-encrypted-data). Lors de l’étape de création de flux, vous devez fournir un paramètre `encryption` et inclure votre identifiant de clé publique.
@@ -24,7 +24,7 @@ Le processus d’ingestion des données chiffrées est le suivant :
 
 >[!IMPORTANT]
 >
->La taille maximale d’un seul fichier chiffré est de 100 Mo. Par exemple, vous pouvez ingérer 2 Go de données dans une seule exécution de flux de données. Toutefois, un fichier individuel de ces données ne peut pas dépasser 100 Mo.
+>La taille maximale d’un seul fichier chiffré est de 100 Mo. Par exemple, vous pouvez ingérer 2 Go de données dans une seule exécution de flux de données. Toutefois, les fichiers individuels dans ces données ne peuvent pas dépasser 100 Mo.
 
 Ce document décrit les étapes à suivre pour générer une paire de clés de chiffrement pour vos données et ingérer ces données chiffrées sur Experience Platform à l’aide de sources d’espace de stockage dans le cloud.
 
@@ -77,7 +77,7 @@ curl -X POST \
 
 **Réponse**
 
-Une réponse réussie renvoie votre clé publique codée en Base64, votre identifiant de clé publique et l’heure d’expiration de vos clés. La date d’expiration est automatiquement définie sur 180 jours après la date de génération de la clé. La date d’expiration ne peut actuellement pas être configurée.
+Une réponse réussie renvoie votre clé publique codée en Base64, votre identifiant de clé publique et la date d’expiration de vos clés. La date d’expiration est automatiquement définie sur 180 jours après la date de génération de la clé. La date d’expiration ne peut actuellement pas être configurée.
 
 ```json
 {

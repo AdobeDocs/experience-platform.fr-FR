@@ -6,7 +6,7 @@ user-guide-description: Utilisez des balises unifiées pour gérer les taxonomie
 source-git-commit: de258d0e9fe8304b239633c6901a62e3d7b9e214
 workflow-type: tm+mt
 source-wordcount: '39'
-ht-degree: 0%
+ht-degree: 30%
 
 ---
 
@@ -15,5 +15,5 @@ ht-degree: 0%
 
 * [Présentation des balises unifiées (version bêta)](overview.md)
 * Interface utilisateur des balises unifiées {#ui}
-   * [Gestion des balises](ui/managing-tags.md)
+   * [Gérer les balises](ui/managing-tags.md)
    * [Catégories de balises](ui/tags-categories.md)

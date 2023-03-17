@@ -7,7 +7,7 @@ feature: Schemas
 source-git-commit: 81b53d2bd84eacb32999b957bee9b5e9aa77d5f7
 workflow-type: tm+mt
 source-wordcount: '518'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -193,8 +193,8 @@ ht-degree: 98%
    * [Ajouter des champs spécifiques à un schéma (API)](./tutorials/specific-fields-api.md)
    * [Définir des champs personnalisés (API)](./tutorials/custom-fields-api.md)
    * [Ajouter des valeurs suggérées à un champ (API)](tutorials/suggested-values.md)
-   * [Rendre obsolète un champ XDM dans l’interface utilisateur](tutorials/field-deprecation-ui.md)
-   * [Obsolescence d’un champ XDM dans l’API](tutorials/field-deprecation-api.md)
+   * [Rendre obsolète un champ XDM dans l’IU](tutorials/field-deprecation-ui.md)
+   * [Rendre obsolète un champ XDM dans l’API](tutorials/field-deprecation-api.md)
    * [Définir une relation de schéma dans l’interface utilisateur](tutorials/relationship-ui.md)
    * [Définir une relation de schéma dans l’API](tutorials/relationship-api.md)
    * [Définir une relation de schéma dans l’édition B2B de Real-Time CDP](tutorials/relationship-b2b.md)

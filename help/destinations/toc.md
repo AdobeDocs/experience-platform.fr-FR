@@ -7,7 +7,7 @@ feature: Destinations
 source-git-commit: 9fd11ecbd2d9747088a31b0f25fc8be9990292e3
 workflow-type: tm+mt
 source-wordcount: '1044'
-ht-degree: 96%
+ht-degree: 98%
 
 ---
 
@@ -41,7 +41,7 @@ ht-degree: 96%
       * [Configurez des destinations de personnalisation pour la personnalisation de la même page et de la page suivante.](./ui/configure-personalization-destinations.md)
       * [(Version bêta) Exporter des fichiers à la demande vers des destinations par lots à l’aide de l’interface utilisateur Experience Platform](./ui/export-file-now.md)
       * [(Version bêta) Exporter des jeux de données à l’aide de l’interface utilisateur Experience Platform](./ui/export-datasets.md)
-      * [(Version bêta) Utilisation de l’attribut XDM de l’heure de la dernière qualification dans les nouvelles destinations de stockage dans le cloud bêta](./ui/activate-last-qualification-time.md)
+      * [(Version bêta) Utiliser l’attribut XDM de l’heure de la dernière qualification dans les nouvelles destinations de stockage dans le cloud en version bêta](./ui/activate-last-qualification-time.md)
    * [Afficher les détails de la destination](./ui/destination-details-page.md)
    * [Mettre à jour les comptes de destination](./ui/update-accounts.md)
    * [Supprimer les comptes de destination](./ui/delete-destination-account.md)

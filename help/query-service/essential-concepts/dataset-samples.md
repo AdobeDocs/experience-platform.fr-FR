@@ -5,11 +5,11 @@ exl-id: 9e676d7c-c24f-4234-878f-3e57bf57af44
 source-git-commit: 13779e619345c228ff2a1981efabf5b1917c4fdb
 workflow-type: tm+mt
 source-wordcount: '639'
-ht-degree: 76%
+ht-degree: 100%
 
 ---
 
-# Échantillon de jeux de données
+# Échantillons de jeux de données
 
 Adobe Experience Platform Query Service fournit des échantillons de jeux de données dans le cadre de ses fonctionnalités approximatives de traitement des requêtes. Des échantillons de jeux de données sont créés avec des échantillons aléatoires uniformes issus de jeux de données [!DNL Azure Data Lake Storage] (ADLS), utilisant uniquement un pourcentage d’enregistrements de l’original. Ce pourcentage est connu sous le nom de taux d’échantillonnage. Le réglage du taux d’échantillonnage pour contrôler l’équilibre précision/temps de traitement permet d’effectuer des requêtes exploratoires sur le Big Data avec un temps de traitement considérablement réduit, au détriment de la précision des requêtes.
 
@@ -18,7 +18,7 @@ Comme de nombreux utilisateurs et de nombreuses utilisatrices n’ont pas besoin
 Pour vous aider à gérer vos échantillons pour le traitement approximatif des requêtes, Query Service prend en charge les opérations suivantes pour les échantillons de jeux de données :
 
 - [Créer un échantillon de jeu de données aléatoire uniforme.](#create-a-sample)
-- [Vous pouvez éventuellement spécifier un critère de filtre](##optional-filter-criteria)
+- [Vous pouvez également indiquer un critère de filtre.](##optional-filter-criteria)
 - [Afficher la liste des échantillons pour une table ADLS.](#view-list-of-samples)
 - [Interroger directement les échantillons de jeux de données.](#query-sample-datasets)
 - [Supprimer un échantillon.](#delete-a-sample)
@@ -26,7 +26,7 @@ Pour vous aider à gérer vos échantillons pour le traitement approximatif des 
 
 ## Prise en main {#get-started}
 
-Pour utiliser les fonctionnalités de création et de suppression de traitement de requête approximatif présentées dans ce document, vous devez définir l’indicateur de session sur `true`. Dans la ligne de commande de l’éditeur de requêtes ou de votre client PSQL, saisissez la variable `SET aqp=true;` .
+Pour utiliser les fonctionnalités de création et de suppression du traitement approximatif des requêtes présentées dans ce document, vous devez définir l’indicateur de session sur `true`. Dans la ligne de commande de Query Editor ou de votre client PSQL, saisissez la commande `SET aqp=true;`.
 
 >[!NOTE]
 >
@@ -48,11 +48,11 @@ Le taux d’échantillonnage est le pourcentage d’enregistrements extraits du 
 ANALYZE TABLE example_dataset_name TABLESAMPLE SAMPLERATE 5.0;
 ```
 
-## Vous pouvez éventuellement spécifier un critère de filtre {#optional-filter-criteria}
+## Vous pouvez également indiquer un critère de filtre. {#optional-filter-criteria}
 
-Vous pouvez choisir de spécifier un critère de filtrage pour vos échantillons aléatoires uniformes. Vous pouvez ainsi créer un exemple basé sur le sous-ensemble filtré du tableau analysé.
+Vous pouvez appliquer un critère de filtre sur vos échantillons aléatoires uniformes. Vous obtiendrez alors un échantillon basé sur le sous-ensemble filtré du tableau analysé.
 
-Lors de la création d’un exemple, le filtre facultatif est appliqué en premier, puis l’exemple est créé à partir de la vue filtrée du jeu de données. Un exemple de jeu de données avec un filtre appliqué suit le format de requête suivant :
+Lors de la création d’un échantillon, le filtre facultatif est appliqué en premier, puis l’échantillon est créé à partir de la vue filtrée du jeu de données. Un échantillon de jeu de données doté d’un filtre suit le format de requête suivant :
 
 ```sql
 ANALYZE TABLE <tableToAnalyze> TABLESAMPLE FILTERCONTEXT (<filter_condition>) SAMPLERATE X.Y;
@@ -60,7 +60,7 @@ ANALYZE TABLE <tableToAnalyze> TABLESAMPLE FILTERCONTEXT (<filter_condition_1> A
 ANALYZE TABLE <tableToAnalyze> TABLESAMPLE FILTERCONTEXT (<filter_condition_1> AND (<filter_condition_2> OR <filter_condition_3>)) SAMPLERATE X.Y;
 ```
 
-Voici des exemples pratiques de ce type de jeu de données d’exemple filtré :
+Voici des exemples concrets de ce type d’échantillon de jeu de données filtré :
 
 ```sql
 Analyze TABLE large_table TABLESAMPLE FILTERCONTEXT (month(to_timestamp(timestamp)) in ('8', '9')) SAMPLERATE 10;
@@ -68,7 +68,7 @@ Analyze TABLE large_table TABLESAMPLE FILTERCONTEXT (month(to_timestamp(timestam
 Analyze TABLE large_table TABLESAMPLE FILTERCONTEXT (month(to_timestamp(timestamp)) in ('8', '9') AND (product.name = "product1" OR product.name = "product2")) SAMPLERATE 10;
 ```
 
-Dans les exemples fournis, le nom de la table est `large_table`, la condition de filtrage sur la table d’origine est la suivante : `month(to_timestamp(timestamp)) in ('8', '9')`, et que le taux d’échantillonnage est (X % des données filtrées), dans ce cas, `10`.
+Dans les exemples ci-dessus, le nom du tableau est `large_table`, la condition de filtrage sur le tableau d’origine est `month(to_timestamp(timestamp)) in ('8', '9')` et le taux d’échantillonnage est (pourcentage des données filtrées), dans ce cas, `10`.
 
 ## Afficher la liste des échantillons {#view-list-of-samples}
 

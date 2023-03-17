@@ -5,7 +5,7 @@ description: Ce document fournit des informations sur les balises unifiées dans
 source-git-commit: de258d0e9fe8304b239633c6901a62e3d7b9e214
 workflow-type: tm+mt
 source-wordcount: '607'
-ht-degree: 1%
+ht-degree: 91%
 
 ---
 
@@ -15,50 +15,50 @@ ht-degree: 1%
 >
 >Les balises unifiées sont en version bêta. Si vous souhaitez laisser vos commentaires, cliquez sur le bouton en haut de la page d’administration Balises.
 
-Les balises sont une fonctionnalité de Adobe Experience Platform qui permet aux administrateurs de gérer les taxonomies de métadonnées afin de classer les objets commerciaux pour une découverte et une catégorisation plus simples. Les balises sont des métadonnées qui peuvent être considérées comme des mots-clés pouvant être jointes à un segment, un jeu de données, un parcours ou d’autres objets pour permettre aux recherches de trouver cet objet et les objets associés. Les balises sont classées en deux types : catégorisés et non classés.
+Les balises sont une fonctionnalité d’Adobe Experience Platform qui permet à l’administration de gérer les taxonomies de métadonnées et de classer les objets d’entreprise pour une découverte et un classement plus simples. Pensez aux balises comme à des mots-clés : associez-les à un segment, un jeu de données, un parcours, etc. pour identifier ces objets. Vous pourrez ensuite rechercher cet objet et les objets associés grâce à leur balise. Il existe deux catégories de balises : classées et non classées.
 
-Pour fournir plus de contexte et définir l’objectif d’une balise, les catégories organisent les balises en ensembles utiles. Un administrateur définit les balises classées que les utilisateurs peuvent ajouter aux objets. De nouvelles balises qui ne contiennent pas de catégories peuvent également être créées en ligne dans les workflows où des balises sont appliquées. Ces balises s’affichent dans la section non classée de l’inventaire des balises. Les balises peuvent être appliquées par les administrateurs et les utilisateurs, quelle que soit la personne qui les a créées. Tous les types de balises peuvent être sélectionnés lors de l’affectation à un objet, d’une recherche ou d’un filtrage.
+Pour offrir plus de contexte et définir la finalité d’une balise, les catégories classent les balises en jeux utiles. L’administration définit les balises classées que les utilisateurs et utilisatrices peuvent ajouter aux objets. De nouvelles balises n’appartenant à aucune catégorie peuvent également être créées en ligne dans les workflows où des balises sont appliquées. Ces balises s’affichent dans la section non classée de l’inventaire des balises. L’administration, les utilisateurs et les utilisatrices peuvent tous appliquer les balises, quelle que soit la personne qui les a créées. Lors de l’affectation d’une balise à un objet, d’une recherche ou d’un filtrage, tous les types de balises sont disponibles.
 
-## Terminologie des balises
+## Terminologie propre aux balises
 
-Le balisage implique les composants suivants :
+Le balisage implique les composants suivants :
 
 | Terminologie | Définition |
 | --- | --- |
 | Archivé | État d’une balise qui conserve les associations actuelles avec les objets mais qui limite l’application de la balise à d’autres objets.  Les balises archivées sont masquées dans le sélecteur de balises. |
-| Objet | Élément Experience Cloud auquel une balise peut être appliquée.  Exemples : Segment, Parcours, jeu de données. |
-| Balises | Les balises sont des métadonnées et peuvent être considérées comme des mots-clés qui peuvent être joints à un segment, un jeu de données, un parcours ou d’autres objets pour permettre aux recherches de trouver cet objet et les objets associés. |
-| Catégorie de balise | Les catégories de balises regroupent les balises dans des ensembles significatifs afin de fournir un plus grand contexte ou de décrire l’objectif de la balise.  Les administrateurs gèrent les catégories de balises et les balises au sein des catégories. |
-| Balise non classée | Une nouvelle balise créée en ligne où les balises sont appliquées. Ces balises peuvent être créées et appliquées par n’importe quel utilisateur, mais elles ne sont pas liées à une catégorie.  Les administrateurs peuvent déplacer ces balises vers une catégorie afin de s’aligner sur d’autres balises similaires. |
+| Objet | Élément Experience Cloud auquel une balise peut être appliquée.  Exemples : segment, parcours, jeu de données. |
+| Balise | Les balises sont des métadonnées et peuvent être considérées comme des mots-clés qui peuvent être rattachés à un segment, un jeu de données, un parcours ou d’autres objets pour permettre aux recherches de trouver cet objet et les objets associés. |
+| Catégorie de balises | Les catégories de balises regroupent les balises dans des jeux significatifs pour fournir un plus grand contexte ou décrire la finalité de la balise.  Les administrateurs et administratrices gèrent les catégories de balises et les balises dans des catégories. |
+| Balise non classée | Une nouvelle balise créée en ligne où les balises sont appliquées. Ces balises peuvent être créées et appliquées par n’importe quel utilisateur ou utilisatrice, mais elles ne sont pas liées à une catégorie.  Les administrateurs et administratrices peuvent déplacer ces balises vers une catégorie afin de s’aligner sur d’autres balises similaires. |
 
 ## Inventaire des balises
 
-La gestion des balises et des catégories à l’aide de l’inventaire des balises est disponible dans la navigation de l’Experience Platform et de Journey Optimizer. Les modifications apportées aux balises de l’inventaire sont répercutées dans tous les objets qui prennent en charge les balises. Tous les utilisateurs peuvent accéder à l’inventaire des balises et le parcourir, mais la gestion des balises se limite aux administrateurs système et produit.
+La gestion des balises et des catégories de balises à l’aide de l’inventaire des balises est disponible dans la navigation d’Experience Platform et de Journey Optimizer. Les modifications apportées aux balises de l’inventaire sont répercutées dans tous les objets qui prennent en charge les balises. Tous les utilisateurs et utilisatrices peuvent accéder à l’inventaire des balises et le parcourir, mais seuls les administrateurs et administraices système et produit sont responsables de la gestion des balises.
 
-L’inventaire des balises comporte trois niveaux de hiérarchie, ce qui permet aux utilisateurs de gérer les catégories de balises, les balises d’une catégorie et les balises individuelles. Lors de la gestion d’une balise individuelle, les utilisateurs peuvent afficher et accéder à n’importe quel objet auquel cette balise est actuellement appliquée.
+L’inventaire des balises comporte trois niveaux de hiérarchie, ce qui permet aux utilisateurs et utilisatrices de gérer les catégories de balises, les balises d’une catégorie et les balises individuelles. Lors de la gestion d’une balise individuelle, les utilisateurs et utilisatrices peuvent afficher et accéder à n’importe quel objet auquel cette balise est actuellement appliquée.
 
 ### Catégories de balises
 
-Les catégories regroupent les balises dans des ensembles significatifs afin de fournir un plus grand contexte ou de décrire l’objectif de la balise. Sur toute balise comportant une catégorie, le nom de la catégorie suivi d’un signe deux-points précède le nom de la balise.
+Les catégories regroupent les balises dans des jeux significatifs afin de fournir un plus grand contexte ou de décrire la finalité de la balise. Sur toute balise appartenant à une catégorie, le nom de la catégorie suivi du signe deux-points précède le nom de la balise.
 
-Les actions suivantes sont possibles lors de l’utilisation de catégories de balises :
+Les actions suivantes sont possibles lors de l’utilisation de catégories de balises :
 
-* [Créer une catégorie de balise](./ui/tags-categories.md#create-tag-category)
-* [Modifier la catégorie de balise](./ui/tags-categories.md#edit-tag-category-edit-tag-category)
-* [Supprimer une catégorie de balise](./ui/tags-categories.md#delete-tag-category-delete-tag-category)
+* [Créer une catégorie de balises](./ui/tags-categories.md#create-tag-category)
+* [Modifier la catégorie de balises](./ui/tags-categories.md#edit-tag-category-edit-tag-category)
+* [Supprimer une catégorie de balises](./ui/tags-categories.md#delete-tag-category-delete-tag-category)
 
-### Gestion des balises dans une catégorie
+### Gérer les balises d’une catégorie
 
 >[!NOTE]
 >
->Pour gérer les balises d’Experience Cloud, vous devez être un administrateur système ou un administrateur de produit pour Adobe Experience Platform pour votre entreprise, qui s’abonne à Experience Cloud.
+>Pour gérer les balises d’Experience Cloud, vous devez être administrateur ou administratrice système ou produit d’Adobe Experience Platform pour votre organisation abonnée à Experience Cloud.
 
-Dans une catégorie (ou le groupe &quot;Non classé&quot; par défaut), vous pouvez créer et gérer des balises. Les actions suivantes sont possibles lors de la gestion des balises :
+Dans une catégorie (ou le groupe « Non classé » par défaut), vous pouvez créer et gérer des balises. Les actions suivantes sont possibles lors de la gestion des balises :
 
-* [Création d&#39;une balise](./ui/managing-tags.md#create-a-tag-create-tag)
-* [Modification d’une balise](./ui/managing-tags.md#edit-a-tag-edit-tag)
-* [Déplacer une balise entre des catégories](./ui/managing-tags.md#move-a-tag-between-categories-move-tag)
-* [Archivage d’une balise](./ui/managing-tags.md#archive-a-tag-archive-tag)
+* [Créer une balise](./ui/managing-tags.md#create-a-tag-create-tag)
+* [Modifier une balise](./ui/managing-tags.md#edit-a-tag-edit-tag)
+* [Déplacer une balise entre catégories](./ui/managing-tags.md#move-a-tag-between-categories-move-tag)
+* [Archiver une balise](./ui/managing-tags.md#archive-a-tag-archive-tag)
 * [Restaurer une balise archivée](./ui/managing-tags.md#restore-an-archived-tag-restore-archived-tag)
-* [Suppression d’une balise](./ui/managing-tags.md#delete-a-tag-delete-tag)
-* [Affichage des objets balisés](./ui/managing-tags.md#viewing-tagged-objects-view-tagged)
+* [Supprimer une balise](./ui/managing-tags.md#delete-a-tag-delete-tag)
+* [Afficher les objets balisés](./ui/managing-tags.md#viewing-tagged-objects-view-tagged)
