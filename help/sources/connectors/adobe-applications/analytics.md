@@ -2,10 +2,10 @@
 title: Connecteur source Adobe Analytics pour les données d’une suite de rapports
 description: Ce document présente Analytics et décrit les cas d’utilisation des données Analytics.
 exl-id: c4887784-be12-40d4-83bf-94b31eccdc2e
-source-git-commit: 486f5bdd834808c6262f41c0b0187721fc9b0799
+source-git-commit: 35298fc6b3e272c1b7b14cfa17713d18427ba2ce
 workflow-type: tm+mt
-source-wordcount: '1040'
-ht-degree: 19%
+source-wordcount: '1042'
+ht-degree: 20%
 
 ---
 
@@ -23,7 +23,7 @@ Ce document présente les [!DNL Analytics] et décrit les cas d’utilisation po
 
 à un niveau élevé, [!DNL Analytics] collecte des données à partir de divers canaux numériques et de plusieurs centres de données dans le monde entier. Une fois les données collectées, les règles VISTA (Visitor Identification, Segmentation and Transformation Architecture) et les règles de traitement sont appliquées pour façonner les données entrantes. Une fois que les données brutes ont subi ce traitement léger, elles sont alors considérées comme prêtes à être utilisées par [!DNL Real-Time Customer Profile]. Dans un processus parallèle mentionné ci-dessus, les mêmes données traitées sont microtraitées par lot et ingérées dans des jeux de données Platform pour être utilisées par [!DNL Data Science Workspace], [!DNL Query Service]et d’autres applications de découverte de données.
 
-Voir [présentation des règles de traitement](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/processing-rules/processing-rules.html) pour plus d’informations sur les règles de traitement.
+Voir [présentation des règles de traitement](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/processing-rules/processing-rules.html?lang=fr) pour plus d’informations sur les règles de traitement.
 
 ## Modèle de données d’expérience (XDM)
 
@@ -50,7 +50,7 @@ Le tableau ci-dessous décrit la latence attendue des données Analytics sur Pla
 | Données Analytics | Latence attendue |
 | -------------- | ---------------- |
 | Nouvelles données pour [!DNL Real-Time Customer Profile] (A4T) **not** enabled) | &lt; 2 minutes |
-| Nouvelles données pour [!DNL Real-Time Customer Profile] (A4T) **is** enabled) | &lt; 15 minutes |
+| Nouvelles données pour [!DNL Real-Time Customer Profile] (A4T) **is** enabled) | jusqu’à 30 minutes |
 | Nouvelles données pour le lac de données | &lt; 90 minutes |
 | Renvoi de moins de 10 milliards d’événements | &lt; 4 semaines |
 
