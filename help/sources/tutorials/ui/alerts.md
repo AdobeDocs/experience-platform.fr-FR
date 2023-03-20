@@ -3,14 +3,18 @@ keywords: Experience Platform;accueil;rubriques les plus consultées ; alertes
 description: Vous pouvez vous abonner à des alertes lors de la création d’un flux de données pour recevoir des messages d’alerte concernant l’état, la réussite ou l’échec de votre exécution de flux.
 title: Abonnement à des alertes contextuelles dans l’interface utilisateur
 exl-id: 5d51edaa-ecba-4ac0-8d3c-49010466b9a5
-source-git-commit: d450dc7b0dc0303c9d33c3e8e003659e3140cf5b
+source-git-commit: 3f7f66c0d58d127299ad12027869ca0e9837f5cd
 workflow-type: tm+mt
-source-wordcount: '845'
-ht-degree: 17%
+source-wordcount: '868'
+ht-degree: 16%
 
 ---
 
 # Abonnement aux alertes pour les flux de données de sources dans l’interface utilisateur
+
+>[!NOTE]
+>
+>Les alertes ne sont pas prises en charge dans les environnements de test hors production. Pour vous abonner aux alertes, vous devez vous assurer que vous utilisez un environnement de test de production.
 
 Adobe Experience Platform vous permet de vous abonner à des alertes basées sur des événements concernant les activités Adobe Experience Platform. Les alertes réduisent ou éliminent la nécessité d’interroger l’[[!DNL Observability Insights] API](../../../observability/api/overview.md) afin de vérifier si une tâche est terminée, si un certain jalon a été atteint dans un processus ou si des erreurs se sont produites.
 
@@ -103,7 +107,7 @@ Pour plus d’informations sur la gestion des erreurs de flux de données, consu
 
 Les alertes de vos flux de données vous sont également envoyées par courrier électronique. Sélectionnez le nom du flux de données dans le corps de l’email pour afficher plus d’informations sur votre flux de données.
 
-![e-mail](../../images/tutorials/alerts/email.png)
+![adresse e-mail](../../images/tutorials/alerts/email.png)
 
 Tout comme l’alerte de l’interface utilisateur, la variable [!UICONTROL Présentation de l’exécution du flux de données] s’affiche, vous fournissant une interface permettant d’enquêter sur les erreurs associées à votre flux de données.
 

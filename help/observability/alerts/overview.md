@@ -4,14 +4,18 @@ title: Présentation des alertes
 description: Découvrez les alertes dans Adobe Experience Platform, y compris la structure de la définition des règles d’alerte.
 feature: Alerts
 exl-id: c38a93c6-1618-4ef9-8f94-41c7ab4af43c
-source-git-commit: b1c82169056e66b9cdcf99f73daa7d37a3a01600
+source-git-commit: 37700c3b3b728b59083fd51cabf1d8e4b8213580
 workflow-type: tm+mt
-source-wordcount: '760'
-ht-degree: 97%
+source-wordcount: '774'
+ht-degree: 94%
 
 ---
 
 # Présentation des alertes
+
+>[!NOTE]
+>
+>Les alertes ne sont pas prises en charge dans les environnements de test hors production. Pour vous abonner aux alertes, vous devez vous assurer que vous utilisez un environnement de test de production.
 
 Adobe Experience Platform vous permet de vous abonner à des alertes basées sur des événements concernant les activités Adobe Experience Platform. Les alertes réduisent ou éliminent la nécessité d’interroger l’[[!DNL Observability Insights] API](../api/overview.md) afin de vérifier si une tâche est terminée, si un certain jalon a été atteint dans un processus ou si des erreurs se sont produites.
 
@@ -29,7 +33,7 @@ Les alertes de Platform peuvent être envoyées une seule fois ou se répéter �
 | Ne se répète pas. | Peut se répéter si la condition anormale persiste. |
 | Par exemple :<ul><li>L’ingestion des données s’est terminée avec succès.</li><li>Une exécution de requête est terminée.</li><li>Les données ont été supprimées.</li></ul> | Par exemple :<ul><li>La durée d’ingestion dépasse le contrat de niveau de service (SLA).</li><li>L’ingestion quotidienne n’a pas eu lieu au cours des dernières 24 heures.</li><li>Le taux d’erreur du processeur de flux est supérieur au seuil configuré.</li><li>Le nombre total de profils dépasse les droits.</li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Présentation des alertes
 
@@ -43,7 +47,7 @@ Une alerte peut être décomposée en plusieurs éléments :
 | **Action** | Lorsqu’une alerte est déclenchée, une action est exécutée. Plus précisément, les messages sont envoyés aux destinataires applicables par le biais d’un canal de diffusion, tel qu’un webhook préconfiguré ou l’interface utilisateur Experience Platform. |
 | **Fréquence** | (Facultatif) Une alerte peut être configurée pour répéter son action à un intervalle défini si sa condition reste vraie ou n’est pas résolue. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Recevoir et gérer des alertes
 
@@ -71,7 +75,7 @@ Pour utiliser des alertes dans l’interface utilisateur de Platform, vous devez
 | Gérer les alertes* | Permet d’activer et de désactiver les règles d’alerte à partir de l’onglet [!UICONTROL Alertes]. |
 | Résoudre les alertes* | Permet de résoudre les alertes déclenchées à partir de l’onglet [!UICONTROL Alertes]. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Pour accéder à l’onglet [!UICONTROL Alertes], vous devez également disposer de l’autorisation Afficher les alertes, associée à l’une des autres autorisations.*
 
