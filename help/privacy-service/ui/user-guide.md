@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Gestion des tâches liées à la confidentialité dans l’interface utilisateur du Privacy Service
 description: Découvrez comment utiliser l’interface utilisateur du Privacy Service pour coordonner et surveiller les demandes d’accès à des informations personnelles dans différentes applications Experience Cloud.
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
-source-git-commit: e539b1e165227d9a888bfe12d8205e285b3ce259
+source-git-commit: 21347074ed6160511888d4b543133dfd1ec4d35c
 workflow-type: tm+mt
-source-wordcount: '1150'
-ht-degree: 59%
+source-wordcount: '1266'
+ht-degree: 54%
 
 ---
 
@@ -19,6 +19,12 @@ ht-degree: 59%
 >abstract=""
 
 Ce document décrit les étapes à suivre pour créer et gérer des demandes d’accès à des informations personnelles à l’aide de la méthode [!DNL Privacy Service] de l’interface utilisateur.
+
+>[!IMPORTANT]
+>
+>Le Privacy Service est destiné uniquement aux demandes relatives aux titulaires de données et aux droits des consommateurs. Toute autre utilisation de Privacy Service pour le nettoyage ou la maintenance des données n’est ni prise en charge ni autorisée. L&#39;Adobe a l&#39;obligation légale de les remplir dans les délais impartis. Par conséquent, le test de chargement sur Privacy Service n’est pas autorisé, car il s’agit d’un environnement de production uniquement et crée un journal inutile de demandes d’accès à des informations personnelles valides.
+>
+>Une limite de chargement quotidienne stricte est maintenant en place pour prévenir les abus du service. Les utilisateurs qui abusent du système verront leur accès désactivé. Une réunion ultérieure sera ensuite organisée avec eux afin d&#39;aborder leurs actions et de discuter de l&#39;utilisation acceptable pour le Privacy Service.
 
 ## Parcourez les [!DNL Privacy Service] Tableau de bord de l’interface utilisateur
 

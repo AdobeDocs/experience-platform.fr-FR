@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Point de terminaison de l’API Privacy Jobs
 description: Découvrez comment gérer les tâches de confidentialité pour les applications Experience Cloud à l’aide de l’API Privacy Service.
 exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+source-git-commit: 21347074ed6160511888d4b543133dfd1ec4d35c
 workflow-type: tm+mt
-source-wordcount: '1451'
-ht-degree: 64%
+source-wordcount: '1549'
+ht-degree: 59%
 
 ---
 
@@ -40,7 +40,7 @@ GET /jobs?regulation={REGULATION}&page={PAGE}&size={SIZE}
 | `{PAGE}` | La page de données à afficher à l’aide d’une numérotation basée sur 0. La valeur par défaut est de `0`. |
 | `{SIZE}` | Le nombre de résultats à afficher sur chaque page. `1` est la valeur par défaut et `100` est le maximum. Dépasser le maximum entraîne le code d’erreur 400 dans l’API. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Requête**
 
@@ -63,6 +63,12 @@ Une réponse réussie renvoie une liste des tâches dont chaque tâche contient 
 Pour récupérer le jeu suivant de résultats dans une réponse paginée, vous devez effectuer un autre appel API vers le même point de terminaison tout en augmentant le paramètre de requête `page` de 1.
 
 ## Création d’une tâche de confidentialité {#create-job}
+
+>[!IMPORTANT]
+>
+>Le Privacy Service est destiné uniquement aux demandes relatives aux titulaires de données et aux droits des consommateurs. Toute autre utilisation de Privacy Service pour le nettoyage ou la maintenance des données n’est ni prise en charge ni autorisée. L&#39;Adobe a l&#39;obligation légale de les remplir dans les délais impartis. Par conséquent, le test de chargement sur Privacy Service n’est pas autorisé, car il s’agit d’un environnement de production uniquement et crée un journal inutile de demandes d’accès à des informations personnelles valides.
+>
+>Une limite de chargement quotidienne stricte est maintenant en place pour prévenir les abus du service. Les utilisateurs qui abusent du système verront leur accès désactivé. Une réunion ultérieure sera ensuite organisée avec eux afin d&#39;aborder leurs actions et de discuter de l&#39;utilisation acceptable pour le Privacy Service.
 
 Avant de créer une nouvelle requête de tâche, vous devez d’abord collecter des informations d’identification concernant les titulaires des données auxquelles vous souhaitez accéder, supprimer ou exclure de la vente. Une fois que vous disposez des données requises, elles doivent être fournies dans le payload d’une requête de POST à la variable `/jobs` point de terminaison .
 
@@ -162,7 +168,7 @@ curl -X POST \
 | `mergePolicyId` | Lors de l’exécution de demandes d’accès à des informations personnelles pour Real-time Customer Profile (`profileService`), vous pouvez éventuellement fournir l’identifiant de la variable [stratégie de fusion](../../profile/merge-policies/overview.md) que vous souhaitez utiliser pour la combinaison d’identifiants. En spécifiant une stratégie de fusion, les demandes d’accès à des informations personnelles peuvent inclure des informations de segment lors du renvoi de données sur un client. Une seule stratégie de fusion peut être spécifiée par requête. Si aucune stratégie de fusion n’est fournie, les informations de segmentation ne sont pas incluses dans la réponse. |
 | `regulation` **(Obligatoire)** | La réglementation de la tâche de confidentialité. Les valeurs suivantes sont acceptées : <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpra_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`nzpa_nzl`</li><li>`pdpa_tha`</li><li>`vcdpa_usa`</li></ul><br>Consultez la présentation sur [réglementations prises en charge](../regulations/overview.md) pour plus d’informations sur les réglementations de confidentialité que représentent les valeurs ci-dessus. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Réponse**
 
@@ -214,7 +220,7 @@ Une réponse réussie renvoie les détails des tâches créées.
 | --- | --- |
 | `jobId` | Un identifiant généré par le système unique et en lecture seule pour une tâche. Cette valeur est utilisée à l’étape suivante pour rechercher une tâche spécifique. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Lorsque vous avez réussi à soumettre la requête de tâche, vous pouvez passer à l’étape suivante de [vérification de l’état de la tâche](#check-status).
 
@@ -236,7 +242,7 @@ GET /jobs/{JOB_ID}
 | --- | --- |
 | `{JOB_ID}` | L’identifiant de la tâche que vous souhaitez rechercher. Cet identifiant est renvoyé sous `jobId` dans les réponses d’API réussies pour [création d’une tâche](#create-job) et [liste de toutes les tâches](#list). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Requête**
 
@@ -334,7 +340,7 @@ Une réponse réussie renvoie les détails de la tâche spécifiée.
 | `productStatusResponse.results` | Pour certains statuts, certains produits peuvent renvoyer une `results` qui fournit des informations supplémentaires non couvertes par `responseMsgDetail`. |
 | `downloadURL` | Si l’état de la tâche est `complete`, cet attribut fournit une URL pour télécharger les résultats de la tâche sous la forme d’un fichier ZIP. Vous pouvez télécharger ce fichier pendant 60 jours à compter de l’achèvement de la tâche. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Catégories d’état des tâches {#status-categories}
 
@@ -347,7 +353,7 @@ Le tableau suivant répertorie les différentes catégories d’état des tâche
 | `submitted` | La tâche est envoyée vers chaque application nécessaire. |
 | `error` | Une erreur s’est produite lors du traitement de la tâche. Vous pouvez obtenir de plus amples informations en récupérant les détails individuels de la tâche. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >

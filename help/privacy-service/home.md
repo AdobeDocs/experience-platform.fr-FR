@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Présentation de Privacy Service
 description: Privacy Service vous permet de faciliter votre mise en conformité automatisée aux réglementations légales liées à la confidentialité dans vos opérations de données Experience Cloud.
 exl-id: 585f7619-5072-413b-9a62-be0ea0cd4d1b
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+source-git-commit: 21347074ed6160511888d4b543133dfd1ec4d35c
 workflow-type: tm+mt
-source-wordcount: '1389'
-ht-degree: 100%
+source-wordcount: '1505'
+ht-degree: 92%
 
 ---
 
@@ -18,6 +18,12 @@ Pour offrir de meilleures expériences client, vous devez collecter et stocker l
 Adobe Experience Platform [!DNL Privacy Service] a été développé en réponse à un changement fondamental dans la façon dont les entreprises sont tenues de gérer les données personnelles de leurs clients. Le principal objectif de [!DNL Privacy Service] est d’automatiser la conformité aux réglementations de confidentialité des données qui, en cas de violation, peuvent entraîner des amendes importantes et perturber les opérations de données de votre entreprise.
 
 [!DNL Privacy Service] fournit une API RESTful et une interface utilisateur pour vous aider à gérer les requêtes liées aux données des clients. Grâce à [!DNL Privacy Service], vous pouvez envoyer des demandes d’accès et de suppression de données clients personnelles depuis les applications Adobe Experience Cloud. Cela facilite l’automatisation de la mise en conformité concernant les réglementations légales et organisationnelles liées à la confidentialité.
+
+>[!IMPORTANT]
+>
+>Le Privacy Service est destiné uniquement aux demandes relatives aux titulaires de données et aux droits des consommateurs. Toute autre utilisation de Privacy Service pour le nettoyage ou la maintenance des données n’est ni prise en charge ni autorisée. L&#39;Adobe a l&#39;obligation légale de les remplir dans les délais impartis. Par conséquent, le test de chargement sur Privacy Service n’est pas autorisé, car il s’agit d’un environnement de production uniquement et crée un journal inutile de demandes d’accès à des informations personnelles valides.
+>
+>Une limite de chargement quotidienne stricte est maintenant en place pour prévenir les abus du service. Les utilisateurs qui abusent du système verront leur accès désactivé. Une réunion ultérieure sera ensuite organisée avec eux afin d&#39;aborder leurs actions et de discuter de l&#39;utilisation acceptable pour le Privacy Service.
 
 ## Prise en main de [!DNL Privacy Service] {#getting-started}
 
