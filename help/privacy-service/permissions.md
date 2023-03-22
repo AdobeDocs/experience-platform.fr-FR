@@ -2,14 +2,20 @@
 title: Gérer les autorisations pour Privacy Service
 description: Découvrez comment gérer les autorisations utilisateur pour Adobe Experience Platform Privacy Service à l’aide d’Adobe Admin Console.
 exl-id: 6aa81850-48d7-4fff-95d1-53b769090649
-source-git-commit: ebcfdc9f73fc9120cf3819169d72bd828d0b35a6
+source-git-commit: 37a67b19fa0cb38e9e34066c869dd9dc49edefd6
 workflow-type: tm+mt
-source-wordcount: '961'
-ht-degree: 100%
+source-wordcount: '1064'
+ht-degree: 90%
 
 ---
 
 # Gérer les autorisations pour Privacy Service
+
+>[!IMPORTANT]
+>
+>Les autorisations pour Adobe Experience Platform Privacy Service ont été améliorées afin d’augmenter leur niveau de granularité. Ces modifications permettent aux administrateurs de l’organisation d’accorder à plus d’utilisateurs l’accès avec le rôle et le niveau d’autorisation souhaités. Les utilisateurs de compte technique doivent mettre à jour leurs autorisations de Privacy Service, car cette mise à jour imminente constitue une modification irréversible pour eux. L’application de cette modification des autorisations aura lieu le **28 mars 2023**.
+>
+>Les comptes techniques sont disponibles pour les clients d’entreprise et créés via Adobe Developers Console. L’Adobe ID d’un titulaire de compte technique se termine par `@techacct.adobe.com`. Si vous ne savez pas si vous êtes titulaire d’un compte technique, contactez l’administrateur de votre entreprise.
 
 L’accès à [Adobe Experience Platform Privacy Service](./home.md) est contrôlé par des autorisations granulaires en fonction du rôle dans Adobe Admin Console. En créant des profils de produit qui attribuent des autorisations à des groupes d’utilisateurs, vous pouvez déterminer qui a accès aux fonctionnalités de l’[Interface utilisateur](./ui/overview.md) et des [API](./api/overview.md) de Privacy Service.
 
