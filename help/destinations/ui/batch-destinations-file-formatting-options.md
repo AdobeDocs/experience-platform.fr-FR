@@ -2,7 +2,7 @@
 description: Découvrez comment configurer les options de formatage des fichiers lors de l’activation des données vers des destinations basées sur des fichiers.
 title: (Beta) Configurer des options de formatage de fichier pour les destinations basées sur des fichiers
 exl-id: f59b1952-e317-40ba-81d1-35535e132a72
-source-git-commit: 14ce4a11f53ef24b3008b3f775cc926d05ea8f8e
+source-git-commit: 379a3769965bb425ca2c8df195b99a98f0b5398d
 workflow-type: tm+mt
 source-wordcount: '601'
 ht-degree: 88%
@@ -47,7 +47,7 @@ Définit un séparateur pour chaque champ et valeur. Les options disponibles son
 * Virgule `(,)`
 * Tube `(|)`
 * Point-virgule `(;)`
-* Tabulation `(\\t)`
+* Tabulation `(\t)`
 
 ### Guillemets
 
