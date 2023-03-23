@@ -3,10 +3,10 @@ title: (Version bêta) Exporter des jeux de données vers des destinations d’e
 type: Tutorial
 description: Découvrez comment exporter des jeux de données d’Adobe Experience Platform vers l’emplacement d’espace de stockage de votre choix.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: aebb1494a6ed667730997048d30a2ca3e00f9452
+source-git-commit: d0de642eb6118e6597925c12c76917ffa98c3a5a
 workflow-type: tm+mt
-source-wordcount: '1335'
-ht-degree: 96%
+source-wordcount: '1359'
+ht-degree: 94%
 
 ---
 
@@ -22,6 +22,19 @@ ht-degree: 96%
 Cet article explique le workflow requis pour l’exportation [jeux de données](/help/catalog/datasets/overview.md) de Adobe Experience Platform à l’emplacement de stockage de votre choix dans le cloud, par exemple [!DNL Amazon S3], emplacements SFTP ou [!DNL Google Cloud Storage] en utilisant l’interface utilisateur de l’Experience Platform.
 
 Vous pouvez également utiliser les API Experience Platform pour exporter des jeux de données. Lisez le [tutoriel sur l’API d’exportation de jeux de données](/help/destinations/api/export-datasets.md) pour plus d’informations.
+
+## Destinations prises en charge {#supported-destinations}
+
+Actuellement, vous pouvez exporter des jeux de données vers les destinations de stockage dans le cloud mises en évidence dans la capture d’écran et répertoriées ci-dessous.
+
+![Destinations qui prennent en charge les exportations de jeux de données](/help/destinations/assets/ui/export-datasets/destinations-supporting-dataset-exports.png)
+
+* [[!DNL (Beta) Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md)
+* [[!DNL (Beta) Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md)
+* [[!DNL (Beta) Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md)
+* [[!DNL (Beta) Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md#changelog)
+* [[!DNL (Beta) Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md#changelog)
+* [[!DNL (Beta) SFTP]](../../destinations/catalog/cloud-storage/sftp.md#changelog)
 
 ## Quand activer des segments ou exporter des jeux de données {#when-to-activate-segments-or-activate-datasets}
 

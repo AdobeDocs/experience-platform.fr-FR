@@ -3,9 +3,9 @@ solution: Experience Platform
 title: (Version bêta) Exportation de jeux de données à l’aide de l’API Flow Service
 description: Découvrez comment utiliser l’API Flow Service pour exporter des jeux de données vers des destinations sélectionnées.
 type: Tutorial
-source-git-commit: c16fbc89b7bc7a8f1ee4a0ca4fd9f7541df095ca
+source-git-commit: d0de642eb6118e6597925c12c76917ffa98c3a5a
 workflow-type: tm+mt
-source-wordcount: '3326'
+source-wordcount: '3347'
 ht-degree: 17%
 
 ---
@@ -25,6 +25,19 @@ Cet article explique le workflow requis pour utiliser la variable [!DNL Flow Ser
 >
 >Vous pouvez également utiliser l’interface utilisateur de l’Experience Platform pour exporter des jeux de données. Lisez le [tutoriel sur l’interface utilisateur des jeux de données d’exportation](/help/destinations/ui/export-datasets.md) pour plus d’informations.
 
+## Destinations prises en charge {#supported-destinations}
+
+Actuellement, vous pouvez exporter des jeux de données vers les destinations de stockage dans le cloud mises en évidence dans la capture d’écran et répertoriées ci-dessous.
+
+![Destinations qui prennent en charge les exportations de jeux de données](/help/destinations/assets/ui/export-datasets/destinations-supporting-dataset-exports.png)
+
+* [[!DNL (Beta) Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md)
+* [[!DNL (Beta) Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md)
+* [[!DNL (Beta) Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md)
+* [[!DNL (Beta) Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md#changelog)
+* [[!DNL (Beta) Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md#changelog)
+* [[!DNL (Beta) SFTP]](../../destinations/catalog/cloud-storage/sftp.md#changelog)
+
 ## Prise en main {#get-started}
 
 ![Présentation : étapes de création d’une destination et d’exportation de jeux de données](../assets/api/export-datasets/export-datasets-api-workflow-get-started.png)
@@ -32,7 +45,7 @@ Cet article explique le workflow requis pour utiliser la variable [!DNL Flow Ser
 Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
 
 * [[!DNL Experience Platform datasets]](/help/catalog/datasets/overview.md): Toutes les données correctement ingérées dans Adobe Experience Platform sont conservées dans la variable [!DNL Data Lake] comme des jeux de données. Un jeu de données est une structure de stockage et de gestion pour la collecte de données, généralement sous la forme d’un tableau, qui contient un schéma (des colonnes) et des champs (des lignes). Les jeux de données contiennent également des métadonnées qui décrivent divers aspects des données stockées.
-* [[!DNL Sandboxes]](../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuelles qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
+* [[!DNL Sandboxes]](../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
 
 Les sections suivantes apportent des informations supplémentaires dont vous avez besoin pour exporter des jeux de données vers des destinations de stockage dans le cloud dans Platform.
 
@@ -54,7 +67,7 @@ Pour lancer des appels à [!DNL Platform] API, vous devez d’abord renseigner l
 * x-api-key : `{API_KEY}`
 * x-gw-ims-org-id : `{ORG_ID}`
 
-Les ressources dans [!DNL Experience Platform] peuvent être isolées dans des sandbox spécifiques. Dans les requêtes aux API [!DNL Platform], vous pouvez spécifier le nom et l’identifiant de la sandbox dans laquelle l’opération aura lieu. Il s’agit de paramètres facultatifs.
+Les ressources dans [!DNL Experience Platform] peuvent être isolées dans des sandbox spécifiques. Dans les requêtes aux API [!DNL Platform], vous pouvez spécifier le nom et l’identifiant du sandbox dans lequel l’opération aura lieu. Il s’agit de paramètres facultatifs.
 
 * x-sandbox-name : `{SANDBOX_NAME}`
 
@@ -88,7 +101,7 @@ Avant de démarrer le workflow pour exporter un jeu de données, identifiez les 
 | [!DNL Google Cloud Storage] | `c5d93acb-ea8b-4b14-8f53-02138444ae99` | `585c15c4-6cbf-4126-8f87-e26bff78b657` |
 | SFTP | `36965a81-b1c6-401b-99f8-22508f1e6a26` | `354d6aad-4754-46e4-a576-1b384561c440` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Vous avez besoin de ces identifiants pour construire diverses [!DNL Flow Service] entités. Vous devez également vous référer aux parties de la section [!DNL Connection Spec] pour configurer certaines entités afin que vous puissiez récupérer la variable [!DNL Connection Spec] de [!DNL Flow Service APIs]. Consultez les exemples ci-dessous de récupération des spécifications de connexion pour toutes les destinations dans le tableau :
 
@@ -966,14 +979,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'x-sandbox-name: <SANDBOX-NAME>' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-  "name": "Data Landing Zone(DLZ) Base Connection",
-  "auth": {
-    "name": "Data Landing Zone(DLZ) Base Connection",
-    "description": "Data Landing Zone(DLZ) Base Connection",
-    "connectionSpec": {
-        "id": "10440537-2a7b-4583-ac39-ed38d4b848e8",
-        "version": "1.0"
-    }
+  "name": "Data Landing Zone(DLZ) Base Connection"
 }'
 ```
 
