@@ -2,10 +2,10 @@
 title: (Version bêta) Audiences Experience Cloud
 description: Découvrez comment partager des segments d’Experience Platform vers différentes solutions d’Experience Platform.
 last-substantial-update: 2023-01-25T00:00:00Z
-source-git-commit: 83778bc5d643f69e0393c0a7767fef8a4e8f66e9
+source-git-commit: 32222aa1c96537b51cd0db35d9cdabce9210f64a
 workflow-type: tm+mt
-source-wordcount: '1521'
-ht-degree: 22%
+source-wordcount: '1512'
+ht-degree: 24%
 
 ---
 
@@ -61,8 +61,8 @@ Note: briefly talk about when to share segments to these destinations using the 
 >[!IMPORTANT]
 >
 > * Cette destination est disponible pour [Adobe Real-time Customer Data Platform Prime et Ultimate](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform.html) clients.
-> * Vous avez besoin d’une licence d’Audience Manager pour activer les cas d’utilisation de Data Management Platform mentionnés dans la section ci-dessus.
-> * You *ne doivent pas* une licence d’Audience Manager permettant de partager des segments Experience Platform avec Adobe Advertising Cloud, Adobe Target, Marketo et d’autres solutions Experience Cloud, via l’intégration des audiences Experience Cloud.
+> * Vous avez besoin d’une licence d’Audience Manager pour activer la variable [Cas d’utilisation de Data Management Platform](#dmp-use-cases) mentionné plus haut.
+> * You *ne doivent pas* une licence d’Audience Manager permettant de partager des segments Experience Platform avec Adobe Advertising Cloud, Adobe Target, Marketo et d’autres solutions Experience Cloud, comme indiqué dans la section [section supérieure](#share-segments-with-other-solutions).
 
 
 ### Pour les clients qui utilisent la solution de partage de segments héritée
@@ -91,12 +91,12 @@ Profils exportés vers le [!UICONTROL Audiences Experience Cloud] Les destinatio
 
 | Identité cible | Description | Considérations |
 |---|---|---|
-| ECID | Experience Cloud ID | Espace de noms qui représente l’ECID. Cet espace de noms peut également être référencé par les alias suivants : &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Consultez le document suivant sur [ECID](/help/identity-service/ecid.md) pour plus d’informations. |
+| ECID | Experience Cloud ID | Espace de noms qui représente l’ECID. Cet espace de noms peut également être référencé par les alias suivants : « ID Adobe Marketing Cloud », « ID Adobe Experience Cloud », « ID Adobe Experience Platform ». Consultez le document suivant sur [ECID](/help/identity-service/ecid.md) pour plus d’informations. |
 | GAID | Google Advertising ID | Les profils ingérés dans Experience Platform avec une identité Principale de Google Advertising ID (GAID) peuvent être exportés vers cette destination. |
 | IDFA | Identifiant Apple pour les annonceurs | Les profils ingérés dans Experience Platform avec une identité Principale d’Apple ID for Advertisers (IDFA) peuvent être exportés vers cette destination. |
 | email_lc_sha256 | Adresses électroniques hachées avec l’algorithme SHA256 | Les profils ingérés dans l’Experience Platform avec une Principale identité d’adresse électronique hachée peuvent être exportés vers cette destination. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Type et fréquence d’exportation {#export-type-frequency}
 
@@ -107,7 +107,7 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 | Type d’exportation | **[!UICONTROL Exportation des segments]** | Vous exportez tous les membres d’un segment (audience) en dehors des identités répertoriées dans la section ci-dessus. |
 | Fréquence des exportations | **[!UICONTROL Diffusion en continu]** | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation des segments, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Se connecter à la destination {#connect}
 
