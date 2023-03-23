@@ -3,10 +3,10 @@ keywords: flux en continu; destination HTTP
 title: Connexion API HTTP
 description: Utilisez la destination API HTTP dans Adobe Experience Platform pour envoyer des données de profil vers un point d’entrée HTTP tiers afin d’exécuter vos propres analyses ou toute autre opération dont vous pourriez avoir besoin sur les données de profil exportées hors d’Experience Platform.
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: e22472443eef8aa053aeb0eb35488de581e4b2bd
+source-git-commit: 658cd7ec2d88d4b3633412f5c6d571351904e70b
 workflow-type: tm+mt
-source-wordcount: '2648'
-ht-degree: 88%
+source-wordcount: '2436'
+ht-degree: 95%
 
 ---
 
@@ -158,12 +158,12 @@ Si vous sélectionnez le type d’authentification **[!UICONTROL Informations d�
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_includesegmenttimestamps"
 >title="Inclure la date et l’heure de segment"
->abstract="Activez ce bouton si vous souhaitez que l’exportation de données inclue la date et l’heure UNIX de la création et des mises à jour des segments, ainsi que la date et l’heure UNIX du mappage des segments à la destination pour l’activation. Consultez la documentation pour un exemple d’exportation de données avec cette option sélectionnée.**Surveillance des activités des utilisateurs dans Platform**<h2>Description</h2><p>Vous pouvez surveiller l’activité des utilisateurs pour divers services et fonctionnalités de Platform sous la forme de journaux d’audit. Ces journaux forment un journal d’audit qui enregistre <b>who</b> performance <b>what</b> action et <b>when</b>. Les journaux d’audit peuvent vous aider à résoudre les problèmes liés à Platform et aider votre entreprise à se conformer efficacement aux politiques de gestion des données d’entreprise et aux exigences réglementaires.</p><h2>Instructions</h2><ul><li>Sélectionner <b>Audits</b> dans le volet de navigation de gauche. L’espace de travail Audits affiche une liste des journaux enregistrés, triés par défaut de la plus récente à la moins récente.</li>   <li> REMARQUE : Les journaux d’audit sont conservés pendant 365 jours, après quoi ils seront supprimés du système. Par conséquent, vous ne pouvez revenir en arrière que pendant une période maximale de 365 jours. Si vous devez revenir sur des données datant de plus de 365 jours, vous devez exporter les journaux à un rythme régulier afin de répondre aux exigences de votre politique interne. </li><li>Sélectionnez un événement dans la liste pour afficher ses détails dans le rail de droite. </li><li>Sélectionnez l’icône d’entonnoir pour afficher une liste de contrôles de filtre afin de limiter les résultats. Seuls les 1000 derniers enregistrements sont affichés, quels que soient les filtres sélectionnés. </li><li>Pour exporter la liste actuelle des journaux d’audit, sélectionnez **Journal de téléchargement**.</li><li>Pour obtenir de l’aide sur cette fonctionnalité, voir <a href="https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/audit-logs/overview.html?lang=fr">aperçu des journaux d’audit</a> sur Experience League.</li></ul>"
+>abstract="Activez ce bouton si vous souhaitez que l’exportation de données inclue la date et l’heure UNIX de la création et des mises à jour des segments, ainsi que la date et l’heure UNIX du mappage des segments à la destination pour l’activation. Consultez la documentation pour un exemple d’exportation de données avec cette option sélectionnée."
 
-[!CONTEXTUALHELP]
-id="platform_destinations_connect_http_queryparameters"
-title="Paramètres de requête"
-abstract="Vous pouvez éventuellement ajouter des paramètres de requête à l’URL du point d’entrée HTTP. Mettez en forme les paramètres de requête que vous utilisez comme suit : `parameter1=value&parameter2=value`."
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_http_queryparameters"
+>title="Paramètres de requête"
+>abstract="Vous pouvez éventuellement ajouter des paramètres de requête à l’URL du point d’entrée HTTP. Mettez en forme les paramètres de requête que vous utilisez comme suit : `parameter1=value&parameter2=value`."
 
 Pour configurer les détails de la destination, renseignez les champs obligatoires et facultatifs ci-dessous. Un astérisque situé en regard d’un champ de l’interface utilisateur indique que le champ est obligatoire.
 
@@ -186,7 +186,8 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 ## Activer des segments vers cette destination {#activate}
 
 >[!IMPORTANT]
-Pour activer les données, vous avez besoin des [autorisations de contrôle d’accès](/help/access-control/home.md#permissions) pour les fonctions **[!UICONTROL Gérer les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]**, et **[!UICONTROL Afficher les segments]**. Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+> 
+>Pour activer les données, vous avez besoin des [autorisations de contrôle d’accès](/help/access-control/home.md#permissions) pour les fonctions **[!UICONTROL Gérer les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]**, et **[!UICONTROL Afficher les segments]**. Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
 Voir [Activer des données d’audience vers des destinations d’exportation de profils en flux continu](../../ui/activate-streaming-profile-destinations.md) pour obtenir des instructions sur l’activation des segments d’audience vers cette destination.
 
