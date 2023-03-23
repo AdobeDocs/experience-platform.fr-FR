@@ -2,10 +2,10 @@
 title: Publication d’une extension
 description: Découvrez comment effectuer une publication publique ou privée d’une extension de balise dans Adobe Experience Platform.
 exl-id: a5eb6902-4b0f-4717-a431-a290c50fb5a6
-source-git-commit: 3e349c5d78d964c8c2a5b635ef1866d4f41ef6bb
+source-git-commit: 60d88be5d710314cdc6900f4b63643c740b91fa6
 workflow-type: tm+mt
-source-wordcount: '319'
-ht-degree: 98%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -30,7 +30,7 @@ Vous devez publier votre extension en tant qu’extension privée avant de pouvo
 
 Le moyen le plus simple de publier votre extension en disponibilité privée consiste à utiliser lʼoutil [Tag Extension Releaser](https://www.npmjs.com/package/@adobe/reactor-releaser). Vous trouverez davantage d’instructions dans sa documentation.
 
-Si vous souhaitez publier directement votre extension pour une disponibilité privée à lʼaide de lʼAPI, reportez-vous à lʼexemple dʼappel de [publication privée dʼun package dʼextension](https://developer.adobelaunch.com/api/reference/1.0/extension_packages/release_private/) dans la documentation API pour plus de détails.
+Si vous souhaitez publier directement votre extension pour une disponibilité privée à lʼaide de lʼAPI, reportez-vous à lʼexemple dʼappel de [publication privée dʼun package dʼextension](../../api/endpoints/extension-packages.md/#private-release) dans la documentation API pour plus de détails.
 
 ## Publication publique
 

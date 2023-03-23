@@ -2,10 +2,10 @@
 title: Prise en main de l’API Reactor
 description: Découvrez comment commencer à utiliser l’API Reactor, y compris les étapes de génération des informations d’identification d’accès requises.
 exl-id: fc1acc1d-6cfb-43c1-9ba9-00b2730cad5a
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 0a4883cff4f8e04dd0dd62a9e01435fa302a9e54
 workflow-type: tm+mt
-source-wordcount: '1060'
-ht-degree: 100%
+source-wordcount: '1050'
+ht-degree: 97%
 
 ---
 
@@ -21,7 +21,7 @@ Ce guide explique comment utiliser Adobe Developer Console pour rassembler les v
 
 ## Obtenir l’accès développeur à Adobe Experience Platform
 
-Avant de pouvoir générer des valeurs d’authentification pour l’API Reactor, vous devez disposer d’un accès développeur à Experience Platform. Pour obtenir l’accès développeur, suivez les étapes mentionnées au début du [tutoriel sur l’authentification dans Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr). Une fois arrivé à l’étape « Générer les informations d’identification d’accès dans Adobe Developer Console », revenez sur ce tutoriel pour générer les informations d’identification spécifiques à l’API Reactor.
+Avant de pouvoir générer des valeurs d’authentification pour l’API Reactor, vous devez disposer d’un accès développeur à Experience Platform. Pour obtenir l’accès développeur, suivez les étapes mentionnées au début du [tutoriel sur l’authentification dans Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr). Une fois que vous avez terminé l’étape &quot;Obtenir un accès utilisateur&quot;, revenez à ce tutoriel pour générer les informations d’identification spécifiques à l’API Reactor.
 
 ## Génération des informations d’identification d’accès
 
@@ -37,7 +37,7 @@ Les étapes de génération de ces valeurs sont décrites en détail ci-dessous.
 
 ### Configuration ponctuelle
 
-Accédez à [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) et connectez-vous avec votre Adobe ID. Suivez ensuite les étapes décrites dans le tutoriel sur la [création d’un projet vide](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) dans la documentation de Developer Console.
+Accédez à [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) et connectez-vous avec votre Adobe ID. Suivez ensuite les étapes décrites dans le tutoriel sur la [création d’un projet vide](https://developer.adobe.com/developer-console/docs/guides/projects/projects-empty/) dans la documentation de Developer Console.
 
 Une fois que vous avez créé un projet, sélectionnez **Ajouter une API** dans l’écran **Aperçu du projet**.
 
@@ -149,7 +149,7 @@ Une réponse réussie renvoie un nouveau jeton d’accès, ainsi que le nombre d
 | `access_token` | La valeur de jeton d’accès nouvellement générée. Cette valeur est utilisée pour l’en-tête `Authorization` requis et doit être fournie au format `Bearer {ACCESS_TOKEN}`. |
 | `expires_in` | Durée restante jusqu’à l’expiration du jeton, en millisecondes. Une fois qu’un jeton expire, un nouveau jeton doit être généré. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Étapes suivantes
 

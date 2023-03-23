@@ -2,9 +2,9 @@
 title: Guide de démarrage rapide
 description: Découvrez comment vous familiariser rapidement avec les balises dans Adobe Experience Platform.
 exl-id: 490ee344-3b18-4189-9293-2378f86fb10d
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 60d88be5d710314cdc6900f4b63643c740b91fa6
 workflow-type: tm+mt
-source-wordcount: '1527'
+source-wordcount: '1525'
 ht-degree: 92%
 
 ---
@@ -135,5 +135,5 @@ Pour plus d’informations sur les différents états et options disponibles pen
 Pour en savoir plus sur les balises, consultez les ressources suivantes :
 
 * **[Communauté de la collecte de données](https://forums.adobe.com/community/experience-cloud/platform/launch)** : posez vos questions et répondez à celles des autres, proposez des idées, prononcez-vous sur les idées des autres. Connectez-vous avec votre Adobe ID.
-* **[Developer Docs](https://developer.adobelaunch.com/)** : rejoignez la communauté des développeurs de balises pour créer des extensions ou utiliser les API de balises.
+* **[Developer Docs](../api/overview.md)** : rejoignez la communauté des développeurs de balises pour créer des extensions ou utiliser les API de balises.
 * **[Présentation des tutoriels](https://experienceleague.adobe.com/docs/core-services-learn/tutorials/overview.html?lang=fr)** : ces documents vous présentent les concepts de balises, y compris le transfert d’événement et le SDK mobile dans les applications Android.

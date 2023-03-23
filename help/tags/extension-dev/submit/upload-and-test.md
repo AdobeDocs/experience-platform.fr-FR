@@ -2,10 +2,10 @@
 title: Téléchargement et implémentation de tests de bout en bout pour une extension
 description: Découvrez comment valider, télécharger et tester votre extension dans Adobe Experience Platform.
 exl-id: 6176a9e1-fa06-447e-a080-42a67826ed9e
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 9b99ec5e526fcbe34a41d3ce397b34a9b4105819
 workflow-type: tm+mt
-source-wordcount: '2394'
-ht-degree: 95%
+source-wordcount: '2382'
+ht-degree: 92%
 
 ---
 
@@ -39,7 +39,7 @@ Le fichier de logo en est un exemple précis : ajoutez une ligne `"iconPath": "
 
 Pour utiliser l’API ou les outils de ligne de commande, vous avez besoin d’un compte technique avec Adobe I/O. Vous devez créer ce compte technique dans la console I/O, puis utiliser l’outil de téléchargement pour télécharger le package d’extension.
 
-Pour plus dʼinformations sur la création dʼun compte technique à utiliser avec les balises dans Adobe Experience Platform, reportez-vous au guide [Jetons dʼaccès](https://developer.adobelaunch.com/api/guides/access_tokens/).
+Pour plus d’informations sur la création d’un compte technique à utiliser avec des balises dans Adobe Experience Platform, reportez-vous à la section [Prise en main de l’API Reactor](../../api/getting-started.md) guide.
 
 >[!IMPORTANT]
 >
@@ -112,7 +112,7 @@ Pour ajouter votre extension, sélectionnez l’onglet **Catalogue**.
 
 Celui-ci affiche les icônes de carte pour chaque extension disponible. Si votre extension ne s’affiche pas dans le catalogue, assurez-vous d’avoir complété les étapes ci-dessus dans les sections Configuration de la console d’administration Adobe et Création de votre package d’extension. Votre package d’extension peut également apparaître comme En attente si Platform n’a pas terminé le traitement initial.
 
-Si vous avez suivi les étapes précédentes et que vous ne voyez toujours pas de package d’extension En attente ou en Échec dans le catalogue, vous devez vérifier le statut de votre package d’extension directement à l’aide de l’API. Pour plus d’informations sur la manière d’effectuer l’appel API approprié, consultez la section [Récupérer un package d’extension](https://developer.adobelaunch.com/api/reference/1.0/extension_packages/fetch/) dans la documentation de l’API.
+Si vous avez suivi les étapes précédentes et que vous ne voyez toujours pas de package d’extension En attente ou Échec dans le catalogue, vous devez vérifier le statut de votre package d’extension directement à l’aide de l’API. Pour plus d’informations sur la manière d’effectuer l’appel API approprié, consultez la section [Récupérer un package d’extension](../../api/endpoints/extension-packages.md#lookup) dans la documentation de l’API.
 
 Une fois le traitement de votre package d’extension terminé, sélectionnez **Installer** au bas de la carte.
 

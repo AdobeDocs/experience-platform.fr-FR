@@ -2,10 +2,10 @@
 title: Guide de dépannage des balises
 description: Obtenez des réponses aux questions les plus fréquentes à propos des balises dans Adobe Experience Platform.
 exl-id: c06b8e25-4d79-4a11-94da-94ac096b5e33
-source-git-commit: b0cc02478273c0b6035488a5d21191ce5cc0e268
+source-git-commit: 9701a14dc2915e0d6dcc6051c15d5113f305487f
 workflow-type: tm+mt
-source-wordcount: '1051'
-ht-degree: 91%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -45,6 +45,8 @@ La fonctionnalité Balises a ouvert son portail en libre-service, que les dével
 
 Nous avons de nombreux clients qui choisissent également de développer leurs propres extensions privées pour les utiliser uniquement dans leurs propres entreprises en utilisant les mêmes méthodes de développement d’extension.
 
+Pour développer une extension, consultez la [Présentation du développement d’extensions](./extension-dev/overview.md) page.
+
 ## Les balises sont-elles conformes aux normes de sécurité de ma société ?
 
 Les balises sont certifiées SOC-2 et conformes à la loi Gramm-Leach-Bliley Act. Les balises offrent également la possibilité d’être auto-hébergées. Les bibliothèques JavaScript ainsi que les configurations mobiles peuvent être traitées à partir de vos propres serveurs ou du réseau CDN de votre choix. Cela permet aux équipes informatiques et de sécurité d’exécuter des tests automatisés, de vérifier les fichiers dans leur propre système de contrôle de versions et de se conformer pleinement aux processus de migration de production internes, liés à la sécurité ou autres.
@@ -71,22 +73,7 @@ Les balises sont conçues pour fournir et exécuter des technologies publicitair
 
 ## Quels navigateurs les balises prennent-elles en charge ?
 
-Prise en charge des navigateurs par les balises :
-
-- [!DNL Chrome] (version la plus récente)
-- [!DNL Safari] (version la plus récente)
-- [!DNL Firefox] (version la plus récente)
-- [!DNL Microsoft Edge] (version la plus récente)
-- [!DNL Internet Explorer] (version 10 et supérieure)
-- [!DNL iOS Safari] (version la plus récente)
-- [!DNL Android Chrome] (version la plus récente)
-
-Prise en charge du navigateur pour l’interface de l’application Balises :
-
-- [!DNL Chrome] (version la plus récente)
-- [!DNL Safari] (version la plus récente)
-- [!DNL Firefox] (version la plus récente)
-- [!DNL Microsoft Edge] (version la plus récente)
+Voir les navigateurs pris en charge [here](./extension-dev/browsers.md).
 
 La plupart des clients exploitent désormais des fonctionnalités de plateforme web plus modernes dans les navigateurs actuels et génèrent de meilleures expériences utilisateur, y compris des applications d’une seule page et des sites web et pages interactifs à utilisation lourde Ajax. Comme la plupart des clients optent pour des approches plus modernes de leurs sites, ils ont besoin d’une solution comme Balises permettant ces approches.
 

@@ -2,10 +2,10 @@
 title: Prise en main du développement des extensions
 description: Commencez à développer vos propres extensions de balises dans Adobe Experience Platform.
 exl-id: 3925b928-0180-4a4f-aaa6-42f342089560
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 0a4883cff4f8e04dd0dd62a9e01435fa302a9e54
 workflow-type: tm+mt
-source-wordcount: '430'
-ht-degree: 100%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -60,3 +60,7 @@ L’outil de génération de modèles automatique fournit ensuite des options po
 >* Plusieurs événements, conditions, actions peuvent être ajoutés.
 >* Une seule vue de configuration peut exister.
 
+
+## Étapes suivantes
+
+* Suivez la [Présentation du processus d’envoi](./submit/overview.md) et préparer [valider](./submit/upload-and-test.md#validate) et [charger](./submit/upload-and-test.md#integration) votre extension pour les tests dans l’écosystème de balises.
