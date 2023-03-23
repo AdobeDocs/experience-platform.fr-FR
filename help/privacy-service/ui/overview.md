@@ -11,7 +11,7 @@ ht-degree: 16%
 
 ---
 
-# [!DNL Privacy Service] Présentation de l’interface utilisateur {#privacy-ui-guide}
+# Présentation de l’interface utilisateur de [!DNL Privacy Service] {#privacy-ui-guide}
 
 >[!CONTEXTUALHELP]
 >id="platform_privacy_privacyconsole_requests"
