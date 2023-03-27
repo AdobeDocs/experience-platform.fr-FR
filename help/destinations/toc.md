@@ -7,7 +7,7 @@ feature: Destinations
 source-git-commit: 5095ba2a2c40194aac3b9b0c985d36fd9fca864b
 workflow-type: tm+mt
 source-wordcount: '1046'
-ht-degree: 98%
+ht-degree: 99%
 
 ---
 
@@ -35,7 +35,7 @@ ht-degree: 98%
    * Activer les données d’audience vers les destinations {#activate}
       * [Présentation de l’activation](./ui/activation-overview.md)
       * [Activer les données d’audience vers des destinations d’exportation de segments de diffusion en continu](./ui/activate-segment-streaming-destinations.md)
-      * [Activer les données d’audience vers des destinations d’exportation de segments de diffusion en continu](./ui/activate-streaming-profile-destinations.md)
+      * [Activer les données d’audience vers des destinations d’exportation de profils de diffusion en continu](./ui/activate-streaming-profile-destinations.md)
       * [Activer les données d’audience vers des destinations d’exportation de profils par lots](./ui/activate-batch-profile-destinations.md)
       * [Activer les données d’audience vers les destinations de requête de profil](./ui/activate-profile-request-destinations.md)
       * [Configurez des destinations de personnalisation pour la personnalisation de la même page et de la page suivante.](./ui/configure-personalization-destinations.md)
@@ -56,7 +56,7 @@ ht-degree: 98%
       * [Présentation des destinations Adobe](./catalog/adobe/overview.md)
       * [(Version bêta) Audiences Experience Cloud](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
       * [Connexion Marketo Engage](./catalog/adobe/marketo-engage.md)
-      * [Connexion à Marketo Measure Ultimate](./catalog/adobe/marketo-measure-ultimate.md)
+      * [Connexion Marketo Measure Ultimate](./catalog/adobe/marketo-measure-ultimate.md)
       * [Partage de segments Experience Platform](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=fr)
    * Destinations publicitaires {#advertising}
       * [Présentation des destinations publicitaires](./catalog/advertising/overview.md)
@@ -135,8 +135,8 @@ ht-degree: 98%
       * [Présentation des destinations du marketing par e-mail](./catalog/email-marketing/overview.md)
       * [Connexion Adobe Campaign](./catalog/email-marketing/adobe-campaign.md)
       * [Connexion à Adobe Campaign Managed Cloud Services](./catalog/email-marketing/adobe-campaign-managed-services.md)
-      * [(API) Oracle de la connexion Eloqua](./catalog/email-marketing/oracle-eloqua-api.md)
-      * [(Fichiers) Oracle de la connexion Eloqua](./catalog/email-marketing/oracle-eloqua.md)
+      * [Connexion Oracle Eloqua (API)](./catalog/email-marketing/oracle-eloqua-api.md)
+      * [Connexion Oracle Eloqua (Fichiers)](./catalog/email-marketing/oracle-eloqua.md)
       * [Connexion Oracle Responsys](./catalog/email-marketing/oracle-responsys.md)
       * [(API) Connexion à Salesforce Marketing Cloud](./catalog/email-marketing/salesforce-marketing-cloud-exact-target.md)
       * [(Fichiers) Connexion à Salesforce Marketing Cloud](./catalog/email-marketing/salesforce-marketing-cloud.md)
@@ -151,7 +151,7 @@ ht-degree: 98%
       * [Connexion à la ligne](./catalog/mobile-engagement/line.md)
    * Destinations de personnalisation {#personalization}
       * [Présentation des destinations de personnalisation](./catalog/personalization/overview.md)
-      * [Connexion Adobe Commerce](./catalog/personalization/adobe-commerce.md)
+      * [Connexion Adobe Commerce](./catalog/personalization/adobe-commerce.md)
       * [Connexion Adobe Target](./catalog/personalization/adobe-target-connection.md)
       * [Extension Adobe Target](./catalog/personalization/adobe-target.md)
       * [Extension Adobe Target v2](./catalog/personalization/adobe-target-v2.md)

@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;gestion des balises;balises;
-title: Gestion des balises unifiées
-description: Ce document fournit des informations sur la gestion des balises unifiées dans Adobe Experience Cloud
+title: Gérer les balises unifiées
+description: Ce document est consacré à la gestion des balises unifiées dans Adobe Experience Cloud.
 source-git-commit: 6f9787909b8155d2bf032b4a42483f2cb4d44eb4
 workflow-type: tm+mt
 source-wordcount: '1070'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
