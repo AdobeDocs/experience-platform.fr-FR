@@ -5,9 +5,9 @@ user-guide-title: Aide d’Intelligent Services
 breadcrumb-title: Guide des services intelligents
 user-guide-description: Utilisez les services intelligents d’IA pour générer des scores, découvrir des insights et créer des segments à partir des données de vos événements marketing.
 source-git-commit: 56f0ea4ee1fcefecb317eb2a078b01f7a9767c52
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '140'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -34,7 +34,7 @@ ht-degree: 93%
 - Balisage de contenu {#content-commerce-ai}
    - [Aperçu](content-commerce-ai/overview.md)
    - [Prise en main](content-commerce-ai/getting-started.md)
-   - API de balisage de contenu{#api}
+   - API de balisage de contenu {#api}
       - [Balisage des couleurs](content-commerce-ai/api/color-tagging.md)
       - [Balisage des mots-clés](content-commerce-ai/api/keyword-tagging.md)
       - [Détection de texte et reconnaissance optique de caractères](content-commerce-ai/api/optical-character-recognition.md)
