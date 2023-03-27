@@ -4,10 +4,10 @@ user-guide-title: Guide des destinations
 user-guide-description: Activez vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
 description: Ce document répertorie la table des matières des destinations Adobe Experience Platform
 feature: Destinations
-source-git-commit: 5095ba2a2c40194aac3b9b0c985d36fd9fca864b
+source-git-commit: 80864c67bc80f3c2ef12e9571adc2c065512e61f
 workflow-type: tm+mt
-source-wordcount: '1046'
-ht-degree: 99%
+source-wordcount: '1065'
+ht-degree: 98%
 
 ---
 
@@ -22,12 +22,14 @@ ht-degree: 99%
    * [Comportement d’exportation de profils selon les types de destinations](./how-destinations-work/profile-export-behavior.md)
    * [Gestion des identités dans le workflow d’activation des destinations](./how-destinations-work/identity-handling.md)
 * Tutoriels sur les API {#api}
+   * [Guide de migration des API pour les destinations de stockage dans le cloud](/help/destinations/api/api-migration-guide-cloud-storage-destinations.md)
    * [Se connecter aux destinations de diffusion en continu et activer les données à l’aide de l’API Flow Service](./api/streaming-destinations.md)
    * [Se connecter à l’espace de stockage par lots et aux destinations de marketing par e-mail et activer les données à l’aide de l’API Flow Service](./api/connect-activate-batch-destinations.md)
    * [(Version Beta) Activer les segments d’audience vers des destinations par lots via l’API d’activation ad hoc](./api/ad-hoc-activation-api.md)
    * [Mettre à jour les flux de données de destination](./api/update-destination-dataflows.md)
    * [Supprimer les comptes de destination](./api/delete-destination-account.md)
    * [Supprimer les flux de données de destination](./api/delete-destination-dataflow.md)
+   * [(Version bêta) Activation des données vers des destinations basées sur des fichiers à l’aide de l’API Flow Service](/help/destinations/api/activate-segments-file-based-destinations.md)
    * [(Version bêta) Exporter des jeux de données](/help/destinations/api/export-datasets.md)
 * Guides d’interface utilisateur {#ui}
    * [Espace de travail des destinations](./ui/destinations-workspace.md)
