@@ -5,7 +5,7 @@ title: Gestion des libellés d’utilisation des données dans l’interface uti
 description: Ce guide détaille la procédure d’utilisation des libellés d’utilisation des données dans l’interface utilisateur d’Adobe Experience Platform.
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
 source-git-commit: e539b1e165227d9a888bfe12d8205e285b3ce259
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1308'
 ht-degree: 100%
 
