@@ -8,7 +8,7 @@ short-description: Find answers to frequently asked questions and a guide for tr
 type: Documentation
 exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
 source-git-commit: b21367814e38fb5ee017709a29b39de982d59d24
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1851'
 ht-degree: 100%
 
