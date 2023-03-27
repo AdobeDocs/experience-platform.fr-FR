@@ -3,7 +3,7 @@ title: Chargement incrémentiel dans Query Service
 description: La fonction de chargement incrémentiel utilise des fonctions d’instantanés et de blocs anonymes afin de fournir une solution en temps quasi réel pour déplacer les données du lac de données vers votre entrepôt de données, tout en ignorant les données correspondantes.
 exl-id: 1418d041-29ce-4153-90bf-06bd8da8fb78
 source-git-commit: 11a947addce65887385c983ac81d884fb4244291
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '688'
 ht-degree: 100%
 
@@ -27,7 +27,7 @@ Pour vous familiariser avec la terminologie utilisée dans ce guide, constulez l
 
 Les étapes ci-dessous montrent comment créer et charger incrémentiellement des données à l’aide d’instantanés et de la fonction de bloc anonyme. Le modèle de conception peut être utilisé comme modèle pour votre propre séquence de requêtes.
 
-1.  Créez une table `checkpoint_log` pour effectuer le suivi de l’instantané le plus récent utilisé pour traiter les données avec succès. La table de suivi (`checkpoint_log` dans cet exemple) doit d’abord être initialisé en `null` afin de traiter de manière incrémentielle un jeu de données.
+1. Créez une table `checkpoint_log` pour effectuer le suivi de l’instantané le plus récent utilisé pour traiter les données avec succès. La table de suivi (`checkpoint_log` dans cet exemple) doit d’abord être initialisé en `null` afin de traiter de manière incrémentielle un jeu de données.
 
    ```SQL
    DROP TABLE IF EXISTS checkpoint_log;
@@ -40,7 +40,7 @@ Les étapes ci-dessous montrent comment créer et charger incrémentiellement de
       WHERE false;
    ```
 
-1.  Renseignez la table `checkpoint_log` avec un enregistrement vide pour le jeu de données qui nécessite un traitement incrémentiel. `DIM_TABLE_ABC` est le jeu de données à traiter dans l’exemple ci-dessous. Lors du premier traitement de `DIM_TABLE_ABC`, l’`last_snapshot_id` est initialisé en tant que `null`. Cela vous permet de traiter l’ensemble du jeu de données la première fois et de manière incrémentielle par la suite.
+1. Renseignez la table `checkpoint_log` avec un enregistrement vide pour le jeu de données qui nécessite un traitement incrémentiel. `DIM_TABLE_ABC` est le jeu de données à traiter dans l’exemple ci-dessous. Lors du premier traitement de `DIM_TABLE_ABC`, l’`last_snapshot_id` est initialisé en tant que `null`. Cela vous permet de traiter l’ensemble du jeu de données la première fois et de manière incrémentielle par la suite.
 
    ```SQL
    INSERT INTO
@@ -52,7 +52,7 @@ Les étapes ci-dessous montrent comment créer et charger incrémentiellement de
          CURRENT_TIMESTAMP process_timestamp;
    ```
 
-1.  Ensuite, initialisez `DIM_TABLE_ABC_Incremental` pour contenir la sortie traitée de `DIM_TABLE_ABC`. Le bloc anonyme dans la section d’exécution **obligatoire** de l’exemple SQL ci-dessous, comme décrit dans les étapes 1 à 4, est exécuté de manière séquentielle pour traiter les données de manière incrémentielle.
+1. Ensuite, initialisez `DIM_TABLE_ABC_Incremental` pour contenir la sortie traitée de `DIM_TABLE_ABC`. Le bloc anonyme dans la section d’exécution **obligatoire** de l’exemple SQL ci-dessous, comme décrit dans les étapes 1 à 4, est exécuté de manière séquentielle pour traiter les données de manière incrémentielle.
 
    1. Définissez l’`from_snapshot_id` qui indique l’endroit où commence le traitement. L’`from_snapshot_id` dans l’exemple est interrogé à partir de la table `checkpoint_log` à utiliser avec `DIM_TABLE_ABC`. Lors de l’exécution initiale, l’ID de l’instantané est `null`, ce qui signifie que l’ensemble du jeu de données sera traité.
    1. Définissez l’`to_snapshot_id` comme ID d’instantané actuel de la table source (`DIM_TABLE_ABC`). Dans l’exemple, cette requête provient de la table des métadonnées de la table source.
@@ -90,7 +90,7 @@ Les étapes ci-dessous montrent comment créer et charger incrémentiellement de
    $$;
    ```
 
-1.  Utilisez la logique de chargement incrémentiel des données dans l’exemple de bloc anonyme ci-dessous pour permettre le traitement et l’ajout régulier de toutes les nouvelles données du jeu de données source (depuis l’horodatage le plus récent) à la table de destination. Dans l’exemple, les données modifiées en `DIM_TABLE_ABC` seront traitées et ajoutées à `DIM_TABLE_ABC_incremental`.
+1. Utilisez la logique de chargement incrémentiel des données dans l’exemple de bloc anonyme ci-dessous pour permettre le traitement et l’ajout régulier de toutes les nouvelles données du jeu de données source (depuis la date et l’heure les plus récentes) à la table de destination. Dans l’exemple, les données modifiées en `DIM_TABLE_ABC` seront traitées et ajoutées à `DIM_TABLE_ABC_incremental`.
 
    >[!NOTE]
    >
