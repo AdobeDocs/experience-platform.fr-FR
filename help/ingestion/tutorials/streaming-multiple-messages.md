@@ -5,10 +5,10 @@ title: Envoi de plusieurs messages dans une seule requête HTTP
 type: Tutorial
 description: Ce document fournit un tutoriel sur l’envoi de plusieurs messages à Adobe Experience Platform dans une seule requête HTTP à l’aide de l’ingestion par flux.
 exl-id: 04045090-8a2c-42b6-aefa-09c043ee414f
-source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
+source-git-commit: 3ad5c06db07b360df255d3afb1c177cc5de613bb
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1490'
+ht-degree: 75%
 
 ---
 
@@ -508,7 +508,7 @@ Le deuxième message a échoué parce qu’il manquait un corps de message. Pour
     },
 ```
 
-Le troisième message a échoué en raison de l’utilisation d’un identifiant d’organisation IMS invalide dans l’en-tête. L’organisation IMS doit correspondre au {CONNECTION_ID} sur lequel vous essayez de publier. Pour déterminer quel ID d’organisation IMS correspond à la connexion en continu que vous utilisez, vous pouvez effectuer une `GET inlet` à l’aide de la méthode [[!DNL Data Ingestion API]](https://www.adobe.io/experience-platform-apis/references/data-ingestion/). Consultez la section [Récupération d’une connexion en continu](./create-streaming-connection.md#get-data-collection-url) pour obtenir un exemple de la manière dont vous pouvez récupérer les connexions en continu créées précédemment.
+Le troisième message a échoué en raison de l’utilisation d’un identifiant d’organisation invalide dans l’en-tête. L’organisation doit correspondre au {CONNECTION_ID} sur lequel vous essayez de publier. Pour déterminer quel ID d’organisation correspond à la connexion en continu que vous utilisez, vous pouvez effectuer une `GET inlet` à l’aide de la méthode [[!DNL Streaming Ingestion API]](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion/). Consultez la section [Récupération d’une connexion en continu](./create-streaming-connection.md#get-data-collection-url) pour obtenir un exemple de la manière dont vous pouvez récupérer les connexions en continu créées précédemment.
 
 Le quatrième message a échoué, car il ne suivait pas le schéma XDM attendu. Les éléments `xdmSchema` inclus dans l’en-tête et dans le corps de la requête ne correspondent pas au schéma XDM de `{DATASET_ID}`. Corriger le schéma dans l’en-tête et le corps du message lui permettra de passer la validation DCCS et d’être envoyé avec succès vers [!DNL Platform]. Vous devez également mettre à jour le corps du message de manière à ce qu’il corresponde au schéma XDM de `{DATASET_ID}` pour passer la validation en continu sur [!DNL Platform]. Pour plus d’informations sur ce qui arrive aux messages diffusés en continu vers Platform, consultez la section [Confirmation des messages ingérés](#confirm-messages-ingested) de ce tutoriel.
 

@@ -4,10 +4,10 @@ user-guide-title: Aide d’Adobe Experience Platform Data Ingestion
 breadcrumb-title: Guide d’ingestion de données
 user-guide-description: Insérez vos données dans Experience Platform par ingestion en lot ou en flux continu.
 feature: Data Ingestion
-source-git-commit: f77bbc60f2bc1f12970e8050ec6a924b9713f303
+source-git-commit: 6110bf51cbd0005428e7dab4552944c5c9b54d03
 workflow-type: tm+mt
-source-wordcount: '145'
-ht-degree: 95%
+source-wordcount: '156'
+ht-degree: 83%
 
 ---
 
@@ -27,7 +27,7 @@ ht-degree: 95%
    - [Dépannage](batch-ingestion/troubleshooting.md)
 - Tutoriels {#tutorials}
    - Mappage d’un fichier CSV à XDM {#map-csv}
-      - [Présentation](./tutorials/map-csv/overview.md)
+      - [Aperçu](./tutorials/map-csv/overview.md)
       - [Mapper un fichier CSV à un schéma existant](./tutorials/map-csv/existing-schema.md)
       - [Mappage d’un fichier CSV à l’aide de recommandations générées par l’IA](./tutorials/map-csv/recommendations.md)
    - [Ingestion de données par lots à l’aide de l’interface utilisateur](tutorials/ingest-batch-data.md)
@@ -44,7 +44,8 @@ ht-degree: 95%
    - [Récupération des lots en échec](quality/retrieve-failed-batches.md)
    - [Validation de l’ingestion par flux](quality/streaming-validation.md)
    - [Notifications d’ingestion de données](quality/subscribe-events.md)
-- [Barrières de sécurité pour l’ingestion des données](guardrails.md)
+- [Mécanismes de sécurisation pour l’ingestion des données](guardrails.md)
 - [Connecteurs source](source-connectors.md)
-- [Référence d’API](https://www.adobe.io/experience-platform-apis/references/data-ingestion/)
+- [Référence de l’API Batch Ingestion](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/)
+- [Référence de l’API d’ingestion par flux](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion/)
 - [Notes de mise à jour de Platform](https://docs.adobe.com/content/help/fr-FR/experience-platform/release-notes/latest.html)

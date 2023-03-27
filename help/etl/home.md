@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Développement d’intégrations ETL pour Adobe Experience Platform
 description: Le guide d’intégration ETL décrit les étapes générales de la création de connecteurs sécurisés et haute performance pour Experience Platform et l’ingestion de données dans Platform.
 exl-id: 7d29b61c-a061-46f8-a31f-f20e4d725655
-source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
+source-git-commit: 76ef5638316a89aee1c6fb33370af943228b75e1
 workflow-type: tm+mt
-source-wordcount: '4075'
-ht-degree: 100%
+source-wordcount: '4081'
+ht-degree: 99%
 
 ---
 
@@ -18,7 +18,8 @@ Le guide d’intégration ETL décrit les étapes générales de la création de
 
 - [[!DNL Catalog]](https://www.adobe.io/experience-platform-apis/references/catalog/)
 - [[!DNL Data Access]](https://www.adobe.io/experience-platform-apis/references/data-access/)
-- [[!DNL Data Ingestion]](https://www.adobe.io/experience-platform-apis/references/data-ingestion/)
+- [[!DNL Batch Ingestion]](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/)
+- [[!DNL Streaming Ingestion]](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion/)
 - [Authentification et autorisation pour les API Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr)
 - [[!DNL Schema Registry]](https://www.adobe.io/experience-platform-apis/references/schema-registry/)
 
@@ -490,7 +491,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/dataSets/59c93f3d
 }
 ```
 
-Les données seront écrites dans [!DNL Experience Platform] à l’aide de l’[API Data Ingestion](https://www.adobe.io/experience-platform-apis/references/data-ingestion/).  L’écriture des données est un processus asynchrone. Lorsque des données sont écrites dans Adobe Experience Platform, un lot est créé et marqué comme réussi uniquement après que les données ont été entièrement écrites.
+Les données seront écrites dans [!DNL Experience Platform] en utilisant la variable [API Batch Ingestion](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/).  L’écriture des données est un processus asynchrone. Lorsque des données sont écrites dans Adobe Experience Platform, un lot est créé et marqué comme réussi uniquement après que les données ont été entièrement écrites.
 
 Dans [!DNL Experience Platform], les données devraient être écrites sous la forme de fichiers parquet.
 
@@ -579,7 +580,7 @@ La validation peut être effectuée pour les types XDM logiques à l’aide d’
 
 ### Création d’un lot
 
-Une fois les données traitées, l’outil ETL réécrit les données dans [!DNL Experience Platform] à l’aide de l’[API Batch Ingestion](https://www.adobe.io/experience-platform-apis/references/data-ingestion/). Avant de pouvoir ajouter des données à un jeu de données, celles-ci doivent être liées à un lot qui sera chargé ultérieurement dans un jeu de données spécifique.
+Une fois les données traitées, l’outil ETL réécrit les données dans [!DNL Experience Platform] à l’aide de l’[API Batch Ingestion](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/). Avant de pouvoir ajouter des données à un jeu de données, celles-ci doivent être liées à un lot qui sera chargé ultérieurement dans un jeu de données spécifique.
 
 **Requête**
 

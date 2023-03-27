@@ -4,22 +4,22 @@ solution: Experience Platform
 title: Guide de l’API Batch Ingestion
 description: Ce document fournit un guide complet aux développeurs qui utilisent les API d’ingestion par lots pour Adobe Experience Platform.
 exl-id: 4ca9d18d-1b65-4aa7-b608-1624bca19097
-source-git-commit: 49281d6ef959c84c3da964f0a9e19859fd8901a5
+source-git-commit: 76ef5638316a89aee1c6fb33370af943228b75e1
 workflow-type: tm+mt
-source-wordcount: '2413'
-ht-degree: 77%
+source-wordcount: '2412'
+ht-degree: 76%
 
 ---
 
 # Guide de développement de l’ingestion par lots
 
-Ce document fournit un guide complet sur l’utilisation de [points de terminaison de l’API d’ingestion par lots](https://www.adobe.io/experience-platform-apis/references/data-ingestion/#tag/Batch-Ingestion) dans Adobe Experience Platform. Pour obtenir un aperçu des API d’ingestion par lots, y compris les conditions préalables et les bonnes pratiques, veuillez commencer par lire la section [Présentation de l’API d’ingestion par lots](overview.md).
+Ce document fournit un guide complet sur l’utilisation de [points de terminaison de l’API d’ingestion par lots](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) dans Adobe Experience Platform. Pour obtenir un aperçu des API d’ingestion par lots, y compris les conditions préalables et les bonnes pratiques, veuillez commencer par lire la section [Présentation de l’API d’ingestion par lots](overview.md).
 
 L’annexe de ce document fournit des informations sur le [formatage des données à utiliser pour l’ingestion](#data-transformation-for-batch-ingestion), y compris des exemples de fichiers de données CSV et JSON.
 
 ## Prise en main
 
-Les points de terminaison d’API utilisés dans ce guide font partie de la variable [API Data Ingestion](https://www.adobe.io/experience-platform-apis/references/data-ingestion/). L’ingestion de données fournit une API RESTful grâce à laquelle vous pouvez effectuer des opérations CRUD sur les types d’objets pris en charge.
+Les points de terminaison d’API utilisés dans ce guide font partie de la variable [API Batch Ingestion](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/). L’ingestion par lots est fournie par le biais d’une API RESTful qui vous permet d’effectuer des opérations CRUD de base sur les types d’objets pris en charge.
 
 Avant de poursuivre, veuillez consulter la section [Présentation de l’API d’ingestion par lots](overview.md) et le [guide de prise en main](getting-started.md).
 

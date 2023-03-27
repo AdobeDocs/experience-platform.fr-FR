@@ -2,20 +2,20 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;ingestion de données;lot;activer le jeu de données;présentation de l’ingestion par lots;présentation de l’ingestion par lots;présentation de l’ingestion par lots
 solution: Experience Platform
 title: Présentation de l’API Batch Ingestion
-description: L’API Adobe Experience Platform Data Ingestion vous permet d’ingérer des données dans Platform sous forme de fichiers de lot. Les données en cours d’ingestion peuvent être les données de profil d’un fichier plat dans un système CRM (par exemple un fichier Parquet) ou les données conformes à un schéma connu dans le registre Experience Data Model (XDM).
+description: L’API Batch Ingestion de Adobe Experience Platform vous permet d’ingérer des données dans Platform sous forme de fichiers de lot. Les données en cours d’ingestion peuvent être les données de profil d’un fichier plat dans un système CRM (par exemple un fichier Parquet) ou les données conformes à un schéma connu dans le registre Experience Data Model (XDM).
 exl-id: ffd1dc2d-eff8-4ef7-a26b-f78988f050ef
-source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
+source-git-commit: 76ef5638316a89aee1c6fb33370af943228b75e1
 workflow-type: tm+mt
 source-wordcount: '1387'
-ht-degree: 75%
+ht-degree: 74%
 
 ---
 
 # Présentation de l’API d’ingestion par lots
 
-L’API Adobe Experience Platform Data Ingestion vous permet d’ingérer des données dans Platform sous forme de fichiers de lot. Les données en cours d’ingestion peuvent être des données de profil provenant d’un fichier plat (un fichier Parquet, par exemple) ou des données conformes à un schéma connu dans la variable [!DNL Experience Data Model] Registre (XDM).
+L’API Batch Ingestion de Adobe Experience Platform vous permet d’ingérer des données dans Platform sous forme de fichiers de lot. Les données en cours d’ingestion peuvent être des données de profil provenant d’un fichier plat (un fichier Parquet, par exemple) ou des données conformes à un schéma connu dans la variable [!DNL Experience Data Model] Registre (XDM).
 
-La [référence de l’API Data Ingestion](https://www.adobe.io/experience-platform-apis/references/data-ingestion/) fournit des informations supplémentaires sur ces appels d’API.
+Le [Référence de l’API Batch Ingestion](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) fournit des informations supplémentaires sur ces appels API.
 
 Le diagramme suivant décrit le processus d’ingestion par lots :
 
@@ -23,7 +23,7 @@ Le diagramme suivant décrit le processus d’ingestion par lots :
 
 ## Prise en main
 
-Les points de terminaison d’API utilisés dans ce guide font partie de la variable [API Data Ingestion](https://www.adobe.io/experience-platform-apis/references/data-ingestion/). Avant de continuer, consultez le [guide de prise en main](getting-started.md) pour obtenir des liens vers la documentation associée, un guide de lecture des exemples d’appels API dans ce document et des informations importantes sur les en-têtes requis pour réussir des appels vers n’importe quelle API d’Experience Platform.
+Les points de terminaison d’API utilisés dans ce guide font partie de la variable [API Batch Ingestion](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/). Avant de continuer, consultez le [guide de prise en main](getting-started.md) pour obtenir des liens vers la documentation associée, un guide de lecture des exemples d’appels API dans ce document et des informations importantes sur les en-têtes requis pour réussir des appels vers n’importe quelle API d’Experience Platform.
 
 ### Conditions préalables de [!DNL Data Ingestion]
 

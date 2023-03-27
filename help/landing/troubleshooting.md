@@ -7,10 +7,10 @@ landing-page-description: Trouvez des réponses aux questions fréquemment posé
 short-description: Find answers to frequently asked questions and a guide for troubleshooting common errors in Experience Platform.
 type: Documentation
 exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
-source-git-commit: b21367814e38fb5ee017709a29b39de982d59d24
-workflow-type: ht
-source-wordcount: '1851'
-ht-degree: 100%
+source-git-commit: 76ef5638316a89aee1c6fb33370af943228b75e1
+workflow-type: tm+mt
+source-wordcount: '1861'
+ht-degree: 99%
 
 ---
 
@@ -209,7 +209,8 @@ Voici une liste de guides de dépannage et de documentation de référence sur l
 | Service | Référence d’API | Dépannage |
 | --- | --- | --- |
 | Contrôle d’accès | [API Access Control](https://www.adobe.io/experience-platform-apis/references/access-control/) | [Guide de dépannage du contrôle d’accès](../access-control/troubleshooting-guide.md) |
-| Adobe Experience Platform Data Ingestion | [[!DNL Data Ingestion API]](https://www.adobe.io/experience-platform-apis/references/data-ingestion/) | [Guide de dépannage de l’ingestion par lots ](../ingestion/batch-ingestion/troubleshooting.md)<br><br>[Guide de dépannage de l’ingestion en flux continu](../ingestion/streaming-ingestion/troubleshooting.md) |
+| Adobe Experience Platform Data Ingestion | [[!DNL Batch Ingestion API]](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) | [Guide de dépannage de l’ingestion par lots](../ingestion/batch-ingestion/troubleshooting.md) |
+| Adobe Experience Platform Data Ingestion | [[!DNL Streaming Ingestion API]](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion/) | [Guide de dépannage de l’ingestion par flux](../ingestion/streaming-ingestion/troubleshooting.md) |
 | Espace de travail de science des données d’Adobe Experience Platform | [[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) | Guide de dépannage du [[!DNL Data Science Workspace] ](../data-science-workspace/troubleshooting-guide.md) |
 | Gouvernance des données d’Adobe Experience Platform | [[!DNL Policy Service API]](https://www.adobe.io/experience-platform-apis/references/policy-service/) |  |
 | Adobe Experience Platform Identity Service | [[!DNL Identity Service API]](https://www.adobe.io/experience-platform-apis/references/identity-service) | Guide de dépannage du [[!DNL Identity Service] ](../identity-service/troubleshooting-guide.md) |
