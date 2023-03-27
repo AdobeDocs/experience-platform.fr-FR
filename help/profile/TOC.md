@@ -4,9 +4,9 @@ user-guide-title: Guide de Real-Time Customer Profile
 user-guide-description: Fusionnez les données client pour créer une vue unifiée des interactions client entre les canaux.
 feature: Profiles
 source-git-commit: 81d219116479aa71e9540e4efa636bec8dea5d23
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '138'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 97%
 * [[!DNL Profile] et mécanismes de sécurisation de la segmentation](guardrails.md)
 * [Tableau de bord [!DNL Profile]](ui/profile-dashboard.md)
 * [Expirations des événements d’expérience](event-expirations.md)
-* [Expirations du profil pseudonyme](pseudonymous-profiles.md)
+* [Expirations des profils pseudonymes](pseudonymous-profiles.md)
 * [!DNL Profile] API {#api}
    * [Présentation](api/overview.md)
    * [Prise en main](api/getting-started.md)
