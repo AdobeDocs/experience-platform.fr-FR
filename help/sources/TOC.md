@@ -4,10 +4,10 @@ user-guide-title: Aide sur les connecteurs source d’Adobe Experience Platfor
 breadcrumb-title: Guide des connecteurs sources
 user-guide-description: Ingérez des données à partir de diverses sources. Découvrez comment structurer, étiqueter et améliorer les données déjà ingérées.
 feature: Sources
-source-git-commit: 0108d0dcb130e17007faeaa08f97e5c13d71578f
+source-git-commit: c19982ad18b04a8fe039f90ff4ada1fbf5a2dee1
 workflow-type: tm+mt
-source-wordcount: '940'
-ht-degree: 100%
+source-wordcount: '946'
+ht-degree: 99%
 
 ---
 
@@ -213,6 +213,7 @@ ht-degree: 100%
    - [Supprimer des comptes](tutorials/api/delete.md)
    - [Supprimer des flux de données](tutorials/api/delete-dataflows.md)
    - [Ingérer des données chiffrées](tutorials/api/encrypt-data.md)
+   - [Enregistrement d’un flux de données en tant que brouillon](tutorials/api/draft.md)
 - Tutoriels sur l’interface utilisateur {#ui-tutorials}
    - Créer une connexion source {#create}
       - Applications Adobe {#adobe-applications}
