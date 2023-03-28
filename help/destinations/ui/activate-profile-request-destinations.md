@@ -4,9 +4,9 @@ title: Activer les données d’audience vers les destinations de requête de pr
 type: Tutorial
 description: Découvrez comment activer les données d’audience que vous avez dans Adobe Experience Platform en mappant les segments aux destinations de requête de profil.
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: 9bde403338187409892d76de68805535de03d59f
+source-git-commit: 811aba50fb4509e77910499f8d01c4bc13d06841
 workflow-type: tm+mt
-source-wordcount: '896'
+source-wordcount: '898'
 ht-degree: 23%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 23%
 
 ## Présentation {#overview}
 
-Cet article explique le workflow requis pour activer les données d’audience dans les destinations de demande de profil Adobe Experience Platform. Utilisé conjointement avec [segmentation de périphérie](../../segmentation/ui/edge-segmentation.md), ces destinations activent des cas d’utilisation de la personnalisation de la même page et de la page suivante sur vos propriétés web. En savoir plus sur [activation des cas d’utilisation de la personnalisation de la même page et de la page suivante](/help/destinations/ui/configure-personalization-destinations.md).
+Cet article explique le workflow requis pour activer les données d’audience dans les destinations de demande de profil Adobe Experience Platform. Utilisé conjointement avec [segmentation de périphérie](../../segmentation/ui/edge-segmentation.md), ces destinations activent des cas d’utilisation de la personnalisation de la même page et de la page suivante sur vos propriétés web et mobiles. En savoir plus sur [activation des cas d’utilisation de la personnalisation de la même page et de la page suivante](/help/destinations/ui/configure-personalization-destinations.md).
 
 Voici des exemples de destinations de requête de profil : [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) et le [Personnalisation personnalisée](../../destinations/catalog/personalization/custom-personalization.md) connexions.
 
