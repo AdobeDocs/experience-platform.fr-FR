@@ -1,18 +1,18 @@
 ---
 title: Conseils sur le client User-Agent
-description: Découvrez le fonctionnement des conseils client User-Agent dans le SDK Web
+description: Découvrez comment les conseils client User-Agent fonctionnent dans le SDK Web. Les conseils aux clients permettent aux propriétaires de sites web d’accéder à une grande partie des mêmes informations disponibles dans la chaîne User-Agent, mais de manière plus respectueuse de la vie privée.
 keywords: user-agent;conseils client; string; chaîne de l’agent-utilisateur ; faible entropie; entropie élevée
 exl-id: a909b1d1-be9d-43ba-bb4b-d28b0c609f65
-source-git-commit: faeec4288948012fabeb25d0a0ce5a3b45f563ec
+source-git-commit: 29679e85943f16bcb02064cc60a249a3de61e022
 workflow-type: tm+mt
-source-wordcount: '1132'
+source-wordcount: '1155'
 ht-degree: 10%
 
 ---
 
 # Conseils sur le client User-Agent
 
-## Présentation {#overview}
+## Aperçu {#overview}
 
 Chaque fois qu’un navigateur Web envoie une requête à un serveur Web, l’en-tête de la requête inclut des informations sur le navigateur et l’environnement sur lequel le navigateur est exécuté. Toutes ces données sont agrégées dans une chaîne appelée [!DNL User-Agent] chaîne.
 
