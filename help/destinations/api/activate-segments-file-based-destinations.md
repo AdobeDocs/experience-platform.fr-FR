@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Activation des segments vers des destinations basées sur des fichiers à l’aide de l’API Flow Service
 description: Découvrez comment utiliser l’API Flow Service pour exporter des fichiers avec des profils qualifiés vers des destinations de stockage dans le cloud.
 type: Tutorial
-source-git-commit: 6ed78a96f099fb4552716ac4a598c43f4d65cf37
+source-git-commit: d925802489d5da006cd9cfacb89b3e880663edaf
 workflow-type: tm+mt
 source-wordcount: '4337'
 ht-degree: 11%
@@ -3645,6 +3645,8 @@ L’identifiant dans la réponse représente l’identifiant unique du schéma d
 
 Vous devez ensuite configurer le schéma de sortie de votre export. Tout d’abord, vous devez rechercher et examiner votre schéma de partenaire existant.
 
+>[!BEGINSHADEBOX]
+
 **Requête**
 
 +++Demande d’obtention du schéma partenaire pour le schéma de sortie
@@ -3957,7 +3959,7 @@ Vous devez ensuite créer un schéma de sortie. Copiez la réponse JSON ci-dessu
 
 **Requête**
 
-+++ Création d’un schéma de sortie - Requête
++++Création d’un schéma de sortie - Requête
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/conversion/schemas' \
@@ -3977,7 +3979,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/conver
 
 **Réponse**
 
-+++ Création d’un schéma de sortie - Réponse
++++Créer un schéma de sortie - Réponse
 
 ```json
 {
@@ -4287,7 +4289,7 @@ L’identifiant dans la réponse représente l’identifiant unique du schéma d
 
 >[!ENDSHADEBOX]
 
-### Création de jeux de mappages
+### Créer un jeu de mappages {#create-mapping-set}
 
 Ensuite, utilisez le [API de préparation des données](https://developer.adobe.com/experience-platform-apis/references/data-prep/#tag/Mapping-sets/operation/createMappingSet) pour créer le mappage défini à l’aide de l’identifiant de schéma d’entrée, de l’identifiant de schéma de sortie et des mappages de champ souhaités.
 
@@ -4295,7 +4297,7 @@ Ensuite, utilisez le [API de préparation des données](https://developer.adobe.
 
 **Requête**
 
-+++ Créer un jeu de mappages - Requête
++++Créer un jeu de mappages - Requête
 
 >[!IMPORTANT]
 >
@@ -4304,7 +4306,7 @@ Ensuite, utilisez le [API de préparation des données](https://developer.adobe.
 >* Notez également que même si l’exemple de configuration ci-dessous inclut `Email` et `Phone_E.164`, vous ne pouvez exporter qu’un seul attribut d’identité par flux de données.
 
 
-```shell{line-numbers="true" start-line="1" highlight="16-38"}
+```shell {line-numbers="true" start-line="1" highlight="16-38"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/conversion/mappingSets' \
 --header 'x-api-key: {API_KEY}' \
 --header 'x-gw-ims-org-id: {ORG_ID}' \
