@@ -5,9 +5,9 @@ title: Créer une connexion source Adobe Analytics dans l’interface utilisate
 type: Tutorial
 description: Découvrez comment créer une connexion source Adobe Analytics dans l’interface utilisateur pour importer des données client dans Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: 3530c91cd36e9e2729515827978e6115857f2405
 workflow-type: tm+mt
-source-wordcount: '2384'
+source-wordcount: '2390'
 ht-degree: 61%
 
 ---
@@ -159,7 +159,7 @@ La documentation suivante fournit d’autres ressources sur la compréhension de
 * [Fonctions de mappage de la préparation des données](../../../../../data-prep/functions.md)
 * [Ajouter des champs calculés](../../../../../data-prep/ui/mapping.md#calculated-fields)
 
-### Filtrage pour [!DNL Profile Service] (Version bêta) {#filtering-for-profile}
+### Filtrage pour Real-time Customer Profile (bêta) {#filtering-for-profile}
 
 >[!CONTEXTUALHELP]
 >id="platform_data_prep_analytics_filtering"
@@ -170,7 +170,7 @@ La documentation suivante fournit d’autres ressources sur la compréhension de
 >
 >Prise en charge du filtrage [!DNL Analytics] Les données sont actuellement en version bêta et ne sont pas disponibles pour tous les utilisateurs. La documentation et les fonctionnalités peuvent changer.
 
-Une fois que vous avez terminé les mappages pour vos [!DNL Analytics] données de la suite de rapports, vous pouvez appliquer des règles et des conditions de filtrage pour inclure ou exclure de manière sélective les données de l’ingestion au [!DNL Profile Service]. La prise en charge du filtrage n’est disponible que pour [!DNL Analytics] Les données et les données ne sont filtrées que lors de la saisie de [!DNL Profile.] Toutes les données sont ingérées dans le lac de données.
+Une fois que vous avez terminé les mappages pour vos [!DNL Analytics] données de suite de rapports, vous pouvez appliquer des règles et des conditions de filtrage pour inclure ou exclure de manière sélective des données de l’ingestion dans Real-time Customer Profile. La prise en charge du filtrage n’est disponible que pour [!DNL Analytics] Les données et les données ne sont filtrées que lors de la saisie de [!DNL Profile.] Toutes les données sont ingérées dans le lac de données.
 
 #### Filtrage au niveau de la ligne
 
