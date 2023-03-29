@@ -4,10 +4,10 @@ title: Activer les données d’audience vers les destinations de requête de pr
 type: Tutorial
 description: Découvrez comment activer les données d’audience que vous avez dans Adobe Experience Platform en mappant les segments aux destinations de requête de profil.
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: 811aba50fb4509e77910499f8d01c4bc13d06841
+source-git-commit: f771cf0c9ea692ad02cf987608b3710772712d54
 workflow-type: tm+mt
-source-wordcount: '898'
-ht-degree: 23%
+source-wordcount: '935'
+ht-degree: 20%
 
 ---
 
@@ -15,7 +15,10 @@ ht-degree: 23%
 
 >[!IMPORTANT]
 > 
->Pour activer les données, vous avez besoin des [autorisations de contrôle d’accès](/help/access-control/home.md#permissions) pour les fonctions **[!UICONTROL Gérer les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]**, et **[!UICONTROL Afficher les segments]**. Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+> * Pour activer les données et activer la variable [étape de mappage](#mapping) du workflow, vous avez besoin de l’événement **[!UICONTROL Gestion des destinations]**, **[!UICONTROL Activation des destinations]**, **[!UICONTROL Afficher les profils]**, et **[!UICONTROL Affichage de segments]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions).
+> * Pour activer les données sans passer par la fonction [étape de mappage](#mapping) du workflow, vous avez besoin de l’événement **[!UICONTROL Gestion des destinations]**, **[!UICONTROL Activation du segment sans mappage]**, **[!UICONTROL Afficher les profils]**, et **[!UICONTROL Affichage de segments]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions).
+> 
+> Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
 ## Présentation {#overview}
 

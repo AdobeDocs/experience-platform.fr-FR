@@ -4,10 +4,10 @@ title: Activer les données d’audience vers des destinations d’exportation d
 type: Tutorial
 description: Comment activer les données d’audience disponibles dans Adobe Experience Platform en envoyant des segments vers des destinations de profils par lots.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 7d680567cee8b47532bb66434e2f0582cde68532
+source-git-commit: 546758c419670746cf55de35cbb33131d4457cb9
 workflow-type: tm+mt
-source-wordcount: '3592'
-ht-degree: 92%
+source-wordcount: '3629'
+ht-degree: 91%
 
 ---
 
@@ -15,9 +15,12 @@ ht-degree: 92%
 
 >[!IMPORTANT]
 > 
->Pour activer les données, vous avez besoin des [autorisations de contrôle d’accès](/help/access-control/home.md#permissions) pour les fonctions **[!UICONTROL Gérer les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]**, et **[!UICONTROL Afficher les segments]**. Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+> * Pour activer les données et activer la variable [étape de mappage](#mapping) du workflow, vous avez besoin de l’événement **[!UICONTROL Gestion des destinations]**, **[!UICONTROL Activation des destinations]**, **[!UICONTROL Afficher les profils]**, et **[!UICONTROL Affichage de segments]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions).
+> * Pour activer les données sans passer par la fonction [étape de mappage](#mapping) du workflow, vous avez besoin de l’événement **[!UICONTROL Gestion des destinations]**, **[!UICONTROL Activation du segment sans mappage]**, **[!UICONTROL Afficher les profils]**, et **[!UICONTROL Affichage de segments]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions).
+> 
+> Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 >
->Certains clients participant au programme bêta de la fonctionnalité d’exportation améliorée de fichiers voient la nouvelle étape **[!UICONTROL Mappage]** dans le cadre de leur workflow d’activation vers les [nouvelles destinations bêta de stockage dans le cloud](/help/release-notes/2022/october-2022.md#destinations). Veuillez également noter les [limitations connues](#known-limitations) dans le cadre de la version.
+> Certains clients participant au programme bêta de la fonctionnalité d’exportation améliorée de fichiers voient la nouvelle étape **[!UICONTROL Mappage]** dans le cadre de leur workflow d’activation vers les [nouvelles destinations bêta de stockage dans le cloud](/help/release-notes/2022/october-2022.md#destinations). Veuillez également noter les [limitations connues](#known-limitations) dans le cadre de la version.
 
 ## Présentation {#overview}
 
