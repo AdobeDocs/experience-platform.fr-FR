@@ -2,10 +2,10 @@
 title: Notes de mise à jour de l’extension Core
 description: Notes de mise à jour les plus récentes pour l’extension Core dans Adobe Experience Platform.
 exl-id: a049b2d5-7a00-435d-bcc7-112658a53a1e
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 0955646164269d868be5161a117c6e12dbd9a4cb
 workflow-type: tm+mt
-source-wordcount: '1565'
-ht-degree: 100%
+source-wordcount: '1654'
+ht-degree: 95%
 
 ---
 
@@ -14,6 +14,26 @@ ht-degree: 100%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+
+## 29 mars 2023
+
+v3.4.1
+
+* Ajoute de nouveaux événements de délégation natifs web :
+   * Keydown
+   * KeyUp
+* Ajoute la possibilité de tester par rapport à de nombreuses valeurs (options &quot;Ajouter une autre&quot;) par rapport aux délégués suivants :
+   * Événements
+      * de changement
+   * Conditions
+      * Cookie
+      * Landing Page
+      * Query String Parameter
+      * Traffic Source
+      * Variable
+* Modifie le délégué events/EntersViewport pour utiliser la variable [API Intersection Observer](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) au lieu de la détection manuelle des éléments qui entrent dans la fenêtre d’affichage.
+* Supprime le code qui migrait les cookies DTM vers LocalStorage.
+* Consigne un avertissement dans la console lorsque les API LocalStorage et SessionStorage ne sont pas disponibles.
 
 ## 4 janvier 2022
 
