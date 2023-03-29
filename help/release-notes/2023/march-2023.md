@@ -1,9 +1,9 @@
 ---
 title: Notes de mise à jour d’Adobe Experience Platform - Mars 2023
 description: Les notes de mise à jour de mars 2023 pour Adobe Experience Platform.
-source-git-commit: 48cd7f670ab7d42d2b0c54bb549d37aa3b9ebe66
+source-git-commit: c5061a759f1098ce1dcc7e3f00c52e064239d7c5
 workflow-type: tm+mt
-source-wordcount: '715'
+source-wordcount: '716'
 ht-degree: 42%
 
 ---
@@ -54,7 +54,7 @@ Pour plus d’informations sur la préparation des données, veuillez lire le [A
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Mesures de profil | Pour vous donner une représentation plus précise des mesures de profil, la ventilation des adhésions et les mesures d’attrition sont combinées et sont désormais calculées sur une période de 24 heures. Plus d’informations sont disponibles dans la section [Guide de l’interface utilisateur de segmentation](../../segmentation/ui/overview.md) |
+| Mesures de profil | Pour vous donner une représentation plus précise des mesures de profil, la ventilation des adhésions et les mesures d’attrition sont combinées et sont désormais calculées sur une période de 24 heures. Pour plus d’informations, reportez-vous à la section [Guide de l’interface utilisateur de segmentation](../../segmentation/ui/overview.md#browse) |
 
 {style="table-layout:auto"}
 
