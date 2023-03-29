@@ -2,10 +2,10 @@
 title: Gouvernance des données dans Query Service
 description: Cette présentation couvre les principaux éléments de la gouvernance des données dans Experience Platform Query Service.
 exl-id: 37543d43-bd8c-4bf9-88e5-39de5efe3164
-source-git-commit: c1ec6f949bd0ab9ec3b1ccc58baf74d8c71deca0
+source-git-commit: 54a6f508818016df1a4ab2a217bc0765b91df9e9
 workflow-type: tm+mt
-source-wordcount: '2667'
-ht-degree: 2%
+source-wordcount: '2843'
+ht-degree: 3%
 
 ---
 
@@ -39,7 +39,7 @@ La sécurité relative à Query Service est divisée en plusieurs catégories :
 
 <!-- * Securing data through [encryption and customer-managed keys (CMK)](#encryption-and-customer-managed-keys): Access controlled through encryption when data is at rest. -->
 
-### Contrôle d&#39;accès {#access-control}
+### Contrôle d’accès {#access-control}
 
 Le contrôle d’accès dans Adobe Experience Platform permet d’utiliser [Adobe Admin Console](https://adminconsole.adobe.com/) pour gérer l’accès aux fonctionnalités de Query Service à l’aide d’autorisations basées sur les rôles. De même, vous pouvez contrôler l’accès à des attributs de données spécifiques par le biais de la gestion des libellés sur les schémas et les champs de données.
 
@@ -93,6 +93,16 @@ Query Service permet d’utiliser le langage SQL ANSI standard pour [`CREATE VIE
 
 Le `CREATE VIEW` keyword définit une vue d’une requête, mais la vue n’est pas matérialisée physiquement. Au lieu de cela, la requête est exécutée chaque fois que la vue est référencée dans une requête. Lorsqu’un utilisateur crée une vue à partir d’un jeu de données, les règles de contrôle d’accès basées sur les rôles et les attributs du jeu de données parent sont **not** appliqué de manière hiérarchique. Par conséquent, vous devez définir explicitement des autorisations sur chacune des colonnes lors de la création d’une vue.
 
+#### Création de restrictions d’accès basées sur les champs sur les jeux de données accélérés {#create-field-based-access-restrictions-on-accelerated-datasets}
+
+Avec le [fonctionnalité de contrôle d’accès basé sur les attributs](../../access-control/abac/overview.md) vous pouvez définir des portées d’utilisation des données ou de l’organisation sur les jeux de données de faits et de dimensions dans la variable [boutique accélérée](../data-distiller/query-accelerated-store/send-accelerated-queries.md). Cela permet aux administrateurs de gérer l’accès à des segments spécifiques et de mieux gérer l’accès attribué aux utilisateurs ou groupes d’utilisateurs.
+
+Pour créer des restrictions d’accès basées sur les champs sur des jeux de données accélérés, vous pouvez utiliser les requêtes CTAS de Query Service pour créer des jeux de données accélérés et structurer ces jeux de données en fonction de schémas XDM ou de schémas ad hoc existants. Les administrateurs peuvent alors [ajout et modification des libellés d’utilisation des données pour le schéma](../../xdm/tutorials/labels.md#edit-the-labels-for-the-schema-or-field) ou [schéma ad hoc](./ad-hoc-schema-labels.md#edit-governance-labels). Vous pouvez appliquer, créer et modifier des libellés à vos schémas à partir du [!UICONTROL Étiquettes] de l’espace de travail [!UICONTROL Schémas] Interface utilisateur.
+
+Les libellés d’utilisation des données peuvent également être [appliquée ou modifiée directement sur le jeu de données](../../data-governance/labels/user-guide.md#add-labels) via l’interface utilisateur des jeux de données ou créés à partir du contrôle d’accès ; [!UICONTROL Étiquettes] workspace. Consultez le guide sur la façon de [créer une nouvelle étiquette](../../access-control/abac/ui/labels.md) pour plus d’informations.
+
+L’accès des utilisateurs à des colonnes individuelles peut ensuite être contrôlé par les libellés d’utilisation des données joints et les jeux d’autorisations appliqués aux rôles affectés aux utilisateurs.
+
 ### Connectivité {#connectivity}
 
 Query Service est accessible par le biais de l’interface utilisateur de Platform ou en établissant une connexion avec des clients externes compatibles. L’accès à tous les fronts disponibles est contrôlé par un ensemble d’informations d’identification.
@@ -131,13 +141,13 @@ Consultez le guide sur les [Options SSL pour les connexions de clients tiers à 
 
 Le cryptage est l’utilisation d’un processus algorithmique pour transformer les données en texte codé et illisible, afin de garantir que les informations sont protégées et inaccessibles sans clé de décryptage.
 
-La conformité des données de Query Service garantit que les données sont toujours cryptées. Les données en transit sont toujours conformes au protocole HTTPS et les données au repos sont chiffrées dans un magasin Azure Data Lake à l’aide de clés au niveau du système. Consultez la documentation relative à [comment les données sont chiffrées dans Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/encryption.html) pour plus d’informations. Pour plus d’informations sur la façon dont les données au repos sont chiffrées dans Azure Data Lake Storage, reportez-vous à la section [documentation Azure officielle](https://docs.microsoft.com/fr-fr/azure/data-lake-store/data-lake-store-encryption).
+La conformité des données de Query Service garantit que les données sont toujours cryptées. Les données en transit sont toujours conformes au protocole HTTPS et les données au repos sont chiffrées dans un magasin Azure Data Lake à l’aide de clés au niveau du système. Consultez la documentation relative à [comment les données sont chiffrées dans Adobe Experience Platform](../../landing/governance-privacy-security/encryption.md) pour plus d’informations. Pour plus d’informations sur la façon dont les données au repos sont chiffrées dans Azure Data Lake Storage, reportez-vous à la section [documentation Azure officielle](https://docs.microsoft.com/fr-fr/azure/data-lake-store/data-lake-store-encryption).
 
 <!-- Data-in-transit is always HTTPS compliant and similarly when the data is at rest in the data lake, the encryption is done with Customer Management Key (CMK), which is already supported by Data Lake Management. The currently supported version is TLS1.2. -->
 
 ## Journal {#audit}
 
-Query Service enregistre l’activité de l’utilisateur et classe cette activité dans différents types de journaux. Informations d’approvisionnement des journaux sur **who** performance **what** et **when**. Chaque action enregistrée dans un journal contient des métadonnées qui indiquent le type d’action, la date et l’heure, l’e-mail de l’utilisateur qui a exécuté l’action et des attributs supplémentaires liés au type d’action.
+Query Service enregistre l’activité de l’utilisateur et classe cette activité dans différents types de journaux. Informations d’approvisionnement des journaux sur **who** performance **what** et **when**. Chaque action enregistrée dans un journal contient des métadonnées qui indiquent le type d’action, la date et l’heure, l’ID d’e-mail de l’utilisateur ou de l’utilisatrice qui a exécuté l’action et des attributs supplémentaires liés au type d’action.
 
 Toutes les catégories de journaux peuvent être demandées selon vos besoins par un utilisateur de Platform. Cette section fournit des détails sur le type d’informations capturées pour Query Service et l’emplacement d’accès à ces informations.
 
@@ -195,7 +205,7 @@ Pour plus d’informations sur les [données d’identité pour les demandes d�
 
 Les fonctionnalités de Query Service pour la gouvernance des données simplifient et rationalisent le processus de catégorisation des données et d’adhésion aux réglementations sur l’utilisation des données. Une fois les données identifiées, Query Service vous permet d’affecter l’identité Principale à tous les jeux de données de sortie. You **must** ajoutez des identités au jeu de données pour faciliter les demandes de confidentialité des données et travailler à la conformité des données.
 
-Les champs de données de schéma peuvent être définis en tant que champ d’identité via l’interface utilisateur de Platform et Query Service vous permet également de [marquer les identités Principales à l’aide de la commande SQL &quot;ALTER TABLE&quot;](../sql/syntax.md#alter-table). Définition d’une identité à l’aide de la variable `ALTER TABLE` est particulièrement utile lorsque des jeux de données sont créés à l’aide de SQL plutôt que directement à partir d’un schéma via l’interface utilisateur de Platform. Consultez la documentation pour obtenir des instructions sur la manière de [définition de champs d’identité dans l’interface utilisateur](../../xdm/ui/fields/identity.md) lors de l’utilisation de schémas standard.
+Les champs de données de schéma peuvent être définis en tant que champ d’identité via l’interface utilisateur de Platform et Query Service vous permet également de [marquer les identités Principales à l’aide de la commande SQL &#39;ALTER TABLE&#39;](../sql/syntax.md#alter-table). Définition d’une identité à l’aide de la variable `ALTER TABLE` est particulièrement utile lorsque des jeux de données sont créés à l’aide de SQL plutôt que directement à partir d’un schéma via l’interface utilisateur de Platform. Consultez la documentation pour obtenir des instructions sur la manière de [définition de champs d’identité dans l’interface utilisateur](../../xdm/ui/fields/identity.md) lors de l’utilisation de schémas standard.
 
 <!-- COMMENTING OUT DATA HYGEINE SECTION TEMPORARILY UNTIL IT IS GA. currently it is in Beta only.
 
