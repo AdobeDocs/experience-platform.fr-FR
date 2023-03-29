@@ -3,10 +3,10 @@ audience: user
 user-guide-title: Présentation d’Adobe Experience Platform
 breadcrumb-title: Présentation d’Experience Platform
 user-guide-description: Découvrez comment Experience Platform est capable de fournir des expériences personnalisées à vos clients en temps réel.
-source-git-commit: 695675aed5a1de4bb6869b733769f8e7e86a0d5b
+source-git-commit: bc781aadb620ad4b383d441d36e39626b0875901
 workflow-type: tm+mt
-source-wordcount: '256'
-ht-degree: 92%
+source-wordcount: '258'
+ht-degree: 91%
 
 ---
 
@@ -29,6 +29,7 @@ ht-degree: 92%
    * [Présentation de l’interface utilisateur de Platform (vidéo)](video/platform-ui.md)
    * [Guide de l’interface utilisateur des workflows](workflows.md)
    * [Prise en charge des navigateurs et des langues](browser-language-support.md)
+   * [Enquête à auto-identification](self-identification.md)
 * Les API d’Experience Platform {#platform-apis}
    * [Prise en main des API Platform](api-guide.md)
    * [Authentification et accès aux API Platform](api-authentication.md)
@@ -57,9 +58,9 @@ ht-degree: 92%
          * [Configuration d’un jeu de données pour capturer les données de consentement et de préférence](./governance-privacy-security/consent/iab/dataset.md)
       * [Intégrer le SDK Web de Platform pour traiter les données de consentement et de préférence](./governance-privacy-security/consent/sdk.md)
    * Journaux d’audit {#audit-logs}
-      * [Présentation](./governance-privacy-security/audit-logs/overview.md)
+      * [Aperçu](./governance-privacy-security/audit-logs/overview.md)
       * API de requête d’audit {#audit-api}
-         * [Présentation](./governance-privacy-security/audit-logs/api/overview.md)
+         * [Aperçu](./governance-privacy-security/audit-logs/api/overview.md)
          * [Prise en main](./governance-privacy-security/audit-logs/api/getting-started.md)
          * [Événements](./governance-privacy-security/audit-logs/api/events.md)
          * [Exporter](./governance-privacy-security/audit-logs/api/export.md)
