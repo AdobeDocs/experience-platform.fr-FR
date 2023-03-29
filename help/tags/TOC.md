@@ -5,9 +5,9 @@ breadcrumb-title: Balises
 user-guide-description: Découvrez comment déployer et gérer des balises d’analyse, de marketing et de publicité pour améliorer les expériences clients.
 feature: Tags
 solution: Data Collection
-source-git-commit: e34661f70a3550e579afe5133d85f76b1125e004
-workflow-type: ht
-source-wordcount: '961'
+source-git-commit: 7bff76b6c06e3d596dd811d04b3673c08ed9c250
+workflow-type: tm+mt
+source-wordcount: '962'
 ht-degree: 100%
 
 ---
@@ -222,6 +222,8 @@ ht-degree: 100%
          * [Aperçu](./extensions/server/meta/overview.md)
       * [!UICONTROL Microsoft Azure] {#azure}
          * [Aperçu](./extensions/server/azure/overview.md)
+      * [!DNL Mixpanel] {#mixpanel}
+         * [Aperçu](./extensions/server/mixpanel/overview.md)
       * [Pega Customer Decision Hub](https://exchange.adobe.com/apps/ec/107597)
       * [Snap Conversions API](https://exchange.adobe.com/apps/ec/108550)
       * [!DNL Splunk] {#splunk}
@@ -271,7 +273,7 @@ ht-degree: 100%
       * [Éléments de données](./api/endpoints/data-elements.md)
       * [Règles](./api/endpoints/rules.md)
       * [Composants de règle](./api/endpoints/rule-components.md)
-      * [Modules d’extension](./api/endpoints/extension-packages.md)
+      * [Packages d’extension](./api/endpoints/extension-packages.md)
       * [Extensions](./api/endpoints/extensions.md)
       * [Bibliothèques](./api/endpoints/libraries.md)
       * [Versions](./api/endpoints/builds.md)
