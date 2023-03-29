@@ -2,70 +2,77 @@
 keywords: présentation des mesures ; Présentation des mesures rtcdp
 title: Page d’accueil et tableaux de bord Real-time Customer Data Platform
 description: Tableaux de bord, page d’accueil et première expérience client d’Adobe Experience Platform
+badge: "Version bêta"
 exl-id: ced5b69c-5bb5-4e06-9cb4-938e36e6e5cc
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: cc6d962e1c4a9afe1b608dfa06e9812b33dc7e6d
 workflow-type: tm+mt
-source-wordcount: '620'
-ht-degree: 63%
+source-wordcount: '817'
+ht-degree: 17%
 
 ---
 
-# [!DNL Real-Time Customer Data Platform] page d’accueil et tableaux de bord
+# [!DNL Real-Time Customer Data Platform] page d&#39;accueil
 
-La page d’accueil d’Adobe Real-time Customer Data Platform (Real-Time CDP), qui comprend un tableau de bord de mesures, s’affiche lorsque vous vous connectez à Real-Time CDP.
+>[!NOTE]
+>
+>Le [!DNL Real-Time Customer Data Platform] La page d’accueil est en version bêta. Ses fonctionnalités et sa documentation peuvent faire l’objet de modifications.
 
-La page d’accueil n’est qu’un des emplacements où les cartes de mesures apparaissent. Real-Time CDP fournit des cartes de mesure tout au long de votre expérience. Ces mesures indiquent les données, les profils et les audiences de segments du système.
+La page d’accueil d’Adobe Real-time Customer Data Platform (Real-Time CDP) est la première page qui s’affiche une fois connecté à Real-Time CDP.
 
-![image](assets/home.png)
+La page d’accueil de Real-Time CDP comprend un widget de prise en main qui vous permet d’accéder rapidement à plusieurs fonctionnalités différentes et une section de mesures qui affiche des informations à jour sur les données de votre entreprise.
 
-Si le système ne contient aucune donnée lorsque vous vous connectez à Real-Time CDP, le tableau de bord de la page d’accueil n’apparaît pas. Dans ce cas, la page d’accueil propose des ressources pédagogiques pour une première expérience client. Au fur et à mesure de la collecte des données (c’est-à-dire au fur et à mesure de la création <!--sources-->des jeux de données, profils, segments et destinations ainsi que de la transmission des données au système), le tableau de bord se met automatiquement à jour pour afficher les informations sur ces données<!-- in metric cards-->.
+Ce document présente la page d’accueil de Real-Time CDP et le tableau de bord des mesures.
 
-## Affichage du tableau de bord de la page d’accueil
+![Page d’accueil de l’interface utilisateur de Platform.](assets/platform-home/home.png)
 
-<!--The dashboard shows information in several areas. Each category of information displays for the time range shown beneath the data.-->
+## Widget de prise en main
 
-Le tableau de bord se divise en plusieurs parties<!-- two areas.--> :
+Le [!UICONTROL Prise en main de Real-time Customer Profile] Le widget est divisé en quatre sections :
 
-* **Le tableau de classement** occupe toute la partie supérieure du tableau de bord. Le tableau de classement indique le nombre de jeux de données, de profils, de segments et de destinations du système.
+* **Ingestion de données dans Platform**: Ce widget vous dirige vers le catalogue de sources. Utilisez le catalogue de sources pour sélectionner une source et ingérer vos données vers Experience Platform. Pour plus d’informations, reportez-vous à la section [présentation des sources](../sources/home.md)
+* **Structures de données de modèle**: Ce widget vous dirige vers la présentation des schémas. Utilisez la présentation des schémas pour rechercher des schémas existants ou créer des blocs de création qui décrivent la structure de vos données. Pour plus d’informations, reportez-vous à la section [présentation des schémas](../xdm/home.md).
+* **Segmenter les audiences**: Ce widget vous dirige vers le [!DNL Segment Builder] dans l’interface utilisateur. Utilisez la variable [!DNL Segment Builder] pour interagir avec les éléments de données Profile et définir des règles pour vos segments. Pour plus d’informations, reportez-vous à la section [Présentation de Segmentation Service](../segmentation/home.md).
+* **Envoi de données vers des destinations**: Ce widget vous dirige vers le catalogue des destinations. Utilisez le catalogue des destinations pour sélectionner une destination à laquelle vous pouvez vous connecter et envoyer des segments. Pour plus d’informations, reportez-vous à la section [présentation des destinations](../destinations/home.md)
 
-   ![image](assets/leaderboard.png)
+![Page d’accueil de l’interface utilisateur de Platform affichant le widget de prise en main](assets/platform-home/getting-started-widget.png)
 
-<!-- * **Metric cards** display beneath the leaderboard. Metric cards show additional information, such as percentages or trends. Metric cards appear as data is collected.
-    ![image](assets/home-metrics.jpg)
-Some information is shown in different ways on both the leaderboard and metric cards. -->
-* La section **Éléments récents** répertorie les cinq jeux de données, sources, segments et destinations ajoutés le plus récemment au système.
+## Tableau de bord des mesures
 
-   ![image](assets/recent.png)
+Le tableau de bord des mesures affiche des informations à jour sur les données de votre Experience Platform. Le tableau de bord est divisé en deux sections :
 
-D’autres mesures, par exemple pour les profils et les segments, sont disponibles dans d’autres parties de Real-time Customer Data Platform.
+### Tableau de classement
 
-### Jeux de données
+Le tableau de classement indique le nombre total actuel de schémas, de jeux de données, de profils et de segments dans votre organisation, ainsi que leur date de mise à jour la plus récente.
 
-Le **[!UICONTROL Jeux de données]** Le compteur affiche le nombre de jeux de données dans le système et la quantité de données dans [!DNL Platform]. Ce compteur est mis à jour lors de la création d’un jeu de données.
+![La section du tableau de classement de la page d’accueil de l’interface utilisateur de Platform.](assets/platform-home/leaderboard.png)
 
-Pour plus d’informations sur les jeux de données, consultez la [présentation des jeux de données](../catalog/datasets/overview.md).
+* **Schémas totaux**: Le **Total des schémas** compteur affiche le nombre de schémas dans le système. Ce compteur est mis à jour lors de la création d’un schéma. Pour plus d’informations, reportez-vous à la section [présentation des schémas](../xdm/home.md).
+* **Nombre total de jeux de données**: Le **Jeux de données totaux** Le compteur affiche le nombre de jeux de données dans le système et la quantité de données dans [!DNL Platform]. Ce compteur est mis à jour lors de la création d’un jeu de données. Pour plus d’informations sur les jeux de données, consultez la [présentation des jeux de données](../catalog/datasets/overview.md).
+* **Profils totaux**: Le **Profils** count affiche le nombre total de personnes avec des profils dans la variable [!DNL Real-Time Customer Profile]. Il n’inclut pas les fragments de profil. Il s’agit de votre audience adressable totale. Ce compte utilise la [stratégie de fusion](profile/merge-policies.md) par défaut telle que définie dans la configuration de la stratégie de fusion du profil unifié. Le nombre de profils est mis à jour une fois toutes les 24 heures. Pour plus d’informations sur les profils, consultez la [Présentation de Real-Time Customer Profile](../profile/home.md).
+* **Segments totaux**: **Segments** affiche le nombre total de segments créés pour l’organisation. Ce nombre est mis à jour lors de la création de segments. Pour plus d’informations sur les segments, consultez la [Présentation de Segmentation Service](../segmentation/home.md).
 
-### Profils
+### Éléments récents
 
-Le **[!UICONTROL Profils]** count affiche le nombre total de personnes avec des profils dans la variable [!DNL Real-Time Customer Profile]. Il n’inclut pas les fragments de profil. Il s’agit de votre audience adressable totale.
+La section Éléments récents répertorie les modifications les plus récentes apportées à votre organisation. Dans l’exemple ci-dessous, les modifications les plus récentes concernent les jeux de données, les sources, les segments et les destinations.
 
-Ce compte utilise la [stratégie de fusion](profile/merge-policies.md) par défaut telle que définie dans la configuration de la stratégie de fusion du profil unifié.
+![Section des éléments récents de la page d’accueil de l’interface utilisateur de Platform.](assets/platform-home/recent-items.png)
 
-Le nombre de profils est mis à jour une fois toutes les 24 heures.
+* **Jeux de données récents**: Le **[!UICONTROL Jeux de données récents]** affiche les cinq jeux de données créés le plus récemment dans l’organisation. Cette liste est mise à jour lors de la création d’un jeu de données. Sélectionnez un jeu de données pour afficher les détails de cet élément ou sélectionnez **[!UICONTROL Afficher tout]** pour une liste de jeux de données. À partir de là, vous pouvez sélectionner une source spécifique pour plus de détails. Pour plus d’informations sur les jeux de données, consultez la [présentation des jeux de données](../catalog/datasets/overview.md).
+* **Sources récentes**: Le **[!UICONTROL Sources récentes]** la carte de mesure affiche les cinq sources créées le plus récemment dans l’organisation. Cette liste est mise à jour lors de la création d’une source. Sélectionnez une source pour afficher les détails de cet élément ou sélectionnez **[!UICONTROL Afficher tout]** pour une liste de sources. À partir de là, vous pouvez sélectionner une source spécifique pour plus de détails. Pour plus d’informations sur les sources, consultez [Présentation des sources](../sources/home.md).
+* **Segments récents**: Le **[!UICONTROL Segments récents]** la carte de mesure affiche les cinq segments créés le plus récemment dans l’organisation. Cette liste est mise à jour lors de la création d’un segment. Sélectionnez un segment pour afficher les détails de cet élément ou sélectionnez **[!UICONTROL Afficher tout]** pour une liste de segments. Pour plus d’informations sur les segments, consultez [Présentation de Segmentation Service](../segmentation/home.md).
+* **Destinations récentes**: Le **[!UICONTROL Destinations récentes]** la carte de mesure affiche les cinq destinations créées le plus récemment dans l’organisation. Cette liste est mise à jour lors de la création d’une destination. Sélectionnez une destination pour afficher les détails de cet élément ou sélectionnez **[!UICONTROL Afficher tout]** pour une liste de destinations. Pour plus d’informations, reportez-vous à la section [présentation des destinations](../destinations/home.md).
 
-Pour plus d’informations sur les profils, voir [Une vue unifiée de votre client dans Real-Time CDP](profile/profile-overview.md).
+## Ressources
 
-### Segments
+Enfin, le widget Ressources fournit des ressources de documentation supplémentaires auxquelles vous pouvez vous référer. Ces cas comprennent notamment :
 
-La section **[!UICONTROL Segments]** indique le nombre total de segments créés pour l’organisation. Ce nombre est mis à jour lors de la création de segments.
+![La section Ressources de la page d’accueil de l’interface utilisateur de Platform.](assets/platform-home/resources.png)
 
-Pour plus d’informations sur les segments, consultez [Présentation de Segmentation Service](segmentation/segmentation-overview.md).
-
-### Destinations
-
-La section **[!UICONTROL Destinations]** indique le nombre total de destinations créées pour l’organisation. Ce nombre est mis à jour lors de la création de destinations.
-
-Pour plus d’informations sur les destinations, consultez [Présentation des destinations](destinations/overview.md).
+* [Compréhension des schémas](../xdm/schema/composition.md)
+* [Connexion à des sources](../sources/home.md)
+* [Comment renseigner votre profil client en temps réel](../profile/home.md)
+* [Connexion des destinations](../destinations/home.md)
+* [Gérer l’accès](../access-control/abac/overview.md)
 
 <!-- ### Successful profile records
 
@@ -100,35 +107,3 @@ In the leaderboard, **[!UICONTROL Failed profile records]** counts the number of
 The **[!UICONTROL Failed profile records]** metric card shows this count, and includes a graphical representation that helps you see how failures have trended during the time shown below the graphic. This chart is updated hourly. Select **[!UICONTROL View datasets]** to see more details about the profile records.
 
 The number of failed profile records is updated hourly. -->
-
-### Jeux de données récents
-
-La carte **[!UICONTROL Jeux de données récents]** montre les cinq jeux de données créés le plus récemment dans l’entreprise. Cette liste est mise à jour lors de la création d’un jeu de données.
-
-Sélectionnez un jeu de données pour afficher les détails de cet élément, ou **[!UICONTROL Afficher tout]** pour afficher la liste des jeux de données. À partir de là, vous pouvez sélectionner une source spécifique pour plus de détails.
-
-Pour plus d’informations sur les jeux de données, consultez la [présentation des jeux de données](../catalog/datasets/overview.md).
-
-### Sources récentes
-
-La carte de mesure **[!UICONTROL Sources récentes]** montre les cinq sources créées le plus récemment dans l’organisation. Cette liste est mise à jour lors de la création d’une source.
-
-Sélectionnez une source pour afficher les détails de cet élément, ou **[!UICONTROL Afficher tout]** pour afficher la liste des sources. À partir de là, vous pouvez sélectionner une source spécifique pour plus de détails.
-
-Pour plus d’informations sur les sources, consultez [Présentation des sources](sources/sources-overview.md).
-
-### Segments récents
-
-La carte de mesure **[!UICONTROL Segments récents]** montre les cinq segments créés le plus récemment dans l’organisation. Cette liste est mise à jour lors de la création d’un segment.
-
-Sélectionnez un segment pour afficher les détails de cet élément, ou **[!UICONTROL Afficher tout]** pour afficher des informations sur d’autres segments.
-
-Pour plus d’informations sur les segments, consultez [Présentation de Segmentation Service](segmentation/segmentation-overview.md).
-
-### Destinations récentes
-
-La carte de mesure **[!UICONTROL Destinations récentes]** montre les cinq destinations créées le plus récemment dans l’organisation. Cette liste est mise à jour lors de la création d’une destination.
-
-Sélectionnez une destination pour afficher les détails de cet élément, ou **[!UICONTROL Afficher tout]** pour afficher des informations sur d’autres destinations.
-
-Pour plus d’informations sur les destinations, consultez [Présentation des destinations](destinations/overview.md).
