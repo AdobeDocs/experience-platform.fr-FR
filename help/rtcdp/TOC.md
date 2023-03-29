@@ -4,10 +4,10 @@ solution: Real-time Customer Data Platform
 audience: user
 user-guide-title: Guide de Real-Time Customer Data Platform
 user-guide-description: Regroupez les données connues et anonymes provenant de plusieurs entreprises sources afin de créer des profils clients, puis des segments d’audience à partir de ces profils et enfin d’activer ces segments vers des destinations tierces.
-source-git-commit: e67b3a6f9f57a3971a5bfa755db3b1043bebc96b
+source-git-commit: a36ec71cbec2316eaa08daf5f1edb36509271e7c
 workflow-type: tm+mt
 source-wordcount: '205'
-ht-degree: 64%
+ht-degree: 67%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 64%
 * Prise en main {#intro}
    * Real-Time CDP {#rtcdp-intro}
       * [Prise en main de Real-Time CDP](get-started.md)
-      * [Présentation des mesures](home-page-dashboards.md)
+      * [Page d’accueil](home-page-dashboards.md)
    * Édition B2B de Real-Time CDP {#rtcdpb2b-intro}
       * [Exemple de cas d’utilisation](./b2b-use-case.md)
       * [Tutoriel de bout en bout](./b2b-tutorial.md)
@@ -48,7 +48,7 @@ ht-degree: 64%
 * Services AI/ML Real-Time CDP B2B Edition {#b2b-cdp-ai-ml}
    * [Comptes associés](b2b-ai-ml-services/related-accounts.md)
    * [Correspondance du prospect et du compte](b2b-ai-ml-services/lead-to-account-matching.md)
-   * Score prédictif de piste et de compte {#predictive-lead-and-account-scoring-intro}
+   * Notation prédictive des prospects et des comptes {#predictive-lead-and-account-scoring-intro}
       * [Aperçu de la notation prédictive des pistes et des comptes](b2b-ai-ml-services/predictive-lead-and-account-scoring.md)
       * [Gestion de la notation prédictive des pistes et des comptes](b2b-ai-ml-services/manage-predictive-lead-and-account-scoring.md)
 * Schémas {#schemas}
