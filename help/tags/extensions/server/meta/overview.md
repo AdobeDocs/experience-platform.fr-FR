@@ -2,9 +2,9 @@
 title: Présentation de l’extension de l’API Meta Conversions
 description: Découvrez l’extension de l’API Meta Conversions pour le transfert d’événement dans Adobe Experience Platform.
 exl-id: 6b5836d6-6674-4978-9165-0adc1d7087b7
-source-git-commit: 24001da61306a00d295bf9441c55041e20f488c0
+source-git-commit: ec1e2b792ff827fd791576d904858ef9abb98947
 workflow-type: tm+mt
-source-wordcount: '1289'
+source-wordcount: '2261'
 ht-degree: 1%
 
 ---
@@ -64,7 +64,7 @@ Les commandes qui s’affichent vous permettent de configurer les données d’�
 | [!UICONTROL Données personnalisées] | Données supplémentaires à utiliser pour l’optimisation de la diffusion publicitaire, fournies sous la forme d’un objet JSON. Reportez-vous à la section [[!DNL Conversions API] documentation](https://developers.facebook.com/docs/marketing-api/conversions-api/parameters/custom-data) pour plus d’informations sur les propriétés acceptées pour cet objet.<br><br>Si vous envoyez un événement d’achat, vous devez utiliser cette section pour fournir les attributs requis. `currency` et `value`. |
 | [!UICONTROL Événement de test] | Cette option permet de vérifier si votre configuration entraîne la réception d’événements de serveur par [!DNL Meta] comme prévu. Pour utiliser cette fonctionnalité, sélectionnez la variable **[!UICONTROL Envoyer en tant qu’événement de test]** , puis fournissez un code d’événement de test de votre choix dans l’entrée ci-dessous. Une fois la règle de transfert d’événement déployée, si vous avez configuré correctement l’extension et l’action, les activités apparaissant dans la variable **[!DNL Test Events]** afficher dans [!DNL Meta Events Manager]. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Lorsque vous avez terminé, sélectionnez **[!UICONTROL Conserver les modifications]** pour ajouter l’action à la configuration de la règle.
 
@@ -79,6 +79,113 @@ Comme indiqué dans la section [section conditions préalables](#prerequisites),
 Si vous envoyez différents types d’événements du client et du serveur sans chevauchement entre les deux, la déduplication n’est pas nécessaire. Cependant, si un événement unique est partagé par les deux [!DNL Meta Pixel] et le [!DNL Conversions API], vous devez vous assurer que ces événements redondants sont dédupliqués afin que vos rapports ne soient pas affectés négativement.
 
 Lors de l’envoi d’événements partagés, veillez à inclure un identifiant et un nom d’événement avec chaque événement que vous envoyez à partir du client et du serveur. Lorsque plusieurs événements portant le même ID et le même nom sont reçus, [!DNL Meta] utilise automatiquement plusieurs stratégies pour les dédupliquer et conserver les données les plus pertinentes. Voir [!DNL Meta] documentation sur [déduplication pour [!DNL Meta Pixel] et [!DNL Conversions API] events](https://www.facebook.com/business/help/823677331451951?id=1205376682832142) pour plus d’informations sur ce processus.
+
+## Workflow de démarrage rapide : Extension de l’API des conversions de métadonnées (version bêta) {#quick-start}
+
+>[!IMPORTANT]
+>
+>* La fonction de démarrage rapide est disponible pour les clients qui ont acheté le package Real-Time CDP Prime et Ultimate. Pour plus dʼinformations, contactez votre représentant commercial Adobe.
+>* Cette fonctionnalité est destinée aux nouvelles mises en oeuvre et ne prend actuellement pas en charge l’installation automatique d’extensions et de configurations sur les balises existantes et les propriétés de transfert d’événement.
+
+
+La fonction de démarrage rapide vous permet de configurer facilement et efficacement l’API des conversions de métadonnées et les extensions de pixel de métadonnées. Cet outil automatise plusieurs étapes effectuées dans les balises Adobe et le transfert d’événement, réduisant considérablement le temps de configuration.
+
+Cette fonctionnalité installe et configure automatiquement l’API des conversions de métadonnées et les extensions de pixel de métadonnées sur une nouvelle propriété de transfert d’événement et de balises générées automatiquement avec les règles et éléments de données nécessaires. De plus, il installe et configure automatiquement le SDK Web et la banque de données Experience Platform. Enfin, la fonction de démarrage rapide publie automatiquement la bibliothèque à l’URL désignée dans un environnement de développement, ce qui permet la collecte de données côté client et le transfert d’événements côté serveur en temps réel via Event Forwarding et Experience Edge.
+
+La vidéo suivante présente la fonction de démarrage rapide.
+
+>[!VIDEO](https://publish.tv.adobe.com/bucket/1/category/5138/video/3416939/)
+
+### Installation de la fonction de démarrage rapide
+
+>[!NOTE]
+>
+>Cette fonctionnalité est conçue pour vous aider à prendre en main une mise en oeuvre du transfert d’événement. Il ne délivrera pas de mise en oeuvre complète et complète de bout en bout qui prenne en charge tous les cas d’utilisation.
+
+Cette configuration installe automatiquement l’API des conversions de métadonnées et les extensions des pixels de métadonnées. Cette mise en oeuvre hybride est recommandée par les métadonnées pour collecter et transférer les conversions d’événements côté serveur.
+La fonction de configuration rapide est conçue pour aider les clients à prendre en main une mise en oeuvre de transfert d’événement et n’est pas destinée à fournir une mise en oeuvre complète et complète de bout en bout qui prend en charge tous les cas d’utilisation.
+
+Pour installer la fonctionnalité, sélectionnez **[!UICONTROL Prise en main]** pour **[!DNL Send Conversions Data to Meta]** sur la collecte de données Adobe Experience Platform **[!UICONTROL Accueil]** page.
+
+![Page d’accueil de la collecte de données présentant les données de conversion en métadonnées](../../../images/extensions/server/meta/conversion-data-to-meta.png)
+
+Saisissez votre **[!UICONTROL Domaine]**, puis sélectionnez **[!UICONTROL Suivant]**. Ce domaine sera utilisé comme convention d’affectation des noms pour vos propriétés, règles, éléments de données, flux de données et propriétés de transfert d’événement générés automatiquement, etc.
+
+![Écran de bienvenue demandant le nom de domaine](../../../images/extensions/server/meta/welcome.png)
+
+Dans le **[!UICONTROL Configuration initiale]** Entrez votre **[!UICONTROL ID de pixel de méta]**, **[!UICONTROL Jeton d’accès à l’API de conversion de métadonnées]**, et **[!UICONTROL Chemin de la couche de données]**, puis sélectionnez **[!UICONTROL Suivant]**.
+
+![Boîte de dialogue de configuration initiale](../../../images/extensions/server/meta/initial-setup.png)
+
+Patientez quelques minutes avant que le processus de configuration initial ne soit terminé, puis sélectionnez **[!UICONTROL Suivant]**.
+
+![Écran de confirmation de la configuration initiale terminée](../../../images/extensions/server/meta/setup-complete.png)
+
+Dans la **[!UICONTROL Ajout de code sur votre site]** Copiez le code fourni à l’aide de la copie ![Copier](../../../images/extensions/server/meta/copy-icon.png) et collez-les dans la fonction `<head>` de votre site web source. Une fois l’implémentation effectuée, sélectionnez **[!UICONTROL Commencer la validation]**
+
+![Ajout de code dans la boîte de dialogue de votre site](../../../images/extensions/server/meta/add-code-on-your-site.png)
+
+Le [!UICONTROL Résultats de la validation] affiche les résultats de la mise en oeuvre de l’extension Meta. Sélectionnez **[!UICONTROL Suivant]**. Vous pouvez également afficher des résultats de validation supplémentaires en sélectionnant **[!UICONTROL Assurance]** lien.
+
+![Boîte de dialogue des résultats de test affichant les résultats de mise en oeuvre](../../../images/extensions/server/meta/test-results.png)
+
+Le **[!UICONTROL Étapes suivantes]** l’affichage de l’écran confirme la fin de la configuration. À partir de là, vous avez la possibilité d’optimiser votre mise en oeuvre en ajoutant de nouveaux événements, qui s’affichent dans la section suivante.
+
+Si vous ne souhaitez pas ajouter d’événements supplémentaires, sélectionnez **[!UICONTROL Fermer]**.
+
+![Boîte de dialogue Étapes suivantes](../../../images/extensions/server/meta/next-steps.png)
+
+#### Ajout d’événements supplémentaires
+
+Pour ajouter de nouveaux événements, sélectionnez **[!UICONTROL Modification de la propriété web des balises]**.
+
+![Boîte de dialogue des étapes suivantes présentant la modification de la propriété web de vos balises](../../../images/extensions/server/meta/edit-your-tags-web-property.png)
+
+Sélectionnez la règle correspondant au méta-événement que vous souhaitez modifier. Par exemple : **MetaConversion_AddToCart**.
+
+>[!NOTE]
+>
+>En l’absence d’événement, cette règle ne s’exécute pas. Cela est vrai pour toutes les règles, avec la variable **MetaConversion_PageView** étant l’exception.
+
+Pour ajouter une sélection d’événement **[!UICONTROL Ajouter]** sous le [!UICONTROL Événements] en-tête.
+
+![Page de propriétés de balise sans événement](../../../images/extensions/server/meta/edit-rule.png)
+
+Sélectionnez la [!UICONTROL Type d’événement]. Dans cet exemple, nous avons sélectionné la variable [!UICONTROL Cliquez sur] et l’ont configuré pour se déclencher lorsque la variable **Bouton Ajouter au panier** est sélectionnée. Sélectionnez **[!UICONTROL Conserver les modifications]**.
+
+![Écran de configuration d’événement affichant un événement de clic](../../../images/extensions/server/meta/event-configuration.png)
+
+Le nouvel événement a été enregistré. Sélectionner **[!UICONTROL Sélectionner une bibliothèque de travail]** et sélectionnez la bibliothèque à créer.
+
+![Sélectionner une liste déroulante de bibliothèque de travail](../../../images/extensions/server/meta/working-library.png)
+
+Sélectionnez ensuite la liste déroulante en regard de . **[!UICONTROL Enregistrer dans la bibliothèque]** et sélectionnez **[!UICONTROL Enregistrer dans la bibliothèque et créer]**. La modification sera alors publiée dans la bibliothèque.
+
+![Sélectionnez Enregistrer dans la bibliothèque et créer](../../../images/extensions/server/meta/save-and-build.png)
+
+Répétez ces étapes pour tout autre événement de conversion de métadonnées que vous souhaitez configurer.
+
+#### Configuration de la couche de données
+
+>[!IMPORTANT]
+>
+>La manière dont vous mettez à jour cette couche de données globale dépend de l’architecture de votre site web. Une application d’une seule page sera différente d’une application de rendu côté serveur. Il est également possible que vous soyez entièrement responsable de la création et de la mise à jour de ces données dans le produit Balises. Dans toutes les instances, la couche de données doit être mise à jour entre l’exécution de chacune des `MetaConversion_* rules`. Si vous ne mettez pas à jour les données entre les règles, vous risquez également de rencontrer un cas où vous envoyez des données obsolètes du dernier `MetaConversion_* rule` dans la `MetaConversion_* rule`.
+
+Pendant la configuration, on vous a demandé où se trouve votre couche de données. Par défaut, cette variable serait `window.dataLayer.meta`, et à l’intérieur du `meta` , vos données seront attendues comme illustré ci-dessous.
+
+![Métadonnées de couche de données](../../../images/extensions/server/meta/data-layer-meta.png)
+
+Il est important de comprendre la variable `MetaConversion_*` La règle utilise cette structure de données pour transmettre les éléments de données appropriés à la variable [!DNL Meta Pixel] et au [!DNL Meta Conversions API]. Reportez-vous à la documentation relative à la [événements standard](https://developers.facebook.com/docs/meta-pixel/reference#standard-events) pour plus d’informations sur les données requises pour différents événements de métadonnées.
+
+Par exemple, si vous souhaitez utiliser la variable `MetaConversion_Subscribe` règle, vous devez mettre à jour `window.dataLayer.meta.currency`, `window.dataLayer.meta.predicted_ltv`, et `window.dataLayer.meta.value` conformément aux propriétés de l’objet décrites dans la documentation sur [événements standard](https://developers.facebook.com/docs/meta-pixel/reference#standard-events).
+
+Vous trouverez ci-dessous un exemple de ce qui doit être exécuté sur un site web pour mettre à jour la couche de données avant l’exécution de la règle.
+
+![Mise à jour des métadonnées de couche de données](../../../images/extensions/server/meta/update-data-layer-meta.png)
+
+Par défaut, la variable `<datalayerpath>.conversionData.eventId` est généré de manière aléatoire par l’action &quot;Générer un nouvel ID d’événement&quot; sur l’un des `MetaConversion_* rules`.
+
+Pour obtenir une référence locale sur l’aspect de la couche de données, vous pouvez ouvrir l’éditeur de code personnalisé sur la page `MetaConversion_DataLayer` élément de données sur votre propriété.
 
 ## Étapes suivantes
 
