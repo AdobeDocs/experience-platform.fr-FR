@@ -2,9 +2,9 @@
 title: Tableaux de bord définis par l’utilisateur
 description: Découvrez comment créer et gérer des tableaux de bord personnalisés dans lesquels vous pouvez créer, ajouter et modifier des widgets personnalisés pour visualiser des mesures clés.
 exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
-source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
+source-git-commit: a0be2f8625ca60f9c8f355c1230a889002436d6d
 workflow-type: tm+mt
-source-wordcount: '956'
+source-wordcount: '1307'
 ht-degree: 1%
 
 ---
@@ -19,13 +19,17 @@ Les tableaux de bord Adobe Experience Platform vous permettent d’accélérer l
 
 To view dashboards in Adobe Experience Platform you must have the appropriate permissions enabled. Please read the [dashboards permissions documentation](./permissions.md#available-permissions) to learn how to grant users the ability to view, edit, and update Experience Platform dashboards using Adobe Admin Console. If you do not have administrator privileges for your organization, contact your product administrator to obtain the required permissions. -->
 
-## Créer des tableaux de bord personnalisés
+## Création d’un tableau de bord personnalisé
 
 Pour créer un tableau de bord personnalisé, accédez d’abord à l’inventaire du tableau de bord. Sélectionner **[!UICONTROL Tableaux de bord]** dans le volet de navigation de gauche de l’interface utilisateur de Platform, suivi de **[!UICONTROL Créer un tableau de bord]**.
 
 ![L’inventaire des tableaux de bord avec les tableaux de bord dans le volet de navigation de gauche et &quot;Créer un tableau de bord&quot; est mis en surbrillance.](./images/user-defined-dashboards/create-dashboard.png)
 
 Avant d’ajouter un tableau de bord personnalisé, l’inventaire des tableaux de bord est vide et affiche le message &quot;Aucun tableau de bord trouvé&quot;.  (Jeton récupéré) s’affiche.  Une fois créés, tous vos tableaux de bord définis par l’utilisateur sont répertoriés dans l’inventaire des tableaux de bord.
+
+>[!NOTE]
+>
+>Pour modifier un tableau de bord existant, sélectionnez le nom du tableau de bord dans la liste de stock, puis cliquez sur l’icône en forme de crayon (![Une icône en forme de crayon.](./images/user-defined-dashboards/edit-icon.png))
 
 Le [!UICONTROL Créer un tableau de bord] s’affiche. Saisissez un nom explicite et convivial pour la collection de widgets que vous souhaitez créer, puis sélectionnez **[!UICONTROL Enregistrer]**.
 
@@ -54,13 +58,15 @@ L’espace de travail du compositeur de widgets s’affiche. Ensuite, sélection
 
 ![Espace de travail du compositeur de widgets.](./images/user-defined-dashboards/widget-composer.png)
 
-Le [!UICONTROL Sélectionner des données] s’affiche. Sélectionnez un modèle de données dans la colonne de gauche pour afficher la liste de tous les tableaux disponibles.
+#### Sélectionner le modèle de données {#select-data-model}
 
->[!NOTE]
+Le [!UICONTROL Sélectionner le modèle de données] s’affiche. Sélectionnez un modèle de données dans la colonne de gauche pour afficher la liste de tous les tableaux disponibles. Le modèle de données préconfiguré de Real-time Customer Data Platform est nommé [!UICONTROL CDPInsights].
+
+>[!TIP]
 >
->Actuellement, les tableaux de bord définis par l’utilisateur ne prennent en charge que le modèle de données de profil. D’autres options seront prises en charge.
+>Sélectionnez l’icône d’information (![Icône d’informations.](./images/user-defined-dashboards/info-icon.png)) pour afficher le nom complet du modèle de données s’il est trop long à afficher dans le rail de données.
 
-![La boîte de dialogue Sélectionner les données .](./images/user-defined-dashboards/select-data-dialog.png)
+![La boîte de dialogue Sélectionner les données .](./images/user-defined-dashboards/select-data-model-dialog.png)
 
 La liste d’aperçu fournit des détails sur les tables contenues dans le modèle de données. Le tableau ci-dessous fournit une description des champs de la colonne et de leurs valeurs potentielles.
 
@@ -68,49 +74,61 @@ La liste d’aperçu fournit des détails sur les tables contenues dans le modè
 |---|---|
 | [!UICONTROL Titre] | Nom de la table. |
 | [!UICONTROL Type de tableau] | Type de tableau. Les types potentiels sont les suivants : `fact`, `dimension`, et `none`. |
+| [!UICONTROL Enregistrements] | Le nombre d&#39;enregistrements associés à la table choisie. |
 | [!UICONTROL Recherches] | Le nombre de tables jointes à la table choisie. |
+| [!UICONTROL Attributs] | Le nombre d’attributs de la table choisie. |
 
 Sélectionner **[!UICONTROL Suivant]** pour confirmer votre choix du modèle de données. La vue suivante affiche la liste des tableaux disponibles dans le rail de gauche. Sélectionnez un tableau pour afficher une ventilation complète des données contenues dans le tableau sélectionné.
 
+### Renseigner le widget {#populate-widget}
+
 Le [!UICONTROL Aperçu] contient des onglets pour [!UICONTROL Exemples d’enregistrements] et [!UICONTROL Attributs]. Le [!UICONTROL Exemples d’enregistrements] fournit un sous-ensemble des enregistrements de la table sélectionnée dans une vue tabulée. Le [!UICONTROL Attributs] fournit le nom de l’attribut, le type de données et la table source pour chaque attribut associé au tableau sélectionné.
 
-Sélectionnez un tableau dans la liste disponible dans le rail de gauche pour fournir des données à votre widget et sélectionnez **[!UICONTROL Sélectionner]** pour revenir au compositeur de widget.
+Sélectionnez un tableau dans la liste disponible dans le rail de gauche pour fournir des données à votre widget, puis sélectionnez **[!UICONTROL Sélectionner]** pour revenir au compositeur de widget.
 
 ![La boîte de dialogue de sélection des données avec la sélection mise en surbrillance.](./images/user-defined-dashboards/select-a-table.png)
 
 Le compositeur de widgets est maintenant renseigné avec les données du tableau de votre choix.
 
-Le modèle de données et le tableau actuellement sélectionné sont affichés dans la partie supérieure du rail de gauche, et les attributs disponibles pour créer votre widget sont répertoriés dans la colonne Attributs.
+Le modèle de données et le tableau actuellement sélectionné sont affichés dans la partie supérieure du rail de gauche, et les attributs disponibles pour créer votre widget sont répertoriés dans la section [!UICONTROL Attributs] colonne . Vous pouvez utiliser la barre de recherche pour rechercher des attributs au lieu de faire défiler la liste, ou modifier le modèle de données sélectionné en sélectionnant l’icône en forme de crayon (![Icône Crayon.](./images/user-defined-dashboards/edit-icon.png)) dans le rail de gauche.
 
 ![Widget renseigné avec des données dans le compositeur de widgets.](./images/user-defined-dashboards/populated-widget-composer.png)
 
+#### Ajout et filtrage d’attributs {#add-and-filter-attributes}
+
+Cliquez sur l’icône d’ajout (![Une icône d’ajout.](./images/user-defined-dashboards/add-icon.png)) en regard d’un nom d’attribut pour ajouter un attribut à votre widget. Le menu déroulant qui s’affiche vous permet d’ajouter un attribut en tant qu’axe X, axe Y, couleur ou filtre pour votre widget. Le [!UICONTROL Couleur] vous permet de différencier les résultats des marques des axes X et Y en fonction de la couleur. Pour ce faire, il divise les résultats en différentes couleurs en fonction de leur composition d’un troisième attribut.
+
 >[!TIP]
 >
->Vous pouvez modifier le modèle de données sélectionné en cliquant sur l’icône représentant un crayon (![Icône Crayon.](./images/user-defined-dashboards/edit-icon.png)) dans le rail de gauche.
+>Si vous souhaitez modifier la disposition des axes X et Y, sélectionnez l’icône de flèche vers le haut et vers le bas (![Icône Flèche vers le haut et le bas.](./images/user-defined-dashboards/switch-axis-icon.png)) pour changer leur arrangement.
 
-Sélectionnez l’icône d’ajout (./images/user-defined-dashboards/add-icon.png) en regard d’un nom d’attribut pour ajouter un attribut à l’axe X ou Y.
+![Le compositeur de widgets avec la liste déroulante d’icônes supplémentaires mise en surbrillance.](./images/user-defined-dashboards/attributes-dropdown.png)
 
-![Le compositeur de widgets avec la liste déroulante d’icône d’ajout mise en surbrillance pour ajouter des attributs à un axe de widget.](./images/user-defined-dashboards/attributes-dropdown.png)
+Pour modifier le type de graphique ou de graphique de votre widget, sélectionnez l’option [!UICONTROL Marques] et choisissez parmi les options disponibles. Les options incluent des barres, des points, des coches, des lignes ou une zone. Une fois cette option sélectionnée, une visualisation d’aperçu des paramètres actuels de votre widget est générée.
 
-Sélectionnez ensuite le type de graphique ou de graphique dans le [!UICONTROL Marques] pour générer une visualisation d’aperçu des paramètres actuels de votre widget. Dans le [!UICONTROL Propriétés] sur le côté droit de l’écran, saisissez un nom pour le widget dans le champ [!UICONTROL Titre du widget] Champ de texte.
+![Le compositeur de widget avec la liste déroulante Marques mise en surbrillance.](./images/user-defined-dashboards/marks-dropdown.png)
 
-![Le compositeur de widgets avec la liste déroulante Marques et le champ de texte Titre du widget sont mis en surbrillance.](./images/user-defined-dashboards/marks-dropdown-widget-title.png)
+En ajoutant un attribut comme filtre, vous pouvez sélectionner les valeurs à inclure ou à exclure du widget. Après avoir ajouté un filtre à partir de la liste d’attributs, la variable [!UICONTROL Filtrer] s’affiche, dans laquelle vous pouvez sélectionner ou désélectionner des valeurs à l’aide de leur case à cocher.
 
-Lorsque vous êtes satisfait de votre widget, sélectionnez **[!UICONTROL Enregistrer]**. Une icône de coche sous le nom du widget indique que le widget a été enregistré.
+![Boîte de dialogue de filtrage permettant de filtrer les valeurs de votre widget.](./images/user-defined-dashboards/filter-dialog.png)
 
->[!NOTE]
->
->L’enregistrement dans le compositeur de widgets enregistre le widget localement dans votre tableau de bord. Si vous quittez l’éditeur de tableau de bord sans enregistrer le tableau de bord, le widget n’est pas enregistré dans le tableau de bord.
+### Propriétés du widget
+
+Cliquez sur l’icône Propriétés (![Icône Propriétés.](./images/user-defined-dashboards/properties-icon.png)) dans le rail de droite pour ouvrir le panneau des propriétés. Dans le [!UICONTROL Propriétés] , saisissez un nom pour le widget dans le [!UICONTROL Titre du widget] Champ de texte.
+
+![Le panneau Propriétés avec l’icône de propriétés et le champ Titre du widget mis en surbrillance.](./images/user-defined-dashboards/properties-panel.png)
+
+Dans le panneau des propriétés du widget, vous pouvez modifier plusieurs aspects de votre widget. Vous disposez d’un contrôle total pour modifier l’emplacement de la légende du widget. Pour déplacer la légende, sélectionnez l’option [!UICONTROL Emplacement des légendes] et choisissez l’emplacement de votre choix dans la liste des options disponibles. Vous pouvez également renommer le libellé associé à la légende, ainsi que l’axe X ou Y en entrant un nouveau nom dans la variable [!UICONTROL Titre de la légende] champ de texte ou [!UICONTROL Libellé de l&#39;axe] Champ de texte, respectivement.
+
+#### Enregistrez votre widget. {#save-widget}
+
+L’enregistrement dans le compositeur de widgets enregistre le widget localement dans votre tableau de bord. Si vous souhaitez enregistrer votre travail et reprendre ultérieurement, sélectionnez **[!UICONTROL Enregistrer]**. Une icône de coche sous le nom du widget indique que le widget a été enregistré. Lorsque vous êtes satisfait de votre widget, vous pouvez également sélectionner **[!UICONTROL Enregistrer et fermer]** pour rendre le widget disponible pour tous les autres utilisateurs ayant accès à votre tableau de bord. Sélectionner **[!UICONTROL Annuler]** pour abandonner votre travail et revenir à votre tableau de bord personnalisé.
 
 ![Nouvelle confirmation d’enregistrement du widget.](./images/user-defined-dashboards/save-confirmation.png)
 
-Sélectionner **[!UICONTROL Annuler]** pour revenir à votre tableau de bord personnalisé.
-
-![compositeur de widgets avec un exemple de widget créé.](./images/user-defined-dashboards/composed-widget.png)
-
 >[!TIP]
 >
->Sélectionnez l’icône de paramètre en regard du nom du tableau de bord pour afficher les détails sur sa création. Vous pouvez modifier le nom de votre tableau de bord dans la boîte de dialogue qui s’affiche.
+>Cliquez sur l’icône Propriétés (![Icône Propriétés.](./images/user-defined-dashboards/properties-icon.png)) en regard du nom du tableau de bord pour afficher des détails sur sa création. Vous pouvez modifier le nom de votre tableau de bord dans la boîte de dialogue qui s’affiche.
 
 Les widgets peuvent être réorganisés et redimensionnés dans cet espace de travail. Sélectionner **[!UICONTROL Enregistrer]** pour conserver le nom et la mise en page de votre tableau de bord.
 
