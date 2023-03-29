@@ -3,16 +3,16 @@ keywords: destinations publicitaires;destinations;destinations de plateforme
 title: Présentation des destinations publicitaires
 description: Connectez Adobe Experience Platform à une plateforme publicitaire tierce (par ex. DSP, réseau publicitaire, SSP) et partagez des audiences pseudonymes sur ces plateformes.
 exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
-source-git-commit: 30e75b8fbaa4a8269a32f82ade435b67767630c5
+source-git-commit: 732e6d3d53d983f3390941f4694d2c542d882004
 workflow-type: tm+mt
-source-wordcount: '254'
-ht-degree: 49%
+source-wordcount: '258'
+ht-degree: 57%
 
 ---
 
 # Présentation des destinations publicitaires {#advertising-destinations}
 
-## Présentation {#overview}
+## Aperçu {#overview}
 
 Connectez Adobe Experience Platform à des plateformes publicitaires telles que les plateformes côté demande (DSP), les plateformes côté offre (SSP) et les réseaux publicitaires afin de partager des audiences connues et pseudonymes avec ces plateformes.
 
@@ -26,8 +26,9 @@ Pour comprendre la différence entre les connexions et les extensions, voir [Con
 
 ### Connexions
 
-* [Connexion Adobe Advertising Cloud](adobe-advertising-cloud-connection.md)
-* [(Version bêta) Connexion aux critères](criteo.md)
+* [Connexion Adobe Advertising Cloud](adobe-advertising-cloud-connection.md)
+* [(Version bêta) Connexion Amazon Ads](amazon-ads.md)
+* [(Version bêta) Connexion Criteo](criteo.md)
 * [Connexion Google Display &amp; Video 360](google-dv360.md)
 * [Connexion Google Ads](google-ads-destination.md)
 * [Connexion Google Ad Manager](google-ad-manager.md)
@@ -36,8 +37,8 @@ Pour comprendre la différence entre les connexions et les extensions, voir [Con
 * [Connexion Microsoft Bing](bing.md)
 * [Connexion Liste des Clients Pinterest](pinterest.md)
 * [(Version bêta) Connexion à Snapchat Ads](snap-inc.md)
-* [Connexion Trade Desk](tradedesk.md)
-* [(Version bêta) Connexion CRM du bureau de commerce](tradedesk-emails.md)
+* [Connexion à The Trade Desk](tradedesk.md)
+* [(Version bêta) Connexion CRM à The Trade Desk](tradedesk-emails.md)
 * [Yahoo/Verizon DataX](datax.md)
 
 ### Extensions
