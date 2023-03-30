@@ -4,10 +4,10 @@ user-guide-title: Aide sur les connecteurs source d’Adobe Experience Platfor
 breadcrumb-title: Guide des connecteurs sources
 user-guide-description: Ingérez des données à partir de diverses sources. Découvrez comment structurer, étiqueter et améliorer les données déjà ingérées.
 feature: Sources
-source-git-commit: 840ad16b3762afee0b36bdd93c5be566c5a29b18
+source-git-commit: 10edb5dfd9ce99b69cf5bb014f4903942c9bff3e
 workflow-type: tm+mt
-source-wordcount: '952'
-ht-degree: 98%
+source-wordcount: '963'
+ht-degree: 97%
 
 ---
 
@@ -352,6 +352,9 @@ ht-degree: 98%
       - [Documenter votre source (SDK de streaming)](sources-sdk/streaming/document-streaming.md)
       - [Documentation en libre-service de modèle d’API de streaming](sources-sdk/streaming/streaming-template-api.md)
       - [Documentation en libre-service de modèle d’interface utilisateur de streaming](sources-sdk/streaming/streaming-template-ui.md)
+- Messages d’erreur {#errors}
+   - [Messages d’erreur dans les sources](./errors/sources-errors.md)
+   - [Messages d’erreur dans le service de flux](./errors/flow-service-errors.md)
 - [Notifications d’exécution de flux](notifications.md)
 - [Liste autorisée d’adresses IP](ip-address-allow-list.md)
 - [Questions fréquentes](./troubleshooting.md)
