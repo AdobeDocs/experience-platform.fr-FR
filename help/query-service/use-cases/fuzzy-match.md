@@ -1,26 +1,26 @@
 ---
 title: Correspondance floue dans Query Service
 description: Découvrez comment effectuer une correspondance sur vos données Platform qui combine les résultats de plusieurs jeux de données en faisant correspondre approximativement une chaîne de votre choix.
-source-git-commit: a3a4ca4179610348eba73cf1239861265d2bf887
+source-git-commit: 633210fe5e824d8686a23b877a406db3780ebdd4
 workflow-type: tm+mt
-source-wordcount: '804'
+source-wordcount: '813'
 ht-degree: 1%
 
 ---
 
-# Correspondance floue
+# Correspondance floue dans Query Service
 
-Utilisez une correspondance &quot;floue&quot; sur vos données Platform pour renvoyer les correspondances les plus probables et approximatives sans avoir à rechercher des chaînes avec des caractères identiques. Cela permet une recherche beaucoup plus flexible de vos données et rend vos données plus accessibles en gagnant du temps et en faisant des efforts.
+Utilisez une correspondance approximative sur vos données Adobe Experience Platform pour renvoyer les correspondances les plus probables et les plus approximatives sans avoir à rechercher des chaînes avec des caractères identiques. Cela permet une recherche beaucoup plus flexible de vos données et rend vos données plus accessibles en gagnant du temps et en faisant des efforts.
 
-Au lieu d’essayer de reformater les chaînes de recherche afin de les faire correspondre, la correspondance approximative analyse le rapport de similarité entre deux séquences et renvoie le pourcentage de similarité. [!DNL FuzzyWuzzy] est recommandé pour ce processus, car ses fonctions sont plus adaptées à la correspondance de chaînes dans des situations plus complexes que [!DNL regex] ou [!DNL difflib].
+Au lieu d’essayer de reformater les chaînes de recherche afin de les faire correspondre, la correspondance approximative analyse le rapport de similarité entre deux séquences et renvoie le pourcentage de similarité. [[!DNL FuzzyWuzzy]](https://pypi.org/project/fuzzywuzzy/) est recommandé pour ce processus, car ses fonctions sont plus adaptées à la correspondance de chaînes dans des situations plus complexes que [!DNL regex] ou [!DNL difflib].
 
-L’exemple fourni dans ce cas d’utilisation se concentre sur la mise en correspondance d’attributs similaires à partir d’une recherche de chambre d’hôtel dans deux jeux de données d’agence de voyage différents. Le document indique comment faire correspondre des chaînes en fonction de leur degré de similarité à partir de sources de données distinctes volumineuses. Dans cet exemple, une correspondance approximative compare les résultats de recherche des fonctionnalités d’une pièce des agences de voyage Luma et Acme.
+L’exemple fourni dans ce cas d’utilisation se concentre sur la mise en correspondance d’attributs similaires à partir d’une recherche de chambre d’hôtel dans deux jeux de données d’agence de voyages différents. Le document indique comment faire correspondre des chaînes en fonction de leur degré de similarité à partir de sources de données distinctes volumineuses. Dans cet exemple, une correspondance approximative compare les résultats de recherche des fonctionnalités d’une pièce des agences de voyage Luma et Acme.
 
 ## Prise en main {#getting-started}
 
 Dans le cadre de ce processus, vous devez entraîner un modèle d’apprentissage automatique. Ce document suppose une connaissance pratique d’un ou de plusieurs environnements d’apprentissage automatique.
 
-Cet exemple utilise [!DNL Python] et le [!DNL Jupyter Notebook] environnement de développement. Bien qu’il existe de nombreuses options disponibles, [!DNL Jupyter Notebook] est recommandé, car il s’agit d’une application web open source qui a de faibles exigences de calcul. Cela peut être [téléchargé à partir du site officiel de Jupyter.](https://jupyter.org/).
+Cet exemple utilise [!DNL Python] et le [!DNL Jupyter Notebook] environnement de développement. Bien qu’il existe de nombreuses options disponibles, [!DNL Jupyter Notebook] est recommandé, car il s’agit d’une application web open source qui a de faibles exigences de calcul. Il peut être téléchargé à partir de [le site officiel de Jupyter](https://jupyter.org/).
 
 Avant de commencer, vous devez importer les bibliothèques nécessaires. [!DNL FuzzyWuzzy] est un site open-source [!DNL Python] bibliothèque créée au-dessus de [!DNL difflib] et utilisée pour faire correspondre des chaînes. Elle utilise [!DNL Levenshtein Distance] pour calculer les différences entre les séquences et les motifs. [!DNL FuzzyWuzzy] présente les exigences suivantes :
 
@@ -43,7 +43,7 @@ Informations techniques supplémentaires sur [!DNL Fuzzywuzzy] se trouvent dans 
 
 ### Connecter  à Query Service
 
-Vous devez connecter votre modèle d’apprentissage automatique à Query Service en fournissant vos informations d’identification de connexion. Les informations d’identification arrivant à expiration et non arrivant à expiration peuvent être fournies. Veuillez consulter la [guide des informations d’identification](../ui/credentials.md) pour plus d’informations sur la manière d’acquérir les informations d’identification nécessaires. Si vous utilisez [!DNL Jupyter Notebook], consultez le guide complet sur [Comment se connecter à Query Service](../clients/jupyter-notebook.md).
+Vous devez connecter votre modèle d’apprentissage automatique à Query Service en fournissant vos informations d’identification de connexion. Les informations d’identification arrivant à expiration et non arrivant à expiration peuvent être fournies. Veuillez consulter la [guide des informations d’identification](../ui/credentials.md) pour plus d’informations sur la manière d’acquérir les informations d’identification nécessaires. Si vous utilisez [!DNL Jupyter Notebook], veuillez lire le guide complet sur [Comment se connecter à Query Service](../clients/jupyter-notebook.md).
 
 Veillez également à importer la variable [!DNL numpy] dans votre [!DNL Python] pour activer l’algèbre linéaire.
 
