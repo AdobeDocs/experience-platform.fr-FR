@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Gestion des politiques d’utilisation des données dans l’interface utilisateur
 description: La gouvernance des données d’Adobe Experience Platform fournit une interface utilisateur qui vous permet de créer et de gérer des politiques d’utilisation des données. Ce document offre une vue d’ensemble des actions que vous pouvez effectuer dans l’espace de travail Stratégies de l’interface utilisateur d’Experience Platform.
 exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
-source-git-commit: e539b1e165227d9a888bfe12d8205e285b3ce259
-workflow-type: ht
-source-wordcount: '1413'
-ht-degree: 100%
+source-git-commit: a1628df7d0eefc795d1eaeefce842a65c7133322
+workflow-type: tm+mt
+source-wordcount: '1618'
+ht-degree: 87%
 
 ---
 
@@ -15,8 +15,8 @@ ht-degree: 100%
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataUsagePolicies_description"
->title="Description"
->abstract=""
+>title="Intégrer et appliquer le consentement du client dans vos données de profil"
+>abstract="<h2>Description</h2><p>Platform vous permet d’intégrer dans leurs profils respectifs les données de consentement que vous avez collectées auprès de vos clients. Vous pouvez ensuite configurer des stratégies de consentement pour déterminer si ces données peuvent être incluses dans des segments qui sont activés vers certaines destinations.</p>"
 
 Ce document explique comment utiliser l’espace de travail **[!UICONTROL Stratégies]** dans l’interface utilisateur d’Adobe Experience Platform pour créer et gérer des stratégies d’utilisation des données.
 
@@ -92,7 +92,7 @@ L’onglet **[!UICONTROL Parcourir]** réapparaît et affiche désormais la nouv
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataUsagePolicies_instructions"
 >title="Instructions"
->abstract=""
+>abstract="<ul><li>Assurez-vous d’ingérer des données de préférences dans vos schémas d’union via le connecteur source OneTrust ou le schéma XDM standard pour obtenir le consentement.</li><li>Sélectionner <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html?lang=fr">Stratégies</a> dans le volet de navigation de gauche, puis sélectionnez <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html#create-governance-policy">Créer une stratégie</a>.</li><li>Sous , <b>If</b> , décrivez les conditions ou actions qui déclencheront la vérification de la stratégie.</li><li>Sous , <b>Alors</b> , saisissez les attributs de consentement qui doivent être présents pour qu’un profil soit inclus dans l’action qui a déclenché la stratégie.</li><li>Sélectionner <b>Enregistrer</b> pour créer la stratégie. Pour activer la stratégie, sélectionnez l’option <b>État</b> bascule dans le rail de droite.</li><li>Experience Platform applique automatiquement vos stratégies de consentement activées lorsque vous activez des segments vers des destinations et fournit des détails sur la manière dont chaque stratégie affecte la taille de votre audience.</li><li>Pour obtenir de l’aide sur cette fonctionnalité, consultez le guide sur <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html#consent-policy">création de stratégies de consentement</a> sur Experience League.</li></ul>"
 
 >[!IMPORTANT]
 >

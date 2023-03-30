@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Présentation des libellés d’utilisation des données
 description: Découvrez comment les libellés d’utilisation des données sont utilisés pour appliquer la conformité en matière de gouvernance des données dans Adobe Experience Platform.
 exl-id: 4f113000-b9a1-4dfb-9502-6a5d08f0b26f
-source-git-commit: e539b1e165227d9a888bfe12d8205e285b3ce259
-workflow-type: ht
-source-wordcount: '682'
-ht-degree: 100%
+source-git-commit: a1628df7d0eefc795d1eaeefce842a65c7133322
+workflow-type: tm+mt
+source-wordcount: '794'
+ht-degree: 85%
 
 ---
 
@@ -15,8 +15,8 @@ ht-degree: 100%
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataUsageLabels_description"
->title="Description"
->abstract=""
+>title="Contrôle de l’accès aux données sensibles et protégées"
+>abstract="<h2>Description</h2><p>Contrôlez l’accès à des attributs de données et/ou à des segments spécifiques, ce qui vous permet de concevoir des workflows flexibles pour les différents acteurs et équipes qui gèrent des cas d’utilisation Experience Platform.</p>"
 
 Adobe Experience Platform vous permet d’appliquer des libellés d’utilisation des données aux jeux de données et aux champs, en les classant en fonction des [stratégies de gouvernance des données](../policies/overview.md) et des [stratégies de contrôle d’accès](../../access-control/abac/ui/policies.md) associées.
 
@@ -51,7 +51,7 @@ Pour savoir comment des contrôles d‘exportation de données spécifiques se m
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataUsageLabels_instructions"
 >title="Instructions"
->abstract=""
+>abstract="<ul><li>Étiqueter les champs XDM et les segments pour classer les champs et ou les segments auxquels vous souhaitez restreindre l’accès.</li><li>Étiqueter les rôles, l’ajout d’étiquettes à un rôle vous permet de définir les membres d’étiquettes de ce rôle doivent faire l’objet de restrictions.</li><li>Pour créer des stratégies, une stratégie crée une relation entre les libellés des objets étiquetés tels que les champs XDM et les segments et les libellés des rôles. Si les étiquettes correspondent, un accès autorisé ou restreint peut être défini.</li></ul>"
 
 Vous pouvez gérer les libellés d’utilisation des données à l’aide des API [!DNL Experience Platform] ou de l’interface utilisateur. Consultez les sous-sections ci-dessous pour plus de détails sur chaque option.
 
