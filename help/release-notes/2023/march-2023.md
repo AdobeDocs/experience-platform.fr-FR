@@ -1,10 +1,10 @@
 ---
 title: Notes de mise à jour d’Adobe Experience Platform - Mars 2023
 description: Les notes de mise à jour de mars 2023 pour Adobe Experience Platform.
-source-git-commit: 74b609572b6e5e9b5e641fe497f53f3463b900c4
+source-git-commit: 582305583aa5869d8cc29f871aeb3fa0ef0b6ab1
 workflow-type: tm+mt
-source-wordcount: '1110'
-ht-degree: 34%
+source-wordcount: '1724'
+ht-degree: 40%
 
 ---
 
@@ -14,11 +14,29 @@ ht-degree: 34%
 
 Mises à jour des fonctionnalités existantes dans Adobe Experience Platform :
 
+- [Tableaux de bord](#dashboards)
 - [Collecte de données](#data-collection)
 - [Préparation des données](#data-prep)
 - [Destinations](#destinations)
+- [Modèle de données d’expérience](#xdm)
+- [Query Service](#query-service)
+- [Édition B2B de Real-Time Customer Data Platform](#b2b)
 - [Segmentation Service](#segmentation)
 - [Sources](#sources)
+
+## Tableaux de bord {#dashboards}
+
+Adobe Experience Platform fournit de nombreux tableaux de bord grâce auxquels vous pouvez afficher des nformationsimportantes sur les données de votre organisation, telles quʼelles sont capturées lors dʼinstantanés quotidiens.
+
+**Fonctionnalités nouvelles ou mises à jour** {#dashboards-new-updated-features}
+
+| Fonctionnalité | Description |
+| --- | --- |
+| Tableaux de bord définis par l’utilisateur | Vous pouvez désormais **exemple de valeurs d’attribut** avant d’ajouter un attribut à un widget dans le compositeur de widget de tableaux de bord défini par l’utilisateur. Quelques exemples de valeurs de cette colonne d’attributs sont disponibles pour les attributs individuels lors de la création d’un widget.<br>Vous pouvez désormais **permuter les axes X et Y** sur votre widget à l’aide du bouton d’axe de permutation . Cela permet de gagner du temps et offre une expérience plus ergonomique lors de l’ajout d’attributs à vos widgets. Cela permet d’enregistrer les deux attributs à nouveau à partir du panneau Attributs.<br> Vous pouvez désormais **modifier l’emplacement et le titre de la légende ;** dans vos widgets. Une fois qu’une légende est présente sur un widget, vous pouvez la déplacer n’importe où autour du graphique et renommer le titre de la légende, comme vous le pouvez avec les libellés d’axe et le titre du widget. |
+
+{style="table-layout:auto"}
+
+Pour plus dʼinformations sur les tableaux de bord, notamment sur la manière dʼoctroyer des autorisations dʼaccès et de créer des widgets personnalisés, commencez par lire la [Présentation des tableaux de bord](../../dashboards/home.md).
 
 ## Collecte de données {#data-collection}
 
@@ -82,6 +100,48 @@ Nous publions un correctif pour le chiffrement PGP/GPG dans les destinations bas
 - Extension future lors de l’utilisation du chiffrement : `filename.csv.gpg`
 
 Pour des informations plus générales sur les destinations, consultez la [présentation des destinations](../../destinations/home.md).
+
+## Modèle de données d’expérience (XDM) {#xdm}
+
+XDM est une spécification Open Source qui fournit des structures et des définitions communes (schémas) pour les données introduites dans Adobe Experience Platform. En adhérant aux normes XDM, toutes les données d’expérience client peuvent être intégrées dans une représentation commune afin de fournir des informations plus rapidement et de manière plus intégrée. Vous pouvez obtenir des informations précieuses à partir des actions des clients, définir des types de clients par le biais de segments et utiliser les attributs du client à des fins de personnalisation.
+
+**Fonctionnalités mises à jour**
+
+| Fonctionnalité | Description |
+| --- | --- |
+| CSV vers recommandation de schéma | Vous pouvez désormais charger vos fichiers locaux pour créer des schémas générés par l’apprentissage automatique qui éliminent la nécessité de créer manuellement un schéma. Dans la [!UICONTROL Sources] espace de travail, téléchargez un exemple de fichier CSV et Adobes des algorithmes d’apprentissage automatique qui vous suggéreront un schéma en fonction des champs cibles. Pour plus d’informations, consultez la [documentation.&quot;](../../ingestion/tutorials/map-csv/recommendations.md) |
+
+{style="table-layout:auto"}
+
+Pour plus d’informations sur XDM dans Platform, consultez la [présentation du système XDM](../../xdm/home.md).
+
+## Query Service {#query-service}
+
+Query Service vous permet d’utiliser le langage SQL standard pour interroger les données dans le [!DNL Data Lake] d’Adobe Experience Platform. Vous pouvez joindre n’importe quel jeu de données à partir du lac de données et capturer les résultats de la requête sous la forme d’un nouveau jeu de données à utiliser dans les rapports, dans l’espace de travail de science des données ou à ingérer en tant que profil client en temps réel.
+
+**Fonctionnalités mises à jour**
+
+| Fonctionnalité | Description |
+| --- | --- |
+| Contrôle d’accès basé sur les attributs sur le magasin accéléré | Utilisez le contrôle d’accès basé sur les attributs avec Data Distiller pour définir le contrôle d’accès sur tous les jeux de données du magasin accéléré. Cela contrôle l’accès aux modèles de données personnalisés créés par les utilisateurs et stockés sur une boutique accélérée pour alimenter les tableaux de bord personnalisés. |
+
+{style="table-layout:auto"}
+
+Pour plus d’informations sur Query Service, consultez la section [présentation de Query Service](../../query-service/home.md).
+
+## Édition B2B de Real-Time Customer Data Platform {#b2b}
+
+Basée sur Real-time Customer Data Platform (Real-time CDP), l’édition B2B de Real-time CDP a été conçue pour les professionnels du marketing travaillant dans un modèle de service business-to-business. Elle rassemble des données provenant de sources multiples et les combine en une vue unique des profils de comptes et d’utilisateurs. Ces données unifiées permettent aux professionnels du marketing de cibler précisément des audiences spécifiques afin de stimuler leur engagement sur tous les canaux disponibles.
+
+**Fonctionnalités mises à jour**
+
+| Fonctionnalité | Description |
+| --- | --- |
+| Bugfix | Pour fournir une représentation plus précise des profils de votre système, le système n’inclut plus les profils internes dans le nombre total de profils ou la mesure d’audience adressable pour l’édition B2B de Real-time Customer Data Platform. À compter d’aujourd’hui, la mesure du nombre total de profils/d’audiences adressables peut s’afficher une fois. Aucune de vos données n’a été effacée, il s’agit simplement d’un changement du décompte. Veuillez contacter votre chargé d’Adobe pour toute question que vous pourriez avoir. |
+
+{style="table-layout:auto"}
+
+Pour en savoir plus sur Real-time CDP B2B Edition, consultez la [présentation de Real-time CDP B2B Edition](../../rtcdp/overview.md).
 
 ## Segmentation Service {#segmentation}
 
