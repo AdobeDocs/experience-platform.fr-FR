@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Présentation des connecteurs source
 description: Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les bases de données, etc.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 9d6a4b5f60f7895e2c1833493926db147064f3f1
+source-git-commit: ac5eb6467d0fcaf13c27c31a9bcdfb57d3b90e01
 workflow-type: tm+mt
-source-wordcount: '1322'
+source-wordcount: '1320'
 ht-degree: 84%
 
 ---
@@ -189,7 +189,7 @@ Le contrôle d’accès basé sur les attributs est une fonctionnalité d’Adob
 
 Grâce au contrôle d’accès basé sur les attributs, vous pouvez appliquer des configurations de mappage aux champs pour lesquels vous disposez d’autorisations. En outre, vous ne pouvez pas ingérer de données dans un jeu de données si vous n’avez pas accès à tous les champs du jeu de données.
 
-#### Prise en charge du contrôle d’accès basé sur les attributs dans les sources [!BADGE Nouvelle fonctionnalité]
+#### Prise en charge du contrôle d’accès basé sur les attributs dans les sources
 
 >[!TIP]
 >
