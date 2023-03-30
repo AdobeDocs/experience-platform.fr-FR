@@ -3,10 +3,10 @@ title: Suivi des liens à l’aide du SDK Web de Adobe Experience Platform
 description: Découvrez comment envoyer des données de lien à Adobe Analytics avec le SDK Web Experience Platform
 keywords: adobe analytics;analytics;sendEvent;s.t();s.tl();webPageDetails;pageViews;webInteraction;interaction web;pages vues;suivi des liens;liens;suivre les liens;cliquer sur la collection;cliquer sur la collection;
 exl-id: d5a1804c-8f91-4083-a46e-ea8f7edf36b6
-source-git-commit: dac14cd358922b577c71f8d9b7f7c9b7e1b4f87d
+source-git-commit: 04078a53bc6bdc01d8bfe0f2e262a28bbaf542da
 workflow-type: tm+mt
-source-wordcount: '340'
-ht-degree: 0%
+source-wordcount: '470'
+ht-degree: 1%
 
 ---
 
@@ -34,6 +34,8 @@ alloy("sendEvent", {
   }
 });
 ```
+
+À partir de la version 2.15.0, le SDK Web capture la variable `region` de l’élément de HTML sur lequel l’utilisateur a cliqué. Cela active la variable [Activity Map](https://experienceleague.adobe.com/docs/analytics/analyze/activity-map/activity-map.html?lang=fr) fonctions de création de rapports dans Adobe Analytics.
 
 Le type de lien peut correspondre à l’une des trois valeurs suivantes :
 
@@ -90,3 +92,23 @@ alloy("configure", {
 });
 ```
 
+À partir de la version 2.15.0 du SDK Web, les données collectées avec le suivi automatique des liens peuvent être inspectées, augmentées ou filtrées en fournissant une [Fonction de rappel onBeforeLinkClickSend](../fundamentals/configuring-the-sdk.md#onBeforeLinkClickSend).
+
+Cette fonction de rappel est exécutée uniquement lorsqu’un événement de clic de lien automatique se produit.
+
+```javascript
+alloy("configure", {
+  onBeforeLinkClickSend: function(options) {
+    if (options.xdm.web.webInteraction.type === "download") {
+      options.xdm.web.webInteraction.name = undefined;
+    }
+  }
+});
+```
+
+Lors du filtrage des événements de suivi des liens à l’aide de la variable `onBeforeLinkClickSend` , Adobe recommande de renvoyer la commande `false` pour les clics sur les liens qui ne doivent pas être suivis. Toute autre réponse fera en sorte que le SDK Web envoie les données au réseau Edge.
+
+
+>[!NOTE]
+>
+>** Lorsque la variable `onBeforeEventSend` et `onBeforeLinkClickSend` Les fonctions de rappel sont définies, le SDK Web exécute la fonction `onBeforeLinkClickSend` fonction de rappel pour filtrer et augmenter l’événement d’interaction clic sur les liens, suivi de la fonction `onBeforeEventSend` fonction de rappel.
