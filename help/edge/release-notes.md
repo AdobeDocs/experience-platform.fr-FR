@@ -3,10 +3,10 @@ title: Notes de mise à jour du SDK web d’Adobe Experience Platform
 description: Notes de mise à jour les plus récentes pour le SDK web d’Adobe Experience Platform.
 keywords: SDK web Adobe Experience Platform;SDK web Platform;SDK web;notes de mise à jour;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 6009592d47cf8f3d0d31e919aff0552e370b2063
-workflow-type: ht
-source-wordcount: '1470'
-ht-degree: 100%
+source-git-commit: 009475c8bab3eb29a5d8a97763967d49ccf0999d
+workflow-type: tm+mt
+source-wordcount: '1507'
+ht-degree: 97%
 
 ---
 
@@ -16,11 +16,21 @@ ht-degree: 100%
 Ce document présente les notes de mise à jour du SDK web d’Adobe Experience Platform.
 Pour obtenir les dernières notes de mise à jour sur l’extension de balise du SDK web, reportez-vous à la section [Notes de mise à jour de l’extension de balise du SDK web](extension/web-sdk-ext-release-notes.md).
 
-## Version 2.14.0 - 25 janvier 2023
+## Version 2.15.0 - 30 mars 2023
 
 **Nouvelles fonctionnalités**
 
-* (Version Beta) Ajout de la prise en charge des surfaces et des propositions d’AJO.
+* Ajout de la prise en charge de [`onBeforeLinkClickSend`](fundamentals/configuring-the-sdk.md#onBeforeLinkClickSend) rappel de clic sur les liens.
+* Ajout de la prise en charge du suivi des clics Adobe Journey Optimizer.
+
+**Correctifs et améliorations**
+
+* La collection de liens comprend désormais le nom du lien et la région du visiteur.
+* Suppression de l’erreur de console pour les destinations d’URL ayant échoué.
+
+## Version 2.14.0 - 25 janvier 2023
+
+* (Version bêta) Ajout de la prise en charge des surfaces et des propositions Adobe Journey Optimizer.
 
 **Correctifs et améliorations**
 

@@ -2,10 +2,10 @@
 title: Notes de mise à jour de l’extension du SDK Web Adobe Experience Platform
 description: Extension de la balise SDK Web Adobe Experience Platform
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 5ec1ede39489ce48fc20739030884ec3811a8426
+source-git-commit: 2b8307422e4f073451c23ae9b35061d845f0893c
 workflow-type: tm+mt
-source-wordcount: '1528'
-ht-degree: 100%
+source-wordcount: '1597'
+ht-degree: 96%
 
 ---
 
@@ -13,6 +13,20 @@ ht-degree: 100%
 # Notes de mise à jour de l’extension du SDK Web Adobe Experience Platform
 
 Ce document contient les notes de mise à jour de l’extension de balises du SDK Web Adobe Experience Platform. Pour obtenir les dernières notes de mise à jour sur le SDK lui-même, voir les [notes de mise à jour du SDK Web Platform](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html?lang=fr).
+
+## Version 2.16.0 - 30 mars 2023
+
+**Nouvelles fonctionnalités**
+
+* (Version bêta) ajoutée **[!UICONTROL Mettre à jour la variable]** action et **[!UICONTROL Variable]** élément de données.
+* Ajout de la configuration pour [`onBeforeLinkClickSend`](../fundamentals/configuring-the-sdk.md#onBeforeLinkClickSend) fonction de rappel.
+
+**Correctifs et améliorations**
+
+* Correction d’un problème en raison duquel le fait de cliquer sur les éléments d’une balise d’ancrage ne fonctionnait pas lorsque la variable **[!UICONTROL Redirection vers une identité]** a été utilisée.
+* Correction d’un problème en raison duquel les éléments de données d’objet XDM ne fonctionnaient pas lorsqu’un seul schéma était présent.
+* Contient la version 2.15.0 du SDK Web Adobe Experience Platform.
+
 
 ## Version 2.15.1, - 26 Janvier 2023
 
