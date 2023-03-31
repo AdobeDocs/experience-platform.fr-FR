@@ -1,7 +1,7 @@
 ---
 title: Présentation de Data Distiller
 description: Résumé des limites d’utilisation de Data Distiller pour les données de Query Service par rapport à vos droits de licence.
-source-git-commit: ae4ecd43071a198592193a1a598a064cdc6be2f6
+source-git-commit: c7e753e54f087ee45daabb9094edeb51e54271fc
 workflow-type: tm+mt
 source-wordcount: '154'
 ht-degree: 1%
@@ -14,7 +14,7 @@ Data Distiller est une offre de package qui comprend un sous-ensemble des foncti
 
 ## Utilisation des licences {#license-usage}
 
-Le  [Tableau de bord de l’utilisation des licences Data Distiller](./license-usage.md) est disponible une fois que vous avez acheté les heures de calcul de Data Distiller. Le tableau de bord de l’utilisation des licences vous permet de surveiller la consommation des heures de calcul autorisées. Voir [Document d’utilisation des licences Data Distiller](./license-usage.md) pour afficher des informations importantes sur l’utilisation des licences Query Service de votre entreprise.
+Le [Tableau de bord de l’utilisation des licences Data Distiller](./license-usage.md) est disponible une fois que vous avez acheté les heures de calcul de Data Distiller. Le tableau de bord de l’utilisation des licences vous permet de surveiller la consommation des heures de calcul autorisées. Voir [Document d’utilisation des licences Data Distiller](./license-usage.md) pour afficher des informations importantes sur l’utilisation des licences Query Service de votre entreprise.
 
 <!-- Update these descriptions post 23.3 release
 ## Scoping parameters {#scoping-parameters}
