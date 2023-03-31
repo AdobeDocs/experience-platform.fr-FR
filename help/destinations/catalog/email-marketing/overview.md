@@ -2,12 +2,12 @@
 keywords: email;E-mail;e-mail;destinations d’email
 title: Présentation des destinations du marketing par e-mail
 type: Tutorial
-description: Les fournisseurs de service de messagerie électronique (ESP, Email Service Providers) vous permettent de gérer vos activités de marketing par e-mail, comme l’envoi de campagnes promotionnelles par e-mail.
+description: Les fournisseurs de service de messagerie électronique (ESP, Email Service Providers) vous permettent de gérer vos activités de marketing par e-mail, comme l’envoi de campagnes promotionnelles par e-mail. Découvrez quels ESP sont pris en charge en tant que destinations Experience Platform.
 exl-id: e07f8c5a-0424-4de5-810f-3d5711ef4606
-source-git-commit: ccbc633bfce8f4f66577b50064c28cfc26cb6dca
+source-git-commit: d6ea94b275ab0ed7c0638200188fe7ada7bacf5c
 workflow-type: tm+mt
-source-wordcount: '388'
-ht-degree: 99%
+source-wordcount: '377'
+ht-degree: 76%
 
 ---
 
@@ -17,16 +17,17 @@ ht-degree: 99%
 
 Les fournisseurs de service de messagerie électronique (ESP, Email Service Providers) vous permettent de gérer vos activités de marketing par e-mail, comme l’envoi de campagnes promotionnelles par e-mail. Adobe Experience Platform s’intègre aux ESP en vous permettant d’activer des segments vers des destinations de marketing par e-mail.
 
-Platform exporte vos segments sous forme de fichiers `.csv` et les diffuse vers votre emplacement préféré. Planifiez l’importation des données dans la plateforme de marketing par e-mail à partir de l’emplacement de stockage activé dans [!DNL Platform]. Le processus d’importation des données varie pour chaque partenaire. Pour plus d’informations, consultez les articles de destinations individuelles.
-
 ## Destinations de marketing par e-mail prises en charge {#supported-destinations}
 
 Adobe Experience Platform prend en charge les destinations de marketing par e-mail suivantes :
 
 * [Adobe Campaign](adobe-campaign.md)
-* [Oracle Eloqua](oracle-eloqua.md)
+* [Adobe Campaign Managed Cloud Services](adobe-campaign-managed-services.md)
+* [(API) Oracle Eloqua](oracle-eloqua-api.md)
+* [(API) Salesforce Marketing Cloud](salesforce-marketing-cloud-exact-target.md)
+* [(Fichiers) Oracle Eloqua](oracle-eloqua.md)
+* [(Fichiers) Marketing Cloud Salesforce](salesforce-marketing-cloud.md)
 * [Oracle Responsys](oracle-responsys.md)
-* [Salesforce Marketing Cloud](salesforce-marketing-cloud.md)
 * [SendGrid](sendgrid.md)
 
 ## Se connecter à une nouvelle destination de marketing par e-mail {#connect-destination}
@@ -45,7 +46,9 @@ Adobe recommande de sélectionner un identifiant unique à partir de votre [sch�
 | Téléphone | `mobilePhone.number` |
 | Identifiant du programme de fidélité | `Customer-defined XDM field` |
 
-### Autres attributs de destination
+{style="table-layout:auto"}
+
+### Autres attributs de destination {#other-destination-attributes}
 
 Dans le sélecteur de champ Schéma, choisissez les autres champs à exporter vers la destination de courriel. Voici quelques options recommandées :
 
@@ -60,20 +63,17 @@ Dans le sélecteur de champ Schéma, choisissez les autres champs à exporter ve
 | Date de naissance | `person.birthDayAndMonth` |
 | Appartenance à un segment | `segmentMembership.status` |
 
-## Importer les données de l’emplacement de stockage vers la destination {#import-data-into-destination}
-
-Consultez les articles de destination de marketing par e-mail individuels pour découvrir comment importer des données de l’emplacement de stockage vers les destinations :
-
-* [Adobe Campaign](adobe-campaign.md)
-* [Oracle Eloqua](oracle-eloqua.md)
-* [Oracle Responsys](oracle-responsys.md)
-* [Salesforce Marketing Cloud](salesforce-marketing-cloud.md)
+{style="table-layout:auto"}
 
 ## Activer les segments vers des destinations de marketing par e-mail {#activate}
 
-Pour plus d’informations sur l’activation des segments vers les destinations de marketing par e-mail, reportez-vous à la section [Activer les données d’audience vers des destinations d’exportation de profils par lots](../../ui/activate-batch-profile-destinations.md).
+Certaines destinations de marketing par e-mail dans le catalogue exportent les profils en continu, via une intégration d’API à la destination.
 
-## Ressources supplémentaires
+D’autres destinations exportent les fichiers vers un emplacement de stockage dans le cloud. Une fois l’exportation terminée, vous devez importer les données de l’emplacement de stockage dans le cloud dans votre destination de marketing par e-mail.
+
+Suivez les liens de la section [destinations de marketing par e-mail prises en charge](#supported-destinations) pour savoir comment activer des segments vers chaque destination de marketing par e-mail.
+
+## Ressources supplémentaires {#additional-resources}
 
 * [Activer les données d’audience vers des destinations d’exportation de profils par lots](../../ui/activate-batch-profile-destinations.md)
 * [Créer des destinations de marketing par e-mail et activer des données à l’aide de l’API Flow Service](../../api/connect-activate-batch-destinations.md)
