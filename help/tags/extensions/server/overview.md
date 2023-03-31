@@ -2,10 +2,10 @@
 title: Référence des extensions de transfert d’événement
 description: Recherchez la documentation pour les extensions de transfert d’événement dans Adobe Experience Platform.
 exl-id: e7b42241-b41c-4d12-8551-4df14e3c9b74
-source-git-commit: fbdfbe4be6e3b1e5ad212a4e5ebd3551cec3a89a
+source-git-commit: 30ac89d9af3e1d69c464650879d239a8c3edb525
 workflow-type: tm+mt
-source-wordcount: '158'
-ht-degree: 43%
+source-wordcount: '165'
+ht-degree: 50%
 
 ---
 
@@ -23,12 +23,15 @@ Vous trouverez ci-dessous une liste de la documentation relative aux extensions 
 
 * [ Adobe Experience Platform Cloud Connector ](./cloud-connector/overview.md)
 * [[!DNL AWS]](./aws/overview.md)
+* [[!DNL Braze]](./braze/overview.md)
 * [Base](./core/overview.md)
+* [API d’événement Epsilon](https://exchange.adobe.com/apps/ec/109127)*
 * [API de conversion facebook](https://exchange.adobe.com/apps/ec/105509)
-* [Conversions améliorées de Google Ads](./google-ads-enhanced-conversions/overview.md)
+* [Conversions améliorées de Google Ads](./google-ads-enhanced-conversions/overview.md)
 * [[!DNL Mailchimp] Edge](./mailchimp/overview.md)
-* [[!UICONTROL Microsoft Azure]](./azure/overview.md)
+* [[!UICONTROL Microsoft Azure]](./azure/overview.md)
+* [[!DNL Mixpanel]](./mixpanel/overview.md)
 * [Pega Customer Decision Hub](https://exchange.adobe.com/apps/ec/107597)*
-* [API de conversion d’accrochage](https://exchange.adobe.com/apps/ec/108550)*
+* [Snap Conversions API](https://exchange.adobe.com/apps/ec/108550)*
 * [[!DNL Splunk]](./splunk/overview.md)
-* [[!DNL Zendesk] API des événements](./zendesk/overview.md)
+* [API des événements [!DNL Zendesk] ](./zendesk/overview.md)

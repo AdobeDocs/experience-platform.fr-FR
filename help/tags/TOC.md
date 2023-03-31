@@ -5,10 +5,10 @@ breadcrumb-title: Balises
 user-guide-description: Découvrez comment déployer et gérer des balises d’analyse, de marketing et de publicité pour améliorer les expériences clients.
 feature: Tags
 solution: Data Collection
-source-git-commit: 83ac7ba5bcdb0b0f728b42c709eef11b25fb3cef
+source-git-commit: 95a56982d38bd1e2c72dd84e2fa48b9de659741f
 workflow-type: tm+mt
-source-wordcount: '963'
-ht-degree: 100%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -216,6 +216,7 @@ ht-degree: 100%
       * [Connecteur cloud pour Google Analytics](https://exchange.adobe.com/apps/ec/106542)
       * Base {#core}
          * [Aperçu](./extensions/server/core/overview.md)
+      * [API d’événement Epsilon](https://exchange.adobe.com/apps/ec/109127)
       * Conversions améliorées de Google Ads {#google-ads-enhanced-conversions}
          * [Aperçu](./extensions/server/google-ads-enhanced-conversions/overview.md)
       * [!DNL Mailchimp] Edge {#mailchimp}
