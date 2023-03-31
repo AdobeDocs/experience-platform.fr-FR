@@ -2,10 +2,10 @@
 title: Création d’une connexion source Marketo Engage et d’un flux de données dans l’interface utilisateur
 description: Ce tutoriel décrit les étapes à suivre pour créer une connexion source Marketo Engage et un flux de données dans l’interface utilisateur afin d’importer des données B2B dans Adobe Experience Platform.
 exl-id: a6aa596b-9cfa-491e-86cb-bd948fb561a8
-source-git-commit: d049a29d4c39fa41917e8da1dde530966f4cbaf4
+source-git-commit: b271d28677543f773fe1ba471fc08574e7c5542b
 workflow-type: tm+mt
-source-wordcount: '1554'
-ht-degree: 82%
+source-wordcount: '1693'
+ht-degree: 76%
 
 ---
 
@@ -27,7 +27,7 @@ Ce tutoriel nécessite une compréhension du fonctionnement des composants suiva
    * [Créer et modifier des schémas dans l’interface utilisateur](../../../../../xdm/ui/resources/schemas.md) : découvrez comment créer et modifier des schémas dans l’interface utilisateur.
 * [Espaces de noms d’identité](../../../../../identity-service/namespaces.md) : les espaces de noms d’identité sont des composants d’[!DNL Identity Service] qui servent d’indicateurs du contexte auquel une identité se rapporte. Une identité complète est composée d’une valeur d’identifiant et d’un espace de noms.
 * [[!DNL Real-Time Customer Profile]](/help/profile/home.md) : fournit un profil de consommateur unifié en temps réel, basé sur des données agrégées provenant de plusieurs sources.
-* [Sandbox](../../../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuelles qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
+* [Sandbox](../../../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
 
 ### Collecter les informations d’identification requises
 
@@ -183,3 +183,24 @@ Vous êtes arrivé au bout de ce tutoriel, félicitations ! Grâce à celui-ci,
 
 * [Présentation de [!DNL Real-Time Customer Profile]](/help/profile/home.md)
 * [Présentation de [!DNL Data Science Workspace]](/help/data-science-workspace/home.md)
+
+## Annexe {#appendix}
+
+Les sections suivantes contiennent des instructions supplémentaires que vous pouvez suivre lorsque vous utilisez le [!DNL Marketo] source.
+
+### Messages d’erreur dans l’interface utilisateur {#error-messages}
+
+Les messages d’erreur suivants s’affichent dans l’interface utilisateur lorsque Platform détecte des problèmes liés à votre configuration :
+
+#### [!DNL Munchkin ID] n’est pas mappé à l’organisation appropriée
+
+L’authentification sera refusée si votre [!DNL Munchkin ID] n’est pas mappé à l’organisation Platform que vous utilisez. Configurez le mappage entre vos [!DNL Munchkin ID] et votre organisation à l’aide de la variable [[!DNL Marketo] interface](https://app-sjint.marketo.com/#MM0A1).
+
+![Message d’erreur indiquant que l’instance Marketo n’est pas correctement mappée à l’organisation de l’Adobe.](../../../../images/tutorials/create/marketo/munchkin-not-mapped.png)
+
+#### Identité Principal manquante
+
+Un flux de données n’enregistre pas et n’ingère pas si une identité Principale est manquante. Assurez-vous que [une identité Principale existe dans votre schéma XDM](../../../../../xdm/tutorials/create-schema-ui.md), avant de tenter de configurer un flux de données.
+
+![Message d’erreur indiquant que l’identité Principale est absente du schéma XDM.](../../../../images/tutorials/create/marketo/no-primary-identity.png)
+
