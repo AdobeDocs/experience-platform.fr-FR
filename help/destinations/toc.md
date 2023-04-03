@@ -6,8 +6,8 @@ description: Ce document répertorie la table des matières des destinations Ado
 feature: Destinations
 source-git-commit: aa915c24dc6d73a5bdd3345cfb0fb7049bdd2679
 workflow-type: tm+mt
-source-wordcount: '1068'
-ht-degree: 97%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -172,7 +172,7 @@ ht-degree: 97%
       * [Extension Adobe Livefyre](./catalog/social/adobe-livefyre.md)
       * [Connexion Facebook](./catalog/social/facebook.md)
       * [Connexion des audiences correspondantes linkedIn](./catalog/social/linkedin.md)
-      * [Connexion TikTok](./catalog/social/tiktok.md)
+      * [Connexion à TikTok](./catalog/social/tiktok.md)
       * [Connexion [!DNL Twitter Custom Audiences]](./catalog/social/twitter.md)
    * Destinations de diffusion en continu {#streaming}
       * [Connexion API HTTP](./catalog/streaming/http-destination.md)
