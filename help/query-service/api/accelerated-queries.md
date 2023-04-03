@@ -2,10 +2,10 @@
 title: Point d’entrée de requêtes accélérées
 description: Découvrez comment accéder sans état à la boutique accélérée de requêtes pour renvoyer rapidement des résultats basés sur des données agrégées. Ce document fournit un exemple de requête HTTP et de réponse pour le point d’entrée de requêtes accélérées de Query Service.
 exl-id: 29ea4d25-9c46-4b29-a6d7-45ac33dcb0fb
-source-git-commit: fa4fc154f57243250dec9bdf9557db13ef7768e8
+source-git-commit: aa209dce9268a15a91db6e3afa7b6066683d76ea
 workflow-type: tm+mt
-source-wordcount: '567'
-ht-degree: 100%
+source-wordcount: '566'
+ht-degree: 97%
 
 ---
 
@@ -17,7 +17,11 @@ Avant de poursuivre avec ce guide, assurez-vous d’avoir lu et compris le [guid
 
 ## Prise en main
 
-Le SKU Data Distiller est requis pour utiliser la boutique de requêtes accélérées. Veuillez consulter le [packaging](../packages.md), les [mécanismes de sécurisation](../guardrails.md#query-accelerated-store), et la documentation de la [licence](../data-distiller/license-usage.md) relative au SKU de Data Distiller. Si vous ne disposez pas du SKU de Data Distiller, contactez votre représentant du service client Adobe pour plus d’informations.
+Le SKU Data Distiller est requis pour utiliser la boutique de requêtes accélérées. Veuillez consulter la [packaging](../packages.md) et [barrières de sécurité](../guardrails.md#query-accelerated-store) documentation relative au SKU de Data Distiller. Si vous ne disposez pas du SKU de Data Distiller, contactez votre représentant du service client Adobe pour plus d’informations.
+
+<!-- Document is hidden temporarily
+Please see the [packaging](../packages.md), [guardrails](../guardrails.md#query-accelerated-store), and [licensing](../data-distiller/license-usage.md) documentation that relates to the Data Distiller SKU. 
+-->
 
 Les sections suivantes détaillent les appels d’API nécessaires pour accéder sans état à la boutique de requêtes accélérées via l’API Query Service. Chaque appel inclut le format général d’API, un exemple de requête présentant les en-têtes requis et un exemple de réponse.
 

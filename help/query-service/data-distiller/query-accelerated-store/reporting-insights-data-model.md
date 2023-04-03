@@ -2,10 +2,10 @@
 title: Guide d’informations sur les rapports de magasin accélérés de requête
 description: Découvrez comment créer un modèle de données d’insights sur les rapports via Query Service afin de l’utiliser avec des données de magasin accélérées et des tableaux de bord définis par l’utilisateur.
 exl-id: 216d76a3-9ea3-43d3-ab6f-23d561831048
-source-git-commit: fa4fc154f57243250dec9bdf9557db13ef7768e8
+source-git-commit: aa209dce9268a15a91db6e3afa7b6066683d76ea
 workflow-type: tm+mt
-source-wordcount: '1034'
-ht-degree: 97%
+source-wordcount: '1033'
+ht-degree: 95%
 
 ---
 
@@ -23,7 +23,11 @@ Ce tutoriel utilise des tableaux de bord définis par l’utilisateur pour visua
 
 ## Prise en main
 
-Le SKU Data Distiller est nécessaire pour créer un modèle de données personnalisé pour vos rapports d’insights et pour étendre les modèles de données Real-time CDP qui contiennent des données Platform enrichies. Veuillez consulter le [packaging](../../packages.md), les [mécanismes de sécurisation](../../guardrails.md#query-accelerated-store), et la documentation de la [licence](../../data-distiller/license-usage.md) relative au SKU de Data Distiller. Si vous ne disposez pas du SKU de Data Distiller, contactez votre représentant du service client Adobe pour plus d’informations.
+Le SKU Data Distiller est nécessaire pour créer un modèle de données personnalisé pour vos rapports d’insights et pour étendre les modèles de données Real-time CDP qui contiennent des données Platform enrichies. Veuillez consulter la [packaging](../../packages.md) et [barrières de sécurité](../../guardrails.md#query-accelerated-store) documentation relative au SKU de Data Distiller. Si vous ne disposez pas du SKU de Data Distiller, contactez votre représentant du service client Adobe pour plus d’informations.
+
+<!-- Document is hidden temporarily
+Please see the [packaging](../../packages.md), [guardrails](../../guardrails.md#query-accelerated-store), and [licensing](../../data-distiller/license-usage.md) documentation that relates to the Data Distiller SKU. 
+-->
 
 ## Créer un modèle de données de rapport d’informations
 
