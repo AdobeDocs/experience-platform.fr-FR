@@ -5,9 +5,9 @@ title: Présentation de Privacy Service
 description: Privacy Service vous permet de faciliter votre mise en conformité automatisée aux réglementations légales liées à la confidentialité dans vos opérations de données Experience Cloud.
 exl-id: 585f7619-5072-413b-9a62-be0ea0cd4d1b
 source-git-commit: e09f0598e1d8dc007d0fdfcf13da11d5cad94c54
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1608'
-ht-degree: 86%
+ht-degree: 100%
 
 ---
 
@@ -15,9 +15,9 @@ ht-degree: 86%
 
 >[!IMPORTANT]
 >
->Les autorisations pour Adobe Experience Platform Privacy Service ont été améliorées afin d’augmenter leur niveau de granularité. Ces modifications permettent aux administrateurs de l’organisation d’accorder à plus d’utilisateurs l’accès avec le rôle et le niveau d’autorisation souhaités. Les utilisateurs de compte technique doivent mettre à jour leurs autorisations de Privacy Service, car cette mise à jour imminente constitue une modification irréversible pour eux. L’application de cette modification des autorisations aura lieu le **28 mars 2023**.
+>Les autorisations pour Adobe Experience Platform Privacy Service ont été améliorées afin d’augmenter leur niveau de granularité. Ces modifications permettent aux administrateurs et administratrices de l’organisation d’accorder l’accès à plus d’utilisateurs et d’utilisatrices avec le rôle et le niveau d’autorisation souhaités.Les utilisateurs et utilisatrices de comptes techniques doivent mettre à jour leurs autorisations de Privacy Service, car cette mise à jour imminente constitue une modification irréversible.L’application de la modification de ces autorisations aura lieu le **28 mars 2023**.
 >
->Les comptes techniques sont disponibles pour les clients d’entreprise et créés via Adobe Developers Console. L’Adobe ID d’un titulaire de compte technique se termine par `@techacct.adobe.com`. Si vous ne savez pas si vous êtes titulaire d’un compte technique, contactez l’administrateur de votre entreprise.
+>Les comptes techniques sont disponibles pour les clientes et clients d’entreprise et créés via l’Adobe Developers Console. L’Adobe ID d’une personne titulaire de compte technique se termine par `@techacct.adobe.com`. Si vous ne savez pas si vous êtes titulaire d’un compte technique, contactez l’administrateur ou l’administratrice de votre organisation.
 
 Pour offrir de meilleures expériences client, vous devez collecter et stocker les données personnelles de vos clients. Lorsque vous utilisez ces données, il est important de comprendre et de respecter la confidentialité de vos clients. Les nouvelles réglementations légales et organisationnelles donnent aux utilisateurs le droit d’accéder à leurs données personnelles et de les supprimer de vos banques de données sur demande.
 
@@ -27,9 +27,9 @@ Adobe Experience Platform [!DNL Privacy Service] a été développé en répon
 
 >[!IMPORTANT]
 >
->Le Privacy Service est destiné uniquement aux demandes relatives aux titulaires de données et aux droits des consommateurs. Toute autre utilisation de Privacy Service pour le nettoyage ou la maintenance des données n’est ni prise en charge ni autorisée. L&#39;Adobe a l&#39;obligation légale de les remplir dans les délais impartis. Par conséquent, le test de chargement sur Privacy Service n’est pas autorisé, car il s’agit d’un environnement de production uniquement et crée un journal inutile de demandes d’accès à des informations personnelles valides.
+>Privacy Service est destiné uniquement aux requêtes relatives aux titulaires de données et aux droits des clientes et clients. Toute autre utilisation de Privacy Service pour le nettoyage ou la maintenance des données n’est ni prise en charge ni autorisée. Adobe a l’obligation légale d’y répondre dans les délais impartis. Par conséquent, le test de chargement sur Privacy Service n’est pas autorisé, car il s’agit d’un environnement de production uniquement qui crée une liste d’attente inutile de requêtes d’accès à des informations personnelles valides.
 >
->Une limite de chargement quotidienne stricte est maintenant en place pour prévenir les abus du service. Les utilisateurs qui abusent du système verront leur accès désactivé. Une réunion ultérieure sera ensuite organisée avec eux afin d&#39;aborder leurs actions et de discuter de l&#39;utilisation acceptable pour le Privacy Service.
+>Une limite de chargement quotidienne stricte est maintenant en place pour prévenir les abus du service. Les utilisateurs et utilisatrices qui abusent du système verront leur accès au service désactivé. Une réunion ultérieure sera ensuite organisée avec ces utilisateurs et utilisatrices afin d’aborder leurs actions et de discuter de l’utilisation acceptable de Privacy Service.
 
 ## Prise en main de [!DNL Privacy Service] {#getting-started}
 
