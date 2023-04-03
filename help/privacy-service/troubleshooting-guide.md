@@ -5,9 +5,9 @@ title: Guide de dépannage de Privacy Service
 description: Ce document fournit des réponses aux questions fréquentes sur Privacy Service, ainsi que des informations sur les erreurs courantes rencontrées dans l’API.
 exl-id: 8afbb065-0f41-4048-9003-a22c0c839717
 source-git-commit: fc115801ac8e75cd58356060ad98f1e340d2494a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '917'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
@@ -65,9 +65,9 @@ Pour plus d’informations sur la fourniture des informations d’identité des 
 
 ## Puis-je utiliser [!DNL Privacy Service] pour nettoyer les données envoyées accidentellement à [!DNL Platform] ?
 
-Adobe n’est pas compatible avec l’utilisation de [!DNL Privacy Service] comme solution pour effacer les données envoyées accidentellement à un produit. [!DNL Privacy Service] est conçu pour vous aider à remplir vos obligations en matière de requêtes d’accès ou de suppression des titulaires de données (ou consommateurs). Toute autre utilisation de Privacy Service pour le nettoyage ou la maintenance des données n’est ni prise en charge ni autorisée.
+Adobe n’est pas compatible avec l’utilisation de [!DNL Privacy Service] comme solution pour effacer les données envoyées accidentellement à un produit. [!DNL Privacy Service] est conçu pour vous aider à remplir vos obligations en matière de requêtes d’accès ou de suppression des titulaires de données (ou consommateurs). Toute autre utilisation de Privacy Service pour le nettoyage ou la maintenance des données n’est ni prise en charge ni autorisée.
 
-Les demandes d’accès à des informations personnelles sont urgentes et sont traitées conformément à la loi sur la protection des informations personnelles en vigueur. l’envoi de requêtes qui ne sont pas du sujet des données/du consommateur, l’accès ou la suppression des requêtes impacte toutes les [!DNL Privacy Service] les clients et la possibilité pour [!DNL Privacy Service] pour prendre en charge les délais légaux appropriés. Une limite de chargement quotidienne stricte est maintenant en place pour prévenir les abus du service.
+Les requêtes d’accès à des informations personnelles sont sensibles au facteur temps et sont effectuées en fonction des lois de confidentialité applicables. L’envoi de requêtes autres que les requêtes relatives à l’accès ou à la suppression de titulaires de données ou de clientes et clients a des répercussions sur les clientes et clients de [!DNL Privacy Service] et sur la capacité de [!DNL Privacy Service] à respecter les délais légaux appropriés. Une limite de chargement quotidienne stricte est maintenant en place pour prévenir les abus du service.
 
 Veuillez contacter votre gestionnaire de compte (CDM) pour coordonner vos efforts et fournir un niveau de service adéquat en matière de suppression des données personnelles identifiables (PII) ou des problèmes relatifs aux données.
 
