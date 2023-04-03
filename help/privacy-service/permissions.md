@@ -2,10 +2,10 @@
 title: Gérer les autorisations pour Privacy Service
 description: Découvrez comment gérer les autorisations utilisateur pour Adobe Experience Platform Privacy Service à l’aide d’Adobe Admin Console.
 exl-id: 6aa81850-48d7-4fff-95d1-53b769090649
-source-git-commit: 37a67b19fa0cb38e9e34066c869dd9dc49edefd6
-workflow-type: ht
-source-wordcount: '1064'
-ht-degree: 100%
+source-git-commit: fc6c22ab1185b9692ece86de75149102ce020474
+workflow-type: tm+mt
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -34,6 +34,10 @@ Ce guide suppose que vous connaissez les concepts de base d’Admin Console tel
 ## Autorisations disponibles
 
 Le tableau suivant décrit les autorisations disponibles pour Privacy Service avec des descriptions des fonctionnalités spécifiques auxquelles elles donnent accès :
+
+>[!NOTE]
+>
+>Tous les Privacy Service et [!UICONTROL Exclusion de la vente] Les autorisations sont distinctes et distinctes les unes des autres, sans chevauchement fonctionnel. Cela est possible, car l’API du Privacy Service est considérée comme idempotent.
 
 | Catégorie | Autorisation | Description |
 | --- | --- | --- |
