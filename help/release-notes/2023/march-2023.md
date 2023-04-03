@@ -1,10 +1,10 @@
 ---
 title: Notes de mise à jour d’Adobe Experience Platform - Mars 2023
 description: Les notes de mise à jour de mars 2023 pour Adobe Experience Platform.
-source-git-commit: 582305583aa5869d8cc29f871aeb3fa0ef0b6ab1
+source-git-commit: 1ead97aa9b197cd1c046175bdcd06c03fd35ac17
 workflow-type: tm+mt
-source-wordcount: '1724'
-ht-degree: 40%
+source-wordcount: '1762'
+ht-degree: 39%
 
 ---
 
@@ -49,6 +49,7 @@ Adobe Experience Platform fournit une suite de technologies qui vous permetten
 | Nouveau workflow de démarrage rapide pour l’API de métadonnées de conversion (version bêta) | Accédez aux nouveaux workflows de démarrage rapide sous &quot;Prise en main&quot; à partir de l’écran d’accueil de la collecte de données ! Le [workflow de démarrage rapide pour l’API des conversions de métadonnées](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/meta/overview.html?lang=en#quick-start) permet aux clients de collecter et de transférer rapidement des données d’événement côté serveur vers les métadonnées pour les conversions publicitaires en quelques étapes simples. |
 | Nouveau workflow de démarrage rapide pour le SDK Mobile (version bêta) | Accédez aux nouveaux workflows de démarrage rapide sous &quot;Prise en main&quot; à partir de l’écran d’accueil de la collecte de données ! Le [workflow de démarrage rapide pour le SDK Mobile](https://developer.adobe.com/client-sdks/documentation/) vous permet de mettre rapidement en oeuvre le SDK Mobile et de valider les événements mobiles de base en quelques étapes simples. |
 | [!DNL Braze] extension de transfert d’événement | Le [[!DNL Braze Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html) l’extension de transfert d’événement vous permet d’exploiter les données capturées dans Adobe Experience Platform Edge Network et de les envoyer à [!DNL Braze] sous la forme d’événements côté serveur à l’aide de la variable [!DNL Braze] API de suivi des utilisateurs. |
+| [!DNL Epsilon] extension de transfert d’événement | Le [[!DNL Epsilon Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/overview.html) l’extension vous permet d’exploiter le transfert d’événement pour capturer des informations d’événement dans Adobe Experience Platform Edge Network et les envoyer à [!DNL Epsilon] en utilisant la variable [!DNL Epsilon] API d’événement. |
 | [!DNL Mixpanel] extension de transfert d’événement | Le [[!DNL Mixpanel Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html) L’extension permet aux clients d’exploiter le transfert d’événement pour capturer des informations d’événement dans Adobe Experience Platform Edge Network et les envoyer à Mixpanel à l’aide de l’API Track Events. |
 
 {style="table-layout:auto"}
@@ -79,7 +80,7 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 | [Connexion Oracle Eloqua (API)](../../destinations/catalog/email-marketing/oracle-eloqua-api.md) | Utilisez la connexion basée sur l’API pour [!DNL Oracle Eloqua] planifier et exécuter des campagnes tout en offrant une expérience client personnalisée pour leurs prospects dans [!DNL Oracle Eloqua]. |
 | [Connexion à  [!DNL Amazon Ads]  (Version bêta)](../../destinations/catalog/advertising/amazon-ads.md) | Le [!DNL Amazon Ads] l’intégration à Adobe Experience Platform permet une intégration clé en main à [!DNL Amazon Ads] les produits, y compris la variable [!DNL Amazon DSP (ADSP)]. En utilisant la variable [!DNL Amazon Ads] destination dans Adobe Experience Platform, les utilisateurs peuvent définir les audiences de l’annonceur pour le ciblage et l’activation sur la variable [!DNL Amazon DSP]. |
 | Connexion [[!DNL Marketo Measure Ultimate] ](../../destinations/catalog/adobe/marketo-measure-ultimate.md) | [!DNL Marketo Measure] (anciennement Bizible) donne aux marketeurs un aperçu des actions marketing les plus efficaces pour générer des recettes et optimiser le retour sur investissement pour leur entreprise. La destination active les flux de données B2B (business-to-business) de Adobe Experience Platform vers [!DNL Marketo Measure]. La carte n’est disponible que pour [!DNL Marketo Measure Ultimate] clients. |
-| [Connexion TikTok](../../destinations/catalog/social/tiktok.md) | Créez des audiences personnalisées sur TikTok avec vos données pour le ciblage de vos campagnes publicitaires. |
+| [Connexion à TikTok](../../destinations/catalog/social/tiktok.md) | Créez des audiences personnalisées sur TikTok avec vos données pour le ciblage de vos campagnes publicitaires. |
 | [Connexion Zendesk](../../destinations/catalog/crm/zendesk.md) | Utilisez cette destination pour créer et mettre à jour des identités dans un segment en tant que contacts dans [!DNL Zendesk]. |
 
 {style="table-layout:auto"}
