@@ -5,10 +5,10 @@ title: Traitement des demandes d’accès à des informations personnelles dans 
 type: Documentation
 description: Adobe Experience Platform Privacy Service traite les demandes des clients en matière dʼaccès, de retrait du consentement à la vente ou de suppression de leurs données personnelles conformément aux nombreuses réglementations en matière de confidentialité. Ce document couvre les concepts essentiels liés au traitement des demandes d’accès à des informations personnelles pour Real-time Customer Profile.
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
-source-git-commit: 4cb6280ea646f813a064eb08fef4ab29126ec3ea
+source-git-commit: e5ea0672ba8e9b5951464396a75decc5d8508ff4
 workflow-type: tm+mt
-source-wordcount: '1612'
-ht-degree: 26%
+source-wordcount: '1573'
+ht-degree: 27%
 
 ---
 
@@ -186,10 +186,6 @@ Pour vous assurer que vos demandes d’accès à des informations personnelles t
 ## Traitement des demandes de suppression {#delete}
 
 Lorsquʼ[!DNL Experience Platform] reçoit une requête DELETE de la part de [!DNL Privacy Service], [!DNL Platform] envoie une confirmation à [!DNL Privacy Service] pour confirmer que la requête a été reçue et que les données concernées ont été marquées pour suppression. Les enregistrements sont ensuite supprimés une fois la tâche de confidentialité terminée.
-
->[!IMPORTANT]
->
->Les demandes de suppression de données personnelles ne sont pas instantanées et peuvent varier en fonction des services impliqués et d’autres facteurs d’impact tels que la localisation géographique. La période d’achèvement des tâches de confidentialité peut varier de 15 à 45 jours, mais n’est pas garantie.
 
 Selon que vous avez également inclus ou non Identity Service (`identity`) et le lac de données (`aepDataLake`) en tant que produits dans votre demande d’accès à des informations personnelles pour Profile (`ProfileService`), différents ensembles de données liés au profil sont supprimés du système à des moments potentiellement différents :
 
