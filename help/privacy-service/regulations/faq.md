@@ -4,9 +4,9 @@ solution: Experience Platform
 title: FAQ sur les réglementations de confidentialité
 description: Ce document répond aux questions les plus fréquemment posées sur les réglementations de confidentialité légales prises en charge et leur mise en oeuvre dans Adobe Experience Cloud.
 exl-id: ec553e53-664b-4e18-abb1-4e4063fdd2c9
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+source-git-commit: 7e86721f6dd6fd280ae7e7e67aca21b4258ffb66
 workflow-type: tm+mt
-source-wordcount: '1599'
+source-wordcount: '1619'
 ht-degree: 35%
 
 ---
@@ -80,7 +80,11 @@ De nombreuses réglementations de confidentialité stipulent que si un sujet des
 
 En supposant que l’entreprise ait collecté des informations personnelles et qu’elle puisse authentifier ou vérifier l’identité d’un consommateur particulier, les réglementations de confidentialité permettent de remplir un délai spécifique pour une demande de consommateur. Le tableau suivant ventile les délais applicables pour chaque réglementation, avec des notes sur certaines exceptions :
 
-| Régulation | Fenêtre de conformité | Notes |
+>[!NOTE]
+>
+>Le délai de réponse en &quot;jours&quot; est le reflet des délais prescrits par chaque loi pour répondre à une demande des consommateurs.
+
+| Régulation | Période de réponse | Notes |
 | --- | --- | --- |
 | CCPA (Californie) | 45 jours |  |
 | RGPD (Union européenne) | 30 jours | Si la demande est complexe ou si de nombreuses demandes ont été effectuées par le même sujet de données, la demande peut être étendue à 60 jours. |
