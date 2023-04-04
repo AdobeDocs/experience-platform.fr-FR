@@ -5,10 +5,10 @@ title: Traitement des demandes d’accès à des informations personnelles dans 
 type: Documentation
 description: Adobe Experience Platform Privacy Service traite les demandes des clients en matière dʼaccès, de retrait du consentement à la vente ou de suppression de leurs données personnelles conformément aux nombreuses réglementations en matière de confidentialité. Ce document couvre les concepts essentiels liés au traitement des demandes d’accès à des informations personnelles pour Real-time Customer Profile.
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
-source-git-commit: d41606e4df297d11b4e0e755363d362e075e862c
+source-git-commit: 4cb6280ea646f813a064eb08fef4ab29126ec3ea
 workflow-type: tm+mt
-source-wordcount: '1573'
-ht-degree: 27%
+source-wordcount: '1612'
+ht-degree: 26%
 
 ---
 
@@ -109,7 +109,7 @@ curl -X POST \
 
 >[!IMPORTANT]
 >
->Platform traite les demandes d’accès à des informations personnelles dans toutes les [sandbox](../sandboxes/home.md) appartenant à votre organisation. Par conséquent, tout en-tête `x-sandbox-name` inclus dans la demande est ignoré par le système. 
+>Platform traite les demandes d’accès à des informations personnelles dans tous les [sandbox](../sandboxes/home.md) appartenant à votre organisation. Par conséquent, tout en-tête `x-sandbox-name` inclus dans la demande est ignoré par le système. 
 
 **Réponse du produit**
 
@@ -161,7 +161,7 @@ Pour Profile Service, une fois la tâche de confidentialité terminée, une rép
 }
 ```
 
-### Utiliser l’interface utilisateur
+### Utilisation de l’interface utilisateur
 
 Lors de la création de requêtes de tâche dans l’interface utilisateur, veillez à sélectionner **[!UICONTROL Lac de données AEP]** et/ou **[!UICONTROL Profil]** under **[!UICONTROL Produits]** afin de traiter les tâches pour les données stockées dans le lac de données ou [!DNL Real-Time Customer Profile], respectivement.
 
@@ -186,6 +186,10 @@ Pour vous assurer que vos demandes d’accès à des informations personnelles t
 ## Traitement des demandes de suppression {#delete}
 
 Lorsquʼ[!DNL Experience Platform] reçoit une requête DELETE de la part de [!DNL Privacy Service], [!DNL Platform] envoie une confirmation à [!DNL Privacy Service] pour confirmer que la requête a été reçue et que les données concernées ont été marquées pour suppression. Les enregistrements sont ensuite supprimés une fois la tâche de confidentialité terminée.
+
+>[!IMPORTANT]
+>
+>Les demandes de suppression de données personnelles ne sont pas instantanées et peuvent varier en fonction des services impliqués et d’autres facteurs d’impact tels que la localisation géographique. La période d’achèvement des tâches de confidentialité peut varier de 15 à 45 jours, mais n’est pas garantie.
 
 Selon que vous avez également inclus ou non Identity Service (`identity`) et le lac de données (`aepDataLake`) en tant que produits dans votre demande d’accès à des informations personnelles pour Profile (`ProfileService`), différents ensembles de données liés au profil sont supprimés du système à des moments potentiellement différents :
 
