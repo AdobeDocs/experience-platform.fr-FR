@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Guide de l’IU de Segmentation Service
 description: Adobe Experience Platform Segmentation Service fournit une interface utilisateur pour la création et la gestion des définitions de segment.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 11a4bb90b5d88f86ac14d702a213f56432a30c24
+source-git-commit: 229dd08bc5d5dfab068db3be84ad20d10992fd31
 workflow-type: tm+mt
-source-wordcount: '2686'
-ht-degree: 94%
+source-wordcount: '2650'
+ht-degree: 96%
 
 ---
 
@@ -69,12 +69,11 @@ Cette vue contient des informations sur la définition de segment, y compris le 
 
 Vous pouvez ajouter des champs supplémentaires à cet affichage en sélectionnant ![l’icône d’attribut de filtre](../images/ui/overview/filter-attribute.png). Ces champs supplémentaires comprennent la ventilation, la méthode d’évaluation et l’ID de tâche.
 
-Si la ventilation est sélectionnée, l’affichage affiche un graphique à barres indiquant le pourcentage de profils appartenant à chacun des statuts de profil calculé suivants : [!UICONTROL Réalisé], [!UICONTROL Existant], et [!UICONTROL Quitter]. De plus, la répartition affichée dans l’onglet [!UICONTROL Parcourir] est la répartition la plus précise du statut du segment. Si ce nombre diffère de ce qui est indiqué dans l’onglet [!UICONTROL Vue d’ensemble], vous devez utiliser les nombres de l’onglet [!UICONTROL Parcourir] comme source d’informations correcte, puisque les nombres de l’onglet [!UICONTROL Vue d’ensemble] ne sont mis à jour qu’une seule fois par jour.
+Si la ventilation est sélectionnée, l’affichage affiche un graphique à barres indiquant le pourcentage de profils appartenant à chacun des statuts de profil calculé suivants : [!UICONTROL Réalisé] et [!UICONTROL Quitter]. De plus, la répartition affichée dans l’onglet [!UICONTROL Parcourir] est la répartition la plus précise du statut du segment. Si ce nombre diffère de ce qui est indiqué dans l’onglet [!UICONTROL Vue d’ensemble], vous devez utiliser les nombres de l’onglet [!UICONTROL Parcourir] comme source d’informations correcte, puisque les nombres de l’onglet [!UICONTROL Vue d’ensemble] ne sont mis à jour qu’une seule fois par jour.
 
 | État | Description |
 | ------ | ----------- |
 | Réalisé | Le nombre de profils qui remplissent les critères pour le segment au cours des dernières 24 heures. Ainsi, le nombre de profils qui remplissent les critères du segment depuis la dernière exécution de la tâche de segmentation par lots. |
-| Existant | Le nombre de profils qui sont restés qualifiés pour le segment au cours des dernières 24 heures. Ainsi, le nombre de profils qui sont restés qualifiés pour le segment depuis la dernière exécution de la tâche de segmentation par lots. |
 | Sortant | Nombre de profils ayant quitté le segment au cours des dernières 24 heures. Ainsi, le nombre de profils qui ne sont plus qualifiés pour le segment depuis la dernière exécution de la tâche de segmentation par lots. |
 
 La méthode d’évaluation peut être soit en flux continu, par lots ou Edge. Les segments en streaming sont constamment évalués au fur et à mesure que les données entrent dans le système. Les segments par lot sont évalués selon un planning établi. Les segments Edge évaluent les segments en temps réel, ce qui permet d’utiliser les cas d’utilisation de personnalisation de la même page et de la page suivante.

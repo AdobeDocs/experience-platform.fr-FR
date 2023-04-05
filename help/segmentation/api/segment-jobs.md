@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Point de terminaison de l’API de tâches de segmentation
 description: Le point de terminaison des tâches de segmentation de l’API Adobe Experience Platform Segmentation Service vous permet de gérer par programmation les tâches de segmentation pour votre organisation.
 exl-id: 105481c2-1c25-4f0e-8fb0-c6577a4616b3
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 229dd08bc5d5dfab068db3be84ad20d10992fd31
 workflow-type: tm+mt
-source-wordcount: '1511'
+source-wordcount: '1498'
 ht-degree: 24%
 
 ---
@@ -130,7 +130,6 @@ Si moins de 1 500 segments sont exécutés dans votre tâche de segmentation, un
                 "segmentedProfileByStatusCounter":{
                     "94509dba-7387-452f-addc-5d8d979f6ae8":{
                         "exited":144646,
-                        "existing":10,
                         "realized":2056
                     }
                 },
@@ -226,7 +225,6 @@ Si plus de 1 500 segments sont exécutés dans votre tâche de segmentation, la 
                 "segmentedProfileByStatusCounter":{
                     "94509dba-7387-452f-addc-5d8d979f6ae8":{
                         "exited":144646,
-                        "existing":10,
                         "realized":2056
                     }
                 },
@@ -275,7 +273,7 @@ Si plus de 1 500 segments sont exécutés dans votre tâche de segmentation, la 
 | `metrics.profileSegmentationTime` | Objet contenant des informations sur les heures de début et de fin de l’évaluation de segmentation, ainsi que le temps total nécessaire. |
 | `metrics.segmentProfileCounter` | Nombre de profils qualifiés par segment. |
 | `metrics.segmentedProfileByNamespaceCounter` | Le nombre de profils qualifiés pour chaque espace de noms d’identité par segment. |
-| `metrics.segmentProfileByStatusCounter` | Nombre de profils pour chaque état. Les trois états suivants sont pris en charge : <ul><li>&quot;réalisé&quot; : nombre de nouveaux profils entrés dans le segment.</li><li>&quot;existing&quot; : nombre de profils qui existent toujours dans le segment.</li><li>&quot;Sortie&quot; : nombre de segments de profil qui n’existent plus dans le segment.</li></ul> |
+| `metrics.segmentProfileByStatusCounter` | Nombre de profils pour chaque état. Les trois états suivants sont pris en charge : <ul><li>&quot;réalisé&quot; : nombre de profils qui remplissent les critères pour le segment.</li><li>&quot;Sortie&quot; : nombre de segments de profil qui n’existent plus dans le segment.</li></ul> |
 | `metrics.totalProfilesByMergePolicy` | Nombre total de profils fusionnés par stratégie de fusion. |
 
 ## Création d’une tâche de segmentation {#create}
@@ -373,7 +371,6 @@ Une réponse réussie renvoie un état HTTP 200 avec des informations sur la tâ
         "segmentedProfileByStatusCounter":{
             "7863c010-e092-41c8-ae5e-9e533186752e":{
                 "exited":144646,
-                "existing":10,
                 "realized":2056
             }
         },
@@ -494,7 +491,6 @@ Une réponse réussie renvoie un état HTTP 200 avec les détails de la tâche 
         "segmentedProfileByStatusCounter":{
             "7863c010-e092-41c8-ae5e-9e533186752e":{
                 "exited":144646,
-                "existing":10,
                 "realized":2056
             }
         },
@@ -674,7 +670,6 @@ Si plus de 1 500 segments sont exécutés dans votre tâche de segmentation, la 
         "segmentedProfileByStatusCounter":{
             "7863c010-e092-41c8-ae5e-9e533186752e":{
                 "exited":144646,
-                "existing":10,
                 "realized":2056
             }
         },

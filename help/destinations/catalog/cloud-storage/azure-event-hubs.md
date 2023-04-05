@@ -3,10 +3,10 @@ keywords: Destination du hub d’événements Azure ; hub d’événements Azure
 title: Connexion Azure Event Hubs
 description: Créez une connexion sortante en temps réel avec votre [!DNL Azure Event Hubs] stockage pour diffuser des données depuis l’Experience Platform.
 exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
-source-git-commit: ce20c273cb6a87264363c03611ccfdfb783e595f
+source-git-commit: 4d1f9fa19bd35095e3ccbd8d83bcc33dcd4c45a8
 workflow-type: tm+mt
-source-wordcount: '2067'
-ht-degree: 60%
+source-wordcount: '2062'
+ht-degree: 59%
 
 ---
 
@@ -134,7 +134,7 @@ En ce qui concerne les données exportées pour un profil donné, il est importa
 
 | Ce qui détermine une exportation de destination | Éléments inclus dans l’exportation de destination |
 |---------|----------|
-| <ul><li>Les attributs et segments mappés servent de repère pour une exportation de destination. Cela signifie que si un segment mappé change d’état (de nul à réalisé ou de réalisé/existant à sorti), ou qu’un attribut mappé est mis à jour, une exportation de destination est déclenchée.</li><li>Puisque les identités ne peuvent actuellement pas être mappées à [!DNL Azure Event Hubs] les destinations, les modifications de toute identité sur un profil donné déterminent également les exportations de destination.</li><li>Toute modification pour un attribut est considérée comme une mise à jour, qu’il s’agisse ou non de la même valeur. Cela signifie qu’une réécriture sur un attribut est considérée comme une modification, même si la valeur elle-même n’a pas changé.</li></ul> | <ul><li>L’objet `segmentMembership` inclut le segment mappé dans le flux de données d’activation, pour lequel le statut du profil a changé suite à un événement de qualification ou de sortie de segment. Notez que d’autres segments non mappés pour lesquels le profil s’est qualifié peuvent faire partie de l’exportation de destination, si ces segments appartiennent à la même [politique de fusion](/help/profile/merge-policies/overview.md) que le segment mappé dans le flux de données d’activation. </li><li>Toutes les identités dans la variable `identityMap` sont également inclus (l’Experience Platform ne prend actuellement pas en charge le mappage d’identité dans la variable [!DNL Azure Event Hubs] destination).</li><li>Seuls les attributs mappés sont inclus dans l’exportation de destination.</li></ul> |
+| <ul><li>Les attributs et segments mappés servent de repère pour une exportation de destination. Cela signifie que si des segments mappés changent d’états (à partir de `null` to `realized` ou de `realized` to `exiting`) ou si les attributs mappés sont mis à jour, une exportation de destination est déclenchée.</li><li>Puisque les identités ne peuvent actuellement pas être mappées à [!DNL Azure Event Hubs] les destinations, les modifications de toute identité sur un profil donné déterminent également les exportations de destination.</li><li>Toute modification pour un attribut est considérée comme une mise à jour, qu’il s’agisse ou non de la même valeur. Cela signifie qu’une réécriture sur un attribut est considérée comme une modification, même si la valeur elle-même n’a pas changé.</li></ul> | <ul><li>L’objet `segmentMembership` inclut le segment mappé dans le flux de données d’activation, pour lequel le statut du profil a changé suite à un événement de qualification ou de sortie de segment. Notez que d’autres segments non mappés pour lesquels le profil s’est qualifié peuvent faire partie de l’exportation de destination, si ces segments appartiennent à la même [politique de fusion](/help/profile/merge-policies/overview.md) que le segment mappé dans le flux de données d’activation. </li><li>Toutes les identités dans la variable `identityMap` sont également inclus (l’Experience Platform ne prend actuellement pas en charge le mappage d’identité dans la variable [!DNL Azure Event Hubs] destination).</li><li>Seuls les attributs mappés sont inclus dans l’exportation de destination.</li></ul> |
 
 {style="table-layout:fixed"}
 
@@ -174,11 +174,11 @@ Les données [!DNL Experience Platform] exportées arrivent dans votre destinati
       },
       "59bd2fkd-3c48-4b18-bf56-4f5c5e6967ae":{
          "lastQualificationTime":"2022-01-02T23:37:33Z",
-         "status":"existing"
+         "status":"realized"
       },
       "947c1c46-008d-40b0-92ec-3af86eaf41c1":{
          "lastQualificationTime":"2021-08-25T23:37:33Z",
-         "status":"existing"
+         "status":"realized"
       },
       "5114d758-ce71-43ba-b53e-e2a91d67b67f":{
          "lastQualificationTime":"2022-01-11T23:37:33Z",
@@ -216,7 +216,7 @@ Vous trouverez ci-dessous d’autres exemples de données exportées, en fonctio
         "ups": {
           "5b998cb9-9488-4ec3-8d95-fa8338ced490": {
             "lastQualificationTime": "2019-04-15T02:41:50+0000",
-            "status": "existing",
+            "status": "realized",
             "createdAt": 1648553325000,
             "updatedAt": 1648553330000,
             "mappingCreatedAt": 1649856570000,
@@ -236,7 +236,7 @@ Vous trouverez ci-dessous d’autres exemples de données exportées, en fonctio
         "ups": {
           "5b998cb9-9488-4ec3-8d95-fa8338ced490": {
             "lastQualificationTime": "2019-04-15T02:41:50+0000",
-            "status": "existing",
+            "status": "realized",
             "createdAt": 1648553325000,
             "updatedAt": 1648553330000,
             "mappingCreatedAt": 1649856570000,

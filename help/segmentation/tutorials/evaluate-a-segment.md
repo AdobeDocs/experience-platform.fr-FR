@@ -5,9 +5,9 @@ title: Évaluation et accès aux résultats des segments
 type: Tutorial
 description: Suivez ce tutoriel pour savoir comment évaluer les segments et accéder aux résultats des segments à l’aide de l’API Adobe Experience Platform Segmentation Service.
 exl-id: 47702819-f5f8-49a8-a35d-034ecac4dd98
-source-git-commit: 378f9260703d388976054431a76ac285724a9ae3
+source-git-commit: 229dd08bc5d5dfab068db3be84ad20d10992fd31
 workflow-type: tm+mt
-source-wordcount: '1615'
+source-wordcount: '1608'
 ht-degree: 64%
 
 ---
@@ -23,7 +23,7 @@ Ce tutoriel nécessite une compréhension pratique des différentes [!DNL Adobe 
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): Fournit un profil client unifié en temps réel basé sur des données agrégées provenant de plusieurs sources.
 - [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): Permet de créer des segments d’audience à partir de [!DNL Real-Time Customer Profile] data.
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md) : framework normalisé selon lequel Platform organise les données de l’expérience client. Pour utiliser au mieux la segmentation, veillez à ce que vos données soient ingérées en tant que profils et événements en fonction des [bonnes pratiques pour la modélisation des données](../../xdm/schema/best-practices.md).
-- [Sandbox](../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuelles qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
+- [Sandbox](../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
 ### En-têtes requis
 
@@ -33,7 +33,7 @@ Ce tutoriel exige aussi que vous ayez terminé le [tutoriel sur l’authentifica
 - x-api-key : `{API_KEY}`
 - x-gw-ims-org-id : `{ORG_ID}`
 
-Dans [!DNL Experience Platform], toutes les ressources sont isolées dans des sandbox virtuelles spécifiques. Demandes à [!DNL Platform] Les API requièrent un en-tête qui spécifie le nom de l’environnement de test dans lequel l’opération aura lieu :
+Dans [!DNL Experience Platform], toutes les ressources sont isolées dans des sandbox virtuels spécifiques. Demandes à [!DNL Platform] Les API requièrent un en-tête qui spécifie le nom de l’environnement de test dans lequel l’opération aura lieu :
 
 - x-sandbox-name : `{SANDBOX_NAME}`
 
@@ -59,7 +59,7 @@ L’évaluation planifiée permet à votre organisation IMS de créer un plannin
 
 >[!NOTE]
 >
->L’évaluation planifiée peut être activée pour les sandbox avec un maximum de cinq (5) stratégies de fusion pour [!DNL XDM Individual Profile]. Si votre organisation compte plus de cinq stratégies de fusion pour [!DNL XDM Individual Profile] dans une seul sandbox, vous ne pourrez pas procéder à l’évaluation planifiée.
+>L’évaluation planifiée peut être activée pour les sandbox avec un maximum de cinq (5) stratégies de fusion pour [!DNL XDM Individual Profile]. Si votre organisation compte plus de cinq stratégies de fusion pour [!DNL XDM Individual Profile] dans un seul sandbox, vous ne pourrez pas procéder à l’évaluation planifiée.
 
 ### Création d’un planning
 
@@ -109,7 +109,7 @@ L’exemple suivant illustre l’attribut `segmentMembership` pour chaque enregi
     "UPS": {
       "04a81716-43d6-4e7a-a49c-f1d8b3129ba9": {
         "timestamp": "2018-04-26T15:52:25+00:00",
-        "status": "existing"
+        "status": "realized"
       },
       "53cba6b2-a23b-454a-8069-fc41308f1c0f": {
         "lastQualificationTime": "2018-04-26T15:52:25+00:00",
@@ -129,7 +129,7 @@ L’exemple suivant illustre l’attribut `segmentMembership` pour chaque enregi
 | Propriété | Description |
 | -------- | ----------- |
 | `lastQualificationTime` | La date et l’heure auxquelles l’appartenance au segment a été affirmée et le profil est entré dans le segment ou en est sorti. |
-| `status` | L’état de la participation au segment dans le cadre de la requête actuelle. Doit être égal à l’une des valeurs connues suivantes : <ul><li>`existing` : l’entité reste dans le segment.</li><li>`realized` : l’entité entre dans le segment.</li><li>`exited` : l’entité quitte le segment.</li></ul> |
+| `status` | L’état de la participation au segment dans le cadre de la requête actuelle. Doit être égal à l’une des valeurs connues suivantes : <ul><li>`realized`: L’entité est admissible pour le segment.</li><li>`exited` : l’entité quitte le segment.</li></ul> |
 
 >[!NOTE]
 >

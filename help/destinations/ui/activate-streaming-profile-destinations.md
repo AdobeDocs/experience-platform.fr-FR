@@ -4,7 +4,7 @@ title: Activer les données d’audience vers des destinations d’exportation d
 type: Tutorial
 description: Découvrez comment activer les données d’audience que vous avez dans Adobe Experience Platform en envoyant des segments vers des destinations basées sur un profil en continu.
 exl-id: bc0f781e-60de-44a5-93cb-06b4a3148591
-source-git-commit: 546758c419670746cf55de35cbb33131d4457cb9
+source-git-commit: 5bb2981b8187fcd3de46f80ca6c892421b3590f6
 workflow-type: tm+mt
 source-wordcount: '780'
 ht-degree: 46%
@@ -120,7 +120,7 @@ Votre exportation [!DNL Experience Platform] Les données arrivent dans votre de
       },
       "59bd2fkd-3c48-4b18-bf56-4f5c5e6967ae": {
         "lastQualificationTime": "2020-05-25T23:37:33Z",
-        "status": "existing"
+        "status": "realized"
       }
     }
   },

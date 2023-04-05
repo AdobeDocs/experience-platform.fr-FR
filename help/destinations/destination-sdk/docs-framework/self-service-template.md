@@ -2,10 +2,10 @@
 title: Modèle de libre-service de documentation // Remplacer par le nom de votre destination
 description: Utilisez ce modèle pour créer une documentation publique pour votre destination dans le catalogue Adobe Experience Platform. // Remplacer par le paragraphe dans la section Aperçu
 exl-id: 99700474-8bf6-4176-acc1-38814e17c995
-source-git-commit: 49b3553c3e408d2dfbca491b1df71be1d4aefaae
+source-git-commit: 9aba3384b320b8c7d61a875ffd75217a5af04815
 workflow-type: tm+mt
-source-wordcount: '1534'
-ht-degree: 28%
+source-wordcount: '1528'
+ht-degree: 29%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 28%
 >* Ce modèle est rarement mis à jour, en fonction des commentaires des partenaires. Avant de commencer à créer de la documentation pour votre destination, assurez-vous d’avoir téléchargé la [dernière version du modèle](/help/destinations/destination-sdk/docs-framework/assets/yourdestination-template.zip).
 
 
-## Présentation {#overview}
+## Aperçu {#overview}
 
 *Fournissez un bref aperçu de votre entreprise, y compris la valeur qu’elle fournit aux clients. Pour plus d’informations, insérez un lien vers la page d’accueil de la documentation du produit.*
 
@@ -66,12 +66,12 @@ Pour vous aider à mieux comprendre comment et à quel moment utiliser la variab
 |---|---|---|
 | GAID | Google Advertising ID | Sélectionnez l’identité cible GAID lorsque votre identité source est un espace de noms GAID. |
 | IDFA | Identifiant Apple pour les annonceurs | Sélectionnez l’identité cible IDFA lorsque votre identité source est un espace de noms IDFA. |
-| ECID | Experience Cloud ID | Espace de noms qui représente l’ECID. Cet espace de noms peut également être référencé par les alias suivants : &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Lisez le document suivant sur [ECID](/help/identity-service/ecid.md) pour plus d’informations. |
+| ECID | Experience Cloud ID | Espace de noms qui représente l’ECID. Cet espace de noms peut également être référencé par les alias suivants : « ID Adobe Marketing Cloud », « ID Adobe Experience Cloud », « ID Adobe Experience Platform ». Lisez le document suivant sur [ECID](/help/identity-service/ecid.md) pour plus d’informations. |
 | phone_sha256 | Numéros de téléphone hachés avec l’algorithme SHA256 | Adobe Experience Platform prend en charge le texte brut et les numéros de téléphone hachés SHA256. Lorsque votre champ source contient des attributs non hachés, vérifiez la variable **[!UICONTROL Appliquer la transformation]** option, pour avoir [!DNL Platform] hachage automatique des données lors de l’activation. |
 | email_lc_sha256 | Adresses électroniques hachées avec l’algorithme SHA256 | Adobe Experience Platform prend en charge le texte brut et les adresses électroniques hachées SHA256. Lorsque votre champ source contient des attributs non hachés, vérifiez la variable **[!UICONTROL Appliquer la transformation]** option, pour avoir [!DNL Platform] hachage automatique des données lors de l’activation. |
 | extern_id | ID utilisateur personnalisés | Sélectionnez cette identité cible lorsque votre identité source est un espace de noms personnalisé. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Type et fréquence d’exportation {#export-type-frequency}
 
@@ -87,7 +87,7 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 | Fréquence des exportations | **[!UICONTROL Diffusion en continu]** | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation des segments, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
 | Fréquence des exportations | **[!UICONTROL Lot]** | Les destinations par lots exportent des fichiers vers des plateformes en aval par incréments de trois, six, huit, douze ou vingt-quatre heures. En savoir plus sur les [destinations basées sur des fichiers par lots](/help/destinations/destination-types.md#file-based). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Se connecter à la destination {#connect}
 
@@ -163,7 +163,7 @@ Lecture [(Version bêta) Exportation de jeux de données](/help/destinations/ui/
       },
       "59bd2fkd-3c48-4b18-bf56-4f5c5e6967ae": {
         "lastQualificationTime": "2020-05-25T23:37:33Z",
-        "status": "existing"
+        "status": "realized"
       }
     }
   },

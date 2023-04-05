@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Guide de l’interface utilisateur de la segmentation en flux continu
 description: La segmentation en flux continu sur Adobe Experience Platform vous permet d’effectuer une segmentation en temps quasi réel tout en vous concentrant sur la richesse des données. Avec la segmentation en flux continu, la qualification de segment se produit désormais lorsque les données entrent dans Platform, ce qui évite d’avoir à planifier et à exécuter des tâches de segmentation. Grâce à cette fonctionnalité, la plupart des règles de segment peuvent désormais être évaluées au fur et à mesure que les données sont transmises à Platform, ce qui signifie que l’appartenance à un segment sera maintenue à jour sans avoir à exécuter des tâches de segmentation planifiée.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 229dd08bc5d5dfab068db3be84ad20d10992fd31
 workflow-type: tm+mt
-source-wordcount: '1495'
-ht-degree: 100%
+source-wordcount: '1490'
+ht-degree: 99%
 
 ---
 
@@ -74,7 +74,7 @@ Un graphique linéaire se trouve en dessous, qui indique le nombre de nouvelles 
 
 >[!NOTE]
 >
->Un segment est considéré comme qualifié s’il passe de l’absence d’état à l’état réalisé ou s’il passe de l’état sorti à l’état réalisé. Un segment est considéré comme disqualifié s’il passe de l’état réalisé à l’état sorti ou de l’état existant à l’état sorti.
+>Un segment est considéré comme qualifié s’il passe de l’absence d’état à l’état réalisé ou s’il passe de l’état sorti à l’état réalisé. Un segment est considéré comme non qualifié s’il passe de la réalisation à la sortie.
 >
 >Vous trouverez plus d’informations sur ces états dans le tableau des états de la [présentation de la segmentation](./overview.md#browse).
 

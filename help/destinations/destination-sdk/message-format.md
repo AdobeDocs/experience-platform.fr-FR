@@ -2,9 +2,9 @@
 description: Cette page traite du format du message et de la transformation des profils dans les données exportées de Adobe Experience Platform vers les destinations.
 title: Format des messages
 exl-id: 1212c1d0-0ada-4ab8-be64-1c62a1158483
-source-git-commit: bd89df0659604c05ffd049682343056dbe5667e3
+source-git-commit: 9aba3384b320b8c7d61a875ffd75217a5af04815
 workflow-type: tm+mt
-source-wordcount: '2272'
+source-wordcount: '2267'
 ht-degree: 4%
 
 ---
@@ -15,12 +15,12 @@ ht-degree: 4%
 
 Pour comprendre le format des messages, le processus de configuration et de transformation des profils du côté Adobe, familiarisez-vous avec les concepts Experience Platform suivants :
 
-* **Modèle de données d’expérience (XDM)**. [Présentation de XDM](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=fr) et  [Création d’un schéma XDM dans Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/create-schema-ui.html?lang=en).
+* **Modèle de données d’expérience (XDM)**. [Présentation de XDM](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=fr) et  [Création d’un schéma XDM dans Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/create-schema-ui.html?lang=fr).
 * **Classe**. [Création et modification de classes dans l’interface utilisateur](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/resources/classes.html?lang=en).
 * **IdentityMap**. La carte des identités représente une carte de toutes les identités des utilisateurs finaux dans Adobe Experience Platform. Voir `xdm:identityMap` dans le [Dictionnaire des champs XDM](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/field-dictionary.html?lang=en).
 * **SegmentMembership**. Le [segmentMembership](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/field-dictionary.html?lang=en) L’attribut XDM indique les segments dont un profil est membre. Pour les trois valeurs différentes de la variable `status` , lisez la documentation sur [Groupe de champs Détails de l’appartenance à un segment](https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/segmentation.html).
 
-## Présentation {#overview}
+## Aperçu {#overview}
 
 Utilisez le contenu de cette page avec le reste de la variable [options de configuration pour les destinations partenaires](./configuration-options.md). Cette page traite du format du message et de la transformation des profils dans les données exportées de Adobe Experience Platform vers les destinations. L’autre page traite des détails relatifs à la connexion et à l’authentification à votre destination.
 
@@ -84,7 +84,7 @@ Au niveau du format du message, les transformations correspondantes sont les sui
 | `_your_custom_schema.lastName` | `attributes.last_name` | `last_name` |
 | `personalEmail.address` | `attributes.external_id` | `external_id` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Structure de profil dans Experience Platform {#profile-structure}
 
@@ -93,7 +93,7 @@ Pour comprendre les exemples ci-dessous dans la page, il est important de conna�
 Les profils comportent 3 sections :
 
 * `segmentMembership` (toujours présente sur un profil)
-   * cette section contient tous les segments présents sur le profil. Les segments peuvent avoir l’un des trois états suivants : `realized`, `existing`, `exited`.
+   * cette section contient tous les segments présents sur le profil. Les segments peuvent avoir l’un des deux états suivants : `realized` ou `exited`.
 * `identityMap` (toujours présente sur un profil)
    * cette section contient toutes les identités présentes sur le profil (email, Google GAID, Apple IDFA, etc.) et que l’utilisateur a mappées pour l’exportation dans le workflow d’activation.
 * attributs (selon la configuration de la destination, ils peuvent être présents sur le profil). Il existe également une légère différence entre les attributs prédéfinis et les attributs de forme libre :
@@ -110,7 +110,7 @@ Voir ci-dessous deux exemples de profils en Experience Platform :
     "ups": {
       "11111111-1111-1111-1111-111111111111": {
         "lastQualificationTime": "2019-04-15T02:41:50.000+0000",
-        "status": "existing"
+        "status": "realized"
       }
     }
   },
@@ -139,7 +139,7 @@ Voir ci-dessous deux exemples de profils en Experience Platform :
     "ups": {
       "11111111-1111-1111-1111-111111111111": {
         "lastQualificationTime": "2019-04-15T02:41:50.000+0000",
-        "status": "existing"
+        "status": "realized"
       }
     }
   },
@@ -268,7 +268,7 @@ Profil 1 :
       },
       "788d8874-8007-4253-92b7-ee6b6c20c6f3": {
         "lastQualificationTime": "2019-11-20T13:15:49Z",
-        "status": "existing"
+        "status": "realized"
       },
       "8f812592-3f06-416b-bd50-e7831848a31a": {
         "lastQualificationTime": "2019-11-20T13:15:49Z",
@@ -291,7 +291,7 @@ Profil 2 :
       },
       "af854278-894a-4192-a96b-320fbf2623fd": {
         "lastQualificationTime": "2021-08-20T16:44:37Z",
-        "status": "existing"
+        "status": "realized"
       },
       "66505bf9-bc08-4bac-afbc-8b6706650ea4": {
         "lastQualificationTime": "2019-08-20T17:23:04Z",
@@ -511,7 +511,7 @@ Profil 1 :
             },
             "788d8874-8007-4253-92b7-ee6b6c20c6f3": {
               "lastQualificationTime": "2019-11-20T13:15:49Z",
-              "status": "existing"
+              "status": "realized"
             },
             "8f812592-3f06-416b-bd50-e7831848a31a": {
                 "lastQualificationTime": "2019-11-20T13:15:49Z",
@@ -685,7 +685,7 @@ Profil 1 :
             },
             "788d8874-8007-4253-92b7-ee6b6c20c6f3": {
               "lastQualificationTime": "2019-11-20T13:15:49Z",
-              "status": "existing"
+              "status": "realized"
             },
             "8f812592-3f06-416b-bd50-e7831848a31a": {
                 "lastQualificationTime": "2019-11-20T13:15:49Z",
@@ -874,7 +874,7 @@ Profil 1 :
       "ups":{
          "788d8874-8007-4253-92b7-ee6b6c20c6f3":{
             "lastQualificationTime":"2020-11-20T13:15:49Z",
-            "status":"existing"
+            "status":"realized"
          }
       }
    }
@@ -894,7 +894,7 @@ Profil 2 :
       "ups":{
          "788d8874-8007-4253-92b7-ee6b6c20c6f3":{
             "lastQualificationTime":"2020-11-20T13:15:49Z",
-            "status":"existing"
+            "status":"realized"
          }
       }
    }
@@ -914,7 +914,7 @@ Profil 3 :
       "ups":{
          "8f812592-3f06-416b-bd50-e7831848a31a":{
             "lastQualificationTime":"2021-02-20T12:00:00Z",
-            "status":"existing"
+            "status":"realized"
          }
       }
    }
@@ -934,11 +934,11 @@ Profil 4 :
       "ups":{
          "8f812592-3f06-416b-bd50-e7831848a31a":{
             "lastQualificationTime":"2021-02-20T12:00:00Z",
-            "status":"existing"
+            "status":"realized"
          },
          "788d8874-8007-4253-92b7-ee6b6c20c6f3":{
             "lastQualificationTime":"2020-11-20T13:15:49Z",
-            "status":"existing"
+            "status":"realized"
          }
       }
    }
@@ -1194,10 +1194,10 @@ Le tableau ci-dessous fournit des descriptions des fonctions dans les exemples c
 | `input.profile` | Le profil, représenté sous la forme [JsonNode](https://fasterxml.github.io/jackson-databind/javadoc/2.11/com/fasterxml/jackson/databind/node/JsonNodeType.html). Suit le schéma XDM du partenaire mentionné plus haut sur cette page. |
 | `destination.segmentAliases` | Mappage des identifiants de segment dans l’espace de noms Adobe Experience Platform aux alias de segment dans le système du partenaire. |
 | `destination.segmentNames` | Mappage des noms de segment dans l’espace de noms Adobe Experience Platform aux noms de segment dans le système du partenaire. |
-| `addedSegments(listOfSegments)` | Renvoie uniquement les segments ayant un état `realized` ou `existing`. |
+| `addedSegments(listOfSegments)` | Renvoie uniquement les segments ayant un état `realized`. |
 | `removedSegments(listOfSegments)` | Renvoie uniquement les segments ayant un état `exited`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Étapes suivantes {#next-steps}
 

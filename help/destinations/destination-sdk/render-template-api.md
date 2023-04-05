@@ -2,9 +2,9 @@
 description: Cette page répertorie toutes les opérations d’API que vous pouvez effectuer à l’aide du point d’entrée de l’API « /authoring/testing/template/render » et fournit leur description. Effectuez le rendu des données exportées pour votre destination, en fonction de votre modèle de transformation de message.
 title: Opérations de l’API pour le rendu du modèle
 exl-id: e64ea89e-6064-4a05-9730-e0f7d7a3e1db
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 9aba3384b320b8c7d61a875ffd75217a5af04815
 workflow-type: tm+mt
-source-wordcount: '806'
+source-wordcount: '803'
 ht-degree: 100%
 
 ---
@@ -45,7 +45,7 @@ POST authoring/testing/template/render
 | `template` | Version du modèle placée dans une séquence dʼéchappement, sur la base duquel vous effectuez le rendu des profils exportés. |
 | `profiles` | *Facultatif*. Vous pouvez ajouter des profils au corps de la demande. Si vous n’ajoutez aucun profil, Experience Platform génère et ajoute automatiquement des profils à la demande. <br> Pour ajouter des profils au corps de la demande, générez-les à lʼaide de lʼ[API de génération de profil type](./sample-profile-generation-api.md). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Notez que la réponse renvoyée par le point d’entrée de l’API du modèle de rendu diffère selon la stratégie d’agrégation de la destination. Si votre destination dispose d’une stratégie d’agrégation configurable, la clé d’agrégation qui détermine comment les profils sont agrégés est également renvoyée dans la réponse. Pour en savoir plus sur les [stratégies d’agrégation](./destination-configuration.md#aggregation), consultez le document de configuration de la destination.
 
@@ -84,7 +84,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
                 "ups": {
                     "segmentid1": {
                         "lastQualificationTime": "2021-10-26T16:59:00.828461Z",
-                        "status": "existing"
+                        "status": "realized"
                     },
                     "segmentid3": {
                         "lastQualificationTime": "2021-10-26T16:59:00.828469Z",
@@ -139,7 +139,7 @@ Une réponse non réussie renvoie un état HTTP 400 avec la description des err
                         "ups": {
                             "segmentid1": {
                                 "lastQualificationTime": "2021-10-26T16:59:00.828461Z",
-                                "status": "existing"
+                                "status": "realized"
                             },
                             "segmentid3": {
                                 "lastQualificationTime": "2021-10-26T16:59:00.828469Z",
@@ -205,7 +205,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
                 "ups": {
                     "segmentid1": {
                         "lastQualificationTime": "2021-10-26T17:41:55.947859Z",
-                        "status": "existing"
+                        "status": "realized"
                     },
                     "segmentid3": {
                         "lastQualificationTime": "2021-10-26T17:41:55.947860Z",
@@ -255,7 +255,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
                 "ups": {
                     "segmentid1": {
                         "lastQualificationTime": "2021-10-26T17:41:55.948187Z",
-                        "status": "existing"
+                        "status": "realized"
                     },
                     "segmentid3": {
                         "lastQualificationTime": "2021-10-26T17:41:55.948188Z",
@@ -509,7 +509,7 @@ Une réponse non réussie renvoie un état HTTP 400 avec la description des err
             "aggregationKey": {
                 "destinationInstanceId": "49966037-32cd-4457-a105-2cbf9c01826a",
                 "segmentId": "segmentid1",
-                "segmentStatus": "existing",
+                "segmentStatus": "realized",
                 "identityNamespaces": [
                     "android_channel",
                     "amazon_channel",
@@ -523,7 +523,7 @@ Une réponse non réussie renvoie un état HTTP 400 avec la description des err
                         "ups": {
                             "segmentid1": {
                                 "lastQualificationTime": "2021-10-26T17:41:55.947+0000",
-                                "status": "existing"
+                                "status": "realized"
                             }
                         }
                     },
@@ -545,7 +545,7 @@ Une réponse non réussie renvoie un état HTTP 400 avec la description des err
                         "ups": {
                             "segmentid1": {
                                 "lastQualificationTime": "2021-10-26T17:41:55.947+0000",
-                                "status": "existing"
+                                "status": "realized"
                             }
                         }
                     },
@@ -567,7 +567,7 @@ Une réponse non réussie renvoie un état HTTP 400 avec la description des err
                         "ups": {
                             "segmentid1": {
                                 "lastQualificationTime": "2021-10-26T17:41:55.947+0000",
-                                "status": "existing"
+                                "status": "realized"
                             }
                         }
                     },
@@ -589,7 +589,7 @@ Une réponse non réussie renvoie un état HTTP 400 avec la description des err
                         "ups": {
                             "segmentid1": {
                                 "lastQualificationTime": "2021-10-26T17:41:55.947+0000",
-                                "status": "existing"
+                                "status": "realized"
                             }
                         }
                     },
@@ -611,7 +611,7 @@ Une réponse non réussie renvoie un état HTTP 400 avec la description des err
                         "ups": {
                             "segmentid1": {
                                 "lastQualificationTime": "2021-10-26T17:41:55.948+0000",
-                                "status": "existing"
+                                "status": "realized"
                             }
                         }
                     },
@@ -633,7 +633,7 @@ Une réponse non réussie renvoie un état HTTP 400 avec la description des err
                         "ups": {
                             "segmentid1": {
                                 "lastQualificationTime": "2021-10-26T17:41:55.948+0000",
-                                "status": "existing"
+                                "status": "realized"
                             }
                         }
                     },
@@ -655,7 +655,7 @@ Une réponse non réussie renvoie un état HTTP 400 avec la description des err
                         "ups": {
                             "segmentid1": {
                                 "lastQualificationTime": "2021-10-26T17:41:55.948+0000",
-                                "status": "existing"
+                                "status": "realized"
                             }
                         }
                     },
@@ -677,7 +677,7 @@ Une réponse non réussie renvoie un état HTTP 400 avec la description des err
                         "ups": {
                             "segmentid1": {
                                 "lastQualificationTime": "2021-10-26T17:41:55.948+0000",
-                                "status": "existing"
+                                "status": "realized"
                             }
                         }
                     },
@@ -950,7 +950,7 @@ Une réponse non réussie renvoie un état HTTP 400 avec la description des err
             "aggregationKey": {
                 "destinationInstanceId": "49966037-32cd-4457-a105-2cbf9c01826a",
                 "segmentId": "segmentid1",
-                "segmentStatus": "existing",
+                "segmentStatus": "realized",
                 "identityNamespaces": [
                     "named_user_id"
                 ]
@@ -961,7 +961,7 @@ Une réponse non réussie renvoie un état HTTP 400 avec la description des err
                         "ups": {
                             "segmentid1": {
                                 "lastQualificationTime": "2021-10-26T17:41:55.947+0000",
-                                "status": "existing"
+                                "status": "realized"
                             }
                         }
                     },
@@ -983,7 +983,7 @@ Une réponse non réussie renvoie un état HTTP 400 avec la description des err
                         "ups": {
                             "segmentid1": {
                                 "lastQualificationTime": "2021-10-26T17:41:55.948+0000",
-                                "status": "existing"
+                                "status": "realized"
                             }
                         }
                     },

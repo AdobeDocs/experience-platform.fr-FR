@@ -5,7 +5,7 @@ title: Connexion aux destinations en continu et activation des données à l’a
 description: Ce document couvre la création de destinations de diffusion en continu à l’aide de l’API Adobe Experience Platform.
 type: Tutorial
 exl-id: 3e8d2745-8b83-4332-9179-a84d8c0b4400
-source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
+source-git-commit: 9aba3384b320b8c7d61a875ffd75217a5af04815
 workflow-type: tm+mt
 source-wordcount: '2241'
 ht-degree: 57%
@@ -36,7 +36,7 @@ Ce guide nécessite une compréhension professionnelle des composants suivants d
 
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md) : framework normalisé selon lequel Experience Platform organise les données de l’expérience client.
 * [[!DNL Catalog Service]](../../catalog/home.md): [!DNL Catalog] est le système d’enregistrement de l’emplacement et de la traçabilité des données dans Experience Platform.
-* [Sandbox](../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuelles qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
+* [Sandbox](../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
 
 Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour activer les données vers les destinations de diffusion en continu dans Platform.
 
@@ -59,13 +59,13 @@ Pour lancer des appels aux API Platform, vous devez d’abord suivre le [tutorie
 * x-api-key : `{API_KEY}`
 * x-gw-ims-org-id: `{ORG_ID}`
 
-Les ressources d’Experience Platform peuvent être isolées dans des environnements de test virtuels spécifiques. Dans les requêtes aux API Platform, vous pouvez spécifier le nom et l’identifiant de l’environnement de test dans lequel l’opération aura lieu. Il s’agit de paramètres facultatifs.
+Les ressources d’Experience Platform peuvent être isolées dans des sandbox virtuels spécifiques. Dans les requêtes aux API Platform, vous pouvez spécifier le nom et l’identifiant du sandbox dans lequel l’opération aura lieu. Il s’agit de paramètres facultatifs.
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Pour plus d’informations sur les environnements de test dans Experience Platform, consultez la [documentation de présentation des environnements de test](../../sandboxes/home.md).
+>Pour plus d’informations sur les sandbox dans Experience Platform, consultez la [documentation de présentation des sandbox](../../sandboxes/home.md).
 
 Toutes les requêtes qui contiennent un payload (POST, PUT, PATCH) nécessitent un en-tête de type de média supplémentaire :
 
@@ -578,7 +578,7 @@ La réponse renvoyée doit inclure dans le paramètre `transformations` les segm
       },
       "7841ba61-23c1-4bb3-a495-00d695fe1e93": {
         "lastQualificationTime": "2020-03-04T23:37:33Z",
-        "status": "existing"
+        "status": "realized"
       }
     }
   },
