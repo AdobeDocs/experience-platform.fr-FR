@@ -1,18 +1,14 @@
 ---
 title: Notes de mise à jour d’Adobe Experience Platform
 description: Les notes de mise à jour de mars 2023 pour Adobe Experience Platform.
-source-git-commit: 5f7cc08d48b7cf7d057fe199882be011607e51e6
+source-git-commit: 5b8dd4b295f9363fd7e848070b1ec21ff519c524
 workflow-type: tm+mt
-source-wordcount: '2397'
-ht-degree: 37%
+source-wordcount: '2205'
+ht-degree: 38%
 
 ---
 
 # Notes de mise à jour d’Adobe Experience Platform
-
->[!IMPORTANT]
->
->À compter du 5 avril 2023, la variable `Existing` est abandonné du mappage de l’adhésion au segment afin de supprimer la redondance dans le cycle de vie de l’adhésion au segment. Après cette modification, les profils qualifiés dans un segment seront représentés comme `Realized` et les profils disqualifiés continueront à être représentés comme `Exited`. Pour plus d’informations sur cette modification, veuillez lire la section [Section Segmentation Service](#segmentation).
 
 **Date de publication : 29 mars 2023**
 
@@ -189,7 +185,6 @@ Pour en savoir plus sur Real-time CDP B2B Edition, consultez la [présentatio
 | Fonctionnalité | Description |
 | ------- | ----------- |
 | Mesures de profil | Pour vous donner une représentation plus précise des mesures de profil, la ventilation des adhésions et les mesures d’attrition sont combinées et sont désormais calculées sur une période de 24 heures. Pour plus d’informations, reportez-vous à la section [Guide de l’interface utilisateur de segmentation](../../segmentation/ui/overview.md#browse) |
-| Mappage de l’adhésion aux segments | Comme suite à l’annonce précédente faite le 5 avril 2023, la variable `Existing` est abandonné du mappage de l’adhésion au segment afin de supprimer la redondance dans le cycle de vie de l’adhésion au segment. Après cette modification, les profils qualifiés dans un segment seront représentés comme `Realized` et les profils disqualifiés continueront à être représentés comme `Exited`.<br/><br/> Cette modification peut avoir un impact sur vous si vous utilisez [destinations d’entreprise](../../destinations/destination-types.md#streaming-profile-export) (Amazon Kinesis, Azure Event Hubs, API HTTP) et peuvent avoir mis en place des processus automatisés en aval en fonction des `Existing` statut. Vérifiez vos intégrations en aval si c’est votre cas. Si vous souhaitez identifier les profils nouvellement qualifiés au-delà d’un certain temps, envisagez d’utiliser une combinaison du statut `Realized` et du `lastQualificationTime` dans votre mappage d’appartenance aux segments. Pour plus d’informations, contactez votre représentant ou représentante Adobe. |
 
 {style="table-layout:auto"}
 
