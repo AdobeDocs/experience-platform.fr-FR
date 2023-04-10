@@ -2,9 +2,9 @@
 title: FAQ sur le SDK Web Adobe Experience Platform
 description: Obtenez des réponses aux questions fréquentes sur le SDK Web de Adobe Experience Platform.
 exl-id: 6ddb4b4d-c9b8-471a-bd2e-135dc4202876
-source-git-commit: 5586c788f4ae5c61b3b94f93b4180fc293d7e179
+source-git-commit: a8f6bb8c3e35f4c17812ef944440210b7fe3f87b
 workflow-type: tm+mt
-source-wordcount: '2101'
+source-wordcount: '2104'
 ht-degree: 3%
 
 ---
@@ -101,7 +101,7 @@ Le SDK Web de Adobe Experience Platform a été développé pour les personnes s
 
 ## Comment puis-je accéder au SDK Web de Adobe Experience Platform pour commencer ?
 
-Le SDK Web est actuellement disponible pour le grand public et peut être utilisé pour envoyer des données aux produits Adobe Experience Cloud. La possibilité d’envoyer des données à des solutions tierces sera bientôt disponible. Le SDK est gratuit, est hébergé gratuitement par Adobe et peut être téléchargé afin que vous puissiez l’héberger gratuitement sur vos propres serveurs, si vous le souhaitez. Le SDK Web de Platform nécessite l’accès aux configurations du flux de données et au créateur de schémas XDM de Adobe Experience Platform, afin que les serveurs d’Adobe puissent gérer correctement les données entrantes provenant du SDK. Si vous souhaitez y accéder, contactez votre responsable du succès client pour lancer le processus de demande.
+Le SDK Web est actuellement disponible pour le grand public et peut être utilisé pour envoyer des données aux produits Adobe Experience Cloud. La possibilité d’envoyer des données à des solutions tierces sera bientôt disponible. Le SDK est gratuit et est hébergé gratuitement par Adobe. Si nécessaire, vous pouvez le télécharger et l’héberger sur vos propres serveurs sans frais. Le SDK Web de Platform nécessite l’accès aux configurations du flux de données et au créateur de schémas XDM de Adobe Experience Platform, afin que les serveurs d’Adobe puissent gérer correctement les données entrantes provenant du SDK. Si vous souhaitez y accéder, contactez votre équipe de compte d’Adobe pour lancer le processus de demande.
 
 ## Quels cas pratiques sont actuellement pris en charge par le SDK Web ?
 
@@ -156,11 +156,11 @@ Oui, le SDK Web utilise actuellement entre un et sept cookies en fonction de vot
 | **Nom** | **maxAge** | **Page conviviale** | **Description** |
 |---|---|---|---|
 | **kndct_orgid_identity** | 34128000 | 395 jours | Le cookie d’identité stocke l’ECID, ainsi que d’autres informations relatives à l’ECID. |
-| **kndctr_orgid_consent_check** | 7200 | 2 heures | Ce cookie stocke les préférences de consentement de l’utilisateur pour le site web. |
+| **kndctr_orgid_consent_check** | 7200 | 2 heures | Ce cookie stocke les préférences de consentement de l’utilisateur pour le site web. |
 | **kndctr_orgid_consent** | 15552000 | 180 jours | Ce cookie basé sur une session indique au serveur de rechercher les préférences de consentement côté serveur. |
-| **kndctr_orgid_cluster** | 1 800 | 30 minutes | Ce cookie stocke la région Experience Edge qui traite les requêtes de l’utilisateur actuel. La région est utilisée dans le chemin d’URL afin qu’Experience Edge puisse acheminer la requête vers la région appropriée. Ce cookie a une durée de vie de 30 minutes, de sorte que si un utilisateur se connecte à une autre adresse IP, la demande peut être acheminée vers la région la plus proche. |
+| **kndctr_orgid_cluster** | 1800 | 30 minutes | Ce cookie stocke la région Experience Edge qui traite les requêtes de l’utilisateur actuel. La région est utilisée dans le chemin d’URL afin qu’Experience Edge puisse acheminer la requête vers la région appropriée. Ce cookie a une durée de vie de 30 minutes, de sorte que si un utilisateur se connecte à une autre adresse IP, la demande peut être acheminée vers la région la plus proche. |
 | **mbox** | 63072000 | 2 ans | Ce cookie s’affiche lorsque le paramètre de migration Target est défini sur true. Cela permet à Target de [cookie mbox](https://developer.adobe.com/target/implement/client-side/atjs/atjs-cookies/) à définir par le SDK Web. |
-| **mboxEdgeCluster** | 1 800 | 30 minutes | Ce cookie s’affiche lorsque le paramètre de migration Target est défini sur true. Ce cookie permet au SDK Web de communiquer la grappe Edge appropriée à at.js afin que les profils Target puissent rester synchronisés lorsque les utilisateurs naviguent sur un site. |
+| **mboxEdgeCluster** | 1800 | 30 minutes | Ce cookie s’affiche lorsque le paramètre de migration Target est défini sur true. Ce cookie permet au SDK Web de communiquer la grappe Edge appropriée à at.js afin que les profils Target puissent rester synchronisés lorsque les utilisateurs naviguent sur un site. |
 | **AMCV_###@AdobeOrg** | 34128000 | 395 jours | Ce cookie s’affiche uniquement lorsque la migration des identifiants sur le SDK Web de Adobe Experience Platform est activée. Ce cookie est utile lors de la transition vers le SDK Web alors que certaines parties du site utilisent toujours visitor.js. Voir [Documentation idMigrationEnabled](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=en#identity-options) pour en savoir plus sur ce paramètre. |
 
 Lors de l’utilisation du SDK Web, le réseau Edge définit un ou plusieurs des cookies ci-dessus. Le réseau Edge définit tous les cookies avec la variable `secure` et `sameSite="none"` attributs.

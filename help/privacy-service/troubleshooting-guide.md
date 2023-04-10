@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Guide de dépannage de Privacy Service
 description: Ce document fournit des réponses aux questions fréquentes sur Privacy Service, ainsi que des informations sur les erreurs courantes rencontrées dans l’API.
 exl-id: 8afbb065-0f41-4048-9003-a22c0c839717
-source-git-commit: fc115801ac8e75cd58356060ad98f1e340d2494a
-workflow-type: ht
+source-git-commit: f619bbf2c8d313eabc6444b4bd8c09615a00cc42
+workflow-type: tm+mt
 source-wordcount: '917'
-ht-degree: 100%
+ht-degree: 97%
 
 ---
 
@@ -69,7 +69,7 @@ Adobe n’est pas compatible avec l’utilisation de [!DNL Privacy Service] comm
 
 Les requêtes d’accès à des informations personnelles sont sensibles au facteur temps et sont effectuées en fonction des lois de confidentialité applicables. L’envoi de requêtes autres que les requêtes relatives à l’accès ou à la suppression de titulaires de données ou de clientes et clients a des répercussions sur les clientes et clients de [!DNL Privacy Service] et sur la capacité de [!DNL Privacy Service] à respecter les délais légaux appropriés. Une limite de chargement quotidienne stricte est maintenant en place pour prévenir les abus du service.
 
-Veuillez contacter votre gestionnaire de compte (CDM) pour coordonner vos efforts et fournir un niveau de service adéquat en matière de suppression des données personnelles identifiables (PII) ou des problèmes relatifs aux données.
+Veuillez contacter votre équipe de compte d’Adobe pour coordonner et fournir un niveau d’effort afin de supprimer tout problème de PII ou de données.
 
 ## Comment puis-je obtenir des informations sur l’état d’une requête ou d’une tâche de confidentialité ?
 

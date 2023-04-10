@@ -2,9 +2,9 @@
 title: (Version bêta) Audiences Experience Cloud
 description: Découvrez comment partager des segments d’Experience Platform vers différentes solutions d’Experience Platform.
 last-substantial-update: 2023-01-25T00:00:00Z
-source-git-commit: 32222aa1c96537b51cd0db35d9cdabce9210f64a
+source-git-commit: a8f6bb8c3e35f4c17812ef944440210b7fe3f87b
 workflow-type: tm+mt
-source-wordcount: '1512'
+source-wordcount: '1509'
 ht-degree: 24%
 
 ---
@@ -67,7 +67,7 @@ Note: briefly talk about when to share segments to these destinations using the 
 
 ### Pour les clients qui utilisent la solution de partage de segments héritée
 
-Si vous partagez déjà des segments de l’Experience Platform vers l’Audience Manager et d’autres solutions d’Experience Cloud via la variable [intégration du partage de segment hérité](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=en#aep-segments-in-aam), vous devez contacter l’assistance clientèle ou votre responsable du succès client pour désactiver l’intégration héritée. L’assistance clientèle et les équipes de gestion du service clientèle doivent déposer un ticket Jira (voir le ticket de modèle AAM-52354) pour désactiver l’intégration.
+Si vous partagez déjà des segments de l’Experience Platform vers l’Audience Manager et d’autres solutions d’Experience Cloud via la variable [intégration du partage de segment hérité](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam), vous devez contacter l’assistance clientèle ou votre équipe de compte d’Adobe pour désactiver l’intégration héritée. L’assistance clientèle et les équipes du compte d’Adobe doivent déposer un ticket Jira (voir le ticket de modèle AAM-52354) pour désactiver l’intégration.
 
 Le délai d’activation pour résoudre le ticket de désapprovisionnement pour les clients bêta est de six jours ouvrables ou moins. Une fois l’intégration héritée existante désactivée, vous pouvez procéder à la [création d&#39;une connexion](#connect) via la carte de destination en libre-service.
 

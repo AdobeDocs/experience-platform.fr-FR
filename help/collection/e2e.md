@@ -2,9 +2,9 @@
 title: Présentation complète de la collecte de données
 description: Présentation générale de l’envoi de données d’événement aux solutions Adobe Experience Cloud à l’aide des fonctionnalités de collecte de données Adobe Experience Platform.
 exl-id: 01ddbb19-40bb-4cb5-bfca-b272b88008b3
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: f619bbf2c8d313eabc6444b4bd8c09615a00cc42
 workflow-type: tm+mt
-source-wordcount: '2619'
+source-wordcount: '2621'
 ht-degree: 95%
 
 ---
@@ -30,7 +30,7 @@ Ce tutoriel utilise l’interface utilisateur de collecte de données pour crée
 
 Consultez le guide sur la [gestion des autorisations pour la collecte de données](./permissions.md) pour savoir comment accorder l’accès aux propriétés et aux droits de propriété.
 
-Pour utiliser les différents produits de collecte de données mentionnés dans ce guide, vous devez également avoir accès aux flux de données et la possibilité de créer et de gérer des schémas. Si vous avez besoin d’accéder à l’une de ces fonctionnalités, contactez votre CSM qui vous aidera à obtenir l’accès nécessaire. Si vous n’avez pas acheté Adobe Experience Platform, Adobe vous donnera l’accès nécessaire pour utiliser le SDK sans frais supplémentaires.
+Pour utiliser les différents produits de collecte de données mentionnés dans ce guide, vous devez également avoir accès aux flux de données et la possibilité de créer et de gérer des schémas. Si vous avez besoin d’accéder à l’une de ces fonctionnalités, contactez votre équipe de compte d’Adobe pour obtenir l’accès nécessaire. Si vous n’avez pas acheté Adobe Experience Platform, Adobe vous donnera l’accès nécessaire pour utiliser le SDK sans frais supplémentaires.
 
 Si vous avez déjà accès à Platform, vous devez vous assurer que toutes les [autorisations](../access-control/home.md#permissions) dans les catégories suivantes sont activées :
 
@@ -159,7 +159,7 @@ Dans l’interface utilisateur, sélectionnez **[!UICONTROL Éléments de donné
 
 ![Type d’objet XDM](./images/e2e/xdm-object.png)
 
-La boîte de dialogue de configuration s’affiche pour le type d’objet XDM. La boîte de dialogue sélectionne automatiquement votre environnement de test Platform. Vous pouvez voir tous les schémas qui ont été créés dans cette sanbox. Sélectionnez le schéma XDM que vous avez créé précédemment dans la liste.
+La boîte de dialogue de configuration s’affiche pour le type d’objet XDM. La boîte de dialogue sélectionne automatiquement votre sandbox Platform. Vous pouvez voir tous les schémas qui ont été créés dans ce sandbox. Sélectionnez le schéma XDM que vous avez créé précédemment dans la liste.
 
 ![Type d’objet XDM](./images/e2e/select-schema.png)
 

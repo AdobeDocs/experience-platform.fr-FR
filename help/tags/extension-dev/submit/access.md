@@ -2,9 +2,9 @@
 title: Octroyer un accès utilisateur
 description: Configurez les comptes utilisateur et les autorisations de balises des membres de votre équipe dans Adobe Experience Platform.
 exl-id: c7235e50-13b3-4487-b171-873063875621
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: b0615a2fd2bd9d9dd729d506f71ce4a91c64a4fd
 workflow-type: tm+mt
-source-wordcount: '215'
+source-wordcount: '218'
 ht-degree: 36%
 
 ---
@@ -23,4 +23,4 @@ Pour qu’un utilisateur puisse accéder aux fonctionnalités de balise, il doit
 
 ## Confirmer l’approvisionnement
 
-Une fois que votre société a accès aux balises et que vos utilisateurs sont configurés comme décrit ci-dessus, vous devez pouvoir accéder à l’interface utilisateur de la collecte de données et à l’interface utilisateur Experience Platform à partir de la [Tableau de bord Adobe Experience Cloud](https://experience.adobe.com/). Si vous ne pouvez toujours pas accéder à l’une ou l’autre des interfaces utilisateur après avoir suivi les étapes ci-dessus, contactez vos représentants du support Adobe.
+Une fois que votre société a accès aux balises et que vos utilisateurs sont configurés comme décrit ci-dessus, vous devez pouvoir accéder à l’interface utilisateur de la collecte de données et à l’interface utilisateur Experience Platform à partir de la [Tableau de bord Adobe Experience Cloud](https://experience.adobe.com/). Si vous ne pouvez toujours pas accéder à l’interface utilisateur après avoir suivi les étapes ci-dessus, contactez votre équipe de compte d’Adobe ou l’assistance clientèle.

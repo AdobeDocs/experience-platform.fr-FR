@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Présentation de la correspondance des segments
 description: La correspondance des segments est un service de partage de segments dans Adobe Experience Platform qui permet à deux utilisateurs ou plus de Platform d’échanger des données de segment de manière sécurisée, régulée et respectueuse de la confidentialité.
 exl-id: 4e6ec2e0-035a-46f4-b171-afb777c14850
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: f619bbf2c8d313eabc6444b4bd8c09615a00cc42
 workflow-type: tm+mt
 source-wordcount: '1998'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -56,7 +56,7 @@ Vous devez fournir une configuration de consentement et définir sa valeur par d
 
 La vérification de consentement pour l’accord préalable et le droit d’opposition détermine si vous pouvez utiliser le consentement par défaut relatif au partage des données utilisateur. Si la configuration de consentement par défaut est définie sur `opt-out`, les données utilisateur peuvent ensuite être partagées, sauf si un utilisateur s’y oppose explicitement. Si la valeur par défaut est définie sur `opt-in`, les données utilisateur ne peuvent pas être partagées, à moins qu’un utilisateur n’y consente explicitement.
 
-La configuration de consentement par défaut pour [!DNL Segment Match] est définie sur `opt-out`. Pour appliquer un modèle d’accord préalable à vos données, envoyez une demande par e-mail à votre gestionnaire de compte Adobe.
+La configuration de consentement par défaut pour [!DNL Segment Match] est définie sur `opt-out`. Pour appliquer un modèle d’inclusion à vos données, envoyez une demande par courrier électronique à votre équipe de compte Adobe.
 
 Pour plus d’informations sur l’attribut `share` utilisé pour définir la valeur de consentement du partage des données, consultez la documentation suivante sur le [groupe de champs confidentialité et consentements](../../../xdm/field-groups/profile/consents.md). Pour plus d’informations sur le groupe de champs spécifique utilisé pour capturer le consentement des consommateurs pour la collecte et l’utilisation de données liées à la confidentialité, à la personnalisation et aux préférences marketing, consultez [les exemples GitHub de consentement pour la confidentialité, la personnalisation et les préférences marketing](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/consent/consent-preferences.schema.md).
 

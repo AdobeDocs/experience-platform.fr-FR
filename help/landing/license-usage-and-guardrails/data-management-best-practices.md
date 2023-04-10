@@ -3,9 +3,9 @@ keywords: Experience Platform;accueil;rubriques les plus consultées;gestion de
 title: Bonnes pratiques relatives aux droits de licence de gestion des données
 description: Découvrez les bonnes pratiques à suivre et les outils que vous pouvez utiliser pour mieux gérer vos droits de licence avec Adobe Experience Platform.
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: 252ca6c62b6b95e3a01211c15d7361146dee5116
+source-git-commit: 5b5afceff59105eb6e0d17e22c2810a5c25ae760
 workflow-type: tm+mt
-source-wordcount: '2130'
+source-wordcount: '2133'
 ht-degree: 81%
 
 ---
@@ -156,7 +156,7 @@ Le tableau suivant présente la liste des fonctionnalités actuellement disponib
 | Fonctionnalité | Description |
 | --- | --- |
 | [Activation/désactivation de jeux de données pour le profil](../../catalog/datasets/user-guide.md) | Activez ou désactivez l’ingestion de jeux de données dans Real-time Customer Profile. |
-| [Expirations des événements d’expérience](../../profile/event-expirations.md) | Appliquez un délai d’expiration pour tous les événements ingérés dans un jeu de données activé par Profile. Contactez votre représentant du support Adobe pour activer cette fonctionnalité. |
+| [Expirations des événements d’expérience](../../profile/event-expirations.md) | Appliquez un délai d’expiration pour tous les événements ingérés dans un jeu de données activé par Profile. Contactez votre équipe de compte d’Adobe ou l’assistance clientèle pour activer cette fonctionnalité. |
 | [Filtres de préparation de données Adobe Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md) | Appliquez des filtres [!DNL Kafka] pour exclure les données inutiles de l’ingestion |
 | [Filtres de connecteur source Adobe Audience Manager](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) | Appliquez des filtres de connexion source Audience Manager pour exclure les données inutiles de l’ingestion. |
 | [Filtres Alloy de données du SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=fr#fundamentals) | Appliquez des filtres Alloy pour exclure les données inutiles de l’ingestion. |
