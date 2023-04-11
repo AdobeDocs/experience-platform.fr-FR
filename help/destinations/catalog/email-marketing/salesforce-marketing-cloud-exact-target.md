@@ -3,10 +3,10 @@ keywords: e-mail;e-mail;destinations d’e-mail;salesforce;api salesforce destin
 title: (API) Connexion à Salesforce Marketing Cloud
 description: La destination de Marketing Cloud Salesforce (anciennement connue sous le nom d’ExactTarget) vous permet d’exporter les données de votre compte et de les activer dans le Marketing Cloud Salesforce pour répondre aux besoins de votre entreprise.
 exl-id: 0cf068e6-8a0a-4292-a7ec-c40508846e27
-source-git-commit: 5a9b7af3b009f8529f2e473b17f77c54de35003e
+source-git-commit: 017ccadc1689663059aa1214c5440549b509e81b
 workflow-type: tm+mt
-source-wordcount: '2464'
-ht-degree: 28%
+source-wordcount: '2619'
+ht-degree: 27%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 28%
 >
 >Notez la différence entre cette connexion et l’autre [[!DNL Salesforce Marketing Cloud] connection](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud.md) qui se trouve dans la section Catalogue des emails . L’autre connexion au Marketing Cloud Salesforce vous permet d’exporter des fichiers vers un emplacement de stockage spécifié, alors qu’il s’agit d’une connexion en continu basée sur l’API.
 
-Ceci [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) tire parti de [!DNL Salesforce Marketing Cloud] [mettre à jour les contacts](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/updateContacts.html) API qui vous permet d’ajouter des contacts/de mettre à jour les données de contact pour vos besoins professionnels après les avoir activés dans une nouvelle [!DNL Salesforce Marketing Cloud] segment.
+Ceci [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) tire parti de [!DNL Salesforce Marketing Cloud] [mettre à jour les contacts](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/updateContacts.html) API qui vous permet de **ajouter des contacts et mettre à jour les données de contact ;** pour répondre aux besoins de votre entreprise après les avoir activés dans une nouvelle [!DNL Salesforce Marketing Cloud] segment.
 
 [!DNL Salesforce Marketing Cloud] utilise OAuth 2 avec les informations d’identification du client comme mécanisme d’authentification pour communiquer avec le [!DNL Salesforce Marketing Cloud] API. Les instructions vous permettant de vous authentifier sur votre instance [!DNL Salesforce Marketing Cloud] sont plus loin dans la section [Authentifier à la destination](#authenticate).
 
@@ -92,7 +92,7 @@ Notez les éléments ci-dessous avant de vous authentifier à la variable [!DNL 
 | Identifiant client | Voir [!DNL Salesforce Marketing Cloud] [documentation](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/access-token-s2s.html) pour savoir comment obtenir cette valeur de la fonction [!DNL Salesforce Marketing Cloud] . | r23kxxxxxxxx0z05xxxxxx |
 | Secret client | Voir [!DNL Salesforce Marketing Cloud] [documentation](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/access-token-s2s.html) pour savoir comment obtenir cette valeur de la fonction [!DNL Salesforce Marketing Cloud] . | ipxxxxxxxxxxT4xxxxxxxxxx |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Mécanismes de sécurisation {#guardrails}
 
@@ -124,7 +124,7 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 | Type d’exportation | **[!UICONTROL Basé sur les profils]** | <ul><li>Vous exportez tous les membres d’un segment, ainsi que les champs de schéma souhaités, *(par exemple : adresse e-mail, numéro de téléphone, nom)*, en fonction de votre mappage de champs.</li><li> Chaque statut du segment dans [!DNL Salesforce Marketing Cloud] est mis à jour avec le statut du segment correspondant de Platform, en fonction de la valeur de l’**[!UICONTROL identifiant de mappage]** fournie pendant l’étape de [planification des segments](#schedule-segment-export-example).</li></ul> |
 | Fréquence des exportations | **[!UICONTROL Diffusion en continu]** | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation des segments, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Se connecter à la destination {#connect}
 
@@ -260,3 +260,20 @@ Lors de la gestion de vos données, toutes les destinations [!DNL Adobe Experien
 
 * [!DNL Salesforce Marketing Cloud] [API](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/apis-overview.html)
 * [!DNL Salesforce Marketing Cloud] [documentation](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/updateContacts.html) expliquant comment les contacts sont mis à jour avec les informations spécifiées dans les groupes d’attributs spécifiés.
+
+### Journal des modifications {#changelog}
+
+Cette section capture les fonctionnalités et les mises à jour importantes de la documentation apportées à ce connecteur de destination.
+
++++ Afficher le journal des modifications
+
+| Mois de publication | Type de mise à jour | Description |
+|---|---|---|
+| Février 2023 | Mise à jour de la documentation | Nous avons mis à jour la variable [Conditions préalables dans le Marketing Cloud Salesforce (API)](#prerequisites-destination) pour inclure un lien de référence indiquant que [!DNL Salesforce Marketing Cloud Account Engagement] est un abonnement obligatoire pour utiliser cette destination. |
+| Février 2023 | Mise à jour des fonctionnalités | Correction d’un problème en raison duquel une configuration incorrecte dans la destination provoquait l’envoi d’un JSON incorrect à Salesforce. Cela entraînait l’échec de certains utilisateurs qui voyaient un grand nombre d’identités lors de l’activation. (PLATIR-26299) |
+| Janvier 2023 | Mise à jour de la documentation | <ul><li>Nous avons mis à jour la variable [Conditions préalables dans [!DNL Salesforce]](#prerequisites-destination) pour indiquer que les attributs doivent être créés sur la variable [!DNL Salesforce] côté. Cette section comprend désormais des instructions détaillées sur la manière de procéder et des bonnes pratiques concernant l’attribution de noms aux attributs dans la section [!DNL Salesforce]. (PLATIR-25602)</li><li>Nous avons ajouté des instructions claires sur l’utilisation de l’ID de mappage pour chaque segment activé dans la variable [planification des segments](#schedule-segment-export-example) étape . (PLATIR-25602)</li></ul> |
+| Octobre 2022 | Version initiale | Version initiale de la destination et publication de la documentation. |
+
+{style="table-layout:auto"}
+
++++
