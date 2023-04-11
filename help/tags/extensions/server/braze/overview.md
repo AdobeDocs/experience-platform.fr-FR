@@ -2,10 +2,10 @@
 keywords: extension de transfert d’événement;ventilation;extension de transfert d’événement de ventilation
 title: Extension de transfert d’événement de braze
 description: Cette extension de transfert d’événement Adobe Experience Platform envoie les événements Adobe Experience Edge Network à Brand.
-source-git-commit: 88e589eb17c249a8bdc82fe7a041a5581a60c7e6
+source-git-commit: 6815b5eb0426efd1dde901db1e8b86e86615530a
 workflow-type: tm+mt
-source-wordcount: '1874'
-ht-degree: 5%
+source-wordcount: '1863'
+ht-degree: 6%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 5%
 - Ciblez des utilisateurs spécifiques pour les campagnes marketing et promotionnelles afin d’augmenter le nombre de clients réguliers.
 - Étudiez le comportement et les schémas des utilisateurs pour cibler des audiences spécifiques avec des messages personnalisés, ce qui peut contribuer à augmenter les recettes.
 
-Le [!DNL Braze Track Events API] [transfert d’événement](../../../ui/event-forwarding/overview.md) l’extension vous permet d’exploiter les données capturées dans Adobe Experience Platform Edge Network et de les envoyer à [!DNL Braze] sous la forme d’événements côté serveur à l’aide de la variable [[!DNL Braze User Identify]](https://www.braze.com/docs/api/endpoints/user_data/post_user_identify) et [[!DNL Braze User Track]](https://www.braze.com/docs/api/endpoints/user_data/post_user_track) API.
+Le [!DNL Braze Track Events API] [transfert d’événement](../../../ui/event-forwarding/overview.md) l’extension vous permet d’exploiter les données capturées dans Adobe Experience Platform Edge Network et de les envoyer à [!DNL Braze] sous la forme d’événements côté serveur à l’aide de la variable [[!DNL Braze User Track]](https://www.braze.com/docs/api/endpoints/user_data/post_user_track) API.
 
 Ce document couvre les cas d’utilisation de l’extension, comment l’installer dans vos bibliothèques de transfert d’événements et comment utiliser ses fonctionnalités dans un transfert d’événement. [règle](../../../ui/managing-resources/rules.md).
 
@@ -130,7 +130,7 @@ Les attributs utilisateur peuvent être un objet JSON contenant des champs qui c
 | [!UICONTROL Genre] | L’une des chaînes suivantes : &quot;M&quot;, &quot;F&quot;, &quot;O&quot; (autre), &quot;N&quot; (non applicable), &quot;P&quot; (préférez ne pas dire). |
 | [!UICONTROL Ville] |  |
 | [!UICONTROL Pays] | Pays sous forme de chaîne dans [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) format. |
-| [!UICONTROL Langue] | Langue sous forme de chaîne dans [ISO-639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) format. |
+| [!UICONTROL Langue] | Langue sous forme de chaîne dans [ISO-639-1](https://fr.wikipedia.org/wiki/Liste_des_codes_ISO_639-1) format. |
 | [!UICONTROL Date de naissance] | Chaîne au format &quot;AAAA-MM-JJ&quot; (par exemple, 1980-12-21). |
 | [!UICONTROL Fuseau horaire] | Nom du fuseau horaire à partir de [Base de données des fuseaux horaires IANA](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) (par exemple, &quot;Amérique/New_York&quot; ou &quot;Heure de l’Est (États-Unis et Canada)&quot;). |
 | [!UICONTROL Facebook] | Hachage contenant n’importe quel identifiant (chaîne), mentions &quot;J’aime&quot; (tableau de chaînes), num_friend (entier). |
@@ -189,7 +189,7 @@ Les attributs utilisateur peuvent être un objet JSON contenant des champs qui c
 | [!UICONTROL Genre] | L’une des chaînes suivantes : &quot;M&quot;, &quot;F&quot;, &quot;O&quot; (autre), &quot;N&quot; (non applicable), &quot;P&quot; (préférez ne pas dire). |
 | [!UICONTROL Ville] |  |
 | [!UICONTROL Pays] | Pays sous forme de chaîne dans [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) format. |
-| [!UICONTROL Langue] | Langue sous forme de chaîne dans [ISO-639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) format. |
+| [!UICONTROL Langue] | Langue sous forme de chaîne dans [ISO-639-1](https://fr.wikipedia.org/wiki/Liste_des_codes_ISO_639-1) format. |
 | [!UICONTROL Date de naissance] | Chaîne au format &quot;AAAA-MM-JJ&quot; (par exemple, 1980-12-21). |
 | [!UICONTROL Fuseau horaire] | Nom du fuseau horaire à partir de [Base de données des fuseaux horaires IANA](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) (par exemple, &quot;Amérique/New_York&quot; ou &quot;Heure de l’Est (États-Unis et Canada)&quot;). |
 | [!UICONTROL Facebook] | Hachage contenant n’importe quel identifiant (chaîne), mentions &quot;J’aime&quot; (tableau de chaînes), num_friend (entier). |
