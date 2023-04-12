@@ -6,7 +6,7 @@ exl-id: b080e398-e71f-40bd-aea1-7ea3ce86b55d
 source-git-commit: 647f2780798dcf55a68e156af3318924c352a442
 workflow-type: tm+mt
 source-wordcount: '1034'
-ht-degree: 16%
+ht-degree: 26%
 
 ---
 
@@ -66,25 +66,25 @@ La moitié inférieure de la page affiche des informations sur le nombre d’enr
 >[!CONTEXTUALHELP]
 >id="platform_sources_dataflow_records_received"
 >title="Enregistrements reçus"
->abstract="La mesure Enregistrements reçus indique le nombre total d’enregistrements reçus dans le flux de données."
+>abstract="La mesure Enregistrements reçus indique le nombre total d&#39;enregistrements reçus dans le flux de données."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_dataflow_records_ingested"
 >title="Enregistrements ingérés"
->abstract="La mesure Enregistrements ingérés indique le nombre total d’enregistrements ingérés dans le lac de données."
+>abstract="La mesure Enregistrements ingérés indique le nombre total d&#39;enregistrements ingérés dans le lac de données."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_dataflow_records_failed"
->title="Enregistrements échoués"
->abstract="La mesure Échec des enregistrements indique le nombre total d’enregistrements qui n’ont pas été ingérés dans le lac de données en raison d’erreurs dans les données."
+>title="Échec des enregistrements"
+>abstract="La mesure Échec des enregistrements indique le nombre total d&#39;enregistrements qui n&#39;ont pas été ingérés dans le lac de données en raison d&#39;erreurs dans les données."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_dataflow_records_warnings"
 >title="Enregistrements avec avertissements"
->abstract="Les enregistrements avec avertissement indiquent le nombre total d’enregistrements ingérés avec des avertissements de transformation du mappeur. Toutes les erreurs de transformation de mappage sont signalées sous forme d’avertissements et les lignes partiellement ingérées sont considérées comme réussies avec un avertissement."
+>abstract="Les Enregistrements avec avertissements indiquent le nombre total d&#39;enregistrements ingérés avec des avertissements de transformation du mappeur. Toutes les erreurs de transformation du mappeur sont signalées comme avertissements et les lignes partiellement ingérées sont considérées comme réussies, avec un avertissement."
 >text="Learn more in documentation"
 
 Chaque exécution de flux de données individuelle affiche les détails suivants :

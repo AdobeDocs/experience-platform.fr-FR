@@ -7,7 +7,7 @@ exl-id: 735b0e52-74f6-47fe-98c6-e12a633b6f57
 source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
 source-wordcount: '1149'
-ht-degree: 14%
+ht-degree: 20%
 
 ---
 
@@ -29,13 +29,13 @@ Le tableau de bord de surveillance vous fournit une représentation visuelle de 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_identity_processing"
 >title="Traitement des identités"
->abstract="La vue de traitement des identités contient des informations sur les enregistrements ingérés dans le service Identity, notamment le nombre d’identités ajoutées, de graphiques créés et de graphiques mis à jour. Consultez le guide de définition des mesures pour en savoir plus sur les mesures et les graphiques."
+>abstract="La vue de traitement des identités contient des informations sur les enregistrements ingérés dans le service d&#39;identités, notamment le nombre d&#39;identités ajoutées, de graphiques créés et de graphiques mis à jour. Consultez le guide de définition des mesures pour en savoir plus sur les mesures et les graphiques."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_identity"
->title="Détails de l’exécution du flux de données"
->abstract="La page Détails de l’exécution du flux de données affiche plus d’informations sur votre exécution du flux de données d’identité, y compris son identifiant d’organisation et son identifiant d’exécution du flux de données."
+>title="Détails de l&#39;exécution du flux de données"
+>abstract="La page Détails de l&#39;exécution du flux de données affiche plus d&#39;informations sur votre exécution du flux de données d&#39;identité, y compris son identifiant d&#39;organisation et son identifiant d&#39;exécution du flux de données."
 
 Pour accéder au **[!UICONTROL Identités]** tableau de bord, sélectionnez **[!UICONTROL Surveillance]** dans le volet de navigation de gauche. Une fois sur le **[!UICONTROL Surveillance]** , sélectionnez **[!UICONTROL Identités]** carte.
 
@@ -54,7 +54,7 @@ Les mesures suivantes sont disponibles pour cette vue de tableau de bord :
 | Mesures d’identité | Description |
 | ---------------- | ----------- |
 | **[!UICONTROL Enregistrements reçus]** | Nombre d’enregistrements reçus du lac de données. |
-| **[!UICONTROL Enregistrements échoués]** | Nombre d’enregistrements qui n’ont pas été ingérés dans Platform en raison d’erreurs dans les données. |
+| **[!UICONTROL Échec des enregistrements]** | Nombre d’enregistrements qui n’ont pas été ingérés dans Platform en raison d’erreurs dans les données. |
 | **[!UICONTROL Enregistrements ignorés]** | Nombre d’enregistrements ingérés, mais pas dans [!DNL Identity Service] car il n’y avait qu’un seul identifiant dans la ligne d’enregistrement. |
 | **[!UICONTROL Enregistrements ingérés]** | Nombre d’enregistrements ingérés dans [!DNL Identity Service]. |
 | **[!UICONTROL Identités ajoutées]** | Nombre de nouveaux identifiants nets ajoutés à [!DNL Identity Service]. |
@@ -78,7 +78,7 @@ Les mesures suivantes sont disponibles pour cette vue de tableau de bord :
 | **[!UICONTROL Jeu de données]** | Nom du jeu de données auquel le flux de données est en cours d’insertion. |
 | **[!UICONTROL Nom de source]** | Nom de la source à laquelle le flux de données appartient. |
 | **[!UICONTROL Enregistrements reçus]** | Nombre d’enregistrements reçus du lac de données. |
-| **[!UICONTROL Enregistrements échoués]** | Nombre d’enregistrements qui n’ont pas été ingérés dans Platform en raison d’erreurs dans les données. |
+| **[!UICONTROL Échec des enregistrements]** | Nombre d’enregistrements qui n’ont pas été ingérés dans Platform en raison d’erreurs dans les données. |
 | **[!UICONTROL Enregistrements ignorés]** | Nombre d’enregistrements ingérés, mais pas dans [!DNL Identity Service] car il n’y avait qu’un seul identifiant dans la ligne d’enregistrement. |
 | **[!UICONTROL Enregistrements ingérés]** | Nombre d’enregistrements ingérés dans [!DNL Identity Service]. |
 | **[!UICONTROL Total enregistrements]** | Comptage total de tous les enregistrements, y compris les enregistrements en échec, les enregistrements ignorés, les identités ajoutées et les enregistrements dupliqués. |
@@ -100,7 +100,7 @@ Les mesures suivantes sont disponibles pour cette vue de tableau de bord :
 | Mesure | Description |
 | -------| ----------- |
 | **[!UICONTROL Enregistrements reçus]** | Nombre d’enregistrements reçus du lac de données. |
-| **[!UICONTROL Enregistrements échoués]** | Nombre d’enregistrements qui n’ont pas été ingérés dans Platform en raison d’erreurs dans les données. |
+| **[!UICONTROL Échec des enregistrements]** | Nombre d’enregistrements qui n’ont pas été ingérés dans Platform en raison d’erreurs dans les données. |
 | **[!UICONTROL Enregistrements ignorés]** | Nombre d’enregistrements ingérés, mais pas dans [!DNL Identity Service] car il n’y avait qu’un seul identifiant dans la ligne d’enregistrement. |
 | **[!UICONTROL Enregistrements ingérés]** | Nombre d’enregistrements ingérés dans [!DNL Identity Service]. |
 | **[!UICONTROL Identités ajoutées]** | Nombre de nouveaux identifiants nets ajoutés à [!DNL Identity Service]. |

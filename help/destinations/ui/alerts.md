@@ -6,7 +6,7 @@ exl-id: 134144a0-cdfe-49a8-bd8b-e36a4f053de5
 source-git-commit: 3bb9858c236c91e1567fd8e78988f4049537ffe3
 workflow-type: tm+mt
 source-wordcount: '950'
-ht-degree: 16%
+ht-degree: 21%
 
 ---
 
@@ -30,8 +30,8 @@ Ce document nécessite une compréhension pratique des composants suivants de Ad
 
 >[!CONTEXTUALHELP]
 >id="platform_destination_alerts_subscribe"
->title="Abonnement aux alertes de destination"
->abstract="Les alertes vous permettent de recevoir des notifications en fonction de l’état de vos flux de données de destination. Vous pouvez définir des notifications d’alerte pour obtenir des mises à jour si votre flux de données a commencé, a réussi, a échoué ou n’a envoyé aucune donnée à votre destination."
+>title="S&#39;abonner aux alertes sur les destinations"
+>abstract="Les alertes vous permettent de recevoir des notifications en fonction du statut de vos flux de données de destination. Vous pouvez définir des notifications d&#39;alerte pour obtenir des mises à jour si votre flux de données a commencé, a réussi, a échoué ou n&#39;a envoyé aucune donnée à votre destination."
 >text="Learn more in documentation"
 
 >[!IMPORTANT]

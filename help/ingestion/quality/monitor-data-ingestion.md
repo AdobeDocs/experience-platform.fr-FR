@@ -7,7 +7,7 @@ exl-id: 85711a06-2756-46f9-83ba-1568310c9f73
 source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '654'
-ht-degree: 34%
+ht-degree: 37%
 
 ---
 
@@ -22,9 +22,9 @@ Ce guide d’utilisation décrit les étapes à suivre pour surveiller vos donn�
 >[!CONTEXTUALHELP]
 >id="platform_ingestion_streaming_ingestionrate"
 >title="Taux d&#39;ingestion"
->abstract="Nombre d’événements traités avec succès par seconde."
+>abstract="Le nombre d&#39;événements traités avec succès par seconde."
 >text="Learn more in the documentation"
->additional-url="http://www.adobe.com/go/monitor-dataflows-en" text="Surveillance des flux de données pour les sources dans l’interface utilisateur"
+>additional-url="http://www.adobe.com/go/monitor-dataflows-en?lang=fr" text="Surveillance des flux de données pour les sources dans l&#39;interface utilisateur"
 
 >[!TIP]
 >

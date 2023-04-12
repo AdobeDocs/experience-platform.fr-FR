@@ -7,7 +7,7 @@ exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
 source-git-commit: 482de6a50d14b9de095014b070ce400a2fd273cc
 workflow-type: tm+mt
 source-wordcount: '1681'
-ht-degree: 27%
+ht-degree: 31%
 
 ---
 
@@ -35,8 +35,8 @@ Par exemple, deux fragments de profil peuvent contenir des identifiants Principa
 
 >[!CONTEXTUALHELP]
 >id="platform_identity_create_namespace"
->title="Définition du type d’identité"
->abstract="Le type d’identité contrôle si les données sont stockées ou non dans le graphique d’identités. Les identifiants autres que les personnes ne seront pas stockés et tous les autres types d’identité le seront."
+>title="Définition du type d&#39;identité"
+>abstract="Le type d&#39;identité contrôle si les données sont stockées ou non dans le graphique d&#39;identité. Les identifiants autres que ceux des personnes ne seront pas stockés et tous les autres types d&#39;identité le seront."
 >text="Learn more in documentation"
 
 Les données peuvent être identifiées par plusieurs types d’identité différents. Le type d’identité est spécifié au moment de la création de l’espace de noms d’identité et contrôle la conservation ou non des données dans le graphique d’identités, ainsi que toutes les instructions spéciales concernant la manière dont ces données doivent être traitées. Tous les types d’identité sauf **Identifiant de non-personne** procédez de la même manière que pour associer un espace de noms et sa valeur d’identifiant correspondante à un cluster de graphiques d’identités. Les données ne sont pas regroupées lors de l’utilisation de **Identifiant de non-personne**.
@@ -82,8 +82,8 @@ Les espaces de noms standard suivants sont fournis pour être utilisés par tout
 
 >[!CONTEXTUALHELP]
 >id="platform_identity_view_integration_identities"
->title="Affichage des identités d’intégration"
->abstract="Les identités d’intégration sont des espaces de noms utilisés pour établir une connexion avec d’autres systèmes et ne sont pas utilisés dans la résolution d’identité ou pour assembler des identités. <br> Ces identités sont masquées par défaut. Utilisez le bouton d’activation/désactivation pour afficher les espaces de noms d’intégration."
+>title="Affichage des identités d&#39;intégration"
+>abstract="Les identités d&#39;intégration sont des espaces de noms utilisés pour établir une connexion avec d&#39;autres systèmes et ne sont pas utilisés dans la résolution d&#39;identité ou pour assembler des identités. <br> Ces identités sont masquées par défaut. Utilisez le bouton pour afficher les espaces de noms d&#39;intégration."
 
 Pour afficher les espaces de noms d’identité dans l’interface utilisateur, sélectionnez **[!UICONTROL Identités]** dans le volet de navigation de gauche, puis sélectionnez **[!UICONTROL Parcourir]**.
 

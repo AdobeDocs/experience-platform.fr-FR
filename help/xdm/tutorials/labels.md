@@ -5,7 +5,7 @@ exl-id: 92284bf7-f034-46cc-b905-bdfb9fcd608a
 source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '737'
-ht-degree: 6%
+ht-degree: 10%
 
 ---
 
@@ -37,8 +37,8 @@ Ce guide nécessite une compréhension professionnelle des composants suivants d
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_editgovernancelabels"
->title="Modification des étiquettes de gouvernance"
->abstract="Appliquez un libellé à un champ de schéma pour indiquer les stratégies d’utilisation qui s’appliquent aux données contenues dans ce champ spécifique."
+>title="Modifier les libellés de gouvernance"
+>abstract="Appliquez un libellé à un champ de schéma pour indiquer les stratégies d&#39;utilisation qui s&#39;appliquent aux données contenues dans ce champ."
 
 Pour commencer à ajouter des libellés, vous devez d’abord [sélectionner un schéma existant à modifier ;](../ui/resources/schemas.md#edit) ou [créer un nouveau schéma](../ui/resources/schemas.md#create) pour afficher sa structure dans l’éditeur de schémas.
 

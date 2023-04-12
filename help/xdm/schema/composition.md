@@ -7,7 +7,7 @@ exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
 source-git-commit: a3f38a18693e0ef4bc93765c090eafd56dcd15d3
 workflow-type: tm+mt
 source-wordcount: '4140'
-ht-degree: 26%
+ht-degree: 30%
 
 ---
 
@@ -53,7 +53,7 @@ Les schémas d’enregistrement et de série temporelle contiennent tous deux un
 >[!CONTEXTUALHELP]
 >id="platform_schemas_identities"
 >title="Identités dans les schémas"
->abstract="Les identités sont des champs clés d’un schéma qui peuvent être utilisés pour identifier un objet, comme une adresse électronique ou un identifiant marketing. Ces champs sont utilisés pour créer le graphique d’identités pour chaque individu et créer des profils client. Pour plus d’informations sur les identités dans les schémas, consultez la documentation ."
+>abstract="Les identités sont des champs clés d&#39;un schéma pouvant être utilisés pour identifier un objet, comme une adresse e-mail ou un identifiant marketing. Ces champs sont utilisés pour créer le graphique d&#39;identité de chaque individu ainsi que les profils client. Pour plus d&#39;informations sur les identités dans les schémas, consultez la documentation."
 
 Les schémas sont utilisés pour ingérer des données dans [!DNL Experience Platform]. Ces données sont finalement utilisées par plusieurs services pour créer une vue unique et unifiée d’une entité individuelle. Il est donc important, lors de la réflexion sur les schémas, de réfléchir aux identités des clients et aux champs qui peuvent être utilisés pour identifier un sujet, quel que soit l’origine des données.
 
@@ -170,7 +170,7 @@ Les schémas sont composés à l’aide de la formule suivante :
 >[!CONTEXTUALHELP]
 >id="platform_schemas_class"
 >title="Classe"
->abstract="Chaque schéma est basé sur une seule classe. La classe définit le comportement du schéma et les propriétés communes que tous les schémas basés sur cette classe doivent contenir. Consultez la documentation pour en savoir plus sur l’implication des classes dans la composition des schémas."
+>abstract="Chaque schéma est basé sur une seule classe. La classe définit le comportement du schéma et les propriétés communes que tous les schémas basés sur cette classe doivent avoir. Pour plus d&#39;informations sur l&#39;implication des classes dans la composition des schémas, consultez la documentation."
 
 La composition d’un schéma commence par l’attribution d’une classe. Les classes définissent les aspects comportementaux des données que le schéma contiendra (enregistrements ou séries temporelles). En outre, les classes décrivent le plus petit de nombres de propriétés communes que tous les schémas basés sur cette classe doivent inclure et fournir une manière de fusionner plusieurs jeux de données compatibles.
 
@@ -189,12 +189,12 @@ Pour obtenir la liste la plus récente des classes XDM standard disponibles, rep
 >[!CONTEXTUALHELP]
 >id="platform_schemas_fieldgroup"
 >title="Groupe de champs"
->abstract="Les groupes de champs sont des composants réutilisables qui vous permettent d’étendre les schémas avec des attributs supplémentaires. La plupart des groupes de champs ne sont compatibles qu’avec certaines classes. Vous pouvez utiliser des groupes de champs standard définis par Adobe ou vous pouvez définir manuellement vos propres groupes de champs personnalisés. Consultez la documentation pour en savoir plus sur l’implication des groupes de champs dans la composition des schémas."
+>abstract="Les groupes de champs sont des composants réutilisables qui vous permettent d&#39;étendre les schémas avec des attributs supplémentaires. La plupart des groupes de champs ne sont compatibles qu&#39;avec certaines classes. Vous pouvez utiliser des groupes de champs standard définis par Adobe ou définir manuellement vos propres groupes de champs personnalisés. Pour plus d&#39;informations sur l&#39;implication des groupes de champs dans la composition des schémas, consultez la documentation."
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_fieldgroup_requiredFieldgroup"
 >title="Groupe de champs requis"
->abstract="Ce groupe de champs est requis par la source que vous utilisez. Pour cette raison, vous ne pouvez pas la supprimer de votre schéma."
+>abstract="Ce groupe de champs est requis par la source que vous utilisez. Vous ne pouvez donc pas le supprimer de votre schéma."
 
 Un groupe de champs est un composant réutilisable qui définit un ou plusieurs champs qui implémentent certaines fonctions telles que les détails personnels, les préférences d’hôtel ou l’adresse. Les groupes de champs sont destinés à être inclus dans le cadre d’un schéma qui met en oeuvre une classe compatible.
 

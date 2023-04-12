@@ -7,7 +7,7 @@ exl-id: 00b624b2-f6d1-4ef2-abf2-52cede89b684
 source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
 source-wordcount: '1074'
-ht-degree: 9%
+ht-degree: 17%
 
 ---
 
@@ -23,21 +23,21 @@ Ce guide nécessite une compréhension professionnelle des composants suivants d
 
 - [Flux de données](../home.md) : les flux de données sont une représentation des tâches de données qui déplacent ces dernières dans Platform. Les flux de données sont configurés sur différents services, ce qui permet de déplacer les données des connecteurs sources vers des jeux de données cibles, vers [!DNL Identity] et [!DNL Profile], et vers [!DNL Destinations].
    - [Exécutions de flux de données](../../sources/notifications.md): Les exécutions de flux de données sont les tâches planifiées récurrentes en fonction de la configuration de fréquence des flux de données sélectionnés.
-- [Profil client en temps réel](../../profile/home.md): Fournit un profil client en temps réel unifié basé sur des données agrégées provenant de plusieurs sources.
-- [Sandbox](../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuelles qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
+- [Profil client en temps réel](../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
+- [Sandbox](../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
 ## Tableau de bord des profils de surveillance {#profile-metrics}
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_profile_processing"
 >title="Traitement des profils"
->abstract="La vue Traitement des profils contient des informations sur les enregistrements ingérés dans le service Profile, notamment le nombre de fragments de profil créés, de fragments de profil mis à jour et le nombre total de fragments de profil."
+>abstract="La vue Traitement des profils contient des informations sur les enregistrements ingérés dans le service Profil, notamment le nombre de fragments de profil créés, mis à jour et le nombre total de fragments de profil."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_profile"
->title="Détails de l’exécution du flux de données"
->abstract="La page Détails de l’exécution du flux de données affiche plus d’informations sur votre exécution de flux de données de profil, y compris son identifiant d’organisation et son identifiant d’exécution de flux de données."
+>title="Détails de l&#39;exécution du flux de données"
+>abstract="La page Détails de l&#39;exécution du flux de données affiche plus d&#39;informations sur votre exécution du flux de données de Profil, y compris son identifiant d&#39;organisation et son identifiant d&#39;exécution du flux de données."
 
 Pour accéder au **[!UICONTROL Profils]** tableau de bord, sélectionnez **[!UICONTROL Surveillance]** dans le volet de navigation de gauche. Une fois sur le **[!UICONTROL Surveillance]** , sélectionnez **[!UICONTROL Profils]** carte.
 
@@ -57,7 +57,7 @@ Les mesures suivantes sont disponibles pour cette vue de tableau de bord :
 | -------| ----------- |
 | **[!UICONTROL Nom de source]** | Nom de la source. |
 | **[!UICONTROL Enregistrements reçus]** | Nombre d’enregistrements reçus du lac de données. |
-| **[!UICONTROL Enregistrements échoués]** | Nombre d’enregistrements ingérés, mais pas dans [!DNL Profile] en raison d’erreurs. |
+| **[!UICONTROL Échec des enregistrements]** | Nombre d’enregistrements ingérés, mais pas dans [!DNL Profile] en raison d’erreurs. |
 | **[!UICONTROL Fragments de profil créés]** | Nombre de nouvelles nettes [!DNL Profile] fragments ajoutés. |
 | **[!UICONTROL Fragments de profil mis à jour]** | Le nombre de [!DNL Profile] fragments mis à jour. |
 | **[!UICONTROL Fragments de profil totaux]** | Le nombre total d&#39;enregistrements écrits dans [!DNL Profile], y compris toutes les [!DNL Profile] fragments mis à jour et nouveaux [!DNL Profile] fragments créés. |
@@ -79,7 +79,7 @@ Les mesures suivantes sont disponibles pour cette vue de tableau de bord :
 | **[!UICONTROL Jeu de données]** | Nom du jeu de données auquel le flux de données est en cours d’insertion. |
 | **[!UICONTROL Nom de source]** | Nom de la source à laquelle le flux de données appartient. |
 | **[!UICONTROL Enregistrements reçus**] | Nombre d’enregistrements reçus du lac de données. |
-| **[!UICONTROL Enregistrements échoués]** | Nombre d’enregistrements ingérés, mais pas dans [!DNL Profile] en raison d’erreurs. |
+| **[!UICONTROL Échec des enregistrements]** | Nombre d’enregistrements ingérés, mais pas dans [!DNL Profile] en raison d’erreurs. |
 | **[!UICONTROL Fragments de profil créés]** | Nombre de nouvelles nettes [!DNL Profile] fragments ajoutés. |
 | **[!UICONTROL Fragments de profil mis à jour]** | Le nombre de [!DNL Profile] fragments mis à jour |
 | **[!UICONTROL Fragments de profil totaux]** | Le nombre total d&#39;enregistrements écrits dans [!DNL Profile], y compris toutes les [!DNL Profile] fragments mis à jour et nouveaux [!DNL Profile] fragments créés. |
@@ -99,7 +99,7 @@ Les mesures suivantes sont disponibles pour cette vue de tableau de bord :
 | Mesure | Description |
 | -------| ----------- |
 | **[!UICONTROL Enregistrements reçus]** | Nombre d’enregistrements reçus du lac de données. |
-| **[!UICONTROL Enregistrements échoués]** | Nombre d’enregistrements ingérés, mais pas dans [!DNL Profile] en raison d’erreurs. |
+| **[!UICONTROL Échec des enregistrements]** | Nombre d’enregistrements ingérés, mais pas dans [!DNL Profile] en raison d’erreurs. |
 | **[!UICONTROL Fragments de profil créés]** | Nombre de nouvelles nettes [!DNL Profile] fragments ajoutés. |
 | **[!UICONTROL Fragments de profil mis à jour]** | Le nombre de [!DNL Profile] fragments mis à jour. |
 | **[!UICONTROL Statut]** | Définit l’état global d’un flux de données. Les valeurs d’état possibles sont les suivantes : <ul><li>`Success`: Indique qu’un flux de données est principal et ingère des données selon le planning selon lequel il a été fourni.</li><li>`Failed`: Indique que le processus d’activation d’un flux de données a été interrompu en raison d’erreurs. </li><li>`Processing`: Indique que le flux de données n’est pas encore principal. Cet état est souvent rencontré immédiatement après la création d’un nouveau flux de données.</li></ul> |

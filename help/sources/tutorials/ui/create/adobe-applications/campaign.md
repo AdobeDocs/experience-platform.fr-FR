@@ -38,7 +38,7 @@ Sous , **[!UICONTROL Adobe des applications]** catégorie, sélectionnez **[!UIC
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_campaign_instance"
->title="Instance d’environnement Adobe Campaign"
+>title="Instance d&#39;environnement Adobe Campaign"
 >abstract="Nom de l’environnement Adobe Campaign que vous souhaitez utiliser."
 >text="Learn more in documentation"
 

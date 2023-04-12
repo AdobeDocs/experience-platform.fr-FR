@@ -7,7 +7,7 @@ hidefromtoc: true
 source-git-commit: a20afcd95d47e38ccdec9fba9e772032e212d7a4
 workflow-type: tm+mt
 source-wordcount: '1184'
-ht-degree: 61%
+ht-degree: 67%
 
 ---
 
@@ -65,12 +65,12 @@ Si vous souhaitez supprimer des enregistrements de tous les jeux de données, s�
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_primaryidentity"
 >title="Identité principale"
->abstract="Une identité principale est un attribut qui lie un enregistrement au profil d’un client dans Experience Platform. Le champ d’identité principale d’un jeu de données est défini par le schéma sur lequel le jeu de données est basé. Dans cette colonne, vous devez indiquer le type (ou l’espace de noms) de l’identité Principale de l’enregistrement, telle que `email` pour les adresses électroniques et `ecid` pour les identifiants Experience Cloud. Pour en savoir plus, consultez le guide de l’interface utilisateur de l’hygiène des données ."
+>abstract="Une identité principale est un attribut qui lie un enregistrement au profil d’un client dans Experience Platform. Le champ d’identité principale d’un jeu de données est défini par le schéma sur lequel le jeu de données est basé. Dans cette colonne, vous devez indiquer le type (ou l&#39;espace de noms) de l&#39;identité principale de l&#39;enregistrement, par exemple `email` pour les adresses e-mail et `ecid` pour les identifiants Experience Cloud. Pour en savoir plus, consultez le guide de l&#39;interface utilisateur de l&#39;hygiène de données."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_identityvalue"
 >title="Valeur de l’identité"
->abstract="Dans cette colonne, vous devez indiquer la valeur de l’identité Principale de l’enregistrement, qui doit correspondre au type d’identité fourni dans la colonne de gauche. Si le type d’identité Principal est `email`, la valeur doit correspondre à l’adresse électronique de l’enregistrement. Pour en savoir plus, consultez le guide de l’interface utilisateur de l’hygiène de données."
+>abstract="Dans cette colonne, vous devez indiquer la valeur de l&#39;identité principale de l&#39;enregistrement, qui doit correspondre au type d&#39;identité fourni dans la colonne de gauche. Si le type d&#39;identité principale est `email`, la valeur doit correspondre à l&#39;adresse e-mail de l&#39;enregistrement. Pour en savoir plus, consultez le guide de l’interface utilisateur de l’hygiène de données."
 
 Lors de la suppression d’enregistrements, vous devez fournir des informations d’identité afin que le système puisse déterminer les enregistrements à supprimer. Pour les jeux de données de Platform, les enregistrements sont supprimés en fonction du champ **Identité principale** défini par le schéma du jeu de données.
 

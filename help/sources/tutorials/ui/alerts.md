@@ -6,7 +6,7 @@ exl-id: 5d51edaa-ecba-4ac0-8d3c-49010466b9a5
 source-git-commit: 3f7f66c0d58d127299ad12027869ca0e9837f5cd
 workflow-type: tm+mt
 source-wordcount: '868'
-ht-degree: 16%
+ht-degree: 21%
 
 ---
 
@@ -35,7 +35,7 @@ Ce document nécessite une compréhension pratique des composants suivants de Ad
 >[!CONTEXTUALHELP]
 >id="platform_sources_alerts_subscribe"
 >title="S’abonner aux alertes sur les sources"
->abstract="Les alertes vous permettent de recevoir des notifications en fonction de l’état des flux de données de vos sources. Vous pouvez définir des notifications d’alerte pour obtenir des mises à jour si votre flux de données a démarré, a réussi, a échoué ou n’a ingéré aucune donnée."
+>abstract="Les alertes vous permettent de recevoir des notifications en fonction du statut de vos flux de données sources. Vous pouvez définir des notifications d&#39;alerte pour obtenir des mises à jour si votre flux de données a commencé, a réussi, a échoué ou n&#39;a ingéré aucune donnée."
 >text="Learn more in documentation"
 
 >[!IMPORTANT]

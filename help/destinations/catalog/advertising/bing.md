@@ -6,7 +6,7 @@ exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
 source-git-commit: aec9708680c2a4cb3c70af12f95c67ec37b2e129
 workflow-type: tm+mt
 source-wordcount: '616'
-ht-degree: 57%
+ht-degree: 64%
 
 ---
 
@@ -82,7 +82,7 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 >[!CONTEXTUALHELP]
 >id="platform_destinations_bing_mapping_id"
 >title="Identifiant de mappage"
->abstract="Saisissez l’identifiant numérique du segment Bing auquel vous souhaitez mapper le segment sélectionné. Si la variable [!UICONTROL ID de mappage] ne correspond pas à un identifiant de segment dans la destination Bing. Vous ne verrez pas les données d’audience attendues dans votre compte Bing."
+>abstract="Saisissez l&#39;identifiant numérique du segment Bing auquel vous souhaitez mapper le segment sélectionné. Si l&#39;[!UICONTROL ID de mappage] ne correspond pas à un identifiant de segment dans la destination Bing, vous ne verrez pas les données d&#39;audience attendues dans votre compte Bing."
 
 >[!IMPORTANT]
 > 

@@ -66,13 +66,13 @@ L’espace de travail Autorisations de l’interface utilisateur de Platform s�
 >[!CONTEXTUALHELP]
 >id="platform_permissions_labels_about"
 >title="Que sont les libellés ?"
->abstract="Les libellés vous permettent de classer les jeux de données et les champs en fonction des stratégies d’utilisation qui s’appliquent à ces données. Platform fournit plusieurs libellés d’utilisation des données « de base » définis par Adobe, qui couvrent un large éventail de restrictions courantes applicables à la gouvernance des données. Les libellés « S » (Sensibles) tels que DSR (données réglementées en matière de santé) servent à catégoriser les données qui font référence aux informations de santé protégées (ISP). Vous pouvez également définir vos propres libellés personnalisés en fonction des besoins de votre entreprise."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=fr#comprendre-les-libell%C3%A9s-d%E2%80%99utilisation-des-donn%C3%A9es" text="Présentation des libellés d’utilisation des données"
+>abstract="Les libellés vous permettent de classer les jeux de données et les champs en fonction des stratégies d’utilisation qui s’appliquent à ces données. Platform fournit plusieurs libellés d&#39;utilisation des données « de base » définis par Adobe, qui couvrent un large éventail de restrictions courantes applicables à la gouvernance des données. Par exemple, les libellés « S » (Sensibles) tels que DSR (données réglementées en matière de santé) servent à catégoriser les données qui font référence aux informations de santé protégées (ISP). Vous pouvez également définir vos propres libellés personnalisés en fonction des besoins de votre entreprise."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=en#understanding-data-usage-labels?lang=fr" text="Présentation des libellés d’utilisation des données"
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_labels_about_create"
 >title="Créer un libellé"
->abstract="Vous pouvez créer vos propres libellés personnalisés selon les besoins de votre entreprise. Les libellés personnalisés peuvent être utilisées pour appliquer à vos données à la fois des configurations de gouvernance des données et de contrôle d’accès."
+>abstract="Vous pouvez créer vos propres libellés personnalisés selon les besoins de votre entreprise. Les libellés personnalisés peuvent être utilisés pour appliquer à vos données à la fois des configurations de gouvernance des données et de contrôle d&#39;accès."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=fr#manage-labels" text="Gérer les libellés personnalisés"
 
 >[!CONTEXTUALHELP]
@@ -84,7 +84,7 @@ L’espace de travail Autorisations de l’interface utilisateur de Platform s�
 >[!CONTEXTUALHELP]
 >id="platform_permissions_roles_about_create"
 >title="Créer un rôle"
->abstract="Vous pouvez créer un rôle pour mieux classer les utilisateurs et utilisatrices qui ont accès à votre instance Platform. Par exemple, vous pouvez créer un rôle pour une équipe marketing interne et lui appliquer le libellé RHD. Cela permettra à l’équipe d’accéder aux informations de santé protégées (ISP). Vous pouvez également créer un rôle pour une agence externe et refuser l’accès à ce rôle aux données ISP en vous abstenant d’appliquer le libellé RHD à ce rôle."
+>abstract="Vous pouvez créer un rôle pour mieux classer les utilisateurs qui ont accès à votre instance Platform. Par exemple, vous pouvez créer un rôle pour une équipe marketing interne et lui appliquer le libellé RHD. Cela permettra à l&#39;équipe d&#39;accéder aux informations de santé protégées (ISP). Vous pouvez également créer un rôle pour une agence externe et refuser l&#39;accès à ce rôle aux données ISP en vous abstenant d&#39;appliquer le libellé RHD à ce rôle."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=fr#create-a-new-role" text="Créer un rôle"
 
 >[!CONTEXTUALHELP]

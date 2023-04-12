@@ -7,7 +7,7 @@ exl-id: 67ec5382-31de-4f8d-9618-e8919bb5a472
 source-git-commit: a3140d5216857ef41c885bbad8c69d91493b619d
 workflow-type: tm+mt
 source-wordcount: '1257'
-ht-degree: 0%
+ht-degree: 8%
 
 ---
 
@@ -15,8 +15,8 @@ ht-degree: 0%
 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_enum_suggestedvalue"
->title="Enumérations et valeurs proposées"
->abstract="Un **Enum** limite un champ de chaîne pour autoriser uniquement l’ingestion des données correspondant à un jeu prédéfini de valeurs. Chaque contrainte d’énumération peut se voir attribuer une **Nom d’affichage** qui renseigne les listes déroulantes d’attributs dans l’interface utilisateur de segmentation. **Valeurs proposées** pour un champ ne limite pas l’ingestion et ne détermine que les noms d’affichage affichés dans Segmentation. Si plusieurs schémas partagent un champ appartenant à une classe ou à un groupe de champs commun et que vous définissez différentes énumérations ou valeurs suggérées pour ce champ entre chaque schéma, ces valeurs sont fusionnées et ajoutées dans le schéma d’union."
+>title="Énumérations et valeurs suggérées"
+>abstract="Une **Énumération** limite un champ de chaîne pour autoriser uniquement l&#39;ingestion des données correspondant à un jeu prédéfini de valeurs à ingérer. Chaque limite d&#39;énumération peut se voir attribuer un **Nom d&#39;affichage** qui renseigne les listes déroulantes d&#39;attributs dans l&#39;interface utilisateur de segmentation. Les **valeurs suggérées** pour un champ ne limitent pas l&#39;ingestion et ne déterminent que les noms d&#39;affichage présents dans Segmentation. Si plusieurs schémas partagent un champ appartenant à une classe ou à un groupe de champs commun et que vous définissez différentes énumérations ou valeurs suggérées pour ce champ entre chaque schéma, ces valeurs sont fusionnées et ajoutées dans le schéma d&#39;union."
 
 Dans le modèle de données d’expérience (XDM), un champ de chaîne peut se voir attribuer un jeu prédéfini de valeurs acceptées ou suggérées afin de mieux contrôler les valeurs ingérées dans ce champ ou leur comportement dans la segmentation.
 

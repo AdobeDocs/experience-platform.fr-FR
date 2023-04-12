@@ -1,25 +1,25 @@
 ---
-keywords: Experience Platform;accueil;rubriques populaires;contrôle d’accès;contrôle d’accès basé sur les attributs;ABAC
+keywords: Experience Platform;accueil;rubriques populaires;contrôle d’accès;contrôle d’accès basé sur les attributs;ABAC
 title: Gestion des étiquettes de contrôle d’accès basé sur les attributs
 description: Ce document fournit des informations sur la gestion des libellés par le biais de l’interface Autorisations dans Adobe Experience Cloud.
 exl-id: c790f09c-fda6-48bf-95db-3f5053cd882e
 source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
 source-wordcount: '173'
-ht-degree: 23%
+ht-degree: 42%
 
 ---
 
 # Gestion des étiquettes
 
-Les libellés vous permettent de classer les jeux de données et les champs en fonction de l’utilisation et des stratégies d’accès qui s’appliquent à ces données. Vous pouvez appliquer les libellés à tout moment, ce qui vous offre une certaine flexibilité quant à la manière dont vous choisissez de gérer les données. Les bonnes pratiques recommandent de libeller les données dès qu’elles sont ingérées dans  Platform, ou dès que les données sont disponibles pour une utilisation dans Platform.
+Les libellés vous permettent de classer les jeux de données et les champs en fonction de l’utilisation et des stratégies d’accès qui s’appliquent à ces données. Vous pouvez appliquer les libellés à tout moment, ce qui vous offre une certaine flexibilité quant à la manière dont vous choisissez de gérer les données. Les bonnes pratiques recommandent de libeller les données dès qu’elles sont ingérées dans Platform, ou dès que les données sont disponibles pour une utilisation dans Platform.
 
 ## Créer un nouveau libellé {#create-new-label}
 
 >[!CONTEXTUALHELP]
 >id="platform_abac_labelusage"
 >title="Utilisation des libellés"
->abstract="Vous pouvez utiliser des étiquettes personnalisées pour appliquer des configurations de gouvernance des données et de contrôle d’accès à vos données."
+>abstract="Vous pouvez utiliser des libellés personnalisés pour appliquer à vos données des configurations de gouvernance des données et de contrôle d&#39;accès."
 
 >[!NOTE]
 >

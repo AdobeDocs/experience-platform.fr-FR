@@ -6,7 +6,7 @@ exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
 source-git-commit: f97b667f8d4dc311683b018bb1c1792aae871648
 workflow-type: tm+mt
 source-wordcount: '1011'
-ht-degree: 54%
+ht-degree: 59%
 
 ---
 
@@ -70,8 +70,8 @@ Une société de location et de vente d’habitations souhaite personnaliser sa 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_target_datastream"
 >title="À propos des identifiants de flux de données"
->abstract="Cette option détermine dans quel jeu de données de collecte de données les segments seront inclus. Le menu déroulant affiche uniquement les flux de données pour lesquels la configuration Target est activée. Pour utiliser la segmentation Edge, vous devez sélectionner un identifiant de flux de données. Si vous sélectionnez Aucun, tous les cas d’utilisation qui utilisent la segmentation Edge sont désactivés."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/personalization/adobe-target-connection.html#parameters" text="En savoir plus sur la sélection des flux de données"
+>abstract="Cette option détermine dans quel train de données de collecte de données les segments seront inclus. Le menu déroulant affiche uniquement les trains de données pour lesquels la configuration cible est activée. Pour utiliser la segmentation Edge, vous devez sélectionner un identifiant de train de données. Si vous sélectionnez Aucun, tous les cas d&#39;utilisation qui utilisent la segmentation Edge sont désactivés."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/personalization/adobe-target-connection.html#parameters?lang=fr" text="En savoir plus sur la sélection des trains de données"
 
 >[!IMPORTANT]
 > 

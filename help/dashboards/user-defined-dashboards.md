@@ -5,7 +5,7 @@ exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
 source-git-commit: a0be2f8625ca60f9c8f355c1230a889002436d6d
 workflow-type: tm+mt
 source-wordcount: '1307'
-ht-degree: 1%
+ht-degree: 5%
 
 ---
 
@@ -42,13 +42,13 @@ Le tableau de bord vierge nouvellement créé s’affiche avec le nom de votre c
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_udd_maxwidgets"
 >title="Nombre maximal de widgets"
->abstract="Les tableaux de bord définis par l’utilisateur prennent en charge jusqu’à dix widgets. Une fois que vous avez ajouté dix widgets à votre tableau de bord, la variable [!UICONTROL Ajouter un nouveau widget] est désactivée et apparaît en gris."
+>abstract="Les tableaux de bord définis par l&#39;utilisateur prennent en charge jusqu&#39;à dix widgets. Une fois que vous avez ajouté dix widgets à votre tableau de bord, l&#39;option [!UICONTROL Ajouter un nouveau widget] est désactivée et apparaît en gris."
 
 Dans la nouvelle vue de tableau de bord, sélectionnez **[!UICONTROL Ajouter un nouveau widget]** pour lancer le processus de création du widget.
 
 >[!IMPORTANT]
 >
->Les tableaux de bord définis par l’utilisateur prennent en charge jusqu’à dix widgets. Une fois que vous avez ajouté dix widgets à votre tableau de bord, la variable [!UICONTROL Ajouter un nouveau widget] est désactivée et apparaît en gris.
+>Les tableaux de bord définis par l&#39;utilisateur prennent en charge jusqu&#39;à dix widgets. Une fois que vous avez ajouté dix widgets à votre tableau de bord, l&#39;option [!UICONTROL Ajouter un nouveau widget] est désactivée et apparaît en gris.
 
 ![Le nouveau tableau de bord vide avec l’option Ajouter un nouveau widget mise en surbrillance.](./images/user-defined-dashboards/add-new-widget.png)
 

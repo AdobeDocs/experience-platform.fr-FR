@@ -7,7 +7,7 @@ exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
 source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
 source-wordcount: '1476'
-ht-degree: 38%
+ht-degree: 39%
 
 ---
 
@@ -30,8 +30,8 @@ Ce guide d’utilisation nécessite une compréhension professionnelle des compo
 
 >[!CONTEXTUALHELP]
 >id="platform_datasets_negative_numbers"
->title="Numéros négatifs dans l’activité du jeu de données"
->abstract="Les nombres négatifs dans les enregistrements ingérés signifie qu’un utilisateur a supprimé certains lots au cours d’une période sélectionnée."
+>title="Nombres négatifs dans l&#39;activité du jeu de données"
+>abstract="Les nombres négatifs dans les enregistrements ingérés signifient qu&#39;un utilisateur a supprimé certains lots au cours d&#39;une période sélectionnée."
 >text="Learn more in documentation"
 
 Dans le [!DNL Experience Platform] Interface utilisateur, sélectionnez **[!UICONTROL Jeux de données]** dans le volet de navigation de gauche pour ouvrir la **[!UICONTROL Jeux de données]** tableau de bord. Le tableau de bord répertorie tous les jeux de données disponibles pour votre organisation. Des détails s’affichent pour chaque jeu de données répertorié, notamment son nom, le schéma auquel le jeu de données adhère et l’état de l’exécution d’ingestion la plus récente.
@@ -62,7 +62,7 @@ Pour des méthodes plus robustes d’accès à vos données, [!DNL Experience Pl
 * [Présentation de Query Service](../../query-service/home.md)
 * [Guide d’utilisation de JupyterLab](../../data-science-workspace/jupyterlab/overview.md)
 
-## Création d’un jeu de données {#create}
+## Créer un jeu de données {#create}
 
 Pour créer un jeu de données, commencez par sélectionner **[!UICONTROL Créer un jeu de données]** dans le tableau de bord Jeux de données.****
 

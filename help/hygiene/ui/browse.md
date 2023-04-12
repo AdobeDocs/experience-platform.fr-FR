@@ -5,7 +5,7 @@ exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
 source-git-commit: a20afcd95d47e38ccdec9fba9e772032e212d7a4
 workflow-type: tm+mt
 source-wordcount: '862'
-ht-degree: 87%
+ht-degree: 92%
 
 ---
 
@@ -74,12 +74,12 @@ Les filtres suivants s’appliquent aux requêtes d’expiration de jeu de donn�
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_numberofidentities"
 >title="Nombre d’identités"
->abstract="Nombre d’identités dont les enregistrements ont été demandés pour mise à jour ou suppression dans le cadre de cet ordre de travail. Les identités incluses dans le nombre n’existent pas nécessairement dans les jeux de données affectés. Pour en savoir plus, consultez le guide de l’interface utilisateur de l’hygiène de données."
+>abstract="Le nombre d&#39;identités pour lesquelles une demande de mise à jour ou de suppression des enregistrements a été formulée dans le cadre de cet ordre de travail. Les identités incluses dans le nombre n’existent pas nécessairement dans les jeux de données affectés. Pour en savoir plus, consultez le guide de l’interface utilisateur de l’hygiène de données."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_responsemessages"
->title="Réponse de suppression des enregistrements"
->abstract="Lorsqu’un processus de suppression d’enregistrement reçoit une réponse du système, ces messages s’affichent sous le **[!UICONTROL Résultat]** . Si un problème se produit alors qu’un ordre de travail est en cours de traitement, tous les messages d’erreur pertinents s’affichent dans cette section pour vous aider à résoudre le problème. Pour en savoir plus, consultez le guide de l’interface utilisateur de l’hygiène de données."
+>title="Réponse de suppression d&#39;enregistrement"
+>abstract="Lorsqu&#39;un processus de suppression d&#39;enregistrement reçoit une réponse du système, ces messages s&#39;affichent sous la section **[!UICONTROL Résultat]**. Si un problème se produit alors qu’un ordre de travail est en cours de traitement, tous les messages d’erreur pertinents s’affichent dans cette section pour vous aider à résoudre le problème. Pour en savoir plus, consultez le guide de l’interface utilisateur de l’hygiène de données."
 
 Sélectionnez l’identifiant d’un ordre de travail répertorié pour en afficher les détails.
 

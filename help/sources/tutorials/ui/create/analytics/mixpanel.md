@@ -6,7 +6,7 @@ exl-id: 2a02f6a4-08ed-468c-8052-f5b7be82d183
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '874'
-ht-degree: 35%
+ht-degree: 43%
 
 ---
 
@@ -68,9 +68,9 @@ Si vous créez un compte, sélectionnez **[!UICONTROL Nouveau compte]**, puis fo
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_mixpanel_timezone"
->title="Définition d’un fuseau horaire pour l’assimilation de Mixpanel"
->abstract="Le fuseau horaire doit être identique au paramètre de fuseau horaire du profil Mixpanel , car Platform utilise le fuseau horaire du projet désigné pour ingérer les données pertinentes à partir de Mixpanel. Mixpanel adapte son fuseau horaire afin de le coordonner avec le fuseau horaire de votre projet avant d’enregistrer l’événement dans un entrepôt de données Mixpanel."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/analytics/mixpanel.html?lang=en#project-id-and-timezone" text="En savoir plus dans la documentation."
+>title="Définir un fuseau horaire pour l&#39;ingestion de Mixpanel"
+>abstract="Le fuseau horaire doit être identique à celui du profil Mixpanel, car Platform utilise le fuseau horaire du projet désigné pour ingérer les données pertinentes à partir de Mixpanel. Mixpanel adaptera son fuseau horaire afin de le coordonner à celui de votre projet avant d&#39;enregistrer l&#39;événement dans un entrepôt de données Mixpanel."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/analytics/mixpanel.html?lang=fr#project-id-and-timezone" text="En savoir plus dans la documentation."
 
 Une fois la source authentifiée, indiquez l’ID de projet et le fuseau horaire, puis sélectionnez **[!UICONTROL Sélectionner]**.
 

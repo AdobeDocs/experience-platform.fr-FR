@@ -8,11 +8,11 @@ exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
 source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
 source-wordcount: '1069'
-ht-degree: 16%
+ht-degree: 26%
 
 ---
 
-# Surveillance des flux de données pour les sources dans l’interface utilisateur
+# Surveillance des flux de données pour les sources dans l&#39;interface utilisateur
 
 >[!IMPORTANT]
 >
@@ -30,23 +30,23 @@ Ce tutoriel nécessite une compréhension du fonctionnement des composants suiva
 
 * [Flux de données](../home.md) : les flux de données sont une représentation des tâches de données qui déplacent ces dernières dans Platform. Les flux de données sont configurés sur différents services, ce qui permet de déplacer les données des connecteurs sources vers des jeux de données cibles, vers [!DNL Identity] et [!DNL Profile], et vers [!DNL Destinations].
    * [Exécutions de flux de données](../../sources/notifications.md): Les exécutions de flux de données sont les tâches planifiées récurrentes en fonction de la configuration de fréquence des flux de données sélectionnés.
-* [Sources](../../sources/home.md) : Experience Platform permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de Platform.
+* [Sources](../../sources/home.md) : Experience Platform permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, de libeller et d’améliorer les données entrantes à l’aide des services de Platform.
 * [Service d’identités](../../identity-service/home.md) : obtenez une meilleure compréhension des clients individuels et de leurs comportements en reliant les identités entre les appareils et les systèmes.
-* [Profil client en temps réel](../../profile/home.md): Fournit un profil client en temps réel unifié basé sur des données agrégées provenant de plusieurs sources.
-* [Sandbox](../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuelles qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
+* [Profil client en temps réel](../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
+* [Sandbox](../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
 
 ## Vue de surveillance agrégée {#aggregated-monitoring-view}
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_source_ingestion"
 >title="Ingestion source"
->abstract="La vue Ingestion source contient des informations sur l’état et les mesures de l’activité de données dans le service de lac de données, y compris les enregistrements ingérés et les enregistrements ayant échoué. Consultez le guide de définition des mesures pour en savoir plus sur les mesures et les graphiques."
+>abstract="La vue Ingestion source contient des informations sur l&#39;état et les mesures de l&#39;activité des données dans le service de lac de données, y compris les enregistrements ingérés et les enregistrements ayant échoué. Consultez le guide de définition des mesures pour en savoir plus sur les mesures et les graphiques."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_ingestion"
->title="Détails de l’exécution du flux de données"
->abstract="Le traitement des sources contient des informations sur l’état de l’activité de données et des mesures dans le service de lac de données, y compris les enregistrements ingérés et les enregistrements ayant échoué. Consultez le guide de définition des mesures pour en savoir plus sur les mesures et les graphiques."
+>title="Détails de l&#39;exécution du flux de données"
+>abstract="Le traitement des sources contient des informations sur l&#39;état de l&#39;activité des données et des mesures dans le service de lac de données, y compris les enregistrements ingérés et les enregistrements ayant échoué. Consultez le guide de définition des mesures pour en savoir plus sur les mesures et les graphiques."
 >text="Learn more in documentation"
 
 Dans le [Interface utilisateur de Platform](https://platform.adobe.com), sélectionnez **[!UICONTROL Surveillance]** dans le volet de navigation de gauche pour accéder à la fonction [!UICONTROL Surveillance] tableau de bord. Le [!UICONTROL Surveillance] Le tableau de bord contient des mesures et des informations sur tous les flux de données de sources, y compris des informations sur l’intégrité du trafic de données d’une source à [!DNL Identity Service]et à [!DNL Profile].
@@ -70,7 +70,7 @@ Les graphiques sont activés par défaut et vous pouvez les désactiver pour dé
 | Ingestion source | Description |
 | ---------------- | ----------- |
 | [!UICONTROL Enregistrements ingérés ] | Nombre total d’enregistrements ingérés. |
-| [!UICONTROL Enregistrements échoués] | Nombre total d’enregistrements qui n’ont pas été ingérés en raison d’erreurs dans les données. |
+| [!UICONTROL Échec des enregistrements] | Nombre total d’enregistrements qui n’ont pas été ingérés en raison d’erreurs dans les données. |
 | [!UICONTROL Total des flux de données ayant échoué] | Le nombre total de flux de données avec un `failed` statut. |
 
 La liste d’ingestion source affiche toutes les sources qui contiennent au moins un compte existant. La liste inclut également des informations sur le taux d’ingestion de chaque source, le nombre d’enregistrements ayant échoué et le nombre total de flux de données ayant échoué en fonction de la période que vous avez appliquée.

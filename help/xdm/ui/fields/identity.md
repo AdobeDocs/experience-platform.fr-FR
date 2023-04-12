@@ -7,7 +7,7 @@ exl-id: 11a53345-4c3f-4537-b3eb-ee7a5952df2a
 source-git-commit: 857c1d4f74b6352e90f9c97ef22d686a883e3563
 workflow-type: tm+mt
 source-wordcount: '610'
-ht-degree: 10%
+ht-degree: 15%
 
 ---
 
@@ -27,8 +27,8 @@ Les champs d’identité sont un composant essentiel de la manière dont les gra
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_identityField_primaryIdentityRestriction"
->title="Restrictions à l’identité Principale"
->abstract="Ce schéma utilise un groupe de champs destiné à être utilisé dans une connexion source spécifique. La connexion nécessite que identityMap soit utilisé comme identité Principale et l’a défini automatiquement."
+>title="Restrictions de l&#39;identité principale"
+>abstract="Ce schéma utilise un groupe de champs destiné à être utilisé dans une connexion source spécifique. La connexion nécessite l&#39;utilisation d&#39;identityMap comme identité principale et l&#39;a défini automatiquement."
 
 When [définition d’un nouveau champ](./overview.md#define) dans l’interface utilisateur, vous pouvez la définir comme un champ d’identité en sélectionnant l’option **[!UICONTROL Identité]** dans le rail de droite.
 

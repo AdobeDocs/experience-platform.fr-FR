@@ -8,7 +8,7 @@ exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
 source-git-commit: 9c2ede973aa4348f15362ba80fdcd7a231577909
 workflow-type: tm+mt
 source-wordcount: '2365'
-ht-degree: 61%
+ht-degree: 65%
 
 ---
 
@@ -164,7 +164,7 @@ La documentation suivante fournit d’autres ressources sur la compréhension de
 >[!CONTEXTUALHELP]
 >id="platform_data_prep_analytics_filtering"
 >title="Créer des règles de filtrage"
->abstract="Définissez des règles de filtrage au niveau des lignes et des colonnes lors de l’envoi de données à Real-time Customer Profile. Utilisez le filtrage au niveau des lignes pour appliquer des conditions et dicter les données à **inclusion pour l’ingestion de profils**. Utilisez le filtrage au niveau des colonnes pour sélectionner les colonnes de données à sélectionner. **exclusion de l’ingestion de profils**. Les règles de filtrage ne s’appliquent pas aux données envoyées au lac de données."
+>abstract="Définissez des règles de filtrage au niveau des lignes et des colonnes lors de l&#39;envoi de données au profil client en temps réel. Utilisez le filtrage au niveau des lignes pour appliquer des conditions et dicter les données à **inclure lors de l&#39;ingestion de profils**. Utilisez le filtrage au niveau des colonnes pour sélectionner les colonnes de données à **exclure lors de l&#39;ingestion de profils**. Les règles de filtrage ne s&#39;appliquent pas aux données envoyées au lac de données."
 
 Une fois que vous avez terminé les mappages pour vos [!DNL Analytics] données de suite de rapports, vous pouvez appliquer des règles et des conditions de filtrage pour inclure ou exclure de manière sélective des données de l’ingestion dans Real-time Customer Profile. La prise en charge du filtrage n’est disponible que pour [!DNL Analytics] Les données et les données ne sont filtrées que lors de la saisie de [!DNL Profile.] Toutes les données sont ingérées dans le lac de données.
 
@@ -172,7 +172,7 @@ Une fois que vous avez terminé les mappages pour vos [!DNL Analytics] données 
 
 >[!IMPORTANT]
 >
->Utilisez le filtrage au niveau des lignes pour appliquer des conditions et dicter les données à **inclusion pour l’ingestion de profils**. Utilisez le filtrage au niveau des colonnes pour sélectionner les colonnes de données à sélectionner. **exclusion de l’ingestion de profils**.
+>Utilisez le filtrage au niveau des lignes pour appliquer des conditions et dicter les données à **inclure lors de l&#39;ingestion de profils**. Utilisez le filtrage au niveau des colonnes pour sélectionner les colonnes de données à **exclure lors de l&#39;ingestion de profils**.
 
 Vous pouvez filtrer les données pour [!DNL Profile] ingestion au niveau des lignes et des colonnes. Le filtrage au niveau des lignes vous permet de définir des critères tels que chaîne contenant, égal à, commence ou se termine par. Vous pouvez également utiliser le filtrage au niveau des lignes pour joindre des conditions à l’aide de `AND` ainsi que `OR`et annuler les conditions à l’aide de `NOT`.
 
