@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Évaluer les événements en temps quasi réel grâce à la segmentation en flux continu
 description: Ce document contient des exemples d’utilisation de la segmentation par diffusion en flux continu avec l’API du service de segmentation Adobe Experience Platform.
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-source-git-commit: 1c4da50b2c211aae06d6702d75e5650447fae0eb
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1971'
-ht-degree: 100%
+source-wordcount: '1967'
+ht-degree: 96%
 
 ---
 
@@ -49,7 +49,7 @@ Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [
 - x-api-key : `{API_KEY}`
 - x-gw-ims-org-id : `{ORG_ID}`
 
-Dans [!DNL Experience Platform], toutes les ressources sont isolées dans des sandbox virtuelles spécifiques. Toutes les requêtes envoyées aux API [!DNL Platform] nécessitent un en-tête spécifiant le nom de la sandbox dans laquelle l’opération sera effectuée :
+Dans [!DNL Experience Platform], toutes les ressources sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes envoyées aux API [!DNL Platform] nécessitent un en-tête spécifiant le nom du sandbox dans lequel l’opération sera effectuée :
 
 - x-sandbox-name : `{SANDBOX_NAME}`
 
@@ -102,7 +102,7 @@ De plus, la disqualification de segment, tout comme la qualification de segment,
 
 ## Récupérer tous les segments activés pour la segmentation en flux continu
 
-Vous pouvez récupérer une liste de tous vos segments qui sont activés pour la segmentation en flux continu dans votre organisation IMS en adressant une requête GET au point d’entrée `/segment/definitions`.
+Vous pouvez récupérer une liste de tous vos segments qui sont activés pour la segmentation par flux au sein de votre organisation en envoyant une demande de GET à la fonction `/segment/definitions` point de terminaison .
 
 **Format d’API**
 
@@ -126,7 +126,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie un tableau de segments de votre organisation IMS permettant une segmentation par flux.
+Une réponse réussie renvoie un tableau de segments de votre entreprise activés pour la segmentation par flux.
 
 ```json
 {
@@ -307,11 +307,11 @@ Une réponse réussie renvoie les détails de la nouvelle définition de segment
 
 ## Activation de l’évaluation planifiée {#enable-scheduled-segmentation}
 
-Une fois l’évaluation par flux activée, une ligne de base doit être créée (ensuite le segment sera toujours à jour). L’évaluation planifiée (également appelée segmentation planifiée) doit d’abord être activée pour que le système effectue automatiquement la mise en référence. La segmentation planifiée permet à votre organisation IMS de créer une planification récurrente pour exécuter automatiquement les tâches d’exportation afin d’évaluer les segments.
+Une fois l’évaluation par flux activée, une ligne de base doit être créée (ensuite le segment sera toujours à jour). L’évaluation planifiée (également appelée segmentation planifiée) doit d’abord être activée pour que le système effectue automatiquement la mise en référence. Avec la segmentation planifiée, votre entreprise peut se conformer à un planning récurrent pour exécuter automatiquement des tâches d’exportation afin d’évaluer les segments.
 
 >[!NOTE]
 >
->L’évaluation planifiée peut être activée pour les sandbox avec un maximum de cinq (5) stratégies de fusion pour [!DNL XDM Individual Profile]. Si votre organisation compte plus de cinq stratégies de fusion pour [!DNL XDM Individual Profile] dans une seul sandbox, vous ne pourrez pas procéder à l’évaluation planifiée.
+>L’évaluation planifiée peut être activée pour les sandbox avec un maximum de cinq (5) stratégies de fusion pour [!DNL XDM Individual Profile]. Si votre organisation compte plus de cinq stratégies de fusion pour [!DNL XDM Individual Profile] dans un seul sandbox, vous ne pourrez pas procéder à l’évaluation planifiée.
 
 ### Création d’un planning
 
@@ -353,7 +353,7 @@ curl -X POST \
 | `properties` | **(Obligatoire)** Un objet contenant des propriétés supplémentaires liées au planning. |
 | `properties.segments` | **(Obligatoire lorsque `type` est égal à `batch_segmentation`)** L’utilisation de `["*"]` permet de s’assurer que tous les segments sont inclus. |
 | `schedule` | **(Obligatoire)** Une chaîne contenant le planning de la tâche. Vous ne pouvez planifier qu’une seule exécution de tâche par jour, ce qui signifie que vous ne pouvez pas planifier l’exécution d’une tâche plus d’une fois au cours d’une période de 24 heures. L’exemple illustré (`0 0 1 * * ?`) signifie que la tâche est déclenchée tous les jours à 1:00:00 UTC. Pour plus d’informations, veuillez consulter l’annexe sur le [format d’expression cron](./schedules.md#appendix) dans la documentation sur les planifications dans la segmentation. |
-| `state` | *(Facultatif)* Chaîne contenant l’état du planning. Valeurs disponibles : `active` et `inactive`. La valeur par défaut est `inactive`. Une organisation IMS ne peut créer qu’un seul planning. Les étapes de mise à jour du planning sont disponibles plus loin dans ce tutoriel. |
+| `state` | *(Facultatif)* Chaîne contenant l’état du planning. Valeurs disponibles : `active` et `inactive`. La valeur par défaut est `inactive`. Une organisation ne peut créer qu’une seule planification. Les étapes de mise à jour du planning sont disponibles plus loin dans ce tutoriel. |
 
 **Réponse**
 

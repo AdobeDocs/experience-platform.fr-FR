@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Prise en main de l’API Policy Service
 description: L’API Policy Service vous permet de créer et de gérer diverses ressources liées à la gouvernance des données d’Adobe Experience Platform. Ce document présente les concepts de base que vous devez connaître avant d’effectuer des appels à l’API Policy Service.
 exl-id: 5539976c-8433-45af-a147-2ab82ae308b2
-source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '444'
-ht-degree: 100%
+source-wordcount: '443'
+ht-degree: 93%
 
 ---
 
@@ -52,7 +52,7 @@ Toutes les requêtes contenant un payload (POST, PUT, PATCH) requièrent un en-t
 
 Dans l’API [!DNL Policy Service], toutes les stratégies et actions marketing sont nommées ressources `core` ou `custom`.
 
-Les ressources `core` sont celles définies et gérées par Adobe, tandis que les ressources `custom` sont celles créées et gérées par votre organisation. Ces dernières sont donc uniques et visibles uniquement par votre organisation IMS. Les opérations de liste et de recherche (`GET`) sont donc les seules opérations autorisées sur les ressources `core`, alors que les opérations de liste, de recherche et de mise à jour (`POST`, `PUT`, `PATCH` et `DELETE`) sont disponibles pour les ressources `custom`.
+`core` Les ressources sont définies et gérées par Adobe, alors que `custom` Les ressources sont celles créées et gérées par votre organisation. Elles sont donc uniques et visibles uniquement par votre organisation. Les opérations de liste et de recherche (`GET`) sont donc les seules opérations autorisées sur les ressources `core`, alors que les opérations de liste, de recherche et de mise à jour (`POST`, `PUT`, `PATCH` et `DELETE`) sont disponibles pour les ressources `custom`.
 
 ## Étapes suivantes
 

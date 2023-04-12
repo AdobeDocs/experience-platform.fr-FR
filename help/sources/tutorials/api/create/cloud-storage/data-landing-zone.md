@@ -5,10 +5,10 @@ title: Connexion d’une zone d’entrée de données à Adobe Experience Platfo
 type: Tutorial
 description: Découvrez comment connecter Adobe Experience Platform à Data Landing Zone à l’aide de l’API Flow Service.
 exl-id: bdb60ed3-7c63-4a69-975a-c6f1508f319e
-source-git-commit: d57060ddeed64d3863f71ac1ea34ccc5c97265ea
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1249'
-ht-degree: 20%
+source-wordcount: '1248'
+ht-degree: 19%
 
 ---
 
@@ -27,7 +27,7 @@ Ce tutoriel vous guide tout au long des étapes de création d’un [!DNL Data L
 Ce guide nécessite une compréhension professionnelle des composants suivants d’Experience Platform :
 
 * [Sources](../../../../home.md) : Experience Platform permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de Platform.
-* [Sandbox](../../../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuelles qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
+* [Sandbox](../../../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
 
 Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour créer une [!DNL Data Landing Zone] connexion source à l’aide de la fonction [!DNL Flow Service] API.
 
@@ -452,7 +452,7 @@ Une réponse réussie renvoie la structure du fichier interrogé, y compris les 
 
 ## Créer une connexion source
 
-Une connexion source crée et gère la connexion à la source externe à partir de laquelle les données sont ingérées. Une connexion source se compose d’informations telles que la source de données, le format de données et l’identifiant de connexion source nécessaires à la création d’un flux de données. Une instance de connexion source est spécifique à un client et à une organisation IMS.
+Une connexion source crée et gère la connexion à la source externe à partir de laquelle les données sont ingérées. Une connexion source se compose d’informations telles que la source de données, le format de données et l’identifiant de connexion source nécessaires à la création d’un flux de données. Une instance de connexion source est spécifique à un client et à une organisation.
 
 Pour créer une connexion source, envoyez une requête POST au point d’entrée `/sourceConnections` de l’API [!DNL Flow Service].
 

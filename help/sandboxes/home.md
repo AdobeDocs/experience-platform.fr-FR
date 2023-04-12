@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Présentation des sandbox
 description: Les sandbox constituent des partitions virtuelles au sein d’une instance d’Experience Platform unique, ce qui permet une intégration transparente au processus de développement de vos applications d’expérience numérique.
 exl-id: b760a979-8134-4a44-8433-ec6fb49bc508
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1005'
-ht-degree: 100%
+source-wordcount: '1002'
+ht-degree: 94%
 
 ---
 
@@ -31,9 +31,9 @@ Les sandbox constituent des partitions virtuelles au sein d’une instance d’E
 
 Une instance Experience Platform prend en charge plusieurs sandbox de production et de développement. Chaque sandbox conserve sa propre bibliothèque indépendante de ressources Platform (y compris les schémas, les jeux de données, les profils, etc.). En outre, les sandbox de production et de développement disposent tous d’une fonctionnalité de réinitialisation supprimant toutes les ressources créées par les clients du sandbox. Les sandbox de développement ne peuvent pas être convertis en sandbox de production.
 
-Une licence Experience Platform par défaut vous accorde un total de cinq sandbox que vous pouvez classer en tant que production ou développement. Vous pouvez ajouter des packs de 10 sandbox jusquʼà 75 sandbox maximum au total. Ces sandbox supplémentaires peuvent être utilisés pour créer des sandbox de production et de développement. Contactez votre administrateur dʼorganisation IMS ou votre représentant commercial Adobe pour plus de détails.
+Une licence Experience Platform par défaut vous accorde un total de cinq sandbox que vous pouvez classer en tant que production ou développement. Vous pouvez ajouter des packs de 10 sandbox jusquʼà 75 sandbox maximum au total. Ces sandbox supplémentaires peuvent être utilisés pour créer des sandbox de production et de développement. Pour plus d’informations, contactez l’administrateur de votre entreprise ou votre représentant commercial Adobe.
 
-Le sandbox de production par défaut est le premier sandbox de production créé lorsqu’une organisation IMS est configurée pour la première fois. Le sandbox de production par défaut vous permet d’ingérer ou d’utiliser des données de Platform, ainsi que d’accepter des requêtes qui n’incluent pas de valeurs pour un nom de sandbox ou un identifiant de sandbox.
+Enfin, l’environnement de test de production par défaut est le premier environnement de test de production créé lors de la première création d’une organisation. Le sandbox de production par défaut vous permet d’ingérer ou d’utiliser des données de Platform, ainsi que d’accepter des requêtes qui n’incluent pas de valeurs pour un nom de sandbox ou un identifiant de sandbox.
 
 >[!NOTE]
 >
@@ -42,7 +42,7 @@ Le sandbox de production par défaut est le premier sandbox de production créé
 Pour résumer, les sandbox offrent les avantages suivants :
 
 * **Gestion du cycle de vie des applications** : créez des environnements virtuels distincts pour développer et faire évoluer des applications d’expérience numérique.
-* **Gestion de projet et de marque** : permet à plusieurs projets de fonctionner en parallèle au sein de la même organisation IMS, tout en maintenant l’isolement et le contrôle d’accès. Les prochaines versions prendront en charge l’assistance au déploiement dans plusieurs régions.
+* **Gestion de projet et de marque**: Permet à plusieurs projets de s’exécuter en parallèle au sein de la même organisation, tout en fournissant un isolement et un contrôle d’accès. Les prochaines versions prendront en charge l’assistance au déploiement dans plusieurs régions.
 * **Écosystème de développement flexible** : proposez des sandbox de manière transparente, évolutive et économique pour l’exploration, l’activation et la démonstration.
 
 ## Contrôle d’accès pour les sandbox

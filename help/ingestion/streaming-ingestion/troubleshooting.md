@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Guide de dépannage de l’ingestion en flux continu
 description: Ce document répond aux questions les plus fréquentes sur l’ingestion en flux continu sur Adobe Experience Platform.
 exl-id: 5d5deccf-25b8-44c9-ae27-9a4713ced274
-source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '1025'
-ht-degree: 100%
+source-wordcount: '1024'
+ht-degree: 97%
 
 ---
 
@@ -43,7 +43,7 @@ Lorsque la validation synchrone n’est pas prise en charge pour l’emplacement
 
 ### Comment puis-je m’assurer que les données sont uniquement collectées auprès de sources approuvées ?
 
-[!DNL Experience Platform] prend en charge la collecte de données sécurisée. Lorsque la collecte de données authentifiées est activée, les clients doivent envoyer un jeton JSON Web Token (JWT) et leur ID d’organisation IMS en tant qu’en-têtes de requête. Pour plus d’informations sur la manière d’envoyer des données authentifiées à [!DNL Platform], consultez le guide sur la [collecte de données authentifiées](../tutorials/create-authenticated-streaming-connection.md).
+[!DNL Experience Platform] prend en charge la collecte de données sécurisée. Lorsque la collecte de données authentifiées est activée, les clients doivent envoyer un jeton Web JSON (JWT) et leur ID d’organisation en tant qu’en-têtes de requête. Pour plus d’informations sur la manière d’envoyer des données authentifiées à [!DNL Platform], consultez le guide sur la [collecte de données authentifiées](../tutorials/create-authenticated-streaming-connection.md).
 
 ### Quelle est la latence de la diffusion des données en flux continu vers [!DNL Real-Time Customer Profile] ?
 

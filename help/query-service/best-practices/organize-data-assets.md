@@ -2,9 +2,9 @@
 title: Bonnes pratiques pour l’organisation des ressources de données dans Query Service
 description: Ce document décrit un moyen logique d’organiser les données pour faciliter leur utilisation avec Query Service.
 exl-id: 12d6af99-035a-4f80-b7c0-c6413aa50697
-source-git-commit: d3ea7ee751962bb507c91e1afea0da35da60a66d
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '788'
+source-wordcount: '786'
 ht-degree: 0%
 
 ---
@@ -129,7 +129,7 @@ dataset3| table
 
 ## Mise à jour ou suppression de ressources de données d’un conteneur de données
 
-À mesure que le nombre de ressources de données de votre organisation IMS (ou sandbox) augmente, il devient nécessaire de mettre à jour ou de supprimer des ressources de données d’un conteneur de données. Les ressources individuelles peuvent être supprimées du conteneur de l’organisation en référençant la base de données et le nom de schéma appropriés à l’aide de la notation par points. Le tableau et la vue (`t1` et `v1` ajouté à `databaseA.schema1` dans le premier exemple, sont supprimés en utilisant la syntaxe de l’exemple suivant.
+À mesure que le nombre de ressources de données de votre entreprise (ou sandbox) augmente, il devient nécessaire de mettre à jour ou de supprimer des ressources de données d’un conteneur de données. Les ressources individuelles peuvent être supprimées du conteneur de l’organisation en référençant la base de données et le nom de schéma appropriés à l’aide de la notation par points. Le tableau et la vue (`t1` et `v1` ajouté à `databaseA.schema1` dans le premier exemple, sont supprimés en utilisant la syntaxe de l’exemple suivant.
 
 ```sql
 ALTER TABLE databaseA.schema2.t1 REMOVE SCHEMA databaseA.schema2;
@@ -138,7 +138,7 @@ ALTER VIEW databaseA.schema2.v1 REMOVE SCHEMA databaseA.schema2;
 
 ### Suppression de ressources de données
 
-Le [DROP TABLE](../sql/syntax.md#drop-table) supprime physiquement une ressource de données de la fonction [!DNL Data Lake] lorsqu’il existe une référence unique à la table dans toutes les bases de données de votre organisation IMS.
+Le [DROP TABLE](../sql/syntax.md#drop-table) supprime physiquement une ressource de données de la fonction [!DNL Data Lake] lorsqu’il existe une référence unique à la table dans toutes les bases de données de votre organisation.
 
 ```sql
 DROP TABLE databaseA.schema2.t1;

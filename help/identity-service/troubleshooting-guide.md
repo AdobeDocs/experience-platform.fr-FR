@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Guide de dépannage d’Identity Service
 description: Ce document fournit des réponses aux questions fréquentes sur Adobe Experience Platform Identity Service, ainsi qu’un guide de dépannage pour les erreurs courantes.
 exl-id: dac31bc3-7003-46d6-9d41-9f6fd3645c2c
-source-git-commit: 76ef5638316a89aee1c6fb33370af943228b75e1
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '2180'
-ht-degree: 98%
+source-wordcount: '2176'
+ht-degree: 95%
 
 ---
 
@@ -204,7 +204,7 @@ Ce message d’erreur s’affiche lorsqu’une valeur non valide est attribuée 
 }
 ```
 
-Ce message d’erreur s’affiche lorsque votre organisation IMS n’a pas reçu les autorisations appropriées pour [!DNL Identity Service]. Contactez votre administrateur système pour résoudre ce problème.
+Ce message d’erreur s’affiche lorsque votre organisation n’a pas reçu les autorisations appropriées pour [!DNL Identity Service]. Contactez votre administrateur système pour résoudre ce problème.
 
 ### Jeton de service de passerelle non valide
 
@@ -264,7 +264,7 @@ Lorsque [!DNL Identity Service] conserve une identité, un identifiant unique ap
 }
 ```
 
-Ce message d’erreur s’affiche lorsque votre organisation IMS n’a pas reçu les autorisations appropriées pour [!DNL Identity Service]. Contactez votre administrateur système pour résoudre ce problème.
+Ce message d’erreur s’affiche lorsque votre organisation n’a pas reçu les autorisations appropriées pour [!DNL Identity Service]. Contactez votre administrateur système pour résoudre ce problème.
 
 ### Erreur interne du serveur
 
@@ -330,7 +330,7 @@ Cette erreur s’affiche lorsque les 100 premières lignes d’un lot ne prése
 }
 ```
 
-Cette erreur s’affiche lorsqu’un enregistrement ingéré présente une identité dont l’espace de noms associé n’existe pas ou n’est pas accessible pour votre organisation IMS.
+Cette erreur s’affiche lorsqu’un enregistrement ingéré présente une identité dont l’espace de noms associé n’existe pas ou n’est pas accessible pour votre organisation.
 
 ### L’ingestion par lots est ignorée en tant que l’organisation IMS n’est pas configurée pour le graphique d’identités privé
 
@@ -342,7 +342,7 @@ Cette erreur s’affiche lorsqu’un enregistrement ingéré présente une ident
 }
 ```
 
-Lors de l’ingestion de données par lots, ce message d’erreur s’affiche lorsque votre organisation IMS n’a pas reçu les autorisations appropriées pour [!DNL Identity Service]. Contactez votre administrateur système pour résoudre ce problème.
+Lors de l’ingestion de données par lots, ce message d’erreur s’affiche lorsque votre entreprise n’a pas reçu les autorisations appropriées pour [!DNL Identity Service]. Contactez votre administrateur système pour résoudre ce problème.
 
 ### Erreur interne
 

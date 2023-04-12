@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Point de terminaison des planifications
 description: Les sections suivantes décrivent les différents appels d’API que vous pouvez effectuer pour les requêtes planifiées avec l’API Query Service.
 exl-id: f57dbda5-da50-4812-a924-c8571349f1cd
-source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1136'
-ht-degree: 73%
+source-wordcount: '1132'
+ht-degree: 70%
 
 ---
 
@@ -19,7 +19,7 @@ Maintenant que vous savez quels en-têtes utiliser, vous êtes prêt(e) à comme
 
 ### Récupération d’une liste de requêtes planifiées
 
-Vous pouvez obtenir une liste de toutes les requêtes planifiées de votre organisation IMS en effectuant une requête GET vers le point de terminaison `/schedules`.
+Vous pouvez récupérer une liste de toutes les requêtes planifiées de votre organisation en adressant une requête de GET à la fonction `/schedules` point de terminaison .
 
 **Format d’API**
 
@@ -45,7 +45,7 @@ Vous trouverez ci-dessous une liste des paramètres de requête disponibles pour
 
 **Requête**
 
-La requête suivante renvoie la dernière requête planifiée créée pour votre organisation IMS.
+La requête suivante renvoie la dernière requête planifiée créée pour votre organisation 
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/query/schedules?limit=1
@@ -57,7 +57,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/schedules?limit=1
 
 **Réponse**
 
-Une réponse réussie renvoie un état HTTP 200 avec une liste de requêtes planifiées pour l’organisation IMS spécifiée. La réponse suivante renvoie la dernière requête planifiée créée pour votre organisation IMS.
+Une réponse réussie renvoie un état HTTP 200 avec une liste de requêtes planifiées pour l’organisation spécifiée. La réponse suivante renvoie la dernière requête planifiée créée pour votre organisation 
 
 ```json
 {

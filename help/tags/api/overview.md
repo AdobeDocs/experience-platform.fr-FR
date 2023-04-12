@@ -2,10 +2,10 @@
 title: Guide de lʼAPI Reactor
 description: L’API Reactor permet aux développeurs de gérer toutes les ressources de balises par programme dans Adobe Experience Platform. Suivez ce guide pour savoir comment effectuer des opérations clés à l’aide de l’API.
 exl-id: 153eab11-db08-499e-80d1-c56f254372ce
-source-git-commit: 7e4bc716e61b33563e0cb8059cb9f1332af7fd36
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1082'
-ht-degree: 100%
+source-wordcount: '1081'
+ht-degree: 99%
 
 ---
 
@@ -19,7 +19,7 @@ Pour afficher tous les points dʼentrée et opérations CRUD disponibles, consul
 
 ## Sociétés
 
-Une société représente lʼorganisation dʼun utilisateur de balises, généralement une entreprise. Ces sociétés répondent parfaitement aux identifiants dʼorganisation IMS. Les utilisateurs de l’API nʼauront une visibilité que sur les sociétés auxquelles ils ont accès.
+Une société représente lʼorganisation dʼun utilisateur de balises, généralement une entreprise. Ces sociétés correspondent à 1:1 avec les ID d’organisation. Les utilisateurs de l’API nʼauront une visibilité que sur les sociétés auxquelles ils ont accès.
 
 Pour savoir comment afficher les sociétés disponibles dans lʼAPI, consultez le [guide du point dʼentrée des sociétés](./endpoints/companies.md).
 
@@ -51,7 +51,7 @@ Les composants de règle sont les éléments individuels constitutifs dʼune rè
 
 Pour savoir comment gérer les règles dans lʼAPI, consultez le [guide du point dʼentrée des règles](./endpoints/rules.md).
 
-## Modules d’extension
+## Packages d’extension
 
 Un package dʼextension représente un ensemble de fonctionnalités individuelles qui peuvent être mises à la disposition dʼun utilisateur de balises. La plupart du temps, ces fonctionnalités se présentent sous la forme de composants de règle et dʼéléments de données, mais peuvent également inclure des modules principaux et partagés. Les fonctionnalités fournies par un package dʼextension sont installées en tant quʼextension lorsquʼil est inclus dans une bibliothèque.
 

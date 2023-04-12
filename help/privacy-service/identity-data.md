@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Données d’identité pour les demandes d’accès à des informations personnelles
 description: Ce document fournit des instructions générales expliquant comment configurer vos opérations de données et tirer parti des technologies Adobe pour récupérer efficacement les informations d’identité appropriées pour les demandes d’accès à des informations personnelles des clients.
 exl-id: 43b0292a-ea4d-4858-b584-ba71029724f6
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '646'
+source-wordcount: '645'
 ht-degree: 45%
 
 ---
@@ -21,7 +21,7 @@ Ce document fournit des instructions générales expliquant comment configurer v
 
 Lorsqu’un client peut interagir avec votre marque via plusieurs canaux, il peut s’avérer difficile de rapprocher les différents identifiants enregistrés à partir de ces nombreuses interactions. Cela peut rendre difficile de déterminer quelles données appartiennent à une personne spécifique dans votre [!DNL Experience Cloud] applications.
 
-Par exemple, lors du traitement des requêtes de données client dans [!DNL Privacy Service], une identité peut représenter une valeur de cookie définie sous un domaine contrôlé par l’Adobe, une valeur de cookie définie sous un domaine tiers et partagée avec un Adobe ou un identifiant personnalisé défini explicitement dans votre organisation IMS.
+Par exemple, lors du traitement des requêtes de données client dans [!DNL Privacy Service], une identité peut représenter une valeur de cookie définie sous un domaine contrôlé par l’Adobe, une valeur de cookie définie sous un domaine tiers et partagée avec un Adobe ou un identifiant personnalisé défini explicitement au sein de votre organisation.
 
 Chaque identité envoyée à [!DNL Privacy Service] est accompagné d’un espace de noms qui fournit un contexte en reliant la valeur d’identité à son système d’origine. Un espace de noms peut représenter un concept générique tel qu’une adresse e-mail (« E-mail ») ou associer l’identité à une application spécifique telle qu’un identifiant Adobe Advertising Cloud ID (« AdCloud ») ou un identifiant Adobe Target (« TNTID »).
 

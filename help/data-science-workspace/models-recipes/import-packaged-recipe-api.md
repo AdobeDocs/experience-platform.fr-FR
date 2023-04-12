@@ -5,10 +5,10 @@ title: Importation d’une recette empaquetée à l’aide de l’API d’appren
 type: Tutorial
 description: Ce tutoriel utilise l’API Sensei Machine Learning pour créer un moteur, aussi appelé recette dans l’interface utilisateur.
 exl-id: c8dde30b-5234-448d-a597-f1c8d32f23d4
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1007'
-ht-degree: 62%
+source-wordcount: '1006'
+ht-degree: 61%
 
 ---
 
@@ -38,7 +38,7 @@ Ce tutoriel nécessite un fichier de recette empaqueté sous la forme d’une UR
 Pour suivre ce tutoriel, vous devez avoir terminé le tutoriel [Authentification à Adobe Experience ](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr) afin d’effectuer avec succès des appels vers les API Platform. [!DNL Platform] Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
 
 - `{ACCESS_TOKEN}` : votre valeur de jeton porteur spécifique fournie après l’authentification.
-- `{ORG_ID}` : vos informations d’identification d’organisation IMS, qui se trouvent dans votre intégration unique d’Adobe Experience Platform.
+- `{ORG_ID}`: Les informations d’identification de votre organisation se trouvent dans votre intégration Adobe Experience Platform unique.
 - `{API_KEY}` : valeur de clé API spécifique, qui se trouve dans votre intégration unique d’Adobe Experience Platform.
 
 ## Création d’un moteur

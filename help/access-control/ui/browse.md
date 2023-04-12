@@ -2,22 +2,22 @@
 keywords: Experience Platform;accueil;rubriques populaires
 solution: Experience Platform
 title: Sélection dʼun profil de produit pour modifier les autorisations de contrôle dʼaccès
-description: Ce document couvre les étapes nécessaires pour parcourir lʼespace de travail du contrôle dʼaccès. Afin de configurer le contrôle d’accès à Experience Platform via Adobe Admin Console, vous devez être administrateur d’une organisation IMS disposant d’un abonnement à Experience Platform.
+description: Ce document couvre les étapes nécessaires pour parcourir lʼespace de travail du contrôle dʼaccès. Pour configurer le contrôle d’accès pour un Experience Platform via Adobe Admin Console, vous devez être un administrateur pour une organisation qui s’abonne à l’Experience Platform.
 exl-id: 1d3c894e-b412-43ba-ba91-ddfa35303d73
-source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '317'
-ht-degree: 100%
+source-wordcount: '311'
+ht-degree: 61%
 
 ---
 
 # Sélection dʼun profil de produit pour gérer ses autorisations de contrôle dʼaccès
 
-Afin de configurer le contrôle dʼaccès à [!DNL Experience Platform] via Adobe Admin Console, vous devez être administrateur dʼune organisation IMS disposant dʼun abonnement à [!DNL Experience Platform]. Bien qu’Adobe prenne en charge des hiérarchies d’administrateurs flexibles pour les organisations IMS, vous devez disposer de droits d’administrateur système, d’administrateur produit, ou d’administrateur de profil de produit pour configurer le contrôle d’accès. Pour en savoir plus, consultez l’article du Centre d’aide Adobe sur les [rôles administratifs](https://helpx.adobe.com/fr/enterprise/using/admin-roles.html).
+Pour configurer le contrôle d’accès pour [!DNL Experience Platform] par le biais de Adobe Admin Console, vous devez être un administrateur pour une organisation qui s’abonne à [!DNL Experience Platform]. Bien qu’Adobe prenne en charge des hiérarchies d’administrateurs flexibles pour les organisations, vous devez disposer de droits d’administrateur système, d’administrateur de produit ou d’administrateur de profil de produit pour configurer le contrôle d’accès. Pour en savoir plus, consultez l’article du Centre d’aide Adobe sur les [rôles administratifs](https://helpx.adobe.com/fr/enterprise/using/admin-roles.html).
 
 Si vous ne disposez pas de droits d’administrateur, contactez votre administrateur système pour obtenir l’accès.
 
-Une fois que vous disposez des droits d’administrateur, accédez à [Adobe Admin Console](https://adminconsole.adobe.com) et connectez-vous à l’aide de vos informations d’identification Adobe. Une fois connecté, la page **[!UICONTROL Présentation]** s’affiche pour l’organisation IMS pour laquelle vous disposez des droits d’administrateur. Cette page présente les produits auxquels votre organisation IMS est abonnée, ainsi que d’autres contrôles permettant d’ajouter des utilisateurs et des administrateurs à l’ensemble de l’organisation IMS. Sélectionnez **[!UICONTROL Adobe Experience Platform]** pour ouvrir l’espace de travail du contrôle d’accès en vue de votre intégration Platform.
+Une fois que vous disposez des droits d’administrateur, accédez à [Adobe Admin Console](https://adminconsole.adobe.com) et connectez-vous à l’aide de vos informations d’identification Adobe. Une fois connecté, l’événement **[!UICONTROL Présentation]** s’affiche pour l’organisation pour laquelle vous disposez des droits d’administrateur. Cette page présente les produits auxquels votre organisation est abonnée, ainsi que d’autres contrôles permettant d’ajouter des utilisateurs et des administrateurs à l’organisation dans son ensemble. Sélectionnez **[!UICONTROL Adobe Experience Platform]** pour ouvrir l’espace de travail du contrôle d’accès en vue de votre intégration Platform.
 
 ![select-product](../images/select-product.png)
 

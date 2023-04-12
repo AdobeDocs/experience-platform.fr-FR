@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Prise en main de l’API Schema Registry
 description: Ce document présente les concepts de base que vous devez connaître avant d’effectuer des appels vers l’API Schema Registry.
 exl-id: 7daebb7d-72d2-4967-b4f7-1886736db69f
-source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1356'
-ht-degree: 48%
+source-wordcount: '1350'
+ht-degree: 45%
 
 ---
 
@@ -22,7 +22,7 @@ L’utilisation du guide de développement nécessite une compréhension pratiqu
 * [[!DNL Experience Data Model (XDM) System]](../home.md) : cadre normalisé selon lequel [!DNL Experience Platform] organise les données de l’expérience client.
    * [Notions de base de la composition du schéma](../schema/composition.md) : en savoir plus sur les blocs de création de base des schémas XDM.
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md) : fournit un profil de consommateur unifié en temps réel, basé sur des données agrégées provenant de plusieurs sources.
-* [[!DNL Sandboxes]](../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuelles qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
+* [[!DNL Sandboxes]](../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
 
 XDM utilise le formatage du schéma JSON pour décrire et valider la structure des données d’expérience client ingérées. Il est donc vivement recommandé de consulter la section [documentation officielle du schéma JSON](https://json-schema.org/) pour une meilleure compréhension de cette technologie sous-jacente.
 
@@ -38,7 +38,7 @@ Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {ORG_ID}`
 
-Toutes les ressources dans [!DNL Experience Platform], y compris ceux appartenant à la variable [!DNL Schema Registry], sont isolés dans des environnements de test virtuels spécifiques. Toutes les requêtes envoyées aux API [!DNL Platform] nécessitent un en-tête spécifiant le nom de la sandbox dans laquelle l’opération sera effectuée :
+Toutes les ressources dans [!DNL Experience Platform], y compris ceux appartenant à la variable [!DNL Schema Registry], sont isolés dans des environnements de test virtuels spécifiques. Toutes les requêtes envoyées aux API [!DNL Platform] nécessitent un en-tête spécifiant le nom du sandbox dans lequel l’opération sera effectuée :
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -54,7 +54,7 @@ Toutes les requêtes contenant un payload (POST, PUT, PATCH) requièrent un en-t
 
 ## Connaître votre TENANT_ID {#know-your-tenant_id}
 
-Dans les guides de l’API, vous trouverez des références à une `TENANT_ID`. Cet identifiant est utilisé pour assurer que les espaces de noms des ressources que vous créez sont corrects et contenus dans votre organisation IMS. Si vous ne connaissez pas votre identifiant, vous pouvez y accéder en réalisant la requête GET suivante :
+Dans les guides de l’API, vous trouverez des références à une `TENANT_ID`. Cet identifiant permet de s’assurer que les espaces de noms des ressources que vous créez sont corrects et contenus dans votre organisation. Si vous ne connaissez pas votre identifiant, vous pouvez y accéder en réalisant la requête GET suivante :
 
 **Format d’API**
 
@@ -168,7 +168,7 @@ GET /global/classes
 
 ### Conteneur client
 
-À ne pas confondre avec votre `TENANT_ID`, la variable `tenant` conteneur contient toutes les classes, groupes de champs, types de données, schémas et descripteurs définis par une organisation IMS. Ils sont spécifiques à chaque organisation, ce qui signifie qu’ils ne sont pas visibles ou gérables par d’autres organisations IMS. Vous pouvez effectuer toutes les opérations CRUD (GET, POST, PUT, PATCH, DELETE) par rapport aux ressources que vous créez dans la variable `tenant` conteneur.
+À ne pas confondre avec votre `TENANT_ID`, la variable `tenant` conteneur contient toutes les classes, les groupes de champs, les types de données, les schémas et les descripteurs définis par une organisation. Elles sont propres à chaque organisation, ce qui signifie qu’elles ne sont pas visibles ou gérables par d’autres organisations. Vous pouvez effectuer toutes les opérations CRUD (GET, POST, PUT, PATCH, DELETE) par rapport aux ressources que vous créez dans la variable `tenant` conteneur.
 
 Exemple d’appel qui utilise la variable `tenant` se présente comme suit :
 
@@ -212,7 +212,7 @@ Le tableau suivant répertorie les `Accept` valeurs d’en-tête, y compris cell
 | `application/vnd.adobe.xed-full-desc+json; version=1` | Attributs `$ref` et `allOf` résolus. Les descripteurs sont inclus. |
 | `application/vnd.adobe.xed-deprecatefield+json; version=1` | `$ref` et `allOf` résolus, contient des titres et des descriptions. Les champs obsolètes sont indiqués par un `meta:status` de `deprecated`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >

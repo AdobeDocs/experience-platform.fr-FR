@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Guide de dépannage de Privacy Service
 description: Ce document fournit des réponses aux questions fréquentes sur Privacy Service, ainsi que des informations sur les erreurs courantes rencontrées dans l’API.
 exl-id: 8afbb065-0f41-4048-9003-a22c0c839717
-source-git-commit: f619bbf2c8d313eabc6444b4bd8c09615a00cc42
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '917'
-ht-degree: 97%
+source-wordcount: '916'
+ht-degree: 96%
 
 ---
 
@@ -107,7 +107,7 @@ Le tableau suivant présente quelques erreurs courantes dans [!DNL Privacy Servi
 | Espace de noms non valide | Un espace de noms d’identité fourni pour un ID d’utilisateur n’était pas valide. Voir la section [Espaces de noms d’identité standard](./api/appendix.md#standard-namespaces) dans l’annexe du guide de l’API [!DNL Privacy Service] pour obtenir une liste des espaces de noms acceptés. Si vous utilisez un espace de noms personnalisé, veillez à définir la propriété `type` des identifiants sur « personnalisés». |
 | Tâche en partie terminée | La tâche s’est terminée avec succès, mais certaines données n’étaient pas applicables pour la requête donnée et ont été ignorées. |
 | Les données ne sont pas au format requis. | Une ou plusieurs valeurs de données pour l’application spécifiée n’étaient pas au format requis. Pour plus d’informations, consultez les détails de la tâche. |
-| L’organisation IMS n’a pas été configurée. | Ce message se produit lorsque votre organisation IMS n’a pas été configurée pour [!DNL Privacy Service]. Pour plus d’informations, contactez votre administrateur. |
+| L’organisation IMS n’a pas été configurée. | Ce message se produit lorsque votre organisation n’a pas reçu les privilèges d’accès pour [!DNL Privacy Service]. Pour plus d’informations, contactez votre administrateur. |
 | Des accès et des autorisations sont requis. | Des accès et des autorisations sont requis pour utiliser [!DNL Privacy Service]. Contactez votre administrateur pour obtenir un accès. |
 | Un problème est survenu lors du chargement et de l’archivage des données d’accès. | Lorsque cette erreur se produit, rechargez les données d’accès, puis réessayez. |
 | Dépassement de la charge de travail pour la limite de taux de documents actuelle. | Lorsque cette erreur se produit, réduisez le taux d’envoi, puis réessayez. |

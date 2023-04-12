@@ -7,10 +7,10 @@ landing-page-description: Trouvez des réponses aux questions fréquemment posé
 short-description: Trouvez des réponses aux questions fréquemment posées et obtenez un guide afin de résoudre les problèmes courants dans Experience Platform.
 type: Documentation
 exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
-source-git-commit: 76ef5638316a89aee1c6fb33370af943228b75e1
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1877'
-ht-degree: 99%
+source-wordcount: '1868'
+ht-degree: 93%
 
 ---
 
@@ -32,9 +32,9 @@ Les formats de requête varient selon l’API [!DNL Platform] utilisée. Le meil
 
 Pour plus d’informations sur le formatage des requêtes API, consultez la section du guide de prise en main de l’API Platform [qui fournit des exemples d’appels API](./api-guide.md#sample-api).
 
-## Quelle est mon organisation IMS ?  {#what-is-my-ims-organization}
+## Quelle est mon organisation  {#what-is-my-ims-organization}
 
-Une organisation IMS est une représentation Adobe d’un client. Toutes les solutions Adobe sous licence intègrent cette organisation client. Lorsqu’une organisation IMS est autorisée à utiliser [!DNL Experience Platform], elle peut attribuer un accès aux développeurs. L’identifiant d’organisation IMS (`x-gw-ims-org-id`) représente l’organisation pour laquelle un appel API devrait être exécuté. Il est donc nécessaire de le placer en tant qu’en-tête de toutes les requêtes API. Cet ID est accessible via [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) : dans l’onglet **Intégrations**, accédez à la section **Vue d’ensemble** pour toute intégration spécifique afin de trouver l’ID sous **Informations d’identification client**. Pour une présentation détaillée de la procédure d’authentification dans [!DNL Platform], consultez le [tutoriel sur l’authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr).
+Une organisation est une représentation Adobe d’un client. Toutes les solutions Adobe sous licence intègrent cette organisation client. Lorsqu’une organisation est autorisée à utiliser [!DNL Experience Platform], elle peut attribuer un accès aux développeurs. ID d’organisation (`x-gw-ims-org-id`) représente l’organisation pour laquelle un appel API doit être exécuté. Il est donc requis en tant qu’en-tête dans toutes les requêtes API. Cet ID est accessible via [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) : dans l’onglet **Intégrations**, accédez à la section **Vue d’ensemble** pour toute intégration spécifique afin de trouver l’ID sous **Informations d’identification client**. Pour une présentation détaillée de la procédure d’authentification dans [!DNL Platform], consultez le [tutoriel sur l’authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr).
 
 ## Où trouver ma clé API ?  {#where-can-i-find-my-api-key}
 
@@ -42,7 +42,7 @@ Une clé API doit constituer l’en-tête de toutes les requêtes API. Il est ac
 
 ## Comment obtenir un jeton d’accès ?  {#how-do-i-get-an-access-token}
 
-Les jetons d’accès doivent être renseignés dans l’en-tête d’autorisation de tous les appels API. Ils peuvent être générés à l’aide d’une commande `curl`, à condition que vous ayez accès à une intégration pour une organisation IMS. Les jetons d’accès ne sont valides que pendant 24 heures. Après ce délai, un nouveau jeton doit être généré pour continuer à utiliser l’API. Pour plus d’informations sur la génération des jetons d’accès, consultez le [tutoriel sur l’authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr).
+Les jetons d’accès doivent être renseignés dans l’en-tête d’autorisation de tous les appels API. Ils peuvent être générés à l’aide d’une commande CURL, à condition que vous ayez accès à une intégration pour une organisation. Les jetons d’accès ne sont valides que pendant 24 heures. Après ce délai, un nouveau jeton doit être généré pour continuer à utiliser l’API. Pour plus d’informations sur la génération des jetons d’accès, consultez le [tutoriel sur l’authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr).
 
 ## Comment utiliser les paramètres de requête ?  {#how-do-i-user-query-parameters}
 
@@ -151,7 +151,7 @@ Ce message d’erreur s’affiche lorsque la valeur de l’en-tête de clé API 
 }
 ```
 
-Ce message d’erreur s’affiche lorsqu’un en-tête d’organisation IMS (`x-gw-ims-org-id`) est absent d’une requête API. Assurez-vous que l’en-tête comprend l’identifiant de votre organisation IMS avant de réessayer.
+Ce message d’erreur s’affiche lorsqu’un en-tête d’organisation (`x-gw-ims-org-id`) est absent d’une requête API. Assurez-vous que l’en-tête comprend l’identifiant de votre organisation avant de réessayer.
 
 ### Profil non valide {#profile-is-not-valid}
 
@@ -162,7 +162,7 @@ Ce message d’erreur s’affiche lorsqu’un en-tête d’organisation IMS (`x-
 }
 ```
 
-Ce message d’erreur s’affiche lorsque l’intégration de l’utilisateur ou d’Adobe I/O (identifiée par le [jeton d’accès](#how-do-i-get-an-access-token) dans l’en-tête `Authorization`) n’est pas autorisée à effectuer des appels vers les API d’[!DNL Experience Platform] pour l’organisation IMS indiquée dans l’en-tête `x-gw-ims-org-id`. Vérifiez que vous avez indiqué le bon identifiant pour votre organisation IMS dans l’en-tête avant de réessayer. Si vous ne connaissez pas l’identifiant de votre organisation, vous pouvez le trouver dans la [console Adobe I/O](https://console.adobe.io) : dans l’onglet **Intégrations**, accédez à la section **Aperçu** pour une intégration spécifique afin de trouver l’identifiant sous **Informations d’identification du client**.
+Ce message d’erreur s’affiche lorsque l’intégration de l’utilisateur ou de l’Adobe I/O (identifiée par la variable [jeton d’accès](#how-do-i-get-an-access-token) dans le `Authorization` en-tête) n’est pas autorisé à effectuer des appels vers [!DNL Experience Platform] API de l’organisation fournie dans la variable `x-gw-ims-org-id` en-tête . Vérifiez que vous avez indiqué le bon identifiant pour votre organisation dans l’en-tête avant de réessayer. Si vous ne connaissez pas l’identifiant de votre organisation, vous pouvez le trouver dans la [console Adobe I/O](https://console.adobe.io) : dans l’onglet **Intégrations**, accédez à la section **Aperçu** pour une intégration spécifique afin de trouver l’identifiant sous **Informations d’identification du client**.
 
 ### Erreur d’actualisation de l’etag {#refresh-etag-error}
 
@@ -199,7 +199,7 @@ Ce message d’erreur s’affiche lorsqu’une requête POST, PUT ou PATCH compo
 ```
 
 Ce message d’erreur s’affiche dans l’un des deux cas ci-dessous :
-- Lorsqu’un en-tête de l’organisation IMS incorrect ou malformé (`x-gw-ims-org-id`) est transmis dans une requête API. Assurez-vous que l’ID correct de votre organisation IMS est inclus avant de réessayer.
+- En cas d’en-tête d’identifiant d’organisation incorrect ou incorrect (`x-gw-ims-org-id`) est transmis dans une requête API. Assurez-vous que l’ID correct de votre organisation est inclus avant de réessayer.
 - Lorsque votre compte (tel que représenté par les informations d’authentification fournies) n’est pas associé à un profil de produit pour Experience Platform. Suivez les étapes de la [génération des informations d’accès](./api-authentication.md#authentication-for-each-session) dans le tutoriel sur l’authentification de l’API Platform pour ajouter Platform à votre compte et mettre à jour vos informations d’authentification en conséquence.
 
 ## Répertoire de dépannage des services {#service-troubleshooting-directory}

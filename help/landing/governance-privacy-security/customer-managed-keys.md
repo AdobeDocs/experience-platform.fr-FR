@@ -2,9 +2,9 @@
 title: Clés gérées par le client dans Adobe Experience Platform
 description: Découvrez comment configurer vos propres clés de chiffrement pour les données stockées dans Adobe Experience Platform.
 exl-id: cd33e6c2-8189-4b68-a99b-ec7fccdc9b91
-source-git-commit: ca92839bd2a775ae323da5d5d0750b2026f8052d
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1618'
+source-wordcount: '1617'
 ht-degree: 92%
 
 ---
@@ -207,7 +207,7 @@ curl -X POST \
 | --- | --- |
 | `name` | Un nom pour la configuration. Veillez à mémoriser cette valeur, car il sera nécessaire de vérifier le statut de la configuration à une [étape ultérieure](#check-status). La valeur respecte la casse. |
 | `type` | Le type de configuration. Cette propriété doit être définie sur `BYOK_CONFIG`. |
-| `imsOrgId` | Votre identifiant d’organisation IMS. Il doit s’agir de la même valeur que celle fournie sous l’en-tête `x-gw-ims-org-id`. |
+| `imsOrgId` | Votre identifiant d’organisation. Il doit s’agir de la même valeur que celle fournie sous l’en-tête `x-gw-ims-org-id`. |
 | `configData` | Contient les détails suivants sur la configuration :<ul><li>`providerType` : Cette propriété doit être définie sur `AZURE_KEYVAULT`.</li><li>`keyVaultKeyIdentifier` : URI de coffre de clés que vous avez copié [précédemment](#send-to-adobe).</li></ul> |
 
 **Réponse**

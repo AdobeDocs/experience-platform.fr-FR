@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Présentation de Query Service
 description: Ce document donne une vue d’ensemble du rôle de Query Service dans Experience Platform.
 exl-id: fdaefc12-a97d-4e4e-9aed-d3dbd0f43ea0
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '722'
-ht-degree: 100%
+source-wordcount: '721'
+ht-degree: 96%
 
 ---
 
@@ -21,7 +21,7 @@ Adobe Experience Platform ingère des données à partir de sources diverses. 
 
 ## Utilisation de [!DNL Query Service]
 
-[!DNL Query Service] fournit une interface utilisateur et une API RESTful à partir desquelles vous pouvez créer des requêtes SQL pour mieux analyser vos données. L’interface utilisateur vous permet d’écrire et d’exécuter des requêtes, de visualiser des requêtes précédemment exécutées et d’accéder à des requêtes enregistrés par des utilisateurs au sein de votre organisation IMS. L’interface utilisateur est conçue pour être utilisée en tant que sandbox pour vos requêtes avant de les exécuter sur votre jeu de données plus vaste. Pour plus dʼinformations sur lʼutilisation du service interactif dans [!DNL Platform], consultez le [guide de lʼinterface utilisateur de Query Service](ui/overview.md). L’API RESTful offre une expérience similaire vous permettant d’écrire et d’exécuter par programmation des requêtes, de planifier des requêtes pour les utiliser et les répéter plus tard, ainsi que de créer des modèles pour les requêtes que vous souhaitez écrire. Pour plus dʼinformations sur lʼutilisation de lʼAPI [!DNL Query Service], reportez-vous au [guide de développement de Query Service](api/getting-started.md).
+[!DNL Query Service] fournit une interface utilisateur et une API RESTful à partir desquelles vous pouvez créer des requêtes SQL pour mieux analyser vos données. L’interface utilisateur vous permet d’écrire et d’exécuter des requêtes, d’afficher les requêtes précédemment exécutées et d’accéder aux requêtes enregistrées par les utilisateurs de votre entreprise. L’interface utilisateur est conçue pour être utilisée en tant que sandbox pour vos requêtes avant de les exécuter sur votre jeu de données plus vaste. Pour plus dʼinformations sur lʼutilisation du service interactif dans [!DNL Platform], consultez le [guide de lʼinterface utilisateur de Query Service](ui/overview.md). L’API RESTful offre une expérience similaire vous permettant d’écrire et d’exécuter par programmation des requêtes, de planifier des requêtes pour les utiliser et les répéter plus tard, ainsi que de créer des modèles pour les requêtes que vous souhaitez écrire. Pour plus dʼinformations sur lʼutilisation de lʼAPI [!DNL Query Service], reportez-vous au [guide de développement de Query Service](api/getting-started.md).
 
 ## [!DNL Query Service] et les services de [!DNL Experience Platform]
 

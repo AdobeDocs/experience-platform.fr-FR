@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Point de terminaison de l’API de requêtes
 description: Les sections suivantes passent en revue les appels que vous pouvez effectuer à l’aide du point de terminaison /query de l’API Query Service.
 exl-id: d6273e82-ce9d-4132-8f2b-f376c6712882
-source-git-commit: 08e19149a84273231c6261d2a4e09584dfb6e38d
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '868'
-ht-degree: 66%
+source-wordcount: '864'
+ht-degree: 62%
 
 ---
 
@@ -19,7 +19,7 @@ Les sections suivantes passent en revue les appels que vous pouvez effectuer à 
 
 ### Récupération d’une liste de requêtes
 
-Vous pouvez obtenir une liste de toutes les requêtes de votre organisation IMS en effectuant une requête GET vers le point de terminaison `/queries`.
+Vous pouvez récupérer une liste de toutes les requêtes de votre organisation en adressant une requête GET à la fonction `/queries` point de terminaison .
 
 **Format d’API**
 
@@ -46,7 +46,7 @@ Vous trouverez ci-dessous une liste des paramètres de requête disponibles pour
 
 **Requête**
 
-La requête suivante renvoie la dernière requête créée pour votre organisation IMS.
+La requête suivante renvoie la dernière requête créée pour votre organisation 
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/query/queries?limit=1 \
@@ -58,7 +58,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/queries?limit=1 \
 
 **Réponse**
 
-Une réponse réussie renvoie un état HTTP 200 avec une liste de requêtes pour l’organisation IMS spécifiée sous JSON. La réponse suivante renvoie la dernière requête créée pour votre organisation IMS.
+Une réponse réussie renvoie un état HTTP 200 avec une liste de requêtes pour l’organisation spécifiée sous la forme JSON. La réponse suivante renvoie la dernière requête créée pour votre organisation 
 
 ```json
 {

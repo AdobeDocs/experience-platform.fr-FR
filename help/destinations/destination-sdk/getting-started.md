@@ -2,10 +2,10 @@
 description: Cette page décrit comment vous authentifier et commencer à utiliser Adobe Experience Platform Destination SDK. Vous y trouverez des instructions sur la manière d’obtenir des informations d’authentification Adobe I/O, un nom de sandbox et l’autorisation de contrôle d’accès de création de destinations.
 title: Prise en main de Destination SDK
 exl-id: f22c37a8-202d-49ac-9af0-545dfa9af8fd
-source-git-commit: 557db5b7eefdd7902895e428f7bc34e3ad8a6f58
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '612'
-ht-degree: 100%
+source-wordcount: '610'
+ht-degree: 95%
 
 ---
 
@@ -17,13 +17,13 @@ Cette page décrit comment vous authentifier et commencer à utiliser Adobe Exp
 
 ## Terminologie {#terminology}
 
-Ce guide utilise des concepts spécifiques à Platform tels que l’organisation IMS et les sandbox. Consultez le [glossaire Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/glossary.html?lang=fr) pour connaître la définition de ces termes et d’autres.
+Ce guide utilise des concepts spécifiques à Platform, tels que l’organisation et les environnements de test. Consultez le [glossaire Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/glossary.html?lang=fr) pour connaître la définition de ces termes et d’autres.
 
 ## Obtenir les informations d’authentification requises {#obtain-authentication-credentials}
 
 Destination SDK utilise la passerelle [Adobe I/O](https://www.adobe.io/) pour l’authentification. Pour effectuer des appels API vers des points d’entrée de Destination SDK, vous devez fournir certains en-têtes dans vos appels API. Demandez à l’équipe dʼAdobe Exchange de configurer votre authentification dans [Adobe Developer Console](https://developer.adobe.com/console).
 
-Pour réaliser des appels aux points d’entrée de l’API Destination SDK, suivez le [tutoriel sur l’authentification Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr). Démarrez le tutoriel à partir de l’étape « [Générer une clé API, un identifiant d’organisation IMS et un secret client](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr#api-ims-secret) ». L’équipe dʼAdobe Exchange effectuera les étapes précédentes à votre place. Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans les appels à l’API Destination SDK, tel qu’indiqué ci-dessous :
+Pour réaliser des appels aux points d’entrée de l’API Destination SDK, suivez le [tutoriel sur l’authentification Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr). Démarrez le tutoriel à partir du[Génération d’une clé API, d’un ID d’organisation et d’un secret client](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr#api-ims-secret)&quot;. L’équipe dʼAdobe Exchange effectuera les étapes précédentes à votre place. Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans les appels à l’API Destination SDK, tel qu’indiqué ci-dessous :
 
 * `x-api-key: {API_KEY}`, également appelé identifiant client.
 * `x-gw-ims-org-id: {ORG_ID}`, également appelé identifiant d’organisation.

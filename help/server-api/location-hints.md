@@ -2,16 +2,16 @@
 title: Conseils de localisation
 description: Cet article explique le fonctionnement des indicateurs d’emplacement dans l’API Edge Network Server, de sorte que les demandes des utilisateurs finaux puissent toujours être acheminées vers le même serveur.
 exl-id: 8cd2f8e2-2065-4b7e-8d35-4ed1a716f1b3
-source-git-commit: 80c527ab3c82e01fe19e5003e224d63e79b23bdc
+source-git-commit: 2c7a5f007189d897ed32302a2a80c1e16af6af80
 workflow-type: tm+mt
-source-wordcount: '415'
+source-wordcount: '414'
 ht-degree: 0%
 
 ---
 
 # Conseils de localisation
 
-## Présentation {#overview}
+## Aperçu {#overview}
 
 Le [!DNL Adobe Experience Platform Edge Network] utilise plusieurs serveurs répartis dans le monde pour garantir des temps de réponse rapides, quel que soit l’emplacement de l’utilisateur final. Il utilise également le routage basé sur DNS pour s’assurer que les demandes sont toujours acheminées vers l’emplacement réseau Edge le plus proche des utilisateurs finaux.
 
@@ -62,4 +62,4 @@ POST 'https://edge.adobedc.net/ee/{LOCATION_HINT}/v2/interact?dataStreamId={Data
 
 Pour vous assurer que l’indicateur d’emplacement renvoyé par le réseau Edge persiste pendant la durée de la session, vous pouvez stocker la valeur de l’indicateur d’emplacement dans un cookie, ainsi que la durée de vie du cookie, qui est contenue dans la variable `ttlSeconds` (généralement 1 800 secondes).
 
-Comme pour la plupart des cookies, vous devez prolonger la durée de vie de ce cookie chaque fois qu’une réponse est apportée par le réseau Edge. Pour garantir une compatibilité maximale avec le SDK Web, utilisez le nom du cookie. `kndctr_{IMSORG}_AdobeOrg_cluster`. Les identifiants de l’organisation IMS se terminent généralement par `@AdobeOrg`. Le `@` doit être convertie en trait de soulignement pour que le cookie soit au bon format.
+Comme pour la plupart des cookies, vous devez prolonger la durée de vie de ce cookie chaque fois qu’une réponse est apportée par le réseau Edge. Pour garantir une compatibilité maximale avec le SDK Web, utilisez le nom du cookie. `kndctr_{IMSORG}_AdobeOrg_cluster`. Les identifiants d’organisation se terminent généralement par `@AdobeOrg`. Le `@` doit être convertie en trait de soulignement pour que le cookie soit au bon format.

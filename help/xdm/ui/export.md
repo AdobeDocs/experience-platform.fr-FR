@@ -1,21 +1,21 @@
 ---
 solution: Experience Platform
 title: Exportation des schémas XDM dans l’interface utilisateur
-description: Découvrez comment exporter un schéma existant vers un autre environnement de test ou organisation IMS dans l’interface utilisateur de Adobe Experience Platform.
+description: Découvrez comment exporter un schéma existant vers un environnement de test ou une organisation différente dans l’interface utilisateur de Adobe Experience Platform.
 type: Tutorial
 exl-id: c467666d-55bc-4134-b8f4-7758d49c4786
-source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '496'
+source-wordcount: '488'
 ht-degree: 0%
 
 ---
 
 # Exportation des schémas XDM dans l’interface utilisateur
 
-Toutes les ressources de la bibliothèque de schémas sont contenues dans un environnement de test spécifique au sein d’une organisation IMS. Dans certains cas, vous souhaiterez peut-être partager des ressources du modèle de données d’expérience (XDM) entre les environnements de test et les organisations IMS.
+Toutes les ressources de la bibliothèque de schémas sont contenues dans un environnement de test spécifique au sein d’une organisation. Dans certains cas, vous pouvez vouloir partager des ressources de modèle de données d’expérience (XDM) entre des environnements de test et des organisations.
 
-Pour répondre à ce besoin, la variable [!UICONTROL Schémas] Workspace dans l’interface utilisateur de Adobe Experience Platform vous permet de générer une charge d’exportation pour n’importe quel schéma dans la bibliothèque de schémas. Cette payload peut ensuite être utilisée dans un appel à l’API Schema Registry pour importer le schéma (et toutes les ressources dépendantes) dans un environnement de test cible et une organisation IMS.
+Pour répondre à ce besoin, la variable [!UICONTROL Schémas] Workspace dans l’interface utilisateur de Adobe Experience Platform vous permet de générer une charge d’exportation pour n’importe quel schéma dans la bibliothèque de schémas. Cette payload peut ensuite être utilisée dans un appel à l’API Schema Registry pour importer le schéma (et toutes les ressources dépendantes) dans un environnement de test et une organisation cible.
 
 >[!NOTE]
 >
@@ -23,7 +23,7 @@ Pour répondre à ce besoin, la variable [!UICONTROL Schémas] Workspace dans l�
 
 ## Conditions préalables
 
-Bien que l’interface utilisateur de Platform vous permette d’exporter des ressources XDM, vous devez utiliser l’API Schema Registry pour importer ces ressources dans d’autres environnements de test ou organisations IMS afin de terminer le workflow. Reportez-vous au guide sur [Prise en main de l’API Schema Registry](../api/getting-started.md) pour obtenir des informations importantes sur les en-têtes d’authentification requis avant de suivre ce guide.
+Bien que l’interface utilisateur de Platform vous permette d’exporter des ressources XDM, vous devez utiliser l’API Schema Registry pour importer ces ressources dans d’autres environnements de test ou organisations afin de terminer le processus. Reportez-vous au guide sur [Prise en main de l’API Schema Registry](../api/getting-started.md) pour obtenir des informations importantes sur les en-têtes d’authentification requis avant de suivre ce guide.
 
 ## Génération d’une payload d’exportation
 
@@ -201,14 +201,14 @@ Cette opération copie une charge utile JSON dans le presse-papiers, générée 
 ]
 ```
 
-La charge utile prend la forme d’un tableau, chaque élément de tableau étant un objet qui représente une ressource XDM personnalisée à exporter. Dans l’exemple ci-dessus, le[!DNL Loyalty details]&quot; groupe de champs personnalisés et le &quot;[!DNL Loyalty Members]&quot; sont inclus. Les ressources de base utilisées par le schéma ne sont pas incluses dans l’exportation, car elles sont disponibles dans tous les environnements de test et toutes les organisations IMS.
+La charge utile prend la forme d’un tableau, chaque élément de tableau étant un objet qui représente une ressource XDM personnalisée à exporter. Dans l’exemple ci-dessus, le[!DNL Loyalty details]&quot; groupe de champs personnalisés et le &quot;[!DNL Loyalty Members]&quot; sont inclus. Les ressources de base utilisées par le schéma ne sont pas incluses dans l’exportation, car elles sont disponibles dans tous les environnements de test et toutes les organisations.
 
 Notez que chaque instance de l’ID de tenant de votre organisation apparaît sous la forme `<XDM_TENANTID_PLACEHOLDER>` dans la payload. Ces espaces réservés seront automatiquement remplacés par la valeur d’identifiant du client appropriée en fonction de l’endroit où vous importez le schéma à l’étape suivante.
 
 ## Importer la ressource à l’aide de l’API
 
-Une fois que vous avez copié le fichier JSON d’exportation pour le schéma, vous pouvez l’utiliser comme charge utile pour une requête de POST vers la propriété `/rpc/import` point de terminaison dans l’API Schema Registry. Voir [guide de point de fin d’importation](../api/import.md) pour plus d’informations sur la configuration de l’appel pour envoyer le schéma à l’organisation IMS et à l’environnement de test de votre choix.
+Une fois que vous avez copié le fichier JSON d’exportation pour le schéma, vous pouvez l’utiliser comme charge utile pour une requête de POST vers la propriété `/rpc/import` point de terminaison dans l’API Schema Registry. Voir [guide de point de fin d’importation](../api/import.md) pour plus d’informations sur la configuration de l’appel pour envoyer le schéma à l’organisation et à l’environnement de test souhaités.
 
 ## Étapes suivantes
 
-En suivant ce guide, vous avez correctement exporté un schéma XDM vers une organisation IMS ou un environnement de test différent. Pour plus d’informations sur les fonctionnalités de la variable [!UICONTROL Schémas] IU, voir [[!UICONTROL Schémas] Présentation de l’interface utilisateur](./overview.md).
+En suivant ce guide, vous avez correctement exporté un schéma XDM vers une autre organisation ou un autre environnement de test. Pour plus d’informations sur les fonctionnalités de la variable [!UICONTROL Schémas] IU, voir [[!UICONTROL Schémas] Présentation de l’interface utilisateur](./overview.md).

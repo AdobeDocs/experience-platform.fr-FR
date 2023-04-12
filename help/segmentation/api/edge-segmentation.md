@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Effectuer une segmentation Edge à l’aide de l’API
 description: Ce document contient des exemples d’utilisation de la segmentation Edge avec l’API Segmentation Service Adobe Experience Platform.
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: 1c4da50b2c211aae06d6702d75e5650447fae0eb
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1187'
-ht-degree: 100%
+source-wordcount: '1185'
+ht-degree: 96%
 
 ---
 
@@ -67,7 +67,7 @@ Une définition de segment ne sera **pas** activée pour la segmentation Edge da
 
 ## Récupérer tous les segments activés pour la segmentation Edge
 
-Vous pouvez récupérer une liste de tous les segments activés pour la segmentation Edge dans votre organisation IMS en envoyant une requête GET au point d’entrée `/segment/definitions`.
+Vous pouvez récupérer une liste de tous les segments activés pour la segmentation Edge au sein de votre organisation en envoyant une demande de GET à la fonction `/segment/definitions` point de terminaison .
 
 **Format d’API**
 
@@ -90,7 +90,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie un tableau de segments de votre organisation IMS qui sont activés pour la segmentation Edge. Vous trouverez des informations plus détaillées sur la définition de segment renvoyée dans le [guide de point d’entrée des définitions de segment](./segment-definitions.md).
+Une réponse réussie renvoie un tableau de segments de votre entreprise activés pour la segmentation Edge. Vous trouverez des informations plus détaillées sur la définition de segment renvoyée dans le [guide de point d’entrée des définitions de segment](./segment-definitions.md).
 
 ```json
 {

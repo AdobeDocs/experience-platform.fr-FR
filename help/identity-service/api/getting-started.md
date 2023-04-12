@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Guide de l’API Identity Service
 description: L’API Identity Service permet aux développeurs de gérer l’identification inter-appareils, cross-canal et en temps quasi réel de vos clients à l’aide de graphiques d’identités dans Adobe Experience Platform. Suivez ce guide pour savoir comment effectuer des opérations clés à l’aide de l’API.
 exl-id: d612af38-4648-4c3e-8cfd-3f306c9370e1
-source-git-commit: ad9fb0bcc7bca55da432c72adc94d49e3c63ad6e
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '767'
-ht-degree: 74%
+source-wordcount: '764'
+ht-degree: 70%
 
 ---
 
@@ -37,7 +37,7 @@ Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [
 - x-api-key : `{API_KEY}`
 - x-gw-ims-org-id : `{ORG_ID}`
 
-Dans [!DNL Experience Platform], toutes les ressources sont isolées dans des sandbox virtuelles spécifiques. Toutes les requêtes envoyées aux API [!DNL Platform] nécessitent un en-tête spécifiant le nom de la sandbox dans laquelle l’opération sera effectuée :
+Dans [!DNL Experience Platform], toutes les ressources sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes envoyées aux API [!DNL Platform] nécessitent un en-tête spécifiant le nom du sandbox dans lequel l’opération sera effectuée :
 
 - x-sandbox-name : `{SANDBOX_NAME}`
 
@@ -51,7 +51,7 @@ Toutes les requêtes contenant un payload (POST, PUT, PATCH) requièrent un en-t
 
 ### Acheminement basé sur la région
 
-Le [!DNL Identity Service] L’API utilise des points de terminaison spécifiques à une région qui nécessitent l’inclusion d’un `{REGION}` dans le chemin d’accès de la requête. Pendant la mise en service de votre organisation IMS, une région est déterminée et stockée dans votre profil d’organisation IMS. L’utilisation de la région appropriée avec chaque point de terminaison garantit que toutes les requêtes effectuées à l’aide de la variable [!DNL Identity Service] Les API sont acheminées vers la région appropriée.
+Le [!DNL Identity Service] L’API utilise des points de terminaison spécifiques à une région qui nécessitent l’inclusion d’un `{REGION}` dans le chemin d’accès de la requête. Pendant la mise en service de votre organisation, une région est déterminée et stockée dans votre profil d’organisation. L’utilisation de la région appropriée avec chaque point de terminaison garantit que toutes les requêtes effectuées à l’aide de la variable [!DNL Identity Service] Les API sont acheminées vers la région appropriée.
 
 Deux régions sont actuellement prises en charge par [!DNL Identity Service] API : VA7 et NLD2.
 
@@ -66,7 +66,7 @@ Le tableau ci-dessous présente des exemples de chemins qui utilisent les régio
 >
 >Les requêtes effectuées sans spécifier de région peuvent entraîner le routage des appels vers une région incorrecte ou entraîner l’échec inattendu des appels.
 
-Si vous ne parvenez pas à localiser la région dans votre profil d’organisation IMS, contactez votre administrateur système pour obtenir de l’aide.
+Si vous ne parvenez pas à localiser la région dans votre profil d’entreprise, contactez votre administrateur système pour obtenir de l’aide.
 
 ## En utilisant la variable [!DNL Identity Service] API
 

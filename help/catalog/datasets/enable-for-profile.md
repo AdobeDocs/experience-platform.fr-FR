@@ -4,9 +4,9 @@ title: Configurer un jeu de données pour le profil et le Service d’identités
 type: Tutorial
 description: Ce tutoriel vous explique comment activer un jeu de données à utiliser avec Real-Time Customer Profile et Identity Service à l’aide des API Adobe Experience Platform.
 exl-id: a115e126-6775-466d-ad7e-ee36b0b8b49c
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '1073'
+source-wordcount: '1072'
 ht-degree: 94%
 
 ---
@@ -47,7 +47,7 @@ Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [
 
 Toutes les requêtes contenant une payload (POST, PUT, PATCH) nécessitent un en-tête `Content-Type` supplémentaire : La valeur correcte de cet en-tête s’affiche dans les exemples de requêtes, le cas échéant.
 
-Dans [!DNL Experience Platform], toutes les ressources sont isolées dans des sandbox virtuelles spécifiques. Toutes les requêtes envoyées aux API [!DNL Platform] nécessitent un en-tête `x-sandbox-name` spécifiant le nom de la sandbox dans laquelle l’opération sera effectuée. Pour plus d’informations sur les sandbox dans [!DNL Platform], consultez la [documentation de présentation des sandbox](../../sandboxes/home.md).
+Dans [!DNL Experience Platform], toutes les ressources sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes envoyées aux API [!DNL Platform] nécessitent un en-tête `x-sandbox-name` spécifiant le nom du sandbox dans lequel l’opération sera effectuée. Pour plus d’informations sur les sandbox dans [!DNL Platform], consultez la [documentation de présentation des sandbox](../../sandboxes/home.md).
 
 ## Créer un jeu de données activé pour Profile et Service d’identités {#create-a-dataset-enabled-for-profile-and-identity}
 
@@ -92,8 +92,8 @@ curl -X POST \
 
 | Propriété | Description |
 |---|---|
-| `schemaRef.id` | Identifiant du schéma activé pour [!DNL Profile] sur lequel le jeu de données sera basé. |
-| `{TENANT_ID}` | Espace de noms au sein du [!DNL Schema Registry] qui contient les ressources appartenant à votre organisation IMS. Pour plus d’informations, consultez la section [TENANT_ID](../../xdm/api/getting-started.md#know-your-tenant-id) du guide de développement [!DNL Schema Registry]. |
+| `schemaRef.id` | L’ID du schéma activé pour [!DNL Profile] sur lequel le jeu de données sera basé. |
+| `{TENANT_ID}` | L’espace de noms dans [!DNL Schema Registry] qui contient les ressources appartenant à votre organisation. Pour plus d’informations, consultez la section [TENANT_ID](../../xdm/api/getting-started.md#know-your-tenant-id) du guide de développement [!DNL Schema Registry]. |
 
 **Réponse**
 
@@ -220,7 +220,8 @@ curl -X PATCH \
 Le corps de la requête comprend un `path` à deux types de balises, `unifiedProfile` et `unifiedIdentity`. Le `value` de chacune de ces balises sont des tableaux contenant la chaîne `enabled:true`.
 
 **Réponse**
-Une requête PATCH réussie renvoie un état HTTP 200 (OK) et un tableau contenant l’identifiant du jeu de données mis à jour. Cet identifiant doit correspondre à celui envoyé dans la requête PATCH. Les balises `unifiedProfile` et `unifiedIdentity` ont maintenant été ajoutées, et le jeu de données est activé pour une utilisation dans Profile et Identity Service.
+
+Une requête PATCH réussie renvoie un statut HTTP 200 (OK) et un tableau contenant l’identifiant du jeu de données mis à jour. Cet identifiant doit correspondre à celui envoyé dans la requête PATCH. Les balises `unifiedProfile` et `unifiedIdentity` ont maintenant été ajoutées, et le jeu de données est activé pour une utilisation dans Profile et Identity Service.
 
 ```json
 [

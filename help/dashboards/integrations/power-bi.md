@@ -2,16 +2,16 @@
 title: Modèles de rapport Power BI pour les tableaux de bord de Platform
 description: Utilisez les modèles de rapport pour explorer les données d’Experience Platform à l’aide de Power BI.
 exl-id: fb98a79f-3d82-4e11-b08a-b7cb06414462
-source-git-commit: fa4fc154f57243250dec9bdf9557db13ef7768e8
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '1472'
-ht-degree: 93%
+source-wordcount: '1471'
+ht-degree: 92%
 
 ---
 
 # Modèles de rapport Power BI pour les tableaux de bord
 
-La fonctionnalité de modèles de rapport Power BI vous permet de créer des rapports attrayants remplis de données provenant d’Adobe Experience Platform. Le processus d’installation simplifié installe automatiquement les widgets standard pour Real-Time Customer Profile, la segmentation et les destinations. L’installation connecte également Power BI à vos modèles de données afin que vous puissiez facilement personnaliser et étendre vos modèles de rapport. Ces rapports peuvent être partagés dans l’ensemble de l’organisation sans que les destinataires aient besoin d’informations d’identification pour votre organisation IMS sur Platform.
+La fonctionnalité de modèles de rapport Power BI vous permet de créer des rapports attrayants remplis de données provenant d’Adobe Experience Platform. Le processus d’installation simplifié installe automatiquement les widgets standard pour Real-Time Customer Profile, la segmentation et les destinations. L’installation connecte également Power BI à vos modèles de données afin que vous puissiez facilement personnaliser et étendre vos modèles de rapport. Ces rapports peuvent être partagés dans l’ensemble de l’organisation sans que les destinataires aient besoin d’informations d’identification pour votre organisation sur Platform.
 
 Ce document explique comment connecter Adobe Experience Platform à l’application Power BI et utiliser des modèles de rapport pour partager des insights de données Platform clés avec des utilisateurs externes.
 

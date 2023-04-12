@@ -5,10 +5,10 @@ title: Formation et évaluation d’un modèle dans l’interface utilisateur de
 type: Tutorial
 description: Dans l’espace de travail de science des données d’Adobe Experience Platform, un modèle d’apprentissage automatique est créé en incorporant une recette existante adéquate au but du modèle. Le modèle est ensuite formé et évalué afin d’optimiser son efficience et son efficacité opérationnelles en affinant ses hyperparamètres associés. Les recettes sont réutilisables, ce qui signifie que plusieurs modèles peuvent être créés et adaptés à des fins spécifiques à l’aide d’une seule recette.
 exl-id: 6f674cfa-c123-46a3-80e2-9342fe687976
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '1092'
-ht-degree: 64%
+source-wordcount: '1090'
+ht-degree: 63%
 
 ---
 
@@ -20,7 +20,7 @@ Ce tutoriel décrit les étapes à suivre pour créer, former et évaluer un mod
 
 ## Prise en main
 
-Pour suivre ce tutoriel, vous devez avoir accès à [!DNL Experience Platform]. Si vous n’avez pas accès à une organisation IMS dans [!DNL Experience Platform], contactez votre administrateur système avant de continuer.
+Pour suivre ce tutoriel, vous devez avoir accès à [!DNL Experience Platform]. Si vous n’avez pas accès à une organisation dans [!DNL Experience Platform], contactez votre administrateur système avant de continuer.
 
 Ce tutoriel nécessite une recette existante. Si vous ne possédez aucune recette, suivez le tutoriel [Importation d’une recette empaquetée dans l’interface utilisateur](./import-packaged-recipe-ui.md) avant de continuer.
 
@@ -120,7 +120,7 @@ Des paramètres supplémentaires déterminent les propriétés techniques du mod
 | `ACP_DSW_INPUT_FEATURES` | Chaîne | Liste d’attributs de schéma d’entrée séparés par des virgules. |
 | `ACP_DSW_TARGET_FEATURES` | Chaîne | Liste d’attributs de schéma de sortie séparés par des virgules. |
 | `ACP_DSW_FEATURE_UPDATE_SUPPORT` | Booléen | Détermine si les fonctionnalités d’entrée et de sortie peuvent être modifiées. |
-| `tenantId` | Chaîne | Cet identifiant permet de garantir que les ressources que vous créez sont des espaces de noms corrects et contenus dans votre organisation IMS. [Suivez ces étapes](../../xdm/api/getting-started.md#know-your-tenant_id) pour trouver votre identifiant client. |
+| `tenantId` | Chaîne | Cet identifiant permet de s’assurer que les ressources que vous créez sont des espaces de noms corrects et contenus dans votre organisation. [Suivez ces étapes](../../xdm/api/getting-started.md#know-your-tenant_id) pour trouver votre identifiant client. |
 | `ACP_DSW_TRAINING_XDM_SCHEMA` | Chaîne | Le schéma d’entrée utilisé pour la formation d’un modèle. |
 | `evaluation.labelColumn` | Chaîne | Libellé de colonne pour visualiser les évaluations. |
 | `evaluation.metrics` | Chaîne | Liste de mesures d’évaluation séparées par des virgules à utiliser pour l’évaluation d’un modèle. |

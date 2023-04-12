@@ -2,10 +2,10 @@
 description: Cette page décrit toutes les opérations d’API que vous pouvez effectuer à l’aide du point dʼentrée de l’API « /authoring/audience-templates ».
 title: Opérations de l’API du point d’entrée des métadonnées d’audience
 exl-id: 3444da8c-b2be-4254-980a-8cce7560134d
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '879'
-ht-degree: 100%
+source-wordcount: '873'
+ht-degree: 91%
 
 ---
 
@@ -196,7 +196,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/audience-t
 | `validations.field` | Chaîne | Indique si les validations doivent être exécutées pour tout champ avant que des appels d’API ne soient effectués vers votre destination. Par exemple, vous pouvez utiliser `{{validations.accountId}}` pour valider l’identifiant de compte de l’utilisateur. |
 | `validations.regex` | Chaîne | Indique la structure du champ pour que la validation soit réussie. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Réponse**
 
@@ -318,7 +318,7 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/audience-te
 
 ## Récupérer une liste de modèles dʼaudience {#retrieve-list}
 
-Vous pouvez récupérer une liste de tous les modèles dʼaudience pour votre organisation IMS en effectuant une requête GET au point dʼentrée `/authoring/audience-templates`.
+Vous pouvez récupérer une liste de tous les modèles d’audience pour votre organisation en adressant une demande de GET à la fonction `/authoring/audience-templates` point de terminaison .
 
 **Format d’API**
 
@@ -329,7 +329,7 @@ GET /authoring/audience-templates
 
 **Requête**
 
-La requête suivante récupère la liste des modèles d’audience auxquels vous avez accès, en fonction de la configuration de l’organisation IMS et du sandbox.
+La requête suivante récupère la liste des modèles d’audience auxquels vous avez accès, en fonction de la configuration de l’organisation et de l’environnement de test.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/activation/authoring/audience-templates \
@@ -341,7 +341,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/audience-te
 
 **Réponse**
 
-La réponse suivante renvoie un état HTTP 200 avec une liste de modèles de métadonnées d’audience auxquels vous avez accès, en fonction de l’identifiant de l’organisation IMS et du nom de sandbox que vous avez utilisés. Une valeur `instanceId` correspond au modèle pour une destination. La réponse est tronquée à des fins de brièveté.
+La réponse suivante renvoie un état HTTP 200 avec une liste de modèles de métadonnées d’audience auxquels vous avez accès, en fonction de l’ID d’organisation et du nom de l’environnement de test que vous avez utilisés. Une valeur `instanceId` correspond au modèle pour une destination. La réponse est tronquée à des fins de brièveté.
 
 ```json
 {

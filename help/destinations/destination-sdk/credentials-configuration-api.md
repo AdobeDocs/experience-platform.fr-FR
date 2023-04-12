@@ -2,10 +2,10 @@
 description: Cette page décrit toutes les opérations d’API que vous pouvez effectuer à l’aide du point d’entrée de l’API « /authoring/credentials ».
 title: Opérations des paramètres d’identification de l’API
 exl-id: 89957f38-e7f4-452d-abc0-0940472103fe
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '797'
-ht-degree: 100%
+source-wordcount: '791'
+ht-degree: 91%
 
 ---
 
@@ -132,7 +132,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/credential
 | `servicePrincipalKey` | Chaîne | Clé principale du service Azure pour Azure Data Lake Storage |
 | `connectionString` | Chaîne | Chaîne de connexion de stockage dʼobjets Azure Blob |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Réponse**
 
@@ -140,7 +140,7 @@ Une réponse réussie renvoie un état HTTP 200 avec les détails de la configu
 
 ## Répertorier les configurations dʼinformations d’identification {#retrieve-list}
 
-Vous pouvez obtenir une liste de toutes les configurations dʼinformations dʼidentification de votre organisation IMS en effectuant une requête GET vers le point de terminaison `/authoring/credentials`.
+Vous pouvez récupérer une liste de toutes les configurations d’informations d’identification de votre organisation en envoyant une demande de GET à la fonction `/authoring/credentials` point de terminaison .
 
 **Format d’API**
 
@@ -151,7 +151,7 @@ GET /authoring/credentials
 
 **Requête**
 
-La requête suivante récupère la liste des configurations dʼinformations d’identification auxquelles vous avez accès, en fonction de lʼorganisation IMS et de la configuration de la sandbox.
+La requête suivante récupère la liste des configurations d’informations d’identification auxquelles vous avez accès, en fonction de la configuration de l’organisation et de l’environnement de test.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/activation/authoring/credentials \
@@ -163,7 +163,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/credentials
 
 **Réponse**
 
-La réponse suivante renvoie un état HTTP 200 avec une liste des configurations dʼinformations d’identification auxquelles vous avez accès, en fonction de l’identifiant de l’organisation IMS et du nom de sandbox utilisés. Un champ `instanceId` correspond au modèle dʼune configuration dʼinformations d’identification. La réponse est tronquée à des fins de brièveté.
+La réponse suivante renvoie un état HTTP 200 avec une liste des configurations d’informations d’identification auxquelles vous avez accès, en fonction de l’ID d’organisation et du nom de l’environnement de test que vous avez utilisés. Un champ `instanceId` correspond au modèle dʼune configuration dʼinformations d’identification. La réponse est tronquée à des fins de brièveté.
 
 ```json
 {

@@ -2,10 +2,10 @@
 title: Exporter le point de terminaison de l’API
 description: Le point de terminaison /export de l’API Schema Registry vous permet de partager des ressources XDM entre environnements de test.
 exl-id: 1dcbfa59-af98-4db5-b6f4-f848e5bf5e81
-source-git-commit: 32d4a364ba740194d4fd7a0f4df7bd69f25f62b8
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '414'
-ht-degree: 14%
+source-wordcount: '410'
+ht-degree: 13%
 
 ---
 
@@ -33,7 +33,7 @@ GET /rpc/export/{RESOURCE_ID}
 | --- | --- |
 | `{RESOURCE_ID}` | Le `meta:altId` ou encodé URL `$id` de la ressource XDM que vous souhaitez exporter. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Requête**
 
@@ -51,7 +51,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie un tableau d’objets, qui représente la ressource XDM cible et toutes ses ressources dépendantes. Dans cet exemple, le premier objet du tableau est un objet créé par le client. `Property` le type de données qui `Restaurant` le groupe de champs utilise, tandis que le second objet est le suivant : `Restaurant` groupe de champs lui-même. Cette payload peut ensuite être utilisée pour [importer la ressource](#import) dans un autre environnement de test ou organisation IMS.
+Une réponse réussie renvoie un tableau d’objets, qui représente la ressource XDM cible et toutes ses ressources dépendantes. Dans cet exemple, le premier objet du tableau est un objet créé par le client. `Property` le type de données qui `Restaurant` le groupe de champs utilise, tandis que le second objet est le suivant : `Restaurant` groupe de champs lui-même. Cette payload peut ensuite être utilisée pour [importer la ressource](#import) dans un autre environnement de test ou une autre organisation.
 
 Notez que toutes les instances de l’identifiant du client de la ressource sont remplacées par `<XDM_TENANTID_PLACEHOLDER>`. Cela permet au registre des schémas d’appliquer automatiquement l’identifiant client correct aux ressources en fonction de l’emplacement où ils sont envoyés dans l’appel d’importation suivant.
 

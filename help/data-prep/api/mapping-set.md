@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Point d’entré de l’API Mapping Sets
 description: Vous pouvez utiliser le point d’entrée `/mappingSets` dans l’API Adobe Experience Platform pour récupérer, créer, mettre à jour et valider par programmation des jeux de mappage.
 exl-id: a4e4ddcd-164e-42aa-b7d1-ba59d70da142
-source-git-commit: d39ae3a31405b907f330f5d54c91b95c0f999eee
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '854'
-ht-degree: 94%
+source-wordcount: '852'
+ht-degree: 90%
 
 ---
 
@@ -17,7 +17,7 @@ Les jeux de mappages peuvent être utilisés pour définir la façon dont les do
 
 ## Liste des jeux de mappages
 
-Vous pouvez récupérer une liste de tous les jeux de mappage pour votre organisation IMS en effectuant une requête GET sur le point d’entrée `/mappingSets`.
+Vous pouvez récupérer une liste de tous les ensembles de mappages pour votre organisation en envoyant une requête de GET à la variable `/mappingSets` point de terminaison .
 
 **Format d’API**
 
@@ -40,7 +40,7 @@ GET /mappingSets?limit={LIMIT}&start={START}&expandSchema={EXPAND_SCHEMA}
 
 **Requête**
 
-La requête suivante récupèrera les deux derniers jeux de de mappage de votre organisation IMS.
+La requête suivante récupère les deux derniers jeux de mappages au sein de votre organisation.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/conversion/mappingSets?limit=2&start=0 \

@@ -3,10 +3,10 @@ title: Utilisation d’Offer Decisioning avec le SDK Web Platform
 description: Le SDK Web de Adobe Experience Platform peut diffuser et générer des offres personnalisées gérées dans Offer Decisioning. Vous pouvez créer vos offres et d’autres objets associés à l’aide de l’interface utilisateur ou de l’API Offer Decisioning.
 keywords: offer decisioning;prise de décision;SDK Web;SDK Web Platform;offres personnalisées;diffuser des offres;diffusion d’offres;personnalisation des offres ;
 exl-id: 4ab51f9d-3c44-4855-b900-aa2cde673a9a
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '865'
-ht-degree: 20%
+source-wordcount: '863'
+ht-degree: 19%
 
 ---
 
@@ -14,13 +14,13 @@ ht-degree: 20%
 
 >[!NOTE]
 >
->L’utilisation d’Offer Decisioning dans le SDK Web de Adobe Experience Platform est disponible en accès anticipé pour certains utilisateurs. Cette fonctionnalité n’est pas disponible pour toutes les organisations IMS.
+>L’utilisation d’Offer Decisioning dans le SDK Web de Adobe Experience Platform est disponible en accès anticipé pour certains utilisateurs. Cette fonctionnalité n’est pas disponible pour toutes les organisations 
 
 Adobe Experience Platform [!DNL Web SDK] peut diffuser et générer des offres personnalisées gérées dans Offer Decisioning. Vous pouvez créer vos offres et d’autres objets connexes en utilisant l’interface utilisateur (UI) ou les API d’Offer Decisioning.
 
 ## Conditions préalables
 
-* L’organisation IMS est activée pour la prise de décision Edge
+* L’organisation est activée pour la prise de décision Edge
 * Offres, Activités créées
 * Datastream est publié
 

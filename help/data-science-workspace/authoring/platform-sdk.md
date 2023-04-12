@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Création de modèles à l’aide du SDK Adobe Experience Platform Platform
 description: Ce tutoriel vous fournit des informations sur la conversion de data_access_sdk_python en nouveau Python platform_sdk en Python et en R.
 exl-id: 20909cae-5cd2-422b-8dbb-35bc63e69b2a
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '495'
-ht-degree: 79%
+source-wordcount: '489'
+ht-degree: 69%
 
 ---
 
@@ -21,7 +21,7 @@ Ce tutoriel vous fournit des informations sur la conversion de `data_access_sdk_
 
 ## Authentification de création {#build-authentication}
 
-L’authentification est requise pour effectuer des appels vers [!DNL Adobe Experience Platform], et comprend une clé API, un identifiant de l’organisation IMS, un jeton utilisateur et un jeton de service.
+L’authentification est requise pour effectuer des appels vers [!DNL Adobe Experience Platform], et comprend une clé API, un ID d’organisation, un jeton utilisateur et un jeton de service.
 
 ### Python
 
@@ -31,7 +31,7 @@ Si vous utilisez Jupyter Notebook, veuillez utiliser le code ci-dessous pour cr�
 client_context = PLATFORM_SDK_CLIENT_CONTEXT
 ```
 
-Si vous n’utilisez pas Jupyter Notebook ou si vous devez changer l’organisation IMS, veuillez utiliser l’exemple de code ci-dessous :
+Si vous n’utilisez pas Jupyter Notebook ou si vous devez modifier l’organisation, utilisez l’exemple de code suivant :
 
 ```python
 from platform_sdk.client_context import ClientContext
@@ -54,7 +54,7 @@ py_run_file("../.ipython/profile_default/startup/platform_sdk_context.py")
 client_context <- py$PLATFORM_SDK_CLIENT_CONTEXT
 ```
 
-Si vous n’utilisez pas Jupyter Notebook ou si vous devez changer l’organisation IMS, veuillez utiliser l’exemple de code ci-dessous :
+Si vous n’utilisez pas Jupyter Notebook ou si vous devez changer d’organisation, utilisez l’exemple de code suivant :
 
 ```r
 library(reticulate)
@@ -79,7 +79,7 @@ Si votre temps de lecture est trop long, vous pouvez essayer d’utiliser l’un
 
 >[!NOTE]
 >
->L’organisation IMS est définie dans le `client_context`.
+>L’organisation est définie dans la variable `client_context`.
 
 ### Python
 
@@ -195,7 +195,7 @@ df <- dataset_reader$sort(c(('column-a', 'asc'), ('column-b', 'desc')))$read()
 
 >[!NOTE]
 >
->L’organisation IMS est définie dans le `client_context`.
+>L’organisation est définie dans la variable `client_context`.
 
 Pour écrire des données en Python et en R, utilisez l’un des exemples suivants :
 

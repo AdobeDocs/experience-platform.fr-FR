@@ -3,24 +3,24 @@ keywords: Experience Platform;recette de ventes au détail;Data Science Workspac
 solution: Experience Platform
 title: Création d’un schéma et d’un jeu de données de vente au détail
 type: Tutorial
-description: Ce tutoriel vous présente les prérequis et les ressources nécessaires à tous les autres tutoriels sur l’espace de travail de science des données d’Adobe Experience Platform. Une fois que vous aurez terminé, les jeux de données et le schéma de vente au détail seront disponibles pour vous et les membres de votre organisation IMS sur Experience Platform.
+description: Ce tutoriel vous présente les prérequis et les ressources nécessaires à tous les autres tutoriels sur l’espace de travail de science des données d’Adobe Experience Platform. Une fois l’opération terminée, les jeux de données et le schéma de vente au détail seront disponibles pour vous et les membres de votre organisation sur Experience Platform.
 exl-id: 1b868c8c-7c92-4f99-8486-54fd7aa1af48
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '554'
-ht-degree: 71%
+source-wordcount: '551'
+ht-degree: 64%
 
 ---
 
 
 # Création de jeux de données et de schéma de vente au détail
 
-Ce tutoriel vous fournit les prérequis et les ressources requis pour tous les autres [!DNL Adobe Experience Platform] [!DNL Data Science Workspace] tutoriels. Une fois que vous aurez terminé, les jeux de données et le schéma de vente au détail seront disponibles pour vous et les membres de votre organisation IMS sur [!DNL Experience Platform].
+Ce tutoriel vous fournit les prérequis et les ressources requis pour tous les autres [!DNL Adobe Experience Platform] [!DNL Data Science Workspace] tutoriels. Une fois l’opération terminée, les jeux de données et le schéma de vente au détail seront disponibles pour vous et les membres de votre organisation sur [!DNL Experience Platform].
 
 ## Prise en main
 
 Avant de commencer ce tutoriel, vous devez disposer des éléments suivants :
-- Accès à [!DNL Adobe Experience Platform]. Si vous n’avez pas accès à une organisation IMS dans [!DNL Experience Platform], contactez votre administrateur système avant de continuer.
+- Accès à [!DNL Adobe Experience Platform]. Si vous n’avez pas accès à une organisation dans [!DNL Experience Platform], contactez votre administrateur système avant de continuer.
 - Autorisation d’effectuer [!DNL Experience Platform] Appels API. Suivez le tutoriel [Authentification et accès aux API Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr) afin d’obtenir les valeurs suivantes pour effectuer ce didacticiel :
    - Authorization: `{ACCESS_TOKEN}`
    - x-api-key: `{API_KEY}`

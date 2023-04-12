@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Point de terminaison de l’API de tâches de segmentation
 description: Le point de terminaison des tâches de segmentation de l’API Adobe Experience Platform Segmentation Service vous permet de gérer par programmation les tâches de segmentation pour votre organisation.
 exl-id: 105481c2-1c25-4f0e-8fb0-c6577a4616b3
-source-git-commit: 229dd08bc5d5dfab068db3be84ad20d10992fd31
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1498'
+source-wordcount: '1497'
 ht-degree: 24%
 
 ---
@@ -56,7 +56,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
 
 **Réponse**
 
-Une réponse réussie renvoie un état HTTP 200 avec une liste de tâches de segmentation pour l’organisation IMS spécifiée comme JSON. Toutefois, la réponse sera différente, en fonction du nombre de segments dans la tâche de segmentation.
+Une réponse réussie renvoie un état HTTP 200 avec une liste de tâches de segmentation pour l’organisation spécifiée comme JSON. Toutefois, la réponse sera différente, en fonction du nombre de segments dans la tâche de segmentation.
 
 **Inférieur ou égal à 1 500 segments dans votre tâche de segmentation**
 

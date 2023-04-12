@@ -2,10 +2,10 @@
 title: Prise en main de l’API Reactor
 description: Découvrez comment commencer à utiliser l’API Reactor, y compris les étapes de génération des informations d’identification d’accès requises.
 exl-id: fc1acc1d-6cfb-43c1-9ba9-00b2730cad5a
-source-git-commit: 0a4883cff4f8e04dd0dd62a9e01435fa302a9e54
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1050'
-ht-degree: 97%
+source-wordcount: '1049'
+ht-degree: 95%
 
 ---
 
@@ -31,7 +31,7 @@ Avant de pouvoir générer des valeurs d’authentification pour l’API Reactor
 * `{API_KEY}`
 * `{ACCESS_TOKEN}`
 
-L’identifiant de votre organisation IMS (`{ORG_ID}`) et la clé d’API (`{API_KEY}`) peuvent être réutilisés dans les appels d’API futurs après leur génération initiale. Cependant, votre jeton d’accès (`{ACCESS_TOKEN}`) est temporaire et doit être régénéré toutes les 24 heures.
+ID de votre organisation (`{ORG_ID}`) et clé API (`{API_KEY}`) peut être réutilisé dans les appels API futurs après leur génération initiale. Cependant, votre jeton d’accès (`{ACCESS_TOKEN}`) est temporaire et doit être régénéré toutes les 24 heures.
 
 Les étapes de génération de ces valeurs sont décrites en détail ci-dessous.
 

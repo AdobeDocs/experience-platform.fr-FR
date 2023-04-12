@@ -5,9 +5,9 @@ title: Activation des segments d’audience vers des destinations par lots via l
 description: Cet article illustre le processus de bout en bout d’activation des segments d’audience par le biais de l’API d’activation ad hoc, y compris les tâches de segmentation qui ont lieu avant l’activation.
 type: Tutorial
 exl-id: 1a09f5ff-0b04-413d-a9f6-57911a92b4e4
-source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '1563'
+source-wordcount: '1553'
 ht-degree: 18%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 18%
 >
 >Voir [Exécution de la tâche d’activation ad hoc](#activation-job) plus loin dans ce tutoriel pour plus d’informations.
 
-## Présentation {#overview}
+## Aperçu {#overview}
 
 L’API d’activation ad hoc permet aux spécialistes du marketing d’activer par programmation les segments d’audience vers les destinations, de manière rapide et efficace, dans les cas où une activation immédiate est requise.
 
@@ -46,7 +46,7 @@ Un hôtel s&#39;attend à des conditions météorologiques favorables les jours 
 
 Les responsables informatiques peuvent utiliser l’API d’activation ad hoc Experience Platform pour exporter des segments à la demande, afin qu’ils puissent tester leur intégration personnalisée avec Adobe Experience Platform et s’assurer que tout fonctionne correctement.
 
-## Barrières de sécurité {#guardrails}
+## Mécanismes de sécurisation {#guardrails}
 
 Gardez à l’esprit les barrières de sécurité suivantes lors de l’utilisation de l’API d’activation ad hoc.
 
@@ -62,7 +62,7 @@ Adobe Experience Platform exécute des tâches de segmentation planifiées toute
 
 Avant de pouvoir appeler les API Adobe Experience Platform, assurez-vous de respecter les conditions préalables suivantes :
 
-* Vous disposez d’un compte de l’organisation IMS ayant accès à Adobe Experience Platform.
+* Vous disposez d’un compte d’organisation ayant accès à Adobe Experience Platform.
 * Votre compte d’Experience Platform a la variable `developer` et `user` rôles activés pour le profil de produit de l’API Adobe Experience Platform. Contactez votre [Admin Console](../../access-control/home.md) pour activer ces rôles pour votre compte.
 * Vous avez une Adobe ID. Si vous ne possédez pas d’Adobe ID, accédez à la [Console Adobe Developer](https://developer.adobe.com/console) et créez un compte.
 
@@ -74,13 +74,13 @@ Pour lancer des appels aux API Platform, vous devez d’abord suivre le [tutorie
 * x-api-key : `{API_KEY}`
 * x-gw-ims-org-id: `{ORG_ID}`
 
-Les ressources d’Experience Platform peuvent être isolées dans des environnements de test virtuels spécifiques. Dans les requêtes aux API Platform, vous pouvez spécifier le nom et l’identifiant de l’environnement de test dans lequel l’opération aura lieu. Il s’agit de paramètres facultatifs.
+Les ressources d’Experience Platform peuvent être isolées dans des sandbox virtuels spécifiques. Dans les requêtes aux API Platform, vous pouvez spécifier le nom et l’identifiant du sandbox dans lequel l’opération aura lieu. Il s’agit de paramètres facultatifs.
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Pour plus d’informations sur les environnements de test dans Experience Platform, consultez la [documentation de présentation des environnements de test](../../sandboxes/home.md).
+>Pour plus d’informations sur les sandbox dans Experience Platform, consultez la [documentation de présentation des sandbox](../../sandboxes/home.md).
 
 Toutes les requêtes qui contiennent un payload (POST, PUT, PATCH) nécessitent un en-tête de type de média supplémentaire :
 
@@ -169,7 +169,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/d
 | <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | Les identifiants des instances de destination vers lesquelles vous souhaitez activer les segments. Vous pouvez obtenir ces ID à partir de l’interface utilisateur de Platform en accédant à **[!UICONTROL Destinations]** > **[!UICONTROL Parcourir]** et cliquez sur la ligne de destination souhaitée pour afficher l’ID de destination dans le rail de droite. Pour plus d’informations, reportez-vous à la section [documentation de l’espace de travail des destinations](/help/destinations/ui/destinations-workspace.md#browse). |
 | <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul> | Les identifiants des segments que vous souhaitez activer vers la destination sélectionnée. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Requête avec des identifiants d’exportation (à abandonner) {#request-deprecated}
 
@@ -207,7 +207,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/disflowprovider/adho
 | <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul> | Les identifiants des segments que vous souhaitez activer vers la destination sélectionnée. |
 | <ul><li>`exportId1`</li></ul> | L’ID renvoyé dans la réponse de la variable [exportation de segments](../../segmentation/api/export-jobs.md#retrieve-list) tâche. Voir [Étape 4 : Obtention du dernier ID de tâche d’exportation de segments](#segment-export-id) pour obtenir des instructions sur la manière de trouver cet identifiant. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Réponse {#response}
 
@@ -231,7 +231,7 @@ Une réponse réussie renvoie un état HTTP 200.
 | `order` | Identifiant de la destination vers laquelle le segment a été activé. |
 | `statusURL` | URL d’état du flux d’activation. Vous pouvez suivre la progression du flux à l’aide de la variable [API de service de flux](../../sources/tutorials/api/monitor.md). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Gestion des erreurs d’API {#api-error-handling}
 

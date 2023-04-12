@@ -3,9 +3,9 @@ keywords: Experience Platform;accueil;rubriques populaires
 title: Traitement des demandes d’accès à des informations personnelles dans Identity Service
 description: Adobe Experience Platform Privacy Service traite les demandes des clients en matière dʼaccès, de retrait du consentement à la vente ou de suppression de leurs données personnelles conformément aux nombreuses réglementations en matière de confidentialité. Ce document couvre les concepts essentiels associés au traitement des demandes d’accès à des informations personnelles pour Identity Service.
 exl-id: ab84450b-1a4b-4fdd-b77d-508c86bbb073
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '1038'
+source-wordcount: '1037'
 ht-degree: 65%
 
 ---
@@ -104,7 +104,7 @@ Lors de la création de requêtes de tâche dans l’interface utilisateur, veil
 
 ## Traitement des demandes de suppression
 
-Lorsquʼ[!DNL Experience Platform] reçoit une requête DELETE de la part de [!DNL Privacy Service], [!DNL Platform] envoie une confirmation à [!DNL Privacy Service] pour confirmer que la requête a été reçue et que les données concernées ont été marquées pour suppression. La suppression de l’identité individuelle est basée sur l’espace de noms et/ou la valeur d’identifiant fournis. En outre, la suppression a lieu pour tous les sandbox associés à une organisation IMS donnée.
+Lorsquʼ[!DNL Experience Platform] reçoit une requête DELETE de la part de [!DNL Privacy Service], [!DNL Platform] envoie une confirmation à [!DNL Privacy Service] pour confirmer que la requête a été reçue et que les données concernées ont été marquées pour suppression. La suppression de l’identité individuelle est basée sur l’espace de noms et/ou la valeur d’identifiant fournis. En outre, la suppression a lieu pour tous les sandbox associés à une organisation donnée.
 
 Selon que vous avez également inclus ou non Real-time Customer Profile (`ProfileService`) et le lac de données (`aepDataLake`) en tant que produits dans votre demande d’accès à des informations personnelles (`identity`), différents ensembles de données liés à l’identité sont supprimés du système à des moments potentiellement différents :
 

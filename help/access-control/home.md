@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Présentation du contrôle d’accès
 description: Dans Adobe Experience Platform, le contrôle dʼaccès est fourni par le biais dʼAdobe Admin Console. Cette fonctionnalité exploite les profils de produit dans l’Admin Console, liant les utilisateurs et utilisatrices à des autorisations et des sandbox.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: 546758c419670746cf55de35cbb33131d4457cb9
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '1542'
-ht-degree: 93%
+source-wordcount: '1540'
+ht-degree: 91%
 
 ---
 
@@ -55,7 +55,7 @@ Dans [!DNL Admin Console], des autorisations sont attribuées à des utilisateur
 
 ## Sandbox et autorisations
 
-Les sandbox hors production sont une forme de virtualisation des données qui vous permet d’isoler des données des autres sandbox et qui est généralement utilisée à des fins d’expériences de développement, de test ou d’évaluations. Les autorisations dʼun profil de produit donnent aux utilisateurs du profil lʼaccès aux fonctionnalités de [!DNL Platform] dans les sandbox auxquels ils se sont vus accorder lʼaccès. Une licence Experience Platform par défaut vous accorde cinq sandbox (un de production et quatre hors production). Vous pouvez ajouter des packs de dix sandbox hors production jusquʼà un maximum de 75 sandbox au total. Contactez votre administrateur dʼorganisation IMS ou votre représentant commercial Adobe pour plus de détails.
+Les sandbox hors production sont une forme de virtualisation des données qui vous permet d’isoler des données des autres sandbox et qui est généralement utilisée à des fins d’expériences de développement, de test ou d’évaluations. Les autorisations dʼun profil de produit donnent aux utilisateurs du profil lʼaccès aux fonctionnalités de [!DNL Platform] dans les sandbox auxquels ils se sont vus accorder lʼaccès. Une licence Experience Platform par défaut vous accorde cinq sandbox (un de production et quatre hors production). Vous pouvez ajouter des packs de dix sandbox hors production jusquʼà un maximum de 75 sandbox au total. Pour plus d’informations, contactez l’administrateur de votre entreprise ou votre représentant commercial Adobe.
 
 Pour plus dʼinformations sur les sandbox dans [!DNL Experience Platform], reportez-vous à la [présentation des sandbox](../sandboxes/home.md).
 
@@ -114,7 +114,7 @@ Le tableau suivant décrit les autorisations disponibles pour [!DNL Experience P
 | [!DNL Destinations] | [!UICONTROL Création de destinations] | Possibilité de créer des destinations à lʼaide du [SDK Destination Adobe Experience Platform](../destinations/destination-sdk/overview.md). |
 | [!DNL Data Ingestion] | [!UICONTROL Gestion des sources] | Accès à la lecture, la création, la modification et la désactivation des sources. |
 | [!DNL Data Ingestion] | [!UICONTROL Affichage des sources] | Accès en lecture seule aux sources disponibles dans l’onglet **[!UICONTROL Catalogue]** et aux sources authentifiées dans l’onglet **[!UICONTROL Parcourir]**. |
-| [!DNL Data Ingestion] | [!DNL Manage Audience Share Connections] | Accès à la création, lʼacceptation et le refus des négociations entre partenaires afin de connecter deux organisations IMS et dʼactiver les flux [!DNL Segment Match]. |
+| [!DNL Data Ingestion] | [!DNL Manage Audience Share Connections] | Accès à la création, à l’acceptation et au refus de poignées de main des partenaires pour connecter deux organisations et permettre [!DNL Segment Match] flux. |
 | [!DNL Data Ingestion] | [!DNL Manage Audience Share] | Accès à la lecture, la création, la modification et la publication de flux [!DNL Segment Match] avec des partenaires actifs. |
 | [!DNL Data Science Workspace] | [!UICONTROL Gestion de l’espace de travail de science des données] | Accès à la lecture, la création, la modification et la suppression dans [!DNL Data Science Workspace]. |
 | Gouvernance des données | [!UICONTROL Application dʼétiquettes dʼutilisation des données] | Accès à la lecture, la création et la suppression des étiquettes dʼutilisation des données. |

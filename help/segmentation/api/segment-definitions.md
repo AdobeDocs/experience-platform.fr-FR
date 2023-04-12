@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Point de terminaison de l’API de définitions de segment
 description: Le point de terminaison des définitions de segment de l’API Adobe Experience Platform Segmentation Service vous permet de gérer par programmation les définitions de segment pour votre organisation.
 exl-id: e7811b96-32bf-4b28-9abb-74c17a71ffab
-source-git-commit: 9aa86b8d541836504be6b8667a2e069116c6002c
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1261'
-ht-degree: 48%
+source-wordcount: '1258'
+ht-degree: 46%
 
 ---
 
@@ -23,7 +23,7 @@ Les points d’entrée d’API utilisés dans ce guide font partie de l’[!DNL 
 
 ## Obtention d’une liste de définitions de segment {#list}
 
-Vous pouvez obtenir une liste de toutes les définitions de segment de votre organisation IMS en envoyant une requête GET au point de terminaison `/segment/definitions`.
+Vous pouvez récupérer une liste de toutes les définitions de segment pour votre organisation en envoyant une demande de GET à la fonction `/segment/definitions` point de terminaison .
 
 **Format d’API**
 
@@ -46,7 +46,7 @@ GET /segment/definitions?{QUERY_PARAMETERS}
 
 **Requête**
 
-La requête suivante récupère les deux dernières définitions de segment publiées dans votre organisation IMS.
+La requête suivante récupère les deux dernières définitions de segment publiées dans votre organisation.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/segment/definitions?limit=2 \
@@ -58,7 +58,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/definitions?limit=2 
 
 **Réponse**
 
-Une réponse réussie renvoie un état HTTP 200 avec une liste de définitions de segment pour l’organisation IMS spécifiée sous JSON.
+Une réponse réussie renvoie un état HTTP 200 avec une liste de définitions de segment pour l’organisation spécifiée sous JSON.
 
 ```json
 {

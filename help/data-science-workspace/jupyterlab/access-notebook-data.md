@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Accès aux données dans les notebooks Jupyterlab
 description: Ce guide porte sur l’utilisation des notebooks Jupyter, conçus dans Data Science Workspace pour accéder à vos données.
 exl-id: 2035a627-5afc-4b72-9119-158b95a35d32
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '3294'
-ht-degree: 24%
+source-wordcount: '3292'
+ht-degree: 31%
 
 ---
 
@@ -17,7 +17,7 @@ Chaque noyau pris en charge fournit des fonctionnalités intégrées qui vous pe
 
 ## Prise en main
 
-Avant de lire ce guide, veuillez consulter la section [[!DNL JupyterLab] guide de l’utilisateur](./overview.md) pour une introduction de haut niveau à [!DNL JupyterLab] et son rôle dans Data Science Workspace.
+Avant de lire ce guide, veuillez consulter le [[!DNL JupyterLab] guide de l’utilisateur](./overview.md) pour une présentation détaillée de [!DNL JupyterLab] et de son rôle dans l’espace de travail de science des données.
 
 ## Limites de données des notebooks {#notebook-data-limits}
 
@@ -148,7 +148,7 @@ df = dataset_reader.limit(100).offset(10).read()
 
 ### Écriture dans un jeu de données en Python {#write-python}
 
-Pour écrire dans un jeu de données de votre notebook JupyterLab, sélectionnez l’onglet Icône de données (mis en évidence ci-dessous) dans le volet de navigation de gauche de JupyterLab. Le **[!UICONTROL Jeux de données]** et **[!UICONTROL Schémas]** les répertoires s’affichent. Sélectionner **[!UICONTROL Jeux de données]** puis cliquez avec le bouton droit de la souris, puis sélectionnez l’option **[!UICONTROL Écrire des données dans Notebook]** dans le menu déroulant du jeu de données que vous souhaitez utiliser. Une entrée de code exécutable s’affiche au bas de votre notebook.
+Pour écrire dans un jeu de données de votre notebook JupyterLab, sélectionnez l’onglet Icône de données (mis en évidence ci-dessous) dans le volet de navigation de gauche de JupyterLab. Les **[!UICONTROL jeux de données]** et les répertoires de **[!UICONTROL schémas]** s’affichent. Sélectionner **[!UICONTROL Jeux de données]** puis cliquez avec le bouton droit de la souris, puis sélectionnez l’option **[!UICONTROL Écrire des données dans Notebook]** dans le menu déroulant du jeu de données que vous souhaitez utiliser. Une entrée de code exécutable s’affiche au bas de votre notebook.
 
 ![](../images/jupyterlab/data-access/write-dataset.png)
 
@@ -169,9 +169,9 @@ write_tracker = dataset_writer.write({PANDA_DATAFRAME}, file_format='json')
 
 ### Requête de données à l’aide de [!DNL Query Service] in [!DNL Python] {#query-data-python}
 
-[!DNL JupyterLab][!DNL Platform][!DNL Python] sur vous permet d’utiliser SQL dans un notebook pour accéder aux données via [Adobe Experience Platform Query Service](https://docs.adobe.com/content/help/fr-FR/experience-platform/query/home.html). Accès aux données par le biais de [!DNL Query Service] peut s’avérer utile pour traiter des jeux de données volumineux en raison de ses temps d’exécution supérieurs. Notez que l’interrogation de données à l’aide de [!DNL Query Service] a une durée de traitement de dix minutes.
+[!DNL JupyterLab][!DNL Platform][!DNL Python] sur vous permet d’utiliser SQL dans un notebook pour accéder aux données via [Adobe Experience Platform Query Service](https://experienceleague.adobe.com/docs/experience-platform/query/home.html?lang=fr). L’accès aux données par le biais de [!DNL Query Service] peut s’avérer utile pour la gestion de jeux de données volumineux grâce à ses temps d’exécution plus performants. Notez que l’interrogation de données à l’aide de [!DNL Query Service] est limitée à dix minutes de traitement.
 
-Avant d’utiliser [!DNL Query Service] in [!DNL JupyterLab], assurez-vous que vous comprenez bien le [[!DNL Query Service] Syntaxe SQL](https://docs.adobe.com/content/help/fr-FR/experience-platform/query/home.html#!api-specification/markdown/narrative/technical_overview/query-service/sql/syntax.md).
+Avant d’utiliser [!DNL Query Service] dans [!DNL JupyterLab], assurez-vous de bien comprendre le fonctionnement de la syntaxe SQL de [[!DNL Query Service] ](https://experienceleague.adobe.com/docs/experience-platform/query/sql/syntax.html?lang=fr).
 
 Requête sur des données à l’aide de [!DNL Query Service] nécessite que vous fournissiez le nom du jeu de données cible. Vous pouvez générer les cellules de code nécessaires en recherchant le jeu de données souhaité à l’aide de l’**[!UICONTROL explorateur de données]**. Cliquez avec le bouton droit de la souris sur la liste des jeux de données, puis cliquez sur **[!UICONTROL Données de requête dans Notebook]** pour générer deux cellules de code dans votre notebook. Ces deux cellules sont décrites plus en détail ci-dessous.
 
@@ -284,7 +284,7 @@ df0 <- dataset_reader$limit(100L)$offset(10L)$read()
 
 ### Écriture dans un jeu de données en R {#write-r}
 
-Pour écrire dans un jeu de données de votre notebook JupyterLab, sélectionnez l’onglet Icône de données (mis en évidence ci-dessous) dans le volet de navigation de gauche de JupyterLab. Le **[!UICONTROL Jeux de données]** et **[!UICONTROL Schémas]** les répertoires s’affichent. Sélectionner **[!UICONTROL Jeux de données]** puis cliquez avec le bouton droit de la souris, puis sélectionnez l’option **[!UICONTROL Écrire des données dans Notebook]** dans le menu déroulant du jeu de données que vous souhaitez utiliser. Une entrée de code exécutable s’affiche au bas de votre notebook.
+Pour écrire dans un jeu de données de votre notebook JupyterLab, sélectionnez l’onglet Icône de données (mis en évidence ci-dessous) dans le volet de navigation de gauche de JupyterLab. Les **[!UICONTROL jeux de données]** et les répertoires de **[!UICONTROL schémas]** s’affichent. Sélectionner **[!UICONTROL Jeux de données]** puis cliquez avec le bouton droit de la souris, puis sélectionnez l’option **[!UICONTROL Écrire des données dans Notebook]** dans le menu déroulant du jeu de données que vous souhaitez utiliser. Une entrée de code exécutable s’affiche au bas de votre notebook.
 
 ![](../images/jupyterlab/data-access/r-write-dataset.png)
 
@@ -388,7 +388,7 @@ Une [!DNL Data Science Workspace] commande magique pour lire ou écrire un jeu d
 >
 > Mise en cache des données à l’aide de `df.cache()` avant d’écrire des données peut améliorer considérablement les performances du notebook. Cela peut vous aider si vous recevez l’une des erreurs suivantes :
 > 
-> - Traitement abandonné en raison d’un échec de test... Peuvent uniquement compresser les RDD avec le même nombre d&#39;éléments dans chaque partition.
+> - Tâche abandonnée en raison d’un échec de test ... Peut uniquement compresser les RDD avec le même nombre d’éléments dans chaque partition.
 > - Client RPC distant dissocié et autres erreurs de mémoire.
 > - Mauvaises performances lors de la lecture et de l’écriture de jeux de données.
 > 
@@ -396,7 +396,7 @@ Une [!DNL Data Science Workspace] commande magique pour lire ou écrire un jeu d
 
 Vous pouvez générer automatiquement les exemples ci-dessus dans JupyterLab en achetant à l’aide de la méthode suivante :
 
-Sélectionnez l’onglet Icône de données (en surbrillance ci-dessous) dans le volet de navigation de gauche de JupyterLab. Le **[!UICONTROL Jeux de données]** et **[!UICONTROL Schémas]** les répertoires s’affichent. Sélectionner **[!UICONTROL Jeux de données]** puis cliquez avec le bouton droit de la souris, puis sélectionnez l’option **[!UICONTROL Écrire des données dans Notebook]** dans le menu déroulant du jeu de données que vous souhaitez utiliser. Une entrée de code exécutable s’affiche au bas de votre notebook.
+Sélectionnez l’onglet Icône de données (en surbrillance ci-dessous) dans le volet de navigation de gauche de JupyterLab. Les **[!UICONTROL jeux de données]** et les répertoires de **[!UICONTROL schémas]** s’affichent. Sélectionner **[!UICONTROL Jeux de données]** puis cliquez avec le bouton droit de la souris, puis sélectionnez l’option **[!UICONTROL Écrire des données dans Notebook]** dans le menu déroulant du jeu de données que vous souhaitez utiliser. Une entrée de code exécutable s’affiche au bas de votre notebook.
 
 - Utilisation **[!UICONTROL Exploration des données dans Notebook]** pour générer une cellule de lecture.
 - Utilisation **[!UICONTROL Écrire des données dans Notebook]** pour générer une cellule d’écriture.
@@ -488,7 +488,7 @@ Dans Scala, vous pouvez importer `clientContext` pour obtenir et renvoyer des va
 >
 > Mise en cache des données à l’aide de `df.cache()` avant d’écrire des données peut améliorer considérablement les performances du notebook. Cela peut vous aider si vous recevez l’une des erreurs suivantes :
 > 
-> - Traitement abandonné en raison d’un échec de test... Peuvent uniquement compresser les RDD avec le même nombre d&#39;éléments dans chaque partition.
+> - Tâche abandonnée en raison d’un échec de test ... Peut uniquement compresser les RDD avec le même nombre d’éléments dans chaque partition.
 > - Client RPC distant dissocié et autres erreurs de mémoire.
 > - Mauvaises performances lors de la lecture et de l’écriture de jeux de données.
 > 
@@ -519,7 +519,7 @@ df1.show(10)
 | df1 | Variable qui représente le cadre de données pandas utilisé pour lire et écrire des données. |
 | user-token | Votre jeton utilisateur qui est automatiquement récupéré à l’aide de `clientContext.getUserToken()`. |
 | service-token | Votre jeton de service automatiquement récupéré à l’aide de `clientContext.getServiceToken()`. |
-| ims-org | Votre identifiant de l’organisation IMS qui est automatiquement récupéré à l’aide de `clientContext.getOrgId()`. |
+| ims-org | Votre ID d’organisation qui est automatiquement récupéré à l’aide de `clientContext.getOrgId()`. |
 | api-key | Votre clé API automatiquement récupérée à l’aide de `clientContext.getApiKey()`. |
 
 >[!TIP]
@@ -528,7 +528,7 @@ df1.show(10)
 
 Vous pouvez générer automatiquement l’exemple ci-dessus dans JupyterLab en achetant à l’aide de la méthode suivante :
 
-Sélectionnez l’onglet Icône de données (en surbrillance ci-dessous) dans le volet de navigation de gauche de JupyterLab. Le **[!UICONTROL Jeux de données]** et **[!UICONTROL Schémas]** les répertoires s’affichent. Sélectionner **[!UICONTROL Jeux de données]** puis cliquez avec le bouton droit de la souris, puis sélectionnez l’option **[!UICONTROL Exploration des données dans Notebook]** dans le menu déroulant du jeu de données que vous souhaitez utiliser. Une entrée de code exécutable s’affiche au bas de votre notebook.
+Sélectionnez l’onglet Icône de données (en surbrillance ci-dessous) dans le volet de navigation de gauche de JupyterLab. Les **[!UICONTROL jeux de données]** et les répertoires de **[!UICONTROL schémas]** s’affichent. Sélectionnez **[!UICONTROL Jeux de données]** puis cliquez avec le bouton droit de la souris. Sélectionnez ensuite l’option **[!UICONTROL Exploration des données dans Notebook]** dans le menu déroulant du jeu de données que vous souhaitez utiliser. Une entrée de code exécutable s’affiche au bas de votre notebook.
 Et
 - Utilisation **[!UICONTROL Exploration des données dans Notebook]** pour générer une cellule de lecture.
 - Utilisation **[!UICONTROL Écrire des données dans Notebook]** pour générer une cellule d’écriture.
@@ -543,7 +543,7 @@ Dans Scala, vous pouvez importer `clientContext` pour obtenir et renvoyer des va
 >
 > Mise en cache des données à l’aide de `df.cache()` avant d’écrire des données peut améliorer considérablement les performances du notebook. Cela peut vous aider si vous recevez l’une des erreurs suivantes :
 > 
-> - Traitement abandonné en raison d’un échec de test... Peuvent uniquement compresser les RDD avec le même nombre d&#39;éléments dans chaque partition.
+> - Tâche abandonnée en raison d’un échec de test ... Peut uniquement compresser les RDD avec le même nombre d’éléments dans chaque partition.
 > - Client RPC distant dissocié et autres erreurs de mémoire.
 > - Mauvaises performances lors de la lecture et de l’écriture de jeux de données.
 > 
@@ -571,7 +571,7 @@ df1.write.format("com.adobe.platform.query")
 | df1 | Variable qui représente le cadre de données pandas utilisé pour lire et écrire des données. |
 | user-token | Votre jeton utilisateur qui est automatiquement récupéré à l’aide de `clientContext.getUserToken()`. |
 | service-token | Votre jeton de service automatiquement récupéré à l’aide de `clientContext.getServiceToken()`. |
-| ims-org | Votre identifiant de l’organisation IMS qui est automatiquement récupéré à l’aide de `clientContext.getOrgId()`. |
+| ims-org | Votre ID d’organisation qui est automatiquement récupéré à l’aide de `clientContext.getOrgId()`. |
 | api-key | Votre clé API automatiquement récupérée à l’aide de `clientContext.getApiKey()`. |
 
 >[!TIP]

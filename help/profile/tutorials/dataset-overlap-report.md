@@ -4,9 +4,9 @@ title: Génération du rapport de chevauchement de jeux de données
 type: Tutorial
 description: Ce tutoriel décrit les étapes nécessaires à la génération du rapport de chevauchement de jeux de données à l’aide de l’API Real-time Customer Profile.
 exl-id: 90894ed3-b09e-435d-a9e3-18fd6dc8e907
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '888'
+source-wordcount: '884'
 ht-degree: 2%
 
 ---
@@ -27,7 +27,7 @@ Les en-têtes requis pour tous les appels API de ce tutoriel sont les suivants :
 
 * `Authorization: Bearer {ACCESS_TOKEN}`: Le `Authorization` Un en-tête requiert un jeton d’accès précédé du mot `Bearer`. Une nouvelle valeur de jeton d’accès doit être générée toutes les 24 heures.
 * `x-api-key: {API_KEY}`: Le `API Key` est également appelé `Client ID` et est une valeur qui ne doit être générée qu’une seule fois.
-* `x-gw-ims-org-id: {ORG_ID}`: Le `IMS Org` est également appelé `Organization ID` et ne doit être généré qu’une seule fois.
+* `x-gw-ims-org-id: {ORG_ID}`: L’ID d’organisation ne doit être généré qu’une seule fois.
 
 Après avoir suivi le tutoriel sur l’authentification et rassemblé les valeurs des en-têtes requis, vous êtes prêt à lancer des appels à l’API client en temps réel.
 

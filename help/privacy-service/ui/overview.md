@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Présentation de l’interface utilisateur de Privacy Service
 description: Commencez à utiliser l’interface utilisateur de Privacy Service pour coordonner et surveiller les demandes d’accès à des informations personnelles dans différentes applications Experience Cloud.
 exl-id: 5624691f-0b9a-4565-8277-ea273a0d239a
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '207'
-ht-degree: 16%
+source-wordcount: '206'
+ht-degree: 34%
 
 ---
 
@@ -15,8 +15,8 @@ ht-degree: 16%
 
 >[!CONTEXTUALHELP]
 >id="platform_privacy_privacyconsole_requests"
->title="Requêtes de titulaire de données"
->abstract="Ce widget affiche le nombre de demandes des titulaires de données envoyées et terminées traitées par Privacy Service pour un jour donné. Pour plus d’informations sur vos processus de Privacy Service, sélectionnez **Demandes** dans le volet de navigation de gauche."
+>title="Requêtes des titulaires de données"
+>abstract="Ce widget affiche le nombre de requêtes des titulaires de données envoyées et terminées ayant été traitées par Privacy Service pour un jour donné. Pour plus d&#39;informations sur vos processus de Privacy Service, sélectionnez **Requêtes** dans le volet de navigation de gauche."
 
 Interface utilisateur du Privacy Service [!DNL Privacy Service] vous permet de coordonner les demandes d’accès à des informations personnelles et de conformité dans différentes applications Adobe Experience Cloud.
 
@@ -28,7 +28,7 @@ Interface utilisateur du Privacy Service [!DNL Privacy Service] vous permet de c
 
 >[!IMPORTANT]
 >
->Pour vous authentifier auprès de la variable [!DNL Privacy Service] Interface utilisateur. En outre, vous devez disposer de droits d’administrateur système au sein de votre organisation IMS.
+>Pour vous authentifier auprès de la variable [!DNL Privacy Service] Interface utilisateur. En outre, vous devez disposer de droits d’administrateur système au sein de votre entreprise.
 
 Pour accéder à l’interface utilisateur, connectez-vous à [Adobe Experience Cloud](https://experience.adobe.com/) et sélectionnez **[!UICONTROL Interface utilisateur de confidentialité]** dans le menu accès rapide.
 

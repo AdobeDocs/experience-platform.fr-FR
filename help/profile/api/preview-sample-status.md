@@ -3,9 +3,9 @@ keywords: Experience Platform;profil;profil client en temps réel;dépannage;API
 title: Aperçu de l’exemple d’état (aperçu du profil), point de terminaison de l’API
 description: L’aperçu de l’exemple de point de terminaison d’état de l’API Real-time Customer Profile vous permet de prévisualiser le dernier échantillon réussi de vos données de profil, de répertorier la distribution du profil par jeu de données et par identité, et de générer des rapports montrant le chevauchement des jeux de données, le chevauchement d’identités et les profils désassemblés.
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
-source-git-commit: a6173860adda4bd71c94750e5cce6dd4cbe820c6
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '2874'
+source-wordcount: '2873'
 ht-degree: 5%
 
 ---
@@ -45,7 +45,7 @@ Le nombre de profils et les profils par mesures d’espace de noms sont égaleme
 
 ## Afficher le dernier état d’exemple {#view-last-sample-status}
 
-Vous pouvez exécuter une requête de GET sur la variable `/previewsamplestatus` point de terminaison pour afficher les détails du dernier exemple de tâche réussi qui a été exécuté pour votre organisation IMS. Cela inclut le nombre total de profils dans l’exemple, ainsi que la mesure du nombre de profils ou le nombre total de profils de votre organisation dans Experience Platform.
+Vous pouvez exécuter une requête de GET sur la variable `/previewsamplestatus` point de terminaison pour afficher les détails du dernier exemple de tâche réussi qui a été exécuté pour votre organisation. Cela inclut le nombre total de profils dans l’exemple, ainsi que la mesure du nombre de profils ou le nombre total de profils de votre organisation dans Experience Platform.
 
 Le nombre de profils est généré après la fusion de fragments de profil afin de former un seul profil pour chaque client. En d’autres termes, lorsque des fragments de profil sont fusionnés, ils renvoient le nombre de profils &quot;1&quot;, car ils sont tous liés à la même personne.
 

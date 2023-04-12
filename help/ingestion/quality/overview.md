@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Qualité des données
 description: Le document suivant résume les comportements de vérification et de validation pris en charge pour l’ingestion par lots et par flux dans Adobe Experience Platform.
 exl-id: 7ef40859-235a-4759-9492-c63e5fd80c8e
-source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '425'
-ht-degree: 57%
+source-wordcount: '423'
+ht-degree: 54%
 
 ---
 
@@ -49,7 +49,7 @@ Les validations suivantes sont effectuées pour l’ingestion par flux :
 | Schéma | Vérifie que le schéma n’est **pas** vide et contient une référence au schéma d’union, comme ci-dessous : `"meta:immutableTags": ["union"]` |
 | `identityField` | Vérifie que tous les descripteurs d’identité valides sont définis. |
 | JSON | Vérifie que le fichier JSON est valide. |
-| Organisation IMS | Vérifie que l’organisation IMS répertoriée est une organisation valide. |
+| Organisation | Vérifie que l’organisation répertoriée est une organisation valide. |
 | Nom de source | Vérifie que le nom de la source de données est spécifié. |
 | Jeu de données | Vérifie que le jeu de données est spécifié, activé et n’a pas été supprimé. |
 | En-tête | Vérifie que l’en-tête est spécifié et valide. |

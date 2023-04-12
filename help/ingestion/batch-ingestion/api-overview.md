@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Guide de l’API Batch Ingestion
 description: Ce document fournit un guide complet aux développeurs qui utilisent les API d’ingestion par lots pour Adobe Experience Platform.
 exl-id: 4ca9d18d-1b65-4aa7-b608-1624bca19097
-source-git-commit: 76ef5638316a89aee1c6fb33370af943228b75e1
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '2412'
-ht-degree: 76%
+source-wordcount: '2411'
+ht-degree: 75%
 
 ---
 
@@ -549,7 +549,7 @@ curl -X POST https://platform.adobe.io/data/foundation/catalog/dataSets \
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{TENANT_ID}` | Cet identifiant est utilisé pour assurer que les espaces de noms des ressources que vous créez sont corrects et contenus dans votre organisation IMS. |
+| `{TENANT_ID}` | Cet identifiant permet de s’assurer que les espaces de noms des ressources que vous créez sont corrects et contenus dans votre organisation. |
 | `{SCHEMA_ID}` | L’identifiant du schéma que vous avez créé. |
 
 ### Création d’un lot

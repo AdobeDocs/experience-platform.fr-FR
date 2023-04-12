@@ -5,10 +5,10 @@ title: Affichage des données d’un jeu de données à l’aide de l’API Data
 type: Tutorial
 description: Découvrez comment localiser, accéder et télécharger des données stockées dans un jeu de données à l’aide de l’API Data Access de Adobe Experience Platform. Certaines des fonctionnalités uniques de l’API Data Access vous seront également présentées comme la pagination et les téléchargements partiels.
 exl-id: 1c1e5549-d085-41d5-b2c8-990876000f08
-source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '1390'
-ht-degree: 75%
+source-wordcount: '1388'
+ht-degree: 73%
 
 ---
 
@@ -62,7 +62,7 @@ Avant de commencer à utiliser la variable [!DNL Data Access] API, vous devez id
 
 Pour obtenir une liste complète des points de fin dans la variable [!DNL Catalog] API, reportez-vous à la section [Référence d’API](https://www.adobe.io/experience-platform-apis/references/catalog/).
 
-## Récupération d’une liste de lots sous votre organisation IMS
+## Récupération d’une liste de lots sous votre organisation
 
 En utilisant la variable [!DNL Catalog] API, vous pouvez renvoyer une liste de lots sous votre organisation :
 
@@ -84,7 +84,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches/' \
 
 **Réponse**
 
-La réponse inclut un objet qui répertorie tous les lots associés à l’organisation IMS, chaque valeur de niveau supérieur représentant un lot. Les objets de lot individuels contiennent les détails pour ce lot spécifique. La réponse ci-dessous a été réduite pour gagner de l’espace.
+La réponse comprend un objet qui répertorie tous les lots associés à l’organisation, chaque valeur de niveau supérieur représentant un lot. Les objets de lot individuels contiennent les détails pour ce lot spécifique. La réponse ci-dessous a été réduite pour gagner de l’espace.
 
 ```json
 {

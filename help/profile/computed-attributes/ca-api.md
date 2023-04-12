@@ -6,10 +6,10 @@ description: Dans Adobe Experience Platform, les attributs calculés sont des fo
 exl-id: 6b35ff63-590b-4ef5-ab39-c36c39ab1d58
 hide: true
 hidefromtoc: true
-source-git-commit: 5ae7ddbcbc1bc4d7e585ca3e3d030630bfb53724
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '2275'
-ht-degree: 65%
+source-wordcount: '2274'
+ht-degree: 64%
 
 ---
 
@@ -83,7 +83,7 @@ curl -X POST \
 | `name` | Le nom du champ attribut calculé, sous forme de chaîne. |
 | `path` | Le chemin d’accès au champ contenant l’attribut calculé. Ce chemin d’accès se trouve dans l’attribut `properties` du schéma et ne doit PAS inclure le nom du champ. Lors de l’écriture du chemin d’accès, omettez les multiples niveaux des attributs `properties`. |
 | `{TENANT_ID}` | Si vous ne connaissez pas votre identifiant de client, veuillez vous reporter à la procédure de recherche de votre identifiant de client dans le [guide de développement du registre des schémas](../../xdm/api/getting-started.md#know-your-tenant_id). |
-| `description` | Une description de l’attribut calculé. Celle-ci s’avère particulièrement utile si vous avez défini plusieurs attributs calculés, car elle aidera les autres membres de votre organisation IMS à déterminer l’attribut calculé correct à utiliser. |
+| `description` | Une description de l’attribut calculé. Cela s’avère particulièrement utile une fois que plusieurs attributs calculés ont été définis, car cela aidera d’autres membres de votre organisation à déterminer l’attribut calculé correct à utiliser. |
 | `expression.value` | Un valide [!DNL Profile Query Language] (PQL). Les attributs calculés prennent actuellement en charge les fonctions suivantes : sum, count, min, max et boolean. Pour obtenir une liste d’exemples d’expressions, reportez-vous à la section [exemple d’expressions PQL](expressions.md) documentation. |
 | `schema.name` | La classe sur laquelle le schéma contenant le champ attribut calculé est basé. Par exemple : `_xdm.context.experienceevent` pour un schéma basé sur la classe XDM ExperienceEvent. |
 

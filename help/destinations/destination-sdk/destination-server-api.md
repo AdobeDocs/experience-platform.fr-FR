@@ -2,10 +2,10 @@
 description: Cette page répertorie et décrit toutes les opérations d’API que vous pouvez effectuer à l’aide du point d’entrée d’API `/authoring/destination-servers`. Les spécifications du serveur et du modèle pour votre destination peuvent être configurées dans Adobe Experience Platform Destination SDK via le point d’entrée commun `/authoring/destination-servers`.
 title: Opérations de l’API du point d’entrée du serveur de destination
 exl-id: a144b0fb-d34f-42d1-912b-8576296e59d2
-source-git-commit: 557db5b7eefdd7902895e428f7bc34e3ad8a6f58
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '1358'
-ht-degree: 95%
+source-wordcount: '1355'
+ht-degree: 90%
 
 ---
 
@@ -603,7 +603,7 @@ Une réponse réussie renvoie un état HTTP 200 avec les détails de la configu
 
 ## Liste des configurations de serveur de destination {#retrieve-list}
 
-Vous pouvez récupérer une liste de toutes les configurations de serveur de destination pour votre organisation IMS en effectuant une requête GET sur le point d’entrée `/authoring/destination-servers`.
+Vous pouvez récupérer une liste de toutes les configurations de serveur de destination pour votre organisation en envoyant une demande de GET à la fonction `/authoring/destination-servers` point de terminaison .
 
 **Format d’API**
 
@@ -613,7 +613,7 @@ GET /authoring/destination-servers
 
 **Requête**
 
-La requête suivante récupère la liste des configurations de serveur de destination auxquelles vous avez accès, en fonction de la configuration de l’organisation IMS et de la configuration du sandbox.
+La requête suivante récupère la liste des configurations de serveur de destination auxquelles vous avez accès, en fonction de la configuration de l’organisation et de l’environnement de test.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination-servers \
@@ -625,7 +625,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 **Réponse**
 
-La réponse suivante renvoie un état HTTP 200 avec une liste des configurations de serveur de destination auxquelles vous avez accès, en fonction de l’identifiant de l’organisation IMS et du nom du sandbox que vous avez utilisés. Un `instanceId` correspond au modèle d’un serveur de destination. La réponse est tronquée à des fins de brièveté.
+La réponse suivante renvoie un état HTTP 200 avec une liste des configurations de serveur de destination auxquelles vous avez accès, en fonction de l’ID d’organisation et du nom de l’environnement de test que vous avez utilisés. Un `instanceId` correspond au modèle d’un serveur de destination. La réponse est tronquée à des fins de brièveté.
 
 ```json
 {

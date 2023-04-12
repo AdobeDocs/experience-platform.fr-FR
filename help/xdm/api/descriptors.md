@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Point de terminaison de l’API Descripteurs
 description: Le point de terminaison /descriptors de l’API Schema Registry vous permet de gérer par programmation les descripteurs XDM dans votre application d’expérience.
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: 81b53d2bd84eacb32999b957bee9b5e9aa77d5f7
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1900'
-ht-degree: 46%
+source-wordcount: '1872'
+ht-degree: 48%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 46%
 
 Les schémas définissent un affichage statique des entités de données, mais ne fournissent pas de détails spécifiques sur la manière dont les données basées sur ces schémas (jeux de données, par exemple) peuvent être reliées entre elles. Adobe Experience Platform vous permet de décrire ces relations et d’autres métadonnées interprétatives relatives à un schéma à l’aide de descripteurs.
 
-Les descripteurs de schéma sont des métadonnées au niveau du client, ce qui signifie qu’ils sont propres à votre organisation IMS et que toutes les opérations de descripteur se déroulent dans le conteneur du client.
+Les descripteurs de schéma sont des métadonnées au niveau du client, ce qui signifie qu’ils sont propres à votre organisation et que toutes les opérations de descripteur ont lieu dans le conteneur du client.
 
 Une ou plusieurs entités de descripteur de schéma peuvent être appliquées à chaque schéma. Chaque entité de descripteur de schéma comprend un descripteur `@type` et le `sourceSchema` auquel il s’applique. Une fois appliqués, ces descripteurs s’appliquent à tous les jeux de données créés à l’aide du schéma.
 
@@ -60,7 +60,7 @@ Le format de réponse dépend de la variable `Accept` en-tête envoyé dans la r
 | `application/vnd.adobe.xdm+json` | Renvoie un tableau d’objets de descripteurs étendus |
 | `application/vnd.adobe.xdm-v2+json` | Ceci `Accept` doit être utilisé pour utiliser les fonctionnalités de pagination. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Réponse**
 
@@ -98,7 +98,7 @@ GET /tenant/descriptors/{DESCRIPTOR_ID}
 | --- | --- |
 | `{DESCRIPTOR_ID}` | Le `@id` du descripteur que vous souhaitez rechercher. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Requête**
 
@@ -207,7 +207,7 @@ PUT /tenant/descriptors/{DESCRIPTOR_ID}
 | --- | --- |
 | `{DESCRIPTOR_ID}` | L’identifiant `@id` du descripteur que vous souhaitez mettre à jour. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Requête**
 
@@ -264,7 +264,7 @@ DELETE /tenant/descriptors/{DESCRIPTOR_ID}
 | --- | --- |
 | `{DESCRIPTOR_ID}` | L’identifiant `@id` du descripteur que vous souhaitez supprimer. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Requête**
 
@@ -318,7 +318,7 @@ Un descripteur d’identité signale que la variable[!UICONTROL sourceProperty]&
 | `xdm:property` | `xdm:id` ou `xdm:code` selon l’espace de noms `xdm:namespace` utilisé. |
 | `xdm:isPrimary` | Une valeur booléenne facultative. Lorsqu’elle est définie sur true, le champ est l’identité principale. Les schémas ne peuvent contenir qu’une seule identité principale. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 #### Descripteur de nom convivial {#friendly-name}
 
@@ -359,7 +359,7 @@ Les descripteurs de nom convivial permettent à l’utilisateur de modifier la v
 | `meta:enum` | Si le champ indiqué par `xdm:sourceProperty` est un champ de chaîne, `meta:enum` peut être utilisé pour ajouter des valeurs suggérées pour le champ dans l’interface utilisateur de segmentation. Il est important de noter que `meta:enum` ne déclare pas d’énumération ni ne fournit de validation de données pour le champ XDM.<br><br>Cela ne doit être utilisé que pour les champs XDM principaux définis par Adobe. Si la propriété source est un champ personnalisé défini par votre organisation, vous devez modifier le `meta:enum` par le biais d’une requête de PATCH à la ressource parente du champ. |
 | `meta:excludeMetaEnum` | Si le champ indiqué par `xdm:sourceProperty` est un champ de chaîne dont les valeurs suggérées existantes sont fournies sous une `meta:enum` , vous pouvez inclure cet objet dans un descripteur de nom convivial pour exclure certaines ou toutes ces valeurs de la segmentation. La clé et la valeur de chaque entrée doivent correspondre à celles incluses dans l’original. `meta:enum` du champ pour que la saisie soit exclue. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 #### Descripteur de relation
 
@@ -389,7 +389,7 @@ Les descripteurs de relation décrivent une relation entre deux schémas différ
 | `xdm:destinationVersion` | La version majeure du schéma de référence. |
 | `xdm:destinationProperty` | Chemin facultatif vers un champ cible dans le schéma de référence. Si cette propriété est omise, le champ cible est déterminé par les champs qui contiennent un descripteur d’identité de référence correspondant (voir ci-dessous). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 #### Descripteur d’identité de référence
 
@@ -413,7 +413,7 @@ Les descripteurs d’identité de référence fournissent un contexte de référ
 | `xdm:sourceProperty` | Chemin d’accès au champ du schéma source qui sera utilisé pour faire référence au schéma de référence. Doit commencer et non se terminer par un « / ». N’incluez pas &quot;properties&quot; dans le chemin (par exemple, `/personalEmail/address` au lieu de `/properties/personalEmail/properties/address`). |
 | `xdm:identityNamespace` | Le code d’espace de noms d’identité de la propriété source. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 #### Descripteur de champ obsolète
 
@@ -430,9 +430,9 @@ Vous pouvez [abandon d’un champ dans une ressource XDM personnalisée](../tuto
 
 | Propriété | Description |
 | --- | --- |
-| `@type` | Type de descripteur. Pour un descripteur d’obsolescence de champ, cette valeur doit être définie sur `xdm:descriptorDeprecated`. |
-| `xdm:sourceSchema` | L’URI `$id` du schéma auquel vous appliquez le descripteur. |
-| `xdm:sourceVersion` | Version du schéma auquel vous appliquez le descripteur. Doit être défini sur `1`. |
-| `xdm:sourceProperty` | Le chemin d’accès à la propriété dans le schéma auquel vous appliquez le descripteur. Si vous souhaitez appliquer le descripteur à plusieurs propriétés, vous pouvez fournir une liste de chemins sous la forme d’un tableau (par exemple, `["/firstName", "/lastName"]`). |
+| `@type` | Le type de descripteur. Pour un descripteur d’obsolescence de champ, cette valeur doit être définie sur `xdm:descriptorDeprecated`. |
+| `xdm:sourceSchema` | L’`$id` de l’URI du schéma auquel vous appliquez le descripteur. |
+| `xdm:sourceVersion` | La version du schéma auquel vous appliquez le descripteur. Doit être définie sur `1`. |
+| `xdm:sourceProperty` | Le chemin d’accès à la propriété dans le schéma auquel vous appliquez le descripteur. Si vous souhaitez appliquer le descripteur à plusieurs propriétés, vous pouvez fournir une liste de chemins d’accès sous la forme d’un tableau (par exemple, `["/firstName", "/lastName"]`). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

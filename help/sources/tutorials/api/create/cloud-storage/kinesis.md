@@ -5,10 +5,10 @@ title: Création d’une connexion source Kinesis Amazon à l’aide de l’API 
 type: Tutorial
 description: Découvrez comment connecter Adobe Experience Platform à une source Kinesis Amazon à l’aide de l’API Flow Service.
 exl-id: 64da8894-12ac-45a0-b03e-fe9b6aa435d3
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '730'
-ht-degree: 68%
+source-wordcount: '729'
+ht-degree: 67%
 
 ---
 
@@ -20,8 +20,8 @@ Ce tutoriel vous guide tout au long des étapes de connexion de [!DNL Amazon Kin
 
 Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
 
-* [Sources](../../../../home.md)[!DNL Platform] : Experience  permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de Platform.
-* [Sandbox](../../../../../sandboxes/home.md)[!DNL Platform] : Experience  fournit des sandbox virtuelles qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
+* [Sources](../../../../home.md)[!DNL Platform] : Experience  permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, de libeller et d’améliorer les données entrantes à l’aide des services de Platform.
+* [Sandbox](../../../../../sandboxes/home.md)[!DNL Platform] : Experience  fournit des sandbox virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
 
 Les sections suivantes contiennent des informations supplémentaires que vous devez connaître pour réussir à connecter [!DNL Kinesis] à Platform à l’aide de l’API [!DNL Flow Service].
 
@@ -88,7 +88,7 @@ curl -X POST \
 | `auth.params.accessKeyId` | L’identifiant de la clé d’accès pour votre [!DNL Kinesis] compte . |
 | `auth.params.secretKey` | La clé d’accès secrète de votre [!DNL Kinesis] compte . |
 | `auth.params.region` | La région de votre [!DNL Kinesis] compte . |
-| `connectionSpec.id` | Le [!DNL Kinesis] identifiant de spécification de connexion : `86043421-563b-46ec-8e6c-e23184711bf6` |
+| `connectionSpec.id` | Identifiant de spécification de connexion [!DNL Kinesis] : `86043421-563b-46ec-8e6c-e23184711bf6`. |
 
 **Réponse**
 
@@ -103,7 +103,7 @@ Une réponse réussie renvoie les détails de la connexion de base que vous vene
 
 ## Créer une connexion source {#source}
 
-Une connexion source crée et gère la connexion à la source externe à partir de laquelle les données sont ingérées. Une connexion source se compose d’informations telles que la source de données, le format de données et l’identifiant de connexion source nécessaires à la création d’un flux de données. Une instance de connexion source est spécifique à un client et à une organisation IMS.
+Une connexion source crée et gère la connexion à la source externe à partir de laquelle les données sont ingérées. Une connexion source se compose d’informations telles que la source de données, le format de données et l’identifiant de connexion source nécessaires à la création d’un flux de données. Une instance de connexion source est spécifique à un client et à une organisation.
 
 Pour créer une connexion source, envoyez une requête POST au point d’entrée `/sourceConnections` de l’API [!DNL Flow Service].
 

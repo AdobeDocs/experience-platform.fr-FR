@@ -2,9 +2,9 @@
 title: Migration du lac de données vers la version Gen2
 description: Découvrez les nouvelles fonctionnalités offertes par la migration du lac de données vers la version Gen2 dans Adobe Experience Platform.
 exl-id: 56d9c77a-d7eb-498d-994f-b15d150dedb7
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '286'
+source-wordcount: '285'
 ht-degree: 0%
 
 ---
@@ -26,4 +26,4 @@ Pendant que Adobe migre le lac de données de Gen1 vers Gen 2, les utilisateurs 
 
 ## Communication avec les utilisateurs de Platform
 
-Adobe contactera les administrateurs système pour discuter en détail de l’impact de la migration et confirmer les dates et heures de migration pour certaines organisations IMS.
+Adobe contactera les administrateurs système pour discuter en détail de l’impact de la migration et confirmer les dates et heures de migration pour certaines organisations.

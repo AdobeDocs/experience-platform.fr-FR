@@ -4,22 +4,22 @@ solution: Experience Platform
 title: Prise en main de l’API Sandbox
 description: L’API Sandbox permet aux développeurs de gérer par programmation les environnements de test dans Adobe Experience Platform. Suivez ce guide pour savoir comment effectuer des opérations clés à l’aide de l’API.
 exl-id: 1ae27f30-2f89-4bfa-887d-a5def17b5cbc
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '376'
-ht-degree: 89%
+source-wordcount: '375'
+ht-degree: 85%
 
 ---
 
 # Prise en main de l’API Sandbox
 
-Les environnements de test d’Adobe Experience Platform fournissent des environnements de développement isolés qui vous permettent de tester des fonctionnalités, d’exécuter des opérations et de créer des configurations personnalisées sans affecter votre environnement de production.
+Les sandbox d’Adobe Experience Platform fournissent des environnements de développement isolés qui vous permettent de tester des fonctionnalités, d’exécuter des opérations et de créer des configurations personnalisées sans affecter votre environnement de production.
 
-Ce guide de développement décrit les étapes à suivre pour utiliser l’API Sandbox afin de gérer les environnements de test dans Experience Platform. Il inclut des exemples d’appels API pour effectuer diverses opérations.
+Ce guide de développement décrit les étapes à suivre pour utiliser l’API Sandbox afin de gérer les sandbox dans Experience Platform. Il inclut des exemples d’appels API pour effectuer diverses opérations.
 
 ## Conditions préalables
 
-Pour gérer les environnements de test de votre organisation IMS, vous devez disposer des droits d’administration pour les environnements de test. Les utilisateurs ne disposant pas d’autorisations d’accès peuvent uniquement utiliser la variable [point d’entrée sandbox disponible](./available.md) pour répertorier les environnements de test principaux de l’utilisateur actuel. Pour plus d’informations sur l’attribution des autorisations Sandbox pour Experience Platform, reportez-vous à la [présentation du contrôle d’accès](../../access-control/home.md).
+Pour gérer les environnements de test pour votre organisation, vous devez disposer des autorisations Sandbox Administration. Les utilisateurs ne disposant pas d’autorisations d’accès peuvent uniquement utiliser la variable [point d’entrée sandbox disponible](./available.md) pour répertorier les environnements de test principaux de l’utilisateur actuel. Pour plus d’informations sur l’attribution des autorisations Sandbox pour Experience Platform, reportez-vous à la [présentation du contrôle d’accès](../../access-control/home.md).
 
 ### Lecture d’exemples d’appels API
 
@@ -33,7 +33,7 @@ Ce guide nécessite que vous ayez suivi le [tutoriel sur l’authentification](h
 * x-api-key : `{API_KEY}`
 * x-gw-ims-org-id: `{ORG_ID}`
 
-Outre les en-têtes d’authentification, toutes les requêtes nécessitent un en-tête spécifiant le nom de l’environnement de test dans lequel l’opération aura lieu :
+Outre les en-têtes d’authentification, toutes les requêtes nécessitent un en-tête spécifiant le nom du sandbox dans lequel l’opération aura lieu :
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 

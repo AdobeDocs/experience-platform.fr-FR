@@ -2,12 +2,12 @@
 keywords: Experience Platform; accueil;rubriques populaires;query service;Query Service;requête;éditeur de requêtes;éditeur de requêtes;éditeur de requêtes;
 solution: Experience Platform
 title: Guide des informations d’identification de Query Service
-description: Adobe Experience Platform Query Service présente une interface utilisateur qui permet d’écrire et d’exécuter des requêtes, de voir les requêtes précédemment exécutées et d’accéder aux requêtes enregistrées par les utilisateurs au sein de votre organisation IMS.
+description: Adobe Experience Platform Query Service fournit une interface utilisateur qui permet d’écrire et d’exécuter des requêtes, d’afficher des requêtes précédemment exécutées et d’accéder aux requêtes enregistrées par les utilisateurs de votre entreprise.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: d86e1118fc8886f3a55b0224a2e065b33d96daf2
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1338'
-ht-degree: 6%
+source-wordcount: '1337'
+ht-degree: 5%
 
 ---
 
@@ -19,8 +19,8 @@ Adobe Experience Platform Query Service vous permet de vous connecter à des cli
 
 >[!CONTEXTUALHELP]
 >id="platform_queryservice_credentials_expiringcredentials"
->title="Mode SSL du client"
->abstract="SSL doit être activé dans les clients connectés à Query Service. Assurez-vous que le mode SSL est défini sur &quot;require&quot;."
+>title="Mode SSL du client"
+>abstract="SSL doit être activé dans les clients connectés à Query Service. Assurez-vous que le mode SSL est paramétré sur « exiger »."
 
 Vous pouvez utiliser des informations d’identification arrivant à expiration pour configurer rapidement une connexion à un client externe.
 

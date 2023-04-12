@@ -4,10 +4,10 @@ description: La segmentation vous permet de créer des segments et des audiences
 title: Surveillance des flux de données pour les segments dans l’interface utilisateur
 type: Tutorial
 exl-id: 32fd2ba1-0ff0-4ea7-8d55-80d53eebc02f
-source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1923'
-ht-degree: 5%
+source-wordcount: '1919'
+ht-degree: 7%
 
 ---
 
@@ -27,14 +27,14 @@ Ce guide nécessite une compréhension professionnelle des composants suivants d
    - [Tâches d’activation](../../destinations/ui/activation-overview.md): Une tâche d’activation est utilisée pour activer votre segment vers une destination spécifiée.
    - [Tâches d’évaluation](../../segmentation/tutorials/evaluate-a-segment.md#evaluate-a-segment): Une tâche d’évaluation est un processus asynchrone qui s’exécute pour créer un segment d’audience basé sur le segment spécifié.
    - [Tâches d’exportation](../../segmentation/api/export-jobs.md): Une tâche d’exportation est un processus asynchrone utilisé pour conserver les membres du segment d’audience dans les jeux de données.
-- [Sandbox](../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuelles qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
+- [Sandbox](../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
 ## Tableau de bord des segments de surveillance {#monitoring-segments-dashboard}
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_segments"
 >title="Segments"
->abstract="La vue Segments contient des informations sur tous les segments de votre organisation IMS, ainsi que des informations supplémentaires sur leurs tâches d’activation et d’évaluation."
+>abstract="La vue Segments contient des informations sur tous les segments de votre entreprise, ainsi que des informations supplémentaires sur leurs tâches d’activation et d’évaluation."
 
 Pour accéder au **[!UICONTROL Segments]** tableau de bord, sélectionnez **[!UICONTROL Surveillance]** dans le volet de navigation de gauche. Une fois sur le **[!UICONTROL Surveillance]** , sélectionnez **[!UICONTROL Segments]** carte.
 
@@ -48,7 +48,7 @@ Le tableau de bord lui-même contient des mesures pour les tâches de segments e
 >
 >Actuellement, seuls les segments activés pour [destinations par lot (basées sur des fichiers)](../../destinations/destination-types.md#file-based) sont pris en charge pour le tableau de bord des segments de surveillance.
 
-![Tableau de bord des segments. Des informations sur les différents segments de votre organisation IMS et de votre environnement de test s’affichent.](../assets/ui/monitor-segments/segment-monitoring-dashboard.png)
+![Le tableau de bord des segments. Des informations sur les différents segments de votre organisation et de votre environnement de test s’affichent.](../assets/ui/monitor-segments/segment-monitoring-dashboard.png)
 
 Les mesures suivantes sont disponibles pour cette vue de tableau de bord :
 
@@ -109,7 +109,7 @@ Les mesures suivantes sont disponibles pour cette vue de tableau de bord :
 | **[!UICONTROL Démarrage de l’exécution du flux de données]** | Date et heure de début de la tâche d’activation. |
 | **[!UICONTROL Fin de l’exécution du flux de données]** | Date et heure auxquelles la tâche d’activation s’est terminée. |
 | **[!UICONTROL Identifiant d’exécution du flux de données]** | Identifiant de la tâche d’activation actuelle. |
-| **[!UICONTROL Identifiant de l’organisation IMS]** | L’identifiant de l’organisation IMS à laquelle appartient la tâche d’activation. |
+| **[!UICONTROL Identifiant de l’organisation IMS]** | ID de l’organisation à laquelle appartient la tâche d’activation. |
 | **[!UICONTROL Nom de la destination]** | Nom de la destination vers laquelle les données sont activées. |
 
 Sous les mesures, une bascule permettant de sélectionner entre les erreurs d’exécution du flux de données et les segments s’affiche.
@@ -151,7 +151,7 @@ Les mesures suivantes sont disponibles pour cette vue de tableau de bord :
 | **[!UICONTROL Type de tâche]** | Type de tâche de segmentation. Dans ce cas, il s’agira toujours d’une tâche d’évaluation de segment. |
 | **[!UICONTROL Type d’évaluation]** | Type d’évaluation en cours. Cela peut être : **[!UICONTROL Lot]** ou **[!UICONTROL Diffusion en continu]**. |
 | **[!UICONTROL ID de tâche]** | Identifiant de la tâche d’évaluation. |
-| **[!UICONTROL Identifiant de l’organisation IMS]** | Identifiant de l’organisation IMS à laquelle appartient la tâche d’évaluation. |
+| **[!UICONTROL Identifiant de l’organisation IMS]** | Identifiant de l’organisation à laquelle appartient la tâche d’évaluation. |
 | **[!UICONTROL Nom du segment]** | Nom du segment en cours d’évaluation. |
 | **[!UICONTROL Identifiant de segment]** | Identifiant du segment en cours d’évaluation. |
 
@@ -173,7 +173,7 @@ Pour la section des segments, les mesures suivantes sont disponibles :
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_segment_jobs"
 >title="Tâches de segmentation"
->abstract="La vue des tâches de segmentation contient des informations sur les tâches d’évaluation et d’exportation pour tous vos segments."
+>abstract="La vue des tâches de segmentation contient des informations sur les tâches d&#39;évaluation et d&#39;exportation pour tous vos segments."
 
 Pour accéder au **[!UICONTROL Tâches de segmentation]** tableau de bord, sélectionnez **[!UICONTROL Surveillance]** (![icône de surveillance](../assets/ui/monitor-destinations/monitoring-icon.png)) dans le volet de navigation de gauche. Une fois sur le [!UICONTROL Surveillance] page, sélectionnez **[!UICONTROL Tâches de segmentation]**. Le [!UICONTROL Surveillance] Le tableau de bord contient des mesures et des informations sur les tâches d’évaluation et d’exportation de segments.
 

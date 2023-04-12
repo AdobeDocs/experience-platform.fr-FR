@@ -2,10 +2,10 @@
 description: Cette page répertorie et décrit toutes les opérations d’API que vous pouvez effectuer à l’aide du point d’entrée de l’API « /authoring/destinations ».
 title: Opérations de point d’entrée de l’API Destinations
 exl-id: 96755e9d-be62-432f-b985-91330575b395
-source-git-commit: 59ac7749d788d8527da3578ec140248f7acf8e98
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '2545'
-ht-degree: 91%
+source-wordcount: '2536'
+ht-degree: 88%
 
 ---
 
@@ -180,7 +180,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `aggregation.configurableAggregation.aggregationKey.oneIdentityPerGroup` | Booléen | Consultez le paramètre dans l’exemple de configuration [ici](./destination-configuration.md#example-configuration). Utilisez ce paramètre pour indiquer si vous souhaitez que les profils exportés soient agrégés en groupes d’une seule identité (GAID, IDFA, numéros de téléphone, e-mail, etc.). |
 | `aggregation.configurableAggregation.aggregationKey.groups` | Chaîne | Consultez le paramètre dans l’exemple de configuration [ici](./destination-configuration.md#example-configuration). Créez des listes de groupes d’identités si vous souhaitez regrouper les profils exportés vers votre destination par groupes d’espaces de noms d’identité. Par exemple, vous pouvez combiner des profils contenant les identifiants mobiles IDFA et GAID dans un appel vers votre destination et des e-mails dans un autre en utilisant la configuration de l’exemple. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Réponse**
 
@@ -443,7 +443,7 @@ Une réponse réussie renvoie un état HTTP 200 avec les détails de la configu
 
 ## Liste des configurations de destination {#retrieve-list}
 
-Vous pouvez récupérer une liste de toutes les configurations de destination pour votre organisation IMS en effectuant une requête GET au point d’entrée `/authoring/destinations`.
+Vous pouvez récupérer une liste de toutes les configurations de destination pour votre organisation en envoyant une demande de GET à la variable `/authoring/destinations` point de terminaison .
 
 **Format d’API**
 
@@ -454,7 +454,7 @@ GET /authoring/destinations
 
 **Requête**
 
-La demande suivante récupère la liste des configurations de destination auxquelles vous avez accès, en fonction de la configuration de l’organisation IMS et de la sandbox.
+La requête suivante récupère la liste des configurations de destination auxquelles vous avez accès, en fonction de la configuration de l’organisation et de l’environnement de test.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/activation/authoring/destinations \
@@ -466,7 +466,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 **Réponse**
 
-La réponse suivante renvoie un état HTTP 200 avec une liste des configurations de destination auxquelles vous avez accès, en fonction de l’identifiant d’organisation IMS et du nom de sandbox utilisés. Une valeur `instanceId` correspond au modèle d’une destination. La réponse est tronquée à des fins de brièveté.
+La réponse suivante renvoie un état HTTP 200 avec une liste des configurations de destination auxquelles vous avez accès, en fonction de l’ID d’organisation et du nom de l’environnement de test que vous avez utilisés. Une valeur `instanceId` correspond au modèle pour une destination. La réponse est tronquée à des fins de brièveté.
 
 ```json
 {
@@ -602,9 +602,9 @@ La réponse suivante renvoie un état HTTP 200 avec une liste des configurations
 | `segmentMappingConfig.mapUserInput` | Booléen | Contrôle si l’identifiant de mappage de segments dans le workflow d’activation de destination est saisi par l’utilisateur. |
 | `segmentMappingConfig.mapExperiencePlatformSegmentId` | Booléen | Contrôle si l’identifiant de mappage de segments dans le workflow d’activation de destination est l’identifiant de segment Experience Platform. |
 | `segmentMappingConfig.mapExperiencePlatformSegmentName` | Booléen | Contrôle si l’identifiant de mappage de segments dans le workflow d’activation de destination est le nom du segment Experience Platform. |
-| `segmentMappingConfig.audienceTemplateId` | Booléen | Paramètre `instanceId` du [modèle de métadonnées d’audience](./audience-metadata-management.md) utilisé pour cette destination. Pour configurer un modèle de métadonnées d’audience, lisez [Référence de l’API de métadonnées d’audience](./audience-metadata-api.md). |
+| `segmentMappingConfig.audienceTemplateId` | Booléen | Paramètre `instanceId` du [modèle de métadonnées d’audience](./audience-metadata-management.md) utilisé pour cette destination. Pour configurer un modèle de métadonnées d’audience, consultez la [référence de l’API de métadonnées d’audience](./audience-metadata-api.md). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Mettre à jour une configuration de destination existante {#update}
 

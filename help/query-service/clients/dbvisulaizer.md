@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Connexion de DbVisualizer à Query Service
 description: Ce document décrit les étapes à suivre pour connecter DbVisualizer à Adobe Experience Platform Query Service.
 exl-id: badb0d89-1713-438c-8a9c-d1404051ff5f
-source-git-commit: 106a2e4606e94f71d6359cf947e05f193c19c660
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '922'
-ht-degree: 1%
+source-wordcount: '921'
+ht-degree: 6%
 
 ---
 
@@ -17,9 +17,9 @@ Ce document décrit les étapes à suivre pour connecter la variable [!DNL DbVis
 
 ## Prise en main
 
-Ce guide nécessite que vous ayez déjà accès à la fonction [!DNL DbVisualizer] de l’appli de bureau et connaissent comment naviguer dans son interface. Pour télécharger le [!DNL DbVisualizer] pour plus d’informations, voir [officiel [!DNL DbVisualizer] documentation](https://www.dbvis.com/download/).
+Ce guide nécessite que vous ayez déjà accès à l’application [!DNL DbVisualizer] Desktop et que vous sachiez comment naviguer dans son interface. Pour télécharger le [!DNL DbVisualizer] pour plus d’informations, voir [officiel [!DNL DbVisualizer] documentation](https://www.dbvis.com/download/).
 
-Pour acquérir les informations d’identification nécessaires à la connexion [!DNL  DbVisualizer] pour Experience Platform, vous devez avoir accès à l’espace de travail Requêtes dans l’interface utilisateur de Platform. Contactez votre administrateur de l’organisation IMS si vous n’avez pas actuellement accès à l’espace de travail Requêtes .
+Pour acquérir les informations d’identification nécessaires à la connexion de [!DNL  DbVisualizer] à Experience Platform, vous devez avoir accès à l’espace de travail Requêtes dans l’interface utilisateur de Platform. Contactez l’administrateur de votre organisation si vous n’avez pas actuellement accès à l’espace de travail Requêtes .
 
 ## Création d’une connexion à une base de données {#connect-database}
 

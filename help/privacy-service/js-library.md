@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Présentation de la bibliothèque JavaScript Adobe Privacy
 description: La bibliothèque JavaScript Adobe Privacy vous permet de récupérer les identités des titulaires de données à utiliser dans Privacy Service.
 exl-id: 757bf69e-25bf-4ef9-9787-3e74b213908a
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1007'
+source-wordcount: '1006'
 ht-degree: 59%
 
 ---
@@ -207,7 +207,7 @@ Voici une liste des paramètres de configuration acceptés pour les solutions Ad
 
 | Paramètre | Description |
 | --- | --- |
-| `imsOrgID` | Votre identifiant d’organisation IMS. |
+| `imsOrgID` | Votre identifiant d’organisation. |
 
 **Adobe Target**
 

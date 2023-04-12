@@ -2,10 +2,10 @@
 description: Cette page répertorie et décrit toutes les opérations d’API que vous pouvez effectuer à l’aide du point d’entrée de l’API « authoring/destinations/publish ».
 title: Opérations de l’API du point d’entrée de publication des destinations
 exl-id: 0564a132-42f4-478c-9197-9b051acf093c
-source-git-commit: 1fb0fde2054528679235268ae96e3b7e78de80ef
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '779'
-ht-degree: 67%
+source-wordcount: '770'
+ht-degree: 60%
 
 ---
 
@@ -67,7 +67,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `destinationId` | Chaîne | Identifiant de destination de la configuration de destination que vous envoyez pour publication. Obtenez l’identifiant de destination d’une configuration de destination à l’aide de la [référence de l’API de configuration de destination](./destination-configuration-api.md#retrieve-list). |
 | `destinationAccess` | Chaîne | Utilisation `ALL` pour que votre destination apparaisse dans le catalogue pour tous les clients Experience Platform. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Réponse**
 
@@ -75,7 +75,7 @@ Une réponse réussie renvoie un état HTTP 201 avec les détails de la requêt
 
 ## Liste des requêtes de publication de destination {#retrieve-list}
 
-Vous pouvez récupérer une liste de toutes les destinations envoyées pour la publication pour votre organisation IMS en effectuant une requête GET au point d’entrée `/authoring/destinations/publish`.
+Vous pouvez récupérer une liste de toutes les destinations envoyées pour publication pour votre organisation en adressant une requête de GET à la fonction `/authoring/destinations/publish` point de terminaison .
 
 **Format d’API**
 
@@ -85,7 +85,7 @@ GET /authoring/destinations/publish
 
 **Requête**
 
-La requête suivante récupère la liste des destinations soumises pour publication auxquelles vous avez accès, en fonction de la configuration de l’organisation IMS et de l’environnement de test.
+La requête suivante récupère la liste des destinations soumises pour publication auxquelles vous avez accès, en fonction de la configuration de l’organisation et de l’environnement de test.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/activation/authoring/destinations/publish \
@@ -97,7 +97,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 **Réponse**
 
-La réponse suivante renvoie un état HTTP 200 avec une liste des destinations envoyées pour publication auxquelles vous avez accès, en fonction de l’ID d’organisation IMS et du nom de la sandbox utilisés. L’un d’eux `configId` correspond à la demande de publication pour une destination.
+La réponse suivante renvoie un état HTTP 200 avec une liste des destinations soumises pour publication auxquelles vous avez accès, en fonction de l’ID d’organisation et du nom de l’environnement de test que vous avez utilisés. L’un d’eux `configId` correspond à la demande de publication pour une destination.
 
 ```json
 {
@@ -125,7 +125,7 @@ La réponse suivante renvoie un état HTTP 200 avec une liste des destinations e
 | `publishDetailsList.destinationType` | Chaîne | Type de destination. Les valeurs peuvent être `DEV` et `PUBLIC`. `DEV` correspond à la destination dans votre organisation Experience Platform. `PUBLIC` correspond à la destination que vous avez envoyée pour publication. Pensez à ces deux options en termes Git, où la variable `DEV` La version représente votre branche de création locale et la `PUBLIC` version représente la branche principale distante. |
 | `publishDetailsList.publishedDate` | Chaîne | Date à laquelle la destination a été envoyée pour publication, en temps Unix. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Obtenez le statut d’une demande de publication de destination spécifique {#get}
 

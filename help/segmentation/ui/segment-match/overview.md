@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Présentation de la correspondance des segments
 description: La correspondance des segments est un service de partage de segments dans Adobe Experience Platform qui permet à deux utilisateurs ou plus de Platform d’échanger des données de segment de manière sécurisée, régulée et respectueuse de la confidentialité.
 exl-id: 4e6ec2e0-035a-46f4-b171-afb777c14850
-source-git-commit: f619bbf2c8d313eabc6444b4bd8c09615a00cc42
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1998'
-ht-degree: 99%
+source-wordcount: '1997'
+ht-degree: 98%
 
 ---
 
@@ -76,7 +76,7 @@ Deux autorisations sont associées à [!DNL Segment Match] :
 
 | Autorisation | Description |
 | --- | --- |
-| Gérer les connexions de partage d’audience | Cette autorisation vous permet d’effectuer le processus de partenariat à l’amiable, qui connecte deux organisations IMS pour activer les flux [!DNL Segment Match]. |
+| Gérer les connexions de partage d’audience | Cette autorisation vous permet d’effectuer le processus de négociation des liens avec les partenaires, qui connecte deux organisations pour activer [!DNL Segment Match] flux. |
 | Gérer les partages d’audience | Cette autorisation vous permet de créer, de modifier et de publier des flux (le package de données utilisé pour [!DNL Segment Match]) avec des partenaires actifs (des partenaires qui ont été connectés par l’utilisateur administrateur avec un accès aux **[!UICONTROL connexions avec partage d’audience]**). |
 
 Pour plus d’informations sur le contrôle d’accès et les autorisations, consultez la [Présentation du contrôle d’accès](../../../access-control/home.md).

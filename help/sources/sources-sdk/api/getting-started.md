@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Prise en main des sources en libre-service (SDK par lots)
 description: Ce document présente les informations prérequises que vous devez connaître avant de tenter de créer une source à l’aide de sources en libre-service (SDK par lots).
 exl-id: ba131442-ff20-4854-87fe-918aa313382d
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 2a5d545db18a5dd33c5ff2ac5c543ec35db4ca00
 workflow-type: tm+mt
-source-wordcount: '387'
-ht-degree: 52%
+source-wordcount: '386'
+ht-degree: 53%
 
 ---
 
@@ -17,12 +17,12 @@ Les sources en libre-service (SDK par lots) vous permettent d’intégrer votre 
 
 ## Conditions préalables
 
-Pour utiliser des sources en libre-service (SDK par lots), vous devez vous assurer que vous avez accès à un environnement de test d’organisation IMS fourni avec des sources Adobe Experience Platform.
+Pour utiliser des sources en libre-service (SDK par lots), vous devez vous assurer que vous avez accès à une organisation Sandbox configurée avec des sources Adobe Experience Platform.
 
 Ce guide nécessite également une compréhension pratique des composants suivants de Adobe Experience Platform :
 
 * [Sources](../../home.md) : Experience Platform permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de Platform.
-* [Sandbox](../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuelles qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
+* [Sandbox](../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
 
 ## Lecture d’exemples d’appels API
 
@@ -36,7 +36,7 @@ Pour lancer des appels aux API Platform, vous devez d’abord suivre le [tutorie
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {ORG_ID}`
 
-Toutes les ressources de Platform, y compris celles appartenant à [!DNL Flow Service], sont isolés dans des environnements de test virtuels spécifiques. Toutes les requêtes envoyées aux API Platform nécessitent un en-tête spécifiant le nom de l’environnement de test dans lequel l’opération sera effectuée :
+Toutes les ressources de Platform, y compris celles appartenant à [!DNL Flow Service], sont isolés dans des environnements de test virtuels spécifiques. Toutes les requêtes envoyées aux API Platform nécessitent un en-tête spécifiant le nom du sandbox dans lequel l’opération sera effectuée :
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 

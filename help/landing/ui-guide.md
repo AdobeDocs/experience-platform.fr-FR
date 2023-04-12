@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Présentation de l’interface utilisateur Experience Platform
 description: Adobe Experience Platform
 exl-id: 47f9a3fb-731d-4ade-8069-faaa18f224dc
-source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1811'
+source-wordcount: '1797'
 ht-degree: 2%
 
 ---
@@ -29,13 +29,13 @@ Le tableau de bord des mesures fournit des cartes qui vous donnent des informati
 
 ![](images/user-guide/homepage-dashboard.png)
 
-Le **[!UICONTROL Jeux de données]** La section indique le nombre de jeux de données au sein de votre organisation IMS. Ce nombre est mis à jour lors de la création d’un jeu de données. Vous trouverez plus d’informations sur les jeux de données dans la section [présentation des jeux de données](../catalog/datasets/overview.md).
+Le **[!UICONTROL Jeux de données]** indique le nombre de jeux de données au sein de votre organisation. Ce nombre est mis à jour lors de la création d’un jeu de données. Vous trouverez plus d’informations sur les jeux de données dans la section [présentation des jeux de données](../catalog/datasets/overview.md).
 
-Le **[!UICONTROL Profils]** indique le nombre total de personnes avec des profils au sein de votre organisation IMS, à l’exception des fragments de profil. Ce nombre total de personnes représente l’audience adressable totale et est mis à jour toutes les 24 heures. Vous trouverez plus d’informations sur les profils dans la section [Présentation de Real-Time Customer Profile](../profile/home.md).
+Le **[!UICONTROL Profils]** indique le nombre total de personnes avec des profils au sein de votre organisation, à l’exception des fragments de profil. Ce nombre total de personnes représente l’audience adressable totale et est mis à jour toutes les 24 heures. Vous trouverez plus d’informations sur les profils dans la section [Présentation de Real-Time Customer Profile](../profile/home.md).
 
-Le **[!UICONTROL Segments]** indique le nombre total de segments créés dans votre organisation IMS. Ce nombre est mis à jour lors de la création d’un segment. Vous trouverez plus d’informations sur les segments dans la section [Présentation de Segmentation Service](../segmentation/home.md).
+Le **[!UICONTROL Segments]** indique le nombre total de segments créés dans votre organisation. Ce nombre est mis à jour lors de la création d’un segment. Vous trouverez plus d’informations sur les segments dans la section [Présentation de Segmentation Service](../segmentation/home.md).
 
-Le **[!UICONTROL Destinations]** indique le nombre total de destinations créées pour l’organisation IMS. Ce nombre est mis à jour lors de la création d’une destination. Vous trouverez plus d’informations sur les destinations dans la section [présentation des destinations](../destinations/home.md).
+Le **[!UICONTROL Destinations]** indique le nombre total de destinations créées pour l’organisation. Ce nombre est mis à jour lors de la création d’une destination. Vous trouverez plus d’informations sur les destinations dans la section [présentation des destinations](../destinations/home.md).
 
 ### Données récentes
 
@@ -43,13 +43,13 @@ Le tableau de bord de données récent fournit des informations sur les jeux de 
 
 ![](images/user-guide/homepage-recent.png)
 
-Le **[!UICONTROL Jeux de données récents]** Cette section répertorie les cinq jeux de données créés le plus récemment au sein de votre organisation IMS. Cette liste est mise à jour chaque fois qu’un nouveau jeu de données est créé. Vous pouvez sélectionner un jeu de données dans la liste pour afficher plus d’informations sur le jeu de données spécifié ou sélectionner **[!UICONTROL Afficher tout]** pour afficher la liste de tous les jeux de données créés. Vous trouverez plus d’informations sur les jeux de données dans la section [présentation des jeux de données](../catalog/datasets/overview.md).
+Le **[!UICONTROL Jeux de données récents]** Cette section répertorie les cinq jeux de données créés le plus récemment au sein de votre organisation. Cette liste est mise à jour chaque fois qu’un nouveau jeu de données est créé. Vous pouvez sélectionner un jeu de données dans la liste pour afficher plus d’informations sur le jeu de données spécifié ou sélectionner **[!UICONTROL Afficher tout]** pour afficher la liste de tous les jeux de données créés. Vous trouverez plus d’informations sur les jeux de données dans la section [présentation des jeux de données](../catalog/datasets/overview.md).
 
-Le **[!UICONTROL Sources récentes]** Cette section répertorie les cinq connecteurs source créés le plus récemment au sein de votre organisation IMS. Cette liste est mise à jour chaque fois qu’un nouveau connecteur source est créé. Vous pouvez sélectionner une connexion source dans la liste pour afficher plus d’informations sur le connecteur spécifié ou sélectionner **[!UICONTROL Afficher tout]** pour afficher la liste de toutes les connexions source créées. Vous trouverez plus d’informations sur les sources dans la section [présentation des sources](../sources/home.md).
+Le **[!UICONTROL Sources récentes]** Cette section répertorie les cinq connecteurs source créés le plus récemment au sein de votre entreprise. Cette liste est mise à jour chaque fois qu’un nouveau connecteur source est créé. Vous pouvez sélectionner une connexion source dans la liste pour afficher plus d’informations sur le connecteur spécifié ou sélectionner **[!UICONTROL Afficher tout]** pour afficher la liste de toutes les connexions source créées. Vous trouverez plus d’informations sur les sources dans la section [présentation des sources](../sources/home.md).
 
-Le **[!UICONTROL Segments récents]** Cette section répertorie les cinq définitions de segment créées le plus récemment au sein de votre organisation IMS. Cette liste est mise à jour chaque fois qu’une nouvelle définition de segment est créée. Vous pouvez sélectionner une définition de segment dans la liste pour afficher plus d’informations sur la définition de segment spécifiée ou sélectionner **[!UICONTROL Afficher tout]** pour afficher la liste de toutes les définitions de segment créées. Vous trouverez plus d’informations sur les segments dans la section [Présentation de Segmentation Service](../segmentation/home.md).
+Le **[!UICONTROL Segments récents]** Cette section répertorie les cinq définitions de segment créées le plus récemment au sein de votre organisation. Cette liste est mise à jour chaque fois qu’une nouvelle définition de segment est créée. Vous pouvez sélectionner une définition de segment dans la liste pour afficher plus d’informations sur la définition de segment spécifiée ou sélectionner **[!UICONTROL Afficher tout]** pour afficher la liste de toutes les définitions de segment créées. Vous trouverez plus d’informations sur les segments dans la section [Présentation de Segmentation Service](../segmentation/home.md).
 
-Le **[!UICONTROL Destinations récentes]** Cette section répertorie les cinq destinations créées le plus récemment dans votre organisation IMS. Cette liste est mise à jour chaque fois qu’une nouvelle destination est créée. Vous pouvez sélectionner une destination dans la liste pour afficher plus d’informations sur la destination spécifiée ou sélectionner **[!UICONTROL Afficher tout]** pour afficher une liste de toutes les destinations créées. Vous trouverez plus d’informations sur les destinations dans la section [présentation des destinations](../destinations/home.md).
+Le **[!UICONTROL Destinations récentes]** Cette section répertorie les cinq destinations créées le plus récemment au sein de votre organisation. Cette liste est mise à jour chaque fois qu’une nouvelle destination est créée. Vous pouvez sélectionner une destination dans la liste pour afficher plus d’informations sur la destination spécifiée ou sélectionner **[!UICONTROL Afficher tout]** pour afficher une liste de toutes les destinations créées. Vous trouverez plus d’informations sur les destinations dans la section [présentation des destinations](../destinations/home.md).
 
 ### Apprentissage recommandé
 
@@ -59,23 +59,23 @@ Le **[!UICONTROL Apprentissage recommandé]** fournit des liens vers la document
 
 ## Barre de navigation supérieure
 
-La barre de navigation supérieure de l’interface utilisateur de Platform affiche l’organisation IMS dans laquelle vous êtes actuellement connecté et fournit plusieurs contrôles importants.
+La barre de navigation supérieure de l’interface utilisateur de Platform affiche l’organisation dans laquelle vous êtes actuellement connecté et fournit plusieurs contrôles importants.
 
 Le logo Adobe Experience Platform se trouve sur le côté gauche de la barre de navigation. La sélection de ce logo à tout moment vous ramène à l’écran d’accueil de l’interface utilisateur de Platform.
 
 ![](./images/user-guide/homepage-top-nav-bar.png)
 
-### Sélecteur d’organisation IMS
+### Sélecteur d’organisation
 
-Le premier élément situé sur le côté droit de la barre de navigation supérieure est le suivant : **Sélecteur d’organisation IMS**.
+Le premier élément situé sur le côté droit de la barre de navigation supérieure est le suivant : **Sélecteur d’organisation**.
 
 ![](./images/user-guide/homepage-ims-org-switcher.png)
 
-Si vous sélectionnez le sélecteur, un menu déroulant des organisations IMS auxquelles vous avez accès s’affiche, le cas échéant. Pour passer à une autre organisation IMS, sélectionnez une option répertoriée.
+Si vous sélectionnez le sélecteur, un menu déroulant des organisations auxquelles vous avez accès s’affiche, le cas échéant. Pour passer à une autre organisation, sélectionnez une option répertoriée.
 
 ### Changement d’applications
 
-L’élément suivant situé sur le côté droit de la navigation supérieure est le suivant : **sélecteur d’applications**, représenté par le ![sélecteur d’applications](./images/user-guide/app-switcher-icon.png) icône . Lorsque vous sélectionnez cette icône, vous pouvez passer d’une application d’Adobe à laquelle votre organisation IMS a accès, comme Experience Platform, Analytics, Assets, etc.
+L’élément suivant situé sur le côté droit de la navigation supérieure est le suivant : **sélecteur d’applications**, représenté par le ![sélecteur d’applications](./images/user-guide/app-switcher-icon.png) icône . Lorsque vous sélectionnez cette icône, vous pouvez basculer entre les applications d’Adobe auxquelles votre entreprise a accès (Experience Platform, Analytics, Assets, etc.).
 
 ### Aide
 

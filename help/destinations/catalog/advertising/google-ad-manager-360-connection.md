@@ -2,7 +2,7 @@
 title: Connexion à  [!DNL Google Ad Manager 360]  (Version bêta)
 description: Google Ad Manager 360 est une plateforme de diffusion d’annonces de Google qui donne aux éditeurs les moyens de gérer l’affichage des annonces sur leurs sites web, en vidéo et dans les applications mobiles.
 exl-id: 3251145a-3e4d-40aa-b120-d79c8c9c7cae
-source-git-commit: ec4d064f90348f9eafb1d0fe4b9df5e102295507
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
 source-wordcount: '920'
 ht-degree: 85%
@@ -19,7 +19,7 @@ Pour plus d’informations sur le fonctionnement des identifiants fournis par l�
 
 >[!IMPORTANT]
 >
->Cette destination est actuellement en version bêta et nʼest disponible que pour un nombre de clients limité. Pour demander l’accès à la connexion à [!DNL Google Ad Manager 360], contactez votre représentant Adobe et fournissez vos [!DNL IMS Organization ID].
+>Cette destination est actuellement en version bêta et nʼest disponible que pour un nombre de clients limité. Pour demander l’accès à la connexion à [!DNL Google Ad Manager 360], contactez votre représentant Adobe et fournissez vos [!DNL organization ID].
 
 La destination [!DNL Google Ad Manager 360] exporte des fichiers [!DNL CSV] vers votre compartiment [!DNL Google Cloud Storage]. Une fois que vous avez exporté les fichiers [!DNL CSV], vous devez les importer dans votre compte [!DNL Google Ad Manager 360].
 

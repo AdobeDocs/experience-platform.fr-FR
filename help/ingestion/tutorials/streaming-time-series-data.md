@@ -5,10 +5,10 @@ title: Diffusion en continu de données de séries temporelles à l’aide des A
 type: Tutorial
 description: Ce tutoriel vous aidera à commencer à utiliser les API d’ingestion par flux, qui font partie des API d’Adobe Experience Platform Data Ingestion Service.
 exl-id: 720b15ea-217c-4c13-b68f-41d17b54d500
-source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '1204'
-ht-degree: 66%
+source-wordcount: '1203'
+ht-degree: 65%
 
 ---
 
@@ -155,7 +155,7 @@ Une réponse réussie renvoie un état HTTP 201 avec les détails du schéma qu
 
 | Propriété | Description |
 | -------- | ----------- |
-| `{TENANT_ID}` | Cet identifiant est utilisé pour assurer que les espaces de noms des ressources que vous créez sont corrects et contenus dans votre organisation IMS. Pour plus d’informations sur l’identifiant du client, consultez le [guide du registre des schémas](../../xdm/api/getting-started.md#know-your-tenant-id). |
+| `{TENANT_ID}` | Cet identifiant permet de s’assurer que les espaces de noms des ressources que vous créez sont corrects et contenus dans votre organisation. Pour plus d’informations sur l’identifiant du client, consultez le [guide du registre des schémas](../../xdm/api/getting-started.md#know-your-tenant-id). |
 
 Prenez note des `$id` ainsi que des attributs `version`, ces deux éléments étant utilisés lors de la création du jeu de données.
 

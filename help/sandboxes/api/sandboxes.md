@@ -4,16 +4,16 @@ solution: Experience Platform
 title: Point de terminaison de l’API de gestion des environnements de test
 description: Le point de terminaison /sandbox dans l’API Sandbox vous permet de gérer par programmation les environnements de test dans Adobe Experience Platform.
 exl-id: 0ff653b4-3e31-4ea5-a22e-07e18795f73e
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1489'
-ht-degree: 54%
+source-wordcount: '1488'
+ht-degree: 55%
 
 ---
 
 # Point d’entrée de gestion des environnements de test
 
-Les environnements de test d’Adobe Experience Platform fournissent des environnements de développement isolés qui vous permettent de tester des fonctionnalités, d’exécuter des opérations et de créer des configurations personnalisées sans affecter votre environnement de production. Le `/sandboxes` du point de terminaison [!DNL Sandbox] L’API vous permet de gérer par programmation les environnements de test dans Platform.
+Les sandbox d’Adobe Experience Platform fournissent des environnements de développement isolés qui vous permettent de tester des fonctionnalités, d’exécuter des opérations et de créer des configurations personnalisées sans affecter votre environnement de production. Le `/sandboxes` du point de terminaison [!DNL Sandbox] L’API vous permet de gérer par programmation les environnements de test dans Platform.
 
 ## Prise en main
 
@@ -21,7 +21,7 @@ Le point d’entrée dʼAPI utilisé dans ce guide fait partie de lʼ [[!DNL San
 
 ## Récupération d’une liste d’environnements de test {#list}
 
-Vous pouvez répertorier tous les environnements de test appartenant à votre organisation IMS (principal ou non) en adressant une GET à la fonction `/sandboxes` point de terminaison .
+Vous pouvez répertorier tous les environnements de test appartenant à votre organisation (principal ou non) en adressant une GET à la variable `/sandboxes` point de terminaison .
 
 **Format d’API**
 
@@ -46,7 +46,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie une liste d’environnements de test appartenant à votre organisation, y compris des détails tels que `name`, `title`, `state` et `type`.
+Une réponse réussie renvoie une liste de sandbox appartenant à votre organisation, y compris des détails tels que `name`, `title`, `state` et `type`.
 
 ```json
 {
@@ -127,16 +127,16 @@ Une réponse réussie renvoie une liste d’environnements de test appartenant �
 
 | Propriété | Description |
 | --- | --- |
-| `name` | Le nom de l’environnement de test. Cette propriété est utilisée à des fins de recherche dans les appels API. |
-| `title` | Le nom d’affichage de l’environnement de test. |
-| `state` | L’état de traitement actuel de l’environnement de test. Un environnement de test peut avoir l’un des états suivants : <br/><ul><li>`creating`: L’environnement de test a été créé, mais le système continue de le configurer.</li><li>`active`: L’environnement de test est créé et principal.</li><li>`failed`: En raison d’une erreur, le système n’a pas pu configurer l’environnement de test et est désactivé.</li><li>`deleted`: L’environnement de test a été désactivé manuellement.</li></ul> |
+| `name` | Le nom du sandbox. Cette propriété est utilisée à des fins de recherche dans les appels API. |
+| `title` | Le nom d’affichage du sandbox. |
+| `state` | L’état de traitement actuel du sandbox. Un sandbox peut avoir l’un des états suivants : <br/><ul><li>`creating`: L’environnement de test a été créé, mais le système continue de le configurer.</li><li>`active`: L’environnement de test est créé et principal.</li><li>`failed`: En raison d’une erreur, le système n’a pas pu configurer l’environnement de test et est désactivé.</li><li>`deleted`: L’environnement de test a été désactivé manuellement.</li></ul> |
 | `type` | Type d’environnement de test. Les types d’environnements de test actuellement pris en charge sont les suivants : `development` et `production`. |
 | `isDefault` | Une propriété booléenne indiquant si cet environnement de test est l’environnement de test de production par défaut pour l’organisation. |
-| `eTag` | L’identifiant d’une version spécifique de l’environnement de test. Utilisée pour le contrôle des versions et une mise en cache efficace, cette valeur est mise à jour chaque fois que l’environnement de test est modifié. |
+| `eTag` | L’identifiant d’une version spécifique du sandbox. Utilisée pour le contrôle des versions et une mise en cache efficace, cette valeur est mise à jour chaque fois que le sandbox est modifié. |
 
-## Recherche d’un environnement de test {#lookup}
+## Recherche d’un sandbox {#lookup}
 
-Vous pouvez rechercher un environnement de test individuel en effectuant une requête GET comprenant la propriété `name` de l’environnement de test dans le chemin de requête.
+Vous pouvez rechercher un sandbox individuel en effectuant une requête GET comprenant la propriété `name` du sandbox dans le chemin de requête.
 
 **Format d’API**
 
@@ -146,11 +146,11 @@ GET /sandboxes/{SANDBOX_NAME}
 
 | Paramètre | Description |
 | --- | --- |
-| `{SANDBOX_NAME}` | La propriété `name` de l’environnement de test que vous souhaitez rechercher. |
+| `{SANDBOX_NAME}` | La propriété `name` du sandbox que vous souhaitez rechercher. |
 
 **Requête**
 
-La requête suivante récupère un environnement de test nommé « dev-2 ».
+La requête suivante récupère un sandbox nommé « dev-2 ».
 
 ```shell
 curl -X GET \
@@ -162,7 +162,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie les détails de l’environnement de test, y compris son `name`, `title`, `state` et `type`.
+Une réponse réussie renvoie les détails du sandbox, y compris son `name`, `title`, `state` et `type`.
 
 ```json
 {
@@ -182,18 +182,18 @@ Une réponse réussie renvoie les détails de l’environnement de test, y compr
 
 | Propriété | Description |
 | --- | --- |
-| `name` | Le nom de l’environnement de test. Cette propriété est utilisée à des fins de recherche dans les appels API. |
-| `title` | Le nom d’affichage de l’environnement de test. |
-| `state` | L’état de traitement actuel de l’environnement de test. L’état d’un environnement de test peut correspondre à l’un des suivants : <ul><li>**création** : l’environnement de test a été créé, mais le système continue de le configurer.</li><li>**actif** : l’environnement de test est créé et actif.</li><li>**échec** : en raison d’une erreur, le système n’a pas pu configurer l’environnement de test et a été désactivé.</li><li>**supprimé** : l’environnement de test a été désactivé manuellement.</li></ul> |
+| `name` | Le nom du sandbox. Cette propriété est utilisée à des fins de recherche dans les appels API. |
+| `title` | Le nom d’affichage du sandbox. |
+| `state` | L’état de traitement actuel du sandbox. Un sandbox peut avoir l’un des états suivants : <ul><li>**création** : le sandbox a été créé, mais le système continue de le configurer.</li><li>**actif** : le sandbox est créé et actif.</li><li>**échec** : en raison d’une erreur, le système n’a pas pu configurer le sandbox et a été désactivé.</li><li>**supprimé** : le sandbox a été désactivé manuellement.</li></ul> |
 | `type` | Type d’environnement de test. Les types d’environnements de test actuellement pris en charge sont les suivants : `development` et `production`. |
-| `isDefault` | Une propriété booléenne indiquant s’il s’agit de l’environnement de test par défaut de l’organisation. Il s’agit généralement de l’environnement de test de production. |
-| `eTag` | L’identifiant d’une version spécifique de l’environnement de test. Utilisée pour le contrôle des versions et une mise en cache efficace, cette valeur est mise à jour chaque fois que l’environnement de test est modifié. |
+| `isDefault` | Une propriété booléenne indiquant s’il s’agit du sandbox par défaut de l’organisation. Il s’agit généralement du sandbox de production. |
+| `eTag` | L’identifiant d’une version spécifique du sandbox. Utilisée pour le contrôle des versions et une mise en cache efficace, cette valeur est mise à jour chaque fois que le sandbox est modifié. |
 
-## Création d’un environnement de test {#create}
+## Création d’un sandbox {#create}
 
 >[!NOTE]
 >
->Lorsqu’une nouvelle sandbox est créée, vous devez d’abord l’ajouter à votre profil de produit dans [Adobe Admin Console](https://adminconsole.adobe.com/) avant de commencer à utiliser la nouvelle sandbox. Consultez la documentation relative à la [gestion des autorisations pour un profil de produit](../../access-control/ui/permissions.md) pour plus d’informations sur la configuration d’une sandbox en fonction d’un profil de produit.
+>Lorsqu’un nouveau sandbox est créé, vous devez d’abord l’ajouter à votre profil de produit dans [Adobe Admin Console](https://adminconsole.adobe.com/) avant de commencer à utiliser le nouveau sandbox. Consultez la documentation relative à la [gestion des autorisations pour un profil de produit](../../access-control/ui/permissions.md) pour plus d’informations sur la configuration d’un sandbox en fonction d’un profil de produit.
 
 Vous pouvez créer un environnement de test de développement ou de production en adressant une requête de POST à la variable `/sandboxes` point de terminaison .
 
@@ -227,13 +227,13 @@ curl -X POST \
 
 | Propriété | Description |
 | --- | --- |
-| `name` | Identifiant qui sera utilisé pour accéder à l’environnement de test lors de futures requêtes. Cette valeur doit être unique, et il est recommandé de la décrire le plus précisément possible. Cette valeur ne peut pas contenir d’espaces ni de caractères spéciaux. |
+| `name` | Identifiant qui sera utilisé pour accéder au sandbox lors de futures requêtes. Cette valeur doit être unique, et il est recommandé de la décrire le plus précisément possible. Cette valeur ne peut pas contenir d’espaces ni de caractères spéciaux. |
 | `title` | Nom compréhensible utilisé à des fins d’affichage dans l’interface utilisateur de Platform. |
-| `type` | Type d’environnement de test à créer. Pour un environnement de test hors production, cette valeur doit être `development`. |
+| `type` | Type de sandbox à créer. Pour un environnement de test hors production, cette valeur doit être `development`. |
 
 **Réponse**
 
-Une réponse réussie renvoie les détails du nouvel environnement de test, indiquant que son `state` est « création ».
+Une réponse réussie renvoie les détails du nouveau sandbox, indiquant que son `state` est « création ».
 
 ```json
 {
@@ -280,13 +280,13 @@ curl -X POST \
 
 | Propriété | Description |
 | --- | --- |
-| `name` | Identifiant qui sera utilisé pour accéder à l’environnement de test lors de futures requêtes. Cette valeur doit être unique, et il est recommandé de la décrire le plus précisément possible. Cette valeur ne peut pas contenir d’espaces ni de caractères spéciaux. |
+| `name` | Identifiant qui sera utilisé pour accéder au sandbox lors de futures requêtes. Cette valeur doit être unique, et il est recommandé de la décrire le plus précisément possible. Cette valeur ne peut pas contenir d’espaces ni de caractères spéciaux. |
 | `title` | Nom compréhensible utilisé à des fins d’affichage dans l’interface utilisateur de Platform. |
-| `type` | Type d’environnement de test à créer. Pour un environnement de test de production, cette valeur doit être `production`. |
+| `type` | Type de sandbox à créer. Pour un environnement de test de production, cette valeur doit être `production`. |
 
 **Réponse**
 
-Une réponse réussie renvoie les détails du nouvel environnement de test, indiquant que son `state` est « création ».
+Une réponse réussie renvoie les détails du nouveau sandbox, indiquant que son `state` est « création ».
 
 ```json
 {
@@ -302,13 +302,13 @@ Une réponse réussie renvoie les détails du nouvel environnement de test, indi
 >
 >Les environnements de test prennent environ 30 secondes pour être configurés par le système, après quoi leurs `state` deviendra &quot;principal&quot; ou &quot;échec&quot;.
 
-## Mise à jour d’un environnement de test {#put}
+## Mise à jour d’un sandbox {#put}
 
-Vous pouvez mettre à jour un ou plusieurs champs d’un environnement de test en effectuant une requête PATCH incluant le `name` de l’environnement de test dans le chemin de requête et la propriété à mettre à jour dans le payload de la requête.
+Vous pouvez mettre à jour un ou plusieurs champs d’un sandbox en effectuant une requête PATCH incluant le `name` du sandbox dans le chemin de requête et la propriété à mettre à jour dans le payload de la requête.
 
 >[!NOTE]
 >
->Actuellement, seule la propriété `title` d’un environnement de test peut être mise à jour.
+>Actuellement, seule la propriété `title` d’un sandbox peut être mise à jour.
 
 **Format d’API**
 
@@ -318,7 +318,7 @@ PATCH /sandboxes/{SANDBOX_NAME}
 
 | Paramètre | Description |
 | --- | --- |
-| `{SANDBOX_NAME}` | La propriété `name` de l’environnement de test que vous souhaitez mettre à jour. |
+| `{SANDBOX_NAME}` | La propriété `name` du sandbox que vous souhaitez mettre à jour. |
 
 **Requête**
 
@@ -338,7 +338,7 @@ curl -X PATCH \
 
 **Réponse**
 
-Une réponse réussie renvoie un état HTTP 200 (OK) avec les détails de l’environnement de test mis à jour.
+Une réponse réussie renvoie un état HTTP 200 (OK) avec les détails du sandbox mis à jour.
 
 ```json
 {
@@ -350,9 +350,9 @@ Une réponse réussie renvoie un état HTTP 200 (OK) avec les détails de l’e
 }
 ```
 
-## Réinitialiser une sandbox {#reset}
+## Réinitialisation d’un sandbox {#reset}
 
-Les environnements de test disposent d’une fonctionnalité de &quot;réinitialisation d’usine&quot; qui supprime toutes les ressources autres que les ressources par défaut d’un environnement de test. Vous pouvez réinitialiser un environnement de test en effectuant une requête PUT comprenant le `name` de l’environnement de test dans le chemin d’accès de la requête.
+Les environnements de test disposent d’une fonctionnalité de &quot;réinitialisation d’usine&quot; qui supprime toutes les ressources autres que les ressources par défaut d’un environnement de test. Vous pouvez réinitialiser un sandbox en effectuant une requête PUT comprenant le `name` du sandbox dans le chemin d’accès de la requête.
 
 **Format d’API**
 
@@ -362,7 +362,7 @@ PUT /sandboxes/{SANDBOX_NAME}
 
 | Paramètre | Description |
 | --- | --- |
-| `{SANDBOX_NAME}` | La propriété `name` de l’environnement de test que vous souhaitez réinitialiser. |
+| `{SANDBOX_NAME}` | La propriété `name` du sandbox que vous souhaitez réinitialiser. |
 | `validationOnly` | Paramètre facultatif qui vous permet d’effectuer une vérification avant vol sur l’opération de réinitialisation de l’environnement de test sans effectuer la requête réelle. Définissez ce paramètre sur `validationOnly=true` pour vérifier si l’environnement de test que vous êtes sur le point de réinitialiser contient des données Adobe Analytics, Adobe Audience Manager ou de partage de segments. |
 
 **Requête**
@@ -383,7 +383,7 @@ curl -X PUT \
 
 | Propriété | Description |
 | --- | --- |
-| `action` | Ce paramètre doit être fourni dans le payload de la requête avec une valeur « reset » pour réinitialiser l’environnement de test. |
+| `action` | Ce paramètre doit être fourni dans le payload de la requête avec une valeur « reset » pour réinitialiser le sandbox. |
 
 **Réponse**
 
@@ -391,7 +391,7 @@ curl -X PUT \
 >
 >Une fois qu’un environnement de test est réinitialisé, il faut compter environ 30 secondes pour qu’il soit configuré par le système.
 
-Une réponse réussie renvoie les détails de l’environnement de test mis à jour, indiquant que son `state` est « resetting ».
+Une réponse réussie renvoie les détails du sandbox mis à jour, indiquant que son `state` est « resetting ».
 
 ```json
 {
@@ -441,7 +441,7 @@ PUT /sandboxes/{SANDBOX_NAME}?ignoreWarnings=true
 
 | Paramètre | Description |
 | --- | --- |
-| `{SANDBOX_NAME}` | La propriété `name` de l’environnement de test que vous souhaitez réinitialiser. |
+| `{SANDBOX_NAME}` | La propriété `name` du sandbox que vous souhaitez réinitialiser. |
 | `ignoreWarnings` | Paramètre facultatif qui vous permet d’ignorer la vérification de validation et de forcer la réinitialisation d’un environnement de test de production utilisé pour le partage de segments bidirectionnel avec [!DNL Audience Manager] ou [!DNL Audience Core Service]. Ce paramètre ne peut pas être appliqué à un environnement de test de production par défaut. |
 
 **Requête**
@@ -462,7 +462,7 @@ curl -X PUT \
 
 **Réponse**
 
-Une réponse réussie renvoie les détails de l’environnement de test mis à jour, indiquant que son `state` est « resetting ».
+Une réponse réussie renvoie les détails du sandbox mis à jour, indiquant que son `state` est « resetting ».
 
 ```json
 {
@@ -475,17 +475,17 @@ Une réponse réussie renvoie les détails de l’environnement de test mis à j
 }
 ```
 
-## Supprimer une sandbox {#delete}
+## Suppression d’un sandbox {#delete}
 
 >[!IMPORTANT]
 >
 >L’environnement de test de production par défaut ne peut pas être supprimé.
 
-Vous pouvez supprimer un environnement de test en effectuant une requête DELETE qui inclut le `name` de l’environnement de test dans le chemin de la requête.
+Vous pouvez supprimer un sandbox en effectuant une requête DELETE qui inclut le `name` du sandbox dans le chemin de la requête.
 
 >[!NOTE]
 >
->L’appel de cette API met à jour la propriété `status` de l’environnement de test sur « supprimé » et la désactive. Les requêtes GET peuvent toujours récupérer les détails de l’environnement de test après sa suppression.
+>L’appel de cette API met à jour la propriété `status` du sandbox sur « supprimé » et la désactive. Les requêtes GET peuvent toujours récupérer les détails du sandbox après sa suppression.
 
 **Format d’API**
 
@@ -495,7 +495,7 @@ DELETE /sandboxes/{SANDBOX_NAME}
 
 | Paramètre | Description |
 | --- | --- |
-| `{SANDBOX_NAME}` | `name` de l’environnement de test que vous souhaitez supprimer. |
+| `{SANDBOX_NAME}` | `name` du sandbox que vous souhaitez supprimer. |
 | `validationOnly` | Paramètre facultatif qui vous permet de vérifier en amont l’opération de suppression de l’environnement de test sans effectuer la requête réelle. Définissez ce paramètre sur `validationOnly=true` pour vérifier si l’environnement de test que vous êtes sur le point de réinitialiser contient des données Adobe Analytics, Adobe Audience Manager ou de partage de segments. |
 | `ignoreWarnings` | Paramètre facultatif qui vous permet d’ignorer la vérification de validation et de forcer la suppression d’un environnement de test de production créé par l’utilisateur qui est utilisé pour le partage de segment bidirectionnel avec [!DNL Audience Manager] ou [!DNL Audience Core Service]. Ce paramètre ne peut pas être appliqué à un environnement de test de production par défaut. |
 
@@ -513,7 +513,7 @@ curl -X DELETE \
 
 **Réponse**
 
-Une réponse réussie renvoie les détails mis à jour de l’environnement de test, indiquant que son `state` est « supprimé ».
+Une réponse réussie renvoie les détails mis à jour du sandbox, indiquant que son `state` est « supprimé ».
 
 ```json
 {

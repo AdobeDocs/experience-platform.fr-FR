@@ -5,9 +5,9 @@ title: Ingestion de données dans un Experience Platform
 type: Tutorial
 description: Adobe Experience Platform vous permet d’importer facilement des données sous forme de fichiers par lots sous la forme de fichiers Parquet ou de données conformes à un schéma de modèle de données d’expérience (XDM) connu.
 exl-id: a4a7358d-b117-4d81-8cb0-3dbbfeccdcbd
-source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1322'
+source-wordcount: '1320'
 ht-degree: 56%
 
 ---
@@ -18,13 +18,13 @@ Adobe Experience Platform vous permet d’importer facilement des données dans 
 
 ## Prise en main
 
-Pour suivre ce tutoriel, vous devez avoir accès à [!DNL Experience Platform]. Si vous n’avez pas accès à une organisation IMS dans [!DNL Experience Platform], contactez votre administrateur système avant de continuer.
+Pour suivre ce tutoriel, vous devez avoir accès à [!DNL Experience Platform]. Si vous n’avez pas accès à une organisation dans [!DNL Experience Platform], contactez votre administrateur système avant de continuer.
 
 Si vous préférez ingérer des données à l’aide des API Data Ingestion, lisez d’abord le [guide de développement de l’ingestion par lots](../batch-ingestion/api-overview.md).
 
 ## Espace de travail des jeux de données
 
-L’espace de travail des jeux de données dans [!DNL Experience Platform] vous permet d’afficher et de gérer tous les jeux de données créés par votre organisation IMS, ainsi que d’en créer de nouveaux.
+L’espace de travail des jeux de données dans [!DNL Experience Platform] vous permet d’afficher et de gérer tous les jeux de données créés par votre organisation, ainsi que d’en créer de nouveaux.
 
 Affichez l’espace de travail des jeux de données en cliquant sur **[!UICONTROL Jeux de données]** dans le volet de navigation de gauche. L’espace de travail des jeux de données contient une liste de jeux de données, y compris des colonnes indiquant le nom, la date et l’heure de création, la source, le schéma et l’état du dernier lot, ainsi que la date et l’heure de la dernière mise à jour du jeu de données.
 

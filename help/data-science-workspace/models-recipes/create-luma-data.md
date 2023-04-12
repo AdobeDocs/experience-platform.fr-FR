@@ -5,16 +5,16 @@ title: Création de jeux de données et de schémas web Luma
 type: Tutorial
 description: Ce tutoriel vous fournit les prérequis et les ressources requis pour le modèle de propension aux démonstrations Luma.
 exl-id: a791e532-1116-4407-b745-fd6c2ac0d8f7
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '466'
+source-wordcount: '465'
 ht-degree: 2%
 
 ---
 
 # Création de schémas et de jeux de données de modèle de propension Luma
 
-Ce tutoriel vous fournit les prérequis et les ressources requis pour tous les autres [!DNL Adobe Experience Platform] [!DNL Data Science Workspace] tutoriels. Une fois l’opération terminée, vous et votre organisation IMS aurez accès aux schémas et jeux de données suivants.
+Ce tutoriel vous fournit les prérequis et les ressources requis pour tous les autres [!DNL Adobe Experience Platform] [!DNL Data Science Workspace] tutoriels. Une fois l’opération terminée, vous et votre organisation aurez accès aux schémas et jeux de données suivants.
 
 **Schémas:**
 
@@ -43,7 +43,7 @@ Le tutoriel suivant utilise un modèle personnalisé de propension à l’achat 
 
 ### Créez le schéma de données web Luma et ingérez les données.
 
-Pour créer un modèle, vous devez disposer d’un jeu de données dans Platform qui est utilisé pour entraîner et noter votre modèle. Le tutoriel vidéo suivant de la [Cours sur Data Science Workspace](https://experienceleague.adobe.com/?recommended=ExperiencePlatform-U-1-2021.1.dsw) vous guide tout au long des étapes nécessaires pour créer le schéma Luma et ingérer les données utilisées par le modèle de propension aux achats.
+Pour créer un modèle, vous devez disposer d’un jeu de données dans Platform qui est utilisé pour entraîner et noter votre modèle. Le tutoriel vidéo suivant de la [Cours sur Data Science Workspace](https://experienceleague.adobe.com/?recommended=ExperiencePlatform-U-1-2021.1.dsw&amp;lang=fr) vous guide tout au long des étapes nécessaires pour créer le schéma Luma et ingérer les données utilisées par le modèle de propension aux achats.
 
 >[!VIDEO](https://video.tv.adobe.com/v/333312)
 

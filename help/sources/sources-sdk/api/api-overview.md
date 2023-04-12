@@ -3,9 +3,9 @@ keywords: Experience Platform;accueil;rubriques populaires;sources;connecteurs;c
 title: Guide de l’API des sources en libre-service (SDK par lots)
 description: Ce document présente le processus de création d’une source, ainsi que les étapes de récupération, d’écriture et d’envoi d’une nouvelle spécification de connexion à l’aide de l’API Flow Service.
 exl-id: 7e827989-207b-41e2-84d6-5ecb754bebb6
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '488'
+source-wordcount: '487'
 ht-degree: 11%
 
 ---
@@ -22,7 +22,7 @@ Le [!DNL Flow Service] L’API fournit plusieurs points de terminaison qui vous 
 
 La première étape de la configuration d’une nouvelle source consiste à créer une spécification de connexion.
 
-Les spécifications de connexion renvoient les propriétés du connecteur d’une source. Elles incluent des spécifications d’authentification liées à la création des connexions de base et source, ainsi qu’un identifiant de spécification de connexion fixe affecté à une source particulière. Les spécifications de connexion sont indépendantes de l’organisation du client et IMS. Une spécification de connexion type contient des informations de base sur une source donnée, ainsi que trois sections distinctes : `authSpec`, `sourceSpec`, et `exploreSpec`.
+Les spécifications de connexion renvoient les propriétés du connecteur d’une source. Elles incluent des spécifications d’authentification liées à la création des connexions de base et source, ainsi qu’un identifiant de spécification de connexion fixe affecté à une source particulière. Les spécifications de connexion sont indépendantes du client et de l’organisation. Une spécification de connexion type contient des informations de base sur une source donnée, ainsi que trois sections distinctes : `authSpec`, `sourceSpec`, et `exploreSpec`.
 
 Pour obtenir des instructions détaillées, consultez le guide sur la [création d’une nouvelle spécification de connexion](./create.md). Pour plus d’informations sur les propriétés et les valeurs utilisées pour une spécification de connexion, y compris des détails sur la configuration de l’authentification, de la source et des spécifications d’exploration, voir la section [document des options de configuration](../config/config.md).
 

@@ -5,10 +5,10 @@ title: Évaluation et accès aux résultats des segments
 type: Tutorial
 description: Suivez ce tutoriel pour savoir comment évaluer les segments et accéder aux résultats des segments à l’aide de l’API Adobe Experience Platform Segmentation Service.
 exl-id: 47702819-f5f8-49a8-a35d-034ecac4dd98
-source-git-commit: 229dd08bc5d5dfab068db3be84ad20d10992fd31
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1608'
-ht-degree: 64%
+source-wordcount: '1607'
+ht-degree: 63%
 
 ---
 
@@ -55,7 +55,7 @@ Si vous n’avez pas encore terminé la variable [créer un segment à l’aide 
 
 ## Évaluation planifiée {#scheduled-evaluation}
 
-L’évaluation planifiée permet à votre organisation IMS de créer un planning récurrent pour exécuter automatiquement les tâches d’exportation.
+Grâce à l’évaluation planifiée, votre entreprise peut créer un planning récurrent pour exécuter automatiquement les tâches d’exportation.
 
 >[!NOTE]
 >

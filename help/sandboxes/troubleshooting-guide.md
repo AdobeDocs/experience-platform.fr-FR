@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Guide de dépannage des sandbox
 description: Ce document apporte des réponses aux questions fréquentes sur les sandbox dans Adobe Experience Platform.
 exl-id: 6a496509-a4e9-4e76-829b-32d67ccfcce6
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '857'
-ht-degree: 100%
+source-wordcount: '855'
+ht-degree: 95%
 
 ---
 
@@ -45,7 +45,7 @@ Les sandbox sont des partitions isolées d’une instance Platform unique pour l
 
 ## Quel est le sandbox de production par défaut ?
 
-Le sandbox de production par défaut est le premier sandbox de production créé lorsqu’une organisation IMS est configurée pour la première fois. Le sandbox de production par défaut vous permet d’ingérer ou d’utiliser des données de Platform, ainsi que d’accepter des requêtes qui n’incluent pas de valeurs pour un nom de sandbox ou un identifiant de sandbox. Le sandbox de production par défaut peut être réinitialisé, mais pas supprimé.
+L’environnement de test de production par défaut est le premier environnement de test de production créé lorsqu’une organisation est configurée pour la première fois. Le sandbox de production par défaut vous permet d’ingérer ou d’utiliser des données de Platform, ainsi que d’accepter des requêtes qui n’incluent pas de valeurs pour un nom de sandbox ou un identifiant de sandbox. Le sandbox de production par défaut peut être réinitialisé, mais pas supprimé.
 
 ## De combien de sandbox de production puis-je disposer ?
 
@@ -63,7 +63,7 @@ Vous pouvez mettre à jour le titre d’un sandbox de production. Cependant, un 
 
 ## De combien de sandbox de développement puis-je disposer ?
 
-Experience Platform autorise actuellement un maximum de 75 sandbox au total (de production et de développement) à être actifs au sein d’une seule organisation IMS.
+Experience Platform permet actuellement à un maximum de 75 environnements de test (production et développement) d’être principaux au sein d’une seule organisation.
 
 Les sandbox de développement prennent en charge les fonctionnalités de réinitialisation et de suppression.
 

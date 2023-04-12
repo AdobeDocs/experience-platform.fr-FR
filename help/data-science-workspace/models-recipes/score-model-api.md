@@ -5,10 +5,10 @@ title: Notation d’un modèle à l’aide de l’API d’apprentissage automati
 type: Tutorial
 description: Ce tutoriel vous explique comment tirer parti des API d’apprentissage automatique de Sensei pour créer une expérience et une exécution d’expérience.
 exl-id: 202c63b0-86d8-4a82-8ec8-d144a8911d08
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '554'
-ht-degree: 87%
+source-wordcount: '550'
+ht-degree: 78%
 
 ---
 
@@ -34,7 +34,7 @@ curl -X POST \
   -d '{JSON_PAYLOAD}'
 ```
 
-`{ORG_ID}` : vos informations d’identification d’organisation IMS, qui se trouvent dans votre intégration unique d’Adobe Experience Platform.\
+`{ORG_ID}`: Les informations d’identification de votre organisation se trouvent dans votre intégration Adobe Experience Platform unique.\
 `{ACCESS_TOKEN}` : votre valeur de jeton porteur spécifique fournie après l’authentification.\
 `{API_KEY}` : votre valeur clé d’API spécifique, qui se trouve dans votre intégration unique d’Adobe Experience Platform.\
 `{JSON_PAYLOAD}` : objet d’exécution d’expérience à envoyer. Voici l’exemple utilisé dans notre tutoriel :
@@ -122,7 +122,7 @@ curl -X POST \
   -d '{JSON_PAYLOAD}'
 ```
 
-`{ORG_ID}` : vos informations d’identification d’organisation IMS, qui se trouvent dans votre intégration unique d’Adobe Experience Platform.\
+`{ORG_ID}`: Les informations d’identification de votre organisation se trouvent dans votre intégration Adobe Experience Platform unique.\
 `{ACCESS_TOKEN}` : votre valeur de jeton porteur spécifique fournie après l’authentification.\
 `{API_KEY}` : votre valeur clé d’API spécifique, qui se trouve dans votre intégration unique d’Adobe Experience Platform.\
 `{EXPERIMENT_ID}` : identifiant qui correspond à l’expérience que vous souhaitez cibler. Vous pouvez le trouver dans la réponse lors de la création de votre expérience.\
@@ -187,7 +187,7 @@ curl -X GET \
 
 `{EXPERIMENT_ID}` : identifiant qui correspond à l’expérience sous laquelle se trouve l’exécution.\
 `{ACCESS_TOKEN}` : votre valeur de jeton porteur spécifique fournie après l’authentification.\
-`{ORG_ID}` : vos informations d’identification d’organisation IMS, qui se trouvent dans votre intégration unique d’Adobe Experience Platform.
+`{ORG_ID}`: Les informations d’identification de votre organisation se trouvent dans votre intégration Adobe Experience Platform unique.
 
 Puisqu’il existe plusieurs exécutions d’expérience pour une expérience spécifique, la réponse renvoyée comporte un tableau d’identifiant d’exécution.
 
@@ -230,7 +230,7 @@ curl -X DELETE \
 
 `{EXPERIMENT_ID}` : identifiant qui correspond à l’expérience.\
 `{ACCESS_TOKEN}` : votre valeur de jeton porteur spécifique fournie après l’authentification.\
-`{ORG_ID}` : vos informations d’identification d’organisation IMS, qui se trouvent dans votre intégration unique d’Adobe Experience Platform.
+`{ORG_ID}`: Les informations d’identification de votre organisation se trouvent dans votre intégration Adobe Experience Platform unique.
 
 >[!NOTE]
 >

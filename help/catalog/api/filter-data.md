@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Filtrage des données du catalogue à l’aide des paramètres de requête
 description: L’API Catalog Service permet de filtrer les données de réponse à l’aide de paramètres de requête de demande. En ce qui concerne le catalogue, l’une des bonnes pratiques consiste à utiliser des filtres dans tous les appels API, réduisant ainsi la charge de l’API et contribuant à améliorer les performances globales.
 exl-id: 0cdb5a7e-527b-46be-9ad8-5337c8dc72b7
-source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '2121'
+source-wordcount: '2120'
 ht-degree: 87%
 
 ---
@@ -206,7 +206,7 @@ Certains objets Catalog prennent en charge l’utilisation d’un attribut `tags
 Quelques limites doivent être prises en compte lors de l’utilisation de balises :
 
 * Les seuls objets Catalog qui prennent actuellement en charge les balises sont les jeux de données, les lots et les connexions.
-* Les noms de balise sont propres à votre organisation IMS.
+* Les noms de balise sont propres à votre organisation.
 * Les processus Adobe peuvent se servir de balises pour certains comportements. Le préfixe standard « adobe » est ajouté au nom de ces balises. Par conséquent, vous devriez éviter cette pratique lors de la déclaration des noms de balise.
 * Les noms de balise suivants sont réservés à l’ensemble de [!DNL Experience Platform], et ne peuvent donc pas être déclarés comme nom de balise pour votre organisation :
    * `unifiedProfile` : ce nom de balise est réservé à l’ingestion des jeux de données par [[!DNL Real-Time Customer Profile]](../../profile/home.md).

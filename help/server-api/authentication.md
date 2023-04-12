@@ -2,16 +2,16 @@
 title: Authentification
 description: Découvrez comment configurer l’authentification pour l’API Adobe Experience Platform Edge Network Server.
 exl-id: 73c7a186-9b85-43fe-a586-4c6260b6fa8c
-source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '638'
+source-wordcount: '637'
 ht-degree: 19%
 
 ---
 
 # Authentification {#authentication}
 
-## Présentation
+## Aperçu
 
 Le [!DNL Edge Network Server API] gère à la fois la collecte de données authentifiées et non authentifiées, en fonction de la source des événements et du domaine de collecte de l’API.
 
@@ -32,11 +32,11 @@ Appels API provenant d’un serveur privé sur `server.adobedc.net` doit toujour
 
 Avant d’effectuer des appels à la fonction [!DNL Server API], assurez-vous de respecter les conditions préalables suivantes :
 
-* Vous disposez d’un compte de l’organisation IMS ayant accès à Adobe Experience Platform.
+* Vous disposez d’un compte d’organisation ayant accès à Adobe Experience Platform.
 * Votre compte d’Experience Platform a la variable `developer` et `user` rôles activés pour le profil de produit de l’API Adobe Experience Platform. Contactez votre [Admin Console](../access-control/home.md) pour activer ces rôles pour votre compte.
 * Vous avez une Adobe ID. Si vous ne possédez pas d’Adobe ID, accédez à la [Console Adobe Developer](https://developer.adobe.com/console) et créez un compte.
 
-## Collecte des informations d’identification {#credentials}
+## Collectez les informations d’identification de . {#credentials}
 
 Pour lancer des appels aux API Platform, vous devez d’abord suivre le [tutoriel sur l’authentification](../landing/api-authentication.md). Le tutoriel sur l’authentification indique les valeurs de chacun des en-têtes requis dans tous les appels API Experience Platform, comme illustré ci-dessous :
 
@@ -44,13 +44,13 @@ Pour lancer des appels aux API Platform, vous devez d’abord suivre le [tutorie
 * x-api-key : `{API_KEY}`
 * x-gw-ims-org-id: `{ORG_ID}`
 
-Les ressources d’Experience Platform peuvent être isolées dans des environnements de test virtuels spécifiques. Dans les requêtes aux API Platform, vous pouvez spécifier le nom et l’identifiant de l’environnement de test dans lequel l’opération aura lieu. Il s’agit de paramètres facultatifs.
+Les ressources d’Experience Platform peuvent être isolées dans des sandbox virtuels spécifiques. Dans les requêtes aux API Platform, vous pouvez spécifier le nom et l’identifiant du sandbox dans lequel l’opération aura lieu. Il s’agit de paramètres facultatifs.
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Pour plus d’informations sur les environnements de test dans Experience Platform, consultez la [documentation de présentation des environnements de test](../sandboxes/home.md).
+>Pour plus d’informations sur les sandbox dans Experience Platform, consultez la [documentation de présentation des sandbox](../sandboxes/home.md).
 
 Toutes les requêtes qui contiennent un payload (POST, PUT, PATCH) nécessitent un en-tête de type de média supplémentaire :
 
@@ -65,7 +65,7 @@ Pour configurer les autorisations d’écriture de jeux de données, accédez au
 
 ## Dépannage des erreurs d’autorisation {#troubleshooting-authorization}
 
-| Code erreur | Message d’erreur | Description |
+| Code d’erreur | Message d’erreur | Description |
 | --- | --- | --- |
 | `EXEG-0500-401` | Jeton d’autorisation non valide | Ce message d&#39;erreur s&#39;affiche dans l&#39;une des situations suivantes :  <ul><li>Le `authorization` valeur d’en-tête manquante.</li><li>Le `authorization` La valeur d’en-tête n’inclut pas la valeur requise `Bearer` jeton.</li><li>Le format du jeton d’autorisation fourni n’est pas valide.</li><li>Le flux de données nécessite une authentification, mais les en-têtes requis ne sont pas présents dans la requête.</li></ul> |
 | `EXEG-0501-401` | Jeton d’autorisation d’utilisateur non valide | Ce message d&#39;erreur s&#39;affiche dans l&#39;une des situations suivantes : <ul><li>L’appel API n’a pas le paramètre requis `x-user-token` en-tête .</li><li>Le format du jeton utilisateur fourni n’est pas valide.</li></ul> |

@@ -5,9 +5,9 @@ title: Création d’un flux de données en flux continu pour les données brute
 type: Tutorial
 description: Ce tutoriel décrit les étapes à suivre pour récupérer des données en continu et les introduire dans Platform à l’aide des connecteurs source et des API.
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1099'
+source-wordcount: '1098'
 ht-degree: 55%
 
 ---
@@ -25,7 +25,7 @@ Ce tutoriel nécessite une compréhension du fonctionnement des composants suiva
    - [Guide du développeur de Schema Registry](../../../../xdm/api/getting-started.md) : inclut des informations importantes à connaître avant dʼeffectuer des appels vers l’API Schema Registry. Cela inclut votre `{TENANT_ID}`, le concept de « conteneurs » et les en-têtes requis pour effectuer des requêtes (avec une attention particulière à l’en-tête Accept et à ses valeurs possibles).
 - [[!DNL Catalog Service]](../../../../catalog/home.md) : Catalogue constitue le système d’enregistrement de l’emplacement et de la liaison des données dans Experience Platform.
 - [[!DNL Streaming ingestion]](../../../../ingestion/streaming-ingestion/overview.md): L’ingestion par flux pour Platform fournit aux utilisateurs une méthode pour envoyer en temps réel des données de périphériques côté client et côté serveur vers Experience Platform.
-- [Sandbox](../../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuelles qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
+- [Sandbox](../../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
 
 ### Utiliser les API Platform
 
@@ -204,7 +204,7 @@ Une réponse réussie renvoie un tableau contenant l’identifiant du jeu de don
 
 ## Créer une connexion cible {#target-connection}
 
-Les connexions Target créent et gèrent une connexion de destination à Platform ou à tout emplacement où les données transférées arriveront. Les connexions Target contiennent des informations concernant la destination des données, le format des données et l’identifiant de connexion cible requis pour créer un flux de données. Les instances de connexion Target sont spécifiques à une organisation client et IMS.
+Les connexions Target créent et gèrent une connexion de destination à Platform ou à tout emplacement où les données transférées arriveront. Les connexions Target contiennent des informations concernant la destination des données, le format des données et l’identifiant de connexion cible requis pour créer un flux de données. Les instances de connexion à Target sont spécifiques à un client et à une organisation.
 
 Pour créer une connexion cible, envoyez une requête de POST au `/targetConnections` point d’entrée du [!DNL Flow Service] API. Dans le cadre de la requête, vous devez fournir le format de données, la variable `dataSetId` récupéré à l’étape précédente et l’identifiant de spécification de connexion fixe lié à [!DNL Data Lake]. Cet identifiant est `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
@@ -486,5 +486,5 @@ Une réponse réussie renvoie l’identifiant (`id`) du flux de données nouvell
 
 En suivant ce tutoriel, vous avez créé un flux de données pour collecter des données en continu à partir de votre connecteur de diffusion en continu. Ces données entrantes peuvent désormais être utilisées par les services de Platform en aval, comme [!DNL Real-Time Customer Profile] et [!DNL Data Science Workspace]. Consultez les documents suivants pour plus d’informations :
 
-- [Présentation de Real-Time Customer Profile](../../../../profile/home.md)
-- [Présentation de Data Science Workspace](../../../../data-science-workspace/home.md)
+- [Vue d’ensemble de Real-Time Customer Profile](../../../../profile/home.md)
+- [Présentation de l’espace de travail de science des données](../../../../data-science-workspace/home.md)

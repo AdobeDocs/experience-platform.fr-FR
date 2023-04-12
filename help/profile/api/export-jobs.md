@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;profil;profil client en temps réel;dépannage;API
+keywords: Experience Platform;profil;real-time customer profile;dépannage;API
 title: Point de terminaison de l’API des tâches d’exportation de profils
 type: Documentation
 description: Real-Time Customer Profile vous permet de créer une vue unique de clients individuels dans Adobe Experience Platform en rassemblant des données provenant de plusieurs sources, y compris des données d’attributs et des données comportementales. Les données de profil peuvent ensuite être exportées vers un jeu de données en vue d’un traitement ultérieur.
 exl-id: d51b1d1c-ae17-4945-b045-4001e4942b67
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1519'
-ht-degree: 61%
+source-wordcount: '1517'
+ht-degree: 59%
 
 ---
 
@@ -180,7 +180,7 @@ Une réponse réussie renvoie un jeu de données contenant les données Profile,
 
 ## Liste de toutes les tâches d’exportation
 
-Vous pouvez renvoyer une liste de toutes les tâches d’exportation pour une organisation IMS particulière en effectuant une requête GET sur le point de terminaison `export/jobs`. La requête prend également en charge les paramètres de requête `limit` et `offset`, comme illustré ci-dessous.
+Vous pouvez renvoyer une liste de toutes les tâches d’exportation pour une organisation spécifique en adressant une requête de GET à la fonction `export/jobs` point de terminaison . La requête prend également en charge les paramètres de requête `limit` et `offset`, comme illustré ci-dessous.
 
 **Format d’API**
 
@@ -209,7 +209,7 @@ curl -X GET \
 
 **Réponse**
 
-La réponse comprend un objet `records` contenant les tâches d’exportation créées par votre organisation IMS.
+La réponse comprend une `records` contenant les tâches d’exportation créées par votre organisation.
 
 ```json
 {

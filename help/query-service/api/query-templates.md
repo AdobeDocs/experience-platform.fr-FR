@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Point de terminaison de l’API de modèles de requête
 description: Ce guide décrit les différents appels d’API de modèle de requête que vous pouvez effectuer à l’aide de l’API Query Service.
 exl-id: 14cd7907-73d2-478f-8992-da3bdf08eacc
-source-git-commit: ee6a54aeba4ddfeb98ee5e11283c299f00969a53
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '894'
-ht-degree: 65%
+source-wordcount: '890'
+ht-degree: 61%
 
 ---
 
@@ -21,7 +21,7 @@ Voir [Documentation sur les modèles de requête d’interface utilisateur](../u
 
 ### Récupération d’une liste de modèles de requête
 
-Vous pouvez récupérer une liste de tous les modèles de requête pour votre organisation IMS en effectuant une requête GET sur le point de terminaison `/query-templates`.
+Vous pouvez récupérer une liste de tous les modèles de requête pour votre organisation en adressant une requête de GET à la fonction `/query-templates` point de terminaison .
 
 **Format d’API**
 
@@ -47,7 +47,7 @@ Vous trouverez ci-dessous une liste des paramètres de requête disponibles pour
 
 **Requête**
 
-La requête suivante récupère le dernier modèle de requête créé pour votre organisation IMS.
+La requête suivante récupère le dernier modèle de requête créé pour votre organisation 
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/query/query-templates?limit=1
@@ -59,7 +59,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/query-templates?limi
 
 **Réponse**
 
-Une réponse réussie renvoie un état HTTP 200 avec une liste de modèles de requête pour l’organisation IMS spécifiée. La réponse suivante renvoie le dernier modèle de requête créé pour votre organisation IMS.
+Une réponse réussie renvoie un état HTTP 200 avec une liste de modèles de requête pour l’organisation spécifiée. La réponse suivante renvoie le dernier modèle de requête créé pour votre organisation 
 
 ```json
 {

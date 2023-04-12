@@ -3,10 +3,10 @@ keywords: RTCDP;CDP;Édition B2B;Real-time Customer Data Platform;plateforme de 
 title: Présentation de l’édition B2B de Real-Time CDP
 description: Présentation du compte de l’édition B2B de Real-Time Customer Data Platform
 exl-id: 9b45bba4-fc46-4d69-b36a-5cb91f316612
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1084'
-ht-degree: 60%
+source-wordcount: '1082'
+ht-degree: 58%
 
 ---
 
@@ -57,7 +57,7 @@ Lorsqu’il est implémenté correctement, le système permet de suivre les util
 
 ## Sources B2B
 
-Platform permet d’ingérer des données à partir de sources externes tout en vous permettant de structurer, de libeller et d’améliorer les données entrantes à l’aide des services de Platform. La source [!DNL Marketo] vous permet de diffuser des données B2B en continu dans Platform et de maintenir ces données à jour à l’aide d’applications connectées à Platform. Elle prend en charge un nombre illimité d’instances [!DNL Marketo] (ce qui est avantageux pour les grandes entreprises ayant de multiples instances) et effectue une extraction vers une seule organisation IMS, où les données sont fusionnées.
+Platform permet d’ingérer des données à partir de sources externes tout en vous permettant de structurer, de libeller et d’améliorer les données entrantes à l’aide des services de Platform. La source [!DNL Marketo] vous permet de diffuser des données B2B en continu dans Platform et de maintenir ces données à jour à l’aide d’applications connectées à Platform. Il prend en charge un certain nombre d’instances de [!DNL Marketo] (ce qui est bénéfique pour les grandes entreprises comptant plusieurs instances) et s’insère dans une seule organisation où les données sont fusionnées.
 
 >[!NOTE]
 >
@@ -75,7 +75,7 @@ Pour les entreprises disposant de plusieurs CRM, l’édition B2B de Real-Time C
 
 ## Étapes suivantes
 
-Maintenant que vous comprenez mieux les avantages offerts aux marketeurs par l’édition B2B de Real-Time CDP et les différences entre cette dernière et Real-Time CDP, vous pouvez découvrir comment appliquer ces fonctionnalités à votre propre organisation IMS.
+Maintenant que vous comprenez mieux les avantages offerts aux marketeurs par l’édition B2B de Real-Time CDP et les différences entre cette dernière et Real-Time CDP, vous pouvez découvrir comment appliquer ces fonctionnalités à votre propre organisation.
 
 Pour comprendre comment Real-Time CDP B2B Edition peut bénéficier à votre modèle de service business-to-business, consultez la documentation suivante pour vous aider à démarrer :
 

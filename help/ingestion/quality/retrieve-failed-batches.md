@@ -5,10 +5,10 @@ title: Récupération de lots en échec à l’aide de l’API Data Access
 type: Tutorial
 description: Ce tutoriel décrit les étapes à suivre pour récupérer des informations sur un lot en échec à l’aide des API Data Ingestion.
 exl-id: 5fb9f28d-091e-4124-8d8e-b8a675938d3a
-source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '647'
-ht-degree: 83%
+source-wordcount: '645'
+ht-degree: 80%
 
 ---
 
@@ -37,13 +37,13 @@ Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [
 - `x-api-key: {API_KEY}`
 - `x-gw-ims-org-id: {ORG_ID}`
 
-Toutes les ressources dans [!DNL Experience Platform], y compris ceux appartenant à la variable [!DNL Schema Registry], sont isolés dans des environnements de test virtuels spécifiques. Toutes les requêtes envoyées aux API [!DNL Platform] nécessitent un en-tête spécifiant le nom de l’environnement de test dans lequel l’opération sera effectuée :
+Toutes les ressources dans [!DNL Experience Platform], y compris ceux appartenant à la variable [!DNL Schema Registry], sont isolés dans des environnements de test virtuels spécifiques. Toutes les requêtes envoyées aux API [!DNL Platform] nécessitent un en-tête spécifiant le nom du sandbox dans lequel l’opération sera effectuée :
 
 - `x-sandbox-name: {SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Pour plus d’informations sur les environnements de test dans [!DNL Platform], consultez la [documentation de présentation des environnements de test](../../sandboxes/home.md).
+>Pour plus d’informations sur les sandbox dans [!DNL Platform], consultez la [documentation de présentation des sandbox](../../sandboxes/home.md).
 
 Toutes les requêtes contenant un payload (POST, PUT, PATCH) requièrent un en-tête supplémentaire :
 
@@ -194,9 +194,9 @@ Cette section contient des informations sur d’autres types d’erreurs d’ing
 
 Comme l’erreur d’horodatage de l’exemple précédent, ces erreurs sont dues à un XDM mal formaté. Ces messages d’erreur varient selon la nature du problème. Par conséquent, aucun exemple d’erreur spécifique ne peut être affiché.
 
-### Identifiant d’organisation IMS absent ou non valide
+### ID d’organisation absent ou non valide
 
-Cette erreur s’affiche si l’identifiant d’organisation IMS est absent du payload ou n’est pas valide.
+Cette erreur s’affiche si l’ID d’organisation est absent de la charge utile n’est pas valide.
 
 ```json
 {

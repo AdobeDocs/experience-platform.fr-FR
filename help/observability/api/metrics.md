@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Point de terminaison de l’API de mesures
 description: Découvrez comment récupérer les mesures d’observabilité dans Experience Platform à l’aide de l’API Observability Insights.
 exl-id: 08d416f0-305a-44e2-a2b7-d563b2bdd2d2
-source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1409'
-ht-degree: 29%
+source-wordcount: '1384'
+ht-degree: 26%
 
 ---
 
@@ -86,7 +86,7 @@ curl -X POST \
 | `aggregator` | Spécifie la fonction d’agrégation qui doit être utilisée pour regrouper plusieurs enregistrements de série temporelle en résultats uniques. Pour plus d&#39;informations sur les agrégateurs disponibles, reportez-vous à la section [Documentation OpenTSDB](https://docs.w3cub.com/opentsdb/user_guide/query/aggregators). |
 | `downsample` | Champ facultatif qui vous permet de spécifier une fonction d’agrégation afin de réduire le taux d’échantillonnage des données de mesure en triant les champs en intervalles (ou &quot;intervalles&quot;). L’intervalle du sous-échantillonnage est déterminé par la variable `granularity` . Pour plus d’informations sur le sous-échantillonnage, reportez-vous à la section [Documentation OpenTSDB](https://docs.w3cub.com/opentsdb/user_guide/query/aggregators). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Réponse**
 
@@ -180,7 +180,7 @@ Une réponse réussie renvoie les points de données résultants pour les mesure
 | `groupBy` | Si plusieurs jeux de données ont été spécifiés dans la variable `filter` pour une mesure et la propriété `groupBy` a été définie sur true dans la requête, cet objet contiendra l’identifiant du jeu de données correspondant. `dps` s’applique à .<br><br>Si cet objet apparaît vide dans la réponse, la variable `dps` s’applique à tous les jeux de données fournis dans la variable `filters` tableau (ou tous les jeux de données dans [!DNL Platform] si aucun filtre n’a été fourni). |
 | `dps` | Les données renvoyées pour la mesure, le filtre et la période donnés. Chaque clé de cet objet représente un horodatage avec une valeur correspondante pour la mesure spécifiée. La période entre chaque point de données dépend de la variable `granularity` valeur spécifiée dans la requête. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Annexe
 
@@ -211,7 +211,7 @@ Le tableau suivant décrit les mesures pour Adobe Experience Platform [!DNL Da
 | **timeseries.data.collection.inlet.success** | Nombre total d’appels HTTP réussis à un inlet de données ou tous les inlets de données. | Inlet ID |
 | **timeseries.data.collection.inlet.failure** | Nombre total d’appels HTTP échoués à un inlet de données ou tous les inlets de données. | Inlet ID |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 #### [!DNL Identity Service] {#identity}
 
@@ -223,11 +223,11 @@ Le tableau suivant décrit les mesures pour Adobe Experience Platform [!DNL Id
 | timeseries.identity.dataset.recordfailed.count | Nombre d’enregistrements échoués par [!DNL Identity Service], pour un jeu de données ou tous les jeux de données. | Identifiant du jeu de données |
 | timeseries.identity.dataset.namespacecode.recordfailed.count | Nombre d’enregistrements d’identité échoués par un espace de noms. | Identifiant d’espace de noms (**obligatoire**) |
 | timeseries.identity.dataset.namespacecode.recordskipped.count | Nombre d’enregistrements d’identité ignorés par un espace de noms. | Identifiant d’espace de noms (**obligatoire**) |
-| timeseries.identity.graph.imsorg.uniqueidentities.count | Nombre d’identités uniques stockées dans le graphique d’identités de votre organisation IMS. | N/A |
+| timeseries.identity.graph.imsorg.uniqueidentities.count | Nombre d’identités uniques stockées dans le graphique d’identités de votre organisation. | N/A |
 | timeseries.identity.graph.imsorg.namespacecode.uniqueidentities.count | Nombre d’identités uniques stockées dans le graphique d’identités pour un espace de noms. | Identifiant d’espace de noms (**obligatoire**) |
-| timeseries.identity.graph.imsorg.graphstrength.uniqueidentities.count | Nombre d’identités uniques stockées dans le graphique d’identités de votre organisation IMS pour une force de graphique spécifique (« inconnu », « faible » ou « fort »). | Force de graphique (**obligatoire**) |
+| timeseries.identity.graph.imsorg.graphstrength.uniqueidentities.count | Nombre d’identités uniques stockées dans le graphique d’identités de votre organisation pour une force de graphique spécifique (&quot;inconnu&quot;, &quot;faible&quot; ou &quot;fort&quot;). | Force de graphique (**obligatoire**) |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 #### [!DNL Real-Time Customer Profile] {#profile}
 
@@ -239,7 +239,7 @@ Le tableau suivant décrit les mesures pour [!DNL Real-Time Customer Profile].
 | timeseries.profiles.dataset.recordsuccess.count | Nombre d’enregistrements écrits dans leur source de données par [!DNL Profile], pour un jeu de données ou tous les jeux de données. | Identifiant du jeu de données |
 | timeseries.profiles.dataset.batchsuccess.count | Nombre [!DNL Profile] lots ingérés pour un jeu de données ou tous les jeux de données. | Identifiant du jeu de données |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Messages d’erreur
 
@@ -272,18 +272,18 @@ Réponses de la `/metrics` endpoint peut renvoyer des messages d’erreur sous c
 | Propriété | Description |
 | --- | --- |
 | `title` | Chaîne contenant le message d’erreur et la raison potentielle pour laquelle il s’est produit. |
-| `report` | Contient des informations contextuelles sur l’erreur, y compris l’environnement de test et l’organisation IMS utilisés dans l’opération qui l’a déclenchée. |
+| `report` | Contient des informations contextuelles sur l’erreur, y compris l’environnement de test et l’organisation utilisés dans l’opération qui l’a déclenchée. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Le tableau suivant répertorie les différents codes d’erreur qui peuvent être renvoyés par l’API :
 
-| Code erreur | Titre | Description |
+| Code d’erreur | Titre | Description |
 | --- | --- | --- |
 | `INSGHT-1000-400` | Charge utile de requête incorrecte | Un problème s’est produit avec le payload de la requête. Assurez-vous que la mise en forme de la payload correspond exactement à celle affichée. [above](#v2). L’une des raisons possibles peut déclencher cette erreur :<ul><li>Champs obligatoires manquants, tels que `aggregator`</li><li>Mesures non valides</li><li>La requête contient un agrégateur non valide</li><li>Une date de début a lieu après une date de fin</li></ul> |
 | `INSGHT-1001-400` | Échec de la requête des mesures | Une erreur s’est produite lors de la tentative d’interrogation de la base de données de mesures, en raison d’une mauvaise requête ou de l’impossibilité d’analyser la requête elle-même. Assurez-vous que votre requête est correctement formatée avant de réessayer. |
 | `INSGHT-1001-500` | Échec de la requête des mesures | Une erreur s’est produite lors de la tentative d’interrogation de la base de données de mesures, en raison d’une erreur du serveur. Essayez à nouveau la demande. Si le problème persiste, contactez le support Adobe. |
 | `INSGHT-1002-500` | Erreur de service | La demande n’a pas pu être traitée en raison d’une erreur interne. Essayez à nouveau la demande. Si le problème persiste, contactez le support Adobe. |
-| `INSGHT-1003-401` | Erreur de validation des environnements de test | La requête n’a pas pu être traitée en raison d’une erreur de validation de sandbox. Assurez-vous que le nom de l’environnement de test que vous avez fourni dans la variable `x-sandbox-name` L’en-tête représente un environnement de test valide et activé pour votre organisation IMS avant de réessayer la requête. |
+| `INSGHT-1003-401` | Erreur de validation des environnements de test | La requête n’a pas pu être traitée en raison d’une erreur de validation de sandbox. Assurez-vous que le nom de l’environnement de test que vous avez fourni dans la variable `x-sandbox-name` L’en-tête représente un environnement de test valide et activé pour votre organisation avant de réessayer la requête. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

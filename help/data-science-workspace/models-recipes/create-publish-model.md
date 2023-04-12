@@ -5,10 +5,10 @@ title: Création et publication d’un modèle d’apprentissage automatique
 type: Tutorial
 description: Le guide suivant décrit les étapes requises pour créer et publier un modèle d’apprentissage automatique.
 exl-id: f71e5a17-9952-411e-8e6a-aab46bc4c006
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '1076'
-ht-degree: 12%
+source-wordcount: '1074'
+ht-degree: 10%
 
 ---
 
@@ -21,7 +21,7 @@ Le guide suivant décrit les étapes requises pour créer et publier un modèle 
 
 Avant de commencer ce tutoriel, vous devez disposer des éléments suivants :
 
-- Accès à [!DNL Adobe Experience Platform]. Si vous n’avez pas accès à une organisation IMS dans [!DNL Experience Platform], contactez votre administrateur système avant de continuer.
+- Accès à [!DNL Adobe Experience Platform]. Si vous n’avez pas accès à une organisation dans [!DNL Experience Platform], contactez votre administrateur système avant de continuer.
 
 - Tous les tutoriels Data Science Workspace utilisent le modèle de propension Luma. Pour suivre cette procédure, vous devez avoir créé la variable [Schémas et jeux de données de modèle de propension Luma](./create-luma-data.md).
 
@@ -73,13 +73,13 @@ Pour en savoir plus sur la création d’un modèle à l’aide de l’interface
 
 L’étape suivante de la création et de la publication d’un modèle consiste à rendre opérationnel votre modèle afin de recueillir et d’exploiter les insights du lac de données et de Real-Time Customer Profile.
 
-La notation dans Data Science Workspace peut être réalisée en alimentant un modèle formé existant avec des données d’entrée. Les résultats de la notation sont ensuite stockés et consultables dans un jeu de données de sortie spécifié sous la forme d’un nouveau lot.
+La notation dans Data Science Workspace peut être obtenue en alimentant les données d’entrée dans un modèle formé existant. Les résultats de la notation sont ensuite stockés et consultables dans un jeu de données de sortie spécifié sous la forme d’un nouveau lot.
 
 Pour savoir comment noter votre modèle, consultez la note d’un modèle. [Tutoriel sur l’interface utilisateur](./score-model-ui.md) ou [Tutoriel sur l’API](./score-model-api.md).
 
 ## Publication d’un modèle noté en tant que service
 
-Data Science Workspace vous permet de publier votre modèle formé en tant que service. Cela permet aux utilisateurs de votre organisation IMS de noter des données sans avoir à créer leurs propres modèles.
+Data Science Workspace vous permet de publier votre modèle formé en tant que service. Cela permet aux utilisateurs de votre entreprise de noter des données sans avoir à créer leurs propres modèles.
 
 Pour savoir comment publier un modèle en tant que service, rendez-vous sur la page [Tutoriel sur l’interface utilisateur](./publish-model-service-ui.md) ou [Tutoriel sur l’API](./publish-model-service-api.md).
 

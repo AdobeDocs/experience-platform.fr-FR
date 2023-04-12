@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: October, 2020
 author: crhoades, ens28527
 exl-id: 89f5e2bd-8892-4d3f-a3fe-5433bb5ece7a
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1016'
+source-wordcount: '1015'
 ht-degree: 26%
 
 ---
@@ -41,7 +41,7 @@ Adobe Experience Platform vous permet d’offrir aux clients des expériences 
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
-| Ajout d’API d’aperçu de profil | API d’aperçu de profil (`/previewsamplestatus`) permet désormais d’afficher la ventilation du nombre total de fragments de profil dans votre organisation IMS, ainsi que la distribution des fragments de profil entre les espaces de noms d’identité. |
+| Ajout d’API d’aperçu de profil | API d’aperçu de profil (`/previewsamplestatus`) offre désormais la possibilité d’afficher une ventilation du nombre total de fragments de profil dans votre organisation, ainsi que d’afficher la distribution des fragments de profil entre les espaces de noms d’identité. |
 | Mises à jour des vues des schémas d’union | Dans l’interface utilisateur de l’Experience Platform, les utilisateurs peuvent trouver plus facilement des informations concernant tous les schémas et jeux de données contribuant au schéma d’union, ainsi que des attributs de clé de surface tels que les champs d’identité et de relation. Ces mises à jour améliorent la possibilité de dépanner et de valider que les profils sont correctement configurés, que les identités sont correctement regroupées et que les données ont été ingérées avec succès. |
 
 Pour plus d’informations sur [!DNL Real-Time Customer Profile], y compris des tutoriels et des bonnes pratiques pour travailler avec [!DNL Profile] data, veuillez lire la [Présentation de Real-Time Customer Profile](../../profile/home.md).

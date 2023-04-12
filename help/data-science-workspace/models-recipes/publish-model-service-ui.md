@@ -3,22 +3,22 @@ keywords: Experience Platform;publier un modèle;Data Science Workspace;rubrique
 solution: Experience Platform
 title: Publication d’un modèle en tant que service dans l’interface utilisateur de Data Science Workspace
 type: Tutorial
-description: L’espace de travail de science des données d’Adobe Experience Platform vous permet de publier un modèle formé et noté en tant que service et permet ainsi aux utilisateurs de votre organisation IMS de noter des données sans avoir besoin de créer leurs propres modèles.
+description: Adobe Experience Platform Data Science Workspace vous permet de publier votre modèle formé et évalué en tant que service, ce qui permet aux utilisateurs de votre organisation de noter des données sans avoir à créer leurs propres modèles.
 exl-id: ebbec1b1-20d3-43b5-82d3-89c79757625a
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '502'
-ht-degree: 50%
+source-wordcount: '499'
+ht-degree: 36%
 
 ---
 
 # Publication d’un modèle en tant que service dans l’interface utilisateur de Data Science Workspace
 
-L’espace de travail de science des données d’Adobe Experience Platform vous permet de publier un modèle formé et noté en tant que service et permet ainsi aux utilisateurs de votre organisation IMS de noter des données sans avoir besoin de créer leurs propres modèles.
+Adobe Experience Platform Data Science Workspace vous permet de publier votre modèle formé et évalué en tant que service, ce qui permet aux utilisateurs de votre organisation de noter des données sans avoir à créer leurs propres modèles.
 
 ## Prise en main
 
-Pour suivre ce tutoriel, vous devez avoir accès à [!DNL Experience Platform]. Si vous n’avez pas accès à une organisation IMS dans [!DNL Experience Platform], contactez votre administrateur système avant de continuer.
+Pour suivre ce tutoriel, vous devez avoir accès à [!DNL Experience Platform]. Si vous n’avez pas accès à une organisation dans [!DNL Experience Platform], contactez votre administrateur système avant de continuer.
 
 Ce tutoriel nécessite un modèle existant avec une opération de formation réussie. Si vous ne disposez pas d’un modèle publiable, suivez le tutoriel [Formation et notation d’un modèle dans l’interface utilisateur](./train-evaluate-model-ui.md) avant de poursuivre.
 

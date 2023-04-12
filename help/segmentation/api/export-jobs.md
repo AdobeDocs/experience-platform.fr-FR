@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Point de terminaison de l’API des tâches d’exportation de segments
 description: Les tâches d’exportation sont des processus asynchrones utilisés pour conserver les membres du segment d’audience dans des jeux de données. Vous pouvez utiliser le point de terminaison /export/jobs dans l’API Adobe Experience Platform Segmentation Service, qui vous permet de récupérer, créer et annuler des tâches d’exportation par programmation.
 exl-id: 5b504a4d-291a-4969-93df-c23ff5994553
-source-git-commit: d28cebaf4b9fe5c35240e28653e99424db08d9d2
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1631'
-ht-degree: 36%
+source-wordcount: '1629'
+ht-degree: 35%
 
 ---
 
@@ -25,7 +25,7 @@ Les points d’entrée d’API utilisés dans ce guide font partie de l’[!DNL 
 
 ## Récupération d’une liste de tâches d’exportation {#retrieve-list}
 
-Vous pouvez récupérer une liste de toutes les tâches d’exportation pour votre organisation IMS en effectuant une requête GET sur le point de terminaison `/export/jobs`.
+Vous pouvez récupérer une liste de toutes les tâches d’exportation pour votre organisation en adressant une requête de GET à la fonction `/export/jobs` point de terminaison .
 
 **Format d’API**
 
@@ -46,7 +46,7 @@ GET /export/jobs?status={STATUS}
 
 **Requête**
 
-La requête suivante récupère les deux dernières tâches d’exportation au sein de votre organisation IMS.
+La requête suivante récupère les deux dernières tâches d’exportation au sein de votre organisation.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/export/jobs?limit=2 \

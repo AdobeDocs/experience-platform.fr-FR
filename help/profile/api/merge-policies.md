@@ -4,10 +4,10 @@ title: Point de terminaison de l’API de stratégies de fusion
 type: Documentation
 description: Adobe Experience Platform permet de rassembler des données issues de plusieurs sources et de les combiner pour obtenir une vue complète de chacun de vos clients. Lorsque vous rassemblez ces données, les stratégies de fusion sont les règles utilisées par Platform pour déterminer la priorité des données et les données qui seront combinées pour créer une vue unifiée.
 exl-id: fb49977d-d5ca-4de9-b185-a5ac1d504970
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '2472'
-ht-degree: 71%
+source-wordcount: '2468'
+ht-degree: 68%
 
 ---
 
@@ -27,7 +27,7 @@ Le point d’entrée dʼAPI utilisé dans ce guide fait partie de [[!DNL Real-Ti
 
 ## Composants des stratégies de fusion {#components-of-merge-policies}
 
-Les stratégies de fusion sont réservées à votre organisation IMS, ce qui vous permet de créer différentes stratégies afin de fusionner les schémas selon vos besoins. Toute API accédant à [!DNL Profile] Les données nécessitent une stratégie de fusion, bien qu’une stratégie par défaut soit utilisée si elles ne sont pas explicitement fournies. [!DNL Platform] fournit aux organisations une stratégie de fusion par défaut, ou vous pouvez créer une stratégie de fusion pour une classe de schéma de modèle de données d’expérience (XDM) spécifique et la marquer comme stratégie par défaut pour votre organisation.
+Les stratégies de fusion sont réservées à votre organisation, ce qui vous permet de créer différentes stratégies pour fusionner les schémas de la manière spécifique dont vous avez besoin. Toute API accédant à [!DNL Profile] Les données nécessitent une stratégie de fusion, bien qu’une stratégie par défaut soit utilisée si elles ne sont pas explicitement fournies. [!DNL Platform] fournit aux organisations une stratégie de fusion par défaut, ou vous pouvez créer une stratégie de fusion pour une classe de schéma de modèle de données d’expérience (XDM) spécifique et la marquer comme stratégie par défaut pour votre organisation.
 
 Bien que chaque organisation puisse avoir plusieurs stratégies de fusion par classe de schéma, chaque classe ne peut avoir qu’une seule stratégie de fusion par défaut. Tout jeu de stratégies de fusion comme valeur par défaut sera utilisé lorsque le nom de la classe de schéma est fourni et qu’une stratégie de fusion est requise, mais pas fournie.
 
@@ -37,7 +37,7 @@ Bien que chaque organisation puisse avoir plusieurs stratégies de fusion par cl
 
 Pour garantir que tous les consommateurs de profils utilisent la même vue sur les bords, les stratégies de fusion peuvent être marquées comme Active-on-Edge (actives sur le bord). Pour qu’un segment soit Active-On-Edge (actif sur le bord) (marqué comme un segment de bord), il doit être lié à une stratégie de fusion marquée comme Active-on-Edge (active sur le bord). Si un segment n’est **pas** lié à une stratégie de fusion marquée comme Active-On-Edge (active sur le bord), le segment ne sera pas marqué comme Active-On-Edge (actif sur le bord), et sera marqué comme un segment en continu.
 
-En outre, chaque organisation IMS ne peut avoir qu’une **seule** stratégie de fusion Active-On-Edge (active sur le bord). Si une stratégie de fusion est principale sur Edge, elle peut être utilisée pour d’autres systèmes sur Edge, tels que Edge Profile, Edge Segmentation et Destinations on Edge.
+En outre, chaque organisation ne peut avoir que **one** stratégie de fusion principale en périphérie. Si une stratégie de fusion est principale sur Edge, elle peut être utilisée pour d’autres systèmes sur Edge, tels que Edge Profile, Edge Segmentation et Destinations on Edge.
 
 ### Objet de stratégie de fusion complet
 
@@ -193,7 +193,7 @@ Pour en savoir plus sur XDM et l’utilisation des schémas en Experience Platfo
 
 ## Accès aux stratégies de fusion {#access-merge-policies}
 
-En utilisant la variable [!DNL Real-Time Customer Profile] API, `/config/mergePolicies` Le point de terminaison vous permet d’effectuer une requête de recherche pour afficher une stratégie de fusion spécifique selon son identifiant ou d’accéder à toutes les stratégies de fusion de votre organisation IMS, filtrées selon des critères spécifiques. Vous pouvez également utiliser la variable `/config/mergePolicies/bulk-get` point de terminaison pour récupérer plusieurs stratégies de fusion à l’aide de leurs identifiants. Les étapes d’exécution de chacun de ces appels sont décrites dans les sections suivantes.
+En utilisant la variable [!DNL Real-Time Customer Profile] API, `/config/mergePolicies` Le point de terminaison vous permet d’effectuer une requête de recherche pour afficher une stratégie de fusion spécifique selon son identifiant ou d’accéder à toutes les stratégies de fusion de votre organisation, filtrées selon des critères spécifiques. Vous pouvez également utiliser la variable `/config/mergePolicies/bulk-get` point de terminaison pour récupérer plusieurs stratégies de fusion à l’aide de leurs identifiants. Les étapes d’exécution de chacun de ces appels sont décrites dans les sections suivantes.
 
 ### Accès à une stratégie de fusion unique par identifiant
 
@@ -347,7 +347,7 @@ Pour en savoir plus sur chacun des éléments qui constituent une stratégie de 
 
 ### Répertorier plusieurs stratégies de fusion par critère
 
-Vous pouvez répertorier plusieurs stratégies de fusion au sein de votre organisation IMS en envoyant une requête GET au point de terminaison `/config/mergePolicies` et en utilisant des paramètres de requête facultatifs pour filtrer, classer et paginer la réponse. Plusieurs paramètres peuvent être inclus et séparés par des esperluettes (&amp;). Un appel à ce point de terminaison sans paramètre permet de récupérer toutes les stratégies de fusion disponibles pour votre organisation.
+Vous pouvez répertorier plusieurs stratégies de fusion au sein de votre organisation en envoyant une requête de GET à la variable `/config/mergePolicies` et à l’aide de paramètres de requête facultatifs pour filtrer, classer et paginer la réponse. Plusieurs paramètres peuvent être inclus et séparés par des esperluettes (&amp;). Un appel à ce point de terminaison sans paramètre permet de récupérer toutes les stratégies de fusion disponibles pour votre organisation.
 
 **Format d’API**
 

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Point de terminaison de l’API Schedules
 description: Les planifications sont un outil qui peut être utilisé pour exécuter automatiquement des tâches de segmentation par lots une fois par jour.
 exl-id: 92477add-2e7d-4d7b-bd81-47d340998ff1
-source-git-commit: e24a2ba0321ebaa8e91f96477f58bfa4915f47ce
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '2011'
+source-wordcount: '2009'
 ht-degree: 23%
 
 ---
@@ -52,7 +52,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/config/schedules?limit=10 \
 
 **Réponse**
 
-Une réponse réussie renvoie un état HTTP 200 avec une liste de plannings pour l’organisation IMS spécifiée en tant que JSON.
+Une réponse réussie renvoie un état HTTP 200 avec une liste de plannings pour l’organisation spécifiée en tant que JSON.
 
 >[!NOTE]
 >
@@ -274,7 +274,7 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/config/schedules/4e538382-
 | Propriété | Description |
 | -------- | ----------- |
 | `path` | Chemin d’accès de la valeur que vous souhaitez mettre à jour. Dans ce cas, puisque vous mettez à jour l’état du planning, vous devez définir la valeur de `path` à &quot;/state&quot;. |
-| `value` | Valeur mise à jour de l’état du planning. Cette valeur peut être définie sur &quot;principal&quot; ou &quot;inactif&quot; pour activer ou désactiver le planning. Veuillez noter que vous **cannot** désactivez une planification si l’organisation IMS a été activée pour la diffusion en continu. |
+| `value` | Valeur mise à jour de l’état du planning. Cette valeur peut être définie sur &quot;principal&quot; ou &quot;inactif&quot; pour activer ou désactiver le planning. Veuillez noter que vous **cannot** désactivez une planification si l’organisation a été activée pour la diffusion en continu. |
 
 **Réponse**
 
