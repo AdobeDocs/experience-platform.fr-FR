@@ -2,9 +2,10 @@
 title: Extension Conversions améliorées de Google Ads
 description: Découvrez l’extension Conversions améliorées de Google Ads pour le transfert d’événement dans Adobe Experience Platform.
 exl-id: 65cdff40-276f-4481-9621-6c6861dbd412
-source-git-commit: bfbad3c11df64526627e4ce2d766b527df678bca
+last-substantial-update: 2022-11-23T00:00:00Z
+source-git-commit: 1c417744518a7ac7cfb9c65d6af8219dcbc70d46
 workflow-type: tm+mt
-source-wordcount: '1314'
+source-wordcount: '1311'
 ht-degree: 1%
 
 ---
@@ -59,7 +60,7 @@ La boîte de dialogue d’installation s’affiche. À partir de là, sélection
 | Identifiant de compte | Votre [!DNL Google Ads] ID de compte. Pour rechercher cette valeur, connectez-vous à [!DNL Google Ads] et accédez à : **[!DNL Tools and Settings]** > **[!DNL Conversions]** > **[!DNL Select a conversion action]** > **[!DNL Tag Setup]** > **[!DNL Install the Tag yourself]**. La chaîne d’identifiant de compte se trouve dans la fenêtre de fragment de code qui commence par `AW-` ou `d`. |
 | Produit | Sélectionner **[!UICONTROL Publicités Google (AdWords)]**. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Lorsque vous avez terminé, sélectionnez **[!UICONTROL Ajouter un compte]**, puis sélectionnez **[!UICONTROL Enregistrer]**.
 
@@ -119,7 +120,7 @@ De nouveaux contrôles s’affichent dans le panneau de droite qui vous permette
 
 | Entrée | Description |
 | --- | --- |
-| Client Identifiant | Votre [!DNL Google Ads] ID de client. La valeur par défaut est l’ID de client que vous avez saisi lors de la [installation de l’extension](#install-enhanced-conversions). |
+| Identifiant client | Votre [!DNL Google Ads] ID de client. La valeur par défaut est l’ID de client que vous avez saisi lors de la [installation de l’extension](#install-enhanced-conversions). |
 | Identifiant de conversion ou libellé de conversion | Valeurs de suivi obtenues à partir de [!DNL Google Ads] lors de la configuration du suivi des conversions. Les valeurs commencent par `AW-`.<br><br>Pour plus d’informations sur la manière de trouver ces valeurs, reportez-vous à la section [[!DNL Google Ads] documentation](https://support.google.com/tagmanager/answer/6105160?hl=en). |
 | Identifiant de transaction | Sélectionnez un élément de données ayant la même valeur d’ID de transaction que celle qui est [envoyé du côté client](#conversion-action-tags) en utilisant la variable [!DNL Google Global Site Tag] extension . |
 

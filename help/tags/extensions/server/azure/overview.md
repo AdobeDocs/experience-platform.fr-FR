@@ -2,10 +2,11 @@
 title: Présentation de l’extension Microsoft Azure
 description: Découvrez l’extension Microsoft Azure pour le transfert d’événement dans Adobe Experience Platform.
 exl-id: 2337d99d-861e-44e7-94ed-ba21ef28d815
-source-git-commit: f6c11fadc0d8019044fbdd2923af00ce18ce39e1
+last-substantial-update: 2022-11-23T00:00:00Z
+source-git-commit: 1c417744518a7ac7cfb9c65d6af8219dcbc70d46
 workflow-type: tm+mt
-source-wordcount: '937'
-ht-degree: 7%
+source-wordcount: '931'
+ht-degree: 6%
 
 ---
 
@@ -23,7 +24,7 @@ Le [!DNL Microsoft Azure] [transfert d’événement](../../../ui/event-forward
 
 Pour utiliser cette extension, vous devez disposer d’un [!DNL Azure] compte avec accès à [!DNL Event Hubs]. Vous devez également [créez un hub d’événements à l’aide de la fonction [!DNL Azure] Portail](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-create) avant de suivre les étapes ci-dessous.
 
-## Installer l’extension
+## Installation l’extension
 
 Pour installer Microsoft [!DNL Azure] , accédez à l’interface utilisateur de la collecte de données ou à l’interface utilisateur Experience Platform et sélectionnez **[!UICONTROL Transfert d’événement]** dans le volet de navigation de gauche. À partir de là, sélectionnez une propriété à laquelle ajouter l’extension ou créez une propriété à la place.
 
@@ -53,7 +54,7 @@ Le panneau de droite se met à jour afin d’afficher les options de configurati
 | [!UICONTROL Clé d’accès SAS] | La clé Principale de la règle d’autorisation d’accès partagé pour l’ensemble de votre [!DNL Event Hubs] ou l’instance de hub d’événements spécifique à laquelle vous souhaitez envoyer des données. Voir la section de l’annexe sur [Obtention des valeurs d’autorisation SAS](#sas) pour plus d’informations. |
 | [!UICONTROL ID de partition] | [!DNL Event Hubs] vous permet de [envoyer des événements directement à des partitions spécifiques ;](https://learn.microsoft.com/en-us/azure/architecture/reference-architectures/event-hubs/partitioning-in-event-hubs-and-kafka). Pour tirer parti de cette fonctionnalité, fournissez l’identifiant de la partition que vous souhaitez recevoir les événements. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Data** (Données)
 
@@ -61,7 +62,7 @@ Le panneau de droite se met à jour afin d’afficher les options de configurati
 | --- | --- |
 | [!UICONTROL Payload] | Ce champ contient les données qui seront transférées à la variable [!DNL Event Hubs]. Les données peuvent être un objet JSON, une chaîne ou un élément de données. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Lorsque vous avez terminé, sélectionnez **[!UICONTROL Conserver les modifications]** pour ajouter l’action à la configuration de la règle. Lorsque la règle vous satisfait, sélectionnez **[!UICONTROL Enregistrer dans la bibliothèque]**.
 

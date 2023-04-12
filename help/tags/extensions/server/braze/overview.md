@@ -2,7 +2,8 @@
 keywords: extension de transfert d’événement;ventilation;extension de transfert d’événement de ventilation
 title: Extension de transfert d’événement de braze
 description: Cette extension de transfert d’événement Adobe Experience Platform envoie les événements Adobe Experience Edge Network à Brand.
-source-git-commit: 6815b5eb0426efd1dde901db1e8b86e86615530a
+last-substantial-update: 2023-03-29T00:00:00Z
+source-git-commit: 1c417744518a7ac7cfb9c65d6af8219dcbc70d46
 workflow-type: tm+mt
 source-wordcount: '1863'
 ht-degree: 6%

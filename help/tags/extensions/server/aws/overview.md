@@ -2,10 +2,11 @@
 title: Présentation de l’extension AWS
 description: Découvrez l’extension AWS pour le transfert d’événement dans Adobe Experience Platform.
 exl-id: 826a96aa-2d64-4a8b-88cf-34a0b6c26df5
-source-git-commit: b4ff3dbc9c62dceefdf2b842cafa65132dde41fc
+last-substantial-update: 2022-11-23T00:00:00Z
+source-git-commit: 1c417744518a7ac7cfb9c65d6af8219dcbc70d46
 workflow-type: tm+mt
-source-wordcount: '847'
-ht-degree: 8%
+source-wordcount: '841'
+ht-degree: 7%
 
 ---
 
@@ -59,7 +60,7 @@ Le panneau de droite se met à jour afin d’afficher les options de configurati
 | [!UICONTROL Région AWS] | Le [!DNL AWS] région dans laquelle la variable [!DNL Kinesis] le flux de données est créé. |
 | [!UICONTROL Clé de partition] | Le [clé de partition](https://docs.aws.amazon.com/streams/latest/dev/key-concepts.html#partition-key) que l’extension utilisera lors de l’envoi de données au flux de données.<br><br>[!DNL Kinesis Data Streams] sépare les enregistrements de données appartenant à un flux en plusieurs éclats. Elle utilise la clé de partition envoyée avec chaque enregistrement de données pour déterminer à quel partage appartient un enregistrement de données donné.<br><br>Une bonne clé de partition pour distribuer les clients peut être le numéro de client, car il est différent pour chaque client. Une mauvaise clé de partition peut leur code postal car ils peuvent tous se trouver dans la même zone à proximité. En règle générale, vous devez choisir une clé de partition ayant la plus grande plage de valeurs potentielles différentes. Voir [!DNL AWS] article sur [effectuez une mise à l’échelle [!DNL Kinesis] flux de données](https://aws.amazon.com/blogs/big-data/under-the-hood-scaling-your-kinesis-data-streams/) pour connaître les bonnes pratiques en matière de gestion des clés de partition. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **[!UICONTROL Data]** (Données)
 
@@ -67,7 +68,7 @@ Le panneau de droite se met à jour afin d’afficher les options de configurati
 | --- | --- |
 | [!UICONTROL Payload] | Ce champ contient les données qui seront transférées à la variable [!DNL Kinesis] flux de données, au format JSON.<br><br>Sous , **[!UICONTROL Brut]** , vous pouvez coller l’objet JSON directement dans le champ de texte fourni ou sélectionner l’icône d’élément de données (![Icône Jeu de données](../../../images/extensions/server/aws/data-element-icon.png)) pour effectuer une sélection dans une liste d’éléments de données existants afin de représenter la charge utile.<br><br>Vous pouvez également utiliser la variable **[!UICONTROL Éditeur de paires clé-valeur JSON]** pour ajouter manuellement chaque paire clé-valeur par le biais d’un éditeur d’interface utilisateur. Chaque valeur peut être représentée par une entrée brute ou un élément de données peut être sélectionné à la place. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Lorsque vous avez terminé, sélectionnez **[!UICONTROL Conserver les modifications]** pour ajouter l’action à la configuration de la règle. Lorsque la règle vous satisfait, sélectionnez **[!UICONTROL Enregistrer dans la bibliothèque]**.
 
