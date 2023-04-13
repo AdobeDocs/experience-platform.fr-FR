@@ -2,7 +2,7 @@
 title: Référence des extensions de transfert d’événement
 description: Recherchez la documentation pour les extensions de transfert d’événement dans Adobe Experience Platform.
 exl-id: e7b42241-b41c-4d12-8551-4df14e3c9b74
-source-git-commit: 30ac89d9af3e1d69c464650879d239a8c3edb525
+source-git-commit: e0c1b4e2cc7444ab97d0eae6ff4f3455b0017d4a
 workflow-type: tm+mt
 source-wordcount: '165'
 ht-degree: 50%
@@ -14,6 +14,13 @@ ht-degree: 50%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+
+<div id="recs-overview-body-1"></div>
+<div id="recs-overview-body-2"></div>
+<div id="recs-overview-body-3"></div>
+<div id="recs-overview-body-4"></div>
+<div id="recs-overview-body-5"></div>
+<div id="recs-overview-body-6"></div>
 
 Vous trouverez ci-dessous une liste de la documentation relative aux extensions de transfert d’événement côté serveur. Pour obtenir la liste des extensions côté client disponibles, voir [référence des extensions de balise](../client/overview.md) au lieu de .
 
