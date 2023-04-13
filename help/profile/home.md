@@ -3,9 +3,9 @@ keywords: Experience Platform;profil;profil client en temps réel;dépannage;AP
 title: Vue d’ensemble de Real-Time Customer Profile
 description: Le profil client en temps réel fusionne des données provenant de diverses sources et permet d’accéder à ces données sous la forme de profils clients individuels et d’événements de séries temporelles associés. Cette fonctionnalité permet aux spécialistes marketing d’offrir à leur audience des expériences coordonnées, cohérentes et pertinentes sur plusieurs canaux.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: 737a67b7e30f770d65751b1a924d8378af8bde52
+source-git-commit: 8f61840ad60b7d24c980b218b6f742485f5ebfdd
 workflow-type: tm+mt
-source-wordcount: '2098'
+source-wordcount: '1991'
 ht-degree: 100%
 
 ---
@@ -90,13 +90,13 @@ L’une des fonctionnalités clés du [!DNL Real-Time Customer Profile] est la p
 
 Pour en savoir plus sur les schémas d’union, notamment sur la façon d’y accéder dans l’interface utilisateur, consultez le [guide de l’interface utilisateur des schémas d’union](ui/union-schema.md).
 
-### (Alpha) Attributs calculés
+<!-- ### (Alpha) Computed attributes
 
 >[!IMPORTANT]
 >
->La fonctionnalité d’attributs calculés est en version Alpha. La documentation et la fonctionnalité peuvent changer.
+>Computed attribute functionality is in alpha. The documentation and functionality are subject to change.
 
-Les attributs calculés sont des fonctions utilisées pour regrouper des données au niveau de l’événement en attributs au niveau du profil. Ces fonctions sont automatiquement calculées afin de pouvoir être utilisées au niveau de la segmentation, de l’activation et de la personnalisation. Ces calculs vous aident à répondre facilement aux questions liées à des éléments tels que la valeur d’achat de durée de vie, le temps écoulé entre les achats ou le nombre d’ouvertures de l’application, sans que vous ayez à effectuer manuellement des calculs complexes chaque fois que ces informations sont nécessaires. Pour plus d’informations sur les attributs calculés, notamment la présentation du rôle qu’ils jouent dans Adobe Experience Platform, consultez tout d’abord la [présentation des attributs calculés](computed-attributes/overview.md).
+Computed attributes are functions used to aggregate event-level data into profile-level attributes. These functions are automatically computed so that they can be used across segmentation, activation, and personalization. These computations help you to easily answer questions related to things like lifetime purchase value, time between purchases, or number of application opens, without requiring you to manually perform complex calculations each time the information is needed. For more information on computed attributes, including understanding the role computed attributes play within Adobe Experience Platform, please begin by reading the [computed attributes overview](computed-attributes/overview.md). -->
 
 ## Profils et segments
 
