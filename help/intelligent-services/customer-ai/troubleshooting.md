@@ -6,8 +6,8 @@ title: Dépannage des erreurs de l’IA dédiée aux clients
 description: Trouvez des réponses aux erreurs courantes de l’IA dédiée aux clients.
 type: Documentation
 exl-id: 37ff4e85-da92-41ca-afd4-b7f3555ebd43
-source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
-workflow-type: ht
+source-git-commit: 3bc750b5e1cf47cbca6b037d099936c80c926cf8
+workflow-type: tm+mt
 source-wordcount: '529'
 ht-degree: 100%
 
@@ -48,7 +48,7 @@ Si vous recevez l’erreur « [!UICONTROL La qualité du modèle est médiocre.
 Commencez par vérifier l’exactitude de vos données. Il est important que vos données contiennent les champs nécessaires à votre résultat prédictif.
 
 - Vérifiez si votre jeu de données comporte les dates les plus récentes. L’IA dédiée aux clients suppose toujours que les données sont à jour lorsque le modèle est déclenché.
-- Recherchez les données manquantes dans la fenêtre de prédiction et d’éligibilité que vous avez définie. Vos données doivent être complètes sans oubli. Assurez-vous également que votre jeu de données respecte les [exigences en matière de données historiques de l’IA dédiée aux clients](./input-output.md#data-requirements).
+- Recherchez les données manquantes dans la fenêtre de prédiction et d’éligibilité que vous avez définie. Vos données doivent être complètes sans oubli. Assurez-vous également que votre jeu de données respecte les [exigences en matière de données historiques de l’IA dédiée aux clients](./data-requirements.md#data-requirements).
 - Recherchez les données manquantes dans les propriétés de champ de schéma dans le commerce, l’application, le web et la recherche.
 
 Si vos données ne semblent pas poser problème, essayez de modifier la condition de la population d’éligibilité pour restreindre le modèle à certains profils (par exemple, `_experience.analytics.customDimensions.eVars.eVar142` existe dans les 56 derniers jours). Cela limite la population et la taille des données utilisées dans la fenêtre d’entraînement.

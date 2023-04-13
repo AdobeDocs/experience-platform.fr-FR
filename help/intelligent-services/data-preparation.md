@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Préparation des données à utiliser dans les services intelligents
 description: Pour que les services intelligents découvrent des informations à partir de vos données d’événements marketing, les données doivent être enrichies sémantiquement et conservées dans une structure standard. Pour ce faire, les services intelligents utilisent des schémas de modèle de données d’expérience (XDM).
 exl-id: 17bd7cc0-da86-4600-8290-cd07bdd5d262
-source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
+source-git-commit: 87a8ad253abb219662034652b5f8c4fabfa40484
 workflow-type: tm+mt
 source-wordcount: '2936'
 ht-degree: 2%
@@ -23,7 +23,7 @@ Ce document fournit des conseils généraux sur le mappage de vos données d’�
 
 Par exemple, si vous utilisez Customer AI pour prédire la propension à acheter un produit, le modèle de Customer AI nécessite à la fois des exemples de parcours d’achat réussis et des exemples de chemins d’accès infructueux. En effet, pendant la formation du modèle, Customer AI cherche à comprendre les événements et les parcours qui conduisent à un achat. Cela inclut également les actions entreprises par les clients qui n’ont pas effectué d’achat, par exemple une personne qui a arrêté son parcours lors de l’ajout d’un article au panier. Ces clients peuvent avoir des comportements similaires, mais Customer AI peut fournir des informations et analyser les principales différences et facteurs qui mènent à un score de propension plus élevé. De même, Attribution AI nécessite à la fois des types d’événements et de parcours afin d’afficher des mesures telles que l’efficacité des points de contact, les chemins de conversion principaux et les ventilations par position de point de contact.
 
-Pour obtenir des exemples et des informations sur les exigences en matière de données historiques, consultez la page [Customer AI](./customer-ai/input-output.md#data-requirements) ou [Attribution AI](./attribution-ai/input-output.md#data-requirements) la section sur les exigences en matière de données historiques dans la documentation d’entrée/sortie.
+Pour obtenir des exemples et des informations sur les exigences en matière de données historiques, consultez la page [Customer AI](./customer-ai/data-requirements.md#data-requirements) ou [Attribution AI](./attribution-ai/input-output.md#data-requirements) la section sur les exigences en matière de données historiques dans la documentation d’entrée/sortie.
 
 ### Instructions relatives à l’assemblage de données
 
@@ -39,7 +39,7 @@ Le processus de préparation varie selon que vos données sont stockées dans Ad
 
 Si vos données sont stockées en dehors de l’Experience Platform, vous devez les mapper aux champs requis et pertinents d’une [Schéma ExperienceEvent des clients](#cee-schema). Ce schéma peut être complété avec des groupes de champs personnalisés pour mieux capturer les données de vos clients. Une fois le mappage effectué, vous pouvez créer un jeu de données à l’aide de votre schéma ExperienceEvent dédié aux consommateurs. [ingérer vos données dans Platform](../ingestion/home.md). Le jeu de données CEE peut ensuite être sélectionné lors de la configuration d’un [!DNL Intelligent Service].
 
-Selon le [!DNL Intelligent Service] Si vous souhaitez utiliser , différents champs peuvent être requis. Notez qu’il est recommandé d’ajouter des données à un champ si les données sont disponibles. Pour en savoir plus sur les champs requis, consultez la page [Attribution AI](./attribution-ai/input-output.md) ou [Customer AI](./customer-ai/input-output.md) guide d’entrée/de sortie.
+Selon le [!DNL Intelligent Service] Si vous souhaitez utiliser , différents champs peuvent être requis. Notez qu’il est recommandé d’ajouter des données à un champ si les données sont disponibles. Pour en savoir plus sur les champs requis, consultez la page [Attribution AI](./attribution-ai/input-output.md) ou [Customer AI](./customer-ai/data-requirements.md) guide sur les exigences en matière de données.
 
 ### Préparation des données Adobe Analytics {#analytics-data}
 
@@ -65,7 +65,7 @@ GROUP BY channel.typeAtSource
 
 >[!IMPORTANT]
 >
->Le connecteur Adobe Analytics met jusqu’à quatre semaines pour renvoyer les données. Si vous avez récemment configuré une connexion, vous devez vérifier que le jeu de données contient la longueur minimale de données requise pour le client ou Attribution AI. Consultez les sections Données historiques dans [Customer AI](./customer-ai/input-output.md#data-requirements) ou [Attribution AI](./attribution-ai/input-output.md#data-requirements)et vérifiez que vous disposez de suffisamment de données pour votre objectif de prédiction.
+>Le connecteur Adobe Analytics met jusqu’à quatre semaines pour renvoyer les données. Si vous avez récemment configuré une connexion, vous devez vérifier que le jeu de données contient la longueur minimale de données requise pour le client ou Attribution AI. Consultez les sections Données historiques dans [Customer AI](./customer-ai/data-requirements.md#data-requirements) ou [Attribution AI](./attribution-ai/input-output.md#data-requirements)et vérifiez que vous disposez de suffisamment de données pour votre objectif de prédiction.
 
 ### Préparation des données Adobe Audience Manager (Customer AI uniquement) {#AAM-data}
 
@@ -75,7 +75,7 @@ Une fois que le connecteur source diffuse vos données dans Experience Platform,
 
 >[!IMPORTANT]
 >
->Si vous avez récemment configuré un connecteur, vous devez vérifier que le jeu de données possède la longueur minimale de données requise. Consultez la section des données historiques dans la [documentation d’entrée/sortie](./customer-ai/input-output.md) pour Customer AI et vérifiez que vous disposez de suffisamment de données pour votre objectif de prédiction.
+>Si vous avez récemment configuré un connecteur, vous devez vérifier que le jeu de données possède la longueur minimale de données requise. Consultez la section des données historiques dans la [documentation d’entrée/sortie](./customer-ai/data-requirements.md) pour Customer AI et vérifiez que vous disposez de suffisamment de données pour votre objectif de prédiction.
 
 ### [!DNL Experience Platform] préparation des données
 
@@ -144,7 +144,7 @@ Dans le **[!UICONTROL Propriétés du champ]** , faites défiler l’écran vers
 
 ![Case à cocher](./images/data-preparation/set_primary_identity.png)
 
-Ensuite, vous devez fournir un **[!UICONTROL Espace de noms d’identité]** dans la liste des espaces de noms prédéfinis dans la liste déroulante. Dans cet exemple, l’espace de noms ECID est sélectionné depuis un Adobe Audience Manager ID. `mcid.id` est en cours d’utilisation. Sélectionner **[!UICONTROL Appliquer]** pour confirmer les mises à jour, puis sélectionnez **[!UICONTROL Enregistrer]** dans le coin supérieur droit pour enregistrer les modifications apportées à votre schéma.
+Ensuite, vous devez fournir un **[!UICONTROL Espace de noms d’identité]** à partir des espaces de noms prédéfinis dans la liste déroulante. Dans cet exemple, l’espace de noms ECID est sélectionné depuis un Adobe Audience Manager ID. `mcid.id` est en cours d’utilisation. Sélectionner **[!UICONTROL Appliquer]** pour confirmer les mises à jour, puis sélectionnez **[!UICONTROL Enregistrer]** dans le coin supérieur droit pour enregistrer les modifications apportées à votre schéma.
 
 ![Enregistrez les modifications](./images/data-preparation/select_namespace.png)
 

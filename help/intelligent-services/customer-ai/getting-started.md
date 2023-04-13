@@ -5,7 +5,7 @@ feature: Customer AI
 title: Prise en main de Customer AI
 description: Ce guide fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés.
 exl-id: 90c9a83a-8e66-4239-b2d6-2049a6319b25
-source-git-commit: 596921163bf64d11545dcde49039bcdd07c253dd
+source-git-commit: 3bc750b5e1cf47cbca6b037d099936c80c926cf8
 workflow-type: tm+mt
 source-wordcount: '572'
 ht-degree: 71%
@@ -49,4 +49,4 @@ Ce guide fournit des exemples d’appels API pour démontrer comment formater vo
 
 ## Étapes suivantes
 
-Une fois que vous avez suivi les étapes décrites dans le document ci-dessus, consultez la page [Entrée et sortie](./input-output.md) documentation. Ce document présente brièvement les types de données utilisés et produits dans Customer AI.
+Une fois que vous avez suivi les étapes décrites dans le document ci-dessus, consultez la page [Entrée et sortie](./data-requirements.md) documentation. Ce document présente brièvement les types de données utilisés et produits dans Customer AI.

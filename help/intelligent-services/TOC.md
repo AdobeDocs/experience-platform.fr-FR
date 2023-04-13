@@ -4,10 +4,10 @@ audience: user
 user-guide-title: Aide d’Intelligent Services
 breadcrumb-title: Guide des services intelligents
 user-guide-description: Utilisez les services intelligents d’IA pour générer des scores, découvrir des insights et créer des segments à partir des données de vos événements marketing.
-source-git-commit: 56f0ea4ee1fcefecb317eb2a078b01f7a9767c52
-workflow-type: ht
-source-wordcount: '140'
-ht-degree: 100%
+source-git-commit: a8a721cde2ebd68e72a1ee36b6d9274792474b3d
+workflow-type: tm+mt
+source-wordcount: '139'
+ht-degree: 98%
 
 ---
 
@@ -41,7 +41,7 @@ ht-degree: 100%
 - Customer AI {#customer-ai}
    - [Aperçu](customer-ai/overview.md)
    - [Prise en main de Customer AI](customer-ai/getting-started.md)
-   - [Entrée et sortie](customer-ai/input-output.md)
+   - [Exigences de données](customer-ai/data-requirements.md)
    - Guides de lʼinterface utilisateur {#user-guide}
       - [Configuration d’une instance](customer-ai/user-guide/configure.md)
       - [Découvrez des informations](customer-ai/user-guide/discover-insights.md)

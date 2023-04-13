@@ -5,7 +5,7 @@ feature: Customer AI
 title: Configuration d’une instance Customer AI
 description: Les services AI/ML fournissent Customer AI en tant que service Adobe Sensei simple d’utilisation pouvant être configuré pour différents cas d’utilisation. Les sections suivantes décrivent les étapes de configuration d’une instance de Customer AI.
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
-source-git-commit: 6aff88c0bc5cd15b8b3ffb32458402e1edc873c8
+source-git-commit: 3bc750b5e1cf47cbca6b037d099936c80c926cf8
 workflow-type: tm+mt
 source-wordcount: '2828'
 ht-degree: 8%
@@ -80,7 +80,7 @@ L’aperçu du jeu de données contient des données telles que l’heure de la 
 
 Sélectionner **[!UICONTROL Enregistrer]** pour enregistrer vos brouillons au fur et à mesure que vous vous déplacez dans le workflow. Vous pouvez également enregistrer les configurations de modèle de brouillon et passer à l’étape suivante du workflow. Utilisation **[!UICONTROL Enregistrer et continuer]** pour créer et enregistrer des brouillons lors des configurations de modèle. Cette fonctionnalité vous permet de créer et d’enregistrer des brouillons de la configuration du modèle. Elle est particulièrement utile lorsque vous devez définir de nombreux champs dans le workflow de configuration.
 
-![Le workflow Créer de l’onglet Customer AI des Data Science Services avec les options Enregistrer et Enregistrer et continuer en surbrillance.](../images/user-guide/cai-save-and-exit.png)
+![Le workflow Créer de l’onglet Customer AI des Data Science Services avec les options Enregistrer et Enregistrer et continuer est mis en surbrillance.](../images/user-guide/cai-save-and-exit.png)
 
 ### Complétude du jeu de données {#dataset-completeness}
 
@@ -163,7 +163,7 @@ Par défaut, les scores de propension sont générés pour tous les profils, sau
 
 ### Événements personnalisés (*facultatif*) {#custom-events}
 
-Si vous disposez d’informations supplémentaires sur la variable [champs d’événement standard](../input-output.md#standard-events) utilisée par Customer AI pour générer des scores de propension, une option d’événements personnalisés est fournie. L’utilisation de cette option vous permet d’ajouter d’autres événements que vous jugez influents, ce qui peut améliorer la qualité de votre modèle et contribuer à fournir des résultats plus précis. Si le jeu de données que vous avez sélectionné inclut des événements personnalisés définis dans votre schéma, vous pouvez les ajouter à votre instance.
+Si vous disposez d’informations supplémentaires sur la variable [champs d’événement standard](../data-requirements.md#standard-events) utilisée par Customer AI pour générer des scores de propension, une option d’événements personnalisés est fournie. L’utilisation de cette option vous permet d’ajouter d’autres événements que vous jugez influents, ce qui peut améliorer la qualité de votre modèle et contribuer à fournir des résultats plus précis. Si le jeu de données que vous avez sélectionné inclut des événements personnalisés définis dans votre schéma, vous pouvez les ajouter à votre instance.
 
 >[!NOTE]
 >
@@ -187,7 +187,7 @@ Une fois l’opération terminée, sélectionnez **[!UICONTROL Suivant]** en hau
 
 ### Attributs de profil personnalisés (*facultatif*)
 
-Vous pouvez définir des champs de jeu de données Profile importants (avec horodatages) dans vos données en plus des [champs d’événement standard](../input-output.md#standard-events) utilisé par Customer AI pour générer des scores de propension. L’utilisation de cette option vous permet d’ajouter des attributs de profil supplémentaires que vous estimez influents, ce qui peut améliorer la qualité de votre modèle et fournir des résultats plus précis. En outre, l’ajout d’attributs de profil personnalisés permet à Customer AI de mieux montrer comment des profils particuliers se sont retrouvés dans un compartiment de propension.
+Vous pouvez définir des champs de jeu de données Profile importants (avec horodatages) dans vos données en plus des [champs d’événement standard](../data-requirements.md#standard-events) utilisé par Customer AI pour générer des scores de propension. L’utilisation de cette option vous permet d’ajouter des attributs de profil supplémentaires que vous estimez influents, ce qui peut améliorer la qualité de votre modèle et fournir des résultats plus précis. En outre, l’ajout d’attributs de profil personnalisés permet à Customer AI de mieux montrer comment des profils particuliers se sont retrouvés dans un compartiment de propension.
 
 >[!NOTE]
 >
