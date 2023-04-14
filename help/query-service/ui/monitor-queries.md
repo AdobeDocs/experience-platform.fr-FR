@@ -2,14 +2,14 @@
 title: Surveillance des requêtes planifiées
 description: Découvrez comment surveiller les requêtes via l’interface utilisateur de Query Service.
 exl-id: 4640afdd-b012-4768-8586-32f1b8232879
-source-git-commit: 5e6fa112ccca7405c3dfd0653d3d6cad8b9ed2af
+source-git-commit: 1b4554e204663d40c3a18da792614305abb7d296
 workflow-type: tm+mt
-source-wordcount: '1204'
-ht-degree: 74%
+source-wordcount: '1252'
+ht-degree: 72%
 
 ---
 
-# Surveillance des requêtes planifiées
+# Surveiller les requêtes planifiées
 
 Adobe Experience Platform offre une meilleure visibilité du statut de toutes les tâches de requête via l’interface utilisateur. Depuis l’onglet [!UICONTROL Requêtes planifiées], vous pouvez désormais trouver des informations importantes sur vos exécutions de requêtes qui incluent le statut, les détails de la planification et les messages/codes d’erreur en cas d’échec. Vous pouvez également vous abonner à des alertes pour les requêtes en fonction de leur statut par le biais de l’interface utilisateur pour l’une de ces requêtes via l’onglet [!UICONTROL Requêtes planifiées].
 
@@ -120,11 +120,15 @@ Vous pouvez copier la requête SQL dans le presse-papiers à partir de cette vue
 
 ### Exécution des détails des requêtes avec bloc anonyme {#anonymous-block-queries}
 
-Les requêtes qui utilisent des blocs anonymes pour comprendre leurs instructions SQL sont séparées dans leurs requêtes individuelles. Vous pouvez ainsi inspecter individuellement les détails de l’exécution pour chaque bloc de requête.
+Les requêtes qui utilisent des blocs anonymes pour comprendre leurs instructions SQL sont séparées dans leurs sous-requêtes individuelles. Vous pouvez ainsi inspecter individuellement les détails de l’exécution pour chaque bloc de requête.
+
+>[!NOTE]
+>
+>Les détails d&#39;exécution d&#39;un bloc anonyme qui utilise la commande DROP sont **not** être signalée en tant que sous-requête distincte. Des détails d’exécution distincts sont disponibles pour les requêtes CTAS, les requêtes ITAS et les instructions COPY utilisées comme sous-requêtes de bloc anonymes. Les détails d’exécution de la commande DROP ne sont actuellement pas pris en charge.
 
 Les blocs anonymes sont identifiés à l’aide d’une `$$` avant la requête. Voir [document de bloc anonyme](../essential-concepts/anonymous-block.md) pour en savoir plus sur les blocs anonymes dans query service.
 
-Les requêtes de bloc anonymes ont des onglets à gauche de l’état d’exécution. Sélectionnez un onglet pour afficher les détails de l’exécution.
+Les sous-requêtes de bloc anonymes ont des onglets à gauche de l’état d’exécution. Sélectionnez un onglet pour afficher les détails de l’exécution.
 
 ![La vue d&#39;ensemble Exécution de la requête affiche une requête bloquée anonyme. Les onglets de requête multiples sont mis en surbrillance.](../images/ui/monitor-queries/anonymous-block-overview.png)
 
