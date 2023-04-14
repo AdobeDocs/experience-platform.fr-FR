@@ -2,10 +2,10 @@
 title: Notes de mise à jour de l’extension du SDK Web Adobe Experience Platform
 description: Extension de la balise SDK Web Adobe Experience Platform
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 2b8307422e4f073451c23ae9b35061d845f0893c
+source-git-commit: 52c6420a7fba6474dd2e9e97c9b2f49b5208be1d
 workflow-type: tm+mt
-source-wordcount: '1597'
-ht-degree: 96%
+source-wordcount: '1620'
+ht-degree: 95%
 
 ---
 
@@ -13,6 +13,10 @@ ht-degree: 96%
 # Notes de mise à jour de l’extension du SDK Web Adobe Experience Platform
 
 Ce document contient les notes de mise à jour de l’extension de balises du SDK Web Adobe Experience Platform. Pour obtenir les dernières notes de mise à jour sur le SDK lui-même, voir les [notes de mise à jour du SDK Web Platform](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html?lang=fr).
+
+## Version 2.16.1 - 14 avril 2023
+
+* Correction d’un problème lié aux éléments de données Objet XDM et Variable en raison duquel vous ne pouviez pas sélectionner un schéma dans un environnement de test autre que l’environnement de test par défaut.
 
 ## Version 2.16.0 - 30 mars 2023
 
