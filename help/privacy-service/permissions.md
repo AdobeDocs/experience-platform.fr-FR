@@ -2,10 +2,10 @@
 title: Gérer les autorisations pour Privacy Service
 description: Découvrez comment gérer les autorisations utilisateur pour Adobe Experience Platform Privacy Service à l’aide d’Adobe Admin Console.
 exl-id: 6aa81850-48d7-4fff-95d1-53b769090649
-source-git-commit: fc6c22ab1185b9692ece86de75149102ce020474
+source-git-commit: 1e164166f58540cbaaa4ad789b10cdfc40fa8a70
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1634'
+ht-degree: 60%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Les autorisations pour Adobe Experience Platform Privacy Service ont été améliorées afin d’augmenter leur niveau de granularité. Ces modifications permettent aux administrateurs et administratrices de l’organisation d’accorder l’accès à plus d’utilisateurs et d’utilisatrices avec le rôle et le niveau d’autorisation souhaités.Les utilisateurs et utilisatrices de comptes techniques doivent mettre à jour leurs autorisations de Privacy Service, car cette mise à jour imminente constitue une modification irréversible.L’application de la modification de ces autorisations aura lieu le **28 mars 2023**.
+>Les autorisations pour Adobe Experience Platform Privacy Service ont été améliorées afin d’augmenter leur niveau de granularité. Ces modifications permettent aux administrateurs et administratrices de l’organisation d’accorder l’accès à plus d’utilisateurs et d’utilisatrices avec le rôle et le niveau d’autorisation souhaités.Les utilisateurs et utilisatrices de comptes techniques doivent mettre à jour leurs autorisations de Privacy Service, car cette mise à jour imminente constitue une modification irréversible. L’application de cette modification des autorisations aura lieu le **13 avril 2023**. Consultez la documentation relative à [migration des informations d’identification d’API héritées](#migrate-tech-accounts) pour obtenir des conseils sur la résolution de ce problème.
 >
 >Les comptes techniques sont disponibles pour les clientes et clients d’entreprise et créés via l’Adobe Developers Console. L’Adobe ID d’une personne titulaire de compte technique se termine par `@techacct.adobe.com`. Si vous ne savez pas si vous êtes titulaire d’un compte technique, contactez l’administrateur ou l’administratrice de votre organisation.
 
@@ -99,11 +99,49 @@ Pour plus d’informations sur la gestion des utilisateurs et utilisatrices pour
 >
 >Cette section s’applique uniquement aux informations d’identification d’API existantes qui ont été créées avant l’intégration des autorisations de Privacy Service dans Adobe Admin Console. Pour les nouvelles informations d’identification, les profils de produit (et leurs autorisations) sont plutôt attribués via les [Projets d’Adobe Developer Console](https://developer.adobe.com/developer-console/docs/guides/projects/).<br><br>Voir la section sur l’[attribution de profils de produit à un projet](./api/getting-started.md#product-profiles) dans le guide de prise en main de l’API Privacy Service pour obtenir plus d’informations.
 
-Pour migrer les informations d’identification d’API héritées vers le profil de produit, sélectionnez les **[!UICONTROL Informations d’identification de l’API]**, puis **[!UICONTROL Ajouter des informations d’identification API]**.
+Auparavant, les comptes techniques ne nécessitaient pas de profil de produit pour l’intégration et les autorisations. Cependant, en raison des récentes améliorations apportées aux autorisations de Privacy Service, il est désormais nécessaire de migrer les informations d’identification d’API héritées vers le profil de produit. Cette mise à jour permet d’accorder des autorisations granulaires aux titulaires d’un compte technique. Suivez les étapes ci-dessous pour mettre à jour les autorisations de compte technique pour Privacy Service.
 
-![[!UICONTROL Ajouter des informations d’identification API] en cours de sélection dans Admin Console, sous l’onglet [!UICONTROL Informations d’identification de l’API] d’un profil de produit.](./images/permissions/api-credentials.png)
+#### Mise à jour des autorisations de compte technique {#update-tech-account-permissions}
 
-Sélectionnez les projets Developer Console de votre choix dans la liste, puis sélectionnez **[!UICONTROL Enregistrer]** pour les ajouter au profil de produit. Tous les appels d’API qui utilisent les informations d’identification de ces projets hériteront des autorisations granulaires accordées par le profil de produit.
+La première étape de l’attribution d’un jeu d’autorisations pour votre compte technique consiste à accéder au [Adobe Admin Console](https://adminconsole.adobe.com/) et créez un profil de produit pour Privacy Service.
+
+Dans l’interface utilisateur du Admin Console, sélectionnez **Produits** à partir de la barre de navigation, suivie de **[!UICONTROL Experience Cloud]** et **[!UICONTROL Adobe Experience Platform Privacy Service]** dans la barre latérale gauche. Le [!UICONTROL Profils de produit] s’affiche. Sélectionner **Nouveau profil** pour créer un profil de produit pour Privacy Service.
+
+![L’onglet Profils de produit du Privacy Service Experience Platform dans Adobe Admin Console avec un nouveau profil mis en surbrillance.](./images/permissions/create-product-profile.png)
+
+Le [!UICONTROL Création d’un profil de produit] s’affiche. Vous trouverez des instructions complètes sur la création d’un profil de produit dans la section [Guide de l’interface utilisateur pour la création de profils](../access-control/ui/create-profile.md).
+
+Après avoir enregistré votre nouveau profil de produit, accédez à la [Console Adobe Developer](https://developer.adobe.com/console/home) et connectez-vous à ce produit ou à ce projet. Sélectionner **[!UICONTROL Projets]** dans le volet de navigation supérieur, suivi de la carte de votre projet.
+
+>[!NOTE]
+>
+>Vous devrez peut-être vider votre cache et/ou attendre un certain temps pour que le nouveau projet apparaisse dans la liste de vos projets Developer Console.
+
+Une fois connecté à votre projet, sélectionnez l’option **[!UICONTROL API Privacy Service]** intégration à partir de la barre latérale gauche.
+
+![L’onglet Projets de la console Adobe Developer avec les projets et l’API Privacy Service mis en surbrillance.](./images/permissions/login-to-dev-console-project.png)
+
+Le tableau de bord de l’intégration de l’API du Privacy Service s’affiche. Dans ce tableau de bord, vous pouvez modifier le profil de produit associé à ce projet. Sélectionner **[!UICONTROL Modification des profils de produit]** pour lancer le processus. Le [!UICONTROL Configuration de l’API] s’affiche.
+
+![Le tableau de bord de l’intégration de l’API du Privacy Service dans la console Adobe Developer avec l’option Modifier les profils de produit mise en surbrillance](./images/permissions/edit-product-profiles.png)
+
+Le [!UICONTROL Configuration de l’API] La boîte de dialogue affiche les profils de produit disponibles qui existent actuellement dans le service. Ils sont en corrélation avec les profils de produit créés dans la console d’administration. Dans la liste des profils de produit disponibles, cochez la case correspondant au nouveau profil de produit que vous avez créé pour le compte technique dans la console d’administration. Ce compte technique est ainsi automatiquement associé aux autorisations du profil de produit sélectionné. Sélectionner **[!UICONTROL Enregistrer l’API configurée]** pour confirmer vos paramètres.
+
+>[!NOTE]
+>
+>Si un compte technique est déjà associé à un profil de produit, l’une des cases à cocher de la liste des profils de produit disponibles est déjà sélectionnée.
+
+![La boîte de dialogue Configurer l’API dans la console Adobe Developer avec une case à cocher Profil de produit et Enregistrer l’API configurée est mise en surbrillance.](./images/permissions/select-profile-for-tech-account.png)
+
+#### Vérifiez que les paramètres ont été appliqués. {#confirm-applied-settings}
+
+Pour confirmer que vos paramètres ont été appliqués au compte. Revenez au [Admin Console](https://adminconsole.adobe.com/) et accédez à votre profil de produit nouvellement créé. Sélectionnez la **[!UICONTROL Informations d’identification de l’API]** pour afficher la liste des projets associés. Le projet utilisé dans Developer Console dans lequel vous avez affecté le profil de produit au compte technique s’affiche dans la liste des informations d’identification. Le nom de chaque information d’identification d’API est composé du nom du projet avec un nombre généré de manière aléatoire, suffixé à la fin. Sélectionnez des informations d’identification pour ouvrir la [!UICONTROL Détails] du panneau.
+
+![Un profil de produit dans le Admin Console avec l’onglet Informations d’identification de l’API et une ligne d’informations d’identification du projet mis en surbrillance.](./images/permissions/confirm-credentials-in-admin-console.png)
+
+Le [!UICONTROL Détails] contient des informations sur les informations d’identification de l’API, notamment l’identifiant technique associé, la clé API, la date de création et de dernière modification, ainsi que les produits d’Adobe associés.
+
+![Panneau Détails surligné des informations d’identification d’une API dans Admin Console.](./images/permissions/admin-console-details-panel.png)
 
 ## Étapes suivantes
 
