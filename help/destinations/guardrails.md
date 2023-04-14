@@ -6,7 +6,7 @@ product: experience platform
 type: Documentation
 description: En savoir plus sur l’utilisation par défaut de l’activation des données et les limites de débit.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 1132c5166f1271f1b8eb0c618b83d028b413b991
 workflow-type: tm+mt
 source-wordcount: '1177'
 ht-degree: 98%
@@ -90,7 +90,7 @@ Les mécanismes de sécurisation ci-dessous s’appliquent à l’activation par
 | Mécanisme de sécurisation | Limite | Type de limite | Description |
 | --- | --- | --- | --- |
 | Nombre maximal de destinations de [Personnalisation personnalisée](/help/destinations/catalog/personalization/custom-personalization.md) | 10 | Soft | Vous pouvez configurer des flux de données vers 10 destinations de personnalisation personnalisée par sandbox. |
-| Nombre maximal d’attributs mappés à une destination de personnalisation par sandbox | 20 | Hard | Un maximum de 20 attributs peuvent être mappés dans un flux de données à une destination de personnalisation, par sandbox. |
+| Nombre maximal d’attributs mappés à une destination de personnalisation par sandbox | 30 | Hard | Un maximum de 30 attributs peuvent être mappés dans un flux de données à une destination de personnalisation, par sandbox. |
 | Nombre maximal de segments mappés à une seule destination [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) | 50 | Soft | Vous pouvez activer un maximum de 50 segments dans un flux d’activation vers une seule destination Adobe Target. |
 
 {style="table-layout:auto"}
