@@ -2,18 +2,14 @@
 title: Extension de couche de données Google
 description: Découvrez l’extension de balise de la couche de données client Google dans Adobe Experience Platform.
 exl-id: 7990351d-8669-432b-94a9-4f9db1c2b3fe
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 9c608f69f6ba219f9cb4e938a77bd4838158d42c
 workflow-type: tm+mt
-source-wordcount: '823'
-ht-degree: 8%
+source-wordcount: '867'
+ht-degree: 15%
 
 ---
 
-# Extension de la couche de données Google (bêta)
-
->[!IMPORTANT]
->
->Cette extension est actuellement en version bêta et n’a pas été entièrement testée en production.
+# Extension de la couche de données Google
 
 L’extension de la couche de données Google vous permet d’utiliser une couche de données Google lorsque vous implémentez des balises. L’extension peut être utilisée indépendamment ou simultanément avec les solutions Google et avec Google open source [Bibliothèque d’assistance de couche de données](https://github.com/google/data-layer-helper).
 
@@ -21,45 +17,50 @@ La bibliothèque d’assistance fournit des fonctionnalités similaires, piloté
 
 ## Maturité
 
-La version 1.0.x de l’extension est une version bêta. Cette extension n’a pas été entièrement testée en production.
+La version 1.2.x est une version bêta tardive en cours d’utilisation en production.
 
 ## Installation
 
-Pour installer l’extension, accédez au catalogue d’extensions dans l’interface utilisateur Experience Platform ou l’interface utilisateur de collecte de données, puis sélectionnez **Couche de données Google**.
+Pour installer l’extension, accédez au catalogue d’extensions dans l’interface utilisateur de la collecte de données et sélectionnez **[!UICONTROL Couche de données Google]**.
 
-Une fois installée, l’extension crée ou accède à une couche de données chaque fois que la bibliothèque de balises se charge sur votre site web.
+Une fois installée, l’extension crée ou accède à une couche de données à chaque chargement de la bibliothèque de balises Adobe Experience Platform.
 
 ## Affichage de l’extension
 
-Lors de la configuration de l’extension (lors de l’installation de l’extension ou en sélectionnant **[!UICONTROL Configurer]** dans le catalogue d’extensions) vous devez définir le nom de la couche de données utilisée par l’extension. Si aucune couche de données avec le nom configuré n’est présente lors du chargement de la bibliothèque, l’extension en crée une à la place.
+La configuration de l’extension peut être utilisée pour définir le nom de la couche de données utilisée par l’extension. Si aucune couche de données avec le nom configuré n’est présente lors du chargement des balises Adobe Experience Platform, l’extension en crée une.
+
+La valeur par défaut du nom de couche de données est le nom par défaut de Google. `dataLayer`.
 
 >[!NOTE]
 >
->Peu importe que le code Google ou Adobe se charge en premier et crée la couche de données. Les deux systèmes créent la couche de données s’ils ne sont pas présents ou utilisent la couche de données existante.
-
-Par défaut, la couche de données utilise le nom Google par défaut. `dataLayer`.
+>Peu importe que le code Google ou Adobe se charge en premier et crée la couche de données. Les deux systèmes se comportent de la même manière : créez la couche de données si elle n’est pas présente ou utilisez la couche de données existante.
 
 ## Événements
 
-L’extension vous permet d’écouter les modifications (événements) dans la couche de données. Un événement peut être l’un des suivants :
+>[!NOTE]
+>
+>Le mot _event_ est surchargé lorsqu’une couche de données pilotée par un événement est utilisée dans les balises Adobe Experience Platform. _Événements_ peut être :
+> - Événements Balises Adobe Experience Platform (bibliothèque chargée, etc.).
+> - Événements JavaScript.
+> - Données transmises à la couche de données avec la variable _event_ mot-clé.
 
-* Balisage des événements (par exemple, une bibliothèque en cours de chargement)
-* Événements JavaScript
-* Données transmises à la couche de données avec la variable `event` mot-clé.
 
-Il est important de comprendre l’utilisation de la variable [`event` keyword](https://developers.google.com/tag-platform/devguides/datalayer#use_a_data_layer_with_event_handlers) lorsque des données sont transmises à une couche de données Google, de la même manière que la couche de données client Adobe. Le `event` Le mot-clé modifie le comportement de la couche de données Google et, par conséquent, le comportement de l’extension se met à jour en conséquence.
+L’extension vous permet d’écouter les modifications apportées à la couche de données.
 
-Les sections ci-dessous décrivent les différents types d’événements que l’extension peut écouter.
+>[!NOTE]
+>
+>Il est important de comprendre l’utilisation de la variable _event_ mot-clé lorsque des données sont transmises à une couche de données Google, comme la couche de données client Adobe. Le _event_ change le comportement de la couche de données Google et donc de cette extension.\
+> Veuillez lire la documentation de Google ou effectuer des recherches si vous n’êtes pas sûr de ce point.
 
 ### Prêtez attention à toutes les transmissions vers la couche de données
 
-Si vous sélectionnez cette option, l’extension écoute toute modification apportée à la couche de données.
+Si vous sélectionnez cette option, votre écouteur d’événement écoute toute modification apportée à la couche de données.
 
 ### Écoute des publications excluant des événements
 
-Si vous sélectionnez cette option, l’extension écoute tout élément transmis à la couche de données, à l’exception des événements.
+Si vous sélectionnez cette option, votre écouteur d’événement écoute toute notification push de données vers la couche de données, à l’exception des événements.
 
-L’exemple d’événement push suivant est suivi par l’écouteur :
+L’exemple d’événement push suivant est suivi par l’écouteur :
 
 ```js
 dataLayer.push({"data":"something"})
@@ -74,7 +75,7 @@ dataLayer.push({"event":"myevent","data":"something"})
 
 ### Écoute de tous les événements
 
-Si vous sélectionnez cette option, l’extension écoute tous les événements transmis à la couche de données.
+Si vous sélectionnez cette option, votre écouteur d’événement écoute tout événement transmis à la couche de données.
 
 L’exemple d’événement push suivant est suivi par l’écouteur :
 
@@ -91,7 +92,7 @@ dataLayer.push({"data":"something"})
 
 ### Écoute d’un événement spécifique
 
-Si vous souhaitez écouter un événement spécifique, sélectionnez cette option afin que le récepteur d’événements effectue le suivi des événements correspondant à une chaîne spécifique.
+Si vous spécifiez un événement, l’écouteur d’événement suit tout événement correspondant à une chaîne spécifique.
 
 Par exemple, si vous définissez `myEvent` lors de l’utilisation de cette configuration, l’écouteur ne suit que l’événement push suivant :
 
@@ -99,7 +100,9 @@ Par exemple, si vous définissez `myEvent` lors de l’utilisation de cette conf
 dataLayer.push({"event":"myEvent"})
 ```
 
-Vous pouvez également utiliser une chaîne regex pour faire correspondre les noms d’événement. Par exemple, la définition de `myEvent\d` effectuent le suivi des événements commençant par `myEvent` suivi d’un chiffre :
+Une expression régulière (ECMAScript/JavaScript) peut être utilisée pour faire correspondre les noms d’événement.
+
+Par exemple, la définition de &quot;myEvent\d&quot; effectue le suivi `myEvent` avec un chiffre (\d) :
 
 ```js
 dataLayer.push({"event":"myEvent1"})
@@ -108,11 +111,13 @@ dataLayer.push({"event":"myEvent2"})
 
 ## Actions
 
-Les sections ci-dessous décrivent les différentes actions que l’extension peut effectuer lorsqu’elle est incluse dans une [règle](../../../ui/managing-resources/rules.md).
-
 ### Push to Data Layer (Envoi vers couche de données) {#push-to-data-layer}
 
-Cette action envoie le contenu JSON à la couche de données elle-même, ce qui permet d’utiliser des éléments de données directement dans les payloads JSON. Dans l’éditeur JSON fourni, vous pouvez référencer des éléments de données à l’aide de la notation de pourcentage (par exemple, `%dataElementName%`).
+L’extension vous fournit deux actions pour envoyer JSON vers la couche de données ; un champ de texte libre pour créer manuellement le fichier JSON à transmettre, et à partir de la version 1.2.0, une boîte de dialogue multichamp de valeur clé.
+
+#### JSON de texte libre
+
+L’action de texte libre permet d’utiliser des éléments de données directement dans le fichier JSON. Dans l’éditeur JSON, les éléments de données doivent être référencés à l’aide de la notation de pourcentage. Par exemple : `%dataElementName%`.
 
 ```json
 {
@@ -124,27 +129,27 @@ Cette action envoie le contenu JSON à la couche de données elle-même, ce qui 
 }
 ```
 
+#### Multi-champ Clé-Valeur
+
+La nouvelle boîte de dialogue multichamp clé-valeur est une interface plus conviviale qui permet de configurer une notification push sans écrire manuellement JSON.
+
 ### Réinitialisation du langage DL Google à l’état calculé
 
->[!NOTE]
->
->Cette action est disponible à partir de la version 1.0.5.
-
-Cette action réinitialise la couche de données. Si elle est utilisée dans une règle qui traite une modification de couche de données Google, la couche de données est réinitialisée à l’état calculé de la couche de données au moment où la règle a été déclenchée. Si l’action est utilisée dans une règle qui ne traite pas de modification de couche de données Google, l’action vide la couche de données.
+L’extension vous fournit une action pour réinitialiser la couche de données. Si elle est utilisée dans une règle qui traite une modification de couche de données Google, la couche de données est réinitialisée à l’état calculé de la couche de données au moment où la règle a été déclenchée. Si l’action est utilisée dans une règle qui ne traite pas de modification de couche de données Google, l’action vide la couche de données.
 
 ## Éléments de données
 
-L’extension fournit un élément de données unique qui accède à la couche de données à l’aide d’une clé (par exemple, `page.url` dans le [extrait de code ci-dessus](#push-to-data-layer)).
+L’élément de données fourni peut être utilisé lors de l’exécution d’une règle déclenchée par un changement de couche de données Google (événement push) ou dans une règle non liée telle que Bibliothèque chargée. Dans le premier cas, l’élément de données renvoie une valeur extraite de l’état calculé au moment du changement de couche de données. Dans ce dernier cas, l’état calculé au moment de l’exécution de la règle est utilisé.
 
-L’élément de données peut fournir les éléments suivants :
+Un commutateur à bascule vous permet de choisir si l’élément de données doit renvoyer des valeurs de l’état calculé entier ou uniquement des informations d’événement (si utilisé dans une règle déclenchée par un changement de couche de données).
 
-* Une valeur spécifique de la couche de données (par exemple, `page.url`)
-* Le tableau de couche de données entier (champ de clé vide)
-* Valeurs d’un événement de couche de données à l’aide de la clé (si la variable `event` a été utilisé)
-* Objet d’événement entier (champ de clé vide)
+L’élément de données peut donc renvoyer :
 
-L’extension donne toujours la priorité aux informations d’événement. Si une couche de données `event` est en cours de traitement, les valeurs sont toujours lues à partir de cet événement. Si `event` n’est pas présent, les valeurs sont lues à partir de la couche de données directe à la place.
+- Champ vide : état calculé de la couche de données.
+- Champ avec clé (tel que page.previous_url dans l’exemple ci-dessus) : valeur de la clé dans l’objet d’événement ou l’état calculé.
 
 ## Informations supplémentaires 
 
-Des informations supplémentaires sont disponibles dans la section [project README](https://github.com/adobe/reactor-extension-googledatalayer/blob/main/README.md) et dans les boîtes de dialogue d’élément de données et d’événement de l’extension.
+Les boîtes de dialogue d’élément de données et d’événement de l’extension contiennent des informations d’utilisation détaillées et des exemples.
+
+Vous trouverez des informations générales supplémentaires dans la section [project README](https://github.com/adobe/reactor-extension-googledatalayer/blob/main/README.md)
