@@ -5,9 +5,9 @@ breadcrumb-title: Guide des connecteurs sources
 user-guide-description: Ingérez des données à partir de diverses sources. Découvrez comment structurer, étiqueter et améliorer les données déjà ingérées.
 feature: Sources
 source-git-commit: 10edb5dfd9ce99b69cf5bb014f4903942c9bff3e
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '963'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -37,7 +37,7 @@ ht-degree: 97%
          - [Espaces de noms et schémas B2B](connectors/adobe-applications/marketo/marketo-namespaces.md)
    - Publicité {#advertising}
       - [Connecteur Google Ads](connectors/advertising/ads.md)
-      - [Publicités pinterest](connectors/advertising/pinterest-ads.md)
+      - [Pinterest Ads](connectors/advertising/pinterest-ads.md)
    - Analytics {#analytics}
       - [Connecteur Mixpanel](connectors/analytics/mixpanel.md)
       - [Pendo](connectors/analytics/pendo-webhook.md)
@@ -113,7 +113,7 @@ ht-degree: 97%
    - Créer une connexion de base {#create}
       - Publicité {#advertising}
          - [Google Ads](tutorials/api/create/advertising/ads.md)
-         - [Publicités pinterest](tutorials/api/create/advertising/pinterest-ads.md)
+         - [Pinterest Ads](tutorials/api/create/advertising/pinterest-ads.md)
       - Analytics {#analytics}
          - [Mixpanel](tutorials/api/create/analytics/mixpanel.md)
          - [Pendo](tutorials/api/create/analytics/pendo-webhook.md)
@@ -215,7 +215,7 @@ ht-degree: 97%
    - [Supprimer des comptes](tutorials/api/delete.md)
    - [Supprimer des flux de données](tutorials/api/delete-dataflows.md)
    - [Ingérer des données chiffrées](tutorials/api/encrypt-data.md)
-   - [Enregistrement d’un flux de données en tant que brouillon](tutorials/api/draft.md)
+   - [Enregistrer un flux de données en tant que brouillon](tutorials/api/draft.md)
 - Tutoriels sur l’interface utilisateur {#ui-tutorials}
    - Créer une connexion source {#create}
       - Applications Adobe {#adobe-applications}
@@ -229,7 +229,7 @@ ht-degree: 97%
          - [Workfront](tutorials/ui/create/adobe-applications/workfront.md)
       - Publicité {#advertising}
          - [Google Ads](tutorials/ui/create/advertising/ads.md)
-         - [Publicités pinterest](tutorials/ui/create/advertising/pinterest-ads.md)
+         - [Pinterest Ads](tutorials/ui/create/advertising/pinterest-ads.md)
       - Analytics {#analytics}
          - [Mixpanel](tutorials/ui/create/analytics/mixpanel.md)
          - [Pendo](tutorials/ui/create/analytics/pendo-webhook.md)
