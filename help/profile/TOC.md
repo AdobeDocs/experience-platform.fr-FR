@@ -4,7 +4,7 @@ user-guide-title: Guide de Real-Time Customer Profile
 user-guide-description: Fusionnez les données client pour créer une vue unifiée des interactions client entre les canaux.
 feature: Profiles
 source-git-commit: 9de3af9402a245779cfaf765c40bb54da57b91e2
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '124'
 ht-degree: 100%
 
