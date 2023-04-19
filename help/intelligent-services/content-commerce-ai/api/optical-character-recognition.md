@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Présence de texte et reconnaissance optique des caractères
 description: Dans l’API Content Tagging, le service Text Presence/Optical Character Reconnaissance (OCR) peut indiquer si du texte est présent dans une image donnée. Si du texte est présent, la reconnaissance optique des caractères peut renvoyer le texte.
 exl-id: 85b976a7-0229-43e9-b166-cdbd213b867f
-source-git-commit: b124ed97da8bde2a7fc4f10d350c81a47e096f29
+source-git-commit: 82722ddf7ff543361177b555fffea730a7879886
 workflow-type: tm+mt
 source-wordcount: '688'
 ht-degree: 4%
@@ -110,7 +110,7 @@ Une réponse réussie renvoie le texte qui a été détecté dans la variable `t
       "tags": [
         {
           "text": "yosemite",
-          "relevance": 0.05604639115920341
+          "relevance": 0.06
         }
       ],
       "request_element_id": 0

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Balisage de mots-clés dans l’API de balisage de contenu
 description: Le service de balisage de mots-clés, lorsqu’il reçoit un document texte, extrait automatiquement les mots-clés ou les expressions-clés qui décrivent le mieux l’objet du document. Pour extraire des mots-clés, une combinaison d’algorithmes de reconnaissance d’entité nommée (NER) et de balisage de mot-clé non supervisé est utilisée.
 exl-id: 56a2da96-5056-4702-9110-a1dfec56f0dc
-source-git-commit: a42bb4af3ec0f752874827c5a9bf70a66beb6d91
+source-git-commit: 7c8c1d69f4c4e0a1374603d541b634ac7f64ab38
 workflow-type: tm+mt
-source-wordcount: '450'
+source-wordcount: '447'
 ht-degree: 6%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 6%
 
 Lorsqu’un document texte est fourni, le service de balisage de mot-clé extrait automatiquement les mots-clés ou les expressions-clés qui décrivent le mieux l’objet du document. Pour extraire des mots-clés, une combinaison d’algorithmes de reconnaissance d’entité nommée (NER) et de balisage de mot-clé non supervisé est utilisée.
 
-Le tableau suivant répertorie les entités nommées qui [!DNL Content Tagging] a identifié :
+Le tableau suivant répertorie les entités nommées qui [!DNL Content Tagging] peut identifier :
 
 | Nom de l’entité | Description |
 | --- | --- |
@@ -86,15 +86,18 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 -F 'infile_1=@simple-text.pdf'
 ```
 
+**Paramètres d&#39;entrée**
+
 | Propriété | Description | Obligatoire |
 | --- | --- | --- |
-| `application-id` | L’identifiant de l’application créée. | Oui |
 | `top_n` | Nombre de résultats à renvoyer. 0, pour renvoyer tous les résultats. Utilisé conjointement avec le seuil, le nombre de résultats renvoyé est inférieur à l’une ou l’autre des limites. | Non |
 | `min_relevance` | Seuil de score au-dessous duquel les résultats doivent être renvoyés. Excluez le paramètre pour renvoyer tous les résultats. | Non |
 | `min_key_phrase_length` | Nombre minimum de mots requis dans les expressions clés. | Non |
 | `max_key_phrase_length` | Nombre maximal de mots requis dans les expressions clés. | Non |
 | `last_semantic_unit_type` | Renvoie uniquement les unités sémantiques jusqu’au niveau donné dans la réponse hiérarchique. &quot;key_phrase&quot; renvoie uniquement les expressions clés, &quot;linked_entity&quot; renvoie uniquement les expressions clés et les entités liées correspondantes, et &quot;concept&quot; renvoie les expressions clés, les entités liées et les concepts. | Non |
 | `entity_types` | Types d’entités à renvoyer sous la forme d’expressions clés. | Non |
+
+**Objet document**
 
 | Nom | Type de données | Obligatoire | Par défaut | Valeurs | Description |
 | -----| --------- | -------- | ------- | ------ | ----------- |

@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Balisage des couleurs dans l’API de balisage de contenu
 description: Le service de balisage des couleurs, lorsqu’une image est donnée, peut calculer l’histogramme des couleurs des pixels et les trier par couleurs dominantes en compartiments.
 exl-id: 6b3b6314-cb67-404f-888c-4832d041f5ed
-source-git-commit: a42bb4af3ec0f752874827c5a9bf70a66beb6d91
+source-git-commit: e6ea347252b898f73c2bc495b0324361ee6cae9b
 workflow-type: tm+mt
-source-wordcount: '497'
-ht-degree: 5%
+source-wordcount: '676'
+ht-degree: 6%
 
 ---
 
@@ -21,7 +21,14 @@ Cette méthode extrait un histogramme des couleurs sur l’ensemble de l’image
 
 **Balisage des couleurs (avec masque)**
 
-Cette méthode utilise un extracteur de premier plan basé sur l’apprentissage profond pour identifier les objets au premier plan. Le modèle est formé sur un catalogue d’images de commerce électronique. Une fois l’objet de premier plan extrait, un histogramme est calculé sur les couleurs dominantes, comme décrit précédemment.
+Cette méthode utilise un extracteur de premier plan basé sur l’apprentissage profond pour identifier les objets au premier plan. Une fois les objets de premier plan extraits, un histogramme est calculé sur les couleurs dominantes pour les zones de premier plan et d’arrière-plan, ainsi que pour l’image entière.
+
+**Extraction des tons**
+
+Outre les variantes mentionnées ci-dessus, vous pouvez configurer le service pour récupérer un histogramme de tons pour :
+
+- L’image globale (lors de l’utilisation d’une variante d’image complète)
+- L’image globale, ainsi que les zones de premier plan et d’arrière-plan (lors de l’utilisation de la variante avec le masquage)
 
 L’image suivante a été utilisée dans l’exemple illustré dans ce document :
 
@@ -33,11 +40,9 @@ L’image suivante a été utilisée dans l’exemple illustré dans ce document
 POST /services/v2/predict
 ```
 
-**Requête**
+**Demande - variante d’image complète**
 
-L’exemple de requête suivant utilise la méthode image complète pour le balisage colorimétrique.
-
-La requête suivante extrait les couleurs d’une image en fonction des paramètres d’entrée fournis dans le payload. Pour plus d’informations sur les paramètres d’entrée affichés, reportez-vous au tableau ci-dessous de l’exemple de payload.
+L’exemple de requête suivant utilise la méthode image complète pour le balisage colorimétrique et extrait les couleurs d’une image en fonction des paramètres d’entrée fournis dans la payload. Pour plus d’informations sur les paramètres d’entrée affichés, reportez-vous au tableau ci-dessous de l’exemple de payload.
 
 ```SHELL
 curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
@@ -46,13 +51,13 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 -H "content-type: multipart/form-data" \
 -H "authorization: Bearer $API_TOKEN" \
 -F 'contentAnalyzerRequests={
-  "sensei:name": "Feature:cintel-image-classifier:Service-60887e328ded447d86e01122a4f19c58",
+  "sensei:name": "Feature:autocrop:Service-af865523d46547e2b17fdf9b38e32a72",
   "sensei:invocation_mode": "synchronous",
   "sensei:invocation_batch": false,
   "sensei:engines": [
     {
       "sensei:execution_info": {
-        "sensei:engine": "Feature:cintel-image-classifier:Service-60887e328ded447d86e01122a4f19c58"
+        "sensei:engine": "Feature:autocrop:Service-af865523d46547e2b17fdf9b38e32a72"
       },
       "sensei:inputs": {
         "documents": [{
@@ -61,8 +66,8 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
           }]
       },
       "sensei:params": {
-        "application-id": "1234",
-        "enable_mask": 0
+        "top_n": 5,
+        "min_coverage": 0.005      
       },
       "sensei:outputs":{
         "result" : {
@@ -76,23 +81,7 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 -F 'infile_1=@1431RDMJANELLERAWJACKE_2.jpg'
 ```
 
-| Propriété | Description | Obligatoire |
-| --- | --- | --- |
-| `application-id` | L’identifiant de l’application créée. | Oui |
-| `documents` | Liste d’éléments JSON dont chaque élément de la liste représente un document. | Oui |
-| `top_n` | Nombre de résultats à renvoyer (il ne peut pas s’agir d’un entier négatif). Utiliser la valeur `0` pour renvoyer tous les résultats. Utilisé conjointement avec `threshold`, le nombre de résultats renvoyés est le plus petit des jeux de limites. La valeur par défaut de cette propriété est `0`. | Non |
-| `min_coverage` | Seuil de couverture au-dessus duquel les résultats doivent être renvoyés. Excluez le paramètre pour renvoyer tous les résultats. | Non |
-| `resize_image` | Indique si l’image d’entrée doit être redimensionnée. Par défaut, les images sont redimensionnées à 320 x 320 pixels avant l’exécution du balisage colorimétrique. À des fins de débogage, nous pouvons également permettre au code de s’exécuter sur l’image complète, en définissant ce paramètre sur False. | Non |
-| `enable_mask` | Active/désactive le balisage des couleurs dans le masque. | Non |
-
-| Nom | Type de données | Obligatoire | Par défaut | Valeurs | Description |
-| -----| --------- | -------- | ------- | ------ | ----------- |
-| `repo:path` | chaîne | - | - | - | URL présignée du document duquel extraire les expressions clés. |
-| `sensei:repoType` | chaîne | - | - | HTTPS | Type de référentiel dans lequel l’image est stockée. |
-| `sensei:multipart_field_name` | chaîne | - | - | - | Utilisez-le lorsque vous transmettez un fichier image comme argument multipart au lieu d’utiliser des URL présignées. |
-| `dc:format` | chaîne | Oui | - | &quot;image/jpg&quot;, <br> &quot;image/jpeg&quot;, <br>&quot;image/png&quot;, <br>&quot;image/tiff&quot; | Le codage des images est comparé aux types de codage d’entrée autorisés avant d’être traité. |
-
-**Réponse**
+**Réponse : variante de l’image complète**
 
 Une réponse réussie renvoie les détails des couleurs extraites. Chaque couleur est représentée par une `feature_value` qui contient les informations suivantes :
 
@@ -100,89 +89,287 @@ Une réponse réussie renvoie les détails des couleurs extraites. Chaque couleu
 - Pourcentage d’affichage de cette couleur par rapport à l’image
 - Valeur RGB de la couleur
 
-Dans le premier exemple d’objet ci-dessous, la variable `feature_value` de `Mud_Green,0.069,102,72,95` signifie que la couleur trouvée est le vert boueux, le vert boueux se trouve dans 6,9 % de l’image et a une valeur RGB de 102 7295.
+`"White":{"coverage":0.5834,"rgb":{"red":254,"green":254,"blue":243}}`signifie que la couleur trouvée est blanche, que l’on trouve dans 58,34 % de l’image et qu’elle a une valeur de RGB moyenne de 254, 254, 243.
 
 ```json
 {
-  "status": 200,
-  "content_id": "test_image.jpg",
-  "cas_responses": [
-    {
-{
-  "statuses": [
-    {
-      "sensei:engine": "Feature:cintel-image-classifier:Service-60887e328ded447d86e01122a4f19c58",
-      "invocations": [
-        {
-          "sensei:outputs": {
-            "result": {
-              "sensei:multipart_field_name": "result",
-              "dc:format": "application/json"
+    "statuses": [{
+        "sensei:engine": "Feature:autocrop:Service-af865523d46547e2b17fdf9b38e32a72",
+        "invocations": [{
+            "sensei:outputs": {
+                "result": {
+                    "sensei:multipart_field_name": "result",
+                    "dc:format": "application/json"
+                }
+            },
+            "message": null,
+            "status": "200"
+        }]
+    }],
+    "request_id": "bfpzaJxKDxtgxpjUj5QDrN1jasjUw2RM"
+}  
+ 
+[{
+    "overall": {
+        "colors": {
+            "White": {
+                "coverage": 0.5834,
+                "rgb": {
+                    "red": 254,
+                    "green": 254,
+                    "blue": 243
+                }
+            },
+            "Orange": {
+                "coverage": 0.254,
+                "rgb": {
+                    "red": 249,
+                    "green": 165,
+                    "blue": 45
+                }
+            },
+            "Gold": {
+                "coverage": 0.0817,
+                "rgb": {
+                    "red": 253,
+                    "green": 188,
+                    "blue": 58
+                }
+            },
+            "Mustard": {
+                "coverage": 0.0727,
+                "rgb": {
+                    "red": 253,
+                    "green": 207,
+                    "blue": 84
+                }
+            },
+            "Cream": {
+                "coverage": 0.0082,
+                "rgb": {
+                    "red": 253,
+                    "green": 236,
+                    "blue": 174
+                }
             }
-          },
-          "message": null,
-          "status": "200"
         }
-      ]
     }
-  ],
-  "request_id": "hsxycVq5Q9KbZ7MWrt6NXcSNWbonSLf3"
-}
+}]
+```
 
-[
-  {
-    "request_element_id": "0",
-    "colors": {
-      "Mud_Green": {
-        "coverage": 0.0694,
-        "rgb": {
-          "red": 102,
-          "blue": 72,
-          "green": 95
-        }
+Notez que la couleur du résultat ici est extraite de la région &quot;globale&quot; de l’image.
+
+**Demande - Variante d’image masquée**
+
+L’exemple de requête suivant utilise la méthode de masquage pour le balisage colorimétrique. Nous l’activons en définissant la variable `enable_mask` du paramètre `true` dans la requête.
+
+```SHELL
+curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
+-H 'Prefer: respond-async, wait=59' \
+-H "x-api-key: $API_KEY" \
+-H "content-type: multipart/form-data" \
+-H "authorization: Bearer $API_TOKEN" \
+-F 'contentAnalyzerRequests={
+  "sensei:name": "Feature:autocrop:Service-af865523d46547e2b17fdf9b38e32a72",
+  "sensei:invocation_mode": "synchronous",
+  "sensei:invocation_batch": false,
+  "sensei:engines": [
+    {
+      "sensei:execution_info": {
+        "sensei:engine": "Feature:autocrop:Service-af865523d46547e2b17fdf9b38e32a72"
       },
-      "Dark_Brown": {
-        "coverage": 0.1226,
-        "rgb": {
-          "red": 113,
-          "blue": 77,
-          "green": 84
-        }
+      "sensei:inputs": {
+        "documents": [{
+            "sensei:multipart_field_name": "infile_1",
+            "dc:format": "image/jpg"
+          }]
       },
-      "Pink": {
-        "coverage": 0.0731,
-        "rgb": {
-          "red": 234,
-          "blue": 201,
-          "green": 209
-        }
+      "sensei:params": {
+        "top_n": 5,
+        "min_coverage": 0.005,
+        "enable_mask": true,
+        "retrieve_tone": true     
       },
-      "Dark_Gray": {
-        "coverage": 0.1533,
-        "rgb": {
-          "red": 63,
-          "blue": 58,
-          "green": 59
-        }
-      },
-      "Olive": {
-        "coverage": 0.492,
-        "rgb": {
-          "red": 177,
-          "blue": 126,
-          "green": 170
-        }
-      },
-      "Brown": {
-        "coverage": 0.0896,
-        "rgb": {
-          "red": 141,
-          "blue": 85,
-          "green": 105
+      "sensei:outputs":{
+        "result" : {
+          "sensei:multipart_field_name" : "result",
+          "dc:format": "application/json"
         }
       }
     }
-  }
-]
-}
+  ]
+}' \
+-F 'infile_1=@1431RDMJANELLERAWJACKE_2.jpg'
 ```
+
+>Remarque : En outre, la variable `retrieve_tone` du paramètre `true` dans la requête ci-dessus. Cela nous permet de récupérer un histogramme de distribution des tons sur des tons chauds, neutres et froids dans les régions générales, de premier plan et d’arrière-plan de l’image.
+
+**Réponse : variante d’image masquée**
+
+```json
+{
+    "statuses": [{
+        "sensei:engine": "Feature:autocrop:Service-af865523d46547e2b17fdf9b38e32a72",
+        "invocations": [{
+            "sensei:outputs": {
+                "result": {
+                    "sensei:multipart_field_name": "result",
+                    "dc:format": "application/json"
+                }
+            },
+            "message": null,
+            "status": "200"
+        }]
+    }],
+    "request_id": "gpeCyJsrJvOWd94WwZOyPBPrKi2BQyla"
+}  
+ 
+ 
+[{
+    "overall": {
+        "colors": {
+            "White": {
+                "coverage": 0.5834,
+                "rgb": {
+                    "red": 254,
+                    "green": 254,
+                    "blue": 243
+                }
+            },
+            "Orange": {
+                "coverage": 0.254,
+                "rgb": {
+                    "red": 249,
+                    "green": 165,
+                    "blue": 45
+                }
+            },
+            "Gold": {
+                "coverage": 0.0817,
+                "rgb": {
+                    "red": 253,
+                    "green": 188,
+                    "blue": 58
+                }
+            },
+            "Mustard": {
+                "coverage": 0.0727,
+                "rgb": {
+                    "red": 253,
+                    "green": 207,
+                    "blue": 84
+                }
+            },
+            "Cream": {
+                "coverage": 0.0082,
+                "rgb": {
+                    "red": 253,
+                    "green": 236,
+                    "blue": 174
+                }
+            }
+        },
+        "tones": {
+            "warm": 0.4084,
+            "neutral": 0.5916,
+            "cool": 0
+        }
+    },
+    "foreground": {
+        "colors": {
+            "Orange": {
+                "coverage": 0.6022,
+                "rgb": {
+                    "red": 249,
+                    "green": 165,
+                    "blue": 45
+                }
+            },
+            "Gold": {
+                "coverage": 0.1935,
+                "rgb": {
+                    "red": 253,
+                    "green": 188,
+                    "blue": 58
+                }
+            },
+            "Mustard": {
+                "coverage": 0.1722,
+                "rgb": {
+                    "red": 253,
+                    "green": 207,
+                    "blue": 84
+                }
+            },
+            "Cream": {
+                "coverage": 0.0173,
+                "rgb": {
+                    "red": 253,
+                    "green": 235,
+                    "blue": 170
+                }
+            },
+            "Yellow": {
+                "coverage": 0.0148,
+                "rgb": {
+                    "red": 254,
+                    "green": 229,
+                    "blue": 117
+                }
+            }
+        },
+        "tones": {
+            "warm": 0.9827,
+            "neutral": 0.0173,
+            "cool": 0
+        }
+    },
+    "background": {
+        "colors": {
+            "White": {
+                "coverage": 0.9923,
+                "rgb": {
+                    "red": 254,
+                    "green": 254,
+                    "blue": 243
+                }
+            },
+            "Dark_Brown": {
+                "coverage": 0.0077,
+                "rgb": {
+                    "red": 83,
+                    "green": 68,
+                    "blue": 57
+                }
+            }
+        },
+        "tones": {
+            "warm": 0,
+            "neutral": 1.0,
+            "cool": 0
+        }
+    }
+}]
+```
+
+Outre les couleurs de l’image globale, vous pouvez désormais afficher les couleurs des régions de premier plan et d’arrière-plan. Puisque nous activons la récupération des tons pour chacune des régions ci-dessus, nous pouvons également récupérer un histogramme des tons.
+
+**Paramètres d&#39;entrée**
+
+| Nom | Type de données | Obligatoire | Par défaut | Valeurs | Description |
+| --- | --- | --- | --- | --- | --- |
+| `documents` | array (Document-Object) | Oui | - | Reportez-vous à l’exemple ci-dessous : | Liste des éléments json avec chaque élément de la liste représentant un document. |
+| `top_n` | nombre | Non | 0 | Entier non négatif | Nombre de résultats à renvoyer. 0, pour renvoyer tous les résultats. En cas d’utilisation conjointe avec le seuil, le nombre de résultats renvoyé sera inférieur à l’une ou l’autre des limites. |
+| `min_coverage` | nombre | Non | 0.05 | Nombre réel | Seuil de couverture au-dessus duquel les résultats doivent être renvoyés. Paramètre Exclure pour renvoyer tous les résultats. |
+| `resize_image` | nombre | Non | True | True/False | Si vous souhaitez redimensionner l’image d’entrée ou non. Par défaut, les images sont redimensionnées à 320 x 320 pixels avant l’extraction des couleurs. À des fins de débogage, nous pouvons également permettre au code de s’exécuter sur l’image complète, en définissant ce paramètre sur False. |
+| `enable_mask` | nombre | Non | False | True/False | Active/désactive l’extraction de couleurs |
+| `retrieve_tone` | nombre | Non | False | True/False | Active/désactive l’extraction des tons |
+
+**Objet document**
+
+| Nom | Type de données | Obligatoire | Par défaut | Valeurs | Description |
+| -----| --------- | -------- | ------- | ------ | ----------- |
+| `repo:path` | chaîne | - | - | - | URL présignée du document duquel extraire les expressions clés. |
+| `sensei:repoType` | chaîne | - | - | HTTPS | Type de référentiel dans lequel le document est stocké. |
+| `sensei:multipart_field_name` | chaîne | - | - | - | Utilisez-le lorsque vous transmettez le document en tant qu’argument en plusieurs parties au lieu d’utiliser des URL présignées. |
+| `dc:format` | chaîne | Oui | - | &quot;text/plain&quot;,<br>&quot;application/pdf&quot;,<br>&quot;text/pdf&quot;,<br>&quot;text/html&quot;,<br>&quot;text/rtf&quot;,<br>&quot;application/rtf&quot;,<br>&quot;application/msword&quot;,<br>&quot;application/vnd.openxmlformats-office-document.wordprocessingml.document&quot;,<br>&quot;application/mspowerpoint&quot;,<br>&quot;application/vnd.ms-powerpoint&quot;,<br>&quot;application/vnd.openxmlformats-office.document.présentation.ml.présentation&quot; | Le codage du document est comparé aux types de codage d’entrée autorisés avant d’être traité. |
