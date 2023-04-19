@@ -5,9 +5,9 @@ breadcrumb-title: Guide d’ingestion de données
 user-guide-description: Insérez vos données dans Experience Platform par ingestion en lot ou en flux continu.
 feature: Data Ingestion
 source-git-commit: 6110bf51cbd0005428e7dab4552944c5c9b54d03
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '156'
-ht-degree: 83%
+ht-degree: 100%
 
 ---
 
@@ -27,9 +27,9 @@ ht-degree: 83%
    - [Dépannage](batch-ingestion/troubleshooting.md)
 - Tutoriels {#tutorials}
    - Mappage d’un fichier CSV à XDM {#map-csv}
-      - [Aperçu](./tutorials/map-csv/overview.md)
+      - [Présentation](./tutorials/map-csv/overview.md)
       - [Mapper un fichier CSV à un schéma existant](./tutorials/map-csv/existing-schema.md)
-      - [Mappage d’un fichier CSV à l’aide de recommandations générées par l’IA](./tutorials/map-csv/recommendations.md)
+      - [Mapper un fichier CSV à l’aide de recommandations générées par l’IA](./tutorials/map-csv/recommendations.md)
    - [Ingestion de données par lots à l’aide de l’interface utilisateur](tutorials/ingest-batch-data.md)
    - [Créer une connexion en continu authentifiée](tutorials/create-authenticated-streaming-connection.md)
    - [Création d’une connexion en continu (API)](tutorials/create-streaming-connection.md)
@@ -44,8 +44,8 @@ ht-degree: 83%
    - [Récupération des lots en échec](quality/retrieve-failed-batches.md)
    - [Validation de l’ingestion par flux](quality/streaming-validation.md)
    - [Notifications d’ingestion de données](quality/subscribe-events.md)
-- [Mécanismes de sécurisation pour l’ingestion des données](guardrails.md)
+- [Barrières de sécurité pour l’ingestion de données](guardrails.md)
 - [Connecteurs source](source-connectors.md)
-- [Référence de l’API Batch Ingestion](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/)
-- [Référence de l’API d’ingestion par flux](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion/)
+- [Référence de l’API d’ingestion par lots](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/)
+- [Référence de l’API d’ingestion en flux continu](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion/)
 - [Notes de mise à jour de Platform](https://docs.adobe.com/content/help/fr-FR/experience-platform/release-notes/latest.html)
