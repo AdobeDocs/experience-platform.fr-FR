@@ -6,9 +6,9 @@ user-guide-description: Découvrez comment déployer et gérer des balises d’a
 feature: Tags
 solution: Data Collection
 source-git-commit: 95a56982d38bd1e2c72dd84e2fa48b9de659741f
-workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+workflow-type: ht
+source-wordcount: '970'
+ht-degree: 100%
 
 ---
 
