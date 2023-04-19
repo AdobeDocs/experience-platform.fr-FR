@@ -4,7 +4,7 @@ title: Vue d’ensemble de Real-Time Customer Profile
 description: Le profil client en temps réel fusionne des données provenant de diverses sources et permet d’accéder à ces données sous la forme de profils clients individuels et d’événements de séries temporelles associés. Cette fonctionnalité permet aux spécialistes marketing d’offrir à leur audience des expériences coordonnées, cohérentes et pertinentes sur plusieurs canaux.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
 source-git-commit: 8f61840ad60b7d24c980b218b6f742485f5ebfdd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1991'
 ht-degree: 100%
 
