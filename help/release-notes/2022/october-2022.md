@@ -3,7 +3,7 @@ title: Notes de mise à jour d’octobre 2022 d’Adobe Experience Platform
 description: Les notes de mise à jour d’octobre 2022 pour Adobe Experience Platform.
 exl-id: 61ef2472-5e79-433f-9f60-b1245f619b42
 source-git-commit: cd99ccb7b026565814dd6f268b2a92dda34bc7f0
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1343'
 ht-degree: 100%
 
@@ -18,11 +18,11 @@ ht-degree: 100%
 Mises à jour des fonctionnalités existantes dans Adobe Experience Platform :
 
 - [Notes de mise à jour d’Adobe Experience Platform](#adobe-experience-platform-release-notes)
-   - [Clés gérées par le client {#cmk}](#customer-managed-keys-cmk)
+   - [Clés gérées par le client ou la cliente {#cmk}](#customer-managed-keys-cmk)
    - [Collecte de données {#data-collection}](#data-collection-data-collection)
    - [\[!DNL Destinations\] {#destinations}](#dnl-destinations-destinations)
    - [Modèle de données d’expérience (XDM) {#xdm}](#experience-data-model-xdm-xdm)
-   - [Query Service {#query-service}](#query-service-query-service)
+   - [Query Service {#query-service}](#query-service-query-service)
    - [Sources {#sources}](#sources-sources)
 
 ## Clés gérées par le client {#cmk}
