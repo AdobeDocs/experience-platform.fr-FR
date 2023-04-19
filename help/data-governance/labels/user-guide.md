@@ -7,7 +7,7 @@ exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
 source-git-commit: 1a4e71ee07900fb4f1581274f740ddb96cb93289
 workflow-type: tm+mt
 source-wordcount: '1529'
-ht-degree: 86%
+ht-degree: 100%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 86%
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataGovernance_description"
 >title="Gouverner l’utilisation des données dans Platform"
->abstract="<h2>Description</h2><p>La structure de gouvernance des données dans Experience Platform vous permet d’étiqueter les attributs et les jeux de données en fonction des restrictions d’utilisation des données et de configurer des stratégies qui identifient et respectent ces restrictions pour des actions marketing spécifiques.</p>"
+>abstract="<h2>Description</h2><p>La structure de gouvernance des données dans Experience Platform vous permet de libeller les attributs et les jeux de données en fonction des restrictions d’utilisation des données et de configurer des stratégies qui identifient et respectent ces restrictions pour des actions marketing spécifiques.</p>"
 
 Ce guide d’utilisation détaille la procédure d’utilisation des libellés d’utilisation des données dans l’interface utilisateur [!DNL Experience Platform].
 
@@ -87,7 +87,7 @@ L’option **[!UICONTROL Afficher les libellés hérités]** est activée par d�
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataGovernance_instructions"
 >title="Instructions"
->abstract="<ol><li>Sélectionner <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/user-guide.html?lang=fr">Jeux de données</a> dans le volet de navigation de gauche, sélectionnez le jeu de données dont vous souhaitez restreindre les données.</li><li>Dans la vue Détails du jeu de données, sélectionnez la variable <b>Gouvernance des données</b> .</li><li>Sélectionnez les champs du jeu de données que vous souhaitez restreindre, puis sélectionnez <b>Modification des étiquettes de gouvernance</b> pour étiqueter les données en fonction des restrictions d’utilisation.</li><li>Après avoir étiqueté vos données, sélectionnez <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html?lang=fr">Stratégies</a> dans le volet de navigation de gauche, puis sélectionnez <b>Créer une stratégie</b>.</li><li>Choisissez de créer un <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html#create-governance-policy">Stratégie de gouvernance des données</a>, puis sélectionnez les libellés d’utilisation des données que la stratégie appliquera à la stratégie.</li><li>Sélectionnez la ou les actions marketing que la stratégie refusera pour toutes les données contenant ces étiquettes. Une fois la stratégie créée, sélectionnez-la dans la liste et activez-la à l’aide du bouton d’activation/désactivation du rail de droite.</li><li>Pour chaque stratégie activée, Platform empêche l’utilisation des données contenant les libellés spécifiés pour les actions marketing définies. Cette mise en oeuvre a lieu automatiquement lorsque vous tentez d’activer des données étiquetées vers une destination avec des actions marketing associées (cas pratiques).</li></ol>"
+>abstract="<ol><li>Sélectionnez <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/user-guide.html?lang=fr">Jeux de données</a> dans le volet de navigation de gauche, puis cliquez sur le jeu de données dont vous souhaitez restreindre les données.</li><li>Dans la vue des détails du jeu de données, sélectionnez l’onglet <b>Gouvernance des données</b>.</li><li>Sélectionnez les champs du jeu de données que vous souhaitez restreindre, puis cliquez sur <b>Modifier les libellés de gouvernance</b> pour libeller les données en fonction des restrictions d’utilisation.</li><li>Une fois les données libellées, sélectionnez <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html?lang=fr">Stratégies</a> dans le volet de navigation de gauche et cliquez sur <b>Créer une stratégie</b>.</li><li>Créez une <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html?lang=fr#create-governance-policy">Stratégie de gouvernance des données</a>, puis sélectionnez les libellés d’utilisation des données que la stratégie appliquera à la stratégie.</li><li>Sélectionnez la ou les actions marketing que la stratégie refusera pour toutes les données contenant ces libellés. Une fois la stratégie créée, sélectionnez-la dans la liste et activez-la à l’aide du bouton (bascule) du rail de droite.</li><li>En fonction de la stratégie activée, Platform empêche l’utilisation des données contenant les libellés spécifiés pour la ou les actions marketing définies. Cette implémentation a lieu automatiquement lorsque vous tentez d’activer des données libellées vers une destination avec des actions marketing associées (cas d’utilisation).</li></ol>"
 
 >[!IMPORTANT]
 >

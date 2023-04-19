@@ -7,7 +7,7 @@ exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
 source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
 source-wordcount: '1540'
-ht-degree: 91%
+ht-degree: 98%
 
 ---
 
@@ -106,10 +106,10 @@ Le tableau suivant décrit les autorisations disponibles pour [!DNL Experience P
 | [!DNL Sandbox Administration] | [!UICONTROL Gestion des sandbox] | Accès à la lecture, la création, la modification et la suppression des sandbox. |
 | [!DNL Sandbox Administration] | [!UICONTROL Affichage des sandbox] | Accès en lecture seule aux sandbox appartenant à votre organisation. |
 | [!DNL Sandbox Administration] | [!UICONTROL Réinitialisation d’un sandbox] | Capacité à réinitialiser un sandbox. |
-| [!DNL Destinations] | [!UICONTROL Gestion des destinations] | Accès à la lecture, la création et la suppression des flux d’activation et des comptes de destination de destination. |
+| [!DNL Destinations] | [!UICONTROL Gestion des destinations] | Accès à la lecture, à la création et à la suppression des flux d’activation de destination et des comptes de destination. |
 | [!DNL Destinations] | [!UICONTROL Affichage des destinations] | Accès en lecture seule aux destinations disponibles dans l’onglet **[!UICONTROL Catalogue]** et aux destinations authentifiées dans l’onglet **[!UICONTROL Parcourir]**. |
-| [!DNL Destinations] | [!UICONTROL Activation des destinations] | Permet aux utilisateurs d’activer des segments vers des destinations existantes. Active l’étape de mappage dans le workflow d’activation. Cette autorisation nécessite : [!UICONTROL Affichage des destinations] ou [!UICONTROL Gestion des destinations] à être accordée à l’utilisateur qui activera les données vers les destinations. |
-| [!DNL Destinations] | [!UICONTROL Activation du segment sans mappage] | Permet aux utilisateurs d’activer des segments vers des destinations existantes, sans afficher la variable [étape de mappage](../destinations/ui/activate-batch-profile-destinations.md#mapping). Les utilisateurs peuvent ajouter et supprimer des segments dans les workflows d’activation, mais ils ne peuvent pas ajouter ni supprimer des attributs ou des identités mappés. Cette autorisation nécessite que la variable [!UICONTROL Activation des destinations] autorisation à être accordée à l’utilisateur qui activera les données vers les destinations. |
+| [!DNL Destinations] | [!UICONTROL Activation des destinations] | Permet aux utilisateurs et utilisatrices d’activer des segments vers des destinations existantes. Active l’étape de mappage dans le workflow d’activation. Cette autorisation nécessite d’accorder les autorisations [!UICONTROL Afficher les destinations] ou [!UICONTROL Gérer les destinations] à l’utilisateur ou utilisatrice qui activera les données vers les destinations. |
+| [!DNL Destinations] | [!UICONTROL Activer un segment sans mappage] | Permet aux utilisateurs et utilisatrices d’activer des segments vers des destinations existantes, sans afficher l’[étape de mappage](../destinations/ui/activate-batch-profile-destinations.md#mapping). Les utilisateurs et utilisatrices peuvent ajouter et supprimer des segments dans les workflows d’activation, mais ne peuvent pas ajouter ni supprimer des attributs ou des identités mappés. Cette autorisation nécessite d’accorder l’autorisation [!UICONTROL Activer les destinations] à l’utilisateur ou l’utilisatrice qui activera les données vers les destinations. |
 | [!DNL Destinations] | [!UICONTROL Gérer et activer des destinations de jeu de données] | Possibilité de lire, créer, modifier et désactiver les flux d’exportation des jeux de données. Possibilité d’activer les données vers les jeux de données actifs qui ont été créés. |
 | [!DNL Destinations] | [!UICONTROL Création de destinations] | Possibilité de créer des destinations à lʼaide du [SDK Destination Adobe Experience Platform](../destinations/destination-sdk/overview.md). |
 | [!DNL Data Ingestion] | [!UICONTROL Gestion des sources] | Accès à la lecture, la création, la modification et la désactivation des sources. |

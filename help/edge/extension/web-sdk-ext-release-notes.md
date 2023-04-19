@@ -5,7 +5,7 @@ exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
 source-git-commit: 52c6420a7fba6474dd2e9e97c9b2f49b5208be1d
 workflow-type: tm+mt
 source-wordcount: '1620'
-ht-degree: 95%
+ht-degree: 98%
 
 ---
 
@@ -18,18 +18,18 @@ Ce document contient les notes de mise à jour de l’extension de balises du SD
 
 * Correction d’un problème lié aux éléments de données Objet XDM et Variable en raison duquel vous ne pouviez pas sélectionner un schéma dans un environnement de test autre que l’environnement de test par défaut.
 
-## Version 2.16.0 - 30 mars 2023
+## Version 2.16.0 - 30 mars 2023
 
 **Nouvelles fonctionnalités**
 
-* (Version bêta) ajoutée **[!UICONTROL Mettre à jour la variable]** action et **[!UICONTROL Variable]** élément de données.
-* Ajout de la configuration pour [`onBeforeLinkClickSend`](../fundamentals/configuring-the-sdk.md#onBeforeLinkClickSend) fonction de rappel.
+* (Beta) Ajout de l’action **[!UICONTROL Mettre à jour la variable]** et de l’élément de données **[!UICONTROL Variable]**.
+* Ajout de la configuration pour la fonction de rappel [`onBeforeLinkClickSend`](../fundamentals/configuring-the-sdk.md#onBeforeLinkClickSend).
 
 **Correctifs et améliorations**
 
-* Correction d’un problème en raison duquel le fait de cliquer sur les éléments d’une balise d’ancrage ne fonctionnait pas lorsque la variable **[!UICONTROL Redirection vers une identité]** a été utilisée.
+* Correction d’un problème en raison duquel le fait de cliquer sur les éléments d’une balise d’ancrage ne fonctionnait pas lors de l’utilisation de l’action **[!UICONTROL Rediriger avec l’identité]**.
 * Correction d’un problème en raison duquel les éléments de données d’objet XDM ne fonctionnaient pas lorsqu’un seul schéma était présent.
-* Contient la version 2.15.0 du SDK Web Adobe Experience Platform.
+* Contient la version 2.15.0 du SDK web d’Adobe Experience Platform.
 
 
 ## Version 2.15.1, - 26 Janvier 2023

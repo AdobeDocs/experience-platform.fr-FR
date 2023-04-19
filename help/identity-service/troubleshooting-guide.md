@@ -7,7 +7,7 @@ exl-id: dac31bc3-7003-46d6-9d41-9f6fd3645c2c
 source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
 source-wordcount: '2176'
-ht-degree: 95%
+ht-degree: 96%
 
 ---
 
@@ -282,7 +282,7 @@ Cette erreur s’affiche quand une exception inattendue se produit lors de l’e
 
 [!DNL Identity Service] ingère des données d’identité à partir des données d’enregistrement et de série temporelle téléchargées dans [!DNL Platform] à l’aide de la fonction d’ingestion par lots. L’ingestion par lots est un processus asynchrone, vous devez afficher les détails d’un lot pour voir les erreurs. Les erreurs s’accumulent au fur et à mesure que le lot avance, jusqu’à ce que le traitement du lot soit terminé.
 
-Voici une liste des messages d’erreur liés à [!DNL Identity Service] vous pouvez rencontrer lors de l’utilisation de la variable [API Batch Ingestion](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/).
+Voici une liste des messages d’erreur dans [!DNL Identity Service], que vous pouvez rencontrer lors de l’utilisation de l’[API d’ingestion par lots](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/).
 
 ### Schéma XDM inconnu
 

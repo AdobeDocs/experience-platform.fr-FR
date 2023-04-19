@@ -7,7 +7,7 @@ feature: Destinations
 source-git-commit: fb1a8f3a8f78578a0c7d6b8ab4feb60d8c5da1af
 workflow-type: tm+mt
 source-wordcount: '1072'
-ht-degree: 97%
+ht-degree: 99%
 
 ---
 
@@ -29,7 +29,7 @@ ht-degree: 97%
    * [Mettre à jour les flux de données de destination](./api/update-destination-dataflows.md)
    * [Supprimer les comptes de destination](./api/delete-destination-account.md)
    * [Supprimer les flux de données de destination](./api/delete-destination-dataflow.md)
-   * [(Version bêta) Activation des données vers des destinations basées sur des fichiers à l’aide de l’API Flow Service](/help/destinations/api/activate-segments-file-based-destinations.md)
+   * [(Beta) Activer des données vers des destinations basées sur des fichiers à l’aide de l’API de service de flux](/help/destinations/api/activate-segments-file-based-destinations.md)
    * [(Version bêta) Exporter des jeux de données](/help/destinations/api/export-datasets.md)
 * Guides d’interface utilisateur {#ui}
    * [Espace de travail des destinations](./ui/destinations-workspace.md)
@@ -64,7 +64,7 @@ ht-degree: 97%
       * [Présentation des destinations publicitaires](./catalog/advertising/overview.md)
       * [Connexion Adobe Advertising Cloud](./catalog/advertising/adobe-advertising-cloud-connection.md)
       * [Extension Adobe Advertising Cloud](./catalog/advertising/adobe-advertising-cloud.md)
-      * [(Version bêta) Connexion Amazon Ads](./catalog/advertising/amazon-ads.md)
+      * [Connexion Amazon Ads (Beta)](./catalog/advertising/amazon-ads.md)
       * [Extension Awin Advertiser Conversion Tag](./catalog/advertising/awin-conversiontag.md)
       * [Extension Awin Advertiser Mastertag](./catalog/advertising/awin-mastertag.md)
       * [Extension Bing Ads Universal Event Tracking (UET)](./catalog/advertising/bing-ads.md)
@@ -85,7 +85,7 @@ ht-degree: 97%
       * [Connexion Microsoft Bing](./catalog/advertising/bing.md)
       * [Extension Pinterest Conversion Tracking](./catalog/advertising/pinterest-extension.md)
       * [Connexion Liste des Clients Pinterest](./catalog/advertising/pinterest.md)
-      * [Connexion Snapchat Ads](./catalog/advertising/snap-inc.md)
+      * [Connexion Snapchat Ads](./catalog/advertising/snap-inc.md)
       * [Connexion à The Trade Desk](./catalog/advertising/tradedesk.md)
       * [(Version bêta) Connexion CRM à The Trade Desk](./catalog/advertising/tradedesk-emails.md)
       * [Extension Twitter Universal Website Tag](./catalog/advertising/twitter-uwt.md)

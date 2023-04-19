@@ -5,7 +5,7 @@ exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
 source-git-commit: 3ebf8df16f88660eab481bd0a0ba88816b470255
 workflow-type: tm+mt
 source-wordcount: '720'
-ht-degree: 70%
+ht-degree: 95%
 
 ---
 
@@ -13,17 +13,17 @@ ht-degree: 70%
 
 ## 29 mars 2023
 
-**Workflows de démarrage rapide (version bêta)**
+**Workflows de démarrage rapide (Beta)**
 
-Accédez aux nouveaux workflows de démarrage rapide sous &quot;Prise en main&quot; à partir de l’écran d’accueil de la collecte de données ! Les workflows suivants sont désormais disponibles pour les clients sous la forme d’une version bêta publique.
-* **[API des conversions de métadonnées](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/meta/overview.html?lang=en#quick-start)**: Les clients de transfert d’événements peuvent collecter et transférer rapidement des données d’événement côté serveur vers des métadonnées pour les conversions de publicités en quelques étapes simples.
-* **[SDK Mobile](https://developer.adobe.com/client-sdks/documentation/)**: Les clients peuvent rapidement mettre en oeuvre le SDK Mobile et valider les événements mobiles de base en quelques étapes simples.
+Accédez aux nouveaux workflows de démarrage rapide sous « Prise en main » à partir de l’écran d’accueil Collecte de données. Les workflows suivants sont désormais disponibles pour les clientes et clients sous la forme d’une version Beta publique.
+* **[API Meta Conversions](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/meta/overview.html?lang=fr#quick-start)** : les clientes et clients utilisant le transfert d’événement peuvent collecter et transférer rapidement des données d’événement côté serveur vers les métadonnées pour les conversions publicitaires en quelques étapes simples.
+* **[SDK mobile](https://developer.adobe.com/client-sdks/documentation/)** : les clientes et clients peuvent rapidement implémenter le SDK mobile et valider les événements mobiles de base en quelques étapes simples.
 
 De nouvelles extensions ont été publiées :
 
-* **[!DNL Braze]extension de transfert d’événement**: Le [[!DNL Braze Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html) l’extension de transfert d’événement vous permet d’exploiter les données capturées dans Adobe Experience Platform Edge Network et de les envoyer à [!DNL Braze] sous la forme d’événements côté serveur à l’aide de la variable [!DNL Braze] API de suivi des utilisateurs.
-* **[API des événements Epsilon] extension de transfert d’événement**: Le [[!DNL Epsilon Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html) l’extension vous permet d’exploiter le transfert d’événement pour capturer des informations d’événement dans Adobe Experience Platform Edge Network et les envoyer à [!DNL Epsilon] en utilisant la variable [!DNL Epsilon] API d’événement.
-* **[!DNL Mixpanel]extension de transfert d’événement**: Le [[!DNL Mixpanel Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html) l’extension vous permet d’exploiter le transfert d’événement pour capturer des informations d’événement dans Adobe Experience Platform Edge Network et les envoyer à [!DNL Mixpanel] à l’aide de l’API Track Events.
+* Extension de transfert d’événement **[!DNL Braze]** : l’extension de transfert d’événement [[!DNL Braze Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html?lang=fr) vous permet d’exploiter les données capturées sur le réseau Edge d’Adobe Experience Platform et de les envoyer à [!DNL Braze] sous la forme d’événements côté serveur à l’aide des API de suivi des utilisateurs [!DNL Braze].
+* **[API des événements Epsilon] extension de transfert d’événement**: Le [[!DNL Epsilon Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html?lang=fr) l’extension vous permet d’exploiter le transfert d’événement pour capturer des informations d’événement dans Adobe Experience Platform Edge Network et les envoyer à [!DNL Epsilon] en utilisant la variable [!DNL Epsilon] API d’événement.
+* Extension de transfert d’événement **[!DNL Mixpanel]** : l’extension [[!DNL Mixpanel Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html?lang=fr)[!DNL Mixpanel] vous permet d’exploiter le transfert d’événement pour capturer des informations d’événement sur le réseau Edge d’Adobe Experience Platform et les envoyer à à l’aide de l’API de suivi des événements.
 
 ## 25 janvier 2023
 
