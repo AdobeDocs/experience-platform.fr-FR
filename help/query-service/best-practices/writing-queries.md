@@ -5,10 +5,10 @@ title: Directives générales pour l’exécution de requête dans Query Service
 type: Tutorial
 description: Ce document présente les détails importants à connaître lors de l’écriture de requêtes dans Adobe Experience Platform Query Service.
 exl-id: a7076c31-8f7c-455e-9083-cbbb029c93bb
-source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
+source-git-commit: adf8da46d09c60b86df16493043efeacbdd24fe2
 workflow-type: tm+mt
-source-wordcount: '1072'
-ht-degree: 46%
+source-wordcount: '1067'
+ht-degree: 47%
 
 ---
 
@@ -324,8 +324,7 @@ La lecture de ce document vous a permis de vous initier à certaines considérat
 Pour plus d’exemples de requêtes pouvant être utilisées dans Query Service, veuillez lire la documentation de cas d’utilisation suivante :
 
 - [Analytics insights](../use-cases/analytics-insights.md)
-- [Analyse des activités avec Adobe Target](../use-cases/activity-analysis-with-adobe-target.md)
 - [Créer un rapport de tendance d’événements](../use-cases/trended-report-of-events.md)
 - [Afficher un rapport de cumul d’un visiteur](../use-cases/roll-up-report-of-a-visitor.md)
-- [Répertorier les pages vues d’un utilisateur](../use-cases/list-visitor-sessions.md)
+- [Répertorier les pages vues d’un utilisateur ou d’une utilisatrice](../use-cases/list-visitor-sessions.md)
 - [Répertorier les visiteurs selon leur nombre de pages vues](../use-cases/visitors-by-number-of-page-views.md)
