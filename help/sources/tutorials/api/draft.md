@@ -1,18 +1,18 @@
 ---
-keywords: Experience Platform;accueil;rubriques les plus consultées;service de flux ;
-title: Brouillons De Flux À L’Aide De L’API Flow Service
-description: Découvrez comment définir vos flux de données dans un état de brouillon à l’aide de l’API Flow Service.
-badge: label="Nouvelle fonctionnalité" type="Positive"
+keywords: Experience Platform;accueil;rubriques les plus consultées;flow service;
+title: Créer des brouillons de flux de données à l’aide de l’API Flow Service
+description: Découvrez comment définir vos flux de données sur le statut de brouillon à l’aide de l’API Flow Service.
+badge: label="New Feature" type="Positive"
 source-git-commit: d093e34ae4b353d1ed6db922b6da66cf23f25c48
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '591'
-ht-degree: 18%
+ht-degree: 100%
 
 ---
 
-# Brouillons de flux de données à l’aide de l’API Flow Service
+# Créer des brouillons de flux de données à l’aide de l’API Flow Service
 
-Enregistrez vos flux de données en tant que brouillons lors de l’utilisation de l’API Flow Service en fournissant la variable `mode=draft` paramètre de requête lors de l’appel de création de flux. Les versions préliminaires peuvent être mises à jour ultérieurement avec de nouvelles informations, puis publiées une fois qu’elles sont prêtes. Ce tutoriel décrit les étapes à suivre pour définir vos flux de données dans un état de brouillon à l’aide de l’API Flow Service.
+Enregistrez vos flux de données en tant que brouillons lors de l’utilisation de l’API Flow Service en indiquant le paramètre de requête `mode=draft` lors de l’appel de création de flux. Vous pouvez modifier les brouillons à tout moment et les publier quand ils sont prêts. Ce tutoriel décrit les étapes à suivre pour définir vos flux de données sur le statut de brouillon à l’aide de l’API Flow Service.
 
 ## Prise en main
 
@@ -23,28 +23,28 @@ Ce tutoriel nécessite une compréhension du fonctionnement des composants suiva
 
 ### Conditions préalables
 
-Ce tutoriel nécessite que vous ayez déjà généré les ressources nécessaires pour créer un flux de données. Cela inclut les éléments suivants :
+Avant de suivre ce tutoriel, vous devez avoir généré les ressources nécessaires pour créer un flux de données. Il s’agit des éléments suivants :
 
-* Une connexion de base authentifiée
-* Une connexion source
-* Un schéma XDM cible
-* Un jeu de données cible
-* Une connexion cible
-* Mappage
+* une connexion de base authentifiée,
+* une connexion source,
+* un schéma XDM cible,
+* un jeu de données cible,
+* une connexion cible,
+* un mappage.
 
-Si vous ne disposez pas encore de ces valeurs, sélectionnez une source parmi [catalogue dans la présentation des sources](../../home.md). Suivez ensuite les instructions de cette source donnée pour générer les ressources requises pour créer un flux de données de brouillon.
+Si vous ne disposez pas de ces ressources, sélectionnez une source dans le [catalogue de la présentation des sources](../../home.md). Suivez ensuite les instructions de la source donnée pour générer les ressources nécessaires à la création d’un brouillon de flux de données.
 
 ### Utiliser les API Platform
 
 Pour plus d’informations sur la manière d’effectuer des appels vers les API Platform, consultez le guide [Prise en main des API Platform](../../../landing/api-guide.md).
 
-## Définition du flux de données à l’état de brouillon
+## Définir un flux de données sur le statut de brouillon
 
-Les sections suivantes décrivent le processus de définition d’un flux de données en tant que brouillon, de mise à jour du flux de données, de publication du flux de données, puis de suppression finale du flux de données.
+Les sections suivantes décrivent comment définir un flux de données en tant que brouillon, mettre à jour le flux de données, le publier et le supprimer, si nécessaire.
 
-### Création d’un flux de données
+### Créer un brouillon de flux de données
 
-Pour définir un flux de données en tant que brouillon, envoyez une requête de POST à la variable `/flows` point d’entrée lors de l’ajout de la variable `mode=draft` comme paramètre de requête. Vous pouvez ainsi créer un flux de données et l’enregistrer en tant que brouillon.
+Pour définir un flux de données en tant que brouillon, envoyez une requête POST au point d’entrée `/flows` et indiquez le paramètre de requête `mode=draft`. Vous pouvez ainsi créer un flux de données et l’enregistrer en tant que brouillon.
 
 **Format d’API**
 
@@ -54,11 +54,11 @@ POST /flows?mode=draft
 
 | Paramètre | Description |
 | --- | --- |
-| `mode` | Paramètre de requête fourni par l’utilisateur qui décide de l’état du flux de données. Pour définir un flux de données en tant que brouillon, définissez `mode` to `draft`. |
+| `mode` | Paramètre de requête fourni par l’utilisateur ou l’utilisatrice qui décide du statut du flux de données. Pour définir un flux de données en tant que brouillon, définissez `mode` sur `draft`. |
 
 **Requête**
 
-La requête suivante crée un flux de données de brouillon.
+La requête suivante permet de créer un brouillon de flux de données.
 
 ```shell
   'https://platform-int.adobe.io/data/foundation/flowservice/flows?mode=draft' \
@@ -84,7 +84,7 @@ La requête suivante crée un flux de données de brouillon.
 
 **Réponse**
 
-Une réponse réussie renvoie la variable `id` et le `etag` de votre flux de données.
+Une réponse réussie renvoie l’`id` et l’`etag` correspondant de votre flux de données.
 
 ```json
 {
@@ -93,9 +93,9 @@ Une réponse réussie renvoie la variable `id` et le `etag` de votre flux de don
 }
 ```
 
-### Mise à jour d’un flux de données
+### Mettre à jour un flux de données
 
-Pour mettre à jour votre brouillon, envoyez une requête de PATCH à l’ `/flows` point d’entrée tout en fournissant l’identifiant du flux de données que vous souhaitez mettre à jour. Au cours de cette étape, vous devez également fournir un `If-Match` paramètre d’en-tête , qui correspond à `etag` du flux de données que vous souhaitez mettre à jour.
+Pour mettre à jour le brouillon, envoyez une requête PATCH au point d’entrée `/flows` et indiquez l’identifiant du flux de données à mettre à jour. Au cours de cette étape, vous devez également fournir un paramètre d’en-tête `If-Match`, qui correspond à l’`etag` du flux de données que vous souhaitez mettre à jour.
 
 **Format d’API**
 
@@ -105,7 +105,7 @@ PATCH /flows/{FLOW_ID}
 
 **Requête**
 
-Les requêtes suivantes ajoutent des transformations de mappage au flux de données brouillé.
+Les requêtes suivantes permettent d’ajouter des transformations de mappage au brouillon de flux de données.
 
 ```shell
 curl -X PATCH \
@@ -134,7 +134,7 @@ curl -X PATCH \
 
 **Réponse**
 
-Une réponse réussie renvoie votre identifiant de flux et `etag`. Pour vérifier la modification, vous pouvez envoyer une demande de GET à la variable `/flows` point de terminaison tout en fournissant votre identifiant de flux.
+Une réponse réussie renvoie l’identifiant de flux et l’`etag`. Pour vérifier que la modification a réussi, envoyez une requête GET au point d’entrée `/flows` et indiquez votre identifiant de flux.
 
 ```json
 {
@@ -143,9 +143,9 @@ Une réponse réussie renvoie votre identifiant de flux et `etag`. Pour vérifie
 }
 ```
 
-### Publication d’un flux de données
+### Publier un flux de données
 
-Une fois que votre brouillon est prêt à être publié, envoyez une requête de POST au `/flows` point de terminaison tout en fournissant l’identifiant du flux de données de brouillon que vous souhaitez publier, ainsi qu’une opération d’action pour la publication.
+Une fois que votre brouillon est prêt à être publié, envoyez une requête POST au point d’entrée `/flows` et indiquez l’identifiant du brouillon de flux de données que vous souhaitez publier, ainsi qu’une opération d’action pour la publication.
 
 **Format d’API**
 
@@ -155,11 +155,11 @@ POST /flows/{FLOW_ID}/action?op=publish
 
 | Paramètre | Description |
 | --- | --- |
-| `op` | Opération d’action qui met à jour l’état du flux de données interrogé. Pour publier un brouillon de flux de données, définissez `op` to `publish`. |
+| `op` | Opération d’action qui met à jour le statut du flux de données interrogé. Pour publier un brouillon de flux de données, définissez `op` sur `publish`. |
 
 **Requête**
 
-La requête suivante publie votre flux de données de brouillon.
+La requête suivante permet de publier le brouillon de flux de données.
 
 ```shell
 curl -X POST \
@@ -172,7 +172,7 @@ curl -X POST \
 
 **Réponse**
 
-Une réponse réussie renvoie l’identifiant et le `etag` de votre flux de données.
+Une réponse réussie renvoie l’identifiant et l’`etag` correspondant du flux de données.
 
 ```json
 {
@@ -183,4 +183,4 @@ Une réponse réussie renvoie l’identifiant et le `etag` de votre flux de donn
 
 ### Supprimer un flux de données
 
-Pour supprimer votre flux de données, envoyez une requête de DELETE au `/flows` point d’entrée tout en fournissant l’identifiant du flux de données que vous souhaitez supprimer. Pour obtenir des instructions détaillées sur la suppression d’un flux de données à l’aide de l’API Flow Service, consultez le guide sur [suppression d’un flux de données dans l’API](./delete-dataflows.md).
+Pour supprimer le flux de données, envoyez une requête DELETE au point d’entrée `/flows` et indiquez l’identifiant du flux de données à supprimer. Pour connaître la procédure de suppression d’un flux de données à l’aide de l’API Flow Service, consultez le guide sur la [suppression d’un flux de données dans l’API](./delete-dataflows.md).
