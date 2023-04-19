@@ -5,9 +5,9 @@ breadcrumb-title: Guide de Query Service
 user-guide-description: Utilisez le langage SQL standard pour interroger les données du lac de données dans Experience Platform.
 feature: Queries
 source-git-commit: 83d1889450ba292573a6f995120691fc57cb6cfa
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '275'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -35,9 +35,9 @@ ht-degree: 98%
    - [Analyse de l’attribution](use-cases/attribution-analysis.md)
    - [Filtrage des robots](use-cases/bot-filtering.md)
    - [Créer un rapport de tendance d’événements](use-cases/trended-report-of-events.md)
-   - [Valeur de durée de vie client](use-cases/customer-lifetime-value.md)
+   - [Valeur durée de vie client](use-cases/customer-lifetime-value.md)
    - [Attributs dérivés basés sur les déciles](use-cases/deciles-use-case.md)
-   - [Correspondance floue](use-cases/fuzzy-match.md)
+   - [Correspondance approximative](use-cases/fuzzy-match.md)
    - [Répertorier les pages vues d’un utilisateur ou d’une utilisatrice](use-cases/list-visitor-sessions.md)
    - [Répertorier les visiteurs et visiteuses selon leurs vues de page](use-cases/visitors-by-number-of-page-views.md)
    - [Score de propension](use-cases/propensity-score.md)
