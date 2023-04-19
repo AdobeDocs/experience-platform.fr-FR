@@ -1,51 +1,51 @@
 ---
-title: Publicités Amazon
-description: Amazon Ads offre toute une gamme d’options pour vous aider à atteindre vos objectifs publicitaires pour les vendeurs enregistrés, les vendeurs, les vendeurs de livres, les auteurs de publication directe Kindle (KDP), les développeurs d’applications et/ou les agences. L’intégration d’Amazon Ads à Adobe Experience Platform offre une intégration clé en main aux produits Amazon Ads, y compris le DSP Amazon (ADSP). À l’aide de la destination Amazon Ads dans Adobe Experience Platform, les utilisateurs peuvent définir des audiences d’annonceurs pour le ciblage et l’activation sur la DSP Amazon.
+title: Amazon Ads
+description: Amazon Ads offre toute une gamme de solutions pour vous aider à atteindre vos objectifs publicitaires. Les partenaires de vente enregistrés, les vendeurs et vendeuses, les marchands de livres, les auteures et auteurs Kindle Direct Publishing (KDP), les personnes développant des applications et/ou les agences peuvent tirer parti du connecteur. L’intégration d’Amazon Ads à Adobe Experience Platform offre une intégration clé en main aux produits Amazon Ads, y compris Amazon DSP (ADSP). À l’aide de la destination Amazon Ads dans Adobe Experience Platform, les utilisateurs et utilisatrices peuvent définir des audiences d’annonceurs pour le ciblage et l’activation sur Amazon DSP.
 last-substantial-update: 2023-03-29T00:00:00Z
 source-git-commit: 732e6d3d53d983f3390941f4694d2c542d882004
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1277'
-ht-degree: 29%
+ht-degree: 100%
 
 ---
 
 
-# (Version bêta) Connexion Amazon Ads {#amazon-ads}
+# Connexion Amazon Ads (Beta) {#amazon-ads}
 
-## Aperçu {#overview}
+## Présentation {#overview}
 
-Amazon Ads offre toute une gamme d’options pour vous aider à atteindre vos objectifs publicitaires pour les vendeurs enregistrés, les vendeurs, les vendeurs de livres, les auteurs de publication directe Kindle (KDP), les développeurs d’applications et/ou les agences.
+Amazon Ads offre toute une gamme de solutions pour vous aider à atteindre vos objectifs publicitaires. Les partenaires de vente enregistrés, les vendeurs et vendeuses, les marchands de livres, les auteures et auteurs Kindle Direct Publishing (KDP), les personnes développant des applications et/ou les agences peuvent tirer parti du connecteur.
 
-L’intégration d’Amazon Ads à Adobe Experience Platform offre une intégration clé en main aux produits Amazon Ads, y compris le DSP Amazon (ADSP). À l’aide de la destination Amazon Ads dans Adobe Experience Platform, les utilisateurs peuvent définir des audiences d’annonceurs pour le ciblage et l’activation sur la DSP Amazon.
+L’intégration d’Amazon Ads à Adobe Experience Platform offre une intégration clé en main aux produits Amazon Ads, y compris Amazon DSP (ADSP). À l’aide de la destination Amazon Ads dans Adobe Experience Platform, les utilisateurs et utilisatrices peuvent définir des audiences d’annonceurs pour le ciblage et l’activation sur Amazon DSP.
 
-Cette connexion prend en charge la création d’audiences dans les Amazon Marketplaces suivants : `US`, `CA`, `MX`, `BR`.
+Cette connexion prend en charge la création d’audiences dans les Marketplaces Amazon suivantes : `US`, `CA`, `MX` et `BR`.
 
 >[!IMPORTANT]
 >
->Cette page de documentation a été créée par la fonction *Publicités Amazon* l&#39;équipe. Il s’agit actuellement d’un produit bêta qui peut faire l’objet de modifications. Pour toute demande de mise à jour ou de renseignements, contactez-les directement à l’adresse *`amc-support@amazon.com`.*
+>Cette page de documentation a été élaborée par l’équipe d’*Amazon Ads*. Il s’agit actuellement d’un produit en version Beta qui peut faire l’objet de modifications. Pour toute demande ou information, contactez directement l’équipe d’Amazon Ads à l’adresse *`amc-support@amazon.com`.*
 
 ## Cas d’utilisation {#use-cases}
 
-Pour vous aider à mieux comprendre comment et à quel moment utiliser la variable *Publicités Amazon* destination, voici des exemples de cas d’utilisation que les clients Adobe Experience Platform peuvent résoudre à l’aide de cette destination.
+Pour découvrir les avantages de la destination *Amazon Ads* et son utilisation, consultez les exemples de cas d’utilisation ci-dessous que la clientèle Adobe Experience Platform peut résoudre.
 
 ### Activation et ciblage {#activation-and-targeting}
 
-Cette intégration avec Amazon DSP permet aux annonceurs d’Amazon Ads de transmettre des segments CDP des annonceurs de Adobe Experience Platform à Amazon DSP afin de créer des audiences des annonceurs pour le ciblage publicitaire. Les audiences peuvent être sélectionnées dans Amazon DSP pour un ciblage positif, ainsi qu’un ciblage négatif (suppression). En outre, en utilisant des signaux générés par le Marketing Cloud Amazon, les annonceurs peuvent optimiser leurs audiences qui synchronisent les modifications d’audience avec les DSP Amazon.
+Cette intégration avec Amazon DSP permet aux annonceurs d’Amazon Ads de transmettre les segments CDP des annonceurs d’Adobe Experience Platform à Amazon DSP afin de créer des audiences d’annonceurs pour le ciblage publicitaire. Configurez Amazon DSP pour effectuer un ciblage positif ou négatif (suppression) des audiences. De plus, en utilisant les signaux générés par Amazon Marketing Cloud, les annonceurs peuvent optimiser leurs audiences et synchroniser les modifications d’audience avec Amazon DSP.
 
 ## Conditions préalables {#prerequisites}
 
-Pour utiliser la connexion Amazon Ads avec Adobe Experience Platform, les utilisateurs doivent d’abord avoir accès à un compte Amazon DSP Advertiser.  Pour configurer ces instances, consultez la page suivante du site web Amazon Ads :
+Pour utiliser la connexion d’Amazon Ads avec Adobe Experience Platform, vous devez disposer d’un compte d’annonceur Amazon DSP.  Pour configurer ces instances, consultez la page suivante sur le site web Amazon Ads :
 
-* [Prise en main d’Amazon DSP](https://advertising.amazon.com/solutions/products/amazon-dsp?ref_=a20m_us_hnav_p_dsp_adtech)
+* [Commencer avec Amazon DSP](https://advertising.amazon.com/solutions/products/amazon-dsp?ref_=a20m_us_hnav_p_dsp_adtech)
 
 ## Identités prises en charge {#supported-identities}
 
-Le *Publicités Amazon* La connexion prend en charge l’activation des identités décrites dans le tableau ci-dessous. En savoir plus sur les [identités](/help/identity-service/namespaces.md). Pour plus d’informations sur les identités prises en charge par Amazon Ads, consultez la page [Centre de support Amazon DSP](https://advertising.amazon.com/dsp/help/ss/en/audiences#GA6BC9BW52YFXBNE).
+La connexion *Amazon Ads* prend en charge l’activation des identités décrites dans le tableau ci-dessous. En savoir plus sur les [identités](/help/identity-service/namespaces.md). Pour plus d’informations sur les identités prises en charge par Amazon Ads, consultez le [Centre de support Amazon DSP](https://advertising.amazon.com/dsp/help/ss/en/audiences#GA6BC9BW52YFXBNE).
 
 | Identité cible | Description | Considérations |
 |---|---|---|
-| phone_sha256 | Numéros de téléphone hachés avec l’algorithme SHA256 | Adobe Experience Platform prend en charge le texte brut et les numéros de téléphone hachés SHA256. Lorsque votre champ source contient des attributs non hachés, vérifiez la variable **[!UICONTROL Appliquer la transformation]** option, pour avoir [!DNL Platform] hachage automatique des données lors de l’activation. |
-| email_lc_sha256 | Adresses électroniques hachées avec l’algorithme SHA256 | Adobe Experience Platform prend en charge le texte brut et les adresses électroniques hachées SHA256. Lorsque votre champ source contient des attributs non hachés, vérifiez la variable **[!UICONTROL Appliquer la transformation]** option, pour avoir [!DNL Platform] hachage automatique des données lors de l’activation. |
+| phone_sha256 | Numéros de téléphone hachés avec l’algorithme SHA256 | Adobe Experience Platform prend en charge le texte brut et les numéros de téléphone hachés avec SHA256. Lorsque votre champ source contient des attributs non hachés, cochez l’option **[!UICONTROL Appliquer la transformation]** pour que [!DNL Platform] hache automatiquement les données lors de l’activation. |
+| email_lc_sha256 | Adresses e-mail hachées avec l’algorithme SHA256 | Adobe Experience Platform prend en charge le texte brut et les adresses e-mail hachées avec SHA256. Lorsque votre champ source contient des attributs non hachés, cochez l’option **[!UICONTROL Appliquer la transformation]** pour que [!DNL Platform] hache automatiquement les données lors de l’activation. |
 
 {style="table-layout:auto"}
 
@@ -55,7 +55,7 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 | Élément | Type | Notes |
 ---------|----------|---------|
-| Type d’exportation | **[!UICONTROL Exportation des segments]** | Vous exportez tous les membres d’un segment (audience) avec les identifiants (nom, numéro de téléphone ou autres) utilisés dans la variable *Publicités Amazon* destination. |
+| Type d’exportation | **[!UICONTROL Exportation des segments]** | Vous exportez tous les membres d’un segment (audience) ainsi que les identifiants (nom, numéro de téléphone ou autres) utilisés dans la destination *Amazon Ads*. |
 | Fréquence des exportations | **[!UICONTROL Diffusion en continu]** | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation des segments, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
@@ -72,9 +72,9 @@ Pour vous connecter à cette destination, procédez comme décrit dans le [tutor
 
 Pour vous authentifier à la destination, renseignez les champs requis et sélectionnez **[!UICONTROL Se connecter à la destination]**.
 
-Vous accédez à l’interface de connexion d’Amazon Ads où vous allez d’abord sélectionner les comptes publicitaires auxquels vous souhaitez vous connecter.  Lors de la connexion, vous serez redirigé vers Adobe Experience Platform avec une nouvelle connexion, fournie avec l’identifiant du compte publicitaire que vous avez sélectionné. Sélectionnez le compte Advertiser approprié dans l’écran de configuration de destination pour continuer.
+Vous accédez à l’interface de connexion d’Amazon Ads où vous allez d’abord sélectionner les comptes publicitaires auxquels vous souhaitez vous connecter.  Lors de la connexion, on vous redirigera vers Adobe Experience Platform avec une nouvelle connexion fournie avec l’ID du compte publicitaire que vous avez sélectionné. Sélectionnez le compte publicitaire approprié dans l’écran de configuration de destination pour continuer.
 
-* **[!UICONTROL Jeton de porteur]**: Renseignez le jeton porteur pour vous authentifier à la destination.
+* **[!UICONTROL Jeton porteur]** : renseignez le jeton porteur pour vous authentifier sur la destination.
 
 ### Renseigner les détails de la destination {#destination-details}
 
@@ -82,11 +82,11 @@ Pour configurer les détails de la destination, renseignez les champs obligatoir
 
 * **[!UICONTROL Nom]** : un nom par lequel vous reconnaîtrez cette destination à l’avenir.
 * **[!UICONTROL Description]** : une description qui vous aidera à identifier cette destination à l’avenir.
-* **[!UICONTROL Identifiant publicitaire Amazon Ads]**: Sélectionnez l’identifiant du compte Amazon Ads cible utilisé pour la destination.
+* **[!UICONTROL ID publicitaire Amazon Ads]** : sélectionnez l’ID du compte Amazon Ads cible utilisé pour la destination.
 
-Remarque : une fois que vous aurez sélectionné cet identifiant publicitaire Amazon Ads, vous devrez créer une nouvelle destination pour modifier ce paramètre. Si vous réauthentifiez les informations d’identification OAuth et sélectionnez un nouvel identifiant publicitaire, vos modifications ne s’appliqueront pas.
+Remarque : une fois l’ID publicitaire Amazon Ads sélectionné, vous devrez créer une nouvelle destination pour modifier ce paramètre. Si vous réauthentifiez les informations d’identification OAuth et sélectionnez un nouvel ID publicitaire, vos modifications ne s’appliqueront pas.
 
-![Configuration d’une nouvelle destination](../../assets/catalog/advertising/amazon_ads_image_1.png)
+![Configurer une nouvelle destination](../../assets/catalog/advertising/amazon_ads_image_1.png)
 
 ### Activer les alertes {#enable-alerts}
 
@@ -104,25 +104,25 @@ Consultez [Activer les profils et les segments vers les destinations d’exporta
 
 ### Mapper les attributs et les identités {#map}
 
-La connexion Amazon Ads prend en charge les adresses électroniques hachées et les numéros de téléphone hachés à des fins de correspondance d’identité.  La capture d’écran ci-dessous fournit un exemple de correspondance compatible avec la connexion Amazon Ads :
+La connexion Amazon Ads prend en charge les adresses e-mail et numéros de téléphone hachés à des fins de correspondance d’identité.  La capture d’écran ci-dessous fournit un exemple de correspondance compatible avec la connexion Amazon Ads :
 
-![Mappage Adobe vers Amazon Ads](../../assets/catalog/advertising/amazon_ads_image_2.png)
+![Mappage Adobe vers Amazon Ads.](../../assets/catalog/advertising/amazon_ads_image_2.png)
 
-* Pour mapper des adresses électroniques hachées, sélectionnez la variable `Email_LC_SHA256` espace de noms d’identité en tant que champ source.
-* Pour mapper des numéros de téléphone hachés, sélectionnez l’option `Phone_SHA256` espace de noms d’identité en tant que champ source.
-* Pour mapper des adresses électroniques ou des numéros de téléphone non hachés, sélectionnez les espaces de noms d’identité correspondants comme champs source, puis cochez la case `Apply Transformation` pour que Platform hache les identités lors de l’activation.
+* Pour mapper des adresses e-mail hachées, sélectionnez l’espace de noms d’identité `Email_LC_SHA256` comme champ source.
+* Pour mapper des numéros de téléphone hachés, sélectionnez l’espace de noms d’identité `Phone_SHA256` comme champ source.
+* Pour mapper des adresses e-mail ou des numéros de téléphone non hachés, sélectionnez les espaces de noms d’identité correspondants comme champs source, puis cochez la case `Apply Transformation` pour que Platform hache les identités lors de l’activation.
 
-Il est vivement recommandé de mapper autant de champs que possible. Si un seul attribut source est disponible, vous pouvez mapper un seul champ.  La destination Publicités Amazon utilisera tous les champs mappés à des fins de mappage, produisant des taux de correspondance plus élevés si d’autres champs sont fournis. Pour plus d’informations sur les identifiants acceptés, consultez la [Page d’aide d’une audience hachée Amazon Ads](https://advertising.amazon.com/dsp/help/ss/en/audiences#GA6BC9BW52YFXBNE).
+Il est vivement recommandé de mapper autant de champs que possible. Si un seul attribut source est disponible, vous pouvez mapper un seul champ.  La destination Amazon Ads utilisera tous les champs mappés à des fins de mappage, produisant ainsi des taux de correspondance plus élevés si d’autres champs sont fournis. Pour plus d’informations sur les identifiants acceptés, consultez la [page d’aide sur les audiences hachées Amazon Ads](https://advertising.amazon.com/dsp/help/ss/en/audiences#GA6BC9BW52YFXBNE).
 
-## Données exportées / Validation de l’exportation des données {#exported-data}
+## Données exportées / Valider l’exportation des données {#exported-data}
 
-Une fois votre audience chargée, vous pouvez vérifier que votre audience a été créée et chargée correctement en procédant comme suit :
+Une fois votre audience chargée, vous pouvez vérifier qu’elle a été créée et chargée correctement en procédant comme suit :
 
-**Pour Amazon DSP**
+**Pour Amazon DSP**
 
-Accédez à votre identifiant publicitaire → Audiences → Publicitaires. Si votre audience a été créée avec succès et répond au nombre minimum de membres de l’audience, un état de `Active`.  Vous trouverez plus d’informations sur la taille et la portée de votre audience dans le panneau Portée prévue sur le côté droit de l’interface utilisateur d’Amazon DSP.
+Accédez à ID publicitaire → Audiences → Audiences publicitaires. Si votre audience a été créée avec succès et qu’elle contient le nombre minimum de membres, le statut `Active` s’affiche.  Vous trouverez plus d’informations sur la taille et la portée de votre audience dans le panneau Portée prévue sur le côté droit de l’interface utilisateur d’Amazon DSP.
 
-![Validation de la création d’audiences Amazon DSP](../../assets/catalog/advertising/amazon_ads_image_3.png)
+![Validation de la création d’audiences Amazon DSP.](../../assets/catalog/advertising/amazon_ads_image_3.png)
 
 ## Utilisation et gouvernance des données {#data-usage-governance}
 
@@ -130,6 +130,6 @@ Lors de la gestion de vos données, toutes les destinations [!DNL Adobe Experien
 
 ## Ressources supplémentaires {#additional-resources}
 
-Pour accéder à une documentation d’aide supplémentaire, consultez les ressources d’aide Amazon Ads suivantes :
+Pour accéder à une documentation d’aide supplémentaire, consultez les ressources d’aide Amazon Ads suivantes :
 
 * [Centre d’aide Amazon DSP](https://advertising.amazon.com/dsp/help/ss/en/audiences#/)
