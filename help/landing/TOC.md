@@ -4,9 +4,9 @@ user-guide-title: Présentation d’Adobe Experience Platform
 breadcrumb-title: Présentation d’Experience Platform
 user-guide-description: Découvrez comment Experience Platform est capable de fournir des expériences personnalisées à vos clients en temps réel.
 source-git-commit: bc781aadb620ad4b383d441d36e39626b0875901
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '258'
-ht-degree: 91%
+ht-degree: 100%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 91%
 * [Une expérience client proposée par Platform (vidéo)](video/customer-experience.md)
 * [Coulisses d’une expérience client proposée par Platform (vidéo)](video/customer-experience-bts.md)
 * Prise en main {#getting-started}
-   * [Exemple de workflow de bout en bout](end-to-end-tutorial.md)
+   * [Exemple de workflow complet](end-to-end-tutorial.md)
    * [Fonctionnalités clés (vidéo)](video/key-capabilities.md)
    * [Cas d’utilisation clés (vidéo)](video/platform-use-cases.md)
    * [Architecture de Platform (vidéo)](video/platform-architecture.md)
@@ -29,7 +29,7 @@ ht-degree: 91%
    * [Présentation de l’interface utilisateur de Platform (vidéo)](video/platform-ui.md)
    * [Guide de l’interface utilisateur des workflows](workflows.md)
    * [Prise en charge des navigateurs et des langues](browser-language-support.md)
-   * [Enquête à auto-identification](self-identification.md)
+   * [Enquête sur l’auto-identification](self-identification.md)
 * Les API d’Experience Platform {#platform-apis}
    * [Prise en main des API Platform](api-guide.md)
    * [Authentification et accès aux API Platform](api-authentication.md)
@@ -41,9 +41,9 @@ ht-degree: 91%
    * [Prise en charge des langues](documentation/language-support.md)
 * Services applicatifs créés sur Platform {#ecosystem}
    * [Présentation](application-services.md)
-   * [Adobe Real-time Customer Data Platform (toutes les éditions)](https://experienceleague.adobe.com/docs/real-time-customer-data-platform.html?lang=fr)
+   * [Adobe Real-Time Customer Data Platform (toutes les éditions)](https://experienceleague.adobe.com/docs/real-time-customer-data-platform.html?lang=fr)
    * [Application et services intelligents (vidéo)](video/application-intelligent-services.md)
-   * [Customer Journey Analytics](https://experienceleague.adobe.com/docs/customer-journey-analytics.html?lang=fr)
+   * [Customer Journey Analytics](https://experienceleague.adobe.com/docs/customer-journey-analytics.html?lang=fr)
    * [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer.html?lang=fr)
    * [Journey Orchestration](https://experienceleague.adobe.com/docs/journey-orchestration.html?lang=fr)
    * [Intégrations de Platform avec Experience Cloud (vidéo)](video/experience-cloud-integrations.md)
@@ -58,14 +58,14 @@ ht-degree: 91%
          * [Configuration d’un jeu de données pour capturer les données de consentement et de préférence](./governance-privacy-security/consent/iab/dataset.md)
       * [Intégrer le SDK Web de Platform pour traiter les données de consentement et de préférence](./governance-privacy-security/consent/sdk.md)
    * Journaux d’audit {#audit-logs}
-      * [Aperçu](./governance-privacy-security/audit-logs/overview.md)
-      * API de requête d’audit {#audit-api}
+      * [Présentation](./governance-privacy-security/audit-logs/overview.md)
+      * API Audit Query {#audit-api}
          * [Aperçu](./governance-privacy-security/audit-logs/api/overview.md)
          * [Prise en main](./governance-privacy-security/audit-logs/api/getting-started.md)
          * [Événements](./governance-privacy-security/audit-logs/api/events.md)
          * [Exporter](./governance-privacy-security/audit-logs/api/export.md)
-   * [Cryptage des données](./governance-privacy-security/encryption.md)
-   * [Clés gérées par le client](./governance-privacy-security/customer-managed-keys.md)
+   * [Chiffrement des données](./governance-privacy-security/encryption.md)
+   * [Clés gérées par le client ou la cliente](./governance-privacy-security/customer-managed-keys.md)
 * Utilisation de la licence et barrières de sécurité {#license}
    * [Bonnes pratiques relatives aux droits de licence de gestion des données](./license-usage-and-guardrails/data-management-best-practices.md)
    * [Tableau de bord d’utilisation de la licence](./license-usage-and-guardrails/license-usage-dashboard.md)
