@@ -2,10 +2,10 @@
 title: Connexion à  [!DNL Google Ad Manager 360]  (Version bêta)
 description: Google Ad Manager 360 est une plateforme de diffusion d’annonces de Google qui donne aux éditeurs les moyens de gérer l’affichage des annonces sur leurs sites web, en vidéo et dans les applications mobiles.
 exl-id: 3251145a-3e4d-40aa-b120-d79c8c9c7cae
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: ea480854c6058d84615b66a7df2d7c8fbd619bab
 workflow-type: tm+mt
-source-wordcount: '920'
-ht-degree: 85%
+source-wordcount: '947'
+ht-degree: 82%
 
 ---
 
@@ -83,6 +83,11 @@ Pour plus d’informations sur ces valeurs, consultez le guide [Clés HMAC de Go
 
 ### Renseigner les détails de la destination {#destination-details}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_gam360_appendSegmentID"
+>title="Ajout d’un identifiant de segment au nom du segment"
+>abstract="Sélectionnez cette option pour que le nom du segment dans Google Ad Manager 360 inclue l’identifiant du segment de l’Experience Platform, comme suit : `Segment Name (Segment ID)`"
+
 Pour configurer les détails de la destination, renseignez les champs obligatoires et facultatifs ci-dessous. Un astérisque situé en regard d’un champ de l’interface utilisateur indique que le champ est obligatoire.
 
 * **[!UICONTROL Nom]** : renseignez le nom de votre choix pour cette destination.
@@ -93,6 +98,12 @@ Pour configurer les détails de la destination, renseignez les champs obligatoir
 * **[!UICONTROL Type de compte]**: Sélectionnez une option, en fonction de votre [!DNL Google] compte :
    * Utiliser `AdX buyer` pour [!DNL Google AdX]
    * Utiliser `DFP by Google` pour [!DNL DoubleClick] pour les éditeurs
+
+<!--
+
+*  **[!UICONTROL Append segment ID to segment name]**: Select this option to have the segment name in Google Ad Manager 360 include the segment ID from Experience Platform, like this: `Segment Name (Segment ID)`
+
+-->
 
 ### Activer les alertes {#enable-alerts}
 
