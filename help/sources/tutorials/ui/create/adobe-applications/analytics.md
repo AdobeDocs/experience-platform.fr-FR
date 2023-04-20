@@ -1,14 +1,12 @@
 ---
-keywords: Experience Platform;accueil;rubriques populaires;connecteur source Analytics;connecteur Analytics;source Analytics;analytics
-solution: Experience Platform
+keywords: Experience Platform;accueil;rubriques populaires;connecteur source Analytics;connecteur Analytics;source Analytics;analytics;filtrage;filtrage;filtrage pour le profil;profil client en temps réel;filtre;données de profil de filtre;filtrage au niveau des lignes;filtrage au niveau des colonnes
 title: Créer une connexion source Adobe Analytics dans l’interface utilisateur
-type: Tutorial
 description: Découvrez comment créer une connexion source Adobe Analytics dans l’interface utilisateur pour importer des données client dans Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 9c2ede973aa4348f15362ba80fdcd7a231577909
+source-git-commit: 23a99a46cfd6e42dd0f4815bb972dbe46104b60f
 workflow-type: tm+mt
-source-wordcount: '2365'
-ht-degree: 65%
+source-wordcount: '2380'
+ht-degree: 64%
 
 ---
 
