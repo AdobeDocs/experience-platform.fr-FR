@@ -5,7 +5,7 @@ title: Présentation des libellés d’utilisation des données
 description: Découvrez comment les libellés d’utilisation des données sont utilisés pour appliquer la conformité en matière de gouvernance des données dans Adobe Experience Platform.
 exl-id: 4f113000-b9a1-4dfb-9502-6a5d08f0b26f
 source-git-commit: a1628df7d0eefc795d1eaeefce842a65c7133322
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '794'
 ht-degree: 100%
 
