@@ -24,7 +24,7 @@ Ce guide d’utilisation décrit les étapes à suivre pour surveiller vos donn�
 >title="Taux d&#39;ingestion"
 >abstract="Le nombre d&#39;événements traités avec succès par seconde."
 >text="Learn more in the documentation"
->additional-url="http://www.adobe.com/go/monitor-dataflows-en?lang=fr" text="Surveillance des flux de données pour les sources dans l&#39;interface utilisateur"
+>additional-url="http://www.adobe.com/go/monitor-dataflows-en" text="Surveillance des flux de données pour les sources dans l&#39;interface utilisateur"
 
 >[!TIP]
 >
