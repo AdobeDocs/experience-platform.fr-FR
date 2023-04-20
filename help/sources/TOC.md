@@ -4,10 +4,10 @@ user-guide-title: Aide sur les connecteurs source d’Adobe Experience Platfor
 breadcrumb-title: Guide des connecteurs sources
 user-guide-description: Ingérez des données à partir de diverses sources. Découvrez comment structurer, étiqueter et améliorer les données déjà ingérées.
 feature: Sources
-source-git-commit: 10edb5dfd9ce99b69cf5bb014f4903942c9bff3e
-workflow-type: ht
-source-wordcount: '963'
-ht-degree: 100%
+source-git-commit: 33a660800e3202d9969c4e44eba8419e22db57a3
+workflow-type: tm+mt
+source-wordcount: '968'
+ht-degree: 99%
 
 ---
 
@@ -90,7 +90,8 @@ ht-degree: 100%
       - [Connecteur Snowflake](connectors/databases/snowflake.md)
       - [Connecteur Teradata Vantage](connectors/databases/teradata-vantage.md)
    - eCommerce {#ecommerce}
-      - [Connecteur Shopify](connectors/ecommerce/shopify.md)
+      - [Shopify](connectors/ecommerce/shopify.md)
+      - [Shopify Streaming](connectors/ecommerce/shopify-streaming.md)
    - Système local {#local-system}
       - [Connecteur de téléchargement de fichiers locaux](connectors/local-system/local-file-upload.md)
    - Automatisation du marketing {#marketing-automation}
@@ -167,6 +168,7 @@ ht-degree: 100%
          - [SQL Server](tutorials/api/create/databases/sql-server.md)
       - eCommerce {#ecommerce}
          - [Shopify](tutorials/api/create/ecommerce/shopify.md)
+         - [Shopify Streaming](tutorials/api/create/ecommerce/shopify-streaming.md)
       - Automatisation du marketing {#marketing-automation}
          - [Chatlio](tutorials/api/create/marketing-automation/chatlio-webhook.md)
          - [Customer.io](tutorials/api/create/marketing-automation/customerio-webhook.md)
@@ -284,6 +286,7 @@ ht-degree: 100%
          - [Teradata Vantage](tutorials/ui/create/databases/teradata-vantage.md)
       - eCommerce {#ecommerce}
          - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
+         - [Shopify Streaming](tutorials/ui/create/ecommerce/shopify-streaming.md)
       - Système local {#local-system}
          - [Téléchargement de fichiers locaux](tutorials/ui/create/local-system/local-file-upload.md)
       - Automatisation du marketing {#marketing-automation}
