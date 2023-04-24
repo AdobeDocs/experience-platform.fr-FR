@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;accueil;rubriques populaires;contrôle d’accès;contrôle d’accès basé sur les attributs;ABAC
+keywords: Experience Platform;accueil;rubriques populaires;contrôle d’accès;contrôle d’accès basé sur les attributs;ABAC
 title: Gestion des utilisateurs du contrôle d’accès basé sur les attributs
 description: Ce document fournit des informations sur la gestion des utilisateurs et des groupes d’utilisateurs par le biais de l’interface Autorisations dans Adobe Experience Cloud.
 exl-id: 16450867-040a-4be1-a6c0-f03d0a1b90ba
-source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
+source-git-commit: fa4786b081b46c8f3c0030282ae3900891fbd652
 workflow-type: tm+mt
-source-wordcount: '160'
-ht-degree: 2%
+source-wordcount: '218'
+ht-degree: 6%
 
 ---
 
@@ -25,6 +25,14 @@ L’onglet Détails présente un aperçu de l’utilisateur. La présentation af
 Sélectionnez la **[!UICONTROL Rôles]** pour afficher les rôles auxquels l’utilisateur est affecté.
 
 ![flac-users-rôles](../../images/flac-ui/flac-users-roles.png)
+
+## Contrôle d’accès des développeurs et des API avec autorisations des Experience Platform
+
+>[!NOTE]
+>
+>Seuls les administrateurs système peuvent afficher et gérer les informations d’identification de l’API dans les autorisations.
+
+La transition vers les autorisations Adobe Experience Platform comprend d’autres étapes à suivre pour le workflow de l’API développeur qui utilisait auparavant les profils de produit. Consultez le guide sur la [Authentification API](../../../landing/api-authentication.md) pour plus d’informations.
 
 ## Étapes suivantes
 

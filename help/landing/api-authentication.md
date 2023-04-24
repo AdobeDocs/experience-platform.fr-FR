@@ -5,10 +5,10 @@ title: Authentification et accès aux API Experience Platform
 type: Tutorial
 description: Ce document fournit un tutoriel détaillé pour accéder à un compte de développeur Adobe Experience Platform afin d’effectuer des appels API Experience Platform.
 exl-id: dfe8a7be-1b86-4d78-a27e-87e4ed8b3d42
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: fa4786b081b46c8f3c0030282ae3900891fbd652
 workflow-type: tm+mt
-source-wordcount: '1267'
-ht-degree: 16%
+source-wordcount: '1581'
+ht-degree: 14%
 
 ---
 
@@ -197,6 +197,68 @@ Si votre réponse est similaire à celle illustrée ci-dessous, vos informations
 ## Utilisation de Postman pour authentifier et tester les appels API
 
 [Postman](https://www.postman.com/) est un outil populaire qui permet aux développeurs d’explorer et de tester les API RESTful. Ceci [Publication moyenne](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f) décrit comment configurer Postman pour effectuer automatiquement l’authentification JWT et l’utiliser pour utiliser les API Platform.
+
+## Contrôle d’accès des développeurs et des API avec autorisations des Experience Platform
+
+>[!NOTE]
+>
+>Seuls les administrateurs système peuvent afficher et gérer les informations d’identification de l’API dans les autorisations.
+
+Avant de créer des intégrations sur Adobe Developer Console, votre compte doit disposer des autorisations de développeur et d’utilisateur pour un profil de produit Experience Platform dans Adobe Admin Console.
+
+### Ajout de développeurs à un profil de produit
+
+Accédez à [[!DNL Admin Console]](https://adminconsole.adobe.com/) et connectez-vous avec votre Adobe ID.
+
+Sélectionner **[!UICONTROL Produits]**, puis sélectionnez **[!UICONTROL Adobe Experience Platform]** dans la liste des produits.
+
+![Liste de produits sur le Admin Console](././images/api-authentication/products.png)
+
+Dans la **[!UICONTROL Profils de produit]** onglet, sélectionnez **[!UICONTROL AEP-Default-All-Users]**. Vous pouvez également utiliser la barre de recherche pour rechercher le profil de produit en saisissant son nom.
+
+![Recherche du profil de produit](././images/api-authentication/select-product-profile.png)
+
+Sélectionnez la **[!UICONTROL Développeurs]** , puis sélectionnez **[!UICONTROL Ajouter un développeur]**.
+
+![Ajout d’un développeur à partir de l’onglet Développeurs](././images/api-authentication/add-developer1.png)
+
+Saisissez le **[!UICONTROL Email ou nom d’utilisateur]**. Un valide [!UICONTROL Email ou nom d’utilisateur] affiche les détails du développeur. Sélectionnez **[!UICONTROL Enregistrer]**.
+
+![Ajouter un développeur à l’aide de son adresse électronique ou de son nom d’utilisateur](././images/api-authentication/add-developer-email.png)
+
+Le développeur a bien été ajouté et apparaît sur le [!UICONTROL Développeurs] .
+
+![Développeurs répertoriés dans l’onglet Développeurs](././images/api-authentication/developer-added.png)
+
+### Configuration d’une API
+
+Un développeur peut ajouter et configurer une API dans un projet dans la console Adobe Developer.
+
+Sélectionnez votre projet, puis cliquez sur **[!UICONTROL Ajout d’une API]**.
+
+![Ajout d’une API à un projet](././images/api-authentication/add-api-project.png)
+
+Dans le **[!UICONTROL Ajout d’une API]** boîte de dialogue de sélection **[!UICONTROL Adobe Experience Platform]**, puis sélectionnez **[!UICONTROL API Experience Platform]**.
+
+![Ajout d’une API dans Experience Platform](././images/api-authentication/add-api-platform.png)
+
+Dans le **[!UICONTROL Configuration de l’API]** écran, sélectionnez **[!UICONTROL AEP-Default-All-Users]**.
+
+### Attribution d’une API à un rôle
+
+Un administrateur système peut affecter des API aux rôles dans l’interface utilisateur de l’Experience Platform.
+
+Sélectionner **[!UICONTROL Autorisations]** et le rôle auquel vous souhaitez ajouter l’API. Sélectionnez la **[!UICONTROL Informations d’identification de l’API]** , puis sélectionnez **[!UICONTROL Ajout des informations d’identification d’API]**.
+
+![Onglet Informations d’identification de l’API dans le rôle sélectionné](././images/api-authentication/api-credentials.png)
+
+Sélectionnez l’API que vous souhaitez ajouter au rôle, puis sélectionnez **[!UICONTROL Enregistrer]**.
+
+![Liste des API disponibles pour la sélection](././images/api-authentication/select-api.png)
+
+Vous revenez alors au [!UICONTROL Informations d’identification de l’API] , où l’API nouvellement ajoutée est répertoriée.
+
+![Onglet Informations d’identification de l’API avec l’API nouvellement ajoutée](././images/api-authentication/api-credentials-with-added-api.png)
 
 ## Étapes suivantes
 
