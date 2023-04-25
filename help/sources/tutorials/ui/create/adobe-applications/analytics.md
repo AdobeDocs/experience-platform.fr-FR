@@ -2,10 +2,10 @@
 title: Créer une connexion source Adobe Analytics dans l’interface utilisateur
 description: Découvrez comment créer une connexion source Adobe Analytics dans l’interface utilisateur pour importer des données client dans Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 3b86c071c4b5dc151bf83ad0042c10ac7a5648db
+source-git-commit: 1839e67d86a04762d93a5c35050e261fb1d1cf50
 workflow-type: tm+mt
-source-wordcount: '2352'
-ht-degree: 65%
+source-wordcount: '2406'
+ht-degree: 63%
 
 ---
 
@@ -31,6 +31,14 @@ Il est important de comprendre les termes clés suivants utilisés dans ce docum
 * **Noms conviviaux :** les noms conviviaux sont des libellés fournis par l’utilisateur pour les variables personnalisées dans le cadre dʼune implémentation [!DNL Analytics]. Pour plus d’informations sur les noms conviviaux, consultez la [[!DNL Analytics] documentation sur les variables de conversion](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=fr).
 
 ## Créer une connexion source avec Adobe Analytics
+
+>[!NOTE]
+>
+>Lorsque vous créez un flux de données source Analytics dans un environnement de test de production, deux flux de données sont créés :
+>
+>* Flux de données qui effectue un renvoi de 13 mois des données de suite de rapports historiques dans le lac de données. Ce flux de données se termine une fois le renvoi terminé.
+>* Flux de données qui envoie des données actives au lac de données et à [!DNL Real-Time Customer Profile]. Ce flux de données s’exécute en continu.
+
 
 Dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources]. L’écran [!UICONTROL Catalogue] affiche diverses sources avec lesquelles vous pouvez créer un compte.
 

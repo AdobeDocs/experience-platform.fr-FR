@@ -1,10 +1,9 @@
 ---
 title: Création D’Une Connexion Source De Diffusion En Continu Et D’Un Flux De Données Pour Shopifier Les Données À L’Aide De L’API Flow Service
 description: Découvrez comment créer une connexion source en continu et un flux de données pour Shopify data à l’aide de l’API Flow Service.
-badge: « Version bêta »
-hidefromtoc: y
-hide: y
-source-git-commit: 279d8e307c8ca5a799a47c6f903b9a082d9cf034
+badge: Version bêta
+exl-id: d44414a1-48fb-41e2-8cec-23cad867ba7d
+source-git-commit: feb05d5bddc4135c5fe14d3ec5d8fad62c5e2236
 workflow-type: tm+mt
 source-wordcount: '1472'
 ht-degree: 52%

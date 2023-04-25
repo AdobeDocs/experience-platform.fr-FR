@@ -2,20 +2,17 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;Oracle Service Cloud;oracle service cloud
 title: Présentation du connecteur source d’Oracle Service Cloud
 description: Découvrez comment connecter Oracle Service Cloud à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur.
-source-git-commit: 078a266967cd7b0818f958283a58a8af4c886a21
-workflow-type: ht
-source-wordcount: '269'
-ht-degree: 100%
+exl-id: 5c914e8a-d8ed-469f-b17a-26a85705e9ef
+source-git-commit: 1695b7d638feb648d5cd7af07879f3ed13f938eb
+workflow-type: tm+mt
+source-wordcount: '249'
+ht-degree: 98%
 
 ---
 
-# (Version Beta) Source Oracle Service Cloud
+# Source Oracle Service Cloud
 
->[!NOTE]
->
->La source Oracle Service Cloud est en version bêta. Voir la [présentation des sources](../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de sources étiquetées bêta.
-
-Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous permettant de structurer, de libeller et d’améliorer les données entrantes à l’aide des services de Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, des bases de données, etc.
+Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les bases de données, etc.
 
 Experience Platform prend en charge l’ingestion de données provenant d’un système de succès client tiers. La prise en charge des fournisseurs de succès client inclut Oracle Service Cloud.
 

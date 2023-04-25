@@ -1,21 +1,21 @@
 ---
 keywords: Experience Platform;accueil;rubriques les plus consultées;OneTrust;onetrust;consentement;consentement et préférences;conformité
 solution: Experience Platform
-title: (Version bêta) Présentation du connecteur source d’intégration OneTrust
+title: Présentation du connecteur source d’intégration OneTrust
 description: Découvrez comment connecter l’intégration OneTrust à Adobe Experience Platform à l’aide des API ou de l’interface utilisateur.
 exl-id: f2229d4d-8aa6-483a-9156-403309f80007
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 9846dc24321d7b32a110cfda9df3511b1e3a82ed
 workflow-type: tm+mt
-source-wordcount: '186'
+source-wordcount: '174'
 ht-degree: 55%
 
 ---
 
-# (Version bêta) source [!DNL OneTrust Integration]
+# [!DNL OneTrust Integration] source
 
 >[!NOTE]
 >
->La source [!DNL OneTrust Integration] est en version bêta. Ses fonctionnalités et sa documentation peuvent faire l’objet de modifications. Pour plus d’informations sur l’utilisation de sources marquées d’une version bêta, voir la section [présentation des sources](../../home.md#terms-and-conditions).
+>Le [!DNL OneTrust Integration] source ne prend en charge que l’ingestion des données de consentement et de préférences, et non les cookies.
 
 Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les bases de données, etc.
 

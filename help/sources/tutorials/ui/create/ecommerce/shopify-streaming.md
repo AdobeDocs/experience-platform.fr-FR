@@ -1,10 +1,9 @@
 ---
 title: Création D’Une Connexion En Continu Shopify Et D’Un Flux De Données Dans L’Interface Utilisateur
 description: Découvrez comment créer une connexion source Shopify et un flux de données à l’aide de l’interface utilisateur de Platform
-badge: « Version bêta »
-hidefromtoc: y
-hide: y
-source-git-commit: 279d8e307c8ca5a799a47c6f903b9a082d9cf034
+badge: Version bêta
+exl-id: 3368ecf6-0c61-49ce-bc9c-29ee50b3f037
+source-git-commit: feb05d5bddc4135c5fe14d3ec5d8fad62c5e2236
 workflow-type: tm+mt
 source-wordcount: '790'
 ht-degree: 35%
@@ -95,4 +94,3 @@ Pour récupérer votre point de terminaison de diffusion en continu, accédez à
 ## Étapes suivantes
 
 En suivant ce tutoriel, vous avez établi une connexion source et un flux de données à votre [!DNL Shopify Streaming] compte . Pour obtenir des instructions sur la connexion à votre [!DNL Shopify Streaming] à l’aide de l’API, veuillez lire le tutoriel sur [création d’une connexion source et d’un flux de données pour la diffusion [!DNL Shopify] données à l’aide de l’API Flow Service](../../../api/create/ecommerce/shopify-streaming.md).
-

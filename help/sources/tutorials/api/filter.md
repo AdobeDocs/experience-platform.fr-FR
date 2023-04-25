@@ -2,7 +2,8 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;service de flux;API de service de flux;sources;sources
 title: Filtrage Des Données Au Niveau De La Ligne D’Une Source À L’Aide De L’API Flow Service
 description: Ce tutoriel décrit les étapes de filtrage des données au niveau de la source à l’aide de l’API Flow Service
-source-git-commit: 122f6bda2fbcf72bf098b972ff7b081f4c5e3388
+exl-id: 224b454e-a079-4df3-a8b2-1bebfb37d11f
+source-git-commit: da6f5a79b1ee16fb0d44a5c2990ed1b8be1f99e2
 workflow-type: tm+mt
 source-wordcount: '785'
 ht-degree: 17%
@@ -13,7 +14,14 @@ ht-degree: 17%
 
 >[!IMPORTANT]
 >
->Actuellement, la prise en charge du filtrage des données au niveau des lignes pour une source n’est disponible que pour le [[!DNL Google BigQuery]](../../connectors/databases/bigquery.md) et [[!DNL Snowflake]](../../connectors/databases/snowflake.md) sources.
+>La prise en charge du filtrage des données au niveau des lignes n’est actuellement disponible que pour les sources suivantes :
+>
+>* [Google BigQuery](../../connectors/databases/bigquery.md)
+>* [Microsoft Dynamics](../../connectors/crm/ms-dynamics.md)
+>* [Salesforce](../../connectors/crm/salesforce.md)
+>* [Salesforce Marketing Cloud](../../connectors/marketing-automation/salesforce-marketing-cloud.md)
+>* [Snowflake](../../connectors/databases/snowflake.md)
+
 
 Ce tutoriel décrit les étapes à suivre pour filtrer les données au niveau de la ligne pour une source à l’aide de la variable [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
@@ -22,7 +30,7 @@ Ce tutoriel décrit les étapes à suivre pour filtrer les données au niveau de
 Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform :
 
 * [Sources ](../../home.md): [!DNL Experience Platform]permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services [!DNL Platform].
-* [Sandbox](../../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuelles qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
+* [Sandbox](../../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
 ### Utiliser les API Platform
 
@@ -103,7 +111,7 @@ Une réponse réussie renvoie les spécifications de connexion pour [!DNL Google
 | `attributes.filterAtSource.columnNameEscapeChar` | Détermine le caractère à utiliser pour échapper les colonnes. |
 | `attributes.filterAtSource.valueEscapeChar` | Détermine la manière dont les valeurs seront entourées lors de l’écriture d’une requête SQL. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 #### Opérateurs de comparaison 
 
@@ -118,7 +126,7 @@ Une réponse réussie renvoie les spécifications de connexion pour [!DNL Google
 | `like` | Filtre en utilisant dans une `WHERE` pour rechercher un modèle spécifié. |
 | `in` | Filtre selon si la propriété se trouve dans une plage spécifiée. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Définition des conditions de filtrage pour l’ingestion
 

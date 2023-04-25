@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Présentation des connecteurs source
 description: Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les bases de données, etc.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: e0c1b4e2cc7444ab97d0eae6ff4f3455b0017d4a
+source-git-commit: feb05d5bddc4135c5fe14d3ec5d8fad62c5e2236
 workflow-type: tm+mt
 source-wordcount: '1320'
 ht-degree: 84%
@@ -135,6 +135,7 @@ Experience Platform prend en charge l’ingestion de données provenant d’une
 Experience Platform prend en charge l’ingestion de données provenant d’un système tiers d’eCommerce. Consultez les documents connexes suivants pour plus d’informations sur des connecteurs source spécifiques :
 
 - [[!DNL Shopify]](connectors/ecommerce/shopify.md)
+- [[!DNL Shopify Streaming]](connectors/ecommerce/shopify-streaming.md)
 
 ### Système local {#local-system}
 

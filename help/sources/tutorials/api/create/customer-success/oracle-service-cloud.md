@@ -2,18 +2,15 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;Oracle Service Cloud;oracle service cloud
 title: Créer une connexion source Oracle Service Cloud à l’aide de l’API Flow Service
 description: Découvrez comment connecter Adobe Experience Platform à Oracle Service Cloud à l’aide de l’API Flow Service.
-source-git-commit: 078a266967cd7b0818f958283a58a8af4c886a21
-workflow-type: ht
-source-wordcount: '547'
-ht-degree: 100%
+exl-id: 00c0bc9c-a740-4bab-a882-2cfed8abe758
+source-git-commit: 1695b7d638feb648d5cd7af07879f3ed13f938eb
+workflow-type: tm+mt
+source-wordcount: '527'
+ht-degree: 98%
 
 ---
 
-# (Version bêta) Créer une connexion source Oracle Service Cloud à l’aide de l’API [!DNL Flow Service]
-
->[!NOTE]
->
->La source Oracle Service Cloud est en version bêta. Voir la [présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de sources étiquetées bêta. 
+# Créez une connexion source Oracle Service Cloud à l’aide du [!DNL Flow Service] API
 
 Une connexion de base représente la connexion authentifiée entre une source et Adobe Experience Platform.
 
@@ -24,7 +21,7 @@ Ce tutoriel vous guide tout au long des étapes de création dʼune connexion de
 Ce guide nécessite une compréhension professionnelle des composants suivants d’Experience Platform :
 
 * [Sources](../../../../home.md) : Experience Platform permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de Platform.
-* [Sandbox](../../../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuelles qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
+* [Sandbox](../../../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
 
 Les sections suivantes contiennent des informations supplémentaires que vous devez connaître pour réussir à vous connecter à Oracle Service Cloud à l’aide de l’API [!DNL Flow Service]. 
 

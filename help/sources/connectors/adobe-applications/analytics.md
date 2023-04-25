@@ -2,10 +2,10 @@
 title: Connecteur source Adobe Analytics pour les données d’une suite de rapports
 description: Ce document présente Analytics et décrit les cas d’utilisation des données Analytics.
 exl-id: c4887784-be12-40d4-83bf-94b31eccdc2e
-source-git-commit: 35298fc6b3e272c1b7b14cfa17713d18427ba2ce
+source-git-commit: 83ce7d46e4e64fbe961c964ed5a17ec12a7ec15f
 workflow-type: tm+mt
-source-wordcount: '1042'
-ht-degree: 20%
+source-wordcount: '1112'
+ht-degree: 19%
 
 ---
 
@@ -54,7 +54,12 @@ Le tableau ci-dessous décrit la latence attendue des données Analytics sur Pla
 | Nouvelles données pour le lac de données | &lt; 90 minutes |
 | Renvoi de moins de 10 milliards d’événements | &lt; 4 semaines |
 
-Le renvoi d’Analytics est défini par défaut sur 13 mois. La limite de 10 milliards d&#39;événements mentionnée dans le tableau ci-dessus est strictement en ce qui concerne la latence attendue.
+Le renvoi Analytics pour les environnements de test de production est défini par défaut sur 13 mois. Pour les données Analytics dans les environnements de test hors production, le renvoi est défini sur trois mois. La limite de 10 milliards d&#39;événements mentionnée dans le tableau ci-dessus est strictement en ce qui concerne la latence attendue.
+
+Lorsque vous créez un flux de données source Analytics dans un environnement de test de production, deux flux de données sont créés :
+
+* Flux de données qui effectue un renvoi de 13 mois des données de suite de rapports historiques dans le lac de données. Ce flux de données se termine une fois le renvoi terminé.
+* Flux de données qui envoie des données actives au lac de données et à [!DNL Real-Time Customer Profile]. Ce flux de données s’exécute en continu.
 
 >[!NOTE]
 >
