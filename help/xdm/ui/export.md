@@ -4,9 +4,9 @@ title: Exportation des schémas XDM dans l’interface utilisateur
 description: Découvrez comment exporter un schéma existant vers un environnement de test ou une organisation différente dans l’interface utilisateur de Adobe Experience Platform.
 type: Tutorial
 exl-id: c467666d-55bc-4134-b8f4-7758d49c4786
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: bed627b945c5392858bcc2dce18e9bbabe8bcdb6
 workflow-type: tm+mt
-source-wordcount: '488'
+source-wordcount: '498'
 ht-degree: 0%
 
 ---
@@ -25,17 +25,17 @@ Pour répondre à ce besoin, la variable [!UICONTROL Schémas] Workspace dans l�
 
 Bien que l’interface utilisateur de Platform vous permette d’exporter des ressources XDM, vous devez utiliser l’API Schema Registry pour importer ces ressources dans d’autres environnements de test ou organisations afin de terminer le processus. Reportez-vous au guide sur [Prise en main de l’API Schema Registry](../api/getting-started.md) pour obtenir des informations importantes sur les en-têtes d’authentification requis avant de suivre ce guide.
 
-## Génération d’une payload d’exportation
+## Génération d’une payload d’exportation {#generate-export-payload}
 
-Dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Schémas]** dans le volet de navigation de gauche. Dans le [!UICONTROL Schémas] espace de travail, recherchez le schéma que vous souhaitez exporter et ouvrez-le dans le [!DNL Schema Editor].
+Dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Schémas]** dans le volet de navigation de gauche. Dans le [!UICONTROL Schémas] espace de travail, sélectionnez la ligne du schéma que vous souhaitez exporter pour afficher les détails du schéma dans la barre latérale droite.
 
 >[!TIP]
 >
 >Consultez le guide sur la [exploration des ressources XDM](./explore.md) pour plus d’informations sur la manière de trouver la ressource XDM que vous recherchez.
 
-Une fois le schéma ouvert, sélectionnez la **[!UICONTROL Copie de JSON]** Icône (![Icône Copier](../images/ui/export/icon.png)) en haut à droite du canevas.
+Sélectionnez ensuite le **[!UICONTROL Copie de JSON]** Icône (![Icône Copier](../images/ui/export/icon.png)) dans les options disponibles.
 
-![](../images/ui/export/copy-json.png)
+![Espace de travail des schémas avec une ligne de schéma et [!UICONTROL Copier vers JSON] surlignée.](../images/ui/export/copy-json.png)
 
 Cette opération copie une charge utile JSON dans le presse-papiers, générée en fonction de la structure du schéma. Pour le[!DNL Loyalty Members]&quot; illustré ci-dessus, le fichier JSON suivant est généré :
 

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Création et modification de schémas dans l’interface utilisateur
 description: Découvrez les principes de base de la création et de l’édition de schémas dans l’interface utilisateur de l’Experience Platform.
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 3dffa9687f3429b970e8fceebd6864a5b61ead21
+source-git-commit: bed627b945c5392858bcc2dce18e9bbabe8bcdb6
 workflow-type: tm+mt
-source-wordcount: '3203'
+source-wordcount: '3340'
 ht-degree: 3%
 
 ---
@@ -57,6 +57,18 @@ Pour modifier un schéma existant, sélectionnez l’option **[!UICONTROL Parcou
 
 Une fois que vous avez sélectionné un schéma, la variable [!DNL Schema Editor] apparaît avec la structure du schéma affichée dans la zone de travail. Vous pouvez désormais [ajouter des groupes de champs](#add-field-groups) au schéma (ou [ajouter des champs individuels ;](#add-individual-fields) de ces groupes), [modifier les noms d’affichage des champs ;](#display-names)ou [modifier des groupes de champs personnalisés ;](./field-groups.md#edit) si le schéma en utilise un.
 
+## Bascule du nom d’affichage {#display-name-toggle}
+
+Pour votre commodité, l’éditeur de schémas propose un bouton d’activation/désactivation pour modifier les noms de champ d’origine et les noms d’affichage plus lisibles. Cette flexibilité permet d’améliorer la visibilité des champs et l’édition de vos schémas. Le bouton bascule se trouve en haut à droite de la vue de l’éditeur de schémas.
+
+>[!NOTE]
+>
+>Le changement des noms de champ en noms d’affichage est purement cosmétique et ne modifie aucune ressource en aval.
+
+![Éditeur de schémas avec [!UICONTROL Afficher les noms d’affichage des champs] surlignée.](../../images/ui/resources/schemas/display-name-toggle.png)
+
+Les noms d’affichage des groupes de champs standard sont générés par le système, mais peuvent être personnalisés, comme décrit dans la section [noms d’affichage](#display-names) . Les noms d’affichage sont reflétés dans plusieurs vues d’interface utilisateur, y compris les aperçus de mappage et de jeu de données. Le paramètre par défaut est désactivé et affiche les noms des champs selon leurs valeurs d’origine.
+
 ## Ajout de groupes de champs à un schéma {#add-field-groups}
 
 >[!NOTE]
@@ -65,7 +77,7 @@ Une fois que vous avez sélectionné un schéma, la variable [!DNL Schema Editor
 
 Une fois que vous avez ouvert un schéma dans la fonction [!DNL Schema Editor], vous pouvez ajouter des champs au schéma à l’aide de groupes de champs. Pour commencer, sélectionnez **[!UICONTROL Ajouter]** en regard de **[!UICONTROL Groupes de champs]** dans le rail de gauche.
 
-![](../../images/ui/resources/schemas/add-field-group-button.png)
+![L’éditeur de schémas avec la méthode [!UICONTROL Ajouter] de la [!UICONTROL Groupes de champs] en surbrillance.](../../images/ui/resources/schemas/add-field-group-button.png)
 
 Une boîte de dialogue s’affiche, affichant la liste des groupes de champs que vous pouvez sélectionner pour le schéma. Puisque les groupes de champs ne sont compatibles qu’avec une seule classe, seuls les groupes de champs associés à la classe sélectionnée du schéma sont répertoriés. Par défaut, les groupes de champs répertoriés sont triés en fonction de leur popularité d’utilisation au sein de votre entreprise.
 

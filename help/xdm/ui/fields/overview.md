@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Définition des champs XDM dans l’interface utilisateur
 description: Découvrez comment définir des champs XDM dans l’interface utilisateur de l’Experience Platform.
 exl-id: 2adb03d4-581b-420e-81f8-e251cf3d9fb9
-source-git-commit: f1a8bcc7c1ba33d74e1f687b4cfd83bddce2fadc
+source-git-commit: bed627b945c5392858bcc2dce18e9bbabe8bcdb6
 workflow-type: tm+mt
-source-wordcount: '1407'
+source-wordcount: '1414'
 ht-degree: 4%
 
 ---
@@ -25,7 +25,7 @@ Bien que ce guide ne soit pas obligatoire, il est recommandé de suivre égaleme
 
 Pour définir de nouveaux champs XDM dans l’interface utilisateur, vous devez d’abord ouvrir un schéma dans le [!DNL Schema Editor]. Selon les schémas actuellement disponibles dans la variable [!DNL Schema Library], vous pouvez choisir de [créer un nouveau schéma](../resources/schemas.md#create) ou [sélectionner un schéma existant à modifier ;](../resources/schemas.md#edit).
 
-Une fois que vous avez [!DNL Schema Editor] ouvert, des contrôles pour ajouter ou modifier des champs s’affichent dans la zone de travail. Ces commandes s’affichent en regard du nom du schéma, ainsi que des champs de type objet qui ont été définis sous la classe ou le groupe de champs sélectionné.
+Une fois que vous avez [!DNL Schema Editor] ouvert, les contrôles pour ajouter des champs s’affichent dans la zone de travail. Ces commandes s’affichent en regard du nom du schéma, ainsi que des champs de type objet qui ont été définis sous la classe ou le groupe de champs sélectionné.
 
 ![](../../images/ui/fields/overview/select-resource.png)
 
@@ -53,10 +53,10 @@ Dans le rail de droite sous **[!UICONTROL Propriétés du champ]**, vous pouvez 
 | Propriété du champ | Description |
 | --- | --- |
 | [!UICONTROL Nom du champ] | Nom explicite unique du champ. Notez que le nom du champ ne peut pas être modifié une fois le schéma enregistré. Cette valeur est utilisée pour identifier et référencer le champ dans le code et dans d’autres applications en aval.<br><br>Le nom doit idéalement être écrit en CamelCase. Il peut contenir des caractères alphanumériques, des tirets ou des traits de soulignement, mais il **may not** commencer par un trait de soulignement.<ul><li>**Correct**: `fieldName`</li><li>**Acceptable :** `field_name2`, `Field-Name`, `field-name_3`</li><li>**Incorrect**: `_fieldName`</li></ul> |
-| [!UICONTROL Nom d’affichage] | Nom d’affichage du champ. Il s’agit du nom qui sera utilisé pour représenter le champ dans le canevas de l’éditeur de schémas. |
+| [!UICONTROL Nom d’affichage] | Nom d’affichage du champ. Il s’agit du nom qui sera utilisé pour représenter le champ dans le canevas de l’éditeur de schémas. Le nom du champ peut être remplacé par le nom d’affichage à l’aide de la variable [bascule du nom d’affichage](../resources/schemas.md#display-name-toggle). |
 | [!UICONTROL Type] | Le type de données que le champ contiendra. Dans ce menu déroulant, vous pouvez sélectionner l’une des options suivantes : [types scalaires standard](../../schema/field-constraints.md) pris en charge par XDM ou l’un des champs multiples [types de données](../resources/data-types.md) qui ont été précédemment définis dans la variable [!DNL Schema Registry].<br><br>Vous pouvez également sélectionner **[!UICONTROL Recherche de type avancé]** pour rechercher et filtrer les types de données existants et localiser plus facilement le type souhaité. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Vous pouvez également fournir une **[!UICONTROL Description]** au champ pour fournir plus de contexte sur le cas d’utilisation prévu du champ.
 
@@ -96,7 +96,7 @@ Lors de la définition d’un nouveau champ, d’autres options de configuration
 | [!UICONTROL Valeur minimale exclusive] | [!UICONTROL Double] | Valeur maximale que la Double doit être acceptée lors de l’ingestion. Si la valeur ingérée correspond exactement à celle saisie ici, la valeur est rejetée. Lors de l’utilisation de cette contrainte, le[!UICONTROL Valeur minimale]&quot; (non exclusif) doit rester vide. |
 | [!UICONTROL Valeur maximale exclusive] | [!UICONTROL Double] | Valeur maximale que la Double doit être acceptée lors de l’ingestion. Si la valeur ingérée correspond exactement à celle saisie ici, la valeur est rejetée. Lors de l’utilisation de cette contrainte, le[!UICONTROL Valeur maximale]&quot; (non exclusif) doit rester vide. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Types de champ spéciaux {#special}
 
