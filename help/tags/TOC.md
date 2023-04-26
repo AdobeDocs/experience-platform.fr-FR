@@ -5,10 +5,10 @@ breadcrumb-title: Balises
 user-guide-description: Découvrez comment déployer et gérer des balises d’analyse, de marketing et de publicité pour améliorer les expériences clients.
 feature: Tags
 solution: Data Collection
-source-git-commit: 95a56982d38bd1e2c72dd84e2fa48b9de659741f
-workflow-type: ht
-source-wordcount: '970'
-ht-degree: 100%
+source-git-commit: 9d9e02c2a4f628ebe04aaa63942e830f3354729f
+workflow-type: tm+mt
+source-wordcount: '983'
+ht-degree: 98%
 
 ---
 
@@ -82,6 +82,7 @@ ht-degree: 100%
          * [Aperçu](./extensions/client/product-string/overview.md)
          * [Notes de mise à jour](./extensions/client/product-string/release-notes.md)
       * [Créateur de chaînes de produit Adobe Analytics](https://exchange.adobe.com/apps/ec/101461)
+      * [Adobe Analytics via le SDK Web de Adobe Experience Platform](https://exchange.adobe.com/apps/ec/108985/search-discovery-for-adobe-analytics-via-aep-web-sdk)
       * Adobe Audience Manager {#audience-manager}
          * [Aperçu](./extensions/client/audience-manager/overview.md)
       * Adobe Client Data Layer (ACDL) {#client-data-layer}
