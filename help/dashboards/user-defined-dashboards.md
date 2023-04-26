@@ -2,14 +2,14 @@
 title: Tableaux de bord définis par l’utilisateur
 description: Découvrez comment créer et gérer des tableaux de bord personnalisés dans lesquels vous pouvez créer, ajouter et modifier des widgets personnalisés pour visualiser des mesures clés.
 exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
-source-git-commit: a0be2f8625ca60f9c8f355c1230a889002436d6d
+source-git-commit: 8507ecceca47fac3d321b89e4fed018ee9784777
 workflow-type: tm+mt
-source-wordcount: '1307'
-ht-degree: 5%
+source-wordcount: '1608'
+ht-degree: 4%
 
 ---
 
-# Tableaux de bord définis par l’utilisateur
+# Tableaux de bord définis par l’utilisateur ou l’utilisatrice
 
 Les tableaux de bord Adobe Experience Platform vous permettent d’accélérer les insights et de personnaliser la visualisation par le biais de la fonctionnalité de tableaux de bord définis par l’utilisateur. Cette fonctionnalité vous permet de créer et de gérer des tableaux de bord personnalisés dans lesquels vous pouvez créer, ajouter et modifier des widgets personnalisés pour visualiser les mesures clés pertinentes pour votre entreprise.
 
@@ -112,6 +112,20 @@ En ajoutant un attribut comme filtre, vous pouvez sélectionner les valeurs à i
 
 ![Boîte de dialogue de filtrage permettant de filtrer les valeurs de votre widget.](./images/user-defined-dashboards/filter-dialog.png)
 
+#### Filtrage des données historiques {#filter-historical-data}
+
+Pour filtrer les données historiques des insights générés par votre widget, ajoutez la variable `date_key` comme filtre et sélectionnez **[!UICONTROL Date récente]** suivie de **[!UICONTROL Appliquer]**. Ce filtre permet de s’assurer que les données utilisées pour obtenir des informations proviennent de l’instantané système le plus récent.
+
+![Le [!UICONTROL Filtre : date_key] Boîte de dialogue avec [!UICONTROL Date récente] et [!UICONTROL Appliquer] surlignée.](./images/user-defined-dashboards/recent-date.png)
+
+Vous pouvez également créer une période personnalisée en fonction de laquelle filtrer vos données. Sélectionner **[!UICONTROL Sélectionner des dates]** pour étendre la boîte de dialogue avec une liste de dates disponibles. Utilisez la variable **[!UICONTROL Tout sélectionner]** pour activer ou désactiver toutes les options disponibles, ou cochez la case correspondant à chaque jour individuellement. Enfin, sélectionnez **[!UICONTROL Appliquer]** pour confirmer vos choix.
+
+>[!NOTE]
+>
+>Si la variable `date_key` a déjà été ajouté en tant que filtre, sélectionnez les points de suspension suivis de **[!UICONTROL Modifier]** des options de la liste déroulante pour modifier la période de filtrage.
+
+![Le [!UICONTROL Filtre : date_key] avec des cases à cocher de jour individuelles cochées et non cochées.](./images/user-defined-dashboards/select-dates.png)
+
 ### Propriétés du widget
 
 Cliquez sur l’icône Propriétés (![Icône Propriétés.](./images/user-defined-dashboards/properties-icon.png)) dans le rail de droite pour ouvrir le panneau des propriétés. Dans le [!UICONTROL Propriétés] , saisissez un nom pour le widget dans le [!UICONTROL Titre du widget] Champ de texte.
@@ -135,6 +149,22 @@ Les widgets peuvent être réorganisés et redimensionnés dans cet espace de tr
 ![Le tableau de bord défini par l’utilisateur avec un widget personnalisé et le bouton d’enregistrement mis en surbrillance.](./images/user-defined-dashboards/user-defined-dashboard.png)
 
 Pour s’assurer que chaque requête d’un tableau de bord des insights Adobe Real-time Customer Data Platform dispose de suffisamment de ressources pour s’exécuter efficacement, l’API effectue le suivi de l’utilisation des ressources en attribuant des emplacements simultanés à chaque requête. Le système peut traiter jusqu’à quatre requêtes simultanées. Par conséquent, quatre emplacements de requête simultanés sont disponibles à tout moment. Les requêtes sont placées dans une file d’attente en fonction des emplacements de simultanéité, puis patientez dans la file d’attente jusqu’à ce que suffisamment d’emplacements de simultanéité soient disponibles.
+
+### Duplication d’un widget
+
+Une fois que vous avez créé un widget, vous pouvez dupliquer l’intégralité du widget et personnaliser ses attributs pour créer un widget unique sans avoir à partir de zéro. Pour dupliquer un widget, accédez d’abord à l’inventaire du tableau de bord. Sélectionnez ensuite le nom du tableau de bord dans la liste de stock. Votre tableau de bord personnalisé s’affiche.
+
+![L’interface utilisateur de Platform avec des tableaux de bord et un nom de tableau de bord personnalisé mis en surbrillance.](./images/user-defined-dashboards/dashbaord-inventory.png)
+
+Sélectionnez l’icône de crayon (![Une icône en forme de crayon.](./images/user-defined-dashboards/edit-icon.png)) en haut à droite de votre tableau de bord personnalisé pour entrer en mode de modification.
+
+![Un tableau de bord personnalisé avec l’icône en forme de crayon mise en surbrillance.](./images/user-defined-dashboards/edit-mode.png)
+
+Sélectionnez ensuite les ellipses situées en haut à droite du widget que vous souhaitez copier, puis choisissez **[!UICONTROL Dupliquer]** dans la liste des options disponibles.
+
+![Widget dans un tableau de bord défini par l’utilisateur, avec les points de suspension et le widget Dupliquer en surbrillance.](./images/user-defined-dashboards/duplicate.png)
+
+Un widget dupliqué apparaît dans le tableau de bord défini par l’utilisateur. Sélectionnez les ellipses de votre nouveau widget, suivies de **[!UICONTROL Modifier]**, pour personnaliser votre nouveau widget.
 
 ## Étapes suivantes et ressources supplémentaires
 
