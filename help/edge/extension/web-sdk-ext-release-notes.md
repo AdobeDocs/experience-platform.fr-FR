@@ -2,10 +2,10 @@
 title: Notes de mise à jour de l’extension du SDK Web Adobe Experience Platform
 description: Extension de la balise SDK Web Adobe Experience Platform
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 52c6420a7fba6474dd2e9e97c9b2f49b5208be1d
+source-git-commit: ccd02ea014d514b56a8e1bd540bb2c2c4bb2eb1b
 workflow-type: tm+mt
-source-wordcount: '1620'
-ht-degree: 98%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -13,6 +13,17 @@ ht-degree: 98%
 # Notes de mise à jour de l’extension du SDK Web Adobe Experience Platform
 
 Ce document contient les notes de mise à jour de l’extension de balises du SDK Web Adobe Experience Platform. Pour obtenir les dernières notes de mise à jour sur le SDK lui-même, voir les [notes de mise à jour du SDK Web Platform](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html?lang=fr).
+
+## Version 2.17.0 - 25 avril 2023
+
+**Nouvelles fonctionnalités**
+
+* Ajout de la prise en charge des remplacements de configuration de la chaîne de données.
+* Ajout d’un avis d’obsolescence au `datasetId` sur l’option `sendEvent` .
+
+**Correctifs et améliorations**
+
+* Correction d’un problème en raison duquel le défilement dans Safari fermait le sélecteur de flux de données.
 
 ## Version 2.16.1 - 14 avril 2023
 
@@ -213,7 +224,7 @@ Ces décisions ne sont renvoyées par la commande `sendEvent` que si `renderDeci
 
 * Les options idSyncContainerId, datasetId, schemaId, urlDestinationsEnabled et cookieDestinationsEnabled ont été supprimées.
 * Les tirets sont maintenant pris en charge dans la valeur de l’option edgeDomain.
-* La requête effectuée lors de la migration des identifiants est envoyée au point de terminaison demdex afin d’améliorer l’identification inter-domaines lorsque le cookie demdex n’est pas défini.
+* La requête effectuée lors de la migration des identifiants est envoyée au point d’entrée demdex afin d’améliorer l’identification inter-domaines lorsque le cookie demdex n’est pas défini.
 * La requête effectuée lors de la migration des identifiants attend toujours une réponse afin de s’assurer que le cookie d’identité est défini.
 * Lors de l’exécution d’une commande non valide, une liste de noms de commande valides sera enregistrée dans la console.
 * Ajout d’une case à cocher afin d’activer ou de désactiver la prise en charge des cookies tiers dans l’extension de balises. Cela désactive les appels vers demdex.net.
