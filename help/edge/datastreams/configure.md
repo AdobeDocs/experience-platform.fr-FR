@@ -1,11 +1,11 @@
 ---
 title: Configurer un flux de données
-description: Connectez votre intégration SDK Experience Platform côté client à des produits Adobe et à des destinations tierces.
+description: Découvrez comment connecter l’intégration de votre SDK Web côté client à d’autres produits Adobe et destinations tierces.
 exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
-source-git-commit: aa271fed242d03ecac6025721c2566a3b550b6bb
+source-git-commit: 611b80f2444ea86ef008f761c5d46976c55b864d
 workflow-type: tm+mt
-source-wordcount: '1658'
-ht-degree: 98%
+source-wordcount: '2020'
+ht-degree: 80%
 
 ---
 
@@ -19,7 +19,7 @@ Vous pouvez créer et gérer des flux de données dans l’interface utilisateur
 
 ![Onglet Flux de données dans l’interface utilisateur de collecte de données](../assets/datastreams/configure/datastreams-tab.png)
 
-L’onglet [!UICONTROL Flux de données] affiche une liste des flux de données existants, y compris leur nom convivial, leur identifiant et leur date de dernière modification. Sélectionnez le nom d’un flux de données pour [afficher les détails et configurer des services](#view-details).
+L’onglet **[!UICONTROL Flux de données]** affiche une liste des flux de données existants, y compris leur nom convivial, leur identifiant et leur date de dernière modification. Sélectionnez le nom d’un flux de données pour [afficher les détails et configurer des services](#view-details).
 
 Sélectionnez l’icône « plus » (**…**) d’un flux de données spécifique afin d’afficher plus d’options. Sélectionnez **[!UICONTROL Modifier]** pour mettre à jour la [configuration de base](#configure) du flux de données ou sélectionnez **[!UICONTROL Supprimer]** pour supprimer le flux de données.
 
@@ -43,7 +43,8 @@ Sélectionnez **[!UICONTROL Options avancées]** pour afficher des commandes sup
 
 | Paramètre | Description |
 | --- | --- |
-| [!UICONTROL Géolocalisation] | Détermine si des recherches de géolocalisation ont lieu en fonction de l’adresse IP de l’utilisateur. Le paramètre par défaut **[!UICONTROL Aucun]** désactive les recherches Géo, tandis que la fonction **[!UICONTROL Ville]** fournit les coordonnées GPS à deux décimales. |
+| [!UICONTROL Géolocalisation] | Détermine si des recherches de géolocalisation se produisent en fonction de l’adresse IP de l’utilisateur. Le paramètre par défaut **[!UICONTROL Aucun]** désactive toutes les recherches de géolocalisation, tandis que la fonction **[!UICONTROL Ville]** fournit les coordonnées GPS à deux décimales. La géolocalisation survient avant [!UICONTROL Obscurcissement d’IP] et n’est pas affecté par la variable  [!UICONTROL Obscurcissement d’IP] . |
+| [!UICONTROL Obscurcissement d’IP] | Indique le type d’obscurcissement d’IP à appliquer au flux de données. Tout traitement basé sur l’adresse IP du client sera affecté par le paramètre d’obscurcissement de l’adresse IP. Cela inclut tous les services Experience Cloud qui reçoivent des données de votre flux de données. <p> Options disponibles :</p> <ul><li>**[!UICONTROL Aucun]**: Désactive l’obscurcissement des adresses IP. L’adresse IP complète de l’utilisateur sera envoyée via la banque de données.</li><li>**[!UICONTROL Partiel]**: Pour les adresses IPv4, obscurcit le dernier octet de l’adresse IP de l’utilisateur. Pour les adresses IPv6, obscurcit les 80 derniers bits de l’adresse. <p>Exemples :</p> <ul><li>IPv4: `1.2.3.4` -> `1.2.3.0`</li><li>IPv6: `2001:0db8:1345:fd27:0000:ff00:0042:8329` -> `2001:0db8:1345:0000:0000:0000:0000:0000`</li></ul></li><li>**[!UICONTROL Complet]**: Obscurcit l’adresse IP complète. <p>Exemples :</p> <ul><li>IPv4: `1.2.3.4` -> `0.0.0.0`</li><li>IPv6: `2001:0db8:1345:fd27:0000:ff00:0042:8329` -> `::/128`</li></ul></li></ul> Impact de l’obscurcissement des adresses IP sur d’autres produits Adobe : <ul><li>**Adobe Target**: Au niveau du flux de données [!UICONTROL Obscurcissement d’IP] est prioritaire sur toute option d’obscurcissement d’IP définie dans Adobe Target. Par exemple, si le niveau du flux de données [!UICONTROL Obscurcissement d’IP] est définie sur **[!UICONTROL Complet]** et l’option d’obscurcissement d’IP d’Adobe Target est définie sur **[!UICONTROL Obscurcissement du dernier octet]**, Adobe Target recevra une adresse IP entièrement obscurcie. Reportez-vous à la documentation Adobe Target sur [Obscurcissement d’IP](https://developer.adobe.com/target/before-implement/privacy/privacy/) et [géolocalisation](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/geo.html?lang=en) pour plus d’informations.</li><li>**Audience Manager**: Le paramètre d’obscurcissement de l’adresse IP au niveau du flux de données est prioritaire sur toute option d’obscurcissement de l’adresse IP définie dans Audience Manager et il est appliqué à toutes les adresses IP. Toute recherche de géolocalisation effectuée par l’Audience Manager est impactée par le niveau du flux de données. [!UICONTROL Obscurcissement d’IP] . Une recherche de géolocalisation dans l’Audience Manager, basée sur une adresse IP complètement obscurcie, entraînera une région inconnue et aucun segment basé sur les données de géolocalisation résultantes ne sera réalisé. Reportez-vous à la documentation sur l’Audience Manager sur [Obscurcissement d’IP](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/administration/ip-obfuscation.html?lang=en) pour plus d’informations.</li><li>**Adobe Analytics**: Les données envoyées à Adobe Analytics ne sont pas affectées par le niveau du flux de données. [!UICONTROL Obscurcissement d’IP] . Adobe Analytics reçoit actuellement des adresses IP non obscurcies. Pour qu’Analytics reçoive des adresses IP obscurcies, vous devez configurer l’obscurcissement des adresses IP séparément, dans Adobe Analytics. Ce comportement sera mis à jour dans les prochaines versions. Voir Adobe Analytics [documentation](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/general-acct-settings-admin.html) pour plus d’informations sur l’activation de l’obscurcissement des adresses IP dans Analytics.</li></ul> |
 | [!UICONTROL Cookie interne d’identifiant] | Lorsqu’il est activé, ce paramètre indique à Edge Network de se référer à un cookie spécifié lors de la recherche d’un [identifiant d’appareil interne](../identity/first-party-device-ids.md), plutôt que de rechercher cette valeur dans le mappage d’identité.<br><br>Lors de l’activation de ce paramètre, vous devez indiquer le nom du cookie dans lequel l’identifiant doit être stocké. |
 | [!UICONTROL Synchronisation des identifiants tiers] | Les synchronisations des identifiants peuvent être regroupées en conteneurs afin de permettre l’exécution de différentes synchronisations d’identifiant à différents moments. Lorsqu’il est activé, ce paramètre vous permet de spécifier le conteneur des synchronisations d’identifiant à exécuter pour ce flux de données. |
 | [!UICONTROL Type d’accès] | Définit le type d’authentification qu’Edge Network accepte pour le train de données. <ul><li>**[!UICONTROL Authentification mixte]** : lorsque cette option est activée, Edge Network accepte les demandes authentifiées et non authentifiées. Sélectionnez cette option lorsque vous prévoyez d’utiliser le SDK web ou le [SDK mobile](https://aep-sdks.gitbook.io/docs/), ainsi que l’[API Server](../../server-api/overview.md). </li><li>**[!UICONTROL Authentifié uniquement]** : lorsque cette option est activée, Edge Network accepte uniquement les demandes authentifiées. électionnez cette option lorsque vous prévoyez d’utiliser uniquement l’API Server et que vous souhaitez empêcher le traitement des demandes non authentifiées par Edge Network.</li></ul> |
@@ -103,7 +104,7 @@ Ce service contrôle si et comment les données sont envoyées à Adobe Audience
 
 >[!IMPORTANT]
 >
->Lors de l’activation d’un flux de données pour Platform, notez la sandbox Platform que vous utilisez actuellement, tel qu’affichée dans le ruban supérieur de l’interface utilisateur.
+>Lors de l’activation d’un flux de données pour Platform, notez le sandbox Platform que vous utilisez actuellement, tel qu’affiché dans le ruban supérieur de l’interface utilisateur.
 >
 >![Sandbox sélectionné](../assets/datastreams/configure/platform-sandbox.png)
 >
