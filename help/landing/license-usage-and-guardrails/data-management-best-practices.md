@@ -3,10 +3,10 @@ keywords: Experience Platform;accueil;rubriques les plus consultées;gestion de
 title: Bonnes pratiques relatives aux droits de licence de gestion des données
 description: Découvrez les bonnes pratiques à suivre et les outils que vous pouvez utiliser pour mieux gérer vos droits de licence avec Adobe Experience Platform.
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: 5b5afceff59105eb6e0d17e22c2810a5c25ae760
+source-git-commit: fd594e19e13ca6e7f9f92674107d8ac6dabac9d6
 workflow-type: tm+mt
-source-wordcount: '2133'
-ht-degree: 81%
+source-wordcount: '2169'
+ht-degree: 79%
 
 ---
 
@@ -122,8 +122,6 @@ La banque de profils est composée des composants suivants :
 
 {style="table-layout:auto"}
 
-
-
 #### Rapports de composition de magasin de profils
 
 Plusieurs rapports sont disponibles pour vous aider à comprendre la composition de la banque de profils. Ces rapports vous aident à prendre des décisions éclairées sur la manière et l’emplacement de définir vos expirations d’événements d’expérience afin de mieux optimiser votre utilisation de licence :
@@ -132,6 +130,10 @@ Plusieurs rapports sont disponibles pour vous aider à comprendre la composition
 * **API Identity Overlap Report** : indique les espaces de noms d’identité qui contribuent le plus à l’audience adressable. Pour plus d’informations, consultez le tutoriel sur la [génération du rapport de chevauchement d’identités](../../profile/api/preview-sample-status.md#generate-the-identity-namespace-overlap-report).
 <!-- * **Unknown Profiles Report API**: Exposes the impact of applying pseudonymous expirations for different time thresholds. You can use this report to identify which pseudonymous expirations threshold to apply. See the tutorial on [generating the unknown profiles report](../../profile/api/preview-sample-status.md#generate-the-unknown-profiles-report) for more information.
 -->
+
+#### Expiration des données de profil pseudonyme {#pseudonymous-profile-expirations}
+
+Cette fonctionnalité vous permet de supprimer automatiquement les profils pseudonymes obsolètes de la banque de profils. Pour plus d’informations sur cette fonctionnalité, veuillez lire la section [Expiration des données de profil pseudonyme - Aperçu](../../profile/pseudonymous-profiles.md).
 
 #### Expirations des événements d’expérience {#event-expirations}
 
@@ -144,7 +146,7 @@ Vous trouverez ci-dessous une liste des bonnes pratiques recommandées pour gara
 * Utilisez le [tableau de bord d’utilisation de la licence](../../dashboards/guides/license-usage.md) pour suivre et surveiller les tendances d’utilisation des clients. Vous pouvez ainsi anticiper les potentiels dépassements qui peuvent survenir.
 * Configurez les [filtres d’ingestion](#ingestion-filters) en identifiant les événements requis pour les cas d’utilisation de segmentation et de personnalisation. Cela vous permet d’envoyer uniquement les événements importants nécessaires aux cas d’utilisation.
 * Assurez-vous que vous n’avez [activé que les jeux de données pour le profil](#ingestion-filters) qui sont nécessaires aux d’utilisation de segmentation et de personnalisation.
-* Configurez une [Expiration de l’événement d’expérience](#event-expirations) pour les données à haute fréquence, telles que les données web.
+* Configurer [Expiration des événements d’expérience](#event-expirations) et [Expiration des données de profil pseudonyme](#pseudonymous-profile-expirations) pour les données à haute fréquence, telles que les données web.
 * Vérifiez régulièrement le [Rapports de composition de profils](#profile-store-composition-reports) pour comprendre la composition de votre banque de profils. Cela vous permet de comprendre les sources de données qui contribuent le plus à la consommation de l’utilisation des licences.
 
 ## Résumé et disponibilité des fonctionnalités {#feature-summary}

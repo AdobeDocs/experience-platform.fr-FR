@@ -3,24 +3,26 @@ keywords: Experience Platform;accueil;rubriques populaires;jeu de données;jeu 
 solution: Experience Platform
 title: Expiration des données de profils pseudonymes
 description: Ce document fournit des conseils généraux sur la configuration de l’expiration des données de profils pseudonymes dans Adobe Experience Platform.
-hide: true
-hidefromtoc: true
-source-git-commit: 6ba219162f6fde37d8bd258c43ed1bdbbbcdf569
-workflow-type: ht
-source-wordcount: '875'
-ht-degree: 100%
+exl-id: e8d31718-0b50-44b5-a15b-17668a063a9c
+source-git-commit: 07ed7eb9644b2e8cc4da02743c48037afc247614
+workflow-type: tm+mt
+source-wordcount: '912'
+ht-degree: 89%
 
 ---
 
+# Expiration des données de profils pseudonymes
 
-# Expiration des données de profils pseudonymes [!BADGE Version limitée]
+Dans Adobe Experience Platform, vous pouvez configurer les délais d’expiration des profils pseudonymes, ce qui vous permet de supprimer automatiquement des données de la banque de profils qui ne sont plus valides ou utiles pour vos cas d’utilisation.
 
-Dans Adobe Experience Platform, un profil est pris en compte pour l’expiration des données pseudonymes s’il répond aux conditions suivantes :
+## Profil pseudonyme {#pseudonymous-profile}
+
+Un profil est pris en compte pour l’expiration des données pseudonymes s’il répond aux conditions suivantes :
 
 - Les espaces de noms d’identité du profil assemblé correspondent à l’espace de noms d’identité pseudonyme ou inconnu indiqué par le client ou la cliente.
    - Par exemple, si l’espace de noms d’identité du profil est `ECID`, `GAID` ou `AAID`. Le profil assemblé ne comporte aucun identifiant provenant d’un autre espace de noms d’identité. Dans cet exemple, un profil assemblé ne possède **pas** d’identité d’e-mail ou de gestion de la relation client.
 - Aucune activité n’a eu lieu au cours d’une période définie par l’utilisateur ou l’utilisatrice. L’activité répertorie les événements d’expérience ingérés ou les mises à jour des attributs de profil initiées par le client ou la cliente.
-   - Il s’agit, par exemple, d’un nouvel événement de page vue ou d’une mise à jour d’un attribut de page. Cependant, la mise à jour de l’appartenance à un segment non initiée par l’utilisateur ou l’utilisatrice n’est **pas** considérée comme une activité. Actuellement, pour calculer l’expiration des données, le suivi au niveau du profil est basé sur le moment de l’ingestion.
+   - Il s’agit, par exemple, d’un nouvel événement de page vue ou d’une mise à jour d’un attribut de page. Cependant, la mise à jour de l’appartenance à un segment non initiée par l’utilisateur ou l’utilisatrice n’est **pas** considérée comme une activité. Actuellement, pour calculer l’expiration des données, le suivi au niveau du profil est basé sur l’heure de l’événement pour les événements d’expérience et l’heure d’ingestion pour les attributs de profil.
 
 ## Accéder à {#access}
 
@@ -33,6 +35,36 @@ L’expiration des données de profils pseudonymes ne peut pas être configurée
 ## Questions fréquentes {#faq}
 
 Consultez les questions fréquentes sur l’expiration des données de profils pseudonymes dans la section suivante :
+
+### En quoi l’expiration des données de profil pseudonyme diffère-t-elle de l’expiration des données d’événement d’expérience ?
+
+L’expiration des données de profils pseudonymes et l’expiration des données d’événements d’expérience sont des fonctionnalités complémentaires.
+
+#### Granularité
+
+L’expiration des données de profils pseudonymes s’applique à la **sandbox**. Par conséquent, l’expiration des données affecte tous les profils de la sandbox.
+
+L’expiration des données d’événements d’expérience s’applique au **jeu de données**. Par conséquent, chaque jeu de données peut avoir un paramètre d’expiration de données différent.
+
+#### Types d’identité
+
+L’expiration des données de profils pseudonymes prend **uniquement** en compte les profils dont les graphiques d’identités contiennent des espaces de noms d’identité sélectionnés par le client ou la cliente, tels que `ECID`, `AAID` ou d’autres types de cookies. Si le profil contient **un** espace de noms d’identité supplémentaire qui ne figurait **pas** dans la liste sélectionnée par le client ou la cliente, le profil n’est **pas** supprimé.
+
+L’expiration des données d’événements d’expérience supprime les événements **uniquement** sur la base de la date et de l’heure de l’enregistrement de l’événement. Les espaces de noms d’identité inclus sont **ignorés** pour les besoins de l’expiration.
+
+#### Éléments supprimés
+
+L’expiration des données de profils pseudonymes supprime les enregistrements d’événement **et** de profil. Les données de classe de profil sont donc également supprimées.
+
+L’expiration des données d’événements d’expérience supprime **uniquement** les événements et **non** les données de la classe de profil. Les données de classe de profil ne sont supprimées que lorsque les données de **tous** les jeux de données sont supprimées et qu’il n’existe **aucun** enregistrement de classe de profil restant pour le profil.
+
+### Comment utiliser l’expiration des données de profils pseudonymes en parallèle avec l’expiration des données d’événements d’expérience ?
+
+L’expiration des données de profils anonymes et l’expiration des données d’événements d’expérience sont complémentaires.
+
+Nous vous recommandons de **toujours** appliquer l’expiration des données d’événements d’expérience à vos jeux de données, en fonction de vos besoins de conservation des données sur votre clientèle existante. Une fois la configuration de l’expiration des données d’événements d’expérience terminée, vous pouvez utiliser l’expiration des données de profils pseudonymes pour supprimer automatiquement les profils pseudonymes. En règle générale, le délai d’expiration des données des profils pseudonymes est inférieur à celui des événements d’expérience.
+
+Dans un cas d’utilisation standard, définissez l’expiration de vos données d’événements d’expérience en fonction de vos données utilisateur existantes. Configurez ensuite l’expiration de vos données de profils pseudonymes sur un délai beaucoup plus court, afin de limiter l’impact des profils pseudonymes sur la conformité de votre licence Platform.
 
 ### À qui s’adresse la fonctionnalité d’expiration des données de profils pseudonymes ?
 
@@ -49,32 +81,3 @@ Consultez les questions fréquentes sur l’expiration des données de profils p
 - **Tous** les profils définis comme des profils pseudonymes sont sujets à l’expiration des données de profils pseudonymes. **Peu importe** si le profil est uniquement un événement d’expérience ou ne contient que des attributs de profil.
 - La suppression se produit **uniquement** au niveau du profil. Il se peut que le service d’identités continue à afficher les identités supprimées dans le graphique si le profil possède plusieurs identités pseudonymes associées (telles que `AAID` et `ECID`). Nous apporterons une solution à cette incohérence dans une prochaine mise à jour.
 
-### En quoi l’expiration des données de profils pseudonymes diffère-t-elle de l’expiration des données d’événements d’expérience existante ?
-
-L’expiration des données de profils pseudonymes et l’expiration des données d’événements d’expérience sont des fonctionnalités complémentaires.
-
-#### Granularité
-
-L’expiration des données d’événements d’expérience s’applique au **jeu de données**. Par conséquent, chaque jeu de données peut avoir un paramètre d’expiration de données différent.
-
-L’expiration des données de profils pseudonymes s’applique à la **sandbox**. Par conséquent, l’expiration des données affecte tous les profils de la sandbox.
-
-#### Types d’identité
-
-L’expiration des données d’événements d’expérience supprime les événements **uniquement** sur la base de la date et de l’heure de l’enregistrement de l’événement. Les espaces de noms d’identité inclus sont **ignorés** pour les besoins de l’expiration.
-
-L’expiration des données de profils pseudonymes prend **uniquement** en compte les profils dont les graphiques d’identités contiennent des espaces de noms d’identité sélectionnés par le client ou la cliente, tels que `ECID`, `AAID` ou d’autres types de cookies. Si le profil contient **un** espace de noms d’identité supplémentaire qui ne figurait **pas** dans la liste sélectionnée par le client ou la cliente, le profil n’est **pas** supprimé.
-
-#### Éléments supprimés
-
-L’expiration des données d’événements d’expérience supprime **uniquement** les événements et **non** les données de la classe de profil. Les données de classe de profil ne sont supprimées que lorsque les données de **tous** les jeux de données sont supprimées et qu’il n’existe **aucun** enregistrement de classe de profil restant pour le profil.
-
-L’expiration des données de profils pseudonymes supprime les enregistrements d’événement **et** de profil. Les données de classe de profil sont donc également supprimées.
-
-### Comment utiliser l’expiration des données de profils pseudonymes en parallèle avec l’expiration des données d’événements d’expérience ?
-
-L’expiration des données de profils anonymes et l’expiration des données d’événements d’expérience sont complémentaires.
-
-Nous vous recommandons de **toujours** appliquer l’expiration des données d’événements d’expérience à vos jeux de données, en fonction de vos besoins de conservation des données sur votre clientèle existante. Une fois la configuration de l’expiration des données d’événements d’expérience terminée, vous pouvez utiliser l’expiration des données de profils pseudonymes pour supprimer automatiquement les profils pseudonymes. En règle générale, le délai d’expiration des données des profils pseudonymes est inférieur à celui des événements d’expérience.
-
-Dans un cas d’utilisation standard, définissez l’expiration de vos données d’événements d’expérience en fonction de vos données utilisateur existantes. Configurez ensuite l’expiration de vos données de profils pseudonymes sur un délai beaucoup plus court, afin de limiter l’impact des profils pseudonymes sur la conformité de votre licence Platform.
