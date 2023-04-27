@@ -3,10 +3,10 @@ keywords: DoubleClick Bid Manager;gestionnaire d’offres DoubleClick;DoubleClic
 title: Connexion Google Display & Video 360
 description: Display & Video 360, anciennement appelé DoubleClick Bid Manager, est un outil utilisé pour exécuter le reciblage et des campagnes numériques ciblées dans des sources d’inventaire Display, Video et Mobile.
 exl-id: bdd3b3fd-891f-44ec-bd47-daf7f3289f92
-source-git-commit: 7d32499bec8d7248472ae60b07893dbb5496d984
+source-git-commit: 326127996a27df41383ef67da765f7b0818f17f2
 workflow-type: tm+mt
-source-wordcount: '942'
-ht-degree: 86%
+source-wordcount: '987'
+ht-degree: 81%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 86%
 Notez les détails suivants qui sont spécifiques aux destinations [!DNL Google Display & Video 360] :
 
 * Les audiences activées sont créées par programmation dans la plateforme Google.
-* [!DNL Platform] n’inclut actuellement aucune mesure permettant de valider l’activation réussie. Consultez le nombre d’audiences dans Google pour valider l’intégration et comprendre la taille de ciblage des audiences.
+* L’activation des renvoi d’audience vers le [!DNL Google Display & Video 360] La destination doit se produire entre 24 et 48 heures après le premier mappage d’un segment à une connexion de destination. Cette mise à jour répond à la stratégie de Google consistant à attendre 24 heures avant d’ingérer des données et est destinée à améliorer les taux de correspondance entre la plateforme de données clients en temps réel et [!DNL Google Display & Video 360]. Notez qu’il s’agit d’une configuration de serveur principal applicable uniquement à cette destination et qui n’est liée à aucune option de planification configurable par le client dans l’interface utilisateur.
 
 >[!IMPORTANT]
 >
@@ -61,8 +61,8 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 Avant de créer la variable [!DNL Google Display & Video 360] dans Platform, vous devez contacter Google pour demander que l’Adobe soit ajouté à la liste des fournisseurs de données autorisés et que votre compte soit ajouté à la liste autorisée. Contactez Google et fournissez les informations suivantes :
 
-* **Identifiant de compte**: Identifiant de compte de l’Adobe avec Google. Identifiant de compte : 87933855.
-* **ID de client**: Identifiant du compte client de l’Adobe avec Google. Identifiant client : 89690775.
+* **Identifiant de compte** : l’identifiant du compte Adobe avec Google. Identifiant de compte : 87933855.
+* **Identifiant client** : l’identifiant client d’Adobe avec Google. Identifiant client : 89690775.
 * **Votre type de compte** : utilisez **[!DNL Invite advertiser]** pour ne partager les audiences que vers une marque spécifique de votre compte Display &amp; Video 360 ou utilisez **[!DNL Invite partner]** pour partager les audiences vers toutes les marques de votre compte Display &amp; Video 360.
 
 ## Se connecter à la destination {#connect}
