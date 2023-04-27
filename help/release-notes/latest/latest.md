@@ -2,9 +2,9 @@
 title: Notes de mise à jour d’Adobe Experience Platform
 description: Les notes de mise à jour d’avril 2023 pour Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: f8ef0c6fb949cb5c9071e84d88a9151a5558848f
+source-git-commit: ce2e80a7ea7385be98bbcda6a0704cd0814c62b2
 workflow-type: tm+mt
-source-wordcount: '1274'
+source-wordcount: '1284'
 ht-degree: 42%
 
 ---
@@ -61,7 +61,7 @@ Adobe Experience Platform fournit une suite de technologies qui vous permetten
 | Fonctionnalité | Description |
 | --- | --- |
 | Obscurcissement des adresses IP pour les flux de données | Vous pouvez désormais définir des options d’obscurcissement d’IP au niveau d’un flux de données partiel ou complet dans la variable [interface utilisateur de configuration de datastream](../../edge/datastreams/configure.md). <br><br>Le paramètre d’obscurcissement de l’adresse IP au niveau du flux de données est prioritaire par rapport à toute obscurcissement d’adresse IP configuré dans Adobe Target et Audience Manager. <br><br>Les données envoyées à Adobe Analytics ne sont pas affectées par le niveau du flux de données. [!UICONTROL Obscurcissement d’IP] . Adobe Analytics reçoit actuellement des adresses IP non obscurcies. Pour qu’Analytics reçoive des adresses IP obscurcies, vous devez configurer l’obscurcissement des adresses IP séparément, dans Adobe Analytics. Ce comportement sera mis à jour dans les prochaines versions.<br><br> Pour plus d’informations sur l’obscurcissement des adresses IP et pour obtenir des instructions sur la façon de le configurer, voir [documentation sur la configuration de datastream](../../edge/datastreams/configure.md#advanced-options). |
-| Remplacements de la configuration des flux de données | Vous pouvez désormais définir des options de configuration supplémentaires pour les flux de données, que vous utiliserez pour remplacer des paramètres spécifiques, tels que les jeux de données d’événement, les jetons de propriété Target, les conteneurs de synchronisation d’identifiants et les suites de rapports Analytics. <br><br>Le remplacement des configurations de flux de données est un processus en deux étapes. Tout d’abord, vous devez définir vos remplacements de configuration de flux de données dans l’interface utilisateur des flux de données. Ensuite, vous devez envoyer les remplacements au réseau Edge via une commande SDK Web. |
+| [Remplacements de la configuration des flux de données](../../edge/datastreams/overrides.md) | Vous pouvez désormais définir des options de configuration supplémentaires pour les flux de données, que vous utiliserez pour remplacer des paramètres spécifiques, tels que les jeux de données d’événement, les jetons de propriété Target, les conteneurs de synchronisation d’identifiants et les suites de rapports Analytics. <br><br>Le remplacement des configurations de flux de données est un processus en deux étapes : <ol><li>Tout d’abord, vous devez définir vos remplacements de configuration de flux de données dans la variable [page de configuration de datastream](../../edge/datastreams/configure.md).</li><li>Ensuite, vous devez envoyer les remplacements au réseau Edge par le biais d’une commande de SDK Web ou à l’aide du SDK Web. [extension de balise](../../edge/extension/web-sdk-extension-configuration.md).</li></ol> |
 
 {style="table-layout:auto"}
 

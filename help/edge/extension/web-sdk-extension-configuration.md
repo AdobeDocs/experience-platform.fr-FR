@@ -2,9 +2,9 @@
 title: Configuration de l’extension du SDK Web Adobe Experience Platform
 description: Comment configurer l’extension de balise du SDK Web de Adobe Experience Platform dans l’interface utilisateur.
 exl-id: 96d32db8-0c9a-49f0-91f3-0244522d66df
-source-git-commit: 3ab02646968222c0ad09c1d8ce8fda04de7aaac6
+source-git-commit: ce2e80a7ea7385be98bbcda6a0704cd0814c62b2
 workflow-type: tm+mt
-source-wordcount: '1041'
+source-wordcount: '1184'
 ht-degree: 6%
 
 ---
@@ -93,7 +93,7 @@ Si vous souhaitez masquer certaines parties si le contenu personnalisé de votre
 
 ### [!UICONTROL Fonction de rappel]
 
-La fonction de rappel fournie dans l’extension est également appelée [`onBeforeEventSend` function](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=en) dans la bibliothèque. Cette fonction vous permet de modifier les événements de manière globale avant qu’ils ne soient envoyés à Adobe Edge Network. Vous trouverez des informations plus détaillées sur l’utilisation de cette fonction [here](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en#modifying-events-globally).
+La fonction de rappel fournie dans l’extension est également appelée [`onBeforeEventSend` function](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=fr) dans la bibliothèque. Cette fonction vous permet de modifier les événements de manière globale avant qu’ils ne soient envoyés à Adobe Edge Network. Vous trouverez des informations plus détaillées sur l’utilisation de cette fonction [here](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en#modifying-events-globally).
 
 ### [!UICONTROL Clic sur la collecte de données]
 
@@ -102,6 +102,23 @@ Le SDK peut automatiquement collecter des informations sur les clics sur les lie
 ### [!UICONTROL Données contextuelles collectées automatiquement]
 
 Par défaut, le SDK collecte certaines données contextuelles concernant l’appareil, le web, l’environnement et le contexte de lieu. Si vous souhaitez voir une liste des informations collectées par l&#39;Adobe, vous pouvez la trouver. [here](https://experienceleague.adobe.com/docs/experience-platform/edge/data-collection/automatic-information.html?lang=en). Si vous ne souhaitez pas que ces données soient collectées ou que vous souhaitez uniquement que certaines catégories de données soient collectées, vous pouvez modifier ces options.
+
+## [!UICONTROL Remplacements de configuration des flux de données]
+
+Les remplacements de flux de données vous permettent de définir des configurations supplémentaires pour vos flux de données, qui sont transmises au réseau Edge via le SDK Web.
+
+Vous pouvez ainsi déclencher différents comportements de flux de données par rapport aux comportements par défaut, sans créer de flux de données ni modifier vos paramètres existants.
+
+Le remplacement de la configuration du flux de données est un processus en deux étapes :
+
+1. Tout d’abord, vous devez définir vos remplacements de configuration de flux de données dans la variable [page de configuration de datastream](../datastreams/configure.md).
+2. Ensuite, vous devez envoyer les remplacements au réseau Edge par le biais d’une commande de SDK Web ou à l’aide de l’extension de balise du SDK Web.
+
+Voir la structure de données [la documentation de remplacement de configuration](../datastreams/overrides.md) pour obtenir des instructions détaillées sur la façon de remplacer les configurations datastream.
+
+Au lieu de transmettre les remplacements par le biais d’une commande SDK Web, vous pouvez configurer les remplacements dans l’écran d’extension de balise illustré ci-dessous.
+
+![Image montrant les remplacements de la configuration de la banque de données dans la page de l’extension de balise du SDK Web.](../assets/extension/overview/datastream-overrides.png)
 
 ## [!UICONTROL Paramètres avancés]
 

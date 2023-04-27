@@ -3,10 +3,10 @@ title: Suivi des événements à l’aide du SDK Web de Adobe Experience Platfor
 description: Découvrez comment effectuer le suivi des événements du SDK Web Adobe Experience Platform.
 keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;envoyer la balise;documentUnloading;document Unloading;onBeforeEventSend;
 exl-id: 8b221cae-3490-44cb-af06-85be4f8d280a
-source-git-commit: 9b108d0e1722ea1b895c08fd7f42104a0d0da5df
+source-git-commit: a6948e3744aa754eda22831a7e68b847eb904e76
 workflow-type: tm+mt
-source-wordcount: '1177'
-ht-degree: 32%
+source-wordcount: '1194'
+ht-degree: 31%
 
 ---
 
@@ -138,7 +138,12 @@ alloy("sendEvent", {
 
 ### Remplacement de l’identifiant du jeu de données
 
+>[!IMPORTANT]
+>
+>Le `datasetId` l’option prise en charge par `sendEvent` était obsolète. Pour remplacer un identifiant de jeu de données, utilisez [remplacements de configuration](../datastreams/overrides.md) au lieu de .
+
 Dans certains cas d’utilisation, vous pouvez envoyer un événement à un jeu de données autre que celui configuré dans l’interface utilisateur de configuration. Pour ce faire, vous devez définir la variable `datasetId` sur l’option `sendEvent` command :
+
 
 
 ```javascript

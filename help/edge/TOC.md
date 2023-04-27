@@ -5,10 +5,10 @@ user-guide-title: Aide du SDK web d’Adobe Experience Platform
 breadcrumb-title: Guide du SDK web
 user-guide-description: Interagissez avec les services Experience Cloud via le réseau Edge.
 feature: Web SDK
-source-git-commit: b53be9f2f2d55d5f9e8081fb0ca6732dcc2a8c11
+source-git-commit: 5a64beb2f5826bda585111e9ce7f760b939bf9b9
 workflow-type: tm+mt
-source-wordcount: '209'
-ht-degree: 100%
+source-wordcount: '212'
+ht-degree: 98%
 
 ---
 
@@ -30,6 +30,7 @@ ht-degree: 100%
 * Train de données {#datastreams}
    * [Aperçu](./datastreams/overview.md)
    * [Configurer un train de données](./datastreams/configure.md)
+   * [Configuration des remplacements de flux de données](./datastreams/overrides.md)
    * [Préparation des données pour la collecte de données](./datastreams/data-prep.md)
    * Enrichissement des données {#data-enrichment}
       * [Données météo par The Weather Channel](./datastreams/data-enrichment/weather.md)
