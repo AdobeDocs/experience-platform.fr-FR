@@ -2,9 +2,9 @@
 title: Notes de mise à jour d’Adobe Experience Platform - Avril 2023
 description: Les notes de mise à jour d’avril 2023 pour Adobe Experience Platform.
 exl-id: 8b8fa810-d301-43c1-98df-10d3903f3147
-source-git-commit: ce2e80a7ea7385be98bbcda6a0704cd0814c62b2
+source-git-commit: efd69011f1ba81ece0a1c270cc71b9706ab7b88f
 workflow-type: tm+mt
-source-wordcount: '1285'
+source-wordcount: '1297'
 ht-degree: 42%
 
 ---
@@ -82,7 +82,7 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 | Fonction | Description |
 | ----------- | ----------- |
 | Surveillance du flux de données pour [!DNL Custom Personalization] et [!DNL Adobe Commerce] destinations | <p> Vous pouvez désormais afficher les mesures d’activation pour la variable [Adobe Commerce](/help/destinations/catalog/personalization/adobe-commerce.md), [Personnalisation personnalisée](../../destinations/catalog/personalization/custom-personalization.md) et le [Personnalisation Personnalisée Avec Attributs](../../destinations/catalog/personalization/custom-personalization.md) connexions. </p> <p>![Image Adobe Commerce](/help/destinations/assets/common/adobe-commerce-metrics.png "Mesures Adobe Commerce"){width="100" zoomable="yes"}</p>  Voir [Surveillance des flux de données dans l’espace de travail des destinations](../../dataflows/ui/monitor-destinations.md#monitor-dataflows-in-the-destinations-workspace) pour plus d’informations. |
-| Nouveau **[!UICONTROL Ajout d’un identifiant de segment au nom du segment]** pour le champ [!DNL Google Ad Manager] et [!DNL Google Ad Manager 360] destinations | Le nom du segment peut maintenant apparaître dans la variable [[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md#parameters) et [[!DNL Google Ad Manager 360]](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) incluez l’identifiant de segment de l’Experience Platform, comme suit : `Segment Name (Segment ID)`. |
+| Nouveau **[!UICONTROL Ajout d’un identifiant de segment au nom du segment]** pour le champ [!DNL Google Ad Manager] et [!DNL Google Ad Manager 360] destinations | <p>Le nom du segment peut maintenant apparaître dans la variable [[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md#parameters) et [[!DNL Google Ad Manager 360]](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) incluez l’identifiant de segment de l’Experience Platform, comme suit : `Segment Name (Segment ID)`.</p><p>![Ajout d’une image d’identifiant de segment](/help/destinations/assets/common/append-segment-id-to-segment-name.png "Nouveau champ Ajouter un identifiant de segment au nom du segment "){width="100" zoomable="yes"}</p> |
 
 {style="table-layout:auto"}
 
@@ -97,7 +97,7 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 **Correctifs et améliorations** {#destinations-fixes-and-enhancements}
 
 - Nous avons corrigé un problème dans la variable **Identités exclues** mesures de création de rapports pour les exportations de destination basées sur des fichiers. Les clients recevaient tous les identifiants exportés à partir de l’exportation activée comme prévu. Toutefois, la variable **Identités exclues** la mesure de création de rapports dans l’interface utilisateur affichait incorrectement un grand nombre d’identités exclues en raison d’un comptage incorrect des identités qui n’étaient jamais censées être exportées. (PLAT-149774)
-- Correction d’un problème dans l’étape Planification du workflow d’activation. Pour les destinations qui nécessitent un ID de mappage, les clients n’ont pas pu ajouter d’ID de mappage pour les segments ajoutés aux connexions de destination existantes. (PLAT-148808)
+- Nous avons corrigé un problème dans la variable **Planification** de l’étape du workflow d’activation. Pour les destinations qui nécessitent un ID de mappage, les clients n’ont pas pu ajouter d’ID de mappage pour les segments ajoutés aux connexions de destination existantes. (PLAT-148808)
 
 <!--
 - We have fixed an issue with the beta SFTP destination where the port number was previously hardcoded to 22. The port is now configurable for this destination. 
