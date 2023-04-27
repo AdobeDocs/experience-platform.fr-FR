@@ -1,10 +1,10 @@
 ---
 audience: user
-user-guide-title: Guide de Real-Time Customer Profile
+user-guide-title: Guide du profil client en temps réel
 user-guide-description: Fusionnez les données client pour créer une vue unifiée des interactions client entre les canaux.
 feature: Profiles
 source-git-commit: 9de3af9402a245779cfaf765c40bb54da57b91e2
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '124'
 ht-degree: 100%
 
@@ -39,7 +39,7 @@ ht-degree: 100%
    * [Guide de l’interface utilisateur du schéma d’union](ui/union-schema.md)
    * [Présentation du schéma d’union (vidéo)](video/union-schemas-overview.md)
 * Tutoriels {#tutorials}
-   * [Ajouter des données à Real-Time Customer Profile](tutorials/add-profile-data.md)
+   * [Ajouter des données au profil client en temps réel](tutorials/add-profile-data.md)
    * [Configuration dʼun jeu de données pour le profil](tutorials/dataset-configuration.md)
    * [Génération du rapport de chevauchement de jeux de données](tutorials/dataset-overlap-report.md)
    * [Plus de tutoriels](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html?lang=fr)
