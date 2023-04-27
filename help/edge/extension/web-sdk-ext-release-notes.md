@@ -2,10 +2,10 @@
 title: Notes de mise à jour de l’extension du SDK Web Adobe Experience Platform
 description: Extension de la balise SDK Web Adobe Experience Platform
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: ccd02ea014d514b56a8e1bd540bb2c2c4bb2eb1b
+source-git-commit: 952ffa14537058ad03121747846a96c7c978b833
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1654'
+ht-degree: 96%
 
 ---
 
@@ -18,7 +18,7 @@ Ce document contient les notes de mise à jour de l’extension de balises du SD
 
 **Nouvelles fonctionnalités**
 
-* Ajout de la prise en charge des remplacements de configuration de la chaîne de données.
+* Ajout de la prise en charge de [remplacements de la configuration du flux de données](../datastreams/overrides.md).
 * Ajout d’un avis d’obsolescence au `datasetId` sur l’option `sendEvent` .
 
 **Correctifs et améliorations**

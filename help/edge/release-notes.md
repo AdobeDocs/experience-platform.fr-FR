@@ -3,10 +3,10 @@ title: Notes de mise à jour du SDK web d’Adobe Experience Platform
 description: Notes de mise à jour les plus récentes pour le SDK web d’Adobe Experience Platform.
 keywords: SDK web Adobe Experience Platform;SDK web Platform;SDK web;notes de mise à jour;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: ccd02ea014d514b56a8e1bd540bb2c2c4bb2eb1b
+source-git-commit: 952ffa14537058ad03121747846a96c7c978b833
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1517'
+ht-degree: 99%
 
 ---
 
@@ -20,7 +20,7 @@ Pour obtenir les dernières notes de mise à jour sur l’extension de balise du
 
 **Nouvelles fonctionnalités**
 
-* Ajout de la prise en charge des remplacements de configuration de la chaîne de données.
+* Ajout de la prise en charge de [remplacements de la configuration du flux de données](datastreams/overrides.md).
 
 ## Version 2.15.0 - 30 mars 2023
 
