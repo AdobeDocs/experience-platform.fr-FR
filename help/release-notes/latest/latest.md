@@ -2,10 +2,10 @@
 title: Notes de mise à jour d’Adobe Experience Platform
 description: Les notes de mise à jour d’avril 2023 pour Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 8b77b3a91d8724591ec389aa214c81c4bef6baf8
+source-git-commit: 7c4bdee9f8599e27ffab776c4df5083d2e29e26c
 workflow-type: tm+mt
-source-wordcount: '1372'
-ht-degree: 39%
+source-wordcount: '1421'
+ht-degree: 38%
 
 ---
 
@@ -31,7 +31,7 @@ Adobe Experience Platform fournit de nombreux tableaux de bord grâce auxquels
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Tableaux de bord définis par l’utilisateur ou l’utilisatrice | Vous pouvez désormais **filtrer les données historiques** à partir de vos informations sur les widgets et utilisez des données récentes ou une période d’analyse personnalisée.<br>Vous pouvez également **dupliquer vos widgets existants**. En personnalisant un doublon et en modifiant leurs attributs, vous pouvez éviter de redémarrer dès le début lors de la création d’un widget unique. |
+| Tableaux de bord définis par l’utilisateur ou l’utilisatrice | Vous pouvez désormais **filtrer les données historiques** à partir de vos informations sur les widgets et utilisez des données récentes ou une période d’analyse personnalisée. Voir [Guide des tableaux de bord définis par l’utilisateur](../../dashboards/user-defined-dashboards.md#filter-historical-data) pour plus d’informations.<br>Vous pouvez également **dupliquer vos widgets existants**. En personnalisant un doublon et en modifiant leurs attributs, vous pouvez éviter de redémarrer dès le début lors de la création d’un widget unique. Lisez le [guide de duplication de widgets](../../dashboards/user-defined-dashboards.md#duplicate-a-widget) pour en savoir plus. |
 
 {style="table-layout:auto"}
 
@@ -107,7 +107,7 @@ XDM est une spécification Open Source qui fournit des structures et des défini
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Bascule des noms d’affichage | L’éditeur de schémas propose désormais un bouton d’activation/désactivation pour modifier les noms de champ d’origine et les noms d’affichage plus lisibles. Cette flexibilité permet d’améliorer la visibilité des champs et l’édition de vos schémas. Les noms d’affichage des groupes de champs standard sont générés par le système, mais peuvent également être personnalisés via l’interface utilisateur si nécessaire. |
+| Bascule des noms d’affichage | L’éditeur de schémas propose désormais un bouton d’activation/désactivation pour modifier les noms de champ d’origine et les noms d’affichage plus lisibles.<br>![L’éditeur de schémas avec le bouton bascule du nom d’affichage mis en surbrillance.](../../xdm/images/ui/resources/schemas/display-name-toggle.png "Bascule du nom d’affichage de l’éditeur de schémas"){width="100" zoomable="yes"}<br>Cette flexibilité permet d’améliorer la visibilité des champs et l’édition de vos schémas. Les noms d’affichage des groupes de champs standard sont générés par le système, mais peuvent également être personnalisés via l’interface utilisateur si nécessaire. Veuillez lire la [documentation sur le basculement de nom d’affichage](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/resources/schemas.html#display-name-toggle) pour en savoir plus. |
 
 {style="table-layout:auto"}
 
