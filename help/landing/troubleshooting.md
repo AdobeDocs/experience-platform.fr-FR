@@ -10,7 +10,7 @@ exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
 source-wordcount: '1868'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -24,7 +24,7 @@ Vous trouverez ci-dessous une liste de réponses aux questions les plus fréquem
 
 ## Que sont les API [!DNL Experience Platform] ? {#what-are-experience-platform-apis}
 
-[!DNL Experience Platform] propose plusieurs API RESTful qui utilisent des requêtes HTTP pour accéder aux ressources de [!DNL Platform]. Ces API de service présentent chacune plusieurs points de terminaison et vous permettent d’effectuer des opérations ayant pour but de répertorier (GET), de rechercher (GET), de modifier (PUT et/ou PATCH) et de supprimer (DELETE) des ressources. Pour plus d’informations sur les points de terminaison spécifiques et sur les opérations disponibles pour chaque service, consultez la [documentation de référence sur l’API](https://www.adobe.com/go/platform-api-reference-en) sur Adobe I/O.
+[!DNL Experience Platform] propose plusieurs API RESTful qui utilisent des requêtes HTTP pour accéder aux ressources de [!DNL Platform]. Ces API de service présentent chacune plusieurs points d’entrée et vous permettent d’effectuer des opérations ayant pour but de répertorier (GET), de rechercher (GET), de modifier (PUT et/ou PATCH) et de supprimer (DELETE) des ressources. Pour plus d’informations sur les points d’entrée spécifiques et sur les opérations disponibles pour chaque service, consultez la [documentation de référence sur l’API](https://www.adobe.com/go/platform-api-reference-en) sur Adobe I/O.
 
 ## Comment formater une requête API ?  {#how-do-i-format-an-api-request}
 
@@ -32,9 +32,9 @@ Les formats de requête varient selon l’API [!DNL Platform] utilisée. Le meil
 
 Pour plus d’informations sur le formatage des requêtes API, consultez la section du guide de prise en main de l’API Platform [qui fournit des exemples d’appels API](./api-guide.md#sample-api).
 
-## Quelle est mon organisation  {#what-is-my-ims-organization}
+## Quelle est mon organisation ? {#what-is-my-ims-organization}
 
-Une organisation est une représentation Adobe d’un client. Toutes les solutions Adobe sous licence intègrent cette organisation client. Lorsqu’une organisation est autorisée à utiliser [!DNL Experience Platform], elle peut attribuer un accès aux développeurs. ID d’organisation (`x-gw-ims-org-id`) représente l’organisation pour laquelle un appel API doit être exécuté. Il est donc requis en tant qu’en-tête dans toutes les requêtes API. Cet ID est accessible via [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) : dans l’onglet **Intégrations**, accédez à la section **Vue d’ensemble** pour toute intégration spécifique afin de trouver l’ID sous **Informations d’identification client**. Pour une présentation détaillée de la procédure d’authentification dans [!DNL Platform], consultez le [tutoriel sur l’authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr).
+Une organisation est une représentation de clientèle pour Adobe. Toutes les solutions Adobe sous licence sont intégrées à cette organisation cliente. Lorsqu’une organisation est autorisée à utiliser [!DNL Experience Platform], elle peut attribuer un accès aux développeurs et développeuses. L’identifiant d’organisation (`x-gw-ims-org-id`) représente l’organisation pour laquelle un appel API devrait être exécuté. Il est donc nécessaire de le placer en tant qu’en-tête de toutes les requêtes API. Cet ID est accessible via [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) : dans l’onglet **Intégrations**, accédez à la section **Vue d’ensemble** pour toute intégration spécifique afin de trouver l’ID sous **Informations d’identification client**. Pour une présentation détaillée de la procédure d’authentification dans [!DNL Platform], consultez le [tutoriel sur l’authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr).
 
 ## Où trouver ma clé API ?  {#where-can-i-find-my-api-key}
 
@@ -56,7 +56,7 @@ GET /datasets?limit=36&start=10
 GET /batches?createdAfter=1559775880000&orderBy=desc:created
 ```
 
-Pour savoir précisément quels paramètres de requête sont disponibles pour un service ou un point de terminaison en particulier, consultez la documentation spécifique au service.
+Pour savoir précisément quels paramètres de requête sont disponibles pour un service ou un point d’entrée en particulier, consultez la documentation spécifique au service.
 
 ## Comment indiquer un champ JSON à mettre à jour dans une requête PATCH ?  {#how-do-i-indicate-a-json-field-to-update-in-a-patch-request}
 
@@ -162,7 +162,7 @@ Ce message d’erreur s’affiche lorsqu’un en-tête d’organisation (`x-gw-i
 }
 ```
 
-Ce message d’erreur s’affiche lorsque l’intégration de l’utilisateur ou de l’Adobe I/O (identifiée par la variable [jeton d’accès](#how-do-i-get-an-access-token) dans le `Authorization` en-tête) n’est pas autorisé à effectuer des appels vers [!DNL Experience Platform] API de l’organisation fournie dans la variable `x-gw-ims-org-id` en-tête . Vérifiez que vous avez indiqué le bon identifiant pour votre organisation dans l’en-tête avant de réessayer. Si vous ne connaissez pas l’identifiant de votre organisation, vous pouvez le trouver dans la [console Adobe I/O](https://console.adobe.io) : dans l’onglet **Intégrations**, accédez à la section **Aperçu** pour une intégration spécifique afin de trouver l’identifiant sous **Informations d’identification du client**.
+Ce message d’erreur s’affiche lorsque l’intégration de l’utilisateur ou de l’utilisatrice ou d’Adobe I/O (identifiée par le [jeton d’accès](#how-do-i-get-an-access-token) dans l’en-tête `Authorization`) n’est pas autorisée à effectuer des appels vers les API [!DNL Experience Platform] pour l’organisation indiquée dans l’en-tête `x-gw-ims-org-id`. Vérifiez que vous avez indiqué le bon identifiant pour votre organisation dans l’en-tête avant de réessayer. Si vous ne connaissez pas l’identifiant de votre organisation, vous pouvez le trouver dans la [Console Adobe I/O](https://console.adobe.io) : dans l’onglet **Intégrations**, accédez à la section **Aperçu** pour une intégration spécifique afin de trouver l’identifiant sous **Informations d’identification du client**.
 
 ### Erreur d’actualisation de l’etag {#refresh-etag-error}
 
@@ -199,12 +199,12 @@ Ce message d’erreur s’affiche lorsqu’une requête POST, PUT ou PATCH compo
 ```
 
 Ce message d’erreur s’affiche dans l’un des deux cas ci-dessous :
-- En cas d’en-tête d’identifiant d’organisation incorrect ou incorrect (`x-gw-ims-org-id`) est transmis dans une requête API. Assurez-vous que l’ID correct de votre organisation est inclus avant de réessayer.
+- Lorsqu’un en-tête d’organisation incorrect ou malformé (`x-gw-ims-org-id`) est transmis dans une requête API. Assurez-vous que l’identifiant correct de votre organisation est inclus avant de réessayer.
 - Lorsque votre compte (tel que représenté par les informations d’authentification fournies) n’est pas associé à un profil de produit pour Experience Platform. Suivez les étapes de la [génération des informations d’accès](./api-authentication.md#authentication-for-each-session) dans le tutoriel sur l’authentification de l’API Platform pour ajouter Platform à votre compte et mettre à jour vos informations d’authentification en conséquence.
 
 ## Répertoire de dépannage des services {#service-troubleshooting-directory}
 
-Voici une liste de guides de dépannage et de documentation de référence sur les API pour les API [!DNL Experience Platform]. Chaque guide de dépannage fournit des réponses aux questions les plus fréquemment posées ainsi que des solutions aux problèmes relatifs à un service [!DNL Platform] spécifique. Les documents de référence sur l’API fournissent un guide complet de tous les points de terminaison disponibles pour chaque service et présentent des échantillons de corps de requête, de réponses et de codes d’erreur que vous pouvez recevoir.
+Voici une liste de guides de dépannage et de documentation de référence sur les API pour les API [!DNL Experience Platform]. Chaque guide de dépannage fournit des réponses aux questions les plus fréquemment posées ainsi que des solutions aux problèmes relatifs à un service [!DNL Platform] spécifique. Les documents de référence sur l’API fournissent un guide complet de tous les points d’entrée disponibles pour chaque service et présentent des échantillons de corps de requête, de réponses et de codes d’erreur que vous pouvez recevoir.
 
 | Service | Référence d’API | Dépannage |
 | --- | --- | --- |

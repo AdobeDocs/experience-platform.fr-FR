@@ -7,7 +7,7 @@ exl-id: dac31bc3-7003-46d6-9d41-9f6fd3645c2c
 source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
 source-wordcount: '2176'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -55,7 +55,7 @@ Les champs tels que les codes postaux et les adresses IP ne doivent pas être é
 
 ## Pourquoi mes champs d’identité ne sont-ils pas liés comme je m’y attendais ?
 
-À l’aide du [`/cluster/members`point de terminaison](./api/list-cluster-identites.md) de l’API Identity Service, vous pouvez afficher les identités associées pour un ou plusieurs champs d’identité. Si la réponse ne renvoie pas les identités liées attendues, veillez à fournir les informations d’identité appropriées dans vos données XDM. Pour plus d’informations, voir la section relative à la [provision de données XDM à Identity Service](./home.md) dans la présentation d’Identity Service.
+À l’aide du [`/cluster/members`point d’entrée](./api/list-cluster-identites.md) de l’API Identity Service, vous pouvez afficher les identités associées pour un ou plusieurs champs d’identité. Si la réponse ne renvoie pas les identités liées attendues, veillez à fournir les informations d’identité appropriées dans vos données XDM. Pour plus d’informations, voir la section relative à la [provision de données XDM à Identity Service](./home.md) dans la présentation d’Identity Service.
 
 ## Qu’est-ce qu’un espace de noms d’identité ?
 
@@ -77,11 +77,11 @@ Les espaces de noms d’identité standard sont des espaces de noms disponibles 
 
 ## Où trouver la liste des espaces de noms d’identité disponibles pour mon organisation ?
 
-À l’aide de l’[API Identity Service](https://www.adobe.io/experience-platform-apis/references/identity-service), vous pouvez répertorier tous les espaces de noms d’identité disponibles pour votre organisation en envoyant une requête GET au point de terminaison `/idnamespace/identities`. Pour plus d’informations, reportez-vous à la section relative à la [liste des espaces de noms disponibles](./api/list-namespaces.md) dans la présentation de l’API Identity Service.
+À l’aide de l’[API Identity Service](https://www.adobe.io/experience-platform-apis/references/identity-service), vous pouvez répertorier tous les espaces de noms d’identité disponibles pour votre organisation en envoyant une requête GET au point d’entrée `/idnamespace/identities`. Pour plus d’informations, reportez-vous à la section relative à la [liste des espaces de noms disponibles](./api/list-namespaces.md) dans la présentation de l’API Identity Service.
 
 ## Comment créer un espace de noms personnalisé pour mon organisation ?
 
-À l’aide de l’[API Identity Service](https://www.adobe.io/experience-platform-apis/references/identity-service), vous pouvez créer un espace de noms d’identité personnalisé pour votre organisation en envoyant une requête POST au point de terminaison `/idnamespace/identities`. Pour plus d’informations, reportez-vous à la section relative à la [création d’un espace de noms personnalisé](./api/create-custom-namespace.md) dans la présentation de l’API Identity Service.
+À l’aide de l’[API Identity Service](https://www.adobe.io/experience-platform-apis/references/identity-service), vous pouvez créer un espace de noms d’identité personnalisé pour votre organisation en envoyant une requête POST au point d’entrée `/idnamespace/identities`. Pour plus d’informations, reportez-vous à la section relative à la [création d’un espace de noms personnalisé](./api/create-custom-namespace.md) dans la présentation de l’API Identity Service.
 
 ## Que sont les identités composites et les XID ?
 
@@ -332,7 +332,7 @@ Cette erreur s’affiche lorsque les 100 premières lignes d’un lot ne prése
 
 Cette erreur s’affiche lorsqu’un enregistrement ingéré présente une identité dont l’espace de noms associé n’existe pas ou n’est pas accessible pour votre organisation.
 
-### L’ingestion par lots est ignorée en tant que l’organisation IMS n’est pas configurée pour le graphique d’identités privé
+### L’ingestion par lots est ignorée en tant que l’organisation IMS n’est pas configurée pour le graphique d’identité privé
 
 ```json
 {
@@ -342,7 +342,7 @@ Cette erreur s’affiche lorsqu’un enregistrement ingéré présente une ident
 }
 ```
 
-Lors de l’ingestion de données par lots, ce message d’erreur s’affiche lorsque votre entreprise n’a pas reçu les autorisations appropriées pour [!DNL Identity Service]. Contactez votre administrateur système pour résoudre ce problème.
+Lors de l’ingestion de données par lots, ce message d’erreur s’affiche lorsque votre organisation n’a pas reçu les autorisations appropriées pour [!DNL Identity Service]. Contactez votre administrateur système pour résoudre ce problème.
 
 ### Erreur interne
 

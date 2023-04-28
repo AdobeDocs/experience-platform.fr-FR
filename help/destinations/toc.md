@@ -6,8 +6,8 @@ description: Ce document répertorie la table des matières des destinations Ado
 feature: Destinations
 source-git-commit: fb1a8f3a8f78578a0c7d6b8ab4feb60d8c5da1af
 workflow-type: tm+mt
-source-wordcount: '1072'
-ht-degree: 99%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
