@@ -3,9 +3,9 @@ title: Présentation des balises
 description: Les balises dans Adobe Experience Platform Launch représentent la nouvelle génération des fonctionnalités de gestion des balises dʼAdobe. Les balises offrent aux clients un moyen simple de déployer et de gérer toutes les balises dʼanalyse, de marketing et de publicité nécessaires pour offrir des expériences client pertinentes.
 exl-id: 23d882a5-1ddd-404b-a7e9-3000f1804971
 source-git-commit: 13c02dd5930905e3851ff147c0ea4d914e3dc6c7
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '585'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 96%
 
 >[!NOTE]
 >
->Le transfert d’événement est une fonctionnalité payante incluse dans les offres Adobe Real-time Customer Data Platform Connections, Prime ou Ultimate.
+>Le transfert d’événement est une fonctionnalité payante uniquement incluse dans les offres Connections, Prime, ou Ultimate d’Adobe Real-Time Customer Data Platform.
 
 >[!NOTE]
 >
