@@ -1,23 +1,23 @@
 ---
-keywords: Experience Platform;profil;profil client en temps réel;dépannage;barrières de sécurité;instructions;limite;entité;entité principale;entité de dimension;
+keywords: Experience Platform;profil;profil client en temps réel;dépannage;mécanismes de sécurisation;instructions;limite;entité;entité principale;entité de dimension;
 title: Barrières de sécurité par défaut pour les données de profil client en temps réel
 solution: Experience Platform
 product: experience platform
 type: Documentation
 description: Adobe Experience Platform utilise un modèle de données hybride fortement dénormalisé qui diffère du modèle de données relationnelles traditionnel. Ce document fournit des limites d’utilisation et de débit par défaut pour vous aider à modéliser vos données de profil afin d’optimiser les performances du système.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 1c092cd66a8a96623359a0e56de76e2a3d077c8d
+source-git-commit: 8ee68e5416c28a08dffc358dad70055e9b4cdd28
 workflow-type: tm+mt
-source-wordcount: '1982'
-ht-degree: 89%
+source-wordcount: '1980'
+ht-degree: 88%
 
 ---
 
-# Barrières de sécurité par défaut pour les données [!DNL Real-Time Customer Profile]
+# Mécanismes de sécurisation par défaut pour les données [!DNL Real-Time Customer Profile]
 
 Adobe Experience Platform vous permet de proposer des expériences cross-canal personnalisées basées sur des informations comportementales et des attributs du client sous la forme de profils client en temps réel. Pour prendre en charge cette nouvelle approche des profils, Experience Platform utilise un modèle de données hybride fortement dénormalisé qui diffère du modèle de données relationnelles traditionnel.
 
-Ce document fournit des limites d’utilisation et de débit par défaut pour vous aider à modéliser vos données de profil afin d’optimiser les performances du système. Lors de la révision des barrières de sécurité suivantes, on suppose que vous avez correctement modélisé les données. Si vous avez des questions sur la manière de modéliser vos données, contactez votre représentant du service client.
+Ce document fournit des limites d’utilisation et de débit par défaut pour vous aider à modéliser vos données de profil afin d’optimiser les performances du système. Lors de la révision des mécanismes de sécurisation suivants, on suppose que vous avez correctement modélisé les données. Si vous avez des questions sur la manière de modéliser vos données, contactez votre représentant du service client.
 
 >[!NOTE]
 >
@@ -48,9 +48,11 @@ Ce document comprend deux types de limites par défaut :
 
 Les barrières de sécurité suivantes fournissent des limites recommandées lors de la modélisation des données Real-Time Customer Profile. Pour en savoir plus sur les entités principales et les entités de dimension, consultez la section sur les [types d’entités](#entity-types) dans l’Annexe.
 
-### Barrières de sécurité pour les entités principales
+![Diagramme présentant les différentes barrières de sécurité pour les données de profil dans Adobe Experience Platform.](./images/guardrails/profile-guardrails.png)
 
-| Barrière de sécurité | Limite | Type de limite | Description |
+### Mécanismes de sécurisation pour les entités principales
+
+| Mécanisme de sécurisation | Limite | Type de limite | Description |
 | --- | --- | --- | --- |
 | Jeux de données de classe XDM Indivdual Profile | 20 | Soft | Il est recommandé d’utiliser au maximum 20 jeux de données qui exploitent la classe XDM Individual Profile. |
 | Jeux de données de classe XDM ExperienceEvent | 20 | Soft | Il est recommandé d’utiliser au maximum 20 jeux de données qui exploitent la classe XDM ExperienceEvent. |
@@ -61,29 +63,29 @@ Les barrières de sécurité suivantes fournissent des limites recommandées lor
 | Cardinalité de tableau dans ExperienceEvent | &lt;=10 | Soft | La cardinalité optimale des tableaux dans un ExperienceEvent (données de série temporelle) est &lt;=10. |
 | Nombre d’identités pour le graphique d’identités d’un profil individuel | 50 | Hard | **Le nombre maximal d’identités dans un graphique d’identités pour un profil individuel est de 50.** Les profils comportant plus de 50 identités sont exclus de la segmentation, des exportations et des recherches. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-### Barrières de sécurité de l’entité de dimension
+### Mécanismes de sécurisation de l’entité de dimension
 
-| Barrière de sécurité | Limite | Type de limite | Description |
+| Mécanisme de sécurisation | Limite | Type de limite | Description |
 | --- | --- | --- | --- |
 | Aucune donnée de série temporelle n’est autorisée pour les entités non [!DNL XDM Individual Profile]. | 0 | Hard | **Les données de série temporelle ne sont pas autorisées pour les entités non [!DNL XDM Individual Profile] dans le service Profil.** Si un jeu de données de série temporelle est associé à un ID non [!DNL XDM Individual Profile], le jeu de données ne doit pas être activé pour [!DNL Profile]. |
 | Aucune relation imbriquée | 0 | Soft | Vous ne devez pas créer de relation entre deux schémas non-[!DNL XDM Individual Profile]. La possibilité de créer des relations n’est pas recommandée pour les schémas qui ne font pas partie du schéma d’union [!DNL Profile]. |
 | Profondeur JSON du champ de l’ID principal | 4 | Soft | La profondeur JSON maximale recommandée pour le champ de l’ID principal est de 4. Cela signifie que dans un schéma fortement imbriqué, vous ne devez pas choisir un champ comme identifiant principal qui est imbriqué à plus de 4 niveaux de profondeur. Un champ qui est au quatrième niveau d’imbrication peut être utilisé comme ID principal. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Limites de taille des données
 
-Les barrières de sécurité suivantes se rapportent à la taille des données et fournissent des limites recommandées pour les données qui peuvent être ingérées, stockées et interrogées comme prévu. Pour en savoir plus sur les entités principales et les entités de dimension, consultez la section sur les [types d’entités](#entity-types) dans l’Annexe.
+Les mécanismes de sécurisation suivants se rapportent à la taille des données et fournissent des limites recommandées pour les données qui peuvent être ingérées, stockées et interrogées comme prévu. Pour en savoir plus sur les entités principales et les entités de dimension, consultez la section sur les [types d’entités](#entity-types) dans l’Annexe.
 
 >[!NOTE]
 >
 >La taille des données est mesurée en tant que données non compressées dans JSON au moment de l’ingestion.
 
-### Barrières de sécurité pour les entités principales
+### Mécanismes de sécurisation pour les entités principales
 
-| Barrière de sécurité | Limite | Type de limite | Description |
+| Mécanisme de sécurisation | Limite | Type de limite | Description |
 | --- | --- | --- | --- |
 | Taille maximale d’ExperienceEvent | 10 Ko | Hard | **La taille maximale d’un événement est de 10 Ko.** L’ingestion se poursuit, mais tous les événements de plus de 10 Ko seront ignorés. |
 | Taille maximale d’enregistrement de profil | 100 Ko | Hard | **La taille maximale d’un enregistrement de profil est de 100 Mo.** L’ingestion se poursuit, mais les enregistrements de profil supérieurs à 100 Ko seront ignorés. |
@@ -92,30 +94,30 @@ Les barrières de sécurité suivantes se rapportent à la taille des données e
 | Nombre de lots Profile ou ExperienceEvent ingérés par jour | 90 | Soft | **Le nombre maximal de lots Profile ou ExperienceEvent ingérés par jour est de 90.** Cela signifie que le total combiné des lots Profile et ExperienceEvent ingérés chaque jour ne peut pas dépasser 90. L’ingestion de lots supplémentaires affectera les performances du système. |
 | Nombre d’ExperienceEvents par enregistrement de profil | 5000 | Soft | **Le nombre maximal d’ExperienceEvents par enregistrement de profil est de 5 000.** Les profils comportant plus de 5 000 ExperienceEvents **not** être pris en compte pour la segmentation ; |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-### Barrières de sécurité de l’entité de dimension
+### Mécanismes de sécurisation de l’entité de dimension
 
-| Barrière de sécurité | Limite | Type de limite | Description |
+| Mécanisme de sécurisation | Limite | Type de limite | Description |
 | --- | --- | --- | --- |
 | Taille totale pour toutes les entités de dimension | 5 Go | Soft | La taille totale recommandée pour toutes les entités dimensionnelles est de 5 Go. L’ingestion d’entités de dimension volumineuses peut affecter les performances du système. Par exemple, il n’est pas recommandé de charger un catalogue de produits de 10 Go en tant qu’entité de dimension. |
 | Jeux de données par schéma d’entité dimensionnelle | 5 | Soft | Il est recommandé d’associer un maximum de 5 jeux de données à chaque schéma d’entité dimensionnelle. Par exemple, si vous créez un schéma pour les « produits » et ajoutez cinq jeux de données de contribution, vous ne devez pas créer un sixième jeu de données lié au schéma de produits. |
 | Lots d’entités de dimension ingérés par jour | 4 par entité | Soft | Le nombre maximal recommandé de lots d’entités de dimension ingérés par jour est de 4 par entité. Par exemple, vous pouvez ingérer des mises à jour à un catalogue de produits jusqu’à 4 fois par jour. L’ingestion de lots d’entités de dimension supplémentaires pour la même entité peut affecter les performances du système. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-## Barrières de sécurité de la segmentation
+## Mécanismes de sécurisation de la segmentation
 
-Les barrières de sécurité décrites dans cette section font référence au nombre et à la nature des segments qu’une organisation peut créer dans Experience Platform, ainsi qu’au mappage et à l’activation de segments vers des destinations.
+Les mécanismes de sécurisation décrits dans cette section font référence au nombre et à la nature des segments qu’une organisation peut créer dans Experience Platform, ainsi qu’au mappage et à l’activation de segments vers des destinations.
 
-| Barrière de sécurité | Limite | Type de limite | Description |
+| Mécanisme de sécurisation | Limite | Type de limite | Description |
 | --- | --- | --- | --- |
-| Segments par sandbox | 4 000 | Soft | Une organisation peut avoir plus de 4 000 segments au total, à condition qu’il y ait moins de 4 000 segments dans chaque sandbox individuelle. Toute tentative de création de segments supplémentaires peut affecter les performances du système. |
-| Segments Edge par sandbox | 150 | Soft | Une organisation peut comporter plus de 150 segments Edge au total, à condition qu’il y en ait moins de 150 dans chaque sandbox individuelle. Toute tentative de création de segments Edge supplémentaires peut affecter les performances du système. |
-| Segments de flux continu par sandbox | 500 | Soft | Une organisation peut avoir plus de 500 segments de flux continu au total, à condition qu’il y en ait moins de 500 dans chaque sandbox individuelle. Toute tentative de création de segments de flux continu supplémentaires peut affecter les performances du système. |
-| Segments par lot par sandbox | 4 000 | Soft | Une organisation peut avoir plus de 4 000 segments par lot au total, à condition qu’il y en ait moins de 4 000 dans chaque sandbox individuelle. Toute tentative de création de segments par lot supplémentaires peut affecter les performances du système. |
+| Segments par sandbox | 4 000 | Soft | Une organisation peut avoir plus de 4 000 segments au total, à condition qu’il y ait moins de 4 000 segments dans chaque sandbox individuel. Toute tentative de création de segments supplémentaires peut affecter les performances du système. |
+| Segments Edge par sandbox | 150 | Soft | Une organisation peut comporter plus de 150 segments Edge au total, à condition qu’il y en ait moins de 150 dans chaque sandbox individuel. Toute tentative de création de segments Edge supplémentaires peut affecter les performances du système. |
+| Segments de flux continu par sandbox | 500 | Soft | Une organisation peut avoir plus de 500 segments de flux continu au total, à condition qu’il y en ait moins de 500 dans chaque sandbox individuel. Toute tentative de création de segments de flux continu supplémentaires peut affecter les performances du système. |
+| Segments par lot par sandbox | 4 000 | Soft | Une organisation peut avoir plus de 4 000 segments par lot au total, à condition qu’il y en ait moins de 4 000 dans chaque sandbox individuel. Toute tentative de création de segments par lot supplémentaires peut affecter les performances du système. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Annexe
 
@@ -145,7 +147,7 @@ Les entités de dimension fournissent des données de recherche qui aident et si
 
 ### Fragments de profil
 
-Dans ce document, plusieurs barrières de sécurité font référence à des « fragments de profil ». Dans Experience Platform, plusieurs fragments de profil sont fusionnés pour former le profil client en temps réel. Chaque fragment représente une identité principale unique et l’enregistrement correspondant ou l’ensemble complet de données d’événement pour cet identifiant, dans un jeu de données déterminé. Pour en savoir plus sur les fragments de profil, consultez la section [Présentation des profils](home.md#profile-fragments-vs-merged-profiles).
+Dans ce document, plusieurs mécanismes de sécurisation font référence à des « fragments de profil ». Dans Experience Platform, plusieurs fragments de profil sont fusionnés pour former le profil client en temps réel. Chaque fragment représente une identité principale unique et l’enregistrement correspondant ou l’ensemble complet de données d’événement pour cet identifiant, dans un jeu de données déterminé. Pour en savoir plus sur les fragments de profil, consultez la section [Présentation des profils](home.md#profile-fragments-vs-merged-profiles).
 
 ### Stratégies de fusion {#merge-policies}
 
