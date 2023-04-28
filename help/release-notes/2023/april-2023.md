@@ -2,9 +2,9 @@
 title: Notes de mise à jour d’Adobe Experience Platform - Avril 2023
 description: Les notes de mise à jour d’avril 2023 pour Adobe Experience Platform.
 exl-id: 8b8fa810-d301-43c1-98df-10d3903f3147
-source-git-commit: c7f09da40d2ea84de6f21669bdda16c0175a63c1
+source-git-commit: 3594b20ee495dadf91d745958eac1a06647cae24
 workflow-type: tm+mt
-source-wordcount: '1492'
+source-wordcount: '1662'
 ht-degree: 36%
 
 ---
@@ -110,6 +110,26 @@ XDM est une spécification Open Source qui fournit des structures et des défini
 | Fonctionnalité | Description |
 | --- | --- |
 | Bascule des noms d’affichage | L’éditeur de schémas propose désormais un bouton d’activation/désactivation pour modifier les noms de champ d’origine et les noms d’affichage plus lisibles.<br>![L’éditeur de schémas avec le bouton bascule du nom d’affichage mis en surbrillance.](../../xdm/images/ui/resources/schemas/display-name-toggle.png "Bascule du nom d’affichage de l’éditeur de schémas"){width="100" zoomable="yes"}<br>Cette flexibilité permet d’améliorer la visibilité des champs et l’édition de vos schémas. Les noms d’affichage des groupes de champs standard sont générés par le système, mais peuvent également être personnalisés via l’interface utilisateur si nécessaire. Veuillez lire la [documentation sur le basculement de nom d’affichage](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/resources/schemas.html#display-name-toggle) pour en savoir plus. |
+
+{style="table-layout:auto"}
+
+**Nouveaux composants XDM**
+
+| Type de composant | Nom | Description |
+| --- | --- | --- |
+| Schéma | [[!UICONTROL Champs de classification Adobe Target]](https://github.com/adobe/xdm/pull/1719/files) | Un nouveau schéma XDM pour les jeux de données de classification Target contenant un ensemble de champs de métadonnées pour classer les activités et expériences Target. |
+
+{style="table-layout:auto"}
+
+**Composants XDM mis à jour**
+
+| Type de composant | Nom | Description |
+| --- | --- | --- |
+| Groupe de champs | [[!UICONTROL Extension d’union de compte de service de profil unifié Adobe]](https://github.com/adobe/xdm/pull/1696/files) | Ajout d’un groupe de champs d’extension de compte pour Real-Time Customer Profile qui permet aux utilisateurs d’ajouter une adhésion au segment sur l’union de compte. |
+| Schéma | [[!UICONTROL Schéma système des attributs calculés]](https://github.com/adobe/xdm/pull/1696/files) | Le groupe de champs Attributs calculés utilisé par Real-Time Customer Profile a été mis à jour vers un schéma global en lecture seule du système. |
+| Groupe de champs | Multiple | Ajout de plusieurs événements en tant que champs pour [[!UICONTROL Schéma de série temporelle]](https://github.com/adobe/xdm/pull/1718/files). |
+| Groupe de champs | Détails de fidélité du profil | [Correction du titre](https://github.com/adobe/xdm/pull/1717/files) pour `xdm:upgradeDate` de &quot;Nom du programme&quot; à &quot;Date de mise à niveau&quot;. |
+| Groupe de champs | Multiple | Plusieurs champs de [[!UICONTROL Élément de décision]](https://github.com/adobe/xdm/pull/1714/files) ont été mis à jour afin de supprimer la hiérarchie imbriquée double. |
 
 {style="table-layout:auto"}
 
