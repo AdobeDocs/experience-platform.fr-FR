@@ -6,9 +6,9 @@ type: Tutorial
 description: Découvrez comment créer une stratégie de gouvernance des données à l’aide de l’API Policy Service.
 exl-id: 8483f8a1-efe8-4ebb-b074-e0577e5a81a4
 source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1199'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -57,7 +57,7 @@ GET /marketingActions/custom
 
 **Requête**
 
-La requête suivante utilise la variable `marketingActions/custom` point de terminaison qui récupère une liste de toutes les actions marketing définies par votre organisation.
+La requête suivante utilise le point d’entrée `marketingActions/custom` qui récupère une liste de toutes les actions marketing définies par votre organisation.
 
 ```shell
 curl -X GET \
