@@ -5,9 +5,9 @@ title: Présentation de la correspondance des segments
 description: La correspondance des segments est un service de partage de segments dans Adobe Experience Platform qui permet à deux utilisateurs ou plus de Platform d’échanger des données de segment de manière sécurisée, régulée et respectueuse de la confidentialité.
 exl-id: 4e6ec2e0-035a-46f4-b171-afb777c14850
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1997'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -56,7 +56,7 @@ Vous devez fournir une configuration de consentement et définir sa valeur par d
 
 La vérification de consentement pour l’accord préalable et le droit d’opposition détermine si vous pouvez utiliser le consentement par défaut relatif au partage des données utilisateur. Si la configuration de consentement par défaut est définie sur `opt-out`, les données utilisateur peuvent ensuite être partagées, sauf si un utilisateur s’y oppose explicitement. Si la valeur par défaut est définie sur `opt-in`, les données utilisateur ne peuvent pas être partagées, à moins qu’un utilisateur n’y consente explicitement.
 
-La configuration de consentement par défaut pour [!DNL Segment Match] est définie sur `opt-out`. Pour appliquer un modèle d’inclusion à vos données, envoyez une demande par courrier électronique à votre équipe de compte Adobe.
+La configuration de consentement par défaut pour [!DNL Segment Match] est définie sur `opt-out`. Pour appliquer un modèle d’accord préalable à vos données, envoyez une demande par e-mail à l’équipe de votre compte Adobe.
 
 Pour plus d’informations sur l’attribut `share` utilisé pour définir la valeur de consentement du partage des données, consultez la documentation suivante sur le [groupe de champs confidentialité et consentements](../../../xdm/field-groups/profile/consents.md). Pour plus d’informations sur le groupe de champs spécifique utilisé pour capturer le consentement des consommateurs pour la collecte et l’utilisation de données liées à la confidentialité, à la personnalisation et aux préférences marketing, consultez [les exemples GitHub de consentement pour la confidentialité, la personnalisation et les préférences marketing](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/consent/consent-preferences.schema.md).
 
@@ -76,7 +76,7 @@ Deux autorisations sont associées à [!DNL Segment Match] :
 
 | Autorisation | Description |
 | --- | --- |
-| Gérer les connexions de partage d’audience | Cette autorisation vous permet d’effectuer le processus de négociation des liens avec les partenaires, qui connecte deux organisations pour activer [!DNL Segment Match] flux. |
+| Gérer les connexions de partage d’audience | Cette autorisation vous permet d’effectuer le processus de partenariat à l’amiable, qui connecte deux organisations pour activer les flux [!DNL Segment Match]. |
 | Gérer les partages d’audience | Cette autorisation vous permet de créer, de modifier et de publier des flux (le package de données utilisé pour [!DNL Segment Match]) avec des partenaires actifs (des partenaires qui ont été connectés par l’utilisateur administrateur avec un accès aux **[!UICONTROL connexions avec partage d’audience]**). |
 
 Pour plus d’informations sur le contrôle d’accès et les autorisations, consultez la [Présentation du contrôle d’accès](../../../access-control/home.md).
