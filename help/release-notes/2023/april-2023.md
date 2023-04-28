@@ -2,7 +2,7 @@
 title: Notes de mise à jour d’Adobe Experience Platform - Avril 2023
 description: Les notes de mise à jour d’avril 2023 pour Adobe Experience Platform.
 exl-id: 8b8fa810-d301-43c1-98df-10d3903f3147
-source-git-commit: 7c4bdee9f8599e27ffab776c4df5083d2e29e26c
+source-git-commit: a8e59d6386a51c4d5d3173be16ee45311f8d2929
 workflow-type: tm+mt
 source-wordcount: '1422'
 ht-degree: 38%
@@ -122,6 +122,8 @@ Adobe Experience Platform vous permet d’offrir aux clients des expériences 
 | Fonctionnalité | Description |
 | ------- | ----------- |
 | Expiration des données de profil pseudonyme | L’expiration des données de profil anonymes est désormais disponible en général. Cette version supprimera en permanence les profils pseudonymes obsolètes de votre instance d’Experience Platform une fois activée. Pour en savoir plus sur cette fonctionnalité et les profils pseudonymes, veuillez lire la section [Guide d’expiration des données de profil pseudonyme](../../profile/pseudonymous-profiles.md). |
+
+{style="table-layout:auto"}
 
 ## Sources {#sources}
 
