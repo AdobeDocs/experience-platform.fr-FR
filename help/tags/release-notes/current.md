@@ -2,14 +2,22 @@
 title: Notes de mise à jour relatives aux balises et au transfert d’événements
 description: Dernières notes de mise à jour concernant les balises et le transfert d’événement dans Adobe Experience Platform.
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: 3ebf8df16f88660eab481bd0a0ba88816b470255
+source-git-commit: c7f09da40d2ea84de6f21669bdda16c0175a63c1
 workflow-type: tm+mt
-source-wordcount: '720'
-ht-degree: 95%
+source-wordcount: '798'
+ht-degree: 86%
 
 ---
 
 # Notes de mise à jour relatives aux balises et au transfert d’événements
+
+## 26 avril 2023
+
+* **Secret JWT OAuth**: Le [Secret JWT OAuth](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html?lang=en) permet aux clients d’utiliser des jetons Adobe et Google Service pour prendre en charge les interactions serveur à serveur dans le transfert d’événements.
+
+La nouvelle extension suivante a été publiée :
+
+* **[!DNL Pinterest Conversions API]extension**: Le [[!DNL Pinterest Conversions API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/pinterest/overview.html) l’extension de transfert d’événement vous permet d’exploiter les données capturées dans Adobe Experience Platform Edge Network et de les envoyer à [!DNL Pinterest] sous la forme d’événements côté serveur à l’aide de la variable [!DNL Pinterest Conversions API].
 
 ## 29 mars 2023
 

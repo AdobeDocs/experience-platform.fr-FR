@@ -2,10 +2,10 @@
 title: Notes de mise à jour d’Adobe Experience Platform
 description: Les notes de mise à jour d’avril 2023 pour Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: a8e59d6386a51c4d5d3173be16ee45311f8d2929
+source-git-commit: c7f09da40d2ea84de6f21669bdda16c0175a63c1
 workflow-type: tm+mt
-source-wordcount: '1421'
-ht-degree: 38%
+source-wordcount: '1491'
+ht-degree: 36%
 
 ---
 
@@ -62,6 +62,8 @@ Adobe Experience Platform fournit une suite de technologies qui vous permetten
 | --- | --- |
 | Obscurcissement des adresses IP pour les flux de données | Vous pouvez désormais définir des options d’obscurcissement d’IP au niveau d’un flux de données partiel ou complet dans la variable [interface utilisateur de configuration de datastream](../../edge/datastreams/configure.md). <br><br>Le paramètre d’obscurcissement de l’adresse IP au niveau du flux de données est prioritaire par rapport à toute obscurcissement d’adresse IP configuré dans Adobe Target et Audience Manager. <br><br>Les données envoyées à Adobe Analytics ne sont pas affectées par le niveau du flux de données. [!UICONTROL Obscurcissement d’IP] . Adobe Analytics reçoit actuellement des adresses IP non obscurcies. Pour qu’Analytics reçoive des adresses IP obscurcies, vous devez configurer l’obscurcissement des adresses IP séparément, dans Adobe Analytics. Ce comportement sera mis à jour dans les prochaines versions.<br><br> Pour plus d’informations sur l’obscurcissement des adresses IP et pour obtenir des instructions sur la façon de le configurer, voir [documentation sur la configuration de datastream](../../edge/datastreams/configure.md#advanced-options). |
 | [Remplacements de la configuration des flux de données](../../edge/datastreams/overrides.md) | Vous pouvez désormais définir des options de configuration supplémentaires pour les flux de données, que vous utiliserez pour remplacer des paramètres spécifiques, tels que les jeux de données d’événement, les jetons de propriété Target, les conteneurs de synchronisation d’identifiants et les suites de rapports Analytics. <br><br>Le remplacement des configurations de flux de données est un processus en deux étapes : <ol><li>Tout d’abord, vous devez définir vos remplacements de configuration de flux de données dans la variable [page de configuration de datastream](../../edge/datastreams/configure.md).</li><li>Ensuite, vous devez envoyer les remplacements au réseau Edge par le biais d’une commande de SDK Web ou à l’aide du SDK Web. [extension de balise](../../edge/extension/web-sdk-extension-configuration.md).</li></ol> |
+| Secret JWT OAuth | Le [Secret JWT OAuth](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html?lang=en) permet aux clients d’utiliser des jetons Adobe et Google Service pour prendre en charge les interactions serveur à serveur dans le transfert d’événements. |
+| [!DNL Pinterest Conversions API] Extension | Le [[!DNL Pinterest Conversions API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/pinterest/overview.html) l’extension de transfert d’événement vous permet d’exploiter les données capturées dans Adobe Experience Platform Edge Network et de les envoyer à [!DNL Pinterest] sous la forme d’événements côté serveur à l’aide de la variable [!DNL Pinterest Conversions API]. |
 
 {style="table-layout:auto"}
 
