@@ -5,9 +5,9 @@ title: Présentation de la collecte de données
 description: Découvrez les différentes technologies impliquées dans la collecte de données relatives aux expériences client dans Adobe Experience Platform.
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
 source-git-commit: 13c02dd5930905e3851ff147c0ea4d914e3dc6c7
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '516'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -63,7 +63,7 @@ En outre, les flux de données sont intégrés à plusieurs fonctionnalités Pla
 
 >[!NOTE]
 >
->Le transfert d’événement est une fonctionnalité payante incluse dans les offres Adobe Real-time Customer Data Platform Connections, Prime ou Ultimate.
+>Le transfert d’événement est une fonctionnalité payante uniquement incluse dans les offres Connections, Prime, ou Ultimate d’Adobe Real-Time Customer Data Platform.
 
 ## Étapes suivantes
 
