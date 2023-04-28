@@ -5,9 +5,9 @@ title: Guide de dépannage de Privacy Service
 description: Ce document fournit des réponses aux questions fréquentes sur Privacy Service, ainsi que des informations sur les erreurs courantes rencontrées dans l’API.
 exl-id: 8afbb065-0f41-4048-9003-a22c0c839717
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '916'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -69,9 +69,9 @@ Adobe n’est pas compatible avec l’utilisation de [!DNL Privacy Service] comm
 
 Les requêtes d’accès à des informations personnelles sont sensibles au facteur temps et sont effectuées en fonction des lois de confidentialité applicables. L’envoi de requêtes autres que les requêtes relatives à l’accès ou à la suppression de titulaires de données ou de clientes et clients a des répercussions sur les clientes et clients de [!DNL Privacy Service] et sur la capacité de [!DNL Privacy Service] à respecter les délais légaux appropriés. Une limite de chargement quotidienne stricte est maintenant en place pour prévenir les abus du service.
 
-Veuillez contacter votre équipe de compte d’Adobe pour coordonner et fournir un niveau d’effort afin de supprimer tout problème de PII ou de données.
+Veuillez contacter votre équipe de compte Adobe pour coordonner vos efforts et fournir un niveau de service adéquat en matière de suppression des données personnelles identifiables (PII) ou des problèmes relatifs aux données.
 
-## Comment puis-je obtenir des informations sur l’état d’une requête ou d’une tâche de confidentialité ?
+## Comment puis-je obtenir des informations sur le statut d’une requête ou d’une tâche de confidentialité ?
 
 Vous pouvez obtenir des détails sur une tâche spécifique à l’aide de l’API ou de l’interface utilisateur [!DNL Privacy Service].
 
@@ -107,7 +107,7 @@ Le tableau suivant présente quelques erreurs courantes dans [!DNL Privacy Servi
 | Espace de noms non valide | Un espace de noms d’identité fourni pour un ID d’utilisateur n’était pas valide. Voir la section [Espaces de noms d’identité standard](./api/appendix.md#standard-namespaces) dans l’annexe du guide de l’API [!DNL Privacy Service] pour obtenir une liste des espaces de noms acceptés. Si vous utilisez un espace de noms personnalisé, veillez à définir la propriété `type` des identifiants sur « personnalisés». |
 | Tâche en partie terminée | La tâche s’est terminée avec succès, mais certaines données n’étaient pas applicables pour la requête donnée et ont été ignorées. |
 | Les données ne sont pas au format requis. | Une ou plusieurs valeurs de données pour l’application spécifiée n’étaient pas au format requis. Pour plus d’informations, consultez les détails de la tâche. |
-| L’organisation IMS n’a pas été configurée. | Ce message se produit lorsque votre organisation n’a pas reçu les privilèges d’accès pour [!DNL Privacy Service]. Pour plus d’informations, contactez votre administrateur. |
+| L’organisation IMS n’a pas été configurée. | Ce message se produit lorsque votre organisation n’a pas été configurée pour [!DNL Privacy Service]. Pour plus d’informations, contactez votre administrateur. |
 | Des accès et des autorisations sont requis. | Des accès et des autorisations sont requis pour utiliser [!DNL Privacy Service]. Contactez votre administrateur pour obtenir un accès. |
 | Un problème est survenu lors du chargement et de l’archivage des données d’accès. | Lorsque cette erreur se produit, rechargez les données d’accès, puis réessayez. |
 | Dépassement de la charge de travail pour la limite de taux de documents actuelle. | Lorsque cette erreur se produit, réduisez le taux d’envoi, puis réessayez. |
