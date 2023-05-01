@@ -2,10 +2,10 @@
 title: Traiter les données de consentement du client à l’aide du SDK Web de Adobe Experience Platform
 description: Découvrez comment intégrer le SDK Web de Adobe Experience Platform pour traiter les données de consentement des clients dans Adobe Experience Platform.
 exl-id: 3a53d908-fc61-452b-bec3-af519dfefa41
-source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
+source-git-commit: dc269f952d0970cb5be1b28ab91c6006de975df3
 workflow-type: tm+mt
-source-wordcount: '1375'
-ht-degree: 2%
+source-wordcount: '1349'
+ht-degree: 3%
 
 ---
 
@@ -24,17 +24,17 @@ Ce tutoriel suppose que vous avez déjà déterminé comment générer des donn�
 
 Ce guide suit le processus de configuration du SDK à l’aide de l’extension de balise dans l’interface utilisateur. Si vous ne souhaitez pas utiliser l’extension et que vous préférez incorporer directement la version autonome du SDK sur votre site, reportez-vous aux documents suivants au lieu de ce guide :
 
-* [Configurer un flux de données](../../../edge/datastreams/overview.md)
+* [Configurer un train de données](../../../edge/datastreams/overview.md)
 * [Installation du SDK](../../../edge/fundamentals/installing-the-sdk.md)
 * [Configuration du SDK pour les commandes de consentement](../../../edge/consent/supporting-consent.md)
 
-Les étapes d’installation de ce guide nécessitent une compréhension pratique des extensions de balise et de leur installation dans les applications web. Pour plus d’informations, consultez la documentation suivante :
+Les étapes d’installation de ce guide nécessitent une compréhension pratique des extensions de balise et de leur installation dans les applications web. Pour plus d’informations, reportez-vous à la documentation suivante :
 
 * [Présentation des balises](../../../tags/home.md)
 * [Guide de démarrage rapide](../../../tags/quick-start/quick-start.md)
 * [Présentation de la publication](../../../tags/ui/publishing/overview.md)
 
-## Configuration d’un flux de données
+## Configurer un flux de données
 
 Pour que le SDK envoie des données à l’Experience Platform, vous devez d’abord configurer un flux de données. Dans l’interface utilisateur de la collecte de données ou l’interface utilisateur Experience Platform, sélectionnez **[!UICONTROL Datastreams]** dans le volet de navigation de gauche.
 
@@ -45,7 +45,6 @@ Après avoir créé un nouveau flux de données ou sélectionné un flux existan
 | Champ de flux de données | Valeur |
 | --- | --- |
 | [!UICONTROL Sandbox] | Nom de la plateforme [sandbox](../../../sandboxes/home.md) qui contient la connexion en continu et les jeux de données requis pour configurer le flux de données. |
-| [!UICONTROL Inlet de diffusion en continu] | Une connexion en continu valide pour l’Experience Platform. Voir le tutoriel sur [création d’une connexion en continu](../../../ingestion/tutorials/create-streaming-connection-ui.md) si vous n’avez pas d’inlet de diffusion en continu existant. |
 | [!UICONTROL Jeu de données d’événement] | Un [!DNL XDM ExperienceEvent] jeu de données que vous prévoyez d’envoyer des données d’événement à à l’aide du SDK. Bien que vous soyez tenu de fournir un jeu de données d’événement pour créer un flux de données Platform, notez que les données de consentement envoyées par le biais d’événements ne sont pas honorées dans les workflows d’application en aval. |
 | [!UICONTROL Jeu de données de profil] | Le [!DNL Profile]Jeu de données activé avec les champs de consentement du client que vous avez créés [previous](#prerequisites). |
 
