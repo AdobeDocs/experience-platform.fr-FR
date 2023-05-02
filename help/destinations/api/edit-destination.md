@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Modification des connexions de destination à l’aide de l’API Flow Service
 type: Tutorial
 description: Découvrez comment modifier différents composants d’une connexion de destination à l’aide de l’API Flow Service.
-source-git-commit: 52fe0ef2ab195756c381b3ef0a5792dffe459b8d
+source-git-commit: 956ac5d210d54526e886e57b8ea37ab4b3fbab8a
 workflow-type: tm+mt
-source-wordcount: '1560'
+source-wordcount: '1565'
 ht-degree: 33%
 
 ---
@@ -196,9 +196,6 @@ Obtenez l’identifiant du flux de données de la connexion > Obtenez l’identi
 PATCH /targetConnections/{TARGET_CONNECTION_ID}
 ```
 
->[!ENDSHADEBOX]
-
-
 >[!BEGINTABS]
 
 >[!TAB Amazon S3]
@@ -244,11 +241,11 @@ Une réponse réussie renvoie votre identifiant de connexion cible et une balise
 }
 ```
 
->[!TAB Google Ad Manager 360]
+>[!TAB Google Ad Manager et Google Ad Manager 360]
 
 **Requête**
 
-La requête suivante met à jour les paramètres d’une [[!DNL Google Ad Manager 360] destination](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) connexion pour ajouter le nouveau champ d’ajout de l’identifiant de segment au nom du segment.
+La requête suivante met à jour les paramètres d’une [[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md) ou [[!DNL Google Ad Manager 360] destination](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) pour ajouter la nouvelle connexion [**[!UICONTROL Ajout d’un identifiant de segment au nom du segment]**](/help/release-notes/2023/april-2023.md#destinations) champ .
 
 ```shell
 curl -X PATCH \
@@ -328,6 +325,8 @@ Une réponse réussie renvoie votre identifiant de connexion cible et une balise
 
 >[!ENDTABS]
 
+>[!ENDSHADEBOX]
+
 ## Modifier les composants de connexion de base (paramètres d’authentification et autres composants) {#patch-base-connection}
 
 Les composants d’une connexion de base diffèrent par destination. Par exemple, pour [!DNL Amazon S3] destinations, vous pouvez mettre à jour la clé d’accès et la clé secrète vers vos [!DNL Amazon S3] emplacement.
@@ -340,11 +339,13 @@ Souvenez-vous que vous avez obtenu votre identifiant de connexion de base à une
 >
 >L’en-tête `If-Match` est requis lors de l’exécution d’une requête PATCH. La valeur de cet en-tête est la version unique de la connexion de base que vous souhaitez mettre à jour. La valeur etag est mise à jour à chaque mise à jour réussie d’une entité de flux, telle que le flux de données, la connexion de base, etc.
 >
-> Pour obtenir la dernière version de la valeur etag, effectuez une requête GET à la variable `/connections/{BASE_CONNECTION_ID}` point de terminaison , où `{BASE_CONNECTION_ID}` est l’identifiant de connexion de base que vous souhaitez mettre à jour.
+> Pour obtenir la dernière version de la valeur Etag, effectuez une requête GET à la variable `/connections/{BASE_CONNECTION_ID}` point de terminaison , où `{BASE_CONNECTION_ID}` est l’identifiant de connexion de base que vous souhaitez mettre à jour.
 
 Vous trouverez ci-dessous quelques exemples de mise à jour des paramètres dans la spécification de connexion de base pour différents types de destinations. Mais la règle générale pour mettre à jour les paramètres pour n’importe quelle destination est la suivante :
 
 Obtenez l’identifiant de flux de données de la connexion > obtenez l’identifiant de connexion de base > PATCH la connexion de base avec les valeurs mises à jour pour les paramètres souhaités.
+
+>[!BEGINSHADEBOX]
 
 **Format d’API**
 
@@ -440,6 +441,8 @@ Une réponse réussie renvoie votre identifiant de connexion de base et une bali
 ```
 
 >[!ENDTABS]
+
+>[!ENDSHADEBOX]
 
 ## Gestion des erreurs d’API {#api-error-handling}
 
