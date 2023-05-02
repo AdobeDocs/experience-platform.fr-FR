@@ -5,7 +5,7 @@ exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
 source-git-commit: 8f61840ad60b7d24c980b218b6f742485f5ebfdd
 workflow-type: tm+mt
 source-wordcount: '1156'
-ht-degree: 37%
+ht-degree: 59%
 
 ---
 
@@ -23,8 +23,8 @@ ht-degree: 37%
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_audits_description"
->title="Surveillance des activités des utilisateurs dans Platform"
->abstract="<h2>Description</h2><p>Vous pouvez surveiller l’activité des utilisateurs pour divers services et fonctionnalités de Platform sous la forme de journaux d’audit. Ces journaux forment un journal d’audit qui enregistre <b>who</b> performance <b>what</b> action et <b>when</b>. Les journaux d’audit peuvent vous aider à résoudre les problèmes liés à Platform et aider votre entreprise à se conformer efficacement aux politiques de gestion des données d’entreprise et aux exigences réglementaires.</p>"
+>title="Surveiller les activités des utilisateurs et utilisatrices dans Platform"
+>abstract="<h2>Description</h2><p>Vous pouvez surveiller l’activité des utilisateurs et utilisatrices pour divers services et fonctionnalités de Platform sous la forme de journaux d’audit. Ces journaux forment un journal d’audit qui enregistre <b>qui</b> a effectué <b>quelle</b> action et <b>quand</b>. Les journaux d’audit peuvent vous aider à résoudre les problèmes liés à Platform et aider votre entreprise à se conformer efficacement aux politiques de gestion des données d’entreprise et aux exigences réglementaires.</p>"
 
 Afin d’accroître la transparence et la visibilité des activités exécutées dans le système, Adobe Experience Platform vous permet de contrôler l’activité des utilisateurs pour divers services et fonctionnalités sous la forme de &quot;journaux d’audit&quot;. Ces journaux constituent un journal d’audit qui peut vous aider à résoudre les problèmes liés à Platform et à aider votre entreprise à se conformer efficacement aux politiques de gestion des données d’entreprise et aux exigences réglementaires.
 
@@ -75,13 +75,13 @@ Pour afficher et exporter les journaux d’audit, vous devez disposer de la vari
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_audits_instructions"
 >title="Instructions"
->abstract="<ul><li>Sélectionner <b>Audits</b> dans le volet de navigation de gauche. L’espace de travail Audits affiche une liste des journaux enregistrés, triés par défaut de la plus récente à la moins récente.</li>   <li> REMARQUE : Les journaux d’audit sont conservés pendant 365 jours, après quoi ils seront supprimés du système. Par conséquent, vous ne pouvez revenir en arrière que pendant une période maximale de 365 jours. Si vous devez revenir sur des données datant de plus de 365 jours, vous devez exporter les journaux à un rythme régulier afin de répondre aux exigences de votre politique interne. </li><li>Sélectionnez un événement dans la liste pour afficher ses détails dans le rail de droite. </li><li>Sélectionnez l’icône d’entonnoir pour afficher une liste de contrôles de filtre afin de limiter les résultats. Seuls les 1000 derniers enregistrements sont affichés, quels que soient les filtres sélectionnés. </li><li>Pour exporter la liste actuelle des journaux d’audit, sélectionnez **Journal de téléchargement**.</li><li>Pour obtenir de l’aide sur cette fonctionnalité, voir <a href="https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/audit-logs/overview.html?lang=fr">aperçu des journaux d’audit</a> sur Experience League.</li></ul>"
+>abstract="<ul><li>Sélectionnez <b>Audits</b> dans le volet de navigation de gauche. L’espace de travail Audits affiche une liste des journaux enregistrés, triés par défaut du plus récent au moins récent.</li>   <li> REMARQUE : les journaux d’audit sont conservés pendant 365 jours, après quoi ils seront supprimés du système. Par conséquent, vous ne pouvez revenir en arrière que pendant une période maximale de 365 jours. Si vous devez revenir sur des données datant de plus de 365 jours, vous devez exporter régulièrement les journaux afin de répondre aux exigences de votre politique interne. </li><li>Sélectionnez un événement dans la liste pour afficher ses détails dans le rail de droite. </li><li>Sélectionnez l’icône en forme d’entonnoir pour afficher une liste de contrôles de filtre permettant de limiter les résultats. Seuls les 1 000 derniers enregistrements sont affichés, quels que soient les différents filtres sélectionnés. </li><li>Pour exporter la liste actuelle des journaux d’audit, sélectionnez **Journal de téléchargement**.</li><li>Pour plus d’informations sur cette fonctionnalité, voir l’<a href="https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/audit-logs/overview.html?lang=fr">aperçu des journaux d’audit</a> sur Experience League.</li></ul>"
 
-Vous pouvez afficher les journaux d’audit pour différentes fonctionnalités d’Experience Platform dans le **[!UICONTROL Audits]** dans l’interface utilisateur de Platform. L’espace de travail affiche une liste des journaux enregistrés, triés par défaut de la plus récente à la moins récente.
+Vous pouvez afficher les journaux d’audit pour différentes fonctionnalités d’Experience Platform dans le **[!UICONTROL Audits]** dans l’interface utilisateur de Platform. L’espace de travail affiche une liste des journaux enregistrés, triés par défaut du plus récent au moins récent.
 
 ![Tableau de bord des journaux d’audit](../../images/audit-logs/audits.png)
 
-Les journaux d’audit sont conservés pendant 365 jours, après quoi ils seront supprimés du système. Par conséquent, vous ne pouvez revenir en arrière que pendant une période maximale de 365 jours. Si vous avez besoin de données de plus de 365 jours, vous devez exporter les journaux à un rythme régulier afin de répondre aux exigences de votre stratégie interne.
+Les journaux d’audit sont conservés pendant 365 jours, après quoi ils seront supprimés du système. Par conséquent, vous ne pouvez revenir en arrière que pendant une période maximale de 365 jours. Si vous avez besoin de données de plus de 365 jours, vous devez exporter les journaux à un rythme régulier afin de répondre aux exigences de votre stratégie interne.
 
 Sélectionnez un événement dans la liste pour afficher ses détails dans le rail de droite.
 

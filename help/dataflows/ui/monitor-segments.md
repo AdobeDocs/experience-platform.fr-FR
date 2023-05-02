@@ -7,7 +7,7 @@ exl-id: 32fd2ba1-0ff0-4ea7-8d55-80d53eebc02f
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
 source-wordcount: '1919'
-ht-degree: 7%
+ht-degree: 8%
 
 ---
 
@@ -34,7 +34,7 @@ Ce guide nécessite une compréhension professionnelle des composants suivants d
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_segments"
 >title="Segments"
->abstract="La vue Segments contient des informations sur tous les segments de votre entreprise, ainsi que des informations supplémentaires sur leurs tâches d’activation et d’évaluation."
+>abstract="La vue des segments contient des informations sur tous les segments de votre organisation, ainsi que des informations supplémentaires sur leurs tâches d’activation et d’évaluation."
 
 Pour accéder au **[!UICONTROL Segments]** tableau de bord, sélectionnez **[!UICONTROL Surveillance]** dans le volet de navigation de gauche. Une fois sur le **[!UICONTROL Surveillance]** , sélectionnez **[!UICONTROL Segments]** carte.
 

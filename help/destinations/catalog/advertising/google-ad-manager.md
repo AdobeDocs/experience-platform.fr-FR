@@ -6,7 +6,7 @@ exl-id: e93f1bd5-9d29-43a1-a9a6-8933f9d85150
 source-git-commit: 5174c65970aa8df9bc3f2c8d612c26c72c20e81f
 workflow-type: tm+mt
 source-wordcount: '938'
-ht-degree: 82%
+ht-degree: 84%
 
 ---
 
@@ -75,8 +75,8 @@ Pour vous connecter à cette destination, procédez comme décrit dans le [tutor
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_gam_appendSegmentID"
->title="Ajout d’un identifiant de segment au nom du segment"
->abstract="Sélectionnez cette option pour que le nom du segment dans Google Ad Manager inclue l’identifiant du segment de l’Experience Platform, comme ceci : `Segment Name (Segment ID)`"
+>title="Ajouter un identifiant de segment au nom du segment"
+>abstract="Sélectionnez cette option pour que le nom du segment dans Google Ad Manager inclue l’identifiant du segment d’Experience Platform, comme suit : `Segment Name (Segment ID)`"
 
 Pendant la [configuration](../../ui/connect-destination.md) de cette destination, vous devez fournir les informations suivantes :
 

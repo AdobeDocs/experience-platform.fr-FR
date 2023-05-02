@@ -5,7 +5,7 @@ exl-id: 3251145a-3e4d-40aa-b120-d79c8c9c7cae
 source-git-commit: 5174c65970aa8df9bc3f2c8d612c26c72c20e81f
 workflow-type: tm+mt
 source-wordcount: '974'
-ht-degree: 80%
+ht-degree: 83%
 
 ---
 
@@ -85,8 +85,8 @@ Pour plus d’informations sur ces valeurs, consultez le guide [Clés HMAC de Go
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_gam360_appendSegmentID"
->title="Ajout d’un identifiant de segment au nom du segment"
->abstract="Sélectionnez cette option pour que le nom du segment dans Google Ad Manager 360 inclue l’identifiant du segment de l’Experience Platform, comme suit : `Segment Name (Segment ID)`"
+>title="Ajouter un identifiant de segment au nom du segment"
+>abstract="Sélectionnez cette option pour que le nom du segment dans Google Ad Manager 360 inclue l’identifiant du segment d’Experience Platform, comme suit : `Segment Name (Segment ID)`"
 
 Pour configurer les détails de la destination, renseignez les champs obligatoires et facultatifs ci-dessous. Un astérisque situé en regard d’un champ de l’interface utilisateur indique que le champ est obligatoire.
 
