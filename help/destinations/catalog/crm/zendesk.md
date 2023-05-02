@@ -2,10 +2,10 @@
 title: Connexion Zendesk
 description: La destination Zendesk vous permet d’exporter les données de votre compte et de les activer dans Zendesk en fonction des besoins de votre entreprise.
 last-substantial-update: 2023-03-14T00:00:00Z
-source-git-commit: 3197eddcf9fef2870589fdf9f09276a333f30cd1
+source-git-commit: 55f1eafa68124b044d20f8f909f6238766076a7a
 workflow-type: tm+mt
-source-wordcount: '1340'
-ht-degree: 61%
+source-wordcount: '1471'
+ht-degree: 53%
 
 ---
 
@@ -13,13 +13,13 @@ ht-degree: 61%
 
 [[!DNL Zendesk]](https://www.zendesk.fr) est une solution de service client et un outil de vente.
 
-Ceci [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) tire parti de [[!DNL Zendesk] API de contacts](https://developer.zendesk.com/api-reference/sales-crm/resources/contacts/), pour créer et mettre à jour des identités dans un segment en tant que contacts dans [!DNL Zendesk].
+Ceci [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) tire parti de [[!DNL Zendesk] API de contacts](https://developer.zendesk.com/api-reference/sales-crm/resources/contacts/), à **créer et mettre à jour des identités** dans un segment en tant que contacts dans [!DNL Zendesk].
 
 [!DNL Zendesk] utilise des jetons au porteur comme mécanisme d’authentification pour communiquer avec le [!DNL Zendesk] API de contacts. Les instructions vous permettant de vous authentifier sur votre instance [!DNL Zendesk] sont plus loin dans la section [Authentifier à la destination](#authenticate).
 
 ## Cas d’utilisation {#use-cases}
 
-En tant que professionnel du marketing, vous pouvez proposer des expériences personnalisées à vos utilisateurs en fonction des attributs de leurs profils Adobe Experience Platform. Vous pouvez créer des segments à partir de vos données hors ligne et envoyer ces segments vers [!DNL Zendesk], pour les afficher dans les flux des utilisateurs dès que les segments et les profils sont mis à jour dans Adobe Experience Platform.
+Le service à la clientèle d’une plateforme multicanal B2C souhaite offrir à ses clients une expérience personnalisée transparente. Le service peut créer des segments à partir de ses propres données hors ligne pour créer de nouveaux profils utilisateur ou mettre à jour les informations de profil existantes à partir de différentes interactions (par exemple, achats, retours, etc.) et envoyer ces segments de Adobe Experience Platform vers [!DNL Zendesk]. Consultez les informations mises à jour dans [!DNL Zendesk] garantit que l’agent du service client dispose immédiatement des informations récentes du client, ce qui permet des réponses et une résolution plus rapides.
 
 ## Conditions préalables {#prerequisites}
 
@@ -118,17 +118,15 @@ Pour mapper correctement vos champs XDM vers les champs de destination [!DNL Zen
 
 1. Dans l’étape **[!UICONTROL Mappage]**, sélectionnez **[!UICONTROL Ajouter un nouveau mappage]**. Une nouvelle ligne de mappage s’affichera à l’écran.
 1. Dans le **[!UICONTROL Sélectionner le champ source]** , choisissez la **[!UICONTROL Sélectionner des attributs]** et sélectionnez l’attribut XDM ou choisissez l’option **[!UICONTROL Sélectionner un espace de noms d’identité]** et sélectionnez une identité.
-1. Dans le **[!UICONTROL Sélectionner le champ cible]** , choisissez la **[!UICONTROL Sélectionner un espace de noms d’identité]** et sélectionnez une identité ou choisissez **[!UICONTROL Sélectionner des attributs personnalisés]** et sélectionnez un attribut selon vos besoins.
-   * Répétez ces étapes pour ajouter les mappages suivants entre votre schéma de profil XDM et votre [!DNL Zendesk] instance : |Champ source|Champ cible| Obligatoire| |—|—|—| |`xdm: person.name.lastName`|`Attribute: last_name` <br>ou `Attribute: name`| Oui | |`IdentityMap: Email`|`Identity: email`| Oui |
+1. Dans le **[!UICONTROL Sélectionner le champ cible]** , choisissez la **[!UICONTROL Sélectionner un espace de noms d’identité]** et sélectionnez une identité cible, ou choisissez la catégorie **[!UICONTROL Sélectionner des attributs]** et sélectionnez l’un des attributs de schéma pris en charge.
+   * Répétez ces étapes pour ajouter les mappages obligatoires suivants. Vous pouvez également ajouter tout autre attribut que vous souhaitez mettre à jour entre votre schéma de profil XDM et votre [!DNL Zendesk] instance : |Champ source|Champ cible| Obligatoire| |—|—|—| |`xdm: person.name.lastName`|`xdm: last_name`| Oui | |`IdentityMap: Email`|`Identity: email`| Oui | |`xdm: person.name.firstName`|`xdm: first_name`| |
 
    * Un exemple d’utilisation de ces mappages est illustré ci-dessous :
       ![Exemple de capture d’écran de l’interface utilisateur de Platform avec mappages d’attributs.](../../assets/catalog/crm/zendesk/mappings.png)
 
-      >[!IMPORTANT]
-      >
-      >Les deux mappages de champs cibles sont obligatoires et requis pour [!DNL Zendesk] au travail.
-      >
-      >Le mappage pour *Nom* ou *Nom* est requis dans le cas contraire : [!DNL Zendesk] L’API ne répond pas avec une erreur et toute valeur d’attribut transmise est ignorée.
+>[!IMPORTANT]
+>
+>Le `Attribute: last_name` et `Identity: email` les mappings de ciblage sont obligatoires pour cette destination. Si ces mappages sont manquants, tous les autres mappages sont ignorés et ne sont pas envoyés à [!DNL Zendesk].
 
 Lorsque vous avez terminé de fournir les mappages pour votre connexion de destination, sélectionnez **[!UICONTROL Suivant]**.
 
@@ -167,3 +165,18 @@ Lors de la gestion de vos données, toutes les destinations [!DNL Adobe Experien
 Retrouvez d’autres informations utiles de la documentation de [!DNL Zendesk] ci-dessous :
 * [Effectuer votre premier appel](https://developer.zendesk.com/documentation/sales-crm/first-call/)
 * [Champs personnalisés](https://developer.zendesk.com/api-reference/sales-crm/requests/#custom-fields)
+
+### Journal des modifications
+
+Cette section capture les fonctionnalités et les mises à jour importantes de la documentation apportées à ce connecteur de destination.
+
++++ Afficher le journal des modifications
+
+| Mois de publication | Type de mise à jour | Description |
+|---|---|---|
+| Avril 2023 | Mise à jour de la documentation | <ul><li>Nous avons mis à jour la variable [use-case](#use-cases) avec un exemple plus clair de à quel moment les clients pourraient bénéficier de l’utilisation de cette destination.</li> <li>Nous avons mis à jour la variable [mapping](#mapping-considerations-example) pour refléter les mappages requis corrects. Le `Attribute: last_name` et `Identity: email` les mappings de ciblage sont obligatoires pour cette destination. Si ces mappages sont manquants, tous les autres mappages sont ignorés et ne sont pas envoyés à [!DNL Zendesk].</li> <li>Nous avons mis à jour la variable [mapping](#mapping-considerations-example) avec des exemples clairs de mappages obligatoires et facultatifs.</li></ul> |
+| Mars 2023 | Version initiale | Version initiale de la destination et publication de la documentation. |
+
+{style="table-layout:auto"}
+
++++
