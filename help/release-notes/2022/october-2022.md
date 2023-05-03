@@ -2,9 +2,9 @@
 title: Notes de mise à jour d’octobre 2022 d’Adobe Experience Platform
 description: Les notes de mise à jour d’octobre 2022 pour Adobe Experience Platform.
 exl-id: 61ef2472-5e79-433f-9f60-b1245f619b42
-source-git-commit: cd99ccb7b026565814dd6f268b2a92dda34bc7f0
-workflow-type: ht
-source-wordcount: '1343'
+source-git-commit: 8bbac729324ad5bd701f8609c443092ddb045b96
+workflow-type: tm+mt
+source-wordcount: '1328'
 ht-degree: 100%
 
 ---
@@ -14,16 +14,11 @@ ht-degree: 100%
 **Date de publication : 26 octobre 2022**
 
 - [Clés gérées par le client](#cmk)
-
-Mises à jour des fonctionnalités existantes dans Adobe Experience Platform :
-
-- [Notes de mise à jour d’Adobe Experience Platform](#adobe-experience-platform-release-notes)
-   - [Clés gérées par le client ou la cliente {#cmk}](#customer-managed-keys-cmk)
-   - [Collecte de données {#data-collection}](#data-collection-data-collection)
-   - [\[!DNL Destinations\] {#destinations}](#dnl-destinations-destinations)
-   - [Modèle de données d’expérience (XDM) {#xdm}](#experience-data-model-xdm-xdm)
-   - [Query Service {#query-service}](#query-service-query-service)
-   - [Sources {#sources}](#sources-sources)
+- [Collecte de données](#data-collection)
+- [Destinations](#destinations)
+- [Modèle de données d’expérience](#xdm)
+- [Query Service](#query-service)
+- [Sources](#sources-sources)
 
 ## Clés gérées par le client {#cmk}
 
@@ -100,7 +95,7 @@ Pour plus d’informations sur XDM dans Platform, consultez la [présentation du
 
 ## Query Service {#query-service}
 
-Query Service vous permet d’utiliser le langage SQL standard pour interroger les données dans le [!DNL Data Lake] d’Adobe Experience Platform. Vous pouvez joindre n’importe quel jeu de données à partir du [!DNL Data Lake] et capturer les résultats de la requête sous la forme d’un nouveau jeu de données à utiliser dans les rapports, dans l’espace de travail de science des données ou pour l’ingestion dans Real-Time Customer Profile.
+Query Service vous permet d’utiliser le langage SQL standard pour interroger les données dans le [!DNL Data Lake] d’Adobe Experience Platform. Vous pouvez joindre n’importe quel jeu de données à partir du [!DNL Data Lake] et capturer les résultats de la requête sous la forme d’un nouveau jeu de données à utiliser dans les rapports, dans l’espace de travail de science des données ou pour l’ingestion dans le profil client en temps réel.
 
 **Fonctionnalités mises à jour**
 

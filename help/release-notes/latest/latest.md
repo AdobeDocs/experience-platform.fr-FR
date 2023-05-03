@@ -2,10 +2,10 @@
 title: Notes de mise à jour d’Adobe Experience Platform
 description: Les notes de mise à jour d’avril 2023 pour Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 3594b20ee495dadf91d745958eac1a06647cae24
+source-git-commit: da28de44fc8ab37d530c2f9b3c167e365f00dca6
 workflow-type: tm+mt
-source-wordcount: '1661'
-ht-degree: 36%
+source-wordcount: '1841'
+ht-degree: 34%
 
 ---
 
@@ -20,6 +20,7 @@ Mises à jour des fonctionnalités existantes dans Adobe Experience Platform 
 - [Collecte de données](#data-collection)
 - [Destinations](#destinations)
 - [Modèle de données d’expérience](#xdm)
+- [Real-Time Customer Data Platform](#rtcdp)
 - [Profil client en temps réel](#profile)
 - [Sources](#sources)
 
@@ -134,6 +135,19 @@ XDM est une spécification Open Source qui fournit des structures et des défini
 {style="table-layout:auto"}
 
 Pour plus d’informations sur XDM dans Platform, consultez la [présentation du système XDM](../../xdm/home.md).
+
+## Real-Time Customer Data Platform
+
+Basé sur Experience Platform, Real-time Customer Data Platform ([!DNL Real-Time CDP]) permet aux entreprises de rassembler des données connues et inconnues pour activer les profils clients avec une prise de décision intelligente tout au long du parcours client. [!DNL Real-Time CDP] combine plusieurs sources de données d’entreprise pour créer des profils client en temps réel. Les segments créés à partir de ces profils peuvent ensuite être envoyés vers des destinations en aval afin de fournir des expériences client personnalisées et individuelles sur tous les canaux et appareils.
+
+**Nouvelles fonctionnalités**
+
+| Fonctionnalité | Description |
+| ------- | ----------- |
+| Page d’accueil Real-Time CDP améliorée | Le [Page d’accueil Real-Time CDP](https://experience.adobe.com) a été amélioré avec un aspect actualisé et des performances améliorées. La page d’accueil prend désormais en charge les autorisations et présente des widgets pertinents pour les fonctionnalités auxquelles vous avez accès. Pour plus d’informations, reportez-vous à la section [Tableau de bord de la page d’accueil Real-Time CDP - Aperçu](../../rtcdp/home-page-dashboards.md). |
+| Enquête sur l&#39;auto-identification | L’enquête d’auto-identification est un court questionnaire présenté sur la page d’accueil de l’interface utilisateur d’Adobe Experience Platform. Utilisez l&#39;enquête d&#39;auto-identification pour créer votre profil personnel Experience Platform et recevoir des directives personnalisées basées sur vos sélections. Pour plus d’informations, reportez-vous à la section [questionnaire d’auto-identification - Aperçu](../../landing/self-identification.md). |
+
+Pour plus d’informations sur [!DNL Real-Time CDP], reportez-vous à la section [[!DNL Real-Time CDP] aperçu](../../rtcdp/overview.md).
 
 ## Profil client en temps réel {#profile}
 
