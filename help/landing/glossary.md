@@ -7,7 +7,7 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 source-git-commit: 6327f5e6cb64a46c502613dd6074d84ed1fdd32b
 workflow-type: tm+mt
 source-wordcount: '7929'
-ht-degree: 12%
+ht-degree: 13%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 12%
 
 ## A
 
-**Contrôle d’accès**: Le contrôle d’accès en fonction du rôle permet aux administrateurs d’attribuer un accès et des autorisations aux utilisateurs d’Experience Platform. Les autorisations incluent la possibilité d’afficher ou d’utiliser les fonctionnalités Experience Platform, telles que la création d’environnements de test, la définition de schémas et la gestion des jeux de données.
+**Contrôle d’accès**: Le contrôle d’accès en fonction du rôle permet aux administrateurs d’attribuer un accès et des autorisations aux utilisateurs d’Experience Platform. Les autorisations incluent la possibilité d’afficher ou d’utiliser les fonctionnalités Experience Platform, telles que la création de sandbox, la définition de schémas et la gestion des jeux de données.
 
 **Accès à l’ID de clé**: Un identifiant de clé d’accès est un identifiant unique associé à un [!DNL Amazon] Clé d’accès secrète S3. L’identifiant de la clé d’accès et la clé d’accès secrète sont utilisés conjointement pour signer. [!DNL Amazon Web Services] (AWS).
 
@@ -223,7 +223,7 @@ ht-degree: 12%
 
 **Événement**: Dans le contexte des balises, un événement est un type spécifique de composant de règle, qui est un déclencheur qui se produit sur un appareil client pour commencer l’exécution d’une règle.
 
-**Entités d’événement**: Dans le cadre de la modélisation des données, les entités d’événement représentent des concepts liés aux actions qu’un client peut entreprendre, aux événements système ou à tout autre concept sur lequel vous souhaitez peut-être suivre les modifications au fil du temps. Les entités appartenant à cette catégorie doivent être représentées par des schémas basés sur la variable [!DNL XDM ExperienceEvent] classe .
+**Entités d’événement**: Dans le cadre de la modélisation des données, les entités d’événement représentent des concepts liés aux actions qu’un client peut entreprendre, aux événements système ou à tout autre concept sur lequel vous souhaitez peut-être suivre les modifications au fil du temps. Les entités appartenant à cette catégorie doivent être représentées par des schémas basés sur la classe [!DNL XDM ExperienceEvent].
 
 **Événements**: Les événements sont les données de comportement associées à un profil.
 
@@ -263,7 +263,7 @@ ht-degree: 12%
 
 **RGPD (Règlement général sur la protection des données)**: Le Règlement général sur la protection des données (RGPD) est un cadre juridique qui définit des lignes directrices pour la collecte et le traitement des informations personnelles des individus au sein de l’Union européenne (UE). Le RGPD énonce les principes de la gestion des données et les droits des individus et couvre toutes les entreprises qui traitent les données des citoyens de l’UE.
 
-**Barrières de sécurité**: Les barrières de sécurité sont des seuils qui fournissent des conseils pour l’utilisation des données et du système, l’optimisation des performances et la prévention des erreurs ou des résultats inattendus dans Adobe Experience Platform. Les barrières de sécurité peuvent faire référence à l’utilisation ou la consommation de données et de traitement par rapport à vos droits de licence.
+**Barrières de sécurité**: Les barrières de sécurité sont des seuils qui fournissent des conseils pour l’utilisation des données et du système, l’optimisation des performances et la prévention des erreurs ou des résultats inattendus dans Adobe Experience Platform. Les mécanismes de sécurisation peuvent faire référence à l’utilisation ou la consommation de données et de traitement par rapport à vos droits de licence.
 
 ## H
 
@@ -409,7 +409,7 @@ ht-degree: 12%
 
 **Entrepôt de données de profil**: La banque de données Profile (parfois appelée banque de données Profile) est un système de stockage de données distinct du lac de données, utilisé par Real-Time Customer Profile pour créer et stocker des profils.
 
-**Entités de profil**: Les entités de profil représentent les attributs relatifs à une personne, généralement un client. Les entités appartenant à cette catégorie doivent être représentées par des schémas basés sur la variable [!DNL XDM Individual Profile] classe . Voir aussi : Accès au profil
+**Entités de profil**: Les entités de profil représentent les attributs relatifs à une personne, généralement un client. Les entités appartenant à cette catégorie doivent être représentées par des schémas basés sur la classe [!DNL XDM Individual Profile]. Voir aussi : Accès au profil
 
 **Export de profil**: [!DNL Profile] export est l’un des deux types de destinations dans Experience Platform. [!DNL Profile] export génère un fichier contenant des profils et des attributs et utilise des données d’informations d’identification personnelles brutes avec les emails afin de s’intégrer aux plateformes de marketing et d’automatisation des emails.
 
@@ -443,7 +443,7 @@ ht-degree: 12%
 
 **Ressource**: Dans le contexte des balises, une ressource est un terme générique qui fait référence aux options que l’utilisateur peut configurer dans l’environnement client, y compris les extensions, les éléments de données et les règles.
 
-**Contrôle d’accès en fonction du rôle**: Le contrôle d’accès en fonction du rôle permet aux administrateurs d’attribuer un accès et des autorisations aux utilisateurs d’Experience Platform. Les autorisations incluent la possibilité d’afficher ou d’utiliser les fonctionnalités Experience Platform, telles que la création d’environnements de test, la définition de schémas et la gestion des jeux de données.
+**Contrôle d’accès en fonction du rôle**: Le contrôle d’accès en fonction du rôle permet aux administrateurs d’attribuer un accès et des autorisations aux utilisateurs d’Experience Platform. Les autorisations incluent la possibilité d’afficher ou d’utiliser les fonctionnalités Experience Platform, telles que la création de sandbox, la définition de schémas et la gestion des jeux de données.
 
 **Règle**: Dans le contexte des balises, une règle est un ensemble de composants définissant un ensemble spécifique d’événements, de conditions et d’actions qui doivent être regroupés logiquement.
 
@@ -459,7 +459,7 @@ ht-degree: 12%
 
 **Réinitialisation des environnements de test**: La réinitialisation d’un environnement de test supprime toutes les données, y compris les données, les profils et les segments d’un environnement de test. Les réinitialisations des environnements de test peuvent affecter les données connectées à des destinations internes ou externes.
 
-**Sélecteur d’environnement de test**: Le sélecteur d’environnements de test dans Experience Platform permet aux utilisateurs de naviguer entre les environnements de test auxquels ils ont accès. Le fait de changer d’environnement de test modifie tout le contenu et peut modifier l’accès aux fonctionnalités en fonction des autorisations.
+**Sélecteur d’environnement de test**: Le sélecteur d’environnements de test dans Experience Platform permet aux utilisateurs de naviguer entre les environnements de test auxquels ils ont accès. Le fait de changer de sandbox modifie tout le contenu et peut modifier l’accès aux fonctionnalités en fonction des autorisations.
 
 **Planification**: Une planification est une spécification définie par l’utilisateur sur la fréquence ou la cadence d’ingestion des données d’une source de données tierce vers Adobe Experience Platform.
 
@@ -555,7 +555,7 @@ ht-degree: 12%
 
 **XDM ExperienceEvent**: XDM ExperienceEvent est une classe basée sur une série temporelle utilisée pour capturer l’état du système lorsqu’un événement (ou un ensemble d’événements) s’est produit, y compris le moment et l’identité du sujet concerné. Voir aussi : Événement d’expérience
 
-**XDM Individual Profile**: XDM [!DNL Individual Profile] est une classe basée sur des enregistrements qui forme une représentation singulière des attributs des sujets identifiés et partiellement identifiés. Les profils hautement identifiés peuvent être utilisés pour des communications personnelles ou des engagements ciblés et peuvent contenir des informations personnelles détaillées telles que le nom, le genre, la date de naissance, l’adresse et les coordonnées, y compris les numéros de téléphone et les adresses électroniques.
+**XDM Individual Profile**: XDM [!DNL Individual Profile] est une classe basée sur des enregistrements qui forme une représentation singulière des attributs des sujets identifiés et partiellement identifiés.  Les profils hautement identifiés peuvent être utilisés pour des communications personnelles ou des engagements ciblés et peuvent contenir des informations personnelles détaillées telles que le nom, le genre, la date de naissance, l’adresse et les coordonnées, y compris les numéros de téléphone et les adresses e-mail.
 
 **Système XDM**: Le système XDM représente la structure qui rend les schémas XDM opérationnels pour les utiliser dans les services Experience Platform en aval.
 

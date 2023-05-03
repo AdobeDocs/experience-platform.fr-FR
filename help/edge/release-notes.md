@@ -16,7 +16,7 @@ ht-degree: 99%
 Ce document présente les notes de mise à jour du SDK web d’Adobe Experience Platform.
 Pour obtenir les dernières notes de mise à jour sur l’extension de balise du SDK web, reportez-vous à la section [Notes de mise à jour de l’extension de balise du SDK web](extension/web-sdk-ext-release-notes.md).
 
-## Version 2.16.0 - 25 avril 2023
+## Version 2.16.0 - 25 avril 2023
 
 **Nouvelles fonctionnalités**
 

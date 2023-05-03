@@ -7,7 +7,7 @@ exl-id: 51ecefb0-a699-4b1a-80f1-26c6ba92fcbf
 source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
 source-wordcount: '784'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -43,7 +43,7 @@ La gouvernance des données d’Adobe Experience Platform vous permet de gére
 
 >[!IMPORTANT]
 >
->L’application d’étiquettes au niveau du jeu de données est uniquement prise en charge pour les cas d’utilisation de la gouvernance des données. Si vous essayez de créer des stratégies d’accès pour les données, vous devez [appliquer des libellés au schéma ;](../../xdm/tutorials/labels.md) sur lequel le jeu de données est basé. Consultez la présentation sur [contrôle d’accès basé sur les attributs](../../access-control/abac/overview.md) pour plus d’informations.
+>L’application de libellés au niveau du jeu de données est uniquement prise en charge pour les cas d’utilisation de la gouvernance des données. Si vous essayez de créer des stratégies d’accès pour les données, vous devez [appliquer des libellés au schéma](../../xdm/tutorials/labels.md) sur lequel le jeu de données est basé. Consultez la présentation du [contrôle d’accès basé sur les attributs](../../access-control/abac/overview.md) pour plus d’informations.
 
 Les libellés d’utilisation des données peuvent être appliqués à des jeux de données entiers ou à des champs de jeu de données individuels. Les libellés ajoutés au niveau du jeu de données sont hérités par tous les champs du jeu de données.
 
@@ -62,7 +62,7 @@ Voici une liste des services en aval qui utilisent des jeux de données pour div
 * [Service Adobe Experience Platform Identity](../../identity-service/home.md) : associe les identités des appareils et des systèmes, en liant les jeux de données en fonction des champs d’identité définis par les schémas XDM auxquels ils se conforment.
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md) : tire parti de [!DNL Identity Service] pour créer des profils client détaillés à partir de vos jeux de données en temps réel. [!DNL Real-Time Customer Profile] extrait les données du [!DNL Data Lake] et conserve les profils clients dans sa propre banque de données distincte.
 * [Adobe Experience Platform Segmentation Service](../../segmentation/home.md) : permet de créer des segments et de générer des audiences à partir de vos données [!DNL Real-Time Customer Profile]. Ces audiences peuvent ensuite être exportées vers leurs propres jeux de données dans le [!DNL Data Lake].
-* [Adobe Experience Platform Data Science Workspace](../../data-science-workspace/home.md) : utilise le machine learning et l’intelligence artificielle pour découvrir des insights dans les jeux de données volumineux.
+* [Espace de travail de science des données d’Adobe Experience Platform](../../data-science-workspace/home.md) : utilise le machine learning et l’intelligence artificielle pour découvrir des insights dans les jeux de données volumineux.
 * [Adobe Experience Platform Query Service](../../query-service/home.md) : vous permet d’utiliser une requête SQL standard pour interroger les données dans [!DNL Experience Platform]. Il peut joindre n’importe quel jeu de données dans le [!DNL Data Lake] et capturer les résultats de la requête sous la forme d’un nouveau jeu de données à utiliser pour le reporting, [!DNL Data Science Workspace], ou [!DNL Real-Time Customer Profile].
 * [Service de destinations d’Adobe Experience Platform](../../destinations/home.md) : vous permet d’[exporter des jeux de données](/help/destinations/ui/export-datasets.md) vers les destinations de stockage dans le cloud ou de marketing par e-mail de votre choix, pour les activités de création de rapports ou de science des données.
 
