@@ -5,24 +5,24 @@ title: Expiration des données de profils pseudonymes
 description: Ce document fournit des conseils généraux sur la configuration de l’expiration des données de profils pseudonymes dans Adobe Experience Platform.
 exl-id: e8d31718-0b50-44b5-a15b-17668a063a9c
 source-git-commit: 07ed7eb9644b2e8cc4da02743c48037afc247614
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '912'
-ht-degree: 89%
+ht-degree: 100%
 
 ---
 
 # Expiration des données de profils pseudonymes
 
-Dans Adobe Experience Platform, vous pouvez configurer les délais d’expiration des profils pseudonymes, ce qui vous permet de supprimer automatiquement des données de la banque de profils qui ne sont plus valides ou utiles pour vos cas d’utilisation.
+Dans Adobe Experience Platform, vous pouvez configurer les délais d’expiration des profils pseudonymes, ce qui vous permet de supprimer automatiquement des données du magasin de profils qui ne sont plus valides ou utiles pour vos cas d’utilisation.
 
 ## Profil pseudonyme {#pseudonymous-profile}
 
-Un profil est pris en compte pour l’expiration des données pseudonymes s’il répond aux conditions suivantes :
+Un profil est pris en compte pour l’expiration des données pseudonymes s’il répond aux conditions suivantes :
 
 - Les espaces de noms d’identité du profil assemblé correspondent à l’espace de noms d’identité pseudonyme ou inconnu indiqué par le client ou la cliente.
    - Par exemple, si l’espace de noms d’identité du profil est `ECID`, `GAID` ou `AAID`. Le profil assemblé ne comporte aucun identifiant provenant d’un autre espace de noms d’identité. Dans cet exemple, un profil assemblé ne possède **pas** d’identité d’e-mail ou de gestion de la relation client.
 - Aucune activité n’a eu lieu au cours d’une période définie par l’utilisateur ou l’utilisatrice. L’activité répertorie les événements d’expérience ingérés ou les mises à jour des attributs de profil initiées par le client ou la cliente.
-   - Il s’agit, par exemple, d’un nouvel événement de page vue ou d’une mise à jour d’un attribut de page. Cependant, la mise à jour de l’appartenance à un segment non initiée par l’utilisateur ou l’utilisatrice n’est **pas** considérée comme une activité. Actuellement, pour calculer l’expiration des données, le suivi au niveau du profil est basé sur l’heure de l’événement pour les événements d’expérience et l’heure d’ingestion pour les attributs de profil.
+   - Il s’agit, par exemple, d’un nouvel événement de page vue ou d’une mise à jour d’un attribut de page. Cependant, la mise à jour de l’appartenance à un segment non initiée par l’utilisateur ou l’utilisatrice n’est **pas** considérée comme une activité. Actuellement, pour calculer l’expiration des données, le suivi au niveau du profil est basé sur l’heure de l’événement pour les événements d’expérience et sur l’heure d’ingestion pour les attributs de profil.
 
 ## Accéder à {#access}
 
@@ -36,7 +36,7 @@ L’expiration des données de profils pseudonymes ne peut pas être configurée
 
 Consultez les questions fréquentes sur l’expiration des données de profils pseudonymes dans la section suivante :
 
-### En quoi l’expiration des données de profil pseudonyme diffère-t-elle de l’expiration des données d’événement d’expérience ?
+### En quoi l’expiration des données de profils pseudonymes diffère-t-elle de l’expiration des données d’événements d’expérience ?
 
 L’expiration des données de profils pseudonymes et l’expiration des données d’événements d’expérience sont des fonctionnalités complémentaires.
 
