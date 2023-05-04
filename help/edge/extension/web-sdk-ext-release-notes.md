@@ -3,9 +3,9 @@ title: Notes de mise à jour de l’extension du SDK Web Adobe Experience Plat
 description: Extension de la balise SDK Web Adobe Experience Platform
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
 source-git-commit: edd1745467a95804681b5d6c6d33458329641c39
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1663'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -14,22 +14,22 @@ ht-degree: 96%
 
 Ce document contient les notes de mise à jour de l’extension de balises du SDK Web Adobe Experience Platform. Pour obtenir les dernières notes de mise à jour sur le SDK lui-même, voir les [notes de mise à jour du SDK Web Platform](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html?lang=fr).
 
-## Version 2.17.0 - 25 avril 2023
+## Version 2.17.0 - 25 avril 2023
 
 **Nouvelles fonctionnalités**
 
-* Contient la version 2.16.0 du SDK Web de Adobe Experience Platform.
-* Ajout de la prise en charge de [remplacements de la configuration du flux de données](../datastreams/overrides.md).
-* Ajout d’un avis d’obsolescence au `datasetId` sur l’option `sendEvent` .
+* Contient la version 2.16.0 du SDK web d’Adobe Experience Platform.
+* Ajout de la prise en charge des [remplacements de la configuration du train de données](../datastreams/overrides.md).
+* Ajout d’un avis d’obsolescence à l’option `datasetId` de la commande `sendEvent`.
 
 
 **Correctifs et améliorations**
 
-* Correction d’un problème en raison duquel le défilement dans Safari fermait le sélecteur de flux de données.
+* Correction d’un problème en raison duquel le défilement dans Safari fermait le sélecteur de train de données.
 
-## Version 2.16.1 - 14 avril 2023
+## Version 2.16.1 - 14 avril 2023
 
-* Correction d’un problème lié aux éléments de données Objet XDM et Variable en raison duquel vous ne pouviez pas sélectionner un schéma dans un environnement de test autre que l’environnement de test par défaut.
+* Correction d’un problème lié aux éléments de données Objet XDM et Variable en raison duquel il était impossible de sélectionner un schéma dans une sandbox autre que la sandbox par défaut.
 
 ## Version 2.16.0 - 30 mars 2023
 
