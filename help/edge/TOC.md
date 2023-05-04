@@ -6,9 +6,9 @@ breadcrumb-title: Guide du SDK web
 user-guide-description: Interagissez avec les services Experience Cloud via le réseau Edge.
 feature: Web SDK
 source-git-commit: 5a64beb2f5826bda585111e9ce7f760b939bf9b9
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '212'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -30,7 +30,7 @@ ht-degree: 98%
 * Train de données {#datastreams}
    * [Aperçu](./datastreams/overview.md)
    * [Configurer un train de données](./datastreams/configure.md)
-   * [Configuration des remplacements de flux de données](./datastreams/overrides.md)
+   * [Configurer les remplacements de train de données](./datastreams/overrides.md)
    * [Préparation des données pour la collecte de données](./datastreams/data-prep.md)
    * Enrichissement des données {#data-enrichment}
       * [Données météo par The Weather Channel](./datastreams/data-enrichment/weather.md)
