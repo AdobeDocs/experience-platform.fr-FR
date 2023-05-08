@@ -3,10 +3,10 @@ keywords: Experience Platform;accueil;rubriques populaires;contrôle d’accès
 title: Gestion des autorisations de rôle du contrôle d’accès basé sur les attributs
 description: Ce document fournit des informations sur la configuration des autorisations pour un rôle dans l’interface Autorisations d’Adobe Experience Cloud.
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
-source-git-commit: a94cf02a57bd91d2342b53ced7da98836343aa2b
+source-git-commit: 9515527f5a2c250b0a9057aa37769431e3b6fa07
 workflow-type: tm+mt
 source-wordcount: '966'
-ht-degree: 100%
+ht-degree: 97%
 
 ---
 
@@ -159,7 +159,7 @@ Pour ajouter un utilisateur à un profil de produit, connectez-vous a Admin Cons
 
 La boîte de dialogue **[!UICONTROL Ajouter des utilisateurs à votre équipe]** s’affiche. Saisissez l’adresse e-mail, le prénom (facultatif) et le nom des utilisateurs (facultatif).
 
-Cliquez sur l’icône en forme de crayon pour sélectionner les produits et les groupes d’utilisateurs, sélectionnez **[!UICONTROL Adobe Experience Platform]**, **[!UICONTROL AEP-Default-All-Users]**, puis **[!UICONTROL Enregistrer]**.
+Sélectionnez l’icône en forme de crayon pour sélectionner les produits et les groupes d’utilisateurs, puis sélectionnez **[!UICONTROL Adobe Experience Platform]**, puis sélectionnez **[!UICONTROL AEP-Default-All-Users]**, puis sélectionnez  **[!UICONTROL Enregistrer]**.
 
 ![Profil de produit](../../images/flac-ui/product-profile.png)
 
