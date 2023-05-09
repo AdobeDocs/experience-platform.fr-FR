@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Fonctions de mappage de prép de données
 description: Ce document présente les fonctions de mappage utilisées avec Data Prep.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: cce2d7b4f950248807bd700bae5e371418df634d
+source-git-commit: a89faf5f1d1befdc057cd872fcd190703c620c2d
 workflow-type: tm+mt
-source-wordcount: '4591'
+source-wordcount: '4916'
 ht-degree: 14%
 
 ---
@@ -246,6 +246,8 @@ Toutes les fonctions de l’agent utilisateur contenues dans le tableau ci-desso
 * Phone : appareil mobile avec un petit écran (généralement &lt; 7&quot;).
 * Mobile : périphérique mobile qui n’est pas encore identifié. Ce périphérique mobile peut être un lecteur électronique, une tablette, un téléphone, une montre, etc.
 
+Pour plus d’informations sur les valeurs de champ d’appareil, veuillez lire la section [liste des valeurs de champ d’appareil](#device-field-values) dans l’annexe du présent document.
+
 >[!NOTE]
 >
 >Faites défiler vers la gauche ou vers la droite pour consulter l’intégralité du tableau.
@@ -343,5 +345,36 @@ Le tableau ci-dessous présente une liste de caractères réservés et les carac
 | ^ | %5E |
 | ` | %60 |
 | ~ | %7E |
+
+{style="table-layout:auto"}
+
+### Valeurs de champ du périphérique {#device-field-values}
+
+Le tableau ci-dessous présente une liste des valeurs de champ d’appareil et leurs descriptions correspondantes.
+
+| Appareil | Description |
+| --- | --- |
+| Bureau | Un ordinateur de bureau ou un ordinateur portable de type appareil. |
+| Anonymisé | Appareil anonyme. Dans certains cas, ces `useragents` qui ont été modifiées par un logiciel d’anonymisation. |
+| Inconnu | Un appareil inconnu. Celles-ci sont généralement `useragents` qui ne contiennent aucune information sur l’appareil. |
+| Mobile | Appareil mobile qui n’est pas encore identifié. Ce périphérique mobile peut être un lecteur électronique, une tablette, un téléphone, une montre, etc. |
+| Tablette | Appareil mobile avec un grand écran (généralement > 7 pouces). |
+| Téléphone | Appareil mobile avec un petit écran (généralement &lt; 7 pouces). |
+| Regarder | Un appareil mobile avec un petit écran (généralement &lt; 2&quot;). Ces appareils fonctionnent normalement comme un écran supplémentaire pour un type de téléphone/tablette. |
+| La réalité augmentée | Un appareil mobile avec des fonctionnalités de AR. |
+| La réalité virtuelle | Un appareil mobile avec des fonctionnalités de réalité virtuelle. |
+| eReader | Un appareil similaire à une tablette, mais généralement avec une [!DNL eInk] écran. |
+| Cadre de configuration | Appareil connecté qui permet l’interaction par le biais d’un écran de la taille d’une télévision. |
+| TV | Un appareil semblable à la visionneuse, mais intégré à la télévision. |
+| Approvisionnement à domicile | Un appareil domestique (généralement grand), comme un réfrigérateur. |
+| Console de jeu | Un système de jeu fixe tel qu’un [!DNL Playstation] ou [!DNL XBox]. |
+| Console de jeu pour portables | Un système de jeu mobile comme un [!DNL Nintendo Switch]. |
+| Voix | Un appareil piloté par la voix, tel qu’un [!DNL Amazon Alexa] ou [!DNL Google Home]. |
+| Voiture | Navigateur basé sur un véhicule. |
+| Robot | Des robots qui visitent un site web. |
+| Robot Mobile | Robots qui visitent un site web mais qui indiquent qu’ils souhaitent être vus comme un visiteur mobile. |
+| Robot Imitator | Des robots qui visitent un site web, faisant semblant d&#39;être des robots comme [!DNL Google]mais ils ne le sont pas. **Remarque**: Dans la plupart des cas, les robots d&#39;imagerie sont en effet des robots. |
+| Cloud | Une application cloud. Ce ne sont ni des robots ni des hackers, mais des applications qui doivent se connecter. Cela inclut [!DNL Mastodon] serveurs. |
+| Hacker | Cette valeur de périphérique est utilisée au cas où un script est détecté dans la variable `useragent` chaîne. |
 
 {style="table-layout:auto"}
