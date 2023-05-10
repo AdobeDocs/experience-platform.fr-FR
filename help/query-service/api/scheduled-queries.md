@@ -34,7 +34,7 @@ GET /schedules?{QUERY_PARAMETERS}
 
 **Paramètres de requête**
 
-Vous trouverez ci-dessous une liste des paramètres de requête disponibles pour répertorier les requêtes planifiées. Tous ces paramètres sont facultatifs. En effectuant un appel vers ce point de terminaison sans paramètres, vous récupérerez toutes les requêtes planifiées disponibles pour votre organisation.
+Vous trouverez ci-dessous une liste des paramètres de requête disponibles pour répertorier les requêtes planifiées. Tous ces paramètres sont facultatifs. En effectuant un appel vers ce point d’entrée sans paramètres, vous récupérerez toutes les requêtes planifiées disponibles pour votre organisation.
 
 | Paramètre | Description |
 | --------- | ----------- |
@@ -123,7 +123,7 @@ Une réponse réussie renvoie un état HTTP 200 avec une liste de requêtes plan
 
 ### Création d’une requête planifiée
 
-Vous pouvez créer une requête planifiée en effectuant une requête POST vers le point de terminaison `/schedules`. Lorsque vous créez une requête planifiée dans l’API, vous pouvez également la voir dans l’éditeur de requêtes. Pour plus d’informations sur les requêtes planifiées dans l’interface utilisateur, veuillez lire le [Documentation de Query Editor](../ui/user-guide.md#scheduled-queries).
+Vous pouvez créer une requête planifiée en effectuant une requête POST vers le point d’entrée `/schedules`. Lorsque vous créez une requête planifiée dans l’API, vous pouvez également la voir dans l’éditeur de requêtes. Pour plus d’informations sur les requêtes planifiées dans l’interface utilisateur, veuillez lire le [Documentation de Query Editor](../ui/user-guide.md#scheduled-queries).
 
 **Format d’API**
 
@@ -222,7 +222,7 @@ Une réponse réussie renvoie un état HTTP 202 (Accepted) avec les détails de
 
 ### Demande des détails d’une requête planifiée spécifiée
 
-Vous pouvez récupérer des informations sur une requête planifiée spécifique en effectuant une requête GET vers le point de terminaison `/schedules` et en fournissant son identifiant dans le chemin d’accès de la requête.
+Vous pouvez récupérer des informations sur une requête planifiée spécifique en effectuant une requête GET vers le point d’entrée `/schedules` et en fournissant son identifiant dans le chemin d’accès de la requête.
 
 **Format d’API**
 
@@ -305,7 +305,7 @@ Une réponse réussie renvoie un état HTTP 200 avec les détails de la requêt
 
 ### Mise à jour des détails d’une requête planifiée spécifiée
 
-Vous pouvez mettre à jour les détails d’une requête planifiée spécifiée en effectuant une requête PATCH vers le point de terminaison `/schedules` et en fournissant son identifiant dans le chemin d’accès de la requête.
+Vous pouvez mettre à jour les détails d’une requête planifiée spécifiée en effectuant une requête PATCH vers le point d’entrée `/schedules` et en fournissant son identifiant dans le chemin d’accès de la requête.
 
 La requête PATCH prend en charge deux chemins d’accès différents : `/state` et `/schedule/schedule`.
 
@@ -416,7 +416,7 @@ Une réponse réussie renvoie un état HTTP 202 (Accepted) avec le message suiv
 
 ### Suppression d’une requête planifiée spécifiée
 
-Vous pouvez supprimer une requête planifiée spécifiée en effectuant une requête DELETE vers le point de terminaison `/schedules` et en fournissant l’identifiant de la requête planifiée que vous souhaitez supprimer du chemin d’accès de la requête.
+Vous pouvez supprimer une requête planifiée spécifiée en effectuant une requête DELETE vers le point d’entrée `/schedules` et en fournissant l’identifiant de la requête planifiée que vous souhaitez supprimer du chemin d’accès de la requête.
 
 >[!NOTE]
 >

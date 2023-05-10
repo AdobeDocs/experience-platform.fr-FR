@@ -4,8 +4,8 @@ description: Ce document présente un aperçu du groupe de champs Détails du me
 exl-id: 597629c8-7f41-4c1c-95b6-aed5e16cee72
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
-source-wordcount: '360'
-ht-degree: 6%
+source-wordcount: '357'
+ht-degree: 5%
 
 ---
 
@@ -34,7 +34,7 @@ ht-degree: 6%
 | `webinarConfirmationUrl` | [!UICONTROL Chaîne] | URL de confirmation du webinaire du membre de la campagne. |
 | `webinarRegistrationID` | [!UICONTROL Chaîne] | ID d’enregistrement du webinaire du membre de la campagne. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Pour plus d’informations sur le groupe de champs, reportez-vous au référentiel XDM public :
 

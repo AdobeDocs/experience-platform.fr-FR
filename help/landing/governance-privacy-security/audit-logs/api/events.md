@@ -4,14 +4,14 @@ description: Découvrez comment récupérer des événements d’audit dans Expe
 exl-id: c365b6d8-0432-41a5-9a07-44a995f69b7d
 source-git-commit: c7887391481def872c40dd6ed1193bf562b9d0cf
 workflow-type: tm+mt
-source-wordcount: '477'
-ht-degree: 21%
+source-wordcount: '474'
+ht-degree: 20%
 
 ---
 
 # Point d’entrée des événements d’audit
 
-Les journaux d’audit permettent de fournir des détails sur l’activité des utilisateurs pour divers services et fonctionnalités. Chaque action enregistrée dans un journal contient des métadonnées qui indiquent le type d’action, la date et l’heure, l’ID d’e-mail de l’utilisateur qui a exécuté l’action et des attributs supplémentaires liés au type d’action. Le `/audit/events` du point de terminaison [!DNL Audit Query] L’API vous permet de récupérer par programmation les données d’événement pour l’activité de votre entreprise dans [!DNL Platform].
+Les journaux d’audit permettent de fournir des détails sur l’activité des utilisateurs pour divers services et fonctionnalités. Chaque action enregistrée dans un journal contient des métadonnées qui indiquent le type d’action, la date et l’heure, l’ID d’e-mail de l’utilisateur ou de l’utilisatrice qui a exécuté l’action et des attributs supplémentaires liés au type d’action. Le `/audit/events` du point de terminaison [!DNL Audit Query] L’API vous permet de récupérer par programmation les données d’événement pour l’activité de votre entreprise dans [!DNL Platform].
 
 ## Prise en main
 
@@ -156,4 +156,4 @@ Une réponse réussie renvoie les points de données résultants pour les mesure
 | `action` | Type d’action enregistrée pour l’événement. Une action peut être l’une des suivantes : <ul><li>`Add` </li><li>`Create` </li><li>`Dataset activate` </li><li>`Dataset remove` </li><li>`Delete` </li><li>`Disable for profile` </li><li>`Enable` </li><li>`Enable for profile` </li><li>`Profile activate` </li><li>`Profile remove` </li><li>`remove` </li><li>`reset` </li><li>`segment activate` </li><li>`segment remove` </li><li>`update` </li></ul> |
 | `status` | État de l’action. Un état peut être l’un des suivants : </li><li>`Allow` </li><li>`Deny` </li><li>`Failure` </li><li>`Success` </li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

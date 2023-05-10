@@ -8,7 +8,7 @@ exl-id: 2299328c-d41a-4fdc-b7ed-72891569eaf2
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1368'
-ht-degree: 54%
+ht-degree: 52%
 
 ---
 
@@ -21,13 +21,13 @@ Ce tutoriel décrit les étapes à suivre pour appliquer la conformité de l’u
 Ce tutoriel nécessite une connaissance pratique des composants suivants de [!DNL Adobe Experience Platform] :
 
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): [!DNL Real-Time Customer Profile] est un magasin d’entités de recherche générique utilisé pour gérer les [!DNL Experience Data Model (XDM)] données dans [!DNL Platform]. Profile fusionne les données de divers actifs de données d’entreprise et permet d’accéder à ces données dans une présentation unifiée.
-   - [Stratégies de fusion](../../profile/api/merge-policies.md)[!DNL Real-Time Customer Profile] : stratégies utilisées par pour déterminer quelles données peuvent être fusionnées en une vue unifiée dans certains cas. Les stratégies de fusion peuvent être configurées à des fins de gouvernance des données.
-- [[!DNL Segmentation]](../home.md)[!DNL Real-Time Customer Profile] : manière dont divise un grand groupe d’individus inclus dans la banque de profils en groupes plus petits partageant des caractéristiques et réagissant de la même manière aux stratégies marketing.
+   - [Politiques de fusion](../../profile/api/merge-policies.md)[!DNL Real-Time Customer Profile] : politiques utilisées par pour déterminer quelles données peuvent être fusionnées en une vue unifiée dans certains cas. Les politiques de fusion peuvent être configurées à des fins de gouvernance des données.
+- [[!DNL Segmentation]](../home.md): Comment [!DNL Real-Time Customer Profile] divise un grand groupe d’individus contenus dans la banque de profils en groupes plus petits partageant des caractéristiques similaires et réagissant de la même manière aux stratégies marketing.
 - [Gouvernance des données](../../data-governance/home.md): La gouvernance des données fournit l’infrastructure pour l’étiquetage et l’application de l’utilisation des données, à l’aide des composants suivants :
    - [Libellés d’utilisation des données](../../data-governance/labels/user-guide.md) : libellés utilisés pour décrire les jeux de données et les champs en fonction du niveau de sensibilité avec lequel traiter leurs données respectives.
-   - [Stratégies d’utilisation des données](../../data-governance/policies/overview.md) : configurations indiquant quelles actions marketing sont autorisées sur les données classées selon des libellés d’utilisation de données particulières.
+   - [Politiques d’utilisation des données](../../data-governance/policies/overview.md) : configurations indiquant quelles actions marketing sont autorisées sur les données classées selon des libellés d’utilisation de données particulières.
    - [Application des stratégies](../../data-governance/enforcement/overview.md): Permet d’appliquer des stratégies d’utilisation des données et d’empêcher les opérations de données qui constituent des violations de stratégie.
-- [Sandbox](../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuelles qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
+- [Sandbox](../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
 Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour passer avec succès des appels à la fonction [!DNL Platform] API.
 
@@ -43,7 +43,7 @@ Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [
 - x-api-key : `{API_KEY}`
 - x-gw-ims-org-id : `{ORG_ID}`
 
-Dans [!DNL Experience Platform], toutes les ressources sont isolées dans des sandbox virtuelles spécifiques. Toutes les requêtes envoyées aux API [!DNL Platform] nécessitent un en-tête spécifiant le nom de la sandbox dans laquelle l’opération sera effectuée :
+Dans [!DNL Experience Platform], toutes les ressources sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes envoyées aux API [!DNL Platform] nécessitent un en-tête spécifiant le nom du sandbox dans lequel l’opération sera effectuée :
 
 - x-sandbox-name : `{SANDBOX_NAME}`
 
@@ -57,7 +57,7 @@ Toutes les requêtes contenant un payload (POST, PUT, PATCH) requièrent un en-t
 
 ## Recherche d’une stratégie de fusion pour une définition de segment {#merge-policy}
 
-Ce workflow commence par l’accès à un segment connu. Segments activés pour une utilisation dans [!DNL Real-Time Customer Profile] contiennent un identifiant de stratégie de fusion dans leur définition de segment. Cette stratégie de fusion contient des informations sur les jeux de données à inclure dans le segment, qui à leur tour contiennent les libellés d’utilisation de données applicables.
+Ce workflow commence par l’accès à un segment connu. Segments activés pour une utilisation dans [!DNL Real-Time Customer Profile] contiennent un identifiant de stratégie de fusion dans leur définition de segment. Cette politique de fusion contient des informations sur les jeux de données à inclure dans le segment, qui à leur tour contiennent les libellés d’utilisation de données applicables.
 
 En utilisant la variable [!DNL Segmentation] API, vous pouvez rechercher une définition de segment par son identifiant pour trouver sa stratégie de fusion associée.
 
@@ -122,9 +122,9 @@ Une réponse réussie renvoie les détails de la définition de segment.
 
 | Propriété | Description |
 | -------- | ----------- |
-| `mergePolicyId` | L’identifiant de la stratégie de fusion utilisée pour la définition de segment. Cela sera utile pour l’étape suivante. |
+| `mergePolicyId` | L’identifiant de la politique de fusion utilisée pour la définition de segment. Cela sera utile pour l’étape suivante. |
 
-## Recherche des jeux de données source à partir de la stratégie de fusion {#datasets}
+## Recherche des jeux de données source à partir de la politique de fusion {#datasets}
 
 Les stratégies de fusion contiennent des informations sur leurs jeux de données source, qui à leur tour contiennent des libellés d’utilisation des données. Vous pouvez rechercher les détails d’une stratégie de fusion en fournissant l’ID de stratégie de fusion dans une requête de GET à la variable [!DNL Profile] API. Vous trouverez plus d’informations sur les stratégies de fusion dans la section [guide de point de terminaison des stratégies de fusion](../../profile/api/merge-policies.md).
 
@@ -136,7 +136,7 @@ GET /config/mergePolicies/{MERGE_POLICY_ID}
 
 | Propriété | Description |
 | -------- | ----------- |
-| `{MERGE_POLICY_ID}` | Identifiant de la stratégie de fusion obtenue à l’[étape précédente](#merge-policy). |
+| `{MERGE_POLICY_ID}` | Identifiant de la politique de fusion obtenue à l’[étape précédente](#merge-policy). |
 
 **Requête**
 
@@ -151,7 +151,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie les détails de la stratégie de fusion.
+Une réponse réussie renvoie les détails de la politique de fusion.
 
 ```json
 {
@@ -177,9 +177,9 @@ Une réponse réussie renvoie les détails de la stratégie de fusion.
 
 | Propriété | Description |
 | -------- | ----------- |
-| `schema.name` | Nom du schéma associé à la stratégie de fusion. |
-| `attributeMerge.type` | Type de configuration de priorité des données de la stratégie de fusion. Si la valeur est `dataSetPrecedence`, les jeux de données associés à cette stratégie de fusion sont répertoriés sous `attributeMerge > data > order`. Si la valeur est `timestampOrdered`, tous les jeux de données associés au schéma référencés dans `schema.name` sont utilisés par la stratégie de fusion. |
-| `attributeMerge.data.order` | Si la valeur `attributeMerge.type` est `dataSetPrecedence`, cet attribut sera un tableau contenant les identifiants des jeux de données utilisés par cette stratégie de fusion. Ces identifiants sont utilisés à l’étape suivante. |
+| `schema.name` | Nom du schéma associé à la politique de fusion. |
+| `attributeMerge.type` | Type de configuration de priorité des données de la politique de fusion. Si la valeur est `dataSetPrecedence`, les jeux de données associés à cette politique de fusion sont répertoriés sous `attributeMerge > data > order`. Si la valeur est `timestampOrdered`, tous les jeux de données associés au schéma référencés dans `schema.name` sont utilisés par la politique de fusion. |
+| `attributeMerge.data.order` | Si la valeur `attributeMerge.type` est `dataSetPrecedence`, cet attribut sera un tableau contenant les identifiants des jeux de données utilisés par cette politique de fusion. Ces identifiants sont utilisés à l’étape suivante. |
 
 ## Évaluation des jeux de données en cas de violation de stratégie
 
@@ -369,9 +369,9 @@ En utilisant les données renvoyées dans la réponse de l’API, vous pouvez co
 
 Si votre segment d’audience ne réussit pas l’évaluation, vous pouvez ajuster les données incluses dans le segment à l’aide de l’une des deux méthodes décrites ci-dessous.
 
-### Mise à jour de la stratégie de fusion de la définition de segment
+### Mise à jour de la politique de fusion de la définition de segment
 
-La mise à jour de la stratégie de fusion d’une définition de segment modifie les jeux de données et les champs qui seront inclus dans l’exécution de la tâche de segmentation. Voir la section sur [mise à jour d’une stratégie de fusion existante](../../profile/api/merge-policies.md#update) pour plus d’informations, consultez le tutoriel sur les stratégies de fusion d’API .
+La mise à jour de la politique de fusion d’une définition de segment modifie les jeux de données et les champs qui seront inclus dans l’exécution de la tâche de segmentation. Voir la section sur [mise à jour d’une stratégie de fusion existante](../../profile/api/merge-policies.md#update) pour plus d’informations, consultez le tutoriel sur les stratégies de fusion d’API .
 
 ### Restriction des champs de données spécifiques lors de l’exportation du segment
 
@@ -383,4 +383,4 @@ Pour plus d’informations, consultez la section sur l’[exportation d’un seg
 
 ## Étapes suivantes
 
-Dans ce tutoriel, vous avez cherché les libellés d’utilisation des données associés à un segment ciblé et les avez testés pour détecter des violations de stratégie en fonction d’actions marketing spécifiques. Pour plus d’informations sur la gouvernance des données dans [!DNL Experience Platform], veuillez lire la présentation de [Gouvernance des données](../../data-governance/home.md).
+Dans ce tutoriel, vous avez cherché les libellés d’utilisation des données associés à un segment ciblé et les avez testés pour détecter des violations de politique en fonction d’actions marketing spécifiques. Pour plus d’informations sur la gouvernance des données dans [!DNL Experience Platform], veuillez lire la présentation de [Gouvernance des données](../../data-governance/home.md).

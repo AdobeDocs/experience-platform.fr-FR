@@ -249,17 +249,17 @@ Par le biais de `audienceTemplateId`, cette section associe également cette con
 
 Les paramètres affichés dans la configuration ci-dessus sont décrits dans la [référence de l’API de point d’entrée des destinations](./destination-configuration-api.md).
 
-## Stratégie d’agrégation {#aggregation}
+## Politique d’agrégation {#aggregation}
 
-![Stratégie d’agrégation dans le modèle de configuration](./assets/aggregation-configuration.png)
+![Politique d’agrégation dans le modèle de configuration](./assets/aggregation-configuration.png)
 
-Cette section vous permet de définir les stratégies d’agrégation qu’Experience Platform doit utiliser lors de l’exportation de données vers votre destination.
+Cette section vous permet de définir les politiques d’agrégation qu’Experience Platform doit utiliser lors de l’exportation de données vers votre destination.
 
-Une stratégie d’agrégation détermine la manière dont les profils exportés sont combinés dans les exportations de données. Les options disponibles sont les suivantes :
+Une politique d’agrégation détermine la manière dont les profils exportés sont combinés dans les exportations de données. Les options disponibles sont les suivantes :
 * Agrégation des meilleurs efforts
 * Agrégation configurable (affichée dans la configuration ci-dessus)
 
-Lisez la section relative à l’[utilisation de modèles](./message-format.md#using-templating) ainsi que les [exemples de clés d’agrégation](./message-format.md#template-aggregation-key) pour comprendre comment inclure la stratégie d’agrégation dans votre modèle de transformation des messages en fonction de votre stratégie d’agrégation sélectionnée.
+Lisez la section relative à l’[utilisation de modèles](./message-format.md#using-templating) ainsi que les [exemples de clés d’agrégation](./message-format.md#template-aggregation-key) pour comprendre comment inclure la politique d’agrégation dans votre modèle de transformation des messages en fonction de votre politique d’agrégation sélectionnée.
 
 ### Agrégation des meilleurs efforts {#best-effort-aggregation}
 

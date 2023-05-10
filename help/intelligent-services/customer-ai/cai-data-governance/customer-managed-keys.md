@@ -2,8 +2,9 @@
 keywords: insights;IA dédiée aux clients;insights IA dédiée aux clients;service de requêtes AAI;requêtes d’IA dédiée aux clients;scores d’IA dédiée aux clients; clés gérées par le client dans CAI
 title: Clés gérées par le client dans l’IA dédiée aux clients.
 description: Découvrez comment configurer les clés gérées par le client pour l’IA dédiée aux clients.
-source-git-commit: f80cdd553c36ee10cfbf07c5cbbb14e9a4ae6757
-workflow-type: ht
+exl-id: 12746c5c-094a-4d49-8d3a-7641fe0ec02a
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+workflow-type: tm+mt
 source-wordcount: '173'
 ht-degree: 100%
 

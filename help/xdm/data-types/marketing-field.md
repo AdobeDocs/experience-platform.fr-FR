@@ -5,8 +5,8 @@ description: Ce document présente un aperçu du type de données XDM Champ de p
 exl-id: d4c53885-f34f-4721-aa34-1fe02dc7006f
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '673'
-ht-degree: 4%
+source-wordcount: '667'
+ht-degree: 3%
 
 ---
 
@@ -28,7 +28,7 @@ ht-degree: 4%
 | `time` | DateTime | Horodatage ISO 8601 du moment où la préférence marketing a changé, le cas échéant. |
 | `val` | Chaîne | Choix des préférences fournies par le client pour ce cas d’utilisation marketing. Consultez le tableau ci-dessous pour connaître les valeurs et définitions acceptées. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Le tableau suivant décrit les valeurs acceptées pour `val`:
 
@@ -46,7 +46,7 @@ Le tableau suivant décrit les valeurs acceptées pour `val`:
 | `VI` | Intérêt vital de l’individu | La collecte de données aux fins spécifiées est nécessaire pour protéger les intérêts vitaux de l’individu. |
 | `PI` | Intérêt public | La collecte de données aux fins spécifiées est nécessaire pour effectuer une tâche dans l’intérêt public ou dans l’exercice de l’autorité officielle. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Pour obtenir plus d’informations sur ce type de données, reportez-vous au référentiel XDM public:
 

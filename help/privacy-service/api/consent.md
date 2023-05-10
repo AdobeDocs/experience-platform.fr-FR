@@ -6,8 +6,8 @@ description: Découvrez comment gérer les demandes de consentement des clients 
 exl-id: ec505749-c0a9-4050-be56-4c0657807ec7
 source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
-source-wordcount: '247'
-ht-degree: 5%
+source-wordcount: '244'
+ht-degree: 4%
 
 ---
 
@@ -65,7 +65,7 @@ curl -X POST \
 | `nameSpace` | Chaque objet de la variable `entities` Le tableau doit contenir l’un des [espaces de noms d’identité standard](./appendix.md#standard-namespaces) reconnu par l’API du Privacy Service. |
 | `values` | Tableau de valeurs pour chaque utilisateur, correspondant au `nameSpace`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >

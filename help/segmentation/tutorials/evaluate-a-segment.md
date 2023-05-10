@@ -59,23 +59,23 @@ Grâce à l’évaluation planifiée, votre entreprise peut créer un planning r
 
 >[!NOTE]
 >
->L’évaluation planifiée peut être activée pour les sandbox avec un maximum de cinq (5) stratégies de fusion pour [!DNL XDM Individual Profile]. Si votre organisation compte plus de cinq stratégies de fusion pour [!DNL XDM Individual Profile] dans un seul sandbox, vous ne pourrez pas procéder à l’évaluation planifiée.
+>L’évaluation planifiée peut être activée pour les sandbox avec un maximum de cinq (5) politiques de fusion pour [!DNL XDM Individual Profile]. Si votre organisation compte plus de cinq politiques de fusion pour [!DNL XDM Individual Profile] dans une seul sandbox, vous ne pourrez pas procéder à l’évaluation planifiée.
 
 ### Création d’un planning
 
-En effectuant une requête POST sur le point de terminaison `/config/schedules`, vous pouvez créer un planning et inclure l’heure spécifique à laquelle le planning doit être déclenché.
+En effectuant une requête POST sur le point d’entrée `/config/schedules`, vous pouvez créer un planning et inclure l’heure spécifique à laquelle le planning doit être déclenché.
 
 Vous trouverez des informations plus détaillées sur l’utilisation de ce point de terminaison dans la section [guide de point de fin planifications](../api/schedules.md#create)
 
 ### Activation d’un planning
 
-Par défaut, un planning est inactif lors de la création, sauf si la propriété `state` est définie sur `active` dans le corps de la requête de création (POST). Vous pouvez activer un planning (définissez `state` sur `active`) en effectuant une requête PATCH sur le point de terminaison `/config/schedules` et en incluant l’identifiant du planning dans le chemin.
+Par défaut, un planning est inactif lors de la création, sauf si la propriété `state` est définie sur `active` dans le corps de la requête de création (POST). Vous pouvez activer un planning (définissez `state` sur `active`) en effectuant une requête PATCH sur le point d’entrée `/config/schedules` et en incluant l’identifiant du planning dans le chemin.
 
 Vous trouverez des informations plus détaillées sur l’utilisation de ce point de terminaison dans la section [guide de point de fin planifications](../api/schedules.md#update-state)
 
 ### Mise à jour de l’heure du planning
 
-Vous pouvez mettre à jour l’heure du planning en effectuant une requête PATCH sur le point de terminaison `/config/schedules` et en incluant l’identifiant du planning dans le chemin.
+Vous pouvez mettre à jour l’heure du planning en effectuant une requête PATCH sur le point d’entrée `/config/schedules` et en incluant l’identifiant du planning dans le chemin.
 
 Vous trouverez des informations plus détaillées sur l’utilisation de ce point de terminaison dans la section [guide de point de fin planifications](../api/schedules.md#update-schedule)
 
@@ -219,7 +219,7 @@ Vous trouverez des informations plus détaillées sur l’utilisation de ce poin
 
 ### Contrôle de la progression de l’exportation
 
-Lorsqu’une tâche d’exportation est en cours de traitement, vous pouvez contrôler son état en effectuant une requête GET sur le point de terminaison `/export/jobs` et en incluant l’`id` de la tâche d’exportation dans le chemin. La tâche d’exportation est terminée lorsque le champ `status` renvoie la valeur &quot;SUCCEEDED&quot;.
+Lorsqu’une tâche d’exportation est en cours de traitement, vous pouvez contrôler son état en effectuant une requête GET sur le point d’entrée `/export/jobs` et en incluant l’`id` de la tâche d’exportation dans le chemin. La tâche d’exportation est terminée lorsque le champ `status` renvoie la valeur &quot;SUCCEEDED&quot;.
 
 Vous trouverez des informations plus détaillées sur l’utilisation de ce point de terminaison dans la section [guide de point de fin des traitements d’export](../api/export-jobs.md#get)
 

@@ -15,7 +15,7 @@ ht-degree: 41%
 
 >[!NOTE]
 >
->Contrairement aux autres points de terminaison fournis dans l’API Sandbox, ce point de terminaison est disponible pour tous les utilisateurs, y compris ceux ne disposant pas des autorisations d’accès à Sandbox Administration.
+>Contrairement aux autres points d’entrée fournis dans l’API Sandbox, ce point d’entrée est disponible pour tous les utilisateurs, y compris ceux ne disposant pas des autorisations d’accès à Sandbox Administration.
 
 Vous pouvez répertorier les environnements de test disponibles pour l’utilisateur actuel en envoyant une requête de GET au point de terminaison des environnements de test disponibles.
 
@@ -101,9 +101,9 @@ Une réponse réussie renvoie une liste d’environnements de test disponibles p
 
 | Propriété | Description |
 | --- | --- |
-| `name` | Le nom de l’environnement de test. Utilisé à des fins de recherche dans les appels API. |
-| `title` | Le nom d’affichage de l’environnement de test. |
-| `state` | L’état de traitement actuel de l’environnement de test. L’état d’un environnement de test peut correspondre à l’un des suivants : <ul><li>`creating`: L’environnement de test a été créé, mais le système continue de le configurer.</li><li>`active`: L’environnement de test est créé et principal.</li><li>`failed`: En raison d’une erreur, le système n’a pas pu configurer l’environnement de test et est désactivé.</li><li>`deleted`: L’environnement de test a été désactivé manuellement.</li></ul> |
-| `type` | Le type d’environnement de test : « développement » ou « production ». |
+| `name` | Le nom du sandbox. Utilisé à des fins de recherche dans les appels API. |
+| `title` | Le nom d’affichage du sandbox. |
+| `state` | L’état de traitement actuel du sandbox. Un sandbox peut avoir l’un des états suivants : <ul><li>`creating`: L’environnement de test a été créé, mais le système continue de le configurer.</li><li>`active`: L’environnement de test est créé et principal.</li><li>`failed`: En raison d’une erreur, le système n’a pas pu configurer l’environnement de test et est désactivé.</li><li>`deleted`: L’environnement de test a été désactivé manuellement.</li></ul> |
+| `type` | Le type de sandbox : « développement » ou « production ». |
 | `isDefault` | Une propriété booléenne indiquant si cet environnement de test est l’environnement de test de production par défaut pour l’organisation. |
-| `eTag` | L’identifiant d’une version spécifique de l’environnement de test. Utilisée pour le contrôle des versions et une mise en cache efficace, cette valeur est mise à jour chaque fois que l’environnement de test est modifié. |
+| `eTag` | L’identifiant d’une version spécifique du sandbox. Utilisée pour le contrôle des versions et une mise en cache efficace, cette valeur est mise à jour chaque fois que le sandbox est modifié. |

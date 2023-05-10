@@ -6,8 +6,8 @@ description: Ce document fournit un aperçu du groupe de champs de schéma de co
 exl-id: 52a4fee8-d7f4-4f27-8e26-0c132985eb84
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '341'
-ht-degree: 6%
+source-wordcount: '338'
+ht-degree: 5%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 6%
 | --- | --- | --- |
 | `identityPrivacyInfo` | Carte | Objet de type map qui associe les valeurs d’identité individuelles d’un client à différentes chaînes de consentement TCF. Vous trouverez ci-dessous un exemple de la structure de cet objet. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Le fichier JSON suivant illustre la structure de la variable `identityPrivacyInfo` carte.
 

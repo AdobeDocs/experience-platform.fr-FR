@@ -3,7 +3,7 @@ title: Personnalisation côté serveur à l’aide de l’API Edge Network Serve
 description: Cet article explique comment utiliser l’API Edge Network Server pour déployer la personnalisation côté serveur sur vos propriétés web.
 keywords: personnalisation;api du serveur;edge network;côté serveur;
 source-git-commit: 3e7084953a5e158059074c857bfce4940a83661b
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '574'
 ht-degree: 100%
 

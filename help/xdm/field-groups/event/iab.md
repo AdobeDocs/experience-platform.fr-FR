@@ -6,8 +6,8 @@ description: Ce document fournit un aperçu du groupe de champs de schéma de co
 exl-id: c236d0d4-27bd-45d7-a912-d0e93a609254
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '253'
-ht-degree: 8%
+source-wordcount: '250'
+ht-degree: 7%
 
 ---
 
@@ -29,7 +29,7 @@ ht-degree: 8%
 | --- | --- | --- |
 | `consentStrings` | Tableau de [Chaînes de consentement](../../data-types/consent-string.md) | Tableau de valeurs de chaîne de consentement associées à l’événement. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Consultez le guide sur la [Prise en charge du TCF 2.0 de l’IAB dans Platform](../../../landing/governance-privacy-security/consent/iab/overview.md) pour plus d’informations sur le cas d’utilisation de ce groupe de champs. Pour plus d’informations sur le groupe de champs lui-même, consultez le référentiel XDM public:
 

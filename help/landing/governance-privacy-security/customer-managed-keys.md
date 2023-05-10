@@ -37,7 +37,7 @@ La fonction CMK est incluse dans les offres Adobe Healthcare Shield et Privacy a
 
 Le processus se présente comme suit :
 
-1. [Configurez un coffre  [!DNL Azure]  Key Vault](#create-key-vault) en fonction des stratégies de votre entreprise, puis [générez une clé de chiffrement](#generate-a-key) qui sera à la fin partagée avec Adobe.
+1. [Configurez un coffre  [!DNL Azure]  Key Vault](#create-key-vault) en fonction des politiques de votre entreprise, puis [générez une clé de chiffrement](#generate-a-key) qui sera à la fin partagée avec Adobe.
 1. Utilisez les appels d’API pour [configurer l’application CMK](#register-app) avec votre client [!DNL Azure].
 1. Utilisez les appels d’API pour [envoyer votre ID de clé de chiffrement à Adobe](#send-to-adobe) et lancez le processus d’activation de la fonctionnalité.
 1. [Vérifiez le statut de la configuration](#check-status) pour vous assurer que la fonction CMK a été activée.

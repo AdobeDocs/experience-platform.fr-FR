@@ -5,7 +5,7 @@ type: Documentation
 description: Adobe Experience Platform s’engage à fournir des fonctionnalités accessibles et inclusives à tous les individus.
 exl-id: 54ce6826-09ee-4716-8237-ef904a41986f
 source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '311'
 ht-degree: 100%
 

@@ -81,7 +81,7 @@ La chaîne de consentement doit être incluse dans l’événement d’expérien
 1. Développez l’objet **[!UICONTROL consentString]** et développez le premier élément, puis renseignez les valeurs suivantes :
 
 * `consentStandard`: IAB TCF
-* `consentStandardVersion`: 2,0
+* `consentStandardVersion`: 2.0
 * `consentStringValue`: %IAB TCF Consent String%
 * `gdprApplies`: %Consentement du TCF de l’IAB%
 

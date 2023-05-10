@@ -29,7 +29,7 @@ Avant de commencer ce tutoriel, veuillez consulter le [guide de développement](
 
 ## Création d’une classe ad hoc
 
-Le comportement des données d’un schéma XDM est déterminé par sa classe sous-jacente. La première étape de la création d’un schéma ad hoc consiste à créer une classe basée sur le comportement `adhoc`. Pour ce faire, vous devez envoyer une requête POST au point de terminaison `/tenant/classes`.
+Le comportement des données d’un schéma XDM est déterminé par sa classe sous-jacente. La première étape de la création d’un schéma ad hoc consiste à créer une classe basée sur le comportement `adhoc`. Pour ce faire, vous devez envoyer une requête POST au point d’entrée `/tenant/classes`.
 
 **Format d’API**
 
@@ -152,7 +152,7 @@ Une réponse réussie renvoie les détails de la nouvelle classe, en remplaçant
 
 ## Création d’un schéma ad hoc
 
-Une fois que vous avez créé une classe ad hoc, vous pouvez créer un nouveau schéma qui implémente celle-ci en envoyant une requête POST au point de terminaison `/tenant/schemas`.
+Une fois que vous avez créé une classe ad hoc, vous pouvez créer un nouveau schéma qui implémente celle-ci en envoyant une requête POST au point d’entrée `/tenant/schemas`.
 
 **Format d’API**
 

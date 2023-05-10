@@ -7,7 +7,7 @@ exl-id: a19abfc8-b431-4e57-b44d-c6130041af4a
 source-git-commit: 9fe7e618d251867c90c88f8bee6ef5863ae78f60
 workflow-type: tm+mt
 source-wordcount: '416'
-ht-degree: 4%
+ht-degree: 8%
 
 ---
 
@@ -31,7 +31,7 @@ Pour se connecter [!DNL Postico] à Query Service, ouvrez [!DNL Postico] et sél
 | **[!DNL Password]** | Cette chaîne alphanumérique est votre Experience Platform **[!UICONTROL Mot de passe]** informations d’identification. Si vous souhaitez utiliser des informations d’identification qui ne expirent pas, cette valeur correspond aux arguments concaténés du `technicalAccountID` et le `credential` téléchargé dans le fichier de configuration JSON. La valeur du mot de passe se présente comme suit : {technicalAccountId}:{credential}. Le fichier de configuration JSON pour les informations d’identification non arrivant à expiration est un téléchargement unique lors de leur initialisation, dont Adobe ne conserve pas de copie. |
 | **[!DNL Database]** | Utilisez votre Experience Platform **[!UICONTROL Base]** valeur d’identification : `prod:all`. |
 
-Pour plus d’informations sur la recherche du nom de la base de données, de l’hôte, du port et des informations de connexion, consultez la section [guide des informations d’identification](../ui/credentials.md). Pour trouver vos informations d’identification, connectez-vous à [!DNL Platform], puis sélectionnez **[!UICONTROL Requêtes]**, suivie de **[!UICONTROL Informations d’identification]**.
+Pour plus d’informations sur la manière dont trouver le nom, l’hôte et le port de votre base de données ainsi que vos informations d’identification de connexion, consultez le [guide des informations d’identification](../ui/credentials.md). Pour trouver vos informations d’identification, connectez-vous à [!DNL Platform], puis sélectionnez **[!UICONTROL Requêtes]**, suivie de **[!UICONTROL Informations d’identification]**.
 
 Après avoir inséré vos informations d’identification, sélectionnez **[!DNL Connect]** pour vous connecter à Query Service.
 

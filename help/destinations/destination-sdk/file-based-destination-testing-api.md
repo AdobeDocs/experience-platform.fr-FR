@@ -1,15 +1,15 @@
 ---
 description: Cette page explique comment utiliser le point d’entrée de l’API /testing/destinationInstance pour tester si votre destination basée sur des fichiers est configurée correctement et pour vérifier l’intégrité des flux de données vers votre destination configurée.
-title: Test de votre destination basée sur des fichiers avec des exemples de profils
+title: Testez votre destination basée sur des fichiers avec des exemples de profils
 exl-id: 75f76aec-245b-4f07-8871-c64a710db9f6
 source-git-commit: 44e056407f5089c927752f00cc6bf173d7640b83
 workflow-type: tm+mt
-source-wordcount: '830'
-ht-degree: 10%
+source-wordcount: '827'
+ht-degree: 12%
 
 ---
 
-# Test de votre destination basée sur des fichiers avec des exemples de profils
+# Testez votre destination basée sur des fichiers avec des exemples de profils
 
 ## Présentation {#overview}
 
@@ -115,7 +115,7 @@ Une réponse réussie renvoie un état HTTP 200 avec la charge utile de la répo
 | `results` | Renvoie l’identifiant de l’instance de destination et les identifiants d’exécution de flux que vous pouvez utiliser pour appeler la variable [API des résultats](file-based-destination-results-api.md), pour tester davantage l’intégration. |
 | `inputProfiles` | Renvoie les exemples de profils générés automatiquement par l’API. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Tester la configuration de votre destination avec les profils ajoutés à l’appel {#test-with-added-profiles}
 

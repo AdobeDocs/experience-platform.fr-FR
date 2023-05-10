@@ -5,7 +5,7 @@ exl-id: d675e3de-ab62-4beb-9360-1f6090397a17
 source-git-commit: 91f318596bf268aa93e8b2df9c13774aab76d13a
 workflow-type: tm+mt
 source-wordcount: '1040'
-ht-degree: 8%
+ht-degree: 9%
 
 ---
 
@@ -28,9 +28,9 @@ Ce guide nécessite une compréhension professionnelle des composants suivants d
 * [Système de modèle de données d’expérience (XDM)](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=fr) : cadre normalisé selon lequel Experience Platform organise les données d’expérience client.
    * [[!DNL Schema Editor]](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/overview.html?lang=fr): Découvrez comment créer et gérer des schémas et d’autres ressources dans l’interface utilisateur de Platform.
 * [[!DNL Data Governance]](../../data-governance/home.md): Découvrez comment [!DNL Data Governance] vous permet de gérer les données client et de garantir la conformité aux réglementations, aux restrictions et aux politiques applicables à l’utilisation des données.
-* [Contrôle d’accès basé sur les attributs](../../access-control/abac/overview.md): Le contrôle d’accès basé sur les attributs est une fonctionnalité de Adobe Experience Platform qui permet aux administrateurs de contrôler l’accès à des objets et/ou fonctionnalités spécifiques en fonction d’attributs. Les attributs peuvent être des métadonnées ajoutées à un objet, comme un libellé ajouté à un champ de schéma ad hoc ou ordinaire. Un administrateur définit des stratégies d’accès qui comprennent des attributs afin de gérer les autorisations d’accès des utilisateurs.
+* [Contrôle d’accès basé sur les attributs](../../access-control/abac/overview.md): Le contrôle d’accès basé sur les attributs est une fonctionnalité de Adobe Experience Platform qui permet aux administrateurs de contrôler l’accès à des objets et/ou fonctionnalités spécifiques en fonction d’attributs. Les attributs peuvent être des métadonnées ajoutées à un objet, comme un libellé ajouté à un champ de schéma ad hoc ou ordinaire. Un administrateur définit des politiques d’accès qui comprennent des attributs afin de gérer les autorisations d’accès des utilisateurs.
 
-## Création d’un schéma ad hoc
+## Créer un schéma ad hoc
 
 Une fois votre requête exécutée et les résultats générés, un schéma ad hoc est automatiquement généré et ajouté à l’inventaire des schémas.
 
@@ -50,7 +50,7 @@ Sélectionnez le nom du schéma ad hoc récemment créé dans la liste disponibl
 
 ![L’exemple de diagramme de structure de schéma ad hoc.](../images/data-governance/adhoc-schema-structure-diagram.png)
 
-## Modification des étiquettes de gouvernance
+## Modifier les libellés de gouvernance
 
 Pour modifier les libellés de données de votre schéma ad hoc, sélectionnez la variable [!UICONTROL Étiquettes] . L’espace de travail des libellés vous permet d’appliquer, de créer et de modifier des libellés à vos champs de schéma ad hoc et de contrôler les autorisations d’accès via l’interface utilisateur. Tous les champs du schéma ad hoc sont représentés ici.
 

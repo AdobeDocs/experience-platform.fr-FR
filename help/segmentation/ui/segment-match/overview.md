@@ -5,7 +5,7 @@ title: Présentation de la correspondance des segments
 description: La correspondance des segments est un service de partage de segments dans Adobe Experience Platform qui permet à deux utilisateurs ou plus de Platform d’échanger des données de segment de manière sécurisée, régulée et respectueuse de la confidentialité.
 exl-id: 4e6ec2e0-035a-46f4-b171-afb777c14850
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1997'
 ht-degree: 100%
 
@@ -64,7 +64,7 @@ Pour plus d’informations sur l’attribut `share` utilisé pour définir la va
 
 Le dernier prérequis à mettre en place est de configurer un nouveau libellé d’utilisation des données pour empêcher le partage des données. Grâce aux libellés d’utilisation des données, vous pouvez gérer les données qui peuvent être partagées via [!DNL Segment Match].
 
-Les libellés d’utilisation des données vous permettent de classer les jeux de données et les champs en fonction des stratégies d’utilisation qui s’appliquent à ces données. Vous pouvez appliquer les libellés à tout moment, ce qui vous offre une certaine flexibilité quant à la manière dont vous choisissez de gérer les données. Les bonnes pratiques recommandent de libeller les données dès qu’elles sont ingérées dans Experience Platform, ou dès que les données sont disponibles pour une utilisation dans Platform.
+Les libellés d’utilisation des données vous permettent de classer les jeux de données et les champs en fonction des politiques d’utilisation qui s’appliquent à ces données. Vous pouvez appliquer les libellés à tout moment, ce qui vous offre une certaine flexibilité quant à la manière dont vous choisissez de gérer les données. Les bonnes pratiques recommandent de libeller les données dès qu’elles sont ingérées dans Experience Platform, ou dès que les données sont disponibles pour une utilisation dans Platform.
 
 [!DNL Segment Match] utilise le libellé C11, un libellé de contrat spécifique à [!DNL Segment Match] que vous pouvez ajouter manuellement à n’importe quels jeux de données ou attributs pour vous assurer qu’ils sont exclus du processus de partage des partenaires de [!DNL Segment Match]. Le libellé C11 indique les données qui ne doivent pas être utilisées dans les processus [!DNL Segment Match]. Une fois que vous avez déterminé les jeux de données et/ou les champs que vous souhaitez exclure de [!DNL Segment Match] et que vous avez ajouté le libellé C11 en conséquence, le libellé est automatiquement appliqué par le workflow [!DNL Segment Match]. [!DNL Segment Match] active automatiquement la politique principale [!UICONTROL Limitation du partage de données]. Pour obtenir des instructions spécifiques sur la manière d’appliquer des libellés d’utilisation des données aux jeux de données, consultez le tutoriel sur la [gestion des libellés d’utilisation des données dans l’interface utilisateur](../../../data-governance/labels/user-guide.md).
 

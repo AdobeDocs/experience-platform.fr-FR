@@ -7,7 +7,7 @@ exl-id: 36b2924d-7893-4c55-bc33-2c0234f1120e
 source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
 workflow-type: tm+mt
 source-wordcount: '1655'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
@@ -98,7 +98,7 @@ Après avoir fourni un nom et une description, vous pouvez éventuellement ajout
 
 Si vous modifiez un schéma existant qui a déjà été activé pour une utilisation dans [!DNL Real-Time Customer Profile], sélectionnez **[!UICONTROL Enregistrer]** pour confirmer vos modifications avant de passer à la section sur [création d’un jeu de données basé sur votre schéma de consentement](#dataset). Si vous créez un nouveau schéma, continuez à suivre les étapes décrites dans la sous-section ci-dessous.
 
-#### Activation du schéma à utiliser dans [!DNL Real-Time Customer Profile]
+#### Activer le schéma pour l’utiliser dans [!DNL Real-Time Customer Profile]
 
 Pour que Platform associe les données de consentement qu’il reçoit à des profils client spécifiques, le schéma de consentement doit être activé pour une utilisation dans [!DNL Real-Time Customer Profile].
 

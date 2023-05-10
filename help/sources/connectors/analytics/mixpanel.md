@@ -6,7 +6,7 @@ exl-id: 7eb605f6-8580-40b7-a9b3-96b9c3444f5d
 source-git-commit: e44f6d5bb2fd891a3e3b3c5e4aed68e8d4687b53
 workflow-type: tm+mt
 source-wordcount: '472'
-ht-degree: 27%
+ht-degree: 32%
 
 ---
 
@@ -14,9 +14,9 @@ ht-degree: 27%
 
 >[!NOTE]
 >
->Le [!DNL Mixpanel] La source est en version bêta. Voir [présentation des sources](../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de sources étiquetées bêta.
+>La source [!DNL Mixpanel] est en version Beta. Voir la [présentation des sources](../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de sources étiquetées bêta.
 
-Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous permettant de structurer, de libeller et d’améliorer les données entrantes à l’aide des services de Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, des bases de données, etc.
+Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les bases de données, etc.
 
 Experience Platform prend en charge l’ingestion de données à partir d’une application d’analyse tierce. La prise en charge des fournisseurs d’analyses inclut [!DNL Mixpanel].
 
@@ -50,13 +50,13 @@ Enfin, créez une plateforme [schema](../../../xdm/schema/composition.md) requis
 
 ![Création d’un schéma](../../images/tutorials/create/mixpanel-export-events/schema.png)
 
-## Connexion [!DNL Mixpanel] vers Platform à l’aide d’API
+## Connecter [!DNL Mixpanel] à Platform à l’aide d’API
 
-La documentation ci-dessous fournit des informations sur la connexion de [!DNL Mixpanel] à Platform à l’aide d’API ou de l’interface utilisateur :
+La documentation ci-dessous fournit des informations sur la connexion d’[!DNL Mixpanel] à Platform à l’aide d’API ou de l’interface utilisateur :
 
 * [Création d’une connexion source et d’un flux de données pour [!DNL Mixpanel] utilisation de l’API Flow Service](../../tutorials/api/create/analytics/mixpanel.md)
 
-## Connexion [!DNL Mixpanel] vers Platform à l’aide de l’interface utilisateur
+## Connecter [!DNL Mixpanel] à Platform à l’aide de l’interface utilisateur
 
 * [Créer une connexion source  [!DNL Mixpanel]  dans l’interface utilisateur](../../tutorials/ui/create/analytics/mixpanel.md)
 * [Création d’un flux de données pour une connexion de source de succès client dans l’interface utilisateur](../../tutorials/ui/dataflow/analytics.md)

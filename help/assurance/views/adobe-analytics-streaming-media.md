@@ -1,13 +1,13 @@
 ---
 title: Vue Adobe Analytics pour les médias en streaming dans Assurance
 description: Ce guide explique comment utiliser Adobe Analytics pour les médias en streaming avec Adobe Experience Platform Assurance.
-source-git-commit: 07dc01c11c79ac2dad05d89309cabb5715c0b63c
+exl-id: 9a9c2c64-e9ed-4d58-b936-d802f1c3b7d3
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '412'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
-
 
 # Vue Adobe Analytics pour les médias en streaming dans Assurance
 
@@ -26,7 +26,7 @@ Une fois les données traitées dans Analytics, l’état et les données post-t
 Avant de poursuivre, assurez-vous que vous disposez des services suivants :
 
 - Le [Interface utilisateur de la collecte de données Adobe Experience Platform](https://experience.adobe.com/#/data-collection/)
-- [Adobe Experience Platform Assurance](https://experience.adobe.com/assurance)
+- [Assurance d’Adobe Experience Platform Assurance](https://experience.adobe.com/assurance)
 
 Pour savoir comment installer Assurance dans votre application, veuillez lire le [guide d’assurance d’implémentation](../tutorials/implement-assurance.md).
 

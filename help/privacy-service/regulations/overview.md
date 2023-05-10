@@ -6,7 +6,7 @@ description: Ce document présente les différentes réglementations de confiden
 exl-id: 2ca946cf-94f8-4fd8-bb1a-7f06a5ab1256
 source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
-source-wordcount: '724'
+source-wordcount: '721'
 ht-degree: 7%
 
 ---
@@ -29,7 +29,7 @@ Grâce à l’utilisation de [Adobe Experience Platform Privacy Service](../home
 | PDPA (Thaïlande) | Le [[!DNL Personal Data Protection Act (PDPA)]](https://www.pdpc.gov.sg/Overview-of-PDPA/The-Legislation/Personal-Data-Protection-Act) a été introduit pour protéger les propriétaires de données thaïlandais de la collecte, de l’utilisation ou de la divulgation illégales de leurs données personnelles. Inspirée par le RGPD de l&#39;Union européenne, la réglementation accorde aux citoyens thaïlandais le droit de demander l&#39;accès à leurs données personnelles stockées ou de les supprimer. |
 | VCDPA (Virginie) | Le [[!DNL Virginia Consumer Data Protection Act (VCDPA)]](https://lis.virginia.gov/cgi-bin/legp604.exe?212+sum+HB2307) fournit de nouveaux droits sur la confidentialité des données aux résidents de la Virginie (&quot;Consommateurs&quot;), y compris le droit d’accéder à des données personnelles, de les supprimer et de les corriger. Les consommateurs ont également le droit de se désabonner de la vente de données personnelles, de se désabonner du profilage basé sur les données personnelles et du traitement des fins publicitaires personnelles. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Étapes suivantes
 

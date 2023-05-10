@@ -6,7 +6,7 @@ type: Tutorial
 description: Découvrez comment connecter Adobe Experience Platform à un serveur ServiceNow à l’aide de l’API Flow Service.
 exl-id: 39d0e628-5c07-4371-a5af-ac06385db891
 source-git-commit: 997423f7bf92469e29c567bd77ffde357413bf9e
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '479'
 ht-degree: 100%
 
@@ -23,7 +23,7 @@ Ce tutoriel vous guide tout au long des étapes de création dʼune connexion de
 Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
 
 * [Sources](../../../../home.md) : [!DNL Experience Platform] permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services [!DNL Platform].
-* [Sandbox](../../../../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuelles qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
+* [Sandbox](../../../../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
 Les sections suivantes contiennent des informations supplémentaires que vous devez connaître pour réussir la connexion à un serveur [!DNL ServiceNow] à l’aide de l’API [!DNL Flow Service].
 

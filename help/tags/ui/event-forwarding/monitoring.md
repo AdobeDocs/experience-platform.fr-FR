@@ -6,7 +6,7 @@ exl-id: 9d8572a3-816e-4b66-afe6-344fe8a15f22
 source-git-commit: 9313ebe6d51d5ef42915d154def9cb0612407439
 workflow-type: tm+mt
 source-wordcount: '548'
-ht-degree: 1%
+ht-degree: 5%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->Cette fonctionnalité est actuellement en version bêta et votre entreprise n’y a peut-être pas encore accès. La fonctionnalité et la documentation peuvent être modifiées.
+>Cette fonctionnalité est actuellement en version bêta et votre organisation n’y a peut-être pas encore accès. Les fonctionnalités et la documentation sont susceptibles d’être modifiées.
 
 Le **[!UICONTROL Surveillance]** dans l’interface utilisateur de la collecte de données vous permet de surveiller les schémas d’utilisation, les erreurs et l’heure de calcul des propriétés de transfert d’événement. Ce guide donne un aperçu général de la manière d’afficher et de comprendre les rapports affichés dans l’onglet .
 

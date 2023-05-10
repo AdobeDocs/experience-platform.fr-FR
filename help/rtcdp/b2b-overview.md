@@ -20,7 +20,7 @@ Avec l’édition B2B de Real-time CDP, vous pouvez :
 
 * Combiner les données collectées à partir de plusieurs sources en une seule vue afin de créer des profils de comptes et d’utilisateurs holistiques.
 * Enrichir, segmenter et exporter toutes vos données inter-sources à partir d’un magasin centralisé de profils de comptes unifiés.
-* Gérer vos données à l’aide d’outils de gouvernance des données mis à votre disposition à chaque étape du processus de centralisation. Cela garantit que vos données sont conformes aux réglementations légales et aux stratégies commerciales.
+* Gérer vos données à l’aide d’outils de gouvernance des données mis à votre disposition à chaque étape du processus de centralisation. Cela garantit que vos données sont conformes aux réglementations légales et aux politiques commerciales.
 
 Des détails plus complets sur les améliorations apportées à l’édition B2B de Real-time CDP sont divisés en sections indiquées ci-dessous.
 
@@ -86,4 +86,4 @@ Pour comprendre comment l’édition B2B de Real-time CDP peut bénéficier à
 * [Schémas dans l’édition B2B de Real-time Customer Data Platform](./schemas/b2b.md)
 * [Création de segments](./segmentation/b2b.md)
 * [Activation de segments vers des destinations](./destinations/b2b.md)
-* [Définition et application des stratégies de gouvernance des données](./privacy/data-governance-overview.md)
+* [Définition et application des politiques de gouvernance des données](./privacy/data-governance-overview.md)

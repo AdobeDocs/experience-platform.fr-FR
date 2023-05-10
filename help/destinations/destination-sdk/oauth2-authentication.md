@@ -4,8 +4,8 @@ title: Authentification OAuth 2
 exl-id: 280ecb63-5739-491c-b539-3c62bd74e433
 source-git-commit: 87fb3ffa65449b61e05d94d2b56daf727ecebdea
 workflow-type: tm+mt
-source-wordcount: '2110'
-ht-degree: 6%
+source-wordcount: '2080'
+ht-degree: 5%
 
 ---
 
@@ -53,10 +53,10 @@ Experience Platform prend en charge les trois types de subventions OAuth 2 dans 
 | Subvention OAuth 2 | Entrées | Sorties |
 |---------|----------|---------|
 | Code d’autorisation | <ul><li><b>clientId</b></li><li><b>clientSecret</b></li><li>portée</li><li><b>authorizationUrl</b></li><li><b>accessTokenUrl</b></li><li>refreshTokenUrl</li></ul> | <ul><li><b>accessToken</b></li><li>expiresIn</li><li>refreshToken</li><li>tokenType</li></ul> |
-| Mot de passe | <ul><li><b>clientId</b></li><li><b>clientSecret</b></li><li>portée</li><li><b>accessTokenUrl</b></li><li><b>username</b></li><li><b>mot de passe</b></li></ul> | <ul><li><b>accessToken</b></li><li>expiresIn</li><li>refreshToken</li><li>tokenType</li></ul> |
+| Mot de passe | <ul><li><b>clientId</b></li><li><b>clientSecret</b></li><li>portée</li><li><b>accessTokenUrl</b></li><li><b>username</b></li><li><b>password</b></li></ul> | <ul><li><b>accessToken</b></li><li>expiresIn</li><li>refreshToken</li><li>tokenType</li></ul> |
 | Informations d’identification client | <ul><li><b>clientId</b></li><li><b>clientSecret</b></li><li>portée</li><li><b>accessTokenUrl</b></li></ul> | <ul><li><b>accessToken</b></li><li>expiresIn</li><li>refreshToken</li><li>tokenType</li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Le tableau ci-dessus répertorie les champs utilisés dans les flux OAuth 2 standard. Outre ces champs standard, diverses intégrations de partenaires peuvent nécessiter des entrées et des sorties supplémentaires. Adobe a conçu un framework d’authentification/d’autorisation OAuth 2 flexible pour la Destination SDK qui peut gérer des variations du modèle de champs standard ci-dessus, tout en prenant en charge un mécanisme pour générer automatiquement des sorties non valides, telles que des jetons d’accès expirés.
 
@@ -75,7 +75,7 @@ Si votre destination prend en charge un flux de code d’autorisation OAuth 2.0 
 |---------|----------|---------|
 | Code d’autorisation | <ul><li><b>clientId</b></li><li><b>clientSecret</b></li><li>portée</li><li><b>authorizationUrl</b></li><li><b>accessTokenUrl</b></li><li>refreshTokenUrl</li></ul> | <ul><li><b>accessToken</b></li><li>expiresIn</li><li>refreshToken</li><li>tokenType</li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Pour configurer cette méthode d’authentification pour votre destination, ajoutez les lignes suivantes à votre configuration, dans la section `/destinations` [endpoint](./destination-configuration.md):
 
@@ -109,7 +109,7 @@ Pour configurer cette méthode d’authentification pour votre destination, ajou
 | `clientSecret` | Chaîne | Secret client que votre système attribue à Adobe Experience Platform. |
 | `scope` | Liste de chaînes | *Facultatif*. Définissez la portée de ce que le jeton d’accès permet à l’Experience Platform d’effectuer sur vos ressources. Exemple : &quot;lire, écrire&quot;. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## OAuth 2 avec octroi de mot de passe
 
@@ -118,9 +118,9 @@ Adobe utilise les entrées standard ci-dessous pour simplifier la configuration 
 
 | Subvention OAuth 2 | Entrées | Sorties |
 |---------|----------|---------|
-| Mot de passe | <ul><li><b>clientId</b></li><li><b>clientSecret</b></li><li>portée</li><li><b>accessTokenUrl</b></li><li><b>username</b></li><li><b>mot de passe</b></li></ul> | <ul><li><b>accessToken</b></li><li>expiresIn</li><li>refreshToken</li><li>tokenType</li></ul> |
+| Mot de passe | <ul><li><b>clientId</b></li><li><b>clientSecret</b></li><li>portée</li><li><b>accessTokenUrl</b></li><li><b>username</b></li><li><b>password</b></li></ul> | <ul><li><b>accessToken</b></li><li>expiresIn</li><li>refreshToken</li><li>tokenType</li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >
@@ -152,7 +152,7 @@ Pour configurer cette méthode d’authentification pour votre destination, ajou
 | `clientSecret` | Chaîne | Secret client que votre système attribue à Adobe Experience Platform. |
 | `scope` | Liste de chaînes | *Facultatif*. Définissez la portée de ce que le jeton d’accès permet à l’Experience Platform d’effectuer sur vos ressources. Exemple : &quot;lire, écrire&quot;. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## OAuth 2 avec octroi des informations d’identification du client
 
@@ -162,7 +162,7 @@ Vous pouvez configurer des informations d’identification du client OAuth 2 (li
 |---------|----------|---------|
 | Informations d’identification client | <ul><li><b>clientId</b></li><li><b>clientSecret</b></li><li>portée</li><li><b>accessTokenUrl</b></li></ul> | <ul><li><b>accessToken</b></li><li>expiresIn</li><li>refreshToken</li><li>tokenType</li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Pour configurer cette méthode d’authentification pour votre destination, ajoutez les lignes suivantes à votre configuration, dans la section `/destinations` [endpoint](./destination-configuration.md):
 
@@ -194,7 +194,7 @@ Pour configurer cette méthode d’authentification pour votre destination, ajou
 | `clientSecret` | Chaîne | Secret client que votre système attribue à Adobe Experience Platform. |
 | `scope` | Liste de chaînes | *Facultatif*. Définissez la portée de ce que le jeton d’accès permet à l’Experience Platform d’effectuer sur vos ressources. Exemple : &quot;lire, écrire&quot;. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Personnalisation de votre configuration OAuth 2 {#customize-configuration}
 
@@ -354,7 +354,7 @@ Vous pouvez utiliser les paramètres suivants dans `authenticationDataFields` po
 | `authenticationDataFields.value` | Chaîne. Booléen. Nombre entier | La valeur du champ de données personnalisé. La valeur correspond au type sélectionné parmi `authenticationDataFields.type`. |
 | `authenticationDataFields.authenticationResponsePath` | Chaîne | Indique le champ du chemin de réponse de l’API que vous référencez. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Actualisation du jeton d’accès {#access-token-refresh}
 
@@ -450,7 +450,7 @@ Vous pouvez utiliser les paramètres suivants dans `accessTokenRequest` pour per
 | `accessTokenRequest.validations.expectedValue.templatingStrategy` | Chaîne | <ul><li>Utilisation `PEBBLE_V1` si vous utilisez des modèles pour les valeurs de la variable `accessTokenRequest.validations.expectedValue.value`.</li><li> Utilisation `NONE` si la valeur du champ `accessTokenRequest.validations.expectedValue.value` est une constante. </li></li> |
 | `accessTokenRequest.validations.expectedValue.value` | Chaîne | Utilisez le langage de modèle pour accéder aux champs de la réponse HTTP. Pour plus d’informations sur l’utilisation du modèle pour personnaliser des champs, reportez-vous à la section [conventions de création de modèles](./oauth2-authentication.md#templating-conventions) . |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Conventions relatives aux modèles {#templating-conventions}
 
@@ -465,7 +465,7 @@ Selon la personnalisation de votre authentification, vous devrez peut-être acc�
 | response.headers | En-têtes de réponse HTTP | ``{{ response.headers.server[0] }}`` |
 | userContext | Accès aux informations sur la tentative d’authentification actuelle | <ul><li>`{{ userContext.sandboxName }} `</li><li>`{{ userContext.sandboxId }} `</li><li>`{{ userContext.imsOrgId }} `</li><li>`{{ userContext.client }} // the client executing the authentication attempt `</li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Étapes suivantes {#next-steps}
 

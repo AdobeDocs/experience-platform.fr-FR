@@ -7,11 +7,11 @@ exl-id: f380aacd-5091-41bc-97ca-593e0b1670fd
 source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
 source-wordcount: '447'
-ht-degree: 1%
+ht-degree: 12%
 
 ---
 
-# Connexion [!DNL Tableau] vers Query Service
+# Connecter [!DNL Tableau] à Query Service
 
 Ce document fournit des informations sur la connexion. [!DNL Tableau] avec Adobe Experience Platform [!DNL Query Service].
 
@@ -36,7 +36,7 @@ Vérifiez que vous avez coché la variable **[!UICONTROL Require SSL]** avant de
 
 >[!IMPORTANT]
 >
->Les structures de données imbriquées dans des outils de BI tiers peuvent être aplaties afin d’améliorer leur convivialité et de réduire la charge de travail requise pour récupérer, analyser, transformer et générer des rapports sur les données. Consultez la documentation relative à la[`FLATTEN` fonctionnalité](../essential-concepts/flatten-nested-data.md) pour savoir comment activer ce paramètre lors de la connexion à une base de données.
+>Les structures de données imbriquées dans des outils de BI tiers peuvent être aplaties afin d’améliorer leur utilisation et réduire la charge de travail requise pour récupérer, analyser, transformer et présenter des données. Consultez la documentation relative à la[`FLATTEN` fonctionnalité](../essential-concepts/flatten-nested-data.md) pour savoir comment activer ce paramètre lors de la connexion à une base de données.
 
 Après avoir renseigné toutes vos informations d’identification, vérifiez vos paramètres pour continuer. Vous êtes maintenant connecté à Adobe Experience Platform.
 

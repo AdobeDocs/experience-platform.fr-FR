@@ -1,6 +1,6 @@
 ---
-title: Notes de mise à jour de Adobe Experience Platform - Mars 2020
-description: Notes de mise à jour de mars 2020 pour Adobe Experience Platform.
+title: Notes de mise à jour d’Adobe Experience Platform - Mars 2020
+description: Les notes de mise à jour de mars 2020 pour Adobe Experience Platform.
 doc-type: release notes
 last-update: March 10, 2020
 author: ens71067
@@ -9,13 +9,13 @@ exl-id: 407c2bac-4c8a-4939-b3dd-788250f15650
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '855'
-ht-degree: 68%
+ht-degree: 70%
 
 ---
 
 # Notes de mise à jour d’Adobe Experience Platform
 
-**Date de lancement : 11 mars 2020**
+**Date de publication : 11 mars 2020**
 
 Mises à jour des fonctionnalités existantes dans Adobe Experience Platform :
 
@@ -29,7 +29,7 @@ Mises à jour des fonctionnalités existantes dans Adobe Experience Platform 
 
 [!DNL Experience Platform] permet aux entreprises de rassembler des données issues de plusieurs systèmes d’entreprise afin de mieux permettre aux spécialistes du marketing d’identifier, de comprendre et d’impliquer les clients. [!DNL Experience Platform] comprend une infrastructure de gouvernance des données de bout en bout pour garantir une utilisation appropriée des données dans [!DNL Platform] et lors du partage entre les systèmes.
 
-Dans Adobe Experience Platform, la gouvernance des données désigne un ensemble de stratégies et de technologies permettant de gérer les données clients et de garantir la conformité aux réglementations, aux restrictions et aux stratégies applicables à l’utilisation des données. Elle joue un rôle clé dans [!DNL Experience Platform] à différents niveaux, notamment dans le catalogage, la traçabilité des données, l’étiquetage de l’utilisation des données, les stratégies d’accès aux données et le contrôle d’accès aux données pour les actions marketing.
+Dans Adobe Experience Platform, la gouvernance des données désigne un ensemble de politiques et de technologies permettant de gérer les données clients et de garantir la conformité aux réglementations, aux restrictions et aux politiques applicables à l’utilisation des données. Elle joue un rôle clé dans [!DNL Experience Platform] à différents niveaux, notamment dans le catalogage, la traçabilité des données, l’étiquetage de l’utilisation des données, les politiques d’accès aux données et le contrôle d’accès aux données pour les actions marketing.
 
 **Nouvelles fonctionnalités**
 
@@ -39,7 +39,7 @@ Dans Adobe Experience Platform, la gouvernance des données désigne un ensemb
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
-| Application automatisée des stratégies d’utilisation des données pour [!DNL Real-Time Customer Data Platform] | Les stratégies d’utilisation des données sont désormais appliquées dans le workflow d’activation des données vers les destinations. La gouvernance des données est aussi intégrée et appliquée lors de modifications affectant les activations existantes (telles que les modifications des libellés des jeux de données, des stratégies de fusion, des définitions de segment, etc.). |
+| Application automatisée des stratégies d’utilisation des données pour [!DNL Real-Time Customer Data Platform] | Les politiques d’utilisation des données sont désormais appliquées dans le workflow d’activation des données vers les destinations. La gouvernance des données est aussi intégrée et appliquée lors de modifications affectant les activations existantes (telles que les modifications des libellés des jeux de données, des politiques de fusion, des définitions de segment, etc.). |
 | Traçabilité des données pour l’application | Lorsqu’une stratégie d’utilisation des données est enfreinte dans Real-Time CDP, l’interface utilisateur affiche une notification contenant des informations de traçabilité des données afin d’aider l’utilisateur à comprendre pourquoi les stratégies ont été violées et ce qu’il peut faire pour résoudre la violation. |
 
 

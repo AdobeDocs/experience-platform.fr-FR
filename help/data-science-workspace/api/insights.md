@@ -17,7 +17,7 @@ Les insights contiennent des mesures qui permettent à un scientifique de donné
 
 ## Récupération d’une liste d’insights
 
-Vous pouvez récupérer une liste d’insights en effectuant une requête GET unique sur le point de terminaison des insights.  Pour vous aider à filtrer les résultats, vous pouvez spécifier des paramètres de requête dans le chemin de requête. Pour obtenir une liste des requêtes disponibles, reportez-vous à la section de l’annexe concernant les [paramètres de requête pour la récupération des ressources](./appendix.md#query).
+Vous pouvez récupérer une liste d’insights en effectuant une requête GET unique sur le point d’entrée des insights.  Pour vous aider à filtrer les résultats, vous pouvez spécifier des paramètres de requête dans le chemin de requête. Pour obtenir une liste des requêtes disponibles, reportez-vous à la section de l’annexe concernant les [paramètres de requête pour la récupération des ressources](./appendix.md#query).
 
 **Format d’API**
 
@@ -263,7 +263,7 @@ Une réponse réussie renvoie un payload incluant un `{INSIGHT_ID}` et tous les 
 
 ## Récupération d’une liste de mesures par défaut pour les algorithmes
 
-Vous pouvez récupérer une liste de toutes les mesures de vos algorithmes et mesures par défaut en effectuant une requête GET unique sur le point de terminaison des mesures. Pour interroger une mesure spécifique, effectuez une requête GET et fournissez un `{ALGORITHM}` valide dans le chemin d’accès de la requête.
+Vous pouvez récupérer une liste de toutes les mesures de vos algorithmes et mesures par défaut en effectuant une requête GET unique sur le point d’entrée des mesures. Pour interroger une mesure spécifique, effectuez une requête GET et fournissez un `{ALGORITHM}` valide dans le chemin d’accès de la requête.
 
 **Format d’API**
 

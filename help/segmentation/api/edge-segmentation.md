@@ -58,7 +58,7 @@ Pour qu’un segment soit évalué à l’aide de la segmentation Edge, la requ�
 | Segment de segments | Toute définition de segment contenant un ou plusieurs segments par lots ou en diffusion en flux continu. | Personnes qui vivent aux États-Unis et qui se trouvent dans le segment « segment existant ». | `homeAddress.countryCode = "US" and inSegment("existing segment")` |
 | Requête qui fait référence à une carte | Toute définition de segment qui fait référence à une carte de propriétés. | Personnes ayant effectué un ajout à leur panier en fonction de données de segment externes. | `chain(xEvent, timestamp, [A: WHAT(eventType = "addToCart") WHERE(externalSegmentMapProperty.values().exists(stringProperty="active"))])` |
 
-En outre, le segment **doit** être lié à une stratégie de fusion activée sur le serveur Edge. Pour plus d’informations sur les stratégies de fusion, consultez le [guide des stratégies de fusion](../../profile/api/merge-policies.md).
+En outre, le segment **doit** être lié à une politique de fusion activée sur le serveur Edge. Pour plus d’informations sur les politiques de fusion, consultez le [guide des politiques de fusion](../../profile/api/merge-policies.md).
 
 Une définition de segment ne sera **pas** activée pour la segmentation Edge dans les scénarios suivants :
 

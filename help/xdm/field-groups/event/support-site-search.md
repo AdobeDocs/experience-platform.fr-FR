@@ -4,8 +4,8 @@ description: Ce document présente un aperçu du groupe de champs de schéma Rec
 exl-id: 7bd442f0-f85c-491f-91ad-8b14b4b431eb
 source-git-commit: f5df893260f0772ad54ccdb00d99ed8f328d35a9
 workflow-type: tm+mt
-source-wordcount: '94'
-ht-degree: 10%
+source-wordcount: '91'
+ht-degree: 7%
 
 ---
 
@@ -19,6 +19,6 @@ ht-degree: 10%
 | --- | --- | --- |
 | `supportSiteSearch` | [[!UICONTROL Recherche interne au site]](../../data-types/internal-site-search.md) | Capture les détails de l’événement de recherche. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Pour plus d’informations sur le groupe de champs, reportez-vous à la section [référentiel XDM public](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/experience-event/experienceevent-support-site-search.schema.json).

@@ -5,7 +5,7 @@ exl-id: b12059f1-6635-41cd-acc5-6ff471111164
 source-git-commit: 0b9b724c2530e43ce681011d12fc1341148ddbf5
 workflow-type: tm+mt
 source-wordcount: '565'
-ht-degree: 0%
+ht-degree: 3%
 
 ---
 
@@ -20,7 +20,7 @@ Cette page décrit les règles que vous devez suivre lorsque [création de votre
 * Lorsque vous renseignez la variable [modèle](./self-service-template.md) pour consulter la documentation de votre destination, reportez-vous au guide du contributeur d’Adobe pour plus d’informations sur [liaison](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html?lang=en), [tables](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=en#tables), la variable [syntaxe markdown prise en charge](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=en), [écriture de conseils](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/general-writing-guidance.html?lang=en), etc.
 * N’incluez pas d’observations et d’estimations dans la documentation du produit.
 * Dans la documentation Experience Platform, les auteurs Adobe utilisent **mise en forme gras** pour faire référence aux commandes de l’interface utilisateur, comme suit :
-   * Accédez à **[!UICONTROL Connexions]** > **[!UICONTROL Destinations]**, puis sélectionnez la variable **[!UICONTROL Catalogue]** . Consultez un exemple de la manière dont les commandes de l’interface utilisateur sont documentées dans une [tutoriel sur les destinations](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#select-destination).
+   * Accédez à **[!UICONTROL Connexions]** > **[!UICONTROL Destinations]**, puis sélectionnez l’onglet **[!UICONTROL Catalogue.]** Consultez un exemple de la manière dont les commandes de l’interface utilisateur sont documentées dans une [tutoriel sur les destinations](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#select-destination).
 
 ## Style d’écriture
 

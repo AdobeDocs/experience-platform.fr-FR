@@ -65,7 +65,7 @@ Sélectionnez le type de données à modifier dans la liste pour ouvrir le rail 
 
 ## Ajouter des champs au type de données {#add-fields}
 
-Pour commencer à ajouter des champs au type de données, sélectionnez la variable **plus (+)** en regard du champ de niveau racine dans la zone de travail. Un nouveau champ s’affiche ci-dessous et le rail de droite se met à jour pour afficher les commandes du nouveau champ.
+Pour commencer à ajouter des champs au type de données, sélectionnez la variable **plus (+)** en regard du champ de niveau racine dans la zone de travail. Un nouveau champ s’affiche en dessous et le rail de droite se met à jour pour afficher les commandes du nouveau champ.
 
 ![](../../images/ui/resources/data-types/new-field.png)
 

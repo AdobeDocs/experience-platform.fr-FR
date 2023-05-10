@@ -8,7 +8,7 @@ exl-id: fa487a5f-d914-48f6-8d1b-001a60303f3d
 source-git-commit: 3dffa9687f3429b970e8fceebd6864a5b61ead21
 workflow-type: tm+mt
 source-wordcount: '2588'
-ht-degree: 40%
+ht-degree: 41%
 
 ---
 
@@ -29,9 +29,9 @@ Ce guide nécessite une compréhension professionnelle des composants suivants d
 * [[!DNL Experience Data Model (XDM) System]](../home.md) : cadre normalisé selon lequel [!DNL Experience Platform] organise les données de l’expérience client.
    * [Principes de base de la composition des schémas](../schema/composition.md) : découvrez les blocs de création de base des schémas XDM, y compris les principes clés et les bonnes pratiques en matière de composition de schémas.
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md) : fournit un profil de consommateur unifié en temps réel, basé sur des données agrégées provenant de plusieurs sources.
-* [[!DNL Sandboxes]](../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuelles qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
+* [[!DNL Sandboxes]](../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
 
-Avant de commencer ce tutoriel, veuillez consulter le [guide de développement](../api/getting-started.md) pour trouver les informations importantes à connaître afin d’effectuer avec succès des appels vers l’API [!DNL Schema Registry] Cela inclut votre `{TENANT_ID}`, le concept de « conteneurs » et les en-têtes requis pour effectuer des requêtes (avec une attention particulière à l’en-tête et à ses valeurs possibles).`Accept`
+Avant de commencer ce tutoriel, veuillez consulter le [guide de développement](../api/getting-started.md) pour trouver les informations importantes à connaître afin d’effectuer avec succès des appels vers l’API [!DNL Schema Registry] Cela inclut votre `{TENANT_ID}`, le concept de « conteneurs » et les en-têtes requis pour effectuer des requêtes (avec une attention particulière à l’en-tête `Accept` et à ses valeurs possibles).
 
 Ce tutoriel passe en revue les étapes de la composition d’un schéma Loyalty Members qui décrit les données relatives aux membres d’un programme de fidélité dans la vente au détail. Avant de commencer, vous pouvez consulter avoir un aperçu de [l’intégralité du schéma Loyalty Members](#complete-schema) dans l’annexe.
 
@@ -1113,7 +1113,7 @@ Si vous effectuez une requête de GET pour rechercher le schéma maintenant, la 
 
 ### Définition d’un descripteur d’identité
 
-Les schémas sont utilisés pour ingérer des données dans [!DNL Experience Platform]. Ces données sont finalement utilisées par plusieurs services pour créer une vue unique et unifiée d’un individu. Pour faciliter ce processus, les champs clés peuvent être désignés comme champs « Identity » et, lors de l’ingestion de données, les données de ces champs sont intégrées au « Graphique d’identité » pour cette personne. Les données du graphique peuvent ensuite être consultées par [[!DNL Real-Time Customer Profile]](../../profile/home.md)[!DNL Experience Platform] et d’autres services afin de fournir une vue d’ensemble de chaque client individuel.
+Les schémas sont utilisés pour ingérer des données dans [!DNL Experience Platform]. Ces données sont finalement utilisées par plusieurs services pour créer une vue unique et unifiée d’un individu. Pour faciliter ce processus, les champs clés peuvent être désignés comme champs « Identity » et, lors de l’ingestion de données, les données de ces champs sont intégrées au « Graphique d’identité » pour cette personne. Les données du graphique sont ensuite accessibles par [[!DNL Real-Time Customer Profile]](../../profile/home.md) et autres [!DNL Experience Platform] services pour offrir une vue d’ensemble de chaque client.
 
 Les champs généralement désignés comme champs &quot;Identité&quot; sont les suivants : adresse email, numéro de téléphone, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=fr), ID de gestion de la relation client ou d’autres champs d’identifiant uniques. Tenez compte des identifiants uniques propres à votre organisation, dans la mesure où ils peuvent aussi représenter de bons champs d’identité.
 

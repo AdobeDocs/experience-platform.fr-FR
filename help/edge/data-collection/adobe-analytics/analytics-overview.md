@@ -1,16 +1,16 @@
 ---
-title: Utilisation d’Adobe Analytics avec le SDK Web Platform
+title: Utiliser Adobe Analytics avec le SDK Web Platform
 description: Découvrez comment envoyer des données à Adobe Analytics avec le SDK Web de Adobe Experience Platform.
 keywords: adobe analytics;analytics;données mappées;variables mappées;
 exl-id: b18d1163-9edf-4a9c-b247-cd1aa7dfca50
 source-git-commit: 836fa7814a6966903639e871bfaea0563847f363
 workflow-type: tm+mt
 source-wordcount: '306'
-ht-degree: 34%
+ht-degree: 39%
 
 ---
 
-# Utilisation d’Adobe Analytics avec le SDK Web Platform
+# Utiliser Adobe Analytics avec le SDK Web Platform
 
 Adobe Experience Platform [!DNL Web SDK] peut envoyer des données à Adobe Analytics. Cela fonctionne en convertissant `xdm` dans un format utilisable par Adobe Analytics.
 

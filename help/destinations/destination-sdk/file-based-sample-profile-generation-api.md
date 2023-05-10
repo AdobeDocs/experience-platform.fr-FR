@@ -11,7 +11,7 @@ ht-degree: 15%
 
 # Générer des exemples de profils en fonction d’un schéma source
 
-## Aperçu {#overview}
+## Présentation {#overview}
 
 La première étape du test de votre destination basée sur les fichiers consiste à utiliser la variable `/sample-profiles` point d’entrée pour générer un exemple de profil en fonction de votre schéma source existant.
 

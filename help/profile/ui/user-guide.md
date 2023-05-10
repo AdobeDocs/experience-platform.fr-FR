@@ -6,13 +6,13 @@ exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
 source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '1951'
-ht-degree: 8%
+ht-degree: 7%
 
 ---
 
 # Guide de l’interface utilisateur de [!DNL Real-Time Customer Profile]
 
-[!DNL Real-Time Customer Profile] offre une vue d’ensemble de chaque client en combinant des données issues de plusieurs canaux, notamment des données en ligne, hors ligne, CRM et tierces. Ce document sert de guide pour interagir avec [!DNL Real-Time Customer Profile] données dans l’interface utilisateur de Adobe Experience Platform.
+[!DNL Real-Time Customer Profile] crée une vue d’ensemble de chacun de vos clients, en combinant des données issues de plusieurs canaux, notamment des données en ligne, hors ligne, CRM et tierces. Ce document sert de guide pour interagir avec [!DNL Real-Time Customer Profile] données dans l’interface utilisateur de Adobe Experience Platform.
 
 ## Prise en main
 
@@ -54,7 +54,7 @@ Outre ces mesures, cette section fournit une date et une heure de dernière mise
 
 ### Nombre de profils {#profile-count}
 
-Le nombre de profils affiche le nombre total de profils de votre organisation dans Experience Platform, une fois que la stratégie de fusion par défaut de votre organisation a fusionné des fragments de profil afin de former un seul et même profil pour chaque client. En d’autres termes, votre organisation peut disposer de plusieurs fragments de profil liés à un seul client qui interagit avec votre marque sur différents canaux, mais ces fragments sont fusionnés (selon la stratégie de fusion par défaut) et renvoient le nombre de profils « 1 », car ils sont tous liés à la même personne.
+Le nombre de profils affiche le nombre total de profils de votre organisation dans Experience Platform, une fois que la politique de fusion par défaut de votre organisation a fusionné des fragments de profil afin de former un seul et même profil pour chaque client. En d’autres termes, votre organisation peut disposer de plusieurs fragments de profil liés à un seul client qui interagit avec votre marque sur différents canaux, mais ces fragments sont fusionnés (selon la politique de fusion par défaut) et renvoient le nombre de profils « 1 », car ils sont tous liés à la même personne.
 
 Le nombre de profils inclut également les profils avec des attributs (données d’enregistrement) ainsi que les profils contenant uniquement des données de série temporelle (événement), tels que les profils Adobe Analytics. Le nombre de profils est régulièrement actualisé afin de fournir un nombre total de profils à jour dans Platform.
 
@@ -102,7 +102,7 @@ Pour en savoir plus sur les stratégies de fusion et leur rôle dans Platform, v
 
 Sur le **[!UICONTROL Parcourir]** vous pouvez utiliser un espace de noms d’identité afin de rechercher un profil spécifique en fonction d’une valeur d’identité. Pour naviguer selon une identité, vous devez fournir une stratégie de fusion, un espace de noms d’identité et une valeur d’identité.
 
-![Le sélecteur de stratégie de fusion est mis en surbrillance.](../images/user-guide/browse-by-merge-policy.png)
+![Le sélecteur de politique de fusion est mis en surbrillance.](../images/user-guide/browse-by-merge-policy.png)
 
 Si nécessaire, utilisez la méthode **[!UICONTROL Stratégie de fusion]** pour ouvrir le **[!UICONTROL Sélectionner une stratégie de fusion]** et sélectionnez la stratégie de fusion à utiliser.
 
@@ -160,11 +160,11 @@ Pour plus d’informations sur la segmentation dans Experience Platform, reporte
 
 ![L’onglet Appartenance au segment est mis en surbrillance. Les détails de l’adhésion au segment de profil s’affichent.](../images/user-guide/segment-membership.png)
 
-## Stratégies de fusion
+## Politiques de fusion
 
 À partir de la page principale **[!UICONTROL Profils]** , sélectionnez **[!UICONTROL Stratégies de fusion]** pour afficher la liste des stratégies de fusion appartenant à votre organisation. Chaque stratégie répertoriée affiche son nom, qu’il s’agisse de la stratégie de fusion par défaut ou de la classe de schéma à laquelle elle s’applique.
 
-Pour plus d’informations sur les stratégies de fusion, consultez [Présentation des stratégies de fusion](../merge-policies/overview.md).
+Pour plus d’informations sur les politiques de fusion, consultez [Présentation des politiques de fusion](../merge-policies/overview.md).
 
 ![L’onglet Stratégies de fusion est surligné. Les stratégies de fusion appartenant à l’organisation s’affichent.](../images/user-guide/merge-policies.png)
 

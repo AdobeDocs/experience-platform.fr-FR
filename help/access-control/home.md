@@ -6,8 +6,8 @@ description: Dans Adobe Experience Platform, le contrôle dʼaccès est fourni
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
 source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1540'
+ht-degree: 100%
 
 ---
 
@@ -96,8 +96,8 @@ Le tableau suivant décrit les autorisations disponibles pour [!DNL Experience P
 | [!DNL Profile Management] | [!UICONTROL Affichage des profils] | Accès en lecture seule aux profils disponibles. |
 | [!DNL Profile Management] | [!UICONTROL Gestion des segments] | Accès à la lecture, la création, la modification et la suppression des segments. |
 | [!DNL Profile Management] | [!UICONTROL Affichage des segments] | Accès en lecture seule aux segments disponibles. |
-| [!DNL Profile Management] | [!UICONTROL Gestion des stratégies de fusion] | Accès à la lecture, la création, la modification et la suppression des stratégies de fusion. |
-| [!DNL Profile Management] | [!UICONTROL Affichage des stratégies de fusion] | Accès en lecture seule aux stratégies de fusion disponibles. |
+| [!DNL Profile Management] | [!UICONTROL Gestion des politiques de fusion] | Accès à la lecture, la création, la modification et la suppression des politiques de fusion. |
+| [!DNL Profile Management] | [!UICONTROL Affichage des politiques de fusion] | Accès en lecture seule aux politiques de fusion disponibles. |
 | [!DNL Profile Management] | [!UICONTROL Exportation de l’audience pour un segment] | Capacité à exporter un segment ciblé évalué vers un jeu de données. |
 | [!DNL Profile Management] | [!UICONTROL Évaluation dʼun segment sur une audience] | Capacité à générer des profils pour une audience en évaluant une définition de segment. |
 | [!DNL Identity Management] | [!UICONTROL Gestion des espaces de noms d’identité] | Accès à la lecture, la création, la modification et la suppression des espaces de noms d’identité. |
@@ -118,8 +118,8 @@ Le tableau suivant décrit les autorisations disponibles pour [!DNL Experience P
 | [!DNL Data Ingestion] | [!DNL Manage Audience Share] | Accès à la lecture, la création, la modification et la publication de flux [!DNL Segment Match] avec des partenaires actifs. |
 | [!DNL Data Science Workspace] | [!UICONTROL Gestion de l’espace de travail de science des données] | Accès à la lecture, la création, la modification et la suppression dans [!DNL Data Science Workspace]. |
 | Gouvernance des données | [!UICONTROL Application dʼétiquettes dʼutilisation des données] | Accès à la lecture, la création et la suppression des étiquettes dʼutilisation des données. |
-| Gouvernance des données | [!UICONTROL Gestion des stratégies dʼutilisation des données] | Accès à la lecture, la création, la modification et la suppression des stratégies dʼutilisation des données. |
-| Gouvernance des données | [!UICONTROL Affichage des stratégies dʼutilisation des données] | Accès en lecture seule pour les stratégies dʼutilisation des données appartenant à votre organisation. |
+| Gouvernance des données | [!UICONTROL Gestion des politiques dʼutilisation des données] | Accès à la lecture, la création, la modification et la suppression des politiques dʼutilisation des données. |
+| Gouvernance des données | [!UICONTROL Affichage des politiques dʼutilisation des données] | Accès en lecture seule pour les politiques dʼutilisation des données appartenant à votre organisation. |
 | Gouvernance des données | [!UICONTROL Afficher le journal d’activité de l’utilisateur] | Accès en lecture seule pour afficher les [journaux d’audit](../landing/governance-privacy-security/audit-logs/overview.md) enregistrés des activités de Platform. |
 | [!DNL Dashboards] | [!UICONTROL Afficher le tableau de bord d’utilisation des licences] | Accès en lecture seule pour afficher le tableau de bord de l’utilisation des licences. |
 | [!DNL Dashboards] | [!UICONTROL Gestion des tableaux de bord standard] | Ajoutez des attributs personnalisés qui ne se trouvent pas encore dans l’entrepôt de données. |

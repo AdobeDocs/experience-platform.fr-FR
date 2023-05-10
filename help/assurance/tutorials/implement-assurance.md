@@ -1,13 +1,13 @@
 ---
 title: Implémentation de l’extension Adobe Experience Platform Assurance
 description: Ce guide explique comment mettre en oeuvre et installer l’extension Adobe Experience Platform Assurance.
-source-git-commit: 24f452bdb923179eefe53fdb28d3a92d43e533cd
+exl-id: b7bd1bb1-1606-4d00-97e0-c329c86d8ca4
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '400'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
-
 
 # Mise en oeuvre de l’extension Adobe Experience Platform Assurance
 
@@ -18,7 +18,7 @@ Ce tutoriel explique comment installer et mettre en oeuvre l’extension Platfor
 Pour installer et mettre en oeuvre l’extension Assurance, vous devez accéder aux services suivants :
 
 - Le [Interface utilisateur de la collecte de données Adobe Experience Platform](https://experience.adobe.com/#/data-collection/)
-- [Adobe Experience Platform Assurance](https://experience.adobe.com/assurance)
+- [Assurance d’Adobe Experience Platform Assurance](https://experience.adobe.com/assurance)
 
 ## Créer une propriété mobile
 

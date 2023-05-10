@@ -2,7 +2,8 @@
 keywords: insights;IA dédiée à l’attrbution;informations sur l’IA dédiée à l’attribution;service de requête AAI;requêtes d’attribution;scores d’attribution
 title: Vue d’ensemble des journaux d’audit dans l’IA dédiée à l’attribution
 description: Découvrez comment afficher et gérer les journaux d’audit dans l’IA dédiée à l’attribution.
-source-git-commit: a68d4634c6341f27673fdd70d96f7e214032b5a9
+exl-id: 83c55dbc-f03d-4bda-ae07-68b7914483c8
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '268'
 ht-degree: 100%
@@ -22,4 +23,3 @@ Pour faire simple, un journal d’audit indique qui a effectué quelle action et
 Lorsque la fonction est activée pour votre organisation, les journaux d’audit sont automatiquement collectés au fur et à mesure de l’activité. Vous n’avez pas besoin d’activer manuellement la collecte des journaux.
 
 Pour afficher et exporter les journaux d’audit, l’autorisation de contrôle d’accès Accès aux journaux d’audit doit avoir été accordée dans Adobe Console. Pour savoir comment gérer les autorisations individuelles pour les fonctionnalités IA dédiée à l’attribution, consultez la [documentation sur le contrôle d’accès](../aai-data-governance/access-controls.md).
-

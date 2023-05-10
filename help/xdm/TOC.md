@@ -54,7 +54,7 @@ ht-degree: 100%
       * [Détails démographiques](./field-groups/profile/demographic-details.md)
       * [Consentement IAB TCF 2.0](./field-groups/profile/iab.md)
       * [IdentityMap](./field-groups/profile/identitymap.md)
-      * [Informations sur les membres du service de santé](./field-groups/profile/healthcare-member-details.md)
+      * [Informations sur l’affilié à l’assurance-maladie](./field-groups/profile/healthcare-member-details.md)
       * [Détails de fidélité](./field-groups/profile/loyalty-details.md)
       * [Détails du contact personnel](./field-groups/profile/personal-contact-details.md)
       * [Détails de l’appartenance à un segment](./field-groups/profile/segmentation.md)

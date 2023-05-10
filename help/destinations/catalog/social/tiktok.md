@@ -1,18 +1,18 @@
 ---
-title: Connexion TikTok
+title: Connexion à TikTok
 description: Créez des audiences personnalisées sur TikTok avec vos données pour le ciblage de vos campagnes publicitaires. Il peut s’agir de personnes qui ont visité votre site web ou interagi avec votre contenu. Envoyez rapidement et en toute sécurité le segment souhaité de Adobe Experience Platform à TikTok à l’aide de l’intégration en temps réel d’Adobe à TikTok Ads Manager.
 last-substantial-update: 2023-03-20T00:00:00Z
-source-git-commit: 7bfcd0132380f0c847742ff05c1f334542adfba2
+exl-id: 7b12d17f-7d9a-4615-9830-92bffe3f6927
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '980'
-ht-degree: 37%
+ht-degree: 47%
 
 ---
 
+# Connexion à TikTok
 
-# Connexion TikTok
-
-## Aperçu {#overview}
+## Présentation {#overview}
 
 Créez des audiences personnalisées sur TikTok avec vos données pour le ciblage de vos campagnes publicitaires. Il peut s’agir de personnes qui ont visité votre site web ou interagi avec votre contenu. Envoyez rapidement et en toute sécurité le segment souhaité de Adobe Experience Platform à TikTok à l’aide de l’intégration en temps réel d’Adobe à TikTok Ads Manager. Visite [Centre d’aide aux entreprises TikTok](https://ads.tiktok.com/help/article/audiences?lang=en) pour plus d’informations.
 
@@ -40,8 +40,8 @@ TikTok prend en charge l’activation des identités décrites dans le tableau c
 |---|---|---|
 | GAID | Google Advertising ID | Sélectionnez l’identité cible GAID lorsque votre identité source est un espace de noms GAID. |
 | IDFA | Identifiant Apple pour les annonceurs | Sélectionnez l’identité cible IDFA lorsque votre identité source est un espace de noms IDFA. |
-| Numéro de téléphone | Numéros de téléphone hachés avec l’algorithme SHA256 | Les numéros de téléphone hachés SHA-256 et en texte brut sont pris en charge par Adobe Experience Platform et doivent être au format E.164. Lorsque votre champ source contient des attributs non hachés, vérifiez la variable **[!UICONTROL Appliquer la transformation]** option, pour avoir [!DNL Platform] hachage automatique des données lors de l’activation. |
-| E-mail | Adresses électroniques hachées avec l’algorithme SHA256 | Adobe Experience Platform prend en charge le texte brut et les adresses électroniques hachées SHA256. Lorsque votre champ source contient des attributs non hachés, vérifiez la variable **[!UICONTROL Appliquer la transformation]** option, pour avoir [!DNL Platform] hachage automatique des données lors de l’activation. |
+| Numéro de téléphone | Numéros de téléphone hachés avec l’algorithme SHA256 | Les numéros de téléphone hachés SHA-256 et en texte brut sont pris en charge par Adobe Experience Platform et doivent être au format E.164. Lorsque votre champ source contient des attributs non hachés, cochez l’option **[!UICONTROL Appliquer la transformation]** pour que [!DNL Platform] hache automatiquement les données lors de l’activation. |
+| E-mail | Adresses e-mail hachées avec l’algorithme SHA256 | Adobe Experience Platform prend en charge le texte brut et les adresses e-mail hachées avec SHA256. Lorsque votre champ source contient des attributs non hachés, cochez l’option **[!UICONTROL Appliquer la transformation]** pour que [!DNL Platform] hache automatiquement les données lors de l’activation. |
 
 {style="table-layout:auto"}
 
@@ -116,7 +116,7 @@ Vérifiez vos [!DNL TikTok Ads Manager] compte (sous **Ressources > Audiences**)
 
 ## Utilisation et gouvernance des données {#data-usage-governance}
 
-Lors de la gestion de vos données, toutes les destinations [!DNL Adobe Experience Platform] se conforment aux stratégies d’utilisation des données. Pour obtenir des informations détaillées sur la manière dont [!DNL Adobe Experience Platform] applique la gouvernance des données, consultez la [Présentation de la gouvernance des données](/help/data-governance/home.md).
+Lors de la gestion de vos données, toutes les destinations [!DNL Adobe Experience Platform] se conforment aux politiques d’utilisation des données. Pour obtenir des informations détaillées sur la manière dont [!DNL Adobe Experience Platform] applique la gouvernance des données, consultez la [Présentation de la gouvernance des données](/help/data-governance/home.md).
 
 ## Ressources supplémentaires {#additional-resources}
 

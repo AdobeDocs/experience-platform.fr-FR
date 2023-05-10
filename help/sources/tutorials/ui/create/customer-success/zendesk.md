@@ -5,7 +5,7 @@ description: Découvrez comment créer une connexion source Zendesk à l’aide 
 exl-id: 75d303b0-2dcd-4202-987c-fe3400398d90
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
-source-wordcount: '797'
+source-wordcount: '794'
 ht-degree: 36%
 
 ---
@@ -153,7 +153,7 @@ Le tableau ci-dessous répertorie les mappages pris en charge qui doivent être 
 | `results.url` | Chaîne |
 | `results.verified` | Booléen |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Limites {#limits}
 

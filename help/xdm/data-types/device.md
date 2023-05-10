@@ -6,7 +6,7 @@ description: Ce document présente le type de données XDM de l’appareil.
 exl-id: 049a2ca1-6bc3-4b9c-832a-77102e8a0ed2
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '329'
+source-wordcount: '326'
 ht-degree: 18%
 
 ---
@@ -30,7 +30,7 @@ ht-degree: 18%
 | `typeID` | Chaîne | Identifiant de l’appareil. Il peut s’agir d’un identifiant de DeviceAtlas ou d’un autre service qui identifie le matériel utilisé. |
 | `typeIDService` | Chaîne | Espace de noms du service utilisé pour identifier le type d’appareil. Voir [annexe](#typeIDService) pour plus d’informations sur les valeurs acceptées. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Pour plus d’informations sur le groupe de champs, reportez-vous au référentiel XDM public :
 

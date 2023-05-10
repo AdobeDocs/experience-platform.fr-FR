@@ -13,7 +13,7 @@ ht-degree: 100%
 
 # Point d’entrée des libellés
 
-Les libellés dʼutilisation des données vous permettent de classer les données en fonction des stratégies dʼutilisation qui peuvent sʼappliquer à ces données. Le point d’entrée `/labels` dans [!DNL Policy Service API] vous permet de gérer par programme les libellés dʼutilisation des données dans votre application Experience.
+Les libellés dʼutilisation des données vous permettent de classer les données en fonction des politiques dʼutilisation qui peuvent sʼappliquer à ces données. Le point d’entrée `/labels` dans [!DNL Policy Service API] vous permet de gérer par programme les libellés dʼutilisation des données dans votre application Experience.
 
 >[!NOTE]
 >

@@ -1,8 +1,9 @@
 ---
 title: Création d’une connexion source Pendo dans l’interface utilisateur
 description: Découvrez comment créer une connexion source Pendo à l’aide de l’interface utilisateur de Adobe Experience Platform.
-badge: "Version bêta"
-source-git-commit: 5a199262acd517516b1e5313a25ddff8f1b11959
+badge: Version bêta
+exl-id: defdec30-42af-43c8-b2eb-7ce98f7871e3
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '1212'
 ht-degree: 22%

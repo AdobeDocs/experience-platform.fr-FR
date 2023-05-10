@@ -6,7 +6,7 @@ exl-id: 8481e286-2ff0-484f-85d2-a8db9b08d8d3
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '535'
-ht-degree: 11%
+ht-degree: 12%
 
 ---
 
@@ -19,7 +19,7 @@ Dans l’interface utilisateur de Adobe Experience Platform, vous pouvez affiche
 
 Adobe Real-time Customer Data Platform repose sur Adobe Experience Platform et peut ainsi utiliser les fonctionnalités d’affichage des profils dans l’interface utilisateur de l’Experience Platform. Pour obtenir un guide détaillé sur l’affichage des profils client dans l’interface utilisateur de Platform, reportez-vous à la section [Guide d’utilisation de Real-Time Customer Profile](../../profile/ui/user-guide.md).
 
-## Améliorations des profils pour Real-Time CDP, version B2B
+## Améliorations des profils pour Real-Time CDP, édition B2B
 
 Outre les fonctionnalités de navigation des profils prises en charge par Adobe Experience Platform, Real-Time CDP, les utilisateurs de l’édition B2B peuvent accéder aux attributs et événements B2B du profil client sur la page [!UICONTROL Attributs] et [!UICONTROL Événements] les onglets, respectivement. Les données B2B peuvent également être utilisées pour effectuer une segmentation, avec ces segments apparaissant sous le segment du client [!UICONTROL abonnement au segment] à côté des segments non B2B.
 

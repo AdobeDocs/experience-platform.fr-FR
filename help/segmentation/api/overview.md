@@ -6,7 +6,7 @@ exl-id: cebecaf3-9746-4b0b-9c50-11789fba66c3
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '497'
-ht-degree: 7%
+ht-degree: 8%
 
 ---
 
@@ -26,7 +26,7 @@ For more information on using this endpoint, please read the [audiences endpoint
 
 ## Tâches d’exportation
 
-Tâches d’exportation sont des processus asynchrones utilisés pour conserver les membres de segments d’audience dans des jeux de données. Vous pouvez utiliser la variable `/export/jobs` point de fin pour récupérer toutes les tâches d’exportation, créer une tâche d’exportation, récupérer les détails d’une tâche d’exportation spécifique ou annuler une tâche d’exportation spécifique.
+Les tâches d’exportation sont des processus asynchrones utilisés pour conserver les membres du segment d’audience dans des jeux de données. Vous pouvez utiliser la variable `/export/jobs` point de fin pour récupérer toutes les tâches d’exportation, créer une tâche d’exportation, récupérer les détails d’une tâche d’exportation spécifique ou annuler une tâche d’exportation spécifique.
 
 Pour plus d’informations sur l’utilisation de ce point de terminaison, veuillez lire la section [guide de point de fin des traitements d’export](./export-jobs.md).
 

@@ -6,7 +6,7 @@ description: Ce document fournit un aperçu du type de données XDM de l’élé
 exl-id: 056fdb5b-6782-4e29-9d62-90b270c05795
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '370'
+source-wordcount: '367'
 ht-degree: 14%
 
 ---
@@ -34,7 +34,7 @@ Les valeurs capturées dans ce type de données peuvent différer de l’enregis
 | `quantity` | [!UICONTROL Nombre entier] | Nombre d’unités du produit que le client a indiqué. |
 | `unitOfMeasureCode` | [!UICONTROL Chaîne] | Le standard [code unité de mesure](https://ucum.org/ucum) pour le produit, en fonction de la variable `quantity` . |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Pour plus d’informations sur le type de données des adresses postales, reportez-vous au référentiel XDM public :
 

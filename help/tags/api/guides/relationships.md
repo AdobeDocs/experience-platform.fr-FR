@@ -4,7 +4,7 @@ description: Découvrez comment les relations de ressources sont établies dans 
 exl-id: 23976978-a639-4eef-91b6-380a29ec1c14
 source-git-commit: 7e4bc716e61b33563e0cb8059cb9f1332af7fd36
 workflow-type: tm+mt
-source-wordcount: '807'
+source-wordcount: '762'
 ht-degree: 100%
 
 ---
@@ -40,7 +40,7 @@ POST /properties/{PROPERTY_ID}/{RESOURCE_TYPE}
 | `{PROPERTY_ID}` | L’identifiant de la propriété à laquelle appartient la ressource. |
 | `{RESOURCE_TYPE}` | Le type de ressource à créer. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Requête**
 
@@ -89,11 +89,11 @@ curl -X POST \
 | `id` | L’identifiant unique d’une ressource. Chaque `id` doit être accompagné d’une propriété `type` parente, indiquant le type de ressource en question. |
 | `type` | Le type de ressource tel que référencé par un champ `id` parent. Les exemples de valeurs comprennent `data_elements`, `rules`, `extensions` et `environments`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Création d’une relation par URL {#url}
 
-Contrairement aux autres ressources, les bibliothèques établissent des relations par le biais de leurs propres points de terminaison `/relationship` dédiés. Par exemple :
+Contrairement aux autres ressources, les bibliothèques établissent des relations par le biais de leurs propres points d’entrée `/relationship` dédiés. Par exemple :
 
 * [Ajout d’extensions, d’éléments de données et de règles à une bibliothèque](../endpoints/libraries.md#add-resources)
 * [Affectation d’une bibliothèque à un environnement](../endpoints/libraries.md#environment)
@@ -112,7 +112,7 @@ POST /properties/{PROPERTY_ID}/libraries/{LIBRARY_ID}/relationships/{RESOURCE_TY
 
 **Requête**
 
-La requête suivante utilise le point de terminaison `/relationships/environment` d’une bibliothèque pour créer une relation avec un environnement.
+La requête suivante utilise le point d’entrée `/relationships/environment` d’une bibliothèque pour créer une relation avec un environnement.
 
 ```shell
 curl -X POST \
@@ -136,7 +136,7 @@ curl -X POST \
 | `id` | L’identifiant unique d’une ressource. Chaque `id` doit être accompagné d’une propriété `type` parente, indiquant le type de ressource en question. |
 | `type` | Le type de ressource tel que référencé par un champ `id` parent. Les exemples de valeurs comprennent `data_elements`, `rules`, `extensions` et `environments`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Exigences de relation par ressource {#requirements}
 
@@ -153,7 +153,7 @@ Les tableaux suivants décrivent les relations disponibles pour chaque type de r
 | `property` | ✓ |  |  |
 | `entity` | ✓ |  |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Versions
 
@@ -166,7 +166,7 @@ Les tableaux suivants décrivent les relations disponibles pour chaque type de r
 | `library` | ✓ |  |  |
 | `property` | ✓ |  |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Rappels
 
@@ -174,7 +174,7 @@ Les tableaux suivants décrivent les relations disponibles pour chaque type de r
 | :--- | :---: | :---: | :---: |
 | `property` | ✓ |  |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Sociétés
 
@@ -182,7 +182,7 @@ Les tableaux suivants décrivent les relations disponibles pour chaque type de r
 | :--- | :---: | :---: | :---: |
 | `properties` |  |  |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Éléments de données
 
@@ -197,7 +197,7 @@ Les tableaux suivants décrivent les relations disponibles pour chaque type de r
 | `updated_with_extension` | ✓ |  |  |
 | `updated_with_extension_package` | ✓ |  |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Environnements
 
@@ -208,7 +208,7 @@ Les tableaux suivants décrivent les relations disponibles pour chaque type de r
 | `host` | ✓ | ✓ |  |
 | `property` | ✓ |  |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Extensions
 
@@ -222,7 +222,7 @@ Les tableaux suivants décrivent les relations disponibles pour chaque type de r
 | `extension_package` | ✓ | ✓ |  |
 | `updated_with_extension_package` | ✓ |  |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Hôtes
 
@@ -230,7 +230,7 @@ Les tableaux suivants décrivent les relations disponibles pour chaque type de r
 | :--- | :---: | :---: | :---: |
 | `property` | ✓ |  |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Bibliothèques
 
@@ -246,7 +246,7 @@ Les tableaux suivants décrivent les relations disponibles pour chaque type de r
 | `property` | ✓ |  |  |
 | `last_build` |  |  |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Notes
 
@@ -254,7 +254,7 @@ Les tableaux suivants décrivent les relations disponibles pour chaque type de r
 | :--- | :---: | :---: | :---: |
 | `resource` | ✓ |  |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Propriétés
 
@@ -268,7 +268,7 @@ Les tableaux suivants décrivent les relations disponibles pour chaque type de r
 | `extensions` |  |  |  |
 | `extensions` |  |  |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Composants de règle
 
@@ -283,7 +283,7 @@ Les tableaux suivants décrivent les relations disponibles pour chaque type de r
 | `rules` | ✓ | ✓ |  |
 | `revisions` | ✓ |  |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Règles
 

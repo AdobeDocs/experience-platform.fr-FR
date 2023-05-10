@@ -6,8 +6,8 @@ description: Ce document fournit un aperçu du type de données XDM (Commerce Ex
 exl-id: c9cc569b-1a91-4a6e-8bfd-7f8ec07d01d4
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '341'
-ht-degree: 17%
+source-wordcount: '338'
+ht-degree: 16%
 
 ---
 
@@ -32,7 +32,7 @@ ht-degree: 17%
 | `purchases` | [[!UICONTROL Mesure]](./measure.md) | Permet d’effectuer le suivi d’une commande acceptée. L’événement d’achat est la seule action requise dans une conversion commerciale. Une liste de produits doit être référencée pour l’événement d’achat. |
 | `saveForLaters` | [[!UICONTROL Mesure]](./measure.md) | Une liste de produits est enregistrée pour une utilisation ultérieure, telle qu’une liste de souhaits. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Pour obtenir plus d’informations sur ce type de données, reportez-vous au référentiel XDM public:
 

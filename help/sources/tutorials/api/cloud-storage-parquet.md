@@ -23,7 +23,7 @@ Ce tutoriel utilise la méthode [!DNL Flow Service] API permettant de vous guide
 Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
 
 - [Sources](../../home.md) : [!DNL Experience Platform] permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services [!DNL Platform].
-- [Sandbox](../../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuelles qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
+- [Sandbox](../../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
 Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour ingérer correctement des données Parquet à partir d’un espace de stockage dans le cloud tiers à l’aide de la variable [!DNL Flow Service] API.
 
@@ -39,7 +39,7 @@ Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [
 - `x-api-key: {API_KEY}`
 - `x-gw-ims-org-id: {ORG_ID}`
 
-Toutes les ressources qui se trouvent dans [!DNL Experience Platform], y compris celles liées à la [!DNL Flow Service], sont isolées dans des environnements de test virtuels spécifiques. Toutes les requêtes envoyées aux API [!DNL Platform] nécessitent un en-tête spécifiant le nom de l’environnement de test dans lequel l’opération sera effectuée :
+Toutes les ressources qui se trouvent dans [!DNL Experience Platform], y compris celles liées à la [!DNL Flow Service], sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes envoyées aux API [!DNL Platform] nécessitent un en-tête spécifiant le nom du sandbox dans lequel l’opération sera effectuée :
 
 - `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -51,7 +51,7 @@ Toutes les requêtes qui contiennent un payload (POST, PUT, PATCH) nécessitent 
 
 Pour ingérer des données Parquet à l’aide de [!DNL Platform] API, vous devez posséder une connexion valide pour la source de stockage dans le cloud tierce à laquelle vous accédez. Si vous ne disposez pas déjà d’une connexion pour le stockage que vous souhaitez utiliser, vous pouvez en créer une via les tutoriels suivants :
 
-- [Amazon S3](./create/cloud-storage/s3.md)
+- [Amazon S3](./create/cloud-storage/s3.md)
 - [Azure Blob](./create/cloud-storage/blob.md)
 - [Azure Data Lake Storage Gen2](./create/cloud-storage/adls-gen2.md)
 - [Google Cloud Store](./create/cloud-storage/google.md)
@@ -429,5 +429,5 @@ Une réponse réussie renvoie l’identifiant (`id`) du flux de données nouvell
 
 En suivant ce tutoriel, vous avez créé un connecteur source pour collecter des données Parquet à partir de votre système de stockage cloud tiers sur une base planifiée. Les données entrantes peuvent désormais être utilisées par les services [!DNL Platform] en aval tels que [!DNL Real-Time Customer Profile] et [!DNL Data Science Workspace]. Consultez les documents suivants pour plus d’informations :
 
-- [Présentation de Real-Time Customer Profile](../../../profile/home.md)
-- [Présentation de Data Science Workspace](../../../data-science-workspace/home.md)
+- [Vue d’ensemble du profil client en temps réel](../../../profile/home.md)
+- [Présentation de l’espace de travail de science des données](../../../data-science-workspace/home.md)

@@ -6,7 +6,7 @@ description: Le point d’entrée /datatypes de l’API Schema Registry vous per
 exl-id: 2a58d641-c681-40cf-acc8-7ad842cd6243
 source-git-commit: 342da62b83d0d804b31744a580bcd3e38412ea51
 workflow-type: tm+mt
-source-wordcount: '1236'
+source-wordcount: '1215'
 ht-degree: 16%
 
 ---
@@ -38,7 +38,7 @@ GET /{CONTAINER_ID}/datatypes?{QUERY_PARAMS}
 | `{CONTAINER_ID}` | Conteneur à partir duquel vous souhaitez récupérer les types de données : `global` pour les types de données créés par l’Adobe ou `tenant` pour les types de données appartenant à votre organisation. |
 | `{QUERY_PARAMS}` | Paramètres de requête facultatifs en fonction desquels filtrer les résultats. Voir [document de l’annexe](./appendix.md#query) pour une liste de paramètres disponibles. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Requête**
 
@@ -61,7 +61,7 @@ Le format de réponse dépend de la variable `Accept` en-tête envoyé dans la r
 | `application/vnd.adobe.xed-id+json` | Renvoie un court résumé de chaque ressource. Il s’agit de l’en-tête recommandé pour répertorier les ressources. (Limite : 300) |
 | `application/vnd.adobe.xed+json` | Renvoie le type de données JSON complet pour chaque ressource, avec l’original `$ref` et `allOf` inclus. (Limite : 300) |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Réponse**
 
@@ -112,7 +112,7 @@ GET /{CONTAINER_ID}/datatypes/{DATA_TYPE_ID}
 | `{CONTAINER_ID}` | Le conteneur qui contient le type de données que vous souhaitez récupérer : `global` pour un type de données créé par l’Adobe ou `tenant` pour un type de données détenu par votre organisation. |
 | `{DATA_TYPE_ID}` | Le `meta:altId` ou encodé URL `$id` du type de données que vous souhaitez rechercher. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Requête**
 
@@ -138,7 +138,7 @@ Le format de réponse dépend de la variable `Accept` en-tête envoyé dans la r
 | `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref` et `allOf` résolus, ne contient aucun titre ni aucune description. |
 | `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` et `allOf` résolus, contient des descripteurs. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Réponse**
 
@@ -351,7 +351,7 @@ Une réponse réussie renvoie un état HTTP 201 (Created) ainsi qu’un payload
 
 Exécution d’une demande de GET pour [répertorier tous les types de données ;](#list) Dans le conteneur client, le type de données Détails de la propriété doit désormais être inclus, ou vous pouvez [effectuer une requête de recherche (GET) ;](#lookup) à l’aide du codage URL `$id` URI pour afficher directement le nouveau type de données.
 
-## Mise à jour d’un type de données {#put}
+## Mettre à jour un type de données {#put}
 
 Vous pouvez remplacer un type de données entier par le biais d’une opération de PUT, en réécrivant essentiellement la ressource. Lors de la mise à jour d’un type de données par le biais d’une requête de PUT, le corps doit inclure tous les champs requis lors de la [création d’un nouveau type de données](#create) dans une requête de POST.
 
@@ -369,7 +369,7 @@ PUT /tenant/datatypes/{DATA_TYPE_ID}
 | --- | --- |
 | `{DATA_TYPE_ID}` | Le `meta:altId` ou encodé URL `$id` du type de données que vous souhaitez réécrire. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Requête**
 
@@ -500,7 +500,7 @@ PATCH /tenant/data type/{DATA_TYPE_ID}
 | --- | --- |
 | `{DATA_TYPE_ID}` | Codé URL `$id` URI ou `meta:altId` du type de données que vous souhaitez mettre à jour. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Requête**
 
@@ -639,7 +639,7 @@ DELETE /tenant/datatypes/{DATA_TYPE_ID}
 | --- | --- |
 | `{DATA_TYPE_ID}` | Codé URL `$id` URI ou `meta:altId` du type de données que vous souhaitez supprimer. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Requête**
 

@@ -1,5 +1,5 @@
 ---
-keywords: insights;attribution ai;informations sur l’attribution;service de requête AAI;requêtes d’attribution;scores d’attribution
+keywords: insights;IA dédiée à l’attrbution;informations sur l’IA dédiée à l’attribution;service de requête AAI;requêtes d’attribution;scores d’attribution
 feature: Attribution AI
 title: Analyse des scores d’attribution à l’aide de Query Service
 description: Découvrez comment utiliser Adobe Experience Platform Query Service pour analyser les scores Attribution AI.
@@ -7,7 +7,7 @@ exl-id: 35d7f6f2-a118-4093-8dbc-cb020ec35e90
 source-git-commit: 66d20dc1141ff33211635ba74d320350f8b27fb7
 workflow-type: tm+mt
 source-wordcount: '589'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 

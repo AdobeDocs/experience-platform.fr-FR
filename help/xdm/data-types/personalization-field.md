@@ -5,8 +5,8 @@ description: Ce document fournit un aperçu du type de données XDM Champ de pr�
 exl-id: 3f6a3c31-19f3-4bad-921e-9ad33c6b9ac9
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '617'
-ht-degree: 4%
+source-wordcount: '611'
+ht-degree: 3%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 4%
 | --- | --- | --- |
 | `val` | Chaîne | Choix des préférences fournies par le client pour ce cas d’utilisation de la personnalisation. Consultez le tableau ci-dessous pour connaître les valeurs et définitions acceptées. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Le tableau suivant décrit les valeurs acceptées pour `val`:
 
@@ -42,7 +42,7 @@ Le tableau suivant décrit les valeurs acceptées pour `val`:
 | `VI` | Intérêt vital de l’individu | La collecte de données aux fins spécifiées est nécessaire pour protéger les intérêts vitaux de l’individu. |
 | `PI` | Intérêt public | La collecte de données aux fins spécifiées est nécessaire pour effectuer une tâche dans l’intérêt public ou dans l’exercice de l’autorité officielle. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Pour obtenir plus d’informations sur ce type de données, reportez-vous au référentiel XDM public:
 

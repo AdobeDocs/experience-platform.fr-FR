@@ -4,8 +4,8 @@ description: Ce document présente la classe XDM Business Account Person Relatio
 exl-id: d51abe9b-d936-4c84-96e2-35a81ca6b67f
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
-source-wordcount: '445'
-ht-degree: 7%
+source-wordcount: '442'
+ht-degree: 6%
 
 ---
 
@@ -39,6 +39,6 @@ ht-degree: 7%
 | `relationStartDate` | DateTime | Date à laquelle la relation entre le compte et la personne a commencé. |
 | `relationshipSource` | Chaîne | Source de la relation compte-personne. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Consultez le guide sur la [relations de schéma dans Real-Time CDP B2B Edition](../../tutorials/relationship-b2b.md) pour découvrir comment cette classe correspond conceptuellement aux autres classes B2B et comment vous pouvez établir ces relations dans l’interface utilisateur de Adobe Experience Platform.

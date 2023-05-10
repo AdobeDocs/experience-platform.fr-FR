@@ -4,8 +4,8 @@ description: Ce document présente un aperçu du groupe de champs de schéma Dé
 exl-id: 472c0a3f-efda-49af-9490-f2de90b348c0
 source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
 workflow-type: tm+mt
-source-wordcount: '198'
-ht-degree: 13%
+source-wordcount: '195'
+ht-degree: 12%
 
 ---
 
@@ -24,6 +24,6 @@ ht-degree: 13%
 | `name` | Chaîne | Nom du site (chatbot, enquête, etc.). |
 | `section` | Chaîne | La section appropriée de l’outil de site, comme principal ou sous-site. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Pour plus d’informations sur le groupe de champs, reportez-vous à la section [référentiel XDM public](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-healthcare-sitetool.schema.json).

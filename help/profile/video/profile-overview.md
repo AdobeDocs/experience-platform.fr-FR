@@ -12,11 +12,11 @@ exl-id: cdc91194-771f-4026-808f-97d70db436d9
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '117'
-ht-degree: 15%
+ht-degree: 18%
 
 ---
 
-# Présentation de Real-Time Customer Profile
+# Vue d’ensemble du profil client en temps réel
 
 Cette vidéo fournit une compréhension de base de Real-time Customer Profile dans Adobe Experience Platform et explique comment les données provenant de plusieurs sources sont rassemblées afin de former un profil centralisé pour chaque client. Pour en savoir plus sur les fonctionnalités et les fonctionnalités de Real-time Customer Profile, veuillez commencer par lire la section [Présentation de Real-Time Customer Profile](../home.md).
 

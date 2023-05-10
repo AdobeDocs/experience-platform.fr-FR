@@ -6,7 +6,7 @@ exl-id: 98ae69db-bc87-4ea3-b101-664ac53e7ae0
 source-git-commit: 6a9882224cba08718c81a3aead237107b3e47726
 workflow-type: tm+mt
 source-wordcount: '315'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
@@ -21,4 +21,4 @@ Pour utiliser le SDK Web de Adobe Experience Platform, vous devez d’abord :
 >
 >**Notez qu’à compter du 11/10/20, les mises en oeuvre CNAME propriétaires expirent de 7 jours sur tous les navigateurs Safari et les appareils iOS mobiles.**
 
-- Si votre site web utilise déjà la variable [Service d’ID Experience Cloud](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html) sur votre site web (via l’API visiteur ou l’extension du service d’ID Experience Cloud dans Adobe Experience Platform Launch) et que vous souhaitez continuer à l’utiliser lors de la migration vers le SDK Web Adobe Experience Platform, vous devez utiliser la dernière version de l’API visiteur ou l’extension du service d’ID Experience Cloud. Voir [Migration des identifiants](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html?lang=en#identity) pour plus d’informations.
+- Si votre site web utilise déjà la variable [Service d’ID Experience Cloud](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html?lang=fr) sur votre site web (via l’API visiteur ou l’extension du service d’ID Experience Cloud dans Adobe Experience Platform Launch) et que vous souhaitez continuer à l’utiliser lors de la migration vers le SDK Web Adobe Experience Platform, vous devez utiliser la dernière version de l’API visiteur ou l’extension du service d’ID Experience Cloud. Voir [Migration des identifiants](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html?lang=en#identity) pour plus d’informations.

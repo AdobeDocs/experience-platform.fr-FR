@@ -7,8 +7,8 @@ description: La collecte de données authentifiées permet aux services Adobe Ex
 exl-id: 14228cd9-4508-4605-8f50-04a74f1c6236
 source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '117'
+ht-degree: 23%
 
 ---
 

@@ -35,5 +35,5 @@ Vous avez maintenant ingéré avec succès des données d’exemple de ventes au
 Pour continuer à travailler sur les données ingérées, procédez de la façon suivante :
 - [Analyse de vos données à l’aide des notebooks Jupyter](../jupyterlab/analyze-your-data.md)
    - Utilisation des notebooks Jupyter dans [!DNL Data Science Workspace] pour accéder à vos données, les explorer, les visualiser et les comprendre.
-- [Regroupez les fichiers source dans une recette](./package-source-files-recipe.md)
+- [Regroupez les fichiers sources dans une recette](./package-source-files-recipe.md)
    - Suivez ce tutoriel pour apprendre à importer votre propre modèle dans [!DNL Data Science Workspace] en regroupant les fichiers source dans un fichier Recette pouvant être importé.

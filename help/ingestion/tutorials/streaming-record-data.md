@@ -8,7 +8,7 @@ exl-id: 097dfd5a-4e74-430d-8a12-cac11b1603aa
 source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
 source-wordcount: '1024'
-ht-degree: 71%
+ht-degree: 68%
 
 ---
 
@@ -22,7 +22,7 @@ Ce tutoriel vous aidera à commencer à utiliser les API d’ingestion par flux,
 Ce tutoriel nécessite une connaissance pratique de différents services d’Adobe Experience Platform. Avant de commencer ce tutoriel, veuillez consulter la documentation relative aux services suivants :
 
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Le cadre normalisé selon lequel [!DNL Platform] organise les données d’expérience.
-   - [Guide de développement du registre des schémas](../../xdm/api/getting-started.md)[!DNL Schema Registry] : guide complet abordant chacun des points de terminaison disponibles de l’API et la manière d’effectuer des appels vers ceux-ci. Cela implique de connaître votre `{TENANT_ID}`, qui apparaît dans les appels de ce tutoriel, et de savoir comment créer des schémas utilisés pour la création d’un jeu de données destiné à être ingéré.
+   - [Guide de développement du registre des schémas](../../xdm/api/getting-started.md)[!DNL Schema Registry] : guide complet abordant chacun des points d’entrée disponibles de l’API et la manière d’effectuer des appels vers ceux-ci. Cela implique de connaître votre `{TENANT_ID}`, qui apparaît dans les appels de ce tutoriel, et de savoir comment créer des schémas utilisés pour la création d’un jeu de données destiné à être ingéré.
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): Fournit un profil client unifié en temps réel basé sur des données agrégées provenant de plusieurs sources.
 
 ### Utiliser les API Platform
@@ -73,7 +73,7 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/sch
 | -------- | ----------- |
 | `title` | Le nom que vous souhaitez utiliser pour votre schéma. Ce nom doit être unique. |
 | `description` | Description significative du schéma que vous êtes en train de créer. |
-| `meta:immutableTags` | Dans cet exemple, la balise `union` est utilisée pour conserver vos données dans [[!DNL Real-Time Customer Profile]](../../profile/home.md). |
+| `meta:immutableTags` | Dans cet exemple, la variable `union` est utilisée pour conserver vos données dans [[!DNL Real-Time Customer Profile]](../../profile/home.md). |
 
 **Réponse**
 
@@ -138,7 +138,7 @@ Ajoutez ensuite un [descripteur d’identité](../../xdm/api/descriptors.md) au 
 
 1. L’adresse e-mail de travail deviendra un champ obligatoire. Cela signifie que les messages envoyés sans ce champ ne seront ni validés ni ingérés.
 
-2. [!DNL Real-Time Customer Profile] utilisera l’adresse e-mail de travail comme identifiant pour rassembler plus d’informations sur cette personne.
+2. [!DNL Real-Time Customer Profile] utilisera l’adresse électronique professionnelle comme identifiant pour rassembler plus d’informations sur cette personne.
 
 ### Requête
 

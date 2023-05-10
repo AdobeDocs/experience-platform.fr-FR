@@ -1,6 +1,6 @@
 ---
-title: Prise en charge de la stratégie de sécurité du contenu (CSP)
-description: Découvrez comment gérer les restrictions de la stratégie de sécurité du contenu (CSP) lors de lʼintégration de votre site web au moyen de balises dans Adobe Experience Platform.
+title: Prise en charge de la politique de sécurité du contenu (CSP)
+description: Découvrez comment gérer les restrictions de la politique de sécurité du contenu (CSP) lors de lʼintégration de votre site web au moyen de balises dans Adobe Experience Platform.
 exl-id: 9232961e-bc15-47e1-aa6d-3eb9b865ac23
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
@@ -9,13 +9,13 @@ ht-degree: 100%
 
 ---
 
-# Prise en charge de la stratégie de sécurité du contenu (CSP)
+# Prise en charge de la politique de sécurité du contenu (CSP)
 
 >[!NOTE]
 >
 >Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
-Une stratégie de sécurité du contenu (CSP) est une fonctionnalité de sécurité qui aide à prévenir les attaques de type « cross-site scripting » (XSS). Elles se produisent lorsque le navigateur est amené à exécuter du contenu malveillant qui semble provenir dʼune source de confiance, mais qui vient en réalité dʼailleurs. La stratégie de sécurité du contenu permet au navigateur (au nom de l’utilisateur) de vérifier que le script provient bien d’une source de confiance.
+Une politique de sécurité du contenu (CSP) est une fonctionnalité de sécurité qui aide à prévenir les attaques de type « cross-site scripting » (XSS). Elles se produisent lorsque le navigateur est amené à exécuter du contenu malveillant qui semble provenir dʼune source de confiance, mais qui vient en réalité dʼailleurs. La stratégie de sécurité du contenu permet au navigateur (au nom de l’utilisateur) de vérifier que le script provient bien d’une source de confiance.
 
 Les fichiers CSP sont implémentés en ajoutant un en-tête HTTP `Content-Security-Policy` à vos réponses de serveur ou en ajoutant un élément `<meta>` configuré dans la section `<head>` de vos fichiers HTML.
 

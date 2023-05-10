@@ -391,7 +391,7 @@ Adobe recommande de sélectionner un espace de noms d’identité, tel qu’un [
 >* Les champs sont utilisés dans la définition de segment.
 >* Les champs sont configurés en tant qu’attributs prévisionnels pour la destination cible.
 >
-> Par exemple, si le champ `person.name.firstName` comporte certains libellés d’utilisation des données entrant en conflit avec l’action marketing de la destination, une violation de la stratégie d’utilisation des données s’afficherait dans l’étape de révision. Pour plus d’informations, voir [Gouvernance des données dans Adobe Experience Platform](../../rtcdp/privacy/data-governance-overview.md#destinations).
+> Par exemple, si le champ `person.name.firstName` comporte certains libellés d’utilisation des données entrant en conflit avec l’action marketing de la destination, une violation de la politique d’utilisation des données s’afficherait dans l’étape de révision. Pour plus d’informations, voir [Gouvernance des données dans Adobe Experience Platform](../../rtcdp/privacy/data-governance-overview.md#destinations).
 
 ## (Version bêta) Mappage {#mapping}
 
@@ -479,9 +479,9 @@ Si votre organisation a acheté **Adobe HealthCare Shield** ou **Adobe Privacy &
 
 ### Vérifications des stratégies d’utilisation des données {#data-usage-policy-checks}
 
-Dans le **[!UICONTROL Réviser]** , Experience Platform recherche également les violations de stratégie d’utilisation des données. Vous trouverez ci-dessous un exemple de violation de la stratégie. Vous ne pouvez pas terminer le processus d’activation des segments tant que vous n’avez pas résolu la violation. Pour plus d’informations sur la résolution des violations de stratégie, reportez-vous à la section [violations de la stratégie d’utilisation des données](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) dans la section documentation sur la gouvernance des données .
+Dans le **[!UICONTROL Réviser]** , Experience Platform recherche également les violations de stratégie d’utilisation des données. Vous trouverez ci-dessous un exemple de violation de la politique. Vous ne pouvez pas terminer le processus d’activation des segments tant que vous n’avez pas résolu la violation. Pour plus d’informations sur la résolution des violations de stratégie, reportez-vous à la section [violations de la stratégie d’utilisation des données](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) dans la section documentation sur la gouvernance des données .
 
-![violation de la stratégie de données](../assets/common/data-policy-violation.png)
+![violation de la politique de données](../assets/common/data-policy-violation.png)
 
 ### Filtrer des segments {#filter-segments}
 

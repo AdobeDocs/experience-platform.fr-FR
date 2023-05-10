@@ -6,8 +6,8 @@ description: Ce document présente un aperçu du groupe de champs Détails du ma
 exl-id: be08b38b-68a0-4a74-9b8f-0344a0637395
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '150'
-ht-degree: 18%
+source-wordcount: '147'
+ht-degree: 17%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 18%
 | --- | --- | --- |
 | `marketing` | [Marketing](../../data-types/marketing.md) | Objet qui décrit des informations sur les campagnes marketing, telles que le groupe, le nom et le code de suivi des campagnes. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Pour plus d’informations sur le groupe de champs, reportez-vous au référentiel XDM public :
 

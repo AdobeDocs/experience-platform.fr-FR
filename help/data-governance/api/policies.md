@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform;accueil;rubriques populaires Application des stratégies;Application basée sur lʼAPI;gouvernance des données
+keywords: Experience Platform;accueil;rubriques populaires Application des politiques;Application basée sur lʼAPI;gouvernance des données
 solution: Experience Platform
-title: Point d’entrée de l’API des stratégies de gouvernance des données
-description: Les stratégies de gouvernance des données sont des règles adoptées par votre organisation qui décrivent les types d’actions marketing que vous êtes autorisé(e) ou non à effectuer sur les données dans Experience Platform. Le point d’entrée « /policies » est utilisé pour tous les appels d’API liés à lʼaffichage, la création, la mise à jour ou la suppression des stratégies de gouvernance des données.
+title: Point d’entrée de l’API des politiques de gouvernance des données
+description: Les politiques de gouvernance des données sont des règles adoptées par votre organisation qui décrivent les types d’actions marketing que vous êtes autorisé(e) ou non à effectuer sur les données dans Experience Platform. Le point d’entrée « /policies » est utilisé pour tous les appels d’API liés à lʼaffichage, la création, la mise à jour ou la suppression des politiques de gouvernance des données.
 exl-id: 62a6f15b-4c12-4269-bf90-aaa04c147053
 source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
 workflow-type: tm+mt
@@ -11,21 +11,21 @@ ht-degree: 100%
 
 ---
 
-# Point d’entrée des stratégies de gouvernance des données
+# Point d’entrée des politiques de gouvernance des données
 
-Les stratégies de gouvernance des données sont des règles qui décrivent les types d’actions marketing que vous êtes autorisé(e) ou non à effectuer sur des données dans [!DNL Experience Platform]. Le point d’entrée `/policies` dans l’[!DNL Policy Service API] vous permet de gérer par programmation les stratégies de gouvernance des données pour votre organisation.
+Les politiques de gouvernance des données sont des règles qui décrivent les types d’actions marketing que vous êtes autorisé(e) ou non à effectuer sur des données dans [!DNL Experience Platform]. Le point d’entrée `/policies` dans l’[!DNL Policy Service API] vous permet de gérer par programmation les politiques de gouvernance des données pour votre organisation.
 
 >[!IMPORTANT]
 >
->Les stratégies de gouvernance ne doivent pas être confondues avec les stratégies de contrôle d’accès, qui déterminent les attributs de données spécifiques accessibles par certains utilisateurs et utilisatrices de Platform dans votre organisation. Reportez-vous au guide du point d’entrée `/policies` de l’[API de contrôle d’accès](../../access-control/abac/api/policies.md) pour plus d’informations sur la gestion par programmation des stratégies de contrôle d’accès.
+>Les politiques de gouvernance ne doivent pas être confondues avec les politiques de contrôle d’accès, qui déterminent les attributs de données spécifiques accessibles par certains utilisateurs et utilisatrices de Platform dans votre organisation. Reportez-vous au guide du point d’entrée `/policies` de l’[API de contrôle d’accès](../../access-control/abac/api/policies.md) pour plus d’informations sur la gestion par programmation des politiques de contrôle d’accès.
 
 ## Prise en main
 
 Le point d’entrée dʼAPI utilisé dans ce guide fait partie de lʼ [[!DNL Policy Service] API](https://www.adobe.io/experience-platform-apis/references/policy-service/). Avant de continuer, consultez le [guide de prise en main](getting-started.md) pour obtenir des liens vers la documentation associée, un guide de lecture des exemples dʼappels API dans ce document et des informations importantes sur les en-têtes requis pour réussir des appels à nʼimporte quel API dʼ[!DNL Experience Platform].
 
-## Récupération dʼune liste de stratégies {#list}
+## Récupération dʼune liste de politiques {#list}
 
-Vous pouvez répertorier toutes les stratégies `core` ou `custom` en effectuant une requête GET à `/policies/core` ou `/policies/custom`, respectivement.
+Vous pouvez répertorier toutes les politiques `core` ou `custom` en effectuant une requête GET à `/policies/core` ou `/policies/custom`, respectivement.
 
 **Format d’API**
 
@@ -36,7 +36,7 @@ GET /policies/custom
 
 **Requête**
 
-La requête suivante récupère une liste de stratégies personnalisées définies par votre organisation.
+La requête suivante récupère une liste de politiques personnalisées définies par votre organisation.
 
 ```shell
 curl -X GET \
@@ -49,7 +49,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie comprend un tableau `children` qui répertorie les détails de chaque stratégie récupérée, y compris leurs valeurs `id`. Vous pouvez utiliser le champ `id` dʼune stratégie spécifique pour effectuer des requêtes de [recherche](#lookup), de [mise à jour](#update) et de [suppression](#delete) pour cette stratégie.
+Une réponse réussie comprend un tableau `children` qui répertorie les détails de chaque politique récupérée, y compris leurs valeurs `id`. Vous pouvez utiliser le champ `id` dʼune politique spécifique pour effectuer des requêtes de [recherche](#lookup), de [mise à jour](#update) et de [suppression](#delete) pour cette politique.
 
 ```JSON
 {
@@ -142,16 +142,16 @@ Une réponse réussie comprend un tableau `children` qui répertorie les détail
 
 | Propriété | Description |
 | --- | --- |
-| `_page.count` | Nombre total de stratégies récupérées. |
-| `name` | Nom dʼaffichage dʼune stratégie. |
-| `status` | État actuel dʼune stratégie. Il existe trois états possibles : `DRAFT`, `ENABLED` ou `DISABLED`. Par défaut, seules les stratégies `ENABLED` participent à lʼévaluation. Pour plus dʼinformations, consultez la présentation sur lʼ[évaluation des stratégies](../enforcement/overview.md). |
-| `marketingActionRefs` | Tableau qui répertorie les URI de toutes les actions marketing applicables pour une stratégie. |
-| `description` | Description facultative qui fournit un contexte plus détaillé au cas dʼutilisation de la stratégie. |
-| `deny` | Objet qui décrit les étiquettes dʼutilisation des données spécifiques sur lesquelles lʼaction marketing associée à une stratégie ne peut pas être effectuée. Pour plus dʼinformations sur cette propriété, consultez la section [Création dʼune stratégie](#create-policy). |
+| `_page.count` | Nombre total de politiques récupérées. |
+| `name` | Nom dʼaffichage dʼune politique. |
+| `status` | État actuel dʼune politique. Il existe trois états possibles : `DRAFT`, `ENABLED` ou `DISABLED`. Par défaut, seules les politiques `ENABLED` participent à lʼévaluation. Pour plus dʼinformations, consultez la présentation sur lʼ[évaluation des politiques](../enforcement/overview.md). |
+| `marketingActionRefs` | Tableau qui répertorie les URI de toutes les actions marketing applicables pour une politique. |
+| `description` | Description facultative qui fournit un contexte plus détaillé au cas dʼutilisation de la politique. |
+| `deny` | Objet qui décrit les étiquettes dʼutilisation des données spécifiques sur lesquelles lʼaction marketing associée à une politique ne peut pas être effectuée. Pour plus dʼinformations sur cette propriété, consultez la section [Création dʼune politique](#create-policy). |
 
-## Recherche dʼune stratégie {#look-up}
+## Recherche dʼune politique {#look-up}
 
-Vous pouvez rechercher une stratégie spécifique en incluant la propriété `id` de cette stratégie dans le chemin dʼune requête GET.
+Vous pouvez rechercher une politique spécifique en incluant la propriété `id` de cette politique dans le chemin dʼune requête GET.
 
 **Format d’API**
 
@@ -162,7 +162,7 @@ GET /policies/custom/{POLICY_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{POLICY_ID}` | Champ `id` de la stratégie que vous souhaitez rechercher. |
+| `{POLICY_ID}` | Champ `id` de la politique que vous souhaitez rechercher. |
 
 **Requête**
 
@@ -177,7 +177,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie les détails de la stratégie.
+Une réponse réussie renvoie les détails de la politique.
 
 ```JSON
 {
@@ -224,22 +224,22 @@ Une réponse réussie renvoie les détails de la stratégie.
 
 | Propriété | Description |
 | --- | --- |
-| `name` | Nom dʼaffichage de la stratégie. |
-| `status` | État actuel de la stratégie. Il existe trois états possibles : `DRAFT`, `ENABLED` ou `DISABLED`. Par défaut, seules les stratégies `ENABLED` participent à lʼévaluation. Pour plus dʼinformations, consultez la présentation sur lʼ[évaluation des stratégies](../enforcement/overview.md). |
-| `marketingActionRefs` | Tableau qui répertorie les URI de toutes les actions marketing applicables pour la stratégie. |
-| `description` | Description facultative qui fournit un contexte plus détaillé au cas dʼutilisation de la stratégie. |
-| `deny` | Objet qui décrit les étiquettes dʼutilisation des données spécifiques sur lesquelles lʼaction marketing associée à la stratégie ne peut pas être effectuée. Pour plus dʼinformations sur cette propriété, consultez la section [Création dʼune stratégie](#create-policy). |
+| `name` | Nom dʼaffichage de la politique. |
+| `status` | État actuel de la politique. Il existe trois états possibles : `DRAFT`, `ENABLED` ou `DISABLED`. Par défaut, seules les politiques `ENABLED` participent à lʼévaluation. Pour plus dʼinformations, consultez la présentation sur lʼ[évaluation des politiques](../enforcement/overview.md). |
+| `marketingActionRefs` | Tableau qui répertorie les URI de toutes les actions marketing applicables pour la politique. |
+| `description` | Description facultative qui fournit un contexte plus détaillé au cas dʼutilisation de la politique. |
+| `deny` | Objet qui décrit les étiquettes dʼutilisation des données spécifiques sur lesquelles lʼaction marketing associée à la politique ne peut pas être effectuée. Pour plus dʼinformations sur cette propriété, consultez la section [Création dʼune politique](#create-policy). |
 
-## Création dʼune stratégie personnalisée {#create-policy}
+## Création dʼune politique personnalisée {#create-policy}
 
-Dans lʼAPI [!DNL Policy Service], une stratégie est définie par les éléments suivants :
+Dans lʼAPI [!DNL Policy Service], une politique est définie par les éléments suivants :
 
 * référence à une action marketing spécifique
 * expression décrivant les étiquettes dʼutilisation des données pour lesquelles lʼaction marketing ne peut pas être effectuée.
 
-Pour satisfaire à cette dernière exigence, les définitions des stratégies doivent inclure une expression booléenne par rapport à la présence dʼétiquettes dʼutilisation des données. Cette expression sʼappelle une expression de stratégie.
+Pour satisfaire à cette dernière exigence, les définitions des politiques doivent inclure une expression booléenne par rapport à la présence dʼétiquettes dʼutilisation des données. Cette expression sʼappelle une expression de politique.
 
-Les expressions de stratégie sont fournies sous la forme dʼune propriété `deny` dans chaque définition de stratégie. Voici un exemple dʼobjet `deny` simple qui vérifie uniquement la présence dʼune seule étiquette :
+Les expressions de politique sont fournies sous la forme dʼune propriété `deny` dans chaque définition de politique. Voici un exemple dʼobjet `deny` simple qui vérifie uniquement la présence dʼune seule étiquette :
 
 ```json
 "deny": {
@@ -247,9 +247,9 @@ Les expressions de stratégie sont fournies sous la forme dʼune propriété `de
 }
 ```
 
-Cependant, de nombreuses stratégies spécifient des conditions plus complexes par rapport à la présence dʼétiquettes dʼutilisation des données. Pour prendre en charge ces cas dʼutilisation, vous pouvez également inclure des opérations booléennes pour décrire vos expressions de stratégie. Lʼobjet dʼexpression de stratégie doit contenir soit une étiquette soit un opérateur et des opérandes, mais pas les deux. De même, chaque opérande est également un objet d’expression de stratégie.
+Cependant, de nombreuses politiques spécifient des conditions plus complexes par rapport à la présence dʼétiquettes dʼutilisation des données. Pour prendre en charge ces cas dʼutilisation, vous pouvez également inclure des opérations booléennes pour décrire vos expressions de politique. Lʼobjet dʼexpression de politique doit contenir soit une étiquette soit un opérateur et des opérandes, mais pas les deux. De même, chaque opérande est également un objet d’expression de politique.
 
-Par exemple, afin de définir une stratégie qui interdit lʼexécution dʼune action marketing sur des données contenant des étiquettes `C1 OR (C3 AND C7)`, la propriété `deny` de la stratégie est spécifiée comme suit :
+Par exemple, afin de définir une politique qui interdit lʼexécution dʼune action marketing sur des données contenant des étiquettes `C1 OR (C3 AND C7)`, la propriété `deny` de la politique est spécifiée comme suit :
 
 ```JSON
 "deny": {
@@ -271,9 +271,9 @@ Par exemple, afin de définir une stratégie qui interdit lʼexécution dʼune a
 | --- | --- |
 | `operator` | Indique la relation conditionnelle entre les étiquettes fournies dans le tableau `operands` frère. Les valeurs acceptées sont les suivantes : <ul><li>`OR` : lʼexpression est résolue en « true » si lʼune des étiquettes du tableau `operands` est présente.</li><li>`AND` : lʼexpression est résolue en « true » uniquement si toutes les étiquettes du tableau `operands` sont présentes.</li></ul> |
 | `operands` | Tableau dʼobjets, chaque objet représentant soit une seule étiquette, soit une paire supplémentaire de propriétés `operator` et `operands`. La présence des étiquettes et/ou des opérations dans un tableau `operands` est résolue en « true » ou « false » en fonction de la valeur de sa propriété `operator` frère. |
-| `label` | Nom dʼune étiquette unique dʼutilisation des données qui sʼapplique à la stratégie. |
+| `label` | Nom dʼune étiquette unique dʼutilisation des données qui sʼapplique à la politique. |
 
-Vous pouvez créer une nouvelle stratégie personnalisée en effectuant une requête POST vers le point d’entrée `/policies/custom`.
+Vous pouvez créer une nouvelle politique personnalisée en effectuant une requête POST vers le point d’entrée `/policies/custom`.
 
 **Format d’API**
 
@@ -283,7 +283,7 @@ POST /policies/custom
 
 **Requête**
 
-La requête suivante crée une nouvelle stratégie qui limite lʼexécution de lʼaction marketing `exportToThirdParty` sur les données contenant des étiquettes `C1 OR (C3 AND C7)`.
+La requête suivante crée une nouvelle politique qui limite lʼexécution de lʼaction marketing `exportToThirdParty` sur les données contenant des étiquettes `C1 OR (C3 AND C7)`.
 
 ```shell
 curl -X POST \
@@ -318,15 +318,15 @@ curl -X POST \
 
 | Propriété | Description |
 | --- | --- |
-| `name` | Nom dʼaffichage de la stratégie. |
-| `status` | État actuel de la stratégie. Il existe trois états possibles : `DRAFT`, `ENABLED` ou `DISABLED`. Par défaut, seules les stratégies `ENABLED` participent à lʼévaluation. Pour plus dʼinformations, consultez la présentation sur lʼ[évaluation des stratégies](../enforcement/overview.md). |
-| `marketingActionRefs` | Tableau qui répertorie les URI de toutes les actions marketing applicables pour la stratégie. LʼURI dʼune action marketing est indiqué sous `_links.self.href` dans la réponse pour la [recherche dʼune action marketing](./marketing-actions.md#look-up). |
-| `description` | Description facultative qui fournit un contexte plus détaillé au cas dʼutilisation de la stratégie. |
-| `deny` | Lʼexpression de stratégie qui décrit les étiquettes dʼutilisation des données spécifiques sur lesquelles lʼaction marketing associée à la stratégie ne peut pas être exécutée. |
+| `name` | Nom dʼaffichage de la politique. |
+| `status` | État actuel de la politique. Il existe trois états possibles : `DRAFT`, `ENABLED` ou `DISABLED`. Par défaut, seules les politiques `ENABLED` participent à lʼévaluation. Pour plus dʼinformations, consultez la présentation sur lʼ[évaluation des politiques](../enforcement/overview.md). |
+| `marketingActionRefs` | Tableau qui répertorie les URI de toutes les actions marketing applicables pour la politique. LʼURI dʼune action marketing est indiqué sous `_links.self.href` dans la réponse pour la [recherche dʼune action marketing](./marketing-actions.md#look-up). |
+| `description` | Description facultative qui fournit un contexte plus détaillé au cas dʼutilisation de la politique. |
+| `deny` | Lʼexpression de politique qui décrit les étiquettes dʼutilisation des données spécifiques sur lesquelles lʼaction marketing associée à la politique ne peut pas être exécutée. |
 
 **Réponse**
 
-Une réponse réussie renvoie les détails de la nouvelle stratégie créée, y compris son `id`. Cette valeur est en lecture seule et s’affiche automatiquement lors de la création de la stratégie.
+Une réponse réussie renvoie les détails de la nouvelle politique créée, y compris son `id`. Cette valeur est en lecture seule et s’affiche automatiquement lors de la création de la politique.
 
 ```JSON
 {
@@ -371,17 +371,17 @@ Une réponse réussie renvoie les détails de la nouvelle stratégie créée, y 
 }
 ```
 
-## Mise à jour dʼune stratégie personnalisée {#update}
+## Mise à jour dʼune politique personnalisée {#update}
 
 >[!IMPORTANT]
 >
->Vous pouvez uniquement mettre à jour des stratégies personnalisées. Si vous souhaitez activer ou désactiver des stratégies de base, consultez la section [Mise à jour de la liste des stratégies de base activées](#update-enabled-core).
+>Vous pouvez uniquement mettre à jour des politiques personnalisées. Si vous souhaitez activer ou désactiver des politiques de base, consultez la section [Mise à jour de la liste des politiques de base activées](#update-enabled-core).
 
-Vous pouvez mettre à jour une stratégie personnalisée existante en fournissant son identifiant dans le chemin dʼune requête PUT avec une payload qui inclut la version actualisée de la stratégie dans son intégralité. En dʼautres termes, la requête PUT réécrit essentiellement la stratégie.
+Vous pouvez mettre à jour une politique personnalisée existante en fournissant son identifiant dans le chemin dʼune requête PUT avec une payload qui inclut la version actualisée de la politique dans son intégralité. En dʼautres termes, la requête PUT réécrit essentiellement la politique.
 
 >[!NOTE]
 >
->Reportez-vous à la section [Mise à jour dʼune partie dʼune stratégie personnalisée](#patch) si vous souhaitez uniquement mettre à jour un ou plusieurs champs dʼune stratégie, plutôt que de la remplacer.
+>Reportez-vous à la section [Mise à jour dʼune partie dʼune politique personnalisée](#patch) si vous souhaitez uniquement mettre à jour un ou plusieurs champs dʼune politique, plutôt que de la remplacer.
 
 **Format d’API**
 
@@ -391,13 +391,13 @@ PUT /policies/custom/{POLICY_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{POLICY_ID}` | Champ `id` de la stratégie à mettre à jour. |
+| `{POLICY_ID}` | Champ `id` de la politique à mettre à jour. |
 
 **Requête**
 
-Dans cet exemple, les conditions d’exportation des données vers un tiers ont été modifiées. Vous devez définir la stratégie créée de sorte qu’elle rejette cette action marketing en présence d’étiquettes de données `C1 AND C5`.
+Dans cet exemple, les conditions d’exportation des données vers un tiers ont été modifiées. Vous devez définir la politique créée de sorte qu’elle rejette cette action marketing en présence d’étiquettes de données `C1 AND C5`.
 
-La requête suivante met à jour la stratégie existante pour inclure la nouvelle expression de stratégie. Remarquez que puisque cette requête réécrit essentiellement la stratégie, tous les champs doivent être inclus dans la payload, même si certaines de leurs valeurs ne sont pas mises à jour.
+La requête suivante met à jour la politique existante pour inclure la nouvelle expression de politique. Remarquez que puisque cette requête réécrit essentiellement la politique, tous les champs doivent être inclus dans la payload, même si certaines de leurs valeurs ne sont pas mises à jour.
 
 ```shell
 curl -X PUT \
@@ -426,15 +426,15 @@ curl -X PUT \
 
 | Propriété | Description |
 | --- | --- |
-| `name` | Nom dʼaffichage de la stratégie. |
-| `status` | État actuel de la stratégie. Il existe trois états possibles : `DRAFT`, `ENABLED` ou `DISABLED`. Par défaut, seules les stratégies `ENABLED` participent à lʼévaluation. Pour plus dʼinformations, consultez la présentation sur lʼ[évaluation des stratégies](../enforcement/overview.md). |
-| `marketingActionRefs` | Tableau qui répertorie les URI de toutes les actions marketing applicables pour la stratégie. LʼURI dʼune action marketing est indiqué sous `_links.self.href` dans la réponse pour la [recherche dʼune action marketing](./marketing-actions.md#look-up). |
-| `description` | Description facultative qui fournit un contexte plus détaillé au cas dʼutilisation de la stratégie. |
-| `deny` | Lʼexpression de stratégie qui décrit les étiquettes dʼutilisation des données spécifiques sur lesquelles lʼaction marketing associée à la stratégie ne peut pas être exécutée. Pour plus dʼinformations sur cette propriété, consultez la section [Création dʼune stratégie](#create-policy). |
+| `name` | Nom dʼaffichage de la politique. |
+| `status` | État actuel de la politique. Il existe trois états possibles : `DRAFT`, `ENABLED` ou `DISABLED`. Par défaut, seules les politiques `ENABLED` participent à lʼévaluation. Pour plus dʼinformations, consultez la présentation sur lʼ[évaluation des politiques](../enforcement/overview.md). |
+| `marketingActionRefs` | Tableau qui répertorie les URI de toutes les actions marketing applicables pour la politique. LʼURI dʼune action marketing est indiqué sous `_links.self.href` dans la réponse pour la [recherche dʼune action marketing](./marketing-actions.md#look-up). |
+| `description` | Description facultative qui fournit un contexte plus détaillé au cas dʼutilisation de la politique. |
+| `deny` | Lʼexpression de politique qui décrit les étiquettes dʼutilisation des données spécifiques sur lesquelles lʼaction marketing associée à la politique ne peut pas être exécutée. Pour plus dʼinformations sur cette propriété, consultez la section [Création dʼune politique](#create-policy). |
 
 **Réponse**
 
-Une réponse réussie renvoie les détails de la stratégie mise à jour.
+Une réponse réussie renvoie les détails de la politique mise à jour.
 
 ```JSON
 {
@@ -471,13 +471,13 @@ Une réponse réussie renvoie les détails de la stratégie mise à jour.
 }
 ```
 
-## Mise à jour dʼune partie dʼune stratégie {#patch}
+## Mise à jour dʼune partie dʼune politique {#patch}
 
 >[!IMPORTANT]
 >
->Vous pouvez uniquement mettre à jour des stratégies personnalisées. Si vous souhaitez activer ou désactiver des stratégies de base, consultez la section [Mise à jour de la liste des stratégies de base activées](#update-enabled-core).
+>Vous pouvez uniquement mettre à jour des politiques personnalisées. Si vous souhaitez activer ou désactiver des politiques de base, consultez la section [Mise à jour de la liste des politiques de base activées](#update-enabled-core).
 
-Vous pouvez mettre à jour une partie spécifique d’une stratégie à l’aide d’une requête PATCH. Contrairement aux requêtes PUT qui réécrivent la stratégie, les requêtes PATCH ne mettent à jour que les propriétés spécifiées dans le corps de la requête. Cela sʼavère particulièrement utile lorsque vous souhaitez activer ou désactiver une stratégie, car vous devez uniquement fournir le chemin dʼaccès à la propriété appropriée (`/status`) et sa valeur (`ENABLED` ou `DISABLED`).
+Vous pouvez mettre à jour une partie spécifique d’une politique à l’aide d’une requête PATCH. Contrairement aux requêtes PUT qui réécrivent la politique, les requêtes PATCH ne mettent à jour que les propriétés spécifiées dans le corps de la requête. Cela sʼavère particulièrement utile lorsque vous souhaitez activer ou désactiver une politique, car vous devez uniquement fournir le chemin dʼaccès à la propriété appropriée (`/status`) et sa valeur (`ENABLED` ou `DISABLED`).
 
 >[!NOTE]
 >
@@ -493,11 +493,11 @@ PATCH /policies/custom/{POLICY_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{POLICY_ID}` | Champ `id` de la stratégie dont vous souhaitez mettre à jour les propriétés. |
+| `{POLICY_ID}` | Champ `id` de la politique dont vous souhaitez mettre à jour les propriétés. |
 
 **Requête**
 
-La requête suivante utilise deux opérations `replace` pour modifier lʼétat de la stratégie de `DRAFT` à `ENABLED` et pour mettre à jour le champ `description` avec une nouvelle description.
+La requête suivante utilise deux opérations `replace` pour modifier lʼétat de la politique de `DRAFT` à `ENABLED` et pour mettre à jour le champ `description` avec une nouvelle description.
 
 >[!IMPORTANT]
 >
@@ -527,7 +527,7 @@ curl -X PATCH \
 
 **Réponse**
 
-Une réponse réussie renvoie les détails de la stratégie mise à jour.
+Une réponse réussie renvoie les détails de la politique mise à jour.
 
 
 ```JSON
@@ -573,13 +573,13 @@ Une réponse réussie renvoie les détails de la stratégie mise à jour.
 }
 ```
 
-## Suppression dʼune stratégie personnalisée {#delete}
+## Suppression dʼune politique personnalisée {#delete}
 
-Vous pouvez supprimer une stratégie personnalisée en incluant son `id` dans le chemin dʼaccès dʼune requête DELETE.
+Vous pouvez supprimer une politique personnalisée en incluant son `id` dans le chemin dʼaccès dʼune requête DELETE.
 
 >[!WARNING]
 >
->Les stratégies supprimées ne peuvent pas être récupérées. Il est recommandé dʼ[effectuer une requête de recherche GET](#lookup) avant dʼafficher la stratégie et de confirmer quʼil sʼagit bien de la stratégie à supprimer.
+>Les politiques supprimées ne peuvent pas être récupérées. Il est recommandé dʼ[effectuer une requête de recherche GET](#lookup) avant dʼafficher la politique et de confirmer quʼil sʼagit bien de la politique à supprimer.
 
 **Format d’API**
 
@@ -589,7 +589,7 @@ DELETE /policies/custom/{POLICY_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{POLICY_ID}` | Lʼidentifiant de la stratégie que vous souhaitez supprimer. |
+| `{POLICY_ID}` | Lʼidentifiant de la politique que vous souhaitez supprimer. |
 
 **Requête**
 
@@ -606,11 +606,11 @@ curl -X DELETE \
 
 Une réponse réussie renvoie lʼétat HTTP 200 (OK) avec un corps vide.
 
-Vous pouvez confirmer la suppression de la stratégie en la recherchant à lʼaide de GET. Vous devriez recevoir une erreur HTTP 404 (Not Found) si la stratégie a bien été supprimée.
+Vous pouvez confirmer la suppression de la politique en la recherchant à lʼaide de GET. Vous devriez recevoir une erreur HTTP 404 (Not Found) si la politique a bien été supprimée.
 
-## Récupération dʼune liste de stratégies de base activées {#list-enabled-core}
+## Récupération dʼune liste de politiques de base activées {#list-enabled-core}
 
-Par défaut, seules les stratégies de gouvernance des données activées participent à lʼévaluation. Vous pouvez récupérer une liste de stratégies de base actuellement activées par votre organisation en réalisant une requête GET au point d’entrée `/enabledCorePolicies`.
+Par défaut, seules les politiques de gouvernance des données activées participent à lʼévaluation. Vous pouvez récupérer une liste de politiques de base actuellement activées par votre organisation en réalisant une requête GET au point d’entrée `/enabledCorePolicies`.
 
 **Format d’API**
 
@@ -631,7 +631,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie la liste des stratégies de base activées sous un tableau `policyIds`.
+Une réponse réussie renvoie la liste des politiques de base activées sous un tableau `policyIds`.
 
 ```json
 {
@@ -660,13 +660,13 @@ Une réponse réussie renvoie la liste des stratégies de base activées sous un
 }
 ```
 
-## Mise à jour de la liste des stratégies de base activées {#update-enabled-core}
+## Mise à jour de la liste des politiques de base activées {#update-enabled-core}
 
-Par défaut, seules les stratégies de gouvernance des données activées participent à lʼévaluation. En réalisant une requête PUT au point d’entrée `/enabledCorePolicies`, vous pouvez mettre à jour la liste des stratégies de base activées pour votre organisation en un seul appel.
+Par défaut, seules les politiques de gouvernance des données activées participent à lʼévaluation. En réalisant une requête PUT au point d’entrée `/enabledCorePolicies`, vous pouvez mettre à jour la liste des politiques de base activées pour votre organisation en un seul appel.
 
 >[!NOTE]
 >
->Seules les stratégies de base peuvent être activées ou désactivées par ce point d’entrée. Pour activer ou désactiver des stratégies personnalisées, consultez la section [Mise à jour dʼune partie dʼune stratégie](#patch).
+>Seules les politiques de base peuvent être activées ou désactivées par ce point d’entrée. Pour activer ou désactiver des politiques personnalisées, consultez la section [Mise à jour dʼune partie dʼune politique](#patch).
 
 **Format d’API**
 
@@ -676,7 +676,7 @@ PUT /enabledCorePolicies
 
 **Requête**
 
-La requête suivante met à jour la liste des stratégies de base activées en fonction des identifiants fournis dans la payload.
+La requête suivante met à jour la liste des politiques de base activées en fonction des identifiants fournis dans la payload.
 
 ```shell
 curl -X GET \
@@ -697,11 +697,11 @@ curl -X GET \
 
 | Propriété | Description |
 | --- | --- |
-| `policyIds` | Liste dʼidentifiants de stratégies de base à activer. Toutes les stratégies de base qui ne sont pas incluses sont définies sur lʼétat `DISABLED` et ne participeront pas à lʼévaluation. |
+| `policyIds` | Liste dʼidentifiants de politiques de base à activer. Toutes les politiques de base qui ne sont pas incluses sont définies sur lʼétat `DISABLED` et ne participeront pas à lʼévaluation. |
 
 **Réponse**
 
-Une réponse réussie renvoie la liste mise à jour des stratégies de base activées sous un tableau `policyIds`.
+Une réponse réussie renvoie la liste mise à jour des politiques de base activées sous un tableau `policyIds`.
 
 ```json
 {
@@ -728,4 +728,4 @@ Une réponse réussie renvoie la liste mise à jour des stratégies de base acti
 
 ## Étapes suivantes
 
-Une fois que vous avez défini de nouvelles stratégies ou mis à jour des stratégies existantes, vous pouvez utiliser lʼAPI [!DNL Policy Service] pour tester les actions marketing par rapport à des étiquettes ou des jeux de données spécifiques et voir si vos stratégies génèrent des violations comme prévu. Pour plus dʼinformations, consultez le guide sur les [points d’entrée dʼévaluation des stratégies](./evaluation.md).
+Une fois que vous avez défini de nouvelles politiques ou mis à jour des politiques existantes, vous pouvez utiliser lʼAPI [!DNL Policy Service] pour tester les actions marketing par rapport à des étiquettes ou des jeux de données spécifiques et voir si vos politiques génèrent des violations comme prévu. Pour plus dʼinformations, consultez le guide sur les [points d’entrée dʼévaluation des politiques](./evaluation.md).

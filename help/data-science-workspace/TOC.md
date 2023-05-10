@@ -58,7 +58,7 @@ ht-degree: 100%
    * [Notation d’un modèle (interface utilisateur)](models-recipes/score-model-ui.md)
    * [Notation d’un modèle (API)](models-recipes/score-model-api.md)
    * [Optimisation d’un modèle](models-recipes/optimize-model.md)
-   * [Enrichir Real-Time Customer Profile avec des insights de machine learning](models-recipes/enrich-profile.md)
+   * [Enrichir le profil client en temps réel avec des insights de machine learning](models-recipes/enrich-profile.md)
    * [Publication d’un modèle en tant que service (interface utilisateur)](models-recipes/publish-model-service-ui.md)
    * [Publication d’un modèle en tant que service (API)](models-recipes/publish-model-service-api.md)
    * [Planification de la formation et de la notation automatisées d’un service (interface utilisateur)](models-recipes/schedule-models-ui.md)

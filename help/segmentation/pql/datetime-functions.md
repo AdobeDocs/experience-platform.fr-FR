@@ -7,13 +7,13 @@ exl-id: 8cbffcb6-1c25-454f-8f02-eca602318e5e
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '508'
-ht-degree: 89%
+ht-degree: 88%
 
 ---
 
 # Fonctions de date et d’heure
 
-Fonctions de date et d’heure sont utilisés pour effectuer des opérations de date et d’heure sur des valeurs dans [!DNL Profile Query Language] (PQL). Vous trouverez plus d’informations sur les autres fonctions PQL dans la section [[!DNL Profile Query Language] aperçu](./overview.md).
+Les fonctions de date et d’heure sont utilisées pour effectuer des opérations de date et d’heure sur des valeurs dans . [!DNL Profile Query Language] (PQL). Vous trouverez plus d’informations sur les autres fonctions PQL dans la section [[!DNL Profile Query Language] aperçu](./overview.md).
 
 ## Current month
 

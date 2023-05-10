@@ -109,23 +109,23 @@ Pour plus d’informations sur le catalogue, consultez la [présentation du serv
 
 Adobe Experience Platform Query Service vous permet d’utiliser le langage SQL standard pour interroger les données d’Experience Platform afin de prendre en charge de nombreux cas d’utilisation différents.
 
-Une fois qu’un schéma a été composé et qu’un jeu de données faisant référence à ce schéma a été créé, les données sont ingérées et stockées dans le lac de données. Grâce à Query Service, vous pouvez joindre n’importe quel jeu de données du lac de données et capturer les résultats de la requête sous forme de nouveau jeu de données à utiliser dans la création de rapports, dans le cadre du machine learning ou pour une ingestion dans Real-Time Customer Profile.
+Une fois qu’un schéma a été composé et qu’un jeu de données faisant référence à ce schéma a été créé, les données sont ingérées et stockées dans le lac de données. Grâce à Query Service, vous pouvez joindre n’importe quel jeu de données du lac de données et capturer les résultats de la requête sous forme de nouveau jeu de données à utiliser dans la création de rapports, dans le cadre du machine learning ou pour une ingestion dans le profil client en temps réel.
 
 Pour plus d’informations sur le service, consultez la [présentation de Query Service](../query-service/home.md).
 
 ### Profil client en temps réel
 
-Real-Time Customer Profile fournit un profil de consommateur centralisé pour une gestion d’expérience ciblée et personnalisée. Chaque profil contient des données agrégées sur tous les systèmes ainsi que des comptes horodatés exploitables d’événements impliquant les personnes concernées par l’un des systèmes que vous utilisez avec Experience Platform.
+Le profil client en temps réel fournit un profil de consommateur centralisé pour une gestion d’expérience ciblée et personnalisée. Chaque profil contient des données agrégées sur tous les systèmes ainsi que des comptes horodatés exploitables d’événements impliquant les personnes concernées par l’un des systèmes que vous utilisez avec Experience Platform.
 
-Real-Time Customer Profile utilise des données sous forme de schémas basées sur les classes [!UICONTROL XDM Individual Profile] ou [!UICONTROL XDM ExperienceEvent], et répond aux requêtes en fonction de ces données. Le profil ne prend pas en charge l’utilisation de schémas basés sur d’autres classes.
+Le profil client en temps réel utilise des données sous forme de schémas basées sur les classes [!UICONTROL XDM Individual Profile] ou [!UICONTROL XDM ExperienceEvent], et répond aux requêtes en fonction de ces données. Le profil ne prend pas en charge l’utilisation de schémas basés sur d’autres classes.
 
-Le système conserve une instance de chaque profil client, fusionnant les données pour former une « source unique de vérité » pour l’individu. Ces données unifiées sont représentées par un « schéma d’union »; (parfois appelé « vue d’union »;). Un schéma d’union agrège les champs de tous les schémas qui mettent en œuvre la même classe dans un seul et même schéma.  Lors de la composition d’un schéma à l’aide de l’interface utilisateur ou d’une API, vous pouvez l’activer pour une utilisation avec Real-Time Customer Profile et l’étiqueter pour l’inclure à l’union. Le schéma balisé participe alors à la définition de schéma transmise à Profil.
+Le système conserve une instance de chaque profil client, fusionnant les données pour former une « source unique de vérité » pour l’individu. Ces données unifiées sont représentées par un « schéma d’union »; (parfois appelé « vue d’union »;). Un schéma d’union agrège les champs de tous les schémas qui mettent en œuvre la même classe dans un seul et même schéma.  Lors de la composition d’un schéma à l’aide de l’interface utilisateur ou d’une API, vous pouvez l’activer pour une utilisation avec le profil client en temps réel et l’étiqueter pour l’inclure à l’union. Le schéma balisé participe alors à la définition de schéma transmise à Profil.
 
-Alors que les données [!UICONTROL XDM Individual Profile] et [!UICONTROL XDM ExperienceEvent] sont ingérées dans le lac de données, Real-Time Customer Profile ingère quant à lui toutes les données qui ont été activées pour son utilisation. Plus la quantité d’interactions et de détails ingérés est élevée, plus les profils deviennent robustes.
+Alors que les données [!UICONTROL XDM Individual Profile] et [!UICONTROL XDM ExperienceEvent] sont ingérées dans le lac de données, le profil client en temps réel ingère quant à lui toutes les données qui ont été activées pour son utilisation. Plus la quantité d’interactions et de détails ingérés est élevée, plus les profils deviennent robustes.
 
 Les données [!UICONTROL XDM Individual Profile] permettent de guider et d’exécuter les actions sur n’importe quel canal ou intégration de produit Adobe. Associées à un riche historique de données sur les comportements et les interactions, ces données peuvent être utilisées pour alimenter le machine learning. L’API Real-Time Customer Profile peut aussi être utilisée pour enrichir les fonctionnalités des solutions tierces, des solutions CRM et des solutions propriétaires.
 
-Pour plus d’informations, consultez la [vue d’ensemble de Real-Time Customer Profile](../profile/home.md).
+Pour plus d’informations, consultez la [vue d’ensemble du profil client en temps réel](../profile/home.md).
 
 ### Espace de travail de science des données
 

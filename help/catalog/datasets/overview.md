@@ -43,7 +43,7 @@ La gouvernance des données d’Adobe Experience Platform vous permet de gére
 
 >[!IMPORTANT]
 >
->L’application de libellés au niveau du jeu de données est uniquement prise en charge pour les cas d’utilisation de la gouvernance des données. Si vous essayez de créer des stratégies d’accès pour les données, vous devez [appliquer des libellés au schéma](../../xdm/tutorials/labels.md) sur lequel le jeu de données est basé. Consultez la présentation du [contrôle d’accès basé sur les attributs](../../access-control/abac/overview.md) pour plus d’informations.
+>L’application de libellés au niveau du jeu de données est uniquement prise en charge pour les cas d’utilisation de la gouvernance des données. Si vous essayez de créer des politiques d’accès pour les données, vous devez [appliquer des libellés au schéma](../../xdm/tutorials/labels.md) sur lequel le jeu de données est basé. Consultez la présentation du [contrôle d’accès basé sur les attributs](../../access-control/abac/overview.md) pour plus d’informations.
 
 Les libellés d’utilisation des données peuvent être appliqués à des jeux de données entiers ou à des champs de jeu de données individuels. Les libellés ajoutés au niveau du jeu de données sont hérités par tous les champs du jeu de données.
 

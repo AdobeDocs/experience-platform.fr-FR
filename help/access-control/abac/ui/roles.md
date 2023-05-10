@@ -1,20 +1,20 @@
 ---
-keywords: Experience Platform;accueil;rubriques populaires;contrôle d’accès;contrôle d’accès basé sur les attributs;ABAC
+keywords: Experience Platform;accueil;rubriques populaires;contrôle d’accès;contrôle d’accès basé sur les attributs;ABAC
 title: 'Contrôle d’accès basé sur les attributs : création d’un rôle'
 description: Ce document fournit des informations sur la gestion des rôles par le biais de l’interface Autorisations dans Adobe Experience Cloud.
 exl-id: 85699716-339d-4992-8390-95563c7ea7fe
 source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
 workflow-type: tm+mt
 source-wordcount: '511'
-ht-degree: 0%
+ht-degree: 16%
 
 ---
 
-# Gestion des rôles
+# Gérer les rôles
 
-Les rôles définissent l’accès dont dispose un administrateur, un spécialiste ou un utilisateur final aux ressources de votre entreprise. Dans un environnement de contrôle d’accès basé sur les rôles, la configuration de l’accès des utilisateurs est regroupée par le biais de responsabilités et de besoins communs. Un rôle possède un ensemble donné d’autorisations et les membres de votre organisation peuvent être affectés à un ou plusieurs rôles, selon la portée de l’accès en lecture ou en écriture dont ils ont besoin.
+Les rôles définissent l’accès dont dispose un administrateur, un spécialiste ou un utilisateur final aux ressources de votre entreprise. Dans un environnement de contrôle d’accès basé sur les rôles, la configuration de l’accès des utilisateurs est regroupée suivant les responsabilités et les besoins communs. Un rôle possède un jeu d’autorisations déterminé et les membres de votre organisation peuvent être affectés à un ou plusieurs rôles, selon la portée de l’accès en lecture ou en écriture dont ils ont besoin.
 
-## Création d’un rôle
+## Créer un rôle
 
 Pour créer un nouveau rôle, sélectionnez le **[!UICONTROL Rôles]** dans la barre latérale et sélectionnez **[!UICONTROL Créer un rôle]**.
 
@@ -28,7 +28,7 @@ Lorsque vous avez terminé, sélectionnez **[!UICONTROL Confirmer]**.
 
 Sélectionnez ensuite les autorisations de ressources que vous souhaitez inclure dans le rôle à l’aide du menu déroulant.
 
-![flac-add-role-permission](../../images/flac-ui/flac-add-role-permission.png)
+![Autorisation FLAC ajouter rôle](../../images/flac-ui/flac-add-role-permission.png)
 
 Pour ajouter des ressources supplémentaires, sélectionnez **[!UICONTROL Adobe Experience Platform]** dans le panneau de navigation de gauche, qui affiche une liste des ressources. Vous pouvez également saisir le nom de la ressource dans la barre de recherche du panneau de navigation de gauche.
 

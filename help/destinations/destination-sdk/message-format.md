@@ -20,7 +20,7 @@ Pour comprendre le format des messages, le processus de configuration et de tran
 * **IdentityMap**. La carte des identités représente une carte de toutes les identités des utilisateurs finaux dans Adobe Experience Platform. Voir `xdm:identityMap` dans le [Dictionnaire des champs XDM](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/field-dictionary.html?lang=en).
 * **SegmentMembership**. Le [segmentMembership](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/field-dictionary.html?lang=en) L’attribut XDM indique les segments dont un profil est membre. Pour les trois valeurs différentes de la variable `status` , lisez la documentation sur [Groupe de champs Détails de l’appartenance à un segment](https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/segmentation.html).
 
-## Aperçu {#overview}
+## Présentation {#overview}
 
 Utilisez le contenu de cette page avec le reste de la variable [options de configuration pour les destinations partenaires](./configuration-options.md). Cette page traite du format du message et de la transformation des profils dans les données exportées de Adobe Experience Platform vers les destinations. L’autre page traite des détails relatifs à la connexion et à l’authentification à votre destination.
 

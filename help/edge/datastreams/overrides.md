@@ -1,15 +1,15 @@
 ---
-title: Configuration des remplacements de flux de données
+title: Configurer les remplacements de train de données
 description: Découvrez comment configurer les remplacements de flux de données dans l’interface utilisateur des flux de données et les activer via le SDK Web.
-source-git-commit: ce2e80a7ea7385be98bbcda6a0704cd0814c62b2
+exl-id: 7829f411-acdc-49a1-a8fe-69834bcdb014
+source-git-commit: d76d596818db67c99aca0606b6b6fb1a9aa977aa
 workflow-type: tm+mt
 source-wordcount: '948'
-ht-degree: 0%
+ht-degree: 4%
 
 ---
 
-
-# Configuration des remplacements de flux de données
+# Configurer les remplacements de train de données
 
 Les remplacements de flux de données vous permettent de définir des configurations supplémentaires pour vos flux de données, qui sont transmises au réseau Edge via le SDK Web.
 
@@ -17,8 +17,8 @@ Vous pouvez ainsi déclencher différents comportements de flux de données par 
 
 Le remplacement de la configuration du flux de données est un processus en deux étapes :
 
-1. Tout d’abord, vous devez définir vos remplacements de configuration de flux de données dans la variable [page de configuration de datastream](configure.md).
-2. Ensuite, vous devez envoyer les remplacements au réseau Edge par le biais d’une commande de SDK Web ou à l’aide du SDK Web. [extension de balise](../extension/web-sdk-extension-configuration.md).
+1. Tout d’abord, vous devez définir vos remplacements de configuration de trains de données sur la page de [configuration des trains de données](configure.md).
+2. Ensuite, vous devez envoyer les remplacements au réseau Edge par le biais d’une commande de SDK Web ou à l’aide de l’[extension de balise](../extension/web-sdk-extension-configuration.md) du SDK Web.
 
 Cet article explique le processus de remplacement de la configuration de flux de données de bout en bout pour chaque type de remplacement pris en charge.
 
@@ -233,4 +233,3 @@ Les exemples ci-dessus génèrent une [!DNL Edge Network] payload qui ressemble 
   }
 }
 ```
-

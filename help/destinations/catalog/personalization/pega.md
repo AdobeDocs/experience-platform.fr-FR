@@ -4,8 +4,8 @@ description: Utilisez la destination Pega Customer Decision Hub dans Adobe Exper
 exl-id: 0546da5d-d50d-43ec-bbc2-9468a7db4d90
 source-git-commit: ae00b113308354e98f4448d2544e2a6e475c384e
 workflow-type: tm+mt
-source-wordcount: '1013'
-ht-degree: 7%
+source-wordcount: '1007'
+ht-degree: 27%
 
 ---
 
@@ -21,9 +21,9 @@ Appartenance au segment de profil à partir de Adobe Experience Platform, lorsqu
 >
 >Cette page de documentation a été créée par Pegasystems. Pour toute demande d&#39;information ou de mise à jour, veuillez contacter directement Pega. [here](mailto:support@pega.com).
 
-## Cas d&#39;utilisation
+## Cas d’utilisation
 
-Pour vous aider à mieux comprendre comment et à quel moment utiliser la variable [!DNL Customer Decision Hub] destination, voici des exemples de cas d’utilisation que les clients Adobe Experience Platform peuvent résoudre à l’aide de cette destination.
+Pour découvrir les avantages de la destination [!DNL Customer Decision Hub] et son utilisation, consultez les exemples de cas d’utilisation ci-dessous que la clientèle Adobe Experience Platform peut résoudre.
 
 ### Télécommunications
 
@@ -49,26 +49,26 @@ Avant d’utiliser cette destination pour exporter des données en dehors de Ado
 |---|---|
 | *CustomerID* | Identifiant utilisateur commun qui identifie de manière unique un profil dans [!DNL Pega Customer Decision Hub] et Adobe Experience Platform |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-## Type et fréquence d&#39;export {#export-type-frequency}
+## Type et fréquence d’exportation {#export-type-frequency}
 
 Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la fréquence d’exportation des destinations.
 
 | Élément | Type | Notes |
 ---------|----------|---------|
 | Type d’exportation | **[!UICONTROL Basé sur les profils]** | Exporter tous les membres d’un segment avec un identifiant (*CustomerID*), attributs (nom, prénom, emplacement, etc.) et les données d’appartenance aux segments. |
-| Fréquence des exports | **[!UICONTROL Diffusion en continu]** | Les destinations de diffusion en continu sont des connexions basées sur l’API toujours utilisées. Dès qu’un profil est mis à jour en Experience Platform, sur la base de l’évaluation des segments, le connecteur envoie la mise à jour en aval vers la plateforme de destination. Pour plus d’informations, voir [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
+| Fréquence des exportations | **[!UICONTROL Diffusion en continu]** | Les destinations de diffusion en continu sont des connexions basées sur l’API toujours utilisées. Dès qu’un profil est mis à jour en Experience Platform, sur la base de l’évaluation des segments, le connecteur envoie la mise à jour en aval vers la plateforme de destination. Pour plus d’informations, voir [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Se connecter à la destination {#connect}
 
 Pour vous connecter à cette destination, procédez comme décrit dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md). Dans le workflow de configuration des destinations, renseignez les champs répertoriés dans les deux sections ci-dessous.
 
-### Authentification à la destination {#authenticate}
+### S’authentifier auprès de la destination {#authenticate}
 
-#### Authentification des informations d’identification du client OAuth 2 {#oauth-2-client-credentials-authentication}
+#### Authentification avec informations d’identification du client OAuth 2 {#oauth-2-client-credentials-authentication}
 
 ![Image de l’écran de l’interface utilisateur où vous pouvez vous connecter à la destination Pega CDH, à l’aide d’OAuth 2 avec authentification des informations d’identification du client.](../../assets/catalog/personalization/pega/pega-api-authentication-oauth2-client-credentials.png)
 
@@ -78,7 +78,7 @@ Renseignez les champs ci-dessous et sélectionnez **[!UICONTROL Se connecter à 
 * **[!UICONTROL ID client]**: OAuth 2 [!DNL client ID] que vous avez généré dans votre [!DNL Pega Customer Decision Hub] instance.
 * **[!UICONTROL Secret du client]**: OAuth 2 [!DNL client secret] que vous avez généré dans votre [!DNL Pega Customer Decision Hub] instance.
 
-### Renseignement des détails de destination {#destination-details}
+### Renseigner les détails de la destination {#destination-details}
 
 Après avoir établi la connexion d’authentification à la variable [!DNL Pega Customer Decision Hub], fournissez les informations suivantes pour la destination :
 
@@ -86,21 +86,21 @@ Après avoir établi la connexion d’authentification à la variable [!DNL Pega
 
 Pour configurer les détails de la destination, renseignez les champs requis et sélectionnez **[!UICONTROL Suivant]**.
 
-* **[!UICONTROL Nom]**: Un nom par lequel vous reconnaîtrez cette destination à l’avenir.
-* **[!UICONTROL Description]**: Description qui vous aidera à identifier cette destination ultérieurement.
+* **[!UICONTROL Nom]** : un nom par lequel vous reconnaîtrez cette destination à l’avenir.
+* **[!UICONTROL Description]** : une description qui vous aidera à identifier cette destination à l’avenir.
 * **[!UICONTROL Nom d’hôte]**: Nom d’hôte Pega Customer Decision Hub vers lequel le profil est exporté en tant que données json.
 
 ## Activer des segments vers cette destination {#activate}
 
 >[!IMPORTANT]
 > 
->Pour activer les données, vous avez besoin de l’événement **[!UICONTROL Gestion des destinations]**, **[!UICONTROL Activation des destinations]**, **[!UICONTROL Afficher les profils]**, et **[!UICONTROL Affichage de segments]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez le [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+>Pour activer les données, vous avez besoin des [autorisations de contrôle d’accès](/help/access-control/home.md#permissions) pour les fonctions **[!UICONTROL Gérer les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]**, et **[!UICONTROL Afficher les segments]**. Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
-Voir [Activation des données d’audience vers des destinations d’exportation de profils en continu](../../ui/activate-streaming-profile-destinations.md) pour obtenir des instructions sur l’activation des segments d’audience vers cette destination.
+Voir [Activer des données d’audience vers des destinations d’exportation de profils en flux continu](../../ui/activate-streaming-profile-destinations.md) pour obtenir des instructions sur l’activation des segments d’audience vers cette destination.
 
 ### Attributs de destination {#attributes}
 
-Dans le [[!UICONTROL Sélectionner des attributs]](../../ui/activate-streaming-profile-destinations.md#select-attributes) , Adobe vous recommande de sélectionner un identifiant unique dans votre [schéma d’union](../../../profile/home.md#profile-fragments-and-union-schemas). Sélectionnez l’identifiant unique et tout autre champ XDM que vous souhaitez exporter vers la destination.
+Lors de l’étape [[!UICONTROL Sélectionner des attributs]](../../ui/activate-streaming-profile-destinations.md#select-attributes), Adobe recommande de sélectionner un identifiant unique dans votre [schéma d’union](../../../profile/home.md#profile-fragments-and-union-schemas). Sélectionnez l’identifiant unique et tout autre champ XDM que vous souhaitez exporter vers la destination.
 
 ### Exemple de mappage : activation des mises à jour de profil dans [!DNL Pega Customer Decision Hub] {#mapping-example}
 
@@ -118,7 +118,7 @@ Sélection des champs cibles :
 
 ![Mappage des identités](../../assets/catalog/personalization/pega/pega-source-destination-mapping.png)
 
-## Données exportées / Validation de l’exportation des données {#exported-data}
+## Données exportées / Valider l’exportation des données {#exported-data}
 
 Une mise à jour réussie de l’appartenance à un segment pour un profil insère l’identifiant du segment, le nom et les états dans la banque de données de l’appartenance à un segment marketing de marque. Les données d’appartenance sont associées à un client à l’aide du Concepteur de profil client dans [!DNL Pega Customer Decision Hub], comme illustré ci-dessous.
 ![Image de l’écran de l’interface utilisateur dans lequel vous pouvez associer les données d’appartenance à un segment à un client à l’aide du concepteur de profil client.](../../assets/catalog/personalization/pega/pega-profile-designer-associate.png)
@@ -139,4 +139,4 @@ Voir [Gestion des enregistrements de client dans Customer Profile Designer](http
 
 ## Utilisation et gouvernance des données {#data-usage-governance}
 
-Lors de la gestion de vos données, toutes les destinations [!DNL Adobe Experience Platform] se conforment aux stratégies d’utilisation des données. Pour obtenir des informations détaillées sur la manière dont [!DNL Adobe Experience Platform] applique la gouvernance des données, voir [Présentation de la gouvernance des données](/help/data-governance/home.md).
+Lors de la gestion de vos données, toutes les destinations [!DNL Adobe Experience Platform] se conforment aux politiques d’utilisation des données. Pour obtenir des informations détaillées sur la manière dont [!DNL Adobe Experience Platform] applique la gouvernance des données, lisez la [présentation de la gouvernance des données](/help/data-governance/home.md).

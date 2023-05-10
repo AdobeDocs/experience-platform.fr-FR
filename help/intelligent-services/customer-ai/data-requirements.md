@@ -7,7 +7,7 @@ topic-legacy: Getting started
 description: Apprenez-en plus sur les événements, les entrées et les sorties requis utilisés par l’IA dédiée aux clientes et clients.
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
 source-git-commit: 5f7b602b68f5cbf4b1f4b08603757b0956e36408
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '2484'
 ht-degree: 100%
 
@@ -67,7 +67,7 @@ Le tableau suivant présente la terminologie courante utilisée dans ce document
 | [Classe XDM](../../xdm/schema/field-constraints.md) | Tous les schémas XDM décrivent des données qui peuvent être catégorisées comme `Experience Event`. Le comportement des données d’un schéma est défini par la classe du schéma attribuée à celui-ci lorsqu’il est créé pour la première fois. Les classes XDM décrivent le plus petit nombre de propriétés qu’un schéma doit contenir pour représenter un comportement de données spécifique. |
 | [Groupes de champs](../../xdm/schema/composition.md) | Un composant qui définit un ou plusieurs champs d’un schéma. Les groupes de champs imposent la manière dont leurs champs apparaissent dans la hiérarchie du schéma, et présentent donc la même structure dans chaque schéma dans lequel ils sont inclus. Les groupes de champs ne sont compatibles qu’avec des classes spécifiques, identifiées par leur attribut `meta:intendedToExtend`. |
 | [Type de données](../../xdm/schema/composition.md) | Un composant qui peut également fournir un ou plusieurs champs pour un schéma. Toutefois, contrairement aux groupes de champs, les types de données ne sont pas limités à une classe particulière. Ainsi, les types de données constituent une option plus souple pour décrire des structures de données communes réutilisables sur plusieurs schémas avec des classes potentiellement différentes. Les types de données décrits dans ce document sont pris en charge par les schémas CEE et Adobe Analytics. |
-| [Real-time Customer Profile](../../profile/home.md) | Real-time Customer Profile fournit un profil de consommateur centralisé pour une gestion d’expérience ciblée et personnalisée. Chaque profil contient des données agrégées sur tous les systèmes ainsi que des comptes horodatés exploitables d’événements impliquant les personnes concernées par l’un des systèmes que vous utilisez avec Experience Platform. |
+| [Real-time Customer Profile](../../profile/home.md) | Le profil client en temps réel fournit un profil de consommateur centralisé pour une gestion d’expérience ciblée et personnalisée. Chaque profil contient des données agrégées sur tous les systèmes ainsi que des comptes horodatés exploitables d’événements impliquant les personnes concernées par l’un des systèmes que vous utilisez avec Experience Platform. |
 
 ## Données de sortie de l’IA dédiée aux clientes et clients {#customer-ai-input-data}
 

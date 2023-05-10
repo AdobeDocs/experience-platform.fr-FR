@@ -51,7 +51,7 @@ ht-degree: 100%
    * [Déploiement asynchrone](./ui/client-side/asynchronous-deployment.md)
    * [Référence d’objet par satellite](./ui/client-side/satellite-object.md)
    * [Déploiement de balises JavaScript pour la gestion du consentement client](./ui/client-side/consent.md)
-   * [Prise en charge de la stratégie de sécurité du contenu (CSP)](./ui/client-side/content-security-policy.md)
+   * [Prise en charge de la politique de sécurité du contenu (CSP)](./ui/client-side/content-security-policy.md)
    * [Prise en charge de l’intégrité des sous-ressources (SRI)](./ui/client-side/sri.md)
 * Transfert d’événement {#event-forwarding}
    * [Aperçu](./ui/event-forwarding/overview.md)

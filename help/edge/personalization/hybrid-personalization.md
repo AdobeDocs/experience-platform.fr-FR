@@ -2,13 +2,13 @@
 title: Personnalisation hybride à l’aide du SDK Web et de l’API Edge Network Server
 description: Cet article explique comment utiliser le SDK Web conjointement avec l’API du serveur pour déployer la personnalisation hybride sur vos propriétés web.
 keywords: personnalisation;hybride;api du serveur;côté serveur;implémentation hybride;
-source-git-commit: f280d4cbcde434ccf36df37e95f1902cfd02c96c
-workflow-type: ht
+exl-id: 506991e8-701c-49b8-9d9d-265415779876
+source-git-commit: a9887535b12b8c4aeb39bb5a6646da88db4f0308
+workflow-type: tm+mt
 source-wordcount: '830'
 ht-degree: 100%
 
 ---
-
 
 # Personnalisation hybride à l’aide du SDK Web et de l’API Edge Network Server
 
@@ -281,9 +281,3 @@ function sendDisplayEvent(decision) {
 ## Exemple d’application {#sample-app}
 
 Pour vous aider à expérimenter et à en savoir plus sur ce type de personnalisation, nous vous proposons un exemple d’application que vous pouvez télécharger et utiliser pour les tests. Vous pouvez télécharger l’application, ainsi que des instructions détaillées sur son utilisation, à partir de ce [référentiel GitHub](https://github.com/adobe/alloy-samples).
-
-
-
-
-
-

@@ -6,7 +6,7 @@ description: Ce document présente la classe XDM Individual Profile.
 exl-id: a3767c8d-a009-49b4-81a4-b084b6e5101a
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '253'
+source-wordcount: '250'
 ht-degree: 16%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 16%
 | `proximity` | Chaîne | Distance estimée de la balise. Voir [annexe](#proximity) pour les valeurs et définitions acceptées. |
 | `proximityUUID` | Chaîne | Un UUID de proximité (Universally Unique Identifier) est un type spécial d’identifiant utilisé pour distinguer les balises de votre réseau de toutes les autres balises des réseaux hors de votre contrôle. L’UUID de proximité est configuré dans une balise, à transmettre aux appareils mobiles à portée afin d’identifier les balises d’une organisation. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Pour obtenir plus d’informations sur ce type de données, reportez-vous au référentiel XDM public:
 

@@ -5,7 +5,7 @@ exl-id: ab274270-ae8c-4264-ba64-700b118e6435
 source-git-commit: a07557ec398631ece0c8af6ec7b32e0e8593e24b
 workflow-type: tm+mt
 source-wordcount: '905'
-ht-degree: 92%
+ht-degree: 95%
 
 ---
 
@@ -60,7 +60,7 @@ Pour vous authentifier auprès de la destination, renseignez les champs requis e
 
 * **[!UICONTROL ID de clé d’accès]** : chaîne alphanumérique de 61 caractères utilisée pour authentifier votre compte [!DNL Google Cloud Storage] auprès de Platform. Pour plus d’informations sur la manière d’obtenir cette valeur, lisez la section [Conditions préalables](#prerequisites) ci-dessus.
 * **[!UICONTROL Clé d’accès secrète]** : chaîne codée en base64 de 40 caractères utilisée pour authentifier votre compte [!DNL Google Cloud Storage] auprès de Platform. Pour plus d’informations sur la manière d’obtenir cette valeur, lisez la section [Conditions préalables](#prerequisites) ci-dessus.
-* **[!UICONTROL Clé de chiffrement]** : vous pouvez éventuellement joindre votre clé publique au format RSA pour ajouter un chiffrement à vos fichiers exportés. Affichez un exemple de clé de chiffrement correctement formatée dans l’image ci-dessous.
+* **[!UICONTROL Clé de chiffrement]** : vous pouvez éventuellement joindre votre clé publique au format RSA pour ajouter un chiffrement à vos fichiers exportés. Vous pouvez voir un exemple de clé correctement formatée dans l’image ci-dessous.
 
    ![Image montrant un exemple de clé PGP correctement formatée dans l’interface utilisateur](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 

@@ -1,6 +1,6 @@
 ---
-title: Notes de mise à jour de Adobe Experience Platform - Mars 2021
-description: Notes de mise à jour de mars 2021 pour Adobe Experience Platform.
+title: Notes de mise à jour d’Adobe Experience Platform - Mars 2021
+description: Les notes de mise à jour de mars 2021 pour Adobe Experience Platform.
 doc-type: release notes
 last-update: March 31, 2021
 author: ens72741
@@ -8,7 +8,7 @@ exl-id: 027cd7b1-1651-4939-bc97-968a41824117
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '425'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 

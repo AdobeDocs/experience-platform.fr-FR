@@ -3,8 +3,8 @@ title: Notes de mise à jour d’Adobe Experience Platform - Mars 2022
 description: Les notes de mise à jour de mars 2022 pour Adobe Experience Platform.
 exl-id: 0d499aa6-e25d-4d34-ad32-5e4ab361cba1
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
-workflow-type: ht
-source-wordcount: '1194'
+workflow-type: tm+mt
+source-wordcount: '1176'
 ht-degree: 100%
 
 ---
@@ -34,10 +34,10 @@ Experience Platform vous permet d’auditer l’activité des utilisateurs pour 
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Journaux d’audit pour jeu de données, schéma, classe, groupe de champs, type de données, sandbox, destination, segment, stratégie de fusion, attribut calculé, profil de produit et compte (Adobe) | Ces éléments sont les ressources enregistrées par les journaux d’audit. Si la fonction est activée, les journaux d’audit sont automatiquement collectés au fur et à mesure de l’activité. Vous n’avez pas besoin d’activer manuellement la collecte des journaux. |
+| Journaux d’audit pour jeu de données, schéma, classe, groupe de champs, type de données, sandbox, destination, segment, politique de fusion, attribut calculé, profil de produit et compte (Adobe) | Ces éléments sont les ressources enregistrées par les journaux d’audit. Si la fonction est activée, les journaux d’audit sont automatiquement collectés au fur et à mesure de l’activité. Vous n’avez pas besoin d’activer manuellement la collecte des journaux. |
 | Exportation des journaux d’audit | Les journaux d’audit peuvent être téléchargés en tant que fichier `CSV` ou `JSON`. Les fichiers générés sont directement enregistrés sur votre machine. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Pour plus d’informations sur les journaux d’audit dans Platform, consultez la [présentation des journaux d’audit](../../landing/governance-privacy-security/audit-logs/overview.md).
 
@@ -67,7 +67,7 @@ Experience Platform vous permet de vous abonner à des alertes basées sur des 
 | --- | --- |
 | Nouvelles règles d’alerte | Deux nouvelles règles d’alerte sont désormais disponibles pour les sources liées à l’ingestion des données. Consultez la présentation des [règles d’alerte](../../observability/alerts/rules.md) pour obtenir la liste mise à jour des types d’alerte. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Pour plus d’informations sur les alertes dans Platform, consultez l’[aperçu des alertes](../../observability/alerts/overview.md).
 
@@ -88,7 +88,7 @@ Le tableau de bord des profils affiche un instantané des données d’attribut 
 | Widget profils non segmentés par identité | Ce widget classe le nombre total de profils non segmentés en fonction de leur identifiant unique. Les données sont représentées dans un histogramme. Pour plus d’informations, consultez la [documentation sur les widgets standard des profils](../../dashboards/guides/profiles.md#standard-widgets). |
 | Widget profils à identité unique | Ce widget fournit le nombre de profils de votre entreprise qui n’ont qu’un seul type d’identifiant qui crée leur identité, soit un email, soit un ECID (identifiant Experience Cloud). Pour plus d’informations, consultez la [documentation sur les widgets standard des profils](../../dashboards/guides/profiles.md#standard-widgets). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Pour plus d’informations sur les tableaux de bord des profils, consultez la [présentation des tableaux de bord des profils](../../dashboards/guides/profiles.md).
 
@@ -102,7 +102,7 @@ Le tableau de bord des destinations affiche un instantané des destinations acti
 | --- | --- |
 | Widget de comptage des destinations | Le widget fournit le nombre total de points d’entrée disponibles où une audience peut être activée et diffusée dans le système. Ce nombre inclut les destinations principales et inactives. Pour plus d’informations, consultez la [documentation du widget standard des destinations](../../dashboards/guides/destinations.md#standard-widgets). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Pour plus d’informations sur les tableaux de bord des destinations dans Platform, consultez la [présentation des tableaux de bord des destinations](../../dashboards/guides/destinations.md).
 
@@ -121,7 +121,7 @@ Pour plus d’informations sur la collecte de données dans Platform, consultez 
 
 ## Query Service {#query-service}
 
-[!DNL Query Service] vous permet d’utiliser le langage SQL standard pour interroger les données dans le [!DNL Data Lake] d’Adobe Experience Platform. Vous pouvez joindre n’importe quel jeu de données à partir du [!DNL Data Lake] et capturer les résultats de la requête sous la forme d’un nouveau jeu de données à utiliser dans les rapports, dans l’espace de travail de science des données ou pour l’ingestion dans Real-Time Customer Profile.
+[!DNL Query Service] vous permet d’utiliser le langage SQL standard pour interroger les données dans le [!DNL Data Lake] d’Adobe Experience Platform. Vous pouvez joindre n’importe quel jeu de données à partir du [!DNL Data Lake] et capturer les résultats de la requête sous la forme d’un nouveau jeu de données à utiliser dans les rapports, dans l’espace de travail de science des données ou pour l’ingestion dans le profil client en temps réel.
 
 **Fonctionnalités mises à jour**
 
@@ -129,7 +129,7 @@ Pour plus d’informations sur la collecte de données dans Platform, consultez 
 | --- | --- |
 | `table_exists` | La commande de la nouvelle fonctionnalité sert à confirmer si un tableau existe actuellement dans le système ou non. La commande renvoie une valeur booléenne : `true` si le tableau **existe** et `false` si le tableau **n’existe pas**. Pour plus d’informations, consultez la [documentation sur la syntaxe SQL](../../query-service/sql/syntax.md). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Pour plus d’informations sur les fonctionnalités disponibles, consultez la section [présentation de Query Service](../../query-service/home.md).
 
@@ -147,6 +147,6 @@ Experience Platform fournit une API RESTful et une interface utilisateur intera
 | Disponibilité générale de la nouvelle source [!DNL Oracle Eloqua] | Vous pouvez désormais utiliser la source [!DNL Oracle Eloqua] pour ingérer facilement des données à partir de votre instance [!DNL Oracle Eloqua] (compte, campagne, contacts) vers Platform. Pour plus d’informations, consultez la documentation sur la [création d’une connexion source  [!DNL Oracle Eloqua] ](../../sources/connectors/marketing-automation/oracle-eloqua.md). |
 | Améliorations de l’API pour [!DNL Data Landing Zone] | La source [!DNL Data Landing Zone] prend désormais en charge la détection automatique des propriétés de fichier lors de l’utilisation de l’API [!DNL Flow Service]. Pour plus d’informations, consultez la documentation sur la [création d’une connexion source [!DNL Data Landing Zone] ](../../sources/tutorials/api/create/cloud-storage/data-landing-zone.md). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Pour en savoir plus sur les sources, consultez la [présentation des sources](../../sources/home.md).

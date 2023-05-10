@@ -59,7 +59,7 @@ GET /alert-subscriptions?{QUERY_PARAMETERS}
 
 **Paramètres de requête**
 
-Vous trouverez ci-dessous une liste des paramètres de requête disponibles pour répertorier les requêtes. Tous ces paramètres sont facultatifs. En effectuant un appel vers ce point de terminaison sans paramètres, vous récupérerez toutes les requêtes disponibles pour votre organisation.
+Vous trouverez ci-dessous une liste des paramètres de requête disponibles pour répertorier les requêtes. Tous ces paramètres sont facultatifs. En effectuant un appel vers ce point d’entrée sans paramètres, vous récupérerez toutes les requêtes disponibles pour votre organisation.
 
 | Paramètre | Description |
 | --------- | ----------- |

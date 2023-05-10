@@ -6,7 +6,7 @@ description: Le point d’entrée /fieldgroups de l’API Schema Registry vous p
 exl-id: d26257e4-c7d5-4bff-b555-7a2997c88c74
 source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
-source-wordcount: '1216'
+source-wordcount: '1195'
 ht-degree: 14%
 
 ---
@@ -38,7 +38,7 @@ GET /{CONTAINER_ID}/fieldgroups?{QUERY_PARAMS}
 | `{CONTAINER_ID}` | Conteneur à partir duquel vous souhaitez récupérer des groupes de champs : `global` pour les groupes de champs créés par Adobe ou `tenant` pour les groupes de champs appartenant à votre organisation. |
 | `{QUERY_PARAMS}` | Paramètres de requête facultatifs en fonction desquels filtrer les résultats. Voir [document de l’annexe](./appendix.md#query) pour une liste de paramètres disponibles. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Requête**
 
@@ -61,7 +61,7 @@ Le format de réponse dépend de la variable `Accept` en-tête envoyé dans la r
 | `application/vnd.adobe.xed-id+json` | Renvoie un court résumé de chaque ressource. Il s’agit de l’en-tête recommandé pour répertorier les ressources. (Limite : 300) |
 | `application/vnd.adobe.xed+json` | Renvoie le groupe de champs JSON complet pour chaque ressource, avec l’original `$ref` et `allOf` inclus. (Limite : 300) |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Réponse**
 
@@ -124,11 +124,11 @@ GET /{CONTAINER_ID}/fieldgroups/{FIELD_GROUP_ID}
 | `{CONTAINER_ID}` | Conteneur qui héberge le groupe de champs que vous souhaitez récupérer : `global` pour un groupe de champs créé par l’Adobe ou `tenant` pour un groupe de champs appartenant à votre organisation. |
 | `{FIELD_GROUP_ID}` | Le `meta:altId` ou encodé URL `$id` du groupe de champs que vous souhaitez rechercher. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Requête**
 
-La requête suivante récupère un groupe de champs selon ses `meta:altId` valeur fournie dans le chemin.
+La requête suivante récupère un groupe de champs à l’aide de `meta:altId` valeur fournie dans le chemin.
 
 ```shell
 curl -X GET \
@@ -150,7 +150,7 @@ Le format de réponse dépend de la variable `Accept` en-tête envoyé dans la r
 | `application/vnd.adobe.xed-full-notext+json; version={MAJOR_VERSION}` | `$ref` et `allOf` résolus, ne contient aucun titre ni aucune description. |
 | `application/vnd.adobe.xed-full-desc+json; version={MAJOR_VERSION}` | `$ref` et `allOf` résolus, contient des descripteurs. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Réponse**
 
@@ -215,7 +215,7 @@ Une réponse réussie renvoie les détails du groupe de champs. Les champs renvo
 }
 ```
 
-## Création d’un groupe de champs {#create}
+## Créer un groupe de champs {#create}
 
 Vous pouvez définir un groupe de champs personnalisé sous le `tenant` en effectuant une requête de POST.
 
@@ -404,7 +404,7 @@ PUT /tenant/fieldgroups/{FIELD_GROUP_ID}
 | --- | --- |
 | `{FIELD_GROUP_ID}` | Le `meta:altId` ou encodé URL `$id` du groupe de champs que vous souhaitez réécrire. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Requête**
 
@@ -589,7 +589,7 @@ PATCH /tenant/fieldgroups/{FIELD_GROUP_ID}
 | --- | --- |
 | `{FIELD_GROUP_ID}` | Codé URL `$id` URI ou `meta:altId` du groupe de champs que vous souhaitez mettre à jour. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Requête**
 
@@ -728,7 +728,7 @@ DELETE /tenant/fieldgroups/{FIELD_GROUP_ID}
 | --- | --- |
 | `{FIELD_GROUP_ID}` | Codé URL `$id` URI ou `meta:altId` du groupe de champs que vous souhaitez supprimer. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Requête**
 

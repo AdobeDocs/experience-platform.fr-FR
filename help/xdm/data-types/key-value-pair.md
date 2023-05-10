@@ -4,7 +4,7 @@ description: Ce document offre un aperçu du type de données des modèles de do
 exl-id: 2a1a7537-9019-4cf2-bfa1-9c760f9656dd
 source-git-commit: 1d023ce6184e54693401eb68a04ceeb1464dcaa0
 workflow-type: tm+mt
-source-wordcount: '121'
+source-wordcount: '118'
 ht-degree: 100%
 
 ---
@@ -20,6 +20,6 @@ Une [!UICONTROL paire clé-valeur] est un type de données standard des modèles
 | `key` | Chaîne | Clé (nom) d’une variable ou valeur générique. |
 | `value` | Chaîne | Valeur de la variable. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Pour obtenir plus d’informations sur ce type de données, reportez-vous au [référentiel XDM public](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/keyvalue.schema.json).

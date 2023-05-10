@@ -5,7 +5,7 @@ title: Guide de dépannage du contrôle dʼaccès
 description: Ce document répond aux questions fréquentes sur le contrôle d’accès dans Adobe Experience Platform.
 exl-id: c299c0c4-dbee-4e6d-8af4-2446444bed69
 source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '407'
 ht-degree: 100%
 
@@ -21,7 +21,7 @@ Ce document répond aux questions fréquentes sur le contrôle d’accès dans A
 
 Si vous êtes en charge de l’administration système, de l’administration de produits ou des profils de produits au sein de votre organisation, vous avez la possibilité d’accéder à l’Adobe Admin Console pour consulter le profil de produit qui vous a été attribué et les autorisations qu’il confère. Consultez le [guide d’utilisation du contrôle d’accès](./ui/overview.md) pour obtenir des instructions sur la navigation dans afin d’afficher les autorisations d’un profil de produit[!DNL Admin Console].
 
-Si vous n’êtes pas un administrateur, vous pouvez tout de même consulter vos autorisations d’accès actuelles en envoyant une requête sur le point d’entrée `/acl/effective-policies` dans l’API Access Control. Pour plus d’informations, consultez la section « Affichage des stratégies efficaces » du [guide de développement du contrôle d’accès](./api/effective-policies.md).
+Si vous n’êtes pas un administrateur, vous pouvez tout de même consulter vos autorisations d’accès actuelles en envoyant une requête sur le point d’entrée `/acl/effective-policies` dans l’API Access Control. Pour plus d’informations, consultez la section « Affichage des politiques efficaces » du [guide de développement du contrôle d’accès](./api/effective-policies.md).
 
 ## Certaines fonctionnalités de lʼinterface utilisateur de [!DNL Platform] ne sont pas disponibles. Comment les autorisations contrôlent-elles l’accès à ces fonctionnalités ?
 

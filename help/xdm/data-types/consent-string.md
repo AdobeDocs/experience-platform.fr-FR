@@ -5,8 +5,8 @@ description: Ce document fournit un aperçu du type de données XDM Chaîne de c
 exl-id: 288ec79e-074a-4d72-9c5f-e9cd8485b804
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '201'
-ht-degree: 12%
+source-wordcount: '198'
+ht-degree: 11%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 12%
 | `containsPersonalData` | Booléen | Lorsque ce champ est défini sur true, cela signifie que cette chaîne de consentement doit être traitée pour l’application du consentement. |
 | `gdprApplies` | Booléen | Lorsque ce champ est vrai, cela signifie que le consentement est fourni avec des données personnelles. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Pour obtenir plus d’informations sur ce type de données, reportez-vous au référentiel XDM public:
 

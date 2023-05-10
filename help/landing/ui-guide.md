@@ -7,7 +7,7 @@ exl-id: 47f9a3fb-731d-4ade-8069-faaa18f224dc
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
 source-wordcount: '1797'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 2%
 
 Ce guide présente l’utilisation de l’interface utilisateur de Adobe Experience Platform, explique à quoi servent les différents composants et fournit des liens vers d’autres documents pour plus d’informations.
 
-Pour en savoir plus sur Adobe Experience Platform, veuillez lire le [Présentation de Experience Platform](home.md).
+Pour en savoir plus sur Adobe Experience Platform, commencez par lire la [Présentation dʼExperience Platform](home.md).
 
 ## Écran d’accueil
 

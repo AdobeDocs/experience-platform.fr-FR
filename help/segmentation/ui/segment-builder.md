@@ -220,15 +220,15 @@ Après avoir selectionné **[!UICONTROL Déplier le conteneur]**, le conteneur e
 
 ![Le conteneur s’affiche après avoir été déplié.](../images/ui/segment-builder/unwrapped-container.png)
 
-## Stratégies de fusion
+## Politiques de fusion
 
-[!DNL Experience Platform] vous permet de rassembler des données issues de plusieurs sources et de les combiner pour obtenir une vue complète de chaque client. Lors du regroupement de ces données, les stratégies de fusion sont les règles utilisées par [!DNL Platform] pour déterminer comment les données seront hiérarchisées et quelles données seront combinées pour créer un profil.
+[!DNL Experience Platform] vous permet de rassembler des données issues de plusieurs sources et de les combiner pour obtenir une vue complète de chaque client. Lors du regroupement de ces données, les politiques de fusion sont les règles utilisées par [!DNL Platform] pour déterminer comment les données seront hiérarchisées et quelles données seront combinées pour créer un profil.
 
-Vous pouvez sélectionner une stratégie de fusion qui correspond à votre objectif marketing pour cette audience ou utiliser la stratégie de fusion par défaut fournie par [!DNL Platform]. Vous pouvez créer plusieurs stratégies de fusion propres à votre organisation, y compris créer votre propre stratégie de fusion par défaut. Pour obtenir des instructions détaillées sur la création de stratégies de fusion pour votre organisation, commencez par lire la [présentation des stratégies de fusion](../../profile/merge-policies/overview.md).
+Vous pouvez sélectionner une politique de fusion qui correspond à votre objectif marketing pour cette audience ou utiliser la politique de fusion par défaut fournie par [!DNL Platform]. Vous pouvez créer plusieurs politiques de fusion propres à votre organisation, y compris créer votre propre politique de fusion par défaut. Pour obtenir des instructions détaillées sur la création de politiques de fusion pour votre organisation, commencez par lire la [présentation des politiques de fusion](../../profile/merge-policies/overview.md).
 
-Pour sélectionner une stratégie de fusion pour votre définition de segment, sélectionnez l’icône en forme d’engrenage dans l’onglet **[!UICONTROL Champs]**, puis utilisez le menu déroulant **[!UICONTROL Stratégie de fusion]** pour sélectionner la stratégie de fusion à utiliser.
+Pour sélectionner une politique de fusion pour votre définition de segment, sélectionnez l’icône en forme d’engrenage dans l’onglet **[!UICONTROL Champs]**, puis utilisez le menu déroulant **[!UICONTROL Politique de fusion]** pour sélectionner la politique de fusion à utiliser.
 
-![Le sélecteur de stratégie de fusion est mis en surbrillance. Vous pouvez ainsi choisir la stratégie de fusion à sélectionner pour votre définition de segment.](../images/ui/segment-builder/merge-policy-selector.png)
+![Le sélecteur de politique de fusion est mis en surbrillance. Vous pouvez ainsi choisir la politique de fusion à sélectionner pour votre définition de segment.](../images/ui/segment-builder/merge-policy-selector.png)
 
 ## Propriétés du segment {#segment-properties}
 

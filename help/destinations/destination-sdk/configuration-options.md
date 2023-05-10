@@ -4,7 +4,7 @@ title: Options de configuration dans Destination SDK
 exl-id: 8890c70a-cdb9-4b9d-aa81-affe72b1fdc5
 source-git-commit: 9b4c7da5aa02ae27608c2841b1d825445ac3015e
 workflow-type: tm+mt
-source-wordcount: '563'
+source-wordcount: '560'
 ht-degree: 7%
 
 ---
@@ -40,7 +40,7 @@ Les pages ci-dessous fournissent plus de détails sur la fonctionnalité et les 
 | [Outils de test pour les destinations de diffusion en continu](./test-destination.md) | [Outils de test pour les destinations basées sur des fichiers](/help/destinations/destination-sdk/file-based-destination-testing-overview.md) | [Opérations de l’API pour les tests de destination](./destination-testing-api.md) |
 | [Publication de destination](./configure-destination-instructions.md#publish-destination) | Identique à pour les destinations de diffusion en continu | [Opérations de l’API de publication de destination](./destination-publish-api.md) |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Étapes suivantes {#next-steps}
 

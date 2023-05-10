@@ -5,8 +5,8 @@ description: Ce document présente les configurations que vous devez préparer p
 exl-id: 68ed22fe-1f22-46d2-9d58-72ad8a9e6b98
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '525'
-ht-degree: 5%
+source-wordcount: '519'
+ht-degree: 4%
 
 ---
 
@@ -130,7 +130,7 @@ Un code d’actualisation OAuth 2 permet un accès sécurisé à une application
 | `authSpec.spec.properties.requestParameterOverride` | Permet de spécifier les paramètres d’identification à remplacer lors de l’authentification. |
 | `authSpec.spec.required` | Affiche les informations d’identification requises pour l’authentification. | `accessToken` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 
 ### Authentification de base
@@ -177,7 +177,7 @@ L’authentification de base est un type d’authentification qui vous permet d�
 | `authSpec.spec.properties.password` | Mot de passe du compte associé à votre application. |
 | `authSpec.spec.required` | Spécifie les champs requis en tant que valeurs obligatoires à saisir dans Platform. | `username` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Exemple de spécification d’authentification
 

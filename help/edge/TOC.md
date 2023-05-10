@@ -6,7 +6,7 @@ breadcrumb-title: Guide du SDK web
 user-guide-description: Interagissez avec les services Experience Cloud via le réseau Edge.
 feature: Web SDK
 source-git-commit: 5a64beb2f5826bda585111e9ce7f760b939bf9b9
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '212'
 ht-degree: 100%
 

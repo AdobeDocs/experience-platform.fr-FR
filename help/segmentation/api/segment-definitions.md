@@ -27,7 +27,7 @@ Vous pouvez récupérer une liste de toutes les définitions de segment pour vot
 
 **Format d’API**
 
-Le point d’entrée `/segment/definitions` prend en charge plusieurs paramètres de requête pour vous aider à filtrer vos résultats. Bien que ces paramètres soient facultatifs, leur utilisation est vivement recommandée pour réduire les frais généraux élevés. En passant un appel vers ce point de terminaison sans paramètres, vous récupérerez toutes les définitions de segment disponibles pour votre organisation. Plusieurs paramètres peuvent être inclus et séparés par des esperluettes (`&`).
+Le point d’entrée `/segment/definitions` prend en charge plusieurs paramètres de requête pour vous aider à filtrer vos résultats. Bien que ces paramètres soient facultatifs, leur utilisation est vivement recommandée pour réduire les frais généraux élevés. En passant un appel vers ce point d’entrée sans paramètres, vous récupérerez toutes les définitions de segment disponibles pour votre organisation. Plusieurs paramètres peuvent être inclus et séparés par des esperluettes (`&`).
 
 ```http
 GET /segment/definitions
@@ -152,7 +152,7 @@ Une réponse réussie renvoie un état HTTP 200 avec une liste de définitions 
 
 ## Création d’une définition de segment {#create}
 
-Vous pouvez créer une définition de segment en envoyant une requête POST au point de terminaison `/segment/definitions`.
+Vous pouvez créer une définition de segment en envoyant une requête POST au point d’entrée `/segment/definitions`.
 
 **Format d’API**
 

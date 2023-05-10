@@ -4,8 +4,8 @@ description: Ce document présente un aperçu du type de données XDM (Extend So
 exl-id: ebdd8707-9675-4232-a5b7-4e4a481d706a
 source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '217'
-ht-degree: 14%
+source-wordcount: '214'
+ht-degree: 13%
 
 ---
 
@@ -31,7 +31,7 @@ ht-degree: 14%
 | `lastUpdatedDate` | DateTime | Date de la dernière mise à jour du système source. |
 | `lastViewedDate` | DateTime | Date de dernière consultation du système source. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Pour obtenir plus d’informations sur ce type de données, reportez-vous au référentiel XDM public:
 

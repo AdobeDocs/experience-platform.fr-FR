@@ -5,13 +5,13 @@ exl-id: 73c7a186-9b85-43fe-a586-4c6260b6fa8c
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
 source-wordcount: '637'
-ht-degree: 19%
+ht-degree: 21%
 
 ---
 
 # Authentification {#authentication}
 
-## Aperçu
+## Présentation
 
 Le [!DNL Edge Network Server API] gère à la fois la collecte de données authentifiées et non authentifiées, en fonction de la source des événements et du domaine de collecte de l’API.
 

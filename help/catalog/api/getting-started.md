@@ -39,7 +39,7 @@ Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [
 * x-api-key : `{API_KEY}`
 * x-gw-ims-org-id : `{ORG_ID}`
 
-Dans [!DNL Experience Platform], toutes les ressources sont isolées dans des sandbox virtuelles spécifiques. Toutes les requêtes envoyées aux API [!DNL Platform] nécessitent un en-tête spécifiant le nom de la sandbox dans laquelle l’opération sera effectuée :
+Dans [!DNL Experience Platform], toutes les ressources sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes envoyées aux API [!DNL Platform] nécessitent un en-tête spécifiant le nom du sandbox dans lequel l’opération sera effectuée :
 
 * x-sandbox-name : `{SANDBOX_NAME}`
 
@@ -63,6 +63,6 @@ Comme certaines requêtes peuvent imposer une charge importante à l’API, des 
 
 Ce document couvrait les connaissances préalables requises pour effectuer des appels à la fonction [!DNL Catalog] API. Vous pouvez désormais procéder aux exemples d&#39;appel fournis dans ce guide de développement et suivre leurs instructions.
 
-La plupart des exemples de ce guide utilisent la méthode `/dataSets` mais les principes peuvent s’appliquer à d’autres points de terminaison dans [!DNL Catalog] (par exemple, `/batches` et `/accounts`). Consultez la [référence de l’API Catalog Service](https://www.adobe.io/experience-platform-apis/references/catalog/) pour obtenir une liste complète de tous les appels et opérations disponibles pour chaque point de terminaison.
+La plupart des exemples de ce guide utilisent la méthode `/dataSets` mais les principes peuvent s’appliquer à d’autres points de terminaison dans [!DNL Catalog] (par exemple, `/batches` et `/accounts`). Consultez la [référence de l’API Catalog Service](https://www.adobe.io/experience-platform-apis/references/catalog/) pour obtenir une liste complète de tous les appels et opérations disponibles pour chaque point d’entrée.
 
 Pour un workflow détaillé qui montre comment [!DNL Catalog] L’API est impliquée dans l’ingestion de données. Pour plus d’informations, consultez le tutoriel sur [création d’un jeu de données](../datasets/create.md).

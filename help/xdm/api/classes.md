@@ -6,7 +6,7 @@ description: Le point de terminaison /classes de l’API Schema Registry vous pe
 exl-id: 7beddb37-0bf2-4893-baaf-5b292830f368
 source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
-source-wordcount: '1532'
+source-wordcount: '1508'
 ht-degree: 24%
 
 ---
@@ -47,7 +47,7 @@ GET /{CONTAINER_ID}/classes?{QUERY_PARAMS}
 | `{CONTAINER_ID}` | Conteneur à partir duquel vous souhaitez récupérer des classes : `global` pour les classes créées par l’Adobe ou `tenant` pour les classes détenues par votre organisation. |
 | `{QUERY_PARAMS}` | Paramètres de requête facultatifs en fonction desquels filtrer les résultats. Voir [document de l’annexe](./appendix.md#query) pour une liste de paramètres disponibles. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Requête**
 
@@ -70,7 +70,7 @@ Le format de réponse dépend de la variable `Accept` en-tête envoyé dans la r
 | `application/vnd.adobe.xed-id+json` | Renvoie un court résumé de chaque ressource. Il s’agit de l’en-tête recommandé pour répertorier les ressources. (Limite : 300) |
 | `application/vnd.adobe.xed+json` | Renvoie la classe JSON complète pour chaque ressource, avec l’élément d’origine `$ref` et `allOf` inclus. (Limite : 300) |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Réponse**
 
@@ -127,7 +127,7 @@ GET /{CONTAINER_ID}/classes/{CLASS_ID}
 | `{CONTAINER_ID}` | Conteneur qui héberge la classe que vous souhaitez récupérer : `global` pour une classe créée par un Adobe ou `tenant` pour une classe détenue par votre organisation. |
 | `{CLASS_ID}` | Le `meta:altId` ou encodé URL `$id` de la classe que vous souhaitez étudier. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Requête**
 
@@ -153,7 +153,7 @@ Le format de réponse dépend de la variable `Accept` en-tête envoyé dans la r
 | `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref` et `allOf` résolus, ne contient aucun titre ni aucune description. |
 | `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` et `allOf` résolus, contient des descripteurs. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Réponse**
 
@@ -320,7 +320,7 @@ curl -X POST \
 | `_{TENANT_ID}` | L’espace de noms `TENANT_ID` pour votre organisation. Toutes les ressources créées par votre organisation doivent inclure cette propriété pour éviter les collisions avec d’autres ressources dans la variable [!DNL Schema Registry]. |
 | `allOf` | Une liste des ressources dont les propriétés doivent être héritées par la nouvelle classe. L’un des objets `$ref` au sein du tableau définit le comportement de la classe. Dans cet exemple, la classe hérite du comportement « enregistrement ». |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Réponse**
 
@@ -408,7 +408,7 @@ PUT /tenant/classes/{CLASS_ID}
 | --- | --- |
 | `{CLASS_ID}` | Le `meta:altId` ou encodé URL `$id` de la classe que vous souhaitez réécrire. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Requête**
 
@@ -545,7 +545,7 @@ PATCH /tenant/class/{CLASS_ID}
 | --- | --- |
 | `{CLASS_ID}` | Codé URL `$id` URI ou `meta:altId` de la classe que vous souhaitez mettre à jour. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Requête**
 
@@ -647,7 +647,7 @@ DELETE /tenant/classes/{CLASS_ID}
 | --- | --- |
 | `{CLASS_ID}` | Codé URL `$id` URI ou `meta:altId` de la classe que vous souhaitez supprimer. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Requête**
 

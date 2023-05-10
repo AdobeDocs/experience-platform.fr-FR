@@ -15,7 +15,7 @@ ht-degree: 62%
 
 ## Exemples d’appels API
 
-Les sections suivantes passent en revue les appels que vous pouvez effectuer à l’aide du point de terminaison `/queries` dans l’API [!DNL Query Service] Chaque appel inclut le format général d’API, un exemple de requête présentant les en-têtes requis et un exemple de réponse.
+Les sections suivantes passent en revue les appels que vous pouvez effectuer à l’aide du point d’entrée `/queries` dans l’API [!DNL Query Service] Chaque appel inclut le format général d’API, un exemple de requête présentant les en-têtes requis et un exemple de réponse.
 
 ### Récupération d’une liste de requêtes
 
@@ -32,7 +32,7 @@ GET /queries?{QUERY_PARAMETERS}
 
 **Paramètres de requête**
 
-Vous trouverez ci-dessous une liste des paramètres de requête disponibles pour répertorier les requêtes. Tous ces paramètres sont facultatifs. En effectuant un appel vers ce point de terminaison sans paramètres, vous récupérerez toutes les requêtes disponibles pour votre organisation.
+Vous trouverez ci-dessous une liste des paramètres de requête disponibles pour répertorier les requêtes. Tous ces paramètres sont facultatifs. En effectuant un appel vers ce point d’entrée sans paramètres, vous récupérerez toutes les requêtes disponibles pour votre organisation.
 
 | Paramètre | Description |
 | --------- | ----------- |
@@ -119,7 +119,7 @@ Une réponse réussie renvoie un état HTTP 200 avec une liste de requêtes pour
 
 ### Création d’une requête
 
-Vous pouvez créer une requête en effectuant une requête POST vers le point de terminaison `/queries`.
+Vous pouvez créer une requête en effectuant une requête POST vers le point d’entrée `/queries`.
 
 **Format d’API**
 
@@ -226,7 +226,7 @@ Une réponse réussie renvoie un état HTTP 202 (Accepted) avec les détails de
 
 ### Récupération d’une requête par identifiant
 
-Vous pouvez obtenir des informations détaillées sur une requête spécifique en effectuant une requête GET vers le point de terminaison `/queries` et en indiquant la valeur `id` de la requête dans le chemin d’accès à la requête.
+Vous pouvez obtenir des informations détaillées sur une requête spécifique en effectuant une requête GET vers le point d’entrée `/queries` et en indiquant la valeur `id` de la requête dans le chemin d’accès à la requête.
 
 **Format d’API**
 

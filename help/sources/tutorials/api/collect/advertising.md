@@ -691,5 +691,5 @@ Une fois votre flux de données créé, vous pouvez surveiller les données ing�
 
 Vous êtes arrivé au bout de ce tutoriel, félicitations ! Grâce à celui-ci, vous avez créé un connecteur source pour collecter des données à intervalles réguliers à partir d’un système publicitaire. Ces données peuvent désormais être utilisées par les services de Platform en aval tels que [!DNL Real-Time Customer Profile] et [!DNL Data Science Workspace]. Consultez les documents suivants pour plus d’informations :
 
-* [Vue d’ensemble de Real-Time Customer Profile](../../../../profile/home.md)
+* [Vue d’ensemble du profil client en temps réel](../../../../profile/home.md)
 * [Présentation de l’espace de travail de science des données](../../../../data-science-workspace/home.md)

@@ -11,7 +11,7 @@ ht-degree: 3%
 
 # Configurer des options de formatage de fichier pour les destinations basées sur des fichiers
 
-## Aperçu {#overview}
+## Présentation {#overview}
 
 Destination SDK vous permet d’ajuster considérablement les options de formatage et de compression de vos fichiers exportés, afin de répondre à toutes les exigences en aval de votre emplacement de stockage.
 

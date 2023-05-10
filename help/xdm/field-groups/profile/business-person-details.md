@@ -4,7 +4,7 @@ description: Ce document fournit un aperçu du groupe de champs de schéma XDM B
 exl-id: e9da5c1c-5a30-4cbc-beb2-cc5efe57cab0
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
-source-wordcount: '601'
+source-wordcount: '598'
 ht-degree: 16%
 
 ---
@@ -56,7 +56,7 @@ ht-degree: 16%
 | `isDeleted` | Booléen | Indique si cette personne a été supprimée dans Marketo Engage.<br><br>Lors de l’utilisation de la variable [Connecteur source Marketo](../../../sources/connectors/adobe-applications/marketo/marketo.md), les enregistrements supprimés dans Marketo sont automatiquement répercutés dans Real-time Customer Profile. Cependant, les enregistrements relatifs à ces profils peuvent toujours persister dans le lac de données. En définissant `isDeleted` to `true`, vous pouvez utiliser ce champ pour filtrer les enregistrements qui ont été supprimés de vos sources lors de l’interrogation du lac de données. |
 | `organizations` | Tableau de chaînes | Liste des noms de l’organisation dans laquelle la personne travaille. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Pour plus d’informations sur le groupe de champs, reportez-vous au référentiel XDM public :
 

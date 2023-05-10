@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;accueil;rubriques les plus consultées;serviceNow;ServiceNow
+keywords: Experience Platform;accueil;rubriques les plus consultées;serviceNow;ServiceNow
 solution: Experience Platform
 title: Présentation du connecteur source ServiceNow
 description: Découvrez comment connecter ServiceNow à Adobe Experience Platform à l’aide des API ou de l’interface utilisateur.
@@ -7,13 +7,13 @@ exl-id: f491b367-ec6d-4fb8-8eeb-3178673c0085
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '216'
-ht-degree: 76%
+ht-degree: 80%
 
 ---
 
 # Connecteur [!DNL ServiceNow]
 
-Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous permettant de structurer, de libeller et d’améliorer les données entrantes à l’aide des services [!DNL Platform]. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, des bases de données, etc.
+Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous permettant de structurer, de libeller et d’améliorer les données entrantes à l’aide des services [!DNL Platform]. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les bases de données, etc.
 
 [!DNL Experience Platform] prend en charge l’ingestion de données provenant d’un système de succès client tiers. La prise en charge des fournisseurs de succès client inclut [!DNL ServiceNow].
 

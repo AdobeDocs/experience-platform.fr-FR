@@ -5,8 +5,8 @@ description: La destination SendGrid vous permet d’exporter vos données propr
 exl-id: 6f22746f-2043-4a20-b8a6-097d721f2fe7
 source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
 workflow-type: tm+mt
-source-wordcount: '1548'
-ht-degree: 8%
+source-wordcount: '1542'
+ht-degree: 28%
 
 ---
 
@@ -34,7 +34,7 @@ Les éléments suivants sont requis avant de commencer à configurer la destinat
 
 ![](../../assets/catalog/email-marketing/sendgrid/01-api-key.jpg)
 
-Avant d’activer des données vers la destination SendGrid, vous devez disposer d’un [schema](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=fr), un [dataset](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=en), et [segments](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en) créé dans [!DNL Experience Platform]. Reportez-vous également à la section [limites](#limits) plus loin dans cette page.
+Avant d’activer des données vers la destination SendGrid, vous devez disposer d’un [schema](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=fr), un [dataset](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=fr), et [segments](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=fr) créé dans [!DNL Experience Platform]. Reportez-vous également à la section [limites](#limits) plus loin dans cette page.
 
 >[!IMPORTANT]
 >
@@ -45,26 +45,26 @@ Avant d’activer des données vers la destination SendGrid, vous devez disposer
 
 ## Identités prises en charge {#supported-identities}
 
-SendGrid prend en charge l’activation des identités décrites dans le tableau ci-dessous. En savoir plus sur [identités](/help/identity-service/namespaces.md).
+SendGrid prend en charge l’activation des identités décrites dans le tableau ci-dessous. En savoir plus sur les [identités](/help/identity-service/namespaces.md).
 
 | Identité cible | Description | Considérations |
 |---|---|---|
 | adresse e-mail | Adresse e-mail | Notez que le texte brut et les adresses électroniques hachées SHA256 sont pris en charge par [!DNL Adobe Experience Platform]. Si le champ source Experience Platform contient des attributs non hachés, vérifiez la variable **[!UICONTROL Appliquer la transformation]** option, pour avoir [!DNL Platform] hachage automatique des données lors de l’activation.<br/><br/> Notez que **SendGrid** ne prend pas en charge les adresses électroniques hachées. Par conséquent, seules les données en texte brut sans transformation sont envoyées à la destination. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-## Type et fréquence d&#39;export {#export-type-frequency}
+## Type et fréquence d’exportation {#export-type-frequency}
 
 Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la fréquence d’exportation des destinations.
 
 | Élément | Type | Notes |
 ---------|----------|---------|
-| Type d’exportation | **[!UICONTROL Basé sur les profils]** | Vous exportez tous les membres d’un segment, ainsi que les champs de schéma de votre choix (par exemple : adresse électronique, numéro de téléphone, nom), tel que sélectionné dans l’écran de sélection des attributs de profil de la fonction [workflow d’activation de destination](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
-| Fréquence des exports | **[!UICONTROL Diffusion en continu]** | Les destinations de diffusion en continu sont &quot;toujours sur&quot; des connexions basées sur l’API. Dès qu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation des segments, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
+| Type d’exportation | **[!UICONTROL Basé sur les profils]** | Vous exportez tous les membres d’un segment, ainsi que les champs de schéma de votre choix (par exemple : adresse électronique, numéro de téléphone, nom), tel que sélectionné dans l’écran de sélection des attributs de profil du [workflow d’activation de destination](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
+| Fréquence des exportations | **[!UICONTROL Diffusion en continu]** | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation des segments, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-## Cas d&#39;utilisation {#use-cases}
+## Cas d’utilisation {#use-cases}
 
 Pour vous aider à mieux comprendre comment et à quel moment utiliser la destination SendGrid, voici des exemples d’utilisation qui [!DNL Experience Platform] les clients peuvent résoudre ce problème en utilisant cette destination.
 
@@ -76,11 +76,11 @@ Les équipes marketing qui utilisent SendGrid peuvent créer une liste de diffus
 
 >[!IMPORTANT]
 > 
->Pour vous connecter à la destination, vous avez besoin de l’événement **[!UICONTROL Gestion des destinations]** [autorisation de contrôle d’accès](/help/access-control/home.md#permissions). Lisez le [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+>Pour vous connecter à la destination, vous devez disposer de l’[autorisation de contrôle d’accès](/help/access-control/home.md#permissions) **[!UICONTROL Gérer les destinations]**. Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
 Pour vous connecter à cette destination, procédez comme décrit dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md). Dans le workflow de configuration des destinations, renseignez les champs répertoriés dans les deux sections ci-dessous.
 
-### Authentification à la destination {#authenticate}
+### S’authentifier auprès de la destination {#authenticate}
 
 1. Dans le [!DNL Adobe Experience Platform] console, accédez à **Destinations**.
 
@@ -97,9 +97,9 @@ Pour vous connecter à cette destination, procédez comme décrit dans le [tutor
 
 ![](../../assets/catalog/email-marketing/sendgrid/05.jpg)
 
-### Renseignement des détails de destination {#destination-details}
+### Renseigner les détails de la destination {#destination-details}
 
-Pendant la [configuration](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=en) de cette destination, vous devez fournir les informations suivantes :
+Pendant la [configuration](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=fr) de cette destination, vous devez fournir les informations suivantes :
 
 * **[!UICONTROL Nom]**: Nom par lequel vous reconnaîtrez cette destination à l’avenir.
 * **[!UICONTROL Description]**: Description facultative qui vous aidera à identifier cette destination ultérieurement.
@@ -108,17 +108,17 @@ Pendant la [configuration](https://experienceleague.adobe.com/docs/experience-pl
 
 ### Activer les alertes {#enable-alerts}
 
-Vous pouvez activer les alertes pour recevoir des notifications sur l’état du flux de données vers votre destination. Sélectionnez une alerte dans la liste et abonnez-vous à des notifications concernant le statut de votre flux de données. Pour plus d’informations sur les alertes, consultez le guide sur les [abonnement aux alertes de destinations à l’aide de l’interface utilisateur](../../ui/alerts.md).
+Vous pouvez activer les alertes pour recevoir des notifications sur le statut de votre flux de données vers votre destination. Sélectionnez une alerte dans la liste et abonnez-vous à des notifications concernant le statut de votre flux de données. Pour plus d’informations sur les alertes, consultez le guide sur l’[abonnement aux alertes des destinations dans l’interface utilisateur](../../ui/alerts.md).
 
-Lorsque vous avez terminé de fournir des détails sur votre connexion de destination, sélectionnez **[!UICONTROL Suivant]**.
+Lorsque vous avez terminé de renseigner les détails sur votre connexion de destination, sélectionnez **[!UICONTROL Suivant]**.
 
 ## Activer des segments vers cette destination {#activate}
 
 >[!IMPORTANT]
 > 
->Pour activer les données, vous avez besoin de l’événement **[!UICONTROL Gestion des destinations]**, **[!UICONTROL Activation des destinations]**, **[!UICONTROL Afficher les profils]**, et **[!UICONTROL Affichage de segments]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez le [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+>Pour activer les données, vous avez besoin des [autorisations de contrôle d’accès](/help/access-control/home.md#permissions) pour les fonctions **[!UICONTROL Gérer les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]**, et **[!UICONTROL Afficher les segments]**. Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
-Lecture [Activation des profils et des segments vers des destinations d’exportation de segments en continu](/help/destinations/ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des segments d’audience vers cette destination.
+Consultez [Activer les profils et les segments vers les destinations d’exportation de segments de diffusion en continu](/help/destinations/ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des segments d’audience vers cette destination.
 
 Reportez-vous aux images ci-dessous pour plus de détails sur cette destination.
 
@@ -160,15 +160,15 @@ Liste complète des mappages d’attributs pris en charge pouvant être configur
 
 ## Validation de l’exportation des données dans SendGrid {#validate}
 
-Pour vérifier que vous avez correctement configuré la destination, procédez comme suit :
+Pour vérifier que vous avez correctement configuré la destination, procédez comme suit :
 
-1. Sélectionner **[!UICONTROL Destinations]** > **[!UICONTROL Parcourir]** pour accéder à la liste des destinations.
+1. Sélectionnez **[!UICONTROL Destinations]** > **[!UICONTROL Parcourir]** pour accéder à la liste des destinations.
    ![](../../assets/catalog/email-marketing/sendgrid/25.jpg)
 
-1. Sélectionnez la destination et vérifiez que l’état est **[!UICONTROL enabled]**.
+1. Sélectionnez la destination et vérifiez que le statut est **[!UICONTROL activé]**.
    ![](../../assets/catalog/email-marketing/sendgrid/26.jpg)
 
-1. Basculez vers le **[!DNL Activation data]** , puis sélectionnez un nom de segment.
+1. Basculez vers l’onglet **[!DNL Activation data]**, puis sélectionnez un nom de segment.
    ![](../../assets/catalog/email-marketing/sendgrid/27.jpg)
 
 1. Surveillez le résumé du segment et vérifiez que le nombre de profils correspond au nombre créé dans le jeu de données.
@@ -188,7 +188,7 @@ Pour vérifier que vous avez correctement configuré la destination, procédez c
 
 ## Utilisation et gouvernance des données {#data-usage-governance}
 
-Lors de la gestion de vos données, toutes les destinations [!DNL Adobe Experience Platform] se conforment aux stratégies d’utilisation des données. Pour obtenir des informations détaillées sur la manière dont [!DNL Adobe Experience Platform] applique la gouvernance des données, voir [Présentation de la gouvernance des données](/help/data-governance/home.md).
+Lors de la gestion de vos données, toutes les destinations [!DNL Adobe Experience Platform] se conforment aux politiques d’utilisation des données. Pour obtenir des informations détaillées sur la manière dont [!DNL Adobe Experience Platform] applique la gouvernance des données, lisez la [présentation de la gouvernance des données](/help/data-governance/home.md).
 
 ## Ressources supplémentaires {#additional-resources}
 

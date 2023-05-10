@@ -4,8 +4,8 @@ description: Ce document présente un aperçu du groupe de champs Détails de la
 exl-id: 3ef6c0b9-cba1-449e-8868-46446c00465f
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
-source-wordcount: '366'
-ht-degree: 7%
+source-wordcount: '363'
+ht-degree: 6%
 
 ---
 
@@ -39,6 +39,6 @@ ht-degree: 7%
 | `webinarSessionDescription` | [!UICONTROL Chaîne] | Description de la session de webinaire associée à cette campagne. |
 | `webinarSessionName` | [!UICONTROL Chaîne] | Nom de la session de webinaire associée à cette campagne. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Pour plus d’informations sur le groupe de champs, reportez-vous à la section [référentiel XDM public](https://github.com/adobe/xdm/blob/master/components/fieldgroups/campaign/campaign-details.schema.json).

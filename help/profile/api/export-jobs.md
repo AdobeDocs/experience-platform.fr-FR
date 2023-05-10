@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;profil;real-time customer profile;dépannage;API
+keywords: Experience Platform;profil;profil client en temps réel;dépannage;API
 title: Point de terminaison de l’API des tâches d’exportation de profils
 type: Documentation
 description: Real-Time Customer Profile vous permet de créer une vue unique de clients individuels dans Adobe Experience Platform en rassemblant des données provenant de plusieurs sources, y compris des données d’attributs et des données comportementales. Les données de profil peuvent ensuite être exportées vers un jeu de données en vue d’un traitement ultérieur.
@@ -7,13 +7,13 @@ exl-id: d51b1d1c-ae17-4945-b045-4001e4942b67
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
 source-wordcount: '1517'
-ht-degree: 59%
+ht-degree: 58%
 
 ---
 
 # Point de terminaison des tâches d’exportation de profils
 
-[!DNL Real-Time Customer Profile] vous permet d’établir une vue unique des clients individuels en rassemblant des données issues de plusieurs sources, y compris des données d’attributs et des données comportementales. Les données de profil peuvent ensuite être exportées vers un jeu de données en vue d’un traitement ultérieur. Par exemple, les segments d’audience provenant de [!DNL Profile] Les données peuvent être exportées pour activation et les attributs de profil peuvent être exportés pour création de rapports.
+[!DNL Real-Time Customer Profile] vous permet de créer une vue unique de clients individuels en rassemblant des données provenant de plusieurs sources, y compris des données d’attributs et des données comportementales. Les données de profil peuvent ensuite être exportées vers un jeu de données en vue d’un traitement ultérieur. Par exemple, les segments d’audience provenant de [!DNL Profile] Les données peuvent être exportées pour activation et les attributs de profil peuvent être exportés pour création de rapports.
 
 Ce document fournit des instructions étape par étape pour la création et la gestion de tâches d’exportation à l’aide du [API de profil](https://www.adobe.com/go/profile-apis-en).
 
@@ -132,9 +132,9 @@ curl -X POST \
 | Propriété | Description |
 | -------- | ----------- |
 | `fields` | *(Facultatif)* Limite les champs de données à inclure dans l’exportation à ceux fournis dans ce paramètre. Si vous omettez cette valeur, tous les champs seront inclus dans les données exportées. |
-| `mergePolicy` | *(Facultatif)* Spécifie la stratégie de fusion pour régir les données exportées. Ajoutez ce paramètre lorsque plusieurs segments sont exportés. |
-| `mergePolicy.id` | Identifiant de la stratégie de fusion. |
-| `mergePolicy.version` | La version spécifique de la stratégie de fusion à utiliser. Si vous omettez cette valeur, la version la plus récente sera utilisée par défaut. |
+| `mergePolicy` | *(Facultatif)* Spécifie la politique de fusion pour régir les données exportées. Ajoutez ce paramètre lorsque plusieurs segments sont exportés. |
+| `mergePolicy.id` | Identifiant de la politique de fusion. |
+| `mergePolicy.version` | La version spécifique de la politique de fusion à utiliser. Si vous omettez cette valeur, la version la plus récente sera utilisée par défaut. |
 | `additionalFields.eventList` | *(Facultatif)* Contrôle les champs d’événement de série temporelle exportés pour des objets enfants ou associés en fournissant un ou plusieurs des paramètres suivants :<ul><li>`eventList.fields` : contrôlent les champs à exporter.</li><li>`eventList.filter` : indique les critères qui limitent les résultats inclus dans les objets associés. Attend une valeur minimale requise pour l’exportation, généralement une date.</li><li>`eventList.filter.fromIngestTimestamp`: Filtre les événements de série temporelle par rapport à ceux qui ont été ingérés après l’horodatage fourni. Il ne s’agit pas de l’heure de l’événement, mais de l’heure de l’ingestion des événements.</li></ul> |
 | `destination` | **(Obligatoire)** Informations de destination pour les données exportées :<ul><li>`destination.datasetId` : **(obligatoire)** identifiant du jeu de données vers lequel les données doivent être exportées.</li><li>`destination.segmentPerBatch` : *(facultatif)* valeur booléenne qui, si elle n’est pas fournie, est définie par défaut sur `false`. La valeur `false` exporte tous les identifiants de segment vers un seul identifiant de lot. La valeur `true` exporte un identifiant de segment vers un identifiant de lot. Notez que la définition de la valeur sur `true` peut affecter les performances d’exportation par lots.</li></ul> |
 | `schema.name` | **(Obligatoire)** Le nom du schéma associé au jeu de données vers lequel les données doivent être exportées. |
@@ -326,7 +326,7 @@ La réponse comprend une `records` contenant les tâches d’exportation créée
 
 ## Contrôle de la progression de l’exportation
 
-Pour afficher les détails d’une tâche d’exportation spécifique, ou contrôler son état pendant son traitement, vous pouvez effectuer une requête GET sur le point de terminaison `/export/jobs` et inclure l’`id` de la tâche d’exportation dans le chemin d’accès. La tâche d’exportation est terminée lorsque le champ `status` renvoie la valeur &quot;SUCCEEDED&quot;.
+Pour afficher les détails d’une tâche d’exportation spécifique, ou contrôler son état pendant son traitement, vous pouvez effectuer une requête GET sur le point d’entrée `/export/jobs` et inclure l’`id` de la tâche d’exportation dans le chemin d’accès. La tâche d’exportation est terminée lorsque le champ `status` renvoie la valeur &quot;SUCCEEDED&quot;.
 
 **Format d’API**
 
@@ -403,7 +403,7 @@ curl -X GET \
 
 ## Annulation d’une tâche d’exportation
 
-Experience Platform vous permet d’annuler une tâche d’exportation existante, ce qui peut s’avérer utile pour plusieurs raisons, notamment si la tâche d’exportation n’a pas été terminée ou est restée bloquée en cours de traitement. Pour annuler une tâche d’exportation, vous pouvez effectuer une requête DELETE sur le point de terminaison `/export/jobs` et inclure l’`id` de la tâche d’exportation que vous souhaitez annuler dans le chemin de la requête.
+Experience Platform vous permet d’annuler une tâche d’exportation existante, ce qui peut s’avérer utile pour plusieurs raisons, notamment si la tâche d’exportation n’a pas été terminée ou est restée bloquée en cours de traitement. Pour annuler une tâche d’exportation, vous pouvez effectuer une requête DELETE sur le point d’entrée `/export/jobs` et inclure l’`id` de la tâche d’exportation que vous souhaitez annuler dans le chemin de la requête.
 
 **Format d’API**
 

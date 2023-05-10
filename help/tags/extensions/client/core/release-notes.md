@@ -181,7 +181,7 @@ v1.6.2
 
 v1.6.1
 
-* **Prise en charge de la valeur à usage unique de la CSP** : l’extension Core comporte désormais un paramètre de configuration facultatif. Vous pouvez ajouter un élément de données qui fait référence à une valeur à usage unique. S’il est configuré, tous les scripts intégrés qu’une balise ajoute à la page utilisent la valeur à usage unique que vous avez configurée. Cette modification prend en charge lʼutilisation dʼune stratégie de sécurité du contenu (CSP) avec une valeur à usage unique afin que les scripts de balises puissent toujours se charger dans un environnement CSP. Pour en savoir plus sur lʼutilisation des balises avec une stratégie de sécurité du contenu, [cliquez ici](../../../ui/client-side/content-security-policy.md).
+* **Prise en charge de la valeur à usage unique de la CSP** : l’extension Core comporte désormais un paramètre de configuration facultatif. Vous pouvez ajouter un élément de données qui fait référence à une valeur à usage unique. S’il est configuré, tous les scripts intégrés qu’une balise ajoute à la page utilisent la valeur à usage unique que vous avez configurée. Cette modification prend en charge lʼutilisation dʼune politique de sécurité du contenu (CSP) avec une valeur à usage unique afin que les scripts de balises puissent toujours se charger dans un environnement CSP. Pour en savoir plus sur lʼutilisation des balises avec une stratégie de sécurité du contenu, [cliquez ici](../../../ui/client-side/content-security-policy.md).
 
 ## 18 juin 2019
 

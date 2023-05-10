@@ -3,7 +3,7 @@ title: Gérer les autorisations pour Privacy Service
 description: Découvrez comment gérer les autorisations utilisateur pour Adobe Experience Platform Privacy Service à l’aide d’Adobe Admin Console.
 exl-id: 6aa81850-48d7-4fff-95d1-53b769090649
 source-git-commit: 1e164166f58540cbaaa4ad789b10cdfc40fa8a70
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1634'
 ht-degree: 100%
 
@@ -13,7 +13,7 @@ ht-degree: 100%
 
 >[!IMPORTANT]
 >
->Les autorisations pour Adobe Experience Platform Privacy Service ont été améliorées afin d’augmenter leur niveau de granularité. Ces modifications permettent aux administrateurs et administratrices de l’organisation d’accorder l’accès à plus d’utilisateurs et d’utilisatrices avec le rôle et le niveau d’autorisation souhaités.Les utilisateurs et utilisatrices de comptes techniques doivent mettre à jour leurs autorisations de Privacy Service, car cette mise à jour imminente constitue une modification irréversible.L’application de la modification de ces autorisations aura lieu le **13 avril 2023**. Consultez la documentation sur la [migration des informations d’identification d’API héritées](#migrate-tech-accounts) pour obtenir des conseils sur la résolution de ce problème.
+>Les autorisations pour Adobe Experience Platform Privacy Service ont été améliorées afin d’augmenter leur niveau de granularité. Ces modifications permettent aux administrateurs et administratrices de l’organisation d’accorder l’accès à plus d’utilisateurs et d’utilisatrices avec le rôle et le niveau d’autorisation souhaités.Les utilisateurs et utilisatrices de comptes techniques doivent mettre à jour leurs autorisations de Privacy Service, car cette mise à jour imminente constitue une modification irréversible.L’application de la modification de ces autorisations aura lieu le **13 avril 2023**. Consultez la documentation relative à la [migration des informations d’identification d’API héritées](#migrate-tech-accounts) pour obtenir des conseils sur la résolution de ce problème.
 >
 >Les comptes techniques sont disponibles pour les clientes et clients d’entreprise et créés via l’Adobe Developers Console. L’Adobe ID d’une personne titulaire de compte technique se termine par `@techacct.adobe.com`. Si vous ne savez pas si vous êtes titulaire d’un compte technique, contactez l’administrateur ou l’administratrice de votre organisation.
 

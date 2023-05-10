@@ -6,7 +6,7 @@ exl-id: 88707dca-3c7a-43c7-9d71-473ad9715fc6
 source-git-commit: 322b9aa5b817276eb4b56daf6e410944591c1d51
 workflow-type: tm+mt
 source-wordcount: '478'
-ht-degree: 48%
+ht-degree: 59%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 48%
 
 >[!NOTE]
 >
->Le [!DNL Teradata Vantage] La source est en version bêta. Voir [Présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de sources étiquetées bêta.
+>La source [!DNL Teradata Vantage] est en version bêta. Consulter la [présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation des sources étiquetées bêta.
 
 Une connexion de base représente la connexion authentifiée entre une source et Adobe Experience Platform.
 
@@ -25,7 +25,7 @@ Ce tutoriel vous guide tout au long des étapes de création dʼune connexion de
 Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
 
 * [Sources](../../../../home.md) : [!DNL Experience Platform] permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services [!DNL Platform].
-* [Sandbox](../../../../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuelles qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
+* [Sandbox](../../../../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
 ### Utiliser les API Platform
 
@@ -100,7 +100,7 @@ Une réponse réussie renvoie la nouvelle connexion de , y compris son identifia
 }
 ```
 
-En suivant ce tutoriel, vous avez créé une [!DNL Teradata Vantage] connexion de base à l’aide de [!DNL Flow Service] API. Vous pouvez utiliser cet identifiant de connexion de base dans les tutoriels suivants :
+Ce tutoriel vous a permis de créer une connexion de base à [!DNL Teradata Vantage] à l’aide de l’API [!DNL Flow Service]. Vous pouvez utiliser cet identifiant de connexion de base dans les tutoriels suivants : 
 
-* [Explorez la structure et le contenu de vos tableaux de données à l’aide du [!DNL Flow Service] API](../../explore/tabular.md)
+* [Explorez la structure et le contenu de vos tableaux de données à l’aide de l’API  [!DNL Flow Service] .](../../explore/tabular.md)
 * [Créez un flux de données pour importer des données de base de données dans Platform à l’aide de la fonction [!DNL Flow Service] API](../../collect/database-nosql.md)

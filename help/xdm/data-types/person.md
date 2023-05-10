@@ -6,8 +6,8 @@ description: Ce document présente un aperçu du type de données XDM (Person Ex
 exl-id: f28a52be-90c7-4ed0-a460-97165bb58046
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '341'
-ht-degree: 21%
+source-wordcount: '338'
+ht-degree: 20%
 
 ---
 
@@ -28,7 +28,7 @@ ht-degree: 21%
 | `nationality` | Chaîne | La relation juridique entre une personne et son état représentée à l’aide du code ISO 3166-1 Alpha-2. Le format de cette propriété doit être conforme à cette expression régulière. `^[A-Z]{2}$`. |
 | `taxId` | Chaîne | ID fiscal ou fiscal de la personne, comme le Numéro d&#39;identification du contribuable (TIN) aux États-Unis ou le Certificado de l&#39;identification fiscale (CIF/NIF) en Espagne. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Pour obtenir plus d’informations sur ce type de données, reportez-vous au référentiel XDM public:
 

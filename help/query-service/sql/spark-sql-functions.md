@@ -5,7 +5,7 @@ title: Fonctions Spark SQL dans Query Service
 description: Cette documentation contient des informations sur les fonctions Spark SQL qui étendent les fonctionnalités de SQL.
 exl-id: 59e6d82b-3317-456d-8c56-3efd5978433a
 source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '3866'
 ht-degree: 100%
 

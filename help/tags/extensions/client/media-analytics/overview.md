@@ -130,7 +130,7 @@ L’extension MA expose les modules partagés `get-instance` et `media-heartbeat
 
       | Propriété | Description | Obligatoire |
       | :--- | :--- | :--- |
-      | Fournisseur de vidéos en ligne | Nom de la plateforme vidéo en ligne sur laquelle le contenu est distribué. | Non. Le cas échéant, remplace la valeur définie pendant la configuration de l’extension. |
+      | Online Video Provider | Nom de la plateforme vidéo en ligne sur laquelle le contenu est distribué. | Non. Le cas échéant, remplace la valeur définie pendant la configuration de l’extension. |
       | Nom du lecteur | Le nom du lecteur multimédia en cours d’utilisation (par exemple, « AVPlayer », « Lecteur HTML5 », « Mon lecteur personnalisé ») | Non. Le cas échéant, remplace la valeur définie pendant la configuration de l’extension. |
       | Canal | Propriété du nom de canal | Non. Le cas échéant, remplace la valeur définie pendant la configuration de l’extension. |
    **Valeur renvoyée** : une promesse qui est résolue avec une instance `MediaHeartbeat` ou rejetée avec un message d’erreur.

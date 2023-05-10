@@ -19,7 +19,7 @@ Maintenant que vous savez quels en-têtes utiliser, vous êtes prêt(e) à comme
 
 ### Récupération d’une liste de toutes les exécutions pour une requête planifiée spécifiée
 
-Vous pouvez récupérer une liste de toutes les exécutions pour une requête planifiée spécifique, qu’elles soient en cours ou déjà terminées. Pour ce faire, effectuez une requête GET sur le point de terminaison `/schedules/{SCHEDULE_ID}/runs`, où `{SCHEDULE_ID}` correspond à la valeur `id` de la requête planifiée dont vous souhaitez récupérer les exécutions.
+Vous pouvez récupérer une liste de toutes les exécutions pour une requête planifiée spécifique, qu’elles soient en cours ou déjà terminées. Pour ce faire, effectuez une requête GET sur le point d’entrée `/schedules/{SCHEDULE_ID}/runs`, où `{SCHEDULE_ID}` correspond à la valeur `id` de la requête planifiée dont vous souhaitez récupérer les exécutions.
 
 **Format d’API**
 
@@ -35,7 +35,7 @@ GET /schedules/{SCHEDULE_ID}/runs?{QUERY_PARAMETERS}
 
 **Paramètres de requête**
 
-Vous trouverez ci-dessous une liste des paramètres de requête disponibles pour répertorier les exécutions pour une requête planifiée spécifiée. Tous ces paramètres sont facultatifs. En passant un appel vers ce point de terminaison sans paramètres, vous récupérerez toutes les exécutions disponibles pour une requête planifiée spécifiée.
+Vous trouverez ci-dessous une liste des paramètres de requête disponibles pour répertorier les exécutions pour une requête planifiée spécifiée. Tous ces paramètres sont facultatifs. En passant un appel vers ce point d’entrée sans paramètres, vous récupérerez toutes les exécutions disponibles pour une requête planifiée spécifiée.
 
 | Paramètre | Description |
 | --------- | ----------- |
@@ -152,7 +152,7 @@ Une réponse réussie renvoie un état HTTP 200 avec une liste d’exécutions 
 
 ### Déclenchement immédiat d’une exécution pour une requête planifiée spécifique
 
-Vous pouvez immédiatement déclencher une exécution pour une requête planifiée spécifiée en effectuant une requête POST sur le point de terminaison `/schedules/{SCHEDULE_ID}/runs`, où `{SCHEDULE_ID}` correspond à la valeur `id` de la requête planifiée dont vous souhaitez déclencher l’exécution.
+Vous pouvez immédiatement déclencher une exécution pour une requête planifiée spécifiée en effectuant une requête POST sur le point d’entrée `/schedules/{SCHEDULE_ID}/runs`, où `{SCHEDULE_ID}` correspond à la valeur `id` de la requête planifiée dont vous souhaitez déclencher l’exécution.
 
 **Format d’API**
 
@@ -183,7 +183,7 @@ Une réponse réussie renvoie un état HTTP 202 (Accepted) avec le message suiv
 
 ### Récupération des détails d’une exécution pour une requête planifiée spécifique
 
-Vous pouvez récupérer les détails d’une exécution pour une requête planifiée spécifique en effectuant une requête GET sur le point de terminaison `/schedules/{SCHEDULE_ID}/runs/{RUN_ID}` et en fournissant les identifiants de la requête planifiée et de l’exécution dans le chemin de requête.
+Vous pouvez récupérer les détails d’une exécution pour une requête planifiée spécifique en effectuant une requête GET sur le point d’entrée `/schedules/{SCHEDULE_ID}/runs/{RUN_ID}` et en fournissant les identifiants de la requête planifiée et de l’exécution dans le chemin de requête.
 
 **Format d’API**
 
@@ -244,7 +244,7 @@ Une réponse réussie renvoie un état HTTP 200 avec les détails de l’exécu
 
 ### Arrêt immédiat d’une exécution pour une requête planifiée spécifique
 
-Vous pouvez immédiatement arrêter une exécution pour une requête planifiée spécifique en effectuant une requête PATCH sur le point de terminaison `/schedules/{SCHEDULE_ID}/runs/{RUN_ID}` et en fournissant les identifiants de la requête planifiée et de l’exécution dans le chemin de requête.
+Vous pouvez immédiatement arrêter une exécution pour une requête planifiée spécifique en effectuant une requête PATCH sur le point d’entrée `/schedules/{SCHEDULE_ID}/runs/{RUN_ID}` et en fournissant les identifiants de la requête planifiée et de l’exécution dans le chemin de requête.
 
 **Format d’API**
 

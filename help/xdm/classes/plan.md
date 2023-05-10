@@ -4,8 +4,8 @@ description: Ce document présente la classe Plan dans le modèle de données d�
 exl-id: ccff962d-3104-482c-8d65-d2bd2602a9be
 source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
 workflow-type: tm+mt
-source-wordcount: '152'
-ht-degree: 6%
+source-wordcount: '149'
+ht-degree: 4%
 
 ---
 
@@ -21,6 +21,6 @@ Dans le modèle de données d’expérience (XDM), la variable [!UICONTROL Plan]
 | `planId` | [!UICONTROL Chaîne] | Identifiant unique du plan. |
 | `planName` | [!UICONTROL Chaîne] | Nom du plan. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 La classe peut être étendue à l’aide de la fonction [[!UICONTROL Détails du plan de soins de santé] groupe de champs](../field-groups/plan/healthcare-plan-details.md) pour décrire plus en détail un régime d’assurance maladie.

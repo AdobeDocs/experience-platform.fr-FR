@@ -6,8 +6,8 @@ description: Ce document fournit un aperçu du type de données XDM (Experience 
 exl-id: 31108e57-d416-485b-a6c3-4ebc4f5b1152
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '411'
-ht-degree: 14%
+source-wordcount: '408'
+ht-degree: 13%
 
 ---
 
@@ -30,7 +30,7 @@ Le type de données est destiné aux détails complets de la page et aux chargem
 | `siteSection` | Chaîne | Nom normatif de la section du site où se trouve cette page web. Vous pouvez l’utiliser pour classer ou catégoriser l’interaction. |
 | `viewName` | Chaîne | Nom de la vue, dans une page. Cette propriété est généralement utilisée avec les applications d’une seule page ou les pages qui comportent des onglets ou des contrôles qui modifient la plupart de la mise en page. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Pour obtenir plus d’informations sur ce type de données, reportez-vous au référentiel XDM public:
 

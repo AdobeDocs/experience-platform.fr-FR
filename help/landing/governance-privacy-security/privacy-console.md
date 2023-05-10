@@ -3,8 +3,8 @@ title: Présentation de la console de confidentialité
 description: Découvrez comment surveiller vos workflows liés à la confidentialité dans l’interface utilisateur de Adobe Experience Platform.
 source-git-commit: 1fac36a0fd767add92283cd256d8bcea783ecf3b
 workflow-type: tm+mt
-source-wordcount: '406'
-ht-degree: 4%
+source-wordcount: '403'
+ht-degree: 3%
 
 ---
 
@@ -38,7 +38,7 @@ La fonction de chaque widget est expliquée ci-dessous :
 | Les utilisateurs les plus principaux | Affiche les utilisateurs de Platform les plus principaux de votre entreprise, tels qu’ils ont été capturés par [journaux d’audit](./audit-logs/overview.md) pour la période sélectionnée. Utilisez le menu déroulant pour modifier la période entre les 7 derniers jours, 14 et 30 jours. |
 | Requêtes de titulaire de données | Affiche le nombre de demandes du sujet des données envoyées et terminées par [Privacy Service](../../privacy-service/home.md) pour un jour donné. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Guides de cas d’utilisation
 
@@ -50,7 +50,7 @@ La console fournit plusieurs guides intégrés au produit qui vous présentent l
 
 Pour plus d’informations sur les différents services Platform liés aux cas d’utilisation de la confidentialité, consultez la documentation suivante :
 
-* [Contrôle d’accès basé sur attribut](../../access-control/abac/overview.md)
+* [Contrôle d’accès basé sur les attributs](../../access-control/abac/overview.md)
 * [Journaux d’audit](./audit-logs/overview.md)
 * [Gouvernance des données](../../data-governance/home.md)
 * [Hygiène des données](../../hygiene/home.md)

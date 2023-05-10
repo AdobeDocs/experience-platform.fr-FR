@@ -7,7 +7,7 @@ hidefromtoc: true
 exl-id: 36318163-ba07-4209-b1be-dc193ab7ba41
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
-source-wordcount: '1363'
+source-wordcount: '1360'
 ht-degree: 10%
 
 ---
@@ -16,13 +16,13 @@ ht-degree: 10%
 
 >[!IMPORTANT]
 >
->Le [!DNL Shared Device Detection] est en version bêta. Ses fonctionnalités et sa documentation peuvent faire l’objet de modifications.
+>Le [!DNL Shared Device Detection] est en version bêta. Les fonctionnalités et la documentation peuvent faire l’objet de changements.
 
 Adobe Experience Platform [!DNL Identity Service] vous permet de mieux connaître vos clients et leurs comportements, en établissant un lien entre les identités des différents appareils et systèmes, ce qui vous permet de proposer des expériences numériques personnelles et percutantes en temps réel.
 
 [!DNL Shared Device] fait référence aux appareils utilisés par plusieurs individus. Les tablettes, les ordinateurs de bibliothèque et les kiosques sont des exemples d’appareils partagés. Par le biais de la [!DNL Shared Device Detection] , il est possible d’empêcher la fusion de différents utilisateurs d’un même appareil en une seule identité, ce qui permet une représentation plus précise d’un individu.
 
-Avec [!DNL Shared Device Detection] vous pouvez :
+Avec [!DNL Shared Device Detection], vous pouvez :
 
 * créer des graphiques d’identités distincts pour différents utilisateurs d’un même appareil ;
 * empêcher le mélange de données provenant de différentes personnes utilisant le même appareil ;
@@ -55,7 +55,7 @@ Il est important de comprendre la terminologie suivante lorsque vous utilisez
 | Espace de noms d’identité utilisateur | L’espace de noms d’identité de l’utilisateur représente l’utilisateur authentifié (connecté) d’un appareil partagé. |
 | Dernier utilisateur authentifié | Le dernier utilisateur authentifié représente l’utilisateur qui a été connecté pour la dernière fois à un appareil, si un appareil est connecté par plusieurs comptes. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 [!DNL Shared Device Detection] fonctionne en établissant deux espaces de noms : la valeur **Espace de noms d’identité partagée** et le **Espace de noms d’identité utilisateur**.
 
@@ -74,7 +74,7 @@ Examinez l’exemple suivant pour mieux comprendre comment [!DNL Shared Device D
 >
 >Dans ce diagramme, l’espace de noms d’identité partagée est configuré sur ECID et l’espace de noms d’identité utilisateur est configuré sur l’identifiant CRM.
 
-![diagramme](../images/shared-device/diagram.png)
+![Diagramme.](../images/shared-device/diagram.png)
 
 * Kevin et Nora partagent une tablette pour visiter un site de commerce électronique. Cependant, ils disposent tous deux de leurs propres comptes indépendants qu&#39;ils utilisent chacun pour naviguer et faire des achats en ligne ;
    * En tant qu’appareil partagé, la tablette dispose d’un ECID correspondant, qui représente l’ID de cookie du navigateur web de la tablette ;

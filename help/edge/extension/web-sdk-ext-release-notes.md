@@ -3,7 +3,7 @@ title: Notes de mise à jour de l’extension du SDK Web Adobe Experience Plat
 description: Extension de la balise SDK Web Adobe Experience Platform
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
 source-git-commit: edd1745467a95804681b5d6c6d33458329641c39
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1663'
 ht-degree: 100%
 

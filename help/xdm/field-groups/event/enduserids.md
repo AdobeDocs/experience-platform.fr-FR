@@ -6,8 +6,8 @@ description: Ce document présente un aperçu du groupe de champs Détails de l�
 exl-id: ff5b74f4-7700-4d10-821e-b50f80ea8c05
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '226'
-ht-degree: 15%
+source-wordcount: '223'
+ht-degree: 14%
 
 ---
 
@@ -33,7 +33,7 @@ ht-degree: 15%
 | `phonenumberid` | [Identité](../../data-types/identity.md) | ID de numéro de téléphone. |
 | `tntid` | [Identité](../../data-types/identity.md) | ID utilisateur final pour Adobe Target. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Pour plus d’informations sur le groupe de champs, reportez-vous au référentiel XDM public :
 

@@ -135,7 +135,7 @@ L’appel de cet élément de données renvoie une valeur en fonction des argume
 
 ### `getTimeParting`
 
-Permet de configurer et de configurer le [`getTimeParting` Module externe Analytics](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/gettimeparting.html). Le `getTimeParting` l’élément de données capture les détails du moment où une activité mesurable a lieu sur votre site. Cet élément de données est utile lorsque vous souhaitez ventiler les mesures selon une division répétable du temps sur une période donnée. Ainsi, vous pouvez comparer les taux de conversion entre deux jours différents de la semaine, par exemple tous les dimanches contre tous les jeudis. Vous pouvez également comparer les périodes de la journée, par exemple tous les matins contre tous les soirs.
+Permet de configurer et de configurer le [`getTimeParting` Module externe Analytics](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/gettimeparting.html?lang=fr). Le `getTimeParting` l’élément de données capture les détails du moment où une activité mesurable a lieu sur votre site. Cet élément de données est utile lorsque vous souhaitez ventiler les mesures selon une division répétable du temps sur une période donnée. Ainsi, vous pouvez comparer les taux de conversion entre deux jours différents de la semaine, par exemple tous les dimanches contre tous les jeudis. Vous pouvez également comparer les périodes de la journée, par exemple tous les matins contre tous les soirs.
 
 Le `getTimeParting` L’élément de données utilise l’argument suivant :
 

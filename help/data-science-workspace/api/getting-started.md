@@ -15,7 +15,7 @@ ht-degree: 74%
 
 Le [!DNL Sensei Machine Learning] L’API fournit un mécanisme permettant aux spécialistes des données d’organiser et de gérer les services d’apprentissage automatique, de l’intégration des algorithmes à l’expérimentation et au déploiement des services.
 
-Ce guide de développement décrit les étapes à suivre pour vous aider à prendre en main l’[API Sensei Machine Learning](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) et présente les appels d’API visant à effectuer des opérations CRUD sur diverses ressources de Data Science Workspace.
+Ce guide de développement décrit les étapes à suivre pour vous aider à prendre en main l’[API Sensei Machine Learning](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) et présente les appels d’API visant à effectuer des opérations CRUD sur diverses ressources de l’espace de travail de science des données.
 
 ## Prise en main
 
@@ -25,7 +25,7 @@ Vous devez avoir suivi le tutoriel portant sur l’[authentification](https://ex
 * x-api-key : `{API_KEY}`
 * x-gw-ims-org-id : `{ORG_ID}`
 
-Dans [!DNL Experience Platform], toutes les ressources sont isolées dans des sandbox virtuelles spécifiques. Toutes les requêtes envoyées aux API [!DNL Platform] nécessitent un en-tête spécifiant le nom de la sandbox dans laquelle l’opération sera effectuée :
+Dans [!DNL Experience Platform], toutes les ressources sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes envoyées aux API [!DNL Platform] nécessitent un en-tête spécifiant le nom du sandbox dans lequel l’opération sera effectuée :
 
 * x-sandbox-name : `{SANDBOX_NAME}`
 
@@ -37,12 +37,12 @@ Toutes les requêtes contenant un payload (POST, PUT, PATCH) requièrent un en-t
 
 ## Étapes suivantes
 
-Une fois que vous disposez des informations d’authentification requises, vous pouvez accéder aux sections suivantes de ce guide de développement afin de consulter des exemples d’appels API aux groupes de points de terminaison suivants :
+Une fois que vous disposez des informations d’authentification requises, vous pouvez accéder aux sections suivantes de ce guide de développement afin de consulter des exemples d’appels API aux groupes de points d’entrée suivants :
 
 * [Moteurs](./engines.md)
 * [Expériences](./experiments.md)
 * [Insights](./insights.md)
 * [MLInstances (recettes)](./mlinstances.md)
-* [MLService](./mlservices.md)
+* [MLServices](./mlservices.md)
 * [Modèles](./models.md)
 * [Annexe](./appendix.md)

@@ -6,7 +6,7 @@ description: Ce document présente la classe XDM Individual Profile.
 exl-id: 83b22462-79ce-4024-aa50-a9bd800c0f81
 source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
-source-wordcount: '598'
+source-wordcount: '595'
 ht-degree: 38%
 
 ---
@@ -31,7 +31,7 @@ Le [!DNL XDM Individual Profile] La classe elle-même fournit plusieurs valeurs 
 | `repositoryCreatedBy` | L’identifiant de l’utilisateur qui a créé l’enregistrement. |
 | `repositoryLastModifiedBy` | L’identifiant de l’utilisateur qui a modifié l’enregistrement pour la dernière fois. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Groupes de champs compatibles {#field-groups}
 

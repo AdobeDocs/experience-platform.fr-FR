@@ -6,13 +6,13 @@ exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
 source-git-commit: 732e6d3d53d983f3390941f4694d2c542d882004
 workflow-type: tm+mt
 source-wordcount: '258'
-ht-degree: 57%
+ht-degree: 58%
 
 ---
 
 # Présentation des destinations publicitaires {#advertising-destinations}
 
-## Aperçu {#overview}
+## Présentation {#overview}
 
 Connectez Adobe Experience Platform à des plateformes publicitaires telles que les plateformes côté demande (DSP), les plateformes côté offre (SSP) et les réseaux publicitaires afin de partager des audiences connues et pseudonymes avec ces plateformes.
 
@@ -27,7 +27,7 @@ Pour comprendre la différence entre les connexions et les extensions, voir [Con
 ### Connexions
 
 * [Connexion Adobe Advertising Cloud](adobe-advertising-cloud-connection.md)
-* [(Version bêta) Connexion Amazon Ads](amazon-ads.md)
+* [Connexion Amazon Ads (Beta)](amazon-ads.md)
 * [(Version bêta) Connexion Criteo](criteo.md)
 * [Connexion Google Display &amp; Video 360](google-dv360.md)
 * [Connexion Google Ads](google-ads-destination.md)

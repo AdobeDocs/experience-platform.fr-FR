@@ -6,8 +6,8 @@ description: Découvrez comment définir un champ de tableau dans l’interface 
 exl-id: 9ac55554-c29b-40b2-9987-c8c17cc2c00c
 source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
 workflow-type: tm+mt
-source-wordcount: '366'
-ht-degree: 2%
+source-wordcount: '363'
+ht-degree: 1%
 
 ---
 
@@ -31,7 +31,7 @@ Les contrôles de configuration supplémentaires pour les tableaux sont les suiv
 | [!UICONTROL Longueur maximale] | Nombre maximal d’éléments que le tableau doit contenir pour que l’ingestion soit réussie. |
 | [!UICONTROL Éléments uniques uniquement] | Si la variable est définie sur &quot;[!UICONTROL True]&quot;, chaque élément du tableau doit être unique pour que l’ingestion réussisse. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Lorsque vous avez terminé de configurer le champ, sélectionnez **[!UICONTROL Appliquer]** pour appliquer la modification au schéma.
 

@@ -5,7 +5,7 @@ exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
 source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '1052'
-ht-degree: 7%
+ht-degree: 10%
 
 ---
 
@@ -59,7 +59,7 @@ Reportez-vous au document sur [modification des tableaux de bord](../customize/m
 
 Adobe fournit des widgets standard que vous pouvez utiliser pour visualiser différentes mesures liées à vos profils de compte.
 
-Pour en savoir plus sur chacun des widgets standard disponibles, sélectionnez le nom d’un widget dans la liste suivante :
+Pour en savoir plus sur chacun des widgets standards disponibles, sélectionnez le nom d’un widget dans la liste suivante :
 
 * [ du nombre total de comptes par secteur](#total-accounts-by-industry)
 * [Profils de compte ajoutés](#account-profiles-added)
@@ -108,4 +108,4 @@ Le menu déroulant du widget vous permet de sélectionner le modèle de notation
 
 ## Étapes suivantes
 
-En suivant ce document, vous devez maintenant savoir comment localiser la variable [!UICONTROL Profils de compte] tableau de bord. Vous devez également comprendre les mesures affichées dans les widgets disponibles. Pour en savoir plus sur l’utilisation des profils de compte dans le cadre de vos données B2B dans l’interface utilisateur de l’Experience Platform, reportez-vous à la section [présentation des profils de compte](../../rtcdp/accounts/account-profile-overview.md) pour Adobe Real-Time CDP, édition B2B.
+En suivant ce document, vous devez maintenant savoir comment localiser la variable [!UICONTROL Profils de compte] tableau de bord. Vous devriez également comprendre désormais les mesures affichées dans les widgets disponibles. Pour en savoir plus sur l’utilisation des profils de compte dans le cadre de vos données B2B dans l’interface utilisateur de l’Experience Platform, reportez-vous à la section [présentation des profils de compte](../../rtcdp/accounts/account-profile-overview.md) pour Adobe Real-Time CDP, édition B2B.

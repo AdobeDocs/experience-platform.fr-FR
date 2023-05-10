@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;accueil;rubriques populaires;contrôle d’accès;contrôle d’accès basé sur les attributs;ABAC
+keywords: Experience Platform;accueil;rubriques populaires;contrôle d’accès;contrôle d’accès basé sur les attributs;ABAC
 title: Parcourir le contrôle d’accès basé sur les attributs
 description: Ce document fournit des informations sur l’utilisation de l’interface Autorisations dans Adobe Experience Cloud.
 exl-id: 39634bde-8858-44a6-b39a-776846654fc1
 source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
 source-wordcount: '347'
-ht-degree: 21%
+ht-degree: 36%
 
 ---
 
@@ -23,7 +23,7 @@ Avec [!UICONTROL Autorisations], vous pouvez configurer :
 * [Sandbox](./sandboxes.md)
 * [Utilisateurs](./users.md)
 
-Pour accéder aux autorisations de contrôle d’accès basées sur des attributs pour [!DNL Experience Cloud], vous devez être un administrateur de votre entreprise qui s’abonne à [!DNL Experience Cloud]. Bien qu’Adobe prenne en charge des hiérarchies d’administrateurs flexibles pour vos organisations, vous devez être un administrateur de produit pour que Adobe Experience Platform puisse configurer des autorisations. Pour en savoir plus, consultez l’article d’Adobe Help Center sur les [rôles administratifs](https://helpx.adobe.com/fr/enterprise/using/admin-roles.html).
+Pour accéder aux autorisations de contrôle d’accès basées sur des attributs pour [!DNL Experience Cloud], vous devez être un administrateur de votre entreprise qui s’abonne à [!DNL Experience Cloud]. Bien qu’Adobe prenne en charge des hiérarchies d’administrateurs flexibles pour vos organisations, vous devez être un administrateur de produit pour que Adobe Experience Platform puisse configurer des autorisations. Pour en savoir plus, consultez l’article du Centre d’aide Adobe sur les [rôles administratifs](https://helpx.adobe.com/fr/enterprise/using/admin-roles.html).
 
 Si vous ne disposez pas de droits d’administrateur, contactez votre administrateur système pour obtenir l’accès.
 
@@ -35,7 +35,7 @@ L’espace de travail du contrôle d’accès basé sur les attributs pour Adobe
 
 >[!IMPORTANT]
 >
->Une fois que votre organisation a activé le contrôle d’accès basé sur les attributs, vous pouvez commencer à utiliser les autorisations sur Adobe Experience Cloud, au lieu des profils de produit dans Adobe Admin Console, pour gérer les autorisations des utilisateurs, fonctionnalités, libellés et autres ressources de votre organisation.
+>Quand votre organisation a activé le contrôle d’accès basé sur les attributs, vous pouvez commencer à utiliser les autorisations sur Adobe Experience Cloud, au lieu des profils de produit dans Adobe Admin Console, pour gérer les autorisations des utilisateurs, les fonctionnalités, les libellés et autres ressources de votre organisation.
 
 ![flac-select-rôles](../../images/flac-ui/flac-select-roles.png)
 

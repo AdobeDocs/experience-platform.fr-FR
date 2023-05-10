@@ -4,8 +4,8 @@ description: Ce tutoriel décrit la syntaxe à utiliser pour trier et filtrer à
 exl-id: 029c3199-946e-4f89-ba7a-dac50cc40c09
 source-git-commit: ef8db14b1eb7ea555135ac621a6c155ef920e89a
 workflow-type: tm+mt
-source-wordcount: '607'
-ht-degree: 7%
+source-wordcount: '586'
+ht-degree: 4%
 
 ---
 
@@ -127,7 +127,7 @@ Selon l’entité de service de flux que vous récupérez, différentes proprié
 | `providerId` | `/connectionSpecs?property=providerId==3897933` |
 | `attributes.{ATTRIBUTE_NAME}` | `/connectionSpecs?property=attributes.sampleAttribute="abc"` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **`flowSpec`**
 
@@ -137,7 +137,7 @@ Selon l’entité de service de flux que vous récupérez, différentes proprié
 | `name` | `/flowSpecs?property=name==TestConn` |
 | `providerId` | `/flowSpecs?property=providerId==3897933` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **`connection`**
 
@@ -149,7 +149,7 @@ Selon l’entité de service de flux que vous récupérez, différentes proprié
 | `connectionSpec.id` | `/connections?property=connectionSpec.id==938903,849048` |
 | `state` | `/connections?property=state==enabled` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **`sourceConnection`**
 
@@ -159,7 +159,7 @@ Selon l’entité de service de flux que vous récupérez, différentes proprié
 | `connectionSpec.id` | `/sourceConnections?property=connectionSpec.id==938903,849048` |
 | `baseConnectionId` | `/sourceConnections?property=baseConnectionId==983908,4908095` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **`targetConnection`**
 
@@ -169,7 +169,7 @@ Selon l’entité de service de flux que vous récupérez, différentes proprié
 | `connectionSpec.id` | `/targetConnections?property=connectionSpec.id==938903,849048` |
 | `baseConnectionId` | `/targetConnections?property=baseConnectionId==983908,4908095` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **`flow`**
 
@@ -183,7 +183,7 @@ Selon l’entité de service de flux que vous récupérez, différentes proprié
 | `sourceConnectionIds` | `/flows?property=sourceConnectionIds[]==9874984,6980696` |
 | `targetConnectionIds` | `/flows?property=targetConnectionIds[]==598590,690666` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **`run`**
 
@@ -193,7 +193,7 @@ Selon l’entité de service de flux que vous récupérez, différentes proprié
 | `flowId` | `/runs?property=flowId==8749844` |
 | `state` | `/runs?property=state==inProgress` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Étapes suivantes
 

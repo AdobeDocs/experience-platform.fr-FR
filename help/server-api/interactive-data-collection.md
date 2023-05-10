@@ -5,7 +5,7 @@ exl-id: 1b06e755-b6a9-42dd-96c1-98ad67e7d222
 source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
 workflow-type: tm+mt
 source-wordcount: '138'
-ht-degree: 7%
+ht-degree: 19%
 
 ---
 
@@ -63,7 +63,7 @@ curl -X POST "https://server.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM
 | Paramètre | Type | Obligatoire | Description |
 | --- | --- | --- | --- |
 | `dataStreamId` | `String` | Oui. | Identifiant de la banque de données. |
-| `requestId` | `String` | Non | Fournissez un ID aléatoire client pour les demandes de serveur interne corrélées. Si aucun n’est fourni, le réseau Edge en génère un et le renvoie dans la réponse . |
+| `requestId` | `String` | Non | Fournissez un ID aléatoire client pour les demandes de serveur interne corrélées. Si aucun n’est fourni, le Edge Network en génère un et le renvoie dans la réponse. |
 
 ### Réponse {#response}
 

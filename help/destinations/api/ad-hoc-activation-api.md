@@ -20,7 +20,7 @@ ht-degree: 18%
 >
 >Voir [Exécution de la tâche d’activation ad hoc](#activation-job) plus loin dans ce tutoriel pour plus d’informations.
 
-## Aperçu {#overview}
+## Présentation {#overview}
 
 L’API d’activation ad hoc permet aux spécialistes du marketing d’activer par programmation les segments d’audience vers les destinations, de manière rapide et efficace, dans les cas où une activation immédiate est requise.
 

@@ -7,7 +7,7 @@ exl-id: afb41878-4205-4c64-af4d-e2740f852785
 source-git-commit: f31b54622c63f96fb8fa727f80dda295a926e2c7
 workflow-type: tm+mt
 source-wordcount: '505'
-ht-degree: 3%
+ht-degree: 11%
 
 ---
 
@@ -29,11 +29,11 @@ Pour les destinations par lot, vous pouvez mettre à jour la clé d’accès ou 
 
 Suivez les étapes ci-dessous pour mettre à jour les détails de connexion vers les destinations existantes.
 
-1. Connectez-vous au [Interface utilisateur Experience Platform](https://platform.adobe.com/) et sélectionnez **[!UICONTROL Destinations]** dans la barre de navigation de gauche. Sélectionner **[!UICONTROL Comptes]** dans l’en-tête supérieur pour afficher vos comptes existants.
+1. Connectez-vous à l’[interface utilisateur Experience Platform](https://platform.adobe.com/) et sélectionnez **[!UICONTROL Destinations]** dans la barre de navigation de gauche. Sélectionner **[!UICONTROL Comptes]** dans l’en-tête supérieur pour afficher vos comptes existants.
 
    ![Onglet Comptes](../assets/ui/update-accounts/accounts-tab.png)
 
-2. Icône Sélectionner le filtre ![Icône Filtre](../assets/ui/update-accounts/filter.png) en haut à gauche pour lancer le panneau de tri. Le panneau de tri fournit une liste de toutes vos destinations. Vous pouvez sélectionner plusieurs destinations dans la liste pour afficher une sélection filtrée de comptes associés aux destinations sélectionnées.
+2. Sélectionnez l’icône filtre ![Icône Filtre](../assets/ui/update-accounts/filter.png) en haut à gauche pour lancer le panneau de tri. Le panneau de tri fournit une liste de toutes vos destinations. Vous pouvez sélectionner plusieurs destinations dans la liste pour afficher une sélection filtrée de comptes associés aux destinations sélectionnées.
 
    ![Filtrage des comptes de destination](../assets/ui/update-accounts/filter-accounts.png)
 

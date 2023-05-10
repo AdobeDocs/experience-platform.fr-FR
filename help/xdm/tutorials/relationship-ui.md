@@ -8,7 +8,7 @@ exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
 source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
 workflow-type: tm+mt
 source-wordcount: '1109'
-ht-degree: 28%
+ht-degree: 27%
 
 ---
 
@@ -55,13 +55,13 @@ Vous devez avoir déjà créé les deux schémas qui seront définis dans la rel
 >
 >Pour établir une relation, les deux schémas doivent avoir défini des identités Principales et être activés pour [!DNL Real-Time Customer Profile]. Voir la section sur [activation d’un schéma à utiliser dans Profile](./create-schema-ui.md#profile) dans le tutoriel sur la création de schémas si vous avez besoin de conseils sur la configuration de vos schémas en conséquence.
 
-Les relations de schéma sont représentées par un champ dédié dans un **schéma source** qui pointe vers un autre champ dans un **schéma de référence**. Dans les étapes suivantes, &quot;[!DNL Loyalty Members]&quot; sera le schéma source, tandis que &quot;[!DNL Hotels]&quot; agira comme schéma de référence.
+Les relations de schéma sont représentées par un champ dédié dans une **schéma source** qui pointe vers un autre champ dans un **schéma de référence**. Dans les étapes suivantes, &quot;[!DNL Loyalty Members]&quot; sera le schéma source, tandis que &quot;[!DNL Hotels]&quot; agira comme schéma de référence.
 
 Les sections suivantes décrivent la structure de chaque schéma utilisé dans ce tutoriel avant la définition d’une relation.
 
 ### [!DNL Loyalty Members] schema
 
-Le schéma source &quot;[!DNL Loyalty Members]&quot; est basé sur la variable [!DNL XDM Individual Profile] , contenant un champ qui décrit les membres d’un programme de fidélité. Un de ces champs, `personalEmail.addess`, sert d’identité Principale pour le schéma sous le [!UICONTROL Email] espace de noms. Comme vous pouvez le voir sous **[!UICONTROL Propriétés du schéma]**, ce schéma a été activé pour une utilisation dans [!DNL Real-Time Customer Profile].
+Le schéma source &quot;[!DNL Loyalty Members]&quot; est basé sur la variable [!DNL XDM Individual Profile] , contenant un champ qui décrit les membres d’un programme de fidélité. Un de ces champs, `personalEmail.addess`, sert d’identité Principale pour le schéma sous le [!UICONTROL Email] espace de noms. Comme vu sous **[!UICONTROL Propriétés du schéma]**, ce schéma peut être utilisé dans [!DNL Real-Time Customer Profile].
 
 ![](../images/tutorials/relationship/loyalty-members.png)
 

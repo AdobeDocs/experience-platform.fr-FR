@@ -33,7 +33,7 @@ Pour accéder au tableau de bord Profils dans l’interface utilisateur de Platf
 
 >[!NOTE]
 >
->Si votre organisation débute avec Platform et ne dispose pas encore de jeux de données ou de stratégies de fusion de profil actifs, le tableau de bord Profils n’est pas visible. Au lieu de cela, la variable [!UICONTROL Présentation] Cet onglet affiche des liens et de la documentation pour vous aider à prendre en main Real-time Customer Profile.
+>Si votre organisation débute avec Platform et ne dispose pas encore de jeux de données ou de politiques de fusion de profil actifs, le tableau de bord Profils n’est pas visible. Au lieu de cela, la variable [!UICONTROL Présentation] Cet onglet affiche des liens et de la documentation pour vous aider à prendre en main Real-time Customer Profile.
 
 ![Le tableau de bord Profils Experience Platform avec les options Profils et Aperçu en surbrillance.](../images/profiles/dashboard-overview.png)
 
@@ -71,19 +71,19 @@ L’onglet [!UICONTROL Parcourir] vous permet de rechercher et d’afficher les 
 
 Pour en savoir plus sur les fonctionnalités d’affichage des profils fournies dans l’interface utilisateur de Platform, consultez la documentation sur la [navigation dans les profils dans Adobe Real-time Customer Data Platform](../../rtcdp/profile/profile-browse.md).
 
-## Stratégies de fusion {#merge-policies}
+## Politiques de fusion {#merge-policies}
 
-Les mesures affichées dans le tableau de bord Profils reposent sur les stratégies de fusion appliquées à vos données Real-Time Customer Profile. Lorsque des données sont rassemblées à partir de plusieurs sources pour créer le profil client, les données peuvent contenir des valeurs en conflit. Par exemple, un jeu de données peut désigner un(e) client(e) comme « célibataire » tandis qu’un autre jeu de données peut désigner le/la client(e) comme « marié(e) ». La tâche de la stratégie de fusion consiste à déterminer les données à prioriser et à afficher dans le cadre du profil.
+Les mesures affichées dans le tableau de bord Profils reposent sur les stratégies de fusion appliquées à vos données Real-Time Customer Profile. Lorsque des données sont rassemblées à partir de plusieurs sources pour créer le profil client, les données peuvent contenir des valeurs en conflit. Par exemple, un jeu de données peut désigner un(e) client(e) comme « célibataire » tandis qu’un autre jeu de données peut désigner le/la client(e) comme « marié(e) ». La tâche de la politique de fusion consiste à déterminer les données à prioriser et à afficher dans le cadre du profil.
 
-Pour plus d’informations sur les stratégies de fusion, notamment sur la création, la modification et la déclaration d’une stratégie de fusion par défaut pour votre organisation, reportez-vous à la [présentation des stratégies de fusion](../../profile/merge-policies/overview.md).
+Pour plus d’informations sur les politiques de fusion, notamment sur la création, la modification et la déclaration d’une politique de fusion par défaut pour votre organisation, reportez-vous à la [présentation des politiques de fusion](../../profile/merge-policies/overview.md).
 
-Le tableau de bord sélectionne automatiquement une stratégie de fusion à utiliser. La stratégie de fusion appliquée peut être modifiée à l’aide du menu déroulant à côté du nom de la stratégie de fusion.
+Le tableau de bord sélectionne automatiquement une politique de fusion à utiliser. La politique de fusion appliquée peut être modifiée à l’aide du menu déroulant à côté du nom de la politique de fusion.
 
 >[!NOTE]
 >
->Le menu déroulant affiche uniquement les stratégies de fusion qui utilisent le schéma `_xdm.context.profile`. Cependant, si votre organisation a créé plusieurs stratégies de fusion, vous devrez peut-être faire défiler la liste complète des stratégies de fusion disponibles.
+>Le menu déroulant affiche uniquement les politiques de fusion qui utilisent le schéma `_xdm.context.profile`. Cependant, si votre organisation a créé plusieurs politiques de fusion, vous devrez peut-être faire défiler la liste complète des politiques de fusion disponibles.
 
-![Onglet Aperçu des profils avec le menu déroulant Stratégie de fusion en surbrillance.](../images/profiles/select-merge-policy.png)
+![Onglet Aperçu des profils avec le menu déroulant Politique de fusion en surbrillance.](../images/profiles/select-merge-policy.png)
 
 ## Schémas d’union
 
@@ -97,7 +97,7 @@ Consultez le guide de l’interface utilisateur du schéma d’union pour en sav
 
 Le tableau de bord est composé de widgets, qui sont des mesures en lecture seule fournissant des informations importantes sur vos données de profil.
 
-La date et l’heure de l’instantané le plus récent s’affichent en haut de l’onglet [!UICONTROL Présentation] à côté de la liste déroulante Stratégie de fusion. Toutes les données du widget sont exactes à cette date et cette heure. La date et l’heure de l’instantané sont fournies en UTC ; elles ne se trouvent pas dans le fuseau horaire de l’utilisateur/utilisatrice ou de l’organisation.
+La date et l’heure de l’instantané le plus récent s’affichent en haut de l’onglet [!UICONTROL Présentation] à côté de la liste déroulante Politique de fusion. Toutes les données du widget sont exactes à cette date et cette heure. La date et l’heure de l’instantané sont fournies en UTC ; elles ne se trouvent pas dans le fuseau horaire de l’utilisateur/utilisatrice ou de l’organisation.
 
 ![Onglet Aperçu du tableau de bord Profils avec la date et l’heure de l’instantané le plus récent en surbrillance.](../images/profiles/snapshot-timestamp.png)
 
@@ -122,7 +122,7 @@ Pour en savoir plus sur chacun des widgets standards disponibles, sélectionnez 
 * [[!UICONTROL Audiences]](#audiences)
 * [[!UICONTROL Audiences mappées au statut de destination]](#audiences-mapped-to-destination-status)
 * [[!UICONTROL Taille des audiences]](#audiences-size)
-* [[!UICONTROL Chevauchements d’audience par stratégie de fusion]](#audience-overlap-by-merge-policy)
+* [[!UICONTROL Chevauchements d’audience par politique de fusion]](#audience-overlap-by-merge-policy)
 * [[!UICONTROL Rapport de chevauchement d’audience]](#audience-overlap-report)
 
 ### [!UICONTROL Nombre de profils] {#profile-count}
@@ -130,15 +130,15 @@ Pour en savoir plus sur chacun des widgets standards disponibles, sélectionnez 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_profilecount"
 >title="Nombre de profils"
->abstract="Ce widget affiche le nombre total de profils fusionnés dans la banque de profils au moment où l’instantané a été pris. Le nombre dépend de la stratégie de fusion sélectionnée appliquée à vos données de profil."
+>abstract="Ce widget affiche le nombre total de profils fusionnés dans la banque de profils au moment où l’instantané a été pris. Le nombre dépend de la politique de fusion sélectionnée appliquée à vos données de profil."
 
-Le widget **[!UICONTROL Nombre de profils]** affiche le nombre total de profils fusionnés dans la banque de profils au moment où l’instantané a été pris. Ce nombre est le résultat de l’application de la stratégie de fusion sélectionnée à vos données de profil afin de fusionner les fragments de profil pour former un seul profil pour chaque individu.
+Le widget **[!UICONTROL Nombre de profils]** affiche le nombre total de profils fusionnés dans la banque de profils au moment où l’instantané a été pris. Ce nombre est le résultat de l’application de la politique de fusion sélectionnée à vos données de profil afin de fusionner les fragments de profil pour former un seul profil pour chaque individu.
 
-Pour en savoir plus, consultez la [section sur les stratégies de fusion plus haut dans ce document](#merge-policies).
+Pour en savoir plus, consultez la [section sur les politiques de fusion plus haut dans ce document](#merge-policies).
 
 >[!NOTE]
 >
->Le widget [!UICONTROL Nombre de profils] peut afficher un nombre différent du nombre de profils affiché dans l’onglet [!UICONTROL Parcourir] dans la section [!UICONTROL Profils] de l’interface utilisateur pour plusieurs raisons. La raison la plus courante est que l’onglet [!UICONTROL Parcourir] référence le nombre total de profils fusionnés en fonction de la stratégie de fusion par défaut de votre organisation, tandis que le widget [!UICONTROL Nombre de profils] référence le nombre total de profils fusionnés en fonction de la stratégie de fusion que vous avez sélectionnée pour afficher dans le tableau de bord.
+>Le widget [!UICONTROL Nombre de profils] peut afficher un nombre différent du nombre de profils affiché dans l’onglet [!UICONTROL Parcourir] dans la section [!UICONTROL Profils] de l’interface utilisateur pour plusieurs raisons. La raison la plus courante est que l’onglet [!UICONTROL Parcourir] référence le nombre total de profils fusionnés en fonction de la politique de fusion par défaut de votre organisation, tandis que le widget [!UICONTROL Nombre de profils] référence le nombre total de profils fusionnés en fonction de la politique de fusion que vous avez sélectionnée pour afficher dans le tableau de bord.
 >
 >Une autre raison courante est due aux différences entre le moment où l’instantané du tableau de bord est pris et le moment où l’exemple de tâche est exécuté pour l’onglet [!UICONTROL Parcourir]. Vous pouvez voir quand le widget [!UICONTROL Nombre de profils] a été mis à jour pour la dernière fois en regardant la date et l’heure sur le widget. Pour en savoir plus sur la manière dont l’exemple de tâche est déclenché sur la page [!UICONTROL Parcourir] , voir [section sur le nombre de profils dans le guide de l’interface utilisateur de Real-time Customer Profile](https://experienceleague.adobe.com/docs/experience-platform/profile/ui/user-guide.html?lang=fr#profile-count).
 
@@ -155,9 +155,9 @@ Le widget [!UICONTROL Tendance du nombre de profils] utilise un graphique linéa
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_profilescountchange"
 >title="Modification du nombre de profils"
->abstract="Ce widget affiche le nombre total de profils fusionnés **ajoutés** à la banque de profils au moment du dernier instantané. Le nombre dépend de la stratégie de fusion sélectionnée appliquée à vos données de profil."
+>abstract="Ce widget affiche le nombre total de profils fusionnés **ajoutés** à la banque de profils au moment du dernier instantané. Le nombre dépend de la politique de fusion sélectionnée appliquée à vos données de profil."
 
-Le widget **[!UICONTROL Modification du nombre de profils]** affiche le nombre de profils fusionnés ajoutés à la banque de profils depuis l’instantané précédent. Ce nombre est le résultat de l’application de la stratégie de fusion sélectionnée à vos données de profil afin de fusionner les fragments de profil pour former un seul profil pour chaque individu. Vous pouvez utiliser le sélecteur de liste déroulante pour afficher le nombre de profils ajoutés au cours des 30 derniers jours, des 90 derniers jours, ou des 12 derniers mois.
+Le widget **[!UICONTROL Modification du nombre de profils]** affiche le nombre de profils fusionnés ajoutés à la banque de profils depuis l’instantané précédent. Ce nombre est le résultat de l’application de la politique de fusion sélectionnée à vos données de profil afin de fusionner les fragments de profil pour former un seul profil pour chaque individu. Vous pouvez utiliser le sélecteur de liste déroulante pour afficher le nombre de profils ajoutés au cours des 30 derniers jours, des 90 derniers jours, ou des 12 derniers mois.
 
 >[!NOTE]
 >
@@ -170,11 +170,11 @@ Le widget **[!UICONTROL Modification du nombre de profils]** affiche le nombre d
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_profilesaddedtrend"
 >title="Tendance de modification du nombre de profils"
->abstract="Ce widget affiche le nombre de profils fusionnés qui ont été ajoutés quotidiennement à la banque de profils au cours des 30 derniers jours, des 90 derniers jours, ou des 12 derniers mois. Le nombre dépend également de la stratégie de fusion sélectionnée appliquée à vos données de profil."
+>abstract="Ce widget affiche le nombre de profils fusionnés qui ont été ajoutés quotidiennement à la banque de profils au cours des 30 derniers jours, des 90 derniers jours, ou des 12 derniers mois. Le nombre dépend également de la politique de fusion sélectionnée appliquée à vos données de profil."
 
-Le widget **[!UICONTROL Tendance de modification du nombre de profils]** affiche le nombre total de profils fusionnés qui ont été ajoutés quotidiennement à la banque de profils au cours des 30 derniers jours, des 90 derniers jours, ou des 12 derniers mois. Ce nombre est mis à jour chaque jour lorsque l’instantané est pris. Par conséquent, si vous deviez ingérer des profils dans Platform, le nombre de profils ne serait pas reflété tant que l’instantané suivant n’aurait pas été pris. Le nombre de profils ajoutés est le résultat de l’application de la stratégie de fusion sélectionnée à vos données de profil afin de fusionner les fragments de profil pour former un seul profil pour chaque individu.
+Le widget **[!UICONTROL Tendance de modification du nombre de profils]** affiche le nombre total de profils fusionnés qui ont été ajoutés quotidiennement à la banque de profils au cours des 30 derniers jours, des 90 derniers jours, ou des 12 derniers mois. Ce nombre est mis à jour chaque jour lorsque l’instantané est pris. Par conséquent, si vous deviez ingérer des profils dans Platform, le nombre de profils ne serait pas reflété tant que l’instantané suivant n’aurait pas été pris. Le nombre de profils ajoutés est le résultat de l’application de la politique de fusion sélectionnée à vos données de profil afin de fusionner les fragments de profil pour former un seul profil pour chaque individu.
 
-Pour en savoir plus, consultez la [section sur les stratégies de fusion plus haut dans ce document](#merge-policies).
+Pour en savoir plus, consultez la [section sur les politiques de fusion plus haut dans ce document](#merge-policies).
 
 Le widget **[!UICONTROL Tendance de modification du nombre de profils]** affiche un bouton « légendes » en haut à droite du widget. Sélectionnez **[!UICONTROL Légendes]** pour ouvrir la boîte de dialogue des légendes automatiques.
 
@@ -188,7 +188,7 @@ Un modèle de machine learning génère automatiquement des légendes pour décr
 
 <!-- This widget uses a line graph to illustrate the change in number of profiles filtered by a chosen source identity and merge policy. -->
 
-Ce widget filtre le nombre de profils en fonction d’une identité source sélectionnée et d’une stratégie de fusion, puis illustre la modification du nombre pour diverses périodes à l’aide d’un graphique linéaire. La stratégie de fusion est sélectionnée dans la liste déroulante d’aperçu située en haut de la page. L’identité source et la période sont sélectionnées dans les menus déroulants du widget. La tendance peut être visualisée sur des périodes de 30 jours, 90 jours et 12 mois.
+Ce widget filtre le nombre de profils en fonction d’une identité source sélectionnée et d’une politique de fusion, puis illustre la modification du nombre pour diverses périodes à l’aide d’un graphique linéaire. La politique de fusion est sélectionnée dans la liste déroulante d’aperçu située en haut de la page. L’identité source et la période sont sélectionnées dans les menus déroulants du widget. La tendance peut être visualisée sur des périodes de 30 jours, 90 jours et 12 mois.
 
 Ce widget vous permet de gérer vos besoins d’activation de destination en présentant le modèle de croissance des profils filtrés selon l’identité requise.
 
@@ -203,7 +203,7 @@ Ce widget vous permet de gérer vos besoins d’activation de destination en pr�
 
 Le widget **[!UICONTROL Profils par identité]** affiche la répartition des identités pour tous les profils fusionnés de votre banque de profils. Le nombre total de profils par identité (c’est-à-dire en additionnant les valeurs affichées pour chaque espace de noms) peut être supérieur au nombre total de profils fusionnés, car plusieurs espaces de noms peuvent être associés à un profil. Par exemple, si un client interagit avec votre marque sur plusieurs canaux, plusieurs espaces de noms seront associés à ce client individuel.
 
-Pour en savoir plus, consultez la [section sur les stratégies de fusion plus haut dans ce document](#merge-policies).
+Pour en savoir plus, consultez la [section sur les politiques de fusion plus haut dans ce document](#merge-policies).
 
 ![Le tableau de bord d’aperçu des profils avec le widget Profils par identité mis en surbrillance.](../images/profiles/profiles-by-identity.png)
 
@@ -292,7 +292,7 @@ The [!UICONTROL Unsegmented Profiles by Identity] widget categorizes the total n
 
 ### [!UICONTROL Audiences] {#audiences}
 
-Ce widget fournit le nombre total de segments prêts à être activés, en fonction de la stratégie de fusion choisie appliquée aux données de votre profil.
+Ce widget fournit le nombre total de segments prêts à être activés, en fonction de la politique de fusion choisie appliquée aux données de votre profil.
 
 Sélectionnez **[!UICONTROL Audiences]** pour accéder à l’onglet [!UICONTROL Parcourir] du tableau de bord [!UICONTROL Segments]. De là, vous pouvez voir une liste de toutes les définitions de segment pour votre organisation.
 
@@ -311,7 +311,7 @@ The visualization allows you to monitor the overall health of audiences within A
 
 ### [!UICONTROL Rapport de chevauchement des audiences] {#audience-overlap-report}
 
-Ce widget tabularise les données de chevauchement des audiences de tous les segments disponibles filtrés par stratégie de fusion. Une liste de cinq audiences classées du pourcentage de chevauchement le plus élevé au plus faible est fournie pour la stratégie de fusion choisie dans le menu déroulant en haut de l’écran. Les deux segments analysés sont répertoriés dans les colonnes [!UICONTROL NOM DU SEGMENT A] et [!UICONTROL NOM DU SEGMENT B]. Le chevauchement en pourcentage est fourni dans la troisième colonne avec une précision de douze décimales.
+Ce widget tabularise les données de chevauchement des audiences de tous les segments disponibles filtrés par politique de fusion. Une liste de cinq audiences classées du pourcentage de chevauchement le plus élevé au plus faible est fournie pour la politique de fusion choisie dans le menu déroulant en haut de l’écran. Les deux segments analysés sont répertoriés dans les colonnes [!UICONTROL NOM DU SEGMENT A] et [!UICONTROL NOM DU SEGMENT B]. Le chevauchement en pourcentage est fourni dans la troisième colonne avec une précision de douze décimales.
 
 Le rapport sur le chevauchement des audiences vous permet de créer de nouveaux segments hautement performants. L’observation des chevauchements au pourcentage élevé vous permet de supprimer des audiences et d’empêcher l’envoi d’une même audience vers différentes destinations. Elle vous aide également à identifier les informations cachées qui peuvent contribuer à une meilleure segmentation. Un chevauchement au pourcentage faible permet de localiser les profils uniques à rechercher.
 
@@ -339,7 +339,7 @@ Sélectionnez **[!UICONTROL Fermer]** pour revenir au tableau de bord des [!UICO
 
 ### [!UICONTROL Audiences mappées au statut de destination] {#audiences-mapped-to-destination-status}
 
-Le widget [!UICONTROL Audiences mappées au statut de destination] affiche le nombre total d’audiences mappées et non mappées dans une seule mesure et utilise un graphique en anneau pour illustrer la différence proportionnelle entre les totaux. Les nombres calculés dépendent de la stratégie de fusion choisie.
+Le widget [!UICONTROL Audiences mappées au statut de destination] affiche le nombre total d’audiences mappées et non mappées dans une seule mesure et utilise un graphique en anneau pour illustrer la différence proportionnelle entre les totaux. Les nombres calculés dépendent de la politique de fusion choisie.
 
 Les nombres individuels des audiences mappées ou non mappées s’affichent dans une boîte de dialogue lorsque le curseur survole la section correspondante du graphique en anneau.
 
@@ -347,7 +347,7 @@ Les nombres individuels des audiences mappées ou non mappées s’affichent dan
 
 ### [!UICONTROL Taille des audiences] {#audiences-size}
 
-Le widget [!UICONTROL Taille des audiences] fournit un tableau à deux colonnes qui répertorie jusqu’à 20 segments et le nombre total d’audiences contenues dans chaque segment. La liste est classée en fonction du nombre total d’audiences, du plus élevé au plus bas. Le nombre total de tailles d’audience dépend de la stratégie de fusion appliquée.
+Le widget [!UICONTROL Taille des audiences] fournit un tableau à deux colonnes qui répertorie jusqu’à 20 segments et le nombre total d’audiences contenues dans chaque segment. La liste est classée en fonction du nombre total d’audiences, du plus élevé au plus bas. Le nombre total de tailles d’audience dépend de la politique de fusion appliquée.
 
 ![Le widget Taille des audiences.](../images/profiles/audiences-size.png)
 
@@ -357,13 +357,13 @@ Pour afficher des informations complètes sur un segment, sélectionnez un nom d
 
 Consultez la documentation pour plus d’informations sur l’onglet [!UICONTROL  Parcourir] des [[!UICONTROL Segments] ](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html?lang=fr#browse).
 
-### [!UICONTROL Chevauchements d’audience par stratégie de fusion] {#audience-overlap-by-merge-policy}
+### [!UICONTROL Chevauchements d’audience par politique de fusion] {#audience-overlap-by-merge-policy}
 
-Ce widget utilise un diagramme de Venn pour afficher le chevauchement de deux segments sélectionnés. La stratégie de fusion est sélectionnée dans la liste déroulante d’aperçu située en haut de la page et les segments à analyser sont sélectionnés dans deux menus déroulants du widget. Le nombre total de profils contenus dans la définition de segment pertinente peut être affiché en passant la souris sur un cercle ou l’intersection.
+Ce widget utilise un diagramme de Venn pour afficher le chevauchement de deux segments sélectionnés. La politique de fusion est sélectionnée dans la liste déroulante d’aperçu située en haut de la page et les segments à analyser sont sélectionnés dans deux menus déroulants du widget. Le nombre total de profils contenus dans la définition de segment pertinente peut être affiché en passant la souris sur un cercle ou l’intersection.
 
 Ce widget affiche le croisement visuel des définitions de segment et vous permet d’optimiser la politique de segmentation en étudiant les similitudes entre les définitions de segment.
 
-![Le tableau de bord Profils de l’interface utilisateur de Platform avec la liste déroulante Stratégie de fusion et les menus déroulants de segment du widget en surbrillance.](../images/profiles/audience-overlap-by-merge-policy.png)
+![Le tableau de bord Profils de l’interface utilisateur de Platform avec la liste déroulante Politique de fusion et les menus déroulants de segment du widget en surbrillance.](../images/profiles/audience-overlap-by-merge-policy.png)
 
 
 <!-- ## (Beta) Profile efficacy widgets {#profile-efficacy-widgets}

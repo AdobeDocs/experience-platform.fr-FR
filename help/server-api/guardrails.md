@@ -50,7 +50,7 @@ Le tableau ci-dessous présente les valeurs limites par défaut. Si vous avez be
 
 | Point d’entrée | Demandes d’unités par seconde |
 | --- | --- |
-| `/v2/interact` | 4000 |
+| `/v2/interact` | 4 000 |
 | `/v2/collect` | 6 000 |
 
 

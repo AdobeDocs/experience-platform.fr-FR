@@ -4,7 +4,7 @@ description: Découvrez comment effectuer des appels au point d’entrée /envir
 exl-id: 4c22f799-8338-4cf0-980a-3900d725ab5d
 source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
-source-wordcount: '1038'
+source-wordcount: '1002'
 ht-degree: 100%
 
 ---
@@ -26,7 +26,7 @@ Les environnements sont organisés en trois types (ou étapes), chaque type ayan
 | Évaluation | Un |
 | Production | Un |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Ces types d’environnements ont un comportement similaire, mais sont utilisés à différentes étapes du [flux de travaux de publication de balises](../../ui/publishing/publishing-flow.md).
 
@@ -52,7 +52,7 @@ GET /properties/{PROPERTY_ID}/environments
 | --- | --- |
 | `PROPERTY_ID` | Le `id` de la propriété propriétaire des environnements. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >
@@ -176,7 +176,7 @@ GET /environments/{ENVIRONMENT_ID}
 | --- | --- |
 | `ENVIRONMENT_ID` | Le `id` de l’environnement que vous voulez rechercher. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Requête**
 
@@ -285,7 +285,7 @@ POST /properties/{PROPERTY_ID}/environments
 | --- | --- |
 | `PROPERTY_ID` | Le `id` de la [propriété](./properties.md) sous laquelle vous définissez l’environnement. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Requête**
 
@@ -330,7 +330,7 @@ curl -X POST \
 | `id` | Le `id` de l&#39;environnement que vous voulez mettre à jour. Il doit correspondre à la valeur `{ENVIRONMENT_ID}` fournie dans le chemin de requête. |
 | `type` | Le type de ressource en cours de mise à jour. Pour ce point d’entrée, la valeur doit être `environments`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Réponse**
 
@@ -427,7 +427,7 @@ PATCH /environments/{ENVIRONMENT_ID}
 | --- | --- |
 | `ENVIRONMENT_ID` | Le `id` de l&#39;environnement que vous voulez mettre à jour. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Requête**
 
@@ -457,7 +457,7 @@ curl -X PATCH \
 | `id` | Le `id` de l&#39;environnement que vous voulez mettre à jour. Il doit correspondre à la valeur `{ENVIRONMENT_ID}` fournie dans le chemin de requête. |
 | `type` | Le type de ressource en cours de mise à jour. Pour ce point d’entrée, la valeur doit être `environments`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Réponse**
 
@@ -554,7 +554,7 @@ DELETE /environments/{ENVIRONMENT_ID}
 | --- | --- |
 | `ENVIRONMENT_ID` | Le `id` de l&#39;environnement que vous souhaitez supprimer. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Requête**
 
@@ -590,7 +590,7 @@ GET  /environments/{ENVIRONMENT_ID}/builds
 | --- | --- |
 | `{ENVIRONMENT_ID}` | Le `id` de l’environnement dont vous souhaitez répertorier les versions. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Requête**
 
@@ -707,7 +707,7 @@ GET  /environments/{ENVIRONMENT_ID}/host
 | --- | --- |
 | `{ENVIRONMENT_ID}` | `id` de l’environnement dont vous souhaitez rechercher l’hôte. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Requête**
 
@@ -774,7 +774,7 @@ GET  /environments/{ENVIRONMENT_ID}/library
 | --- | --- |
 | `{ENVIRONMENT_ID}` | Le `id` de l’environnement dont vous souhaitez rechercher la bibliothèque. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Requête**
 
@@ -889,7 +889,7 @@ GET  /environments/{ENVIRONMENT_ID}/property
 | --- | --- |
 | `{ENVIRONMENT_ID}` | Le `id` de l’environnement dont vous souhaitez rechercher la propriété. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Requête**
 

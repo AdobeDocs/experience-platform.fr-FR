@@ -7,7 +7,7 @@ exl-id: 2c204f29-825f-4a5e-a7f6-40fc69263614
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '978'
-ht-degree: 21%
+ht-degree: 23%
 
 ---
 
@@ -34,7 +34,7 @@ Lorsque l’ingestion d’enregistrements dans la banque de profils augmente ou 
 * **Ingestion par lots :** Pour l’ingestion par lots, dans les 15 minutes suivant l’ingestion réussie d’un lot dans la banque de profils, si le seuil de 5 % d’augmentation ou de diminution est atteint, une tâche est exécutée pour mettre à jour le nombre.
 * **Ingestion par flux :** Pour les workflows de données en flux continu, une vérification est effectuée sur une base horaire afin de déterminer si le seuil de 5 % d’augmentation ou de diminution a été atteint. Si tel est le cas, une tâche est automatiquement déclenchée pour mettre à jour le décompte.
 
-La taille de l’échantillon de l’analyse dépend du nombre total d’entités dans votre banque de profils. Ces tailles d’échantillon sont représentées dans le tableau suivant :
+La taille de l’échantillon dépend du nombre total d’entités dans votre banque de profils. Ces tailles d’échantillon sont représentées dans le tableau suivant :
 
 | Entités dans la banque de profils | Taille de l’échantillon |
 | ------------------------- | ----------- |
@@ -48,7 +48,7 @@ La taille de l’échantillon de l’analyse dépend du nombre total d’entité
 
 ## Création d’une nouvelle prévisualisation {#create-preview}
 
-Vous pouvez créer une nouvelle prévisualisation en effectuant une requête POST au point de terminaison `/preview`.
+Vous pouvez créer une nouvelle prévisualisation en effectuant une requête POST au point d’entrée `/preview`.
 
 >[!NOTE]
 >

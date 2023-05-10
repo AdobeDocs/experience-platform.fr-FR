@@ -12,7 +12,7 @@ ht-degree: 10%
 
 # Conseils sur le client User-Agent
 
-## Aperçu {#overview}
+## Présentation {#overview}
 
 Chaque fois qu’un navigateur Web envoie une requête à un serveur Web, l’en-tête de la requête inclut des informations sur le navigateur et l’environnement sur lequel le navigateur est exécuté. Toutes ces données sont agrégées dans une chaîne appelée [!DNL User-Agent] chaîne.
 

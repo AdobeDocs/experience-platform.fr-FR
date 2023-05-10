@@ -4,8 +4,8 @@ description: Ce document présente un aperçu du groupe de champs de schéma Dé
 exl-id: cd3f4cd9-ee0e-4bdf-a630-dd2c3c3cc8c7
 source-git-commit: afdac5ce2ed967b4688d456a586c946bc2cf4179
 workflow-type: tm+mt
-source-wordcount: '154'
-ht-degree: 5%
+source-wordcount: '151'
+ht-degree: 3%
 
 ---
 
@@ -22,7 +22,7 @@ Le groupe de champs fournit un champ de type objet unique, `upgrades`. Les propr
 | `upgradeImpressions` | Tableau de [Impressions](../../data-types/impressions.md) | Tableau qui répertorie les impressions enregistrées (vues numériques ou engagements avec l’offre de mise à niveau) pour le client. |
 | `upgradeTransaction` | [Transaction](../../data-types/transaction.md) | Décrit la transaction de devise pour la mise à niveau. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Pour plus d’informations sur le groupe de champs, reportez-vous au référentiel XDM public :
 

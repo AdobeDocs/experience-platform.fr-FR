@@ -6,8 +6,8 @@ description: Ce document fournit un aperçu du type de données XDM Postal Addre
 exl-id: 94457fe5-80bc-4822-9f6c-48f77d56c89b
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '341'
-ht-degree: 23%
+source-wordcount: '338'
+ht-degree: 22%
 
 ---
 
@@ -39,7 +39,7 @@ ht-degree: 23%
 | `statusReason` | Description de la variable active `status`. |
 | `street1` - `street4` | Ces quatre champs sont destinés à contenir des informations Principales sur les rues, le numéro d’appartement, le numéro de rue et le nom de la rue. `street2` to `street4` sont facultatives. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Pour plus d’informations sur le type de données des adresses postales, reportez-vous au référentiel XDM public :
 

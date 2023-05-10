@@ -1,6 +1,6 @@
 ---
 title: Point d’entrée des packages d’extension
-description: Découvrez comment effectuer des appels au point d'entrée /extension_packages dans l’API Reactor.
+description: Découvrez comment effectuer des appels au point d’entrée /extension_packages dans l’API Reactor.
 exl-id: a91c6f32-6c72-4118-a43f-2bd8ef50709f
 source-git-commit: 8862a911f09d47c3a2260faba045f3c79826b52c
 workflow-type: tm+mt
@@ -13,7 +13,7 @@ ht-degree: 97%
 
 >[!WARNING]
 >
->L’implémentation du point d&#39;entrée `/extension_packages` se fait en flux continu à mesure que des fonctionnalités sont ajoutées, supprimées et retravaillées.
+>L’implémentation du point d’entrée `/extension_packages` se fait en flux continu à mesure que des fonctionnalités sont ajoutées, supprimées et retravaillées.
 
 Un package d’extension représente une [extension](./extensions.md) telle qu’elle a été créée par un développeur d’extension. Un package d’extension définit des fonctionnalités supplémentaires qui peuvent être mises à la disposition des utilisateurs de balises. La plupart du temps, ces fonctionnalités se présentent sous la forme de [composants de règle](./rule-components.md) (événements, conditions et actions) et [d&#39;éléments de données](./data-elements.md), mais peuvent également inclure des modules principaux et des modules partagés.
 
@@ -484,7 +484,7 @@ POST /extension_packages
 
 **Requête**
 
-La requête suivante crée un package d’extension. Le chemin d’accès local au fichier de package en cours de chargement est référencé en tant que données de formulaire (`package`). Par conséquent, ce point d&#39;entrée nécessite un en-tête `Content-Type` de `multipart/form-data`.
+La requête suivante crée un package d’extension. Le chemin d’accès local au fichier de package en cours de chargement est référencé en tant que données de formulaire (`package`). Par conséquent, ce point d’entrée nécessite un en-tête `Content-Type` de `multipart/form-data`.
 
 ```shell
 curl -X POST \

@@ -1,7 +1,8 @@
 ---
 title: Prise en main de l’API de requête d’audit
 description: L’API de requête d’audit vous permet de récupérer des données de mesure pour différentes fonctionnalités de Adobe Experience Platform. Ce document présente les concepts de base que vous devez connaître avant de lancer des appels à l’API de requête d’audit.
-source-git-commit: 5b3459711f41430977f9d7b06f8b35801739207c
+exl-id: 20eab0a8-98f7-4fee-8f91-88324e54ab18
+source-git-commit: c2c5778e0a3fff7f488ad7a672123c813cca59f1
 workflow-type: tm+mt
 source-wordcount: '392'
 ht-degree: 49%
@@ -10,7 +11,7 @@ ht-degree: 49%
 
 # Prise en main de l’API de requête d’audit
 
-Adobe Experience Platform vous permet de contrôler l’activité des utilisateurs pour divers services et fonctionnalités sous la forme de journaux d’événements de contrôle. Chaque action enregistrée dans un journal contient des métadonnées qui indiquent le type d’action, la date et l’heure, l’ID d’e-mail de l’utilisateur qui a exécuté l’action et des attributs supplémentaires liés au type d’action.
+Adobe Experience Platform vous permet de contrôler l’activité des utilisateurs pour divers services et fonctionnalités sous la forme de journaux d’événements de contrôle. Chaque action enregistrée dans un journal contient des métadonnées qui indiquent le type d’action, la date et l’heure, l’ID d’e-mail de l’utilisateur ou de l’utilisatrice qui a exécuté l’action et des attributs supplémentaires liés au type d’action.
 
 L’API de requête d’audit vous permet de contrôler l’activité des utilisateurs pour divers services et fonctionnalités sous la forme de journaux d’événements d’audit. Ce document présente les concepts de base que vous devez connaître avant de lancer des appels à l’API de requête d’audit.
 
@@ -30,7 +31,7 @@ Ce guide nécessite que vous ayez suivi le [tutoriel sur l’authentification](h
 * x-api-key : `{API_KEY}`
 * x-gw-ims-org-id : `{ORG_ID}`
 
-Dans [!DNL Experience Platform], toutes les ressources sont isolées dans des environnements de test virtuels spécifiques. Toutes les requêtes envoyées à [!DNL Platform] Les API requièrent un en-tête qui spécifie le nom de l’environnement de test dans lequel l’opération aura lieu. Pour plus d’informations sur les environnements de test dans [!DNL Platform], consultez la [documentation de présentation des environnements de test](../../../../sandboxes/home.md).
+Dans [!DNL Experience Platform], toutes les ressources sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes envoyées à [!DNL Platform] Les API requièrent un en-tête qui spécifie le nom de l’environnement de test dans lequel l’opération aura lieu. Pour plus d’informations sur les sandbox dans [!DNL Platform], consultez la [documentation de présentation des sandbox](../../../../sandboxes/home.md).
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 

@@ -29,7 +29,7 @@ Vous pouvez utiliser Platform Debugger avec les autres solutions d’activation 
 
 Vous pouvez exécuter Platform Debugger sur n’importe quelle page web et l’extension aura accès aux données publiques. Pour accéder aux données non publiques à l’aide de l’extension, vous devez être authentifié dans Experience Cloud dans un onglet de navigateur ouvert.
 
-## Cas d&#39;utilisation {#section-9fcd0583ed184943a8f0c2d3c00658e0}
+## Cas d’utilisation {#section-9fcd0583ed184943a8f0c2d3c00658e0}
 
 Vous pouvez utiliser les informations collectées par Platform Debugger pour mieux comprendre comment vos solutions Experience Cloud sont mises en oeuvre. Par exemple :
 

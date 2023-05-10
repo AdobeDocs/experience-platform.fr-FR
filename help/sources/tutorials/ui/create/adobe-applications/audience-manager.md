@@ -6,7 +6,7 @@ exl-id: 90c4a719-aaad-4687-afd8-7a1c0c56f744
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '583'
-ht-degree: 28%
+ht-degree: 29%
 
 ---
 
@@ -51,7 +51,7 @@ Vous pouvez également sélectionner la variable **[!UICONTROL Sélectionner tou
 >
 >L’ingestion de populations de segments d’Audience Manager importantes a un impact direct sur le nombre total de profils lorsque vous envoyez un segment d’Audience Manager pour la première fois à Platform à l’aide de la source Audience Manager. Cela signifie que la sélection de tous les segments peut potentiellement entraîner un nombre de profils excédant vos droits d’utilisation de licence. Consultez les [prime d&#39;utilisation de licence](../../../../../dashboards/guides/license-usage.md) avant de poursuivre.
 
-Une fois que vous avez terminé, sélectionnez **[!UICONTROL Suivant]**
+Une fois que vous avez terminé, cliquez sur **[!UICONTROL Suivant]**
 
 ![tous les segments](../../../../images/tutorials/create/aam/all-segments.png)
 
@@ -68,5 +68,5 @@ Une fois que vous avez vérifié votre flux de données, sélectionnez **[!UICON
 
 Lorsqu’un flux de données d’Audience Manager est principal, les données entrantes sont automatiquement ingérées dans les profils clients en temps réel. Vous pouvez désormais utiliser ces données entrantes et créer des segments d’audience à l’aide de Platform Segmentation Service. Consultez les documents suivants pour plus d’informations :
 
-* [Présentation de Real-Time Customer Profile](../../../../../profile/home.md)
+* [Vue d’ensemble du profil client en temps réel](../../../../../profile/home.md)
 * [Présentation de Segmentation Service](../../../../../segmentation/home.md)

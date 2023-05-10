@@ -5,7 +5,7 @@ exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
 source-git-commit: da8b5d9fffdf8a176a4d70be5df5b3021cf0df7b
 workflow-type: tm+mt
 source-wordcount: '469'
-ht-degree: 74%
+ht-degree: 86%
 
 ---
 
@@ -50,7 +50,7 @@ Une expiration de jeu de données correspond à une action « supprimer un jeu 
 >Les demandes de suppression d’enregistrement ne sont disponibles que pour les organisations qui ont acheté **Adobe Health Care Shield**.
 >
 >
->Les suppressions d’enregistrements sont destinées à être utilisées pour la normalisation des données, la suppression des données anonymes ou la minimisation des données. Ils sont **not** à utiliser pour les demandes de droits des titulaires de données (conformité) en ce qui concerne les réglementations de confidentialité comme le Règlement général sur la protection des données (RGPD). Pour tous les cas d’utilisation de conformité, utilisez [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) au lieu de .
+>Les suppressions d’enregistrements sont destinées au nettoyage des données, à la suppression des données anonymes ou à la minimisation des données. Elles ne sont **pas** destinées aux demandes de droits des titulaires de données (conformité) en ce qui concerne les réglementations de confidentialité comme le Règlement général sur la protection des données (RGPD). Pour tous les cas d’utilisation de conformité, utilisez plutôt [Adobe Experience Platform Privacy Service](../../privacy-service/home.md).
 
 L’API Data Hygiene vous permet de supprimer tous les enregistrements associés à une identité dans un ou tous les jeux de données. Toutes les tâches d’hygiène des données qui suppriment les identités sont représentées par un concept appelé ordre de travail. Voir [guide de point de terminaison des commandes de travail](./workorder.md) pour plus d’informations sur l’utilisation des suppressions d’enregistrement dans l’API.
 

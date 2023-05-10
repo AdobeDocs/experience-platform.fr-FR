@@ -47,11 +47,11 @@ POST authoring/testing/template/render
 
 {style="table-layout:auto"}
 
-Notez que la réponse renvoyée par le point d’entrée de l’API du modèle de rendu diffère selon la stratégie d’agrégation de la destination. Si votre destination dispose d’une stratégie d’agrégation configurable, la clé d’agrégation qui détermine comment les profils sont agrégés est également renvoyée dans la réponse. Pour en savoir plus sur les [stratégies d’agrégation](./destination-configuration.md#aggregation), consultez le document de configuration de la destination.
+Notez que la réponse renvoyée par le point d’entrée de l’API du modèle de rendu diffère selon la politique d’agrégation de la destination. Si votre destination dispose d’une politique d’agrégation configurable, la clé d’agrégation qui détermine comment les profils sont agrégés est également renvoyée dans la réponse. Pour en savoir plus sur les [politiques d’agrégation](./destination-configuration.md#aggregation), consultez le document de configuration de la destination.
 
 | Paramètre de réponse | Description |
 | -------- | ----------- |
-| `aggregationKey` | Représente la stratégie selon laquelle les profils sont agrégés dans les exportations vers votre destination. Ce paramètre est facultatif et nʼest présent que si la stratégie d’agrégation de destination est définie sur `CONFIGURABLE_AGGREGATION`. |
+| `aggregationKey` | Représente la politique selon laquelle les profils sont agrégés dans les exportations vers votre destination. Ce paramètre est facultatif et nʼest présent que si la politique d’agrégation de destination est définie sur `CONFIGURABLE_AGGREGATION`. |
 | `profiles` | Affiche les profils fournis dans la demande ou les profils générés automatiquement si aucun profil n’a été fourni dans la demande. |
 | `output` | Profil(s) rendu(s), sous la forme dʼune chaîne placée dans une séquence dʼéchappement, en fonction du modèle de transformation de message fourni. |
 

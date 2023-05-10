@@ -1,7 +1,8 @@
 ---
 title: Suivi des signaux de données pour générer la valeur de durée de vie client
 description: Ce guide fournit une démonstration de bout en bout sur l’utilisation de Data Distiller et de tableaux de bord définis par l’utilisateur avec Real-time Customer Data Platform pour mesurer et visualiser la valeur de durée de vie des clients.
-source-git-commit: 2346f2d9450bc24e10419c09ee3dbcfb35bd5778
+exl-id: c74b5bff-feb2-4e21-9ee4-1e0973192570
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '1296'
 ht-degree: 12%

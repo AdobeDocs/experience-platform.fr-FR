@@ -25,7 +25,7 @@ Vous pouvez récupérer une liste de tous les plannings de votre organisation en
 
 **Format d’API**
 
-Le point d’entrée `/config/schedules` prend en charge plusieurs paramètres de requête pour vous aider à filtrer vos résultats. Bien que ces paramètres soient facultatifs, leur utilisation est vivement recommandée pour réduire les frais généraux élevés. En passant un appel vers ce point de terminaison sans paramètres, vous récupérerez tous les plannings disponibles pour votre organisation. Plusieurs paramètres peuvent être inclus et séparés par des esperluettes (`&`).
+Le point d’entrée `/config/schedules` prend en charge plusieurs paramètres de requête pour vous aider à filtrer vos résultats. Bien que ces paramètres soient facultatifs, leur utilisation est vivement recommandée pour réduire les frais généraux élevés. En passant un appel vers ce point d’entrée sans paramètres, vous récupérerez tous les plannings disponibles pour votre organisation. Plusieurs paramètres peuvent être inclus et séparés par des esperluettes (`&`).
 
 ```http
 GET /config/schedules
@@ -104,7 +104,7 @@ Une réponse réussie renvoie un état HTTP 200 avec une liste de plannings pou
 
 ## Création d’un nouveau planning {#create}
 
-Vous pouvez créer un nouveau planning en effectuant une requête POST au point de terminaison `/config/schedules`.
+Vous pouvez créer un nouveau planning en effectuant une requête POST au point d’entrée `/config/schedules`.
 
 **Format d’API**
 

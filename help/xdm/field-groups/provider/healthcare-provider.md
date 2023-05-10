@@ -4,8 +4,8 @@ description: Ce document présente le groupe de champs Schéma du fournisseur de
 exl-id: e39b4082-4b66-47b3-a8e2-951d8a96f742
 source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
 workflow-type: tm+mt
-source-wordcount: '270'
-ht-degree: 10%
+source-wordcount: '267'
+ht-degree: 9%
 
 ---
 
@@ -30,6 +30,6 @@ ht-degree: 10%
 | `practiceType` | Chaîne | Type d’entraînement du prestataire. |
 | `specialties` | Tableau de chaînes | Une liste de spécialités proposées par ce prestataire. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Pour plus d’informations sur le groupe de champs, reportez-vous à la section [référentiel XDM public](https://github.com/adobe/xdm/blob/master/components/fieldgroups/provider/healthcare-provider-details.schema.json).

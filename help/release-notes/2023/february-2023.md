@@ -1,7 +1,8 @@
 ---
 title: Notes de mise à jour d’Adobe Experience Platform - Février 2023
 description: Les notes de mise à jour de février 2023 pour Adobe Experience Platform.
-source-git-commit: 0935a50527800b255901f8047051c47b45ab33b8
+exl-id: 1c30a646-d9f8-4749-ac25-40bc48365a40
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '1293'
 ht-degree: 100%
@@ -17,8 +18,8 @@ Mises à jour des fonctionnalités existantes dans Adobe Experience Platform 
 - [Collecte de données](#data-collection)
 - [[!DNL Destinations]](#destinations)
 - [Modèle de données d’expérience (XDM)](#xdm)
-- [Query Service](#query-service)
-- [Édition B2B de Real-Time Customer Data Platform](#b2b)
+- [Query Service](#query-service)
+- [Édition B2B de Real-Time Customer Data Platform](#b2b)
 - [Sources](#sources)
 
 ## Collecte de données {#data-collection}
@@ -108,7 +109,7 @@ Query Service vous permet d’utiliser le langage SQL standard pour interroger l
 
 {style="table-layout:auto"}
 
-Pour plus d’informations sur Query Service, consultez la section [présentation de Query Service](../../query-service/home.md).
+Pour plus d’informations sur Query Service, consultez la section [présentation de Query Service](../../query-service/home.md).
 
 
 ## Édition B2B de Real-Time Customer Data Platform {#b2b}

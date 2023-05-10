@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform;accueil;rubriques populaires;Application des stratégies;API des actions marketing;Application basée sur les API;gouvernance des données
+keywords: Experience Platform;accueil;rubriques populaires;Application des politiques;API des actions marketing;Application basée sur les API;gouvernance des données
 solution: Experience Platform
 title: Point d’entrée de l’API des actions marketing
-description: Dans le cadre de la gouvernance des données Adobe Experience Platform, une action marketing est une action entreprise par un utilisateur de données Experience Platform pour laquelle il est nécessaire de vérifier les violations des stratégies d’utilisation des données.
+description: Dans le cadre de la gouvernance des données Adobe Experience Platform, une action marketing est une action entreprise par un utilisateur de données Experience Platform pour laquelle il est nécessaire de vérifier les violations des politiques d’utilisation des données.
 exl-id: bc16b318-d89c-4fe6-bf5a-1a4255312f54
 source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
 workflow-type: tm+mt
@@ -13,7 +13,7 @@ ht-degree: 100%
 
 # Point d’entrée des actions marketing
 
-Dans le cadre de la gouvernance des données d’Adobe Experience Platform, une action marketing est une action entreprise par un utilisateur de données [!DNL Experience Platform] pour laquelle il est nécessaire de vérifier les violations des stratégies d’utilisation des données.
+Dans le cadre de la gouvernance des données d’Adobe Experience Platform, une action marketing est une action entreprise par un utilisateur de données [!DNL Experience Platform] pour laquelle il est nécessaire de vérifier les violations des politiques d’utilisation des données.
 
 Vous pouvez gérer les actions marketing pour votre organisation en utilisant le point d’entrée `/marketingActions` de l’API Policy Service.
 
@@ -47,7 +47,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie les détails de chaque action marketing récupérée, y compris son `name` et son `href`. La valeur `href` est utilisée pour identifier l’action marketing lors de la [création d’une stratégie d’utilisation des données](policies.md#create-policy).
+Une réponse réussie renvoie les détails de chaque action marketing récupérée, y compris son `name` et son `href`. La valeur `href` est utilisée pour identifier l’action marketing lors de la [création d’une politique d’utilisation des données](policies.md#create-policy).
 
 ```json
 {
@@ -102,7 +102,7 @@ Une réponse réussie renvoie les détails de chaque action marketing récupér�
 | `_page.count` | Nombre total d’actions marketing renvoyées. |
 | `children` | Tableau d’objets contenant les détails des actions marketing récupérées. |
 | `name` | Nom de l’action marketing, qui agit comme identifiant unique lors de la [recherche d’une action marketing spécifique](#lookup). |
-| `_links.self.href` | Référence URI de l’action marketing, qui peut être utilisée pour terminer le tableau `marketingActionsRefs` lors de la [création d’une stratégie d’utilisation des données](policies.md#create-policy). |
+| `_links.self.href` | Référence URI de l’action marketing, qui peut être utilisée pour terminer le tableau `marketingActionsRefs` lors de la [création d’une politique d’utilisation des données](policies.md#create-policy). |
 
 ## Recherche d’une action marketing spécifique {#lookup}
 
@@ -134,7 +134,7 @@ curl -X GET \
 
 **Réponse**
 
-L’objet de réponse contient les détails de l’action marketing, y compris le chemin d’accès (`_links.self.href`) nécessaire pour référencer l’action marketing lorsque [vous définissez une stratégie d’utilisation des données](policies.md#create-policy) (`marketingActionsRefs`).
+L’objet de réponse contient les détails de l’action marketing, y compris le chemin d’accès (`_links.self.href`) nécessaire pour référencer l’action marketing lorsque [vous définissez une politique d’utilisation des données](policies.md#create-policy) (`marketingActionsRefs`).
 
 ```JSON
 {
@@ -221,7 +221,7 @@ Vous pouvez supprimer une action marketing personnalisée en incluant son nom da
 
 >[!NOTE]
 >
->Les actions marketing référencées par des stratégies existantes ne peuvent pas être supprimées. Toute tentative de suppression de l’une de ces actions marketing provoquera une erreur HTTP 400 (Bad Request), ainsi qu’un message contenant les identifiants de toutes les stratégies qui font référence à l’action marketing.
+>Les actions marketing référencées par des politiques existantes ne peuvent pas être supprimées. Toute tentative de suppression de l’une de ces actions marketing provoquera une erreur HTTP 400 (Bad Request), ainsi qu’un message contenant les identifiants de toutes les politiques qui font référence à l’action marketing.
 
 **Format d’API**
 

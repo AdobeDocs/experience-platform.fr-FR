@@ -4,8 +4,8 @@ description: Découvrez comment effectuer des appels vers le point d’entrée /
 exl-id: 88a1ec36-b4d2-4fb6-92cb-1da04268492a
 source-git-commit: 36320addc790e844a1102314890e8692841dc5d0
 workflow-type: tm+mt
-source-wordcount: '586'
-ht-degree: 97%
+source-wordcount: '565'
+ht-degree: 96%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 97%
 
 >[!WARNING]
 >
->L’implémentation du point d&#39;entrée `/app_configurations` se fait en flux continu à mesure que des fonctionnalités sont ajoutées, supprimées et retravaillées.
+>L’implémentation du point d’entrée `/app_configurations` se fait en flux continu à mesure que des fonctionnalités sont ajoutées, supprimées et retravaillées.
 
 Les configurations dʼapplication permettent de stocker et de récupérer les informations dʼidentification en vue dʼune utilisation ultérieure. Le point d’entrée `/app_configurations` de l’API Reactor vous permet de gérer par programmation les configurations d’application au sein de votre application d’expérience.
 
@@ -33,7 +33,7 @@ GET /companies/{COMPANY_ID}/app_configurations
 | --- | --- |
 | `COMPANY_ID` | `id` de la [société](./companies.md) propriétaire des configurations de l’application. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >
@@ -113,7 +113,7 @@ GET /app_configurations/{APP_CONFIGURATION_ID}
 | --- | --- |
 | `APP_CONFIGURATION_ID` | Le `id` de la configuration d’application que vous souhaitez rechercher. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Requête**
 
@@ -178,7 +178,7 @@ POST /companies/{COMPANY_ID}/app_configurations
 | --- | --- |
 | `COMPANY_ID` | Champ `id` de la [société](./companies.md) dans laquelle vous définissez la configuration d’application. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Requête**
 
@@ -217,7 +217,7 @@ curl -X POST \
 | `key_type` | Représente le protocole pris en charge par un fournisseur de service Push et détermine le format de l’objet `push_credential`. À mesure que les protocoles évoluent pour les services de messagerie, de nouvelles valeurs `key_type` sont créées pour prendre en charge les protocoles mis à jour. |
 | `push_credential` | La valeur d’identification réelle, qui est chiffrée au repos. Ce champ n’est normalement pas déchiffré ou inclus dans les réponses de l’API. Seuls certains services Adobe peuvent obtenir une réponse contenant des informations d’identification push déchiffrées. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Réponse**
 
@@ -270,7 +270,7 @@ PATCH /app_configurations/{APP_CONFIGURATION_ID}
 | --- | --- |
 | `APP_CONFIGURATION_ID` | Champ `id` de la configuration d’application que vous souhaitez mettre à jour. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Requête**
 
@@ -301,7 +301,7 @@ curl -X PATCH \
 | `id` | Champ `id` de la configuration d’application à mettre à jour. Cela doit correspondre à la valeur `{APP_CONFIGURATION_ID}` fournie dans le chemin d’accès de la requête. |
 | `type` | Le type de ressource en cours de mise à jour. Pour ce point d’entrée, la valeur doit être `app_configurations`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Réponse**
 
@@ -354,7 +354,7 @@ DELETE /app_configurations/{APP_CONFIGURATION_ID}
 | --- | --- |
 | `APP_CONFIGURATION_ID` | Champ `id` de la configuration d’application que vous souhaitez supprimer. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Requête**
 

@@ -367,7 +367,7 @@ curl -X POST \
 | `attributes.settings` | Un objet JSON de paramétrage représenté sous la forme d’une chaîne. |
 | `attributes.timeout` | Nombre entier indiquant le délai d’expiration de l’action exécutée en séquence. |
 | `relationships` | Objet qui établit les relations nécessaires pour le composant de règle. Deux relations doivent être établies : <ol><li>`extension` : l’extension qui définit ce composant de règle. Il doit s’agir de la même extension que celle du package d’extension indiqué par `delegate_descriptor_id`.</li><li>`rules` : la règle sous laquelle ce composant est défini.</li></ol>Pour plus d’informations générales sur les relations, consultez le [guide sur les relations](../guides/relationships.md). |
-| `type` | Le type de ressource en cours de création. Pour ce point d&#39;entrée, la valeur doit être `rule_components`. |
+| `type` | Le type de ressource en cours de création. Pour ce point d’entrée, la valeur doit être `rule_components`. |
 
 {style="table-layout:auto"}
 

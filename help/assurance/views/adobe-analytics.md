@@ -1,13 +1,13 @@
 ---
 title: Vue Adobe Analytics dans Assurance
 description: Ce guide explique comment utiliser Adobe Analytics avec Adobe Experience Platform Assurance.
-source-git-commit: 07dc01c11c79ac2dad05d89309cabb5715c0b63c
+exl-id: e5cc72b0-d6d6-430b-9321-4835c1f77581
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '359'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
-
 
 # Vue Adobe Analytics dans Assurance
 
@@ -20,7 +20,7 @@ L’intégration de Adobe Experience Platform Assurance à Adobe Analytics offre
 Avant de poursuivre, assurez-vous que vous disposez des services suivants :
 
 - Le [Interface utilisateur de la collecte de données Adobe Experience Platform](https://experience.adobe.com/#/data-collection/)
-- [Adobe Experience Platform Assurance](https://experience.adobe.com/assurance)
+- [Assurance d’Adobe Experience Platform Assurance](https://experience.adobe.com/assurance)
 
 Pour savoir comment installer Assurance dans votre application, veuillez lire le [guide d’assurance d’implémentation](../tutorials/implement-assurance.md).
 

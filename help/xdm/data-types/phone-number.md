@@ -6,8 +6,8 @@ description: Ce document fournit un aperçu du type de données XDM Phone Number
 exl-id: b84e48f9-bbb4-4b8b-9476-4bc1c455ecfd
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '213'
-ht-degree: 10%
+source-wordcount: '210'
+ht-degree: 9%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 10%
 | `statusReason` | Description de l’état actuel. |
 | `validity` | Niveau de précision technique du numéro de téléphone. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Pour plus d’informations sur le type de données du numéro de téléphone, reportez-vous au référentiel XDM public :
 

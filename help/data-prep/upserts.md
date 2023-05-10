@@ -6,13 +6,13 @@ exl-id: f9f9e855-0f72-4555-a4c5-598818fc01c2
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1169'
-ht-degree: 8%
+ht-degree: 12%
 
 ---
 
 # Envoi de mises à jour de lignes partielles à [!DNL Profile Service] using [!DNL Data Prep]
 
-Diffusion en continu des upserts dans [!DNL Data Prep] vous permet d’envoyer des mises à jour de ligne partielles à [!DNL Profile Service] lors de la création et de l’établissement de nouveaux liens d’identité avec une seule requête API.
+La diffusion en flux continu d’upserts dans [!DNL Data Prep] permet d’envoyer des mises à jour de ligne partielles aux données [!DNL Profile Service] tout en créant et en établissant de nouveaux liens d’identité avec une seule requête API.
 
 En diffusant en continu des upserts, vous pouvez conserver le format de vos données tout en convertissant ces données en [!DNL Profile Service] Demandes de PATCH pendant l’ingestion. En fonction des entrées que vous fournissez, [!DNL Data Prep] vous permet d’envoyer une seule charge utile API et de traduire les données dans les deux [!DNL Profile Service] PATCH et [!DNL Identity Service] CRÉEZ des requêtes.
 
@@ -24,8 +24,8 @@ Cette présentation d’ nécessite une compréhension professionnelle des compo
 
 * [[!DNL Data Prep]](./home.md): [!DNL Data Prep] permet aux ingénieurs de données de mapper, transformer et valider des données vers et à partir du modèle de données d’expérience (XDM).
 * [[!DNL Identity Service]](../identity-service/home.md) : profitez d’une meilleure compréhension de vos clients et de leurs comportements en rapprochant des identités entre appareils et systèmes.
-* [Profil client en temps réel](../profile/home.md): Fournit un profil client unifié en temps réel basé sur des données agrégées provenant de plusieurs sources.
-* [Sources](../sources/home.md) : Experience Platform permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de Platform.
+* [Real-Time Customer Profile](../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
+* [Sources](../sources/home.md) : Experience Platform permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, de libeller et d’améliorer les données entrantes à l’aide des services de Platform.
 
 ## Utilisation de serveurs de diffusion en continu dans [!DNL Data Prep] {#streaming-upserts-in-data-prep}
 

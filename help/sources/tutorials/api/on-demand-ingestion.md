@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;accueil;rubriques les plus consultées;service de flux ;
+keywords: Experience Platform;accueil;rubriques les plus consultées;flow service;
 title: (Version bêta) Création d’une exécution de flux pour l’ingestion à la demande à l’aide de l’API Flow Service
 description: Ce tutoriel décrit les étapes à suivre pour créer une exécution de flux pour l’ingestion à la demande à l’aide de l’API Flow Service.
 exl-id: a7b20cd1-bb52-4b0a-aad0-796929555e4a
 source-git-commit: 795b1af6421c713f580829588f954856e0a88277
 workflow-type: tm+mt
 source-wordcount: '856'
-ht-degree: 13%
+ht-degree: 14%
 
 ---
 
@@ -31,7 +31,7 @@ Ce tutoriel décrit les étapes à suivre pour utiliser l’ingestion à la dema
 Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform :
 
 * [Sources ](../../home.md): [!DNL Experience Platform]permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services [!DNL Platform].
-* [Sandbox](../../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuelles qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
+* [Sandbox](../../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
 ### Utiliser les API Platform
 

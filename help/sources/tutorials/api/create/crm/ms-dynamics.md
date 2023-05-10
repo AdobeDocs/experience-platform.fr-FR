@@ -8,7 +8,7 @@ exl-id: 423c6047-f183-4d92-8d2f-cc8cc26647ef
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '639'
-ht-degree: 53%
+ht-degree: 56%
 
 ---
 
@@ -23,7 +23,7 @@ Ce tutoriel vous guide tout au long des étapes pour créer une connexion de bas
 Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
 
 * [Sources](../../../../home.md) : Experience Platform permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de Platform.
-* [Sandbox](../../../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuelles qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
+* [Sandbox](../../../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
 
 Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour connecter Platform à un compte Dynamics à l’aide de la variable [!DNL Flow Service] API.
 
@@ -95,7 +95,7 @@ curl -X POST \
 | `auth.params.serviceUri` | L’URI de service associé à votre [!DNL Dynamics] instance. |
 | `auth.params.username` | Le nom d’utilisateur associé à votre [!DNL Dynamics] compte . |
 | `auth.params.password` | Le mot de passe associé à votre [!DNL Dynamics] compte . |
-| `connectionSpec.id` | Le [!DNL Dynamics] identifiant de spécification de connexion : `38ad80fe-8b06-4938-94f4-d4ee80266b07` |
+| `connectionSpec.id` | Identifiant de spécification de connexion [!DNL Dynamics] : `38ad80fe-8b06-4938-94f4-d4ee80266b07`. |
 
 **Réponse**
 
@@ -151,7 +151,7 @@ curl -X POST \
 | `auth.params.serviceUri` | L’URI de service associé à votre [!DNL Dynamics] instance. |
 | `auth.params.servicePrincipalId` | L’ID client de votre [!DNL Dynamics] compte . Cet identifiant est requis lors de l’utilisation de l’authentification principale et basée sur les clés du service. |
 | `auth.params.servicePrincipalKey` | Clé secrète principale du service. Ces informations d’identification sont requises lors de l’utilisation de l’authentification principale et basée sur les clés du service. |
-| `connectionSpec.id` | Le [!DNL Dynamics] identifiant de spécification de connexion : `38ad80fe-8b06-4938-94f4-d4ee80266b07` |
+| `connectionSpec.id` | Identifiant de spécification de connexion [!DNL Dynamics] : `38ad80fe-8b06-4938-94f4-d4ee80266b07`. |
 
 **Réponse**
 
@@ -166,7 +166,7 @@ Une réponse réussie renvoie la nouvelle connexion, y compris son identifiant d
 
 ## Étapes suivantes
 
-En suivant ce tutoriel, vous avez créé une [!DNL Microsoft Dynamics] connexion de base à l’aide de [!DNL Flow Service] API. Vous pouvez utiliser cet identifiant de connexion de base dans les tutoriels suivants : 
+Ce tutoriel vous a permis de créer une connexion de base à [!DNL Microsoft Dynamics] à l’aide de l’API [!DNL Flow Service]. Vous pouvez utiliser cet identifiant de connexion de base dans les tutoriels suivants : 
 
 * [Explorez la structure et le contenu de vos tableaux de données à l’aide de l’API  [!DNL Flow Service] .](../../explore/tabular.md)
 * [Créez un flux de données pour importer des données de gestion de la relation client dans Platform à l’aide du [!DNL Flow Service] API](../../collect/crm.md)

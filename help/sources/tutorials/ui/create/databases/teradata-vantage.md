@@ -6,7 +6,7 @@ exl-id: 3fdb09fa-128a-477b-9144-d4ef3ed18ea6
 source-git-commit: 322b9aa5b817276eb4b56daf6e410944591c1d51
 workflow-type: tm+mt
 source-wordcount: '394'
-ht-degree: 33%
+ht-degree: 42%
 
 ---
 
@@ -14,16 +14,16 @@ ht-degree: 33%
 
 >[!NOTE]
 >
-> Le [!DNL Teradata Vantage] La source est en version bêta. Voir [Présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de sources étiquetées bêta.
+> La source [!DNL Teradata Vantage] est en version bêta. Consulter la [présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation des sources étiquetées bêta.
 
 Ce tutoriel décrit les étapes à suivre pour créer une [!DNL Teradata Vantage] connecteur source à l’aide de l’interface utilisateur de Adobe Experience Platform.
 
 ## Prise en main
 
-Ce tutoriel nécessite une compréhension pratique des composants suivants de Platform :
+Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Platform : 
 
 * [Sources](../../../../home.md): Experience Platform permet d’ingérer des données provenant de diverses sources tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services d’Experience Platform.
-* [Sandbox](../../../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuelles qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
+* [Sandbox](../../../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
 
 ### Collecter les informations d’identification requises
 
@@ -55,7 +55,7 @@ Pour connecter un compte existant, sélectionnez le [!DNL Teradata Vantage] comp
 
 ### Nouveau compte
 
-Si vous utilisez de nouvelles informations d’identification, sélectionnez **[!UICONTROL Nouveau compte]**. Dans le formulaire de saisie qui s’affiche, indiquez un nom, une description facultative et [!DNL Teradata Vantage] informations d’identification. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Connexion]** puis accorder un certain temps pour établir la nouvelle connexion.
+Si vous utilisez de nouvelles informations d’identification, sélectionnez **[!UICONTROL Nouveau compte]**.  Dans le formulaire de saisie qui s’affiche, indiquez un nom, une description facultative et [!DNL Teradata Vantage] informations d’identification. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Connexion]** puis accorder un certain temps pour établir la nouvelle connexion.
 
 ![](../../../../images/tutorials/create/teradata/new.png)
 

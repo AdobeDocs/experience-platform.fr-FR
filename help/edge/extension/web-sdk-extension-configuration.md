@@ -5,7 +5,7 @@ exl-id: 96d32db8-0c9a-49f0-91f3-0244522d66df
 source-git-commit: ce2e80a7ea7385be98bbcda6a0704cd0814c62b2
 workflow-type: tm+mt
 source-wordcount: '1184'
-ht-degree: 6%
+ht-degree: 9%
 
 ---
 
@@ -111,7 +111,7 @@ Vous pouvez ainsi déclencher différents comportements de flux de données par 
 
 Le remplacement de la configuration du flux de données est un processus en deux étapes :
 
-1. Tout d’abord, vous devez définir vos remplacements de configuration de flux de données dans la variable [page de configuration de datastream](../datastreams/configure.md).
+1. Tout d’abord, vous devez définir vos remplacements de configuration de trains de données sur la page de [configuration des trains de données](../datastreams/configure.md).
 2. Ensuite, vous devez envoyer les remplacements au réseau Edge par le biais d’une commande de SDK Web ou à l’aide de l’extension de balise du SDK Web.
 
 Voir la structure de données [la documentation de remplacement de configuration](../datastreams/overrides.md) pour obtenir des instructions détaillées sur la façon de remplacer les configurations datastream.

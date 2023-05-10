@@ -29,7 +29,7 @@ Vous pouvez récupérer une liste de toutes les tâches d’exportation pour vot
 
 **Format d’API**
 
-Le point d’entrée `/export/jobs` prend en charge plusieurs paramètres de requête pour vous aider à filtrer vos résultats. Bien que ces paramètres soient facultatifs, leur utilisation est vivement recommandée pour réduire les frais généraux élevés. Un appel à ce point de terminaison sans paramètre permet de récupérer toutes les tâches d’exportation disponibles pour votre organisation. Plusieurs paramètres peuvent être inclus et séparés par des esperluettes (`&`).
+Le point d’entrée `/export/jobs` prend en charge plusieurs paramètres de requête pour vous aider à filtrer vos résultats. Bien que ces paramètres soient facultatifs, leur utilisation est vivement recommandée pour réduire les frais généraux élevés. Un appel à ce point d’entrée sans paramètre permet de récupérer toutes les tâches d’exportation disponibles pour votre organisation. Plusieurs paramètres peuvent être inclus et séparés par des esperluettes (`&`).
 
 ```http
 GET /export/jobs
@@ -209,7 +209,7 @@ La réponse suivante renvoie un état HTTP 200 avec une liste des tâches d’ex
 
 ## Création d’une tâche d’exportation {#create}
 
-Vous pouvez créer une tâche d’exportation en effectuant une requête POST sur le point de terminaison `/export/jobs`.
+Vous pouvez créer une tâche d’exportation en effectuant une requête POST sur le point d’entrée `/export/jobs`.
 
 **Format d’API**
 
@@ -277,7 +277,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/export/jobs \
 | Propriété | Description |
 | -------- | ----------- |
 | `fields` | Une liste des champs exportés, séparés par des virgules. Si rien n’est indiqué, tous les champs seront exportés. |
-| `mergePolicy` | Spécifie la stratégie de fusion pour régir les données exportées. Ajoutez ce paramètre lorsque plusieurs segments sont exportés. Si elle n’est pas fournie, l’exportation applique la même stratégie de fusion que le segment donné. |
+| `mergePolicy` | Spécifie la stratégie de fusion pour régir les données exportées. Ajoutez ce paramètre lorsque plusieurs segments sont exportés. Si elle n’est pas fournie, l’exportation applique la même politique de fusion que le segment donné. |
 | `filter` | Objet qui spécifie les segments qui vont être inclus dans la tâche d’exportation par identifiant, heure de qualification ou heure d’ingestion, selon les sous-propriétés répertoriées ci-dessous. Si rien n’est indiqué, toutes les données seront exportées. |
 | `filter.segments` | Indique les segments à exporter. Si vous omettez cette valeur, toutes les données de l’ensemble des profils seront exportées. Accepte un tableau d’objets de segment, chacun contenant les champs suivants :<ul><li>`segmentId` : **(obligatoire en cas d’utilisation de `segments`)** identifiant du segment pour les profils à exporter.</li><li>`segmentNs` : *(facultatif)* espace de noms du segment pour le `segmentID` donné.</li><li>`status` : *(facultatif)* tableau de chaînes fournissant un filtre d’état pour le `segmentID`. Par défaut, `status` possède la valeur `["realized"]` qui représente tous les profils appartenant au segment à l’heure actuelle. Les valeurs possibles sont les suivantes : `realized` et `exited`.  Une valeur de `realized` signifie que le profil est admissible pour le segment. Une valeur de `exiting` signifie que le profil quitte le segment.</li></ul> |
 | `filter.segmentQualificationTime` | Filtre basé sur l’heure de qualification du segment. L’heure de début et/ou l’heure de fin peuvent être fournies. |

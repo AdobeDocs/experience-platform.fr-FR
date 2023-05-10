@@ -486,5 +486,5 @@ Une réponse réussie renvoie l’identifiant (`id`) du flux de données nouvell
 
 En suivant ce tutoriel, vous avez créé un flux de données pour collecter des données en continu à partir de votre connecteur de diffusion en continu. Ces données entrantes peuvent désormais être utilisées par les services de Platform en aval, comme [!DNL Real-Time Customer Profile] et [!DNL Data Science Workspace]. Consultez les documents suivants pour plus d’informations :
 
-- [Vue d’ensemble de Real-Time Customer Profile](../../../../profile/home.md)
+- [Vue d’ensemble du profil client en temps réel](../../../../profile/home.md)
 - [Présentation de l’espace de travail de science des données](../../../../data-science-workspace/home.md)

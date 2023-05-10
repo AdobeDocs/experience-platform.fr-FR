@@ -5,8 +5,8 @@ description: Ce document présente un aperçu du champ de préférences marketin
 exl-id: 170ea6ca-77fc-4b0a-87f9-6d4b6f32d953
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '900'
-ht-degree: 4%
+source-wordcount: '891'
+ht-degree: 3%
 
 ---
 
@@ -29,7 +29,7 @@ ht-degree: 4%
 | `time` | DateTime | Horodatage ISO 8601 du moment où la préférence marketing a changé, le cas échéant. |
 | `val` | Chaîne | Choix des préférences fournies par le client pour ce cas d’utilisation marketing. Voir [section suivante](#val) pour les valeurs et définitions acceptées. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## `val` {#val}
 
@@ -49,7 +49,7 @@ Le tableau suivant décrit les valeurs acceptées pour `val`:
 | `VI` | Intérêt vital de l’individu | La collecte de données aux fins spécifiées est nécessaire pour protéger les intérêts vitaux de l’individu. |
 | `PI` | Intérêt public | La collecte de données aux fins spécifiées est nécessaire pour effectuer une tâche dans l’intérêt public ou dans l’exercice de l’autorité officielle. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## `subscriptions` {#subscriptions}
 
@@ -99,7 +99,7 @@ Le fichier JSON suivant représente un exemple de champ marketing pour un canal 
 | `topics` | Tableau de chaînes représentant les centres d’intérêt auxquels un client s’est abonné, qui peut être utilisé pour lui envoyer du contenu pertinent. |
 | `subscribers` | Champ facultatif de type map qui représente un ensemble d’identifiants (tels que les adresses électroniques ou les numéros de téléphone) abonnés à un abonnement particulier. Chaque clé de cet objet représente l’identifiant en question et contient deux sous-propriétés : <ul><li>`time`: Horodatage ISO 8601 du moment où l’identité s’est abonnée, le cas échéant.</li><li>`source`: Source d’où provient l’abonné. Il peut s’agir de n’importe quelle chaîne descriptive, à condition qu’elle contienne 15 caractères ou moins.</li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Ressources supplémentaires
 

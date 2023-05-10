@@ -7,11 +7,11 @@ exl-id: 6759fea4-adb9-4e4e-9f3d-e0e8c885b1dd
 source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '688'
-ht-degree: 18%
+ht-degree: 19%
 
 ---
 
-# Accès à Data Science Workspace et fonctionnalités associées
+# Accès à l’espace de travail de science des données et fonctionnalités associées
 
 Le document suivant décrit les autorisations de Data Science Workspace et l’accès aux fonctionnalités.
 
@@ -52,21 +52,21 @@ Le tableau suivant présente certaines des différences clés entre les droits d
 
 ## Contrôle d’accès
 
-Le contrôle d’accès d’Experience Platform est géré à l’aide d’[Adobe Admin Console](https://adminconsole.adobe.com). Cette fonctionnalité exploite les profils de produit dans Admin Console, liant les utilisateurs à des autorisations et des environnements de test. Pour plus d’informations, consultez la [présentation du contrôle d’accès](../access-control/home.md).
+Le contrôle d’accès d’Experience Platform est géré à l’aide d’[Adobe Admin Console](https://adminconsole.adobe.com). Cette fonctionnalité exploite les profils de produit dans Admin Console, liant les utilisateurs à des autorisations et des sandbox. Pour plus d’informations, consultez la [présentation du contrôle d’accès](../access-control/home.md).
 
-Pour utiliser Data Science Workspace, l’autorisation « Gestion de Data Science Workspace » doit être activée. Le tableau suivant décrit les effets de l’activation ou de la désactivation de cette autorisation :
+Pour utiliser l’espace de travail de science des données, l’autorisation « Gestion de l’espace de travail de science des données » doit être activée. Le tableau suivant décrit les effets de l’activation ou de la désactivation de cette autorisation :
 
 | Autorisation | Activé | Désactivé |
 |---|---|---|
-| Gestion de Data Science Workspace | Permet d’accéder à tous les services de Data Science Workspace. | L’accès aux API et à l’interface utilisateur de tous les services de Data Science Workspace est désactivé. Lorsque cette option est désactivée, sélectionnez la variable **Notebooks**, **Modèles**, et **Services** Les pages ne sont pas autorisées. <li>Accès à **Services** peut toujours être disponible via Adobe Real-time Customer Data Platform (Real-Time CDP).</li> |
+| Gestion de l’espace de travail de science des données | Permet d’accéder à tous les services de l’espace de travail de science des données. | L’accès aux API et à l’interface utilisateur de tous les services de Data Science Workspace est désactivé. Lorsque cette option est désactivée, sélectionnez la variable **Notebooks**, **Modèles**, et **Services** Les pages ne sont pas autorisées. <li>Accès à **Services** peut toujours être disponible via Adobe Real-time Customer Data Platform (Real-Time CDP).</li> |
 
-## Prise en charge des environnements de test
+## Prise en charge des sandbox
 
-Les environnements de test sont des partitions virtuelles au sein d’une instance unique d’Experience Platform. Chaque instance de Platform prend en charge plusieurs environnements de test de production et hors production, chacun conservant sa propre bibliothèque de ressources de Platform. Les environnements de test hors production vous permettent de tester des fonctionnalités, d’exécuter des expériences et de créer des configurations personnalisées sans affecter vos environnements de test de production. Pour plus d’informations sur les environnements de test, consultez la [présentation des environnements de test](../sandboxes/home.md).
+Les sandbox sont des partitions virtuelles au sein d’une instance unique d’Experience Platform. Chaque instance de Platform prend en charge plusieurs environnements de test de production et hors production, chacun conservant sa propre bibliothèque de ressources de Platform. Les environnements de test hors production vous permettent de tester des fonctionnalités, d’exécuter des expériences et de créer des configurations personnalisées sans affecter vos environnements de test de production. Pour plus d’informations sur les sandbox, consultez la [présentation des sandbox](../sandboxes/home.md).
 
 Actuellement, Data Science Workspace présente la limitation d’environnement de test suivante :
 
-- Les ressources de calcul sont partagées dans les environnements de test de production et hors production.
+- Les ressources de calcul sont partagées entre les de production et les sandbox hors production.
 
 ## Étapes suivantes
 

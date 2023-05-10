@@ -1,11 +1,12 @@
 ---
-keywords: Experience Platform;accueil;rubriques les plus consultées;service de flux ;
+keywords: Experience Platform;accueil;rubriques les plus consultées;flow service;
 title: Réessayer les exécutions de flux de données ayant échoué
 description: Ce tutoriel décrit les étapes à suivre pour tenter de relancer des exécutions de flux de données ayant échoué à l’aide de l’API Flow Service
-source-git-commit: dfb95f457d7ddb730950159165ed85b2f532f9ab
+exl-id: b9abc737-9a57-47e6-98ab-6d6c44f38d17
+source-git-commit: a9887535b12b8c4aeb39bb5a6646da88db4f0308
 workflow-type: tm+mt
 source-wordcount: '258'
-ht-degree: 37%
+ht-degree: 42%
 
 ---
 
@@ -22,7 +23,7 @@ Ce tutoriel décrit les étapes à suivre pour tenter de relancer des exécution
 Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform :
 
 * [Sources ](../../home.md): [!DNL Experience Platform]permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services [!DNL Platform].
-* [Sandbox](../../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuelles qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
+* [Sandbox](../../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
 ### Utiliser les API Platform
 

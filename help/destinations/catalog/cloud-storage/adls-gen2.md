@@ -5,7 +5,7 @@ exl-id: d265a02d-c901-4b39-8714-fe9ecdbb5bb1
 source-git-commit: 010818b56154067402a7cd66f489dd2080142e53
 workflow-type: tm+mt
 source-wordcount: '680'
-ht-degree: 90%
+ht-degree: 93%
 
 ---
 
@@ -48,7 +48,7 @@ Pour vous authentifier à la destination, renseignez les champs requis et sélec
 * **[!UICONTROL Client]** : les informations du client qui contiennent votre application.
 * **[!UICONTROL Identifiant principal du service]** : identifiant client de l’application.
 * **[!UICONTROL Clé principale du service]** : clé de l’application.
-* **[!UICONTROL Clé de chiffrement]** : vous pouvez éventuellement joindre votre clé publique au format RSA pour ajouter un chiffrement à vos fichiers exportés. Affichez un exemple de clé de chiffrement correctement formatée dans l’image ci-dessous.
+* **[!UICONTROL Clé de chiffrement]** : vous pouvez éventuellement joindre votre clé publique au format RSA pour ajouter un chiffrement à vos fichiers exportés. Vous pouvez voir un exemple de clé correctement formatée dans l’image ci-dessous.
 
    ![Image montrant un exemple de clé PGP correctement formatée dans l’interface utilisateur](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 

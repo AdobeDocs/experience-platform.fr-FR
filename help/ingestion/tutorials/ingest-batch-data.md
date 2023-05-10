@@ -8,7 +8,7 @@ exl-id: a4a7358d-b117-4d81-8cb0-3dbbfeccdcbd
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
 source-wordcount: '1320'
-ht-degree: 56%
+ht-degree: 53%
 
 ---
 
@@ -74,7 +74,7 @@ Un jeu de données vide a désormais été créé et vous avez été renvoyé à
 
 Sur le côté droit de l’espace de travail des jeux de données, le **[!UICONTROL Infos]** onglet contenant des informations relatives à votre nouveau jeu de données, telles que l’identifiant du jeu de données, le nom, la description, le nom de la table, le schéma, la diffusion en continu et la source. L’onglet Informations contient également des informations sur le moment où le jeu de données a été créé et sa date de dernière modification.
 
-L’onglet Informations contient également un bouton activer/désactiver de **[!UICONTROL Profile]** qui permet d’activer votre jeu de données pour l’utiliser avec [!DNL Real-Time Customer Profile]. Utilisation de ce bouton bascule et [!DNL Real-Time Customer Profile], sera expliqué plus en détail dans la section qui suit.
+L’onglet Infos contient également une  **[!UICONTROL Profil]** bascule utilisé pour activer votre jeu de données à utiliser avec [!DNL Real-Time Customer Profile]. Utilisation de ce bouton bascule et [!DNL Real-Time Customer Profile], sera expliqué plus en détail dans la section qui suit.
 
 ![Activité du jeu de données](../images/tutorials/ingest-batch-data/sample-dataset.png)
 
@@ -90,7 +90,7 @@ Pour activer le jeu de données pour [!DNL Real-Time Customer Profile], cliquez 
 
 ![Bascule des profils](../images/tutorials/ingest-batch-data/dataset-profile-toggle.png)
 
-Une boîte de dialogue s’affiche vous demandant de confirmer que vous souhaitez activer le jeu de données pour [!DNL Real-Time Customer Profile].
+Une boîte de dialogue s’affiche, vous demandant de confirmer que vous souhaitez activer le jeu de données pour [!DNL Real-Time Customer Profile].
 
 ![Boîte de dialogue d’activation de Profile](../images/tutorials/ingest-batch-data/enable-dataset-for-profile.png)
 

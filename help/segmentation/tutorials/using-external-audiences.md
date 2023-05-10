@@ -1,17 +1,17 @@
 ---
 keywords: Experience Platform;accueil;rubriques populaires
 solution: Experience Platform
-title: Import et utilisation d'audiences externes
+title: Import et utilisation d’audiences externes
 description: Suivez ce tutoriel pour découvrir comment utiliser des audiences externes avec Adobe Experience Platform.
 exl-id: 56fc8bd3-3e62-4a09-bb9c-6caf0523f3fe
 source-git-commit: 57586104f1119f5cda926faf286c1663fbb0b240
 workflow-type: tm+mt
 source-wordcount: '1664'
-ht-degree: 4%
+ht-degree: 6%
 
 ---
 
-# Import et utilisation d&#39;audiences externes
+# Import et utilisation d’audiences externes
 
 Adobe Experience Platform prend en charge la possibilité d’importer une audience externe, qui peut ensuite être utilisée comme composants pour une nouvelle définition de segment. Ce document fournit un tutoriel sur la configuration de l’Experience Platform pour importer et utiliser des audiences externes.
 
@@ -20,7 +20,7 @@ Adobe Experience Platform prend en charge la possibilité d’importer une audie
 Ce tutoriel nécessite une compréhension pratique des différentes [!DNL Adobe Experience Platform] services impliqués dans la création de segments d’audience. Avant de commencer ce tutoriel, veuillez consulter la documentation relative aux services suivants :
 
 - [Segmentation Service](../home.md): Permet de créer des segments d’audience à partir de données Real-time Customer Profile.
-- [Profil client en temps réel](../../profile/home.md): Fournit un profil client en temps réel unifié basé sur des données agrégées provenant de plusieurs sources.
+- [Profil client en temps réel](../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
 - [Modèle de données d’expérience (XDM)](../../xdm/home.md) : cadre normalisé selon lequel Experience Platform organise les données d’expérience client. Pour utiliser au mieux la segmentation, veillez à ce que vos données soient ingérées en tant que profils et événements en fonction des [bonnes pratiques pour la modélisation des données](../../xdm/schema/best-practices.md).
 - [Jeu de données](../../catalog/datasets/overview.md) : la structure de stockage et de gestion pour la persistance des données dans Experience Platform.
 - [Ingestion par flux](../../ingestion/streaming-ingestion/overview.md): Comment Experience Platform ingère et stocke des données à partir de périphériques côté client et côté serveur en temps réel.

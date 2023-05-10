@@ -6,7 +6,7 @@ description: Découvrez comment l’espace de noms dans le modèle de données d
 exl-id: b351dfaf-5219-4750-a7a9-cf4689a5b736
 source-git-commit: edd285c3d0638b606876c015dffb18309887dfb5
 workflow-type: tm+mt
-source-wordcount: '634'
+source-wordcount: '631'
 ht-degree: 1%
 
 ---
@@ -81,7 +81,7 @@ Voici un exemple de schéma pour un produit dans la syntaxe XDM standard. À l�
 | `https://ns.adobe.com/vendorA/product/stockNumber` | Les champs fournis par les ressources du fournisseur utilisent leurs propres espaces de noms uniques. Dans cet exemple, `https://ns.adobe.com/vendorA/product` est l’espace de noms du fournisseur ; et `stockNumber` est le nom du champ. |
 | `tenantId:internalSku` | Les champs définis par votre organisation utilisent votre identifiant de client unique comme espace de noms. Dans cet exemple, `tenantId` est l’espace de noms du client (`https://ns.adobe.com/tenantId`), et `internalSku` est le nom du champ. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Mode de compatibilité {#compatibility}
 

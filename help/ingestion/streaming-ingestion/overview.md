@@ -6,8 +6,8 @@ description: L’ingestion par flux pour Adobe Experience Platform fournit aux u
 exl-id: 851f15fd-7ac5-4a9f-934d-6b907057da87
 source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '348'
+ht-degree: 17%
 
 ---
 
@@ -39,7 +39,7 @@ Pour plus d’informations sur l’activation d’un jeu de données pour [!DNL 
 
 | Destination | Latence attendue |
 | --------- | ---------------- |
-| Profil client en temps réel | &lt; 1 minute |
+| Real-time Customer Profile | &lt; 1 minute |
 | Lac de données | &lt; 60 minutes |
 
 ## Instructions de requête par seconde (RPS) sur l’ingestion par flux

@@ -6,8 +6,8 @@ description: Le point de terminaison /mixins de l’API Schema Registry vous per
 exl-id: 93ba2fe3-0277-4c06-acf6-f236cd33252e
 source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
-source-wordcount: '1210'
-ht-degree: 18%
+source-wordcount: '1189'
+ht-degree: 17%
 
 ---
 
@@ -45,7 +45,7 @@ GET /{CONTAINER_ID}/mixins?{QUERY_PARAMS}
 | `{CONTAINER_ID}` | Conteneur à partir duquel vous souhaitez récupérer des mixins : `global` pour les mixins créés par Adobe ou `tenant` pour les mixins appartenant à votre organisation. |
 | `{QUERY_PARAMS}` | Paramètres de requête facultatifs en fonction desquels filtrer les résultats. Voir [document de l’annexe](./appendix.md#query) pour une liste de paramètres disponibles. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Requête**
 
@@ -68,7 +68,7 @@ Le format de réponse dépend de la variable `Accept` en-tête envoyé dans la r
 | `application/vnd.adobe.xed-id+json` | Renvoie un court résumé de chaque ressource. Il s’agit de l’en-tête recommandé pour répertorier les ressources. (Limite : 300) |
 | `application/vnd.adobe.xed+json` | Renvoie le mixin JSON complet pour chaque ressource, avec l’original `$ref` et `allOf` inclus. (Limite : 300) |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Réponse**
 
@@ -131,7 +131,7 @@ GET /{CONTAINER_ID}/mixins/{MIXIN_ID}
 | `{CONTAINER_ID}` | Conteneur qui héberge le mixin que vous souhaitez récupérer : `global` pour un mixin créé par l’Adobe ou `tenant` pour un mixin détenu par votre organisation. |
 | `{MIXIN_ID}` | Le `meta:altId` ou encodé URL `$id` du mixin que vous souhaitez rechercher. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Requête**
 
@@ -157,7 +157,7 @@ Le format de réponse dépend de la variable `Accept` en-tête envoyé dans la r
 | `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref` et `allOf` résolus, ne contient aucun titre ni aucune description. |
 | `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` et `allOf` résolus, contient des descripteurs. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Réponse**
 
@@ -411,7 +411,7 @@ PUT /tenant/mixins/{MIXIN_ID}
 | --- | --- |
 | `{MIXIN_ID}` | Le `meta:altId` ou encodé URL `$id` du mixin que vous souhaitez réécrire. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Requête**
 
@@ -596,7 +596,7 @@ PATCH /tenant/mixin/{MIXIN_ID}
 | --- | --- |
 | `{MIXIN_ID}` | Codé URL `$id` URI ou `meta:altId` du mixin que vous souhaitez mettre à jour. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Requête**
 
@@ -735,7 +735,7 @@ DELETE /tenant/mixins/{MIXIN_ID}
 | --- | --- |
 | `{MIXIN_ID}` | Codé URL `$id` URI ou `meta:altId` du mixin que vous souhaitez supprimer. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Requête**
 

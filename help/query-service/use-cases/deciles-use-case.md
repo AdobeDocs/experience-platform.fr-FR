@@ -4,7 +4,7 @@ description: Ce guide décrit les étapes requises pour utiliser Query Service a
 exl-id: 0ec6b511-b9fd-4447-b63d-85aa1f235436
 source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
-source-wordcount: '1508'
+source-wordcount: '1505'
 ht-degree: 3%
 
 ---
@@ -70,7 +70,7 @@ Le tableau suivant affiche les exemples de données contenus dans la variable `_
 | B789279247 | pgalton32n@barnesandnoble.com | 2022-02-10 | AWARD_MILES | FRA-JFK | 5000 | SILVER |
 | A123487284 | rritson1zn@sciencedaily.com | 2022-01-07 | STATUS_MILES | Nouvelle carte de crédit | 10000 | FLYER |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Génération de jeux de données de décile
 
@@ -295,7 +295,7 @@ Une corrélation entre le numéro de classement et le centile est garantie dans 
 
 ### Exécuter le modèle de requête
 
-Exécutez la requête pour renseigner le jeu de données de décile. Vous pouvez également enregistrer la requête en tant que modèle et la planifier pour qu’elle s’exécute à un rythme. Lors de l’enregistrement en tant que modèle, la requête peut également être mise à jour afin d’utiliser le modèle de création et d’insertion qui fait référence au modèle `table_exists` . Plus d’informations sur l’utilisation de la variable `table_exists`se trouve dans la fonction [Guide de syntaxe SQL](../sql/syntax.md#table-exists).
+Exécutez la requête pour renseigner le jeu de données de décile. Vous pouvez également enregistrer la requête en tant que modèle et la planifier pour qu’elle s’exécute à un rythme. Lors de l’enregistrement en tant que modèle, la requête peut également être mise à jour afin d’utiliser le modèle de création et d’insertion qui fait référence au modèle `table_exists` . Informations supplémentaires sur l’utilisation de la variable `table_exists`se trouve dans la fonction [Guide de syntaxe SQL](../sql/syntax.md#table-exists).
 
 ## Étapes suivantes
 

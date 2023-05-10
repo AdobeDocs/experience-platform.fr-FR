@@ -6,8 +6,8 @@ feature: Alerts
 exl-id: c0ad7217-ce84-47b0-abf6-76bcf280f026
 source-git-commit: 0a4883cff4f8e04dd0dd62a9e01435fa302a9e54
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '771'
+ht-degree: 99%
 
 ---
 

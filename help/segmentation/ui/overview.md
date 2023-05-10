@@ -34,7 +34,7 @@ Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICON
 
 >[!NOTE]
 >
->Si votre organisation débute sur Platform et n’a pas encore de jeux de données de profils actifs ou de stratégies de fusion créés, le tableau de bord [!UICONTROL Segments] n’est pas visible. Au lieu de cela, l’onglet [!UICONTROL Vue d’ensemble] affiche des liens et de la documentation pour vous aider à démarrer avec la segmentation.
+>Si votre organisation débute sur Platform et n’a pas encore de jeux de données de profils actifs ou de politiques de fusion créés, le tableau de bord [!UICONTROL Segments] n’est pas visible. Au lieu de cela, l’onglet [!UICONTROL Vue d’ensemble] affiche des liens et de la documentation pour vous aider à démarrer avec la segmentation.
 
 ### Tableau de bord des [!UICONTROL segments] {#segments-dashboard}
 
@@ -182,7 +182,7 @@ Vous pouvez activer les définitions de segment pour une évaluation planifiée 
 
 >[!NOTE]
 >
->L’évaluation planifiée peut être activée pour les sandbox avec un maximum de cinq (5) stratégies de fusion pour [!DNL XDM Individual Profile]. Si votre organisation compte plus de cinq stratégies de fusion pour [!DNL XDM Individual Profile] dans un seul sandbox, vous ne pourrez pas procéder à l’évaluation planifiée.
+>L’évaluation planifiée peut être activée pour les sandbox avec un maximum de cinq (5) politiques de fusion pour [!DNL XDM Individual Profile]. Si votre organisation compte plus de cinq politiques de fusion pour [!DNL XDM Individual Profile] dans une seul sandbox, vous ne pourrez pas procéder à l’évaluation planifiée.
 
 Actuellement, les plannings ne peuvent être créés qu’à l’aide de l’API. Pour obtenir des instructions détaillées sur la création, la modification et l’utilisation des plannings à l’aide de l’API, suivez le tutoriel relatif à l’évaluation et à l’accès aux résultats de segmentation, en particulier la section sur [l’évaluation planifiée à l’aide de l’API](../tutorials/evaluate-a-segment.md#scheduled-evaluation).
 
@@ -218,7 +218,7 @@ Une fenêtre contextuelle s’affiche, répertoriant tous les champs pouvant êt
 | [!UICONTROL Dernière mise à jour par] | Nom de la personne qui a mis à jour l’audience pour la dernière fois. |
 | [!UICONTROL Créé] | Heure et date de création de l’audience. |
 | [!UICONTROL Dernière mise à jour] | Heure et date de la dernière création de l’audience. |
-| [!UICONTROL Libellés d’accès] | Libellés d’accès pour l’audience. Les libellés d’accès vous permettent de classer les jeux de données et les champs en fonction des stratégies d’utilisation qui s’appliquent à ces données. Vous pouvez appliquer les libellés à tout moment, ce qui vous offre une certaine flexibilité quant à la manière dont vous choisissez de gérer les données. Pour plus d’informations sur les libellés d’accès, veuillez lire la documentation sur la [gestion des libellés](../../access-control/abac/ui/labels.md). |
+| [!UICONTROL Libellés d’accès] | Libellés d’accès pour l’audience. Les libellés d’accès vous permettent de classer les jeux de données et les champs en fonction des politiques d’utilisation qui s’appliquent à ces données. Vous pouvez appliquer les libellés à tout moment, ce qui vous offre une certaine flexibilité quant à la manière dont vous choisissez de gérer les données. Pour plus d’informations sur les libellés d’accès, veuillez lire la documentation sur la [gestion des libellés](../../access-control/abac/ui/labels.md). |
 
 Vous pouvez sélectionner **[!UICONTROL Créer une audience]** pour créer une audience.
 
@@ -278,13 +278,13 @@ La segmentation Edge permet d’évaluer les segments dans Adobe Experience Plat
 
 Vous trouverez plus d’informations sur la segmentation Edge dans le [guide de l’interface utilisateur de segmentation Edge](./edge-segmentation.md).
 
-## Violations de stratégie
+## Violations de politique
 
 >[!NOTE]
 >
->Les violations de stratégie ne s’appliquent que si vous créez un segment qui a été affecté à une destination.
+>Les violations de politique ne s’appliquent que si vous créez un segment qui a été affecté à une destination.
 
-Une fois le segment créé, il est analysé par la gouvernance des données d’Adobe Experience Platform afin de s’assurer qu’il n’y a aucune violation de stratégie dans le segment. Pour plus d’informations, consultez la [présentation de la gouvernance des données](../../data-governance/home.md).
+Une fois le segment créé, il est analysé par la gouvernance des données d’Adobe Experience Platform afin de s’assurer qu’il n’y a aucune violation de politique dans le segment. Pour plus d’informations, consultez la [présentation de la gouvernance des données](../../data-governance/home.md).
 
 ![Les violations de politique pour le segment s’affichent.](../images/ui/overview/segment-dule-policy-violations.png)
 

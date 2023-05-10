@@ -79,7 +79,7 @@ loadScript(url).then(function() {
 
 ### [!DNL reactor-promise]
 
-`reactor-promise` est un constructeur qui imite l’[API Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) native dans ECMAScript 6. Si l’API Promise native est disponible, elle est renvoyée à la place.
+`reactor-promise` est un constructeur qui imite l’[API Promise](https://developer.mozilla.org/fr-FR/docs/Web/JavaScript/Reference/Global_Objects/Promise) native dans ECMAScript 6. Si l’API Promise native est disponible, elle est renvoyée à la place.
 
 ```javascript
 var Promise = require('@adobe/reactor-promise');

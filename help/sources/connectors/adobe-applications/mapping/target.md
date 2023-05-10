@@ -6,7 +6,7 @@ description: Découvrez comment mapper des champs d’événement Adobe Target �
 exl-id: dab08ab6-6c1c-460a-bb52-8dcdb5709a34
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '482'
+source-wordcount: '479'
 ht-degree: 87%
 
 ---
@@ -87,4 +87,4 @@ Le tableau suivant décrit les champs d’un schéma d’événement d’expéri
 | `identityMap.TNTID` | `tntId.mboxPC` |
 | `identityMap.ECID` | `marketingCloudVisitorId` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

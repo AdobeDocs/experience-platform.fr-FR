@@ -6,8 +6,8 @@ description: Ce document fournit un aperçu du groupe de champs de schéma Déta
 exl-id: 36aba186-fadb-4abb-a94f-7e151ff3f744
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '184'
-ht-degree: 15%
+source-wordcount: '181'
+ht-degree: 13%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 15%
 | `commerce` | [Commerce](../../data-types/commerce.md) | Objet décrivant les retours de produits, l’enregistrement de la garantie et les processus du panier/de la commande. |
 | `productListItems` | Tableau de [Éléments de la liste de produits](../../data-types/product-list-item.md) | Liste d’éléments représentant le ou les produits sélectionnés par un client, avec des options et des tarifs spécifiques à un moment spécifique (qui peuvent différer de l’enregistrement du produit). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Pour plus d’informations sur le groupe de champs, reportez-vous au référentiel XDM public :
 

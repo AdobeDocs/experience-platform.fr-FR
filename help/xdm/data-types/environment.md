@@ -6,7 +6,7 @@ description: Ce document fournit un aperçu du type de données XDM d’environn
 exl-id: ec806ee5-ed65-4148-9dbe-e297d9e8cd73
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '468'
+source-wordcount: '465'
 ht-degree: 18%
 
 ---
@@ -39,7 +39,7 @@ ht-degree: 18%
 | `viewportHeight` | Nombre entier | Taille verticale en pixels de la fenêtre dans laquelle l’expérience s’affichait. Pour un événement d’affichage Web, il s’agit de la hauteur de la fenêtre d’affichage du navigateur. |
 | `viewPortWidth` | Nombre entier | Taille horizontale en pixels de la fenêtre dans laquelle l’expérience s’affichait. Pour un événement d’affichage Web, il s’agit de la largeur de la fenêtre d’affichage du navigateur. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Pour obtenir plus d’informations sur ce type de données, reportez-vous au référentiel XDM public:
 

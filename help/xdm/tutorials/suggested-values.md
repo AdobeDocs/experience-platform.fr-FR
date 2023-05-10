@@ -5,7 +5,7 @@ exl-id: 96897a5d-e00a-410f-a20e-f77e223bd8c4
 source-git-commit: a3140d5216857ef41c885bbad8c69d91493b619d
 workflow-type: tm+mt
 source-wordcount: '658'
-ht-degree: 1%
+ht-degree: 4%
 
 ---
 
@@ -221,9 +221,9 @@ Pour gérer la variable `meta:enum` d’un champ personnalisé, vous pouvez mett
 >
 >Contrairement aux champs standard, la mise à jour de la variable `meta:enum` d’un champ personnalisé affecte tous les autres schémas qui utilisent ce champ. Si vous ne souhaitez pas que les modifications se propagent entre les schémas, envisagez plutôt de créer une ressource personnalisée :
 >
->* [Création d’une classe personnalisée](../api/classes.md#create)
->* [Création d’un groupe de champs personnalisé](../api/field-groups.md#create)
->* [Création d’un type de données personnalisé](../api/data-types.md#create)
+>* [Créer une classe personnalisée](../api/classes.md#create)
+>* [Créer un groupe de champs personnalisé](../api/field-groups.md#create)
+>* [Créer un type de données personnalisé](../api/data-types.md#create)
 
 
 La requête suivante met à jour la variable `meta:enum` d’un champ &quot;niveau de fidélité&quot; fourni par un type de données personnalisé :

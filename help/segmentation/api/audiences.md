@@ -155,7 +155,7 @@ Une réponse réussie renvoie un état HTTP 200 avec une liste des audiences cr�
 | `name` | Les deux | Nom de l’audience. |
 | `description` | Les deux | Description de l’audience. |
 | `expression` | Généré par la plateforme | L’expression PQL (Profile Query Language) de l’audience. Vous trouverez plus d’informations sur les expressions PQL dans la section [Guide des expressions PQL](../pql/overview.md). |
-| `mergePolicyId` | Généré par la plateforme | Identifiant de la stratégie de fusion à laquelle l’audience est associée. Pour plus d’informations sur les stratégies de fusion, consultez le [guide des stratégies de fusion](../../profile/api/merge-policies.md). |
+| `mergePolicyId` | Généré par la plateforme | Identifiant de la stratégie de fusion à laquelle l’audience est associée. Pour plus d’informations sur les politiques de fusion, consultez le [guide des politiques de fusion](../../profile/api/merge-policies.md). |
 | `evaluationInfo` | Généré par la plateforme | Affiche la manière dont l’audience sera évaluée. Les méthodes d’évaluation possibles sont les suivantes : lot, diffusion en continu ou périphérie. Vous trouverez plus d’informations sur les méthodes d’évaluation dans la section [présentation de la segmentation](../home.md) |
 | `dependents` | Les deux | Tableau d’identifiants d’audience qui dépendent de l’audience actuelle. Cela serait utilisé si vous créez une audience qui est un segment d’un segment. |
 | `dependencies` | Les deux | Tableau d’identifiants d’audience dont dépend l’audience. Cela serait utilisé si vous créez une audience qui est un segment d’un segment. |

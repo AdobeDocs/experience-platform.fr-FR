@@ -1,10 +1,11 @@
 ---
 title: Gestion des données de plateforme à l’aide de Python et SQLAlchemy
 description: Découvrez comment utiliser SQLAlchemy pour gérer vos données Platform à l’aide de Python au lieu de SQL.
-source-git-commit: 6b7de4236982181eaac2aa37d525604cba31198e
+exl-id: 9fba942e-9b3d-4efe-ae94-aed685025dea
+source-git-commit: 8644b78c947fd015f6a169c9440b8d1df71e5e17
 workflow-type: tm+mt
 source-wordcount: '567'
-ht-degree: 0%
+ht-degree: 7%
 
 ---
 
@@ -16,11 +17,11 @@ Découvrez comment utiliser SQLAlchemy pour une plus grande flexibilité dans la
 
 ## Prise en main
 
-Pour acquérir les informations d’identification nécessaires à la connexion [!DNL SQLAlchemy] pour Experience Platform, vous devez avoir accès à l’espace de travail Requêtes dans l’interface utilisateur de Platform. Contactez l’administrateur de votre organisation si vous n’avez pas actuellement accès à l’espace de travail Requêtes .
+Pour acquérir les informations d’identification nécessaires à la connexion de [!DNL SQLAlchemy] à Experience Platform, vous devez avoir accès à l’espace de travail Requêtes dans l’interface utilisateur de Platform. Contactez l’administrateur de votre organisation si vous n’avez pas actuellement accès à l’espace de travail Requêtes .
 
 ## [!DNL Query Service] informations {#credentials}
 
-Pour trouver vos informations d’identification, connectez-vous à l’interface utilisateur de Platform et sélectionnez **[!UICONTROL Requêtes]** à partir du volet de navigation de gauche, suivi de **[!UICONTROL Informations d’identification]**. Pour obtenir des instructions complètes sur la manière de trouver vos informations de connexion, veuillez lire le [guide des informations d’identification](../ui/credentials.md).
+Pour trouver vos informations d’identification, connectez-vous à l’interface utilisateur de Platform et sélectionnez **[!UICONTROL Requêtes]** à partir du volet de navigation de gauche, puis **[!UICONTROL Informations d’identification]**. Pour obtenir des instructions complètes sur la manière de trouver vos informations de connexion, veuillez lire le [guide des informations d’identification](../ui/credentials.md).
 
 ![L’onglet Informations d’identification avec les informations d’identification arrivant à expiration pour Query Service est mis en surbrillance.](../images/use-cases/credentials.png)
 

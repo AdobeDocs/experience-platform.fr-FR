@@ -2,7 +2,8 @@
 keywords: insights;ia dédiée à l’attributon;insights sur l’IA dédiée à l’attribution;service de requête AAI;requêtes attribution;scores attribution; clés gérées par client dans AAI
 title: Clés gérées par le client
 description: Découvrez comment configurer les clés gérées par le client ou la cliente pour l’IA dédiée à l’attribution.
-source-git-commit: f80cdd553c36ee10cfbf07c5cbbb14e9a4ae6757
+exl-id: c00bf1a0-cc4c-4a34-83f1-d93829576866
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '168'
 ht-degree: 100%

@@ -20,7 +20,7 @@ Ce tutoriel vous guide tout au long des étapes de création dʼune connexion de
 Ce guide nécessite une connaissance pratique des composants suivants de Platform :
 
 * [Sources](../../../../home.md) : Platform permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de [!DNL Platform].
-* [Sandbox](../../../../../sandboxes/home.md) : Platform fournit des sandbox virtuelles qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
+* [Sandbox](../../../../../sandboxes/home.md) : Platform fournit des sandbox virtuels qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
 
 Les sections suivantes contiennent des informations supplémentaires que vous devez connaître pour une connexion réussie à [!DNL Oracle Eloqua] à l’aide de l’API [!DNL Flow Service].
 
@@ -88,7 +88,7 @@ curl -X POST \
 | `name` | Nom de votre connexion de base [!DNL Oracle Eloqua]. Il est recommandé de fournir un nom explicite, car vous pouvez utiliser cette valeur pour rechercher votre connexion de base. |
 | `description` | (Facultatif) Propriété que vous pouvez inclure pour fournir plus d’informations sur votre connexion de base. |
 | `auth.specName` | Type d’authentification utilisé pour la connexion. |
-| `auth.params.endpoint` | Le point de terminaison de votre [!DNL Oracle Eloqua] serveur. |
+| `auth.params.endpoint` | Point d’entrée de votre serveur [!DNL Oracle Eloqua]. |
 | `auth.params.username` | Les informations d’identification concaténées qui incluent le nom du site et le nom d’utilisateur correspondant à votre [!DNL Oracle Eloqua] compte . |
 | `auth.params.password` | Mot de passe correspondant à votre compte [!DNL Oracle Eloqua].  |
 | `connectionSpec.id` | La valeur de l’identifiant de spécification de connexion de la source [!DNL Oracle Eloqua] est fixe comme suit : `35d6c4d8-c9a9-11eb-b8bc-0242ac130003`. |

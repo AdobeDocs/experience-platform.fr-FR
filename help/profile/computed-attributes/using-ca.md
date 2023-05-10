@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;profil;real-time customer profile;dépannage;API
+keywords: Experience Platform;profil;profil client en temps réel;dépannage;API
 title: Utilisation des attributs calculés dans Platform
 type: Documentation
 description: Les attributs calculés sont des fonctions permettant d’agréger des données au niveau de l’événement dans des attributs de niveaux de profil. Ces fonctions sont automatiquement calculées afin de pouvoir être utilisées au niveau de la segmentation, de l’activation et de la personnalisation.

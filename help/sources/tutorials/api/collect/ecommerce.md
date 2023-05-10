@@ -8,7 +8,7 @@ exl-id: 0952f037-5e20-4d84-a2e6-2c9470f168f5
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1284'
-ht-degree: 94%
+ht-degree: 95%
 
 ---
 
@@ -29,7 +29,7 @@ Ce tutoriel nécessite une compréhension du fonctionnement des composants suiva
    * [API Schema Registry](../../../../xdm/api/getting-started.md) : découvrez comment effectuer des appels vers l’API Schema Registry. Cela inclut votre `{TENANT_ID}`, le concept de « conteneurs » et les en-têtes requis pour effectuer des requêtes (avec une attention particulière à l’en-tête Accept et à ses valeurs possibles).
 * [[!DNL Catalog Service]](../../../../catalog/home.md) : le catalogue représente le système d’enregistrement de l’emplacement et de la liaison des données dans [!DNL Experience Platform].
 * [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md) : l’API Batch Ingestion vous permet d’ingérer des données dans [!DNL Experience Platform] sous forme de fichiers de lots.
-* [[!DNL Sandboxes]](../../../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuelles qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
+* [[!DNL Sandboxes]](../../../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
 
 ### Utiliser les API Platform
 
@@ -648,5 +648,5 @@ Une fois votre flux de données créé, vous pouvez surveiller les données ing�
 
 Vous êtes arrivé au bout de ce tutoriel, félicitations ! Grâce à celui-ci, vous avez créé un connecteur source pour collecter des données d’e-commerce à intervalles réguliers. Les données entrantes peuvent désormais être utilisées par les services [!DNL Platform] en aval tels que [!DNL Real-Time Customer Profile] et [!DNL Data Science Workspace]. Consultez les documents suivants pour plus d’informations :
 
-* [Présentation de Real-Time Customer Profile](../../../../profile/home.md)
-* [Présentation de Data Science Workspace](../../../../data-science-workspace/home.md)
+* [Vue d’ensemble du profil client en temps réel](../../../../profile/home.md)
+* [Présentation de l’espace de travail de science des données](../../../../data-science-workspace/home.md)

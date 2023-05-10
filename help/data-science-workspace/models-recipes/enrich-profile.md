@@ -8,7 +8,7 @@ exl-id: 397023c9-383d-4a21-b58a-0f920631ac56
 source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '577'
-ht-degree: 21%
+ht-degree: 26%
 
 ---
 
@@ -37,7 +37,7 @@ La première étape de l&#39;enrichissement [!DNL Real-Time Customer Profile] av
 
 La composition d’un schéma commence par l’attribution d’une classe. Les classes définissent les aspects comportementaux des données que le schéma contiendra (enregistrements ou séries temporelles). Pour commencer à créer vos propres schémas, suivez les étapes du tutoriel sur [création d’un schéma à l’aide de l’éditeur de schémas](../../xdm/tutorials/create-schema-ui.md). Notez qu’avant d’activer un jeu de données pour [!DNL Profile], vous devez configurer le schéma du jeu de données pour qu’il comporte un champ d’identité Principal, puis activer le schéma pour [!DNL Profile]. Lorsque des données sont ingérées dans une [!DNL Profile]Jeu de données compatible, ces mêmes données sont également ingérées en tant que [!DNL Profile] enregistrements.
 
-Si vous préférez composer un schéma à l’aide de la méthode [!DNL Schema Registry] à la place, commencez par lire la variable [[!DNL Schema Registry] guide de développement](../../xdm/api/getting-started.md) avant de lancer le tutoriel sur [création d’un schéma à l’aide de l’API](../../xdm/tutorials/create-schema-api.md).
+Si vous préférez composer un schéma à l’aide de l’API [!DNL Schema Registry], veuillez commencer par lire le guide de développement de [[!DNL Schema Registry] ](../../xdm/api/getting-started.md) avant de vous lancer dans le tutoriel sur la [création d’un schéma à l’aide de l’API](../../xdm/tutorials/create-schema-api.md).
 
 Une fois votre schéma et votre jeu de données préparés, vous pouvez générer et ingérer des données de notation dans le jeu de données en effectuant des exécutions de notation à l’aide d’un modèle approprié.
 

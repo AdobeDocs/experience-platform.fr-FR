@@ -12,7 +12,7 @@ ht-degree: 54%
 
 # Extension Adobe Advertising Cloud {#adobe-advertising-cloud-extension}
 
-## Aperçu {#overview}
+## Présentation {#overview}
 
 Il s’agit de la variable [!DNL Advertising Cloud] extension pour la mise en oeuvre [!DNL Advertising Cloud] balises de conversion et de segment pour les DSP et la recherche (DCO n’est actuellement pas pris en charge).
 

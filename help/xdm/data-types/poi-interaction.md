@@ -6,8 +6,8 @@ description: Ce document présente le type de données XDM de l’interaction Po
 exl-id: 398f56d9-1802-458d-b565-4096beb5b014
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '188'
-ht-degree: 13%
+source-wordcount: '185'
+ht-degree: 12%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 13%
 | `poiEntries` | Objet | Décrit le nombre de fois où une personne est entrée dans le point ciblé. Contient deux propriétés : <ul><li>`id`: Identifiant unique de la mesure.</li><li>`value`: Valeur quantifiable de la mesure.</li></ul> |
 | `poiExits` | Objet | Décrit le nombre de fois où une personne a quitté le point ciblé. Contient deux propriétés : <ul><li>`id`: Identifiant unique de la mesure.</li><li>`value`: Valeur quantifiable de la mesure.</li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Pour obtenir plus d’informations sur ce type de données, reportez-vous au référentiel XDM public:
 

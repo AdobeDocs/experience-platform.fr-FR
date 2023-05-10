@@ -11,7 +11,7 @@ ht-degree: 55%
 
 # Configuration du serveur et des fichiers pour les spécifications de serveur de destination basées sur les fichiers
 
-## Aperçu {#overview}
+## Présentation {#overview}
 
 Cette page décrit toutes les options de configuration du serveur pour vos serveurs de destination basés sur des fichiers et indique comment configurer diverses options de configuration de fichier pour les utilisateurs qui exportent des fichiers d’Experience Platform vers votre destination.
 

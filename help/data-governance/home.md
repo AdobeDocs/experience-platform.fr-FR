@@ -2,7 +2,7 @@
 keywords: Experience Platform;accueil;rubriques populaires;dule;DULE
 solution: Experience Platform
 title: Présentation de la gouvernance des données
-description: La gouvernance des données d’Adobe Experience Platform vous permet de gérer les données clients et de garantir la conformité aux réglementations, aux restrictions et aux stratégies applicables à l’utilisation des données. Elle joue un rôle clé dans Experience Platform à différents niveaux, notamment dans le catalogage, la traçabilité des données, l’étiquetage de l’utilisation des données, les politiques d’utilisation des données et le contrôle de l’utilisation des données lors d’activités marketing
+description: La gouvernance des données d’Adobe Experience Platform vous permet de gérer les données clients et de garantir la conformité aux réglementations, aux restrictions et aux politiques applicables à l’utilisation des données. Elle joue un rôle clé dans Experience Platform à différents niveaux, notamment dans le catalogage, la traçabilité des données, l’étiquetage de l’utilisation des données, les politiques d’utilisation des données et le contrôle de l’utilisation des données lors d’activités marketing
 exl-id: 00ca6bc2-1c58-4ea2-8bb5-30fd3fa5944a
 source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
 workflow-type: tm+mt
@@ -13,9 +13,9 @@ ht-degree: 100%
 
 # Présentation de la gouvernance des données
 
-L’une des principales fonctionnalités d’Adobe Experience Platform est de rassembler des données issues de plusieurs systèmes d’entreprise afin de permettre aux professionnels du marketing d’identifier, de comprendre et d’impliquer les clients avec plus d’efficacité. Ces données peuvent être soumises à des restrictions d’utilisation définies par votre organisation ou par des réglementations juridiques. Il est donc important de s’assurer que vos opérations de données au sein de [!DNL Platform] sont conformes aux stratégies d’utilisation des données.
+L’une des principales fonctionnalités d’Adobe Experience Platform est de rassembler des données issues de plusieurs systèmes d’entreprise afin de permettre aux professionnels du marketing d’identifier, de comprendre et d’impliquer les clients avec plus d’efficacité. Ces données peuvent être soumises à des restrictions d’utilisation définies par votre organisation ou par des réglementations juridiques. Il est donc important de s’assurer que vos opérations de données au sein de [!DNL Platform] sont conformes aux politiques d’utilisation des données.
 
-La gouvernance des données d’Adobe Experience Platform vous permet de gérer les données clients et de garantir la conformité aux réglementations, aux restrictions et aux stratégies applicables à l’utilisation des données. Elle joue un rôle clé dans [!DNL Experience Platform], et ce, à différents niveaux, notamment dans le catalogage, la traçabilité des données, l’étiquetage d’utilisation des données, les politiques d’utilisation des données et le contrôle de l’utilisation des données lors d’actions marketing.
+La gouvernance des données d’Adobe Experience Platform vous permet de gérer les données clients et de garantir la conformité aux réglementations, aux restrictions et aux politiques applicables à l’utilisation des données. Elle joue un rôle clé dans [!DNL Experience Platform], et ce, à différents niveaux, notamment dans le catalogage, la traçabilité des données, l’étiquetage d’utilisation des données, les politiques d’utilisation des données et le contrôle de l’utilisation des données lors d’actions marketing.
 
 >[!NOTE]
 >
@@ -34,8 +34,8 @@ Bien que la gouvernance des données doive être la responsabilité de chacun de
 Les gestionnaires de données sont au cœur de la gouvernance des données. Ce rôle consiste à interpréter les réglementations, les restrictions et les politiques contractuelles et à les appliquer directement aux données. Grâce à sa compréhension de ces réglementations, restrictions et politiques, le rôle d’un gestionnaire de données inclut notamment :
 
 * la vérification des données, des jeux de données et des exemples de données pour appliquer et gérer l’étiquetage d’utilisation des métadonnées ;
-* la création des stratégies de données et l’application de ces stratégies aux jeux de données et aux champs ;
-* la communication des stratégies de données à l’organisation.
+* la création des politiques de données et l’application de ces politiques aux jeux de données et aux champs ;
+* la communication des politiques de données à l’organisation.
 
 ### Professionnel du marketing
 
@@ -47,17 +47,17 @@ Les spécialistes marketing sont le point de terminaison de la gouvernance des d
 
 ## Cadre de gouvernance des données
 
-Le cadre de gouvernance des données simplifie et rationalise le processus de catégorisation des données et de création des stratégies d’utilisation des données. Une fois les étiquettes de données appliquées et les stratégies d’utilisation des données en place, vous pouvez évaluer les actions marketing permettant d’assurer la bonne utilisation des données. 
+Le cadre de gouvernance des données simplifie et rationalise le processus de catégorisation des données et de création des politiques d’utilisation des données. Une fois les étiquettes de données appliquées et les politiques d’utilisation des données en place, vous pouvez évaluer les actions marketing permettant d’assurer la bonne utilisation des données. 
 
-Le cadre de gouvernance des données comporte trois éléments clés : les libellés, les stratégies et l’application. 
+Le cadre de gouvernance des données comporte trois éléments clés : les libellés, les politiques et l’application. 
 
 1. **Libellés :** classent les données en fonction des considérations liées à la confidentialité et aux conditions contractuelles afin qu’elles soient conformes aux réglementations et aux politiques de l’organisation.
-1. **Stratégies :** décrivent le ou les types d’actions marketing que vous êtes autorisé à effectuer ou non sur certaines données.
+1. **Politiques :** décrivent le ou les types d’actions marketing que vous êtes autorisé à effectuer ou non sur certaines données.
 1. **Application :** utilise le cadre de la politique pour conseiller et appliquer les stratégies sur différents modèles d’accès aux données.
 
 ## Libellés d’utilisation des données
 
-La gouvernance des données permet aux gestionnaires de données d’appliquer des étiquettes d’utilisation dau niveau du jeu de données et du champ pour catégoriser les données en fonction du type de stratégies qui s’applique.
+La gouvernance des données permet aux gestionnaires de données d’appliquer des étiquettes d’utilisation dau niveau du jeu de données et du champ pour catégoriser les données en fonction du type de politiques qui s’applique.
 
 Le cadre de gouvernance des données inclut des libellés d’utilisation des données prédéfinis pouvant être utilisés pour catégoriser les données de trois manières différentes :
 
@@ -75,22 +75,22 @@ Vous pouvez appliquer les libellés à tout moment, ce qui vous offre une certai
 
 Pour plus d’informations, consultez la présentation des [libellés d’utilisation des données](./labels/overview.md).
 
-## Stratégies d’utilisation des données
+## Politiques d’utilisation des données
 
-Des stratégies d’utilisation des données doivent être mises en œuvre pour que les libellés d’utilisation des données prennent en charge efficacement la conformité des données. Les stratégies d’utilisation des données sont des règles qui décrivent les types d’actions marketing que vous êtes autorisé ou non à effectuer sur des données d’[!DNL Experience Platform].
+Des politiques d’utilisation des données doivent être mises en œuvre pour que les libellés d’utilisation des données prennent en charge efficacement la conformité des données. Les politiques d’utilisation des données sont des règles qui décrivent les types d’actions marketing que vous êtes autorisé ou non à effectuer sur des données d’[!DNL Experience Platform].
 
-Un exemple d’action marketing peut être le souhait d’exporter un jeu de données vers un service tiers. Si une stratégie est en place indiquant que les informations d’identification personnelle (PII) ne peuvent pas être exportées et qu’un libellé « I » (données d’identité) a été appliqué au jeu de données, [!DNL Policy Service] empêche toute action qui exporterait ce jeu de données vers une destination tierce. Si l’une de ces tentatives d’action se produit, Policy Service envoie un message vous informant qu’une violation de stratégie d’utilisation des données s’est passée.
+Un exemple d’action marketing peut être le souhait d’exporter un jeu de données vers un service tiers. Si une politique est en place indiquant que les informations d’identification personnelle (PII) ne peuvent pas être exportées et qu’un libellé « I » (données d’identité) a été appliqué au jeu de données, [!DNL Policy Service] empêche toute action qui exporterait ce jeu de données vers une destination tierce. Si l’une de ces tentatives d’action se produit, Policy Service envoie un message vous informant qu’une violation de politique d’utilisation des données s’est passée.
 
-Deux types de stratégies sont disponibles :
+Deux types de politiques sont disponibles :
 
-* **[!UICONTROL Stratégie de gouvernance des données]** : permet de restreindre l’activation des données en fonction de l’action marketing en cours et des étiquettes d’utilisation des données associées aux données en question.
-* **[!UICONTROL Stratégie de consentement]** : filtrez les profils pouvant être activés sur les [destinations](../destinations/home.md) selon le consentement ou les préférences de vos clients..
+* **[!UICONTROL Politique de gouvernance des données]** : permet de restreindre l’activation des données en fonction de l’action marketing en cours et des étiquettes d’utilisation des données associées aux données en question.
+* **[!UICONTROL Politique de consentement]** : filtrez les profils pouvant être activés sur les [destinations](../destinations/home.md) selon le consentement ou les préférences de vos clients..
 
 Une fois que les libellés d’utilisation des données ont été appliqués, les gestionnaires de données peuvent créer des politiques à l’aide de l’API [!DNL Policy Service] ou de l’interface utilisateur d’[!DNL Experience Platform]. Pour plus d’informations sur les politiques d’utilisation des données et les actions marketing, consultez la [présentation des politiques](./policies/overview.md).
 
 >[!IMPORTANT]
 >
->Toutes les stratégies d’utilisation des données (y compris les stratégies de base fournies par Adobe) sont désactivées par défaut. Pour qu’une stratégie individuelle soit prise en compte pour l’application, vous devez l’activer manuellement.
+>Toutes les politiques d’utilisation des données (y compris les politiques de base fournies par Adobe) sont désactivées par défaut. Pour qu’une politique individuelle soit prise en compte pour l’application, vous devez l’activer manuellement.
 
 ## Étapes suivantes
 
@@ -116,8 +116,8 @@ Le tableau suivant présente les termes clés liés à la gouvernance des donné
 | **Géobarrière** | Une géobarrière est une limite géographique virtuelle, définie par les technologies GPS ou RFID qui permet à un logiciel de déclencher une réponse lorsqu’un appareil mobile entre ou quitte une zone particulière. |
 | **Étiquettes Identité** | Les étiquettes Identité « I » sont utilisées pour catégoriser des données pouvant identifier ou contacter une personne en particulier. |
 | **Ciblage en fonction des intérêts** | Le ciblage en fonction des intérêts, également connu sous le nom de personnalisation, se produit si les trois conditions suivantes sont rassemblées : les données collectées sur site sont utilisées pour établir des inférences sur les intérêts d’un utilisateur ou d’une utilisatrice, elles sont utilisées dans un autre contexte, par exemple sur un autre site ou sur une autre application (hors site), et elles sont utilisées pour sélectionner le contenu ou les publicités diffusés en fonction de ces inférences. |
-| **Action marketing** | Dans le cadre de la gouvernance des données, une action marketing est une action entreprise par un utilisateur de données [!DNL Experience Platform] pour laquelle il est nécessaire de vérifier les violations des stratégies d’utilisation des données. |
-| **Stratégie** | Dans le cadre de la gouvernance des données, une stratégie est une règle qui décrit le type d’actions marketing que vous pouvez effectuer ou non sur des données spécifiques. |
+| **Action marketing** | Dans le cadre de la gouvernance des données, une action marketing est une action entreprise par un utilisateur de données [!DNL Experience Platform] pour laquelle il est nécessaire de vérifier les violations des politiques d’utilisation des données. |
+| **Politique** | Dans le cadre de la gouvernance des données, une politique est une règle qui décrit le type d’actions marketing que vous pouvez effectuer ou non sur des données spécifiques. |
 | **Étiquettes Sensibles** | Les libellés sensibles « S » sont utilisés pour classer les données que vous et votre entreprise considérez comme sensibles. |
 
 ## Ressources supplémentaires

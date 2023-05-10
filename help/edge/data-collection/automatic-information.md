@@ -6,7 +6,7 @@ exl-id: 901df786-df36-4986-9c74-a32d29c11b71
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
 source-wordcount: '511'
-ht-degree: 59%
+ht-degree: 60%
 
 ---
 
@@ -98,7 +98,7 @@ Lorsque la bibliothèque autonome est utilisée, la valeur est simplement la ver
 | ------------------------------------------------ | ------------ |
 | `events[].xdm.implementationDetails.environment` | `browser` |
 
-Environnement dans lequel les données ont été collectées. Cette variable est toujours définie sur `browser`.
+Environnement dans lequel les données ont été collectées. Cette valeur est toujours définie sur `browser`.
 
 ## Contexte de l’emplacement (`placeContext`)
 

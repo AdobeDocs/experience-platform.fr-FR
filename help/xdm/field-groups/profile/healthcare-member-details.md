@@ -4,7 +4,7 @@ description: Ce document présente un aperçu du groupe de champs Détails du me
 exl-id: 43ba025e-2acf-4cb7-8487-e6c7c7240867
 source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
 workflow-type: tm+mt
-source-wordcount: '661'
+source-wordcount: '655'
 ht-degree: 6%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 6%
 | `personalEmail` | [[!UICONTROL Adresse e-mail]](../../data-types/email-address.md) | Adresse électronique personnelle de la personne. |
 | `shippingAddress` | [[!UICONTROL Adresse postale]](../../data-types/postal-address.md) | Adresse de livraison de la personne. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## `memberDetails` {#memberDetails}
 
@@ -54,7 +54,7 @@ ht-degree: 6%
 | `preferredAvailability` | Chaîne | Disponibilité du jour et de l’heure de votre choix pour un rendez-vous. |
 | `primaryMemberID` | Chaîne | Identifiant unique de l’abonné Principal si la personne est une personne à charge. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Pour plus d’informations sur le groupe de champs, reportez-vous au référentiel XDM public :
 

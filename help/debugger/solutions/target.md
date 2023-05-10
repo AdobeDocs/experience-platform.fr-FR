@@ -3,8 +3,8 @@ title: Tester une mise en œuvre Adobe Target avec Adobe Experience Platform Deb
 description: Découvrez comment utiliser Adobe Experience Platform Debugger pour tester et déboguer un site web activé avec Adobe Target.
 exl-id: f99548ff-c6f2-4e99-920b-eb981679de2d
 source-git-commit: c3b5b63767a934be16a479d04853e1250b3bf775
-workflow-type: ht
-source-wordcount: '1220'
+workflow-type: tm+mt
+source-wordcount: '1211'
 ht-degree: 100%
 
 ---
@@ -38,7 +38,7 @@ Les informations sur la configuration globale de la mise en œuvre sont affiché
 | Nom global de la demande | Nom de la [mbox globale](https://developer.adobe.com/target/implement/client-side/atjs/global-mbox/global-mbox-overview/?) pour la mise en œuvre de Target, le nom par défaut étant `target-global-mbox`. |
 | Événement de chargement de page | Valeur booléenne indiquant si un [événement de chargement de page](https://developer.adobe.com/target/implement/client-side/atjs/how-atjs-works/how-atjs-works/#atjs-2x-diagrams) a eu lieu. Les événements de chargement de page ne sont pris en charge que pour at.js 2.x. Pour les versions non compatibles, cette valeur est définie par défaut sur `None`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## [!DNL Network Requests] {#network}
 
@@ -94,7 +94,7 @@ Les valeurs suivantes sont capturées :
 | [!DNL vst] | La [configuration de l’API Experience Cloud Identity Service](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/configurations/function-vars.html?lang=fr). |
 | [!DNL webGLRenderer] | Fournit des informations sur le moteur de rendu WebGL utilisé sur la page, le cas échéant. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Pour afficher les détails d’un paramètre sur un événement réseau particulier, sélectionnez la cellule de tableau en question. Une fenêtre contextuelle s’affiche, fournissant des informations supplémentaires sur le paramètre, y compris une description et sa valeur. Si la valeur est un objet JSON, la boîte de dialogue comprend une vue entièrement navigable de la structure de l’objet.
 
@@ -112,4 +112,4 @@ Sélectionnez **[!DNL Configuration]** pour activer ou désactiver une sélectio
 | [!DNL Target Diable] | Lorsque cette option est activée, toutes les fonctionnalités de Target sont désactivées sur la page. Vous pouvez l’utiliser pour déterminer si une offre spécifique à Target est à l’origine du problème sur la page. |
 | [!DNL Target Trace] | **Remarque** : vous devez être connecté(e) pour activer cette fonctionnalité.<br><br>Une fois activés, les jetons de suivi sont envoyés avec chaque requête et un objet de suivi est renvoyé dans chaque réponse. `at.js` analyse la réponse `window.__targetTraces`. Chaque objet de suivi contient les mêmes informations que l’[onglet [!DNL Network Requests]], avec les ajouts suivants :<ul><li>Un instantané de profil, qui vous permet d’afficher les attributs avant et après les requêtes.</li><li>[Activités](https://experienceleague.adobe.com/docs/target/using/activities/target-activities-guide.html?lang=fr) avec ou sans correspondance, indiquant pourquoi le profil actuel se qualifiait ou non pour des activités spécifiques.<ul><li>Cela peut aider à identifier les audiences pour lesquelles un profil se qualifie à un moment donné et pourquoi.</li><li>La documentation de Target contient plus d’informations sur les différents types d’activité.</li></ul></li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

@@ -5,7 +5,7 @@ description: Ce document fournit des informations sur les limites d’utilisatio
 exl-id: 1ad5dcf4-d048-49ff-97e3-07040392b65b
 source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '1029'
+source-wordcount: '1020'
 ht-degree: 7%
 
 ---
@@ -54,7 +54,7 @@ Les tableaux ci-dessous contiennent les descriptions et limites recommandées po
 
 **Requêtes ad hoc**
 
-| Barrière de sécurité | Limite | Type de limite | Description |
+| Mécanisme de sécurisation | Limite | Type de limite | Description |
 |---|---|---|---|
 | Durée maximale d’exécution | 10 minutes | Hard | Cela définit le temps de sortie maximal pour une requête SQL ad hoc. Le dépassement de la limite de temps pour renvoyer un résultat renvoie le code d’erreur 53400. |
 | Utilisateurs de Query Service simultanés | <ul><li>Comme spécifié dans la description du produit de l’application.</li><li>+5 (avec chaque module complémentaire d’utilisateurs de requêtes ad hoc supplémentaire acheté)</li></ul> | Hard | Cela définit le nombre d’utilisateurs qui peuvent créer des sessions simultanément pour une organisation particulière. Si la limite de simultanéité est dépassée, l’utilisateur reçoit une `Session Limit Reached` erreur. |
@@ -62,11 +62,11 @@ Les tableaux ci-dessous contiennent les descriptions et limites recommandées po
 | Connecteur client et limite de sortie de résultat | Connecteur client<ul><li>Interface utilisateur de requête (100 lignes)</li><li>Client tiers (50 000)</li><li>[!DNL PostgresSQL] client (50 000)</li></ul> | Hard | Le résultat d&#39;une requête peut être reçu par les moyens suivants :<ul><li>UI Query Service</li><li>Client tiers</li><li>[!DNL PostgresSQL] client</li></ul>Remarque : L’ajout d’une limitation au nombre de sorties peut renvoyer des résultats plus rapidement. Par exemple, `LIMIT 5`, `LIMIT 10`, etc. |
 | Résultats renvoyés via | Interface utilisateur du client | S/O | Cela définit la manière dont les résultats sont mis à la disposition des utilisateurs. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Requêtes par lots**
 
-| **Barrière de sécurité** | **Limite** | **Type de limite** | **Description** |
+| **Mécanisme de sécurisation** | **Limite** | **Type de limite** | **Description** |
 |---|---|---|---|
 | Durée maximale d’exécution | 24 heures | Hard | Cette option définit le temps d’exécution maximal d’une requête SQL par lot.<br>Le temps de traitement d’une requête dépend du volume de données à traiter et de la complexité des requêtes. |
 | Utilisateurs simultanés de Query Service pour un lot non planifié | <ul><li>Comme spécifié dans la description du produit de l’application.</li><li>+5 (avec chaque module complémentaire d’utilisateurs de requêtes ad hoc supplémentaire acheté)</li></ul> | Hard | Pour les requêtes par lots non planifiées (par exemple, les requêtes CTAS/ITAS en mode interactif), cela définit le nombre d’utilisateurs qui peuvent créer des sessions simultanément pour une organisation particulière. Si la limite de simultanéité est dépassée, l’utilisateur reçoit une `Session Limit Reached` erreur. |
@@ -76,17 +76,17 @@ Les tableaux ci-dessous contiennent les descriptions et limites recommandées po
 | Connecteur client et limite de sortie des résultats | Connecteur client<ul><li>Interface utilisateur de requête (pas de limite supérieure pour les lignes)</li><li>Client tiers (pas de limite supérieure aux lignes)</li><li>[!DNL PostgresSQL] client (aucune limite supérieure aux lignes)</li><li>API REST (pas de limite supérieure pour les lignes)</li></ul> | Hard | Le résultat d&#39;une requête peut être rendu disponible à l&#39;aide des méthodes suivantes :<ul><li>Peut être stocké en tant que jeux de données dérivés</li><li>Peuvent être insérés dans les jeux de données dérivés existants</li></ul>Remarque : Il n’existe aucune limite supérieure au nombre d’enregistrements à partir du résultat de la requête. |
 | Résultats renvoyés via | Jeu de données | S/O | Cela définit la manière dont les résultats sont mis à la disposition des utilisateurs. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-## Magasin accéléré de requêtes {#query-accelerated-store}
+## Magasin de requêtes accélérées {#query-accelerated-store}
 
 Le tableau ci-dessous fournit la description et les limites recommandées de la barrière de sécurité pour le magasin accéléré de requêtes.
 
-| Barrière de sécurité | Limite | Type de limite | Description |
+| Mécanisme de sécurisation | Limite | Type de limite | Description |
 |---|---|---|---|
 | Concurrence des requêtes | 4 | Hard | Pour garantir que les requêtes sur les données agrégées via l’API de création de rapports (y compris les requêtes qui améliorent les modèles de données tels que les modèles de données Real-Time CDP) disposent des ressources pour s’exécuter efficacement, l’API de création de rapports effectue le suivi de l’utilisation des ressources en attribuant des emplacements simultanés à chaque requête. Le système place les requêtes dans une file d’attente et attend que les emplacements simultanés soient disponibles ou qu’ils puissent être diffusés à partir du cache. Quatre emplacements de requête simultanés au maximum sont disponibles à tout moment.<br>Si vous accédez à l’API de création de rapports par le biais d’un outil de BI et que vous avez besoin de davantage de simultanéité, un serveur de BI est requis. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Étapes suivantes
 

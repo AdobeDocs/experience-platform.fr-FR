@@ -184,7 +184,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/audience-t
 | Propriété | Type | Description |
 | -------- | ----------- | ----------- |
 | `name` | Chaîne | Nom du modèle de métadonnées d’audience pour votre destination. Ce nom apparaît dans tout message d’erreur spécifique au partenaire dans l’interface utilisateur d’Experience Platform, suivi du message d’erreur analysé à partir de `metadataTemplate.create.errorSchemaMap`. |
-| `url` | Chaîne | L’URL et le point de terminaison de votre API, qui est utilisé pour créer, mettre à jour, supprimer ou valider les audiences/segments dans votre plateforme. Deux exemples de secteurs sont : `https://adsapi.snapchat.com/v1/adaccounts/{{customerData.accountId}}/segments` et `https://api.linkedin.com/v2/dmpSegments/{{segment.alias}}`. |
+| `url` | Chaîne | L’URL et le point d’entrée de votre API, qui est utilisé pour créer, mettre à jour, supprimer ou valider les audiences/segments dans votre plateforme. Deux exemples de secteurs sont : `https://adsapi.snapchat.com/v1/adaccounts/{{customerData.accountId}}/segments` et `https://api.linkedin.com/v2/dmpSegments/{{segment.alias}}`. |
 | `httpMethod` | Chaîne | Méthode utilisée sur votre point dʼentrée pour créer, mettre à jour, supprimer ou valider par programmation le segment/l’audience dans votre destination. Par exemple : `POST`, `PUT`, `DELETE`. |
 | `headers.header` | Chaîne | Spécifie les en-têtes HTTP à ajouter à l’appel de votre API. Par exemple : `"Content-Type"`. |
 | `headers.value` | Chaîne | Indique la valeur des en-têtes HTTP à ajouter à l’appel de votre API. Par exemple : `"application/x-www-form-urlencoded"`. |

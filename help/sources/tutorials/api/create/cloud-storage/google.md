@@ -5,7 +5,7 @@ exl-id: 321d15eb-82c0-45a7-b257-1096c6db6b18
 source-git-commit: 3636b785d82fa2e49f76825650e6159be119f8b4
 workflow-type: tm+mt
 source-wordcount: '560'
-ht-degree: 51%
+ht-degree: 52%
 
 ---
 
@@ -20,7 +20,7 @@ Ce tutoriel vous guide tout au long des étapes de création dʼune connexion de
 Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
 
 * [Sources](../../../../home.md) : [!DNL Experience Platform] permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services [!DNL Platform].
-* [Sandbox](../../../../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuelles qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
+* [Sandbox](../../../../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
 Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour vous connecter à un compte de stockage dans le cloud Google à l’aide de la variable [!DNL Flow Service] API.
 
@@ -94,7 +94,7 @@ curl -X POST \
 | `auth.params.secretAccessKey` | La clé d’accès secrète associée à votre [!DNL Google Cloud Storage] compte . |
 | `auth.params.bucketName` | Le nom de votre [!DNL Google Cloud Storage] du compartiment. Vous devez spécifier un nom de compartiment si vous souhaitez accorder l’accès à un sous-dossier spécifique de votre espace de stockage dans le cloud. |
 | `auth.params.folderPath` | Chemin d’accès au dossier auquel vous souhaitez accorder l’accès. |
-| `connectionSpec.id` | Le [!DNL Google Cloud Storage] identifiant de spécification de connexion : `32e8f412-cdf7-464c-9885-78184cb113fd` |
+| `connectionSpec.id` | Identifiant de spécification de connexion [!DNL Google Cloud Storage] : `32e8f412-cdf7-464c-9885-78184cb113fd`. |
 
 **Réponse**
 

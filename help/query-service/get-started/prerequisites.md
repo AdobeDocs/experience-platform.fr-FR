@@ -24,6 +24,6 @@ Ce document couvrait les conditions préalables requises pour l’utilisation de
 
 Les ressources suivantes sont utiles pour mieux comprendre [!DNL Query Service]:
 
-- [[!DNL Query Service] Présentation de l’interface utilisateur](../ui/overview.md)
+- [Présentation de l’interface utilisateur de [!DNL Query Service]](../ui/overview.md)
 - [[!DNL Query Service] informations](../ui/credentials.md)
 - [Présentation des connexions client](../clients/overview.md)

@@ -682,7 +682,7 @@ Une fois votre flux de données créé, vous pouvez surveiller les données ing�
 
 Grâce à ce tutoriel, vous avez créé un connecteur source permettant de collecter les données de votre espace de stockage à intervalles réguliers. Ces données entrantes peuvent désormais être utilisées par les services Platform en aval, comme [!DNL Real-Time Customer Profile] et [!DNL Data Science Workspace]. Consultez les documents suivants pour plus d’informations :
 
-- [Vue d’ensemble de Real-Time Customer Profile](../../../../profile/home.md)
+- [Vue d’ensemble du profil client en temps réel](../../../../profile/home.md)
 - [Présentation de l’espace de travail de science des données](../../../../data-science-workspace/home.md)
 
 ## Annexe {#appendix}

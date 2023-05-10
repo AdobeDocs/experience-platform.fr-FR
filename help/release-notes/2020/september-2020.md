@@ -28,7 +28,7 @@ Mises à jour des fonctionnalités existantes dans Adobe Experience Platform 
 
 ## Gouvernance des données {#governance}
 
-Dans Adobe Experience Platform, la gouvernance des données désigne un ensemble de stratégies et de technologies permettant de gérer les données clients et de garantir la conformité aux réglementations, aux restrictions et aux stratégies applicables à l’utilisation des données. Elle joue un rôle clé dans [!DNL Experience Platform] à différents niveaux, notamment dans le catalogage, la traçabilité des données, l’étiquetage de l’utilisation des données, les stratégies d’accès aux données et le contrôle d’accès aux données pour les actions marketing.
+Dans Adobe Experience Platform, la gouvernance des données désigne un ensemble de politiques et de technologies permettant de gérer les données clients et de garantir la conformité aux réglementations, aux restrictions et aux politiques applicables à l’utilisation des données. Elle joue un rôle clé dans [!DNL Experience Platform] à différents niveaux, notamment dans le catalogage, la traçabilité des données, l’étiquetage de l’utilisation des données, les politiques d’accès aux données et le contrôle d’accès aux données pour les actions marketing.
 
 **Nouvelles fonctionnalités**
 
@@ -95,7 +95,7 @@ Adobe Experience Platform Segmentation Service propose une interface utilisa
 | Fonctionnalité | Description |
 | ------- | ----------- |
 | Tâches d’exportation | Un indicateur a été ajouté pour permettre l’évaluation des segments dans le cadre d’une tâche d’exportation. Par conséquent, les utilisateurs peuvent exécuter la segmentation et exporter dans une seule tâche. |
-| Stratégies de fusion | Plusieurs stratégies de fusion peuvent être incluses dans une seule tâche de segmentation par lots. |
+| Politiques de fusion | Plusieurs stratégies de fusion peuvent être incluses dans une seule tâche de segmentation par lots. |
 
 Pour plus d’informations sur [!DNL Segmentation Service], consultez la [présentation de la segmentation](../../segmentation/home.md)
 

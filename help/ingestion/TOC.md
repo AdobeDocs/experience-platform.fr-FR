@@ -5,7 +5,7 @@ breadcrumb-title: Guide d’ingestion de données
 user-guide-description: Insérez vos données dans Experience Platform par ingestion en lot ou en flux continu.
 feature: Data Ingestion
 source-git-commit: 6110bf51cbd0005428e7dab4552944c5c9b54d03
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '156'
 ht-degree: 100%
 

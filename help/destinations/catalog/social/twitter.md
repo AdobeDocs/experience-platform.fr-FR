@@ -5,7 +5,7 @@ exl-id: fd244e58-cd94-4de7-81e4-c321eb673b65
 source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
 workflow-type: tm+mt
 source-wordcount: '806'
-ht-degree: 55%
+ht-degree: 61%
 
 ---
 
@@ -29,7 +29,7 @@ Avant de configurer votre [!DNL Twitter Custom Audiences] destination, veillez �
 | Identité cible | Description | Considérations |
 |---|---|---|
 | device_id | IDFA/AdID/Android ID | Google Advertising ID (GAID) et Apple ID for Advertisers (IDFA) sont pris en charge dans Adobe Experience Platform. Faites correspondre ces espaces de noms et/ou attributs de votre schéma source en conséquence dans la variable [étape de mappage](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) du workflow d’activation de destination. |
-| adresse e-mail | Adresse(s) de courriel de l’utilisateur | Faites correspondre vos adresses électroniques en texte brut et vos adresses électroniques hachées SHA256 à ce champ. Lorsque votre champ source contient des attributs non hachés, vérifiez la variable **[!UICONTROL Appliquer la transformation]** option, pour avoir [!DNL Platform] hachage automatique des données lors de l’activation. Si vous hachez les adresses électroniques de vos clients avant de les transférer vers Adobe Experience Platform, notez que ces identités doivent être hachées à l’aide de SHA256, sans sel. |
+| adresse e-mail | Adresse(s) de courriel de l’utilisateur | Faites correspondre vos adresses électroniques en texte brut et vos adresses électroniques hachées SHA256 à ce champ. Lorsque votre champ source contient des attributs non hachés, cochez l’option **[!UICONTROL Appliquer la transformation]** pour que [!DNL Platform] hache automatiquement les données lors de l’activation. Si vous hachez les adresses électroniques de vos clients avant de les transférer vers Adobe Experience Platform, notez que ces identités doivent être hachées à l’aide de SHA256, sans sel. |
 
 {style="table-layout:auto"}
 
@@ -46,7 +46,7 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 ## Cas d’utilisation {#use-cases}
 
-Pour vous aider à mieux comprendre comment et à quel moment utiliser la variable [!DNL Twitter Custom Audiences] destination, voici des exemples de cas d’utilisation que les clients Adobe Experience Platform peuvent résoudre à l’aide de cette destination.
+Pour découvrir les avantages de la destination [!DNL Twitter Custom Audiences] et son utilisation, consultez les exemples de cas d’utilisation ci-dessous que la clientèle Adobe Experience Platform peut résoudre.
 
 ### Cas d’utilisation 1
 
@@ -96,7 +96,7 @@ Consultez [Activer les profils et les segments vers les destinations d’exporta
 
 ## Utilisation et gouvernance des données {#data-usage-governance}
 
-Lors de la gestion de vos données, toutes les destinations [!DNL Adobe Experience Platform] se conforment aux stratégies d’utilisation des données. Pour obtenir des informations détaillées sur la manière dont [!DNL Adobe Experience Platform] applique la gouvernance des données, lisez la [présentation de la gouvernance des données](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=fr).
+Lors de la gestion de vos données, toutes les destinations [!DNL Adobe Experience Platform] se conforment aux politiques d’utilisation des données. Pour obtenir des informations détaillées sur la manière dont [!DNL Adobe Experience Platform] applique la gouvernance des données, lisez la [présentation de la gouvernance des données](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=fr).
 
 ## Ressources supplémentaires {#additional-resources}
 

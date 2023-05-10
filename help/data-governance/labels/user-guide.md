@@ -24,7 +24,7 @@ Ce guide d’utilisation détaille la procédure d’utilisation des libellés d
 
 >[!IMPORTANT]
 >
->L’application de libellés au niveau du jeu de données est uniquement prise en charge pour les cas d’utilisation de la gouvernance des données. Si vous essayez de créer des stratégies d’accès pour les données, vous devez [appliquer des libellés au schéma](../../xdm/tutorials/labels.md) sur lequel le jeu de données est basé. Consultez la présentation sur le [contrôle d’accès basé sur les attributs](../../access-control/abac/overview.md) pour plus d’informations.
+>L’application de libellés au niveau du jeu de données est uniquement prise en charge pour les cas d’utilisation de la gouvernance des données. Si vous essayez de créer des politiques d’accès pour les données, vous devez [appliquer des libellés au schéma](../../xdm/tutorials/labels.md) sur lequel le jeu de données est basé. Consultez la présentation sur le [contrôle d’accès basé sur les attributs](../../access-control/abac/overview.md) pour plus d’informations.
 
 Pour gérer les libellés d’utilisation des données au niveau du jeu de données, vous devez sélectionner un jeu de données existant ou en créer un nouveau. Après vous être connecté à Adobe Experience Platform, sélectionnez **[!UICONTROL Jeux de données]** dans le volet de navigation de gauche pour ouvrir l’espace de travail **[!UICONTROL Jeux de données]**. Cette page répertorie tous les jeux de données créés appartenant à votre organisation, ainsi que des détails utiles relatifs à chaque jeu de données.
 
@@ -91,7 +91,7 @@ L’option **[!UICONTROL Afficher les libellés hérités]** est activée par d�
 
 >[!IMPORTANT]
 >
->L’application de libellés au niveau du champ du jeu de données n’est prise en charge que pour les cas d’utilisation de la gouvernance des données. Si vous essayez de créer des stratégies d’accès pour les données, vous devez [appliquer les libellés au schéma](../../xdm/tutorials/labels.md) sur lequel le jeu de données est basé. Pour plus d’informations, consultez la présentation du [contrôle d’accès basé sur les attributs](../../access-control/abac/overview.md).
+>L’application de libellés au niveau du champ du jeu de données n’est prise en charge que pour les cas d’utilisation de la gouvernance des données. Si vous essayez de créer des politiques d’accès pour les données, vous devez [appliquer les libellés au schéma](../../xdm/tutorials/labels.md) sur lequel le jeu de données est basé. Pour plus d’informations, consultez la présentation du [contrôle d’accès basé sur les attributs](../../access-control/abac/overview.md).
 
 En poursuivant le processus d’[ajout et de modification des libellés d’utilisation des données au niveau du jeu de données](#add-labels), vous pouvez également gérer les libellés au niveau du champ dans l’espace de travail **[!UICONTROL Gouvernance des données]** pour ce jeu de données.
 
@@ -128,9 +128,9 @@ Pour plus d’informations, consultez le tutoriel sur la [gestion des libellés 
 >[!CONTEXTUALHELP]
 >id="platform_governance_createlabels"
 >title="Créer des libellés"
->abstract="Les libellés vous permettent de classer les jeux de données et les champs en fonction des stratégies d’utilisation qui s’appliquent à ces données. Platform fournit un ensemble standard de libellés que vous pouvez utiliser, mais vous pouvez également créer des libellés personnalisés spécifiques à votre organisation."
+>abstract="Les libellés vous permettent de classer les jeux de données et les champs en fonction des politiques d’utilisation qui s’appliquent à ces données. Platform fournit un ensemble standard de libellés que vous pouvez utiliser, mais vous pouvez également créer des libellés personnalisés spécifiques à votre organisation."
 
-Vous pouvez créer vos propres libellés d’utilisation personnalisés dans l’espace de travail **[!UICONTROL Stratégies]** de l’interface utilisateur [!DNL Experience Platform]. Sélectionnez **[!UICONTROL Stratégies]** dans le volet de navigation de gauche, puis cliquez sur **[!UICONTROL Libellés]** pour afficher une liste des libellés existants. À partir de là, cliquez sur **[!UICONTROL Créer un libellé]**.
+Vous pouvez créer vos propres libellés d’utilisation personnalisés dans l’espace de travail **[!UICONTROL Politiques]** de l’interface utilisateur [!DNL Experience Platform]. Sélectionnez **[!UICONTROL Politiques]** dans le volet de navigation de gauche, puis cliquez sur **[!UICONTROL Libellés]** pour afficher une liste des libellés existants. À partir de là, cliquez sur **[!UICONTROL Créer un libellé]**.
 
 ![](../images/labels/create-label-btn.png)
 
@@ -148,7 +148,7 @@ La boîte de dialogue se ferme et le nouveau libellé personnalisé apparaît da
 
 ![](../images/labels/label-created.png)
 
-Le libellé peut désormais être sélectionné sous **[!UICONTROL Libellés personnalisés]** lors de la modification des libellés d’utilisation des jeux de données et des champs ou lors de la création de stratégies d’utilisation des données.
+Le libellé peut désormais être sélectionné sous **[!UICONTROL Libellés personnalisés]** lors de la modification des libellés d’utilisation des jeux de données et des champs ou lors de la création de politiques d’utilisation des données.
 
 <img src="../images/labels/add-custom-label.png" width="600" /><br>
 
@@ -156,7 +156,7 @@ Le libellé peut désormais être sélectionné sous **[!UICONTROL Libellés per
 
 Maintenant que vous avez ajouté des libellés d’utilisation des données aux niveaux du jeu de données et du champ, vous pouvez commencer à ingérer des données dans [!DNL Experience Platform]. Pour en savoir plus, commencez par lire la [documentation sur l’ingestion de données](../../ingestion/home.md).
 
-Désormais, vous pouvez également définir des stratégies d’utilisation des données en fonction des libellés que vous avez appliqués. Pour plus d’informations, consultez la [présentation des stratégies d’utilisation des données](../policies/overview.md).
+Désormais, vous pouvez également définir des politiques d’utilisation des données en fonction des libellés que vous avez appliqués. Pour plus d’informations, consultez la [présentation des politiques d’utilisation des données](../policies/overview.md).
 
 ## Ressources supplémentaires
 

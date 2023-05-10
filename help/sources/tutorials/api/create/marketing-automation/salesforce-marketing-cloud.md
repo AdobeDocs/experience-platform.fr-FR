@@ -8,7 +8,7 @@ exl-id: fbf68d3a-f8b1-4618-bd56-160cc6e3346d
 source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '520'
-ht-degree: 58%
+ht-degree: 61%
 
 ---
 
@@ -26,8 +26,8 @@ Ce tutoriel vous guide tout au long des étapes de création dʼune connexion de
 
 Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
 
-* [Sources](../../../../home.md)[!DNL Platform] : Experience  permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de Platform.
-* [Sandbox](../../../../../sandboxes/home.md)[!DNL Platform] : Experience  fournit des sandbox virtuelles qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
+* [Sources](../../../../home.md)[!DNL Platform] : Experience  permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, de libeller et d’améliorer les données entrantes à l’aide des services de Platform.
+* [Sandbox](../../../../../sandboxes/home.md)[!DNL Platform] : Experience  fournit des sandbox virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
 
 ### Utiliser les API Platform
 
@@ -109,7 +109,7 @@ Une réponse réussie renvoie la nouvelle connexion de , y compris son identifia
 
 ## Étapes suivantes
 
-En suivant ce tutoriel, vous avez créé une [!DNL Salesforce Marketing Cloud] connexion de base à l’aide de [!DNL Flow Service] API. Vous pouvez utiliser cet identifiant de connexion de base dans les tutoriels suivants : 
+Ce tutoriel vous a permis de créer une connexion de base à [!DNL Salesforce Marketing Cloud] à l’aide de l’API [!DNL Flow Service]. Vous pouvez utiliser cet identifiant de connexion de base dans les tutoriels suivants : 
 
 * [Explorez la structure et le contenu de vos tableaux de données à l’aide de l’API  [!DNL Flow Service] .](../../explore/tabular.md)
 * [Créer un flux de données pour importer les données d’automatisation du marketing dans Platform à l’aide de l’API  [!DNL Flow Service] ](../../collect/marketing-automation.md)

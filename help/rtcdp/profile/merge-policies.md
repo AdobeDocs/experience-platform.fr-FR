@@ -10,7 +10,7 @@ ht-degree: 32%
 
 ---
 
-# Présentation des stratégies de fusion
+# Présentation des politiques de fusion
 
 Adobe Experience Platform permet de rassembler des données issues de plusieurs sources et de les combiner pour obtenir une vue complète de chaque client. Lorsque vous rassemblez ces données, les stratégies de fusion sont les règles qui [!DNL Platform] utilise pour déterminer comment les données seront hiérarchisées et quelles données seront combinées pour créer cette vue unifiée du profil.
 

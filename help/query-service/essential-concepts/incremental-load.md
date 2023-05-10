@@ -3,7 +3,7 @@ title: Chargement incrémentiel dans Query Service
 description: La fonction de chargement incrémentiel utilise des fonctions d’instantanés et de blocs anonymes afin de fournir une solution en temps quasi réel pour déplacer les données du lac de données vers votre entrepôt de données, tout en ignorant les données correspondantes.
 exl-id: 1418d041-29ce-4153-90bf-06bd8da8fb78
 source-git-commit: 11a947addce65887385c983ac81d884fb4244291
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '688'
 ht-degree: 100%
 

@@ -7,7 +7,7 @@ exl-id: d6dbc9ee-0c1a-4a5f-b922-88c7a36a5380
 source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
 workflow-type: tm+mt
 source-wordcount: '2504'
-ht-degree: 14%
+ht-degree: 16%
 
 ---
 
@@ -42,7 +42,7 @@ Vous pouvez configurer les points de contact à l’aide des champs recommandés
 | Colonnes recommandées | Nécessaire pour |
 | --- | --- |
 | Champ d’identité Principal | Point de contact/Conversion |
-| Horodatage | Point de contact/Conversion |
+| Date et heure | Point de contact/Conversion |
 | Canal._type | Point de contact |
 | Channel.mediaAction | Point de contact |
 | Channel.mediaType | Point de contact |
@@ -74,7 +74,7 @@ Le [configuration de la fenêtre de formation](./user-guide.md#training-window) 
 
 Par défaut, Attribution AI définit le créneau de formation comme les deux derniers trimestres (6 mois) et le créneau de recherche arrière comme étant de 56 jours. En d’autres termes, le modèle prend en compte tous les événements de conversion définis qui se sont produits au cours des 2 derniers trimestres et recherche tous les points de contact qui se sont produits dans les 56 jours précédant le ou les événements de conversion associés.
 
-**Formule**:
+**Formule** :
 
 Longueur minimale des données requises = période de formation + période de recherche arrière
 
@@ -219,7 +219,7 @@ Le tableau ci-dessous associe les scores agrégés aux scores bruts. Si vous sou
 
 | Nom de la colonne | Colonne de référence Score brut |
 | --- | --- |
-| customerevents_date | timestamp |
+| customerevents_date | date et heure |
 | mediatouchpoints_date | _tenantID.your_schema_name.touchpointsDetail.element.touchpoint.timestamp |
 | segment | _tenantID.your_schema_name.segmentation |
 | conversion_scope | _tenantID.your_schema_name.conversion.conversionName |
@@ -237,7 +237,7 @@ Le tableau ci-dessous associe les scores agrégés aux scores bruts. Si vous sou
 >[!IMPORTANT]
 >
 > - Attribution AI utilise uniquement des données mises à jour pour la formation et la notation ultérieures. De même, lorsque vous demandez la suppression de données, Customer AI s’abstient d’utiliser les données supprimées.
-> - L’IA dédiée à l’attribution utilise les jeux de données Platform. Pour prendre en charge les demandes de droits des consommateurs qu’une marque peut recevoir, les marques doivent utiliser le Privacy Service Platform pour soumettre les demandes d’accès et de suppression des clients afin de supprimer leurs données dans le lac de données, Identity Service et Real-Time Customer Profile.
+> - L’IA dédiée à l’attribution utilise les jeux de données Platform. Pour prendre en charge les demandes de droits des consommateurs qu’une marque peut recevoir, les marques doivent utiliser Privacy Service de Platform pour soumettre les demandes d’accès et de suppression des clients afin de supprimer leurs données dans le lac de données, le service d’identités et le profil client en temps réel.
 > - Tous les jeux de données que nous utilisons pour l’entrée/la sortie des modèles suivront les directives de Platform. Le chiffrement des données de Platform s’applique aux données au repos et en transit. Consultez la documentation pour en savoir plus sur le [chiffrement des données](../../../help/landing/governance-privacy-security/encryption.md)
 
 

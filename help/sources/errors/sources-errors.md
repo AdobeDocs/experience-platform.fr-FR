@@ -1,8 +1,9 @@
 ---
 title: Messages d’erreur liés aux sources
 description: Prenez connaissance des messages d’erreur que vous pouvez rencontrer lors de l’utilisation du service de flux pour les sources.
-source-git-commit: 10edb5dfd9ce99b69cf5bb014f4903942c9bff3e
-workflow-type: ht
+exl-id: cfba9780-4ab9-447b-8c60-c9f813107d11
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+workflow-type: tm+mt
 source-wordcount: '3192'
 ht-degree: 100%
 

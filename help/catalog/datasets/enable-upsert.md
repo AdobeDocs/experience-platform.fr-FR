@@ -44,7 +44,7 @@ Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [
 
 Toutes les requêtes contenant une payload (POST, PUT, PATCH) nécessitent un en-tête `Content-Type` supplémentaire : La valeur correcte de cet en-tête s’affiche dans les exemples de requêtes, le cas échéant.
 
-Dans [!DNL Experience Platform], toutes les ressources sont isolées dans des sandbox virtuelles spécifiques. Toutes les requêtes envoyées aux API [!DNL Platform] nécessitent un en-tête `x-sandbox-name` spécifiant le nom de la sandbox dans laquelle l’opération sera effectuée. Pour plus d’informations sur les sandbox dans [!DNL Platform], consultez la [documentation de présentation des sansdbox](../../sandboxes/home.md).
+Dans [!DNL Experience Platform], toutes les ressources sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes envoyées aux API [!DNL Platform] nécessitent un en-tête `x-sandbox-name` spécifiant le nom du sandbox dans lequel l’opération sera effectuée. Pour plus d’informations sur les sandbox dans [!DNL Platform], consultez la [documentation de présentation des sandbox](../../sandboxes/home.md).
 
 ## Créer un jeu de données activé pour les mises à jour de profil
 

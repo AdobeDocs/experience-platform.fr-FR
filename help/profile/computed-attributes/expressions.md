@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;profil;real-time customer profile;dépannage;API
+keywords: Experience Platform;profil;profil client en temps réel;dépannage;API
 title: Exemples d’expressions PQL pour les attributs calculés
 type: Documentation
 description: Les attributs calculés sont des fonctions utilisées pour regrouper des données au niveau de l’événement en attributs au niveau du profil. Ces fonctions nécessitent l’utilisation d’expressions PQL (Profile Query Language) valides. Ce guide décrit certaines des expressions PQL les plus couramment utilisées pour les attributs calculés.

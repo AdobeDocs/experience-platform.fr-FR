@@ -1,7 +1,8 @@
 ---
 title: Flux SQL transparent pour les attributs dérivés
 description: Query Service SQL a été étendu pour offrir une prise en charge transparente des attributs dérivés. Découvrez comment utiliser cette extension SQL pour créer un attribut dérivé activé pour profile et comment utiliser l’attribut pour Real-time Customer Profile et Segmentation Service.
-source-git-commit: 1ff66d0ac8e0491a6db518545d122555d9d54c75
+exl-id: bb1a1d8d-4662-40b0-857a-36efb8e78746
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '1192'
 ht-degree: 2%

@@ -6,7 +6,7 @@ description: Le point d’entrée /unions de l’API Schema Registry vous permet
 exl-id: d0ece235-72e8-49d9-856b-5dba44e16ee7
 source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
-source-wordcount: '911'
+source-wordcount: '896'
 ht-degree: 50%
 
 ---
@@ -64,7 +64,7 @@ Le format de réponse dépend de la variable `Accept` en-tête envoyé dans la r
 | `application/vnd.adobe.xed-id+json` | Renvoie un court résumé de chaque ressource. Il s’agit de l’en-tête recommandé pour répertorier les ressources. (Limite : 300) |
 | `application/vnd.adobe.xed+json` | Renvoie la classe JSON complète pour chaque ressource, avec l’élément d’origine `$ref` et `allOf` inclus. (Limite : 300) |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Réponse**
 
@@ -95,7 +95,7 @@ Vous pouvez voir une union spécifique en exécutant une requête GET qui inclut
 
 >[!NOTE]
 >
->Les recherches d’unions sont disponibles à l’aide des points de terminaison `/unions` et `/schemas`[!DNL Profile] afin de les activer pour les utiliser dans les exportations de dans un jeu de données.
+>Les recherches d’unions sont disponibles à l’aide des points d’entrée `/unions` et `/schemas`[!DNL Profile] afin de les activer pour les utiliser dans les exportations de dans un jeu de données.
 
 **Format d’API**
 
@@ -108,7 +108,7 @@ GET /tenant/schemas/{UNION_ID}
 | --- | --- |
 | `{UNION_ID}` | Codé URL `$id` URI de l’union que vous souhaitez rechercher. Les URI pour les schémas d’unions sont suivis de « __union ». |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Requête**
 
@@ -131,7 +131,7 @@ Les en-têtes Accept suivants sont disponibles pour les recherches de schémas d
 | `application/vnd.adobe.xed+json; version=1` | Raw avec `$ref` et `allOf`. Contient des titres et des descriptions. |
 | `application/vnd.adobe.xed-full+json; version=1` | Attributs `$ref` et `allOf` résolus. Contient des titres et des descriptions. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Réponse**
 
@@ -196,7 +196,7 @@ GET /tenant/schemas?property=meta:immutableTags==union&property=meta:class=={CLA
 | --- | --- |
 | `{CLASS_ID}` | Le `$id` de la classe dont vous souhaitez répertorier les schémas activés pour l’union. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Requête**
 
@@ -219,7 +219,7 @@ Le format de réponse dépend de la variable `Accept` en-tête envoyé dans la r
 | `application/vnd.adobe.xed-id+json` | Renvoie un court résumé de chaque ressource. Il s’agit de l’en-tête recommandé pour répertorier les ressources. (Limite : 300) |
 | `application/vnd.adobe.xed+json` | Renvoie la totalité du schéma JSON de chaque ressource, en incluant le `$ref` et l’`allOf` d’origine. (Limite : 300) |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Réponse**
 

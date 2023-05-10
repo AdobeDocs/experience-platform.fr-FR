@@ -5,7 +5,7 @@ exl-id: 734ce1b3-e270-4c37-958c-88bcc39fbf20
 source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
 source-wordcount: '1342'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -72,7 +72,7 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 | Personnalisation de la même page et de la page suivante | La [fonctionnalité de personnalisation de la même page et de la page suivante](../../destinations/ui/configure-personalization-destinations.md) fournit une vue partagée et ciblée des utilisateurs pour les applications sur Experience Edge, afin d’assurer la cohérence entre les canaux marketing et client. Cette personnalisation est possible grâce à la [connexion Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) et à la [connexion de personnalisation personnalisée](../../destinations/catalog/personalization/custom-personalization.md). Pour configurer vos campagnes de personnalisation de la même page ou de la page suivante, reportez-vous au [tutoriel dédié](../../destinations/ui/configure-personalization-destinations.md). |
 | Surveillance des destinations par lots et mesures au niveau du segment | La fonctionnalité de surveillance des destinations est désormais étendue à partir des destinations de diffusion en continu pour inclure également les destinations par lots et les mesures au niveau du segment pour vos flux de données d’activation. Pour plus d’informations, lisez les sections [Tableau de bord de surveillance des destinations](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard), [Tableau de bord de surveillance des tâches de segment](/help/dataflows/ui/monitor-destinations.md#monitoring-segment-jobs-dashboard) et [Affichage au niveau du segment](/help/dataflows/ui/monitor-destinations.md#segment-level-view). |
 | Modification du planning dans l’interface utilisateur pour les flux de données d’activation par lots existants | Cette version introduit l’option permettant de modifier le planning de vos flux de données d’activation existants vers des destinations par lots. Pour plus d’informations, lisez [Activation des données de profils vers les destinations de profils par lots](/help/destinations/ui/activate-batch-profile-destinations.md). |
-| Améliorations des destinations Marketo | Les clients d’Experience Platform qui utilisent Marketo Engage peuvent optimiser leur base de données Marketo grâce à la nouvelle possibilité d’envoyer des enregistrements de nouvelles personnes dans Marketo Engage depuis Experience Platform via le [connecteur de destination Marketo](/help/destinations/catalog/adobe/marketo-engage.md). <br> Lors de l’envoi de segments d’audience d’Experience Platform à Marketo Engage, les personnes du segment qui n’existent pas encore dans votre base de données de Marketo Engage peuvent y être automatiquement ajoutées. Pour plus d’informations, lisez [Envoi d’un segment Adobe Experience Platform vers une liste statique Marketo](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-platform-segment-to-a-marketo-static-list.html?lang=fr) (l’étape 9 du tutoriel indique comment envoyer les enregistrements de nouvelles personnes dans Marketo). |
+| Améliorations des destinations Marketo | Les clients d’Experience Platform qui utilisent Marketo Engage peuvent optimiser leur base de données Marketo grâce à la nouvelle possibilité d’envoyer des enregistrements de nouvelles personnes dans Marketo Engage depuis Experience Platform via le [connecteur de destination Marketo](/help/destinations/catalog/adobe/marketo-engage.md). <br> Lorsque vous envoyez des segments d’audience d’Experience Platform vers Marketo Engage, les personnes du segment qui n’existent pas encore dans votre base de données Marketo Engage peuvent y être automatiquement ajoutées. Pour plus d’informations, lisez [Envoi d’un segment Adobe Experience Platform vers une liste statique Marketo](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-platform-segment-to-a-marketo-static-list.html?lang=fr) (l’étape 9 du tutoriel indique comment envoyer les enregistrements de nouvelles personnes dans Marketo). |
 
 **Nouvelles destinations**
 
@@ -85,14 +85,14 @@ Pour des informations plus générales sur les destinations, reportez-vous à la
 
 ## Query Service {#query-service}
 
-[!DNL Query Service] vous permet d’utiliser le langage SQL standard pour interroger les données dans le [!DNL Data Lake] d’Adobe Experience Platform. Vous pouvez joindre n’importe quel jeu de données à partir du [!DNL Data Lake] et capturer les résultats de la requête sous la forme d’un nouveau jeu de données à utiliser dans les rapports, dans l’espace de travail de science des données ou pour l’ingestion dans Real-Time Customer Profile.
+[!DNL Query Service] vous permet d’utiliser le langage SQL standard pour interroger les données dans le [!DNL Data Lake] d’Adobe Experience Platform. Vous pouvez joindre n’importe quel jeu de données à partir du [!DNL Data Lake] et capturer les résultats de la requête sous la forme d’un nouveau jeu de données à utiliser dans les rapports, dans l’espace de travail de science des données ou pour l’ingestion dans le profil client en temps réel.
 
 **Fonctionnalités mises à jour**
 
 | Fonctionnalité | Description |
 | --- | --- |
 | Bloc anonyme | La structure SQL du bloc anonyme permet de ventiler les tâches de préparation des données à grande échelle dans Query Service en tâches plus petites, puis de les réutiliser et de les exécuter en séquence pour le chargement incrémentiel des données. Pour plus d’informations, consultez la [documentation sur les exemples de requêtes pour les blocs anonymes](../../query-service/essential-concepts/anonymous-block.md). |
-| Organisation des jeux de données | Fournit une structure de données cohérente et logique pour organiser vos ressources de données à utiliser avec Query Service à mesure que la quantité de ressources de données dans la sandbox augmente. Pour plus d’informations, consultez la [documentation sur l’organisation des ressources de données](../../query-service/best-practices/organize-data-assets.md). |
+| Organisation des jeux de données | Fournit une structure de données cohérente et logique pour organiser vos ressources de données à utiliser avec Query Service à mesure que la quantité de ressources de données dans le sandbox augmente. Pour plus d’informations, consultez la [documentation sur l’organisation des ressources de données](../../query-service/best-practices/organize-data-assets.md). |
 
 Pour plus d’informations sur Query Service [!DNL Query Service], consultez la [[!DNL Query Service] présentation](../../query-service/home.md) de Query Service.
 

@@ -800,7 +800,7 @@ Une réponse réussie renvoie un état HTTP 204 (No Content) sans corps de répo
 
 ## Gérer les notes d’un élément de données {#notes}
 
-Les éléments de données sont des ressources « inscriptibles », ce qui signifie que vous pouvez créer et récupérer des notes textuelles sur chaque ressource. Pour plus d’informations sur la gestion des notes pour les éléments de données et d’autres ressources compatibles, reportez-vous au [guide de point d&#39;entrée des notes](./notes.md).
+Les éléments de données sont des ressources « inscriptibles », ce qui signifie que vous pouvez créer et récupérer des notes textuelles sur chaque ressource. Pour plus d’informations sur la gestion des notes pour les éléments de données et d’autres ressources compatibles, reportez-vous au [guide de point d’entrée des notes](./notes.md).
 
 ## Récupérer les ressources associées pour un élément de données {#related}
 

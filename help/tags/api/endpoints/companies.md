@@ -21,7 +21,7 @@ Le point d’entrée utilisé dans ce guide fait partie de lʼ[API Reactor](http
 
 ## Récupération dʼune liste de sociétés {#list}
 
-Vous pouvez répertorier les sociétés que vous êtes autorisé à utiliser en envoyant une requête GET au point d&#39;entrée `/companies`. Dans la plupart des cas, il y en a exactement une.
+Vous pouvez répertorier les sociétés que vous êtes autorisé à utiliser en envoyant une requête GET au point d’entrée `/companies`. Dans la plupart des cas, il y en a exactement une.
 
 **Format d&#39;API**
 

@@ -35,7 +35,7 @@ Ce document contient des informations sur les nouvelles fonctionnalités d’Ado
 | --- | --- |
 | Respect de la loi PDPA | Maintenant, les demandes d’accès à des informations personnelles ([!DNL Privacy]) peuvent être créées et suivies dans le cadre de la loi Personal Data Protection Act (PDPA) en Thaïlande. Lors de l’envoi de demandes d’accès à des informations personnelles dans l’API, le tableau `regulation` accepte la valeur « pdpa_tha ». |
 | Types d’espaces de noms dans l’interface utilisateur | Vous pouvez désormais spécifier différents types d’espaces de noms dans le créateur de requêtes de l’interface utilisateur de [!DNL Privacy Service]. Pour plus d’informations, voir le [guide d’utilisation](ui/user-guide.md). |
-| Abandon de l’ancien point de terminaison | L’ancien point de terminaison de l’API (`data/privacy/gdpr`) a été abandonné. |
+| Abandon de l’ancien point d’entrée | L’ancien point d’entrée de l’API (`data/privacy/gdpr`) a été abandonné. |
 
 ## 14 janvier 2020
 

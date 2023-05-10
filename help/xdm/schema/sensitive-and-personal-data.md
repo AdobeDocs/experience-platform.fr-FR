@@ -5,7 +5,7 @@ exl-id: 92a8b6ad-3c45-4772-8178-60f857ab13e2
 source-git-commit: 9785b252b7c9cb3513858476753b6b4f71277ed7
 workflow-type: tm+mt
 source-wordcount: '526'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
@@ -37,8 +37,8 @@ XDM fournit divers groupes de champs et types de données standard pour décrire
 
 Platform vous permet de définir vos propres groupes de champs et types de données personnalisés, ce qui vous permet de contrôler entièrement la structure de vos données si des ressources standard disponibles ne répondent pas à vos besoins. Pour plus d’informations sur la définition de ces ressources personnalisées, consultez la documentation suivante :
 
-* [Création d’un groupe de champs personnalisé](../ui/resources/field-groups.md#create)
-* [Création d’un type de données personnalisé](../ui/resources/data-types.md#create)
+* [Créer un groupe de champs personnalisé](../ui/resources/field-groups.md#create)
+* [Créer un type de données personnalisé](../ui/resources/data-types.md#create)
 
 <!-- (To include once features are available)
 * Marking fields as sensitive

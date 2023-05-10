@@ -6,8 +6,8 @@ description: Ce document présente un aperçu du groupe de champs de schéma Dé
 exl-id: b8ec2f57-6882-466e-9b22-61fb2178fb1e
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '146'
-ht-degree: 19%
+source-wordcount: '143'
+ht-degree: 18%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 19%
 | --- | --- | --- |
 | `channel` | [Canal d’expérience](../../data-types/experience-channel.md) | Objet décrivant les retours de produits, l’enregistrement de la garantie et les processus du panier/de la commande. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Pour plus d’informations sur le groupe de champs, reportez-vous au référentiel XDM public :
 

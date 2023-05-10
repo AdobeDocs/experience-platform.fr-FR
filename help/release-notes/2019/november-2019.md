@@ -1,5 +1,5 @@
 ---
-title: Notes de mise à jour de Adobe Experience Platform, novembre 2019
+title: Notes de mise à jour d’Adobe Experience Platform – Novembre 2019
 description: Les notes de mise à jour de novembre 2019 pour Adobe Experience Platform.
 doc-type: release notes
 last-update: November 18, 2019
@@ -8,13 +8,13 @@ exl-id: 2c417c56-cc61-4788-b248-d98ea6cf89f0
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1887'
-ht-degree: 67%
+ht-degree: 65%
 
 ---
 
 # Notes de mise à jour d’Adobe Experience Platform
 
-**Date de publication : 18 novembre 2019**
+**Date de publication : 18 novembre 2019.**
 
 Nouvelles fonctionnalités d’Adobe Experience Platform :
 * [[!DNL Real-Time Customer Data Platform]](#rtcdp)
@@ -39,8 +39,8 @@ Avec Real-Time CDP, vous pouvez :
 
 * d’obtenir un aperçu unique de votre client grâce à la collecte en flux continu des données client de l’ensemble de l’entreprise ;
 * de gérer de manière responsable les profils avec des contrôles de confidentialité et de gouvernance fiables pour les identifiants connus et inconnus ;
-* de générer des informations exploitables et d’adapter les audiences grâce à l’IA et à l’apprentissage automatique optimisés par Adobe Sensei et conçus pour les spécialistes marketing ;
-* de proposer des expériences personnalisées en temps réel sur l’ensemble des canaux et des destinations.
+* générer des informations exploitables et adapter les audiences grâce à l’IA et au machine learning optimisés par Adobe Sensei et conçus pour les spécialistes marketing ;
+* proposer des expériences personnalisées en temps réel sur l’ensemble des canaux et des destinations.
 
 Pour plus d’informations, voir [Documentation Real-time Customer Data Platform](../../rtcdp/overview.md).
 
@@ -104,22 +104,22 @@ Pour plus d’informations sur les sources, consultez [Présentation des sources
 
 ## [!DNL Data Science Workspace] {#dsw}
 
-Adobe Experience Platform [!DNL Data Science Workspace] permet aux spécialistes des données de générer en toute transparence des informations à partir de données et de contenu dans les applications Adobe et les systèmes tiers en créant et en mettant en oeuvre des modèles d’apprentissage automatique. [!DNL Data Science Workspace] est étroitement intégré à et alimente le cycle de vie de la science des données de bout en bout, y compris l’exploration et la préparation des données XDM, puis le développement et la mise en œuvre de modèles pour enrichir automatiquement avec des insights d’apprentissage automatique.[!DNL Platform][!DNL Real-Time Customer Profile]
+Adobe Experience Platform [!DNL Data Science Workspace] permet aux spécialistes des données de générer en toute transparence des informations à partir de données et de contenu dans les applications Adobe et les systèmes tiers en créant et en mettant en oeuvre des modèles d’apprentissage automatique. [!DNL Data Science Workspace] est étroitement intégré à [!DNL Platform] et alimente le cycle de vie de la science des données de bout en bout, y compris l’exploration et la préparation des données XDM, suivi par le développement et la mise en oeuvre de modèles pour enrichir automatiquement [!DNL Real-Time Customer Profile] avec Machine Learning Insights.
 
 **Nouvelles fonctionnalités**
 
 | Fonctionnalité | Description |
 | -----------| ---------- |
 | Accès aux données à l’aide de [!DNL Platform] SDK | Recettes préconfigurées et notebooks de lancement dans [!DNL Python] now use [!DNL Platform] SDK pour l’accès aux données. |
-| Prise en charge des environnements de test | Prise en charge de la fonctionnalité d’environnement de test à venir (actuellement en version bêta), notamment la possibilité d’isoler les notebooks et les recettes dans des environnements de test de développement ou de production. Pour plus d’informations, consultez la [présentation des environnements de test](../../sandboxes/home.md). |
+| Prise en charge des sandbox | Prise en charge de la fonctionnalité de sandbox à venir (actuellement en version bêta), notamment la possibilité d’isoler les notebooks et les recettes dans des sandbox de développement ou de production. Pour plus d’informations, consultez la [Présentation des sandbox](../../sandboxes/home.md). |
 
-Pour plus d’informations, consultez la [présentation de Data Science Workspace](../../data-science-workspace/home.md).
+Pour plus d’informations, consultez la [présentation de l’espace de travail de science des données](../../data-science-workspace/home.md).
 
 ## Système d’[!DNL Experience Data Model] (XDM) {#xdm}
 
-La normalisation et l’interopérabilité sont des concepts clés pour [!DNL Experience Platform]. Le [!DNL Experience Data Model] (XDM), piloté par Adobe, vise à normaliser les données d’expérience client et à définir des schémas pour la gestion de l’expérience client.
+La normalisation et l’interopérabilité sont des concepts clés pour [!DNL Experience Platform]. Le modèle de données [!DNL Experience Data Model] d’expérience (XDM), piloté par Adobe, vise à normaliser les données d’expérience client et à définir des schémas pour la gestion de l’expérience client.
 
-XDM est une spécification documentée publiquement conçue pour améliorer la puissance des expériences numériques. Elle fournit des structures et des définitions communes à toutes les applications pour communiquer avec des services sur Adobe Experience Platform. En adhérant aux normes XDM, toutes les données d’expérience client peuvent être intégrées dans une représentation commune afin de fournir des informations plus rapidement et de manière plus intégrée. Vous pouvez obtenir des informations précieuses à partir des actions des clients, définir des types de clients par le biais de segments et utiliser les attributs du client à des fins de personnalisation.
+XDM est une spécification documentée publiquement conçue pour améliorer la puissance des expériences digitales. Elle fournit des structures et des définitions communes à toutes les applications pour communiquer avec des services sur Adobe Experience Platform. En adhérant aux normes XDM, toutes les données d’expérience client peuvent être intégrées dans une représentation commune afin de fournir des informations plus rapidement et de manière plus intégrée. Vous pouvez obtenir des informations précieuses à partir des actions des clients, définir des types de clients par le biais de segments et utiliser les attributs du client à des fins de personnalisation.
 
 **Nouvelles fonctionnalités**
 
@@ -147,12 +147,12 @@ Adobe Experience Platform vous permet d’offrir aux clients des expériences 
 | Améliorations apportées aux [!DNL Profile] recherche | Les utilisateurs peuvent désormais rechercher des profils à l’aide de descripteurs de référence et d’entités connexes. |
 | Nettoyage des données d’un jeu de données spécifique | Les utilisateurs peuvent désormais supprimer des données pour un jeu de données ou un lot donné à l’aide de la variable [!DNL Profile] API des tâches système. |
 | Edge [!DNL Profile] améliorations des requêtes | Les applications peuvent désormais interroger Edge [!DNL Profile] par l’une des identités d’un profil donné. |
-| Configuration des stratégies de fusion par projection | Les applications peuvent désormais configurer des stratégies de fusion par projection afin de générer une vue des données telles qu’elles sont régies par une stratégie de fusion spécifique. |
+| Configuration des politiques de fusion par projection | Les applications peuvent désormais configurer des politiques de fusion par projection afin de générer une vue des données telles qu’elles sont régies par une politique de fusion spécifique. |
 | Attributs calculés | Les attributs calculés calculent automatiquement la valeur des champs en fonction d’autres valeurs, calculs et expressions. Les attributs calculés interviennent au niveau du profil pour agréger des valeurs comme « achat total », « valeur de durée de vie » ou « état de l’entonnoir » en fonction d’un événement entrant, d’un événement entrant et de données de profil, ou d’un événement entrant, de données de profil et d’événements historiques. |
 
-**Corrections de bogues**
+**Correctifs de bugs**
 
-* Une liste simplifiée des stratégies de combinaison des identifiants disponibles dans le processus de création de stratégies de fusion.
+* Une liste simplifiée des politiques de combinaison des identifiants disponibles dans le processus de création de politiques de fusion.
 
 **Problèmes connus**
 
@@ -168,20 +168,20 @@ Adobe Experience Platform [!DNL Segmentation Service] propose une interface util
 
 | Fonctionnalité | Description |
 | -----------| ---------- |
-| Segmentation planifiée | Les utilisateurs peuvent désormais activer l’évaluation de segmentation planifiée pour tous les segments via l’interface utilisateur et l’API. Une fois activée, tous les segments sont évalués une fois par jour. Cela n’affecte pas les fonctionnalités de segmentation sur demande dont le fonctionnement reste inchangé.<br/><br/>Remarque : la fonctionnalité de segmentation planifiée ne peut pas être utilisée dans les environnements de test comportant plus de cinq stratégies de fusion pour [!DNL XDM Individual Profile]. |
+| Segmentation planifiée | Les utilisateurs peuvent désormais activer l’évaluation de segmentation planifiée pour tous les segments via l’interface utilisateur et l’API. Une fois activée, tous les segments sont évalués une fois par jour. Cela n’affecte pas les fonctionnalités de segmentation sur demande dont le fonctionnement reste inchangé.<br/><br/>Remarque : la fonctionnalité de segmentation planifiée ne peut pas être utilisée dans les environnements de test comportant plus de cinq politiques de fusion pour [!DNL XDM Individual Profile]. |
 | Segmentation en flux continu | La prise en charge de l’évaluation continue des segments (segmentation par flux) permet d’évaluer la plupart des règles de segmentation à mesure que les données sont transmises à [!DNL Platform]. Cette fonctionnalité signifie que l’adhésion au segment sera à jour sans devoir exécuter des tâches de segmentation planifiées. Certaines exceptions s’appliquent, comme les segments utilisant des relations à plusieurs entités ou comportant des payloads enrichis. |
 | Segments définis comme des blocs de création | Lors de la création de segments à l’aide de l’interface utilisateur du créateur de segments, les utilisateurs peuvent désormais utiliser des segments précédemment définis comme des blocs de création pour d’autres segments. <ul><li>Référencer l’appartenance à l’audience actuelle : elle est mise à jour lorsque les individus rejoignent et quittent les audiences.</li><li>Copier la logique : prenez la définition de segment sélectionnée et dupliquez-la dans le nouveau segment.</li></ul> |
 | Affichage de l’adhésion au segment par espace de noms d’identifiant | L’adhésion au segment peut désormais être affichée à l’aide de l’espace de noms d’identifiant (courrier électronique, ECID et nombre total). |
 | Prise en charge des RBAC | Le créateur de segments prend désormais en charge les autorisations et les contrôles d’accès en fonction du rôle. |
 | Amélioration de la prise en charge du partage des audiences externes entre [!DNL Platform] et les solutions d’Adobe | Les utilisateurs peuvent désormais introduire des éléments externes (non[!DNL Experience Platform]) métadonnées d’audience dans les cas où le nombre d’audiences est important ou inconnu à priori. Cette version comprend l’accès aux [!DNL Audience Manager] métadonnées pour les clients qui ont configuré le connecteur de solution. Ces métadonnées d’audience peuvent être utilisées dans le créateur de segments pour créer [!DNL Experience Platform] segments. <br/><br/> En outre, les segments créés dans [!DNL Experience Platform] sera désormais disponible pour une utilisation dans les solutions Adobe intégrées, notamment [!DNL Audience Manager], [!DNL Target], et [!DNL Ad Cloud]. |
 
-**Corrections de bogues**
+**Correctifs de bugs**
 
 * Correction d’un problème provoquant le renvoi d’aucun profil par la segmentation d’entités multiples dans le cas de relations imbriquées.
 * Correction d’un problème provoquant le renvoi de résultats trompeurs par une logique d’exclusion.
 * Amélioration de la lisibilité des dossiers à plusieurs entités. Ils affichent désormais le nom convivial de la classe XDM.
 * Correction d’un problème intermittent entraînant l’apparition de plusieurs copies du même dossier XDM.
-* Les messages sont maintenant émis pour informer un utilisateur en cas d’indisponibilité des estimations de segments pour la stratégie de fusion sélectionnée.
+* Les messages sont maintenant émis pour informer un utilisateur en cas d’indisponibilité des estimations de segments pour la politique de fusion sélectionnée.
 
 **Problèmes connus**
 

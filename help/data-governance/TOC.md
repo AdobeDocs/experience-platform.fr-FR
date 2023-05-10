@@ -2,7 +2,7 @@
 audience: user
 user-guide-title: Aide sur la gouvernance des données d’Adobe Experience Platform
 breadcrumb-title: Guide de gouvernance des données
-user-guide-description: Faites respecter les restrictions d’utilisation des données au moyen de libellés, d’actions marketing et de stratégies de gouvernance.
+user-guide-description: Faites respecter les restrictions d’utilisation des données au moyen de libellés, d’actions marketing et de politiques de gouvernance.
 feature: Data Governance
 source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
@@ -21,11 +21,11 @@ ht-degree: 100%
    * [Glossaire des libellés](labels/reference.md)
    * [Gestion des libellés dans l’interface utilisateur](labels/user-guide.md)
    * [Gestion des libellés des jeux de données à l’aide des API](labels/dataset-api.md)
-* Stratégies d’utilisation des données {#policies}
+* Politiques d’utilisation des données {#policies}
    * [Présentation](policies/overview.md)
-   * [Gestion des stratégies dans l’interface utilisateur](policies/user-guide.md)
-   * [Création d’une stratégie dans l’API](policies/create.md)
-* Application des stratégies {#enforcement}
+   * [Gestion des politiques dans l’interface utilisateur](policies/user-guide.md)
+   * [Création d’une politique dans l’API](policies/create.md)
+* Application des politiques {#enforcement}
    * [Présentation](enforcement/overview.md)
    * [Application automatique](enforcement/auto-enforcement.md)
    * [Application basée sur les API](enforcement/api-enforcement.md)
@@ -33,7 +33,7 @@ ht-degree: 100%
    * [Présentation](api/overview.md)
    * [Prise en main](api/getting-started.md)
    * [Libellés](api/labels.md)
-   * [Stratégies](api/policies.md)
+   * [Politiques](api/policies.md)
    * [Actions marketing](api/marketing-actions.md)
    * [Évaluation](api/evaluation.md)
 * [Référence d’API](https://www.adobe.io/experience-platform-apis/references/policy-service/)

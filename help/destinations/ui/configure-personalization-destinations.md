@@ -54,17 +54,17 @@ Selon la destination configurée, reportez-vous aux articles suivants pour conna
 * [Connexion Adobe Target](../catalog/personalization/adobe-target-connection.md)
 * [Connexion de personnalisation personnalisée](../catalog/personalization/custom-personalization.md)
 
-## Étape 3 : créer une stratégie de fusion [!DNL Active-On-Edge]. {#create-merge-policy}
+## Étape 3 : créer une politique de fusion [!DNL Active-On-Edge]. {#create-merge-policy}
 
-Une fois votre connexion de destination créée, vous devez créer une stratégie de fusion [!DNL Active-On-Edge].
+Une fois votre connexion de destination créée, vous devez créer une politique de fusion [!DNL Active-On-Edge].
 
-Suivez les instructions de la section [création d’une stratégie de fusion](../../profile/merge-policies/ui-guide.md#create-a-merge-policy) et assurez-vous d’activer le bouton **[!UICONTROL Stratégie de fusion Active-On-Edge]**.
+Suivez les instructions de la section [création d’une politique de fusion](../../profile/merge-policies/ui-guide.md#create-a-merge-policy) et assurez-vous d’activer le bouton **[!UICONTROL Politique de fusion Active-On-Edge]**.
 
 ## Étape 4 : créer un segment dans Platform. {#create-segment}
 
-Après avoir créé la stratégie de fusion [!DNL Active-On-Edge], vous devez créer un segment dans Platform.
+Après avoir créé la politique de fusion [!DNL Active-On-Edge], vous devez créer un segment dans Platform.
 
-Suivez le guide du [Créateur de segments](../../segmentation/ui/segment-builder.md) pour créer le segment et veillez à [y affecter](../../segmentation/ui/segment-builder.md#merge-policies) la stratégie de fusion [!DNL Active-On-Edge] créée à l’étape 3.
+Suivez le guide du [Créateur de segments](../../segmentation/ui/segment-builder.md) pour créer le segment et veillez à [y affecter](../../segmentation/ui/segment-builder.md#merge-policies) la politique de fusion [!DNL Active-On-Edge] créée à l’étape 3.
 
 ## Étape 5 : activer le segment vers votre destination.
 

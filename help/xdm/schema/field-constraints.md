@@ -6,8 +6,8 @@ description: Référence pour les contraintes de type de champ dans le modèle d
 exl-id: 63839a28-6d26-46f1-8bbf-b524e82ac4df
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '663'
-ht-degree: 12%
+source-wordcount: '654'
+ht-degree: 11%
 
 ---
 
@@ -146,7 +146,7 @@ Les sections ci-dessous décrivent comment chaque type XDM est mappé à d’aut
 | [!UICONTROL Booléen] | Type : `BOOLEAN` | `BooleanType` | `java.lang.Boolean` |
 | [!UICONTROL Carte] | `MAP`-groupe annoté<br><br>(`<key-type>` must `STRING`) | `MapType`<br><br>(`keyType` must `StringType`) | `java.util.Map` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Scala, .NET et CosmosDB {#scala}
 
@@ -163,7 +163,7 @@ Les sections ci-dessous décrivent comment chaque type XDM est mappé à d’aut
 | [!UICONTROL Booléen] | `Boolean` | `System.Boolean` | `Boolean` |
 | [!UICONTROL Carte] | `Map` | (S/O) | `object` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### MongoDB, Aerospike et Protobuf 2 {#mongo}
 
@@ -180,7 +180,7 @@ Les sections ci-dessous décrivent comment chaque type XDM est mappé à d’aut
 | [!UICONTROL Booléen] | `bool` | `Integer`<br>(binaire 0/1) | `bool` |
 | [!UICONTROL Carte] | `object` | `map` | `map<key_type, value_type>` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Définition des types de champ XDM dans l’API {#define-fields}
 

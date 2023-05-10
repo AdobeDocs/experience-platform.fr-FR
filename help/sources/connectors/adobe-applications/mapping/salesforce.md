@@ -4,8 +4,8 @@ title: Champs de mappage Salesforce
 description: Les tableaux ci-dessous contiennent les mappages entre les champs source Salesforce et leurs champs XDM correspondants.
 exl-id: 33ee76f2-0495-4acd-a862-c942c0fa3177
 source-git-commit: 5e93a86d6bdbf66e6b4991e0e2bc4d3dfe90d2b5
-workflow-type: ht
-source-wordcount: '494'
+workflow-type: tm+mt
+source-wordcount: '479'
 ht-degree: 100%
 
 ---
@@ -72,11 +72,11 @@ Lisez la [Présentation du Profil individuel XDM](../../../../xdm/classes/indivi
 | `Title` | `extendedWorkDetails.jobTitle` |
 | `"Contact"` | `b2b.personType` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Prospect {#lead}
 
-Lisez la [Présentation du Profil individuel XDM](../../../../xdm/classes/individual-profile.md) pour plus d’informations sur la classe XDM. Pour plus d’informations sur les groupes de champs XDM, consultez les guides [Groupe de champs de schéma Détails professionnels XDM](../../../../xdm/field-groups/profile/business-person-details.md) et [Groupe de champs de schéma Composants professionnels XDM](../../../../xdm/field-groups/profile/business-person-components.md).
+Lisez la [Présentation du Profil individuel XDM](../../../../xdm/classes/individual-profile.md) pour plus d’informations sur la classe XDM. Pour plus d’informations sur les groupes de champs XDM, consultez les guides [Groupe de champs de schéma Détails professionnels XDM](../../../../xdm/field-groups/profile/business-person-details.md) et [Groupe de champs de schéma Composants professionnels XDM](../../../../xdm/field-groups/profile/business-person-components.md).
 
 | Champ source | Chemin du champ XDM cible | Notes |
 | --- | --- | --- |
@@ -123,7 +123,7 @@ Lisez la [Présentation du Profil individuel XDM](../../../../xdm/classes/indivi
 | `"Lead"` | `b2b.personType` |
 | `iif(ConvertedContactId != null && ConvertedContactId != "", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", ConvertedContactId, "sourceKey", concat(ConvertedContactId,"@${CRM_ORG_ID}.Salesforce")), null)` | `personComponents.sourceConvertedContactKey` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Compte {#account}
 
@@ -179,7 +179,7 @@ Lisez la [Présentation des détails du compte professionnel XDM](../../../../x
 | `Type` | `accountType` |
 | `Website` | `accountOrganization.website` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Opportunité {#opportunity}
 
@@ -220,7 +220,7 @@ Lisez la [Présentation des opportunités commerciales XDM](../../../../xdm/cla
 | `Type` | `opportunityType` |
 | `CurrencyIsoCode` | `opportunityAmount.currencyCode` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Rôle de contact d’opportunité {#opportunity-contact-role}
 
@@ -246,7 +246,7 @@ Lisez la [Présentation de la classe de relation entre la personne et l’opport
 | `concat(OpportunityId,"@${CRM_ORG_ID}.Salesforce")` | `opportunityKey.sourceKey` |
 | `Role` | `personRole` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Campaign {#campaign}
 

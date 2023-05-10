@@ -7,7 +7,7 @@ description: Ce tutoriel décrit les étapes de création d’un schéma à l’
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
 source-git-commit: a3140d5216857ef41c885bbad8c69d91493b619d
 workflow-type: tm+mt
-source-wordcount: '3962'
+source-wordcount: '3959'
 ht-degree: 100%
 
 ---
@@ -80,7 +80,7 @@ Une nouvelle boîte de dialogue apparait. Elle présente la liste des groupes de
 
 ![](../images/tutorials/create-schema/field-group-popularity.png)
 
-Vous pouvez utiliser l’un des filtres dans le rail de gauche pour limiter la liste des groupes de champs standard à des [secteurs](../schema/industries/overview.md) comme la vente au détail, les services financiers et la santé.
+Vous pouvez utiliser l’un des filtres dans le rail de gauche pour limiter la liste des groupes de champs standard à des [secteurs](../schema/industries/overview.md) comme la vente au détail, les services financiers et les services de santé.
 
 ![](../images/tutorials/create-schema/industry-field-groups.png)
 
@@ -218,7 +218,7 @@ Lorsque vous définissez des champs dans le [!DNL Schema Editor], vous pouvez ap
 | [!UICONTROL Identité] | Indique que ce champ est un champ d’identité. Vous trouverez plus d’informations sur les champs d’identité [dans la suite de ce tutoriel](#identity-field). |
 | [!UICONTROL Relation] | Bien que les relations de schéma puissent être déduites par l’utilisation du schéma d’union et [!DNL Real-Time Customer Profile], cela s’applique uniquement aux schémas partageant la même classe. La contrainte [!UICONTROL Relation] indique que ce champ fait référence à l’identité principale d’un schéma basée sur une classe différente, ce qui implique une relation entre les deux schémas. Pour plus d’informations, consultez le tutoriel sur [la définition d’une relation](./relationship-ui.md). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >

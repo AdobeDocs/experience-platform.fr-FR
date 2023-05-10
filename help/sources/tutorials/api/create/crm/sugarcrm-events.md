@@ -1,10 +1,11 @@
 ---
 title: Création d’une connexion source et d’un flux de données pour les événements SugarCRM à l’aide de l’API Flow Service
 description: Découvrez comment connecter Adobe Experience Platform aux événements SugarCRM à l’aide de l’API Flow Service.
-source-git-commit: e3ae650c70b07e8682ea77f94791d5b320d89425
+exl-id: 12d08010-569c-4111-ba95-697c6ce6f637
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '2009'
-ht-degree: 60%
+ht-degree: 61%
 
 ---
 
@@ -20,8 +21,8 @@ Le tutoriel suivant vous guide tout au long des étapes de création d’un [!DN
 
 Ce guide nécessite une compréhension professionnelle des composants suivants d’Experience Platform :
 
-* [Sources](../../../../home.md)[!DNL Platform] : Experience  permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de Platform.
-* [Sandbox](../../../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuelles qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
+* [Sources](../../../../home.md)[!DNL Platform] : Experience  permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, de libeller et d’améliorer les données entrantes à l’aide des services de Platform.
+* [Sandbox](../../../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
 
 Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour vous connecter. [!DNL SugarCRM] en utilisant la variable [!DNL Flow Service] API.
 

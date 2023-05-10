@@ -6,14 +6,14 @@ keywords: adobe analytics;variables;analytics;carte automatique;mappage automati
 exl-id: 856fada7-b62c-4fd2-9372-a19ae1cdec33
 source-git-commit: dcbe4c1b5a085878562990ed2db8e5cb27b93e28
 workflow-type: tm+mt
-source-wordcount: '918'
+source-wordcount: '915'
 ht-degree: 35%
 
 ---
 
 # Variables automatiquement mappées dans [!DNL Analytics]
 
-Vous trouverez ci-dessous une liste des variables que Adobe Experience Platform Edge Network mappe automatiquement dans Adobe Analytics. Vous trouverez des informations détaillées sur les paramètres de requête de collecte de données Adobe Analytics dans la section [Guide de mise en oeuvre Analytics](https://experienceleague.adobe.com/docs/analytics/implementation/validate/query-parameters.html).
+Vous trouverez ci-dessous une liste des variables que Adobe Experience Platform Edge Network mappe automatiquement dans Adobe Analytics. Vous trouverez des informations détaillées sur les paramètres de requête de collecte de données Adobe Analytics dans la section [Guide de mise en oeuvre Analytics](https://experienceleague.adobe.com/docs/analytics/implementation/validate/query-parameters.html?lang=fr).
 
 >[!NOTE]
 >Les informations de cette page s’appliquent également au SDK Mobile Adobe.
@@ -22,21 +22,21 @@ Vous trouverez ci-dessous une liste des variables que Adobe Experience Platform 
 | ---------- | ------------------------- | ----------------------------------------- |
 | application.id | c.a.appid | Mappage des données contextuelles `c.a.appid`AppMeasurement. |
 | application.launches.value | c.a.launches | Mappage des données contextuelles `c.a.launches`AppMeasurement. |
-| commerce.checkouts.id | Événements | `scCheckout` sérialisation des événements. Si ce champ est exclu (c’est-à-dire pour les événements non sérialisés), le système génère et affecte sa propre valeur d’identifiant à l’entité. |
-| commerce.checkouts.value | Événements | Mappage du paramètre de requête EVENT_LIST_FULL AppMeasurement avec conversion COMMERCE_SC_CHECKOUT, à l’aide d’un délimiteur `,`. |
+| commerce.checkouts.id | Événements  | `scCheckout` sérialisation des événements. Si ce champ est exclu (c’est-à-dire pour les événements non sérialisés), le système génère et affecte sa propre valeur d’identifiant à l’entité. |
+| commerce.checkouts.value | Événements  | Mappage du paramètre de requête EVENT_LIST_FULL AppMeasurement avec conversion COMMERCE_SC_CHECKOUT, à l’aide d’un délimiteur `,`. |
 | commerce.order.currencyCode | cc | Mappage du paramètre de requête CURRENCY AppMeasurement. |
 | commerce.order.purchaseID | pi | Mappage du paramètre de requête PURCHASEID AppMeasurement. |
-| commerce.productListAdds.id | Événements | `scAdd` sérialisation des événements. Si ce champ est exclu (c’est-à-dire pour les événements non sérialisés), le système génère et affecte sa propre valeur d’identifiant à l’entité. |
-| commerce.productListAdds.value | Événements | Mappage du paramètre de requête EVENT_LIST_FULL AppMeasurement avec conversion COMMERCE_SC_ADD, à l’aide d’un délimiteur `,`. |
-| commerce.productListOpens.id | Événements | `scOpen` sérialisation des événements. Si ce champ est exclu (c’est-à-dire pour les événements non sérialisés), le système génère et affecte sa propre valeur d’identifiant à l’entité. |
-| commerce.productListOpens.value | Événements | Mappage du paramètre de requête EVENT_LIST_FULL AppMeasurement avec conversion COMMERCE_SC_OPEN à l’aide d’un délimiteur `,`. |
-| commerce.productListRemovals.id | Événements | `scRemove` sérialisation des événements. Si ce champ est exclu (c’est-à-dire pour les événements non sérialisés), le système génère et affecte sa propre valeur d’identifiant à l’entité. |
-| commerce.productListRemovals.value | Événements | Mappage du paramètre de requête EVENT_LIST_FULL AppMeasurement avec conversion COMMERCE_SC_REMOVE, à l’aide d’un délimiteur `,`. |
-| commerce.productListViews.id | Événements | `scView` sérialisation des événements. Si ce champ est exclu (c’est-à-dire pour les événements non sérialisés), le système génère et affecte sa propre valeur d’identifiant à l’entité. |
-| commerce.productListViews.value | Événements | Mappage du paramètre de requête EVENT_LIST_FULL AppMeasurement avec conversion COMMERCE_SC_VIEW, à l’aide d’un délimiteur `,`. |
-| commerce.productViews.id | Événements | `prodView` sérialisation des événements. Si ce champ est exclu (c’est-à-dire pour les événements non sérialisés), le système génère et affecte sa propre valeur d’identifiant à l’entité. |
-| commerce.productViews.value | Événements | Mappage du paramètre de requête EVENT_LIST_FULL AppMeasurement avec conversion COMMERCE_PROD_VIEW, à l’aide d’un délimiteur `,`. |
-| commerce.purchases.value | Événements | Mappage du paramètre de requête EVENT_LIST_FULL AppMeasurement avec conversion COMMERCE_PURCHASE, à l’aide d’un délimiteur `,`. |
+| commerce.productListAdds.id | Événements  | `scAdd` sérialisation des événements. Si ce champ est exclu (c’est-à-dire pour les événements non sérialisés), le système génère et affecte sa propre valeur d’identifiant à l’entité. |
+| commerce.productListAdds.value | Événements  | Mappage du paramètre de requête EVENT_LIST_FULL AppMeasurement avec conversion COMMERCE_SC_ADD, à l’aide d’un délimiteur `,`. |
+| commerce.productListOpens.id | Événements  | `scOpen` sérialisation des événements. Si ce champ est exclu (c’est-à-dire pour les événements non sérialisés), le système génère et affecte sa propre valeur d’identifiant à l’entité. |
+| commerce.productListOpens.value | Événements  | Mappage du paramètre de requête EVENT_LIST_FULL AppMeasurement avec conversion COMMERCE_SC_OPEN à l’aide d’un délimiteur `,`. |
+| commerce.productListRemovals.id | Événements  | `scRemove` sérialisation des événements. Si ce champ est exclu (c’est-à-dire pour les événements non sérialisés), le système génère et affecte sa propre valeur d’identifiant à l’entité. |
+| commerce.productListRemovals.value | Événements  | Mappage du paramètre de requête EVENT_LIST_FULL AppMeasurement avec conversion COMMERCE_SC_REMOVE, à l’aide d’un délimiteur `,`. |
+| commerce.productListViews.id | Événements  | `scView` sérialisation des événements. Si ce champ est exclu (c’est-à-dire pour les événements non sérialisés), le système génère et affecte sa propre valeur d’identifiant à l’entité. |
+| commerce.productListViews.value | Événements  | Mappage du paramètre de requête EVENT_LIST_FULL AppMeasurement avec conversion COMMERCE_SC_VIEW, à l’aide d’un délimiteur `,`. |
+| commerce.productViews.id | Événements  | `prodView` sérialisation des événements. Si ce champ est exclu (c’est-à-dire pour les événements non sérialisés), le système génère et affecte sa propre valeur d’identifiant à l’entité. |
+| commerce.productViews.value | Événements  | Mappage du paramètre de requête EVENT_LIST_FULL AppMeasurement avec conversion COMMERCE_PROD_VIEW, à l’aide d’un délimiteur `,`. |
+| commerce.purchases.value | Événements  | Mappage du paramètre de requête EVENT_LIST_FULL AppMeasurement avec conversion COMMERCE_PURCHASE, à l’aide d’un délimiteur `,`. |
 | device.colorDepth | c | Mappage du paramètre de requête C_COLOR AppMeasurement. |
 | device.screenHeight | s | Mappage du paramètre de requête Résolution d’écran AppMeasurement. |
 | device.screenWidth | s | Mappage du paramètre de requête Résolution d’écran AppMeasurement. |
@@ -106,4 +106,4 @@ Vous trouverez ci-dessous une liste des variables que Adobe Experience Platform 
 | web.webPageDetails.siteSection | ch | Mappage du paramètre de requête CHANNEL AppMeasurement. |
 | web.webReferrer.URL | r | Mappage du paramètre de requête REFERRER AppMeasurement. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

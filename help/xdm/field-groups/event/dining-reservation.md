@@ -5,7 +5,7 @@ description: Ce document présente un aperçu du groupe de champs de schéma Ré
 exl-id: 672b7a77-c433-4502-a1ad-a17c811b253e
 source-git-commit: afbbdfff4346ab5240927f5703d3a06676776ea8
 workflow-type: tm+mt
-source-wordcount: '462'
+source-wordcount: '459'
 ht-degree: 6%
 
 ---
@@ -57,7 +57,7 @@ La structure de chaque objet fournie sous `diningReservations` est fourni ci-des
 | `specialOccasion` | Booléen | Indique si la réservation est faite pour une occasion particulière. |
 | `status` | Nombre entier | Statut de la réservation du repas. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Pour plus d’informations sur le groupe de champs, reportez-vous au référentiel XDM public :
 

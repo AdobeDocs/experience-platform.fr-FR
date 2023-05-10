@@ -5,7 +5,7 @@ title: Guide de dépannage de l’espace de travail de science des données
 description: Ce document fournit des réponses aux questions fréquentes sur l’espace de travail de science des données d’Adobe Experience Platform.
 exl-id: fbc5efdc-f166-4000-bde2-4aa4b0318b38
 source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1470'
 ht-degree: 100%
 
@@ -35,7 +35,7 @@ Dans le cas où vous allouez la quantité maximale de mémoire (RAM) et que vous
 >
 >Ce problème a été résolu, mais il peut toujours être présent dans le navigateur Google Chrome 80.x. Vérifiez que votre navigateur Chrome est à jour.
 
-Avec le navigateur [!DNL Google Chrome] version 80.x, tous les cookies tiers sont bloqués par défaut. Cette règle peut empêcher le chargement de [!DNL JupyterLab] dans Adobe Experience Platform.
+Avec le navigateur [!DNL Google Chrome] version 80.x, tous les cookies tiers sont bloqués par défaut. Cette politique peut empêcher le chargement de [!DNL JupyterLab] dans Adobe Experience Platform.
 
 Pour remédier à ce problème, procédez de la manière suivante :
 

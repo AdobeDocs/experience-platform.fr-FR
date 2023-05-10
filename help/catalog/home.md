@@ -51,7 +51,7 @@ Comme indiqué dans la section précédente, le [!DNL Catalog] réalise le suivi
 
 Le tableau suivant décrit les différents types d’objets pris en charge par le [!DNL Catalog] :
 
-| Objet | Point de terminaison de l’API | Définition |
+| Objet | Point d’entrée de l’API | Définition |
 |---|---|---|
 | Compte | `/accounts` | Lors de la création de connexions source, les informations d’authentification doivent être renseignées. Un compte représente un ensemble d’informations d’authentification utilisées pour créer une connexion d’un type spécifique. Chaque connexion comporte un ensemble de paramètres uniques qui sont conservés par le [!DNL Catalog] et sécurisés dans un [!DNL Azure Key Vault]. |
 | Lot | `/batches` | Les lots sont des unités de données composées d’un ou de plusieurs fichiers à ingérer en tant qu’unité unique. Un objet de lot dans le [!DNL Catalog] décrit les mesures d’ingestion du lot, telles que le nombre d’enregistrements traités ou la taille sur le disque. Il peut également inclure des liens vers des jeux de données, des vues et d’autres ressources que l’opération par lot a affectées. |

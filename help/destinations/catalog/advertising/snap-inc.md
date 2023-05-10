@@ -11,7 +11,7 @@ ht-degree: 32%
 
 # Connexion d’accrochage Inc
 
-## Aperçu {#overview}
+## Présentation {#overview}
 
 [Annonces instantanées](https://forbusiness.snapchat.com/) sont faites pour chaque entreprise, quelle que soit sa taille ou son industrie. Faites partie des conversations quotidiennes des Snapchatters avec des publicités numériques en plein écran qui inspirent l&#39;action des personnes qui comptent le plus pour votre entreprise.
 
@@ -131,4 +131,4 @@ Veuillez noter que lorsqu’un segment d’Adobe est activé pour la première f
 
 ## Utilisation et gouvernance des données {#data-usage-governance}
 
-Lors de la gestion de vos données, toutes les destinations [!DNL Adobe Experience Platform] se conforment aux stratégies d’utilisation des données. Pour obtenir des informations détaillées sur la manière dont [!DNL Adobe Experience Platform] applique la gouvernance des données, lisez la [présentation de la gouvernance des données](/help/data-governance/home.md).
+Lors de la gestion de vos données, toutes les destinations [!DNL Adobe Experience Platform] se conforment aux politiques d’utilisation des données. Pour obtenir des informations détaillées sur la manière dont [!DNL Adobe Experience Platform] applique la gouvernance des données, lisez la [présentation de la gouvernance des données](/help/data-governance/home.md).

@@ -47,7 +47,7 @@ curl -X GET \
   -H 'Accept: application/vnd.adobe.xdm-link+json'
 ```
 
-Le format de réponse dépend de la variable `Accept` en-tête envoyé dans la requête. Notez que le point de terminaison `/descriptors` utilise des en-têtes différents de tous les autres points de terminaison dans l’API .`Accept`[!DNL Schema Registry]
+Le format de réponse dépend de la variable `Accept` en-tête envoyé dans la requête. Notez que le point d’entrée `/descriptors` utilise des en-têtes différents de tous les autres points d’entrée dans l’API .`Accept`[!DNL Schema Registry]
 
 >[!IMPORTANT]
 >

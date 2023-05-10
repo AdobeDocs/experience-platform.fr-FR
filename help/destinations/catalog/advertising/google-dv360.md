@@ -6,7 +6,7 @@ exl-id: bdd3b3fd-891f-44ec-bd47-daf7f3289f92
 source-git-commit: 326127996a27df41383ef67da765f7b0818f17f2
 workflow-type: tm+mt
 source-wordcount: '987'
-ht-degree: 81%
+ht-degree: 83%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 81%
 Notez les détails suivants qui sont spécifiques aux destinations [!DNL Google Display & Video 360] :
 
 * Les audiences activées sont créées par programmation dans la plateforme Google.
-* L’activation des renvoi d’audience vers le [!DNL Google Display & Video 360] La destination doit se produire entre 24 et 48 heures après le premier mappage d’un segment à une connexion de destination. Cette mise à jour répond à la stratégie de Google consistant à attendre 24 heures avant d’ingérer des données et est destinée à améliorer les taux de correspondance entre la plateforme de données clients en temps réel et [!DNL Google Display & Video 360]. Notez qu’il s’agit d’une configuration de serveur principal applicable uniquement à cette destination et qui n’est liée à aucune option de planification configurable par le client dans l’interface utilisateur.
+* L’activation des renvoi d’audience vers le [!DNL Google Display & Video 360] La destination doit se produire entre 24 et 48 heures après le premier mappage d’un segment à une connexion de destination. Cette mise à jour répond à la stratégie de Google consistant à attendre 24 heures avant d’ingérer des données et est destinée à améliorer les taux de correspondance entre la plateforme de données clients en temps réel et [!DNL Google Display & Video 360]. Notez qu’il s’agit d’une configuration de serveur principal applicable uniquement à cette destination et qui n’est liée à aucune option de planification configurable par le client ou la cliente dans l’interface utilisateur.
 
 >[!IMPORTANT]
 >

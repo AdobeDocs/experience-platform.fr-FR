@@ -5,7 +5,7 @@ title: Prise en main de l’API Policy Service
 description: L’API Policy Service vous permet de créer et de gérer diverses ressources liées à la gouvernance des données d’Adobe Experience Platform. Ce document présente les concepts de base que vous devez connaître avant d’effectuer des appels à l’API Policy Service.
 exl-id: 5539976c-8433-45af-a147-2ab82ae308b2
 source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '443'
 ht-degree: 100%
 
@@ -22,7 +22,7 @@ L’utilisation du guide du développement nécessite une bonne compréhension d
 * [Gouvernance des données](../home.md) : cadre selon lequel [!DNL Experience Platform] applique la conformité d’utilisation des données.
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md) : Cadre normalisé selon lequel [!DNL Experience Platform] organise les données de l’expérience client.
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
-* [Sandbox](../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
+* [Sandbox](../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
 
 ## Lecture d’exemples d’appels API
 
@@ -30,7 +30,7 @@ La documentation de l’API [!DNL Policy Service] inclut des exemples d’appels
 
 ## En-têtes requis
 
-La documentation de l’API exige aussi que vous ayez suivi le [tutoriel sur l’authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr#platform-apis) pour lancer des appels vers des points de terminaison [!DNL Platform] Le tutoriel sur l’authentification indique les valeurs de chacun des en-têtes requis dans les appels d’API [!DNL Experience Platform], comme illustré ci-dessous :
+La documentation de l’API exige aussi que vous ayez suivi le [tutoriel sur l’authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr#platform-apis) pour lancer des appels vers des points d’entrée [!DNL Platform] Le tutoriel sur l’authentification indique les valeurs de chacun des en-têtes requis dans les appels d’API [!DNL Experience Platform], comme illustré ci-dessous :
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -50,7 +50,7 @@ Toutes les requêtes contenant un payload (POST, PUT, PATCH) requièrent un en-t
 
 ## Ressources de base ou personnalisées
 
-Dans l’API [!DNL Policy Service], toutes les stratégies et actions marketing sont nommées ressources `core` ou `custom`.
+Dans l’API [!DNL Policy Service], toutes les politiques et actions marketing sont nommées ressources `core` ou `custom`.
 
 Les ressources `core` sont celles définies et gérées par Adobe, tandis que les ressources `custom` sont celles créées et gérées par votre organisation. Ces dernières sont donc uniques et visibles uniquement par votre organisation. Les opérations de liste et de recherche (`GET`) sont donc les seules opérations autorisées sur les ressources `core`, alors que les opérations de liste, de recherche et de mise à jour (`POST`, `PUT`, `PATCH` et `DELETE`) sont disponibles pour les ressources `custom`.
 

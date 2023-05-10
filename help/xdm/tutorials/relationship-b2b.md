@@ -5,7 +5,7 @@ exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
 source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
 workflow-type: tm+mt
 source-wordcount: '1391'
-ht-degree: 20%
+ht-degree: 19%
 
 ---
 
@@ -69,7 +69,7 @@ Pour ce faire, toutes les classes B2B standard contiennent des champs &quot;clé
 
 Le schéma source &quot;[!DNL Opportunities]&quot; est basé sur la variable [!UICONTROL Opportunités commerciales XDM] classe . Un des champs fournis par la classe, `opportunityKey`, sert d’identifiant au schéma. Plus précisément, la variable `sourceKey` sous le champ `opportunityKey` est défini comme identité Principale du schéma sous un espace de noms personnalisé appelé [!DNL B2B Opportunity].
 
-Comme vous pouvez le voir sous **[!UICONTROL Propriétés du schéma]**, ce schéma a été activé pour une utilisation dans [!DNL Real-Time Customer Profile].
+Comme vu sous **[!UICONTROL Propriétés du schéma]**, ce schéma peut être utilisé dans [!DNL Real-Time Customer Profile].
 
 ![Schéma d’opportunités](../images/tutorials/relationship-b2b/opportunities.png)
 

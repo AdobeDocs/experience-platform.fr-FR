@@ -4,14 +4,14 @@ description: Découvrez comment configurer des identifiants d’appareil propri�
 exl-id: c3b17175-8a57-43c9-b8a0-b874fecca952
 source-git-commit: f5270d1d1b9697173bc60d16c94c54d001ae175a
 workflow-type: tm+mt
-source-wordcount: '1776'
+source-wordcount: '1773'
 ht-degree: 1%
 
 ---
 
 # Identifiants d’appareil propriétaires dans le SDK Web Platform
 
-Le SDK Web de Adobe Experience Platform affecte [Adobe Experience Cloud ID (ECID)](https://experienceleague.adobe.com/docs/experience-platform/identity/ecid.html?lang=en) aux visiteurs du site web grâce à l’utilisation de cookies, afin de suivre le comportement des utilisateurs. Pour tenir compte des restrictions du navigateur sur la durée de vie des cookies, vous pouvez choisir de définir et de gérer vos propres identifiants d’appareil à la place. On parle alors d’identifiants d’appareil propriétaires (FPID).
+Le SDK Web de Adobe Experience Platform affecte [Adobe Experience Cloud ID (ECID)](https://experienceleague.adobe.com/docs/experience-platform/identity/ecid.html?lang=en) aux visiteurs du site web grâce à l’utilisation de cookies, afin de suivre le comportement des utilisateurs. Pour tenir compte des restrictions du navigateur sur la durée de vie des cookies, vous pouvez choisir de définir et de gérer vos propres identifiants d’appareil à la place. Il s’agit d’identifiants d’appareil interne (FPID).
 
 >[!NOTE]
 >
@@ -219,7 +219,7 @@ Pour illustrer ce processus, imaginez un scénario impliquant un client qui a d�
 | Quatrième visite | Entre la troisième et la quatrième visites, un délai suffisant s’est écoulé pour que l’ECID ait été supprimé en raison de la stratégie de navigateur. Comme la visite précédente, le FPID reste dû à la manière dont il a été défini. Cette fois, le même ECID est généré comme la visite précédente. L’utilisateur est considéré dans l’ensemble des solutions Experience Platform et Experience Cloud comme le même utilisateur que la visite précédente. |
 | Cinquième visite | Entre la quatrième et la cinquième visites, l’utilisateur final a effacé tous les cookies dans son navigateur. Un nouveau FPID est généré et utilisé pour amorcer la création d’un nouvel ECID. L’utilisateur est désormais considéré comme un nouveau visiteur dans Adobe Experience Platform et les solutions Experience Cloud. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## FAQ
 

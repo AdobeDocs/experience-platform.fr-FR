@@ -5,7 +5,7 @@ title: Guide de dépannage de l’ingestion en flux continu
 description: Ce document répond aux questions les plus fréquentes sur l’ingestion en flux continu sur Adobe Experience Platform.
 exl-id: 5d5deccf-25b8-44c9-ae27-9a4713ced274
 source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1024'
 ht-degree: 100%
 

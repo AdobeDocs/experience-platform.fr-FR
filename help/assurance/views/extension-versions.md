@@ -1,13 +1,13 @@
 ---
 title: Affichage des versions des extensions
 description: Ce guide contient des informations détaillées sur la vue Versions des extensions dans Adobe Experience Platform Assurance.
-source-git-commit: 5778d4db27d0f57281821dc8e042a31b69745514
+exl-id: a3a649da-1ef1-45a3-a1ed-6a7bc16c2987
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '190'
 ht-degree: 0%
 
 ---
-
 
 # Affichage des versions d’extension
 

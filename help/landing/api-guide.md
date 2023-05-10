@@ -27,11 +27,11 @@ Pour passer avec succès des appels à des points de terminaison Platform, vous 
 
 ### En-tête Sandbox
 
-Dans Experience Platform, toutes les ressources sont isolées dans des environnements de test virtuels spécifiques. Les requêtes envoyées aux API Platform nécessitent un en-tête spécifiant le nom de l’environnement de test dans lequel l’opération sera effectuée :
+Dans Experience Platform, toutes les ressources sont isolées dans des sandbox virtuels spécifiques. Les requêtes envoyées aux API Platform nécessitent un en-tête spécifiant le nom du sandbox dans lequel l’opération sera effectuée :
 
 - `x-sandbox-name: {SANDBOX_NAME}`
 
-Pour plus d’informations sur les environnements de test dans Platform, consultez la [documentation de présentation des environnements de test](../sandboxes/home.md).
+Pour plus d’informations sur les sandbox dans Platform, consultez la [documentation de présentation des sandbox](../sandboxes/home.md).
 
 ### En-tête de type contenu
 
@@ -53,9 +53,9 @@ Pour en savoir plus sur Postman, notamment sur la configuration d’un environne
 
 Les formats de requête varient selon l’API de Platform utilisée. Le meilleur moyen d’apprendre à structurer vos appels API est de suivre les exemples fournis dans la documentation du service Platform que vous utilisez.
 
-La documentation pour [!DNL Experience Platform] présente des exemples d’appels API de deux manières différentes. Tout d’abord, l’appel est présenté dans son **format d’API**, qui consiste en une représentation de modèle affichant uniquement l’opération (GET, POST, PUT, PATCH, DELETE) et le point de terminaison utilisé (par exemple `/global/classes`). Certains modèles indiquent également l’emplacement des variables pour mieux illustrer la manière dont un appel doit être formulé, comme par exemple `GET /{VARIABLE}/classes/{ANOTHER_VARIABLE}`.
+La documentation pour [!DNL Experience Platform] présente des exemples d’appels API de deux manières différentes. Tout d’abord, l’appel est présenté dans son **format d’API**, qui consiste en une représentation de modèle affichant uniquement l’opération (GET, POST, PUT, PATCH, DELETE) et le point d’entrée utilisé (par exemple `/global/classes`). Certains modèles indiquent également l’emplacement des variables pour mieux illustrer la manière dont un appel doit être formulé, comme par exemple `GET /{VARIABLE}/classes/{ANOTHER_VARIABLE}`.
 
-Les appels sont ensuite affichés sous forme de commandes cURL dans une **Requête**, qui comprend les en-têtes nécessaires et le « chemin racine » complet indispensable pour que l’interaction avec l’API soit réussie. Le chemin racine doit être ajouté à tous les points de terminaison. Par exemple, le point de terminaison `/global/classes` cité plus haut devient `https://platform.adobe.io/data/foundation/schemaregistry/global/classes`. Le format/modèle de requête de l’API s’affiche dans toute la documentation et vous devez utiliser le chemin d’accès complet illustré dans l’exemple de requête lors de vos propres appels aux API Platform.
+Les appels sont ensuite affichés sous forme de commandes cURL dans une **Requête**, qui comprend les en-têtes nécessaires et le « chemin racine » complet indispensable pour que l’interaction avec l’API soit réussie. Le chemin racine doit être ajouté à tous les points d’entrée. Par exemple, le point d’entrée `/global/classes` cité plus haut devient `https://platform.adobe.io/data/foundation/schemaregistry/global/classes`. Le format/modèle de requête de l’API s’affiche dans toute la documentation et vous devez utiliser le chemin d’accès complet illustré dans l’exemple de requête lors de vos propres appels aux API Platform.
 
 ### Exemple de requête API
 
@@ -63,7 +63,7 @@ Voici un exemple de requête API illustrant le format que vous rencontrerez dans
 
 **Format d’API**
 
-Le format d’API affiche l’opération (GET) et le point de terminaison utilisé. Les variables sont indiquées par des accolades (ici `{CONTAINER_ID}`).
+Le format d’API affiche l’opération (GET) et le point d’entrée utilisé. Les variables sont indiquées par des accolades (ici `{CONTAINER_ID}`).
 
 ```http
 GET /{CONTAINER_ID}/classes

@@ -1,6 +1,6 @@
 ---
-title: Notes de mise à jour de Adobe Experience Platform - Février 2020
-description: Notes de mise à jour de février 2020 pour Adobe Experience Platform.
+title: Notes de mise à jour d’Adobe Experience Platform - Février 2020
+description: Les notes de mise à jour de février 2020 pour Adobe Experience Platform.
 doc-type: release notes
 last-update: February 14, 2019
 author: ens71067
@@ -8,13 +8,13 @@ exl-id: 96db25ca-d857-489b-9a9d-625e86b1bf3e
 source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
 workflow-type: tm+mt
 source-wordcount: '199'
-ht-degree: 63%
+ht-degree: 70%
 
 ---
 
 # Notes de mise à jour d’Adobe Experience Platform
 
-**Date de publication : 12 février 2020**
+**Date de mise à jour : 12 février 2020**
 
 Mises à jour des fonctionnalités existantes dans Adobe Experience Platform :
 

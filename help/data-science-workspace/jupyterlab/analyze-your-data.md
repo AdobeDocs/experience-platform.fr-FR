@@ -22,7 +22,7 @@ Les concepts suivants sont présentés :
 - **Lots :** les jeux de données sont constitués de lots. Un lot est un ensemble de données collectées sur une période donnée et traitées ensemble comme une seule unité. De nouveaux lots sont créés lorsque des données sont ajoutées à un jeu de données.
 - **SDK Data Access (obsolète) :** le SDK Data Access est désormais obsolète. Veuillez utiliser la variable [[!DNL Platform SDK]](../authoring/platform-sdk.md) guide.
 
-## Exploration de notebooks dans Data Science Workspace
+## Exploration de notebooks dans l’espace de travail de science des données
 
 Dans cette section, nous explorons les données qui ont été précédemment intégrées au schéma de ventes au détail.
 
@@ -162,13 +162,13 @@ Maintenant que nous connaissons les valeurs de notre DataFrame, nous voulons les
 
 Dans cette section, nous passerons rapidement en revue certains avantages qu’apporte l’utilisation de chaque bibliothèque.
 
-[Matplotlib](https://matplotlib.org/)[!DNL Python] est le plus ancien paquet de visualisation Il a pour but de « simplifier les tâches faciles sans rendre les tâches difficiles impossibles ». Cette affirmation tend à se vérifier, puisque le paquet est extrêmement puissant, mais aussi relativement complexe. Il n’est pas toujours simple d’obtenir un graphique à l’apparence satisfaisante sans y consacrer beaucoup de temps et d’efforts.
+[Matplotlib](https://matplotlib.org/)[!DNL Python] est le plus ancien package de visualisation Il a pour but de « simplifier les tâches faciles sans rendre les tâches difficiles impossibles ». Cette affirmation tend à se vérifier, puisque le package est extrêmement puissant, mais aussi relativement complexe. Il n’est pas toujours simple d’obtenir un graphique à l’apparence satisfaisante sans y consacrer beaucoup de temps et d’efforts.
 
 [Pandas](https://pandas.pydata.org/) est principalement utilisé pour son objet DataFrame qui permet la manipulation de données avec l’indexation intégrée. Cependant, pandas inclut également une fonctionnalité de traçage intégrée basée sur matplotlib.
 
-[seaborn](https://seaborn.pydata.org/) est un paquet élaboré sur la base de matplotlib. Son principal objectif est de rendre les graphiques par défaut plus attrayants visuellement et de simplifier la création de graphiques complexes.
+[seaborn](https://seaborn.pydata.org/) est un package élaboré sur la base de matplotlib. Son principal objectif est de rendre les graphiques par défaut plus attrayants visuellement et de simplifier la création de graphiques complexes.
 
-[ggplot](https://ggplot2.tidyverse.org/) est un paquet également élaboré sur la base de matplotlib. Cependant, sa principale différence est que l’outil est un port de ggplot2 pour R. Tout comme seaborn, l’objectif est de se baser sur matplotlib pour y apporter des améliorations par la suite. Les utilisateurs connaissant bien ggplot2 pour R devraient envisager l’utilisation de cette bibliothèque.
+[ggplot](https://ggplot2.tidyverse.org/) est également un package élaboré sur la base de matplotlib. Cependant, sa principale différence est que l’outil est un port de ggplot2 pour R. Tout comme seaborn, l’objectif est de se baser sur matplotlib pour y apporter des améliorations par la suite. Les utilisateurs connaissant bien ggplot2 pour R devraient envisager l’utilisation de cette bibliothèque.
 
 
 ##### Graphiques unidimensionnels
@@ -199,4 +199,4 @@ Ce tutoriel explique comment créer un nouveau notebook Jupyter dans Data Scienc
 - Accès aux jeux de données et aux schémas
 - Exploration des jeux de données
 
-Vous êtes maintenant prêt à passer à la [section suivante](../models-recipes/package-source-files-recipe.md) pour empaqueter une recette et importer dans Data Science Workspace.
+Vous êtes maintenant prêt à passer à la [section suivante](../models-recipes/package-source-files-recipe.md) pour empaqueter une recette et importer dans l’espace de travail de science des données.

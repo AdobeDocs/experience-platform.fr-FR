@@ -7,7 +7,7 @@ exl-id: 9f245783-949d-4f40-9cf3-8991b4b6d780
 source-git-commit: 61b694ca5fbd3548243663b3f1bff06aaca72434
 workflow-type: tm+mt
 source-wordcount: '391'
-ht-degree: 37%
+ht-degree: 49%
 
 ---
 
@@ -15,9 +15,9 @@ ht-degree: 37%
 
 >[!NOTE]
 >
->Le [!DNL Zendesk] La source est en version bêta. Voir [présentation des sources](../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de sources étiquetées bêta.
+>La source [!DNL Zendesk] est en version Beta. Voir la [présentation des sources](../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de sources étiquetées bêta.
 
-Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous permettant de structurer, de libeller et d’améliorer les données entrantes à l’aide des services de Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, des bases de données, etc.
+Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les bases de données, etc.
 
 Experience Platform prend en charge l’ingestion de données provenant d’une application de succès client tierce. La prise en charge des fournisseurs de succès client inclut [!DNL Zendesk].
 
@@ -29,11 +29,11 @@ Une liste d’adresses IP doit être ajoutée à une liste autorisée avant d’
 
 ## Authentifiez votre [!DNL Zendesk] account
 
-[!DNL Zendesk] utilise des jetons au porteur comme mécanisme d’authentification pour communiquer avec le [!DNL Zendesk] API.
+[!DNL Zendesk] utilise des jetons porteur comme mécanisme d’authentification pour communiquer avec l’API [!DNL Zendesk]
 
 Cette section décrit les étapes préalables à l’authentification [!DNL Zendesk] compte .
 
-* La première étape de l’authentification [!DNL Zendesk] afin de vous assurer que vous avez [!DNL Zendesk] compte d’assistance. Si vous n’en avez pas déjà un, la fonction [[!DNL Zendesk] page d&#39;inscription](https://www.zendesk.com/register/) pour enregistrer et créer votre compte Zendesk.
+* La première étape de l’authentification [!DNL Zendesk] afin de vous assurer que vous avez [!DNL Zendesk] compte d’assistance. Si vous n’en avez pas déjà un, la fonction [[!DNL Zendesk] page d&#39;inscription](https://www.zendesk.fr/register/) pour enregistrer et créer votre compte Zendesk.
 * Une fois que vous êtes enregistré, accédez à la [[!DNL Zendesk] site web](https://www.zendesk.com/login/) et fournissez vos **subdomain**.
 * Ensuite, sélectionnez **[!DNL Settings]** > **[!DNL Apps and Integrations]** > **[!DNL Zendesk API]**.
 * Enfin, récupérez votre jeton API à partir de la fonction **[!DNL API token]** .
@@ -42,13 +42,13 @@ Cette section décrit les étapes préalables à l’authentification [!DNL Zend
 
 Voir [[!DNL Zendesk documentation on subdomains]](https://support.zendesk.com/hc/en-us/articles/4409381383578-Where-can-I-find-my-Zendesk-subdomain-) pour plus d’informations sur la manière de récupérer votre sous-domaine. Pour plus d’informations sur la génération de votre jeton API, voir [[!DNL Zendesk] guide sur la génération d’un nouveau jeton API](https://support.zendesk.com/hc/en-us/articles/4408889192858-Generating-a-new-API-token).
 
-La documentation ci-dessous fournit des informations sur la connexion de [!DNL Zendesk] à Platform à l’aide d’API ou de l’interface utilisateur :
+La documentation ci-dessous fournit des informations sur la connexion d’[!DNL Zendesk] à Platform à l’aide d’API ou de l’interface utilisateur :
 
-## Connexion [!DNL Zendesk] vers Platform à l’aide d’API
+## Connecter [!DNL Zendesk] à Platform à l’aide d’API
 
 * [Création d’une connexion source et d’un flux de données pour [!DNL Zendesk] utilisation de l’API Flow Service](../../tutorials/api/create/customer-success/zendesk.md)
 
-## Connexion [!DNL Zendesk] vers Platform à l’aide de l’interface utilisateur
+## Connecter [!DNL Zendesk] à Platform à l’aide de l’interface utilisateur
 
 * [Créer une connexion source  [!DNL Zendesk ] dans l’interface utilisateur](../../tutorials/ui/create/customer-success/zendesk.md)
 * [Création d’un flux de données pour une connexion de source de succès client dans l’interface utilisateur](../../tutorials/ui/dataflow/customer-success.md)

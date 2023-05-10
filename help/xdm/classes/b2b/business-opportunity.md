@@ -4,8 +4,8 @@ description: Ce document présente la classe XDM Business Opportunity dans Exper
 exl-id: d816b0f9-fd37-45da-aa55-247f7f662da0
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
-source-wordcount: '322'
-ht-degree: 8%
+source-wordcount: '319'
+ht-degree: 7%
 
 ---
 
@@ -33,6 +33,6 @@ ht-degree: 8%
 | `opportunityStage` | Chaîne | L’étape de vente de l’opportunité. |
 | `opportunityType` | Chaîne | Le type d’opportunité. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Consultez le guide sur la [relations de schéma dans Real-Time CDP B2B Edition](../../tutorials/relationship-b2b.md) pour découvrir comment cette classe correspond conceptuellement aux autres classes B2B et comment vous pouvez établir ces relations dans l’interface utilisateur de Adobe Experience Platform.

@@ -4,7 +4,7 @@ description: Découvrez l’extension Splunk pour le transfert d’événement d
 exl-id: 653b5897-493b-44f2-aeea-be492da2b108
 source-git-commit: bfbad3c11df64526627e4ce2d766b527df678bca
 workflow-type: tm+mt
-source-wordcount: '1054'
+source-wordcount: '1051'
 ht-degree: 100%
 
 ---
@@ -24,7 +24,7 @@ Les équipes marketing peuvent utiliser l’extension pour les cas d’utilisati
 | Analyse du comportement des clients | Les organiations peuvent capturer les données d’événement d’interaction client de leur site web et transférer les événements pertinents vers Splunk. Les équipes de marketing et d’analyse peuvent alors effectuer des analyses ultérieures sur la plateforme Splunk afin de comprendre les interactions et les comportements clés des utilisateurs. La plateforme Splunk peut être utilisée pour générer des graphiques, des tableaux de bord ou d’autres visualisations afin d’informer les parties prenantes de l’entreprise. |
 | Recherche évolutive sur des jeux de données volumineux | Les entreprises peuvent capturer des entrées transactionnelles ou conversationnelles comme données d’événement du site web et transférer des événements vers Splunk. Les équipes d’Analytics peuvent ensuite tirer parti des fonctionnalités d’indexation évolutive de Splunk pour filtrer et traiter les jeux de données volumineux afin d’obtenir des insights sur l’entreprise et prendre des décisions éclairées. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Conditions préalables {#prerequisites}
 

@@ -1,15 +1,15 @@
 ---
 title: Présentation de Adobe Experience Platform Assurance
-description: Adobe Experience Platform Assurance vous permet d’inspecter, de tester, de simuler et de valider la manière dont vous collectez des données ou diffusez des expériences dans vos applications mobiles.
-source-git-commit: 07dc01c11c79ac2dad05d89309cabb5715c0b63c
+description: Adobe Experience Platform permet de contrôler, de tester, de simuler et de valider la manière dont vous collectez les données ou dont les expériences sont accomplies dans vos applications mobiles.
+exl-id: e887f5f6-3db0-4521-be2d-20ef3d08e7d0
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '824'
-ht-degree: 3%
+ht-degree: 6%
 
 ---
 
-
-# Adobe Experience Platform Assurance
+# Assurance d’Adobe Experience Platform Assurance
 
 Adobe Experience Platform Assurance est un produit de [Adobe Experience Cloud](https://www.adobe.com/fr/experience-cloud.html) pour vous aider à inspecter, tester, simuler et valider la manière dont vous collectez des données ou diffusez des expériences dans votre application mobile.
 

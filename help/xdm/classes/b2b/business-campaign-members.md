@@ -4,8 +4,8 @@ description: Ce document présente la classe XDM Business Campaign Members dans 
 exl-id: a39eac7d-46ee-4e9c-a1c0-4dbb63f2c813
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
-source-wordcount: '249'
-ht-degree: 8%
+source-wordcount: '246'
+ht-degree: 7%
 
 ---
 
@@ -27,7 +27,7 @@ ht-degree: 8%
 | `personKey` | [[!UICONTROL Source B2B]](../../data-types/b2b-source.md) | Identifiant composite de la personne qui est membre de la campagne associée. |
 | `_id` | Chaîne | Identifiant unique de l’enregistrement. Il s’agit d’une valeur générée par le système qui est distincte de la variable `campaignMemberID`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Pour découvrir comment cette classe correspond conceptuellement aux autres classes B2B et comment vous pouvez établir ces relations dans l’interface utilisateur de Adobe Experience Platform, consultez le guide sur [relations de schéma dans Real-Time CDP B2B Edition](../../tutorials/relationship-b2b.md)
 

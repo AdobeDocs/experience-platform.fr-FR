@@ -1,8 +1,9 @@
 ---
 title: Création d’une connexion à la source de Chrome dans l’interface utilisateur
 description: Découvrez comment créer une connexion source Chatlio à l’aide de l’interface utilisateur de Adobe Experience Platform.
-badge: "Version bêta"
-source-git-commit: c35daa60db315f1ed04ed6424464f1ae7bfb4243
+badge: Version bêta
+exl-id: 55c10bcb-0332-45ff-970b-272d375b591d
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '1168'
 ht-degree: 22%

@@ -2,10 +2,11 @@
 keywords: Experience Platform;accueil;rubriques populaires;service de requête;service de requête;requêtes experienceevent;requête experienceevent;requête Experience Event;
 title: Création d’un rapport de tendances d’événements
 description: Découvrez comment écrire des requêtes qui utilisent les événements d’expérience pour créer un rapport de tendance d’événements sur une période spécifiée, regroupé par date.
-source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
+exl-id: 8f7ed5b5-c265-4a1e-a360-4293d1e86e97
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '379'
-ht-degree: 5%
+ht-degree: 6%
 
 ---
 

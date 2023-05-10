@@ -16,7 +16,7 @@ ht-degree: 2%
 
 Le SDK Web de Adobe Experience Platform prend en charge les fonctionnalités de partage des identifiants visiteur qui permettent aux clients de fournir des expériences personnalisées plus précisément, entre les applications mobiles et le contenu web mobile, et entre les domaines.
 
-## Cas d&#39;utilisation {#use-cases}
+## Cas d’utilisation {#use-cases}
 
 ### offrir une personnalisation cohérente entre les applications mobiles et les sites web mobiles ;
 

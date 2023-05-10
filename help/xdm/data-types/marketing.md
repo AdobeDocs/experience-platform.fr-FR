@@ -6,8 +6,8 @@ description: Ce document présente un aperçu du type de données Marketing XDM.
 exl-id: b5ac0127-15fe-42b6-b7fc-2fbcda7e7e27
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '140'
-ht-degree: 7%
+source-wordcount: '137'
+ht-degree: 5%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 7%
 | `campaignName` | Chaîne | Nom de la campagne marketing, tel que `50%_DISCOUNT_USA` ou `50%_DISCOUNT_ASIA`. |
 | `trackingCode` | Chaîne | Code de suivi pouvant être utilisé pour identifier la campagne marketing à laquelle l’événement est associé. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Pour plus d’informations sur le groupe de champs, reportez-vous au référentiel XDM public :
 

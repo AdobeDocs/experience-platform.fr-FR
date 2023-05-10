@@ -7,7 +7,7 @@ description: Découvrez comment connecter Apache Cassandra à Adobe Experience P
 source-git-commit: 997423f7bf92469e29c567bd77ffde357413bf9e
 workflow-type: tm+mt
 source-wordcount: '620'
-ht-degree: 42%
+ht-degree: 48%
 
 ---
 
@@ -23,7 +23,7 @@ Ce tutoriel utilise la méthode [!DNL Flow Service] API pour vous guider dans le
 Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
 
 * [Sources](../../../../home.md) : [!DNL Experience Platform] permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services [!DNL Platform].
-* [Sandbox](../../../../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuelles qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
+* [Sandbox](../../../../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
 Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour vous connecter à Cassandra à l’aide de la variable [!DNL Flow Service] API.
 
@@ -35,8 +35,8 @@ Pour connecter [!DNL Flow Service] à [!DNL Cassandra], vous devez fournir des v
 | ---------- | ----------- |
 | `host` | L’adresse IP ou le nom d’hôte de la variable [!DNL Cassandra] serveur. |
 | `port` | Le port TCP que la variable [!DNL Cassandra] Le serveur utilise pour écouter les connexions client. Le port par défaut est `9042`. |
-| `username` | Nom d’utilisateur utilisé pour se connecter à la variable [!DNL Cassandra] serveur pour l’authentification. |
-| `password` | Mot de passe pour se connecter au [!DNL Cassandra] serveur pour l’authentification. |
+| `username` | Nom d’utilisateur utilisé pour la connexion au serveur [!DNL Cassandra] pour l’authentification. |
+| `password` | Mot de passe pour la connexion au serveur [!DNL Cassandra] pour l’authentification. |
 | `connectionSpec.id` | Identifiant unique nécessaire pour créer une connexion. L’identifiant de spécification de connexion pour [!DNL Cassandra] is `a8f4d393-1a6b-43f3-931f-91a16ed857f4`. |
 
 Pour plus d’informations sur la prise en main, reportez-vous à la section [ce document de Cassandra](https://cassandra.apache.org/doc/latest/operating/security.html#authentication).
@@ -53,7 +53,7 @@ Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [
 * x-api-key : `{API_KEY}`
 * x-gw-ims-org-id : `{ORG_ID}`
 
-Toutes les ressources dans [!DNL Experience Platform], y compris ceux appartenant à la variable [!DNL Flow Service], sont isolés dans des environnements de test virtuels spécifiques. Toutes les requêtes envoyées aux API [!DNL Platform] nécessitent un en-tête spécifiant le nom de la sandbox dans laquelle l’opération sera effectuée :
+Toutes les ressources dans [!DNL Experience Platform], y compris ceux appartenant à la variable [!DNL Flow Service], sont isolés dans des environnements de test virtuels spécifiques. Toutes les requêtes envoyées aux API [!DNL Platform] nécessitent un en-tête spécifiant le nom du sandbox dans lequel l’opération sera effectuée :
 
 * x-sandbox-name : `{SANDBOX_NAME}`
 
@@ -106,8 +106,8 @@ curl -X POST \
 | --------- | ----------- |
 | `auth.params.host` | L’adresse IP ou le nom d’hôte de la variable [!DNL Cassandra] serveur. |
 | `auth.params.port` | Le port TCP que la variable [!DNL Cassandra] Le serveur utilise pour écouter les connexions client. Le port par défaut est `9042`. |
-| `auth.params.username` | Nom d’utilisateur utilisé pour se connecter à la variable [!DNL Cassandra] serveur pour l’authentification. |
-| `auth.params.password` | Mot de passe pour se connecter au [!DNL Cassandra] serveur pour l’authentification. |
+| `auth.params.username` | Nom d’utilisateur utilisé pour la connexion au serveur [!DNL Cassandra] pour l’authentification. |
+| `auth.params.password` | Mot de passe pour la connexion au serveur [!DNL Cassandra] pour l’authentification. |
 | `connectionSpec.id` | L’identifiant de spécification de connexion [!DNL Cassandra] : `a8f4d393-1a6b-43f3-931f-91a16ed857f4`. |
 
 **Réponse**

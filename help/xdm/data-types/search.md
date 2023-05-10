@@ -6,8 +6,8 @@ description: Ce document présente un aperçu du type de données XDM (Search Ex
 exl-id: 9893cb67-b0c7-4f91-a0d4-96f7b87d9510
 source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
 workflow-type: tm+mt
-source-wordcount: '184'
-ht-degree: 25%
+source-wordcount: '181'
+ht-degree: 23%
 
 ---
 
@@ -27,7 +27,7 @@ ht-degree: 25%
 | `searchEngineID` | Chaîne | Identifiant spécifique à l’application utilisé pour identifier le moteur de recherche. |
 | `slot` | Chaîne | Section nommée de la page dans laquelle le résultat de la recherche s’est affiché. La valeur de cette propriété doit être égale à l’une des valeurs d’énumération connues que vous définissez, par exemple : `top`, `side`ou `bottom`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Pour obtenir plus d’informations sur ce type de données, reportez-vous au référentiel XDM public:
 

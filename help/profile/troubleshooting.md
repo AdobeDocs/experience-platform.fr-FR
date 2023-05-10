@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform;profil;real-time customer profile;dépannage;API
-title: Guide de dépannage de Real-Time Customer Profile
+keywords: Experience Platform;profil;profil client en temps réel;dépannage;API
+title: Guide de dépannage du profil client en temps réel
 type: Documentation
-description: Ce document fournit des réponses aux questions fréquentes sur Real-time Customer Profile, ainsi qu’un guide de dépannage pour les erreurs courantes lors de l’utilisation des données de profil à l’aide d’Adobe Experience Platform.
+description: Ce document fournit des réponses aux questions fréquentes sur le profil client en temps réel, ainsi qu’un guide de dépannage pour les erreurs courantes lors de l’utilisation des données de profil à l’aide d’Adobe Experience Platform.
 exl-id: 0b340025-093b-41e4-8053-969a8e80e889
 source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
@@ -11,17 +11,17 @@ ht-degree: 100%
 
 ---
 
-# Guide de dépannage de Real-Time Customer Profile
+# Guide de dépannage du profil client en temps réel
 
-Ce document fournit des réponses aux questions fréquentes sur Real-Time Customer Profile, ainsi qu’un guide de dépannage pour les erreurs courantes. Pour toute question ou dépannage concernant les autres services d’Adobe Experience Platform, consultez le [guide de dépannage d’Experience Platform](../landing/troubleshooting.md).
+Ce document fournit des réponses aux questions fréquentes sur le profil client en temps réel, ainsi qu’un guide de dépannage pour les erreurs courantes. Pour toute question ou dépannage concernant les autres services d’Adobe Experience Platform, consultez le [guide de dépannage d’Experience Platform](../landing/troubleshooting.md).
 
 [!DNL Real-Time Customer Profile] offre une vision holistique de chaque client en combinant des données issues de plusieurs canaux, notamment des données en ligne, hors ligne, CRM et tierces. Cette fonctionnalité permet aux professionnels du marketing d’offrir à leur audience des expériences coordonnées, cohérentes et pertinentes sur plusieurs canaux.
 
 ## FAQ
 
-Vous trouverez ci-dessous une liste de réponses aux questions les plus fréquemment posées à propos de Real-Time Customer Profile.
+Vous trouverez ci-dessous une liste de réponses aux questions les plus fréquemment posées à propos du profil client en temps réel.
 
-### Quels types de données sont acceptés pour Real-Time Customer Profile ?
+### Quels types de données sont acceptés pour le profil client en temps réel ?
 
 Profile accepte aussi bien les données d’**enregistrement** que les données de **série temporelle**, tant que les données en question contiennent au moins une valeur d’identité qui les associe à une personne individuelle unique.
 
@@ -31,7 +31,7 @@ Si vous ne connaissez pas XDM, commencez par consulter la [Présentation de XDM]
 
 ### Où les données Profile sont-elles stockées ?
 
-Real-Time Customer Profile conserve sa propre banque de données (appelée « banque de profils ») à l’écart du lac de données qui contient d’autres données ingérées de Platform.
+Le profil client en temps réel conserve sa propre banque de données (appelée « banque de profils ») à l’écart du lac de données qui contient d’autres données ingérées de Platform.
 
 ### Si j’ai déjà ingéré des données dans Platform, puis-je les rendre disponibles dans la banque de profils ?
 

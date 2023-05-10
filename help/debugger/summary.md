@@ -9,7 +9,7 @@ exl-id: 91234125-15c4-4111-9ee4-f3af093a3c4d
 source-git-commit: f94bba7eb4763230dae6794eb70a75f53a853c53
 workflow-type: tm+mt
 source-wordcount: '909'
-ht-degree: 74%
+ht-degree: 76%
 
 ---
 
@@ -71,7 +71,7 @@ Experience Platform Debugger affiche les informations suivantes pour chaque so
  </tbody> 
 </table>
 
-**Balises Adobe Experience Platform**
+**Balises Adobe Experience Platform**
 
 <table id="table_E9574975444A407887E26514D1BB1601"> 
  <tbody> 
@@ -89,7 +89,7 @@ Experience Platform Debugger affiche les informations suivantes pour chaque so
   </tr> 
   <tr> 
    <td colname="col1"> <p>Environnement </p> </td> 
-   <td colname="col2"> <p>Le <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html" format="https" scope="external"> environnement</a> utilisé par la bibliothèque de balises </p> </td> 
+   <td colname="col2"> <p>Le <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html?lang=fr" format="https" scope="external"> environnement</a> utilisé par la bibliothèque de balises </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>Extensions </p> </td> 
@@ -139,7 +139,7 @@ Experience Platform Debugger affiche les informations suivantes pour chaque so
   </tr> 
   <tr> 
    <td colname="col1"> <p>Version </p> </td> 
-   <td colname="col2"> <p>Version de la bibliothèque<a href="https://experienceleague.adobe.com/docs/analytics/import/data-sources/data-types-and-categories/datasrc-visitorid.html" format="html" scope="external"> d’identifiants visiteur</a>. </p> </td> 
+   <td colname="col2"> <p>Version de la bibliothèque<a href="https://experienceleague.adobe.com/docs/analytics/import/data-sources/data-types-and-categories/datasrc-visitorid.html?lang=fr" format="html" scope="external"> d’identifiants visiteur</a>. </p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -186,7 +186,7 @@ Experience Platform Debugger affiche les informations suivantes pour chaque so
   </tr> 
   <tr> 
    <td colname="col1"> <p>Nom de l’offre</p> </td> 
-   <td colname="col2"> <p>Nom de <a href="https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html" format="html" scope="external"> l’offre</a> de Target. Disponible sans authentification uniquement si vous implémentez le récepteur d’événements de débogage dans votre gestionnaire de codes ou de balises et si vous activez les <a href="https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html" format="html" scope="external"> jetons de réponse</a> nécessaires dans l’interface utilisateur de Target. </p> </td> 
+   <td colname="col2"> <p>Nom de <a href="https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html?=lang=fr" format="html" scope="external"> l’offre</a> de Target. Disponible sans authentification uniquement si vous implémentez le récepteur d’événements de débogage dans votre gestionnaire de codes ou de balises et si vous activez les <a href="https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html" format="html" scope="external"> jetons de réponse</a> nécessaires dans l’interface utilisateur de Target. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>ID d’offre </p> </td> 

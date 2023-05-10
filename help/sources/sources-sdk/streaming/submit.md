@@ -3,7 +3,8 @@ title: Tester Et Envoyer Votre Source
 description: Le document suivant décrit les étapes à suivre pour tester et vérifier une nouvelle source à l’aide de l’API Flow Service et intégrer une nouvelle source par le biais de sources en libre-service (SDK de diffusion en continu).
 hide: true
 hidefromtoc: true
-source-git-commit: 7744fef9751212a40f8f20df52812d38130c42fc
+exl-id: 2ae0c3ad-1501-42ab-aaaa-319acea94ec2
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '1249'
 ht-degree: 23%

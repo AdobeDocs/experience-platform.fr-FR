@@ -13,7 +13,7 @@ ht-degree: 59%
 
 # [!DNL Generic OData] source
 
-Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous permettant de structurer, de libeller et d’améliorer les données entrantes à l’aide des services [!DNL Platform]. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, des bases de données, etc.
+Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous permettant de structurer, de libeller et d’améliorer les données entrantes à l’aide des services [!DNL Platform]. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les bases de données, etc.
 
 [!DNL Experience Platform] prend en charge l’ingestion de données à partir d’une application de protocoles tiers. La prise en charge des protocoles par les fournisseurs inclut [!DNL Generic OData].
 

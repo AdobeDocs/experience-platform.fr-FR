@@ -4,8 +4,8 @@ description: Ce document présente la classe XDM Business Campaign dans le modè
 exl-id: 4e3228a1-74be-43af-b355-45d84afb1611
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
-source-wordcount: '240'
-ht-degree: 8%
+source-wordcount: '237'
+ht-degree: 7%
 
 ---
 
@@ -29,7 +29,7 @@ ht-degree: 8%
 | `campaignName` | Chaîne | Nom de la campagne. |
 | `campaignType` | Chaîne | Type de campagne ou audience cible. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Pour découvrir comment cette classe correspond conceptuellement aux autres classes B2B et comment vous pouvez établir ces relations dans l’interface utilisateur de Adobe Experience Platform, consultez le guide sur [relations de schéma dans Real-Time CDP B2B Edition](../../tutorials/relationship-b2b.md)
 

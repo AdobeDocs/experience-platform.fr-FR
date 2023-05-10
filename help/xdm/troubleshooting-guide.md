@@ -5,7 +5,7 @@ title: Guide de dépannage du système XDM
 description: Trouvez des réponses aux questions fréquentes sur le modèle de données d’expérience (XDM), y compris les étapes pour résoudre les erreurs d’API courantes.
 exl-id: a0c7c661-bee8-4f66-ad5c-f669c52c9de3
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '2073'
 ht-degree: 100%
 
@@ -59,7 +59,7 @@ Les champs peuvent être marqués comme identités à l’aide de l’API ou de 
 
 Dans l’API, les identités sont établies en créant des descripteurs d’identité. Les descripteurs d’identité signalent qu’une propriété spécifique d’un schéma est un identifiant unique.
 
-Les descripteurs d’identité sont créés par une requête POST au point de terminaison /descriptors. Une réponse réussie renvoie un état HTTP 201 (Created) avec un objet de réponse contenant les détails du nouveau descripteur.
+Les descripteurs d’identité sont créés par une requête POST au point d’entrée /descriptors. Une réponse réussie renvoie un état HTTP 201 (Created) avec un objet de réponse contenant les détails du nouveau descripteur.
 
 Pour plus d’informations sur la création de descripteurs d’identité dans l’API, consultez le document sur la section des [descripteurs](api/descriptors.md) dans le guide de développement du [!DNL Schema Registry].
 
@@ -88,7 +88,7 @@ Pour plus d’informations sur l’utilisation de l’API pour activer un schém
 Dans [!DNL Experience Platform], cliquez sur **[!UICONTROL Schémas]** dans le volet de navigation de gauche, et sélectionnez le nom du schéma que vous souhaitez activer dans la liste des schémas. Ensuite, dans la partie droite de l’éditeur, sous **[!UICONTROL Propriétés du schéma]**, sélectionnez **[!UICONTROL Profile]** pour l’activer.
 
 
-Pour plus d’informations, consultez la section sur l’[utilisation dans Real-Time Customer Profile](./tutorials/create-schema-ui.md#profile) dans le tutoriel de l’[!UICONTROL éditeur de schémas].
+Pour plus d’informations, consultez la section sur l’[utilisation dans le profil client en temps réel](./tutorials/create-schema-ui.md#profile) dans le tutoriel de l’[!UICONTROL éditeur de schémas].
 
 ### Puis-je modifier directement un schéma d’union ?
 

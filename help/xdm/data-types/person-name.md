@@ -6,8 +6,8 @@ description: Ce document fournit un aperçu du type de données XDM du nom de pe
 exl-id: 5cf55fb1-b6b0-4d1c-93c3-7e2b7766599e
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '256'
-ht-degree: 21%
+source-wordcount: '253'
+ht-degree: 20%
 
 ---
 
@@ -28,7 +28,7 @@ En outre, le type de données fournit un certain nombre de propriétés facultat
 | `middleName` | Nom intermédiaire, nom alternatif ou noms supplémentaires présents entre le prénom et le nom. |
 | `suffix` | Groupe de lettres fourni après le nom d’une personne pour fournir des informations supplémentaires (telles que `Jr.`, `Sr.`, `M.D.`, `PhD`, `I`, `II`, `III`, etc.). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Pour plus d’informations sur le type de données du nom de la personne, reportez-vous au référentiel XDM public :
 

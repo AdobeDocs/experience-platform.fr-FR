@@ -1,11 +1,11 @@
 ---
-title: Notes de mise à jour de Adobe Experience Platform, novembre 2021
+title: Notes de mise à jour d’Adobe Experience Platform – Novembre 2021
 description: Les notes de mise à jour de novembre 2021 pour Adobe Experience Platform.
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
 source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '799'
-ht-degree: 79%
+ht-degree: 89%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 79%
 
 Nouvelles fonctionnalités d’Adobe Experience Platform :
 
-- [Édition B2B de Real-Time Customer Data Platform](#B2B)
+- [Édition B2B de Real-Time Customer Data Platform](#B2B)
 - [(Beta) Activation des segments d’audience vers des destinations par lots via l’API d’activation ad hoc](#ad-hoc-activation)
 
 ## Mises à jour des fonctionnalités existantes
@@ -27,13 +27,13 @@ Mises à jour des fonctionnalités existantes dans Adobe Experience Platform 
 - [IA dédiée à l’attribution](#attribution-ai)
 - [IA dédiée aux clients](#customer-ai)
 
-### Édition B2B de Real-Time Customer Data Platform {#B2B}
+### Édition B2B de Real-Time Customer Data Platform {#B2B}
 
 **Date de publication : 12 novembre 2021**
 
-Basée sur Real-time Customer Data Platform (Real-Time CDP), Real-Time CDP B2B Edition est conçue spécifiquement pour les spécialistes du marketing qui opèrent dans un modèle de service business-to-business. Elle rassemble des données provenant de sources multiples et les combine en une vue unique des profils de comptes et d’utilisateurs. Ces données unifiées permettent aux professionnels du marketing de cibler précisément des audiences spécifiques afin de stimuler leur engagement sur tous les canaux disponibles.
+Basée sur Real-time Customer Data Platform (Real-time CDP), l’édition B2B de Real-time CDP a été conçue pour les professionnels du marketing travaillant dans un modèle de service business-to-business. Elle rassemble des données provenant de sources multiples et les combine en une vue unique des profils de comptes et d’utilisateurs. Ces données unifiées permettent aux professionnels du marketing de cibler précisément des audiences spécifiques afin de stimuler leur engagement sur tous les canaux disponibles.
 
-Il existe des améliorations à diverses fonctionnalités de Adobe Experience Platform qui distinguent Real-Time CDP Édition B2B de son homologue B2C. Il s’agit notamment d’améliorations du modèle de données d’expérience (XDM) pour les cas d’utilisation B2B, de mises à niveau de la résolution d’identité et de la segmentation de profil, ainsi que d’un connecteur et d’une destination personnalisés pour Marketo Engage. Le connecteur Marketo permet aux marques B2B de connecter ses données d’engagement B2B de pointe aux informations comportementales afin d’encourager les prospects et d’améliorer les opérations marketing basées sur les comptes.
+Des améliorations ont été apportées à diverses fonctionnalités d’Adobe Experience Platform, distinguant ainsi l’édition B2B de Real-time CDP de son équivalent B2C. Il s’agit notamment d’améliorations du modèle de données d’expérience (XDM) pour les cas d’utilisation B2B, de mises à niveau de la résolution d’identité et de la segmentation de profil, ainsi que d’un connecteur et d’une destination personnalisés pour Marketo Engage. Le connecteur Marketo permet aux marques B2B de connecter ses données d’engagement B2B de pointe aux informations comportementales afin d’encourager les prospects et d’améliorer les opérations marketing basées sur les comptes.
 
 -[Nouvelles éditions B2B et B2P](#editions)
 -[Nouveaux connecteurs de source de données et de destination Marketo](#marketo)
@@ -81,7 +81,7 @@ Pour plus d’informations sur l’IA dédiée à l’attribution, reportez-vous
 
 ### IA dédiée aux clients {#customer-ai}
 
-Customer AI disponible dans Real-time Customer Data Platform est utilisé pour générer des scores de propension personnalisés tels que l’attrition et la conversion pour des profils individuels à grande échelle. Cette opération s’effectue sans qu’il soit nécessaire de transformer les besoins professionnels en un problème de machine learning ou d’avoir recours à un algorithme, à une formation ou à un déploiement.
+L’IA dédiée aux clients disponible dans Real-time Customer Data Platform est utilisée pour générer des scores de propension personnalisés tels que l’attrition et la conversion pour des profils individuels à grande échelle. Cette opération s’effectue sans qu’il soit nécessaire de transformer les besoins professionnels en un problème de machine learning ou d’avoir recours à un algorithme, à une formation ou à un déploiement.
 
 **Fonctionnalités mises à jour**
 

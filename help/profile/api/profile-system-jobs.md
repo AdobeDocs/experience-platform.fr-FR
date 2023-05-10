@@ -7,7 +7,7 @@ exl-id: 75ddbf2f-9a54-424d-8569-d6737e9a590e
 source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '1316'
-ht-degree: 68%
+ht-degree: 69%
 
 ---
 
@@ -25,7 +25,7 @@ Le point d’entrée dʼAPI utilisé dans ce guide fait partie de [[!DNL Real-Ti
 
 ## Affichage des requêtes de suppression
 
-Une requête de suppression est un processus persistant asynchrone, ce qui signifie que votre organisation peut exécuter plusieurs requêtes de suppression simultanément. Pour afficher toutes les requêtes de suppression en cours d’exécution par votre organisation, vous pouvez exécuter une requête GET sur le point de terminaison `/system/jobs`.
+Une requête de suppression est un processus persistant asynchrone, ce qui signifie que votre organisation peut exécuter plusieurs requêtes de suppression simultanément. Pour afficher toutes les requêtes de suppression en cours d’exécution par votre organisation, vous pouvez exécuter une requête GET sur le point d’entrée `/system/jobs`.
 
 Vous pouvez également utiliser des paramètres de requête facultatifs pour filtrer la liste des requêtes de suppression renvoyées dans la réponse. Pour utiliser plusieurs paramètres, séparez chaque paramètre à l’aide d’une esperluette (`&`).
 
@@ -99,7 +99,7 @@ La réponse comprend un tableau « enfants » avec un objet pour chaque requê
 
 ## Création d’une requête de suppression {#create-a-delete-request}
 
-L’exécution d’une nouvelle requête de suppression se fait par le biais d’une requête POST au point de terminaison `/systems/jobs`, où l’identifiant du jeu de données ou du lot à supprimer est fourni dans le corps de la requête.
+L’exécution d’une nouvelle requête de suppression se fait par le biais d’une requête POST au point d’entrée `/systems/jobs`, où l’identifiant du jeu de données ou du lot à supprimer est fourni dans le corps de la requête.
 
 ### Suppression d’un jeu de données
 
@@ -225,7 +225,7 @@ Si vous tentez d’exécuter une requête de suppression pour un lot de jeux de 
 
 ## Affichage d’une requête de suppression spécifique {#view-a-specific-delete-request}
 
-Pour afficher une requête de suppression spécifique, y compris des détails tels que son état, vous pouvez exécuter une requête de recherche (GET) sur le point de terminaison`/system/jobs` et inclure l’identifiant de la requête de suppression dans le chemin.
+Pour afficher une requête de suppression spécifique, y compris des détails tels que son état, vous pouvez exécuter une requête de recherche (GET) sur le point d’entrée`/system/jobs` et inclure l’identifiant de la requête de suppression dans le chemin.
 
 **Format d’API**
 
@@ -275,7 +275,7 @@ Une fois que l’état de la requête de suppression est `"COMPLETED"` vous pouv
 
 ## Suppression d’une requête de suppression
 
-[!DNL Experience Platform] vous permet de supprimer une requête, ce qui peut s’avérer utile pour plusieurs raisons, notamment si la tâche de suppression n’a pas été terminée ou est restée bloquée en cours de traitement. Pour supprimer une requête de suppression, vous pouvez exécuter une requête DELETE sur le point de terminaison `/system/jobs` et inclure l’identifiant de la requête de suppression que vous souhaitez supprimer dans le chemin de la requête.
+[!DNL Experience Platform] vous permet de supprimer une requête, ce qui peut s’avérer utile pour plusieurs raisons, notamment si la tâche de suppression n’a pas été terminée ou est restée bloquée en cours de traitement. Pour supprimer une requête de suppression, vous pouvez exécuter une requête DELETE sur le point d’entrée `/system/jobs` et inclure l’identifiant de la requête de suppression que vous souhaitez supprimer dans le chemin de la requête.
 
 **Format d’API**
 

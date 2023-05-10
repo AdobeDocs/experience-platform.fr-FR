@@ -6,8 +6,8 @@ description: Ce document fournit un aperçu du groupe de champs de schéma Déta
 exl-id: 588c044c-b80d-4cb9-9f97-92f040d54bb4
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '282'
-ht-degree: 30%
+source-wordcount: '279'
+ht-degree: 29%
 
 ---
 
@@ -33,7 +33,7 @@ ht-degree: 30%
 | `person.nationality` | Chaîne | La relation juridique entre une personne et son état représentée à l’aide du code ISO 3166-1 Alpha-2. |
 | `person.taxId` | Chaîne | ID fiscal de la personne, comme le TIN aux États-Unis ou le CIF/NIF en Espagne. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Pour plus d’informations sur le groupe de champs, reportez-vous au référentiel XDM public :
 

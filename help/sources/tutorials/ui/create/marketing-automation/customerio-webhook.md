@@ -1,8 +1,9 @@
 ---
 title: Création d’une connexion source Customer.io et d’un flux de données dans l’interface utilisateur
 description: Découvrez comment créer une connexion source Customer.io à l’aide de l’interface utilisateur de Adobe Experience Platform.
-badge: "Version bêta"
-source-git-commit: 9d6a4b5f60f7895e2c1833493926db147064f3f1
+badge: Version bêta
+exl-id: 7655a34c-808a-46e3-94e3-022a433755a4
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '1233'
 ht-degree: 20%

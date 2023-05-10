@@ -3,7 +3,7 @@ title: Règles
 description: Découvrez le fonctionnement des extensions de balises dans Adobe Experience Platform.
 exl-id: 2beca2c9-72b7-4ea0-a166-50a3b8edb9cd
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1973'
 ht-degree: 100%
 

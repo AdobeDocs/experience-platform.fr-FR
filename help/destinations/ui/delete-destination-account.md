@@ -7,7 +7,7 @@ exl-id: 9b39ba4b-19a4-48a8-a6f1-f860777cdb9e
 source-git-commit: 2ea56957e122140fbc68c727e36666f8f9a71dd8
 workflow-type: tm+mt
 source-wordcount: '306'
-ht-degree: 5%
+ht-degree: 18%
 
 ---
 
@@ -29,11 +29,11 @@ Ce tutoriel décrit les étapes à suivre pour supprimer les comptes de destinat
 
 Suivez les étapes ci-dessous pour supprimer des comptes de destination existants.
 
-1. Connectez-vous au [Interface utilisateur Experience Platform](https://platform.adobe.com/) et sélectionnez **[!UICONTROL Destinations]** dans la barre de navigation de gauche. Sélectionner **[!UICONTROL Comptes]** dans l’en-tête supérieur pour afficher vos comptes existants.
+1. Connectez-vous à l’[interface utilisateur Experience Platform](https://platform.adobe.com/) et sélectionnez **[!UICONTROL Destinations]** dans la barre de navigation de gauche. Sélectionner **[!UICONTROL Comptes]** dans l’en-tête supérieur pour afficher vos comptes existants.
 
    ![Onglet Comptes](../assets/ui/delete-accounts/accounts-tab.png)
 
-2. Icône Sélectionner le filtre ![Icône Filtre](../assets/ui/update-accounts/filter.png) en haut à gauche pour lancer le panneau de tri. Le panneau de tri fournit une liste de toutes vos destinations. Vous pouvez sélectionner plusieurs destinations dans la liste pour afficher une sélection filtrée de comptes associés aux destinations sélectionnées.
+2. Sélectionnez l’icône filtre ![Icône Filtre](../assets/ui/update-accounts/filter.png) en haut à gauche pour lancer le panneau de tri. Le panneau de tri fournit une liste de toutes vos destinations. Vous pouvez sélectionner plusieurs destinations dans la liste pour afficher une sélection filtrée de comptes associés aux destinations sélectionnées.
 
    ![Filtrage des destinations](../assets/ui/delete-accounts/filter-accounts.png)
 

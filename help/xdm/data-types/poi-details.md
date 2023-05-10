@@ -6,8 +6,8 @@ description: Ce document fournit un aperçu du type de données XDM Point ciblé
 exl-id: cab5463b-97a0-400d-a00c-0cd8bf9301a5
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '204'
-ht-degree: 27%
+source-wordcount: '201'
+ht-degree: 26%
 
 ---
 
@@ -28,7 +28,7 @@ ht-degree: 27%
 | `poiID` | Chaîne | Identifiant unique du point ciblé. |
 | `type` | Chaîne | Type général du point ciblé qui utilise un schéma de saisie sélectionné par l’administrateur des définitions des points ciblés. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Pour obtenir plus d’informations sur ce type de données, reportez-vous au référentiel XDM public:
 

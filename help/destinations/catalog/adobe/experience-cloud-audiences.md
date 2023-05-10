@@ -2,13 +2,13 @@
 title: (Version bêta) Audiences Experience Cloud
 description: Découvrez comment partager des segments d’Experience Platform vers différentes solutions d’Experience Platform.
 last-substantial-update: 2023-01-25T00:00:00Z
-source-git-commit: a8f6bb8c3e35f4c17812ef944440210b7fe3f87b
+exl-id: 2bdbcda3-2efb-4a4e-9702-4fd9991e9461
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '1509'
 ht-degree: 24%
 
 ---
-
 
 # (Version bêta) [!UICONTROL Audiences Experience Cloud] connection
 
@@ -94,7 +94,7 @@ Profils exportés vers le [!UICONTROL Audiences Experience Cloud] Les destinatio
 | ECID | Experience Cloud ID | Espace de noms qui représente l’ECID. Cet espace de noms peut également être référencé par les alias suivants : « ID Adobe Marketing Cloud », « ID Adobe Experience Cloud », « ID Adobe Experience Platform ». Consultez le document suivant sur [ECID](/help/identity-service/ecid.md) pour plus d’informations. |
 | GAID | Google Advertising ID | Les profils ingérés dans Experience Platform avec une identité Principale de Google Advertising ID (GAID) peuvent être exportés vers cette destination. |
 | IDFA | Identifiant Apple pour les annonceurs | Les profils ingérés dans Experience Platform avec une identité Principale d’Apple ID for Advertisers (IDFA) peuvent être exportés vers cette destination. |
-| email_lc_sha256 | Adresses électroniques hachées avec l’algorithme SHA256 | Les profils ingérés dans l’Experience Platform avec une Principale identité d’adresse électronique hachée peuvent être exportés vers cette destination. |
+| email_lc_sha256 | Adresses e-mail hachées avec l’algorithme SHA256 | Les profils ingérés dans l’Experience Platform avec une Principale identité d’adresse électronique hachée peuvent être exportés vers cette destination. |
 
 {style="table-layout:auto"}
 
@@ -166,7 +166,7 @@ Vos segments Experience Platform apparaissent dans Audience Manager en tant que 
 
 ## Utilisation et gouvernance des données {#data-usage-governance}
 
-Lors de la gestion de vos données, toutes les destinations [!DNL Adobe Experience Platform] se conforment aux stratégies d’utilisation des données. Pour obtenir des informations détaillées sur la manière dont [!DNL Adobe Experience Platform] applique la gouvernance des données, consultez la [Présentation de la gouvernance des données](/help/data-governance/home.md).
+Lors de la gestion de vos données, toutes les destinations [!DNL Adobe Experience Platform] se conforment aux politiques d’utilisation des données. Pour obtenir des informations détaillées sur la manière dont [!DNL Adobe Experience Platform] applique la gouvernance des données, consultez la [Présentation de la gouvernance des données](/help/data-governance/home.md).
 
 La gouvernance des données en Experience Platform est appliquée par les deux [libellés d’utilisation des données](/help/data-governance/labels/reference.md) et les actions marketing.
 Les libellés d’utilisation des données seront transférés vers les applications, mais les actions marketing ne le seront pas. Cela signifie qu’une fois qu’ils arrivent en Audience Manager, les segments d’Experience Platform peuvent être exportés vers n’importe quelle destination disponible. Dans Audience Manager, vous pouvez utiliser [contrôles des exportations de données](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-export-controls.html?lang=en) pour empêcher l’exportation de segments vers certaines destinations.

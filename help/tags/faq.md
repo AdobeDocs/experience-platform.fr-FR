@@ -4,8 +4,8 @@ description: Obtenez des réponses aux questions les plus fréquentes à propos 
 exl-id: c06b8e25-4d79-4a11-94da-94ac096b5e33
 source-git-commit: 9701a14dc2915e0d6dcc6051c15d5113f305487f
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1044'
+ht-degree: 89%
 
 ---
 

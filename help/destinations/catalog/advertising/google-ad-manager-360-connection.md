@@ -1,6 +1,6 @@
 ---
 title: Connexion à  [!DNL Google Ad Manager 360]  (Version bêta)
-description: Google Ad Manager 360 est une plateforme de diffusion d’annonces de Google qui donne aux éditeurs les moyens de gérer l’affichage des annonces sur leurs sites web, en vidéo et dans les applications mobiles.
+description: Google Ad Manager 360 est une plateforme de diffusion des publicités de Google qui donne aux éditeurs les moyens de gérer l’affichage des publicités sur leurs sites web, en vidéo et dans les applications mobiles.
 exl-id: 3251145a-3e4d-40aa-b120-d79c8c9c7cae
 source-git-commit: 5174c65970aa8df9bc3f2c8d612c26c72c20e81f
 workflow-type: tm+mt

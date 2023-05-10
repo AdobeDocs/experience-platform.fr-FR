@@ -6,8 +6,8 @@ description: Ce document fournit un aperçu du type de données XDM Adresse éle
 exl-id: 1364df42-f89f-4f48-bcda-5332f3828326
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '236'
-ht-degree: 2%
+source-wordcount: '233'
+ht-degree: 0%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 2%
 | `statusReason` | Description de la variable active `status`. |
 | `type` | La façon dont le compte est associé à la personne (par exemple `work` ou `personal`). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 
 Pour plus d’informations sur le type de données de l’adresse électronique, reportez-vous au référentiel XDM public :

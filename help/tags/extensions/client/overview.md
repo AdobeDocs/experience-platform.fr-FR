@@ -5,7 +5,7 @@ exl-id: 226948f4-7738-4cfd-ad22-5934820b1399
 source-git-commit: 9d9e02c2a4f628ebe04aaa63942e830f3354729f
 workflow-type: tm+mt
 source-wordcount: '714'
-ht-degree: 84%
+ht-degree: 86%
 
 ---
 
@@ -32,7 +32,7 @@ Vous trouverez ci-dessous une liste de la documentation relative aux extensions 
 * [Adobe Analytics et Salesforce](https://exchange.adobe.com/apps/ec/101530)*
 * [ Adobe Analytics Product String ](./product-string/overview.md)
 * [Créateur de chaînes de produit Adobe Analytics](https://exchange.adobe.com/apps/ec/101461)*
-* [Adobe Analytics via le SDK Web de Adobe Experience Platform](https://exchange.adobe.com/apps/ec/108985/search-discovery-for-adobe-analytics-via-aep-web-sdk)*
+* [Adobe Analytics via le SDK Web Adobe Experience Platform](https://exchange.adobe.com/apps/ec/108985/search-discovery-for-adobe-analytics-via-aep-web-sdk)*
 * [Adobe Audience Manager](./audience-manager/overview.md)
 * [Adobe Client Data Layer (ACDL) ](./client-data-layer/overview.md)
 * [Adobe ContextHub](./contexthub/overview.md)

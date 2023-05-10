@@ -4,8 +4,8 @@ description: Ce document présente un aperçu du groupe de champs Détails du pl
 exl-id: 5a480c5b-74f8-48dd-858a-5cf2628dc7f0
 source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
 workflow-type: tm+mt
-source-wordcount: '219'
-ht-degree: 10%
+source-wordcount: '216'
+ht-degree: 9%
 
 ---
 
@@ -27,6 +27,6 @@ ht-degree: 10%
 | `planType` | Chaîne | Indique le type de plan. Les valeurs acceptées sont les suivantes :<ul><li>`hmo`</li><li>`epo`</li><li>`pos`</li><li>`hdhp`</li></ul> |
 | `targetOwnerType` | Chaîne | Le type de propriétaire auquel un forfait est destiné. Il peut s’agir d’un individu, d’un groupe, d’une organisation, etc. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Pour plus d’informations sur le groupe de champs, reportez-vous à la section [référentiel XDM public](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/plan/healthcare-plan-details.schema.json).

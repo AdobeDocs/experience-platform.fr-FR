@@ -2,12 +2,12 @@
 keywords: Experience Platform;accueil;rubriques populaires
 solution: Experience Platform
 title: Présentation de la gouvernance, de la confidentialité et de la sécurité
-description: Adobe Experience Platform fournit plusieurs services et outils qui vous permettent de contrôler en toute confiance vos données d’expérience collectées afin de respecter vos pratiques commerciales, vos obligations légales et votre processus de développement.
+description: Adobe Experience Platform fournit plusieurs services et outils qui vous permettent de contrôler en toute confiance vos données d’expérience collectées afin de respecter vos pratiques commerciales, vos obligations légales et votre processus de développement.
 exl-id: 1ab5a436-c5dd-4e7a-aba1-549f0613f224
 source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
 workflow-type: tm+mt
 source-wordcount: '855'
-ht-degree: 18%
+ht-degree: 24%
 
 ---
 
@@ -25,13 +25,13 @@ Les services peuvent être classés en trois domaines :
 
 ## Gouvernance des données {#governance}
 
-La gouvernance des données est un concept essentiel qui est étroitement lié à chaque capacité en Experience Platform. La gouvernance des données représente votre capacité à contrôler et à comprendre vos données tout au long de leur parcours via Platform. Cela implique de maintenir la qualité des données, la liaison des données, le catalogage des données, etc.
+La gouvernance des données est un concept essentiel qui est étroitement lié à chaque capacité en Experience Platform. La gouvernance des données représente votre capacité à contrôler et à comprendre vos données tout au long de leur parcours via Platform. Cela implique de maintenir la qualité des données, le lignage des données, le catalogage des données, etc.
 
 ### Gouvernance des données d’Adobe Experience Platform {#data-governance}
 
 En tant que service Platform, la gouvernance des données de Adobe Experience Platform vous permet de gérer les données clients et de garantir la conformité aux réglementations, aux restrictions et aux politiques applicables à l’utilisation des données. Il joue un rôle clé dans Experience Platform à différents niveaux, notamment l’étiquetage de l’utilisation des données, les stratégies d’utilisation des données, l’application des stratégies et la traçabilité des données.
 
-Voir [Présentation de la gouvernance des données](../../data-governance/home.md) pour plus d’informations.
+Pour plus d’informations, consultez la [présentation de la gouvernance des données](../../data-governance/home.md).
 
 ### Catalogue et jeux de données {#catalog}
 
@@ -65,17 +65,17 @@ Pour plus d’informations sur le traitement des données de consentement des cl
 
 L’intégrité et la sécurité de vos données sont indispensables à votre entreprise et ce risque nécessite des capacités de sécurité de pointe. Pour relever ce défi, Platform fournit plusieurs outils pour vous aider à protéger vos opérations de données.
 
-### Cryptage des données
+### Chiffrement des données
 
 Toutes les données de Platform sont chiffrées en transit et au repos. Consultez le document sur [cryptage des données dans Platform](./encryption.md) pour plus d’informations.
 
 ### Contrôle d’accès {#access-control}
 
-Experience Platform utilise Adobe Admin Console pour fournir un contrôle d’accès en fonction du rôle à diverses fonctionnalités de Platform. Cette fonctionnalité exploite les profils de produit dans Admin Console, liant les utilisateurs à des autorisations et des sandbox.
+Experience Platform utilise Adobe Admin Console pour fournir un contrôle d’accès en fonction du rôle à diverses fonctionnalités de Platform. Cette fonctionnalité exploite les profils de produit dans l’Admin Console, liant les utilisateurs et utilisatrices à des autorisations et des sandbox.
 
 Pour plus d’informations, consultez la [présentation du contrôle d’accès](../../access-control/home.md).
 
-### Environnements de test {#sandboxes}
+### Sandbox {#sandboxes}
 
 Experience Platform est conçu pour enrichir les applications d’expérience numérique à l’échelle mondiale. Les entreprises exécutent souvent plusieurs applications d’expérience numérique en parallèle et doivent prendre en charge le développement, les tests et le déploiement de ces applications tout en assurant la conformité opérationnelle.
 

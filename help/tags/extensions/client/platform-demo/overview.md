@@ -53,7 +53,7 @@ Si vous sélectionnez **[!UICONTROL Créer une connexion en continu]**, une fen�
 
 Le modal contient les champs avec des valeurs préremplies qui peuvent être modifiées en fonction de vos besoins. Si vous prévoyez de créer plus d’une connexion en continu, sachez que le champ **[!UICONTROL Source de données]** doit être unique. Toute tentative visant à créer une autre connexion en continu à l’aide d’une **[!UICONTROL Source de données]** utilisée sur une autre connexion échouera.
 
-Une fois que vous avez sélectionné un point de terminaison de connexion en continu, l’URL et la source du point de terminaison de connexion en continu s’affichent.
+Une fois que vous avez sélectionné un point d’entrée de connexion en continu, l’URL et la source du point d’entrée de connexion en continu s’affichent.
 
 ![](../../../images/adobe-experience-platform-streaming-endpoint-selected.png)
 

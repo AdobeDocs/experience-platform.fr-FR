@@ -1,9 +1,10 @@
 ---
 title: Suppressions dans Identity Service
 description: Ce document présente les différents mécanismes que vous pouvez utiliser pour supprimer vos données d’identité dans Experience Platform et explique clairement comment les graphiques d’identités peuvent être affectés.
-source-git-commit: da1ce4560d28d43db47318883f9656cebb2eb487
-workflow-type: ht
-source-wordcount: '1207'
+exl-id: 0619d845-71c1-4699-82aa-c6436815d5b3
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+workflow-type: tm+mt
+source-wordcount: '1198'
 ht-degree: 100%
 
 ---
@@ -12,7 +13,7 @@ ht-degree: 100%
 
 Adobe Experience Platform Identity Service génère des graphiques d’identités en liant de manière déterministe les identités entre les appareils et les systèmes pour une personne individuelle. Les liens des graphiques d’identités sont établis lorsque plusieurs identités marquées sont reçues au sein de la même ligne de données.
 
-Les graphiques d’identités sont utilisés par Real-time Customer Profile pour créer une vue d’ensemble exhaustive et unique de vos attributs et comportements client, ce qui vous permet de fournir des expériences numériques personnelles et percutantes en temps réel, aux personnes et non aux appareils.
+Les graphiques d’identités sont utilisés par le profil client en temps réel pour créer une vue d’ensemble exhaustive et unique de vos attributs et comportements client, ce qui vous permet de fournir des expériences numériques personnelles et percutantes en temps réel, aux personnes et non aux appareils.
 
 Ce document présente les différents mécanismes que vous pouvez utiliser pour supprimer vos données d’identité dans Experience Platform et explique clairement comment les graphiques d’identités peuvent être affectés.
 
@@ -36,7 +37,7 @@ Les sections ci-dessous décrivent les mécanismes que vous pouvez utiliser pour
 
 ### Suppression d’une identité unique dans Privacy Service
 
-Privacy Service traite les demandes de clients souhaitant accéder à leurs données personnelles, en refuser la vente, ou les effacer comme le stipulent les réglementations de confidentialité telles que le Règlement général sur la protection des données (RGPD) et le California Consumer Privacy Act (CCPA). Avec Privacy Service, vous pouvez envoyer des requêtes de traitement à l’aide de l’API ou de l’interface utilisateur. Lorsqu’Experience Platform reçoit une demande de suppression de la part de Privacy Service, Platform envoie une confirmation à Privacy Service pour confirmer que la demande a été reçue et que les données concernées ont été marquées pour suppression. La suppression de l’identité individuelle est basée sur l’espace de noms et/ou la valeur d’identifiant fournis. En outre, la suppression a lieu pour toutes les sandbox associées à une organisation donnée. Pour plus d’informations, consultez le guide sur le [traitement des demandes d’accès à des informations personnelles dans Identiy Service](privacy.md).
+Privacy Service traite les demandes de clients souhaitant accéder à leurs données personnelles, en refuser la vente, ou les effacer comme le stipulent les réglementations de confidentialité telles que le Règlement général sur la protection des données (RGPD) et le California Consumer Privacy Act (CCPA). Avec Privacy Service, vous pouvez envoyer des requêtes de traitement à l’aide de l’API ou de l’interface utilisateur. Lorsqu’Experience Platform reçoit une demande de suppression de la part de Privacy Service, Platform envoie une confirmation à Privacy Service pour confirmer que la demande a été reçue et que les données concernées ont été marquées pour suppression. La suppression de l’identité individuelle est basée sur l’espace de noms et/ou la valeur d’identifiant fournis. En outre, la suppression a lieu pour tous les sandbox associés à une organisation donnée. Pour plus d’informations, consultez le guide sur le [traitement des demandes d’accès à des informations personnelles dans Identiy Service](privacy.md).
 
 Le tableau ci-dessous fournit une répartition de la suppression d’identité unique dans Privacy Service :
 
@@ -44,10 +45,10 @@ Le tableau ci-dessous fournit une répartition de la suppression d’identité u
 | --- | --- |
 | Cas d’utilisation acceptés | Demandes d’accès à des informations personnelles (RGPD, CCPA) uniquement. |
 | Latence estimée | Plusieurs jours à plusieurs semaines |
-| Services concernés | La suppression d’identité unique dans Privacy Service vous permet de choisir si les données seront supprimées d’Identity Service, de Real-Time Customer Profile ou du lac de données. |
+| Services concernés | La suppression d’identité unique dans Privacy Service vous permet de choisir si les données seront supprimées du service d’identités, du profil client en temps réel ou du lac de données. |
 | Modèles de suppression | Supprimer une identité d’Identity Service. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Suppression d’un jeu de données
 
@@ -59,7 +60,7 @@ Vous pouvez utiliser Catalog Service pour envoyer des demandes de suppression de
 
 ### Expiration des jeux de données dans l’hygiène des données
 
-L’espace de travail [[!UICONTROL Hygiène des données]](../hygiene/ui/overview.md) dans l’interface utilisateur d’Adobe Experience Platform vous permet de planifier l’expiration des jeux de données. Lorsqu’un jeu de données atteint sa date d’expiration, le lac de données, Identity Service et Real-Time Customer Profile lancent des processus distincts pour supprimer le contenu du jeu de données de leurs services respectifs. Pour plus d’informations, consultez le guide sur la [gestion des expirations de jeux de données dans l’espace de travail [!UICONTROL Data Hygiene]](../hygiene/ui/dataset-expiration.md).
+L’espace de travail [[!UICONTROL Hygiène des données]](../hygiene/ui/overview.md) dans l’interface utilisateur d’Adobe Experience Platform vous permet de planifier l’expiration des jeux de données. Lorsqu’un jeu de données atteint sa date d’expiration, le lac de données, le service d’identités et le profil client en temps réel lancent des processus distincts pour supprimer le contenu du jeu de données de leurs services respectifs. Pour plus d’informations, consultez le guide sur la [gestion des expirations de jeux de données dans l’espace de travail [!UICONTROL Data Hygiene]](../hygiene/ui/dataset-expiration.md).
 
 Le tableau ci-dessous présente les différences entre la suppression de jeux de données dans Catalog Service et dans l’hygiène des données :
 
@@ -67,10 +68,10 @@ Le tableau ci-dessous présente les différences entre la suppression de jeux de
 | --- | --- | --- |
 | Cas d’utilisation acceptés | Supprimer les jeux de données complets et les informations d’identité associées dans Platform. | Gestion des données stockées dans Experience Platform. |
 | Latence estimée | Jours | Jours |
-| Services concernés | La suppression de jeux de données par le biais de Catalog Service supprime les données d’Identity Service, de Real-Time Customer Profile et du lac de données. | La suppression de jeux de données avec l’hygiène des données supprime les données d’Identity Service, de Real-Time Customer Profile et du lac de données. |
+| Services concernés | La suppression de jeux de données par le biais de Catalog Service supprime les données du service d’identités, du profil client en temps réel et du lac de données. | La suppression de jeux de données avec l’hygiène des données supprime les données du service d’identités, du profil client en temps réel et du lac de données. |
 | Modèle de suppression | Supprimer les identités liées d’Identity Service établies par un jeu de données spécifique. | Supprimer les identités liées d’Identity Service établies par un jeu de données spécifique, selon le calendrier d’expiration. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Différents états des graphiques d’identités après suppression
 
@@ -84,7 +85,7 @@ Vous trouverez ci-dessous un aperçu des impacts potentiels des suppressions sur
 | Suppression complète | Un graphique doit comporter au moins deux identités liées pour exister. Par conséquent, si une demande de suppression entraîne la suppression de tous les liens existants dans un graphique, le graphique est complètement supprimé. |
 | Aucune modification | Un graphique ne sera pas affecté si une demande de suppression spécifique contient une identité ou un jeu de données qui n’est associé à aucun membre du graphique. En outre, un graphique n’est pas mis à jour même si la demande de suppression supprime un lien entre un jeu de données ou une combinaison de jeux de données d’identité, étant donné que le lien a été établi par un autre lien qui n’a pas été supprimé. En d’autres termes, si un lien existe dans deux jeux de données différents, le graphique n’est pas mis à jour, car un seul des jeux de données est supprimé. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Étapes suivantes
 

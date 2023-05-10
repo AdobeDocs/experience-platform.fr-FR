@@ -4,8 +4,8 @@ description: Ce document présente la classe de médicaments dans le modèle de 
 exl-id: e5786241-dd6e-450f-98c8-2de46affb3e2
 source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
 workflow-type: tm+mt
-source-wordcount: '152'
-ht-degree: 6%
+source-wordcount: '149'
+ht-degree: 4%
 
 ---
 
@@ -21,6 +21,6 @@ Dans le modèle de données d’expérience (XDM), la variable [!UICONTROL Médi
 | `medicationId` | [!UICONTROL Chaîne] | Identifiant unique du médicament. |
 | `medicationName` | [!UICONTROL Chaîne] | Nom du médicament. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 La classe peut être étendue à l’aide de la fonction [[!UICONTROL Médicaments de santé] groupe de champs](../field-groups/medication/healthcare-medication.md) pour décrire plus en détail le médicament ou le médicament.

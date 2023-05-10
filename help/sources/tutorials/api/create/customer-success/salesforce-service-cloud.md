@@ -8,7 +8,7 @@ exl-id: ed133bca-8e88-4c85-ae52-c3269b6bf3c9
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '473'
-ht-degree: 69%
+ht-degree: 73%
 
 ---
 
@@ -23,7 +23,7 @@ Ce tutoriel vous guide tout au long des étapes de création dʼune connexion de
 Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
 
 * [Sources](../../../../home.md) : [!DNL Experience Platform] permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services [!DNL Platform].
-* [Sandbox](../../../../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuelles qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
+* [Sandbox](../../../../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
 Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour vous connecter. [!DNL Salesforce Service Cloud] en utilisant la variable [!DNL Flow Service] API.
 
@@ -91,7 +91,7 @@ curl -X POST \
 | `auth.params.username` | Le nom d’utilisateur associé à votre [!DNL Salesforce Service Cloud] compte . |
 | `auth.params.password` | Le mot de passe associé à votre [!DNL Salesforce Service Cloud] compte . |
 | `auth.params.securityToken` | Jeton de sécurité associé à votre [!DNL Salesforce Service Cloud] compte . |
-| `connectionSpec.id` | Le [!DNL Salesforce Service Cloud] identifiant de spécification de connexion : `b66ab34-8619-49cb-96d1-39b37ede86ea` |
+| `connectionSpec.id` | Identifiant de spécification de connexion [!DNL Salesforce Service Cloud] : `b66ab34-8619-49cb-96d1-39b37ede86ea`. |
 
 **Réponse**
 
@@ -106,7 +106,7 @@ Une réponse réussie renvoie la nouvelle connexion, y compris son identifiant d
 
 ## Étapes suivantes
 
-En suivant ce tutoriel, vous avez créé une [!DNL Salesforce Service Cloud] connexion de base à l’aide de [!DNL Flow Service] API. Vous pouvez utiliser cet identifiant de connexion de base dans les tutoriels suivants : 
+Ce tutoriel vous a permis de créer une connexion de base à [!DNL Salesforce Service Cloud] à l’aide de l’API [!DNL Flow Service]. Vous pouvez utiliser cet identifiant de connexion de base dans les tutoriels suivants : 
 
 * [Explorez la structure et le contenu de vos tableaux de données à l’aide de l’API  [!DNL Flow Service] .](../../explore/tabular.md)
 * [Créez un flux de données pour importer les données de succès client dans Platform à l’aide de l’API  [!DNL Flow Service] .](../../collect/customer-success.md)

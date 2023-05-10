@@ -8,7 +8,7 @@ exl-id: 2728ce08-05c9-4dca-af1d-d2d1b266c5d9
 source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '477'
-ht-degree: 61%
+ht-degree: 62%
 
 ---
 
@@ -23,7 +23,7 @@ Ce tutoriel vous guide tout au long des étapes de création dʼune connexion de
 Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
 
 * [Sources](../../../../home.md) : [!DNL Experience Platform] permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services [!DNL Platform].
-* [Sandbox](../../../../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuelles qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
+* [Sandbox](../../../../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
 Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour vous connecter. [!DNL Amazon Redshift] en utilisant la variable [!DNL Flow Service] API.
 
@@ -98,7 +98,7 @@ curl -X POST \
 | `auth.params.database` | La base de données associée à votre [!DNL Amazon Redshift] compte . |
 | `auth.params.password` | Le mot de passe associé à votre [!DNL Amazon Redshift] compte . |
 | `auth.params.username` | Le nom d’utilisateur associé à votre [!DNL Amazon Redshift] compte . |
-| `connectionSpec.id` | Le [!DNL Amazon Redshift] identifiant de spécification de connexion : `3416976c-a9ca-4bba-901a-1f08f66978ff` |
+| `connectionSpec.id` | Identifiant de spécification de connexion [!DNL Amazon Redshift] : `3416976c-a9ca-4bba-901a-1f08f66978ff`. |
 
 **Réponse**
 

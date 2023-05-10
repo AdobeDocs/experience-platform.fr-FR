@@ -52,7 +52,7 @@ Le tableau ci-dessous présente les actions sur lesquelles les ressources sont e
 | [Groupe de champs](../../../xdm/schema/composition.md#field-group) | <ul><li>Créer</li><li>Mise à jour </li><li>Supprimer</li></ul> |
 | [Graphique d’identités](../../../identity-service/ui/identity-graph-viewer.md) | <ul><li>Affichage</li></ul> |
 | [Espace de noms d’identité](../../../identity-service/ui/identity-graph-viewer.md) | <ul><li>Créer</li><li>Mise à jour </li></ul> |
-| [Stratégie de fusion](../../../profile/merge-policies/overview.md) | <ul><li>Créer</li><li>Mise à jour </li><li>Supprimer</li></ul> |
+| [Politique de fusion](../../../profile/merge-policies/overview.md) | <ul><li>Créer</li><li>Mise à jour </li><li>Supprimer</li></ul> |
 | [Profil de produit](../../../access-control/home.md) | <ul><li>Créer</li><li>Mise à jour </li><li>Supprimer</li></ul> |
 | [Requête](../../../query-service/ui/overview.md) | <ul><li>Exécuter</li></ul> |
 | [Modèle de requête](../../../query-service/ui/overview.md) | <ul><li>Créer</li><li>Mise à jour </li><li>Supprimer</li></ul> |

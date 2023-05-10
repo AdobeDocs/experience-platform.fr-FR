@@ -12,7 +12,7 @@ ht-degree: 11%
 
 # Adobe Campaign Managed Cloud Services
 
-Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous permettant de structurer, de libeller et d’améliorer les données entrantes à l’aide des services de Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, des bases de données, etc.
+Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les bases de données, etc.
 
 Adobe Campaign Managed Cloud Services fournit une plateforme Managed Services pour la conception d’expériences client cross-canal et fournit un environnement pour l’orchestration visuelle des campagnes, la gestion des interactions en temps réel et l’exécution cross-canal. Visitez le [Documentation d’Adobe Campaign v8](https://experienceleague.adobe.com/docs/campaign/campaign-v8/campaign-home.html?lang=fr) pour plus d’informations.
 
@@ -24,7 +24,7 @@ Avant de pouvoir créer une connexion source pour que Campaign v8 soit Experienc
 
 * [Configuration de l’importation de votre journal d’événements à l’aide de la console cliente Adobe Campaign](#view-delivery-and-tracking-log-data)
 * [Création d’un schéma XDM ExperienceEvent](#create-a-schema)
-* [Création d’un jeu de données](#create-a-dataset)
+* [Créer un jeu de données](#create-a-dataset)
 
 ### Afficher les données des logs de diffusion et de tracking {#view-delivery-and-tracking-log-data}
 
@@ -66,7 +66,7 @@ Créez ensuite un schéma XDM ExperienceEvent pour les logs de diffusion et les 
 
 Pour obtenir des instructions détaillées sur la création d’un schéma, consultez le guide sur [création d’un schéma XDM dans l’interface utilisateur](../../../xdm/tutorials/create-schema-ui.md).
 
-### Création d’un jeu de données {#create-a-dataset}
+### Créer un jeu de données {#create-a-dataset}
 
 Enfin, vous devez créer un jeu de données pour vos schémas. Pour obtenir des instructions détaillées sur la création d’un jeu de données, consultez le guide sur [création d’un jeu de données dans l’interface utilisateur](../../../catalog/datasets/user-guide.md).
 

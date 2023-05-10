@@ -2,11 +2,11 @@
 title: Utilisation de Adobe Journey Optimizer avec le SDK Web Platform
 description: Découvrez comment effectuer le rendu du contenu personnalisé avec le SDK Web Experience Platform à l’aide de Adobe Journey Optimizer
 keywords: ajo;ajo web;adobe parcours optimizer;renderDecisions;surfaces;décisions;propositions;portée;schéma
-exl-id: e608952c-9598-11ed-b382-d72064651cac
-source-git-commit: 1b0f1e2e1625f6994a6e09bd086e4b63a3e8d4ab
+exl-id: 3f28e2bc-2c4b-4400-8f69-c7316449ff4f
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '424'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -148,5 +148,3 @@ Exemple de proposition de contenu Journey Optimizer :
 Pour déboguer les implémentations de personnalisation Adobe Journey Optimizer, utilisez [[!DNL Web SDK] débogage](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/debugging.html). [!DNL Adobe Journey Optimizer] des traces de débogage sont disponibles lors de la résolution des problèmes à l’aide de [[!DNL Adobe Experience Platform Assurance]](https://developer.adobe.com/client-sdks/documentation/platform-assurance/). Recherchez des événements avec la variable `AJO:` préfixe.
 
 ![assurance-ajo-trace](./assets/assurance-ajo-trace.png)
-
-

@@ -33,7 +33,7 @@ L’IA dédiée aux clients, incluse dans Real-time Customer Data Platform, v
 * proposer des modèles de propension des clients à haute précision pour une segmentation et un ciblage plus forts ;
 * comprendre les facteurs d’influence et la probabilité derrière certains comportements des clients ;
 * offrir des options personnalisables pour les cas d’utilisation et les données uniques de votre entreprise ;
-* améliorer Real-time Customer Profile grâce aux scores de propension des clients, comme les taux d’attrition et de conversion ;
+* améliorer le profil client en temps réel grâce aux scores de propension des clients, comme les taux d’attrition et de conversion ;
 * améliorer les profils client avec des facteurs d’influence pour les scores de propension ;
 * créer des segments de clients en fonction de facteurs d’influence et de scores de propension.
 

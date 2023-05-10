@@ -33,7 +33,7 @@ Pour naviguer vers le tableau de bord [!UICONTROL Segments] dans l’interface u
 
 >[!NOTE]
 >
->Si votre organisation débute sur Platform et n’a pas encore de jeux de données de profils actifs ou de stratégies de fusion créés, le tableau de bord [!UICONTROL Segments] n’est pas visible. Au lieu de cela, l’onglet [!UICONTROL Présentation] affiche des liens et de la documentation pour vous aider à démarrer avec la segmentation.
+>Si votre organisation débute sur Platform et n’a pas encore de jeux de données de profils actifs ou de politiques de fusion créés, le tableau de bord [!UICONTROL Segments] n’est pas visible. Au lieu de cela, l’onglet [!UICONTROL Présentation] affiche des liens et de la documentation pour vous aider à démarrer avec la segmentation.
 
 ![Onglet Aperçu du tableau de bord Segments avec les options Segments et Aperçu en surbrillance.](../images/segments/dashboard-overview.png)
 
@@ -95,9 +95,9 @@ Pour en savoir plus sur chacun des widgets standards disponibles, sélectionnez 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_segments_audiencesize"
 >title="Taille de l’audience"
->abstract="Ce widget affiche le nombre total de profils fusionnés dans le segment sélectionné. Ce nombre dépend de la stratégie de fusion appliquée à vos données et est correct au moment de l’instantané le plus récent."
+>abstract="Ce widget affiche le nombre total de profils fusionnés dans le segment sélectionné. Ce nombre dépend de la politique de fusion appliquée à vos données et est correct au moment de l’instantané le plus récent."
 
-Le widget **[!UICONTROL Taille de l’audience]** affiche le nombre total de profils fusionnés dans le segment sélectionné au moment de la prise de l’instantané. Ce nombre est le résultat de l’application de la stratégie de fusion de segments à vos données de profil afin de fusionner les fragments de profil pour former un seul profil pour chaque individu du segment.
+Le widget **[!UICONTROL Taille de l’audience]** affiche le nombre total de profils fusionnés dans le segment sélectionné au moment de la prise de l’instantané. Ce nombre est le résultat de l’application de la politique de fusion de segments à vos données de profil afin de fusionner les fragments de profil pour former un seul profil pour chaque individu du segment.
 
 Pour plus d&#39;informations sur les fragments et les profils fusionnés, reportez-vous à la section [Présentation de Real-Time Customer Profile](../../profile/home.md).
 

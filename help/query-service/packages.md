@@ -4,7 +4,7 @@ description: Le document suivant décrit les packages de fonctionnalités et de 
 exl-id: ba472d9e-afe6-423d-9abd-13ecea43f04f
 source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
 workflow-type: tm+mt
-source-wordcount: '720'
+source-wordcount: '714'
 ht-degree: 8%
 
 ---
@@ -41,7 +41,7 @@ Le tableau suivant décrit les principaux droits de Query Service en fonction de
 | Capacité de surveillance | Oui | Oui |
 | Capacité de configuration des alertes de requête | Non | Oui |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Contrôle d’accès
 
@@ -58,11 +58,11 @@ Le tableau suivant décrit les effets de la variable [!DNL Manage Queries] autor
 | [!DNL Manage Queries] (sans autorisation d’écriture de données) | Permet d’accéder à l’exécution de requêtes ad hoc |
 | [!DNL Manage Queries] (avec autorisation pour écrire des données) | Permet d’accéder à l’exécution de requêtes par lots |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-## Prise en charge des environnements de test
+## Prise en charge des sandbox
 
-Les environnements de test sont des partitions virtuelles au sein d’une instance unique d’Experience Platform. Chaque instance de Platform prend en charge plusieurs environnements de test de production et autres, chacun conservant sa propre bibliothèque de ressources de Platform. Les environnements de test hors production vous permettent de tester des fonctionnalités, d’exécuter des expériences et de créer des configurations personnalisées sans affecter vos environnements de test de production. Pour plus d’informations sur les environnements de test, consultez la [présentation des environnements de test](../sandboxes/home.md). Tous les droits de Query Service sont partagés sur tous les environnements de test.
+Les sandbox sont des partitions virtuelles au sein d’une instance unique d’Experience Platform. Chaque instance de Platform prend en charge plusieurs environnements de test de production et autres, chacun conservant sa propre bibliothèque de ressources de Platform. Les environnements de test hors production vous permettent de tester des fonctionnalités, d’exécuter des expériences et de créer des configurations personnalisées sans affecter vos environnements de test de production. Pour plus d’informations sur les sandbox, consultez la [présentation des sandbox](../sandboxes/home.md). Tous les droits de Query Service sont partagés sur tous les environnements de test.
 
 ## Étapes suivantes
 

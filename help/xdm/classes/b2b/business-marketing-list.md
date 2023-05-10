@@ -4,8 +4,8 @@ description: Ce document présente la classe XDM Business Marketing List dans Ex
 exl-id: 510c5608-054d-4bed-91eb-22d84b5dc625
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
-source-wordcount: '311'
-ht-degree: 6%
+source-wordcount: '308'
+ht-degree: 5%
 
 ---
 
@@ -29,6 +29,6 @@ ht-degree: 6%
 | `marketingListID` | Chaîne | Identifiant unique de l’entité de liste marketing. |
 | `marketingListName` | Chaîne | Nom de la liste marketing. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Consultez le guide sur la [relations de schéma dans Real-Time CDP B2B Edition](../../tutorials/relationship-b2b.md) pour découvrir comment cette classe correspond conceptuellement aux autres classes B2B et comment vous pouvez établir ces relations dans l’interface utilisateur de Adobe Experience Platform.

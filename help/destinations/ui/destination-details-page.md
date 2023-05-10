@@ -12,7 +12,7 @@ ht-degree: 18%
 
 # Afficher les détails de la destination
 
-## Aperçu {#overview}
+## Présentation {#overview}
 
 Dans l’interface utilisateur de Adobe Experience Platform, vous pouvez afficher et surveiller les attributs et les activités de vos destinations. Ces détails incluent le nom et l’identifiant de la destination, des commandes pour activer ou désactiver les destinations, etc. Les détails incluent également des mesures pour les enregistrements de profil activés, les identités activées, en échec et exclues, ainsi qu’un historique des exécutions de flux de données.
 

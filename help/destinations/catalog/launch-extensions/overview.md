@@ -6,13 +6,13 @@ exl-id: 54fca635-0e37-460e-abb3-5da294d4e0cf
 source-git-commit: fe71294cb73a25c2c4708b0a6ebe04fc2b97afdf
 workflow-type: tm+mt
 source-wordcount: '486'
-ht-degree: 25%
+ht-degree: 28%
 
 ---
 
 # Balisage des extensions dans Adobe Experience Platform
 
-Adobe Experience Platform offre la nouvelle génération de fonctionnalités de gestion des balises d’Adobe. Platform vous offre un moyen simple de déployer et de gérer toutes les balises d’analyse, de marketing et de publicité nécessaires pour offrir des expériences client pertinentes. Les balises sont proposées aux clients Adobe Experience Cloud en tant que fonctionnalité à valeur ajoutée incluse.
+Adobe Experience Platform offre la nouvelle génération de fonctionnalités de gestion des balises d’Adobe. Platform vous offre un moyen simple de déployer et de gérer toutes les balises d’analyse, de marketing et de publicité nécessaires pour offrir des expériences client pertinentes. Les balises sont proposées aux clients Adobe Experience Cloud en tant que fonctionnalité à valeur ajoutée incluse.
 
 Pour une présentation des balises, reportez-vous aux ressources ci-dessous :
 
@@ -61,7 +61,7 @@ Les extensions vous permettent de répondre à divers cas d’utilisation client
 
 Les extensions peuvent appartenir aux catégories suivantes dans Platform :
 
-- [Publicité](../advertising/overview.md)
+- [Advertising](../advertising/overview.md)
 - [Analytics](../analytics/overview.md)
 - [Plateforme de gestion des données](../data-management/overview.md)
 - [Destinations de marketing par e-mail ](../email-marketing/overview.md)

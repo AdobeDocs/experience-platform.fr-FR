@@ -7,7 +7,7 @@ exl-id: 7b672859-e61a-4b3c-9db9-62048258f0aa
 source-git-commit: 1ef6430b6661a2b8b5aef196b75cfaf3f6220aab
 workflow-type: tm+mt
 source-wordcount: '413'
-ht-degree: 3%
+ht-degree: 33%
 
 ---
 
@@ -28,11 +28,11 @@ Vous pouvez supprimer des destinations de la variable [!DNL Platform] [!DNL UI].
 
 Suivez les étapes ci-dessous pour supprimer une destination du [!UICONTROL Parcourir] .
 
-1. Connectez-vous au [Interface utilisateur Experience Platform](https://platform.adobe.com/) et sélectionnez **[!UICONTROL Destinations]** dans la barre de navigation de gauche. Pour afficher vos destinations existantes, sélectionnez **[!UICONTROL Parcourir]** dans l’en-tête supérieur.
+1. Connectez-vous à l’[interface utilisateur Experience Platform](https://platform.adobe.com/) et sélectionnez **[!UICONTROL Destinations]** dans la barre de navigation de gauche. Pour afficher vos destinations existantes, sélectionnez **[!UICONTROL Parcourir]** dans l’en-tête supérieur.
 
    ![Parcourir les destinations](../assets/ui/delete-destinations/browse-destinations.png)
 
-2. Icône Sélectionner le filtre ![Icône Filtre](../assets/ui/delete-destinations/filter.png) en haut à gauche pour lancer le panneau de tri. Le panneau de tri fournit une liste de toutes vos destinations. Vous pouvez sélectionner plusieurs destinations dans la liste pour afficher une sélection filtrée de flux de données associés à la destination sélectionnée.
+2. Sélectionnez l’icône filtre ![Icône Filtre](../assets/ui/delete-destinations/filter.png) en haut à gauche pour lancer le panneau de tri. Le panneau de tri fournit une liste de toutes vos destinations. Vous pouvez sélectionner plusieurs destinations dans la liste pour afficher une sélection filtrée de flux de données associés à la destination sélectionnée.
 
    ![Filtrage des destinations](../assets/ui/delete-destinations/filter-destinations.png)
 
@@ -47,11 +47,11 @@ Suivez les étapes ci-dessous pour supprimer une destination du [!UICONTROL Parc
 
 Suivez les étapes ci-dessous pour supprimer une destination de la page de détails des destinations.
 
-1. Connectez-vous au [Interface utilisateur Experience Platform](https://platform.adobe.com/) et sélectionnez **[!UICONTROL Destinations]** dans la barre de navigation de gauche. Pour afficher vos destinations existantes, sélectionnez **[!UICONTROL Parcourir]** dans l’en-tête supérieur.
+1. Connectez-vous à l’[interface utilisateur Experience Platform](https://platform.adobe.com/) et sélectionnez **[!UICONTROL Destinations]** dans la barre de navigation de gauche. Pour afficher vos destinations existantes, sélectionnez **[!UICONTROL Parcourir]** dans l’en-tête supérieur.
 
    ![Parcourir les destinations](../assets/ui/delete-destinations/browse-destinations.png)
 
-2. Icône Sélectionner le filtre ![Icône Filtre](../assets/ui/delete-destinations/filter.png) en haut à gauche pour lancer le panneau de tri. Le panneau de tri fournit une liste de toutes vos destinations. Vous pouvez sélectionner plusieurs destinations dans la liste pour afficher une sélection filtrée de flux de données associés à la destination sélectionnée.
+2. Sélectionnez l’icône filtre ![Icône Filtre](../assets/ui/delete-destinations/filter.png) en haut à gauche pour lancer le panneau de tri. Le panneau de tri fournit une liste de toutes vos destinations. Vous pouvez sélectionner plusieurs destinations dans la liste pour afficher une sélection filtrée de flux de données associés à la destination sélectionnée.
 
    ![Filtrage des destinations](../assets/ui/delete-destinations/filter-destinations.png)
 

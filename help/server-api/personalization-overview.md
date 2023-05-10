@@ -5,13 +5,13 @@ exl-id: 11be9178-54fe-49d0-b578-69e6a8e6ab90
 source-git-commit: f36892103b0b202550c07a70538c97b1cc673840
 workflow-type: tm+mt
 source-wordcount: '741'
-ht-degree: 9%
+ht-degree: 10%
 
 ---
 
 # Présentation de la personnalisation
 
-Avec le [!DNL Server API], vous pouvez récupérer du contenu personnalisé à partir des solutions de personnalisation d’Adobe, y compris [Adobe Target](https://business.adobe.com/products/target/adobe-target.html) et [offer decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=en).
+Avec le [!DNL Server API], vous pouvez récupérer du contenu personnalisé à partir des solutions de personnalisation d’Adobe, y compris [Adobe Target](https://business.adobe.com/fr/products/target/adobe-target.html) et [offer decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=en).
 
 En outre, la variable [!DNL Server API] optimise les fonctionnalités de personnalisation de la même page et de la page suivante grâce aux destinations de personnalisation Adobe Experience Platform, telles que [Adobe Target](../destinations/catalog/personalization/adobe-target-connection.md) et le [connexion à la personnalisation personnalisée](../destinations/catalog/personalization/custom-personalization.md). Pour savoir comment configurer Experience Platform pour la personnalisation de la même page et de la page suivante, reportez-vous à la section [guide dédié](../destinations/ui/configure-personalization-destinations.md).
 

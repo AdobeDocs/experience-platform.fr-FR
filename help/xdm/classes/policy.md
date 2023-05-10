@@ -4,8 +4,8 @@ description: Ce document présente la classe Policy dans le modèle de données 
 exl-id: 56cc8c69-84a0-493e-85c5-e0cd994e4bee
 source-git-commit: f5df893260f0772ad54ccdb00d99ed8f328d35a9
 workflow-type: tm+mt
-source-wordcount: '244'
-ht-degree: 10%
+source-wordcount: '241'
+ht-degree: 9%
 
 ---
 
@@ -34,4 +34,4 @@ Dans le modèle de données d’expérience (XDM), la variable [!UICONTROL Strat
 | `startDate` | [!UICONTROL DateTime] | Date à laquelle la couverture de police d’assurance commence (ou commence). |
 | `type` | [!UICONTROL Chaîne] | Type de police d’assurance, telle que maison, automobile, location ou bateau. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

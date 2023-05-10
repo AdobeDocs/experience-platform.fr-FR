@@ -3,8 +3,8 @@ title: Notes de mise à jour d’Adobe Experience Platform - Août 2022
 description: Les notes de mise à jour d’août 2022 pour Adobe Experience Platform.
 exl-id: dbf1e7a3-8599-4991-8932-f57d3b1c640d
 source-git-commit: edd285c3d0638b606876c015dffb18309887dfb5
-workflow-type: ht
-source-wordcount: '2109'
+workflow-type: tm+mt
+source-wordcount: '2082'
 ht-degree: 100%
 
 ---
@@ -20,7 +20,7 @@ Mises à jour des fonctionnalités existantes dans Adobe Experience Platform 
 - [[!DNL Data Prep]](#data-prep)
 - [[!DNL Destinations]](#destinations)
 - [Modèle de données d’expérience (XDM)](#xdm)
-- [Profil client en temps réel](#profile)
+- [Real-time Customer Profile](#profile)
 - [Segmentation Service](#segmentation)
 - [Sources](#sources)
 
@@ -36,9 +36,9 @@ L’IA dédiée à l’attribution est utilisée pour attribuer des crédits aux
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
-| Prise en charge de la confidentialité | <ul><li> L’IA dédiée à l’attribution prend désormais en charge la définition de rôles d’utilisateur et de stratégies d’accès pour gérer les [autorisations](../../../help/access-control/abac/ui/permissions.md) pour les fonctionnalités et objets au sein d’une application produit. </li><li>Les ressources du journal d’audit sont automatiquement enregistrées lorsque l’activité se produit.</li><li> Grâce au [contrôle d’accès basé sur les attributs](../../access-control/abac/overview.md), les administrateurs peuvent contrôler l’accès à des objets et/ou fonctionnalités spécifiques en fonction de certains attributs, qui peuvent être des métadonnées ajoutées à un objet, comme des libellés. Les administrateurs peuvent également définir des rôles d’utilisateur qui n’ont accès qu’à des champs spécifiques et aux données correspondant à ces champs.</li><li>L’IA dédiée à l’attribution utilise les jeux de données Platform. Pour prendre en charge les demandes de droits des consommateurs qu’une marque peut recevoir, les marques doivent utiliser Privacy Service de Platform pour soumettre les demandes d’accès et de suppression des clients afin de supprimer leurs données dans le lac de données, Identity Service et Real-Time Customer Profile.  </li><li>Tous les jeux de données utilisés pour l’entrée/la sortie des modèles suivront les directives de Platform. Le chiffrement des données de Platform s’applique aux données au repos et en transit. Consultez la documentation pour en savoir plus sur le [chiffrement des données](../../../help/landing/governance-privacy-security/encryption.md).</li></ul> |
+| Prise en charge de la confidentialité | <ul><li> L’IA dédiée à l’attribution prend désormais en charge la définition de rôles d’utilisateur et de politiques d’accès pour gérer les [autorisations](../../../help/access-control/abac/ui/permissions.md) pour les fonctionnalités et objets au sein d’une application produit. </li><li>Les ressources du journal d’audit sont automatiquement enregistrées lorsque l’activité se produit.</li><li> Grâce au [contrôle d’accès basé sur les attributs](../../access-control/abac/overview.md), les administrateurs peuvent contrôler l’accès à des objets et/ou fonctionnalités spécifiques en fonction de certains attributs, qui peuvent être des métadonnées ajoutées à un objet, comme des libellés. Les administrateurs peuvent également définir des rôles d’utilisateur qui n’ont accès qu’à des champs spécifiques et aux données correspondant à ces champs.</li><li>L’IA dédiée à l’attribution utilise les jeux de données Platform. Pour prendre en charge les demandes de droits des consommateurs qu’une marque peut recevoir, les marques doivent utiliser Privacy Service de Platform pour soumettre les demandes d’accès et de suppression des clients afin de supprimer leurs données dans le lac de données, le service d’identités et le profil client en temps réel.  </li><li>Tous les jeux de données utilisés pour l’entrée/la sortie des modèles suivront les directives de Platform. Le chiffrement des données de Platform s’applique aux données au repos et en transit. Consultez la documentation pour en savoir plus sur le [chiffrement des données](../../../help/landing/governance-privacy-security/encryption.md).</li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Note** : l’IA dédiée à l’attribution n’est pas disponible pour les clients Healthcare Shield ou Privacy Shield existants jusqu’à nouvel avis.
 
@@ -52,9 +52,9 @@ L’IA dédiée aux clients disponible dans Real-time Customer Data Platform est
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
-| Prise en charge de la confidentialité | <ul><li> L’IA dédiée aux clients prend désormais en charge la définition de rôles d’utilisateur et de stratégies d’accès permettant de gérer les [autorisations](../../../help/access-control/abac/ui/permissions.md) pour les fonctionnalités et objets au sein d’une application produit. </li><li>Les ressources du journal d’audit sont automatiquement enregistrées lorsque l’activité se produit.</li><li> Grâce au [contrôle d’accès basé sur les attributs](../../access-control/abac/overview.md), les administrateurs peuvent contrôler l’accès à des objets et/ou fonctionnalités spécifiques en fonction de certains attributs. Ces attributs peuvent être des métadonnées ajoutées à un objet, comme des libellés. Les administrateurs peuvent également définir des rôles d’utilisateur qui n’ont accès qu’à des champs spécifiques et aux données correspondant à ces champs.</li><li>L’IA dédiée aux clients utilise les jeux de données Platform. Pour prendre en charge les demandes de droits des consommateurs qu’une marque peut recevoir, les marques doivent utiliser Privacy Service de Platform pour soumettre les demandes d’accès et de suppression des clients afin de supprimer leurs données dans le lac de données, Identity Service et Real-Time Customer Profile. </li><li>Tous les jeux de données utilisés pour l’entrée/la sortie des modèles suivront les directives de Platform. Le chiffrement des données de Platform s’applique aux données au repos et en transit. Consultez la documentation pour en savoir plus sur le [chiffrement des données](../../../help/landing/governance-privacy-security/encryption.md).</li></ul> |
+| Prise en charge de la confidentialité | <ul><li> L’IA dédiée aux clients prend désormais en charge la définition de rôles d’utilisateur et de politiques d’accès permettant de gérer les [autorisations](../../../help/access-control/abac/ui/permissions.md) pour les fonctionnalités et objets au sein d’une application produit. </li><li>Les ressources du journal d’audit sont automatiquement enregistrées lorsque l’activité se produit.</li><li> Grâce au [contrôle d’accès basé sur les attributs](../../access-control/abac/overview.md), les administrateurs peuvent contrôler l’accès à des objets et/ou fonctionnalités spécifiques en fonction de certains attributs. Ces attributs peuvent être des métadonnées ajoutées à un objet, comme des libellés. Les administrateurs peuvent également définir des rôles d’utilisateur qui n’ont accès qu’à des champs spécifiques et aux données correspondant à ces champs.</li><li>L’IA dédiée aux clients utilise les jeux de données Platform. Pour prendre en charge les demandes de droits des consommateurs qu’une marque peut recevoir, les marques doivent utiliser Privacy Service de Platform pour soumettre les demandes d’accès et de suppression des clients afin de supprimer leurs données dans le lac de données, le service d’identités et le profil client en temps réel. </li><li>Tous les jeux de données utilisés pour l’entrée/la sortie des modèles suivront les directives de Platform. Le chiffrement des données de Platform s’applique aux données au repos et en transit. Consultez la documentation pour en savoir plus sur le [chiffrement des données](../../../help/landing/governance-privacy-security/encryption.md).</li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Remarque** : l’IA dédiée aux clients n’est pas disponible pour les clients Healthcare Shield ou Privacy Shield existants jusqu’à nouvel avis.
 
@@ -82,7 +82,7 @@ Pour plus d’informations sur Query Service [!DNL Dashboards], consultez la [[!
 | --- | --- |
 | Prise en charge de l’ingestion d’enregistrements avec des avertissements | La préparation des données localise désormais les avertissements (erreurs non critiques) dans les champs et permet d’ingérer le reste de la ligne. Toutes les erreurs de transformation du mappeur sont désormais signalées comme avertissements et les lignes partiellement ingérées sont considérées comme réussies, avec un avertissement.  La surveillance est également prise en charge sur les enregistrements avec des avertissements et des informations de diagnostic. Actuellement, l’ingestion partielle des enregistrements avec avertissements n’est disponible que pour les données en continu. Consultez la documentation sur l’[ingestion d’enregistrements avec des avertissements](../../sources/tutorials/ui/monitor-streaming.md) pour plus d’informations. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Pour en savoir plus sur [!DNL Data Prep], consultez la présentation de [[!DNL Data Prep] ](../../data-prep/home.md).
 
@@ -96,7 +96,7 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 | ----------- | ----------- |
 | (Beta) Prise en charge de la personnalisation basée sur les attributs pour les destinations de personnalisation | Avec la version Beta de la personnalisation basée sur les attributs, vous verrez deux nouvelles cartes dans le [catalogue de destinations](../../destinations/catalog/overview.md) : <ul><li>**[!UICONTROL Adobe Target V2]** : ce connecteur est actuellement en version Beta et disponible uniquement pour un nombre restreint de clients. Outre la fonctionnalité de la carte Adobe Target V1, le connecteur Target V2 ajoute une [étape de mappage](/help/destinations/ui/activate-profile-request-destinations.md#map-attributes) au workflow d’activation, qui vous permet de mapper les attributs de profil à Adobe Target, en activant la personnalisation basée sur les attributs de la même page et de la page suivante.</li><li>**[!UICONTROL Personnalisation avec les attributs]** : ce connecteur est actuellement en version Beta et disponible uniquement pour un nombre restreint de clients. Outre la fonctionnalité fournie par **[!UICONTROL Personnalisation]**, le connecteur **[!UICONTROL Personnalisation avec les attributs]** ajoute une [étape de mappage](../../destinations/ui/activate-profile-request-destinations.md#map-attributes) facultative au workflow d’activation, qui vous permet de mapper les attributs de profil à votre destination de personnalisation, en activant la personnalisation basée sur les attributs de la même page et de la page suivante.</li></ul> <br> Les attributs de profil peuvent contenir des données sensibles. Pour protéger ces données, la destination **[!UICONTROL Personnalisation avec les attributs]** requiert que vous utilisiez l’[API du serveur réseau Edge](../../server-api/overview.md) pour la collecte de données. De plus, tous les appels de l’API du serveur doivent être effectués dans un [contexte authentifié](../../server-api/authentication.md). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Nouvelles destinations**
 
@@ -104,7 +104,7 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 | ----------- | ----------- |
 | [[!DNL Outreach]](../..//destinations/catalog/crm/outreach.md) | [[!DNL Outreach]](https://www.outreach.io/) est une plateforme d’exécution des ventes qui possède le plus grand nombre de données d’interaction entre vendeurs et acheteurs B2B au monde et qui investit de manière significative dans des technologies d’IA propriétaires afin de traduire les données de vente en informations. [!DNL Outreach] aide les entreprises à automatiser l’engagement commercial et à agir sur la base des renseignements fournis par le chiffre d’affaires afin d’améliorer leur efficacité, leur prévisibilité et leur croissance. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Pour des informations plus générales sur les destinations, consultez la [présentation des destinations](../../destinations/home.md).
 
@@ -119,7 +119,7 @@ XDM est une spécification Open Source qui fournit des structures et des défini
 | Classe | [[!UICONTROL Classe d’entité AJO]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/ajo-entity.schema.json) | Classe basée sur des enregistrements permettant de créer des schémas de recherche pour Adobe Journey Optimizer. |
 | Groupe de champs | [[!UICONTROL Objets de travail Workfront]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/workobjects-all.schema.json) | Groupe de champs wrapper qui référence tous les groupes de champs spécifiques à l’objet de niveau inférieur pour Adobe Workfront. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Composants XDM mis à jour**
 
@@ -135,7 +135,7 @@ XDM est une spécification Open Source qui fournit des structures et des défini
 | Types de données et groupes de champs | (Multiple) | Plusieurs types de données multimédias et groupes de champs comportent de nouveaux champs et des descriptions mises à jour. Voir la [requête de stratégie pull](https://github.com/adobe/xdm/pull/1582/files) pour plus d’informations. |
 | (Tous) | (Multiple) | Tous les objets de schéma qui contiennent un champ `enum` comportent désormais également un champ `meta:enum` correspondant pour indiquer les valeurs d’affichage de chaque contrainte. Voir la [requête de stratégie pull](https://github.com/adobe/xdm/pull/1601/files) pour plus d’informations. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Pour plus d’informations sur XDM dans Platform, consultez la [présentation du système XDM](../../xdm/home.md).
 
@@ -145,12 +145,12 @@ Adobe Experience Platform vous permet d’offrir aux clients des expériences 
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
-| Limite Hard des stratégies de fusion | Platform appliquera désormais une limite Hard de **cinq** stratégies de fusion par sandbox. Si votre sandbox comporte actuellement plus de cinq stratégies de fusion, vous ne serez **pas** en mesure de créer de nouvelles stratégies de fusion jusqu’à ce qu’elle en comporte moins de cinq. |
+| Limite Hard des politiques de fusion | Platform appliquera désormais une limite Hard de **cinq** politiques de fusion par sandbox. Si votre sandbox comporte actuellement plus de cinq politiques de fusion, vous ne serez **pas** en mesure de créer de nouvelles politiques de fusion jusqu’à ce qu’elle en comporte moins de cinq. |
 | Nettoyage des attributs de périphérie du profil orphelins | Pour toutes les entreprises, le service de profil supprime désormais quotidiennement les attributs de périphérie restants de la région d’activité des utilisateurs afin d’offrir une représentation plus précise de vos profils dans votre système. Ce nettoyage se produit une fois que tous les fragments de profil d’un profil donné sont supprimés et doit avoir une incidence sur les profils fusionnés à partir des jeux de données où `com_adobe_aep_profile_region_dataset` est marqué comme `true`. En conséquence, les deux mesures suivantes peuvent afficher des chiffres inférieurs : « Audience adressable » dans le tableau de bord de l’utilisation des licences et « Nombre de profils » dans le tableau de bord des profils. En effet, ces mesures incluaient des fragments d’attributs de périphérie restants avant la publication de cette version. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-Pour en savoir plus sur Real-Time Customer Profile, notamment les bonnes pratiques et les tutoriels relatifs à lʼutilisation des données de profil, consultez la [présentation de Real-Time Customer Profile](../../profile/home.md).
+Pour en savoir plus sur le profil client en temps réel, notamment les bonnes pratiques et les tutoriels relatifs à lʼutilisation des données de profil, consultez la [présentation du profil client en temps réel](../../profile/home.md).
 
 ## Segmentation Service {#segmentation}
 
@@ -179,6 +179,6 @@ Experience Platform fournit une API RESTful et une interface utilisateur intera
 | Source [!DNL Teradata Vantage] (Beta) | Utilisez la source [!DNL Teradata Vantage] pour ingérer des données à partir d’environnements multi-cloud hybrides vers Experience Platform. Pour plus d’informations, consultez la documentation relative à la [[!DNL Teradata Vantage] source](../../sources/connectors/databases/teradata-vantage.md). |
 | Prise en charge interrégionale de la source Adobe Analytics | Vous pouvez désormais ingérer des suites de rapports à partir de n’importe quelle région (États-Unis, Royaume-Uni ou Singapour). Les suites de rapports doivent être mappées à la même organisation que l’instance de sandbox Experience Platform dans laquelle la connexion source est en cours de création. Pour plus d’informations, consultez le guide sur la [création d’une connexion source Adobe Analytics dans l’interface utilisateur](../../sources/tutorials/ui/create/adobe-applications/analytics.md). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Pour en savoir plus sur les sources, consultez la [présentation des sources](../../sources/home.md).

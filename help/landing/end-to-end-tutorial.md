@@ -6,7 +6,7 @@ exl-id: 0a4d3b68-05a5-43ef-bf0d-5738a148aa77
 source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
 workflow-type: tm+mt
 source-wordcount: '1836'
-ht-degree: 11%
+ht-degree: 14%
 
 ---
 
@@ -25,7 +25,7 @@ Ce workflow de bout en bout utilise plusieurs services Adobe Experience Platform
 - [[!DNL Experience Data Model (XDM)]](../xdm/home.md) : cadre normalisé selon lequel [!DNL Platform] organise les données de l’expérience client. Pour utiliser au mieux la segmentation, veillez à ce que vos données soient ingérées en tant que profils et événements en fonction des [bonnes pratiques pour la modélisation des données](../xdm/schema/best-practices.md).
 - [[!DNL Identity Service]](../identity-service/home.md): Fournit une vue d’ensemble complète de vos clients et de leur comportement en rapprochant des identités entre appareils et systèmes.
 - [Sources ](../sources/home.md): [!DNL Experience Platform]permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services [!DNL Platform].
-- [[!DNL Segmentation Service]](../segmentation/home.md): [!DNL Segmentation Service] permet de diviser les données stockées dans [!DNL Experience Platform] qui se rapporte aux individus (tels que les clients, les prospects, les utilisateurs ou les organisations) en groupes plus petits.
+- [[!DNL Segmentation Service]](../segmentation/home.md) : [!DNL Segmentation Service] permet de diviser les données stockées dans [!DNL Experience Platform] qui se rapportent aux individus (tels que les client(e)s, les prospects, les utilisateurs et utilisatrices ou les organisations) en groupes plus petits.
 - [[!DNL Real-Time Customer Profile]](../profile/home.md) : fournit un profil de consommateur unifié en temps réel, basé sur des données agrégées provenant de plusieurs sources.
 - [Jeu de données](../catalog/datasets/overview.md) : la structure de stockage et de gestion pour la persistance des données dans [!DNL Experience Platform].
 - [Destinations](../destinations/home.md): Les destinations sont des intégrations préconfigurées aux applications courantes qui permettent l’activation transparente des données de Platform pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
@@ -98,4 +98,4 @@ Vous pouvez également surveiller les activités de Platform à l’aide de mesu
 
 ## Étapes suivantes
 
-En lisant ce tutoriel, vous avez reçu une introduction de base à un flux de bout en bout simple pour Platform. Pour en savoir plus sur Adobe Experience Platform, veuillez lire le [Présentation de Platform](./home.md). Pour en savoir plus sur l’utilisation de l’interface utilisateur de Platform et de l’API de Platform, veuillez lire le [Guide de l’interface utilisateur de Platform](./ui-guide.md) et le [Guide de l’API Platform](./api-guide.md) respectivement.
+En lisant ce tutoriel, vous avez reçu une introduction de base à un flux de bout en bout simple pour Platform. Pour en savoir plus sur Adobe Platform, commencez par lire la [Présentation dʼExperience Platform](./home.md). Pour en savoir plus sur l’utilisation de l’interface utilisateur de Platform et de l’API de Platform, veuillez lire le [Guide de l’interface utilisateur de Platform](./ui-guide.md) et le [Guide de l’API Platform](./api-guide.md) respectivement.

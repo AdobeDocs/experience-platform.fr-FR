@@ -4,8 +4,8 @@ description: Présentation générale de la gestion des autorisations et du cont
 exl-id: 8426d54b-ec1d-475a-a769-f45a8c924fe7
 source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '1309'
-ht-degree: 9%
+source-wordcount: '1303'
+ht-degree: 29%
 
 ---
 
@@ -17,9 +17,9 @@ Ce guide vous explique comment gérer les autorisations pour les fonctionnalité
 
 ## Prise en main
 
-Pour configurer le contrôle d’accès pour la collecte de données, vous devez disposer de droits d’administrateur pour une organisation qui dispose d’une intégration de produit avec la collecte de données Adobe Experience Platform. Le rôle minimum qui peut accorder ou retirer des autorisations est un **administrateur de profil de produit**. Les autres rôles d’administrateur qui peuvent gérer des autorisations sont les **administrateurs de produit** (qui peuvent gérer tous les profils au sein d’un produit) et les **administrateurs système** (aucune restriction). Consultez l’article sur [rôles administratifs](https://helpx.adobe.com/fr/enterprise/using/admin-roles.html) pour plus d’informations, voir le guide d’administration d’Adobe Enterprise.
+Pour configurer le contrôle d’accès pour la collecte de données, vous devez disposer de droits d’administrateur pour une organisation qui dispose d’une intégration de produit avec la collecte de données Adobe Experience Platform. Le rôle minimum qui permet d’accorder ou de retirer des autorisations est un **administrateur de profils de produit**. Les autres rôles d’administrateur qui peuvent gérer des autorisations sont les **administrateurs de produit** (qui peuvent gérer tous les profils au sein d’un produit) et les **administrateurs système** (aucune restriction). Consultez l’article sur les [rôles administratifs](https://helpx.adobe.com/fr/enterprise/using/admin-roles.html) dans le guide d’administration d’Adobe Enterprise pour plus d’informations.
 
-Ce guide suppose que vous connaissez les concepts de Admin Console de base tels que les profils de produit et la manière dont ils accordent des autorisations de produit à des utilisateurs et à des groupes individuels. Pour plus d’informations, voir [Guide d’utilisation du Admin Console](https://helpx.adobe.com/fr/enterprise/using/admin-console.html).
+Ce guide suppose que vous connaissez les concepts de base d’Admin Console tels que les profils de produit et la manière dont ils accordent des autorisations de produit à des utilisateurs et utilisatrices individuels et à des groupes. Pour plus d’informations, consultez le [guide d’utilisation d’Admin Console](https://helpx.adobe.com/fr/enterprise/using/admin-console.html).
 
 ## Autorisations disponibles
 
@@ -34,12 +34,12 @@ Les autorisations sous Adobe Experience Platform incluent l’accès aux jeux de
 | Sandbox | (S/O) | Selon le [sandbox](../sandboxes/home.md) qui ont été créés sous votre organisation, vous pouvez contrôler l’accès à chacun d’eux par le biais de cette catégorie d’autorisations dans Admin Console. |
 | Modélisation des données | Gestion des schémas | Permet d’afficher, de créer et de modifier des [Schémas de modèle de données d’expérience (XDM)](../xdm/home.md). |
 | Modélisation des données | Affichage des schémas | Accorde l’accès en lecture seule aux schémas. |
-| Identity Management | Gestion des espaces de noms d’identité | Permet d’afficher, de créer et de modifier des [espaces de noms d’identité](../identity-service/namespaces.md). |
-| Identity Management | Affichages des espaces de noms d’identité | Accorde l’accès en lecture seule aux espaces de noms d’identité. |
+| Identity Management | Gestion des espaces de noms d’identité | Permet d’afficher, de créer et de modifier des [espaces de noms d’identité](../identity-service/namespaces.md). |
+| Identity Management | Affichages des espaces de noms d’identité | Accorde l’accès en lecture seule aux espaces de noms d’identité. |
 | Collecte de données | Gestion des flux de données | Permet d’afficher, de créer et de modifier des [datastreams](../edge/datastreams/overview.md). |
 | Collecte de données | Affichage des flux de données | Accorde l’accès en lecture seule aux flux de données. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 <!-- (Feature not yet available?)
 | Dashboards | Manage Custom Dashboards | |
@@ -64,13 +64,13 @@ Les autorisations de la collecte de données Adobe Experience Platform contrôle
 | Droits d’entreprise | Développement dʼextensions | Permet de créer et de modifier des modules d’extension dont votre organisation est propriétaire, y compris les versions privées et les demandes de publication publique. |
 | Droits d’entreprise | Gérer les extensions | Cette autorisation n’est applicable que si vous disposez d’une licence pour Adobe Journey Optimizer ou une autre solution qui accorde l’accès aux messages in-app et push mobiles. Cela vous permet de gérer les applications dont Adobe Experience Cloud a connaissance, ainsi que les informations d’identification push nécessaires pour communiquer avec le service Firebase Cloud Messaging et le service Apple Push Notification. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >
 >Pour plus d’informations sur la façon dont ces autorisations affectent les fonctionnalités des balises, y compris les stratégies d’administration pour les scénarios courants, consultez la documentation sur les balises sur [permissions utilisateur](../tags/ui/administration/user-permissions.md).
 
-## Gestion des autorisations {#manage}
+## Gérer les autorisations {#manage}
 
 Comme indiqué dans la section précédente, les autorisations pour la collecte de données sont gérées par deux désignations de produit en Admin Console : **Adobe Experience Platform** et **Collecte de données Adobe Experience Platform**.
 
@@ -99,15 +99,15 @@ Dans la **[!UICONTROL Produits]** vue dans Admin Console, sélectionnez **[!UICO
 
 ![Image montrant la carte de produit de la collecte de données en Admin Console](./images/permissions/data-collection-card.png)
 
-#### Sélection ou création d’un profil de produit
+#### Sélectionner ou créer un profil de produit
 
-L’écran suivant affiche une liste des profils de produit disponibles pour la collecte de données sous votre organisation, le profil par défaut étant **[!DNL Default Data Collection All Access]**. Si vous le souhaitez, vous pouvez modifier le profil de produit par défaut ou sélectionner **[!UICONTROL Nouveau profil]** pour en créer un. Si votre organisation compte plusieurs rôles ou groupes d’utilisateurs nécessitant différents niveaux d’accès, vous devez créer un profil de produit distinct pour chacun d’eux.
+L’écran suivant affiche une liste des profils de produit disponibles pour la collecte de données sous votre organisation, le profil par défaut étant **[!DNL Default Data Collection All Access]**. Si vous le souhaitez, vous pouvez modifier le profil de produit par défaut ou sélectionner **[!UICONTROL Nouveau profil]** pour en créer un. Si votre organisation compte plusieurs rôles ou groupes d’utilisateurs et d’utilisatrices nécessitant différents niveaux d’accès, vous devez créer un profil de produit distinct pour chacun d’eux.
 
 ![Image montrant les profils de produit pour la collecte de données dans Admin Console](./images/permissions/new-profile.png)
 
 Après avoir sélectionné ou créé un profil de produit, vous pouvez utiliser la variable **[!UICONTROL Modifier]** icônes de démarrage [modification des autorisations](#edit-permissions) pour le profil, ou sélectionnez l’événement **[!UICONTROL Utilisateurs]** pour démarrer [attribution d’utilisateurs](#assign-users) au profil.
 
-![Image montrant l’onglet Autorisations d’un Admin Console de profil de produit](./images/permissions/edit-permission-categories.png)
+![Image montrant l’onglet Autorisations d’un profil de produit dans Admin Console.](./images/permissions/edit-permission-categories.png)
 
 #### Modifier les autorisations pour le profil de produit {#edit-permissions}
 
@@ -119,22 +119,22 @@ Les autorisations sont organisées en catégories. Pour passer d’une catégori
 
 ![Image présentant la section des droits de l’entreprise sous autorisations](./images/permissions/switch-category.png)
 
-Sélectionner **[!UICONTROL Enregistrer]** une fois que vous avez terminé de configurer les autorisations.
+Sélectionnez **[!UICONTROL Enregistrer]** une fois que vous avez terminé de configurer les autorisations.
 
-![Image montrant la configuration des autorisations en cours d’enregistrement pour le profil de produit](./images/permissions/save-permissions.png)
+![Image montrant la configuration des autorisations en cours d’enregistrement pour le profil de produit.](./images/permissions/save-permissions.png)
 
 La vue Profil de produit réapparaît avec les autorisations ajoutées reflétées.
 
-![Image montrant les autorisations ajoutées pour le profil de produit](./images/permissions/permissions-added.png)
+![Image montrant les autorisations ajoutées pour le profil de produit.](./images/permissions/permissions-added.png)
 
 #### Affecter des utilisateurs au profil de produits {#assign-users}
 
-Pour affecter des utilisateurs au profil de produit (et leur accorder les autorisations configurées du profil), sélectionnez la variable **[!UICONTROL Utilisateurs]** , suivie de **[!UICONTROL Ajouter un utilisateur]**.
+Pour affecter des utilisateurs et utilisatrices au profil de produit (et leur accorder les autorisations configurées du profil), sélectionnez l’onglet **[!UICONTROL Utilisateurs]**, suivi de **[!UICONTROL Ajouter un utilisateur]**.
 
-![Image montrant l’onglet utilisateurs d’un profil de produit dans Admin Console](./images/permissions/manage-users.png)
+![Image montrant l’onglet utilisateurs d’un profil de produit dans Admin Console.](./images/permissions/manage-users.png)
 
-Pour plus d’informations sur la gestion des utilisateurs pour un profil de produit, voir [Documentation du Admin Console](https://helpx.adobe.com/fr/enterprise/using/manage-product-profiles.html).
+Pour plus d’informations sur la gestion des utilisateurs et utilisatrices pour un profil de produit, voir la [Documentation concernant Admin Console](https://helpx.adobe.com/fr/enterprise/using/manage-product-profiles.html).
 
 ## Étapes suivantes
 
-Ce guide couvrait les autorisations disponibles pour la collecte de données et la manière de les gérer via Admin Console. Pour plus d’informations sur la gestion des autorisations pour d’autres fonctionnalités de Adobe Experience Platform, reportez-vous à la section [documentation sur le contrôle d’accès](../access-control/home.md).
+Ce guide couvrait les autorisations disponibles pour la collecte de données et la manière de les gérer via Admin Console. Pour plus d’informations sur la gestion des autorisations pour d’autres fonctionnalités d’Adobe Experience Platform, reportez-vous à la [documentation sur le contrôle d’accès](../access-control/home.md).

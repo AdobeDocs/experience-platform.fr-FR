@@ -4,7 +4,7 @@ description: Découvrez comment effectuer des appels vers le point d’entrée /
 exl-id: 76875a28-5d13-402d-8543-24db7e2bee8e
 source-git-commit: 24e79c14268b9eab0e8286eb8cd1352c1dfcd1b6
 workflow-type: tm+mt
-source-wordcount: '1286'
+source-wordcount: '1247'
 ht-degree: 92%
 
 ---
@@ -33,7 +33,7 @@ GET /properties/{PROPERTY_ID}/secrets
 | --- | --- |
 | `{PROPERTY_ID}` | L’identifiant de la propriété dont vous souhaitez répertorier les secrets. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Requête**
 
@@ -129,7 +129,7 @@ GET /environments/{ENVIRONMENT_ID}/secrets
 | --- | --- |
 | `{ENVIRONMENT_ID}` | L’identifiant de l’environnement dont vous souhaitez répertorier les secrets. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Requête**
 
@@ -225,7 +225,7 @@ GET /secrets/{SECRET_ID}
 | --- | --- |
 | `{SECRET_ID}` | L’identifiant du secret que vous voulez rechercher. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Requête**
 
@@ -314,7 +314,7 @@ POST /properties/{PROPERTY_ID}/secrets
 | --- | --- |
 | `{PROPERTY_ID}` | L’identifiant de la propriété sous laquelle vous souhaitez définir le secret. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Requête**
 
@@ -357,7 +357,7 @@ curl -X POST \
 | `relationships.environment` | Chaque secret doit être associé à un environnement lors de sa création. L’objet `data` dans cette propriété doit contenir le `id` de l’environnement auquel le secret est affecté, avec une valeur `type` de `environments`. |
 | `type` | Le type de ressource en cours de création. Pour cet appel, la valeur doit être `secrets`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Réponse**
 
@@ -435,7 +435,7 @@ PATCH /secrets/{SECRET_ID}
 | --- | --- |
 | `{SECRET_ID}` | L’identifiant du secret `oauth2` que vous voulez tester. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Requête**
 
@@ -468,7 +468,7 @@ curl -X PATCH \
 | `id` | L’identifiant du secret que vous testez. Il doit correspondre à la valeur fournie dans le chemin de requête. |
 | `type` | Le type de ressource en cours d’exploitation. Cette propriété doit être définie sur `secrets`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Réponse**
 
@@ -552,7 +552,7 @@ PATCH /secrets/{SECRET_ID}
 | --- | --- |
 | `{SECRET_ID}` | L’identifiant du secret que vous souhaitez réessayer. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Requête**
 
@@ -585,7 +585,7 @@ curl -X PATCH \
 | `id` | L’identifiant du secret que vous essayez à nouveau. Il doit correspondre à la valeur fournie dans le chemin de requête. |
 | `type` | Le type de ressource en cours d’exploitation. Cette propriété doit être définie sur `secrets`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Réponse**
 
@@ -771,7 +771,7 @@ DELETE /secrets/{SECRET_ID}
 | --- | --- |
 | `{SECRET_ID}` | L’identifiant du secret que vous souhaitez supprimer. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Requête**
 
@@ -809,7 +809,7 @@ GET /secrets/{SECRET_ID}/notes
 | --- | --- |
 | `{SECRET_ID}` | L’identifiant du secret dont vous souhaitez répertorier les notes. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Requête**
 
@@ -888,7 +888,7 @@ GET /secrets/{SECRET_ID}/environment
 | --- | --- |
 | `{SECRET_ID}` | L’identifiant du secret dont vous souhaitez rechercher l’environnement. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Requête**
 
@@ -997,7 +997,7 @@ GET /secrets/{SECRET_ID}/property
 | --- | --- |
 | `{SECRET_ID}` | L’identifiant du secret dont vous souhaitez rechercher la propriété. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Requête**
 

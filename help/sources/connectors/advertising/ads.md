@@ -6,7 +6,7 @@ exl-id: 1f6257e0-213c-4723-a240-511c11c5833c
 source-git-commit: b732fa1f4afb71e7b8c3276335b371d0f8ef888d
 workflow-type: tm+mt
 source-wordcount: '233'
-ht-degree: 57%
+ht-degree: 67%
 
 ---
 
@@ -14,9 +14,9 @@ ht-degree: 57%
 
 >[!NOTE]
 >
->Le [!DNL Google Ads] La source est en version bêta. Voir [Présentation des sources](../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs bêta-étiquetés.
+>La source [!DNL Google Ads] est en version Beta. Voir la [Présentation des sources](../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs étiquetés Beta.
 
-Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous permettant de structurer, de libeller et d’améliorer les données entrantes à l’aide des services [!DNL Platform]. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, des bases de données, etc.
+Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous permettant de structurer, de libeller et d’améliorer les données entrantes à l’aide des services [!DNL Platform]. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les bases de données, etc.
 
 [!DNL Experience Platform] prend en charge l’ingestion de données provenant d’un système publicitaire tiers. La prise en charge des fournisseurs publicitaires inclut [!DNL Google Ads].
 
@@ -31,10 +31,10 @@ La documentation ci-dessous fournit des informations sur la connexion de [!DNL G
 ### Utiliser les API
 
 * [Création d’une connexion de base Google Ads à l’aide de l’API Flow Service](../../tutorials/api/create/advertising/ads.md)
-* [Exploration des tableaux de données à l’aide de l’API Flow Service](../../tutorials/api/explore/tabular.md)
+* [Explorer des tableaux de données à l’aide de l’API Flow Service](../../tutorials/api/explore/tabular.md)
 * [Création d’un flux de données pour une source publicitaire à l’aide de l’API Flow Service](../../tutorials/api/collect/advertising.md)
 
-### Utiliser l’interface utilisateur
+### Utilisation de l’interface utilisateur
 
 * [Création d’une connexion source Google Ads dans l’interface utilisateur](../../tutorials/ui/create/advertising/ads.md)
 * [Création d’un flux de données pour une connexion à une source publicitaire dans l’interface utilisateur](../../tutorials/ui/dataflow/advertising.md)

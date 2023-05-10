@@ -12,7 +12,7 @@ ht-degree: 23%
 
 # Présentation des destinations sociales {#social-network-destinations}
 
-## Aperçu {#overview}
+## Présentation {#overview}
 
 Avec les destinations sociales, vous pouvez activer les profils de vos campagnes pour un ciblage, une personnalisation et une suppression de l’audience basés sur des emails hachés.
 

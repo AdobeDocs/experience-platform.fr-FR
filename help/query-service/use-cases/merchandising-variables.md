@@ -1,14 +1,15 @@
 ---
 title: Renvoi et utilisation de variables de marchandisage à partir de données d’analyse
 description: Découvrez comment fournir des champs XDM et des exemples de requêtes pour accéder aux variables de marchandisage dans vos jeux de données Analytics.
-source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
+exl-id: 1e2ae095-4152-446f-8b66-dae5512d690e
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '1112'
-ht-degree: 14%
+ht-degree: 15%
 
 ---
 
-# Renvoi et utilisation de variables de marchandisage à partir de données d’analyse
+# Renvoyer et utiliser des variables de marchandisage à partir de données d’analyse
 
 Utilisez Query Service pour gérer les données ingérées d’Adobe Analytics dans Adobe Experience Platform sous forme de jeux de données. Les sections suivantes contiennent des exemples de requêtes que vous pouvez utiliser pour accéder aux variables de marchandisage de vos jeux de données Analytics. Consultez la documentation pour plus d’informations sur [ingestion et mappage de données Adobe Analytics](https://experienceleague.adobe.com/docs/experience-platform/sources/connectors/adobe-applications/mapping/analytics.html?lang=fr) par le biais de la source Analytics
 

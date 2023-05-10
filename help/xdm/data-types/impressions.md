@@ -4,8 +4,8 @@ description: Ce document fournit un aperçu du type de données XDM Impressions.
 exl-id: 1e758043-a41e-45f7-ae8b-514990d0649e
 source-git-commit: afdac5ce2ed967b4688d456a586c946bc2cf4179
 workflow-type: tm+mt
-source-wordcount: '141'
-ht-degree: 7%
+source-wordcount: '138'
+ht-degree: 5%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 7%
 | `selected` | Nombre entier | Nombre de fois où l’élément d’impression a été sélectionné ou a fait l’objet d’un clic. |
 | `type` | Chaîne | Type d’impression. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Pour plus d’informations sur le groupe de champs, reportez-vous au référentiel XDM public :
 

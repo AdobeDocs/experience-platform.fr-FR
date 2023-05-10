@@ -6,7 +6,7 @@ description: Ce document contient des informations supplémentaires sur l’util
 exl-id: 7099e002-b802-486e-8863-0630d66e330f
 source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
-source-wordcount: '485'
+source-wordcount: '476'
 ht-degree: 77%
 
 ---
@@ -33,13 +33,13 @@ Le tableau suivant présente plusieurs types d’identité prédéfinis couramme
 | [!DNL Google] Identifiant de publicité | `GAID` | `20914` |
 | [!DNL Windows] AID | `WAID` | `8` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >
 > Chaque type d’identité possède également une valeur entière `namespaceId`, qui peut être utilisée à la place de la chaîne `namespace` lorsque la propriété `type` de l’identité est « namespaceId ». Pour plus d’informations, consultez la section sur les [qualificateurs d’espace de noms](#namespace-qualifiers).
 
-Vous pouvez récupérer une liste des espaces de noms d’identité utilisés par votre organisation en exécutant une requête GET sur le point de terminaison `idnamespace/identities` dans l’API [!DNL Identity Service] Pour plus d’informations, consultez le [guide de développement d’Identity Service](../../identity-service/api/getting-started.md).
+Vous pouvez récupérer une liste des espaces de noms d’identité utilisés par votre organisation en exécutant une requête GET sur le point d’entrée `idnamespace/identities` dans l’API [!DNL Identity Service] Pour plus d’informations, consultez le [guide de développement d’Identity Service](../../identity-service/api/getting-started.md).
 
 ## Qualificateurs d’espace de noms
 
@@ -55,7 +55,7 @@ Lors de la spécification d’une valeur `namespace`[!DNL Privacy Service] dans 
 | `analytics` | Espace de noms personnalisé mappé en interne dans [!DNL Analytics], et non dans le service d’espace de noms. Il est transmis directement comme indiqué dans la requête d’origine, sans identifiant d’espace de noms. |
 | `target` | Un espace de noms personnalisé compris en interne par [!DNL Target], et non dans le service d’espace de noms. Il est transmis directement comme indiqué dans la requête d’origine, sans identifiant d’espace de noms. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Valeurs de produit acceptées
 
@@ -72,7 +72,7 @@ Le tableau suivant indique les valeurs acceptées pour la spécification d’un 
 | Adobe Primetime Authentication | `primetimeAuthentication` |
 | Adobe Target | `target` |
 | Attributs du client (CRS) | `CRS` |
-| Identity Service | `identity` |
+| Service d’identités | `identity` |
 | Marketo Engage | `marketo` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

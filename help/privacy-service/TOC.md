@@ -20,7 +20,7 @@ ht-degree: 100%
 * [Données d’identité pour les demandes d’accès à des informations personnelles](./identity-data.md)
 * [Présentation de la bibliothèque JS d’Adobe Privacy](./js-library.md)
 * API Privacy Service {#api}
-   * [Présentation](./api/overview.md)
+   * [Aperçu](./api/overview.md)
    * [Prise en main](./api/getting-started.md)
    * [Tâches de confidentialité](./api/privacy-jobs.md)
    * [Consentement](./api/consent.md)

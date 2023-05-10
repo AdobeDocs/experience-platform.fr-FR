@@ -5,8 +5,8 @@ description: Ce document présente un aperçu du type de données XDM (Transacti
 exl-id: 47b7152f-a853-44f0-8962-e902631ad8a4
 source-git-commit: afbbdfff4346ab5240927f5703d3a06676776ea8
 workflow-type: tm+mt
-source-wordcount: '99'
-ht-degree: 10%
+source-wordcount: '96'
+ht-degree: 7%
 
 ---
 
@@ -23,4 +23,4 @@ ht-degree: 10%
 | `transactionId` | [!UICONTROL Chaîne] | Identifiant unique de la transaction. |
 | `transactionType` | [!UICONTROL Chaîne] | Type de transaction utilisé par le visiteur. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

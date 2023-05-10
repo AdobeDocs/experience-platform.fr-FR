@@ -20,12 +20,12 @@ Real-time Customer Data Platform se connecte à un vaste écosystème de partena
 
 Avec Real-time Customer Data Platform, vous pouvez :
 
-* dʼobtenir une vue unique de votre client en combinant les données de toute lʼentreprise.
-* de gérer de manière responsable les profils avec des contrôles de confidentialité et de gouvernance fiables pour les identifiants connus et anonymes.
-* de générer des informations exploitables et d’adapter les audiences grâce à l’IA et à l’apprentissage automatique optimisés par Adobe Sensei et conçus pour les spécialistes marketing ;
-* de proposer des expériences personnalisées en temps réel sur l’ensemble des canaux et des destinations.
+* obtenir une vue unique de votre client en combinant les données de toute lʼentreprise ;
+* gérer de manière responsable les profils avec des contrôles de confidentialité et de gouvernance fiables pour les identifiants connus et anonymes ;
+* générer des informations exploitables et adapter les audiences grâce à l’IA et au machine learning optimisés par Adobe Sensei et conçus pour les spécialistes marketing ;
+* proposer des expériences personnalisées en temps réel sur l’ensemble des canaux et des destinations.
 
-## Édition B2B de Real-Time Customer Data Platform
+## Édition B2B de Real-Time Customer Data Platform
 
 Il existe également une autre version de Real-Time CDP disponible pour répondre aux besoins de l’entreprise par rapport à l’entreprise. L’édition B2B de Real-Time CDP est conçue spécifiquement pour étendre les fonctionnalités de Real-Time CDP aux marketeurs. Elle dispose de différentes fonctionnalités activées dans l’écosystème Adobe Experience Platform pour mieux s’adapter au fonctionnement d’un modèle de service business-to-business.
 
@@ -44,4 +44,4 @@ La documentation suivante est recommandée pour vous aider à prendre en main Re
 * [Accès aux profils](profile/profile-overview.md)
 * [Création de segments](segmentation/segmentation-overview.md)
 * [Activation de segments vers des destinations](destinations/overview.md)
-* [Définition et application des stratégies de gouvernance des données](privacy/data-governance-overview.md)
+* [Définition et application des politiques de gouvernance des données](privacy/data-governance-overview.md)

@@ -6,8 +6,8 @@ description: Ce document présente un aperçu du type de données XDM (Modèle d
 exl-id: d67915b6-daaa-489f-81b4-bd3dbe0ffa44
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '611'
-ht-degree: 20%
+source-wordcount: '605'
+ht-degree: 19%
 
 ---
 
@@ -50,7 +50,7 @@ ht-degree: 20%
 | `topUp` | Chaîne | Décrit les conditions convenues concernant la manière dont les aspects consommables d’un abonnement sont rachetés au cours d’une période de facturation. |
 | `type` | Chaîne | La portée du droit par rapport au nombre de personnes couvertes par l’abonnement. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Pour obtenir plus d’informations sur ce type de données, reportez-vous au référentiel XDM public:
 
@@ -77,4 +77,4 @@ Pour obtenir plus d’informations sur ce type de données, reportez-vous au ré
 | `storageCapacity` | Chaîne | Capacité de stockage de l’appareil. |
 | `type` | Chaîne | Type d’appareil. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

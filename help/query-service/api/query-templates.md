@@ -36,7 +36,7 @@ GET /query-templates?{QUERY_PARAMETERS}
 
 **Paramètres de requête**
 
-Vous trouverez ci-dessous une liste des paramètres de requête disponibles pour répertorier les modèles de requête. Tous ces paramètres sont facultatifs. Un appel à ce point de terminaison sans paramètre permet de récupérer tous les modèles de requête disponibles pour votre organisation.
+Vous trouverez ci-dessous une liste des paramètres de requête disponibles pour répertorier les modèles de requête. Tous ces paramètres sont facultatifs. Un appel à ce point d’entrée sans paramètre permet de récupérer tous les modèles de requête disponibles pour votre organisation.
 
 | Paramètre | Description |
 | --------- | ----------- |
@@ -112,7 +112,7 @@ Une réponse réussie renvoie un état HTTP 200 avec une liste de modèles de re
 
 ### Création d’un modèle de requête
 
-Vous pouvez créer un modèle de requête en effectuant une requête POST sur le point de terminaison `/query-templates`.
+Vous pouvez créer un modèle de requête en effectuant une requête POST sur le point d’entrée `/query-templates`.
 
 **Format d’API**
 
@@ -179,7 +179,7 @@ Une réponse réussie renvoie un état HTTP 202 (Accepted) avec les détails du
 
 ### Récupération d’un modèle de requête spécifié
 
-Vous pouvez récupérer un modèle de requête spécifique en effectuant une requête GET sur le point de terminaison `/query-templates/{TEMPLATE_ID}` et en fournissant l’identifiant du modèle de requête du chemin de requête.
+Vous pouvez récupérer un modèle de requête spécifique en effectuant une requête GET sur le point d’entrée `/query-templates/{TEMPLATE_ID}` et en fournissant l’identifiant du modèle de requête du chemin de requête.
 
 **Format d’API**
 
@@ -237,7 +237,7 @@ Une réponse réussie renvoie un état HTTP 200 avec les détails de votre mod�
 
 ### Mise à jour d’un modèle de requête spécifié
 
-Vous pouvez mettre à jour un modèle de requête spécifique en effectuant une requête PUT sur le point de terminaison `/query-templates/{TEMPLATE_ID}` et en fournissant l’identifiant du modèle de requête du chemin de requête.
+Vous pouvez mettre à jour un modèle de requête spécifique en effectuant une requête PUT sur le point d’entrée `/query-templates/{TEMPLATE_ID}` et en fournissant l’identifiant du modèle de requête du chemin de requête.
 
 **Format d’API**
 

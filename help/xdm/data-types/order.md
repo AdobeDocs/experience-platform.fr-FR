@@ -6,8 +6,8 @@ description: Ce document fournit un aperçu du type de données du modèle de do
 exl-id: abfc6d53-ffe6-4692-ad65-03d556831fa0
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '189'
-ht-degree: 30%
+source-wordcount: '186'
+ht-degree: 29%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 30%
 | `purchaseID` | Chaîne | Identifiant unique attribué par le vendeur pour cet achat ou ce contrat. Étant donné que cet identifiant est défini par le vendeur, il n’y a aucune garantie que l’identifiant est unique. |
 | `purchaseOrderNumber` | Chaîne | Identifiant unique attribué par l’acheteur pour cet achat ou ce contrat. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Pour obtenir plus d’informations sur ce type de données, reportez-vous au référentiel XDM public:
 

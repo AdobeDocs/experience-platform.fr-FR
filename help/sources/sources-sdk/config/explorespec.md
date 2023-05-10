@@ -5,8 +5,8 @@ description: Ce document présente les configurations que vous devez préparer p
 exl-id: 423a7e56-9dd1-4071-bd26-ee4f9f206122
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '258'
-ht-degree: 7%
+source-wordcount: '255'
+ht-degree: 6%
 
 ---
 
@@ -80,7 +80,7 @@ Explorer les spécifications définit les paramètres requis pour explorer et in
 | `responseSpec.schema.properties.columns.items.properties.name` | Affiche le nom du fichier. |
 | `responseSpec.schema.properties.columns.items.properties.name.type` | Définit le type de données du nom de fichier. | `string` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Étapes suivantes
 

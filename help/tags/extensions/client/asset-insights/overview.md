@@ -67,7 +67,7 @@ Pour obtenir des instructions sur l’activation d’Assets Insights, consultez
 
 Effectuez le suivi des ressources dans Analytics à l’aide de l’UUID de la ressource dans AEM.
 
-Pour activer le suivi avec l’UUID de la ressource, ouvrez la console de stratégie des composants du modèle modifiable et désélectionnez la propriété « Désactiver le suivi UUID ». (Par défaut, cette propriété est sélectionnée pour le composant d’image OOTB.)
+Pour activer le suivi avec l’UUID de la ressource, ouvrez la console de politique des composants du modèle modifiable et désélectionnez la propriété « Désactiver le suivi UUID ». (Par défaut, cette propriété est sélectionnée pour le composant d’image OOTB.)
 
 ![](images/uuid.png)
 

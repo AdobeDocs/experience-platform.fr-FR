@@ -8,13 +8,13 @@ exl-id: f1c90ccd-48a9-4668-b2ac-eacd5bec0b91
 source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
 workflow-type: tm+mt
 source-wordcount: '284'
-ht-degree: 2%
+ht-degree: 4%
 
 ---
 
 # Connexion à Adobe Analytics for Target (A4T) dans le SDK Web de Platform
 
-Lorsque vous utilisez Adobe Target pour la personnalisation, vous pouvez choisir le système à utiliser pour la mesure des performances. Chaque [Activité Target](https://experienceleague.adobe.com/docs/target/using/activities/target-activities-guide.html) vous permet de choisir entre les rapports Target et Adobe Analytics.
+Lorsque vous utilisez Adobe Target pour la personnalisation, vous pouvez choisir le système à utiliser pour la mesure des performances. Chaque [Activité Target](https://experienceleague.adobe.com/docs/target/using/activities/target-activities-guide.html?lang=fr) vous permet de choisir entre les rapports Target et Adobe Analytics.
 
 Si vous utilisez la création de rapports Analytics, Adobe Target doit communiquer les éléments suivants à Analytics :
 

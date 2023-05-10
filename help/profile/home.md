@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform;profil;profil client en temps réel;dépannage;API;profil unifié;Profil unifié;unifié;Profil;rtcp;graphiques XDM
-title: Vue d’ensemble de Real-Time Customer Profile
+title: Vue d’ensemble du profil client en temps réel
 description: Le profil client en temps réel fusionne des données provenant de diverses sources et permet d’accéder à ces données sous la forme de profils clients individuels et d’événements de séries temporelles associés. Cette fonctionnalité permet aux spécialistes marketing d’offrir à leur audience des expériences coordonnées, cohérentes et pertinentes sur plusieurs canaux.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
 source-git-commit: 8f61840ad60b7d24c980b218b6f742485f5ebfdd
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1991'
 ht-degree: 100%
 
@@ -62,7 +62,7 @@ Chaque profil client est composé de plusieurs fragments de profil qui ont été
 
 En d’autres termes, les fragments de profil représentent une identité principale unique et les données [enregistrement](#record-data) ou [événement](#time-series-events) correspondantes pour cet identifiant au sein d’un jeu de données spécifique.
 
-Lorsque les données provenant de plusieurs jeux de données entrent en conflit (par exemple, si un fragment classe le client comme étant « célibataire » tandis qu’un autre le classe comme étant « marié »), la [stratégie de fusion](#merge-policies) détermine quelles informations doivent être prioritaires et être incluses dans le profil de l’individu. Par conséquent, il est probable que le nombre total de fragments de profil au sein de Platform soit toujours supérieur au nombre total de profils fusionnés, chaque profil étant composé de fragments multiples issus de multiples jeux de données.
+Lorsque les données provenant de plusieurs jeux de données entrent en conflit (par exemple, si un fragment classe le client comme étant « célibataire » tandis qu’un autre le classe comme étant « marié »), la [politique de fusion](#merge-policies) détermine quelles informations doivent être prioritaires et être incluses dans le profil de l’individu. Par conséquent, il est probable que le nombre total de fragments de profil au sein de Platform soit toujours supérieur au nombre total de profils fusionnés, chaque profil étant composé de fragments multiples issus de multiples jeux de données.
 
 ### Données d’enregistrement {#record-data}
 
@@ -76,13 +76,13 @@ Les données de série temporelle fournissent un instantané du système au mome
 
 Toutes les entreprises souhaitent s’adresser à leurs clients de manière personnalisée. Cependant, l’un des défis que représente la proposition d’expériences numériques pertinentes aux clients consiste à trouver un moyen de relier leurs données déconnectées. Celles-ci sont souvent réparties sur différents canaux numériques tels que les tablettes, les téléphones mobiles et les ordinateurs portables. Le [!DNL Identity Service] vous permet de rassembler l’image complète de votre client en liant les identités de plusieurs canaux et en créant un graphique d’identités pour chaque client. Consultez la [présentation d’Identity Service](../identity-service/home.md) pour en savoir plus.
 
-### Stratégies de fusion
+### Politiques de fusion
 
-Lorsque vous rassemblez des fragments de données provenant de plusieurs sources et les combinez pour obtenir une vue complète de chaque client, les stratégies de fusion sont les règles utilisées par [!DNL Platform] pour déterminer quelle est la priorité des données et quelles données seront combinées pour créer le profil client.
+Lorsque vous rassemblez des fragments de données provenant de plusieurs sources et les combinez pour obtenir une vue complète de chaque client, les politiques de fusion sont les règles utilisées par [!DNL Platform] pour déterminer quelle est la priorité des données et quelles données seront combinées pour créer le profil client.
 
-En cas de conflit de données provenant de plusieurs jeux de données, la stratégie de fusion détermine comment ces données doivent être traitées et quelle valeur doit être utilisée. À lʼaide dʼAPI RESTful ou de lʼinterface utilisateur, vous pouvez créer des stratégies de fusion, gérer des stratégies existantes et définir une stratégie de fusion par défaut pour votre organisation.
+En cas de conflit de données provenant de plusieurs jeux de données, la politique de fusion détermine comment ces données doivent être traitées et quelle valeur doit être utilisée. À lʼaide dʼAPI RESTful ou de lʼinterface utilisateur, vous pouvez créer des politiques de fusion, gérer des politiques existantes et définir une politique de fusion par défaut pour votre organisation.
 
-Pour en savoir plus sur les stratégies de fusion et leur rôle dans Experience Platform, commencez par lire la [présentation des stratégies de fusion](merge-policies/overview.md).
+Pour en savoir plus sur les politiques de fusion et leur rôle dans Experience Platform, commencez par lire la [présentation des politiques de fusion](merge-policies/overview.md).
 
 ### Schémas d’union {#profile-fragments-and-union-schemas}
 
@@ -128,12 +128,12 @@ Il peut parfois être nécessaire de mettre à jour les données du magasin de p
 
 ## Gouvernance des données et [!DNL Privacy]
 
-La gouvernance des données est constituée d’une série de stratégies et de technologies permettant de gérer les données clients et de garantir la conformité aux réglementations, aux restrictions et aux stratégies applicables à l’utilisation des données.
+La gouvernance des données est constituée d’une série de politiques et de technologies permettant de gérer les données clients et de garantir la conformité aux réglementations, aux restrictions et aux politiques applicables à l’utilisation des données.
 
 En ce qui concerne l’accès aux données, la gouvernance des données joue un rôle essentiel dans [!DNL Experience Platform], et ce, à différents niveaux :
 
 - Application de libellés d’utilisation des données
-- Stratégies d’accès aux données
+- Politiques d’accès aux données
 - Contrôle de l’accès aux données pour les actions marketing
 
 La gouvernance des données est gérée sur plusieurs points. Il s’agit notamment de choisir les données à ingérer dans [!DNL Platform] et celles qui seront accessibles après l’ingestion pour une action marketing donnée. Pour plus d’informations, commencez par lire la [présentation de la gouvernance des données](../data-governance/home.md).

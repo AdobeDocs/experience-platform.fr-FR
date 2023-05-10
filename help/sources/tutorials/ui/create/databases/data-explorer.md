@@ -8,7 +8,7 @@ exl-id: 561bf948-fc92-4401-8631-e2a408667507
 source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '496'
-ht-degree: 50%
+ht-degree: 51%
 
 ---
 
@@ -33,7 +33,7 @@ Pour accéder au compte [!DNL Data Explorer] sur , vous devez fournir les valeur
 
 | Informations d’identification | Description |
 | ---------- | ----------- |
-| `endpoint` | Le point de terminaison de [!DNL Data Explorer] serveur. |
+| `endpoint` | Point d’entrée du serveur [!DNL Data Explorer]. |
 | `database` | Nom de la variable [!DNL Data Explorer] base de données. |
 | `tenant` | L’identifiant de client unique utilisé pour se connecter à la variable [!DNL Data Explorer] base de données. |
 | `servicePrincipalId` | L’identifiant principal de service unique utilisé pour se connecter à la variable [!DNL Data Explorer] base de données. |

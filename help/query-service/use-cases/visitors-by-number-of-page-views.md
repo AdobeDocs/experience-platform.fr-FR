@@ -2,7 +2,8 @@
 keywords: Experience Platform;accueil;rubriques populaires;service de requête;service de requête;requêtes experienceevent;requête experienceevent;requête Experience Event;
 title: Répertorier les visiteurs par leur nombre de pages vues
 description: Découvrez comment écrire des requêtes qui utilisent les événements d’expérience pour récupérer une liste de visiteurs organisée selon le nombre de pages vues.
-source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
+exl-id: 6e8eed0c-838e-4cd0-ae8c-453114fbf4ea
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '272'
 ht-degree: 1%

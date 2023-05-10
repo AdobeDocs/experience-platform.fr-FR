@@ -6,7 +6,7 @@ exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
 source-git-commit: 25f1b2197e5b10b04668d16bff3a6ce48cfad5fc
 workflow-type: tm+mt
 source-wordcount: '718'
-ht-degree: 84%
+ht-degree: 85%
 
 ---
 
@@ -20,7 +20,7 @@ Dans Adobe Experience Platform, nous faisons la distinction entre différents ty
 
 Enfin, les connexions peuvent également être distinguées entre les destinations publiques disponibles dans toutes les organisations du catalogue des destinations et les destinations privées que les clients de la plateforme CDP Ultimate en temps réel peuvent créer pour répondre à leurs cas d’utilisation spécifiques à l’exportation.
 
-![Schéma des types de destinations.](./assets/destination-types/types-of-destinations-no-highlight.png)
+![Diagramme Types de destinations.](./assets/destination-types/types-of-destinations-no-highlight.png)
 
 ## Connexions {#connections}
 

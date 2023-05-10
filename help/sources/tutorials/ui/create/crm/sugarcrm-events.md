@@ -1,7 +1,8 @@
 ---
 title: Création d’une connexion source d’événements SugarCRM dans l’interface utilisateur
 description: Découvrez comment créer une connexion source d’événements SugarCRM à l’aide de l’interface utilisateur de Adobe Experience Platform.
-source-git-commit: 17d8a6517686ee2459955f766d75980b41851320
+exl-id: db346ec0-2c57-4b82-8a39-f15d4cd377d4
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '663'
 ht-degree: 47%
@@ -79,7 +80,7 @@ En suivant ce tutoriel, vous avez établi une connexion à votre compte [!DNL Su
 
 Les sections ci-dessous contiennent des ressources supplémentaires auxquelles vous pouvez vous référer lors de l’utilisation de la variable [!DNL SugarCRM] source.
 
-### Barrières de sécurité {#guardrails}
+### Mécanismes de sécurisation {#guardrails}
 
 Le [!DNL SugarCRM] Les taux de ralentissement de l’API sont de 90 appels par minute ou de 2 000 appels par jour, selon ce qui se produit en premier. Toutefois, cette restriction a été contournée en ajoutant un paramètre dans la spécification de connexion qui retardera le temps de demande afin que la limite de taux ne soit jamais atteinte.
 

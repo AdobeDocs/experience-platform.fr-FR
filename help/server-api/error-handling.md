@@ -32,7 +32,7 @@ Les erreurs de l’API du serveur peuvent également être fractionnées par gra
 * **Erreurs non fatales** peut signaler un traitement partiel, tout en permettant la poursuite du traitement des demandes.
    * Lorsqu’il est présent, le code d’état global de la requête est remplacé par `207 Multi-Status`.
 
-| Erreur | Type | Remarques         |
+| Erreur | Type | Remarques |
 | --- | --- | --- |
 | `RequestProcessingError` | Faux | Peut se produire à tout moment pendant le traitement des requêtes. |
 | `InputError` | Faux | Se produit lors de l’acceptation de la demande, avant de la distribuer en amont. |
@@ -119,7 +119,7 @@ Les erreurs non fatales sont représentées dans la variable _Détails du probl�
 ## Gestion `4xx` et `5xx` Réponses
 
 
-| Code erreur | Description |
+| Code d’erreur | Description |
 |---|---|
 | `4xx Bad Request` | Le plus `4xx` Les erreurs, telles que 400, 403, 404, ne doivent pas être retentées pour le compte du client, sauf pour `429`. Il s’agit d’erreurs du client qui échoueront. Le client doit corriger l’erreur avant de retenter la requête. |
 | `429 Too Many Requests` | `429` Le code de réponse HTTP indique que Adobe Experience Platform Edge Network ou un service en amont limite le débit des requêtes. Dans ce cas, l’appelant doit respecter la variable `Retry-After` en-tête de la réponse. Toutes les réponses renvoyées doivent comporter le code de réponse HTTP avec un code d’erreur spécifique au domaine. |

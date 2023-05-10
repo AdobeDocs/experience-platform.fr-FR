@@ -13,7 +13,7 @@ ht-degree: 72%
 
 # Connecteur [!DNL Salesforce Service Cloud]
 
-Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous permettant de structurer, de libeller et d’améliorer les données entrantes à l’aide des services [!DNL Platform]. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, des bases de données, etc.
+Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous permettant de structurer, de libeller et d’améliorer les données entrantes à l’aide des services [!DNL Platform]. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les bases de données, etc.
 
 [!DNL Experience Platform] prend en charge l’ingestion de données provenant d’un système de succès client tiers. La prise en charge des fournisseurs de succès client inclut [!DNL Salesforce Service Cloud].
 

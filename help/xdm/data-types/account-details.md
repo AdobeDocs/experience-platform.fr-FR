@@ -4,8 +4,8 @@ description: Ce document présente un aperçu du type de données XDM (Account D
 exl-id: 17254393-263e-4000-9bd2-815a9e842533
 source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
 workflow-type: tm+mt
-source-wordcount: '435'
-ht-degree: 22%
+source-wordcount: '432'
+ht-degree: 21%
 
 ---
 
@@ -38,7 +38,7 @@ ht-degree: 22%
 | `twitterHandleUrl` | Chaîne | Lien vers le gestionnaire twitter de l’organisation. |
 | `website` | Chaîne | URL du site web de l’organisation. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Pour obtenir plus d’informations sur ce type de données, reportez-vous au référentiel XDM public:
 

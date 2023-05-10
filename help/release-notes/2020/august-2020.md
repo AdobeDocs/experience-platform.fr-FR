@@ -1,6 +1,6 @@
 ---
-title: Notes de mise à jour de Adobe Experience Platform - Août 2020
-description: Notes de mise à jour d’août 2020 pour Adobe Experience Platform.
+title: Notes de mise à jour d’Adobe Experience Platform - Août 2020
+description: Les notes de mise à jour d’août 2020 pour Adobe Experience Platform.
 doc-type: release notes
 last-update: August 10, 2020
 author: crhoades, ens28527
@@ -8,7 +8,7 @@ exl-id: 9347147f-e830-4487-aa12-f56723abb3c8
 source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '572'
-ht-degree: 29%
+ht-degree: 31%
 
 ---
 
@@ -62,7 +62,7 @@ Basé sur Experience Platform, Real-time Customer Data Platform ([!DNL Real-Time
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
-| Prise en charge du TCF 2.0 de l’IAB | [!DNL Real-Time CDP] est désormais un fournisseur enregistré pour la version 2.0 de la variable [!DNL Transparency & Consent Framework] (TCF), comme indiqué par [!DNL Interactive Advertising Bureau] (IAB). Vous pouvez configurer vos opérations de données et vos schémas de profil pour accepter les données de consentement du client générées par une CMP et appliquer les préférences de consentement de vos clients lors de l’activation de segments vers des destinations en aval. |
+| Prise en charge de l’IAB TCF 2.0 | [!DNL Real-Time CDP] est désormais un fournisseur enregistré pour la version 2.0 de la variable [!DNL Transparency & Consent Framework] (TCF), comme indiqué par [!DNL Interactive Advertising Bureau] (IAB). Vous pouvez configurer vos opérations de données et vos schémas de profil pour accepter les données de consentement du client générées par une CMP et appliquer les préférences de consentement de vos clients lors de l’activation de segments vers des destinations en aval. |
 
 Pour plus d’informations sur [!DNL Real-Time CDP], reportez-vous à la section [[!DNL Real-Time CDP] aperçu](../../rtcdp/overview.md).
 

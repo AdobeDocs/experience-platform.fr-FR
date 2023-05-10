@@ -4,8 +4,8 @@ description: Ce document présente un aperçu du groupe de champs Détails de la
 exl-id: 19be76fa-d212-4b00-815a-d3869c1054e2
 source-git-commit: f5df893260f0772ad54ccdb00d99ed8f328d35a9
 workflow-type: tm+mt
-source-wordcount: '150'
-ht-degree: 8%
+source-wordcount: '147'
+ht-degree: 6%
 
 ---
 
@@ -23,6 +23,6 @@ ht-degree: 8%
 | `requestID` | [!UICONTROL Chaîne] | Identifiant unique de la requête de devis. |
 | `selectedRetailer` | [!UICONTROL Chaîne] | Le détaillant sélectionné pour la demande de devis, le cas échéant. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Pour plus d’informations sur le groupe de champs, reportez-vous à la section [référentiel XDM public](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/experience-event/experienceevent-quote-request-details.schema.json).

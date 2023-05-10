@@ -30,11 +30,11 @@ ht-degree: 100%
 * Interface utilisateur de Profile {#ui}
    * [Guide de l’interface utilisateur du [!DNL Profile]](ui/user-guide.md)
    * [Personnalisation détaillée du [!DNL Profile]](ui/profile-customization.md)
-* Stratégies de fusion {#merge-policies}
+* Politiques de fusion {#merge-policies}
    * [Présentation](merge-policies/overview.md)
-   * [API des stratégies de fusion](api/merge-policies.md)
-   * [Guide de l’interface utilisateur des stratégies de fusion](merge-policies/ui-guide.md)
-   * [Création de stratégies de fusion (vidéo)](video/create-merge-policies.md)
+   * [API des politiques de fusion](api/merge-policies.md)
+   * [Guide de l’interface utilisateur des politiques de fusion](merge-policies/ui-guide.md)
+   * [Création de politiques de fusion (vidéo)](video/create-merge-policies.md)
 * Schémas d’union {#union-schemas}
    * [Guide de l’interface utilisateur du schéma d’union](ui/union-schema.md)
    * [Présentation du schéma d’union (vidéo)](video/union-schemas-overview.md)

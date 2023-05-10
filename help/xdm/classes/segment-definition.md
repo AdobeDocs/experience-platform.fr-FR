@@ -5,8 +5,8 @@ description: Ce document présente la classe de définition de segment dans le m
 exl-id: c0f7b04c-2266-4d08-89a1-67ba758a51a7
 source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
-source-wordcount: '377'
-ht-degree: 14%
+source-wordcount: '374'
+ht-degree: 13%
 
 ---
 
@@ -34,4 +34,4 @@ ht-degree: 14%
 | `segmentStatus` | État du segment à partir du système externe. Les valeurs suivantes sont acceptées : <ul><li>`ACTIVE`</li><li>`INACTIVE`</li><li>`DELETED`</li><li>`DRAFT`</li><li>`REVOKED`</li></ul> |
 | `version` | Numéro de la dernière version de la définition de segment. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

@@ -34,7 +34,7 @@ Adobe Experience Platform Segmentation Service propose une interface utilisa
 | Fonctionnalité | Description |
 |--- | ---|
 | Onglet Audiences fusionnées dans [!DNL Segment Builder] | Le [!UICONTROL Segments] et [!UICONTROL Audiences] dans les onglets [!DNL Segment Builder] ont été combinés en une seule [!UICONTROL Audiences] . Cet onglet vous permet de parcourir et de rechercher les audiences existantes, que vous pouvez ensuite faire glisser dans le canevas du créateur de règles pour créer une nouvelle définition de segment. En référençant une audience, il est possible d’ajouter l’un des jeux de logiques de règles suivants à la nouvelle définition de segment : l’appartenance à l’audience en tant que règle, le jeu complet de la logique de règle qui a défini l’audience référencée. |
-| Nouvel emplacement du sélecteur de stratégie de fusion | L’emplacement du sélecteur de stratégie de fusion dans la variable [!DNL Segment Builder] a été modifié. Pour sélectionner une stratégie de fusion pour une définition de segment, cliquez sur l’icône d’engrenage sur la page **[!UICONTROL Champs]** , puis utilisez la fonction **[!UICONTROL Stratégie de fusion]** menu déroulant pour sélectionner la stratégie de fusion à utiliser. |
+| Nouvel emplacement du sélecteur de politique de fusion | L’emplacement du sélecteur de stratégie de fusion dans la variable [!DNL Segment Builder] a été modifié. Pour sélectionner une stratégie de fusion pour une définition de segment, cliquez sur l’icône d’engrenage sur la page **[!UICONTROL Champs]** , puis utilisez la fonction **[!UICONTROL Stratégie de fusion]** menu déroulant pour sélectionner la stratégie de fusion à utiliser. |
 
 **Problèmes connus**
 
@@ -77,9 +77,9 @@ Pour plus d’informations sur les sources, consultez la [présentation des sour
 
 ## Système d’[!DNL Experience Data Model] (XDM) {#xdm}
 
-La normalisation et l’interopérabilité sont des concepts clés pour [!DNL Experience Platform]. Le [!DNL Experience Data Model] (XDM), piloté par Adobe, vise à normaliser les données d’expérience client et à définir des schémas pour la gestion de l’expérience client.
+La normalisation et l’interopérabilité sont des concepts clés pour [!DNL Experience Platform]. Le modèle de données [!DNL Experience Data Model] d’expérience (XDM), piloté par Adobe, vise à normaliser les données d’expérience client et à définir des schémas pour la gestion de l’expérience client.
 
-XDM est une spécification documentée publiquement conçue pour améliorer la puissance des expériences numériques. Elle fournit des structures et des définitions communes à toutes les applications pour communiquer avec des services sur Adobe Experience Platform. En adhérant aux normes XDM, toutes les données d’expérience client peuvent être intégrées dans une représentation commune afin de fournir des informations plus rapidement et de manière plus intégrée. Vous pouvez obtenir des informations précieuses à partir des actions des clients, définir des types de clients par le biais de segments et utiliser les attributs du client à des fins de personnalisation.
+XDM est une spécification documentée publiquement conçue pour améliorer la puissance des expériences digitales. Elle fournit des structures et des définitions communes à toutes les applications pour communiquer avec des services sur Adobe Experience Platform. En adhérant aux normes XDM, toutes les données d’expérience client peuvent être intégrées dans une représentation commune afin de fournir des informations plus rapidement et de manière plus intégrée. Vous pouvez obtenir des informations précieuses à partir des actions des clients, définir des types de clients par le biais de segments et utiliser les attributs du client à des fins de personnalisation.
 
 **Nouvelles fonctionnalités**
 
@@ -87,10 +87,10 @@ XDM est une spécification documentée publiquement conçue pour améliorer la p
 |--- | ---|
 | Amélioration de la validation des schémas | Nouvelles vérifications pour s’assurer que les références renvoient à des champs supplémentaires comme prévu. Ajout de vérifications supplémentaires aux champs définis comme un tableau d’objets pour s’assurer que les objets sont bien définis. Amélioration des messages d’erreur pour aider à identifier et à résoudre les problèmes. |
 
-**Corrections de bogues**
+**Correctifs de bugs**
 
-* Maintenance et améliorations relatives au contrôle d’accès et aux environnements de test.
-* Prise en charge de l’`eTag` pour le point de terminaison `/descriptors` dans l’API [!DNL Schema Registry]
+* Maintenance et améliorations relatives au contrôle d’accès et aux sandbox.
+* Prise en charge de l’`eTag` pour le point d’entrée `/descriptors` dans l’API [!DNL Schema Registry]
 
 **Problèmes connus**
 

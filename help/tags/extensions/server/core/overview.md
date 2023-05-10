@@ -153,7 +153,7 @@ Les opérateurs de comparaison de valeurs suivants sont disponibles :
 
 Cette section décrit les types d’actions disponibles dans l’extension Core.
 
-### Code personnalisé
+### Custom Code
 
 Fournissez le code qui s’exécute une fois que l’événement est déclenché et que les conditions sont évaluées. Le transfert dʼévénements dans Adobe Experience Platform prend en charge ES6.
 

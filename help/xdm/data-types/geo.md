@@ -6,8 +6,8 @@ description: Ce document présente le type de données Geo XDM.
 exl-id: d0eef943-ef86-4abd-8a51-dc45f2ed782d
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '202'
-ht-degree: 44%
+source-wordcount: '199'
+ht-degree: 43%
 
 ---
 
@@ -28,7 +28,7 @@ ht-degree: 44%
 | `postalCode` | Chaîne | Code postal de l’emplacement. Les codes postaux ne sont pas disponibles pour tous les pays. Dans certains pays, ce champ ne contiendra qu’une partie du code postal. |
 | `stateProvince` | Chaîne | Partie de l’état ou de la province de l’observation. Le format est conforme à la norme [ISO 3166-2 (pays et subdivisions)](https://www.unece.org/cefact/locode/subdivisions.html). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Pour obtenir plus d’informations sur ce type de données, reportez-vous au référentiel XDM public:
 

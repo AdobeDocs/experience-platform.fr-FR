@@ -6,7 +6,7 @@ description: Le point de terminaison /schemas de l’API Schema Registry vous pe
 exl-id: d0bda683-9cd3-412b-a8d1-4af700297abf
 source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
-source-wordcount: '1468'
+source-wordcount: '1441'
 ht-degree: 22%
 
 ---
@@ -38,7 +38,7 @@ GET /{CONTAINER_ID}/schemas?{QUERY_PARAMS}
 | `{CONTAINER_ID}` | Conteneur qui héberge les schémas que vous souhaitez récupérer : `global` pour les schémas créés par Adobe ou `tenant` pour les schémas appartenant à votre organisation. |
 | `{QUERY_PARAMS}` | Paramètres de requête facultatifs en fonction desquels filtrer les résultats. Voir [document de l’annexe](./appendix.md#query) pour une liste de paramètres disponibles. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Requête**
 
@@ -61,7 +61,7 @@ Le format de réponse dépend de la variable `Accept` en-tête envoyé dans la r
 | `application/vnd.adobe.xed-id+json` | Renvoie un court résumé de chaque ressource. Il s’agit de l’en-tête recommandé pour répertorier les ressources. (Limite : 300) |
 | `application/vnd.adobe.xed+json` | Renvoie la totalité du schéma JSON de chaque ressource, en incluant le `$ref` et l’`allOf` d’origine. (Limite : 300) |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Réponse**
 
@@ -112,7 +112,7 @@ GET /{CONTAINER_ID}/schemas/{SCHEMA_ID}
 | `{CONTAINER_ID}` | Le conteneur qui héberge le schéma que vous souhaitez récupérer : `global` pour un schéma créé par Adobe ou `tenant` pour un schéma détenu par votre organisation. |
 | `{SCHEMA_ID}` | Le `meta:altId` ou encodé URL `$id` du schéma que vous souhaitez rechercher. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Requête**
 
@@ -139,7 +139,7 @@ Le format de réponse dépend de la variable `Accept` en-tête envoyé dans la r
 | `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` et `allOf` résolus, contient des descripteurs. |
 | `application/vnd.adobe.xed-deprecatefield+json; version=1` | `$ref` et `allOf` résolus, contient des titres et des descriptions. Les champs obsolètes sont indiqués par un `meta:status` de `deprecated`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Réponse**
 
@@ -236,7 +236,7 @@ curl -X POST \
 | --- | --- |
 | `allOf` | Tableau d’objets, chaque objet faisant référence à une classe ou à un groupe de champs dont les champs sont implémentés par le schéma. Chaque objet contient une seule propriété (`$ref`) dont la valeur représente `$id` du groupe de classes ou de champs que le nouveau schéma va implémenter. Une classe doit être fournie avec zéro ou plusieurs groupes de champs supplémentaires. Dans l’exemple ci-dessus, l’objet unique de la variable `allOf` array est la classe du schéma. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Réponse**
 
@@ -297,7 +297,7 @@ PUT /tenant/schemas/{SCHEMA_ID}
 | --- | --- |
 | `{SCHEMA_ID}` | Le `meta:altId` ou encodé URL `$id` du schéma que vous souhaitez réécrire. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Requête**
 
@@ -380,7 +380,7 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 | --- | --- |
 | `{SCHEMA_ID}` | Codé URL `$id` URI ou `meta:altId` du schéma que vous souhaitez mettre à jour. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Requête**
 
@@ -471,7 +471,7 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 | --- | --- |
 | `{SCHEMA_ID}` | Codé URL `$id` URI ou `meta:altId` du schéma que vous souhaitez activer. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Requête**
 
@@ -554,7 +554,7 @@ DELETE /tenant/schemas/{SCHEMA_ID}
 | --- | --- |
 | `{SCHEMA_ID}` | Codé URL `$id` URI ou `meta:altId` du schéma que vous souhaitez supprimer. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Requête**
 

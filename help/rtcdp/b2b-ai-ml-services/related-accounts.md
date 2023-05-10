@@ -5,7 +5,7 @@ description: Présentation et informations supplémentaires sur la fonction des 
 exl-id: 37fd2cdb-87c0-4e5e-9599-ad4f397f7c28
 source-git-commit: 5d1488b26391d8ac758a2968194a6d070ad5b561
 workflow-type: tm+mt
-source-wordcount: '433'
+source-wordcount: '430'
 ht-degree: 22%
 
 ---
@@ -24,7 +24,7 @@ Les entreprises B2B ont souvent leurs informations client stockées dans plusie
 | 4 | Service de conseil Acme | `http://www.acme.com/consulting` | Conseil technologique | NY | (212)471-0904 | x |
 | 5 | Acm IT |  |  | CA |  |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Avec les comptes associés, [!DNL Real-Time CDP B2B] affiche désormais la liste des comptes similaires au compte que vous parcourez.
 

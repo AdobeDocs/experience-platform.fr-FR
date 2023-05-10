@@ -1,8 +1,9 @@
 ---
 title: Création d’une connexion source et d’un flux de données pour Customer.io à l’aide de l’API Flow Service
 description: Découvrez comment connecter Adobe Experience Platform à Customer.io à l’aide de l’API Flow Service.
-badge: "Version bêta"
-source-git-commit: 9d6a4b5f60f7895e2c1833493926db147064f3f1
+badge: Version bêta
+exl-id: 1c84d818-428f-4097-9f6f-ef0cf1a04785
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '1457'
 ht-degree: 56%

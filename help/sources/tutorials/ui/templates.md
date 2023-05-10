@@ -58,14 +58,14 @@ Accédez au [!UICONTROL Adobe des applications] pour afficher la catégorie [!DN
 
 ![Un catalogue de l’espace de travail des sources avec la source de Marketo Engage mise en surbrillance.](../../images/tutorials/templates/catalog.png)
 
-Une fenêtre contextuelle s’affiche, vous permettant de parcourir les modèles ou d’utiliser des schémas et des jeux de données existants.
+Une fenêtre pop-up s’affiche, vous permettant de parcourir les modèles ou d’utiliser des schémas et des jeux de données existants.
 
 * **Parcourir les modèles** : Les modèles sources créent automatiquement pour vous des schémas, des identités, des jeux de données et des flux de données avec des règles de mappage. Vous pouvez personnaliser ces ressources selon vos besoins.
 * **Utiliser mes ressources existantes** : Ingérez vos données à l’aide des jeux de données et des schémas que vous avez créés. Vous pouvez également créer de nouveaux jeux de données et de nouveaux schémas selon vos besoins.
 
 Pour utiliser des ressources générées automatiquement, sélectionnez **[!UICONTROL Parcourir les modèles]** puis **[!UICONTROL Sélectionner]**.
 
-![Fenêtre contextuelle contenant des options permettant de parcourir les modèles ou d’utiliser des ressources existantes.](../../images/tutorials/templates/browse-templates.png)
+![Fenêtre pop-up contenant des options permettant de parcourir les modèles ou d’utiliser des ressources existantes.](../../images/tutorials/templates/browse-templates.png)
 
 ### Authentification
 

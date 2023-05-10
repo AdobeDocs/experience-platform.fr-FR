@@ -1,15 +1,15 @@
 ---
-title: Schémas dans Real-time Customer Data Platform version B2B
+title: Schémas dans l’édition B2B de Real-time Customer Data Platform
 description: Présentation du rôle des schémas de modèle de données d’expérience (XDM) dans l’édition B2B d’Adobe Real-time Customer Data Platform.
 exl-id: 3b18d377-108f-443f-86ae-dc7537cf9013
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '237'
-ht-degree: 45%
+ht-degree: 53%
 
 ---
 
-# Schémas dans Real-time Customer Data Platform version B2B
+# Schémas dans l’édition B2B de Real-time Customer Data Platform
 
 L’édition B2B d’Adobe Real-time Customer Data Platform offre plusieurs [Classes XDM (Experience Data Model)](../../xdm/schema/composition.md#class) qui capturent des détails sur les entités de données B2B essentielles, telles que les comptes, les opportunités, les campagnes, etc. En outre, l’édition B2B de Real-Time CDP vous permet de définir des relations multiples-à-un entre ces schémas afin qu’ils puissent participer à des cas d’utilisation de segmentation avancée.
 

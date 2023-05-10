@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;profil;real-time customer profile;dépannage;API
+keywords: Experience Platform;profil;profil client en temps réel;dépannage;API
 title: Point de terminaison de l’API Attributs calculés
 type: Documentation
 description: Dans Adobe Experience Platform, les attributs calculés sont des fonctions utilisées pour agréger les données au niveau de l’événement en attributs au niveau du profil. Ces fonctions sont automatiquement calculées afin de pouvoir être utilisées au niveau de la segmentation, de l’activation et de la personnalisation. Ce guide explique comment créer, afficher, mettre à jour et supprimer des attributs calculés à l’aide de l’API Real-time Customer Profile.
@@ -286,7 +286,7 @@ Les étapes des deux modèles d’accès sont décrites dans ce document. Sélec
 
 ### Liste de tous les attributs calculés {#list-all-computed-attributes}
 
-Votre organisation IMS peut créer plusieurs attributs calculés et réaliser une requête GET sur le point de terminaison `/config/computedAttributes` vous permet de répertorier tous les attributs calculés existant pour votre organisation.
+Votre organisation IMS peut créer plusieurs attributs calculés et réaliser une requête GET sur le point d’entrée `/config/computedAttributes` vous permet de répertorier tous les attributs calculés existant pour votre organisation.
 
 **Format d’API**
 
@@ -495,7 +495,7 @@ curl -X GET \
 
 ## Mise à jour d’un attribut calculé
 
-Si vous estimez que vous avez besoin de mettre à jour un attribut calculé, vous pouvez effectuer une requête PATCH sur le point de terminaison `/config/computedAttributes` et inclure l’identifiant de l’attribut calculé que vous souhaitez mettre à jour dans le chemin d’accès de la requête.
+Si vous estimez que vous avez besoin de mettre à jour un attribut calculé, vous pouvez effectuer une requête PATCH sur le point d’entrée `/config/computedAttributes` et inclure l’identifiant de l’attribut calculé que vous souhaitez mettre à jour dans le chemin d’accès de la requête.
 
 **Format d’API**
 
@@ -543,7 +543,7 @@ Une mise à jour réussie renvoie un état HTTP 204 (No Content) et un corps de
 
 ## Suppression d’un attribut calculé
 
-Il est également possible de supprimer un attribut calculé à l’aide de l’API. Vous pouvez effectuer ceci à l’aide d’une requête DELETE sur le point de terminaison `/config/computedAttributes` et inclure l’identifiant de l’attribut calculé que vous souhaitez supprimer dans le chemin d’accès de la requête.
+Il est également possible de supprimer un attribut calculé à l’aide de l’API. Vous pouvez effectuer ceci à l’aide d’une requête DELETE sur le point d’entrée `/config/computedAttributes` et inclure l’identifiant de l’attribut calculé que vous souhaitez supprimer dans le chemin d’accès de la requête.
 
 >[!NOTE]
 >

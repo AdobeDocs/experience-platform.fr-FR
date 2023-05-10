@@ -2,8 +2,9 @@
 keywords: insights;IA dédiée aux clients;insights sur l’IA dédié aux clients;service de requête IA ddédiée aux clients;requêtes IA dédiée aux clients;scores IA dédiée aux clients
 title: Vue d’ensemble des journaux d’audit dans l’IA dédiée aux clients
 description: Découvrez comment afficher et gérer les journaux d’audit dans l’IA dédiée aux clients.
-source-git-commit: 6f386d859b8553050ead266fad0e473c7cf7095e
-workflow-type: ht
+exl-id: f5b2d0b0-b6ae-4ccc-b4c9-ac9cc6078d81
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+workflow-type: tm+mt
 source-wordcount: '279'
 ht-degree: 100%
 

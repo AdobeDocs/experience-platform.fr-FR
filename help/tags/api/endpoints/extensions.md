@@ -4,7 +4,7 @@ description: Découvrez comment effectuer des appels au point d’entrée /exten
 exl-id: cc02b2aa-d107-463a-930c-5a9fcc5b4a5a
 source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
-source-wordcount: '977'
+source-wordcount: '941'
 ht-degree: 100%
 
 ---
@@ -33,7 +33,7 @@ GET properties/{PROPERTY_ID}/extensions
 | --- | --- |
 | `{PROPERTY_ID}` | `id` de la propriété dont vous souhaitez répertorier les extensions. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >
@@ -172,7 +172,7 @@ GET /extensions/{EXTENSION_ID}
 | --- | --- |
 | `EXTENSION_ID` | Le `id` de l’extension que vous voulez rechercher. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Requête**
 
@@ -292,7 +292,7 @@ POST /properties/{PROPERTY_ID}/extensions
 | --- | --- |
 | `PROPERTY_ID` | Le `id` de la propriété sous laquelle vous souhaitez installer l’extension. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Requête**
 
@@ -330,7 +330,7 @@ curl -X POST \
 | `attributes.enabled` | Valeur booléenne indiquant si l’extension est activée. |
 | `attributes.settings` | Un objet JSON de paramétrage représenté sous la forme d’une chaîne. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Réponse**
 
@@ -438,11 +438,11 @@ PATCH /extensions/{EXTENSION_ID}
 | --- | --- |
 | `EXTENSION_ID` | `id` de l’extension que vous souhaitez réviser. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Requête**
 
-Comme pour [la création d’une extension](#create), une version locale du module révisé doit être téléchargée via les données de formulaire.
+Comme pour la [création d’une extension](#create), une version locale du package révisé doit être téléchargée via les données de formulaire.
 
 ```shell
 curl -X PATCH \
@@ -470,7 +470,7 @@ curl -X PATCH \
 | `attributes` | Attributs que vous souhaitez réviser. Pour les extensions, vous pouvez réviser leurs attributs `delegate_descriptor_id`, `enabled` et `settings`. |
 | `meta.action` | Doit être inclus avec une valeur de `revise` lors de l’exécution d’une révision. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Réponse**
 
@@ -578,7 +578,7 @@ DELETE /extensions/{EXTENSION_ID}
 | --- | --- |
 | `EXTENSION_ID` |  `id` de l’extension que vous souhaitez supprimer. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Requête**
 
@@ -618,7 +618,7 @@ GET  /extensions/{EXTENSION_ID}/libraries
 | --- | --- |
 | `{EXTENSION_ID}` | `id` de l’extension dont vous souhaitez répertorier les bibliothèques. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Requête**
 
@@ -740,7 +740,7 @@ GET  /extensions/{EXTENSION_ID}/revisions
 | --- | --- |
 | `{EXTENSION_ID}` | `id` de l’extension dont vous souhaitez répertorier les révisions. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Requête**
 
@@ -940,9 +940,9 @@ Une réponse réussie renvoie une liste de révisions pour l’extension spécif
 }
 ```
 
-### Recherche du module d’extension associé pour une extension {#extension}
+### Recherche du package d’extension associé pour une extension {#extension}
 
-Vous pouvez rechercher le module d’extension sur lequel une extension est basée en ajoutant `/extension_package` au chemin d’accès d’une requête GET.
+Vous pouvez rechercher le package d’extension sur lequel une extension est basée en ajoutant `/extension_package` au chemin d’accès d’une requête GET.
 
 **Format d’API**
 
@@ -954,7 +954,7 @@ GET  /extensions/{EXTENSION_ID}/extension_package
 | --- | --- |
 | `{EXTENSION_ID}` | `id` de l’extension dont vous souhaitez rechercher l’extension. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Requête**
 
@@ -970,7 +970,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie les détails du module d’extension sur lequel l’extension spécifiée est basée. La réponse ci-dessous a été réduite pour gagner de l’espace.
+Une réponse réussie renvoie les détails du package d’extension sur lequel l’extension spécifiée est basée. La réponse ci-dessous a été réduite pour gagner de l’espace.
 
 ```json
 {
@@ -1189,7 +1189,7 @@ GET  /extensions/{EXTENSION_ID}/origin
 | --- | --- |
 | `{EXTENSION_ID}` | `id` de l’extension dont vous souhaitez rechercher l’origine. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Requête**
 
@@ -1309,7 +1309,7 @@ GET  /extensions/{EXTENSION_ID}/property
 | --- | --- |
 | `{EXTENSION_ID}` | `id` de l’extension dont vous souhaitez rechercher la propriété. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Requête**
 

@@ -5,8 +5,8 @@ description: Le type de données Consentement pour la confidentialité, la perso
 exl-id: cdcc7b04-eeb9-40d3-b0b5-f736a5472621
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '2058'
-ht-degree: 3%
+source-wordcount: '2034'
+ht-degree: 2%
 
 ---
 
@@ -20,7 +20,7 @@ Ce document couvre la structure et l&#39;utilisation prévue des champs fournis 
 
 Ce document nécessite une compréhension pratique de XDM et de l’utilisation des schémas dans [!DNL Experience Platform]. Avant de poursuivre, consultez la documentation suivante :
 
-* [Présentation du système XDM](https://www.adobe.com/go/xdm-home-en)
+* [Présentation du système XDM](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=fr)
 * [Principes de base de la composition des schémas](https://www.adobe.com/go/xdm-schema-best-practices-en)
 
 ## Structure du type de données {#structure}
@@ -141,7 +141,7 @@ Le fichier JSON suivant illustre un exemple du type de données que la variable 
 | --- | --- |
 | `val` | Choix du consentement fourni par le client pour ce cas d’utilisation. Voir [annexe](#choice-values) pour les valeurs et définitions acceptées. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### `adID`
 
@@ -159,7 +159,7 @@ Le fichier JSON suivant illustre un exemple du type de données que la variable 
 | `idType` | Le type d’ID de publicité, soit `IDFA` pour Apple ID pour les annonceurs ou `GAID` pour Google Advertiser ID, également appelé Android Advertiser ID (AAID). |
 | `val` | Choix du consentement fourni par le client pour ce cas d’utilisation. Voir [annexe](#choice-values) pour les valeurs et définitions acceptées. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### `share`
 
@@ -175,7 +175,7 @@ Le fichier JSON suivant illustre un exemple du type de données que la variable 
 | --- | --- |
 | `val` | Choix du consentement fourni par le client pour ce cas d’utilisation. Voir [annexe](#choice-values) pour les valeurs et définitions acceptées. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### `personalize` {#personalize}
 
@@ -200,7 +200,7 @@ Le fichier JSON suivant illustre un exemple du type de données que la variable 
 | `content` | Représente les préférences du client pour le contenu personnalisé de votre site web ou de votre application. |
 | `val` | La préférence de personnalisation fournie par le client pour le cas d’utilisation spécifié. Dans les cas où le client n’a pas à être invité à donner son consentement, la valeur de ce champ doit indiquer la base sur laquelle la personnalisation doit se dérouler. Voir [annexe](#choice-values) pour les valeurs et définitions acceptées. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### `marketing` {#marketing}
 
@@ -236,7 +236,7 @@ Le fichier JSON suivant illustre un exemple du type de données que la variable 
 | `time` | Horodatage ISO 8601 du moment où la préférence marketing a changé, le cas échéant. Notez que si l’horodatage d’une préférence individuelle est identique à celui fourni sous `metadata`, ce champ ne doit pas être défini pour cette préférence. |
 | `reason` | Lorsqu’un client s’exclut d’un cas d’utilisation marketing, ce champ de chaîne représente la raison pour laquelle le client s’est désinscrit. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### `metadata`
 
@@ -252,7 +252,7 @@ Le fichier JSON suivant illustre un exemple du type de données que la variable 
 | --- | --- |
 | `time` | Horodatage ISO 8601 de la dernière mise à jour des consentements et préférences du client. Ce champ peut être utilisé au lieu d’appliquer des horodatages à des préférences individuelles afin de réduire la charge et la complexité. Fournir une `time` la valeur sous une préférence individuelle remplace la valeur `metadata` horodatage de cette préférence particulière. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Ingestion des données à l’aide du type de données {#ingest}
 
@@ -292,7 +292,7 @@ Le tableau suivant décrit les valeurs acceptées pour `val`:
 | `VI` | Intérêt vital de l’individu | La collecte de données aux fins spécifiées est nécessaire pour protéger les intérêts vitaux de l’individu. |
 | `PI` | Intérêt public | La collecte de données aux fins spécifiées est nécessaire pour effectuer une tâche dans l’intérêt public ou dans l’exercice de l’autorité officielle. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Valeurs acceptées pour `preferred` {#preferred-values}
 
@@ -314,7 +314,7 @@ Le tableau suivant décrit les valeurs acceptées pour `preferred`:
 | `none` | Aucun canal préféré. |
 | `unknown` | Le canal préféré est inconnu. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Complet [!UICONTROL Consentements et préférences] schema {#full-schema}
 

@@ -6,8 +6,8 @@ description: Ce document fournit un aperçu du type de données XDM (modèle de 
 exl-id: d25a358b-73c1-468b-a9c5-808385689932
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '164'
-ht-degree: 34%
+source-wordcount: '161'
+ht-degree: 32%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 34%
 | `paymentType` | Chaîne | Mode de paiement pour cette commande. Les valeurs d’énumération acceptées sont les suivantes : <li> `cash` </li> <li> `credit_card` </li> <li> `debit_card` </li> <li> `gift_card` </li> <li> `check` </li> <li> `paypal` </li> <li> `wire_transfer` </li> <li> `credit_card_reference` </li> <li> `other` </li> |
 | `transactionID` | Chaîne | Identifiant de transaction unique pour cet élément de paiement. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Pour obtenir plus d’informations sur ce type de données, reportez-vous au référentiel XDM public:
 

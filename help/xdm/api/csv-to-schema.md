@@ -4,8 +4,8 @@ description: Le point d’entrée de schéma /rpc/csv2 dans l’API Schema Regis
 exl-id: cf08774a-db94-4ea1-a22e-bb06385f8d0e
 source-git-commit: b4c186c8c40d1372fb5011f49979523e1201fb0b
 workflow-type: tm+mt
-source-wordcount: '857'
-ht-degree: 7%
+source-wordcount: '854'
+ht-degree: 6%
 
 ---
 
@@ -49,7 +49,7 @@ Pour utiliser ce point de terminaison, vous devez d’abord créer un fichier CS
 | 22 | `$ref` | (Voir description) | Obligatoire si `dataType` est défini sur `object` et `properties` n’est pas définie. Cela définit la variable `$id` de l’objet référencé pour le type d’objet (par exemple, `https://ns.adobe.com/xdm/context/person`). |
 | 23 | `comment` | Facultatif | When `isIgnored` est défini sur `true`, cette colonne est utilisée pour fournir les informations de l’en-tête du schéma. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Reportez-vous aux [Modèle CSV](../assets/sample-csv-template.csv) pour déterminer le format de votre fichier CSV.
 

@@ -1,8 +1,9 @@
 ---
 title: Création d’une connexion source et d’un flux de données pour Pendo à l’aide de l’API Flow Service
 description: Découvrez comment connecter Adobe Experience Platform à Pendo à l’aide de l’API Flow Service.
-badge: "Version bêta"
-source-git-commit: c35daa60db315f1ed04ed6424464f1ae7bfb4243
+badge: Version bêta
+exl-id: 12b0295d-4b26-4eb7-a02a-a01d825d2a1e
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '1459'
 ht-degree: 55%
@@ -21,8 +22,8 @@ Le tutoriel suivant décrit les étapes à suivre pour créer une connexion sour
 
 Ce guide nécessite une compréhension professionnelle des composants suivants d’Experience Platform :
 
-* [Sources](../../../../home.md)[!DNL Platform] : Experience  permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de Platform.
-* [Sandbox](../../../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuelles qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
+* [Sources](../../../../home.md)[!DNL Platform] : Experience  permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, de libeller et d’améliorer les données entrantes à l’aide des services de Platform.
+* [Sandbox](../../../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
 
 ## Connexion [!DNL Pendo] vers Platform à l’aide de [!DNL Flow Service] API {#connect-platform-to-flow-api}
 

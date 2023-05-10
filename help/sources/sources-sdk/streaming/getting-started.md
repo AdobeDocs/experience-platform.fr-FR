@@ -3,7 +3,8 @@ title: Prise en main des sources en libre-service (SDK de diffusion en continu)
 description: Ce document présente les informations prérequises que vous devez connaître avant de tenter de créer une source à l’aide de sources en libre-service (SDK de diffusion).
 hide: true
 hidefromtoc: true
-source-git-commit: 7744fef9751212a40f8f20df52812d38130c42fc
+exl-id: 6cc13279-ce0b-45bc-ad25-e2e6aafc2af0
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '534'
 ht-degree: 36%
@@ -48,7 +49,7 @@ Pour utiliser des sources en libre-service (SDK de diffusion en continu), vous d
 Ce guide nécessite également une compréhension pratique des composants suivants de Adobe Experience Platform :
 
 * [Sources](../../home.md) : Experience Platform permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de Platform.
-* [Sandbox](../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuelles qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
+* [Sandbox](../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
 
 ## Lecture d’exemples d’appels API
 
@@ -62,7 +63,7 @@ Pour lancer des appels aux API Platform, vous devez d’abord suivre le [tutorie
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {ORG_ID}`
 
-Toutes les ressources de Platform, y compris celles appartenant à [!DNL Flow Service], sont isolés dans des environnements de test virtuels spécifiques. Toutes les requêtes envoyées aux API Platform nécessitent un en-tête spécifiant le nom de l’environnement de test dans lequel l’opération sera effectuée :
+Toutes les ressources de Platform, y compris celles appartenant à [!DNL Flow Service], sont isolés dans des environnements de test virtuels spécifiques. Toutes les requêtes envoyées aux API Platform nécessitent un en-tête spécifiant le nom du sandbox dans lequel l’opération sera effectuée :
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 

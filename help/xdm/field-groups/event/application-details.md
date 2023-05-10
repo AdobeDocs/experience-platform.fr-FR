@@ -4,8 +4,8 @@ description: Ce document présente un aperçu du groupe de champs de schéma Dé
 exl-id: 5df99f9a-b36a-4c2b-a4a4-d3cf054f09b8
 source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
 workflow-type: tm+mt
-source-wordcount: '140'
-ht-degree: 5%
+source-wordcount: '137'
+ht-degree: 3%
 
 ---
 
@@ -19,6 +19,6 @@ ht-degree: 5%
 | --- | --- | --- |
 | `application` | [[!UICONTROL Application]](../../data-types/financial-account.md) | Capture les informations de l’application relatives à un événement, y compris le nom de l’application, la version de l’application, les installations, les lancements, les blocages et les fermetures. Il peut s’agir de l’application ciblée par l’événement (comme la destination d’une notification push envoyée) ou de l’application à l’origine de l’événement (un clic ou une connexion, par exemple). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Pour plus d’informations sur le groupe de champs, reportez-vous à la section [référentiel XDM public](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/experience-event/experienceevent-application.schema.json).

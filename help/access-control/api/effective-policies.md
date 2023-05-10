@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;accueil;rubriques populaires;stratégies effectives;api contrôle dʼaccès
+keywords: Experience Platform;accueil;rubriques populaires;politiques effectives;api contrôle dʼaccès
 solution: Experience Platform
 title: Point d’entrée de lʼAPI Effective Policies
 description: Découvrez comment afficher des stratégies d’accès efficaces à l’aide de l’API Access Control for Adobe Experience Platform.
@@ -11,7 +11,7 @@ ht-degree: 74%
 
 ---
 
-# Point d’entrée des stratégies effectives
+# Point d’entrée des politiques effectives
 
 >[!NOTE]
 >
@@ -76,7 +76,7 @@ Cette section fournit des informations supplémentaires sur lʼutilisation de l�
 
 ### Autorisations et types de ressources acceptés
 
-Vous trouverez ci-dessous une liste d’autorisations et de types de ressources que vous pouvez inclure dans le payload d’une requête POST envoyée au point de terminaison `/acl/active-permissions`.
+Vous trouverez ci-dessous une liste d’autorisations et de types de ressources que vous pouvez inclure dans le payload d’une requête POST envoyée au point d’entrée `/acl/active-permissions`.
 
 **Autorisations**
 

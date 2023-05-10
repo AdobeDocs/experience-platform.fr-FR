@@ -29,7 +29,7 @@ Vous pouvez acheminer une projection vers une ou plusieurs périphéries en pré
 
 ### Liste de toutes les destinations
 
-Vous pouvez lister les destinations de périphérie déjà créées pour votre organisation en effectuant une requête GET sur le point de terminaison `/config/destinations`.
+Vous pouvez lister les destinations de périphérie déjà créées pour votre organisation en effectuant une requête GET sur le point d’entrée `/config/destinations`.
 
 **Format d’API**
 
@@ -110,7 +110,7 @@ Pour plus d’informations concernant les attributs d’une destination individu
 
 ### Création d’une destination {#create-a-destination}
 
-Si la destination dont vous avez besoin n’existe pas déjà, vous pouvez créer une nouvelle destination de projection en effectuant une requête POST sur le point de terminaison `/config/destinations`.
+Si la destination dont vous avez besoin n’existe pas déjà, vous pouvez créer une nouvelle destination de projection en effectuant une requête POST sur le point d’entrée `/config/destinations`.
 
 **Format d’API**
 
@@ -179,7 +179,7 @@ Une réponse réussie renvoie les détails de la destination de périphérie que
 
 ### Affichage d’une destination
 
-Si vous connaissez l’ID unique d’une destination de projection, vous pouvez réaliser une requête de recherche pour en afficher les détails. Vous pouvez effectuer ceci à l’aide d’une requête GET sur le point de terminaison `/config/destinations` et inclure l’identifiant de la destination dans le chemin d’accès de la requête.
+Si vous connaissez l’ID unique d’une destination de projection, vous pouvez réaliser une requête de recherche pour en afficher les détails. Vous pouvez effectuer ceci à l’aide d’une requête GET sur le point d’entrée `/config/destinations` et inclure l’identifiant de la destination dans le chemin d’accès de la requête.
 
 **Format d’API**
 
@@ -226,7 +226,7 @@ L’objet de réponse affiche les détails de la destination de projection. L’
 
 ### Mise à jour d’une destination
 
-Vous pouvez mettre à jour une destination existante en effectuant une requête PUT sur le point de terminaison `/config/destinations` et en incluant l’identifiant de la destination à mettre à jour dans le chemin d’accès de la requête. Cette opération consiste essentiellement à réécrire la destination. Par conséquent, les mêmes attributs doivent être fournis dans le corps de la requête que ceux fournis lors de la création d’une nouvelle destination.
+Vous pouvez mettre à jour une destination existante en effectuant une requête PUT sur le point d’entrée `/config/destinations` et en incluant l’identifiant de la destination à mettre à jour dans le chemin d’accès de la requête. Cette opération consiste essentiellement à réécrire la destination. Par conséquent, les mêmes attributs doivent être fournis dans le corps de la requête que ceux fournis lors de la création d’une nouvelle destination.
 
 >[!CAUTION]
 >
@@ -296,7 +296,7 @@ La réponse inclut les détails mis à jour pour la destination, y compris son i
 
 ### Suppression d’une destination
 
-Si votre organisation n’a plus besoin d’une destination de projection, celle-ci peut-être supprimée en exécutant une requête DELETE au point de terminaison `/config/destinations` et en incluant l’identifiant de la destination que vous souhaitez supprimer dans le chemin d’accès de la requête.
+Si votre organisation n’a plus besoin d’une destination de projection, celle-ci peut-être supprimée en exécutant une requête DELETE au point d’entrée `/config/destinations` et en incluant l’identifiant de la destination que vous souhaitez supprimer dans le chemin d’accès de la requête.
 
 >[!CAUTION]
 >
@@ -334,7 +334,7 @@ Les configurations de projection fournissent des informations concernant les don
 
 ### Liste de toutes les configurations de projection
 
-Vous pouvez lister toutes les configurations de projection créées pour votre organisation en effectuant une requête GET sur le point de terminaison `/config/projections`. Vous pouvez également ajouter des paramètres facultatifs au chemin d’accès de la requête pour accéder à des configurations de projection pour un schéma particulier ou rechercher une projection individuelle en fonction de son nom.
+Vous pouvez lister toutes les configurations de projection créées pour votre organisation en effectuant une requête GET sur le point d’entrée `/config/projections`. Vous pouvez également ajouter des paramètres facultatifs au chemin d’accès de la requête pour accéder à des configurations de projection pour un schéma particulier ou rechercher une projection individuelle en fonction de son nom.
 
 **Format d’API**
 

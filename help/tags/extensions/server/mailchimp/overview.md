@@ -9,7 +9,7 @@ topic: Integrations
 exl-id: a52870c4-10e6-45a0-a502-f48da3398f3f
 source-git-commit: bfbad3c11df64526627e4ce2d766b527df678bca
 workflow-type: tm+mt
-source-wordcount: '1306'
+source-wordcount: '1303'
 ht-degree: 7%
 
 ---
@@ -126,7 +126,7 @@ Le tableau ci-dessous fournit des détails supplémentaires pour chaque valeur p
 | `isSyncing` | `arc.event.xdm._tenant.isSyncing`<br /> ou<br /> `arc.event.data._tenant.isSyncing` | booléen | Événements créés avec `is_syncing` défini sur `true` **ne sera pas** automates de déclenchement | Non |  |
 | `occurredAt` | `arc.event.xdm._tenant.occuredAt`<br /> ou `arc.event.data._tenant.occuredAt`. | Chaîne | Horodatage ISO 8601 du moment où l’événement s’est produit | Non |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!IMPORTANT]
 >  

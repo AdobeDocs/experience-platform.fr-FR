@@ -159,7 +159,7 @@ Dans l’interface utilisateur, sélectionnez **[!UICONTROL Éléments de donné
 
 ![Type d’objet XDM](./images/e2e/xdm-object.png)
 
-La boîte de dialogue de configuration s’affiche pour le type d’objet XDM. La boîte de dialogue sélectionne automatiquement votre sandbox Platform. Vous pouvez voir tous les schémas qui ont été créés dans ce sandbox. Sélectionnez le schéma XDM que vous avez créé précédemment dans la liste.
+La boîte de dialogue de configuration s’affiche pour le type d’objet XDM. La boîte de dialogue sélectionne automatiquement votre sandbox Platform. Vous pouvez voir tous les schémas qui ont été créés dans cette sandbox. Sélectionnez le schéma XDM que vous avez créé précédemment dans la liste.
 
 ![Type d’objet XDM](./images/e2e/select-schema.png)
 

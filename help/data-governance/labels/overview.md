@@ -18,27 +18,27 @@ ht-degree: 100%
 >title="Contrôler l’accès aux données sensibles et protégées"
 >abstract="<h2>Description</h2><p>Contrôlez l’accès à des attributs et/ou segments de données spécifiques afin de concevoir des workflows flexibles pour les différentes personnes et équipes qui élaborent les cas d’utilisation d’Experience Platform.</p>"
 
-Adobe Experience Platform vous permet d’appliquer des libellés d’utilisation des données aux jeux de données et aux champs, en les classant en fonction des [stratégies de gouvernance des données](../policies/overview.md) et des [stratégies de contrôle d’accès](../../access-control/abac/ui/policies.md) associées.
+Adobe Experience Platform vous permet d’appliquer des libellés d’utilisation des données aux jeux de données et aux champs, en les classant en fonction des [politiques de gouvernance des données](../policies/overview.md) et des [politiques de contrôle d’accès](../../access-control/abac/ui/policies.md) associées.
 
 Ce document offre une présentation des libellés d’utilisation des données dans [!DNL Experience Platform].
 
 ## Comprendre les libellés d’utilisation des données
 
-Les libellés d’utilisation des données vous permettent de classer les jeux de données et les champs en fonction des stratégies de gouvernance qui s’appliquent à ces données. Vous pouvez appliquer les libellés à tout moment, ce qui vous offre une certaine flexibilité quant à la manière dont vous choisissez de gérer les données. Les bonnes pratiques recommandent de libeller les données dès qu’elles sont ingérées dans [!DNL Experience Platform], ou dès que les données sont disponibles pour une utilisation dans [!DNL Platform].
+Les libellés d’utilisation des données vous permettent de classer les jeux de données et les champs en fonction des politiques de gouvernance qui s’appliquent à ces données. Vous pouvez appliquer les libellés à tout moment, ce qui vous offre une certaine flexibilité quant à la manière dont vous choisissez de gérer les données. Les bonnes pratiques recommandent de libeller les données dès qu’elles sont ingérées dans [!DNL Experience Platform], ou dès que les données sont disponibles pour une utilisation dans [!DNL Platform].
 
 Les libellés d’utilisation des données appliqués au niveau du jeu de données sont propagés à tous les champs du jeu de données. Vous pouvez également appliquer les libellés directement sur des champs individuels (en-têtes de colonne) d’un jeu de données, sans propagation.
 
-[!DNL Platform] fournit plusieurs libellés d’utilisation des données « principaux » et prêts à l’emploi, qui couvrent une grande variété de restrictions fréquentes applicables à la gouvernance des données. Pour plus d’informations sur ces libellés et sur les stratégies de gouvernance qu’ils représentent, consultez le guide sur les [principaux libellés d’utilisation des données](reference.md).
+[!DNL Platform] fournit plusieurs libellés d’utilisation des données « principaux » et prêts à l’emploi, qui couvrent une grande variété de restrictions fréquentes applicables à la gouvernance des données. Pour plus d’informations sur ces libellés et sur les politiques de gouvernance qu’ils représentent, consultez le guide sur les [principaux libellés d’utilisation des données](reference.md).
 
 Outre les libellés fournis par Adobe, vous pouvez également définir vos propres libellés personnalisés pour votre entreprise. Pour plus d’informations, consultez la section sur la [gestion des libellés](#manage-labels).
 
 ## Héritage de libellé pour les segments d’audience
 
-Tous les segments d’audience créés par le [service de segmentation d’Adobe Experience Platform](../../segmentation/home.md) héritent des libellés d’utilisation de leurs jeux de données correspondants. Cela permet à Experience Platform d’appliquer automatiquement la stratégie lors de l’activation de segments vers des destinations.
+Tous les segments d’audience créés par le [service de segmentation d’Adobe Experience Platform](../../segmentation/home.md) héritent des libellés d’utilisation de leurs jeux de données correspondants. Cela permet à Experience Platform d’appliquer automatiquement la politique lors de l’activation de segments vers des destinations.
 
 Outre l’héritage de libellés au niveau des jeux de données, les segments héritent par défaut de tous les libellés au niveau des champs de leurs jeux de données associés. Par conséquent, vous pouvez identifier plus facilement les attributs à exclure de vos segments et les empêcher d’hériter des libellés de champs exclus.
 
-Pour plus d’informations sur le fonctionnement de l’application automatique dans Platform, consultez la présentation de l’[application automatique des stratégies](../enforcement/auto-enforcement.md).
+Pour plus d’informations sur le fonctionnement de l’application automatique dans Platform, consultez la présentation de l’[application automatique des politiques](../enforcement/auto-enforcement.md).
 
 ### Héritage des contrôles d’exportation de données d’Adobe Audience Manager
 
@@ -57,11 +57,11 @@ Vous pouvez gérer les libellés d’utilisation des données à l’aide des AP
 
 ### Utilisation de l’interface utilisateur
 
-L’espace de travail **[!UICONTROL Stratégies]** de l’interface utilisateur [!DNL Experience Platform] vous permet d’afficher et de gérer les libellés personnalisés et principaux de votre entreprise. Vous pouvez utiliser l’espace de travail **[!UICONTROL Schémas]** pour [appliquer des libellés à vos schémas de modèle de données d’expérience (XDM)](../../xdm/tutorials/labels.md), ou l’espace de travail **[!DNL Datasets]** pour [appliquer des libellés aux jeux de données](./user-guide.md).
+L’espace de travail **[!UICONTROL Politiques]** de l’interface utilisateur [!DNL Experience Platform] vous permet d’afficher et de gérer les libellés personnalisés et principaux de votre entreprise. Vous pouvez utiliser l’espace de travail **[!UICONTROL Schémas]** pour [appliquer des libellés à vos schémas de modèle de données d’expérience (XDM)](../../xdm/tutorials/labels.md), ou l’espace de travail **[!DNL Datasets]** pour [appliquer des libellés aux jeux de données](./user-guide.md).
 
 >[!NOTE]
 >
->L’application de libellés au niveau du jeu de données est uniquement prise en charge pour les cas d’utilisation de la gouvernance des données. Si vous essayez de créer des stratégies d’accès pour les données, vous devez appliquer des libellés au schéma sur lequel est basé le jeu de données. Pour plus d’informations, consultez la présentation du [contrôle d’accès basé sur les attributs](../../access-control/abac/overview.md).
+>L’application de libellés au niveau du jeu de données est uniquement prise en charge pour les cas d’utilisation de la gouvernance des données. Si vous essayez de créer des politiques d’accès pour les données, vous devez appliquer des libellés au schéma sur lequel est basé le jeu de données. Pour plus d’informations, consultez la présentation du [contrôle d’accès basé sur les attributs](../../access-control/abac/overview.md).
 
 ### Utilisation des API
 
@@ -71,7 +71,7 @@ L’[API Dataset Service](https://www.adobe.io/experience-platform-apis/referenc
 
 >[!NOTE]
 >
->L’application de libellés au niveau du jeu de données est uniquement prise en charge pour les cas d’utilisation de la gouvernance des données. Si vous essayez de créer des stratégies d’accès pour les données, vous devez [appliquer des libellés au schéma](../../xdm/tutorials/labels.md) sur lequel le jeu de données est basé. Pour plus d’informations, consultez la présentation du [contrôle d’accès basé sur les attributs](../../access-control/abac/overview.md).
+>L’application de libellés au niveau du jeu de données est uniquement prise en charge pour les cas d’utilisation de la gouvernance des données. Si vous essayez de créer des politiques d’accès pour les données, vous devez [appliquer des libellés au schéma](../../xdm/tutorials/labels.md) sur lequel le jeu de données est basé. Pour plus d’informations, consultez la présentation du [contrôle d’accès basé sur les attributs](../../access-control/abac/overview.md).
 
 ## Étapes suivantes
 

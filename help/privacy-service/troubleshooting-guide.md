@@ -5,7 +5,7 @@ title: Guide de dépannage de Privacy Service
 description: Ce document fournit des réponses aux questions fréquentes sur Privacy Service, ainsi que des informations sur les erreurs courantes rencontrées dans l’API.
 exl-id: 8afbb065-0f41-4048-9003-a22c0c839717
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '916'
 ht-degree: 100%
 
@@ -89,7 +89,7 @@ L’API et l’interface utilisateur [!DNL Privacy Service] fournissent toutes d
 
 ### Utilisation de l’API
 
-Envoyez une requête au point de terminaison racine (`GET /`) de l’API [!DNL Privacy Service] en indiquant l’identifiant de la tâche dont vous souhaitez télécharger les résultats dans le chemin d’accès de la requête. Si l’état de la tâche est terminé, l’API inclut un attribut `downloadURL` dans le corps de la réponse. Cet attribut contient une URL que vous pouvez coller dans la barre d’adresse de votre navigateur pour télécharger le fichier ZIP.
+Envoyez une requête au point d’entrée racine (`GET /`) de l’API [!DNL Privacy Service] en indiquant l’identifiant de la tâche dont vous souhaitez télécharger les résultats dans le chemin d’accès de la requête. Si l’état de la tâche est terminé, l’API inclut un attribut `downloadURL` dans le corps de la réponse. Cet attribut contient une URL que vous pouvez coller dans la barre d’adresse de votre navigateur pour télécharger le fichier ZIP.
 
 Pour plus d’informations, reportez-vous à la section relative à la [recherche d’une tâche par son identifiant](api/privacy-jobs.md#check-the-status-of-a-job) dans le guide de l’API [!DNL Privacy Service].
 

@@ -49,7 +49,7 @@ La documentation ci-dessous fournit des informations sur la connexion de [!DNL G
 - [Explorer des tableaux de données à l’aide de l’API Flow Service](../../tutorials/api/explore/tabular.md)
 - [Création d’un flux de données pour une source de base de données à l’aide de l’API Flow Service](../../tutorials/api/collect/database-nosql.md)
 
-### Utiliser l’interface utilisateur
+### Utilisation de l’interface utilisateur
 
 - [Création d’une connexion source Google BigQuery dans l’interface utilisateur](../../tutorials/ui/create/databases/bigquery.md)
 - [Création d’un flux de données pour une connexion à la source de la base de données dans l’interface utilisateur](../../tutorials/ui/dataflow/databases.md)

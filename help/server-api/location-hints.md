@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Conseils de localisation
 
-## Aperçu {#overview}
+## Présentation {#overview}
 
 Le [!DNL Adobe Experience Platform Edge Network] utilise plusieurs serveurs répartis dans le monde pour garantir des temps de réponse rapides, quel que soit l’emplacement de l’utilisateur final. Il utilise également le routage basé sur DNS pour s’assurer que les demandes sont toujours acheminées vers l’emplacement réseau Edge le plus proche des utilisateurs finaux.
 

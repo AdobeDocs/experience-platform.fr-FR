@@ -4,8 +4,8 @@ description: Découvrez comment l’Auditor teste la cohérence des balises dans
 exl-id: 642b0c49-a7c7-4142-8189-67f00ed50015
 source-git-commit: df1a67e4b6f3d2eaeaba2b8d3c9b1588ee0b1461
 workflow-type: tm+mt
-source-wordcount: '126'
-ht-degree: 44%
+source-wordcount: '123'
+ht-degree: 43%
 
 ---
 
@@ -23,4 +23,4 @@ Les tests de cohérence des balises recherchent les incohérences entre toutes l
 | --- | --- | --- | --- |
 | Adobe Analytics - Version de code cohérente | 5 | Plusieurs versions du code Analytics ont été trouvées. | Remplacez toutes les instances d’Analytics par la version actuelle.<br><br>[Informations supplémentaires](https://experienceleague.adobe.com/docs/analytics/implementation/home.html?lang=fr) |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

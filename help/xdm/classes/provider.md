@@ -4,8 +4,8 @@ description: Ce document présente la classe Provider dans le modèle de donnée
 exl-id: acb9b8a3-f911-49c5-9d2a-3a0d6aeebef9
 source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
 workflow-type: tm+mt
-source-wordcount: '153'
-ht-degree: 7%
+source-wordcount: '150'
+ht-degree: 5%
 
 ---
 
@@ -21,6 +21,6 @@ Dans le modèle de données d’expérience (XDM), la variable [!UICONTROL Fourn
 | `_id` | [!UICONTROL Chaîne] | Identifiant de chaîne unique généré par le système pour l’enregistrement. Ce champ permet de suivre l’unicité d’un enregistrement individuel, d’éviter la duplication des données et de rechercher cet enregistrement dans les services en aval.<br><br>Ce champ étant généré par le système, il ne reçoit pas de valeur explicite lors de l’ingestion des données. Cependant, vous pouvez toujours choisir de fournir vos propres valeurs d’identifiant uniques si vous le souhaitez. |
 | `providerId` | [!UICONTROL Chaîne] | Identifiant unique du fournisseur. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 La classe peut être étendue à l’aide de la fonction [[!UICONTROL Fournisseur de soins de santé] groupe de champs](../field-groups/provider/healthcare-provider.md) pour décrire plus de détails sur un prestataire de soins.

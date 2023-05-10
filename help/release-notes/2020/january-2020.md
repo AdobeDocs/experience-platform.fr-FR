@@ -1,6 +1,6 @@
 ---
-title: Notes de mise à jour de Adobe Experience Platform, janvier 2020
-description: Notes de mise à jour de janvier 2020 pour Adobe Experience Platform.
+title: Notes de mise à jour d’Adobe Experience Platform - Janvier 2020
+description: Notes de mise à jour de janvier 2020 pour Adobe Experience Platform.
 doc-type: release notes
 last-update: January 15, 2020
 author: crhoades, ens28527
@@ -8,7 +8,7 @@ exl-id: e488a50c-2a87-4649-b3a4-f9d45cb12fcb
 source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '888'
-ht-degree: 66%
+ht-degree: 74%
 
 ---
 
@@ -25,9 +25,9 @@ Mises à jour des fonctionnalités existantes dans Adobe Experience Platform 
 
 ## Système d’[!DNL Experience Data Model] (XDM) {#xdm}
 
-La normalisation et l’interopérabilité sont des concepts clés pour [!DNL Experience Platform]. Le [!DNL Experience Data Model] (XDM), piloté par Adobe, vise à normaliser les données d’expérience client et à définir des schémas pour la gestion de l’expérience client.
+La normalisation et l’interopérabilité sont des concepts clés pour [!DNL Experience Platform]. Le modèle de données [!DNL Experience Data Model] d’expérience (XDM), piloté par Adobe, vise à normaliser les données d’expérience client et à définir des schémas pour la gestion de l’expérience client.
 
-XDM est une spécification documentée publiquement conçue pour améliorer la puissance des expériences numériques. Elle fournit des structures et des définitions communes à toutes les applications pour communiquer avec des services sur Adobe Experience Platform. En adhérant aux normes XDM, toutes les données d’expérience client peuvent être intégrées dans une représentation commune afin de fournir des informations plus rapidement et de manière plus intégrée. Vous pouvez obtenir des informations précieuses à partir des actions des clients, définir des types de clients par le biais de segments et utiliser les attributs du client à des fins de personnalisation.
+XDM est une spécification documentée publiquement conçue pour améliorer la puissance des expériences digitales. Elle fournit des structures et des définitions communes à toutes les applications pour communiquer avec des services sur Adobe Experience Platform. En adhérant aux normes XDM, toutes les données d’expérience client peuvent être intégrées dans une représentation commune afin de fournir des informations plus rapidement et de manière plus intégrée. Vous pouvez obtenir des informations précieuses à partir des actions des clients, définir des types de clients par le biais de segments et utiliser les attributs du client à des fins de personnalisation.
 
 **Nouvelles fonctionnalités**
 
@@ -50,9 +50,9 @@ Les nouvelles réglementations légales et organisationnelles donnent aux utilis
 
 | Fonctionnalité | Description |
 |--- | ---|
-| [!DNL Privacy Service] rebranding | L’ancien &quot;service RGPD&quot; a été renommé [!DNL Privacy Service] car le service s’est développé pour prendre en charge d’autres réglementations en plus du RGPD. |
-| Nouveaux points de terminaison de l’API | Chemin d’accès de base pour la variable [!DNL Privacy Service] Mise à jour de l’API depuis `/data/privacy/gdpr` to `/data/core/privacy/jobs`. |
-| Nouvelle propriété `regulation` requise | Lors de la création de tâches dans [!DNL Privacy Service] API, une `regulation` doit être fournie dans le payload de la requête pour indiquer la réglementation sous laquelle effectuer le suivi de la tâche. Les valeurs acceptées sont `gdpr` et `ccpa`. |
+| Nouveau nom [!DNL Privacy Service] | Le « Service RGPD » a été renommé [!DNL Privacy Service], ce service ayant été élargi pour prendre en compte des réglementations autres que le RGPD. |
+| Nouveaux points d’entrée de l’API | Le chemin d’accès de base de l’API [!DNL Privacy Service] (`/data/privacy/gdpr`) a été remplacé par `/data/core/privacy/jobs`.. |
+| Nouvelle propriété `regulation` requise | Lors de la création de tâches dans l’API [!DNL Privacy Service], une propriété `regulation` doit être fournie dans la payload de la demande pour indiquer la réglementation à prendre en compte pour effectuer le suivi de la tâche. Les valeurs acceptées sont `gdpr` et `ccpa`. |
 | Prise en charge de [!DNL Adobe Primetime Authentication] | [!DNL Privacy Service] accepte désormais les demandes d’accès/de suppression provenant d’Adobe [!DNL Primetime Authentication], à l’aide de `primetimeAuthentication` comme valeur de produit. |
 | Améliorations de l’interface utilisateur de Privacy Service | Pages de suivi des tâches distinctes pour les règlements RGPD et CCPA. Nouvelle liste déroulante **Type de règlement **pour basculer entre les données de suivi pour le RGPD et le CCPA. |
 

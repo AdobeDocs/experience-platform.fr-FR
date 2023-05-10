@@ -1,6 +1,6 @@
 ---
-title: Notes de mise à jour de Adobe Experience Platform - Août 2021
-description: Notes de mise à jour d’août 2021 pour Adobe Experience Platform.
+title: Notes de mise à jour d’Adobe Experience Platform - Août 2021
+description: Les notes de mise à jour d’août 2021 pour Adobe Experience Platform.
 doc-type: release notes
 last-update: August 25, 2021
 author: ens28527
@@ -8,7 +8,7 @@ exl-id: 0513b9dc-b16c-43b3-8e17-4be4499308d4
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '712'
-ht-degree: 89%
+ht-degree: 98%
 
 ---
 
@@ -61,13 +61,13 @@ Pour plus dʼinformations sur ce service, voir la [présentation dʼObservabilit
 
 ## Profil client en temps réel {#profile}
 
-Adobe Experience Platform vous permet d’offrir aux clients des expériences coordonnées, cohérentes et pertinentes, quel que soit l’endroit ou le moment où ils interagissent avec votre marque. Real-Time Customer Profile offre une vue d’ensemble de chaque client qui combine des données issues de plusieurs canaux, notamment des données en ligne, hors ligne, CRM et tierces. Le Profil vous permet de consolider vos données client en une vue unifiée offrant un compte horodaté et exploitable de chaque interaction client.
+Adobe Experience Platform vous permet d’offrir aux clients des expériences coordonnées, cohérentes et pertinentes, quel que soit l’endroit ou le moment où ils interagissent avec votre marque. Le profil client en temps réel offre une vue holistique de chaque client qui combine des données issues de plusieurs canaux, notamment des données en ligne, hors ligne, CRM et tierces. Le Profil vous permet de consolider vos données client en une vue unifiée offrant un compte horodaté et exploitable de chaque interaction client.
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
-| Parcourir les profils par stratégie de fusion ou identité | Lors de lʼexploration des profils dans Experience Platform, vous pouvez désormais naviguer par stratégie de fusion pour prévisualiser 20 profils dʼexemple en fonction de la stratégie de fusion sélectionnée. Vous pouvez également naviguer par identité afin de rechercher un profil spécifique à lʼaide dʼun espace de noms dʼidentité et dʼune valeur dʼidentité associée. Pour plus d’informations, voir [Guide de l’interface utilisateur de Real-Time Customer Profile](../../profile/ui/user-guide.md). |
+| Parcourir les profils par politique de fusion ou identité | Lors de lʼexploration des profils dans Experience Platform, vous pouvez désormais naviguer par politique de fusion pour prévisualiser 20 profils dʼexemple en fonction de la politique de fusion sélectionnée. Vous pouvez également naviguer par identité afin de rechercher un profil spécifique à lʼaide dʼun espace de noms dʼidentité et dʼune valeur dʼidentité associée. Pour plus d’informations, voir [Guide de l’interface utilisateur de Real-Time Customer Profile](../../profile/ui/user-guide.md). |
 
-Pour en savoir plus sur Real-time Customer Profile, notamment des tutoriels et des bonnes pratiques concernant l’utilisation des données de profil, commencez par lire la section [Présentation de Real-Time Customer Profile](../../profile/home.md).
+Pour en savoir plus sur le profil client en temps réel, notamment les bonnes pratiques et les tutoriels relatifs à lʼutilisation des données de profil, consultez la [vue d’ensemble de Real-Time Customer Profile](../../profile/home.md).
 
 ## Sources {#sources}
 

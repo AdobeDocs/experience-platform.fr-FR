@@ -5,8 +5,8 @@ description: Ce document présente un aperçu du groupe de champs du schéma de 
 exl-id: df4bb525-c2d3-4e1d-921f-903142a570ac
 source-git-commit: afbbdfff4346ab5240927f5703d3a06676776ea8
 workflow-type: tm+mt
-source-wordcount: '652'
-ht-degree: 5%
+source-wordcount: '649'
+ht-degree: 4%
 
 ---
 
@@ -61,7 +61,7 @@ La structure de chaque objet fournie sous `flightReservations` est fourni ci-des
 | `ticketNumber` | Chaîne | Numéro ou identifiant de la réservation. |
 | `tripType` | Chaîne | Indique si la réservation est pour un aller simple, un aller-retour ou un voyage dans plusieurs villes. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Pour plus d’informations sur le groupe de champs, reportez-vous au référentiel XDM public :
 

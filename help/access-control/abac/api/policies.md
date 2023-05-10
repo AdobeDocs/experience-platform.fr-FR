@@ -27,7 +27,7 @@ Les politiques de contrôle d&#39;accès sont des déclarations qui rassemblent 
 
 Le point de terminaison API utilisé dans ce guide fait partie de l’API de contrôle d’accès basé sur les attributs. Avant de continuer, consultez le [guide de prise en main](./getting-started.md) pour obtenir des liens vers la documentation associée, un guide de lecture des exemples d’appels API dans ce document et des informations importantes sur les en-têtes requis pour réussir des appels vers n’importe quelle API d’Experience Platform.
 
-## Récupération dʼune liste de stratégies {#list}
+## Récupération dʼune liste de politiques {#list}
 
 Envoyez une requête de GET à la fonction `/policies` point de terminaison pour répertorier toutes les stratégies existantes dans votre organisation.
 
@@ -140,7 +140,7 @@ Une réponse réussie renvoie une liste des stratégies existantes.
 | `modifiedAt` | Heure de la dernière mise à jour de la stratégie. Le `modifiedAt` s’affiche dans l’horodatage d’époque unix. |
 | `name` | Nom de la stratégie. |
 | `description` | (Facultatif) Une propriété qui peut être ajoutée pour fournir des informations supplémentaires sur une stratégie spécifique. |
-| `status` | État actuel dʼune stratégie. Cette propriété définit si une stratégie est actuellement `active` ou `inactive`. |
+| `status` | État actuel dʼune politique. Cette propriété définit si une stratégie est actuellement `active` ou `inactive`. |
 | `subjectCondition` | Conditions appliquées à un sujet. Un sujet est un utilisateur avec certains attributs qui demande l’accès à une ressource pour effectuer une action. Dans ce cas, `subjectCondition` sont des conditions de type requête appliquées aux attributs d’objet. |
 | `rules` | Ensemble de règles qui définissent une stratégie. Les règles définissent les combinaisons d’attributs autorisées pour que le sujet exécute correctement une action sur la ressource. |
 | `rules.effect` | Effet résultant de la prise en compte des valeurs pour `action`, `condition` et `resource`. Les valeurs possibles sont les suivantes : `permit`, `deny`ou `indeterminate`. |
@@ -222,7 +222,7 @@ Une requête réussie renvoie des informations sur l’ID de stratégie interrog
 | `modifiedAt` | Heure de la dernière mise à jour de la stratégie. Le `modifiedAt` s’affiche dans l’horodatage d’époque unix. |
 | `name` | Nom de la stratégie. |
 | `description` | (Facultatif) Une propriété qui peut être ajoutée pour fournir des informations supplémentaires sur une stratégie spécifique. |
-| `status` | État actuel dʼune stratégie. Cette propriété définit si une stratégie est actuellement `active` ou `inactive`. |
+| `status` | État actuel dʼune politique. Cette propriété définit si une stratégie est actuellement `active` ou `inactive`. |
 | `subjectCondition` | Conditions appliquées à un sujet. Un sujet est un utilisateur avec certains attributs qui demande l’accès à une ressource pour effectuer une action. Dans ce cas, `subjectCondition` sont des conditions de type requête appliquées aux attributs d’objet. |
 | `rules` | Ensemble de règles qui définissent une stratégie. Les règles définissent les combinaisons d’attributs autorisées pour que le sujet exécute correctement une action sur la ressource. |
 | `rules.effect` | Effet résultant de la prise en compte des valeurs pour `action`, `condition` et `resource`. Les valeurs possibles sont les suivantes : `permit`, `deny`ou `indeterminate`. |
@@ -231,7 +231,7 @@ Une requête réussie renvoie des informations sur l’ID de stratégie interrog
 | `rules.action` | Action autorisée d’un sujet par rapport à une ressource interrogée. Les valeurs possibles sont les suivantes : `read`, `create`, `edit`, et `delete`. |
 
 
-## Création d’une stratégie {#create}
+## Création d’une politique {#create}
 
 Pour créer une stratégie, envoyez une requête de POST à la fonction `/policies` point de terminaison .
 
@@ -472,7 +472,7 @@ DELETE /policies/{POLICY_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| {POLICY_ID} | Lʼidentifiant de la stratégie que vous souhaitez supprimer. |
+| {POLICY_ID} | Lʼidentifiant de la politique que vous souhaitez supprimer. |
 
 **Requête**
 

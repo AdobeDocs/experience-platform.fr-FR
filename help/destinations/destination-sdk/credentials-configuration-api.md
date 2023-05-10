@@ -190,7 +190,7 @@ La réponse suivante renvoie un état HTTP 200 avec une liste des configurations
 
 ## Mettre à jour une configuration dʼinformations d’identification existante {#update}
 
-Vous pouvez mettre à jour une configuration dʼinformations d’identification existante en effectuant une requête PUT au point de terminaison `/authoring/credentials` et en fournissant lʼidentifiant de lʼinstance de la configuration dʼinformations d’identification à mettre à jour. Dans le corps de l’appel, indiquez la configuration dʼinformations d’identification mise à jour.
+Vous pouvez mettre à jour une configuration dʼinformations d’identification existante en effectuant une requête PUT au point d’entrée `/authoring/credentials` et en fournissant lʼidentifiant de lʼinstance de la configuration dʼinformations d’identification à mettre à jour. Dans le corps de l’appel, indiquez la configuration dʼinformations d’identification mise à jour.
 
 **Format d’API**
 
@@ -234,7 +234,7 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/credentials
 
 ## Récupérer une configuration dʼinformations d’identification spécifique {#get}
 
-Vous pouvez récupérer des informations détaillées sur une configuration dʼinformations d’identification spécifique en effectuant une requête GET au point de terminaison `/authoring/credentials` et en indiquant l’identifiant de l’instance de la configuration dʼinformations d’identification à mettre à jour.
+Vous pouvez récupérer des informations détaillées sur une configuration dʼinformations d’identification spécifique en effectuant une requête GET au point d’entrée `/authoring/credentials` et en indiquant l’identifiant de l’instance de la configuration dʼinformations d’identification à mettre à jour.
 
 **Format d’API**
 
@@ -280,7 +280,7 @@ Une réponse réussie renvoie un état HTTP 200 avec des informations détaill�
 
 ## Supprimer une configuration d’informations d’identification spécifique {#delete}
 
-Vous pouvez supprimer une configuration dʼinformations dʼidentification spécifiée en effectuant une requête DELETE vers le point de terminaison `/authoring/credentials` et en fournissant l’identifiant de la configuration dʼinformations dʼidentification à supprimer dans le chemin d’accès de la requête.
+Vous pouvez supprimer une configuration dʼinformations dʼidentification spécifiée en effectuant une requête DELETE vers le point d’entrée `/authoring/credentials` et en fournissant l’identifiant de la configuration dʼinformations dʼidentification à supprimer dans le chemin d’accès de la requête.
 
 **Format d’API**
 
@@ -312,4 +312,4 @@ Les points d’entrée de l’API Destination SDK suivent les principes généra
 
 ## Étapes suivantes
 
-Vous êtes arrivé au bout de ce document. À présent, vous savez quand utiliser le point de terminaison des informations d’identification et comment créer une configuration dʼinformations d’identification à l’aide du point de terminaison `/authoring/credentials` de l’API ou du point de terminaison `/authoring/destinations`. Poursuivez votre apprentissage dans la section [Comment utiliser Destination SDK pour configurer votre destination](./configure-destination-instructions.md) et obtenez une vue dʼensemble du processus de configuration de votre destination.
+Vous êtes arrivé au bout de ce document. À présent, vous savez quand utiliser le point d’entrée des informations d’identification et comment créer une configuration dʼinformations d’identification à l’aide du point d’entrée `/authoring/credentials` de l’API ou du point d’entrée `/authoring/destinations`. Poursuivez votre apprentissage dans la section [Comment utiliser Destination SDK pour configurer votre destination](./configure-destination-instructions.md) et obtenez une vue dʼensemble du processus de configuration de votre destination.

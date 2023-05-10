@@ -30,9 +30,9 @@ Ce tutoriel nécessite une compréhension pratique de [!DNL Experience Data Mode
 * [Système XDM en Experience Platform](../home.md): Présentation de XDM et de son implémentation dans [!DNL Experience Platform].
    * [Principes de base de composition des schémas](../schema/composition.md) : une présentation des blocs de création de schémas XDM.
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
-* [Sandbox](../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
+* [Sandbox](../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
 
-Avant de commencer ce tutoriel, veuillez consulter le [guide de développement](../api/getting-started.md) pour trouver les informations importantes à connaître afin d’effectuer avec succès des appels vers l’API [!DNL Schema Registry] Cela inclut votre `{TENANT_ID}`, le concept de « conteneurs » et les en-têtes requis pour effectuer des requêtes (avec une attention particulière à l’en-tête et à ses valeurs possibles).[!DNL Accept]
+Avant de commencer ce tutoriel, veuillez consulter le [guide de développement](../api/getting-started.md) pour trouver les informations importantes à connaître afin d’effectuer avec succès des appels vers l’API [!DNL Schema Registry] Cela inclut votre `{TENANT_ID}`, le concept de « conteneurs » et les en-têtes requis pour effectuer des requêtes (avec une attention particulière à l’en-tête [!DNL Accept] et à ses valeurs possibles).
 
 ## Définition d’un schéma source et de référence {#define-schemas}
 
@@ -44,7 +44,7 @@ Les relations de schéma sont représentées par une **schéma source** avoir un
 >
 >Pour établir une relation, les deux schémas doivent avoir défini des identités Principales et être activés pour [!DNL Real-Time Customer Profile]. Voir la section sur [activation d’un schéma à utiliser dans Profile](./create-schema-api.md#profile) dans le tutoriel sur la création de schémas si vous avez besoin de conseils sur la configuration de vos schémas en conséquence.
 
-Pour définir une relation entre deux schémas, vous devez d’abord acquérir les valeurs `$id` des deux schémas. Si vous connaissez les noms d’affichage (`title`) des schémas, vous pouvez trouver leurs valeurs `$id` en envoyant une requête GET au point de terminaison `/tenant/schemas` dans l’API [!DNL Schema Registry]
+Pour définir une relation entre deux schémas, vous devez d’abord acquérir les valeurs `$id` des deux schémas. Si vous connaissez les noms d’affichage (`title`) des schémas, vous pouvez trouver leurs valeurs `$id` en envoyant une requête GET au point d’entrée `/tenant/schemas` dans l’API [!DNL Schema Registry]
 
 **Format d’API**
 

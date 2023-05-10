@@ -17,7 +17,7 @@ ht-degree: 100%
 
 >[!IMPORTANT]
 >
->L’application de libellés au niveau du jeu de données est uniquement prise en charge pour les cas d’utilisation de la gouvernance des données. Si vous essayez de créer des stratégies d’accès pour les données, vous devez [appliquer des libellés au schéma](../../xdm/tutorials/labels.md) sur lequel le jeu de données est basé. Consultez la présentation du [contrôle d’accès basé sur les attributs](../../access-control/abac/overview.md) pour plus d’informations.
+>L’application de libellés au niveau du jeu de données est uniquement prise en charge pour les cas d’utilisation de la gouvernance des données. Si vous essayez de créer des politiques d’accès pour les données, vous devez [appliquer des libellés au schéma](../../xdm/tutorials/labels.md) sur lequel le jeu de données est basé. Consultez la présentation du [contrôle d’accès basé sur les attributs](../../access-control/abac/overview.md) pour plus d’informations.
 
 Ce document explique la gestion des étiquettes pour les jeux de données et les champs à lʼaide de [!DNL Dataset Service API]. Pour obtenir des instructions sur la gestion des étiquettes dʼutilisation des données elles-mêmes à lʼaide dʼappels API, consultez le [guide de point d’entrée des étiquettes](../api/labels.md) pour [!DNL Policy Service API].
 
@@ -158,6 +158,6 @@ Une réponse réussie renvoie le jeu de libellés mis à jour pour le jeu de don
 
 ## Étapes suivantes
 
-En lisant ce document, vous avez appris la gestion des libellés dʼutilisation des données pour les jeux de données et les champs à lʼaide de lʼAPI [!DNL Dataset Service]. Vous pouvez maintenant définir les [stratégies d’utilisation des données](../policies/overview.md) et les [stratégies de contrôle d’accès](../../access-control/abac/ui/policies.md) selon les libellés que vous avez appliqués.
+En lisant ce document, vous avez appris la gestion des libellés dʼutilisation des données pour les jeux de données et les champs à lʼaide de lʼAPI [!DNL Dataset Service]. Vous pouvez maintenant définir les [politiques d’utilisation des données](../policies/overview.md) et les [politiques de contrôle d’accès](../../access-control/abac/ui/policies.md) selon les libellés que vous avez appliqués.
 
 Pour plus dʼinformations sur la gestion des jeux de données dans [!DNL Experience Platform], consultez la [présentation des jeux de données](../../catalog/datasets/overview.md).

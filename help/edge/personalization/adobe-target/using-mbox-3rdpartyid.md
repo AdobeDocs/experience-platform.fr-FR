@@ -14,7 +14,7 @@ ht-degree: 9%
 
 mbox3rdPartyId dans Adobe Target correspond à l’identifiant visiteur de votre entreprise, tel que l’identifiant de membre pour le programme de fidélité de votre entreprise.
 
-Lorsqu’un visiteur se connecte au site d’une entreprise, celle-ci crée généralement un identifiant lié au compte, à la carte de fidélité, au numéro de membre ou à tout autre identifiant applicable du visiteur pour cette entreprise. [En savoir plus](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/3rd-party-id.html?lang=en#)
+Lorsqu’un visiteur se connecte au site d’une entreprise, celle-ci crée généralement un identifiant lié au compte, à la carte de fidélité, au numéro de membre ou à tout autre identifiant applicable du visiteur pour cette entreprise. [En savoir plus](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/3rd-party-id.html?lang=en#).
 
 
 ## Utilisation `mbox3rdPartyId` avec le SDK Web

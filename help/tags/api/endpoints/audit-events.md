@@ -13,9 +13,9 @@ ht-degree: 100%
 
 >[!WARNING]
 >
->L’implémentation du point d&#39;entrée `/audit_events` se fait en flux continu à mesure que des fonctionnalités sont ajoutées, supprimées et retravaillées.
+>L’implémentation du point d’entrée `/audit_events` se fait en flux continu à mesure que des fonctionnalités sont ajoutées, supprimées et retravaillées.
 
-Un événement d’audit est un enregistrement d’une modification spécifique apportée à une autre ressource de l’API Reactor; il est généré au moment de la modification. Il s’agit d’événements système auxquels vous pouvez vous abonner en utilisant un [rappel](./callbacks.md). Le point d&#39;entrée `/audit_events` de l’API Reactor vous permet de gérer par programmation les événements d&#39;audit dans votre application d’expérience.
+Un événement d’audit est un enregistrement d’une modification spécifique apportée à une autre ressource de l’API Reactor; il est généré au moment de la modification. Il s’agit d’événements système auxquels vous pouvez vous abonner en utilisant un [rappel](./callbacks.md). Le point d’entrée `/audit_events` de l’API Reactor vous permet de gérer par programmation les événements d’audit dans votre application d’expérience.
 
 Les événements d’audit sont structurés sous la forme `{RESOURCE_TYPE}.{EVENT}`, par exemple `build.created` ou `rule.updated`.
 

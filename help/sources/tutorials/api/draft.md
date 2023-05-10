@@ -3,8 +3,9 @@ keywords: Experience Platform;accueil;rubriques les plus consultées;flow servic
 title: Créer des brouillons de flux de données à l’aide de l’API Flow Service
 description: Découvrez comment définir vos flux de données sur le statut de brouillon à l’aide de l’API Flow Service.
 badge: label="New Feature" type="Positive"
-source-git-commit: d093e34ae4b353d1ed6db922b6da66cf23f25c48
-workflow-type: ht
+exl-id: aad6a302-1905-4a23-bc3d-39e76c9a22da
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+workflow-type: tm+mt
 source-wordcount: '591'
 ht-degree: 100%
 

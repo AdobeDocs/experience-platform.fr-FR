@@ -5,8 +5,8 @@ description: Ce document présente les configurations que vous devez préparer p
 exl-id: f814c883-b529-4ecc-bedd-f638bf0014b5
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '1690'
-ht-degree: 50%
+source-wordcount: '1687'
+ht-degree: 49%
 
 ---
 
@@ -265,7 +265,7 @@ Voir [annexe](#source-spec) pour un exemple de spécification de source entière
 | `sourceSpec.attributes.spec.properties.scheduleParams.scheduleEndParamFormat` | Définit le format pris en charge pour la variable `scheduleEndParamName`. | `yyyy-MM-ddTHH:mm:ssZ` |
 | `sourceSpec.spec.properties` | Définit les paramètres fournis par l’utilisateur pour récupérer les valeurs de ressource. | Voir [ressources supplémentaires](#user-input) pour un exemple de paramètres entrés par l’utilisateur pour `spec.properties`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Ressources supplémentaires {#appendix}
 

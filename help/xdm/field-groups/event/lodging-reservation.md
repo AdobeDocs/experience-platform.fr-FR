@@ -5,7 +5,7 @@ description: Ce document présente un aperçu du groupe de champs Schéma de ré
 exl-id: f0eafc83-21f1-483d-9397-1133e3777699
 source-git-commit: afbbdfff4346ab5240927f5703d3a06676776ea8
 workflow-type: tm+mt
-source-wordcount: '682'
+source-wordcount: '679'
 ht-degree: 7%
 
 ---
@@ -68,7 +68,7 @@ La structure de chaque objet fournie sous `lodgingReservations` est fourni ci-de
 | `smoking` | Booléen | Indique si la pièce permet de fumer. |
 | `tripType` | Chaîne | Indique si la réservation est pour un aller simple, un aller-retour ou un voyage dans plusieurs villes. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Pour plus d’informations sur le groupe de champs, reportez-vous au référentiel XDM public :
 

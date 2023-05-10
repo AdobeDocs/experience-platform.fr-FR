@@ -7,7 +7,7 @@ exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
 source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
 source-wordcount: '1476'
-ht-degree: 39%
+ht-degree: 38%
 
 ---
 
@@ -107,7 +107,7 @@ L’étape **[!UICONTROL Ajouter les données]** apparaît. Téléchargez le fic
 
 ## Activation d’un jeu de données pour Real-time Customer Profile {#enable-profile}
 
-Chaque jeu de données a la possibilité d’enrichir les profils clients des données qu’ils ingèrent. Pour ce faire, le schéma auquel le jeu de données adhère doit être compatible avec [!DNL Real-Time Customer Profile]. Un schéma compatible répond aux critères suivants :
+Chaque jeu de données a la possibilité d’enrichir les profils clients des données qu’ils ingèrent. Pour ce faire, le schéma auquel le jeu de données adhère doit être compatible pour être utilisé dans [!DNL Real-Time Customer Profile]. Un schéma compatible répond aux critères suivants :
 
 * Le schéma comporte au moins un attribut défini comme propriété d’identité.
 * Le schéma comporte au moins une propriété d’identité définie comme identité principale.
@@ -124,7 +124,7 @@ Pour activer un jeu de données pour Profile, accédez à son **[!UICONTROL Acti
 
 ## Gestion et application de la gouvernance des données sur un jeu de données
 
-Les libellés d’utilisation des données vous permettent de classer les jeux de données et les champs en fonction des stratégies d’utilisation qui s’appliquent à ces données. Pour en savoir plus sur les libellés, consultez la [Présentation de la gouvernance des données](../../data-governance/home.md) ou reportez-vous au [guide d’utilisation des libellés d’utilisation des données](../../data-governance/labels/overview.md) pour savoir comment appliquer des libellés à vos jeux de données.
+Les libellés d’utilisation des données vous permettent de classer les jeux de données et les champs en fonction des politiques d’utilisation qui s’appliquent à ces données. Pour en savoir plus sur les libellés, consultez la [Présentation de la gouvernance des données](../../data-governance/home.md) ou reportez-vous au [guide d’utilisation des libellés d’utilisation des données](../../data-governance/labels/overview.md) pour savoir comment appliquer des libellés à vos jeux de données.
 
 ## Suppression d’un jeu de données {#delete}
 

@@ -1,9 +1,10 @@
 ---
 title: Notes de mise à jour d’Adobe Experience Platform - Janvier 2023
 description: Notes de mise à jour de janvier 2023 pour Adobe Experience Platform.
-source-git-commit: 6388c72aa0be8f5f91efaaa6a0edd22f3eb99de8
-workflow-type: ht
-source-wordcount: '2432'
+exl-id: 461898ce-5683-4ab1-9167-ac25843a1ff8
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+workflow-type: tm+mt
+source-wordcount: '2414'
 ht-degree: 100%
 
 ---
@@ -19,7 +20,7 @@ Mises à jour des fonctionnalités existantes dans Adobe Experience Platform 
 - [Collecte de données](#data-collection)
 - [[!DNL Destinations]](#destinations)
 - [Modèle de données d’expérience (XDM)](#xdm)
-- [Profil client en temps réel](#profile)
+- [Real-time Customer Profile](#profile)
 - [Segmentation Service](#segmentation)
 - [Sources](#sources)
 
@@ -38,7 +39,7 @@ Le service IA dédiée à l’attribution est utilisé pour attribuer des crédi
 | Conformité HIPAA | Les clients de Healthcare Shield peuvent désormais recevoir, utiliser, gérer ou transmettre des informations de santé protégées dans le service IA dédiée à l’attribution et dans certaines autres applications basées sur Experience Platform. Healthcare Shield est destiné aux clients du secteur de la santé qui sont soit une entité couverte, soit un partenaire commercial soumis à la loi américaine HIPAA. Pour plus d’informations, consultez la documentation sur la loi [HIPAA et les produits et services Adobe](https://www.adobe.com/trust/compliance/hipaa-ready.html) |
 | Modifier des colonnes de jeux de données de score supplémentaires | Il est désormais possible d&#39;ajouter ou supprimer des colonnes de jeux de données de score supplémentaires (colonnes de rapports) lorsque des modèles existants sont modifiés. Cela permet d’étendre la flexibilité des scores d’attribution afin d’obtenir des insights sur les dimensions supplémentaires une fois qu’un modèle a déjà été créé. Consultez le [Guide de l’interface utilisateur du service Attribution](../../intelligent-services/attribution-ai/user-guide.md) pour en savoir plus. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Consultez la présentation générale des [Services AI/ML](../../intelligent-services/attribution-ai/overview.md) pour plus d’informations.
 
@@ -52,7 +53,7 @@ L’application IA dédiée aux clients pour Real-time Customer Data Platform es
 | ------- | ----------- |
 | Conformité HIPAA | Les clients de Healthcare Shield peuvent désormais recevoir, utiliser, gérer ou transmettre des informations de santé protégées dans IA dédiée aux clients pour Real-time Customer Data Platform et certaines autres applications basées sur Experience Platform. Healthcare Shield est destiné aux clients du secteur de la santé qui sont soit une entité couverte, soit un partenaire commercial soumis à la loi américaine HIPAA. Pour plus d’informations, consultez la documentation sur la loi [HIPAA et les produits et services Adobe](https://www.adobe.com/trust/compliance/hipaa-ready.html). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Consultez la présentation générale des [Services IA/ML](../../intelligent-services/customer-ai/overview.md) pour plus d’informations.
 
@@ -66,7 +67,7 @@ Adobe Assurance permet de contrôler, de tester, de simuler et de valider la man
 | ------- | ----------- |
 | Éditeur de validation | De nouvelles améliorations ont été apportées à l’éditeur de validation. Ces améliorations incluent des colonnes de validation, de nouveaux outils de création de code et des vues améliorées. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Pour plus d’informations sur l’assurance, consultez la [documentation sur l’assurance](https://developer.adobe.com/client-sdks/documentation/platform-assurance/).
 
@@ -81,7 +82,7 @@ Adobe Experience Platform fournit une suite de technologies qui vous permetten
 | Nouvel écran d’accueil | La page d’accueil de l’interface utilisateur de collecte de données a été mise à jour afin d’inclure des informations d’intégration et des liens utiles pour favoriser la productivité. Cela inclut :<ol><li>Documentation et workflows recommandés pour commencer</li><li>Propriétés, règles et éléments de données récents</li><li>Extensions populaires</li><li>Nouvelles mises à jour des extensions avec une fonction d’installation rapide</li></ol> |
 | Envoyer des données à [!DNL Google Ads] en utilisant le transfert d’événement | Vous pouvez désormais utiliser l’[[!DNL Google Ads Enhanced Conversions] extension API](../../tags/extensions/server/google-ads-enhanced-conversions/overview.md) pour le transfert d’événement, combiné avec [Google Oauth 2 secrets](../../tags/ui/event-forwarding/secrets.md#google-oauth2), pour envoyer en toute sécurité des données côté serveur à [!DNL Google Ads] en temps réel. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Destinations (mises à jour le 2 février) {#destinations}
 
@@ -160,7 +161,7 @@ XDM est une spécification Open Source qui fournit des structures et des défini
 | Groupe de champs | [[!UICONTROL Déclencheurs météo]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/severe-triggers.schema.json) | Le champ `weatherTriggers` est maintenant imbriqué sous un objet `weather`. |
 | Groupe de champs | [[!UICONTROL Comptes professionnels associés à XDM]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/account/related-accounts.schema.json) | Le groupe de champs est maintenant stable. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Pour plus d’informations sur XDM dans Platform, consultez la [présentation du système XDM](../../xdm/home.md).
 
@@ -176,7 +177,7 @@ Après l’obsolescence, les profils qualifiés dans un segment seront représen
 
 Cette modification peut vous impacter si vous utilisez des [destinations d’entreprise](../../destinations/destination-types.md#streaming-profile-export) (Amazon Kinesis, Azure Event Hubs, API HTTP) et avez mis en place en aval des processus automatisés, en fonction des statuts `Existing`. Vérifiez vos intégrations en aval si c’est votre cas. Si vous souhaitez identifier les profils nouvellement qualifiés au-delà d’un certain temps, envisagez d’utiliser une combinaison du statut `Realized` et du `lastQualificationTime` dans votre mappage d’appartenance aux segments. Pour plus d’informations, contactez votre représentant ou représentante Adobe.
 
-Pour en savoir plus sur Real-Time Customer Profile, notamment les bonnes pratiques et les tutoriels relatifs à lʼutilisation des données de profil, consultez la [présentation de Real-Time Customer Profile](../../profile/home.md).
+Pour en savoir plus sur le profil client en temps réel, notamment les bonnes pratiques et les tutoriels relatifs à lʼutilisation des données de profil, consultez la [présentation du profil client en temps réel](../../profile/home.md).
 
 ## Segmentation Service {#segmentation}
 
@@ -190,7 +191,7 @@ Pour en savoir plus sur Real-Time Customer Profile, notamment les bonnes pratiqu
 | Expiration de l’appartenance à une audience externe | Par défaut, les appartenances aux audiences externes sont conservées pendant 30 jours. Pour les conserver plus longtemps, utilisez le champ `validUntil` lors de l’ingestion des données d’audience. |
 | Expiration de l’appartenance à un segment généré par Platform | Toute appartenance à un segment avec l’état `Exited` pendant plus de 30 jours sera sujette à suppression, en fonction du champ `lastQualificationTime`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Pour plus d’informations sur [!DNL Segmentation Service], consultez la [présentation de la segmentation](../../segmentation/home.md).
 

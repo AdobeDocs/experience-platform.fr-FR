@@ -5,7 +5,7 @@ title: Expiration des données de profils pseudonymes
 description: Ce document fournit des conseils généraux sur la configuration de l’expiration des données de profils pseudonymes dans Adobe Experience Platform.
 exl-id: e8d31718-0b50-44b5-a15b-17668a063a9c
 source-git-commit: 07ed7eb9644b2e8cc4da02743c48037afc247614
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '912'
 ht-degree: 100%
 

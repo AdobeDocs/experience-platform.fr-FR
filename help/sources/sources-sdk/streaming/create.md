@@ -3,10 +3,11 @@ title: Création d’une spécification de connexion pour le SDK de diffusion en
 description: Le document suivant décrit les étapes à suivre pour créer une spécification de connexion à l’aide de l’API Flow Service et intégrer une nouvelle source par le biais de sources en libre-service.
 hide: true
 hidefromtoc: true
-source-git-commit: 6b78ed695bca5912c9af4371a8423fdcd7471bde
+exl-id: ad8f6004-4e82-49b5-aede-413d72a1482d
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
-source-wordcount: '751'
-ht-degree: 38%
+source-wordcount: '748'
+ht-degree: 37%
 
 ---
 
@@ -44,7 +45,7 @@ Une fois fourni, vous devez structurer votre référentiel Git privé comme suit
 | {your_source}-label.txt | Le nom de votre source tel qu’il doit apparaître dans le catalogue des sources Experience Platform. | Medallia |
 | {your_source}-connectionSpec.json | Un fichier JSON contenant la spécification de connexion de votre source. Ce fichier n’est pas initialement requis, car vous renseignez votre spécification de connexion à mesure que vous suivez ce guide. | `medallia-connectionSpec.json` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!TIP]
 >

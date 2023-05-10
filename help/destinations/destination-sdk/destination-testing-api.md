@@ -4,8 +4,8 @@ title: Opérations de l’API pour les tests de destination
 exl-id: 2b54250d-ec30-4ad7-a8be-b86b14e4f074
 source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
-source-wordcount: '646'
-ht-degree: 14%
+source-wordcount: '643'
+ht-degree: 15%
 
 ---
 
@@ -25,7 +25,7 @@ Vous pouvez utiliser la variable [Exemple d’API de génération de profil](./s
 
 >[!IMPORTANT]
 >
->* Pour utiliser cette API, vous devez disposer d’une connexion existante à votre destination dans l’interface utilisateur de l’Experience Platform. Lecture [se connecter à la destination](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=en) et [activation de profils et de segments vers une destination](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en) pour plus d’informations. Après avoir établi la connexion à votre destination, récupérez l’ID d’instance de destination que vous devez utiliser dans les appels API vers ce point de terminaison à partir de l’URL lorsque [parcourir une connexion avec votre destination ;](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html?lang=en).
+>* Pour utiliser cette API, vous devez disposer d’une connexion existante à votre destination dans l’interface utilisateur de l’Experience Platform. Lecture [se connecter à la destination](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=fr) et [activation de profils et de segments vers une destination](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en) pour plus d’informations. Après avoir établi la connexion à votre destination, récupérez l’ID d’instance de destination que vous devez utiliser dans les appels API vers ce point de terminaison à partir de l’URL lorsque [parcourir une connexion avec votre destination ;](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html?lang=en).
    >![Image de l’interface utilisateur comment obtenir l’ID d’instance de destination](./assets/get-destination-instance-id.png)
 
 
@@ -161,7 +161,7 @@ Une réponse réussie renvoie un état HTTP 200 avec la réponse de l’API prov
 | `results.httpCalls.response` | Inclut la réponse reçue par l’Adobe de votre destination. |
 | `inputProfiles` | Inclut les profils qui ont été exportés lors de l’appel vers votre destination. Les profils correspondent à votre schéma source. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Tester la configuration de votre destination avec les profils ajoutés à l’appel {#test-with-added-profiles}
 

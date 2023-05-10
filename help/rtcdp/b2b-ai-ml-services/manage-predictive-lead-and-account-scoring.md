@@ -128,7 +128,7 @@ Vous revenez alors au **[!UICONTROL Services]** où vous ne pouvez plus voir le 
 
 ## Leads Codes d’erreur de pipeline AI
 
-| Code erreur | Message d’erreur |
+| Code d’erreur | Message d’erreur |
 | --- | --- |
 | 401 | ERREUR 401. Le pipeline Leads AI est arrêté : comptes valides insuffisants pour la notation de compte. Nombre de comptes : {}. |
 | 402 | ERREUR 402. Le pipeline Leads AI est arrêté : contacts valides insuffisants pour la notation des contacts. Nombre de contacts : {}. |
@@ -156,5 +156,5 @@ Vous revenez alors au **[!UICONTROL Services]** où vous ne pouvez plus voir le 
 
 En suivant ce tutoriel, vous pouvez désormais créer et gérer des scores. Consultez les documents suivants pour plus d’informations :
 
-* [Score prédictif de piste et de compte](/help/rtcdp/b2b-ai-ml-services/predictive-lead-and-account-scoring.md)
+* [Notation prédictive des prospects et des comptes](/help/rtcdp/b2b-ai-ml-services/predictive-lead-and-account-scoring.md)
 * [Surveillance des tâches de notation de compte et de piste prédictives](/help/dataflows/ui/b2b/monitor-profile-enrichment.md)

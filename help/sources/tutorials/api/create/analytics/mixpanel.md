@@ -6,7 +6,7 @@ exl-id: 804b876d-6fd5-4a28-b33c-4ecab1ba3333
 source-git-commit: 23a6f8ee23fb67290a5bcba2673a87ce74c9e1d3
 workflow-type: tm+mt
 source-wordcount: '2050'
-ht-degree: 63%
+ht-degree: 64%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 63%
 
 >[!NOTE]
 >
->Le [!DNL Mixpanel] La source est en version bêta. Voir [présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de sources étiquetées bêta.
+>La source [!DNL Mixpanel] est en version Beta. Voir la [présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de sources étiquetées bêta. 
 
 Le tutoriel suivant décrit les étapes à suivre pour créer une connexion source et un flux de données à importer [!DNL Mixpanel] données vers Adobe Experience Platform à l’aide de la variable [API de service de flux](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
 
@@ -23,7 +23,7 @@ Le tutoriel suivant décrit les étapes à suivre pour créer une connexion sour
 Ce guide nécessite une compréhension professionnelle des composants suivants d’Experience Platform :
 
 * [Sources](../../../../home.md) : Experience Platform permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de Platform.
-* [Sandbox](../../../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuelles qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
+* [Sandbox](../../../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
 
 Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour vous connecter. [!DNL Mixpanel] en utilisant la variable [!DNL Flow Service] API.
 

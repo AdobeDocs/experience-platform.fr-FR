@@ -269,7 +269,7 @@ Deux raisons peuvent expliquer que les mesures ne soient pas disponibles pour vo
 | ----------- | ----------- |
 | 106 | Le fichier de jeu de données est vide. |
 | 118 | Le fichier CSV contient une ligne d’en-tête vide. |
-| 200 | Le lot a été accepté pour traitement et atteindra son état final : Actif ou Échec. Une fois envoyé, le lot peut être surveillé à l’aide du point de terminaison `GetBatch`. |
+| 200 | Le lot a été accepté pour traitement et atteindra son état final : Actif ou Échec. Une fois envoyé, le lot peut être surveillé à l’aide du point d’entrée `GetBatch`. |
 | 400 | Requête incorrecte. Renvoi en cas d’absence ou de chevauchement de blocs dans un lot. |
 
 [large-file-upload]: batch_data_ingestion_developer_guide.md#how-to-ingest-large-parquet-files

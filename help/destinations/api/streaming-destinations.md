@@ -79,7 +79,7 @@ Ce tutoriel vous permet de trouver dans Swagger la documentation de référence 
 
 ![Présentation des étapes de la destination : étape 1](../assets/api/streaming-destination/step1.png)
 
-Dans un premier temps, vous devez décider vers quelle destination de diffusion en continu activer les données. Pour commencer, effectuez un appel pour demander une liste des destinations disponibles auxquelles vous pouvez vous connecter et activer des segments. Effectuez la requête GET suivante auprès du point de terminaison `connectionSpecs` pour obtenir une liste des destinations disponibles :
+Dans un premier temps, vous devez décider vers quelle destination de diffusion en continu activer les données. Pour commencer, effectuez un appel pour demander une liste des destinations disponibles auxquelles vous pouvez vous connecter et activer des segments. Effectuez la requête GET suivante auprès du point d’entrée `connectionSpecs` pour obtenir une liste des destinations disponibles :
 
 **Format d’API**
 

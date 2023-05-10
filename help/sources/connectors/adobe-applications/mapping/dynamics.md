@@ -1,18 +1,18 @@
 ---
-keywords: Experience Platform;accueil;rubriques populaires;Salesforce;Salesforce;mappage de champ;mappage de champ;mappage;marketing;B2B;b2b
+keywords: Experience Platform;accueil;rubriques populaires;Salesforce;Salesforce;mappage de champ;mappage de champ;mappage;marketing;B2B;b2b
 title: Champs de mappage Microsoft Dynamics
 description: Les tableaux ci-dessous contiennent les mappages entre les champs source Microsoft Dynamics et leurs champs XDM correspondants.
 exl-id: 32f51761-5de3-4192-8f23-c1412ca12c08
 source-git-commit: a278f27223c9a5d0b97a0aa6b5d943caf5f6b10e
 workflow-type: tm+mt
-source-wordcount: '565'
-ht-degree: 14%
+source-wordcount: '541'
+ht-degree: 39%
 
 ---
 
-# [!DNL Microsoft Dynamics] mappages de champs
+# Mappages de champs [!DNL Microsoft Dynamics]
 
-Les tableaux ci-dessous contiennent les mappages entre les [!DNL Microsoft Dynamics] champs source et leurs champs XDM correspondants.
+Les tableaux ci-dessous contiennent les mappages entre les champs source [!DNL Microsoft Dynamics] et leurs champs Modèle de données d’expérience (XDM) correspondants.
 
 ## Contacts {#contacts}
 
@@ -34,9 +34,9 @@ Les tableaux ci-dessous contiennent les mappages entre les [!DNL Microsoft Dynam
 | `assistantphone` | `extendedWorkDetails.assistantDetails.phone.number` |
 | `birthdate` | `person.birthDate` |
 | `"Dynamics"` | `b2b.personKey.sourceType` |
-| `"${CRM_ORG_ID}"` | `b2b.personKey.sourceInstanceID` | La valeur de `"${CRM_ORG_ID}"` sera automatiquement remplacé. |
+| `"${CRM_ORG_ID}"` | `b2b.personKey.sourceInstanceID` | La valeur de `"${CRM_ORG_ID}"` sera automatiquement remplacée. |
 | `contactid` | `b2b.personKey.sourceID` |
-| `concat(contactid,"@${CRM_ORG_ID}.Dynamics")` | `b2b.personKey.sourceKey` | Identité principale. La valeur de `"${CRM_ORG_ID}"` sera automatiquement remplacé. |
+| `concat(contactid,"@${CRM_ORG_ID}.Dynamics")` | `b2b.personKey.sourceKey` | Identité principale. La valeur de `"${CRM_ORG_ID}"` sera automatiquement remplacée. |
 | `iif(contactid != null && contactid != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", contactid, "sourceKey", concat(contactid,"@${CRM_ORG_ID}.Dynamics")), null)` | `personComponents.sourcePersonKey` |
 | `department` | `extendedWorkDetails.departments` |
 | `fullname` | `person.name.fullName` |
@@ -57,11 +57,11 @@ Les tableaux ci-dessous contiennent les mappages entre les [!DNL Microsoft Dynam
 | `salutation` | `person.name.courtesyTitle` |
 | `telephone1` | `workPhone.number` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Prospects {#leads}
 
-| Champ source | Champ XDM cible | Remarques |
+| Champ source | Champ XDM cible | Notes |
 | --- | --- | --- |
 | `address1_addressid` | `workAddress._id` |
 | `address1_city` | `workAddress.city` |
@@ -87,24 +87,24 @@ Les tableaux ci-dessous contiennent les mappages entre les [!DNL Microsoft Dynam
 | `jobtitle` | `extendedWorkDetails.jobTitle` |
 | `lastname` | `person.name.lastName` |
 | `"Dynamics"` | `b2b.personKey.sourceType` |
-| `"${CRM_ORG_ID}"` | `b2b.personKey.sourceInstanceID` | La valeur de `"${CRM_ORG_ID}"` sera automatiquement remplacé. |
+| `"${CRM_ORG_ID}"` | `b2b.personKey.sourceInstanceID` | La valeur de `"${CRM_ORG_ID}"` sera automatiquement remplacée. |
 | `leadid` | `b2b.personKey.sourceID` |
-| `concat(leadid,"@${CRM_ORG_ID}.Dynamics")` | `b2b.personKey.sourceKey` | Identité principale. La valeur de `"${CRM_ORG_ID}"` sera automatiquement remplacé. |
+| `concat(leadid,"@${CRM_ORG_ID}.Dynamics")` | `b2b.personKey.sourceKey` | Identité principale. La valeur de `"${CRM_ORG_ID}"` sera automatiquement remplacée. |
 | `iif(leadid != null && leadid != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", leadid, "sourceKey", concat(leadid,"@${CRM_ORG_ID}.Dynamics")), null)` | `personComponents.sourcePersonKey` |
 | `middlename` | `person.name.middleName` |
 | `mobilephone` | `mobilePhone.number` |
 | `modifiedon` | `extSourceSystemAudit.lastUpdatedDate` |
 | `salutation` | `person.name.courtesyTitle` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Comptes {#accounts}
 
-| Champ source | Champ XDM cible | Remarques |
+| Champ source | Champ XDM cible | Notes |
 | --- | --- | --- |
 | `"Dynamics"` | `accountKey.sourceType` |
-| `"${CRM_ORG_ID}"` | `accountKey.sourceInstanceID` | La valeur de `"${CRM_ORG_ID}"` sera automatiquement remplacé. |
-| `accountid` | `accountKey.sourceID` | Identité principale. La valeur de `"${CRM_ORG_ID}"` sera automatiquement remplacé. |
+| `"${CRM_ORG_ID}"` | `accountKey.sourceInstanceID` | La valeur de `"${CRM_ORG_ID}"` sera automatiquement remplacée. |
+| `accountid` | `accountKey.sourceID` | Identité principale. La valeur de `"${CRM_ORG_ID}"` sera automatiquement remplacée. |
 | `accountnumber` | `accountNumber` |
 | `accountratingcode` | `accountOrganization.rating` |
 | `address1_addressid` | `accountPhysicalAddress._id` |
@@ -133,15 +133,15 @@ Les tableaux ci-dessous contiennent les mappages entre les [!DNL Microsoft Dynam
 | `websiteurl` | `accountOrganization.website` |
 | `concat(accountid,"@${CRM_ORG_ID}.Dynamics")` | `accountKey.sourceKey` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Opportunités {#opportunities}
 
-| Champ source | Champ XDM cible | Remarques |
+| Champ source | Champ XDM cible | Notes |
 | --- | --- | --- |
 | `name` | `opportunityName` |
 | `"Dynamics"` | `opportunityKey.sourceType` |
-| `"${CRM_ORG_ID}"` | `opportunityKey.sourceInstanceID` | La valeur de `"${CRM_ORG_ID}"` sera automatiquement remplacé. |
+| `"${CRM_ORG_ID}"` | `opportunityKey.sourceInstanceID` | La valeur de `"${CRM_ORG_ID}"` sera automatiquement remplacée. |
 | `iif(parentaccountid != null && parentaccountid != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", parentaccountid, "sourceKey", concat(parentaccountid, "@${CRM_ORG_ID}.Dynamics")), null)` | `accountKey` |
 | `actualclosedate` | `actualCloseDate` |
 | `actualvalue` | `opportunityAmount.amount` |
@@ -153,20 +153,20 @@ Les tableaux ci-dessous contiennent les mappages entre les [!DNL Microsoft Dynam
 | `estimatedvalue` | `expectedRevenue.amount` |
 | `modifiedon` | `extSourceSystemAudit.lastUpdatedDate` |
 | `opportunityid` | `opportunityKey.sourceID` |
-| `concat(opportunityid,"@${CRM_ORG_ID}.Dynamics")` | `opportunityKey.sourceKey` | Identité principale. La valeur de `"${CRM_ORG_ID}"` sera automatiquement remplacé. |
+| `concat(opportunityid,"@${CRM_ORG_ID}.Dynamics")` | `opportunityKey.sourceKey` | Identité principale. La valeur de `"${CRM_ORG_ID}"` sera automatiquement remplacée. |
 | `salesstage` | `opportunityStage` |
 | `stepname` | `nextStep` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Rôles de contact d’opportunité {#opportunity-contact-roles}
 
-| Champ source | Champ XDM cible | Remarques |
+| Champ source | Champ XDM cible | Notes |
 | --- | --- | --- |
 | `"Dynamics"` | `opportunityPersonKey.sourceType` |
-| `"${CRM_ORG_ID}"` | `opportunityPersonKey.sourceInstanceID` | La valeur de `"${CRM_ORG_ID}"` sera automatiquement remplacé. |
+| `"${CRM_ORG_ID}"` | `opportunityPersonKey.sourceInstanceID` | La valeur de `"${CRM_ORG_ID}"` sera automatiquement remplacée. |
 | `connectionid` | `opportunityPersonKey.sourceID` |
-| `concat(connectionid,"@${CRM_ORG_ID}.Dynamics")` | `opportunityPersonKey.sourceKey` | Identité principale. La valeur de `"${CRM_ORG_ID}"` sera automatiquement remplacé. |
+| `concat(connectionid,"@${CRM_ORG_ID}.Dynamics")` | `opportunityPersonKey.sourceKey` | Identité principale. La valeur de `"${CRM_ORG_ID}"` sera automatiquement remplacée. |
 | `createdon` | `extSourceSystemAudit.createdDate` |
 | `modifiedon` | `extSourceSystemAudit.lastUpdatedDate` |
 | `iif(record1id != null && record1id != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", record1id, "sourceKey", concat(record1id,"@${CRM_ORG_ID}.Dynamics")), null)` | `opportunityKey` |
@@ -175,17 +175,17 @@ Les tableaux ci-dessous contiennent les mappages entre les [!DNL Microsoft Dynam
 | `record1objecttypecode` | *Un groupe de champs personnalisé doit être défini comme schéma cible.* Voir la section de l’annexe pour connaître les étapes de [comment mapper un champ source de type liste de sélection à un schéma XDM cible](#picklist-type-fields) pour plus d’informations. | Pour obtenir la liste des valeurs possibles et , ainsi que les libellés du `record1objecttypecode` champ source, voir [[!DNL Microsoft Dynamics] document de référence d’entité de connexion](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/connection?view=op-9-1#record1objecttypecode-options). |
 | `record2objecttypecode` | *Un groupe de champs personnalisé doit être défini comme schéma cible.* Voir la section de l’annexe pour connaître les étapes de [comment mapper un champ source de type liste de sélection à un schéma XDM cible](#picklist-type-fields) pour plus d’informations. | Pour obtenir la liste des valeurs possibles et , ainsi que les libellés du `record2objecttypecode` champ source, voir [[!DNL Microsoft Dynamics] document de référence d’entité de connexion](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/connection?view=op-9-1#record2objecttypecode-options). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Campagnes {#campaigns}
 
-| Champ source | Champ XDM cible | Remarques |
+| Champ source | Champ XDM cible | Notes |
 | --- | --- | --- |
 | `campaignid` | `campaignKey.sourceID` |
-| `"${CRM_ORG_ID}"` | `campaignKey.sourceInstanceID` | La valeur de `"${CRM_ORG_ID}"` sera automatiquement remplacé. |
-| `concat(campaignid,"@${CRM_ORG_ID}.Dynamics")` | `campaignKey.sourceKey` | Identité principale. La valeur de `"${CRM_ORG_ID}"` sera automatiquement remplacé. |
+| `"${CRM_ORG_ID}"` | `campaignKey.sourceInstanceID` | La valeur de `"${CRM_ORG_ID}"` sera automatiquement remplacée. |
+| `concat(campaignid,"@${CRM_ORG_ID}.Dynamics")` | `campaignKey.sourceKey` | Identité principale. La valeur de `"${CRM_ORG_ID}"` sera automatiquement remplacée. |
 | `"Dynamics"` | `campaignKey.sourceType` |
-| `iif(campaignid != null && campaignid != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", campaignid, "sourceKey", concat(campaignid,"@${CRM_ORG_ID}.Dynamics")), null)` | `extSourceSystemAudit.externalKey` | Le `extSourceSystemAudit.externalKey` est l’identité secondaire. La valeur de `"${CRM_ORG_ID}"` sera automatiquement remplacé. |
+| `iif(campaignid != null && campaignid != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", campaignid, "sourceKey", concat(campaignid,"@${CRM_ORG_ID}.Dynamics")), null)` | `extSourceSystemAudit.externalKey` | Le champ `extSourceSystemAudit.externalKey` est l’identité secondaire. La valeur de `"${CRM_ORG_ID}"` sera automatiquement remplacée. |
 | `createdon` | `extSourceSystemAudit.createdDate` |
 | `modifiedby` | `extSourceSystemAudit.lastUpdatedBy` |
 | `modifiedon` | `extSourceSystemAudit.lastUpdatedDate` |
@@ -200,36 +200,36 @@ Les tableaux ci-dessous contiennent les mappages entre les [!DNL Microsoft Dynam
 | `utcconversiontimezonecode` | `timeZone` |
 | `utcconversiontimezonecode` | `timezoneName` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Liste marketing {#marketing-list}
 
-| Champ source | Champ XDM cible | Remarques |
+| Champ source | Champ XDM cible | Notes |
 | --- | --- | --- |
 | `"Dynamics"` | `marketingListKey.sourceType` |
-| `"${CRM_ORG_ID}"` | `marketingListKey.sourceInstanceID` | La valeur de `"${CRM_ORG_ID}"` sera automatiquement remplacé. |
+| `"${CRM_ORG_ID}"` | `marketingListKey.sourceInstanceID` | La valeur de `"${CRM_ORG_ID}"` sera automatiquement remplacée. |
 | `description` | `marketingListDescription` |
 | `listname` | `marketingListName` |
 | `listid` | `marketingListKey.sourceID` |
-| `concat(listid,"@${CRM_ORG_ID}.Dynamics")` | `marketingListKey.sourceKey` | Identité principale. La valeur de `"${CRM_ORG_ID}"` sera automatiquement remplacé. |
+| `concat(listid,"@${CRM_ORG_ID}.Dynamics")` | `marketingListKey.sourceKey` | Identité principale. La valeur de `"${CRM_ORG_ID}"` sera automatiquement remplacée. |
 | `modifiedon` | `extSourceSystemAudit.lastUpdatedDate` |
 | `createdon` | `extSourceSystemAudit.createdDate` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Membres de la liste marketing {#marketing-list-members}
 
-| Champ source | Champ XDM cible | Remarques |
+| Champ source | Champ XDM cible | Notes |
 | --- | --- | --- |
 | `"Dynamics"` | `marketingListMemberKey.sourceType` |
-| `"${CRM_ORG_ID}"` | `marketingListMemberKey.sourceInstanceID` | La valeur de `"${CRM_ORG_ID}"` sera automatiquement remplacé. |
+| `"${CRM_ORG_ID}"` | `marketingListMemberKey.sourceInstanceID` | La valeur de `"${CRM_ORG_ID}"` sera automatiquement remplacée. |
 | `iif(entityid != null && entityid != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", entityid, "sourceKey", concat(entityid,"@${CRM_ORG_ID}.Dynamics")), null)` | `personKey` |
 | `listmemberid` | `marketingListMemberKey.sourceID` |
-| `concat(listmemberid,"@${CRM_ORG_ID}.Dynamics")` | `marketingListMemberKey.sourceKey` | Identité principale. La valeur de `"${CRM_ORG_ID}"` sera automatiquement remplacé. |
+| `concat(listmemberid,"@${CRM_ORG_ID}.Dynamics")` | `marketingListMemberKey.sourceKey` | Identité principale. La valeur de `"${CRM_ORG_ID}"` sera automatiquement remplacée. |
 | `iif(listid != null && listid != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", listid, "sourceKey", concat(listid,"@${CRM_ORG_ID}.Dynamics")), null)` | `marketingListKey` |
 | `createdon` | `extSourceSystemAudit.createdDate` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Annexe
 

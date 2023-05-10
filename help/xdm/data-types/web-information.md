@@ -6,8 +6,8 @@ description: Ce document fournit un aperçu du type de données XDM (Experience 
 exl-id: bfb00835-5908-4baf-af2a-6d845710e340
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '190'
-ht-degree: 13%
+source-wordcount: '187'
+ht-degree: 12%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 13%
 | `webPageDetails` | [[!UICONTROL Informations sur la page web]](./webpage-details.md) | Décrit les détails de la page web sur laquelle l’interaction web s’est produite. |
 | `webReferrer` | [!UICONTROL Objet] | Décrit le référent d’une interaction web, c’est-à-dire l’URL d’origine d’un visiteur juste avant l’enregistrement de l’interaction web actuelle. Contient les sous-propriétés suivantes : <ul><li>`URL`: URL du référent.</li><li>`type`: Type de référent.</li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Pour obtenir plus d’informations sur ce type de données, reportez-vous au référentiel XDM public:
 

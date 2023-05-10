@@ -97,7 +97,7 @@ Pour savoir comment accéder à un segment exporté, consultez le [tutoriel sur 
 
 Les métadonnées de segment facilitent l’indexation dans le cas où l’un de vos segments doit être réutilisé et/ou combiné.
 
-La composition de vos segments (par le biais de l’API ou du [!DNL Segment Builder]) requiert que vous définissiez un nom de segment et une stratégie de fusion.
+La composition de vos segments (par le biais de l’API ou du [!DNL Segment Builder]) requiert que vous définissiez un nom de segment et une politique de fusion.
 
 ### Noms de segment
 
@@ -107,20 +107,20 @@ Lors de la création d’un segment, vous devez fournir un nom de segment. Le no
 >
 >Lors de la planification d’un segment, n’oubliez pas que les segments peuvent être référencés à partir de n’importe quel autre segment et combinés avec lui. Lorsque vous sélectionnez un nom, pensez à la possibilité que votre segment contienne des portions réutilisables.
 
-### Stratégies de fusion
+### Politiques de fusion
 
-Les stratégies de fusion sont des règles utilisées par [!DNL Profile] pour déterminer comment les données seront hiérarchisées et combinées dans une vue unifiée sous certaines conditions.
-Si aucune stratégie de fusion n’est définie, la stratégie de fusion par défaut de [!DNL Platform] est utilisée. Si vous préférez utiliser une stratégie de fusion spécifique à votre organisation, vous pouvez créer la vôtre et la marquer comme valeur par défaut de votre organisation.
+Les politiques de fusion sont des règles utilisées par [!DNL Profile] pour déterminer comment les données seront hiérarchisées et combinées dans une vue unifiée sous certaines conditions.
+Si aucune politique de fusion n’est définie, la politique de fusion par défaut de [!DNL Platform] est utilisée. Si vous préférez utiliser une politique de fusion spécifique à votre organisation, vous pouvez créer la vôtre et la marquer comme valeur par défaut de votre organisation.
 
-Pour plus d’informations sur les stratégies de fusion, consultez le [guide des stratégies de fusion](../profile/api/merge-policies.md).
+Pour plus d’informations sur les politiques de fusion, consultez le [guide des politiques de fusion](../profile/api/merge-policies.md).
 
 >[!NOTE]
 >
->L’estimation des tailles de l’audience est basée sur la stratégie de fusion de profil par défaut de l’entreprise.
+>L’estimation des tailles de l’audience est basée sur la politique de fusion de profil par défaut de l’entreprise.
 
 ### Autres métadonnées de segment
 
-Outre le nom du segment et la stratégie de fusion, le [!DNL Segment Builder] vous offre un champ de métadonnées « description du segment » supplémentaire dans lequel vous pouvez résumer l’objectif de votre définition de segment.
+Outre le nom du segment et la politique de fusion, le [!DNL Segment Builder] vous offre un champ de métadonnées « description du segment » supplémentaire dans lequel vous pouvez résumer l’objectif de votre définition de segment.
 
 ## Fonctionnalités de segmentation avancées
 

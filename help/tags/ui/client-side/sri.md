@@ -19,7 +19,7 @@ Ce document présente la façon dont l’intégrité des sous-ressources (SRI) e
 
 Les sites web d’aujourd’hui sont créés en référençant des images, du contenu et des scripts provenant de divers emplacements du Web. La SRI permet à un navigateur de vérifier que le contenu d’un fichier demandé n’a pas été modifié de manière inattendue.
 
-Bien que leurs cas pratiques se complètent, l’intégrité des ressources diffère d’une stratégie de sécurité du contenu (CSP), qui garantit que seuls les fichiers provenant de sources fiables sont autorisés sur votre site web. L’intégrité des ressources va plus loin en s’assurant que le contenu de ces fichiers correspond à vos attentes.
+Bien que leurs cas pratiques se complètent, l’intégrité des ressources diffère d’une politique de sécurité du contenu (CSP), qui garantit que seuls les fichiers provenant de sources fiables sont autorisés sur votre site web. L’intégrité des ressources va plus loin en s’assurant que le contenu de ces fichiers correspond à vos attentes.
 
 >[!NOTE]
 >
@@ -38,7 +38,7 @@ En tant que système de gestion des balises (TMS), dans Adobe Experience Platf
 
 Cependant, lorsque le contenu du script change, le hachage cryptographique de ce contenu change également. Par conséquent, la seule façon de faire fonctionner la SRI avec un TMS est de mettre à jour votre code incorporé en même temps que vous publiez une nouvelle version. Pour beaucoup, cela va à l’encontre de l’objectif principal de l’utilisation d’un TMS en premier lieu.
 
-La prochaine option de sécurité optimale concernant les balises consiste à mettre en œuvre une stratégie de sécurité du contenu. Pour plus dʼinformations, voir le guide sur les [CSP et les balises](./content-security-policy.md).
+La prochaine option de sécurité optimale concernant les balises consiste à mettre en œuvre une politique de sécurité du contenu. Pour plus dʼinformations, voir le guide sur les [CSP et les balises](./content-security-policy.md).
 
 ## Intégration de la SRI dans le déploiement de la version
 

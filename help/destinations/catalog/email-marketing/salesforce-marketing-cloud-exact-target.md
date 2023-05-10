@@ -6,7 +6,7 @@ exl-id: 0cf068e6-8a0a-4292-a7ec-c40508846e27
 source-git-commit: 877bf4886e563e8a571f067c06107776a0c81d5d
 workflow-type: tm+mt
 source-wordcount: '2911'
-ht-degree: 24%
+ht-degree: 25%
 
 ---
 
@@ -28,7 +28,7 @@ Ceci [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) 
 
 ## Cas d’utilisation {#use-cases}
 
-Pour vous aider à mieux comprendre comment et à quel moment utiliser la variable [!DNL (API) Salesforce Marketing Cloud] destination, voici un exemple de cas d’utilisation que les clients Adobe Experience Platform peuvent résoudre en utilisant cette destination.
+Pour mieux comprendre quand et comment utiliser la destination [!DNL (API) Salesforce Marketing Cloud], consultez l’exemple de cas d’utilisation ci-dessous que les clientes et clients d’Adobe Experience Platform peuvent résoudre à l’aide de cette destination.
 
 ### Envoyer des emails aux contacts pour les campagnes marketing {#use-case-send-emails}
 
@@ -258,7 +258,7 @@ Pour vérifier que vous avez correctement configuré la destination, procédez c
 
 ## Utilisation et gouvernance des données {#data-usage-governance}
 
-Lors de la gestion de vos données, toutes les destinations [!DNL Adobe Experience Platform] se conforment aux stratégies d’utilisation des données. Pour obtenir des informations détaillées sur la manière dont [!DNL Adobe Experience Platform] applique la gouvernance des données, lisez la [présentation de la gouvernance des données](/help/data-governance/home.md).
+Lors de la gestion de vos données, toutes les destinations [!DNL Adobe Experience Platform] se conforment aux politiques d’utilisation des données. Pour obtenir des informations détaillées sur la manière dont [!DNL Adobe Experience Platform] applique la gouvernance des données, lisez la [présentation de la gouvernance des données](/help/data-governance/home.md).
 
 ## Erreurs et résolution des problèmes {#errors-and-troubleshooting}
 

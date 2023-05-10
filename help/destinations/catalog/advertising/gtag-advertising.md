@@ -4,7 +4,7 @@ title: Extension Google gtag
 description: L’extension Google gtag est une destination publicitaire dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 exl-id: 14a466f2-78a0-4493-93cd-3dcdae048042
 source-git-commit: c3f6650df5fabe9736e4b11a43c41ae39f014425
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '529'
 ht-degree: 100%
 

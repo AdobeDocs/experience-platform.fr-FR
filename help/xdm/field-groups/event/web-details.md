@@ -6,8 +6,8 @@ description: Ce document présente un aperçu du groupe de champs de schéma Dé
 exl-id: eb42606b-ade4-4d72-b601-c560009c98e8
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '144'
-ht-degree: 20%
+source-wordcount: '141'
+ht-degree: 18%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 20%
 | --- | --- | --- |
 | `web` | [Informations web](../../data-types/web-information.md) | Décrit les clics sur les liens, les détails de la page web, les informations sur le référent et les détails du navigateur. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Pour plus d’informations sur le groupe de champs, reportez-vous au référentiel XDM public :
 

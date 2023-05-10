@@ -60,7 +60,7 @@ Une réponse réussie renvoie une liste des tâches dont chaque tâche contient 
 
 ### Accès aux pages suivantes
 
-Pour récupérer le jeu suivant de résultats dans une réponse paginée, vous devez effectuer un autre appel API vers le même point de terminaison tout en augmentant le paramètre de requête `page` de 1.
+Pour récupérer le jeu suivant de résultats dans une réponse paginée, vous devez effectuer un autre appel API vers le même point d’entrée tout en augmentant le paramètre de requête `page` de 1.
 
 ## Création d’une tâche de confidentialité {#create-job}
 

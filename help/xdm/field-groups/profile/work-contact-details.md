@@ -6,8 +6,8 @@ description: Ce document présente un aperçu du groupe de champs de schéma Dé
 exl-id: 0133622c-e95f-4833-b2f8-3694d41751b4
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '193'
-ht-degree: 17%
+source-wordcount: '190'
+ht-degree: 15%
 
 ---
 
@@ -29,7 +29,7 @@ ht-degree: 17%
 | `workPhone` | [Numéro de téléphone](../../data-types/phone-number.md) | Décrit le numéro de téléphone professionnel de la personne. |
 | `organizations` | Chaîne (tableau) | Tableau de chaînes de forme libre représentant les organisations dont la personne est membre. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Pour plus d’informations sur le groupe de champs, reportez-vous au référentiel XDM public :
 

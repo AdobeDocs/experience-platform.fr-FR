@@ -1,6 +1,6 @@
 ---
-title: Notes de mise à jour de Adobe Experience Platform, janvier 2021
-description: Notes de mise à jour de janvier 2021 pour Adobe Experience Platform.
+title: Notes de mise à jour d’Adobe Experience Platform - Janvier 2021
+description: Notes de mise à jour de janvier 2021 pour Adobe Experience Platform.
 doc-type: release notes
 last-update: January 27, 2021
 author: ens60013
@@ -8,7 +8,7 @@ exl-id: 6fb92e35-922c-47ba-8cf4-44edd92acfa1
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '717'
-ht-degree: 90%
+ht-degree: 96%
 
 ---
 
@@ -55,7 +55,7 @@ Pour en savoir plus, consultez la [présentation des destinations](../../destina
 
 ## Profil client en temps réel {#profile}
 
-Adobe Experience Platform vous permet d’offrir aux clients des expériences coordonnées, cohérentes et pertinentes, quel que soit l’endroit ou le moment où ils interagissent avec votre marque. Real-Time Customer Profile offre une vue d’ensemble de chaque client qui combine des données issues de plusieurs canaux, notamment des données en ligne, hors ligne, CRM et tierces. Le [!DNL Profile] vous permet de consolider vos données client en une vue unifiée offrant un compte horodaté et exploitable de chaque interaction client.
+Adobe Experience Platform vous permet d’offrir aux clients des expériences coordonnées, cohérentes et pertinentes, quel que soit l’endroit ou le moment où ils interagissent avec votre marque. Le profil client en temps réel offre une vue holistique de chaque client qui combine des données issues de plusieurs canaux, notamment des données en ligne, hors ligne, CRM et tierces. Le [!DNL Profile] vous permet de consolider vos données client en une vue unifiée offrant un compte horodaté et exploitable de chaque interaction client.
 
 **Nouvelles fonctionnalités**
 

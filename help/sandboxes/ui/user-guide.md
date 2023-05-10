@@ -51,7 +51,7 @@ Une fois qu’un sandbox est sélectionné, l’écran actualise le sandbox que 
 >
 >Lorsqu’un nouveau sandbox est créé, vous devez d’abord l’ajouter à votre profil de produit dans [Adobe Admin Console](https://adminconsole.adobe.com/) avant de commencer à utiliser le nouveau sandbox. Consultez la documentation relative à la [gestion des autorisations pour un profil de produit](../../access-control/ui/permissions.md) pour plus d’informations sur la configuration d’un sandbox en fonction d’un profil de produit.
 
-La vidéo suivante présente un aperçu rapide de l’utilisation des sanbdox dans Experience Platform.
+La vidéo suivante présente un aperçu rapide de l’utilisation des sandbox dans Experience Platform.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29838/?quality=12&learn=on)
 

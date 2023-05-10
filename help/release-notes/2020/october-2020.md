@@ -24,7 +24,7 @@ ht-degree: 26%
 
 ## Préparation des données {#data-prep}
 
-La préparation des données permet aux ingénieur(e)s de données de mapper, de transformer et de valider les données vers et à partir du modèle de données d’expérience (XDM).
+La préparation des données permet aux personnes travaillant dans l’ingénierie de données de mapper, de transformer et de valider les données vers et à partir du modèle de données d’expérience (XDM).
 
 **Fonctionnalités clés**
 

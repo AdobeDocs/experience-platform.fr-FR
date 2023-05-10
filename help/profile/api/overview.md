@@ -6,13 +6,13 @@ exl-id: ce39b95b-cff7-46cf-a14c-8203017c8826
 source-git-commit: 8f61840ad60b7d24c980b218b6f742485f5ebfdd
 workflow-type: tm+mt
 source-wordcount: '792'
-ht-degree: 28%
+ht-degree: 26%
 
 ---
 
 # Guide de l’API [!DNL Real-Time Customer Profile]
 
-[!DNL Real-Time Customer Profile] offre une vue d’ensemble de chaque client dans Adobe Experience Platform. [!DNL Profile] vous permet de consolider diverses données clients provenant de plusieurs canaux, comme les données en ligne, hors ligne, CRM et tierces, en une vue unifiée offrant un compte horodaté et exploitable de chaque interaction client.
+[!DNL Real-Time Customer Profile] vous permet d’obtenir une vue d’ensemble de chaque client dans Adobe Experience Platform. [!DNL Profile] vous permet de consolider diverses données clients provenant de plusieurs canaux, comme les données en ligne, hors ligne, CRM et tierces, en une vue unifiée offrant un compte horodaté et exploitable de chaque interaction client.
 
 Le [!DNL Real-Time Customer Profile] L’API comprend plusieurs points de terminaison, décrits ci-dessous. Consultez le guide de chaque point d’entrée pour plus de détails et reportez-vous au [guide de prise en main](getting-started.md) pour obtenir des informations importantes sur les en-têtes nécessaires, la lecture des exemples d’appels d’API, etc.
 
@@ -44,7 +44,7 @@ Grâce à Adobe Experience Platform, vous pouvez accéder à [!DNL Real-Time Cus
 
 [!DNL Real-Time Customer Profile] les données peuvent être exportées vers un jeu de données pour un traitement ultérieur, par exemple pour l’exportation de segments d’audience en vue de l’activation ou d’attributs de profil pour la création de rapports. Les tâches d’exportation pour les segments d’audience font partie du [!DNL Adobe Experience Platform Segmentation Service] API, veuillez lire la [guide d’entrée des tâches d’exportation de segmentation](../../profile/api/export-jobs.md) pour en savoir plus. Pour obtenir des instructions détaillées sur la création et la gestion de tâches d’exportation pour les attributs de profil, consultez la section [guide de point de fin des traitements d’export](export-jobs.md).
 
-## Stratégies de fusion {#merge-policies}
+## Politiques de fusion {#merge-policies}
 
 Lorsque vous rassemblez des données provenant de plusieurs sources dans [!DNL Experience Platform], les stratégies de fusion sont les règles qui [!DNL Platform] utilise pour déterminer comment les données seront hiérarchisées et quelles données seront combinées afin de créer des profils client individuels. En utilisant la variable [!DNL Real-Time Customer Profile] API, vous pouvez créer des stratégies de fusion, gérer des stratégies existantes et définir une stratégie de fusion par défaut pour votre organisation. Pour utiliser des stratégies de fusion à l’aide de l’API, consultez la page [guide de point de terminaison des stratégies de fusion](merge-policies.md).
 

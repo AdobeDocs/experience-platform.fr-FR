@@ -1,17 +1,17 @@
 ---
 keywords: modifier l’activation, modifier la destination, modifier la destination
-title: Modification des flux de données d’activation
+title: Modifier des flux de données d’activation
 type: Tutorial
 description: Suivez les étapes de cet article pour modifier un flux de données d’activation existant dans Adobe Experience Platform.
 exl-id: 0d79fbff-bfde-4109-8353-c7530e9719fb
 source-git-commit: a6fe0f5a0c4f87ac265bf13cb8bba98252f147e0
 workflow-type: tm+mt
 source-wordcount: '328'
-ht-degree: 1%
+ht-degree: 26%
 
 ---
 
-# Modification des flux de données d’activation {#edit-activation-flows}
+# Modifier des flux de données d’activation {#edit-activation-flows}
 
 Dans Adobe Experience Platform, vous pouvez modifier divers composants des flux de données d’activation existants vers les destinations, tels que les segments et les attributs de profil exportés, la fréquence d’exportation, si le flux de données d’activation est activé ou désactivé, etc.
 
@@ -19,11 +19,11 @@ Dans Adobe Experience Platform, vous pouvez modifier divers composants des flux 
 
 Suivez les étapes ci-dessous pour modifier les flux de données d’activation existants :
 
-1. Connectez-vous au [Interface utilisateur Experience Platform](https://platform.adobe.com/) et sélectionnez **[!UICONTROL Destinations]** dans la barre de navigation de gauche. Sélectionner **[!UICONTROL Parcourir]** dans l’en-tête supérieur pour afficher vos flux de données de destination existants.
+1. Connectez-vous à l’[interface utilisateur Experience Platform](https://platform.adobe.com/) et sélectionnez **[!UICONTROL Destinations]** dans la barre de navigation de gauche. Sélectionnez **[!UICONTROL Parcourir]** dans l’en-tête supérieur pour afficher vos flux de données de destination existants.
 
    ![Parcourir les destinations](../assets/ui/edit-activation/browse-destinations.png)
 
-2. Icône Sélectionner le filtre ![Icône Filtre](../assets/ui/edit-activation/filter.png) en haut à gauche pour lancer le panneau de tri. Le panneau de tri fournit une liste de toutes vos destinations. Vous pouvez sélectionner plusieurs destinations dans la liste pour afficher une sélection filtrée de flux de données associés à la destination sélectionnée.
+2. Sélectionnez l’icône filtre ![Icône Filtre](../assets/ui/edit-activation/filter.png) en haut à gauche pour lancer le panneau de tri. Le panneau de tri fournit une liste de toutes vos destinations. Vous pouvez sélectionner plusieurs destinations dans la liste pour afficher une sélection filtrée de flux de données associés à la destination sélectionnée.
 
    ![Filtrage des destinations](../assets/ui/edit-activation/filter-destinations.png)
 

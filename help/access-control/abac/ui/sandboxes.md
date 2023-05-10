@@ -1,18 +1,18 @@
 ---
-keywords: Experience Platform;accueil;rubriques populaires;contrôle d’accès;contrôle d’accès basé sur les attributs;ABAC
+keywords: Experience Platform;accueil;rubriques populaires;contrôle d’accès;contrôle d’accès basé sur les attributs;ABAC
 title: Environnements de test de contrôle d’accès en fonction des attributs
 description: Ce document fournit des informations sur la gestion des environnements de test par le biais de l’interface Autorisations dans Adobe Experience Cloud.
 exl-id: c21eb319-fc0d-442a-b778-bbfa2d6bb22d
 source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
 workflow-type: tm+mt
 source-wordcount: '217'
-ht-degree: 23%
+ht-degree: 28%
 
 ---
 
 # Gestion des sandbox
 
-Les environnements de test constituent des partitions virtuelles au sein d’une instance d’Experience Platform unique, ce qui permet une intégration transparente au processus de développement de vos applications d’expérience numérique. Tout le contenu et les actions réalisés dans un environnement de test sont limités à celui-ci et n’en affectent aucun autre. Pour plus d’informations sur les environnements de test, voir [Présentation des environnements de test](../../../sandboxes/home.md).
+Les sandbox constituent des partitions virtuelles au sein d’une instance d’Experience Platform unique, ce qui permet une intégration transparente au processus de développement de vos applications d’expérience numérique. Tout le contenu et les actions réalisés dans un sandbox sont limités à celui-ci et n’en affectent aucun autre. Pour plus d’informations sur les environnements de test, voir [Présentation des environnements de test](../../../sandboxes/home.md).
 
 ## Configuration des environnements de test
 

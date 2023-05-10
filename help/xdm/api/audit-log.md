@@ -6,8 +6,8 @@ description: Le point de terminaison /auditlog de l’API Schema Registry vous p
 exl-id: 8d33ae7c-0aa4-4f38-a183-a2ff1801e291
 source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
-source-wordcount: '407'
-ht-degree: 18%
+source-wordcount: '401'
+ht-degree: 16%
 
 ---
 
@@ -35,7 +35,7 @@ GET /rpc/auditlog/{RESOURCE_ID}
 | --- | --- |
 | `{RESOURCE_ID}` | Le `meta:altId` ou encodé URL `$id` de la ressource dont vous souhaitez récupérer le journal d’audit. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Requête**
 
@@ -125,4 +125,4 @@ Une réponse réussie renvoie une liste chronologique des modifications apporté
 | `path` | A [JSON Pointer](../../landing/api-fundamentals.md#json-pointer) chaîne indiquant le chemin d’accès au champ spécifique qui a été modifié ou ajouté. |
 | `value` | Valeur affectée au champ nouveau ou mis à jour. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

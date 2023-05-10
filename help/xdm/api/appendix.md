@@ -6,8 +6,8 @@ description: Ce document fournit des informations supplémentaires relatives au 
 exl-id: 2ddc7fe8-dd0b-4cf9-8561-e89fcdadbfce
 source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
-source-wordcount: '984'
-ht-degree: 34%
+source-wordcount: '978'
+ht-degree: 33%
 
 ---
 
@@ -33,7 +33,7 @@ Les paramètres de requête les plus courants pour la pagination sont les suivan
 | `limit` | Lorsqu’il est utilisé conjointement avec une variable `orderby` paramètre, `limit` limite le nombre maximal d’éléments à renvoyer pour une requête donnée. Ce paramètre ne peut pas être utilisé sans un `orderby` paramètre présent.<br><br>Le `limit` spécifie un entier positif (entre `0` et `500`) as a *hint* en ce qui concerne le nombre maximal d’éléments à renvoyer. Par exemple : `limit=5` renvoie uniquement cinq ressources de la liste. Cependant, cette valeur n’est pas strictement respectée. La taille réelle de la réponse peut être plus petite ou plus grande en raison de la nécessité de fournir un fonctionnement fiable de la fonction `start` , le cas échéant. |
 | `start` | Lorsqu’il est utilisé conjointement avec une variable `orderby` paramètre, `start` indique où la liste des éléments sous-définie doit commencer. Ce paramètre ne peut pas être utilisé sans un `orderby` paramètre présent. Cette valeur peut être obtenue à partir de la variable `_page.next` d’une réponse list et utilisé pour accéder à la page de résultats suivante. Si la variable `_page.next` est nulle, alors aucune page supplémentaire n’est disponible.<br><br>En règle générale, ce paramètre est omis afin d’obtenir la première page de résultats. Après cela, `start` doit être défini sur la valeur maximale de la propriété de tri Principal de la propriété `orderby` champ reçu dans la page précédente. La réponse de l’API renvoie ensuite les entrées commençant par celles dont la propriété de tri est Principale à partir de `orderby` strictement supérieur (pour l’ordre croissant) ou strictement inférieur (pour l’ordre décroissant) à la valeur spécifiée.<br><br>Par exemple, si la variable `orderby` est défini sur `orderby=name,firstname`, la variable `start` contient une valeur pour la variable `name` . Dans ce cas, si vous souhaitez afficher les 20 entrées suivantes d’une ressource immédiatement après le nom &quot;Miller&quot;, utilisez : `?orderby=name,firstname&start=Miller&limit=20`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Filtrage {#filtering}
 
@@ -50,7 +50,7 @@ Vous pouvez filtrer les résultats en utilisant la variable `property` qui est u
 | `~` | Filtre selon si la propriété correspond à une expression régulière fournie. | `property=title~test$` |
 | (Aucun) | Le fait de spécifier uniquement le nom de la propriété renvoie uniquement les entrées où la propriété existe. | `property=title` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!TIP]
 >

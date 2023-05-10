@@ -2,14 +2,15 @@
 keywords: Experience Platform;accueil;rubriques populaires;service de requête;service de requête;requêtes experienceevent;requête experienceevent;requête Experience Event;
 title: Liste des pages vues d’un utilisateur
 description: Découvrez comment écrire des requêtes qui utilisent les événements d’expérience pour créer une liste des 100 dernières pages utilisées par un utilisateur spécifié.
-source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
+exl-id: d831910d-d3a4-4a5a-b897-b09f0546dab0
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '266'
-ht-degree: 6%
+ht-degree: 8%
 
 ---
 
-# Répertorier les pages vues d’un utilisateur
+# Répertorier les pages vues d’un utilisateur ou d’une utilisatrice
 
 Ce document fournit un exemple du code SQL requis pour répertorier les pages vues par un utilisateur spécifié. Avec Adobe Experience Platform Query Service, vous pouvez écrire des requêtes qui utilisent [!DNL Experience Events] pour capturer divers cas d’utilisation. Les événements d’expérience sont représentés par la classe ExperienceEvent du modèle de données d’expérience (XDM), qui capture un instantané non agrégé et immuable du système lorsqu’un utilisateur interagit avec un site web ou un service. Les événements d’expérience peuvent même être utilisés pour l’analyse du domaine temporel. Voir [section étapes suivantes](#next-steps) pour d’autres cas d’utilisation impliquant [!DNL Experience Events] pour générer des rapports sur les visiteurs.
 

@@ -5,8 +5,8 @@ description: Ce document présente les configurations que vous devez préparer p
 exl-id: a41b3b80-599a-47ed-a391-419721be5aa2
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '297'
-ht-degree: 23%
+source-wordcount: '294'
+ht-degree: 22%
 
 ---
 
@@ -24,7 +24,7 @@ Les spécifications de connexion renvoient les propriétés du connecteur d’un
 | `sourceSpec` | Le `sourceSpec` contient des informations générales relatives à une source, notamment des informations sur les attributs requis pour présenter la source dans l’interface utilisateur, un lien vers la documentation et des paramètres concernant la pagination, l’en-tête, le corps et la planification. En outre, `sourceSpec` décrit le schéma des paramètres requis pour créer une connexion source à partir d’une connexion de base. Il est nécessaire pour créer une connexion source. |
 | `exploreSpec` | Le `exploreSpec` définit les paramètres requis pour explorer et inspecter les objets contenus dans votre source. Le `exploreSpec` définit également le format de réponse renvoyé lorsque des objets sont explorés et inspectés. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Renseigner les valeurs des spécifications de connexion
 

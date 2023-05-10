@@ -7,7 +7,7 @@ exl-id: 2c775b86-7262-4f05-b421-c626867de0a4
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '287'
-ht-degree: 12%
+ht-degree: 15%
 
 ---
 
@@ -21,13 +21,13 @@ Le tableau suivant décrit les groupes de champs existants qui ont été mis à 
 | Nom précédent | Nom mis à jour |
 | --- | --- |
 | [!UICONTROL Mixin de confidentialité des événements d’expérience] | [!UICONTROL Détails de confidentialité] |
-| [!UICONTROL Détails de l’application ExperienceEvent] | [!UICONTROL Détails de l’application] |
+| [!UICONTROL Détails de l’application ExperienceEvent] | [!UICONTROL Détails Application] |
 | [!UICONTROL Détails du canal ExperienceEvent] | [!UICONTROL Informations sur le canal] |
-| [!UICONTROL Détails du commerce ExperienceEvent] | [!UICONTROL Informations commerciales] |
+| [!UICONTROL Détails du commerce ExperienceEvent] | [!UICONTROL Détails Commerce] |
 | [!UICONTROL Détails ExperienceEvent pour la publicité] | [!UICONTROL Détails de la publicité] |
 | [!UICONTROL Détails ExperienceEvent pour le marketing] | [!UICONTROL Détails de la campagne marketing] |
 | [!UICONTROL Détails ExperienceEvent pour le média] | [!UICONTROL Détails de l’interaction multimédia] |
-| [!UICONTROL Détails ExperienceEvent pour la recherche] | [!UICONTROL Détails de la recherche] |
+| [!UICONTROL Détails ExperienceEvent pour la recherche] | [!UICONTROL Détails Recherche] |
 | [!UICONTROL Détails du marketing direct ExperienceEvent] | [!UICONTROL Détails du marketing direct] |
 | [!UICONTROL ExperienceEvent EndUserIDs] | [!UICONTROL Informations sur l’identifiant de l’utilisateur final] |
 | [!UICONTROL Détails de l’environnement ExperienceEvent] | [!UICONTROL Détails de l’environnement] |
@@ -35,7 +35,7 @@ Le tableau suivant décrit les groupes de champs existants qui ont été mis à 
 | [!UICONTROL Détails du regroupement de profils ExperienceEvent] | [!UICONTROL Combinaison de profils] |
 | [!UICONTROL Détails de l’adhésion aux segments ExperienceEvent] | [!UICONTROL Détails de l’appartenance à un segment] |
 | [!UICONTROL Détails techniques d’ExperienceEvent] | [!UICONTROL Détails techniques] |
-| [!UICONTROL Détails web d’ExperienceEvent] | [!UICONTROL Détails web] |
+| [!UICONTROL Détails web d’ExperienceEvent] | [!UICONTROL Détails Web] |
 | [!UICONTROL Marketing direct des profils] | [!UICONTROL Détails du contact marketing direct] |
 | [!UICONTROL Détails de la personne de profil] | [!UICONTROL Détails démographiques] |
 | [!UICONTROL Informations personnelles du profil] | [!UICONTROL Détails du contact personnel] |

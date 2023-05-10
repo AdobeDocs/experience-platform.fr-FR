@@ -4,8 +4,9 @@ solution: Experience Platform
 feature: Customer AI
 title: Gouvernance des données dans IA dédiée aux clients
 description: Adobe Experience Platform fournit plusieurs services et outils qui vous permettent de contrôler en toute confiance vos données d’expérience collectées afin de respecter vos pratiques commerciales, vos obligations légales et votre processus de développement.
-source-git-commit: 3b1cc7ca710071df9de06428f7eed2993219ae1a
-workflow-type: ht
+exl-id: de0836a4-7bc2-4f9c-95a9-c01dd9e2b03f
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+workflow-type: tm+mt
 source-wordcount: '221'
 ht-degree: 100%
 

@@ -5,8 +5,8 @@ description: Ce document présente un aperçu du groupe de champs de schéma Dé
 exl-id: 06f9ee37-9879-4db2-af68-9336366f7521
 source-git-commit: afbbdfff4346ab5240927f5703d3a06676776ea8
 workflow-type: tm+mt
-source-wordcount: '337'
-ht-degree: 8%
+source-wordcount: '334'
+ht-degree: 7%
 
 ---
 
@@ -37,7 +37,7 @@ Le groupe de champs fournit un champ de type objet unique, `reservations`. Les p
 | `startDate` | DateTime | Date de démarrage, de sortie ou d’archivage de la réservation. |
 | `triptype` | Chaîne | Indique si la réservation est pour un aller simple, un aller-retour ou un voyage dans plusieurs villes. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Pour plus d’informations sur le groupe de champs, reportez-vous au référentiel XDM public :
 

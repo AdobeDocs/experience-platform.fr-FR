@@ -40,7 +40,7 @@ Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [
 - x-api-key : `{API_KEY}`
 - x-gw-ims-org-id : `{ORG_ID}`
 
-Dans [!DNL Experience Platform], toutes les ressources sont isolées dans des sandbox virtuelles spécifiques. Toutes les requêtes envoyées aux API [!DNL Platform] nécessitent un en-tête spécifiant le nom de la sandbox dans laquelle l’opération sera effectuée :
+Dans [!DNL Experience Platform], toutes les ressources sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes envoyées aux API [!DNL Platform] nécessitent un en-tête spécifiant le nom du sandbox dans lequel l’opération sera effectuée :
 
 - x-sandbox-name : `{SANDBOX_NAME}`
 
@@ -54,7 +54,7 @@ Toutes les requêtes contenant un payload (POST, PUT, PATCH) requièrent un en-t
 
 ## Développement d’une définition de segment
 
-La première étape de la segmentation consiste à définir un segment, représenté dans un concept appelé définition de segment. Une définition de segment est un objet qui encapsule une requête écrite dans [!DNL Profile Query Language] (PQL). Cet objet est également appelé prédicat PQL. Les prédicats PQL définissent les règles du segment en fonction des conditions liées aux données d’enregistrement ou de série temporelle que vous fournissez à [!DNL Real-Time Customer Profile]. Pour plus d’informations sur l’écriture de requêtes PQL, reportez-vous au [guide de PQL](../pql/overview.md).
+La première étape de la segmentation consiste à définir un segment, représenté dans un concept appelé définition de segment. Une définition de segment est un objet qui encapsule une requête écrite dans [!DNL Profile Query Language] (PQL). Cet objet est également appelé prédicat PQL. Les prédicats PQL définissent les règles du segment en fonction des conditions liées à tout enregistrement ou série temporelle que vous fournissez. [!DNL Real-Time Customer Profile]. Pour plus d’informations sur l’écriture de requêtes PQL, reportez-vous au [guide de PQL](../pql/overview.md).
 
 Vous pouvez créer une nouvelle définition de segment en envoyant une requête POST au point de terminaison `/segment/definitions` de l’API [!DNL Segmentation] L’exemple suivant illustre la manière de formater une requête de définition, et inclut les informations requises pour qu’un segment soit défini avec succès.
 
@@ -87,7 +87,7 @@ Les estimations durent généralement entre 10 et 15 secondes. L’estimation e
 
 ### Création d’une tâche de prévisualisation
 
-Vous pouvez créer une nouvelle tâche de prévisualisation en exécutant une requête POST sur le point de terminaison `/preview`.
+Vous pouvez créer une nouvelle tâche de prévisualisation en exécutant une requête POST sur le point d’entrée `/preview`.
 
 Vous trouverez des instructions détaillées sur la création d’une tâche de prévisualisation dans la section [guide d’aperçu et de point de fin d’estimation](../api/previews-and-estimates.md#create-preview).
 

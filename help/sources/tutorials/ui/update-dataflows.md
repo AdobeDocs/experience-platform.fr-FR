@@ -21,7 +21,7 @@ Ce tutoriel vous explique comment mettre à jour un flux de données existant, y
 Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform :
 
 * [Sources](../../home.md) : Experience Platform permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de Platform.
-* [Sandbox](../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuelles qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
+* [Sandbox](../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
 
 ## Mettre à jour des flux de données
 
@@ -95,7 +95,7 @@ Le **[!UICONTROL Modifier le planning]** La boîte de dialogue vous fournit des 
 
 ![planning-pop-up](../../images/tutorials/update-dataflows/schedule-pop-up.png)
 
-### Révision
+### Réviser
 
 Le **[!UICONTROL Réviser]** s’affiche, ce qui vous permet de consulter votre flux de données avant qu’il ne soit mis à jour.
 

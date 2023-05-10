@@ -19,7 +19,7 @@ ht-degree: 59%
 
 L’édition B2B de Real-time Customer Data Platform vous permet de proposer des expériences cross-canal personnalisées basées sur des informations comportementales et des attributs du client sous la forme de profils client et de profils de compte en temps réel. Pour prendre en charge cette nouvelle approche des profils, Experience Platform utilise un modèle de données hybride fortement dénormalisé qui diffère du modèle de données relationnelles traditionnel.
 
-Ce document fournit des limites d’utilisation et de débit par défaut pour vous aider à modéliser vos données pour optimiser les performances du système. Lors de la révision des barrières de sécurité suivantes, on suppose que vous avez correctement modélisé les données. Si vous avez des questions sur la manière de modéliser vos données, contactez votre représentant du service client.
+Ce document fournit des limites d’utilisation et de débit par défaut pour vous aider à modéliser vos données pour optimiser les performances du système. Lors de la révision des mécanismes de sécurisation suivants, on suppose que vous avez correctement modélisé les données. Si vous avez des questions sur la manière de modéliser vos données, contactez votre représentant du service client.
 
 >[!INFO]
 >
@@ -41,25 +41,25 @@ Ce document comprend deux types de limites par défaut :
 
 Les barrières de sécurité suivantes fournissent des limites recommandées lors de la modélisation des données Real-Time Customer Profile. Pour en savoir plus sur les entités principales et les entités de dimension, consultez la section sur les [types d’entités](#entity-types) dans l’Annexe.
 
-### Barrières de sécurité pour les entités principales
+### Mécanismes de sécurisation pour les entités principales
 
 >[!NOTE]
 >
 >Les limites de modèle de données décrites dans cette section représentent les modifications activées par Real-time Customer Data Platform B2B Edition. Pour obtenir une liste complète des limites par défaut de l’édition B2B de Real-Time CDP, combinez ces limites aux limites générales de Adobe Experience Platform décrites dans la section [Barrières de sécurité de la documentation sur les données Real-time Customer Profile](../profile/guardrails.md).
 
-| Barrière de sécurité | Limite | Type de limite | Description |
+| Mécanisme de sécurisation | Limite | Type de limite | Description |
 | --- | --- | --- | --- |
 | Jeux de données de classe XDM standard Real-Time CDP B2B Edition | 60 | Soft | Il est recommandé d’utiliser un maximum de 60 jeux de données qui utilisent les classes XDM (Experience Data Model) standard fournies par Real-Time CDP B2B Edition. Pour obtenir la liste complète des classes XDM standard pour les cas d’utilisation B2B, reportez-vous à la section [schémas dans la documentation de Real-Time CDP B2B Edition](schemas/b2b.md). <br/><br/>*Remarque : en raison de la nature du modèle de données hybride dénormalisé d’Experience Platform, la plupart des clients ne dépasse pas cette limite. Pour toute question sur la manière de modéliser vos données ou pour en savoir plus sur les limites personnalisées, contactez votre représentant de l’assistance clientèle.* |
 | Anciennes relations à entités multiples | 20 | Soft | Il est recommandé d’établir au maximum 20 relations à entités multiples définies entre des entités principales et des entités de dimension. D’autres mappages de relation ne doivent pas être effectués tant qu’une relation existante n’est pas supprimée ou désactivée. |
 | Relations multiples-à-un par classe XDM | 2 | Soft | Il est recommandé de définir au maximum 2 relations multiples-à-un par classe XDM. Une relation supplémentaire ne doit pas être établie tant qu’une relation existante n’a pas été supprimée ou désactivée. Pour savoir comment créer une relation entre deux schémas, reportez-vous au tutoriel sur la [définition des relations de schéma B2B](../xdm/tutorials/relationship-b2b.md). |
 
-### Barrières de sécurité de l’entité de dimension
+### Mécanismes de sécurisation de l’entité de dimension
 
 >[!NOTE]
 >
 >Les limites de modèle de données décrites dans cette section représentent les modifications activées par Real-time Customer Data Platform B2B Edition. Pour obtenir une liste complète des limites par défaut de l’édition B2B de Real-Time CDP, combinez ces limites aux limites générales de Adobe Experience Platform décrites dans la section [Barrières de sécurité de la documentation sur les données Real-time Customer Profile](../profile/guardrails.md).
 
-| Barrière de sécurité | Limite | Type de limite | Description |
+| Mécanisme de sécurisation | Limite | Type de limite | Description |
 | --- | --- | --- | --- |
 | Aucune relation héritée imbriquée | 0 | Soft | Vous ne devez pas créer de relation entre deux schémas non-[!DNL XDM Individual Profile]. La possibilité de créer des relations n’est pas recommandée pour les schémas qui ne font pas partie du schéma d’union [!DNL Profile]. |
 | Seuls les objets B2B peuvent participer à des relations multiples-à-un | 0 | Hard | Le système ne prend en charge que les relations multiples-à-un entre les objets B2B. Pour plus d’informations sur les relations multiples-à-un, consultez le tutoriel sur la [définition des relations de schéma B2B](../xdm/tutorials/relationship-b2b.md). |
@@ -67,45 +67,45 @@ Les barrières de sécurité suivantes fournissent des limites recommandées lor
 
 ## Limites de taille des données
 
-Les barrières de sécurité suivantes se rapportent à la taille des données et fournissent des limites recommandées pour les données qui peuvent être ingérées, stockées et interrogées comme prévu. Pour en savoir plus sur les entités principales et les entités de dimension, consultez la section sur les [types d’entités](#entity-types) dans l’Annexe.
+Les mécanismes de sécurisation suivants se rapportent à la taille des données et fournissent des limites recommandées pour les données qui peuvent être ingérées, stockées et interrogées comme prévu. Pour en savoir plus sur les entités principales et les entités de dimension, consultez la section sur les [types d’entités](#entity-types) dans l’Annexe.
 
 >[!INFO]
 >
 >La taille des données est mesurée en tant que données non compressées dans JSON au moment de l’ingestion.
 
-### Barrières de sécurité pour les entités principales
+### Mécanismes de sécurisation pour les entités principales
 
 >[!NOTE]
 >
 >Les limites de taille des données décrites dans cette section représentent les modifications activées par Real-time Customer Data Platform B2B Edition. Pour obtenir une liste complète des limites par défaut de l’édition B2B de Real-Time CDP, combinez ces limites aux limites générales de Adobe Experience Platform décrites dans la section [Barrières de sécurité de la documentation sur les données Real-time Customer Profile](../profile/guardrails.md).
 
-| Barrière de sécurité | Limite | Type de limite | Description |
+| Mécanisme de sécurisation | Limite | Type de limite | Description |
 | --- | --- | --- | --- |
 | Lots ingérés par classe XDM par jour | 45 | Soft | Le nombre total de lots ingérés chaque jour par classe XDM ne doit pas dépasser 45. L’ingestion de lots supplémentaires peut empêcher une performance optimale. |
 
-### Barrières de sécurité de l’entité de dimension
+### Mécanismes de sécurisation de l’entité de dimension
 
 >[!NOTE]
 >
 >Les limites de taille des données décrites dans cette section représentent les modifications activées par Real-time Customer Data Platform B2B Edition. Pour obtenir une liste complète des limites par défaut de l’édition B2B de Real-Time CDP, combinez ces limites aux limites générales de Adobe Experience Platform décrites dans la section [Barrières de sécurité de la documentation sur les données Real-time Customer Profile](../profile/guardrails.md).
 
-| Barrière de sécurité | Limite | Type de limite | Description |
+| Mécanisme de sécurisation | Limite | Type de limite | Description |
 | --- | --- | --- | --- |
 | Taille totale pour toutes les entités de dimension | 5 Go | Soft | La taille totale recommandée pour toutes les entités dimensionnelles est de 5 Go. L’ingestion d’entités de dimension volumineuses peut affecter les performances du système. Par exemple, il n’est pas recommandé de charger un catalogue de produits de 10 Go en tant qu’entité de dimension. |
 | Jeux de données par schéma d’entité dimensionnelle | 5 | Soft | Il est recommandé d’associer un maximum de 5 jeux de données à chaque schéma d’entité dimensionnelle. Par exemple, si vous créez un schéma pour les « produits » et ajoutez cinq jeux de données de contribution, vous ne devez pas créer un sixième jeu de données lié au schéma de produits. |
 | Lots d’entités de dimension ingérés par jour | 4 par entité | Soft | Le nombre maximal recommandé de lots d’entités de dimension ingérés par jour est de 4 par entité. Par exemple, vous pouvez ingérer des mises à jour à un catalogue de produits jusqu’à 4 fois par jour. L’ingestion de lots d’entités de dimension supplémentaires pour la même entité peut affecter les performances du système. |
 
-## Barrières de sécurité de la segmentation
+## Mécanismes de sécurisation de la segmentation
 
-Les barrières de sécurité décrites dans cette section font référence au nombre et à la nature des segments qu’une organisation peut créer dans Experience Platform, ainsi qu’au mappage et à l’activation de segments vers des destinations.
+Les mécanismes de sécurisation décrits dans cette section font référence au nombre et à la nature des segments qu’une organisation peut créer dans Experience Platform, ainsi qu’au mappage et à l’activation de segments vers des destinations.
 
 >[!NOTE]
 >
 >Les limites de segmentation décrites dans cette section représentent les modifications activées par Real-time Customer Data Platform B2B Edition. Pour obtenir une liste complète des limites par défaut de l’édition B2B de Real-Time CDP, combinez ces limites aux limites générales de Adobe Experience Platform décrites dans la section [Barrières de sécurité de la documentation sur les données Real-time Customer Profile](../profile/guardrails.md).
 
-| Barrière de sécurité | Limite | Type de limite | Description |
+| Mécanisme de sécurisation | Limite | Type de limite | Description |
 | --- | --- | --- | --- |
-| Segments par sandbox B2B | 400 | Soft | Une organisation peut avoir plus de 400 segments au total, à condition qu’il y ait moins de 400 segments dans chaque sandbox B2B individuelle. Toute tentative de création de segments supplémentaires peut affecter les performances du système. |
+| Segments par sandbox B2B | 400 | Soft | Une organisation peut avoir plus de 400 segments au total, à condition qu’il y ait moins de 400 segments dans chaque sandbox B2B individuel. Toute tentative de création de segments supplémentaires peut affecter les performances du système. |
 
 ## Étapes suivantes
 

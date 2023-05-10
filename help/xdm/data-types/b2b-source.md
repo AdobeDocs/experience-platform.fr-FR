@@ -4,8 +4,8 @@ description: Ce document présente un aperçu du type de données XDM (Source Ex
 exl-id: 01b7d41c-1ab6-4cbc-b9b3-77b6af69faf3
 source-git-commit: e602f78470fe4eeb2a42e6333ba52096d8a9fe8a
 workflow-type: tm+mt
-source-wordcount: '273'
-ht-degree: 8%
+source-wordcount: '270'
+ht-degree: 7%
 
 ---
 
@@ -26,7 +26,7 @@ Le [!UICONTROL Source B2B] Le type de données vous permet d’utiliser l’iden
 | `sourceKey` | Chaîne | Un identifiant unique composé de la variable `sourceId`, `sourceInstanceId`, et `sourceType` concaténé ensemble au format suivant : `[sourceID]@[sourceInstanceID].[sourceType]`.<br><br>Certains connecteurs source tels que Marketo concaténent automatiquement cette valeur pour certains identifiants. Les autres doivent être concaténés manuellement à l’aide de la variable [Préparation de données `concat` function](../../data-prep/functions.md#string), par exemple : `concat(id,"@${ORG_ID}.Marketo")` |
 | `sourceType` | Chaîne | Nom de la plateforme qui fournit les données source. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Pour obtenir plus d’informations sur ce type de données, reportez-vous au référentiel XDM public:
 

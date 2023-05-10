@@ -6,8 +6,8 @@ description: Ce document présente un aperçu du groupe de champs de schéma Dé
 exl-id: 12c9fef5-4f9e-49b5-894f-f4938bb95c23
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '305'
-ht-degree: 11%
+source-wordcount: '302'
+ht-degree: 10%
 
 ---
 
@@ -33,7 +33,7 @@ ht-degree: 11%
 | `tier` | Chaîne | Capture le niveau du programme de fidélité dans lequel la personne est inscrite. |
 | `upgradeDate` | Chaîne | Date à laquelle le membre du programme de fidélité a été mis à niveau vers son niveau le plus récent. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Pour plus d’informations sur le groupe de champs, reportez-vous au référentiel XDM public :
 

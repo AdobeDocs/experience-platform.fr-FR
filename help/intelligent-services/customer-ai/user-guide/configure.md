@@ -80,7 +80,7 @@ L’aperçu du jeu de données contient des données telles que l’heure de la 
 
 Sélectionner **[!UICONTROL Enregistrer]** pour enregistrer vos brouillons au fur et à mesure que vous vous déplacez dans le workflow. Vous pouvez également enregistrer les configurations de modèle de brouillon et passer à l’étape suivante du workflow. Utilisation **[!UICONTROL Enregistrer et continuer]** pour créer et enregistrer des brouillons lors des configurations de modèle. Cette fonctionnalité vous permet de créer et d’enregistrer des brouillons de la configuration du modèle. Elle est particulièrement utile lorsque vous devez définir de nombreux champs dans le workflow de configuration.
 
-![Le workflow Créer de l’onglet Customer AI des Data Science Services avec les options Enregistrer et Enregistrer et continuer est mis en surbrillance.](../images/user-guide/cai-save-and-exit.png)
+![Le workflow Créer de l’onglet Customer AI des Data Science Services avec les options Enregistrer et Enregistrer et continuer en surbrillance.](../images/user-guide/cai-save-and-exit.png)
 
 ### Complétude du jeu de données {#dataset-completeness}
 

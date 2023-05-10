@@ -6,8 +6,8 @@ description: Ce document présente un aperçu du groupe de champs Schéma d'abon
 exl-id: 00c20081-09d0-425c-9894-0f957558bd43
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '730'
-ht-degree: 12%
+source-wordcount: '715'
+ht-degree: 10%
 
 ---
 
@@ -33,7 +33,7 @@ Le groupe de champs fournit un champ de type objet unique, `telecomSubscription`
 | `bundleName` | Chaîne | Capture le nom de tout type de regroupement d’abonnement auquel le client est inscrit, tel que `Internet + Media`. |
 | `primaryPartyID` | Chaîne | Identifiant de la Principale personne responsable de l’abonnement, qui peut généralement être son numéro de téléphone d’appareil. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Pour plus d’informations sur le groupe de champs, reportez-vous au référentiel XDM public :
 
@@ -55,7 +55,7 @@ Pour plus d’informations sur le groupe de champs, reportez-vous au référenti
 | `selfSetup` | Booléen | Indique si un client est éligible à la configuration Internet sans visite d’un technicien. |
 | `uploadSpeed` | Nombre entier | Vitesse de chargement maximale disponible pour l’abonnement, en mégaoctets (Mo). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## `landlineSubscription` {#landlineSubscription}
 
@@ -78,7 +78,7 @@ Pour plus d’informations sur le groupe de champs, reportez-vous au référenti
 | `unlimitedLocalCalling` | Booléen | Indique si les fonctionnalités d’abonnement fixe incluent un nombre illimité d’appels locaux. |
 | `voicemail` | Booléen | Indique si les fonctionnalités d’abonnement fixe incluent la messagerie vocale. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## `mediaSubscription` {#mediaSubscription}
 
@@ -92,7 +92,7 @@ Pour plus d’informations sur le groupe de champs, reportez-vous au référenti
 | `subscriptionDetails` | [[!UICONTROL Abonnement aux télécommunications]](../../data-types/telecom-subscription.md) | Décrit les détails généraux de l’abonnement, notamment la durée de l’abonnement, les frais, l’état, etc. |
 | `channels` | Nombre entier | Nombre de canaux inclus dans l’abonnement au média. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## `mobileSubscription` {#mobileSubscription}
 
@@ -108,4 +108,4 @@ Pour plus d’informations sur le groupe de champs, reportez-vous au référenti
 | `planLevel` | Chaîne | Nom du plan mobile affecté à cet abonnement. |
 | `portedNumber` | Booléen | Indique si le client porte son numéro depuis un autre opérateur. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

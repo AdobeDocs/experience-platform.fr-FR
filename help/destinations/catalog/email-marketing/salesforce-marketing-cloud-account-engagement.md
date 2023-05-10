@@ -2,10 +2,11 @@
 title: Engagement du compte Marketing Cloud Salesforce
 description: Découvrez comment utiliser la destination Engagement du compte de Marketing Cloud Salesforce (anciennement appelée Pardot) pour exporter les données de votre compte et les activer dans Engagement du compte de Marketing Cloud Salesforce pour répondre aux besoins de votre entreprise.
 last-substantial-update: 2023-04-14T00:00:00Z
-source-git-commit: 65feb905bfa7d663d1d463d94af428a04dc55b01
+exl-id: fca9d4f4-8717-4bfa-9992-5164ba98bea4
+source-git-commit: 86feee5981aaa81d4c1f97ff8aaf303b2aacd977
 workflow-type: tm+mt
 source-wordcount: '1589'
-ht-degree: 34%
+ht-degree: 36%
 
 ---
 
@@ -21,7 +22,7 @@ Ceci [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) 
 
 ## Cas d’utilisation {#use-cases}
 
-Pour vous aider à mieux comprendre comment et à quel moment utiliser la variable [!DNL Marketing Cloud Account Engagement] destination, voici un exemple de cas d’utilisation que les clients Adobe Experience Platform peuvent résoudre en utilisant cette destination.
+Pour mieux comprendre quand et comment utiliser la destination [!DNL Marketing Cloud Account Engagement], consultez l’exemple de cas d’utilisation ci-dessous que les clientes et clients d’Adobe Experience Platform peuvent résoudre à l’aide de cette destination.
 
 ### Envoyer des emails aux contacts pour les campagnes marketing {#use-case-send-emails}
 
@@ -172,7 +173,7 @@ Pour vérifier que vous avez correctement configuré la destination, procédez c
 
 ## Utilisation et gouvernance des données {#data-usage-governance}
 
-Lors de la gestion de vos données, toutes les destinations [!DNL Adobe Experience Platform] se conforment aux stratégies d’utilisation des données. Pour obtenir des informations détaillées sur la manière dont [!DNL Adobe Experience Platform] applique la gouvernance des données, lisez la [présentation de la gouvernance des données](/help/data-governance/home.md).
+Lors de la gestion de vos données, toutes les destinations [!DNL Adobe Experience Platform] se conforment aux politiques d’utilisation des données. Pour obtenir des informations détaillées sur la manière dont [!DNL Adobe Experience Platform] applique la gouvernance des données, lisez la [présentation de la gouvernance des données](/help/data-governance/home.md).
 
 ## Ressources supplémentaires {#additional-resources}
 

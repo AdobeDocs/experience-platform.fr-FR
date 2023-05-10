@@ -423,7 +423,7 @@ Définissez la variable `resolve_fallback_snapshot_on_failure` sur true pour rem
 SET resolve_fallback_snapshot_on_failure=true;
 ```
 
-La ligne de code suivante remplace la variable `@from_snapshot_id` avec le plus tôt possible `snapshot_id` à partir des métadonnées.
+La ligne de code suivante remplace l’`@from_snapshot_id` par l’`snapshot_id` disponible en premier à partir des métadonnées.
 
 ```sql
 $$ BEGIN
@@ -526,7 +526,7 @@ L’exemple renvoie les éléments suivants :
 2  b Spark SQL
 ```
 
-Ce deuxième exemple illustre le concept et l&#39;application de la `inline` fonction . Le modèle de données de l’exemple est illustré dans l’image ci-dessous.
+Ce deuxième exemple illustre le concept et l&#39;application de la méthode `inline` fonction . Le modèle de données de l’exemple est illustré dans l’image ci-dessous.
 
 ![Schéma de productListItems.](../images/sql/productListItems.png)
 

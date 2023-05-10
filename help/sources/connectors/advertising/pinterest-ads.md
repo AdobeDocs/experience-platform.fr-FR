@@ -2,10 +2,11 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;publicités Pinterest
 title: Présentation de la source pinterest Ads
 description: Découvrez comment connecter Pinterest Ads à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur.
-badge: "Version bêta"
+badge: Version bêta
 hide: true
 hidefromtoc: true
-source-git-commit: a16264da68d9e5e9aeac86b1a3083c701407febb
+exl-id: 8edbcb26-0a18-47f1-8012-ca209d99d7a6
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '984'
 ht-degree: 13%

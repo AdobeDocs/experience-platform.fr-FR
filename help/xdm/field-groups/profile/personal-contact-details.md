@@ -6,8 +6,8 @@ description: Ce document présente un aperçu du groupe de champs de schéma Dé
 exl-id: a78d9aee-ecf6-45a9-b270-cdad5b800a86
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '169'
-ht-degree: 21%
+source-wordcount: '166'
+ht-degree: 20%
 
 ---
 
@@ -30,7 +30,7 @@ ht-degree: 21%
 | `mobilePhone` | [Numéro de téléphone](../../data-types/phone-number.md) | Décrit le numéro de téléphone portable de la personne. |
 | `personalEmail` | [Adresse e-mail](../../data-types/email-address.md) | Décrit l’adresse électronique de la personne. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Pour plus d’informations sur le groupe de champs, reportez-vous au référentiel XDM public :
 

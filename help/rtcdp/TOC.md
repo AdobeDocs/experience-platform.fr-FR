@@ -5,7 +5,7 @@ audience: user
 user-guide-title: Guide de Real-Time Customer Data Platform
 user-guide-description: Regroupez les données connues et anonymes provenant de plusieurs entreprises sources afin de créer des profils clients, puis des segments d’audience à partir de ces profils et enfin d’activer ces segments vers des destinations tierces.
 source-git-commit: a36ec71cbec2316eaa08daf5f1edb36509271e7c
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '205'
 ht-degree: 100%
 
@@ -37,8 +37,8 @@ ht-degree: 100%
    * [Destinations dans l’édition B2B de Real-Time CDP](destinations/b2b.md)
 * Identités {#identity}
    * [Identités et espaces de noms d’identité](profile/identities-overview.md)
-* Stratégies de fusion {#merge-policies}
-   * [Présentation des stratégies de fusion](profile/merge-policies.md)
+* Politiques de fusion {#merge-policies}
+   * [Présentation des politiques de fusion](profile/merge-policies.md)
 * Confidentialité et gouvernance des données {#privacy}
    * [Présentation de la confidentialité](privacy/privacy-overview.md)
    * [Présentation de la gouvernance des données](privacy/data-governance-overview.md)

@@ -5,8 +5,8 @@ last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
 source-git-commit: 83778bc5d643f69e0393c0a7767fef8a4e8f66e9
 workflow-type: tm+mt
-source-wordcount: '1084'
-ht-degree: 16%
+source-wordcount: '1078'
+ht-degree: 21%
 
 ---
 
@@ -16,9 +16,9 @@ ht-degree: 16%
 >
 >[!DNL The Trade Desk - CRM] destination dans Platform est actuellement en version bêta. La documentation et les fonctionnalités peuvent changer.
 >
->Avec la publication de l’EUID (European Unified ID), deux [!DNL The Trade Desk - CRM] destinations dans [destinations](/help/destinations/catalog/overview.md).
->* Si vous source des données dans l’UE, utilisez la variable **[!DNL The Trade Desk - CRM (EU)]** destination.
->* Si vous sources des données dans les régions APAC ou NAMER, utilisez la variable **[!DNL The Trade Desk - CRM (NAMER & APAC)]** destination.
+>Avec la publication de l’EUID (European Unified ID), deux destinations [!DNL The Trade Desk - CRM] dans le [catalogue de destinations](/help/destinations/catalog/overview.md) sont maintenant affichées.
+>* Si vos données proviennent de l’UE, utilisez la destination **[!DNL The Trade Desk - CRM (EU)]**.
+>* Si vos données proviennent des régions APAC ou NAMER, utilisez la destination **[!DNL The Trade Desk - CRM (NAMER & APAC)]**.
 >
 >Les deux destinations en Experience Platform sont actuellement en version bêta. Cette page de documentation a été créée par la fonction *[!DNL Trade Desk]* l&#39;équipe. Pour toute question ou demande de mise à jour, veuillez contacter votre [!DNL Trade Desk] représentative, la documentation et la fonctionnalité peuvent être modifiées.
 
@@ -44,14 +44,14 @@ Selon le type d’ID que vous ingérez dans Adobe Experience Platform, vous deve
 
 [!DNL The Trade Desk] prend en charge l’activation des identités décrites dans le tableau ci-dessous. En savoir plus sur les [identités](/help/identity-service/namespaces.md).
 
-Adobe Experience Platform prend en charge le texte brut et les adresses électroniques hachées SHA256. Suivez les instructions de la section Exigences de correspondance des identifiants et utilisez les espaces de noms appropriés pour le texte brut et les adresses électroniques hachées, respectivement.
+Adobe Experience Platform prend en charge le texte brut et les adresses e-mail hachées avec SHA256. Suivez les instructions de la section Exigences de correspondance des identifiants et utilisez les espaces de noms appropriés pour le texte brut et les adresses électroniques hachées, respectivement.
 
 | Identité cible | Description | Considérations |
 |---|---|---|
 | E-mail | Adresses électroniques (texte en clair) | Entrée `email` comme identité cible lorsque votre identité source est un espace de noms ou un attribut Email. |
 | Email_LC_SHA256 | Les adresses électroniques doivent être hachées à l’aide de SHA256 et mises en minuscules. Veillez à suivre les [normalisation des emails](https://github.com/UnifiedID2/uid2docs/tree/main/api#email-address-normalization) règles requises. Vous ne pourrez pas modifier ce paramètre ultérieurement. | Entrée `hashed_email` comme identité cible lorsque votre identité source est un espace de noms ou un attribut Email_LC_SHA256. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Exigences en matière de hachage des emails {#hashing-requirements}
 
@@ -76,7 +76,7 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 | Type d’exportation | **[!UICONTROL Exportation des segments]** | Vous exportez tous les membres d’un segment (audience) avec les identifiants (email ou email haché) utilisés dans la destination du bureau de commerce. |
 | Fréquence des exportations | **[!UICONTROL Lot quotidien]** | Comme un profil est mis à jour dans Experience Platform en fonction de l’évaluation des segments, le profil (identités) est mis à jour une fois par jour en aval de la plateforme de destination. En savoir plus sur [exports par lots](/help/destinations/destination-types.md#file-based). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Se connecter à la destination {#connect}
 
@@ -86,7 +86,7 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 ### Renseignement des détails de destination {#fill-in-details}
 
-Avant de pouvoir envoyer ou activer des données d’audience vers une destination, vous devez configurer une connexion à votre propre plateforme de destination. Pendant la [configuration](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=en) de cette destination, vous devez fournir les informations suivantes :
+Avant de pouvoir envoyer ou activer des données d’audience vers une destination, vous devez configurer une connexion à votre propre plateforme de destination. Pendant la [configuration](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=fr) de cette destination, vous devez fournir les informations suivantes :
 
 * **[!UICONTROL Type de compte]**: Veuillez choisir la **[!UICONTROL Compte existant]** .
 * **[!UICONTROL Nom]** : un nom par lequel vous reconnaîtrez cette destination à l’avenir.
@@ -142,4 +142,4 @@ Pour vérifier que les données sont correctement exportées depuis l’Experien
 
 ## Utilisation et gouvernance des données {#data-usage-governance}
 
-Lors de la gestion de vos données, toutes les destinations [!DNL Adobe Experience Platform] se conforment aux stratégies d’utilisation des données. Pour obtenir des informations détaillées sur la manière dont [!DNL Adobe Experience Platform] applique la gouvernance des données, lisez la [présentation de la gouvernance des données](/help/data-governance/home.md).
+Lors de la gestion de vos données, toutes les destinations [!DNL Adobe Experience Platform] se conforment aux politiques d’utilisation des données. Pour obtenir des informations détaillées sur la manière dont [!DNL Adobe Experience Platform] applique la gouvernance des données, lisez la [présentation de la gouvernance des données](/help/data-governance/home.md).

@@ -2,17 +2,17 @@
 title: Destination Marketo Measure Ultimate
 description: Découvrez comment connecter et activer des données vers la destination Marketo Measure Ultimate.
 last-substantial-update: 2023-03-07T00:00:00Z
-source-git-commit: c2c7a4cd860fed2c8124fe46fe3fd405ba49ecf4
+exl-id: b4220841-8908-41ff-b977-dbeebfa787c8
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '654'
 ht-degree: 37%
 
 ---
 
-
 # Destination Marketo Measure Ultimate {#mmu-destination}
 
-## Aperçu {#overview}
+## Présentation {#overview}
 
 Marketo Measure (anciennement Bizible) permet aux marketeurs de savoir quels efforts marketing sont les plus efficaces pour générer des recettes et optimiser le retour sur investissement pour leur entreprise. Marketo Measure est une solution d’attribution marketing qui effectue automatiquement le suivi et les rapports sur les performances des canaux, ce qui vous permet d’identifier les canaux qui génèrent le plus d’engagement client et d’optimiser vos dépenses marketing en conséquence.
 
@@ -82,6 +82,4 @@ Pour valider une exportation réussie d’un jeu de données, vous pouvez vérif
 
 ## Utilisation et gouvernance des données {#data-usage-governance}
 
-Lors de la gestion de vos données, toutes les destinations [!DNL Adobe Experience Platform] se conforment aux stratégies d’utilisation des données. Pour obtenir des informations détaillées sur la manière dont [!DNL Adobe Experience Platform] applique la gouvernance des données, consultez la [Présentation de la gouvernance des données](/help/data-governance/home.md).
-
-
+Lors de la gestion de vos données, toutes les destinations [!DNL Adobe Experience Platform] se conforment aux politiques d’utilisation des données. Pour obtenir des informations détaillées sur la manière dont [!DNL Adobe Experience Platform] applique la gouvernance des données, consultez la [Présentation de la gouvernance des données](/help/data-governance/home.md).

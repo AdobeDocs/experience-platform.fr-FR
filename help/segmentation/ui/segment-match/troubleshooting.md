@@ -5,7 +5,7 @@ title: Questions fréquentes sur la correspondance de segments
 description: La correspondance de segments est un service de partage de segments dans Adobe Experience Platform qui permet à deux personnes ou plus utilisant Platform d’échanger des données de segment de manière sécurisée, régulée et respectueuse de la confidentialité.
 exl-id: cfa9db16-0bc3-4d25-914d-0d923eccb5a3
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '414'
 ht-degree: 100%
 

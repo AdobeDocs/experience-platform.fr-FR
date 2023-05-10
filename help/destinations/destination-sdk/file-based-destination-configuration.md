@@ -11,7 +11,7 @@ ht-degree: 58%
 
 # Configuration de destinations basées sur des fichiers {#destination-configuration}
 
-## Aperçu {#overview}
+## Présentation {#overview}
 
 Cette configuration vous permet d’indiquer les informations essentielles pour votre destination basée sur des fichiers, telles que votre nom de destination, votre catégorie, votre description, etc. Les paramètres de cette configuration déterminent également comment les utilisateurs d’Experience Platform s’authentifient pour votre destination, comment ils apparaissent dans l’interface utilisateur d’Experience Platform ainsi que les identités qui peuvent être exportées vers votre destination. Vous pouvez également utiliser cette configuration pour afficher les options liées au type de fichier, au format de fichier ou aux paramètres de compression des fichiers exportés.
 

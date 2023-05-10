@@ -6,8 +6,8 @@ description: Ce document présente un aperçu du type de données XDM (Applicati
 exl-id: ac7d6761-7b58-4e0d-85e7-6f157fb2eea5
 source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
-source-wordcount: '442'
-ht-degree: 8%
+source-wordcount: '439'
+ht-degree: 7%
 
 ---
 
@@ -31,7 +31,7 @@ ht-degree: 8%
 | `userPerspective` | Chaîne | La perspective ou la relation physique entre l’utilisateur et l’application ou la marque au moment où un événement s’est produit. La compréhension de la perspective de l’utilisateur par rapport à l’application permet de générer des sessions avec précision, car la plupart du temps vous ne souhaitez pas inclure `background` et `detached` dans le cadre d’une &quot;principale&quot; session. La valeur de cette propriété doit être égale à l’une des valeurs d’énumération répertoriées ci-dessous. <li> `foreground`: L’utilisateur et l’application interagissent directement les uns avec les autres. </li> <li> `background`: L’application et l’utilisateur interagissent indirectement. Par exemple, l’application peut mesurer une valeur et l’actualiser lorsque l’écran est verrouillé ou qu’une autre application est utilisée en premier plan.  </li> <li> `detached`: Désolidarisé signifie que l’événement était lié à l’application, mais ne provenait pas directement de l’application, comme l’envoi d’un email ou d’une notification push depuis un système externe. |
 | `version` | Chaîne | Version de l’application. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Pour obtenir plus d’informations sur ce type de données, reportez-vous au référentiel XDM public:
 

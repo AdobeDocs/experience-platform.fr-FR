@@ -48,7 +48,7 @@ Vous pouvez également utiliser un ensemble d’actions et de listes de produits
 
 ## Règles de traitement
 
-Toutes les données collectées par le réseau Edge sont accessibles via des [règles de traitement](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/processing-rules/processing-rules-configuration/t-processing-rules.html). Dans [!DNL Analytics], vous pouvez utiliser des règles de traitement pour incorporer des données contextuelles dans [!DNL Analytics] .
+Toutes les données collectées par le réseau Edge sont accessibles via des [règles de traitement](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/processing-rules/processing-rules-configuration/t-processing-rules.html?lang=fr). Dans [!DNL Analytics], vous pouvez utiliser des règles de traitement pour incorporer des données contextuelles dans [!DNL Analytics] .
 
 Par exemple, dans la règle suivante, Adobe Analytics est défini pour renseigner la variable **Termes de recherche interne (eVar2)** avec les données associées à **a.x._atag.search.term(Context Data)**.
 
@@ -84,4 +84,4 @@ alloy("event",{
 });
 ```
 
-Pour plus d’informations sur le suivi des événements avec Adobe Experience Platform [!DNL Web SDK], voir [Suivi des événements](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html).
+Pour plus d’informations sur le suivi des événements avec Adobe Experience Platform [!DNL Web SDK], voir [Suivi des événements](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=fr).

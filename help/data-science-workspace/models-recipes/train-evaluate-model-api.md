@@ -33,7 +33,7 @@ Grâce au tutoriel, vous devez maintenant disposer des valeurs suivantes :
 
 ## Workflow API
 
-Nous utiliserons les API pour créer une exécution d’expérience pour la formation. Dans ce tutoriel, nous allons nous concentrer sur les points de terminaison Engines,MLInstances et Experiments. Le graphique suivant décrit la relation entre les trois points et présente également la notion d’exécution et de modèle.
+Nous utiliserons les API pour créer une exécution d’expérience pour la formation. Dans ce tutoriel, nous allons nous concentrer sur les points d’entrée Engines,MLInstances et Experiments. Le graphique suivant décrit la relation entre les trois points et présente également la notion d’exécution et de modèle.
 
 ![](../images/models-recipes/train-evaluate-api/engine_hierarchy_api.png)
 

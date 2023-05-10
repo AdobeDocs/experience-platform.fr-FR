@@ -6,8 +6,8 @@ description: Ce document fournit un aperçu du type de données XDM d’identit�
 exl-id: fb02b6b4-255b-442f-895c-600022231a1c
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '287'
-ht-degree: 16%
+source-wordcount: '284'
+ht-degree: 15%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 16%
 | `primary` | Booléen | Indique s’il s’agit de l’identité Principale de l’individu. Chaque individu ne peut avoir qu&#39;une seule identité Principale. |
 | `xid` | Chaîne | Lorsqu’elle est présente, cette valeur représente un identifiant d’espace de noms croisé unique pour tous les identifiants d’espace de noms inclus dans tous les espaces de noms. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Pour obtenir plus d’informations sur ce type de données, reportez-vous au référentiel XDM public:
 

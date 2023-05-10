@@ -3,10 +3,11 @@ solution: Experience Platform
 title: Guide de migration des API pour les destinations de stockage dans le cloud
 description: Découvrez les modifications apportées au workflow pour activer les destinations de stockage dans le cloud dans le cadre de la migration vers les nouvelles cartes de destination de stockage dans le cloud avec des fonctionnalités supplémentaires.
 type: Tutorial
-source-git-commit: 6ed78a96f099fb4552716ac4a598c43f4d65cf37
+exl-id: 4acaf718-794e-43a3-b8f0-9b19177a2bc0
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '1446'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 

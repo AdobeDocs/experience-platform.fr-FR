@@ -4,8 +4,8 @@ description: Ce document fournit un aperçu du type de données du modèle de do
 exl-id: d3d16bae-196b-489d-8590-fd22150eedf1
 source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
 workflow-type: tm+mt
-source-wordcount: '127'
-ht-degree: 18%
+source-wordcount: '124'
+ht-degree: 24%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 18%
 | `name` | Chaîne | Identifiant du SDK ou du point de terminaison. Tous les SDK ou points de terminaison sont identifiés via un URI, y compris les extensions. |
 | `version` | Chaîne | Version de l’API ou du SDK. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Pour obtenir plus d’informations sur ce type de données, reportez-vous au référentiel XDM public:
 

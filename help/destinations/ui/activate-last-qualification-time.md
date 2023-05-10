@@ -3,7 +3,8 @@ title: Utilisation de l’attribut XDM de l’heure de dernière qualification d
 description: Découvrez comment utiliser l’attribut XDM de l’heure de la dernière qualification dans les nouvelles destinations de stockage dans le cloud bêta
 hidefromtoc: y
 hide: y
-source-git-commit: 03031dcaad82932f92e76177adf3b55447c3c153
+exl-id: d077ea10-5ff2-4acc-8ee6-78ea6cd752d1
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '332'
 ht-degree: 8%

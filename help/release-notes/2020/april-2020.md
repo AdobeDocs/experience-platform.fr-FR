@@ -1,6 +1,6 @@
 ---
 title: Notes de mise à jour d’Adobe Experience Platform - Avril 2020
-description: Les notes de mise à jour d’avril 2020 pour Adobe Experience Platform.
+description: Les notes de mise à jour d’avril 2020 pour Adobe Experience Platform.
 doc-type: release notes
 last-update: April 13, 2020
 author: ens71067
@@ -68,9 +68,9 @@ XDM est une spécification documentée publiquement conçue pour améliorer la p
 
 ## Gouvernance des données {#governance}
 
-Dans Adobe Experience Platform, la gouvernance des données désigne un ensemble de stratégies et de technologies permettant de gérer les données clients et de garantir la conformité aux réglementations, aux restrictions et aux stratégies applicables à l’utilisation des données. Elle joue un rôle clé dans [!DNL Experience Platform] à différents niveaux, notamment dans le catalogage, la traçabilité des données, l’étiquetage de l’utilisation des données, les stratégies d’accès aux données et le contrôle d’accès aux données pour les actions marketing.
+Dans Adobe Experience Platform, la gouvernance des données désigne un ensemble de politiques et de technologies permettant de gérer les données clients et de garantir la conformité aux réglementations, aux restrictions et aux politiques applicables à l’utilisation des données. Elle joue un rôle clé dans [!DNL Experience Platform] à différents niveaux, notamment dans le catalogage, la traçabilité des données, l’étiquetage de l’utilisation des données, les politiques d’accès aux données et le contrôle d’accès aux données pour les actions marketing.
 
-La prise en main de la gouvernance des données nécessite une compréhension approfondie des réglementations, des obligations contractuelles et des politiques d’entreprise qui s’appliquent aux données clients. À partir de là, les données peuvent être classifiées en appliquant les libellés d’utilisation des données appropriés, et leur utilisation peut être contrôlée via la définition des stratégies d’utilisation des données.
+La prise en main de la gouvernance des données nécessite une compréhension approfondie des réglementations, des obligations contractuelles et des politiques d’entreprise qui s’appliquent aux données clients. À partir de là, les données peuvent être classifiées en appliquant les libellés d’utilisation des données appropriés, et leur utilisation peut être contrôlée via la définition des politiques d’utilisation des données.
 
 Le cadre de gouvernance des données simplifie et rationalise le processus de catégorisation des données et de création de stratégies d’utilisation des données par le biais du [!DNL Experience Platform] l’interface utilisateur et [!DNL Policy Service] API.
 
@@ -78,7 +78,7 @@ Le cadre de gouvernance des données simplifie et rationalise le processus de ca
 
 | Fonctionnalité | Description |
 | -----------| ---------- |
-| Gestion des stratégies d’utilisation des données dans l’interface utilisateur | Les stratégies d’utilisation des données peuvent désormais être gérées dans le **Stratégies** de l’espace de travail [!DNL Experience Platform] Interface utilisateur. Pour plus d’informations, voir le [guide d’utilisation des stratégies](../../data-governance/policies/user-guide.md). |
+| Gestion des politiques d’utilisation des données dans l’interface utilisateur | Les stratégies d’utilisation des données peuvent désormais être gérées dans le **Stratégies** de l’espace de travail [!DNL Experience Platform] Interface utilisateur. Pour plus d’informations, voir le [guide d’utilisation des politiques](../../data-governance/policies/user-guide.md). |
 
 **Problèmes connus**
 
@@ -112,7 +112,7 @@ Les nouvelles réglementations légales et organisationnelles donnent aux utilis
 | --- | --- |
 | Respect de la loi PDPA | Désormais, les demandes d’accès à des informations personnelles peuvent être créées et suivies en vertu de la loi sur la protection des données à caractère personnel (PDPA) en Thaïlande. Lors de l’envoi de demandes d’accès à des informations personnelles dans l’API, le tableau `regulation` accepte la valeur « pdpa_tha ». |
 | Types d’espaces de noms dans l’interface utilisateur | Vous pouvez désormais spécifier différents types d’espaces de noms dans le créateur de requêtes de l’interface utilisateur de [!DNL Privacy Service]. Pour plus d’informations, voir le [guide d’utilisation](../../privacy-service/ui/user-guide.md). |
-| Abandon de l’ancien point de terminaison | L’ancien point de terminaison de l’API (`data/privacy/gdpr`) a été abandonné. |
+| Abandon de l’ancien point d’entrée | L’ancien point d’entrée de l’API (`data/privacy/gdpr`) a été abandonné. |
 
 Problèmes connus
 

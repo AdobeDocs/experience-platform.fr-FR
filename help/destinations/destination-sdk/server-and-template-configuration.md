@@ -4,7 +4,7 @@ title: Options de configuration des spécifications de serveur et de modèle dan
 exl-id: cf493ed5-0bdb-4b90-b84d-73926a566a2a
 source-git-commit: a08201c4bc71b0e37202133836e9347ed4d3cd6b
 workflow-type: tm+mt
-source-wordcount: '425'
+source-wordcount: '419'
 ht-degree: 100%
 
 ---
@@ -30,7 +30,7 @@ Ce processus fournit des données utilisateur sous forme d’une série de messa
 | `templatingStrategy` | Chaîne | *Obligatoire.* <ul><li>Utilisez `PEBBLE_V1` si vous utilisez une macro au lieu d’une valeur fixe dans le champ `value`. Utilisez cette option si vous disposez d’un point d’entrée du type : `https://api.moviestar.com/data/{{customerData.region}}/items` </li><li> Utilisez `NONE` si aucune transformation n’est nécessaire du côté d’Adobe, par exemple si vous avez un point d’entrée tel que : `https://api.moviestar.com/data/items` </li></ul> |
 | `value` | Chaîne | *Obligatoire.* Renseignez l’adresse du point d’entrée de l’API auquel Experience Platform doit se connecter. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Spécifications des modèles {#template-specs}
 
@@ -75,4 +75,4 @@ La spécification des modèles vous permet de configurer le format du message ex
 | `value` | Chaîne | *Obligatoire.* Cette chaîne est la version placée dans une séquence dʼéchappement qui transforme les données des clients Platform au format attendu par votre service. <br> Pour plus d’informations sur l’écriture du modèle, consultez la section [Utiliser les modèles](./message-format.md#using-templating). <br> Pour plus d’informations sur les caractères d’échappement, consultez la section [Norme RFC JSON, section 7](https://tools.ietf.org/html/rfc8259#section-7). <br> Pour un exemple de transformation simple, reportez-vous à la transformation des [attributs de profil](./message-format.md#attributes). |
 | `contentType` | Chaîne | *Obligatoire.* Type de contenu que votre serveur accepte. Cette valeur est probablement `application/json`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

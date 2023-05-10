@@ -6,8 +6,8 @@ description: Ce document présente le type de données XDM Détails de l’inter
 exl-id: c05b098b-3f12-4283-a6d5-5ebf96b9828d
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '159'
-ht-degree: 15%
+source-wordcount: '156'
+ht-degree: 13%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 15%
 | `deviceGeoAccuracy` | Double | Précision de l’appareil ou du mécanisme de géolocalisation, mesuré en mètres. |
 | `distanceToCenter` | Double | Distance au centre de la zone géographique dans le cas d’un cercle géographique, mesurée en mètres. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Pour obtenir plus d’informations sur ce type de données, reportez-vous au référentiel XDM public:
 

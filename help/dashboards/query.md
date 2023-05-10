@@ -7,7 +7,7 @@ exl-id: 0087dcab-d5fe-4a24-85f6-587e9ae74fb8
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '970'
-ht-degree: 49%
+ht-degree: 50%
 
 ---
 
@@ -43,7 +43,7 @@ Une barre latérale s’affiche avec deux bascules, [!UICONTROL Inclus dans Prof
 
 ### Jeux de données d’attributs de profils
 
-Les informations contenues dans le tableau de bord du profil sont liées aux stratégies de fusion qui ont été définies par votre organisation. Pour chaque stratégie de fusion active, un jeu de données d’attributs de profil est disponible dans le lac de données.
+Les informations contenues dans le tableau de bord du profil sont liées aux politiques de fusion qui ont été définies par votre organisation. Pour chaque politique de fusion active, un jeu de données d’attributs de profil est disponible dans le lac de données.
 
 La convention d’affectation des noms de ces jeux de données est **Profile-Snapshot-Export** suivie d’une valeur alphanumérique aléatoire générée par le système. Par exemple : `Profile-Snapshot-Export-abbc7093-80f4-4b49-b96e-e743397d763f`.
 
@@ -51,9 +51,9 @@ Pour comprendre le schéma complet de chaque jeu de données d’exportation d�
 
 ![Aperçu du jeu de données Profile-Snapshot-Export.](images/query/profile-attribute.png)
 
-#### Mappage des jeux de données d’attributs de profil aux ID de stratégie de fusion
+#### Mappage des jeux de données d’attributs de profil aux ID de politique de fusion
 
-La valeur alphanumérique attribuée à chaque jeu de données d’attributs de profil généré par le système est une chaîne aléatoire qui correspond à un identifiant de stratégie de fusion de l’une des stratégies de fusion créées par votre organisation. Le mappage de chaque ID de stratégie de fusion à sa chaîne de jeu de données d’attributs de profil correspondante est conservé dans le jeu de données `adwh_dim_merge_policies`.
+La valeur alphanumérique attribuée à chaque jeu de données d’attributs de profil généré par le système est une chaîne aléatoire qui correspond à un identifiant de stratégie de fusion de l’une des stratégies de fusion créées par votre organisation. Le mappage de chaque ID de politique de fusion à sa chaîne de jeu de données d’attributs de profil correspondante est conservé dans le jeu de données `adwh_dim_merge_policies`.
 
 Le jeu de données `adwh_dim_merge_policies` contient les champs suivants :
 
@@ -88,7 +88,7 @@ Pour comprendre le schéma complet du jeu de données de destination DIM, vous p
 
 >[!IMPORTANT]
 >
->La fonctionnalité Modèles de données de statistiques CDP est en version bêta. Ses fonctionnalités et sa documentation peuvent faire l’objet de modifications.
+>La fonctionnalité Modèles de données de statistiques CDP est en version bêta. Les fonctionnalités et la documentation peuvent faire l’objet de changements.
 
 La fonction Modèles de données de statistiques CDP expose le code SQL qui alimente les informations pour divers widgets de profil, de destination et de segmentation. Vous pouvez personnaliser ces modèles de requête SQl afin de créer des rapports CDP pour vos cas d’utilisation de marketing et d’ICP.
 
@@ -125,7 +125,7 @@ Select
 
 ### Nombre de profils par segment
 
-Cet aperçu de l’audience fournit le nombre total de profils fusionnés dans chaque segment du jeu de données. Ce nombre est le résultat de l’application de la stratégie de fusion de segments à vos données de profil afin de fusionner les fragments de profil pour former un seul profil pour chaque individu du segment.
+Cet aperçu de l’audience fournit le nombre total de profils fusionnés dans chaque segment du jeu de données. Ce nombre est le résultat de l’application de la politique de fusion de segments à vos données de profil afin de fusionner les fragments de profil pour former un seul profil pour chaque individu du segment.
 
 ```sql
 Select          

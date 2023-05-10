@@ -19,7 +19,7 @@ Ce guide explique comment utiliser Query Service pour envoyer des données à vo
 
 Dans le cadre de ce processus, vous devez entraîner un modèle d’apprentissage automatique. Ce document suppose une connaissance pratique d’un ou de plusieurs environnements d’apprentissage automatique.
 
-Cet exemple utilise [!DNL Jupyter Notebook] en tant qu’environnement de développement. Bien qu’il existe de nombreuses options disponibles, [!DNL Jupyter Notebook] est recommandé, car il s’agit d’une application web open source qui a de faibles exigences de calcul. Cela peut être [téléchargé sur le site officiel](https://jupyter.org/).
+Cet exemple utilise [!DNL Jupyter Notebook] comme environnement de développement. Bien qu’il existe de nombreuses options disponibles, [!DNL Jupyter Notebook] est recommandé, car il s’agit d’une application web open source qui a de faibles exigences de calcul. Cela peut être [téléchargé sur le site officiel](https://jupyter.org/).
 
 Si vous ne l’avez pas déjà fait, suivez les étapes de la section [connect [!DNL Jupyter Notebook] avec Adobe Experience Platform Query Service](../clients/jupyter-notebook.md) avant de poursuivre avec ce guide.
 

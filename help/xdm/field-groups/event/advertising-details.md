@@ -4,8 +4,8 @@ description: Ce document fournit un aperçu du groupe de champs de schéma Déta
 exl-id: 25de09bd-eedd-489c-9cd5-8acd0c52ddbe
 source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
 workflow-type: tm+mt
-source-wordcount: '1016'
-ht-degree: 22%
+source-wordcount: '1004'
+ht-degree: 21%
 
 ---
 
@@ -32,7 +32,7 @@ ht-degree: 22%
 | `timePlayed` | [[!UICONTROL Mesure]](../../data-types/measure.md) | Durée passée par un utilisateur final sur une ressource multimédia minutée spécifique. |
 | `downloadedPlayback` | Booléen | Lorsque la variable est définie sur `true`, indique que l’accès est généré en raison de la lecture d’une session de publicité téléchargée. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## `adAssetReference` {#adAssetReference}
 
@@ -52,7 +52,7 @@ Le `adAssetReference` capture les informations sur les ressources de la publicit
 | `placementID` | Chaîne | Identifiant de référencement de la publicité. |
 | `siteID` | Chaîne | ID du site publicitaire. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## `adAssetViewDetails` {#adAssetViewDetails}
 
@@ -66,7 +66,7 @@ Le `adAssetViewDetails` capture les détails d’affichage de la lecture de publ
 | `index` | Nombre entier | Index de la publicité dans la coupure publicitaire parente. Par exemple, la première publicité comporte l’index `0` et la deuxième publicité comporte l’index `1`. |
 | `playerName` | Chaîne | Nom du lecteur responsable du rendu de la publicité. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## `adViewability` {#adViewability}
 
@@ -98,6 +98,6 @@ Le `adViewability` capture le nombre d’impressions vues par les utilisateurs f
 | `viewportHeight` | Nombre entier | Taille verticale (en pixels) de la fenêtre dans laquelle l’expérience a été affichée, mesurée au moment de l’exécution. Pour un événement d’affichage web, cette valeur indique la hauteur de la fenêtre d’affichage du navigateur. |
 | `viewportWidth` | Nombre entier | Taille horizontale (en pixels) de la fenêtre dans laquelle l’expérience a été affichée, mesurée au moment de l’exécution. Pour un événement d’affichage web, cette valeur indique la largeur de la fenêtre d’affichage du navigateur. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Pour plus d’informations sur le groupe de champs, reportez-vous à la section [référentiel XDM public](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-advertising.schema.json).

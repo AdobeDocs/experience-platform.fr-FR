@@ -61,7 +61,7 @@ Toutes les requêtes contenant un payload (POST, PUT, PATCH) requièrent un en-t
 
 La validation synchrone est une méthode de validation qui fournit des commentaires immédiats sur les raisons de l’échec d’une ingestion. Toutefois, en cas d’échec, les enregistrements dont la validation échoue sont ignorés et le système empêche leur envoi en aval. Par conséquent, la validation synchrone ne doit être utilisée que pendant le processus de développement. Lors d’une validation synchrone, les appelants sont informés du résultat de la validation et en cas d’échec, des raisons de cet échec.
 
-La validation synchrone n’est pas activée par défaut. Pour l’activer, vous devez transmettre le paramètre de requête facultatif `syncValidation=true` lorsque vous effectuez des appels API. De plus, la validation synchrone est actuellement disponible uniquement si le point de terminaison de votre flux se trouve sur le centre de données VA7.
+La validation synchrone n’est pas activée par défaut. Pour l’activer, vous devez transmettre le paramètre de requête facultatif `syncValidation=true` lorsque vous effectuez des appels API. De plus, la validation synchrone est actuellement disponible uniquement si le point d’entrée de votre flux se trouve sur le centre de données VA7.
 
 >[!NOTE]
 >

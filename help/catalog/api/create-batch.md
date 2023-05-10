@@ -13,7 +13,7 @@ ht-degree: 70%
 
 # Création d’un lot
 
-Pour qu’un jeu de données puisse ingérer des données, un lot doit lui être associé. À l’aide de la valeur `id` d’un jeu de données existant, vous pouvez créer un lot en envoyant une requête POST vers le point de terminaison `/batches` dans l’API [!DNL Catalog]
+Pour qu’un jeu de données puisse ingérer des données, un lot doit lui être associé. À l’aide de la valeur `id` d’un jeu de données existant, vous pouvez créer un lot en envoyant une requête POST vers le point d’entrée `/batches` dans l’API [!DNL Catalog]
 
 **Format d’API**
 
