@@ -2,9 +2,9 @@
 title: Flux SQL transparent pour les attributs dérivés
 description: Query Service SQL a été étendu pour offrir une prise en charge transparente des attributs dérivés. Découvrez comment utiliser cette extension SQL pour créer un attribut dérivé activé pour profile et comment utiliser l’attribut pour Real-time Customer Profile et Segmentation Service.
 exl-id: bb1a1d8d-4662-40b0-857a-36efb8e78746
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 6202b1a5956da83691eeb5422d3ebe7f3fb7d974
 workflow-type: tm+mt
-source-wordcount: '1192'
+source-wordcount: '1238'
 ht-degree: 2%
 
 ---
@@ -41,6 +41,16 @@ Utilisez une requête Create Table as Select (CTAS) pour créer un jeu de donné
 CREATE TABLE <your_table_name> [IF NOT EXISTS] (fieldname <your_data_type> primary identity namespace <your_namespace>, [field_name2 <your_data_type>]) [WITH(LABEL='PROFILE')];
 ```
 
+Les types de données pris en charge sont les suivants : booléen, date, datetime, texte, float, bigint, entier, map, tableau et struct/row.
+
+Le bloc de code SQl ci-dessous fournit des exemples pour définir les types de données struct/row, map et array . La ligne 1 présente la syntaxe des lignes. La ligne 2 présente la syntaxe du mappage, la ligne 3, la syntaxe du tableau.
+
+```sql {line-numbers="true"}
+ROW (Column_name <data_type> [, column name <data_type> ]*)
+MAP <data_type, data_type>
+ARRAY <data_type>
+```
+
 Vous pouvez également activer les jeux de données pour le profil via l’interface utilisateur de Platform. Pour plus d’informations sur le marquage d’un jeu de données comme activé pour un profil, voir la section [Activation d’un jeu de données pour la documentation de Real-time Customer Profile](../../../catalog/datasets/user-guide.md#enable-profile).
 
 Dans l’exemple de requête ci-dessous, la variable `decile_table` le jeu de données est créé avec `id` comme colonne d’identité Principale et contient l’espace de noms `IDFA`. Il comporte également un champ nommé `decile1Month` du type de données map . La table créée (`decile_table`) est activé pour profile.
@@ -49,12 +59,6 @@ Dans l’exemple de requête ci-dessous, la variable `decile_table` le jeu de do
 CREATE TABLE decile_table (id text PRIMARY KEY NAMESPACE 'IDFA', 
             decile1Month map<text, integer>) WITH (label='PROFILE');
 ```
-
-<!--        decile3Month map<text, integer>,
-            decile6Month map<text, integer>,
-            decile9month map<text, integer>,
-            decile12month map<text, integer>,
-            decilelifetime map<text, integer> -->
 
 Une fois la requête exécutée avec succès, l’identifiant du jeu de données est renvoyé à la console, comme illustré dans l’exemple ci-dessous.
 
