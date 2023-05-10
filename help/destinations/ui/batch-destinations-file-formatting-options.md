@@ -5,7 +5,7 @@ exl-id: f59b1952-e317-40ba-81d1-35535e132a72
 source-git-commit: b1e9b781f3b78a22b8b977fe08712d2926254e8c
 workflow-type: tm+mt
 source-wordcount: '1214'
-ht-degree: 41%
+ht-degree: 54%
 
 ---
 
@@ -69,9 +69,9 @@ Affichez les exemples ci-dessous du contenu dans les fichiers CSV exportés avec
 >[!CONTEXTUALHELP]
 >id="platform_destinations_csvOptions_quoteCharacter"
 >title="Guillemets"
->abstract="Utilisez cette option si vous souhaitez supprimer les guillemets doubles des chaînes exportées. Consultez la documentation pour obtenir des exemples pour chaque sélection."
+>abstract="Utilisez cette option pour supprimer les guillemets doubles des chaînes exportées. Consultez la documentation pour obtenir des exemples pour chaque sélection."
 
-Utilisez cette option si vous souhaitez supprimer les guillemets doubles des chaînes exportées. Les options disponibles sont les suivantes :
+Utilisez cette option pour supprimer les guillemets doubles des chaînes exportées. Les options disponibles sont les suivantes :
 
 * **[!UICONTROL Caractère nul (\0000)]**. Utilisez cette option pour supprimer les guillemets doubles des fichiers CSV exportés.
 * **[!UICONTROL Guillemets doubles (&quot;)]**. Utilisez cette option pour conserver les guillemets doubles dans les fichiers CSV exportés.

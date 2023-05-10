@@ -6,7 +6,7 @@ exl-id: 97ff41a2-2edd-4608-9557-6b28e74c4480
 source-git-commit: 3d54b89ab5f956710ad595a0e8d3567e1e773d0a
 workflow-type: tm+mt
 source-wordcount: '2125'
-ht-degree: 30%
+ht-degree: 32%
 
 ---
 
@@ -98,7 +98,7 @@ Dans **[!UICONTROL Destinations]** > **[!UICONTROL Catalogue]**, recherchez [!DN
 >[!CONTEXTUALHELP]
 >id="platform_destinations_apioracleeloqua_companyname_username"
 >title="Nom de la société\Nom d’utilisateur"
->abstract="Renseignez ce champ avec le nom de votre société et le nom d’utilisateur de l’Oracle Eloqua dans le formulaire `{COMPANY_NAME}\{USERNAME}`"
+>abstract="Inscrivez dans ce champ le nom de votre société et le nom d’utilisateur d’Oracle Eloqua (formulaire `{COMPANY_NAME}\{USERNAME}`)"
 
 Renseignez les champs obligatoires ci-dessous. Reportez-vous à la section [ [!DNL Oracle Eloqua] Collecter des informations d’identification ](#gather-credentials) pour obtenir des conseils.
 * **[!UICONTROL Mot de passe]**: Le mot de passe de votre [!DNL Oracle Eloqua] compte .
@@ -113,9 +113,9 @@ Si les détails fournis sont valides, l’interface utilisateur affiche un statu
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_apioracleeloqua_pod"
->title="Capsule"
->abstract="Pour trouver votre numéro de capsule, connectez-vous à Oracle Eloqua. Notez l’URL de votre navigateur une fois que vous êtes connecté. "
->additional-url="https://support.oracle.com/knowledge/Oracle%20Cloud/2307176_1.html" text="Oracle de la base de connaissances - découvrez votre numéro de capsule"
+>title="Pod"
+>abstract="Pour trouver votre numéro de pod, connectez-vous à Oracle Eloqua. Notez l’URL de votre navigateur dès la connexion effectuée. "
+>additional-url="https://support.oracle.com/knowledge/Oracle%20Cloud/2307176_1.html" text="Base de connaissances Oracle - Rechercher votre numéro de pod"
 
 Pour configurer les détails de la destination, renseignez les champs obligatoires et facultatifs ci-dessous. Un astérisque situé en regard d’un champ de l’interface utilisateur indique que le champ est obligatoire.
 ![Capture d’écran de l’interface utilisateur de Platform montrant les détails de destination.](../../assets/catalog/email-marketing/oracle-eloqua-api/destination-details.png)
