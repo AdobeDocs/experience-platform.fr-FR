@@ -5,7 +5,7 @@ exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
 source-git-commit: c7f09da40d2ea84de6f21669bdda16c0175a63c1
 workflow-type: tm+mt
 source-wordcount: '798'
-ht-degree: 86%
+ht-degree: 100%
 
 ---
 
@@ -13,11 +13,11 @@ ht-degree: 86%
 
 ## 26 avril 2023
 
-* **Secret JWT OAuth**: Le [Secret JWT OAuth](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html?lang=en) permet aux clients d’utiliser des jetons Adobe et Google Service pour prendre en charge les interactions serveur à serveur dans le transfert d’événements.
+* **Secret JWT OAuth** : le [secret JWT OAuth](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html?lang=fr) permet aux clients et clientes d’utiliser des jetons Adobe et Google Service pour prendre en charge les interactions serveur à serveur dans le transfert d’événement.
 
-La nouvelle extension suivante a été publiée :
+La nouvelle extension suivante a été publiée :
 
-* **[!DNL Pinterest Conversions API]extension**: Le [[!DNL Pinterest Conversions API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/pinterest/overview.html) l’extension de transfert d’événement vous permet d’exploiter les données capturées dans Adobe Experience Platform Edge Network et de les envoyer à [!DNL Pinterest] sous la forme d’événements côté serveur à l’aide de la variable [!DNL Pinterest Conversions API].
+* Extension **[!DNL Pinterest Conversions API]** : l’extension de transfert d’événement [[!DNL Pinterest Conversions API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/pinterest/overview.html?lang=fr) vous permet d’exploiter les données capturées sur le réseau Edge d’Adobe Experience Platform et de les envoyer à [!DNL Pinterest] sous la forme d’événements côté serveur à l’aide de l’[!DNL Pinterest Conversions API].
 
 ## 29 mars 2023
 
@@ -30,8 +30,8 @@ Accédez aux nouveaux workflows de démarrage rapide sous « Prise en main » 
 De nouvelles extensions ont été publiées :
 
 * Extension de transfert d’événement **[!DNL Braze]** : l’extension de transfert d’événement [[!DNL Braze Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html?lang=fr) vous permet d’exploiter les données capturées sur le réseau Edge d’Adobe Experience Platform et de les envoyer à [!DNL Braze] sous la forme d’événements côté serveur à l’aide des API de suivi des utilisateurs [!DNL Braze].
-* **[API des événements Epsilon] extension de transfert d’événement**: Le [[!DNL Epsilon Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html?lang=fr) l’extension vous permet d’exploiter le transfert d’événement pour capturer des informations d’événement dans Adobe Experience Platform Edge Network et les envoyer à [!DNL Epsilon] en utilisant la variable [!DNL Epsilon] API d’événement.
-* Extension de transfert d’événement **[!DNL Mixpanel]** : l’extension [[!DNL Mixpanel Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html?lang=fr)[!DNL Mixpanel] vous permet d’exploiter le transfert d’événement pour capturer des informations d’événement sur le réseau Edge d’Adobe Experience Platform et les envoyer à à l’aide de l’API de suivi des événements.
+* Extension de transfert d’événement de l’**[API d’événements Epsilon]** : l’extension [[!DNL Epsilon Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html?lang=fr) vous permet d’exploiter le transfert d’événement pour capturer des informations d’événement sur le réseau Edge d’Adobe Experience Platform et les envoyer à [!DNL Epsilon] à l’aide de l’API d’événement [!DNL Epsilon].
+* Extension de transfert d’événement **[!DNL Mixpanel]** : l’extension [[!DNL Mixpanel Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html?lang=fr) vous permet d’exploiter le transfert d’événement pour capturer des informations d’événement sur le réseau Edge d’Adobe Experience Platform et les envoyer à [!DNL Mixpanel] à l’aide de l’API de suivi des événements.
 
 ## 25 janvier 2023
 

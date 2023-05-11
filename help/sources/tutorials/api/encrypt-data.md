@@ -7,7 +7,7 @@ exl-id: 83a7a154-4f55-4bf0-bfef-594d5d50f460
 source-git-commit: 8531459da97be648d0a63ffc2af77ce41124585d
 workflow-type: tm+mt
 source-wordcount: '967'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -25,7 +25,7 @@ Le processus d’ingestion des données chiffrées est le suivant :
 
 >[!IMPORTANT]
 >
->La taille maximale d’un seul fichier chiffré est de 1 Go. Par exemple, vous pouvez ingérer 2 Go de données au cours d’une seule exécution de flux de données, mais chaque fichier de ces données ne peut pas dépasser 1 Go.
+>La taille maximale d’un seul fichier chiffré est de 1 Go. Par exemple, vous pouvez ingérer 2 Go de données dans une seule exécution de flux de données. Toutefois, les fichiers individuels dans ces données ne peuvent pas dépasser 1 Go.
 
 Ce document décrit les étapes à suivre pour générer une paire de clés de chiffrement pour vos données et ingérer ces données chiffrées sur Experience Platform à l’aide de sources d’espace de stockage dans le cloud.
 

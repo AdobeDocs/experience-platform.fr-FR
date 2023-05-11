@@ -5,7 +5,7 @@ exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: da28de44fc8ab37d530c2f9b3c167e365f00dca6
 workflow-type: tm+mt
 source-wordcount: '1841'
-ht-degree: 82%
+ht-degree: 100%
 
 ---
 
@@ -63,8 +63,8 @@ Adobe Experience Platform fournit une suite de technologies qui vous permetten
 | --- | --- |
 | Obscurcissement des adresses IP pour les trains de données | Vous pouvez désormais définir des options d’obscurcissement d’IP au niveau d’un train de données partiel ou complet dans l’[interface utilisateur de configuration des trains de données](../../edge/datastreams/configure.md). <br><br>Le paramètre d’obscurcissement de l’adresse IP au niveau du train de données est prioritaire par rapport à tout obscurcissement d’adresse IP configuré dans Adobe Target et Audience Manager. <br><br>Les données envoyées à Adobe Analytics ne sont pas affectées par le paramètre [!UICONTROL Obscurcissement d’adresses IP] au niveau du train de données. Adobe Analytics reçoit actuellement des adresses IP non obscurcies. Pour qu’Analytics reçoive des adresses IP obscurcies, vous devez configurer l’obscurcissement des adresses IP séparément, dans Adobe Analytics. Ce comportement sera mis à jour dans les prochaines versions.<br><br> Pour plus d’informations sur l’obscurcissement des adresses IP et pour obtenir des instructions sur la façon de le configurer, voir la [documentation sur la configuration des trains de données](../../edge/datastreams/configure.md#advanced-options). |
 | [Remplacements de la configuration des trains de données](../../edge/datastreams/overrides.md) | Vous pouvez désormais définir des options de configuration supplémentaires pour les trains de données, que vous utiliserez pour remplacer des paramètres spécifiques, tels que les jeux de données d’événement, les jetons de propriété Target, les conteneurs de synchronisation d’identifiants et les suites de rapports Analytics. <br><br>Le remplacement des configurations de trains de données est un processus en deux étapes : <ol><li>Tout d’abord, vous devez définir vos remplacements de configuration de trains de données sur la page de [configuration des trains de données](../../edge/datastreams/configure.md).</li><li>Ensuite, vous devez envoyer les remplacements au réseau Edge par le biais d’une commande de SDK Web ou à l’aide de l’[extension de balise](../../edge/extension/web-sdk-extension-configuration.md) du SDK Web.</li></ol> |
-| Secret JWT OAuth | Le [Secret JWT OAuth](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html?lang=en) permet aux clients d’utiliser des jetons Adobe et Google Service pour prendre en charge les interactions serveur à serveur dans le transfert d’événements. |
-| [!DNL Pinterest Conversions API] Extension | Le [[!DNL Pinterest Conversions API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/pinterest/overview.html) l’extension de transfert d’événement vous permet d’exploiter les données capturées dans Adobe Experience Platform Edge Network et de les envoyer à [!DNL Pinterest] sous la forme d’événements côté serveur à l’aide de la variable [!DNL Pinterest Conversions API]. |
+| Secret JWT OAuth | Le [secret JWT OAuth](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html?lang=fr) permet aux clients et clientes d’utiliser des jetons Adobe et Google Service pour prendre en charge les interactions serveur à serveur dans le transfert d’événement. |
+| Extension [!DNL Pinterest Conversions API] | L’extension de transfert d’événement [[!DNL Pinterest Conversions API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/pinterest/overview.html?lang=fr) vous permet de tirer parti des données capturées dans le réseau Edge d’Adobe Experience Platform et de les envoyer à [!DNL Pinterest] sous la forme d’événements côté serveur à l’aide de l’[!DNL Pinterest Conversions API]. |
 
 {style="table-layout:auto"}
 
@@ -118,7 +118,7 @@ XDM est une spécification Open Source qui fournit des structures et des défini
 
 | Type de composant | Nom | Description |
 | --- | --- | --- |
-| Schéma | [[!UICONTROL Champs de classification Adobe Target]](https://github.com/adobe/xdm/pull/1719/files) | Un nouveau schéma XDM pour les jeux de données de classification Target contenant un ensemble de champs de métadonnées pour classer les activités et expériences Target. |
+| Schéma | [[!UICONTROL Champs de classification Adobe Target]](https://github.com/adobe/xdm/pull/1719/files) | Un nouveau schéma XDM pour les jeux de données de classification Target contenant un ensemble de champs de métadonnées pour classer les activités et expériences Target. |
 
 {style="table-layout:auto"}
 
@@ -126,11 +126,11 @@ XDM est une spécification Open Source qui fournit des structures et des défini
 
 | Type de composant | Nom | Description |
 | --- | --- | --- |
-| Groupe de champs | [[!UICONTROL Extension d’union de compte de service de profil unifié Adobe]](https://github.com/adobe/xdm/pull/1696/files) | Ajout d’un groupe de champs d’extension de compte pour Real-Time Customer Profile qui permet aux utilisateurs d’ajouter une adhésion au segment sur l’union de compte. |
-| Schéma | [[!UICONTROL Schéma système des attributs calculés]](https://github.com/adobe/xdm/pull/1696/files) | Le groupe de champs Attributs calculés utilisé par Real-Time Customer Profile a été mis à jour vers un schéma global en lecture seule du système. |
-| Groupe de champs | Multiple | Ajout de plusieurs événements en tant que champs pour [[!UICONTROL Schéma de série temporelle]](https://github.com/adobe/xdm/pull/1718/files). |
-| Groupe de champs | Détails de fidélité du profil | [Correction du titre](https://github.com/adobe/xdm/pull/1717/files) pour `xdm:upgradeDate` de &quot;Nom du programme&quot; à &quot;Date de mise à niveau&quot;. |
-| Groupe de champs | Multiple | Plusieurs champs de [[!UICONTROL Élément de décision]](https://github.com/adobe/xdm/pull/1714/files) ont été mis à jour afin de supprimer la hiérarchie imbriquée double. |
+| Groupe de champs | [[!UICONTROL Extension d’union de compte de service de profil unifié Adobe]](https://github.com/adobe/xdm/pull/1696/files) | Ajout d’un groupe de champs d’extension de compte pour Real-Time Customer Profile, qui permet aux utilisateurs et aux utilisatrices d’ajouter une appartenance à un segment sur l’union de compte. |
+| Schéma | [[!UICONTROL Schéma du système des attributs calculés]](https://github.com/adobe/xdm/pull/1696/files) | Le groupe de champs Attributs calculés utilisé par Real-Time Customer Profile a été mis à jour vers un schéma global en lecture seule du système. |
+| Groupe de champs | Multiple | Ajout de plusieurs événements en tant que champs pour le [[!UICONTROL schéma de série temporelle]](https://github.com/adobe/xdm/pull/1718/files). |
+| Groupe de champs | Détails de fidélité du profil | [Modification du titre](https://github.com/adobe/xdm/pull/1717/files) de `xdm:upgradeDate` de « Nom du programme » en « Date de mise à niveau ». |
+| Groupe de champs | Multiple | Plusieurs champs d’[[!UICONTROL Élément de décision]](https://github.com/adobe/xdm/pull/1714/files) ont été mis à jour afin de supprimer la double hiérarchie imbriquée. |
 
 {style="table-layout:auto"}
 
@@ -138,16 +138,16 @@ Pour plus d’informations sur XDM dans Platform, consultez la [présentation du
 
 ## Real-Time Customer Data Platform
 
-Basé sur Experience Platform, Real-time Customer Data Platform ([!DNL Real-Time CDP]) permet aux entreprises de rassembler des données connues et inconnues pour activer les profils clients avec une prise de décision intelligente tout au long du parcours client. [!DNL Real-Time CDP] combine plusieurs sources de données d’entreprise pour créer des profils client en temps réel. Les segments créés à partir de ces profils peuvent ensuite être envoyés vers des destinations en aval afin de fournir des expériences client personnalisées et individuelles sur tous les canaux et appareils.
+Basée sur Experience Platform, Real-time Customer Data Platform ([!DNL Real-Time CDP]) aide les entreprises à rassembler des données connues et inconnues pour activer les profils des clients et clientes avec une prise de décision intelligente tout au long du parcours client. [!DNL Real-Time CDP] associe plusieurs sources de données d’entreprise pour créer des profils client en temps réel. Les segments créés à partir de ces profils peuvent ensuite être envoyés vers des destinations en aval afin de fournir des expériences personnalisées et individuelles aux clients et clientes sur tous les canaux et appareils.
 
 **Nouvelles fonctionnalités**
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
-| Page d’accueil Real-Time CDP améliorée | Le [Page d’accueil Real-Time CDP](https://experience.adobe.com) a été amélioré avec un aspect actualisé et des performances améliorées. La page d’accueil prend désormais en charge les autorisations et présente des widgets pertinents pour les fonctionnalités auxquelles vous avez accès. Pour plus d’informations, reportez-vous à la section [Tableau de bord de la page d’accueil Real-Time CDP - Aperçu](../../rtcdp/home-page-dashboards.md). |
-| Enquête sur l&#39;auto-identification | L’enquête d’auto-identification est un court questionnaire présenté sur la page d’accueil de l’interface utilisateur d’Adobe Experience Platform. Utilisez l&#39;enquête d&#39;auto-identification pour créer votre profil personnel Experience Platform et recevoir des directives personnalisées basées sur vos sélections. Pour plus d’informations, reportez-vous à la section [questionnaire d’auto-identification - Aperçu](../../landing/self-identification.md). |
+| Page d’accueil Real-Time CDP améliorée | La [page d’accueil Real-Time CDP](https://experience.adobe.com) a été améliorée. Son aspect a été actualisé et ses performances sont accrues. La page d’accueil prend désormais en charge les autorisations et présente des widgets pertinents pour les fonctionnalités auxquelles vous avez accès. Pour plus d’informations, reportez-vous à la section [Présentation du tableau de bord de la page d’accueil Real-Time CDP](../../rtcdp/home-page-dashboards.md). |
+| Enquête d’auto-identification | L’enquête d’auto-identification est un court questionnaire présenté sur la page d’accueil de l’interface utilisateur d’Adobe Experience Platform. Utilisez l’enquête d’auto-identification pour créer votre profil personnel Experience Platform et recevoir des directives personnalisées basées sur vos sélections. Pour plus d’informations, consultez la [présentation de l’enquête d’auto-identification](../../landing/self-identification.md). |
 
-Pour plus d’informations sur [!DNL Real-Time CDP], reportez-vous à la section [[!DNL Real-Time CDP] aperçu](../../rtcdp/overview.md).
+Pour plus d’informations sur [!DNL Real-Time CDP], consultez la présentation [[!DNL Real-Time CDP] ](../../rtcdp/overview.md).
 
 ## Profil client en temps réel {#profile}
 
