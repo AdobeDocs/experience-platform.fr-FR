@@ -2,14 +2,18 @@
 title: Notes de mise à jour d’Adobe Experience Platform - Avril 2023
 description: Les notes de mise à jour d’avril 2023 pour Adobe Experience Platform.
 exl-id: 8b8fa810-d301-43c1-98df-10d3903f3147
-source-git-commit: da28de44fc8ab37d530c2f9b3c167e365f00dca6
+source-git-commit: c95d2ab1a6f104c18c491d3a533ee2c304a0aa68
 workflow-type: tm+mt
-source-wordcount: '1842'
-ht-degree: 100%
+source-wordcount: '2095'
+ht-degree: 92%
 
 ---
 
 # Notes de mise à jour d’Adobe Experience Platform
+
+>[!IMPORTANT]
+>
+>À compter du 15 mai 2023, la variable `Existing` est abandonné du mappage de l’adhésion au segment afin de supprimer la redondance dans le cycle de vie de l’adhésion au segment. Après cette modification, les profils qualifiés dans un segment seront représentés comme `Realized` et les profils disqualifiés continueront à être représentés comme `Exited`. Pour plus d’informations sur cette modification, veuillez lire la section [Section Segmentation Service](#segmentation).
 
 **Date de publication : 26 avril 2023**
 
@@ -21,7 +25,8 @@ Mises à jour des fonctionnalités existantes dans Adobe Experience Platform 
 - [Destinations](#destinations)
 - [Modèle de données d’expérience](#xdm)
 - [Real-Time Customer Data Platform](#rtcdp)
-- [Profil client en temps réel](#profile)
+- [Real-time Customer Profile](#profile)
+- [Segmentation Service](#segmentation)
 - [Sources](#sources)
 
 ## Tableaux de bord {#dashboards}
@@ -160,6 +165,20 @@ Adobe Experience Platform vous permet d’offrir aux clients des expériences 
 | Expiration des données de profil pseudonymes | L’expiration des données de profil pseudonymes est désormais disponible. Cette version supprimera en permanence les profils pseudonymes obsolètes de votre instance d’Experience Platform une fois activée. Pour en savoir plus sur cette fonctionnalité et les profils pseudonymes, veuillez lire la section [Guide d’expiration des données de profil pseudonyme](../../profile/pseudonymous-profiles.md). |
 
 {style="table-layout:auto"}
+
+## Segmentation Service {#segmentation}
+
+[!DNL Segmentation Service] définit un sous-ensemble particulier de profils en décrivant les critères qui identifient un groupe de clients potentiels de votre base. Les segments peuvent être basés sur des données d’enregistrement (telles que des informations démographiques) ou des événements de séries temporelles représentant les interactions des clients avec votre marque.
+
+**Fonctionnalités nouvelles ou mises à jour**
+
+| Fonctionnalité | Description |
+| ------- | ----------- |
+| Mappage de l’adhésion aux segments | Comme suite à l’annonce précédente faite le 15 mai 2023, le `Existing` est abandonné du mappage de l’adhésion au segment afin de supprimer la redondance dans le cycle de vie de l’adhésion au segment. Après cette modification, les profils qualifiés dans un segment seront représentés comme `Realized` et les profils disqualifiés continueront à être représentés comme `Exited`.<br/><br/> Cette modification peut avoir un impact sur vous si vous utilisez [destinations d’entreprise](../../destinations/destination-types.md#streaming-profile-export) (Amazon Kinesis, Azure Event Hubs, API HTTP) et peuvent avoir mis en place des processus automatisés en aval en fonction des `Existing` statut. Si c’est le cas, consultez vos intégrations en aval. Si vous souhaitez identifier les profils nouvellement qualifiés au-delà d’un certain temps, envisagez d’utiliser une combinaison du statut `Realized` et du `lastQualificationTime` dans votre mappage d’appartenance aux segments. Pour plus d’informations, contactez votre représentant ou représentante Adobe. |
+
+{style="table-layout:auto"}
+
+Pour plus d’informations sur [!DNL Segmentation Service], consultez la [présentation de la segmentation](../../segmentation/home.md).
 
 ## Sources {#sources}
 
