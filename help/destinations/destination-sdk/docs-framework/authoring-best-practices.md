@@ -2,7 +2,7 @@
 title: Bonnes pratiques de création
 description: Découvrez les règles et conseils à suivre lors de la création de votre page de documentation de destination, afin de vous assurer qu’elle respecte les normes de qualité de la documentation Adobe Experience Platform.
 exl-id: b12059f1-6635-41cd-acc5-6ff471111164
-source-git-commit: 0b9b724c2530e43ce681011d12fc1341148ddbf5
+source-git-commit: e239de97a26ea2ff36bb74390e249851a13d2e13
 workflow-type: tm+mt
 source-wordcount: '565'
 ht-degree: 3%
@@ -56,5 +56,5 @@ Suivez le modèle de documentation fourni et ne modifiez pas les liens existants
 
 ## Processus {#process}
 
-* Le [modèle de documentation](./self-service-template.md) est rarement mis à jour, en fonction des commentaires des partenaires. Avant de commencer à créer de la documentation pour votre destination, assurez-vous d’avoir téléchargé la [dernière version du modèle](/help/destinations/destination-sdk/docs-framework/assets/yourdestination-template.zip).
+* Le [modèle de documentation](./self-service-template.md) est rarement mis à jour, en fonction des commentaires des partenaires. Avant de commencer à créer de la documentation pour votre destination, assurez-vous d’avoir téléchargé la [dernière version du modèle](../assets/docs-framework/yourdestination-template.zip).
 * Créez la documentation et créez la demande d’extraction de documentation (PR) à partir d’une branche de votre double. *autre que la branche principale*. Reportez-vous à la section Destination de l’envoi pour la révision lors de la création dans le [Interface de GitHub](./use-github-interface-to-create-documentation.md#submit-review) ou [votre environnement local](./work-in-local-environment.md#submit-review).

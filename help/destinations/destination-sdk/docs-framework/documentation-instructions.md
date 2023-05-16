@@ -2,7 +2,7 @@
 title: Documenter votre destination dans Adobe Experience Platform
 description: Cette section contient des instructions détaillées pour vous permettre de créer une page de documentation pour votre destination dans Adobe Experience Platform.
 exl-id: 6cc9c758-44bb-463b-941a-06b1a22ee8f3
-source-git-commit: dd4a150351b5e0c41586cf663324aeb345a896e4
+source-git-commit: ffd87573b93d642202e51e5299250a05112b6058
 workflow-type: tm+mt
 source-wordcount: '538'
 ht-degree: 8%
@@ -51,7 +51,7 @@ Pour créer la documentation de votre destination conformément aux instructions
 
 Pour vous aider à créer votre page de documentation, Adobe a prérempli un [modèle de documentation](./self-service-template.md) pour vous. Vous trouverez ci-dessous des instructions pour modifier le modèle et ouvrir une requête d’extraction. L’équipe de documentation de l’Adobe examinera et publiera la documentation relative à votre nouvelle destination.
 
-[Téléchargez le modèle ici](assets/yourdestination-template.zip) et décompressez le fichier pour extraire le fichier `yourdestination.md` fichier .
+[Téléchargez le modèle ici](../assets/docs-framework/yourdestination-template.zip) et décompressez le fichier pour extraire le fichier `yourdestination.md` fichier .
 
 Vous trouverez ci-dessous des instructions sur l’utilisation du modèle pour créer votre page de documentation.
 

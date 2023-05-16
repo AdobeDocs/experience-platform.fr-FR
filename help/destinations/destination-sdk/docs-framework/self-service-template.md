@@ -2,7 +2,7 @@
 title: Modèle de libre-service de documentation // Remplacer par le nom de votre destination
 description: Utilisez ce modèle pour créer une documentation publique pour votre destination dans le catalogue Adobe Experience Platform. // Remplacer par le paragraphe dans la section Aperçu
 exl-id: 99700474-8bf6-4176-acc1-38814e17c995
-source-git-commit: 9aba3384b320b8c7d61a875ffd75217a5af04815
+source-git-commit: 1773edff56059cf5bc57ebaaa133216423fcfe10
 workflow-type: tm+mt
 source-wordcount: '1528'
 ht-degree: 38%
@@ -18,7 +18,7 @@ ht-degree: 38%
 >[!IMPORTANT]
 >
 >* Renseignez toutes les sections de ce modèle, dans l&#39;ordre dans lequel elles sont décrites dans le modèle.
->* Ce modèle est rarement mis à jour, en fonction des commentaires des partenaires. Avant de commencer à créer de la documentation pour votre destination, assurez-vous d’avoir téléchargé la [dernière version du modèle](/help/destinations/destination-sdk/docs-framework/assets/yourdestination-template.zip).
+>* Ce modèle est rarement mis à jour, en fonction des commentaires des partenaires. Avant de commencer à créer de la documentation pour votre destination, assurez-vous d’avoir téléchargé la [dernière version du modèle](../assets/docs-framework/yourdestination-template.zip).
 
 
 ## Présentation {#overview}
@@ -103,7 +103,7 @@ Pour vous connecter à cette destination, procédez comme décrit dans le [tutor
 
 Pour vous authentifier à la destination, renseignez les champs requis et sélectionnez **[!UICONTROL Se connecter à la destination]**.
 
-![Exemple de capture d’écran montrant comment s’authentifier à la destination](/help/destinations/destination-sdk/docs-framework/assets/authenticate-destination.png)
+![Exemple de capture d’écran montrant comment s’authentifier à la destination](../assets/docs-framework/authenticate-destination.png)
 
 * **[!UICONTROL Jeton porteur]** : renseignez le jeton porteur pour vous authentifier sur la destination.
 
@@ -113,7 +113,7 @@ Pour vous authentifier à la destination, renseignez les champs requis et sélec
 
 Pour configurer les détails de la destination, renseignez les champs obligatoires et facultatifs ci-dessous. Un astérisque situé en regard d’un champ de l’interface utilisateur indique que le champ est obligatoire.
 
-![Exemple de capture d’écran montrant comment remplir les détails de votre destination](/help/destinations/destination-sdk/docs-framework/assets/configure-destination-details.png)
+![Exemple de capture d’écran montrant comment remplir les détails de votre destination](../assets/docs-framework/configure-destination-details.png)
 
 * **[!UICONTROL Nom]** : un nom par lequel vous reconnaîtrez cette destination à l’avenir.
 * **[!UICONTROL Description]** : une description qui vous aidera à identifier cette destination à l’avenir.

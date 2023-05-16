@@ -2,9 +2,9 @@
 description: Découvrez comment utiliser Destination SDK pour configurer une destination Amazon S3 avec des options de formatage de fichier prédéfinies et une configuration de nom de fichier personnalisée.
 title: Configurer une destination Amazon S3 avec des options de formatage de fichiers prédéfinies et une configuration personnalisée des noms de fichiers.
 exl-id: 0ecd3575-dcda-4e5c-af5c-247d4ea13fa1
-source-git-commit: 04e4b0f6b6d84d04d0a24a462383420ebd9a2daf
+source-git-commit: d47c82339afa602a9d6914c1dd36a4fc9528ea32
 workflow-type: tm+mt
-source-wordcount: '746'
+source-wordcount: '712'
 ht-degree: 12%
 
 ---
@@ -13,9 +13,11 @@ ht-degree: 12%
 
 ## Présentation {#overview}
 
-Cette page décrit l’utilisation de la Destination SDK pour configurer une destination Amazon S3 avec des valeurs par défaut prédéfinies. [options de formatage de fichier](../../server-and-file-configuration.md#file-configuration) et une [configuration du nom de fichier](../../file-based-destination-configuration.md#file-name-configuration).
+Cette page décrit l’utilisation de la Destination SDK pour configurer une destination Amazon S3 avec des valeurs par défaut prédéfinies. [options de formatage de fichier](configure-file-formatting-options.md) et une [configuration du nom de fichier](../../functionality/destination-configuration/batch-configuration.md#file-name-configuration).
 
 Cette page affiche toutes les options de configuration disponibles pour [!DNL Amazon S3] destinations. Vous pouvez modifier les configurations affichées dans les étapes ci-dessous ou supprimer certaines parties des configurations, si nécessaire.
+
+Pour obtenir des descriptions détaillées des paramètres utilisés ci-dessous, voir [options de configuration dans le SDK Destinations](../../functionality/configuration-options.md).
 
 ## Conditions préalables {#prerequisites}
 
@@ -23,7 +25,7 @@ Avant de passer aux étapes décrites ci-dessous, veuillez lire la section [Pris
 
 ## Étape 1 : créer une configuration de serveur et de fichier {#create-server-file-configuration}
 
-Commencez par utiliser la variable `/destination-server` point d’entrée pour créer une configuration de serveur et de fichier. Pour obtenir des descriptions détaillées des paramètres de la requête HTTP, lisez la section [spécifications de configuration du serveur et des fichiers pour les destinations basées sur des fichiers](../../server-and-file-configuration.md#s3-example) et le [configurations de mise en forme des fichiers](../../server-and-file-configuration.md#file-configuration).
+Commencez par utiliser la variable `/destination-server` point d’entrée [créer une configuration de serveur et de fichier ;](../../authoring-api/destination-server/create-destination-server.md).
 
 **Format d’API**
 
@@ -34,7 +36,7 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
 **Requête**
 
 La requête suivante crée une nouvelle configuration de serveur de destination, configurée en fonction des paramètres fournis dans la payload.
-La payload ci-dessous inclut un [!DNL Amazon S3] configuration, avec prédéfini, par défaut [Formatage des fichiers CSV](../../server-and-file-configuration.md#file-configuration) paramètres de configuration que les utilisateurs peuvent définir dans l’interface utilisateur de l’Experience Platform.
+La payload ci-dessous inclut un [!DNL Amazon S3] configuration, avec prédéfini, par défaut [Formatage des fichiers CSV](../../functionality/destination-server/file-formatting.md) paramètres de configuration que les utilisateurs peuvent définir dans l’interface utilisateur de l’Experience Platform.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-server \
@@ -128,12 +130,6 @@ Après avoir créé la configuration du serveur de destination et du formatage d
 
 Pour connecter la configuration du serveur dans [étape 1](#create-server-file-configuration) sur cette configuration de destination, remplacez la variable `destinationServerId` dans la requête d’API ci-dessous avec la variable `instanceId` valeur obtenue lors de la création du serveur de destination dans [étape 1](#create-server-file-configuration).
 
-Pour obtenir des descriptions détaillées des paramètres utilisés ci-dessous, consultez les pages suivantes :
-
-* [Configuration de l’authentification](../../authentication-configuration.md#s3)
-* [Configuration de la destination du lot](../../file-based-destination-configuration.md#batch-configuration)
-* [Opérations de l’API de configuration des destinations basées sur des fichiers](../../destination-configuration-api.md#create-file-based)
-
 **Format d’API**
 
 ```http
@@ -153,7 +149,6 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 {
    "name":"Amazon S3 destination with predefined CSV formatting options",
    "description":"Amazon S3 destination with predefined CSV formatting options",
-   "releaseNotes":"Amazon S3 destination with predefined CSV formatting options",
    "status":"TEST",
    "customerAuthenticationConfigurations":[
       {
@@ -288,9 +283,9 @@ Une réponse réussie renvoie la nouvelle configuration de destination, y compri
 
 En fonction des configurations ci-dessus, le catalogue des Experience Platform affiche désormais une nouvelle carte de destination privée que vous pouvez utiliser.
 
-![Enregistrement de l’écran affichant la page du catalogue des destinations avec une carte de destination sélectionnée.](../../assets/destination-card.gif)
+![Enregistrement de l’écran affichant la page du catalogue des destinations avec une carte de destination sélectionnée.](../../assets/guides/batch/destination-card.gif)
 
-Dans les images et enregistrements ci-dessous, notez comment les options de la variable [workflow d’activation pour les destinations basées sur des fichiers](/help/destinations/ui/activate-batch-profile-destinations.md) correspondent aux options que vous avez sélectionnées dans la configuration de destination.
+Dans les images et enregistrements ci-dessous, notez comment les options de la variable [workflow d’activation pour les destinations basées sur des fichiers](../../../ui/activate-batch-profile-destinations.md) correspondent aux options que vous avez sélectionnées dans la configuration de destination.
 
 Lorsque vous renseignez des détails sur la destination, notez comment les champs sont apparus comme les champs de données personnalisés que vous configurez dans la configuration.
 
@@ -298,13 +293,13 @@ Lorsque vous renseignez des détails sur la destination, notez comment les champ
 >
 >L’ordre dans lequel vous ajoutez les champs de données personnalisés à la configuration de destination n’est pas reflété dans l’interface utilisateur. Les champs de données du client sont toujours affichés dans l&#39;ordre indiqué dans l&#39;enregistrement à l&#39;écran ci-dessous.
 
-![Enregistrement d’écran présentant les champs de données client définis dans votre configuration.](../../assets/file-configuration-options.gif)
+![Enregistrement d’écran présentant les champs de données client définis dans votre configuration.](../../assets/guides/batch/file-configuration-options.gif)
 
 Lors de la planification des intervalles d’exportation, notez comment les champs apparaissaient sont les champs que vous configurez dans la variable `batchConfig` configuration.
-![options de planification d’exportation](../../assets/file-export-scheduling.png)
+![options de planification d’exportation](../../assets/guides/batch/file-export-scheduling.png)
 
 Lors de l’affichage des options de configuration du nom de fichier, notez comment les champs affichés représentent le `filenameConfig` options que vous configurez dans la configuration.
-![options de configuration du nom de fichier](../../assets/file-naming-options.gif)
+![options de configuration du nom de fichier](../../assets/guides/batch/file-naming-options.gif)
 
 Si vous souhaitez ajuster l’un des champs mentionnés ci-dessus, répétez l’opération. [étapes 1](#create-server-file-configuration) et [two](#create-destination-configuration) pour modifier les configurations selon vos besoins.
 
@@ -314,7 +309,7 @@ Si vous souhaitez ajuster l’un des champs mentionnés ci-dessus, répétez l�
 >
 >Cette étape n’est pas requise si vous créez une destination privée à des fins personnelles et que vous ne souhaitez pas la publier dans le catalogue de destinations pour que d’autres clients puissent l’utiliser.
 
-Après avoir configuré votre destination, utilisez la variable [API de publication de destination](../../destination-publish-api.md) pour envoyer votre configuration à Adobe en vue de la révision.
+Après avoir configuré votre destination, utilisez la variable [API de publication de destination](../../publishing-api/create-publishing-request.md) pour envoyer votre configuration à Adobe en vue de la révision.
 
 ## Étape 5 : (Facultatif) Document de votre destination {#document-destination}
 

@@ -2,7 +2,7 @@
 title: Notes de mise à jour d’Adobe Experience Platform - Septembre 2022
 description: Les notes de mise à jour de septembre 2022 pour Adobe Experience Platform.
 exl-id: a7a4dcf8-2cf3-4e39-879d-bdfcbacb737a
-source-git-commit: 3d829018b527aacb81c16db5e889b2e50f625e28
+source-git-commit: 8904d44cc8d289d103ec6d65116b8385ed615c4d
 workflow-type: tm+mt
 source-wordcount: '2940'
 ht-degree: 100%
@@ -126,7 +126,7 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 
 | Fonctionnalité | Description |
 | ----------- | ----------- |
-| Destination SDK | Destination SDK offre désormais une prise en charge complète des partenaires et des clients qui créent des destinations standardisées ou privées par lots (ou basées sur les fichiers). Pour plus d’informations, consultez les pages de documentation suivantes : <ul><li>[Présentation de Destination SDK](/help/destinations/destination-sdk/overview.md)</li><li>[Configurer une destination basée sur des fichiers](/help/destinations/destination-sdk/configure-file-based-destination-instructions.md)</li><li>[Configurer des options de formatage de fichier pour les destinations basées sur des fichiers](/help/destinations/destination-sdk/configure-file-based-destination-instructions.md)</li><li>[Testez vos destinations basées sur des fichiers](/help/destinations/destination-sdk/file-based-destination-testing-overview.md)</li></ul> |
+| Destination SDK | Destination SDK offre désormais une prise en charge complète des partenaires et des clients qui créent des destinations standardisées ou privées par lots (ou basées sur les fichiers). Pour plus d’informations, consultez les pages de documentation suivantes : <ul><li>[Présentation de Destination SDK](../../destinations/destination-sdk/overview.md)</li><li>[Configurer une destination basée sur des fichiers](../../destinations/destination-sdk/guides/configure-file-based-destination-instructions.md)</li><li>[Configurer des options de formatage de fichier pour les destinations basées sur des fichiers](../../destinations/destination-sdk/guides/batch/configure-file-formatting-options.md)</li><li>[Testez vos destinations basées sur des fichiers](../../destinations/destination-sdk/testing-api/batch-destinations/file-based-destination-testing-overview.md)</li></ul> |
 
 {style="table-layout:auto"}
 

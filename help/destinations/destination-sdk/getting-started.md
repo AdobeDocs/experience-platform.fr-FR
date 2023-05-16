@@ -2,10 +2,10 @@
 description: Cette page décrit comment vous authentifier et commencer à utiliser Adobe Experience Platform Destination SDK. Vous y trouverez des instructions sur la manière d’obtenir des informations d’authentification Adobe I/O, un nom de sandbox et l’autorisation de contrôle d’accès de création de destinations.
 title: Prise en main de Destination SDK
 exl-id: f22c37a8-202d-49ac-9af0-545dfa9af8fd
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: 7c1d956e3b6a1314baa13fef823d73d42404516a
 workflow-type: tm+mt
-source-wordcount: '610'
-ht-degree: 95%
+source-wordcount: '627'
+ht-degree: 89%
 
 ---
 
@@ -56,7 +56,7 @@ L’équipe dʼAdobe Exchange fournit votre nom de sandbox, que vous devez utili
 
 ## Contrôle d’accès en fonction du rôle (RBAC) {#rbac}
 
-Pour utiliser les points d’entrée de l’API Destination SDK décrits dans la section [documentation de référence](./configuration-options.md), vous avez besoin de l’autorisation de contrôle d’accès de **[!UICONTROL création de destinations]**. Demandez à l’équipe dʼAdobe Exchange de vous lʼaccorder dans [Adobe Admin Console](https://adminconsole.adobe.com/).
+Pour utiliser les points d’entrée de l’API Destination SDK décrits dans la section [documentation de référence](functionality/configuration-options.md), vous avez besoin de l’autorisation de contrôle d’accès de **[!UICONTROL création de destinations]**. Demandez à l’équipe dʼAdobe Exchange de vous lʼaccorder dans [Adobe Admin Console](https://adminconsole.adobe.com/).
 
 ![Autorisation de création de destinations](./assets/destination-authoring-permission.png)
 
@@ -68,7 +68,7 @@ Pour plus d’informations, consultez les documents suivants sur le contrôle d�
 
 ## Remarques complémentaires {#additional-considerations}
 
-* Toute modification apportée aux configurations de destination, quʼil sʼagisse de créer ou de modifier une configuration de destination, doit être examinée et approuvée par Adobe. Vos modifications ne sont appliquées dans vos destinations qu’une fois la révision terminée.
+* Pour les destinations productisées/publiques, toute modification que vous apportez aux configurations de destination, que vous créiez ou modifiez une configuration de destination, doit être révisée et approuvée par Adobe. Vos modifications ne sont appliquées dans vos destinations qu’une fois la révision terminée. Cela ne s’applique pas aux destinations privées qui ne sont disponibles que pour vous.
 * Seuls les utilisateurs appartenant à la même organisation et ayant accès au sandbox peuvent modifier la configuration de destination.
 
 ## Étapes suivantes {#next-steps}
@@ -77,8 +77,8 @@ En suivant les étapes décrites dans cet article, vous avez obtenu des informat
 
 * Consultez les guides de configuration suivants, en fonction du type de destination :
 
-   * [Utiliser Destination SDK pour configurer une destination de diffusion en continu](./configure-destination-instructions.md)
-   * [Utiliser Destination SDK pour configurer une destination basée sur des fichiers](./configure-file-based-destination-instructions.md)
+   * [Utiliser Destination SDK pour configurer une destination de diffusion en continu](guides/configure-destination-instructions.md)
+   * [Utiliser Destination SDK pour configurer une destination basée sur des fichiers](guides/configure-file-based-destination-instructions.md)
 
 * Pour toutes les opérations, reportez-vous à la section [Documentation de l’API de création de destinations](https://www.adobe.io/experience-platform-apis/references/destination-authoring/).
 * Utilisez la [Collection Postman de l’API de création de destinations](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Destination%20Authoring%20API.postman_collection.json) pour configurer votre destination à l’aide des points d’entrée de l’API Destination SDK. Pour commencer à utiliser Postman, suivez les [étapes dʼimportation des environnements et des collections](https://learning.postman.com/docs/getting-started/importing-and-exporting-data/) et consultez le [Guide vidéo de création de l’environnement Postman](https://video.tv.adobe.com/v/28832).

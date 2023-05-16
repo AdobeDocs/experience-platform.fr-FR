@@ -2,7 +2,7 @@
 title: Comportement d’exportation de profils
 description: Découvrez comment le comportement d’exportation de profils varie entre les différents modèles d’intégration pris en charge dans les destinations Experience Platform.
 exl-id: 2be62843-0644-41fa-a860-ccd65472562e
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: a0400ab255b3b6a7edb4dcfd5c33a0f9e18b5157
 workflow-type: tm+mt
 source-wordcount: '2933'
 ht-degree: 97%
@@ -27,16 +27,16 @@ Les destinations Experience Platform exportent les données vers des intégratio
 
 Le processus par lequel les profils sont agrégés dans des messages HTTPS avant d’être envoyés aux points d’entrée de l’API de destination est appelé *microtraitement*.
 
-Prenez par exemple la [destination Facebook](/help/destinations/catalog/social/facebook.md) avec une politique d’*[agrégation configurable](/help/destinations/destination-sdk/destination-configuration.md#configurable-aggregation)*. Dans ce cas, les données sont envoyées de manière agrégée, où le service de destinations récupère toutes les données entrantes du service de profil en amont et les agrège par l’une des méthodes suivantes, avant de les distribuer à Facebook :
+Prenez par exemple la [destination Facebook](/help/destinations/catalog/social/facebook.md) avec une politique d’*[agrégation configurable](../destination-sdk/functionality/destination-configuration/aggregation-policy.md)*. Dans ce cas, les données sont envoyées de manière agrégée, où le service de destinations récupère toutes les données entrantes du service de profil en amont et les agrège par l’une des méthodes suivantes, avant de les distribuer à Facebook :
 
 * Nombre d&#39;enregistrements (maximum 10 000) ou
 * Intervalle de fenêtre de délai (30 minutes)
 
 Les seuils ci-dessus qui sont les premiers atteints déclenchent une exportation vers Facebook. Ainsi, dans le tableau de bord [!DNL Facebook Custom Audiences], vous pouvez voir des audiences provenant d’Experience Platform par incréments de 10 000 enregistrements. Vous pouvez voir 10 000 enregistrements toutes les 10 à 15 minutes, car les données sont traitées et agrégées plus rapidement que l’intervalle d’exportation de 30 minutes, et sont envoyées plus rapidement, donc environ toutes les 10 à 15 minutes jusqu’à ce que tous les enregistrements aient été traités. S’il n’y a pas suffisamment d’enregistrements pour constituer un lot de 10 000, le nombre d’enregistrements actuels est envoyé tel quel lorsque le seuil de la fenêtre de délai est atteint, de sorte que vous pouvez également voir des lots plus petits envoyés à Facebook.
 
-Prenons un autre exemple, la [destination de l’API HTTP](/help/destinations/catalog/streaming/http-destination.md), qui a une politique *[d’agrégation de meilleurs effots](/help/destinations/destination-sdk/destination-configuration.md#best-effort-aggregation)*, avec `maxUsersPerRequest: 10`. Cela signifie qu’un maximum de dix profils seront agrégés avant qu’un appel HTTP ne soit déclenché vers cette destination, mais Experience Platform tente d’envoyer des profils vers la destination dès que le service de destinations reçoit des informations de réévaluation mises à jour d’un service en amont.
+Prenons un autre exemple, la [destination de l’API HTTP](/help/destinations/catalog/streaming/http-destination.md), qui a une politique *[d’agrégation de meilleurs effots](../destination-sdk/functionality/destination-configuration/aggregation-policy.md)*, avec `maxUsersPerRequest: 10`. Cela signifie qu’un maximum de dix profils seront agrégés avant qu’un appel HTTP ne soit déclenché vers cette destination, mais Experience Platform tente d’envoyer des profils vers la destination dès que le service de destinations reçoit des informations de réévaluation mises à jour d’un service en amont.
 
-La politique d’agrégation est configurable et les développeurs de destination peuvent décider comment la configurer pour respecter au mieux les limites de taux des points d’entrée de l’API en aval. Obtenez des informations supplémentaires sur la [politique d’agrégation](/help/destinations/destination-sdk/destination-configuration.md#aggregation) dans la documentation de Destination SDK.
+La politique d’agrégation est configurable et les développeurs de destination peuvent décider comment la configurer pour respecter au mieux les limites de taux des points d’entrée de l’API en aval. Obtenez des informations supplémentaires sur la [politique d’agrégation](../destination-sdk/functionality/destination-configuration/aggregation-policy.md) dans la documentation de Destination SDK.
 
 ## Destinations d&#39;exportation de profils de streaming (entreprise) {#streaming-profile-destinations}
 

@@ -2,7 +2,7 @@
 title: Paramètres d’exportation configurables et communs des destinations
 description: Découvrez quels paramètres d’exportation des destinations sont configurables au niveau de la destination et lesquels sont fixes et impossibles à modifier.
 exl-id: 3f4706cb-6d51-4567-81f6-5b2bf167b576
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: a0400ab255b3b6a7edb4dcfd5c33a0f9e18b5157
 workflow-type: tm+mt
 source-wordcount: '845'
 ht-degree: 100%
@@ -32,7 +32,7 @@ Ce qui est inclus dans les exportations de destination varie légèrement d’un
 Les développeurs et développeuses de destinations peuvent utiliser [Destination SDK](/help/destinations/destination-sdk/overview.md) pour créer des destinations personnalisées ou mises en production (privées ou publiques). Destination SDK offre aux développeurs et aux développeuses une grande flexibilité pour configurer des destinations en fonction des fonctionnalités en aval de leurs points d’entrée d’API et de leurs systèmes de réception de fichiers. En fonction des fonctionnalités en aval, les développeurs et développeuses de destinations disposent, lors de la configuration d’une destination à l’aide de Destination SDK, des options de configuration suivantes :
 
 * Déterminer les identités et les attributs pouvant être exportés hors d’Experience Platform vers la destination. Déterminer également les identités requises par leurs destinations pour une exportation réussie des données.
-* Définir une politque d’agrégation qui détermine la durée pendant laquelle Experience Platform doit attendre lors de l’agrégation des messages HTTP à envoyer aux intégrations d’API. Les développeurs et développeuses de destinations peuvent configurer différents types d’agrégation pour déterminer le nombre de profils à inclure dans les messages HTTP sortants et la durée pendant laquelle Experience Platform doit attendre jusqu’à la distribution du message HTTP. Obtenez des informations détaillées sur les [options de configuration des politiques d’agrégation](/help/destinations/destination-sdk/destination-configuration.md#aggregation) disponibles pour les développeurs et développeuses de destinations dans la documentation de Destination SDK.
+* Définir une politque d’agrégation qui détermine la durée pendant laquelle Experience Platform doit attendre lors de l’agrégation des messages HTTP à envoyer aux intégrations d’API. Les développeurs et développeuses de destinations peuvent configurer différents types d’agrégation pour déterminer le nombre de profils à inclure dans les messages HTTP sortants et la durée pendant laquelle Experience Platform doit attendre jusqu’à la distribution du message HTTP. Obtenez des informations détaillées sur les [options de configuration des politiques d’agrégation](../destination-sdk/functionality/destination-configuration/aggregation-policy.md) disponibles pour les développeurs et développeuses de destinations dans la documentation de Destination SDK.
 * Déterminer si les exportations de messages HTTP doivent inclure les profils qui remplissent les critères pour les segments, qui sont supprimés des segments, ou les deux.
 * Déterminer les configurations de nom et de mise en forme des fichiers qui doivent être disponibles pour les utilisateurs et utilisatrices lors de l’exportation de fichiers.
 

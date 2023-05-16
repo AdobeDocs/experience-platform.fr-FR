@@ -2,9 +2,9 @@
 description: Configurer des options de formatage de fichier pour les destinations basées sur des fichiers
 title: Découvrez comment utiliser Destination SDK pour configurer les options de formatage de fichier pour les destinations basées sur des fichiers.
 exl-id: e61c7989-1123-4b3b-9781-a6097cd0e2b4
-source-git-commit: a9887535b12b8c4aeb39bb5a6646da88db4f0308
+source-git-commit: d47c82339afa602a9d6914c1dd36a4fc9528ea32
 workflow-type: tm+mt
-source-wordcount: '929'
+source-wordcount: '913'
 ht-degree: 3%
 
 ---
@@ -23,18 +23,14 @@ Avant de passer aux étapes décrites ci-dessous, veuillez lire la section [Pris
 
 Adobe vous recommande également de lire et de vous familiariser avec la documentation suivante avant de poursuivre :
 
-* Chaque option de mise en forme de fichier disponible est documentée en détail dans la section [configuration du formatage de fichier](../../server-and-file-configuration.md#file-configuration) .
-* Suivez les étapes pour [configuration d’une destination basée sur des fichiers](/help/destinations/destination-sdk/configure-file-based-destination-instructions.md) en utilisant Destination SDK.
+* Chaque option de mise en forme de fichier disponible est documentée en détail dans la section [configuration du formatage de fichier](../../functionality/destination-server/file-formatting.md) .
+* Suivez les étapes pour [configuration d’une destination basée sur des fichiers](../../guides/configure-file-based-destination-instructions.md) en utilisant Destination SDK.
 
 ## Création d’une configuration de serveur et de fichier {#create-server-file-configuration}
 
 Commencez par utiliser la variable `/destination-server` point de fin pour déterminer les options de configuration de formatage de fichier que vous souhaitez configurer pour les fichiers exportés.
 
 Vous trouverez ci-dessous un exemple de configuration de serveur de destination pour un [!DNL Amazon S3] destination, avec plusieurs options de mise en forme de fichier sélectionnées.
-
->[!TIP]
->
->Pour rappel, toutes les options de mise en forme de fichier disponibles sont documentées dans la section [configuration du formatage de fichier](../../server-and-file-configuration.md#file-configuration) .
 
 **Format d’API**
 
@@ -116,13 +112,13 @@ Après avoir ajouté les options de formatage de fichier souhaitées à la confi
 
 Au cours de cette étape, vous pouvez regrouper les options affichées dans l’ordre de votre choix. Vous pouvez ainsi créer des regroupements personnalisés, des champs de liste déroulante et des regroupements conditionnels en fonction des types de fichiers sélectionnés. Tous ces paramètres sont affichés dans l’enregistrement et dans les sections ci-dessous.
 
-![Enregistrement d’écran présentant diverses options de formatage de fichier pour les fichiers de lot.](/help/destinations/destination-sdk/assets/guides/batch/file-formatting-options.gif)
+![Enregistrement d’écran présentant diverses options de formatage de fichier pour les fichiers de lot.](../../assets/guides/batch/file-formatting-options.gif)
 
 ### Classer les options de formatage du fichier {#ordering}
 
 L’ordre dans lequel vous ajoutez les options de formatage de fichier en tant que champs de données client dans la configuration de destination est reflété dans l’interface utilisateur. Par exemple, la configuration ci-dessous est reflétée en conséquence dans l’interface utilisateur, les options s’affichant dans l’ordre. **[!UICONTROL Délimiteur]**, **[!UICONTROL Caractère de citation]**, **[!UICONTROL Caractère d’échappement]**, **[!UICONTROL Valeur vide]**, **[!UICONTROL Valeur nulle]**.
 
-![Image indiquant l’ordre des options de formatage de fichier dans l’interface utilisateur de l’Experience Platform.](/help/destinations/destination-sdk/assets/guides/batch/file-formatting-order.png)
+![Image indiquant l’ordre des options de formatage de fichier dans l’interface utilisateur de l’Experience Platform.](../../assets/guides/batch/file-formatting-order.png)
 
 ```json
         {
@@ -247,38 +243,43 @@ Vous pouvez regrouper plusieurs options de formatage de fichier dans une seule s
 
 Pour ce faire, utilisez `"type": "object"` pour créer le groupe et collecter les options de formatage de fichier souhaitées dans un `properties` , comme illustré dans l’exemple ci-dessous, où le regroupement **[!UICONTROL Options CSV]** est mise en surbrillance.
 
-```json
-        {
-            "name": "csvOptions",
-            "title": "CSV Options",
-            "description": "Select your CSV options",
-            "type": "object",
-            "properties": [
-                {
-                    "name": "delimiter",
-                    "title": "Delimiter",
-                    "description": "Select your Delimiter",
-                    "type": "string",
-                    "isRequired": false,
-                    "default": ",",
-                    "namedEnum": [
-                        {
-                            "name": "Comma (,)",
-                            "value": ","
-                        },
-                        {
-                            "name": "Tab (\\t)",
-                            "value": "\t"
-                        }
-                    ],
-                    "readOnly": false,
-                    "hidden": false
-                },
-
+```json {line-numbers="true" start-number="100" highlight="106-128"}
+"customerDataFields":[
 [...]
+{
+   "name":"csvOptions",
+   "title":"CSV Options",
+   "description":"Select your CSV options",
+   "type":"object",
+   "properties":[
+      {
+         "name":"delimiter",
+         "title":"Delimiter",
+         "description":"Select your Delimiter",
+         "type":"string",
+         "isRequired":false,
+         "default":",",
+         "namedEnum":[
+            {
+               "name":"Comma (,)",
+               "value":","
+            },
+            {
+               "name":"Tab (\\t)",
+               "value":"\t"
+            }
+         ],
+         "readOnly":false,
+         "hidden":false
+      },
+      [...]
+   ]
+}
+[...]
+]
 ```
 
-![Image présentant le regroupement des options CSV dans l’interface utilisateur.](/help/destinations/destination-sdk/assets/guides/batch/file-formatting-grouping.png)
+![Image présentant le regroupement des options CSV dans l’interface utilisateur.](../../assets/guides/batch/file-formatting-grouping.png)
 
 ### Création de sélecteurs de liste déroulante pour les options de formatage de fichier {#dropdown-selectors}
 
@@ -286,27 +287,44 @@ Dans les cas où vous souhaitez permettre aux utilisateurs de sélectionner plus
 
 Pour ce faire, utilisez la méthode `namedEnum` comme illustré ci-dessous et configurez un objet `default` pour les options que l’utilisateur peut sélectionner.
 
-```json
+```json {line-numbers="true" start-number="100" highlight="114-124"}
+[...]
+"customerDataFields":[
+[...]
 {
-   "name": "delimiter",
-   "type": "string",
-   "title": "Delimiter",
-   "description": "Select your Delimiter",
-   "namedEnum": [
-   {
-      "name": "Comma (,)",
-      "value": ","
-   },
-   {
-      "name": "Tab (\\t)",
-      "value": "\t"
-   }
-   ],
-   "default": ","
-},
+   "name":"csvOptions",
+   "title":"CSV Options",
+   "description":"Select your CSV options",
+   "type":"object",
+   "properties":[
+      {
+         "name":"delimiter",
+         "title":"Delimiter",
+         "description":"Select your Delimiter",
+         "type":"string",
+         "isRequired":false,
+         "default":",",
+         "namedEnum":[
+            {
+               "name":"Comma (,)",
+               "value":","
+            },
+            {
+               "name":"Tab (\\t)",
+               "value":"\t"
+            }
+         ],
+         "readOnly":false,
+         "hidden":false
+      },
+      [...]
+   ]
+}
+[...]
+]
 ```
 
-![Enregistrement d’écran montrant un exemple de sélecteurs de liste déroulante créés avec la configuration affichée ci-dessus.](/help/destinations/destination-sdk/assets/guides/batch/dropdown-options-file-formatting.gif)
+![Enregistrement d’écran montrant un exemple de sélecteurs de liste déroulante créés avec la configuration affichée ci-dessus.](../../assets/guides/batch/dropdown-options-file-formatting.gif)
 
 ### Création d’options de mise en forme de fichier conditionnelle {#conditional-options}
 
@@ -467,7 +485,7 @@ Dans un contexte plus large, vous pouvez voir la variable `conditional` champ ut
 
 Vous trouverez ci-dessous l’écran de l’interface utilisateur qui en résulte, en fonction de la configuration ci-dessus. Lorsque l’utilisateur sélectionne le type de fichier CSV, d’autres options de mise en forme de fichier faisant référence au type de fichier CSV s’affichent dans l’interface utilisateur.
 
-![Enregistrement d’écran affichant l’option de mise en forme de fichier conditionnelle pour les fichiers CSV.](/help/destinations/destination-sdk/assets/guides/batch/conditional-file-formatting.gif)
+![Enregistrement d’écran affichant l’option de mise en forme de fichier conditionnelle pour les fichiers CSV.](../../assets/guides/batch/conditional-file-formatting.gif)
 
 ### Demande d’API complète incluant toutes les options ci-dessus
 
@@ -486,7 +504,6 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 {
   "name": "My S3 Destination",
   "description": "Test destination",
-  "releaseNotes": "Test destination",
   "status": "TEST",
   "sources": [
     "UNIFIED_PROFILE"
