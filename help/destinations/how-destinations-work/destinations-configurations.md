@@ -3,7 +3,7 @@ title: Paramètres d’exportation configurables et communs des destinations
 description: Découvrez quels paramètres d’exportation des destinations sont configurables au niveau de la destination et lesquels sont fixes et impossibles à modifier.
 exl-id: 3f4706cb-6d51-4567-81f6-5b2bf167b576
 source-git-commit: a0400ab255b3b6a7edb4dcfd5c33a0f9e18b5157
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '845'
 ht-degree: 100%
 
