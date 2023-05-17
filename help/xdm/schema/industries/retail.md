@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Modèle de données du secteur de la vente au détail
 description: Affichez un modèle de données normalisé pour le secteur de la vente au détail, compatible avec le modèle de données d’expérience (XDM) à utiliser dans Adobe Experience Platform.
 exl-id: 40cbb243-668b-4280-815f-1f94a06b6b87
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: 5ceb261dbf1cac58d0cfe620875b8fa7c761abf2
 workflow-type: tm+mt
-source-wordcount: '519'
-ht-degree: 17%
+source-wordcount: '458'
+ht-degree: 20%
 
 ---
 
@@ -46,5 +46,3 @@ Le tableau suivant décrit les classes recommandées et les groupes de champs de
 | Reciblez les abandons de panier par le biais d’emails automatisés et personnalisés. | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)**:<ul><li>[Détails Commerce](../../field-groups/event/commerce-details.md)</li><li>[Détails Web](../../field-groups/event/web-details.md)</li></ul></li><li>**[Produit](../../classes/product.md)**:<ul><li>[Catalogue de produits](../../field-groups/product/product-catalog.md)</li><li>[Catégorie de produits](../../field-groups/product/product-category.md)</li></ul></li></ul> |
 
 {style="table-layout:auto"}
-
-*\*Bien qu’une classe de produits standard soit prévue pour une prochaine version, les schémas de produits doivent actuellement être créés à l’aide d’une classe personnalisée à la place. Vous devez donc créer manuellement la structure de la classe du schéma, ainsi que celle de tous les groupes de champs que vous lui ajoutez. Voir la section sur [création d’une classe personnalisée](../../ui/resources/classes.md#create) pour plus d’informations.*

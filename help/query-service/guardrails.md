@@ -3,9 +3,9 @@ keywords: Experience Platform;requête;service de requête;dépannage;garde-fous
 title: Barrières de sécurité pour Query Service
 description: Ce document fournit des informations sur les limites d’utilisation des données de Query Service afin de vous aider à optimiser l’utilisation de vos requêtes.
 exl-id: 1ad5dcf4-d048-49ff-97e3-07040392b65b
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 5ceb261dbf1cac58d0cfe620875b8fa7c761abf2
 workflow-type: tm+mt
-source-wordcount: '1020'
+source-wordcount: '1004'
 ht-degree: 7%
 
 ---
@@ -33,8 +33,6 @@ Avant de poursuivre ce document, vous devez bien comprendre les principales déf
 * **API de création de rapports**: Une API permettant d’effectuer des appels de récupération de données (en interne ou en externe). Les modèles de données de rapport étendus sont dérivés des modèles de données de rapport natifs dans Adobe Experience Platform, tels que le modèle de données des tableaux de bord Real-Time CDP.
 
 L’illustration ci-dessous résume la manière dont les fonctionnalités de Query Service sont actuellement mises en package et sous licence :
-
-![Diagramme expliquant la distribution et le regroupement des fonctionnalités de Query Service par rapport aux licences.](./images/guardrails/query-capabilities.png)
 
 ## Types de limite
 
