@@ -4,9 +4,9 @@ title: Guide de migration des API pour les destinations de stockage dans le clou
 description: Découvrez les modifications apportées au workflow pour activer les destinations de stockage dans le cloud dans le cadre de la migration vers les nouvelles cartes de destination de stockage dans le cloud avec des fonctionnalités supplémentaires.
 type: Tutorial
 exl-id: 4acaf718-794e-43a3-b8f0-9b19177a2bc0
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 8ca63586855f2c62231662906646eb8abcfdcc0e
 workflow-type: tm+mt
-source-wordcount: '1446'
+source-wordcount: '1444'
 ht-degree: 4%
 
 ---
@@ -83,7 +83,7 @@ Les modifications incompatibles en amont pour les utilisateurs de l’API sont u
 
 | [!DNL Amazon S3] | hérité | Nouveau  |
 |---------|----------|---------|
-| Spécification de flux | 71471eba-b620-49e4-90fd-23f1fa0174d8 | 269ba276-16fc-47db-92b0-c1049a3c131f |
+| Spécification de flux | 71471eba-b620-49e4-90fd-23f1fa0174d8 | 1a0514a6-33d4-4c7f-aff8-594799c47549 |
 | Spécification de connexion | 4890fc95-5a1f-4983-94bb-e060c08e3f81 | 4fce964d-3f37-408f-9778-e597338a21ee |
 
 Affichez l’ensemble des exemples de connexion héritée et nouvelle base et cible pour [!DNL Amazon S3] dans les onglets ci-dessous. Paramètres requis pour créer des connexions de base [!DNL Amazon S3] les destinations ne changent pas.
@@ -255,7 +255,7 @@ Les modifications incompatibles en amont pour les utilisateurs de l’API sont u
 
 | [!DNL Azure Blob] | hérité | Nouveau  |
 |---------|----------|---------|
-| Spécification de flux | 71471eba-b620-49e4-90fd-23f1fa0174d8 | 95bd8965-fc8a-4119-b9c3-944c2c2df6d2 |
+| Spécification de flux | 71471eba-b620-49e4-90fd-23f1fa0174d8 | 752d422f-b16f-4f0d-b1c6-26e448e3b388 |
 | Spécification de connexion | e258278b-a4cf-43ac-b158-4fa0ca0d948b | 6d6b59bf-fb58-4107-9064-4d246c0e5bb2 |
 
 Affichez l’ensemble des exemples de connexion héritée et nouvelle base et cible pour [!DNL Azure Blob] dans les onglets ci-dessous. Les paramètres requis pour créer des connexions de base pour les destinations Azure Blob ne changent pas.
@@ -427,7 +427,7 @@ Les modifications incompatibles en amont pour les utilisateurs de l’API sont u
 
 | SFTP | hérité | Nouveau  |
 |---------|----------|---------|
-| Spécification de flux | 71471eba-b620-49e4-90fd-23f1fa0174d8 | 354d6aad-4754-46e4-a576-1b384561c440 |
+| Spécification de flux | 71471eba-b620-49e4-90fd-23f1fa0174d8 | fd36aaa4-bf2b-43fb-9387-43785eeeb799 |
 | Spécification de connexion | 64ef4b8b-a6e0-41b5-9677-3805d1ee5dd0 | 36965a81-b1c6-401b-99f8-22508f1e6a26 |
 
 Outre la spécification de flux et de connexion mise à jour ci-dessus, des modifications sont apportées aux paramètres requis lors de la création de connexions de base SFTP.
