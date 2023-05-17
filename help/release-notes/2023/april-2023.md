@@ -3,9 +3,9 @@ title: Notes de mise à jour d’Adobe Experience Platform - Avril 2023
 description: Les notes de mise à jour d’avril 2023 pour Adobe Experience Platform.
 exl-id: 8b8fa810-d301-43c1-98df-10d3903f3147
 source-git-commit: c95d2ab1a6f104c18c491d3a533ee2c304a0aa68
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2095'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 92%
 
 >[!IMPORTANT]
 >
->À compter du 15 mai 2023, la variable `Existing` est abandonné du mappage de l’adhésion au segment afin de supprimer la redondance dans le cycle de vie de l’adhésion au segment. Après cette modification, les profils qualifiés dans un segment seront représentés comme `Realized` et les profils disqualifiés continueront à être représentés comme `Exited`. Pour plus d’informations sur cette modification, veuillez lire la section [Section Segmentation Service](#segmentation).
+>Depuis le 15 mai 2023, le statut `Existing` est supprimé du mappage de l’appartenance à un segment, afin de supprimer la redondance dans le cycle de vie de cette dernière. Depuis ce changement, les profils qualifiés dans un segment sont représentés comme `Realized` et les profils disqualifiés continuent à être représentés comme `Exited`. Pour plus d’informations sur cette modification, veuillez lire la [Section Segmentation Service](#segmentation).
 
 **Date de publication : 26 avril 2023**
 
@@ -174,7 +174,7 @@ Adobe Experience Platform vous permet d’offrir aux clients des expériences 
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
-| Mappage de l’adhésion aux segments | Comme suite à l’annonce précédente faite le 15 mai 2023, le `Existing` est abandonné du mappage de l’adhésion au segment afin de supprimer la redondance dans le cycle de vie de l’adhésion au segment. Après cette modification, les profils qualifiés dans un segment seront représentés comme `Realized` et les profils disqualifiés continueront à être représentés comme `Exited`.<br/><br/> Cette modification peut avoir un impact sur vous si vous utilisez [destinations d’entreprise](../../destinations/destination-types.md#streaming-profile-export) (Amazon Kinesis, Azure Event Hubs, API HTTP) et peuvent avoir mis en place des processus automatisés en aval en fonction des `Existing` statut. Si c’est le cas, consultez vos intégrations en aval. Si vous souhaitez identifier les profils nouvellement qualifiés au-delà d’un certain temps, envisagez d’utiliser une combinaison du statut `Realized` et du `lastQualificationTime` dans votre mappage d’appartenance aux segments. Pour plus d’informations, contactez votre représentant ou représentante Adobe. |
+| Mappage de l’appartenance à un segment | Comme suite à l’annonce précédente de février, depuis le 15 mai 2023, le statut `Existing` est abandonné du mappage de l’appartenance à un segment, afin de supprimer la redondance dans le cycle de vie cette dernière. Depuis ce changement, les profils qualifiés dans un segment sont représentés comme `Realized` et les profils disqualifiés continuent à être représentés comme `Exited`.<br/><br/> Cette modification peut vous impacter si vous utilisez des [destinations d’entreprise](../../destinations/destination-types.md#streaming-profile-export) (Amazon Kinesis, Azure Event Hubs, API HTTP) et si vous avez mis en place en aval des processus automatisés, en fonction du statut `Existing`. Si c’est le cas, consultez vos intégrations en aval. Si vous souhaitez identifier les profils nouvellement qualifiés au-delà d’un certain temps, envisagez d’utiliser une combinaison du statut `Realized` et du `lastQualificationTime` dans votre mappage d’appartenance aux segments. Pour plus d’informations, contactez votre représentant ou représentante Adobe. |
 
 {style="table-layout:auto"}
 
