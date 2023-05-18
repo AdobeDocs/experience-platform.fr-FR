@@ -5,10 +5,10 @@ feature: Customer AI
 title: Gouvernance des données dans IA dédiée aux clients
 description: Adobe Experience Platform fournit plusieurs services et outils qui vous permettent de contrôler en toute confiance vos données d’expérience collectées afin de respecter vos pratiques commerciales, vos obligations légales et votre processus de développement.
 exl-id: de0836a4-7bc2-4f9c-95a9-c01dd9e2b03f
-source-git-commit: f0bd35d8fb592900c61ed4a1a74d05901bc32810
+source-git-commit: 0fcdb358882fba7f7923e5d6fc1a947699276e18
 workflow-type: tm+mt
-source-wordcount: '295'
-ht-degree: 74%
+source-wordcount: '302'
+ht-degree: 76%
 
 ---
 
@@ -26,7 +26,7 @@ Cette intégration vous permet de gérer la conformité plus efficacement. Les g
 
 ## Stratégie de consentement {#consent-policy}
 
-Customer AI respecte vos préférences de consentement. Une fois que vous avez configuré votre politique de consentement et que vous l’avez activée comme indiqué ici, Customer AI respecte les données de consentement collectées auprès de vous. Seules les données consenties sont utilisées pour évaluer le modèle lors des exécutions suivantes du modèle. Les nouveaux scores remplacent les anciens scores et peuvent être utilisés dans la segmentation. Cette fonctionnalité est uniquement disponible pour les clients HealthCare Shield, ainsi que pour les clients Privacy and Security Shield.
+Customer AI respecte vos préférences de consentement. Une fois que vous avez [configuration et activation de votre stratégie de consentement](https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html?lang=fr#consent-policy), Customer AI respecte les données de consentement collectées auprès de vous. Seules les données consenties sont utilisées pour évaluer le modèle lors des exécutions suivantes du modèle. Les nouveaux scores remplacent les anciens scores et peuvent être utilisés dans la segmentation. Actuellement, cette fonctionnalité n’est disponible que pour les clients de HealthCare Shield, ainsi que pour les clients Privacy and Security Shield.
 
 Vous pouvez en savoir plus sur cette fonctionnalité ici :
 
