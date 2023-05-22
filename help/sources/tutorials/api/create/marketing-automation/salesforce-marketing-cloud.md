@@ -1,33 +1,30 @@
 ---
-keywords: Experience Platform;accueil;rubriques les plus consultées;Salesforce marketing cloud;Marketing Cloud Salesforce
-solution: Experience Platform
 title: Création d’une connexion de base de Marketing Cloud Salesforce à l’aide de l’API Flow Service
-type: Tutorial
-description: Découvrez comment connecter Adobe Experience Platform au Marketing Cloud Salesforce à l’aide de l’API Flow Service.
+description: Découvrez comment authentifier votre compte de Marketing Cloud Salesforce par rapport à Experience Platform à l’aide de l’API Flow Service.
 exl-id: fbf68d3a-f8b1-4618-bd56-160cc6e3346d
-source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
+source-git-commit: 997a9dc70145a8cfd5d6da20ba788a4610e5c257
 workflow-type: tm+mt
-source-wordcount: '520'
-ht-degree: 61%
+source-wordcount: '507'
+ht-degree: 59%
 
 ---
 
 # Créez une connexion de base à [!DNL Salesforce Marketing Cloud] à l’aide de l’API [!DNL Flow Service].
 
->[!NOTE]
+>[!IMPORTANT]
 >
->La source [!DNL Salesforce Marketing Cloud] est en version Beta. Voir la [présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de sources étiquetées bêta. 
+>L’ingestion d’objets personnalisés n’est actuellement pas prise en charge par la fonction [!DNL Salesforce Marketing Cloud] intégration de la source.
 
 Une connexion de base représente la connexion authentifiée entre une source et Adobe Experience Platform.
 
-Ce tutoriel vous guide tout au long des étapes de création dʼune connexion de base pour [!DNL Salesforce Marketing Cloud] à l’aide de l’[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Ce tutoriel vous guide tout au long des étapes de création dʼune connexion de base pour [!DNL Salesforce Marketing Cloud] à l’aide de l’[[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>).
 
 ## Prise en main
 
 Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
 
-* [Sources](../../../../home.md)[!DNL Platform] : Experience  permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, de libeller et d’améliorer les données entrantes à l’aide des services de Platform.
-* [Sandbox](../../../../../sandboxes/home.md)[!DNL Platform] : Experience  fournit des sandbox virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
+* [Sources](../../../../home.md) : Experience Platform permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de Platform.
+* [Sandbox](../../../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
 
 ### Utiliser les API Platform
 
@@ -41,12 +38,12 @@ Pour [!DNL Flow Service] pour vous connecter à [!DNL Salesforce Marketing Cloud
 
 | Informations d’identification | Description |
 | ---------- | ----------- |
-| `host` | Serveur hôte de votre application. Il s’agit souvent de votre sous-domaine. **Remarque :** Lorsque vous saisissez votre `host` , il vous suffit de spécifier le sous-domaine et non l’URL entière. Par exemple, si l’URL d’hôte est `https://abcd-ab12c3d4e5fg6hijk7lmnop8qrst.auth.marketingcloudapis.com/`, il vous suffit de saisir `abcd-ab12c3d4e5fg6hijk7lmnop8qrst` comme valeur d’hôte. |
+| `host` | Serveur hôte de votre application. Il s’agit souvent de votre sous-domaine. **Remarque :** Lorsque vous saisissez votre `host` , il vous suffit de spécifier le sous-domaine et non l’URL entière. Par exemple, si l’URL d’hôte est `https://acme-ab12c3d4e5fg6hijk7lmnop8qrst.auth.marketingcloudapis.com/`, il vous suffit de saisir `acme-ab12c3d4e5fg6hijk7lmnop8qrst` comme valeur d’hôte. |
 | `clientId` | L’ID client associé à votre [!DNL Salesforce Marketing Cloud] application. |
 | `clientSecret` | Le secret client associé à votre [!DNL Salesforce Marketing Cloud] application. |
 | `connectionSpec.id` | La spécification de connexion renvoie les propriétés du connecteur d’une source, y compris les spécifications d’authentification liées à la création des connexions de base et source. L’identifiant de spécification de connexion pour [!DNL Salesforce Marketing Cloud] est `ea1c2a08-b722-11eb-8529-0242ac130003`. |
 
-Pour plus d’informations sur la prise en main, reportez-vous à cette section [[!DNL Salesforce Marketing Cloud] document](https://developer.salesforce.com/docs/atlas.en-us.mc-apis.meta/mc-apis/authentication.htm).
+Pour plus d’informations sur la prise en main, reportez-vous à cette section [[!DNL Salesforce Marketing Cloud] document](<https://developer.salesforce.com/docs/atlas.en-us.mc-apis.meta/mc-apis/authentication.htm>).
 
 ## Créer une connexion de base
 
@@ -66,28 +63,28 @@ La requête suivante permet de créer une connexion de base pour [!DNL Salesforc
 
 ```shell
 curl -X POST \
-    'https://platform.adobe.io/data/foundation/flowservice/connections' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "name": "Salesforce Marketing Cloud base connection",
-        "description": "Salesforce Marketing Cloud base connection",
-        "auth": {
-            "specName": "Client-Id-Secret Based Authentication",
-            "params": {
-                "host": "{HOST}"
-                "clientId": "{CLIENT_ID}",
-                "clientSecret": "{CLIENT_SECRET}"
-            }
-        },
-        "connectionSpec": {
-            "id": "ea1c2a08-b722-11eb-8529-0242ac130003",
-            "version": "1.0"
-        }
-    }'
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "Salesforce Marketing Cloud base connection",
+      "description": "Salesforce Marketing Cloud base connection",
+      "auth": {
+          "specName": "Client-Id-Secret Based Authentication",
+          "params": {
+              "host": "acme-ab12c3d4e5fg6hijk7lmnop8qrst"
+              "clientId": "acme-salesforce-marketing-cloud",
+              "clientSecret": "xxxx"
+          }
+      },
+      "connectionSpec": {
+          "id": "ea1c2a08-b722-11eb-8529-0242ac130003",
+          "version": "1.0"
+      }
+  }'
 ```
 
 | Propriété | Description |
