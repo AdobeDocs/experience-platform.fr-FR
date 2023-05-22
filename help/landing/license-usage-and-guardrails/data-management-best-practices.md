@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform;accueil;rubriques les plus consultées;gestion des données;droits de licence;licences;bonnes pratiques
 title: Bonnes pratiques relatives aux droits de licence de gestion des données
 description: Découvrez les bonnes pratiques à suivre et les outils que vous pouvez utiliser pour mieux gérer vos droits de licence avec Adobe Experience Platform.
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: fd594e19e13ca6e7f9f92674107d8ac6dabac9d6
+source-git-commit: 225fee7e2addf5067cb13da11615f6acff62ed72
 workflow-type: tm+mt
-source-wordcount: '2169'
-ht-degree: 79%
+source-wordcount: '2203'
+ht-degree: 78%
 
 ---
 
@@ -106,6 +105,7 @@ Les filtres d’ingestion vous permettent d’importer uniquement les données n
 | Prise en charge de l’activation et de la désactivation des jeux de données pour le profil | Pour ingérer des données dans Real-time Customer Profile, vous devez activer un jeu de données à utiliser dans la banque de profils. Ce faisant, vous élargissez l’[!DNL Addressable Audience] et les droits de [!DNL Profile Richness]. Une fois qu’un jeu de données n’est plus nécessaire pour les cas d’utilisation de profil client, vous pouvez désactiver l’intégration de ce jeu de données au profil afin de vous assurer que vos données restent conformes à la licence. Pour plus d’informations, consultez le guide sur l’[activation et la désactivation des jeux de données pour le profil](../../catalog/datasets/enable-for-profile.md). |
 | Exclusion des données du SDK Web et du SDK mobile | Il existe deux types de collecte de données par le SDK Web et Mobile : les données collectées automatiquement et les données collectées explicitement par le développeur. Pour mieux gérer la conformité de licence, vous pouvez désactiver la collecte de données automatique dans la configuration du SDK via le paramètre contextuel. Les données personnalisées peuvent également être supprimées ou ne pas être définies par le développeur. Pour plus d’informations, consultez le guide sur la [configuration des principes de base du SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=fr#fundamentals). |
 | Exclusion des données du transfert côté serveur | Si vous envoyez des données à Platform à l’aide du transfert côté serveur, vous pouvez exclure les données envoyées en supprimant le mappage dans une action de règle pour l’exclure de tous les événements ou en ajoutant des conditions à la règle afin que les données ne se déclenchent que pour certains événements. Pour plus d’informations, consultez la documentation sur les [événements et conditions](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/rules.html?lang=fr#events-and-conditions-(if)). |
+| Filtrer des données au niveau de la source | Vous pouvez utiliser des opérateurs logiques et de comparaison pour filtrer les données au niveau des lignes de vos sources avant de créer une connexion et d’ingérer des données vers Experience Platform. Pour plus d’informations, consultez le guide sur [filtrage des données au niveau de la ligne pour une source à l’aide de la variable [!DNL Flow Service] API](../../sources/tutorials/api/filter.md). |
 
 {style="table-layout:auto"}
 
