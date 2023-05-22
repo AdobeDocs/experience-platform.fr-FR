@@ -2,9 +2,9 @@
 title: Présentation de l’extension de l’API Meta Conversions
 description: Découvrez l’extension de l’API Meta Conversions pour le transfert d’événement dans Adobe Experience Platform.
 exl-id: 6b5836d6-6674-4978-9165-0adc1d7087b7
-source-git-commit: 6538599e10d4980c3890a8fba65c8ef51c24496a
+source-git-commit: f5a9e8cb5cdbff485bc7d50e9567b0236ae5872e
 workflow-type: tm+mt
-source-wordcount: '2256'
+source-wordcount: '2368'
 ht-degree: 1%
 
 ---
@@ -24,6 +24,10 @@ Il est vivement recommandé d’utiliser [!DNL Meta Pixel] et le [!DNL Conversio
 >La section sur [déduplication des événements](#deduplication) plus loin, ce document décrit les étapes à suivre pour s’assurer que le même événement n’est pas utilisé deux fois, car il peut être reçu à la fois du navigateur et du serveur.
 
 Pour utiliser la variable [!DNL Conversions API] , vous devez avoir accès au transfert d’événement et disposer d’un [!DNL Meta] compte avec accès à [!DNL Ad Manager] et [!DNL Event Manager]. Plus précisément, vous devez copier l’identifiant d’un [[!DNL Meta Pixel]](https://www.facebook.com/business/help/952192354843755?id=1205376682832142) (ou [créer [!DNL Pixel]](https://www.facebook.com/business/help/952192354843755) ) afin que l’extension puisse être configurée sur votre compte.
+
+>[!INFO]
+>
+>Si vous prévoyez d’utiliser cette extension avec des données d’application mobile ou si vous utilisez également des données d’événement hors ligne dans votre [!DNL Meta] campagnes, vous devrez créer votre jeu de données par le biais d’une application existante et sélectionner **Créer à partir d’un ID de pixel** lorsque vous y êtes invité. Voir l’article [Déterminez quelle option de création de jeux de données convient à votre entreprise.](https://www.facebook.com/business/help/5270377362999582?id=490360542427371) pour plus d’informations. Reportez-vous à la section [API de conversion pour les événements d’application](https://developers.facebook.com/docs/marketing-api/conversions-api/app-events) document pour tous les paramètres de suivi d’application requis et facultatifs.
 
 ## Installation l’extension
 
@@ -45,7 +49,7 @@ L’extension est installée et vous pouvez désormais utiliser ses fonctionnali
 
 ## Configurer une règle de transfert d’événement {#rule}
 
-Cette section explique comment utiliser la variable [!DNL Conversions API] dans une règle générique de transfert d’événement. En pratique, vous devez configurer plusieurs règles afin d&#39;envoyer toutes les règles acceptées [événements standard](https://developers.facebook.com/docs/meta-pixel/reference) via [!DNL Meta Pixel] et [!DNL Conversions API].
+Cette section explique comment utiliser la variable [!DNL Conversions API] dans une règle générique de transfert d’événement. En pratique, vous devez configurer plusieurs règles afin d&#39;envoyer toutes les règles acceptées [événements standard](https://developers.facebook.com/docs/meta-pixel/reference) via [!DNL Meta Pixel] et [!DNL Conversions API]. Pour les données d’application mobile, veuillez consulter les champs requis, les champs de données d’application, les paramètres d’informations client et les détails de données personnalisées. [here](https://developers.facebook.com/docs/marketing-api/conversions-api/app-events).
 
 >[!NOTE]
 >
