@@ -4,9 +4,9 @@ user-guide-title: Aide sur les connecteurs source d’Adobe Experience Platfor
 breadcrumb-title: Guide des connecteurs sources
 user-guide-description: Ingérez des données à partir de diverses sources. Découvrez comment structurer, étiqueter et améliorer les données déjà ingérées.
 feature: Sources
-source-git-commit: 33a660800e3202d9969c4e44eba8419e22db57a3
+source-git-commit: 1a6282104af60d66c54bfb20c3c4e8eb74427461
 workflow-type: tm+mt
-source-wordcount: '968'
+source-wordcount: '974'
 ht-degree: 99%
 
 ---
@@ -326,6 +326,7 @@ ht-degree: 99%
    - [Supprimer des comptes](tutorials/ui/delete-accounts.md)
    - [Supprimer des flux de données](tutorials/ui/delete.md)
    - [S’abonner aux alertes sur les sources](tutorials/ui/alerts.md)
+   - [Enregistrer un flux de données en tant que brouillon](tutorials/ui/draft.md)
 - Sources en libre-service (SDK par lots) {#sdk}
    - [Aperçu](sources-sdk/overview.md)
    - Configurer votre spécification de connexion {#config}
