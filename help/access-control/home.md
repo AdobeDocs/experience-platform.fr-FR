@@ -4,78 +4,78 @@ solution: Experience Platform
 title: Présentation du contrôle d’accès
 description: Dans Adobe Experience Platform, le contrôle dʼaccès est fourni par le biais dʼAdobe Admin Console. Cette fonctionnalité exploite les profils de produit dans l’Admin Console, liant les utilisateurs et utilisatrices à des autorisations et des sandbox.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: 88bfcdef65b4a938d573b1beb1952c7e030ebc13
 workflow-type: tm+mt
-source-wordcount: '1540'
-ht-degree: 100%
+source-wordcount: '1567'
+ht-degree: 65%
 
 ---
 
 # Présentation du contrôle d’accès
 
-Dans [!DNL Experience Platform], le contrôle dʼaccès est fourni par le biais dʼ[Adobe Admin Console](https://adminconsole.adobe.com). Cette fonctionnalité exploite les profils de produit dans [!DNL Admin Console], liant les utilisateurs à des autorisations et des sandbox.
+Le contrôle d’accès de Adobe Experience Platform est fourni via le **[!UICONTROL Autorisations]** in [Adobe Experience Cloud](https://experience.adobe.com/). Cette fonctionnalité exploite des rôles et des stratégies qui lient les utilisateurs à des autorisations et des environnements de test.
 
 ## Hiérarchie et workflow du contrôle d’accès
 
-Pour configurer le contrôle dʼaccès dans [!DNL Experience Platform], vous devez posséder des droits dʼadministrateur pour une organisation qui dispose dʼune intégration de produit [!DNL Experience Platform]. Le rôle minimum qui permet d’accorder ou de retirer des autorisations est un administrateur de profils de produit. Les autres rôles d’administrateur qui peuvent gérer des autorisations sont les administrateurs de produit (qui peuvent gérer tous les profils au sein d’un produit) et les administrateurs système (aucune restriction). Pour en savoir plus, consultez l’article du Centre d’aide Adobe sur les [rôles administratifs](https://helpx.adobe.com/fr/enterprise/using/admin-roles.html).
+Pour configurer le contrôle d’accès pour un Experience Platform, vous devez disposer de droits d’administrateur système ou produit pour une organisation disposant d’un produit Experience Platform. Le rôle minimum pouvant accorder ou retirer des autorisations est un administrateur de produit. Les autres rôles d’administrateur qui peuvent gérer les autorisations sont les administrateurs système (aucune restriction). Pour en savoir plus, consultez l’article du Centre d’aide Adobe sur les [rôles administratifs](https://helpx.adobe.com/fr/enterprise/using/admin-roles.html).
 
 >[!NOTE]
 >
->À partir de maintenant, le terme « administrateur » dans ce document désigne un administrateur de profils de produit ou d’un niveau supérieur (comme indiqué ci-dessus).
+>À partir de là, toute mention du terme &quot;administrateur&quot; dans ce document désigne un administrateur de produit ou plus (comme indiqué ci-dessus).
 
 Un workflow de haut niveau d’obtention et d’attribution d’autorisations d’accès peut se résumer de la manière suivante :
 
 - Après lʼattribution dʼune licence pour Adobe Experience Platform, ou pour une application/un service applicatif qui utilise Experience Platform, un e-mail est envoyé à lʼadministrateur spécifié lors de lʼattribution de la licence.
 - L’administrateur se connecte à [Adobe Admin Console](#adobe-admin-console) et sélectionne **Adobe Experience Platform** depuis la liste de produits sur la page d’aperçu.
-- L’administrateur peut afficher les [profils de produit](#product-profiles) par défaut ou créer de nouveaux profils de produit clients si nécessaire.
-- L’administrateur peut modifier les autorisations et les utilisateurs pour tout profil de produit existant.
-- Lors de la création ou de la modification dʼun profil de produit, lʼadministrateur ajoute les utilisateurs au profil à lʼaide de lʼonglet **[!UICONTROL Utilisateurs]**, et accorde des autorisations à ces utilisateurs (comme « [!UICONTROL Lecture des jeux de données] » ou « [!UICONTROL Gestion des schémas] ») en y accédant depuis lʼonglet **[!UICONTROL Autorisations]**. De même, l’administrateur peut attribuer des accès aux sandbox à l’aide du même onglet Autorisations.
-- Lorsque les utilisateurs se connectent à lʼinterface utilisateur dʼ[!DNL Experience Platform], leur accès aux fonctionnalités [!DNL Platform] est géré par les autorisations qui leur ont été accordées à lʼétape 2. Par exemple, si un utilisateur ne dispose pas de lʼautorisation « [!UICONTROL Affichage des jeux de données] », lʼonglet **[!UICONTROL Jeux de données]** nʼapparaîtra pas dans le menu latéral pour cet utilisateur.
+- Pour accorder l’accès à Experience Platform, l’administrateur doit ajouter des utilisateurs au profil de produit par défaut : `AEP-Default-All-Users`.
+- Dans Autorisations des Experience Platform, l’administrateur peut créer de nouveaux rôles ou modifier les autorisations et les utilisateurs pour tous les rôles existants.
+- Lors de la création ou de la modification d’un rôle, l’administrateur ajoute des utilisateurs au rôle à l’aide de la fonction **[!UICONTROL utilisateurs]** et accorde des autorisations à ces utilisateurs (par exemple, &quot;[!UICONTROL Lire les jeux de données]&quot; ou &quot;[!UICONTROL Gestion des schémas]&quot;) en modifiant les autorisations du rôle. De même, l’administrateur peut attribuer l’accès aux environnements de test à l’aide de la même option de modification.
+- Lorsque les utilisateurs se connectent à l’interface utilisateur de l’Experience Platform, leur accès aux fonctionnalités de l’Experience Platform dépend des autorisations qui leur ont été accordées à l’étape précédente. Par exemple, si un utilisateur ne dispose pas de la variable [!UICONTROL Affichage des jeux de données] l’autorisation, **[!UICONTROL Jeux de données]** dans le menu latéral ne sera pas visible pour cet utilisateur.
 
-Pour obtenir des instructions plus détaillées sur la manière de gérer le contrôle dʼaccès dans [!DNL Experience Platform], consultez le [guide dʼutilisation du contrôle dʼaccès](./ui/overview.md).
+Pour obtenir des instructions plus détaillées sur la manière dont gérer le contrôle d’accès dans Experience Platform, consultez le [guide d’utilisation du contrôle d’accès](./ui/overview.md).
 
-Les autorisations sont activées pour tous les appels vers les API dʼ[!DNL Experience Platform] et renverront des erreurs si la ou les autorisations appropriées ne sont pas trouvées dans le contexte de lʼutilisateur actuel. Des éléments seront masqués ou modifiés dans l’interface utilisateur en fonction des autorisations accordées à l’utilisateur actuel.
+Les autorisations sont activées pour tous les appels vers les API Experience Platform et renverront des erreurs si la ou les autorisations appropriées ne sont pas trouvées dans le contexte de l’utilisateur actuel. Des éléments seront masqués ou modifiés dans l’interface utilisateur en fonction des autorisations accordées à l’utilisateur actuel.
 
-## Adobe Admin Console
+## Autorisations {#platform-permissions}
 
-Adobe Admin Console permet de centraliser la gestion des droits et accès de vos produits Adobe pour votre organisation. Grâce à la console, vous pouvez accorder des autorisations dʼaccès à des groupes dʼutilisateurs à différentes fonctionnalités de [!DNL Platform] comme « [!UICONTROL Gestion des jeux de données] », « [!UICONTROL Affichage des jeux de données] » ou « [!UICONTROL Gestion des profils] ».
+[!UICONTROL Autorisations] fournit un emplacement central pour la gestion de l’accès des Experience Platform pour votre entreprise. Via [!UICONTROL Autorisations], vous pouvez octroyer à des groupes d’utilisateurs des autorisations d’accès pour diverses fonctionnalités Experience Platform, telles que [!UICONTROL Gestion des jeux de données], [!UICONTROL Affichage des jeux de données]ou [!UICONTROL Gestion des profils].
 
-### Profils de produit
+### Rôles
 
-Dans [!DNL Admin Console], des autorisations sont attribuées à des utilisateurs grâce à lʼutilisation des profils de produit. Les profils de produit vous permettent d’accorder des autorisations à un ou plusieurs utilisateurs, mais aussi de contenir leur accès aux sandbox qui leur sont attribués par le biais des profils de produit. Il est possible d’attribuer un ou plusieurs profils de produit appartenant à votre organisation.
+Dans le [!UICONTROL Rôles] , des autorisations sont attribuées aux utilisateurs par l’intermédiaire de rôles. Les rôles vous permettent d’accorder des autorisations à un ou plusieurs utilisateurs et de contenir leur accès à la portée des environnements de test qui leur sont affectés par le biais de rôles. Les utilisateurs peuvent être affectés à un ou plusieurs rôles appartenant à votre organisation.
 
-### Profils de produit par défaut
+### Rôles par défaut
 
-[!DNL Experience Platform] sʼaccompagne de deux profils de produit préconfigurés par défaut. Le tableau suivant décrit les fonctionnalités fournies dans chaque profil par défaut, notamment, le sandbox auquel ils accordent l’accès ainsi que les autorisations qu’ils accordent au sein du sandbox.
+Experience Platform est fourni avec deux rôles par défaut préconfigurés. Le tableau suivant décrit les fonctionnalités fournies dans chaque profil par défaut, notamment, le sandbox auquel ils accordent l’accès ainsi que les autorisations qu’ils accordent au sein du sandbox.
 
-| Profil de produit | Accès aux sandbox | Autorisations |
+| Rôle | Accès aux sandbox | Autorisations |
 | --- | --- | --- |
-| Tous les accès de la production par défaut | Production | Toutes les autorisations applicables à [!DNL Experience Platform] à lʼexception des autorisations Sandbox Administration. |
+| Tous les accès de la production par défaut | Production | Toutes les autorisations applicables à Experience Platform à l’exception des autorisations Sandbox Administration |
 | Administrateurs Sandbox | S/O | Fournit un accès uniquement aux autorisations Sandbox Administration. |
 
 ## Sandbox et autorisations
 
-Les sandbox hors production sont une forme de virtualisation des données qui vous permet d’isoler des données des autres sandbox et qui est généralement utilisée à des fins d’expériences de développement, de test ou d’évaluations. Les autorisations dʼun profil de produit donnent aux utilisateurs du profil lʼaccès aux fonctionnalités de [!DNL Platform] dans les sandbox auxquels ils se sont vus accorder lʼaccès. Une licence Experience Platform par défaut vous accorde cinq sandbox (un de production et quatre hors production). Vous pouvez ajouter des packs de dix sandbox hors production jusquʼà un maximum de 75 sandbox au total. Veuillez contacter l’administration de votre organisation ou le service commercial d’Adobe pour plus de détails.
+Les sandbox hors production sont une forme de virtualisation des données qui vous permet d’isoler des données des autres sandbox et qui est généralement utilisée à des fins d’expériences de développement, de test ou d’évaluations. Les autorisations d’un rôle donnent aux utilisateurs du rôle l’accès aux fonctionnalités Experience Platform dans les environnements de test auxquels ils ont accès. Une licence Experience Platform par défaut vous accorde cinq sandbox (un de production et quatre hors production). Vous pouvez ajouter des packs de dix sandbox hors production jusquʼà un maximum de 75 sandbox au total. Veuillez contacter l’administration de votre organisation ou le service commercial d’Adobe pour plus de détails.
 
-Pour plus dʼinformations sur les sandbox dans [!DNL Experience Platform], reportez-vous à la [présentation des sandbox](../sandboxes/home.md).
+Pour plus d’informations sur les sandbox dans Experience Platform, reportez-vous à la [présentation des sandbox](../sandboxes/home.md).
 
 ### Accès aux sandbox
 
-L’accès aux sandbox est géré par l’intermédiaire des profils de produit. Pour obtenir des instructions détaillées sur la manière d’activer l’accès à un sandbox pour un profil de produit, consultez le [guide d’utilisation du contrôle d’accès](./ui/overview.md).
+L’accès aux environnements de test est géré au moyen de rôles. Pour obtenir des instructions détaillées sur la manière d’activer l’accès à un environnement de test pour un rôle, reportez-vous à la section [guide des rôles de contrôle d’accès basé sur les attributs](./abac/ui/roles.md).
 
-Les utilisateurs peuvent se voir accorder l’accès à un ou plusieurs sandbox au sein d’un profil de produit. Si un utilisateur fait partie de deux profils de produit ou plus, cet utilisateur aura accès à tous les sandbox inclus dans ces profils.
+Les utilisateurs peuvent se voir accorder l’accès à un ou plusieurs environnements de test au sein d’un rôle. Si un utilisateur fait partie de deux rôles ou plus, il aura accès à tous les environnements de test inclus dans ces rôles.
 
 L’autorisation « Gestion des sandbox » permet aux utilisateurs de gérer, d’afficher ou de réinitialiser des sandbox.
 
-### Autorisations {#permissions}
+### Autorisations des ressources {#permissions}
 
-L’onglet Autorisations au sein d’un profil de produit affiche les sandbox et les autorisations actifs pour ce profil :
+La ressource [!UICONTROL Autorisations] dans un rôle affiche les environnements de test et les autorisations principales pour ce rôle :
 
 ![présentation-autorisations](./images/permissions.png)
 
-Les autorisations accordées par lʼintermédiaire dʼ[!DNL Admin Console] sont triées par catégorie, certaines autorisations permettant dʼaccéder à plusieurs fonctionnalités de bas niveau.
+Les autorisations accordées par le biais des autorisations de ressources sont triées par catégorie, certaines autorisations permettant d’accéder à plusieurs fonctionnalités de bas niveau.
 
-Le tableau suivant décrit les autorisations disponibles pour [!DNL Experience Platform] dans [!DNL Admin Console], avec des descriptions des fonctionnalités spécifiques de [!DNL Platform] auxquelles elles donnent accès. Pour obtenir des instructions détaillées sur la manière dont ajouter des autorisations à un profil de produit, consultez le [guide d’utilisation du contrôle d’accès](./ui/overview.md).
+Le tableau suivant décrit les autorisations disponibles pour les Experience Platform dans le rôle, avec des descriptions des fonctionnalités d’Experience Platform spécifiques auxquelles ils accordent l’accès. Pour obtenir des instructions détaillées sur l’ajout d’autorisations à un rôle, reportez-vous à la section [guide des rôles de contrôle d’accès basé sur les attributs](./abac/ui/roles.md).
 
 | Catégorie | Autorisation | Description |
 | --- | --- | --- |
@@ -128,4 +128,4 @@ Le tableau suivant décrit les autorisations disponibles pour [!DNL Experience P
 
 ## Étapes suivantes
 
-En lisant ce guide, les principes du contrôle dʼaccès dans [!DNL Experience Platform] vous ont été présentés. Vous pouvez désormais poursuivre en consultant le [guide dʼutilisation du contrôle dʼaccès](./ui/overview.md) pour obtenir des instructions détaillées sur lʼutilisation dʼ[!DNL Admin Console] afin de créer des profils de produit et attribuer des autorisations dans [!DNL Platform].
+En lisant ce guide, les principes du contrôle d’accès dans Experience Platform vous ont été présentés. Vous pouvez maintenant continuer à [guide d’utilisation du contrôle d’accès basé sur les attributs](./abac/overview.md) pour obtenir des instructions détaillées sur l’utilisation d’Experience Cloud pour créer des rôles et attribuer des autorisations à Experience Platform.
