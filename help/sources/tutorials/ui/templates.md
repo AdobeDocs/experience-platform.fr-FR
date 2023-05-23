@@ -1,18 +1,16 @@
 ---
-description: Adobe Experience Platform fournit des modèles préconfigurés que vous pouvez utiliser pour accélérer votre processus d’ingestion de données. Les modèles comprennent des ressources générées automatiquement telles que des schémas, des jeux de données, des règles de mappage, des identités, des espaces de noms d’identité et des flux de données que vous pouvez utiliser lors de l’importation de données d’une source vers Experience Platform.
-title: (Version bêta) Création d’un flux de données de sources à l’aide de modèles dans l’interface utilisateur
+description: Découvrez comment utiliser des modèles dans l’interface utilisateur de Adobe Experience Platform pour accélérer votre processus d’ingestion de données pour les données B2B.
+title: Créer un flux de données de sources à l’aide de modèles dans l’interface utilisateur
 badge1: "Beta"
-hide: true
-hidefromtoc: true
 exl-id: 48aa36ca-656d-4b9d-954c-48c8da9df1e9
-source-git-commit: c4cb3783cbbab6f9bf25ffaa5b27a200c555b181
+source-git-commit: 91d6832231d75c9dd23e91a5f1152eac61558fc5
 workflow-type: tm+mt
-source-wordcount: '1337'
-ht-degree: 76%
+source-wordcount: '1554'
+ht-degree: 59%
 
 ---
 
-# (Version bêta) Création d’un flux de données de sources à l’aide de modèles dans l’interface utilisateur
+# Créer un flux de données de sources à l’aide de modèles dans l’interface utilisateur
 
 >[!IMPORTANT]
 >
@@ -132,7 +130,7 @@ Une fois que vous avez terminé la configuration de votre planning d’ingestion
 
 La page [!UICONTROL Vérifier les ressources de modèle] affiche les ressources générées automatiquement dans le cadre de votre modèle. Dans cette page, vous pouvez afficher les schémas, les jeux de données, les espaces de noms d’identité et les flux de données générés automatiquement associés à votre connexion source. La génération de toutes les ressources peut prendre jusqu’à cinq minutes. Si vous choisissez de quitter la page, une notification vous sera envoyée pour revenir une fois les ressources terminées. Vous pouvez vérifier les ressources une fois qu’elles ont été générées et effectuer des configurations supplémentaires dans votre flux de données à tout moment.
 
-Les flux de données générés automatiquement sont activés par défaut. Sélectionnez les points de suspension (`...`) à côté du nom du flux de données, puis sélectionnez **[!UICONTROL Prévisualiser les mappages]** pour afficher les jeux de mappages créés pour votre flux de données.
+Par défaut, les flux de données générés automatiquement sont définis sur un état de brouillon afin de permettre une personnalisation plus poussée des configurations, telles que les règles de mappage ou les fréquences planifiées. Sélectionnez les ellipses (`...`) en regard du nom du flux de données, puis sélectionnez **[!UICONTROL Prévisualiser les mappages]** pour afficher les jeux de mappages créés pour votre flux de données de brouillon.
 
 ![Une fenêtre déroulante avec l’option Prévisualiser les mappages sélectionnée.](../../images/tutorials/templates/preview.png)
 
@@ -146,18 +144,44 @@ Vous pouvez utiliser la vue de l’éditeur de schémas pour mettre à jour votr
 
 ![Une fenêtre déroulante avec l’option Mettre à jour les flux de données sélectionnée.](../../images/tutorials/templates/update.png)
 
+>[!TIP]
+>
+>Vous pouvez accéder à votre flux de données de brouillon à l’aide du [!UICONTROL Flux de données] page catalogue dans l’espace de travail sources. Sélectionner **[!UICONTROL Flux de données]** dans l’en-tête supérieur, puis sélectionnez le flux de données à mettre à jour dans la liste.
+>
+>![Liste des flux de données existants dans le catalogue des flux de données de l’espace de travail des sources.](../../images/tutorials/templates/dataflows.png)
+
+### Publication de votre flux de données
+
+Commencez le processus de publication en parcourant le workflow des sources. Après avoir sélectionné [!UICONTROL Mise à jour du flux de données], vous êtes dirigé vers le *[!UICONTROL Ajouter des données]* de la procédure. Cliquez sur **[!UICONTROL Suivant]** pour continuer.
+
+![Étape d’ajout de données pour un flux de données de brouillon](../../images/tutorials/templates/continue-draft.png)
+
+Ensuite, confirmez les détails de votre flux de données et configurez les paramètres pour les diagnostics d’erreur, l’ingestion partielle et les notifications d’alerte. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Suivant]**.
+
+![Étape de détail du flux de données pour un flux de données de brouillon.](../../images/tutorials/templates/dataflow-detail.png)
+
+>[!NOTE]
+>
+>Vous pouvez sélectionner **[!UICONTROL Enregistrer en tant que brouillon]** à tout moment pour arrêter et enregistrer les modifications que vous avez apportées à votre flux de données.
+
+L’étape de mappage s’affiche. Au cours de cette étape, vous pouvez reconfigurer les configurations de mappage de votre flux de données. Pour obtenir un guide complet sur les fonctions de préparation de données utilisées pour le mappage, consultez la page [guide de l’interface utilisateur de la préparation de données](../../../data-prep/ui/mapping.md).
+
+![L’étape de mappage d’un flux de données de brouillon.](../../images/tutorials/templates/mapping.png)
+
+Enfin, passez en revue les détails de votre flux de données, puis sélectionnez **[!UICONTROL Enregistrement et ingestion]** pour publier votre brouillon.
+
+![L’étape de révision d’un flux de données de brouillon.](../../images/tutorials/templates/review.png)
+
 ## Étapes suivantes
 
 En suivant ce tutoriel, vous avez désormais créé des flux de données, ainsi que des ressources telles que des schémas, des jeux de données et des espaces de noms d’identité à l’aide de modèles. Pour obtenir des informations générales sur les sources, consultez la [présentation des sources](../../home.md).
 
-## Annexe
+## Alertes et notifications {#alerts-and-notifications}
 
-La section suivante fournit des informations supplémentaires concernant les modèles.
-
-### Utilisez le panneau des notifications pour revenir à la page de révision.
-
-Les modèles sont pris en charge par les alertes Adobe Experience Platform. Vous pouvez utiliser le panneau de notifications pour recevoir des mises à jour sur le statut de vos ressources et également revenir à la page de révision.
+Les modèles sont pris en charge par les alertes Adobe Experience Platform. Vous pouvez utiliser le panneau de notifications pour recevoir des mises à jour sur l’état de vos ressources et également revenir à la page de révision.
 
 Sélectionnez l’icône de notification dans l’en-tête supérieur de l’interface utilisateur de Platform, puis sélectionnez l’alerte de statut pour afficher les ressources que vous souhaitez consulter.
 
 ![Le panneau des notifications de l’interface utilisateur de Platform avec une notification signalant l’échec d’un flux de données mise en surbrillance.](../../images/tutorials/templates/notifications.png)
+
+Vous pouvez mettre à jour les paramètres d’alerte de vos modèles afin de recevoir des notifications par courrier électronique et dans Platform sur l’état de vos flux de données. Pour plus d’informations sur la configuration des alertes, consultez le guide sur [comment vous abonner aux alertes pour les flux de données de sources](../ui/alerts.md).
