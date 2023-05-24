@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Guide de l’interface utilisateur des jeux de données
 description: Découvrez comment exécuter des actions courantes lors de l’utilisation de jeux de données dans l’interface utilisateur de Adobe Experience Platform.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
+source-git-commit: f0cd059683531993398f0a81d6eda486276853e2
 workflow-type: tm+mt
-source-wordcount: '1476'
-ht-degree: 38%
+source-wordcount: '1485'
+ht-degree: 35%
 
 ---
 
@@ -122,9 +122,9 @@ Pour activer un jeu de données pour Profile, accédez à son **[!UICONTROL Acti
 
 ![Le bouton bascule Profil est mis en surbrillance dans la page des détails du jeu de données.](../images/datasets/user-guide/enable-dataset-profiles.png)
 
-## Gestion et application de la gouvernance des données sur un jeu de données
+## Gestion et application de la gouvernance des données sur un jeu de données {#manage-and-enforce-data-governance}
 
-Les libellés d’utilisation des données vous permettent de classer les jeux de données et les champs en fonction des politiques d’utilisation qui s’appliquent à ces données. Pour en savoir plus sur les libellés, consultez la [Présentation de la gouvernance des données](../../data-governance/home.md) ou reportez-vous au [guide d’utilisation des libellés d’utilisation des données](../../data-governance/labels/overview.md) pour savoir comment appliquer des libellés à vos jeux de données.
+Les libellés d’utilisation des données, appliqués au niveau du schéma, vous permettent de classer les jeux de données et les champs en fonction des stratégies d’utilisation qui s’appliquent à ces données. Voir [Présentation de la gouvernance des données](../../data-governance/home.md) pour en savoir plus sur les étiquettes, ou reportez-vous à la section [guide d’utilisation des libellés d’utilisation des données](../../data-governance/labels/overview.md) pour obtenir des instructions sur la manière d’appliquer des libellés aux schémas pour la propagation aux jeux de données.
 
 ## Suppression d’un jeu de données {#delete}
 

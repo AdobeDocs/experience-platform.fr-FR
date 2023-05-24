@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Présentation des libellés d’utilisation des données
 description: Découvrez comment les libellés d’utilisation des données sont utilisés pour appliquer la conformité en matière de gouvernance des données dans Adobe Experience Platform.
 exl-id: 4f113000-b9a1-4dfb-9502-6a5d08f0b26f
-source-git-commit: a1628df7d0eefc795d1eaeefce842a65c7133322
+source-git-commit: 5d34781e06c0fa8bfd2e52f73e336d92d16192f6
 workflow-type: tm+mt
-source-wordcount: '794'
-ht-degree: 100%
+source-wordcount: '802'
+ht-degree: 83%
 
 ---
 
@@ -57,21 +57,17 @@ Vous pouvez gérer les libellés d’utilisation des données à l’aide des AP
 
 ### Utilisation de l’interface utilisateur
 
-L’espace de travail **[!UICONTROL Politiques]** de l’interface utilisateur [!DNL Experience Platform] vous permet d’afficher et de gérer les libellés personnalisés et principaux de votre entreprise. Vous pouvez utiliser l’espace de travail **[!UICONTROL Schémas]** pour [appliquer des libellés à vos schémas de modèle de données d’expérience (XDM)](../../xdm/tutorials/labels.md), ou l’espace de travail **[!DNL Datasets]** pour [appliquer des libellés aux jeux de données](./user-guide.md).
+L’espace de travail **[!UICONTROL Politiques]** de l’interface utilisateur [!DNL Experience Platform] vous permet d’afficher et de gérer les libellés personnalisés et principaux de votre entreprise. Vous pouvez utiliser la variable **[!UICONTROL Schémas]** workspace vers [appliquer des libellés à vos schémas de modèle de données d’expérience (XDM) ;](../../xdm/tutorials/labels.md)ou découvrez comment [créer et gérer des étiquettes personnalisées dans **[!UICONTROL Stratégies] Interface utilisateur](./user-guide.md) en lisant plutôt le guide d’utilisation des libellés d’utilisation des données.
 
->[!NOTE]
+>[!IMPORTANT]
 >
->L’application de libellés au niveau du jeu de données est uniquement prise en charge pour les cas d’utilisation de la gouvernance des données. Si vous essayez de créer des politiques d’accès pour les données, vous devez appliquer des libellés au schéma sur lequel est basé le jeu de données. Pour plus d’informations, consultez la présentation du [contrôle d’accès basé sur les attributs](../../access-control/abac/overview.md).
+>Les libellés ne peuvent plus être appliqués aux champs au niveau du jeu de données. Ce workflow a été abandonné au profit de l’application des libellés au niveau du schéma. Les libellés précédemment appliqués au niveau de l’objet du jeu de données seront toujours pris en charge par l’interface utilisateur de Platform jusqu’au 31 mai 2024. Pour garantir la cohérence de vos libellés sur tous les schémas, les libellés précédemment attachés aux champs au niveau du jeu de données doivent être migrés au niveau du schéma par vous au cours de l’année à venir. Voir la section sur [migration des libellés précédemment appliqués](../e2e.md#migrate-labels) pour obtenir des instructions sur la manière de procéder.
 
 ### Utilisation des API
 
 Le point d’entrée `/labels` de l’[API Policy Service](https://www.adobe.io/experience-platform-apis/references/policy-service/) vous permet de gérer par programmation les libellés d’utilisation des données, y compris la création de libellés personnalisés. Pour plus d’informations, consultez le [guide des points d’entrée des libellés](../api/labels.md).
 
 L’[API Dataset Service](https://www.adobe.io/experience-platform-apis/references/dataset-service/) est utilisée pour gérer les libellés des jeux de données et des champs. Pour plus d’informations, consultez le guide sur la [gestion des libellés de jeux de données](./dataset-api.md).
-
->[!NOTE]
->
->L’application de libellés au niveau du jeu de données est uniquement prise en charge pour les cas d’utilisation de la gouvernance des données. Si vous essayez de créer des politiques d’accès pour les données, vous devez [appliquer des libellés au schéma](../../xdm/tutorials/labels.md) sur lequel le jeu de données est basé. Pour plus d’informations, consultez la présentation du [contrôle d’accès basé sur les attributs](../../access-control/abac/overview.md).
 
 ## Étapes suivantes
 
