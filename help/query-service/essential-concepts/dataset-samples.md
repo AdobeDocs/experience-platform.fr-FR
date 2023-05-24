@@ -2,7 +2,7 @@
 title: Échantillon de jeux de données
 description: Les échantillons de jeux de données Query Service vous permettent de mener des requêtes exploratoires sur le Big Data avec un temps de traitement considérablement réduit, mais au prix de la précision des requêtes. Ce guide fournit des informations sur la gestion de vos échantillons pour le traitement approximatif des requêtes.
 exl-id: 9e676d7c-c24f-4234-878f-3e57bf57af44
-source-git-commit: 13779e619345c228ff2a1981efabf5b1917c4fdb
+source-git-commit: ef71371b04746bbf12ac58e91c9ecb5806f7e771
 workflow-type: tm+mt
 source-wordcount: '639'
 ht-degree: 100%
@@ -63,9 +63,9 @@ ANALYZE TABLE <tableToAnalyze> TABLESAMPLE FILTERCONTEXT (<filter_condition_1> A
 Voici des exemples concrets de ce type d’échantillon de jeu de données filtré :
 
 ```sql
-Analyze TABLE large_table TABLESAMPLE FILTERCONTEXT (month(to_timestamp(timestamp)) in ('8', '9')) SAMPLERATE 10;
-Analyze TABLE large_table TABLESAMPLE FILTERCONTEXT (month(to_timestamp(timestamp)) in ('8', '9') AND product.name = "product1") SAMPLERATE 10;
-Analyze TABLE large_table TABLESAMPLE FILTERCONTEXT (month(to_timestamp(timestamp)) in ('8', '9') AND (product.name = "product1" OR product.name = "product2")) SAMPLERATE 10;
+ANALYZE TABLE large_table TABLESAMPLE FILTERCONTEXT (month(to_timestamp(timestamp)) in ('8', '9')) SAMPLERATE 10;
+ANALYZE TABLE large_table TABLESAMPLE FILTERCONTEXT (month(to_timestamp(timestamp)) in ('8', '9') AND product.name = "product1") SAMPLERATE 10;
+ANALYZE TABLE large_table TABLESAMPLE FILTERCONTEXT (month(to_timestamp(timestamp)) in ('8', '9') AND (product.name = "product1" OR product.name = "product2")) SAMPLERATE 10;
 ```
 
 Dans les exemples ci-dessus, le nom du tableau est `large_table`, la condition de filtrage sur le tableau d’origine est `month(to_timestamp(timestamp)) in ('8', '9')` et le taux d’échantillonnage est (pourcentage des données filtrées), dans ce cas, `10`.

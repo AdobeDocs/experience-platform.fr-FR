@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Syntaxe SQL dans Query Service
 description: Ce document présente la syntaxe SQL prise en charge par Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 3907efa2e8c20671e283c1e5834fc7224ee12f9e
+source-git-commit: 2a5dd20d99f996652de5ba84246c78a1f7978693
 workflow-type: tm+mt
-source-wordcount: '3406'
+source-wordcount: '3706'
 ht-degree: 8%
 
 ---
@@ -568,7 +568,7 @@ Pour renvoyer la valeur d’un paramètre, utilisez `SET [property key]` sans `p
 
 Les sous-sections ci-dessous couvrent la [!DNL PostgreSQL] Commandes prises en charge par Query Service.
 
-### ANALYSER LE TABLEAU
+### ANALYSER LE TABLEAU {#analyze-table}
 
 Le `ANALYZE TABLE` calcule les statistiques pour une table sur l’entrepôt accéléré. Les statistiques sont calculées sur les requêtes CTAS ou ITAS exécutées pour un tableau donné sur la boutique accélérée.
 
@@ -591,6 +591,61 @@ Vous trouverez ci-dessous une liste de calculs statistiques disponibles après l
 | `min` | Valeur minimale du tableau analysé. |
 | `mean` | Valeur moyenne du tableau analysé. |
 | `stdev` | Écart type du tableau analysé. |
+
+#### CALCUL DES STATISTIQUES {#compute-statistics}
+
+Vous pouvez maintenant calculer les statistiques au niveau des colonnes sur [!DNL Azure Data Lake Storage] (ADLS) des jeux de données avec la variable `COMPUTE STATISTICS` et `SHOW STATISTICS` Commandes SQL. Calculez les statistiques des colonnes sur l’ensemble du jeu de données, un sous-ensemble d’un jeu de données, toutes les colonnes ou un sous-ensemble de colonnes.
+
+`COMPUTE STATISTICS` étend la propriété `ANALYZE TABLE` . Toutefois, la variable `COMPUTE STATISTICS`, `FILTERCONTEXT`, `FOR COLUMNS`, et `SHOW STATISTICS` Les commandes ne sont pas prises en charge sur les tables de l’entrepôt de données. Ces extensions pour la variable `ANALYZE TABLE` ne sont actuellement prises en charge que pour les tables ADLS.
+
+**Exemple**
+
+```sql
+ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-04-01 00:00:00') and timestamp <= to_timestamp('2023-04-05 00:00:00')) COMPUTE STATISTICS  FOR COLUMNS (commerce, id, timestamp);
+```
+
+>[!NOTE]
+>
+>`FILTER CONTEXT` calcule les statistiques sur un sous-ensemble du jeu de données en fonction de la condition de filtrage fournie, et `FOR COLUMNS` cible des colonnes spécifiques à des fins d’analyse.
+
+La sortie de la console s’affiche comme ci-dessous.
+
+```console
+  Statistics ID 
+------------------
+ ULKQiqgUlGbTJWhO
+(1 row)
+```
+
+Vous pouvez ensuite utiliser l’identifiant de statistiques renvoyé pour rechercher les statistiques calculées avec la variable `SHOW STATISTICS` .
+
+```sql
+SHOW STATISTICS FOR <statistics_ID>
+```
+
+>[!NOTE]
+>
+>`COMPUTE STATISTICS` ne prend pas en charge les types de données de tableau ou de mappage. Vous pouvez définir une `skip_stats_for_complex_datatypes` Indicateur à avertir ou à exclure si le cadre de données d’entrée comporte des colonnes avec des tableaux et des types de données de mappage. Par défaut, l’indicateur est défini sur true. Pour activer les notifications ou les erreurs, utilisez la commande suivante : `SET skip_stats_for_complex_datatypes = false`.
+
+Voir [documentation sur les statistiques des jeux de données](../essential-concepts/dataset-statistics.md) pour plus d’informations.
+
+#### TABLESAMPLE {#tablesample}
+
+Adobe Experience Platform Query Service fournit des échantillons de jeux de données dans le cadre de ses fonctionnalités approximatives de traitement des requêtes.
+Il est préférable d’utiliser des exemples de jeux de données lorsque vous n’avez pas besoin d’une réponse exacte pour une opération d’agrégat sur un jeu de données. Cette fonctionnalité vous permet de lancer des requêtes exploratoires plus efficaces sur des jeux de données volumineux en émettant une requête approximative pour renvoyer une réponse approximative.
+
+Des exemples de jeux de données sont créés avec des exemples aléatoires uniformes issus de [!DNL Azure Data Lake Storage] Jeux de données (ADLS), utilisant uniquement un pourcentage d’enregistrements de l’original. L’exemple de fonction de jeu de données étend la fonction `ANALYZE TABLE` avec la commande `TABLESAMPLE` et `SAMPLERATE` Commandes SQL.
+
+Dans les exemples ci-dessous, la première ligne montre comment calculer un échantillon de 5 % du tableau. La deuxième ligne montre comment calculer un échantillon de 5 % à partir d’une vue filtrée des données du tableau.
+
+**exemple**
+
+```sql {line-numbers="true"}
+ANALYZE TABLE tableName TABLESAMPLE SAMPLERATE 5;
+ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-01-01')) TABLESAMPLE SAMPLERATE 5:
+```
+
+Voir [documentation sur les exemples de jeux de données](../essential-concepts/dataset-samples.md) pour plus d’informations.
 
 ### BEGIN
 

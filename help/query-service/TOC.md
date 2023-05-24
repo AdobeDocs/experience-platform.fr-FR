@@ -4,10 +4,10 @@ user-guide-title: Aide d’Adobe Experience Platform Query Service
 breadcrumb-title: Guide de Query Service
 user-guide-description: Utilisez le langage SQL standard pour interroger les données du lac de données dans Experience Platform.
 feature: Queries
-source-git-commit: adf8da46d09c60b86df16493043efeacbdd24fe2
+source-git-commit: a2b4ddae00ecdf33a12119810eca1ed19ace0c2f
 workflow-type: tm+mt
-source-wordcount: '270'
-ht-degree: 100%
+source-wordcount: '273'
+ht-degree: 98%
 
 ---
 
@@ -89,6 +89,7 @@ ht-degree: 100%
    - [Chargement incrémentiel](essential-concepts/incremental-load.md)
    - [Dédoublonnage des données](essential-concepts/deduplication.md)
    - [Échantillon de jeux de données](essential-concepts/dataset-samples.md)
+   - [Calcul des statistiques des jeux de données](essential-concepts/dataset-statistics.md)
 - Référence SQL {#sql}
    - [Présentation de SQL](sql/overview.md)
    - [Syntaxe SQL](sql/syntax.md)
