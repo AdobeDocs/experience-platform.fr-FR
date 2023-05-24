@@ -100,7 +100,7 @@ Les exemples de requêtes suivants incluent des exemples de SQL pouvant être ut
 
 ### Nombre de profils par identité
 
-Cet aperçu du profil fournit une ventilation des identités pour tous les profils fusionnés du jeu de données.
+Cet aperçu du profil fournit une répartition des identités pour tous les profils fusionnés du jeu de données.
 
 >[!NOTE]
 >

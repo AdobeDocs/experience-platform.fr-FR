@@ -3,7 +3,7 @@ keywords: Experience Platform;optimisation;modèle;Data Science Workspace;rubriq
 solution: Experience Platform
 title: Optimisation d’un modèle à l’aide de Model Insights Framework
 type: Tutorial
-description: Model Insights Framework fournit aux analystes de données des outils dans l’espace de travail de science des données pour prendre des décisions rapides et éclairées afin d’optimiser les modèles d’apprentissage automatique basés sur des expériences.
+description: Model Insights Framework fournit aux analystes de données des outils dans l’espace de travail de science des données pour prendre des décisions rapides et éclairées afin d’optimiser les modèles de machine learning basés sur des expériences.
 exl-id: f989a3f1-6322-47c6-b7d6-6a828766053f
 source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
@@ -14,7 +14,7 @@ ht-degree: 88%
 
 # Optimisation d’un modèle à l’aide de la structure Model Insights
 
-Model Insights Framework fournit aux analystes de données des outils dans [!DNL Data Science Workspace] pour faire des choix rapides et éclairés pour des modèles d’apprentissage automatique optimaux basés sur des expériences. Le framework améliorera la vitesse et l’efficacité du processus d’apprentissage automatique et la facilité d’utilisation pour les analystes de données. Pour ce faire, un modèle par défaut est fourni pour chaque type d’algorithme d’apprentissage automatique afin de faciliter le réglage des modèles. Le résultat final permet aux analystes de données et aux analystes de données citoyens de prendre de meilleures décisions d’optimisation des modèles pour leurs clients finaux.
+Model Insights Framework fournit aux analystes de données des outils dans [!DNL Data Science Workspace] pour faire des choix rapides et éclairés pour des modèles d’apprentissage automatique optimaux basés sur des expériences. Le framework améliorera la vitesse et l’efficacité du processus de machine learning et la facilité d’utilisation pour les analystes de données. Pour ce faire, un modèle par défaut est fourni pour chaque type d’algorithme de machine learning afin de faciliter le réglage des modèles. Le résultat final permet aux analystes de données et aux analystes de données citoyens de prendre de meilleures décisions d’optimisation des modèles pour leurs clients finaux.
 
 ## Que sont les mesures ?
 
@@ -152,11 +152,11 @@ L’objectif principal de `applicationEvaluator` consiste à renvoyer un objet J
 - Préparation des données/conception des fonctionnalités
 - Récupération du modèle enregistré et évaluation
 
-Les données sont d’abord chargées dans un jeu de données à partir d’une source, comme défini dans [retail.config.json](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/R/Retail%20-%20GradientBoosting/retail.config.json). Ensuite, les données sont nettoyées et conçues pour s’adapter au modèle d’apprentissage automatique. Enfin, le modèle est utilisé pour effectuer une prévision à l’aide du jeu de données et des mesures sont calculées à partir des valeurs prédites et des valeurs réelles. Dans ce cas, MAPE, MAE et RMSE sont définis et renvoyés dans l’objet `metrics`.
+Les données sont d’abord chargées dans un jeu de données à partir d’une source, comme défini dans [retail.config.json](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/R/Retail%20-%20GradientBoosting/retail.config.json). Ensuite, les données sont nettoyées et conçues pour s’adapter au modèle de machine learning. Enfin, le modèle est utilisé pour effectuer une prévision à l’aide du jeu de données et des mesures sont calculées à partir des valeurs prédites et des valeurs réelles. Dans ce cas, MAPE, MAE et RMSE sont définis et renvoyés dans l’objet `metrics`.
 
 ## Utilisation de mesures préconfigurées et de graphiques de visualisation
 
-Le [!DNL Sensei Model Insights Framework] prend en charge un modèle par défaut pour chaque type d’algorithme d’apprentissage automatique. Le tableau ci-dessous présente les classes d’algorithme d’apprentissage automatique de haut niveau courantes et les mesures d’évaluation et visualisations correspondantes.
+Le [!DNL Sensei Model Insights Framework] prend en charge un modèle par défaut pour chaque type d’algorithme d’apprentissage automatique. Le tableau ci-dessous présente les classes d’algorithme de machine learning de haut niveau courantes et les mesures d’évaluation et visualisations correspondantes.
 
 | Type d’algorithme de ML | Mesures d’évaluation | Visualisations |
 | --- | --- | --- |

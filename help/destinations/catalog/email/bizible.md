@@ -10,7 +10,7 @@ ht-degree: 60%
 
 ---
 
-# [!DNL Bizible] Extension {#bizible-extension}
+# Extension [!DNL Bizible] {#bizible-extension}
 
 ## Présentation {#overview}
 

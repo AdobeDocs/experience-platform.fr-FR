@@ -10,7 +10,7 @@ ht-degree: 87%
 
 ---
 
-# [!DNL Marketo] Extension {#marketo-extension}
+# Extension [!DNL Marketo] {#marketo-extension}
 
 ## Présentation {#overview}
 

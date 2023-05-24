@@ -10,7 +10,7 @@ ht-degree: 83%
 
 ---
 
-# [!DNL PebblePost] Extension {#pebblepost-extension}
+# Extension [!DNL PebblePost] {#pebblepost-extension}
 
 ## Présentation {#overview}
 

@@ -23,7 +23,7 @@ Ce document fournit un aperçu et des exemples détaillés des requêtes de filt
 
 Dans le cadre de ce processus, vous devez entraîner un modèle d’apprentissage automatique. Ce document suppose une connaissance pratique d’un ou de plusieurs environnements d’apprentissage automatique.
 
-Cet exemple utilise [!DNL Jupyter Notebook] en tant qu’environnement de développement. Bien qu’il existe de nombreuses options disponibles, [!DNL Jupyter Notebook] est recommandé, car il s’agit d’une application web open source qui a de faibles exigences de calcul. Cela peut être [téléchargé sur le site officiel](https://jupyter.org/).
+Cet exemple utilise [!DNL Jupyter Notebook] comme environnement de développement. Bien qu’il existe de nombreuses options disponibles, [!DNL Jupyter Notebook] est recommandé, car il s’agit d’une application web open source qui a de faibles exigences de calcul. Cela peut être [téléchargé sur le site officiel](https://jupyter.org/).
 
 ## Utilisation [!DNL Query Service] pour définir un seuil pour une activité de robot
 

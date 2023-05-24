@@ -129,7 +129,7 @@ Pour plus d’informations, consultez la [vue d’ensemble du profil client en t
 
 ### Espace de travail de science des données
 
-L’espace de travail de science des données d’Adobe Experience Platform utilise l’apprentissage automatique et l’intelligence artificielle pour obtenir des informations à partir des données stockées dans Experience Platform. L’espace de travail de science des données permet aux spécialistes des données de créer des recettes basées sur des données [!UICONTROL XDM Individual Profile] et [!UICONTROL XDM ExperienceEvent] concernant les clients et leurs activités, ce qui facilite les prédictions telles que la propension d’achat et les offres recommandées que l’individu est susceptible d’apprécier et de saisir.
+L’espace de travail de science des données d’Adobe Experience Platform utilise le machine learning et l’intelligence artificielle pour obtenir des informations à partir des données stockées dans Experience Platform. L’espace de travail de science des données permet aux spécialistes des données de créer des recettes basées sur des données [!UICONTROL XDM Individual Profile] et [!UICONTROL XDM ExperienceEvent] concernant les clients et leurs activités, ce qui facilite les prédictions telles que la propension d’achat et les offres recommandées que l’individu est susceptible d’apprécier et de saisir.
 
 Avec l’espace de travail de science des données, les spécialistes des données peuvent facilement créer des API de service intelligents optimisés par le machine learning. Ces services fonctionnent avec d’autres solutions Adobe, y compris Adobe Target et Adobe Analytics Cloud, pour vous aider à automatiser les expériences digitales ciblées et personnalisées.
 

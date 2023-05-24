@@ -125,7 +125,7 @@ XDM est une spécification Open Source qui fournit des structures et des défini
 | Groupe de champs | [[!UICONTROL Attributs calculés du profil XDM]](https://github.com/adobe/xdm/pull/1686/files) | Cela permet d’ajouter des attributs calculés à partir des services Adobe internes aux données client entrantes. Les clients ne doivent pas l’utiliser pour ingérer des données. |
 | Type de données | [[!UICONTROL Article de remboursement]](https://github.com/adobe/xdm/pull/1685/files) | Indique si un remboursement est associé à une commande et définit le type de remboursement, le montant et la devise associée. |
 | Type de données | [[!UICONTROL Données de catégorie]](https://github.com/adobe/xdm/pull/1677/files) | Ce nouveau type de données représente la catégorie d’un produit. |
-| Schéma | [[!UICONTROL Champs de classification Adobe Target]](https://github.com/adobe/xdm/pull/1682/files) | Un nouveau schéma XDM a été créé pour les jeux de données de classification cible. Il contient un ensemble de champs de métadonnées qui classent les activités et les expériences Target. |
+| Schéma | [[!UICONTROL Champs de classification Adobe Target]](https://github.com/adobe/xdm/pull/1682/files) | Un nouveau schéma XDM a été créé pour les jeux de données de classification cible. Il contient un ensemble de champs de métadonnées qui classent les activités et les expériences Target. |
 
 {style="table-layout:auto"}
 

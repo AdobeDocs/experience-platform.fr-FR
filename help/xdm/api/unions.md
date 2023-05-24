@@ -27,7 +27,7 @@ Un schéma d’union `identityMap` est une représentation des identités connue
 
 ### Événements de série temporelle
 
-Le tableau `timeSeriesEvents` est une liste d’événements de série temporelle liés aux schémas d’enregistrement associés à l’union. Lorsque les données de profil sont exportées vers des jeux de données, ce tableau est inclus pour chaque enregistrement. Ceci est utile pour divers cas d’utilisation, tels que l’apprentissage automatique où les modèles ont besoin de l’historique complet du comportement d’un profil en plus de ses attributs d’enregistrement.
+Le tableau `timeSeriesEvents` est une liste d’événements de série temporelle liés aux schémas d’enregistrement associés à l’union. Lorsque les données de profil sont exportées vers des jeux de données, ce tableau est inclus pour chaque enregistrement. Ceci est utile pour divers cas d’utilisation, tels que le machine learning où les modèles ont besoin de l’historique complet du comportement d’un profil en plus de ses attributs d’enregistrement.
 
 ### Mappage de l’adhésion aux segments
 

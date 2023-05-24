@@ -10,7 +10,7 @@ ht-degree: 92%
 
 ---
 
-# [!DNL Nielsen BSDK] Extension {#nielsen-bsdk-extension}
+# Extension [!DNL Nielsen BSDK] {#nielsen-bsdk-extension}
 
 ## Présentation {#overview}
 

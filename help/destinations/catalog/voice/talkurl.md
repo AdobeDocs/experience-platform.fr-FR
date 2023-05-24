@@ -10,9 +10,9 @@ ht-degree: 89%
 
 ---
 
-# [!DNL Talk URL Inbox] Extension {#talk-url-extension}
+# Extension [!DNL Talk URL Inbox] {#talk-url-extension}
 
-Recevez des messages vocaux de la part des visiteurs de votre page web. Inclut l’interface utilisateur hébergée et l’apprentissage automatique dans le cloud pour transcrire instantanément vos messages vocaux en insights textuels.
+Recevez des messages vocaux de la part des visiteurs de votre page web. Inclut l’interface utilisateur hébergée et le machine learning dans le cloud pour transcrire instantanément vos messages vocaux en insights textuels.
 
 [!DNL Talk URL Inbox] est une voix de l’extension client dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100583.html).
 

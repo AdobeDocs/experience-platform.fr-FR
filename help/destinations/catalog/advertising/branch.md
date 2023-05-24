@@ -10,7 +10,7 @@ ht-degree: 93%
 
 ---
 
-# [!DNL Branch] Extension {#branch-extension}
+# Extension [!DNL Branch] {#branch-extension}
 
 ## Présentation {#overview}
 

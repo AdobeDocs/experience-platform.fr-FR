@@ -2,7 +2,7 @@
 keywords: email;E-mail;e-mail;destinations d’email
 title: Présentation des destinations du marketing par e-mail
 type: Tutorial
-description: Les fournisseurs de service de messagerie électronique (ESP, Email Service Providers) vous permettent de gérer vos activités de marketing par e-mail, comme l’envoi de campagnes promotionnelles par e-mail. Découvrez quels ESP sont pris en charge en tant que destinations Experience Platform.
+description: Les fournisseurs de service e-mail (ESP, Email Service Providers) vous permettent de gérer vos activités de marketing par e-mail, comme l’envoi de campagnes par e-mail promotionnelles. Découvrez quels ESP sont pris en charge en tant que destinations Experience Platform.
 exl-id: e07f8c5a-0424-4de5-810f-3d5711ef4606
 source-git-commit: 29c02cf977863a348252f9a8b40b3b6ec8a83a9c
 workflow-type: tm+mt
@@ -15,7 +15,7 @@ ht-degree: 77%
 
 ## Présentation {#overview}
 
-Les fournisseurs de service de messagerie électronique (ESP, Email Service Providers) vous permettent de gérer vos activités de marketing par e-mail, comme l’envoi de campagnes promotionnelles par e-mail. Adobe Experience Platform s’intègre aux ESP en vous permettant d’activer des segments vers des destinations de marketing par e-mail.
+Les fournisseurs de service e-mail (ESP, Email Service Providers) vous permettent de gérer vos activités de marketing par e-mail, comme l’envoi de campagnes par e-mail promotionnelles. Adobe Experience Platform s’intègre aux ESP en vous permettant d’activer des segments vers des destinations de marketing par e-mail.
 
 ## Destinations de marketing par e-mail prises en charge {#supported-destinations}
 

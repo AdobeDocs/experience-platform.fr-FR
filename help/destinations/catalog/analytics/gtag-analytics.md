@@ -10,7 +10,7 @@ ht-degree: 89%
 
 ---
 
-# [!DNL Google Global Site Tag] Extension {#gtag-analytics-extension}
+# Extension [!DNL Google Global Site Tag] {#gtag-analytics-extension}
 
 ## Présentation {#overview}
 

@@ -10,7 +10,7 @@ ht-degree: 86%
 
 ---
 
-# [!DNL Facebook Pixel] Extension {#facebook-pixel-extension}
+# Extension [!DNL Facebook Pixel] {#facebook-pixel-extension}
 
 ## Présentation {#overview}
 

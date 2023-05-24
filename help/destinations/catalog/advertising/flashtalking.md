@@ -10,7 +10,7 @@ ht-degree: 86%
 
 ---
 
-# [!DNL Flashtalking OneTag] Extension {#flashtalking-extension}
+# Extension [!DNL Flashtalking OneTag] {#flashtalking-extension}
 
 ## Présentation {#overview}
 

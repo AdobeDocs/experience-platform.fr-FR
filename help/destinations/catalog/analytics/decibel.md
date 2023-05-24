@@ -10,7 +10,7 @@ ht-degree: 92%
 
 ---
 
-# [!DNL Decibel] Extension {#decibel-extension}
+# Extension [!DNL Decibel] {#decibel-extension}
 
 ## Présentation {#overview}
 

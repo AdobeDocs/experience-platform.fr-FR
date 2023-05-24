@@ -10,7 +10,7 @@ ht-degree: 87%
 
 ---
 
-# [!DNL Quantum Metric] Extension {#quantum-metric-extension}
+# Extension [!DNL Quantum Metric] {#quantum-metric-extension}
 
 ## Présentation {#overview}
 

@@ -10,7 +10,7 @@ ht-degree: 84%
 
 ---
 
-# [!DNL Marketo Web Personalization] Extension {#marketo-web-personalization-extension}
+# Extension [!DNL Marketo Web Personalization] {#marketo-web-personalization-extension}
 
 ## Présentation {#overview}
 

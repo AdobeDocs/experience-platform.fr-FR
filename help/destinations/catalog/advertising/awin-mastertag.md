@@ -10,7 +10,7 @@ ht-degree: 64%
 
 ---
 
-# [!DNL Awin Advertiser Mastertag] Extension {#awin-mastertag-extension}
+# Extension [!DNL Awin Advertiser Mastertag] {#awin-mastertag-extension}
 
 ## Présentation {#overview}
 

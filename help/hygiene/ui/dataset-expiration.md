@@ -54,7 +54,7 @@ Ensuite, sous **[!UICONTROL Détails du jeu de données]**, sélectionnez l’ic
 ![Image illustrant un jeu de données sélectionné](../images/ui/ttl/select-dataset.png)
 
 >[!NOTE]
->Seuls les jeux de données appartenant au sandbox actuel s’affichent.
+Seuls les jeux de données appartenant au sandbox actuel s’affichent.
 
 ### Envoyer la requête
 
@@ -67,7 +67,7 @@ Vous êtes invité à confirmer la date à laquelle le jeu de données sera supp
 Une fois la requête soumise, un ordre de travail est créé et s’affiche dans l’onglet principal de l’espace de travail [!UICONTROL Nettoyage de données]. Ensuite, vous pouvez surveiller le statut de l’ordre de travail lors du traitement de la requête.
 
 >[!NOTE]
->Consultez la section de présentation sur [la chronologie et la transparence](../home.md#dataset-expiration-transparency) pour plus d’informations sur le traitement des expirations des jeux de données une fois qu’elles sont exécutées.
+Consultez la section de présentation sur [la chronologie et la transparence](../home.md#dataset-expiration-transparency) pour plus d’informations sur le traitement des expirations des jeux de données une fois qu’elles sont exécutées.
 
 ## Modifier ou annuler l’expiration d’un jeu de données
 

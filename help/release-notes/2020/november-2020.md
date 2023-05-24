@@ -129,7 +129,7 @@ Pour plus d’informations, reportez-vous à la [présentation des destinations]
 
 ## Intelligent Services {#intelligent-services}
 
-Intelligent Services permet aux analystes et spécialistes du marketing d’exploiter la puissance de l’intelligence artificielle et de l’apprentissage automatique dans les cas d’utilisation de l’expérience client. Les analystes marketing peuvent obtenir des prédictions spécifiques aux besoins d&#39;une entreprise en utilisant des configurations au niveau de l&#39;entreprise sans avoir besoin d&#39;expertise en sciences des données.
+Intelligent Services permet aux analystes et spécialistes du marketing d’exploiter la puissance de l’intelligence artificielle et du machine learning dans les cas d’utilisation de l’expérience client. Les analystes marketing peuvent obtenir des prédictions spécifiques aux besoins d&#39;une entreprise en utilisant des configurations au niveau de l&#39;entreprise sans avoir besoin d&#39;expertise en sciences des données.
 
 **Fonctionnalités clés**
 

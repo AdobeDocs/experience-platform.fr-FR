@@ -10,7 +10,7 @@ ht-degree: 92%
 
 ---
 
-# [!DNL Foresee] Extension {#foresee-extension}
+# Extension [!DNL Foresee] {#foresee-extension}
 
 ## Présentation {#overview}
 

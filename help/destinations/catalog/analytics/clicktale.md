@@ -10,7 +10,7 @@ ht-degree: 90%
 
 ---
 
-# [!DNL Clicktale] Extension {#clicktale-extension}
+# Extension [!DNL Clicktale] {#clicktale-extension}
 
 ## Présentation {#overview}
 

@@ -211,7 +211,7 @@ ext_custom_audience_id | destination_name |       segment_name        | destinat
 
 Maintenant que vous avez créé votre modèle de données personnalisé, vous êtes prêt à visualiser vos données à l’aide de requêtes personnalisées et de tableaux de bord définis par l’utilisateur.
 
-Le code SQL suivant fournit une ventilation du nombre de correspondances par audiences dans une destination et une ventilation de chaque destination d’audiences par segment.
+Le code SQL suivant fournit une répartition du nombre de correspondances par audiences dans une destination et une répartition de chaque destination d’audiences par segment.
 
 ```sql
 SELECT b.destination_name,

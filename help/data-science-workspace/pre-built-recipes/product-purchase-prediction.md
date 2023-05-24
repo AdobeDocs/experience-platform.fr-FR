@@ -27,7 +27,7 @@ Votre marque cherche à augmenter les ventes trimestrielles de votre gamme de pr
 
 ## Comment fonctionne cette recette ?
 
-La recette de prédiction d’achat de produit utilise l’apprentissage automatique pour prédire le comportement d’achat des clients. Pour ce faire, elle applique une forêt aléatoire personnalisée et un modèle de données d’expérience (XDM) à deux niveaux, afin de prévoir la probabilité d’un événement d’achat. Le modèle utilise des données d’entrée incorporant des informations sur les profils clients et l’historique des achats. Il utilise par défaut des paramètres de configuration prédéterminés par nos spécialistes des données afin d’améliorer la précision des prédictions.
+La recette de prédiction d’achat de produit utilise le machine learning pour prédire le comportement d’achat des clients. Pour ce faire, elle applique une forêt aléatoire personnalisée et un modèle de données d’expérience (XDM) à deux niveaux, afin de prévoir la probabilité d’un événement d’achat. Le modèle utilise des données d’entrée incorporant des informations sur les profils clients et l’historique des achats. Il utilise par défaut des paramètres de configuration prédéterminés par nos spécialistes des données afin d’améliorer la précision des prédictions.
 
 ## Schéma des données
 

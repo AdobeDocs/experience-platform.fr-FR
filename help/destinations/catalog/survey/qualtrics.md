@@ -10,7 +10,7 @@ ht-degree: 86%
 
 ---
 
-# [!DNL Qualtrics Website Feedback] Extension {#qualtrics-extension}
+# Extension [!DNL Qualtrics Website Feedback] {#qualtrics-extension}
 
 ## Présentation {#overview}
 

@@ -1371,7 +1371,7 @@ La réponse est une liste filtrée de schémas, contenant uniquement ceux qui r�
 
 ## Étapes suivantes
 
-En suivant ce tutoriel, vous avez réussi à composer un schéma à l’aide des groupes de champs standard et d’un groupe de champs que vous avez défini. Vous pouvez maintenant utiliser ce schéma pour créer un ensemble de données et ingérer des données d’enregistrement dans Adobe Experience Platform.
+En suivant ce tutoriel, vous avez réussi à composer un schéma à l’aide des groupes de champs standard et d’un groupe de champs que vous avez défini. Vous pouvez maintenant utiliser ce schéma pour créer un jeu de données et ingérer des données d’enregistrement dans Adobe Experience Platform.
 
 L’intégralité du schéma Loyalty Members, tel que créé tout au long de ce tutoriel, est disponible dans l’annexe suivante. En examinant le schéma, vous pouvez voir comment les groupes de champs contribuent à la structure globale et quels champs sont disponibles pour l’ingestion des données.
 

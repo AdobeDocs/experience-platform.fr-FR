@@ -26,7 +26,7 @@ ht-degree: 100%
    * [Analyse exploratoire des données (AED)](jupyterlab/eda-notebook.md)
    * [Création d’un modèle à l’aide du créateur de recettes](jupyterlab/create-a-model.md)
    * [Collaboration dans JupyterLab à l’aide de Git](jupyterlab/using-git-for-collaboration.md)
-* API Sensei Machine Learning {#api}
+* API Sensei Machine Learning {#api}
    * [Prise en main](api/getting-started.md)
    * [Moteurs](api/engines.md)
    * [MLInstances (recettes)](api/mlinstances.md)

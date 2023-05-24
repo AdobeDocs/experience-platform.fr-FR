@@ -10,7 +10,7 @@ ht-degree: 83%
 
 ---
 
-# [!DNL Twitter Universal Website Tag] Extension {#twitter-uwt-extension}
+# Extension [!DNL Twitter Universal Website Tag] {#twitter-uwt-extension}
 
 ## Présentation {#overview}
 

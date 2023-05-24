@@ -10,11 +10,11 @@ ht-degree: 71%
 
 ---
 
-# [!DNL Beemray] Extension {#beemray-extension}
+# Extension [!DNL Beemray] {#beemray-extension}
 
 ## Présentation {#overview}
 
-[!DNL Beemray] permet d’accélérer votre produit dans un contexte situationnel. Elle permet d’obtenir des informations, de créer de nouvelles expériences, de favoriser les interactions et de vous impliquer dans les moments importants. Beemray automatise l’intelligence contextuelle à l’aide de l’apprentissage automatique. Beemray se connecte à Adobe Experience Cloud et au reste de vos partenaires technologiques. Tout se passe en temps réel. Cette extension installe [!DNL Beemray] SDK sur votre site.
+[!DNL Beemray] permet d’accélérer votre produit dans un contexte situationnel. Elle permet d’obtenir des informations, de créer de nouvelles expériences, de favoriser les interactions et de vous impliquer dans les moments importants. Beemray automatise l’intelligence contextuelle à l’aide du machine learning. Beemray se connecte à Adobe Experience Cloud et au reste de vos partenaires technologiques. Tout se passe en temps réel. Cette extension installe [!DNL Beemray] SDK sur votre site.
 
 Beemray est une extension de personnalisation de Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101063.beemray-human-context.html).
 

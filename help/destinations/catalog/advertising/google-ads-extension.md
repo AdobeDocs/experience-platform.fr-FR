@@ -10,7 +10,7 @@ ht-degree: 85%
 
 ---
 
-# [!DNL Google Ads] Extension
+# Extension [!DNL Google Ads]
 
 ## Présentation {#overview}
 

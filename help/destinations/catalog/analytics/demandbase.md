@@ -10,7 +10,7 @@ ht-degree: 86%
 
 ---
 
-# [!DNL Demandbase] Extension {#demandbase-extension}
+# Extension [!DNL Demandbase] {#demandbase-extension}
 
 ## Présentation {#overview}
 

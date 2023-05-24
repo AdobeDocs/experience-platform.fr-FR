@@ -10,7 +10,7 @@ ht-degree: 84%
 
 ---
 
-# [!DNL Marketo Munchkin] Extension {#marketo-munchkin-extension}
+# Extension [!DNL Marketo Munchkin] {#marketo-munchkin-extension}
 
 ## Présentation {#overview}
 

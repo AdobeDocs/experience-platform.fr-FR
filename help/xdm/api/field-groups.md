@@ -128,7 +128,7 @@ GET /{CONTAINER_ID}/fieldgroups/{FIELD_GROUP_ID}
 
 **Requête**
 
-La requête suivante récupère un groupe de champs à l’aide de `meta:altId` valeur fournie dans le chemin.
+La requête suivante récupère un groupe de champs selon ses `meta:altId` valeur fournie dans le chemin.
 
 ```shell
 curl -X GET \

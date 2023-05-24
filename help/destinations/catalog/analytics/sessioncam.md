@@ -10,7 +10,7 @@ ht-degree: 94%
 
 ---
 
-# [!DNL SessionCam] Extension {#sessioncam-extension}
+# Extension [!DNL SessionCam] {#sessioncam-extension}
 
 ## Présentation {#overview}
 

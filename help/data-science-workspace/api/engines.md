@@ -2,7 +2,7 @@
 keywords: Experience Platform;guide de développement;point de terminaison;Data Science Workspace;rubriques les plus consultées;moteurs;api d’apprentissage automatique sensei
 solution: Experience Platform
 title: Point de terminaison de l’API Moteurs
-description: Les moteurs sont le fondement des modèles d’apprentissage automatique dans l’espace de travail de science des données. Ils contiennent des algorithmes d’apprentissage automatique qui permettent de résoudre des problèmes spécifiques, des pipelines de fonctionnalités permettant de concevoir des fonctionnalités, ou les deux.
+description: Les moteurs sont le fondement des modèles de machine learning dans l’espace de travail de science des données. Ils contiennent des algorithmes de machine learning qui permettent de résoudre des problèmes spécifiques, des pipelines de fonctionnalités permettant de concevoir des fonctionnalités, ou les deux.
 exl-id: 7c670abd-636c-47d8-bd8c-5ce0965ce82f
 source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
@@ -13,7 +13,7 @@ ht-degree: 69%
 
 # Point de terminaison des moteurs
 
-Les moteurs sont le fondement des modèles d’apprentissage automatique dans l’espace de travail de science des données. Ils contiennent des algorithmes d’apprentissage automatique qui permettent de résoudre des problèmes spécifiques, des pipelines de fonctionnalités permettant de concevoir des fonctionnalités, ou les deux.
+Les moteurs sont le fondement des modèles de machine learning dans l’espace de travail de science des données. Ils contiennent des algorithmes de machine learning qui permettent de résoudre des problèmes spécifiques, des pipelines de fonctionnalités permettant de concevoir des fonctionnalités, ou les deux.
 
 ## Recherche de votre registre Docker
 
@@ -97,7 +97,7 @@ curl -X POST \
 | `name` | Nom souhaité pour le moteur. La recette correspondant à ce moteur héritera de cette valeur afin d’être affichée dans l’interface utilisateur en tant que nom de la recette. |
 | `description` | Description facultative du moteur. La recette correspondant à ce moteur héritera de cette valeur afin d’être affichée dans l’interface utilisateur en tant que description de la recette. Cette propriété est obligatoire. Si vous ne souhaitez pas fournir de description, définissez sa valeur comme étant une chaîne vide. |
 | `type` | Type d’exécution du moteur. Cette valeur correspond au langage dans lequel l’image Docker est conçue, et peut être soit « Python », « R » ou « Tensorflow ». |
-| `algorithm` | Chaîne spécifiant le type d’algorithme d’apprentissage automatique. Les types d’algorithmes pris en charge comprennent la « Classification », la « Régression » ou la « Personnalisation ». |
+| `algorithm` | Chaîne spécifiant le type d’algorithme de machine learning. Les types d’algorithmes pris en charge comprennent la « Classification », la « Régression » ou la « Personnalisation ». |
 | `artifacts.default.image.location` | Emplacement de l’image Docker à laquelle est liée une URL Docker. |
 | `artifacts.default.image.executionType` | Type d’exécution du moteur. Cette valeur correspond au langage dans lequel l’image Docker est conçue, et peut être soit « Python », « R » ou « Tensorflow ». |
 

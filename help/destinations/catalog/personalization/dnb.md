@@ -10,7 +10,7 @@ ht-degree: 92%
 
 ---
 
-# [!DNL D&B Visitor Intelligence] Extension {#dnb-extension}
+# Extension [!DNL D&B Visitor Intelligence] {#dnb-extension}
 
 ## Présentation {#overview}
 

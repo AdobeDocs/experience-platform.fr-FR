@@ -95,4 +95,4 @@ Pour consulter l’ensemble des résultats de la notation, sélectionnez la vari
 
 ## Étapes suivantes
 
-Ce tutoriel vous a expliqué les étapes à suivre pour noter des données à l’aide d’un modèle formé dans [!DNL Data Science Workspace]. Suivez le tutoriel sur la [publication d’un modèle en tant que service dans l’interface utilisateur](./publish-model-service-ui.md) pour permettre aux utilisateurs de votre organisation de noter des données en leur fournissant un accès facile à un service d’apprentissage automatique.
+Ce tutoriel vous a expliqué les étapes à suivre pour noter des données à l’aide d’un modèle formé dans [!DNL Data Science Workspace]. Suivez le tutoriel sur la [publication d’un modèle en tant que service dans l’interface utilisateur](./publish-model-service-ui.md) pour permettre aux utilisateurs de votre organisation de noter des données en leur fournissant un accès facile à un service de machine learning.

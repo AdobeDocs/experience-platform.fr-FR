@@ -10,7 +10,7 @@ ht-degree: 92%
 
 ---
 
-# [!DNL Google Universal Analytics] Extension {#google-universal-analytics-extension}
+# Extension [!DNL Google Universal Analytics] {#google-universal-analytics-extension}
 
 ## Présentation {#overview}
 

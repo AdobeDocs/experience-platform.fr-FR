@@ -9,7 +9,7 @@ ht-degree: 94%
 
 ---
 
-# [!DNL Pinterest Conversion Tracking] Extension {#pinterest-extension}
+# Extension [!DNL Pinterest Conversion Tracking] {#pinterest-extension}
 
 ## Présentation {#overview}
 

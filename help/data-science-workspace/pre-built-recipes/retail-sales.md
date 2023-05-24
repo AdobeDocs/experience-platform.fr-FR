@@ -26,7 +26,7 @@ Un détaillant doit faire face à de nombreux défis pour rester compétitif sur
 
 ## Comment fonctionne cette recette ?
 
-La recette de prévision des ventes au détail se sert de l’apprentissage automatique pour prédire les tendances de vente. Pour ce faire, elle exploite la richesse des données historiques de vente au détail et développe l’algorithme d’apprentissage automatique personnalisé de variable libre de boosting de gradient pour prédire les ventes une semaine à l’avance. Le modèle se sert de l’historique des achats et utilise par défaut des paramètres de configuration prédéterminés par nos spécialistes des données afin d’améliorer la précision des prédictions.
+La recette de prévision des ventes au détail se sert du machine learning pour prédire les tendances de vente. Pour ce faire, elle exploite la richesse des données historiques de vente au détail et développe l’algorithme de machine learning personnalisé de variable libre de boosting de gradient pour prédire les ventes une semaine à l’avance. Le modèle se sert de l’historique des achats et utilise par défaut des paramètres de configuration prédéterminés par nos spécialistes des données afin d’améliorer la précision des prédictions.
 
 ## Comment démarrer ?
 

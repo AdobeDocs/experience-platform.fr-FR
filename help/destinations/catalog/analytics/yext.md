@@ -10,7 +10,7 @@ ht-degree: 89%
 
 ---
 
-# [!DNL Yext Conversion Tracking] Extension {#yext-extension}
+# Extension [!DNL Yext Conversion Tracking] {#yext-extension}
 
 ## Présentation {#overview}
 

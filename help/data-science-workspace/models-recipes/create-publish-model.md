@@ -13,7 +13,7 @@ ht-degree: 10%
 ---
 
 
-# Création et publication d’un modèle d’apprentissage automatique
+# Création et publication d’un modèle de machine learning
 
 Le guide suivant décrit les étapes requises pour créer et publier un modèle d’apprentissage automatique. Chaque section contient une description de ce que vous allez faire et un lien vers l’interface utilisateur et la documentation de l’API pour réaliser l’étape décrite.
 
@@ -45,7 +45,7 @@ Vous pouvez explorer plus en détail les données à l’aide du notebook d’an
 
 Un composant principal de la variable [!DNL Data Science Workspace] le cycle de vie implique la création de recettes et de modèles. Le modèle de propension de Luma est conçu pour générer une prédiction indiquant si les clients ont une forte propension à acheter un produit auprès de Luma.
 
-Pour créer le modèle de propension Luma, le modèle de créateur de recettes est utilisé. Les recettes sont la base d’un modèle, car elles contiennent des algorithmes d’apprentissage automatique et une logique conçue pour résoudre des problèmes spécifiques. Plus important encore, les recettes vous permettent de démocratiser l’apprentissage automatique au sein de votre organisation, en permettant à d’autres utilisateurs d’accéder à un modèle pour des cas d’utilisation variés sans devoir coder.
+Pour créer le modèle de propension Luma, le modèle de créateur de recettes est utilisé. Les recettes sont la base d’un modèle, car elles contiennent des algorithmes d’apprentissage automatique et une logique conçue pour résoudre des problèmes spécifiques. Plus important encore, les recettes vous permettent de démocratiser le machine learning au sein de votre organisation, en permettant à d’autres utilisateurs d’accéder à un modèle pour des cas d’utilisation variés sans devoir coder.
 
 Suivez la [créer un modèle à l’aide des notebooks JupyterLab ;](../jupyterlab/create-a-model.md) tutoriel pour créer la recette du modèle de propension Luma utilisée dans les tutoriels suivants.
 

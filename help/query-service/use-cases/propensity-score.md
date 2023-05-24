@@ -98,7 +98,7 @@ X = pd.DataFrame( np.concatenate((enc.transform(df_cat).toarray(),df[num_cols]),
 y = df['target']
 ```
 
-Les données définies comme `X` est tabularisé et s’affiche comme suit :
+Les données définies comme `X` est tabulé et s’affiche comme suit :
 
 ![Sortie tabularisée de X dans [!DNL Jupyter Notebook].](../images/use-cases/x-output-table.png)
 

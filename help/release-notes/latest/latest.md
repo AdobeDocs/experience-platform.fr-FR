@@ -3,7 +3,7 @@ title: Notes de mise à jour d’Adobe Experience Platform
 description: Les notes de mise à jour d’avril 2023 pour Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: e3fc587d924b2183806918f91e5ae3aa3fee52f3
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '2094'
 ht-degree: 100%
 

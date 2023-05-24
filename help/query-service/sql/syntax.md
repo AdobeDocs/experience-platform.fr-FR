@@ -526,7 +526,7 @@ L’exemple renvoie les éléments suivants :
 2  b Spark SQL
 ```
 
-Ce deuxième exemple illustre le concept et l&#39;application de la méthode `inline` fonction . Le modèle de données de l’exemple est illustré dans l’image ci-dessous.
+Ce deuxième exemple illustre le concept et l&#39;application de la `inline` fonction . Le modèle de données de l’exemple est illustré dans l’image ci-dessous.
 
 ![Schéma de productListItems.](../images/sql/productListItems.png)
 

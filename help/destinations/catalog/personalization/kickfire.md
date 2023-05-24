@@ -10,7 +10,7 @@ ht-degree: 85%
 
 ---
 
-# [!DNL KickFire] Extension {#kickfire-extension}
+# Extension [!DNL KickFire] {#kickfire-extension}
 
 ## Présentation {#overview}
 

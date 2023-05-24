@@ -130,7 +130,7 @@ Les données ne peuvent pas être utilisées pour mesurer, comprendre et génér
 
 #### C9 {#c9}
 
-Certains contrats prévoient des interdictions explicites sur l’utilisation des données pour la science des données. Parfois, elles sont formulées en des termes qui interdisent l’utilisation de données pour l’intelligence artificielle (AI), l’apprentissage automatique (ML) ou la modélisation.
+Certains contrats prévoient des interdictions explicites sur l’utilisation des données pour la science des données. Parfois, elles sont formulées en des termes qui interdisent l’utilisation de données pour l’intelligence artificielle (AI), le machine learning (ML) ou la modélisation.
 
 #### C10 {#c10}
 

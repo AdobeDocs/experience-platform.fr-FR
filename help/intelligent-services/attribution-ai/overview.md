@@ -21,7 +21,7 @@ Attribution AI, dans le cadre d’Intelligent Services, est un service d’attri
 
 Attribution AI est utilisé pour attribuer des crédits aux points de contact qui génèrent des événements de conversion. Il peut aider les spécialistes du marketing à quantifier l’impact publicitaire de chaque point de contact marketing sur le parcours client. Les impressions de publicités affichées, les envois de courriers électroniques, les ouvertures de courriers électroniques ainsi que les clics de référencement payants sont autant d’exemples de points de contact.
 
-Les résultats d’Attribution AI peuvent être répartis dans plusieurs dimensions et utilisés à différentes étapes du parcours client. Cette opération s’effectue sans qu’il soit nécessaire de transformer les besoins professionnels en problèmes d’apprentissage automatique, ou de choisir des modèles d’algorithmes, de formation ou de déploiement.
+Les résultats d’Attribution AI peuvent être répartis dans plusieurs dimensions et utilisés à différentes étapes du parcours client. Cette opération s’effectue sans qu’il soit nécessaire de transformer les besoins professionnels en problèmes de machine learning, ou de choisir des modèles d’algorithmes, de formation ou de déploiement.
 
 Les données Attribution AI peuvent provenir d’un Adobe (par exemple, [!DNL Analytics]) ou des sources de données non Adobes.
 

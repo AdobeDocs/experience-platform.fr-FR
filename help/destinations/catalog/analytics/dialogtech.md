@@ -10,7 +10,7 @@ ht-degree: 88%
 
 ---
 
-# [!DNL DialogTech] Extension {#dialogtech-extension}
+# Extension [!DNL DialogTech] {#dialogtech-extension}
 
 ## Présentation {#overview}
 

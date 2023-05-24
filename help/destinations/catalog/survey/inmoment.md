@@ -10,7 +10,7 @@ ht-degree: 90%
 
 ---
 
-# [!DNL InMoment] Extension {#inmoment-extension}
+# Extension [!DNL InMoment] {#inmoment-extension}
 
 ## Présentation {#overview}
 

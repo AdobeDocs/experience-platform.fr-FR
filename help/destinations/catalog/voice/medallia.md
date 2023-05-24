@@ -10,7 +10,7 @@ ht-degree: 85%
 
 ---
 
-# [!DNL Medallia] Extension {#medallia-extension}
+# Extension [!DNL Medallia] {#medallia-extension}
 
 ## Présentation {#overview}
 

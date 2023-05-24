@@ -10,7 +10,7 @@ ht-degree: 93%
 
 ---
 
-# [!DNL Gainsight] Extension {#gainsight-extension}
+# Extension [!DNL Gainsight] {#gainsight-extension}
 
 ## Présentation {#overview}
 

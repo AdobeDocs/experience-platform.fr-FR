@@ -10,7 +10,7 @@ ht-degree: 89%
 
 ---
 
-# [!DNL Nielsen VideoJS Player Handler] Extension {#nielsen-vjs-extension}
+# Extension [!DNL Nielsen VideoJS Player Handler] {#nielsen-vjs-extension}
 
 ## Présentation {#overview}
 

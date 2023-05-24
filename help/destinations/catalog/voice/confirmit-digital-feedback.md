@@ -10,7 +10,7 @@ ht-degree: 86%
 
 ---
 
-# [!DNL Confirmit Digital Feedback] Extension
+# Extension [!DNL Confirmit Digital Feedback]
 
 ## Présentation {#overview}
 

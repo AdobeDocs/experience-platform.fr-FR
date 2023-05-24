@@ -142,7 +142,7 @@ Supposons que votre schéma de profil XDM et votre [!DNL Braze] contiennent les 
 
 |  | Schéma de profil XDM | [!DNL Braze] Instance |
 |---|---|---|
-| Attributs | <ul><li>person.name.firstName</code></li><li>person.name.lastName</code></li><li>mobilePhone.number</code></li></ul> | <ul><li>FirstName</code></li><li>LastName</code></li><li>PhoneNumber</code></li></ul> |
+| Attributs | <ul><li>person.name.firstName</code></li><li>person.name.lastName</code></li><li>mobilePhone.number</code></li></ul> | <ul><li>Prénom</code></li><li>Nom de famille</code></li><li>PhoneNumber</code></li></ul> |
 | Identités | <ul><li>E-mail.</code></li><li>Google Ad ID (GAID)</code></li><li>Apple ID For Advertisers (IDFA)</code></li></ul> | <ul><li>external_id</code></li></ul> |
 
 Le mappage correct se présente comme suit :

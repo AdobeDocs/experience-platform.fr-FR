@@ -51,7 +51,7 @@ Utilisez le point d’entrée de l’API REST Prediction pour générer des insi
 
 ### Diffusion
 
-Les spécialistes marketing peuvent ensuite définir des segments et des règles qui mappent les scores de maching learning en temps réel aux expériences à l’aide d’Adobe Target. Les visiteurs et visiteuses du site web de votre marque peuvent ainsi afficher en temps réel une expérience hyper-personnalisée sur la même page ou la page suivante.
+Les spécialistes marketing peuvent ensuite définir des segments et des règles qui mappent les scores de machine learning en temps réel aux expériences à l’aide d’Adobe Target. Les visiteurs et visiteuses du site web de votre marque peuvent ainsi afficher en temps réel une expérience hyper-personnalisée sur la même page ou la page suivante.
 
 ## Fonctionnalités actuelles
 

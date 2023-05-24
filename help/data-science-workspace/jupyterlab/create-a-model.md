@@ -19,7 +19,7 @@ Ce tutoriel vous guide tout au long des étapes requises pour créer un modèle 
 ## Concepts présentés :
 
 - **Recettes :** Une recette est le terme utilisé par l’Adobe pour désigner une spécification de modèle. Il s’agit d’un conteneur de niveau supérieur qui représente un apprentissage automatique spécifique, un algorithme d’intelligence artificielle ou un ensemble d’algorithmes, une logique de traitement et la configuration nécessaires pour créer et exécuter un modèle formé.
-- **Modèle :** un modèle est une instance d’une recette d’apprentissage automatique formée à l’aide de données historiques et de configurations dans le but de résoudre un cas d’usage commercial.
+- **Modèle** : un modèle est une instance d’une recette de machine learning entraînée à l’aide de données historiques et de configurations dans le but de résoudre un cas d’usage commercial.
 - **Formation :** la formation est le processus de formation de modèles et de connaissances à partir de données étiquetées.
 - **Notation :** la notation est le processus de génération d’informations à partir de données en utilisant un modèle formé.
 
@@ -108,7 +108,7 @@ Par défaut, les paramètres de configuration suivants sont définis pour vous l
 
 ## Présentation du chargeur de données d’apprentissage {#training-data-loader}
 
-Le chargeur de données d’apprentissage est destiné à instancier les données utilisées pour créer le modèle d’apprentissage automatique. En règle générale, le chargeur de données d’apprentissage exécute deux tâches :
+Le chargeur de données d’apprentissage est destiné à instancier les données utilisées pour créer le modèle de machine learning. En règle générale, le chargeur de données d’apprentissage exécute deux tâches :
 
 - Charger des données depuis [!DNL Platform]
 - Préparation des données et ingénierie des fonctionnalités

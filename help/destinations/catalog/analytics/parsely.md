@@ -10,7 +10,7 @@ ht-degree: 92%
 
 ---
 
-# [!DNL Parse.ly Analytics] Extension {#parsely-analytics-extension}
+# Extension [!DNL Parse.ly Analytics] {#parsely-analytics-extension}
 
 ## Présentation {#overview}
 

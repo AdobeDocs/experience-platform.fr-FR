@@ -25,7 +25,7 @@ Avant de commencer, il est important de noter que Adobe Experience Platform [!DN
 | Formation et évaluation | [Expérience](../api/experiments.md) |
 | Service | [MLService](../api/mlservices.md) |
 
-Un moteur contient des algorithmes d’apprentissage automatique et une logique pour résoudre des problèmes spécifiques. Le diagramme ci-dessous fournit une visualisation montrant le workflow de l’API dans [!DNL Data Science Workspace]. Ce tutoriel se concentre sur la création d’un moteur, le cerveau d’un modèle d’apprentissage automatique.
+Un moteur contient des algorithmes de machine learning et une logique pour résoudre des problèmes spécifiques. Le diagramme ci-dessous fournit une visualisation montrant le workflow de l’API dans [!DNL Data Science Workspace]. Ce tutoriel se concentre sur la création d’un moteur, le cerveau d’un modèle de machine learning.
 
 ![](../images/models-recipes/import-package-api/engine_hierarchy_api.png)
 

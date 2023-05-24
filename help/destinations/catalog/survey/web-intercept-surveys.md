@@ -10,7 +10,7 @@ ht-degree: 88%
 
 ---
 
-# [!DNL QuestionPro Intercept Surveys] Extension {#questionpro-extension}
+# Extension [!DNL QuestionPro Intercept Surveys] {#questionpro-extension}
 
 ## Présentation {#overview}
 

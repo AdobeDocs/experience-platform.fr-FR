@@ -10,7 +10,7 @@ ht-degree: 84%
 
 ---
 
-# [!DNL TMMData] Extension {#tmmdata-extension}
+# Extension [!DNL TMMData] {#tmmdata-extension}
 
 ## Présentation {#overview}
 

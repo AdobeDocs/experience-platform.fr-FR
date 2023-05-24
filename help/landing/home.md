@@ -2,7 +2,7 @@
 keywords: Experience Platform;accueil;rubriques populaires;CJA;journey analytics;customer journey analytics;orchestration des campagnes;orchestration;parcours client;parcours;journey orchestration;fonctionnalité;région
 solution: Experience Platform
 title: Présentation d’Adobe Experience Platform
-description: Adobe Experience Platform permet aux entreprises de centraliser et de normaliser les données clients avant dʼappliquer la science des données et le machine learning afin dʼaméliorer considérablement la conception et la diffusion dʼexpériences riches et personnalisées.
+description: Adobe Experience Platform permet aux entreprises de centraliser et de normaliser les données clients avant dʼappliquer la science des données et le machine learning afin dʼaméliorer considérablement la conception et la diffusion dʼexpériences riches et personnalisées.
 exl-id: edcce353-338a-440e-99eb-a64e2abca579
 source-git-commit: 48e050718b665bc297f97bf1b90a6f4517dd3af5
 workflow-type: tm+mt
@@ -13,7 +13,7 @@ ht-degree: 100%
 
 # Présentation d’Adobe Experience Platform
 
-Adobe Experience Platform est l’un des meilleurs systèmes ouverts, flexibles et performants du marché permettant de créer et de gérer des solutions complètes qui optimisent l’expérience client. [!DNL Experience Platform] permet aux entreprises de centraliser et de normaliser les données et le contenu des clients à partir de n’importe quel système et d’appliquer la science des données et l’apprentissage automatique afin d’améliorer considérablement la conception et la diffusion d’expériences riches et personnalisées.
+Adobe Experience Platform est l’un des meilleurs systèmes ouverts, flexibles et performants du marché permettant de créer et de gérer des solutions complètes qui optimisent l’expérience client. [!DNL Experience Platform] permet aux entreprises de centraliser et de normaliser les données et le contenu des clients à partir de n’importe quel système et d’appliquer la science des données et le machine learning afin d’améliorer considérablement la conception et la diffusion d’expériences riches et personnalisées.
 
 Basée sur les API RESTful, [!DNL Experience Platform] propose lʼensemble des fonctionnalités du système aux développeurs, en facilitant lʼintégration des solutions dʼentreprise à lʼaide dʼoutils courants. [!DNL Experience Platform] permet également aux partenaires de créer et d’intégrer leurs propres produits et technologies, selon les besoins. La puissance et la flexibilité dʼ[!DNL Experience Platform] permettent à cet outil unique de se démarquer sur le marché. Les partenaires, les clients et la communauté des développeurs bénéficient ainsi d’une base sur laquelle développer les innovations essentielles de The Experience Business, visant à dépasser les attentes des clients en leur offrant une expérience entièrement personnalisée et constamment améliorée, basée sur une vision à 360 degrés du client et de ses préférences individuelles.
 

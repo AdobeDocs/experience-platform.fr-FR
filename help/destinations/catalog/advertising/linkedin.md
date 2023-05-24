@@ -10,7 +10,7 @@ ht-degree: 89%
 
 ---
 
-# [!DNL LinkedIn Insight Tag] Extension {#linkedin-insights-extension}
+# Extension [!DNL LinkedIn Insight Tag] {#linkedin-insights-extension}
 
 ## Présentation {#overview}
 

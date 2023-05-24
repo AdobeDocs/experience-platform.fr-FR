@@ -38,13 +38,13 @@ Le tableau suivant présente la terminologie courante utilisée dans ce tutoriel
 
 | Terme | Définition |
 | --- | --- |
-| **Instance d’apprentissage automatique (instance ML)** | Une instance d’une [!DNL Sensei] Moteur pour un client spécifique, contenant des données, des paramètres et des [!DNL Sensei] code. |
+| **Instance de machine learning (instance ML)** | Une instance d’une [!DNL Sensei] Moteur pour un client spécifique, contenant des données, des paramètres et des [!DNL Sensei] code. |
 | **Expérience** | Entité parapluie permettant d’organiser des exécutions d’expériences de formation ou de notation ou les deux. |
 | **Expérience planifiée** | Terme décrivant l’automatisation des exécutions d’expériences de formation ou de notation, régies par un calendrier défini par l’utilisateur. |
 | **Exécution de l’expérience** | Une instance particulière d’expériences de formation ou de notation. Les exécutions d’expériences multiples provenant d’une expérience particulière peuvent différer des valeurs de jeu de données utilisées pour la formation ou la notation. |
-| **Modèle formé** | Un modèle d’apprentissage automatique créé par le processus d’expérimentation et d’ingénierie de caractéristiques avant d’arriver à un modèle validé, évalué et finalisé. |
+| **Modèle formé** | Un modèle de machine learning créé par le processus d’expérimentation et d’ingénierie de caractéristiques avant d’arriver à un modèle validé, évalué et finalisé. |
 | **Modèle publié** | Un modèle finalisé et versionné est arrivé après la formation, la validation et l’évaluation. |
-| **Service d’apprentissage automatique (service ML)** | Une instance ML déployée en tant que service pour prendre en charge les demandes de formation et de notation à la demande à l’aide d’un point de terminaison API. Un service ML peut également être créé à l’aide d’exécutions d’expériences formées existantes. |
+| **Service de machine learning (service ML)** | Une instance ML déployée en tant que service pour prendre en charge les demandes de formation et de notation à la demande à l’aide d’un point de terminaison API. Un service ML peut également être créé à l’aide d’exécutions d’expériences formées existantes. |
 
 ## Création d’un service ML avec une exécution d’expérience de formation existante et une notation planifiée
 

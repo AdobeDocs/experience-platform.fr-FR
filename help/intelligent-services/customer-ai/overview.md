@@ -3,7 +3,7 @@ keywords: Experience Platform;présentation;service clientèle;rubriques les plu
 solution: Experience Platform, Real-time Customer Data Platform
 feature: Customer AI
 title: Présentation de Customer AI
-description: Customer AI est utilisé pour générer des scores de propension personnalisés tels que les taux d’attrition et de conversion de profils individuels à grande échelle. Cette opération s’effectue sans qu’il soit nécessaire de transformer les besoins professionnels en un problème d’apprentissage automatique ou d’avoir recours à un algorithme, à une formation ou à un déploiement.
+description: Customer AI est utilisé pour générer des scores de propension personnalisés tels que les taux d’attrition et de conversion de profils individuels à grande échelle. Cette opération s’effectue sans qu’il soit nécessaire de transformer les besoins professionnels en un problème de machine learning ou d’avoir recours à un algorithme, à une formation ou à un déploiement.
 landing-page-description: Customer AI est utilisé pour générer des scores de propension personnalisés tels que les taux d’attrition et de conversion de profils individuels à grande échelle.
 short-description: Customer AI est utilisé pour générer des scores de propension personnalisés tels que les taux d’attrition et de conversion de profils individuels à grande échelle.
 exl-id: 3e668103-e2a2-4ce6-a40a-8029a6aaa8dd
@@ -23,7 +23,7 @@ Dans le cadre d’Intelligent Services, Customer AI permet aux spécialistes du 
 
 ## Fonctionnement de Customer AI
 
-Customer AI est utilisé pour générer des scores de propension personnalisés tels que les taux d’attrition et de conversion de profils individuels à grande échelle. Cette opération s’effectue sans qu’il soit nécessaire de transformer les besoins professionnels en un problème d’apprentissage automatique ou d’avoir recours à un algorithme, à une formation ou à un déploiement.
+Customer AI est utilisé pour générer des scores de propension personnalisés tels que les taux d’attrition et de conversion de profils individuels à grande échelle. Cette opération s’effectue sans qu’il soit nécessaire de transformer les besoins professionnels en un problème de machine learning ou d’avoir recours à un algorithme, à une formation ou à un déploiement.
 
 Customer AI est conçu pour :
 
@@ -40,7 +40,7 @@ Customer AI n’est pas conçu pour certaines utilisations :
 - Customer AI ne peut pas déterminer si une offre va inciter un client à acheter un article. Bien que vous puissiez décider d’envoyer des offres de remise en fonction des scores de propension, ce n’est pas nécessairement le meilleur moyen de convertir ces clients.
 - Customer AI n’est pas un outil de recommandation de produits. Si vous disposez de milliers de SKU, n’utilisez pas Customer AI comme proxy pour une vraie solution de recommandations de produits telle que [!DNL Adobe Target].
 - Customer AI ne peut pas prédire à quelle étape du Parcours d’achat se trouve le client, par exemple s’il est en phase de &quot;sensibilisation&quot;, de &quot;considération&quot;, d’&quot;achat&quot; ou de &quot;rétention&quot;.
-- N’utilisez pas Customer AI pour déterminer les clients susceptibles d’acheter un produit lancé ultérieurement. Certains événement de succès doivent s’être produits pour que Customer AI puisse correctement former l’algorithme d’apprentissage automatique sur vos données.
+- N’utilisez pas Customer AI pour déterminer les clients susceptibles d’acheter un produit lancé ultérieurement. Certains événement de succès doivent s’être produits pour que Customer AI puisse correctement entraîner l’algorithme de machine learning sur vos données.
 
 La vidéo suivante est conçue pour vous aider à comprendre Customer AI.
 

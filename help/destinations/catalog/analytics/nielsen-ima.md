@@ -10,7 +10,7 @@ ht-degree: 90%
 
 ---
 
-# [!DNL Nielsen IMA Handler] Extension {#nielsen-ima-extension}
+# Extension [!DNL Nielsen IMA Handler] {#nielsen-ima-extension}
 
 ## Présentation {#overview}
 

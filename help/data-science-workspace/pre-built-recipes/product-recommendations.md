@@ -21,7 +21,7 @@ De nos jours, un détaillant peut proposer à ses clients un large choix de prod
 
 ## Comment fonctionne cette recette ?
 
-La recette des recommandations de produits utilise l’apprentissage automatique pour analyser les interactions d’un client avec des produits dans le passé et générer une liste personnalisée de recommandations de produits rapidement et sans effort. Cela optimise le processus de découverte de produits et évite à vos clients des recherches longues, improductives et hors sujet. En conséquence, la recette des recommandations de produits peut améliorer l’expérience d’achat globale d’un client, ce qui entraîne un engagement plus important et une plus grande fidélité à la marque.
+La recette des recommandations de produits utilise le machine learning pour analyser les interactions d’un client avec des produits dans le passé et générer une liste personnalisée de recommandations de produits rapidement et sans effort. Cela optimise le processus de découverte de produits et évite à vos clients des recherches longues, improductives et hors sujet. En conséquence, la recette des recommandations de produits peut améliorer l’expérience d’achat globale d’un client, ce qui entraîne un engagement plus important et une plus grande fidélité à la marque.
 
 ## Démarrage
 
