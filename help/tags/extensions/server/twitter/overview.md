@@ -2,7 +2,8 @@
 keywords: extension de transfert d’événement;twitter;extension de transfert d’événement twitter
 title: Extension de transfert d’événement twitter
 description: Cette extension de transfert d’événement Adobe Experience Platform vous permet d’ingérer des événements dans Twitter en fonction de vos besoins.
-source-git-commit: d51dae024da0cce770be91601c52b8c2958c3f64
+last-substantial-update: 2023-05-24T00:00:00Z
+source-git-commit: c5cc36d9530ff6fbb52a1995844f495b38e938b3
 workflow-type: tm+mt
 source-wordcount: '1140'
 ht-degree: 7%

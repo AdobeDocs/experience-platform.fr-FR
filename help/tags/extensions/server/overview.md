@@ -2,10 +2,10 @@
 title: Référence des extensions de transfert d’événement
 description: Recherchez la documentation pour les extensions de transfert d’événement dans Adobe Experience Platform.
 exl-id: e7b42241-b41c-4d12-8551-4df14e3c9b74
-source-git-commit: 24220c24af89e3eabc3d21854c1f70a418b2da59
+source-git-commit: 2fdaa1921110b38c7e97ed4889a238d655ef88a1
 workflow-type: tm+mt
-source-wordcount: '165'
-ht-degree: 52%
+source-wordcount: '158'
+ht-degree: 51%
 
 ---
 
@@ -33,7 +33,6 @@ Vous trouverez ci-dessous une liste de la documentation relative aux extensions 
 * [[!DNL Braze]](./braze/overview.md)
 * [Base](./core/overview.md)
 * [API d’événement Epsilon](https://exchange.adobe.com/apps/ec/109127)*
-* [API de conversion facebook](https://exchange.adobe.com/apps/ec/105509)
 * [Conversions améliorées de Google Ads](./google-ads-enhanced-conversions/overview.md)
 * [[!DNL Mailchimp] Edge](./mailchimp/overview.md)
 * [[!UICONTROL Microsoft Azure]](./azure/overview.md)
@@ -42,4 +41,5 @@ Vous trouverez ci-dessous une liste de la documentation relative aux extensions 
 * [[!DNL Pinterest]](./pinterest/overview.md)
 * [Snap Conversions API](https://exchange.adobe.com/apps/ec/108550)*
 * [[!DNL Splunk]](./splunk/overview.md)
+* [[!DNL Twitter]](./twitter/overview.md)
 * [API des événements [!DNL Zendesk] ](./zendesk/overview.md)
