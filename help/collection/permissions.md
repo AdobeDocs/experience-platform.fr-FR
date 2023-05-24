@@ -2,10 +2,10 @@
 title: Gestion des autorisations pour la collecte de données dans Experience Platform
 description: Présentation générale de la gestion des autorisations et du contrôle de l’accès aux fonctionnalités de collecte de données dans Adobe Experience Platform.
 exl-id: 8426d54b-ec1d-475a-a769-f45a8c924fe7
-source-git-commit: 876339019b324d4483152ed6f24bd6ad749ea7ba
+source-git-commit: e24cb8ad6b714a60363bcbec26e453f6445af1ac
 workflow-type: tm+mt
-source-wordcount: '1318'
-ht-degree: 29%
+source-wordcount: '1274'
+ht-degree: 30%
 
 ---
 
@@ -41,11 +41,6 @@ Les autorisations sous Adobe Experience Platform incluent l’accès aux jeux de
 
 {style="table-layout:auto"}
 
-<!-- (Feature not yet available?)
-| Dashboards | Manage Custom Dashboards | |
-| Dashboards | View Custom Dashboards | |
--->
-
 ### Autorisations de collecte de données Adobe Experience Platform
 
 Les autorisations de la collecte de données Adobe Experience Platform contrôlent l’accès aux balises et aux fonctionnalités de transfert d’événement, y compris les propriétés, les extensions et les environnements. Pour obtenir des instructions sur la configuration des autorisations de la collecte de données Adobe Experience Platform, reportez-vous à la section [section ci-dessous](#manage).
@@ -73,16 +68,16 @@ Les autorisations de la collecte de données Adobe Experience Platform contrôle
 
 ## Gérer les autorisations {#manage}
 
-Comme indiqué dans la section précédente, les autorisations pour la collecte de données sont gérées par deux désignations de produit en Admin Console : **Adobe Experience Platform** et **Collecte de données Adobe Experience Platform**.
+Les autorisations pour la collecte de données sont gérées par le biais de deux désignations de produit : **Adobe Experience Platform** et **Collecte de données Adobe Experience Platform**.
 
-Pour gérer ces autorisations, connectez-vous à [Admin Console](https://adminconsole.adobe.com/) et sélectionnez **[!UICONTROL Produits]** dans la barre de navigation supérieure. À partir de là, sélectionnez la carte de produit pour les autorisations que vous souhaitez configurer. Reportez-vous aux sous-sections ci-dessous pour savoir comment gérer les autorisations pertinentes sous chaque produit en Admin Console :
+Reportez-vous aux sous-sections ci-dessous pour savoir comment gérer les autorisations pertinentes sous chaque produit en Admin Console :
 
 * [Autorisations Adobe Experience Platform](#manage-platform)
 * [Autorisations de collecte de données Adobe Experience Platform](#manage-collection)
 
 ### Gestion des autorisations sous Adobe Experience Platform {#manage-platform}
 
-Dans la **[!UICONTROL Produits]** vue dans Admin Console, sélectionnez **[!UICONTROL Collecte de données Adobe Experience Platform]**. Sélectionnez le profil de produit pour lequel vous souhaitez modifier les autorisations, puis accédez à la **[!UICONTROL Autorisations]** .
+Dans la **[!UICONTROL Autorisations]** dans Adobe Experience Platform, sélectionnez le rôle à modifier.
 
 Pour accéder aux fonctionnalités de collecte de données, vous devez activer toutes les autorisations de la variable **[!UICONTROL Environnements de test]**, **[!UICONTROL Modélisation des données]**, **[!UICONTROL Identity Management]**, et **[!UICONTROL Collecte de données]** catégories.
 
@@ -96,7 +91,7 @@ Voir [guide de l’interface utilisateur du contrôle d’accès](../access-cont
 
 ### Gestion des autorisations sous Collecte de données Adobe Experience Platform {#manage-collection}
 
-Dans la **[!UICONTROL Produits]** vue dans Admin Console, sélectionnez **[!UICONTROL Collecte de données Adobe Experience Platform]**.
+Pour gérer ces autorisations, connectez-vous à Admin Console et sélectionnez **[!UICONTROL Produits]** dans le volet de navigation supérieur, puis sélectionnez **[!UICONTROL Collecte de données Adobe Experience Platform]**.
 
 ![Image montrant la carte de produit de la collecte de données en Admin Console](./images/permissions/data-collection-card.png)
 
