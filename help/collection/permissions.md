@@ -2,9 +2,9 @@
 title: Gestion des autorisations pour la collecte de données dans Experience Platform
 description: Présentation générale de la gestion des autorisations et du contrôle de l’accès aux fonctionnalités de collecte de données dans Adobe Experience Platform.
 exl-id: 8426d54b-ec1d-475a-a769-f45a8c924fe7
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 876339019b324d4483152ed6f24bd6ad749ea7ba
 workflow-type: tm+mt
-source-wordcount: '1303'
+source-wordcount: '1318'
 ht-degree: 29%
 
 ---
@@ -54,6 +54,7 @@ Les autorisations de la collecte de données Adobe Experience Platform contrôle
 | --- | --- | --- |
 | Plateformes | Web | Accorde l’accès à [propriétés web](../tags/ui/administration/companies-and-properties.md) lorsqu’elles sont combinées avec d’autres droits de propriété. |
 | Plateformes | Mobile | Accorde l’accès à [propriétés mobiles](../tags/ui/administration/companies-and-properties.md) lorsqu’elles sont combinées avec d’autres droits de propriété. |
+| Plateformes | Edge | Accorde l’accès à [Propriétés Edge de transfert d’événement](../tags/ui/event-forwarding/getting-started.md) lorsqu’elles sont combinées avec d’autres droits de propriété. |
 | Propriétés | (S/O) | Selon les propriétés qui ont été créées sous votre organisation, vous pouvez contrôler l’accès à chacune d’elles par le biais de cette catégorie d’autorisations dans Admin Console.<br><br>Les droits de propriété attribués à un utilisateur s’appliquent uniquement aux propriétés auxquelles il a eu accès par le biais de cette catégorie d’autorisations. |
 | Droits de propriété | Approuver | Permet d’approuver une version de bibliothèque dans le cadre du [flux de publication](../tags/ui/publishing/publishing-flow.md). |
 | Droits de propriété | Développer | Permet de développer une version de bibliothèque dans le cadre du [flux de publication](../tags/ui/publishing/publishing-flow.md). |
