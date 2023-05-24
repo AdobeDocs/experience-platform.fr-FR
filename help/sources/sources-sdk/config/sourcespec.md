@@ -3,10 +3,10 @@ keywords: Experience Platform;accueil;rubriques populaires;sources;connecteurs;c
 title: Configuration des spécifications de source pour les sources en libre-service (SDK par lots)
 description: Ce document présente les configurations que vous devez préparer pour utiliser les sources en libre-service (SDK par lots).
 exl-id: f814c883-b529-4ecc-bedd-f638bf0014b5
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: b1173adb0e0c3a6460b2cb15cba9218ddad7abcb
 workflow-type: tm+mt
-source-wordcount: '1687'
-ht-degree: 49%
+source-wordcount: '1847'
+ht-degree: 45%
 
 ---
 
@@ -439,9 +439,11 @@ Le `PAGE` type de pagination permet de parcourir les données renvoyées par nom
 ```json
 "paginationParams": {
   "type": "PAGE",
-  "limitName": "records",
-  "limitValue": "100",
-  "pageParamName": "pageIndex",
+  "limitName": "pageSize",
+  "limitValue": 100,
+  "initialPageIndex": 1,
+  "endPageIndex": "headers.x-pagecount",
+  "pageParamName": "pageNumber",
   "maximumRequest": 10000
 }
 ```
@@ -451,8 +453,13 @@ Le `PAGE` type de pagination permet de parcourir les données renvoyées par nom
 | `type` | Type de pagination utilisé pour renvoyer des données. |
 | `limitName` | Nom de la limite avec laquelle l’API peut spécifier le nombre d’enregistrements à récupérer dans une page. |
 | `limitValue` | Nombre d’enregistrements à récupérer dans une page. |
+| `initialPageIndex` | (Facultatif) L’index de page initial définit le numéro de page à partir duquel la pagination commencera. Ce champ peut être utilisé pour les sources où la pagination ne commence pas par 0. Si elle n’est pas fournie, l’index de page initial est défini par défaut sur 0. Ce champ exige un entier. |
+| `endPageIndex` | (Facultatif) L’index de page de fin vous permet d’établir une condition de fin et d’arrêter la pagination. Ce champ peut être utilisé lorsque les conditions de fin par défaut pour arrêter la pagination ne sont pas disponibles. Ce champ peut également être utilisé si le nombre de pages à ingérer ou le numéro de la dernière page est fourni par le biais de l’en-tête de réponse, ce qui est courant lors de l’utilisation de `PAGE` pagination de type . La valeur de l’index de page de fin peut être le dernier numéro de page ou une valeur d’expression de type chaîne de l’en-tête de réponse. Par exemple, vous pouvez utiliser `headers.x-pagecount` pour affecter l’index de page de fin à la variable `x-pagecount` de l’en-tête de la réponse. **Remarque**: `x-pagecount` est un en-tête de réponse obligatoire pour certaines sources et contient la valeur nombre de pages à ingérer. |
 | `pageParamName` | Nom du paramètre que vous devez ajouter aux paramètres de requête pour parcourir les différentes pages des données renvoyées. Par exemple : `https://abc.com?pageIndex=1` renvoie la deuxième page de la charge utile renvoyée par une API. |
 | `maximumRequest` | Nombre maximal de requêtes qu’une source peut effectuer pour une exécution incrémentielle donnée. La limite par défaut actuelle est de 10 000. |
+
+{style="table-layout:auto"}
+
 
 #### `NONE`
 
