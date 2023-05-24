@@ -3,10 +3,10 @@ title: Notes de mise à jour du SDK web d’Adobe Experience Platform
 description: Notes de mise à jour les plus récentes pour le SDK web d’Adobe Experience Platform.
 keywords: SDK web Adobe Experience Platform;SDK web Platform;SDK web;notes de mise à jour;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 952ffa14537058ad03121747846a96c7c978b833
+source-git-commit: 97ae7002d4bacb224f7cd57cca4a0c1ede11dd26
 workflow-type: tm+mt
-source-wordcount: '1517'
-ht-degree: 100%
+source-wordcount: '1549'
+ht-degree: 98%
 
 ---
 
@@ -15,6 +15,12 @@ ht-degree: 100%
 
 Ce document présente les notes de mise à jour du SDK web d’Adobe Experience Platform.
 Pour obtenir les dernières notes de mise à jour sur l’extension de balise du SDK web, reportez-vous à la section [Notes de mise à jour de l’extension de balise du SDK web](extension/web-sdk-ext-release-notes.md).
+
+## Version 2.16.0 - 17 mai 2023
+
+**Correctifs et améliorations**
+
+* Le SDK Web code désormais les valeurs de destination des cookies d’Audience Manager, comme [Data Integration Library (DIL)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=en).
 
 ## Version 2.16.0 - 25 avril 2023
 
