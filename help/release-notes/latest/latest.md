@@ -1,11 +1,11 @@
 ---
 title: Notes de mise à jour d’Adobe Experience Platform
-description: Les notes de mise à jour d’avril 2023 pour Adobe Experience Platform.
+description: Les notes de mise à jour de mai 2023 pour Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: e3fc587d924b2183806918f91e5ae3aa3fee52f3
+source-git-commit: 85401e3abfd7d5d1d84e082d20a1a064760c4e19
 workflow-type: tm+mt
-source-wordcount: '2094'
-ht-degree: 100%
+source-wordcount: '1071'
+ht-degree: 29%
 
 ---
 
@@ -13,50 +13,27 @@ ht-degree: 100%
 
 >[!IMPORTANT]
 >
->Depuis le 15 mai 2023, le statut `Existing` est supprimé du mappage de l’appartenance à un segment, afin de supprimer la redondance dans le cycle de vie de cette dernière. Depuis ce changement, les profils qualifiés dans un segment sont représentés comme `Realized` et les profils disqualifiés continuent à être représentés comme `Exited`. Pour plus d’informations sur cette modification, veuillez lire la [Section Segmentation Service](#segmentation).
+>En vue de la disponibilité générale de la fonction Audience Portal, Adobe Experience Platform met à jour l’utilisation des &quot;audiences&quot; et des &quot;segments&quot; dans le système et dans la documentation.
+>
+>- **Audience**: Ensemble de personnes, de comptes, de ménages ou d’autres entités qui partagent des caractéristiques et des comportements communs.
+>
+>- **Définition de segment**: Dans Adobe Experience Platform, les règles utilisées pour décrire les caractéristiques ou le comportement clés d’une audience cible. Ce terme était auparavant appelé &quot;segment&quot;.
+>
+>- **Segment**: L’acte de séparation des profils en audiences. Le terme &quot;segment&quot; est désormais utilisé exclusivement comme verbe.
+>
+>- **Segmentation**: L’acte d’identifier et d’articuler les caractéristiques des profils qui seront regroupés pour produire un ensemble de résultats, comme une audience.
+>
+>Par conséquent, dans l’interface utilisateur de Adobe Experience Platform, &quot;Segments&quot; est remplacé par &quot;Audiences&quot; pour refléter ce nouveau chemin de création et de gestion de l’audience.
 
-**Date de publication : 26 avril 2023**
+**Date de mise à jour : 24 mai 2023**
 
 Mises à jour des fonctionnalités existantes dans Adobe Experience Platform :
 
-- [Tableaux de bord](#dashboards)
-- [Préparation des données](#data-prep)
 - [Collecte de données](#data-collection)
-- [Destinations](#destinations)
-- [Modèle de données d’expérience](#xdm)
-- [Real-Time Customer Data Platform](#rtcdp)
-- [Real-time Customer Profile](#profile)
-- [Segmentation Service](#segmentation)
+- [Gouvernance des données](#data-governance)
+- [Ingestion des données](#data-ingestion)
+- [Query Service](#query-service)
 - [Sources](#sources)
-
-## Tableaux de bord {#dashboards}
-
-Adobe Experience Platform fournit de nombreux tableaux de bord grâce auxquels vous pouvez afficher des informations importantes sur les données de votre organisation, telles quʼelles sont capturées lors dʼinstantanés quotidiens.
-
-**Fonctionnalités nouvelles ou mises à jour** {#dashboards-new-updated-features}
-
-| Fonctionnalité | Description |
-| --- | --- |
-| Tableaux de bord définis par l’utilisateur ou l’utilisatrice | Vous pouvez désormais **filtrer les données historiques** à partir de vos informations sur les widgets et utiliser des données récentes ou une période d’analyse personnalisée. Pour plus d’informations, consultez le [guide des tableaux de bord définis par l’utilisateur](../../dashboards/user-defined-dashboards.md#filter-historical-data).<br>Vous pouvez également **dupliquer vos widgets existants**. En personnalisant un doublon et en modifiant ses attributs, vous pouvez éviter de repartir de zéro lors de la création d’un widget unique. Lisez le [guide de duplication des widgets](../../dashboards/user-defined-dashboards.md#duplicate-a-widget) pour en savoir plus. |
-
-{style="table-layout:auto"}
-
-Pour plus dʼinformations sur les tableaux de bord, notamment sur la manière dʼoctroyer des autorisations dʼaccès et de créer des widgets personnalisés, commencez par lire la [Présentation des tableaux de bord](../../dashboards/home.md).
-
-## Préparation des données {#data-prep}
-
-La préparation des données permet aux personnes travaillant dans l’ingénierie de données de mapper, de transformer et de valider les données vers et à partir du modèle de données d’expérience (XDM).
-
-**Fonctionnalités mises à jour**
-
-| Fonctionnalité | Description |
-| --- | --- |
-| Met à jour la période de renvoi d’Adobe Analytics dans les sandbox hors production | La période de renvoi d’Adobe Analytics dans les sandbox hors production a été réduite à trois mois. Le renvoi des sandbox de production reste le même au bout de 13 mois. Cette modification s’applique uniquement aux nouveaux flux et n’affecte pas les flux existants. Pour plus d’informations, consultez la [présentation d’Adobe Analytics](../../sources/connectors/adobe-applications/analytics.md). |
-| Nouvelle fonction de mappeur pour convertir les chaînes FPID en ECID | Utilisez la fonction `fpid_to_ecid` pour convertir des chaînes FPID en ECID en vue de les utiliser dans des applications Experience Platform et Experience Cloud. Pour plus d’informations, consultez le [guide des fonctions de préparation de données](../../data-prep/functions.md). |
-
-{style="table-layout:auto"}
-
-Pour plus d’informations sur la préparation des données, consultez la [présentation de la préparation des données](../../data-prep/home.md).
 
 ## Collecte de données {#data-collection}
 
@@ -66,123 +43,56 @@ Adobe Experience Platform fournit une suite de technologies qui vous permetten
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Obscurcissement des adresses IP pour les trains de données | Vous pouvez désormais définir des options d’obscurcissement d’IP au niveau d’un train de données partiel ou complet dans l’[interface utilisateur de configuration des trains de données](../../edge/datastreams/configure.md). <br><br>Le paramètre d’obscurcissement de l’adresse IP au niveau du train de données est prioritaire par rapport à tout obscurcissement d’adresse IP configuré dans Adobe Target et Audience Manager. <br><br>Les données envoyées à Adobe Analytics ne sont pas affectées par le paramètre [!UICONTROL Obscurcissement d’adresses IP] au niveau du train de données. Adobe Analytics reçoit actuellement des adresses IP non obscurcies. Pour qu’Analytics reçoive des adresses IP obscurcies, vous devez configurer l’obscurcissement des adresses IP séparément, dans Adobe Analytics. Ce comportement sera mis à jour dans les prochaines versions.<br><br> Pour plus d’informations sur l’obscurcissement des adresses IP et pour obtenir des instructions sur la façon de le configurer, voir la [documentation sur la configuration des trains de données](../../edge/datastreams/configure.md#advanced-options). |
-| [Remplacements de la configuration des trains de données](../../edge/datastreams/overrides.md) | Vous pouvez désormais définir des options de configuration supplémentaires pour les trains de données, que vous utiliserez pour remplacer des paramètres spécifiques, tels que les jeux de données d’événement, les jetons de propriété Target, les conteneurs de synchronisation d’identifiants et les suites de rapports Analytics. <br><br>Le remplacement des configurations de trains de données est un processus en deux étapes : <ol><li>Tout d’abord, vous devez définir vos remplacements de configuration de trains de données sur la page de [configuration des trains de données](../../edge/datastreams/configure.md).</li><li>Ensuite, vous devez envoyer les remplacements au réseau Edge par le biais d’une commande de SDK Web ou à l’aide de l’[extension de balise](../../edge/extension/web-sdk-extension-configuration.md) du SDK Web.</li></ol> |
-| Secret JWT OAuth | Le [secret JWT OAuth](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html?lang=fr) permet aux clients et clientes d’utiliser des jetons Adobe et Google Service pour prendre en charge les interactions serveur à serveur dans le transfert d’événement. |
-| Extension [!DNL Pinterest Conversions API] | L’extension de transfert d’événement [[!DNL Pinterest Conversions API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/pinterest/overview.html?lang=fr) vous permet de tirer parti des données capturées dans le réseau Edge d’Adobe Experience Platform et de les envoyer à [!DNL Pinterest] sous la forme d’événements côté serveur à l’aide de l’[!DNL Pinterest Conversions API]. |
+| [!DNL Twitter] extension de l’API de conversions | Le [[!DNL Twitter] API de conversion](../../tags/extensions/server/twitter/overview.md) l’extension de transfert d’événement vous permet de transférer des données d’événement côté serveur, en temps réel, pour les conversions d’événement à l’aide de la variable [!DNL Twitter] API de conversion. |
+| Assistance au chemin d’accès des éléments de données | Détermination du chemin d’accès de votre élément de données dans la variable [Extension Core](../../tags/extensions/client/core/overview.md) est maintenant plus facile que jamais. Cette amélioration fournit un formulaire assisté qui vous aide à sélectionner et à formater le chemin d’accès à l’élément de données approprié. |
 
 {style="table-layout:auto"}
 
-## Destinations {#destinations}
+Pour en savoir plus sur les collections de données, lisez le [présentation des collections de données](../../tags/home.md).
 
-Les [!DNL Destinations] sont des intégrations préconfigurées à des plateformes de destination qui permettent d’activer facilement des données provenant d’Adobe Experience Platform. Vous pouvez utiliser les destinations pour activer vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
+## Gouvernance des données {#data-governance}
 
-**Nouvelles destinations** {#new-destinations}
+Dans Adobe Experience Platform, la gouvernance des données désigne un ensemble de politiques et de technologies permettant de gérer les données clients et de garantir la conformité aux réglementations, aux restrictions et aux politiques applicables à l’utilisation des données. Elle joue un rôle clé dans Experience Platform à différents niveaux, notamment dans le catalogage, la traçabilité des données, l’étiquetage de l’utilisation des données, les politiques d’accès aux données et le contrôle de l’accès aux données pour les actions marketing.
 
-| Destination | Description |
-| ----------- | ----------- |
-| Connexion [[!DNL Salesforce Marketing Cloud Account Engagement] ](../../destinations/catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md) | Utilisez la destination Engagement du compte de Marketing Cloud Salesforce (anciennement Pardot) pour capturer, suivre, noter et évaluer des pistes. Utilisez cette destination pour les cas d’utilisation B2B impliquant plusieurs services et décideurs/décideuses qui nécessitent des cycles de vente et de décision plus longs. |
+**Nouvelles fonctionnalités**
 
-{style="table-layout:auto"}
-
-**Fonctionnalités nouvelles ou mises à jour** {#destinations-new-updated-functionality}
-
-| Fonction | Description |
-| ----------- | ----------- |
-| Surveillance du flux de données pour les destinations [!DNL Custom Personalization] et [!DNL Adobe Commerce] | <p> Vous pouvez désormais afficher les mesures d’activation pour les connexions [Adobe Commerce](/help/destinations/catalog/personalization/adobe-commerce.md), [Personnalisation personnalisée](../../destinations/catalog/personalization/custom-personalization.md) et [Personnalisation avec les attributs](../../destinations/catalog/personalization/custom-personalization.md). </p> <p>![Image Adobe Commerce](/help/destinations/assets/common/adobe-commerce-metrics.png "Mesures Adobe Commerce"){width="100" zoomable="yes"}</p>  Voir [Surveillance des flux de données dans l’espace de travail des destinations](../../dataflows/ui/monitor-destinations.md#monitor-dataflows-in-the-destinations-workspace) pour plus d’informations. |
-| Nouveau champ **[!UICONTROL Ajouter un identifiant de segment au nom du segment]** pour les destinations [!DNL Google Ad Manager] et [!DNL Google Ad Manager 360] | <p>Vous pouvez à présent faire en sorte que le nom du segment dans [[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md#parameters) et [[!DNL Google Ad Manager 360]](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) inclue l’identifiant du segment d’Experience Platform, comme suit : `Segment Name (Segment ID)`.</p><p>![Ajouter une image d’identifiant de segment](/help/destinations/assets/common/append-segment-id-to-segment-name.png "Nouveau champ Ajouter un identifiant de segment au nom du segment "){width="100" zoomable="yes"}</p> |
-| Renvois d’audience planifiés | <p>Pour la destination [[!DNL Google Display & Video 360]](/help/destinations/catalog/advertising/google-dv360.md#specifics), l’activation des renvois d’audience vers la destination est planifiée 24 à 48 heures après le premier mappage d’un segment à une connexion de destination. Cette mise à jour répond à la politique de Google consistant à attendre 24 heures avant d’ingérer des données. Elle améliore les taux de correspondance entre Real-Time CDP et [!DNL Google Display & Video 360].</p> <p>Notez qu’il s’agit d’une configuration de serveur principal applicable uniquement à cette destination et qui n’est liée à aucune option de planification configurable par le client ou la cliente dans l’interface utilisateur.</p> |
+| Fonctionnalité | Description |
+| --- | --- |
+| Abandon de l’étiquetage au niveau du champ du jeu de données | La possibilité d’appliquer des libellés à des champs individuels a été déplacée des jeux de données vers les schémas. Cela vous permet de centraliser la gestion des libellés de champ en amont pour la gouvernance des données, le consentement et le contrôle d’accès. Les libellés de champ de jeu de données précédemment appliqués seront temporairement pris en charge par le biais de l’interface utilisateur de l’Experience Platform. Les libellés de champ de jeu de données existants doivent être migrés manuellement vers les libellés de champ de schéma par vous d’ici le 31 mai 2024. Veuillez lire la [guide de bout en bout sur la gouvernance des données](../../data-governance/e2e.md) pour plus d’informations sur la migration des libellés. |
 
 {style="table-layout:auto"}
 
-**Correctifs et améliorations** {#destinations-fixes-and-enhancements}
+Pour en savoir plus sur la gouvernance des données, consultez la section [présentation de la gouvernance des données](../../data-governance/home.md).
 
-- Nous avons corrigé un problème dans les mesures de reporting **Identités exclues** pour les exportations de destination basées sur des fichiers. Les clients recevaient tous les identifiants exportés à partir de l’exportation activée comme prévu. Toutefois, la mesure de reporting **Identités exclues** dans l’interface utilisateur affichait incorrectement un grand nombre d’identités exclues en raison d’un comptage incorrect des identités qui n’étaient jamais censées être exportées. (PLAT-149774)
-- Nous avons corrigé un problème dans l’étape **Planification** du workflow d’activation. Pour les destinations qui nécessitent un ID de mappage, les clients et clientes ne pouvaient pas ajouter d’ID de mappage pour les segments ajoutés aux connexions de destination existantes. (PLAT-148808)
+## Ingestion des données {#data-ingestion}
 
-<!--
-- We have fixed an issue with the beta SFTP destination where the port number was previously hardcoded to 22. The port is now configurable for this destination. 
-
--->
-
-Pour des informations plus générales sur les destinations, consultez la [présentation des destinations](../../destinations/home.md).
-
-## Modèle de données d’expérience (XDM) {#xdm}
-
-XDM est une spécification Open Source qui fournit des structures et des définitions communes (schémas) pour les données introduites dans Adobe Experience Platform. En adhérant aux normes XDM, toutes les données d’expérience client peuvent être intégrées dans une représentation commune afin de fournir des informations plus rapidement et de manière plus intégrée. Vous pouvez obtenir des informations précieuses à partir des actions des clients, définir des types de clients par le biais de segments et utiliser les attributs du client à des fins de personnalisation.
+Adobe Experience Platform fournit un ensemble riche de fonctionnalités permettant d’ingérer n’importe quel type et n’importe quelle latence de données. Vous pouvez ingérer à l’aide des API par lots ou en flux continu, à l’aide de sources intégrées par Adobe, de partenaires d’intégration de données ou de l’interface utilisateur de Adobe Experience Platform.
 
 **Fonctionnalités mises à jour**
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Bouton bascule des noms d’affichage | L’éditeur de schémas propose désormais un bouton bascule pour basculer entre les noms de champ d’origine et les noms d’affichage plus lisibles.<br>![L’éditeur de schémas avec le bouton bascule du nom d’affichage mis en surbrillance.](../../xdm/images/ui/resources/schemas/display-name-toggle.png "Bouton bascule du nom d’affichage de l’éditeur de schémas"){width="100" zoomable="yes"}<br>Cette flexibilité permet d’améliorer la visibilité des champs et l’édition de vos schémas. Les noms d’affichage des groupes de champs standard sont générés par le système, mais peuvent également être personnalisés via l’interface utilisateur si nécessaire. Veuillez lire la [documentation sur le bouton bascule des noms d’affichage](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/resources/schemas.html?lang=fr#display-name-toggle) pour en savoir plus. |
+| Disponibilité bêta des modèles d’ingestion de données | Les modèles d’ingestion de données fournissent aux architectes et aux ingénieurs de données des modèles standard et des outils d’automatisation pour accélérer le processus d’ingestion de données, notamment la création de schémas et de jeux de données et la configuration des règles de mappage. Les modèles d’ingestion de données sont actuellement disponibles pour la variable [[!DNL Marketo Engage]](../../sources/connectors/adobe-applications/marketo/marketo.md), [[!DNL Salesforce]](../../sources/connectors/crm/salesforce.md) et [[!DNL Microsoft Dynamics]](../../sources/connectors/crm/ms-dynamics.md) sources. Pour plus d’informations, consultez le guide sur [utilisation de modèles dans l’interface utilisateur](../../sources/tutorials/ui/templates.md). |
 
-{style="table-layout:auto"}
+Pour en savoir plus sur l’ingestion de données, lisez le [présentation de l’ingestion des données](../../ingestion/home.md).
 
-**Nouveaux composants XDM**
+## Query Service {#query-service}
 
-| Type de composant | Nom | Description |
-| --- | --- | --- |
-| Schéma | [[!UICONTROL Champs de classification Adobe Target]](https://github.com/adobe/xdm/pull/1719/files) | Un nouveau schéma XDM pour les jeux de données de classification Target contenant un ensemble de champs de métadonnées pour classer les activités et expériences Target. |
-
-{style="table-layout:auto"}
-
-**Composants XDM mis à jour**
-
-| Type de composant | Nom | Description |
-| --- | --- | --- |
-| Groupe de champs | [[!UICONTROL Extension d’union de compte de service de profil unifié Adobe]](https://github.com/adobe/xdm/pull/1696/files) | Ajout d’un groupe de champs d’extension de compte pour Real-Time Customer Profile, qui permet aux utilisateurs et aux utilisatrices d’ajouter une appartenance à un segment sur l’union de compte. |
-| Schéma | [[!UICONTROL Schéma du système des attributs calculés]](https://github.com/adobe/xdm/pull/1696/files) | Le groupe de champs Attributs calculés utilisé par Real-Time Customer Profile a été mis à jour vers un schéma global en lecture seule du système. |
-| Groupe de champs | Multiple | Ajout de plusieurs événements en tant que champs pour le [[!UICONTROL schéma de série temporelle]](https://github.com/adobe/xdm/pull/1718/files). |
-| Groupe de champs | Détails de fidélité du profil | [Modification du titre](https://github.com/adobe/xdm/pull/1717/files) de `xdm:upgradeDate` de « Nom du programme » en « Date de mise à niveau ». |
-| Groupe de champs | Multiple | Plusieurs champs d’[[!UICONTROL Élément de décision]](https://github.com/adobe/xdm/pull/1714/files) ont été mis à jour afin de supprimer la double hiérarchie imbriquée. |
-
-{style="table-layout:auto"}
-
-Pour plus d’informations sur XDM dans Platform, consultez la [présentation du système XDM](../../xdm/home.md).
-
-## Real-Time Customer Data Platform
-
-Basée sur Experience Platform, Real-time Customer Data Platform ([!DNL Real-Time CDP]) aide les entreprises à rassembler des données connues et inconnues pour activer les profils des clients et clientes avec une prise de décision intelligente tout au long du parcours client. [!DNL Real-Time CDP] associe plusieurs sources de données d’entreprise pour créer des profils client en temps réel. Les segments créés à partir de ces profils peuvent ensuite être envoyés vers des destinations en aval afin de fournir des expériences personnalisées et individuelles aux clients et clientes sur tous les canaux et appareils.
-
-**Nouvelles fonctionnalités**
-
-| Fonctionnalité | Description |
-| ------- | ----------- |
-| Page d’accueil Real-Time CDP améliorée | La [page d’accueil Real-Time CDP](https://experience.adobe.com) a été améliorée. Son aspect a été actualisé et ses performances sont accrues. La page d’accueil prend désormais en charge les autorisations et présente des widgets pertinents pour les fonctionnalités auxquelles vous avez accès. Pour plus d’informations, reportez-vous à la section [Présentation du tableau de bord de la page d’accueil Real-Time CDP](../../rtcdp/home-page-dashboards.md). |
-| Enquête d’auto-identification | L’enquête d’auto-identification est un court questionnaire présenté sur la page d’accueil de l’interface utilisateur d’Adobe Experience Platform. Utilisez l’enquête d’auto-identification pour créer votre profil personnel Experience Platform et recevoir des directives personnalisées basées sur vos sélections. Pour plus d’informations, consultez la [présentation de l’enquête d’auto-identification](../../landing/self-identification.md). |
-
-Pour plus d’informations sur [!DNL Real-Time CDP], consultez la présentation [[!DNL Real-Time CDP] ](../../rtcdp/overview.md).
-
-## Profil client en temps réel {#profile}
-
-Adobe Experience Platform vous permet d’offrir aux clients des expériences coordonnées, cohérentes et pertinentes, quel que soit l’endroit ou le moment où ils interagissent avec votre marque. Le profil client en temps réel offre une vue holistique de chaque client qui combine des données issues de plusieurs canaux, notamment des données en ligne, hors ligne, CRM et tierces. Le Profil vous permet de consolider vos données client en une vue unifiée offrant un compte horodaté et exploitable de chaque interaction client.
+Query Service vous permet d’utiliser le langage SQL standard pour interroger les données dans le [!DNL data lake] d’Adobe Experience Platform. Vous pouvez joindre n’importe quel jeu de données à partir du lac de données et capturer les résultats de la requête sous la forme d’un nouveau jeu de données à utiliser dans les rapports, dans l’espace de travail de science des données ou à ingérer en tant que profil client en temps réel.
 
 **Fonctionnalités mises à jour**
 
 | Fonctionnalité | Description |
-| ------- | ----------- |
-| Expiration des données de profil pseudonymes | L’expiration des données de profil pseudonymes est désormais disponible. Cette version supprimera en permanence les profils pseudonymes obsolètes de votre instance d’Experience Platform une fois activée. Pour en savoir plus sur cette fonctionnalité et les profils pseudonymes, veuillez lire la section [Guide d’expiration des données de profil pseudonyme](../../profile/pseudonymous-profiles.md). |
+| --- | --- |
+| Calcul des statistiques au niveau des colonnes sur les jeux de données ADLS | Le `ANALYZE TABLE` a été étendue avec la fonction `COMPUTE STATISTICS` et `SHOW STATISTICS` Commandes SQL. Vous pouvez désormais calculer des statistiques pour un sous-ensemble d’un jeu de données ADLS ou pour certaines colonnes de ce jeu de données. Pour plus d’informations, reportez-vous à la section [guide de calcul des statistiques des jeux de données](../../query-service/essential-concepts/dataset-statistics.md). |
 
 {style="table-layout:auto"}
 
-## Segmentation Service {#segmentation}
-
-[!DNL Segmentation Service] définit un sous-ensemble particulier de profils en décrivant les critères qui identifient un groupe de clients potentiels de votre base. Les segments peuvent être basés sur des données d’enregistrement (telles que des informations démographiques) ou des événements de séries temporelles représentant les interactions des clients avec votre marque.
-
-**Fonctionnalités nouvelles ou mises à jour**
-
-| Fonctionnalité | Description |
-| ------- | ----------- |
-| Mappage de l’appartenance à un segment | Comme suite à l’annonce précédente de février, depuis le 15 mai 2023, le statut `Existing` est abandonné du mappage de l’appartenance à un segment, afin de supprimer la redondance dans le cycle de vie cette dernière. Depuis ce changement, les profils qualifiés dans un segment sont représentés comme `Realized` et les profils disqualifiés continuent à être représentés comme `Exited`.<br/><br/> Cette modification peut vous impacter si vous utilisez des [destinations d’entreprise](../../destinations/destination-types.md#streaming-profile-export) (Amazon Kinesis, Azure Event Hubs, API HTTP) et si vous avez mis en place en aval des processus automatisés, en fonction du statut `Existing`. Si c’est le cas, consultez vos intégrations en aval. Si vous souhaitez identifier les profils nouvellement qualifiés au-delà d’un certain temps, envisagez d’utiliser une combinaison du statut `Realized` et du `lastQualificationTime` dans votre mappage d’appartenance aux segments. Pour plus d’informations, contactez votre représentant ou représentante Adobe. |
-
-{style="table-layout:auto"}
-
-Pour plus d’informations sur [!DNL Segmentation Service], consultez la [présentation de la segmentation](../../segmentation/home.md).
+Pour en savoir plus sur Query Services, consultez la section [Présentation de Query Service](../../query-service/home.md).
 
 ## Sources {#sources}
 
-Adobe Experience Platform peut ingérer des données à partir de sources externes tout en vous permettant de structurer, d’étiqueter et d’améliorer ces données à l’aide des services de Platform. Vous pouvez ingérer des données à partir de diverses sources telles que les applications Adobe, le stockage dans le cloud, des logiciels tiers et votre système de gestion de la relation client.
+Adobe Experience Platform peut ingérer des données à partir de sources externes tout en vous permettant de structurer, d’étiqueter et d’améliorer ces données à l’aide des services de Platform. Vous pouvez ingérer des données provenant de diverses sources, telles que les applications d’Adobe, le stockage dans le cloud, les logiciels tiers et votre système de gestion de la relation client.
 
 Experience Platform fournit une API RESTful et une interface utilisateur interactive qui vous permet de configurer facilement des connexions source à différents fournisseurs de données. Ces connexions source vous permettent de vous authentifier et de vous connecter à des services de gestion de la relation client et à des systèmes de stockage externes, de définir des heures d’ingestion et de gérer le débit d’ingestion des données.
 
@@ -190,11 +100,15 @@ Experience Platform fournit une API RESTful et une interface utilisateur intera
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Prise en charge de l’API pour le filtrage des données au niveau des lignes pour Microsoft Dynamics, Salesforce CRM et Marketing Cloud Salesforce | Utilisez des opérateurs logiques et de comparaison pour filtrer les données au niveau des lignes pour les sources Microsoft Dynamics, Salesforce CRM et Marketing Cloud Salesforce. Pour plus d’informations, lisez le guide sur le [filtrage des données d’une source à l’aide de l’API](../../sources/tutorials/api/filter.md). |
-| Disponibilité bêta du streaming Shopify | La [source de streaming Shopify](../../sources/connectors/ecommerce/shopify-streaming.md) est désormais disponible en version bêta. Utilisez la source de streaming Shopify pour diffuser des données de votre compte de partenaires Shopify vers Experience Platform. |
-| Disponibilité générale de l’intégration OneTrust | La [source d’intégration OneTrust](../../sources/connectors/consent-and-preferences/onetrust.md) est désormais généralement disponible. Utilisez la source d’intégration OneTrust pour importer les données de consentement et de préférences de votre compte d’intégration OneTrust vers Experience Platform. |
-| Disponibilité générale d’Oracle Service Cloud | La [source Oracle Service Cloud](../../sources/connectors/customer-success/oracle-service-cloud.md) est désormais généralement disponible. Utilisez la source Oracle Service Cloud pour ingérer des données de votre compte Oracle Service Cloud vers Experience Platform. |
+| Prise en charge étendue des API pour le mode préliminaire | Vous pouvez maintenant suspendre et enregistrer votre progression pendant le workflow des sources lors de l’utilisation de la variable [!DNL Flow Service] API à tout moment. Utilisez la variable `mode=draft` état pour enregistrer vos connexions base, source et cible en tant que brouillons. Toutes les entités de brouillon peuvent être visitées à nouveau pour être terminées ultérieurement. Lisez le guide sur [paramétrer votre [!DNL Flow Service] entités à un état de brouillon](../../sources/tutorials/api/draft.md) pour plus d’informations. |
+| Disponibilité générale de la nouvelle source [!DNL Salesforce Marketing Cloud] | Le [[!DNL Salesforce Marketing Cloud source] est désormais en disponibilité générale](../../sources/connectors/marketing-automation/salesforce-marketing-cloud.md). Utilisez cette source pour importer votre [!DNL Salesforce Marketing Cloud] données à Experience Platform. |
+| [!DNL Google Ads] mises à jour d’authentification | Vous pouvez maintenant fournir un ID de client de connexion lors de l’authentification de votre [!DNL Google Ads] compte source pour récupérer les données de rapport d’un client opérationnel spécifique. Lisez le [[!DNL Google Ads] documentation source](../../sources/connectors/advertising/ads.md) pour plus d’informations. |
+| [!DNL Google PubSub] mises à jour d’authentification | Vous pouvez maintenant définir des privilèges d’accès pour votre [!DNL Google PubSub] lors de la création d’un compte. Utilisez l’authentification par projet pour autoriser l’accès au niveau racine ou utilisez l’authentification par rubrique et par abonnement pour restreindre l’accès à une rubrique et à un flux d’abonnement spécifiques. Lisez le [[!DNL Google PubSub] documentation source](../../sources/connectors/cloud-storage/google-pubsub.md) pour plus d’informations. |
+| Nouveaux paramètres de champ de pagination pour `type=PAGE` dans les sources en libre-service (SDK par lots) | Vous pouvez désormais utiliser `initialPageIndex` et `endPageIndex` lors de l’intégration d’une source à `type=PAGE` par le biais du SDK Batch. <ul><li>`initialPageIndex`: Ce paramètre permet de définir le numéro de page à partir duquel la pagination commence. </li><li>`endPageIndex`: Ce paramètre permet d’établir une condition de fin et d’arrêter la pagination.</li></ul> Pour plus d’informations sur ces nouveaux paramètres, consultez la section [Documentation du SDK par lots des sources en libre-service](../../sources/sources-sdk/config/sourcespec.md#page). |
+| Prise en charge de l’interface utilisateur pour le mode préliminaire | Vous pouvez maintenant suspendre et enregistrer votre progression pendant le workflow des sources via l’interface utilisateur. Vous pouvez sélectionner **[!UICONTROL Enregistrer en tant que brouillon]** pendant les étapes de détails, de mappage et de planification du flux de données pour enregistrer votre flux de données en tant que brouillon en vue d’une fin ultérieure. Lisez le guide sur [enregistrement des flux de données en tant que brouillons dans l’interface utilisateur](../../sources/tutorials/ui/draft.md) pour plus d’informations. |
 
 {style="table-layout:auto"}
 
 Pour en savoir plus sur les sources, lisez la [présentation des sources](../../sources/home.md).
+
+<!-- | API support for streaming data from a [!DNL Snowflake] database | You can now stream data from a [[!DNL Snowflake] source](../../sources/connectors/databases/snowflake.md) using the [!DNL Flow Service] API. | -->
