@@ -4,9 +4,9 @@ user-guide-title: Aide sur les connecteurs source d’Adobe Experience Platfor
 breadcrumb-title: Guide des connecteurs sources
 user-guide-description: Ingérez des données à partir de diverses sources. Découvrez comment structurer, étiqueter et améliorer les données déjà ingérées.
 feature: Sources
-source-git-commit: 1a6282104af60d66c54bfb20c3c4e8eb74427461
+source-git-commit: f93ee2bc10135fee0c2d77629ee10901010b744b
 workflow-type: tm+mt
-source-wordcount: '974'
+source-wordcount: '979'
 ht-degree: 99%
 
 ---
@@ -87,6 +87,7 @@ ht-degree: 99%
       - [Connecteur Oracle](connectors/databases/oracle.md)
       - [Connecteur Phoenix](connectors/databases/phoenix.md)
       - [Connecteur PostgreSQL](connectors/databases/postgres.md)
+      - [Connecteur de diffusion en continu de Snowflake](connectors/databases/snowflake-streaming.md)
       - [Connecteur Snowflake](connectors/databases/snowflake.md)
       - [Connecteur Teradata Vantage](connectors/databases/teradata-vantage.md)
    - eCommerce {#ecommerce}
@@ -163,6 +164,7 @@ ht-degree: 99%
          - [Oracle](tutorials/api/create/databases/oracle.md)
          - [Phoenix](tutorials/api/create/databases/phoenix.md)
          - [PostgreSQL](tutorials/api/create/databases/postgres.md)
+         - [Snowflake Diffusion en continu](tutorials/api/create/databases/snowflake-streaming.md)
          - [Snowflake](tutorials/api/create/databases/snowflake.md)
          - [Teradata Vantage](tutorials/api/create/databases/teradata-vantage.md)
          - [SQL Server](tutorials/api/create/databases/sql-server.md)
