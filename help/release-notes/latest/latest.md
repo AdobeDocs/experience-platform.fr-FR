@@ -2,10 +2,10 @@
 title: Notes de mise à jour d’Adobe Experience Platform
 description: Les notes de mise à jour de mai 2023 pour Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 85401e3abfd7d5d1d84e082d20a1a064760c4e19
+source-git-commit: fea5fdf4b4982b59fb1c4954b8f81e131af9955b
 workflow-type: tm+mt
-source-wordcount: '1071'
-ht-degree: 29%
+source-wordcount: '1224'
+ht-degree: 30%
 
 ---
 
@@ -32,6 +32,7 @@ Mises à jour des fonctionnalités existantes dans Adobe Experience Platform 
 - [Collecte de données](#data-collection)
 - [Gouvernance des données](#data-governance)
 - [Ingestion des données](#data-ingestion)
+- [Destinations](#destinations)
 - [Query Service](#query-service)
 - [Sources](#sources)
 
@@ -75,6 +76,37 @@ Adobe Experience Platform fournit un ensemble riche de fonctionnalités permet
 | Disponibilité bêta des modèles d’ingestion de données | Les modèles d’ingestion de données fournissent aux architectes et aux ingénieurs de données des modèles standard et des outils d’automatisation pour accélérer le processus d’ingestion de données, notamment la création de schémas et de jeux de données et la configuration des règles de mappage. Les modèles d’ingestion de données sont actuellement disponibles pour la variable [[!DNL Marketo Engage]](../../sources/connectors/adobe-applications/marketo/marketo.md), [[!DNL Salesforce]](../../sources/connectors/crm/salesforce.md) et [[!DNL Microsoft Dynamics]](../../sources/connectors/crm/ms-dynamics.md) sources. Pour plus d’informations, consultez le guide sur [utilisation de modèles dans l’interface utilisateur](../../sources/tutorials/ui/templates.md). |
 
 Pour en savoir plus sur l’ingestion de données, lisez le [présentation de l’ingestion des données](../../ingestion/home.md).
+
+## Destinations {#destinations}
+
+Les [!DNL Destinations] sont des intégrations préconfigurées à des plateformes de destination qui permettent d’activer facilement des données provenant d’Adobe Experience Platform. Vous pouvez utiliser les destinations pour activer vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
+
+**Nouvelles destinations** {#new-destinations}
+
+| Destination | Description |
+| ----------- | ----------- |
+| **[[!UICONTROL Catégories d’intérêt Mailchimp]](../../destinations/catalog/email-marketing/mailchimp-interest-categories.md)** | **[!UICONTROL Mailchimp]** est une plate-forme d’automatisation du marketing et un service de marketing par e-mail très utilisé par les entreprises pour gérer et communiquer avec des contacts (clients, clients ou autres parties intéressées) à l’aide de listes de diffusion et de campagnes de marketing par e-mail. Utilisez ce connecteur pour trier vos contacts en fonction de leurs centres d&#39;intérêt et préférences. |
+
+{style="table-layout:auto"}
+
+<!--
+
+**New or updated functionality** {#destinations-new-updated-functionality}
+
+| Functionality | Description |
+| ----------- | ----------- |
+| General availability of attribute-based personalization through the [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) and [Custom personalization](../../destinations/catalog/personalization/custom-personalization.md) destinations. | Leverage profile attributes in real-time to deliver one-to-one web and mobile personalization, via Adobe Target or other custom personalization destinations in Experience Platform. See the [dedicated documentation](../../destinations/ui/activate-edge-personalization-destinations.md) for more details. |
+| Destination SDK support for grouping exported audiences based on merge policy. | When building a file-based destination with Destination SDK, you can now configure the grouping of exported audiences into one or multiple files, based on merge policy. <br><br> Additionally, you can now include the merge policy ID and merge policy name in the exported file names, by using the dedicated template macros. <br><br>See the [batch configuration documentation](../../destinations/destination-sdk/functionality/destination-configuration/batch-configuration.md) for more details on how to use the `segmentGroupingEnabled` parameter and the new file name template macros.|
+
+{style="table-layout:auto"}
+
+-->
+
+**Correctifs et améliorations** {#destinations-fixes-and-enhancements}
+
+- Nous avons corrigé une limitation dans la destination de stockage dans le cloud SFTP (bêta), où les utilisateurs n’étaient pas en mesure de personnaliser la valeur du paramètre de port. La valeur est désormais modifiable lors de la configuration d’une connexion de destination SFTP (bêta) via le [API](/help/destinations/api/activate-segments-file-based-destinations.md) ou [Interface utilisateur](/help/destinations/catalog/cloud-storage/sftp.md#authentication-information).
+
+Pour des informations plus générales sur les destinations, reportez-vous à la [présentation des destinations](../../destinations/home.md).
 
 ## Query Service {#query-service}
 
