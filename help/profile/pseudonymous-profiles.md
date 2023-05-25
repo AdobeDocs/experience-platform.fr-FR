@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Expiration des données de profils pseudonymes
 description: Ce document fournit des conseils généraux sur la configuration de l’expiration des données de profils pseudonymes dans Adobe Experience Platform.
 exl-id: e8d31718-0b50-44b5-a15b-17668a063a9c
-source-git-commit: 07ed7eb9644b2e8cc4da02743c48037afc247614
+source-git-commit: 207cddae6b632866d564729de49d28fc5c29ef7f
 workflow-type: tm+mt
-source-wordcount: '912'
-ht-degree: 100%
+source-wordcount: '923'
+ht-degree: 97%
 
 ---
 
@@ -75,9 +75,8 @@ Dans un cas d’utilisation standard, définissez l’expiration de vos données
 
 ### Quelles informations importantes dois-je connaître avant d’utiliser l’expiration des données de profils pseudonymes ?
 
-- L’expiration des données de profils anonymes s’exécute sur la sandbox de **production**.
+- L’expiration des données de profil pseudonyme s’exécute à une adresse **sandbox** niveau. Vous pouvez choisir différentes configurations pour les environnements de test de production et de développement.
 - Une fois la fonctionnalité activée, la suppression des profils est **permanente**. Vous ne pouvez **pas** annuler la suppression ou restaurer un profil supprimé.
 - Il ne s’agit **pas** d’une tâche de suppression ponctuelle. L’expiration des données de profils pseudonymes s’effectue en continu une fois par jour et supprime les profils qui correspondent aux données saisies par le client ou la cliente.
 - **Tous** les profils définis comme des profils pseudonymes sont sujets à l’expiration des données de profils pseudonymes. **Peu importe** si le profil est uniquement un événement d’expérience ou ne contient que des attributs de profil.
 - La suppression se produit **uniquement** au niveau du profil. Il se peut que le service d’identités continue à afficher les identités supprimées dans le graphique si le profil possède plusieurs identités pseudonymes associées (telles que `AAID` et `ECID`). Nous apporterons une solution à cette incohérence dans une prochaine mise à jour.
-
