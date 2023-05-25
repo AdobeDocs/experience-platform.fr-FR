@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Syntaxe SQL dans Query Service
 description: Ce document présente la syntaxe SQL prise en charge par Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 2a5dd20d99f996652de5ba84246c78a1f7978693
+source-git-commit: c42a7cd46f79bb144176450eafb00c2f81409380
 workflow-type: tm+mt
-source-wordcount: '3706'
+source-wordcount: '3761'
 ht-degree: 8%
 
 ---
@@ -570,7 +570,11 @@ Les sous-sections ci-dessous couvrent la [!DNL PostgreSQL] Commandes prises en c
 
 ### ANALYSER LE TABLEAU {#analyze-table}
 
-Le `ANALYZE TABLE` calcule les statistiques pour une table sur l’entrepôt accéléré. Les statistiques sont calculées sur les requêtes CTAS ou ITAS exécutées pour un tableau donné sur la boutique accélérée.
+Le `ANALYZE TABLE` effectue une analyse de distribution et des calculs statistiques pour la ou les tables nommées. L’utilisation de `ANALYZE TABLE` varie selon que les jeux de données sont stockés sur la variable [boutique accélérée](#compute-statistics-accelerated-store) ou le [lac de données](#compute-statistics-data-lake). Consultez leurs sections respectives pour plus d’informations sur son utilisation.
+
+#### CALCULER LES STATISTIQUES sur le magasin accéléré {#compute-statistics-accelerated-store}
+
+Le `ANALYZE TABLE` calcule les statistiques pour une table sur l’entrepôt accéléré. Les statistiques sont calculées sur les requêtes CTAS ou ITAS exécutées pour un tableau donné de la boutique accélérée.
 
 **Exemple**
 
@@ -592,7 +596,7 @@ Vous trouverez ci-dessous une liste de calculs statistiques disponibles après l
 | `mean` | Valeur moyenne du tableau analysé. |
 | `stdev` | Écart type du tableau analysé. |
 
-#### CALCUL DES STATISTIQUES {#compute-statistics}
+#### CALCULER LES STATISTIQUES sur le lac de données {#compute-statistics-data-lake}
 
 Vous pouvez maintenant calculer les statistiques au niveau des colonnes sur [!DNL Azure Data Lake Storage] (ADLS) des jeux de données avec la variable `COMPUTE STATISTICS` et `SHOW STATISTICS` Commandes SQL. Calculez les statistiques des colonnes sur l’ensemble du jeu de données, un sous-ensemble d’un jeu de données, toutes les colonnes ou un sous-ensemble de colonnes.
 
@@ -608,7 +612,7 @@ ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-04-01 00:
 >
 >`FILTER CONTEXT` calcule les statistiques sur un sous-ensemble du jeu de données en fonction de la condition de filtrage fournie, et `FOR COLUMNS` cible des colonnes spécifiques à des fins d’analyse.
 
-La sortie de la console s’affiche comme ci-dessous.
+La sortie de la console s’affiche comme illustré ci-dessous.
 
 ```console
   Statistics ID 
