@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Guide des informations d’identification de Query Service
 description: Adobe Experience Platform Query Service fournit une interface utilisateur qui permet d’écrire et d’exécuter des requêtes, d’afficher des requêtes précédemment exécutées et d’accéder aux requêtes enregistrées par les utilisateurs de votre entreprise.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: aed521bf50c301148c10b98021f1a3df0ed45278
 workflow-type: tm+mt
-source-wordcount: '1337'
-ht-degree: 5%
+source-wordcount: '1462'
+ht-degree: 4%
 
 ---
 
@@ -48,6 +48,10 @@ Le **[!UICONTROL Expiration des informations d’identification]** fournit les i
 
 Vous pouvez utiliser des informations d’identification non arrivant à expiration pour configurer une connexion plus permanente à un client externe.
 
+>[!NOTE]
+>
+>Les informations d’identification non expirantes présentent les limites suivantes :<br><ul><li>Les utilisateurs doivent se connecter avec leur nom d’utilisateur et leur mot de passe. `{technicalAccountId}:{credential}`. Vous trouverez plus d’informations dans la section [Génération des informations d’identification](#generate-credentials) .</li><li>Lors de la création des informations d’identification arrivant à expiration, un nouveau rôle avec un ensemble d’autorisations de base est créé pour permettre aux utilisateurs d’afficher les schémas et les jeux de données. L’autorisation &quot;gérer les requêtes&quot; est également affectée à ce rôle pour une utilisation avec Query Service.</li><li>Les clients tiers peuvent effectuer des opérations différentes de celles attendues lors de la mise en liste des objets de requête. Par exemple, certains clients tiers, tels que [!DNL DB Visualizer] n’affiche pas le nom de la vue dans le panneau de gauche. Cependant, le nom de la vue est accessible s’il est appelé dans une requête SELECT. De même, [!DNL PowerUI] peut ne pas répertorier les vues temporaires créées via SQL à sélectionner pour la création du tableau de bord.</li></ul>
+
 ### Conditions préalables
 
 Avant de pouvoir générer des informations d’identification non arrivant à expiration, vous devez effectuer les étapes suivantes dans Adobe Admin Console :
@@ -63,7 +67,7 @@ Pour en savoir plus sur l’affectation d’autorisations, consultez la document
 
 Toutes les autorisations requises sont maintenant configurées dans la console Adobe Developer pour que l’utilisateur puisse utiliser la fonction des informations d’identification arrivant à expiration.
 
-### Génération des informations d’identification
+### Génération des informations d’identification {#generate-credentials}
 
 Pour créer un ensemble d’informations d’identification non arrivant à expiration, revenez à l’interface utilisateur de Platform et sélectionnez **[!UICONTROL Requêtes]** dans le volet de navigation de gauche pour accéder à la fonction [!UICONTROL Requêtes] workspace. Sélectionnez ensuite le **[!UICONTROL Informations d’identification]** suivi de **[!UICONTROL Génération des informations d’identification]**.
 
