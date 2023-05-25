@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Gestion des étiquettes dʼutilisation des données pour les jeux de données à lʼaide dʼAPI
 description: LʼAPI Dataset Service vous permet dʼappliquer et de modifier des étiquettes dʼutilisation pour les jeux de données. LʼAPI fait partie des fonctionnalités de catalogue de données dʼAdobe Experience Platform, mais est distinct de lʼAPI Catalog Service qui gère les métadonnées du jeu de données.
 exl-id: 24a8d870-eb81-4255-8e47-09ae7ad7a721
-source-git-commit: 1f7a1bcf5aaf694ca2d3416c9c98f37b66adc69f
+source-git-commit: 9f3fa696ed60ce85fa93515e39716d89ec80f1ec
 workflow-type: tm+mt
-source-wordcount: '1153'
-ht-degree: 52%
+source-wordcount: '1151'
+ht-degree: 50%
 
 ---
 
@@ -103,7 +103,7 @@ L’exemple de requête de POST ci-dessous met à jour l’ensemble du jeu de do
 
 >[!NOTE]
 >
->Si des libellés existent actuellement pour le jeu de données en question, de nouveaux libellés ne peuvent être ajoutés que par le biais d’une requête de PUT, ce qui nécessite une `If-Match` en-tête . Une fois que des étiquettes ont été ajoutées à un jeu de données, une valeur `etag` est attribuée qui peut être utilisée pour mettre à jour ou supprimer les étiquettes ultérieurement.
+>Si des libellés existent actuellement pour le jeu de données en question, de nouveaux libellés ne peuvent être ajoutés que par le biais d’une requête de PUT, ce qui nécessite une `If-Match` en-tête . Une fois que des libellés ont été ajoutés à un jeu de données, le plus récent `etag` est requise pour mettre à jour ou supprimer les étiquettes ultérieurement.
 
 Pour récupérer la version la plus récente de lʼentité étiquette-jeu de données, envoyez une [requête GET](#look-up) au point d’entrée `/datasets/{DATASET_ID}/labels`. La valeur actuelle est renvoyée dans la réponse sous un en-tête `etag`. Lors de la mise à jour de libellés de jeux de données existants, il est recommandé dʼeffectuer dʼabord une requête de recherche pour le jeu de données afin de récupérer sa valeur `etag` la plus récente avant dʼutiliser cette valeur dans lʼen-tête `If-Match` de votre requête PUT ultérieure. 
 
