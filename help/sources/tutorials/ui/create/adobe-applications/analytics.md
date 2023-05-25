@@ -2,10 +2,10 @@
 title: Créer une connexion source Adobe Analytics dans l’interface utilisateur
 description: Découvrez comment créer une connexion source Adobe Analytics dans l’interface utilisateur pour importer des données client dans Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 1839e67d86a04762d93a5c35050e261fb1d1cf50
+source-git-commit: b8764b4b39aba43687c7ac0540d392a3aa808df4
 workflow-type: tm+mt
-source-wordcount: '2406'
-ht-degree: 63%
+source-wordcount: '2299'
+ht-degree: 59%
 
 ---
 
@@ -120,49 +120,54 @@ Platform détecte automatiquement tout conflit de noms conviviaux dans vos jeux 
 
 ![mapping](../../../../images/tutorials/create/analytics/mapping.png)
 
-Si des conflits de noms conviviaux existent entre votre suite de rapports source et votre schéma sélectionné, vous pouvez tout de même continuer à utiliser votre flux de données [!DNL Analytics], mais les descripteurs de champ ne seront pas modifiés. Vous pouvez également choisir de créer un autre schéma avec un jeu de descripteurs vierge.
-
-Sélectionnez **[!UICONTROL Suivant]** pour continuer.
-
-![caution](../../../../images/tutorials/create/analytics/caution.png)
+>[!TIP]
+>
+>Si des conflits de noms conviviaux existent entre votre suite de rapports source et votre schéma sélectionné, vous pouvez tout de même continuer à utiliser votre flux de données [!DNL Analytics], mais les descripteurs de champ ne seront pas modifiés. Vous pouvez également choisir de créer un autre schéma avec un jeu de descripteurs vierge.
 
 #### Mappings personnalisés
 
-Pour utiliser les fonctions de préparation de données et ajouter un nouveau mappage ou des champs calculés pour les attributs personnalisés, sélectionnez **[!UICONTROL Affichage des mappages personnalisés]**.
+Vous pouvez utiliser les fonctions de préparation de données pour ajouter un nouveau mappage personnalisé ou des champs calculés pour les attributs personnalisés. Pour ajouter des mappages personnalisés, sélectionnez **[!UICONTROL Personnalisé]**.
 
-![view-custom-mapping](../../../../images/tutorials/create/analytics/view-custom-mapping.png)
+![custom](../../../../images/tutorials/create/analytics/custom.png)
 
-Sélectionnez ensuite **[!UICONTROL Ajouter un nouveau mappage]**.
-
-Selon vos besoins, vous pouvez sélectionner l’une des options suivantes : **[!UICONTROL Ajouter un nouveau mappage]** ou **[!UICONTROL Ajouter un champ calculé]**.
-
-![add-new-mapping](../../../../images/tutorials/create/analytics/add-new-mapping.png)
-
-Un jeu de mappages vide s’affiche. Sélectionnez l’icône de mappage pour ajouter un champ source.
-
-![select-source-field](../../../../images/tutorials/create/analytics/select-source-field.png)
-
-Vous pouvez utiliser l’interface pour parcourir la structure du schéma source et identifier le nouveau champ source que vous souhaitez utiliser. Une fois que vous avez sélectionné le champ source à mapper, cliquez sur **[!UICONTROL Sélectionner]**.
-
-![select-mapping](../../../../images/tutorials/create/analytics/select-mapping.png)
-
-Sélectionnez ensuite l’icône de mappage sous [!UICONTROL Champ cible] pour mapper le champ source sélectionné à son champ cible correspondant.
-
-![select-target-field](../../../../images/tutorials/create/analytics/select-target-field.png)
-
-Tout comme pour le schéma source, vous pouvez utiliser l’interface pour parcourir la structure du schéma cible et sélectionner le champ cible à mapper. Une fois que vous avez sélectionné le champ cible correspondant, cliquez sur **[!UICONTROL Sélectionner]**.
-
-![select-target-mapping](../../../../images/tutorials/create/analytics/select-target-mapping.png)
-
-Une fois votre jeu de mappages personnalisé terminé, sélectionnez **[!UICONTROL Suivant]** pour continuer.
-
-![complete-custom-mapping](../../../../images/tutorials/create/analytics/complete-custom-mapping.png)
+Selon vos besoins, vous pouvez sélectionner l’une des options suivantes : **[!UICONTROL Ajouter un nouveau mappage]** ou **[!UICONTROL Ajouter un champ calculé]** et créez des mappages personnalisés pour vos attributs personnalisés. Pour obtenir des instructions complètes sur l’utilisation des fonctions de préparation de données, veuillez lire la section [Guide de l’interface utilisateur de la préparation de données](../../../../../data-prep/ui/mapping.md).
 
 La documentation suivante fournit d’autres ressources sur la compréhension de la préparation des données, des champs calculés et des fonctions de mappage :
 
 * [Présentation de la préparation des données](../../../../../data-prep/home.md)
 * [Fonctions de mappage de la préparation des données](../../../../../data-prep/functions.md)
 * [Ajouter des champs calculés](../../../../../data-prep/ui/mapping.md#calculated-fields)
+
+<!-- 
+To use Data Prep functions and add new mapping or calculated fields for custom attributes, select **[!UICONTROL View custom mappings]**.
+
+![view-custom-mapping](../../../../images/tutorials/create/analytics/view-custom-mapping.png)
+
+Next, select **[!UICONTROL Add new mapping]**.
+
+Depending on your needs, you can select either **[!UICONTROL Add new mapping]** or **[!UICONTROL Add calculated field]** from the options that appear. 
+
+![add-new-mapping](../../../../images/tutorials/create/analytics/add-new-mapping.png)
+
+An empty mapping set appears. Select the mapping icon to add a source field.
+
+![select-source-field](../../../../images/tutorials/create/analytics/select-source-field.png)
+
+You can use the interface to navigate through the source schema structure and identify the new source field that you want to use. Once you have selected the source field that you want to map, select **[!UICONTROL Select]**.
+
+![select-mapping](../../../../images/tutorials/create/analytics/select-mapping.png)
+
+Next, select the mapping icon under [!UICONTROL Target Field] to map your selected source field to its appropriate target field.
+
+![select-target-field](../../../../images/tutorials/create/analytics/select-target-field.png)
+
+Similar to the source schema, you can use the interface to navigate through the target schema structure and select the target field you want to map to. Once you have selected the appropriate target field, select **[!UICONTROL Select]**.
+
+![select-target-mapping](../../../../images/tutorials/create/analytics/select-target-mapping.png)
+
+With your custom mapping set completed, select **[!UICONTROL Next]** to proceed.
+
+![complete-custom-mapping](../../../../images/tutorials/create/analytics/complete-custom-mapping.png) -->
 
 ### Filtrage pour Real-time Customer Profile {#filtering-for-profile}
 
