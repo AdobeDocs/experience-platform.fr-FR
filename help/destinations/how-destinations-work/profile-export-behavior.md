@@ -2,10 +2,10 @@
 title: Comportement d’exportation de profils
 description: Découvrez comment le comportement d’exportation de profils varie entre les différents modèles d’intégration pris en charge dans les destinations Experience Platform.
 exl-id: 2be62843-0644-41fa-a860-ccd65472562e
-source-git-commit: a0400ab255b3b6a7edb4dcfd5c33a0f9e18b5157
+source-git-commit: c54fa206b673868ca3d0ccfa5b0936b83cfd3ed4
 workflow-type: tm+mt
 source-wordcount: '2933'
-ht-degree: 97%
+ht-degree: 93%
 
 ---
 
@@ -32,7 +32,7 @@ Prenez par exemple la [destination Facebook](/help/destinations/catalog/social/f
 * Nombre d&#39;enregistrements (maximum 10 000) ou
 * Intervalle de fenêtre de délai (30 minutes)
 
-Les seuils ci-dessus qui sont les premiers atteints déclenchent une exportation vers Facebook. Ainsi, dans le tableau de bord [!DNL Facebook Custom Audiences], vous pouvez voir des audiences provenant d’Experience Platform par incréments de 10 000 enregistrements. Vous pouvez voir 10 000 enregistrements toutes les 10 à 15 minutes, car les données sont traitées et agrégées plus rapidement que l’intervalle d’exportation de 30 minutes, et sont envoyées plus rapidement, donc environ toutes les 10 à 15 minutes jusqu’à ce que tous les enregistrements aient été traités. S’il n’y a pas suffisamment d’enregistrements pour constituer un lot de 10 000, le nombre d’enregistrements actuels est envoyé tel quel lorsque le seuil de la fenêtre de délai est atteint, de sorte que vous pouvez également voir des lots plus petits envoyés à Facebook.
+Les seuils ci-dessus qui sont les premiers atteints déclenchent une exportation vers Facebook. Ainsi, dans la variable [!DNL Facebook Custom Audiences] tableau de bord, vous pouvez voir des audiences provenant d’Experience Platform par 10 000 incréments d’enregistrement. Vous pouvez voir 10 000 enregistrements toutes les 10 à 15 minutes, car les données sont traitées et agrégées plus rapidement que l’intervalle d’exportation de 30 minutes et sont envoyées plus rapidement, donc environ toutes les 10 à 15 minutes jusqu’à ce que tous les enregistrements aient été traités. S’il n’y a pas suffisamment d’enregistrements pour constituer un lot de 10 000, le nombre d’enregistrements actuels est envoyé tel quel lorsque le délai limite est atteint, de sorte que vous pouvez également voir des lots plus petits envoyés à Facebook.
 
 Prenons un autre exemple, la [destination de l’API HTTP](/help/destinations/catalog/streaming/http-destination.md), qui a une politique *[d’agrégation de meilleurs effots](../destination-sdk/functionality/destination-configuration/aggregation-policy.md)*, avec `maxUsersPerRequest: 10`. Cela signifie qu’un maximum de dix profils seront agrégés avant qu’un appel HTTP ne soit déclenché vers cette destination, mais Experience Platform tente d’envoyer des profils vers la destination dès que le service de destinations reçoit des informations de réévaluation mises à jour d’un service en amont.
 
