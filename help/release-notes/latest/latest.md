@@ -2,9 +2,9 @@
 title: Notes de mise à jour d’Adobe Experience Platform
 description: Les notes de mise à jour de mai 2023 pour Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: e705d6c38bc1a81ee5d2c31a3097e1dba8f5cf7f
+source-git-commit: fc886dc0d7abb1df76c12edc423bc788b443a788
 workflow-type: tm+mt
-source-wordcount: '1360'
+source-wordcount: '1361'
 ht-degree: 31%
 
 ---
@@ -117,7 +117,7 @@ Adobe Experience Platform Identity Service vous offre la possibilité de mieux
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Prise en charge des identifiants de partenaire dans les applications Adobe Experience Cloud | Les identifiants de partenaire sont désormais disponibles dans Identity Service. Les identifiants de partenaire sont des identifiants utilisés par les partenaires de données pour représenter des personnes. Dans Real-time Customer Data Platform, les identifiants de partenaire sont principalement utilisés pour l’activation étendue de l’audience et l’enrichissement des données. Les identifiants de partenaire ne sont pas stockés dans le graphique d’identités. Pour plus d’informations, consultez la documentation sur [types d’identité](../../identity-service/namespaces.md#identity-types). |
+| Prise en charge des identifiants de partenaire dans les applications Adobe Experience Cloud [!BADGE Beta]{type=Informative} | Les identifiants de partenaire sont désormais disponibles dans Identity Service. Les identifiants de partenaire sont des identifiants utilisés par les partenaires de données pour représenter des personnes. Dans Real-time Customer Data Platform, les identifiants de partenaire sont principalement utilisés pour l’activation étendue de l’audience et l’enrichissement des données. Les identifiants de partenaire ne sont pas stockés dans le graphique d’identités. Pour plus d’informations, consultez la documentation sur [types d’identité](../../identity-service/namespaces.md#identity-types). |
 
 Pour en savoir plus sur Identity Service, consultez la [présentation d’Identity Service](../../identity-service/home.md)
 

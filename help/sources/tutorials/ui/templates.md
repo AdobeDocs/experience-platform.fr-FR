@@ -3,14 +3,19 @@ description: Découvrez comment utiliser des modèles dans l’interface utilisa
 title: Créer un flux de données de sources à l’aide de modèles dans l’interface utilisateur
 badge1: "Beta"
 exl-id: 48aa36ca-656d-4b9d-954c-48c8da9df1e9
-source-git-commit: 91d6832231d75c9dd23e91a5f1152eac61558fc5
+source-git-commit: 41694a96272819652c7176793f94a2de620d1d7a
 workflow-type: tm+mt
-source-wordcount: '1554'
+source-wordcount: '1601'
 ht-degree: 59%
 
 ---
 
-# Créer un flux de données de sources à l’aide de modèles dans l’interface utilisateur
+# Créer un flux de données de sources à l’aide de modèles dans l’interface utilisateur {#create-a-sources-dataflow-using-templates-in-the-ui}
+
+>[!CONTEXTUALHELP]
+>id="platform_sources_marketo_mapping"
+>title="Modèles de sources dans l’interface utilisateur de Platform"
+>abstract="Les modèles comprennent des ressources générées automatiquement telles que des schémas, des jeux de données, des identités, des règles de mappage, des espaces de noms d’identité et des flux de données que vous pouvez utiliser lors de l’importation de données d’une source vers Experience Platform. Vous pouvez mettre à jour des ressources générées automatiquement pour les personnaliser en fonction de vos cas d’utilisation."
 
 >[!IMPORTANT]
 >

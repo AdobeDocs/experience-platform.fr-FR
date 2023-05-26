@@ -4,19 +4,14 @@ solution: Experience Platform
 title: Mapper des champs pour la source Marketo Engage
 description: Les tableaux ci-dessous contiennent les mappages entre les champs des jeux de données Marketo et les champs XDM correspondants.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: ec42cf27c082611acb1a08500b7bbd23fc34d730
 workflow-type: tm+mt
-source-wordcount: '922'
+source-wordcount: '889'
 ht-degree: 100%
 
 ---
 
 # Mappages de champs [!DNL Marketo Engage] {#marketo-engage-field-mappings}
-
->[!CONTEXTUALHELP]
->id="platform_sources_marketo_mapping"
->title="Mappages de champs sources Marketo"
->abstract="Pour établir une connexion source entre Marketo et Platform, les champs de données sources Marketo doivent être mappés à leurs champs XDM cibles appropriés avant d’être ingérés dans Platform."
 
 Les tableaux ci-dessous contiennent les mappages entre les champs des neuf jeux de données [!DNL Marketo] et leurs champs de modèle de données d’expérience (XDM) correspondants.
 

@@ -2,9 +2,9 @@
 title: Présentation d’Identity Namespace
 description: Les espaces de noms d’identité sont des composants du Service d’identités qui servent d’indicateurs du contexte auquel une identité se rapporte. Par exemple, ils distinguent une valeur de "name@email.com" comme adresse électronique ou "443522" comme identifiant CRM numérique.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: 58fefcc0a590341922f0769a416e27cd1f13a617
+source-git-commit: fc886dc0d7abb1df76c12edc423bc788b443a788
 workflow-type: tm+mt
-source-wordcount: '1718'
+source-wordcount: '1719'
 ht-degree: 30%
 
 ---
@@ -48,7 +48,7 @@ Les types d’identité suivants sont disponibles dans [!DNL Platform]:
 | ID de périphérique | Les identifiants d’appareil identifient les appareils matériels, tels qu’IDFA (iPhone et iPad), GAID (Android) et RIDA (Roku), et peuvent être partagés par plusieurs personnes dans des foyers. |
 | Adresse e-mail | Les adresses électroniques sont souvent associées à une seule personne et peuvent donc être utilisées pour identifier cette personne sur différents canaux. Les identités de ce type comprennent des informations d’identification personnelle (PII). Cela indique que [!DNL Identity Service] pour gérer la valeur avec précaution. |
 | Identifiant non-humain | Les identifiants non-personnes sont utilisés pour stocker les identifiants qui nécessitent des espaces de noms, mais ne sont pas connectés à un cluster de personnes. Par exemple, un SKU de produit, des données liées aux produits, aux organisations ou aux magasins. |
-| Identifiant du partenaire | Les identifiants de partenaire sont des identifiants utilisés par les partenaires de données pour représenter des personnes. Les identifiants de partenaire sont souvent pseudonymes afin de ne pas révéler la véritable identité d&#39;une personne, et peuvent être probabilistes. Dans Real-time Customer Data Platform, les identifiants de partenaire sont principalement utilisés pour l’activation étendue de l’audience et l’enrichissement des données, et non pour la création de liens de graphiques d’identités déterministes. |
+| Identifiant du partenaire [!BADGE Beta]{type=Informative} | Les identifiants de partenaire sont des identifiants utilisés par les partenaires de données pour représenter des personnes. Les identifiants de partenaire sont souvent pseudonymes afin de ne pas révéler la véritable identité d&#39;une personne, et peuvent être probabilistes. Dans Real-time Customer Data Platform, les identifiants de partenaire sont principalement utilisés pour l’activation étendue de l’audience et l’enrichissement des données, et non pour la création de liens de graphiques d’identités déterministes. |
 | Numéro de téléphone | Les numéros de téléphone sont souvent associés à une seule personne et peuvent donc être utilisés pour identifier cette personne sur différents canaux. Les identités de ce type incluent des informations d’identification personnelle. Cela indique que [!DNL Identity Service] pour gérer la valeur avec précaution. |
 
 ### Espaces de noms standard {#standard}
