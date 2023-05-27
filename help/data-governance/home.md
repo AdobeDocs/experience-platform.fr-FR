@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Présentation de la gouvernance des données
 description: La gouvernance des données d’Adobe Experience Platform vous permet de gérer les données clients et de garantir la conformité aux réglementations, aux restrictions et aux politiques applicables à l’utilisation des données. Elle joue un rôle clé dans Experience Platform à différents niveaux, notamment dans le catalogage, la traçabilité des données, l’étiquetage de l’utilisation des données, les politiques d’utilisation des données et le contrôle de l’utilisation des données lors d’activités marketing
 exl-id: 00ca6bc2-1c58-4ea2-8bb5-30fd3fa5944a
-source-git-commit: dca5c9df82434d75238a0a80f15e5562cf2fa412
+source-git-commit: d45c813cf660d9bf738d09101536f1dfb41a1505
 workflow-type: tm+mt
-source-wordcount: '1495'
+source-wordcount: '1498'
 ht-degree: 90%
 
 ---
@@ -79,7 +79,7 @@ Pour plus d’informations, consultez la présentation des [libellés d’utilis
 
 Des politiques d’utilisation des données doivent être mises en œuvre pour que les libellés d’utilisation des données prennent en charge efficacement la conformité des données. Les politiques d’utilisation des données sont des règles qui décrivent les types d’actions marketing que vous êtes autorisé ou non à effectuer sur des données d’[!DNL Experience Platform].
 
-Un exemple d’action marketing peut être le souhait d’exporter un jeu de données vers un service tiers. Si une stratégie a été mise en place pour déclarer que les informations d’identification personnelle (PII) ne peuvent pas être exportées et qu’une étiquette &quot;I&quot; (données d’identité) a été appliquée au jeu de données, [!DNL Policy Service] empêche toute action qui exporterait ce jeu de données vers une destination tierce. Si l’une de ces tentatives d’action se produit, Policy Service envoie un message vous informant qu’une violation de politique d’utilisation des données s’est passée.
+Un exemple d’action marketing peut être le souhait d’exporter un jeu de données vers un service tiers. Si une stratégie a été mise en place pour déclarer que les informations d’identification personnelle (PII) ne peuvent pas être exportées et qu’une étiquette &quot;I&quot; (données d’identité) a été appliquée au niveau du champ ou au jeu de données, [!DNL Policy Service] empêche toute action qui exporterait ce jeu de données vers une destination tierce. Si l’une de ces tentatives d’action se produit, Policy Service envoie un message vous informant qu’une violation de politique d’utilisation des données s’est passée.
 
 Deux types de politiques sont disponibles :
 
