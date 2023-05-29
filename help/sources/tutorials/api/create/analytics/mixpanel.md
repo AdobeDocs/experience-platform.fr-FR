@@ -3,10 +3,10 @@ keywords: Experience Platform;accueil;rubriques populaires;sources;connecteurs;c
 title: (Version bêta) Création d’une connexion source et d’un flux de données pour Mixpanel à l’aide de l’API Flow Service
 description: Découvrez comment connecter Adobe Experience Platform à Mixpanel à l’aide de l’API Flow Service.
 exl-id: 804b876d-6fd5-4a28-b33c-4ecab1ba3333
-source-git-commit: 23a6f8ee23fb67290a5bcba2673a87ce74c9e1d3
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '2050'
-ht-degree: 64%
+ht-degree: 63%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 64%
 
 >[!NOTE]
 >
->La source [!DNL Mixpanel] est en version Beta. Voir la [présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de sources étiquetées bêta. 
+>La source [!DNL Mixpanel] est en version Beta. Voir [présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de sources étiquetées bêta.
 
 Le tutoriel suivant décrit les étapes à suivre pour créer une connexion source et un flux de données à importer [!DNL Mixpanel] données vers Adobe Experience Platform à l’aide de la variable [API de service de flux](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
 

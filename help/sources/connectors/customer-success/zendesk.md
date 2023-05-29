@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Présentation du connecteur source Zendesk
 description: Découvrez comment connecter Zendesk à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur.
 exl-id: 9f245783-949d-4f40-9cf3-8991b4b6d780
-source-git-commit: 61b694ca5fbd3548243663b3f1bff06aaca72434
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '391'
-ht-degree: 49%
+ht-degree: 46%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 49%
 
 >[!NOTE]
 >
->La source [!DNL Zendesk] est en version Beta. Voir la [présentation des sources](../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de sources étiquetées bêta.
+>La source [!DNL Zendesk] est en version Beta. Voir [présentation des sources](../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de sources étiquetées bêta.
 
 Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les bases de données, etc.
 

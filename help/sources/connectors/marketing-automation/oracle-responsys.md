@@ -5,10 +5,10 @@ description: Découvrez comment connecter Oracle Responsys à Adobe Experience P
 hide: true
 hidefromtoc: true
 exl-id: 806ae7e2-d4af-47d5-a3aa-561b69acc836
-source-git-commit: 784ec5f799c591185620e8376a6980b4930d914a
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '274'
-ht-degree: 100%
+ht-degree: 95%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->La source [!DNL Oracle Responsys] est en version bêta. Consulter la [présentation des sources](../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation des sources étiquetées bêta.
+>La source [!DNL Oracle Responsys] est en version bêta. Voir [Présentation des sources](../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de sources étiquetées bêta.
 
 Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous permettant de structurer, de libeller et d’améliorer les données entrantes à l’aide des services [!DNL Platform]. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les bases de données, etc.
 

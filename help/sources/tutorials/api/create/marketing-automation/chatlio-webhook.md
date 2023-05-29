@@ -3,7 +3,7 @@ title: Création d’une connexion source et d’un flux de données pour Chatli
 description: Découvrez comment connecter Adobe Experience Platform à Chatlio à l’aide de l’API Flow Service.
 badge: Version bêta
 exl-id: 867b8096-0841-4462-9888-e60c97c2115e
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '1458'
 ht-degree: 55%

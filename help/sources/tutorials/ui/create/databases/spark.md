@@ -5,10 +5,10 @@ title: Création d’une Apache Spark sur la connexion source Azure HDInsights d
 type: Tutorial
 description: Découvrez comment créer une connexion source Apache Spark sur Azure HDInsights à l’aide de l’interface utilisateur de Adobe Experience Platform.
 exl-id: 30d0b740-cec4-486f-9c9b-1579fd04f28b
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '496'
-ht-degree: 53%
+ht-degree: 51%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 53%
 
 >[!NOTE]
 >
-> Le [!DNL Apache Spark] on [!DNL Azure HDInsights] Le connecteur est en version bêta. Voir la [Présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs étiquetés Beta.
+> Le [!DNL Apache Spark] on [!DNL Azure HDInsights] Le connecteur est en version bêta. Voir [Présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs libellés en version bêta.
 
 Les connecteurs source d’Adobe Experience Platform permettent d’ingérer des données externes selon un calendrier précis. Ce tutoriel décrit les étapes à suivre pour créer une [!DNL Apache Spark] on [!DNL Azure HDInsights] connecteur source à l’aide de [!DNL Platform] de l’interface utilisateur.
 

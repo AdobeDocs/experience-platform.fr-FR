@@ -5,10 +5,10 @@ title: Création d’une connexion de base de stockage Azure Table à l’aide d
 type: Tutorial
 description: Découvrez comment connecter Azure Table Storage à Adobe Experience Platform à l’aide de l’API Flow Service.
 exl-id: 8ebd5d77-ed1f-47e1-8212-efb6c5e84ec1
-source-git-commit: 997423f7bf92469e29c567bd77ffde357413bf9e
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '475'
-ht-degree: 68%
+ht-degree: 65%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 68%
 
 >[!NOTE]
 >
->Le [!DNL Azure Table Storage] Le connecteur est en version bêta. Voir la [Présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs étiquetés Beta.
+>Le [!DNL Azure Table Storage] Le connecteur est en version bêta. Voir [Présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs libellés en version bêta.
 
 Une connexion de base représente la connexion authentifiée entre une source et Adobe Experience Platform.
 

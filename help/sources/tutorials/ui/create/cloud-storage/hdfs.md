@@ -5,10 +5,10 @@ title: Création d’une connexion source Apache HDFS dans l’interface utilisa
 type: Tutorial
 description: Découvrez comment créer une connexion source Apache Hadoop Distributed File System à l’aide de l’interface utilisateur de Adobe Experience Platform.
 exl-id: 3b8bf210-13b6-44e6-9090-152998f67452
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '492'
-ht-degree: 37%
+ht-degree: 35%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 37%
 
 >[!NOTE]
 >
->Le [!DNL Apache] Le connecteur HDFS est en version bêta. Voir la [Présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs étiquetés Beta.
+>Le [!DNL Apache] Le connecteur HDFS est en version bêta. Voir [Présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs libellés en version bêta.
 
 Connecteurs source dans [!DNL Adobe Experience Platform] offrir la possibilité d’ingérer des données provenant de l’extérieur sur une base planifiée ; Ce tutoriel décrit les étapes à suivre pour authentifier une [!DNL Apache Hadoop Distributed File System] (ci-après appelé &quot;HDFS&quot;) Connecteur source à l’aide de [!DNL Platform] de l’interface utilisateur.
 

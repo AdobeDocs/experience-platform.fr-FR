@@ -2,10 +2,10 @@
 title: Création d’une connexion source Google Ads dans l’interface utilisateur
 description: Découvrez comment créer une connexion source Google Ads à l’aide de l’interface utilisateur de Adobe Experience Platform.
 exl-id: 33dd2857-aed3-4e35-bc48-1c756a8b3638
-source-git-commit: ac87434c857a39f4be3714cba57519cbb4fa54a6
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '682'
-ht-degree: 29%
+ht-degree: 28%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 29%
 
 >[!NOTE]
 >
->La source Google Ads est en version bêta. Consulter la [présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation des sources étiquetées bêta.
+>La source Google Ads est en version bêta. Voir [Présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de sources étiquetées bêta.
 
 Ce tutoriel décrit les étapes à suivre pour créer une connexion source Google Ads à l’aide de l’interface utilisateur de Adobe Experience Platform.
 

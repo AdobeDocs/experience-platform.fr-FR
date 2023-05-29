@@ -5,10 +5,10 @@ title: Création d’une connexion source Phoenix dans l’interface utilisateur
 type: Tutorial
 description: Découvrez comment créer une connexion source Phoenix à l’aide de l’interface utilisateur de Adobe Experience Platform.
 exl-id: 2ed469bc-1c72-4f04-a5f0-6a0bb519a6c2
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '520'
-ht-degree: 53%
+ht-degree: 51%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 53%
 
 >[!NOTE]
 >
-> Le [!DNL Phoenix] Le connecteur est en version bêta. Voir la [Présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs étiquetés Beta.
+> Le [!DNL Phoenix] Le connecteur est en version bêta. Voir [Présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs libellés en version bêta.
 
 Les connecteurs source d’Adobe Experience Platform permettent d’ingérer des données externes selon un calendrier précis. Ce tutoriel décrit les étapes à suivre pour créer un connecteur source [!DNL Phoenix] à l’aide de l’interface utilisateur de [!DNL Platform].
 

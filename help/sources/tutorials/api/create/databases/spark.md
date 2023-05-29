@@ -5,10 +5,10 @@ title: Création d’une Apache Spark sur une connexion de base Azure HDInsights
 type: Tutorial
 description: Découvrez comment connecter Apache Spark sur Azure HDInsights à Adobe Experience Platform à l’aide de l’API Flow Service.
 exl-id: 1f7ca86e-32f4-45f7-92c2-f87c5c0c4ea4
-source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '500'
-ht-degree: 61%
+ht-degree: 59%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 61%
 
 >[!NOTE]
 >
->Le [!DNL Apache Spark] on [!DNL Azure HDInsights] Le connecteur est en version bêta. Voir la [Présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs étiquetés Beta.
+>Le [!DNL Apache Spark] on [!DNL Azure HDInsights] Le connecteur est en version bêta. Voir [Présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs libellés en version bêta.
 
 Une connexion de base représente la connexion authentifiée entre une source et Adobe Experience Platform.
 

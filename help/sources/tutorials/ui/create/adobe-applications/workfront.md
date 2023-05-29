@@ -3,10 +3,10 @@ keywords: Experience Platform;accueil;rubriques populaires;
 title: (Version bêta) Créer une connexion source Adobe Workfront dans l’interface utilisateur
 description: Ce tutoriel décrit les étapes à suivre pour créer une connexion source Adobe Workfront afin d’importer vos données Workfront dans Adobe Experience Platform à l’aide de l’interface utilisateur.
 exl-id: f82e852a-c9d1-4ecc-bc54-2b39d3b4cc1e
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '771'
-ht-degree: 100%
+ht-degree: 98%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->La source Adobe Workfront est en version bêta. Voir la [présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de sources étiquetées bêta. 
+>La source Adobe Workfront est en version bêta. Voir [présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de sources étiquetées bêta.
 
 Ce tutoriel décrit les étapes à suivre pour créer une connexion source Adobe Workfront afin d’importer vos données Workfront dans Adobe Experience Platform à l’aide de l’interface utilisateur.
 

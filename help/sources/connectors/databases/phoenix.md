@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Présentation du connecteur source Phoenix
 description: Découvrez comment connecter Phoenix à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur.
 exl-id: 45e6ef18-a0b7-4bb2-b099-b2a878e96637
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '244'
-ht-degree: 61%
+ht-degree: 57%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 61%
 
 >[!NOTE]
 >
->Le [!DNL Phoenix] Le connecteur est en version bêta. Voir la [Présentation des sources](../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs étiquetés Beta.
+>Le [!DNL Phoenix] Le connecteur est en version bêta. Voir [Présentation des sources](../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs libellés en version bêta.
 
 Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les bases de données, etc.
 

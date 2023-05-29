@@ -3,10 +3,10 @@ keywords: Experience Platform;accueil;rubriques populaires;
 title: (Version bêta) Source Adobe Workfront
 description: Adobe Workfront est une application de gestion du travail marketing qui vous permet de gérer l’ensemble du cycle de vie du travail en un seul endroit. Workfront comprend des outils de créations de rapports et d’analyse que vous pouvez utiliser pour mieux comprendre et optimiser le flux de travail dans votre entreprise.
 exl-id: ea714278-d84d-4929-9a34-81fc5fb70871
-source-git-commit: a9887535b12b8c4aeb39bb5a6646da88db4f0308
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '281'
-ht-degree: 100%
+ht-degree: 96%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->La source Adobe Workfront est en version bêta. Voir la [Présentation des sources](../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs étiquetés bêta.
+>La source Adobe Workfront est en version bêta. Voir [Présentation des sources](../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs libellés en version bêta.
 
 Adobe Workfront est une application de gestion du travail marketing qui vous permet de gérer l’ensemble du cycle de vie du travail en un seul endroit. Workfront comprend des outils de créations de rapports et d’analyse que vous pouvez utiliser pour mieux comprendre et optimiser le flux de travail dans votre entreprise.
 

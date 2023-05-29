@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Présentation générique du connecteur source de l’API REST
 description: Découvrez comment connecter l’API REST générique à Adobe Experience Platform à l’aide des API ou de l’interface utilisateur.
 exl-id: e3449e33-7261-4aa2-bce9-5530eb4fcc68
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '228'
-ht-degree: 55%
+ht-degree: 50%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 55%
 
 >[!NOTE]
 >
->La source [!DNL Generic REST API] est en version Beta. Voir la [Présentation des sources](../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs étiquetés Beta.
+>La source [!DNL Generic REST API] est en version Beta. Voir [Présentation des sources](../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs libellés en version bêta.
 
 Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous permettant de structurer, de libeller et d’améliorer les données entrantes à l’aide des services [!DNL Platform]. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les bases de données, etc.
 

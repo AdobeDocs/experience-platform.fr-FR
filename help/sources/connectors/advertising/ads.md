@@ -3,10 +3,10 @@ keywords: Experience Platform;accueil;rubriques les plus consultées;publicités
 title: Présentation de la source Google Ads
 description: Découvrez comment connecter Google Ads à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur.
 exl-id: 1f6257e0-213c-4723-a240-511c11c5833c
-source-git-commit: b732fa1f4afb71e7b8c3276335b371d0f8ef888d
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '233'
-ht-degree: 67%
+ht-degree: 62%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 67%
 
 >[!NOTE]
 >
->La source [!DNL Google Ads] est en version Beta. Voir la [Présentation des sources](../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs étiquetés Beta.
+>La source [!DNL Google Ads] est en version Beta. Voir [Présentation des sources](../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs libellés en version bêta.
 
 Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous permettant de structurer, de libeller et d’améliorer les données entrantes à l’aide des services [!DNL Platform]. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les bases de données, etc.
 

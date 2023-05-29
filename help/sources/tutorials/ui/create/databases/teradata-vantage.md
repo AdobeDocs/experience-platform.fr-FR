@@ -3,10 +3,10 @@ keywords: Experience Platform;accueil;rubriques les plus consultées;Teradata Va
 title: Création d’une connexion à la source de l’offre Teradata dans l’interface utilisateur
 description: Découvrez comment créer une connexion source Teradata Vantage à l’aide de l’interface utilisateur de Adobe Experience Platform.
 exl-id: 3fdb09fa-128a-477b-9144-d4ef3ed18ea6
-source-git-commit: 322b9aa5b817276eb4b56daf6e410944591c1d51
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '394'
-ht-degree: 42%
+ht-degree: 40%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 42%
 
 >[!NOTE]
 >
-> La source [!DNL Teradata Vantage] est en version bêta. Consulter la [présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation des sources étiquetées bêta.
+> La source [!DNL Teradata Vantage] est en version Beta. Voir [Présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de sources étiquetées bêta.
 
 Ce tutoriel décrit les étapes à suivre pour créer une [!DNL Teradata Vantage] connecteur source à l’aide de l’interface utilisateur de Adobe Experience Platform.
 

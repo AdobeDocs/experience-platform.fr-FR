@@ -3,7 +3,7 @@ title: Présentation de la source Pendo
 description: Découvrez comment connecter Pendo à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur en utilisant des webhooks
 badge: Version bêta
 exl-id: 376f18ef-1eea-4c42-8041-6fadb5906e9b
-source-git-commit: cfe5f34316e9db072f0a320143354f2771b4a3a9
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '370'
 ht-degree: 20%

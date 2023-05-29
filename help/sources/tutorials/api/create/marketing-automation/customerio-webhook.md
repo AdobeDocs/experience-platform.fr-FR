@@ -3,10 +3,10 @@ title: Création d’une connexion source et d’un flux de données pour Custom
 description: Découvrez comment connecter Adobe Experience Platform à Customer.io à l’aide de l’API Flow Service.
 badge: Version bêta
 exl-id: 1c84d818-428f-4097-9f6f-ef0cf1a04785
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '1457'
-ht-degree: 56%
+ht-degree: 55%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 56%
 
 >[!NOTE]
 >
->La source [!DNL Customer.io] est en version Beta. Voir la [présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de sources étiquetées bêta. 
+>La source [!DNL Customer.io] est en version Beta. Voir [présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de sources étiquetées bêta.
 
 Le tutoriel suivant vous guide tout au long des étapes de création d’un [!DNL Customer.io] connexion source et flux de données à importer [[!DNL Customer.io]](https://customer.io/) données d’événement vers Adobe Experience Platform à l’aide de la variable [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 

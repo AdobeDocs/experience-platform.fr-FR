@@ -2,10 +2,10 @@
 title: Création d’une connexion source aux comptes et contacts SugarCRM dans l’interface utilisateur
 description: Découvrez comment créer une connexion source aux comptes et contacts SugarCRM à l’aide de l’interface utilisateur de Adobe Experience Platform.
 exl-id: 45840d7e-4c19-4720-8629-be446347862d
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '779'
-ht-degree: 41%
+ht-degree: 39%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 41%
 
 >[!NOTE]
 >
->La source [!DNL SugarCRM Accounts & Contacts] est en version Beta. Voir la [présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de sources étiquetées bêta. 
+>La source [!DNL SugarCRM Accounts & Contacts] est en version Beta. Voir [présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de sources étiquetées bêta.
 
 Ce tutoriel décrit les étapes à suivre pour créer une [!DNL SugarCRM Accounts & Contacts] connexion source à l’aide de l’interface utilisateur de Adobe Experience Platform.
 

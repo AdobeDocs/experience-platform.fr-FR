@@ -4,10 +4,10 @@ description: Découvrez comment connecter SugarCRM à Adobe Experience Platform 
 badge: Version bêta
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: 03fbc4e9-974d-494e-8463-756c96665fd5
-source-git-commit: 0cc4eab97dcd56d2b1d679cf5f35932976d22634
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '403'
-ht-degree: 43%
+ht-degree: 40%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 43%
 
 >[!NOTE]
 >
->La source [!DNL SugarCRM] est en version Beta. Voir la [présentation des sources](../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de sources étiquetées bêta.
+>La source [!DNL SugarCRM] est en version Beta. Voir [présentation des sources](../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de sources étiquetées bêta.
 
 Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les bases de données, etc.
 

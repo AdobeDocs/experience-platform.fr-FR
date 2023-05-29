@@ -2,10 +2,10 @@
 title: Création d’une connexion source d’événements SugarCRM dans l’interface utilisateur
 description: Découvrez comment créer une connexion source d’événements SugarCRM à l’aide de l’interface utilisateur de Adobe Experience Platform.
 exl-id: db346ec0-2c57-4b82-8a39-f15d4cd377d4
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '663'
-ht-degree: 47%
+ht-degree: 45%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 47%
 
 >[!NOTE]
 >
->La source [!DNL SugarCRM Events] est en version Beta. Voir la [présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de sources étiquetées bêta. 
+>La source [!DNL SugarCRM Events] est en version Beta. Voir [présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de sources étiquetées bêta.
 
 Ce tutoriel décrit les étapes à suivre pour créer une [!DNL SugarCRM Events] connexion source à l’aide de l’interface utilisateur de Adobe Experience Platform.
 

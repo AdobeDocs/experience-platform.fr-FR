@@ -3,10 +3,10 @@ keywords: Experience Platform;accueil;rubriques les plus consultées;API REST g�
 title: Création d’une connexion à la source de l’API REST générique dans l’interface utilisateur
 type: Tutorial
 description: Découvrez comment créer une connexion source de l’API REST générique à l’aide de l’interface utilisateur de Adobe Experience Platform.
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '637'
-ht-degree: 38%
+ht-degree: 36%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 38%
 
 >[!NOTE]
 >
-> La source [!DNL Generic REST API] est en version Beta. Voir la [Présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs étiquetés Beta.
+> La source [!DNL Generic REST API] est en version Beta. Voir [Présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs libellés en version bêta.
 
 Ce tutoriel décrit les étapes à suivre pour créer une [!DNL Generic REST API] connecteur source à l’aide de l’interface utilisateur de Adobe Experience Platform.
 

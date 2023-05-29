@@ -5,10 +5,10 @@ title: Création d’une IBM [!DNL IBM DB2] Connexion de base à l’aide de l�
 type: Tutorial
 description: Découvrez comment connecter IBM [!DNL IBM DB2] vers Adobe Experience Platform à l’aide de l’API Flow Service.
 exl-id: 83c1dbe6-975f-4e3b-a7bf-166eb5106dd2
-source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '470'
-ht-degree: 51%
+ht-degree: 48%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 51%
 
 >[!NOTE]
 >
->IBM [!DNL IBM DB2] Le connecteur est en version bêta. Voir la [Présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs étiquetés Beta.
+>IBM [!DNL IBM DB2] Le connecteur est en version bêta. Voir [Présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs libellés en version bêta.
 
 Une connexion de base représente la connexion authentifiée entre une source et Adobe Experience Platform.
 
