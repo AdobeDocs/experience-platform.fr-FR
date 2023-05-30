@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Définition des champs XDM dans l’interface utilisateur
 description: Découvrez comment définir des champs XDM dans l’interface utilisateur de l’Experience Platform.
 exl-id: 2adb03d4-581b-420e-81f8-e251cf3d9fb9
-source-git-commit: bed627b945c5392858bcc2dce18e9bbabe8bcdb6
+source-git-commit: 765079f084dce316d321fbac5aee9e387373ba00
 workflow-type: tm+mt
-source-wordcount: '1414'
+source-wordcount: '1505'
 ht-degree: 4%
 
 ---
@@ -86,7 +86,7 @@ Lors de la définition d’un nouveau champ, d’autres options de configuration
 
 | Propriété du champ | Types compatibles | Description |
 | --- | --- | --- |
-| [!UICONTROL Valeur par défaut] | [!UICONTROL Chaîne], [!UICONTROL Double], [!UICONTROL Long], [!UICONTROL Entier], [!UICONTROL Court], [!UICONTROL Octet], [!UICONTROL Booléen] | Une valeur par défaut qui sera affectée à ce champ si aucune autre valeur n’est fournie pendant l’ingestion. Cette valeur doit être conforme au type sélectionné du champ. |
+| [!UICONTROL Valeur par défaut] | [!UICONTROL Chaîne], [!UICONTROL Double], [!UICONTROL Long], [!UICONTROL Entier], [!UICONTROL Court], [!UICONTROL Octet], [!UICONTROL Booléen] | Valeur par défaut attribuée à ce champ si aucune autre valeur n’est fournie pendant l’ingestion. Cette valeur doit être conforme au type sélectionné du champ.<br><br>Les valeurs par défaut ne sont pas enregistrées dans le jeu de données au moment de l’ingestion, car elles peuvent changer au fil du temps. Les valeurs par défaut définies dans le schéma sont déduites par les services et applications Platform en aval lorsqu’ils lisent les données du jeu de données. Par exemple, lors de l’interrogation des données à l’aide de Query Service, si l’attribut a une valeur NULL, mais que la valeur par défaut est définie sur `5` au niveau du schéma, Query Service doit renvoyer la variable `5` au lieu de NULL. Notez que ce comportement n’est actuellement pas uniforme pour tous les services AEP. |
 | [!UICONTROL Modèle] | [!UICONTROL Chaîne] | A [expression régulière](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) que la valeur de ce champ doit être conforme pour être acceptée lors de l’ingestion. |
 | [!UICONTROL Format] | [!UICONTROL Chaîne] | Effectuez une sélection dans une liste de formats prédéfinis pour les chaînes auxquelles la valeur doit se conformer. Les formats disponibles sont les suivants : <ul><li>[[!UICONTROL date-time]](https://tools.ietf.org/html/rfc3339)</li><li>[[!UICONTROL e-mail]](https://tools.ietf.org/html/rfc2822)</li><li>[[!UICONTROL hostname]](https://tools.ietf.org/html/rfc1123#page-13)</li><li>[[!UICONTROL ipv4]](https://tools.ietf.org/html/rfc791)</li><li>[[!UICONTROL ipv6]](https://tools.ietf.org/html/rfc2460)</li><li>[[!UICONTROL uri]](https://tools.ietf.org/html/rfc3986)</li><li>[[!UICONTROL référence uri]](https://tools.ietf.org/html/rfc3986#section-4.1)</li><li>[[!UICONTROL url-template]](https://tools.ietf.org/html/rfc6570)</li><li>[[!UICONTROL json-pointer]](https://tools.ietf.org/html/rfc6901)</li></ul> |
 | [!UICONTROL Longueur minimale] | [!UICONTROL Chaîne] | Nombre minimum de caractères que doit contenir la chaîne pour que la valeur soit acceptée lors de l’ingestion. |
