@@ -2,10 +2,10 @@
 title: Notes de mise à jour d’Adobe Experience Platform
 description: Les notes de mise à jour de mai 2023 pour Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: fc886dc0d7abb1df76c12edc423bc788b443a788
+source-git-commit: 43f505c6d3871e6ebc7d644aef6ec3b71f9fc2bc
 workflow-type: tm+mt
-source-wordcount: '1361'
-ht-degree: 31%
+source-wordcount: '1559'
+ht-degree: 36%
 
 ---
 
@@ -33,9 +33,11 @@ Mises à jour des fonctionnalités existantes dans Adobe Experience Platform 
 - [Gouvernance des données](#data-governance)
 - [Ingestion des données](#data-ingestion)
 - [Destinations](#destinations)
+- [Modèle de données d’expérience (XDM)](#xdm)
 - [Service d’identités](#identity-service)
 - [Query Service](#query-service)
 - [Sources](#sources)
+
 
 ## Collecte de données {#data-collection}
 
@@ -108,6 +110,24 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 - Nous avons corrigé une limitation dans la destination de stockage dans le cloud SFTP (bêta), où les utilisateurs n’étaient pas en mesure de personnaliser la valeur du paramètre de port. La valeur est désormais modifiable lors de la configuration d’une connexion de destination SFTP (bêta) via le [API](/help/destinations/api/activate-segments-file-based-destinations.md) ou [Interface utilisateur](/help/destinations/catalog/cloud-storage/sftp.md#authentication-information).
 
 Pour des informations plus générales sur les destinations, consultez la [présentation des destinations](../../destinations/home.md).
+
+## Modèle de données d’expérience (XDM) {#xdm}
+
+XDM est une spécification Open Source qui fournit des structures et des définitions communes (schémas) pour les données introduites dans Adobe Experience Platform. En adhérant aux normes XDM, toutes les données d’expérience client peuvent être intégrées dans une représentation commune afin de fournir des informations plus rapidement et de manière plus intégrée. Vous pouvez obtenir des informations précieuses à partir des actions des clients, définir des types de clients par le biais de segments et utiliser les attributs du client à des fins de personnalisation.
+
+**Composants XDM mis à jour**
+
+| Type de composant | Nom | Description |
+| --- | --- | --- |
+| Groupe de champs | (Multiple) | Plusieurs champs pour [Article de l’offre](https://github.com/adobe/xdm/pull/1720/files) ont été mis à jour afin de supprimer une hiérarchie double du schéma. |
+| Groupe de champs | [[!UICONTROL XDM Individual Prospect Profile]](https://github.com/adobe/xdm/pull/1721/files) | Le `partnerProspect` l’option pour les balises de métadonnées a été ajoutée à la fonction [!UICONTROL Profil XDM Individual Prospect] classe . |
+| Type de données | (Multiple) | Plusieurs champs ont été ajoutés pour le [!UICONTROL Informations détaillées sur le média] datatype. |
+| Type de données | [[!UICONTROL Informations détaillées sur la session]](https://github.com/adobe/xdm/pull/1716/files) | Un nouveau champ a été ajouté pour indiquer si une redirection s’est produite. |
+| Groupe de champs | [[!UICONTROL Détails de l’interaction MediaAnalytics]](https://github.com/adobe/xdm/pull/1716/files) | Un nouveau champ relatif aux rapports multimédia a été ajouté. |
+
+{style="table-layout:auto"}
+
+Pour plus d’informations sur XDM dans Platform, consultez la [présentation du système XDM](../../xdm/home.md).
 
 ## Service d’identités {#identity-service}
 
