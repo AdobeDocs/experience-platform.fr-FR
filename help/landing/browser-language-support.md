@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Prise en charge du navigateur et de la langue pour l’interface utilisateur Experience Platform
 description: Adobe Experience Platform est l’un des meilleurs systèmes ouverts, flexibles et performants du marché permettant de créer et de gérer des solutions complètes qui optimisent l’expérience client. Experience Platform permet aux entreprises de centraliser et de normaliser les données et le contenu des clients à partir de n’importe quel système et d’appliquer la science des données et le machine learning afin d’améliorer considérablement la conception et la diffusion d’expériences riches et personnalisées.
 exl-id: 1b74aede-55df-4e81-8360-e49d1932b373
-source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
+source-git-commit: 74e6c2a56da8455bbecd301ed7e5ad10c0366dc5
 workflow-type: tm+mt
-source-wordcount: '248'
+source-wordcount: '256'
 ht-degree: 40%
 
 ---
@@ -38,7 +38,13 @@ L’interface utilisateur de Platform est actuellement disponible dans les langu
 * Anglais
 * Français
 * Allemand
+* Espagnol
 * Japonais
+* Italien
+* Coréen
+* Chinois (taïwanais)
+* Chinois (traditionnel)
+* Portugais
 
 ### Modification de la langue par défaut
 
