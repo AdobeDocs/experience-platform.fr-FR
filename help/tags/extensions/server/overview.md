@@ -2,10 +2,10 @@
 title: Référence des extensions de transfert d’événement
 description: Recherchez la documentation pour les extensions de transfert d’événement dans Adobe Experience Platform.
 exl-id: e7b42241-b41c-4d12-8551-4df14e3c9b74
-source-git-commit: 2fdaa1921110b38c7e97ed4889a238d655ef88a1
+source-git-commit: 3c2ada6e5dec7cc95fbcca7e19d944ca06097edc
 workflow-type: tm+mt
-source-wordcount: '158'
-ht-degree: 51%
+source-wordcount: '169'
+ht-degree: 53%
 
 ---
 
@@ -31,10 +31,12 @@ Vous trouverez ci-dessous une liste de la documentation relative aux extensions 
 * [ Adobe Experience Platform Cloud Connector ](./cloud-connector/overview.md)
 * [[!DNL AWS]](./aws/overview.md)
 * [[!DNL Braze]](./braze/overview.md)
+* [Connecteur cloud pour Google Analytics](https://exchange.adobe.com/apps/ec/106542)*
 * [Base](./core/overview.md)
 * [API d’événement Epsilon](https://exchange.adobe.com/apps/ec/109127)*
 * [Conversions améliorées de Google Ads](./google-ads-enhanced-conversions/overview.md)
 * [[!DNL Mailchimp] Edge](./mailchimp/overview.md)
+* [[!DNL Meta] API de conversion](./meta/overview.md)
 * [[!UICONTROL Microsoft Azure]](./azure/overview.md)
 * [[!DNL Mixpanel]](./mixpanel/overview.md)
 * [Pega Customer Decision Hub](https://exchange.adobe.com/apps/ec/107597)*
