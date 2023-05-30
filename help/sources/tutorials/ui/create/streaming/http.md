@@ -1,14 +1,11 @@
 ---
-keywords: Experience Platform;accueil;rubriques les plus consultées;connexion en continu;créer une connexion en continu;guide de l’interface utilisateur;tutoriel;créer une connexion en continu;ingestion en continu;ingestion ;
-solution: Experience Platform
 title: Création d’une connexion en continu d’API HTTP à l’aide de l’interface utilisateur
-type: Tutorial
 description: Ce guide de l’interface utilisateur vous aidera à créer une connexion en continu à l’aide d’Adobe Experience Platform.
 exl-id: 7932471c-a9ce-4dd3-8189-8bc760ced5d6
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: de721d204cda8e55c72ac5f530b89b2275d94306
 workflow-type: tm+mt
-source-wordcount: '1058'
-ht-degree: 27%
+source-wordcount: '1000'
+ht-degree: 28%
 
 ---
 
@@ -71,7 +68,7 @@ Une fois les données chargées, vous pouvez utiliser le côté droit de l’int
 
 Le [!UICONTROL Mappage] s’affiche, fournissant une interface pour mapper les données source à un jeu de données Platform.
 
-Les fichiers parquet doivent être conformes à XDM et ne nécessitent pas de configurer manuellement le mappage, tandis que les fichiers CSV nécessitent que vous configuriez explicitement le mappage, mais vous permettent de sélectionner les champs de données source à mapper. Les fichiers JSON, s’ils sont marqués comme une plainte XDM, ne nécessitent pas de configuration manuelle. Cependant, s’il n’est pas marqué comme compatible XDM, il vous faudra configurer explicitement le mappage.
+Le [!DNL HTTP API] source prend en charge l’ingestion de fichiers JSON. Les fichiers JSON ne nécessitent pas de configuration manuelle s’ils sont marqués comme XDM-réclamation. Si ce n’est pas le cas, vous devez configurer explicitement le mappage.
 
 Sélectionnez un jeu de données dans lequel ingérer les données entrantes. Vous pouvez utiliser un jeu de données existant ou en créer un nouveau.
 
@@ -88,7 +85,6 @@ Pour utiliser un jeu de données existant, sélectionnez **[!UICONTROL Jeu de do
 ![existing-dataset](../../../../images/tutorials/create/http/existing-dataset.png)
 
 ### Mappage des champs standard
-
 
 Selon vos besoins, vous pouvez choisir de mapper directement des champs ou d’utiliser des fonctions de préparation de données pour transformer les données sources afin d’obtenir des valeurs informatisées ou calculées. Pour obtenir des instructions complètes sur l’utilisation de l’interface du mappeur et des champs calculés, reportez-vous à la section [Guide de l’interface utilisateur de la préparation de données](../../../../../data-prep/ui/mapping.md).
 
