@@ -3,10 +3,10 @@ keywords: les destinations ; questions; aux questions fréquentes; faq; faq sur 
 title: Questions fréquentes
 description: Réponses aux questions les plus fréquemment posées sur les destinations Adobe Experience Platform
 exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
-source-git-commit: a6fe0f5a0c4f87ac265bf13cb8bba98252f147e0
+source-git-commit: abb6b598a2ec1f7589cb99204b6ccc2d4b55b5ec
 workflow-type: tm+mt
-source-wordcount: '864'
-ht-degree: 9%
+source-wordcount: '1364'
+ht-degree: 6%
 
 ---
 
@@ -104,3 +104,53 @@ Pour obtenir des explications détaillées sur les exigences de correspondance d
 **Quel type d’identités puis-je activer dans [!DNL LinkedIn]?**
 
 [!DNL LinkedIn Matched Audiences] prend en charge l’activation des identités suivantes : les emails hachés, [!DNL GAID], et [!DNL IDFA].
+
+## Personnalisation de la même page et de la page suivante via les destinations Adobe Target et personnalisation personnalisée {#same-next-page-personalization}
+
+**Dois-je utiliser le SDK Web Experience Platform pour envoyer des audiences et des attributs à Adobe Target ?**
+
+Non, [SDK Web](../edge/home.md) n’est pas nécessaire pour activer les audiences vers [Adobe Target](catalog/personalization/adobe-target-connection.md).
+
+Cependant, si [[!DNL at.js]](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html?lang=en) est utilisée à la place du SDK Web, seule la personnalisation de session suivante est prise en charge.
+
+Pour [personnalisation de la même page et de la page suivante](ui/activate-edge-personalization-destinations.md) , vous devez utiliser l’une des méthodes suivantes : [SDK Web](../edge/home.md) ou le [API du serveur réseau Edge](../server-api/overview.md). Consultez la documentation relative à [activation des audiences vers les destinations de périphérie](ui/activate-edge-personalization-destinations.md) pour plus d’informations sur l’implémentation.
+
+**Le nombre d’attributs que je peux envoyer de Real-time Customer Data Platform vers Adobe Target ou vers une destination de personnalisation personnalisée est-il limité ?**
+
+Oui, les cas d’utilisation de la personnalisation de la même page et de la page suivante prennent en charge un maximum de 30 attributs par environnement de test lors de l’activation d’audiences vers des destinations Adobe Target ou de personnalisation personnalisée. Pour plus d’informations sur les barrières de sécurité d’activation, voir [documentation sur les barrières de sécurité](guardrails.md#edge-destinations-activation).
+
+**Quels types d’attributs sont pris en charge pour l’activation (par exemple, tableaux, cartes, etc.) ?**
+
+Actuellement, seuls les attributs de niveau feuille sont pris en charge pour l’activation.
+
+<!-- **Is there a limit on the number of audiences that can be activated to Adobe Target and Custom Personalization destinations?**
+
+Yes, you can activate a maximum of 150 edge audiences per sandbox.  For more information on activation guardrails, see the [default guardrails for activation](guardrails.md#edge-destinations-activation). -->
+
+**Après avoir créé une audience dans Experience Platform, combien de temps faudra-t-il pour qu’elle soit disponible pour les cas d’utilisation de la segmentation Edge ?**
+
+Les définitions d’audience sont propagées à la variable [Edge Network](../edge/home.md) jusqu&#39;à une heure. Cependant, si une audience est activée au cours de cette première heure, certains visiteurs qui auraient pu être qualifiés pour l’audience pourraient être manqués.
+
+**Où puis-je voir les attributs activés dans Adobe Target ?**
+
+Les attributs peuvent être utilisés dans Target dans [JSON](https://experienceleague.adobe.com/docs/target/using/experiences/offers/create-json-offer.html) et [HTML](https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html?lang=fr) offres.
+
+**Puis-je créer une destination sans flux de données, puis ajouter un flux de données à la même destination ultérieurement ?**
+
+Cette fonctionnalité n’est actuellement pas prise en charge via l’interface utilisateur Destinations . Si vous avez besoin d’aide dans ce cas, contactez votre représentant Adobe.
+
+**Que se passe-t-il si je supprime une destination Adobe Target ?**
+
+Lorsque vous supprimez une destination, toutes les audiences et tous les attributs mappés sous la destination sont supprimés d’Adobe Target et ils sont également supprimés du réseau Edge.
+
+**L’intégration fonctionne-t-elle à l’aide de l’API Edge Network Server ?**
+
+Oui, l’API Edge Network Server fonctionne avec la destination de personnalisation personnalisée. Comme les attributs de profil peuvent contenir des données sensibles, pour protéger ces données, la destination de personnalisation personnalisée exige que vous utilisiez l’API Edge Network Server pour la collecte des données. En outre, tous les appels API doivent être effectués dans un [contexte authentifié](../server-api/authentication.md).
+
+**Je ne peux avoir qu’une seule stratégie de fusion principale. Puis-je créer des audiences qui utilisent une autre stratégie de fusion et qui les envoient toujours à Adobe Target en tant que segments en continu ?**
+
+Non. Toutes les audiences que vous souhaitez activer dans Adobe Target doivent utiliser un fichier principal sur le serveur. [stratégie de fusion](../profile/merge-policies/ui-guide.md).
+
+**Les stratégies Data Usage Labeling and Enforcement (DULE) et Consent sont-elles appliquées ?**
+
+Oui. Le [Stratégies de gouvernance et de consentement des données](../data-governance/home.md) l’activation des attributs sélectionnés sera régie par les actions marketing créées et associées aux actions marketing sélectionnées.
