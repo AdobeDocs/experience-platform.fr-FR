@@ -3,10 +3,10 @@ description: Découvrez comment utiliser des modèles dans l’interface utilisa
 title: Créer un flux de données de sources à l’aide de modèles dans l’interface utilisateur
 badge1: "Beta"
 exl-id: 48aa36ca-656d-4b9d-954c-48c8da9df1e9
-source-git-commit: 41694a96272819652c7176793f94a2de620d1d7a
+source-git-commit: deca8300ebbada548a409de9c6a7b7178d0032e0
 workflow-type: tm+mt
-source-wordcount: '1601'
-ht-degree: 59%
+source-wordcount: '2258'
+ht-degree: 43%
 
 ---
 
@@ -91,6 +91,83 @@ Pour créer un compte, sélectionnez **[!UICONTROL Nouveau compte]**, puis fourn
 >[!ENDTABS]
 
 ### Sélectionner des modèles
+
+Une fois votre compte authentifié, vous pouvez désormais sélectionner le modèle que vous souhaitez utiliser pour votre flux de données.
+
++++[!DNL Marketo Engage] modèles Le tableau suivant décrit les modèles disponibles pour les [!DNL Marketo Engage] source.
+
+| [!DNL Marketo Engage] templates | Description |
+| --- | --- |
+| Activités | Le modèle Activités capture des instantanés d’activités basés sur un événement, tels que des interactions par e-mail, des interactions sur le site web et des appels de vente. |
+| Sociétés | Le modèle Sociétés capture les détails du compte commercial, tels que les informations démographiques, le lieu et les informations de facturation de l’entreprise. |
+| Comptes désignés | Le modèle Comptes nommés capture les détails des comptes qui ont été déterminés comme des comptes cibles à poursuivre. |
+| Opportunités | Le modèle Opportunités capture les détails des opportunités commerciales tels que le type, l’étape de vente et les comptes associés. |
+| Rôles de contact d’opportunité | Le modèle Rôles de contact d’opportunité capture des détails sur les rôles des prospects associés à une opportunité particulière. |
+| Personnes | Le modèle Personnes capture les attributs des personnes individuelles, tels que les détails démographiques, les coordonnées et les préférences de consentement. |
+| Adhésions aux programmes | Le modèle Adhésions au programme capture les détails des contacts associés à une campagne d’entreprise, notamment les cadences de formation et les réponses des contacts. |
+| Programmes | Le modèle Programmes capture les détails des campagnes commerciales, tels que l’état, les canaux, les chronologies et les coûts. |
+| Adhésions à liste statique | Le modèle Adhésions à liste statique capture les relations entre les personnes et leur appartenance dans des listes statiques. |
+| Listes statiques | Le modèle Liste statique capture les listes instanciées de personnes pour des cas d’utilisation spécifiques. |
+
+{style="table-layout:auto"}
+
++++
+
++++[!DNL Salesforce] Modèles B2B Le tableau suivant décrit les modèles B2B disponibles pour les [!DNL Salesforce] source.
+
+| [!DNL Salesforce] Modèles B2B | Description |
+| --- | --- |
+| Contact de compte | Le modèle Relation contact compte capture la relation entre un contact et un ou plusieurs comptes. |
+| Comptes | Le modèle Compte capture les détails du compte commercial, tels que les informations démographiques, le lieu et les informations de facturation de l’entreprise. |
+| Membres de la campagne | Le modèle Membres de la campagne capture la relation entre un prospect ou un contact individuel et un [!DNL Salesforce] campaign. |
+| Campagnes | Le modèle Campagnes capture les détails du compte d’entreprise, tels que les informations démographiques, le lieu et les informations de facturation de l’entreprise. |
+| Contacts | Le modèle Contact capture les attributs des contacts, tels que les détails démographiques, les coordonnées et les entités commerciales associées. |
+| Prospects | Le modèle Pistes capture les attributs des pistes, tels que les détails démographiques, les coordonnées et les entités commerciales associées. |
+| Opportunités | Le modèle Opportunités capture les détails des opportunités commerciales tels que le type, l’étape de vente et le compte associé. |
+| Rôles de contact d’opportunité | Le modèle Rôles de contact d’opportunité capture des détails sur les rôles des prospects associés à une opportunité particulière. |
+
+{style="table-layout:auto"}
+
++++
+
++++[!DNL Salesforce] Modèles B2C Le tableau suivant décrit les modèles B2C disponibles pour les [!DNL Salesforce] source.
+
+| [!DNL Salesforce] Modèles B2C | Description |
+| --- | --- |
+| Contact | Le modèle Contact capture les attributs des contacts, tels que les détails démographiques, les coordonnées et les entités commerciales associées. |
+| Prospect | Le modèle de piste capture les attributs des pistes, tels que les détails démographiques, les coordonnées et les entités commerciales associées. |
+
+{style="table-layout:auto"}
+
++++
+
++++[!DNL Microsoft Dynamics] Modèles B2B Le tableau suivant décrit les modèles B2B disponibles pour les [!DNL Microsoft Dynamics] source.
+
+| [!DNL Microsoft Dynamics] Modèles B2B | Description |
+| --- | --- |
+| Comptes | Le modèle Compte capture les détails du compte commercial, tels que les informations démographiques, le lieu et les informations de facturation de l’entreprise. |
+| Campagnes | Le modèle Campagnes capture les détails du compte d’entreprise, tels que les informations démographiques, le lieu et les informations de facturation de l’entreprise. |
+| Contacts | Le modèle Contact capture les attributs des contacts, tels que les détails démographiques, les coordonnées et les entités commerciales associées. |
+| Prospects | Le modèle Pistes capture les attributs des pistes, tels que les détails démographiques, les coordonnées et les entités commerciales associées. |
+| Liste marketing | Le modèle Liste marketing capture un groupe de clients existants ou potentiels créés pour une campagne marketing ou à d’autres fins de vente. |
+| Membres de la liste marketing | Les membres de la liste marketing capturent les détails d’un type d’enregistrement de client, tel que les prospects, les comptes ou les contacts, dans une liste marketing. |
+| Opportunités | Le modèle Opportunités capture les détails des opportunités commerciales tels que le type, l’étape de vente et le compte associé. |
+| Rôles de contact d’opportunité | Le modèle Rôles de contact d’opportunité capture des détails sur les rôles des prospects associés à une opportunité particulière. |
+
+{style="table-layout:auto"}
+
++++
+
++++[!DNL Microsoft Dynamics] Modèles B2C Le tableau suivant décrit les modèles B2C disponibles pour les [!DNL Microsoft Dynamics] source.
+
+| [!DNL Microsoft Dynamics] Modèles B2C | Description |
+| --- | --- |
+| Contact | Le modèle Contact capture les attributs des contacts, tels que les détails démographiques, les coordonnées et les entités commerciales associées. |
+| Prospect | Le modèle de piste capture les attributs des pistes, tels que les détails démographiques, les coordonnées et les entités commerciales associées. |
+
+{style="table-layout:auto"}
+
++++
 
 Selon le type d’entreprise sélectionné, une liste de modèles s’affiche. Sélectionner l’icône d’aperçu ![icône d’aperçu](../../images/tutorials/templates/preview-icon.png) en regard d’un nom de modèle pour prévisualiser les exemples de données du modèle.
 
