@@ -1,13 +1,12 @@
 ---
-keywords: Experience Platform;accueil;rubriques populaires;CJA;journey analytics;customer journey analytics;orchestration des campagnes;orchestration;parcours client;parcours;journey orchestration;fonctionnalité;région
 solution: Experience Platform
 title: Prise en charge du navigateur et de la langue pour l’interface utilisateur Experience Platform
 description: Adobe Experience Platform est l’un des meilleurs systèmes ouverts, flexibles et performants du marché permettant de créer et de gérer des solutions complètes qui optimisent l’expérience client. Experience Platform permet aux entreprises de centraliser et de normaliser les données et le contenu des clients à partir de n’importe quel système et d’appliquer la science des données et le machine learning afin d’améliorer considérablement la conception et la diffusion d’expériences riches et personnalisées.
 exl-id: 1b74aede-55df-4e81-8360-e49d1932b373
-source-git-commit: 74e6c2a56da8455bbecd301ed7e5ad10c0366dc5
+source-git-commit: 20cb7afe6338f1ca79e86558f1f0cbec54790212
 workflow-type: tm+mt
-source-wordcount: '256'
-ht-degree: 40%
+source-wordcount: '236'
+ht-degree: 35%
 
 ---
 
@@ -42,9 +41,9 @@ L’interface utilisateur de Platform est actuellement disponible dans les langu
 * Japonais
 * Italien
 * Coréen
-* Chinois (taïwanais)
+* Chinois (simplifié)
 * Chinois (traditionnel)
-* Portugais
+* Portugais brésilien
 
 ### Modification de la langue par défaut
 
