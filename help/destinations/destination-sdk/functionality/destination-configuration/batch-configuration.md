@@ -1,10 +1,10 @@
 ---
 description: Découvrez comment configurer les paramètres d’exportation de fichiers pour les destinations créées avec Destination SDK.
 title: Configuration par lots
-source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
+source-git-commit: f2e04d6f96132aa5cee3602190375e0f3eb96c97
 workflow-type: tm+mt
-source-wordcount: '937'
-ht-degree: 18%
+source-wordcount: '1073'
+ht-degree: 16%
 
 ---
 
@@ -82,6 +82,7 @@ Les valeurs que vous configurez ici sont affichées dans la variable [Planificat
          ],
          "defaultFilename":"%DESTINATION%_%SEGMENT_ID%"
       },
+   "segmentGroupingEnabled": true
    }
 ```
 
@@ -97,6 +98,7 @@ Les valeurs que vous configurez ici sont affichées dans la variable [Planificat
 | `filenameConfig.allowedFilenameAppendOptions` | Chaîne | *Obligatoire*. Liste des macros de nom de fichier disponibles à l’intention des utilisateurs. Cela détermine les éléments qui sont ajoutés aux noms de fichier exportés (ID de segment, nom de l’organisation, date et heure de l’exportation, etc.). Lorsque vous définissez `defaultFilename`, veillez à éviter la duplication des macros. <br><br>Valeurs prises en charge : <ul><li>`DESTINATION`</li><li>`SEGMENT_ID`</li><li>`SEGMENT_NAME`</li><li>`DESTINATION_INSTANCE_ID`</li><li>`DESTINATION_INSTANCE_NAME`</li><li>`ORGANIZATION_NAME`</li><li>`SANDBOX_NAME`</li><li>`DATETIME`</li><li>`CUSTOM_TEXT`</li></ul>Quel que soit l’ordre dans lequel vous définissez les macros, l’interface utilisateur de l’Experience Platform les affiche toujours dans l’ordre présenté ici. <br><br> If `defaultFilename` est vide, la variable `allowedFilenameAppendOptions` La liste doit contenir au moins une macro. |
 | `filenameConfig.defaultFilenameAppendOptions` | Chaîne | *Obligatoire*. Macros de nom de fichier par défaut présélectionnées que les utilisateurs peuvent décocher.<br><br> Les macros de cette liste sont un sous-ensemble de celles définies dans la variable `allowedFilenameAppendOptions`. |
 | `filenameConfig.defaultFilename` | Chaîne | *Facultatif*. Définit les macros de nom de fichier par défaut pour les fichiers exportés. Ils ne peuvent pas être remplacés par les utilisateurs. <br><br>Toute macro définie par `allowedFilenameAppendOptions` sera annexé après l’événement `defaultFilename` macros. <br><br>If `defaultFilename` est vide, vous devez définir au moins une macro dans `allowedFilenameAppendOptions`. |
+| `segmentGroupingEnabled` | Booléen | Définit si les audiences activées doivent être exportées dans un ou plusieurs fichiers, selon l’audience [stratégie de fusion](../../../../profile/merge-policies/overview.md). Valeurs prises en charge : <ul><li>`true`: exporte un fichier par stratégie de fusion.</li><li>`false`: exporte un fichier par audience, quelle que soit la stratégie de fusion. Il s’agit du comportement par défaut. Vous pouvez obtenir le même résultat en omettant complètement ce paramètre.</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -120,6 +122,8 @@ Utilisez les macros de configuration des noms de fichier pour définir les noms 
 | `DATETIME` / `TIMESTAMP` | [!UICONTROL Date et heure] | `DATETIME` et `TIMESTAMP` les deux définissent le moment où le fichier a été généré, mais dans des formats différents. <br><br><ul><li>`DATETIME` utilise le format suivant : YYYYMMDD_HHMMSS.</li><li>`TIMESTAMP` utilise le format Unix à 10 chiffres. </li></ul> `DATETIME` et `TIMESTAMP` s’excluent mutuellement et ne peuvent pas être utilisés simultanément. | <ul><li>`DATETIME`: 20220509_210543</li><li>`TIMESTAMP`: 1652131584</li></ul> |
 | `CUSTOM_TEXT` | [!UICONTROL Texte personnalisé] | Texte personnalisé défini par l’utilisateur à inclure dans le nom du fichier. Ne peut pas être utilisé dans `defaultFilename`. | My_Custom_Text |
 | `TIMESTAMP` | [!UICONTROL Date et heure] | Horodatage à 10 chiffres de l’heure de génération du fichier, au format Unix. | 1652131584 |
+| `MERGE_POLICY_ID` | [!UICONTROL Fusionner l’ID de stratégie] | L’identifiant de la variable [stratégie de fusion](../../../../profile/merge-policies/overview.md) utilisé pour générer l’audience exportée. Utilisez cette macro lorsque vous regroupez des segments exportés dans des fichiers, en fonction d’une stratégie de fusion. Utilisation de cette macro avec `segmentGroupingEnabled:true`. | e8591fdb-2873-4b12-b63e-15275b1c1439 |
+| `MERGE_POLICY_NAME` | [!UICONTROL Nom de la stratégie de fusion] | Nom de la variable [stratégie de fusion](../../../../profile/merge-policies/overview.md) utilisé pour générer l’audience exportée. Utilisez cette macro lorsque vous regroupez des segments exportés dans des fichiers, en fonction d’une stratégie de fusion. Utilisation de cette macro avec `segmentGroupingEnabled:true`. | Ma stratégie de fusion personnalisée |
 
 {style="table-layout:auto"}
 
