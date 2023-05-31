@@ -4,9 +4,9 @@ title: Guide de migration des API pour les destinations de stockage dans le clou
 description: Découvrez les modifications apportées au workflow pour activer les destinations de stockage dans le cloud dans le cadre de la migration vers les nouvelles cartes de destination de stockage dans le cloud avec des fonctionnalités supplémentaires.
 type: Tutorial
 exl-id: 4acaf718-794e-43a3-b8f0-9b19177a2bc0
-source-git-commit: 8ca63586855f2c62231662906646eb8abcfdcc0e
+source-git-commit: 07a91ef15075b6c438e85aecff12dfab704cc6a2
 workflow-type: tm+mt
-source-wordcount: '1444'
+source-wordcount: '1418'
 ht-degree: 4%
 
 ---
@@ -433,7 +433,6 @@ Les modifications incompatibles en amont pour les utilisateurs de l’API sont u
 Outre la spécification de flux et de connexion mise à jour ci-dessus, des modifications sont apportées aux paramètres requis lors de la création de connexions de base SFTP.
 
 * Auparavant, la connexion de base pour les destinations SFTP nécessitait une `host` . Ce paramètre a maintenant été renommé `domain`.
-* Pour l’option d’authentification avec clé SSH, les paramètres d’authentification de la connexion de base nécessitaient une `port` . Ce paramètre est désormais obsolète et n’est plus requis.
 
 Affichez les exemples complets de nouvelle connexion de base et héritée et de nouvelle connexion cible pour SFTP dans les onglets ci-dessous, avec les lignes qui changent en surbrillance. Les paramètres requis pour créer des connexions cibles pour les destinations SFTP ne changent pas.
 
@@ -567,7 +566,8 @@ Affichez les exemples complets de nouvelle connexion de base et héritée et de 
       "authorizedDate": "2022-06-02",
       "domain": "ftp-out.demdex.com",
       "username": "DPID12345",
-      "password": "<your-password>"
+      "password": "<your-password>",
+      "port": 22      
     }
   },
   "encryption": {

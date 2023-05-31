@@ -4,9 +4,9 @@ title: Activation des segments vers des destinations basées sur des fichiers à
 description: Découvrez comment utiliser l’API Flow Service pour exporter des fichiers avec des profils qualifiés vers des destinations de stockage dans le cloud.
 type: Tutorial
 exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 5ab72c11a5fd73f10eef6b7bb3e0d3386098748e
 workflow-type: tm+mt
-source-wordcount: '4337'
+source-wordcount: '4442'
 ht-degree: 11%
 
 ---
@@ -956,7 +956,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
     "params": {
       "domain": "<Add domain>",
       "username": "<Add username>",
-      "password": "<Add password>"
+      "password": "<Add password>",
+      "port": "<Add port>"      
     }
   },
   "connectionSpec": {
@@ -965,6 +966,16 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
   }
 }'
 ```
+
+| Propriété | Description |
+| --------- | ----------- |
+| `specName` | Utilisez `SFTP with Password`. |
+| `domain` | Adresse IP ou nom de domaine de l’emplacement de stockage de votre SFTP. |
+| `username` | Nom d’utilisateur pour se connecter à l’emplacement de stockage SFTP. |
+| `password` | Mot de passe pour se connecter à l’emplacement de stockage de votre SFTP. |
+| `port` | Port utilisé par votre emplacement de stockage SFTP. |
+
+{style="table-layout:auto"}
 
 +++
 
@@ -991,7 +1002,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
     "params": {
       "domain": "<Add domain>",
       "username": "<Add username>",
-      "sshKey": "<Add SSH key>"
+      "sshKey": "<Add SSH key>",
+      "port": "<Add port>"
     }
   },
   "connectionSpec": {
@@ -1000,6 +1012,16 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
   }
 }'
 ```
+
+| Propriété | Description |
+| --------- | ----------- |
+| `specName` | Utilisez `SFTP with Password`. |
+| `domain` | Adresse IP ou nom de domaine de l’emplacement de stockage de votre SFTP. |
+| `username` | Nom d’utilisateur pour se connecter à l’emplacement de stockage SFTP. |
+| `sshKey` | Clé SSH privée utilisée pour se connecter à l’emplacement de stockage de votre SFTP. La clé privée doit être mise en forme sous la forme d’une chaîne codée en Base64 et ne doit pas être protégée par un mot de passe. |
+| `port` | Port utilisé par votre emplacement de stockage SFTP. |
+
+{style="table-layout:auto"}
 
 +++
 

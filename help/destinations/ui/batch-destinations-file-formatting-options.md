@@ -2,10 +2,10 @@
 description: Découvrez comment configurer les options de formatage des fichiers lors de l’activation des données vers des destinations basées sur des fichiers.
 title: (Beta) Configurer des options de formatage de fichier pour les destinations basées sur des fichiers
 exl-id: f59b1952-e317-40ba-81d1-35535e132a72
-source-git-commit: b1e9b781f3b78a22b8b977fe08712d2926254e8c
+source-git-commit: 07a91ef15075b6c438e85aecff12dfab704cc6a2
 workflow-type: tm+mt
-source-wordcount: '1214'
-ht-degree: 54%
+source-wordcount: '1226'
+ht-degree: 53%
 
 ---
 
@@ -111,8 +111,8 @@ Affichez les exemples ci-dessous du contenu des fichiers CSV exportés avec chac
 
 Utilisez ce contrôle pour définir la représentation sous forme de chaîne d’une valeur vide. Cette option détermine le mode de représentation des valeurs vides dans les fichiers CSV exportés. Les options disponibles sont les suivantes :
 
-* **[!UICONTROL null]**
-* **&quot;&quot;**
+* **[!UICONTROL Null (null)]**
+* **Chaîne vide dans les guillemets doubles (&quot;&quot;)**
 * **[!UICONTROL Chaîne vide]**
 
 #### Exemples
@@ -136,8 +136,8 @@ Affichez les exemples ci-dessous du contenu des fichiers CSV exportés avec chac
 
 Utilisez ce contrôle pour définir la représentation sous forme de chaîne d’une valeur null dans les fichiers exportés. Cette option détermine le mode de représentation des valeurs nulles dans vos fichiers CSV exportés. Les options disponibles sont les suivantes :
 
-* **[!UICONTROL null]**
-* **&quot;&quot;**
+* **[!UICONTROL Null (null)]**
+* **Chaîne vide dans les guillemets doubles (&quot;&quot;)**
 * **[!UICONTROL Chaîne vide]**
 
 #### Exemples

@@ -3,10 +3,10 @@ keywords: e-mail;e-mail;destinations d’e-mail;Salesforce;destination Salesforc
 title: Connexion Salesforce Marketing Cloud
 description: Salesforce Marketing Cloud est une suite de marketing numérique anciennement connue sous le nom d’ExactTarget qui vous permet de créer et de personnaliser les parcours des visiteurs et des clients afin d’offrir une expérience personnalisée.
 exl-id: e85049a7-eaed-4f8a-b670-9999d56928f8
-source-git-commit: 30e75b8fbaa4a8269a32f82ade435b67767630c5
+source-git-commit: ba4090d95a4a476e76d946e36f8370202f26d23e
 workflow-type: tm+mt
-source-wordcount: '655'
-ht-degree: 62%
+source-wordcount: '748'
+ht-degree: 64%
 
 ---
 
@@ -53,15 +53,15 @@ Cette destination prend en charge les types de connexions suivants :
 Pendant la [configuration](../../ui/connect-destination.md) de cette destination, vous devez fournir les informations suivantes :
 
 * Pour **[!UICONTROL SFTP avec mot de passe]** connexions, vous devez fournir les éléments suivants :
-   * [!UICONTROL Domaine]
-   * [!UICONTROL Port]
-   * [!UICONTROL Nom d’utilisateur]
-   * [!UICONTROL Mot de passe]
+   * **[!UICONTROL Domaine]**: l’adresse IP ou le nom de domaine de votre compte SFTP ;
+   * **[!UICONTROL Port]** : le port utilisé par votre emplacement de stockage SFTP ;
+   * **[!UICONTROL Nom d’utilisateur]** : nom d’utilisateur pour se connecter à l’emplacement de stockage de votre SFTP ;
+   * **[!UICONTROL Mot de passe]** : mot de passe pour se connecter à l’emplacement de stockage de votre SFTP.
 * Pour **[!UICONTROL SFTP avec clé SSH]** connexions, vous devez fournir les éléments suivants :
-   * [!UICONTROL Domaine]
-   * [!UICONTROL Port]
-   * [!UICONTROL Nom d’utilisateur]
-   * [!UICONTROL Clé SSH]
+   * **[!UICONTROL Domaine]**: l’adresse IP ou le nom de domaine de votre compte SFTP ;
+   * **[!UICONTROL Port]** : le port utilisé par votre emplacement de stockage SFTP ;
+   * **[!UICONTROL Nom d’utilisateur]** : nom d’utilisateur pour se connecter à l’emplacement de stockage de votre SFTP ;
+   * **[!UICONTROL Clé SSH]** : clé SSH privée utilisée pour se connecter à l’emplacement de stockage de votre SFTP. La clé privée doit être mise en forme sous la forme d’une chaîne codée en Base64 et ne doit pas être protégée par un mot de passe.
 
 * Vous pouvez éventuellement joindre votre clé publique au format RSA pour ajouter un chiffrement avec PGP/GPG à vos fichiers exportés sous le **[!UICONTROL Clé]** . Votre clé publique doit être écrite en tant que chaîne codée en [!DNL Base64].
 * **[!UICONTROL Nom]** : choisissez un nom pertinent pour votre destination.
