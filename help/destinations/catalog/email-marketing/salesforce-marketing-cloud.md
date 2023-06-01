@@ -3,9 +3,9 @@ keywords: e-mail;e-mail;destinations d’e-mail;Salesforce;destination Salesforc
 title: Connexion Salesforce Marketing Cloud
 description: Salesforce Marketing Cloud est une suite de marketing numérique anciennement connue sous le nom d’ExactTarget qui vous permet de créer et de personnaliser les parcours des visiteurs et des clients afin d’offrir une expérience personnalisée.
 exl-id: e85049a7-eaed-4f8a-b670-9999d56928f8
-source-git-commit: ba4090d95a4a476e76d946e36f8370202f26d23e
+source-git-commit: 47e0dfb59edca58e205cb478e9ee624659753ab9
 workflow-type: tm+mt
-source-wordcount: '748'
+source-wordcount: '747'
 ht-degree: 64%
 
 ---
@@ -33,7 +33,7 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 Lors de la configuration des destinations de marketing par e-mail avec stockage SFTP, Adobe vous recommande d’ajouter certaines plages d’adresses IP à votre liste autorisée.
 
-Voir [LISTE AUTORISÉE d’adresses IP pour les destinations de stockage dans le cloud](../cloud-storage/ip-address-allow-list.md) si vous devez ajouter des adresses IP d’Adobe à votre liste autorisée.
+Voir [LISTE AUTORISÉE d’adresses IP pour les destinations SFTP](../cloud-storage/ip-address-allow-list.md) si vous devez ajouter des adresses IP d’Adobe à votre liste autorisée.
 
 ## Se connecter à la destination {#connect}
 

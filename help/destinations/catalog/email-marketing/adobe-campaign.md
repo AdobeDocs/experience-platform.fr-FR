@@ -3,9 +3,9 @@ keywords: e-mail;e-mail;destinations d’e-mail;adobe campaign;campagne
 title: Connexion Adobe Campaign
 description: Adobe Campaign est un ensemble de solutions qui permet de personnaliser les campagnes et de les diffuser via tous vos canaux en ligne et hors ligne.
 exl-id: 0de91738-8f56-41f5-8745-9b14b15db76a
-source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
+source-git-commit: 47e0dfb59edca58e205cb478e9ee624659753ab9
 workflow-type: tm+mt
-source-wordcount: '885'
+source-wordcount: '884'
 ht-degree: 47%
 
 ---
@@ -33,7 +33,7 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 Lors de la configuration des destinations de marketing par e-mail avec stockage SFTP, Adobe vous recommande d’ajouter certaines plages d’adresses IP à votre liste autorisée.
 
-Voir [LISTE AUTORISÉE d’adresses IP pour les destinations de stockage dans le cloud](../cloud-storage/ip-address-allow-list.md) si vous devez ajouter des adresses IP d’Adobe à votre liste autorisée.
+Voir [LISTE AUTORISÉE d’adresses IP pour les destinations SFTP](../cloud-storage/ip-address-allow-list.md) si vous devez ajouter des adresses IP d’Adobe à votre liste autorisée.
 
 ## Se connecter à la destination {#connect}
 

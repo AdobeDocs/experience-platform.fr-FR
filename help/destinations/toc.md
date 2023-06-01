@@ -4,10 +4,10 @@ user-guide-title: Guide des destinations
 user-guide-description: Activez vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
 description: Ce document répertorie la table des matières des destinations Adobe Experience Platform
 feature: Destinations
-source-git-commit: 991cd22bc28a72593512a36636806e6a8a4b2820
+source-git-commit: 47e0dfb59edca58e205cb478e9ee624659753ab9
 workflow-type: tm+mt
-source-wordcount: '1173'
-ht-degree: 86%
+source-wordcount: '1172'
+ht-degree: 85%
 
 ---
 
@@ -121,7 +121,7 @@ ht-degree: 86%
       * [Data Landing Zone (version Bêta)](./catalog/cloud-storage/data-landing-zone.md)
       * [Google Cloud Storage (version Bêta)](./catalog/cloud-storage/google-cloud-storage.md)
       * [Connexion SFTP](./catalog/cloud-storage/sftp.md)
-      * [Liste autorisée d’adresses IP pour les destinations de stockage dans le cloud](./catalog/cloud-storage/ip-address-allow-list.md)
+      * [LISTE AUTORISÉE des adresses IP pour les destinations SFTP](./catalog/cloud-storage/ip-address-allow-list.md)
    * Destinations de la gestion de la relation client (CRM) {#crm}
       * [Connexion CRM à Salesforce](./catalog/crm/salesforce.md)
       * [Connexion à Microsoft Dynamics 365](./catalog/crm/microsoft-dynamics-365.md)
