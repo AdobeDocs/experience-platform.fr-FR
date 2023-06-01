@@ -3,7 +3,7 @@ keywords: personnalisation cible;destination;destination cible Experience Platfo
 title: Connexion Adobe Target
 description: Adobe Target est une application qui permet la personnalisation et l’expérimentation en temps réel, grâce à l’IA, au niveau de toutes les interactions avec les clients entrants sur les sites web, les applications mobiles, etc.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: bee1bf0ec9cbf35ea7303921059068c01cb9f54a
+source-git-commit: 6ac48762dc9ea1cb77b04651275a3846411449ea
 workflow-type: tm+mt
 source-wordcount: '908'
 ht-degree: 56%
@@ -16,7 +16,7 @@ ht-degree: 56%
 
 | Mois de publication | Type de mise à jour | Description |
 |---|---|---|
-| Avril 2023 | Fonctionnalité et mise à jour de la documentation | En avril 2023, la **[!UICONTROL Adobe Target]** prise en charge de la connexion [personnalisation basée sur les attributs](../../ui/activate-edge-personalization-destinations.md#map-attributes) et est généralement disponible pour tous les clients. |
+| Mai 2023 | Fonctionnalité et mise à jour de la documentation | En mai 2023, la **[!UICONTROL Adobe Target]** prise en charge de la connexion [personnalisation basée sur les attributs](../../ui/activate-edge-personalization-destinations.md#map-attributes) et est généralement disponible pour tous les clients. |
 
 {style="table-layout:auto"}
 
