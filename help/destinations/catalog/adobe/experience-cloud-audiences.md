@@ -3,10 +3,10 @@ title: (Version bêta) Audiences Experience Cloud
 description: Découvrez comment partager des segments d’Experience Platform vers différentes solutions d’Experience Platform.
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: 2bdbcda3-2efb-4a4e-9702-4fd9991e9461
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 017c8bbc19845c0f60040ba2995b5dd2b0299a8b
 workflow-type: tm+mt
-source-wordcount: '1509'
-ht-degree: 24%
+source-wordcount: '1576'
+ht-degree: 23%
 
 ---
 
@@ -83,7 +83,14 @@ Notez les limites connues suivantes et les légendes importantes dans la version
 * Lorsque vous vous connectez à la destination, vous pouvez voir une option permettant d’accéder à [activation des alertes de flux de données](#enable-alerts). Bien qu’elle soit visible dans l’interface utilisateur, la variable **l’option activer les alertes n’est pas prise en charge** dans la version bêta.
 * **Les renvois ne sont pas pris en charge**. Le premier export vers Audience Manager ou d’autres solutions Experience Cloud n’inclut pas une population historique des segments.
 * Dans la version bêta, vous pouvez créer **une connexion de destination unique à la destination Audiences Experience Cloud ;**, sur tous les environnements de test appartenant à votre organisation Experience Platform.
-* Il existe une **latence de quatre heures** entre le moment où ces données sont activées dans Experience Platform et celui où elles sont prêtes à être utilisées dans Audience Manager et d’autres solutions Experience Cloud.
+
+### Latence lors de l’activation des audiences {#audience-activation-latency}
+
+Il existe une latence de quatre heures entre le moment où les audiences sont activées pour la première fois dans Experience Platform et celui où elles sont prêtes à être utilisées dans Audience Manager et d’autres solutions Experience Cloud pour certains cas d’utilisation.
+
+Les audiences peuvent prendre jusqu’à 24 heures pour être pleinement disponibles en Audience Manager pour tous les cas d’utilisation et jusqu’à 48 heures pour apparaître dans les rapports d’Audience Manager dans les audiences Experience Cloud.
+
+Les métadonnées, telles que les noms de segment, sont disponibles en Audience Manager quelques minutes après la configuration de l’exportation vers la destination Audiences Experience Cloud.
 
 ## Identités prises en charge {#supported-identities}
 
