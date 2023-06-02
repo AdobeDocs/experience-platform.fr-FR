@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Gestion des libellés d’utilisation des données dans l’interface utilisateur
 description: Ce guide détaille la procédure d’utilisation des libellés d’utilisation des données dans l’interface utilisateur d’Adobe Experience Platform.
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
-source-git-commit: dca5c9df82434d75238a0a80f15e5562cf2fa412
+source-git-commit: 1690a73cf709594b82469e95aba64231cf216d96
 workflow-type: tm+mt
-source-wordcount: '1380'
-ht-degree: 44%
+source-wordcount: '1462'
+ht-degree: 40%
 
 ---
 
@@ -20,7 +20,15 @@ ht-degree: 44%
 
 Ce guide d’utilisation détaille la procédure d’utilisation des libellés d’utilisation des données dans l’interface utilisateur [!DNL Experience Platform].
 
+## Gestion des étiquettes {#manage-labels}
+
+Pour appliquer des libellés à vos données, vous avez besoin de l’événement **[!UICONTROL Gestion des étiquettes d’utilisation]** autorisation d’utilisation sur l’environnement de test de production. Pour créer une étiquette personnalisée, vous devez également disposer de droits d’administration sur le profil de produit. Chaque organisation ne possède qu’une seule liste de libellés applicables. Pour le moment, la suppression des libellés n’est pas prise en charge.
+
+Consultez le guide sur la façon de [configuration des autorisations](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html) ou le [présentation du contrôle d’accès](../../access-control/home.md) pour plus d’informations sur l’attribution d’une autorisation. Si vous n’avez pas accès au Admin Console de votre entreprise, contactez l’administrateur de votre entreprise.
+
 ## Gérer les libellés au niveau du schéma
+
+Vous pouvez ajouter des libellés directement à un schéma ou à des champs de ce schéma. Tous les champs appliqués au niveau du schéma se propagent à tous les jeux de données basés sur ce schéma.
 
 Pour gérer les libellés d’utilisation des données au niveau du schéma, vous devez sélectionner un schéma existant ou en créer un nouveau. Après vous être connecté à Adobe Experience Platform, sélectionnez **[!UICONTROL Schémas]** dans le volet de navigation de gauche pour ouvrir la **[!UICONTROL Schémas]** workspace. Cette page répertorie tous les schémas créés appartenant à votre organisation, ainsi que des détails utiles liés à chaque schéma.
 
@@ -32,7 +40,7 @@ La section suivante décrit les étapes à suivre pour créer un nouveau schéma
 
 Pour créer un nouveau schéma, sélectionnez **[!UICONTROL Créer un schéma]** dans le coin supérieur droit du **[!UICONTROL Schémas]** workspace. Consultez le guide sur la [Comment créer un schéma à l’aide de l’éditeur de schémas](../../xdm/tutorials/create-schema-ui.md#create) pour obtenir des instructions complètes. Vous pouvez également [créer un schéma à l’aide de l’API Schema Registry](../../xdm/tutorials/create-schema-api.md) si nécessaire.
 
-### Ajout de libellés d’utilisation des données au schéma {#add-labels-to-schema}
+### Ajout de libellés d’utilisation des données à un schéma {#add-labels-to-schema}
 
 Après avoir créé un nouveau schéma ou sélectionné un schéma existant dans la liste du [!UICONTROL Parcourir] de l’onglet [!UICONTROL Schémas] espace de travail, sélectionnez un champ de votre schéma dans l’éditeur de schémas. Dans le [!UICONTROL Propriétés du champ] barre latérale, sélectionnez **[!UICONTROL Appliquer les étiquettes d’accès et de gouvernance des données]**.
 
@@ -98,12 +106,6 @@ Le **[!UICONTROL Afficher les étiquettes héritées]** est activé par défaut,
 >Les libellés appliqués avant que la fonction d’étiquetage du jeu de données ne soit obsolète peuvent être supprimés du jeu de données en recherchant le jeu de données approprié et en sélectionnant l’icône Annuler sur le libellé.
 >![Onglet Gouvernance des données de l’espace de travail des jeux de données avec un libellé pouvant être supprimé en surbrillance.](../images/labels/remove-governance-labels.png)
 >Consultez la documentation pour obtenir des instructions sur [Comment migrer les libellés précédemment appliqués du jeu de données au niveau du schéma](../e2e.md#migrate-labels).
-
-## Gérer les libellés au niveau du schéma
-
-Vous pouvez ajouter des libellés directement à un schéma ou à des champs de ce schéma. Tous les champs appliqués au niveau du schéma se propagent à tous les jeux de données basés sur ce schéma.
-
-Pour plus d’informations, consultez le tutoriel sur la [gestion des libellés au niveau du schéma](../../xdm/tutorials/labels.md).
 
 ## Gérer les libellés personnalisés {#manage-custom-labels}
 
