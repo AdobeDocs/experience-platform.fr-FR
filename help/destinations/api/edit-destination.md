@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Modification des connexions de destination à l’aide de l’API Flow Service
 type: Tutorial
 description: Découvrez comment modifier différents composants d’une connexion de destination à l’aide de l’API Flow Service.
-source-git-commit: 956ac5d210d54526e886e57b8ea37ab4b3fbab8a
+source-git-commit: 2afe330176c2b7734c38cf47be79960175060824
 workflow-type: tm+mt
-source-wordcount: '1565'
+source-wordcount: '1580'
 ht-degree: 33%
 
 ---
@@ -329,11 +329,11 @@ Une réponse réussie renvoie votre identifiant de connexion cible et une balise
 
 ## Modifier les composants de connexion de base (paramètres d’authentification et autres composants) {#patch-base-connection}
 
-Les composants d’une connexion de base diffèrent par destination. Par exemple, pour [!DNL Amazon S3] destinations, vous pouvez mettre à jour la clé d’accès et la clé secrète vers vos [!DNL Amazon S3] emplacement.
+Modifiez la connexion de base lorsque vous souhaitez mettre à jour les informations d’identification d’une destination. Les composants d’une connexion de base diffèrent par destination. Par exemple, pour [!DNL Amazon S3] destinations, vous pouvez mettre à jour la clé d’accès et la clé secrète vers vos [!DNL Amazon S3] emplacement.
 
 Pour mettre à jour les composants d’une connexion de base, effectuez une requête de PATCH au `/connections` point de terminaison tout en fournissant votre identifiant de connexion de base, votre version et les nouvelles valeurs que vous souhaitez utiliser.
 
-Souvenez-vous que vous avez obtenu votre identifiant de connexion de base à une étape précédente, lorsque vous avez inspecté un flux de données existant vers la destination souhaitée.
+Souvenez-vous que vous avez obtenu votre identifiant de connexion de base dans un [étape précédente](#look-up-dataflow-details), lorsque vous avez inspecté un flux de données existant vers la destination souhaitée pour le paramètre . `baseConnection`.
 
 >[!IMPORTANT]
 >
