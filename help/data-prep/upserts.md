@@ -3,10 +3,10 @@ keywords: Experience Platform;accueil;rubriques les plus consultées;prép de do
 title: Envoi De Mises À Jour De Ligne Partielles Au Service De Profil À L’Aide De La Préparation De Données
 description: Ce document fournit des informations sur la manière d’envoyer des mises à jour de lignes partielles au service Profile à l’aide de la préparation de données.
 exl-id: f9f9e855-0f72-4555-a4c5-598818fc01c2
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: d167975c9c7a267f2888153a05c5857748367822
 workflow-type: tm+mt
-source-wordcount: '1169'
-ht-degree: 12%
+source-wordcount: '1177'
+ht-degree: 11%
 
 ---
 
@@ -37,20 +37,20 @@ Cette présentation d’ nécessite une compréhension professionnelle des compo
 
 Diffusion en continu des upserts dans [!DNL Data Prep] fonctionne comme suit :
 
-* Vous devez d’abord créer et activer un jeu de données pour [!DNL Profile] consommation. Consultez le guide sur la [activation d’un jeu de données pour [!DNL Profile]](../catalog/datasets/enable-for-profile.md) pour plus d’informations;
-* Si de nouvelles identités doivent être liées, vous devez également créer un jeu de données supplémentaire. **avec le même schéma** en tant que [!DNL Profile] jeu de données ;
+* Vous devez d’abord créer et activer un jeu de données pour [!DNL Profile] consommation. Consultez le guide sur la [activation d’un jeu de données pour [!DNL Profile]](../catalog/datasets/enable-for-profile.md) pour plus d’informations.
+* Si de nouvelles identités doivent être liées, vous devez également créer un jeu de données supplémentaire. **avec le même schéma** en tant que [!DNL Profile] jeu de données.
 * Une fois vos jeux de données préparés, vous devez créer un flux de données pour mapper votre requête entrante à la variable [!DNL Profile] jeu de données ;
 * Vous devez ensuite mettre à jour la requête entrante afin d’inclure les en-têtes nécessaires. Ces en-têtes définissent :
-   * L’opération de données à effectuer avec [!DNL Profile]: `create`, `merge`, et `delete`;
+   * L’opération de données à effectuer avec [!DNL Profile]: `create`, `merge`, et `delete`.
    * L’opération d’identité facultative à effectuer avec [!DNL Identity Service]: `create`.
 
 ### Configuration du jeu de données d’identité
 
 Si de nouvelles identités doivent être liées, vous devez créer et transmettre un jeu de données supplémentaire dans la payload entrante. Lors de la création d’un jeu de données d’identité, vous devez vous assurer que les conditions suivantes sont remplies :
 
-* Le jeu de données d’identité doit avoir son schéma associé comme [!DNL Profile] jeu de données. Une incohérence des schémas peut entraîner un comportement du système incohérent ;
-* Cependant, vous devez vous assurer que le jeu de données d’identité est différent du [!DNL Profile] jeu de données. Si les jeux de données sont identiques, les données seront écrasées au lieu d’être mises à jour ;
-* Alors que le jeu de données initial doit être activé pour [!DNL Profile], le jeu de données d’identité **should not** être activé pour [!DNL Profile]. Dans le cas contraire, les données seront également écrasées au lieu d’être mises à jour.
+* Le jeu de données d’identité doit avoir son schéma associé comme [!DNL Profile] jeu de données. Une incohérence des schémas peut entraîner un comportement du système incohérent.
+* Cependant, vous devez vous assurer que le jeu de données d’identité est différent du [!DNL Profile] jeu de données. Si les jeux de données sont identiques, les données seront écrasées au lieu d’être mises à jour.
+* Alors que le jeu de données initial doit être activé pour [!DNL Profile], le jeu de données d’identité **ne doit pas être activé** pour [!DNL Profile]. Dans le cas contraire, les données seront également écrasées au lieu d’être mises à jour. Cependant, le jeu de données d’identité **doit être activé** pour [!DNL Identity Service].
 
 #### Champs obligatoires dans les schémas associés au jeu de données d’identité {#identity-dataset-required-fileds}
 
@@ -64,9 +64,17 @@ curl -X POST 'https://platform.adobe.io/data/foundation/catalog/dataSets/62257be
   -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
-    "tags":{
-        "acp_validationContext": ["disabled"]
-        }
+    "tags": {
+        "acp_validationContext": [
+            "disabled"
+        ],
+        "unifiedProfile": [
+            "enabled:false"
+        ],
+        "unifiedIdentity": [
+            "enabled:true"
+        ]
+    }
 }'
 ```
 
