@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Gestion des libellés d’utilisation des données dans l’interface utilisateur
 description: Ce guide détaille la procédure d’utilisation des libellés d’utilisation des données dans l’interface utilisateur d’Adobe Experience Platform.
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
-source-git-commit: 1690a73cf709594b82469e95aba64231cf216d96
+source-git-commit: 663d1e20a7b8a56b1395047124fdf4b6fc3c214b
 workflow-type: tm+mt
-source-wordcount: '1462'
+source-wordcount: '1465'
 ht-degree: 40%
 
 ---
@@ -22,7 +22,7 @@ Ce guide d’utilisation détaille la procédure d’utilisation des libellés d
 
 ## Gestion des étiquettes {#manage-labels}
 
-Pour appliquer des libellés à vos données, vous avez besoin de l’événement **[!UICONTROL Gestion des étiquettes d’utilisation]** autorisation d’utilisation sur l’environnement de test de production. Pour créer une étiquette personnalisée, vous devez également disposer de droits d’administration sur le profil de produit. Chaque organisation ne possède qu’une seule liste de libellés applicables. Pour le moment, la suppression des libellés n’est pas prise en charge.
+Pour appliquer des libellés à vos données, vous avez besoin de l’événement **[!UICONTROL Gestion des étiquettes d’utilisation]** autorisation d’utilisation sur l’environnement de test de production par défaut appelé &quot;prod&quot;. Pour créer une étiquette personnalisée, vous devez également disposer de droits d’administration sur le profil de produit. Chaque organisation ne possède qu’une seule liste de libellés applicables. Pour le moment, la suppression des libellés n’est pas prise en charge.
 
 Consultez le guide sur la façon de [configuration des autorisations](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html) ou le [présentation du contrôle d’accès](../../access-control/home.md) pour plus d’informations sur l’attribution d’une autorisation. Si vous n’avez pas accès au Admin Console de votre entreprise, contactez l’administrateur de votre entreprise.
 
