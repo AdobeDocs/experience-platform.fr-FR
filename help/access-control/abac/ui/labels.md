@@ -3,10 +3,10 @@ keywords: Experience Platform;accueil;rubriques populaires;contrôle d’accès
 title: Gestion des étiquettes de contrôle d’accès basé sur les attributs
 description: Ce document fournit des informations sur la gestion des libellés par le biais de l’interface Autorisations dans Adobe Experience Cloud.
 exl-id: c790f09c-fda6-48bf-95db-3f5053cd882e
-source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
+source-git-commit: 4069924b4c4000192dff1f89e5cf9a9412bcd95c
 workflow-type: tm+mt
-source-wordcount: '173'
-ht-degree: 42%
+source-wordcount: '190'
+ht-degree: 38%
 
 ---
 
@@ -23,7 +23,7 @@ Les libellés vous permettent de classer les jeux de données et les champs en f
 
 >[!NOTE]
 >
->Vous devez disposer des droits d’administration pour créer un libellé personnalisé. Actuellement, la suppression des étiquettes n’est pas prise en charge.
+>Il existe une liste unique d’étiquettes pour l’ensemble de l’organisation. Pour créer une étiquette personnalisée, vous devez **[!UICONTROL Gestion des étiquettes d’utilisation]** autorisations sur l’environnement de test de production. La suppression d’étiquettes n’est actuellement pas prise en charge.
 
 Pour créer un nouveau libellé, sélectionnez le **[!UICONTROL Étiquettes]** dans la barre latérale et sélectionnez **[!UICONTROL Créer une étiquette]**.
 
