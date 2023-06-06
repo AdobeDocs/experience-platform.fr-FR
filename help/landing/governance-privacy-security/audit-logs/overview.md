@@ -2,10 +2,10 @@
 title: Présentation des journaux d’audit
 description: Découvrez comment les journaux d’audit vous permettent de savoir qui a effectué quelles actions dans Adobe Experience Platform.
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: 8f61840ad60b7d24c980b218b6f742485f5ebfdd
+source-git-commit: 7bb81a103c6b2a7d0baec22c927f575764bc3730
 workflow-type: tm+mt
-source-wordcount: '1156'
-ht-degree: 59%
+source-wordcount: '1294'
+ht-degree: 53%
 
 ---
 
@@ -79,13 +79,13 @@ Pour afficher et exporter les journaux d’audit, vous devez disposer de la vari
 
 Vous pouvez afficher les journaux d’audit pour différentes fonctionnalités d’Experience Platform dans le **[!UICONTROL Audits]** dans l’interface utilisateur de Platform. L’espace de travail affiche une liste des journaux enregistrés, triés par défaut du plus récent au moins récent.
 
-![Tableau de bord des journaux d’audit](../../images/audit-logs/audits.png)
+![Le tableau de bord Audits met en surbrillance les Audits dans le menu de gauche.](../../images/audit-logs/audits.png)
 
 Les journaux d’audit sont conservés pendant 365 jours, après quoi ils seront supprimés du système. Par conséquent, vous ne pouvez revenir en arrière que pendant une période maximale de 365 jours. Si vous avez besoin de données de plus de 365 jours, vous devez exporter les journaux à un rythme régulier afin de répondre aux exigences de votre stratégie interne.
 
 Sélectionnez un événement dans la liste pour afficher ses détails dans le rail de droite.
 
-![Détails de l’événement](../../images/audit-logs/select-event.png)
+![Vérifie l’onglet Journal d’activité du tableau de bord avec le panneau des détails de l’événement en surbrillance.](../../images/audit-logs/select-event.png)
 
 ### Filtrer des journaux d’audit
 
@@ -95,31 +95,43 @@ Comme il s’agit d’une nouvelle fonctionnalité, les données affichées remo
 
 Sélectionnez l’icône en forme d’entonnoir (![icône filtre](../../images/audit-logs/icon.png)) pour afficher une liste de contrôles de filtre afin de limiter les résultats. Seuls les 1000 derniers enregistrements sont affichés, quels que soient les différents filtres sélectionnés.
 
-![Filtres](../../images/audit-logs/filters.png)
+![Le tableau de bord Audits avec le journal d’activité filtré en surbrillance.](../../images/audit-logs/filters.png)
 
 Les filtres suivants sont disponibles pour les événements d’audit dans l’interface utilisateur :
 
 | Filtre | Description |
 | --- | --- |
 | [!UICONTROL Catégorie] | Utiliser le menu déroulant pour filtrer les résultats affichés par [category](#category). |
-| [!UICONTROL Action] | Filtrer par action. Actuellement uniquement [!UICONTROL Créer] et [!UICONTROL Supprimer] Les actions peuvent être filtrées. |
+| [!UICONTROL Action] | Filtrer par action. Les actions disponibles pour chaque service sont visibles dans le tableau de ressources ci-dessus. |
 | [!UICONTROL Utilisateur] | Saisissez l’identifiant utilisateur complet (par exemple, `johndoe@acme.com`) pour filtrer par utilisateur. |
 | [!UICONTROL Statut] | Filtrez selon si l’action a été autorisée (terminée) ou refusée en raison de l’absence de [contrôle d&#39;accès](../../../access-control/home.md) autorisations. |
 | [!UICONTROL Date] | Sélectionnez une date de début et/ou une date de fin pour définir une période en fonction de laquelle filtrer les résultats. Les données peuvent être exportées avec une période de recherche arrière de 90 jours (par exemple, 2021-12-15 à 2022-03-15). Cela peut varier en fonction du type d’événement. |
 
 Pour supprimer un filtre, sélectionnez « X » sur l’icône de pilule du filtre en question, ou sélectionnez **[!UICONTROL Effacer tout]** pour supprimer tous les filtres.
 
-![Effacer les filtres](../../images/audit-logs/clear-filters.png)
+![Le tableau de bord Audits avec un filtre clair en surbrillance.](../../images/audit-logs/clear-filters.png)
+
+Les données du journal d’audit renvoyées contiennent les informations suivantes sur toutes les requêtes qui répondent aux critères de filtrage de votre choix.
+
+| Nom de la colonne | Description |
+|---|---|
+| [!UICONTROL Date et heure] | La date et l’heure exactes de l’action effectuée dans une `month/day/year hour:minute AM/PM` format. |
+| [!UICONTROL Nom de la ressource] | La valeur de la variable [!UICONTROL Nom de la ressource] dépend de la catégorie choisie comme filtre. |
+| [!UICONTROL Catégorie] | Ce champ correspond à la catégorie sélectionnée dans la liste déroulante des filtres. |
+| [!UICONTROL Action] | Les actions disponibles dépendent de la catégorie choisie comme filtre. |
+| [!UICONTROL Utilisateur] | Ce champ indique l’ID utilisateur qui a exécuté la requête. |
+
+![Le tableau de bord Audits avec le journal d’activité filtré en surbrillance.](../../images/audit-logs/filtered.png)
 
 ### Exportation des journaux d’audit
 
 Pour exporter la liste actuelle des journaux d’audit, sélectionnez **[!UICONTROL Journal de téléchargement]**.
 
-![Journal de téléchargement](../../images/audit-logs/download.png)
+![Le tableau de bord Audits avec le [!UICONTROL Journal de téléchargement] surlignée.](../../images/audit-logs/download.png)
 
 Dans la boîte de dialogue qui s’affiche, sélectionnez le format de votre choix (soit **[!UICONTROL CSV]** ou **[!UICONTROL JSON]**), puis sélectionnez **[!UICONTROL Télécharger]**. Le navigateur télécharge le fichier généré et l’enregistre sur votre ordinateur.
 
-![Sélectionner le format de téléchargement](../../images/audit-logs/select-download-format.png)
+![Boîte de dialogue de sélection du format de fichier avec [!UICONTROL Télécharger] surlignée.](../../images/audit-logs/select-download-format.png)
 
 ## Gestion des journaux d’audit dans l’API
 
