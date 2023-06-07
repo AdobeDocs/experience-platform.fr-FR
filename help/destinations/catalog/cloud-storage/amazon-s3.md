@@ -2,10 +2,10 @@
 title: Connexion Amazon S3
 description: Créez une connexion sortante active vers votre stockage Amazon Web Services (AWS) S3 pour exporter régulièrement des fichiers de données CSV depuis Adobe Experience Platform vers vos propres compartiments S3.
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: d30cd0729aa13044d8e7009fde5cae846e7a2864
+source-git-commit: 8890fd137cfe6d35dcf6177b5516605e7753a75a
 workflow-type: tm+mt
-source-wordcount: '983'
-ht-degree: 87%
+source-wordcount: '1054'
+ht-degree: 79%
 
 ---
 
@@ -32,6 +32,11 @@ Améliorations de la nouvelle carte de destination [!DNL Amazon S3] :
 ## Présentation {#overview}
 
 Créez une connexion sortante active vers votre stockage [!DNL Amazon S3] pour exporter régulièrement des fichiers de données depuis Adobe Experience Platform vers vos propres compartiments S3.
+
+## Connectez-vous à votre [!DNL Amazon S3] stockage via l’API ou l’interface utilisateur {#connect-api-or-ui}
+
+* Pour vous connecter à [!DNL Amazon S3] Emplacement de stockage à l’aide de l’interface utilisateur de Platform, lisez les sections [Connexion à la destination](#connect) et [Activation des segments vers cette destination](#activate) ci-dessous.
+* Pour vous connecter à [!DNL Amazon S3] emplacement de stockage par programmation, lisez la [Activation des segments vers des destinations basées sur des fichiers à l’aide du tutoriel de l’API Flow Service](../../api/activate-segments-file-based-destinations.md).
 
 ## Type et fréquence d’exportation {#export-type-frequency}
 
@@ -132,7 +137,10 @@ Voir [Activer les données d’audience vers des destinations d’exportation de
 
 ## (Version bêta) Exporter des jeux de données {#export-datasets}
 
-Cette destination prend en charge les exportations de jeux de données. Pour obtenir des informations complètes sur la configuration des exportations de jeux de données, consultez le [tutoriel sur l’exportation de jeux de données](/help/destinations/ui/export-datasets.md).
+Cette destination prend en charge les exportations de jeux de données. Pour obtenir des informations complètes sur la configuration des exportations de jeux de données, consultez les tutoriels :
+
+* Comment [exportation de jeux de données à l’aide de l’interface utilisateur de Platform](/help/destinations/ui/export-datasets.md).
+* Comment [exporter des jeux de données par programmation à l’aide de l’API Flow Service](/help/destinations/api/export-datasets.md).
 
 ## Données exportées {#exported-data}
 

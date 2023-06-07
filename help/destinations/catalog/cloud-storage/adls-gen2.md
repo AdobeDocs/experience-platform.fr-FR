@@ -2,10 +2,10 @@
 title: (Version bêta) Connexion à Azure Data Lake Storage Gen2
 description: Découvrez comment vous connecter à Azure Data Lake Storage Gen2 pour activer des segments et exporter des jeux de données.
 exl-id: d265a02d-c901-4b39-8714-fe9ecdbb5bb1
-source-git-commit: d30cd0729aa13044d8e7009fde5cae846e7a2864
+source-git-commit: 8890fd137cfe6d35dcf6177b5516605e7753a75a
 workflow-type: tm+mt
-source-wordcount: '709'
-ht-degree: 90%
+source-wordcount: '780'
+ht-degree: 80%
 
 ---
 
@@ -18,6 +18,11 @@ ht-degree: 90%
 ## Présentation {#overview}
 
 Lisez cette page pour apprendre à créer une connexion sortante active vers votre lac de données [[!DNL Azure Data Lake Storage Gen2]](https://learn.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction) ([!DNL ADLS Gen2]) pour exporter périodiquement des fichiers de données à partir d’Experience Platform.
+
+## Connectez-vous à votre [!DNL ADLS Gen2] stockage via l’API ou l’interface utilisateur {#connect-api-or-ui}
+
+* Pour vous connecter à [!DNL ADLS Gen2] Emplacement de stockage à l’aide de l’interface utilisateur de Platform, lisez les sections [Connexion à la destination](#connect) et [Activation des segments vers cette destination](#activate) ci-dessous.
+* Pour vous connecter à [!DNL ADLS Gen2] emplacement de stockage par programmation, lisez la [Activation des segments vers des destinations basées sur des fichiers à l’aide du tutoriel de l’API Flow Service](../../api/activate-segments-file-based-destinations.md).
 
 ## Type et fréquence d’exportation {#export-type-frequency}
 
@@ -87,7 +92,10 @@ Dans l’étape **[!UICONTROL Mappage]**, vous pouvez sélectionner les champs d
 
 ## (Version bêta) Exporter des jeux de données {#export-datasets}
 
-Cette destination prend en charge les exportations de jeux de données. Pour obtenir des informations complètes sur la configuration des exportations de jeux de données, consultez la section [tutoriel sur l’exportation de jeux de données](/help/destinations/ui/export-datasets.md).
+Cette destination prend en charge les exportations de jeux de données. Pour obtenir des informations complètes sur la configuration des exportations de jeux de données, consultez les tutoriels :
+
+* Comment [exportation de jeux de données à l’aide de l’interface utilisateur de Platform](/help/destinations/ui/export-datasets.md).
+* Comment [exporter des jeux de données par programmation à l’aide de l’API Flow Service](/help/destinations/api/export-datasets.md).
 
 ## Valider l’exportation des données avec succès {#exported-data}
 

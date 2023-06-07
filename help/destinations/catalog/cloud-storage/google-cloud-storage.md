@@ -2,10 +2,10 @@
 title: Connexion à Google Cloud Storage (version Beta)
 description: Découvrez comment vous connecter à Google Cloud Storage et activer des segments ou exporter des jeux de données.
 exl-id: ab274270-ae8c-4264-ba64-700b118e6435
-source-git-commit: d30cd0729aa13044d8e7009fde5cae846e7a2864
+source-git-commit: 8890fd137cfe6d35dcf6177b5516605e7753a75a
 workflow-type: tm+mt
-source-wordcount: '934'
-ht-degree: 92%
+source-wordcount: '1005'
+ht-degree: 84%
 
 ---
 
@@ -18,6 +18,11 @@ ht-degree: 92%
 ## Présentation {#overview}
 
 Créez une connexion sortante active vers [!DNL Google Cloud Storage] pour exporter régulièrement des fichiers de données depuis Adobe Experience Platform dans vos propres compartiments.
+
+## Connectez-vous à votre [!DNL Google Cloud Storage] stockage via l’API ou l’interface utilisateur {#connect-api-or-ui}
+
+* Pour vous connecter à [!DNL Google Cloud Storage] Emplacement de stockage à l’aide de l’interface utilisateur de Platform, lisez les sections [Connexion à la destination](#connect) et [Activation des segments vers cette destination](#activate) ci-dessous.
+* Pour vous connecter à [!DNL Google Cloud Storage] emplacement de stockage par programmation, lisez la [Activation des segments vers des destinations basées sur des fichiers à l’aide du tutoriel de l’API Flow Service](../../api/activate-segments-file-based-destinations.md).
 
 ## Type et fréquence d’exportation {#export-type-frequency}
 
@@ -102,7 +107,10 @@ Dans l’étape **[!UICONTROL Mappage]**, vous pouvez sélectionner les champs d
 
 ## (Version bêta) Exporter des jeux de données {#export-datasets}
 
-Cette destination prend en charge les exportations de jeux de données. Pour obtenir des informations complètes sur la configuration des exportations de jeux de données, consultez la section [tutoriel sur l’exportation de jeux de données](/help/destinations/ui/export-datasets.md).
+Cette destination prend en charge les exportations de jeux de données. Pour obtenir des informations complètes sur la configuration des exportations de jeux de données, consultez les tutoriels :
+
+* Comment [exportation de jeux de données à l’aide de l’interface utilisateur de Platform](/help/destinations/ui/export-datasets.md).
+* Comment [exporter des jeux de données par programmation à l’aide de l’API Flow Service](/help/destinations/api/export-datasets.md).
 
 ## Valider l’exportation des données avec succès {#exported-data}
 

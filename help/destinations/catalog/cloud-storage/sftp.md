@@ -2,10 +2,10 @@
 title: Connexion SFTP
 description: Créez une connexion sortante active à votre serveur SFTP afin d’exporter périodiquement des fichiers de données délimités à partir d’Adobe Experience Platform.
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: d30cd0729aa13044d8e7009fde5cae846e7a2864
+source-git-commit: 5af201858e00f5ccdee4d68f04d37bc5f69caf9c
 workflow-type: tm+mt
-source-wordcount: '906'
-ht-degree: 86%
+source-wordcount: '987'
+ht-degree: 72%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 86%
 >
 >Avec la version Beta de la fonctionnalité d’exportation des jeux de données et l’amélioration de la fonctionnalité d’exportation de fichiers, vous pouvez maintenant voir deux cartes [!DNL SFTP] dans le catalogue des destinations.
 >* Si vous exportez déjà des fichiers vers la destination **[!UICONTROL SFTP]**, créez des flux de données vers la nouvelle destination **[!UICONTROL SFTP en version Beta]**.
->* Si vous n’avez pas encore créé de flux de données vers la destination **[!UICONTROL SFTP]**, veuillez utiliser la nouvelle carte **[!UICONTROL SFTP en version Beta]** pour exporter des fichiers vers **[!UICONTROL SFTP]**.
+>* Si vous n’avez pas encore créé de flux de données pour la variable **[!UICONTROL SFTP]** destination, utilisez la nouvelle **[!UICONTROL Version bêta SFTP]** carte pour exporter des fichiers vers **[!UICONTROL SFTP]**.
 
 
 ![Image des deux cartes de destination SFTP dans une vue côte à côte.](../../assets/catalog/cloud-storage/sftp/two-sftp-destination-cards.png)
@@ -36,6 +36,11 @@ Créez une connexion sortante active à votre serveur SFTP afin d’exporter pé
 >[!IMPORTANT]
 >
 > Bien qu’Experience Platform prenne en charge les exportations de données vers des serveurs SFTP, les emplacements de stockage dans le cloud recommandés pour exporter les données sont [!DNL Amazon S3] et [!DNL SFTP].
+
+## Connexion à SFTP via l’API ou l’interface utilisateur {#connect-api-or-ui}
+
+* Pour vous connecter à votre emplacement de stockage SFTP à l’aide de l’interface utilisateur de Platform, lisez les sections [Connexion à la destination](#connect) et [Activation des segments vers cette destination](#activate) ci-dessous.
+* Pour vous connecter à votre emplacement de stockage SFTP par programmation, lisez le [Activation des segments vers des destinations basées sur des fichiers à l’aide du tutoriel de l’API Flow Service](../../api/activate-segments-file-based-destinations.md).
 
 ## Type et fréquence d’exportation {#export-type-frequency}
 
@@ -70,12 +75,13 @@ Pour vous connecter à cette destination, procédez comme décrit dans le [tutor
 >title="Clé SSH privée"
 >abstract="La clé SSH privée doit être formatée sous forme de chaîne codée en Base64 et ne doit pas être protégée par un mot de passe."
 
-Si vous sélectionnez le type **[!UICONTROL Authentification de base]** pour vous connecter à votre emplacement SFTP :
+Si vous sélectionnez la variable **[!UICONTROL SFTP avec mot de passe]** type d’authentification pour se connecter à votre emplacement SFTP :
 
 ![Authentification de base de la destination SFTP](../../assets/catalog/cloud-storage/sftp/stfp-basic-authentication.png)
 
-* **[!UICONTROL Hôte]** : adresse de l’emplacement de stockage de votre SFTP ;
+* **[!UICONTROL Domaine]**: l’adresse de votre emplacement de stockage SFTP ;
 * **[!UICONTROL Nom d’utilisateur]** : nom d’utilisateur pour se connecter à l’emplacement de stockage de votre SFTP ;
+* **[!UICONTROL Port]** : le port utilisé par votre emplacement de stockage SFTP ;
 * **[!UICONTROL Mot de passe]** : mot de passe pour se connecter à l’emplacement de stockage de votre SFTP.
 * **[!UICONTROL Clé de chiffrement]** : vous pouvez éventuellement joindre votre clé publique au format RSA pour ajouter un chiffrement à vos fichiers exportés. Vous pouvez voir un exemple de clé correctement formatée dans l’image ci-dessous.
 
@@ -100,7 +106,7 @@ Après avoir établi la connexion d’authentification à l’emplacement SFTP, 
 
 ![Détails de la destination disponibles pour la destination SFTP](../../assets/catalog/cloud-storage/sftp/sftp-destination-details.png)
 
-* **[!UICONTROL Nom]** : saisissez un nom qui vous aidera à identifier cette destination dans l’interface utilisateur d’Experience Platform ;
+* **[!UICONTROL Nom]**: saisissez un nom qui vous aide à identifier cette destination dans l’interface utilisateur de l’Experience Platform ;
 * **[!UICONTROL Description]** : saisissez une description pour cette destination ;
 * **[!UICONTROL Chemin du dossier]** : saisissez le chemin d’accès au dossier de votre emplacement SFTP où les fichiers seront exportés.
 * **[!UICONTROL Type de fichier]**: sélectionnez le format que l’Experience Platform doit utiliser pour les fichiers exportés. Cette option n’est disponible que pour la variable **[!UICONTROL Version bêta SFTP]** destination. Lorsque vous sélectionnez la variable [!UICONTROL CSV] , vous pouvez également [configuration des options de formatage de fichier](../../ui/batch-destinations-file-formatting-options.md).
@@ -117,12 +123,15 @@ Voir [Activer les données d’audience vers des destinations d’exportation de
 
 ## (Version bêta) Exporter des jeux de données {#export-datasets}
 
-Cette destination prend en charge les exportations de jeux de données. Pour obtenir des informations complètes sur la configuration des exportations de jeux de données, consultez le [tutoriel sur l’exportation de jeux de données](/help/destinations/ui/export-datasets.md).
+Cette destination prend en charge les exportations de jeux de données. Pour obtenir des informations complètes sur la configuration des exportations de jeux de données, consultez les tutoriels :
+
+* Comment [exportation de jeux de données à l’aide de l’interface utilisateur de Platform](/help/destinations/ui/export-datasets.md).
+* Comment [exporter des jeux de données par programmation à l’aide de l’API Flow Service](/help/destinations/api/export-datasets.md).
 
 ## Données exportées {#exported-data}
 
 Pour les destinations [!DNL SFTP], Platform crée un fichier `.csv` à l’emplacement de stockage que vous avez indiqué. Pour plus d’informations sur les fichiers, consultez la section [Activation des données d’audience vers des destinations d’exportation de profils par lots](../../ui/activate-batch-profile-destinations.md) dans le tutoriel sur l’activation des segments.
 
-## Liste autorisée d’adresses IP
+## Liste autorisée d’adresses IP {#ip-address-allow-list}
 
 Voir [LISTE AUTORISÉE d’adresses IP pour les destinations SFTP](ip-address-allow-list.md) si vous devez ajouter des adresses IP d’Adobe à une liste autorisée.

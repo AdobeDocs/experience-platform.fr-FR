@@ -2,10 +2,10 @@
 title: Destination de Data Landing Zone
 description: Découvrez comment vous connecter à Data Landing Zone pour activer des segments et exporter des jeux de données.
 exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
-source-git-commit: d30cd0729aa13044d8e7009fde5cae846e7a2864
+source-git-commit: 8890fd137cfe6d35dcf6177b5516605e7753a75a
 workflow-type: tm+mt
-source-wordcount: '1189'
-ht-degree: 72%
+source-wordcount: '1265'
+ht-degree: 64%
 
 ---
 
@@ -26,6 +26,11 @@ ht-degree: 72%
 
 Platform applique une durée de vie (TTL) stricte de sept jours sur tous les fichiers chargés dans un conteneur [!DNL Data Landing Zone]. Tous les fichiers sont supprimés au bout de sept jours.
 
+## Connectez-vous à votre [!UICONTROL Zone d’entrée des données] stockage via l’API ou l’interface utilisateur {#connect-api-or-ui}
+
+* Pour vous connecter à [!UICONTROL Zone d’entrée des données] Emplacement de stockage à l’aide de l’interface utilisateur de Platform, lisez les sections [Connexion à la destination](#connect) et [Activation des segments vers cette destination](#activate) ci-dessous.
+* Pour vous connecter à [!UICONTROL Zone d’entrée des données] emplacement de stockage par programmation, lisez la [Activation des segments vers des destinations basées sur des fichiers à l’aide du tutoriel de l’API Flow Service](../../api/activate-segments-file-based-destinations.md).
+
 ## Type et fréquence d’exportation {#export-type-frequency}
 
 Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la fréquence d’exportation des destinations.
@@ -43,7 +48,7 @@ Notez les conditions préalables suivantes qui doivent être remplies pour pouvo
 
 ### Connectez-vous à [!DNL Data Landing Zone] conteneur à [!DNL Azure Storage Explorer]
 
-Vous pouvez utiliser [[!DNL Azure Storage Explorer]](https://azure.microsoft.com/fr-fr/products/storage/storage-explorer/) pour gérer le contenu de votre conteneur [!DNL Data Landing Zone]. Pour commencer à utiliser [!DNL Data Landing Zone], vous devez d’abord récupérer vos informations d’identification, puis les entrer dans [!DNL Azure Storage Explorer], puis connectez vos [!DNL Data Landing Zone] conteneur à [!DNL Azure Storage Explorer].
+Vous pouvez utiliser [[!DNL Azure Storage Explorer]](https://azure.microsoft.com/en-us/products/storage/storage-explorer/) pour gérer le contenu de votre conteneur [!DNL Data Landing Zone]. Pour commencer à utiliser [!DNL Data Landing Zone], vous devez d’abord récupérer vos informations d’identification, puis les entrer dans [!DNL Azure Storage Explorer], puis connectez vos [!DNL Data Landing Zone] conteneur à [!DNL Azure Storage Explorer].
 
 Dans l’interface utilisateur [!DNL Azure Storage Explorer], sélectionnez l’icône de connexion dans la barre de navigation de gauche. La fenêtre **Sélectionner la ressource** s’affiche, vous permettant d’accéder à des options de connexion. Sélectionnez **[!DNL Blob container]** pour vous connecter à votre espace de stockage [!DNL Data Landing Zone].
 
@@ -83,7 +88,7 @@ curl -X GET \
 
 **Réponse**
 
-La réponse suivante renvoie les informations d’identification pour votre zone d’entrée, y compris votre `SASToken` et `SASUri`, ainsi que la variable `storageAccountName` qui correspond au conteneur de votre zone d’entrée.
+La réponse suivante renvoie les informations d’identification pour votre zone d’entrée, y compris votre `SASToken` et `SASUri`, et la variable `storageAccountName` qui correspond au conteneur de votre zone d’entrée.
 
 ```json
 {
@@ -114,7 +119,7 @@ Une connexion réussie met à jour l’interface utilisateur [!DNL Azure Storage
 
 ![Conteneur utilisateur DLZ](/help/sources/images/tutorials/create/dlz/dlz-user-container.png)
 
-Avec votre conteneur [!DNL Data Landing Zone] connecté à [!DNL Azure Storage Explorer], vous pouvez maintenant commencer à exporter des fichiers d’Experience Platform vers votre conteneur [!DNL Data Landing Zone]. Pour exporter des fichiers, vous devez établir une connexion à la destination [!DNL Data Landing Zone] dans l’interface utilisateur Experience Platform, comme décrit dans la section ci-dessous.
+Avec votre conteneur [!DNL Data Landing Zone] connecté à [!DNL Azure Storage Explorer], vous pouvez maintenant commencer à exporter des fichiers d’Experience Platform vers votre conteneur [!DNL Data Landing Zone]. Pour exporter des fichiers, vous devez établir une connexion au [!DNL Data Landing Zone] destination dans l’interface utilisateur de l’Experience Platform, comme décrit dans la section ci-dessous.
 
 ## Se connecter à la destination {#connect}
 
@@ -163,7 +168,10 @@ Dans l’étape **[!UICONTROL Mappage]**, vous pouvez sélectionner les champs d
 
 ## (Version bêta) Exporter des jeux de données {#export-datasets}
 
-Cette destination prend en charge les exportations de jeux de données. Pour obtenir des informations complètes sur la configuration des exportations de jeux de données, consultez la section [tutoriel sur l’exportation de jeux de données](/help/destinations/ui/export-datasets.md).
+Cette destination prend en charge les exportations de jeux de données. Pour obtenir des informations complètes sur la configuration des exportations de jeux de données, consultez les tutoriels :
+
+* Comment [exportation de jeux de données à l’aide de l’interface utilisateur de Platform](/help/destinations/ui/export-datasets.md).
+* Comment [exporter des jeux de données par programmation à l’aide de l’API Flow Service](/help/destinations/api/export-datasets.md).
 
 ## Valider l’exportation des données avec succès {#exported-data}
 

@@ -2,10 +2,10 @@
 title: Connexion Azure Blob
 description: Créez une connexion sortante active vers votre stockage Blob Azure afin d’exporter régulièrement des fichiers de données CSV à partir d’Adobe Experience Platform.
 exl-id: 8099849b-e3d2-48a5-902a-ca5a5ec88207
-source-git-commit: d30cd0729aa13044d8e7009fde5cae846e7a2864
+source-git-commit: 8890fd137cfe6d35dcf6177b5516605e7753a75a
 workflow-type: tm+mt
-source-wordcount: '952'
-ht-degree: 89%
+source-wordcount: '1029'
+ht-degree: 80%
 
 ---
 
@@ -32,6 +32,11 @@ Améliorations de la nouvelle carte de destination [!DNL Azure Blob] :
 ## Présentation {#overview}
 
 [!DNL Azure Blob] (ci-après dénommé [!DNL Blob]) est la solution de stockage d’objets Microsoft pour le cloud. Ce tutoriel présente les étapes à suivre pour créer une destination [!DNL Blob] à l’aide de l’interface utilisateur de [!DNL Platform].
+
+## Connectez-vous à votre [!UICONTROL Azure Blob] stockage via l’API ou l’interface utilisateur {#connect-api-or-ui}
+
+* Pour vous connecter à [!UICONTROL Azure Blob] Emplacement de stockage à l’aide de l’interface utilisateur de Platform, lisez les sections [Connexion à la destination](#connect) et [Activation des segments vers cette destination](#activate) ci-dessous.
+* Pour vous connecter à [!UICONTROL Azure Blob] emplacement de stockage par programmation, lisez la [Activation des segments vers des destinations basées sur des fichiers à l’aide du tutoriel de l’API Flow Service](../../api/activate-segments-file-based-destinations.md).
 
 ## Prise en main
 
@@ -79,7 +84,7 @@ Pour vous connecter à cette destination, procédez comme décrit dans le [tutor
 Pour vous authentifier auprès de la destination, renseignez les champs requis et sélectionnez **[!UICONTROL Se connecter à la destination]**.
 
 * **[!UICONTROL Chaîne de connexion]** : la chaîne de connexion est requise pour accéder aux données de votre stockage Blob. Le modèle de chaîne de connexion [!DNL Blob] commence par : `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`.
-   * Pour plus d’informations sur la configuration de votre chaîne de connexion [!DNL Blob], consultez [Configurer une chaîne de connexion pour un compte de stockage Azure](https://docs.microsoft.com/fr-fr/azure/storage/common/storage-configure-connection-string#configure-a-connection-string-for-an-azure-storage-account) dans la documentation de Microsoft.
+   * Pour plus d’informations sur la configuration de votre chaîne de connexion [!DNL Blob], consultez [Configurer une chaîne de connexion pour un compte de stockage Azure](https://learn.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string#configure-a-connection-string-for-an-azure-storage-account) dans la documentation de Microsoft.
 * **[!UICONTROL Clé de chiffrement]** : vous pouvez éventuellement joindre votre clé publique au format RSA pour ajouter un chiffrement à vos fichiers exportés. Vous pouvez voir un exemple de clé correctement formatée dans l’image ci-dessous.
 
    ![Image montrant un exemple de clé PGP correctement formatée dans l’interface utilisateur](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
@@ -112,7 +117,10 @@ Voir [Activer les données d’audience vers des destinations d’exportation de
 
 ## (Version bêta) Exporter des jeux de données {#export-datasets}
 
-Cette destination prend en charge les exportations de jeux de données. Pour obtenir des informations complètes sur la configuration des exportations de jeux de données, consultez le [tutoriel sur l’exportation de jeux de données](/help/destinations/ui/export-datasets.md).
+Cette destination prend en charge les exportations de jeux de données. Pour obtenir des informations complètes sur la configuration des exportations de jeux de données, consultez les tutoriels :
+
+* Comment [exportation de jeux de données à l’aide de l’interface utilisateur de Platform](/help/destinations/ui/export-datasets.md).
+* Comment [exporter des jeux de données par programmation à l’aide de l’API Flow Service](/help/destinations/api/export-datasets.md).
 
 ## Données exportées {#exported-data}
 
