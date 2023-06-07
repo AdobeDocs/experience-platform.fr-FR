@@ -3,7 +3,7 @@ title: Amazon Ads
 description: Amazon Ads offre toute une gamme de solutions pour vous aider à atteindre vos objectifs publicitaires. Les partenaires de vente enregistrés, les vendeurs et vendeuses, les marchands de livres, les auteures et auteurs Kindle Direct Publishing (KDP), les personnes développant des applications et/ou les agences peuvent tirer parti du connecteur. L’intégration d’Amazon Ads à Adobe Experience Platform offre une intégration clé en main aux produits Amazon Ads, y compris Amazon DSP (ADSP). À l’aide de la destination Amazon Ads dans Adobe Experience Platform, les utilisateurs et utilisatrices peuvent définir des audiences d’annonceurs pour le ciblage et l’activation sur Amazon DSP.
 last-substantial-update: 2023-03-29T00:00:00Z
 exl-id: 724f3d32-65e0-4612-a882-33333e07c5af
-source-git-commit: 9c1f3d5d5fc14941cb40adf02fd3d9acce5cf648
+source-git-commit: 147499e0b736fac7aa27942790661236be68b0a4
 workflow-type: tm+mt
 source-wordcount: '1401'
 ht-degree: 78%
@@ -81,9 +81,11 @@ Pour configurer les détails de la destination, renseignez les champs obligatoir
 * **[!UICONTROL Nom]** : un nom par lequel vous reconnaîtrez cette destination à l’avenir.
 * **[!UICONTROL Description]** : une description qui vous aidera à identifier cette destination à l’avenir.
 * **[!UICONTROL ID publicitaire Amazon Ads]** : sélectionnez l’ID du compte Amazon Ads cible utilisé pour la destination.
+
 >[!NOTE]
 >
 >Après avoir enregistré la configuration de destination, vous ne pourrez pas modifier l’identifiant publicitaire Amazon Ads, même si vous vous authentifiez à nouveau via votre compte Amazon. Pour utiliser un autre identifiant publicitaire Amazon Ads, vous devez créer une nouvelle connexion de destination.
+
 * **[!UICONTROL Région des annonceurs]**: Sélectionnez la région dans laquelle votre annonceur est hébergé. Pour plus d’informations sur les marchés pris en charge par chaque région, consultez la page [Documentation Amazon Ads](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints).
 
 
@@ -136,7 +138,7 @@ Pour accéder à une documentation d’aide supplémentaire, consultez les resso
 
 * [Centre d’aide Amazon DSP](https://www.amazon.com/ap/signin?openid.pape.max_auth_age=28800&amp;openid.return_to=https%3A%2F%2Fadvertising.amazon.com%2Fdsp%2Fhelp%2Fss%2Fen%2Faudiences&amp;openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&amp;openid.assoc_handle=amzn_bt_desktop_us&amp;openid.mode=checkid_setup&amp;openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&amp;openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0)
 
-### Journal des modifications {#changelog}
+## Journal des modifications {#changelog}
 
 Cette section capture les fonctionnalités et les mises à jour importantes de la documentation apportées à ce connecteur de destination.
 
@@ -144,7 +146,7 @@ Cette section capture les fonctionnalités et les mises à jour importantes de l
 
 | Mois de publication | Type de mise à jour | Description |
 |---|---|---|
-| Mai 2023 | Fonctionnalité et mise à jour de la documentation | <ul><li>Ajout de la prise en charge de la sélection de la région Advertiser dans le processus de connexion de destination.</li><li>Mise à jour de la documentation pour prendre en compte l’ajout de la sélection de région Advertiser. Pour plus d’informations sur la sélection de la région Advertiser appropriée, reportez-vous à la section [Documentation Amazon](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints).</li></ul> |
+| Mai 2023 | Fonctionnalité et mise à jour de la documentation | <ul><li>Ajout de la prise en charge de la sélection de la région Advertiser dans le [workflow de connexion à destination](#destination-details).</li><li>Mise à jour de la documentation pour prendre en compte l’ajout de la sélection de région Advertiser. Pour plus d’informations sur la sélection de la région Advertiser appropriée, reportez-vous à la section [Documentation Amazon](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints).</li></ul> |
 | Mars 2023 | Version initiale | Version initiale de la destination et documentation publiée. |
 
 {style="table-layout:auto"}
