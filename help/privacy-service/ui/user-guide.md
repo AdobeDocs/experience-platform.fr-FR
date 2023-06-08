@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Gestion des tâches liées à la confidentialité dans l’interface utilisateur du Privacy Service
 description: Découvrez comment utiliser l’interface utilisateur du Privacy Service pour coordonner et surveiller les demandes d’accès à des informations personnelles dans différentes applications Experience Cloud.
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
-source-git-commit: 96434c83b3d8757872439b58b5c450955c0ed652
+source-git-commit: e5a1b57bc81b27d0e61c3c1ecc10156c10dd3f6e
 workflow-type: tm+mt
-source-wordcount: '1467'
-ht-degree: 68%
+source-wordcount: '1473'
+ht-degree: 67%
 
 ---
 
@@ -58,7 +58,7 @@ Le tableau de bord de la variable [!DNL Privacy Service] L’interface utilisate
 
 Les tâches pour chaque type de réglementation sont suivies séparément. Pour passer d’un type de réglementation à un autre, sélectionnez l’option **[!UICONTROL Type de réglementation]** menu déroulant et sélectionnez la réglementation souhaitée dans la liste.
 
-![Liste déroulante de type de réglementation](../images/user-guide/regulation.png)
+![Console du Privacy Service avec la liste déroulante Type de réglementation .](../images/user-guide/regulation.png)
 
 Lorsque vous modifiez le type de réglementation, le tableau de bord se met à jour pour afficher tous les filtres, widgets, ainsi que toutes les opérations et les boîtes de dialogue de création de tâche qui s’appliquent au règlement sélectionné.
 
