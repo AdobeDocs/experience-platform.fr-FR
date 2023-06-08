@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Gestion des tâches liées à la confidentialité dans l’interface utilisateur du Privacy Service
 description: Découvrez comment utiliser l’interface utilisateur du Privacy Service pour coordonner et surveiller les demandes d’accès à des informations personnelles dans différentes applications Experience Cloud.
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
-source-git-commit: a1628df7d0eefc795d1eaeefce842a65c7133322
+source-git-commit: 96434c83b3d8757872439b58b5c450955c0ed652
 workflow-type: tm+mt
-source-wordcount: '1463'
+source-wordcount: '1467'
 ht-degree: 68%
 
 ---
@@ -38,7 +38,9 @@ Le tableau de bord de la variable [!DNL Privacy Service] L’interface utilisate
 
 | Libellé de l’interface utilisateur | Régulation |
 | --- | --- |
+| [!UICONTROL CPA] | La variable [!DNL Colorado Privacy Act] |
 | [!UICONTROL CCPA] | La variable [!DNL California Consumer Privacy Act] |
+| [!UICONTROL CTDPA] | La variable [!DNL Connecticut Data Privacy Act] |
 | [!UICONTROL RGPD] | L&#39;Union européenne [!DNL General Data Protection Regulation] |
 | [!UICONTROL PDPA_THA] | Thaïlande [!DNL Personal Data Protection Act] |
 | [!UICONTROL LGPD_BRA] | Le Brésil [!DNL Lei Geral de Proteção de Dados] |
@@ -158,7 +160,7 @@ La boîte de dialogue disparaît et la ou les nouvelles tâches sont répertori�
 
 ### Charger un fichier JSON {#json}
 
-Lorsque vous créez des requêtes plus complexes, comme celles qui utilisent plusieurs types d’identifiants pour chaque sujet de données traité, vous pouvez créer une requête en chargeant un fichier JSON.
+Lorsque vous créez des requêtes plus complexes, comme celles qui utilisent plusieurs types d’identifiants pour chaque titulaire de données traité, vous pouvez créer une requête en chargeant un fichier JSON.
 
 Sélectionnez la flèche en regard de **[!UICONTROL Créer une requête]**, sous le widget Rapport d’état sur le côté droit de l’écran. Dans la liste des options qui s’affiche, sélectionnez **[!UICONTROL Charger JSON]**.
 
