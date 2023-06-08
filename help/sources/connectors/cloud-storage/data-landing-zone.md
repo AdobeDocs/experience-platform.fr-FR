@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Source de la zone d’entrée de données
 description: Découvrez comment connecter la zone d’entrée des données à Adobe Experience Platform
 exl-id: bdc10095-7de4-4183-bfad-a7b5c89197e3
-source-git-commit: d57060ddeed64d3863f71ac1ea34ccc5c97265ea
+source-git-commit: c2cc734d4a5c86fecbd0dabdfe63c896f0fe0f54
 workflow-type: tm+mt
-source-wordcount: '842'
-ht-degree: 47%
+source-wordcount: '869'
+ht-degree: 45%
 
 ---
 
@@ -32,7 +32,7 @@ Vous trouverez ci-dessous une liste des contraintes dont vous devez tenir compte
 - Caractères de chemin d’URL illégaux interdits. Les points de code tels que `\uE000`, bien que valides dans les noms de fichier NTFS, ne sont pas des caractères Unicode valides. En outre, certains caractères ASCII ou Unicode, tels que les caractères de contrôle (tels que `0x00` to `0x1F`, `\u0081`, etc.), ne sont pas non plus autorisés. Pour les règles régissant les chaînes Unicode en HTTP/1.1, voir [RFC 2616, section 2.2 : règles de base](https://www.ietf.org/rfc/rfc2616.txt) et [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt).
 - Les noms de fichier suivants ne sont pas autorisés : LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, COM9, PRN, AUX, NUL, CON, CLOCK$, point (.) et deux points (..).
 
-## Gérer le contenu de vos [!DNL Data Landing Zone]
+## Gestion du contenu de votre zone d’entrée des données{#manage-the-contents-of-your-data-landing-zone}
 
 Vous pouvez utiliser [[!DNL Azure Storage Explorer]](https://azure.microsoft.com/fr-fr/products/storage/storage-explorer/) pour gérer le contenu de votre conteneur [!DNL Data Landing Zone].
 
@@ -162,3 +162,8 @@ La documentation ci-dessous fournit des informations sur la manière d’importe
 
 - [Connecter  [!DNL Data Landing Zone]  à Platform à l’aide de l’interface utilisateur](../../tutorials/ui/create/cloud-storage/data-landing-zone.md)
 - [Créer un flux de données pour une connexion de stockage dans le cloud dans l’interface utilisateur](../../tutorials/ui/dataflow/batch/cloud-storage.md)
+
+>[!IMPORTANT]
+>
+>Les liens privés ne sont actuellement pas pris en charge lors de la connexion à Experience Platform à l’aide de la variable [!DNL Data Landing Zone]. Les seules méthodes d’accès prises en charge sont les méthodes répertoriées. [here](#manage-the-contents-of-your-data-landing-zone).
+
