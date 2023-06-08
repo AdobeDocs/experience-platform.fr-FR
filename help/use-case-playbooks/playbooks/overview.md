@@ -1,11 +1,11 @@
 ---
 solution: Experience Platform
-title: Présentation des livres de lecture
+title: Présentation des playbooks de cas d’utilisation
 description: Découvrez comment utiliser la fonction des cahiers de travail des cas d’utilisation dans Experience Platform pour commencer à utiliser divers cas d’utilisation marketing
 badgeBeta: label="Beta" type="Informative"
-source-git-commit: 63ea852ca9f9a45d1c071fd1033cbd44cbb427c6
+source-git-commit: 51e4a77472ccb560dbfa5f56011ce50932d87b64
 workflow-type: tm+mt
-source-wordcount: '390'
+source-wordcount: '398'
 ht-degree: 3%
 
 ---
@@ -18,8 +18,8 @@ ht-degree: 3%
 Ce que vous trouverez dans ce guide de documentation :
 
 * **[Présentation des playbooks de cas d’utilisation](#overview)**
-* [Affichage d’un playbook et génération de ressources](ui-guide.md#view-playbook-generate-assets)
-* [Activation, utilisation et réutilisation d’une instance d’un manuel de lecture ](ui-guide.md#enable-playbook)
+* [Découvrez le bon manuel](/help/use-case-playbooks/playbooks/discover.md)
+* [Créer, partager et réutiliser des instances de playbook](/help/use-case-playbooks/playbooks/create-share-reuse.md)
 * [Dépannage et limites connues](troubleshooting.md)
 
 >[!ENDSHADEBOX]
@@ -46,9 +46,9 @@ Créez une instance d’un playbook pour générer des ressources spécifiques t
 
 Certains [!UICONTROL Cas d’utilisation des classeurs] sont adaptées aux cas d’utilisation de la plateforme CDP en temps réel, tandis que d’autres sont mieux adaptés aux clients utilisant Journey Optimizer. Parcourez le catalogue pour trouver les playbooks les mieux adaptés à votre produit et à votre cas d’utilisation.
 
-## Guide de l’interface utilisateur du 
+## Guides d’interface utilisateur
 
-Une fois que vous avez décidé du manuel à utiliser, sélectionnez-le dans l’interface utilisateur et commencez à l’utiliser. Lisez le guide de l’interface utilisateur sur [comment activer et réutiliser des livres de lecture](/help/use-case-playbooks/playbooks/ui-guide.md) pour obtenir des informations complètes sur la création d’instances et sur l’utilisation optimale d’un playbook.
+Une fois que vous avez décidé du manuel à utiliser, sélectionnez-le dans l’interface utilisateur et commencez à l’utiliser. Lisez les guides de l’interface utilisateur sur [découvrez le bon playbook](/help/use-case-playbooks/playbooks/discover.md) pour vous et [comment créer, partager et réutiliser des instances playbook](/help/use-case-playbooks/playbooks/create-share-reuse.md) pour obtenir des informations complètes sur la création d’instances et sur l’utilisation optimale d’un playbook.
 
 ## Dépannage et limites connues
 
