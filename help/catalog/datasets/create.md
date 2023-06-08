@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Création d’un jeu de données à l’aide d’API
 description: Ce document décrit les étapes générales pour créer un jeu de données à l’aide des API d’Adobe Experience Platform et pour renseigner le jeu de données à l’aide d’un fichier.
 exl-id: 3a5f48cf-ad05-4b9e-be1d-ff213a26a477
-source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
+source-git-commit: e2f16f532b98e6948ffd7f331e630137b3972f0f
 workflow-type: tm+mt
-source-wordcount: '1304'
-ht-degree: 86%
+source-wordcount: '1303'
+ht-degree: 81%
 
 ---
 
@@ -45,9 +45,7 @@ Dans [!DNL Experience Platform], toutes les ressources sont isolées dans des sa
 >
 >Pour plus d’informations sur les sandbox dans [!DNL Platform], consultez la [documentation de présentation des sandbox](../../sandboxes/home.md).
 
-Toutes les requêtes contenant un payload (POST, PUT, PATCH) requièrent un en-tête supplémentaire :
-
-* Content-Type: application/json
+Toutes les requêtes contenant une payload (POST, PUT, PATCH) nécessitent un en-tête `Content-Type: application/json` supplémentaire : Pour les requêtes JSON+PATCH, la variable `Content-Type` should `application/json-patch+json`.
 
 ## Tutoriel
 
@@ -227,7 +225,7 @@ Une réponse réussie renvoie un état HTTP 201 (Créé) et un objet de répons
 
 ## Création d’un lot
 
-Avant d’ajouter des données à un jeu de données, vous devez créer un lot lié au jeu de données. Le lot sert ensuite au transfert.
+Avant d’ajouter des données à un jeu de données, vous devez créer un lot lié au jeu de données. Le lot sert ensuite au chargement.
 
 **Format d’API**
 
@@ -254,7 +252,7 @@ curl -X POST 'https://platform.adobe.io/data/foundation/import/batches' \
 
 **Réponse**
 
-Une réponse réussie renvoie un état HTTP 201 (Créé) et un objet de réponse contenant les détails du lot nouvellement créé, y compris sa chaîne `id` en lecture seule générée par le système.
+Une réponse réussie renvoie un état HTTP 201 (Created) et un objet de réponse. L’objet de réponse est un tableau contenant l’identifiant du lot nouvellement créé au format `"@/batches/{BATCH_ID}"`. L’identifiant de lot est une chaîne en lecture seule générée par le système et utilisée pour référencer le lot dans les appels API.
 
 ```JSON
 {
@@ -291,13 +289,13 @@ Une réponse réussie renvoie un état HTTP 201 (Créé) et un objet de répons
 }
 ```
 
-## Transfert de fichiers dans un lot
+## Chargement de fichiers dans un lot
 
-Une fois le nouveau lot créé pour le transfert, vous pouvez désormais transférer des fichiers dans le jeu de données spécifique. Il est important de rappeler que lorsque vous avez défini le jeu de données, vous avez spécifié le format de fichier comme Parquet. Par conséquent, les fichiers que vous transférez doivent être dans ce format.
+Une fois le nouveau lot créé pour le chargement, vous pouvez désormais charger des fichiers dans le jeu de données spécifique. Il est important de rappeler que lorsque vous avez défini le jeu de données, vous avez spécifié le format de fichier comme Parquet. Par conséquent, les fichiers que vous chargez doivent être dans ce format.
 
 >[!NOTE]
 >
->Le fichier de transfert de données le plus volumineux pris en charge est de 512 Mo. Si votre fichier de données est plus volumineux, il doit être divisé en blocs de 512 Mo maximum afin de les transférer un par un. En répétant cette étape, vous pouvez transférer chaque fichier dans le même lot, à l’aide du même identifiant de lot. Le nombre de fichiers que vous pouvez transférer dans le cadre d’un lot n’est pas limité.
+>Le fichier de transfert de données le plus volumineux pris en charge est de 512 Mo. Si votre fichier de données est plus volumineux, il doit être divisé en blocs de 512 Mo maximum afin de les charger un par un. En répétant cette étape, vous pouvez charger chaque fichier dans le même lot, à l’aide du même identifiant de lot. Le nombre de fichiers que vous pouvez charger dans le cadre d’un lot n’est pas limité.
 
 **Format d’API**
 
@@ -307,9 +305,9 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 
 | Paramètre | Description |
 | --- | --- |
-| `{BATCH_ID}` | L’`id` du lot dans lequel vous effectuez le transfert. |
+| `{BATCH_ID}` | L’`id` du lot dans lequel vous effectuez le chargement. |
 | `{DATASET_ID}` | L’`id` du jeu de données dans lequel le lot est conservé. |
-| `{FILE_NAME}` | Le nom du fichier que vous transférez. |
+| `{FILE_NAME}` | Le nom du fichier que vous chargez. |
 
 **Requête**
 
@@ -324,11 +322,11 @@ curl -X PUT 'https://platform.adobe.io/data/foundation/import/batches/5d01230fc7
 
 **Réponse**
 
-Un fichier transféré renvoie un corps de réponse vide et un état HTTP 200 (OK).
+Un fichier chargé renvoie un corps de réponse vide et un état HTTP 200 (OK).
 
 ## Signalement de la fin du lot
 
-Après avoir transféré tous les fichiers de données dans le lot, vous pouvez signaler que le lot est terminé. Le signalement de la fin entraîne la création du service. [!DNL Catalog] `DataSetFile` entrées pour les fichiers chargés et les associer au lot généré précédemment. Le [!DNL Catalog] Le lot est marqué comme réussi, ce qui déclenche tous les flux en aval qui peuvent ensuite fonctionner sur les données désormais disponibles.
+Après avoir chargé tous les fichiers de données dans le lot, vous pouvez signaler que le lot est terminé. Le signalement de la fin entraîne la création du service. [!DNL Catalog] `DataSetFile` entrées pour les fichiers chargés et les associer au lot généré précédemment. Le [!DNL Catalog] Le lot est marqué comme réussi, ce qui déclenche tous les flux en aval qui peuvent ensuite fonctionner sur les données désormais disponibles.
 
 **Format d’API**
 
@@ -355,12 +353,12 @@ Un lot terminé renvoie un corps de réponse vide et un état HTTP 200 (OK).
 
 ## Surveillance de l’ingestion
 
-La durée d’ingestion des lots varie en fonction de la taille des données. Vous pouvez surveiller l’état d’un lot en ajoutant un paramètre de requête `batch` contenant l’identifiant du lot à une requête `GET /batches`. L’API interroge le jeu de données pour connaître l’état du lot jusqu’à ce que le `status` dans la réponse indique la fin (« succès » ou « échec »).
+La durée d’ingestion des lots varie en fonction de la taille des données. Vous pouvez surveiller l’état d’un lot en ajoutant l’identifiant d’un lot à une `GET /batches` requête.
 
 **Format d’API**
 
 ```HTTP
-GET /batches?batch={BATCH_ID}
+GET /batches/{BATCH_ID}
 ```
 
 | Paramètre | Description |
@@ -460,7 +458,7 @@ Une réponse négative renvoie un objet avec la valeur `"failed"` dans son attri
 
 ## Lecture des données du jeu de données
 
-L’identifiant de lot vous permet d’utiliser l’API d’accès aux données pour relire et vérifier tous les fichiers transférés dans le lot. La réponse renvoie un tableau contenant une liste d’identifiants de fichier, chacun référençant un fichier du lot.
+L’identifiant de lot vous permet d’utiliser l’API d’accès aux données pour relire et vérifier tous les fichiers chargés dans le lot. La réponse renvoie un tableau contenant une liste d’identifiants de fichier, chacun référençant un fichier du lot.
 
 Vous pouvez également utiliser l’API d’accès aux données pour renvoyer le nom, la taille en octets et un lien pour télécharger le fichier ou le dossier.
 

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Présentation de Catalog service
 description: Le Catalog Service est le système d’enregistrement pour l’emplacement et la parenté des données au sein d’Adobe Experience Platform. Bien que toutes les données ingérées dans Experience Platform soient stockées dans le lac de données sous forme de fichiers et de répertoires, le catalogue renferme les métadonnées et la description de ces fichiers et répertoires à des fins de recherche et de surveillance.
 exl-id: ef0c173b-607b-41b8-8676-c54ae9472e23
-source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
+source-git-commit: 0ebe9eadb1bce6252b43a50af009ce1b0f6e5d6e
 workflow-type: tm+mt
-source-wordcount: '805'
+source-wordcount: '694'
 ht-degree: 100%
 
 ---
@@ -53,10 +53,7 @@ Le tableau suivant décrit les différents types d’objets pris en charge par l
 
 | Objet | Point d’entrée de l’API | Définition |
 |---|---|---|
-| Compte | `/accounts` | Lors de la création de connexions source, les informations d’authentification doivent être renseignées. Un compte représente un ensemble d’informations d’authentification utilisées pour créer une connexion d’un type spécifique. Chaque connexion comporte un ensemble de paramètres uniques qui sont conservés par le [!DNL Catalog] et sécurisés dans un [!DNL Azure Key Vault]. |
 | Lot | `/batches` | Les lots sont des unités de données composées d’un ou de plusieurs fichiers à ingérer en tant qu’unité unique. Un objet de lot dans le [!DNL Catalog] décrit les mesures d’ingestion du lot, telles que le nombre d’enregistrements traités ou la taille sur le disque. Il peut également inclure des liens vers des jeux de données, des vues et d’autres ressources que l’opération par lot a affectées. |
-| Connexion | `/connections` | Une connexion est une instance unique d’un connecteur source, propre à votre organisation et configurée à l’aide des informations d’authentification adéquates au type de connecteur. |
-| Connecteur | `/connectors` | Les connecteurs définissent la manière dont les connexions sources sont utilisées pour collecter les données d’autres applications Adobe (telles qu’Adobe Analytics et Adobe Audience Manager), de sources tierces de stockage dans le cloud (comme [!DNL Azure Blob], [!DNL Amazon S3], serveurs FTP et SFTP) et de systèmes de gestion de la relation client tiers (notamment [!DNL Microsoft Dynamics] et [!DNL Salesforce]). |
 | Jeu de données | `/dataSets` | Un jeu de données est une structure de stockage et de gestion utilisée pour la collecte de données (généralement sous la forme d’un tableau) qui contient un schéma (des colonnes) et des champs (des lignes). Pour plus d’informations, consultez la [présentation des jeux de données](./datasets/overview.md). |
 | Fichier de jeu de données | `/datasetFiles` | Les fichiers de jeux de données représentent des blocs de données qui ont été enregistrés sur [!DNL Platform]. Étant des enregistrements de fichiers littéraux, vous pouvez y trouver la taille du fichier, le nombre d’enregistrements qu’il contient, ainsi qu’une référence au lot qui a ingéré le fichier. |
 

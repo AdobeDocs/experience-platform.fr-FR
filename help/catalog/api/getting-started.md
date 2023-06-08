@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guide de l’API Catalog Service
 description: L’API Catalog Service permet aux développeurs de gérer les métadonnées des jeux de données dans Adobe Experience Platform. Suivez ce guide pour savoir comment effectuer des opérations clés à l’aide de l’API.
 exl-id: 812fcdae-ed0e-4f2b-84d7-26f2f79e71b9
-source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
+source-git-commit: 07451b8ab4bcb7ca43ad0c8a821478b2c9682894
 workflow-type: tm+mt
-source-wordcount: '596'
+source-wordcount: '595'
 ht-degree: 58%
 
 ---
@@ -63,6 +63,6 @@ Comme certaines requêtes peuvent imposer une charge importante à l’API, des 
 
 Ce document couvrait les connaissances préalables requises pour effectuer des appels à la fonction [!DNL Catalog] API. Vous pouvez désormais procéder aux exemples d&#39;appel fournis dans ce guide de développement et suivre leurs instructions.
 
-La plupart des exemples de ce guide utilisent la méthode `/dataSets` mais les principes peuvent s’appliquer à d’autres points de terminaison dans [!DNL Catalog] (par exemple, `/batches` et `/accounts`). Consultez la [référence de l’API Catalog Service](https://www.adobe.io/experience-platform-apis/references/catalog/) pour obtenir une liste complète de tous les appels et opérations disponibles pour chaque point d’entrée.
+La plupart des exemples de ce guide utilisent la méthode `/dataSets` mais les principes peuvent s’appliquer à d’autres points de terminaison dans [!DNL Catalog] (par exemple, `/batches`). Consultez la [référence de l’API Catalog Service](https://www.adobe.io/experience-platform-apis/references/catalog/) pour obtenir une liste complète de tous les appels et opérations disponibles pour chaque point d’entrée.
 
 Pour un workflow détaillé qui montre comment [!DNL Catalog] L’API est impliquée dans l’ingestion de données. Pour plus d’informations, consultez le tutoriel sur [création d’un jeu de données](../datasets/create.md).
