@@ -3,7 +3,7 @@ title: Échantillon de jeux de données
 description: Les échantillons de jeux de données Query Service vous permettent de mener des requêtes exploratoires sur le Big Data avec un temps de traitement considérablement réduit, mais au prix de la précision des requêtes. Ce guide fournit des informations sur la gestion de vos échantillons pour le traitement approximatif des requêtes.
 exl-id: 9e676d7c-c24f-4234-878f-3e57bf57af44
 source-git-commit: ef71371b04746bbf12ac58e91c9ecb5806f7e771
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '639'
 ht-degree: 100%
 
