@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Prise en main des API Media Edge
 description: Prise en main des API Media Edge
 exl-id: null
-source-git-commit: f040ba6d1403da4212fe279e32316bac995905b2
+source-git-commit: 8592bcc7a6d6700ec9b689b98d07a15f0b9301b2
 workflow-type: tm+mt
-source-wordcount: '914'
+source-wordcount: '937'
 ht-degree: 8%
 
 ---
@@ -206,6 +206,8 @@ Dans l’exemple de requête ci-dessus, la même `sessionId` qui est renvoyé da
 
 Pour plus d’informations sur les paramètres du point de terminaison de début de la mémoire tampon et des exemples, consultez le fichier Media Edge Swagger.
 
+La réponse réussie indique un état de 200 et n’inclut aucun contenu.
+
 ## Lire la requête d’événement
 
 L’événement Play est envoyé lorsque le lecteur multimédia passe à l’état &quot;lecture&quot; à partir d’un autre état, tel que &quot;mise en mémoire tampon&quot;, &quot;mise en pause&quot; ou &quot;erreur&quot;. Pour effectuer une requête d’événement Play, utilisez `sessionId` dans la charge utile d’un appel au point de terminaison suivant :
@@ -236,6 +238,8 @@ curl -X 'POST' \
   ]
 }'
 ```
+
+La réponse réussie indique un état de 200 et n’inclut aucun contenu.
 
 Pour plus d’informations sur les paramètres de point de terminaison de lecture et des exemples, consultez le fichier Media Edge Swagger.
 
@@ -270,7 +274,7 @@ curl -X 'POST' \
 }'
 ```
 
-Pour plus d’informations sur les paramètres de point de terminaison et les exemples de fin de session, consultez le fichier Media Edge Swagger.
+La réponse réussie indique un état de 200 et n’inclut aucun contenu.
 
 ## Codes de réponse
 
