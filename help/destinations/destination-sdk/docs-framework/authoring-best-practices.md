@@ -1,60 +1,60 @@
 ---
 title: Bonnes pratiques de création
-description: Découvrez les règles et conseils à suivre lors de la création de votre page de documentation de destination, afin de vous assurer qu’elle respecte les normes de qualité de la documentation Adobe Experience Platform.
+description: Découvrez les règles et conseils à suivre au moment de la création de la page de documentation de destination, afin de vous assurer qu’elle respecte les normes de qualité de la documentation Adobe Experience Platform.
 exl-id: b12059f1-6635-41cd-acc5-6ff471111164
 source-git-commit: e239de97a26ea2ff36bb74390e249851a13d2e13
 workflow-type: tm+mt
 source-wordcount: '565'
-ht-degree: 3%
+ht-degree: 100%
 
 ---
 
 # Bonnes pratiques de création
 
-## Présentation {#overview}
+## Vue d’ensemble {#overview}
 
-Cette page décrit les règles que vous devez suivre lorsque [création de votre documentation de destination](./documentation-instructions.md) pour vous assurer qu’elle respecte les normes de qualité de la documentation Adobe Experience Platform.
+Cette page décrit les règles à suivre au moment de la [création de la page de documentation de destination](./documentation-instructions.md), afin de vous assurer qu’elle respecte les normes de qualité de la documentation Adobe Experience Platform.
 
 ## Directives générales {#general-guidance}
 
-* Lorsque vous renseignez la variable [modèle](./self-service-template.md) pour consulter la documentation de votre destination, reportez-vous au guide du contributeur d’Adobe pour plus d’informations sur [liaison](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html?lang=en), [tables](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=en#tables), la variable [syntaxe markdown prise en charge](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=en), [écriture de conseils](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/general-writing-guidance.html?lang=en), etc.
-* N’incluez pas d’observations et d’estimations dans la documentation du produit.
-* Dans la documentation Experience Platform, les auteurs Adobe utilisent **mise en forme gras** pour faire référence aux commandes de l’interface utilisateur, comme suit :
-   * Accédez à **[!UICONTROL Connexions]** > **[!UICONTROL Destinations]**, puis sélectionnez l’onglet **[!UICONTROL Catalogue.]** Consultez un exemple de la manière dont les commandes de l’interface utilisateur sont documentées dans une [tutoriel sur les destinations](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#select-destination).
+* Lorsque vous remplissez le [modèle](./self-service-template.md) de la documentation de destination, consultez le guide du contributeur d’Adobe pour en savoir plus sur les [liens](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html?lang=fr), les [tableaux](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=fr#tables), la [syntaxe markdown prise en charge](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=fr), les [guides de rédaction](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/general-writing-guidance.html?lang=fr), etc.
+* N’incluez pas d’observations ni d’estimations dans la documentation du produit.
+* Dans la documentation Experience Platform, les auteurs Adobe mettent les commandes de l’interface utilisateur **en gras**, comme suit :
+   * Accédez à **[!UICONTROL Connexions]** > **[!UICONTROL Destinations]**, puis sélectionnez l’onglet **[!UICONTROL Catalogue]**. Consultez ce [tutoriel sur les destinations](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=fr#select-destination) pour en savoir plus sur la manière dont les commandes de l’interface utilisateur sont documentées.
 
-## Style d’écriture
+## Règle de style
 
 >[!IMPORTANT]
 >
->Lecture [Rédaction de conseils pour la documentation Adobe](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/general-writing-guidance.html?lang=en) avant de commencer à créer la page de documentation de destination.
+>Consultez le document [Guide de rédaction pour la documentation Adobe](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/general-writing-guidance.html?lang=fr) avant de commencer à créer la page de documentation de destination.
 
-* Gardez vos phrases courtes et arrivez au point rapidement. Si votre phrase comporte plus de 20 mots ou utilise plusieurs virgules, envisagez de la diviser en phrases distinctes. Les phrases de plus de 20 mots peuvent être particulièrement difficiles pour les lecteurs.
-* Ne sois pas trop poli. Évitez d’utiliser &quot;s’il vous plaît&quot; ou &quot;faites bien...&quot;. dans la documentation technique.
+* Faites des phrases courtes et allez à l’essentiel. Si la phrase comporte plus de 20 mots ou plusieurs virgules, envisagez de la diviser en plusieurs phrases, car elles peuvent être particulièrement difficiles à lire.
+* Ne soyez pas trop poli. Évitez d’utiliser « veuillez » ou « nous vous prions… » dans la documentation technique.
 
 ## Liaison {#linking}
 
-Suivez le modèle de documentation fourni et ne modifiez pas les liens existants dans le modèle. Lorsque vous incluez de nouveaux liens, lisez [utilisation de liens dans la documentation](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html?lang=en) dans le guide du contributeur.
+Suivez le modèle de documentation fourni et ne modifiez pas les liens existant dans le modèle. Quand vous ajoutez de nouveaux liens, consultez la section [Utilisation de liens dans la documentation](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html?lang=fr) dans le guide du contributeur.
 
-## Indications de marque {#branding}
+## Directives relatives à l’image de marque {#branding}
 
-* AEP n&#39;est pas un terme approuvé destiné au public. Utilisez Adobe Experience Platform lors de la première utilisation, puis Experience Platform, puis Platform.
-   * **Ne pas utiliser**: Avant d’exporter des données d’AEP vers YourDestination, veillez à lire et à remplir ces conditions préalables.
-   * **Utilisation**: Avant d’exporter des données de Adobe Experience Platform vers YourDestination, veillez à lire et à remplir ces conditions préalables.
+* AEP n’est pas un terme approuvé pour le public. Utilisez Adobe Experience Platform au moment de la première utilisation, puis Experience Platform, et enfin Platform.
+   * **Ne pas utiliser** : avant d’exporter des données d’AEP vers YourDestination, veillez à lire et à remplir ces conditions préalables.
+   * **Utiliser** : avant d’exporter des données d’Adobe Experience Platform vers YourDestination, veillez à lire et à remplir ces conditions préalables.
 
-## Images et captures d’écran {#images-and-screenshots}
+## Images et copies d’écran {#images-and-screenshots}
 
-* Pour plus d’informations sur [Comment créer un lien vers des images](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=en#images), reportez-vous au guide du contributeur.
-* Lorsque vous utilisez des captures d’écran, veillez à ce que votre capture d’écran capture l’ensemble de l’écran de l’interface utilisateur de Platform.
-* Lorsque vous marquez des images pour mettre en évidence un certain contrôle ou libellé sur la page, essayez de suivre le style de balisage utilisé par l’équipe de documentation Experience Platform. Notez comment la fonction basée sur Profile est mise en surbrillance dans [cette capture d’écran](/help/destinations/catalog/cloud-storage/amazon-s3.md#export-type-frequency).
-* Veuillez utiliser `png` format des images.
-* N’utilisez pas de captures d’écran numérotées comme noms de fichier. Les noms des fichiers image doivent être descriptifs.
-   * **Ne pas utiliser**: `1.png`, `2.png`, `3.png`
-   * **Utilisez**: `yourdestination-authentication-details.png`, `yourdestination-destination-details.png`
-* Veuillez utiliser du texte de remplacement pour toutes les images que vous ajoutez à la documentation et utiliser une grammaire correcte dans le texte de remplacement.
-   * **Ne pas utiliser**: Détails de la connexion de destination
-   * **Utilisation**: Image de l’interface utilisateur de Platform, affichant les détails de connexion de destination renseignés.
+* Pour plus d’informations sur [comment créer un lien vers des images](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=fr#images), consultez le guide du contributeur.
+* Quand vous utilisez des copies d’écran, veillez à copier l’ensemble de l’écran de l’interface utilisateur de Platform.
+* Quand vous marquez des images pour mettre en évidence une certaine commande ou un certain libellé sur la page, essayez de respecter le style de marquage utilisé par l’équipe de documentation Experience Platform. Observez comment la base de profil est mise en évidence dans [cette copie d’écran](/help/destinations/catalog/cloud-storage/amazon-s3.md#export-type-frequency).
+* Utilisez des images au format `png`.
+* N’utilisez pas de copies d’écran numérotées comme noms de fichier. Les noms des fichiers images doivent être descriptifs.
+   * **Ne pas utiliser** : `1.png`, `2.png`, `3.png`
+   * **Utiliser** : `yourdestination-authentication-details.png`, `yourdestination-destination-details.png`
+* Utilisez du texte de remplacement pour toutes les images que vous ajoutez à la documentation et veillez à respecter les règles de grammaire dans le texte de remplacement.
+   * **Ne pas utiliser** : détails de la connexion de destination
+   * **Utiliser** : image de l’interface utilisateur de Platform affichant les détails de connexion de destination renseignés.
 
 ## Processus {#process}
 
-* Le [modèle de documentation](./self-service-template.md) est rarement mis à jour, en fonction des commentaires des partenaires. Avant de commencer à créer de la documentation pour votre destination, assurez-vous d’avoir téléchargé la [dernière version du modèle](../assets/docs-framework/yourdestination-template.zip).
-* Créez la documentation et créez la demande d’extraction de documentation (PR) à partir d’une branche de votre double. *autre que la branche principale*. Reportez-vous à la section Destination de l’envoi pour la révision lors de la création dans le [Interface de GitHub](./use-github-interface-to-create-documentation.md#submit-review) ou [votre environnement local](./work-in-local-environment.md#submit-review).
+* Le [modèle de documentation](./self-service-template.md) est mis à jour périodiquement, en fonction des commentaires du partenaire. Avant de commencer à créer de la documentation pour la destination, veillez à avoir téléchargé la [dernière version du modèle](../assets/docs-framework/yourdestination-template.zip).
+* Rédigez la documentation et créez la requête de tirage de la documentation (PR) à partir d’une branche de votre secteur, *autre que la branche principale*. Consultez la section « Soumission d’une destination à réviser » au moment de la création dans l’[interface GitHub](./use-github-interface-to-create-documentation.md#submit-review) ou [votre environnement local](./work-in-local-environment.md#submit-review).

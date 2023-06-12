@@ -1,63 +1,63 @@
 ---
-description: Découvrez comment configurer les options de formatage de fichier pour les destinations basées sur des fichiers créées avec l’Adobe Experience Platform Destination SDK, via le point de terminaison `/destination-servers`.
+description: Découvrez comment configurer les options de formatage de fichier pour les destinations basées sur des fichiers créés avec Adobe Experience Platform Destination SDK, via le point d’entrée `/destination-servers`.
 title: Configuration du formatage des fichiers
 source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
 workflow-type: tm+mt
 source-wordcount: '987'
-ht-degree: 25%
+ht-degree: 100%
 
 ---
 
 
 # Configuration du formatage des fichiers
 
-Destination SDK prend en charge un ensemble flexible de fonctionnalités que vous pouvez configurer en fonction de vos besoins d’intégration. Parmi ces fonctionnalités, la prise en charge de [!DNL CSV] mise en forme des fichiers.
+Destination SDK prend en charge un ensemble flexible de fonctionnalités que vous pouvez configurer en fonction de vos besoins d’intégration. Parmi ces fonctionnalités, on trouve la prise en charge du formatage des fichiers [!DNL CSV].
 
-Lorsque vous créez des destinations basées sur des fichiers via Destination SDK, vous pouvez définir la manière dont les fichiers CSV exportés doivent être formatés. Vous pouvez personnaliser de nombreuses options de mise en forme, telles que :
+Quand vous créez des destinations basées sur des fichiers avec Destination SDK, vous pouvez définir le formatage des fichiers CSV exportés. Vous pouvez personnaliser de nombreuses options de mise en forme, notamment, mais sans s’y limiter :
 
-* si le fichier CSV doit inclure un en-tête ;
-* Quel caractère utiliser pour les guillemets de valeurs ?
-* À quoi doivent ressembler les valeurs vides ?
+* si le fichier CSV doit inclure un en-tête ;
+* quel caractère utiliser pour les valeurs entre guillemets ;
+* à quoi doivent ressembler les valeurs vides.
 
-Selon la configuration de votre destination, les utilisateurs verront certaines options dans l’interface utilisateur lors de la connexion à une destination basée sur des fichiers. Vous pouvez voir à quoi ressemblent ces options dans la variable [options de mise en forme des fichiers pour les destinations basées sur des fichiers](../../../ui/batch-destinations-file-formatting-options.md) documentation.
+Selon la configuration de la destination, les utilisateurs verront certaines options dans l’interface utilisateur pendant la connexion à une destination basée sur des fichiers. Vous pouvez voir à quoi ressemblent ces options dans les [options de mise en forme des fichiers pour les destinations basées sur des fichiers](../../../ui/batch-destinations-file-formatting-options.md).
 
 
-Les paramètres de mise en forme de fichier font partie de la configuration du serveur de destination pour les destinations basées sur des fichiers.
+Les paramètres de formatage de fichiers font partie de la configuration de serveur de destination quand celles-ci sont basées sur des fichiers.
 
-Pour comprendre où ce composant entre dans une intégration créée avec Destination SDK, reportez-vous au diagramme de la section [options de configuration](../configuration-options.md) ou consulter le guide sur la manière d’effectuer les opérations [utiliser la Destination SDK pour configurer une destination basée sur des fichiers ;](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration).
+Pour comprendre la place de ce composant dans une intégration créée avec Destination SDK, consultez le diagramme de la documentation [Options de configuration](../configuration-options.md) ou consultez le guide sur l’[utilisation de Destination SDK pour configurer une destination basée sur des fichiers](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration).
 
-Vous pouvez configurer les options de formatage de fichier à partir du `/authoring/destination-servers` point de terminaison . Consultez les pages de référence d’API suivantes pour obtenir des exemples d’appels d’API détaillés dans lesquels vous pouvez configurer les composants affichés dans cette page.
+Vous pouvez configurer les options de formatage de fichier via le point d’entrée `/authoring/destination-servers`. Pour obtenir des exemples d’appels API détaillés dans lesquels vous pouvez configurer les composants affichés sur cette page, consultez les pages de référence de l’API suivantes.
 
 * [Création d’une configuration de serveur de destination](../../authoring-api/destination-server/create-destination-server.md)
-* [Mise à jour de la configuration d’un serveur de destination](../../authoring-api/destination-server/update-destination-server.md)
+* [Mise à jour d’une configuration de serveur de destination](../../authoring-api/destination-server/update-destination-server.md)
 
-Cette page décrit tous les paramètres de formatage de fichier pris en charge pour les fichiers exportés `CSV` fichiers .
+Cette page décrit tous les paramètres de formatage de fichier pris en charge pour les fichiers `CSV` exportés.
 
 >[!IMPORTANT]
 >
->Tous les noms et valeurs de paramètre pris en charge par Destination SDK sont **respect de la casse**. Pour éviter les erreurs de respect de la casse, veuillez utiliser les noms et valeurs des paramètres exactement comme indiqué dans la documentation.
+>Tous les noms et toutes les valeurs de paramètre pris en charge par Destination SDK **sont sensibles à la casse**. Pour éviter les erreurs de respect de la casse, utilisez les noms et valeurs des paramètres exactement comme indiqué dans la documentation.
 
 ## Types d’intégration pris en charge {#supported-integration-types}
 
-Reportez-vous au tableau ci-dessous pour plus d’informations sur les types d’intégration qui prennent en charge les fonctionnalités décrites sur cette page.
+Pour en savoir plus sur les types d’intégration qui prennent en charge les fonctionnalités décrites sur cette page, consultez le tableau ci-dessous.
 
 | Type d’intégration | Fonctionnalité de prise en charge |
 |---|---|
-| Intégrations en temps réel (diffusion en continu) | Non |
+| Intégrations en temps réel (streaming) | Non |
 | Intégrations basées sur des fichiers (par lots) | Oui |
 
 ## Paramètres pris en charge {#supported-parameters}
 
-Vous pouvez modifier plusieurs propriétés des fichiers exportés pour répondre aux exigences du système de réception de fichiers de votre destination, afin de lire et d’interpréter de manière optimale les fichiers reçus d’un Experience Platform.
+Vous pouvez modifier plusieurs propriétés des fichiers exportés pour répondre aux exigences de votre système de réception de fichiers de destination, afin de lire et d’interpréter de manière optimale les fichiers provenant d’Experience Platform.
 
 >[!NOTE]
 >
->Les options CSV ne sont disponibles que lors de l’exportation de fichiers CSV. La section `fileConfigurations` n’est pas obligatoire lors de la configuration d’un nouveau serveur de destination. Si vous ne transmettez aucune valeur dans l’appel API pour les options CSV, les valeurs par défaut de la variable [tableau de référence ci-dessous](#file-formatting-reference-and-example) sera utilisé.
+>Les options CSV ne sont disponibles que lors de l’exportation de fichiers CSV. La section `fileConfigurations` n’est pas obligatoire lors de la configuration d’un nouveau serveur de destination. Si vous ne transmettez aucune valeur dans l’appel API pour les options CSV, les valeurs par défaut du [tableau de référence ci-dessous](#file-formatting-reference-and-example) seront utilisées.
 
 
-## Options CSV dans lesquelles les utilisateurs ne peuvent pas sélectionner d’options de configuration {#file-configuration-templating-none}
+## Options sCSV dans lesquelles les utilisateurs ne peuvent pas sélectionner d’options de configuration {#file-configuration-templating-none}
 
-Dans l’exemple de configuration ci-dessous, toutes les options CSV sont prédéfinies. Les paramètres d’exportation définis dans chacune des `csvOptions` sont définitifs et les utilisateurs ne peuvent pas les modifier.
+Dans l’exemple de configuration ci-dessous, toutes les options CSV sont prédéfinies. Les paramètres d’exportation définis dans chacune des options `csvOptions` sont définitifs et les utilisateurs ne peuvent pas les modifier.
 
 ```json
 "fileConfigurations": {
@@ -123,9 +123,9 @@ Dans l’exemple de configuration ci-dessous, toutes les options CSV sont préd�
     }
 ```
 
-## Options CSV dans lesquelles les utilisateurs peuvent sélectionner des options de configuration {#file-configuration-templating-pebble}
+## Options CSV dans lesquelles les utilisateurs peuvent sélectionner des options de configuration {#file-configuration-templating-pebble}
 
-Dans l’exemple de configuration ci-dessous, aucune des options CSV n’est prédéfinie. Le `value` dans chaque `csvOptions` Les paramètres sont configurés dans un champ de données client correspondant par l’intermédiaire de la fonction `/destinations` point de fin (par exemple, [`customerData.quote`](../../functionality/destination-configuration/customer-data-fields.md#conditional-options) pour le `quote` (option de mise en forme de fichier) et les utilisateurs peuvent utiliser l’interface utilisateur de l’Experience Platform pour sélectionner parmi les différentes options que vous configurez dans le champ de données client correspondant. Vous pouvez voir à quoi ressemblent ces options dans la variable [options de mise en forme des fichiers pour les destinations basées sur des fichiers](../../../ui/batch-destinations-file-formatting-options.md) documentation.
+Dans l’exemple de configuration ci-dessous, aucune des options CSV n’est prédéfinie. La `value` de chaque paramètre `csvOptions` est configurée dans un champ de données client correspondant avec le point d’entrée `/destinations` (par exemple, [`customerData.quote`](../../functionality/destination-configuration/customer-data-fields.md#conditional-options) pour l’option de mise en forme de fichier `quote`) et les utilisateurs peuvent utiliser l’interface utilisateur d’Experience Platform pour sélectionner une option que vous configurez dans le champ de données client correspondant. Vous pouvez voir à quoi ressemblent ces options dans les [options de mise en forme des fichiers pour les destinations basées sur des fichiers](../../../ui/batch-destinations-file-formatting-options.md).
 
 ```json
 {
@@ -168,13 +168,13 @@ Dans l’exemple de configuration ci-dessous, aucune des options CSV n’est pr�
 
 >[!TIP]
 >
->Les options de formatage de fichier CSV décrites ci-dessous sont également documentées dans la section [Guide Apache Spark pour les fichiers CSV](https://spark.apache.org/docs/latest/sql-data-sources-csv.html). Les descriptions utilisées ci-dessous sont extraites du guide Apache Spark.
+>Les options de formatage de fichiers CSV décrites ci-dessous sont également documentées dans la section [Guide Apache Spark pour les fichiers CSV](https://spark.apache.org/docs/latest/sql-data-sources-csv.html). Les descriptions utilisées ci-dessous sont extraites du guide Apache Spark.
 
 Vous trouverez ci-dessous une référence complète de toutes les options de formatage de fichier disponibles dans Destination SDK, ainsi que des exemples de sortie pour chaque option.
 
-| Champ | Obligatoire / Facultatif | Description | Valeur par défaut | Exemple de sortie 1 | Exemple de sortie 2 |
+| Champ | Obligatoire / Facultatif | Description | Valeur par défaut | Exemple de sortie 1 | Exemple de sortie 2 |
 |---|---|---|---|---|---|
-| `templatingStrategy` | Obligatoire | Pour chaque option de mise en forme de fichier que vous configurez, vous devez ajouter le paramètre . `templatingStrategy`, qui peut avoir deux valeurs : <br><ul><li>`NONE`: utilisez cette valeur si vous ne prévoyez pas de permettre aux utilisateurs de sélectionner différentes valeurs pour une configuration. Voir [cette configuration](#file-configuration-templating-none) pour un exemple où les options de formatage de fichier sont corrigées.</li><li>`PEBBLE_V1`: utilisez cette valeur si vous souhaitez permettre aux utilisateurs de sélectionner différentes valeurs pour une configuration. Dans ce cas, vous devez également configurer un champ de données client correspondant dans le `/destination` configuration des points de fin, pour faire apparaître les différentes options aux utilisateurs dans l’interface utilisateur. Voir [cette configuration](#file-configuration-templating-pebble) par exemple, où les utilisateurs peuvent sélectionner différentes valeurs pour les options de formatage de fichier.</li></ul> | - | - | - |
+| `templatingStrategy` | Obligatoire | Pour chaque option de formatage de fichier que vous configurez, vous devez ajouter le paramètre `templatingStrategy`, qui peut avoir deux valeurs : <br><ul><li>`NONE` : utilisez cette valeur si vous n’envisagez pas de donner aux utilisateurs la possibilité de choisir entre différentes valeurs pour une configuration. Pour obtenir un exemple d’options de formatage de fichier corrigées, consultez [cette configuration](#file-configuration-templating-none).</li><li>`PEBBLE_V1` : utilisez cette valeur si vous souhaitez donner aux utilisateurs la possibilité de choisir entre différentes valeurs pour une configuration. Dans ce cas, vous devez également configurer un champ de données client correspondant dans la configuration des points d’entrées `/destination`, pour faire apparaître les différentes options aux utilisateurs dans l’interface utilisateur. Pour obtenir un exemple où les utilisateurs peuvent sélectionner différentes valeurs pour les options de formatage de fichier, consultez [cette configuration](#file-configuration-templating-pebble).</li></ul> | - | - | - |
 | `compression.value` | Facultatif | Codec de compression à utiliser lors de l’enregistrement de données dans un fichier. Valeurs prises en charge : `none`, `bzip2`, `gzip`, `lz4` et `snappy`. | `none` | - | - |
 | `fileType.value` | Facultatif | Indique le format du fichier de sortie. Valeurs prises en charge : `csv`, `parquet` et `json`. | `csv` | - | - |
 | `csvOptions.quote.value` | Facultatif | *Uniquement pour`"fileType.value": "csv"`*. Définit un caractère unique utilisé pour lʼéchappement des valeurs entre guillemets où le séparateur peut faire partie de la valeur. | `null` | - | - |
@@ -182,9 +182,9 @@ Vous trouverez ci-dessous une référence complète de toutes les options de for
 | `csvOptions.delimiter.value` | Facultatif | *Uniquement pour`"fileType.value": "csv"`*. Définit un séparateur pour chaque champ et valeur. Ce séparateur peut contenir un ou plusieurs caractères. | `,` | `delimiter`:`,` --> `comma-separated values"` | `delimiter`:`\t` --> `tab-separated values` |
 | `csvOptions.escape.value` | Facultatif | *Uniquement pour`"fileType.value": "csv"`*. Définit un caractère unique utilisé pour lʼéchappement des guillemets dans une valeur déjà entre guillemets. | `\` | `"escape"`:`"\\"` --> `male,John,"Test,\"LastName5"` | `"escape"`:`"'"` --> `male,John,"Test,'''"LastName5"` |
 | `csvOptions.escapeQuotes.value` | Facultatif | *Uniquement pour`"fileType.value": "csv"`*. Indique si les valeurs contenant des guillemets doivent toujours être placées entre guillemets. La valeur par défaut est lʼéchappement de toutes les valeurs contenant un guillemet. | `true` | - | - |
-| `csvOptions.header.value` | Facultatif | *Uniquement pour`"fileType.value": "csv"`*. Indique s’il faut écrire les noms des colonnes comme première ligne dans le fichier exporté. | `true` | - | - |
+| `csvOptions.header.value` | Facultatif | *Uniquement pour`"fileType.value": "csv"`*. Indique si les noms des colonnes doivent être écrits sur la première ligne du fichier exporté. | `true` | - | - |
 | `csvOptions.ignoreLeadingWhiteSpace.value` | Facultatif | *Uniquement pour`"fileType.value": "csv"`*. Indique s’il faut supprimer les espaces de tête des valeurs. | `true` | `ignoreLeadingWhiteSpace`:`true` --> `"male","John","TestLastName"` | `ignoreLeadingWhiteSpace`:`false`--> `"    male","John","TestLastName"` |
-| `csvOptions.ignoreTrailingWhiteSpace.value` | Facultatif | *Uniquement pour`"fileType.value": "csv"`*. Indique s’il faut supprimer les espaces à la fin des valeurs. | `true` | `ignoreTrailingWhiteSpace`:`true` --> `"male","John","TestLastName"` | `ignoreTrailingWhiteSpace`:`false`--> `"male    ","John","TestLastName"` |
+| `csvOptions.ignoreTrailingWhiteSpace.value` | Facultatif | *Uniquement pour`"fileType.value": "csv"`*. Indique s’il faut supprimer les espaces blancs à la fin des valeurs. | `true` | `ignoreTrailingWhiteSpace`:`true` --> `"male","John","TestLastName"` | `ignoreTrailingWhiteSpace`:`false`--> `"male    ","John","TestLastName"` |
 | `csvOptions.nullValue.value` | Facultatif | *Uniquement pour`"fileType.value": "csv"`*. Définit la représentation sous forme de chaîne d’une valeur nulle. | `""` | `nullvalue`:`""` --> `male,"",TestLastName` | `nullvalue`:`"NULL"` --> `male,NULL,TestLastName` |
 | `csvOptions.dateFormat.value` | Facultatif | *Uniquement pour`"fileType.value": "csv"`*. Indique le format de date. | `yyyy-MM-dd` | `dateFormat`:`yyyy-MM-dd` --> `male,TestLastName,John,2022-02-24` | `dateFormat`:`MM/dd/yyyy` --> `male,TestLastName,John,02/24/2022` |
 | `csvOptions.timestampFormat.value` | Facultatif | *Uniquement pour`"fileType.value": "csv"`*. Définit la chaîne qui indique un format d’horodatage. | `yyyy-MM-dd'T'HH:mm:ss[.SSS][XXX]` | - | - |
@@ -195,9 +195,9 @@ Vous trouverez ci-dessous une référence complète de toutes les options de for
 
 ## Étapes suivantes {#next-steps}
 
-Après avoir lu cet article, vous devriez mieux comprendre le fonctionnement du formatage des fichiers dans la configuration d’un serveur de destination et comment le configurer.
+Vous êtes arrivé au bout de cet article. À présent, vous devriez mieux comprendre le fonctionnement du formatage des fichiers dans la configuration d’un serveur de destination et comment le configurer.
 
-Pour en savoir plus sur les autres composants du serveur de destination, consultez les articles suivants :
+Pour en savoir plus sur les autres composants de serveur de destination, consultez les articles suivants :
 
 * [Spécifications de serveur pour les destinations créées avec Destination SDK](server-specs.md)
 * [Spécifications du modèle](templating-specs.md)

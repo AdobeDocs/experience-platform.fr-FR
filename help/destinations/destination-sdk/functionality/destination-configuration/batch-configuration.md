@@ -4,49 +4,49 @@ title: Configuration par lots
 source-git-commit: f2e04d6f96132aa5cee3602190375e0f3eb96c97
 workflow-type: tm+mt
 source-wordcount: '1073'
-ht-degree: 16%
+ht-degree: 87%
 
 ---
 
 
 # Configuration par lots {#batch-configuration}
 
-Utilisez les options de configuration par lot de Destination SDK pour permettre aux utilisateurs de personnaliser les noms des fichiers exportés et de configurer le planning d’exportation selon leurs préférences.
+Utilisez les options de configuration par lots de Destination SDK pour permettre aux utilisateurs de personnaliser les noms des fichiers exportés et de configurer le planning d’exportation en fonction de leurs préférences.
 
-Lorsque vous créez des destinations basées sur des fichiers par le biais de Destination SDK, vous pouvez configurer le nommage de fichiers et les plannings d’exportation par défaut, ou vous pouvez donner aux utilisateurs la possibilité de configurer ces paramètres à partir de l’interface utilisateur de Platform. Par exemple, vous pouvez configurer des comportements tels que :
+Quand vous créez des destinations basées sur des fichiers avec Destination SDK, vous pouvez configurer les noms de fichiers et les plannings d’exportation par défaut, ou permettre aux utilisateurs de configurer ces paramètres à partir de l’interface utilisateur de Platform. Par exemple, vous pouvez configurer des comportements tels que :
 
-* Inclusion d’informations spécifiques dans le nom de fichier, telles que des identifiants de segment, des identifiants de destination ou des informations personnalisées.
-* Permet aux utilisateurs de personnaliser l’attribution du nom des fichiers à partir de l’interface utilisateur de Platform.
-* Configurez les exportations de fichiers pour qu’elles se produisent à des intervalles de temps définis.
-* Définissez les options de personnalisation du nom de fichier et du planning d’exportation que les utilisateurs peuvent voir dans l’interface utilisateur de Platform.
+* Ajouter des informations spécifiques dans le nom du fichier, telles que des identifiants de segment, des identifiants de destination ou des informations personnalisées.
+* Permettre aux utilisateurs de personnaliser l’attribution de noms de fichiers à partir de l’interface utilisateur de Platform.
+* Configurer des exportations de fichiers à des intervalles de temps définis.
+* Définir des options de nom de fichier et de planning d’exportation que les utilisateurs peuvent voir dans l’interface utilisateur de Platform.
 
-Les paramètres de configuration de lot font partie de la configuration de destination pour les destinations basées sur des fichiers.
+Les paramètres de configuration par lots font partie de la configuration de destination pour les destinations basées sur des fichiers.
 
-Pour comprendre où ce composant entre dans une intégration créée avec Destination SDK, reportez-vous au diagramme de la section [options de configuration](../configuration-options.md) ou consulter le guide sur la manière d’effectuer les opérations [utiliser la Destination SDK pour configurer une destination basée sur des fichiers ;](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration).
+Pour comprendre la place de ce composant dans une intégration créée avec Destination SDK, consultez le diagramme de la documentation [Options de configuration](../configuration-options.md) ou consultez le guide sur l’[utilisation de Destination SDK pour configurer une destination basée sur des fichiers](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration).
 
-Vous pouvez configurer l’attribution de noms aux fichiers et les paramètres du planning d’exportation à l’aide du `/authoring/destinations` point de terminaison . Consultez les pages de référence d’API suivantes pour obtenir des exemples d’appels d’API détaillés dans lesquels vous pouvez configurer les composants affichés dans cette page.
+Vous pouvez configurer les noms de fichiers et les paramètres du planning d’exportation via le point d’entrée `/authoring/destinations`. Pour obtenir des exemples d’appels API détaillés dans lesquels vous pouvez configurer les composants affichés sur cette page, consultez les pages de référence de l’API suivantes.
 
 * [Création d’une configuration de destination](../../authoring-api/destination-configuration/create-destination-configuration.md)
 * [Mise à jour d’une configuration de destination](../../authoring-api/destination-configuration/update-destination-configuration.md)
 
-Cet article décrit toutes les options de configuration par lots prises en charge que vous pouvez utiliser pour votre destination et indique ce que les clients verront dans l’interface utilisateur de Platform.
+Cet article décrit toutes les options de configuration par lots prises en charge que vous pouvez utiliser pour la destination et montre ce que la clientèle verra dans l’interface utilisateur de Platform.
 
 >[!IMPORTANT]
 >
->Tous les noms et valeurs de paramètre pris en charge par Destination SDK sont **respect de la casse**. Pour éviter les erreurs de respect de la casse, veuillez utiliser les noms et valeurs des paramètres exactement comme indiqué dans la documentation.
+>Tous les noms et toutes les valeurs de paramètre pris en charge par Destination SDK **sont sensibles à la casse**. Pour éviter les erreurs de respect de la casse, utilisez les noms et valeurs des paramètres exactement comme indiqué dans la documentation.
 
 ## Types d’intégration pris en charge {#supported-integration-types}
 
-Reportez-vous au tableau ci-dessous pour plus d’informations sur les types d’intégration qui prennent en charge les fonctionnalités décrites sur cette page.
+Pour en savoir plus sur les types d’intégration qui prennent en charge les fonctionnalités décrites sur cette page, consultez le tableau ci-dessous.
 
 | Type d’intégration | Fonctionnalité de prise en charge |
 |---|---|
-| Intégrations en temps réel (diffusion en continu) | Non |
+| Intégrations en temps réel (streaming) | Non |
 | Intégrations basées sur des fichiers (par lots) | Oui |
 
 ## Paramètres pris en charge {#supported-parameters}
 
-Les valeurs que vous configurez ici sont affichées dans la variable [Planification de l’exportation de segments](../../../ui/activate-batch-profile-destinations.md#scheduling) de l’étape du workflow d’activation des destinations basées sur des fichiers.
+Les valeurs que vous configurez ici sont affichées à l’étape [Planifier l’exportation de segments](../../../ui/activate-batch-profile-destinations.md#scheduling) du workflow d’activation des destinations basées sur des fichiers.
 
 ```json
 "batchConfig":{
@@ -88,40 +88,40 @@ Les valeurs que vous configurez ici sont affichées dans la variable [Planificat
 
 | Paramètre | Type | Description |
 |---------|----------|------|
-| `allowMandatoryFieldSelection` | Booléen | Définissez cette valeur sur `true` afin de permettre aux clients de spécifier les attributs de profil obligatoires. La valeur par défaut est `false`. Pour plus d’informations, consultez la section [Attributs obligatoires](../../../ui/activate-batch-profile-destinations.md#mandatory-attributes). |
-| `allowDedupeKeyFieldSelection` | Booléen | Définissez cette valeur sur `true` afin de permettre aux clients de spécifier des clés de déduplication. La valeur par défaut est `false`. Pour plus d’informations, consultez la section [Clés de déduplication](../../../ui/activate-batch-profile-destinations.md#deduplication-keys). |
+| `allowMandatoryFieldSelection` | Booléen | Définissez cette valeur sur `true` afin de permettre la spécification des attributs de profil obligatoires. La valeur par défaut est `false`. Pour plus d’informations, consultez la section [Attributs obligatoires](../../../ui/activate-batch-profile-destinations.md#mandatory-attributes). |
+| `allowDedupeKeyFieldSelection` | Booléen | Définissez cette valeur sur `true` afin de permettre la spécification des clés de déduplication. La valeur par défaut est `false`. Pour plus d’informations, consultez la section [Clés de déduplication](../../../ui/activate-batch-profile-destinations.md#deduplication-keys). |
 | `defaultExportMode` | Énumération | Définit le mode d’exportation de fichier par défaut. Valeurs prises en charge :<ul><li>`DAILY_FULL_EXPORT`</li><li>`FIRST_FULL_THEN_INCREMENTAL`</li></ul> La valeur par défaut est `DAILY_FULL_EXPORT`. Pour plus d’informations sur la planification des exportations de fichiers, consultez la [documentation sur l’activation par lots](../../../ui/activate-batch-profile-destinations.md#scheduling). |
 | `allowedExportModes` | Liste | Définit les modes d’exportation de fichiers disponibles pour les clients. Valeurs prises en charge :<ul><li>`DAILY_FULL_EXPORT`</li><li>`FIRST_FULL_THEN_INCREMENTAL`</li></ul> |
 | `allowedScheduleFrequency` | Liste | Définit la fréquence d’exportation des fichiers disponible pour les clients. Valeurs prises en charge :<ul><li>`ONCE`</li><li>`EVERY_3_HOURS`</li><li>`EVERY_6_HOURS`</li><li>`EVERY_8_HOURS`</li><li>`EVERY_12_HOURS`</li><li>`DAILY`</li></ul> |
 | `defaultFrequency` | Énumération | Définit la fréquence d’exportation des fichiers par défaut. Les valeurs prises en charge sont les suivantes :<ul><li>`ONCE`</li><li>`EVERY_3_HOURS`</li><li>`EVERY_6_HOURS`</li><li>`EVERY_8_HOURS`</li><li>`EVERY_12_HOURS`</li><li>`DAILY`</li></ul> La valeur par défaut est `DAILY`. |
 | `defaultStartTime` | Chaîne | Définit l’heure de début par défaut de l’exportation du fichier. Utilise le format de fichier de 24 heures. La valeur par défaut est « 00:00 ». |
-| `filenameConfig.allowedFilenameAppendOptions` | Chaîne | *Obligatoire*. Liste des macros de nom de fichier disponibles à l’intention des utilisateurs. Cela détermine les éléments qui sont ajoutés aux noms de fichier exportés (ID de segment, nom de l’organisation, date et heure de l’exportation, etc.). Lorsque vous définissez `defaultFilename`, veillez à éviter la duplication des macros. <br><br>Valeurs prises en charge : <ul><li>`DESTINATION`</li><li>`SEGMENT_ID`</li><li>`SEGMENT_NAME`</li><li>`DESTINATION_INSTANCE_ID`</li><li>`DESTINATION_INSTANCE_NAME`</li><li>`ORGANIZATION_NAME`</li><li>`SANDBOX_NAME`</li><li>`DATETIME`</li><li>`CUSTOM_TEXT`</li></ul>Quel que soit l’ordre dans lequel vous définissez les macros, l’interface utilisateur de l’Experience Platform les affiche toujours dans l’ordre présenté ici. <br><br> If `defaultFilename` est vide, la variable `allowedFilenameAppendOptions` La liste doit contenir au moins une macro. |
-| `filenameConfig.defaultFilenameAppendOptions` | Chaîne | *Obligatoire*. Macros de nom de fichier par défaut présélectionnées que les utilisateurs peuvent décocher.<br><br> Les macros de cette liste sont un sous-ensemble de celles définies dans la variable `allowedFilenameAppendOptions`. |
-| `filenameConfig.defaultFilename` | Chaîne | *Facultatif*. Définit les macros de nom de fichier par défaut pour les fichiers exportés. Ils ne peuvent pas être remplacés par les utilisateurs. <br><br>Toute macro définie par `allowedFilenameAppendOptions` sera annexé après l’événement `defaultFilename` macros. <br><br>If `defaultFilename` est vide, vous devez définir au moins une macro dans `allowedFilenameAppendOptions`. |
+| `filenameConfig.allowedFilenameAppendOptions` | Chaîne | *Obligatoire*. Liste des macros de nom de fichier disponibles. Cela détermine les éléments qui sont ajoutés aux noms de fichier exportés (identifiant de segment, nom de l’organisation, date et heure de l’exportation, etc.). Quand vous définissez `defaultFilename`, veillez à ne pas dupliquer les macros. <br><br>Valeurs prises en charge : <ul><li>`DESTINATION`</li><li>`SEGMENT_ID`</li><li>`SEGMENT_NAME`</li><li>`DESTINATION_INSTANCE_ID`</li><li>`DESTINATION_INSTANCE_NAME`</li><li>`ORGANIZATION_NAME`</li><li>`SANDBOX_NAME`</li><li>`DATETIME`</li><li>`CUSTOM_TEXT`</li></ul>Quel que soit l’ordre dans lequel vous définissez les macros, l’interface utilisateur d’Experience Platform les affiche toujours dans l’ordre présenté ici. <br><br> Si `defaultFilename` est vide, la liste `allowedFilenameAppendOptions` doit contenir au moins une macro. |
+| `filenameConfig.defaultFilenameAppendOptions` | Chaîne | *Obligatoire*. Macros de nom de fichier par défaut présélectionnées que les utilisateurs peuvent décocher.<br><br> Les macros de cette liste sont un sous-ensemble de celles définies dans `allowedFilenameAppendOptions`. |
+| `filenameConfig.defaultFilename` | Chaîne | *Facultatif*. Définit les macros de nom de fichier par défaut pour les fichiers exportés. Elles ne peuvent pas être modifiées par les utilisateurs. <br><br>Toute macro définie par `allowedFilenameAppendOptions` sera ajoutée après les macros `defaultFilename`. <br><br>Si `defaultFilename` est vide, vous devez définir au moins une macro dans `allowedFilenameAppendOptions`. |
 | `segmentGroupingEnabled` | Booléen | Définit si les audiences activées doivent être exportées dans un ou plusieurs fichiers, selon l’audience [stratégie de fusion](../../../../profile/merge-policies/overview.md). Valeurs prises en charge : <ul><li>`true`: exporte un fichier par stratégie de fusion.</li><li>`false`: exporte un fichier par audience, quelle que soit la stratégie de fusion. Il s’agit du comportement par défaut. Vous pouvez obtenir le même résultat en omettant complètement ce paramètre.</li></ul> |
 
 {style="table-layout:auto"}
 
-## Configuration du nom de fichier {#file-name-configuration}
+## Configuration du nom du fichier {#file-name-configuration}
 
-Utilisez les macros de configuration des noms de fichier pour définir les noms de fichier exportés à inclure. Les macros du tableau ci-dessous décrivent les éléments figurant dans l’interface utilisateur de la fonction [configuration du nom de fichier](../../../ui/activate-batch-profile-destinations.md#file-names) écran.
+Utilisez les macros de configuration des noms de fichiers pour définir les noms de fichiers exportés à inclure. Les macros du tableau ci-dessous décrivent les éléments figurant dans l’interface utilisateur de l’écran [configuration du nom du fichier](../../../ui/activate-batch-profile-destinations.md#file-names).
 
 >[!TIP]
 > 
->En règle générale, vous devez toujours inclure la variable `SEGMENT_ID` macro dans les noms de fichiers exportés. Les identifiants de segment sont uniques. Par conséquent, leur inclusion dans le nom de fichier est la meilleure manière de s’assurer que les noms de fichier sont également uniques.
+>En règle générale, vous devez toujours inclure la macro `SEGMENT_ID` dans les noms de fichiers exportés. Les identifiants de segment sont uniques. Ainsi, la meilleure manière de s’assurer que les noms de fichiers sont également uniques est de les inclure dans le nom du fichier.
 
 | Macro | Libellé de l’interface utilisateur | Description | Exemple |
 |---|---|---|---|
 | `DESTINATION` | [!UICONTROL Destination] | Nom de la destination dans l’interface utilisateur. | Amazon S3 |
 | `SEGMENT_ID` | [!UICONTROL Identifiant de segment] | Identifiant de segment unique généré par Platform | ce5c5482-2813-4a80-99bc-57113f6acde2 |
-| `SEGMENT_NAME` | [!UICONTROL Nom du segment] | Nom de segment défini par l’utilisateur | abonné VIP |
-| `DESTINATION_INSTANCE_ID` | [!UICONTROL Identifiant de destination] | Identifiant unique généré par Platform de l’instance de destination. | 7b891e5f-025a-4f0d-9e73-1919e71da3b0 |
-| `DESTINATION_INSTANCE_NAME` | [!UICONTROL Nom de la destination] | Nom défini par l’utilisateur de l’instance de destination. | Ma destination publicitaire 2022 |
+| `SEGMENT_NAME` | [!UICONTROL Nom du segment] | Nom du segment défini par l’utilisateur | abonné VIP |
+| `DESTINATION_INSTANCE_ID` | [!UICONTROL Identifiant de destination] | Identifiant unique de l’instance de destination, généré par Platform | 7b891e5f-025a-4f0d-9e73-1919e71da3b0 |
+| `DESTINATION_INSTANCE_NAME` | [!UICONTROL Nom de la destination] | Nom défini par l’utilisateur de l’instance de destination. | Ma destination publicitaire 2022 |
 | `ORGANIZATION_NAME` | [!UICONTROL Nom de l’organisation] | Nom de l’organisation du client dans Adobe Experience Platform. | Mon nom d’organisation |
-| `SANDBOX_NAME` | [!UICONTROL Nom du sandbox] | Nom de l’environnement de test utilisé par le client. | prod |
-| `DATETIME` / `TIMESTAMP` | [!UICONTROL Date et heure] | `DATETIME` et `TIMESTAMP` les deux définissent le moment où le fichier a été généré, mais dans des formats différents. <br><br><ul><li>`DATETIME` utilise le format suivant : YYYYMMDD_HHMMSS.</li><li>`TIMESTAMP` utilise le format Unix à 10 chiffres. </li></ul> `DATETIME` et `TIMESTAMP` s’excluent mutuellement et ne peuvent pas être utilisés simultanément. | <ul><li>`DATETIME`: 20220509_210543</li><li>`TIMESTAMP`: 1652131584</li></ul> |
+| `SANDBOX_NAME` | [!UICONTROL Nom du sandbox] | Nom du sandbox utilisé par le client. | prod |
+| `DATETIME` / `TIMESTAMP` | [!UICONTROL Date et heure] | `DATETIME` et `TIMESTAMP` définissent tous deux le moment où le fichier a été généré, mais dans des formats différents. <br><br><ul><li>`DATETIME` utilise le format suivant : AAAAMMJJ_HHMMSS.</li><li>`TIMESTAMP` utilise le format Unix à 10 chiffres. </li></ul> `DATETIME` et `TIMESTAMP` s’excluent mutuellement et ne peuvent pas être utilisés simultanément. | <ul><li>`DATETIME` : 20220509_210543</li><li>`TIMESTAMP` : 1652131584</li></ul> |
 | `CUSTOM_TEXT` | [!UICONTROL Texte personnalisé] | Texte personnalisé défini par l’utilisateur à inclure dans le nom du fichier. Ne peut pas être utilisé dans `defaultFilename`. | My_Custom_Text |
-| `TIMESTAMP` | [!UICONTROL Date et heure] | Horodatage à 10 chiffres de l’heure de génération du fichier, au format Unix. | 1652131584 |
+| `TIMESTAMP` | [!UICONTROL Date et heure] | Date et heure à 10 chiffres indiquant l’heure à laquelle le fichier a été généré, au format Unix. | 1652131584 |
 | `MERGE_POLICY_ID` | [!UICONTROL Fusionner l’ID de stratégie] | L’identifiant de la variable [stratégie de fusion](../../../../profile/merge-policies/overview.md) utilisé pour générer l’audience exportée. Utilisez cette macro lorsque vous regroupez des segments exportés dans des fichiers, en fonction d’une stratégie de fusion. Utilisation de cette macro avec `segmentGroupingEnabled:true`. | e8591fdb-2873-4b12-b63e-15275b1c1439 |
 | `MERGE_POLICY_NAME` | [!UICONTROL Nom de la stratégie de fusion] | Nom de la variable [stratégie de fusion](../../../../profile/merge-policies/overview.md) utilisé pour générer l’audience exportée. Utilisez cette macro lorsque vous regroupez des segments exportés dans des fichiers, en fonction d’une stratégie de fusion. Utilisation de cette macro avec `segmentGroupingEnabled:true`. | Ma stratégie de fusion personnalisée |
 
@@ -129,7 +129,7 @@ Utilisez les macros de configuration des noms de fichier pour définir les noms 
 
 ### Exemple de configuration de nom de fichier
 
-L’exemple de configuration ci-dessous illustre la correspondance entre la configuration utilisée dans l’appel API et les options affichées dans l’interface utilisateur.
+L’exemple de configuration ci-dessous montre la correspondance entre la configuration utilisée dans l’appel API et les options affichées dans l’interface utilisateur.
 
 ```json
 "filenameConfig":{
@@ -150,12 +150,12 @@ L’exemple de configuration ci-dessous illustre la correspondance entre la conf
 
 ## Étapes suivantes {#next-steps}
 
-Après avoir lu cet article, vous devriez mieux comprendre comment configurer l’attribution de noms aux fichiers et les calendriers d’exportation pour vos destinations basées sur les fichiers.
+Vous êtes arrivé au bout de cet article. À présent, vous devriez mieux comprendre comment configurer les noms de fichiers et la planification des exportations pour vos destinations basées sur les fichiers.
 
-Pour en savoir plus sur les autres composants de destination, consultez les articles suivants :
+Pour en savoir plus sur les autres composants de destination, consultez les articles suivants :
 
 * [Configuration de l’authentification du client](customer-authentication.md)
-* [Authentification OAuth 2](oauth2-authentication.md)
+* [Authentification OAuth 2](oauth2-authentication.md)
 * [Champs de données client](customer-data-fields.md)
 * [Attributs de l’interface utilisateur](ui-attributes.md)
 * [Configuration du schéma](schema-configuration.md)

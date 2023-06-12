@@ -1,62 +1,62 @@
 ---
-description: Découvrez comment configurer un mécanisme d’authentification pour votre destination et déterminer ce que les utilisateurs verront dans l’interface utilisateur en fonction de la méthode d’authentification que vous sélectionnez.
+description: Découvrez comment configurer un mécanisme d’authentification pour la destination et déterminez ce que les utilisateurs verront dans l’interface utilisateur en fonction de la méthode d’authentification que vous sélectionnez.
 title: Configuration de l’authentification du client
 source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
 workflow-type: tm+mt
 source-wordcount: '1094'
-ht-degree: 35%
+ht-degree: 100%
 
 ---
 
 
 # Configuration de l’authentification du client
 
-Experience Platform offre une grande flexibilité dans les protocoles d’authentification disponibles pour les partenaires et les clients. Vous pouvez configurer votre destination pour qu’elle prenne en charge l’une des méthodes d’authentification standard du secteur, telles que [!DNL OAuth2], authentification par jeton porteur, authentification par mot de passe, etc.
+Experience Platform offre une grande flexibilité dans les protocoles d’authentification mis à la disposition des partenaires et de la clientèle. Vous pouvez configurer la destination pour qu’elle prenne en charge l’une des méthodes d’authentification standard du secteur, telles que [!DNL OAuth2], l’authentification par jeton d’un porteur, l’authentification par mot de passe, etc.
 
-Cette page explique comment configurer votre destination à l’aide de votre méthode d’authentification préférée. En fonction de la configuration d’authentification que vous utilisez lors de la création de votre destination, les clients voient différents types de pages d’authentification lors de la connexion à la destination dans l’interface utilisateur de l’Experience Platform.
+Cette page explique comment configurer la destination à l’aide de votre méthode d’authentification préférée. En fonction de la configuration d’authentification que vous utilisez au moment de la création de la destination, différents types de pages d’authentification s’affichent lors de la connexion à la destination dans l’interface utilisateur d’Experience Platform.
 
-Pour comprendre où ce composant entre dans une intégration créée avec Destination SDK, reportez-vous au diagramme de la section [options de configuration](../configuration-options.md) ou consultez les pages de présentation de la configuration de destination suivantes :
+Pour comprendre la place de ce composant dans une intégration créée avec Destination SDK, consultez le diagramme de la documentation [Options de configuration](../configuration-options.md) ou consultez les pages de vue d’ensemble de la configuration de destination suivantes :
 
-* [Utiliser Destination SDK pour configurer une destination de diffusion en continu](../../guides/configure-destination-instructions.md#create-destination-configuration)
-* [Utiliser Destination SDK pour configurer une destination basée sur des fichiers](../../guides/configure-file-based-destination-instructions.md#create-destination-configuration)
+* [Utiliser Destination SDK pour configurer une destination de diffusion en streaming](../../guides/configure-destination-instructions.md#create-destination-configuration)
+* [Utilisation de Destination SDK pour configurer une destination basée sur des fichiers](../../guides/configure-file-based-destination-instructions.md#create-destination-configuration)
 
-Avant que les clients puissent exporter des données de Platform vers votre destination, ils doivent créer une nouvelle connexion entre l’Experience Platform et votre destination, en suivant les étapes décrites dans la section [connexion à la destination](../../../ui/connect-destination.md) tutoriel .
+Avant de pouvoir exporter des données de Platform vers la destination, une nouvelle connexion entre Experience Platform et la destination doit être créée, en suivant les étapes décrites dans le tutoriel de [connexion à la destination](../../../ui/connect-destination.md).
 
-When [création d’une destination](../../authoring-api/destination-configuration/create-destination-configuration.md) par Destination SDK, la variable `customerAuthenticationConfigurations` définit ce que voient les clients dans la section [écran d&#39;authentification](../../../ui/connect-destination.md#authenticate). Selon le type d’authentification de destination, les clients doivent fournir divers détails d’authentification, tels que :
+Pendant la [création d’une destination](../../authoring-api/destination-configuration/create-destination-configuration.md) avec Destination SDK, la section `customerAuthenticationConfigurations` définit ce que voit la clientèle sur l’[écran d’authentification](../../../ui/connect-destination.md#authenticate). Selon le type d’authentification de destination, divers détails d’authentification doivent être fournis, notamment :
 
-* Pour les destinations qui utilisent [authentification de base](#basic), les utilisateurs doivent fournir un nom d’utilisateur et un mot de passe directement dans la page d’authentification de l’interface utilisateur Experience Platform.
-* Pour les destinations qui utilisent [authentification du porteur](#bearer), les utilisateurs doivent fournir un jeton porteur.
-* Pour les destinations qui utilisent [Authentification OAuth2](#oauth2), les utilisateurs sont redirigés vers la page de connexion de votre destination, où ils peuvent se connecter à l’aide de leurs informations d’identification.
-* Pour [Amazon S3](#s3) destinations, les utilisateurs doivent fournir leurs [!DNL Amazon S3] clé d’accès et clé secrète.
-* Pour [Azure Blob](#blob) destinations, les utilisateurs doivent fournir leurs [!DNL Azure Blob] Chaîne de connexion.
+* Pour les destinations qui utilisent un moyen d’[authentification de base](#basic), les utilisateurs doivent fournir un nom d’utilisateur et un mot de passe directement dans la page d’authentification de l’interface utilisateur Experience Platform.
+* Pour les destinations qui utilisent l’[authentification du porteur](#bearer), les utilisateurs doivent fournir un jeton porteur.
+* Pour les destinations qui utilisent l’[authentification OAuth 2](#oauth2), les utilisateurs sont redirigés vers la page de connexion de la destination, où ils peuvent se connecter à l’aide de leurs informations d’identification.
+* Pour les destinations [Amazon S3](#s3), les utilisateurs doivent fournir leurs clés d’accès et clé secrète [!DNL Amazon S3].
+* Pour les destinations [Azure Blob](#blob), les utilisateurs doivent fournir leur chaîne de connexion [!DNL Azure Blob].
 
-Vous pouvez configurer les détails de l’authentification du client via le `/authoring/destinations` point de terminaison . Consultez les pages de référence d’API suivantes pour obtenir des exemples d’appels d’API détaillés dans lesquels vous pouvez configurer les composants affichés dans cette page.
+Vous pouvez configurer les détails de l’authentification du client via le point d’entrée `/authoring/destinations`. Pour obtenir des exemples d’appels API détaillés dans lesquels vous pouvez configurer les composants affichés sur cette page, consultez les pages de référence de l’API suivantes.
 
 * [Création d’une configuration de destination](../../authoring-api/destination-configuration/create-destination-configuration.md)
 * [Mise à jour d’une configuration de destination](../../authoring-api/destination-configuration/update-destination-configuration.md)
 
-Cet article décrit toutes les configurations d’authentification du client prises en charge que vous pouvez utiliser pour votre destination et indique ce que les clients verront dans l’interface utilisateur de l’Experience Platform en fonction de la méthode d’authentification que vous avez configurée pour votre destination.
+Cet article décrit toutes les configurations d’authentification du client prises en charge que vous pouvez utiliser pour la destination et montre ce que la clientèle verra dans l’interface utilisateur d’Experience Platform en fonction de la méthode d’authentification que vous avez configurée pour la destination.
 
 >[!IMPORTANT]
 >
->La configuration de l’authentification du client n’exige pas que vous configuriez des paramètres. Vous pouvez copier et coller les fragments de code affichés sur cette page dans vos appels API lors de la [création](../../authoring-api/destination-configuration/create-destination-configuration.md) ou [mise à jour](../../authoring-api/destination-configuration/update-destination-configuration.md) une configuration de destination, et vos utilisateurs verront l’écran d’authentification correspondant dans l’interface utilisateur de Platform.
+>La configuration de l’authentification du client ne demande pas que vous configuriez des paramètres. Vous pouvez copier et coller les fragments de code affichés sur cette page dans vos appels API au moment de la [création](../../authoring-api/destination-configuration/create-destination-configuration.md) ou la [mise à jour](../../authoring-api/destination-configuration/update-destination-configuration.md) d’une configuration de destination, et vos utilisateurs verront l’écran d’authentification correspondant apparaître dans l’interface utilisateur de Platform.
 
 >[!IMPORTANT]
 >
->Tous les noms et valeurs de paramètre pris en charge par Destination SDK sont **respect de la casse**. Pour éviter les erreurs de respect de la casse, veuillez utiliser les noms et valeurs des paramètres exactement comme indiqué dans la documentation.
+>Tous les noms et toutes les valeurs de paramètre pris en charge par Destination SDK **sont sensibles à la casse**. Pour éviter les erreurs de respect de la casse, utilisez les noms et valeurs des paramètres exactement comme indiqué dans la documentation.
 
 ## Types d’intégration pris en charge {#supported-integration-types}
 
-Reportez-vous au tableau ci-dessous pour plus d’informations sur les types d’intégration qui prennent en charge les fonctionnalités décrites sur cette page.
+Pour en savoir plus sur les types d’intégration qui prennent en charge les fonctionnalités décrites sur cette page, consultez le tableau ci-dessous.
 
 | Type d’intégration | Fonctionnalité de prise en charge |
 |---|---|
-| Intégrations en temps réel (diffusion en continu) | Oui |
+| Intégrations en temps réel (streaming) | Oui |
 | Intégrations basées sur des fichiers (par lots) | Oui |
 
 ## Configuration des règles d’authentification {#authentication-rule}
 
-Lors de l’utilisation de l’une des configurations d’authentification du client décrites dans cette page, définissez toujours la variable `authenticationRule` du paramètre [diffusion de destination](destination-delivery.md) to `"CUSTOMER_AUTHENTICATION"`, comme illustré ci-dessous.
+Pendant l’utilisation de l’une des configurations d’authentification du client décrites sur cette page, définissez toujours le paramètre `authenticationRule` dans la [diffusion de destination](destination-delivery.md) sur `"CUSTOMER_AUTHENTICATION"`, comme illustré ci-dessous.
 
 ```json {line-numbers="true" highlight="4"
 {
@@ -71,13 +71,13 @@ Lors de l’utilisation de l’une des configurations d’authentification du cl
 
 ## Authentification de base {#basic}
 
-L’authentification de base est prise en charge pour les intégrations en temps réel (flux) dans Experience Platform.
+L’authentification de base est prise en charge pour les intégrations en temps réel (streaming) dans Experience Platform.
 
-Lorsque vous configurez le type d’authentification de base, les utilisateurs doivent saisir un nom d’utilisateur et un mot de passe pour se connecter à votre destination.
+Quand vous configurez le type d’authentification de base, les utilisateurs doivent saisir un nom d’utilisateur et un mot de passe pour se connecter à la destination.
 
 ![Rendu de l’interface utilisateur avec authentification de base](../../assets/functionality/destination-configuration/basic-authentication-ui.png)
 
-Pour configurer l’authentification de base pour votre destination, configurez la variable `customerAuthenticationConfigurations` via la section `/destinations` point de terminaison comme illustré ci-dessous :
+Pour configurer l’authentification de base pour la destination, configurez la section `customerAuthenticationConfigurations` via le point d’entrée `/destinations` comme illustré ci-dessous :
 
 ```json
 "customerAuthenticationConfigurations":[
@@ -93,7 +93,7 @@ Lorsque vous configurez le type d’authentification du porteur, les utilisateur
 
 ![Rendu de l’interface utilisateur avec authentification du porteur](../../assets/functionality/destination-configuration/bearer-authentication-ui.png)
 
-Pour configurer l’authentification par type de porteur pour votre destination, configurez la variable `customerAuthenticationConfigurations` via la section `/destinations` point de terminaison comme illustré ci-dessous :
+Pour configurer l’authentification de type porteur pour la destination, configurez la section `customerAuthenticationConfigurations` via le point d’entrée `/destinations` comme illustré ci-dessous :
 
 ```json
 "customerAuthenticationConfigurations":[
@@ -109,7 +109,7 @@ Les utilisateurs sélectionnent **[!UICONTROL Se connecter à la destination]** 
 
 ![Rendu de l’interface utilisateur avec authentification OAuth 2](../../assets/functionality/destination-configuration/oauth2-authentication-ui.png)
 
-Pour configurer [!DNL OAuth2] l’authentification pour votre destination, configurez la variable `customerAuthenticationConfigurations` via la section `/destinations` point de terminaison comme illustré ci-dessous :
+Pour configurer l’authentification [!DNL OAuth2] pour la destination, configurez la section `customerAuthenticationConfigurations` via le point d’entrée `/destinations` comme illustré ci-dessous :
 
 ```json
 "customerAuthenticationConfigurations":[
@@ -123,11 +123,11 @@ Pour configurer [!DNL OAuth2] l’authentification pour votre destination, confi
 
 L’authentification [!DNL Amazon S3] est prise en charge pour les destinations basées sur des fichiers dans Experience Platform.
 
-Lorsque vous configurez le type d’authentification Amazon S3, les utilisateurs doivent saisir leurs informations d’identification S3.
+Quand vous configurez le type d’authentification Amazon S3, les utilisateurs doivent saisir leurs informations d’identification S3.
 
-![Rendu de l’interface utilisateur avec authentification S3](../../assets/functionality/destination-configuration/s3-authentication-ui.png)
+![Rendu de l’interface utilisateur avec authentification S3](../../assets/functionality/destination-configuration/s3-authentication-ui.png)
 
-Pour configurer [!DNL Amazon S3] l’authentification pour votre destination, configurez la variable `customerAuthenticationConfigurations` via la section `/destinations` point de terminaison comme illustré ci-dessous :
+Pour configurer l’authentification [!DNL Amazon S3] pour la destination, configurez la section `customerAuthenticationConfigurations` via le point d’entrée `/destinations` comme illustré ci-dessous :
 
 ```json
 "customerAuthenticationConfigurations":[
@@ -145,7 +145,7 @@ Lorsque vous configurez le type d’authentification Azure Blob, les utilisateur
 
 ![Rendu de l’interface utilisateur avec authentification Blob](../../assets/functionality/destination-configuration/blob-authentication-ui.png)
 
-Pour configurer l’authentification [!DNL Azure Blob] pour votre destination, configurez le paramètre `customerAuthenticationConfigurations` du point d’entrée `/destinations` comme illustré ci-dessous :
+Pour configurer l’authentification [!DNL Azure Blob] pour la destination, configurez le paramètre `customerAuthenticationConfigurations` du point d’entrée `/destinations` comme illustré ci-dessous :
 
 ```json
 "customerAuthenticationConfigurations":[
@@ -159,11 +159,11 @@ Pour configurer l’authentification [!DNL Azure Blob] pour votre destination, c
 
 L’authentification [!DNL Azure Data Lake Storage] est prise en charge pour les destinations basées sur des fichiers dans Experience Platform.
 
-Lorsque vous configurez la variable [!DNL Azure Data Lake Storage] type d’authentification, les utilisateurs doivent saisir les informations d’identification de l’entité de sécurité Azure Service et leurs informations de client.
+Quand vous configurez le type d’authentification[!DNL Azure Data Lake Storage], les utilisateurs doivent saisir les informations d’identification d’Azure Service Principal et leurs informations de client.
 
 ![[!DNL Azure Data Lake Storage]Rendu de l’interface utilisateur avec authentification ](../../assets/functionality/destination-configuration/adls-authentication-ui.png)
 
-Pour configurer l’authentification [!DNL Azure Data Lake Storage] (ADLS) de votre destination, configurez le paramètre `customerAuthenticationConfigurations` du point d’entrée `/destinations` comme illustré ci-dessous :
+Pour configurer l’authentification [!DNL Azure Data Lake Storage] (ADLS) de la destination, configurez le paramètre `customerAuthenticationConfigurations` du point d’entrée `/destinations` comme illustré ci-dessous :
 
 ```json
 "customerAuthenticationConfigurations":[
@@ -181,7 +181,7 @@ Lorsque vous configurez le SFTP avec le type d’authentification par mot de pas
 
 ![Rendu de l’interface utilisateur avec authentification par mot de passe](../../assets/functionality/destination-configuration/sftp-password-authentication-ui.png)
 
-Pour configurer l’authentification SFTP avec le mot de passe de votre destination, configurez le paramètre `customerAuthenticationConfigurations` du point d’entrée `/destinations` comme illustré ci-dessous :
+Pour configurer l’authentification SFTP avec le mot de passe de la destination, configurez le paramètre `customerAuthenticationConfigurations` du point d’entrée `/destinations` comme illustré ci-dessous :
 
 ```json
 "customerAuthenticationConfigurations":[
@@ -199,7 +199,7 @@ Lorsque vous configurez le SFTP avec le type d’authentification par clé SSH, 
 
 ![Rendu de l’interface utilisateur avec SFTP avec authentification par clé SSH](../../assets/functionality/destination-configuration/sftp-key-authentication-ui.png)
 
-Pour configurer l’authentification SFTP avec la clé SSH pour votre destination, configurez le paramètre `customerAuthenticationConfigurations` du point d’entrée `/destinations` comme illustré ci-dessous :
+Pour configurer l’authentification SFTP avec la clé SSH pour la destination, configurez le paramètre `customerAuthenticationConfigurations` du point d’entrée `/destinations` comme illustré ci-dessous :
 
 ```json
 "customerAuthenticationConfigurations":[
@@ -213,11 +213,11 @@ Pour configurer l’authentification SFTP avec la clé SSH pour votre destinatio
 
 L’authentification [!DNL Google Cloud Storage] est prise en charge pour les destinations basées sur des fichiers dans Experience Platform.
 
-Lorsque vous configurez la variable [!DNL Google Cloud Storage] type d’authentification, les utilisateurs doivent saisir leur [!DNL Google Cloud Storage] [!UICONTROL ID de clé d’accès] et [!UICONTROL clé d&#39;accès secrète].
+Quand vous configurez le type d’authentification [!DNL Google Cloud Storage], les utilisateurs doivent saisir leur [!UICONTROL identifiant de clé d’accès] [!DNL Google Cloud Storage] et leur [!UICONTROL clé d’accès secrète].
 
 ![Rendu de l’interface utilisateur avec l’authentification Google Cloud Storage](../../assets/functionality/destination-configuration/google-cloud-storage-ui.png)
 
-Pour configurer l’authentification [!DNL Google Cloud Storage] pour votre destination, configurez le paramètre `customerAuthenticationConfigurations` du point d’entrée `/destinations` comme illustré ci-dessous :
+Pour configurer l’authentification [!DNL Google Cloud Storage] pour la destination, configurez le paramètre `customerAuthenticationConfigurations` du point d’entrée `/destinations` comme illustré ci-dessous :
 
 ```json
 "customerAuthenticationConfigurations":[
@@ -229,11 +229,11 @@ Pour configurer l’authentification [!DNL Google Cloud Storage] pour votre dest
 
 ## Étapes suivantes {#next-steps}
 
-Après avoir lu cet article, vous devriez mieux comprendre comment configurer l’authentification des utilisateurs sur votre plateforme de destination.
+Vous êtes arrivé au bout de cet article. À présent, vous devriez mieux comprendre comment configurer l’authentification des utilisateurs sur votre plateforme de destination.
 
-Pour en savoir plus sur les autres composants de destination, consultez les articles suivants :
+Pour en savoir plus sur les autres composants de destination, consultez les articles suivants :
 
-* [Authentification OAuth 2](oauth2-authentication.md)
+* [Authentification OAuth 2](oauth2-authentication.md)
 * [Champs de données client](customer-data-fields.md)
 * [Attributs de l’interface utilisateur](ui-attributes.md)
 * [Configuration du schéma](schema-configuration.md)

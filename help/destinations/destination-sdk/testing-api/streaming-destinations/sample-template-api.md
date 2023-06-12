@@ -1,35 +1,34 @@
 ---
-description: Découvrez comment utiliser l’API de test de destination pour générer un modèle de transformation de message de test pour votre destination.
-title: Générer un exemple de modèle de transformation des messages
+description: Découvrez comment utiliser l’API de test de destination pour générer un modèle de transformation de message de test pour la destination.
+title: Génération d’un modèle type de transformation des messages
 exl-id: d18a06f7-0c3a-4b4d-a7d5-011690d00e2c
 source-git-commit: adf75720f3e13c066b5c244d6749dd0939865a6f
 workflow-type: tm+mt
 source-wordcount: '375'
-ht-degree: 29%
+ht-degree: 100%
 
 ---
 
 
-# Générer un exemple de modèle de transformation des messages {#get-sample-template-api-operations}
+# Génération d’un modèle type de transformation des messages {#get-sample-template-api-operations}
 
 >[!IMPORTANT]
 >
 >**Point d’entrée de l’API** : `https://platform.adobe.io/data/core/activation/authoring/testing/template/sample`
 
-Cette page répertorie et décrit toutes les opérations d’API que vous pouvez effectuer à l’aide du `/authoring/testing/template/sample` point d’entrée d’API, pour générer un [modèle de transformation des messages](../../functionality/destination-server/message-format.md#using-templating) pour votre destination. Pour une description des fonctionnalités prises en charge par ce point d’entrée, consultez la section [Créer un modèle](create-template.md).
+Cette page répertorie et décrit toutes les opérations de l’API que vous pouvez effectuer à l’aide du point d’entrée `/authoring/testing/template/sample` de l’API pour générer un [modèle de transformation des messages](../../functionality/destination-server/message-format.md#using-templating) pour la destination. Pour une description des fonctionnalités prises en charge par ce point d’entrée, consultez la section [Créer un modèle](create-template.md).
 
-## Prise en main des exemples d’opérations de l’API de modèle {#get-started}
+## Prise en main des opérations de l’API des modèles type {#get-started}
 
-Avant de poursuivre, consultez le [guide de prise en main](../../getting-started.md) pour obtenir des informations importantes à connaître avant d’effectuer des appels vers l’API, notamment sur la manière d’obtenir l’autorisation de création de la destination et les en-têtes requis.
+Avant de poursuivre, consultez le [guide de prise en main](../../getting-started.md) pour obtenir des informations importantes à connaître avant d’effectuer des appels vers l’API, notamment sur la manière d’obtenir l’autorisation de création de la destination et les en-têtes obligatoires.
 
-## Obtenir un exemple de modèle {#generate-sample-template}
+## Obtention d’un modèle type {#generate-sample-template}
 
-Vous pouvez obtenir un exemple de modèle en adressant une requête de GET à la fonction `authoring/testing/template/sample/` point de terminaison et fournissant l’identifiant de destination de la configuration de destination selon laquelle vous créez votre modèle.
+Vous pouvez obtenir un modèle type en adressant une requête GET au point d’entrée `authoring/testing/template/sample/` et en fournissant l’identifiant de destination de la configuration de destination en fonction de laquelle vous créez votre modèle.
 
 >[!TIP]
 >
->* L’identifiant de destination que vous devez utiliser ici est `instanceId`, qui correspond à une configuration de destination, créée à l’aide du point d’entrée `/destinations`. Reportez-vous à la section [récupération d’une configuration de destination](../../authoring-api/destination-configuration/retrieve-destination-configuration.md) pour plus d’informations.
-
+>* L’identifiant de destination que vous devez utiliser ici est `instanceId`, qui correspond à une configuration de destination, créée à l’aide du point d’entrée `/destinations`. Pour en savoir plus, consultez [Récupération d’une configuration de destination](../../authoring-api/destination-configuration/retrieve-destination-configuration.md).
 
 **Format d’API**
 
@@ -39,11 +38,11 @@ GET authoring/testing/template/sample/{DESTINATION_ID}
 
 | Paramètre | Description |
 | -------- | ----------- |
-| `{DESTINATION_ID}` | L’identifiant de la configuration de destination pour laquelle vous générez un modèle de transformation de message. |
+| `{DESTINATION_ID}` | Identifiant de la configuration de destination pour laquelle vous générez un modèle de transformation de message. |
 
 **Requête**
 
-La requête suivante génère un nouvel exemple de modèle, configuré par les paramètres fournis dans la payload.
+La requête suivante génère un nouveau modèle d’audience configuré en fonction des paramètres fournis dans la payload.
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/core/activation/authoring/testing/template/sample/5114d758-ce71-43ba-b53e-e2a91d67b67f' \
@@ -57,9 +56,9 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 
 **Réponse**
 
-Une réponse réussie renvoie un état HTTP 200 avec un exemple de modèle que vous pouvez modifier pour correspondre au format de données attendu.
+Une réponse réussie renvoie le statut HTTP 200 avec un modèle type que vous pouvez modifier pour correspondre au format de données attendu.
 
-Si l’identifiant de destination que vous fournissez correspond à une configuration de destination avec [agrégation des meilleurs efforts](../../functionality/destination-configuration/aggregation-policy.md) et `maxUsersPerRequest=1` dans la stratégie d’agrégation, la requête renvoie un exemple de modèle similaire à celui-ci :
+Si l’identifiant de destination que vous fournissez correspond à une configuration de destination avec [agrégation des meilleurs efforts](../../functionality/destination-configuration/aggregation-policy.md) et `maxUsersPerRequest=1` dans la politique d’agrégation, la requête renvoie un modèle type similaire à celui-ci :
 
 ```python
 {#- THIS is an example template for a single profile -#}
@@ -92,7 +91,7 @@ Si l’identifiant de destination que vous fournissez correspond à une configur
 }
 ```
 
-Si l’identifiant de destination que vous fournissez correspond à un modèle de serveur de destination avec [agrégation configurable](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) ou [agrégation des meilleurs efforts](../../functionality/destination-configuration/aggregation-policy.md#best-effort-aggregation) avec `maxUsersPerRequest` supérieur à un, la requête renvoie un exemple de modèle similaire à celui-ci :
+Si l’identifiant de destination que vous fournissez correspond à un modèle de serveur de destination avec [agrégation configurable](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) ou [agrégation des meilleurs efforts](../../functionality/destination-configuration/aggregation-policy.md#best-effort-aggregation) et que `maxUsersPerRequest` est supérieur à un, la requête renvoie un modèle type similaire à celui-ci :
 
 ```python
 {#- THIS is an example template for multiple profiles -#}
@@ -137,4 +136,4 @@ Les points d’entrée de l’API Destination SDK suivent les principes généra
 
 ## Étapes suivantes {#next-steps}
 
-Après avoir lu ce document, vous savez maintenant comment générer un modèle de transformation de message à l’aide du `/authoring/testing/template/sample` Point d’entrée de l’API. Vous pouvez ensuite utiliser la variable [Point d’entrée de l’API de modèle de rendu](render-template-api.md) pour générer les profils exportés en fonction du modèle et les comparer au format de données attendu de votre destination.
+Vous êtes arrivé au bout de ce document. À présent, vous savez comment générer un modèle de transformation de message à l’aide du point d’entrée `/authoring/testing/template/sample` de l’API. Vous pouvez désormais utiliser le [point d’entrée de l’API du modèle de rendu](render-template-api.md) pour générer les profils exportés en fonction du modèle et les comparer au format de données attendu de la destination.

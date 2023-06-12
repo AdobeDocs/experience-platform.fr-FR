@@ -5,13 +5,13 @@ exl-id: 2be62843-0644-41fa-a860-ccd65472562e
 source-git-commit: c54fa206b673868ca3d0ccfa5b0936b83cfd3ed4
 workflow-type: tm+mt
 source-wordcount: '2933'
-ht-degree: 93%
+ht-degree: 96%
 
 ---
 
 # Comportement d’exportation de profils selon les types de destinations
 
-Il existe plusieurs types de destinations dans Experience Platform, comme illustré dans le diagramme ci-dessous. Ces destinations ont des schémas d&#39;exportation légèrement différents en ce qui concerne les éléments qui déclenchent une exportation de destination et ce qui est inclus dans une exportation, comme décrit dans les sections ci-dessous.
+Il existe plusieurs types de destinations dans Experience Platform, comme illustré dans le diagramme ci-dessous. Ces destinations ont des schémas d’exportation légèrement différents en ce qui concerne les éléments qui déclenchent une exportation de destination et ce qui est inclus dans une exportation, comme décrit dans les sections ci-dessous.
 
 >[!IMPORTANT]
 >
@@ -38,15 +38,15 @@ Prenons un autre exemple, la [destination de l’API HTTP](/help/destinations/ca
 
 La politique d’agrégation est configurable et les développeurs de destination peuvent décider comment la configurer pour respecter au mieux les limites de taux des points d’entrée de l’API en aval. Obtenez des informations supplémentaires sur la [politique d’agrégation](../destination-sdk/functionality/destination-configuration/aggregation-policy.md) dans la documentation de Destination SDK.
 
-## Destinations d&#39;exportation de profils de streaming (entreprise) {#streaming-profile-destinations}
+## Destinations d’exportation de profils de streaming (entreprise) {#streaming-profile-destinations}
 
 >[!IMPORTANT]
 >
-> Les destionations d’entreprise sont disponibles uniquement pour la clientèle d’[Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform.html).
+> Les destinations d’entreprise sont disponibles uniquement pour [la clientèle d’Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform.html).
 
 Les [destinations d’entreprise](/help/destinations/destination-types.md#streaming-profile-export) dans Experience Platform sont Amazon Kinesis, Azure Event Hubs et l’API HTTP.
 
-Experience Platform optimise le comportement d’exportation de profils vers votre destination d’entreprise afin de n&#39;exporter des données vers votre point d’entrée API que lorsque des mises à jour pertinentes d&#39;un profil ont eu lieu suite à la qualification d&#39;un segment ou à d&#39;autres événements importants. Les profils sont exportés vers votre destination dans les situations suivantes :
+Experience Platform optimise le comportement d’exportation de profils vers votre destination d’entreprise afin de n’exporter des données vers votre point d’entrée de l’API que lorsque des mises à jour pertinentes d’un profil ont eu lieu suite à la qualification d’un segment ou à d’autres événements importants. Les profils sont exportés vers votre destination dans les situations suivantes :
 
 * La mise à jour du profil a été déterminée par une modification de l’[appartenance à un segment](/help/xdm/field-groups/profile/segmentation.md) pour au moins un des segments mappés à la destination. Par exemple, le profil est qualifié pour l’un des segments mappés à la destination ou a quitté l’un de ces segments.
 * La mise à jour du profil a été déterminée par une modification dans le [mappage d’identités](/help/xdm/field-groups/profile/identitymap.md). Par exemple, une nouvelle identité a été ajoutée dans l’attribut de mappage d’identités à un profil qui était déjà qualifié pour l’un des segments mappés à la destination.
@@ -62,7 +62,7 @@ Concernant les données exportées pour un profil donné, il est important de co
 
 | Ce qui détermine une exportation de destination | Éléments inclus dans l’exportation de destination |
 |---------|----------|
-| <ul><li>Les attributs et segments mappés servent de repère pour une exportation de destination. Cela signifie que si des segments mappés changent d’états (à partir de `null` to `realized` ou de `realized` to `exiting`) ou si les attributs mappés sont mis à jour, une exportation de destination est déclenchée.</li><li>Comme les identités ne peuvent actuellement pas être mappées aux destinations d’entreprise, les modifications d’identité sur un profil donné déterminent également les exportations de destination.</li><li>Toute modification pour un attribut est considérée comme une mise à jour, qu’il s’agisse ou non de la même valeur. Cela signifie qu’une réécriture sur un attribut est considérée comme une modification, même si la valeur elle-même n’a pas changé.</li></ul> | <ul><li>L’objet `segmentMembership` inclut le segment mappé dans le flux de données d’activation, pour lequel le statut du profil a changé suite à un événement de qualification ou de sortie de segment. Notez que d’autres segments non mappés pour lesquels le profil s’est qualifié peuvent faire partie de l’exportation de destination, si ces segments appartiennent à la même [politique de fusion](/help/profile/merge-policies/overview.md) que le segment mappé dans le flux de données d’activation. </li><li>Toutes les identités dans l’objet `identityMap` sont également incluses (Experience Platform ne prend actuellement pas en charge le mappage d’identités dans la destination d’entreprise).</li><li>Seuls les attributs mappés sont inclus dans l’exportation de destination.</li></ul> |
+| <ul><li>Les attributs et segments mappés servent de repère pour une exportation de destination. Cela signifie que si un segment mappé change d’état (de `null` à `realized` ou de `realized` à `exiting`) ou qu’un attribut mappé est mis à jour, une destination est exportée.</li><li>Comme les identités ne peuvent actuellement pas être mappées aux destinations d’entreprise, les modifications d’identité sur un profil donné déterminent également les exportations de destination.</li><li>Toute modification pour un attribut est considérée comme une mise à jour, qu’il s’agisse ou non de la même valeur. Cela signifie qu’une réécriture sur un attribut est considérée comme une modification, même si la valeur elle-même n’a pas changé.</li></ul> | <ul><li>L’objet `segmentMembership` inclut le segment mappé dans le flux de données d’activation, pour lequel le statut du profil a changé suite à un événement de qualification ou de sortie de segment. Notez que d’autres segments non mappés pour lesquels le profil s’est qualifié peuvent faire partie de l’exportation de destination, si ces segments appartiennent à la même [politique de fusion](/help/profile/merge-policies/overview.md) que le segment mappé dans le flux de données d’activation. </li><li>Toutes les identités dans l’objet `identityMap` sont également incluses (Experience Platform ne prend actuellement pas en charge le mappage d’identités dans la destination d’entreprise).</li><li>Seuls les attributs mappés sont inclus dans l’exportation de destination.</li></ul> |
 
 {style="table-layout:fixed"}
 
@@ -109,7 +109,7 @@ Concernant les données exportées pour un profil donné, il est important de co
 
 | Ce qui détermine une exportation de destination | Éléments inclus dans l’exportation de destination |
 |---------|----------|
-| <ul><li>Les attributs et segments mappés servent de repère pour une exportation de destination. Cela signifie que si des segments mappés changent d’états (à partir de `null` to `realized` ou de `realized` to `exiting`) ou si les attributs mappés sont mis à jour, une exportation de destination est déclenchée.</li><li>La modification du mappage d’identités correspond à une identité ajoutée/supprimée pour le [graphique d’identités](/help/identity-service/ui/identity-graph-viewer.md) du profil, pour les espaces de noms d’identité mappés pour l’exportation.</li><li>La modification d’un attribut correspond à toute mise à jour de l’attribut, pour les attributs mappés à la destination.</li></ul> | <ul><li>Les segments qui sont mappés à la destination et qui ont été modifiés seront inclus dans l’objet `segmentMembership`. Dans certains scénarios, ils peuvent être exportés à l’aide de plusieurs appels. En outre, dans certains scénarios, certains segments qui n’ont pas été modifiés peuvent également être inclus dans l’appel. Dans tous les cas, seuls les segments mappés seront exportés.</li><li>Toutes les identités des espaces de noms qui sont mappés à la destination dans l’objet `identityMap` sont également inclus.</li><li>Seuls les attributs mappés sont inclus dans l’exportation de destination.</li></ul> |
+| <ul><li>Les attributs et segments mappés servent de repère pour une exportation de destination. Cela signifie que si un segment mappé change d’état (de `null` à `realized` ou de `realized` à `exiting`) ou qu’un attribut mappé est mis à jour, une destination est exportée.</li><li>La modification du mappage d’identités correspond à une identité ajoutée/supprimée pour le [graphique d’identités](/help/identity-service/ui/identity-graph-viewer.md) du profil, pour les espaces de noms d’identité mappés pour l’exportation.</li><li>La modification d’un attribut correspond à toute mise à jour de l’attribut, pour les attributs mappés à la destination.</li></ul> | <ul><li>Les segments qui sont mappés à la destination et qui ont été modifiés seront inclus dans l’objet `segmentMembership`. Dans certains scénarios, ils peuvent être exportés à l’aide de plusieurs appels. En outre, dans certains scénarios, certains segments qui n’ont pas été modifiés peuvent également être inclus dans l’appel. Dans tous les cas, seuls les segments mappés seront exportés.</li><li>Toutes les identités des espaces de noms qui sont mappés à la destination dans l’objet `identityMap` sont également inclus.</li><li>Seuls les attributs mappés sont inclus dans l’exportation de destination.</li></ul> |
 
 {style="table-layout:fixed"}
 
@@ -123,7 +123,7 @@ Prenons l’exemple de ce flux de données vers une destination de diffusion en 
 
 ![flux de données de destination de diffusion en continu](/help/destinations/assets/how-destinations-work/streaming-destination-example-dataflow.png)
 
-Une exportation de profil vers la destination peut être déterminée par un profil éligible ou sortant de l’un des trois segments mappés. Si un profil est qualifié pour le segment **Client avec des voitures DeLorean**, cela déclenche une exportation. Les autres segments (**Ville - Dallas** et **Principal de base du site**) peut également être exporté si le segment est présent dans le profil avec l’un des états possibles (`realized` ou `exited`). Les segments non mappés (comme **Fans de science-fiction**) ne sont pas exportés.
+Une exportation de profil vers la destination peut être déterminée par un profil éligible ou sortant de l’un des trois segments mappés. Si un profil est qualifié pour le segment **Client avec des voitures DeLorean**, cela déclenche une exportation. Les autres segments (**Ville - Dallas** et **Site de base actif**) pourraient également être exportés si le segment est présent dans le profil avec l’un des statuts possibles (`realized` ou `exited`). Les segments non mappés (comme **Fans de science-fiction**) ne sont pas exportés.
 
 Du point de vue des attributs de profil, toute modification des trois attributs mappés ci-dessus déterminera une exportation de destination.
 
@@ -145,7 +145,7 @@ Dans l’une des situations d’exportation ci-dessus, les fichiers exportés in
 
 ### Exportations de fichiers incrémentiels {#incremental-file-exports}
 
-Toutes les mises à jour d’un profil n’entraînent pas l’inclusion de celui-ci dans les exportations de fichiers incrémentiels. Par exemple, si un attribut a été ajouté à un profil ou supprimé de celui-ci, le profil n’est pas inclus dans l’exportation. Seuls les profils pour lesquels l’attribut `segmentMembership` a changé sera inclus dans les fichiers exportés. En d’autres termes, ce n’est que si le profil fait partie du segment ou est supprimé du segment qu’il est inclus dans les exportations de fichiers incrémentiels.
+Toutes les mises à jour d’un profil n’entraînent pas l’inclusion de celui-ci dans les exportations de fichiers incrémentiels. Par exemple, si un attribut a été ajouté à un profil ou supprimé de celui-ci, le profil n’est pas inclus dans l’exportation. Seuls les profils pour lesquels l’attribut `segmentMembership` a changé seront inclus dans les fichiers exportés. En d’autres termes, ce n’est que si le profil fait partie du segment ou est supprimé du segment qu’il est inclus dans les exportations de fichiers incrémentiels.
 
 De même, si une nouvelle identité (nouvelle adresse e-mail, numéro de téléphone, ECID, etc.) est ajoutée à un profil dans le [graphique d’identité](/help/identity-service/ui/identity-graph-viewer.md), cela ne représente pas une raison d’inclure le profil dans une nouvelle exportation de fichiers incrémentiels.
 
@@ -174,13 +174,13 @@ La totalité de la population active du segment est exportée tous les jours.
 
 | Ce qui détermine une exportation de destination | Éléments inclus dans le fichier exporté |
 |---------|----------|
-| <ul><li>Le planning d’exportation défini dans l’interface utilisateur ou l’API et l’action de l’utilisateur ou de l’utilisatrice (qui sélectionne [Exporter le fichier maintenant](/help/destinations/ui/export-file-now.md) dans l’IU ou qui utilise l’[API d’activation ad hoc](/help/destinations/api/ad-hoc-activation-api.md)) déterminent le début d’une exportation de destination.</li></ul> | Dans les exportations de fichiers complets, tous des profils actifs d’un segment, selon la dernière évaluation de segment, sont inclus dans chaque exportation de fichiers. Les dernières valeurs pour chaque attribut XDM sélectionné pour l’exportation sont également incluses en tant que colonnes dans chaque fichier. Notez que les profils à l’état de sortie ne sont pas inclus dans l’exportation du fichier. |
+| <ul><li>Le planning d’exportation défini dans l’interface utilisateur ou l’API et l’action de l’utilisateur (qui sélectionne [Exporter le fichier maintenant](/help/destinations/ui/export-file-now.md) dans l’IU ou qui utilise l’[API d’activation ad hoc](/help/destinations/api/ad-hoc-activation-api.md)) déterminent le début d’une exportation de destinations.</li></ul> | Dans les exportations de fichiers complets, tous des profils actifs d’un segment, selon la dernière évaluation de segment, sont inclus dans chaque exportation de fichiers. Les dernières valeurs pour chaque attribut XDM sélectionné pour l’exportation sont également incluses en tant que colonnes dans chaque fichier. Notez que les profils à l’état de sortie ne sont pas inclus dans l’exportation du fichier. |
 
 {style="table-layout:fixed"}
 
 **Exportations de fichiers incrémentiels**
 
-Dans la première exportation de fichiers, après avoir configuré le workflow d&#39;activation, la population intégrale du segment est exportée. Lors des exportations suivantes, seuls les profils modifiés sont exportés.
+Dans la première exportation de fichiers, après avoir configuré le workflow d’activation, la population intégrale du segment est exportée. Lors des exportations suivantes, seuls les profils modifiés sont exportés.
 
 | Ce qui détermine une exportation de destination | Éléments inclus dans le fichier exporté |
 |---------|----------|

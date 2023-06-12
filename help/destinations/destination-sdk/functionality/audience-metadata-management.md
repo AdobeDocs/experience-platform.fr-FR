@@ -4,7 +4,7 @@ title: Gérer les métadonnées d’audience
 source-git-commit: e69bd819fb8ef6c2384a2b843542d1ddcea0661f
 workflow-type: tm+mt
 source-wordcount: '1038'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 94%
 
 Utilisez les modèles de métadonnées d’audience pour créer, mettre à jour ou supprimer des audiences par programmation dans votre destination. Adobe fournit un modèle de métadonnées d’audience extensible que vous pouvez configurer en fonction des spécifications de votre API marketing. Une fois la configuration définie, testée et envoyée, elle sera utilisée par Adobe pour structurer les appels API vers votre destination.
 
-Vous pouvez configurer les fonctionnalités décrites dans ce document à l’aide du point d’entrée de lʼAPI `/authoring/audience-templates`. Lecture [création d’un modèle de métadonnées](../metadata-api/create-audience-template.md) pour obtenir une liste complète des opérations que vous pouvez effectuer sur le point de terminaison .
+Vous pouvez configurer les fonctionnalités décrites dans ce document à l’aide du point d’entrée de lʼAPI `/authoring/audience-templates`. Consultez la section [Création d’un modèle de métadonnées](../metadata-api/create-audience-template.md) pour obtenir une liste complète des opérations que vous pouvez effectuer sur le point d’entrée.
 
 ## Quand utiliser le point d’entrée de la gestion des métadonnées d’audience {#when-to-use}
 
@@ -23,7 +23,7 @@ Selon la configuration de votre API, vous devrez peut-être utiliser le point d�
 
 ## Cas d’utilisation pris en charge par la gestion des métadonnées d’audience {#use-cases}
 
-Grâce à la prise en charge des métadonnées d’audience dans Destination SDK, lors de la configuration de votre destination Experience Platform, vous pouvez proposer aux utilisateurs de Platform de choisir entre plusieurs options lorsqu’ils mappent et activent des segments vers votre destination. Vous pouvez contrôler les options disponibles pour l’utilisateur via les paramètres du [Configuration des métadonnées d’audience](../functionality/destination-configuration/audience-metadata-configuration.md) de la configuration de destination.
+Grâce à la prise en charge des métadonnées d’audience dans Destination SDK, lors de la configuration de votre destination Experience Platform, vous pouvez proposer aux utilisateurs de Platform de choisir entre plusieurs options lorsqu’ils mappent et activent des segments vers votre destination. Vous pouvez contrôler les options disponibles pour l’utilisateur via les paramètres de la section [Configuration des métadonnées d’audience](../functionality/destination-configuration/audience-metadata-configuration.md) de la configuration de destination.
 
 ### Cas d’utilisation 1 : vous disposez d’une API tierce et les utilisateurs n’ont pas besoin de saisir les identifiants de mappage.
 
@@ -31,13 +31,13 @@ Si vous disposez d’un point d’entrée de l’API pour créer/mettre à jour/
 
 Lors de l’activation de segments vers votre destination dans l’interface utilisateur dʼExperience Platform, les utilisateurs n’ont pas besoin de remplir manuellement un champ d’identifiant de mappage de segments dans le workflow d’activation.
 
-### Cas d’utilisation 2 : les utilisateurs doivent d’abord créer un segment dans votre destination et saisir manuellement l’identifiant de mappage.
+### Cas d’utilisation 2 : les utilisateurs doivent d’abord créer un segment dans votre destination et saisir manuellement l’identifiant de mappage
 
 Si des segments et d’autres métadonnées doivent être créés manuellement par des partenaires ou des utilisateurs dans votre destination, les utilisateurs doivent renseigner manuellement le champ identifiant de mappage de segments dans le workflow d’activation pour synchroniser les métadonnées de segments entre votre destination et Experience Platform.
 
 ![Identifiant de mappage d’entrée](../assets/functionality/input-mapping-id.png)
 
-### Cas d’utilisation 3 : votre destination accepte l’identifiant de segment Experience Platform et les utilisateurs n’ont pas besoin de saisir manuellement l’identifiant de mappage.
+### Cas d’utilisation 3 : votre destination accepte l’identifiant de segment Experience Platform et les utilisateurs n’ont pas besoin de saisir manuellement l’identifiant de mappage
 
 Si votre système de destination accepte l’identifiant du segment Experience Platform, vous pouvez le configurer dans votre modèle de métadonnées d’audience. Les utilisateurs n’ont pas à renseigner d’identifiant de mappage de segments lors de l’activation d’un segment.
 
@@ -521,7 +521,7 @@ Notez que dans certains exemples les champs de macro tels que `{{authData.access
 }
 ```
 
-Rechercher des descriptions de tous les paramètres du modèle dans le [Créer un modèle d’audience](../metadata-api/create-audience-template.md) Référence de l’API.
+Recherchez des descriptions de tous les paramètres du modèle dans la référence de l’API [Création d’un modèle d’audience](../metadata-api/create-audience-template.md).
 
 ## Macros utilisées dans les modèles de métadonnées d’audience
 

@@ -1,38 +1,38 @@
 ---
-description: Cette page explique comment utiliser le point d’entrée de l’API /sample-profiles depuis Destination SDK pour générer des profils d’exemple basés sur un schéma source. Vous pouvez utiliser ces exemples de profils pour tester votre configuration de destination basée sur des fichiers.
-title: Générer des exemples de profils en fonction d’un schéma source
+description: Cette page explique comment utiliser le point d’entrée de l’API /sample-profiles depuis Destination SDK pour générer des profils types en fonction d’un schéma source. Vous pouvez utiliser ces profils types pour tester votre configuration de destination basée sur des fichiers.
+title: Génération de profils types en fonction d’un schéma source
 exl-id: aea50d2e-e916-4ef0-8864-9333a4eafe80
 source-git-commit: adf75720f3e13c066b5c244d6749dd0939865a6f
 workflow-type: tm+mt
 source-wordcount: '651'
-ht-degree: 15%
+ht-degree: 100%
 
 ---
 
 
-# Générer des exemples de profils en fonction d’un schéma source
+# Génération de profils types en fonction d’un schéma source
 
-La première étape du test de votre destination basée sur les fichiers consiste à utiliser la variable `/sample-profiles` point d’entrée pour générer un exemple de profil en fonction de votre schéma source existant.
+La première étape du test de la destination basée sur les fichiers consiste à utiliser le point d’entrée `/sample-profiles` pour générer un profil type en fonction de votre schéma source existant.
 
-Les exemples de profils peuvent vous aider à comprendre la structure JSON d’un profil. En outre, ils vous donnent une valeur par défaut que vous pouvez personnaliser avec vos propres données de profil, pour d’autres tests de destination.
+Les profils types peuvent vous aider à comprendre la structure JSON d’un profil. En outre, ils vous donnent une valeur par défaut que vous pouvez personnaliser avec vos propres données de profil pour d’autres tests de destination.
 
 ## Prise en main {#getting-started}
 
-Avant de poursuivre, consultez le [guide de prise en main](../../getting-started.md) pour obtenir des informations importantes à connaître avant d’effectuer des appels vers l’API, notamment sur la manière d’obtenir l’autorisation de création de la destination et les en-têtes requis.
+Avant de poursuivre, consultez le [guide de prise en main](../../getting-started.md) pour obtenir des informations importantes à connaître avant d’effectuer des appels vers l’API, notamment sur la manière d’obtenir l’autorisation de création de la destination et les en-têtes obligatoires.
 
 ## Conditions préalables {#prerequisites}
 
-Avant d’utiliser la variable `/sample-profiles` endpoint, assurez-vous de respecter les conditions suivantes :
+Avant d’utiliser le point d’entrée `/sample-profiles`, veillez à respecter les conditions suivantes :
 
-* Une destination basée sur des fichiers existante est créée via la Destination SDK et vous pouvez la voir dans votre [destinations](../../../ui/destinations-workspace.md).
-* Vous avez créé au moins un flux d’activation pour votre destination dans l’interface utilisateur de l’Experience Platform. Le `/sample-profiles` endpoint crée les profils en fonction du schéma source que vous avez défini dans votre flux d’activation. Voir [tutoriel sur l’activation](../../../ui/activate-batch-profile-destinations.md) pour savoir comment créer un flux d’activation.
-* Pour réussir la requête API, vous avez besoin de l’ID d’instance de destination correspondant à l’instance de destination que vous allez tester. Obtenez l’ID d’instance de destination que vous devez utiliser dans l’appel API, à partir de l’URL, lors de l’exploration d’une connexion avec votre destination dans l’interface utilisateur de Platform.
+* Une destination existante basée sur des fichiers a été créée avec Destination SDK et vous pouvez la voir dans votre [catalogue de destination](../../../ui/destinations-workspace.md).
+* Au moins un flux d’activation pour la destination dans l’interface utilisateur d’Experience Platform a été créé. Le point d’entrée `/sample-profiles` crée les profils en fonction du schéma source que vous avez défini dans votre flux d’activation. Pour découvrir comment créer un flux d’activation, regardez le [tutoriel sur l’activation](../../../ui/activate-batch-profile-destinations.md).
+* Pour réussir la requête API, vous avez besoin de l’identifiant d’instance de destination correspondant à l’instance de destination que vous allez tester. Obtenez l’identifiant d’instance de destination que vous devez utiliser dans l’appel API, à partir de l’URL, pendant l’exploration d’une connexion avec la destination dans l’interface utilisateur de Platform.
 
-   ![Image de l’interface utilisateur montrant comment obtenir l’ID d’instance de destination à partir de l’URL.](../../assets/testing-api/get-destination-instance-id.png)
+  ![Image de l’interface utilisateur montrant comment obtenir l’identifiant d’instance de destination à partir de l’URL.](../../assets/testing-api/get-destination-instance-id.png)
 
-## Génération d’exemples de profils pour les tests de destination {#generate-sample-profiles}
+## Génération de profils types pour les tests de destination {#generate-sample-profiles}
 
-Vous pouvez générer des exemples de profils en fonction de votre schéma source en adressant une requête de GET à la fonction `/sample-profiles` point de terminaison avec l’identifiant de l’instance de destination de la destination que vous souhaitez tester.
+Vous pouvez générer des profils types en fonction de votre schéma source en adressant une requête GET au point d’entrée `/sample-profiles` avec l’identifiant de l’instance de destination de la destination que vous souhaitez tester.
 
 **Format d’API**
 
@@ -42,12 +42,12 @@ GET /authoring/sample-profiles?destinationInstanceId={DESTINATION_INSTANCE_ID}&c
 
 | Paramètres de requête | Description |
 | -------- | ----------- |
-| `destinationInstanceId` | L’identifiant de l’instance de destination pour laquelle vous générez des exemples de profils. Voir [conditions préalables](#prerequisites) pour plus d’informations sur la manière d’obtenir cet identifiant. |
-| `count` | *Facultatif*. Le nombre d’exemples de profils que vous souhaitez générer. Le paramètre peut prendre des valeurs entre les variables `1 - 1000`. Si cette propriété n’est pas définie, l’API génère un seul exemple de profil. |
+| `destinationInstanceId` | L’identifiant de l’instance de destination pour laquelle vous générez des profils types. Pour en savoir plus sur la manière d’obtenir cet identifiant, consultez la section [Conditions préalables](#prerequisites). |
+| `count` | *Facultatif*. Nombre de profils types que vous souhaitez générer. Le paramètre peut prendre des valeurs entre `1 - 1000`. Si cette propriété n’est pas définie, l’API génère un seul profil type. |
 
 **Requête**
 
-La requête suivante génère un exemple de profil en fonction du schéma source défini dans l’instance de destination avec le `destinationInstanceId`.
+La requête suivante génère un profil type en fonction du schéma source défini dans l’instance de destination avec l’identifiant `destinationInstanceId` correspondant.
 
 ```shell
 curl -X GET 'https://platform.adobe.io/data/core/activation/authoring/sample-profiles?destinationInstanceId={DESTINATION_INSTANCE_ID}' \
@@ -60,11 +60,11 @@ curl -X GET 'https://platform.adobe.io/data/core/activation/authoring/sample-pro
 
 **Réponse**
 
-Une réponse réussie renvoie un état HTTP 200 avec le nombre spécifié de profils d’exemple, avec l’appartenance au segment, les identités et les attributs de profil qui correspondent au schéma XDM source.
+Une réponse réussie renvoie le statut HTTP 200 avec le nombre spécifié de profils types, avec l’appartenance au segment, les identités et les attributs de profil qui correspondent au schéma XDM source.
 
 >[!NOTE]
 >
-> La réponse renvoie uniquement les attributs d’appartenance, d’identité et de profil utilisés dans l’instance de destination. Même si votre schéma source comporte d’autres champs, ceux-ci sont ignorés.
+> La réponse renvoie uniquement les attributs d’appartenance au segment, d’identité et de profil utilisés dans l’instance de destination. Même si votre schéma source comporte d’autres champs, ceux-ci sont ignorés.
 
 ```json
 [
@@ -105,10 +105,10 @@ Une réponse réussie renvoie un état HTTP 200 avec le nombre spécifié de pro
 
 | Propriété | Description |
 | -------- | ----------- |
-| `segmentMembership` | Objet map qui décrit les appartenances aux segments de l’individu. Pour plus d’informations sur `segmentMembership`, lire [Détails de l’adhésion au segment](../../../../xdm/field-groups/profile/segmentation.md). |
-| `lastQualificationTime` | Horodatage de la dernière fois que ce profil s’est qualifié pour le segment. |
-| `status` | Un champ de chaîne qui indique si l’appartenance au segment a été réalisée dans le cadre de la requête actuelle. Les valeurs suivantes sont acceptées : <ul><li>`realized`: Le profil fait partie du segment.</li><li>`exited`: Le profil quitte le segment dans le cadre de la requête actuelle.</li></ul> |
-| `identityMap` | Champ de type map qui décrit les différentes valeurs d’identité d’un individu, ainsi que les espaces de noms qui lui sont associés. Pour plus d’informations sur `identityMap`, voir [base de la composition des schémas](../../../../xdm/schema/composition.md#identityMap). |
+| `segmentMembership` | Objet map qui décrit les appartenances à un segment de l’individu. Pour plus d’informations sur `segmentMembership`, consultez la documentation [Détails de l’appartenance à un segment](../../../../xdm/field-groups/profile/segmentation.md). |
+| `lastQualificationTime` | Date et heure de la dernière qualification de ce profil pour le segment. |
+| `status` | Un champ de chaîne qui indique si l’appartenance à un segment a été réalisée dans le cadre de la requête actuelle. Les valeurs suivantes sont acceptées : <ul><li>`realized` : le profil fait partie du segment.</li><li>`exited` : le profil quitte le segment dans le cadre de la requête actuelle.</li></ul> |
+| `identityMap` | Champ de type map qui décrit les différentes valeurs d’identité d’un individu, ainsi que les espaces de noms qui lui sont associés. Pour plus d’informations sur `identityMap`, consultez la [base de la composition des schémas](../../../../xdm/schema/composition.md#identityMap). |
 
 {style="table-layout:auto"}
 
@@ -118,6 +118,6 @@ Les points d’entrée de l’API Destination SDK suivent les principes généra
 
 ## Étapes suivantes
 
-Après avoir lu ce document, vous savez maintenant comment générer des profils d’exemple en fonction du schéma source que vous avez configuré dans votre destination. [flux d’activation](../../../ui/activate-batch-profile-destinations.md).
+Vous êtes arrivé au bout de ce document. À présent, vous savez comment générer des profils types en fonction du schéma source que vous avez configuré dans votre [flux d’activation](../../../ui/activate-batch-profile-destinations.md) de destination.
 
-Vous pouvez désormais personnaliser ces profils ou les utiliser tels qu’ils sont renvoyés par l’API pour [test de votre configuration de destination basée sur des fichiers](file-based-destination-testing-api.md).
+Vous pouvez désormais personnaliser ces profils ou les utiliser tels qu’ils sont renvoyés par l’API pour [tester votre configuration de destination basée sur des fichiers](file-based-destination-testing-api.md).

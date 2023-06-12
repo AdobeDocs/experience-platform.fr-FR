@@ -1,21 +1,21 @@
 ---
-description: Cette page illustre l’appel API utilisé pour créer un serveur de destination via l’Adobe Experience Platform Destination SDK.
+description: Cette page illustre comment l’appel API est utilisé pour créer un serveur de destination avec Adobe Experience Platform Destination SDK.
 title: Création d’une configuration de serveur de destination
 source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
 workflow-type: tm+mt
 source-wordcount: '1623'
-ht-degree: 52%
+ht-degree: 100%
 
 ---
 
 
 # Création d’une configuration de serveur de destination
 
-La création d’un serveur de destination est la première étape de la création de votre propre destination avec Destination SDK. Le serveur de destination comprend des options de configuration pour la variable [server](../../functionality/destination-server/server-specs.md) et [modèle](../../functionality/destination-server/templating-specs.md) les spécifications, la variable [format du message](../../functionality/destination-server/message-format.md), et la variable [formatage de fichier](../../functionality/destination-server/file-formatting.md) options (pour les destinations basées sur des fichiers).
+La création d’un serveur de destination est la première étape de la création de votre propre destination avec Destination SDK. Le serveur de destination comprend des options de configuration pour les spécifications [de serveur](../../functionality/destination-server/server-specs.md) et [de modèle](../../functionality/destination-server/templating-specs.md) et pour les options [format du message](../../functionality/destination-server/message-format.md), et [formatage de fichier](../../functionality/destination-server/file-formatting.md) (pour les destinations basées sur des fichiers).
 
-Cette page illustre la requête d’API et la charge utile que vous pouvez utiliser pour créer votre propre serveur de destination à l’aide de la variable `/authoring/destination-servers` Point d’entrée de l’API.
+Cette page illustre la requête d’API et la payload que vous pouvez utiliser pour créer votre propre serveur de destination à l’aide du point d’entrée de l’API `/authoring/destination-servers`.
 
-Pour une description détaillée des fonctionnalités que vous pouvez configurer via ce point de terminaison, consultez les articles suivants :
+Pour obtenir une description détaillée des fonctionnalités configurables avec ce point d’entrée, consultez les articles suivants :
 
 * [Spécifications de serveur pour les destinations créées avec Destination SDK](../../../destination-sdk/functionality/destination-server/server-specs.md)
 * [Spécifications de modèle pour les destinations créées avec Destination SDK](../../../destination-sdk/functionality/destination-server/templating-specs.md)
@@ -24,15 +24,15 @@ Pour une description détaillée des fonctionnalités que vous pouvez configurer
 
 >[!IMPORTANT]
 >
->Tous les noms et valeurs de paramètre pris en charge par Destination SDK sont **respect de la casse**. Pour éviter les erreurs de respect de la casse, veuillez utiliser les noms et valeurs des paramètres exactement comme indiqué dans la documentation.
+>Tous les noms et toutes les valeurs de paramètre pris en charge par Destination SDK **sont sensibles à la casse**. Pour éviter les erreurs de respect de la casse, utilisez les noms et valeurs des paramètres exactement comme indiqué dans la documentation.
 
 ## Prise en main des opérations de l’API du serveur de destination {#get-started}
 
-Avant de poursuivre, veuillez consulter la section [Guide de prise en main](../../getting-started.md) pour obtenir des informations importantes à connaître afin d’effectuer avec succès des appels vers l’API, notamment sur la manière d’obtenir l’autorisation de création de destination requise et les en-têtes requis.
+Avant de poursuivre, consultez le [guide de prise en main](../../getting-started.md) pour obtenir des informations importantes à connaître avant d’effectuer des appels vers l’API, notamment sur la manière d’obtenir l’autorisation de création de la destination et les en-têtes obligatoires.
 
 ## Création d’une configuration de serveur de destination {#create}
 
-Vous pouvez créer une configuration de serveur de destination en effectuant une `POST` à la fonction `/authoring/destination-servers` point de terminaison .
+Vous pouvez créer une configuration de serveur de destination en effectuant une requête `POST` au point d’entrée `/authoring/destination-servers`.
 
 >[!TIP]
 >
@@ -44,19 +44,19 @@ Vous pouvez créer une configuration de serveur de destination en effectuant une
 POST /authoring/destination-servers
 ```
 
-Selon le type de destination que vous créez, vous devez configurer un type de serveur de destination légèrement différent. Consultez les onglets ci-dessous des exemples de serveurs de destination pour chaque type de destination pris en charge dans Destination SDK.
+Selon le type de destination que vous créez, vous devez configurer un type de serveur de destination légèrement différent. Consultez dans les onglets ci-dessous des exemples de serveurs de destination pour chaque type de destination pris en charge dans Destination SDK.
 
-Les exemples de payloads ci-dessous incluent tous les paramètres pris en charge par chaque type de serveur de destination. Vous n’avez pas besoin d’inclure tous les paramètres dans votre requête. La payload peut être personnalisée en fonction de vos besoins.
+Les exemples de payloads ci-dessous incluent tous les paramètres pris en charge par chaque type de serveur de destination. Il n’est pas nécessaire d’inclure tous les paramètres dans votre requête. La payload peut être personnalisée en fonction de vos besoins.
 
-Sélectionnez chaque onglet ci-dessous pour afficher les requêtes API correspondantes.
+Sélectionnez chaque onglet ci-dessous pour afficher la requête d’API correspondante.
 
 >[!BEGINTABS]
 
->[!TAB Temps réel (diffusion en continu)]
+>[!TAB Temps réel (streaming)]
 
-**Création d’un serveur de destination en temps réel (diffusion en continu)**
+**Création d’un serveur de destination en temps réel (streaming)**
 
-Vous devez créer un serveur de destination en temps réel (flux) similaire à celui illustré ci-dessous lorsque vous configurez une intégration basée sur l’API (flux) en temps réel.
+Vous devez créer un serveur de destination en temps réel (streaming) similaire à celui illustré ci-dessous quand vous configurez une intégration basée sur l’API (streaming) en temps réel.
 
 +++Requête
 
@@ -91,12 +91,12 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | Paramètre | Type | Description |
 | -------- | ----------- | ----------- |
 | `name` | Chaîne | *Obligatoire.* Représente le nom convivial de votre serveur, visible uniquement par Adobe. Ce nom n’est pas visible pour les partenaires ou les clients. Par exemple, `Moviestar destination server`. |
-| `destinationServerType` | Chaîne | *Obligatoire.* Définissez sur . `URL_BASED` pour les destinations en temps réel (diffusion en continu). |
-| `urlBasedDestination.url.templatingStrategy` | Chaîne | *Obligatoire.* <ul><li>Utilisez `PEBBLE_V1` si Adobe doit transformer l’URL dans le champ `value` ci-dessous. Utilisez cette option si vous disposez d’un point de fin comme `https://api.moviestar.com/data/{{customerData.region}}/items`, où la variable `region` peut différer d’un client à l’autre. Dans ce cas, vous devez également configurer `region` as a [champ de données client](../../functionality/destination-configuration/customer-data-fields.md) dans le [configuration de destination](../destination-configuration/create-destination-configuration.md). </li><li> Utilisez `NONE` si aucune transformation n’est nécessaire du côté d’Adobe, par exemple si vous avez un point d’entrée tel que : `https://api.moviestar.com/data/items`.</li></ul> |
+| `destinationServerType` | Chaîne | *Obligatoire.* Définissez-le sur `URL_BASED` quand les destinations sont diffusées en temps réel (streaming). |
+| `urlBasedDestination.url.templatingStrategy` | Chaîne | *Obligatoire.* <ul><li>Utilisez `PEBBLE_V1` si Adobe doit transformer l’URL dans le champ `value` ci-dessous. Utilisez cette option si vous disposez d’un point d’entrée tel que `https://api.moviestar.com/data/{{customerData.region}}/items`, où la partie `region` peut différer d’une personne à l’autre. Dans ce cas, vous devez également configurer `region` en tant que [champ de données client](../../functionality/destination-configuration/customer-data-fields.md) dans la [configuration de destination](../destination-configuration/create-destination-configuration.md). </li><li> Utilisez `NONE` si aucune transformation n’est nécessaire du côté d’Adobe, par exemple si vous avez un point d’entrée tel que : `https://api.moviestar.com/data/items`.</li></ul> |
 | `urlBasedDestination.url.value` | Chaîne | *Obligatoire.* Renseignez l’adresse du point d’entrée d’API auquel Experience Platform doit se connecter. |
 | `httpTemplate.httpMethod` | Chaîne | *Obligatoire.* Méthode qu’Adobe utilise dans les appels vers votre serveur. Les options sont les suivantes : `GET`, `PUT`, `POST`, `DELETE` ou `PATCH`. |
 | `httpTemplate.requestBody.templatingStrategy` | Chaîne | *Obligatoire.* Utilisez `PEBBLE_V1`. |
-| `httpTemplate.requestBody.value` | Chaîne | *Obligatoire.* Cette chaîne est la version avec échappement par des caractères qui transforme les données des clients Platform au format attendu par votre service. <br> <ul><li> Pour plus d’informations sur l’écriture du modèle, lisez la section [Utilisation des modèles](../../functionality/destination-server/message-format.md#using-templating). </li><li> Pour plus d’informations sur l’échappement des caractères, reportez-vous à la section [Norme RFC JSON, section 7](https://tools.ietf.org/html/rfc8259#section-7). </li><li> Pour un exemple de transformation simple, reportez-vous à la transformation [Attributs de profil](../../functionality/destination-server/message-format.md#attributes). </li></ul> |
+| `httpTemplate.requestBody.value` | Chaîne | *Obligatoire.* Cette chaîne est la version avec caractères d’échappement qui transforme les données des clients Platform au format attendu par votre service. <br> <ul><li> Pour plus d’informations sur l’écriture du modèle, lisez la section [Utilisation des modèles](../../functionality/destination-server/message-format.md#using-templating). </li><li> Pour plus d’informations sur l’échappement des caractères, reportez-vous à la section [Norme RFC JSON, section 7](https://tools.ietf.org/html/rfc8259#section-7). </li><li> Pour obtenir un exemple de transformation simple, consultez la transformation des [attributs de profil](../../functionality/destination-server/message-format.md#attributes). </li></ul> |
 | `httpTemplate.contentType` | Chaîne | *Obligatoire.* Type de contenu que votre serveur accepte. Cette valeur est probablement `application/json`. |
 
 {style="table-layout:auto"}
@@ -105,15 +105,15 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 +++Réponse
 
-Une réponse réussie renvoie un état HTTP 200 avec les détails de la configuration du serveur de destination que vous venez de créer.
+Une réponse réussie renvoie le statut HTTP 200 avec les détails de la configuration du serveur de destination que vous venez de créer.
 
 +++
 
->[!TAB Amazon S3]
+>[!TAB Amazon S3]
 
-**Création d’un serveur de destination Amazon S3**
+**Création d’un serveur de destination Amazon S3**
 
-Vous devez créer une [!DNL Amazon S3] serveur de destination similaire à celui illustré ci-dessous lors de la configuration d’un serveur basé sur des fichiers [!DNL Amazon S3] destination.
+Vous devez créer un serveur de destination [!DNL Amazon S3] similaire à celui illustré ci-dessous au moment de la configuration d’une destination [!DNL Amazon S3] basée sur des fichiers.
 
 +++Requête
 
@@ -209,7 +209,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `fileBasedS3Destination.bucket.value` | Chaîne | Nom de l’intervalle [!DNL Amazon S3] à utiliser par cette destination. |
 | `fileBasedS3Destination.path.templatingStrategy` | Chaîne | *Obligatoire.* Utilisez `PEBBLE_V1`. |
 | `fileBasedS3Destination.path.value` | Chaîne | Chemin d’accès au dossier de destination qui hébergera les fichiers exportés. |
-| `fileConfigurations` | S/O | Voir [configuration du formatage de fichier](../../functionality/destination-server/file-formatting.md) pour obtenir des informations détaillées sur la configuration de ces paramètres. |
+| `fileConfigurations` | S/O | Pour en savoir plus sur la manière de configurer ces paramètres, consultez la [configuration du formatage de fichier](../../functionality/destination-server/file-formatting.md). |
 
 {style="table-layout:auto"}
 
@@ -217,15 +217,15 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 +++Réponse
 
-Une réponse réussie renvoie un état HTTP 200 avec les détails de la configuration du serveur de destination que vous venez de créer.
+Une réponse réussie renvoie le statut HTTP 200 avec les détails de la configuration du serveur de destination que vous venez de créer.
 
 +++
 
 >[!TAB SFTP]
 
-**Créez un [!DNL SFTP] serveur de destination**
+**Création d’un serveur de destination [!DNL SFTP]**
 
-Vous devez créer une [!DNL SFTP] serveur de destination similaire à celui illustré ci-dessous lors de la configuration d’un serveur basé sur des fichiers [!DNL SFTP] destination.
+Vous devez créer un serveur de destination [!DNL SFTP] similaire à celui illustré ci-dessous au moment de la configuration d’une destination [!DNL SFTP] basée sur des fichiers.
 
 +++Requête
 
@@ -321,7 +321,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `fileBasedSftpDestination.hostName.value` | Chaîne | Nom d’hôte de lʼespace de stockage de destination. |
 | `port` | Nombre entier | Port du serveur de fichiers SFTP. |
 | `encryptionMode` | Chaîne | Indique s’il faut utiliser le chiffrement de fichier. Valeurs prises en charge : <ul><li>PGP</li><li>Aucun</li></ul> |
-| `fileConfigurations` | S/O | Voir [configuration du formatage de fichier](../../functionality/destination-server/file-formatting.md) pour obtenir des informations détaillées sur la configuration de ces paramètres. |
+| `fileConfigurations` | S/O | Pour en savoir plus sur la manière de configurer ces paramètres, consultez la [configuration du formatage de fichier](../../functionality/destination-server/file-formatting.md). |
 
 {style="table-layout:auto"}
 
@@ -329,15 +329,15 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 +++Réponse
 
-Une réponse réussie renvoie un état HTTP 200 avec les détails de la configuration du serveur de destination que vous venez de créer.
+Une réponse réussie renvoie le statut HTTP 200 avec les détails de la configuration du serveur de destination que vous venez de créer.
 
 +++
 
->[!TAB Stockage du lac de données Azure]
+>[!TAB Azure Data Lake Storage]
 
-**Créez un [!DNL Azure Data Lake Storage] serveur de destination**
+**Création d’un serveur de destination [!DNL Azure Data Lake Storage]**
 
-Vous devez créer une [!DNL Azure Data Lake Storage] serveur de destination similaire à celui illustré ci-dessous lors de la configuration d’un serveur basé sur des fichiers [!DNL Azure Data Lake Storage] destination.
+Vous devez créer un serveur de destination [!DNL Azure Data Lake Storage] similaire à celui illustré ci-dessous au moment de la configuration d’une destination [!DNL Azure Data Lake Storage] basée sur des fichiers.
 
 +++Requête
 
@@ -427,7 +427,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `destinationServerType` | Chaîne | Définissez cette valeur en fonction de votre plateforme de destination. Pour les destinations [!DNL Azure Data Lake Storage], définissez ce paramètre sur `FILE_BASED_ADLS_GEN2`. |
 | `fileBasedAdlsGen2Destination.path.templatingStrategy` | Chaîne | *Obligatoire.* Utilisez `PEBBLE_V1`. |
 | `fileBasedAdlsGen2Destination.path.value` | Chaîne | Chemin d’accès au dossier de destination qui hébergera les fichiers exportés. |
-| `fileConfigurations` | S/O | Voir [configuration du formatage de fichier](../../functionality/destination-server/file-formatting.md) pour obtenir des informations détaillées sur la configuration de ces paramètres. |
+| `fileConfigurations` | S/O | Pour en savoir plus sur la manière de configurer ces paramètres, consultez la [configuration du formatage de fichier](../../functionality/destination-server/file-formatting.md). |
 
 {style="table-layout:auto"}
 
@@ -435,15 +435,15 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 +++Réponse
 
-Une réponse réussie renvoie un état HTTP 200 avec les détails de la configuration du serveur de destination que vous venez de créer.
+Une réponse réussie renvoie le statut HTTP 200 avec les détails de la configuration du serveur de destination que vous venez de créer.
 
 +++
 
 >[!TAB Stockage Azure Blob]
 
-**Créez un [!DNL Azure Blob Storage] serveur de destination**
+**Création d’un serveur de destination [!DNL Azure Blob Storage]**
 
-Vous devez créer une [!DNL Azure Blob Storage] serveur de destination similaire à celui illustré ci-dessous lors de la configuration d’un serveur basé sur des fichiers [!DNL Azure Blob Storage] destination.
+Vous devez créer un serveur de destination [!DNL Azure Blob Storage] similaire à celui illustré ci-dessous au moment de la configuration d’une destination [!DNL Azure Blob Storage] basée sur des fichiers.
 
 +++Requête
 
@@ -539,7 +539,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `fileBasedAzureBlobDestination.path.value` | Chaîne | Chemin d’accès au dossier de destination qui hébergera les fichiers exportés. |
 | `fileBasedAzureBlobDestination.container.templatingStrategy` | Chaîne | *Obligatoire.* Utilisez `PEBBLE_V1`. |
 | `fileBasedAzureBlobDestination.container.value` | Chaîne | Nom du conteneur [!DNL Azure Blob Storage] à utiliser par cette destination. |
-| `fileConfigurations` | S/O | Voir [configuration du formatage de fichier](../../functionality/destination-server/file-formatting.md) pour obtenir des informations détaillées sur la configuration de ces paramètres. |
+| `fileConfigurations` | S/O | Pour en savoir plus sur la manière de configurer ces paramètres, consultez la [configuration du formatage de fichier](../../functionality/destination-server/file-formatting.md). |
 
 {style="table-layout:auto"}
 
@@ -547,15 +547,15 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 +++Réponse
 
-Une réponse réussie renvoie un état HTTP 200 avec les détails de la configuration du serveur de destination que vous venez de créer.
+Une réponse réussie renvoie le statut HTTP 200 avec les détails de la configuration du serveur de destination que vous venez de créer.
 
 +++
 
 >[!TAB Zone d’entrée des données (DLZ)]
 
-**Créez un [!DNL Data Landing Zone (DLZ)] serveur de destination**
+**Création d’un serveur de destination [!DNL Data Landing Zone (DLZ)]**
 
-Vous devez créer une [!DNL Data Landing Zone (DLZ)] serveur de destination similaire à celui illustré ci-dessous lors de la configuration d’un serveur basé sur des fichiers [!DNL Data Landing Zone (DLZ)] destination.
+Vous devez créer un serveur de destination [!DNL Data Landing Zone (DLZ)] similaire à celui illustré ci-dessous au moment de la configuration d’une destination [!DNL Data Landing Zone (DLZ)] basée sur des fichiers.
 
 +++Requête
 
@@ -646,7 +646,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `destinationServerType` | Chaîne | Définissez cette valeur en fonction de votre plateforme de destination. Pour les destinations [!DNL Data Landing Zone], définissez ce paramètre sur `FILE_BASED_DLZ`. |
 | `fileBasedDlzDestination.path.templatingStrategy` | Chaîne | *Obligatoire.*  Utilisez `PEBBLE_V1`. |
 | `fileBasedDlzDestination.path.value` | Chaîne | Chemin d’accès au dossier de destination qui hébergera les fichiers exportés. |
-| `fileConfigurations` | S/O | Voir [configuration du formatage de fichier](../../functionality/destination-server/file-formatting.md) pour obtenir des informations détaillées sur la configuration de ces paramètres. |
+| `fileConfigurations` | S/O | Pour en savoir plus sur la manière de configurer ces paramètres, consultez la [configuration du formatage de fichier](../../functionality/destination-server/file-formatting.md). |
 
 {style="table-layout:auto"}
 
@@ -654,15 +654,15 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 +++Réponse
 
-Une réponse réussie renvoie un état HTTP 200 avec les détails de la configuration du serveur de destination que vous venez de créer.
+Une réponse réussie renvoie le statut HTTP 200 avec les détails de la configuration du serveur de destination que vous venez de créer.
 
 +++
 
 >[!TAB Google Cloud Storage]
 
-**Créez un [!DNL Google Cloud Storage] serveur de destination**
+**Création d’un serveur de destination [!DNL Google Cloud Storage]**
 
-Vous devez créer une [!DNL Google Cloud Storage] serveur de destination similaire à celui illustré ci-dessous lors de la configuration d’un serveur basé sur des fichiers [!DNL Google Cloud Storage] destination.
+Vous devez créer un serveur de destination [!DNL Google Cloud Storage] similaire à celui illustré ci-dessous au moment de la configuration d’une destination [!DNL Google Cloud Storage] basée sur des fichiers.
 
 +++Requête
 
@@ -758,7 +758,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `fileBasedGoogleCloudStorageDestination.bucket.value` | Chaîne | Nom de l’intervalle [!DNL Google Cloud Storage] à utiliser par cette destination. |
 | `fileBasedGoogleCloudStorageDestination.path.templatingStrategy` | Chaîne | *Obligatoire.* Utilisez `PEBBLE_V1`. |
 | `fileBasedGoogleCloudStorageDestination.path.value` | Chaîne | Chemin d’accès au dossier de destination qui hébergera les fichiers exportés. |
-| `fileConfigurations` | S/O | Voir [configuration du formatage de fichier](../../functionality/destination-server/file-formatting.md) pour obtenir des informations détaillées sur la configuration de ces paramètres. |
+| `fileConfigurations` | S/O | Pour en savoir plus sur la manière de configurer ces paramètres, consultez la [configuration du formatage de fichier](../../functionality/destination-server/file-formatting.md). |
 
 {style="table-layout:auto"}
 
@@ -766,15 +766,15 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 +++Réponse
 
-Une réponse réussie renvoie un état HTTP 200 avec les détails de la configuration du serveur de destination que vous venez de créer.
+Une réponse réussie renvoie le statut HTTP 200 avec les détails de la configuration du serveur de destination que vous venez de créer.
 
 +++
 
->[!TAB Serveur de schémas dynamique]
+>[!TAB Serveur de schéma dynamique]
 
 **Création d’un serveur de schéma dynamique**
 
-Vous devez créer un serveur de schéma dynamique similaire à celui illustré ci-dessous lorsque vous configurez une destination qui récupère son schéma de profil de votre propre point d’entrée API. Contrairement à un schéma statique, un schéma dynamique n’utilise pas une `profileFields` tableau. Au lieu de cela, les schémas dynamiques utilisent un serveur de schéma dynamique qui se connecte à votre propre API à partir de laquelle il récupère la configuration du schéma.
+Vous devez créer un serveur de schéma dynamique similaire à celui illustré ci-dessous quand vous configurez une destination qui récupère son schéma de profil à partir de votre propre point d’entrée de l’API. Contrairement à un schéma statique, un schéma dynamique n’utilise pas de tableau `profileFields`, mais un serveur de schéma dynamique qui se connecte à votre propre API à partir de laquelle il récupère la configuration du schéma.
 
 +++Requête
 
@@ -810,13 +810,13 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 | Paramètre | Type | Description |
 | -------- | ----------- | ----------- |
-| `name` | Chaîne | *Obligatoire.* Représente un nom convivial de votre serveur de schéma dynamique, visible uniquement par Adobe. |
-| `destinationServerType` | Chaîne | *Obligatoire.* Définissez sur . `URL_BASED` pour les serveurs de schéma dynamique. |
+| `name` | Chaîne | *Obligatoire.* Représente le nom convivial du serveur de votre schéma dynamique, visible uniquement par Adobe. |
+| `destinationServerType` | Chaîne | *Obligatoire.* Définissez-le sur `URL_BASED` quand les serveurs de schéma sont dynamiques. |
 | `urlBasedDestination.url.templatingStrategy` | Chaîne | *Obligatoire.* <ul><li>Utilisez `PEBBLE_V1` si Adobe doit transformer l’URL dans le champ `value` ci-dessous. Utilisez cette option si vous disposez d’un point d’entrée tel que : `https://api.moviestar.com/data/{{customerData.region}}/items`. </li><li> Utilisez `NONE` si aucune transformation n’est nécessaire du côté d’Adobe, par exemple si vous avez un point d’entrée tel que : `https://api.moviestar.com/data/items`.</li></ul> |
-| `urlBasedDestination.url.value` | Chaîne | *Obligatoire.* Renseignez l’adresse du point de terminaison de l’API auquel l’Experience Platform doit se connecter et récupérez les champs de schéma à renseigner en tant que champs cibles dans l’étape de mappage du workflow d’activation. |
-| `httpTemplate.httpMethod` | Chaîne | *Obligatoire.* Méthode qu’Adobe utilise dans les appels vers votre serveur. Pour les serveurs de schéma dynamiques, utilisez `GET`. |
+| `urlBasedDestination.url.value` | Chaîne | *Obligatoire.* Renseignez l’adresse du point d’entrée de l’API auquel Experience Platform doit se connecter et récupérez les champs de schéma à remplir en tant que champs cibles dans l’étape de mappage du workflow d’activation. |
+| `httpTemplate.httpMethod` | Chaîne | *Obligatoire.* Méthode qu’Adobe utilise dans les appels vers votre serveur. Quand les serveurs de schéma sont dynamiques, utilisez `GET`. |
 | `responseFields.templatingStrategy` | Chaîne | *Obligatoire.* Utilisez `PEBBLE_V1`. |
-| `responseFields.value` | Chaîne | *Obligatoire.* Cette chaîne est le modèle de transformation avec séquence d’échappement des caractères qui transforme la réponse reçue de l’API du partenaire en schéma de partenaire qui s’affichera dans l’interface utilisateur de Platform. <br> <ul><li> Pour plus d’informations sur l’écriture du modèle, lisez la section [Utilisation des modèles](../../functionality/destination-server/message-format.md#using-templating). </li><li> Pour plus d’informations sur l’échappement des caractères, reportez-vous à la section [Norme RFC JSON, section 7](https://tools.ietf.org/html/rfc8259#section-7). </li><li> Pour un exemple de transformation simple, reportez-vous à la transformation [Attributs de profil](../../functionality/destination-server/message-format.md#attributes). </li></ul> |
+| `responseFields.value` | Chaîne | *Obligatoire.* Cette chaîne est le modèle de transformation de caractères d’échappement transformant la réponse reçue de l’API du partenaire en schéma du partenaire qui s’affichera dans l’interface utilisateur de Platform. <br> <ul><li> Pour plus d’informations sur l’écriture du modèle, lisez la section [Utilisation des modèles](../../functionality/destination-server/message-format.md#using-templating). </li><li> Pour plus d’informations sur l’échappement des caractères, reportez-vous à la section [Norme RFC JSON, section 7](https://tools.ietf.org/html/rfc8259#section-7). </li><li> Pour obtenir un exemple de transformation simple, consultez la transformation des [attributs de profil](../../functionality/destination-server/message-format.md#attributes). </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -824,7 +824,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 +++Réponse
 
-Une réponse réussie renvoie un état HTTP 200 avec les détails de la configuration du serveur de destination que vous venez de créer.
+Une réponse réussie renvoie le statut HTTP 200 avec les détails de la configuration du serveur de destination que vous venez de créer.
 
 +++
 
@@ -836,15 +836,15 @@ Les points d’entrée de l’API Destination SDK suivent les principes généra
 
 ## Étapes suivantes {#next-steps}
 
-Après avoir lu ce document, vous savez maintenant comment créer un serveur de destination par le biais de la Destination SDK `/authoring/destination-servers` Point d’entrée de l’API.
+Vous êtes arrivé au bout de ce document. À présent, vous savez comment créer un serveur de destination avec le point d’entrée `/authoring/destination-servers` Destination SDK de l’API.
 
-Pour en savoir plus sur ce que vous pouvez faire avec ce point de terminaison, consultez les articles suivants :
+Pour en savoir plus sur les fonctionnalités offertes par ce point d’entrée, consultez les articles suivants :
 
-* [Récupération de la configuration d’un serveur de destination](retrieve-destination-server.md)
-* [Mise à jour de la configuration d’un serveur de destination](update-destination-server.md)
+* [Récupération d’une configuration de serveur de destination](retrieve-destination-server.md)
+* [Mise à jour d’une configuration de serveur de destination](update-destination-server.md)
 * [Suppression d’une configuration de serveur de destination](delete-destination-server.md)
 
-Pour comprendre où ce point de terminaison correspond au processus de création de destination, consultez les articles suivants :
+Pour comprendre la place de ce point d’entrée dans le processus de création de destinations, consultez les articles suivants :
 
-* [Utiliser Destination SDK pour configurer une destination de diffusion en continu](../../guides/configure-destination-instructions.md#create-server-template-configuration)
-* [Utiliser Destination SDK pour configurer une destination basée sur des fichiers](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration)
+* [Utiliser Destination SDK pour configurer une destination de diffusion en streaming](../../guides/configure-destination-instructions.md#create-server-template-configuration)
+* [Utilisation de Destination SDK pour configurer une destination basée sur des fichiers](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration)

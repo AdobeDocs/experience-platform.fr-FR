@@ -1,19 +1,19 @@
 ---
-description: Cette page illustre l’appel API utilisé pour récupérer une configuration de serveur de destination via Adobe Experience Platform Destination SDK.
-title: Récupération de la configuration d’un serveur de destination
+description: Cette page illustre comment l’appel API est utilisé pour récupérer une configuration de serveur de destination avec Adobe Experience Platform Destination SDK.
+title: Récupération d’une configuration de serveur de destination
 source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
 workflow-type: tm+mt
 source-wordcount: '464'
-ht-degree: 23%
+ht-degree: 100%
 
 ---
 
 
-# Récupération de la configuration d’un serveur de destination
+# Récupération d’une configuration de serveur de destination
 
-Cette page illustre la requête d’API et la charge utile que vous pouvez utiliser pour récupérer des informations sur une configuration de serveur de destination existante à l’aide de la variable `/authoring/destination-servers` Point d’entrée de l’API.
+Cette page illustre la requête d’API et la payload que vous pouvez utiliser pour récupérer les informations relatives à une configuration de serveur de destination existante à l’aide du point d’entrée `/authoring/destination-servers` de l’API.
 
-Pour une description détaillée des fonctionnalités utilisées par les serveurs de destination, lisez les articles suivants :
+Pour une description détaillée des fonctionnalités utilisées par les serveurs de destination, consultez les articles suivants :
 
 * [Spécifications de serveur pour les destinations créées avec Destination SDK](../../../destination-sdk/functionality/destination-server/server-specs.md)
 * [Spécifications de modèle pour les destinations créées avec Destination SDK](../../../destination-sdk/functionality/destination-server/templating-specs.md)
@@ -22,15 +22,15 @@ Pour une description détaillée des fonctionnalités utilisées par les serveur
 
 >[!IMPORTANT]
 >
->Tous les noms et valeurs de paramètre pris en charge par Destination SDK sont **respect de la casse**. Pour éviter les erreurs de respect de la casse, veuillez utiliser les noms et valeurs des paramètres exactement comme indiqué dans la documentation.
+>Tous les noms et toutes les valeurs de paramètre pris en charge par Destination SDK **sont sensibles à la casse**. Pour éviter les erreurs de respect de la casse, utilisez les noms et valeurs des paramètres exactement comme indiqué dans la documentation.
 
 ## Prise en main des opérations de l’API du serveur de destination {#get-started}
 
-Avant de poursuivre, veuillez consulter la section [Guide de prise en main](../../getting-started.md) pour obtenir des informations importantes à connaître afin d’effectuer avec succès des appels vers l’API, notamment sur la manière d’obtenir l’autorisation de création de destination requise et les en-têtes requis.
+Avant de poursuivre, consultez le [guide de prise en main](../../getting-started.md) pour obtenir des informations importantes à connaître avant d’effectuer des appels vers l’API, notamment sur la manière d’obtenir l’autorisation de création de la destination et les en-têtes obligatoires.
 
-## Récupération de la configuration d’un serveur de destination {#retrieve}
+## Récupération d’une configuration de serveur de destination {#retrieve}
 
-Vous pouvez récupérer une configuration de serveur de destination existante en effectuant une `GET` à la fonction `/authoring/destination-servers` point de terminaison .
+Vous pouvez récupérer une configuration de serveur de destination existante en effectuant une requête `GET` au point dʼentrée `/authoring/destination-servers`.
 
 >[!TIP]
 >
@@ -44,21 +44,21 @@ Utilisez le format d’API suivant pour récupérer toutes les configurations de
 GET /authoring/destination-servers
 ```
 
-Utilisez le format d’API suivant pour récupérer une configuration de serveur de destination spécifique, définie par la variable `{INSTANCE_ID}` .
+Utilisez le format d’API suivant pour récupérer une configuration de serveur de destination spécifique, définie par le paramètre `{INSTANCE_ID}`.
 
 ```http
 GET /authoring/destination-servers/{INSTANCE_ID}
 ```
 
-Les deux requêtes suivantes récupèrent toutes les configurations de serveur de destination pour votre organisation IMS, ou une configuration de serveur de destination spécifique, selon que vous transmettez ou non la variable `INSTANCE_ID` dans la requête.
+Les deux requêtes suivantes récupèrent toutes les configurations de serveur de destination pour votre organisation IMS ou une configuration de serveur de destination spécifique, selon que vous transmettez ou non le paramètre `INSTANCE_ID` dans la requête.
 
-Sélectionnez chaque onglet ci-dessous pour afficher la payload correspondante et leurs réponses.
+Sélectionnez chaque onglet ci-dessous pour afficher la payload et leurs réponses correspondantes.
 
 >[!BEGINTABS]
 
->[!TAB Récupération de toutes les configurations de serveur de destination]
+>[!TAB Récupération de configurations de serveur de destination]
 
-La requête suivante récupère la liste des configurations de serveur de destination auxquelles vous avez accès, en fonction des [!DNL IMS Org ID] et la configuration des environnements de test.
+La requête suivante récupère la liste des configurations de serveur de destination auxquelles vous avez accès en fonction de [!DNL IMS Org ID] et de la configuration du sandbox.
 
 +++Requête
 
@@ -74,7 +74,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 +++Réponse
 
-Une réponse réussie renvoie un état HTTP 200 avec une liste des configurations de serveur de destination auxquelles vous avez accès, en fonction de la variable [!DNL IMS Org ID] et le nom de l’environnement de test que vous avez utilisé. One `instanceId` correspond à un serveur de destination. L’exemple de réponse ci-dessous comprend deux configurations de serveur de destination.
+Une réponse réussie renvoie le statut HTTP 200 avec une liste de configuration de serveur de destination auxquels vous avez accès en fonction de [!DNL IMS Org ID] et du nom du sandbox que vous avez utilisé. Un `instanceId` correspond à un serveur de destination. L’exemple de réponse ci-dessous comprend deux configurations de serveur de destination.
 
 ```json
 {
@@ -151,9 +151,9 @@ Une réponse réussie renvoie un état HTTP 200 avec une liste des configuration
 
 +++
 
->[!TAB Récupérer une configuration de serveur de destination spécifique]
+>[!TAB Récupération d’une configuration de serveur de destination spécifique]
 
-La requête suivante récupère des configurations de serveur de destination spécifiques définies par `{INSTANCE_ID}` .
+La requête suivante récupère des configurations de serveur de destination spécifiques définies par le paramètre `{INSTANCE_ID}`.
 
 +++Requête
 
@@ -173,7 +173,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 +++Réponse
 
-Une réponse réussie renvoie un état HTTP 200 avec la configuration du serveur de destination correspondant à la variable `{INSTANCE_ID}` tu as fourni.
+Une réponse réussie renvoie le statut HTTP 200 avec la configuration du serveur de destination correspondant à l’identifiant `{INSTANCE_ID}` que vous avez fourni pendant l’appel.
 
 ```json
 {
@@ -225,10 +225,10 @@ Les points d’entrée de l’API Destination SDK suivent les principes généra
 
 ## Étapes suivantes {#next-steps}
 
-Après avoir lu ce document, vous savez maintenant comment récupérer une configuration de serveur de destination via la Destination SDK `/authoring/destination-servers` Point d’entrée de l’API.
+Vous êtes arrivé au bout de ce document. À présent, vous savez comment récupérer une configuration de serveur de destination avec le point d’entrée `/authoring/destination-servers` Destination SDK de l’API.
 
-Pour en savoir plus sur ce que vous pouvez faire avec ce point de terminaison, consultez les articles suivants :
+Pour en savoir plus sur les fonctionnalités offertes par ce point d’entrée, consultez les articles suivants :
 
 * [Création d’une configuration de serveur de destination](create-destination-server.md)
-* [Mise à jour de la configuration d’un serveur de destination](update-destination-server.md)
+* [Mise à jour d’une configuration de serveur de destination](update-destination-server.md)
 * [Suppression d’une configuration de serveur de destination](delete-destination-server.md)

@@ -1,10 +1,10 @@
 ---
-description: Cette page illustre l’appel API utilisé pour supprimer un modèle d’audience existant par le biais de l’Adobe Experience Platform Destination SDK.
+description: Cette page illustre comment l’appel API est utilisé pour supprimer un modèle d’audience existant avec Adobe Experience Platform Destination SDK.
 title: Suppression d’un modèle d’audience
 source-git-commit: 9e1ae44f83b886f0b5dd5a9fc9cd9b7db6154ff0
 workflow-type: tm+mt
 source-wordcount: '287'
-ht-degree: 42%
+ht-degree: 100%
 
 ---
 
@@ -15,23 +15,23 @@ ht-degree: 42%
 >
 >**Point d’entrée de l’API** : `platform.adobe.io/data/core/activation/authoring/audience-templates`
 
-Cette page illustre la requête d’API et la charge utile que vous pouvez utiliser pour supprimer un modèle d’audience, en utilisant la variable `/authoring/audience-templates` Point d’entrée de l’API.
+Cette page illustre la requête d’API et la payload que vous pouvez utiliser pour supprimer un modèle d’audience à l’aide du point d’entrée de l’API `/authoring/audience-templates`.
 
-Pour une description détaillée des fonctionnalités que vous pouvez configurer via ce point de terminaison, voir [gestion des métadonnées d’audience](../functionality/audience-metadata-management.md).
+Pour obtenir une description détaillée des fonctionnalités configurables avec ce point d’entrée, consultez l’article sur la [gestion des métadonnées d’audience](../functionality/audience-metadata-management.md).
 
 >[!IMPORTANT]
 >
->Tous les noms et valeurs de paramètre pris en charge par Destination SDK sont **respect de la casse**. Pour éviter les erreurs de respect de la casse, veuillez utiliser les noms et valeurs des paramètres exactement comme indiqué dans la documentation.
+>Tous les noms et toutes les valeurs de paramètre pris en charge par Destination SDK **sont sensibles à la casse**. Pour éviter les erreurs de respect de la casse, utilisez les noms et valeurs des paramètres exactement comme indiqué dans la documentation.
 
-## Prise en main des opérations de l’API de modèle d’audience {#get-started}
+## Prise en main des opérations de l’API des modèles d’audience {#get-started}
 
-Avant de poursuivre, consultez le [guide de prise en main](../getting-started.md) pour obtenir des informations importantes à connaître avant d’effectuer des appels vers l’API, notamment sur la manière d’obtenir l’autorisation de création de la destination et les en-têtes requis.
+Avant de poursuivre, consultez le [guide de prise en main](../getting-started.md) pour obtenir des informations importantes à connaître avant d’effectuer des appels vers l’API, notamment sur la manière d’obtenir l’autorisation de création de la destination et les en-têtes obligatoires.
 
 ## Suppression d’un modèle d’audience {#delete}
 
-Vous pouvez supprimer une [existant](create-audience-template.md) modèle d’audience en effectuant une `DELETE` à la fonction `/authoring/audience-templates` point de terminaison avec la fonction `{INSTANCE_ID}`du modèle d’audience que vous souhaitez supprimer.
+Vous pouvez supprimer un modèle d’audience [existant](create-audience-template.md) en effectuant une requête `DELETE` au point d’entrée `/authoring/audience-templates` avec la fonction `{INSTANCE_ID}` du modèle d’audience que vous souhaitez supprimer.
 
-Pour obtenir un modèle d&#39;audience existant et son `{INSTANCE_ID}`, voir l’article sur [récupération d’un modèle d’audience](retrieve-audience-template.md).
+Pour obtenir un modèle d’audience existant et son `{INSTANCE_ID}` correspondant, consultez l’article sur la [récupération d’un modèle d’audience](retrieve-audience-template.md).
 
 **Format d’API**
 
@@ -57,7 +57,7 @@ curl -X DELETE https://platform.adobe.io/data/core/activation/authoring/audience
 
 +++Réponse
 
-Une réponse réussie renvoie un état HTTP 200 avec une réponse HTTP vide.
+Une réponse réussie renvoie le statut HTTP 200 avec une réponse HTTP vide.
 
 +++
 
@@ -67,4 +67,4 @@ Les points d’entrée de l’API Destination SDK suivent les principes généra
 
 ## Étapes suivantes {#next-steps}
 
-Après avoir lu ce document, vous savez maintenant comment supprimer un modèle d’audience à l’aide du `/authoring/audience-templates` Point d’entrée de l’API. Poursuivez votre apprentissage dans la section [Comment utiliser Destination SDK pour configurer votre destination](../guides/configure-destination-instructions.md) et obtenez une vue dʼensemble du processus de configuration de votre destination.
+Vous êtes arrivé au bout de ce document. À présent, vous savez comment supprimer un modèle d’audience à l’aide du point d’entrée `/authoring/audience-templates` de l’API. Consultez la documentation [Comment utiliser Destination SDK pour configurer la destination](../guides/configure-destination-instructions.md) afin de comprendre la place de cette étape dans le processus de configuration de la destination.

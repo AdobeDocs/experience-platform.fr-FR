@@ -1,11 +1,11 @@
 ---
-description: Découvrez comment utiliser l’API de test de destination pour valider la sortie vers votre destination de diffusion en continu, en fonction de votre modèle de transformation de messages.
+description: Découvrez comment utiliser l’API de test de destination pour valider la sortie vers la destination de diffusion en streaming, en fonction de votre modèle de transformation de message.
 title: Validation de la structure de profil exportée
 exl-id: e64ea89e-6064-4a05-9730-e0f7d7a3e1db
 source-git-commit: adf75720f3e13c066b5c244d6749dd0939865a6f
 workflow-type: tm+mt
 source-wordcount: '789'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
@@ -20,7 +20,7 @@ Cette page répertorie toutes les opérations d’API que vous pouvez effectuer 
 
 ## Prise en main des opérations de l’API de modèle de rendu {#get-started}
 
-Avant de poursuivre, consultez le [guide de prise en main](../../getting-started.md), qui contient des informations importantes à connaître avant d’effectuer des appels vers l’API, y compris la façon d’obtenir l’autorisation de création de destination et les en-têtes requis.
+Avant de poursuivre, consultez le [guide de prise en main](../../getting-started.md) pour obtenir des informations importantes à connaître avant d’effectuer des appels vers l’API, notamment sur la manière d’obtenir l’autorisation de création de la destination et les en-têtes obligatoires.
 
 ## Effectuer le rendu des profils exportés en fonction du modèle de transformation des messages {#render-exported-data}
 
@@ -30,8 +30,7 @@ Commencez par utiliser un modèle simple qui exporte vos profils bruts sans appl
 
 >[!TIP]
 >
->* L’identifiant de destination que vous devez utiliser ici est `instanceId`, qui correspond à une configuration de destination, créée à l’aide du point d’entrée `/destinations`. Voir [récupération d’une configuration de destination](../../authoring-api/destination-configuration/retrieve-destination-configuration.md) pour plus d’informations.
-
+>* L’identifiant de destination que vous devez utiliser ici est `instanceId`, qui correspond à une configuration de destination, créée à l’aide du point d’entrée `/destinations`. Pour plus d’informations, consultez la [récupération d’une configuration de destination](../../authoring-api/destination-configuration/retrieve-destination-configuration.md).
 
 **Format d’API**
 
@@ -48,7 +47,7 @@ POST authoring/testing/template/render
 
 {style="table-layout:auto"}
 
-Notez que la réponse renvoyée par le point d’entrée de l’API du modèle de rendu diffère selon la politique d’agrégation de la destination. Si votre destination dispose d’une politique d’agrégation configurable, la clé d’agrégation qui détermine comment les profils sont agrégés est également renvoyée dans la réponse. En savoir plus [stratégies d’agrégation](../../functionality/destination-configuration/aggregation-policy.md) pour plus d’informations.
+Notez que la réponse renvoyée par le point d’entrée de l’API du modèle de rendu diffère selon la politique d’agrégation de la destination. Si votre destination dispose d’une politique d’agrégation configurable, la clé d’agrégation qui détermine comment les profils sont agrégés est également renvoyée dans la réponse. Pour en savoir plus, consultez les [politiques d’agrégation](../../functionality/destination-configuration/aggregation-policy.md).
 
 | Paramètre de réponse | Description |
 | -------- | ----------- |
@@ -1071,4 +1070,4 @@ Les points d’entrée de l’API Destination SDK suivent les principes généra
 
 ## Étapes suivantes {#next-steps}
 
-Vous êtes arrivé au bout de ce document, vous savez désormais comment utiliser le modèle de transformation des messages pour générer des profils exportés correspondant au format de données attendu de votre destination. Lisez [comment utiliser le Destination SDK pour configurer une destination](../../guides/configure-destination-instructions.md) et comprendre où cette étape s’inscrit dans le processus de configuration d’une destination.
+Vous êtes arrivé au bout de ce document, vous savez désormais comment utiliser le modèle de transformation des messages pour générer des profils exportés correspondant au format de données attendu de votre destination. Consultez la documentation [Comment utiliser Destination SDK pour configurer la destination](../../guides/configure-destination-instructions.md) afin de comprendre la place de cette étape dans le processus de configuration de la destination.

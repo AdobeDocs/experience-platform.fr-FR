@@ -1,16 +1,16 @@
 ---
-description: Découvrez comment utiliser l’API de test de destination pour générer des exemples de profils pour votre destination de diffusion en continu, que vous pouvez utiliser dans les tests de destination.
-title: Générer des exemples de profils en fonction d’un schéma source
+description: Découvrez comment utiliser l’API de test de destination pour générer des profils types pour la destination de diffusion en streaming, que vous pouvez utiliser dans les tests de destination.
+title: Génération de profils types en fonction d’un schéma source
 exl-id: 5f1cd00a-8eee-4454-bcae-07b05afa54af
 source-git-commit: 0befd65b91e49cacab67c76fd9ed5d77bf790b9d
 workflow-type: tm+mt
 source-wordcount: '1018'
-ht-degree: 15%
+ht-degree: 100%
 
 ---
 
 
-# Générer des exemples de profils en fonction d’un schéma source {#sample-profile-api-operations}
+# Génération de profils types en fonction d’un schéma source {#sample-profile-api-operations}
 
 >[!IMPORTANT]
 >
@@ -18,39 +18,37 @@ ht-degree: 15%
 
 Cette page répertorie et décrit toutes les opérations de l’API que vous pouvez effectuer à l’aide du point d’entrée de l’API `/authoring/sample-profiles`.
 
-## Génération de différents types de profils pour différentes API {#different-profiles-different-apis}
+## Génération de différents types de profils pour différentes interfaces API {#different-profiles-different-apis}
 
 >[!IMPORTANT]
 >
->Utilisez ce point de terminaison API pour générer des exemples de profils pour deux cas d’utilisation distincts. Vous pouvez effectuer l’une des actions suivantes :
->* générer des profils à utiliser lors de [conception et test d&#39;un modèle de transformation des messages](create-template.md) - en utilisant *ID de destination* comme paramètre de requête.
->* générer des profils à utiliser lors d’appels à [tester si votre destination est correctement configurée ;](streaming-destination-testing-overview.md) - en utilisant *ID d’instance de destination* comme paramètre de requête.
+>Utilisez ce point d’entrée de l’API pour générer des profils types pour deux cas d’utilisation distincts. Vous pouvez effectuer l’une des actions suivantes :
+>* Générer des profils à utiliser au moment de la [conception et du test d’un modèle de transformation des messages](create-template.md), à l’aide de l’*identifiant de destination* comme paramètre de requête.
+>* Générer des profils à utiliser lors d’appels pour [tester si la destination est correctement configurée](streaming-destination-testing-overview.md), à l’aide de l’*identifiant d’instance de destination* comme paramètre de requête.
 
+Vous pouvez générer des profils types en fonction du schéma source XDM d’Adobe (à utiliser au moment du test de la destination) ou du schéma cible pris en charge par la destination (à utiliser lors de la conception de votre modèle). Pour comprendre la différence entre le schéma source XDM d’Adobe et le schéma cible, consultez la section de présentation de l’article [Format de message](../../functionality/destination-server/message-format.md).
 
-Vous pouvez générer des exemples de profils en fonction du schéma source XDM Adobe (à utiliser lors du test de votre destination) ou du schéma cible pris en charge par votre destination (à utiliser lors de la conception de votre modèle). Pour comprendre la différence entre le schéma source XDM d’Adobe et le schéma cible, consultez la section de présentation de la section [Format du message](../../functionality/destination-server/message-format.md) article.
+Notez que les profils types ne peuvent pas être utilisés à d’autres fins. Les profils générés à partir de l’*identifiant de destination* peuvent uniquement être utilisés pour concevoir des modèles et les profils de transformation de messages générés en fonction des *identifiants d’instance de destination* peuvent uniquement être utilisés pour tester le point d’entrée de destination.
 
-Notez que les finalités pour lesquelles les exemples de profils peuvent être utilisés ne sont pas interchangeables. Profils générés à partir de *ID de destination* ne peut être utilisé que pour concevoir vos modèles et profils de transformation de messages générés en fonction des *ID d’instance de destination* ne peut être utilisé que pour tester votre point de terminaison de destination.
+## Prise en main des opérations de l’API de génération de profils types {#get-started}
 
-## Prise en main d’exemples d’opérations de l’API de génération de profil {#get-started}
+Avant de poursuivre, consultez le [guide de prise en main](../../getting-started.md) pour obtenir des informations importantes à connaître avant d’effectuer des appels vers l’API, notamment sur la manière d’obtenir l’autorisation de création de la destination et les en-têtes obligatoires.
 
-Avant de poursuivre, consultez le [guide de prise en main](../../getting-started.md) pour obtenir des informations importantes à connaître avant d’effectuer des appels vers l’API, notamment sur la manière d’obtenir l’autorisation de création de la destination et les en-têtes requis.
-
-## Générer des exemples de profils en fonction du schéma source à utiliser lors du test de votre destination {#generate-sample-profiles-source-schema}
-
->[!IMPORTANT]
->
->Ajoutez les exemples de profils générés ici aux appels HTTP lorsque [test de votre destination](streaming-destination-testing-overview.md).
-
-Vous pouvez générer des exemples de profils en fonction du schéma source en adressant une requête de GET à la variable `authoring/sample-profiles/` point d’entrée et fournissant l’identifiant d’une instance de destination que vous avez créée en fonction de la configuration de destination que vous souhaitez tester.
-
-Pour obtenir l’identifiant d’une instance de destination, vous devez d’abord créer une connexion dans l’interface utilisateur de l’Experience Platform à votre destination avant de tenter de tester votre destination. Lisez le [Tutoriel sur l’activation de la destination](../../../ui/activation-overview.md) et consultez l’astuce ci-dessous pour savoir comment obtenir l’ID d’instance de destination à utiliser pour cette API.
+## Génération de profils types en fonction du schéma source à utiliser lors du test de la destination {#generate-sample-profiles-source-schema}
 
 >[!IMPORTANT]
 >
->* Pour utiliser cette API, vous devez disposer d’une connexion existante à votre destination dans l’interface utilisateur de l’Experience Platform. Lecture [se connecter à la destination](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=fr) et [activation de profils et de segments vers une destination](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en) pour plus d’informations.
-> * Après avoir établi la connexion à votre destination, obtenez l’ID d’instance de destination que vous devez utiliser dans les appels API vers ce point de terminaison lorsque [parcourir une connexion avec votre destination ;](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html?lang=en).
-   >![Image de l’interface utilisateur comment obtenir l’ID d’instance de destination](../../assets/testing-api/get-destination-instance-id.png)
+>Ajoutez les profils types générés ici aux appels HTTP lors du [test de la destination](streaming-destination-testing-overview.md).
 
+Vous pouvez générer des profils types en fonction du schéma source en adressant une requête GET au point d’entrée `authoring/sample-profiles/` avec l’identifiant de l’instance de destination que vous avez créé en fonction de la configuration de destination que vous souhaitez tester.
+
+Pour obtenir l’identifiant d’une instance de destination, vous devez d’abord créer une connexion dans l’interface utilisateur d’Experience Platform vers la destination avant d’essayer de tester la destination. Pour découvrir comment obtenir l’identifiant d’instance de destination à utiliser pour cette API, consultez le [tutoriel sur l’activation de la destination](../../../ui/activation-overview.md) et l’astuce ci-dessous.
+
+>[!IMPORTANT]
+>
+>* Pour utiliser cette API, vous devez disposer d’une connexion existante vers la destination dans l’interface utilisateur d’Experience Platform. Pour plus d’informations, consultez la documentation [Connexion à la destination](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=fr) et [Activation des profils et des segments vers une destination](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=fr).
+> * Après avoir établi la connexion à la destination, obtenez l’identifiant d’instance de destination que vous devez utiliser dans les appels API vers ce point d’entrée pendant la [recherche d’une connexion avec la destination ](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html?lang=fr).
+>![Image de l’interface illustrant comment obtenir l’identifiant d’instance de destination](../../assets/testing-api/get-destination-instance-id.png)
 
 **Format d’API**
 
@@ -60,15 +58,15 @@ GET authoring/sample-profiles?destinationInstanceId={DESTINATION_INSTANCE_ID}&co
 
 | Paramètre de requête | Description |
 | -------- | ----------- |
-| `{DESTINATION_INSTANCE_ID}` | L’identifiant de l’instance de destination sur laquelle vous générez des exemples de profils. |
-| `{COUNT}` | *Facultatif*. Le nombre d’exemples de profils que vous générez. Le paramètre peut prendre des valeurs entre les variables `1 - 1000`. <br> Si le paramètre count n’est pas spécifié, le nombre de profils générés par défaut est déterminé par la variable `maxUsersPerRequest` dans la variable [configuration du serveur de destination](../../authoring-api/destination-server/create-destination-server.md). Si cette propriété n’est pas définie, Adobe génère un exemple de profil. |
+| `{DESTINATION_INSTANCE_ID}` | Identifiant de l’instance de destination en fonction de laquelle vous générez des profils types. |
+| `{COUNT}` | *Facultatif*. Nombre de profils types que vous générez. Le paramètre peut prendre des valeurs entre `1 - 1000`. <br> Si le paramètre de nombre n’est pas spécifié, le nombre de profils générés par défaut est déterminé par la valeur `maxUsersPerRequest` dans la [configuration du serveur de destination](../../authoring-api/destination-server/create-destination-server.md). Si cette propriété n’est pas définie, Adobe génère alors un profil type. |
 
 {style="table-layout:auto"}
 
 
 **Requête**
 
-La requête suivante génère des exemples de profils, configurés par la variable `{DESTINATION_INSTANCE_ID}` et `{COUNT}` paramètres de requête.
+La requête suivante génère des profils types, configurés par les paramètres de requête `{DESTINATION_INSTANCE_ID}` et `{COUNT}`.
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/core/activation/authoring/sample-profiles?destinationInstanceId=49966037-32cd-4457-a105-2cbf9c01826a&count=3' \
@@ -82,11 +80,11 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 
 **Réponse**
 
-Une réponse réussie renvoie un état HTTP 200 avec le nombre spécifié de profils d’exemple, avec l’appartenance au segment, les identités et les attributs de profil qui correspondent au schéma XDM source.
+Une réponse réussie renvoie le statut HTTP 200 avec le nombre spécifié de profils types, avec l’appartenance au segment, les identités et les attributs de profil qui correspondent au schéma XDM source.
 
 >[!TIP]
 >
-> La réponse renvoie uniquement les attributs d’appartenance, d’identité et de profil utilisés dans l’instance de destination. Même si votre schéma source comporte d’autres champs, ceux-ci sont ignorés.
+> La réponse renvoie uniquement les attributs d’appartenance au segment, d’identité et de profil utilisés dans l’instance de destination. Même si votre schéma source comporte d’autres champs, ceux-ci sont ignorés.
 
 ```json
 [
@@ -182,25 +180,24 @@ Une réponse réussie renvoie un état HTTP 200 avec le nombre spécifié de pro
 
 | Propriété | Description |
 | -------- | ----------- |
-| `segmentMembership` | Objet map qui décrit les appartenances aux segments de l’individu. Pour plus d’informations sur `segmentMembership`, lire [Détails de l’adhésion au segment](https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/segmentation.html). |
-| `lastQualificationTime` | Horodatage de la dernière fois que ce profil s’est qualifié pour le segment. |
-| `xdm:status` | Un champ de chaîne qui indique si l’appartenance au segment a été réalisée dans le cadre de la requête actuelle. Les valeurs suivantes sont acceptées : <ul><li>`realized`: Le profil fait partie du segment.</li><li>`exited`: Le profil quitte le segment dans le cadre de la requête actuelle.</li></ul> |
-| `identityMap` | Champ de type map qui décrit les différentes valeurs d’identité d’un individu, ainsi que les espaces de noms qui lui sont associés. Pour plus d’informations sur `identityMap`, lire [Base de la composition des schémas](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=en#identityMap). |
+| `segmentMembership` | Objet map qui décrit les appartenances à un segment de l’individu. Pour plus d’informations sur `segmentMembership`, consultez la documentation [Détails de l’appartenance à un segment](https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/segmentation.html?lang=fr). |
+| `lastQualificationTime` | Date et heure de la dernière qualification de ce profil pour le segment. |
+| `xdm:status` | Un champ de chaîne qui indique si l’appartenance à un segment a été réalisée dans le cadre de la requête actuelle. Les valeurs suivantes sont acceptées : <ul><li>`realized` : le profil fait partie du segment.</li><li>`exited` : le profil quitte le segment dans le cadre de la requête actuelle.</li></ul> |
+| `identityMap` | Champ de type map qui décrit les différentes valeurs d’identité d’un individu, ainsi que les espaces de noms qui lui sont associés. Pour plus d’informations sur `identityMap`, consultez [Base de la composition des schémas](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=fr#identityMap). |
 
 {style="table-layout:auto"}
 
-## Générer des exemples de profils en fonction du schéma cible à utiliser lors de la conception d&#39;un modèle de transformation des messages {#generate-sample-profiles-target-schema}
+## Génération de profils types en fonction du schéma cible à utiliser au moment de la création de votre modèle de transformation de message {#generate-sample-profiles-target-schema}
 
 >[!IMPORTANT]
 >
->Utilisez les exemples de profils générés ici lors de la conception de votre modèle, dans la variable [étape du modèle de rendu](render-template-api.md#multiple-profiles-with-body).
+>Utilisez les profils types générés ici au moment de la conception de votre modèle, dans l’[étape du modèle de rendu](render-template-api.md#multiple-profiles-with-body).
 
-Vous pouvez générer des exemples de profils en fonction du schéma cible en adressant une requête GET à la variable `authoring/sample-profiles/` point de terminaison et fournissant l’identifiant de destination de la configuration de destination selon laquelle vous créez votre modèle.
+Vous pouvez générer des profils types en fonction du schéma cible en adressant une requête GET au point d’entrée `authoring/sample-profiles/` et en fournissant l’identifiant de destination de la configuration de destination à partir de laquelle vous créez votre modèle.
 
 >[!TIP]
 >
->* L’identifiant de destination que vous devez utiliser ici est `instanceId`, qui correspond à une configuration de destination, créée à l’aide du point d’entrée `/destinations`. Voir [récupération d’une configuration de destination](../../authoring-api/destination-configuration/retrieve-destination-configuration.md) pour plus d’informations.
-
+>* L’identifiant de destination que vous devez utiliser ici est `instanceId`, qui correspond à une configuration de destination, créée à l’aide du point d’entrée `/destinations`. Pour plus d’informations, consultez la [récupération d’une configuration de destination](../../authoring-api/destination-configuration/retrieve-destination-configuration.md).
 
 **Format d’API**
 
@@ -211,14 +208,14 @@ GET authoring/sample-profiles?destinationId={DESTINATION_ID}&count={COUNT}
 
 | Paramètre de requête | Description |
 | -------- | ----------- |
-| `{DESTINATION_ID}` | L’identifiant de la configuration de destination sur laquelle vous générez des exemples de profils. |
-| `{COUNT}` | *Facultatif*. Le nombre d’exemples de profils que vous générez. Le paramètre peut prendre des valeurs entre les variables `1 - 1000`. <br> Si le paramètre count n’est pas spécifié, le nombre de profils générés par défaut est déterminé par la variable `maxUsersPerRequest` dans la variable [configuration du serveur de destination](../../authoring-api/destination-server/create-destination-server.md). Si cette propriété n’est pas définie, Adobe génère un exemple de profil. |
+| `{DESTINATION_ID}` | Identifiant de la configuration de destination en fonction de laquelle vous générez des profils types. |
+| `{COUNT}` | *Facultatif*. Nombre de profils types que vous générez. Le paramètre peut prendre des valeurs entre `1 - 1000`. <br> Si le paramètre de nombre n’est pas spécifié, le nombre de profils générés par défaut est déterminé par la valeur `maxUsersPerRequest` dans la [configuration du serveur de destination](../../authoring-api/destination-server/create-destination-server.md). Si cette propriété n’est pas définie, Adobe génère alors un profil type. |
 
 {style="table-layout:auto"}
 
 **Requête**
 
-La requête suivante génère des exemples de profils, configurés par la variable `{DESTINATION_ID}` et `{COUNT}` paramètres de requête.
+La requête suivante génère des profils types, configurés par les paramètres de requête `{DESTINATION_ID}` et `{COUNT}`.
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/core/activation/authoring/sample-profiles?destinationId=49966037-32cd-4457-a105-2cbf9c01826a&count=3' \
@@ -232,7 +229,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 
 **Réponse**
 
-Une réponse réussie renvoie un état HTTP 200 avec le nombre spécifié de profils d’exemple, avec l’appartenance au segment, les identités et les attributs de profil qui correspondent au schéma XDM cible.
+Une réponse réussie renvoie le statut HTTP 200 avec le nombre spécifié de profils types, avec l’appartenance au segment, les identités et les attributs de profil qui correspondent au schéma XDM cible.
 
 ```json
 [
@@ -380,4 +377,4 @@ Les points d’entrée de l’API Destination SDK suivent les principes généra
 
 ## Étapes suivantes
 
-Après avoir lu ce document, vous savez maintenant comment générer des profils d’exemple à utiliser lors de la [test d&#39;un modèle de transformation de message](create-template.md) ou [test si votre destination est correctement configurée](streaming-destination-testing-overview.md).
+Vous êtes arrivé au bout de ce document. À présent, vous savez comment générer des profils types à utiliser lors du [test d’un modèle de transformation de message](create-template.md) ou un [test de vérification de la configuration de la destination](streaming-destination-testing-overview.md).

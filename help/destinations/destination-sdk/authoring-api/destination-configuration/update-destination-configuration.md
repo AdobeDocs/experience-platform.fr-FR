@@ -1,26 +1,26 @@
 ---
-description: Cette page illustre l’appel API utilisé pour mettre à jour une configuration de destination existante en Adobe Experience Platform Destination SDK.
+description: Cette page illustre l’appel API utilisé pour mettre à jour une configuration de destination existante avec Adobe Experience Platform Destination SDK.
 title: Mise à jour d’une configuration de destination
 source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
 workflow-type: tm+mt
 source-wordcount: '369'
-ht-degree: 28%
+ht-degree: 100%
 
 ---
 
 
 # Mise à jour d’une configuration de destination
 
-Cette page illustre la requête d’API et la charge utile que vous pouvez utiliser pour mettre à jour une configuration de destination existante, en utilisant la variable `/authoring/destinations` Point d’entrée de l’API.
+Cette page illustre la requête d’API et la payload que vous pouvez utiliser pour mettre à jour une configuration de destination existante à l’aide du point d’entrée `/authoring/destinations` de l’API.
 
 >[!TIP]
 >
->Toute opération de mise à jour sur des destinations productisées/publiques n’est visible qu’après avoir utilisé la variable [API de publication](../../publishing-api/create-publishing-request.md) et envoyer la mise à jour pour la révision des Adobes.
+>Toute opération de mise à jour sur des destinations produites/publiques n’est visible qu’après avoir utilisé l’[API de publication](../../publishing-api/create-publishing-request.md) et envoyé la mise à jour pour révision Adobe.
 
-Pour une description détaillée des fonctionnalités d’une configuration de destination, lisez les articles suivants :
+Pour une description détaillée des fonctionnalités de configuration de la destination, consultez les articles suivants :
 
 * [Configuration de l’authentification du client](../../functionality/destination-configuration/customer-authentication.md)
-* [Authentification OAuth 2](../../functionality/destination-configuration/oauth2-authentication.md)
+* [Authentification OAuth 2](../../functionality/destination-configuration/oauth2-authentication.md)
 * [Champs de données client](../../functionality/destination-configuration/customer-data-fields.md)
 * [Attributs de l’interface utilisateur](../../functionality/destination-configuration/ui-attributes.md)
 * [Configuration du schéma](../../functionality/destination-configuration/schema-configuration.md)
@@ -34,21 +34,21 @@ Pour une description détaillée des fonctionnalités d’une configuration de d
 
 >[!IMPORTANT]
 >
->Tous les noms et valeurs de paramètre pris en charge par Destination SDK sont **respect de la casse**. Pour éviter les erreurs de respect de la casse, veuillez utiliser les noms et valeurs des paramètres exactement comme indiqué dans la documentation.
+>Tous les noms et toutes les valeurs de paramètre pris en charge par Destination SDK **sont sensibles à la casse**. Pour éviter les erreurs de respect de la casse, utilisez les noms et valeurs des paramètres exactement comme indiqué dans la documentation.
 
-## Prise en main des opérations de l’API de configuration de destination {#get-started}
+## Prise en main des opérations dʼAPI de configuration de destinations {#get-started}
 
-Avant de poursuivre, consultez le [guide de prise en main](../../getting-started.md) pour obtenir des informations importantes à connaître avant d’effectuer des appels vers l’API, notamment sur la manière d’obtenir l’autorisation de création de la destination et les en-têtes requis.
+Avant de poursuivre, consultez le [guide de prise en main](../../getting-started.md) pour obtenir des informations importantes à connaître avant d’effectuer des appels vers l’API, notamment sur la manière d’obtenir l’autorisation de création de la destination et les en-têtes obligatoires.
 
 ## Mise à jour d’une configuration de destination {#update}
 
-Vous pouvez mettre à jour une [existant](create-destination-configuration.md) configuration de destination en effectuant une `PUT` à la fonction `/authoring/destinations` point de terminaison avec la payload mise à jour.
+Vous pouvez mettre à jour une configuration de destination [existante](create-destination-configuration.md) en effectuant une requête `PUT` au point d’entrée `/authoring/destinations` avec la payload mise à jour.
 
 >[!TIP]
 >
->Point d’entrée de l’API: `platform.adobe.io/data/core/activation/authoring/destinations`
+>Point d’entrée de l’API : `platform.adobe.io/data/core/activation/authoring/destinations`
 
-Pour obtenir une configuration de destination existante et sa `{INSTANCE_ID}`, voir l’article sur [récupération d’une configuration de destination](retrieve-destination-configuration.md).
+Pour obtenir une configuration de destination existante et son `{INSTANCE_ID}` correspondant, consultez l’article sur la [récupération d’une configuration de destination](retrieve-destination-configuration.md).
 
 **Format d’API**
 
@@ -58,11 +58,11 @@ PUT /authoring/destinations/{INSTANCE_ID}
 
 | Paramètre | Description |
 | -------- | ----------- |
-| `{INSTANCE_ID}` | Identifiant de la configuration de destination à mettre à jour. Pour obtenir une configuration de destination existante et sa `{INSTANCE_ID}`, voir [Récupération d’une configuration de destination](retrieve-destination-configuration.md). |
+| `{INSTANCE_ID}` | Identifiant de la configuration de destination à mettre à jour. Pour obtenir une configuration de destination existante et son `{INSTANCE_ID}` correspondant, consultez la section [Récupération d’une configuration de destination](retrieve-destination-configuration.md). |
 
 +++Requête
 
-La requête suivante met à jour la destination que nous avons créée dans [cet exemple](create-destination-configuration.md#create) avec différent `filenameConfig` options.
+La requête suivante met à jour la destination que nous avons créée dans [cet exemple](create-destination-configuration.md#create) avec différentes options `filenameConfig`.
 
 ```shell {line-numbers="true" highlight="115-128"}
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinations/{INSTANCE_ID} \
@@ -201,7 +201,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 +++Réponse
 
-Une réponse réussie renvoie un état HTTP 200 avec les détails de la configuration de destination mise à jour.
+Une réponse réussie renvoie le statut HTTP 200 avec les détails de la configuration de destination que vous venez de mettre à jour.
 
 +++
 
@@ -211,9 +211,9 @@ Les points d’entrée de l’API Destination SDK suivent les principes généra
 
 ## Étapes suivantes
 
-Après avoir lu ce document, vous savez maintenant comment mettre à jour une configuration de destination via la Destination SDK `/authoring/destinations` Point d’entrée de l’API.
+Vous êtes arrivé au bout de ce document. À présent, vous savez comment mettre à jour une configuration de destination avec le point d’entrée `/authoring/destinations` Destination SDK de l’API.
 
-Pour en savoir plus sur ce que vous pouvez faire avec ce point de terminaison, consultez les articles suivants :
+Pour en savoir plus sur les fonctionnalités offertes par ce point d’entrée, consultez les articles suivants :
 
 * [Création d’une configuration de destination](create-destination-configuration.md)
 * [Récupération d’une configuration de destination](retrieve-destination-configuration.md)

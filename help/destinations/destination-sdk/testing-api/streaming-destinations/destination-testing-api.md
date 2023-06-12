@@ -1,43 +1,42 @@
 ---
-description: Découvrez comment utiliser l’API de test de destination pour tester si votre destination de diffusion en continu est configurée correctement et pour vérifier l’intégrité des flux de données vers votre destination configurée.
-title: Test de votre destination de diffusion en continu avec des exemples de profils
+description: Découvrez comment utiliser l’API de test de destination pour tester si la destination de diffusion en streaming est configurée correctement et pour vérifier l’intégrité des flux de données vers la destination configurée.
+title: Test de la destination de diffusion en streaming avec des profils types
 exl-id: 2b54250d-ec30-4ad7-a8be-b86b14e4f074
 source-git-commit: 0befd65b91e49cacab67c76fd9ed5d77bf790b9d
 workflow-type: tm+mt
 source-wordcount: '630'
-ht-degree: 14%
+ht-degree: 100%
 
 ---
 
 
-# Test de votre destination de diffusion en continu avec des exemples de profils {#template-api-operations}
+# Test de la destination de diffusion en streaming avec des profils types {#template-api-operations}
 
 >[!IMPORTANT]
 >
 >**Point d’entrée de l’API** : `https://platform.adobe.io/data/core/activation/authoring/testing/destinationInstance/`
 
-Cette page répertorie et décrit toutes les opérations d’API que vous pouvez effectuer à l’aide du `/authoring/testing/destinationInstance/` Point de terminaison de l’API, pour tester si votre destination est configurée correctement et pour vérifier l’intégrité des flux de données vers votre destination configurée. Pour une description de la fonctionnalité prise en charge par ce point de terminaison, reportez-vous à la section [Test de votre configuration de destination](streaming-destination-testing-overview.md).
+Cette page répertorie et décrit toutes les opérations d’API que vous pouvez effectuer à l’aide du point d’entrée `/authoring/testing/destinationInstance/` de l’API pour tester si la destination est configurée correctement et pour vérifier l’intégrité des flux de données vers la destination configurée. Pour obtenir une description des fonctionnalités prises en charge par ce point d’entrée, consultez [Test de la configuration de destination](streaming-destination-testing-overview.md).
 
-Vous envoyez des requêtes au point de terminaison de test avec ou sans ajouter de profils à l’appel . Si vous n’envoyez aucun profil à la demande, Adobe les génère en interne et les ajoute à la demande.
+Vous envoyez des requêtes au point d’entrée de test avec ou sans ajout de profils à l’appel. Si vous n’envoyez aucun profil à la requête, Adobe les génère en interne et les ajoute à la requête.
 
-Vous pouvez utiliser la variable [Exemple d’API de génération de profil](sample-profile-generation-api.md) pour créer des profils à utiliser dans les requêtes de l’API de test de destination.
+Vous pouvez utiliser la [génération de ’profils types API](sample-profile-generation-api.md) pour créer des profils à utiliser dans les requêtes de l’API de test de destination.
 
-## Comment obtenir l’ID d’instance de destination {#get-destination-instance-id}
+## Comment obtenir l’identifiant d’instance de destination {#get-destination-instance-id}
 
 >[!IMPORTANT]
 >
->* Pour utiliser cette API, vous devez disposer d’une connexion existante à votre destination dans l’interface utilisateur de l’Experience Platform. Lecture [se connecter à la destination](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=fr) et [activation de profils et de segments vers une destination](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en) pour plus d’informations.
-> * Après avoir établi la connexion à votre destination, obtenez l’ID d’instance de destination que vous devez utiliser dans les appels API vers ce point de terminaison lorsque [parcourir une connexion avec votre destination ;](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html?lang=en).
-   >![Image de l’interface utilisateur comment obtenir l’ID d’instance de destination](../../assets/testing-api/get-destination-instance-id.png)
+>* Pour utiliser cette API, vous devez disposer d’une connexion existante vers la destination dans l’interface utilisateur d’Experience Platform. Pour plus d’informations, consultez la documentation [Connexion à la destination](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=fr) et [Activation des profils et des segments vers une destination](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=fr).
+> * Après avoir établi la connexion à la destination, obtenez l’identifiant d’instance de destination que vous devez utiliser dans les appels API vers ce point d’entrée pendant la [recherche d’une connexion avec la destination ](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html?lang=fr).
+>![Image de l’interface illustrant comment obtenir l’identifiant d’instance de destination](../../assets/testing-api/get-destination-instance-id.png)
 
+## Prise en main des opérations dʼAPI de test de destination {#get-started}
 
-## Prise en main des opérations de l’API de test de destination {#get-started}
+Avant de poursuivre, consultez le [guide de prise en main](../../getting-started.md) pour obtenir des informations importantes à connaître avant d’effectuer des appels vers l’API, notamment sur la manière d’obtenir l’autorisation de création de la destination et les en-têtes obligatoires.
 
-Avant de poursuivre, consultez le [guide de prise en main](../../getting-started.md) pour obtenir des informations importantes à connaître avant d’effectuer des appels vers l’API, notamment sur la manière d’obtenir l’autorisation de création de la destination et les en-têtes requis.
+## Test de la configuration de la destination sans ajout de profils à l’appel {#test-without-adding-profiles}
 
-## Tester la configuration de votre destination sans ajouter de profils à l’appel {#test-without-adding-profiles}
-
-Vous pouvez tester votre configuration de destination en adressant une requête de POST au `authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}` point de terminaison et en indiquant l’identifiant de l’instance de destination de la destination que vous testez.
+Vous pouvez tester votre configuration de destination en adressant une requête POST au point d’entrée `authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}` et en indiquant l’identifiant de l’instance de destination de la destination que vous testez.
 
 **Format d’API**
 
@@ -48,11 +47,11 @@ POST authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}
 
 | Paramètre de requête | Description |
 | -------- | ----------- |
-| `{DESTINATION_INSTANCE_ID}` | L’ID d’instance de destination de la destination que vous testez. |
+| `{DESTINATION_INSTANCE_ID}` | Identifiant d’instance de destination de la destination que vous testez. |
 
 **Requête**
 
-La requête suivante appelle le point de terminaison de l’API REST de votre destination. La requête est configurée par la fonction `{DESTINATION_INSTANCE_ID}` paramètre de requête.
+La requête suivante appelle le point d’entrée de l’API REST de la destination. La requête est configurée par le paramètre de requête `{DESTINATION_INSTANCE_ID}`.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/core/activation/authoring/testing/destinationInstance/49966037-32cd-4457-a105-2cbf9c01826a' \
@@ -66,7 +65,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 
 **Réponse**
 
-Une réponse réussie renvoie un état HTTP 200 avec la réponse de l’API provenant du point de terminaison de l’API REST de votre destination.
+Une réponse réussie renvoie le statut HTTP 200 avec la réponse de l’API provenant du point d’entrée de l’API REST de la destination.
 
 ```json
 {
@@ -157,17 +156,17 @@ Une réponse réussie renvoie un état HTTP 200 avec la réponse de l’API prov
 
 | Propriété | Description |
 | -------- | ----------- |
-| `aggregationKey` | Inclut des informations sur la stratégie d’agrégation configurée pour la destination. Pour plus d’informations, reportez-vous à la section [Stratégie d’agrégation](../../functionality/destination-configuration/aggregation-policy.md) documentation. |
-| `traceId` | Identifiant unique de l’opération. En cas d’erreur, vous pouvez partager cet identifiant avec l’équipe Adobe à des fins de dépannage. |
-| `results.httpCalls.request` | Inclut la demande qui a été envoyée par Adobe à votre destination. |
-| `results.httpCalls.response` | Inclut la réponse reçue par l’Adobe de votre destination. |
-| `inputProfiles` | Inclut les profils qui ont été exportés lors de l’appel vers votre destination. Les profils correspondent à votre schéma source. |
+| `aggregationKey` | Inclut des informations sur la politique d’agrégation configurée pour la destination. Pour plus d’informations, consultez la documentation [Politique d’agrégation](../../functionality/destination-configuration/aggregation-policy.md). |
+| `traceId` | Identifiant unique de l’opération. En cas d’erreur, vous pouvez partager cet identifiant avec l’équipe Adobe pour faciliter le dépannage. |
+| `results.httpCalls.request` | Inclut la requête qui a été envoyée par Adobe à la destination. |
+| `results.httpCalls.response` | Inclut la réponse de la destination reçue par Adobe. |
+| `inputProfiles` | Inclut les profils qui ont été exportés pendant l’appel vers la destination. Les profils correspondent à votre schéma source. |
 
 {style="table-layout:auto"}
 
-## Tester la configuration de votre destination avec les profils ajoutés à l’appel {#test-with-added-profiles}
+## Test de la configuration de la destination avec ajout de profils à l’appel {#test-with-added-profiles}
 
-Vous pouvez tester votre configuration de destination en adressant une requête de POST au `authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}` point de terminaison et en indiquant l’identifiant de l’instance de destination de la destination que vous testez.
+Vous pouvez tester votre configuration de destination en adressant une requête POST au point d’entrée `authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}` et en indiquant l’identifiant de l’instance de destination de la destination que vous testez.
 
 **Format d’API**
 
@@ -177,11 +176,11 @@ POST authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}
 
 | Paramètre de requête | Description |
 | -------- | ----------- |
-| `{DESTINATION_INSTANCE_ID}` | L’ID d’instance de destination de la destination que vous testez. |
+| `{DESTINATION_INSTANCE_ID}` | Identifiant d’instance de destination de la destination que vous testez. |
 
 **Requête**
 
-La requête suivante appelle le point de terminaison de l’API REST de votre destination. La requête est configurée par les paramètres fournis dans la payload et la variable `{DESTINATION_INSTANCE_ID}` paramètre de requête.
+La requête suivante appelle le point d’entrée de l’API REST de la destination. La requête est configurée par les paramètres fournis dans la payload et le paramètre de requête `{DESTINATION_INSTANCE_ID}`.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/core/activation/authoring/testing/destinationInstance/49966037-32cd-4457-a105-2cbf9c01826a' \
@@ -230,7 +229,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 
 **Réponse**
 
-Une réponse réussie renvoie un état HTTP 200 avec la réponse de l’API provenant du point de terminaison de l’API REST de votre destination.
+Une réponse réussie renvoie le statut HTTP 200 avec la réponse de l’API provenant du point d’entrée de l’API REST de la destination.
 
 ```json
 {
@@ -327,4 +326,4 @@ Les points d’entrée de l’API Destination SDK suivent les principes généra
 
 ## Étapes suivantes
 
-Après avoir lu ce document, vous savez maintenant comment tester votre destination. Vous pouvez désormais utiliser l’Adobe [processus de documentation en libre-service](../../docs-framework/documentation-instructions.md) pour créer une page de documentation pour votre destination.
+Vous êtes arrivé au bout de ce document. À présent, vous savez comment tester la destination. Vous pouvez désormais utiliser le [processus de documentation en libre-service](../../docs-framework/documentation-instructions.md) d’Adobe pour créer une page de documentation pour la destination.

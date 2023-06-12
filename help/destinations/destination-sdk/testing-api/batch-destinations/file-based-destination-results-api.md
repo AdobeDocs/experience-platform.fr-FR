@@ -1,48 +1,48 @@
 ---
-description: Cette page explique comment utiliser le point d’entrée de l’API /testing/destinationInstance pour afficher les détails complets de vos résultats de test. Ce point de terminaison API renvoie le même résultat que celui obtenu lors de l’utilisation de l’API Flow Service pour surveiller les flux de données.
+description: Cette page explique comment utiliser le point d’entrée /testing/destinationInstance de l’API pour afficher les détails complets de vos résultats de test. Ce point d’entrée de l’API renvoie le même résultat que celui obtenu pendant l’utilisation de l’API Flow Service pour surveiller les flux de données.
 title: Consulter les résultats détaillés de l’activation
 exl-id: a7b27beb-825e-47fd-8939-f499c3298f68
 source-git-commit: ffd87573b93d642202e51e5299250a05112b6058
 workflow-type: tm+mt
 source-wordcount: '545'
-ht-degree: 16%
+ht-degree: 100%
 
 ---
 
 # Consulter les résultats détaillés de l’activation {#view-test-results}
 
-## Présentation {#overview}
+## Vue d’ensemble {#overview}
 
-Cette page explique comment utiliser la variable `/testing/destinationInstance` Point de terminaison d’API pour afficher les détails complets de vos résultats de test de destination basés sur des fichiers.
+Cette page explique comment utiliser le point d’entrée `/testing/destinationInstance` de l’API pour afficher les détails complets de vos résultats de tests des destinations basés sur des fichiers.
 
-Si vous avez déjà [a testé votre destination](file-based-destination-testing-api.md) et a reçu une réponse API valide, votre destination fonctionne correctement.
+Si vous avez déjà [testé la destination](file-based-destination-testing-api.md) et reçu une réponse API valide, la destination fonctionne correctement.
 
-Si vous souhaitez obtenir des informations plus détaillées sur votre flux d’activation, vous pouvez utiliser la variable `results` de la propriété [test de destination](file-based-destination-testing-api.md) réponse du point de terminaison, comme décrit plus loin ci-dessous.
+Si vous souhaitez obtenir des informations plus détaillées sur votre flux d’activation, vous pouvez utiliser la propriété `results` de la réponse de point d’entrée du [test de destination](file-based-destination-testing-api.md), comme décrit plus en détail ci-après.
 
 >[!NOTE]
 >
->Ce point de terminaison API renvoie le même résultat que vous obtiendriez lors de l’utilisation de la variable [API de service de flux](../../../api/update-destination-dataflows.md) pour surveiller les flux de données.
+>Ce point d’entrée de l’API renvoie le même résultat que celui obtenu lors de l’utilisation de l’[API Flow Service](../../../api/update-destination-dataflows.md) pour surveiller les flux de données.
 
 ## Prise en main {#getting-started}
 
-Avant de poursuivre, consultez le [guide de prise en main](../../getting-started.md) pour obtenir des informations importantes à connaître avant d’effectuer des appels vers l’API, notamment sur la manière d’obtenir l’autorisation de création de la destination et les en-têtes requis.
+Avant de poursuivre, consultez le [guide de prise en main](../../getting-started.md) pour obtenir des informations importantes à connaître avant d’effectuer des appels vers l’API, notamment sur la manière d’obtenir l’autorisation de création de la destination et les en-têtes obligatoires.
 
 ## Conditions préalables {#prerequisites}
 
-Avant d’utiliser la variable `/testing/destinationInstance` endpoint, assurez-vous de respecter les conditions suivantes :
+Avant d’utiliser le point d’entrée `/testing/destinationInstance`, veillez à respecter les conditions suivantes :
 
-* Une destination basée sur des fichiers existante est créée via la Destination SDK et vous pouvez la voir dans votre [destinations](../../../ui/destinations-workspace.md).
-* Vous avez créé au moins un flux d’activation pour votre destination dans l’interface utilisateur de l’Experience Platform.
-* Pour réussir la requête API, vous avez besoin de l’ID d’instance de destination correspondant à l’instance de destination que vous allez tester. Obtenez l’ID d’instance de destination que vous devez utiliser dans l’appel API, à partir de l’URL, lors de l’exploration d’une connexion avec votre destination dans l’interface utilisateur de Platform.
+* Une destination existante basée sur des fichiers a été créée avec Destination SDK et vous pouvez la voir dans votre [catalogue de destination](../../../ui/destinations-workspace.md).
+* Au moins un flux d’activation pour la destination dans l’interface utilisateur d’Experience Platform a été créé.
+* Pour réussir la requête API, vous avez besoin de l’identifiant d’instance de destination correspondant à l’instance de destination que vous allez tester. Obtenez l’identifiant d’instance de destination que vous devez utiliser dans l’appel API, à partir de l’URL, pendant l’exploration d’une connexion avec la destination dans l’interface utilisateur de Platform.
 
-   ![Image de l’interface utilisateur montrant comment obtenir l’ID d’instance de destination à partir de l’URL.](../../assets/testing-api/get-destination-instance-id.png)
-* Vous avez précédemment [a testé votre configuration de destination](file-based-destination-testing-api.md)et a reçu une réponse API valide comprenant un `results` . Vous utiliserez ceci : `results` pour tester davantage votre destination.
+  ![Image de l’interface utilisateur montrant comment obtenir l’identifiant d’instance de destination à partir de l’URL.](../../assets/testing-api/get-destination-instance-id.png)
+* Vous avez précédemment [testé votre configuration de destination](file-based-destination-testing-api.md) et reçu une réponse API valide comprenant une propriété `results`. Vous utiliserez cette valeur `results` pour tester davantage la destination.
 
 ## Affichage des résultats détaillés du test de destination {#test-activation-results}
 
-Une fois que vous avez [a validé votre configuration de destination](file-based-destination-testing-api.md), vous pouvez afficher les résultats détaillés de l’activation en envoyant une requête de GET au `authoring/testing/destinationInstance/` point de terminaison et en fournissant l’identifiant de l’instance de destination que vous testez, ainsi que les identifiants d’exécution de flux des segments activés.
+Une fois que vous avez [validé votre configuration de destination](file-based-destination-testing-api.md), vous pouvez afficher les résultats détaillés de l’activation en envoyant une requête GET au point d’entrée `authoring/testing/destinationInstance/` et en fournissant l’identifiant de l’instance de destination que vous testez, ainsi que les identifiants d’exécution de flux des segments activés.
 
-Vous trouverez l’URL complète d’API que vous devez utiliser dans la variable `results` renvoyée dans la propriété [réponse de l’appel de test de destination](file-based-destination-testing-api.md).
+Vous trouverez l’URL complète d’API que vous devez utiliser dans la propriété `results` renvoyée dans la [réponse de l’appel de test de destination](file-based-destination-testing-api.md).
 
 **Format d’API**
 
@@ -52,11 +52,11 @@ GET /authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}/results?flo
 
 | Paramètres de chemin | Description |
 | -------- | ----------- |
-| `{DESTINATION_INSTANCE_ID}` | L’identifiant de l’instance de destination pour laquelle vous générez des exemples de profils. Voir [conditions préalables](#prerequisites) pour plus d’informations sur la manière d’obtenir cet identifiant. |
+| `{DESTINATION_INSTANCE_ID}` | L’identifiant de l’instance de destination pour laquelle vous générez des profils types. Pour en savoir plus sur la manière d’obtenir cet identifiant, consultez la section [Conditions préalables](#prerequisites). |
 
 | Paramètres de chaîne de requête | Description |
 | -------- | ----------- |
-| `flowRunIds` | Les identifiants d’exécution de flux correspondant aux segments activés. Vous trouverez les ID d’exécution de flux dans la variable `results` renvoyée dans la propriété [réponse de l’appel de test de destination](file-based-destination-testing-api.md). |
+| `flowRunIds` | Les identifiants d’exécution de flux correspondant aux segments activés. Vous trouverez les identifiants d’exécution de flux dans la propriété `results` renvoyée dans la [réponse de l’appel de test de destination](file-based-destination-testing-api.md). |
 
 **Requête**
 
@@ -71,7 +71,7 @@ curl -X GET 'https://platform.adobe.io/data/core/activation/authoring/testing/de
 
 **Réponse**
 
-La réponse contient les détails complets du flux d’activation. Vous pouvez obtenir la même réponse en appelant la fonction [API de service de flux](../../../api/update-destination-dataflows.md) pour surveiller les flux de données.
+La réponse contient les détails complets du flux d’activation. Vous pouvez obtenir la même réponse en appelant la fonction [API Flow Service](../../../api/update-destination-dataflows.md) pour surveiller les flux de données.
 
 ```json
 {
@@ -217,6 +217,6 @@ Les points d’entrée de l’API Destination SDK suivent les principes généra
 
 ## Étapes suivantes
 
-Après avoir lu ce document, vous savez maintenant comment tester votre configuration de destination basée sur des fichiers et voir les détails complets de vos résultats d’activation.
+Vous êtes arrivé au bout de ce document. À présent, vous savez comment tester votre configuration de destination basée sur des fichiers et voir les détails complets de vos résultats d’activation.
 
-Si vous créez une destination publique, vous pouvez désormais [envoyer votre configuration de destination ;](../../guides/submit-destination.md) à Adobe pour révision.
+Si vous créez une destination publique, vous pouvez désormais [envoyer votre configuration de destination](../../guides/submit-destination.md) à Adobe pour révision.

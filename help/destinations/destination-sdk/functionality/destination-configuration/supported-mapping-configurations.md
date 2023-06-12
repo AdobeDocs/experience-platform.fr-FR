@@ -1,10 +1,10 @@
 ---
-description: Découvrez comment configurer votre destination pour les configurations de mappage d’identité et d’attributs prises en charge.
+description: Découvrez comment configurer la destination pour les configurations de mappage d’identité et d’attributs prises en charge.
 title: Configurations de mappage prises en charge
 source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
 workflow-type: tm+mt
 source-wordcount: '659'
-ht-degree: 5%
+ht-degree: 100%
 
 ---
 
@@ -13,28 +13,28 @@ ht-degree: 5%
 
 Les destinations créées avec Destination SDK prennent en charge les configurations spécifiques d’espace de noms d’identité et de mappage d’attributs, en fonction du type de destination.
 
-Cet article décrit toutes les configurations de mappage prises en charge que vous pouvez utiliser lors de la configuration de votre destination.
+Cet article décrit toutes les configurations de mappage prises en charge que vous pouvez utiliser au moment de la configuration de la destination.
 
 >[!WARNING]
 >
->Toute configuration de mappage qui n’est pas décrite dans cet article n’est pas prise en charge par Destination SDK.
+>Toute configuration de mappage qui ne figure pas dans cet article n’est pas prise en charge par Destination SDK.
 
-Lors de la création de votre destination, configurez vos espaces de noms de schéma et d’identité en fonction de l’une des configurations de mappage décrites dans cette page.
+Pendant la création de la destination, configurez vos espaces de noms de schéma et d’identité en fonction de l’une des configurations de mappage décrites sur cette page.
 
 >[!IMPORTANT]
 >
->Tous les noms et valeurs de paramètre pris en charge par Destination SDK sont **respect de la casse**. Pour éviter les erreurs de respect de la casse, veuillez utiliser les noms et valeurs des paramètres exactement comme indiqué dans la documentation.
+>Tous les noms et toutes les valeurs de paramètre pris en charge par Destination SDK **sont sensibles à la casse**. Pour éviter les erreurs de respect de la casse, utilisez les noms et valeurs des paramètres exactement comme indiqué dans la documentation.
 
-## Mappages pris en charge pour les destinations de diffusion en continu {#streaming-mappings}
+## Mappages pris en charge pour les destinations de diffusion en streaming {#streaming-mappings}
 
-Les destinations en temps réel (diffusion en continu) créées avec Destination SDK prennent en charge les configurations de mappage décrites dans le tableau ci-dessous.
+Les destinations en temps réel (streaming) créé avec Destination SDK prennent en charge les configurations de mappage décrites dans le tableau ci-dessous.
 
 | Champ source | Champ cible |
 | --- | --- |
 | Attribut XDM | Attribut personnalisé |
 | Espace de noms d’identité | Espace de noms d’identité |
 
-L’exemple de configuration ci-dessous permet aux clients d’utiliser les deux mappages dans le tableau ci-dessus.
+L’exemple de configuration suivant permet d’utiliser les deux mappages dans le tableau ci-dessus.
 
 ```json
 "schemaConfig":{
@@ -60,27 +60,27 @@ L’exemple de configuration ci-dessous permet aux clients d’utiliser les deux
 
 ### Mappage des attributs XDM aux attributs personnalisés {#streaming-xdm-to-custom}
 
-Les utilisateurs peuvent mapper des attributs de leur profil XDM source aux attributs personnalisés du côté de votre destination.
+Les utilisateurs peuvent mapper des attributs de leur profil XDM source aux attributs personnalisés du côté de la destination.
 
-Les utilisateurs doivent saisir manuellement le nom de l’attribut personnalisé cible lors de la sélection du mapping de champ cible.
+Les utilisateurs doivent saisir manuellement le nom de l’attribut personnalisé cible au moment de la sélection du mapping de ciblage de champ.
 
-![Capture d’écran de l’interface utilisateur de Platform montrant la sélection d’attributs personnalisés.](../../assets/functionality/destination-configuration/mapping-streaming-select-custom-attribute.png)
+![Copie d’écran de l’interface utilisateur de Platform montrant la sélection d’attributs personnalisés.](../../assets/functionality/destination-configuration/mapping-streaming-select-custom-attribute.png)
 
 L’expérience de l’interface utilisateur qui en résulte est affichée dans l’image ci-dessous.
 
-![Copie d’écran de l’interface utilisateur de Platform montrant le mappage des attributs XDM aux attributs personnalisés pour les destinations de diffusion en continu.](../../assets/functionality/destination-configuration/mapping-streaming-xdm-custom.png)
+![Copie d’écran de l’interface utilisateur de Platform montrant le mappage des attributs XDM aux attributs personnalisés pour les destinations de diffusion en streaming.](../../assets/functionality/destination-configuration/mapping-streaming-xdm-custom.png)
 
-### Mappage des espaces de noms d’identité aux espaces de noms d’identité des partenaires {#streaming-identity-to-identity}
+### Mappage des espaces de noms d’identité aux espaces de noms d’identité de partenaires {#streaming-identity-to-identity}
 
 Les utilisateurs peuvent mapper des espaces de noms d’identité personnalisés ou globaux de Platform aux espaces de noms d’identité que vous avez définis.
 
 L’expérience de l’interface utilisateur qui en résulte est affichée dans l’image ci-dessous.
 
-![Copie d’écran de l’interface utilisateur de Platform montrant le mappage d’identité pour les destinations de diffusion en continu.](../../assets/functionality/destination-configuration/mapping-streaming-identity-identity.png)
+![Copie d’écran de l’interface utilisateur de Platform montrant le mappage des identités pour les destinations de diffusion en streaming.](../../assets/functionality/destination-configuration/mapping-streaming-identity-identity.png)
 
 ## Mappages pris en charge pour les destinations basées sur des fichiers {#batch-mappings}
 
-Les destinations basées sur des fichiers créées avec Destination SDK prennent en charge les configurations de mappage décrites dans le tableau ci-dessous. Consultez les sections suivantes pour obtenir des exemples de mappage détaillés.
+Les destinations basées sur des fichiers créés avec Destination SDK prennent en charge les configurations de mappage décrites dans le tableau ci-dessous. Pour obtenir des exemples de mappage détaillés, consultez les sections suivantes.
 
 | Champ source | Champ cible |
 | --- | --- |
@@ -88,7 +88,7 @@ Les destinations basées sur des fichiers créées avec Destination SDK prennent
 | Espace de noms d’identité | Attribut/attribut personnalisé |
 | Espace de noms d’identité | Espace de noms d’identité |
 
-L’exemple de configuration ci-dessous permet aux clients d’utiliser tous les mappages du tableau ci-dessus.
+L’exemple de configuration ci-dessous permet d’utiliser tous les mappages du tableau ci-dessus.
 
 ```json
 "schemaConfig":{
@@ -112,7 +112,7 @@ L’exemple de configuration ci-dessous permet aux clients d’utiliser tous les
 
 ### Mappage des attributs XDM aux attributs personnalisés {#batch-xdm-to-custom}
 
-Les utilisateurs peuvent mapper des attributs de leur profil XDM source aux attributs personnalisés du côté de votre destination.
+Les utilisateurs peuvent mapper des attributs de leur profil XDM source aux attributs personnalisés du côté de la destination.
 
 Pour les destinations basées sur des fichiers, le champ cible est automatiquement renseigné avec un attribut par défaut du même nom que le champ source.
 
@@ -120,27 +120,27 @@ L’expérience de l’interface utilisateur qui en résulte est affichée dans 
 
 ![Copie d’écran de l’interface utilisateur de Platform montrant le mappage XDM aux attributs personnalisés pour les destinations basées sur des fichiers.](../../assets/functionality/destination-configuration/mapping-batch-xdm-custom.png)
 
-Les utilisateurs peuvent laisser le nom par défaut en place ou saisir un nom d’attribut personnalisé dans l’écran de sélection des champs cibles.
+Les utilisateurs peuvent conserver le nom par défaut ou saisir un nom d’attribut personnalisé dans l’écran de sélection des champs cibles.
 
-![Capture d’écran de l’interface utilisateur de Platform montrant la sélection d’attributs cibles personnalisés pour les destinations basées sur des fichiers.](../../assets/functionality/destination-configuration/mapping-batch-custom-attribute.png)
+![Copie d’écran de l’interface utilisateur de Platform montrant la sélection d’attributs cibles personnalisés pour les destinations basées sur des fichiers.](../../assets/functionality/destination-configuration/mapping-batch-custom-attribute.png)
 
 ### Mappage des espaces de noms d’identité aux attributs personnalisés {#batch-identity-to-custom}
 
-Les utilisateurs peuvent mapper des espaces de noms d’identité personnalisés ou globaux de Platform aux attributs personnalisés du côté de votre destination.
+Les utilisateurs peuvent mapper des espaces de noms d’identité personnalisés ou globaux de Platform aux attributs personnalisés du côté de la destination.
 
-Lors de la sélection d’un espace de noms d’identité comme champ source, le champ cible est automatiquement renseigné avec un espace de noms d’identité équivalent. Pour remplacer le champ cible par un attribut personnalisé, les utilisateurs doivent saisir un nom d’attribut personnalisé dans l’écran de sélection du champ cible.
+Pendant la sélection d’un espace de noms d’identité comme champ source, le champ cible est automatiquement renseigné avec un espace de noms d’identité équivalent. Pour remplacer le champ cible par un attribut personnalisé, les utilisateurs doivent saisir un nom d’attribut personnalisé dans l’écran de sélection du champ cible.
 
-![Capture d’écran de l’interface utilisateur de Platform montrant la sélection d’attributs cibles personnalisés pour les destinations basées sur des fichiers.](../../assets/functionality/destination-configuration/mapping-batch-custom-attribute.png)
+![Copie d’écran de l’interface utilisateur de Platform montrant la sélection d’attributs cibles personnalisés pour les destinations basées sur des fichiers.](../../assets/functionality/destination-configuration/mapping-batch-custom-attribute.png)
 
 L’expérience de l’interface utilisateur qui en résulte est affichée dans l’image ci-dessous.
 
-![Copie d’écran de l’interface utilisateur de Platform montrant le mappage d’identité avec les attributs personnalisés pour les destinations basées sur des fichiers.](../../assets/functionality/destination-configuration/mapping-batch-identity-custom.png)
+![Copie d’écran de l’interface utilisateur de Platform montrant le mappage d’identité aux attributs personnalisés pour les destinations basées sur des fichiers.](../../assets/functionality/destination-configuration/mapping-batch-identity-custom.png)
 
-### Mappage des espaces de noms d’identité aux espaces de noms d’identité des partenaires {#batch-identity-to-identity}
+### Mappage des espaces de noms d’identité aux espaces de noms d’identité de partenaires {#batch-identity-to-identity}
 
-Les utilisateurs peuvent mapper des espaces de noms d’identité personnalisés ou globaux de Platform à des espaces de noms d’identité équivalents.
+Les utilisateurs peuvent mapper des espaces de noms d’identité personnalisés ou globaux de Platform aux espaces de noms d’identité équivalents.
 
-Lors de la sélection d’un espace de noms d’identité comme champ source, le champ cible est automatiquement renseigné avec un espace de noms d’identité équivalent.
+Pendant la sélection d’un espace de noms d’identité comme champ source, le champ cible est automatiquement renseigné avec un espace de noms d’identité équivalent.
 
 L’expérience de l’interface utilisateur qui en résulte est affichée dans l’image ci-dessous.
 
@@ -149,12 +149,12 @@ L’expérience de l’interface utilisateur qui en résulte est affichée dans 
 
 ## Étapes suivantes {#next-steps}
 
-Après avoir lu cet article, vous devriez mieux comprendre les mappages pris en charge par les destinations créées avec Destination SDK.
+Vous êtes arrivé au bout de cet article. À présent, vous devriez mieux comprendre quels mappages sont pris en charge par les destinations créées à l’aide de Destination SDK.
 
-Pour en savoir plus sur les autres composants de destination, consultez les articles suivants :
+Pour en savoir plus sur les autres composants de destination, consultez les articles suivants :
 
 * [Authentification du client](customer-authentication.md)
-* [Authentification OAuth 2](oauth2-authentication.md)
+* [Authentification OAuth 2](oauth2-authentication.md)
 * [Champs de données client](customer-data-fields.md)
 * [Attributs de l’interface utilisateur](ui-attributes.md)
 * [Configuration du schéma](schema-configuration.md)

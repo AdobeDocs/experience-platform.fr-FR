@@ -1,10 +1,10 @@
 ---
-description: Cette page illustre l’appel d’API utilisé pour récupérer un modèle d’audience par le biais de l’Adobe Experience Platform Destination SDK.
+description: Cette page illustre comment l’appel API est utilisé pour récupérer un modèle d’audience à partir d’Adobe Experience Platform Destination SDK.
 title: Récupération d’un modèle d’audience
 source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
 workflow-type: tm+mt
 source-wordcount: '418'
-ht-degree: 25%
+ht-degree: 100%
 
 ---
 
@@ -15,21 +15,21 @@ ht-degree: 25%
 >
 >**Point d’entrée de l’API** : `platform.adobe.io/data/core/activation/authoring/audience-templates`
 
-Cette page illustre la requête d’API et la charge utile que vous pouvez utiliser pour récupérer un modèle de métadonnées d’audience, à l’aide de la variable `/authoring/audience-templates` Point d’entrée de l’API.
+Cette page illustre la requête d’API et la payload que vous pouvez utiliser pour récupérer un modèle de métadonnées d’audience à l’aide du point d’entrée `/authoring/audience-templates` de l’API.
 
-Pour une description détaillée des fonctionnalités que vous pouvez configurer via ce point de terminaison, voir [gestion des métadonnées d’audience](../functionality/audience-metadata-management.md).
+Pour obtenir une description détaillée des fonctionnalités configurables avec ce point d’entrée, consultez l’article sur la [gestion des métadonnées d’audience](../functionality/audience-metadata-management.md).
 
 >[!IMPORTANT]
 >
->Tous les noms et valeurs de paramètre pris en charge par Destination SDK sont **respect de la casse**. Pour éviter les erreurs de respect de la casse, veuillez utiliser les noms et valeurs des paramètres exactement comme indiqué dans la documentation.
+>Tous les noms et toutes les valeurs de paramètre pris en charge par Destination SDK **sont sensibles à la casse**. Pour éviter les erreurs de respect de la casse, utilisez les noms et valeurs des paramètres exactement comme indiqué dans la documentation.
 
-## Prise en main des opérations de l’API de modèle d’audience {#get-started}
+## Prise en main des opérations de l’API des modèles d’audience {#get-started}
 
-Avant de poursuivre, consultez le [guide de prise en main](../getting-started.md) pour obtenir des informations importantes à connaître avant d’effectuer des appels vers l’API, notamment sur la manière d’obtenir l’autorisation de création de la destination et les en-têtes requis.
+Avant de poursuivre, consultez le [guide de prise en main](../getting-started.md) pour obtenir des informations importantes à connaître avant d’effectuer des appels vers l’API, notamment sur la manière d’obtenir l’autorisation de création de la destination et les en-têtes obligatoires.
 
 ## Récupération d’un modèle d’audience {#retrieve}
 
-Vous pouvez récupérer un modèle d’audience existant en effectuant une `GET` à la fonction `/authoring/audience-templates` point de terminaison .
+Vous pouvez récupérer un modèle d’audience existant en effectuant une requête `GET` au point dʼentrée `/authoring/audience-templates`.
 
 **Format d’API**
 
@@ -39,21 +39,21 @@ Utilisez le format d’API suivant pour récupérer tous les modèles d’audien
 GET /authoring/audience-templates
 ```
 
-Utilisez le format d’API suivant pour récupérer un modèle d’audience spécifique, défini par la variable `{INSTANCE_ID}` .
+Utilisez le format d’API suivant pour récupérer un modèle d’audience spécifique, défini par le paramètre `{INSTANCE_ID}`.
 
 ```http
 GET /authoring/audience-templates/{INSTANCE_ID}
 ```
 
-Les deux requêtes suivantes récupèrent tous les modèles d’audience pour votre organisation IMS ou un modèle d’audience spécifique, selon que vous transmettez ou non la variable `INSTANCE_ID` dans la requête.
+Les deux requêtes suivantes récupèrent tous les modèles d’audience pour votre organisation IMS ou un modèle d’audience spécifique, selon que vous transmettez ou non le paramètre `INSTANCE_ID` dans la requête.
 
-Sélectionnez chaque onglet ci-dessous pour afficher la charge utile correspondante.
+Sélectionnez chaque onglet ci-dessous pour afficher la payload correspondante.
 
 >[!BEGINTABS]
 
 >[!TAB Récupération de tous les modèles d’audience]
 
-La requête suivante récupère la liste des modèles d’audience auxquels vous avez accès, en fonction de [!DNL IMS Org ID] et la configuration des environnements de test.
+La requête suivante récupère la liste des modèles d’audience auxquels vous avez accès en fonction de [!DNL IMS Org ID] et de la configuration du sandbox.
 
 +++Requête
 
@@ -69,7 +69,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/audience-te
 
 +++Réponse
 
-Une réponse réussie renvoie un état HTTP 200 avec une liste de modèles d’audience auxquels vous avez accès, en fonction de la variable [!DNL IMS Org ID] et le nom de l’environnement de test que vous avez utilisé. One `instanceId` correspond à un modèle d&#39;audience.
+Une réponse réussie renvoie le statut HTTP 200 avec une liste de modèles d’audience auxquels vous avez accès en fonction de [!DNL IMS Org ID] et du nom du sandbox que vous avez utilisé. Un `instanceId` correspond à un modèle d’audience.
 
 ```json
 {
@@ -180,9 +180,9 @@ Une réponse réussie renvoie un état HTTP 200 avec une liste de modèles d’a
 
 +++
 
->[!TAB Récupérer un modèle d’audience spécifique]
+>[!TAB Récupération d’un modèle d’audience spécifique]
 
-La requête suivante récupère la liste des modèles d’audience auxquels vous avez accès, en fonction de [!DNL IMS Org ID] et la configuration des environnements de test.
+La requête suivante récupère la liste des modèles d’audience auxquels vous avez accès en fonction de [!DNL IMS Org ID] et de la configuration du sandbox.
 
 +++Requête
 
@@ -196,13 +196,13 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/audience-te
 
 | Paramètre | Description |
 | -------- | ----------- |
-| `{INSTANCE_ID}` | L’identifiant du modèle d’audience que vous souhaitez récupérer. |
+| `{INSTANCE_ID}` | Identifiant du modèle d’audience à récupérer. |
 
 +++
 
 +++Réponse
 
-Une réponse réussie renvoie un état HTTP 200 avec les détails du modèle d’audience correspondant au `{INSTANCE_ID}` fourni lors de l’appel .
+Une réponse réussie renvoie le statut HTTP 200 avec les détails du modèle d’audience correspondant à l’identifiant `{INSTANCE_ID}` fourni pendant l’appel.
 
 ```json
 {
@@ -321,4 +321,4 @@ Les points d’entrée de l’API Destination SDK suivent les principes généra
 
 ## Étapes suivantes {#next-steps}
 
-Après avoir lu ce document, vous savez maintenant comment récupérer des détails sur la configuration de votre serveur de destination à l’aide de la variable `/authoring/destination-servers` Point d’entrée de l’API. Poursuivez votre apprentissage dans la section [Comment utiliser Destination SDK pour configurer votre destination](../guides/configure-destination-instructions.md) et obtenez une vue dʼensemble du processus de configuration de votre destination.
+Vous êtes arrivé au bout de ce document. À présent, vous savez comment récupérer des détails sur la configuration du serveur de la destination à l’aide du point d’entrée `/authoring/destination-servers` de l’API. Consultez la documentation [Comment utiliser Destination SDK pour configurer la destination](../guides/configure-destination-instructions.md) afin de comprendre la place de cette étape dans le processus de configuration de la destination.

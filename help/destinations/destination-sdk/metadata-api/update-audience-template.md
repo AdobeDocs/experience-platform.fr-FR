@@ -1,37 +1,37 @@
 ---
-description: Cette page illustre l’appel API utilisé pour mettre à jour un modèle d’audience par le biais de l’Adobe Experience Platform Destination SDK.
-title: Mettre à jour un modèle d’audience
+description: Cette page illustre comment l’appel API est utilisé pour mettre à jour un modèle d’audience avec Adobe Experience Platform Destination SDK.
+title: Mise à jour d’un modèle d’audience
 source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
 workflow-type: tm+mt
 source-wordcount: '319'
-ht-degree: 36%
+ht-degree: 100%
 
 ---
 
 
-# Mettre à jour un modèle d’audience
+# Mise à jour d’un modèle d’audience
 
 >[!IMPORTANT]
 >
 >**Point d’entrée de l’API** : `platform.adobe.io/data/core/activation/authoring/audience-templates`
 
-Cette page illustre la requête d’API et la charge utile que vous pouvez utiliser pour mettre à jour un modèle d’audience, en utilisant la variable `/authoring/audience-templates` Point d’entrée de l’API.
+Cette page illustre la requête d’API et la payload que vous pouvez utiliser pour mettre à jour un modèle d’audience à l’aide du point d’entrée `/authoring/audience-templates` de l’API.
 
-Pour une description détaillée des fonctionnalités que vous pouvez configurer via ce point de terminaison, voir [gestion des métadonnées d’audience](../functionality/audience-metadata-management.md).
+Pour obtenir une description détaillée des fonctionnalités configurables avec ce point d’entrée, consultez l’article sur la [gestion des métadonnées d’audience](../functionality/audience-metadata-management.md).
 
 >[!IMPORTANT]
 >
->Tous les noms et valeurs de paramètre pris en charge par Destination SDK sont **respect de la casse**. Pour éviter les erreurs de respect de la casse, veuillez utiliser les noms et valeurs des paramètres exactement comme indiqué dans la documentation.
+>Tous les noms et toutes les valeurs de paramètre pris en charge par Destination SDK **sont sensibles à la casse**. Pour éviter les erreurs de respect de la casse, utilisez les noms et valeurs des paramètres exactement comme indiqué dans la documentation.
 
-## Prise en main des opérations de l’API de modèle d’audience {#get-started}
+## Prise en main des opérations de l’API des modèles d’audience {#get-started}
 
-Avant de poursuivre, consultez le [guide de prise en main](../getting-started.md) pour obtenir des informations importantes à connaître avant d’effectuer des appels vers l’API, notamment sur la manière d’obtenir l’autorisation de création de la destination et les en-têtes requis.
+Avant de poursuivre, consultez le [guide de prise en main](../getting-started.md) pour obtenir des informations importantes à connaître avant d’effectuer des appels vers l’API, notamment sur la manière d’obtenir l’autorisation de création de la destination et les en-têtes obligatoires.
 
-## Mettre à jour un modèle d’audience {#create}
+## Mise à jour d’un modèle d’audience {#create}
 
-Vous pouvez mettre à jour une [existant](create-audience-template.md) modèle d’audience en effectuant une `PUT` à la fonction `/authoring/audience-templates` point de terminaison avec la payload mise à jour.
+Vous pouvez mettre à jour un modèle d’audience [existant](create-audience-template.md) en effectuant une requête `PUT` au point dʼentrée `/authoring/audience-templates` avec la payload mise à jour.
 
-Pour obtenir un modèle d&#39;audience existant et son `{INSTANCE_ID}`, voir l’article sur [récupération d’un modèle d’audience](retrieve-audience-template.md).
+Pour obtenir un modèle d’audience existant et son `{INSTANCE_ID}` correspondant, consultez l’article sur la [récupération d’un modèle d’audience](retrieve-audience-template.md).
 
 **Format d’API**
 
@@ -41,7 +41,7 @@ PUT /authoring/audience-templates/{INSTANCE_ID}
 
 | Paramètre | Description |
 | -------- | ----------- |
-| `{INSTANCE_ID}` | L’identifiant du modèle d’audience que vous souhaitez mettre à jour. Pour obtenir un modèle d&#39;audience existant et son `{INSTANCE_ID}`, voir [Récupération d’un modèle d’audience](retrieve-audience-template.md). |
+| `{INSTANCE_ID}` | Identifiant du modèle d’audience à mettre à jour. Pour obtenir un modèle d’audience existant et son `{INSTANCE_ID}` correspondant, consultez la section [Récupération d’un modèle d’audience](retrieve-audience-template.md). |
 
 La requête suivante met à jour un modèle de métadonnées d’audience existant, configuré par les paramètres fournis dans la payload.
 
@@ -147,7 +147,7 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/audience-te
 
 +++Réponse
 
-Une réponse réussie renvoie un état HTTP 200 avec les détails de votre modèle d’audience mis à jour.
+Une réponse réussie renvoie le statut HTTP 200 avec les détails du modèle dʼaudience mis à jour.
 
 +++
 
@@ -157,4 +157,4 @@ Les points d’entrée de l’API Destination SDK suivent les principes généra
 
 ## Étapes suivantes
 
-Après avoir lu ce document, vous savez à quel moment utiliser les modèles d’audience et comment mettre à jour un modèle d’audience à l’aide de la fonction `/authoring/audience-templates` Point d’entrée de l’API. Poursuivez votre apprentissage dans la section [Comment utiliser Destination SDK pour configurer votre destination](../guides/configure-destination-instructions.md) et obtenez une vue dʼensemble du processus de configuration de votre destination.
+Vous êtes arrivé au bout de ce document. À présent, vous savez quand utiliser les modèles d’audience et comment mettre à jour un modèle d’audience à l’aide du point dʼentrée `/authoring/audience-templates` de l’API. Consultez la documentation [Comment utiliser Destination SDK pour configurer la destination](../guides/configure-destination-instructions.md) afin de comprendre la place de cette étape dans le processus de configuration de la destination.

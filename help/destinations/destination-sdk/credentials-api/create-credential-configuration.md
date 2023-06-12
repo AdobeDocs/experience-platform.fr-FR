@@ -1,10 +1,10 @@
 ---
-description: Cette page illustre l’appel API utilisé pour créer un Adobe Experience Platform Destination SDK de configuration des informations d’identification.
+description: Cette page illustre comment l’appel API est utilisé pour créer une configuration d’informations d’identification avec Adobe Experience Platform Destination SDK.
 title: Création d’une configuration d’informations d’identification
 source-git-commit: 9e1ae44f83b886f0b5dd5a9fc9cd9b7db6154ff0
 workflow-type: tm+mt
 source-wordcount: '559'
-ht-degree: 50%
+ht-degree: 100%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 50%
 >
 >**Point d’entrée de l’API** : `platform.adobe.io/data/core/activation/authoring/credentials`
 
-Cette page illustre la requête d’API et la charge utile que vous pouvez utiliser pour créer une configuration d’informations d’identification à l’aide de la variable `/authoring/credentials` Point d’entrée de l’API.
+Cette page illustre la requête d’API et la payload que vous pouvez utiliser pour créer une configuration d’informations d’identification à l’aide du point d’entrée de l’API `/authoring/credentials`.
 
 ## Quand utiliser le point d’entrée de l’API `/credentials` {#when-to-use}
 
@@ -23,23 +23,23 @@ Cette page illustre la requête d’API et la charge utile que vous pouvez utili
 >
 >Dans la plupart des cas, vous ***ne devez pas*** utiliser le point d’entrée de l’API `/credentials`. Au lieu de cela, vous pouvez configurer les informations d’authentification pour votre destination via les paramètres `customerAuthenticationConfigurations` du point d’entrée `/destinations`.
 > 
->Lecture [Configuration de l’authentification du client](../functionality/destination-configuration/customer-authentication.md) pour plus d’informations sur les types d’authentification pris en charge.
+>Pour en savoir plus sur les types d’authentification pris en charge, consultez la documentation [Configuration de l’authentification du client](../functionality/destination-configuration/customer-authentication.md).
 
-Utilisez ce point de terminaison d’API pour créer une configuration d’informations d’identification uniquement s’il existe un système d’authentification global entre l’Adobe et votre plateforme de destination, et que la variable [!DNL Platform] Le client n’a pas besoin de fournir d’informations d’authentification pour se connecter à votre destination. Dans ce cas, vous devez créer une configuration d’informations d’identification à l’aide de la fonction `/credentials` Point d’entrée de l’API.
+Utilisez ce point d’entrée de l’API pour créer une configuration d’informations d’identification uniquement s’il existe un système d’authentification global entre Adobe et votre plateforme de destination et si le client [!DNL Platform] n’a pas besoin de fournir d’informations d’authentification pour se connecter à la destination. Dans ce cas, vous devez créer une configuration d’informations d’identification à l’aide du point d’entrée `/credentials` de l’API.
 
-Lorsque vous utilisez un système d’authentification global, vous devez définir `"authenticationRule":"PLATFORM_AUTHENTICATION"` dans le [diffusion de destination](../functionality/destination-configuration/destination-delivery.md) lors de la configuration [création d’une configuration de destination](../authoring-api/destination-configuration/create-destination-configuration.md).
+Quand vous utilisez un système d’authentification global, vous devez définir `"authenticationRule":"PLATFORM_AUTHENTICATION"` dans la configuration de [diffusion de destination](../functionality/destination-configuration/destination-delivery.md) au moment de la [création d’une configuration de destination](../authoring-api/destination-configuration/create-destination-configuration.md).
 
 >[!IMPORTANT]
 >
->Tous les noms et valeurs de paramètre pris en charge par Destination SDK sont **respect de la casse**. Pour éviter les erreurs de respect de la casse, veuillez utiliser les noms et valeurs des paramètres exactement comme indiqué dans la documentation.
+>Tous les noms et toutes les valeurs de paramètre pris en charge par Destination SDK **sont sensibles à la casse**. Pour éviter les erreurs de respect de la casse, utilisez les noms et valeurs des paramètres exactement comme indiqué dans la documentation.
 
-## Prise en main des opérations de l’API de des informations d’identification {#get-started}
+## Prise en main des opérations de l’API des informations d’identification {#get-started}
 
-Avant de poursuivre, veuillez consulter la section [guide de prise en main](../getting-started.md) pour obtenir des informations importantes à connaître afin d’effectuer avec succès des appels vers l’API, notamment sur la manière d’obtenir l’autorisation de création de destination requise et les en-têtes requis.
+Avant de poursuivre, consultez le [guide de prise en main](../getting-started.md) pour obtenir des informations importantes à connaître avant d’effectuer des appels vers l’API, notamment sur la manière d’obtenir l’autorisation de création de la destination et les en-têtes obligatoires.
 
 ## Créer la configuration des informations d’identification {#create}
 
-Vous pouvez créer une configuration d’informations d’identification en effectuant une `POST` à la fonction `/authoring/credentials` point de terminaison .
+Vous pouvez créer une configuration d’information d’identification en effectuant une requête `POST` vers le point d’entrée `/authoring/credentials`.
 
 **Format d’API**
 
@@ -47,9 +47,9 @@ Vous pouvez créer une configuration d’informations d’identification en effe
 POST /authoring/credentials
 ```
 
-Les requêtes suivantes créent de nouvelles configurations d’informations d’identification, définies par les paramètres fournis dans le payload.
+Les requêtes suivantes créent des configurations d’informations d’identification, définies par les paramètres fournis dans la payload.
 
-Sélectionnez chaque onglet ci-dessous pour afficher la charge utile correspondante.
+Sélectionnez chaque onglet ci-dessous pour afficher la payload correspondante.
 
 >[!BEGINTABS]
 
@@ -88,13 +88,13 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/credential
 
 +++Réponse
 
-Une réponse réussie renvoie un état HTTP 200 avec les détails de la configuration dʼinformations dʼidentification que vous venez de créer.
+Une réponse réussie renvoie le statut HTTP 200 avec les détails de la configuration dʼinformations dʼidentification que vous venez de créer.
 
 +++
 
->[!TAB Amazon S3]
+>[!TAB Amazon S3]
 
-**Créez un [!DNL Amazon S3] configuration des informations d’identification**
+**Création d’une configuration d’informations d’identification [!DNL Amazon S3]**
 
 +++**Requête**
 
@@ -116,8 +116,8 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/credential
 
 | Paramètre | Type | Description |
 | -------- | ----------- | ----------- |
-| `accessId` | Chaîne | [!DNL Amazon S3] ID d’accès |
-| `secretKey` | Chaîne | [!DNL Amazon S3] clé secrète |
+| `accessId` | Chaîne | Identifiant d’accès [!DNL Amazon S3] |
+| `secretKey` | Chaîne | Clé secrète [!DNL Amazon S3] |
 
 {style="table-layout:auto"}
 
@@ -125,7 +125,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/credential
 
 +++Réponse
 
-Une réponse réussie renvoie un état HTTP 200 avec les détails de la configuration dʼinformations dʼidentification que vous venez de créer.
+Une réponse réussie renvoie le statut HTTP 200 avec les détails de la configuration dʼinformations dʼidentification que vous venez de créer.
 
 +++
 
@@ -162,13 +162,13 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/credential
 
 +++Réponse
 
-Une réponse réussie renvoie un état HTTP 200 avec les détails de la configuration dʼinformations dʼidentification que vous venez de créer.
+Une réponse réussie renvoie le statut HTTP 200 avec les détails de la configuration dʼinformations dʼidentification que vous venez de créer.
 
 +++
 
->[!TAB Stockage du lac de données Azure]
+>[!TAB Azure Data Lake Storage]
 
-**Créez un [!DNL Azure Data Lake Storage] configuration des informations d’identification**
+**Création d’une configuration d’informations d’identification [!DNL Azure Data Lake Storage]**
 
 +++Requête
 
@@ -203,13 +203,13 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/credential
 
 +++Réponse
 
-Une réponse réussie renvoie un état HTTP 200 avec les détails de la configuration dʼinformations dʼidentification que vous venez de créer.
+Une réponse réussie renvoie le statut HTTP 200 avec les détails de la configuration dʼinformations dʼidentification que vous venez de créer.
 
 +++
 
 >[!TAB Stockage Azure Blob]
 
-**Créez un [!DNL Azure Blob Storage] configuration des informations d’identification**
+**Création d’une configuration d’informations d’identification [!DNL Azure Blob Storage]**
 
 +++Requête
 
@@ -230,7 +230,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/credential
 
 | Paramètre | Type | Description |
 | -------- | ----------- | ----------- |
-| `connectionString` | Chaîne | [!DNL Azure Blob Storage] chaîne de connexion |
+| `connectionString` | Chaîne | chaîne de connexion [!DNL Azure Blob Storage] |
 
 {style="table-layout:auto"}
 
@@ -238,7 +238,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/credential
 
 +++Réponse
 
-Une réponse réussie renvoie un état HTTP 200 avec les détails de la configuration dʼinformations dʼidentification que vous venez de créer.
+Une réponse réussie renvoie le statut HTTP 200 avec les détails de la configuration dʼinformations dʼidentification que vous venez de créer.
 
 +++
 
@@ -250,4 +250,4 @@ Les points d’entrée de l’API Destination SDK suivent les principes généra
 
 ## Étapes suivantes {#next-steps}
 
-Après avoir lu ce document, vous savez maintenant quand utiliser le point de terminaison des informations d’identification et comment configurer une configuration des informations d’identification à l’aide de la variable `/authoring/credentials` Lecture du point d’entrée API [comment utiliser la Destination SDK pour configurer votre destination](../guides/configure-destination-instructions.md) pour comprendre où cette étape s’inscrit dans le processus de configuration de votre destination.
+Vous êtes arrivé au bout de ce document. À présent, vous savez quand utiliser le point d’entrée des informations d’identification et comment configurer les informations d’identification à l’aide du point d’entrée `/authoring/credentials` de l’API. Découvrez [comment utiliser Destination SDK pour configurer la destination](../guides/configure-destination-instructions.md) afin de comprendre la place de cette étape dans le processus de configuration de la destination.
