@@ -4,10 +4,10 @@ solution: Experience Platform
 title: API Media Edge
 description: Présentation des API Media Edge.
 exl-id: null
-source-git-commit: f040ba6d1403da4212fe279e32316bac995905b2
+source-git-commit: 696ddd93d87601f9f6dedfd651ee12573dc4990a
 workflow-type: tm+mt
-source-wordcount: '387'
-ht-degree: 5%
+source-wordcount: '391'
+ht-degree: 4%
 
 ---
 
@@ -25,7 +25,7 @@ Les API Media Edge sont créées sur Adobe Experience Platform (AEP) pour fourni
 
 ## Optimisation des flux de données de suivi multimédia
 
-Les [Collection multimédia](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-overview.html?lang=en&amp;media-tracking-data-flows) Les API et les API Media Edge fournissent des données de suivi multimédia en tant que services RESTful. Toutefois, l’utilisation du service Media Edge présente les avantages suivants :
+Les [API Media Collection](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-overview.html?lang=en&amp;media-tracking-data-flows) et les API Media Edge fournissent des données de suivi multimédia en tant que services RESTful. Toutefois, l’utilisation du service Media Edge présente les avantages suivants :
 
 * Il s’agit du moyen le plus simple d’incorporer des schémas XDM dans votre flux de données.
 
@@ -33,14 +33,14 @@ Les [Collection multimédia](https://experienceleague.adobe.com/docs/media-analy
 
 * Il effectue le suivi le plus efficace des événements multimédia.
 
-Le tableau suivant présente le meilleur service d’API Adobe pour divers cas d’analyse des médias :
+Le tableau suivant présente un service d’API d’Adobe possible pour divers cas d’analyse des médias :
 
-| Cas d’utilisation | Plateforme | Service API |
-| -------- | ------ | ---------- |
-| CJA | AEP | Media Edge |
-| CDP + CJA | AEP | Media Edge |
-| Analytics + CJA | AEP | Media Edge |
-| Analytics hérité | S/O | Collection Médias |
+| Cas d’utilisation | Service API |
+| -------- | ------ |
+| Solution AEP (CJA, RTDCP, AJO, etc.) | Media Edge |
+| CDP + CJA | Media Edge |
+| Solution Adobe Analytics + AEP | Media Edge |
+| Adobe Analytics uniquement (suivi déjà effectué) | Collection Médias |
 
 >[!NOTE]
 >

@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Prise en main des API Media Edge
 description: Prise en main des API Media Edge
 exl-id: null
-source-git-commit: 8592bcc7a6d6700ec9b689b98d07a15f0b9301b2
+source-git-commit: 696ddd93d87601f9f6dedfd651ee12573dc4990a
 workflow-type: tm+mt
-source-wordcount: '937'
-ht-degree: 8%
+source-wordcount: '963'
+ht-degree: 7%
 
 ---
 
@@ -101,18 +101,18 @@ curl -i --request POST '{uri}/ee/va/v1/sessionStart?configId={dataStreamId}' \
 
 Dans l’exemple de requête ci-dessus, la variable `eventType` contient le préfixe `media` selon la variable [Modèle de données d’expérience (XDM)](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=fr) pour la spécification de domaines.
 
-En outre, le mappage des types de données pour `eventType` dans l’exemple ci-dessus, les champs suivants (les champs de création de rapports uniquement ne doivent pas être présents dans la payload) :
+En outre, le mappage des types de données pour `eventType` dans l’exemple ci-dessus, les éléments suivants sont proposés :
 
-| eventType | datatypes | champs de rapport uniquement (ignorés) |
-| -------- | ------ | ---------- |
-| mediaSessionStart | sessionDetails | ID, adCount, averageMinuteAudience, chapterCount, estimatedStreams, hasPauseImpactedStreams, hasProgress10, hasProgress25, hasProgress50, hasProgress75, hasProgress95, hasSegmentView, isCompleted, isDownloaded, isFederated, isPlayed, isPlayed , isViewed, pauseCount, pauseTime, secondsSinceLastCall, segment, timePlayed, totalTimePlayed, uniqueTimePlayed, pev3, pcr |
-| media.chapterStart | chapterDetails | ID, isCompleted, isStarted, timePlayed |
-| media.adBreakStart | advertisingPodDetails | Identifiant |
-| media.adStart | advertisingDetails | ID, isCompleted, isStarted, timePlayed |
-| media.error | errorDetails | - |
-| media.statesUpdate | statesStart : Tableau[playerStateData], statesEnd : Tableau[playerStateData] | playerStateData.isSet, playerStateData.count, playerStateData.time |
-| media.sessionStart, media.chapterStart, media.adStart | customMetadata | - |
-| tous | qoeDataDetails | bitrateAverage, bitrateAverageBucket, bitrateChangeCount, bufferCount, bufferTime, errorCount, externalErrors, hasBitrateChangeImpactedStreams, hasBufferImpactedStreams, hasDrsecondFrameImpactedStreams, hasErrorImpactedStreams, hasStallImpactedStreams, isDrsecondBeforeStart, mediaSdkErrors, playerSdkErrors, stallCount, stallTime |
+| eventType | datatypes |
+| -------- | ------ |
+| mediaSessionStart | [sessionDetails](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/sessiondetails.schema.md) |
+| media.chapterStart | [chapterDetails](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/chapterdetails.schema.md) |
+| media.adBreakStart | [advertisingPodDetails](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/advertisingpoddetails.schema.md) |
+| media.adStart | [advertisingDetails](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/advertisingdetails.schema.md) |
+| media.error | [errorDetails](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/errordetails.schema.md) |
+| media.statesUpdate | [statesStart](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/mediadetails.schema.md#xdmstatesstart): Tableau[playerStateData], [statesEnd](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/mediadetails.schema.md#xdmstatesend): Tableau[playerStateData] |
+| media.sessionStart, media.chapterStart, media.adStart | [customMetadata](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/mediadetails.schema.md#xdmcustommetadata) |
+| tous | [qoeDataDetails](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/qoedatadetails.schema.md) |
 
 ### Exemple de réponse
 
