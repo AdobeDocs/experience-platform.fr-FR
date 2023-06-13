@@ -4,9 +4,9 @@ description: Découvrez comment compléter les profils propriétaires avec des a
 hide: true
 hidefromtoc: true
 badgeBeta: label="Beta" type="informative" before-title="true"
-source-git-commit: c4f34afb7a05707ed9f62f09685ff50a1de2ef93
+source-git-commit: 500475af5e7c80e670324a5c70ed18cc813199be
 workflow-type: tm+mt
-source-wordcount: '1092'
+source-wordcount: '1066'
 ht-degree: 0%
 
 ---
@@ -66,14 +66,20 @@ Pour plus d’informations, consultez les pages de documentation ci-dessous :
 * [Présentation de la variable [!UICONTROL XDM Individual Profile] class](/help/xdm/classes/individual-profile.md)
 * [Création et modification de schémas dans l’interface utilisateur](/help/xdm/ui/resources/schemas.md)
 * [Création et modification de groupes de champs de schéma dans l’interface utilisateur](/help/xdm/ui/resources/field-groups.md)
-* [Création et modification de schémas à l’aide de l’API](/help/xdm/api/schemas.md#create)
-* [Mettre à jour un schéma existant pour ajouter des groupes de champs à l’aide de l’API](/help/xdm/api/schemas.md#patch)
-* Lien vers la nouvelle page de documentation du groupe de champs lorsqu’elle existe
+
+<!--
+
+Commenting out links for now
+* [Create and edit schemas using the API](/help/xdm/api/schemas.md#create)
+* [Update an existing schema to add field groups using the API](/help/xdm/api/schemas.md#patch)
+* Link to new field group documentation page when it exists
+
+-->
 
 Au cours de cette étape également, réfléchissez à la manière dont votre modèle de gouvernance des données change à mesure que vous développez votre stratégie de gestion des données pour inclure les données tierces fournies par le partenaire. Consultez les points à prendre en compte dans les liens de documentation ci-dessous :
 
 * (**Bientôt disponible**) Conserver les données tierces dans un jeu de données distinct afin de faciliter la suppression et l’annulation des intégrations.
-* (**Bientôt disponible**) Utilisez TTL sur le jeu de données pour les clients qui disposent du module complémentaire d’hygiène des données.
+* (**Bientôt disponible**) Utilisez la durée de vie (TTL) sur le jeu de données pour les clients qui ont acheté le module complémentaire d’hygiène des données.
 * (**Bientôt disponible**) Soyez prudent lors de la création de jeux de données dérivés qui extraient des données tierces, car une fois mélangés, la seule solution pour supprimer les données tierces consiste à supprimer l’ensemble du jeu de données dérivé.
 
 >[!TIP]
@@ -111,7 +117,7 @@ Voici quelques connecteurs source recommandés à cet effet :
 
 Notez les limites suivantes lorsque vous explorez le cas d’utilisation décrit sur cette page :
 
-Si vous choisissez d’utiliser des identifiants de partenaire, notez qu’ils ne sont pas utilisés dans pour créer votre [graphique d’identités](/help/identity-service/ui/identity-graph-viewer.md).
+Si vous choisissez d’utiliser des identifiants de partenaire, sachez que ces identifiants ne sont pas utilisés lors de la création de votre [graphique d’identités](/help/identity-service/ui/identity-graph-viewer.md).
 
 ## Autres cas d’utilisation réalisés grâce à la prise en charge des données des partenaires {#other-use-cases}
 
