@@ -3,8 +3,7 @@ keywords: Experience Platform;bannière multimédia;rubriques les plus consulté
 solution: Experience Platform
 title: API Media Edge
 description: Présentation des API Media Edge.
-exl-id: null
-source-git-commit: 696ddd93d87601f9f6dedfd651ee12573dc4990a
+source-git-commit: 9d535c8d6524d61612581fbf82986bc5c5cf52de
 workflow-type: tm+mt
 source-wordcount: '391'
 ht-degree: 4%
