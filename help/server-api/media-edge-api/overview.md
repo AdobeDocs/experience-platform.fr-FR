@@ -3,9 +3,9 @@ keywords: Experience Platform;bannière multimédia;rubriques les plus consulté
 solution: Experience Platform
 title: API Media Edge
 description: Présentation des API Media Edge.
-source-git-commit: 9d535c8d6524d61612581fbf82986bc5c5cf52de
+source-git-commit: 4f60b00026a226aa6465b2c21b3c2198962a1e3b
 workflow-type: tm+mt
-source-wordcount: '391'
+source-wordcount: '396'
 ht-degree: 4%
 
 ---
@@ -17,7 +17,7 @@ Les API Media Edge sont créées sur Adobe Experience Platform (AEP) pour fourni
 
 * Avec [Customer Journey Analytics (CJA)](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=fr), les clients peuvent obtenir des détails détaillés en temps quasi réel sur la durée, les démarrages et les arrêts pour évaluer et combiner les mesures multimédia. Toutes les mesures de création de rapports sont disponibles dans CJA pour les clients effectuant la migration depuis Adobe Analytics.
 
-* Avec [Adobe Real-time Customer Data Platform (CDP)](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html?lang=fr), les clients peuvent enrichir leurs profils en temps réel avec des données de consommation multimédia.
+* Avec [Adobe Real-time Customer Data Platform (RTCDP)](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html?lang=fr), les clients peuvent enrichir leurs profils en temps réel avec des données de consommation multimédia.
 
 * Avec [Adobe Journey Optimizer (AJO)](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/get-started.html?lang=en), les clients peuvent optimiser les campagnes omnicanal et automatiser les parcours à l’aide de signaux de consommation multimédia.
 
@@ -30,7 +30,7 @@ Les [API Media Collection](https://experienceleague.adobe.com/docs/media-analyti
 
 * Les appels sont dirigés d’un lecteur multimédia directement vers [Réseau Experience Edge Platform](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/overview.html?lang=en).
 
-* Il effectue le suivi le plus efficace des événements multimédia.
+* Il effectue un suivi efficace des événements multimédia avec un minimum d’appels inter-serveurs.
 
 Le tableau suivant présente un service d’API d’Adobe possible pour divers cas d’analyse des médias :
 
@@ -51,7 +51,7 @@ Le graphique suivant montre les flux de données des deux services API :
 ![Flux de données Media Analytics](../assets/edge-api-dataflow.png)
 
 
-Pour plus d’informations sur l’utilisation des API Media Edge, consultez la documentation Prise en main .
+Pour plus d’informations sur l’utilisation des API Media Edge, reportez-vous à la section [Documentation de prise en main](getting-started.md).
 
 Pour plus d’informations sur l’utilisation de Platform Edge, voir [Installation de Media Analytics avec Experience Platform Edge](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/implementation-edge.html?lang=en).
 

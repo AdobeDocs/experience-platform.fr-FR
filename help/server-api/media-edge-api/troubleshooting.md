@@ -3,9 +3,9 @@ keywords: Experience Platform;bannière multimédia;rubriques les plus consulté
 solution: Experience Platform
 title: Prise en main des API Media Edge
 description: Guide de dépannage des API Media Edge
-source-git-commit: b4687fa7f1a2eb8f206ad41eae0af759b0801b83
+source-git-commit: f723114eebc9eb6bfa2512b927c5055daf97188b
 workflow-type: tm+mt
-source-wordcount: '677'
+source-wordcount: '678'
 ht-degree: 1%
 
 ---
@@ -17,7 +17,7 @@ Ce guide fournit des instructions de dépannage pour gérer les erreurs et obten
 
 ## Utilisation des aides de réponse aux erreurs
 
-Pour aider à résoudre les problèmes de réponses infructueuses, les erreurs sont accompagnées d’un corps de réponse contenant un objet d’erreur. Dans ce cas, le corps de la réponse contient les détails du problème, tels que définis par [RFC 7807 - Détails du problème pour les API HTTP](https://datatracker.ietf.org/doc/html/rfc7807). Pour améliorer l’expérience utilisateur de l’API, les détails du problème sont descriptifs (les détails des clés du tableau sont affichés à l’aide de JsonPath sur le champ manquant ou non valide). Ils sont également cumulatifs (tous les champs non valides seront signalés dans la même requête).
+Pour résoudre les problèmes liés aux réponses qui n’ont pas abouti, les erreurs sont accompagnées d’un corps de réponse contenant un objet d’erreur. Dans ce cas, le corps de la réponse contient les détails du problème, tels que définis par [RFC 7807 - Détails du problème pour les API HTTP](https://datatracker.ietf.org/doc/html/rfc7807). Pour améliorer l’expérience utilisateur de l’API, les détails du problème sont descriptifs (les détails des clés du tableau sont affichés à l’aide de JsonPath sur le champ manquant ou non valide). Ils sont également cumulatifs (tous les champs non valides seront signalés dans la même requête).
 
 
 ## Validation des démarrages de session
@@ -110,17 +110,17 @@ Le tableau suivant fournit des instructions pour gérer les erreurs de réponse 
 
 | Code d’erreur | Description |
 | ---------- | --------- |
-| 4xx Mauvaise requête | La plupart des erreurs 4xx (par exemple, 400, 403, 404) ne doivent pas être relancées par l’utilisateur. Une nouvelle tentative de la requête n’entraîne pas de réponse réussie. L’utilisateur doit corriger l’erreur avant de retenter la requête. Les événements qui résultent en codes d’état 4xx ne sont pas suivis, ce qui peut potentiellement affecter la précision des données dans les sessions qui ont reçu des réponses 4xx. |
-| 410 Gone | Indique que la session prévue pour le suivi n’est plus calculée côté serveur. La raison la plus courante est que la session dure plus de 24 heures. Après avoir reçu 410, essayez de démarrer une nouvelle session et de la suivre. |
+| 4xx Mauvaise requête | La plupart des erreurs 4xx (par ex. `400`, `403`, `404`) ne doit pas être relancé par l’utilisateur. Une nouvelle tentative de la requête n’entraîne pas de réponse réussie. L’utilisateur doit corriger l’erreur avant de retenter la requête. Les événements qui résultent en codes d’état 4xx ne sont pas suivis, ce qui peut potentiellement affecter la précision des données dans les sessions qui ont reçu des réponses 4xx. |
+| 410 Gone | Indique que la session prévue pour le suivi n’est plus calculée côté serveur. La raison la plus courante est que la session dure plus de 24 heures. Après réception d’un `410`, essayez de démarrer une nouvelle session et d’en effectuer le suivi. |
 | 429 Too many requests | Ce code de réponse indique que le serveur limite le débit des requêtes. Suivez la **Retry-After** instructions dans l’en-tête de réponse avec précaution. Toutes les réponses renvoyées doivent comporter le code de réponse HTTP avec un code d’erreur spécifique au domaine. |
-| 500 Erreur interne du serveur | Les erreurs 500 sont génériques, des erreurs fourre-tout. Les erreurs 500 ne doivent pas être retentées, à l’exception des erreurs 502, 503 et 504. |
-| 502 Bad gateway | Ce code d’erreur Indique que le serveur, lorsqu’il agissait en tant que passerelle, a reçu une réponse non valide des serveurs en amont. Cela peut être dû à des problèmes réseau entre les serveurs. Le problème de réseau temporaire peut se résoudre de manière à ce que la nouvelle tentative de requête puisse résoudre le problème. |
-| Service indisponible | Ce code d’erreur indique que le service est temporairement indisponible. Cela peut se produire pendant les périodes de maintenance. Les destinataires avec une erreur 503 peuvent réessayer la requête, mais doivent également suivre le **Retry-After** instructions d’en-tête. |
+| 500 Erreur interne du serveur | `500` les erreurs sont génériques, des erreurs fourre-tout. `500` Les erreurs ne doivent pas être retentées, à l’exception de `502`, `503` et `504`. |
+| 502 Bad gateway | Ce code d’erreur Indique que le serveur, lorsqu’il agissait en tant que passerelle, a reçu une réponse non valide des serveurs en amont. Cela peut être dû à des problèmes réseau entre les serveurs. Le problème réseau temporaire peut se résoudre de lui-même. Une nouvelle tentative de requête peut donc résoudre le problème. |
+| Service 503 indisponible | Ce code d’erreur indique que le service est temporairement indisponible. Cela peut se produire pendant les périodes de maintenance. Destinataires de `503` Les erreurs peuvent réessayer la requête, mais doivent également suivre le **Retry-After** instructions d’en-tête. |
 
 
-Événements de mise en file d’attente lorsque les réponses de session sont lentes
+## Événements de mise en file d’attente lorsque les réponses de session sont lentes
 
-Après le démarrage d’une session de suivi multimédia, le lecteur multimédia peut se déclencher avant que la réponse de début de session ne soit renvoyée (avec le paramètre d’ID de session) depuis le serveur principal. Si cela se produit, votre application doit mettre en file d’attente tous les événements de suivi qui arrivent entre la requête Session et sa réponse. Lorsque la réponse sessions arrive, vous devez d’abord traiter les événements placés dans la file d’attente, puis commencer à traiter les événements en direct.
+Après le démarrage d’une session de suivi multimédia, le lecteur multimédia peut se déclencher avant que la réponse de début de session ne soit renvoyée (avec le paramètre d’ID de session) depuis le serveur principal. Si cela se produit, votre application doit mettre en file d’attente tous les événements de suivi qui arrivent entre la requête de début de session et sa réponse. Lorsque la réponse sessions arrive, vous devez d’abord traiter les événements placés dans la file d’attente, puis commencer à traiter les événements en direct.
 
 Pour de meilleurs résultats, consultez le lecteur de référence dans votre distribution pour obtenir des instructions sur le traitement des événements avant de recevoir un ID de session.
 
