@@ -1,17 +1,17 @@
 ---
-title: (Version bêta) Compléter les profils propriétaires avec les attributs fournis par le partenaire
-description: Découvrez comment compléter les profils propriétaires avec des attributs de partenaires de données de confiance pour améliorer vos bases de données, obtenir de nouvelles informations sur votre base de clients et optimiser l’audience
+title: (Version bêta) Complémentation de profils propriétaires avec des attributs fournis par le partenaire
+description: Découvrez comment compléter les profils propriétaires avec des attributs de partenaires de données de confiance pour améliorer vos bases de données, obtenir de nouvelles informations sur votre base de clients et optimiser l’audience.
 hide: true
 hidefromtoc: true
 badgeBeta: label="Beta" type="informative" before-title="true"
-source-git-commit: 500475af5e7c80e670324a5c70ed18cc813199be
+source-git-commit: 2a072ce9351a84263a50597967b994162de18d81
 workflow-type: tm+mt
-source-wordcount: '1066'
+source-wordcount: '1080'
 ht-degree: 0%
 
 ---
 
-# Compléter les profils propriétaires avec les attributs fournis par les partenaires
+# Complémentation de profils propriétaires avec des attributs fournis par le partenaire
 
 >[!AVAILABILITY]
 >
@@ -40,7 +40,7 @@ Lorsque vous envisagez de compléter vos propres profils propriétaires avec des
 
 1. Comme **client**, vous autorisez les attributs à partir de la variable **partenaire de données**.
 2. Comme **client**, vous étendez vos données de profil et votre modèle de gouvernance pour les adapter **partenaire** Attributs fournis par .
-3. Comme **client**, vous intégrez les audiences que vous souhaitez enrichir au partenaire de données. En règle générale, ces audiences sont composées d’identifiants d’entrée comme des éléments d’informations d’identification personnelle (PII) tels que l’adresse électronique, le nom, l’adresse ou d’autres.
+3. Comme **client**, vous intégrez les audiences que vous souhaitez enrichir avec le partenaire de données. En règle générale, ces audiences sont composées d’identifiants d’entrée comme des éléments d’informations d’identification personnelle (PII) tels que l’adresse électronique, le nom, l’adresse ou d’autres.
 4. Le **partenaire** ajoute des attributs sous licence pour les profils avec lesquels ils peuvent établir une correspondance. Si vous le souhaitez, une [Identifiant du partenaire](/help/identity-service/namespaces.md) peut être inclus et ingéré dans l’espace de noms de l’ID de portée du partenaire.
 5. Comme **client**, vous chargez des attributs du partenaire de données dans les profils client de Real-Time CDP.
 
@@ -50,7 +50,7 @@ Lisez les sections ci-dessous, qui contiennent des liens vers d’autres documen
 
 ### Attributs de licence du partenaire {#license-attributes-from-partner}
 
-Cette étape est traitée dans les conditions préalables et Adobe suppose que vous avez mis en place les bons accords contractuels avec les fournisseurs de données de confiance pour augmenter vos profils propriétaires.
+Cette étape est décrite dans la section [conditions préalables](#prerequisites-and-planning) et Adobe suppose que vous avez mis en place les accords contractuels appropriés avec des fournisseurs de données de confiance pour augmenter vos profils propriétaires.
 
 ### Étendez vos données de profil et votre modèle de gouvernance pour prendre en compte les attributs fournis par les partenaires. {#extend-governance-model}
 
@@ -58,7 +58,7 @@ Cette étape est traitée dans les conditions préalables et Adobe suppose que v
 
 Vous avez la possibilité de créer un nouveau schéma du **[!UICONTROL XDM Individual Profile]** ou étendre un schéma existant du même type pour inclure des attributs fournis par le partenaire. Adobe recommande vivement de créer un nouveau schéma avec un nouvel ensemble de groupes de champs qui représentent le mieux les attributs supplémentaires du fournisseur de données. Cela garantit que vos schémas de données sont propres et peuvent évoluer indépendamment les uns des autres.
 
-Pour inclure des attributs fournis par un partenaire dans un schéma, vous pouvez soit créer un groupe de champs avec les attributs attendus, soit utiliser l’un des groupes de champs d’usine fournis par Adobe.
+Pour inclure des attributs fournis par un partenaire dans un schéma, vous pouvez soit créer un groupe de champs avec les attributs attendus, soit utiliser l’un des groupes de champs préconfigurés fournis par Adobe.
 
 Pour plus d’informations, consultez les pages de documentation ci-dessous :
 
@@ -79,7 +79,7 @@ Commenting out links for now
 Au cours de cette étape également, réfléchissez à la manière dont votre modèle de gouvernance des données change à mesure que vous développez votre stratégie de gestion des données pour inclure les données tierces fournies par le partenaire. Consultez les points à prendre en compte dans les liens de documentation ci-dessous :
 
 * (**Bientôt disponible**) Conserver les données tierces dans un jeu de données distinct afin de faciliter la suppression et l’annulation des intégrations.
-* (**Bientôt disponible**) Utilisez la durée de vie (TTL) sur le jeu de données pour les clients qui ont acheté le module complémentaire d’hygiène des données.
+* (**Bientôt disponible**) [Durée de vie (TTL)](/help/hygiene/ui/dataset-expiration.md) sur le jeu de données pour les clients ayant acheté le module complémentaire d’hygiène des données.
 * (**Bientôt disponible**) Soyez prudent lors de la création de jeux de données dérivés qui extraient des données tierces, car une fois mélangés, la seule solution pour supprimer les données tierces consiste à supprimer l’ensemble du jeu de données dérivé.
 
 >[!TIP]
@@ -87,10 +87,9 @@ Au cours de cette étape également, réfléchissez à la manière dont votre mo
 >Si vous choisissez de compléter vos profils client avec un identifiant basé sur la personne du fournisseur de données, vous pouvez créer un nouveau type d’identité du type . **[[!UICONTROL Identifiant du partenaire]](/help/identity-service/namespaces.md)**.
 >
 >En savoir plus sur l’identifiant de partenaire dans la section [section types d’identité](/help/identity-service/namespaces.md).
-> En savoir plus [comment définir des champs d’identité](/help/xdm/ui/fields/identity.md) dans l’interface utilisateur de l’Experience Platform.
+>En savoir plus [comment définir des champs d’identité](/help/xdm/ui/fields/identity.md) dans l’interface utilisateur de l’Experience Platform.
 
-
-### Exporter les audiences que vous souhaitez enrichir à partir des informations d’identification personnelles (PII) ou des informations d’identification hachées {#export-audiences}
+### Exporter les audiences que vous souhaitez enrichir en saisissant des informations d’identification personnelles (PII) ou des informations d’identification hachées {#export-audiences}
 
 Exportez les audiences que le partenaire doit enrichir. Utilisez les destinations de stockage dans le cloud fournies par la plateforme de données clients en temps réel, telles qu’Amazon S3 ou SFTP. Lisez les pages de documentation suivantes pour terminer cette étape :
 
@@ -99,10 +98,9 @@ Exportez les audiences que le partenaire doit enrichir. Utilisez les destination
 * Comment [se connecter à une destination](/help/destinations/ui/connect-destination.md)
 * Comment [exporter des données vers une destination de stockage dans le cloud](/help/destinations/ui/activate-batch-profile-destinations.md)
 
+### Votre partenaire de données ajoute des attributs sous licence pour les profils contre lesquels il peut établir une correspondance. {#partner-appends-attributes}
 
-### Le partenaire ajoute des attributs sous licence pour les profils contre lesquels il peut établir une correspondance. {#partner-appends-attributes}
-
-Au cours de cette étape, le partenaire ajoute des attributs sous licence pour l’audience exportée. La sortie est généralement disponible sous la forme d’un fichier plat qui peut être ingéré à nouveau dans Real-Time CDP.
+Au cours de cette étape, votre partenaire de données ajoute des attributs sous licence pour l’audience exportée. La sortie est généralement disponible sous la forme d’un fichier plat qui peut être ingéré à nouveau dans Real-Time CDP. En savoir plus sur [ingestion de fichiers dans Real-Time CDP](/help/ingestion/tutorials/ingest-batch-data.md#upload-file).
 
 ### Real-Time CDP ajoute des attributs enrichis dans le profil du client {#ingest-data}
 
@@ -117,7 +115,7 @@ Voici quelques connecteurs source recommandés à cet effet :
 
 Notez les limites suivantes lorsque vous explorez le cas d’utilisation décrit sur cette page :
 
-Si vous choisissez d’utiliser des identifiants de partenaire, sachez que ces identifiants ne sont pas utilisés lors de la création de votre [graphique d’identités](/help/identity-service/ui/identity-graph-viewer.md).
+* Si vous choisissez d’utiliser des identifiants de partenaire, sachez que ces identifiants ne sont pas utilisés lors de la création de votre [graphique d’identités](/help/identity-service/ui/identity-graph-viewer.md).
 
 ## Autres cas d’utilisation réalisés grâce à la prise en charge des données des partenaires {#other-use-cases}
 
