@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Guide de l’interface utilisateur des sandbox
 description: Ce document fournit la procédure à suivre pour réaliser différentes opérations associées aux sandbox dans l’interface utilisateur d’Adobe Experience Platform.
 exl-id: b258c822-5182-4217-9d1b-8196d889740f
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 70bbfd4e2971367c9b7b88bd4bc7985d9e6fbb1e
 workflow-type: tm+mt
-source-wordcount: '816'
-ht-degree: 100%
+source-wordcount: '953'
+ht-degree: 85%
 
 ---
 
@@ -77,7 +77,30 @@ Lorsque vous avez terminé de créer le sandbox, actualisez la page pour que le 
 
 >[!WARNING]
 >
->Voici une liste d’exceptions qui peuvent vous empêcher de réinitialiser le sandbox de production par défaut ou un sandbox de production créé par l’utilisateur ou l’utilisatrice : <ul><li>Le sandbox de production par défaut ne peut pas être réinitialisé si le graphique d’identités hébergé dans le sandbox est également utilisé par Adobe Analytics pour la fonctionnalité [Analyses sur l’ensemble des appareils (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html?lang=fr).</li><li>Le sandbox de production par défaut ne peut pas être réinitialisé si le graphique d’identités hébergé dans le sandbox est également utilisé par Adobe Audience Manager pour les [Destinations basées sur les personnes (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html?lang=fr).</li><li>Le sandbox de production par défaut ne peut pas être réinitialisé s’il contient des données pour les fonctionnalités CDA et PBD en même temps.</li><li>Un sandbox de production créé par l’utilisateur ou l’utilisatrice et utilisé pour le partage bidirectionnel de segments avec Adobe Audience Manager ou Audience Core Service peut être réinitialisé après un message d’avertissement.</li></ul>
+>Voici une liste d’exceptions qui peuvent vous empêcher de réinitialiser le sandbox de production par défaut ou un sandbox de production créé par l’utilisateur ou l’utilisatrice :
+>* Le sandbox de production par défaut ne peut pas être réinitialisé si le graphique d’identités hébergé dans le sandbox est également utilisé par Adobe Analytics pour la fonctionnalité [Analyses sur l’ensemble des appareils (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html?lang=fr).
+>* Le sandbox de production par défaut ne peut pas être réinitialisé si le graphique d’identités hébergé dans le sandbox est également utilisé par Adobe Audience Manager pour les [Destinations basées sur les personnes (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html?lang=fr).
+>* Le sandbox de production par défaut ne peut pas être réinitialisé s’il contient des données pour les fonctionnalités CDA et PBD en même temps.
+>* Un sandbox de production créé par l’utilisateur ou l’utilisatrice et utilisé pour le partage bidirectionnel de segments avec Adobe Audience Manager ou Audience Core Service peut être réinitialisé après un message d’avertissement.
+>* Avant de réinitialiser un environnement de test, vous devrez supprimer manuellement vos compositions pour vous assurer que les données d’audience associées sont correctement nettoyées.
+
+### Suppression de compositions d’audience
+
+La composition de l’audience n’est actuellement pas intégrée à la fonctionnalité de réinitialisation des environnements de test. Par conséquent, les audiences doivent être supprimées manuellement avant d’effectuer la réinitialisation des environnements de test.
+
+Sélectionner **[!UICONTROL Audiences]** dans le volet de navigation de gauche, puis sélectionnez **[!UICONTROL Compositions]**.
+
+![Le [!UICONTROL Compositions] dans le [!UICONTROL Audiences] workspace.](../images/ui/audiences.png)
+
+Sélectionnez ensuite les points de suspension (`...`) en regard de la première audience, puis sélectionnez **[!UICONTROL Supprimer]**.
+
+![Le menu Audience met en surbrillance la variable [!UICONTROL Supprimer] .](../images/ui/delete-composition.png)
+
+Une confirmation de suppression réussie s’affiche et vous revenez au **[!UICONTROL Compositions]** .
+
+Répétez les étapes ci-dessus avec toutes vos compositions. Toutes les audiences seront alors supprimées de l’inventaire des audiences. Une fois toutes les audiences supprimées, vous pouvez continuer à réinitialiser l’environnement de test.
+
+### Réinitialisation d’un environnement de test
 
 La réinitialisation d’un sandbox de production ou de développement supprime toutes les ressources associées à ce sandbox (schémas, jeux de données, etc.) tout en conservant le nom et les autorisations associées du sandbox. Ce sandbox « propre » reste disponible avec le même nom auprès des utilisateurs qui y ont accès.
 
