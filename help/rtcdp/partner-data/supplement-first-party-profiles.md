@@ -4,9 +4,9 @@ description: Découvrez comment compléter les profils propriétaires avec des a
 hide: true
 hidefromtoc: true
 badgeBeta: label="Beta" type="informative" before-title="true"
-source-git-commit: 2a072ce9351a84263a50597967b994162de18d81
+source-git-commit: 019ebe0c1cf11a7fb30dced1e10b511bab9b5100
 workflow-type: tm+mt
-source-wordcount: '1080'
+source-wordcount: '1082'
 ht-degree: 0%
 
 ---
@@ -79,7 +79,7 @@ Commenting out links for now
 Au cours de cette étape également, réfléchissez à la manière dont votre modèle de gouvernance des données change à mesure que vous développez votre stratégie de gestion des données pour inclure les données tierces fournies par le partenaire. Consultez les points à prendre en compte dans les liens de documentation ci-dessous :
 
 * (**Bientôt disponible**) Conserver les données tierces dans un jeu de données distinct afin de faciliter la suppression et l’annulation des intégrations.
-* (**Bientôt disponible**) [Durée de vie (TTL)](/help/hygiene/ui/dataset-expiration.md) sur le jeu de données pour les clients ayant acheté le module complémentaire d’hygiène des données.
+* (**Bientôt disponible**) Utilisez la variable [expiration du jeu de données](/help/hygiene/ui/dataset-expiration.md) fonctionnalité du jeu de données pour les clients qui ont acheté le module complémentaire d’hygiène des données.
 * (**Bientôt disponible**) Soyez prudent lors de la création de jeux de données dérivés qui extraient des données tierces, car une fois mélangés, la seule solution pour supprimer les données tierces consiste à supprimer l’ensemble du jeu de données dérivé.
 
 >[!TIP]
