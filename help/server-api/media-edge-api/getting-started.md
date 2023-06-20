@@ -1,61 +1,60 @@
 ---
-keywords: Experience Platform;bannière multimédia;rubriques les plus consultées;période
 solution: Experience Platform
 title: Prise en main des API Media Edge
 description: Prise en main des API Media Edge
-source-git-commit: 4f60b00026a226aa6465b2c21b3c2198962a1e3b
+source-git-commit: 6570149298defe1aeb0c3e35cb71e166aeb7a3f7
 workflow-type: tm+mt
-source-wordcount: '979'
-ht-degree: 7%
+source-wordcount: '960'
+ht-degree: 6%
 
 ---
 
 
 # Prise en main de l’API Media Edge
 
-Ce guide fournit des instructions pour établir des interactions initiales réussies avec le service d’API Media Edge. Cela inclut le démarrage d’une session multimédia, puis le suivi des événements envoyés à une solution Adobe Experience Platform (AEP) telle que Customer Journey Analytics (CJA). Le service d’API Media Edge est lancé avec le point de terminaison Démarrage de session. Une fois la session lancée, un ou plusieurs des événements suivants peuvent être suivis :
+Ce guide fournit des instructions pour établir des interactions initiales réussies avec le service d’API Media Edge. Cela inclut le démarrage d’une session multimédia, puis le suivi des événements envoyés à une solution Adobe Experience Platform telle que Customer Journey Analytics (CJA). Le service d’API Media Edge est lancé avec le point de terminaison Démarrage de session. Une fois la session lancée, un ou plusieurs des événements suivants peuvent être suivis :
 
-* play
-* ping
-* bitrateChange
-* bufferStart
-* pauseStart
-* adBreakStart
-* adStart
-* adComplete
-* adSkip
-* adBreakComplete
-* chapterStart
-* chapterComplete
-* chapterSkip
-* error
-* sessionEnd
-* sessionComplete
-* statesUpdate
+* `play`
+* `ping`
+* `bitrateChange`
+* `bufferStart`
+* `pauseStart`
+* `adBreakStart`
+* `adStart`
+* `adComplete`
+* `adSkip`
+* `adBreakComplete`
+* `chapterStart`
+* `chapterComplete`
+* `chapterSkip`
+* `error`
+* `sessionEnd`
+* `sessionComplete`
+* `statesUpdate`
 
 Chaque événement possède son propre point de terminaison. Tous les points de terminaison de l’API Media Edge sont des méthodes de POST, avec des corps de requête JSON pour les données d’événement. Pour plus d’informations sur les points de terminaison, les paramètres et les exemples de l’API Media Edge, voir la section [Fichier Media Edge Swagger](swagger.md).
 
 Ce guide explique comment effectuer le suivi des événements suivants après le démarrage de la session :
 
-* Début de la mémoire tampon
-* Play
-* Fin de la session
+* [Début de la mémoire tampon](#buffer-start-event-request)
+* [Play](#play-event-request)
+* [Fin de la session](#session-complete-event-request)
 
-## Mise en œuvre de l’API
+## Mise en œuvre de l’API {#implement-api}
 
-Outre les différences mineures dans le modèle et les chemins appelés, l’API Media Edge a la même mise en oeuvre que l’API Media Collection. Les détails de mise en oeuvre de Media Collection restent valides pour l’API Media Edge, comme décrit dans la documentation suivante :
+Outre les différences mineures dans le modèle et les chemins appelés, l’API Media Edge a la même mise en oeuvre que la variable [API Media Collection](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-overview.html?lang=en). Les détails de mise en oeuvre de Media Collection restent valides pour l’API Media Edge, comme décrit dans la documentation suivante :
 
 * [Définition du type de requête HTTP dans votre lecteur](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-sed-pings.html?lang=en)
 * [Envoi d’événements ping](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-sed-pings.html?lang=en)
 * [Conditions d’expiration](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-timeout.html?lang=en)
 * [Contrôle de l’ordre des événements](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-ctrl-order.html?lang=en)
 
-## Authorization
+## Authorization {#authorization}
 
 Actuellement, les API Media Edge ne nécessitent pas d’en-têtes d’autorisation dans leurs requêtes.
 
 
-## Démarrage de la session
+## Démarrage de la session {#start-session}
 
 Pour démarrer la session multimédia sur le serveur, utilisez le point de terminaison Démarrage de session . Une réponse réussie inclut une `sessionId`, qui est un paramètre obligatoire pour les requêtes d’événement suivantes.
 
@@ -104,7 +103,7 @@ En outre, le mappage des types de données pour `eventType` dans l’exemple ci-
 
 | eventType | datatypes |
 | -------- | ------ |
-| mediaSessionStart | [sessionDetails](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/sessiondetails.schema.md) |
+| media.SessionStart | [sessionDetails](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/sessiondetails.schema.md) |
 | media.chapterStart | [chapterDetails](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/chapterdetails.schema.md) |
 | media.adBreakStart | [advertisingPodDetails](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/advertisingpoddetails.schema.md) |
 | media.adStart | [advertisingDetails](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/advertisingdetails.schema.md) |
@@ -170,7 +169,7 @@ Pour plus d’informations sur les paramètres de point de fin de début de sess
 Pour plus d’informations sur les paramètres de données multimédia XDM, voir [Schéma d’informations sur les détails du média](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/mediadetails.schema.md#xdmplayhead).
 
 
-## Requête d’événement de début de la mémoire tampon
+## Requête d’événement de début de la mémoire tampon {#buffer-start}
 
 L’événement Début de la mémoire tampon signale le démarrage de la mise en mémoire tampon sur le lecteur multimédia. La reprise de la mémoire tampon n’est pas un événement du service d’API ; au lieu de cela, elle est déduite lorsqu’un événement play est envoyé après le début de la mémoire tampon. Pour effectuer une requête d’événement Buffer Start, utilisez `sessionId` dans la charge utile d’un appel au point de terminaison suivant :
 
@@ -208,7 +207,7 @@ La réponse réussie indique un état de 200 et n’inclut aucun contenu.
 Pour plus d’informations sur les paramètres du point de terminaison de début de la mémoire tampon et des exemples, reportez-vous à la section [Media Edge Swagger](swagger.md) fichier .
 
 
-## Lire la requête d’événement
+## Lire la requête d’événement {#play-event}
 
 L’événement Play est envoyé lorsque le lecteur multimédia passe à l’état &quot;lecture&quot; à partir d’un autre état, tel que &quot;mise en mémoire tampon&quot;, &quot;mise en pause&quot; ou &quot;erreur&quot;. Pour effectuer une requête d’événement Play, utilisez `sessionId` dans la charge utile d’un appel au point de terminaison suivant :
 
@@ -243,7 +242,7 @@ La réponse réussie indique un état de 200 et n’inclut aucun contenu.
 
 Pour plus d’informations sur les paramètres du point de fin de lecture et des exemples, voir la section [Media Edge Swagger](swagger.md) fichier .
 
-## Demande d’événement de fin de session
+## Demande d’événement de fin de session {#session-complete}
 
 L’événement Session Complete est envoyé lorsque la fin du contenu principal est atteinte. Pour effectuer une requête d’événement Session Complete , utilisez `sessionId` dans la charge utile d’un appel au point de terminaison suivant :
 
@@ -289,6 +288,9 @@ Le tableau suivant affiche les codes de réponse possibles résultant des demand
 | 400-level | Requête incorrecte |
 | 500-level | Erreur du serveur |
 
-Pour plus d’informations sur la gestion des erreurs et des codes de réponse manquants, voir la section [Guide de dépannage de Media Edge](troubleshooting.md).
+## Plus d’informations sur cette fonctionnalité
+
+* [Guide de dépannage de Media Edge](troubleshooting.md)
+* [Présentation de l’API Media Edge](overview.md)
 
 

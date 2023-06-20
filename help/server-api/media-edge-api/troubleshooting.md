@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform;bannière multimédia;rubriques les plus consultées;période
 solution: Experience Platform
 title: Prise en main des API Media Edge
 description: Guide de dépannage des API Media Edge
-source-git-commit: f723114eebc9eb6bfa2512b927c5055daf97188b
+source-git-commit: ff4bc64843e3d05277f56ab67b60400fb9e65c4f
 workflow-type: tm+mt
-source-wordcount: '678'
+source-wordcount: '669'
 ht-degree: 1%
 
 ---
@@ -22,10 +21,10 @@ Pour résoudre les problèmes liés aux réponses qui n’ont pas abouti, les er
 
 ## Validation des démarrages de session
 
-La plupart des problèmes de création de requêtes de démarrage de session entraînent une réponse à plusieurs états 207.
+La plupart des problèmes liés aux requêtes de démarrage de session entraînent une réponse multi-état 207.
 La payload est similaire aux erreurs non fatales de l’API du serveur réseau Experience Edge. Toutes les erreurs Media Analytics sont du type suivant :  `https://ns.adobe.com/aep/errors/va-edge-0XXX-XXX`. Les nombres affichés dans la réponse correspondent à l’état d’erreur.
 
-L’exemple suivant illustre un corps de réponse pour une requête de début de session qui ne comporte pas de champ obligatoire et dont le champ n’est pas valide.
+L’exemple suivant illustre un corps de réponse pour une requête de démarrage de session qui ne comporte pas de champ obligatoire et n’en comporte pas non plus.
 
 ```
 {

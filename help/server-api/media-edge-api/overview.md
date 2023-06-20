@@ -1,25 +1,24 @@
 ---
-keywords: Experience Platform;bannière multimédia;rubriques les plus consultées;période
 solution: Experience Platform
 title: API Media Edge
-description: Présentation des API Media Edge.
-source-git-commit: 4f60b00026a226aa6465b2c21b3c2198962a1e3b
+description: Présentation des API Media Edge
+source-git-commit: ff4bc64843e3d05277f56ab67b60400fb9e65c4f
 workflow-type: tm+mt
-source-wordcount: '396'
-ht-degree: 4%
+source-wordcount: '393'
+ht-degree: 5%
 
 ---
 
 
 # Présentation de l’API Media Edge
 
-Les API Media Edge sont créées sur Adobe Experience Platform (AEP) pour fournir des données de suivi d’événement multimédia dans le cadre de la fonction [Schémas XDM](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=en#:~:text=Experience%20Data%20Model%20(XDM)%2C,the%20power%20of%20digital%20experiences). Pour les clients Media Analytics, les fonctionnalités suivantes sont alors disponibles :
+Les API Media Edge sont créées sur Adobe Experience Platform pour fournir des données de suivi d’événement multimédia dans le cadre de la fonction [Schémas XDM](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=en#:~:text=Experience%20Data%20Model%20(XDM)%2C,the%20power%20of%20digital%20experiences). Pour les clients Media Analytics, les fonctionnalités suivantes sont alors disponibles :
 
-* Avec [Customer Journey Analytics (CJA)](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=fr), les clients peuvent obtenir des détails détaillés en temps quasi réel sur la durée, les démarrages et les arrêts pour évaluer et combiner les mesures multimédia. Toutes les mesures de création de rapports sont disponibles dans CJA pour les clients effectuant la migration depuis Adobe Analytics.
+* Avec [Adobe Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=fr), les clients peuvent obtenir des détails détaillés en temps quasi réel sur la durée, les démarrages et les arrêts pour évaluer et combiner les mesures multimédia. Toutes les mesures de création de rapports sont disponibles dans Adobe Customer Journey Analytics pour les clients effectuant la migration depuis Adobe Analytics.
 
-* Avec [Adobe Real-time Customer Data Platform (RTCDP)](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html?lang=fr), les clients peuvent enrichir leurs profils en temps réel avec des données de consommation multimédia.
+* Avec [Adobe Real-time Customer Data Platform](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html?lang=fr), les clients peuvent enrichir leurs profils en temps réel avec des données de consommation multimédia.
 
-* Avec [Adobe Journey Optimizer (AJO)](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/get-started.html?lang=en), les clients peuvent optimiser les campagnes omnicanal et automatiser les parcours à l’aide de signaux de consommation multimédia.
+* Avec [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/get-started.html?lang=en), les clients peuvent optimiser les campagnes omnicanal et automatiser les parcours à l’aide de signaux de consommation multimédia.
 
 
 ## Optimisation des flux de données de suivi multimédia
@@ -35,10 +34,10 @@ Les [API Media Collection](https://experienceleague.adobe.com/docs/media-analyti
 Le tableau suivant présente un service d’API d’Adobe possible pour divers cas d’analyse des médias :
 
 | Cas d’utilisation | Service API |
-| -------- | ------ |
-| Solution AEP (CJA, RTDCP, AJO, etc.) | Media Edge |
-| CDP + CJA | Media Edge |
-| Solution Adobe Analytics + AEP | Media Edge |
+| -------- | ----------- |
+| Solution Adobe Experience Platform | Media Edge |
+| CDP en temps réel + Customer Journey Analytics | Media Edge |
+| Solution Adobe Analytics + Adobe Experience Platform | Media Edge |
 | Adobe Analytics uniquement (suivi déjà effectué) | Collection Médias |
 
 >[!NOTE]
@@ -47,13 +46,13 @@ Le tableau suivant présente un service d’API d’Adobe possible pour divers c
 
 Le graphique suivant montre les flux de données des deux services API :
 
-
 ![Flux de données Media Analytics](../assets/edge-api-dataflow.png)
 
+## Étapes suivantes
 
-Pour plus d’informations sur l’utilisation des API Media Edge, reportez-vous à la section [Documentation de prise en main](getting-started.md).
+* Pour plus d’informations sur l’utilisation des API Media Edge, reportez-vous à la section [Documentation de prise en main](getting-started.md).
 
-Pour plus d’informations sur l’utilisation de Platform Edge, voir [Installation de Media Analytics avec Experience Platform Edge](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/implementation-edge.html?lang=en).
+* Pour plus d’informations sur l’utilisation de Platform Edge, voir [Installation de Media Analytics avec Experience Platform Edge](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/implementation-edge.html?lang=en).
 
 
 

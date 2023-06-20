@@ -1,9 +1,8 @@
 ---
-keywords: Experience Platform;bannière multimédia;rubriques les plus consultées;période
 solution: Experience Platform
 title: Prise en main des API Media Edge
 description: Les API Media Edge permettent aux développeurs de collecter des données pour Media Edge Analytics et Customer Journey Analytics.
-source-git-commit: b4687fa7f1a2eb8f206ad41eae0af759b0801b83
+source-git-commit: 6570149298defe1aeb0c3e35cb71e166aeb7a3f7
 workflow-type: tm+mt
 source-wordcount: '82'
 ht-degree: 0%
@@ -15,6 +14,7 @@ ht-degree: 0%
 
 Ce document comprend une référence OAS (JSON Open API Specification) ou &quot;Swagger&quot;. Vous pouvez copier et coller cette spécification dans un outil de rendu, tel que editor.swagger.io, pour afficher les informations de l’API Media Edge. Cette spécification inclut des paramètres, des exemples et un schéma pour chaque point de terminaison.
 
++++ Sélectionnez cette option pour afficher et copier Open API Specification (Spécification de l’API ouverte).
 
 ```
 {
@@ -3908,3 +3908,5 @@ Ce document comprend une référence OAS (JSON Open API Specification) ou &quot;
   }
 }
 ```
+
++++
