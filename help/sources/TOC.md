@@ -4,10 +4,10 @@ user-guide-title: Aide sur les connecteurs source d’Adobe Experience Platfor
 breadcrumb-title: Guide des connecteurs sources
 user-guide-description: Ingérez des données à partir de diverses sources. Découvrez comment structurer, étiqueter et améliorer les données déjà ingérées.
 feature: Sources
-source-git-commit: b5a6853c13b151a8754245cd4316a0de75e23e82
+source-git-commit: 68c6d579d43b4137e3107d3ab102300dc8304c90
 workflow-type: tm+mt
-source-wordcount: '988'
-ht-degree: 98%
+source-wordcount: '991'
+ht-degree: 97%
 
 ---
 
@@ -21,6 +21,7 @@ ht-degree: 98%
       - [Source Analytics](connectors/adobe-applications/analytics.md)
       - [Source Audience Manager](connectors/adobe-applications/audience-manager.md)
       - [Source Adobe Campaign Managed Cloud Services](connectors/adobe-applications/campaign.md)
+      - [Source Adobe Commerce](connectors/adobe-applications/commerce.md)
       - [Source des attributs du client](connectors/adobe-applications/customer-attributes.md)
       - [Source de collecte de données](connectors/adobe-applications/data-collection.md)
       - [Source Workfront](connectors/adobe-applications/workfront.md)
