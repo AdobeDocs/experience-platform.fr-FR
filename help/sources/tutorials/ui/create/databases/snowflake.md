@@ -1,17 +1,21 @@
 ---
-keywords: Experience Platform;accueil;rubriques les plus consultées;Snowflake
 title: Création d’une connexion à la source du Snowflake dans l’interface utilisateur
 type: Tutorial
 description: Découvrez comment créer une connexion source de Snowflake à l’aide de l’interface utilisateur de Adobe Experience Platform.
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: fb2038b9-7f27-4818-b5de-cc8072122127
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: 669b47753a9c9400f22aa81d08a4d25bb5e414c5
 workflow-type: tm+mt
-source-wordcount: '445'
-ht-degree: 41%
+source-wordcount: '504'
+ht-degree: 36%
 
 ---
 
 # Créer une connexion source [!DNL Snowflake] dans l’interface utilisateur
+
+>[!IMPORTANT]
+>
+>Le [!DNL Snowflake] source est disponible dans le catalogue des sources pour les utilisateurs qui ont acheté Real-time Customer Data Platform Ultimate.
 
 Ce tutoriel décrit les étapes à suivre pour créer une [!DNL Snowflake] connecteur source à l’aide de l’interface utilisateur de Adobe Experience Platform.
 
@@ -33,9 +37,14 @@ Pour accéder à votre compte de Snowflake sur [!DNL Platform], vous devez fourn
 | Base de données | Le [!DNL Snowflake] La base de données contient les données que vous souhaitez importer dans Platform. |
 | Nom d’utilisateur | Nom d’utilisateur de la variable [!DNL Snowflake] compte . |
 | Mot de passe | Le mot de passe du [!DNL Snowflake] compte utilisateur. |
+| Rôle | Le rôle de contrôle d’accès par défaut à utiliser dans la variable [!DNL Snowflake] session. Le rôle doit être un rôle existant qui a déjà été attribué à l’utilisateur spécifié. Le rôle par défaut est `PUBLIC`. |
 | Chaîne de connexion | Chaîne de connexion utilisée pour se connecter à votre [!DNL Snowflake] instance. Le modèle de chaîne de connexion pour [!DNL Snowflake] is `jdbc:snowflake://{ACCOUNT_NAME}.snowflakecomputing.com/?user={USERNAME}&password={PASSWORD}&db={DATABASE}&warehouse={WAREHOUSE}` |
 
 Pour plus d’informations sur ces valeurs, reportez-vous à la section [ce document Snowflake](https://docs.snowflake.com/en/user-guide/key-pair-auth.html).
+
+>[!NOTE]
+>
+>Vous devez définir la variable `PREVENT_UNLOAD_TO_INLINE_URL` indicateur pour `FALSE` pour permettre le déchargement des données de votre [!DNL Snowflake] base de données vers Experience Platform.
 
 ## Connexion à votre compte Snowflake
 

@@ -3,10 +3,10 @@ keywords: Experience Platform;accueil;rubriques les plus consultées;service de 
 title: Filtrage Des Données Au Niveau De La Ligne D’Une Source À L’Aide De L’API Flow Service
 description: Ce tutoriel décrit les étapes de filtrage des données au niveau de la source à l’aide de l’API Flow Service
 exl-id: 224b454e-a079-4df3-a8b2-1bebfb37d11f
-source-git-commit: 963fc5e31e1728a8a1a7e94bc0cc47d010347325
+source-git-commit: b0e2fc4767fb6fbc90bcdd3350b3add965988f8f
 workflow-type: tm+mt
-source-wordcount: '780'
-ht-degree: 16%
+source-wordcount: '782'
+ht-degree: 17%
 
 ---
 
@@ -17,9 +17,9 @@ ht-degree: 16%
 >La prise en charge du filtrage des données au niveau des lignes n’est actuellement disponible que pour les sources suivantes :
 >
 >* [Google BigQuery](../../connectors/databases/bigquery.md)
+>* [Microsoft Dynamics](../../connectors/crm/ms-dynamics.md)
 >* [Salesforce](../../connectors/crm/salesforce.md)
 >* [Snowflake](../../connectors/databases/snowflake.md)
-
 
 Ce tutoriel décrit les étapes à suivre pour filtrer les données au niveau de la ligne pour une source à l’aide de la variable [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
