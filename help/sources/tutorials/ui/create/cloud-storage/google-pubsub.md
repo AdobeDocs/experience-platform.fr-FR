@@ -1,15 +1,20 @@
 ---
 title: Créer une connexion de source Google PubSub dans l’interface utilisateur
 description: Découvrez comment créer un connecteur source Google PubSub à l’aide de l’interface utilisateur de Platform.
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: fb8411f2-ccae-4bb5-b1bf-52b1144534ed
-source-git-commit: 79149274c28507041ad89be9d7afdefaedb6aaa0
+source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
 workflow-type: tm+mt
-source-wordcount: '1010'
+source-wordcount: '1028'
 ht-degree: 43%
 
 ---
 
 # Créer une connexion source [!DNL Google PubSub] dans l’interface utilisateur
+
+>[!IMPORTANT]
+>
+>Le [!DNL Google PubSub] source est disponible dans le catalogue des sources pour les utilisateurs qui ont acheté Real-time Customer Data Platform Ultimate.
 
 Ce tutoriel décrit les étapes à suivre pour créer une connexion de source [!DNL Google PubSub] (ci-après dénommée « [!DNL PubSub] ») à l’aide de l’interface utilisateur de Platform.
 

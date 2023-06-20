@@ -3,9 +3,9 @@ title: Connexion de votre compte de diffusion en continu de Snowflake à Adobe E
 description: Découvrez comment connecter Adobe Experience Platform à Snowflake Streaming à l’aide de l’API Flow Service.
 badgeBeta: label="Beta" type="Informative"
 badgeUltimate: label="Ultimate" type="Positive"
-source-git-commit: 8bc232034301fa713f61bd3f11fbde122afcdcf9
+source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
 workflow-type: tm+mt
-source-wordcount: '829'
+source-wordcount: '830'
 ht-degree: 30%
 
 ---
@@ -15,8 +15,7 @@ ht-degree: 30%
 >[!IMPORTANT]
 >
 >* Le [!DNL Snowflake] source de diffusion en continu est en version bêta. Veuillez lire la [Présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de sources étiquetées bêta.
->* Prise en charge des API pour le [!DNL Snowflake] La source de diffusion en continu est disponible uniquement pour les clients qui ont acheté Real-Time CDP Ultimate.
-
+>* Le [!DNL Snowflake] La source de diffusion en continu est disponible dans l’API pour les utilisateurs qui ont acheté Real-time Customer Data Platform Ultimate.
 
 Ce tutoriel décrit les étapes à suivre pour connecter et diffuser des données à partir de vos [!DNL Snowflake] à Adobe Experience Platform à l’aide de la variable [[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>).
 

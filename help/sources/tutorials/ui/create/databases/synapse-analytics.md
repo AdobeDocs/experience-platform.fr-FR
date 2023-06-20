@@ -1,20 +1,22 @@
 ---
-keywords: Experience Platform;accueil;rubriques les plus consultées;Azure synapse Analytics;Synapse;synapse;azure synapse analytics
-solution: Experience Platform
 title: Création d’une connexion source Analytics d’Azure synapse dans l’interface utilisateur
-type: Tutorial
 description: Découvrez comment créer une connexion source Analytics d’Azure synapse (ci-après appelée "Synapse") à l’aide de l’interface utilisateur de Adobe Experience Platform.
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 1f1ce317-eaaf-4ad2-a5fb-236983220bd7
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: a7c2c5e4add5c80e0622d5aeb766cec950d79dbb
 workflow-type: tm+mt
-source-wordcount: '462'
-ht-degree: 58%
+source-wordcount: '449'
+ht-degree: 54%
 
 ---
 
-# Créer une connexion source [!DNL Azure Synapse Analytics] dans l’interface utilisateur
+# Créez un [!DNL Azure Synapse Analytics] connexion source dans l’interface utilisateur
 
-Les connecteurs source d’Adobe Experience Platform permettent d’ingérer des données externes selon un calendrier précis. Ce tutoriel décrit les étapes à suivre pour créer une [!DNL Azure Synapse Analytics] (ci-après dénommés &quot;[!DNL Synapse]&quot;) connecteur source à l’aide de [!DNL Platform] de l’interface utilisateur.
+>[!IMPORTANT]
+>
+>Le [!DNL Azure Synapse Analytics] source est disponible dans le catalogue des sources pour les utilisateurs qui ont acheté Real-time Customer Data Platform Ultimate.
+
+Ce tutoriel décrit les étapes à suivre pour créer une [!DNL Azure Synapse Analytics] (ci-après dénommés &quot;[!DNL Synapse]&quot;) connecteur source à l’aide de [!DNL Platform] de l’interface utilisateur.
 
 ## Prise en main
 

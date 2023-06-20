@@ -1,18 +1,20 @@
 ---
-keywords: Experience Platform;accueil;rubriques les plus consultées;Amazon Kinesis;amazon kinesis;Kinesis;kinesis
-solution: Experience Platform
 title: Création d’une connexion source Amazon Kinesis dans l’interface utilisateur
-type: Tutorial
 description: Découvrez comment créer une connexion source Amazon Kinesis à l’aide de l’interface utilisateur de Adobe Experience Platform.
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 4152e48b-bec7-4b05-a172-eea71c9d9880
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
 workflow-type: tm+mt
-source-wordcount: '466'
-ht-degree: 45%
+source-wordcount: '473'
+ht-degree: 44%
 
 ---
 
 # Créez un [!DNL Amazon Kinesis] connexion source dans l’interface utilisateur
+
+>[!IMPORTANT]
+>
+>Le [!DNL Amazon Kinesis] source est disponible dans le catalogue des sources pour les utilisateurs qui ont acheté Real-time Customer Data Platform Ultimate.
 
 Les connecteurs source d’Adobe Experience Platform permettent d’ingérer des données externes selon un calendrier précis. Ce tutoriel décrit les étapes à suivre pour authentifier une [!DNL Amazon Kinesis] (ci-après dénommées [!DNL "Kinesis"]) du connecteur source à l’aide de la fonction [!DNL Platform] de l’interface utilisateur.
 

@@ -1,18 +1,20 @@
 ---
-keywords: Experience Platform;accueil;rubriques populaires;synapse;synapse;Azure synapse Analytics
-solution: Experience Platform
 title: Création d’une connexion de base Analytics d’Azure synapse à l’aide de l’API Flow Service
-type: Tutorial
 description: Découvrez comment connecter Azure synapse Analytics à Adobe Experience Platform à l’aide de l’API Flow Service.
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 8944ac3f-366d-49c8-882f-11cd0ea766e4
-source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
+source-git-commit: a7c2c5e4add5c80e0622d5aeb766cec950d79dbb
 workflow-type: tm+mt
-source-wordcount: '473'
-ht-degree: 63%
+source-wordcount: '481'
+ht-degree: 62%
 
 ---
 
 # Créez un [!DNL Azure Synapse Analytics] connexion de base à l’aide de [!DNL Flow Service] API
+
+>[!IMPORTANT]
+>
+>Le [!DNL Azure Synapse Analytics] source est disponible dans le catalogue des sources pour les utilisateurs qui ont acheté Real-time Customer Data Platform Ultimate.
 
 Une connexion de base représente la connexion authentifiée entre une source et Adobe Experience Platform.
 
@@ -60,26 +62,26 @@ La requête suivante permet de créer une connexion de base pour [!DNL Synapse]�
 
 ```shell
 curl -X POST \
-    'https://platform.adobe.io/data/foundation/flowservice/connections' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "name": "Connection for Azure Synapse Analytics",
-        "description": "Connection for Azure Synapse Analytics",
-        "auth": {
-            "specName": "Connection String Based Authentication",
-            "params": {
-                "connectionString": "Server=tcp:{SERVER_NAME}.database.windows.net,1433;Database={DATABASE};User ID={USERNAME}@{SERVER_NAME};Password={PASSWORD};Trusted_Connection=False;Encrypt=True;Connection Timeout=30"
-            }
-        },
-        "connectionSpec": {
-            "id": "a49bcc7d-8038-43af-b1e4-5a7a089a7d79",
-            "version": "1.0"
-        }
-    }'
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "Connection for Azure Synapse Analytics",
+      "description": "Connection for Azure Synapse Analytics",
+      "auth": {
+          "specName": "Connection String Based Authentication",
+          "params": {
+              "connectionString": "Server=tcp:{SERVER_NAME}.database.windows.net,1433;Database={DATABASE};User ID={USERNAME}@{SERVER_NAME};Password={PASSWORD};Trusted_Connection=False;Encrypt=True;Connection Timeout=30"
+          }
+      },
+      "connectionSpec": {
+          "id": "a49bcc7d-8038-43af-b1e4-5a7a089a7d79",
+          "version": "1.0"
+      }
+  }'
 ```
 
 | Paramètre | Description |

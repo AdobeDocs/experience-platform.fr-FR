@@ -4,9 +4,9 @@ description: Découvrez comment créer une connexion source et un flux de donné
 badgeBeta: label="Beta" type="Informative"
 badgeUltimate: label="Ultimate" type="Positive"
 last-substantial-update: 2023-05-25T00:00:00Z
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
 workflow-type: tm+mt
-source-wordcount: '684'
+source-wordcount: '686'
 ht-degree: 11%
 
 ---
@@ -16,8 +16,7 @@ ht-degree: 11%
 >[!IMPORTANT]
 >
 >* Le [!DNL Snowflake] source de diffusion en continu est en version bêta. Veuillez lire la [Présentation des sources](../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de sources étiquetées bêta.
->* Le [!DNL Snowflake] La source de diffusion en continu est disponible dans l’API pour les clients qui ont acheté Real-Time CDP Ultimate.
-
+>* Le [!DNL Snowflake] La source de diffusion en continu est disponible dans l’API pour les utilisateurs qui ont acheté Real-time Customer Data Platform Ultimate.
 
 Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les bases de données, etc.
 

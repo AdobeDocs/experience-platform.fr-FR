@@ -1,17 +1,20 @@
 ---
-keywords: Experience Platform;accueil;rubriques populaires;Amazon Redshift;Amazon redshift;Redshift;Redshift;Redshift
-solution: Experience Platform
 title: Présentation d’Amazon Redshift Source Connector
 description: Découvrez comment connecter Amazon Redshift à Adobe Experience Platform à l’aide des API ou de l’interface utilisateur.
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 75e577dd-a0b0-4f82-a371-5ec9255544f8
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
 workflow-type: tm+mt
-source-wordcount: '241'
-ht-degree: 60%
+source-wordcount: '248'
+ht-degree: 58%
 
 ---
 
-# Connecteur [!DNL Amazon Redshift]
+# [!DNL Amazon Redshift] source
+
+>[!IMPORTANT]
+>
+>Le [!DNL Amazon Redshift] source est disponible dans le catalogue des sources pour les utilisateurs qui ont acheté Real-time Customer Data Platform Ultimate.
 
 Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les bases de données, etc.
 

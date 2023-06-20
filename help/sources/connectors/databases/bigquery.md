@@ -1,17 +1,20 @@
 ---
-keywords: Experience Platform;accueil;rubriques populaires;BigQuery;bigquery;Google BigQuery;google bigquery
-solution: Experience Platform
 title: Présentation du connecteur source Google BigQuery
 description: Découvrez comment connecter Google BigQuery à Adobe Experience Platform à l’aide des API ou de l’interface utilisateur.
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 35c61382-a909-47f4-a937-15cb725ecbe3
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
 workflow-type: tm+mt
-source-wordcount: '387'
+source-wordcount: '395'
 ht-degree: 36%
 
 ---
 
-# [!DNL Google BigQuery]
+# [!DNL Google BigQuery] source
+
+>[!IMPORTANT]
+>
+>Le [!DNL Google BigQuery] source est disponible dans le catalogue des sources pour les utilisateurs qui ont acheté Real-time Customer Data Platform Ultimate.
 
 Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les bases de données, etc.
 
