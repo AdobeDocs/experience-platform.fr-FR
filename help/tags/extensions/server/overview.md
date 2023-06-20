@@ -2,9 +2,9 @@
 title: Référence des extensions de transfert d’événement
 description: Recherchez la documentation pour les extensions de transfert d’événement dans Adobe Experience Platform.
 exl-id: e7b42241-b41c-4d12-8551-4df14e3c9b74
-source-git-commit: 3c2ada6e5dec7cc95fbcca7e19d944ca06097edc
+source-git-commit: 9470be59f8c84cb2b41e09010998de1ff8e5e7d9
 workflow-type: tm+mt
-source-wordcount: '169'
+source-wordcount: '180'
 ht-degree: 53%
 
 ---
@@ -32,6 +32,7 @@ Vous trouverez ci-dessous une liste de la documentation relative aux extensions 
 * [[!DNL AWS]](./aws/overview.md)
 * [[!DNL Braze]](./braze/overview.md)
 * [Connecteur cloud pour Google Analytics](https://exchange.adobe.com/apps/ec/106542)*
+* [Connecteur cloud pour les Google Analytics 4](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.109820.html)*
 * [Base](./core/overview.md)
 * [API d’événement Epsilon](https://exchange.adobe.com/apps/ec/109127)*
 * [Conversions améliorées de Google Ads](./google-ads-enhanced-conversions/overview.md)
