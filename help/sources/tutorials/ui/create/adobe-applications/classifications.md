@@ -5,10 +5,10 @@ solution: Experience Platform
 title: Création d’une connexion source Adobe Analytics pour les données de classification dans l’interface utilisateur
 type: Tutorial
 exl-id: d606720d-f1ca-47cc-919b-643a8fc61e07
-source-git-commit: f619bbf2c8d313eabc6444b4bd8c09615a00cc42
+source-git-commit: fcebef97ba9cc667f80afd55980c5460912a56fb
 workflow-type: tm+mt
-source-wordcount: '659'
-ht-degree: 25%
+source-wordcount: '628'
+ht-degree: 19%
 
 ---
 
@@ -72,12 +72,7 @@ Sélectionnez la **[!UICONTROL Jeu de données cible]** vous souhaitez y accéde
 
 Le **[!UICONTROL Activité du jeu de données]** page affiche des informations sur le jeu de données cible que vous avez sélectionné, y compris des détails sur son état de lot, son identifiant de jeu de données et son schéma.
 
->[!IMPORTANT]
->
->Bien que la suppression de jeux de données soit possible pour dʼautres connecteurs source, elle nʼest actuellement pas prise en charge pour le Connecteur de classifications Analytics. Si vous supprimez un jeu de données par erreur, contactez lʼassistance clientèle Adobe.
-
 ![](../../../../images/tutorials/create/classifications/dataset.png)
-
 
 ## Étapes suivantes
 
