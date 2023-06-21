@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Créer, partager et réutiliser des instances de playbook
 description: Découvrez comment créer, partager et réutiliser des instances de playbook pour réaliser votre cas d’utilisation marketing.
 badgeBeta: label="Beta" type="Informative"
-source-git-commit: 51e4a77472ccb560dbfa5f56011ce50932d87b64
+source-git-commit: e61e200b148e4d17041b3711bd63c796a44b05c8
 workflow-type: tm+mt
 source-wordcount: '724'
 ht-degree: 1%
@@ -64,11 +64,11 @@ Le comportement décrit ci-dessus est vrai pour toutes les ressources qui sont c
 >
 >Une fois les objets générés, vous pouvez continuer à les tester dans les environnements de test de développement en ajoutant des données. Vous pouvez tester les ressources tant que vous le souhaitez dans l’environnement de test de développement et vous pouvez répliquer la logique des ressources (définitions de segment, parcours, schémas, etc.) dans l’environnement de test de production lorsque vous êtes prêt.
 
-### Réutilisation des classeurs {#reuse-playbooks}
+## Réutilisation des classeurs {#reuse-playbooks}
 
 En créant plusieurs instances du même playbook, vous pouvez mettre en oeuvre le même cas d’utilisation ultérieurement, sans modifier les détails de votre mise en oeuvre précédente du cas d’utilisation.
 
-### Partage du playbook et des ressources générées avec d’autres membres de l’équipe {#share-playbook}
+## Partage du playbook et des ressources générées avec d’autres membres de l’équipe {#share-playbook}
 
 Vous pouvez partager l’instance et les ressources générées avec d’autres membres de l’équipe. Pour ce faire, copiez le lien URL du navigateur et partagez-le avec votre équipe afin de leur donner un aperçu des ressources générées.
 

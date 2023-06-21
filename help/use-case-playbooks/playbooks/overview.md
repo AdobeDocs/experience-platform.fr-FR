@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Présentation des playbooks de cas d’utilisation
 description: Découvrez comment utiliser la fonction des cahiers de travail des cas d’utilisation dans Experience Platform pour commencer à utiliser divers cas d’utilisation marketing
 badgeBeta: label="Beta" type="Informative"
-source-git-commit: 51e4a77472ccb560dbfa5f56011ce50932d87b64
+source-git-commit: 896ca002b34e79bd464467011875a54acd5c187c
 workflow-type: tm+mt
-source-wordcount: '398'
-ht-degree: 3%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -18,6 +18,7 @@ ht-degree: 3%
 Ce que vous trouverez dans ce guide de documentation :
 
 * **[Présentation des playbooks de cas d’utilisation](#overview)**
+* [Commencer](/help/use-case-playbooks/playbooks/get-started.md)
 * [Découvrez le bon manuel](/help/use-case-playbooks/playbooks/discover.md)
 * [Créer, partager et réutiliser des instances de playbook](/help/use-case-playbooks/playbooks/create-share-reuse.md)
 * [Dépannage et limites connues](troubleshooting.md)
