@@ -2,10 +2,10 @@
 title: Configuration de secrets dans le transfert d’événements
 description: Découvrez comment configurer des secrets dans lʼinterface utilisateur afin de vous authentifier aux points dʼentrée utilisés dans les propriétés de transfert dʼévénement.
 exl-id: eefd87d7-457f-422a-b159-5b428da54189
-source-git-commit: c314cba6b822e12aa0367e1377ceb4f6c9d07ac2
+source-git-commit: a863d65c3e6e330254a58aa822383c0847b0e5f5
 workflow-type: tm+mt
-source-wordcount: '1763'
-ht-degree: 100%
+source-wordcount: '2182'
+ht-degree: 85%
 
 ---
 
@@ -13,14 +13,15 @@ ht-degree: 100%
 
 Dans le transfert dʼévénement, un secret est une ressource qui représente des informations dʼidentification pour sʼauthentifier auprès dʼun autre système, ce qui permet lʼéchange sécurisé de données. Les secrets ne peuvent être créés que dans les propriétés de transfert dʼévénement.
 
-Il existe actuellement trois types de secret pris en charge :
+Les types de secret suivants sont actuellement pris en charge :
 
 | Type de secret | Description |
 | --- | --- |
-| [!UICONTROL Jeton] | Chaîne unique de caractères représentant une valeur de jeton dʼauthentification connue et comprise par les deux systèmes. |
+| [!UICONTROL Google OAuth 2] | Contient plusieurs attributs pour prendre en charge la spécification d’authentification [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) pour une utilisation dans l’[API Google Ads](https://developers.google.com/google-ads/api/docs/oauth/overview) et l’[API Pub/Sub](https://cloud.google.com/pubsub/docs/reference/service_apis_overview). Le système vous demande les informations requises, puis gère le renouvellement de ces jetons pour vous à un intervalle spécifié. |
 | [!UICONTROL HTTP] | Contient deux attributs de chaîne pour un nom dʼutilisateur et un mot de passe, respectivement. |
 | [!UICONTROL OAuth 2] | Contient plusieurs attributs pour prendre en charge le [type d’octroi des informations d’identification du client](https://datatracker.ietf.org/doc/html/rfc6749#section-1.3.4) pour la spécification d’authentification [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749). Le système vous demande les informations requises, puis gère le renouvellement de ces jetons pour vous à un intervalle spécifié. |
-| [!UICONTROL Google OAuth 2] | Contient plusieurs attributs pour prendre en charge la spécification d’authentification [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) pour une utilisation dans l’[API Google Ads](https://developers.google.com/google-ads/api/docs/oauth/overview) et l’[API Pub/Sub](https://cloud.google.com/pubsub/docs/reference/service_apis_overview). Le système vous demande les informations requises, puis gère le renouvellement de ces jetons pour vous à un intervalle spécifié. |
+| [!UICONTROL JWT OAuth 2] | Contient plusieurs attributs pour la prise en charge du profil JSON Web Token (JWT) pour [Autorisation OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc7523#section-2.1) subventions. Le système vous demande les informations requises, puis gère le renouvellement de ces jetons pour vous à un intervalle spécifié. |
+| [!UICONTROL Jeton] | Chaîne unique de caractères représentant une valeur de jeton dʼauthentification connue et comprise par les deux systèmes. |
 
 {style="table-layout:auto"}
 
@@ -73,6 +74,7 @@ Pour chaque environnement ajouté, vous devez attribuer un nouveau nom unique po
 * [[!UICONTROL Jeton]](#token)
 * [[!UICONTROL HTTP]](#http)
 * [[!UICONTROL OAuth 2]](#oauth2)
+* [[!UICONTROL JWT OAuth 2]](#oauth2jwt)
 * [[!UICONTROL Google OAuth 2]](#google-oauth2)
 
 ### [!UICONTROL Jeton] {#token}
@@ -116,6 +118,40 @@ Par exemple, si le décalage d’actualisation est défini sur la valeur par dé
 Lorsque vous avez terminé, sélectionnez **[!UICONTROL Créer un secret]** pour enregistrer le secret.
 
 ![Enregistrer le décalage OAuth 2](../../images/ui/event-forwarding/secrets/oauth-secret-4.png)
+
+### [!UICONTROL JWT OAuth 2] {#oauth2jwt}
+
+Pour créer un secret JWT OAuth 2, sélectionnez **[!UICONTROL JWT OAuth 2]** de la **[!UICONTROL Type]** menu déroulant.
+
+![Le [!UICONTROL Créer un secret] avec le secret JWT OAuth 2 mis en surbrillance dans l’onglet [!UICONTROL Type] menu déroulant.](../../images/ui/event-forwarding/secrets/oauth-jwt-secret.png)
+
+>[!NOTE]
+>
+>La seule [!UICONTROL Algorithme] qui est actuellement pris en charge pour la signature du JWT est RS256.
+
+Dans les champs qui s’affichent ci-dessous, fournissez vos [!UICONTROL Émetteur], [!UICONTROL Objet], [!UICONTROL Audience], [!UICONTROL Demandes personnalisées], [!UICONTROL TTL], puis sélectionnez la variable [!UICONTROL Algorithme] dans la liste déroulante. Ensuite, saisissez le [!UICONTROL Id De Clé Privée], ainsi que vos [[!UICONTROL URL du jeton]](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) pour votre intégration OAuth. Le [!UICONTROL URL du jeton] n’est pas un champ obligatoire. Si une valeur est fournie, le jeton JWT est échangé avec un jeton d’accès. Le secret sera actualisé en fonction de la variable `expires_in` de la réponse et de la variable [!UICONTROL Actualiser le décalage] . Si aucune valeur n’est fournie, le secret envoyé au bord est le JWT. Le jeton JWT sera actualisé en fonction de la variable [!UICONTROL TTL] et [!UICONTROL Actualiser le décalage] valeurs.
+
+![Le [!UICONTROL Créer un secret] avec une sélection de champs de saisie en surbrillance.](../../images/ui/event-forwarding/secrets/oauth-jwt-information.png)
+
+Sous **[!UICONTROL Options d’identification]**, vous pouvez fournir d’autres options d’identification, telles que `jwt_param` sous la forme de paires clé-valeur. Pour ajouter des paires clé-valeur supplémentaires, sélectionnez **[!UICONTROL Ajouter une autre]**.
+
+![Le [!UICONTROL Créer un secret] mise en surbrillance de l’onglet [!UICONTROL Options d’identification] champs.](../../images/ui/event-forwarding/secrets/oauth-jwt-credential-options.png)
+
+Enfin, vous pouvez configurer la valeur **[!UICONTROL Actualiser le décalage]** pour le secret. Cette valeur représente le nombre de secondes avant l’expiration du jeton pendant lesquelles le système effectue une actualisation automatique. L’équivalent en heures et minutes s’affiche à droite du champ et se met automatiquement à jour au fur et à mesure que vous tapez.
+
+![Le [!UICONTROL Créer un secret] mise en surbrillance de l’onglet [!UICONTROL Actualiser le décalage] champ .](../../images/ui/event-forwarding/secrets/oauth-jwt-refresh-offset.png)
+
+Par exemple, si le décalage d’actualisation est défini sur la valeur par défaut de `1800` (30 minutes) et le jeton d’accès comporte une `expires_in` valeur de `3600` (une heure), le système actualise automatiquement le secret en une heure.
+
+>[!IMPORTANT]
+>
+>Un secret JWT OAuth 2 nécessite au moins 30 minutes entre les actualisations et doit également être valide pendant au moins une heure. Cette restriction vous donne un minimum de 30 minutes pour intervenir en cas de problème avec le jeton généré.
+>
+>Par exemple, si le décalage est défini sur `1800` (30 minutes) et le jeton d’accès comporte une `expires_in` de `2700` (45 minutes), l’échange échouerait, car la différence résultante serait inférieure à 30 minutes.
+
+Lorsque vous avez terminé, sélectionnez **[!UICONTROL Créer un secret]** pour enregistrer le secret.
+
+![Le [!UICONTROL Créer un secret] mise en surbrillance des onglets [!UICONTROL Créer un secret]](../../images/ui/event-forwarding/secrets/oauth-jwt-create-secret.png)
 
 ### [!UICONTROL Google OAuth 2] {#google-oauth2}
 
