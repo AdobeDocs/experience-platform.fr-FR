@@ -4,9 +4,9 @@ user-guide-title: Aide d’Adobe Experience Platform Query Service
 breadcrumb-title: Guide de Query Service
 user-guide-description: Utilisez le langage SQL standard pour interroger les données du lac de données dans Experience Platform.
 feature: Queries
-source-git-commit: a0f826a2e5fcdfc2f9e08221f30ba01470c9b3be
+source-git-commit: 9fe547e6270b4ede3151158e3b474f8c3dfd2297
 workflow-type: tm+mt
-source-wordcount: '276'
+source-wordcount: '278'
 ht-degree: 97%
 
 ---
@@ -87,6 +87,7 @@ ht-degree: 97%
    - [Utilisation de structures de données imbriquées](essential-concepts/nested-data-structures.md)
    - [Aplatir les structures de données imbriquées](essential-concepts/flatten-nested-data.md)
    - [Bloc anonyme](essential-concepts/anonymous-block.md)
+   - [Modèle intégré](essential-concepts/inline-templates.md)
    - [Chargement incrémentiel](essential-concepts/incremental-load.md)
    - [Dédoublonnage des données](essential-concepts/deduplication.md)
    - [Échantillon de jeux de données](essential-concepts/dataset-samples.md)
