@@ -2,10 +2,10 @@
 title: Planifications de requête
 description: Découvrez comment automatiser les exécutions de requêtes planifiées, supprimer ou désactiver un planning de requêtes et utiliser les options de planification disponibles via l’interface utilisateur de Adobe Experience Platform.
 exl-id: 984d5ddd-16e8-4a86-80e4-40f51f37a975
-source-git-commit: a0f826a2e5fcdfc2f9e08221f30ba01470c9b3be
+source-git-commit: 75ef9c58aa7c5f1cc628d1f13b6c5f56b362458a
 workflow-type: tm+mt
-source-wordcount: '831'
-ht-degree: 68%
+source-wordcount: '886'
+ht-degree: 53%
 
 ---
 
@@ -15,7 +15,7 @@ Vous pouvez automatiser les exécutions de requêtes en créant des plannings de
 
 >[!IMPORTANT]
 >
->Vous trouverez ci-dessous une liste des limitations des requêtes planifiées lorsque vous utilisez l’éditeur de requêtes. Elles ne s’appliquent pas à l’API [!DNL Query Service] :<br/>Vous pouvez uniquement ajouter un planning à une requête qui a déjà été créée, enregistrée et exécutée.<br/>Vous **ne pouvez pas** ajouter un planning à une requête paramétrée.<br/>Les requêtes planifiées **ne peuvent pas** contenir un bloc anonyme.
+>Vous pouvez uniquement ajouter un planning à une requête qui a déjà été créée, enregistrée et exécutée.
 
 Toutes les requêtes planifiées sont ajoutées à la liste dans la variable [!UICONTROL Requêtes planifiées] . Depuis cet espace de travail, vous pouvez surveiller l’état de toutes les tâches de requête planifiées via l’interface utilisateur. Sur le [!UICONTROL Requêtes planifiées] vous pouvez trouver des informations importantes sur les exécutions de requête et vous abonner aux alertes. Les informations disponibles incluent l’état, les détails de planification et les codes/messages d’erreur en cas d’échec de l’exécution. Voir [Surveiller le document des requêtes planifiées](./monitor-queries.md) pour plus d’informations.
 
@@ -69,7 +69,9 @@ Après avoir confirmé tous ces détails, sélectionnez **[!UICONTROL Enregistre
 
 ## Supprimer ou désactiver un planning {#delete-schedule}
 
-Vous pouvez supprimer ou désactiver un planning dans l’espace de travail des plannings. Vous devez sélectionner un modèle de requête à partir de l’onglet [!UICONTROL Modèles] ou de l’onglet [!UICONTROL Requêtes planifiées] pour accéder à l’éditeur de requêtes et sélectionner **[!UICONTROL Planning]** pour accéder à l’espace de travail des plannings.
+Vous pouvez supprimer ou désactiver un planning dans l’espace de travail des plannings d’une requête spécifique ou dans l’ [!UICONTROL Requêtes planifiées] espace de travail qui répertorie toutes les requêtes planifiées.
+
+Pour accéder au [!UICONTROL Planifications] de la requête choisie, vous devez sélectionner le nom d&#39;un modèle de requête parmi les [!UICONTROL Modèles] ou le [!UICONTROL Requêtes planifiées] . L’éditeur de requêtes de cette requête est alors accessible. Dans Query Editor, sélectionnez **[!UICONTROL Planifications]** pour accéder à l’espace de travail des plannings.
 
 Sélectionnez un planning dans les lignes des plannings disponibles. Vous pouvez activer ou désactiver la requête planifiée à l’aide du bouton d’activation.
 
@@ -80,3 +82,5 @@ Sélectionnez un planning dans les lignes des plannings disponibles. Vous pouvez
 Sélectionnez **[!UICONTROL Supprimer un planning]** pour supprimer le planning désactivé.
 
 ![L’espace de travail des plannings avec l’option Désactiver le planning et Supprimer le planning est en surbrillance.](../images/ui/query-schedules/delete-schedule.png)
+
+Sinon, la variable [!UICONTROL Requêtes planifiées] tab propose une collection d’actions intégrées pour chaque requête planifiée. Les actions intégrées disponibles sont les suivantes : [!UICONTROL Désactiver le planning] ou [!UICONTROL Activation du planning], [!UICONTROL Supprimer le planning], et [!UICONTROL S’abonner] aux alertes pour la requête planifiée. Pour obtenir des instructions complètes sur la suppression ou la désactivation d’une requête planifiée via l’onglet Requêtes planifiées, voir la section [guide de suivi des requêtes planifiées](./monitor-queries.md#inline-actions).

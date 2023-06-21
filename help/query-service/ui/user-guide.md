@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guide de l’interface utilisateur de Query Editor
 description: Query Editor est un outil interactif fourni par Adobe Experience Platform Query Service. Il permet d’écrire, de valider et d’exécuter des requêtes pour les données d’expérience client dans l’interface utilisateur d’Experience Platform. Query Editor prend en charge le développement de requête pour l’analyse et l’exploration de données. Il vous permet également d’exécuter des requêtes interactives à des fins de développement, ainsi que des requêtes non interactives pour renseigner les jeux de données dans Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 90829713e85e930e4fd6a32b0dbd38aeb837b84e
+source-git-commit: ff4b528a0456f46d8c99e5921cfc99b197956ba6
 workflow-type: tm+mt
-source-wordcount: '1696'
+source-wordcount: '1670'
 ht-degree: 88%
 
 ---
@@ -113,11 +113,7 @@ Ce panneau présente également des métadonnées utiles, telles que la dernièr
 
 Les requêtes qui ont été enregistrées en tant que modèle peuvent être planifiées à partir de l’éditeur de requêtes. Vous pouvez ainsi automatiser les exécutions de requête exécutées sur une cadence personnalisée. Vous pouvez planifier des requêtes en fonction de la fréquence, de la date et de l’heure, et choisir également un jeu de données de sortie pour vos résultats, si nécessaire. Les plannings de requête peuvent également être désactivés ou supprimés via l’interface utilisateur.
 
-Les plannings sont définis à partir du Query Editor. Vous trouverez ci-dessous une liste des limitations des requêtes planifiées lorsque vous utilisez l’éditeur de requêtes. Elles ne s’appliquent pas au [!DNL Query Service] API :
-
-- Vous pouvez uniquement ajouter un planning à une requête qui a déjà été créée, enregistrée et exécutée.
-- Vous **ne pouvez pas** ajouter un planning à une requête paramétrée.
-- Les requêtes planifiées **ne peuvent pas** contenir un bloc anonyme.
+Les planifications sont définies dans l’éditeur de requêtes. Lorsque vous utilisez Query Editor, vous ne pouvez ajouter qu’un planning à une requête qui a déjà été créée, enregistrée et exécutée. Cela ne s’applique pas au [!DNL Query Service] API :
 
 Consultez la documentation sur les plannings de requête pour savoir comment [création de plannings de requête dans l’interface utilisateur](./query-schedules.md). Pour savoir comment ajouter des plannings à l’aide de l’API, vous pouvez également lire le [guide de point de terminaison des requêtes planifiées](../api/scheduled-queries.md).
 
