@@ -2,10 +2,10 @@
 title: Référence des extensions de transfert d’événement
 description: Recherchez la documentation pour les extensions de transfert d’événement dans Adobe Experience Platform.
 exl-id: e7b42241-b41c-4d12-8551-4df14e3c9b74
-source-git-commit: 9470be59f8c84cb2b41e09010998de1ff8e5e7d9
+source-git-commit: 0d931c90b6321d93eec9da16f360a3ecd2fd8f14
 workflow-type: tm+mt
-source-wordcount: '180'
-ht-degree: 53%
+source-wordcount: '184'
+ht-degree: 54%
 
 ---
 
@@ -36,6 +36,7 @@ Vous trouverez ci-dessous une liste de la documentation relative aux extensions 
 * [Base](./core/overview.md)
 * [API d’événement Epsilon](https://exchange.adobe.com/apps/ec/109127)*
 * [Conversions améliorées de Google Ads](./google-ads-enhanced-conversions/overview.md)
+* [Google Cloud Platform](./google-cloud-platform/overview.md)
 * [[!DNL Mailchimp] Edge](./mailchimp/overview.md)
 * [[!DNL Meta] API de conversion](./meta/overview.md)
 * [[!UICONTROL Microsoft Azure]](./azure/overview.md)
@@ -43,6 +44,7 @@ Vous trouverez ci-dessous une liste de la documentation relative aux extensions 
 * [Pega Customer Decision Hub](https://exchange.adobe.com/apps/ec/107597)*
 * [[!DNL Pinterest]](./pinterest/overview.md)
 * [Snap Conversions API](https://exchange.adobe.com/apps/ec/108550)*
+* [Snowflake](./snowflake/overview.md)
 * [[!DNL Splunk]](./splunk/overview.md)
 * [[!DNL Twitter]](./twitter/overview.md)
 * [API des événements [!DNL Zendesk] ](./zendesk/overview.md)

@@ -5,9 +5,9 @@ breadcrumb-title: Balises
 user-guide-description: Découvrez comment déployer et gérer des balises d’analyse, de marketing et de publicité pour améliorer les expériences clients.
 feature: Tags
 solution: Data Collection
-source-git-commit: 852e0a87b93e640298c38aef7b3f1c255bf18896
+source-git-commit: 0d931c90b6321d93eec9da16f360a3ecd2fd8f14
 workflow-type: tm+mt
-source-wordcount: '996'
+source-wordcount: '1002'
 ht-degree: 99%
 
 ---
@@ -221,6 +221,8 @@ ht-degree: 99%
       * [API d’événement Epsilon](https://exchange.adobe.com/apps/ec/109127)
       * Conversions améliorées de Google Ads {#google-ads-enhanced-conversions}
          * [Aperçu](./extensions/server/google-ads-enhanced-conversions/overview.md)
+      * Google Cloud Platform {#google-cloud-platform}
+         * [Aperçu](./extensions/server/google-cloud-platform/overview.md)
       * [!DNL Mailchimp] Edge {#mailchimp}
          * [Aperçu](./extensions/server/mailchimp/overview.md)
       * [!DNL Meta Conversions API] {#meta}
@@ -233,6 +235,8 @@ ht-degree: 99%
       * [!DNL Pinterest] {#pinterest}
          * [Présentation](./extensions/server/pinterest/overview.md)
       * [Snap Conversions API](https://exchange.adobe.com/apps/ec/108550)
+      * [Snowflake] {#snowflake}
+         * [Aperçu](./extensions/server/snowflake/overview.md)
       * [!DNL Splunk] {#splunk}
          * [Aperçu](./extensions/server/splunk/overview.md)
       * [!DNL Twitter] {#twitter}
