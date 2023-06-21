@@ -5,7 +5,7 @@ description: Le point de terminaison d’audiences dans l’API Adobe Experience
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
 hide: true
 hidefromtoc: true
-source-git-commit: 9aba3384b320b8c7d61a875ffd75217a5af04815
+source-git-commit: f75c2c7ff07974cd0f2a5a8cc3e990c7f3eaa0a3
 workflow-type: tm+mt
 source-wordcount: '1515'
 ht-degree: 9%
@@ -62,7 +62,7 @@ La paire requête/réponse suivante est utilisée lorsque la variable `withMetri
 La requête suivante récupère les cinq dernières audiences créées dans votre organisation.
 
 ```shell
-curl -X GET https: //platform.adobe.io/data/core/ups/audiences?limit=5 \
+curl -X GET https://platform.adobe.io/data/core/ups/audiences?limit=5 \
  -H 'Authorization:  Bearer {ACCESS_TOKEN}' \
  -H 'x-gw-ims-org-id:  {IMS_ORG}' \
  -H 'x-api-key:  {API_KEY}' \
@@ -684,7 +684,7 @@ curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513
 | -------- | ----------- | 
 | `audienceId` | ID de l’audience. Utilisé par des audiences externes |
 | `name` | Nom de l’audience. |
-| `namespace` |  |
+| `namespace` | |
 | `description` | Description de l’audience. |
 | `type` | Champ généré par le système qui affiche si l’audience est générée par Platform ou est générée en externe. Les valeurs possibles sont les suivantes : `SegmentDefinition` et `ExternalAudience`. A `SegmentDefinition` fait référence à une audience qui a été générée dans Platform, tandis qu’une `ExternalAudience` fait référence à une audience qui n’a pas été générée dans Platform. |
 | `lifecycle` | Statut de l’audience. Les valeurs possibles sont les suivantes : `draft`, `published`, `inactive`, et `archived`. `draft` représente le moment où l’audience est créée, `published` lorsque l’audience est publiée, `inactive` lorsque l’audience n’est plus principale, et `archived` si l’audience est supprimée. |

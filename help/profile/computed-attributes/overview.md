@@ -1,29 +1,33 @@
 ---
-keywords: Experience Platform;profil;profil client en temps réel;dépannage;API
 title: Présentation des attributs calculés
-type: Documentation
 description: Les attributs calculés sont des fonctions permettant d’agréger des données au niveau de l’événement en attributs au niveau du profil. Ces fonctions sont automatiquement calculées afin de pouvoir être utilisées au niveau de la segmentation, de l’activation et de la personnalisation.
-exl-id: 13878363-589d-4a3c-811c-21d014a5f3c2
-hide: true
-hidefromtoc: true
-source-git-commit: 5ae7ddbcbc1bc4d7e585ca3e3d030630bfb53724
+badge: « Version bêta »
+source-git-commit: 3b4e1e793a610c9391b3718584a19bd11959e3be
 workflow-type: tm+mt
-source-wordcount: '730'
-ht-degree: 48%
+source-wordcount: '961'
+ht-degree: 11%
 
 ---
 
-# (Alpha) Présentation des attributs calculés
+# Présentation des attributs calculés
 
 >[!IMPORTANT]
 >
->La fonctionnalité d’attribut calculé est actuellement en version alpha et n’est pas disponible pour tous les utilisateurs. La documentation et les fonctionnalités peuvent changer.
+>Les attributs calculés se trouvent actuellement dans **bêta** et est **not** disponible pour tous les utilisateurs.
 
-Les attributs calculés sont des fonctions utilisées pour regrouper des données au niveau de l’événement en attributs au niveau du profil. Ces fonctions sont automatiquement calculées afin de pouvoir être utilisées au niveau de la segmentation, de l’activation et de la personnalisation.
+La personnalisation basée sur le comportement des utilisateurs est une exigence clé pour les marketeurs afin d’optimiser l’impact de la personnalisation. Par exemple, personnaliser l’e-mail marketing avec le produit récemment consulté pour générer des conversions ou personnaliser la page web en fonction du total des achats effectués par les utilisateurs pour accroître la rétention.
 
-Chaque attribut calculé contient une expression, ou &quot;règle&quot;, qui évalue les données entrantes et stocke la valeur obtenue dans un attribut de profil. Ces calculs vous aident à répondre facilement aux questions liées à des éléments tels que la valeur d’achat de durée de vie, le temps écoulé entre les achats ou le nombre d’ouvertures de l’application, sans que vous ayez à effectuer manuellement des calculs complexes chaque fois que ces informations sont nécessaires. Ces valeurs d’attribut calculées peuvent ensuite être visualisées dans un profil, utilisées pour créer un segment ou accessibles via plusieurs modèles d’accès différents.
+Les attributs calculés permettent de convertir rapidement les données comportementales de profil en valeurs agrégées au niveau du profil sans dépendre des ressources d’ingénierie pour :
 
-Ce guide vous aidera à mieux comprendre le rôle des attributs calculés dans Adobe Experience Platform.
+- Activation de la personnalisation ciblée avec l’activation d’agrégats comportementaux vers des destinations Real-time Customer Data Platform, l’utilisation dans Adobe Journey Optimizer ou la segmentation
+- Normalisation des données comportementales de profil agrégées pour une utilisation sur plusieurs plateformes et applications
+- Amélioration de la gestion des données avec la consolidation des anciennes données d’événements de profil dans des informations comportementales significatives
+
+Ces agrégats sont calculés en fonction des jeux de données d’événements d’expérience activés pour le profil ingérés dans Adobe Experience Platform. Chaque attribut calculé est un attribut de profil créé sur votre schéma d’union de profil et est regroupé sous le groupe de champs &quot;Attribut calculé&quot; dans votre schéma d’union.
+
+Parmi les exemples d’utilisation, citons la personnalisation des publicités avec le nom du dernier produit consulté pour les personnes n’ayant effectué aucun achat au cours des 7 derniers jours, la personnalisation des emails marketing avec le total des points de récompense pour féliciter les utilisateurs d’avoir été promus à un niveau de prime ou le calcul de la valeur de durée de vie de chaque client afin d’optimiser le ciblage.
+
+Ce guide vous aidera à mieux comprendre le rôle des attributs calculés dans Platform, en plus d’expliquer les bases des attributs calculés.
 
 ## Comprendre les attributs calculés
 
@@ -31,28 +35,55 @@ Adobe Experience Platform vous permet d’importer et de fusionner facilement de
 
 Certaines des informations collectées dans le profil sont facilement comprises lorsque vous lisez directement les champs de données (par exemple, « prénom ») tandis que d’autres données nécessitent la réalisation de plusieurs calculs ou comptent sur d’autres champs et d’autres valeurs afin de générer les informations (par exemple, « total d’achat depuis le début »). Pour faciliter la compréhension de ces données en un coup d’oeil, [!DNL Platform] permet de créer des attributs calculés qui effectuent automatiquement ces références et calculs, en renvoyant la valeur dans le champ approprié.
 
-Les attributs calculés incluent la création d’une expression, ou &quot;règle&quot;, qui fonctionne sur les données entrantes et stocke la valeur obtenue dans un attribut de profil. Les expressions peuvent être définies de plusieurs manières différentes, ce qui vous permet de préciser qu’une règle n’évalue que les événements entrants, un événement entrant et les données du profil ou un événement entrant, les données du profil et les événements historiques.
+Les attributs calculés incluent la création d’une expression, ou &quot;règle&quot;, qui fonctionne sur les données entrantes et stocke la valeur obtenue dans un attribut de profil. Les expressions peuvent être définies de plusieurs manières différentes, ce qui vous permet de spécifier les événements sur lesquels vous souhaitez effectuer une agrégation, les fonctions d’agrégat ou les durées de recherche en amont.
 
-### Cas d’utilisation
+### Fonctions
 
-Les cas d’utilisation des attributs calculés peuvent aller de calculs simples à des références très complexes. Voici quelques exemples de cas d’utilisation des attributs calculés :
+Les attributs calculés vous permettent de définir des agrégats d’événements en libre-service à l’aide de fonctions prédéfinies. Vous trouverez ci-dessous des informations détaillées sur ces fonctions :
 
-1. **[!UICONTROL Pourcentages]:** Un attribut calculé simple peut inclure la prise de deux champs numériques sur un enregistrement et leur division pour créer un pourcentage. Par exemple, vous pouvez prendre le nombre total d’e-mails envoyés à un destinataire et le diviser par le nombre d’e-mails que ce destinataire a ouvert. Un simple coup d’œil au champ attribut calculé obtenu donnerait rapidement le pourcentage total d’e-mails ouvert par ce destinataire.
-1. **[!UICONTROL Utilisation de l’application]:** Un autre exemple inclut la possibilité d’agréger le nombre d’ouvertures de votre application par un utilisateur. En suivant le nombre total d’ouvertures de l’application, en fonction des événements d’ouverture individuels, vous pourriez diffuser des offres spéciales ou des messages aux utilisateurs à leur centième ouverture pour encourager un engagement plus approfondi avec votre marque.
-1. **[!UICONTROL Valeurs de durée de vie]:** Rassembler des totaux cumulés, tels que la valeur d’achat à vie d’un client, peut s’avérer très difficile. Cela nécessite la mise à jour de l’historique total chaque fois qu’un nouvel événement d’achat se produit. Un attribut calculé vous permet de faire ceci beaucoup plus facilement en conservant la valeur de durée de vie dans un champ unique qui est mis à jour automatiquement à chaque événement d’achat réussi associé au client.
+| Fonction | Description | Types de données pris en charge | Exemple d’utilisation |
+| -------- | ----------- | -------------------- | ------------- |
+| SUM | Une fonction qui **sum** augmenter la valeur spécifiée pour les événements qualifiés. | Entiers, nombres, Longs | Somme de tous les achats des 7 derniers jours |
+| COUNT | Une fonction qui **count** le nombre d’événements qui se sont produits pour la règle donnée. | S/O | Nombre d&#39;achats au cours des 3 derniers mois |
+| MIN | Une fonction qui recherche la variable **minimum** pour les événements qualifiés. | Entiers, Nombres, Longs, Horodatages | Premières données d’achat au cours des 7 derniers jours<br/>Montant minimum de la commande dans les 4 dernières semaines |
+| MAX | Une fonction qui recherche la variable **maximum** pour les événements qualifiés. | Entiers, Nombres, Longs, Horodatages | Données du dernier achat au cours des 7 derniers jours<br/>Montant maximum de la commande dans les 4 dernières semaines |
+| MOST_RECENT | Une fonction qui recherche la valeur d’attribut spécifiée à partir du dernier événement qualifié. | Toutes les valeurs primitives, tableaux de valeurs primitives | Dernier produit consulté au cours des 7 derniers jours |
 
-## Limites connues
+### Périodes de recherche en amont
 
-### Disponibilité différée des nouveaux attributs calculés
+Les attributs calculés sont calculés par lots, ce qui vous permet de garder vos agrégats à jour et d’utiliser les derniers événements. Pour prendre en charge ces scénarios en temps quasi réel, la fréquence d’actualisation varie en fonction de la période de recherche en amont des événements.
 
-La disponibilité de nouveaux attributs calculés peut être reportée jusqu’à 2 heures après l’ajout de l’attribut de schéma correspondant au schéma d’union.
+La période de recherche arrière fait référence à la durée passée en revue lors de l’agrégation des événements d’expérience pour l’attribut calculé. Cette période peut être définie en heures, jours, semaines ou mois.
 
-Ce délai est dû à la configuration de mise en cache actuelle. Post-Alpha La fréquence d’actualisation du cache peut être augmentée.
+La fréquence d’actualisation fait référence à la fréquence d’actualisation des attributs calculés. Cette valeur dépend de la période de recherche arrière et est automatiquement définie.
 
-### Suivi des dépendances dans les segments
+| Période de recherche en amont | Fréquence d’actualisation |
+| --------------- | ----------------- |
+| Jusqu’à 24 heures | Toutes les heures |
+| Jusqu’à 7 jours | Quotidien |
+| Jusqu’à 4 semaines | Hebdomadaire |
+| Jusqu’à 6 mois | Mensuel |
 
-Les attributs de schéma déjà utilisés dans une expression de définition de segment, mais transformés ultérieurement en attribut calculé, ne seront pas suivis en tant que dépendance de ce segment.
+Par exemple, si votre attribut calculé a une période de recherche arrière des 7 derniers jours, cette valeur sera calculée en fonction des valeurs des 7 derniers jours, puis actualisée quotidiennement.
 
-En raison du fait qu’aucune dépendance n’a été détectée, l’Experience Platform n’évalue pas automatiquement l’attribut calculé associé chaque fois que la définition de segment est évaluée.
+>[!NOTE]
+>
+>Les semaines et les mois sont considérés comme **semaines calendaires** et **mois calendaires** lorsqu’elle est utilisée dans les recherches en amont d’événements.
 
-Vous pouvez également gérer la création d’attributs calculés par le biais d’un groupe de champs de schéma spécifique qui ajoute de nouveaux attributs calculés qui n’entrent pas en conflit avec les attributs existants. Une autre alternative consiste à simplement recréer le segment avec le suivi de dépendance correct pour les nouveaux attributs calculés.
+**Actualisation rapide**
+
+>[!IMPORTANT]
+>
+>Un maximum de **cinq** Par environnement de test, les attributs peuvent avoir une actualisation rapide activée.
+
+Une actualisation rapide vous permet de garder vos attributs à jour. L’activation de cette option vous permet d’actualiser quotidiennement vos attributs calculés, même pour des périodes de recherche en amont plus longues. Vous pouvez ainsi réagir en temps quasi réel aux activités des utilisateurs. Cette valeur s’applique uniquement aux attributs calculés avec une période de recherche arrière supérieure à une base hebdomadaire.
+
+>[!NOTE]
+>
+>L’activation d’une actualisation rapide varie les durées de recherche en amont de vos événements, puisque la période de recherche en amont s’étend respectivement sur une base hebdomadaire ou mensuelle.
+>
+>Par exemple, si vous créez un attribut calculé avec une période de recherche en amont de deux semaines avec l’actualisation rapide activée, cela signifie que la période de recherche en amont initiale sera de deux semaines. Toutefois, à chaque actualisation quotidienne, la période de recherche arrière inclut les événements du jour supplémentaire. Cet ajout de jours se poursuit jusqu’au début de la semaine calendaire suivante, au cours de laquelle l’intervalle de recherche en amont s’affiche et revient à deux semaines.
+
+## Étapes suivantes
+
+Pour en savoir plus sur la création et la gestion des attributs calculés, veuillez lire le [guide de l’API des attributs calculés](./api.md) ou le [guide de l’interface utilisateur des attributs calculés](./ui.md).
