@@ -2,7 +2,7 @@
 title: Surveillance des requêtes planifiées
 description: Découvrez comment surveiller les requêtes via l’interface utilisateur de Query Service.
 exl-id: 4640afdd-b012-4768-8586-32f1b8232879
-source-git-commit: 1b4554e204663d40c3a18da792614305abb7d296
+source-git-commit: 87b530c0ee509d9f24fc7af63507ff0567779d26
 workflow-type: tm+mt
 source-wordcount: '1252'
 ht-degree: 72%
@@ -139,3 +139,9 @@ En cas d’échec d’une requête bloquée anonyme, vous pouvez trouver le code
 Sélectionnez **[!UICONTROL Requête]** pour revenir à l’écran des détails du planning, ou **[!UICONTROL Requêtes planifiées]** pour revenir à l’onglet [!UICONTROL Requêtes planifiées].
 
 ![L’écran des détails de l’exécution avec la requête mise en surbrillance.](../images/ui/monitor-queries/return-navigation.png)
+
+<!-- Details required to complete this section below:
+### Run details for queries with parameterized queries {#parameterized-queries}
+
+Queries that use parameterized values to make up the SQL statement are ... 
+-->
