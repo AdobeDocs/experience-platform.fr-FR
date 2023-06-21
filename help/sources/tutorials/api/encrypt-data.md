@@ -1,13 +1,13 @@
 ---
 title: Ingestion de données chiffrées
-description: Adobe Experience Platform vous permet d’ingérer des fichiers chiffrés par le biais de sources de lot d’espace de stockage dans le cloud.
+description: Découvrez comment ingérer des fichiers chiffrés par le biais de sources par lots de stockage dans le cloud à l’aide de l’API.
 hide: true
 hidefromtoc: true
 exl-id: 83a7a154-4f55-4bf0-bfef-594d5d50f460
-source-git-commit: 8531459da97be648d0a63ffc2af77ce41124585d
+source-git-commit: f0e518459eca72d615b380d11cabee6c1593dd9a
 workflow-type: tm+mt
-source-wordcount: '967'
-ht-degree: 100%
+source-wordcount: '1017'
+ht-degree: 93%
 
 ---
 
@@ -35,11 +35,34 @@ Ce tutoriel nécessite une compréhension du fonctionnement des composants suiva
 
 * [Sources](../../home.md) : Experience Platform permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, de libeller et d’améliorer les données entrantes à l’aide des services de Platform.
    * [Sources d‘espace de stockage dans le cloud](../api/collect/cloud-storage.md) : créez un flux de données pour importer les données par lots de votre source d’espace de stockage dans le cloud vers Experience Platform.
-* [Sandbox](../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
+* [Sandbox](../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
 ### Utiliser les API Platform
 
 Pour plus d’informations sur la manière d’effectuer des appels vers les API Platform, consultez le guide [Prise en main des API Platform](../../../landing/api-guide.md).
+
+### Extensions de fichiers prises en charge pour les fichiers chiffrés
+
+La liste des extensions de fichier prises en charge pour les fichiers chiffrés est la suivante :
+
+* .csv
+* .tsv
+* .json
+* .parquet
+* .csv.gpg
+* .tsv.gpg
+* .json.gpg
+* .parquet.gpg
+* .csv.pgp
+* .tsv.pgp
+* .json.pgp
+* .parquet.pgp
+* .gpg
+* .pgp
+
+>[!NOTE]
+>
+>L’ingestion de fichiers chiffrés dans les sources Adobe Experience Platform prend en charge openPGP et non pas une version propriétaire spécifique de PGP.
 
 ## Créer une paire de clés de chiffrement {#create-encryption-key-pair}
 
@@ -112,11 +135,11 @@ Après avoir créé une connexion de base, vous devez suivre les étapes décrit
 >[!NOTE]
 >
 >Afin de créer un flux de données pour l’ingestion de données chiffrée, vous devez disposer des éléments suivants :
+>
 >* [Identifiant de clé publique](#create-encryption-key-pair)
 >* [Identifiant de connexion source](../api/collect/cloud-storage.md#source)
 >* [Identifiant de connexion cible](../api/collect/cloud-storage.md#target)
 >* [Identifiant de mappage](../api/collect/cloud-storage.md#mapping)
-
 
 Pour créer un flux de données, envoyez une requête POST au point d’entrée `/flows` de l’API [!DNL Flow Service]. Pour ingérer des données chiffrées, vous devez ajouter une section `encryption` à la propriété `transformations` et inclure l’`publicKeyId` qui a été créé lors d’une précédente étape.
 
