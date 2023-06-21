@@ -1,20 +1,15 @@
 ---
-keywords: Experience Platform;accueil;rubriques populaires;sources;connecteurs;connecteurs source;sdk sources;sdk;SDK
-title: (Version bêta) Création d’une connexion source à panneau mixte dans l’interface utilisateur
+title: Création d’une connexion à la source Mixpanel dans l’interface utilisateur
 description: Découvrez comment créer une connexion source Mixpanel à l’aide de l’interface utilisateur de Adobe Experience Platform.
 exl-id: 2a02f6a4-08ed-468c-8052-f5b7be82d183
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: 6f8abca8f0db8a559fe62e6c143f2d0506d3b886
 workflow-type: tm+mt
-source-wordcount: '874'
-ht-degree: 41%
+source-wordcount: '843'
+ht-degree: 42%
 
 ---
 
-# (Version bêta) Créez un [!DNL Mixpanel] connexion source dans l’interface utilisateur
-
->[!NOTE]
->
->La source [!DNL Mixpanel] est en version Beta. Voir [présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de sources étiquetées bêta.
+# Créer une connexion source [!DNL Mixpanel] dans l’interface utilisateur
 
 Ce tutoriel décrit les étapes à suivre pour créer une [!DNL Mixpanel] connexion source à l’aide de l’interface utilisateur de Adobe Experience Platform Platform.
 

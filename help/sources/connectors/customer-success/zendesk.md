@@ -1,21 +1,16 @@
 ---
-keywords: Experience Platform;accueil;rubriques les plus consultées;Zendesk;zendesk
-solution: Experience Platform
 title: Présentation du connecteur source Zendesk
 description: Découvrez comment connecter Zendesk à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur.
+last-substantial-update: 2023-06-21T00:00:00Z
 exl-id: 9f245783-949d-4f40-9cf3-8991b4b6d780
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: 6f8abca8f0db8a559fe62e6c143f2d0506d3b886
 workflow-type: tm+mt
-source-wordcount: '391'
-ht-degree: 46%
+source-wordcount: '367'
+ht-degree: 48%
 
 ---
 
-# (version bêta) [!DNL Zendesk]
-
->[!NOTE]
->
->La source [!DNL Zendesk] est en version Beta. Voir [présentation des sources](../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de sources étiquetées bêta.
+# [!DNL Zendesk]
 
 Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les bases de données, etc.
 
@@ -40,7 +35,7 @@ Cette section décrit les étapes préalables à l’authentification [!DNL Zend
 
 ![Jeton d’API Zendesk](../../images/tutorials/create/zendesk/zendesk-api-tokens.png)
 
-Voir [[!DNL Zendesk documentation on subdomains]](https://support.zendesk.com/hc/en-us/articles/4409381383578-Where-can-I-find-my-Zendesk-subdomain-) pour plus d’informations sur la manière de récupérer votre sous-domaine. Pour plus d’informations sur la génération de votre jeton API, voir [[!DNL Zendesk] guide sur la génération d’un nouveau jeton API](https://support.zendesk.com/hc/en-us/articles/4408889192858-Generating-a-new-API-token).
+Voir [[!DNL Zendesk documentation on subdomains]](<https://support.zendesk.com/hc/en-us/articles/4409381383578-Where-can-I-find-my-Zendesk-subdomain->) pour plus d’informations sur la manière de récupérer votre sous-domaine. Pour plus d’informations sur la génération de votre jeton API, voir [[!DNL Zendesk] guide sur la génération d’un nouveau jeton API](<https://support.zendesk.com/hc/en-us/articles/4408889192858-Generating-a-new-API-token>).
 
 La documentation ci-dessous fournit des informations sur la connexion d’[!DNL Zendesk] à Platform à l’aide d’API ou de l’interface utilisateur :
 
