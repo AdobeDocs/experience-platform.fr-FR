@@ -25,7 +25,7 @@ Mises à jour des fonctionnalités existantes dans Adobe Experience Platform 
 - [Destinations](#destinations)
 - [Modèle de données d’expérience](#xdm)
 - [Real-Time Customer Data Platform](#rtcdp)
-- [Real-time Customer Profile](#profile)
+- [Profil client en temps réel](#profile)
 - [Segmentation Service](#segmentation)
 - [Sources](#sources)
 
@@ -184,7 +184,7 @@ Pour plus d’informations sur [!DNL Segmentation Service], consultez la [prése
 
 Adobe Experience Platform peut ingérer des données à partir de sources externes tout en vous permettant de structurer, d’étiqueter et d’améliorer ces données à l’aide des services de Platform. Vous pouvez ingérer des données à partir de diverses sources telles que les applications Adobe, le stockage dans le cloud, des logiciels tiers et votre système de gestion de la relation client.
 
-Experience Platform fournit une API RESTful et une interface utilisateur interactive qui vous permet de configurer facilement des connexions source à différents fournisseurs de données. Ces connexions source vous permettent de vous authentifier et de vous connecter à des services de gestion de la relation client et à des systèmes de stockage externes, de définir des heures d’ingestion et de gérer le débit d’ingestion des données.
+Experience Platform fournit une API RESTful et une interface utilisateur interactive qui vous permet de configurer facilement des connexions source à différents fournisseurs de données. Ces connexions source vous permettent de vous authentifier et de vous connecter à des services de gestion de la relation client et à des systèmes de stockage externes, de définir des heures d’ingestion et de gérer le débit d’ingestion des données.
 
 **Fonctionnalités mises à jour**
 
