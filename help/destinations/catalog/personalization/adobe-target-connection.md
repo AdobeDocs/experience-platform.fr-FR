@@ -3,10 +3,10 @@ keywords: personnalisation cible;destination;destination cible Experience Platfo
 title: Connexion Adobe Target
 description: Adobe Target est une application qui permet la personnalisation et l’expérimentation en temps réel, grâce à l’IA, au niveau de toutes les interactions avec les clients entrants sur les sites web, les applications mobiles, etc.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: 6ac48762dc9ea1cb77b04651275a3846411449ea
+source-git-commit: 3b2fedf4f7b17c4fb32afb5978bfac6f618f5bc3
 workflow-type: tm+mt
-source-wordcount: '908'
-ht-degree: 56%
+source-wordcount: '1079'
+ht-degree: 47%
 
 ---
 
@@ -16,6 +16,7 @@ ht-degree: 56%
 
 | Mois de publication | Type de mise à jour | Description |
 |---|---|---|
+| Juin 2023 | Fonctionnalité et mise à jour de la documentation | Depuis juin 2023, vous pouvez sélectionner l’espace de travail Adobe Target auquel vous souhaitez partager des audiences lors de la configuration d’une nouvelle connexion à la destination Adobe Target. Voir [paramètres de connexion](#parameters) pour plus d’informations. En outre, consultez le tutoriel sur [configuration des espaces de travail](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=en) dans Adobe Target pour plus d’informations sur les espaces de travail. |
 | Mai 2023 | Fonctionnalité et mise à jour de la documentation | En mai 2023, la **[!UICONTROL Adobe Target]** prise en charge de la connexion [personnalisation basée sur les attributs](../../ui/activate-edge-personalization-destinations.md#map-attributes) et est généralement disponible pour tous les clients. |
 
 {style="table-layout:auto"}
@@ -80,12 +81,19 @@ Adobe Experience Platform se connecte automatiquement à l’instance Adobe Targ
 
 ### Paramètres de connexion {#parameters}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_target_workspace"
+>title="A propos des espaces de travail Adobe Target"
+>abstract="Sélectionnez l’espace de travail Adobe Target vers lequel les audiences seront partagées. Vous pouvez sélectionner un seul espace de travail pour chaque connexion Adobe Target. Lors de l’activation, les audiences sont acheminées vers l’espace de travail sélectionné tout en suivant les libellés d’utilisation des données Experience Platform applicables."
+>additional-url="https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=en" text="En savoir plus sur les espaces de travail Adobe Target"
+
 Pendant la [configuration](../../ui/connect-destination.md) de cette destination, vous devez fournir les informations suivantes :
 
 * **Nom** : renseignez le nom de votre choix pour cette destination.
 * **Description** : saisissez une description pour votre destination. Vous pouvez, par exemple, mentionner la campagne pour laquelle vous utilisez cette destination. Ce champ est facultatif.
 * **Identifiant du flux de données**: Cela détermine dans quel flux de données de collecte de données les segments seront inclus. Le menu déroulant affiche uniquement les flux de données pour lesquels les services Target et Adobe Experience Platform sont activés. Voir [configuration d’un flux de données](../../../edge/datastreams/configure.md#aep) pour obtenir des informations détaillées sur la configuration d’un flux de données pour Adobe Experience Platform et Adobe Target.
    * **[!UICONTROL Aucun]**: Sélectionnez cette option si vous devez configurer la personnalisation Adobe Target mais que vous ne pouvez pas mettre en oeuvre le [SDK Web Experience Platform](../../../edge/home.md). Lorsque vous utilisez cette option, les segments exportés d’Experience Platform vers Target ne prennent en charge que la personnalisation de la prochaine session et la segmentation Edge est désactivée. Pour plus d’informations, consultez le tableau ci-dessous.
+* **Workspace**: Sélection de l’Adobe Target [workspace](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=en) aux audiences qui seront partagées. Vous pouvez sélectionner un seul espace de travail pour chaque connexion Adobe Target. Lors de l’activation, les audiences sont acheminées vers l’espace de travail sélectionné tout en suivant le [Libellés d’utilisation des données Experience Platform](../../../data-governance/labels/overview.md).
 
 | Aucun flux de données sélectionné | Envoi de données sélectionné |
 |---|---|
