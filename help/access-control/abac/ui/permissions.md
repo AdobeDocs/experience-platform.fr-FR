@@ -3,7 +3,7 @@ keywords: Experience Platform;accueil;rubriques populaires;contrôle d’accès
 title: Gestion des autorisations de rôle du contrôle d’accès basé sur les attributs
 description: Ce document fournit des informations sur la configuration des autorisations pour un rôle dans l’interface Autorisations d’Adobe Experience Cloud.
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
-source-git-commit: 9515527f5a2c250b0a9057aa37769431e3b6fa07
+source-git-commit: 7c44683c8110d78654baba4bc53f2c3c2daf2831
 workflow-type: tm+mt
 source-wordcount: '966'
 ht-degree: 97%
@@ -101,7 +101,7 @@ Pour supprimer un utilisateur d’un rôle, sélectionnez l’icône **X** à c�
 
 ![Supression utilisateurs FLAC](../../images/flac-ui/flac-remove-users.png)
 
-## Gestion des informations d’identification d’API pour le rôle
+## Gestion des informations d’identification d’API pour le rôle {#manage-api-credentials-for-role}
 
 Sélectionnez l’onglet **[!UICONTROL Informations d’identification d’API]** pour ouvrir la page des informations d’identification d’API des rôles, puis sélectionnez **[!UICONTROL Ajouter des informations d’identification d’API]** pour attribuer des informations d’identification d’API au rôle.
 
