@@ -1,9 +1,9 @@
 ---
 title: Requêtes paramétrées
 description: Découvrez comment utiliser des requêtes paramétrées dans l’interface utilisateur de Adobe Experience Platform.
-source-git-commit: a0f826a2e5fcdfc2f9e08221f30ba01470c9b3be
+source-git-commit: e9deabe1e0514f44be085e558fd2fdbf54956f3e
 workflow-type: tm+mt
-source-wordcount: '638'
+source-wordcount: '659'
 ht-degree: 0%
 
 ---
@@ -20,9 +20,9 @@ Query Service prend en charge l’utilisation de requêtes paramétrées dans Qu
 
 Avant de poursuivre avec ce guide, lisez le [Guide de l’interface utilisateur de Query Editor](./user-guide.md). Le guide Query Editor fournit des informations détaillées sur la manière d’écrire, de valider et d’exécuter des requêtes pour les données d’expérience client dans l’interface utilisateur de l’Experience Platform.
 
+>[!NOTE]
 >
->
->Les requêtes paramétrées ne sont pas prises en charge dans les modèles intégrés au-delà de leur niveau parent immédiat. Les requêtes paramétrées ne fonctionnent que dans le modèle d’origine ou dans un modèle intégré enfant direct.
+>Dans l’interface utilisateur de Adobe Experience Platform, les requêtes paramétrées ne sont prises en charge qu’au niveau parent des modèles intégrés. Cela signifie que les requêtes paramétrées ne fonctionnent que lorsqu’elles sont utilisées dans le modèle d’origine. Les modèles enfants doivent être un modèle statique et ne peuvent pas comporter de paramètres dynamiques. Voir [documentation sur les modèles en ligne](../essential-concepts/inline-templates.md) pour en savoir plus.
 
 ## Syntaxe de requête paramétrée {#syntax}
 

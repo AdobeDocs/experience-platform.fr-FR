@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Questions fréquentes
 description: Ce document contient les questions les plus fréquentes et les réponses associées concernant Query Service. Les rubriques incluent l’exportation de données, les outils tiers et les erreurs PSQL.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
+source-git-commit: e9deabe1e0514f44be085e558fd2fdbf54956f3e
 workflow-type: tm+mt
-source-wordcount: '4383'
-ht-degree: 100%
+source-wordcount: '4309'
+ht-degree: 99%
 
 ---
 
@@ -303,7 +303,7 @@ Commencez par consulter les journaux pour connaître les détails de l’erreur.
 
 Vous pouvez également consulter la documentation pour obtenir des conseils sur la manière d’effectuer des [requêtes planifiées dans l’interface utilisateur](./ui/user-guide.md#scheduled-queries) et par le biais de [l’API](./api/scheduled-queries.md).
 
-Vous trouverez ci-dessous une liste d’éléments à prendre en compte pour les requêtes planifiées si vous utilisez le [!DNL Query Editor]. Elles ne s’appliquent pas à l’API [!DNL Query Service] :<br/>Vous pouvez uniquement ajouter un planning à une requête qui a déjà été créée, enregistrée et exécutée.<br/>Vous **ne pouvez pas** ajouter un planning à une requête paramétrée.<br/>Les requêtes planifiées **ne peuvent pas** contenir un bloc anonyme.<br/>Vous ne pouvez planifier qu’**un seul** modèle de requête à l’aide de l’interface utilisateur. Si vous souhaitez ajouter des planifications à un modèle de requête, vous devez utiliser l’API. Si vous avez déjà ajouté une planification à l’aide de l’API, vous ne pouvez pas ajouter d’autres planifications à l’aide de l’interface utilisateur.
+N’oubliez pas que lorsque vous utilisez la variable [!DNL Query Editor] vous pouvez uniquement ajouter un planning à une requête qui a déjà été créée, enregistrée et exécutée. Cela ne s’applique pas au [!DNL Query Service] API.
 +++
 
 ### Que signifie l’erreur « Limite de session atteinte » ?

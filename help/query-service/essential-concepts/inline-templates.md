@@ -1,9 +1,9 @@
 ---
 title: Modèles intégrés
 description: Découvrez comment réutiliser plusieurs conditions dans de nombreuses requêtes avec des modèles intégrés.
-source-git-commit: f8ec94b4c93e3b36667bdb179ce12c10d20fa30f
+source-git-commit: e9deabe1e0514f44be085e558fd2fdbf54956f3e
 workflow-type: tm+mt
-source-wordcount: '477'
+source-wordcount: '485'
 ht-degree: 1%
 
 ---
@@ -43,7 +43,7 @@ Vous pouvez utiliser des modèles pour stocker une ou plusieurs conditions. Il n
 
 >
 >
->Dans l’interface utilisateur de Adobe Experience Platform, les modèles intégrés sous la forme de requêtes paramétrées ne sont pris en charge qu’au niveau parent. Cela signifie que les requêtes paramétrées ne fonctionnent que lorsqu’elles sont utilisées dans le modèle d’origine. Le modèle enfant doit être un modèle statique et ne peut pas comporter de paramètres dynamiques.
+>Dans l’interface utilisateur de Adobe Experience Platform, les modèles intégrés sous la forme de requêtes paramétrées ne sont pris en charge qu’au niveau parent. Cela signifie que les requêtes paramétrées ne fonctionnent que lorsqu’elles sont utilisées dans le modèle d’origine. Le modèle enfant doit être un modèle statique et ne peut pas comporter de paramètres dynamiques. Voir [documentation sur les requêtes paramétrées](../ui/parameterized-queries.md) pour en savoir plus.
 
 ## Étapes suivantes
 
