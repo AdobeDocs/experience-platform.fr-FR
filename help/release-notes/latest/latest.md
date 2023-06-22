@@ -2,10 +2,10 @@
 title: Notes de mise à jour d’Adobe Experience Platform
 description: Les notes de mise à jour de juin 2023 pour Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: a03d0eeab5ca42225705fdeab692020b1641395d
+source-git-commit: e56a6c2bac46778afcc24db8d51e77ec3700dd96
 workflow-type: tm+mt
-source-wordcount: '1055'
-ht-degree: 28%
+source-wordcount: '1606'
+ht-degree: 35%
 
 ---
 
@@ -18,6 +18,7 @@ Mises à jour des fonctionnalités existantes dans Adobe Experience Platform 
 - [Authentification aux API Experience Platform](#authentication-platform-apis)
 - [Collecte de données](#data-collection)
 - [Destinations](#destinations)
+- [Modèle de données d’expérience (XDM)](#xdm)
 - [Query Service](#query-service)
 - [Sources](#sources)
 
@@ -74,9 +75,48 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 
 -->
 
-Pour des informations plus générales sur les destinations, reportez-vous à la [présentation des destinations](../../destinations/home.md).
+Pour des informations plus générales sur les destinations, consultez la [présentation des destinations](../../destinations/home.md).
 
-## Query Service {#query-service}
+## Modèle de données d’expérience (XDM) {#xdm}
+
+XDM est une spécification Open Source qui fournit des structures et des définitions communes (schémas) pour les données introduites dans Adobe Experience Platform. En adhérant aux normes XDM, toutes les données d’expérience client peuvent être intégrées dans une représentation commune afin de fournir des informations plus rapidement et de manière plus intégrée. Vous pouvez obtenir des informations précieuses à partir des actions des clients, définir des types de clients par le biais de segments et utiliser les attributs du client à des fins de personnalisation.
+
+**Nouveaux composants XDM**
+
+| Type de composant | Nom | Description |
+| --- | --- | --- |
+| Extension (Prospect-Profile) | [[!UICONTROL Extension Adobe Unified Profile Service Prospect-Profile Union]](https://github.com/adobe/xdm/pull/1735/files) | Ajout des champs requis pour le schéma d’union Prospect-Profile. |
+| Extension | [[!UICONTROL Ressource de prise de décision]](https://github.com/adobe/xdm/pull/1732/files) | Ajoutez un type de données pour représenter les ressources utilisées dans la prise de décision. [!UICONTROL Ressource de prise de décision] fournit une référence aux ressources utilisées pour effectuer le rendu de la variable `decisionItems`. |
+| Type de données | [[!UICONTROL Commerce]](https://github.com/adobe/xdm/pull/1747/files) | [!UICONTROL Commerce] stocke des enregistrements liés à l’activité d’achat et de vente. |
+| Groupe de champs | [[!UICONTROL Enrichissement du partenaire de profil (exemple)]](https://github.com/adobe/xdm/pull/1747/files) | Un exemple de schéma a été ajouté pour l’enrichissement du partenaire de profil. |
+| Groupe de champs | [[!UICONTROL Détails du projet partenaire (exemple)]](https://github.com/adobe/xdm/pull/1747/files) | Un exemple de schéma a été ajouté pour les extensions de profil de fournisseur de données prospect. |
+| Type de données | [[!UICONTROL Portée du commerce]](https://github.com/adobe/xdm/pull/1747/files) | [!UICONTROL Portée du commerce] identifie l’endroit où un événement s’est produit. Par exemple, dans la vue de magasin, le magasin ou le site web, etc. |
+| Type de données | [[!UICONTROL Facturation]](https://github.com/adobe/xdm/pull/1734/files) | Les informations de facturation, pour un ou plusieurs paiements, ont été ajoutées à la variable [!UICONTROL Commerce] schéma. |
+
+{style="table-layout:auto"}
+
+**Composants XDM mis à jour**
+
+| Type de composant | Nom | Description de la mise à jour |
+| --- | --- | --- |
+| Groupe de champs | [[!UICONTROL Détails de l’interaction MediaAnalytics]](https://github.com/adobe/xdm/pull/1736/files) | Modifié `bitrateAverageBucket` de 100 à &quot;800-899&quot;. |
+| Type de données | [[!UICONTROL Informations détaillées sur les données de la QoE]](https://github.com/adobe/xdm/pull/1736/files) | Modifié `bitrateAverageBucket` type de données en chaîne. |
+| Groupe de champs | [[!UICONTROL Détails de l’appartenance à un segment]](https://github.com/adobe/xdm/pull/1735/files) | Ajout à la classe Prospect Profile. |
+| Schéma | [[!UICONTROL Schéma du système des attributs calculés]](https://github.com/adobe/xdm/pull/1735/files) | Mappage d’identités ajouté à la variable [!UICONTROL Schéma système des attributs calculés]. |
+| Type de données | [[!UICONTROL Réseau de diffusion de contenu]](https://github.com/adobe/xdm/pull/1733/files) | Champ ajouté à [!UICONTROL Informations détaillées sur la session] pour décrire le réseau de diffusion de contenu utilisé. |
+| Extension | [[!UICONTROL Extension d’union de compte de service de profil unifié Adobe]](https://github.com/adobe/xdm/pull/1731/files) | Mappage d’identités ajouté à la variable [!UICONTROL Extension d’union de compte de service de profil unifié Adobe]. |
+| Type de données | [[!UICONTROL Commande]](https://github.com/adobe/xdm/pull/1730/files) | `discountAmount` a été ajouté à [!UICONTROL Commande]. Ceci fait la différence entre le prix normal de la commande et le prix spécial. Elle s’applique à l’ensemble de la commande plutôt qu’à des produits individuels. |
+| Schéma | [[!UICONTROL Demande d’opération d’hygiène AEP]](https://github.com/adobe/xdm/pull/1728/files) | Le `targetServices` a été ajouté pour fournir les noms des services qui traitent les opérations d’hygiène des données. |
+| Type de données | [[!UICONTROL Expédition]](https://github.com/adobe/xdm/pull/1727/files) | `currencyCode` a été ajouté aux informations d’expédition pour un ou plusieurs produits. Il s’agit d’un code de devise alphabétique ISO 4217 utilisé pour évaluer le produit. |
+| Type de données | [[!UICONTROL Application]](https://github.com/adobe/xdm/pull/1726/files) | Le `language` a été ajouté pour fournir les préférences linguistiques, géographiques ou culturelles de l’utilisateur à l’application. |
+| Extension | [[!UICONTROL Champs d’entité AJO]](https://github.com/adobe/xdm/pull/1746/files) | [!UICONTROL Entité d’horodatage AJO] a été ajouté pour indiquer l’heure de la dernière modification du message. |
+| Type de données | (Multiple) | [Suppression de plusieurs détails multimédia](https://github.com/adobe/xdm/pull/1739/files) sur plusieurs types de données pour assurer la cohérence. |
+
+{style="table-layout:auto"}
+
+Pour plus d’informations sur XDM dans Platform, consultez la [présentation du système XDM](../../xdm/home.md)
+
+## Query Service {#query-service}
 
 Query Service vous permet d’utiliser le langage SQL standard pour interroger des données dans le lac de données Adobe Experience Platform. Vous pouvez joindre n’importe quel jeu de données à partir du lac de données et capturer les résultats de la requête sous la forme d’un nouveau jeu de données à utiliser dans les rapports, dans l’espace de travail de science des données ou à ingérer en tant que profil client en temps réel.
 &#x200B;
