@@ -2,9 +2,9 @@
 title: Notes de mise à jour d’Adobe Experience Platform
 description: Les notes de mise à jour de juin 2023 pour Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: b9d78cd726430b0c7690fdb814d0888aaad832f6
+source-git-commit: 77c7fbfba2a1ccc6df31abc2f6b926ed90942c4c
 workflow-type: tm+mt
-source-wordcount: '768'
+source-wordcount: '988'
 ht-degree: 29%
 
 ---
@@ -15,9 +15,19 @@ ht-degree: 29%
 
 Mises à jour des fonctionnalités existantes dans Adobe Experience Platform :
 
+- [Authentification aux API Experience Platform](#authentication-platform-apis)
 - [Collecte de données](#data-collection)
+- [Destinations](#destinations)
 - [Query Service](#query-service)
 - [Sources](#sources)
+
+## Authentification aux API Experience Platform {#authentication-platform-apis}
+
+Pour les utilisateurs d’API Experience Platform, la méthode d’obtention des jetons d’accès requis pour s’authentifier et effectuer des appels vers des points de terminaison d’API est désormais simplifiée. La méthode JWT pour obtenir des jetons d’accès est obsolète et remplacée par une méthode d’authentification OAuth serveur à serveur plus simple.<p>![Nouvelle méthode d’authentification OAuth pour mettre les jetons d’accès en surbrillance.](/help/landing/images/api-authentication/oauth-authentication-method.png "Nouvelle méthode d’authentification OAuth pour mettre les jetons d’accès en surbrillance."){width="100" zoomable="yes"}</p>
+
+Bien que les intégrations d’API existantes utilisant la méthode d’authentification JWT continueront à fonctionner jusqu’au 1er janvier 2025, Adobe recommande vivement de migrer les intégrations existantes vers la nouvelle méthode OAuth Server-to-Server avant cette date. Lisez le guide sur [migration des informations d’identification du compte de service (JWT) vers les informations d’identification OAuth serveur à serveur](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/).
+
+Lire la mise à jour [Tutoriel sur l’authentification des Experience Platform](/help/landing/api-authentication.md) pour plus d’informations.
 
 ## Collecte de données {#data-collection}
 
@@ -36,7 +46,41 @@ Adobe Experience Platform fournit une suite de technologies qui vous permetten
 
 Pour en savoir plus sur la collecte de données, lisez le [présentation de la collecte de données](../../tags/home.md).
 
-## Query Service {#query-service}
+## Destinations {#destinations}
+
+Les [!DNL Destinations] sont des intégrations préconfigurées à des plateformes de destination qui permettent d’activer facilement des données provenant d’Adobe Experience Platform. Vous pouvez utiliser les destinations pour activer vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
+
+**Fonctionnalités nouvelles ou mises à jour** {#new-updated-destinations}
+
+| Destination | Description |
+| ----------- | ----------- |
+| [[!BADGE Beta]{type=Informative} [!DNL Amazon Ads] connection](../../destinations/catalog/advertising/amazon-ads.md) | Le [!DNL Amazon Ads] L’intégration à Adobe Experience Platform prend désormais en charge le routage régional vers les différentes [!DNL Amazon Ads] les marchés. En savoir plus dans la section [changement de destination](../../destinations/catalog/advertising/amazon-ads.md#changelog). |
+
+{style="table-layout:auto"}
+
+<!-- 
+
+**New or updated functionality** {#destinations-new-updated-functionality}
+
+| Functionality | Description |
+| ----------- | ----------- |
+| Workspace support for [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) destinations. | You can now select the Adobe Target workspace that you want to share audiences to, when configuring a new Adobe Target destination connection. See the [connection parameters](../../destinations/catalog/personalization/adobe-target-connection.md#parameters) section for more information. Additionally, see the tutorial on [configuring workspaces](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=en) in Adobe Target for more information about workspaces. |
+
+{style="table-layout:auto"}
+
+-->
+
+<!--
+
+**Fixes and enhancements** {#destinations-fixes-and-enhancements}
+
+- Placeholder for fixes and enhancements
+
+-->
+
+Pour des informations plus générales sur les destinations, reportez-vous à la [présentation des destinations](../../destinations/home.md).
+
+## Query Service {#query-service}
 
 Query Service vous permet d’utiliser le langage SQL standard pour interroger des données dans le lac de données Adobe Experience Platform. Vous pouvez joindre n’importe quel jeu de données à partir du lac de données et capturer les résultats de la requête sous la forme d’un nouveau jeu de données à utiliser dans les rapports, dans l’espace de travail de science des données ou à ingérer en tant que profil client en temps réel.
 &#x200B;
