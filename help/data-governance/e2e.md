@@ -3,9 +3,9 @@ title: Guide complet sur la gouvernance des données
 description: Suivez la procédure complète permettant d’appliquer des contraintes d’utilisation des données aux champs et jeux de données dans Adobe Experience Platform.
 exl-id: f18ae032-027a-4c97-868b-e04753237c81
 source-git-commit: 9f3fa696ed60ce85fa93515e39716d89ec80f1ec
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1881'
-ht-degree: 71%
+ht-degree: 100%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 71%
 
 Pour déterminer les actions marketing pouvant être effectuées sur certains jeux de données et champs dans Adobe Experience Platform, vous devez au préalable réaliser les opérations suivantes :
 
-1. [Application de libellés](#labels) aux champs de schémas ou à des jeux de données entiers, dont vous souhaitez restreindre l’utilisation.
+1. [Appliquez des libellés](#labels) aux champs de schémas ou à des jeux de données entiers dont vous souhaitez restreindre l’utilisation.
 1. [Configurez et activez les politiques de gouvernance des données](#policy) qui déterminent les types de données libellées qui peuvent être utilisés pour certaines actions marketing.
 1. [Appliquez des actions marketing à vos destinations](#destinations) pour indiquer les politiques qui s’appliquent aux données envoyées vers ces destinations.
 
@@ -34,9 +34,9 @@ Ce guide aborde l’ensemble du processus de configuration et d’application d�
 
 >[!IMPORTANT]
 >
->Les libellés ne peuvent plus être appliqués à des champs individuels au niveau du jeu de données. Ce workflow a été abandonné au profit de l’application des libellés au niveau du schéma. Cependant, vous pouvez toujours libeller un jeu de données entier. Les libellés précédemment appliqués à des champs de jeux de données individuels seront toujours pris en charge par le biais de l’interface utilisateur de Platform jusqu’au 31 mai 2024. Pour garantir la cohérence de vos libellés sur tous les schémas, les libellés précédemment attachés aux champs au niveau du jeu de données doivent être migrés au niveau du schéma par vous au cours de l’année à venir. Voir la section sur [migration des libellés précédemment appliqués](#migrate-labels) pour obtenir des instructions sur la manière de procéder.
+>Les libellés ne peuvent plus être appliqués à des champs individuels au niveau du jeu de données. Ce workflow a été abandonné au profit de l’application des libellés au niveau du schéma. Cependant, vous pouvez toujours libeller un jeu de données entier. Les libellés précédemment appliqués à des champs de jeux de données individuels seront toujours pris en charge par le biais de l’interface utilisateur de Platform jusqu’au 31 mai 2024. Pour garantir la cohérence de vos libellés sur tous les schémas, les libellés précédemment attachés aux champs au niveau du jeu de données doivent être migrés au niveau du schéma par vous-même au cours de l’année à venir. Voir la section sur la [migration des libellés précédemment appliqués](#migrate-labels) pour obtenir des instructions sur la manière de procéder.
 
-Vous pouvez [appliquer des libellés à un schéma ;](#schema-labels) afin que tous les jeux de données basés sur ce schéma héritent des mêmes libellés. Vous pouvez ainsi gérer les étiquettes pour la gouvernance des données, le consentement et le contrôle d’accès au même endroit. En appliquant des contraintes d’utilisation des données au niveau du schéma, l’effet se propage en aval à tous les jeux de données basés sur ce schéma. Les libellés appliqués au niveau du champ de schéma prennent en charge les cas d’utilisation de la gouvernance des données et sont détectables dans l’espace de travail des jeux de données . [!UICONTROL Gouvernance des données] sous l’onglet [!UICONTROL Nom du champ] en tant que libellés en lecture seule.
+Vous pouvez [appliquer des libellés à un schéma](#schema-labels) afin que tous les jeux de données basés sur ce schéma héritent des mêmes libellés. Vous pouvez ainsi gérer les libellés pour la gouvernance des données, le consentement et le contrôle d’accès au même endroit. En appliquant des contraintes d’utilisation des données au niveau du schéma, l’effet se propage en aval à tous les jeux de données basés sur ce schéma. Les libellés appliqués au niveau du champ de schéma prennent en charge les cas d’utilisation de la gouvernance des données et sont détectables dans l’onglet de l’espace de travail Jeux de données [!UICONTROL Gouvernance des données] sous la colonne [!UICONTROL Nom du champ] en tant que libellés en lecture seule.
 
 Si vous souhaitez appliquer des contraintes d’utilisation des données à un jeu de données spécifique, vous pouvez [appliquer des libellés directement à ce jeu de données](#dataset-labels) ou à des champs spécifiques de celui-ci.
 
@@ -46,19 +46,19 @@ Vous pouvez également [appliquer des libellés à un schéma](#schema-labels) a
 >
 >Pour plus d’informations sur les différents libellés d’utilisation des données et leur utilisation prévue, consultez la [référence des libellés d’utilisation des données](./labels/reference.md). Si les libellés de base disponibles ne couvrent pas tous les cas d’utilisation souhaités, vous pouvez également [définir vos propres libellés personnalisés](./labels/user-guide.md#manage-custom-labels).
 
-### Application d’étiquettes à un jeu de données entier {#dataset-labels}
+### Appliquez des libellés à un jeu de données entier {#dataset-labels}
 
 Sélectionnez **[!UICONTROL Jeux de données]** dans le volet de navigation de gauche, puis cliquez sur le nom du jeu de données auquel appliquer des libellés. Vous pouvez également utiliser le champ de recherche pour réduire la liste des jeux de données affichés.
 
-![L’onglet Parcourir de l’espace de travail des jeux de données avec les jeux de données et une ligne de jeu de données en surbrillance.](./images/e2e/select-dataset.png)
+![Onglet Parcourir de l’espace de travail Jeux de données avec les jeux de données et une ligne de jeu de données en surbrillance.](./images/e2e/select-dataset.png)
 
 La vue des détails du jeu de données s’affiche. Sélectionnez l’onglet **[!UICONTROL Gouvernance des données]** pour afficher la liste des champs du jeu de données et des libellés qui y ont déjà été appliqués. Sélectionnez l’icône représentant un crayon pour modifier les libellés des jeux de données.
 
-![L’onglet Gouvernance des données du jeu de données Loyalty Members avec l’icône en forme de crayon mise en surbrillance.](./images/e2e/edit-dataset-labels.png)
+![Onglet Gouvernance des données du jeu de données Membres du programme de fidélité avec l’icône en forme de crayon en surbrillance.](./images/e2e/edit-dataset-labels.png)
 
-Le [!UICONTROL Modification des étiquettes de gouvernance] s’affiche. Sélectionnez l’étiquette de gouvernance appropriée et sélectionnez **[!UICONTROL Enregistrer]**.
+La boîte de dialogue [!UICONTROL Modifier les libellés de gouvernance] apparaît. Sélectionnez le libellé de gouvernance approprié et sélectionnez **[!UICONTROL Enregistrer]**.
 
-![La boîte de dialogue Modifier les étiquettes de gouvernance avec la case à cocher d’étiquette et Enregistrer en surbrillance.](./images/e2e/edit-dataset-governance-labels.png)
+![Boîte de dialogue Modifier les libellés de gouvernance avec la case à cocher du libellé et Enregistrer en surbrillance.](./images/e2e/edit-dataset-governance-labels.png)
 
 ### Appliquer des libellés à un schéma {#schema-labels}
 
@@ -70,9 +70,9 @@ Sélectionnez **[!UICONTROL Schémas]** dans le volet de navigation de gauche, p
 >
 >![Image montrant un lien vers le schéma d’un jeu de données.](./images/e2e/schema-from-dataset.png)
 
-La structure du schéma s’affiche dans l’éditeur de schémas. Dans cet écran, sélectionnez l’onglet **[!UICONTROL Libellés]** pour afficher une vue en mode liste des champs du schéma et des libellés qui y ont déjà été appliqués. Cochez les cases en regard des champs auxquels vous souhaitez ajouter des libellés, puis sélectionnez **[!UICONTROL Appliquer les étiquettes d’accès et de gouvernance des données]** dans le rail de droite.
+La structure du schéma s’affiche dans l’éditeur de schémas. Dans cet écran, sélectionnez l’onglet **[!UICONTROL Libellés]** pour afficher une vue en mode liste des champs du schéma et des libellés qui y ont déjà été appliqués. Cochez les cases en regard des champs auxquels vous souhaitez ajouter des libellés, puis sélectionnez **[!UICONTROL Appliquez l’accès et les libellés de gouvernance des données]** dans le rail de droite.
 
-![L’onglet Libellés de l’espace de travail du schéma avec un champ de schéma unique sélectionné et les étiquettes Appliquer l’accès et gouvernance des données mises en surbrillance.](./images/e2e/schema-field-label.png)
+![Onglets Libellés de l’espace de travail Schéma avec un champ de schéma unique sélectionné et Appliquer l’accès et les libellés de gouvernance des données en surbrillance.](./images/e2e/schema-field-label.png)
 
 >[!NOTE]
 >
@@ -80,30 +80,30 @@ La structure du schéma s’affiche dans l’éditeur de schémas. Dans cet écr
 >
 >![Image montrant la sélection de l’icône en forme de crayon dans la vue des libellés du schéma.](./images/e2e/label-whole-schema.png)
 
-Le [!UICONTROL Appliquer les étiquettes d’accès et de gouvernance des données] s’affiche. Sélectionnez les libellés à appliquer au champ de schéma choisi. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Enregistrer]**.
+La boîte de dialogue [!UICONTROL Appliquer l’accès et les libellés de gouvernance des données] s’affiche. Sélectionnez les libellés à appliquer au champ de schéma choisi. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Enregistrer]**.
 
-![La boîte de dialogue Appliquer les étiquettes d’accès et de gouvernance des données affiche plusieurs étiquettes ajoutées à un champ de schéma.](./images/e2e/save-schema-labels.png)
+![La boîte de dialogue Appliquer l’accès et les libellés de gouvernance des données affiche plusieurs libellés ajoutés à un champ de schéma.](./images/e2e/save-schema-labels.png)
 
 Répétez les étapes ci-dessus pour appliquer des libellés à différents champs (ou à différents schémas) si nécessaire. Lorsque vous avez terminé, vous pouvez passer à l’étape suivante qui consiste à [activer les politiques de gouvernance des données](#policy).
 
 ### Migrer les libellés précédemment appliqués au niveau du jeu de données {#migrate-labels}
 
-Sélectionner **[!UICONTROL Jeu de données]** dans le volet de navigation de gauche, sélectionnez le nom du jeu de données à partir duquel vous souhaitez migrer des libellés. Vous pouvez également utiliser le champ de recherche pour réduire la liste des jeux de données affichés.
+Sélectionnez **[!UICONTROL Jeu de données]** dans le volet de navigation de gauche, puis cliquez sur le nom du jeu de données depuis lequel vous souhaitez que les libellés migrent. Vous pouvez également utiliser le champ de recherche pour réduire la liste des jeux de données affichés.
 
-![L’onglet Parcourir de l’espace de travail des jeux de données avec le jeu de données Loyalty Members en surbrillance.](./images/e2e/select-dataset.png)
+![Onglet Parcourir de l’espace de travail Jeux de données avec le jeu de données Membres du programme de fidélité en surbrillance.](./images/e2e/select-dataset.png)
 
 La vue des détails du jeu de données s’affiche. Sélectionnez l’onglet **[!UICONTROL Gouvernance des données]** pour afficher la liste des champs du jeu de données et des libellés qui y ont déjà été appliqués. Sélectionnez l’icône Annuler en regard d’un libellé que vous souhaitez supprimer d’un champ. Une boîte de dialogue de confirmation s’affiche. Sélectionnez [!UICONTROL Supprimer le libellé] pour confirmer vos choix.
 
-![Onglet Gouvernance des données de l’espace de travail des jeux de données avec le libellé d’un champ mis en surbrillance pour suppression.](./images/e2e/remove-label.png)
+![Onglet Gouvernance des données de l’espace de travail Jeux de données avec le libellé d’un champ en surbrillance pour suppression.](./images/e2e/remove-label.png)
 
-Après avoir supprimé le libellé de votre champ de jeu de données, accédez à l’éditeur de schémas pour ajouter le libellé au schéma. Vous trouverez des instructions pour ce faire dans la section [section sur l’application d’étiquettes à un schéma](#schema-labels).
+Après avoir supprimé le libellé de votre champ de jeu de données, accédez à l’éditeur de schémas pour ajouter le libellé au schéma. Vous trouverez des instructions pour ce faire dans la [section relative à l’application de libellés à un schéma](#schema-labels).
 
 >[!TIP]
 >
 >Vous pouvez sélectionner le nom du schéma dans le rail de droite, suivi du lien dans la boîte de dialogue qui s’affiche pour accéder au schéma approprié.
->![Onglet Gouvernance des données de l’espace de travail des jeux de données avec le nom du schéma dans la barre latérale et le lien de la boîte de dialogue mis en surbrillance.](./images/e2e/navigate-to-schema.png)
+>![Onglet Gouvernance des données de l’espace de travail Jeux de données avec le nom du schéma dans la barre latérale et le lien de la boîte de dialogue en surbrillance.](./images/e2e/navigate-to-schema.png)
 
-Après avoir migré les étiquettes nécessaires, assurez-vous que vous disposez des [activation des stratégies de gouvernance des données](#policy).
+Après avoir migré les libellés nécessaires, assurez-vous que vous avez activé les [politiques de gouvernance des données](#policy) adéquates.
 
 ## Activer les politiques de gouvernance des données {#policy}
 
