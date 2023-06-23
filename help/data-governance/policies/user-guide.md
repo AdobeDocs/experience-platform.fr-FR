@@ -5,9 +5,9 @@ title: Gestion des politiques d’utilisation des données dans l’interface ut
 description: La gouvernance des données d’Adobe Experience Platform fournit une interface utilisateur qui vous permet de créer et de gérer des politiques d’utilisation des données. Ce document offre une vue d’ensemble des actions que vous pouvez effectuer dans l’espace de travail Politiques de l’interface utilisateur d’Experience Platform.
 exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
 source-git-commit: ed9ab1f2a4b4466841b3bedef48a6e0a07ec3d10
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1788'
-ht-degree: 91%
+ht-degree: 100%
 
 ---
 
@@ -61,17 +61,17 @@ Selon que vous fassiez partie de la version bêta des politiques de consentement
 * Si vous faites partie de la version bêta, une boîte de dialogue vous offre une option supplémentaire pour [créer une politique de consentement](#consent-policy).
   ![](../images/policies/choose-policy-type.png)
 
-### Utilisation conjointe de la gouvernance des données et des stratégies de consentement {#combine-policies}
+### Utilisation conjointe de la gouvernance des données et des politiques de consentement {#combine-policies}
 
 >[!NOTE]
 >
 >Actuellement, les politiques de consentement ne sont disponibles que pour les organisations qui ont acheté Adobe Healthcare Shield ou Adobe Privacy &amp; Security Shield.
 
-Les stratégies de gouvernance et de consentement peuvent être utilisées conjointement pour créer des règles robustes pour gérer les audiences mappées à une destination. Les stratégies de consentement sont de nature inclusive, ce qui signifie qu’elles déterminent les profils pouvant être inclus dans chaque expérience marketing. À l’inverse, les politiques de gouvernance excluent l’utilisation d’attributs étiquetés spécifiques d’être configurés pour l’activation.
+Les politiques de gouvernance et de consentement peuvent être utilisées conjointement pour créer des règles solides afin de gérer les audiences mappées à une destination. Les politiques de consentement sont de nature inclusive, ce qui signifie qu’elles déterminent les profils pouvant être inclus dans chaque expérience marketing. À l’inverse, les politiques de gouvernance empêchent que les attributs étiquetés spécifiques soient utilisés pour être configurés pour l’activation.
 
-En utilisant ce comportement, vous pouvez configurer une combinaison de stratégies et de règles de consentement qui incluent les profils corrects, mais vous empêche d’inclure des données qui vont à l’encontre de vos règles d’organisation définies. Par exemple, si vous souhaitez exclure des données sensibles de l’inclusion, mais que vous pouvez toujours cibler les utilisateurs consentants pour le marketing via les médias sociaux. Les étapes nécessaires à ce scénario sont décrites dans l’infographie ci-dessous.
+En utilisant ce comportement, vous pouvez configurer une combinaison de politiques et de règles de consentement incluant les profils corrects, mais vous ne pouvez pas inclure des données qui vont à l’encontre de vos règles d’organisation définies. C’est le cas par exemple si vous souhaitez exclure des données sensibles de l’inclusion, mais que vous pouvez toujours cibler les utilisateurs et utilisatrices consentants pour le marketing via les médias sociaux. Les étapes nécessaires à ce scénario sont décrites dans l’infographie ci-dessous.
 
-![Infographie décrivant les étapes à suivre pour utiliser conjointement les politiques de gouvernance et de consentement afin de créer des règles robustes pour les audiences publiques.](../images/policies/governance-and-consent-policies-infographic.png)
+![Infographie décrivant les étapes à suivre pour utiliser conjointement les politiques de gouvernance et de consentement afin de créer des règles solides pour les audiences de gouvernance.](../images/policies/governance-and-consent-policies-infographic.png)
 
 ### Créer une politique de gouvernance des données {#create-governance-policy}
 
