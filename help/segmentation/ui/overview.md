@@ -5,9 +5,9 @@ title: Guide de l’IU de Segmentation Service
 description: Adobe Experience Platform Segmentation Service fournit une interface utilisateur pour la création et la gestion des définitions de segment.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
 source-git-commit: 207cddae6b632866d564729de49d28fc5c29ef7f
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2646'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -73,9 +73,9 @@ Si la répartition est sélectionnée, l’affichage présente un graphique à b
 
 | État | Description |
 | ------ | ----------- |
-| [!UICONTROL Réalisé] | Le nombre de profils qui **qualifié** pour le segment au cours des dernières 24 heures depuis la dernière tâche de segmentation par lots. |
-| [!UICONTROL Existant] | Le nombre de profils qui **remain** dans le segment au cours des dernières 24 heures depuis la dernière tâche de segmentation par lots. |
-| [!UICONTROL Sortant] | Le nombre de profils qui **exited** le segment au cours des dernières 24 heures depuis la dernière tâche de segmentation par lots. |
+| [!UICONTROL Réalisé] | Nombre de profils qui **ont rempli les critères** du segment au cours des dernières 24 heures depuis la dernière exécution de la tâche de segmentation par lots. |
+| [!UICONTROL Existant] | Nombre de profils qui **sont restés** dans le segment au cours des dernières 24 heures depuis la dernière exécution de la tâche de segmentation par lots. |
+| [!UICONTROL Sortant] | Nombre de profils qui **sont sortis** du segment au cours des dernières 24 heures depuis la dernière exécution de la tâche de segmentation par lots. |
 
 La méthode d’évaluation peut être soit en flux continu, par lots ou Edge. Les segments en streaming sont constamment évalués au fur et à mesure que les données entrent dans le système. Les segments par lot sont évalués selon un planning établi. Les segments Edge évaluent les segments en temps réel, ce qui permet d’utiliser les cas d’utilisation de personnalisation de la même page et de la page suivante.
 
