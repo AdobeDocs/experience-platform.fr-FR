@@ -5,9 +5,9 @@ title: Guide de l’API Policy Service
 description: L’API Policy Service permet aux développeurs de gérer les libellés et les politiques d’utilisation des données dans Experience Platform. Suivez ce guide pour savoir comment effectuer des opérations clés à l’aide de l’API.
 exl-id: 23c05670-7107-4b96-bc24-0a51b5d267b2
 source-git-commit: 0c09db51d97bc0cf321c5d2fd57c42d194b25d5f
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '547'
-ht-degree: 89%
+ht-degree: 100%
 
 ---
 
@@ -21,7 +21,7 @@ Pour afficher tous les points d’entrée et opérations CRUD disponibles, consu
 
 ## Libellés
 
-Appliquez des libellés d’utilisation des données aux schémas pour classer les jeux de données et les champs en fonction des stratégies d’utilisation qui s’appliquent à ces données. Vous pouvez appliquer les libellés à tout moment, ce qui vous offre une certaine flexibilité quant à la manière dont vous choisissez de gérer les données. Les bonnes pratiques recommandent de libeller les données dès qu’elles sont ingérées dans [!DNL Experience Platform], ou dès que les données sont disponibles pour une utilisation dans [!DNL Platform]. Vous pouvez créer, afficher, modifier et supprimer des libellés à l’aide du point d’entrée `/labels`. Pour découvrir comment utiliser ce point d’entrée, consultez le [guide des points d’entrée des libellés](./labels.md).
+Appliquez les libellés d’utilisation des données pour classer les jeux de données et les champs en fonction des politiques d’utilisation qui s’appliquent à ces données. Vous pouvez appliquer les libellés à tout moment, ce qui vous offre une certaine flexibilité quant à la manière dont vous choisissez de gérer les données. Les bonnes pratiques recommandent de libeller les données dès qu’elles sont ingérées dans [!DNL Experience Platform], ou dès que les données sont disponibles pour une utilisation dans [!DNL Platform]. Vous pouvez créer, afficher, modifier et supprimer des libellés à l’aide du point d’entrée `/labels`. Pour découvrir comment utiliser ce point d’entrée, consultez le [guide des points d’entrée des libellés](./labels.md).
 
 ## Actions marketing
 
@@ -44,7 +44,7 @@ Pour savoir comment gérer les politiques dans l’API, consultez le [guide des 
 
 ## Évaluation
 
-Une fois que les libellés d’utilisation des données ont été appliqués aux schémas Platform et que les stratégies d’utilisation des données ont été définies pour les actions marketing en fonction de ces libellés, les fonctionnalités de gouvernance des données vous permettent d’appliquer ces stratégies et d’empêcher les opérations de données qui constituent des violations de stratégie.
+Une fois que les libellés d’utilisation des données ont été appliqués aux schémas de Platform et que les politiques d’utilisation des données ont été définies pour les actions marketing suivant ces libellés, les fonctionnalités de gouvernance des données vous permettent d’appliquer ces politiques et d’empêcher les opérations de données en violation avec celles-ci.
 
 L’API [!DNL Policy Service] fournit des points d’entrée qui vous permettent de tester les actions marketing par rapport aux jeux de données ou à des combinaisons arbitraires de libellés d’utilisation des données, afin de vérifier si des violations de politiques se produisent. En fonction de la réponse de l’API, vous pouvez configurer des protocoles dans votre application d’expérience, afin d’être en conformité avec les politiques d’utilisation des données. Pour plus d’informations, consultez le [guide des points d’entrée d’évaluation](./evaluation.md).
 
