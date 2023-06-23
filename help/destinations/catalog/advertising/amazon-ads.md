@@ -4,9 +4,9 @@ description: Amazon Ads offre toute une gamme de solutions pour vous aider à a
 last-substantial-update: 2023-03-29T00:00:00Z
 exl-id: 724f3d32-65e0-4612-a882-33333e07c5af
 source-git-commit: 147499e0b736fac7aa27942790661236be68b0a4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1401'
-ht-degree: 78%
+ht-degree: 100%
 
 ---
 
@@ -32,7 +32,7 @@ Cette intégration avec Amazon DSP permet aux annonceurs d’Amazon Ads de tran
 
 ## Conditions préalables {#prerequisites}
 
-Pour utiliser la connexion Amazon Ads avec Adobe Experience Platform, les utilisateurs doivent d’abord avoir accès à un compte Amazon DSP Advertiser. Pour configurer ces instances, consultez la page suivante du site web Amazon Ads :
+Pour utiliser la connexion d’Amazon Ads avec Adobe Experience Platform, vous devez disposer d’un compte d’annonceur Amazon DSP. Pour configurer ces instances, veuillez consulter la page suivante sur le site web Amazon Ads :
 
 * [Commencer avec Amazon DSP](https://advertising.amazon.com/solutions/products/amazon-dsp?ref_=a20m_us_hnav_p_dsp_adtech)
 
@@ -70,7 +70,7 @@ Pour vous connecter à cette destination, procédez comme décrit dans le [tutor
 
 Pour vous authentifier à la destination, renseignez les champs requis et sélectionnez **[!UICONTROL Se connecter à la destination]**.
 
-Vous accédez à l’interface de connexion d’Amazon Ads où vous sélectionnez d’abord les comptes publicitaires auxquels vous souhaitez vous connecter. Lors de la connexion, vous êtes redirigé vers Adobe Experience Platform avec une nouvelle connexion, fournie avec l’identifiant du compte publicitaire que vous avez sélectionné. Sélectionnez le compte publicitaire approprié dans l’écran de configuration de destination pour continuer.
+Vous accédez à l’interface de connexion d’Amazon Ads où vous sélectionnez d’abord les comptes publicitaires auxquels vous souhaitez vous connecter. Lors de la connexion, on vous redirige vers Adobe Experience Platform avec une nouvelle connexion fournie avec l’ID du compte publicitaire que vous avez sélectionné. Sélectionnez le compte publicitaire approprié dans l’écran de configuration de destination pour continuer.
 
 * **[!UICONTROL Jeton porteur]** : renseignez le jeton porteur pour vous authentifier sur la destination.
 
@@ -84,9 +84,9 @@ Pour configurer les détails de la destination, renseignez les champs obligatoir
 
 >[!NOTE]
 >
->Après avoir enregistré la configuration de destination, vous ne pourrez pas modifier l’identifiant publicitaire Amazon Ads, même si vous vous authentifiez à nouveau via votre compte Amazon. Pour utiliser un autre identifiant publicitaire Amazon Ads, vous devez créer une nouvelle connexion de destination.
+>Après avoir enregistré la configuration de destination, vous ne pourrez pas modifier l’ID publicitaire Amazon Ads, même si vous vous authentifiez à nouveau via votre compte Amazon. Pour utiliser un autre ID publicitaire Amazon Ads, vous devez créer une nouvelle connexion de destination.
 
-* **[!UICONTROL Région des annonceurs]**: Sélectionnez la région dans laquelle votre annonceur est hébergé. Pour plus d’informations sur les marchés pris en charge par chaque région, consultez la page [Documentation Amazon Ads](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints).
+* **[!UICONTROL Zone géographique des annonceurs]** : sélectionnez la zone géographique dans laquelle votre annonceur est hébergé. Pour plus d’informations sur les marchés pris en charge par chaque zone géographique, consultez la [documentation Amazon Ads](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints).
 
 
 
@@ -116,7 +116,7 @@ La connexion Amazon Ads prend en charge les adresses e-mail et numéros de tél
 * Pour mapper des numéros de téléphone hachés, sélectionnez l’espace de noms d’identité `Phone_SHA256` comme champ source.
 * Pour mapper des adresses e-mail ou des numéros de téléphone non hachés, sélectionnez les espaces de noms d’identité correspondants comme champs source, puis cochez la case `Apply Transformation` pour que Platform hache les identités lors de l’activation.
 
-Il est vivement recommandé de mapper autant de champs que possible. Si un seul attribut source est disponible, vous pouvez mapper un seul champ. La destination Amazon Ads utilise tous les champs mappés à des fins de mappage, ce qui produit des taux de correspondance plus élevés si d’autres champs sont fournis. Pour plus d’informations sur les identifiants acceptés, consultez la [page d’aide sur les audiences hachées Amazon Ads](https://advertising.amazon.com/dsp/help/ss/en/audiences#GA6BC9BW52YFXBNE).
+Il est vivement recommandé de mapper autant de champs que possible. Si un seul attribut source est disponible, vous pouvez mapper un seul champ. La destination Amazon Ads utilise tous les champs mappés à des fins de mappage, produisant ainsi des taux de correspondance plus élevés si d’autres champs sont fournis. Pour plus d’informations sur les identifiants acceptés, consultez la [page d’aide sur les audiences hachées Amazon Ads](https://advertising.amazon.com/dsp/help/ss/en/audiences#GA6BC9BW52YFXBNE).
 
 ## Données exportées / Valider l’exportation des données {#exported-data}
 
@@ -140,14 +140,14 @@ Pour accéder à une documentation d’aide supplémentaire, consultez les resso
 
 ## Journal des modifications {#changelog}
 
-Cette section capture les fonctionnalités et les mises à jour importantes de la documentation apportées à ce connecteur de destination.
+Cette section répertorie les nouvelles fonctionnalités et les mises à jour importantes de la documentation consacrée au connecteur de destination.
 
 +++ Afficher le journal des modifications
 
 | Mois de publication | Type de mise à jour | Description |
 |---|---|---|
-| Mai 2023 | Fonctionnalité et mise à jour de la documentation | <ul><li>Ajout de la prise en charge de la sélection de la région Advertiser dans le [workflow de connexion à destination](#destination-details).</li><li>Mise à jour de la documentation pour prendre en compte l’ajout de la sélection de région Advertiser. Pour plus d’informations sur la sélection de la région Advertiser appropriée, reportez-vous à la section [Documentation Amazon](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints).</li></ul> |
-| Mars 2023 | Version initiale | Version initiale de la destination et documentation publiée. |
+| Mai 2023 | Nouvelles fonctionnalités et mise à jour de la documentation | <ul><li>Ajout de la prise en charge de la sélection de la zone géographique de l’annonceur dans le [workflow de connexion de destination](#destination-details).</li><li>Nouvelle documentation sur la fonctionnalité de sélection de la zone géographique de l’annonceur. Pour plus d’informations sur la sélection de la zone géographique de l’annonceur appropriée, consultez la [documentation d’Amazon](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints).</li></ul> |
+| Mars 2023 | Version initiale | Publication de la destination initiale et de la documentation. |
 
 {style="table-layout:auto"}
 
