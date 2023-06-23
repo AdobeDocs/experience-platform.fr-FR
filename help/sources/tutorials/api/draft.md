@@ -1,21 +1,21 @@
 ---
-title: Création De Brouillons De L’API Entités De Votre Service De Flux
-description: Découvrez comment créer des brouillons de votre connexion de base, de votre connexion source, de votre connexion cible et de votre flux de données à l’aide de l’API Flow Service
+title: Créer des brouillons de votre API Flow Service Entities
+description: Découvrez comment créer des brouillons de votre connexion de base, connexion source, connexion cible et flux de données à l’aide de l’API Flow Service.
 exl-id: aad6a302-1905-4a23-bc3d-39e76c9a22da
 source-git-commit: ebd650355a5a4c2a949739384bfd5c8df9577075
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1192'
-ht-degree: 23%
+ht-degree: 100%
 
 ---
 
-# Créez des brouillons de votre [!DNL Flow Service] entités utilisant l’API
+# Créer des brouillons de vos entités [!DNL Flow Service] à l’aide de l’API
 
-Vous pouvez utiliser la variable `mode=draft` paramètre de requête dans la variable [[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>) pour définir votre [!DNL Flow Service] entités telles que vos connexions de base, vos connexions source, vos connexions cible et vos flux de données vers un état de brouillon.
+Utilisez le paramètre de requête `mode=draft` dans l’API [[!DNL Flow Service] ](<https://www.adobe.io/experience-platform-apis/references/flow-service/>) pour définir vos entités [!DNL Flow Service] telles que vos connexions de base, connexions source, connexions cible et flux de données au statut brouillon.
 
-Les versions préliminaires peuvent être mises à jour ultérieurement avec de nouvelles informations, puis publiées une fois qu’elles sont prêtes, à l’aide de la variable `op=publish` paramètre de requête.
+Les brouillons peuvent être mises à jour plus tard avec de nouvelles informations, puis publiés une fois qu’ils sont prêts, à l’aide du paramètre de requête `op=publish`.
 
-Ce tutoriel décrit les étapes à suivre pour définir votre [!DNL Flow Service] les entités à un état de brouillon et vous permettent de suspendre et d’enregistrer vos workflows pour qu’ils soient terminés ultérieurement.
+Ce tutoriel décrit les étapes à suivre pour définir vos entités [!DNL Flow Service] au statut brouillon. Vous pouvez ainsi suspendre et enregistrer vos workflows en vue de les poursuivre plus tard.
 
 ## Prise en main
 
@@ -28,15 +28,16 @@ Ce tutoriel nécessite une compréhension du fonctionnement des composants suiva
 
 Pour plus d’informations sur la manière d’effectuer des appels vers les API Platform, consultez le guide [Prise en main des API Platform](../../../landing/api-guide.md).
 
-### Vérification de la prise en charge du mode préliminaire
+### Vérifier la prise en charge du mode brouillon
 
-Vous devez également vérifier si l’identifiant de spécification de connexion et l’identifiant de spécification de flux correspondant de la source que vous utilisez sont activés pour le mode préliminaire.
+Vous devez également vérifier si l’identifiant de spécification de connexion et l’identifiant de spécification de flux correspondant de la source que vous utilisez sont activés pour le mode brouillon.
 
 >[!BEGINTABS]
 
->[!TAB Recherche des détails de spécification de connexion]
+>[!TAB Rechercher les détails de la spécification de connexion]
 
-+++Request La requête suivante récupère les informations de spécification de connexion pour [!DNL Azure File Storage]:
++++Requête
+La requête suivante récupère les informations sur la spécification de connexion pour [!DNL Azure File Storage] :
 
 ```shell
 curl -X GET \
@@ -52,7 +53,7 @@ curl -X GET \
 
 +++Réponse
 
-Une réponse réussie renvoie les informations de spécification de connexion pour votre source. Pour vérifier si le mode préliminaire est pris en charge pour votre source, vérifiez que la variable `items[0].attributes.isDraftModeSupported` a une valeur de `true`.
+Une réponse réussie renvoie les informations sur la spécification de connexion de votre source. Pour vérifier si le mode brouillon est pris en charge pour votre source, assurez-vous que le paramètre `items[0].attributes.isDraftModeSupported` possède la valeur `true`.
 
 ```json {line-numbers="true" start-line="1" highlight="252"}
 {
@@ -340,9 +341,10 @@ Une réponse réussie renvoie les informations de spécification de connexion po
 
 +++
 
->[!TAB Recherche des détails sur les spécifications de flux]
+>[!TAB Rechercher des détails sur la spécification de flux]
 
-+++Requête La requête suivante récupère les détails de spécification de flux pour une source de stockage dans le cloud :
++++Requête
+La requête suivante récupère les détails de spécification de flux pour une source d’espace de stockage :
 
 ```shell
 curl -X GET \
@@ -358,7 +360,7 @@ curl -X GET \
 
 +++Réponse
 
-Une réponse réussie renvoie les informations de spécification de flux pour votre source. Pour vérifier si le mode préliminaire est pris en charge pour votre source, vérifiez que la variable `items[0].attributes.isDraftModeSupported` a une valeur de `true`.
+Une réponse réussie renvoie les informations de spécification de flux pour votre source. Pour vérifier si le mode brouillon est pris en charge pour votre source, assurez-vous que le paramètre `items[0].attributes.isDraftModeSupported` possède la valeur `true`.
 
 ```json {line-numbers="true" start-line="1" highlight="167"}
 {
@@ -567,9 +569,9 @@ Une réponse réussie renvoie les informations de spécification de flux pour vo
 
 
 
-## Création d’une connexion de base de brouillon {#create-a-draft-base-connection}
+## Créer un brouillon de connexion de base {#create-a-draft-base-connection}
 
-Pour créer une connexion de base de brouillon, envoyez une requête de POST à la fonction `/connections` point d’entrée du [!DNL Flow Service] API et fournir `mode=draft` comme paramètre de requête.
+Pour créer un brouillon de connexion de base, envoyez une requête POST au point d’entrée `/connections` de l’API [!DNL Flow Service] et indiquez `mode=draft` comme paramètre de requête.
 
 **Format d’API**
 
@@ -579,11 +581,11 @@ POST /connections?mode=draft
 
 | Paramètre | Description |
 | --- | --- |
-| `mode` | Paramètre de requête fourni par l’utilisateur qui décide de l’état de la connexion de base. Pour définir une connexion de base en tant que brouillon, définissez `mode` to `draft`. |
+| `mode` | Paramètre de requête fourni par l’utilisateur ou l’utilisatrice qui décide du statut de la connexion de base. Pour configurer une connexion de base en tant que brouillon, définissez `mode` sur `draft`. |
 
 **Requête**
 
-La requête suivante crée une connexion de base de brouillon pour le [!DNL Azure File Storage] source :
+La requête suivante crée un brouillon de connexion de base pour la source [!DNL Azure File Storage] :
 
 ```shell
 curl -X POST \
@@ -613,7 +615,7 @@ curl -X POST \
 
 **Réponse**
 
-Une réponse réussie renvoie l’identifiant de connexion de base et l’etag correspondant à votre connexion de base de brouillon. Vous pouvez utiliser cet identifiant ultérieurement pour mettre à jour et publier votre connexion de base.
+Une réponse réussie renvoie l’identifiant de connexion de base et l’etag correspondant à votre brouillon de connexion de base. Vous pouvez utiliser cet identifiant plus tard pour mettre à jour et publier votre connexion de base.
 
 ```json
 {
@@ -622,9 +624,9 @@ Une réponse réussie renvoie l’identifiant de connexion de base et l’etag c
 }
 ```
 
-## Publier votre connexion de base de brouillon {#publish-your-draft-base-connection}
+## Publier votre brouillon de connexion de base {#publish-your-draft-base-connection}
 
-Une fois que votre brouillon est prêt à être publié, envoyez une requête de POST au `/connections` endpoint et indiquez l’identifiant de la connexion de base de brouillon que vous souhaitez publier, ainsi qu’une opération d’action pour la publication.
+Une fois que votre brouillon est prêt à être publié, envoyez une requête POST au point d’entrée `/connections` et indiquez l’identifiant du brouillon de connexion de base que vous souhaitez publier, ainsi qu’une opération d’action pour la publication.
 
 **Format d’API**
 
@@ -634,11 +636,11 @@ POST /connections/{BASE_CONNECTION_ID}/action?op=publish
 
 | Paramètre | Description |
 | --- | --- |
-| `op` | Opération d’action qui met à jour l’état de la connexion de base interrogée. Pour publier un brouillon de connexion de base, définissez `op` to `publish`. |
+| `op` | Opération d’action qui met à jour le statut de la connexion de base interrogée. Pour publier un brouillon de connexion de base, définissez `op` sur `publish`. |
 
 **Requête**
 
-La requête suivante publie le brouillon de la connexion de base pour [!DNL Azure File Storage] qui a été créé à une étape précédente.
+La requête suivante publie le brouillon de connexion de base pour [!DNL Azure File Storage], qui a été créé lors d’une étape précédente.
 
 ```shell
 curl -X POST \
@@ -661,9 +663,9 @@ Une réponse réussie renvoie l’identifiant et l’etag correspondant à votre
 }
 ```
 
-## Création d’une connexion source de brouillon {#create-a-draft-source-connection}
+## Créer un brouillon de connexion source {#create-a-draft-source-connection}
 
-Pour créer un brouillon de connexion source, envoyez une requête de POST à la fonction `/sourceConnections` point d’entrée du [!DNL Flow Service] API et fournir `mode=draft` comme paramètre de requête.
+Pour créer un brouillon de connexion source, envoyez une requête POST au point d’entrée `/sourceConnections` de l’API [!DNL Flow Service] et indiquez `mode=draft` comme paramètre de requête.
 
 **Format d’API**
 
@@ -673,7 +675,7 @@ POST /sourceConnections?mode=draft
 
 | Paramètre | Description |
 | --- | --- |
-| `mode` | Paramètre de requête fourni par l’utilisateur qui décide de l’état de la connexion source. Pour définir une connexion source en tant que brouillon, définissez `mode` to `draft`. |
+| `mode` | Paramètre de requête fourni par l’utilisateur ou l’utilisatrice qui décide du statut de la connexion source. Pour définir une connexion source en tant que brouillon, définissez `mode` sur `draft`. |
 
 **Requête**
 
@@ -705,7 +707,7 @@ curl -X POST \
 
 **Réponse**
 
-Une réponse réussie renvoie l’identifiant de connexion source et l’etag correspondant à votre connexion source de brouillon. Vous pouvez utiliser cet identifiant ultérieurement pour mettre à jour et publier votre connexion source.
+Une réponse réussie renvoie l’identifiant de connexion source et l’etag correspondant à votre brouillon de connexion source. Vous pouvez utiliser cet identifiant plus tard pour mettre à jour et publier votre connexion source.
 
 ```json
 {
@@ -714,13 +716,13 @@ Une réponse réussie renvoie l’identifiant de connexion source et l’etag co
 }
 ```
 
-## Publier la connexion source du brouillon {#publish-your-draft-source-connection}
+## Publier votre brouillon de connexion source {#publish-your-draft-source-connection}
 
 >[!NOTE]
 >
->Vous ne pouvez pas publier une connexion source si sa connexion de base associée est toujours en état de brouillon. Assurez-vous que votre connexion de base est publiée en premier avant de publier votre connexion source.
+>Vous ne pouvez pas publier de connexion source si sa connexion de base associée est toujours en mode brouillon. Assurez-vous que votre connexion de base est publiée en premier, avant de publier votre connexion source.
 
-Une fois que votre brouillon est prêt à être publié, envoyez une requête de POST au `/sourceConnections` endpoint et indiquez l’identifiant de la connexion source du brouillon que vous souhaitez publier, ainsi qu’une opération d’action pour la publication.
+Une fois que votre brouillon est prêt à être publié, envoyez une requête POST au point d’entrée `/sourceConnections` et indiquez l’identifiant du brouillon de la connexion source que vous souhaitez publier, ainsi qu’une opération d’action pour la publication.
 
 **Format d’API**
 
@@ -730,11 +732,11 @@ POST /sourceConnections/{SOURCE_CONNECTION_ID}/action?op=publish
 
 | Paramètre | Description |
 | --- | --- |
-| `op` | Opération d’action qui met à jour l’état de la connexion source interrogée. Pour publier un brouillon de connexion source, définissez `op` to `publish`. |
+| `op` | Opération d’action qui met à jour le statut de la connexion source interrogée. Pour publier un brouillon de connexion source, définissez `op` sur `publish`. |
 
 **Requête**
 
-La requête suivante publie le brouillon de la connexion source pour [!DNL Azure File Storage] qui a été créé à une étape précédente.
+La requête suivante publie le brouillon de la connexion source pour [!DNL Azure File Storage], créé lors d’une étape précédente.
 
 ```shell
 curl -X POST \
@@ -757,9 +759,9 @@ Une réponse réussie renvoie l’identifiant et l’etag correspondant à votre
 }
 ```
 
-## Création d’une connexion cible de brouillon {#create-a-draft-target-connection}
+## Créer un brouillon de connexion cible {#create-a-draft-target-connection}
 
-Pour créer une connexion cible de brouillon, envoyez une requête de POST à la fonction `/targetConnections` point d’entrée du [!DNL Flow Service] API et fournir `mode=draft` comme paramètre de requête.
+Pour créer un brouillon de connexion cible, envoyez une requête POST au point d’entrée `/targetConnections` de l’API [!DNL Flow Service] et indiquez `mode=draft` comme paramètre de requête.
 
 **Format d’API**
 
@@ -769,7 +771,7 @@ POST /targetConnections?mode=draft
 
 | Paramètre | Description |
 | --- | --- |
-| `mode` | Paramètre de requête fourni par l’utilisateur qui décide de l’état de la connexion cible. Pour définir une connexion cible en tant que brouillon, définissez `mode` to `draft`. |
+| `mode` | Paramètre de requête fourni par l’utilisateur ou l’utilisatrice qui décide du statut de la connexion cible. Pour définir une connexion cible en tant que brouillon, définissez `mode` sur `draft`. |
 
 **Requête**
 
@@ -802,7 +804,7 @@ curl -X POST \
 
 **Réponse**
 
-Une réponse réussie renvoie l’identifiant de connexion cible et l’etag correspondant à votre connexion cible de brouillon. Vous pouvez utiliser cet identifiant ultérieurement pour mettre à jour et publier votre connexion cible.
+Une réponse réussie renvoie l’identifiant de connexion cible et l’etag correspondant à votre brouillon de connexion cible. Vous pouvez utiliser cet identifiant plus tard pour mettre à jour et publier votre connexion cible.
 
 ```json
 {
@@ -811,13 +813,13 @@ Une réponse réussie renvoie l’identifiant de connexion cible et l’etag cor
 }
 ```
 
-## Publier votre connexion cible de brouillon {#publish-your-draft-target-connection}
+## Publier votre brouillon de connexion cible {#publish-your-draft-target-connection}
 
 >[!NOTE]
 >
->Vous ne pouvez pas publier une connexion cible si sa connexion de base associée est toujours en état de création. Assurez-vous que votre connexion de base est publiée en premier avant de publier votre connexion cible.
+>Vous ne pouvez pas publier de connexion cible si sa connexion de base associée est toujours en mode brouillon. Assurez-vous que votre connexion de base est publiée en premier, avant de publier votre connexion cible.
 
-Une fois que votre brouillon est prêt à être publié, envoyez une requête de POST au `/targetConnections` point de terminaison et indiquez l’identifiant de la connexion cible de brouillon que vous souhaitez publier, ainsi qu’une opération d’action pour la publication.
+Une fois que votre brouillon est prêt à être publié, envoyez une requête POST au point d’entrée `/targetConnections` et indiquez l’identifiant du brouillon de connexion cible que vous souhaitez publier, ainsi qu’une opération d’action pour la publication.
 
 **Format d’API**
 
@@ -827,11 +829,11 @@ POST /targetConnections/{TARGET_CONNECTION_ID}/action?op=publish
 
 | Paramètre | Description |
 | --- | --- |
-| `op` | Opération d’action qui met à jour l’état de la connexion cible interrogée. Pour publier un brouillon de connexion cible, définissez `op` to `publish`. |
+| `op` | Opération d’action qui met à jour le statut de la connexion cible interrogée. Pour publier un brouillon de connexion cible, définissez `op` sur `publish`. |
 
 **Requête**
 
-La requête suivante publie le brouillon de la connexion cible pour [!DNL Azure File Storage] qui a été créé à une étape précédente.
+La requête suivante publie le brouillon de connexion cible pour [!DNL Azure File Storage], créé lors d’une étape précédente.
 
 ```shell
 curl -X POST \
@@ -854,7 +856,7 @@ Une réponse réussie renvoie l’identifiant et l’etag correspondant à votre
 }
 ```
 
-## Création d’un flux de données de brouillon {#create-a-draft-dataflow}
+## Créer un brouillon de flux de données {#create-a-draft-dataflow}
 
 Pour définir un flux de données en tant que brouillon, envoyez une requête POST au point d’entrée `/flows` et indiquez le paramètre de requête `mode=draft`. Vous pouvez ainsi créer un flux de données et l’enregistrer en tant que brouillon.
 
@@ -897,7 +899,7 @@ La requête suivante permet de créer un brouillon de flux de données.
 
 **Réponse**
 
-Une réponse réussie renvoie l’identifiant de flux et l’etag correspondant à votre flux de données de brouillon. Vous pouvez utiliser cet identifiant ultérieurement pour mettre à jour et publier votre flux de données.
+Une réponse réussie renvoie l’identifiant de flux et l’etag correspondant à votre brouillon de flux de données. Vous pouvez utiliser cet identifiant plus tard pour mettre à jour et publier votre flux de données.
 
 ```json
 {
@@ -906,11 +908,11 @@ Une réponse réussie renvoie l’identifiant de flux et l’etag correspondant 
 }
 ```
 
-## Publication du flux de données de brouillon {#publish-your-draft-dataflow}
+## Publier votre brouillon de flux de données {#publish-your-draft-dataflow}
 
 >[!NOTE]
 >
->Vous ne pouvez pas publier un flux de données si ses connexions source et cible associées sont toujours à l’état de brouillon. Assurez-vous que vos connexions source et cible sont publiées en premier avant de publier votre flux de données.
+>Vous ne pouvez pas publier de flux de données si ses connexions source et cible associées sont toujours en mode brouillon. Assurez-vous que vos connexions source et cible sont publiées en premier, avant de publier votre flux de données.
 
 Une fois que votre brouillon est prêt à être publié, envoyez une requête POST au point d’entrée `/flows` et indiquez l’identifiant du brouillon de flux de données que vous souhaitez publier, ainsi qu’une opération d’action pour la publication.
 
@@ -951,4 +953,4 @@ Une réponse réussie renvoie l’identifiant et l’`etag` correspondant du flu
 
 ## Étapes suivantes
 
-En suivant ce tutoriel, vous avez appris à créer des brouillons de votre [!DNL Flow Service] entités et publiez ces brouillons. Pour plus d’informations sur les sources, veuillez lire le [présentation des sources](../../home.md).
+En suivant attentivement ce tutoriel, vous avez appris à créer des brouillons de vos entités [!DNL Flow Service] et à les publier. Pour plus d’informations sur les sources, consultez la [vue d’ensemble des sources](../../home.md).
