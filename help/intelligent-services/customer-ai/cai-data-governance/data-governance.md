@@ -6,9 +6,9 @@ title: Gouvernance des données dans IA dédiée aux clients
 description: Adobe Experience Platform fournit plusieurs services et outils qui vous permettent de contrôler en toute confiance vos données d’expérience collectées afin de respecter vos pratiques commerciales, vos obligations légales et votre processus de développement.
 exl-id: de0836a4-7bc2-4f9c-95a9-c01dd9e2b03f
 source-git-commit: 0fcdb358882fba7f7923e5d6fc1a947699276e18
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '302'
-ht-degree: 76%
+ht-degree: 100%
 
 ---
 
@@ -24,9 +24,9 @@ Les politiques et étiquettes d&#39;utilisation de données créées sur les jeu
 
 Cette intégration vous permet de gérer la conformité plus efficacement. Les gestionnaires de données de votre entreprise peuvent définir des politiques pour restreindre l’utilisation. Par conséquent, vous pouvez utiliser des données conformes aux stratégies définies par les gestionnaires de données. Lisez la documentation sur les [Libellés et stratégies](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-dataviews/data-governance.html?lang=fr) pour en savoir plus.
 
-## Stratégie de consentement {#consent-policy}
+## Politique de consentement {#consent-policy}
 
-Customer AI respecte vos préférences de consentement. Une fois que vous avez [configuration et activation de votre stratégie de consentement](https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html?lang=fr#consent-policy), Customer AI respecte les données de consentement collectées auprès de vous. Seules les données consenties sont utilisées pour évaluer le modèle lors des exécutions suivantes du modèle. Les nouveaux scores remplacent les anciens scores et peuvent être utilisés dans la segmentation. Actuellement, cette fonctionnalité n’est disponible que pour les clients de HealthCare Shield, ainsi que pour les clients Privacy and Security Shield.
+L’IA dédiée aux clients respecte vos préférences de consentement. Une fois que vous avez [configuré et activé votre politique de consentement](https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html?lang=fr#consent-policy), l’IA dédiée aux clients respecte les données de consentement collectées auprès de vous. Seules les données consenties sont utilisées pour évaluer le modèle lors des exécutions suivantes du modèle. Les nouveaux scores remplacent les anciens scores et peuvent être utilisés dans la segmentation. Actuellement, cette fonctionnalité n’est disponible que pour les clients et clientes de HealthCare Shield, ainsi que pour les clients Privacy and Security Shield.
 
 Vous pouvez en savoir plus sur cette fonctionnalité ici :
 
