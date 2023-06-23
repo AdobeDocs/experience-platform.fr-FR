@@ -5,9 +5,9 @@ title: Présentation de la gouvernance des données
 description: La gouvernance des données d’Adobe Experience Platform vous permet de gérer les données clients et de garantir la conformité aux réglementations, aux restrictions et aux politiques applicables à l’utilisation des données. Elle joue un rôle clé dans Experience Platform à différents niveaux, notamment dans le catalogage, la traçabilité des données, l’étiquetage de l’utilisation des données, les politiques d’utilisation des données et le contrôle de l’utilisation des données lors d’activités marketing
 exl-id: 00ca6bc2-1c58-4ea2-8bb5-30fd3fa5944a
 source-git-commit: e6f003a058f50454a6fd4923510976973c6946fb
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1518'
-ht-degree: 88%
+ht-degree: 100%
 
 ---
 
@@ -57,7 +57,7 @@ Le cadre de gouvernance des données comporte trois éléments clés : les libe
 
 ## Libellés d’utilisation des données
 
-La gouvernance des données permet aux gestionnaires de données d’appliquer des libellés d’utilisation au niveau des champs de schéma et des jeux de données afin de classer les données en fonction du type de stratégies qui s’appliquent.
+La gouvernance des données permet aux gestionnaires de données d’appliquer des libellés d’utilisation au niveau des champs du schéma et des jeux de données afin de classer les données en fonction du type de politique qui s’applique.
 
 Le cadre de gouvernance des données inclut des libellés d’utilisation des données prédéfinis pouvant être utilisés pour catégoriser les données de trois manières différentes :
 
@@ -79,7 +79,7 @@ Pour plus d’informations, consultez la présentation des [libellés d’utilis
 
 Des politiques d’utilisation des données doivent être mises en œuvre pour que les libellés d’utilisation des données prennent en charge efficacement la conformité des données. Les politiques d’utilisation des données sont des règles qui décrivent les types d’actions marketing que vous êtes autorisé ou non à effectuer sur des données d’[!DNL Experience Platform].
 
-Un exemple d’action marketing peut être le souhait d’exporter un jeu de données vers un service tiers. Si une stratégie a été mise en place pour déclarer que les informations d’identification personnelle (PII) ne peuvent pas être exportées et qu’une étiquette &quot;I&quot; (données d’identité) a été appliquée au niveau du champ ou au jeu de données, [!DNL Policy Service] empêche toute action qui exporterait ce jeu de données vers une destination tierce. Si l’une de ces tentatives d’action se produit, Policy Service envoie un message vous informant qu’une violation de politique d’utilisation des données s’est passée.
+Un exemple d’action marketing peut être le souhait d’exporter un jeu de données vers un service tiers. Si une politique est en place indiquant que les informations d’identification personnelle (PII) ne peuvent pas être exportées et qu’un libellé « I » (données d’identité) a été appliqué au niveau du champ ou du jeu de données, [!DNL Policy Service] empêche toute action qui exporterait ce jeu de données vers une destination tierce. Si l’une de ces tentatives d’action se produit, Policy Service envoie un message vous informant qu’une violation de politique d’utilisation des données s’est passée.
 
 Deux types de politiques sont disponibles :
 
@@ -112,14 +112,14 @@ Le tableau suivant présente les termes clés liés à la gouvernance des donné
 | **Gestionnaire de données** | Le/la gestionnaire de données est la personne responsable de la gestion, de la supervision et de l’application des ressources de données d’une organisation. Un(e) gestionnaire de données assure également la protection et la conservation des politiques de gouvernance des données afin qu’elles soient conformes aux réglementations gouvernementales et aux politiques de l’organisation. |
 | **Libellés d’utilisation des données** | Les libellés d’utilisation des données permettent aux utilisateurs de catégoriser les données en fonction des considérations liées à la confidentialité et des conditions contractuelles afin qu’elles soient conformes aux réglementations et aux politiques d’entreprise. |
 | **Libellés de jeux de données** | Les libellés peuvent être ajoutés à un schéma. Tous les champs d’un jeu de données héritent des libellés du schéma. |
-| **Libellés de champ** | Les libellés de champ sont des libellés de gouvernance des données qui sont soit hérités d’un schéma, soit appliqués directement à un champ. Les libellés de gouvernance des données appliqués à un champ ne sont pas hérités au niveau du schéma. |
+| **Libellés de champ** | Les libellés du champ sont des libellés de gouvernance des données qui sont hérités d’un schéma ou appliqués directement à un champ. Les libellés de gouvernance des données appliqués à un champ ne sont pas hérités jusqu’au niveau du schéma. |
 | **Géobarrière** | Une géobarrière est une limite géographique virtuelle, définie par les technologies GPS ou RFID qui permet à un logiciel de déclencher une réponse lorsqu’un appareil mobile entre ou quitte une zone particulière. |
 | **Étiquettes Identité** | Les étiquettes Identité « I » sont utilisées pour catégoriser des données pouvant identifier ou contacter une personne en particulier. |
 | **Ciblage en fonction des intérêts** | Le ciblage en fonction des intérêts, également connu sous le nom de personnalisation, se produit si les trois conditions suivantes sont rassemblées : les données collectées sur site sont utilisées pour établir des inférences sur les intérêts d’un utilisateur ou d’une utilisatrice, elles sont utilisées dans un autre contexte, par exemple sur un autre site ou sur une autre application (hors site), et elles sont utilisées pour sélectionner le contenu ou les publicités diffusés en fonction de ces inférences. |
 | **Action marketing** | Dans le cadre de la gouvernance des données, une action marketing est une action entreprise par un utilisateur de données [!DNL Experience Platform] pour laquelle il est nécessaire de vérifier les violations des politiques d’utilisation des données. |
 | **Politique** | Dans le cadre de la gouvernance des données, une politique est une règle qui décrit le type d’actions marketing que vous pouvez effectuer ou non sur des données spécifiques. |
-| **Étiquettes de schéma** | Gérez les étiquettes pour la gouvernance des données, le consentement et le contrôle d’accès au niveau du schéma. Cette opération fait migrer les libellés vers chaque jeu de données qui utilise ce schéma. |
-| **Étiquettes Sensibles** | Les libellés sensibles « S » sont utilisés pour classer les données que vous et votre entreprise considérez comme sensibles. |
+| **Libellés de schéma** | Gérez les libellés liés à la gouvernance des données, au consentement et au contrôle d’accès au niveau du schéma. Les libellés sont ainsi appliqués à tous les jeux de données qui utilisent ce schéma. |
+| **Libellés Sensibles** | Les libellés sensibles « S » sont utilisés pour classer les données que vous et votre entreprise considérez comme sensibles. |
 
 ## Ressources supplémentaires
 
@@ -127,6 +127,6 @@ La vidéo suivante a pour but de vous aider à comprendre le cadre de gouvernanc
 
 >[!VIDEO](https://video.tv.adobe.com/v/29708?quality=12&enable10seconds=on&speedcontrol=on)
 
-La vidéo suivante explique comment appliquer des libellés d’utilisation des données à vos schémas et jeux de données dans Experience Platform.
+La vidéo suivante explique comment appliquer des libellés d’utilisation des données à vos schémas et jeux de données dans Experience Platform.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29709/?learn=on)
