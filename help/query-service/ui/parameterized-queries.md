@@ -1,9 +1,9 @@
 ---
 title: Requêtes paramétrées
 description: Découvrez comment utiliser des requêtes paramétrées dans l’interface utilisateur de Adobe Experience Platform.
-source-git-commit: e9deabe1e0514f44be085e558fd2fdbf54956f3e
+source-git-commit: d927f1f98c1f3a42907501921fcd2367241fa625
 workflow-type: tm+mt
-source-wordcount: '659'
+source-wordcount: '694'
 ht-degree: 0%
 
 ---
@@ -55,6 +55,10 @@ Utilisez la variable `'$'` pour saisir un paramètre de requête dans votre requ
 
 Si vous supprimez un paramètre et tentez de relancer la requête après son exécution, un message d’erreur s’affiche dans la variable [!UICONTROL Paramètres de requête] pour vous alerter.
 
+>[!NOTE]
+>
+>Si votre requête ne prend pas de paramètres, vous pouvez toujours saisir des paramètres inutiles dans l’éditeur de requêtes. L’éditeur de requêtes ignore toutes les paires clé-valeur inutiles et elles n’ont aucun effet sur l’exécution ou les résultats de la requête.
+
 ![L’éditeur de requêtes avec un champ de valeur vide et l’erreur des paramètres de requête mise en surbrillance.](../images/ui/parameterized-queries/query-parameter-error.png)
 
 ## Utiliser les détails des logs de requête pour vérifier les valeurs des paramètres {#check-parameter-values}
@@ -77,4 +81,4 @@ Les valeurs des paramètres sont enregistrées lorsque vous planifiez une requê
 
 En lisant ce document, vous avez appris à paramétrer des requêtes dans l’interface utilisateur de Adobe Experience Platform et à les utiliser dans des exécutions de requêtes planifiées. Le document a également mis en évidence la manière de vérifier les journaux pour les valeurs de paramètre utilisées dans les exécutions de requête.
 
-Si ce n’est déjà fait, il est recommandé de lire le guide sur la [surveillance des requêtes planifiées](./monitor-queries.md) pour mieux comprendre l’état de toutes les tâches de requête via l’interface utilisateur de Platform.
+Il est ensuite recommandé de lire le guide sur la [surveillance des requêtes planifiées](./monitor-queries.md) pour mieux comprendre l’état de toutes les tâches de requête via l’interface utilisateur de Platform.
