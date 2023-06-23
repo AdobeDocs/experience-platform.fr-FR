@@ -5,9 +5,9 @@ title: Application automatique des politiques
 description: Ce document présente l’application automatique des politiques d’utilisation de données lors de l’activation de segments vers des destinations dans Experience Platform.
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
 source-git-commit: dca5c9df82434d75238a0a80f15e5562cf2fa412
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1890'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -51,12 +51,11 @@ Lorsqu’un segment est activé pour la première fois, [!DNL Policy Service] v�
 >* Les champs sont utilisés dans la définition de segment.
 >* Les champs sont configurés en tant qu’attributs prévisionnels pour la destination cible.
 
-
 ## Parenté des données {#lineage}
 
 La parenté des données joue un rôle essentiel dans la façon dont les politiques sont appliquées dans Platform. D’une façon générale, la parenté des données fait référence à l’origine d’un jeu de données ainsi qu’à son évolution (ou à son déplacement) au fil du temps.
 
-Dans le contexte de la gouvernance des données, la traçabilité permet aux libellés d’utilisation des données de se propager des schémas aux services en aval qui utilisent leurs données, tels que Real-time Customer Profile et les destinations. Cela permet d’évaluer et d’appliquer les politiques à plusieurs points clés du parcours des données par l’intermédiaire de Platform et fournit un contexte aux consommateurs de données quant aux raisons pour lesquelles une violation de politique a eu lieu.
+Dans le cadre de la gouvernance des données, la parenté permet aux libellés d’utilisation des données de se propager des schémas aux services en aval qui utilisent leurs données, comme le profil client en temps réel et les destinations. Cela permet d’évaluer et d’appliquer les politiques à plusieurs points clés du parcours des données par l’intermédiaire de Platform et fournit un contexte aux consommateurs de données quant aux raisons pour lesquelles une violation de politique a eu lieu.
 
 Dans Experience Platform, l’application des politiques est concernée par la parenté suivante :
 
@@ -69,7 +68,7 @@ Chaque étape de la chronologie ci-dessus représente une entité qui peut contr
 
 | Étape relative à la parenté des données | Rôle dans l’application des politiques |
 | --- | --- |
-| Jeu de données | Les jeux de données contiennent des libellés d’utilisation des données (appliqués au niveau du champ de schéma ou au niveau du jeu de données entier) qui définissent les cas d’utilisation pour lesquels le jeu de données entier ou des champs spécifiques peuvent être utilisés. Des violations de politique se produisent si un jeu de données ou un champ contenant certains libellés est utilisé à des fins limitées par une politique.<br><br>Tous les attributs de consentement collectés auprès de vos clients sont également stockés dans des jeux de données. Si vous avez accès aux politiques de consentement, tous les profils qui ne répondent pas aux exigences d’attribut de consentement de vos politiques seront exclus des segments qui sont activés vers une destination. |
+| Jeu de données | Les jeux de données contiennent des libellés d’utilisation des données (appliqués au niveau du champ de schéma ou du champ de l’intégralité du jeu de données) qui définissent les cas d’utilisation pour lesquels l’intégralité du jeu de données ou des champs spécifiques peut être utilisée. Des violations de politique se produisent si un jeu de données ou un champ contenant certains libellés est utilisé à des fins limitées par une politique.<br><br>Tous les attributs de consentement collectés auprès de vos clients sont également stockés dans des jeux de données. Si vous avez accès aux politiques de consentement, tous les profils qui ne répondent pas aux exigences d’attribut de consentement de vos politiques seront exclus des segments qui sont activés vers une destination. |
 | Politique de fusion | Les politiques de fusion sont les règles utilisées par Platform pour déterminer le classement par priorité des données lors de la fusion de fragments provenant de plusieurs jeux de données. Des violations de politique se produisent si vos politiques de fusion sont configurées de telle sorte que les jeux de données dotés de libellés limités sont activés pour une destination. Pour plus d’informations, consultez la [présentation des politiques de fusion](../../profile/merge-policies/overview.md). |
 | Segment | Les règles de segment définissent les attributs à inclure dans les profils clients. En fonction des champs inclus dans une définition de segment, le segment hérite des libellés d’utilisation appliqués pour ces champs. Des violations de politique se produisent si vous activez un segment dont les libellés hérités sont limités par les politiques applicables de la destination cible, en fonction de son cas d’utilisation marketing. |
 | Destination | Lors de la configuration d’une destination, une action marketing (parfois appelée cas d’utilisation marketing) peut être définie. Ce cas d’utilisation correspond à une action marketing telle que définie dans une politique. En d’autres termes, l’action marketing que vous définissez comme une destination détermine les politiques d’utilisation des données et de consentement applicables à cette destination.<br><br>Des violations de politique d’utilisation des données se produisent si vous activez un segment dont les libellés d’utilisation sont limités pour l’action marketing de la destination cible.<br><br>(Version bêta) Lorsqu’un segment est activé, tous les profils qui ne contiennent pas les attributs de consentement requis pour l’action marketing (tels que définis par vos politique de consentement) sont exclus de l’audience activée. |
