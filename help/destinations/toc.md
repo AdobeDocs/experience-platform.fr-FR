@@ -7,7 +7,7 @@ feature: Destinations
 source-git-commit: 47e0dfb59edca58e205cb478e9ee624659753ab9
 workflow-type: tm+mt
 source-wordcount: '1172'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -40,7 +40,7 @@ ht-degree: 98%
       * [Activer les données d’audience vers des destinations d’exportation de segments de diffusion en continu](./ui/activate-segment-streaming-destinations.md)
       * [Activer les données d’audience vers des destinations d’exportation de profils de diffusion en continu](./ui/activate-streaming-profile-destinations.md)
       * [Activer les données d’audience vers des destinations d’exportation de profils par lots](./ui/activate-batch-profile-destinations.md)
-      * [Activation des données d’audience vers des destinations de personnalisation de périphérie](./ui/activate-edge-personalization-destinations.md)
+      * [Activer les données d’audience vers des destinations de personnalisation Edge](./ui/activate-edge-personalization-destinations.md)
       * [(Version bêta) Exporter des fichiers à la demande vers des destinations par lots à l’aide de l’interface utilisateur Experience Platform](./ui/export-file-now.md)
       * [(Version bêta) Exporter des jeux de données à l’aide de l’interface utilisateur Experience Platform](./ui/export-datasets.md)
       * [(Version bêta) Utiliser l’attribut XDM de l’heure de la dernière qualification dans les nouvelles destinations de stockage dans le cloud en version bêta](./ui/activate-last-qualification-time.md)
@@ -121,7 +121,7 @@ ht-degree: 98%
       * [Data Landing Zone (version Bêta)](./catalog/cloud-storage/data-landing-zone.md)
       * [Google Cloud Storage (version Bêta)](./catalog/cloud-storage/google-cloud-storage.md)
       * [Connexion SFTP](./catalog/cloud-storage/sftp.md)
-      * [LISTE AUTORISÉE des adresses IP pour les destinations SFTP](./catalog/cloud-storage/ip-address-allow-list.md)
+      * [Liste autorisée d’adresses IP pour les destinations SFTP](./catalog/cloud-storage/ip-address-allow-list.md)
    * Destinations de la gestion de la relation client (CRM) {#crm}
       * [Connexion CRM à Salesforce](./catalog/crm/salesforce.md)
       * [Connexion à Microsoft Dynamics 365](./catalog/crm/microsoft-dynamics-365.md)

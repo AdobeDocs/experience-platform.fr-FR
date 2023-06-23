@@ -18,7 +18,7 @@ Ce document contient les notes de mise à jour de l’extension de balises du SD
 
 * Le **[!UICONTROL Variable]** élément de données et **[!UICONTROL Mettre à jour la variable]** Les actions sont désormais disponibles en général.
 
-## Version 2.18.0 - 18 mai 2023
+## Version 2.18.0 - 18 mai 2023
 
 * Contient la version 2.17.0 du SDK web d’Adobe Experience Platform.
 
