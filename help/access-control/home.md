@@ -5,32 +5,32 @@ title: Présentation du contrôle d’accès
 description: Dans Adobe Experience Platform, le contrôle dʼaccès est fourni par le biais dʼAdobe Admin Console. Cette fonctionnalité exploite les profils de produit dans l’Admin Console, liant les utilisateurs et utilisatrices à des autorisations et des sandbox.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
 source-git-commit: 88bfcdef65b4a938d573b1beb1952c7e030ebc13
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1567'
-ht-degree: 65%
+ht-degree: 100%
 
 ---
 
 # Présentation du contrôle d’accès
 
-Le contrôle d’accès de Adobe Experience Platform est fourni via le **[!UICONTROL Autorisations]** in [Adobe Experience Cloud](https://experience.adobe.com/). Cette fonctionnalité exploite des rôles et des stratégies qui lient les utilisateurs à des autorisations et des environnements de test.
+Le contrôle d’accès d’Adobe Experience Platform est fourni via les **[!UICONTROL autorisations]** dans [Adobe Experience Cloud](https://experience.adobe.com/). Cette fonctionnalité exploite les rôles et les politiques, liant les utilisateurs et utilisatrices à des autorisations et des sandbox.
 
 ## Hiérarchie et workflow du contrôle d’accès
 
-Pour configurer le contrôle d’accès pour un Experience Platform, vous devez disposer de droits d’administrateur système ou produit pour une organisation disposant d’un produit Experience Platform. Le rôle minimum pouvant accorder ou retirer des autorisations est un administrateur de produit. Les autres rôles d’administrateur qui peuvent gérer les autorisations sont les administrateurs système (aucune restriction). Pour en savoir plus, consultez l’article du Centre d’aide Adobe sur les [rôles administratifs](https://helpx.adobe.com/fr/enterprise/using/admin-roles.html).
+Pour configurer le contrôle d’accès dans Experience Platform, vous devez posséder des droits d’administrateur système ou produit pour une organisation qui dispose d’un produit Experience Platform. Le rôle minimum qui permet d’accorder ou de retirer des autorisations est un administrateur ou une administratrice de produit. Les autres rôles d’administrateur ou d’administratrice qui peuvent gérer les autorisations sont les administrateurs ou administratrices système (aucune restriction). Pour en savoir plus, consultez l’article du Centre d’aide Adobe sur les [rôles administratifs](https://helpx.adobe.com/fr/enterprise/using/admin-roles.html).
 
 >[!NOTE]
 >
->À partir de là, toute mention du terme &quot;administrateur&quot; dans ce document désigne un administrateur de produit ou plus (comme indiqué ci-dessus).
+>À partir de maintenant, le terme « administrateur ou administratrice » dans ce document désigne un administrateur ou une administratrice de produit ou d’un niveau supérieur (comme indiqué ci-dessus).
 
 Un workflow de haut niveau d’obtention et d’attribution d’autorisations d’accès peut se résumer de la manière suivante :
 
 - Après lʼattribution dʼune licence pour Adobe Experience Platform, ou pour une application/un service applicatif qui utilise Experience Platform, un e-mail est envoyé à lʼadministrateur spécifié lors de lʼattribution de la licence.
-- L’administrateur se connecte à [Adobe Admin Console](#adobe-admin-console) et sélectionne **Adobe Experience Platform** depuis la liste de produits sur la page d’aperçu.
-- Pour accorder l’accès à Experience Platform, l’administrateur doit ajouter des utilisateurs au profil de produit par défaut : `AEP-Default-All-Users`.
-- Dans Autorisations des Experience Platform, l’administrateur peut créer de nouveaux rôles ou modifier les autorisations et les utilisateurs pour tous les rôles existants.
-- Lors de la création ou de la modification d’un rôle, l’administrateur ajoute des utilisateurs au rôle à l’aide de la fonction **[!UICONTROL utilisateurs]** et accorde des autorisations à ces utilisateurs (par exemple, &quot;[!UICONTROL Lire les jeux de données]&quot; ou &quot;[!UICONTROL Gestion des schémas]&quot;) en modifiant les autorisations du rôle. De même, l’administrateur peut attribuer l’accès aux environnements de test à l’aide de la même option de modification.
-- Lorsque les utilisateurs se connectent à l’interface utilisateur de l’Experience Platform, leur accès aux fonctionnalités de l’Experience Platform dépend des autorisations qui leur ont été accordées à l’étape précédente. Par exemple, si un utilisateur ne dispose pas de la variable [!UICONTROL Affichage des jeux de données] l’autorisation, **[!UICONTROL Jeux de données]** dans le menu latéral ne sera pas visible pour cet utilisateur.
+- L’administrateur ou l’administratrice se connecte à [Adobe Admin Console](#adobe-admin-console) et sélectionne **Adobe Experience Platform** depuis la liste de produits sur la page de la vue d’ensemble.
+- Pour accorder l’accès à Experience Platform, l’administrateur ou administratrice doit ajouter des utilisateurs et utilisatrices au profil de produit par défaut : `AEP-Default-All-Users`.
+- Dans Autorisations dans Experience Platform, l’administrateur ou administratrice peut créer de nouveaux rôles ou modifier les autorisations et les utilisateurs et utilisatrices pour tous les rôles existants.
+- Lors de la création ou de la modification dʼun rôle, lʼadministrateur ou administratrice ajoute les utilisateurs et utilisatrices au rôle à lʼaide de lʼonglet **[!UICONTROL Utilisateurs]**, et accorde des autorisations à ces utilisateurs et utilisatrices (comme « [!UICONTROL Lecture des jeux de données] » ou « [!UICONTROL Gestion des schémas] ») en modifiant les autorisations des rôles. De même, l’administrateur ou administratrice peut attribuer des accès aux sandbox à l’aide de la même option de modification.
+- Lorsque les utilisateurs et utilisatrices se connectent à l’interface utilisateur Experience Platform, leur accès aux fonctionnalités d’Experience Platform est géré par les autorisations qui leur ont été accordées à l’étape précédente. Par exemple, si un utilisateur ou une utilisatrice ne dispose pas de lʼautorisation « [!UICONTROL Affichage des jeux de données] », lʼonglet **[!UICONTROL Jeux de données]** nʼapparaîtra pas dans le menu latéral pour cet utilisateur ou utilisatrice.
 
 Pour obtenir des instructions plus détaillées sur la manière dont gérer le contrôle d’accès dans Experience Platform, consultez le [guide d’utilisation du contrôle d’accès](./ui/overview.md).
 
@@ -38,15 +38,15 @@ Les autorisations sont activées pour tous les appels vers les API Experience P
 
 ## Autorisations {#platform-permissions}
 
-[!UICONTROL Autorisations] fournit un emplacement central pour la gestion de l’accès des Experience Platform pour votre entreprise. Via [!UICONTROL Autorisations], vous pouvez octroyer à des groupes d’utilisateurs des autorisations d’accès pour diverses fonctionnalités Experience Platform, telles que [!UICONTROL Gestion des jeux de données], [!UICONTROL Affichage des jeux de données]ou [!UICONTROL Gestion des profils].
+Les [!UICONTROL autorisations] fournissent un emplacement central pour la gestion de l’accès à Experience Platform pour votre organisation. Grâce aux [!UICONTROL autorisations], vous pouvez accorder des autorisations d’accès à des groupes d’utilisateurs et utilisatrices à différentes fonctionnalités d’Experience Platform telles que [!UICONTROL « Gestion des jeux de données »], [!UICONTROL « Affichage des jeux de données »] ou [!UICONTROL « Gestion des profils »].
 
 ### Rôles
 
-Dans le [!UICONTROL Rôles] , des autorisations sont attribuées aux utilisateurs par l’intermédiaire de rôles. Les rôles vous permettent d’accorder des autorisations à un ou plusieurs utilisateurs et de contenir leur accès à la portée des environnements de test qui leur sont affectés par le biais de rôles. Les utilisateurs peuvent être affectés à un ou plusieurs rôles appartenant à votre organisation.
+Dans la section [!UICONTROL Rôles] , des autorisations sont attribuées aux utilisateurs et utilisatrices par l’intermédiaire de rôles. Les rôles vous permettent d’accorder des autorisations à un ou plusieurs utilisateurs ou utilisatrices, mais aussi de contenir leur accès aux sandbox qui leur sont attribués par le biais des rôles. Les utilisateurs et utilisatrices peuvent recevoir un ou plusieurs rôles appartenant à votre organisation.
 
 ### Rôles par défaut
 
-Experience Platform est fourni avec deux rôles par défaut préconfigurés. Le tableau suivant décrit les fonctionnalités fournies dans chaque profil par défaut, notamment, le sandbox auquel ils accordent l’accès ainsi que les autorisations qu’ils accordent au sein du sandbox.
+Experience Platform s’accompagne de deux rôles préconfigurés par défaut. Le tableau suivant décrit les fonctionnalités fournies dans chaque profil par défaut, notamment, le sandbox auquel ils accordent l’accès ainsi que les autorisations qu’ils accordent au sein du sandbox.
 
 | Rôle | Accès aux sandbox | Autorisations |
 | --- | --- | --- |
@@ -55,27 +55,27 @@ Experience Platform est fourni avec deux rôles par défaut préconfigurés. Le 
 
 ## Sandbox et autorisations
 
-Les sandbox hors production sont une forme de virtualisation des données qui vous permet d’isoler des données des autres sandbox et qui est généralement utilisée à des fins d’expériences de développement, de test ou d’évaluations. Les autorisations d’un rôle donnent aux utilisateurs du rôle l’accès aux fonctionnalités Experience Platform dans les environnements de test auxquels ils ont accès. Une licence Experience Platform par défaut vous accorde cinq sandbox (un de production et quatre hors production). Vous pouvez ajouter des packs de dix sandbox hors production jusquʼà un maximum de 75 sandbox au total. Veuillez contacter l’administration de votre organisation ou le service commercial d’Adobe pour plus de détails.
+Les sandbox hors production sont une forme de virtualisation des données qui vous permet d’isoler des données des autres sandbox et qui est généralement utilisée à des fins d’expériences de développement, de test ou d’évaluations. Les autorisations d’un rôle donnent aux utilisateurs et utilisatrices du rôle l’accès aux fonctionnalités d’Experience Platform dans les environnements de sandbox auxquels ils se sont vus accorder l’accès. Une licence Experience Platform par défaut vous accorde cinq sandbox (un de production et quatre hors production). Vous pouvez ajouter des packs de dix sandbox hors production jusquʼà un maximum de 75 sandbox au total. Veuillez contacter l’administration de votre organisation ou le service commercial d’Adobe pour plus de détails.
 
 Pour plus d’informations sur les sandbox dans Experience Platform, reportez-vous à la [présentation des sandbox](../sandboxes/home.md).
 
 ### Accès aux sandbox
 
-L’accès aux environnements de test est géré au moyen de rôles. Pour obtenir des instructions détaillées sur la manière d’activer l’accès à un environnement de test pour un rôle, reportez-vous à la section [guide des rôles de contrôle d’accès basé sur les attributs](./abac/ui/roles.md).
+L’accès aux sandbox est géré par l’intermédiaire des rôles. Pour obtenir des instructions détaillées sur la manière d’activer l’accès à un sandbox pour un rôle, consultez le [guide des rôles du contrôle d’accès basé sur les attributs](./abac/ui/roles.md).
 
-Les utilisateurs peuvent se voir accorder l’accès à un ou plusieurs environnements de test au sein d’un rôle. Si un utilisateur fait partie de deux rôles ou plus, il aura accès à tous les environnements de test inclus dans ces rôles.
+Les utilisateurs et utilisatrices peuvent se voir accorder l’accès à un ou plusieurs sandbox au sein d’un rôle. Si un utilisateur ou une utilisatrice fait partie de deux rôles ou plus, il ou elle aura accès à tous les sandbox inclus dans ces rôles.
 
-L’autorisation « Gestion des sandbox » permet aux utilisateurs de gérer, d’afficher ou de réinitialiser des sandbox.
+L’autorisation « Gestion des sandbox » permet aux utilisateurs et aux utilisatrices de gérer, d’afficher ou de réinitialiser des sandbox.
 
 ### Autorisations des ressources {#permissions}
 
-La ressource [!UICONTROL Autorisations] dans un rôle affiche les environnements de test et les autorisations principales pour ce rôle :
+L’onglet [!UICONTROL Autorisations] des ressources au sein d’un rôle affiche les sandbox et les autorisations actives pour ce rôle :
 
 ![présentation-autorisations](./images/permissions.png)
 
-Les autorisations accordées par le biais des autorisations de ressources sont triées par catégorie, certaines autorisations permettant d’accéder à plusieurs fonctionnalités de bas niveau.
+Les autorisations accordées par l’intermédiaire des autorisations de ressources sont triées par catégorie, certaines autorisations permettant d’accéder à plusieurs fonctionnalités de bas niveau.
 
-Le tableau suivant décrit les autorisations disponibles pour les Experience Platform dans le rôle, avec des descriptions des fonctionnalités d’Experience Platform spécifiques auxquelles ils accordent l’accès. Pour obtenir des instructions détaillées sur l’ajout d’autorisations à un rôle, reportez-vous à la section [guide des rôles de contrôle d’accès basé sur les attributs](./abac/ui/roles.md).
+Le tableau suivant décrit les autorisations disponibles pour Experience Platform dans le rôle, avec des descriptions des fonctionnalités spécifiques d’Experience Platform auxquelles elles donnent accès. Pour obtenir des instructions détaillées sur comment ajouter des autorisations à un rôle, consultez le [guide des rôles du contrôle d’accès basé sur les attributs](./abac/ui/roles.md).
 
 | Catégorie | Autorisation | Description |
 | --- | --- | --- |
@@ -128,4 +128,4 @@ Le tableau suivant décrit les autorisations disponibles pour les Experience Pla
 
 ## Étapes suivantes
 
-En lisant ce guide, les principes du contrôle d’accès dans Experience Platform vous ont été présentés. Vous pouvez maintenant continuer à [guide d’utilisation du contrôle d’accès basé sur les attributs](./abac/overview.md) pour obtenir des instructions détaillées sur l’utilisation d’Experience Cloud pour créer des rôles et attribuer des autorisations à Experience Platform.
+En lisant ce guide, les principes du contrôle d’accès dans Experience Platform vous ont été présentés. Vous pouvez maintenant consulter le [guide d’utilisation du contrôle d’accès basé sur les attributs](./abac/overview.md) pour obtenir des instructions détaillées sur l’utilisation d’Experience Cloud pour créer des rôles et attribuer des autorisations à Experience Platform.
