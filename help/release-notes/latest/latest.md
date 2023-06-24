@@ -2,10 +2,10 @@
 title: Notes de mise à jour d’Adobe Experience Platform
 description: Les notes de mise à jour de juin 2023 pour Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: e56a6c2bac46778afcc24db8d51e77ec3700dd96
+source-git-commit: 5ee919390d759cc2a9418f636a46a516560fd5f0
 workflow-type: tm+mt
 source-wordcount: '1606'
-ht-degree: 35%
+ht-degree: 37%
 
 ---
 
@@ -124,7 +124,7 @@ Query Service vous permet d’utiliser le langage SQL standard pour interroger d
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Modèles &#x200B; intégrés | Query Service prend désormais en charge l’utilisation de modèles qui référencent d’autres modèles dans votre SQL. Réduisez votre charge de travail et évitez les erreurs en utilisant des modèles intégrés dans vos requêtes. Vous pouvez réutiliser des instructions ou des conditions et référencer des modèles imbriqués pour une plus grande flexibilité dans votre SQL. La taille des requêtes pouvant être stockées en tant que modèles n’est pas limitée, ni le nombre de modèles pouvant être référencés à partir de votre requête d’origine. Pour plus d’informations, reportez-vous à la section [guide de modèle intégré](../../query-service/essential-concepts/inline-templates.md). |
+| Modèles intégrés | Query Service prend désormais en charge l’utilisation de modèles qui référencent d’autres modèles dans votre SQL. Réduisez votre charge de travail et évitez les erreurs en utilisant des modèles intégrés dans vos requêtes. Vous pouvez réutiliser des instructions ou des conditions et référencer des modèles imbriqués pour une plus grande flexibilité dans votre SQL. La taille des requêtes pouvant être stockées en tant que modèles n’est pas limitée, ni le nombre de modèles pouvant être référencés à partir de votre requête d’origine. Pour plus d’informations, reportez-vous à la section [guide de modèle intégré](../../query-service/essential-concepts/inline-templates.md). |
 | Mises à jour de l’interface utilisateur des requêtes planifiées | Gérez toutes vos requêtes planifiées à partir d’un seul emplacement de l’interface utilisateur à l’aide de la fonction [[!UICONTROL Onglet Requêtes planifiées]](../../query-service/ui/monitor-queries.md#inline-actions). Le [!UICONTROL Requêtes planifiées] L’interface utilisateur a été améliorée avec l’ajout d’actions de requête intégrées et de la nouvelle colonne d’état de requête. Les ajouts récents incluent la possibilité d’activer, de désactiver et de supprimer un planning, ou de s’abonner à des alertes pour les exécutions de requête à venir directement depuis le [!UICONTROL Requêtes planifiées] vue. <p>![Actions intégrées mises en surbrillance dans la variable [!UICONTROL Requêtes planifiées] vue.](../../query-service/images/ui/monitor-queries/disable-inline.png "Actions intégrées mises en surbrillance dans la variable [!UICONTROL Requêtes planifiées] vue."){width="100" zoomable="yes"}</p> |
 
 {style="table-layout:auto"}
@@ -133,7 +133,7 @@ Pour plus d’informations sur Query Service, reportez-vous à la section [Prés
 
 ## Sources {#sources}
 
-Adobe Experience Platform peut ingérer des données à partir de sources externes tout en vous permettant de structurer, d’étiqueter et d’améliorer ces données à l’aide des services de Platform. Vous pouvez ingérer des données provenant de diverses sources, telles que les applications d’Adobe, le stockage dans le cloud, les logiciels tiers et votre système de gestion de la relation client.
+Adobe Experience Platform peut ingérer des données à partir de sources externes tout en vous permettant de structurer, d’étiqueter et d’améliorer ces données à l’aide des services de Platform. Vous pouvez ingérer des données à partir de diverses sources telles que les applications Adobe, le stockage dans le cloud, des logiciels tiers et votre système de gestion de la relation client (CRM).
 
 Experience Platform fournit une API RESTful et une interface utilisateur interactive qui vous permet de configurer facilement des connexions source à différents fournisseurs de données. Ces connexions source vous permettent de vous authentifier et de vous connecter à des services de gestion de la relation client et à des systèmes de stockage externes, de définir des heures d’ingestion et de gérer le débit d’ingestion des données.
 
@@ -150,4 +150,4 @@ Experience Platform fournit une API RESTful et une interface utilisateur inter
 
 {style="table-layout:auto"}
 
-Pour en savoir plus sur les sources, lisez la [présentation des sources](../../sources/home.md).
+Pour en savoir plus sur les sources, lisez la [vue d’ensemble des sources](../../sources/home.md).
