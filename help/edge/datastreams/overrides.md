@@ -2,9 +2,9 @@
 title: Configurer les remplacements de train de données
 description: Découvrez comment configurer les remplacements de flux de données dans l’interface utilisateur des flux de données et les activer via le SDK Web.
 exl-id: 7829f411-acdc-49a1-a8fe-69834bcdb014
-source-git-commit: d76d596818db67c99aca0606b6b6fb1a9aa977aa
+source-git-commit: 621dd1dbf99720604f797b97a5e31e090456cdf3
 workflow-type: tm+mt
-source-wordcount: '948'
+source-wordcount: '971'
 ht-degree: 4%
 
 ---
@@ -121,6 +121,7 @@ alloy("sendEvent", {
     /* ... */
   },
   edgeConfigOverrides: {
+    datastreamId: "{DATASTREAM_ID}"
     com_adobe_experience_platform: {
       datasets: {
         event: {
@@ -148,6 +149,10 @@ alloy("sendEvent", {
 });
 ```
 
+| Paramètre | Description |
+|---|---|
+| `edgeConfigOverrides.datastreamId` | Utilisez ce paramètre pour permettre à une seule requête d’accéder à un flux de données différent de celui défini par la variable `configure` . |
+
 ### L&#39;envoi de configurations remplace via le `configure` command {#send-configure}
 
 L’exemple ci-dessous montre à quoi pourrait ressembler un remplacement de configuration sur une `configure` .
@@ -157,7 +162,7 @@ alloy("configure", {
   defaultConsent: "in",
   edgeDomain: "etc",
   edgeBasePath: "ee",
-  edgeConfigId: "etc",
+  datastreamId: "{DATASTREAM_ID}",
   orgId: "org",
   debugEnabled: true,
   edgeConfigOverrides: {
