@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Guide de l’API Identity Service
 description: L’API Identity Service permet aux développeurs de gérer l’identification inter-appareils, cross-canal et en temps quasi réel de vos clients à l’aide de graphiques d’identités dans Adobe Experience Platform. Suivez ce guide pour savoir comment effectuer des opérations clés à l’aide de l’API.
 exl-id: d612af38-4648-4c3e-8cfd-3f306c9370e1
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: 9f8ed1cc6460dacef7ca91b500a45c059ed1a295
 workflow-type: tm+mt
 source-wordcount: '764'
-ht-degree: 70%
+ht-degree: 68%
 
 ---
 
@@ -19,7 +19,7 @@ Adobe Experience Platform [!DNL Identity Service] gère l’identification de vo
 
 Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
 
-- [[!DNL Identity Service]](../home.md) : résout le problème fondamental posé par la fragmentation des données de profil des clients. Pour ce faire, il rapproche les identités entre les appareils et les systèmes sur lesquels les clients interagissent avec votre marque.
+- [[!DNL Identity Service]](../home.md) : résout le problème fondamental posé par la fragmentation des données de profil des clients. Pour ce faire, il associe les identités entre les appareils et les systèmes sur lesquels les clients interagissent avec votre marque.
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): Fournit un profil client unifié en temps réel basé sur des données agrégées provenant de plusieurs sources.
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md) : cadre normalisé selon lequel [!DNL Platform] organise les données de l’expérience client.
 
