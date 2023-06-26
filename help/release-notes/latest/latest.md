@@ -2,10 +2,10 @@
 title: Notes de mise à jour d’Adobe Experience Platform
 description: Les notes de mise à jour de juin 2023 pour Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 5ee919390d759cc2a9418f636a46a516560fd5f0
+source-git-commit: a3faca5e0a711f0d4f6bafb22bf3c4770f58db8e
 workflow-type: tm+mt
-source-wordcount: '1606'
-ht-degree: 37%
+source-wordcount: '1538'
+ht-degree: 38%
 
 ---
 
@@ -41,7 +41,6 @@ Adobe Experience Platform fournit une suite de technologies qui vous permetten
 | Extension | Extension de transfert d’événement [!DNL Google Cloud Platform] | Le [[!DNL Google Cloud Platform]](../../tags/extensions/server/google-cloud-platform/overview.md) l’extension de transfert d’événement vous permet de transférer des données d’événement vers Google pour activation via [!DNL Google Pub/Sub]. |
 | Extension | Extension [!DNL Cloud connector for Google Analytics 4 (ga4)] | Le [[!DNL Cloud connector for Google Analytics 4 (ga4)]](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.109820.html) l’extension de transfert d’événement vous permet d’effectuer le suivi des analyses via la nouvelle [!DNL Google Analytics 4 (ga4)] standard. |
 | Secret | Secret JWT OAuth 2 | Le [Secret JWT OAuth 2](../../tags/ui/event-forwarding/secrets.md) vous permet d’utiliser l’Adobe et [!DNL Google] Jetons de service pour prendre en charge les interactions serveur-serveur dans le transfert d’événement. |
-| Balises et transfert d’événements | Attribution des utilisateurs | L’attribution de l’utilisateur fournit les données d’activité clés dans l’ensemble de [Balises](../../tags/home.md) et [Transfert d’événement](../../tags/ui/event-forwarding/overview.md) Interface utilisateur.<br><br>Les données incluent qui a apporté les modifications et à quelle heure. Ces données sont visibles dans l’interface utilisateur Balises et Transfert d’événement dans les écrans suivants :<br><ul><li> Présentation des propriétés</li><li> Extensions installées</li><li>Comparaison et révision des règles</li><li>Comparaison des éléments de données</li><li>Comparaison des extensions - Révision</li><li>Modifications des ressources de bibliothèque</li><li>Dernier build de bibliothèque et publication</li></ul> |
 
 {style="table-layout:auto"}
 
