@@ -3,10 +3,10 @@ title: (Version bêta) Exporter des jeux de données vers des destinations d’e
 type: Tutorial
 description: Découvrez comment exporter des jeux de données d’Adobe Experience Platform vers l’emplacement d’espace de stockage de votre choix.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: d0de642eb6118e6597925c12c76917ffa98c3a5a
+source-git-commit: d9b59b8a331511e87171f3b9d1163d452ba469be
 workflow-type: tm+mt
-source-wordcount: '1359'
-ht-degree: 94%
+source-wordcount: '1425'
+ht-degree: 88%
 
 ---
 
@@ -16,8 +16,7 @@ ht-degree: 94%
 >
 >* La fonctionnalité d’exportation des jeux de données est actuellement en version bêta et n’est pas disponible pour tous les utilisateurs. La documentation et les fonctionnalités peuvent changer.
 >* Cette fonctionnalité bêta prend en charge l’exportation des données de première génération, comme défini dans la [description du produit](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html) de Real-time Customer Data Platform.
->* Cette fonctionnalité est disponible pour les clients qui ont acheté les packages Real-Time CDP Prime et Ultimate. Pour plus dʼinformations, contactez votre représentant commercial Adobe.
-
+>* Cette fonctionnalité est disponible pour les clients qui ont acheté les packages Real-Time CDP Prime et Ultimate. Pour plus d’informations, contactez votre représentant d’Adobe.
 
 Cet article explique le workflow requis pour l’exportation [jeux de données](/help/catalog/datasets/overview.md) de Adobe Experience Platform à l’emplacement de stockage de votre choix dans le cloud, par exemple [!DNL Amazon S3], emplacements SFTP ou [!DNL Google Cloud Storage] en utilisant l’interface utilisateur de l’Experience Platform.
 
@@ -90,7 +89,7 @@ Utilisez les cases à cocher situées à gauche des jeux de données pour sélec
 >title="Options d’exportation de fichiers pour les jeux de données"
 >abstract="Sélectionnez **Exporter des fichiers incrémentiels** pour n’exporter que les données ajoutées au jeu de données depuis la dernière exportation. <br> La première exportation de fichier incrémentiel inclut toutes les données du jeu de données, agissant comme un renvoi. Les futurs fichiers incrémentiels incluent uniquement les données qui ont été ajoutées au jeu de données depuis la première exportation."
 
-Dans l’étape de **[!UICONTROL Planification]** vous pouvez définir une date de début et une cadence d’exportation pour vos exportations de jeux de données.
+Dans le **[!UICONTROL Planification]** vous pouvez définir une date de début et une cadence d’exportation pour vos exportations de jeux de données.
 
 L’option **[!UICONTROL Exporter des fichiers incrémentiels]** est automatiquement sélectionnée. Cela déclenche une exportation où le premier fichier est un instantané complet du jeu de données et les fichiers suivants sont des ajouts incrémentiels du jeu de données depuis l’exportation précédente.
 
@@ -135,11 +134,22 @@ Le nom de fichier par défaut est généré de manière aléatoire pour garantir
 
 La présence de ces fichiers dans votre emplacement de stockage confirme que l’activation a été réalisée avec succès. Pour comprendre la structure des fichiers exportés, vous pouvez télécharger un exemple de [fichier parquet](../assets/common/part-00000-tid-253136349007858095-a93bcf2e-d8c5-4dd6-8619-5c662e261097-672704-1-c000.parquet) ou de [fichier JSON](../assets/common/part-00000-tid-4172098795867639101-0b8c5520-9999-4cff-bdf5-1f32c8c47cb9-451986-1-c000.json).
 
+#### Fichiers de jeux de données compressés {#compressed-dataset-files}
+
+Dans le [workflow de connexion à la destination](/help/destinations/ui/connect-destination.md#file-formatting-and-compression-options), vous pouvez sélectionner les fichiers de jeu de données exportés à compresser, comme illustré ci-dessous :
+
+![Sélection du type de fichier et de la compression lors de la connexion à une destination pour exporter des jeux de données.](/help/destinations/assets/ui/export-datasets/compression-format-datasets.gif)
+
+Notez la différence de format de fichier entre les deux types de fichiers, lorsqu’ils sont compressés :
+
+* Lors de l’exportation de fichiers JSON compressés, le format de fichier exporté est `json.gz`
+* Lors de l’exportation de fichiers parquet compressés, le format de fichier exporté est `gz.parquet`
+
 ## Supprimer un jeu de données de la destination {#remove-dataset}
 
 Pour supprimer un jeu de données d’un flux de données existant, procédez comme suit :
 
-1. Connectez-vous à l’[interface utilisateur Experience Platform](https://platform.adobe.com/) et sélectionnez **[!UICONTROL Destinations]** dans la barre de navigation de gauche. Sélectionnez **[!UICONTROL Parcourir]** dans l’en-tête supérieur pour afficher vos flux de données de destination existants.
+1. Connectez-vous à l’[interface utilisateur Experience Platform](https://experience.adobe.com/platform/) et sélectionnez **[!UICONTROL Destinations]** dans la barre de navigation de gauche. Sélectionnez **[!UICONTROL Parcourir]** dans l’en-tête supérieur pour afficher vos flux de données de destination existants.
 
    ![La vue de navigation de destination avec une connexion de destination affichée et le reste s’est estompée.](../assets/ui/export-datasets/browse-dataset-connections.png)
 
