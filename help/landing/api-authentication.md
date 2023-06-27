@@ -4,9 +4,9 @@ title: Authentification et accès aux API Experience Platform
 type: Tutorial
 description: Ce document fournit un tutoriel détaillé pour accéder à un compte de développeur Adobe Experience Platform afin d’effectuer des appels API Experience Platform.
 exl-id: dfe8a7be-1b86-4d78-a27e-87e4ed8b3d42
-source-git-commit: cf8450bd7382169d8e62b62f03dd861ca61c7be3
+source-git-commit: 361f409c7aeee2e3e789bb263eca7c59b73db8ec
 workflow-type: tm+mt
-source-wordcount: '2239'
+source-wordcount: '2240'
 ht-degree: 10%
 
 ---
@@ -87,7 +87,7 @@ Sélectionnez ensuite le type d&#39;authentification pour générer les jetons d
 
 >[!IMPORTANT]
 >
->Sélectionnez la **[!UICONTROL OAuth serveur à serveur]** , car sera la seule méthode prise en charge à l’avenir. Le **[!UICONTROL Compte de service (JWT)]** est obsolète. Bien que les intégrations utilisant la méthode d’authentification JWT continueront à fonctionner jusqu’au 1er janvier 2025, Adobe recommande vivement de migrer les intégrations existantes vers la nouvelle méthode OAuth Server-to-Server avant cette date. Pour plus d’informations, reportez-vous à la section [!BADGE Obsolète]{type=negative}[Génération d’un jeton Web JSON (JWT)](#jwt).
+>Sélectionnez la **[!UICONTROL OAuth serveur à serveur]** car il s’agira de la seule méthode prise en charge à l’avenir. Le **[!UICONTROL Compte de service (JWT)]** est obsolète. Bien que les intégrations utilisant la méthode d’authentification JWT continueront à fonctionner jusqu’au 1er janvier 2025, Adobe recommande vivement de migrer les intégrations existantes vers la nouvelle méthode OAuth Server-to-Server avant cette date. Pour plus d’informations, reportez-vous à la section [!BADGE Obsolète]{type=negative}[Génération d’un jeton Web JSON (JWT)](#jwt).
 
 ![Sélectionnez API Experience Platform.](./images/api-authentication/oauth-authentication-method.png)
 

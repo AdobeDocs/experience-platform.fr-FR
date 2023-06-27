@@ -5,10 +5,10 @@ breadcrumb-title: Balises
 user-guide-description: Découvrez comment déployer et gérer des balises d’analyse, de marketing et de publicité pour améliorer les expériences clients.
 feature: Tags
 solution: Data Collection
-source-git-commit: 6e569ca3f83b374f88ca46fd8f2c40bbed203527
+source-git-commit: 2c8ac35e9bf72c91743714da1591c3414db5c5e9
 workflow-type: tm+mt
-source-wordcount: '1001'
-ht-degree: 99%
+source-wordcount: '1005'
+ht-degree: 98%
 
 ---
 
@@ -279,7 +279,7 @@ ht-degree: 99%
    * [Norme de rétrocompatibilité](./extension-dev/backwards-compatibility.md)
 * API Reactor {#api}
    * [Aperçu](./api/overview.md)
-   * [Prise en main](./api/getting-started.md)
+   * [Authentification et accès à l’API Reactor](./api/getting-started.md)
    * Points d’entrée {#endpoints}
       * [Sociétés](./api/endpoints/companies.md)
       * [Propriétés](./api/endpoints/properties.md)
