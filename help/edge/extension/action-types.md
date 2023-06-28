@@ -3,9 +3,9 @@ title: Types d’action dans l’extension SDK Web Adobe Experience Platform
 description: Découvrez les différents types d’actions fournis par l’extension de balise du SDK Web de Adobe Experience Platform.
 solution: Experience Platform
 exl-id: a4bf0bb9-59b4-4c43-97e6-387768176517
-source-git-commit: db7700d5c504e484f9571bbb82ff096497d0c96e
+source-git-commit: 19430906e5e97732f88bfe13501c4a75f9338a07
 workflow-type: tm+mt
-source-wordcount: '821'
+source-wordcount: '820'
 ht-degree: 4%
 
 ---
@@ -39,7 +39,7 @@ Dans cette action, vous recevez également un champ facultatif pour inclure une 
 
 Si vous souhaitez réinitialiser votre ID de fusion d’événements sur votre page, vous pouvez le faire avec cette action. Pour réinitialiser votre ID, sélectionnez l’ID de fusion que vous souhaitez réinitialiser et déclenchez l’action selon vos besoins.
 
-## (Version bêta) Mettre à jour la variable {#update-variable}
+## Mettre à jour la variable {#update-variable}
 
 >[!IMPORTANT]
 >
