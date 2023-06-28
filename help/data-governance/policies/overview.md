@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Présentation des politiques dʼutilisation des données
 description: Les politiques d’utilisation des données sont des règles qui décrivent les types d’actions marketing que vous êtes autorisé(e) ou non à effectuer sur des données dans Adobe Experience Platform.
 exl-id: 1b372aa5-3e49-4741-82dc-5701a4bc8469
-source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
+source-git-commit: f292e87bb5f944a636521344b28cf02c746c0f6c
 workflow-type: tm+mt
-source-wordcount: '1164'
-ht-degree: 100%
+source-wordcount: '1215'
+ht-degree: 95%
 
 ---
 
@@ -94,6 +94,7 @@ Le tableau ci-dessous décrit les principales actions marketing prêtes à l’e
 | Combinaison avec des données directement identifiables | Action qui combine des informations d’identification personnelle (PII) avec des données anonymes. Les contrats relatifs aux données provenant de réseaux publicitaires, de serveurs de publicités et de fournisseurs de données tiers comportent souvent des interdictions contractuelles spécifiques concernant l’utilisation de ces données avec des données directement identifiables. |
 | Ciblage intersite | Action qui utilise des données pour le ciblage publicitaire intersite. La combinaison de données provenant de plusieurs sites, y compris une combinaison de données sur site et de données hors site ou une combinaison de données provenant de plusieurs sources hors site, est appelée données intersites. Les données intersites sont généralement collectées et traitées afin d’établir des inférences sur les intérêts des utilisateurs. |
 | Science des données | Action qui utilise les données pour les workflows relatifs à la science des données. Certains contrats prévoient des interdictions explicites sur l’utilisation des données pour la science des données. Parfois, elles sont formulées en des termes qui interdisent l’utilisation de données pour l’intelligence artificielle (AI), le machine learning (ML) ou la modélisation. |
+| Exportation de données | Action qui exporte des données vers n’importe quel emplacement ou destination en dehors des produits et services d’Adobe. Par exemple, téléchargez des données sur votre ordinateur local, copiez des données à partir de l’écran, planifiez la remise des données à un emplacement en dehors de l’Adobe, des projets planifiés du Customer Journey Analytics, téléchargez des rapports, l’API de création de rapports, etc. |
 | Ciblage e-mail | Action qui utilise les données dans les campagnes de ciblage e-mail. |
 | Exportation vers un tiers | Action qui exporte des données vers des responsables du traitement et des entités qui n’ont pas de relations directes avec les clients. De nombreux fournisseurs de données ont des clauses dans leurs contrats qui interdisent l’exportation de données à partir de l’endroit où elles ont été collectées à l’origine. Par exemple, les contrats de réseau social limitent souvent le transfert des données que vous recevez de leur part. |
 | Publicités sur site | Action qui utilise des données pour les publicités sur site, notamment la sélection et la diffusion des publicités sur les sites web ou applications de votre organisation, ou pour mesurer la diffusion et l’efficacité de ces publicités. |
