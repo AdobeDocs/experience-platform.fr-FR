@@ -2,10 +2,10 @@
 title: Types d’éléments de données dans l’extension SDK Web Adobe Experience Platform
 description: Découvrez les différents types d’éléments de données fournis par l’extension de balise du SDK Web de Adobe Experience Platform.
 exl-id: 3c2c257f-1fbc-4722-8040-61ad19aa533f
-source-git-commit: 19430906e5e97732f88bfe13501c4a75f9338a07
+source-git-commit: 13912d8f5488aaa9ffa79021b67607fe5eec0732
 workflow-type: tm+mt
-source-wordcount: '632'
-ht-degree: 8%
+source-wordcount: '585'
+ht-degree: 6%
 
 ---
 
@@ -13,10 +13,6 @@ ht-degree: 8%
 # Types d’éléments de données
 
 Après avoir défini votre [types d’actions](action-types.md) dans le [Extension de balise SDK Web Adobe Experience Platform](web-sdk-extension-configuration.md), vous devez configurer vos types d’éléments de données. Cette page décrit les types d’éléments de données disponibles.
-
-## Identifiant de fusion d’événements {#event-merge-id}
-
-Lorsque cet élément de données est utilisé, il fournit un identifiant de fusion d’événements. Aucune configuration n’est nécessaire pour cet élément de données. L’élément de données fourni reste le même jusqu’à ce que le visiteur quitte la page ou jusqu’à ce que la variable **[!UICONTROL Réinitialiser l’identifiant de fusion d’événements]** le type d’action est utilisé.
 
 ## Mappage d’identités {#identity-map}
 

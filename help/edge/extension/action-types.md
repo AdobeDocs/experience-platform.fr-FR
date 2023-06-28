@@ -3,9 +3,9 @@ title: Types d’action dans l’extension SDK Web Adobe Experience Platform
 description: Découvrez les différents types d’actions fournis par l’extension de balise du SDK Web de Adobe Experience Platform.
 solution: Experience Platform
 exl-id: a4bf0bb9-59b4-4c43-97e6-387768176517
-source-git-commit: 19430906e5e97732f88bfe13501c4a75f9338a07
+source-git-commit: 13912d8f5488aaa9ffa79021b67607fe5eec0732
 workflow-type: tm+mt
-source-wordcount: '820'
+source-wordcount: '778'
 ht-degree: 4%
 
 ---
@@ -34,10 +34,6 @@ D’autres champs du type d’action Envoyer l’événement peuvent également 
 Une fois que vous avez reçu le consentement de votre utilisateur, ce consentement doit être communiqué au SDK Web de Adobe Experience Platform à l’aide du type d’action &quot;Définir le consentement&quot;. Actuellement, deux types de standards sont pris en charge : « Adobe » et « IAB TCF ». Voir [Prise en charge des préférences de consentement du client](../consent/supporting-consent.md). Lors de l’utilisation d’Adobe version 2.0, seule une valeur d’élément de données est prise en charge. Vous devez créer un élément de données qui résout l’objet de consentement.
 
 Dans cette action, vous recevez également un champ facultatif pour inclure une carte des identités afin que les identités puissent être synchronisées une fois le consentement reçu. La synchronisation est utile lorsque le consentement est configuré comme &quot;En attente&quot; ou &quot;Sortie&quot;, car l’appel de consentement est probablement le premier appel à se déclencher.
-
-## Réinitialiser l’ID de fusion d’événements {#reset-event-merge-id}
-
-Si vous souhaitez réinitialiser votre ID de fusion d’événements sur votre page, vous pouvez le faire avec cette action. Pour réinitialiser votre ID, sélectionnez l’ID de fusion que vous souhaitez réinitialiser et déclenchez l’action selon vos besoins.
 
 ## Mettre à jour la variable {#update-variable}
 
