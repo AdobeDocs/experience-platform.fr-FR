@@ -4,10 +4,10 @@ title: Activer un jeu de données pour les mises à jour de profil à l’aide d
 type: Tutorial
 description: Ce tutoriel vous explique comment utiliser les API Adobe Experience Platform pour activer un jeu de données avec des fonctionnalités "d’insertion" afin d’effectuer des mises à jour des données Real-time Customer Profile.
 exl-id: fc89bc0a-40c9-4079-8bfc-62ec4da4d16a
-source-git-commit: 2226b1878ef3398554b6cf96ff400cc1767a9e4c
+source-git-commit: 6985ebf8705130636abdc50b5c3f50299a60f2aa
 workflow-type: tm+mt
-source-wordcount: '1050'
-ht-degree: 95%
+source-wordcount: '1069'
+ht-degree: 92%
 
 ---
 
@@ -17,7 +17,7 @@ Ce tutoriel décrit le processus d’activation d’un jeu de données avec des 
 
 >[!NOTE]
 >
->Le workflow d’upsert ne fonctionne que pour l’ingestion par lots. L’ingestion en flux continu n’est **pas** prise en charge.
+>Le workflow décrit dans ce tutoriel ne fonctionne que pour l’ingestion par lots. Pour les upserts d’ingestion par flux, reportez-vous au guide sur [Envoi de mises à jour de lignes partielles à Real-time Customer Profile à l’aide de la préparation de données](../../data-prep/upserts.md).
 
 ## Prise en main
 
