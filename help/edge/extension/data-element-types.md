@@ -2,9 +2,9 @@
 title: Types d’éléments de données dans l’extension SDK Web Adobe Experience Platform
 description: Découvrez les différents types d’éléments de données fournis par l’extension de balise du SDK Web de Adobe Experience Platform.
 exl-id: 3c2c257f-1fbc-4722-8040-61ad19aa533f
-source-git-commit: 13912d8f5488aaa9ffa79021b67607fe5eec0732
+source-git-commit: eef0b50b12b0e3be34ad519f2d106392c23b7d69
 workflow-type: tm+mt
-source-wordcount: '585'
+source-wordcount: '568'
 ht-degree: 6%
 
 ---
@@ -45,10 +45,6 @@ Notez que lorsque vous ouvrez certains champs de votre schéma, tels que `web.we
 >Renseignez uniquement les informations que vous souhaitez recueillir. Tout ce qui n’est pas renseigné est omis lorsque les données sont envoyées aux solutions.
 
 ## Variable {#variable}
-
->[!IMPORTANT]
->
->Il s’agit actuellement d’une fonctionnalité bêta qui peut être modifiée. Les versions futures peuvent contenir des modifications entraînant des ruptures.
 
 Une autre méthode de création d’objets XDM consiste à utiliser la propriété **[!UICONTROL Variable]** élément de données. Bien que l’élément de données de l’objet XDM soit créé lorsqu’il est référencé, par exemple dans une balise `sendEvent` , la commande **[!UICONTROL Variable]** l’élément de données peut être mis à jour via [!UICONTROL Mettre à jour la variable] actions. Pour utiliser l’élément de données, sélectionnez l’environnement de test et le schéma Adobe Experience Platform appropriés.
 

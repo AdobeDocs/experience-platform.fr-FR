@@ -3,9 +3,9 @@ title: Types d’action dans l’extension SDK Web Adobe Experience Platform
 description: Découvrez les différents types d’actions fournis par l’extension de balise du SDK Web de Adobe Experience Platform.
 solution: Experience Platform
 exl-id: a4bf0bb9-59b4-4c43-97e6-387768176517
-source-git-commit: 13912d8f5488aaa9ffa79021b67607fe5eec0732
+source-git-commit: eef0b50b12b0e3be34ad519f2d106392c23b7d69
 workflow-type: tm+mt
-source-wordcount: '778'
+source-wordcount: '761'
 ht-degree: 4%
 
 ---
@@ -36,10 +36,6 @@ Une fois que vous avez reçu le consentement de votre utilisateur, ce consenteme
 Dans cette action, vous recevez également un champ facultatif pour inclure une carte des identités afin que les identités puissent être synchronisées une fois le consentement reçu. La synchronisation est utile lorsque le consentement est configuré comme &quot;En attente&quot; ou &quot;Sortie&quot;, car l’appel de consentement est probablement le premier appel à se déclencher.
 
 ## Mettre à jour la variable {#update-variable}
-
->[!IMPORTANT]
->
->Il s’agit actuellement d’une fonctionnalité bêta qui peut être modifiée. Les versions futures peuvent contenir des modifications entraînant des ruptures.
 
 Utilisez cette action pour modifier un objet XDM suite à un événement. Cette action est destinée à créer un objet qui peut être référencé ultérieurement à partir d’un **[!UICONTROL Envoyer un événement]** pour enregistrer l’objet XDM d’événement.
 
