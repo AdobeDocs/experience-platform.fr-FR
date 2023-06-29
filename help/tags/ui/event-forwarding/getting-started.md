@@ -3,7 +3,7 @@ title: Prise en main du transfert dʼévénements
 description: Suivez ce tutoriel détaillé pour commencer à utiliser le transfert d’événement dans Adobe Experience Platform.
 feature: Event Forwarding
 exl-id: f82bfac9-dc2d-44de-a308-651300f107df
-source-git-commit: f619bbf2c8d313eabc6444b4bd8c09615a00cc42
+source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
 workflow-type: tm+mt
 source-wordcount: '873'
 ht-degree: 87%
@@ -18,7 +18,7 @@ ht-degree: 87%
 
 Pour utiliser le transfert dʼévénements dans Adobe Experience Platform, les données doivent être envoyées à Adobe Experience Platform Edge Network à lʼaide de lʼune ou de plusieurs des trois options suivantes :
 
-* [SDK web Adobe Experience Platform](../../extensions/client/sdk/overview.md)
+* [SDK web Adobe Experience Platform](../../extensions/client/web-sdk/overview.md)
 * [ SDK Mobile Adobe Experience Platform](https://sdkdocs.com)
 * [API serveur à serveur](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-apis/dcs-s2s.html?lang=fr)
 
@@ -100,7 +100,7 @@ Après la configuration, prenez note des identifiants d’environnement pour la 
 
 Créez votre propriété dans le **[!UICONTROL Balises]** workspace, puis accédez à **[!UICONTROL Extensions]** et sélectionnez l’extension SDK Web Experience Platform dans le catalogue pour la configurer et l’installer.
 
-Voir [Documentation de l’extension SDK Web](../../extensions/client/sdk/overview.md) pour plus d’informations sur les options de configuration.
+Voir [Documentation de l’extension SDK Web](../../extensions/client/web-sdk/overview.md) pour plus d’informations sur les options de configuration.
 
 ## Création dʼune règle de balise pour envoyer des données au SDK Web Platform
 

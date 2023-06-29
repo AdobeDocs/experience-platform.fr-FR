@@ -2,7 +2,7 @@
 title: Présentation de l’extension Adobe Experience Platform Demo
 description: Découvrez l’extension Adobe Experience Platform Demo dans Adobe Experience Platform.
 exl-id: 4bafa132-0d21-4140-ab46-f09cc20bce6f
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
 workflow-type: tm+mt
 source-wordcount: '1069'
 ht-degree: 100%
@@ -17,7 +17,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Cette extension sera abandonnée au profit du [SDK Web Adobe Experience Platform](../sdk/overview.md).
+>Cette extension sera abandonnée au profit du [SDK Web Adobe Experience Platform](../web-sdk/overview.md).
 
 Les fonctionnalités de cette extension sont transférées vers une nouvelle extension. Voici une rapide comparaison des fonctionnalités actuelles.
 
@@ -26,11 +26,11 @@ Les fonctionnalités de cette extension sont transférées vers une nouvelle ext
 | Prise en charge des ID client personnalisés | Prise en charge des ID client personnalisés |
 | Interface utilisateur de mappage côté client pour XDM | Création dans ECID (pas besoin de visitor.js) |
 | Possibilité de créer une connexion continu | Prise en charge de l’inclusion |
-|  | Prise en charge de XDM en tant qu’élément de données |
-|  | Prise en charge des domaines de premier niveau |
-|  | Outils de débogage intégrés |
-|  | Collecte automatique du contexte du navigateur |
-|  | Entièrement open source |
+| | Prise en charge de XDM en tant qu’élément de données |
+| | Prise en charge des domaines de premier niveau |
+| | Outils de débogage intégrés |
+| | Collecte automatique du contexte du navigateur |
+| | Entièrement open source |
 
 
 ## Configuration de l’extension Adobe Experience Platform

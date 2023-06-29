@@ -5,10 +5,10 @@ breadcrumb-title: Balises
 user-guide-description: Découvrez comment déployer et gérer des balises d’analyse, de marketing et de publicité pour améliorer les expériences clients.
 feature: Tags
 solution: Data Collection
-source-git-commit: 2c8ac35e9bf72c91743714da1591c3414db5c5e9
+source-git-commit: 2772660936444e39124a75deda6f78d97f7793f2
 workflow-type: tm+mt
-source-wordcount: '1005'
-ht-degree: 98%
+source-wordcount: '1027'
+ht-degree: 97%
 
 ---
 
@@ -96,8 +96,16 @@ ht-degree: 98%
          * [Notes de mise à jour](./extensions/client/id-service/release-notes.md)
       * Démo Adobe Experience Platform {#platform-demo}
          * [Aperçu](./extensions/client/platform-demo/overview.md)
-      * SDK web Adobe Experience Platform {#sdk}
-         * [Aperçu](./extensions/client/sdk/overview.md)
+      * SDK web Adobe Experience Platform {#web-sdk}
+         * [Aperçu](./extensions/client/web-sdk/overview.md)
+         * [Configuration de l’extension de balise du SDK Web](./extensions/client/web-sdk/web-sdk-extension-configuration.md)
+         * [Types d’événements](./extensions/client/web-sdk/event-types.md)
+         * [Types d’actions](./extensions/client/web-sdk/action-types.md)
+         * [Types d’éléments de données](./extensions/client/web-sdk/data-element-types.md)
+         * [Accès à l’ECID](./extensions/client/web-sdk/accessing-the-ecid.md)
+         * [Plug-ins SDK Web](./extensions/client/web-sdk/web-sdk-plugins.md)
+         * [Notes de mise à jour de l’extension SDK web](./extensions/client/web-sdk/web-sdk-ext-release-notes.md)
+         * [Notes de mise à jour des modules externes SDK Web](./extensions/client/web-sdk/web-sdk-plugins-release-notes.md)
       * des statistiques sur les ressources Adobe Experience Manager {#asset-insights}
          * [Aperçu](./extensions/client/asset-insights/overview.md)
          * [Notes de mise à jour](./extensions/client/asset-insights/release-notes.md)
@@ -138,9 +146,6 @@ ht-degree: 98%
       * Plugins Analytics courants {#plugins}
          * [Aperçu](./extensions/client/plugins/overview.md)
          * [Notes de mise à jour](./extensions/client/plugins/release-notes.md)
-      * Modules externes SDK Web courants {#web-sdk-plugins}
-         * [Aperçu](./extensions/client/web-sdk-plugins/overview.md)
-         * [Notes de mise à jour](./extensions/client/web-sdk-plugins/release-notes.md)
       * [Concat](https://exchange.adobe.com/apps/ec/104690)
       * [ContentSquare](https://exchange.adobe.com/apps/ec/100364)
       * [Gestion du consentement des cookies par Usercentrics CMP v2](https://exchange.adobe.com/apps/ec/107037)

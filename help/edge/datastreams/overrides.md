@@ -2,7 +2,7 @@
 title: Configurer les remplacements de train de données
 description: Découvrez comment configurer les remplacements de flux de données dans l’interface utilisateur des flux de données et les activer via le SDK Web.
 exl-id: 7829f411-acdc-49a1-a8fe-69834bcdb014
-source-git-commit: 621dd1dbf99720604f797b97a5e31e090456cdf3
+source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
 workflow-type: tm+mt
 source-wordcount: '971'
 ht-degree: 4%
@@ -18,7 +18,7 @@ Vous pouvez ainsi déclencher différents comportements de flux de données par 
 Le remplacement de la configuration du flux de données est un processus en deux étapes :
 
 1. Tout d’abord, vous devez définir vos remplacements de configuration de trains de données sur la page de [configuration des trains de données](configure.md).
-2. Ensuite, vous devez envoyer les remplacements au réseau Edge par le biais d’une commande de SDK Web ou à l’aide de l’[extension de balise](../extension/web-sdk-extension-configuration.md) du SDK Web.
+2. Ensuite, vous devez envoyer les remplacements au réseau Edge par le biais d’une commande de SDK Web ou à l’aide de l’[extension de balise](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) du SDK Web.
 
 Cet article explique le processus de remplacement de la configuration de flux de données de bout en bout pour chaque type de remplacement pris en charge.
 
@@ -91,7 +91,7 @@ Les remplacements du conteneur de synchronisation des identifiants doivent maint
 
 >[!NOTE]
 >
->Au lieu d’envoyer les remplacements de configuration via les commandes du SDK Web, vous pouvez ajouter les remplacements de configuration au SDK Web. [extension de balise](../extension/web-sdk-extension-configuration.md).
+>Au lieu d’envoyer les remplacements de configuration via les commandes du SDK Web, vous pouvez ajouter les remplacements de configuration au SDK Web. [extension de balise](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
 
 Après [configuration des remplacements de la banque de données](#configure-overrides) Dans l’interface utilisateur de la collecte de données, vous pouvez désormais envoyer les remplacements au réseau Edge, via le SDK Web.
 

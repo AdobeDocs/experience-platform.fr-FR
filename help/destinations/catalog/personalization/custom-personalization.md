@@ -3,7 +3,7 @@ keywords: personnalisation personnalisée;destination;destination personnalisée
 title: Connexion de personnalisation personnalisée
 description: Cette destination fournit une personnalisation externe, des systèmes de gestion de contenu, des serveurs de publicités et d’autres applications qui s’exécutent sur votre site pour récupérer des informations de segment à partir d’Adobe Experience Platform. Cette destination fournit une personnalisation en temps réel basée sur l’appartenance au segment du profil utilisateur.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: 1ffcbabe29994fb881ff622394d669c4340c94f1
+source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
 workflow-type: tm+mt
 source-wordcount: '879'
 ht-degree: 77%
@@ -17,7 +17,7 @@ ht-degree: 77%
 
 | Mois de publication | Type de mise à jour | Description |
 |---|---|---|
-| Mai 2023 | Fonctionnalité et mise à jour de la documentation | En mai 2023, la **[!UICONTROL Personnalisation personnalisée]** prise en charge de la connexion [personnalisation basée sur les attributs](../../ui/activate-edge-personalization-destinations.md#map-attributes) et est généralement disponible pour tous les clients. |
+| Mai 2023 | Nouvelles fonctionnalités et mise à jour de la documentation | En mai 2023, la **[!UICONTROL Personnalisation personnalisée]** prise en charge de la connexion [personnalisation basée sur les attributs](../../ui/activate-edge-personalization-destinations.md#map-attributes) et est généralement disponible pour tous les clients. |
 
 {style="table-layout:auto"}
 
@@ -87,7 +87,7 @@ Lecture [Activation des destinations de personnalisation des profils et des segm
 
 ## Données exportées {#exported-data}
 
-Si vous utilisez des [balises dans Adobe Experience Platform](../../../tags/home.md) pour déployer le SDK web Experience Platform, utilisez la fonctionnalité [Envoi de l’événement terminé](../../../edge/extension/event-types.md) et votre action de code personnalisé contiendra une variable `event.destinations` que vous pourrez utiliser pour afficher les données exportées.
+Si vous utilisez des [balises dans Adobe Experience Platform](../../../tags/home.md) pour déployer le SDK web Experience Platform, utilisez la fonctionnalité [Envoi de l’événement terminé](../../../tags/extensions/client/web-sdk/event-types.md) et votre action de code personnalisé contiendra une variable `event.destinations` que vous pourrez utiliser pour afficher les données exportées.
 
 Voici un exemple de valeur pour la variable `event.destinations` :
 

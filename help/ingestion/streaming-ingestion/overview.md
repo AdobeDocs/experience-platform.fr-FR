@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Présentation de l’ingestion par flux
 description: L’ingestion par flux pour Adobe Experience Platform fournit aux utilisateurs une méthode pour envoyer en temps réel des données de périphériques côté client et côté serveur vers Experience Platform.
 exl-id: 851f15fd-7ac5-4a9f-934d-6b907057da87
-source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
+source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
 workflow-type: tm+mt
 source-wordcount: '348'
 ht-degree: 17%
@@ -39,7 +39,7 @@ Pour plus d’informations sur l’activation d’un jeu de données pour [!DNL 
 
 | Destination | Latence attendue |
 | --------- | ---------------- |
-| Real-time Customer Profile | &lt; 1 minute |
+| Profil client en temps réel | &lt; 1 minute |
 | Lac de données | &lt; 60 minutes |
 
 ## Instructions de requête par seconde (RPS) sur l’ingestion par flux
@@ -57,4 +57,4 @@ Le tableau ci-dessous présente des conseils sur les limites de requête par sec
 
 ## Extension Adobe Experience Platform
 
-Vous pouvez utiliser l’extension Adobe Experience Platform pour créer une connexion en continu. Le [!DNL Experience Platform] L’extension fournit des actions pour envoyer des balises formatées dans [!DNL Experience Data Model] (XDM) pour l’ingestion en temps réel vers [!DNL Experience Platform]. Pour plus d’informations, consultez la documentation de [l’extension Experience Platform](../../tags/extensions/client/sdk/overview.md).
+Vous pouvez utiliser l’extension Adobe Experience Platform pour créer une connexion en continu. Le [!DNL Experience Platform] L’extension fournit des actions pour envoyer des balises formatées dans [!DNL Experience Data Model] (XDM) pour l’ingestion en temps réel vers [!DNL Experience Platform]. Pour plus d’informations, consultez la documentation de [l’extension Experience Platform](../../tags/extensions/client/web-sdk/overview.md).

@@ -3,8 +3,8 @@ title: Notes de mise à jour du SDK web d’Adobe Experience Platform
 description: Notes de mise à jour les plus récentes pour le SDK web d’Adobe Experience Platform.
 keywords: SDK web Adobe Experience Platform;SDK web Platform;SDK web;notes de mise à jour;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 97ae7002d4bacb224f7cd57cca4a0c1ede11dd26
-workflow-type: ht
+source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
+workflow-type: tm+mt
 source-wordcount: '1549'
 ht-degree: 100%
 
@@ -14,7 +14,7 @@ ht-degree: 100%
 # Notes de mise à jour
 
 Ce document présente les notes de mise à jour du SDK web d’Adobe Experience Platform.
-Pour obtenir les dernières notes de mise à jour sur l’extension de balise du SDK web, reportez-vous à la section [Notes de mise à jour de l’extension de balise du SDK web](extension/web-sdk-ext-release-notes.md).
+Pour obtenir les dernières notes de mise à jour sur l’extension de balise du SDK web, reportez-vous à la section [Notes de mise à jour de l’extension de balise du SDK web](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
 
 ## Version 2.16.0 - 17 mai 2023
 
