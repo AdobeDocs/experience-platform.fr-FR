@@ -4,7 +4,7 @@ title: Guide de migration des API pour les destinations de stockage dans le clou
 description: Découvrez les modifications apportées au workflow pour activer les destinations de stockage dans le cloud dans le cadre de la migration vers les nouvelles cartes de destination de stockage dans le cloud avec des fonctionnalités supplémentaires.
 type: Tutorial
 exl-id: 4acaf718-794e-43a3-b8f0-9b19177a2bc0
-source-git-commit: 07a91ef15075b6c438e85aecff12dfab704cc6a2
+source-git-commit: b651d15260adbcd37fa396fa0b325a9674a92133
 workflow-type: tm+mt
 source-wordcount: '1418'
 ht-degree: 4%
@@ -16,7 +16,6 @@ ht-degree: 4%
 >[!IMPORTANT]
 >
 >* Les fonctionnalités décrites sur cette page sont disponibles pour les clients qui ont acheté les packages Real-Time CDP Prime et Ultimate. Pour plus dʼinformations, contactez votre représentant commercial Adobe.
-
 
 ## Contexte de migration {#migration-context}
 
@@ -783,7 +782,7 @@ Remarquez dans l’exemple de configuration ci-dessous comment `profileSelectors
 
 ## Chronologie de migration et éléments d’action {#timeline-and-action-items}
 
-Migration des flux de données hérités vers les nouvelles cartes de destination pour [!DNL Amazon S3], [!DNL Azure Blob], et les destinations SFTP se produiront dès que votre entreprise sera prête à migrer et au plus tard **30 juin 2023**.
+Migration des flux de données hérités vers les nouvelles cartes de destination pour [!DNL Amazon S3], [!DNL Azure Blob], et les destinations SFTP se produiront dès que votre entreprise sera prête à migrer et au plus tard **26 juillet 2023**.
 
 Vous recevrez des e-mails de rappel d’Adobe à l’approche de la date de migration. En préparation, lisez la section Éléments d’action ci-dessous pour vous préparer à la migration.
 
@@ -791,11 +790,11 @@ Vous recevrez des e-mails de rappel d’Adobe à l’approche de la date de migr
 
 En vue de la migration du [!DNL Amazon S3], [!DNL Azure Blob], ainsi que les destinations de stockage dans le cloud SFTP vers les nouvelles cartes, préparez-vous à mettre à jour vos scripts et vos appels d’API automatisés, comme suggéré ci-dessous.
 
-1. Mise à jour de scripts ou d’appels d’API automatisés pour tous les [!DNL Amazon S3], [!DNL Azure Blob]ou destinations de stockage dans le cloud SFTP d’ici le 30 juin 2023. Tous les appels ou scripts d’API automatisés qui utilisent les spécifications de connexion ou les spécifications de flux héritées doivent être mis à jour vers les nouvelles spécifications de connexion ou de flux.
-2. Contactez votre représentant de compte d’Adobe lorsque vos scripts ont été mis à jour avant le 30 juin.
+1. Mise à jour de scripts ou d’appels d’API automatisés pour tous les [!DNL Amazon S3], [!DNL Azure Blob]ou destinations de stockage dans le cloud SFTP d’ici le 26 juillet 2023. Tous les appels ou scripts d’API automatisés qui utilisent les spécifications de connexion ou les spécifications de flux héritées doivent être mis à jour vers les nouvelles spécifications de connexion ou de flux.
+2. Contactez votre représentant de compte d’Adobe lorsque vos scripts ont été mis à jour avant le 26 juillet.
 3. Par exemple, la variable `targetConnectionSpecId` peut être utilisé comme indicateur pour déterminer si le flux de données a été migré vers la nouvelle carte de destination. Vous pouvez mettre à jour vos scripts à l’aide d’une `if` pour examiner les spécifications de connexion Target héritées et mises à jour dans `flow.inheritedAttributes.targetConnections[0].connectionSpec.id` et déterminez si votre flux de données a été migré. Vous pouvez voir les identifiants hérités et nouveaux attributs de connexion dans les sections spécifiques de cette page pour chaque destination.
 4. Votre équipe de compte d’Adobe vous renverra des informations supplémentaires sur le moment où vos flux de données seront migrés.
-5. Après le 30 juin, tous les flux de données seront migrés. Tous vos flux de données existants auront désormais de nouvelles entités de flux (spécifications de connexion, spécifications de flux, connexions de base et connexions cibles). Tout script ou appel d’API de votre côté qui utilise les entités de flux héritées cessera de fonctionner.
+5. Après le 26 juillet, tous les flux de données seront migrés. Tous vos flux de données existants auront désormais de nouvelles entités de flux (spécifications de connexion, spécifications de flux, connexions de base et connexions cibles). Tout script ou appel d’API de votre côté qui utilise les entités de flux héritées cessera de fonctionner.
 
 ## Autres considérations relatives à la migration {#other-considerations}
 
