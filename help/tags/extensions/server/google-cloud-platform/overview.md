@@ -2,10 +2,10 @@
 title: Extension de transfert d’événements de la plateforme Google Cloud
 description: Cette extension de transfert d’événement Adobe Experience Platform envoie les événements Adobe Experience Edge Network à Google Cloud Platform.
 last-substantial-update: 2023-06-21T00:00:00Z
-source-git-commit: d1a34a98efd24a20dc53544eeb0d79490aaf31e7
+source-git-commit: 7e26ebe6d40796174ca48367f826c7c6f1512abf
 workflow-type: tm+mt
-source-wordcount: '577'
-ht-degree: 3%
+source-wordcount: '570'
+ht-degree: 4%
 
 ---
 
@@ -17,7 +17,7 @@ Le [!DNL Google Cloud Platform] [transfert d’événement](../../../ui/event-fo
 
 ## Conditions préalables
 
-Pour utiliser cette extension, vous devez disposer d’un [!DNL Google Cloud Platform] compte avec un compte existant [!DNL Cloud Pub/Sub] rubrique. Si vous ne disposez pas d’un flux de données préexistant, reportez-vous à la section [!DNL AWS] documentation sur [création d’un nouveau flux de données à l’aide de la fonction [!DNL AWS] Console de gestion](https://docs.aws.amazon.com/streams/latest/dev/how-do-i-create-a-stream.html).
+Pour utiliser cette extension, vous devez disposer d’un [!DNL Google Cloud Platform] compte avec un compte existant [!DNL Cloud Pub/Sub] rubrique. Si vous ne disposez pas d’une rubrique préexistante, reportez-vous à la section [[!DNL Google Cloud Platform]](https://cloud.google.com/pubsub/docs/create-topic) documentation sur la création et la gestion des rubriques.
 
 ### Création d’un secret et d’un élément de données
 
