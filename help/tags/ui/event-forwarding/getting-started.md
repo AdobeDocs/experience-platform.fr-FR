@@ -3,10 +3,10 @@ title: Prise en main du transfert dʼévénements
 description: Suivez ce tutoriel détaillé pour commencer à utiliser le transfert d’événement dans Adobe Experience Platform.
 feature: Event Forwarding
 exl-id: f82bfac9-dc2d-44de-a308-651300f107df
-source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
+source-git-commit: efe88b582b4539a14f32c6e2c80a8b35cde1626e
 workflow-type: tm+mt
-source-wordcount: '873'
-ht-degree: 87%
+source-wordcount: '875'
+ht-degree: 86%
 
 ---
 
@@ -29,7 +29,7 @@ Après avoir envoyé les données au réseau Edge, vous pouvez basculer sur des 
 
 ## Conditions préalables
 
-* Adobe Experience Platform Collection Enterprise (contactez l’équipe chargée de votre compte d’Adobe pour connaître les tarifs)
+* Connexions Adobe Real-Time CDP, Prime ou Ultimate (contactez l’équipe de votre compte Adobe pour connaître les tarifs)
 * Transfert d’événement dans Adobe Experience Platform
 * SDK Web ou Mobile Adobe Experience Platform, configuré pour envoyer des données au réseau Edge
 * Mettez en correspondance les données avec le modèle de données dʼexpérience (XDM) (cette mise en correspondance peut être effectuée à lʼaide de balises).
