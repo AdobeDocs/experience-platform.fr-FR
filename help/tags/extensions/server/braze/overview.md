@@ -4,7 +4,7 @@ title: Extension de transfert d’événement de braze
 description: Cette extension de transfert d’événement Adobe Experience Platform envoie les événements Adobe Experience Edge Network à Brand.
 last-substantial-update: 2023-03-29T00:00:00Z
 exl-id: 297f48f8-2c3b-41c2-8820-35f4558c67b3
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 4f75bbfee6b550552d2c9947bac8540a982297eb
 workflow-type: tm+mt
 source-wordcount: '1863'
 ht-degree: 6%
@@ -59,7 +59,7 @@ Pour connecter le réseau Edge à [!DNL Braze], les entrées suivantes sont requ
 
 | Type de clé | Description | Exemple |
 | --- | --- | --- |
-| [!DNL Braze] Instance | Le point de terminaison REST associé à la variable [!DNL Braze] compte . Reportez-vous à la section [!DNL Braze] documentation sur [instances](https://www.braze.com/docs/user_guide/administrative/access_braze/braze_instances) pour obtenir des conseils. | `https://rest.iad-03.braze.com` |
+| [!DNL Braze] Instance | Le point de terminaison REST associé à la variable [!DNL Braze] compte . Reportez-vous à la section [!DNL Braze] documentation sur [instances](https://www.braze.com/docs/user_guide/administrative/access_braze/sdk_endpoints) pour obtenir des conseils. | `https://rest.iad-03.braze.com` |
 | Clé API | Le [!DNL Braze] Clé API associée à [!DNL Braze] compte . <br/>Reportez-vous à la section [!DNL Braze] la documentation relative à la [Clé API REST](https://www.braze.com/docs/api/basics/#rest-api-key) pour obtenir des conseils. | `YOUR-BRAZE-REST-API-KEY` |
 
 ### Créer un secret
@@ -108,8 +108,8 @@ Après l’installation de l’extension, créez un transfert d’événement. [
 | Entrée | Description | Obligatoire |
 | --- | --- | --- |
 | [!UICONTROL Nom de l’événement &#x200B;] | Nom de l’événement. | Oui |
-| [!UICONTROL Heure de l’événement ] | Date-time sous forme de chaîne dans ISO 8601 ou dans `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format. | Oui |
-| [!UICONTROL Identifiant de l’application] | L’identifiant de l’application ou <strong>app_id</strong> est un paramètre qui associe une activité à une application spécifique de votre groupe d’applications. Il désigne l’application dans le groupe d’applications avec lequel vous interagissez. En savoir plus sur les [Types d’identificateur d’API](https://www.braze.com/docs/api/identifier_types/). |  |
+| [!UICONTROL Heure de l’événement] | Date-time sous forme de chaîne dans ISO 8601 ou dans `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format. | Oui |
+| [!UICONTROL Identifiant de l’application] | L’identifiant de l’application ou <strong>app_id</strong> est un paramètre qui associe une activité à une application spécifique de votre groupe d’applications. Il désigne l’application dans le groupe d’applications avec lequel vous interagissez. En savoir plus sur les [Types d’identificateur d’API](https://www.braze.com/docs/api/identifier_types/). | |
 | [!UICONTROL Propriétés de l’événement &#x200B;] | Objet JSON contenant des propriétés personnalisées de l’événement. |  |
 
 {style="table-layout:auto"}
@@ -124,12 +124,12 @@ Les attributs utilisateur peuvent être un objet JSON contenant des champs qui c
 
 | Attribut utilisateur | Description |
 | --- | --- |
-| [!UICONTROL Prénom] |  |
-| [!UICONTROL Nom] |  |
-| [!UICONTROL Téléphone] |  |
-| [!UICONTROL E-mail.] |  |
+| [!UICONTROL Prénom] | |
+| [!UICONTROL Nom] | |
+| [!UICONTROL Téléphone] | |
+| [!UICONTROL E-mail.] | |
 | [!UICONTROL Genre] | L’une des chaînes suivantes : &quot;M&quot;, &quot;F&quot;, &quot;O&quot; (autre), &quot;N&quot; (non applicable), &quot;P&quot; (préférez ne pas dire). |
-| [!UICONTROL Ville] |  |
+| [!UICONTROL Ville] | |
 | [!UICONTROL Pays] | Pays sous forme de chaîne dans [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) format. |
 | [!UICONTROL Langue] | Langue sous forme de chaîne dans [ISO-639-1](https://fr.wikipedia.org/wiki/Liste_des_codes_ISO_639-1) format. |
 | [!UICONTROL Date de naissance] | Chaîne au format &quot;AAAA-MM-JJ&quot; (par exemple, 1980-12-21). |
@@ -164,11 +164,11 @@ Après l’installation de l’extension, créez un transfert d’événement. [
 | Entrée | Description | Obligatoire |
 | --- | --- | --- |
 | [!UICONTROL ID de produit &#x200B;] | Identifiant de l’achat. (par exemple, Nom du produit ou Catégorie de produit) | Oui |
-| [!UICONTROL Temps d’achat ] | Date-time sous forme de chaîne dans ISO 8601 ou dans `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format. | Oui |
+| [!UICONTROL Temps d’achat] | Date-time sous forme de chaîne dans ISO 8601 ou dans `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format. | Oui |
 | [!UICONTROL Devise &#x200B;] | Devise en tant que chaîne dans [ISO 4217](https://fr.wikipedia.org/wiki/ISO_4217) Format de code de devise alphabétique. | Oui |
 | [!UICONTROL Prix &#x200B;] | Prix. | Oui |
-| [!UICONTROL Quantité &#x200B;] | Si elle n’est pas fournie, la valeur par défaut est 1. La valeur maximale doit être inférieure à 100. |  |
-| [!UICONTROL Identifiant de l’application] | L’identifiant de l’application ou <strong>app_id</strong> est un paramètre qui associe une activité à une application spécifique de votre groupe d’applications. Il désigne l’application dans le groupe d’applications avec lequel vous interagissez. En savoir plus sur les [Types d’identificateur d’API](https://www.braze.com/docs/api/identifier_types/). |  |
+| [!UICONTROL Quantité &#x200B;] | Si elle n’est pas fournie, la valeur par défaut est 1. La valeur maximale doit être inférieure à 100. | |
+| [!UICONTROL Identifiant de l’application] | L’identifiant de l’application ou <strong>app_id</strong> est un paramètre qui associe une activité à une application spécifique de votre groupe d’applications. Il désigne l’application dans le groupe d’applications avec lequel vous interagissez. En savoir plus sur les [Types d’identificateur d’API](https://www.braze.com/docs/api/identifier_types/). | |
 | [!UICONTROL Propriétés d’achat &#x200B;] | Objet JSON contenant les propriétés personnalisées de l’achat. |  |
 
 {style="table-layout:auto"}
@@ -183,12 +183,12 @@ Les attributs utilisateur peuvent être un objet JSON contenant des champs qui c
 
 | Attribut utilisateur | Description |
 | --- | --- |
-| [!UICONTROL Prénom] |  |
-| [!UICONTROL Nom] |  |
-| [!UICONTROL Téléphone] |  |
-| [!UICONTROL E-mail.] |  |
+| [!UICONTROL Prénom] | |
+| [!UICONTROL Nom] | |
+| [!UICONTROL Téléphone] | |
+| [!UICONTROL E-mail.] | |
 | [!UICONTROL Genre] | L’une des chaînes suivantes : &quot;M&quot;, &quot;F&quot;, &quot;O&quot; (autre), &quot;N&quot; (non applicable), &quot;P&quot; (préférez ne pas dire). |
-| [!UICONTROL Ville] |  |
+| [!UICONTROL Ville] | |
 | [!UICONTROL Pays] | Pays sous forme de chaîne dans [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) format. |
 | [!UICONTROL Langue] | Langue sous forme de chaîne dans [ISO-639-1](https://fr.wikipedia.org/wiki/Liste_des_codes_ISO_639-1) format. |
 | [!UICONTROL Date de naissance] | Chaîne au format &quot;AAAA-MM-JJ&quot; (par exemple, 1980-12-21). |

@@ -2,7 +2,7 @@
 title: Point d’entrée des packages d’extension
 description: Découvrez comment effectuer des appels au point d’entrée /extension_packages dans l’API Reactor.
 exl-id: a91c6f32-6c72-4118-a43f-2bd8ef50709f
-source-git-commit: 8862a911f09d47c3a2260faba045f3c79826b52c
+source-git-commit: 4f75bbfee6b550552d2c9947bac8540a982297eb
 workflow-type: tm+mt
 source-wordcount: '939'
 ht-degree: 97%
@@ -944,7 +944,7 @@ Une réponse réussie renvoie les détails du package d’extension mis à jour.
 
 Une fois que vous avez terminé le test de votre package d’extension, vous pouvez le publier de manière privée. Cela permet de la rendre disponible pour n’importe quelle propriété de votre société.
 
-Une fois que vous avez publié votre version privée, vous pouvez lancer le processus de publication publique en remplissant le [formulaire de demande de publication publique](https://experiencecloudpanel.adobe.com/c/r/DCExtensionReleaseRequest).
+Une fois que vous avez publié votre version privée, vous pouvez lancer le processus de publication publique en remplissant le [formulaire de demande de publication publique](https://www.feedbackprogram.adobe.com/c/r/DCExtensionReleaseRequest).
 
 **Format d’API**
 

@@ -3,16 +3,16 @@ keywords: extension de transfert d’événement;twitter;extension de transfert 
 title: Extension de transfert d’événement twitter
 description: Cette extension de transfert d’événement Adobe Experience Platform vous permet d’ingérer des événements dans Twitter en fonction de vos besoins.
 last-substantial-update: 2023-05-24T00:00:00Z
-source-git-commit: c5cc36d9530ff6fbb52a1995844f495b38e938b3
+source-git-commit: 4f75bbfee6b550552d2c9947bac8540a982297eb
 workflow-type: tm+mt
-source-wordcount: '1140'
+source-wordcount: '1143'
 ht-degree: 7%
 
 ---
 
 # Extension de transfert d’événement [!DNL Twitter]
 
-[[!DNL Twitter]](https://www.twitter.com) est un service en ligne de médias sociaux et de réseaux sociaux, sur lequel les utilisateurs publient et interagissent avec des messages de 280 caractères, appelés tweets. Les utilisateurs peuvent interagir avec Twitter à l’aide d’un navigateur, d’un logiciel frontal mobile ou par programmation via son [API](https://developer.twitter.com/en/docs/twitter-api)
+[[!DNL Twitter]](https://twitter.com/i/flow/login) est un service en ligne de médias sociaux et de réseaux sociaux, sur lequel les utilisateurs publient et interagissent avec des messages de 280 caractères, appelés tweets. Les utilisateurs peuvent interagir avec Twitter à l’aide d’un navigateur, d’un logiciel frontal mobile ou par programmation via son [API](https://developer.twitter.com/en/docs/twitter-api)
 
 Le [!DNL Twitter] API de conversion web [transfert d’événement](../../../ui/event-forwarding/overview.md) l’extension vous permet d’exploiter les données capturées dans Adobe Experience Platform Edge Network et de les envoyer à [!DNL Twitter]. Ce document couvre les cas d’utilisation de l’extension, comment l’installer et comment intégrer ses fonctionnalités à votre transfert d’événement. [rules](../../../ui/managing-resources/rules.md).
 
@@ -32,7 +32,7 @@ Pour plus d’informations sur les cas d’utilisation spécifiques à [!DNL Twi
 
 Vous devez disposer d’un [!DNL Twitter] afin d’utiliser cette extension. Accédez au [[!DNL Twitter] page d’enregistrement](https://help.twitter.com/en/using-twitter/create-twitter-account) pour enregistrer et créer un compte si vous n’en avez pas déjà un.
 
-Vous devez configurer votre compte en tant que [!DNL Twitter] compte développeur. Pour savoir comment vous inscrire en tant que développeur, reportez-vous à la section [[!DNL Twitter] compte développeur](https://developer.twitter.com/en/support/twitter-api/developer-account).
+Vous devez configurer votre compte en tant que [!DNL Twitter] compte développeur. Pour savoir comment vous inscrire en tant que développeur, reportez-vous à la section [[!DNL Twitter] compte développeur](https://developer.twitter.com/en/support/twitter-api/developer-account1).
 
 ### Protections des API {#guardrails}
 
@@ -44,7 +44,7 @@ Pour connecter l’Experience Platform à [!DNL Twitter], les entrées suivantes
 
 | Type de clé | Description |
 | --- | --- |
-| Clé client | &#x200B; Clé API de l’application permettant d’accéder à la variable [!DNL Twitter] API. Reportez-vous à la section [!DNL Twitter] documentation sur [clés et secrets d’api](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/api-key-and-secret) pour obtenir des conseils. |  |
+| Clé client | &#x200B; Clé API de l’application permettant d’accéder à la variable [!DNL Twitter] API. Reportez-vous à la section [!DNL Twitter] documentation sur [clés et secrets d’api](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/api-key-and-secret) pour obtenir des conseils. | |
 | Secret du client | Le secret d’API permet à votre application d’accéder à [!DNL Twitter] API. Reportez-vous à la section [!DNL Twitter] documentation sur [clés et secrets d’api](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/api-key-and-secret) pour obtenir des conseils. |
 | Secret du jeton | Le secret du jeton non expirant de votre application, qui est utilisé pour l’authentification au [!DNL Twitter] API via OAuth. Reportez-vous à la section [!DNL Twitter] documentation sur [obtention des jetons d’accès d’utilisation](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/obtaining-user-access-tokens) pour obtenir des conseils. |
 | Jeton d’accès | Jeton d’accès non expirant de votre application, utilisé pour l’authentification au [!DNL Twitter] API via OAuth. Reportez-vous à la section [!DNL Twitter] documentation sur [obtention des jetons d’accès d’utilisation](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/obtaining-user-access-tokens) pour obtenir des conseils. |

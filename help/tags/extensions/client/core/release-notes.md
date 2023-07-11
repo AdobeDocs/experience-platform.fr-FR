@@ -2,10 +2,10 @@
 title: Notes de mise à jour de l’extension Core
 description: Notes de mise à jour les plus récentes pour l’extension Core dans Adobe Experience Platform.
 exl-id: a049b2d5-7a00-435d-bcc7-112658a53a1e
-source-git-commit: 0955646164269d868be5161a117c6e12dbd9a4cb
+source-git-commit: 4f75bbfee6b550552d2c9947bac8540a982297eb
 workflow-type: tm+mt
-source-wordcount: '1654'
-ht-degree: 95%
+source-wordcount: '1644'
+ht-degree: 86%
 
 ---
 
@@ -27,7 +27,7 @@ v3.4.1
       * de changement
    * Conditions
       * Cookie
-      * Landing Page
+      * Page de destination
       * Query String Parameter
       * Traffic Source
       * Variable
@@ -115,15 +115,15 @@ v2.0.5
 
 v2.0.4
 
-* Ajout de la prise en charge des éléments de données dans plusieurs champs - La prise en charge des éléments de données a été ajoutée aux événements suivants : « Temps sur la page », « Entrée dans la fenêtre dʼaffichage », « Survol » et « Temps de lecture du média ». En plus des conditions suivantes : « Temps sur le site » et « Comparaison de valeur »
+* Ajout de la prise en charge des éléments de données dans plusieurs champs - La prise en charge des éléments de données a été ajoutée aux événements suivants : « Temps sur la page », « Entrée dans la fenêtre dʼaffichage », « Survol » et « Temps de lecture du média ». En plus des conditions suivantes : « Temps passé sur le site » et « Comparaison de valeur »
 * Ajout de la prise en charge du comportement par défaut pour Ctrl/Cmd + Clic et pour le clic central de la souris lors de lʼutilisation du délai de lien
-* **Le délai de lien avec lʼévénement Clic « nʼest plus pris en charge ».** - Vous trouverez plus d’informations sur le [blog de collecte de données](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/explainer-link-delay/ba-p/398403) pour Adobe Experience Platform.
+* **Le délai du lien marqué sur l’événement click comme &quot;n’est plus pris en charge&quot;.** - Vous trouverez plus d’informations sur le [blog de collecte de données](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/explainer-link-delay/ba-p/398403) pour Adobe Experience Platform.
 
 ## 6 janvier 2021
 
 v1.9.0
 
-* **Nouvelle action « Déclenchement appel direct »** - L’extension Core inclut désormais un nouveau type d’action appelé `Trigger Direct Call`.  Vous pouvez l’utiliser lorsque vous voulez déclencher une règle d’appel direct par le biais d’une action tirée d’une autre règle. Il correspond directement à la méthode `_satellite.track()`. Un grand merci à [Jan Exner](https://twitter.com/jexner) pour cette contribution.
+* **Nouvelle action &quot;Trigger Direct Call&quot;** - L’extension Core inclut désormais un nouveau type d’action appelé `Trigger Direct Call`.  Vous pouvez l’utiliser lorsque vous voulez déclencher une règle d’appel direct par le biais d’une action tirée d’une autre règle. Il correspond directement à la méthode `_satellite.track()`. Un grand merci à Jan Exner pour cette contribution.
 
 ## 8 décembre 2020
 
@@ -163,19 +163,19 @@ Pour plus d’informations, reportez-vous à la [référence Extension Core](./o
 
 v1.7.3
 
-* **Augmentation de la longueur du champ texte** : les champs de saisie de texte ont été modifiés pour une disposition flexible afin de mieux s’adapter à la largeur d’écran de l’utilisateur et de donner plus d’espace pour des chaînes de texte plus longues.
+* **Augmentation de la longueur du champ texte** - les champs de saisie de texte ont été modifiés pour une disposition flexible afin de mieux s’adapter à la largeur d’écran de l’utilisateur et de donner plus d’espace pour des chaînes de texte plus longues.
 
 ## 1er novembre 2019
 
 v1.7.0
 
-* **Accès à la variable `event` dans l’élément de données de code personnalisé** : vous pouvez désormais référencer l’événement depuis un élément de données de Cutom Code (code personnalisé) lorsqu’il est exécuté dans le contexte d’une règle. L’objet contient des informations utiles sur l’événement qui a déclenché la règle. Un grand merci à [Stewart Schilling](https://twitter.com/sdi_stewart) pour cette contribution.
+* **Accès à la variable `event` dans l’élément de données de code personnalisé** : vous pouvez désormais référencer l’événement depuis un élément de données de Cutom Code (code personnalisé) lorsqu’il est exécuté dans le contexte d’une règle. L’objet contient des informations utiles sur l’événement qui a déclenché la règle. Un grand merci à Stewart Schilling pour cette contribution.
 
 ## 7 octobre 2019
 
 v1.6.2
 
-* **Nouveau type d’élément de données « Constante »** : l’extension Core inclut désormais un nouveau type d’élément de données appelé `Constant`.  Vous pouvez l’utiliser lorsque vous avez besoin de stocker une valeur constante qui sera référencée dans différentes conditions, actions ou code personnalisé (Custom code). Un grand merci à [Jan Exner](https://twitter.com/jexner) pour cette contribution.
+* **Nouveau type d’élément de données « Constante »** : l’extension Core inclut désormais un nouveau type d’élément de données appelé `Constant`.  Vous pouvez l’utiliser lorsque vous avez besoin de stocker une valeur constante qui sera référencée dans différentes conditions, actions ou code personnalisé (Custom code). Un grand merci à Jan Exner pour cette contribution.
 
 ## 11 septembre 2019
 
@@ -194,9 +194,9 @@ v1.5.0
 v1.4.3
 
 * **Input Fields** : les champs d’entrée sont désormais plus longs.
-* **Custom Event** : le type de Custom event peut désormais être utilisé avec les événements envoyés de la fenêtre.
-* **Bug Fix** : correction d’un bogue qui survenait lorsque la condition Value Comparison ne contenait pas une valeur 0.
-* **Bug Fix** : mise à jour du champ exchange\_url afin que la liste des extensions de base s’affiche dans Adobe Exchange.
+* **Événement personnalisé** : le type de Custom event (Événement personnalisé) peut désormais être utilisé avec les événements envoyés de la fenêtre.
+* **Correction de bogue** : correction d’un bogue qui survenait lorsque la condition Value Comparison (Comparaison de valeurs) ne contenait pas une valeur 0.
+* **Correction de bogue** : mise à jour du champ exchange\_url afin que la liste des extensions de base s’affiche dans Adobe Exchange.
 
 ## 8 janvier 2019
 
@@ -208,9 +208,9 @@ v1.4.2
 
 ## 8 novembre 2018
 
-* **Option Persist Cohort** : l’option de conservation d’une cohorte a été ajoutée à la condition de l’échantillonnage. Cela a pour effet de conserver un utilisateur dans ou hors de la cohorte de l’échantillon d’une session à l’autre. Par exemple, si la case Conserver la cohorte est cochée et que la condition renvoie vrai lors de sa première exécution pour un visiteur donné, elle renvoie vrai sur toutes les exécutions suivantes de la condition pour le même visiteur. De même, si la case Conserver la cohorte est cochée et que la condition renvoie faux lors de sa première exécution pour un visiteur donné, elle renvoie faux sur toutes les exécutions suivantes de la condition pour le même visiteur.
+* **Option Persist Cohort** : l’option de conservation d’une cohorte a été ajoutée à la condition de l’échantillonnage. Cela a pour effet de conserver un utilisateur dans ou hors de la cohorte de l’échantillon d’une session à l’autre. Par exemple, si la case &quot;Conserver la cohorte&quot; est cochée et que la condition renvoie true (vrai) la première fois qu’elle est exécutée pour un visiteur donné, elle renvoie true (vrai) sur toutes les exécutions suivantes de la condition pour le même visiteur. De même, si la case &quot;Conserver la cohorte&quot; est cochée et que la condition renvoie false la première fois qu’elle est exécutée pour un visiteur donné, elle renvoie false sur toutes les exécutions suivantes de la condition pour le même visiteur.
 * **Correctif** : correction d’un bug par lequel une règle utilisant un événement Page Bottom et une action Custom Code (Code personnalisé) sur une page où les balises étaient chargées de manière synchrone, mais installées de manière incorrecte (aucun appel à `_satellite.pageBottom()`) effaçait le contenu du site Web.
-* **Correctif** - Correction d’un bug entraînant le dysfonctionnement de l’événement Enters Viewport lorsque la bibliothèque de balises était chargée de manière asynchrone et que son chargement se terminait après le renvoi de l’événement DOMContentLoaded du navigateur.
+* **Bug Fix** - Correction d’un problème en raison duquel la fenêtre d’affichage Enters ne fonctionnait pas si la bibliothèque de balises était chargée de manière asynchrone et que le chargement se terminait après le déclenchement de l’événement DOMContentLoaded du navigateur.
 
 ## 24 mai 2018
 

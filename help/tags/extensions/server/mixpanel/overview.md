@@ -4,9 +4,9 @@ title: Extension de transfert d’événement d’API de suivi des événements 
 description: Cette extension de transfert d’événement Adobe Experience Platform envoie les événements Adobe Experience Edge Network à Mixpanel.
 last-substantial-update: 2023-03-29T00:00:00Z
 exl-id: 21e2e0fa-4949-4be4-859f-d449d21d8f41
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 4f75bbfee6b550552d2c9947bac8540a982297eb
 workflow-type: tm+mt
-source-wordcount: '953'
+source-wordcount: '950'
 ht-degree: 2%
 
 ---
@@ -31,7 +31,7 @@ Les équipes d’analyse peuvent alors tirer parti des [!DNL Mixpanel's] fonctio
 
 Pour plus d’informations sur les cas d’utilisation spécifiques à [!DNL Mixpanel], reportez-vous à la documentation suivante :
 
-* [Nouveau pour [!DNL Mixpanel]](https://help.mixpanel.com/hc/en-us/sections/360008533532-New-to-Mixpanel)
+* [Nouveau pour [!DNL Mixpanel]](https://docs.mixpanel.com/docs)
 * [En quoi consiste  [!DNL Mixpanel] ?](https://developer.mixpanel.com/docs)
 * [12 à essayer [!DNL Mixpanel] features](https://mixpanel.com/blog/12-things-you-probably-didnt-know-you-could-do-with-mixpanel/)
 
@@ -80,10 +80,10 @@ Commencez à créer une règle dans votre propriété de transfert d’événeme
 | --- | --- | --- |
 | [!UICONTROL Jeton de projet] | Ce champ doit être mappé au jeton de projet associé à votre [!DNL Mixpanel] compte . | Oui |
 | [!UICONTROL Event Type] (Type d’événement) | Nom de l’événement. | Oui |
-| [!UICONTROL Heure de l’événement] | L’heure de l’événement. |  |
-| [!UICONTROL Identifiant distinct du panneau mixte] | Identifiant unique de l’utilisateur qui a exécuté l’événement. |  |
-| [!UICONTROL Insérer un ID] | Identifiant unique de l’événement, utilisé pour le dédoublonnage. |  |
-| [!UICONTROL Propriétés de l’événement] | Objet JSON contenant des propriétés personnalisées de l’événement. Choisissez entre fournir un fichier JSON brut ou utiliser un jeu simplifié d’entrées clé-valeur. |  |
+| [!UICONTROL Heure de l’événement] | L’heure de l’événement. | |
+| [!UICONTROL Identifiant distinct du panneau mixte] | Identifiant unique de l’utilisateur qui a exécuté l’événement. | |
+| [!UICONTROL Insérer un ID] | Identifiant unique de l’événement, utilisé pour le dédoublonnage. | |
+| [!UICONTROL Propriétés de l’événement] | Objet JSON contenant des propriétés personnalisées de l’événement. Choisissez entre fournir un fichier JSON brut ou utiliser un jeu simplifié d’entrées clé-valeur. | |
 
 >[!NOTE]
 >
