@@ -1,21 +1,18 @@
 ---
-keywords: Experience Platform;accueil;rubriques les plus consultées;mapping de ciblage;Mapping de ciblage
 solution: Experience Platform
 title: Mappage des données d’événement Adobe Target avec XDM
 description: Découvrez comment mapper des champs d’événement Adobe Target à un schéma de modèle de données d’expérience (XDM) pour une utilisation dans Adobe Experience Platform.
 exl-id: dab08ab6-6c1c-460a-bb52-8dcdb5709a34
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 81412493b096264ce7a89e3ca2348edb2dcd1798
 workflow-type: tm+mt
-source-wordcount: '479'
-ht-degree: 87%
+source-wordcount: '430'
+ht-degree: 82%
 
 ---
 
 # Mappages des champs de mapping de ciblage
 
-Adobe Experience Platform vous permet d’ingérer des données Adobe Target par le biais du connecteur source cible. Lors de l’utilisation du connecteur, toutes les données des champs cibles doivent être mappées avec les champs de [modèle de données d’expérience (XDM)](../../../../xdm/home.md) associés à la classe XDM ExperienceEvent.
-
-Le tableau suivant décrit les champs d’un schéma d’événement d’expérience (*champ XDM ExperienceEvent*) et les champs cibles correspondants auxquels ils doivent être mappés (*champ de requête cible*). Des notes supplémentaires pour certains mappages sont également fournies.
+Le tableau suivant décrit les champs d’un schéma d’événement d’expérience de modèle de données d’expérience (XDM) et les champs correspondants d’Adobe Target vers lesquels ils doivent être mappés. Des notes supplémentaires pour certains mappages sont également fournies.
 
 >[!NOTE]
 >
@@ -24,7 +21,7 @@ Le tableau suivant décrit les champs d’un schéma d’événement d’expéri
 | Champ XDM ExperienceEvent | Champ de requête cible | Notes |
 | ------------------------- | -------------------- | ----- |
 | **`id`** | Un identifiant de requête unique |
-| **`dataSource`** |  | Configuré sur « 1 » pour tous les clients. |
+| **`dataSource`** | | Configuré sur « 1 » pour tous les clients. |
 | `dataSource._id` | Une valeur générée par le système qui ne peut pas être transmise avec la requête. | L’ID unique de cette source de données. Fourni par la personne ou le système qui a créé la source de données. |
 | `dataSource.code` | Une valeur générée par le système qui ne peut pas être transmise avec la requête. | Un raccourci vers la valeur @id complète. Vous pouvez utiliser au moins un code ou une valeur @id. Parfois, ce code est appelé code d’intégration de la source de données. |
 | `dataSource.tags` | Une valeur générée par le système qui ne peut pas être transmise avec la requête. | Les balises servent à indiquer la façon dont les alias représentés par une source de données spécifique doivent être interprétés par les applications utilisant ces alias.<br><br>Exemples :<br><ul><li>`isAVID` : sources de données représentant les identifiants de visiteurs Analytics.</li><li>`isCRSKey` : sources de données représentant des alias qui doivent être utilisés comme clés dans CRS.</li></ul>Les balises sont définies lors de la création de la source de données, mais elles sont également incluses dans les messages de pipeline lors du référencement d’une source de données spécifique. |
@@ -76,7 +73,7 @@ Le tableau suivant décrit les champs d’un schéma d’événement d’expéri
 | `placeContext.geo.postalCode` | Le code postal résolu en fonction de l’adresse IP de la requête. |
 | `placeContext.geo.stateProvince` | La province ou l’État résolu en fonction de l’adresse IP de la requête. |
 | `placeContext.localTime` | `mboxRequest.offsetTime` + `mboxRequest.currentServerTime` |
-| **`commerce`** |  | Défini uniquement si les informations sur la commande sont présentes dans la requête. |
+| **`commerce`** | | Défini uniquement si les informations sur la commande sont présentes dans la requête. |
 | `commerce.order.priceTotal` | `mboxRequest.orderTotal` |
 | `commerce.order.purchaseOrderNumber` | `mboxRequest.orderId` |
 | `commerce.order.purchaseID` | `mboxRequest.orderId` |
