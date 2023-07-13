@@ -6,7 +6,7 @@ exl-id: 48aa36ca-656d-4b9d-954c-48c8da9df1e9
 source-git-commit: deca8300ebbada548a409de9c6a7b7178d0032e0
 workflow-type: tm+mt
 source-wordcount: '2258'
-ht-degree: 43%
+ht-degree: 44%
 
 ---
 
@@ -43,7 +43,7 @@ Ce tutoriel nécessite une compréhension du fonctionnement des composants suiva
 
 * [Sources](../../home.md) : Experience Platform permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de Platform.
 * [[!DNL Experience Data Model (XDM)] Système](../../../xdm/home.md) : Cadre normalisé selon lequel Experience Platform organise les données d’expérience client.
-* [Sandbox](../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
+* [Sandbox](../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
 ## Utiliser des modèles dans l’interface utilisateur de Platform {#use-templates-in-the-platform-ui}
 
