@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Principes de base de la composition des schémas
 description: Ce document présente les schémas du modèle de données d’expérience (XDM) ainsi que les blocs de création, principes et bonnes pratiques de la composition de schémas à utiliser dans Adobe Experience Platform.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: a3f38a18693e0ef4bc93765c090eafd56dcd15d3
+source-git-commit: 4ff003b8f4e98fa7af7f12271aa990c8e5f49f14
 workflow-type: tm+mt
 source-wordcount: '4140'
 ht-degree: 30%
@@ -42,11 +42,11 @@ La première étape de la conception d’un schéma consiste à déterminer le c
 Données destinées à être utilisées dans [!DNL Experience Platform] est regroupé en deux types de comportements :
 
 * **Enregistrer les données** : fournit des informations sur les attributs d’un sujet. Un sujet peut être une organisation ou un individu.
-* **Données de série temporelle** : fournissent un instantané du système au moment où une action a été entreprise directement ou indirectement par un sujet enregistré.
+* **Données de série temporelle** : fournissent un instantané du système au moment où une action a été entreprise directement ou indirectement par un objet d’enregistrement.
 
 Tous les schémas XDM décrivent des données pouvant être catégorisées en tant qu’enregistrement ou série temporelle. Le comportement des données d’un schéma est défini par la classe du schéma attribuée à celui-ci lorsqu’il est créé pour la première fois. Les classes XDM sont décrites en détail par la suite dans ce document.
 
-Les schémas d’enregistrement et de série temporelle contiennent tous deux une carte des identités (`xdm:identityMap`). Ce champ contient la représentation de l’identité d’un sujet tiré des champs marqués comme « Identité » décrit à la section suivante.
+Les schémas d’enregistrement et de série temporelle contiennent tous deux une carte des identités (`xdm:identityMap`). Ce champ contient la représentation de l’identité d’un objet tiré des champs marqués comme « Identité » décrit à la section suivante.
 
 ### [!UICONTROL Identité] {#identity}
 
@@ -117,7 +117,7 @@ Comme le montre l’exemple ci-dessus, chaque clé du `identityMap` représente 
 
 ### Principes d’évolution des schémas {#evolution}
 
-Étant donné que la nature des expériences numériques continue à évoluer, les schémas utilisés pour les représenter le doivent aussi. Un schéma bien conçu est donc capable de s’adapter et d’évoluer si nécessaire sans provoquer des modifications destructives aux versions précédentes du schéma.
+Étant donné que la nature des expériences digitales continue à évoluer, les schémas utilisés pour les représenter le doivent aussi. Un schéma bien conçu est donc capable de s’adapter et d’évoluer si nécessaire sans provoquer des modifications destructives aux versions précédentes du schéma.
 
 Le maintien de la compatibilité descendante étant essentiel pour l’évolution des schémas, [!DNL Experience Platform] applique un principe de contrôle de version purement additif. Ce principe garantit que toute révision du schéma n’entraîne que des mises à jour et des modifications non destructives. En d’autres termes, **les modifications entraînant des ruptures ne sont pas prises en charge.**
 
@@ -285,12 +285,12 @@ Pour plus d’informations sur l’utilisation de [!DNL Profile], reportez-vous 
 
 Tous les fichiers de données ingérés dans [!DNL Experience Platform] doit être conforme à la structure d’un schéma XDM. Pour plus d’informations sur la manière de formater les fichiers de données pour se conformer aux hiérarchies XDM (ainsi que des fichiers d’exemple), consultez le document sur les [exemples de transformations ETL](../../etl/transformations.md). Pour obtenir des informations générales sur l’ingestion de fichiers de données dans [!DNL Experience Platform], reportez-vous à la section [Présentation de l’ingestion par lots](../../ingestion/batch-ingestion/overview.md).
 
-## Schémas pour les segments externes
+## Schémas pour les audiences externes
 
-Si vous intégrez des segments provenant de systèmes externes dans Platform, vous devez utiliser les composants suivants pour les capturer dans vos schémas :
+Si vous intégrez des audiences provenant de systèmes externes dans Platform, vous devez utiliser les composants suivants pour les capturer dans vos schémas :
 
 * [[!UICONTROL Définition de segment] class](../classes/segment-definition.md): Utilisez cette classe standard pour capturer les attributs clés d’une définition de segment externe.
-* [[!UICONTROL Détails de l’adhésion au segment] groupe de champs](../field-groups/profile/segmentation.md): Ajoutez ce groupe de champs à votre [!UICONTROL XDM Individual Profile] afin d’associer des profils client à des segments spécifiques.
+* [[!UICONTROL Détails de l’adhésion au segment] groupe de champs](../field-groups/profile/segmentation.md): Ajoutez ce groupe de champs à votre [!UICONTROL XDM Individual Profile] afin d’associer des profils client à des audiences spécifiques.
 
 ## Étapes suivantes
 

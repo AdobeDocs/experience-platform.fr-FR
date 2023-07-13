@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Glossaire des étiquettes dʼutilisation des données
 description: Ce document décrit toutes les étiquettes dʼutilisation des données actuellement prises en charge par Adobe Experience Platform.
 exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
-source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
+source-git-commit: f4f4deda02c96e567cbd0815783f192d1c54096c
 workflow-type: tm+mt
-source-wordcount: '2108'
-ht-degree: 100%
+source-wordcount: '2109'
+ht-degree: 98%
 
 ---
 
@@ -134,11 +134,11 @@ Certains contrats prévoient des interdictions explicites sur l’utilisation de
 
 #### C10 {#c10}
 
-Certaines politiques de gouvernance des données limitent lʼutilisation de données dʼidentité assemblées pour la personnalisation. Le libellé C10 est automatiquement appliqué aux segments si leurs politiques de fusion utilisent lʼoption « graphique privé ».
+Certaines politiques de gouvernance des données limitent lʼutilisation de données dʼidentité assemblées pour la personnalisation. Le libellé C10 est automatiquement appliqué aux audiences si leurs stratégies de fusion utilisent l’option &quot;graphique privé&quot;.
 
 #### C11 {#c11}
 
-La correspondance de segments d’Adobe Experience Platform vous permet de faire correspondre des segments propriétaires avec des préférences de confidentialité et de consentement, ce qui facilite la création enrichie de profils utilisateurs et les insights en aval. Le libellé C11 indique les données qui ne doivent pas être utilisées dans les processus [!DNL Segment Match]. Une fois que vous avez déterminé les jeux de données et/ou les champs que vous souhaitez exclure de la correspondance de segment et que vous avez ajouté le libellé C11 en conséquence, le libellé est automatiquement appliqué par le workflow Correspondance de segment.
+La correspondance de segment Adobe Experience Platform vous permet de faire correspondre les audiences générées par Platform avec les préférences de confidentialité et de consentement, ce qui facilite le profilage enrichi et les informations en aval. Le libellé C11 indique les données qui ne doivent pas être utilisées dans les processus [!DNL Segment Match]. Une fois que vous avez déterminé les jeux de données et/ou les champs que vous souhaitez exclure de la correspondance de segment et que vous avez ajouté le libellé C11 en conséquence, le libellé est automatiquement appliqué par le workflow Correspondance de segment.
 
 #### C12 {#c12}
 

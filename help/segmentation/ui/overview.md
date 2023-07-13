@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Guide de l’IU de Segmentation Service
 description: Découvrez comment créer et gérer des audiences et des définitions de segment dans l’interface utilisateur de Adobe Experience Platform.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 5950713c33bfb2893f24f35136acf2707ad35f1f
+source-git-commit: 04c0b19bf4ffbc0719a89f710570cc667ca5e482
 workflow-type: tm+mt
 source-wordcount: '3606'
 ht-degree: 30%
@@ -41,7 +41,7 @@ Dans l’interface utilisateur de l’Experience Platform, sélectionnez **[!UIC
 
 Le **[!UICONTROL Audiences]** Le tableau de bord décrit les mesures clés liées aux données d’audience de votre entreprise.
 
-Pour en savoir plus, rendez-vous sur la page [guide du tableau de bord des audiences](../../dashboards/guides/segments.md).
+Pour en savoir plus, rendez-vous sur la page [guide du tableau de bord des audiences](../../dashboards/guides/audiences.md).
 
 ![Le tableau de bord de l’audience s’affiche. Il affiche divers widgets, notamment la taille de l’audience, les profils par identité, le chevauchement des identités et la tendance de changement de la taille de l’audience.](../../dashboards/images/segments/dashboard-overview.png)
 

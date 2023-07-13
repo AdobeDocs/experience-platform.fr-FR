@@ -2,8 +2,8 @@
 title: Notes de mise à jour d’Adobe Experience Platform - Janvier 2022
 description: Les notes de mise à jour de janvier 2022 pour Adobe Experience Platform.
 exl-id: 734ce1b3-e270-4c37-958c-88bcc39fbf20
-source-git-commit: 378f222b5c673632ce5792c52fc32410106def37
-workflow-type: ht
+source-git-commit: 4bdbb987905b6010f4b4f75bee060828d0e07368
+workflow-type: tm+mt
 source-wordcount: '1342'
 ht-degree: 100%
 
@@ -43,7 +43,7 @@ Adobe Experience Platform fournit de nombreux tableaux de bord grâce auxquels
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Légendes intelligentes | Un algorithme de machine learning fournit automatiquement des informations sur votre profil et vos données d’audience, et illustre les modèles et les tendances sur une période de 30 à 90 jours ou de 12 mois. Les légendes contiennent des informations sur les éléments suivants : <ul><li>Forme globale et statistiques</li><li>Tendances et modifications brusques</li><li>Modèles saisonniers</li><li>Anomalies inattendues</li></ul> Vous trouverez plus d’informations dans la documentation sur les [tableaux de bord des profils](../../dashboards/guides/profiles.md#profiles-count-trend) et les [tableaux de bord des segments](../../dashboards/guides/segments.md#audience-size-trend). |
+| Légendes intelligentes | Un algorithme de machine learning fournit automatiquement des informations sur votre profil et vos données d’audience, et illustre les modèles et les tendances sur une période de 30 à 90 jours ou de 12 mois. Les légendes contiennent des informations sur les éléments suivants : <ul><li>Forme globale et statistiques</li><li>Tendances et modifications brusques</li><li>Modèles saisonniers</li><li>Anomalies inattendues</li></ul> Vous trouverez plus d’informations dans la documentation sur les [tableaux de bord des profils](../../dashboards/guides/profiles.md#profiles-count-trend) et les [tableaux de bord des segments](../../dashboards/guides/audiences.md#audience-size-trend). |
 | Inventaire des tableaux de bord | Accédez aux rapports préconfigurés des tableaux de bord de profils, de segments et de destinations, y compris les intégrations installées telles que PowerBI, dans un emplacement centralisé. Pour plus d’informations, consultez la [[!DNL Dashboards] documentation de l’inventaire](../../dashboards/inventory.md). |
 | Modèles de rapport PowerBI | Créez, personnalisez ou étendez les mesures à partir des modèles de données des rapports sur les profils, les segments et les destinations à l’aide de nouveaux graphiques PowerBI. Le workflow d’installation automatisée vous permet de partager vos informations marketing à travers votre organisation à partir de l’environnement PowerBI. Pour plus d’informations, consultez la [documentation sur le modèle de rapport PowerBI](../../dashboards/integrations/power-bi.md). |
 
@@ -98,7 +98,7 @@ Pour plus d’informations sur Query Service [!DNL Query Service], consultez la 
 
 ## Sandbox {#sandboxes}
 
-Adobe Experience Platform est conçu pour enrichir les applications d’expérience numérique à l’échelle mondiale. Les entreprises exécutent souvent plusieurs applications d’expérience numérique en parallèle et doivent prendre en charge le développement, les tests et le déploiement de ces applications tout en assurant la conformité opérationnelle. Pour répondre à ce besoin, Experience Platform fournit des sandbox qui divisent une instance unique de Platform en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
+Adobe Experience Platform est conçu pour enrichir les applications d’expérience digitale à l’échelle mondiale. Les entreprises exécutent souvent plusieurs applications d’expérience digitale en parallèle et doivent prendre en charge le développement, les tests et le déploiement de ces applications tout en assurant la conformité opérationnelle. Pour répondre à ce besoin, Experience Platform fournit des sandbox qui divisent une instance de Platform unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
 **Fonctionnalités mises à jour**
 

@@ -3,9 +3,9 @@ keywords: Experience Platform;service de requête;service de requête;requête
 title: Exemple de cas d’utilisation pour Adobe Experience Platform Query Service
 description: Exemple de bout en bout montrant la versatilité et les avantages de Adobe Experience Platform Query Service.
 exl-id: 00bdae47-71b7-44ea-9365-a1d64c88d2bf
-source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
+source-git-commit: 79966442f5333363216da17342092a71335a14f0
 workflow-type: tm+mt
-source-wordcount: '712'
+source-wordcount: '707'
 ht-degree: 3%
 
 ---
@@ -18,7 +18,7 @@ Ce document et la présentation vidéo qui l’accompagne fournissent un workflo
 * Méthodes pour créer la requête en fonction de votre architecture de données existante.
 * Assurez-vous de la qualité des données en fonction de vos besoins et des méthodes permettant d’atténuer tout manque.
 * Processus de planification de l’exécution d’une requête à une fréquence définie en vue de son utilisation en aval dans la segmentation et les destinations pour la personnalisation.
-* Facilité pour les marketeurs d’inclure des attributs dérivés dans leurs segments grâce à la puissance de [!DNL Query Service].
+* Facilité pour les marketeurs d’inclure des attributs dérivés dans leurs audiences grâce à la puissance de [!DNL Query Service].
 
 ## Objectifs {#objectives}
 
@@ -63,9 +63,9 @@ La présentation vidéo présentée ci-dessous présente un cas pratique global 
 
 ## Avantages de [!DNL Query Service] {#benefits}
 
-Les fonctionnalités proposées par [!DNL Query Service] sert de nombreux objectifs. Vous pouvez l’utiliser pour tenir compte d’une logique complexe de segmentation, pour calculer divers attributs personnalisés à utiliser en aval ou pour simplifier considérablement la création de vos segments.
+Les fonctionnalités proposées par [!DNL Query Service] sert de nombreux objectifs. Vous pouvez l’utiliser pour tenir compte d’une logique complexe de segmentation, pour calculer divers attributs personnalisés à utiliser en aval ou pour simplifier considérablement la création de vos audiences.
 
-[!DNL Query Service] vous permet d’inclure des contraintes dans vos requêtes afin de simplifier votre processus de création de segments. Cela améliore la qualité des données en veillant à ce que les données appropriées soient qualifiées pour vos segments et crée des audiences plus précises. Le maintien de la qualité de votre requête permet d’obtenir une audience précise et facilite la fiabilité des données. Vous pouvez également sauvegarder votre audience en créant des schémas et des tableaux personnalisés basés sur des attributs dérivés de votre requête. Un tableau personnalisé peut être activé pour Profile et vous pouvez utiliser ces points de données pour la segmentation et la personnalisation. Cette fonctionnalité aide les marketeurs qui souhaitent créer une audience de personnes claire.
+[!DNL Query Service] vous permet d’inclure des contraintes dans vos requêtes afin de simplifier votre processus de création d’audiences. Cela améliore la qualité des données en assurant les bonnes conditions de qualification des données pour vos audiences. Le maintien de la qualité de votre requête permet d’obtenir une audience précise et facilite la fiabilité des données. Vous pouvez également sauvegarder votre audience en créant des schémas et des tableaux personnalisés basés sur des attributs dérivés de votre requête. Un tableau personnalisé peut être activé pour Profile et vous pouvez utiliser ces points de données pour la segmentation et la personnalisation. Cette fonctionnalité aide les marketeurs qui souhaitent créer une audience de personnes claire.
 
 En outre, en incluant dans votre requête la logique qui satisfait toutes les conditions récurrentes ou statiques, [!DNL Query Service] extrait le fardeau de la segmentation élaborée.
 

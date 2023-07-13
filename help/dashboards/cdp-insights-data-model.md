@@ -2,16 +2,16 @@
 title: Modèle de données Real-time Customer Data Platform Insights
 description: Découvrez comment utiliser les requêtes SQL avec les modèles de données Real-time Customer Data Platform Insights pour personnaliser vos propres rapports Real-Time CDP pour vos cas d’utilisation de marketing et d’indicateurs de performance clés.
 exl-id: 61bc7f23-9f79-4c75-a515-85dd9dda2d02
-source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
+source-git-commit: e55bbba92b0e3b9c86a9962ffa0131dfb7c15e77
 workflow-type: tm+mt
 source-wordcount: '1109'
-ht-degree: 7%
+ht-degree: 4%
 
 ---
 
 # Modèle de données Real-time Customer Data Platform Insights
 
-La fonction Modèle de données Real-time Customer Data Platform Insights présente les modèles de données et SQL qui alimentent les insights pour divers widgets de profil, de destination et de segmentation. Vous pouvez personnaliser ces modèles de requête SQL afin de créer des rapports Real-Time CDP pour vos cas d’utilisation d’indicateurs de performance clés (IPC) et marketing. Ces insights peuvent ensuite être utilisées comme widgets personnalisés pour vos tableaux de bord définis par l’utilisateur. Pour en savoir plus, consultez la documentation sur les informations sur les rapports de magasin accélérées de requête . [comment créer un modèle de données d’informations sur les rapports via Query Service pour l’utiliser avec des données de magasin accélérées et des tableaux de bord définis par l’utilisateur](../query-service/data-distiller/query-accelerated-store/reporting-insights-data-model.md).
+La fonction Modèle de données Real-time Customer Data Platform Insights présente les modèles de données et SQL qui alimentent les insights pour divers widgets de profil, de destination et de segmentation. Vous pouvez personnaliser ces modèles de requête SQL afin de créer des rapports Real-Time CDP pour vos cas d’utilisation d’indicateurs de performance clés (IPC) et marketing. Ces informations peuvent ensuite être utilisées comme widgets personnalisés pour vos tableaux de bord définis par l’utilisateur. Pour en savoir plus, consultez la documentation sur les informations sur les rapports de magasin accélérés de requête . [comment créer un modèle de données d’informations sur les rapports via Query Service pour l’utiliser avec des données de magasin accélérées et des tableaux de bord définis par l’utilisateur](../query-service/data-distiller/query-accelerated-store/reporting-insights-data-model.md).
 
 ## Conditions préalables
 
@@ -19,7 +19,7 @@ Ce guide nécessite une compréhension pratique de la fonction [fonction de tabl
 
 ## Rapports d’informations sur Real-Time CDP et cas d’utilisation
 
-Les rapports Real-Time CDP fournissent des informations sur vos données de profil et sur leurs relations avec les segments et les destinations. Divers modèles de schémas étoiles ont été développés pour répondre à divers cas d’utilisation marketing courants et chaque modèle de données peut prendre en charge plusieurs cas d’utilisation.
+Les rapports Real-Time CDP fournissent des informations sur vos données de profil et sur leurs relations avec les audiences et les destinations. Divers modèles de schémas étoiles ont été développés pour répondre à divers cas d’utilisation marketing courants et chaque modèle de données peut prendre en charge plusieurs cas d’utilisation.
 
 >[!IMPORTANT]
 >
@@ -144,9 +144,9 @@ GROUP BY
 
 +++
 
-### Modèle de segment {#segment-model}
+### Modèle d’audience {#audience-model}
 
-Le modèle de segment comprend les jeux de données suivants :
+Le modèle d’audience comprend les jeux de données suivants :
 
 - `adwh_dim_date`
 - `adwh_fact_profile_by_segment`
@@ -158,11 +158,11 @@ Le modèle de segment comprend les jeux de données suivants :
 
 L’image ci-dessous contient les champs de données appropriés dans chaque jeu de données.
 
-![Un identifiant d’utilisateur (ERD) du modèle de segment.](./images/cdp-insights/segment-model.png)
+![Un identifiant d’utilisateur (ERD) du modèle d’audience.](./images/cdp-insights/audience-model.png)
 
 #### Cas d’utilisation de la taille d’audience
 
-La logique utilisée pour la variable [!UICONTROL Taille de l’audience] widget renvoie le nombre total de profils fusionnés dans le segment sélectionné au moment de l’instantané le plus récent. Voir [[!UICONTROL Taille de l’audience] documentation du widget](./guides/segments.md#audience-size) pour plus d’informations.
+La logique utilisée pour la variable [!UICONTROL Taille de l’audience] widget renvoie le nombre total de profils fusionnés dans l’audience sélectionnée au moment de l’instantané le plus récent. Voir [[!UICONTROL Taille de l’audience] documentation du widget](./guides/audiences.md#audience-size) pour plus d’informations.
 
 Le SQL qui génère la variable [!UICONTROL Taille de l’audience] Le widget est visible dans la section réductible ci-dessous.
 
@@ -191,7 +191,7 @@ LIMIT 20;
 
 #### Cas d’utilisation de la tendance de modification de la taille de l’audience
 
-La logique utilisée pour la variable [!UICONTROL Tendance de changement de la taille de l’audience] widget fournit un graphique linéaire qui illustre la différence entre le nombre total de profils qualifiés pour un segment donné et les instantanés quotidiens les plus récents. Voir [[!UICONTROL Tendance de changement de la taille de l’audience] documentation du widget](./guides/segments.md#audience-size-change-trend) pour plus d’informations.
+La logique utilisée pour la variable [!UICONTROL Tendance de changement de la taille de l’audience] widget fournit un graphique linéaire qui illustre la différence entre le nombre total de profils qualifiés pour une audience donnée et les instantanés quotidiens les plus récents. Voir [[!UICONTROL Tendance de changement de la taille de l’audience] documentation du widget](./guides/audiences.md#audience-size-change-trend) pour plus d’informations.
 
 Le SQL qui génère la variable [!UICONTROL Tendance de changement de la taille de l’audience] Le widget est visible dans la section réductible ci-dessous.
 
@@ -212,7 +212,7 @@ GROUP BY cast(adwh_dim_segments.create_date AS date), adwh_dim_merge_policies.me
 
 #### Cas d’utilisation des destinations les plus utilisées
 
-La logique utilisée dans la variable [!UICONTROL Destinations les plus utilisées] Le widget répertorie les destinations les plus utilisées de votre entreprise en fonction du nombre de segments qui y sont mappés. Ce classement permet de savoir quelles destinations sont utilisées, tout en présentant éventuellement celles qui peuvent être sous-utilisées. Consultez la documentation relative à la [[!UICONTROL Destinations les plus utilisées] widget](./guides/destinations.md#most-used-destinations) pour plus d’informations.
+La logique utilisée dans la variable [!UICONTROL Destinations les plus utilisées] Le widget répertorie les destinations les plus utilisées de votre entreprise en fonction du nombre d’audiences qui y sont associées. Ce classement permet de savoir quelles destinations sont utilisées, tout en présentant éventuellement celles qui peuvent être sous-utilisées. Consultez la documentation relative à la [[!UICONTROL Destinations les plus utilisées] widget](./guides/destinations.md#most-used-destinations) pour plus d’informations.
 
 Le SQL qui génère la variable [!UICONTROL Destinations les plus utilisées] Le widget est visible dans la section réductible ci-dessous.
 
@@ -237,11 +237,11 @@ FROM
 
 +++
 
-#### Cas d’utilisation des segments récemment activés
+#### Cas d’utilisation des audiences récemment activées
 
-La logique de la variable [!UICONTROL Segments récemment activés] fournit une liste des segments mappés le plus récemment à une destination. Cette liste fournit un instantané des segments et des destinations utilisés actuellement dans le système et peut aider à corriger les mappages erronés. Voir [[!UICONTROL Segments récemment activés] documentation du widget](./guides/destinations.md#recently-activated-segments) pour plus d’informations.
+La logique de la variable [!UICONTROL Audiences récemment activées] fournit une liste des audiences mappées le plus récemment à une destination. Cette liste fournit un instantané des audiences et des destinations activement utilisées dans le système et peut vous aider à résoudre les problèmes de mappages erronés. Voir [[!UICONTROL Audiences récemment activées] documentation du widget](./guides/destinations.md#recently-activated-audiences) pour plus d’informations.
 
-Le SQL qui génère la variable [!UICONTROL Segments récemment activés] Le widget est visible dans la section réductible ci-dessous.
+Le SQL qui génère la variable [!UICONTROL Audiences récemment activées] Le widget est visible dans la section réductible ci-dessous.
 
 Requête +++SQL
 
@@ -255,9 +255,9 @@ ORDER BY create_time desc, segment LIMIT 5;
 
 +++
 
-### Modèle Namespace-segment
+### Modèle Namespace-audience
 
-Le modèle namespace-segment comprend les jeux de données suivants :
+Le modèle namespace-audience comprend les jeux de données suivants :
 
 - `adwh_dim_date`
 - `adwh_dim_namespaces`
@@ -270,11 +270,11 @@ Le modèle namespace-segment comprend les jeux de données suivants :
 
 L’image ci-dessous contient les champs de données appropriés dans chaque jeu de données.
 
-![Un ERD du modèle namespace-segment.](./images/cdp-insights/namespace-segment-model.png)
+![Un ERD du modèle namespace-audience.](./images/cdp-insights/namespace-audience-model.png)
 
-#### Profils par identité pour un cas d’utilisation de segment
+#### Profils par identité pour un cas d’utilisation d’audience
 
-La logique utilisée dans la variable [!UICONTROL Profils par identité] Ce widget fournit une ventilation des identités pour tous les profils fusionnés de votre banque de profils pour un segment donné. Voir [[!UICONTROL Profils par identité] documentation du widget](./guides/segments.md#profiles-by-identity) pour plus d’informations.
+La logique utilisée dans la variable [!UICONTROL Profils par identité] Ce widget fournit une ventilation des identités pour tous les profils fusionnés de votre banque de profils pour une audience donnée. Voir [[!UICONTROL Profils par identité] documentation du widget](./guides/audiences.md#profiles-by-identity) pour plus d’informations.
 
 Le SQL qui génère la variable [!UICONTROL Profils par identité] Le widget est visible dans la section réductible ci-dessous.
 
@@ -359,9 +359,9 @@ SELECT Sum(overlap_col1) overlap_col1,
 
 +++
 
-### Espace de noms de chevauchement par modèle de segment
+### Espace de noms de chevauchement par modèle d’audience
 
-L’espace de noms de chevauchement par modèle de segment est constitué des jeux de données suivants :
+L’espace de noms de chevauchement par modèle d’audience est constitué des jeux de données suivants :
 
 - `adwh_dim_date`
 - `adwh_dim_overlap_namespaces`
@@ -374,11 +374,11 @@ L’espace de noms de chevauchement par modèle de segment est constitué des je
 
 L’image ci-dessous contient les champs de données appropriés dans chaque jeu de données.
 
-![Un ERD de l’espace de noms de chevauchement par modèle de segment.](./images/cdp-insights/overlap-namespace-by-segment-model.png)
+![Identifiant d’espace de noms de chevauchement par modèle d’audience.](./images/cdp-insights/overlap-namespace-by-audience-model.png)
 
-#### Cas d’utilisation de chevauchement d’identités (segments)
+#### Cas d’utilisation du chevauchement des identités (audiences)
 
-La logique utilisée dans la variable [!UICONTROL Segments] tableau de bord [!UICONTROL Superposition des identités] Le widget illustre le chevauchement des profils qui contiennent les deux identités sélectionnées pour un segment particulier. Pour plus d’informations, voir [[!UICONTROL Superposition des identités] section widget de [!UICONTROL Segmentation] documentation du tableau de bord](./guides/segments.md#identity-overlap).
+La logique utilisée dans la variable [!UICONTROL Audiences] tableau de bord [!UICONTROL Superposition des identités] Le widget illustre le chevauchement des profils qui contiennent les deux identités sélectionnées pour une audience particulière. Pour plus d’informations, voir [[!UICONTROL Superposition des identités] section widget de [!UICONTROL Audiences] documentation du tableau de bord](./guides/audiences.md#identity-overlap).
 
 Le SQL qui génère la variable [!UICONTROL Superposition des identités] Le widget est visible dans la section réductible ci-dessous.
 

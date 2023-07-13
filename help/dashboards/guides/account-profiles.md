@@ -2,7 +2,7 @@
 title: Guide du tableau de bord des profils de compte
 description: Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur les profils de compte B2B de votre entreprise.
 exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 79966442f5333363216da17342092a71335a14f0
 workflow-type: tm+mt
 source-wordcount: '1052'
 ht-degree: 10%
@@ -39,7 +39,7 @@ Dans la [!UICONTROL Profils de compte] vous pouvez effectuer l’une des opérat
 
 ## Parcourir les profils de compte {#browse-account-profiles}
 
-Le [!UICONTROL Parcourir] vous permet de rechercher et d’afficher les profils de compte en lecture seule ingérés dans votre organisation à l’aide d’un ID de compte provenant d’une source d’entreprise connectée ou en saisissant directement les détails de la source. Vous y trouverez des informations importantes relatives au profil du compte, notamment leur nom, leur secteur d’activité, leurs recettes et leur segment.
+Le [!UICONTROL Parcourir] vous permet de rechercher et d’afficher les profils de compte en lecture seule ingérés dans votre organisation à l’aide d’un ID de compte provenant d’une source d’entreprise connectée ou en saisissant directement les détails de la source. Vous y trouverez des informations importantes appartenant au profil du compte, notamment leur nom, leur secteur d’activité, leurs recettes et leur audience.
 
 Sélectionnez la [!UICONTROL Identifiant de profil] dans les résultats affichés sur la [!UICONTROL Parcourir] pour ouvrir la [!UICONTROL Détails] pour le profil du compte.
 

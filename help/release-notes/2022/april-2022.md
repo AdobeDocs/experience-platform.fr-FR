@@ -2,10 +2,10 @@
 title: Notes de mise à jour d’Adobe Experience Platform - Avril 2022
 description: Les notes de mise à jour d’avril 2022 pour Adobe Experience Platform.
 exl-id: 39233787-3089-4469-8363-b006ae41ae21
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 4bdbb987905b6010f4b4f75bee060828d0e07368
 workflow-type: tm+mt
 source-wordcount: '2904'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -26,9 +26,9 @@ Mises à jour des fonctionnalités existantes dans Adobe Experience Platform 
 
 ## [!DNL Dashboards] {#dashboards}
 
- Platform propose de nombreux tableaux de bord qui vous permettent d’afficher des informations importantes concernant les données de l’entreprise. Celles-ci sont présentées telles qu’elles sont capturées lors d’aperçus quotidiens.
+ Platform fournit de nombreux tableaux de bord grâce auxquels vous pouvez afficher des informations importantes sur les données de votre entreprise, telles quʼelles sont capturées lors dʼinstantanés quotidiens.
 
-Les tableaux de bord proposent des options de rapports préconfigurés sur les données de l’entreprise. Ils sont directement intégrés au processus du professionnel du marketing dans Platform. La mise à disposition de ces tableaux de bord ne nécessite pas d’assistance informatique supplémentaire. En outre, ils offrent un gain de temps et d’effort en évitant de recourir à l’exportation et au traitement des données avec une conception et une implémentation d’entreposage de données supplémentaires.
+Les tableaux de bord fournissent des options de création de rapports préconfigurées pour les données de votre entreprise et sont directement intégrés au workflow du marketeur dans Platform. La mise à disposition de ces tableaux de bord ne nécessite pas d’assistance informatique supplémentaire. En outre, ils offrent un gain de temps et d’effort en évitant de recourir à l’exportation et au traitement des données avec une conception et une implémentation d’entreposage de données supplémentaires.
 
 Les widgets suivants sont disponibles via la bibliothèque de widgets dans leurs tableaux de bord respectifs. Pour plus d’informations, consultez la documentation sur l’[ajout de widgets via la bibliothèque de widgets](../../dashboards/customize/widget-library.md).
 
@@ -57,7 +57,7 @@ Les widgets suivants sont disponibles via la bibliothèque de widgets dans leurs
 
 {style="table-layout:auto"}
 
-Consultez la documentation pour plus d’informations sur les tableaux de bord [[!DNL Profiles]](../../dashboards/guides/profiles.md), [[!DNL Destinations]](../../dashboards/guides/destinations.md) et [[!DNL Segments]](../../dashboards/guides/segments.md).
+Consultez la documentation pour plus d’informations sur les tableaux de bord [[!DNL Profiles]](../../dashboards/guides/profiles.md), [[!DNL Destinations]](../../dashboards/guides/destinations.md) et [[!DNL Segments]](../../dashboards/guides/audiences.md).
 
 ## Flux de données {#dataflows}
 
@@ -173,7 +173,7 @@ Pour plus d’informations sur XDM dans Platform, consultez la [présentation du
 
 ## [!DNL Artificial Intelligence/Machine Learning services] {#ai/ml-services}
 
-Les services d’IA/ML permettent aux analystes et spécialistes du marketing d’exploiter la puissance de l’intelligence artificielle et du machine learning dans les cas d’utilisation de l’expérience client. Les analystes marketing peuvent obtenir des prédictions spécifiques aux besoins d’une entreprise en utilisant des configurations au niveau de l’entreprise sans avoir besoin d’expertise en sciences des données.
+Les services d’IA/ML permettent aux analystes et spécialistes du marketing d’exploiter la puissance de l’intelligence artificielle et du machine learning dans les cas d’utilisation de l’expérience client. Les analystes marketing peuvent obtenir des prédictions spécifiques aux besoins d&#39;une entreprise en utilisant des configurations au niveau de l&#39;entreprise sans avoir besoin d&#39;expertise en sciences des données.
 
 ### IA dédiée à l’attribution
 
@@ -216,7 +216,7 @@ Pour en savoir plus sur l’édition B2B de Real-time Customer Data Platform, c
 
 Adobe Experience Platform peut ingérer des données à partir de sources externes tout en vous permettant de structurer, d’étiqueter et d’améliorer ces données à l’aide des services de Platform. Vous pouvez ingérer des données à partir de diverses sources telles que les applications Adobe, le stockage dans le cloud, des logiciels tiers et votre système de gestion de la relation client.
 
-Experience Platform fournit une API RESTful et une interface utilisateur interactive qui vous permet de configurer facilement des connexions source à différents fournisseurs de données. Ces connexions source vous permettent de vous authentifier et de vous connecter à des services de gestion de la relation client et à des systèmes de stockage externes, de définir des heures d’ingestion et de gérer le débit d’ingestion des données.
+Experience Platform fournit une API RESTful et une interface utilisateur interactive qui vous permet de configurer facilement des connexions source à différents fournisseurs de données. Ces connexions source vous permettent de vous authentifier et de vous connecter à des services de gestion de la relation client et à des systèmes de stockage externes, de définir des heures d’ingestion et de gérer le débit d’ingestion des données.
 
 **Fonctionnalités mises à jour**
 

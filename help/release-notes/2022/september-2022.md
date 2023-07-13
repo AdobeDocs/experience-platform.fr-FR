@@ -2,7 +2,7 @@
 title: Notes de mise à jour d’Adobe Experience Platform - Septembre 2022
 description: Les notes de mise à jour de septembre 2022 pour Adobe Experience Platform.
 exl-id: a7a4dcf8-2cf3-4e39-879d-bdfcbacb737a
-source-git-commit: 8904d44cc8d289d103ec6d65116b8385ed615c4d
+source-git-commit: 4bdbb987905b6010f4b4f75bee060828d0e07368
 workflow-type: tm+mt
 source-wordcount: '2940'
 ht-degree: 100%
@@ -88,14 +88,14 @@ Pour plus d’informations sur les différents types d’événements spécifiqu
 
 ## [!DNL Dashboards] {#dashboards}
 
-Adobe Experience Platform fournit de nombreux tableaux de bord grâce auxquels vous pouvez afficher des nformationsimportantes sur les données de votre organisation, telles quʼelles sont capturées lors dʼinstantanés quotidiens.
+Adobe Experience Platform fournit de nombreux tableaux de bord grâce auxquels vous pouvez afficher des informations importantes sur les données de votre organisation, telles quʼelles sont capturées lors dʼinstantanés quotidiens.
 
 | Fonctionnalité | Description |
 | --- | --- |
 | Libellé en cours d’utilisation | Lorsqu’il est affiché dans la bibliothèque de widgets, le libellé en cours d’utilisation identifie facilement la présence de widgets existants dans votre tableau de bord. Cela permet d’éviter facilement la duplication, bien que vous puissiez ajouter le même widget plusieurs fois si vous le souhaitez. |
-| Tableaux de bord définis par l’utilisateur | Les tableaux de bord définis par l’utilisateur accélérèrent les insights et personnalisent les visualisations en vous permettant de créer et de gérer des tableaux de bord personnalisés. Grâce aux tableaux de bord définis par l’utilisateur, vous pouvez créer, ajouter et modifier des widgets personnalisés pour visualiser les mesures clés pertinentes pour votre organisation. Lisez le [guide des fonctionnalités](../../dashboards/user-defined-dashboards.md) pour en savoir plus. |
-| Modèle de données d’insights Customer Data Platform | La fonctionnalité Modèle de données d’insights Customer Data Platform (CDP) expose les modèles de données et SQL qui alimentent les insights pour divers widgets de profil, de destination et de segmentation. Vous pouvez personnaliser ces modèles de requête SQL pour créer des rapports CDP pour vos cas d’utilisation de marketing et d’indicateurs clés de performance. Ces insights peuvent ensuite être utilisées comme widgets personnalisés pour vos tableaux de bord définis par l’utilisateur. Lisez le [guide de fonctionnalité du modèle de données d’insights CDP](../../dashboards/cdp-insights-data-model.md) pour en savoir plus. |
-| Widget de rapport de chevauchements d’audience | Ce widget est disponible pour les deux tableaux de bord [!UICONTROL Profils] et [!UICONTROL Segments]. Le rapport fournit une liste d’audiences classées selon les pourcentages de chevauchement les plus élevés ou les plus bas pour le segment sélectionné. Dans le tableau de bord [!UICONTROL Profils], vous pouvez filtrer et afficher le chevauchement de vos audiences par politique de fusion de tous les segments disponibles. Les tableaux de bord [!UICONTROL Segments] vous permettent de filtrer le chevauchement des audiences selon un segment spécifique.<br>Utilisez cette analyse pour créer de nouveaux segments hautement performants et éviter d’envoyer la même audience vers différentes destinations. Le rapport permet également d’identifier les insights masqués afin d’améliorer la segmentation ou de localiser les profils uniques à rechercher. Lisez les guides des widgets [profils](../../dashboards/guides/profiles.md#audience-overlap-report) et [segments](../../dashboards/guides/segments.md#audience-overlap-report) pour en savoir plus. |
+| Tableaux de bord définis par l’utilisateur | Les tableaux de bord définis par l’utilisateur accélérèrent les informations et personnalisent les visualisations en vous permettant de créer et de gérer des tableaux de bord personnalisés. Grâce aux tableaux de bord définis par l’utilisateur, vous pouvez créer, ajouter et modifier des widgets personnalisés pour visualiser les mesures clés pertinentes pour votre organisation. Lisez le [guide des fonctionnalités](../../dashboards/user-defined-dashboards.md) pour en savoir plus. |
+| Modèle de données d’informations Customer Data Platform | La fonctionnalité Modèle de données d’informations Customer Data Platform (CDP) expose les modèles de données et SQL qui alimentent les informations pour divers widgets de profil, de destination et de segmentation. Vous pouvez personnaliser ces modèles de requête SQL pour créer des rapports CDP pour vos cas d’utilisation de marketing et d’indicateurs clés de performance. Ces informations peuvent ensuite être utilisées comme widgets personnalisés pour vos tableaux de bord définis par l’utilisateur. Lisez le [guide de fonctionnalité du modèle de données d’informations CDP](../../dashboards/cdp-insights-data-model.md) pour en savoir plus. |
+| Widget de rapport de chevauchements d’audience | Ce widget est disponible pour les deux tableaux de bord [!UICONTROL Profils] et [!UICONTROL Segments]. Le rapport fournit une liste d’audiences classées selon les pourcentages de chevauchement les plus élevés ou les plus bas pour le segment sélectionné. Dans le tableau de bord [!UICONTROL Profils], vous pouvez filtrer et afficher le chevauchement de vos audiences par politique de fusion de tous les segments disponibles. Les tableaux de bord [!UICONTROL Segments] vous permettent de filtrer le chevauchement des audiences selon un segment spécifique.<br>Utilisez cette analyse pour créer de nouveaux segments hautement performants et éviter d’envoyer la même audience vers différentes destinations. Le rapport permet également d’identifier les informations masquées afin d’améliorer la segmentation ou de localiser les profils uniques à rechercher. Lisez les guides des widgets [profils](../../dashboards/guides/profiles.md#audience-overlap-report) et [segments](../../dashboards/guides/audiences.md#audience-overlap-report) pour en savoir plus. |
 
 Pour plus d’informations sur Query Service [!DNL Dashboards], consultez la [[!DNL Dashboards] présentation](../../dashboards/home.md) de Query Service.
 
@@ -175,7 +175,7 @@ XDM est une spécification Open Source qui fournit des structures et des défini
 | Comportement | [[!UICONTROL Série temporelle]](https://github.com/adobe/xdm/blob/master/components/behaviors/time-series.schema.json) | <ul><li>Ajout de valeurs pour `eventType` :<ul><li>`decisioning.propositionSend`</li><li>`decisioning.propositionDismiss`</li><li>`decisioning.propositionTrigger`</li><li>`media.downloaded`</li><li>`location.entry`</li><li>`location.exit`</li></ul></li><li>Valeurs supprimées pour `eventType` :<ul><li>`decisioning.propositionDeliver`</li><li>`media.stateStart`</li><li>`media.stateEnd`</li></ul></li></ul> |
 | Groupe de champs | (Multiple) | [Mise à jour de plusieurs descriptions de champ](https://github.com/adobe/xdm/pull/1628/files) sur les composants de Journey Orchestration. |
 | Groupe de champs | (Multiple) | [Mise à jour des titres de plusieurs composants Adobe Workfront](https://github.com/adobe/xdm/pull/1634/files) par souci de cohérence. |
-| Groupe de champs | [[!UICONTROL Champs de classification AJO]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/decisioning/proposition-event-type.schema.json) | Mise à jour des espaces de nommage de plusieurs champs vers `xdm`. |
+| Groupe de champs | [[!UICONTROL Champs de classification AJO]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/decisioning/proposition-event-type.schema.json) | Mise à jour des espaces de noms de plusieurs champs vers `xdm`. |
 | Groupe de champs | [[!UICONTROL Champs communs des événements d’étape de l’orchestration de parcours]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/journeyOrchestration/stepEvents/journeyStepEventCommonFieldsMixin.schema.json) | Ajout d’un nouveau champ, `isReadSegmentTriggerStartEvent`. |
 | Groupe de champs | [[!UICONTROL Prévisions météorologiques]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/forecasted-weather.schema.json) | Modification du champ `xdm:uvIndex` en un type entier, puis ajout de l’espace de nommage `xdm` à plusieurs champs dans lesquels il était manquant. |
 | Groupe de champs | [[!UICONTROL Informations détaillées sur les médias]](https://github.com/adobe/xdm/blob/master/components/datatypes/mediadetails.schema.json) | `xdm:endUserIDs` et `xdm:implementationDetails` ont été supprimés du groupe de champs. |
@@ -186,7 +186,7 @@ XDM est une spécification Open Source qui fournit des structures et des défini
 | Type de données | [[!UICONTROL Type d’événement de proposition]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/decisioning/proposition-event-type.schema.json) | [!DNL AJO Classification Fields] a été renommé [!UICONTROL Action de proposition]. |
 | (Multiple) | (Multiple) | Les propriétés expérimentales ont été [stabilisées sur tous les composants B2B](https://github.com/adobe/xdm/pull/1617/files). |
 | (Multiple) | (Multiple) | Les entités Adobe Journey Optimizer ont été [stabilisées](https://github.com/adobe/xdm/pull/1625/files). |
-| (Multiple) | (Multiple) | Les espaces de nommage de certains champs dans plusieurs composants expérimentaux ont été [mis à jour par souci de cohérence](https://github.com/adobe/xdm/pull/1626/files). |
+| (Multiple) | (Multiple) | Les espaces de noms de certains champs dans plusieurs composants expérimentaux ont été [mis à jour par souci de cohérence](https://github.com/adobe/xdm/pull/1626/files). |
 
 {style="table-layout:auto"}
 
@@ -194,7 +194,7 @@ Pour plus d’informations sur XDM dans Platform, consultez la [présentation du
 
 ## Service d’identités {#identity-service}
 
-Proposer des expériences numériques pertinentes nécessite une compréhension complète de votre client. Cela devient plus difficile lorsque les données de vos clients sont fragmentées entre plusieurs systèmes, chaque client semble donc posséder plusieurs « identités ».
+Proposer des expériences digitales pertinentes nécessite une compréhension complète de votre client. Cela devient plus difficile lorsque les données de vos clients sont fragmentées entre plusieurs systèmes, chaque client semble donc posséder plusieurs « identités ».
 
 Le Service d’identités d’Adobe Experience Platform vous permet de mieux connaître vos clients et leurs comportements, en établissant un lien entre les identités des différents appareils et systèmes, ce qui vous permet de proposer des expériences digitales personnelles et percutantes en temps réel.
 
@@ -225,7 +225,7 @@ Pour en savoir plus, consultez la [documentation sur les alertes de requêtes](.
 
 Adobe Experience Platform peut ingérer des données à partir de sources externes tout en vous permettant de structurer, d’étiqueter et d’améliorer ces données à l’aide des services de Platform. Vous pouvez ingérer des données à partir de diverses sources telles que les applications Adobe, le stockage dans le cloud, des logiciels tiers et votre système de gestion de la relation client.
 
-Experience Platform fournit une API RESTful et une interface utilisateur interactive qui vous permet de configurer facilement des connexions source à différents fournisseurs de données. Ces connexions source vous permettent de vous authentifier et de vous connecter à des services de gestion de la relation client et à des systèmes de stockage externes, de définir des heures d’ingestion et de gérer le débit d’ingestion des données.
+Experience Platform fournit une API RESTful et une interface utilisateur interactive qui vous permet de configurer facilement des connexions source à différents fournisseurs de données. Ces connexions source vous permettent de vous authentifier et de vous connecter à des services de gestion de la relation client et à des systèmes de stockage externes, de définir des heures d’ingestion et de gérer le débit d’ingestion des données.
 
 **Fonctionnalités mises à jour**
 

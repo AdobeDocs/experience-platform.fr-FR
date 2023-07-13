@@ -2,18 +2,18 @@
 solution: Experience Platform
 title: Exploration, vérification et traitement des jeux de données de tableau de bord à l’aide de Query Service
 type: Documentation
-description: Découvrez comment utiliser Query Service pour explorer et traiter des jeux de données bruts alimentant les tableaux de bord de profils, de segments et de destinations dans Experience Platform.
+description: Découvrez comment utiliser Query Service pour explorer et traiter des jeux de données bruts alimentant les tableaux de bord de profil, d’audience et de destination dans Experience Platform.
 exl-id: 0087dcab-d5fe-4a24-85f6-587e9ae74fb8
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 79966442f5333363216da17342092a71335a14f0
 workflow-type: tm+mt
-source-wordcount: '970'
-ht-degree: 50%
+source-wordcount: '964'
+ht-degree: 38%
 
 ---
 
 # Exploration, vérification et traitement des jeux de données de tableau de bord à l’aide de [!DNL Query Service]
 
-Adobe Experience Platform fournit des informations importantes sur les données de profils, de segments et de destinations de votre entreprise par le biais de tableaux de bord disponibles dans l’interface utilisateur Experience Platform. Vous pouvez ensuite utiliser Adobe Experience Platform [!DNL Query Service] pour explorer, vérifier et traiter les jeux de données bruts qui alimentent ces tableaux de bord dans le lac de données.
+Adobe Experience Platform fournit des informations importantes sur les données de profil, d’audience et de destination de votre entreprise par le biais de tableaux de bord disponibles dans l’interface utilisateur de l’Experience Platform. Vous pouvez ensuite utiliser Adobe Experience Platform [!DNL Query Service] pour explorer, vérifier et traiter les jeux de données bruts qui alimentent ces tableaux de bord dans le lac de données.
 
 ## Prise en main de [!DNL Query Service]
 
@@ -23,7 +23,7 @@ Pour en savoir plus sur [!DNL Query Service] et son rôle dans l&#39;Experience 
 
 ## Accès aux jeux de données disponibles
 
-Vous pouvez utiliser [!DNL Query Service] pour interroger des jeux de données bruts pour les tableaux de bord des profils, des segments et des destinations. Pour afficher vos jeux de données disponibles, dans l’interface utilisateur de l’Experience Platform, sélectionnez **Jeux de données** dans le volet de navigation de gauche pour ouvrir le tableau de bord Jeux de données . Le tableau de bord répertorie tous les jeux de données disponibles pour votre organisation. Des détails s’affichent pour chaque jeu de données répertorié, notamment son nom, le schéma auquel le jeu de données adhère et l’état de l’exécution d’ingestion la plus récente.
+Vous pouvez utiliser [!DNL Query Service] pour interroger des jeux de données bruts pour les tableaux de bord de profil, d’audience et de destinations. Pour afficher vos jeux de données disponibles, dans l’interface utilisateur de l’Experience Platform, sélectionnez **Jeux de données** dans le volet de navigation de gauche pour ouvrir le tableau de bord Jeux de données . Le tableau de bord répertorie tous les jeux de données disponibles pour votre organisation. Des détails s’affichent pour chaque jeu de données répertorié, notamment son nom, le schéma auquel le jeu de données adhère et l’état de l’exécution d’ingestion la plus récente.
 
 ![Le tableau de bord Parcourir le jeu de données avec l’onglet Jeux de données surligné dans le volet de navigation de gauche.](./images/query/browse-datasets.png)
 
@@ -64,15 +64,13 @@ Le jeu de données `adwh_dim_merge_policies` contient les champs suivants :
 
 Ce jeu de données peut être exploré à l’aide de l’interface utilisateur de l’éditeur de requêtes dans Experience Platform. Pour en savoir plus sur l’utilisation de l’éditeur de requêtes, reportez-vous au [Guide de l’interface utilisateur de l’éditeur de requêtes](../query-service/ui/user-guide.md).
 
-### Jeu de données de métadonnées de segments
+### Jeu de données de métadonnées d’audience
 
-Un jeu de données de métadonnées de segment contenant des métadonnées pour chacun des segments de votre organisation est disponible dans le lac de données.
+Un jeu de données de métadonnées d’audience est disponible dans le lac de données et contient des métadonnées pour chaque audience de votre entreprise.
 
 La convention d’affectation des noms de ce jeu de données est **Segmentdefinition-Snapshot-Export** suivi d’une valeur alphanumérique. Par exemple : `Segmentdefinition-Snapshot-Export-acf28952-2b6c-47ed-8f7f-016ac3c6b4e7`
 
 Pour comprendre le schéma complet de chaque jeu de données d’exportation d’instantané de définition de segment, vous pouvez prévisualiser et explorer les jeux de données [à l’aide de la visionneuse de jeux de données](../catalog/datasets/user-guide.md) dans l’interface utilisateur d’Experience Platform.
-
-![Aperçu du jeu de données de définition de segment-instantané-exportation.](images/query/segment-metadata.png)
 
 ### Jeu de données de métadonnées de destination
 
@@ -92,7 +90,7 @@ Pour comprendre le schéma complet du jeu de données de destination DIM, vous p
 
 La fonction Modèles de données de statistiques CDP expose le code SQL qui alimente les informations pour divers widgets de profil, de destination et de segmentation. Vous pouvez personnaliser ces modèles de requête SQl afin de créer des rapports CDP pour vos cas d’utilisation de marketing et d’ICP.
 
-Les rapports CDP fournissent des informations sur vos données de profil et sur leurs relations avec les segments et les destinations. Consultez la documentation du modèle de données de statistiques de la plateforme de données clients pour obtenir des informations détaillées sur la manière de procéder. [appliquer les modèles de données d’insights de la plateforme de données clients à vos cas d’utilisation d’IPC spécifiques ;](./cdp-insights-data-model.md).
+Les rapports CDP fournissent des informations sur vos données de profil et sur leurs relations avec les audiences et les destinations. Consultez la documentation du modèle de données de statistiques de la plateforme de données clients pour obtenir des informations détaillées sur la manière de procéder. [appliquer les modèles de données d’insights de la plateforme de données clients à vos cas d’utilisation d’IPC spécifiques ;](./cdp-insights-data-model.md).
 
 ## Exemples de requêtes
 
@@ -100,7 +98,7 @@ Les exemples de requêtes suivants incluent des exemples de SQL pouvant être ut
 
 ### Nombre de profils par identité
 
-Cet aperçu du profil fournit une répartition des identités pour tous les profils fusionnés du jeu de données.
+Ces informations de profil fournissent une ventilation des identités pour tous les profils fusionnés du jeu de données.
 
 >[!NOTE]
 >
@@ -123,13 +121,13 @@ Select
         namespace;
 ```
 
-### Nombre de profils par segment
+### Nombre de profils par audience
 
-Cet aperçu de l’audience fournit le nombre total de profils fusionnés dans chaque segment du jeu de données. Ce nombre est le résultat de l’application de la politique de fusion de segments à vos données de profil afin de fusionner les fragments de profil pour former un seul profil pour chaque individu du segment.
+Cet aperçu de l’audience fournit le nombre total de profils fusionnés au sein de chaque audience dans le jeu de données. Ce nombre est le résultat de l’application de la stratégie de fusion d’audiences à vos données de profil afin de fusionner les fragments de profil pour former un seul profil pour chaque individu de l’audience.
 
 ```sql
 Select          
-        concat_ws('-', key, source_namespace) segment_id,
+        concat_ws('-', key, source_namespace) audience_id,
         count(1) count_of_profiles
       from
         (
@@ -139,17 +137,17 @@ Select
             from
               (
                   Select
-                    explode(Segmentmembership)
+                    explode(Audiencemembership)
                   from
                     Profile-Snapshot-Export-abbc7093-80f4-4b49-b96e-e743397d763f
               )
         )
       group by
-      segment_id
+      audience_id
 ```
 
 ## Étapes suivantes
 
-En lisant ce guide, vous pouvez désormais utiliser [!DNL Query Service] pour exécuter plusieurs requêtes afin d’explorer et de traiter les jeux de données bruts qui alimentent vos tableaux de bord de profil, de segment et de destinations.
+En lisant ce guide, vous pouvez désormais utiliser [!DNL Query Service] pour exécuter plusieurs requêtes afin d’explorer et de traiter les jeux de données bruts qui alimentent vos tableaux de bord de profil, d’audience et de destinations.
 
 Pour en savoir plus sur ces tableaux de bord et les mesures associées, sélectionnez-les dans la liste des tableaux de bord disponibles dans la navigation de la documentation.

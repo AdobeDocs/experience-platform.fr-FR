@@ -2,10 +2,10 @@
 title: Présentation de l’hygiène de données
 description: Le nettoyage de données d’Adobe Experience Platform vous permet de gérer le cycle de vie des données en mettant à jour ou en purgeant des enregistrements obsolètes ou inexacts.
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
-source-git-commit: 2913e9e687843e566db4ebf2031e610d1891d4c9
+source-git-commit: e59def7a05862ad880d0b6ada13b1c69c655ff90
 workflow-type: tm+mt
 source-wordcount: '639'
-ht-degree: 100%
+ht-degree: 92%
 
 ---
 
@@ -51,7 +51,7 @@ Ce qui suit se produit lorsqu’une [requête d’expiration de jeu de données]
 | La requête a été soumise | 0 heure | Un gestionnaire de données ou un analyste de la confidentialité soumet une requête pour qu’un jeu de données arrive à expiration à un moment donné. La requête est visible dans l’[!UICONTROL interface utilisateur de l’hygiène des données] après avoir été soumise, et reste dans un statut en attente jusqu’à l’heure d’expiration planifiée, après quoi la requête s’exécutera. |
 | Jeu de données déposé | 1 heure | Le jeu de données est supprimé de la [page d’inventaire du jeu de données](../catalog/datasets/user-guide.md) dans l’interface utilisateur. Les données du lac de données sont uniquement supprimées de manière réversible et le resteront jusqu’à la fin du processus, après quoi elles seront supprimées définitivement. |
 | Nombre de profils mis à jour | 30 heures | Selon le contenu du jeu de données supprimé, certains profils peuvent être supprimés du système si tous leurs attributs de composant sont liés à ce jeu de données. 30 heures après la suppression du jeu de données, toutes les modifications résultantes dans le nombre total de profils sont répercutées dans les [widgets du tableau de bord](../dashboards/guides/profiles.md#profile-count-trend) et d’autres rapports. |
-| Segments mis à jour | 48 heures | Une fois tous les profils affectés mis à jour, tous les [segments](../segmentation/home.md) connexes sont mis à jour pour refléter leur nouvelle taille. Selon le jeu de données supprimé et les attributs que vous segmentez, la taille de chaque segment peut augmenter ou diminuer en raison de la suppression. |
+| Audiences mises à jour | 48 heures | Une fois tous les profils concernés mis à jour, tous les profils associés [audiences](../segmentation/home.md) sont mises à jour pour refléter leur nouvelle taille. Selon le jeu de données supprimé et les attributs sur lesquels vous segmentez, la taille de chaque audience peut augmenter ou diminuer en raison de la suppression. |
 | Destinations et parcours mis à jour | 50 heures | Les [Parcours](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journeys/journey.html?lang=fr), [destinations](../destinations/home.md), et [campagnes](https://experienceleague.adobe.com/docs/journey-optimizer/using/campaigns/get-started-with-campaigns.html?lang=fr) sont mis à jour en fonction des modifications apportées aux segments connexes. |
 | Suppression définitive terminée | 14 jours | Toutes les données relatives au jeu de données sont supprimées définitivement du lac de données. Le [statut du traitement d’hygiène](./ui/browse.md#view-details) qui a supprimé le jeu de données est mis à jour pour refléter cette situation. |
 

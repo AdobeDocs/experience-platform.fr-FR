@@ -3,7 +3,7 @@ title: Tableau de bord des segments
 description: L’interface utilisateur d’Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher les mesures importantes liées aux segments créés et gérés par votre organisation.
 type: Documentation
 exl-id: 4a45bc3a-be5e-42b5-abd1-f0fb5795f5f4
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: 04c0b19bf4ffbc0719a89f710570cc667ca5e482
 workflow-type: tm+mt
 source-wordcount: '136'
 ht-degree: 100%
@@ -14,7 +14,7 @@ ht-degree: 100%
 
 L’interface utilisateur d’Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur vos segments. Ceux-ci sont présentés tels qu’ils sont capturés lors d’un instantané quotidien.
 
-Consultez le [guide du tableau de bord des segments](../../dashboards/guides/segments.md) pour obtenir des instructions détaillées sur la manière d’accéder au tableau de bord des segments et d’interagir avec celui-ci dans l’interface utilisateur, ainsi que pour en savoir plus sur les mesures disponibles affichées dans le tableau de bord.
+Consultez le [guide du tableau de bord des segments](../../dashboards/guides/audiences.md) pour obtenir des instructions détaillées sur la manière d’accéder au tableau de bord des segments et d’interagir avec celui-ci dans l’interface utilisateur, ainsi que pour en savoir plus sur les mesures disponibles affichées dans le tableau de bord.
 
 Pour découvrir toutes les fonctionnalités des tableaux de bord dans l’interface utilisateur d’Experience Platform, commencez par lire la [présentation des tableaux de bord](../../dashboards/home.md).
 

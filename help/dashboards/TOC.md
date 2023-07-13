@@ -4,7 +4,7 @@ user-guide-title: Aide sur les tableaux de bord dʼAdobe Experience Platform
 breadcrumb-title: Guide des tableaux de bord
 user-guide-description: Découvrez comment visualiser les données dans Experience Platform via des tableaux de bord personnalisables.
 feature: Dashboards
-source-git-commit: 16ae8a16d8c4f7ec68a054e8d15a518f453a05c7
+source-git-commit: 32f3383d87a7fc4920b9551df434a2fc26f73fea
 workflow-type: tm+mt
 source-wordcount: '80'
 ht-degree: 87%
@@ -22,7 +22,7 @@ ht-degree: 87%
 * Tableaux de bord disponibles {#guides}
    * [Profils](guides/profiles.md)
    * [Profils de compte](guides/account-profiles.md)
-   * [Segments](guides/segments.md)
+   * [Audiences](guides/audiences.md)
    * [Destinations](guides/destinations.md)
    * [Utilisation des licences](guides/license-usage.md)
 * Personnalisation des tableaux de bord {#customize}

@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Questions fréquentes
 description: Ce document contient les questions les plus fréquentes et les réponses associées concernant Query Service. Les rubriques incluent l’exportation de données, les outils tiers et les erreurs PSQL.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: e9deabe1e0514f44be085e558fd2fdbf54956f3e
+source-git-commit: e59def7a05862ad880d0b6ada13b1c69c655ff90
 workflow-type: tm+mt
 source-wordcount: '4309'
-ht-degree: 99%
+ht-degree: 98%
 
 ---
 
@@ -251,7 +251,7 @@ Vous pouvez utiliser la clause [`SNAPSHOT`](./sql/syntax.md#snapshot-clause) pou
 ### Pourquoi y a-t-il une différence entre les nombres affichés dans l’interface utilisateur du profil et les nombres calculés à partir du jeu de données d’exportation du profil ?
 
 +++Réponse
-Les nombres affichés dans le tableau de bord du profil sont précis à partir du dernier instantané. Les nombres générés dans le tableau d’exportation du profil dépendent entièrement de la requête d’exportation. L’interrogation du nombre de profils admissibles pour un segment particulier constitue donc une cause courante de cette incohérence.
+Les nombres affichés dans le tableau de bord du profil sont précis à partir du dernier instantané. Les nombres générés dans le tableau d’exportation du profil dépendent entièrement de la requête d’exportation. Par conséquent, l’interrogation du nombre de profils admissibles pour une audience particulière est une cause courante de cette incohérence.
 
 >[!NOTE]
 >

@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Présentation de Query Service
 description: Ce document donne une vue d’ensemble du rôle de Query Service dans Experience Platform.
 exl-id: fdaefc12-a97d-4e4e-9aed-d3dbd0f43ea0
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: e59def7a05862ad880d0b6ada13b1c69c655ff90
 workflow-type: tm+mt
 source-wordcount: '721'
-ht-degree: 100%
+ht-degree: 89%
 
 ---
 
@@ -33,15 +33,15 @@ Adobe Experience Platform [!DNL Data Science Workspace] utilise le machine lea
 
 ### [!DNL Segmentation Service]
 
-Adobe Experience Platform [!DNL Segmentation Service] permet aux utilisateurs de diviser leurs clients en plus petits groupes partageant des caractéristiques similaires. Ces segments peuvent ensuite être évalués afin de fournir une meilleure analyse de vos données [!DNL Real-Time Customer Profile]. [!DNL Query Service] peut être utilisé pour fournir cette analyse en exécutant des requêtes sur ce segment de données dans [!DNL Data Lake]. Pour plus dʼinformations sur la segmentation, reportez-vous à la présentation de [!DNL Segmentation Service] et au guide de [!DNL Profile Query Language] (PQL) pour plus dʼinformations sur lʼanalyse des segments.
+Adobe Experience Platform [!DNL Segmentation Service] permet aux utilisateurs de diviser leurs clients en plus petits groupes partageant des caractéristiques similaires. Ces audiences peuvent ensuite être évaluées afin de fournir une meilleure analyse sur vos [!DNL Real-Time Customer Profile] data. [!DNL Query Service] peut être utilisé pour fournir cette analyse en exécutant des requêtes sur ces données d’audience dans la variable [!DNL Data Lake]. Veuillez lire la [!DNL Segmentation Service] pour plus d’informations sur la segmentation et la variable [!DNL Profile Query Language] (PQL) pour plus d’informations sur l’analyse des audiences.
 
 ## Cas d’utilisation
 
-[!DNL Query Service] offre une approche flexible du traitement des données qui répond à de nombreux objectifs. Il peut, entre autres, soulager les spécialistes marketing de la charge de la segmentation et contribuer à générer des audiences exploitables et des insights commerciaux significatifs. Les cas d’utilisation suivants présentent des exemples plus détaillés de la puissance de [!DNL Query Service].
+[!DNL Query Service] offre une approche flexible du traitement des données qui répond à de nombreux objectifs. Il peut, entre autres, soulager les spécialistes marketing de la charge de la segmentation et contribuer à générer des audiences exploitables et des informations commerciales significatives. Les cas d’utilisation suivants présentent des exemples plus détaillés de la puissance de [!DNL Query Service].
 
 ### Abandon de la navigation dans Adobe Analytics
 
-Cet [exemple d’abandon de la navigation est centré sur l’utilisation des données Adobe [!DNL Analytics]](./use-cases/abandoned-browse.md) pour créer une audience exploitable particulière. [!DNL Query Service] prend en charge une logique complexe de segmentation afin de calculer divers attributs personnalisés à utiliser en aval ou de simplifier considérablement la création de vos segments.
+Cet [exemple d’abandon de la navigation est centré sur l’utilisation des données Adobe [!DNL Analytics]](./use-cases/abandoned-browse.md) pour créer une audience exploitable particulière. [!DNL Query Service] prend en charge une logique complexe de segmentation afin de calculer divers attributs personnalisés à utiliser en aval ou de simplifier considérablement la création de vos audiences.
 
 ### Tableaux de bord Looker BI
 
