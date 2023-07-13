@@ -2,12 +2,12 @@
 audience: user
 user-guide-title: Adobe Experience Platform Segmentation Service
 breadcrumb-title: Guide de Segmentation Service
-user-guide-description: Créez des segments et générez des audiences à partir de vos données du profil client en temps réel.
+user-guide-description: Créez des audiences à partir de vos données Real-time Customer Profile à l’aide de définitions de segment générées par Adobe Experience Platform ou de sources externes.
 feature: Segments
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 0a3dbb49948278f4fd12737938ad00f2f7abb681
 workflow-type: tm+mt
-source-wordcount: '166'
-ht-degree: 100%
+source-wordcount: '176'
+ht-degree: 88%
 
 ---
 
@@ -30,7 +30,7 @@ ht-degree: 100%
    - [Segmentation en flux continu](api/streaming-segmentation.md)
 - Interface utilisateur de segmentation {#ui}
    - [Présentation](ui/overview.md)
-   - [Créateur d’audience](ui/audience-builder.md)
+   - [Composition de l’audience](ui/audience-composition.md)
    - [Tableau de bord des segments](ui/segment-dashboard.md)
    - [Créateur de segments](ui/segment-builder.md)
    - [Segmentation Edge](ui/edge-segmentation.md)
@@ -65,5 +65,6 @@ ht-degree: 100%
    - [Import et utilisation d’audiences externes](tutorials/using-external-audiences.md)
    - [Création d’un jeu de données pour exporter des données](tutorials/create-dataset-export-segment.md)
    - [Application de la conformité à l’utilisation des données pour les segments](tutorials/governance.md)
+- [Questions fréquentes](./faq.md)
 - [Référence d’API](https://www.adobe.io/experience-platform-apis/references/segmentation/)
 - [Notes de mise à jour de Platform](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=fr)

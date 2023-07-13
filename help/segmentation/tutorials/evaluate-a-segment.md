@@ -1,27 +1,26 @@
 ---
-keywords: Experience Platform;accueil;rubriques les plus consultées;évaluation de segment;service de segmentation;segmentation;segmentation;évaluer un segment;accéder aux résultats des segments;évaluer et accéder au segment ;
 solution: Experience Platform
 title: Évaluation et accès aux résultats des segments
 type: Tutorial
-description: Suivez ce tutoriel pour savoir comment évaluer les segments et accéder aux résultats des segments à l’aide de l’API Adobe Experience Platform Segmentation Service.
+description: Suivez ce tutoriel pour savoir comment évaluer les définitions de segment et accéder aux résultats de segmentation à l’aide de l’API Adobe Experience Platform Segmentation Service.
 exl-id: 47702819-f5f8-49a8-a35d-034ecac4dd98
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '1607'
-ht-degree: 63%
+source-wordcount: '1599'
+ht-degree: 51%
 
 ---
 
-# Évaluation et accès aux résultats de segmentation
+# Évaluation et accès aux résultats de définition de segment
 
-Ce document fournit un tutoriel sur l’évaluation des segments et l’accès aux résultats de segmentation à l’aide du [[!DNL Segmentation API]](../api/getting-started.md).
+Ce document fournit un tutoriel sur l’évaluation des définitions de segment et l’accès à ces résultats à l’aide du [[!DNL Segmentation API]](../api/getting-started.md).
 
 ## Prise en main
 
-Ce tutoriel nécessite une compréhension pratique des différentes [!DNL Adobe Experience Platform] services impliqués dans la création de segments d’audience. Avant de commencer ce tutoriel, veuillez consulter la documentation relative aux services suivants :
+Ce tutoriel nécessite une compréhension pratique des différentes [!DNL Adobe Experience Platform] services impliqués dans la création d’audiences. Avant de commencer ce tutoriel, veuillez consulter la documentation relative aux services suivants :
 
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): Fournit un profil client unifié en temps réel basé sur des données agrégées provenant de plusieurs sources.
-- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): Permet de créer des segments d’audience à partir de [!DNL Real-Time Customer Profile] data.
+- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): Permet de créer des audiences à partir de [!DNL Real-Time Customer Profile] data.
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md) : framework normalisé selon lequel Platform organise les données de l’expérience client. Pour utiliser au mieux la segmentation, veillez à ce que vos données soient ingérées en tant que profils et événements en fonction des [bonnes pratiques pour la modélisation des données](../../xdm/schema/best-practices.md).
 - [Sandbox](../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
@@ -45,13 +44,13 @@ Toutes les requêtes POST, PUT et PATCH requièrent un en-tête supplémentaire�
 
 - Content-Type: application/json
 
-## Évaluation d’un segment {#evaluate-a-segment}
+## Évaluation d’un segment définition {#evaluate-a-segment}
 
-Une fois que vous avez développé, testé et enregistré votre définition de segment, vous pouvez ensuite évaluer le segment soit par une évaluation planifiée soit par l’évaluation sur demande.
+Une fois que vous avez développé, testé et enregistré votre définition de segment, vous pouvez ensuite évaluer la définition de segment par le biais d’une évaluation planifiée ou d’une évaluation sur demande.
 
 [L’évaluation planifiée](#scheduled-evaluation) (également appelée « segmentation planifiée ») vous permet de créer un planning récurrent pour exécuter une tâche d’exportation à un moment précis, tandis que l’[évaluation sur demande](#on-demand-evaluation) implique la création d’une tâche de segmentation pour créer immédiatement l’audience. Les étapes à suivre pour chaque type d’évaluation sont décrites ci-dessous.
 
-Si vous n’avez pas encore terminé la variable [créer un segment à l’aide de l’API Segmentation ;](./create-a-segment.md) tutoriel ou définition de segment créée à l’aide de [Créateur de segments](../ui/overview.md), faites-le avant de suivre ce tutoriel.
+Si vous n’avez pas encore terminé la variable [créer une définition de segment à l’aide de l’API Segmentation ;](./create-a-segment.md) tutoriel ou définition de segment créée à l’aide de [Créateur de segments](../ui/overview.md), faites-le avant de suivre ce tutoriel.
 
 ## Évaluation planifiée {#scheduled-evaluation}
 
@@ -81,11 +80,11 @@ Vous trouverez des informations plus détaillées sur l’utilisation de ce poin
 
 ## Évaluation sur demande
 
-L’évaluation sur demande vous permet de créer une tâche de segmentation afin de générer un segment ciblé chaque fois que vous en avez besoin. Contrairement à l’évaluation planifiée, celle-ci n’a lieu que sur demande et n’est pas récurrente.
+L’évaluation sur demande vous permet de créer une tâche de segmentation afin de générer un ciblé chaque fois que vous en avez besoin. Contrairement à l’évaluation planifiée, celle-ci n’a lieu que sur demande et n’est pas récurrente.
 
 ### Création d’une tâche de segmentation
 
-Une tâche de segmentation est un processus asynchrone qui crée un segment d’audience à la demande. Il fait référence à une définition de segment, ainsi qu’à toute stratégie de fusion contrôlant la manière dont [!DNL Real-Time Customer Profile] fusionne des attributs qui se chevauchent dans vos fragments de profil. Lorsqu’une tâche de segmentation se termine avec succès, vous pouvez collecter diverses informations sur le segment, telles que les erreurs qui se sont produites au cours du traitement et la taille finale de votre audience. Une tâche de segmentation doit être exécutée chaque fois que vous souhaitez actualiser l’audience actuellement admissible pour la définition de segment.
+Une tâche de segmentation est un processus asynchrone qui crée un segment d’audience à la demande. Il fait référence à une définition de segment, ainsi qu’à toute stratégie de fusion contrôlant la manière dont [!DNL Real-Time Customer Profile] fusionne des attributs qui se chevauchent dans vos fragments de profil. Une fois la tâche de segmentation terminée, vous pouvez collecter diverses informations sur la définition de segment, telles que les erreurs qui se sont produites au cours du traitement et la taille finale de votre audience. Une tâche de segmentation doit être exécutée chaque fois que vous souhaitez actualiser l’audience actuellement admissible par la définition de segment.
 
 Vous pouvez créer une tâche de segmentation en exécutant une requête POST sur le point de terminaison `/segment/jobs` dans l’API [!DNL Real-Time Customer Profile]
 
@@ -97,9 +96,9 @@ Vous pouvez utiliser l’`id` pour une tâche de segmentation spécifique afin d
 
 Vous trouverez des informations plus détaillées sur l’utilisation de ce point de terminaison dans la section [guide de point de fin des tâches de segmentation](../api/segment-jobs.md#get)
 
-## Interprétation des résultats de segmentation
+## Interprétation des résultats de tâche de segmentation
 
-Lorsque les tâches de segmentation sont exécutées avec succès, le mappage `segmentMembership` est mis à jour pour chaque profil inclus dans le segment. `segmentMembership` stocke également tous les segments d’audience préévalués qui sont ingérés dans [!DNL Platform], permettant l’intégration à d’autres solutions telles que [!DNL Adobe Audience Manager].
+Lorsque les tâches de segmentation sont exécutées avec succès, la variable `segmentMembership` est mis à jour pour chaque profil inclus dans la définition de segment. `segmentMembership` stocke également toutes les audiences préévaluées ingérées dans [!DNL Platform], permettant l’intégration à d’autres solutions telles que [!DNL Adobe Audience Manager].
 
 L’exemple suivant illustre l’attribut `segmentMembership` pour chaque enregistrement de profil individuel :
 
@@ -128,14 +127,14 @@ L’exemple suivant illustre l’attribut `segmentMembership` pour chaque enregi
 
 | Propriété | Description |
 | -------- | ----------- |
-| `lastQualificationTime` | La date et l’heure auxquelles l’appartenance au segment a été affirmée et le profil est entré dans le segment ou en est sorti. |
-| `status` | L’état de la participation au segment dans le cadre de la requête actuelle. Doit être égal à l’une des valeurs connues suivantes : <ul><li>`realized`: L’entité est admissible pour le segment.</li><li>`exited` : l’entité quitte le segment.</li></ul> |
+| `lastQualificationTime` | Horodatage au moment où l’affirmation de l’appartenance au segment a été faite et où le profil a entré ou quitté la définition de segment. |
+| `status` | État de participation de la définition de segment dans le cadre de la requête actuelle. Doit être égal à l’une des valeurs connues suivantes : <ul><li>`realized`: L’entité est admissible pour la définition de segment.</li><li>`exited`: L’entité quitte la définition de segment.</li></ul> |
 
 >[!NOTE]
 >
 >Toute adhésion au segment qui figure dans la variable `exited` de plus de 30 jours, en fonction de la variable `lastQualificationTime`, sera sujet à suppression.
 
-## Accès aux résultats de segmentation
+## Accès aux résultats de la tâche de segmentation
 
 Vous pouvez accéder aux résultats d’une tâche de segmentation de deux manières : en accédant aux profils individuels ou en exportant une audience entière vers un jeu de données.
 
@@ -160,7 +159,7 @@ Les étapes suivantes sont requises pour exporter votre audience :
 
 Lors de l’exportation d’une audience, un jeu de données cible doit d’abord être créé. Il est important que le jeu de données soit correctement configuré pour garantir la réussite de l’exportation.
 
-Le schéma sur lequel repose le jeu de données est l’une des principales considérations (`schemaRef.id` dans l’exemple de requête API ci-dessous). Pour exporter un segment, le jeu de données doit être basé sur la variable [!DNL XDM Individual Profile Union Schema] (`https://ns.adobe.com/xdm/context/profile__union`). Un schéma d’union est un schéma en lecture seule généré par le système regroupant les champs des schémas qui partagent la même classe, dans ce cas précis, la classe XDM Individual Profile. Pour plus d’informations sur les schémas d’affichage d’union, reportez-vous à la section [section Real-time Customer Profile du guide de développement du registre des schémas](../../xdm/api/getting-started.md).
+Le schéma sur lequel repose le jeu de données est l’une des principales considérations (`schemaRef.id` dans l’exemple de requête API ci-dessous). Pour exporter une définition de segment, le jeu de données doit être basé sur la variable [!DNL XDM Individual Profile Union Schema] (`https://ns.adobe.com/xdm/context/profile__union`). Un schéma d’union est un schéma en lecture seule généré par le système regroupant les champs des schémas qui partagent la même classe, dans ce cas précis, la classe XDM Individual Profile. Pour plus d’informations sur les schémas d’affichage d’union, reportez-vous à la section [section Real-time Customer Profile du guide de développement du registre des schémas](../../xdm/api/getting-started.md).
 
 Il existe deux manières de créer le jeu de données nécessaire :
 
@@ -213,7 +212,7 @@ Une réponse réussie renvoie un tableau contenant l’ID unique et en lecture s
 
 ### Génération de profils pour les membres de l’audience {#generate-profiles}
 
-Une fois que vous disposez d’un jeu de données d’union persistant, vous pouvez créer une tâche d’exportation afin de conserver les membres de l’audience dans le jeu de données, en effectuant une requête POST sur le point de terminaison `/export/jobs` dans l’API et en fournissant l’identifiant du jeu de données et les informations sur les segments que vous souhaitez exporter.[!DNL Real-Time Customer Profile]
+Une fois que vous disposez d’un jeu de données d’union persistant, vous pouvez créer une tâche d’exportation afin de conserver les membres de l’audience dans le jeu de données en envoyant une requête de POST à l’ `/export/jobs` du point de terminaison [!DNL Real-Time Customer Profile] API et fournissant l’identifiant du jeu de données et les informations de définition de segment pour les définitions de segment que vous souhaitez exporter.
 
 Vous trouverez des informations plus détaillées sur l’utilisation de ce point de terminaison dans la section [guide de point de fin des traitements d’export](../api/export-jobs.md#create)
 
@@ -225,10 +224,10 @@ Vous trouverez des informations plus détaillées sur l’utilisation de ce poin
 
 ## Étapes suivantes
 
-Une fois l’exportation terminée, vos données sont disponibles dans la variable [!DNL Data Lake] in [!DNL Experience Platform]. Vous pouvez ensuite utiliser la variable [[!DNL Data Access API]](https://www.adobe.io/experience-platform-apis/references/data-access/) pour accéder aux données à l’aide de la variable `batchId` associée à l&#39;export. Selon la taille du segment, les données peuvent se présenter sous forme de blocs et le lot peut être constitué de plusieurs fichiers.
+Une fois l’exportation terminée, vos données sont disponibles dans la variable [!DNL Data Lake] in [!DNL Experience Platform]. Vous pouvez ensuite utiliser la variable [[!DNL Data Access API]](https://www.adobe.io/experience-platform-apis/references/data-access/) pour accéder aux données à l’aide de la variable `batchId` associée à l&#39;export. Selon la taille de la définition de segment, les données peuvent se présenter sous forme de blocs et le lot peut être constitué de plusieurs fichiers.
 
 Pour obtenir des instructions détaillées sur l’utilisation de la variable [!DNL Data Access] Pour accéder aux fichiers de lot et les télécharger, suivez la [Tutoriel sur l’accès aux données](../../data-access/tutorials/dataset-data.md).
 
-Vous pouvez également accéder aux données de segment exportées avec succès à l’aide de [!DNL Adobe Experience Platform Query Service]. Utilisation de l’interface utilisateur ou de l’API RESTful, [!DNL Query Service] vous permet d’écrire, de valider et d’exécuter des requêtes sur des données dans la variable [!DNL Data Lake].
+Vous pouvez également accéder aux données de définition de segment exportées avec succès à l’aide de [!DNL Adobe Experience Platform Query Service]. Utilisation de l’interface utilisateur ou de l’API RESTful, [!DNL Query Service] vous permet d’écrire, de valider et d’exécuter des requêtes sur des données dans la variable [!DNL Data Lake].
 
 Pour plus d’informations sur la manière d’interroger les données d’audience, consultez la documentation sur [[!DNL Query Service]](../../query-service/home.md).

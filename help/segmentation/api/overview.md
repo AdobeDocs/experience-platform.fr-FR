@@ -1,28 +1,27 @@
 ---
-keywords: Experience Platform;accueil;rubriques les plus consultées;segmentation;Segmentation;Segmentation Service;API;api;
 title: Guide de l’API Segmentation Service
 description: L’API Segmentation Service permet aux développeurs de gérer par programmation les opérations de segmentation dans Adobe Experience Platform. Suivez ce guide pour savoir comment effectuer des opérations clés à l’aide de l’API.
 exl-id: cebecaf3-9746-4b0b-9c50-11789fba66c3
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '497'
-ht-degree: 8%
+source-wordcount: '560'
+ht-degree: 5%
 
 ---
 
 # Guide de l’API Segmentation Service
 
-[!DNL Adobe Experience Platform Segmentation Service] vous permet de créer des segments et de générer des audiences dans [!DNL Adobe Experience Platform] de votre [!DNL Real-Time Customer Profile] data.
+Adobe Experience Platform [!DNL Segmentation Service] vous permet de créer des audiences par le biais de définitions de segment ou d’autres sources dans Adobe Experience Platform à partir de vos [!DNL Real-Time Customer Profile] data.
 
 Le [!DNL Segmentation Service] L’API fournit plusieurs points de terminaison qui vous permettent de gérer par programmation vos opérations de segmentation dans [!DNL Experience Platform]. Ce document de présentation présente de manière détaillée chacun de ces points de terminaison et fournit des liens vers les guides des points de terminaison associés pour plus de détails. Avant de lire les guides des différents points de terminaison, reportez-vous à la section [guide de prise en main](./getting-started.md) pour obtenir des informations importantes sur les en-têtes requis, lire des exemples d’appels API, etc.
 
 Pour afficher tous les points de terminaison disponibles et les opérations CRUD, reportez-vous à la section [Référence de l’API Segmentation Service](https://www.adobe.io/experience-platform-apis/references/segmentation/).
 
-<!-- ## Audiences
+## Audiences
 
-Audiences are a collection of people who share similar behaviors and/or characteristics. These can be generated either by using Platform or from external sources. You can use the `/audiences` endpoint to retrieve all audiences, create a new audience, retrieve details of a specific audience, update a specific audience, or delete a specific audience.
+Les audiences sont un ensemble de personnes qui partagent des comportements et/ou des caractéristiques similaires. Ils peuvent être générés à l’aide de Platform ou à partir de sources externes. Vous pouvez utiliser la variable `/audiences` point d’entrée pour récupérer toutes les audiences, créer une audience, récupérer les détails d’une audience spécifique, mettre à jour une audience spécifique ou supprimer une audience spécifique.
 
-For more information on using this endpoint, please read the [audiences endpoint guide](./audiences.md). -->
+Pour plus d’informations sur l’utilisation de ce point de terminaison, veuillez lire la section [guide de point de terminaison d’audiences](./audiences.md).
 
 ## Tâches d’exportation
 
@@ -46,13 +45,13 @@ Pour plus d’informations sur l’utilisation de ce point de terminaison, veuil
 
 ## Définitions de segment
 
-Les définitions de segment définissent les profils qui feront partie de quels segments d’audience. Vous pouvez utiliser la variable `/segment/definitions` point d’entrée pour gérer les définitions de segment.
+Les définitions de segment définissent les profils qui feront partie de l’audience. Vous pouvez utiliser la variable `/segment/definitions` point d’entrée pour gérer les définitions de segment.
 
 Pour plus d’informations sur l’utilisation de ce point de terminaison, veuillez lire la section [guide d’entrée des définitions de segment](./segment-definitions.md).
 
 ## Tâches de segmentation
 
-Les tâches de segmentation traitent les définitions de segmentation préalablement établies pour générer un segment d’audience. Vous pouvez utiliser la variable `/segment/jobs` point de terminaison pour gérer les tâches de segmentation.
+Les tâches de segmentation traitent les définitions de segment précédemment établies pour générer une audience. Vous pouvez utiliser la variable `/segment/jobs` point de terminaison pour gérer les tâches de segmentation.
 
 Pour plus d’informations sur l’utilisation de ce point de terminaison, veuillez lire la section [guide de point de fin des tâches de segmentation](./segment-jobs.md).
 

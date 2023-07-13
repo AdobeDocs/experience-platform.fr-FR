@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform;accueil;rubriques les plus consultées;segmentation;Segmentation;Segmentation Service;plannings;planification;api;API;
 solution: Experience Platform
 title: Point de terminaison de l’API Schedules
 description: Les planifications sont un outil qui peut être utilisé pour exécuter automatiquement des tâches de segmentation par lots une fois par jour.
 exl-id: 92477add-2e7d-4d7b-bd81-47d340998ff1
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '2009'
+source-wordcount: '1996'
 ht-degree: 23%
 
 ---

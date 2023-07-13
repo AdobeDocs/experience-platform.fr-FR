@@ -1,13 +1,12 @@
 ---
-keywords: Experience Platform;accueil;rubriques les plus consultées;segmentation en flux continu;Segmentation;Service de segmentation;service de segmentation;guide de l’interface utilisateur;
 solution: Experience Platform
 title: Guide de l’interface utilisateur de la segmentation en flux continu
 description: La segmentation en flux continu sur Adobe Experience Platform vous permet d’effectuer une segmentation en temps quasi réel tout en vous concentrant sur la richesse des données. Avec la segmentation en flux continu, la qualification de segment se produit désormais lorsque les données entrent dans Platform, ce qui évite d’avoir à planifier et à exécuter des tâches de segmentation. Grâce à cette fonctionnalité, la plupart des règles de segment peuvent désormais être évaluées au fur et à mesure que les données sont transmises à Platform, ce qui signifie que l’appartenance à un segment sera maintenue à jour sans avoir à exécuter des tâches de segmentation planifiée.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: 229dd08bc5d5dfab068db3be84ad20d10992fd31
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
 source-wordcount: '1490'
-ht-degree: 99%
+ht-degree: 83%
 
 ---
 
@@ -23,7 +22,7 @@ La segmentation en flux continu sur [!DNL Adobe Experience Platform] permet aux 
 >
 >La segmentation en flux continu fonctionne sur toutes les données ingérées à l’aide d’une source en flux continu. Les données ingérées à l’aide d’une source par lots seront évaluées chaque nuit, même si elles sont admissibles pour la segmentation en flux continu.
 >
->En outre, les segments évalués avec la segmentation en flux continu peuvent dériver entre l’appartenance idéale et l’appartenance réelle si le segment est basé sur un autre segment évalué à l’aide de la segmentation par lots. Si, par exemple, le segment A est basé sur le segment B et que le segment B est évalué à l’aide de la segmentation par lots, puisque le segment B n’est mis à jour que toutes les 24 heures, le segment A s’éloigne davantage des données réelles jusqu’à ce qu’il se resynchronise avec la mise à jour du segment B.
+>En outre, les segments évalués avec la segmentation par flux peuvent dériver entre l’adhésion idéale et l’adhésion réelle si la définition de segment est basée sur une autre définition de segment évaluée à l’aide de la segmentation par lots. Si, par exemple, le segment A est basé sur le segment B et que le segment B est évalué à l’aide de la segmentation par lots, puisque le segment B n’est mis à jour que toutes les 24 heures, le segment A s’éloigne davantage des données réelles jusqu’à ce qu’il se resynchronise avec la mise à jour du segment B.
 
 ## Types de requête permettant la segmentation en flux continu {#query-types}
 
@@ -38,7 +37,7 @@ Une requête est automatiquement évaluée avec la segmentation en flux continu 
 | Événement unique | Toute définition de segment qui fait référence à un seul événement entrant sans restriction temporelle. | ![Un exemple d’événement unique s’affiche.](../images/ui/streaming-segmentation/incoming-hit.png) |
 | Événement unique dans une fenêtre temporelle relative | Toute définition de segment qui fait référence à un seul événement entrant. | ![Un exemple d’événement unique dans une fenêtre temporelle relative s’affiche.](../images/ui/streaming-segmentation/relative-hit-success.png) |
 | Événement unique avec une fenêtre temporelle | Toute définition de segment qui fait référence à un seul événement entrant avec une fenêtre temporelle. | ![Un exemple d’événement unique avec une fenêtre temporelle s’affiche.](../images/ui/streaming-segmentation/historic-time-window.png) |
-| Profil uniquement | Toute définition de segment qui ne fait référence qu’à un attribut de profil. |  |
+| Profil uniquement | Toute définition de segment qui ne fait référence qu’à un attribut de profil. | |
 | Événement unique avec un attribut de profil | Toute définition de segment qui fait référence à un seul événement entrant, sans restriction temporelle, et à un ou plusieurs attributs de profil. **Remarque :** la requête est immédiatement évaluée lorsque l’événement arrive. Toutefois, dans le cas d’un événement de profil, il doit attendre 24 heures pour être incorporé. | ![Un exemple d’événement unique avec un attribut de profil s’affiche.](../images/ui/streaming-segmentation/profile-hit.png) |
 | Événement unique avec un attribut de profil dans une fenêtre temporelle relative | Toute définition de segment qui fait référence à un seul événement entrant et à un ou plusieurs attributs de profil. | ![Un exemple d’événement unique avec un attribut de profil dans une fenêtre temporelle relative s’affiche.](../images/ui/streaming-segmentation/profile-relative-success.png) |
 | Segment de segments | Toute définition de segment contenant un ou plusieurs segments par lots ou en diffusion en flux continu. **Remarque :** si un segment est utilisé, la disqualification du profil se produit **toutes les 24 heures**. | ![Un exemple d’un segment de segments s’affiche.](../images/ui/streaming-segmentation/two-batches.png) |
@@ -49,7 +48,7 @@ Une définition de segment ne sera **pas** activée pour la segmentation en flux
 - La définition de segment inclut des segments ou des caractéristiques Adobe Audience Manager (AAM).
 - La définition de segment comprend plusieurs entités (requêtes d’entités multiples).
 - La définition de segment comprend une combinaison d’un événement unique et d’un événement `inSegment`.
-   - Toutefois, si le segment contenu dans l’événement `inSegment` est un segment de profil uniquement, la définition de segment **sera activée** pour la segmentation en flux continu.
+   - Toutefois, si la définition de segment contenue dans la variable `inSegment` est un événement de profil uniquement, la définition de segment **will** être activé pour la segmentation par flux.
 
 Veuillez noter que les instructions suivantes s’appliquent lors de la segmentation en flux continu :
 
@@ -62,11 +61,11 @@ Si une définition de segment est modifiée de sorte qu’elle ne répond plus a
 
 De plus, la disqualification de segment, tout comme la qualification de segment, se produit en temps réel. Par conséquent, si une audience n’est plus admissible pour être un segment, elle sera immédiatement disqualifiée. Par exemple, si la définition de segment demande « Tous les utilisateurs et utilisatrices qui ont acheté des chaussures rouges au cours des trois dernières heures », tous les profils initialement qualifiés pour la définition de segment seront disqualifiés après trois heures.
 
-## Détails des segments de segmentation en flux continu
+## Détails de la définition de segment de segmentation par flux
 
 Après avoir créé un segment activé pour segmentation en flux continu, vous pouvez afficher les détails de ce segment.
 
-![La page des détails du segment s’affiche.](../images/ui/streaming-segmentation/monitoring-streaming-segment.png)
+![La page de détails de la définition de segment s’affiche.](../images/ui/streaming-segmentation/monitoring-streaming-segment.png)
 
 Plus précisément, la mesure **[!UICONTROL Total qualifié]** s’affiche, qui indique le nombre total d’audiences qualifiées, en fonction des évaluations de lot et de flux continu pour ce segment.
 
@@ -74,7 +73,7 @@ Un graphique linéaire se trouve en dessous, qui indique le nombre de nouvelles 
 
 >[!NOTE]
 >
->Un segment est considéré comme qualifié s’il passe de l’absence d’état à l’état réalisé ou s’il passe de l’état sorti à l’état réalisé. Un segment est considéré comme non qualifié s’il passe de la réalisation à la sortie.
+>Une définition de segment est considérée comme qualifiée si elle passe de l’absence d’état à la réalisation ou si elle passe de la sortie à la réalisation. Une définition de segment est considérée comme non qualifiée si elle passe de la réalisation à la sortie.
 >
 >Vous trouverez plus d’informations sur ces états dans le tableau des états de la [présentation de la segmentation](./overview.md#browse).
 
@@ -106,11 +105,11 @@ La segmentation en flux continu fonctionne sur toutes les données ingérées à
 
 ### Comment les segments sont-ils définis comme segmentation par lots ou en flux continu ?
 
-Un segment est défini comme une segmentation par lot ou en flux continu selon une combinaison de type de requête et de durée d’historique des événements. Vous trouverez une liste des segments qui seront évalués en tant que segment en flux continu dans la [section types de requête de segmentation en flux continu](#query-types).
+Une définition de segment est définie comme une segmentation par lots, par flux ou par périphérie basée sur une combinaison de type de requête et de durée d’historique des événements. Vous trouverez une liste des segments qui seront évalués en tant que définition de segment en continu dans la variable [section types de requête de segmentation par flux](#query-types).
 
-Notez que si un segment contient **à la fois** une expression `inSegment` et une chaîne d’événement unique directe, elle ne peut pas être qualifiée pour la segmentation en flux continu. Si vous souhaitez que ce segment soit qualifié pour la segmentation par diffusion en continu, vous devez faire de la chaîne d’événement unique directe son propre segment.
+Notez que si une définition de segment contient **both** an `inSegment` et une chaîne d’événement unique directe, elle ne peut pas être admissible pour la segmentation par flux. Si vous souhaitez que cette définition de segment soit admissible pour la segmentation par flux, vous devez faire de la chaîne d’événement unique directe son propre segment.
 
-### Pourquoi le nombre de segments « total qualifié » continue-t-il à augmenter alors que le nombre sous « X derniers jours » reste à zéro dans la section de détails du segment ?
+### Pourquoi le nombre de segments &quot;total qualifié&quot; continue-t-il à augmenter alors que le nombre sous &quot;X derniers jours&quot; reste à zéro dans la section des détails de la définition de segment ?
 
 Le nombre total de segments qualifiés est tiré de la tâche de segmentation quotidienne, qui inclut les audiences qui sont qualifiées pour des segments par lots et par diffusion en flux continu. Cette valeur s’affiche pour les segments par lots et en diffusion en flux continu.
 
@@ -118,6 +117,6 @@ Le nombre sous « X derniers jours » comprend **seulement** les audiences qua
 
 Par conséquent, si vous constatez que le nombre sous « X derniers jours » est nul et que le graphique linéaire signale également zéro, vous n’avez **pas** diffusé en flux continu dans le système des profils qui sont qualifiés pour ce segment.
 
-### Combien de temps faut-il pour qu’un segment soit disponible ?
+### Combien de temps faut-il pour qu’une définition de segment soit disponible ?
 
-La disponibilité d’un segment peut prendre jusqu’à une heure.
+La disponibilité d’une définition de segment peut prendre jusqu’à une heure.

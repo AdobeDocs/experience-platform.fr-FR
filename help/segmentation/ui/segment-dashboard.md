@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform;profil;segment;segments;segmentation;interface utilisateur;IU;personnalisation;tableau de bord des segments;tableau de bord
 title: Tableau de bord des segments
 description: L’interface utilisateur d’Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher les mesures importantes liées aux segments créés et gérés par votre organisation.
 type: Documentation
 exl-id: 4a45bc3a-be5e-42b5-abd1-f0fb5795f5f4
-source-git-commit: f7d204442c8bc2355671ba2adffff4c40ce08784
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '149'
+source-wordcount: '136'
 ht-degree: 100%
 
 ---
@@ -19,4 +18,4 @@ Consultez le [guide du tableau de bord des segments](../../dashboards/guides/seg
 
 Pour découvrir toutes les fonctionnalités des tableaux de bord dans l’interface utilisateur d’Experience Platform, commencez par lire la [présentation des tableaux de bord](../../dashboards/home.md).
 
-![Le tableau de bord des segments. Trois widgets sont affichés : le widget Taille d’audience, le widget Tendance de la modification de la taille d’audience et le widget Profils par identité.](../images/ui/segment-dashboard/dashboard-overview.png)
+![Le tableau de bord des segments. Trois widgets sont affichés : le widget Taille d’audience, le widget Tendance de la modification de la taille d’audience et le widget Profils par identité.](../../dashboards/images/segments/dashboard-overview.png)

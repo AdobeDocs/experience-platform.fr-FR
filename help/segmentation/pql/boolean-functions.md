@@ -1,13 +1,12 @@
 ---
-keywords: Experience Platform;accueil;rubriques populaires;segmentation;Segmentation;Segmentation Service;pql;PQL;langage de requête de profil;fonctions booléennes;booléen;
 solution: Experience Platform
 title: Fonctions booléennes PQL
 description: Les fonctions booléennes sont utilisées pour exécuter une logique booléenne sur différents éléments dans le langage de requête de profil (PQL).
 exl-id: 68a4a8cc-88ad-41b1-b9fc-c2b4ab7d0122
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '254'
-ht-degree: 82%
+source-wordcount: '237'
+ht-degree: 88%
 
 ---
 

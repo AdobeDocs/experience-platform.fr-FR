@@ -1,13 +1,12 @@
 ---
-keywords: Experience Platform;accueil;rubriques les plus consultées;Service de segmentation;segmentation;service de segmentation;guide de l’utilisateur;guide de l’interface utilisateur;guide de l’interface utilisateur de segmentation;créateur de segments;Créateur de segments;
 solution: Experience Platform
 title: Guide de l’interface utilisateur du créateur de segments
 description: Le créateur de segments de l’interface utilisateur d’Adobe Experience Platform fournit un espace de travail riche qui vous permet d’interagir avec les éléments de données de profil. L’espace de travail fournit des commandes intuitives pour la création et la modification de règles, telles que le glisser-déposer de mosaïques utilisées pour représenter les propriétés des données.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 28b9458d29ce69bcbfdff53c0cb6bd7f427e4a2e
+source-git-commit: 6d33c1bd3921a754edfab227fad236caf60ac960
 workflow-type: tm+mt
-source-wordcount: '3258'
-ht-degree: 100%
+source-wordcount: '3308'
+ht-degree: 85%
 
 ---
 
@@ -22,7 +21,7 @@ Le [!DNL Segment Builder] offre un vaste espace de travail qui vous permet d’i
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_fields"
 >title="Champs"
->abstract="Un segment est constitué des trois types de champ suivants : attributs, événements et audiences. Les attributs vous permettent d’utiliser des attributs de profil appartenant à la classe XDM Individual Profile, les événements vous permettent de créer une audience basée sur des actions ou des événements qui ont lieu à l’aide des éléments de données XDM ExperienceEvent et les audiences vous permettent d’utiliser des audiences importées à partir de sources externes."
+>abstract="Les trois types de champ qui constituent une définition de segment sont les attributs, les événements et les audiences. Les attributs vous permettent d’utiliser des attributs de profil appartenant à la classe XDM Individual Profile, les événements vous permettent de créer une audience basée sur des actions ou des événements qui ont lieu à l’aide des éléments de données XDM ExperienceEvent et les audiences vous permettent d’utiliser des audiences importées à partir de sources externes."
 
 Les blocs de création de base des définitions de segment sont les attributs et les événements. En outre, les attributs et les événements contenus dans les audiences existantes peuvent être utilisés comme éléments de nouvelles définitions.
 
@@ -38,7 +37,7 @@ L’onglet **[!UICONTROL Attributs]** vous permet de parcourir les attributs [!D
 
 ### Événements
 
-L’onglet **[!UICONTROL Événements]** vous permet de créer une audience basée sur des événements ou des actions qui ont eu lieu en utilisant des éléments de données [!DNL XDM ExperienceEvent] Vous pouvez également trouver les types d’événements dans l’onglet **[!UICONTROL Événements]**, qui sont une collection d’événements couramment utilisés pour vous permettre de créer vos segments plus rapidement.
+L’onglet **[!UICONTROL Événements]** vous permet de créer une audience basée sur des événements ou des actions qui ont eu lieu en utilisant des éléments de données [!DNL XDM ExperienceEvent] Vous pouvez également trouver les types d’événement sur la page **[!UICONTROL Événements]** , qui sont un ensemble d’événements fréquemment utilisés pour vous permettre de créer plus rapidement vos définitions de segment.
 
 Outre la possibilité de rechercher des éléments [!DNL ExperienceEvent], vous pouvez également rechercher des types d’événements. Les types d’événements utilisent la même logique de codage que [!DNL ExperienceEvents] sans qu’il soit nécessaire de faire une recherche dans la classe [!DNL XDM ExperienceEvent] pour trouver l’événement correct. Par exemple, l’utilisation de la barre de recherche pour rechercher « cart » (panier) renvoie les types d’événements « [!UICONTROL AddCart] » et « [!UICONTROL RemoveCart] », qui sont deux actions liées au panier très couramment utilisées lors de la création de définitions de segment.
 
@@ -116,7 +115,7 @@ Pour ajouter une nouvelle règle à votre définition de segment, faites glisser
 
 >[!IMPORTANT]
 >
->Les dernières modifications apportées à Adobe Experience Platform ont mis à jour l’utilisation des opérateurs logiques `OR` et `AND` entre les événements. Ces mises à jour n’auront aucune incidence sur les segments existants. Cependant, toutes les mises à jour ultérieures des segments existants et des nouvelles créations de segments seront affectées par ces modifications. Consultez la [mise à jour des constantes de temps](./segment-refactoring.md) pour plus d’informations.
+>Les dernières modifications apportées à Adobe Experience Platform ont mis à jour l’utilisation des opérateurs logiques `OR` et `AND` entre les événements. Ces mises à jour n’auront aucune incidence sur les définitions de segment existantes. Cependant, toutes les mises à jour ultérieures des définitions de segment existantes et des définitions de segment nouvellement créées seront affectées par ces modifications. Consultez la [mise à jour des constantes de temps](./segment-refactoring.md) pour plus d’informations.
 
 Lors de la sélection d’une valeur pour l’attribut, vous verrez une liste de valeurs d’énumération pour l’attribut.
 
@@ -144,7 +143,7 @@ Veuillez noter qu’un maximum de 250 valeurs est autorisé. Si vous dépassez 
 
 ### Ajout d’audiences
 
-Vous pouvez faire glisser une audience depuis l’onglet **[!UICONTROL Audience]** sur le canevas du créateur de règles pour référencer l’appartenance à l’audience dans la nouvelle définition de segment. Cela vous permet d’inclure ou d’exclure l’appartenance à une audience en tant qu’attribut dans la nouvelle règle de segmentation.
+Vous pouvez faire glisser une audience depuis l’onglet **[!UICONTROL Audience]** sur le canevas du créateur de règles pour référencer l’appartenance à l’audience dans la nouvelle définition de segment. Cela vous permet d’inclure ou d’exclure l’appartenance à une audience en tant qu’attribut dans les nouvelles règles de définition de segment.
 
 Pour les [!DNL Platform]audiences créées à l’aide du [!DNL Segment Builder], vous avez la possibilité de convertir l’audience en un ensemble de règles utilisées dans la définition de segment pour cette audience. Cette conversion effectue une copie de la logique de règle, qui peut ensuite être modifiée sans affecter la définition de segment d’origine. Assurez-vous d’avoir enregistré les modifications récentes apportées à votre définition de segment avant de la convertir en logique de règle.
 
@@ -158,11 +157,11 @@ Si des conflits surviennent lors de la conversion d’audiences en règles, le [
 
 ### Affichage du code
 
-Vous pouvez également afficher une version codée d’une règle créée dans le [!DNL Segment Builder]. Une fois que vous avez créé votre règle dans la zone de travail du créateur de règles, vous pouvez sélectionner **[!UICONTROL Affichage du code]** pour afficher votre segment en PQL.
+Vous pouvez également afficher une version codée d’une règle créée dans le [!DNL Segment Builder]. Une fois que vous avez créé votre règle dans le canevas du créateur de règles, vous pouvez sélectionner **[!UICONTROL Affichage du code]** pour voir votre définition de segment comme PQL.
 
-![Le bouton d’affichage du code est mis en surbrillance, ce qui vous permet d’afficher le segment en PQL.](../images/ui/segment-builder/code-view.png)
+![Le bouton d’affichage du code est mis en surbrillance, ce qui vous permet d’afficher la définition de segment sous la forme PQL.](../images/ui/segment-builder/code-view.png)
 
-L’affichage du code fournit un bouton qui vous permet de copier la valeur du segment à utiliser dans les appels API. Pour obtenir la dernière version du segment, assurez-vous d’avoir sauvegardé vos dernières modifications du segment.
+L’affichage du code fournit un bouton qui vous permet de copier la valeur de la définition de segment à utiliser dans les appels API. Pour obtenir la dernière version de la définition de segment, veillez à enregistrer les dernières modifications apportées à la définition de segment.
 
 ![Le bouton « Copier le code » est mis en surbrillance, ce qui vous permet de ](../images/ui/segment-builder/copy-code.png)
 
@@ -178,7 +177,7 @@ Après avoir placé l’événement dans le conteneur Événements, sélectionne
 
 ![Le texte agrégé est mis en surbrillance. En le sélectionnant, vous pouvez sélectionner des fonctions d’agrégation.](../images/ui/segment-builder/add-aggregation.png)
 
-L’agrégation est maintenant ajoutée. Vous pouvez maintenant sélectionner la fonction d’agrégation, choisir l’attribut à agréger, la fonction d’égalité, ainsi que la valeur. Pour l’exemple ci-dessous, ce segment peut être considéré comme un profil dont la somme des valeurs achetées est supérieure à 100$, même si chaque achat individuel est inférieur à 100$.
+L’agrégation est maintenant ajoutée. Vous pouvez maintenant sélectionner la fonction d’agrégation, choisir l’attribut à agréger, la fonction d’égalité, ainsi que la valeur. Pour l’exemple ci-dessous, cette définition de segment qualifierait tout profil dont la somme des valeurs achetées est supérieure à 100 €, même si chaque achat individuel est inférieur à 100 €.
 
 ![Les règles d’événement, qui affichent une fonction d’agrégation.](../images/ui/segment-builder/filled-aggregation.png)
 
@@ -222,6 +221,11 @@ Après avoir selectionné **[!UICONTROL Déplier le conteneur]**, le conteneur e
 
 ## Politiques de fusion
 
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_createSegment_segmentBuilder_mergePolicies"
+>title="Politiques de fusion"
+>abstract="Une stratégie de fusion permet la fusion de différents jeux de données pour former votre profil. Platform a fourni une stratégie de fusion par défaut ou vous pouvez créer une stratégie de fusion par défaut dans les profils. Choisissez une stratégie de fusion correspondant à votre objectif marketing pour cette audience."
+
 [!DNL Experience Platform] vous permet de rassembler des données issues de plusieurs sources et de les combiner pour obtenir une vue complète de chaque client. Lors du regroupement de ces données, les politiques de fusion sont les règles utilisées par [!DNL Platform] pour déterminer comment les données seront hiérarchisées et quelles données seront combinées pour créer un profil.
 
 Vous pouvez sélectionner une politique de fusion qui correspond à votre objectif marketing pour cette audience ou utiliser la politique de fusion par défaut fournie par [!DNL Platform]. Vous pouvez créer plusieurs politiques de fusion propres à votre organisation, y compris créer votre propre politique de fusion par défaut. Pour obtenir des instructions détaillées sur la création de politiques de fusion pour votre organisation, commencez par lire la [présentation des politiques de fusion](../../profile/merge-policies/overview.md).
@@ -230,40 +234,40 @@ Pour sélectionner une politique de fusion pour votre définition de segment, s�
 
 ![Le sélecteur de politique de fusion est mis en surbrillance. Vous pouvez ainsi choisir la politique de fusion à sélectionner pour votre définition de segment.](../images/ui/segment-builder/merge-policy-selector.png)
 
-## Propriétés du segment {#segment-properties}
+## Propriétés de définition de segment {#segment-properties}
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_segmentproperties"
->title="Propriétés du segment"
->abstract="La section des propriétés du segment affiche une estimation de la taille du segment résultant, en affichant le nombre de profils qualifiés par rapport au nombre total de profils. Cela vous permet d’ajuster votre définition de segment selon vos besoins avant de créer l’audience elle-même."
+>title="Propriétés de définition de segment"
+>abstract="La section Propriétés de la définition de segment affiche une estimation de la taille de la définition de segment résultante, indiquant le nombre de profils qualifiés par rapport au nombre total de profils. Cela vous permet d’ajuster votre définition de segment selon vos besoins avant de créer l’audience elle-même."
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_refreshestimate"
 >title="Actualiser les estimations"
->abstract="Vous pouvez actualiser les estimations de votre segment pour afficher immédiatement un aperçu du nombre de profils admissibles pour le segment proposé. Les estimations d’audience sont générées en utilisant une taille d’échantillon des données d’exemple du jour."
+>abstract="Vous pouvez actualiser les estimations de votre définition de segment pour afficher immédiatement un aperçu du nombre de profils qui remplissent les critères de la définition de segment proposée. Les estimations d’audience sont générées en utilisant une taille d’échantillon des données d’exemple du jour."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=fr#estimate-and-preview-an-audience" text="Estimation et prévisualisation d’une audience"
 
-Lors de la création d’une définition de segment, la section **[!UICONTROL Propriétés du segment]** située dans la partie droite de l’espace de travail affiche une estimation de la taille du segment obtenu, ce qui vous permet d’ajuster votre définition de segment selon vos besoins avant de créer l’audience elle-même.
+Lors de la création d’une définition de segment, la variable **[!UICONTROL Propriétés du segment]** sur le côté droit de l’espace de travail, la section affiche une estimation de la taille de la définition de segment résultante, ce qui vous permet d’ajuster votre définition de segment selon vos besoins avant de créer l’audience elle-même.
 
-La section **[!UICONTROL Propriétés du segment]** vous permet également de spécifier des informations importantes sur votre définition de segment, y compris son nom, sa description et son type d’évaluation. Les noms des définitions de segment sont utilisés pour identifier votre segment parmi ceux définis par votre organisation et doivent donc être descriptifs, concis et uniques.
+La section **[!UICONTROL Propriétés du segment]** vous permet également de spécifier des informations importantes sur votre définition de segment, y compris son nom, sa description et son type d’évaluation. Les noms des définitions de segment sont utilisés pour identifier votre définition de segment parmi celles définies par votre organisation et doivent donc être descriptifs, concis et uniques.
 
 Au fur et à mesure que vous continuez à créer votre définition de segment, vous pouvez visualiser un aperçu paginé de l’audience en sélectionnant **[!UICONTROL Afficher les profils]**.
 
-![La section des propriétés de définition de segment est mise en surbrillance. Les propriétés du segment comportent, sans s’y limiter, le nom, la description et la méthode d’évaluation du segment.](../images/ui/segment-builder/segment-properties.png)
+![La section des propriétés de définition de segment est mise en surbrillance. Les propriétés de définition de segment incluent, sans s’y limiter, le nom, la description et la méthode d’évaluation de la définition de segment.](../images/ui/segment-builder/segment-properties.png)
 
 >[!NOTE]
 >
->Les estimations d’audience sont générées en utilisant une taille d’échantillon des données d’exemple du jour. S’il y a moins d’un million d’entités dans votre banque de profils, l’ensemble des données est utilisé. Entre 1 et 20 millions d’entités, 1 million d’entités sont utilisées. Et pour plus de 20 millions d’entités, 5 % du total des entités sont utilisés. Vous trouverez plus d’informations sur la génération d’estimations de segments dans la [section Génération d’estimations](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) du tutoriel sur la création de segments.
+>Les estimations d’audience sont générées en utilisant une taille d’échantillon des données d’exemple du jour. S’il y a moins d’un million d’entités dans votre banque de profils, l’ensemble des données est utilisé. Entre 1 et 20 millions d’entités, 1 million d’entités sont utilisées. Et pour plus de 20 millions d’entités, 5 % du total des entités sont utilisés. Vous trouverez plus d’informations sur la génération d’estimations pour les définitions de segment dans la section [section génération d’estimation](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) du tutoriel sur la création de définitions de segment.
 
-Vous pouvez également sélectionner votre méthode d’évaluation. Si vous savez quelle méthode d’évaluation vous voulez utiliser, vous pouvez sélectionner la méthode d’évaluation souhaitée à l’aide de la liste déroulante. Si vous souhaitez savoir pour quels types d’évaluation ce segment est admissible, vous pouvez sélectionner l’![icône de dossier Parcourir avec une loupe](../images/ui/segment-builder/segment-evaluation-select-icon.png) pour voir la liste des méthodes d’évaluation de segment disponibles.
+Vous pouvez également sélectionner votre méthode d’évaluation. Si vous savez quelle méthode d’évaluation vous voulez utiliser, vous pouvez sélectionner la méthode d’évaluation souhaitée à l’aide de la liste déroulante. Si vous souhaitez savoir à quels types d’évaluation cette définition de segment est admissible, vous pouvez sélectionner l’icône Parcourir . ![icône de dossier avec loupe](../images/ui/segment-builder/segment-evaluation-select-icon.png) pour afficher la liste des méthodes d’évaluation de définition de segment disponibles.
 
 L’[!UICONTROL Éligibilité de la méthode d’évaluation] s’affiche. Cette fenêtre contextuelle affiche les méthodes d’évaluation disponibles, à savoir par lots, en flux continu et Edge. La fenêtre contextuelle affiche les méthodes d’évaluation éligibles et non éligibles. Selon les paramètres que vous avez utilisés dans votre définition de segment, il se peut qu’elle ne soit pas admissible pour certaines méthodes d’évaluation. Pour plus d’informations sur les exigences de chaque méthode d’évaluation, veuillez lire les présentations sur la [segmentation en flux continu](./streaming-segmentation.md#query-types) ou la [segmentation Edge](./edge-segmentation.md#query-types).
 
-![La fenêtre contextuelle d’éligibilité de la méthode d’évaluation s’affiche. Elle affiche les méthodes d’évaluation de segment éligibles et non éligibles pour le segment.](../images/ui/segment-builder/select-evaluation-method.png)
+![La fenêtre contextuelle d’éligibilité de la méthode d’évaluation s’affiche. Elle affiche les méthodes d’évaluation éligibles et non éligibles pour la définition de segment.](../images/ui/segment-builder/select-evaluation-method.png)
 
 Si vous sélectionnez une méthode d’évaluation non valide, vous serez invité à modifier vos règles de définition de segment ou la méthode d’évaluation.
 
-![La fenêtre contextuelle de méthode d’évaluation s’affiche. Si une méthode d’évaluation de segment non éligible est sélectionnée, la fenêtre contextuelle explique pourquoi celle-ci n’est pas éligible.](../images/ui/segment-builder/ineligible-evaluation-method.png)
+![La fenêtre contextuelle de méthode d’évaluation s’affiche. Si une méthode d’évaluation de non éligible est sélectionnée, la fenêtre contextuelle explique pourquoi celle-ci n’est pas éligible.](../images/ui/segment-builder/ineligible-evaluation-method.png)
 
 Vous trouverez plus d’informations sur les différentes méthodes d’évaluation de définition de segment dans la [présentation de la segmentation](../home.md#evaluate-segments).
 

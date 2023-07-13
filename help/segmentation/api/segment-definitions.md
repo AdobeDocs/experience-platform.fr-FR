@@ -1,19 +1,18 @@
 ---
-keywords: Experience Platform;accueil;rubriques les plus consultées;segmentation;Segmentation;Service de segmentation;définition de segment;définitions de segment;api;API;
 solution: Experience Platform
 title: Point de terminaison de l’API de définitions de segment
 description: Le point de terminaison des définitions de segment de l’API Adobe Experience Platform Segmentation Service vous permet de gérer par programmation les définitions de segment pour votre organisation.
 exl-id: e7811b96-32bf-4b28-9abb-74c17a71ffab
-source-git-commit: 8f61840ad60b7d24c980b218b6f742485f5ebfdd
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '1216'
-ht-degree: 46%
+source-wordcount: '1209'
+ht-degree: 40%
 
 ---
 
 # Point d’entrée des définitions de segment
 
-Adobe Experience Platform vous permet de créer des segments définissant un groupe d’attributs ou de comportements spécifiques à partir d’un groupe de profils. Une définition de segment est un objet qui encapsule une requête écrite dans [!DNL Profile Query Language] (PQL). Cet objet est également appelé prédicat PQL. Les prédicats PQL définissent les règles du segment en fonction des conditions liées à tout enregistrement ou série temporelle que vous fournissez. [!DNL Real-Time Customer Profile]. Pour plus d’informations sur l’écriture de requêtes PQL, reportez-vous au [guide de PQL](../pql/overview.md).
+Adobe Experience Platform vous permet de créer des définitions de segment qui définissent un groupe d’attributs ou de comportements spécifiques à partir d’un groupe de profils. Une définition de segment est un objet qui encapsule une requête écrite dans [!DNL Profile Query Language] (PQL). Les définitions de segment sont appliquées aux profils pour créer des audiences. Cet objet (définition de segment) est également appelé prédicat PQL. Les prédicats PQL définissent les règles de la définition de segment en fonction des conditions liées à tout enregistrement ou série temporelle que vous fournissez. [!DNL Real-Time Customer Profile]. Pour plus d’informations sur l’écriture de requêtes PQL, reportez-vous au [guide de PQL](../pql/overview.md).
 
 Ce guide fournit des informations pour vous aider à mieux comprendre les définitions de segment et inclut des exemples d’appels API pour effectuer des actions de base à l’aide de l’API.
 
@@ -199,15 +198,14 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 
 | Propriété | Description |
 | -------- | ----------- |
-| `name` | **Obligatoire.** Un nom unique qui fait référence au segment. |
-| `description` | Description de la définition de segment que vous créez. |
-| `evaluationInfo` | Type de segment que vous créez. Si vous souhaitez créer un segment par lot, définissez `evaluationInfo.batch.enabled` pour être vrai. Si vous souhaitez créer un segment en continu, définissez `evaluationInfo.continuous.enabled` pour être vrai. Si vous souhaitez créer un segment Edge, définissez `evaluationInfo.synchronous.enabled` pour être vrai. Si ce champ n’est pas renseigné, le segment est créé en tant que **batch** segment. |
-| `schema` | **Obligatoire.** Le schéma associé aux entités du segment. Se compose d’un champ `id` ou `name`. |
-| `expression` | **Obligatoire.** Une entité qui contient des champs d’informations à propos de la définition de segment. |
+| `name` | Nom unique qui fait référence à la définition de segment. |
+| `description` | (Facultatif.) Description de la définition de segment que vous créez. |
+| `evaluationInfo` | (Facultatif.) Le type de définition de segment que vous créez. Si vous souhaitez créer un segment par lot, définissez `evaluationInfo.batch.enabled` pour être vrai. Si vous souhaitez créer un segment en continu, définissez `evaluationInfo.continuous.enabled` pour être vrai. Si vous souhaitez créer un segment Edge, définissez `evaluationInfo.synchronous.enabled` pour être vrai. Si ce champ n’est pas renseigné, la définition de segment est créée sous la forme d’une **batch** segment. |
+| `schema` | Le schéma associé aux entités du segment. Se compose d’un champ `id` ou `name`. |
+| `expression` | Une entité qui contient des champs d’informations à propos de la définition de segment. |
 | `expression.type` | Indique le type d’expression. Actuellement, seul « PQL » est pris en charge. |
 | `expression.format` | Indique la structure de l’expression en valeur. Actuellement, le format suivant est pris en charge : <ul><li>`pql/text` : une représentation textuelle d’une définition de segment, selon la grammaire PQL publiée.  Par exemple : `workAddress.stateProvince = homeAddress.stateProvince`.</li></ul> |
 | `expression.value` | Une expression conforme au type indiqué dans `expression.format`. |
-| `description` | Description lisible par l’utilisateur de la définition. |
 
 <!-- >[!NOTE]
 >
@@ -339,7 +337,7 @@ Une réponse réussie renvoie un état HTTP 200 avec les informations détaill�
 | Propriété | Description |
 | -------- | ----------- |
 | `id` | Identifiant en lecture seule généré par le système de la définition de segment. |
-| `name` | Un nom unique qui fait référence au segment. |
+| `name` | Nom unique qui fait référence à la définition de segment. |
 | `schema` | Le schéma associé aux entités du segment. Se compose d’un champ `id` ou `name`. |
 | `expression` | Une entité qui contient des champs d’informations à propos de la définition de segment. |
 | `expression.type` | Indique le type d’expression. Actuellement, seul « PQL » est pris en charge. |
@@ -472,7 +470,7 @@ Une réponse réussie renvoie un état HTTP 207 avec les définitions de segment
 | Propriété | Description |
 | -------- | ----------- |
 | `id` | Identifiant en lecture seule généré par le système de la définition de segment. |
-| `name` | Un nom unique qui fait référence au segment. |
+| `name` | Nom unique qui fait référence à la définition de segment. |
 | `schema` | Le schéma associé aux entités du segment. Se compose d’un champ `id` ou `name`. |
 | `expression` | Une entité qui contient des champs d’informations à propos de la définition de segment. |
 | `expression.type` | Indique le type d’expression. Actuellement, seul « PQL » est pris en charge. |
@@ -487,7 +485,7 @@ Vous pouvez demander la suppression d’une définition de segment spécifique e
 
 >[!NOTE]
 >
-> Vous **ne pourrez pas** supprimer un segment utilisé dans une activation de destination.
+> Une définition de segment utilisée dans une activation de destination **cannot** être supprimées.
 
 **Format d’API**
 

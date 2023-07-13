@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform;accueil;rubriques les plus consultées;segmentation;Segmentation;Segmentation Service;tâches de segmentation;tâche de segmentation;API;api;
 solution: Experience Platform
 title: Point de terminaison de l’API de tâches de segmentation
 description: Le point de terminaison des tâches de segmentation de l’API Adobe Experience Platform Segmentation Service vous permet de gérer par programmation les tâches de segmentation pour votre organisation.
 exl-id: 105481c2-1c25-4f0e-8fb0-c6577a4616b3
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '1497'
+source-wordcount: '1505'
 ht-degree: 24%
 
 ---
@@ -56,11 +55,11 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
 
 **Réponse**
 
-Une réponse réussie renvoie un état HTTP 200 avec une liste de tâches de segmentation pour l’organisation spécifiée comme JSON. Toutefois, la réponse sera différente, en fonction du nombre de segments dans la tâche de segmentation.
+Une réponse réussie renvoie un état HTTP 200 avec une liste de tâches de segmentation pour l’organisation spécifiée comme JSON. Cependant, la réponse sera différente, selon le nombre de définitions de segment dans la tâche de segmentation.
 
-**Inférieur ou égal à 1 500 segments dans votre tâche de segmentation**
+**Valeur inférieure ou égale à 1 500 définitions de segment dans votre tâche de segmentation**
 
-Si moins de 1 500 segments sont exécutés dans votre tâche de segmentation, une liste complète de tous les segments s’affiche dans la variable `children.segments` attribut.
+Si moins de 1 500 définitions de segment sont exécutées dans votre tâche de segmentation, une liste complète de toutes les définitions de segment s’affiche dans la variable `children.segments` attribut.
 
 >[!NOTE]
 >
@@ -166,9 +165,9 @@ Si moins de 1 500 segments sont exécutés dans votre tâche de segmentation, un
 }
 ```
 
-**Plus de 1 500 segments**
+**Plus de 1 500 définitions de segment**
 
-Si plus de 1 500 segments sont exécutés dans votre tâche de segmentation, la variable `children.segments` l’attribut s’affiche `*`, indiquant que tous les segments sont évalués.
+Si plus de 1 500 définitions de segment sont exécutées dans votre tâche de segmentation, la variable `children.segments` l’attribut s’affiche `*`, indiquant que toutes les définitions de segment sont évaluées.
 
 >[!NOTE]
 >
@@ -272,8 +271,8 @@ Si plus de 1 500 segments sont exécutés dans votre tâche de segmentation, la 
 | `metrics.totalTime` | Objet contenant des informations sur les heures de début et de fin de la tâche de segmentation, ainsi que le temps total nécessaire. |
 | `metrics.profileSegmentationTime` | Objet contenant des informations sur les heures de début et de fin de l’évaluation de segmentation, ainsi que le temps total nécessaire. |
 | `metrics.segmentProfileCounter` | Nombre de profils qualifiés par segment. |
-| `metrics.segmentedProfileByNamespaceCounter` | Le nombre de profils qualifiés pour chaque espace de noms d’identité par segment. |
-| `metrics.segmentProfileByStatusCounter` | Nombre de profils pour chaque état. Les trois états suivants sont pris en charge : <ul><li>&quot;réalisé&quot; : nombre de profils qui remplissent les critères pour le segment.</li><li>&quot;Sortie&quot; : nombre de segments de profil qui n’existent plus dans le segment.</li></ul> |
+| `metrics.segmentedProfileByNamespaceCounter` | Nombre de profils qualifiés pour chaque espace de noms d’identité sur une base de définition de segment. |
+| `metrics.segmentProfileByStatusCounter` | Nombre de profils pour chaque état. Les trois états suivants sont pris en charge : <ul><li>&quot;réalisé&quot; : nombre de profils qui remplissent les critères de la définition de segment.</li><li>&quot;exited&quot; : nombre de profils qui n’existent plus dans la définition de segment.</li></ul> |
 | `metrics.totalProfilesByMergePolicy` | Nombre total de profils fusionnés par stratégie de fusion. |
 
 ## Création d’une tâche de segmentation {#create}
@@ -286,9 +285,9 @@ Vous pouvez créer une tâche de segmentation en adressant une requête de POST 
 POST /segment/jobs
 ```
 
-Lors de la création d’une tâche de segmentation, la requête et la réponse diffèrent en fonction du nombre de segments dans la tâche de segmentation.
+Lors de la création d’une tâche de segmentation, la requête et la réponse diffèrent en fonction du nombre de définitions de segment dans la tâche de segmentation.
 
-**Inférieur ou égal à 1 500 segments dans votre tâche de segmentation**
+**Valeur inférieure ou égale à 1 500 définitions de segment dans votre tâche de segmentation**
 
 **Requête**
 
@@ -411,13 +410,13 @@ Une réponse réussie renvoie un état HTTP 200 avec des informations sur la tâ
 | `segments.segment.id` | L’identifiant de la définition de segment que vous avez fournie. |
 | `segments.segment.expression` | Objet contenant des informations sur l’expression de la définition de segment, écrite dans PQL. |
 
-**Plus de 1 500 segments**
+**Plus de 1 500 définitions de segment**
 
 **Requête**
 
 >[!NOTE]
 >
->Bien que vous puissiez créer une tâche de segmentation avec plus de 1 500 segments, cette opération **fortement déconseillé**.
+>Bien que vous puissiez créer une tâche de segmentation avec plus de 1 500 définitions de segment, ceci est **fortement déconseillé**.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
@@ -440,7 +439,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 
 | Propriété | Description |
 | -------- | ----------- |
-| `schema.name` | Nom du schéma des segments. |
+| `schema.name` | Nom du schéma pour les définitions de segment. |
 | `segments.segmentId` | Lors de l’exécution d’une tâche de segmentation avec plus de 1 500 segments, vous devez transmettre `*` comme identifiant du segment pour indiquer que vous souhaitez exécuter une tâche de segmentation avec tous les segments. |
 
 **Réponse**
@@ -528,7 +527,7 @@ Une réponse réussie renvoie un état HTTP 200 avec les détails de la tâche 
 | `id` | Identifiant en lecture seule généré par le système pour la tâche de segmentation que vous venez de créer. |
 | `status` | État actuel de la tâche de segmentation. La tâche de segmentation étant nouvellement créée, l’état sera toujours `NEW`. |
 | `segments` | Objet contenant des informations sur les définitions de segment pour lesquelles cette tâche de segmentation est en cours d’exécution. |
-| `segments.segment.id` | Le `*` signifie que cette tâche de segmentation s’exécute pour tous les segments de votre entreprise. |
+| `segments.segment.id` | Le `*` signifie que cette tâche de segmentation s’exécute pour toutes les définitions de segment de votre organisation. |
 
 ## Récupération d’une tâche de segmentation spécifique {#get}
 
@@ -556,11 +555,11 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfea-4
 
 **Réponse**
 
-Une réponse réussie renvoie un état HTTP 200 avec des informations détaillées sur la tâche de segmentation spécifiée.  Toutefois, la réponse varie en fonction du nombre de segments dans la tâche de segmentation.
+Une réponse réussie renvoie un état HTTP 200 avec des informations détaillées sur la tâche de segmentation spécifiée.  Cependant, la réponse varie en fonction du nombre de définitions de segment dans la tâche de segmentation.
 
-**Inférieur ou égal à 1 500 segments dans votre tâche de segmentation**
+**Valeur inférieure ou égale à 1 500 définitions de segment dans votre tâche de segmentation**
 
-Si moins de 1 500 segments sont exécutés dans votre tâche de segmentation, une liste complète de tous les segments s’affiche dans la variable `children.segments` attribut.
+Si moins de 1 500 définitions de segment sont exécutées dans votre tâche de segmentation, une liste complète de toutes les définitions de segment s’affiche dans la variable `children.segments` attribut.
 
 ```json
 {
@@ -622,9 +621,9 @@ Si moins de 1 500 segments sont exécutés dans votre tâche de segmentation, un
 }
 ```
 
-**Plus de 1 500 segments**
+**Plus de 1 500 définitions de segment**
 
-Si plus de 1 500 segments sont exécutés dans votre tâche de segmentation, la variable `children.segments` l’attribut s’affiche `*`, indiquant que tous les segments sont évalués.
+Si plus de 1 500 définitions de segment sont exécutées dans votre tâche de segmentation, la variable `children.segments` l’attribut s’affiche `*`, indiquant que toutes les définitions de segment sont évaluées.
 
 ```json
 {
@@ -744,7 +743,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs/bulk-get \
 
 **Réponse**
 
-Une réponse réussie renvoie un état HTTP 207 avec les tâches de segmentation demandées. Cependant, la valeur de la variable `children.segments` varie selon que la tâche de segmentation est exécutée pour plus de 1 500 segments.
+Une réponse réussie renvoie un état HTTP 207 avec les tâches de segmentation demandées. Cependant, la valeur de la variable `children.segments` varie selon que la tâche de segmentation est exécutée pour plus de 1 500 définitions de segment.
 
 >[!NOTE]
 >

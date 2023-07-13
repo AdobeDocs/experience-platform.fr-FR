@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform;accueil;rubriques les plus consultées;segmentation;Segmentation;Segmentation Service;tâches d’exportation;api;
 solution: Experience Platform
 title: Point de terminaison de l’API des tâches d’exportation de segments
 description: Les tâches d’exportation sont des processus asynchrones utilisés pour conserver les membres du segment d’audience dans des jeux de données. Vous pouvez utiliser le point de terminaison /export/jobs dans l’API Adobe Experience Platform Segmentation Service, qui vous permet de récupérer, créer et annuler des tâches d’exportation par programmation.
 exl-id: 5b504a4d-291a-4969-93df-c23ff5994553
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '1629'
+source-wordcount: '1617'
 ht-degree: 35%
 
 ---

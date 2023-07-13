@@ -1,29 +1,28 @@
 ---
-keywords: Experience Platform;accueil;rubriques populaires;segment;segment;créer un segment;segmentation;créer un segment;créer un segment;service de segmentation;
 solution: Experience Platform
-title: Création d’un segment à l’aide de l’API Segmentation Service
+title: Création d’une définition de segment à l’aide de l’API Segmentation Service
 type: Tutorial
 description: Suivez ce tutoriel pour découvrir comment développer, tester, prévisualiser et enregistrer une définition de segment à l’aide de l’API Adobe Experience Platform Segmentation Service.
 exl-id: 78684ae0-3721-4736-99f1-a7d1660dc849
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '948'
-ht-degree: 68%
+source-wordcount: '940'
+ht-degree: 59%
 
 ---
 
-# Création d’un segment à l’aide de l’API Segmentation Service
+# Création d’une définition de segment à l’aide de l’API Segmentation Service
 
 Ce document fournit un tutoriel pour le développement, le test, la prévisualisation et l’enregistrement d’une définition de segment à l’aide du [[!DNL Adobe Experience Platform Segmentation Service API]](../api/getting-started.md).
 
-Pour plus d’informations sur la création de segments à l’aide de l’interface utilisateur, consultez le [guide du créateur de segments](../ui/overview.md).
+Pour plus d’informations sur la création de définitions de segment à l’aide de l’interface utilisateur, voir [Guide du créateur de segments](../ui/overview.md).
 
 ## Prise en main
 
-Ce tutoriel nécessite une compréhension pratique des différentes [!DNL Adobe Experience Platform] services impliqués dans la création de segments d’audience. Avant de commencer ce tutoriel, veuillez consulter la documentation relative aux services suivants :
+Ce tutoriel nécessite une compréhension pratique des différentes [!DNL Adobe Experience Platform] services impliqués dans la création de définitions de segment. Avant de commencer ce tutoriel, veuillez consulter la documentation relative aux services suivants :
 
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md) : fournit un profil de consommateur unifié en temps réel, basé sur des données agrégées provenant de plusieurs sources.
-- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): Permet de créer des segments d’audience à partir de données Real-time Customer Profile.
+- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): Permet de créer des audiences à l’aide de définitions de segment ou d’autres sources externes à partir de données Real-time Customer Profile.
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md) : cadre normalisé selon lequel [!DNL Platform] organise les données de l’expérience client. Pour utiliser au mieux la segmentation, veillez à ce que vos données soient ingérées en tant que profils et événements en fonction des [bonnes pratiques pour la modélisation des données](../../xdm/schema/best-practices.md).
 
 Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour passer avec succès des appels à la fonction [!DNL Platform] API.
@@ -54,11 +53,11 @@ Toutes les requêtes contenant un payload (POST, PUT, PATCH) requièrent un en-t
 
 ## Développement d’une définition de segment
 
-La première étape de la segmentation consiste à définir un segment, représenté dans un concept appelé définition de segment. Une définition de segment est un objet qui encapsule une requête écrite dans [!DNL Profile Query Language] (PQL). Cet objet est également appelé prédicat PQL. Les prédicats PQL définissent les règles du segment en fonction des conditions liées à tout enregistrement ou série temporelle que vous fournissez. [!DNL Real-Time Customer Profile]. Pour plus d’informations sur l’écriture de requêtes PQL, reportez-vous au [guide de PQL](../pql/overview.md).
+La première étape de la segmentation consiste à définir une définition de segment. Une définition de segment est un objet qui encapsule une requête écrite dans [!DNL Profile Query Language] (PQL). Cet objet est également appelé prédicat PQL. Les prédicats PQL définissent les règles de la définition de segment en fonction des conditions liées à tout enregistrement ou série temporelle que vous fournissez. [!DNL Real-Time Customer Profile]. Pour plus d’informations sur l’écriture de requêtes PQL, reportez-vous au [guide de PQL](../pql/overview.md).
 
-Vous pouvez créer une nouvelle définition de segment en envoyant une requête POST au point de terminaison `/segment/definitions` de l’API [!DNL Segmentation] L’exemple suivant illustre la manière de formater une requête de définition, et inclut les informations requises pour qu’un segment soit défini avec succès.
+Vous pouvez créer une nouvelle définition de segment en envoyant une requête POST au point de terminaison `/segment/definitions` de l’API [!DNL Segmentation] L’exemple suivant décrit comment formater une requête de définition, y compris les informations requises pour qu’une définition de segment soit définie avec succès.
 
-Pour obtenir une explication détaillée sur la définition d’un segment, veuillez lire le [guide de développement de la définition de segment](../api/segment-definitions.md#create).
+Pour obtenir une explication détaillée sur la définition d’une définition de segment, veuillez lire le [guide de développement de la définition de segment](../api/segment-definitions.md#create).
 
 ## Estimation et prévisualisation d’une audience {#estimate-and-preview-an-audience}
 
@@ -66,14 +65,14 @@ Au fur et à mesure que vous développez votre définition de segment, vous pouv
 
 En estimant et en prévisualisant votre audience, vous pouvez tester et optimiser vos prédicats PQL jusqu’à ce qu’ils produisent un résultat souhaitable. Ils peuvent alors être utilisés dans une définition de segment mise à jour.
 
-Deux étapes sont nécessaires pour prévisualiser ou obtenir une estimation de votre segment :
+Deux étapes sont nécessaires pour prévisualiser ou obtenir une estimation de votre définition de segment :
 
 1. [Création d’une tâche de prévisualisation](#create-a-preview-job)
 2. [Afficher l’estimation ou la prévisualisation](#view-an-estimate-or-preview) à l’aide de l’identifiant de la tâche de prévisualisation
 
 ### Comment sont générées les estimations
 
-Des exemples de données sont utilisés pour évaluer les segments et estimer le nombre de profils admissibles. De nouvelles données sont chargées dans la mémoire chaque matin (entre 0 h et 2 h PT, soit entre 7 h et 9 h UTC) et toutes les requêtes de segmentation sont estimées à l’aide des exemples de données de cette journée. Par conséquent, tous les nouveaux champs ajoutés ou toutes les données supplémentaires recueillies seront pris en compte dans les estimations du lendemain.
+Des exemples de données sont utilisés pour évaluer les définitions de segment et estimer le nombre de profils admissibles. De nouvelles données sont chargées dans la mémoire chaque matin (entre 0 h et 2 h PT, soit entre 7 h et 9 h UTC) et toutes les requêtes de segmentation sont estimées à l’aide des exemples de données de cette journée. Par conséquent, tous les nouveaux champs ajoutés ou toutes les données supplémentaires recueillies seront pris en compte dans les estimations du lendemain.
 
 La taille de l’échantillon dépend du nombre total d’entités dans votre banque de profils. Ces tailles d’échantillon sont représentées dans le tableau suivant :
 

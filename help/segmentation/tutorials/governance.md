@@ -1,20 +1,19 @@
 ---
-keywords: Experience Platform;accueil;rubriques les plus consultées;conformité de l’utilisation des données;application;application de la conformité de l’utilisation des données;service de segmentation;segmentation;segmentation;segmentation
 solution: Experience Platform
 title: Application de la conformité de l’utilisation des données à un segment d’audience à l’aide d’API
 type: Tutorial
-description: Ce tutoriel décrit les étapes à suivre pour appliquer la conformité de l’utilisation des données aux segments ciblés de Real-Time Customer Profile à l’aide des API.
+description: Ce tutoriel décrit les étapes à suivre pour appliquer les définitions de segment de conformité à l’utilisation des données à l’aide des API.
 exl-id: 2299328c-d41a-4fdc-b7ed-72891569eaf2
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '1368'
-ht-degree: 52%
+source-wordcount: '1355'
+ht-degree: 44%
 
 ---
 
-# Application de la conformité de l’utilisation des données à un segment ciblé à l’aide d’API
+# Application de la conformité de l’utilisation des données à une définition de segment à l’aide d’API
 
-Ce tutoriel décrit les étapes à suivre pour appliquer la conformité de l’utilisation des données à [!DNL Real-Time Customer Profile] segments d’audience à l’aide d’API.
+Ce tutoriel décrit les étapes à suivre pour appliquer la conformité de l’utilisation des données aux définitions de segment à l’aide des API.
 
 ## Prise en main
 
@@ -57,7 +56,7 @@ Toutes les requêtes contenant un payload (POST, PUT, PATCH) requièrent un en-t
 
 ## Recherche d’une stratégie de fusion pour une définition de segment {#merge-policy}
 
-Ce workflow commence par l’accès à un segment connu. Segments activés pour une utilisation dans [!DNL Real-Time Customer Profile] contiennent un identifiant de stratégie de fusion dans leur définition de segment. Cette politique de fusion contient des informations sur les jeux de données à inclure dans le segment, qui à leur tour contiennent les libellés d’utilisation de données applicables.
+Ce workflow commence par l’accès à une définition de segment connue. Définitions de segment activées pour une utilisation dans [!DNL Real-Time Customer Profile] contiennent un identifiant de stratégie de fusion dans leur définition de segment. Cette stratégie de fusion contient des informations sur les jeux de données à inclure dans la définition de segment, qui à leur tour contiennent tous les libellés d’utilisation des données applicables.
 
 En utilisant la variable [!DNL Segmentation] API, vous pouvez rechercher une définition de segment par son identifiant pour trouver sa stratégie de fusion associée.
 
@@ -367,20 +366,20 @@ En utilisant les données renvoyées dans la réponse de l’API, vous pouvez co
 
 ## Filtrage des champs de données
 
-Si votre segment d’audience ne réussit pas l’évaluation, vous pouvez ajuster les données incluses dans le segment à l’aide de l’une des deux méthodes décrites ci-dessous.
+Si votre définition de segment ne réussit pas l’évaluation, vous pouvez ajuster les données incluses dans la définition de segment par l’une des deux méthodes décrites ci-dessous.
 
 ### Mise à jour de la politique de fusion de la définition de segment
 
 La mise à jour de la politique de fusion d’une définition de segment modifie les jeux de données et les champs qui seront inclus dans l’exécution de la tâche de segmentation. Voir la section sur [mise à jour d’une stratégie de fusion existante](../../profile/api/merge-policies.md#update) pour plus d’informations, consultez le tutoriel sur les stratégies de fusion d’API .
 
-### Restriction des champs de données spécifiques lors de l’exportation du segment
+### Limitation des champs de données spécifiques lors de l’exportation de la définition de segment
 
-Lors de l’exportation d’un segment vers un jeu de données à l’aide de la variable [!DNL Segmentation] API, vous pouvez filtrer les données incluses dans l’exportation à l’aide de la variable `fields` . Tous les champs de données ajoutés à ce paramètre seront inclus dans l’exportation, tandis que tous les autres champs de données en seront exclus.
+Lors de l’exportation d’une définition de segment vers un jeu de données à l’aide de la variable [!DNL Segmentation] API, vous pouvez filtrer les données incluses dans l’exportation à l’aide de la variable `fields` . Tous les champs de données ajoutés à ce paramètre seront inclus dans l’exportation, tandis que tous les autres champs de données en seront exclus.
 
-Prenons l’exemple d’un segment dont les champs de données sont nommés « A », « B » et « C ». Si vous ne souhaitez exporter que le champ « C », le `fields` paramètre contiendra seulement le champ « C ». Ainsi, les champs « A » et « B » seront exclus lors de l’exportation du segment.
+Prenons l’exemple d’une définition de segment dont les champs de données sont nommés &quot;A&quot;, &quot;B&quot; et &quot;C&quot;. Si vous ne souhaitez exporter que le champ « C », le `fields` paramètre contiendra seulement le champ « C ». Ce faisant, les champs &quot;A&quot; et &quot;B&quot; seront exclus lors de l’exportation de la définition de segment.
 
-Pour plus d’informations, consultez la section sur l’[exportation d’un segment](./evaluate-a-segment.md#export) dans le tutoriel sur la segmentation.
+Voir la section sur [exportation d’une définition de segment](./evaluate-a-segment.md#export) dans le tutoriel sur la segmentation pour plus d’informations.
 
 ## Étapes suivantes
 
-Dans ce tutoriel, vous avez cherché les libellés d’utilisation des données associés à un segment ciblé et les avez testés pour détecter des violations de politique en fonction d’actions marketing spécifiques. Pour plus d’informations sur la gouvernance des données dans [!DNL Experience Platform], veuillez lire la présentation de [Gouvernance des données](../../data-governance/home.md).
+En suivant ce tutoriel, vous avez recherché les libellés d’utilisation des données associés à une définition de segment et les avez testés pour détecter des violations de stratégie par rapport à des actions marketing spécifiques. Pour plus d’informations sur la gouvernance des données dans [!DNL Experience Platform], veuillez lire la présentation de [Gouvernance des données](../../data-governance/home.md).

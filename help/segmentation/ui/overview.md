@@ -1,75 +1,92 @@
 ---
-keywords: Experience Platform;accueil;rubriques les plus consultées;Segmentation Service;segmentation;service de segmentation;guide de l’utilisateur;guide de l’interface utilisateur;guide de l’interface utilisateur de segmentation;créateur de segments;réalisé;existant;sortant;
 solution: Experience Platform
 title: Guide de l’IU de Segmentation Service
-description: Adobe Experience Platform Segmentation Service fournit une interface utilisateur pour la création et la gestion des définitions de segment.
+description: Découvrez comment créer et gérer des audiences et des définitions de segment dans l’interface utilisateur de Adobe Experience Platform.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 207cddae6b632866d564729de49d28fc5c29ef7f
-workflow-type: ht
-source-wordcount: '2646'
-ht-degree: 100%
+source-git-commit: 5950713c33bfb2893f24f35136acf2707ad35f1f
+workflow-type: tm+mt
+source-wordcount: '3606'
+ht-degree: 30%
 
 ---
 
 # Guide de l’IU de Segmentation Service
 
-[!DNL Adobe Experience Platform Segmentation Service] fournit une interface utilisateur pour la création et la gestion des définitions de segment.
+[!DNL Adobe Experience Platform Segmentation Service] fournit une interface utilisateur pour la création et la gestion des audiences et des définitions de segment.
 
 ## Prise en main
 
-L’utilisation des définitions de segment exige une compréhension des différents services [!DNL Experience Platform] concernés par la segmentation. Avant de lire ce guide d’utilisation, veuillez consulter la documentation relative aux services suivants :
+L’utilisation des audiences et des définitions de segment nécessite une compréhension des différentes [!DNL Experience Platform] services impliqués dans la segmentation. Avant de lire ce guide d’utilisation, veuillez consulter la documentation relative aux services suivants :
 
-- [[!DNL Segmentation Service]](../home.md) : [!DNL Segmentation Service] permet de diviser les données stockées dans [!DNL Experience Platform] qui se rapportent aux individus (tels que les client(e)s, les prospects, les utilisateurs et utilisatrices ou les organisations) en groupes plus petits.
+- [[!DNL Segmentation Service]](../home.md): [!DNL Segmentation Service] vous permet de segmenter les données stockées dans [!DNL Experience Platform] qui se rapporte aux individus (tels que les clients, les prospects, les utilisateurs ou les organisations) en groupes plus petits.
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md) : fournit un profil de consommateur unifié en temps réel, basé sur des données agrégées provenant de plusieurs sources.
 - [[!DNL Adobe Experience Platform Identity Service]](../../identity-service/home.md) : permet la création de profils client en rapprochant des identités de sources de données disparates ingérées dans [!DNL Platform].
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md) : cadre normalisé selon lequel [!DNL Platform] organise les données de l’expérience client. Pour utiliser au mieux la segmentation, veillez à ce que vos données soient ingérées en tant que profils et événements en fonction des [bonnes pratiques pour la modélisation des données](../../xdm/schema/best-practices.md).
 
-Il est également important de connaître deux termes clés utilisés dans ce document et de comprendre la différence entre eux :
-- **Définition de segment** : ensemble des règles utilisées pour décrire les caractéristiques ou les comportements clés d’une audience cible.
-- **Audience** : ensemble des profils ainsi obtenus qui répondent aux critères d’une définition de segment. Cela peut être créé via Adobe Experience Platform (audience générée par Platform) ou à partir d’une source externe (audience générée en externe).
+Vous devez également comprendre deux termes clés utilisés dans ce document et comprendre la différence entre eux :
 
-## Présentation
+- **Audience**: Ensemble de personnes qui partagent des comportements et/ou des caractéristiques similaires. Cette collection de personnes peut être générée par Adobe Experience Platform à l’aide de définitions de segment ou de composition d’audience (audience générée par Platform) ou à partir de sources externes telles que les téléchargements personnalisés (audience générée en externe).
+- **Définition de segment**: Les règles utilisées par Adobe Experience Platform pour décrire les caractéristiques ou le comportement clés d’une audience cible.
+- **Segmenter** : acte de séparation des profils en audiences.
 
-Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Segments]** dans le volet de navigation de gauche pour ouvrir l’onglet **[!UICONTROL Vue d’ensemble]** affichant le tableau de bord des [!UICONTROL segments].
+## Vue d’ensemble
+
+Dans l’interface utilisateur de l’Experience Platform, sélectionnez **[!UICONTROL Audiences]** dans le volet de navigation de gauche pour ouvrir la **[!UICONTROL Présentation]** affichant la [!UICONTROL Audiences] tableau de bord.
 
 >[!NOTE]
 >
->Si votre organisation débute sur Platform et n’a pas encore de jeux de données de profils actifs ou de politiques de fusion créés, le tableau de bord [!UICONTROL Segments] n’est pas visible. Au lieu de cela, l’onglet [!UICONTROL Vue d’ensemble] affiche des liens et de la documentation pour vous aider à démarrer avec la segmentation.
+>Si votre entreprise est une nouvelle entreprise de Platform et qu’elle ne dispose pas encore de jeux de données Profile principaux ni de stratégies de fusion créés, la variable [!UICONTROL Audiences] tableau de bord n’est pas visible. Au lieu de cela, la variable [!UICONTROL Présentation] affiche des liens et de la documentation pour vous aider à commencer à utiliser les audiences.
 
-### Tableau de bord des [!UICONTROL segments] {#segments-dashboard}
+### [!UICONTROL Audiences] tableau de bord {#segments-dashboard}
 
-Le tableau de bord des **[!UICONTROL segments]** décrit les mesures clés liées aux données de segment de votre organisation.
+Le **[!UICONTROL Audiences]** Le tableau de bord décrit les mesures clés liées aux données d’audience de votre entreprise.
 
-Pour en savoir plus, consultez le [guide du tableau de bord des segments](../../dashboards/guides/segments.md).
+Pour en savoir plus, rendez-vous sur la page [guide du tableau de bord des audiences](../../dashboards/guides/segments.md).
 
-![Le tableau de bord de segments s’affiche. Il affiche divers widgets, notamment la taille de l’audience, les profils par identité, la superposition des identités et la tendance de changement de la taille de l’audience.](../../dashboards/images/segments/dashboard-overview.png)
+![Le tableau de bord de l’audience s’affiche. Il affiche divers widgets, notamment la taille de l’audience, les profils par identité, le chevauchement des identités et la tendance de changement de la taille de l’audience.](../../dashboards/images/segments/dashboard-overview.png)
 
 ## Parcourir {#browse}
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_browse_churncolumnname"
 >title="Attrition"
->abstract="L’attrition représente le pourcentage de profils qui changent dans une définition de segment par rapport à la dernière exécution de la tâche de segmentation."
+>abstract="La perte de clientèle représente le pourcentage de profils qui changent au sein d’une audience par rapport à la dernière exécution de la tâche de segmentation."
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_browse_evaluationmethodcolumnname"
 >title="Méthode d’évaluation"
->abstract="Les méthodes d’évaluation des segments incluent le traitement par lots, en flux continu et Edge."
+>abstract="Les méthodes d’évaluation pour les audiences comprennent le lot, la diffusion en continu et le serveur Edge."
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_browse_addallsegmentstoschedule"
->title="Ajouter tous les segments à planifier"
->abstract="Activez cette option pour inclure tous les segments d’évaluation par lots dans la mise à jour planifiée quotidienne. Désactivez cette option pour supprimer tous les segments de la mise à jour planifiée."
+>title="Ajouter toutes les audiences à la planification"
+>abstract="Activez cette option pour inclure toutes les audiences évaluées à l’aide de la segmentation par lots dans la mise à jour planifiée quotidienne. Désactivez la suppression de toutes les audiences de la mise à jour planifiée."
 
-Sélectionnez l’onglet **[!UICONTROL Parcourir]** pour afficher une liste de toutes les définitions de segment pour votre organisation.
+Sélectionnez la **[!UICONTROL Parcourir]** pour afficher la liste de toutes les audiences de votre organisation.
 
-![L’écran de navigation des segments s’affiche. Une liste de tous les segments appartenant à l’organisation s’affiche.](../images/ui/overview/segment-browse-all.png)
+![L’écran de navigation des s’affiche. Une liste de toutes les audiences appartenant à l’organisation s’affiche.](../images/ui/overview/audience-browse.png)
 
-Cette vue contient des informations sur la définition de segment, y compris le nombre de profils, la date de création et la date de dernière modification.
+Cette vue répertorie des informations sur les audiences, notamment le nombre de profils, l’origine, la date de création, la date de dernière modification, les balises et la ventilation.
 
-Vous pouvez ajouter des champs supplémentaires à cet affichage en sélectionnant ![l’icône d’attribut de filtre](../images/ui/overview/filter-attribute.png). Ces champs supplémentaires comprennent la répartition, la méthode d’évaluation et l’ID de tâche.
+Vous pouvez ajouter des champs supplémentaires à cet affichage en sélectionnant ![l’icône d’attribut de filtre](../images/ui/overview/filter-attribute.png). Ces champs supplémentaires comprennent l’état du cycle de vie, la fréquence de mise à jour, la dernière mise à jour par, la description, la création par et les étiquettes d’accès.
 
-Si la répartition est sélectionnée, l’affichage présente un graphique à barres indiquant le pourcentage de profils appartenant à chacun des statuts suivants : [!UICONTROL Réalisé], [!UICONTROL Existant] et [!UICONTROL Sortant]. De plus, la répartition affichée dans l’onglet [!UICONTROL Parcourir] est la répartition la plus précise du statut du segment. Si ce nombre diffère de ce qui est indiqué dans l’onglet [!UICONTROL Vue d’ensemble], vous devez utiliser les nombres de l’onglet [!UICONTROL Parcourir] comme source d’informations correcte, puisque les nombres de l’onglet [!UICONTROL Vue d’ensemble] ne sont mis à jour qu’une seule fois par jour.
+| Champ | Description |
+| ----- | ----------- |
+| [!UICONTROL Nom] | Nom de l’audience. |
+| [!UICONTROL Nombre de profils] | Nombre total de profils qui remplissent les critères de l’audience. |
+| [!UICONTROL Origine] | Origine de l’audience. Cela indique d’où vient l’audience. Les valeurs possibles sont Segmentation Service, Chargement personnalisé, Composition de l’audience et Audience Manager. |
+| [!UICONTROL Créé] | Date et heure, en UTC, auxquelles l’audience a été créée. |
+| [!UICONTROL Dernière mise à jour] | Date et heure de la dernière mise à jour de l’audience en UTC. |
+| [!UICONTROL Balises] | Les balises définies par l’utilisateur qui appartiennent à l’audience. Vous trouverez plus d’informations sur ces balises dans la section [section sur les balises](#tags). |
+| [!UICONTROL Répartition] | ventilation de l’état du profil pour l’audience. Vous trouverez ci-dessous une description plus détaillée de cette ventilation de statut du profil. |
+| [!UICONTROL Statut du cycle de vie] | Statut de l’audience. Les valeurs possibles pour ce champ incluent `Draft`, `Published` et `Archived`. |
+| [!UICONTROL Fréquence de mise à jour] | Valeur qui indique la fréquence de mise à jour des données de l’audience. Les valeurs possibles pour ce champ incluent `On Demand`, `Scheduled` et `Continuous`. |
+| [!UICONTROL Dernière mise à jour par] | Nom de la personne qui a mis à jour l’audience pour la dernière fois. |
+| [!UICONTROL Description] | Description de l’audience. |
+| [!UICONTROL Créé par] | Nom de la personne qui a créé l’audience. |
+| [!UICONTROL Libellés d’accès] | Libellés d’accès pour l’audience. Les libellés d’accès vous permettent de classer les jeux de données et les champs en fonction des politiques d’utilisation qui s’appliquent à ces données. Vous pouvez appliquer les libellés à tout moment, ce qui vous offre une certaine flexibilité quant à la manière dont vous choisissez de gérer les données. Pour plus d’informations sur les libellés d’accès, veuillez lire la documentation sur la [gestion des libellés](../../access-control/abac/ui/labels.md). |
+
+Si la répartition est sélectionnée, l’affichage présente un graphique à barres indiquant le pourcentage de profils appartenant à chacun des statuts suivants : [!UICONTROL Réalisé], [!UICONTROL Existant] et [!UICONTROL Sortant]. En outre, la ventilation affichée dans la variable [!UICONTROL Parcourir] est la ventilation la plus précise de l’état de définition de segment. Si ce nombre diffère de ce qui est indiqué dans l’onglet [!UICONTROL Vue d’ensemble], vous devez utiliser les nombres de l’onglet [!UICONTROL Parcourir] comme source d’informations correcte, puisque les nombres de l’onglet [!UICONTROL Vue d’ensemble] ne sont mis à jour qu’une seule fois par jour.
 
 | État | Description |
 | ------ | ----------- |
@@ -77,65 +94,175 @@ Si la répartition est sélectionnée, l’affichage présente un graphique à b
 | [!UICONTROL Existant] | Nombre de profils qui **sont restés** dans le segment au cours des dernières 24 heures depuis la dernière exécution de la tâche de segmentation par lots. |
 | [!UICONTROL Sortant] | Nombre de profils qui **sont sortis** du segment au cours des dernières 24 heures depuis la dernière exécution de la tâche de segmentation par lots. |
 
-La méthode d’évaluation peut être soit en flux continu, par lots ou Edge. Les segments en streaming sont constamment évalués au fur et à mesure que les données entrent dans le système. Les segments par lot sont évalués selon un planning établi. Les segments Edge évaluent les segments en temps réel, ce qui permet d’utiliser les cas d’utilisation de personnalisation de la même page et de la page suivante.
+Une icône de points de suspension se trouve à côté de chaque audience. Cette option affiche la liste des actions rapides disponibles pour l’audience. Cette liste d’actions diffère selon l’origine de l’audience.
 
-![Les segments de la page de navigation des segments sont mis en surbrillance.](../images/ui/overview/segment-browse-segments.png)
+![La liste des actions rapides s’affiche pour les audiences dont l’origine est [!UICONTROL Composition de l’audience].](../images/ui/overview/browse-audience-composition-details.png)
 
-En haut de la page se trouvent les options permettant d’ajouter tous les segments à un planning et de créer un nouveau segment.
+| Action | Origines | Description |
+| ------ | ------- | ----------- |
+| Modifier | Segmentation Service | Permet d’ouvrir le créateur de segments pour modifier votre audience. Pour plus d’informations sur l’utilisation du créateur de segments, veuillez lire le [Guide de l’interface utilisateur du créateur de segments](./segment-builder.md). |
+| Composition ouverte | Composition de l’audience | Permet d’ouvrir la composition d’audience pour afficher votre audience. Pour plus d’informations sur la composition de l’audience, veuillez lire la section [guide de l’interface utilisateur de composition d’audience](./audience-composition.md). |
+| Activer la destination | Segmentation Service | Permet d’activer l’audience vers une destination. Pour plus d’informations sur l’activation d’une audience vers une destination, veuillez lire la section [présentation de l’activation](../../destinations/ui/activation-overview.md). |
+| Partager avec les partenaires | Composition d’audience, chargement personnalisé, service de segmentation | Permet de partager votre audience avec d’autres utilisateurs de Platform. Pour plus d’informations sur cette fonctionnalité, veuillez lire la section [Correspondance de segment - Aperçu](./segment-match/overview.md). |
+| Gérer les balises | Composition d’audience, chargement personnalisé, service de segmentation | Permet de gérer les balises définies par l’utilisateur qui appartiennent à l’audience. Pour plus d’informations sur cette fonctionnalité, consultez la section sur [filtrage et balisage](#manage-audiences). |
+| Déplacer vers le dossier | Composition d’audience, chargement personnalisé, service de segmentation | Permet de gérer le dossier auquel appartient l’audience. Pour plus d’informations sur cette fonctionnalité, consultez la section sur [filtrage et balisage](#manage-audiences). |
+| Copier | Composition d’audience, chargement personnalisé, service de segmentation | Duplique l’audience sélectionnée. |
+| Appliquer les libellés d’accès | Composition d’audience, chargement personnalisé, service de segmentation | Permet de gérer les étiquettes d’accès qui appartiennent à l’audience. Pour plus d’informations sur les libellés d’accès, veuillez lire la documentation sur la [gestion des libellés](../../access-control/abac/ui/labels.md). |
+| Archiver | Chargement personnalisé | Archivez l’audience sélectionnée. |
+| Supprimer | Composition d’audience, chargement personnalisé, service de segmentation | Supprime l’audience sélectionnée. |
 
-Basculer vers **[!UICONTROL Ajouter tous les segments à planifier]** active la segmentation planifiée. Vous trouverez plus d’informations sur la segmentation planifiée dans la [section segmentation planifiée de ce guide d’utilisation](#scheduled-segmentation).
+En haut de la page se trouvent les options permettant d’ajouter toutes les audiences à un planning, d’importer une audience et de créer une audience.
 
-Sélectionner **[!UICONTROL Créer un segment]** vous amènera au créateur de segments. Pour en savoir plus sur la création de segments, consultez la section sur la [création d’un segment dans le guide d’utilisation](#create-segment).
+Basculement **[!UICONTROL Planification de toutes les audiences]** active la segmentation planifiée. Vous trouverez plus d’informations sur la segmentation planifiée dans la [section segmentation planifiée de ce guide d’utilisation](#scheduled-segmentation).
 
-![La barre de navigation supérieure de la page de navigation des segments est mise en surbrillance. Cette barre contient un bouton (bascule) permettant d’ajouter tous les segments à un planning et un bouton permettant de créer un segment.](../images/ui/overview/segment-browse-top.png)
+Sélection **[!UICONTROL Importer une audience]** vous permet d’importer une audience générée en externe. Pour en savoir plus sur l&#39;import d&#39;audiences, veuillez lire la section sur [import d’une audience dans le guide d’utilisation](#import-audience).
 
-La barre latérale droite contient des informations sur tous les segments de l’organisation, répertoriant le nombre total de segments, la date de dernière évaluation, la date d’évaluation suivante, ainsi qu’une répartition des segments par méthode d’évaluation.
+Sélection **[!UICONTROL Créer une audience]** vous permet de créer une audience. Pour en savoir plus sur la création d’audiences, consultez la section sur [création d’une audience dans le guide d’utilisation](#create-audience).
 
-![La barre latérale droite de la page de navigation des segments est mise en surbrillance. Des informations sur les segments dans l’organisation s’affichent. Cela inclut des informations telles que le nombre total de segments, l’heure de la dernière évaluation, l’heure de la prochaine évaluation, ainsi qu’une répartition des différents types de segments.](../images/ui/overview/segment-browse-segment-info.png)
-
-La sélection de la ligne de la définition de segment fournit un résumé de la définition de segment, y compris des options permettant de modifier ou de supprimer le segment, d’activer le segment vers une destination, l’audience qualifiée pour le segment, la taille totale de l’audience, en plus du nom du segment, de la description, de la méthode d’évaluation, de la date de création et de la date de dernière modification.
+![La barre de navigation supérieure de la page de navigation de l’audience est mise en surbrillance. Cette barre contient un bouton pour créer une audience et un bouton pour importer une audience.](../images/ui/overview/browse-audiences-top.png)
 
 >[!NOTE]
 >
-> Vous **ne pourrez pas** supprimer un segment utilisé dans une activation de destination.
+> Vous aurez **not** peuvent supprimer une audience utilisée dans une activation de destination.
 
-![Des détails sur le segment sélectionné s’affichent. Cela inclut des détails sur le nombre de profils qualifiés, la répartition en pourcentage des profils qualifiés par rapport au total des profils et la date de la dernière évaluation.](../images/ui/overview/segment-browse-details.png)
+### Filtrage et balisage {#manage-audiences}
 
-## Détails de la définition de segment {#segment-details}
+Pour améliorer votre efficacité, vous pouvez rechercher des audiences existantes, ajouter des balises définies par l’utilisateur aux audiences, placer des audiences dans des dossiers et filtrer les audiences affichées.
 
-Pour afficher plus d’informations sur une définition de segment spécifique, sélectionnez le nom d’un segment dans l’onglet **[!UICONTROL Parcourir]**.
+**Recherche** {#search}
 
-La page Détails du segment s’affiche. En haut se trouve un résumé de la définition de segment, des informations sur la taille d’audience qualifiée, ainsi que les destinations pour lesquelles le segment est activé.
+Vous pouvez rechercher vos audiences existantes dans 9 langues différentes au maximum avec [!DNL Unified Search].
 
-![La page de détails de la définition de segment s’affiche. Le résumé du segment, l’audience totale dans le segment et les cartes de destinations activées sont mis en surbrillance.](../images/ui/overview/segment-details-summary.png)
+Pour utiliser [!DNL Unified Search], ajoutez le terme à rechercher dans la barre de recherche en surbrillance.
 
-### Résumé du segment {#segment-summary}
+![La barre de recherche est mise en surbrillance.](../images/ui/overview/browse-audience-search.png)
 
-Le **[!UICONTROL résumé du segment]** fournit des informations telles que l’identifiant, le nom, la description et les détails des attributs.
+Pour plus d’informations sur [!DNL Unified Search], y compris les fonctionnalités prises en charge, veuillez lire la [Documentation sur la recherche unifiée](https://experienceleague.adobe.com/docs/core-services/interface/services/search-experience-cloud.html).
 
-De plus, vous avez la possibilité d’activer le segment vers une destination ou de le modifier. Sélectionner **[!UICONTROL Activer vers la destination]** vous permet d’activer le segment vers une destination. Pour plus d’informations sur l’activation d’un segment vers une destination, veuillez lire la [présentation de l’activation](../../destinations/ui/activation-overview.md).
+**Balises** {#tags}
 
-![Le bouton Activer à la destination est mis en surbrillance.](../images/ui/overview/segment-details-activate.png)
+Vous pouvez ajouter des balises définies par l’utilisateur pour mieux décrire, trouver et gérer vos audiences.
 
-Sélectionner **[!UICONTROL Modifier le segment]** vous amènera au [!DNL Segment Builder]. Pour plus d’informations sur l’utilisation de l’espace de travail [!DNL Segment Builder], veuillez lire le [[!DNL Segment Builder] guide de l’utilisateur](./segment-builder.md).
+Pour ajouter une balise, sélectionnez **[!UICONTROL Gestion des balises]** sur l’audience que vous souhaitez baliser.
 
-![](../images/ui/overview/segment-details-edit-segment.png)
+![Le [!UICONTROL Gestion des balises] est sélectionné pour une audience spécifique.](../images/ui/overview/browse-manage-tags.png)
 
-### Audience totale dans le segment
+Le **[!UICONTROL Gestion des balises]** s’affiche. Dans cette fenêtre contextuelle, vous pouvez sélectionner une balise catégorisée ou une balise non classée.
 
-La section **[!UICONTROL Audience totale dans le segment]** indique le nombre total de profils qui remplissent les critères du segment.
+| Type de balise | Description |
+| -------- | ----------- |
+| Catégorisé | Balise créée et gérée par les administrateurs de votre entreprise. |
+| Non classé | Balise créée dans la variable [!UICONTROL Gestion des balises] de la fenêtre contextuelle. N’importe qui peut créer ou gérer ces types de balises. |
 
-Les estimations sont générées en utilisant une taille d’échantillon des données d’exemple du jour. S’il y a moins d’un million d’entités dans votre banque de profils, l’ensemble des données est utilisé. Entre 1 et 20 millions d’entités, 1 million d’entités sont utilisées. Et pour plus de 20 millions d’entités, 5 % du total des entités sont utilisés. Vous trouverez plus d’informations sur la génération d’estimations de segments dans la [section Génération d’estimations](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) du tutoriel sur la création de segments.
+![Le [!UICONTROL Gestion des balises] s’affiche. Les options de sélection d’une catégorie ou d’une catégorie non catégorisée sont mises en surbrillance.](../images/ui/overview/create-tag.png)
 
-### Destinations activées
+Après avoir ajouté toutes les balises à joindre à l’audience, sélectionnez **[!UICONTROL Enregistrer]**.
 
-La section **[!UICONTROL Destinations activées]** affiche les destinations pour lesquelles ce segment est activé.
+![Sur le [!UICONTROL Gestion des balises] , les balises ajoutées sont mises en surbrillance.](../images/ui/overview/created-tags.png)
+
+Pour plus d’informations sur la création et la gestion des balises, consultez la section [Guide de gestion des balises](../../administrative-tags/ui/managing-tags.md).
+
+**Dossiers** {#folders}
+
+Vous pouvez placer des audiences dans des dossiers pour une meilleure gestion de l’audience.
+
+Pour déplacer une audience dans un dossier, sélectionnez **[!UICONTROL Déplacer vers le dossier]** sur l’audience que vous souhaitez déplacer.
+
+![Le [!UICONTROL Déplacer vers le dossier] est sélectionné pour une audience spécifique.](../images/ui/overview/browse-move-to-folder.png)
+
+Le **Déplacer l’audience vers le dossier** s’affiche. Sélectionnez le dossier vers lequel vous souhaitez déplacer l’audience, puis sélectionnez **[!UICONTROL Enregistrer]**.
+
+![La fenêtre contextuelle Déplacer l’audience vers le dossier s’affiche. Le dossier vers lequel l’audience sera déplacée est mis en surbrillance.](../images/ui/overview/move-to-folder.png)
+
+Une fois que l’audience se trouve dans un dossier, vous pouvez choisir d’afficher uniquement les audiences appartenant à un dossier spécifique.
+
+![Les audiences appartenant à un dossier spécifique s’affichent.](../images/ui/overview/browse-folders.png)
+
+**Filtrer** {#filter}
+
+Vous pouvez également filtrer les audiences en fonction de divers paramètres.
+
+Pour filtrer les audiences disponibles, sélectionnez la variable ![icône de filtre](../images/ui/overview/filter-icon.png).
+
+![La page Parcourir les audiences s’affiche, l’icône de filtre étant mise en surbrillance.](../images/ui/overview/browse-select-filter.png)
+
+La liste des filtres disponibles s’affiche.
+
+| Filtre | Description |
+| ------ | ----------- |
+| [!UICONTROL Origine] | Permet de filtrer l&#39;audience en fonction de son origine. Les options disponibles comprennent le service Segmentation, le téléchargement personnalisé, la composition de l’audience et l’Audience Manager. |
+| [!UICONTROL Comporte une balise] | Permet de filtrer par balises. Vous pouvez effectuer une sélection parmi **[!UICONTROL Comporte une balise]** et **[!UICONTROL Comporte toutes les balises]**. When **[!UICONTROL Comporte une balise]** est sélectionnée, les audiences filtrées incluent **any** des balises que vous avez ajoutées. When **[!UICONTROL Comporte toutes les balises]** est sélectionnée, les audiences filtrées doivent inclure **all** des balises que vous avez ajoutées. |
+| [!UICONTROL Statut du cycle de vie] | Permet de filtrer les données en fonction de l’état de cycle de vie de l’audience. Les options disponibles incluent : [!UICONTROL Principal], [!UICONTROL Archivé], [!UICONTROL Supprimé], [!UICONTROL Version préliminaire], [!UICONTROL Inactif], et [!UICONTROL Publié]. |
+| [!UICONTROL Fréquence de mise à jour] | Permet de filtrer selon la fréquence de mise à jour de l’audience. Les options disponibles incluent : [!UICONTROL Planifié], [!UICONTROL Continu], et [!UICONTROL À la demande]. |
+| [!UICONTROL Créé par] | Permet de filtrer les données en fonction de la personne qui a créé l’audience. |
+| [!UICONTROL Date de création] | Permet de filtrer les données selon la date de création de l’audience. Vous pouvez choisir une période à filtrer lors de la création de l’audience. |
+| [!UICONTROL Date de modification] | Permet de filtrer selon la date de dernière modification de l’audience. Vous pouvez choisir une période à filtrer lorsque l’audience a été modifiée pour la dernière fois. |
+
+![Les filtres disponibles sont affichés et mis en surbrillance sur la page des audiences de navigation.](../images/ui/overview/filter-audiences.png)
+
+### Détails de l’audience {#audience-details}
+
+Pour afficher plus de détails sur une audience spécifique, sélectionnez le nom d’une audience dans la variable **[!UICONTROL Parcourir]** .
+
+La page Détails de l’audience s’affiche. En haut se trouve un résumé de l’audience, des informations sur la taille de l’audience qualifiée, ainsi que les destinations pour lesquelles le segment est activé.
+
+![La page des détails de l’audience s’affiche. La synthèse de l’audience, le total de l’audience et les cartes de destinations activées sont mis en surbrillance.](../images/ui/overview/audience-details-summary.png)
+
+**Synthèse de l’audience** {#segment-summary}
+
+Le **[!UICONTROL Synthèse de l’audience]** fournit des informations telles que l’identifiant, le nom, la description, l’origine et les détails des attributs.
+
+De plus, vous avez la possibilité d’activer l’audience vers une destination, d’appliquer des étiquettes d’accès ou de modifier/mettre à jour l’audience.
+
+Sélection **[!UICONTROL Activer la destination]** vous permet d’activer l’audience vers une destination. Pour plus d’informations sur l’activation d’une audience vers une destination, veuillez lire la section [présentation de l’activation](../../destinations/ui/activation-overview.md).
+
+![Le bouton Activer à la destination est mis en surbrillance.](../images/ui/overview/audience-details-activate.png)
+
+Sélection **[!UICONTROL Appliquer les libellés d’accès]** permet de gérer les libellés d’accès qui appartiennent à l’audience. Pour plus d’informations sur les libellés d’accès, veuillez lire la documentation sur la [gestion des libellés](../../access-control/abac/ui/labels.md).
+
+![Le bouton Appliquer les libellés d’accès est mis en surbrillance.](../images/ui/overview/audience-details-access-labels.png)
+
+>[!BEGINTABS]
+
+>[!TAB Composition de l’audience]
+
+![La page des détails de l’audience s’affiche, avec la variable [!UICONTROL Composition ouverte] en surbrillance.](../images/ui/overview/audience-details-open-composition.png)
+
+Sélection **[!UICONTROL Composition ouverte]** vous permet d’afficher votre audience dans la composition de l’audience. Pour plus d’informations sur la composition de l’audience, veuillez lire le [Guide de l’interface utilisateur de composition d’audience](./audience-composition.md).
+
+>[!TAB Chargement personnalisé]
+
+![La page des détails de l’audience s’affiche, avec la variable [!UICONTROL Mise à jour d’audience] en surbrillance.](../images/ui/overview/audience-details-update-audience.png)
+
+Sélection **[!UICONTROL Mise à jour d’audience]** permet de recharger une audience générée de l’extérieur. Pour plus d’informations sur l’import d’une audience générée de l’extérieur, veuillez lire la section sur [import d&#39;une audience](#import-audience).
+
+>[!TAB Segmentation Service]
+
+![La page des détails de l’audience s’affiche, avec la variable [!UICONTROL Modifier l’audience] en surbrillance.](../images/ui/overview/audience-details-edit-audience.png)
+
+Sélection **[!UICONTROL Modifier l’audience]** vous permet de modifier votre audience dans le créateur de segments. Pour plus d’informations sur l’utilisation de l’espace de travail [!DNL Segment Builder], veuillez lire le [[!DNL Segment Builder] guide de l’utilisateur](./segment-builder.md).
+
+>[!ENDTABS]
+
+Sélection **[!UICONTROL Modifier les propriétés]** vous permet de modifier les détails de base de l’audience, tels que le nom, la description et les balises.
+
+![](../images/ui/overview/audience-details-edit-properties.png)
+
+**Total de l’audience** {#audience-total}
+
+Le **[!UICONTROL Total de l’audience]** indique le nombre total de profils qui remplissent les critères de l’audience.
+
+Les estimations sont générées en utilisant une taille d’échantillon des données d’exemple du jour. S’il y a moins d’un million d’entités dans votre banque de profils, l’ensemble des données est utilisé. Entre 1 et 20 millions d’entités, 1 million d’entités sont utilisées. Et pour plus de 20 millions d’entités, 5 % du total des entités sont utilisés. Vous trouverez plus d’informations sur la génération d’estimations dans la section [section génération d’estimation](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) du tutoriel sur la création d’audience.
+
+**Destinations activées** {#activated-destinations}
+
+Le **[!UICONTROL Destinations activées]** affiche les destinations pour lesquelles cette audience est activée.
 
 >[!NOTE]
 >
 > Les destinations sont une fonctionnalité disponible avec [!DNL Adobe Real-Time Customer Data Platform] et vous permettent d’exporter des données vers des plateformes externes. Pour plus d’informations sur les destinations, veuillez lire la [présentation des destinations](../../destinations/home.md). Pour savoir comment activer un segment vers une destination, voir la [présentation de l’activation](../../destinations/ui/activation-overview.md).
 
-### Exemples de profils
+**Exemples de profils** {#profile-samples}
 
 Ci-dessous se trouvent des exemples de profils qui remplissent les critères du segment avec des informations détaillées, y compris l’identifiant [!DNL Profile], le prénom, le nom et l’adresse e-mail personnelle.
 
@@ -155,117 +282,112 @@ La taille de l’échantillon dépend du nombre total d’entités dans votre ba
 
 Des informations plus détaillées sur chaque [!DNL Profile] peuvent être consultées en sélectionnant l’identifiant [!DNL Profile]. Pour en savoir plus sur les détails d’un profil, veuillez lire le [[!DNL Real-Time Customer Profile] guide de l’utilisateur](../../profile/ui/user-guide.md#profile-detail).
 
-![Les exemples de profils pour la définition de segment sont mis en surbrillance. Les informations d’exemples de profil incluent l’identifiant du profil, le prénom, le nom et l’adresse e-mail de la personne.](../images/ui/overview/segment-details-profiles.png)
+![Les exemples de profils pour l’audience sont mis en surbrillance. Les informations d’exemples de profil incluent l’identifiant du profil, le prénom, le nom et l’adresse e-mail de la personne.](../images/ui/overview/audience-details-profiles.png)
 
-## Créer un segment {#create-segment}
-
-Cliquez sur **[!UICONTROL Créer un segment]** dans le coin supérieur droit pour ouvrir l’espace de travail du [!DNL Segment Builder], où vous pouvez commencer à créer une définition de segment.
-
-![Sur la page de navigation de segment, le bouton Créer un segment est mis en surbrillance.](../images/ui/overview/segment-browse-create.png)
-
-### Espace de travail [!DNL Segment Builder]
-
-Le [!DNL Segment Builder] offre un vaste espace de travail qui vous permet d’interagir avec les éléments de données de [!DNL Profile]. L’espace de travail fournit des commandes intuitives pour la création et la modification de règles, telles que le glisser-déposer de mosaïques utilisées pour représenter les propriétés des données.
-
-Pour plus d’informations sur l’utilisation de l’espace de travail du [!DNL Segment Builder], veuillez lire le [[!DNL Segment Builder] guide de l’utilisateur](./segment-builder.md).
-
-![L‘espace de travail du créateur de segments s’affiche.](../images/ui/overview/segment-builder.png)
-
-## Segmentation planifiée {#scheduled-segmentation}
-
-Une fois les définitions de segment créées, vous pouvez les évaluer par le biais d’une évaluation sur demande ou planifiée (continue). L’évaluation consiste à déplacer les données [!DNL Real-Time Customer Profile] par le biais de définitions de segment afin de former des audiences correspondantes. Une fois créées, les audiences sont enregistrées et stockées afin de pouvoir être exportées à l’aide d’API [!DNL Experience Platform].
-
-L’évaluation sur demande nécessite l’utilisation de l’API pour effectuer l’évaluation et créer des audiences selon les besoins, alors que l’évaluation planifiée (également appelée « segmentation planifiée ») vous permet de créer un planning récurrent pour évaluer les définitions de segment à un moment précis (au maximum, une fois par jour).
-
-### Activer la segmentation planifiée {#enable-scheduled-segmentation}
-
-Vous pouvez activer les définitions de segment pour une évaluation planifiée à l’aide de l’interface utilisateur ou de l’API. Dans l’interface utilisateur, revenez à l’onglet **[!UICONTROL Parcourir]** dans **[!UICONTROL Segments]** et activez l’option **[!UICONTROL Ajouter tous les segments à planifier]**. Tous les segments seront alors évalués en fonction du planning défini par votre organisation.
-
->[!NOTE]
->
->L’évaluation planifiée peut être activée pour les sandbox avec un maximum de cinq (5) politiques de fusion pour [!DNL XDM Individual Profile]. Si votre organisation compte plus de cinq politiques de fusion pour [!DNL XDM Individual Profile] dans une seul sandbox, vous ne pourrez pas procéder à l’évaluation planifiée.
-
-Actuellement, les plannings ne peuvent être créés qu’à l’aide de l’API. Pour obtenir des instructions détaillées sur la création, la modification et l’utilisation des plannings à l’aide de l’API, suivez le tutoriel relatif à l’évaluation et à l’accès aux résultats de segmentation, en particulier la section sur [l’évaluation planifiée à l’aide de l’API](../tutorials/evaluate-a-segment.md#scheduled-evaluation).
-
-![Le bouton (bascule) Ajouter tous les segments à un planning est mis en surbrillance sur la page de navigation des segments.](../images/ui/overview/segment-browse-scheduled.png)
-
-## Audiences {#audiences}
-
->[!IMPORTANT]
->
->La fonctionnalité des audiences est actuellement en version bêta et n’est pas disponible pour tous les utilisateurs et utilisatrices. La documentation et les fonctionnalités peuvent changer.
-
-Sélectionnez l’onglet **[!UICONTROL Audiences]** pour afficher la liste de toutes les audiences de votre organisation.
-
-![Liste des audiences de votre organisation.](../images/ui/overview/list-audiences.png)
-
-Par défaut, cette vue répertorie les informations sur les audiences, notamment le nom, le nombre de profils, l’origine, la date de création et la date de dernière modification.
-
-Vous pouvez sélectionner l’icône ![Personnaliser le tableau](../images/ui/overview/customize-table.png) pour modifier les champs affichés.
-
-![Le bouton Personnaliser le tableau est mis en surbrillance. En sélectionnant ce bouton, vous pouvez personnaliser les champs affichés sur la page de navigation Audiences.](../images/ui/overview/select-customize-table.png)
-
-Une fenêtre contextuelle s’affiche, répertoriant tous les champs pouvant être affichés dans le tableau.
-
-![Attributs pouvant être affichés pour la section Parcourir les audiences.](../images/ui/overview/customize-table-attributes.png)
-
-| Champ | Description |
-| ----- | ----------- | 
-| [!UICONTROL Nom] | Nom de l’audience. |
-| [!UICONTROL Nombre de profils] | Nombre total de profils qui remplissent les critères de l’audience. |
-| [!UICONTROL Origine] | Origine de l’audience. Si cette audience a été générée par Platform, elle aura une origine de Segmentation Service. |
-| [!UICONTROL Statut du cycle de vie] | Statut de l’audience. Les valeurs possibles pour ce champ incluent `Draft`, `Published` et `Archived`. |
-| [!UICONTROL Fréquence de mise à jour] | Valeur qui indique la fréquence de mise à jour des données de l’audience. Les valeurs possibles pour ce champ incluent `On Demand`, `Scheduled` et `Continuous`. |
-| [!UICONTROL Dernière mise à jour par] | Nom de la personne qui a mis à jour l’audience pour la dernière fois. |
-| [!UICONTROL Créé] | Heure et date de création de l’audience. |
-| [!UICONTROL Dernière mise à jour] | Heure et date de la dernière création de l’audience. |
-| [!UICONTROL Libellés d’accès] | Libellés d’accès pour l’audience. Les libellés d’accès vous permettent de classer les jeux de données et les champs en fonction des politiques d’utilisation qui s’appliquent à ces données. Vous pouvez appliquer les libellés à tout moment, ce qui vous offre une certaine flexibilité quant à la manière dont vous choisissez de gérer les données. Pour plus d’informations sur les libellés d’accès, veuillez lire la documentation sur la [gestion des libellés](../../access-control/abac/ui/labels.md). |
+### Créer une audience {#create-audience}
 
 Vous pouvez sélectionner **[!UICONTROL Créer une audience]** pour créer une audience.
 
-![Le bouton Créer une audience est mis en surbrillance et indique l’emplacement à sélectionner pour créer une audience.](../images/ui/overview/create-audience.png)
+![Sur la page de navigation Audience, le bouton Créer une audience est mis en surbrillance.](../images/ui/overview/browse-create-audience.png)
 
 Une fenêtre contextuelle s’affiche, vous permettant de choisir entre composer une audience ou créer des règles.
 
 ![Une fenêtre contextuelle qui affiche les deux types d’audiences que vous pouvez créer.](../images/ui/overview/create-audience-type.png)
 
-Sélectionner **[!UICONTROL Composer les audiences]** vous conduit au créateur d’audiences. Pour en savoir plus sur la création d’audiences, veuillez lire le [Guide du créateur d’audiences](./audience-builder.md).
+**Composition de l’audience** {#audience-composition}
 
-Sélectionner **[!UICONTROL Créer une règle]** vous dirige vers le créateur de segments. Pour en savoir plus sur la création de segments, consultez le [Guide du créateur de segments](./segment-builder.md).
+Sélection **[!UICONTROL Composer les audiences]** vous emmène à la composition de l’audience. Cet espace de travail fournit des contrôles intuitifs pour la création et la modification d’audiences, tels que le glisser-déposer de mosaïques utilisées pour représenter différentes actions. Pour en savoir plus sur la création d’audiences, veuillez lire le [Guide sur la composition de l’audience](./audience-composition.md).
 
-## Détails de l’audience {#audience-details}
+![L’espace de travail Composition de l’audience s’affiche.](../images/ui/overview/audience-composition.png)
 
-Pour afficher plus de détails sur une audience spécifique, sélectionnez le nom d’une audience dans l’onglet [!UICONTROL Audiences].
+**Créateur de segments** {#segment-builder}
 
-La page Détails de l’audience s’affiche. Cette page diffère en détails selon que l’audience a été générée avec Adobe Experience Platform ou à partir d’une source externe telle qu’Audience Orchestration.
+Sélection **[!UICONTROL Créer une règle]** vous dirige vers le créateur de segments. Cet espace de travail fournit des commandes intuitives pour la création et la modification de définitions de segment, telles que les tuiles par glisser-déposer utilisées pour représenter les propriétés des données. Pour en savoir plus sur la création de définitions de segment, consultez la section [Guide du créateur de segments](./segment-builder.md)
 
-### Audience générée par Platform
+![L‘espace de travail du créateur de segments s’affiche.](../images/ui/overview/segment-builder.png)
 
-Pour plus d’informations sur les audiences générées par Platform, veuillez lire la [section de résumé du segment](#segment-summary).
+### Importer une audience {#import-audience}
 
-### Audience générée de manière externe
+Vous pouvez sélectionner **[!UICONTROL Importer une audience]** pour importer une audience générée de l’extérieur.
 
-En haut de la page des détails de l’audience se trouve un résumé de l’audience et des détails sur le jeu de données dans lequel l’audience est enregistrée.
+![Sur la page de navigation Audience, le bouton Importer une audience est mis en surbrillance.](../images/ui/overview/browse-import-audience.png)
 
-![Détails fournis pour une audience générée de manière externe.](../images/ui/overview/externally-generated-audience.png)
+Le **[!UICONTROL Importation d’un fichier CSV d’audience]** le workflow s’affiche. Vous pouvez sélectionner un fichier CSV à importer en tant qu’audience générée en externe.
 
-La section **[!UICONTROL Résumé de l’audience]** fournit des informations telles que l’identifiant, le nom, la description et les détails des attributs.
+![Dans le [!UICONTROL Importation d’un fichier CSV d’audience] le workflow, [!UICONTROL Glisser-déposer des fichiers] est mise en surbrillance, indiquant où vous pouvez charger votre audience générée en externe.](../images/ui/overview/import-audience-csv.png)
 
-La section **[!UICONTROL Détails du jeu de données]** fournit des informations telles que le nom, la description, le nom de la table, la source et le schéma. Vous pouvez sélectionner **[!UICONTROL Afficher le jeu de données]** pour afficher plus d’informations sur le jeu de données.
+>[!NOTE]
+>
+>L’audience générée externe **must** être au format CSV, disposer d’un **maximum** de 11 colonnes et être inférieur à 1 Go.
+
+Après avoir sélectionné le fichier CSV à importer, une liste d’exemples de données s’affiche pour cette audience générée en externe. Après avoir confirmé que les données d’exemple sont correctes, sélectionnez **[!UICONTROL Suivant]**.
+
+![Des exemples de données pour l’audience générée en externe s’affichent.](../images/ui/overview/import-audience-sample-data.png)
+
+Le **[!UICONTROL Détails de l’audience]** s’affiche. Vous pouvez ajouter des informations sur votre audience, notamment son nom, sa description, son identité Principale et sa valeur d’espace de noms d’identité.
+
+![Le [!UICONTROL Détails de l’audience] s’affiche.](../images/ui/overview/import-audience-audience-details.png)
+
+Après avoir renseigné les détails de votre audience, sélectionnez **[!UICONTROL Suivant]**.
+
+![Le [!UICONTROL Suivant] est mis en surbrillance sur le bouton [!UICONTROL Détails de l’audience] page.](../images/ui/overview/import-audience-filled-details.png)
+
+Le **[!UICONTROL Réviser]** s’affiche. Vous pouvez consulter les détails de l’audience nouvellement importée en externe.
+
+![Le [!UICONTROL Réviser] s’affiche, avec les détails de votre audience nouvellement importée en externe.](../images/ui/overview/import-audience-review-details.png)
+
+Une fois que les détails sont corrects, sélectionnez **[!UICONTROL Terminer]** pour importer votre audience générée de l’extérieur dans Adobe Experience Platform.
+
+## Segmentation planifiée {#scheduled-segmentation}
+
+Une fois les audiences créées, vous pouvez les évaluer par le biais d’une évaluation à la demande ou planifiée (continue). Évaluation signifie se déplacer [!DNL Real-Time Customer Profile] données par le biais de tâches de segmentation afin de produire des audiences correspondantes. Une fois créées, les audiences sont enregistrées et stockées afin de pouvoir être exportées à l’aide d’API [!DNL Experience Platform].
+
+L’évaluation sur demande implique l’utilisation de l’API pour effectuer l’évaluation et créer des audiences selon les besoins, tandis que l’évaluation planifiée (également appelée &quot;segmentation planifiée&quot;) vous permet de créer un planning récurrent pour évaluer les audiences à un moment spécifique (au maximum, une fois par jour).
+
+### Activer la segmentation planifiée {#enable-scheduled-segmentation}
+
+L’activation de vos audiences pour l’évaluation planifiée peut être effectuée à l’aide de l’interface utilisateur ou de l’API. Dans l’interface utilisateur, revenez à la **[!UICONTROL Parcourir]** dans **[!UICONTROL Audiences]** et bascule sur **[!UICONTROL Planification de toutes les audiences]**. Toutes les audiences seront alors évaluées en fonction du planning défini par votre organisation.
+
+>[!NOTE]
+>
+>L’évaluation planifiée peut être activée pour les sandbox avec un maximum de cinq (5) politiques de fusion pour [!DNL XDM Individual Profile]. Si votre organisation compte plus de cinq politiques de fusion pour [!DNL XDM Individual Profile] dans une seul sandbox, vous ne pourrez pas procéder à l’évaluation planifiée.
+
+Actuellement, les plannings ne peuvent être créés qu’à l’aide de l’API. Pour obtenir des instructions détaillées sur la création, la modification et l’utilisation des plannings à l’aide de l’API, suivez le tutoriel sur l’évaluation et l’accès aux résultats de la segmentation, en particulier la section sur [évaluation planifiée à l’aide de l’API](../tutorials/evaluate-a-segment.md#scheduled-evaluation).
+
+![La bascule Planification de toutes les audiences est mise en surbrillance sur la page de navigation des audiences .](../images/ui/overview/browse-audiences-scheduled.png)
+
+## Compositions {#compositions}
+
+Sélectionnez la **[!UICONTROL Compositions]** pour afficher une liste de toutes les audiences générées par le biais de la composition de l’audience pour votre organisation.
+
+![Liste des audiences créées dans Composition de l’audience pour votre organisation.](../images/ui/overview/compositions.png)
+
+Par défaut, cette vue répertorie les informations sur les audiences, notamment le nom, l’état, la date de création, la date de création, la date de dernière mise à jour et la date de dernière mise à jour de .
+
+Vous pouvez sélectionner l’icône ![Personnaliser le tableau](../images/ui/overview/customize-table.png) pour modifier les champs affichés.
+
+![Le bouton Personnaliser le tableau est mis en surbrillance. En sélectionnant ce bouton, vous pouvez personnaliser les champs affichés sur la page Compositions d’audiences .](../images/ui/overview/compositions-select-customize-table.png)
+
+Une fenêtre contextuelle s’affiche, répertoriant tous les champs pouvant être affichés dans le tableau.
+
+![Attributs pouvant être affichés pour la section Composition .](../images/ui/overview/compositions-customize-table.png)
 
 | Champ | Description |
-| ----- | ----------- |
-| [!UICONTROL Nom] | Nom du jeu de données. |
-| [!UICONTROL Description] | Description du jeu de données. |
-| [!UICONTROL Nom de la table] | Nom de la table du jeu de données. |
-| [!UICONTROL Source] | Source du jeu de données. Pour les audiences générées en externe, cette valeur sera **Schéma**. |
-| [!UICONTROL Schéma] | Type de schéma XDM auquel le jeu de données correspond. |
+| ----- | ----------- | 
+| [!UICONTROL Nom] | Nom de l’audience. |
+| [!UICONTROL Statut] | Statut de l’audience. Les valeurs possibles pour ce champ incluent `Draft`, `Published` et `Archived`. |
+| [!UICONTROL Créé] | Heure et date de création de l’audience. |
+| [!UICONTROL Créé par] | Nom de la personne qui a créé l’audience. |
+| [!UICONTROL Mise à jour] | Heure et date de la dernière mise à jour de l’audience. |
+| [!UICONTROL Mis à jour par] | Nom de la personne qui a mis à jour l’audience pour la dernière fois. |
 
-Pour en savoir plus sur les jeux de données, veuillez lire la [présentation des jeux de données](../../catalog/datasets/overview.md).
+Pour afficher la composition de l’audience, sélectionnez le nom d’une audience dans le [!UICONTROL Audiences] .
+
+La page Composition de l’audience s’affiche avec les blocs de création qui composent votre audience. Pour plus d’informations sur l’utilisation de la composition de l’audience, veuillez lire le [Guide de l’interface utilisateur de composition d’audience](./audience-composition.md).
 
 ## Segmentation en flux continu {#streaming-segmentation}
 
-La segmentation en flux continu est la possibilité d’effectuer une segmentation sur [!DNL Platform] en temps quasi réel, tout en se concentrant sur la richesse des données. Avec la segmentation en flux continu, la qualification de segment se produit désormais lorsque les données entrent dans [!DNL Platform], ce qui évite d’avoir à planifier et à exécuter des tâches de segmentation.
+La segmentation en flux continu est la possibilité d’effectuer une segmentation sur [!DNL Platform] en temps quasi réel, tout en se concentrant sur la richesse des données. Avec la segmentation par flux, la qualification pour la segmentation se produit maintenant lorsque les données entrent dans la [!DNL Platform], ce qui évite d’avoir à planifier et à exécuter des tâches de segmentation.
 
 Vous trouverez plus d’informations sur la segmentation en flux continu dans le [guide d’utilisation de la segmentation en flux continu](./streaming-segmentation.md).
 
@@ -275,7 +397,7 @@ Vous trouverez plus d’informations sur la segmentation en flux continu dans le
 
 ## Segmentation Edge {#edge-segmentation}
 
-La segmentation Edge permet d’évaluer les segments dans Adobe Experience Platform instantanément sur le serveur Edge, en activant les cas d’utilisation de la personnalisation sur une même page et sur la page suivante.
+La segmentation Edge permet d’évaluer instantanément les audiences dans Platform, ce qui permet de gérer les cas d’utilisation de personnalisation de la même page et de la page suivante.
 
 Vous trouverez plus d’informations sur la segmentation Edge dans le [guide de l’interface utilisateur de segmentation Edge](./edge-segmentation.md).
 
@@ -283,14 +405,14 @@ Vous trouverez plus d’informations sur la segmentation Edge dans le [guide de 
 
 >[!NOTE]
 >
->Les violations de politique ne s’appliquent que si vous créez un segment qui a été affecté à une destination.
+>Les violations de stratégie ne s’appliquent que si vous créez une audience qui a été affectée à une destination.
 
-Une fois le segment créé, il est analysé par la gouvernance des données d’Adobe Experience Platform afin de s’assurer qu’il n’y a aucune violation de politique dans le segment. Pour plus d’informations, consultez la [présentation de la gouvernance des données](../../data-governance/home.md).
+Une fois la création de votre audience terminée, l’audience est analysée par la gouvernance des données de Adobe Experience Platform afin de s’assurer qu’il n’y a aucune violation de stratégie au sein de l’audience. Pour plus d’informations, consultez la [présentation de la gouvernance des données](../../data-governance/home.md).
 
-![Les violations de politique pour le segment s’affichent.](../images/ui/overview/segment-dule-policy-violations.png)
+![Les violations de stratégie pour l’audience s’affichent.](../images/ui/overview/audience-dule-policy-violations.png)
 
 ## Étapes suivantes et ressources supplémentaires {#next-steps}
 
-L’interface utilisateur de [!DNL Segmentation Service] fournit un workflow complet qui vous permet d’isoler les audiences commercialisables des données [!DNL Real-Time Customer Profile].
+Le [!DNL Segmentation Service] L’interface utilisateur fournit un workflow riche qui vous permet de créer des audiences commercialisables à partir de [!DNL Real-Time Customer Profile] data.
 
 Pour en savoir plus sur [!DNL Segmentation Service], veuillez continuer à lire la documentation. Pour savoir comment utiliser l’API [!DNL Segmentation Service], consultez le [[!DNL Segmentation Service] guide de développement](../api/overview.md).

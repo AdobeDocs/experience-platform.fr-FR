@@ -1,29 +1,28 @@
 ---
-keywords: Experience Platform;accueil;rubriques les plus consultées;segmentation;Segmentation;service de segments;segment;Segment;Segments;segments
 solution: Experience Platform
 title: Présentation de Segmentation Service
 description: Découvrez Adobe Experience Platform Segmentation Service et le rôle qu’il occupe dans l’écosystème de Platform.
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '1635'
-ht-degree: 100%
+source-wordcount: '1629'
+ht-degree: 93%
 
 ---
 
 # Présentation de [!DNL Segmentation Service]
 
-Adobe Experience Platform [!DNL Segmentation Service] propose une interface utilisateur et une API RESTful qui vous permettent de créer des segments et de générer des audiences à partir de vos données [!DNL Real-Time Customer Profile]. Ces segments sont configurés et conservés de manière centralisée sur [!DNL Platform] et sont facilement accessibles depuis n’importe quelle solution Adobe.
+Adobe Experience Platform [!DNL Segmentation Service] fournit une interface utilisateur et une API RESTful qui vous permettent de créer des audiences par le biais de définitions de segment ou d’autres sources à partir de vos [!DNL Real-Time Customer Profile] data. Ces audiences sont configurées et gérées de manière centralisée sur [!DNL Platform], et sont facilement accessibles par toute solution d’Adobe.
 
 Ce document offre une présentation de [!DNL Segmentation Service] et de son rôle dans Adobe Experience Platform.
 
 ## Prise en main de [!DNL Segmentation Service]
 
-Il est important de comprendre les termes clés suivants utilisés dans ce document :
+Vous devez comprendre les termes clés suivants utilisés dans ce document :
 
 - **Segmentation** : division d’un grand groupe d’individus (tels que des clients, des prospects, des utilisateurs ou des organisations) en groupes plus petits partageant des caractéristiques similaires et réagissant de la même manière aux stratégies marketing.
-- **Définition de segment** : ensemble des règles utilisées pour décrire les caractéristiques ou le comportement clés d’une audience cible. Une fois conceptualisées, les règles décrites dans une définition de segment sont utilisées pour déterminer les membres de l’audience admissibles à un segment.
-- **Audience** : ensemble des profils ainsi obtenus qui répondent aux critères d’une définition de segment.
+- **Audience**: Ensemble de personnes qui partagent des comportements et/ou des caractéristiques similaires. Cette collection de personnes peut être générée par Adobe Experience Platform à l’aide de définitions de segment (audience générée par Platform) ou à partir de sources externes (audience générée en externe).
+- **Définition de segment**: Le jeu de règles utilisé par Adobe Experience Platform pour décrire les caractéristiques ou le comportement clés d’une audience cible.
 
 ## Fonctionnement de la segmentation
 

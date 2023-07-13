@@ -1,45 +1,50 @@
 ---
-keywords: Experience Platform;accueil;rubriques populaires
 solution: Experience Platform
 title: Import et utilisation d’audiences externes
 description: Suivez ce tutoriel pour découvrir comment utiliser des audiences externes avec Adobe Experience Platform.
 exl-id: 56fc8bd3-3e62-4a09-bb9c-6caf0523f3fe
-source-git-commit: 57586104f1119f5cda926faf286c1663fbb0b240
+hide: true
+hidefromtoc: true
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '1664'
-ht-degree: 6%
+source-wordcount: '1720'
+ht-degree: 5%
 
 ---
 
 # Import et utilisation d’audiences externes
 
-Adobe Experience Platform prend en charge la possibilité d’importer une audience externe, qui peut ensuite être utilisée comme composants pour une nouvelle définition de segment. Ce document fournit un tutoriel sur la configuration de l’Experience Platform pour importer et utiliser des audiences externes.
+>[!IMPORTANT]
+>
+>Cette documentation contient des informations provenant d’une version précédente de la documentation Audiences. Elle est donc obsolète.
+
+Adobe Experience Platform prend en charge la possibilité d’importer une audience externe, qui peut ensuite être utilisée comme composants pour une nouvelle audience. Ce document fournit un tutoriel sur la configuration de l’Experience Platform pour importer et utiliser des audiences externes.
 
 ## Prise en main
 
-Ce tutoriel nécessite une compréhension pratique des différentes [!DNL Adobe Experience Platform] services impliqués dans la création de segments d’audience. Avant de commencer ce tutoriel, veuillez consulter la documentation relative aux services suivants :
+Ce tutoriel nécessite une compréhension pratique des différentes [!DNL Adobe Experience Platform] services impliqués dans la création d’audiences. Avant de commencer ce tutoriel, veuillez consulter la documentation relative aux services suivants :
 
-- [Segmentation Service](../home.md): Permet de créer des segments d’audience à partir de données Real-time Customer Profile.
+- [Segmentation Service](../home.md): Permet de créer des audiences à partir de données Real-time Customer Profile.
 - [Profil client en temps réel](../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
 - [Modèle de données d’expérience (XDM)](../../xdm/home.md) : cadre normalisé selon lequel Experience Platform organise les données d’expérience client. Pour utiliser au mieux la segmentation, veillez à ce que vos données soient ingérées en tant que profils et événements en fonction des [bonnes pratiques pour la modélisation des données](../../xdm/schema/best-practices.md).
 - [Jeu de données](../../catalog/datasets/overview.md) : la structure de stockage et de gestion pour la persistance des données dans Experience Platform.
 - [Ingestion par flux](../../ingestion/streaming-ingestion/overview.md): Comment Experience Platform ingère et stocke des données à partir de périphériques côté client et côté serveur en temps réel.
 
-### Données de segment par rapport aux métadonnées de segment
+### Audiences et définitions de segment
 
-Avant de commencer à importer et utiliser des audiences externes, il est important de comprendre la différence entre les données de segment et les métadonnées de segment.
+Avant de commencer à importer et utiliser des audiences externes, il est important de comprendre la différence entre les audiences et les définitions de segment.
 
-Les données de segment font référence aux profils qui répondent aux critères de qualification du segment et qui font donc partie de l’audience.
+Les audiences se rapportent au groupe de profils vers lequel vous essayez de filtrer. Lors de l’utilisation de définitions de segment, vous pouvez créer une audience en créant une définition de segment qui filtre vos profils sur le sous-ensemble qui répond aux critères de qualification du segment.
 
-Les métadonnées de segment sont des informations sur le segment lui-même, qui incluent le nom, la description, l’expression (le cas échéant), la date de création, la date de dernière modification et un identifiant. L’ID lie les métadonnées du segment aux profils individuels qui répondent à la qualification du segment et qui font partie de l’audience résultante.
+Les définitions de segment incluent des informations telles que le nom, la description, l’expression (le cas échéant), la date de création, la date de dernière modification et un identifiant. L’ID lie les métadonnées du segment aux profils individuels qui répondent à la qualification du segment et qui font partie de l’audience résultante.
 
-| Données de segment | Métadonnées de segment |
-| ------------ | ---------------- |
-| Profils qui répondent à la qualification des segments | Informations sur le segment lui-même |
+| Audiences | Définition de segment |
+| --------- | ---------------- |
+| Groupe de profils que vous essayez de trouver. Lorsque vous utilisez des définitions de segment, cela signifie que ce sera le groupe de profils qui répondent à la qualification du segment. | Groupe de règles utilisé pour segmenter l’audience que vous recherchez. |
 
 ## Création d’un espace de noms d’identité pour l’audience externe
 
-La première étape de l’utilisation d’audiences externes consiste à créer un espace de noms d’identité. Les espaces de noms d’identité permettent à Platform d’associer l’origine d’un segment.
+La première étape de l’utilisation d’audiences externes consiste à créer un espace de noms d’identité. Les espaces de noms d’identité permettent à Platform d’associer l’origine d’une audience.
 
 Pour créer un espace de noms d’identité, suivez les instructions de la section [guide d’espace de noms d’identité](../../identity-service/namespaces.md#manage-namespaces). Lors de la création de votre espace de noms d’identité, ajoutez les détails sources à l’espace de noms d’identité et marquez son [!UICONTROL Type] as a **[!UICONTROL Identifiant de non-personne]**.
 
