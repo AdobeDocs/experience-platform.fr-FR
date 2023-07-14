@@ -1,10 +1,10 @@
 ---
 title: Calcul des statistiques des jeux de données
 description: Ce document décrit comment calculer les statistiques au niveau des colonnes sur les jeux de données Azure Data Lake Storage (ADLS) avec des commandes SQL.
-source-git-commit: c42a7cd46f79bb144176450eafb00c2f81409380
-workflow-type: ht
-source-wordcount: '785'
-ht-degree: 100%
+source-git-commit: c7bc395038906e27449c82c518bd33ede05c5691
+workflow-type: tm+mt
+source-wordcount: '730'
+ht-degree: 90%
 
 ---
 
@@ -49,16 +49,37 @@ This second example, is a more real-world example as it uses an alias name. See 
 ANALYZE TABLE adc_geometric COMPUTE STATISTICS as <alias_name>;
 ``` -->
 
-La sortie console n’affiche pas les statistiques en réponse à la commande de calcul de statistiques de la table d’analyse. À la place, la console affiche une colonne à une seule ligne de `Statistics ID` avec un identifiant universel unique pour référencer les résultats. Une fois la requête `COMPUTE STATISTICS` terminée, les résultats sont affichés comme suit :
+La sortie console n’affiche pas les statistiques en réponse à la commande de calcul de statistiques de la table d’analyse. À la place, la console affiche une colonne à une seule ligne de `Statistics ID` avec un identifiant universel unique pour référencer les résultats. Vous pouvez également choisir **directement sur la`Statistics ID`**. Une fois la requête `COMPUTE STATISTICS` terminée, les résultats sont affichés comme suit :
 
 ```console
 | Statistics ID    | 
 | ---------------- |
-| QqMtDfHQOdYJpZlb |
+| adc_geometric_stats_1 |
 (1 row)
 ```
 
-Pour afficher la sortie, vous devez utiliser la commande `SHOW STATISTICS`. Les instructions sur l’[affichage des statistiques](#show-statistics) sont fournies ultérieurement dans le document.
+Vous pouvez interroger directement la sortie des statistiques en référençant la variable `Statistics ID` comme illustré ci-dessous :
+
+```sql
+SELECT * FROM adc_geometric_stats_1; 
+```
+
+Cette instruction vous permet d’afficher la sortie de la même manière que la commande AFFICHER les STATISTIQUES lors de l’utilisation de avec la fonction `Statistics ID`.
+
+Vous pouvez afficher une liste de toutes les statistiques calculées de la session en exécutant la commande AFFICHER LES STATISTIQUES . Vous trouverez ci-dessous un exemple de sortie de la commande AFFICHER LES STATISTIQUES .
+
+```console
+statsId | tableName | columnSet | filterContext | timestamp
+-----------+---------------+-----------+---------------------------------------+---------------
+adc_geometric_stats_1 |adc_geometric | (age) | | 25/06/2023 09:22:26
+demo_table_stats_1 | demo_table | (*) | ((age > 25)) | 25/06/2023 12:50:26
+```
+
+<!-- Commented out until the <alias_name> feature is released.
+
+To see the output, you must use the `SHOW STATISTICS` command. Instructions on [how to show the statistics](#show-statistics) are provided later in the document. 
+
+-->
 
 ## Limiter les colonnes incluses {#limit-included-columns}
 
@@ -90,7 +111,8 @@ Vous pouvez combiner la limite des colonnes et le filtre pour créer des requêt
 ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-04-01 00:00:00') and timestamp <= to_timestamp('2023-04-05 00:00:00')) COMPUTE STATISTICS FOR columns (commerce, id, timestamp);
 ```
 
-<!-- ## Create an alias name {#alias-name}
+<!-- Commented out until the <alias_name> feature is released.
+## Create an alias name {#alias-name}
 
 Since the filter condition and the column list can target a large amount of data, it is unrealistic to remember the exact values. Instead, you can provide an `<alias_name>` to store this calculated information. If you do not provide an alias name for these calculations, Query Service generates a universally unique identifier for the alias ID. You can then use this alias ID to look up the computed statistics with the `SHOW STATISTICS` command. 
 
@@ -104,22 +126,24 @@ The example below stores the output computed statistics in the `alias_name` for 
 ANALYZE TABLE adc_geometric COMPUTE STATISTICS FOR ALL COLUMNS as alias_name;
 ```
 
-The output for the above example is `SUCCESSFULLY COMPLETED, alias_name`. The console output does not display the statistics in the response of the analyze table compute statistics command. To see the output, you must use the `SHOW STATISTICS` command discussed below. -->
-
-## Afficher les statistiques {#show-statistics}
+The output for the above example is `SUCCESSFULLY COMPLETED, alias_name`. The console output does not display the statistics in the response of the analyze table compute statistics command. To see the output, you must use the `SHOW STATISTICS` command discussed below. 
+-->
 
 <!-- Commented out until the <alias_name> feature is released.
-The alias name used in the query is available as soon as the `ANALYZE TABLE` command has been run.  -->
 
-Même avec une condition de filtrage et une liste de colonnes, le calcul peut cibler une grande quantité de données. Query Service génère un identifiant universel unique pour l’ID de statistiques afin de stocker ces informations calculées. Vous pouvez ensuite utiliser cet ID de statistiques pour rechercher les statistiques calculées avec la commande `SHOW STATISTICS` à tout moment au cours de cette session.
+## Show the statistics {#show-statistics}
 
-L’identifiant de statistiques et les statistiques générées ne sont valides que pour cette session particulière et ne sont pas accessibles dans différentes sessions PSQL. Les statistiques calculées ne sont actuellement pas persistantes. Pour afficher les statistiques, utilisez la commande ci-dessous.
+The alias name used in the query is available as soon as the `ANALYZE TABLE` command has been run.  
+
+Even with a filter condition and a column list, the computation can target a large amount of data. Query Service generates a universally unique identifier for the statistics ID to store this calculated information. You can then use this statistics ID to look up the computed statistics with the `SHOW STATISTICS` command at any time within that session. 
+
+The statistics ID and the statistics generated are only valid for this particular session and cannot be accessed across different PSQL sessions. The computed statistics are not currently persistent. To display the statistics, use the command seen below.
 
 ```sql
 SHOW STATISTICS FOR <STATISTICS_ID>;
 ```
 
-Une sortie peut ressembler à l’exemple ci-dessous.
+An output might look similar to the example below. 
 
 ```console
                          columnName                         |      mean      |      max       |      min       | standardDeviation | approxDistinctCount | nullCount | dataType  
@@ -138,6 +162,8 @@ Une sortie peut ressembler à l’exemple ci-dessous.
  timestamp                                                  |            0.0 |            0.0 |            0.0 |               0.0 |                98.0 |         3 | Timestamp
 (12 rows)
 ```
+
+-->
 
 ## Étapes suivantes {#next-steps}
 
