@@ -4,10 +4,10 @@ title: Connexion à Microsoft Dynamics 365
 description: La destination Microsoft Dynamics 365 vous permet d’exporter les données de votre compte et de les activer dans Microsoft Dynamics 365 pour répondre aux besoins de votre entreprise.
 last-substantial-update: 2022-11-08T00:00:00Z
 exl-id: 49bb5c95-f4b7-42e1-9aae-45143bbb1d73
-source-git-commit: 3f31a54c0cf329d374808dacce3fac597a72aa11
+source-git-commit: 416f4ff28ae5ca7ee3235f020ce012352d6002c7
 workflow-type: tm+mt
-source-wordcount: '1786'
-ht-degree: 82%
+source-wordcount: '1927'
+ht-degree: 77%
 
 ---
 
@@ -67,7 +67,10 @@ Notez les éléments ci-dessous avant de vous authentifier à la destination CRM
 | `Client ID` | L’identifiant client [!DNL Dynamics 365] pour votre application [!DNL Azure Active Directory]. Reportez-vous à la documentation de [[!DNL Dynamics 365] ](https://docs.microsoft.com/fr-fr/azure/active-directory/develop/howto-create-service-principal-portal#get-tenant-and-app-id-values-for-signing-in) pour obtenir des conseils. | `ababbaba-abab-baba-acac-acacacacacac` |
 | `Client Secret` | Le Secret client [!DNL Dynamics 365] pour votre application [!DNL Azure Active Directory]. Vous utiliseriez l’option #2 dans la documentation de [[!DNL Dynamics 365] ](https://docs.microsoft.com/fr-fr/azure/active-directory/develop/howto-create-service-principal-portal#authentication-two-options). | `abcde~abcdefghijklmnopqrstuvwxyz12345678` pour obtenir des conseils. |
 | `Tenant ID` | L’identifiant client [!DNL Dynamics 365] pour votre application [!DNL Azure Active Directory]. Reportez-vous à la documentation de [[!DNL Dynamics 365] ](https://docs.microsoft.com/fr-fr/azure/active-directory/develop/howto-create-service-principal-portal#get-tenant-and-app-id-values-for-signing-in) pour obtenir des conseils. | `1234567-aaaa-12ab-ba21-1234567890` |
+| `Region` | Région Microsoft associée à l’URL de l’environnement.<br> Reportez-vous à la documentation de [[!DNL Dynamics 365] ](https://learn.microsoft.com/en-us/power-platform/admin/new-datacenter-regions) pour obtenir des conseils. | Si votre domaine est tel que ci-dessous, vous devez fournir la valeur mise en surbrillance pour le champ CRM dans le sélecteur de liste déroulante lors de l’authentification au [destination](#authenticate).<br> *org57771b33.`crm`.dynamics.com*<br>  Par exemple : Si votre société est configurée dans la région Amérique du Nord (NAM), votre URL sera `crm.dynamics.com` et vous devez sélectionner `crm`. Si votre société est configurée dans la région Canada (CAN), votre URL sera `crm3.dynamics.com` et vous devez sélectionner `crm3`. |
 | `Environment URL` | Reportez-vous à la documentation de [[!DNL Dynamics 365] ](https://docs.microsoft.com/fr-fr/dynamics365/customerengagement/on-premises/developer/org-service/discover-url-organization-organization-service?view=op-9-1) pour obtenir des conseils. | Si votre domaine [!DNL Dynamics 365] est comme ci-dessous, vous avez besoin de la valeur mise en surbrillance.<br> *`org57771b33`.crm.dynamics.com* |
+
+{style="table-layout:auto"}
 
 ## Mécanismes de sécurisation {#guardrails}
 
@@ -80,6 +83,8 @@ La page [Limites et allocations de requêtes](https://docs.microsoft.com/fr-fr/p
 | Identité cible | Exemple | Description | Considérations |
 |---|---|---|---|
 | `contactId` | 7eb682f1-ca75-e511-80d4-00155d2a68d1 | Identifiant unique d’un contact. | **Obligatoire**. Reportez-vous à la documentation de [[!DNL Dynamics 365] ](https://docs.microsoft.com/fr-fr/dynamics365/customerengagement/on-premises/developer/entities/contact?view=op-9-1) pour plus d’informations. |
+
+{style="table-layout:auto"}
 
 ## Type et fréquence d’exportation {#export-type-frequency}
 
@@ -111,6 +116,7 @@ Renseignez les champs obligatoires ci-dessous. Reportez-vous à la section [Coll
 * **[!UICONTROL Identifiant client]** : l’identifiant client [!DNL Dynamics 365] pour votre application [!DNL Azure Active Directory].
 * **[!UICONTROL Identifiant client]** : l’identifiant client [!DNL Dynamics 365] pour votre application [!DNL Azure Active Directory].
 * **[!UICONTROL Secret client]** : le secret client [!DNL Dynamics 365] pour votre application [!DNL Azure Active Directory].
+* **[!UICONTROL Région]**: Votre [[!DNL Dynamics 365]](https://learn.microsoft.com/en-us/power-platform/admin/new-datacenter-regions) Région. Par exemple : Si votre société est configurée dans la région Amérique du Nord (NAM), votre URL sera `crm.dynamics.com` et vous devez sélectionner `crm`. Si votre société est configurée dans la région Canada (CAN), votre URL sera `crm3.dynamics.com` et vous devez sélectionner `crm3`.
 * **[!UICONTROL URL d’environnement]** : votre URL d’environnement [!DNL Dynamics 365].
 
 Si les détails fournis sont valides, l’interface utilisateur affiche un statut **[!UICONTROL Connecté]** avec une coche verte. Vous pouvez ensuite passer à l’étape suivante.
