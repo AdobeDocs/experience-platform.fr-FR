@@ -2,10 +2,10 @@
 description: Cette page répertorie et décrit les étapes de configuration d’une destination de diffusion en continu à l’aide de Destination SDK.
 title: Utiliser Destination SDK pour configurer une destination de diffusion en continu
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
-source-git-commit: 0befd65b91e49cacab67c76fd9ed5d77bf790b9d
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '820'
-ht-degree: 71%
+ht-degree: 65%
 
 ---
 
@@ -150,7 +150,7 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 
 ## Étape 3 : créer un modèle de transformation de message : utilisez un langage de modèle pour spécifier le format de sortie du message {#create-transformation-template}
 
-En fonction des payloads pris en charge par votre destination, vous devez créer un modèle qui transforme le format des données exportées à partir du format XDM d’Adobe dans un format pris en charge par votre destination. Consultez les exemples de modèles dans la section [Utiliser une langue de modèle pour les transformations d’identité, d’attributs et d’appartenance aux segments](../functionality/destination-server/message-format.md#using-templating) et utilisez l’[outil de création de modèles](../testing-api/streaming-destinations/create-template.md) fourni par Adobe.
+En fonction des payloads pris en charge par votre destination, vous devez créer un modèle qui transforme le format des données exportées à partir du format XDM d’Adobe dans un format pris en charge par votre destination. Voir des exemples de modèles dans la section [Utilisation d’une langue de modèle pour les transformations d’identité, d’attributs et d’appartenance à une audience](../functionality/destination-server/message-format.md#using-templating) et utilisez la fonction [outil de création de modèles](../testing-api/streaming-destinations/create-template.md) fourni par Adobe.
 
 Une fois que vous avez conçu un modèle de transformation de messages qui vous convient, ajoutez-le à la configuration de serveur et de modèle que vous avez créée à l’étape 1.
 
@@ -273,10 +273,10 @@ Si vous avez sélectionné `"authenticationRule": "PLATFORM_AUTHENTICATION"`, vo
 
 Une fois votre destination configurée à l’aide des points d’entrée de configuration dans les étapes précédentes, vous pouvez utiliser l’[outil de test des destinations](../testing-api/streaming-destinations/streaming-destination-testing-overview.md) afin de tester l’intégration entre Adobe Experience Platform et votre destination.
 
-Dans le cadre du processus de test de votre destination, vous devez utiliser l’interface utilisateur d’Experience Platform pour créer des segments que vous activerez vers votre destination. Pour plus d’informations sur la création de segments dans Experience Platform, consultez les deux ressources ci-dessous :
+Dans le cadre du processus de test de votre destination, vous devez utiliser l’interface utilisateur d’Experience Platform pour créer des segments que vous activerez vers votre destination. Reportez-vous aux deux ressources ci-dessous pour savoir comment créer des audiences dans Experience Platform :
 
-* [Créer une page de documentation sur les segments](/help/segmentation/ui/overview.md#create-segment)
-* [Créer un segment (présentation vidéo détaillée)](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=fr)
+* [Création d’une page de documentation sur l’audience](/help/segmentation/ui/overview.md#create-segment)
+* [Présentation vidéo de la création d’une audience](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=fr)
 
 ## Étape 7 : publier votre destination {#publish-destination}
 

@@ -3,10 +3,10 @@ keywords: e-mail;e-mail;destinations d’e-mail;destination de réponse d’orac
 title: Connexion Oracle Responsys
 description: Responsys est un outil de marketing par e-mail d’entreprise proposé par Oracle dans le cadre de campagnes marketing sur plusieurs canaux. Il permet de personnaliser les interactions entre e-mails, terminaux mobiles, écrans et réseaux sociaux.
 exl-id: 70f2f601-afee-4315-bf7a-ed2c92397ebe
-source-git-commit: 47e0dfb59edca58e205cb478e9ee624659753ab9
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '642'
-ht-degree: 61%
+source-wordcount: '698'
+ht-degree: 53%
 
 ---
 
@@ -16,7 +16,21 @@ ht-degree: 61%
 
 [Responsys](https://www.oracle.com/cx/marketing/campaign-management/)[!DNL Oracle] est un outil de marketing par e-mail d’entreprise proposé par dans le cadre de campagnes marketing sur plusieurs canaux. Il permet de personnaliser les interactions entre e-mails, terminaux mobiles, écrans et réseaux sociaux.
 
-Pour envoyer des données de segment à [!DNL Oracle Responsys], vous devez d’abord [se connecter à la destination](#connect-destination) dans Adobe Experience Platform, puis [configurer un import de données](#import-data-into-responsys) de votre emplacement de stockage dans [!DNL Oracle Responsys].
+Pour envoyer des données d’audience à [!DNL Oracle Responsys], vous devez d’abord [se connecter à la destination](#connect-destination) dans Adobe Experience Platform, puis [configurer un import de données](#import-data-into-responsys) de votre emplacement de stockage dans [!DNL Oracle Responsys].
+
+## Audiences prises en charge {#supported-audiences}
+
+Cette section décrit toutes les audiences que vous pouvez exporter vers cette destination.
+
+Toutes les destinations prennent en charge l’activation des audiences générées par l’Experience Platform [Segmentation Service](../../../segmentation/home.md).
+
+En outre, cette destination prend également en charge l’activation des audiences décrites dans le tableau ci-dessous.
+
+| Type d’audience | Description |
+---------|----------|
+| Chargements personnalisés | Audiences ingérées dans Experience Platform à partir de fichiers CSV. |
+
+{style="table-layout:auto"}
 
 ## Type et fréquence d’exportation {#export-type-frequency}
 
@@ -82,21 +96,21 @@ Vous pouvez activer les alertes pour recevoir des notifications sur le statut de
 
 Lorsque vous avez terminé de renseigner les détails sur votre connexion de destination, sélectionnez **[!UICONTROL Suivant]**.
 
-## Activer des segments vers cette destination {#activate}
+## Activer les audiences vers cette destination {#activate}
 
 >[!IMPORTANT]
 > 
 >Pour activer les données, vous avez besoin des [autorisations de contrôle d’accès](/help/access-control/home.md#permissions) pour les fonctions **[!UICONTROL Gérer les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]**, et **[!UICONTROL Afficher les segments]**. Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
-Voir [Activer des données d’audience vers des destinations d’exportation de profils par lots](../../ui/activate-batch-profile-destinations.md) pour obtenir des instructions sur l’activation des segments d’audience vers cette destination.
+Voir [Activation des données d’audience vers des destinations d’exportation de profils par lots](../../ui/activate-batch-profile-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
 
 ### Attributs de destination {#destination-attributes}
 
-Lors de l’activation des segments vers cette destination, Adobe vous recommande de sélectionner un identifiant unique parmi vos [schéma d’union](../../../profile/home.md#profile-fragments-and-union-schemas). Sélectionnez l’identifiant unique et tout autre champ XDM que vous souhaitez exporter vers la destination. Pour plus d’informations, reportez-vous à la section [bonnes pratiques lors de l’activation d’audiences vers des destinations de marketing par e-mail](overview.md#best-practices).
+Lors de l’activation d’audiences vers cette destination, Adobe vous recommande de sélectionner un identifiant unique parmi vos [schéma d’union](../../../profile/home.md#profile-fragments-and-union-schemas). Sélectionnez l’identifiant unique et tout autre champ XDM que vous souhaitez exporter vers la destination. Pour plus d’informations, reportez-vous à la section [bonnes pratiques lors de l’activation d’audiences vers des destinations de marketing par e-mail](overview.md#best-practices).
 
 ## Données exportées {#exported-data}
 
-Pour les destinations [!DNL Oracle Responsys], Platform crée un fichier `.csv` à l’emplacement de stockage que vous avez indiqué. Pour plus d’informations sur les fichiers, voir [vérification de l’activation des segments](../../ui/activate-batch-profile-destinations.md#verify) dans le tutoriel sur l’activation des segments.
+Pour les destinations [!DNL Oracle Responsys], Platform crée un fichier `.csv` à l’emplacement de stockage que vous avez indiqué. Pour plus d’informations sur les fichiers, voir [vérification de l’activation de l’audience](../../ui/activate-batch-profile-destinations.md#verify) dans le tutoriel sur l’activation de l’audience.
 
 ## Configurer l’importation des données dans [!DNL Oracle Responsys] {#import-data-into-responsys}
 

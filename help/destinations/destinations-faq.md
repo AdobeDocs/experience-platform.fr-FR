@@ -3,16 +3,16 @@ keywords: les destinations ; questions; aux questions fréquentes; faq; faq sur 
 title: Questions fréquentes
 description: Réponses aux questions les plus fréquemment posées sur les destinations Adobe Experience Platform
 exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
-source-git-commit: 784c529691f2f550176080474f5091bfb1b84279
+source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
 workflow-type: tm+mt
-source-wordcount: '1396'
+source-wordcount: '1395'
 ht-degree: 6%
 
 ---
 
 # Questions fréquentes {#faq}
 
-## Présentation {#overview}
+## Vue d’ensemble {#overview}
 
 Ce document répond aux questions les plus fréquemment posées sur les destinations Adobe Experience Platform. Pour les questions et le dépannage liés à d’autres [!DNL Platform] services, y compris ceux rencontrés dans toutes les [!DNL Platform] API, reportez-vous à la section [Guide de dépannage des Experience Platform](../landing/troubleshooting.md).
 
@@ -22,9 +22,9 @@ Ce document répond aux questions les plus fréquemment posées sur les destinat
 
 +++Réponse Il s’agit d’un comportement normal en raison de la manière dont l’Experience Platform effectue la segmentation.
 
-La segmentation par flux met à jour le nombre de profils pour les segments en continu toute la journée, tandis que la segmentation par lots met à jour le nombre de profils pour les segments par lot une fois toutes les 24 heures.
+La segmentation par flux met à jour le nombre de profils pour les audiences en continu toute la journée, tandis que la segmentation par lots met à jour le nombre de profils pour les audiences par lots une fois toutes les 24 heures.
 
-Lorsque le planning d’exportation du segment diffère du planning de segmentation, le profil est comptabilisé entre l’interface utilisateur et l’ exporté. [!DNL CSV] sera différent, en particulier en ce qui concerne les segments en flux continu.
+Lorsque le planning d’exportation de l’audience diffère du planning de segmentation, le profil est comptabilisé entre l’interface utilisateur et l’exportation [!DNL CSV] sera différent, en particulier en ce qui concerne les audiences en continu.
 
 Voir [Documentation de Segmentation Service](../segmentation/home.md) pour plus d’informations.
 +++
@@ -33,7 +33,7 @@ Voir [Documentation de Segmentation Service](../segmentation/home.md) pour plus 
 
 ### Que dois-je faire avant d’activer les audiences dans [!DNL Facebook Custom Audiences]?
 
-+++Réponse Avant de pouvoir envoyer vos segments d’audience à [!DNL Facebook], assurez-vous de respecter les conditions suivantes :
++++Réponse Avant de pouvoir envoyer vos audiences à [!DNL Facebook], assurez-vous de respecter les conditions suivantes :
 
 * Votre [!DNL Facebook] Le compte utilisateur doit avoir la variable **[!DNL Manage campaigns]** autorisation activée pour le compte publicitaire que vous prévoyez d’utiliser.
 * Le **Adobe Experience Cloud** votre compte professionnel doit être ajouté en tant que partenaire publicitaire dans votre [!DNL Facebook Ad Account]. Utilisez `business ID=206617933627973`. Voir [Ajout de partenaires à votre compte Business Manager](https://www.facebook.com/business/help/1717412048538897) pour plus d’informations, voir la documentation de Facebook .
@@ -93,9 +93,9 @@ Oui. Dans Experience Platform, une destination Facebook correspond à 1:1 pour u
 
 ## Correspondance client Google {#google-customer-match}
 
-### Lors de l’exportation de segments vers la correspondance client Google, pourquoi vois-je des nombres supplémentaires annexés à la fin des noms de segment dans l’interface de Google ?
+### Lors de l’exportation d’audiences vers la correspondance client Google, pourquoi vois-je des nombres supplémentaires annexés à la fin des noms d’audience dans l’interface de Google ?
 
-+++La réponse Google nécessite que les noms de segment soient uniques. Les chiffres que vous voyez sont [Horodatages UNIX](https://www.unixtimestamp.com/) et ils sont ajoutés afin de conserver les noms de segment uniques, si vous avez mappé le même segment à plusieurs destinations Google.
++++La réponse Google nécessite que les noms d’audience soient uniques. Les chiffres que vous voyez sont [Horodatages UNIX](https://www.unixtimestamp.com/) et ils sont ajoutés afin de conserver les noms d’audience uniques, si vous avez mappé la même audience à plusieurs destinations Google.
 +++
 
 ## Audiences mappées linkedIn {#linkedin}
@@ -133,7 +133,7 @@ Pour obtenir des explications détaillées sur les exigences de correspondance d
 
 +++Réponse Non, [SDK Web](../edge/home.md) n’est pas nécessaire pour activer les audiences vers [Adobe Target](catalog/personalization/adobe-target-connection.md).
 
-Cependant, si [[!DNL at.js]](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html?lang=en) est utilisée à la place du SDK Web, seule la personnalisation de session suivante est prise en charge.
+Cependant, si [[!DNL at.js]](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html?lang=fr) est utilisée à la place du SDK Web, seule la personnalisation de session suivante est prise en charge.
 
 Pour [personnalisation de la même page et de la page suivante](ui/activate-edge-personalization-destinations.md) , vous devez utiliser l’une des méthodes suivantes : [SDK Web](../edge/home.md) ou le [API du serveur réseau Edge](../server-api/overview.md). Consultez la documentation relative à [activation des audiences vers les destinations de périphérie](ui/activate-edge-personalization-destinations.md) pour plus d’informations sur l’implémentation.
 +++
@@ -177,7 +177,7 @@ Yes, you can activate a maximum of 150 edge audiences per sandbox.  For more inf
 +++Répondez Oui, l’API Edge Network Server fonctionne avec la destination de personnalisation personnalisée. Comme les attributs de profil peuvent contenir des données sensibles, pour protéger ces données, la destination de personnalisation personnalisée exige que vous utilisiez l’API Edge Network Server pour la collecte des données. En outre, tous les appels API doivent être effectués dans un [contexte authentifié](../server-api/authentication.md).
 +++
 
-### Je ne peux avoir qu’une seule stratégie de fusion principale. Puis-je créer des audiences qui utilisent une autre stratégie de fusion et qui les envoient toujours à Adobe Target en tant que segments en continu ?
+### Je ne peux avoir qu’une seule stratégie de fusion principale. Puis-je créer des audiences qui utilisent une autre stratégie de fusion et les envoyer tout de même à Adobe Target en tant qu’audiences en continu ?
 
 +++Réponse
 Non. Toutes les audiences que vous souhaitez activer dans Adobe Target doivent utiliser un fichier principal sur le serveur. [stratégie de fusion](../profile/merge-policies/ui-guide.md).

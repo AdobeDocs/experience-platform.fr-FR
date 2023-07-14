@@ -1,20 +1,20 @@
 ---
 title: Connexion à TikTok
-description: Créez des audiences personnalisées sur TikTok avec vos données pour le ciblage de vos campagnes publicitaires. Il peut s’agir de personnes qui ont visité votre site web ou interagi avec votre contenu. Envoyez rapidement et en toute sécurité le segment souhaité de Adobe Experience Platform à TikTok à l’aide de l’intégration en temps réel d’Adobe à TikTok Ads Manager.
+description: Créez des audiences personnalisées sur TikTok avec vos données pour le ciblage de vos campagnes publicitaires. Il peut s’agir de personnes qui ont visité votre site web ou interagi avec votre contenu. Poussez rapidement et en toute sécurité l’audience souhaitée de Adobe Experience Platform vers TikTok à l’aide de l’intégration en temps réel d’Adobe à TikTok Ads Manager.
 last-substantial-update: 2023-03-20T00:00:00Z
 exl-id: 7b12d17f-7d9a-4615-9830-92bffe3f6927
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '980'
-ht-degree: 47%
+source-wordcount: '978'
+ht-degree: 42%
 
 ---
 
 # Connexion à TikTok
 
-## Présentation {#overview}
+## Vue d’ensemble {#overview}
 
-Créez des audiences personnalisées sur TikTok avec vos données pour le ciblage de vos campagnes publicitaires. Il peut s’agir de personnes qui ont visité votre site web ou interagi avec votre contenu. Envoyez rapidement et en toute sécurité le segment souhaité de Adobe Experience Platform à TikTok à l’aide de l’intégration en temps réel d’Adobe à TikTok Ads Manager. Visite [Centre d’aide aux entreprises TikTok](https://ads.tiktok.com/help/article/audiences?lang=en) pour plus d’informations.
+Créez des audiences personnalisées sur TikTok avec vos données pour le ciblage de vos campagnes publicitaires. Il peut s’agir de personnes qui ont visité votre site web ou interagi avec votre contenu. Poussez rapidement et en toute sécurité l’audience souhaitée de Adobe Experience Platform vers TikTok à l’aide de l’intégration en temps réel d’Adobe à TikTok Ads Manager. Visite [Centre d’aide aux entreprises TikTok](https://ads.tiktok.com/help/article/audiences?lang=en) pour plus d’informations.
 
 >[!IMPORTANT]
 >
@@ -26,7 +26,7 @@ Pour vous aider à mieux comprendre comment et à quel moment utiliser la destin
 
 ### Cas d’utilisation {#use-case-1}
 
-Une marque de vêtements d’athlétisme veut atteindre ses clients existants par le biais de leurs comptes de médias sociaux. La marque de vêtements peut ingérer des adresses électroniques de son propre CRM vers Adobe Experience Platform, créer des segments à partir de ses propres données hors ligne et envoyer ces segments vers TikTok pour afficher des publicités dans les flux de médias sociaux de ses clients.
+Une marque de vêtements d’athlétisme veut atteindre ses clients existants par le biais de leurs comptes de médias sociaux. La marque de vêtements peut ingérer des adresses électroniques de son propre CRM vers Adobe Experience Platform, créer des audiences à partir de ses propres données hors ligne et envoyer ces audiences à TikTok pour afficher des publicités dans les flux de médias sociaux de ses clients.
 
 ## Conditions préalables {#prerequisites}
 
@@ -51,8 +51,8 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 | Élément | Type | Notes |
 ---------|----------|---------|
-| Type d’exportation | **[!UICONTROL Exportation des segments]** | Vous exportez tous les membres d’un segment (audience) avec les identifiants (nom, numéro de téléphone ou autres) utilisés dans la destination TikTok. |
-| Fréquence des exportations | **[!UICONTROL Diffusion en continu]** | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation des segments, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
+| Type d’exportation | **[!UICONTROL Exportation de l’audience]** | Vous exportez tous les membres d’une audience avec les identifiants (nom, numéro de téléphone ou autres) utilisés dans la destination TikTok. |
+| Fréquence des exportations | **[!UICONTROL Diffusion en continu]** | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu&#39;un profil est mis à jour en Experience Platform en fonction de l&#39;évaluation de l&#39;audience, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -88,17 +88,17 @@ Vous pouvez activer les alertes pour recevoir des notifications sur le statut de
 
 Lorsque vous avez terminé de renseigner les détails sur votre connexion de destination, sélectionnez **[!UICONTROL Suivant]**.
 
-## Activer des segments vers cette destination {#activate}
+## Activer les audiences vers cette destination {#activate}
 
 >[!IMPORTANT]
 > 
 >Pour activer les données, vous avez besoin des [autorisations de contrôle d’accès](/help/access-control/home.md#permissions) pour les fonctions **[!UICONTROL Gérer les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]**, et **[!UICONTROL Afficher les segments]**. Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
-Consultez [Activer les profils et les segments vers les destinations d’exportation de segments de diffusion en continu](/help/destinations/ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des segments d’audience vers cette destination.
+Lecture [Activation des profils et des audiences vers les destinations d’exportation d’audiences par flux](/help/destinations/ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
 
 ### Mapping d’identités {#map}
 
-Vous trouverez ci-dessous un exemple de mappage d’identité correct lors de l’exportation de segments vers TikTok Ads Manager.
+Vous trouverez ci-dessous un exemple de mappage d’identité correct lors de l’exportation d’audiences vers TikTok Ads Manager.
 
 Sélection des champs sources :
 
@@ -112,7 +112,7 @@ Sélection des champs cibles :
 
 ## Données exportées {#exported-data}
 
-Vérifiez vos [!DNL TikTok Ads Manager] compte (sous **Ressources > Audiences**) pour vérifier si votre segment Experience Platform a bien été exporté. L’audience est renseignée sous la forme d’une audience : `Partner Audience`.
+Vérifiez vos [!DNL TikTok Ads Manager] compte (sous **Ressources > Audiences**) pour vérifier si l’exportation de votre audience Experience Platform a réussi. L’audience est renseignée sous la forme d’une audience : `Partner Audience`.
 
 ## Utilisation et gouvernance des données {#data-usage-governance}
 

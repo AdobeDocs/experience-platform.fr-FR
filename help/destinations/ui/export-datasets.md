@@ -3,10 +3,10 @@ title: (Version bêta) Exporter des jeux de données vers des destinations d’e
 type: Tutorial
 description: Découvrez comment exporter des jeux de données d’Adobe Experience Platform vers l’emplacement d’espace de stockage de votre choix.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: d9b59b8a331511e87171f3b9d1163d452ba469be
+source-git-commit: 6627953aba4f1cd665c3d5c4bc8711c48064374f
 workflow-type: tm+mt
 source-wordcount: '1425'
-ht-degree: 88%
+ht-degree: 84%
 
 ---
 
@@ -35,14 +35,14 @@ Actuellement, vous pouvez exporter des jeux de données vers les destinations de
 * [[!DNL (Beta) Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md#changelog)
 * [[!DNL (Beta) SFTP]](../../destinations/catalog/cloud-storage/sftp.md#changelog)
 
-## Quand activer des segments ou exporter des jeux de données {#when-to-activate-segments-or-activate-datasets}
+## Quand activer des audiences ou exporter des jeux de données {#when-to-activate-audiences-or-activate-datasets}
 
-Certaines destinations basées sur des fichiers du catalogue d’Experience Platform prennent à la fois en charge l’activation des segments et l’exportation des jeux de données.
+Certaines destinations basées sur des fichiers du catalogue de l’Experience Platform prennent en charge l’activation de l’audience et l’exportation de jeux de données.
 
-* Envisagez l’activation des segments lorsque vous souhaitez que vos données soient structurées en profils regroupés par intérêt ou qualification d’audience.
+* Envisagez d’activer des audiences lorsque vous souhaitez que vos données soient structurées en profils regroupés par intérêt ou qualification d’audience.
 * Vous pouvez également envisager des exportations de jeux de données lorsque vous cherchez à exporter des jeux de données bruts, qui ne sont pas groupés ou structurés par intérêt ou qualification d’audience. Vous pouvez utiliser ces données pour la création de rapports, les workflows de science des données, afin de répondre aux exigences de conformité et à de nombreux autres cas d’utilisation.
 
-Ce document contient toutes les informations nécessaires à l’exportation de jeux de données. Si vous souhaitez activer des segments vers des destinations d’espaces de stockage ou de marketing par e-mail, lisez [Activer les données d’audience vers des destinations d’exportation de profils par lots](/help/destinations/ui/activate-batch-profile-destinations.md).
+Ce document contient toutes les informations nécessaires à l’exportation de jeux de données. Si vous souhaitez activer des audiences vers des destinations de stockage dans le cloud ou de marketing par e-mail, lisez [Activation des données d’audience vers des destinations d’exportation de profils par lots](/help/destinations/ui/activate-batch-profile-destinations.md).
 
 ## Conditions préalables {#prerequisites}
 

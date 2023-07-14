@@ -1,10 +1,10 @@
 ---
 description: Découvrez comment configurer une politique d’agrégation pour déterminer comment les requêtes HTTP vers la destination doivent être associées et regroupées par lot.
 title: Politique d’agrégation
-source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '996'
-ht-degree: 100%
+ht-degree: 96%
 
 ---
 
@@ -112,8 +112,8 @@ L’exemple de configuration ci-dessous montre une configuration d’agrégation
 | `configurableAggregation.maxBatchAgeInSecs` | Nombre entier | Associé à `maxNumEventsInBatch`, ce paramètre détermine combien de temps Experience Platform doit attendre avant d’envoyer un appel API vers le point d’entrée. <ul><li>Valeur minimale (secondes) : 1 800</li><li>Valeur maximale (secondes) : 3 600</li></ul> Par exemple, si vous utilisez la valeur maximale pour les deux paramètres, Experience Platform attend 3 600 secondes où qu’il y ait 10 000 profils qualifiés avant d’effectuer l’appel API, selon ce qui se produit en premier. |
 | `configurableAggregation.maxNumEventsInBatch` | Nombre entier | Associé à `maxBatchAgeInSecs`, ce paramètre détermine le nombre de profils qualifiés qui doivent être agrégés dans un appel API. <ul><li>Valeur minimale : 1 000</li><li>Valeur maximale : 10 000</li></ul> Par exemple, si vous utilisez la valeur maximale pour les deux paramètres, Experience Platform attend 3 600 secondes où qu’il y ait 10 000 profils qualifiés avant d’effectuer l’appel API, selon ce qui se produit en premier. |
 | `configurableAggregation.aggregationKey` | - | Permet d’agréger les profils exportés mappés à la destination en fonction des paramètres décrits ci-dessous. |
-| `configurableAggregation.aggregationKey.includeSegmentId` | Booléen | Définissez ce paramètre sur `true` si vous souhaitez regrouper les profils exportés vers la destination par identifiant de segment. |
-| `configurableAggregation.aggregationKey.includeSegmentStatus` | Booléen | Définissez ce paramètre ainsi qu’`includeSegmentId` sur `true` si vous souhaitez regrouper les profils exportés vers la destination par identifiant de segment et statut de segment. |
+| `configurableAggregation.aggregationKey.includeSegmentId` | Booléen | Définissez ce paramètre sur `true` si vous souhaitez regrouper les profils exportés vers votre destination par identifiant d’audience. |
+| `configurableAggregation.aggregationKey.includeSegmentStatus` | Booléen | Définissez ce paramètre et `includeSegmentId` to `true`, si vous souhaitez regrouper les profils exportés vers votre destination par identifiant d’audience et statut d’audience. |
 | `configurableAggregation.aggregationKey.includeIdentity` | Booléen | Définissez ce paramètre sur `true` si vous souhaitez regrouper les profils exportés vers la destination par espace de noms d’identité. |
 | `configurableAggregation.aggregationKey.oneIdentityPerGroup` | Booléen | Définissez ce paramètre sur `true` si vous souhaitez que les profils exportés soient agrégés en groupes d’une seule identité (GAID, IDFA, numéros de téléphone, e-mail, etc.). |
 | `configurableAggregation.aggregationKey.groups` | Tableau | Créez des listes de groupes d’identités si vous souhaitez regrouper les profils exportés vers la destination par groupes d’espace de noms d’identité. Par exemple, vous pouvez combiner des profils contenant les identifiants mobiles IDFA et GAID dans un appel vers la destination et des e-mails dans un autre en utilisant la configuration montrée dans l’exemple ci-dessus. |

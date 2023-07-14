@@ -3,10 +3,10 @@ keywords: balises d’avion;destination du navire d’aviation
 title: Connexion Balises Airship
 description: Transmettez en toute transparence les données d’audience Adobe à Airship en tant que balises d’audience pour le ciblage dans Airship.
 exl-id: 84cf5504-f0b5-48d8-8da1-ff91ee1dc171
-source-git-commit: fd2019feb25b540612a278cbea5bf5efafe284dc
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '944'
-ht-degree: 38%
+source-wordcount: '989'
+ht-degree: 31%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 38%
 
 [!DNL Airship] est la principale plateforme d’engagement client, qui vous aide à diffuser des messages omnicanaux personnalisés et pertinents à vos utilisateurs à chaque étape du cycle de vie des clients.
 
-Cette intégration transmet les données de segment Adobe Experience Platform dans [!DNL Airship] as [Balises](https://docs.airship.com/guides/audience/tags/) pour le ciblage ou le déclenchement.
+Cette intégration transmet les données d’audience Adobe Experience Platform dans [!DNL Airship] as [Balises](https://docs.airship.com/guides/audience/tags/) pour le ciblage ou le déclenchement.
 
 Pour en savoir plus sur [!DNL Airship], reportez-vous à la section [Documents de navigation](https://docs.airship.com).
 
@@ -27,7 +27,7 @@ Pour en savoir plus sur [!DNL Airship], reportez-vous à la section [Documents d
 
 ## Conditions préalables
 
-Avant d’envoyer vos segments Adobe Experience Platform vers [!DNL Airship], vous devez :
+Avant d’envoyer vos audiences Adobe Experience Platform à [!DNL Airship], vous devez :
 
 * Créez un groupe de balises dans votre [!DNL Airship] projet.
 * Générez un jeton porteur pour l’authentification.
@@ -36,20 +36,32 @@ Avant d’envoyer vos segments Adobe Experience Platform vers [!DNL Airship], vo
 > 
 >Créez un [!DNL Airship] Compte via [ce lien d’inscription](https://go.airship.eu/accounts/register/plan/starter/) si vous ne l&#39;avez pas déjà fait.
 
+## Prise en charge des audiences externes {#external-audiences-support}
+
+Toutes les destinations prennent en charge l’activation des audiences générées par l’Experience Platform [Segmentation Service](../../../segmentation/home.md).
+
+En outre, cette destination prend également en charge l’activation des audiences externes décrites dans le tableau ci-dessous.
+
+| Type d’audience externe | Description |
+---------|----------|
+| Chargements personnalisés | Audiences ingérées dans Experience Platform à partir de fichiers CSV. |
+
+{style="table-layout:auto"}
+
 ## Type et fréquence d’exportation {#export-type-frequency}
 
 Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la fréquence d’exportation des destinations.
 
 | Élément | Type | Notes |
 ---------|----------|---------|
-| Type d’exportation | **[!UICONTROL Exportation des segments]** | Vous exportez tous les membres d’un segment (audience) avec les identifiants utilisés dans la destination des balises de navigation. |
-| Fréquence des exportations | **[!UICONTROL Diffusion en continu]** | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation des segments, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
+| Type d’exportation | **[!UICONTROL Exportation de l’audience]** | Vous exportez tous les membres d’une audience avec les identifiants utilisés dans la destination des balises de navigation. |
+| Fréquence des exportations | **[!UICONTROL Diffusion en continu]** | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu&#39;un profil est mis à jour en Experience Platform en fonction de l&#39;évaluation de l&#39;audience, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
 ## Groupes de balises
 
-Le concept de segments dans Adobe Experience Platform est similaire à [Balises](https://docs.airship.com/guides/audience/tags/) dans Airship, avec de légères différences de mise en oeuvre. Cette intégration mappe l’état d’un utilisateur. [appartenance à un segment Experience Platform](../../../xdm/field-groups/profile/segmentation.md) à la présence ou à la non-présence d’un [!DNL Airship] balise . Par exemple, dans un segment Platform où la variable `xdm:status` change en `realized`, la balise est ajoutée à la fonction [!DNL Airship] canal ou utilisateur nommé auquel ce profil est mappé. Si la variable `xdm:status` change en `exited`, la balise est supprimée.
+Le concept d’audiences dans Adobe Experience Platform est similaire à [Balises](https://docs.airship.com/guides/audience/tags/) dans Airship, avec de légères différences de mise en oeuvre. Cette intégration mappe l’état d’un utilisateur. [appartenance à un segment Experience Platform](../../../xdm/field-groups/profile/segmentation.md) à la présence ou à la non-présence d’un [!DNL Airship] balise . Par exemple, dans une audience Platform où la variable `xdm:status` change en `realized`, la balise est ajoutée à la fonction [!DNL Airship] canal ou utilisateur nommé auquel ce profil est mappé. Si la variable `xdm:status` change en `exited`, la balise est supprimée.
 
 Pour activer cette intégration, créez une *groupe de balises* in [!DNL Airship] named `adobe-segments`.
 
@@ -75,13 +87,13 @@ Pour découvrir les avantages de la destination [!DNL Airship Tags] et son utili
 
 ### Cas d’utilisation #1
 
-Les clients au détail ou les plateformes de divertissement peuvent créer des profils utilisateur sur leurs clients fidèles et transmettre ces segments dans [!DNL Airship] pour le ciblage des messages sur les campagnes mobiles.
+Les clients au détail ou les plateformes de divertissement peuvent créer des profils utilisateur sur leurs clients fidèles et les transmettre à [!DNL Airship] pour le ciblage des messages sur les campagnes mobiles.
 
 ### Cas d’utilisation #2
 
-Déclenchez des messages un-à-un en temps réel lorsque les utilisateurs entrent ou sortent de segments spécifiques dans Adobe Experience Platform.
+Déclenchez des messages un-à-un en temps réel lorsque les utilisateurs entrent ou sortent d’audiences spécifiques dans Adobe Experience Platform.
 
-Par exemple, un détaillant configure un segment spécifique à la marque jeans dans Platform. Ce détaillant peut désormais déclencher un message mobile dès que quelqu’un définit la préférence de son jean sur une marque spécifique.
+Par exemple, un détaillant configure une audience spécifique à la marque jeans dans Platform. Ce détaillant peut désormais déclencher un message mobile dès que quelqu’un définit la préférence de son jean sur une marque spécifique.
 
 ## Se connecter à la destination {#connect}
 
@@ -111,13 +123,13 @@ Vous pouvez activer les alertes pour recevoir des notifications sur le statut de
 
 Lorsque vous avez terminé de renseigner les détails sur votre connexion de destination, sélectionnez **[!UICONTROL Suivant]**.
 
-## Activer des segments vers cette destination {#activate}
+## Activer les audiences vers cette destination {#activate}
 
 >[!IMPORTANT]
 > 
 >Pour activer les données, vous avez besoin des [autorisations de contrôle d’accès](/help/access-control/home.md#permissions) pour les fonctions **[!UICONTROL Gérer les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]**, et **[!UICONTROL Afficher les segments]**. Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
-Voir [Activer les données d’audience vers des destinations d’exportation de segments de diffusion en continu](../../ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des segments d’audience vers cette destination.
+Voir [Activation des données d’audience vers des destinations d’exportation d’audience par flux](../../ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
 
 ## Considérations relatives au mappage {#mapping-considerations}
 

@@ -3,10 +3,10 @@ keywords: platform;destinations;espace de travail des destinations;espace de tra
 title: Espace de travail des destinations
 description: 'L’espace de travail des destinations se compose de cinq sections : Vue d’ensemble, Catalogue, Parcourir, Comptes et Vue du système. Elles sont décrites dans les sections ci-dessous.'
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: 69e1f065cb3b302c4b144f39c84179075379f648
+source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
 workflow-type: tm+mt
 source-wordcount: '1217'
-ht-degree: 100%
+ht-degree: 84%
 
 ---
 
@@ -41,13 +41,13 @@ L’interface utilisateur de [!DNL Platform] offre plusieurs options de recherch
 
 ![Catalogue des destinations présentant quelques destinations publicitaires et de stockage dans le cloud.](../assets/ui/workspace/catalog.png)
 
-Les cartes de destination contiennent des options de commande principales et secondaires. Les commandes principales comprennent [!UICONTROL Configurer], [!UICONTROL Activer], [!UICONTROL Activer les segments], ou [!UICONTROL Exporter les jeux de données]. Les commandes secondaires permettent d’afficher des options. Ces commandes sont décrites ci-dessous :
+Les cartes de destination contiennent des options de commande principales et secondaires. Les contrôles Principaux incluent : [!UICONTROL Configuration], [!UICONTROL Activer], [!UICONTROL Activation des audiences]ou [!UICONTROL Exportation de jeux de données]. Les commandes secondaires permettent d’afficher des options. Ces commandes sont décrites ci-dessous :
 
 | Commande | Description |
 |---------|----------|
 | [!UICONTROL Configurer] | Permet de créer une connexion à la destination. |
-| [!UICONTROL Activer] | Une fois que vous avez établi une connexion avec la destination, vous pouvez activer des segments ou exporter des jeux de données vers cette destination. |
-| [!UICONTROL Activer les segments] | Une fois que vous avez établi une connexion avec la destination, vous pouvez activer les segments vers cette destination. |
+| [!UICONTROL Activer] | Une fois que vous avez établi une connexion à la destination, vous pouvez activer des audiences ou exporter des jeux de données vers cette destination. |
+| [!UICONTROL Activation des audiences] | Une fois que vous avez établi une connexion à la destination, vous pouvez activer les audiences vers cette destination. |
 | [!UICONTROL Exporter les jeux de données] | Une fois que vous avez établi une connexion à la destination, vous pouvez exporter des jeux de données vers cette destination. |
 | [!UICONTROL Afficher le compte] | Affichez les comptes que vous avez connectés pour une destination. |
 | [!UICONTROL Afficher les flux de données] | Affichez les flux d’activation de données qui existent pour une destination. |
@@ -69,10 +69,9 @@ L’onglet **[!UICONTROL Comptes]** vous montre les détails des connexions que 
 
 >[!TIP]
 >
-> * Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Platform] et utilisez la ![commande Activer](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL Activer ]**/**[!UICONTROL  Activer les segments ]**/**[!UICONTROL  Exporter les jeux de données ]**pour exporter les segments ou les jeux de données vers cette destination.
+> * Sélectionnez les points de suspension (`...`) dans la variable [!UICONTROL Plateforme] et utilisez la variable ![Activer le contrôle](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL Activer ]**/**[!UICONTROL  Activation des audiences ]**/**[!UICONTROL  Exportation de jeux de données ]**contrôle pour exporter des audiences ou des jeux de données vers cette destination.
 > * Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Platform] et utilisez la commande ![Modifier les détails](../assets/ui/workspace/pencil-icon.png)**[!UICONTROL Modifier les détails ]**pour [mettre à jour](update-accounts.md) les détails d’un compte de destination existant.
 > * Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Platform] et utilisez la ![commande Supprimer](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL Supprimer ]**pour [supprimer](delete-destination-account.md) un compte de destination existant.
-
 
 ![Onglet Comptes](../assets/ui/workspace/destination-account-options.png)
 
@@ -88,15 +87,14 @@ L’onglet **[!UICONTROL Comptes]** vous montre les détails des connexions que 
 
 ## [!UICONTROL Parcourir] {#browse}
 
-L’onglet **[!UICONTROL Parcourir]** affiche les destinations avec lesquelles vous avez établi une connexion. Les destinations dont le bouton (bascule) **[!UICONTROL Activer/Désactiver]** est sélectionné définissent la destination sur active ou inactive, respectivement. Vous pouvez également consulter les destinations où les données circulent en sélectionnant **[!UICONTROL Segments]** > **[!UICONTROL Parcourir]** et en sélectionnant un segment à inspecter. Consultez le tableau ci-dessous pour toutes les informations fournies pour chaque destination dans l’onglet [!UICONTROL Parcourir] :
+L’onglet **[!UICONTROL Parcourir]** affiche les destinations avec lesquelles vous avez établi une connexion. Les destinations dont le bouton (bascule) **[!UICONTROL Activer/Désactiver]** est sélectionné définissent la destination sur active ou inactive, respectivement. Vous pouvez également afficher les destinations où les données circulent en sélectionnant **[!UICONTROL Audiences]** > **[!UICONTROL Parcourir]** et sélectionner une audience à inspecter. Consultez le tableau ci-dessous pour toutes les informations fournies pour chaque destination dans l’onglet [!UICONTROL Parcourir] :
 
 >[!TIP]
 >
-> * Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Nom] et utilisez la commande ![Activer le contrôle des segments](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL Activer ]**pour exporter des segments ou des jeux de données vers cette destination.
+> * Sélectionnez les points de suspension (`...`) dans la variable [!UICONTROL Nom] et utilisez la variable ![Activer le contrôle des audiences](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL Activer ]**contrôle pour exporter des audiences ou des jeux de données vers cette destination.
 > * Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Nom] et utilisez la commande ![Supprimer](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL Supprimer ]**pour [supprimer](delete-destinations.md) une connexion existante à une destination.
 > * Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Nom] et utilisez la commande ![Affichage dans la surveillance](../assets/ui/workspace/monitoring-icon.png)**[!UICONTROL Affichage dans la surveillance ]**pour afficher les informations d’activation de cette destination dans le [tableau de bord de la surveillance](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard).
 > * Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Nom] et utilisez la commande ![S’abonner aux alertes ](../assets/ui/workspace/alerts-icon.png)**[!UICONTROL S’abonner aux alertes ]**pour vous abonner aux alertes de flux de données de destination. Vous pouvez vous abonner à des alertes pour recevoir des messages concernant l’état, la réussite ou l’échec de votre exécution de flux. Consultez [S’abonner aux alertes de destination en contexte](alerts.md) pour des informations détaillées sur les alertes de flux de données de destination.
-
 
 ![Onglet Parcourir](../assets/ui/workspace/browse-tab.png)
 
@@ -108,7 +106,7 @@ L’onglet **[!UICONTROL Parcourir]** affiche les destinations avec lesquelles v
 | [!UICONTROL Destination] | La plateforme de destination que vous avez sélectionnée pour votre flux d’activation. |
 | [!UICONTROL Type de connexion] | Représente le type de connexion à votre compartiment de stockage ou à votre destination. <ul><li>Pour les destinations de marketing par e-mail : il peut s’agir de S3, FTP ou [!DNL Azure Blob].</li><li>Pour les destinations publicitaires en temps réel : serveur à serveur.</li><li>Pour les destinations en flux continu : il peut s’agir de [!DNL Azure Event Hubs] ou [!DNL Amazon Kinesis].</li></ul> |
 | [!UICONTROL Nom d’utilisateur] | Les informations d’identification de compte que vous avez sélectionnées pour le flux de destination. |
-| [!UICONTROL Données d’activation] | Indique le nombre de segments activés pour cette destination. Sélectionnez cette commande pour en savoir plus sur les segments activés. Reportez-vous à [Données d’activation](/help/destinations/ui/destination-details-page.md#activation-data) dans la page de détails de la destination pour plus d’informations sur les segments activés. |
+| [!UICONTROL Données d’activation] | Indique le nombre d’audiences activées vers cette destination. Sélectionnez ce contrôle pour en savoir plus sur les audiences activées. Voir [Données d’activation](/help/destinations/ui/destination-details-page.md#activation-data) sur la page des détails de la destination pour plus d’informations sur les audiences activées. |
 | [!UICONTROL Créé] | La date et l’heure (UTC) de création du flux d’activation vers la destination. Sélectionnez les flèches haut/bas pour trier les flux d’activation en fonction du plus récent ou du plus ancien. |
 | [!UICONTROL État] | `Enabled` ou `Disabled`. Indique si les données sont activées vers cette destination. |
 
@@ -116,7 +114,7 @@ Cliquez sur une ligne de destination pour afficher plus d’informations sur la 
 
 ![Cliquer sur la ligne de destination](../assets/ui/workspace/click-destination-row.png)
 
-Sélectionnez le nom de la destination pour afficher des informations sur les segments activés vers cette destination. Cliquez sur **[!UICONTROL Modifier l’activation]** pour modifier ou ajouter les segments envoyés vers cette destination.
+Sélectionnez le nom de la destination pour afficher des informations sur les audiences activées vers cette destination. Cliquez sur **[!UICONTROL Modification de l’activation]** pour modifier ou ajouter les audiences envoyées vers cette destination.
 
 ## [!UICONTROL Vue du système] {#system-view}
 

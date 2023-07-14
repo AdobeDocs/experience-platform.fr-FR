@@ -2,10 +2,10 @@
 title: Connexion à des audiences personnalisées twitter
 description: Ciblez vos abonnés et clients existants sur Twitter et créez des campagnes de remarketing pertinentes en activant vos audiences créées dans Adobe Experience Platform
 exl-id: fd244e58-cd94-4de7-81e4-c321eb673b65
-source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '806'
-ht-degree: 61%
+source-wordcount: '860'
+ht-degree: 51%
 
 ---
 
@@ -33,14 +33,28 @@ Avant de configurer votre [!DNL Twitter Custom Audiences] destination, veillez �
 
 {style="table-layout:auto"}
 
+## Audiences prises en charge {#supported-audiences}
+
+Cette section décrit toutes les audiences que vous pouvez exporter vers cette destination.
+
+Toutes les destinations prennent en charge l’activation des audiences générées par l’Experience Platform [Segmentation Service](../../../segmentation/home.md).
+
+En outre, cette destination prend également en charge l’activation des audiences décrites dans le tableau ci-dessous.
+
+| Type d’audience | Description |
+---------|----------|
+| Chargements personnalisés | Audiences ingérées dans Experience Platform à partir de fichiers CSV. |
+
+{style="table-layout:auto"}
+
 ## Type et fréquence d’exportation {#export-type-frequency}
 
 Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la fréquence d’exportation des destinations.
 
 | Élément | Type | Notes |
 ---------|----------|---------|
-| Type d’exportation | **[!UICONTROL Exportation des segments]** | Vous exportez tous les membres d’un segment (audience) avec les identifiants utilisés dans la destination Audiences personnalisées de Twitter. |
-| Fréquence des exportations | **[!UICONTROL Diffusion en continu]** | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation des segments, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
+| Type d’exportation | **[!UICONTROL Exportation de l’audience]** | Vous exportez tous les membres d’une audience avec les identifiants utilisés dans la destination Audiences personnalisées de Twitter. |
+| Fréquence des exportations | **[!UICONTROL Diffusion en continu]** | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu&#39;un profil est mis à jour en Experience Platform en fonction de l&#39;évaluation de l&#39;audience, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -86,13 +100,13 @@ Vous pouvez activer les alertes pour recevoir des notifications sur le statut de
 
 Lorsque vous avez terminé de renseigner les détails sur votre connexion de destination, sélectionnez **[!UICONTROL Suivant]**.
 
-## Activer des segments vers cette destination {#activate}
+## Activer les audiences vers cette destination {#activate}
 
 >[!IMPORTANT]
 > 
 >Pour activer les données, vous avez besoin des [autorisations de contrôle d’accès](/help/access-control/home.md#permissions) pour les fonctions **[!UICONTROL Gérer les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]**, et **[!UICONTROL Afficher les segments]**. Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
-Consultez [Activer les profils et les segments vers les destinations d’exportation de segments de diffusion en continu](/help/destinations/ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des segments d’audience vers cette destination.
+Lecture [Activation des profils et des audiences vers les destinations d’exportation d’audiences par flux](/help/destinations/ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
 
 ## Utilisation et gouvernance des données {#data-usage-governance}
 
@@ -100,9 +114,9 @@ Lors de la gestion de vos données, toutes les destinations [!DNL Adobe Experien
 
 ## Ressources supplémentaires {#additional-resources}
 
-Lors du mappage des segments d’audience sur Twitter, assurez-vous de respecter les exigences d’attribution de noms de segment suivantes :
+Lors du mappage des audiences à Twitter, assurez-vous de respecter les exigences suivantes en termes d’attribution de noms aux audiences :
 
-1. Fournir des noms de mappage de segments lisibles par l’utilisateur. Nous vous recommandons d’utiliser le même nom que celui utilisé pour les segments Experience Platform.
-2. N’utilisez pas de caractères spéciaux (+ &amp; , % : ; @ / = ? $) dans les noms de mappage de segments et de segments. Si le nom du segment Experience Platform contient ces caractères, supprimez-les avant de mapper le segment à une destination Twitter.
+1. Fournir des noms de mappage d’audience lisibles par l’utilisateur. Nous vous recommandons d’utiliser le même nom que celui utilisé pour les segments Experience Platform.
+2. N’utilisez pas de caractères spéciaux (+ &amp; , % : ; @ / = ? $) dans les noms des mappages d’audience et d’audience. Si le nom de l’audience Experience Platform contient ces caractères, supprimez-les avant de mapper l’audience à une destination Twitter.
 
 Plus d’informations sur [!DNL List Custom Audiences] dans Twitter se trouve dans la variable [Documentation twitter](https://business.twitter.com/en/help/campaign-setup/campaign-targeting/custom-audiences/lists.html).

@@ -2,7 +2,7 @@
 title: Connecteur de destination Adobe Commerce
 description: Découvrez comment les marchands Adobe Commerce et Real-Time CDP peuvent personnaliser l’expérience d’achat en proposant du contenu et des promotions de site hautement pertinents, personnalisés en fonction des audiences client créées et gérées dans Real-Time CDP.
 exl-id: f7aa3c6c-ba7a-440c-a4d7-5d7b50dbbc0d
-source-git-commit: 276224303c7a65a53ff859bcbf47f64a6925bf77
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '720'
 ht-degree: 59%
@@ -11,7 +11,7 @@ ht-degree: 59%
 
 # Connexion Adobe Commerce {#adobe-commerce}
 
-## Présentation {#overview}
+## Vue d’ensemble {#overview}
 
 Le [!DNL Adobe Commerce] Le connecteur de destination permet de sélectionner une ou plusieurs audiences Real-Time CDP à activer dans votre [!DNL Adobe Commerce] pour offrir une expérience personnalisée dynamique à vos clients. Within [!DNL Adobe Commerce], vous pouvez ensuite sélectionner ces audiences Real-Time CDP pour personnaliser les offres uniques du panier, telles que &quot;Acheter 2 et 1 gratuitement&quot;. Vous pouvez également afficher des bannières à forte identification et modifier le prix des produits au moyen d’offres promotionnelles, toutes personnalisées en fonction des audiences Adobe Real-Time CDP.
 
@@ -67,7 +67,7 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 > 
 >Pour activer les données, vous avez besoin des [autorisations de contrôle d’accès](/help/access-control/home.md#permissions) pour les fonctions **[!UICONTROL Gérer les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]**, et **[!UICONTROL Afficher les segments]**. Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
-Lecture [Activation des profils et des segments vers les destinations de requête de profil](../../ui/activate-edge-personalization-destinations.md) pour obtenir des instructions sur l’activation des audiences dans la variable [!DNL Commerce] destination.
+Lecture [Activation des profils et des audiences vers les destinations de requête de profil](../../ui/activate-edge-personalization-destinations.md) pour obtenir des instructions sur l’activation des audiences dans la variable [!DNL Commerce] destination.
 
 ## Étapes suivantes dans [!DNL Adobe Commerce]
 

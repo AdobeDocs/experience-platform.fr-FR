@@ -1,13 +1,13 @@
 ---
 keywords: mobile;destinations d’engagement mobile;LINE;destination d’engagement mobile LINE
 title: Connexion LINE
-description: La destination LINE vous permet d’ajouter des profils à votre segment Platform et de fournir des expériences personnalisées aux utilisateurs connectés.
+description: La destination LINE vous permet d’ajouter des profils à votre audience Platform et de fournir des expériences personnalisées aux utilisateurs connectés.
 last-substantial-update: 2022-11-08T00:00:00Z
 exl-id: 9981798a-61f2-4a09-9a33-57e63eb36d43
-source-git-commit: 83778bc5d643f69e0393c0a7767fef8a4e8f66e9
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '1180'
-ht-degree: 47%
+source-wordcount: '1178'
+ht-degree: 41%
 
 ---
 
@@ -17,13 +17,13 @@ ht-degree: 47%
 
 [[!DNL LINE]](https://line.me/en/) est une plateforme de communication populaire qui connecte les personnes, les services et l’information et est passée d’une application de chat à un centre de divertissement, social et d’activités quotidiennes.
 
-Ceci [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) tire parti de [[!DNL LINE] API de messagerie](https://developers.line.biz/en/reference/messaging-api/). Vous pouvez activer les profils de vos segments Experience Platform en tant que connexions dans [!DNL LINE] pour vos besoins professionnels.
+Ceci [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) tire parti de [[!DNL LINE] API de messagerie](https://developers.line.biz/en/reference/messaging-api/). Vous pouvez activer les profils de vos audiences Experience Platform en tant que connexions dans [!DNL LINE] pour vos besoins professionnels.
 
 [!DNL LINE] utilise les jetons du porteur comme mécanisme d’authentification pour communiquer avec [!DNL LINE] API de messagerie. Instructions pour vous authentifier à votre [!DNL LINE] L’instance est plus loin, dans [Authentification à la destination](#authenticate) .
 
 ## Cas d’utilisation {#use-cases}
 
-En tant que marketeur, vous pouvez cibler les utilisateurs dans une destination d’engagement mobile, avec des segments intégrés à [!DNL Adobe Experience Platform]. De plus, vous pouvez leur proposer des expériences personnalisées, en fonction des attributs de leur [!DNL Adobe Experience Platform] profils, dès que les segments et les profils sont mis à jour dans [!DNL Adobe Experience Platform].
+En tant que marketeur, vous pouvez cibler les utilisateurs dans une destination d’engagement mobile, avec des audiences intégrées [!DNL Adobe Experience Platform]. De plus, vous pouvez leur proposer des expériences personnalisées, en fonction des attributs de leur [!DNL Adobe Experience Platform] profils, dès que les audiences et les profils sont mis à jour dans [!DNL Adobe Experience Platform].
 
 ## Conditions préalables {#prerequisites}
 
@@ -67,8 +67,8 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 | Élément | Type | Notes |
 ---------|----------|---------|
-| Type d’exportation | **[!UICONTROL Basé sur les profils]** | Vous exportez tous les membres d’un segment (audience) ainsi que les identifiants (nom, numéro de téléphone ou autres) utilisés dans la destination [!DNL LINE]. |
-| Fréquence des exportations | **[!UICONTROL Diffusion en continu]** | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation des segments, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
+| Type d’exportation | **[!UICONTROL Basé sur les profils]** | Vous exportez tous les membres d’une audience avec les identifiants (nom, numéro de téléphone ou autres) utilisés dans la variable [!DNL LINE] destination. |
+| Fréquence des exportations | **[!UICONTROL Diffusion en continu]** | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu&#39;un profil est mis à jour en Experience Platform en fonction de l&#39;évaluation de l&#39;audience, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -107,13 +107,13 @@ Vous pouvez activer les alertes pour recevoir des notifications sur le statut de
 
 Lorsque vous avez terminé de renseigner les détails sur votre connexion de destination, sélectionnez **[!UICONTROL Suivant]**.
 
-## Activer des segments vers cette destination {#activate}
+## Activer les audiences vers cette destination {#activate}
 
 >[!IMPORTANT]
 >
 >Pour activer les données, vous avez besoin des [autorisations de contrôle d’accès](/help/access-control/home.md#permissions) pour les fonctions **[!UICONTROL Gérer les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]**, et **[!UICONTROL Afficher les segments]**. Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
-Consultez [Activer les profils et les segments vers les destinations d’exportation de segments de diffusion en continu](/help/destinations/ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des segments d’audience vers cette destination.
+Lecture [Activation des profils et des audiences vers les destinations d’exportation d’audiences par flux](/help/destinations/ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
 
 ### Mapper les attributs et les identités {#map}
 
@@ -129,13 +129,13 @@ Si votre identité cible est *ID pour les annonceurs (IFA)* vous aurez besoin de
 
 ## Valider l’exportation des données {#exported-data}
 
-Si l’exportation des données est réussie hors de l’Experience Platform, la variable [!DNL LINE] la destination crée une nouvelle audience dans [!DNL LINE] à l’aide du nom du segment sélectionné.
+Si l’exportation des données est réussie hors de l’Experience Platform, la variable [!DNL LINE] la destination crée une nouvelle audience dans [!DNL LINE] à l’aide du nom de l’audience sélectionnée.
 
 Pour vérifier que vous avez correctement configuré la destination, procédez comme suit :
 
 1. Dans [!DNL LINE], connectez-vous au [Console de gestion](https://manager.line.biz/).
 
-1. Ensuite, accédez à **[!UICONTROL Contrôles de données]** > **[!UICONTROL Audiences]** et vérifiez le nom correspondant au segment sélectionné dans la variable **[!UICONTROL Nom de l’audience]** colonne .
+1. Ensuite, accédez à **[!UICONTROL Contrôles de données]** > **[!UICONTROL Audiences]** et vérifiez le nom correspondant à l’audience sélectionnée dans la fonction **[!UICONTROL Nom de l’audience]** colonne .
 
 1. Le volume mis à jour correspondrait au nombre dans le segment.
 

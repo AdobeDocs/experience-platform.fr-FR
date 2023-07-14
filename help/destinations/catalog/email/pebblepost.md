@@ -3,18 +3,18 @@ keywords: PebblePost;pebblepost;PebblePost Programmatic Direct Mail;pebblepost c
 title: Extension PebblePost
 description: L’extension PebblePost est une destination d’e-mail dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 exl-id: 2d0308db-9d75-4cd1-97de-70ce3837369d
-source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '470'
-ht-degree: 83%
+ht-degree: 78%
 
 ---
 
 # Extension [!DNL PebblePost] {#pebblepost-extension}
 
-## Présentation {#overview}
+## Vue d’ensemble {#overview}
 
-[!DNL PebblePost's Programmatic Direct Mail®] La solution permet aux spécialistes du marketing numérique de connecter l’intérêt et l’intention en ligne à des médias tangibles hors ligne qui convertissent. Désormais, ces spécialistes peuvent tirer parti des segments de données personnalisés créés dans Adobe pour cibler les consommateurs avec une impression multimédia pertinente, à domicile et plus durable. Analysez les performances en temps réel en fonction de l’activité du chemin de réponse et des conversions sur site.
+[!DNL PebblePost's Programmatic Direct Mail®] La solution permet aux spécialistes du marketing numérique de connecter l’intérêt et l’intention en ligne à des médias tangibles hors ligne qui convertissent. Les marketeurs peuvent tirer parti des audiences de données personnalisées qu’ils ont créées en Adobe pour désormais cibler les consommateurs avec une impression multimédia pertinente, plus durable et à domicile. Analysez les performances en temps réel en fonction de l’activité du chemin de réponse et des conversions sur site.
 
 [!DNL PebblePost] est une extension de messagerie dans Adobe Experience Platform. Pour plus d’informations sur PebblePost, lisez la section [publication de blog d’intégration](https://blog.adobe.com/en/publish/2017/11/16/pebblepost-builds-integration-launch-adobe.html#gs.7lejiq).
 

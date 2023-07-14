@@ -1,11 +1,11 @@
 ---
 title: Connexion à Google Cloud Storage (version Beta)
-description: Découvrez comment vous connecter à Google Cloud Storage et activer des segments ou exporter des jeux de données.
+description: Découvrez comment vous connecter à Google Cloud Storage et activer des audiences ou exporter des jeux de données.
 exl-id: ab274270-ae8c-4264-ba64-700b118e6435
-source-git-commit: 8890fd137cfe6d35dcf6177b5516605e7753a75a
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '1005'
-ht-degree: 84%
+source-wordcount: '1061'
+ht-degree: 76%
 
 ---
 
@@ -21,8 +21,22 @@ Créez une connexion sortante active vers [!DNL Google Cloud Storage] pour expor
 
 ## Connectez-vous à votre [!DNL Google Cloud Storage] stockage via l’API ou l’interface utilisateur {#connect-api-or-ui}
 
-* Pour vous connecter à [!DNL Google Cloud Storage] Emplacement de stockage à l’aide de l’interface utilisateur de Platform, lisez les sections [Connexion à la destination](#connect) et [Activation des segments vers cette destination](#activate) ci-dessous.
-* Pour vous connecter à [!DNL Google Cloud Storage] emplacement de stockage par programmation, lisez la [Activation des segments vers des destinations basées sur des fichiers à l’aide du tutoriel de l’API Flow Service](../../api/activate-segments-file-based-destinations.md).
+* Pour vous connecter à [!DNL Google Cloud Storage] Emplacement de stockage à l’aide de l’interface utilisateur de Platform, lisez les sections [Connexion à la destination](#connect) et [Activer les audiences vers cette destination](#activate) ci-dessous.
+* Pour vous connecter à [!DNL Google Cloud Storage] emplacement de stockage par programmation, lisez la [Activation des audiences vers des destinations basées sur des fichiers à l’aide du tutoriel de l’API Flow Service](../../api/activate-segments-file-based-destinations.md).
+
+## Audiences prises en charge {#supported-audiences}
+
+Cette section décrit toutes les audiences que vous pouvez exporter vers cette destination.
+
+Toutes les destinations prennent en charge l’activation des audiences générées par l’Experience Platform [Segmentation Service](../../../segmentation/home.md).
+
+En outre, cette destination prend également en charge l’activation des audiences décrites dans le tableau ci-dessous.
+
+| Type d’audience | Description |
+---------|----------|
+| Chargements personnalisés | Audiences ingérées dans Experience Platform à partir de fichiers CSV. |
+
+{style="table-layout:auto"}
 
 ## Type et fréquence d’exportation {#export-type-frequency}
 
@@ -67,7 +81,7 @@ Pour vous authentifier auprès de la destination, renseignez les champs requis e
 * **[!UICONTROL Clé d’accès secrète]** : chaîne codée en base64 de 40 caractères utilisée pour authentifier votre compte [!DNL Google Cloud Storage] auprès de Platform. Pour plus d’informations sur la manière d’obtenir cette valeur, lisez la section [Conditions préalables](#prerequisites) ci-dessus.
 * **[!UICONTROL Clé de chiffrement]** : vous pouvez éventuellement joindre votre clé publique au format RSA pour ajouter un chiffrement à vos fichiers exportés. Vous pouvez voir un exemple de clé correctement formatée dans l’image ci-dessous.
 
-   ![Image montrant un exemple de clé PGP correctement formatée dans l’interface utilisateur](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+  ![Image montrant un exemple de clé PGP correctement formatée dans l’interface utilisateur](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
 Pour plus d’informations sur ces valeurs, consultez le guide sur les [Clés HMAC de Google Cloud Storage](https://cloud.google.com/storage/docs/authentication/hmackeys#overview). Pour savoir comment générer votre propre identifiant de clé d’accès et votre clé d’accès secrète, reportez-vous à la section [[!DNL Google Cloud Storage] Présentation de la source](/help/sources/connectors/cloud-storage/google-cloud-storage.md).
 
@@ -89,13 +103,13 @@ Vous pouvez activer les alertes pour recevoir des notifications sur le statut de
 
 Lorsque vous avez terminé de renseigner les détails sur votre connexion de destination, sélectionnez **[!UICONTROL Suivant]**.
 
-## Activer des segments vers cette destination {#activate}
+## Activer les audiences vers cette destination {#activate}
 
 >[!IMPORTANT]
 > 
 >Pour activer les données, vous avez besoin des [autorisations de contrôle d’accès](/help/access-control/home.md#permissions) pour les fonctions **[!UICONTROL Gérer les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]**, et **[!UICONTROL Afficher les segments]**. Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
-Voir [Activer des données d’audience vers des destinations d’exportation de profils par lots](../../ui/activate-batch-profile-destinations.md) pour obtenir des instructions sur l’activation des segments d’audience vers cette destination.
+Voir [Activation des données d’audience vers des destinations d’exportation de profils par lots](../../ui/activate-batch-profile-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
 
 ### Planification
 

@@ -1,25 +1,25 @@
 ---
 title: Catégories d’intérêt Mailchimp
-description: Mailchimp (également appelé Intuit Mailchimp) est une plateforme de marketing automatisé populaire et un service de marketing par e-mail utilisé par les entreprises pour gérer et communiquer avec des contacts (clients, clients ou autres personnes intéressées) à l’aide de listes de diffusion et de campagnes de marketing par e-mail. Utilisez ce connecteur pour trier vos contacts en fonction de leurs centres d'intérêt et préférences.
+description: Mailchimp (également appelé Intuit Mailchimp) est une plateforme de marketing automatisé populaire et un service de marketing par e-mail utilisé par les entreprises pour gérer et communiquer avec des contacts (clients, clients ou autres personnes intéressées) à l’aide de listes de diffusion et de campagnes de marketing par e-mail. Utilisez ce connecteur pour trier vos contacts en fonction de leurs centres d’intérêt et de leurs préférences.
 last-substantial-update: 2023-05-24T00:00:00Z
-source-git-commit: f8ccf9303fbcb010225881942de5e672b4111072
+source-git-commit: a293df660a9b959d12bdc170d1cb69f3543a30f1
 workflow-type: tm+mt
-source-wordcount: '2357'
+source-wordcount: '2356'
 ht-degree: 22%
 
 ---
 
 # Connexion [!DNL Mailchimp Interest Categories]
 
-[[!DNL Mailchimp]](https://mailchimp.com) est une plateforme d’automatisation du marketing et un service de marketing par e-mail très utilisé par les entreprises pour gérer et communiquer avec les contacts. *(clients, clients ou autres parties intéressées)* utilisation de listes de diffusion et de campagnes de marketing par e-mail. Utilisez ce connecteur pour trier vos contacts en fonction de leurs centres d&#39;intérêt et préférences.
+[[!DNL Mailchimp]](https://mailchimp.com) est une plateforme d’automatisation du marketing et un service de marketing par e-mail très utilisé par les entreprises pour gérer et communiquer avec les contacts. *(clients, clients ou autres parties intéressées)* utilisation de listes de diffusion et de campagnes de marketing par e-mail. Utilisez ce connecteur pour trier vos contacts en fonction de leurs centres d’intérêt et de leurs préférences.
 
-[!DNL Mailchimp Interest Categories] uses [audiences](https://mailchimp.com/help/getting-started-audience/), [groups](https://mailchimp.com/help/getting-started-with-groups/), et les catégories d’intérêt *(également appelés noms de groupe ou titres de groupe)*. Chaque [!DNL Mailchimp] groupe est une liste de catégories d’intérêt. Les contacts sont associés à une catégorie d&#39;intérêt lorsqu&#39;ils s&#39;abonnent à une ou plusieurs catégories d&#39;intérêt par le biais d&#39;un formulaire d&#39;inscription sur votre site web. Au sein d’une audience, vous pouvez également organiser les contacts en groupes et les associer à des catégories d’intérêt. Ces catégories peuvent ensuite être utilisées pour créer des segments. Vous pouvez utiliser ces segments pour diffuser des emails de campagne ciblés vers les contacts abonnés.
+[!DNL Mailchimp Interest Categories] uses [audiences](https://mailchimp.com/help/getting-started-audience/), [groups](https://mailchimp.com/help/getting-started-with-groups/), et les catégories d’intérêt *(également appelés noms de groupe ou titres de groupe)*. Chaque [!DNL Mailchimp] groupe est une liste de catégories d’intérêt. Les contacts sont associés à une catégorie d&#39;intérêt lorsqu&#39;ils s&#39;abonnent à une ou plusieurs catégories d&#39;intérêt par le biais d&#39;un formulaire d&#39;inscription sur votre site web. Au sein d’une audience, vous pouvez également organiser les contacts en groupes et les associer à des catégories d’intérêt. Ces catégories peuvent ensuite être utilisées pour créer des segments. Vous pouvez utiliser ces audiences pour diffuser des emails de campagne ciblés vers les contacts abonnés.
 
 <!--
 Compared to [!DNL Mailchimp Tags] which you would use for internal classification, [!DNL Mailchimp Interest Categories] is meant to manage subscriptions to topics of interest that your contacts might be interested in. *Note, Experience Platform also has a connection for [!DNL Mailchimp Tags], you can check it out on the [[!DNL Mailchimp Tags]](/help/destinations/catalog/email-marketing/mailchimp-tags.md) page.*
 -->
 
-Ceci [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) utilise la variable [[!DNL Mailchimp batch subscribe or unsubscribe API]](https://mailchimp.com/developer/marketing/api/lists/batch-subscribe-or-unsubscribe/) API à créer [catégories d&#39;intérêt](https://mailchimp.com/developer/marketing/api/interest-categories/) puis ajouter des contacts de chacun des segments Platform sélectionnés dans une catégorie d’intérêt correspondante. Vous pouvez **ajouter de nouveaux contacts** ou **mettre à jour les informations des [!DNL Mailchimp] contacts**, puis **les ajouter ou les supprimer des groupes de votre choix** dans un [!DNL Mailchimp] après les avoir activés dans un nouveau segment. [!DNL Mailchimp Interest Groups] utilise les noms de segment sélectionnés de Platform comme catégories d’intérêt dans [!DNL Mailchimp].
+Ceci [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) utilise la variable [[!DNL Mailchimp batch subscribe or unsubscribe API]](https://mailchimp.com/developer/marketing/api/lists/batch-subscribe-or-unsubscribe/) API à créer [catégories d&#39;intérêt](https://mailchimp.com/developer/marketing/api/interest-categories/) puis ajouter des contacts de chacune des audiences Platform sélectionnées dans une catégorie d’intérêt correspondante. Vous pouvez **ajouter de nouveaux contacts** ou **mettre à jour les informations des [!DNL Mailchimp] contacts**, puis **les ajouter ou les supprimer des groupes de votre choix** dans un [!DNL Mailchimp] après les avoir activés dans un nouveau segment. [!DNL Mailchimp Interest Groups] utilise les noms d’audience sélectionnés de Platform comme catégories d’intérêt dans [!DNL Mailchimp].
 
 ## Cas d’utilisation {#use-cases}
 
@@ -27,7 +27,7 @@ Pour mieux comprendre quand et comment utiliser la destination [!DNL Mailchimp I
 
 ### Envoyer des emails aux contacts pour les campagnes marketing {#use-case-send-emails}
 
-Le service des ventes d&#39;un site web de sport souhaite diffuser une campagne marketing par email à une liste de contacts qui se sont identifiés comme intéressés par le football. Les listes de contacts sont séparées en tant que lots dans l’exportation des données reçue de l’équipe de développement du site web et doivent donc être suivies. L’équipe identifie une [!DNL Mailchimp] et commence à créer les segments Experience Platform dans lesquels sont ajoutés les contacts de chaque liste. Après avoir envoyé ces segments vers [!DNL Mailchimp Interest Categories], si des contacts n’existent pas dans le [!DNL Mailchimp] audience : ils sont ajoutés à un groupe avec le nom du segment auquel appartient le contact. Si des contacts existent déjà dans la variable [!DNL Mailchimp] audience ou groupe, puis leurs informations sont mises à jour. Une fois les données envoyées à [!DNL Mailchimp Interest Categories], l’équipe des ventes peut sélectionner et envoyer le courrier électronique de la campagne marketing au groupe d’intérêt football au sein de la [!DNL Mailchimp] audience.
+Le service des ventes d&#39;un site web de sport souhaite diffuser une campagne marketing par email à une liste de contacts qui se sont identifiés comme intéressés par le football. Les listes de contacts sont séparées en tant que lots dans l’exportation des données reçue de l’équipe de développement du site web et doivent donc être suivies. L’équipe identifie une [!DNL Mailchimp] et commence à créer les audiences Experience Platform dans lesquelles sont ajoutés les contacts de chaque liste. Après avoir envoyé ces audiences à [!DNL Mailchimp Interest Categories], si des contacts n’existent pas dans le [!DNL Mailchimp] audience à laquelle ils sont ajoutés à un groupe avec le nom de l’audience auquel le contact appartient. Si des contacts existent déjà dans la variable [!DNL Mailchimp] audience ou groupe, puis leurs informations sont mises à jour. Une fois les données envoyées à [!DNL Mailchimp Interest Categories], l’équipe des ventes peut sélectionner et envoyer le courrier électronique de la campagne marketing au groupe d’intérêt football au sein de la [!DNL Mailchimp] audience.
 
 ## Conditions préalables {#prerequisites}
 
@@ -91,8 +91,8 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 | Élément | Type | Notes |
 ---------|----------|---------|
-| Type d’exportation | **[!UICONTROL Basé sur les profils]** | <ul><li>Vous exportez tous les membres d’un segment, ainsi que les champs de schéma souhaités, *(par exemple : adresse e-mail, numéro de téléphone, nom)*, en fonction de votre mappage de champs.</li><li> Pour chaque segment sélectionné dans Platform, la variable [!DNL Mailchimp Interest Categories] l’état du segment est mis à jour avec son état de segment depuis Platform.</li></ul> |
-| Fréquence des exportations | **[!UICONTROL Diffusion en continu]** | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Lorsqu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation des segments, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
+| Type d’exportation | **[!UICONTROL Basé sur les profils]** | <ul><li>Vous exportez tous les membres d’un segment, ainsi que les champs de schéma souhaités, *(par exemple : adresse e-mail, numéro de téléphone, nom)*, en fonction de votre mappage de champs.</li><li> Pour chaque audience sélectionnée dans Platform, la valeur [!DNL Mailchimp Interest Categories] l’état du segment est mis à jour avec son état d’audience de Platform.</li></ul> |
+| Fréquence des exportations | **[!UICONTROL Diffusion en continu]** | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Lorsqu’un profil est mis à jour en Experience Platform en fonction de l’évaluation de l’audience, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -147,13 +147,13 @@ Vous pouvez activer les alertes pour recevoir des notifications sur le statut de
 
 Lorsque vous avez terminé de renseigner les détails sur votre connexion de destination, sélectionnez **[!UICONTROL Suivant]**.
 
-## Activer des segments vers cette destination {#activate}
+## Activer les audiences vers cette destination {#activate}
 
 >[!IMPORTANT]
 >
 >Pour activer les données, vous avez besoin des [autorisations de contrôle d’accès](/help/access-control/home.md#permissions) pour les fonctions **[!UICONTROL Gérer les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]**, et **[!UICONTROL Afficher les segments]**. Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
-Consultez [Activer les profils et les segments vers les destinations d’exportation de segments de diffusion en continu](/help/destinations/ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des segments d’audience vers cette destination.
+Lecture [Activation des profils et des audiences vers les destinations d’exportation d’audiences par flux](/help/destinations/ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
 
 ### Considérations sur le mappage et exemple {#mapping-considerations-example}
 
@@ -195,8 +195,8 @@ Pour vérifier que vous avez correctement configuré la destination, procédez c
 
 ![Capture d’écran de l’interface utilisateur de Mailchimp montrant la page du groupe Audience.](../../assets/catalog/email-marketing/mailchimp-interest-categories/audience-groups.png)
 
-* Sélectionnez le Groupe et vérifiez si les segments sélectionnés sont créés en tant que catégories avec le nom du segment de Platform, qui peut être suivi d’un suffixe généré automatiquement.
-   * Cette destination utilise les noms des segments sélectionnés pour créer la catégorie d’intérêt en utilisant la variable [[!DNL Mailchimp] Ajout d’une API de catégorie d’intérêt](https://mailchimp.com/developer/marketing/api/interest-categories/add-interest-category/). Si vous créez une destination et réactivez les mêmes segments, [!DNL Mailchimp] ajoute un suffixe pour distinguer les segments existants des nouveaux segments.
+* Sélectionnez le Groupe et vérifiez si les audiences sélectionnées sont créées en tant que catégories avec le nom de l’audience de Platform, qui peut être suivi d’un suffixe généré automatiquement.
+   * Cette destination utilise les noms des segments sélectionnés pour créer la catégorie d’intérêt en utilisant la variable [[!DNL Mailchimp] Ajout d’une API de catégorie d’intérêt](https://mailchimp.com/developer/marketing/api/interest-categories/add-interest-category/). Si vous créez une destination et réactivez les mêmes audiences, [!DNL Mailchimp] ajoute un suffixe pour distinguer les segments existants des nouveaux segments.
 * Les contacts dont les emails n&#39;existaient pas dans le groupe sont ajoutés à la catégorie nouvellement créée.
 * Pour les contacts déjà présents dans le groupe, les données du champ d&#39;attribut sont mises à jour et le contact est ajouté à la catégorie nouvellement créée.
 

@@ -3,10 +3,10 @@ keywords: correspondance client Google;correspondance client Google;correspondan
 title: Connexion à Google Customer Match
 description: La correspondance client Google vous permet d’utiliser vos données en ligne et hors ligne pour atteindre vos clients et interagir avec eux dans les propriétés détenues et exploitées de Google, telles que la recherche, le shopping, Gmail et YouTube.
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: d6b34f3bd3a432e1cf7d3dcce242934391b65d78
+source-git-commit: 1c9725c108d55aea5d46b086fbe010ab4ba6cf45
 workflow-type: tm+mt
-source-wordcount: '1763'
-ht-degree: 23%
+source-wordcount: '1818'
+ht-degree: 19%
 
 ---
 
@@ -24,13 +24,13 @@ Pour vous aider à mieux comprendre comment et à quel moment utiliser la variab
 
 ### Cas d’utilisation #1
 
-Une marque de vêtements d’athlétisme souhaite atteindre ses clients existants par l’intermédiaire de [!DNL Google Search] et [!DNL Google Shopping] pour personnaliser les offres et les articles en fonction de leurs achats précédents et de leur historique de navigation. La marque de vêtements peut ingérer des adresses électroniques de son propre CRM vers l’Experience Platform et créer des segments à partir de ses propres données hors ligne. Ensuite, ils peuvent envoyer ces segments à [!DNL Google Customer Match] à utiliser dans [!DNL Search] et [!DNL Shopping], optimisant leurs dépenses publicitaires.
+Une marque de vêtements d’athlétisme souhaite atteindre ses clients existants par l’intermédiaire de [!DNL Google Search] et [!DNL Google Shopping] pour personnaliser les offres et les articles en fonction de leurs achats précédents et de leur historique de navigation. La marque de vêtements peut ingérer des adresses électroniques de son propre CRM vers l’Experience Platform et créer des audiences à partir de ses propres données hors ligne. Ensuite, ils peuvent envoyer ces audiences à [!DNL Google Customer Match] à utiliser dans [!DNL Search] et [!DNL Shopping], optimisant leurs dépenses publicitaires.
 
 ### Cas d’utilisation #2
 
 Une importante entreprise technologique a lancé un nouveau téléphone. Pour promouvoir ce nouveau modèle de téléphone, ils cherchent à faire connaitre les nouvelles fonctionnalités du téléphone aux clients qui possèdent des modèles précédents de leurs téléphones.
 
-Pour promouvoir cette version, ils téléchargent les adresses électroniques de leur base de données CRM dans Experience Platform, en utilisant les adresses électroniques comme identifiants. Les segments sont créés en fonction des clients qui possèdent des modèles de téléphone plus anciens. Ensuite, les segments sont envoyés à [!DNL Google Customer Match], afin que l’entreprise puisse cibler les clients actuels, les clients qui possèdent des modèles de téléphone anciens et des clients similaires sur [!DNL YouTube].
+Pour promouvoir cette version, ils téléchargent les adresses électroniques de leur base de données CRM dans Experience Platform, en utilisant les adresses électroniques comme identifiants. Les audiences sont créées en fonction des clients qui possèdent des modèles de téléphone plus anciens. Ensuite, les audiences sont envoyées à [!DNL Google Customer Match], afin que l’entreprise puisse cibler les clients actuels, les clients qui possèdent des modèles de téléphone anciens et des clients similaires sur [!DNL YouTube].
 
 ## Gouvernance des données pour [!DNL Google Customer Match] destinations {#data-governance}
 
@@ -50,14 +50,28 @@ Certaines destinations en Experience Platform ont certaines règles et obligatio
 
 {style="table-layout:auto"}
 
+## Audiences prises en charge {#supported-audiences}
+
+Cette section décrit toutes les audiences que vous pouvez exporter vers cette destination.
+
+Toutes les destinations prennent en charge l’activation des audiences générées par l’Experience Platform [Segmentation Service](../../../segmentation/home.md).
+
+En outre, cette destination prend également en charge l’activation des audiences décrites dans le tableau ci-dessous.
+
+| Type d’audience | Description |
+---------|----------|
+| Chargements personnalisés | Audiences ingérées dans Experience Platform à partir de fichiers CSV. |
+
+{style="table-layout:auto"}
+
 ## Type et fréquence d’exportation {#export-type-frequency}
 
 Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la fréquence d’exportation des destinations.
 
 | Élément | Type | Notes |
 ---------|----------|---------|
-| Type d’exportation | **[!UICONTROL Exportation des segments]** | Vous exportez tous les membres d’un segment (audience) avec les identifiants (nom, numéro de téléphone et autres) utilisés dans la variable [!DNL Google Customer Match] destination. |
-| Fréquence des exportations | **[!UICONTROL Diffusion en continu]** | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation des segments, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
+| Type d’exportation | **[!UICONTROL Exportation de l’audience]** | Vous exportez tous les membres d’une audience avec les identifiants (nom, numéro de téléphone, etc.) utilisés dans la variable [!DNL Google Customer Match] destination. |
+| Fréquence des exportations | **[!UICONTROL Diffusion en continu]** | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu&#39;un profil est mis à jour en Experience Platform en fonction de l&#39;évaluation de l&#39;audience, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -117,7 +131,7 @@ Attribute source data is not automatically hashed. When your source field contai
 
 <!-- ## Configure destination - video walkthrough {#video}
 
-The video below demonstrates the steps to configure a [!DNL Google Customer Match] destination and activate segments. The steps are also laid out sequentially in the next sections.
+The video below demonstrates the steps to configure a [!DNL Google Customer Match] destination and activate audiences. The steps are also laid out sequentially in the next sections.
 
 >[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng) -->
 
@@ -141,22 +155,21 @@ Pendant la [configuration](../../ui/connect-destination.md) de cette destination
 >
 > * Le **[!UICONTROL Combiner avec les PII]** l’action marketing est sélectionnée par défaut pour la variable [!DNL Google Customer Match] destination et ne peuvent pas être supprimés.
 
-
 ### Activer les alertes {#enable-alerts}
 
 Vous pouvez activer les alertes pour recevoir des notifications sur le statut de votre flux de données vers votre destination. Sélectionnez une alerte dans la liste et abonnez-vous à des notifications concernant le statut de votre flux de données. Pour plus d’informations sur les alertes, consultez le guide sur l’[abonnement aux alertes des destinations dans l’interface utilisateur](../../ui/alerts.md).
 
 Lorsque vous avez terminé de renseigner les détails sur votre connexion de destination, sélectionnez **[!UICONTROL Suivant]**.
 
-## Activer des segments vers cette destination {#activate}
+## Activer les audiences vers cette destination {#activate}
 
 >[!IMPORTANT]
 > 
 >Pour activer les données, vous avez besoin des [autorisations de contrôle d’accès](/help/access-control/home.md#permissions) pour les fonctions **[!UICONTROL Gérer les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]**, et **[!UICONTROL Afficher les segments]**. Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
-Voir [Activer les données d’audience vers des destinations d’exportation de segments de diffusion en continu](../../ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des segments d’audience vers cette destination.
+Voir [Activation des données d’audience vers des destinations d’exportation d’audience par flux](../../ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
 
-Dans le **[!UICONTROL Planification du segment]** , vous devez fournir la variable [!UICONTROL ID de l’application] lors de l’envoi [!DNL IDFA] ou [!DNL GAID] segments vers [!DNL Google Customer Match].
+Dans le **[!UICONTROL Planification du segment]** , vous devez fournir la variable [!UICONTROL ID de l’application] lors de l’envoi [!DNL IDFA] ou [!DNL GAID] audiences vers [!DNL Google Customer Match].
 
 ![ID de l’application de correspondance client Google](../../assets/catalog/advertising/google-customer-match/gcm-destination-appid.png)
 
@@ -191,11 +204,11 @@ Les données de la source d’attributs ne sont pas automatiquement hachées. Lo
 
 ![Transformation du mapping des identités](../../assets/ui/activate-segment-streaming-destinations/identity-mapping-gcm-transformation.png)
 
-## Vérification de la réussite de l’activation du segment {#verify-activation}
+## Vérification de la réussite de l’activation de l’audience {#verify-activation}
 
-Une fois le flux d’activation terminé, passez à la **[!UICONTROL Publicités Google]** compte . Les segments activés s’affichent dans votre compte Google sous forme de listes de clients. En fonction de la taille du segment, certaines audiences ne sont pas renseignées, sauf s’il y a plus de 100 principaux utilisateurs à diffuser.
+Une fois le flux d’activation terminé, passez à la **[!UICONTROL Publicités Google]** compte . Les audiences activées s’affichent dans votre compte Google sous forme de listes de clients. En fonction de la taille de votre audience, certaines audiences ne sont pas renseignées, sauf s’il y a plus de 100 principaux utilisateurs à diffuser.
 
-Lors du mappage d’un segment aux deux [!DNL IDFA] et [!DNL GAID] les identifiants mobiles, [!DNL Google Customer Match] crée un segment distinct pour chaque mappage d’ID. Votre [!DNL Google Ads] Le compte affiche deux segments différents, l’un pour la variable [!DNL IDFA], et un pour le [!DNL GAID] mappage.
+Lors du mappage d’une audience à la fois [!DNL IDFA] et [!DNL GAID] les identifiants mobiles, [!DNL Google Customer Match] crée une audience distincte pour chaque mappage d’ID. Votre [!DNL Google Ads] Le compte affiche deux segments différents, l’un pour la variable [!DNL IDFA], et un pour le [!DNL GAID] mappage.
 
 ## Dépannage {#troubleshooting}
 

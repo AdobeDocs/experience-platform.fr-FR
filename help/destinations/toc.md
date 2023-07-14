@@ -4,10 +4,10 @@ user-guide-title: Guide des destinations
 user-guide-description: Activez vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
 description: Ce document répertorie la table des matières des destinations Adobe Experience Platform
 feature: Destinations
-source-git-commit: 47e0dfb59edca58e205cb478e9ee624659753ab9
+source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
 workflow-type: tm+mt
-source-wordcount: '1172'
-ht-degree: 100%
+source-wordcount: '1167'
+ht-degree: 96%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 100%
    * [Guide de migration des API pour les destinations de stockage dans le cloud](/help/destinations/api/api-migration-guide-cloud-storage-destinations.md)
    * [Se connecter aux destinations de diffusion en continu et activer les données à l’aide de l’API Flow Service](./api/streaming-destinations.md)
    * [Se connecter à l’espace de stockage par lots et aux destinations de marketing par e-mail et activer les données à l’aide de l’API Flow Service](./api/connect-activate-batch-destinations.md)
-   * [(Version Beta) Activer les segments d’audience vers des destinations par lots via l’API d’activation ad hoc](./api/ad-hoc-activation-api.md)
+   * [(Version bêta) Activation des audiences vers des destinations par lot via l’API d’activation ad hoc](./api/ad-hoc-activation-api.md)
    * [Modifier la destination](./api/edit-destination.md)
    * [Mettre à jour les flux de données de destination](./api/update-destination-dataflows.md)
    * [Supprimer les comptes de destination](./api/delete-destination-account.md)
@@ -37,10 +37,10 @@ ht-degree: 100%
    * [Créer une connexion à une destination](./ui/connect-destination.md)
    * Activer les données d’audience vers les destinations {#activate}
       * [Présentation de l’activation](./ui/activation-overview.md)
-      * [Activer les données d’audience vers des destinations d’exportation de segments de diffusion en continu](./ui/activate-segment-streaming-destinations.md)
-      * [Activer les données d’audience vers des destinations d’exportation de profils de diffusion en continu](./ui/activate-streaming-profile-destinations.md)
-      * [Activer les données d’audience vers des destinations d’exportation de profils par lots](./ui/activate-batch-profile-destinations.md)
-      * [Activer les données d’audience vers des destinations de personnalisation Edge](./ui/activate-edge-personalization-destinations.md)
+      * [Activation des audiences vers des destinations d’exportation d’audience par flux](./ui/activate-segment-streaming-destinations.md)
+      * [Activation des audiences vers des destinations d’exportation de profils en continu](./ui/activate-streaming-profile-destinations.md)
+      * [Activation des audiences vers les destinations d’exportation de profils par lots](./ui/activate-batch-profile-destinations.md)
+      * [Activation des audiences vers des destinations de personnalisation de périphérie](./ui/activate-edge-personalization-destinations.md)
       * [(Version bêta) Exporter des fichiers à la demande vers des destinations par lots à l’aide de l’interface utilisateur Experience Platform](./ui/export-file-now.md)
       * [(Version bêta) Exporter des jeux de données à l’aide de l’interface utilisateur Experience Platform](./ui/export-datasets.md)
       * [(Version bêta) Utiliser l’attribut XDM de l’heure de la dernière qualification dans les nouvelles destinations de stockage dans le cloud en version bêta](./ui/activate-last-qualification-time.md)
@@ -59,7 +59,7 @@ ht-degree: 100%
       * [(Version bêta) Audiences Experience Cloud](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
       * [Connexion Marketo Engage](./catalog/adobe/marketo-engage.md)
       * [Connexion Marketo Measure Ultimate](./catalog/adobe/marketo-measure-ultimate.md)
-      * [Partage de segments Experience Platform](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=fr)
+      * [Partage d’audiences Experience Platform](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=fr)
    * Destinations publicitaires {#advertising}
       * [Présentation des destinations publicitaires](./catalog/advertising/overview.md)
       * [Connexion Adobe Advertising Cloud](./catalog/advertising/adobe-advertising-cloud-connection.md)

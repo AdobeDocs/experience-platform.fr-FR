@@ -5,10 +5,10 @@ title: Connexion aux destinations en continu et activation des données à l’a
 description: Ce document couvre la création de destinations de diffusion en continu à l’aide de l’API Adobe Experience Platform.
 type: Tutorial
 exl-id: 3e8d2745-8b83-4332-9179-a84d8c0b4400
-source-git-commit: 9aba3384b320b8c7d61a875ffd75217a5af04815
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '2241'
-ht-degree: 57%
+ht-degree: 45%
 
 ---
 
@@ -26,9 +26,9 @@ Ce tutoriel explique comment utiliser les appels API pour se connecter à vos do
 
 Ce tutoriel utilise la méthode [!DNL Amazon Kinesis] destination dans tous les exemples, mais les étapes sont identiques pour [!DNL Azure Event Hubs].
 
-![Présentation : étapes de création d’une destination de diffusion en continu et d’activation des segments](../assets/api/streaming-destination/overview.png)
+![Présentation : étapes de création d’une destination de diffusion en continu et d’activation des audiences](../assets/api/streaming-destination/overview.png)
 
-Si vous préférez utiliser l’interface utilisateur de Platform pour vous connecter à une destination et activer des données, reportez-vous à la section [Connexion à une destination](../ui/connect-destination.md) et [Activation des données d’audience vers des destinations d’exportation de segments par flux](../ui/activate-segment-streaming-destinations.md) tutoriels.
+Si vous préférez utiliser l’interface utilisateur de Platform pour vous connecter à une destination et activer des données, reportez-vous à la section [Connexion à une destination](../ui/connect-destination.md) et [Activation des données d’audience vers des destinations d’exportation d’audience par flux](../ui/activate-segment-streaming-destinations.md) tutoriels.
 
 ## Prise en main
 
@@ -36,13 +36,13 @@ Ce guide nécessite une compréhension professionnelle des composants suivants d
 
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md) : framework normalisé selon lequel Experience Platform organise les données de l’expérience client.
 * [[!DNL Catalog Service]](../../catalog/home.md): [!DNL Catalog] est le système d’enregistrement de l’emplacement et de la traçabilité des données dans Experience Platform.
-* [Sandbox](../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
+* [Sandbox](../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
 Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour activer les données vers les destinations de diffusion en continu dans Platform.
 
-### Collecte des informations d’identification requises
+### Collecter les informations d’identification requises
 
-Pour suivre les étapes de ce tutoriel, vous devez disposer des informations d’identification suivantes, selon le type de destinations auxquelles vous vous connectez et activez des segments.
+Pour suivre les étapes de ce tutoriel, vous devez disposer des informations d’identification suivantes, selon le type de destinations auxquelles vous vous connectez et activez des audiences.
 
 * Pour [!DNL Amazon Kinesis] connections : `accessKeyId`, `secretKey`, `region` ou `connectionUrl`
 * Pour [!DNL Azure Event Hubs] connections : `sasKeyName`, `sasKey`, `namespace`
@@ -79,7 +79,7 @@ Ce tutoriel vous permet de trouver dans Swagger la documentation de référence 
 
 ![Présentation des étapes de la destination : étape 1](../assets/api/streaming-destination/step1.png)
 
-Dans un premier temps, vous devez décider vers quelle destination de diffusion en continu activer les données. Pour commencer, effectuez un appel pour demander une liste des destinations disponibles auxquelles vous pouvez vous connecter et activer des segments. Effectuez la requête GET suivante auprès du point d’entrée `connectionSpecs` pour obtenir une liste des destinations disponibles :
+Dans un premier temps, vous devez décider vers quelle destination de diffusion en continu activer les données. Pour commencer, effectuez un appel pour demander une liste des destinations disponibles auxquelles vous pouvez vous connecter et activer des audiences. Effectuez la requête GET suivante auprès du point d’entrée `connectionSpecs` pour obtenir une liste des destinations disponibles :
 
 **Format d’API**
 
@@ -101,7 +101,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **Réponse**
 
-Une réponse réussie contient une liste des destinations disponibles et leurs identifiants uniques (`id`). Conservez la valeur de la destination que vous prévoyez d’utiliser, car elle sera requise dans les étapes suivantes. Par exemple, si vous souhaitez vous connecter et diffuser des segments vers [!DNL Amazon Kinesis] ou [!DNL Azure Event Hubs], recherchez le fragment de code suivant dans la réponse :
+Une réponse réussie contient une liste des destinations disponibles et leurs identifiants uniques (`id`). Conservez la valeur de la destination que vous prévoyez d’utiliser, car elle sera requise dans les étapes suivantes. Par exemple, si vous souhaitez vous connecter et diffuser des audiences vers [!DNL Amazon Kinesis] ou [!DNL Azure Event Hubs], recherchez le fragment de code suivant dans la réponse :
 
 ```json
 {
@@ -409,7 +409,7 @@ curl -X POST \
 
 **Réponse**
 
-Une réponse réussie renvoie l’identifiant (`id`) du nouveau flux de données et un `etag`. Notez les deux valeurs car vous en aurez besoin à l’étape suivante pour activer les segments.
+Une réponse réussie renvoie l’identifiant (`id`) du nouveau flux de données et un `etag`. Notez les deux valeurs comme vous le ferez à l’étape suivante, pour activer les audiences.
 
 ```json
 {
@@ -423,9 +423,9 @@ Une réponse réussie renvoie l’identifiant (`id`) du nouveau flux de données
 
 ![Présentation des étapes de la destination : étape 5](../assets/api/streaming-destination/step5.png)
 
-Après avoir créé toutes les connexions et le flux de données, vous pouvez désormais activer vos données de profil vers la plateforme de diffusion en continu. Au cours de cette étape, vous sélectionnez les segments et les attributs de profil que vous envoyez à la destination et vous pouvez planifier et envoyer des données à la destination.
+Après avoir créé toutes les connexions et le flux de données, vous pouvez désormais activer vos données de profil vers la plateforme de diffusion en continu. Au cours de cette étape, vous sélectionnez les audiences et les attributs de profil que vous envoyez à la destination et vous pouvez planifier et envoyer des données à la destination.
 
-Pour activer les segments vers votre nouvelle destination, vous devez effectuer une opération JSON PATCH, comme dans l’exemple ci-dessous. Vous pouvez activer plusieurs segments et attributs de profil lors d’un seul appel. Pour en savoir plus sur le JSON PATCH, consultez la [spécification RFC](https://tools.ietf.org/html/rfc6902).
+Pour activer les audiences vers votre nouvelle destination, vous devez effectuer une opération de PATCH JSON, comme dans l’exemple ci-dessous. Vous pouvez activer plusieurs audiences et attributs de profil en un seul appel. Pour en savoir plus sur le JSON PATCH, consultez la [spécification RFC](https://tools.ietf.org/html/rfc6902).
 
 **Format d’API**
 
@@ -450,8 +450,8 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
     "value": {
       "type": "PLATFORM_SEGMENT",
       "value": {
-        "name": "Name of the segment that you are activating",
-        "description": "Description of the segment that you are activating",
+        "name": "Name of the audience that you are activating",
+        "description": "Description of the audience that you are activating",
         "id": "{SEGMENT_ID}"
       }
     }
@@ -474,13 +474,13 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 | --------- | ----------- |
 | `{DATAFLOW_ID}` | Dans l’URL, utilisez l’identifiant du flux de données que vous avez créé à l’étape précédente. |
 | `{ETAG}` | Obtenez la variable `{ETAG}` de la réponse de l’étape précédente, [Création d’un flux de données](#create-dataflow). Le format de réponse de l’étape précédente comporte des guillemets d’échappement. Vous devez utiliser les valeurs sans séquence d’échappement dans l’en-tête de la requête. Voir l’exemple ci-dessous: <br> <ul><li>Exemple de réponse : `"etag":""7400453a-0000-1a00-0000-62b1c7a90000""`</li><li>Valeur à utiliser dans votre requête : `"etag": "7400453a-0000-1a00-0000-62b1c7a90000"`</li></ul> <br> La valeur de la balise dʼentité est mise à jour à chaque mise à jour réussie d’un flux de données. |
-| `{SEGMENT_ID}` | Indiquez l’identifiant du segment que vous souhaitez exporter vers cette destination. Pour récupérer les identifiants des segments que vous souhaitez activer, voir [récupérer une définition de segment](https://www.adobe.io/experience-platform-apis/references/segmentation/#operation/retrieveSegmentDefinitionById) dans la référence de l’API Experience Platform. |
+| `{SEGMENT_ID}` | Indiquez l’ID d’audience que vous souhaitez exporter vers cette destination. Pour récupérer les ID d’audience pour les audiences que vous souhaitez activer, voir [récupération d’une définition d’audience](https://www.adobe.io/experience-platform-apis/references/segmentation/#operation/retrieveSegmentDefinitionById) dans la référence de l’API Experience Platform. |
 | `{PROFILE_ATTRIBUTE}` | Par exemple : `"person.lastName"` |
-| `op` | Appel d’opération utilisé pour définir l’action nécessaire pour mettre à jour la connexion. Les opérations comprennent : `add`, `replace` et `remove`. Pour ajouter un segment à un flux de données, utilisez l’opération `add`. |
-| `path` | Définit la partie du flux à mettre à jour. Lors de l’ajout d’un segment à un flux de données, utilisez le chemin spécifié dans l’exemple. |
+| `op` | Appel d’opération utilisé pour définir l’action nécessaire pour mettre à jour la connexion. Les opérations comprennent : `add`, `replace` et `remove`. Pour ajouter une audience à un flux de données, utilisez la méthode `add` opération. |
+| `path` | Définit la partie du flux à mettre à jour. Lors de l’ajout d’une audience à un flux de données, utilisez le chemin spécifié dans l’exemple. |
 | `value` | Nouvelle valeur avec laquelle vous souhaitez mettre à jour votre paramètre. |
-| `id` | Indiquez l’identifiant du segment que vous ajoutez au flux de données de destination. |
-| `name` | *Facultatif*. Indiquez le nom du segment que vous ajoutez au flux de données de destination. Notez que ce champ n’est pas obligatoire et que vous pouvez ajouter un segment au flux de données de destination sans indiquer son nom. |
+| `id` | Indiquez l’identifiant de l’audience que vous ajoutez au flux de données de destination. |
+| `name` | *Facultatif*. Indiquez le nom de l’audience que vous ajoutez au flux de données de destination. Notez que ce champ n’est pas obligatoire et que vous pouvez ajouter une audience au flux de données de destination sans fournir son nom. |
 
 **Réponse**
 
@@ -490,7 +490,7 @@ Recherchez une réponse 202 OK. Aucun corps de réponse n’est renvoyé. Pour v
 
 ![Présentation des étapes de la destination : étape 6](../assets/api/streaming-destination/step6.png)
 
-La dernière étape du tutoriel consiste à vérifier que les segments et les attributs de profil ont été correctement mappés au flux de données.
+En guise de dernière étape du tutoriel, vous devez vérifier que les audiences et les attributs de profil ont bien été mappés au flux de données.
 
 Pour ce faire, effectuez la requête GET suivante :
 
@@ -517,7 +517,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 **Réponse**
 
-La réponse renvoyée doit inclure dans le paramètre `transformations` les segments et les attributs de profil que vous avez envoyés à l’étape précédente. Voici un exemple de paramètre `transformations` dans la réponse :
+La réponse renvoyée doit inclure dans la variable `transformations` paramètre les audiences et les attributs de profil que vous avez envoyés à l’étape précédente. Voici un exemple de paramètre `transformations` dans la réponse :
 
 ```json
 "transformations": [
@@ -563,7 +563,7 @@ La réponse renvoyée doit inclure dans le paramètre `transformations` les segm
 
 >[!IMPORTANT]
 >
-> Outre les attributs de profil et les segments à l’étape [Activation des données vers votre nouvelle destination](#activate-data), les données exportées dans [!DNL AWS Kinesis] et [!DNL Azure Event Hubs] inclura également des informations sur la carte des identités. Ceci représente les identités des profils exportés (par exemple [ECID](https://experienceleague.adobe.com/docs/id-service/using/intro/id-request.html), ID mobile, Google ID, adresse électronique, etc.). Voir un exemple ci-dessous.
+> En plus des attributs de profil et des audiences à l’étape [Activation des données vers votre nouvelle destination](#activate-data), les données exportées dans [!DNL AWS Kinesis] et [!DNL Azure Event Hubs] inclura également des informations sur la carte des identités. Ceci représente les identités des profils exportés (par exemple [ECID](https://experienceleague.adobe.com/docs/id-service/using/intro/id-request.html), ID mobile, Google ID, adresse électronique, etc.). Voir un exemple ci-dessous.
 
 ```json
 {

@@ -2,10 +2,10 @@
 title: Connexion Azure Blob
 description: Créez une connexion sortante active vers votre stockage Blob Azure afin d’exporter régulièrement des fichiers de données CSV à partir d’Adobe Experience Platform.
 exl-id: 8099849b-e3d2-48a5-902a-ca5a5ec88207
-source-git-commit: 8890fd137cfe6d35dcf6177b5516605e7753a75a
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '1029'
-ht-degree: 80%
+source-wordcount: '1085'
+ht-degree: 69%
 
 ---
 
@@ -18,7 +18,6 @@ ht-degree: 80%
 >Avec la version bêta de la fonctionnalité d’exportation des jeux de données et la fonctionnalité améliorée d’exportation de fichiers, vous pouvez maintenant voir deux cartes [!DNL Azure Blob] dans le catalogue des destinations.
 >* Si vous exportez déjà des fichiers vers la destination **[!UICONTROL Azure Blob]**, créez des flux de données vers la nouvelle destination **[!UICONTROL Azure Blob Beta]**.
 >* Si vous n’avez pas encore créé de flux de données vers la destination **[!UICONTROL Azure Blob]**, utilisez la nouvelle carte **[!UICONTROL Azure Blob Beta]** pour exporter des fichiers vers **[!UICONTROL Azure Blob]**.
-
 
 ![Image des deux cartes de destination Azure Blob en vue côte à côte.](../../assets/catalog/cloud-storage/blob/two-azure-blob-destination-cards.png)
 
@@ -35,8 +34,8 @@ Améliorations de la nouvelle carte de destination [!DNL Azure Blob] :
 
 ## Connectez-vous à votre [!UICONTROL Azure Blob] stockage via l’API ou l’interface utilisateur {#connect-api-or-ui}
 
-* Pour vous connecter à [!UICONTROL Azure Blob] Emplacement de stockage à l’aide de l’interface utilisateur de Platform, lisez les sections [Connexion à la destination](#connect) et [Activation des segments vers cette destination](#activate) ci-dessous.
-* Pour vous connecter à [!UICONTROL Azure Blob] emplacement de stockage par programmation, lisez la [Activation des segments vers des destinations basées sur des fichiers à l’aide du tutoriel de l’API Flow Service](../../api/activate-segments-file-based-destinations.md).
+* Pour vous connecter à [!UICONTROL Azure Blob] Emplacement de stockage à l’aide de l’interface utilisateur de Platform, lisez les sections [Connexion à la destination](#connect) et [Activer les audiences vers cette destination](#activate) ci-dessous.
+* Pour vous connecter à [!UICONTROL Azure Blob] emplacement de stockage par programmation, lisez la [Activation des audiences vers des destinations basées sur des fichiers à l’aide du tutoriel de l’API Flow Service](../../api/activate-segments-file-based-destinations.md).
 
 ## Prise en main
 
@@ -47,7 +46,21 @@ Ce tutoriel nécessite une compréhension du fonctionnement des composants suiva
    * [Tutoriel sur l’éditeur de schémas](../../../xdm/tutorials/create-schema-ui.md) : découvrez comment créer des schémas personnalisés à l’aide de l’interface utilisateur de l’éditeur de schémas.
 * [[!DNL Real-Time Customer Profile]](../../../profile/home.md) : fournit un profil de consommateur unifié en temps réel, basé sur des données agrégées provenant de plusieurs sources.
 
-Si vous avez déjà une destination [!DNL Blob] valide, vous pouvez ignorer le reste de ce document et passer au tutoriel sur l’[activation des segments vers votre destination](../../ui/activate-batch-profile-destinations.md).
+Si vous disposez déjà d’un [!DNL Blob] , vous pouvez ignorer le reste de ce document et passer au tutoriel sur [activation des audiences vers votre destination](../../ui/activate-batch-profile-destinations.md).
+
+## Audiences prises en charge {#supported-audiences}
+
+Cette section décrit toutes les audiences que vous pouvez exporter vers cette destination.
+
+Toutes les destinations prennent en charge l’activation des audiences générées par l’Experience Platform [Segmentation Service](../../../segmentation/home.md).
+
+En outre, cette destination prend également en charge l’activation des audiences décrites dans le tableau ci-dessous.
+
+| Type d’audience | Description |
+---------|----------|
+| Chargements personnalisés | Audiences ingérées dans Experience Platform à partir de fichiers CSV. |
+
+{style="table-layout:auto"}
 
 ## Type et fréquence d’exportation {#export-type-frequency}
 
@@ -87,7 +100,7 @@ Pour vous authentifier auprès de la destination, renseignez les champs requis e
    * Pour plus d’informations sur la configuration de votre chaîne de connexion [!DNL Blob], consultez [Configurer une chaîne de connexion pour un compte de stockage Azure](https://learn.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string#configure-a-connection-string-for-an-azure-storage-account) dans la documentation de Microsoft.
 * **[!UICONTROL Clé de chiffrement]** : vous pouvez éventuellement joindre votre clé publique au format RSA pour ajouter un chiffrement à vos fichiers exportés. Vous pouvez voir un exemple de clé correctement formatée dans l’image ci-dessous.
 
-   ![Image montrant un exemple de clé PGP correctement formatée dans l’interface utilisateur](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+  ![Image montrant un exemple de clé PGP correctement formatée dans l’interface utilisateur](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
 ### Renseigner les détails de la destination {#destination-details}
 
@@ -107,13 +120,13 @@ Vous pouvez activer les alertes pour recevoir des notifications sur le statut de
 
 Lorsque vous avez terminé de renseigner les détails sur votre connexion de destination, sélectionnez **[!UICONTROL Suivant]**.
 
-## Activer des segments vers cette destination {#activate}
+## Activer les audiences vers cette destination {#activate}
 
 >[!IMPORTANT]
 > 
 >Pour activer les données, vous avez besoin des [autorisations de contrôle d’accès](/help/access-control/home.md#permissions) pour les fonctions **[!UICONTROL Gérer les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]**, et **[!UICONTROL Afficher les segments]**. Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
-Voir [Activer les données d’audience vers des destinations d’exportation de profils par lots](../../ui/activate-batch-profile-destinations.md) pour obtenir des instructions sur l’activation des segments d’audience vers cette destination.
+Voir [Activation des données d’audience vers des destinations d’exportation de profils par lots](../../ui/activate-batch-profile-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
 
 ## (Version bêta) Exporter des jeux de données {#export-datasets}
 
@@ -124,4 +137,4 @@ Cette destination prend en charge les exportations de jeux de données. Pour obt
 
 ## Données exportées {#exported-data}
 
-Pour les destinations [!DNL Azure Blob Storage], [!DNL Platform] crée un fichier `.csv` à l’emplacement de stockage que vous avez fourni. Pour plus d’informations sur les fichiers, consultez [Activation des données d’audience vers des destinations d’exportation de profils par lots](../../ui/activate-batch-profile-destinations.md) dans le tutoriel sur l’activation des segments.
+Pour les destinations [!DNL Azure Blob Storage], [!DNL Platform] crée un fichier `.csv` à l’emplacement de stockage que vous avez fourni. Pour plus d’informations sur les fichiers, voir [Activation des données d’audience vers des destinations d’exportation de profils par lots](../../ui/activate-batch-profile-destinations.md) dans le tutoriel sur l’activation de l’audience.

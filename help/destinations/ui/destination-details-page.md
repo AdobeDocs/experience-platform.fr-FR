@@ -1,18 +1,18 @@
 ---
 keywords: destinations;destination;page des détails des destinations;page des détails des destinations
 title: Afficher les détails de la destination
-description: La page de détails d’une destination individuelle fournit un aperçu des détails de destination. Les détails de la destination incluent le nom de destination, l’identifiant, les segments mappés à la destination et les contrôles permettant de modifier l’activation et d’activer et désactiver le flux de données.
+description: La page de détails d’une destination individuelle fournit un aperçu des détails de destination. Les détails de la destination incluent le nom de destination, l’identifiant, les audiences mappées à la destination et les contrôles permettant de modifier l’activation et d’activer et désactiver le flux de données.
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: dcbc0c3ef87be0bc296992819c9b1bc3ba6317e4
+source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
 workflow-type: tm+mt
 source-wordcount: '926'
-ht-degree: 18%
+ht-degree: 12%
 
 ---
 
 # Afficher les détails de la destination
 
-## Présentation {#overview}
+## Vue d’ensemble {#overview}
 
 Dans l’interface utilisateur de Adobe Experience Platform, vous pouvez afficher et surveiller les attributs et les activités de vos destinations. Ces détails incluent le nom et l’identifiant de la destination, des commandes pour activer ou désactiver les destinations, etc. Les détails incluent également des mesures pour les enregistrements de profil activés, les identités activées, en échec et exclues, ainsi qu’un historique des exécutions de flux de données.
 
@@ -50,8 +50,8 @@ Le tableau suivant couvre les contrôles et les détails fournis par le rail de 
 
 | Élément de rail de droite | Description |
 | --- | --- |
-| [!UICONTROL Activer les segments] | Sélectionnez ce contrôle pour modifier les segments qui sont mappés à la destination, mettre à jour les plannings d’exportation ou ajouter et supprimer des attributs et des identités mappés. Voir les guides sur [activation des données d’audience pour segmenter les destinations de diffusion en continu](./activate-segment-streaming-destinations.md), [activation des données d’audience vers des destinations basées sur un profil de lot](./activate-batch-profile-destinations.md), et [activation des données d’audience vers des destinations basées sur un profil de diffusion en continu](./activate-streaming-profile-destinations.md) pour plus d’informations. |
-| [!UICONTROL Supprimer] | Permet de supprimer ce flux de données et annule le mappage des segments qui ont été activés auparavant, le cas échéant. |
+| [!UICONTROL Activation des audiences] | Sélectionnez ce contrôle pour modifier les audiences qui sont mappées à la destination, mettre à jour les plannings d’exportation ou ajouter et supprimer des attributs et des identités mappés. Voir les guides sur [activation des données d’audience vers des destinations de diffusion en continu d’audience](./activate-segment-streaming-destinations.md), [activation des données d’audience vers des destinations basées sur un profil de lot](./activate-batch-profile-destinations.md), et [activation des données d’audience vers des destinations basées sur un profil de diffusion en continu](./activate-streaming-profile-destinations.md) pour plus d’informations. |
+| [!UICONTROL Supprimer] | Permet de supprimer ce flux de données et annule la correspondance des audiences qui ont été activées auparavant, le cas échéant. |
 | [!UICONTROL Nom de la destination] | Ce champ peut être modifié afin de mettre à jour le nom de la destination. |
 | [!UICONTROL Description] | Ce champ peut être modifié pour mettre à jour ou ajouter une description facultative à la destination. |
 | [!UICONTROL Destination] | Représente la plateforme de destination vers laquelle les audiences sont envoyées. Voir [destinations](../catalog/overview.md) pour plus d’informations. |
@@ -81,7 +81,6 @@ Le [!UICONTROL Exécutions de flux de données] fournit des données de mesure s
 >* La fonctionnalité de surveillance des destinations est actuellement prise en charge pour toutes les destinations dans Experience Platform. *Sauf* la valeur [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md), [Personnalisation personnalisée](/help/destinations/catalog/personalization/custom-personalization.md) et [Audiences Experience Cloud](/help/destinations/catalog/adobe/experience-cloud-audiences.md) destinations.
 >* Pour le [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [Centre d’événements Azure](/help/destinations/catalog/cloud-storage/azure-event-hubs.md), et [API HTTP](/help/destinations/catalog/streaming/http-destination.md) destinations, les mesures liées aux identités exclues, en échec et activées sont estimées. Des volumes plus importants de données d’activation augmentent la précision des mesures.
 
-
 ![Vue des exécutions du flux de données](../assets/ui/details-page/dataflow-runs.png)
 
 ### Durée des exécutions du flux de données {#dataflow-runs-duration}
@@ -98,7 +97,7 @@ Pour plus d’informations, reportez-vous à la section [le flux de données s�
 
 ### Destinations basées sur des fichiers {#file-based}
 
-Pour les flux de données qui s’exécutent sur des destinations basées sur des fichiers, la variable **[!UICONTROL Durée de traitement]** dépend de la taille des données exportées et de la charge du système. Notez également que le flux de données s’exécute vers des destinations basées sur des fichiers sont ventilés par segment.
+Pour les flux de données qui s’exécutent sur des destinations basées sur des fichiers, la variable **[!UICONTROL Durée de traitement]** dépend de la taille des données exportées et de la charge du système. Notez également que le flux de données s’exécute vers des destinations basées sur des fichiers sont ventilés par audience.
 
 ![Image de la page Flux de données s’exécutant avec la colonne Temps de traitement mise en surbrillance pour une destination basée sur un fichier.](/help/destinations/assets/ui/details-page/processing-time-dataflow-run-file-based.png)
 
@@ -106,11 +105,11 @@ Pour plus d’informations, reportez-vous à la section [le flux de données s�
 
 ## [!UICONTROL Données d’activation] {#activation-data}
 
-L’onglet [!UICONTROL Données d’activation] affiche la liste des segments qui ont été mappés à la destination, y compris leur date de début et de fin (le cas échéant), ainsi que d’autres informations pertinentes pour l’exportation des données, telles que le type d’exportation, la planification et la fréquence. Pour afficher les détails d’un segment spécifique, sélectionnez son nom dans la liste.
+Le [!UICONTROL Données d’activation] affiche une liste des audiences qui ont été mappées à la destination, y compris leur date de début et de fin (le cas échéant), ainsi que d’autres informations pertinentes pour l’exportation des données, telles que le type d’exportation, la planification et la fréquence. Pour afficher les détails d’une audience spécifique, sélectionnez son nom dans la liste.
 
 >[!TIP]
 >
->Pour afficher et modifier les détails sur les attributs et les identités mappés à une destination, sélectionnez **[!UICONTROL Activation des segments]** dans le [rail droit](#right-rail).
+>Pour afficher et modifier les détails sur les attributs et les identités mappés à une destination, sélectionnez **[!UICONTROL Activation des audiences]** dans le [rail droit](#right-rail).
 
 ![Destination du lot d’affichage des données d’activation](../assets/ui/details-page/activation-data-batch.png)
 
@@ -118,4 +117,4 @@ L’onglet [!UICONTROL Données d’activation] affiche la liste des segments qu
 
 >[!NOTE]
 >
->Pour plus d’informations sur l’exploration de la page de détails d’un segment, reportez-vous à la section [Présentation de l’interface utilisateur de segmentation](../../segmentation/ui/overview.md#segment-details).
+>Pour plus d’informations sur l’exploration de la page de détails d’une audience, reportez-vous à la section [Présentation de l’interface utilisateur de segmentation](../../segmentation/ui/overview.md#segment-details).

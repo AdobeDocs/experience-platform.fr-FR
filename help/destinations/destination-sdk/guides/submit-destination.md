@@ -2,7 +2,7 @@
 description: Cette page fournit toutes les informations dont vous avez besoin pour soumettre une révision d’une destination productisée créée à l’aide de Destination SDK.
 title: Envoyer pour révision une destination productisée créée en Destination SDK
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
-source-git-commit: 8c8026b1180775dddd9517fc88727749678a5613
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '1014'
 ht-degree: 36%
@@ -11,7 +11,7 @@ ht-degree: 36%
 
 # Envoyer pour révision une destination productisée créée en Destination SDK
 
-## Présentation {#overview}
+## Vue d’ensemble {#overview}
 
 >[!IMPORTANT]
 >
@@ -22,7 +22,6 @@ ht-degree: 36%
 >* Si l’équipe d’Adobe vous demande d’apporter des mises à jour à vos configurations après votre envoi initial, vous devez envoyer une autre demande de publication de destination après avoir effectué les mises à jour.
 >
 >* Même une fois votre destination publiée dans le catalogue des Experience Platform, si vous devez apporter des mises à jour à vos configurations, vous devez envoyer une nouvelle demande de publication de destination pour que les mises à jour soient répercutées dans les configurations.
-
 
 Pour que votre destination puisse être publiée dans le [catalogue des destinations Experience Platform](/help/destinations/catalog/overview.md), vous devez fournir à Adobe certaines informations sur la destination et les tests effectués. Cela permet de sʼassurer que les utilisateurs bénéficient de la meilleure expérience possible lors de l’activation des données vers votre plateforme.
 
@@ -46,7 +45,7 @@ Vous trouverez des informations détaillées sur chaque élément dans les secti
 Fournissez une description des cas d’utilisation que votre destination résout pour les clients Experience Platform. Vos descriptions peuvent être similaires aux cas d’utilisation des partenaires existants :
 
 * [Pinterest](/help/destinations/catalog/advertising/pinterest.md): Créez des audiences à partir des listes de clients, des personnes qui ont visité votre site ou des personnes qui ont déjà interagi avec votre contenu sur Pinterest.
-* [Yahoo Data X](/help/destinations/catalog/advertising/datax.md#use-cases): Les API DataX sont disponibles pour les annonceurs qui souhaitent cibler un groupe d’audience spécifique en dehors des adresses électroniques dans Verizon Media (VMG). Elles peuvent rapidement créer un nouveau segment et pousser le groupe d’audience souhaité à l’aide de l’API en temps quasi réel de VMG.
+* [Yahoo Data X](/help/destinations/catalog/advertising/datax.md#use-cases): Les API DataX sont disponibles pour les annonceurs qui souhaitent cibler un groupe d’audience spécifique en dehors des adresses électroniques dans Verizon Media (VMG). Elles peuvent rapidement créer une nouvelle audience et pousser le groupe d’audience souhaité à l’aide de l’API en temps quasi réel de VMG.
 
 ## Raison de la mise à jour {#reason-for-update}
 

@@ -3,10 +3,10 @@ title: (Version bêta) Exporter des fichiers à la demande vers des destinations
 type: Tutorial
 description: Découvrez comment exporter des fichiers à la demande vers des destinations par lots à l’aide de l’interface utilisateur de l’Experience Platform.
 exl-id: 0cbe5089-b73d-4584-8451-2fc34d47c357
-source-git-commit: 29962e07aa50c97b6098f4c892facf48508d28cf
+source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
 workflow-type: tm+mt
-source-wordcount: '743'
-ht-degree: 24%
+source-wordcount: '741'
+ht-degree: 22%
 
 ---
 
@@ -30,9 +30,9 @@ ht-degree: 24%
 
 Cet article explique comment utiliser l’interface utilisateur de l’Experience Platform pour exporter des fichiers à la demande vers des destinations par lots telles que [espace de stockage](/help/destinations/catalog/cloud-storage/overview.md) et [marketing par e-mail](/help/destinations/catalog/email-marketing/overview.md) destinations.
 
-Le **[!UICONTROL Exporter le fichier maintenant]** Le contrôle permet d’exporter un fichier complet sans interrompre le planning d’exportation actuel d’un segment précédemment planifié. Cette exportation s’ajoute aux exportations précédemment planifiées. Elle ne modifie pas la fréquence d’exportation du segment. L’exportation du fichier est déclenchée immédiatement et récupère les derniers résultats des exécutions de segmentation d’Experience Platform.
+Le **[!UICONTROL Exporter le fichier maintenant]** Le contrôle permet d&#39;exporter un fichier complet sans interrompre le planning d&#39;export actuel d&#39;une audience précédemment planifiée. Cet export s&#39;effectue en plus des exports précédemment programmés et ne modifie pas la fréquence d&#39;export de l&#39;audience. L’exportation du fichier est déclenchée immédiatement et récupère les derniers résultats des exécutions de segmentation d’Experience Platform.
 
-Vous pouvez également utiliser les API Experience Platform à cet effet. Lire comment [Activation des segments d’audience à la demande vers des destinations par lots via l’API d’activation ad hoc](/help/destinations/api/ad-hoc-activation-api.md).
+Vous pouvez également utiliser les API Experience Platform à cet effet. Lire comment [activation d’audiences à la demande vers des destinations par lots via l’API d’activation ad hoc](/help/destinations/api/ad-hoc-activation-api.md).
 
 ## Conditions préalables {#prerequisites}
 
@@ -48,11 +48,11 @@ Pour exporter des fichiers à la demande vers des destinations par lot, vous dev
 
    ![Image mettant en surbrillance un flux de données filtré.](../assets/ui/activate-on-demand/filtered-dataflow.png)
 
-3. Sélectionnez la **[!UICONTROL Données d’activation]** et sélectionnez le segment pour lequel vous souhaitez exporter un fichier à la demande, puis sélectionnez le **[!UICONTROL Exporter le fichier maintenant]** pour déclencher une exportation unique qui diffusera un fichier vers votre destination de lot.
+3. Sélectionnez la **[!UICONTROL Données d’activation]** et sélectionnez l&#39;audience pour laquelle vous souhaitez exporter un fichier à la demande, puis sélectionnez l&#39;option **[!UICONTROL Exporter le fichier maintenant]** pour déclencher une exportation unique qui diffusera un fichier vers votre destination de lot.
 
    >[!IMPORTANT]
    >
-   >La sélection de plusieurs segments pour exporter des fichiers à la demande en bloc n’est actuellement pas prise en charge dans l’interface utilisateur. Utilisez la variable [API d’activation ad hoc](/help/destinations/api/ad-hoc-activation-api.md) à cette fin.
+   >La sélection de plusieurs audiences pour exporter des fichiers à la demande en bloc n’est actuellement pas prise en charge dans l’interface utilisateur. Utilisez la variable [API d’activation ad hoc](/help/destinations/api/ad-hoc-activation-api.md) à cette fin.
 
    ![Image mettant en surbrillance le bouton Exporter le fichier maintenant .](../assets/ui/activate-on-demand/activate-segment-on-demand.png)
 
@@ -70,9 +70,9 @@ Pour exporter des fichiers à la demande vers des destinations par lot, vous dev
 
 Gardez à l’esprit les points suivants lors de l’utilisation de la variable **[!UICONTROL Exporter le fichier maintenant]** control :
 
-* **[!UICONTROL Exporter le fichier maintenant]** fonctionne uniquement pour les segments dont le planning dans le flux de données d’activation par lots chevauche la date actuelle. Cela inclut les segments dont les planifications n’ont pas de date de fin (fréquence d’exportation de **[!UICONTROL Une fois]**) ou lorsque la date de fin n’est pas encore passée.
-* Lors de l’ajout d’un segment à un flux de données existant, attendez au moins 15 minutes avant d’utiliser la variable **[!UICONTROL Exporter le fichier maintenant]** contrôle.
-* Si vous modifiez la stratégie de fusion d’un segment ou si vous créez un segment qui utilise une nouvelle stratégie de fusion, patientez 24 heures jusqu’à l’utilisation de la variable **[!UICONTROL Exporter le fichier maintenant]** contrôle.
+* **[!UICONTROL Exporter le fichier maintenant]** fonctionne uniquement pour les audiences dont le planning dans le flux de données d’activation par lots chevauche la date actuelle. Cela inclut les audiences dont les planifications n’ont pas de date de fin (fréquence d’exportation de **[!UICONTROL Une fois]**) ou lorsque la date de fin n’est pas encore passée.
+* Lors de l’ajout d’une audience à un flux de données existant, attendez au moins 15 minutes avant d’utiliser la variable **[!UICONTROL Exporter le fichier maintenant]** contrôle.
+* Si vous modifiez la stratégie de fusion d’une audience ou si vous créez une audience qui utilise une nouvelle stratégie de fusion, patientez 24 heures jusqu’à l’utilisation de la variable **[!UICONTROL Exporter le fichier maintenant]** contrôle.
 
 ## Messages d’erreur de l’interface utilisateur {#ui-error-messages}
 
@@ -80,10 +80,10 @@ Lors de l’utilisation de la variable **[!UICONTROL Exporter le fichier mainten
 
 | Message d’erreur | Résolution |
 |---------|----------|
-| Exécution déjà en cours pour le segment `segment ID` pour la commande `dataflow ID` avec identifiant d’exécution `flow run ID` | Ce message d’erreur indique qu’un flux d’activation ad hoc est actuellement en cours pour un segment. Attendez que la tâche se termine avant de déclencher à nouveau la tâche d’activation. |
-| Segments `<segment name>` ne font pas partie de ce flux de données ou ne font pas partie de la plage de dates prévue. | Ce message d’erreur indique que les segments que vous avez sélectionnés pour activer ne sont pas mappés au flux de données ou que le planning d’activation configuré pour les segments a expiré ou n’a pas encore commencé. Vérifiez si le segment est bien mappé sur le flux de données et que le planning d’activation du segment chevauche la date actuelle. |
+| Exécution déjà en cours pour l’audience `segment ID` pour la commande `dataflow ID` avec identifiant d’exécution `flow run ID` | Ce message d’erreur indique qu’un flux d’activation ad hoc est actuellement en cours pour une audience. Attendez que la tâche se termine avant de déclencher à nouveau la tâche d’activation. |
+| Audiences `<segment name>` ne font pas partie de ce flux de données ou ne font pas partie de la plage de dates prévue. | Ce message d’erreur indique que les audiences que vous avez sélectionnées pour activer ne sont pas mappées au flux de données ou que le planning d’activation configuré pour les audiences a expiré ou n’a pas encore commencé. Vérifiez si l’audience est bien mappée au flux de données et que le planning d’activation de l’audience chevauche la date actuelle. |
 
 ## Informations connexes {#related-information}
 
-* [Activation des segments d’audience vers des destinations par lots à la demande à l’aide des API Experience Platform](/help/destinations/api/ad-hoc-activation-api.md)
+* [Activation des audiences vers des destinations par lots à la demande à l’aide des API Experience Platform](/help/destinations/api/ad-hoc-activation-api.md)
 * [Activer les données d’audience vers des destinations d’exportation de profils par lots](/help/destinations/ui/activate-batch-profile-destinations.md)

@@ -4,7 +4,7 @@ title: Modifier des flux de données d’activation
 type: Tutorial
 description: Suivez les étapes de cet article pour modifier un flux de données d’activation existant dans Adobe Experience Platform.
 exl-id: 0d79fbff-bfde-4109-8353-c7530e9719fb
-source-git-commit: a6fe0f5a0c4f87ac265bf13cb8bba98252f147e0
+source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
 workflow-type: tm+mt
 source-wordcount: '328'
 ht-degree: 26%
@@ -13,7 +13,7 @@ ht-degree: 26%
 
 # Modifier des flux de données d’activation {#edit-activation-flows}
 
-Dans Adobe Experience Platform, vous pouvez modifier divers composants des flux de données d’activation existants vers les destinations, tels que les segments et les attributs de profil exportés, la fréquence d’exportation, si le flux de données d’activation est activé ou désactivé, etc.
+Dans Adobe Experience Platform, vous pouvez modifier divers composants des flux de données d’activation existants vers les destinations, tels que les audiences et les attributs de profil exportés, la fréquence d’exportation, si le flux de données d’activation est activé ou désactivé, etc.
 
 ## Modifier les flux de données {#edit-dataflows}
 
@@ -33,10 +33,11 @@ Suivez les étapes ci-dessous pour modifier les flux de données d’activation 
 
 4. Le **[!UICONTROL Exécutions de flux de données]** pour la destination s’affiche, affichant ses commandes disponibles. À ce stade, vous pouvez modifier plusieurs composants du flux de données de destination :
 
-   * Sélectionner **[!UICONTROL Activation des segments]** dans le rail de droite pour modifier les segments ou attributs de profil à envoyer à la destination. Cette action vous conduit au workflow d’activation, qui varie en fonction du type de destination. Pour plus d’informations, consultez les guides sur :
-      * [activation des données d’audience pour segmenter les destinations de diffusion en continu](./activate-segment-streaming-destinations.md) (par exemple, Facebook ou Twitter) ;
+   * Sélectionner **[!UICONTROL Activation des audiences]** dans le rail de droite pour modifier les audiences ou les attributs de profil à envoyer à la destination. Cette action vous conduit au workflow d’activation, qui varie en fonction du type de destination. Pour plus d’informations, consultez les guides sur :
+      * [activation des données d’audience vers des destinations de diffusion en continu d’audience](./activate-segment-streaming-destinations.md) (par exemple, Facebook ou Twitter) ;
       * [activation des données d’audience vers des destinations basées sur un profil de lot](./activate-batch-profile-destinations.md) (par exemple, Amazon S3 ou Oracle Eloqua) ;
       * [activation des données d’audience vers des destinations basées sur un profil de diffusion en continu](./activate-streaming-profile-destinations.md) (par exemple, API HTTP ou Amazon Kinesis).
+
    * De plus, vous pouvez modifier le nom et la description du flux de données de destination.
    * Vous pouvez utiliser la variable **[!UICONTROL Activé]/[!UICONTROL Désactivé]** pour démarrer et suspendre toutes les exportations de données vers la destination.
 

@@ -3,10 +3,10 @@ keywords: destinations;adobe experience platform;platform;présentation des dest
 title: Présentation des destinations
 description: Les destinations sont des intégrations préconfigurées à des plateformes de destination qui permettent dʼactiver facilement des données provenant dʼAdobe Experience Platform. Vous pouvez utiliser les destinations dans Adobe Experience Platform pour activer vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: 546758c419670746cf55de35cbb33131d4457cb9
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '805'
-ht-degree: 100%
+ht-degree: 84%
 
 ---
 
@@ -30,7 +30,7 @@ L’une des principales fonctionnalités de Platform consiste à ingérer vos do
 ## Étapes des destinations {#steps}
 
 * Effectuez un choix parmi un [catalogue en libre-service](./catalog/overview.md) de toutes les destinations disponibles dans Platform.
-* Utilisez les destinations pour envoyer des profils ou des segments aux plateformes d’automatisation marketing, de publicité digitale, etc.
+* Utilisez les destinations pour envoyer des profils ou des audiences aux plateformes d’automatisation marketing, de publicité numérique, etc.
 * Planifiez régulièrement des exportations de données vers les destinations de votre choix.
 
 ## Commandes {#controls}
@@ -40,8 +40,8 @@ Les commandes de l’[espace de travail des destinations](./ui/destinations-work
 * parcourir le catalogue des plateformes de destination dans lesquelles vous pouvez activer vos données ;
 * créer, modifier, activer et désactiver des flux de données vers les destinations du catalogue ;
 * créer un compte dans un emplacement de stockage ou lier Platform au compte dans la plateforme des destinations ;
-* sélectionner les segments à activer vers les destinations ;
-* sélectionner les [champs XDM](../xdm/home.md) à exporter lors de l’activation de segments vers des destinations de marketing par e-mail.
+* Sélectionnez les audiences qui doivent être activées vers les destinations.
+* Sélectionnez laquelle [Champs du modèle de données d’expérience (XDM)](../xdm/home.md) à exporter lors de l’activation d’audiences vers des destinations de marketing par e-mail.
 
 ## Types et catégories de destination {#types-and-categories}
 
@@ -56,8 +56,8 @@ Le tableau suivant décrit les autorisations et combinaisons d’autorisations r
 | Niveau d’autorisation | Description |
 | ---- | ----|
 | **[!UICONTROL Gérer les destinations]** | Pour vous connecter aux destinations, vous avez besoin de l’[autorisation de contrôle d’accès](/help/access-control/home.md#permissions) **[!UICONTROL Gérer les destinations]**. |
-| **[!UICONTROL Gérer les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** | Pour activer les segments vers les destinations et activer l’[étape de mappage](ui/activate-batch-profile-destinations.md#mapping) du workflow, vous devez disposer des [autorisations de contrôle d’accès](/help/access-control/home.md#permissions) suivantes : **[!UICONTROL Gérer les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]**. |
-| **[!UICONTROL Gérer les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Activer les segments sans mappage]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]**. | Pour activer les segments vers les destinations et masquer l’[étape de mappage](ui/activate-batch-profile-destinations.md#mapping) du workflow, vous devez disposer des [autorisations de contrôle d’accès](/help/access-control/home.md#permissions) suivantes : **[!UICONTROL Gérer les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Activer les segments sans mappage]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]**. |
+| **[!UICONTROL Gérer les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** | Pour activer les audiences vers les destinations et activer la variable [étape de mappage](ui/activate-batch-profile-destinations.md#mapping) du workflow, vous avez besoin de l’événement **[!UICONTROL Gestion des destinations]**, **[!UICONTROL Activation des destinations]**, **[!UICONTROL Afficher les profils]**, et **[!UICONTROL Affichage de segments]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). |
+| **[!UICONTROL Gérer les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Activer les segments sans mappage]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]**. | Pour activer les audiences vers les destinations et masquer la variable [étape de mappage](ui/activate-batch-profile-destinations.md#mapping) du workflow, vous avez besoin de l’événement **[!UICONTROL Gestion des destinations]**, **[!UICONTROL Activation des destinations]**, **[!UICONTROL Activation des segments sans mappage]**, **[!UICONTROL Afficher les profils]**, et **[!UICONTROL Affichage de segments]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). |
 
 {style="table-layout:auto"}
 
@@ -88,15 +88,15 @@ Consultez la documentation sur la gouvernance des données dans Platform pour pl
 
 Pour plus d’informations sur la sélection d’actions marketing dans le workflow de création de destination, consultez les pages suivantes pour les différents types de destinations dans Platform :
 
-* [Destinations publicitaires - Google Ad Manager ](./catalog/advertising/google-ad-manager.md)
+* [Destinations publicitaires - Google Ad Manager](./catalog/advertising/google-ad-manager.md)
 * [Destinations publicitaires - Google Ads](./catalog/advertising/google-ads-destination.md)
-* [Destinations publicitaires - Google Display &amp; Video 360 ](./catalog/advertising/google-dv360.md)
+* [Destinations publicitaires - Google Display &amp; Video 360](./catalog/advertising/google-dv360.md)
 * [Destinations de stockage dans le cloud](./catalog/cloud-storage/overview.md)
 * [Destinations de marketing par e-mail ](./catalog/email-marketing/overview.md)
 * [Destinations sociales ](./catalog/social/overview.md)
 
-Pour plus d’informations sur les violations de politique de données dans le workflow d’activation des segments, voir l’étape **[!UICONTROL Révision]** dans les guides suivants :
+Pour plus d’informations sur les violations de stratégie de données dans le processus d’activation de l’audience, voir **[!UICONTROL Réviser]** dans les guides suivants :
 
-* [Activer les données d’audience vers des destinations d’exportation de segments de diffusion en continu](./ui/activate-segment-streaming-destinations.md#review)
+* [Activation des données d’audience vers des destinations d’exportation d’audiences par flux](./ui/activate-segment-streaming-destinations.md#review)
 * [Activer les données d’audience vers des destinations d’exportation de profils de diffusion en continu](./ui/activate-streaming-profile-destinations.md#review)
 * [Activer les données d’audience vers des destinations d’exportation de profils par lots](./ui/activate-batch-profile-destinations.md#review)

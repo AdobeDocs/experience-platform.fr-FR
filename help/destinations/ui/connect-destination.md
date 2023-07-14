@@ -4,10 +4,10 @@ title: Créer une connexion à une destination
 type: Tutorial
 description: Découvrez comment vous connecter à une destination dans Adobe Experience Platform, activer des alertes et configurer des actions marketing pour votre destination connectée.
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
-source-git-commit: 606038116391e75ba4ffc36bab11757f963a8346
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '1107'
-ht-degree: 99%
+ht-degree: 79%
 
 ---
 
@@ -18,10 +18,9 @@ ht-degree: 99%
 >* Pour vous connecter à une destination, vous devez disposer de l’[autorisation de contrôle d’accès](/help/access-control/home.md#permissions) **[!UICONTROL Gérer les destinations]**. Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 >* Pour vous connecter à une destination qui prend en charge les exportations de jeux de données, vous devez disposer de l’[autorisation de contrôle d’accès](/help/access-control/home.md#permissions) **[!UICONTROL Gérer et activer les destinations des jeux de données]**. Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
-
 ## Présentation {#overview}
 
-Avant d’envoyer des données d’audience vers une destination, vous devez configurer une connexion à votre plateforme de destination. Cet article vous explique comment configurer une nouvelle connexion de destination, à laquelle vous pouvez ensuite activer des segments ou exporter des jeux de données à l’aide de l’interface utilisateur d’Adobe Experience Platform.
+Avant d’envoyer des données d’audience vers une destination, vous devez configurer une connexion à votre plateforme de destination. Cet article vous explique comment configurer une nouvelle connexion de destination, à laquelle vous pouvez ensuite activer des audiences ou exporter des jeux de données à l’aide de l’interface utilisateur de Adobe Experience Platform.
 
 ## Rechercher la destination souhaitée dans le catalogue {#setup}
 
@@ -29,23 +28,23 @@ Avant d’envoyer des données d’audience vers une destination, vous devez con
 
    ![Copie d’écran de l’interface utilisateur d’Experience Platform affichant la page de catalogue des destinations.](../assets/ui/connect-destinations/catalog.png)
 
-2. Les cartes de destination du catalogue peuvent comporter différentes options d’action, selon que vous disposez d’une connexion existante à la destination et que les destinations prennent en charge l’activation de segments, l’exportation de jeux de données ou les deux. Vous pouvez voir une ou plusieurs des options suivantes pour les cartes de destination :
+2. Les cartes de destination du catalogue peuvent comporter différents contrôles d’action, selon que vous disposez d’une connexion existante à la destination et que les destinations prennent en charge l’activation d’audiences, l’exportation de jeux de données ou les deux. Vous pouvez voir une ou plusieurs des options suivantes pour les cartes de destination :
 
-   * **[!UICONTROL Configurer]**. Une connexion doit d’abord être configurée vers cette destination avant de pouvoir activer des segments ou exporter des jeux de données.
-   * **[!UICONTROL Activer]**. Une connexion a déjà été configurée vers cette destination. Cette destination prend en charge l’activation des segments et les exportations des jeux de données.
-   * **[!UICONTROL Activer des segments]**. Une connexion a déjà été configurée vers cette destination. Cette destination prend uniquement en charge l’activation des segments.
+   * **[!UICONTROL Configurer]**. Une connexion doit d’abord être configurée vers cette destination avant de pouvoir activer des audiences ou exporter des jeux de données.
+   * **[!UICONTROL Activer]**. Une connexion a déjà été configurée vers cette destination. Cette destination prend en charge l’activation des audiences et l’exportation des jeux de données.
+   * **[!UICONTROL Activation des audiences]**. Une connexion a déjà été configurée vers cette destination. Cette destination ne prend en charge que l’activation de l’audience.
 
    Pour plus d’informations sur la différence entre ces options, vous pouvez également vous reporter à la section [Catalogue](../ui/destinations-workspace.md#catalog) de la documentation de l’espace de travail de destination.
 
-   Sélectionnez **[!UICONTROL Configurer]**, **[!UICONTROL Activer]** ou **[!UICONTROL Activer des segments]**, selon l’option disponible.
+   Sélectionnez **[!UICONTROL Configuration]**, **[!UICONTROL Activer]** ou **[!UICONTROL Activation des audiences]**, selon le contrôle disponible.
 
    ![Copie d’écran de l’interface utilisateur d’Experience Platform présentant la page du catalogue des destinations avec l’option Configurer mise en surbrillance.](../assets/ui/connect-destinations/set-up.png)
 
-   ![Copie d’écran de l’interface utilisateur d’Experience Platform présentant la page du catalogue des destinations avec l’option Activer des segments en surbrillance.](../assets/ui/connect-destinations/activate-segments.png)
+   ![Capture d’écran de l’interface utilisateur de l’Experience Platform, présentant la page du catalogue des destinations avec la commande Activer les audiences mise en surbrillance.](../assets/ui/connect-destinations/activate-segments.png)
 
 3. Si vous avez sélectionné **[!UICONTROL Configurer]**, passez à l’étape suivante, pour une [authentification](#authenticate) auprès de la destination.
 
-   Si vous avez sélectionné **[!UICONTROL Activer]**, **[!UICONTROL Activer des segments]** ou **[!UICONTROL Exporter des jeux de données]**, vous pouvez désormais voir une liste des connexions de destination existantes.
+   Si vous avez sélectionné **[!UICONTROL Activer]**, **[!UICONTROL Activation des audiences]** ou **[!UICONTROL Exportation de jeux de données]**, vous pouvez désormais voir une liste des connexions de destination existantes.
 
    Sélectionnez **[!UICONTROL Configurer une nouvelle destination]** pour établir une nouvelle connexion à la destination.
 
@@ -85,11 +84,11 @@ Pour les destinations basées sur des fichiers, vous pouvez configurer divers pa
 
 ![Image montrant la sélection du type de fichier et diverses options pour les fichiers CSV.](/help/destinations/assets/ui/connect-destinations/file-formatting-options.png)
 
-### Configurer la connexion de destination pour l’activation des segments ou les exportations de jeux de données {#segment-activation-or-dataset-exports}
+### Configuration de la connexion de destination pour l’activation de l’audience ou les exportations de jeux de données {#segment-activation-or-dataset-exports}
 
-Certaines destinations basées sur des fichiers prennent en charge l’activation des segments ainsi que l’exportation de jeux de données. Pour ces destinations, vous pouvez choisir de créer une connexion qui vous permet d’activer des segments ou d’exporter des jeux de données.
+Certaines destinations basées sur des fichiers prennent en charge l’activation des audiences ainsi que l’exportation de jeux de données. Pour ces destinations, vous pouvez choisir de créer une connexion qui vous permet d’activer des audiences ou d’exporter des jeux de données.
 
-![Image montrant le contrôle de sélection du type de données qui permet aux utilisateurs et utilisatrices de choisir entre l’activation du segment et les exportations de jeux de données.](/help/destinations/assets/ui/connect-destinations/data-type-selection.png)
+![Image montrant le contrôle de sélection du type de données qui permet aux utilisateurs de choisir entre l’activation de l’audience et les exportations de jeux de données.](/help/destinations/assets/ui/connect-destinations/data-type-selection.png)
 
 ### Activer les alertes de destination {#enable-alerts}
 
@@ -113,4 +112,4 @@ Certaines destinations basées sur des fichiers prennent en charge l’activatio
 
 En lisant ce document, vous avez appris à utiliser l’interface utilisateur d’Experience Platform pour établir une connexion à une destination. Pour rappel, les paramètres de connexion disponibles et requis varient d’une destination à l’autre. Consultez également la page de documentation sur la destination dans le [catalogues des destinations](/help/destinations/catalog/overview.md) pour obtenir des informations spécifiques sur les entrées requises et les options disponibles par type de destination.
 
-Ensuite, vous pouvez passer à l’[activation des segments](/help/destinations/ui/activation-overview.md) ou à l’[exportation de jeux de données](/help/destinations/ui/export-datasets.md) vers votre destination.
+Ensuite, vous pouvez passer à [activation des audiences](/help/destinations/ui/activation-overview.md) ou [exportation de jeux de données](/help/destinations/ui/export-datasets.md) à votre destination.

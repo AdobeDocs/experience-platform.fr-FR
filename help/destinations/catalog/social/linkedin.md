@@ -3,10 +3,10 @@ keywords: connexion linkedin;connexion linkedin;destinations linkedin;linkedin;
 title: Connexion à des audiences mises en correspondance Linkedin
 description: Activez les profils de vos campagnes LinkedIn pour le ciblage, la personnalisation et la suppression des audiences, en fonction des courriers électroniques hachés.
 exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
-source-git-commit: fd2019feb25b540612a278cbea5bf5efafe284dc
+source-git-commit: c1ba465a8a866bd8bdc9a2b294ec5d894db81e11
 workflow-type: tm+mt
-source-wordcount: '1035'
-ht-degree: 44%
+source-wordcount: '1087'
+ht-degree: 36%
 
 ---
 
@@ -22,7 +22,7 @@ Activez les profils pour votre [!DNL LinkedIn] campagnes pour le ciblage, la per
 
 Pour vous aider à mieux comprendre comment et à quel moment utiliser la variable [!DNL LinkedIn Matched Audiences] destination : voici un cas d’utilisation que les clients Adobe Experience Platform peuvent résoudre à l’aide de cette fonctionnalité.
 
-Une société de logiciels organise une conférence et souhaite rester en contact avec les participants et leur présenter des offres personnalisées en fonction de leur statut de participation à la conférence. L’entreprise peut ingérer des adresses électroniques ou des identifiants d’appareil mobile à partir de ses propres adresses. [!DNL CRM] dans Adobe Experience Platform. Ils peuvent ensuite créer des segments à partir de leurs propres données hors ligne et les envoyer à la variable [!DNL LinkedIn] plateforme sociale, optimisant leurs dépenses publicitaires.
+Une société de logiciels organise une conférence et souhaite rester en contact avec les participants et leur présenter des offres personnalisées en fonction de leur statut de participation à la conférence. L’entreprise peut ingérer des adresses électroniques ou des identifiants d’appareil mobile à partir de ses propres adresses. [!DNL CRM] dans Adobe Experience Platform. Ensuite, ils peuvent créer des audiences à partir de leurs propres données hors ligne et envoyer ces audiences au [!DNL LinkedIn] plateforme sociale, optimisant leurs dépenses publicitaires.
 
 ## Identités prises en charge {#supported-identities}
 
@@ -36,14 +36,28 @@ Une société de logiciels organise une conférence et souhaite rester en contac
 
 {style="table-layout:auto"}
 
+## Audiences prises en charge {#supported-audiences}
+
+Cette section décrit toutes les audiences que vous pouvez exporter vers cette destination.
+
+Toutes les destinations prennent en charge l’activation des audiences générées par l’Experience Platform [Segmentation Service](../../../segmentation/home.md).
+
+En outre, cette destination prend également en charge l’activation des audiences décrites dans le tableau ci-dessous.
+
+| Type d’audience | Description |
+---------|----------|
+| Chargements personnalisés | Audiences ingérées dans Experience Platform à partir de fichiers CSV. |
+
+{style="table-layout:auto"}
+
 ## Type et fréquence d’exportation {#export-type-frequency}
 
 Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la fréquence d’exportation des destinations.
 
 | Élément | Type | Notes |
 ---------|----------|---------|
-| Type d’exportation | **[!UICONTROL Exportation des segments]** | Vous exportez tous les membres d’un segment (audience) avec les identifiants (nom, numéro de téléphone et autres) utilisés dans la variable [!DNL LinkedIn Matched Audiences] destination. |
-| Fréquence des exportations | **[!UICONTROL Diffusion en continu]** | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation des segments, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
+| Type d’exportation | **[!UICONTROL Exportation de l’audience]** | Vous exportez tous les membres d’une audience avec les identifiants (nom, numéro de téléphone, etc.) utilisés dans la variable [!DNL LinkedIn Matched Audiences] destination. |
+| Fréquence des exportations | **[!UICONTROL Diffusion en continu]** | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu&#39;un profil est mis à jour en Experience Platform en fonction de l&#39;évaluation de l&#39;audience, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -93,7 +107,7 @@ Si vous choisissez de hacher vous-même les adresses électroniques, veillez à 
 
 Pour vous connecter à cette destination, procédez comme décrit dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md). Dans le workflow de configuration des destinations, renseignez les champs répertoriés dans les deux sections ci-dessous.
 
-La vidéo ci-dessous présente également les étapes de configuration d’une [!DNL LinkedIn Matched Audiences] destination et activation des segments.
+La vidéo ci-dessous présente également les étapes de configuration d’une [!DNL LinkedIn Matched Audiences] destination et activation des audiences.
 
 >[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
@@ -127,18 +141,18 @@ Vous pouvez activer les alertes pour recevoir des notifications sur le statut de
 
 Lorsque vous avez terminé de renseigner les détails sur votre connexion de destination, sélectionnez **[!UICONTROL Suivant]**.
 
-## Activer des segments vers cette destination {#activate}
+## Activer les audiences vers cette destination {#activate}
 
 >[!IMPORTANT]
 > 
 >Pour activer les données, vous avez besoin des [autorisations de contrôle d’accès](/help/access-control/home.md#permissions) pour les fonctions **[!UICONTROL Gérer les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]**, et **[!UICONTROL Afficher les segments]**. Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
-Voir [Activer les données d’audience vers des destinations d’exportation de segments de diffusion en continu](../../ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des segments d’audience vers cette destination.
+Voir [Activation des données d’audience vers des destinations d’exportation d’audience par flux](../../ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
 
 ## Données exportées {#exported-data}
 
-Une activation réussie signifie qu’une [!DNL LinkedIn] une audience personnalisée serait créée par programmation dans [[!DNL LinkedIn Campaign Manager]](https://www.linkedin.com/campaignmanager/login). L’adhésion au segment dans l’audience est ajoutée ou supprimée selon que les utilisateurs sont qualifiés ou disqualifiés pour les segments activés.
+Une activation réussie signifie qu’une [!DNL LinkedIn] une audience personnalisée serait créée par programmation dans [[!DNL LinkedIn Campaign Manager]](https://www.linkedin.com/campaignmanager/login). L’appartenance à une audience serait ajoutée et supprimée lorsque les utilisateurs sont qualifiés ou disqualifiés pour les audiences activées.
 
 >[!TIP]
 >
->L’intégration entre Adobe Experience Platform et [!DNL LinkedIn Matched Audiences] prend en charge les renvois d’audience historique. Toutes les qualifications de segments historiques sont envoyées à [!DNL LinkedIn] lorsque vous activez les segments vers la destination.
+>L’intégration entre Adobe Experience Platform et [!DNL LinkedIn Matched Audiences] prend en charge les renvois d’audience historique. Toutes les qualifications d’audience historique sont envoyées à [!DNL LinkedIn] lorsque vous activez les audiences vers la destination.

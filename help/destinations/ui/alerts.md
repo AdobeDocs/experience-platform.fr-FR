@@ -3,7 +3,7 @@ keywords: Experience Platform;accueil;rubriques les plus consultées ; alertes, 
 description: Vous pouvez vous abonner à des alertes lors de la création d’un flux de données pour recevoir des messages d’alerte concernant l’état, la réussite ou l’échec de votre exécution de flux.
 title: S’abonner aux alertes de destination contextuelles
 exl-id: 134144a0-cdfe-49a8-bd8b-e36a4f053de5
-source-git-commit: 3bb9858c236c91e1567fd8e78988f4049537ffe3
+source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
 workflow-type: tm+mt
 source-wordcount: '950'
 ht-degree: 21%
@@ -51,10 +51,10 @@ Les alertes disponibles pour les flux de données de destination sont décrites 
 
 | Alertes | Description |
 | --- | --- |
-| Retard de l’exécution du flux de destinations | Cette alerte vous avertit lorsqu’une exécution de flux de destination dure plus de 150 minutes pour activer un segment. |
-| Échec de l’exécution du flux de destinations | Cette alerte vous informe lorsqu’une erreur se produit lors de l’activation d’un segment vers une destination. |
-| Succès de l’exécution du flux de destinations | Cette alerte vous avertit lorsqu’un segment est correctement activé vers une destination. |
-| Début de l’exécution du flux de destinations | Cette alerte vous avertit lorsqu’une exécution de flux de destination commence à activer un segment. |
+| Retard de l’exécution du flux de destinations | Cette alerte vous avertit lorsqu’une exécution de flux de destination dure plus de 150 minutes pour activer une audience. |
+| Échec de l’exécution du flux de destinations | Cette alerte vous avertit lorsqu’une erreur se produit lors de l’activation d’une audience vers une destination. |
+| Succès de l’exécution du flux de destinations | Cette alerte vous avertit lorsqu’une audience est correctement activée vers une destination. |
+| Début de l’exécution du flux de destinations | Cette alerte vous avertit lorsqu’une exécution de flux de destination commence à activer une audience. |
 | Le taux d’activation ignoré est dépassé | Cette alerte vous avertit lorsque le taux de saut d’activation a dépassé 1 % du total des activations. Les identités sont ignorées lors de l’activation lorsqu’elles comportent des attributs manquants ou une violation du consentement. |
 
 ## Recevoir des alertes {#receiving-alerts}

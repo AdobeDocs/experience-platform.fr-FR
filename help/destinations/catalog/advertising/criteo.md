@@ -3,16 +3,16 @@ keywords: la publicité; les critères;
 title: Connexion à un critère
 description: Criteo optimise la publicité de confiance et d’impact afin d’offrir à chaque consommateur des expériences plus riches sur l’Internet libre. Grâce au jeu de données commercial le plus important du monde et à l’IA la plus performante du monde, Criteo s’assure que chaque point de contact du parcours d’achat est personnalisé pour atteindre les clients avec la bonne publicité, au bon moment.
 exl-id: e6f394b2-ab82-47bb-8521-1cf9d01a203b
-source-git-commit: 8211ca28462548e1c17675e504e6de6f5cc55e73
+source-git-commit: 9ccfbeb6ef36b10b8ecbfc25797c26980e7d1dcd
 workflow-type: tm+mt
-source-wordcount: '1007'
-ht-degree: 31%
+source-wordcount: '1005'
+ht-degree: 24%
 
 ---
 
 # (Version bêta) Connexion Criteo
 
-## Présentation {#overview}
+## Vue d’ensemble {#overview}
 
 >[!IMPORTANT]
 >
@@ -48,8 +48,8 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 | Élément | Type | Notes |
 | --- | --- | --- |
-| Type d’exportation | Exportation des segments | Vous exportez tous les membres d’un segment (audience) ainsi que les identifiants (nom, numéro de téléphone ou autres) utilisés dans la destination [!DNL Criteo]. |
-| Fréquence des exportations | Diffusion en continu | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation des segments, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](../../destination-types.md#streaming-destinations). |
+| Type d’exportation | Exportation de l’audience | Vous exportez tous les membres d’une audience avec les identifiants (nom, numéro de téléphone ou autres) utilisés dans la variable [!DNL Criteo] destination. |
+| Fréquence des exportations | Diffusion en continu | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu&#39;un profil est mis à jour en Experience Platform en fonction de l&#39;évaluation de l&#39;audience, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](../../destination-types.md#streaming-destinations). |
 
 ## Cas d’utilisation {#use-cases}
 
@@ -61,7 +61,7 @@ Présenter à votre entreprise des offres de produits pertinentes et des créati
 
 ### Cas d’utilisation 2 : Augmenter les conversions du site web
 
-Lorsque les visiteurs quittent votre site web, rappelez-leur ce qui leur manque avec les publicités de reciblage qui augmentent les conversions en présentant des offres spéciales et des offres hyper-pertinentes, où qu’ils se rendent. Connectez votre segment CDP d’Adobe pour réengager les clients existants ou cibler les consommateurs comme vos clients les plus fidèles.
+Lorsque les visiteurs quittent votre site web, rappelez-leur ce qui leur manque avec les publicités de reciblage qui augmentent les conversions en présentant des offres spéciales et des offres hyper-pertinentes, où qu’ils se rendent. Connectez votre audience CDP d’Adobe pour réengager les clients existants ou cibler les consommateurs similaires à vos acheteurs les plus fidèles.
 
 ## Connexion à Criteo {#connect}
 
@@ -107,17 +107,17 @@ Vous pouvez activer les alertes pour recevoir des notifications sur le statut de
 
 Lorsque vous avez terminé de renseigner les détails sur votre connexion de destination, sélectionnez **[!UICONTROL Suivant]**.
 
-## Activer des segments vers cette destination {#activate-segments}
+## Activer les audiences vers cette destination {#activate-segments}
 
 >[!IMPORTANT]
 > 
 >Pour activer les données, vous avez besoin des [autorisations de contrôle d’accès](/help/access-control/home.md#permissions) pour les fonctions **[!UICONTROL Gérer les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]**, et **[!UICONTROL Afficher les segments]**. Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
-Consultez [Activer les profils et les segments vers les destinations d’exportation de segments de diffusion en continu](../../ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des segments d’audience vers cette destination.
+Lecture [Activation des profils et des audiences vers les destinations d’exportation d’audiences par flux](../../ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
 
 ## Données exportées {#exported-data}
 
-Vous pouvez voir les segments exportés dans le [Centre de gestion des critères](https://marketing.criteo.com/audience-manager/dashboard).
+Vous pouvez afficher les audiences exportées dans le [Centre de gestion des critères](https://marketing.criteo.com/audience-manager/dashboard).
 
 Le corps de la requête d’ajout d’un profil utilisateur reçu par le [!DNL Criteo] La connexion ressemble à ceci :
 

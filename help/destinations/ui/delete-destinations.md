@@ -4,7 +4,7 @@ title: Supprimer les destinations
 type: Tutorial
 description: Ce tutoriel répertorie les étapes de suppression d’une destination existante dans l’interface utilisateur de Adobe Experience Platform.
 exl-id: 7b672859-e61a-4b3c-9db9-62048258f0aa
-source-git-commit: 1ef6430b6661a2b8b5aef196b75cfaf3f6220aab
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '413'
 ht-degree: 33%
@@ -13,11 +13,11 @@ ht-degree: 33%
 
 # Supprimer les destinations {#delete-destinations}
 
-## Présentation {#overview}
+## Vue d’ensemble {#overview}
 
 Dans l’interface utilisateur de Adobe Experience Platform, vous pouvez supprimer les connexions existantes aux destinations.
 
-La suppression d’une destination supprime tous les flux de données existants vers cette destination. Tous les segments activés vers les destinations que vous supprimez sont démappés avant la suppression du flux de données.
+La suppression d’une destination supprime tous les flux de données existants vers cette destination. Toutes les audiences activées vers les destinations que vous supprimez sont démappées avant la suppression du flux de données.
 
 Vous pouvez supprimer des destinations de la variable [!DNL Platform] [!DNL UI]. Vous pouvez :
 
@@ -61,11 +61,11 @@ Suivez les étapes ci-dessous pour supprimer une destination de la page de déta
 
    * Si la destination comporte des flux de données existants, vous êtes dirigé vers la variable [!UICONTROL Exécutions de flux de données] .
 
-      ![Onglet Exécutions de flux de données](../assets/ui/delete-destinations/destination-details-dataflows.png)
+     ![Onglet Exécutions de flux de données](../assets/ui/delete-destinations/destination-details-dataflows.png)
 
    * Si la destination ne comporte pas de flux de données existants, vous accédez à une page vide dans laquelle vous pouvez commencer à activer les audiences.
 
-      ![Détails de la destination](../assets/ui/delete-destinations/destination-details-empty.png)
+     ![Détails de la destination](../assets/ui/delete-destinations/destination-details-empty.png)
 
 4. Sélectionner **[!UICONTROL Supprimer]** dans le rail de droite.
 

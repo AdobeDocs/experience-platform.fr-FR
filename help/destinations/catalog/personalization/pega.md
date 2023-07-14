@@ -1,21 +1,21 @@
 ---
 title: Connexion à Pega Customer Decision Hub
-description: Utilisez la destination Pega Customer Decision Hub dans Adobe Experience Platform pour envoyer les attributs de profil et les données d’adhésion au segment à Pega Customer Decision Hub pour la prise de décision la plus appropriée.
+description: Utilisez la destination Pega Customer Decision Hub dans Adobe Experience Platform pour envoyer les attributs de profil et les données d’appartenance à l’audience à Pega Customer Decision Hub pour la prise de décision la plus appropriée.
 exl-id: 0546da5d-d50d-43ec-bbc2-9468a7db4d90
-source-git-commit: ae00b113308354e98f4448d2544e2a6e475c384e
+source-git-commit: 9ccfbeb6ef36b10b8ecbfc25797c26980e7d1dcd
 workflow-type: tm+mt
-source-wordcount: '1007'
-ht-degree: 27%
+source-wordcount: '1006'
+ht-degree: 25%
 
 ---
 
 # Connexion à Pega Customer Decision Hub
 
-## Présentation {#overview}
+## Vue d’ensemble {#overview}
 
-Utilisez la variable [!DNL Pega Customer Decision Hub] destination dans Adobe Experience Platform pour envoyer des attributs de profil et des données d’adhésion au segment à [!DNL Pega Customer Decision Hub] pour la prise de décision next-best-action.
+Utilisez la variable [!DNL Pega Customer Decision Hub] destination dans Adobe Experience Platform pour envoyer des attributs de profil et des données d’appartenance à l’audience à [!DNL Pega Customer Decision Hub] pour la prise de décision next-best-action.
 
-Appartenance au segment de profil à partir de Adobe Experience Platform, lorsqu’elle est chargée dans [!DNL Pega Customer Decision Hub], peut être utilisé comme prédicteur dans les modèles adaptatifs et aider à fournir les données contextuelles et comportementales appropriées à des fins de prise de décision de la meilleure action suivante.
+Appartenance à l’audience de profil à partir de Adobe Experience Platform, lorsqu’elle est chargée dans [!DNL Pega Customer Decision Hub], peut être utilisé comme prédicteur dans les modèles adaptatifs et aider à fournir les données contextuelles et comportementales appropriées à des fins de prise de décision de la meilleure action suivante.
 
 >[!IMPORTANT]
 >
@@ -31,15 +31,15 @@ Un spécialiste du marketing souhaite exploiter les informations issues des meil
 
 ### Services financiers
 
-Un spécialiste du marketing souhaite optimiser les offres destinées aux clients qui se sont inscrits ou se sont désabonnés des newsletters des régimes de retraite ou des régimes de retraite. Les sociétés de services financiers peuvent ingérer plusieurs ID de client à partir de leurs propres CRM dans Adobe Experience Platform, créer des segments à partir de leurs propres données hors ligne et envoyer les profils qui entrent et sortent des segments vers [!DNL Pega Customer Decision Hub] pour la prise de décision next-best-action (NBA) dans les canaux sortants.
+Un spécialiste du marketing souhaite optimiser les offres destinées aux clients qui se sont inscrits ou se sont désabonnés des newsletters des régimes de retraite ou des régimes de retraite. Les sociétés de services financiers peuvent ingérer plusieurs ID de client à partir de leurs propres CRM dans Adobe Experience Platform, créer des audiences à partir de leurs propres données hors ligne et envoyer des profils qui entrent et sortent des audiences à [!DNL Pega Customer Decision Hub] pour la prise de décision next-best-action (NBA) dans les canaux sortants.
 
 ## Conditions préalables {#prerequisites}
 
 Avant d’utiliser cette destination pour exporter des données en dehors de Adobe Experience Platform, assurez-vous de remplir les conditions préalables suivantes dans [!DNL Pega Customer Decision Hub]:
 
-* Configurez la variable [Composant d’intégration Profil Adobe Experience Platform et Appartenance à un segment](https://docs.pega.com/component/customer-decision-hub/adobe-experience-platform-profile-and-segment-membership-integration-component) dans votre [!DNL Pega Customer Decision Hub] instance.
+* Configurez la variable [Composant d’intégration Profil Adobe Experience Platform et Appartenance à une audience](https://docs.pega.com/component/customer-decision-hub/adobe-experience-platform-profile-and-segment-membership-integration-component) dans votre [!DNL Pega Customer Decision Hub] instance.
 * Configuration d’OAuth 2.0 [Enregistrement du client à l’aide des informations d’identification du client](https://docs.pega.com/security/87/creating-and-configuring-oauth-20-client-registration) type d’octroi [!DNL Pega Customer Decision Hub] instance.
-* Configurer [flux de données d’exécution en temps réel](https://docs.pega.com/decision-management/87/creating-real-time-run-data-flows) pour le flux de données d’appartenance à un segment Adobe dans votre [!DNL Pega Customer Decision Hub] instance.
+* Configurer [flux de données d’exécution en temps réel](https://docs.pega.com/decision-management/87/creating-real-time-run-data-flows) pour le flux de données d’appartenance à une audience Adobe dans votre [!DNL Pega Customer Decision Hub] instance.
 
 ## Identités prises en charge {#supported-identities}
 
@@ -57,8 +57,8 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 | Élément | Type | Notes |
 ---------|----------|---------|
-| Type d’exportation | **[!UICONTROL Basé sur les profils]** | Exporter tous les membres d’un segment avec un identifiant (*CustomerID*), attributs (nom, prénom, emplacement, etc.) et les données d’appartenance aux segments. |
-| Fréquence des exportations | **[!UICONTROL Diffusion en continu]** | Les destinations de diffusion en continu sont des connexions basées sur l’API toujours utilisées. Dès qu’un profil est mis à jour en Experience Platform, sur la base de l’évaluation des segments, le connecteur envoie la mise à jour en aval vers la plateforme de destination. Pour plus d’informations, voir [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
+| Type d’exportation | **[!UICONTROL Basé sur les profils]** | Exporter tous les membres d’une audience avec un identifiant (*CustomerID*), attributs (nom, prénom, emplacement, etc.) et les données d’appartenance à l’audience. |
+| Fréquence des exportations | **[!UICONTROL Diffusion en continu]** | Les destinations de diffusion en continu sont des connexions basées sur l’API toujours utilisées. Dès qu&#39;un profil est mis à jour en Experience Platform, sur la base de l&#39;évaluation de l&#39;audience, le connecteur envoie la mise à jour en aval vers la plateforme de destination. Pour plus d’informations, voir [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -90,13 +90,13 @@ Pour configurer les détails de la destination, renseignez les champs requis et 
 * **[!UICONTROL Description]** : une description qui vous aidera à identifier cette destination à l’avenir.
 * **[!UICONTROL Nom d’hôte]**: Nom d’hôte Pega Customer Decision Hub vers lequel le profil est exporté en tant que données json.
 
-## Activer des segments vers cette destination {#activate}
+## Activer les audiences vers cette destination {#activate}
 
 >[!IMPORTANT]
 > 
 >Pour activer les données, vous avez besoin des [autorisations de contrôle d’accès](/help/access-control/home.md#permissions) pour les fonctions **[!UICONTROL Gérer les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]**, et **[!UICONTROL Afficher les segments]**. Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
-Voir [Activer des données d’audience vers des destinations d’exportation de profils en flux continu](../../ui/activate-streaming-profile-destinations.md) pour obtenir des instructions sur l’activation des segments d’audience vers cette destination.
+Voir [Activation des données d’audience vers des destinations d’exportation de profils en continu](../../ui/activate-streaming-profile-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
 
 ### Attributs de destination {#attributes}
 
@@ -120,14 +120,14 @@ Sélection des champs cibles :
 
 ## Données exportées / Valider l’exportation des données {#exported-data}
 
-Une mise à jour réussie de l’appartenance à un segment pour un profil insère l’identifiant du segment, le nom et les états dans la banque de données de l’appartenance à un segment marketing de marque. Les données d’appartenance sont associées à un client à l’aide du Concepteur de profil client dans [!DNL Pega Customer Decision Hub], comme illustré ci-dessous.
-![Image de l’écran de l’interface utilisateur dans lequel vous pouvez associer les données d’appartenance à un segment à un client à l’aide du concepteur de profil client.](../../assets/catalog/personalization/pega/pega-profile-designer-associate.png)
+Une mise à jour réussie de l’appartenance à une audience pour un profil insère l’identifiant de l’audience, le nom et les états dans la banque de données de l’appartenance à une audience marketing de Pega. Les données d’appartenance sont associées à un client à l’aide du Concepteur de profil client dans [!DNL Pega Customer Decision Hub], comme illustré ci-dessous.
+![Image de l’écran de l’interface utilisateur dans lequel vous pouvez associer des données d’adhésion à l’audience Adobe au client à l’aide du Concepteur de profil client](../../assets/catalog/personalization/pega/pega-profile-designer-associate.png)
 
-Les données d’adhésion au segment sont utilisées dans les stratégies d’engagement de Pega Next-Best-Action Designer pour la prise de décision next-best-action, comme illustré ci-dessous.
-![Image de l’écran de l’interface utilisateur dans lequel vous pouvez ajouter des champs d’adhésion au segment comme conditions dans Stratégies d’engagement de Pega Next-Best-Action Designer](../../assets/catalog/personalization/pega/pega-profile-designer-engagment.png)
+Les données d’appartenance à l’audience sont utilisées dans les stratégies d’engagement de Pega Next-Best-Action Designer pour la prise de décision next-best-action, comme illustré ci-dessous.
+![Image de l’écran de l’interface utilisateur où vous pouvez ajouter des champs d’appartenance à l’audience comme conditions dans Stratégies d’engagement de Pega Next-Best-Action Designer](../../assets/catalog/personalization/pega/pega-profile-designer-engagment.png)
 
-Les champs de données d’adhésion au segment client sont ajoutés en tant que prédicteurs dans les modèles adaptatifs, comme illustré ci-dessous.
-![Image de l’écran de l’interface utilisateur dans lequel vous pouvez ajouter des champs d’adhésion au segment en tant que prédicateurs dans les modèles adaptatifs, à l’aide de Prediction Studio](../../assets/catalog/personalization/pega/pega-profile-designer-adaptivemodel.png)
+Les champs de données d’appartenance de l’audience du client sont ajoutés en tant que prédicteurs dans les modèles adaptatifs, comme illustré ci-dessous.
+![Image de l’écran de l’interface utilisateur dans lequel vous pouvez ajouter des champs d’appartenance à l’audience en tant que prédicateurs dans les modèles adaptatifs, à l’aide de Prediction Studio](../../assets/catalog/personalization/pega/pega-profile-designer-adaptivemodel.png)
 
 ## Ressources supplémentaires {#additional-resources}
 

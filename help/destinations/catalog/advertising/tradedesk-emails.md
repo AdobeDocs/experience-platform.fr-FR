@@ -3,10 +3,10 @@ title: (Version bêta) Bureau commercial - Connexion CRM
 description: Activez les profils dans votre compte de bureau Commerce pour le ciblage et la suppression des audiences en fonction des données CRM.
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
-source-git-commit: 83778bc5d643f69e0393c0a7767fef8a4e8f66e9
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '1078'
-ht-degree: 21%
+source-wordcount: '1076'
+ht-degree: 19%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 21%
 >
 >Les deux destinations en Experience Platform sont actuellement en version bêta. Cette page de documentation a été créée par la fonction *[!DNL Trade Desk]* l&#39;équipe. Pour toute question ou demande de mise à jour, veuillez contacter votre [!DNL Trade Desk] représentative, la documentation et la fonctionnalité peuvent être modifiées.
 
-## Présentation {#overview}
+## Vue d’ensemble {#overview}
 
 Ce document est conçu pour vous aider à activer les profils dans votre [!DNL Trade Desk] compte pour le ciblage et la suppression des audiences en fonction des données CRM.
 
@@ -34,7 +34,7 @@ Ce document est conçu pour vous aider à activer les profils dans votre [!DNL T
 
 ## Conditions préalables {#prerequisites}
 
-Avant d’activer des segments dans [!DNL The Trade Desk], vous devez contacter votre [!DNL The Trade Desk] gestionnaire de compte pour signer le contrat d’intégration CRM. [!DNL The Trade Desk] donnera ensuite l’autorisation et partagera votre identifiant publicitaire pour configurer votre destination.
+Avant d’activer des audiences vers [!DNL The Trade Desk], vous devez contacter votre [!DNL The Trade Desk] gestionnaire de compte pour signer le contrat d’intégration CRM. [!DNL The Trade Desk] donnera ensuite l’autorisation et partagera votre identifiant publicitaire pour configurer votre destination.
 
 ## Exigences de correspondance des identifiants {#id-matching-requirements}
 
@@ -73,8 +73,8 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 | Élément | Type | Notes |
 ---------|----------|---------|
-| Type d’exportation | **[!UICONTROL Exportation des segments]** | Vous exportez tous les membres d’un segment (audience) avec les identifiants (email ou email haché) utilisés dans la destination du bureau de commerce. |
-| Fréquence des exportations | **[!UICONTROL Lot quotidien]** | Comme un profil est mis à jour dans Experience Platform en fonction de l’évaluation des segments, le profil (identités) est mis à jour une fois par jour en aval de la plateforme de destination. En savoir plus sur [exports par lots](/help/destinations/destination-types.md#file-based). |
+| Type d’exportation | **[!UICONTROL Exportation de l’audience]** | Vous exportez tous les membres d’une audience avec les identifiants (email ou email haché) utilisés dans la destination du bureau de commerce. |
+| Fréquence des exportations | **[!UICONTROL Lot quotidien]** | Lorsqu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation de l’audience, le profil (identités) est mis à jour une fois par jour en aval de la plateforme de destination. En savoir plus sur [exports par lots](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
 
@@ -97,25 +97,25 @@ Avant de pouvoir envoyer ou activer des données d’audience vers une destinati
 
 Lors de la connexion à la destination, la définition d’une stratégie de gouvernance des données est complètement facultative. Veuillez consulter l’Experience Platform [présentation de la gouvernance des données](/help/data-governance/policies/overview.md) pour plus d’informations.
 
-## Activer des segments vers cette destination {#activate}
+## Activer les audiences vers cette destination {#activate}
 
-Lecture [Activation des données d’audience vers des destinations d’exportation de profils par lots](/help/destinations/ui/activate-batch-profile-destinations.md) pour obtenir des instructions sur l’activation des segments d’audience vers une destination.
+Lecture [Activation des données d’audience vers des destinations d’exportation de profils par lots](/help/destinations/ui/activate-batch-profile-destinations.md) pour obtenir des instructions sur l’activation des audiences vers une destination.
 
-Sur la page **[!UICONTROL Planification]**, vous pouvez configurer le planning et les noms des fichiers pour chaque segment que vous exportez. La configuration du planning est obligatoire, mais la configuration du nom de fichier est facultative.
+Dans le **[!UICONTROL Planification]** , vous pouvez configurer le planning et les noms des fichiers pour chaque audience que vous exportez. La configuration du planning est obligatoire, mais la configuration du nom de fichier est facultative.
 
-![Copie d’écran de l’interface utilisateur de Platform pour planifier l’activation du segment.](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment1.png)
+![Copie d’écran de l’interface utilisateur de Platform pour planifier l’activation de l’audience.](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment1.png)
 
 >[!NOTE]
 >
->Tous les segments activés dans [!DNL The Trade Desk] Les destinations CRM sont automatiquement définies sur une fréquence quotidienne et une exportation de fichiers complète.
+>Toutes les audiences activées [!DNL The Trade Desk] Les destinations CRM sont automatiquement définies sur une fréquence quotidienne et une exportation de fichiers complète.
 
-![Copie d’écran de l’interface utilisateur de Platform pour planifier l’activation du segment.](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment2.png)
+![Copie d’écran de l’interface utilisateur de Platform pour planifier l’activation de l’audience.](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment2.png)
 
 Dans le **[!UICONTROL Mappage]** , vous devez sélectionner des attributs ou des espaces de noms d’identité dans la colonne source et les mapper à la colonne cible.
 
-![Copie d’écran de l’interface utilisateur de Platform pour mapper l’activation du segment.](/help/destinations/assets/catalog/advertising/tradedesk/mappingsegment1.png)
+![Copie d’écran de l’interface utilisateur de Platform pour mapper l’activation de l’audience.](/help/destinations/assets/catalog/advertising/tradedesk/mappingsegment1.png)
 
-Vous trouverez ci-dessous un exemple de mappage d’identité correct lors de l’activation de segments vers [!DNL The Trade Desk] Destination CRM.
+Vous trouverez ci-dessous un exemple de mappage d’identité correct lors de l’activation d’audiences vers [!DNL The Trade Desk] Destination CRM.
 
 >[!IMPORTANT]
 >
@@ -133,11 +133,11 @@ Sélection des champs cibles :
 
 ## Validation de l’exportation des données {#validate}
 
-Pour vérifier que les données sont correctement exportées depuis l’Experience Platform et vers [!DNL The Trade Desk], recherchez les segments sous la mosaïque de données Adobe 1PD dans [!DNL The Trade Desk] Plateforme de gestion des données (DMP). Vous trouverez ci-dessous les étapes à suivre pour trouver l’identifiant correspondant dans la variable [!DNL Trade Desk] Interface utilisateur :
+Pour vérifier que les données sont correctement exportées depuis l’Experience Platform et vers [!DNL The Trade Desk], recherchez les audiences sous la mosaïque de données Adobe 1PD dans [!DNL The Trade Desk] Plateforme de gestion des données (DMP). Vous trouverez ci-dessous les étapes à suivre pour trouver l’identifiant correspondant dans la variable [!DNL Trade Desk] Interface utilisateur :
 
 1. Tout d’abord, cliquez sur le **[!UICONTROL Données]** Onglet et révision **[!UICONTROL Premier niveau]**.
 2. Faites défiler la page vers le bas, sous **[!UICONTROL Données importées]**, vous trouverez la variable **[!UICONTROL Mosaïque Adobe 1PD]**.
-3. Cliquez sur le lien**[!UICONTROL Adobe 1PD]** et répertorie tous les segments activés dans la [!DNL Trade Desk] destination de votre annonceur. Vous pouvez également utiliser la fonction de recherche.
+3. Cliquez sur le lien**[!UICONTROL Adobe 1PD]** et répertorie toutes les audiences activées sur la page [!DNL Trade Desk] destination de votre annonceur. Vous pouvez également utiliser la fonction de recherche.
 4. Le numéro d’ID de segment de l’Experience Platform apparaît comme nom de segment dans la variable [!DNL Trade Desk] Interface utilisateur.
 
 ## Utilisation et gouvernance des données {#data-usage-governance}

@@ -1,17 +1,17 @@
 ---
 description: Cette page répertorie et décrit les étapes de configuration d’une destination basée sur des fichiers à l’aide de Destination SDK.
-title: Utiliser Destination SDK pour configurer une destination basée sur des fichiers
+title: Utilisation de Destination SDK pour configurer une destination basée sur des fichiers
 exl-id: 84d73452-88e4-4e0f-8fc7-d0d8e10f9ff5
-source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '683'
-ht-degree: 74%
+ht-degree: 71%
 
 ---
 
-# Utiliser Destination SDK pour configurer une destination basée sur des fichiers
+# Utilisation de Destination SDK pour configurer une destination basée sur des fichiers
 
-## Présentation {#overview}
+## Vue d’ensemble {#overview}
 
 Cette page décrit comment utiliser les informations contenues dans la section [Options de configuration dans Destination SDK](../functionality/configuration-options.md) et dans dʼautres documents de référence sur les fonctionnalités et lʼAPI Destination SDK pour configurer une [destination basée sur des fichiers](../../destination-types.md#file-based). Les étapes sont présentées dans l’ordre séquentiel ci-dessous.
 
@@ -372,7 +372,7 @@ Selon que vous spécifiez `"authenticationRule": "CUSTOMER_AUTHENTICATION"` ou `
 
    * [Authentification Amazon S3](../functionality/destination-configuration/customer-authentication.md#s3)
    * [Azure Blob](../functionality/destination-configuration/customer-authentication.md#blob)
-   * [Stockage du lac de données Azure](../functionality/destination-configuration/customer-authentication.md#adls)
+   * [Azure Data Lake Storage](../functionality/destination-configuration/customer-authentication.md#adls)
    * [Google Cloud Storage](../functionality/destination-configuration/customer-authentication.md#gcs)
    * [Authentification SFTP avec clé SSH](../functionality/destination-configuration/customer-authentication.md#sftp-ssh)
    * [Authentification SFTP avec mot de passe](../functionality/destination-configuration/customer-authentication.md#sftp-password)
@@ -384,10 +384,10 @@ Selon que vous spécifiez `"authenticationRule": "CUSTOMER_AUTHENTICATION"` ou `
 
 Une fois votre destination configurée à l’aide des points d’entrée de configuration dans les étapes précédentes, vous pouvez utiliser l’[outil de test des destinations](../testing-api/batch-destinations/file-based-destination-testing-overview.md) afin de tester l’intégration entre Adobe Experience Platform et votre destination.
 
-Dans le cadre du processus de test de votre destination, vous devez utiliser l’interface utilisateur d’Experience Platform pour créer des segments que vous activerez vers votre destination. Pour plus d’informations sur la création de segments dans Experience Platform, consultez les deux ressources ci-dessous :
+Dans le cadre du processus de test de votre destination, vous devez utiliser l’interface utilisateur d’Experience Platform pour créer des segments que vous activerez vers votre destination. Reportez-vous aux deux ressources ci-dessous pour savoir comment créer des audiences dans Experience Platform :
 
-* [Créer une page de documentation sur les segments](/help/segmentation/ui/overview.md#create-segment)
-* [Créer un segment (présentation vidéo détaillée)](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=fr)
+* [Création d’une page de documentation sur l’audience](/help/segmentation/ui/overview.md#create-segment)
+* [Présentation vidéo de la création d’une audience](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=fr)
 
 ## Étape 6 : publier votre destination {#publish-destination}
 

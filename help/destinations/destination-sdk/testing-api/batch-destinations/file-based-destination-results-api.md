@@ -2,10 +2,10 @@
 description: Cette page explique comment utiliser le point d’entrée /testing/destinationInstance de l’API pour afficher les détails complets de vos résultats de test. Ce point d’entrée de l’API renvoie le même résultat que celui obtenu pendant l’utilisation de l’API Flow Service pour surveiller les flux de données.
 title: Consulter les résultats détaillés de l’activation
 exl-id: a7b27beb-825e-47fd-8939-f499c3298f68
-source-git-commit: ffd87573b93d642202e51e5299250a05112b6058
+source-git-commit: 9ac6b075af3805da4dad0dd6442d026ae96ab5c7
 workflow-type: tm+mt
 source-wordcount: '545'
-ht-degree: 100%
+ht-degree: 90%
 
 ---
 
@@ -40,7 +40,7 @@ Avant d’utiliser le point d’entrée `/testing/destinationInstance`, veillez 
 
 ## Affichage des résultats détaillés du test de destination {#test-activation-results}
 
-Une fois que vous avez [validé votre configuration de destination](file-based-destination-testing-api.md), vous pouvez afficher les résultats détaillés de l’activation en envoyant une requête GET au point d’entrée `authoring/testing/destinationInstance/` et en fournissant l’identifiant de l’instance de destination que vous testez, ainsi que les identifiants d’exécution de flux des segments activés.
+Une fois que vous avez [a validé votre configuration de destination](file-based-destination-testing-api.md), vous pouvez afficher les résultats détaillés de l’activation en envoyant une requête de GET au `authoring/testing/destinationInstance/` point de terminaison et en fournissant l’identifiant de l’instance de destination que vous testez, ainsi que les identifiants d’exécution de flux des audiences activées.
 
 Vous trouverez l’URL complète d’API que vous devez utiliser dans la propriété `results` renvoyée dans la [réponse de l’appel de test de destination](file-based-destination-testing-api.md).
 
@@ -56,7 +56,7 @@ GET /authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}/results?flo
 
 | Paramètres de chaîne de requête | Description |
 | -------- | ----------- |
-| `flowRunIds` | Les identifiants d’exécution de flux correspondant aux segments activés. Vous trouverez les identifiants d’exécution de flux dans la propriété `results` renvoyée dans la [réponse de l’appel de test de destination](file-based-destination-testing-api.md). |
+| `flowRunIds` | Les identifiants d’exécution de flux correspondant aux audiences activées. Vous trouverez les identifiants d’exécution de flux dans la propriété `results` renvoyée dans la [réponse de l’appel de test de destination](file-based-destination-testing-api.md). |
 
 **Requête**
 

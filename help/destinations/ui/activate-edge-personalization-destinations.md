@@ -3,17 +3,17 @@ title: Activation des audiences vers des destinations de personnalisation de pé
 description: Découvrez comment activer les audiences de Adobe Experience Platform vers les destinations de personnalisation de périphérie pour les cas d’utilisation de la personnalisation de la même page et de la page suivante.
 type: Tutorial
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: c96a156c6c9c63d9ae875ee3808168d94ee7aeca
+source-git-commit: 37819b5a6480923686d327e30b1111ea29ae71da
 workflow-type: tm+mt
-source-wordcount: '1738'
-ht-degree: 21%
+source-wordcount: '1833'
+ht-degree: 19%
 
 ---
 
 
 # Activation des audiences vers des destinations de personnalisation de périphérie
 
-## Présentation {#overview}
+## Vue d’ensemble {#overview}
 
 Utilisation de Adobe Experience Platform [segmentation de périphérie](../../segmentation/ui/edge-segmentation.md) ainsi que des destinations de périphérie pour permettre aux clients de créer et de cibler des audiences à grande échelle, en temps réel. Cette fonctionnalité vous permet de configurer des cas d’utilisation de personnalisation de la même page et de la page suivante.
 
@@ -130,6 +130,14 @@ Une fois les conditions préalables remplies, vous pouvez sélectionner la desti
 ## Sélectionner vos audiences {#select-audiences}
 
 Utilisez les cases à cocher situées à gauche des noms d’audience pour sélectionner les audiences que vous souhaitez activer vers la destination, puis sélectionnez **[!UICONTROL Suivant]**.
+
+Pour sélectionner les audiences que vous souhaitez activer vers la destination, utilisez les cases à cocher situées à gauche des noms d’audience, puis sélectionnez **[!UICONTROL Suivant]**.
+
+Vous pouvez sélectionner plusieurs types d’audiences, selon leur origine :
+
+* **[!UICONTROL Segmentation Service]**: Audiences générées dans Experience Platform par le service de segmentation. Voir [documentation sur la segmentation](../../segmentation/ui/overview.md) pour plus d’informations.
+* **[!UICONTROL Chargement personnalisé]**: Audiences générées en dehors de l’Experience Platform et chargées dans Platform sous la forme de fichiers CSV. Pour en savoir plus sur les audiences externes, consultez la documentation sur [import d&#39;une audience](../../segmentation/ui/overview.md#import-audience).
+* Autres types d’audiences, provenant d’autres solutions d’Adobe, telles que [!DNL Audience Manager].
 
 ![Sélection des audiences](../assets/ui/activate-edge-personalization-destinations/select-audiences.png)
 

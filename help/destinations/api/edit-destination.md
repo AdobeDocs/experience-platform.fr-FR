@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Modification des connexions de destination à l’aide de l’API Flow Service
 type: Tutorial
 description: Découvrez comment modifier différents composants d’une connexion de destination à l’aide de l’API Flow Service.
-source-git-commit: 2afe330176c2b7734c38cf47be79960175060824
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '1580'
 ht-degree: 33%
@@ -29,7 +29,7 @@ Ce tutoriel nécessite que vous disposiez d’un identifiant de flux de données
 Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform :
 
 * [Les destinations sont des intégrations préconfigurées à des plateformes de destination qui permettent dʼactiver facilement des données provenant dʼAdobe Experience Platform. ](../home.md)[!DNL Destinations] Vous pouvez utiliser les destinations pour activer vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
-* [Sandbox](../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
+* [Sandbox](../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
 Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour mettre à jour votre flux de données avec succès à l’aide de la variable [!DNL Flow Service] API.
 
@@ -198,7 +198,7 @@ PATCH /targetConnections/{TARGET_CONNECTION_ID}
 
 >[!BEGINTABS]
 
->[!TAB Amazon S3]
+>[!TAB Amazon S3]
 
 **Requête**
 
@@ -245,7 +245,7 @@ Une réponse réussie renvoie votre identifiant de connexion cible et une balise
 
 **Requête**
 
-La requête suivante met à jour les paramètres d’une [[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md) ou [[!DNL Google Ad Manager 360] destination](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) pour ajouter la nouvelle connexion [**[!UICONTROL Ajout d’un identifiant de segment au nom du segment]**](/help/release-notes/2023/april-2023.md#destinations) champ .
+La requête suivante met à jour les paramètres d’une [[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md) ou [[!DNL Google Ad Manager 360] destination](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) pour ajouter la nouvelle connexion [**[!UICONTROL Ajout d’un ID d’audience au nom de l’audience]**](/help/release-notes/2023/april-2023.md#destinations) champ .
 
 ```shell
 curl -X PATCH \
@@ -355,7 +355,7 @@ PATCH /connections/{BASE_CONNECTION_ID}
 
 >[!BEGINTABS]
 
->[!TAB Amazon S3]
+>[!TAB Amazon S3]
 
 **Requête**
 

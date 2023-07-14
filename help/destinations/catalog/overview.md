@@ -3,10 +3,10 @@ keywords: Catalogue;catalogue
 title: Présentation du catalogue des destinations
 description: Le catalogue des destinations fournit une liste des destinations disponibles qui sont prêtes à recevoir des données. Ces destinations incluent des solutions Adobe, des plateformes publicitaires, d’enquête et de marketing par e-mail, et bien plus encore.
 exl-id: c490f6f0-f673-4a56-b87a-22884f8be92d
-source-git-commit: 944f307ecb4cf174c9f9818ded17546057f445e4
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '171'
-ht-degree: 55%
+ht-degree: 39%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 55%
 
 Le catalogue des destinations fournit une liste des plateformes de destination disponibles prêtes à recevoir des données. Ces plateformes de destination incluent des solutions Adobe, des plateformes publicitaires, d’enquête et de marketing par e-mail, des extensions Experience Platform, et bien plus encore.
 
-Parcourez le catalogue pour déterminer les plateformes de destination les plus adaptées à vos cas d’utilisation en matière de publicité et de personnalisation, puis configurez des flux pour activer les segments vers les destinations.
+Parcourez le catalogue pour déterminer les plateformes de destination qui conviennent le mieux à vos cas d’utilisation en matière de publicité et de personnalisation, puis configurez des flux pour activer vos audiences vers les destinations.
 
 <div id="recs-overview-body-1"></div>
 <div id="recs-overview-body-2"></div>

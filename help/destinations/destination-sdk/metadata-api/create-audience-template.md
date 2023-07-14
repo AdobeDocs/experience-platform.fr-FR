@@ -1,10 +1,10 @@
 ---
 description: Cette page illustre comment l’appel API est utilisé pour créer un modèle d’audience avec Adobe Experience Platform Destination SDK.
 title: Création d’un modèle d’audience
-source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
+source-git-commit: 3f31a54c0cf329d374808dacce3fac597a72aa11
 workflow-type: tm+mt
-source-wordcount: '626'
-ht-degree: 100%
+source-wordcount: '624'
+ht-degree: 89%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 100%
 >
 >**Point d’entrée de l’API** : `platform.adobe.io/data/core/activation/authoring/audience-templates`
 
-Pour certaines destinations créées à l’aide de Destination SDK, vous devez créer une configuration de métadonnées d’audience afin de concevoir, mettre à jour ou supprimer des métadonnées de segment dans la destination par programmation. Cette page montre comment utiliser le point d’entrée `/authoring/audience-templates` de l’API pour créer la configuration.
+Pour certaines destinations créées à l’aide de Destination SDK, vous devez créer une configuration de métadonnées d’audience pour créer, mettre à jour ou supprimer des métadonnées d’audience par programmation dans la destination. Cette page montre comment utiliser le point d’entrée `/authoring/audience-templates` de l’API pour créer la configuration.
 
 Pour obtenir une description détaillée des fonctionnalités configurables avec ce point d’entrée, consultez l’article sur la [gestion des métadonnées d’audience](../functionality/audience-metadata-management.md).
 
@@ -190,8 +190,8 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/audience-t
 | Propriété | Type | Description |
 | -------- | ----------- | ----------- |
 | `name` | Chaîne | Nom du modèle de métadonnées d’audience pour la destination. Ce nom apparaît dans tout message d’erreur spécifique au partenaire dans l’interface utilisateur d’Experience Platform, suivi du message d’erreur analysé à partir de `metadataTemplate.create.errorSchemaMap`. |
-| `url` | Chaîne | L’URL et le point d’entrée de votre API, qui est utilisé pour créer, mettre à jour, supprimer ou valider les audiences/segments dans votre plateforme. Deux exemples de secteurs sont : `https://adsapi.snapchat.com/v1/adaccounts/{{customerData.accountId}}/segments` et `https://api.linkedin.com/v2/dmpSegments/{{segment.alias}}`. |
-| `httpMethod` | Chaîne | Méthode utilisée sur votre point dʼentrée pour créer, mettre à jour, supprimer ou valider par programmation le segment/l’audience dans la destination. Par exemple : `POST`, `PUT`, `DELETE`. |
+| `url` | Chaîne | URL et point de terminaison de votre API, qui est utilisé pour créer, mettre à jour, supprimer ou valider des audiences dans votre plateforme. Deux exemples de secteurs sont : `https://adsapi.snapchat.com/v1/adaccounts/{{customerData.accountId}}/segments` et `https://api.linkedin.com/v2/dmpSegments/{{segment.alias}}`. |
+| `httpMethod` | Chaîne | Méthode utilisée sur votre point de terminaison pour créer, mettre à jour, supprimer ou valider par programmation l’audience dans votre destination. Par exemple : `POST`, `PUT`, `DELETE`. |
 | `headers.header` | Chaîne | Spécifie les en-têtes HTTP à ajouter à l’appel de votre API. Par exemple : `"Content-Type"`. |
 | `headers.value` | Chaîne | Indique la valeur des en-têtes HTTP à ajouter à l’appel de votre API. Par exemple : `"application/x-www-form-urlencoded"`. |
 | `requestBody` | Chaîne | Indique le contenu du corps du message qui doit être envoyé à votre API. Les paramètres qui doivent être ajoutés à l’objet `requestBody` dépendent des champs que votre API accepte. Pour obtenir un exemple, consultez le [premier exemple de modèle](../functionality/audience-metadata-management.md#example-1) dans le document sur les fonctionnalités des métadonnées d’audience. |

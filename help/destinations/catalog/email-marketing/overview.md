@@ -4,10 +4,10 @@ title: Présentation des destinations du marketing par e-mail
 type: Tutorial
 description: Les fournisseurs de service e-mail (ESP, Email Service Providers) vous permettent de gérer vos activités de marketing par e-mail, comme l’envoi de campagnes par e-mail promotionnelles. Découvrez quels ESP sont pris en charge en tant que destinations Experience Platform.
 exl-id: e07f8c5a-0424-4de5-810f-3d5711ef4606
-source-git-commit: 152786e5e994a88b19ca7af8815b33be5a732852
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '374'
-ht-degree: 76%
+ht-degree: 66%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 76%
 
 ## Présentation {#overview}
 
-Les fournisseurs de service e-mail (ESP, Email Service Providers) vous permettent de gérer vos activités de marketing par e-mail, comme l’envoi de campagnes par e-mail promotionnelles. Adobe Experience Platform s’intègre aux ESP en vous permettant d’activer des segments vers des destinations de marketing par e-mail.
+Les fournisseurs de service e-mail (ESP, Email Service Providers) vous permettent de gérer vos activités de marketing par e-mail, comme l’envoi de campagnes par e-mail promotionnelles. Adobe Experience Platform s’intègre aux ESP en vous permettant d’activer les audiences vers les destinations de marketing par e-mail.
 
 ## Destinations de marketing par e-mail prises en charge {#supported-destinations}
 
@@ -34,7 +34,7 @@ Adobe Experience Platform prend en charge les destinations de marketing par e-ma
 
 ## Se connecter à une nouvelle destination de marketing par e-mail {#connect-destination}
 
-La plateforme doit tout d’abord se connecter à la destination avant de pouvoir envoyer des segments vers des destinations de marketing par e-mail pour vos campagnes. Voir le [tutoriel sur la création de destinations](../../ui/connect-destination.md) pour des informations détaillées sur la configuration d’une nouvelle destination.
+Pour envoyer des audiences vers des destinations de marketing par e-mail pour vos campagnes, Platform doit d’abord se connecter à la destination. Voir le [tutoriel sur la création de destinations](../../ui/connect-destination.md) pour des informations détaillées sur la configuration d’une nouvelle destination.
 
 ## Bonnes pratiques lors de l’activation d’audiences vers des destinations de marketing par e-mail {#best-practices}
 
@@ -67,13 +67,13 @@ Dans le sélecteur de champ Schéma, choisissez les autres champs à exporter ve
 
 {style="table-layout:auto"}
 
-## Activer les segments vers des destinations de marketing par e-mail {#activate}
+## Activation des audiences vers les destinations de marketing par e-mail {#activate}
 
 Certaines destinations de marketing par e-mail dans le catalogue exportent les profils en continu, via une intégration d’API à la destination.
 
 D’autres destinations exportent les fichiers vers un emplacement de stockage dans le cloud. Une fois l’exportation terminée, vous devez importer les données de l’emplacement de stockage dans le cloud dans votre destination de marketing par e-mail.
 
-Suivez les liens de la section [destinations de marketing par e-mail prises en charge](#supported-destinations) pour savoir comment activer des segments vers chaque destination de marketing par e-mail.
+Suivez les liens de la section [destinations de marketing par e-mail prises en charge](#supported-destinations) pour savoir comment activer des audiences vers chaque destination de marketing par e-mail.
 
 ## Ressources supplémentaires {#additional-resources}
 

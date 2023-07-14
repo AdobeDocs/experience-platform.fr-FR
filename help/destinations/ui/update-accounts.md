@@ -4,7 +4,7 @@ title: Mettre à jour les comptes de destination
 type: Tutorial
 description: Ce tutoriel répertorie les étapes de mise à jour des comptes de destination dans l’interface utilisateur de Adobe Experience Platform.
 exl-id: afb41878-4205-4c64-af4d-e2740f852785
-source-git-commit: f31b54622c63f96fb8fa727f80dda295a926e2c7
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '505'
 ht-degree: 11%
@@ -13,7 +13,7 @@ ht-degree: 11%
 
 # Mettre à jour les comptes de destination
 
-## Présentation {#overview}
+## Vue d’ensemble {#overview}
 
 Le **[!UICONTROL Comptes]** Cet onglet affiche des détails sur les connexions que vous avez établies avec différentes destinations. Reportez-vous à la section [Présentation des comptes](../ui/destinations-workspace.md#accounts) pour toutes les informations que vous pouvez obtenir sur chaque compte de destination.
 
@@ -37,7 +37,7 @@ Suivez les étapes ci-dessous pour mettre à jour les détails de connexion vers
 
    ![Filtrage des comptes de destination](../assets/ui/update-accounts/filter-accounts.png)
 
-3. Sélectionnez les ellipses (`...`) en regard du nom du compte que vous avez l’intention de mettre à jour. Un panneau contextuel s’affiche, fournissant des options pour **[!UICONTROL Activation des segments]**, **[!UICONTROL Modifier les détails]**, et **[!UICONTROL Supprimer]** le compte. Sélectionnez la ![Bouton Modifier les détails](../assets/ui/workspace/pencil-icon.png) **[!UICONTROL Modifier les détails]** pour modifier les informations du compte.
+3. Sélectionnez les ellipses (`...`) en regard du nom du compte que vous avez l’intention de mettre à jour. Un panneau contextuel s’affiche, fournissant des options pour **[!UICONTROL Activation des audiences]**, **[!UICONTROL Modifier les détails]**, et **[!UICONTROL Supprimer]** le compte. Sélectionnez la ![Bouton Modifier les détails](../assets/ui/workspace/pencil-icon.png) **[!UICONTROL Modifier les détails]** pour modifier les informations du compte.
 
    ![Modifier le compte](../assets/ui/update-accounts/accounts-edit.png)
 

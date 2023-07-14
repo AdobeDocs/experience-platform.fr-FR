@@ -2,10 +2,10 @@
 title: Modèle de libre-service de documentation // Remplacer par le nom de votre destination
 description: Utilisez ce modèle pour créer une documentation publique pour votre destination dans le catalogue Adobe Experience Platform. // Remplacer par le paragraphe dans la section Aperçu
 exl-id: 99700474-8bf6-4176-acc1-38814e17c995
-source-git-commit: 1773edff56059cf5bc57ebaaa133216423fcfe10
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '1528'
-ht-degree: 38%
+source-wordcount: '1525'
+ht-degree: 35%
 
 ---
 
@@ -18,10 +18,9 @@ ht-degree: 38%
 >[!IMPORTANT]
 >
 >* Renseignez toutes les sections de ce modèle, dans l&#39;ordre dans lequel elles sont décrites dans le modèle.
->* Ce modèle est rarement mis à jour, en fonction des commentaires des partenaires. Avant de commencer à créer de la documentation pour votre destination, assurez-vous d’avoir téléchargé la [dernière version du modèle](../assets/docs-framework/yourdestination-template.zip).
+>* Ce modèle est rarement mis à jour, en fonction des commentaires des partenaires. Avant de commencer à créer de la documentation pour la destination, veillez à avoir téléchargé la [dernière version du modèle](../assets/docs-framework/yourdestination-template.zip).
 
-
-## Présentation {#overview}
+## Vue d’ensemble {#overview}
 
 *Fournissez un bref aperçu de votre entreprise, y compris la valeur qu’elle fournit aux clients. Pour plus d’informations, insérez un lien vers la page d’accueil de la documentation du produit.*
 
@@ -43,7 +42,7 @@ Pour vous aider à mieux comprendre comment et à quel moment utiliser la variab
 
 *Pour les plateformes de réseaux sociaux :*
 
-*Une marque de vêtements d’athlétisme veut atteindre ses clients existants par le biais de leurs comptes de médias sociaux. La marque de vêtements peut ingérer des adresses électroniques de son propre service de gestion de la relation client vers Adobe Experience Platform, créer des segments à partir de ses propres données hors ligne et envoyer ces segments à votre destination afin d’afficher des publicités dans les flux de médias sociaux de ses clients.*
+*Une marque de vêtements d’athlétisme veut atteindre ses clients existants par le biais de leurs comptes de médias sociaux. La marque de vêtements peut ingérer des adresses électroniques de son propre système de gestion de la relation client vers Adobe Experience Platform, créer des audiences à partir de ses propres données hors ligne et envoyer ces audiences à votre destination afin d’afficher des publicités dans les flux de médias sociaux de ses clients.*
 
 ## Conditions préalables {#prerequisites}
 
@@ -81,10 +80,10 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 | Élément | Type | Notes |
 ---------|----------|---------|
-| Type d’exportation | **[!UICONTROL Exportation des segments]** | Vous exportez tous les membres d’un segment (audience) avec les identifiants (nom, numéro de téléphone ou autres) utilisés dans la variable *YourDestination* destination. |
+| Type d’exportation | **[!UICONTROL Exportation de l’audience]** | Vous exportez tous les membres d’une audience avec les identifiants (nom, numéro de téléphone ou autres) utilisés dans la variable *YourDestination* destination. |
 | Type d’exportation | **[!UICONTROL Basé sur les profils]** | Vous exportez tous les membres d’un segment, ainsi que les champs de schéma de votre choix (par exemple : adresse électronique, numéro de téléphone, nom), tel que sélectionné dans l’écran de sélection des attributs de profil du [workflow d’activation de destination](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
 | Type d’exportation | **[!UICONTROL Exportation des jeux de données]** | Vous exportez des jeux de données bruts qui ne sont pas groupés ou structurés selon les intérêts ou les qualifications de l’audience. |
-| Fréquence des exportations | **[!UICONTROL Diffusion en continu]** | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation des segments, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
+| Fréquence des exportations | **[!UICONTROL Diffusion en continu]** | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu&#39;un profil est mis à jour en Experience Platform en fonction de l&#39;évaluation de l&#39;audience, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
 | Fréquence des exportations | **[!UICONTROL Lot]** | Les destinations par lots exportent des fichiers vers des plateformes en aval par incréments de trois, six, huit, douze ou vingt-quatre heures. En savoir plus sur les [destinations basées sur des fichiers par lots](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
@@ -125,7 +124,7 @@ Vous pouvez activer les alertes pour recevoir des notifications sur le statut de
 
 Lorsque vous avez terminé de renseigner les détails sur votre connexion de destination, sélectionnez **[!UICONTROL Suivant]**.
 
-## Activer des segments vers cette destination {#activate}
+## Activer les audiences vers cette destination {#activate}
 
 >[!IMPORTANT]
 > 
@@ -133,9 +132,9 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 
 *Supprimer le cas échéant : si vous documentez une nouvelle destination de diffusion en continu, conservez le premier paragraphe ci-dessous. Si vous documentez une nouvelle destination basée sur des fichiers, conservez le deuxième paragraphe. Si vous documentez une destination qui exporte des jeux de données, conservez le troisième paragraphe.*
 
-Consultez [Activer les profils et les segments vers les destinations d’exportation de segments de diffusion en continu](/help/destinations/ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des segments d’audience vers cette destination.
+Lecture [Activation des profils et des audiences vers les destinations d’exportation d’audiences par flux](/help/destinations/ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
 
-Consultez [Activer des données d’audience vers des destinations d’exportation de profils par lots](/help/destinations/ui/activate-batch-profile-destinations.md) pour obtenir des instructions sur l’activation des segments d’audience vers cette destination.
+Lecture [Activation des données d’audience vers des destinations d’exportation de profils par lots](/help/destinations/ui/activate-batch-profile-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
 
 Lecture [(Version bêta) Exportation de jeux de données](/help/destinations/ui/export-datasets.md) pour obtenir des instructions détaillées sur l’exportation de jeux de données vers cette destination.
 
@@ -148,7 +147,7 @@ Lecture [(Version bêta) Exportation de jeux de données](/help/destinations/ui/
 
 ## Données exportées / Valider l’exportation des données {#exported-data}
 
-*Ajoutez un paragraphe sur la manière dont les données sont exportées vers votre destination. Cela permet au client de s’assurer qu’il s’est correctement intégré à votre destination. Par exemple, vous pouvez fournir un exemple JSON comme celui ci-dessous. Vous pouvez également fournir des captures d’écran et des informations provenant de l’interface de votre destination qui indiquent comment les clients doivent s’attendre à ce que les segments soient renseignés dans la plateforme de destination.*
+*Ajoutez un paragraphe sur la manière dont les données sont exportées vers votre destination. Cela permet au client de s’assurer qu’il s’est correctement intégré à votre destination. Par exemple, vous pouvez fournir un exemple JSON comme celui ci-dessous. Vous pouvez également fournir des captures d’écran et des informations provenant de l’interface de votre destination qui indiquent comment les clients doivent s’attendre à ce que les audiences soient renseignées dans la plateforme de destination.*
 
 ```
 {

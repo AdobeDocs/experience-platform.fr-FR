@@ -3,18 +3,18 @@ keywords: Experience Platform;accueil;rubriques populaires;service de flux;mettr
 solution: Experience Platform
 title: Mettre à jour des flux de données de destination à l’aide de l’API Flow Service
 type: Tutorial
-description: Ce tutoriel décrit les étapes de mise à jour d’un flux de données de destination. Découvrez comment activer ou désactiver le flux de données, mettre à jour ses informations de base ou ajouter et supprimer des segments et des attributs à l’aide de l’API Flow Service.
+description: Ce tutoriel décrit les étapes de mise à jour d’un flux de données de destination. Découvrez comment activer ou désactiver le flux de données, mettre à jour ses informations de base ou ajouter et supprimer des audiences et des attributs à l’aide de l’API Flow Service.
 exl-id: 3f69ad12-940a-4aa1-a1ae-5ceea997a9ba
-source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
+source-git-commit: 9ac6b075af3805da4dad0dd6442d026ae96ab5c7
 workflow-type: tm+mt
 source-wordcount: '2408'
-ht-degree: 40%
+ht-degree: 35%
 
 ---
 
 # Mettre à jour des flux de données de destination à l’aide de l’API Flow Service
 
-Ce tutoriel décrit les étapes de mise à jour d’un flux de données de destination. Découvrez comment activer ou désactiver le flux de données, mettre à jour ses informations de base ou ajouter et supprimer des segments et des attributs à l’aide du [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/). Pour plus d’informations sur la modification des flux de données de destination à l’aide de l’interface utilisateur de l’Experience Platform, reportez-vous à la section [Modification des flux d’activation](/help/destinations/ui/edit-activation.md).
+Ce tutoriel décrit les étapes de mise à jour d’un flux de données de destination. Découvrez comment activer ou désactiver le flux de données, mettre à jour ses informations de base ou ajouter et supprimer des audiences et des attributs à l’aide du [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/). Pour plus d’informations sur la modification des flux de données de destination à l’aide de l’interface utilisateur de l’Experience Platform, reportez-vous à la section [Modification des flux d’activation](/help/destinations/ui/edit-activation.md).
 
 ## Prise en main {#get-started}
 
@@ -27,7 +27,7 @@ Pour suivre ce tutoriel, vous devez disposer d’un identifiant de flux valide. 
 Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform :
 
 * [Les destinations sont des intégrations préconfigurées à des plateformes de destination qui permettent dʼactiver facilement des données provenant dʼAdobe Experience Platform. ](../home.md)[!DNL Destinations] Vous pouvez utiliser les destinations pour activer vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
-* [Sandbox](../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
+* [Sandbox](../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
 Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour mettre à jour votre flux de données avec succès à l’aide de la variable [!DNL Flow Service] API.
 
@@ -447,9 +447,9 @@ Une réponse réussie renvoie votre identifiant de flux et une balise dʼentité
 }
 ```
 
-## Ajout d’un segment à un flux de données {#add-segment}
+## Ajout d’une audience à un flux de données {#add-segment}
 
-Pour ajouter un segment au flux de données de destination, effectuez une requête de PATCH au [!DNL Flow Service] API lors de la fourniture de votre ID de flux, de votre version et du segment que vous souhaitez ajouter.
+Pour ajouter une audience au flux de données de destination, effectuez une requête de PATCH au [!DNL Flow Service] API lors de la fourniture de l’ID de flux, de la version et de l’audience que vous souhaitez ajouter.
 
 **Format d’API**
 
@@ -459,7 +459,7 @@ PATCH /flows/{FLOW_ID}
 
 **Requête**
 
-La requête suivante ajoute un nouveau segment à un flux de données de destination existant.
+La requête suivante ajoute une nouvelle audience à un flux de données de destination existant.
 
 ```shell
 curl -X PATCH \
@@ -494,18 +494,18 @@ curl -X PATCH \
 
 | Propriété | Description |
 | --------- | ----------- |
-| `op` | Appel d’opération utilisé pour définir l’action nécessaire pour mettre à jour la connexion. Les opérations comprennent : `add`, `replace` et `remove`. Pour ajouter un segment à un flux de données, utilisez l’opération `add`. |
-| `path` | Définit la partie du flux à mettre à jour. Lors de l’ajout d’un segment à un flux de données, utilisez le chemin spécifié dans l’exemple. |
+| `op` | Appel d’opération utilisé pour définir l’action nécessaire pour mettre à jour la connexion. Les opérations comprennent : `add`, `replace` et `remove`. Pour ajouter une audience à un flux de données, utilisez la méthode `add` opération. |
+| `path` | Définit la partie du flux à mettre à jour. Lors de l’ajout d’une audience à un flux de données, utilisez le chemin spécifié dans l’exemple. |
 | `value` | Nouvelle valeur avec laquelle vous souhaitez mettre à jour votre paramètre. |
-| `id` | Indiquez l’identifiant du segment que vous ajoutez au flux de données de destination. |
-| `name` | **(Facultatif)**. Indiquez le nom du segment que vous ajoutez au flux de données de destination. Notez que ce champ n’est pas obligatoire et que vous pouvez ajouter un segment au flux de données de destination sans indiquer son nom. |
-| `filenameTemplate` | Pour *destinations par lot* uniquement. Ce champ est obligatoire uniquement lors de l’ajout d’un segment à un flux de données dans des destinations d’exportation de fichiers par lots telles qu’Amazon S3, SFTP ou Azure Blob. <br> Ce champ détermine le format du nom des fichiers exportés vers votre destination. <br>Les options suivantes sont disponibles :<br> <ul><li>`%DESTINATION_NAME%` : obligatoire. Les fichiers exportés contiennent le nom de destination.</li><li>`%SEGMENT_ID%` : obligatoire. Les fichiers exportés contiennent l’identifiant du segment exporté.</li><li>`%SEGMENT_NAME%`: **(Facultatif)**. Les fichiers exportés contiennent le nom du segment exporté.</li><li>`DATETIME(YYYYMMdd_HHmmss)` ou `%TIMESTAMP%`: **(Facultatif)**. Sélectionnez l’une de ces deux options pour que vos fichiers incluent l’heure à laquelle ils sont générés par Experience Platform.</li><li>`custom-text`: **(Facultatif)**. Remplacez cet espace réservé par tout texte personnalisé que vous souhaitez ajouter à la fin de vos noms de fichier.</li></ul> <br> Pour plus d’informations sur la configuration des noms de fichier, reportez-vous à la section [Configurer des noms de fichier](/help/destinations/ui/activate-batch-profile-destinations.md#file-names) dans le tutoriel consacré à l’activation des destinations par lot. |
-| `exportMode` | Pour *destinations par lot* uniquement. Ce champ est obligatoire uniquement lors de l’ajout d’un segment à un flux de données dans des destinations d’exportation de fichiers par lots telles qu’Amazon S3, SFTP ou Azure Blob. <br> Obligatoire. Sélectionnez `"DAILY_FULL_EXPORT"` ou `"FIRST_FULL_THEN_INCREMENTAL"`. Pour plus d’informations sur les deux options, reportez-vous aux sections [Exporter des fichiers complets](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) et [Exporter des fichiers incrémentiels](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) dans le tutoriel consacré à l’activation des destinations par lot. |
-| `startDate` | Sélectionnez la date à laquelle le segment doit commencer à exporter les profils vers votre destination. |
-| `frequency` | Pour *destinations par lot* uniquement. Ce champ est obligatoire uniquement lors de l’ajout d’un segment à un flux de données dans des destinations d’exportation de fichiers par lots telles qu’Amazon S3, SFTP ou Azure Blob. <br> Obligatoire. <br> <ul><li>Pour le mode d’exportation `"DAILY_FULL_EXPORT"`, vous pouvez sélectionner `ONCE` ou `DAILY`.</li><li>Pour le mode d’exportation `"FIRST_FULL_THEN_INCREMENTAL"`, vous pouvez sélectionner `"DAILY"`, `"EVERY_3_HOURS"`, `"EVERY_6_HOURS"`, `"EVERY_8_HOURS"` ou `"EVERY_12_HOURS"`.</li></ul> |
+| `id` | Indiquez l’identifiant de l’audience que vous ajoutez au flux de données de destination. |
+| `name` | **(Facultatif)**. Indiquez le nom de l’audience que vous ajoutez au flux de données de destination. Notez que ce champ n’est pas obligatoire et que vous pouvez ajouter une audience au flux de données de destination sans fournir son nom. |
+| `filenameTemplate` | Pour *destinations par lot* uniquement. Ce champ n’est requis que lors de l’ajout d’une audience à un flux de données dans des destinations d’exportation de fichiers par lots comme Amazon S3, SFTP ou Azure Blob. <br> Ce champ détermine le format du nom des fichiers exportés vers votre destination. <br>Les options suivantes sont disponibles :<br> <ul><li>`%DESTINATION_NAME%` : obligatoire. Les fichiers exportés contiennent le nom de destination.</li><li>`%SEGMENT_ID%` : obligatoire. Les fichiers exportés contiennent l&#39;identifiant de l&#39;audience exportée.</li><li>`%SEGMENT_NAME%`: **(Facultatif)**. Les fichiers exportés contiennent le nom de l’audience exportée.</li><li>`DATETIME(YYYYMMdd_HHmmss)` ou `%TIMESTAMP%`: **(Facultatif)**. Sélectionnez l’une de ces deux options pour que vos fichiers incluent l’heure à laquelle ils sont générés par Experience Platform.</li><li>`custom-text`: **(Facultatif)**. Remplacez cet espace réservé par tout texte personnalisé que vous souhaitez ajouter à la fin de vos noms de fichier.</li></ul> <br> Pour plus d’informations sur la configuration des noms de fichier, reportez-vous à la section [Configurer des noms de fichier](/help/destinations/ui/activate-batch-profile-destinations.md#file-names) dans le tutoriel consacré à l’activation des destinations par lot. |
+| `exportMode` | Pour *destinations par lot* uniquement. Ce champ n’est requis que lors de l’ajout d’une audience à un flux de données dans des destinations d’exportation de fichiers par lots comme Amazon S3, SFTP ou Azure Blob. <br> Obligatoire. Sélectionnez `"DAILY_FULL_EXPORT"` ou `"FIRST_FULL_THEN_INCREMENTAL"`. Pour plus d’informations sur les deux options, reportez-vous aux sections [Exporter des fichiers complets](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) et [Exporter des fichiers incrémentiels](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) dans le tutoriel consacré à l’activation des destinations par lot. |
+| `startDate` | Sélectionnez la date à laquelle l’audience doit commencer à exporter les profils vers votre destination. |
+| `frequency` | Pour *destinations par lot* uniquement. Ce champ n’est requis que lors de l’ajout d’une audience à un flux de données dans des destinations d’exportation de fichiers par lots comme Amazon S3, SFTP ou Azure Blob. <br> Obligatoire. <br> <ul><li>Pour le mode d’exportation `"DAILY_FULL_EXPORT"`, vous pouvez sélectionner `ONCE` ou `DAILY`.</li><li>Pour le mode d’exportation `"FIRST_FULL_THEN_INCREMENTAL"`, vous pouvez sélectionner `"DAILY"`, `"EVERY_3_HOURS"`, `"EVERY_6_HOURS"`, `"EVERY_8_HOURS"` ou `"EVERY_12_HOURS"`.</li></ul> |
 | `triggerType` | Pour *destinations par lot* uniquement. Ce champ est obligatoire uniquement lors de la sélection de la variable `"DAILY_FULL_EXPORT"` dans le `frequency` sélecteur. <br> Obligatoire. <br> <ul><li>Sélectionner `"AFTER_SEGMENT_EVAL"` pour que la tâche d’activation s’exécute immédiatement une fois la tâche de segmentation par lots quotidienne de Platform terminée. Ainsi, lorsque la tâche d’activation s’exécute, les profils les plus récents sont exportés vers votre destination.</li><li>Sélectionner `"SCHEDULED"` pour que la tâche d’activation s’exécute à un moment donné. Cela permet de garantir que les données de profil Experience Platform sont exportées simultanément chaque jour, mais les profils que vous exportez peuvent ne pas être les plus à jour, selon que la tâche de segmentation par lots est terminée ou non avant le début de la tâche d’activation. Lorsque vous sélectionnez cette option, vous devez également ajouter une `startTime` pour indiquer à quel moment en UTC les exportations quotidiennes doivent avoir lieu.</li></ul> |
-| `endDate` | Pour *destinations par lot* uniquement. Ce champ est obligatoire uniquement lors de l’ajout d’un segment à un flux de données dans des destinations d’exportation de fichiers par lots telles qu’Amazon S3, SFTP ou Azure Blob. <br> Non applicable lors de la sélection de `"exportMode":"DAILY_FULL_EXPORT"` et `"frequency":"ONCE"`. <br> Définit la date à laquelle les membres du segment cessent d’être exportés vers la destination. |
-| `startTime` | Pour *destinations par lot* uniquement. Ce champ est obligatoire uniquement lors de l’ajout d’un segment à un flux de données dans des destinations d’exportation de fichiers par lots telles qu’Amazon S3, SFTP ou Azure Blob. <br> Obligatoire. Sélectionnez l’heure à laquelle les fichiers contenant des membres du segment doivent être générés et exportés vers votre destination. |
+| `endDate` | Pour *destinations par lot* uniquement. Ce champ n’est requis que lors de l’ajout d’une audience à un flux de données dans des destinations d’exportation de fichiers par lots comme Amazon S3, SFTP ou Azure Blob. <br> Non applicable lors de la sélection de `"exportMode":"DAILY_FULL_EXPORT"` et `"frequency":"ONCE"`. <br> Définit la date à laquelle les membres de l’audience cessent d’être exportés vers la destination. |
+| `startTime` | Pour *destinations par lot* uniquement. Ce champ n’est requis que lors de l’ajout d’une audience à un flux de données dans des destinations d’exportation de fichiers par lots comme Amazon S3, SFTP ou Azure Blob. <br> Obligatoire. Sélectionnez l’heure à laquelle les fichiers contenant des membres de l’audience doivent être générés et exportés vers votre destination. |
 
 **Réponse**
 
@@ -518,9 +518,9 @@ Une réponse réussie renvoie votre identifiant de flux et une balise dʼentité
 }
 ```
 
-## Suppression d’un segment d’un flux de données {#remove-segment}
+## Suppression d’une audience d’un flux de données {#remove-segment}
 
-Pour supprimer un segment d’un flux de données de destination existant, effectuez une requête de PATCH à la fonction [!DNL Flow Service] API lors de la fourniture de l’ID de flux, de la version et du sélecteur d’index du segment que vous souhaitez supprimer. L’indexation commence à `0`. Par exemple, l’exemple de requête ci-dessous supprime les premier et deuxième segments du flux de données.
+Pour supprimer une audience d’un flux de données de destination existant, effectuez une requête de PATCH à la fonction [!DNL Flow Service] API lors de la fourniture de l’ID de flux, de la version et du sélecteur d’index de l’audience que vous souhaitez supprimer. L’indexation commence à `0`. Par exemple, l’exemple de requête ci-dessous supprime les première et deuxième audiences du flux de données.
 
 **Format d’API**
 
@@ -530,7 +530,7 @@ PATCH /flows/{FLOW_ID}
 
 **Requête**
 
-La requête suivante supprime deux segments d’un flux de données de destination existant.
+La requête suivante supprime deux audiences d’un flux de données de destination existant.
 
 ```shell
 curl -X PATCH \
@@ -564,8 +564,8 @@ curl -X PATCH \
 
 | Propriété | Description |
 | --------- | ----------- |
-| `op` | Appel d’opération utilisé pour définir l’action nécessaire pour mettre à jour la connexion. Les opérations comprennent : `add`, `replace` et `remove`. Pour supprimer un segment d’un flux de données, utilisez la méthode `remove` opération. |
-| `path` | Indique quel segment existant doit être supprimé du flux de données de destination, en fonction de l’index du sélecteur de segments. Pour récupérer l’ordre des segments dans un flux de données, effectuez un appel GET à la fonction `/flows` et inspecter le `transformations.segmentSelectors` . Pour supprimer le premier segment dans le flux de données, utilisez `"path":"transformations/0/params/segmentSelectors/selectors/0/"`. |
+| `op` | Appel d’opération utilisé pour définir l’action nécessaire pour mettre à jour la connexion. Les opérations comprennent : `add`, `replace` et `remove`. Pour supprimer une audience d’un flux de données, utilisez la méthode `remove` opération. |
+| `path` | Spécifie l’audience existante à supprimer du flux de données de destination, en fonction de l’index du sélecteur d’audience. Pour récupérer l’ordre des audiences dans un flux de données, effectuez un appel GET à la fonction `/flows` et inspecter le `transformations.segmentSelectors` . Pour supprimer la première audience du flux de données, utilisez `"path":"transformations/0/params/segmentSelectors/selectors/0/"`. |
 
 
 **Réponse**
@@ -579,9 +579,9 @@ Une réponse réussie renvoie votre identifiant de flux et une balise dʼentité
 }
 ```
 
-## Mise à jour de composants d’un segment dans un flux de données {#update-segment}
+## Mise à jour des composants d’une audience dans un flux de données {#update-segment}
 
-Vous pouvez mettre à jour les composants d’un segment dans un flux de données de destination existant. Par exemple, vous pouvez modifier la fréquence d’exportation ou modifier le modèle de nom de fichier. Pour ce faire, envoyez une requête de PATCH au [!DNL Flow Service] API lors de la fourniture de l’ID de flux, de la version et du sélecteur d’index du segment que vous souhaitez mettre à jour. L’indexation commence à `0`. Par exemple, la requête ci-dessous met à jour le neuvième segment dans un flux de données.
+Vous pouvez mettre à jour les composants d’une audience dans un flux de données de destination existant. Par exemple, vous pouvez modifier la fréquence d’exportation ou modifier le modèle de nom de fichier. Pour ce faire, envoyez une requête de PATCH au [!DNL Flow Service] API lors de la fourniture de l’ID de flux, de la version et du sélecteur d’index de l’audience que vous souhaitez mettre à jour. L’indexation commence à `0`. Par exemple, la requête ci-dessous met à jour la neuvième audience dans un flux de données.
 
 **Format d’API**
 
@@ -591,7 +591,7 @@ PATCH /flows/{FLOW_ID}
 
 **Requête**
 
-Lors de la mise à jour d’un segment dans un flux de données de destination existant, vous devez d’abord effectuer une opération de GET pour récupérer les détails du segment que vous souhaitez mettre à jour. Indiquez ensuite toutes les informations sur les segments dans la payload, et pas seulement les champs que vous souhaitez mettre à jour. Dans l&#39;exemple ci-dessous, du texte personnalisé est ajouté à la fin du modèle de nom de fichier et la fréquence du planning d&#39;export est mise à jour de 6 heures à 12 heures.
+Lors de la mise à jour d’une audience dans un flux de données de destination existant, vous devez d’abord effectuer une opération de GET pour récupérer les détails de l’audience que vous souhaitez mettre à jour. Ensuite, fournissez toutes les informations d’audience dans la payload, et pas seulement les champs que vous souhaitez mettre à jour. Dans l&#39;exemple ci-dessous, du texte personnalisé est ajouté à la fin du modèle de nom de fichier et la fréquence du planning d&#39;export est mise à jour de 6 heures à 12 heures.
 
 ```shell
 curl -X PATCH \
@@ -626,7 +626,7 @@ curl -X PATCH \
 ]'
 ```
 
-Pour obtenir des descriptions des propriétés de la payload, reportez-vous à la section . [Ajout d’un segment à un flux de données](#add-segment).
+Pour obtenir des descriptions des propriétés de la payload, reportez-vous à la section . [Ajout d’une audience à un flux de données](#add-segment).
 
 
 **Réponse**
@@ -640,13 +640,13 @@ Une réponse réussie renvoie votre identifiant de flux et une balise dʼentité
 }
 ```
 
-Consultez les exemples ci-dessous pour plus d’exemples de composants de segment que vous pouvez mettre à jour dans un flux de données.
+Consultez les exemples ci-dessous pour plus d’exemples de composants d’audience que vous pouvez mettre à jour dans un flux de données.
 
-## Mettre à jour le mode d’exportation d’un segment d’une évaluation planifiée à une évaluation de segment {#update-export-mode}
+## Mettre à jour le mode d&#39;export d&#39;une audience de type planifiée vers après l&#39;évaluation de l&#39;audience {#update-export-mode}
 
-+++ Cliquez pour voir un exemple dans lequel une exportation de segments est mise à jour : elle n’est plus activée tous les jours à une heure donnée, mais elle est activée tous les jours une fois la tâche de segmentation par lots Platform terminée.
++++ Cliquez pour voir un exemple dans lequel une exportation d’audience est mise à jour : elle n’est plus activée tous les jours à une heure donnée, mais elle est activée tous les jours une fois la tâche de segmentation par lots Platform terminée.
 
-Le segment est exporté tous les jours à 16h00 UTC.
+L&#39;audience est exportée tous les jours à 16h00 UTC.
 
 ```json
 {
@@ -669,7 +669,7 @@ Le segment est exporté tous les jours à 16h00 UTC.
 }
 ```
 
-Le segment est exporté tous les jours à la fin de la tâche de segmentation par lots quotidienne.
+L’audience est exportée tous les jours à la fin de la tâche de segmentation par lots quotidienne.
 
 ```json
 {
@@ -697,7 +697,7 @@ Le segment est exporté tous les jours à la fin de la tâche de segmentation pa
 
 +++ Cliquez pour afficher un exemple de mise à jour du modèle de nom de fichier afin d’inclure des champs supplémentaires dans le nom de fichier.
 
-Les fichiers exportés contiennent le nom de destination et l’identifiant de segment Experience Platform.
+Les fichiers exportés contiennent le nom de destination et l’identifiant de l’audience Experience Platform.
 
 ```json
 {
@@ -720,7 +720,7 @@ Les fichiers exportés contiennent le nom de destination et l’identifiant de s
 }
 ```
 
-Les fichiers exportés contiennent le nom de destination, l’identifiant du segment Experience Platform, la date et l’heure de génération du fichier par l’Experience Platform et le texte personnalisé ajouté à la fin des fichiers.
+Les fichiers exportés contiennent le nom de destination, l’identifiant de l’audience Experience Platform, la date et l’heure de génération du fichier par l’Experience Platform et le texte personnalisé ajouté à la fin des fichiers.
 
 
 ```json
@@ -838,8 +838,8 @@ curl -X PATCH \
 
 | Propriété | Description |
 | --------- | ----------- |
-| `op` | Appel d’opération utilisé pour définir l’action nécessaire pour mettre à jour la connexion. Les opérations comprennent : `add`, `replace` et `remove`. Pour supprimer un segment d’un flux de données, utilisez la méthode `remove` opération. |
-| `path` | Indique quel attribut de profil existant doit être supprimé du flux de données de destination, en fonction de l’index du sélecteur de segments. Pour récupérer l’ordre des attributs de profil dans un flux de données, effectuez un appel GET à la fonction `/flows` et inspecter le `transformations.profileSelectors` . Pour supprimer le premier segment dans le flux de données, utilisez `"path":"transformations/0/params/segmentSelectors/selectors/0/"`. |
+| `op` | Appel d’opération utilisé pour définir l’action nécessaire pour mettre à jour la connexion. Les opérations comprennent : `add`, `replace` et `remove`. Pour supprimer une audience d’un flux de données, utilisez la méthode `remove` opération. |
+| `path` | Indique quel attribut de profil existant doit être supprimé du flux de données de destination, en fonction de l’index du sélecteur d’audience. Pour récupérer l’ordre des attributs de profil dans un flux de données, effectuez un appel GET à la fonction `/flows` et inspecter le `transformations.profileSelectors` . Pour supprimer la première audience du flux de données, utilisez `"path":"transformations/0/params/segmentSelectors/selectors/0/"`. |
 
 
 **Réponse**
@@ -859,4 +859,4 @@ Les points de terminaison d’API de ce tutoriel suivent les principes générau
 
 ## Étapes suivantes {#next-steps}
 
-En suivant ce tutoriel, vous avez appris à mettre à jour différents composants d’un flux de données de destination, comme ajouter ou supprimer des segments ou des attributs de profil à l’aide de [!DNL Flow Service] API. Pour plus d’informations sur les destinations, voir [présentation des destinations](../home.md).
+En suivant ce tutoriel, vous avez appris à mettre à jour différents composants d’un flux de données de destination, comme ajouter ou supprimer des audiences ou des attributs de profil à l’aide de [!DNL Flow Service] API. Pour plus d’informations sur les destinations, voir [présentation des destinations](../home.md).

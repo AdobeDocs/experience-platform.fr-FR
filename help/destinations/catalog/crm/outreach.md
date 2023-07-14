@@ -3,10 +3,10 @@ keywords: crm;CRM;destinations crm;portée globale;destination crm de diffusion
 title: Connexion sortante
 description: La destination de diffusion vous permet d’exporter les données de votre compte et de les activer dans le cadre d’Outreach en fonction de vos besoins professionnels.
 exl-id: 7433933d-7a4e-441d-8629-a09cb77d5220
-source-git-commit: 4ef83c152c4649721c6a424f3ba47b7c6bbfef3f
+source-git-commit: c1ba465a8a866bd8bdc9a2b294ec5d894db81e11
 workflow-type: tm+mt
-source-wordcount: '1711'
-ht-degree: 53%
+source-wordcount: '1710'
+ht-degree: 42%
 
 ---
 
@@ -16,13 +16,13 @@ ht-degree: 53%
 
 [[!DNL Outreach]](https://www.outreach.io/) est une plateforme d’exécution des ventes qui possède le plus grand nombre de données d’interaction entre vendeurs et acheteurs B2B au monde et qui investit de manière significative dans des technologies d’IA propriétaires afin de traduire les données de vente en informations. [!DNL Outreach] aide les entreprises à automatiser l’engagement commercial et à agir sur la base des renseignements fournis par le chiffre d’affaires afin d’améliorer leur efficacité, leur prévisibilité et leur croissance.
 
-Ceci [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) tire parti de [API de ressource de mise à jour de diffusion externe](https://api.outreach.io/api/v2/docs#update-an-existing-resource), qui permet de mettre à jour les identités d’un segment correspondant aux prospects dans [!DNL Outreach].
+Ceci [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) tire parti de [API de ressource de mise à jour de diffusion externe](https://api.outreach.io/api/v2/docs#update-an-existing-resource), qui permet de mettre à jour les identités au sein d’une audience correspondant aux prospects dans [!DNL Outreach].
 
 [!DNL Outreach] utilise OAuth 2 avec l’octroi d’autorisation comme mécanisme d’authentification pour communiquer avec le [!DNL Outreach] [!DNL Update Resource API]. Instructions pour vous authentifier à votre [!DNL Outreach] L’instance est plus loin, dans [Authentification à la destination](#authenticate) .
 
 ## Cas d’utilisation {#use-cases}
 
-En tant que marketeur, vous pouvez proposer des expériences personnalisées à vos prospects en fonction des attributs de leurs profils Adobe Experience Platform. Vous pouvez créer des segments à partir de vos données hors ligne et envoyer ces segments vers [!DNL Outreach], pour les afficher dans les flux de prospects dès que les segments et les profils sont mis à jour dans Adobe Experience Platform.
+En tant que marketeur, vous pouvez proposer des expériences personnalisées à vos prospects en fonction des attributs de leurs profils Adobe Experience Platform. Vous pouvez créer des audiences à partir de vos données hors ligne et envoyer ces audiences à [!DNL Outreach], afin qu’elles s’affichent dans les flux des prospects dès que les audiences et les profils sont mis à jour dans Adobe Experience Platform.
 
 ## Conditions préalables {#prerequisites}
 
@@ -30,7 +30,7 @@ En tant que marketeur, vous pouvez proposer des expériences personnalisées à 
 
 Avant d’activer des données dans la destination [!DNL Outreach], vous devez avoir un [schéma](/help/xdm/schema/composition.md), un [jeu de données](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=fr), ainsi que des [segments](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=fr) créés dans [!DNL Experience Platform].
 
-Si vous avez besoin de conseils pour les statuts de segment, reportez-vous à la documentation d’Adobe pour le [groupe de champs de schéma Détails de l’appartenance à un segment](/help/xdm/field-groups/profile/segmentation.md).
+Reportez-vous à la documentation d’Adobe pour [Groupe de champs Détails de l’appartenance à une audience](/help/xdm/field-groups/profile/segmentation.md) si vous avez besoin de conseils sur les états d’audience.
 
 ### Conditions préalables de diffusion {#prerequisites-destination}
 
@@ -49,12 +49,12 @@ Notez les éléments ci-dessous avant de vous authentifier à la destination CRM
 
 #### Configuration d’étiquettes de champ personnalisées {#prerequisites-custom-fields}
 
-[!DNL Outreach] prend en charge les champs personnalisés pour [prospects](https://support.outreach.io/hc/en-us/articles/360001557554-Outreach-Prospect-Profile-Overview). Voir [Comment ajouter un champ personnalisé dans Outreach](https://support.outreach.io/hc/en-us/articles/219124908-How-To-Add-a-Custom-Field-in-Outreach) pour plus d’informations. Pour faciliter l’identification, il est recommandé de mettre à jour manuellement les étiquettes avec les noms de segment correspondants au lieu de conserver les valeurs par défaut. Par exemple, comme ci-dessous :
+[!DNL Outreach] prend en charge les champs personnalisés pour [prospects](https://support.outreach.io/hc/en-us/articles/360001557554-Outreach-Prospect-Profile-Overview). Voir [Comment ajouter un champ personnalisé dans Outreach](https://support.outreach.io/hc/en-us/articles/219124908-How-To-Add-a-Custom-Field-in-Outreach) pour plus d’informations. Pour faciliter l’identification, il est recommandé de mettre à jour manuellement les libellés en fonction des noms d’audience correspondants plutôt que de conserver les valeurs par défaut. Par exemple, comme ci-dessous :
 
 [!DNL Outreach] page paramètres pour les prospects qui affichent des champs personnalisés.
 ![Capture d’écran de l’interface utilisateur de diffusion présentant les champs personnalisés de la page des paramètres.](../../assets/catalog/crm/outreach/outreach-custom-fields.png)
 
-[!DNL Outreach] page paramètres pour les prospects affichant des champs personnalisés avec *convivial* libellés correspondant aux noms des segments. Vous pouvez afficher l’état du segment sur la page des prospects par rapport à ces libellés.
+[!DNL Outreach] page paramètres pour les prospects affichant des champs personnalisés avec *convivial* les libellés correspondant aux noms des audiences. Vous pouvez afficher l’état de l’audience sur la page des prospects en fonction de ces libellés.
 ![Capture d’écran de l’interface utilisateur de diffusion montrant les champs personnalisés avec les libellés associés sur la page des paramètres.](../../assets/catalog/crm/outreach/outreach-custom-field-labels.png)
 
 >[!NOTE]
@@ -65,7 +65,7 @@ Notez les éléments ci-dessous avant de vous authentifier à la destination CRM
 
 Le [!DNL Outreach] L’API est limitée à un taux de 10 000 demandes par heure par utilisateur. Si vous atteignez cette limite, vous recevrez une `429` réponse avec le message suivant : `You have exceeded your permitted rate limit of 10,000; please try again at 2017-01-01T00:00:00.`.
 
-Si vous avez reçu ce message, vous devez mettre à jour votre planning d’exportation de segments afin qu’il soit conforme au seuil de taux.
+Si vous avez reçu ce message, vous devez mettre à jour le planning d&#39;export de votre audience afin qu&#39;il soit conforme au seuil de taux.
 
 Reportez-vous à la section [[!DNL Outreach] documentation](https://api.outreach.io/api/v2/docs#rate-limiting) pour plus d’informations.
 
@@ -83,8 +83,8 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 | Élément | Type | Notes |
 ---------|----------|---------|
-| Type d’exportation | **[!UICONTROL Basé sur les profils]** | <ul><li> Vous exportez tous les membres d’un segment, ainsi que les champs de schéma souhaités, *(par exemple : adresse e-mail, numéro de téléphone, nom)*, en fonction de votre mappage de champs.</li><li> Chaque statut du segment dans [!DNL Outreach] est mis à jour avec le statut du segment correspondant de Platform, en fonction de la valeur de l’[!UICONTROL identifiant de mappage] fournie pendant l’étape de [planification des segments](#schedule-segment-export-example).</li></ul> |
-| Fréquence des exportations | **[!UICONTROL Diffusion en continu]** | <ul><li> Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation des segments, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations).</li></ul> |
+| Type d’exportation | **[!UICONTROL Basé sur les profils]** | <ul><li> Vous exportez tous les membres d’un segment, ainsi que les champs de schéma souhaités, *(par exemple : adresse e-mail, numéro de téléphone, nom)*, en fonction de votre mappage de champs.</li><li> Chaque état de segment dans [!DNL Outreach] est mis à jour avec l’état d’audience correspondant de Platform, en fonction de la variable [!UICONTROL ID de mappage] valeur fournie pendant la [planification des audiences](#schedule-segment-export-example) étape .</li></ul> |
+| Fréquence des exportations | **[!UICONTROL Diffusion en continu]** | <ul><li> Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu&#39;un profil est mis à jour en Experience Platform en fonction de l&#39;évaluation de l&#39;audience, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations).</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -131,13 +131,13 @@ Vous pouvez activer les alertes pour recevoir des notifications sur le statut de
 
 Lorsque vous avez terminé de renseigner les détails sur votre connexion de destination, sélectionnez **[!UICONTROL Suivant]**.
 
-## Activer des segments vers cette destination {#activate}
+## Activer les audiences vers cette destination {#activate}
 
 >[!IMPORTANT]
 > 
 > Pour activer les données, vous avez besoin des [autorisations de contrôle d’accès](/help/access-control/home.md#permissions) pour les fonctions **[!UICONTROL Gérer les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]**, et **[!UICONTROL Afficher les segments]**. Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
-Consultez [Activer les profils et les segments vers les destinations d’exportation de segments de diffusion en continu](../../ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des segments d’audience vers cette destination.
+Lecture [Activation des profils et des audiences vers les destinations d’exportation d’audiences par flux](../../ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
 
 ### Considérations sur le mappage et exemple {#mapping-considerations-example}
 
@@ -151,41 +151,40 @@ Pour envoyer correctement vos données d’audience d’Adobe Experience Platf
 
 1. Dans la fenêtre [!UICONTROL Sélectionner le champ cible], sélectionnez le type de champ cible vers lequel vous souhaitez mapper votre champ source.
    * **[!UICONTROL Sélectionner un espace de noms d’identité]** : sélectionnez cette option pour mapper votre champ source vers un espace de noms d’identité de la liste.
-      ![Copie d’écran de l’interface utilisateur de Platform montrant le mapping de ciblage à l’aide de OutreachId.](../../assets/catalog/crm/outreach/target-mapping.png)
+     ![Copie d’écran de l’interface utilisateur de Platform montrant le mapping de ciblage à l’aide de OutreachId.](../../assets/catalog/crm/outreach/target-mapping.png)
 
    * Ajoutez le mappage suivant entre votre schéma de profil XDM et votre instance [!DNL Outreach] :
 |Schéma de profil XDM|[!DNL Outreach] Instance| Obligatoire|
 |—|—|—| |`Oid`|`OutreachId`| Oui |
 
    * **[!UICONTROL Sélectionner des attributs personnalisés]** : sélectionnez cette option pour mapper votre champ source vers un attribut personnalisé que vous définissez dans le champ [!UICONTROL Nom de l’attribut]. Voir [[!DNL Outreach] documentation des prospects](https://api.outreach.io/api/v2/docs#prospect) pour obtenir une liste complète des attributs pris en charge.
-      ![Copie d’écran de l’interface utilisateur de Platform montrant le mappage de Target à l’aide de Nom.](../../assets/catalog/crm/outreach/target-mapping-lastname.png)
+     ![Copie d’écran de l’interface utilisateur de Platform montrant le mappage de Target à l’aide de Nom.](../../assets/catalog/crm/outreach/target-mapping-lastname.png)
 
    * Par exemple, en fonction des valeurs que vous souhaitez mettre à jour, ajoutez le mappage suivant entre votre schéma de profil XDM et votre [!DNL Outreach] instance : |Schéma de profil XDM|[!DNL Outreach] Instance| |—|—| |`person.name.firstName`|`firstName`| |`person.name.lastName`|`lastName`|
 
    * Un exemple d’utilisation de ces mappages est illustré ci-dessous :
-      ![Capture d’écran de l’interface utilisateur de Platform montrant les mappings de ciblage.](../../assets/catalog/crm/outreach/mappings.png)
+     ![Capture d’écran de l’interface utilisateur de Platform montrant les mappings de ciblage.](../../assets/catalog/crm/outreach/mappings.png)
 
-### Planifier l’exportation de segments et exemple {#schedule-segment-export-example}
+### Planification de l’export d’audience et exemple {#schedule-segment-export-example}
 
-* Lors de l’exécution de la variable [Planification de l’exportation de segments](../../ui/activate-segment-streaming-destinations.md) vous devez mapper manuellement les segments Platform à l’attribut de champ personnalisé dans [!DNL Outreach].
+* Lors de l’exécution de la variable [Planification de l’exportation des audiences](../../ui/activate-segment-streaming-destinations.md) vous devez mapper manuellement les audiences Platform à l’attribut de champ personnalisé dans [!DNL Outreach].
 
 * Pour cela, sélectionnez chaque segment, puis saisissez la valeur numérique correspondante qui correspond au *Champ personnalisé `N` Libellé* champ depuis [!DNL Outreach] dans le **[!UICONTROL ID de mappage]** champ .
 
-   >[!IMPORTANT]
-   >
-   > * Valeur numérique *(`N`)* utilisé dans la variable [!UICONTROL ID de mappage] doit correspondre à la clé d’attribut personnalisée suffixée avec la valeur numérique dans [!DNL Outreach]. Exemple : *Champ personnalisé `N` Libellé*.
-   > * Il vous suffit de spécifier la valeur numérique, et non l’ensemble du libellé du champ personnalisé.
-   > * [!DNL Outreach] prend en charge un maximum de 150 champs de libellé personnalisés.
-   > * Voir [[!DNL Outreach] documentation des prospects](https://api.outreach.io/api/v2/docs#prospect) pour plus d’informations.
-
+  >[!IMPORTANT]
+  >
+  > * Valeur numérique *(`N`)* utilisé dans la variable [!UICONTROL ID de mappage] doit correspondre à la clé d’attribut personnalisée suffixée avec la valeur numérique dans [!DNL Outreach]. Exemple : *Champ personnalisé `N` Libellé*.
+  > * Il vous suffit de spécifier la valeur numérique, et non l’ensemble du libellé du champ personnalisé.
+  > * [!DNL Outreach] prend en charge un maximum de 150 champs de libellé personnalisés.
+  > * Voir [[!DNL Outreach] documentation des prospects](https://api.outreach.io/api/v2/docs#prospect) pour plus d’informations.
 
    * Par exemple :
 
-      | [!DNL Outreach] Champ | ID de mappage de plateforme |
-      |---|---|
-      | Champ personnalisé `4` Libellé | `4` |
+     | [!DNL Outreach] Champ | ID de mappage de plateforme |
+     |---|---|
+     | Champ personnalisé `4` Libellé | `4` |
 
-      ![Copie d’écran de l’interface utilisateur de Platform présentant un exemple d’identifiant de mappage lors de l’exportation du segment Planifier .](../../assets/catalog/crm/outreach/schedule-segment-export.png)
+     ![Copie d’écran de l’interface utilisateur de Platform présentant un exemple d’identifiant de mappage lors de la planification de l’exportation de l’audience.](../../assets/catalog/crm/outreach/schedule-segment-export.png)
 
 ## Valider l’exportation des données {#exported-data}
 
@@ -197,15 +196,15 @@ Pour vérifier que vous avez correctement configuré la destination, procédez c
 1. Sélectionnez la destination et vérifiez que le statut est **[!UICONTROL activé]**.
    ![Capture d’écran de l’interface utilisateur de Platform montrant l’exécution du flux de données des destinations pour la destination sélectionnée.](../../assets/catalog/crm/outreach/destination-dataflow-run.png)
 
-1. Basculez vers l’onglet **[!DNL Activation data]**, puis sélectionnez un nom de segment.
+1. Basculez vers le **[!DNL Activation data]** , puis sélectionnez un nom d’audience.
    ![Capture d’écran de l’interface utilisateur de Platform montrant les données d’activation des destinations.](../../assets/catalog/crm/outreach/destinations-activation-data.png)
 
-1. Surveillez le résumé du segment et assurez-vous que le nombre de profils correspond au nombre créé dans le segment.
+1. Surveillez la synthèse de l’audience et assurez-vous que le nombre de profils correspond au nombre créé dans le segment.
    ![Copie d’écran de l’interface utilisateur de Platform présentant le résumé du segment.](../../assets/catalog/crm/outreach/segment.png)
 
-1. Connectez-vous au site web de [!DNL Outreach], puis accédez à [!DNL Apps] > [!DNL Contacts] et vérifiez si les profils du segment ont été ajoutés. Comme vous pouvez le constater, chaque statut de segment dans [!DNL Outreach] a été mis à jour avec le statut du segment correspondant de Platform, en fonction de la valeur de l’[!UICONTROL identifiant de mappage] fournie lors de la [planification des segments](#schedule-segment-export-example).
+1. Connectez-vous au [!DNL Outreach] , puis accédez au [!DNL Apps] > [!DNL Contacts] et vérifiez si les profils de l’audience ont été ajoutés. Vous pouvez voir que chaque état d’audience dans [!DNL Outreach] a été mis à jour avec l’état d’audience correspondant de Platform, en fonction de la variable [!UICONTROL ID de mappage] valeur fournie pendant la [planification des audiences](#schedule-segment-export-example) étape .
 
-![Capture d’écran de l’interface utilisateur de diffusion montrant la page Perspectives de diffusion avec les états de segment mis à jour.](../../assets/catalog/crm/outreach/outreach-prospect.png)
+![Capture d’écran de l’interface utilisateur de diffusion montrant la page Perspectives de diffusion avec les statuts d’audience mis à jour.](../../assets/catalog/crm/outreach/outreach-prospect.png)
 
 ## Utilisation et gouvernance des données {#data-usage-governance}
 
@@ -217,7 +216,7 @@ Lors de la vérification d’une exécution de flux de données, le message d’
 
 ![Copie d’écran de l’interface utilisateur de Platform affichant la mauvaise erreur de requête.](../../assets/catalog/crm/outreach/error.png)
 
-Pour corriger cette erreur, vérifiez que la variable [!UICONTROL ID de mappage] que vous avez fourni dans Platform pour votre [!DNL Outreach] est valide et existe dans [!DNL Outreach].
+Pour corriger cette erreur, vérifiez que la variable [!UICONTROL ID de mappage] que vous avez fourni dans Platform pour votre [!DNL Outreach] audience valide et existe dans [!DNL Outreach].
 
 ## Ressources supplémentaires {#additional-resources}
 

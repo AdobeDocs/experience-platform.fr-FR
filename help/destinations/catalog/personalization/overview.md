@@ -1,12 +1,12 @@
 ---
 keywords: personnalisation;Personnalisation
 title: Présentation des destinations de personnalisation
-description: Les plateformes de personnalisation collectent des données et des informations issues de comportements individuels. Ces plateformes peuvent aider les professionnels du marketing à naviguer dans des données anonymes, en diffusant des offres ou des publicités vers des prospects en fonction de leurs activités antérieures dans le cadre de segments ciblés avec des habitudes similaires.
+description: Les plateformes de personnalisation collectent des données et des informations issues de comportements individuels. Ces plateformes peuvent aider les marketeurs à naviguer dans des données anonymes, en diffusant des offres ou des publicités vers des prospects en fonction d’activités précédentes ou dans le cadre d’audiences ayant des habitudes similaires.
 exl-id: 18a2b170-43d0-4d41-8afc-d2f0f9bfd7bb
-source-git-commit: 0dbd050a9057f491537777ab539bfc687f8c89cb
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '153'
-ht-degree: 100%
+source-wordcount: '151'
+ht-degree: 62%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 100%
 
 ## Présentation {#overview}
 
-Les plateformes de personnalisation collectent des données et des informations issues de comportements individuels. Ces plateformes peuvent aider les professionnels du marketing à naviguer dans des données anonymes, en diffusant des offres ou des publicités vers des prospects en fonction de leurs activités antérieures dans le cadre de segments ciblés avec des habitudes similaires.
+Les plateformes de personnalisation collectent des données et des informations issues de comportements individuels. Ces plateformes peuvent aider les marketeurs à naviguer dans des données anonymes, en diffusant des offres ou des publicités vers des prospects en fonction d’activités précédentes ou dans le cadre d’audiences ayant des habitudes similaires.
 
 ## Destinations de personnalisation prises en charge {#supported-destinations}
 

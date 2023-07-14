@@ -6,10 +6,10 @@ product: experience platform
 type: Documentation
 description: En savoir plus sur l’utilisation par défaut de l’activation des données et les limites de débit.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: 7c1d956e3b6a1314baa13fef823d73d42404516a
+source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
 workflow-type: tm+mt
 source-wordcount: '1177'
-ht-degree: 98%
+ht-degree: 83%
 
 ---
 
@@ -22,7 +22,6 @@ Cette page fournit les limites d’utilisation et de débit par défaut en ce qu
 >* La plupart des clients ne dépassent pas ces limites par défaut. Si vous souhaitez en savoir plus sur les limites personnalisées, contactez votre représentant de l’assistance clientèle.
 >* Les limites décrites dans ce document sont constamment améliorées. Consultez régulièrement les mises à jour.
 >* Selon les limites individuelles en aval, certaines destinations peuvent avoir des mécanismes de sécurisation plus stricts que ceux documentés sur cette page. Veillez également à vérifier la page du [catalogue](/help/destinations/catalog/overview.md) de la destination à laquelle vous vous connectez et activez les données.
-
 
 ## Types de limite {#limit-types}
 
@@ -42,7 +41,7 @@ Les mécanismes de sécurisation ci-dessous s’appliquent généralement à l�
 
 | Mécanisme de sécurisation | Limite | Type de limite | Description |
 | --- | --- | --- | --- |
-| Nombre maximal de segments vers une seule destination | 250 | Soft | Il est recommandé de mapper un maximum de 250 segments vers une seule destination dans un flux de données. <br><br> Si vous devez activer plus de 250 segments vers une destination, vous pouvez effectuer l’une des opérations suivantes : <ul><li> Annuler le mappage des segments que vous ne souhaitez plus activer, ou</li><li>Créer un nouveau flux de données vers la destination souhaitée et mapper les segments vers ce nouveau flux de données.</li></ul> <br> Notez que dans le cas de certaines destinations, vous pouvez être limité à moins de 250 segments mappés vers la destination. Ces destinations sont répertoriées plus bas sur la page, dans leurs sections respectives. |
+| Nombre maximal d’audiences vers une seule destination | 250 | Soft | Il est recommandé de mapper un maximum de 250 audiences à une seule destination dans un flux de données. <br><br> Si vous devez activer plus de 250 audiences vers une destination, vous pouvez effectuer l’une des opérations suivantes : <ul><li> Dissociez les audiences que vous ne souhaitez plus activer, ou</li><li>Créez un nouveau flux de données vers la destination souhaitée et mappez les audiences à ce nouveau flux de données.</li></ul> <br> Notez que dans le cas de certaines destinations, vous pouvez être limité à moins de 250 audiences mappées à la destination. Ces destinations sont répertoriées plus bas sur la page, dans leurs sections respectives. |
 | Nombre maximal de destinations | 100 | Soft | Il est recommandé de créer un maximum de 100 destinations auxquelles vous pouvez connecter et activer des données *par sandbox*. Les [destinations de personnalisation Edge (personnalisation personnalisée)](#edge-destinations-activation) peuvent représenter un maximum de 10 sur les 100 destinations recommandées. |
 | Nombre maximal d’attributs mappés vers une destination | 50 | Soft | Dans le cas de plusieurs destinations et types de destination, vous pouvez sélectionner des attributs de profil et des identités à mapper pour l’exportation. Pour des performances optimales, un maximum de 50 attributs doit être mappé dans un flux de données vers une destination. |
 | Type de données activées vers les destinations | Données de profil, y compris les identités et le mappage d’identités | Hard | Actuellement, il n’est possible d’exporter que des *attributs d’enregistrement de profil* vers les destinations. Pour l’instant, les attributs XDM qui décrivent les données d’événement ne sont pas pris en charge pour l’exportation. |
@@ -67,7 +66,7 @@ Les mécanismes de sécurisation ci-dessous s’appliquent à l’activation par
 | Mécanisme de sécurisation | Limite | Type de limite | Description |
 | --- | --- | --- | --- |
 | Fréquence d’activation | Exportation complète quotidienne ou exportation incrémentielle plus fréquente toutes les 3, 6, 8 ou 12 heures. | Hard | Consultez les sections de documentation [Exporter des fichiers complets](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) et [Exporter des fichiers incrémentiels](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) pour plus d’informations sur les incréments de fréquence pour les exportations par lots. |
-| Nombre maximal de segments pouvant être exportés à une heure donnée | 100 | Soft | La recommandation est d’ajouter un maximum de 100 segments aux flux de données de destination par lot. |
+| Nombre maximal d’audiences pouvant être exportées à une heure donnée | 100 | Soft | Il est recommandé d’ajouter un maximum de 100 audiences aux flux de données de destination des lots. |
 | Nombre maximum de lignes (enregistrements) par fichier à activer | 5 million | Hard | Adobe Experience Platform fractionne automatiquement les fichiers exportés à raison de 5 millions d’enregistrements (lignes) par fichier. Chaque ligne représente un profil. Les noms de fichiers fractionnés sont ajoutés avec un nombre indiquant que le fichier fait partie d’une exportation plus importante, comme : `filename.csv`, `filename_2.csv`, `filename_3.csv`. Pour plus d’informations, reportez-vous à la [section de planification](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) du tutoriel d’activation des destinations par lot. |
 
 {style="table-layout:auto"}
@@ -78,8 +77,8 @@ Les mécanismes de sécurisation ci-dessous s’appliquent à la méthode d’[a
 
 | Mécanisme de sécurisation | Limite | Type de limite | Description |
 | --- | --- | --- | --- |
-| Segments activés par traitement d’activation ad hoc | 80 | Hard | Actuellement, chaque traitement d’activation ad hoc peut activer jusqu’à 80 segments. Si vous tentez d’activer plus de 80 segments par traitement, celui-ci échouera. Ce comportement peut faire l’objet de modifications dans les prochaines versions. |
-| Traitements d’activation ad hoc simultanés par segment | 1 | Hard | N’exécutez pas plusieurs traitements d’activation ad hoc simultanés par segment. |
+| Audiences activées par tâche d’activation ad hoc | 80 | Hard | Actuellement, chaque tâche d’activation ad hoc peut activer jusqu’à 80 audiences. Si vous tentez d’activer plus de 80 audiences par tâche, la tâche échouera. Ce comportement peut faire l’objet de modifications dans les prochaines versions. |
+| Tâches d’activation ad hoc simultanées par audience | 1 | Hard | N’exécutez pas plusieurs tâches d’activation ad hoc simultanées par audience. |
 
 {style="table-layout:auto"}
 
@@ -91,7 +90,7 @@ Les mécanismes de sécurisation ci-dessous s’appliquent à l’activation par
 | --- | --- | --- | --- |
 | Nombre maximal de destinations de [Personnalisation personnalisée](/help/destinations/catalog/personalization/custom-personalization.md) | 10 | Soft | Vous pouvez configurer des flux de données vers 10 destinations de personnalisation personnalisée par sandbox. |
 | Nombre maximal d’attributs mappés à une destination de personnalisation par sandbox | 30 | Hard | Un maximum de 30 attributs peuvent être mappés dans un flux de données à une destination de personnalisation, par sandbox. |
-| Nombre maximal de segments mappés à une seule destination [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) | 50 | Soft | Vous pouvez activer un maximum de 50 segments dans un flux d’activation vers une seule destination Adobe Target. |
+| Nombre maximal d’audiences mappées à une seule [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) destination | 50 | Soft | Vous pouvez activer un maximum de 50 audiences dans un flux d’activation vers une seule destination Adobe Target. |
 
 {style="table-layout:auto"}
 
