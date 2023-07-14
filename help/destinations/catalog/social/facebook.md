@@ -3,10 +3,10 @@ keywords: Connexion facebook;connexion facebook;destinations facebook;facebook;i
 title: Connexion Facebook
 description: Activez les profils de vos campagnes Facebook pour le ciblage, la personnalisation et la suppression des audiences en fonction des courriers électroniques hachés.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 70670f7aec2ab6a5594f5e69672236c7bcc3ce81
+source-git-commit: c1ba465a8a866bd8bdc9a2b294ec5d894db81e11
 workflow-type: tm+mt
-source-wordcount: '1856'
-ht-degree: 35%
+source-wordcount: '1906'
+ht-degree: 29%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 35%
 
 Activez les profils pour votre [!DNL Facebook] des campagnes pour le ciblage, la personnalisation et la suppression des audiences en fonction d’emails hachés.
 
-Vous pouvez utiliser cette destination pour le ciblage des audiences sur l’ensemble des [!DNL Facebook’s] famille d’applications prises en charge par [!DNL Custom Audiences], y compris [!DNL Facebook], [!DNL Instagram], [!DNL Audience Network], et [!DNL Messenger]. La sélection de l’application sur laquelle vous souhaitez exécuter la campagne est indiquée au niveau de l’emplacement dans [!DNL Facebook Ads Manager].
+Vous pouvez utiliser cette destination pour le ciblage des audiences sur l’ensemble des [!DNL Facebook's] famille d’applications prises en charge par [!DNL Custom Audiences], y compris [!DNL Facebook], [!DNL Instagram], [!DNL Audience Network], et [!DNL Messenger]. La sélection de l’application sur laquelle vous souhaitez exécuter la campagne est indiquée au niveau de l’emplacement dans [!DNL Facebook Ads Manager].
 
 ![Destination facebook dans l’interface utilisateur de Adobe Experience Platform](../../assets/catalog/social/facebook/catalog.png)
 
@@ -26,7 +26,7 @@ Pour vous aider à mieux comprendre comment et à quel moment utiliser la variab
 
 ### Cas d’utilisation #1
 
-Un détaillant en ligne souhaite atteindre des clients existants par le biais de plateformes sociales et leur présenter des offres personnalisées basées sur leurs commandes précédentes. Le détaillant en ligne peut ingérer des adresses électroniques de son propre service de gestion de la relation client vers Adobe Experience Platform, créer des segments à partir de ses propres données hors ligne et envoyer ces segments au [!DNL Facebook] plateforme sociale, optimisant leurs dépenses publicitaires.
+Un détaillant en ligne souhaite atteindre des clients existants par le biais de plateformes sociales et leur présenter des offres personnalisées basées sur leurs commandes précédentes. Le détaillant en ligne peut ingérer des adresses électroniques de son propre CRM vers Adobe Experience Platform, créer des audiences à partir de ses propres données hors ligne et envoyer ces audiences au [!DNL Facebook] plateforme sociale, optimisant leurs dépenses publicitaires.
 
 ### Cas d’utilisation #2
 
@@ -34,7 +34,7 @@ Une compagnie aérienne possède différents niveaux de clients (Bronze, Argent 
 
 Pour les cibler sur les réseaux sociaux, ils peuvent intégrer les données client de leur CRM dans Adobe Experience Platform, en utilisant les adresses email comme identifiants.
 
-Ensuite, ils peuvent utiliser leurs données hors ligne, y compris les identifiants d’adhésion et les niveaux de client associés, pour créer de nouveaux segments d’audience qu’ils peuvent cibler par le biais de . [!DNL Facebook] destination.
+Ensuite, ils peuvent utiliser leurs données hors ligne, y compris les identifiants d’adhésion associés et les niveaux de client, pour créer de nouvelles audiences qu’ils peuvent cibler par le biais de la variable [!DNL Facebook] destination.
 
 ## Identités prises en charge {#supported-identities}
 
@@ -48,30 +48,44 @@ Ensuite, ils peuvent utiliser leurs données hors ligne, y compris les identifia
 | email_lc_sha256 | Adresses e-mail hachées avec l’algorithme SHA256 | Adobe Experience Platform prend en charge le texte brut et les adresses e-mail hachées avec SHA256. Suivez les instructions de la section [Exigences de correspondance des identifiants](#id-matching-requirements-id-matching-requirements) et utilisez les espaces de noms appropriés pour le texte brut et les adresses électroniques hachées, respectivement. Lorsque votre champ source contient des attributs non hachés, cochez l’option **[!UICONTROL Appliquer la transformation]** pour que [!DNL Platform] hache automatiquement les données lors de l’activation. |
 | extern_id | ID utilisateur personnalisés | Sélectionnez cette identité cible lorsque votre identité source est un espace de noms personnalisé. |
 
+## Audiences prises en charge {#supported-audiences}
+
+Cette section décrit toutes les audiences que vous pouvez exporter vers cette destination.
+
+Toutes les destinations prennent en charge l’activation des audiences générées par l’Experience Platform [Segmentation Service](../../../segmentation/home.md).
+
+En outre, cette destination prend également en charge l’activation des audiences décrites dans le tableau ci-dessous.
+
+| Type d’audience | Description |
+---------|----------|
+| Chargements personnalisés | Audiences ingérées dans Experience Platform à partir de fichiers CSV. |
+
+{style="table-layout:auto"}
+
 ## Type et fréquence d’exportation {#export-type-frequency}
 
 Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la fréquence d’exportation des destinations.
 
 | Élément | Type | Notes |
 ---------|----------|---------|
-| Type d’exportation | **[!UICONTROL Exportation des segments]** | Vous exportez tous les membres d’un segment (audience) avec les identifiants (nom, numéro de téléphone ou autres) utilisés dans la destination Facebook. |
-| Fréquence des exportations | **[!UICONTROL Diffusion en continu]** | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation des segments, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
+| Type d’exportation | **[!UICONTROL Exportation de l’audience]** | Vous exportez tous les membres d’une audience avec les identifiants (nom, numéro de téléphone ou autres) utilisés dans la destination Facebook. |
+| Fréquence des exportations | **[!UICONTROL Diffusion en continu]** | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu&#39;un profil est mis à jour en Experience Platform en fonction de l&#39;évaluation de l&#39;audience, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
 ## Conditions préalables au compte facebook {#facebook-account-prerequisites}
 
-Avant d’envoyer vos segments ciblés à [!DNL Facebook], assurez-vous de respecter les conditions suivantes :
+Avant d’envoyer vos audiences à [!DNL Facebook], assurez-vous de respecter les conditions suivantes :
 
 * Votre [!DNL Facebook] Le compte utilisateur doit avoir la variable **[!DNL Manage campaigns]** autorisation activée pour le compte publicitaire que vous prévoyez d’utiliser.
 * Le **Adobe Experience Cloud** votre compte professionnel doit être ajouté en tant que partenaire publicitaire dans votre [!DNL Facebook Ad Account]. Utilisez `business ID=206617933627973`. Voir [Ajout de partenaires à votre compte Business Manager](https://www.facebook.com/business/help/1717412048538897) pour plus d’informations, voir la documentation de Facebook .
-   >[!IMPORTANT]
-   >
-   > Lors de la configuration des autorisations pour Adobe Experience Cloud, vous devez activer l’autorisation **Gérer des campagnes**. L’autorisation est requise pour la variable [!DNL Adobe Experience Platform] intégration.
+  >[!IMPORTANT]
+  >
+  > Lors de la configuration des autorisations pour Adobe Experience Cloud, vous devez activer l’autorisation **Gérer des campagnes**. L’autorisation est requise pour la variable [!DNL Adobe Experience Platform] intégration.
 * Lisez et signez les Conditions d’utilisation [!DNL Facebook Custom Audiences]. Pour ce faire, accédez à `https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]`où `accountID` est votre [!DNL Facebook Ad Account ID].
-   >[!IMPORTANT]
-   >
-   >Lors de la signature de la [!DNL Facebook Custom Audiences] Conditions d’utilisation, veillez à utiliser le même compte utilisateur que celui que vous utilisiez pour vous authentifier dans l’API Facebook.
+  >[!IMPORTANT]
+  >
+  >Lors de la signature de la [!DNL Facebook Custom Audiences] Conditions d’utilisation, veillez à utiliser le même compte utilisateur que celui que vous utilisiez pour vous authentifier dans l’API Facebook.
 
 ## Exigences de correspondance des identifiants {#id-matching-requirements}
 
@@ -125,7 +139,7 @@ Avant d’utiliser la variable `Extern_ID` espace de noms auquel envoyer des don
 
 Pour vous connecter à cette destination, procédez comme décrit dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md). Dans le workflow de configuration des destinations, renseignez les champs répertoriés dans les deux sections ci-dessous.
 
-La vidéo ci-dessous présente également les étapes de configuration d’une [!DNL Facebook] destination et activation des segments.
+La vidéo ci-dessous présente également les étapes de configuration d’une [!DNL Facebook] destination et activation des audiences.
 
 >[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
@@ -159,12 +173,12 @@ Vous pouvez activer les alertes pour recevoir des notifications sur le statut de
 
 Lorsque vous avez terminé de renseigner les détails sur votre connexion de destination, sélectionnez **[!UICONTROL Suivant]**.
 
-## Activer des segments vers cette destination {#activate}
+## Activer les audiences vers cette destination {#activate}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_facebook_originofaudience"
 >title="Origine de l&#39;audience"
->abstract="Choisissez la manière dont les données client du segment ont été collectées à l&#39;origine. Les données s&#39;affichent dans Facebook lorsqu&#39;un utilisateur est ciblé par le segment."
+>abstract="Choisissez la manière dont les données client de l’audience ont été collectées à l’origine. Les données s&#39;affichent dans Facebook lorsqu&#39;un utilisateur est ciblé par le segment."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_facebook_originofaudience_customers"
@@ -185,9 +199,9 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 > 
 >Pour activer les données, vous avez besoin des [autorisations de contrôle d’accès](/help/access-control/home.md#permissions) pour les fonctions **[!UICONTROL Gérer les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]**, et **[!UICONTROL Afficher les segments]**. Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
-Voir [Activer les données d’audience vers des destinations d’exportation de segments de diffusion en continu](../../ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des segments d’audience vers cette destination.
+Voir [Activation des données d’audience vers des destinations d’exportation d’audience par flux](../../ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
 
-Dans le **[!UICONTROL Planification du segment]** , vous devez fournir la variable [!UICONTROL Origine de l’audience] lors de l’envoi de segments à [!DNL Facebook Custom Audiences].
+Dans le **[!UICONTROL Planification du segment]** , vous devez fournir la variable [!UICONTROL Origine de l’audience] lors de l’envoi d’audiences à [!DNL Facebook Custom Audiences].
 
 ![Origine facebook de l’audience](../../assets/catalog/social/facebook/facebook-origin-audience.png)
 
@@ -222,11 +236,11 @@ Sélection des champs cibles :
 
 ## Données exportées {#exported-data}
 
-Pour [!DNL Facebook], une activation réussie signifie qu’une [!DNL Facebook] une audience personnalisée serait créée par programmation dans [[!DNL Facebook Ads Manager]](https://www.facebook.com/adsmanager/manage/). L’adhésion au segment dans l’audience est ajoutée ou supprimée selon que les utilisateurs sont qualifiés ou disqualifiés pour les segments activés.
+Pour [!DNL Facebook], une activation réussie signifie qu’une [!DNL Facebook] une audience personnalisée serait créée par programmation dans [[!DNL Facebook Ads Manager]](https://www.facebook.com/adsmanager/manage/). L’appartenance à une audience serait ajoutée et supprimée lorsque les utilisateurs sont qualifiés ou disqualifiés pour les audiences activées.
 
 >[!TIP]
 >
->L’intégration entre Adobe Experience Platform et [!DNL Facebook] prend en charge les renvois d’audience historique. Toutes les qualifications de segments historiques sont envoyées à [!DNL Facebook] lorsque vous activez les segments vers la destination.
+>L’intégration entre Adobe Experience Platform et [!DNL Facebook] prend en charge les renvois d’audience historique. Toutes les qualifications d’audience historique sont envoyées à [!DNL Facebook] lorsque vous activez les audiences vers la destination.
 
 ## Dépannage {#troubleshooting}
 

@@ -3,10 +3,10 @@ keywords: google ad manager;google ad;doubleclick;DoubleClick AdX;DoubleClick;Go
 title: Connexion Google Ad Manager
 description: Google Ad Manager, anciennement appelé DoubleClick for Publishers ou DoubleClick AdX, est une plateforme de diffusion des publicités de Google qui donne aux éditeurs les moyens de gérer l’affichage des publicités sur leurs sites web, par le biais de vidéos et dans des applications mobiles.
 exl-id: e93f1bd5-9d29-43a1-a9a6-8933f9d85150
-source-git-commit: 5174c65970aa8df9bc3f2c8d612c26c72c20e81f
+source-git-commit: 1c9725c108d55aea5d46b086fbe010ab4ba6cf45
 workflow-type: tm+mt
-source-wordcount: '938'
-ht-degree: 84%
+source-wordcount: '992'
+ht-degree: 66%
 
 ---
 
@@ -22,8 +22,8 @@ Notez les détails suivants qui sont spécifiques aux destinations [!DNL Google 
 
 * Les audiences activées sont créées par programmation dans la plateforme [!DNL Google].
 * [!DNL Platform] n’inclut actuellement aucune mesure permettant de valider l’activation réussie. Consultez le nombre d’audiences dans Google pour valider l’intégration et comprendre la taille de ciblage des audiences.
-* Après avoir mappé un segment à une destination [!DNL Google Ad Manager], le nom du segment apparaît immédiatement dans l’interface utilisateur [!DNL Google Ad Manager].
-* La population de segments nécessite 24 à 48 heures pour apparaître dans [!DNL Google Ad Manager]. En outre, les segments doivent avoir une taille d’audience d’au moins 50 profils pour être affichés dans [!DNL Google Ad Manager]. Les segments dont la taille d’audience est inférieure à 50 profils ne seront pas renseignés dans [!DNL Google Ad Manager].
+* Après avoir mappé une audience à une [!DNL Google Ad Manager] destination, le nom de l’audience apparaît immédiatement dans la variable [!DNL Google Ad Manager] de l’interface utilisateur.
+* La population de segments nécessite 24 à 48 heures pour apparaître dans [!DNL Google Ad Manager]. En outre, les audiences doivent avoir une taille d’audience d’au moins 50 profils pour être affichées dans [!DNL Google Ad Manager]. Les audiences dont la taille est inférieure à 50 profils ne seront pas renseignées dans [!DNL Google Ad Manager].
 
 ## Identités prises en charge {#supported-identities}
 
@@ -36,8 +36,22 @@ Notez les détails suivants qui sont spécifiques aux destinations [!DNL Google 
 | UUID AAM | [Adobe Audience Manager [!DNL Unique User ID]](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html?lang=fr), également appelé [!DNL Device ID]. Identifiant numérique à 38 chiffres associé par Audience Manager à chaque appareil avec lequel il interagit. | Google utilise [UUID AAM](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html?lang=fr) pour cibler les utilisateurs en Californie et l’ID de cookie Google pour tous les autres utilisateurs. |
 | ID de cookie [!DNL Google] | ID de cookie [!DNL Google] | [!DNL Google] utilise cet identifiant pour cibler les utilisateurs situés en dehors de la Californie. |
 | RIDA | ID Roku pour la publicité. Cet identifiant identifie de manière unique les appareils Roku. |  |
-| MAID | ID Microsoft Advertising. Cet identifiant identifie de manière unique les périphériques exécutant Windows 10. |  |
+| MAID | ID Microsoft Advertising. Cet identifiant identifie de manière unique les appareils exécutant Windows 10. |  |
 | ID Amazon Fire TV | Cet identifiant identifie de manière unique les téléviseurs Amazon Fire. |  |
+
+{style="table-layout:auto"}
+
+## Audiences prises en charge {#supported-audiences}
+
+Cette section décrit toutes les audiences que vous pouvez exporter vers cette destination.
+
+Toutes les destinations prennent en charge l’activation des audiences générées par l’Experience Platform [Segmentation Service](../../../segmentation/home.md).
+
+En outre, cette destination prend également en charge l’activation des audiences décrites dans le tableau ci-dessous.
+
+| Type d’audience | Description |
+---------|----------|
+| Chargements personnalisés | Audiences ingérées dans Experience Platform à partir de fichiers CSV. |
 
 {style="table-layout:auto"}
 
@@ -47,8 +61,8 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 | Élément | Type | Notes |
 ---------|----------|---------|
-| Type d’exportation | **[!UICONTROL Exportation des segments]** | Vous exportez tous les membres d’un segment (audience) vers la destination Google. |
-| Fréquence des exportations | **[!UICONTROL Diffusion en continu]** | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation des segments, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
+| Type d’exportation | **[!UICONTROL Exportation de l’audience]** | Vous exportez tous les membres d’une audience vers la destination Google. |
+| Fréquence des exportations | **[!UICONTROL Diffusion en continu]** | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu&#39;un profil est mis à jour en Experience Platform en fonction de l&#39;évaluation de l&#39;audience, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -75,8 +89,8 @@ Pour vous connecter à cette destination, procédez comme décrit dans le [tutor
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_gam_appendSegmentID"
->title="Ajouter un identifiant de segment au nom du segment"
->abstract="Sélectionnez cette option pour que le nom du segment dans Google Ad Manager inclue l’identifiant du segment d’Experience Platform, comme suit : `Segment Name (Segment ID)`"
+>title="Ajout d’un ID d’audience au nom de l’audience"
+>abstract="Sélectionnez cette option pour que le nom de l’audience dans Google Ad Manager inclue l’ID d’audience de l’Experience Platform, comme suit : `Audience Name (Audience ID)`"
 
 Pendant la [configuration](../../ui/connect-destination.md) de cette destination, vous devez fournir les informations suivantes :
 
@@ -86,7 +100,7 @@ Pendant la [configuration](../../ui/connect-destination.md) de cette destination
 * **[!UICONTROL Type de compte]** : sélectionnez une option, en fonction de votre compte avec Google :
    * Utiliser `DFP by Google` pour [!DNL DoubleClick] pour les éditeurs
    * Utiliser `AdX buyer` pour [!DNL Google AdX]
-* **[!UICONTROL Ajout d’un identifiant de segment au nom du segment]**: Sélectionnez cette option pour que le nom du segment dans Google Ad Manager inclue l’identifiant du segment de l’Experience Platform, comme ceci : `Segment Name (Segment ID)`.
+* **[!UICONTROL Ajout d’un ID d’audience au nom de l’audience]**: Sélectionnez cette option pour que le nom de l’audience dans Google Ad Manager inclue l’ID d’audience de l’Experience Platform, comme suit : `Audience Name (Audience ID)`.
 
 >[!NOTE]
 >
@@ -98,13 +112,13 @@ Vous pouvez activer les alertes pour recevoir des notifications sur le statut de
 
 Lorsque vous avez terminé de renseigner les détails sur votre connexion de destination, sélectionnez **[!UICONTROL Suivant]**.
 
-## Activer des segments vers cette destination {#activate}
+## Activer les audiences vers cette destination {#activate}
 
 >[!IMPORTANT]
 > 
 >Pour activer les données, vous avez besoin des [autorisations de contrôle d’accès](/help/access-control/home.md#permissions) pour les fonctions **[!UICONTROL Gérer les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]**, et **[!UICONTROL Afficher les segments]**. Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
-Voir [Activer les données d’audience vers des destinations d’exportation de segments de diffusion en continu](../../ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des segments d’audience vers cette destination.
+Voir [Activation des données d’audience vers des destinations d’exportation d’audience par flux](../../ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
 
 ## Données exportées {#exported-data}
 
