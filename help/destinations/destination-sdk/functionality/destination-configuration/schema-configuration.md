@@ -1,10 +1,10 @@
 ---
 description: Découvrez comment configurer les schémas du partenaire pour les destinations créées avec Destination SDK.
 title: Configuration des schémas de partenaire
-source-git-commit: acb7075f49b4194c31371d2de63709eea7821329
+source-git-commit: 20dc7b31f75e88badac17faa542e046598632690
 workflow-type: tm+mt
-source-wordcount: '1715'
-ht-degree: 100%
+source-wordcount: '1892'
+ht-degree: 90%
 
 ---
 
@@ -91,7 +91,10 @@ Pour créer un schéma statique avec des attributs de profil, définissez les at
       "useCustomerSchemaForAttributeMapping":false,
       "profileRequired":true,
       "segmentRequired":true,
-      "identityRequired":true
+      "identityRequired":true,
+      "segmentNamespaceAllowList": ["someNamespace"],
+      "segmentNamespaceDenyList": ["someOtherNamespace"]
+
 }
 ```
 
@@ -102,6 +105,8 @@ Pour créer un schéma statique avec des attributs de profil, définissez les at
 | `profileRequired` | Booléen | Facultatif | Utilisez `true` si les utilisateurs doivent être en mesure de mapper les attributs de profil d’Experience Platform aux attributs personnalisés du côté de votre plateforme de destination. |
 | `segmentRequired` | Booléen | Obligatoire | Ce paramètre est demandé par Destination SDK et doit toujours être défini sur `true`. |
 | `identityRequired` | Booléen | Obligatoire | Définissez-le sur `true` si les utilisateurs doivent être en mesure de mapper les [types d’identité](identity-namespace-configuration.md) d’Experience Platform aux attributs que vous avez définis dans le tableau `profileFields`. |
+| `segmentNamespaceAllowList` | Tableau | Facultatif | Définit des espaces de noms d’audience spécifiques à partir desquels les utilisateurs peuvent mapper des audiences à la destination. Utilisez ce paramètre pour empêcher les utilisateurs de Platform d’exporter des audiences à partir des espaces de noms d’audience que vous définissez dans le tableau . Ce paramètre ne peut pas être utilisé avec `segmentNamespaceDenyList`.<br> <br> Exemple : `"segmentNamespaceAllowList": ["AudienceManager"]` permettra aux utilisateurs de mapper uniquement les audiences de la `AudienceManager` à cette destination. <br> <br> Pour permettre aux utilisateurs d’exporter n’importe quelle audience vers votre destination, vous pouvez ignorer ce paramètre. <br> <br> Si les deux `segmentNamespaceAllowList` et `segmentNamespaceDenyList` ne sont pas présents dans votre configuration, les utilisateurs pourront uniquement exporter des audiences provenant de la [Segmentation Service](../../../../segmentation/home.md). |
+| `segmentNamespaceDenyList` | Tableau | Facultatif | Limite la capacité des utilisateurs à mapper des audiences à la destination, à partir des espaces de noms d’audience définis dans le tableau . Ne peut pas être utilisé avec `segmentNamespaceAllowed`. <br> <br> Exemple : `"segmentNamespaceDenyList": ["AudienceManager"]` empêche les utilisateurs de mapper les audiences à partir de la variable `AudienceManager` à cette destination. <br> <br> Pour permettre aux utilisateurs d’exporter n’importe quelle audience vers votre destination, vous pouvez ignorer ce paramètre. <br> <br> Si les deux `segmentNamespaceAllowed` et `segmentNamespaceDenyList` ne sont pas présents dans votre configuration, les utilisateurs pourront uniquement exporter des audiences provenant de la [Segmentation Service](../../../../segmentation/home.md). <br> <br> Pour autoriser l’exportation de toutes les audiences, quelle que soit leur origine, définissez `"segmentNamespaceDenyList":[]`. |
 
 {style="table-layout:auto"}
 
