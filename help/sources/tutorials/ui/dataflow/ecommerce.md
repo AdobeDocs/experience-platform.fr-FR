@@ -5,10 +5,10 @@ title: Création d’un flux de données à l’aide d’une source de commerce 
 type: Tutorial
 description: Un flux de données est une tâche planifiée qui récupère et ingère des données d’une source vers un jeu de données Platform. Ce tutoriel décrit les étapes à suivre pour créer un flux de données pour une source de commerce électronique à l’aide de l’interface utilisateur de Platform.
 exl-id: ee1382c5-78ac-4765-8883-0a922772bb20
-source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
+source-git-commit: 62ca31bc8499e822e0da25270bd4fe8871520f9b
 workflow-type: tm+mt
-source-wordcount: '1386'
-ht-degree: 50%
+source-wordcount: '1430'
+ht-degree: 47%
 
 ---
 
@@ -112,7 +112,7 @@ Consultez le tableau ci-dessous pour plus d’informations sur les configuration
 | Intervalle | Entier qui définit l’intervalle pour la fréquence sélectionnée. La valeur de l’intervalle doit être un entier non nul et doit être définie sur supérieur ou égal à 15. |
 | Heure de début | Horodatage UTC indiquant quand la toute première ingestion est configurée pour se produire. L’heure de début doit être supérieure ou égale à l’heure UTC actuelle. |
 | Renvoi | Valeur boolean qui détermine les données ingérées initialement. Si le renvoi est activé, tous les fichiers actuels du chemin spécifié seront ingérés lors de la première ingestion planifiée. Si le renvoi est désactivé, seuls les fichiers chargés entre la première exécution de l’ingestion et l’heure de début seront ingérés. Les fichiers chargés avant l’heure de début ne seront pas ingérés. |
-| Chargement des données incrémentielles par | Une option avec un ensemble filtré de champs de schéma source de type, date ou heure. Ce champ sert à différencier les données nouvelles des données existantes. Les données incrémentielles seront ingérées en fonction de la date et de l’heure de la colonne sélectionnée. |
+| Chargement des données incrémentielles par | Une option avec un ensemble filtré de champs de schéma source de type, date ou heure. Le champ que vous sélectionnez **[!UICONTROL Chargement des données incrémentielles par]** doit avoir ses valeurs de date et heure dans le fuseau horaire UTC pour charger correctement les données incrémentielles. Toutes les sources par lots basées sur un tableau sélectionnent des données incrémentielles en comparant une valeur d’horodatage de colonne delta à l’heure UTC de la fenêtre d’exécution de flux correspondante, puis en copiant les données de la source, si de nouvelles données sont trouvées dans la fenêtre d’heure UTC. |
 
 ![renvoyer](../../../images/tutorials/dataflow/table-based/backfill.png)
 
