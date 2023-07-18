@@ -3,9 +3,9 @@ keywords: Experience Platform;profil;profil client en temps réel;dépannage;API
 title: Aperçu de l’exemple d’état (aperçu du profil), point de terminaison de l’API
 description: L’aperçu de l’exemple de point de terminaison d’état de l’API Real-time Customer Profile vous permet de prévisualiser le dernier échantillon réussi de vos données de profil, de répertorier la distribution du profil par jeu de données et par identité, et de générer des rapports montrant le chevauchement des jeux de données, le chevauchement d’identités et les profils désassemblés.
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
 workflow-type: tm+mt
-source-wordcount: '2873'
+source-wordcount: '2868'
 ht-degree: 5%
 
 ---
@@ -18,7 +18,7 @@ Les résultats de cet exemple de tâche peuvent être affichés à l’aide de l
 
 >[!NOTE]
 >
->Des points de terminaison d’estimation et de prévisualisation sont disponibles dans le cadre de l’API Adobe Experience Platform Segmentation Service. Ils vous permettent d’afficher des informations de niveau résumé concernant les définitions de segment afin de vous assurer que vous isolez l’audience attendue. Pour obtenir des instructions détaillées sur l’utilisation de l’aperçu de segment et des points de terminaison d’estimation, consultez la [guide d’aperçu et de point de fin d’estimation](../../segmentation/api/previews-and-estimates.md), partie de la fonction [!DNL Segmentation] Guide de développement d’API.
+>Des points de terminaison d’estimation et de prévisualisation sont disponibles dans le cadre de l’API Adobe Experience Platform Segmentation Service. Ils vous permettent d’afficher des informations de niveau résumé concernant les définitions de segment afin de vous assurer que vous isolez l’audience attendue. Pour obtenir des instructions détaillées sur l’utilisation des points de terminaison de prévisualisation et d’estimation, consultez la [guide d’aperçu et de point de fin d’estimation](../../segmentation/api/previews-and-estimates.md), partie de la fonction [!DNL Segmentation] Guide de développement d’API.
 
 ## Prise en main
 
@@ -592,5 +592,5 @@ Ce rapport fournit les informations suivantes :
 
 ## Étapes suivantes
 
-Maintenant que vous savez comment prévisualiser des données d’exemple dans le magasin de profils et exécuter plusieurs rapports sur les données, vous pouvez également utiliser les points de terminaison d’estimation et de prévisualisation de l’API Segmentation Service pour afficher des informations sommaires sur vos définitions de segment. Ces informations vous permettent de vous assurer que vous isolez l’audience attendue dans votre segment. Pour en savoir plus sur l’utilisation des prévisualisations et des estimations de segments à l’aide de l’API Segmentation, consultez le [guide de prévisualisation et d’estimation des points de fin](../../segmentation/api/previews-and-estimates.md).
+Maintenant que vous savez comment prévisualiser des données d’exemple dans le magasin de profils et exécuter plusieurs rapports sur les données, vous pouvez également utiliser les points de terminaison d’estimation et de prévisualisation de l’API Segmentation Service pour afficher des informations sommaires sur vos définitions de segment. Ces informations vous permettent de vous assurer que vous isolez l’audience attendue. Pour en savoir plus sur l’utilisation des prévisualisations et des estimations à l’aide de l’API Segmentation, consultez le [guide de prévisualisation et d’estimation des points de fin](../../segmentation/api/previews-and-estimates.md).
 

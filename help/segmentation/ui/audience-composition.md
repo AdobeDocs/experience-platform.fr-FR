@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Guide de l’interface utilisateur d’Audiences
 description: Composition d’audience dans l’interface utilisateur de Adobe Experience Platform fournit un espace de travail riche qui vous permet d’interagir avec les éléments de données Profile. L’espace de travail propose des commandes intuitives pour créer et modifier des audiences pour votre organisation.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: 13492b90552d16334030792323956ea18ca928dc
+source-git-commit: b7da6f00426f8cd8e219bf6f8c8275ab3f6942ef
 workflow-type: tm+mt
-source-wordcount: '1289'
-ht-degree: 74%
+source-wordcount: '1737'
+ht-degree: 55%
 
 ---
 
@@ -108,6 +108,64 @@ Une liste d’attributs de profil s’affiche. Sélectionnez le type d’attribu
 
 ![Une liste d’attributs s’affiche.](../images/ui/audience-composition/select-attribute-exclude.png)
 
+## [!UICONTROL Enrichir] {#enrich-block}
+
+>[!IMPORTANT]
+>
+>À ce stade, les attributs d’enrichissement peuvent **only** peut être utilisé dans des scénarios Adobe Journey Optimizer en aval.
+
+Le **[!UICONTROL Enrichir]** le type block vous permet d’enrichir votre audience avec des attributs supplémentaires provenant d’un jeu de données. Vous pouvez utiliser ces attributs dans des cas d’utilisation de personnalisation.
+
+Pour ajouter une **[!UICONTROL Enrichir]** block, sélectionnez la **+** , suivie de **[!UICONTROL Enrichir]**.
+
+![Le [!UICONTROL Enrichir] est sélectionnée.](../images/ui/audience-composition/add-enrich-block.png)
+
+Le **[!UICONTROL Enrichir]** block est ajouté. Lorsque ce bloc est sélectionné, les détails de l&#39;enrichissement apparaissent dans le rail droit. Cela inclut le libellé du bloc et le jeu de données d’enrichissement.
+
+Pour sélectionner le jeu de données avec lequel enrichir l’audience, sélectionnez la variable ![filter](../images/ui/audience-composition/filter-attribute.png) icône .
+
+![Le bouton de filtrage est mis en surbrillance. Si vous sélectionnez cette option, vous accédez au [!UICONTROL Sélectionner un jeu de données] de la fenêtre contextuelle.](../images/ui/audience-composition/enrich-select-dataset.png)
+
+Le **[!UICONTROL Sélectionner un jeu de données]** s’affiche. Sélectionnez le jeu de données à ajouter à des fins d’enrichissement, suivi de **[!UICONTROL Sélectionner]** pour ajouter le jeu de données à des fins d’enrichissement.
+
+![Le jeu de données sélectionné est sélectionné.](../images/ui/audience-composition/enrich-dataset-selected.png)
+
+>[!IMPORTANT]
+>
+>Jeu de données sélectionné **must** répondent aux critères suivants :
+>
+>- Jeu de données **must** soit de type enregistrement.
+>   - Jeu de données **cannot** être de type d’événement, être généré par le système ou être marqué pour Profile.
+>- Jeu de données **must** d’une taille inférieure ou égale à 1 Go.
+
+Le **[!UICONTROL Critères d&#39;enrichissement]** s’affiche maintenant sur le rail de droite. Dans cette section, vous pouvez sélectionner la variable **[!UICONTROL Clé de jointure source]** et le **[!UICONTROL Clé de jointure du jeu de données d’enrichissement]**, qui vous permet de lier le jeu de données d’enrichissement à l’audience que vous essayez de créer.
+
+![Le [!UICONTROL Critères d&#39;enrichissement] est mise en surbrillance.](../images/ui/audience-composition/enrichment-criteria.png)
+
+Pour sélectionner le **[!UICONTROL Clé de jointure source]**, sélectionnez la variable ![filter](../images/ui/audience-composition/filter-attribute.png) icône .
+
+![L’icône de filtre pour la variable [!UICONTROL Clé de jointure source] est mise en surbrillance.](../images/ui/audience-composition/enrich-select-source-join-key.png)
+
+Le **[!UICONTROL Sélection d’un attribut de profil]** s’affiche. Sélectionnez l’attribut de profil à utiliser comme clé de jointure source, suivie de **[!UICONTROL Sélectionner]** pour sélectionner cet attribut comme clé de jointure source.
+
+![L’attribut que vous souhaitez utiliser comme clé de jointure source est mis en surbrillance.](../images/ui/audience-composition/enrich-select-profile-attribute.png)
+
+Pour sélectionner le **[!UICONTROL Clé de jointure du jeu de données d’enrichissement]**, sélectionnez la variable ![filter](../images/ui/audience-composition/filter-attribute.png) icône .
+
+![L’icône de filtre pour la variable [!UICONTROL Clé de jointure du jeu de données d’enrichissement] est mise en surbrillance.](../images/ui/audience-composition/enrich-select-enrichment-dataset-join-key.png)
+
+Le **[!UICONTROL Attributs d’enrichissement]** s’affiche. Sélectionnez l’attribut que vous souhaitez utiliser comme clé de jointure du jeu de données d’enrichissement, suivie de **[!UICONTROL Sélectionner]** pour choisir cet attribut comme clé de jointure de votre jeu de données d’enrichissement.
+
+![L’attribut que vous souhaitez utiliser comme clé de jointure du jeu de données d’enrichissement est mis en surbrillance.](../images/ui/audience-composition/enrich-select-enrichment-dataset-attribute.png)
+
+Maintenant que vous avez ajouté vos deux clés de jointure, la variable **[!UICONTROL Attributs d’enrichissement]** s’affiche. Vous pouvez maintenant ajouter l’attribut avec lequel vous souhaitez améliorer votre audience. Pour ajouter ces attributs, sélectionnez **[!UICONTROL Ajouter un attribut]**.
+
+![Le [!UICONTROL Ajouter un attribut] est mise en surbrillance.](../images/ui/audience-composition/enrich-select-add-attribute.png)
+
+Le **[!UICONTROL Attributs d’enrichissement]** s’affiche. Vous pouvez sélectionner les attributs du jeu de données pour enrichir votre audience, puis cliquer sur **[!UICONTROL Sélectionner]** pour ajouter les attributs à votre audience.
+
+![Les attributs d’enrichissement que vous souhaitez ajouter sont mis en surbrillance.](../images/ui/audience-composition/enrich-add-enrichment-attributes.png)
+
 <!-- ## [!UICONTROL Join] {#join-block}
 
 The **[!UICONTROL Join]** block type allows you to add in external audiences from datasets that have not yet been processed by Adobe Experience Platform.
@@ -161,6 +219,8 @@ Le type de bloc **[!UICONTROL Fractionner]** vous permet de fractionner votre no
 Pour ajouter un bloc **[!UICONTROL Fractionner]**, sélectionnez l’icône **+**, puis **[!UICONTROL Fractionner]**.
 
 ![L’option « Fractionner » est sélectionnée.](../images/ui/audience-composition/add-split-block.png)
+
+Lorsque vous divisez votre audience, vous pouvez diviser par pourcentage ou diviser par attribut.
 
 ### Fractionner par pourcentage {#split-percentage}
 

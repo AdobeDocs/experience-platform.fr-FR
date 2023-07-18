@@ -6,10 +6,10 @@ product: experience platform
 type: Documentation
 description: Adobe Experience Platform utilise un modèle de données hybride fortement dénormalisé qui diffère du modèle de données relationnelles traditionnel. Ce document fournit des limites d’utilisation et de débit par défaut pour vous aider à modéliser vos données de profil afin d’optimiser les performances du système.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 8ee68e5416c28a08dffc358dad70055e9b4cdd28
+source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
 workflow-type: tm+mt
 source-wordcount: '1980'
-ht-degree: 88%
+ht-degree: 78%
 
 ---
 
@@ -30,7 +30,7 @@ Les services Experience Platform suivants sont impliqués dans la modélisation 
 * [[!DNL Real-Time Customer Profile]](home.md) : créez des profils clients unifiés à l’aide de données provenant de plusieurs sources.
 * [Identités](../identity-service/home.md) : associez les identités à partir de sources de données disparates lors de leur ingestion dans Platform.
 * [Schémas](../xdm/home.md) : les schémas du modèle de données d’expérience (XDM) sont le cadre normalisé selon lequel Experience Platform organise les données d’expérience client.
-* [Segments](../segmentation/home.md) : le moteur de segmentation de Platform est utilisé pour créer des segments à partir de vos profils clients en fonction des comportements et des attributs des clients.
+* [Audiences](../segmentation/home.md): Le moteur de segmentation de Platform est utilisé pour créer des audiences à partir de vos profils clients en fonction des comportements et des attributs des clients.
 
 ## Types de limite
 
@@ -108,14 +108,14 @@ Les mécanismes de sécurisation suivants se rapportent à la taille des donnée
 
 ## Mécanismes de sécurisation de la segmentation
 
-Les mécanismes de sécurisation décrits dans cette section font référence au nombre et à la nature des segments qu’une organisation peut créer dans Experience Platform, ainsi qu’au mappage et à l’activation de segments vers des destinations.
+Les barrières de sécurité décrites dans cette section font référence au nombre et à la nature des audiences qu’une organisation peut créer dans un Experience Platform, ainsi qu’au mappage et à l’activation d’audiences vers des destinations.
 
 | Mécanisme de sécurisation | Limite | Type de limite | Description |
 | --- | --- | --- | --- |
-| Segments par sandbox | 4 000 | Soft | Une organisation peut avoir plus de 4 000 segments au total, à condition qu’il y ait moins de 4 000 segments dans chaque sandbox individuel. Toute tentative de création de segments supplémentaires peut affecter les performances du système. |
-| Segments Edge par sandbox | 150 | Soft | Une organisation peut comporter plus de 150 segments Edge au total, à condition qu’il y en ait moins de 150 dans chaque sandbox individuel. Toute tentative de création de segments Edge supplémentaires peut affecter les performances du système. |
-| Segments de flux continu par sandbox | 500 | Soft | Une organisation peut avoir plus de 500 segments de flux continu au total, à condition qu’il y en ait moins de 500 dans chaque sandbox individuel. Toute tentative de création de segments de flux continu supplémentaires peut affecter les performances du système. |
-| Segments par lot par sandbox | 4 000 | Soft | Une organisation peut avoir plus de 4 000 segments par lot au total, à condition qu’il y en ait moins de 4 000 dans chaque sandbox individuel. Toute tentative de création de segments par lot supplémentaires peut affecter les performances du système. |
+| Audiences par environnement de test | 4 000 | Soft | Une organisation peut avoir plus de 4 000 audiences au total, à condition qu’il y ait moins de 4 000 audiences dans chaque environnement de test individuel. Toute tentative de création d’audiences supplémentaires peut affecter les performances du système. |
+| Audiences Edge par environnement de test | 150 | Soft | Une organisation peut avoir plus de 150 audiences de périphérie au total, à condition qu’il y ait moins de 150 audiences de périphérie dans chaque environnement de test individuel. Toute tentative de création d’audiences Edge supplémentaires peut avoir une incidence sur les performances du système. |
+| Audiences par environnement de test en flux continu | 500 | Soft | Une organisation peut avoir plus de 500 audiences en continu au total, à condition qu’il y ait moins de 500 audiences en continu dans chaque environnement de test individuel. Toute tentative de création d’audiences en continu supplémentaires peut affecter les performances du système. |
+| Audiences par environnement de test par lot | 4 000 | Soft | Une organisation peut avoir plus de 4 000 audiences par lots au total, à condition qu’il y ait moins de 4 000 audiences par lots dans chaque environnement de test individuel. Toute tentative de création d’audiences par lots supplémentaires peut affecter les performances du système. |
 
 {style="table-layout:auto"}
 
@@ -137,7 +137,7 @@ Les attributs indépendants du temps, également appelés « données d’enreg
 
 #### Entité de Dimension
 
-Bien que la banque de données de profil conservant les données de profil ne soit pas un magasin relationnel, Profile permet l’intégration à de petites entités de dimension afin de créer des segments d’une manière simplifiée et intuitive. Cette intégration est connue sous le nom de [segmentation d’entités multiples](../segmentation/multi-entity-segmentation.md).
+Bien que la banque de données de profil conservant les données de profil ne soit pas une banque de données relationnelle, Profile permet l’intégration à de petites entités de dimension afin de créer des audiences d’une manière simplifiée et intuitive. Cette intégration est connue sous le nom de [segmentation d’entités multiples](../segmentation/multi-entity-segmentation.md).
 
 Votre entreprise peut également définir des classes XDM pour décrire des éléments autres que des individus, tels que des magasins, des produits ou des propriétés. Ces[!DNL XDM Individual Profile] Les schémas sont appelés &quot;entités de dimension&quot; (également appelées &quot;entités de recherche&quot;) et ne contiennent pas de données de série temporelle. Les schémas qui représentent des entités de dimension sont liés à des entités de profil grâce à l’utilisation de [relations de schéma](../xdm/tutorials/relationship-ui.md).
 

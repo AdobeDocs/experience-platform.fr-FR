@@ -4,10 +4,10 @@ title: Guide de l’interface utilisateur des politiques de fusion
 type: Documentation
 description: Lorsque vous rassemblez des données provenant de plusieurs sources dans Experience Platform, les politiques de fusion sont les règles utilisées par Platform pour déterminer quelle est la priorité des données et quelles données seront combinées pour créer la vue unifiée. Ce guide fournit des instructions détaillées sur l’utilisation des politiques de fusion à l’aide de l’interface utilisateur d’Adobe Experience Platform.
 exl-id: 0489217a-6a53-428c-a531-fd0a0e5bb71f
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
 workflow-type: tm+mt
-source-wordcount: '2321'
-ht-degree: 98%
+source-wordcount: '2320'
+ht-degree: 91%
 
 ---
 
@@ -32,7 +32,7 @@ Ce guide nécessite une compréhension pratique de plusieurs fonctions [!DNL Exp
 
 Dans l’interface utilisateur [!DNL Experience Platform], vous pouvez commencer à utiliser des politiques de fusion en sélectionnant **[!UICONTROL Profils]** dans le volet de navigation de gauche, puis en sélectionnant l’onglet **[!UICONTROL Politiques de fusion]**. Cet onglet comprend une liste de toutes les politiques de fusion existantes pour votre organisation, ainsi que des informations concernant chaque politique de fusion, y compris le nom de la politique, si la politique de fusion est la politique de fusion par défaut ou non et la classe de schéma à laquelle la politique de fusion se rapporte.
 
-![Page d’entrée des politiques de fusion](../images/merge-policies/landing.png)
+![Page de destination des stratégies de fusion](../images/merge-policies/landing.png)
 
 Pour sélectionner les détails visibles ou ajouter des colonnes supplémentaires à l’affichage, sélectionnez **[!UICONTROL Configurer les colonnes]** et cliquez sur le nom d’une colonne pour l’ajouter ou la supprimer de l’affichage.
 
@@ -40,17 +40,17 @@ Pour sélectionner les détails visibles ou ajouter des colonnes supplémentaire
 
 ## Création d’une politique de fusion {#create-a-merge-policy}
 
-Pour créer une politique de fusion, sélectionnez **[!UICONTROL Créer une politique de fusion]** dans l’onglet Politiques de fusion pour lancer le flux de travaux de création d’une politique de fusion.
+Pour créer une stratégie de fusion, sélectionnez **[!UICONTROL Créer une stratégie de fusion]** dans l’onglet Stratégies de fusion pour lancer le workflow de création d’une stratégie de fusion.
 
 ![Fusionner la page de destination des politiques avec le bouton de création en surbrillance.](../images/merge-policies/create-new.png)
 
-Le flux de travaux **[!UICONTROL Nouvelle politique de fusion]** nécessite que vous fournissiez des informations importantes pour votre nouvelle politique de fusion par le biais d’une série d’étapes guidées. Ces étapes sont décrites dans les sections qui suivent.
+Le workflow **[!UICONTROL Nouvelle stratégie de fusion]** nécessite que vous fournissiez des informations importantes pour votre nouvelle stratégie de fusion par le biais d’une série d’étapes guidées. Ces étapes sont décrites dans les sections qui suivent.
 
-![Le flux de travaux de création d’une politique de fusion.](../images/merge-policies/create.png)
+![Le workflow de création d’une stratégie de fusion.](../images/merge-policies/create.png)
 
 ## [!UICONTROL Configuration] {#configure}
 
-La première étape du flux de travaux vous permet de configurer votre politique de fusion en fournissant des informations de base. Ces informations incluent :
+La première étape du workflow vous permet de configurer votre stratégie de fusion en fournissant des informations de base. Ces informations incluent :
 
 * **[!UICONTROL Nom]** : le nom de votre politique de fusion devrait être descriptif, mais concis.
 * **[!UICONTROL Classe de schéma]** : la classe de schéma XDM associée à la politique de fusion. Ceci permet de spécifier la classe de schéma pour laquelle cette politique de fusion est créée. Les organisations peuvent créer plusieurs politiques de fusion par classe de schéma. Actuellement, seule la classe [!UICONTROL Profil individuel XDM] est disponible dans l’interface utilisateur. Vous pouvez prévisualiser le schéma d’union pour la classe de schéma en sélectionnant **[!UICONTROL Afficher le schéma d’union]**. Pour plus d’informations, reportez-vous à la section [Affichage du schéma d’union](#view-union-schema) qui suit.
@@ -58,10 +58,10 @@ La première étape du flux de travaux vous permet de configurer votre politique
    * **[!UICONTROL Aucun]** : ne réalise pas de combinaison d’identités.
    * **[!UICONTROL Graphique privé]** : réalise des combinaisons d’identités basées sur votre graphique d’identités privé.
 * **[!UICONTROL Politique de fusion par défaut]** : un bouton de basculement qui vous permet de sélectionner cette politique de fusion ou non comme politique par défaut pour votre organisation. Si le sélecteur est activé, un avertissement s’affiche vous demandant de confirmer que vous souhaitez modifier la politique de fusion par défaut de votre organisation. Voir la [présentation des politiques de fusion](overview.md) pour en savoir plus sur les politiques de fusion par défaut.
-   ![](../images/merge-policies/create-make-default.png)
-* **[!UICONTROL Politique de fusion Active-On-Edge]** : bouton de basculement qui vous permet de choisir si cette politique de fusion sera Active-On-Edge (active sur le bord). Pour garantir que tous les consommateurs de profils utilisent la même vue sur les bords, les politiques de fusion peuvent être marquées comme Active-on-Edge (actives sur le bord). Pour qu’un segment soit Active-On-Edge (actif sur le bord) (marqué comme un segment de bord), il doit être lié à une politique de fusion marquée comme Active-on-Edge (active sur le bord). Si un segment n’est **pas** lié à une politique de fusion marquée comme Active-On-Edge (active sur le bord), le segment ne sera pas marqué comme Active-On-Edge (actif sur le bord), et sera marqué comme un segment en continu. En outre, chaque environnement de test d’une organisation ne peut avoir que des **one** stratégie de fusion principale en périphérie.
+  ![](../images/merge-policies/create-make-default.png)
+* **[!UICONTROL Politique de fusion Active-On-Edge]** : bouton de basculement qui vous permet de choisir si cette politique de fusion sera Active-On-Edge (active sur le bord). Pour garantir que tous les consommateurs de profils utilisent la même vue sur les bords, les politiques de fusion peuvent être marquées comme Active-on-Edge (actives sur le bord). Pour qu’une audience soit activée en périphérie (indiquée comme audience en périphérie), elle doit être liée à une stratégie de fusion marquée comme principale en périphérie. Si une audience est **not** liée à une stratégie de fusion marquée comme principale sur Edge, l’audience ne sera pas marquée comme principale sur Edge et sera marquée comme une audience en continu. En outre, chaque environnement de test d’une organisation ne peut avoir que des **one** stratégie de fusion principale en périphérie.
 
-Une fois les champs obligatoires renseignés, vous pouvez sélectionner **[!UICONTROL Suivant]** pour poursuivre le flux de travaux.
+Une fois les champs obligatoires renseignés, vous pouvez sélectionner **[!UICONTROL Suivant]** pour poursuivre le workflow.
 
 ![Un écran de configuration complet avec le bouton Suivant en surbrillance.](../images/merge-policies/create-complete.png)
 
@@ -73,7 +73,7 @@ Lors de la création ou de la modification d’une politique de fusion, vous pou
 
 Cela ouvre la boîte de dialogue [!UICONTROL Afficher le schéma d’union], qui affiche tous les schémas, identités et relations associés au schéma d’union. Vous pouvez utiliser la boîte de dialogue pour explorer le schéma d’union comme vous le feriez en accédant à l’onglet [!UICONTROL Schéma d’union] dans la section [!UICONTROL Profils] de l’interface utilisateur de Platform.
 
-Pour plus d’informations sur les schémas d’union, y compris sur la manière d’interagir avec eux dans l’onglet [!UICONTROL Schéma d’union] ou la boîte de dialogue [!UICONTROL Afficher le schéma d’union] du flux de travaux des politiques de fusion, consultez le [guide de l’interface utilisateur du schéma d’union](../ui/union-schema.md).
+Pour plus d’informations sur les schémas d’union, y compris sur la manière d’interagir avec eux dans l’onglet [!UICONTROL Schéma d’union] ou la boîte de dialogue [!UICONTROL Afficher le schéma d’union] du workflow des stratégies de fusion, consultez le [guide de l’interface utilisateur du schéma d’union](../ui/union-schema.md).
 
 ![](../images/merge-policies/view-union-schema-dialog.png)
 
@@ -113,7 +113,7 @@ La sélection d’un jeu de données met également à jour la section **[!UICON
 
 ## [!UICONTROL Sélection de jeux de données ExperienceEvent] {#select-experienceevent-datasets}
 
-L’étape suivante du flux de travaux nécessite la sélection de jeux de données ExperienceEvent. Cet écran est influencé par la méthode de fusion que vous avez sélectionnée à l’écran [[!UICONTROL Sélectionner les jeux de données de profil]](#select-profile-datasets).
+L’étape suivante du workflow nécessite la sélection de jeux de données ExperienceEvent. Cet écran est influencé par la méthode de fusion que vous avez sélectionnée à l’écran [[!UICONTROL Sélectionner les jeux de données de profil]](#select-profile-datasets).
 
 ### Horodatage ordonné {#timestamp-ordered-experienceevent}
 
@@ -143,11 +143,11 @@ Tout comme pour la sélection de jeux de données de profil, la sélection d’u
 
 ## [!UICONTROL Révision] {#review}
 
-La dernière étape du flux de travaux consiste à examiner votre politique de fusion. L’écran **[!UICONTROL Réviser]** affiche des informations sur votre politique de fusion, y compris la méthode de combinaison d’identifiants sélectionnée, la méthode de fusion sélectionnée et les jeux de données inclus. (Pour afficher tous les jeux de données de profil ou ExperienceEvent inclus, sélectionnez le nombre de jeux de données à développer dans la liste déroulante.)
+La dernière étape du workflow consiste à examiner votre stratégie de fusion. L’écran **[!UICONTROL Réviser]** affiche des informations sur votre politique de fusion, y compris la méthode de combinaison d’identifiants sélectionnée, la méthode de fusion sélectionnée et les jeux de données inclus. (Pour afficher tous les jeux de données de profil ou ExperienceEvent inclus, sélectionnez le nombre de jeux de données à développer dans la liste déroulante.)
 
 Le tableau **[!UICONTROL Prévisualiser les données]** qui présente des exemples d’enregistrements de profil créés à l’aide de votre politique de fusion est également inclus dans l’écran de révision. Cela vous permet de prévisualiser à quoi ressemble un profil client avant d’enregistrer votre politique de fusion.
 
-Veillez à examiner soigneusement la configuration de votre politique de fusion et à prévisualiser les données avant de sélectionner **[!UICONTROL Terminer]** pour terminer le flux de création.
+Veillez à examiner soigneusement la configuration de votre stratégie de fusion et à prévisualiser les données avant de sélectionner **[!UICONTROL Terminer]** pour terminer le workflow de création.
 
 ### Horodatage ordonné {#timestamp-ordered-review}
 
@@ -159,7 +159,7 @@ Le tableau **[!UICONTROL Prévisualiser les données]** affiche des exemples d�
 
 ### Priorité du jeu de données {#dataset-precedence-review}
 
-Si vous avez sélectionné **[!UICONTROL Priorité du jeu de données]** comme méthode de fusion pour votre politique de fusion, les listes des jeux de données de profil et ExperienceEvent incluent uniquement les jeux de données de profil et ExperienceEvent que vous avez sélectionnés lors du flux de création, respectivement. L’ordre des jeux de données de profil doit correspondre à la priorité que vous avez spécifiée lors de la création. Dans le cas contraire, utilisez le bouton [!UICONTROL Précédent] pour revenir aux étapes précédentes du flux de travaux et modifier la priorité.
+Si vous avez sélectionné **[!UICONTROL Priorité du jeu de données]** comme méthode de fusion pour votre stratégie de fusion, les listes des jeux de données de profil et ExperienceEvent incluent uniquement les jeux de données de profil et ExperienceEvent que vous avez sélectionnés lors du workflow de création, respectivement. L’ordre des jeux de données de profil doit correspondre à la priorité que vous avez spécifiée lors de la création. Dans le cas contraire, utilisez le bouton [!UICONTROL Précédent] pour revenir aux étapes précédentes du workflow et modifier la priorité.
 
 Le tableau **[!UICONTROL Prévisualiser les données]** affiche des exemples d’enregistrements de profil à l’aide des jeux de données sélectionnés. Cela vous permet de prévisualiser à quoi ressemble un profil client avant d’enregistrer votre politique de fusion.
 
@@ -175,11 +175,11 @@ Une fois le workflow de création dʼune politique de fusion terminé, vous ête
 
 Dans lʼonglet [!UICONTROL Politiques de fusion], vous pouvez modifier une politique de fusion existante créée pour la classe [!DNL XDM Individual Profile] en sélectionnant le **[!UICONTROL Nom de la politique]** pour la politique de fusion que vous souhaitez modifier.
 
-![Page d’entrée des politiques de fusion](../images/merge-policies/select-edit.png)
+![Page de destination des stratégies de fusion](../images/merge-policies/select-edit.png)
 
 Lorsque lʼécran **[!UICONTROL Modifier la politique de fusion]** apparaît, vous pouvez apporter des modifications au nom et à la méthode de [!UICONTROL combinaison dʼidentités] ainsi que déterminer si cette politique est ou non la politique de fusion par défaut pour votre organisation.
 
-Sélectionnez **[!UICONTROL Suivant]** pour poursuivre le flux de politique de fusion afin de mettre à jour la méthode de fusion et les jeux de données inclus dans la politique de fusion.
+Sélectionnez **[!UICONTROL Suivant]** pour poursuivre le workflow de stratégie de fusion afin de mettre à jour la méthode de fusion et les jeux de données inclus dans la stratégie de fusion.
 
 ![](../images/merge-policies/edit-screen.png)
 
@@ -193,7 +193,7 @@ Une fois les modifications nécessaires effectuées, examinez votre politique de
 
 ## Violations de la politique de gouvernance des données
 
-Lors de la création ou de la mise à jour d’une stratégie de fusion, une vérification est effectuée pour déterminer si la politique de fusion enfreint l’une des stratégies en matière d’utilisation des données définies par votre organisation. Les politiques d’utilisation des données font partie de la gouvernance des données d’Adobe Experience Platform et sont des règles qui décrivent les types d’action marketing que vous êtes autorisé à réaliser ou dont la réalisation est limitée sur certaines données de [!DNL Platform]. Par exemple, si vous avez utilisé une stratégie de fusion pour créer un segment activé dans une destination tierce et que votre organisation dispose dʼune stratégie dʼutilisation des données empêchant lʼexportation de données spécifiques à des tiers, vous recevrez une notification **[!UICONTROL Violation de la politique de gouvernance des données détectée]** lorsque vous tenterez dʼenregistrer votre stratégie de fusion.
+Lors de la création ou de la mise à jour d’une stratégie de fusion, une vérification est effectuée pour déterminer si la politique de fusion enfreint l’une des stratégies en matière d’utilisation des données définies par votre organisation. Les politiques d’utilisation des données font partie de la gouvernance des données d’Adobe Experience Platform et sont des règles qui décrivent les types d’action marketing que vous êtes autorisé à réaliser ou dont la réalisation est limitée sur certaines données de [!DNL Platform]. Par exemple, si une stratégie de fusion a été utilisée pour créer une audience qui est activée vers une destination tierce et que votre organisation dispose d’une stratégie d’utilisation des données empêchant l’exportation de données spécifiques vers des tiers, vous recevrez une **[!UICONTROL Violation de la politique de gouvernance des données détectée]** lorsque vous tentez d’enregistrer votre stratégie de fusion.
 
 Cette notification inclut une liste des politiques d’utilisation des données ayant été enfreintes et vous permet de consulter les détails de la violation en sélectionnant une politique depuis la liste. Si vous avez sélectionné une politique ayant fait lʼobjet dʼune infraction, lʼonglet **[!UICONTROL Liaison des données]** fournit un motif de violation et les activations concernées, chacun fournissant plus de détails sur la manière dont la politique dʼutilisation des données a été enfreinte.
 
@@ -203,4 +203,4 @@ Pour en savoir plus sur la manière dont la gouvernance des données est réalis
 
 ## Étapes suivantes
 
-Maintenant que vous avez créé et configuré des politiques de fusion pour votre organisation, vous pouvez les utiliser pour ajuster lʼaffichage des profils clients dans Platform et pour créer des segments dʼaudience à partir de vos données de profil. Consultez la [présentation de la segmentation](../../segmentation/home.md) pour plus dʼinformations sur la manière de créer et de travailler avec les segments à lʼaide de lʼinterface utilisateur et des API [!DNL Experience Platform].
+Maintenant que vous avez créé et configuré des stratégies de fusion pour votre organisation, vous pouvez les utiliser pour ajuster l’affichage des profils clients dans Platform et pour créer des audiences à partir de vos données de profil. Voir [présentation de la segmentation](../../segmentation/home.md) pour plus d’informations sur la création et l’utilisation d’audiences à l’aide du [!DNL Experience Platform] Interface utilisateur et API.

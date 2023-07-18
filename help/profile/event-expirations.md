@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Expirations des événements d’expérience
 description: Ce document fournit des instructions générales sur la configuration des délais d’expiration pour des événements d’expérience individuels dans un jeu de données Adobe Experience Platform.
 exl-id: a91f2cd2-3a5d-42e6-81c3-0ec5bc644f5f
-source-git-commit: bb2d0075b234ec750046e1f28cac07a58a9d7e72
+source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
 workflow-type: tm+mt
 source-wordcount: '849'
-ht-degree: 90%
+ht-degree: 83%
 
 ---
 
@@ -40,7 +40,7 @@ Par exemple, si vous avez appliqué une valeur d’expiration de 30 jours le 15 
 
 ## Effets sur la segmentation
 
-Vous devez vous assurer que les intervalles de recherche en amont de vos segments se trouvent dans les limites d’expiration de leurs jeux de données dépendants afin de conserver des résultats précis. Par exemple, si vous appliquez une valeur d’expiration de 30 jours et que vous disposez d’un segment qui tente d’afficher les données jusqu’à 45 jours plus tôt, l’audience associée sera probablement inexacte.
+Vous devez vous assurer que les intervalles de recherche en amont pour vos audiences se situent dans les limites d’expiration de leurs jeux de données dépendants afin de conserver des résultats précis. Par exemple, si vous appliquez une valeur d’expiration de 30 jours et que vous disposez d’une audience qui tente d’afficher les données d’il y a jusqu’à 45 jours, l’audience obtenue sera probablement inexacte.
 
 Si possible, vous devez essayer de conserver la même valeur d’expiration d’événement d’expérience pour tous les jeux de données, afin d’éviter l’impact de différentes valeurs d’expiration sur différents jeux de données dans votre logique de segmentation.
 

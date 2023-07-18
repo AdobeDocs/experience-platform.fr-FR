@@ -1,9 +1,9 @@
 ---
 title: Questions fréquentes sur les audiences
 description: Découvrez les réponses aux questions fréquentes sur les audiences.
-source-git-commit: 562af647e21e8f9b9af495849f085e10f258952a
+source-git-commit: 4dbd20dd3ac596052a3390eb6d3731fac7095c0d
 workflow-type: tm+mt
-source-wordcount: '984'
+source-wordcount: '996'
 ht-degree: 0%
 
 ---
@@ -74,8 +74,9 @@ Le placement du composant de composition suit une structure rigide comme suit :
 
 1. You **always** commencer par le [!UICONTROL Audience] pour sélectionner votre activité de départ. Vous pouvez avoir un maximum de **one** [!UICONTROL Audience] block.
 2. Vous pouvez éventuellement ajouter une [!UICONTROL Exclure] qui suit le bloc [!UICONTROL Audience] block.
-3. Vous pouvez éventuellement ajouter une [!UICONTROL Classement] ou [!UICONTROL Partage] block. Vous pouvez **only** avoir l&#39;un de ces blocs par composition ;
-4. You **always** se terminer par un [!UICONTROL Enregistrer] pour sauvegarder votre audience.
+3. Vous pouvez éventuellement ajouter une [!UICONTROL Enrichir] qui suit le bloc [!UICONTROL Exclure] block.
+4. Vous pouvez éventuellement ajouter une [!UICONTROL Classement] ou [!UICONTROL Partage] block. Vous pouvez **only** avoir l&#39;un de ces blocs par composition ;
+5. You **always** se terminer par un [!UICONTROL Enregistrer] pour sauvegarder votre audience.
 
 Pour plus d’informations sur l’utilisation de la composition de l’audience, veuillez lire la section [Guide de l’interface utilisateur de composition d’audience](./ui/audience-composition.md).
 
@@ -91,7 +92,7 @@ Pour plus d&#39;informations sur le bloc Partage, veuillez lire le [Guide de l�
 
 ## Puis-je utiliser tous les types de segmentation dans le workflow Composition de l’audience ?
 
-Oui, tous les types de segmentation (segmentation par lots, segmentation par flux et segmentation par périphérie) sont pris en charge dans le workflow Composition de l’audience . Toutefois, comme les compositions ne sont actuellement exécutées qu’une seule fois par jour, même si des audiences évaluées en périphérie ou en flux continu sont incluses, le résultat sera basé sur l’appartenance à l’audience au moment de l’exécution de la composition.
+Oui, tous les types de segmentation ([segmentation par lots, segmentation par flux et segmentation par périphérie](./home.md#evaluate-segments)) sont pris en charge dans le workflow Composition de l’audience . Toutefois, comme les compositions ne sont actuellement exécutées qu’une seule fois par jour, même si des audiences évaluées en périphérie ou en flux continu sont incluses, le résultat sera basé sur l’appartenance à l’audience au moment de l’exécution de la composition.
 
 ## Comment puis-je confirmer l’appartenance d’un profil à une audience ?
 

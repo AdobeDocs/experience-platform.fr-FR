@@ -3,10 +3,10 @@ keywords: Experience Platform;profil;profil client en temps réel;dépannage;AP
 title: Vue d’ensemble du profil client en temps réel
 description: Le profil client en temps réel fusionne des données provenant de diverses sources et permet d’accéder à ces données sous la forme de profils clients individuels et d’événements de séries temporelles associés. Cette fonctionnalité permet aux spécialistes marketing d’offrir à leur audience des expériences coordonnées, cohérentes et pertinentes sur plusieurs canaux.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: 8f61840ad60b7d24c980b218b6f742485f5ebfdd
+source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
 workflow-type: tm+mt
-source-wordcount: '1991'
-ht-degree: 100%
+source-wordcount: '1990'
+ht-degree: 95%
 
 ---
 
@@ -26,7 +26,7 @@ Le [!DNL Real-Time Customer Profile] fusionne les données de divers systèmes d
 
 ### Composition de l’entité de profil
 
-Un profil client en temps réel est composé d’une entité principale, appelée l’**entité principale**, et de diverses entités annexes. Dans le contexte d’Experience Platform, l’entité principale est généralement une **entité de profil**, qui est composée des caractéristiques, des comportements et des appartenances à un segment d’une personne individuelle. D’autres entités permettent au moteur de segmentation d’utiliser des données en dehors de l’entité principale du profil, et incluent les éléments suivants :
+Un profil client en temps réel est composé d’une entité principale, appelée l’**entité principale**, et de diverses entités annexes. Dans le contexte de l’Experience Platform, l’entité Principale est généralement une **entité de profil**, qui est composé des caractéristiques, des comportements et des appartenances à l’audience d’une personne individuelle. D’autres entités permettent au moteur de segmentation d’utiliser des données en dehors de l’entité principale du profil, et incluent les éléments suivants :
 
 - **Entité dimensionnelle** : l’entité utilisée pour simplifier le processus de modélisation des données pour les informations partagées entre les événements ou les enregistrements de profil. On parle également d’entité de recherche ou d’entité de classification.
 - **Entité B2B** : entités qui décrivent la relation du profil avec les comptes et opportunités business-to-business.
@@ -70,11 +70,11 @@ Un profil est la représentation d’un sujet, d’une organisation ou d’un in
 
 ### Événements de série temporelle {#time-series-events}
 
-Les données de série temporelle fournissent un instantané du système au moment où une action a été entreprise, directement ou indirectement, par un sujet, ainsi que des données détaillant l’événement lui-même. Représentées par la classe de schéma standard XDM ExperienceEvent, les données de série temporelle peuvent décrire des événements tels que l’ajout d’articles à un panier, l’utilisation de liens et la lecture de vidéos. Vous pouvez utiliser les données de série temporelle pour établir des règles de segmentation et consulter les événements individuellement dans le cadre d’un profil.
+Les données de série temporelle fournissent un instantané du système au moment où une action a été entreprise, directement ou indirectement, par un objet, ainsi que des données détaillant l’événement lui-même. Représentées par la classe de schéma standard XDM ExperienceEvent, les données de série temporelle peuvent décrire des événements tels que l’ajout d’articles à un panier, l’utilisation de liens et la lecture de vidéos. Vous pouvez utiliser les données de série temporelle pour établir des règles de segmentation et consulter les événements individuellement dans le cadre d’un profil.
 
 ### Identités
 
-Toutes les entreprises souhaitent s’adresser à leurs clients de manière personnalisée. Cependant, l’un des défis que représente la proposition d’expériences numériques pertinentes aux clients consiste à trouver un moyen de relier leurs données déconnectées. Celles-ci sont souvent réparties sur différents canaux numériques tels que les tablettes, les téléphones mobiles et les ordinateurs portables. Le [!DNL Identity Service] vous permet de rassembler l’image complète de votre client en liant les identités de plusieurs canaux et en créant un graphique d’identités pour chaque client. Consultez la [présentation d’Identity Service](../identity-service/home.md) pour en savoir plus.
+Toutes les entreprises souhaitent s’adresser à leurs clients de manière personnalisée. Cependant, l’un des défis que représente la proposition d’expériences digitales pertinentes aux clients consiste à trouver un moyen de relier leurs données déconnectées. Celles-ci sont souvent réparties sur différents canaux numériques tels que les tablettes, les téléphones mobiles et les ordinateurs portables. Le [!DNL Identity Service] vous permet de rassembler l’image complète de votre client en liant les identités de plusieurs canaux et en créant un graphique d’identités pour chaque client. Consultez la [présentation d’Identity Service](../identity-service/home.md) pour en savoir plus.
 
 ### Politiques de fusion
 
@@ -98,13 +98,13 @@ Pour en savoir plus sur les schémas d’union, notamment sur la façon d’y ac
 
 Computed attributes are functions used to aggregate event-level data into profile-level attributes. These functions are automatically computed so that they can be used across segmentation, activation, and personalization. These computations help you to easily answer questions related to things like lifetime purchase value, time between purchases, or number of application opens, without requiring you to manually perform complex calculations each time the information is needed. For more information on computed attributes, including understanding the role computed attributes play within Adobe Experience Platform, please begin by reading the [computed attributes overview](computed-attributes/overview.md). -->
 
-## Profils et segments
+## Profils et audiences
 
-Le [!DNL Segmentation Service] d’Adobe Experience Platform fournit les audiences nécessaires à l’optimisation de l’expérience de chaque client. Lorsqu’un segment ciblé est créé, l’identifiant de ce segment est ajouté à la liste des adhésions au segment pour tous les profils admissibles. Les règles de segmentation sont créées et appliquées aux données du [!DNL Real-Time Customer Profile] à l’aide des API RESTful et de l’interface utilisateur du créateur de segments. Pour en savoir plus sur la segmentation, commencez pas lire la [Présentation de Segmentation Service](../segmentation/home.md).
+Le [!DNL Segmentation Service] d’Adobe Experience Platform fournit les audiences nécessaires à l’optimisation de l’expérience de chaque client. Lorsqu’une audience est créée, l’identifiant de cette audience est ajouté à la liste des appartenances à l’audience pour tous les profils admissibles. Les règles de segmentation sont créées et appliquées aux données du [!DNL Real-Time Customer Profile] à l’aide des API RESTful et de l’interface utilisateur du créateur de segments. Pour en savoir plus sur la segmentation, commencez pas lire la [Présentation de Segmentation Service](../segmentation/home.md).
 
 ### Ingestion par flux et segmentation par flux
 
-L’entrée en temps réel est possible grâce à un processus appelé ingestion par flux. À mesure que les données de profil et de série temporelle sont ingérées, le [!DNL Real-Time Customer Profile] décide automatiquement d’inclure ou d’exclure ces données des segments par le biais d’un processus continu appelé la segmentation par flux, avant de les fusionner avec les données existantes et de mettre à jour la vue d’union. Par conséquent, vous pouvez instantanément effectuer des calculs et prendre des décisions pour offrir aux clients de meilleures expériences personnalisées lorsqu’ils interagissent avec votre marque. Lors de l’ingestion, les données sont également soumises à un processus de validation pour s’assurer qu’elles sont correctement ingérées et conformes au schéma sur lequel le jeu de données est basé. Pour plus d’informations sur la validation effectuée lors de l’ingestion, commencez par lire la [présentation de la qualité d’ingestion des données](../ingestion/quality/overview.md).
+L’entrée en temps réel est possible grâce à un processus appelé ingestion par flux. Lorsque les données de profil et de série temporelle sont ingérées, [!DNL Real-Time Customer Profile] décide automatiquement d’inclure ou d’exclure ces données des audiences par le biais d’un processus continu appelé segmentation par flux, avant de les fusionner avec les données existantes et de mettre à jour la vue d’union. Par conséquent, vous pouvez instantanément effectuer des calculs et prendre des décisions pour offrir aux clients de meilleures expériences personnalisées lorsqu’ils interagissent avec votre marque. Lors de l’ingestion, les données sont également soumises à un processus de validation pour s’assurer qu’elles sont correctement ingérées et conformes au schéma sur lequel le jeu de données est basé. Pour plus d’informations sur la validation effectuée lors de l’ingestion, commencez par lire la [présentation de la qualité d’ingestion des données](../ingestion/quality/overview.md).
 
 ## Projections de périphérie
 
@@ -120,7 +120,7 @@ Vous pouvez configurer [!DNL Platform] pour envoyer les données d’enregistrem
 
 ### Mesures d’ingestion de profil
 
-Observability Insights vous permet d’afficher les mesures clés dans Adobe Experience Platform. Outre les statistiques d’utilisation relatives à [!DNL Experience Platform] et les indicateurs de performances pour diverses fonctionnalités de [!DNL Platform], des mesures spécifiques liées au profil vous permettent d’obtenir des éclairages sur les taux de requêtes entrantes, les taux d’ingestion réussie, les tailles d’enregistrements ingérés, etc. Pour en savoir plus, consultez tout d’abord la [présentation de l’API Observability Insights](../observability/api/overview.md) et pour obtenir une liste complète des mesures du profil client en temps réel, consultez la documentation sur les [mesures disponibles](../observability/api/metrics.md#available-metrics).
+Observability Insights vous permet d’afficher les mesures clés dans Adobe Experience Platform. Outre les statistiques d’utilisation relatives à [!DNL Experience Platform] et les indicateurs de performances pour diverses fonctionnalités de [!DNL Platform], des mesures spécifiques liées au profil vous permettent d’obtenir des informations sur les taux de requêtes entrantes, les taux d’ingestion réussie, les tailles d’enregistrements ingérés, etc. Pour en savoir plus, consultez tout d’abord la [présentation de l’API Observability Insights](../observability/api/overview.md) et pour obtenir une liste complète des mesures du profil client en temps réel, consultez la documentation sur les [mesures disponibles](../observability/api/metrics.md#available-metrics).
 
 ## Mise à jour des données du magasin de profils
 

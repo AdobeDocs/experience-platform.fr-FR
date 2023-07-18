@@ -4,10 +4,10 @@ title: Guide de dépannage du profil client en temps réel
 type: Documentation
 description: Ce document fournit des réponses aux questions fréquentes sur le profil client en temps réel, ainsi qu’un guide de dépannage pour les erreurs courantes lors de l’utilisation des données de profil à l’aide d’Adobe Experience Platform.
 exl-id: 0b340025-093b-41e4-8053-969a8e80e889
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
 workflow-type: tm+mt
 source-wordcount: '1007'
-ht-degree: 100%
+ht-degree: 94%
 
 ---
 
@@ -47,13 +47,13 @@ Il existe plusieurs façon d’afficher les données de Profile, selon que vous 
 
 Si vous connaissez les identifiants des entités de profil auxquelles vous souhaitez accéder, vous pouvez utiliser le Point d’entrée `/entities` (Accès au profil) dans l’API Profile pour rechercher ces entités. Consultez la section sur les [entités](./api/entities.md) dans le guide de développement pour plus d’informations.
 
-Vous pouvez également utiliser l’API Adobe Experience Platform Segmentation Service pour accéder aux profils individuels des clients qui se qualifient pour l’appartenance à un segment. Pour plus d’informations, consultez la [présentation de Segmentation Service](../segmentation/home.md).
+Vous pouvez également utiliser l’API Adobe Experience Platform Segmentation Service pour accéder aux profils individuels des clients qui sont qualifiés pour une appartenance à une audience. Pour plus d’informations, consultez la [présentation de Segmentation Service](../segmentation/home.md).
 
 #### Utilisation de l’interface utilisateur
 
 Dans l’interface utilisateur d’Experience Platform, l’onglet **[!UICONTROL Parcourir]** dans l’espace de travail **[!UICONTROL Profils]** vous permet d’afficher le nombre total de profils et de rechercher des profils individuels en fonction de leur valeur d’identité. Pour plus d’informations, consultez le [guide d’utilisation de Profile](./ui/user-guide.md).
 
-Vous pouvez également afficher la liste de vos segments sous l’onglet **[!UICONTROL Parcourir]** dans l’espace de travail **[!UICONTROL Segments]**. Après avoir sélectionné un segment, un exemple de profils qualifiés pour ce segment s’affiche. Vous pouvez ensuite sélectionner l’un des profils répertoriés pour en afficher les détails. Pour plus d’informations, consultez la [Présentation de l’interface utilisateur Segmentation](../segmentation/ui/overview.md),
+Vous pouvez également afficher une liste de vos audiences sous le **[!UICONTROL Parcourir]** dans le **[!UICONTROL Audiences]** workspace. Après avoir sélectionné une audience, un exemple de profils qualifiés pour cette audience s’affiche. Vous pouvez ensuite sélectionner l’un des profils répertoriés pour en afficher les détails. Pour plus d’informations, consultez la [Présentation de l’interface utilisateur Segmentation](../segmentation/ui/overview.md),
 
 ## Codes d’erreur
 

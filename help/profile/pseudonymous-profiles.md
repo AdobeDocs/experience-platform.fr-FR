@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Expiration des données de profils pseudonymes
 description: Ce document fournit des conseils généraux sur la configuration de l’expiration des données de profils pseudonymes dans Adobe Experience Platform.
 exl-id: e8d31718-0b50-44b5-a15b-17668a063a9c
-source-git-commit: 207cddae6b632866d564729de49d28fc5c29ef7f
-workflow-type: ht
+source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
+workflow-type: tm+mt
 source-wordcount: '923'
-ht-degree: 100%
+ht-degree: 98%
 
 ---
 
@@ -22,7 +22,7 @@ Un profil est pris en compte pour l’expiration des données pseudonymes s’il
 - Les espaces de noms d’identité du profil assemblé correspondent à l’espace de noms d’identité pseudonyme ou inconnu indiqué par le client ou la cliente.
    - Par exemple, si l’espace de noms d’identité du profil est `ECID`, `GAID` ou `AAID`. Le profil assemblé ne comporte aucun identifiant provenant d’un autre espace de noms d’identité. Dans cet exemple, un profil assemblé ne possède **pas** d’identité d’e-mail ou de gestion de la relation client.
 - Aucune activité n’a eu lieu au cours d’une période définie par l’utilisateur ou l’utilisatrice. L’activité répertorie les événements d’expérience ingérés ou les mises à jour des attributs de profil initiées par le client ou la cliente.
-   - Il s’agit, par exemple, d’un nouvel événement de page vue ou d’une mise à jour d’un attribut de page. Cependant, la mise à jour de l’appartenance à un segment non initiée par l’utilisateur ou l’utilisatrice n’est **pas** considérée comme une activité. Actuellement, pour calculer l’expiration des données, le suivi au niveau du profil est basé sur l’heure de l’événement pour les événements d’expérience et sur l’heure d’ingestion pour les attributs de profil.
+   - Il s’agit, par exemple, d’un nouvel événement de page vue ou d’une mise à jour d’un attribut de page. Cependant, une mise à jour de l’appartenance à une audience non initiée par l’utilisateur est **not** considérée comme une activité. Actuellement, pour calculer l’expiration des données, le suivi au niveau du profil est basé sur l’heure de l’événement pour les événements d’expérience et sur l’heure d’ingestion pour les attributs de profil.
 
 ## Accéder à {#access}
 

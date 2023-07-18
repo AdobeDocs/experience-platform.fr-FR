@@ -4,10 +4,10 @@ title: Présentation des politiques de fusion
 type: Documentation
 description: Adobe Experience Platform permet de rassembler des données issues de plusieurs sources et de les combiner pour obtenir une vue complète de chacun de vos clients. Les politiques de fusion sont les règles utilisées par Platform pour déterminer la priorité des données et les données qui seront combinées pour créer cette vue unifiée.
 exl-id: a8ef527a-cfee-4129-9973-e8a212a3ad1e
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
 workflow-type: tm+mt
 source-wordcount: '1265'
-ht-degree: 95%
+ht-degree: 81%
 
 ---
 
@@ -60,14 +60,14 @@ Lorsque des enregistrements de profil sont intégrés dans Experience Platform,
 
 La combinaison d’identités ([!UICONTROL combinaison d’identités]) est le processus d’identification de fragments de données et de leur combinaison afin de former un enregistrement de profil complet. Pour illustrer les différents comportements de combinaison, imaginez un seul client qui interagit avec une marque à l’aide de deux adresses électroniques différentes.
 
-* **[!UICONTROL Aucun] :** lorsque cette option est sélectionnée, les identifiants ne sont pas regroupés. Lorsqu’il y a segmentation, les identités pouvant appartenir à la même personne ne sont pas regroupées et la segmentation ne prend en compte que les attributs associés à chaque identifiant individuel lorsque vous déterminez si un client est admissible pour l’adhésion au segment. Cela peut se traduire par l’existence de plusieurs profils pour un seul client et par la qualification de chaque profil pour différents segments, entraînant l’envoi de plusieurs messages marketing à un même client.
-* **[!UICONTROL Graphique privé] :** lorsque le graphique privé est sélectionné, les différentes identités liées à la même personne sont regroupées. Le client dispose ainsi d’un profil unique, ce qui permet à la segmentation de prendre en compte plusieurs attributs provenant de plusieurs identités associées lors de la détermination de la qualification du segment. Dans ce scénario, le client est susceptible d’avoir un seul profil, de se qualifier pour un segment en fonction de la combinaison d’attributs entre les identités et de ne recevoir qu’un seul message marketing.
+* **[!UICONTROL Aucun] :** lorsque cette option est sélectionnée, les identifiants ne sont pas regroupés. Lorsque la segmentation se produit, les identités qui peuvent appartenir à la même personne ne sont pas regroupées et la segmentation ne prend en compte que les attributs associés à chaque ID individuel lorsque vous déterminez si un client est admissible pour l’appartenance à l’audience. Cela peut se traduire par l’existence de plusieurs profils pour un seul client et par la qualification de chaque profil pour différentes audiences, ce qui entraîne l’envoi de plusieurs messages marketing à un même client.
+* **[!UICONTROL Graphique privé] :** lorsque le graphique privé est sélectionné, les différentes identités liées à la même personne sont regroupées. Le client dispose ainsi d’un profil unique, ce qui permet à la segmentation de prendre en compte plusieurs attributs provenant de plusieurs identités associées lors de la détermination de la qualification du segment. Dans ce scénario, le client est susceptible d’avoir un seul profil, de se qualifier pour une audience en fonction de la combinaison d’attributs entre les identités et de ne recevoir qu’un seul message marketing.
 
-Pour en savoir plus sur les identités et leur rôle dans la génération de profils et de segments, commencez par lire la [présentation d’Identity Service](../../identity-service/home.md).
+Pour en savoir plus sur les identités et leur rôle dans la génération de profils et d’audiences, veuillez commencer par lire la [Présentation d’Identity Service](../../identity-service/home.md).
 
 ## Politique de fusion par défaut {#default-merge-policy}
 
-Une organisation peut créer une politique de fusion par défaut à utiliser lors de la fusion de fragments de profils. Cela permet aux utilisateurs de sélectionner facilement la politique par défaut lors de l’exécution d’actions dans Experience Platform, telles que l’affichage des profils client ou la création de segments. Dans la plupart des cas, à moins qu’une autre politique de fusion ne soit spécifiée, la politique de fusion par défaut est utilisée.
+Une organisation peut créer une politique de fusion par défaut à utiliser lors de la fusion de fragments de profils. Cela permet aux utilisateurs de sélectionner facilement la stratégie par défaut lors de l’exécution d’actions dans Experience Platform, telles que l’affichage des profils client ou la création d’audiences. Dans la plupart des cas, à moins qu’une autre politique de fusion ne soit spécifiée, la politique de fusion par défaut est utilisée.
 
 Chaque organisation peut créer plusieurs politiques de fusion liées à une seule classe de schéma XDM. Toutefois, une seule politique de fusion par défaut peut être choisie pour chaque classe. Par exemple, votre organisation peut avoir une politique de fusion par défaut associée à la classe [!DNL XDM Individual Profile] et une politique de fusion par défaut différente pour une classe Inventaire de produits personnalisée.
 
@@ -75,7 +75,7 @@ Si vous créez une politique de fusion et la définissez comme politique par dé
 
 >[!WARNING]
 >
->Le nombre de profils et les segments associés à une politique de fusion par défaut existante peuvent être affectés. Tout segment auquel une politique de fusion par défaut est appliquée est mis à jour vers la nouvelle politique de fusion par défaut.
+>Le nombre de profils et les audiences avec une stratégie de fusion par défaut associée peuvent être affectés. Toute audience à laquelle une stratégie de fusion par défaut est appliquée sera mise à jour vers la nouvelle stratégie de fusion par défaut.
 
 ## Étapes suivantes
 

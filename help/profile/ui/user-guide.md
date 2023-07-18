@@ -3,7 +3,7 @@ keywords: Experience Platform;profil;profil client en temps réel;dépannage;API
 title: Guide de l’interface utilisateur de Real-Time Customer Profile
 description: Real-Time Customer Profile offre une vue d’ensemble de chaque client, en combinant des données issues de plusieurs canaux, notamment des données en ligne, hors ligne, CRM et tierces. Ce document sert de guide pour interagir avec Real-time Customer Profile dans l’interface utilisateur de Adobe Experience Platform.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: 98854811e57c621a1c8de9146231f54c96e37a5d
+source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
 workflow-type: tm+mt
 source-wordcount: '2008'
 ht-degree: 7%
@@ -134,7 +134,7 @@ Les champs par défaut affichés peuvent également être modifiés au niveau de
 
 ![L’onglet Détails est mis en surbrillance. Les détails du profil s’affichent.](../images/user-guide/profile-detail.png)
 
-Vous pouvez afficher des informations supplémentaires relatives au profil client individuel en sélectionnant un autre des onglets disponibles. Ces onglets comprennent des attributs, des événements et l’onglet d’adhésion au segment qui affiche les segments pour lesquels le profil est actuellement qualifié.
+Vous pouvez afficher des informations supplémentaires relatives au profil client individuel en sélectionnant un autre des onglets disponibles. Ces onglets comprennent les attributs, les événements et l’onglet abonnement à l’audience qui affiche les audiences pour lesquelles le profil est actuellement qualifié.
 
 ### Onglet Attributs
 
@@ -152,13 +152,13 @@ Les événements peuvent également être affichés sous la forme d’un objet J
 
 ![L’onglet Événements est mis en surbrillance. Les événements de profil s’affichent.](../images/user-guide/events.png)
 
-### Onglet abonnement au segment
+### Onglet abonnement à l’audience
 
-Le **[!UICONTROL abonnement au segment]** affiche une liste avec le nom et la description des segments auxquels appartient actuellement le profil client individuel. Cette liste est mise à jour automatiquement lorsque le profil est admissible ou expire à partir des segments. Le nombre total de segments pour lesquels le profil est actuellement qualifié s’affiche sur le côté droit de l’onglet.
+Le **[!UICONTROL abonnement à l’audience]** affiche une liste avec le nom et la description des audiences auxquelles appartient actuellement le profil client individuel. Cette liste est mise à jour automatiquement lorsque le profil est admissible ou expire à partir des audiences. Le nombre total d&#39;audiences pour lesquelles le profil est actuellement qualifié s&#39;affiche sur le côté droit de l&#39;onglet.
 
 Pour plus d’informations sur la segmentation dans Experience Platform, reportez-vous à la section [Documentation d’Adobe Experience Platform Segmentation Service](../../segmentation/home.md).
 
-![L’onglet Appartenance au segment est mis en surbrillance. Les détails de l’adhésion au segment de profil s’affichent.](../images/user-guide/segment-membership.png)
+![L’onglet Appartenance à une audience est mis en surbrillance. Les détails de l’appartenance à l’audience du profil s’affichent.](../images/user-guide/segment-membership.png)
 
 ## Politiques de fusion
 

@@ -4,10 +4,10 @@ title: Point de terminaison de l’API de stratégies de fusion
 type: Documentation
 description: Adobe Experience Platform permet de rassembler des données issues de plusieurs sources et de les combiner pour obtenir une vue complète de chacun de vos clients. Lorsque vous rassemblez ces données, les stratégies de fusion sont les règles utilisées par Platform pour déterminer la priorité des données et les données qui seront combinées pour créer une vue unifiée.
 exl-id: fb49977d-d5ca-4de9-b185-a5ac1d504970
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
 workflow-type: tm+mt
-source-wordcount: '2468'
-ht-degree: 68%
+source-wordcount: '2467'
+ht-degree: 65%
 
 ---
 
@@ -35,7 +35,7 @@ Bien que chaque organisation puisse avoir plusieurs stratégies de fusion par cl
 >
 >Lorsque vous définissez une nouvelle stratégie de fusion comme stratégie par défaut, toute stratégie de fusion précédemment définie comme stratégie par défaut ne sera plus utilisée comme stratégie par défaut.
 
-Pour garantir que tous les consommateurs de profils utilisent la même vue sur les bords, les politiques de fusion peuvent être marquées comme Active-on-Edge (actives sur le bord). Pour qu’un segment soit Active-On-Edge (actif sur le bord) (marqué comme un segment de bord), il doit être lié à une politique de fusion marquée comme Active-on-Edge (active sur le bord). Si un segment n’est **pas** lié à une politique de fusion marquée comme Active-On-Edge (active sur le bord), le segment ne sera pas marqué comme Active-On-Edge (actif sur le bord), et sera marqué comme un segment en continu.
+Pour garantir que tous les consommateurs de profils utilisent la même vue sur les bords, les politiques de fusion peuvent être marquées comme Active-on-Edge (actives sur le bord). Pour qu’une audience soit activée en périphérie (indiquée comme audience en périphérie), elle doit être liée à une stratégie de fusion marquée comme principale en périphérie. Si une audience est **not** liée à une stratégie de fusion marquée comme principale sur Edge, l’audience ne sera pas marquée comme principale sur Edge et sera marquée comme une audience en continu.
 
 En outre, chaque organisation ne peut avoir que **one** stratégie de fusion principale en périphérie. Si une stratégie de fusion est principale sur Edge, elle peut être utilisée pour d’autres systèmes sur Edge, tels que Edge Profile, Edge Segmentation et Destinations on Edge.
 
@@ -761,6 +761,6 @@ Une requête de suppression réussie renvoie un état HTTP 200 (OK) et un corps
 
 ## Étapes suivantes
 
-Maintenant que vous savez comment créer et configurer des stratégies de fusion pour votre organisation, vous pouvez les utiliser pour ajuster l’affichage des profils client dans Platform et pour créer des segments d’audience à partir de votre organisation. [!DNL Real-Time Customer Profile] data.
+Maintenant que vous savez comment créer et configurer des stratégies de fusion pour votre organisation, vous pouvez les utiliser pour ajuster l’affichage des profils client dans Platform et pour créer des audiences à partir de votre [!DNL Real-Time Customer Profile] data.
 
-Consultez l’[aide d’Adobe Experience Platform Segmentation Service](../../segmentation/home.md) pour commencer à définir et à utiliser des segments.
+Veuillez consulter la [Documentation de Adobe Experience Platform Segmentation Service](../../segmentation/home.md) pour commencer à définir et à utiliser les audiences.
