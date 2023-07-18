@@ -4,9 +4,9 @@ title: Présentation de l’activation
 type: Tutorial
 description: Découvrez comment activer les audiences que vous avez dans Adobe Experience Platform vers différents types de destinations.
 exl-id: 987af401-2d93-45b4-a8f9-191e6058e4da
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 771801b52b7df7029e1c6e7496dcfb563463d06e
 workflow-type: tm+mt
-source-wordcount: '323'
+source-wordcount: '325'
 ht-degree: 26%
 
 ---
@@ -49,9 +49,9 @@ Suivez les étapes ci-dessous pour activer les données vers vos destinations à
    * [Activer les données d’audience vers des destinations d’exportation de profils de diffusion en continu](activate-streaming-profile-destinations.md)
    * [Activer les données d’audience vers des destinations d’exportation de profils par lots](activate-batch-profile-destinations.md)
 
-### Activation des audiences à partir de la page des détails de l’audience {#activate-segment-details}
+### Activation des audiences à partir de la page des détails de l’audience {#activate-audience-details}
 
-Vous pouvez activer les audiences vers les destinations à partir de la page des détails de l’audience. Voir [Détails du segment](../../segmentation/ui/overview.md#segment-details) pour plus d’informations.
+Vous pouvez activer les audiences vers les destinations à partir de la page des détails de l’audience. Voir [Détails de l’audience](../../segmentation/ui/overview.md#audience-details) pour plus d’informations.
 
 Selon la destination sélectionnée, suivez les étapes décrites dans les articles ci-dessous pour terminer le workflow d’activation :
 
