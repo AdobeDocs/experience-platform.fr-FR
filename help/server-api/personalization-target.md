@@ -2,7 +2,7 @@
 title: Personnalisation via Adobe Target
 description: Découvrez comment utiliser l’API serveur pour diffuser et générer des expériences personnalisées créées dans Adobe Target.
 exl-id: c9e2f7ef-5022-4dc4-82b4-ecc210f27270
-source-git-commit: 091d5440d7346861b7c882fa0a17bd03d528e438
+source-git-commit: 47cd73e45ac618a8a84aa3c47b91d5e2a107e7f4
 workflow-type: tm+mt
 source-wordcount: '620'
 ht-degree: 3%
@@ -11,7 +11,7 @@ ht-degree: 3%
 
 # Personnalisation via Adobe Target
 
-## Présentation {#overview}
+## Vue d’ensemble {#overview}
 
 L’API Edge Network Server peut fournir et générer des expériences personnalisées créées dans Adobe Target, avec l’aide de la fonction [Compositeur d’expérience d’après les formulaires](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=en).
 
@@ -51,9 +51,9 @@ Compte tenu de l’exemple XDM suivant :
 
 Lors de la création d’audiences dans Target, les valeurs suivantes sont disponibles en tant que paramètres personnalisés :
 
-* `xdm.marketing.campaignGroup`
-* `xdm.marketing.campaignName`
-* `xdm.marketing.trackingCode`
+* `marketing.campaignGroup`
+* `marketing.campaignName`
+* `marketing.trackingCode`
 
 ## Mises à jour des profils Target {#profile-update}
 
