@@ -5,7 +5,7 @@ title: Traitement des demandes d’accès à des informations personnelles dans 
 type: Documentation
 description: Adobe Experience Platform Privacy Service traite les demandes des clients en matière dʼaccès, de retrait du consentement à la vente ou de suppression de leurs données personnelles conformément aux nombreuses réglementations en matière de confidentialité. Ce document couvre les concepts essentiels liés au traitement des demandes d’accès à des informations personnelles pour Real-time Customer Profile.
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
-source-git-commit: 42e59ba1c7b1980d6633ced264673afcf8d80810
+source-git-commit: fb2686eb44bbf7581120f40b241bead0e61baee9
 workflow-type: tm+mt
 source-wordcount: '1612'
 ht-degree: 26%
@@ -189,7 +189,7 @@ Lorsquʼ[!DNL Experience Platform] reçoit une requête DELETE de la part de [!D
 
 >[!IMPORTANT]
 >
->Les demandes de suppression de données personnelles ne sont pas instantanées et peuvent varier en fonction des services impliqués et d’autres facteurs d’impact tels que la localisation géographique. La période d’achèvement des tâches de confidentialité peut varier de 15 à 45 jours, mais n’est pas garantie.
+>Les demandes de suppression de données personnelles ne sont pas instantanées et peuvent varier en fonction des services impliqués et d’autres facteurs d’impact tels que la localisation géographique. La période d’achèvement des tâches de confidentialité peut être comprise entre 15 et 45 jours, mais n’est pas garantie.
 
 Selon que vous avez également inclus ou non Identity Service (`identity`) et le lac de données (`aepDataLake`) en tant que produits dans votre demande d’accès à des informations personnelles pour Profile (`ProfileService`), différents ensembles de données liés au profil sont supprimés du système à des moments potentiellement différents :
 
@@ -213,7 +213,8 @@ Pour supprimer le profil et toutes les associations d’identité pour un client
 ### Limites des stratégies de fusion {#merge-policy-limitations}
 
 Privacy Service ne peut traiter que [!DNL Profile] données utilisant une stratégie de fusion qui n’effectue pas de combinaison d’identités. Si vous utilisez l’interface utilisateur pour confirmer que vos demandes d’accès à des informations personnelles sont en cours de traitement, assurez-vous que vous utilisez une stratégie avec **[!DNL None]** comme son [!UICONTROL Combinaison d’identifiants] type. En d’autres termes, vous ne pouvez pas utiliser une stratégie de fusion dans laquelle [!UICONTROL Combinaison d’identifiants] est défini sur [!UICONTROL Graphique privé].
->![Le groupement d’identifiants de la stratégie de fusion est défini sur Aucun.](./images/privacy/no-id-stitch.png)
+>>
+![Le groupement d’identifiants de la stratégie de fusion est défini sur Aucun.](./images/privacy/no-id-stitch.png)
 >
 ## Étapes suivantes
 
