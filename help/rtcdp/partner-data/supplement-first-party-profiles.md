@@ -3,10 +3,10 @@ title: (Version bêta) Complémentation de profils propriétaires avec des attri
 description: Découvrez comment compléter les profils propriétaires avec des attributs de partenaires de données de confiance pour améliorer vos bases de données, obtenir de nouvelles informations sur votre base de clients et optimiser l’audience.
 hide: true
 hidefromtoc: true
-badgeBeta: label="Beta" type="informative" before-title="true"
-source-git-commit: 019ebe0c1cf11a7fb30dced1e10b511bab9b5100
+badgeBeta: label="Version bêta" type="informative" before-title="true"
+source-git-commit: 486e1390dfa0602bef15d196d4a1a5befdc9ff23
 workflow-type: tm+mt
-source-wordcount: '1082'
+source-wordcount: '1083'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 Complétez les profils propriétaires avec les attributs des partenaires de données de confiance afin d’améliorer votre base de données et d’obtenir de nouvelles informations sur votre base de clients et d’optimiser l’audience.
 
-![Enrichissez les profils avec des attributs fournis par les partenaires en utilisant un cas d’utilisation d’aperçu visuel de haut niveau.](/help/rtcdp/assets/partner-data/enrichment-use-case-overview.png)
+![Enrichissez les profils avec des attributs fournis par les partenaires en utilisant un cas d’utilisation d’aperçu visuel de haut niveau.](/help/rtcdp/assets/partner-data/enrichment/enrichment-use-case-overview.png)
 
 ## Prérequis et planification {#prerequisites-and-planning}
 
@@ -36,7 +36,7 @@ Lorsque vous envisagez de compléter vos propres profils propriétaires avec des
 
 ## Comment réaliser le cas d’utilisation : présentation de haut niveau {#achieve-the-use-case-high-level}
 
-![Enrichissez les profils avec des attributs fournis par les partenaires en utilisant un cas d’utilisation d’aperçu visuel de haut niveau.](/help/rtcdp/assets/partner-data/enrichment-use-case-steps.png)
+![Enrichissez les profils avec des attributs fournis par les partenaires en utilisant un cas d’utilisation d’aperçu visuel de haut niveau.](/help/rtcdp/assets/partner-data/enrichment/enrichment-use-case-steps.png)
 
 1. Comme **client**, vous autorisez les attributs à partir de la variable **partenaire de données**.
 2. Comme **client**, vous étendez vos données de profil et votre modèle de gouvernance pour les adapter **partenaire** Attributs fournis par .
