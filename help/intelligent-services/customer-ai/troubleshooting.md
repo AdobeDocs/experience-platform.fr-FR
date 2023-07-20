@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;prise en main;ia dédiée aux clients;rubriques populaires;entrée ia dédiée aux clients;sortie ia dédiée aux clients;dépannage ia dédiée aux clients;erreurs ia dédiée aux clients
-solution: Experience Platform, Real-time Customer Data Platform
+solution: Experience Platform, Real-Time Customer Data Platform
 feature: Customer AI
 title: Dépannage des erreurs de l’IA dédiée aux clients
 description: Trouvez des réponses aux erreurs courantes de l’IA dédiée aux clients.
 type: Documentation
 exl-id: 37ff4e85-da92-41ca-afd4-b7f3555ebd43
-source-git-commit: 3bc750b5e1cf47cbca6b037d099936c80c926cf8
+source-git-commit: 07a110f6d293abff38804b939014e28f308e3b30
 workflow-type: tm+mt
 source-wordcount: '529'
 ht-degree: 100%

@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;insights;service client;rubriques les plus consultées;informations sur les clients
-solution: Experience Platform, Real-time Customer Data Platform
+solution: Experience Platform, Real-Time Customer Data Platform
 feature: Customer AI
 title: Découvrez les informations sur Customer AI
-description: Ce document sert de guide pour interagir avec les insights d’instance de service dans l’interface utilisateur d’Intelligent Services Customer AI.
+description: Ce document sert de guide pour interagir avec les informations d’instance de service dans l’interface utilisateur d’Intelligent Services Customer AI.
 exl-id: 8aaae963-4029-471e-be9b-814147a5f160
-source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
+source-git-commit: 07a110f6d293abff38804b939014e28f308e3b30
 workflow-type: tm+mt
 source-wordcount: '2079'
 ht-degree: 31%
@@ -16,11 +16,11 @@ ht-degree: 31%
 
 Customer AI fait partie d’Intelligent Services et permet aux spécialistes du marketing de tirer parti d’Adobe Sensei pour anticiper les prochaines actions de vos clients. Customer AI est utilisé pour générer des scores de propension personnalisés tels que les taux d’attrition et de conversion de profils individuels à grande échelle. Cette opération s’effectue sans qu’il soit nécessaire de transformer les besoins professionnels en un problème de machine learning, en choisissant un algorithme, une formation ou un déploiement.
 
-Ce document sert de guide pour interagir avec les insights d’instance de service dans l’interface utilisateur d’Intelligent Services Customer AI.
+Ce document sert de guide pour interagir avec les informations d’instance de service dans l’interface utilisateur d’Intelligent Services Customer AI.
 
 ## Prise en main
 
-Pour utiliser les insights relatifs à Customer AI, vous devez avoir à disposition une instance de service dont l’état d’exécution est réussi. Pour créer une nouvelle instance de service, rendez-vous sur [Configuration d’une instance Customer AI](./configure.md). Si vous avez récemment créé une instance de service et qu’elle est toujours en cours de formation et de notation, comptez 24 heures pour qu’elle se termine.
+Pour utiliser les informations relatives à Customer AI, vous devez avoir à disposition une instance de service dont l’état d’exécution est réussi. Pour créer une nouvelle instance de service, rendez-vous sur [Configuration d’une instance Customer AI](./configure.md). Si vous avez récemment créé une instance de service et qu’elle est toujours en cours de formation et de notation, comptez 24 heures pour qu’elle se termine.
 
 ## Présentation de l’instance de service
 
@@ -32,7 +32,7 @@ La page de service de Customer AI s’affiche. Cette page répertorie les instan
 
 >[!NOTE]
 >
->Seules les instances de service ayant réussi des exécutions de notation ont des insights.
+>Seules les instances de service ayant réussi des exécutions de notation ont des informations.
 
 ![Création d’une instance](../images/insights/dashboard.png)
 
@@ -71,7 +71,7 @@ Pour afficher un aperçu des détails de l’instance de service dans le tableau
 
 ### Afficher la liste déroulante d’informations supplémentaires
 
-La deuxième façon d’afficher des détails supplémentaires sur une instance de service se trouve sur la page des insights. Sélectionner **[!UICONTROL Afficher plus]** dans le coin supérieur droit pour remplir une liste déroulante. Les détails sont répertoriés, tels que la définition du score, la date de création, le type de propension et les jeux de données utilisés. Pour plus d’informations sur l’une des propriétés répertoriées, consultez la page [Configuration d’une instance Customer AI](./configure.md).
+La deuxième façon d’afficher des détails supplémentaires sur une instance de service se trouve sur la page des informations. Sélectionner **[!UICONTROL Afficher plus]** dans le coin supérieur droit pour remplir une liste déroulante. Les détails sont répertoriés, tels que la définition du score, la date de création, le type de propension et les jeux de données utilisés. Pour plus d’informations sur l’une des propriétés répertoriées, consultez la page [Configuration d’une instance Customer AI](./configure.md).
 
 ![afficher plus](../images/insights/landing-show-more.png)
 
@@ -225,7 +225,7 @@ L’AUC reflète la force de la relation entre le classement par score et l’oc
 
 ## Étapes suivantes
 
-Ce document décrit les insights fournis par une instance de service Customer AI. Vous pouvez maintenant passer au tutoriel sur le [téléchargement de scores dans Customer AI](./download-scores.md) ou consulter les autres guides proposés sur [Adobe Intelligent Services](../../home.md).
+Ce document décrit les informations fournies par une instance de service Customer AI. Vous pouvez maintenant passer au tutoriel sur le [téléchargement de scores dans Customer AI](./download-scores.md) ou consulter les autres guides proposés sur [Adobe Intelligent Services](../../home.md).
 
 ## Ressources supplémentaires
 
