@@ -7,7 +7,7 @@ exl-id: de5e07bc-2c44-416e-99db-7607059117cb
 source-git-commit: f4f4deda02c96e567cbd0815783f192d1c54096c
 workflow-type: tm+mt
 source-wordcount: '2098'
-ht-degree: 48%
+ht-degree: 50%
 
 ---
 
@@ -95,7 +95,7 @@ Pour en savoir plus sur chacun des widgets standards disponibles, sélectionnez 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_segments_audiencesize"
 >title="Taille de l’audience"
->abstract="Ce widget affiche le nombre total de profils fusionnés au sein de l’audience sélectionnée. Ce nombre dépend de la politique de fusion appliquée à vos données et est correct au moment de l’instantané le plus récent."
+>abstract="Ce widget affiche le nombre total de profils fusionnés dans l’audience sélectionnée. Ce nombre dépend de la politique de fusion appliquée à vos données et est correct au moment de l’instantané le plus récent."
 
 Le **[!UICONTROL Taille de l’audience]** widget affiche le nombre total de profils fusionnés dans l’audience sélectionnée au moment de la prise de vue instantanée. Ce nombre est le résultat de l’application de la stratégie de fusion d’audiences à vos données de profil pour fusionner des fragments de profil et former un seul profil pour chaque individu de l’audience.
 
@@ -181,7 +181,7 @@ Sélectionner **[!UICONTROL Fermer]** pour revenir au [!UICONTROL Audiences] tab
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_segments_identityoverlap"
 >title="Chevauchement des identités"
->abstract="Ce widget montre le chevauchement des profils de votre audience contenant les deux identités sélectionnées. Les cercles affichent la taille relative de chaque identité. Le nombre de profils contenant les deux espaces de noms est représenté par le chevauchement entre les cercles."
+>abstract="Ce widget affiche le chevauchement des profils de votre audience contenant les deux identités sélectionnées. Les cercles affichent la taille relative de chaque identité. Le nombre de profils contenant les deux espaces de noms est représenté par le chevauchement entre les cercles."
 
 Le **[!UICONTROL Superposition des identités]** ce widget affiche un diagramme de Venn, ou un diagramme de jeu, qui montre le chevauchement des profils de votre audience contenant plusieurs identités.
 
@@ -198,7 +198,7 @@ Pour en savoir plus sur les identités, rendez-vous sur la page [Documentation d
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_segments_profilesbyidentity"
 >title="Profils par identité"
->abstract="Ce widget affiche la ventilation des identités pour chaque profil fusionné de l’audience sélectionnée."
+>abstract="Ce widget affiche la répartition des identités pour chaque profil fusionné dans votre audience sélectionnée."
 
 Le **[!UICONTROL Profils par identité]** widget affiche la ventilation des identités pour chaque profil fusionné de l’audience sélectionnée. Le nombre total de profils par identité peut être supérieur au nombre total de profils dans l’audience, car plusieurs identités peuvent y être associées pour un profil. En d’autres termes, le fait de additionner les valeurs affichées pour chaque identité peut représenter un total supérieur à la taille totale de l’audience. En effet, si un client interagit avec votre marque sur plusieurs canaux, plusieurs identités peuvent être associées à ce client individuel.
 

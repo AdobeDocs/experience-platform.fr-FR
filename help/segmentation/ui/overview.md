@@ -6,7 +6,7 @@ exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
 source-git-commit: 04c0b19bf4ffbc0719a89f710570cc667ca5e482
 workflow-type: tm+mt
 source-wordcount: '3606'
-ht-degree: 30%
+ht-degree: 32%
 
 ---
 
@@ -50,17 +50,17 @@ Pour en savoir plus, rendez-vous sur la page [guide du tableau de bord des audie
 >[!CONTEXTUALHELP]
 >id="platform_segments_browse_churncolumnname"
 >title="Attrition"
->abstract="La perte de clientèle représente le pourcentage de profils qui changent au sein d’une audience par rapport à la dernière exécution de la tâche de segmentation."
+>abstract="L’attrition représente le pourcentage de profils qui changent dans une audience par rapport à la dernière exécution de la tâche de segmentation."
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_browse_evaluationmethodcolumnname"
 >title="Méthode d’évaluation"
->abstract="Les méthodes d’évaluation pour les audiences comprennent le lot, la diffusion en continu et le serveur Edge."
+>abstract="Les méthodes d’évaluation des audiences incluent le traitement par lots, en flux continu et Edge."
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_browse_addallsegmentstoschedule"
->title="Ajouter toutes les audiences à la planification"
->abstract="Activez cette option pour inclure toutes les audiences évaluées à l’aide de la segmentation par lots dans la mise à jour planifiée quotidienne. Désactivez la suppression de toutes les audiences de la mise à jour planifiée."
+>title="Ajouter toutes les audiences à planifier"
+>abstract="Activez cette option pour inclure toutes les audiences évaluées à l’aide de la segmentation par lots dans la mise à jour planifiée quotidienne. Désactivez cette option pour supprimer toutes les audiences de la mise à jour planifiée."
 
 Sélectionnez la **[!UICONTROL Parcourir]** pour afficher la liste de toutes les audiences de votre organisation.
 

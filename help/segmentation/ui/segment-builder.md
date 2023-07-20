@@ -6,7 +6,7 @@ exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
 source-git-commit: 6d33c1bd3921a754edfab227fad236caf60ac960
 workflow-type: tm+mt
 source-wordcount: '3308'
-ht-degree: 85%
+ht-degree: 89%
 
 ---
 
@@ -21,7 +21,7 @@ Le [!DNL Segment Builder] offre un vaste espace de travail qui vous permet d’i
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_fields"
 >title="Champs"
->abstract="Les trois types de champ qui constituent une définition de segment sont les attributs, les événements et les audiences. Les attributs vous permettent d’utiliser des attributs de profil appartenant à la classe XDM Individual Profile, les événements vous permettent de créer une audience basée sur des actions ou des événements qui ont lieu à l’aide des éléments de données XDM ExperienceEvent et les audiences vous permettent d’utiliser des audiences importées à partir de sources externes."
+>abstract="Une définition de segment est constituée des trois types de champ suivants : les attributs, les événements et les audiences. Les attributs vous permettent d’utiliser des attributs de profil appartenant à la classe XDM Individual Profile, les événements vous permettent de créer une audience basée sur des actions ou des événements qui ont lieu à l’aide des éléments de données XDM ExperienceEvent et les audiences vous permettent d’utiliser des audiences importées à partir de sources externes."
 
 Les blocs de création de base des définitions de segment sont les attributs et les événements. En outre, les attributs et les événements contenus dans les audiences existantes peuvent être utilisés comme éléments de nouvelles définitions.
 
@@ -224,7 +224,7 @@ Après avoir selectionné **[!UICONTROL Déplier le conteneur]**, le conteneur e
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_createSegment_segmentBuilder_mergePolicies"
 >title="Politiques de fusion"
->abstract="Une stratégie de fusion permet la fusion de différents jeux de données pour former votre profil. Platform a fourni une stratégie de fusion par défaut ou vous pouvez créer une stratégie de fusion par défaut dans les profils. Choisissez une stratégie de fusion correspondant à votre objectif marketing pour cette audience."
+>abstract="Une politique de fusion permet de fusionner les différents jeux de données pour former votre profil. Platform a fourni une politique de fusion par défaut ; vous pouvez également créer une politique de fusion par défaut dans les profils. Choisissez une politique de fusion correspondant à votre objectif marketing pour cette audience."
 
 [!DNL Experience Platform] vous permet de rassembler des données issues de plusieurs sources et de les combiner pour obtenir une vue complète de chaque client. Lors du regroupement de ces données, les politiques de fusion sont les règles utilisées par [!DNL Platform] pour déterminer comment les données seront hiérarchisées et quelles données seront combinées pour créer un profil.
 
@@ -239,12 +239,12 @@ Pour sélectionner une politique de fusion pour votre définition de segment, s�
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_segmentproperties"
 >title="Propriétés de définition de segment"
->abstract="La section Propriétés de la définition de segment affiche une estimation de la taille de la définition de segment résultante, indiquant le nombre de profils qualifiés par rapport au nombre total de profils. Cela vous permet d’ajuster votre définition de segment selon vos besoins avant de créer l’audience elle-même."
+>abstract="La section des propriétés de définition de segment affiche une estimation de la taille de la définition de segment résultante, en affichant le nombre de profils qualifiés par rapport au nombre total de profils. Cela vous permet d’ajuster votre définition de segment selon vos besoins avant de créer l’audience elle-même."
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_refreshestimate"
 >title="Actualiser les estimations"
->abstract="Vous pouvez actualiser les estimations de votre définition de segment pour afficher immédiatement un aperçu du nombre de profils qui remplissent les critères de la définition de segment proposée. Les estimations d’audience sont générées en utilisant une taille d’échantillon des données d’exemple du jour."
+>abstract="Vous pouvez actualiser les estimations de votre définition de segment pour afficher immédiatement un aperçu du nombre de profils admissibles pour la définition de segment proposé. Les estimations d’audience sont générées en utilisant une taille d’échantillon des données d’exemple du jour."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=fr#estimate-and-preview-an-audience" text="Estimation et prévisualisation d’une audience"
 
 Lors de la création d’une définition de segment, la variable **[!UICONTROL Propriétés du segment]** sur le côté droit de l’espace de travail, la section affiche une estimation de la taille de la définition de segment résultante, ce qui vous permet d’ajuster votre définition de segment selon vos besoins avant de créer l’audience elle-même.
