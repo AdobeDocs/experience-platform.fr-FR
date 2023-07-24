@@ -4,9 +4,9 @@ user-guide-title: Aide sur les connecteurs source d’Adobe Experience Platfor
 breadcrumb-title: Guide des connecteurs sources
 user-guide-description: Ingérez des données à partir de diverses sources. Découvrez comment structurer, étiqueter et améliorer les données déjà ingérées.
 feature: Sources
-source-git-commit: 68c6d579d43b4137e3107d3ab102300dc8304c90
+source-git-commit: cb8fd7a7e3803c356adbdf0c20cde869c1de602c
 workflow-type: tm+mt
-source-wordcount: '991'
+source-wordcount: '990'
 ht-degree: 98%
 
 ---
@@ -62,7 +62,6 @@ ht-degree: 98%
       - [Intégration OneTrust](connectors/consent-and-preferences/onetrust.md)
    - CRM {#crm}
       - [Connecteur Microsoft Dynamics](connectors/crm/ms-dynamics.md)
-      - [Connecteur SAP Hybris](connectors/crm/sap-hybris.md)
       - [Connecteur Salesforce](connectors/crm/salesforce.md)
       - [Connecteur SugarCRM](connectors/crm/sugarcrm.md)
       - [Connecteur Veeva CRM](connectors/crm/veeva.md)
@@ -94,6 +93,7 @@ ht-degree: 98%
       - [Connecteur Snowflake](connectors/databases/snowflake.md)
       - [Connecteur Teradata Vantage](connectors/databases/teradata-vantage.md)
    - eCommerce {#ecommerce}
+      - [SAP Commerce](connectors/ecommerce/sap-commerce.md)
       - [Shopify](connectors/ecommerce/shopify.md)
       - [Streaming Shopify](connectors/ecommerce/shopify-streaming.md)
    - Système local {#local-system}
@@ -140,7 +140,6 @@ ht-degree: 98%
          - [Intégration OneTrust](tutorials/api/create/consent-and-preferences/onetrust.md)
       - CRM {#crm}
          - [Microsoft Dynamics](tutorials/api/create/crm/ms-dynamics.md)
-         - [SAP Hybris](tutorials/api/create/crm/sap-hybris.md)
          - [Salesforce](tutorials/api/create/crm/salesforce.md)
          - [Comptes et contacts SugarCRM](tutorials/api/create/crm/sugarcrm-accounts-contacts.md)
          - [Événements SugarCRM](tutorials/api/create/crm/sugarcrm-events.md)
@@ -173,6 +172,7 @@ ht-degree: 98%
          - [Teradata Vantage](tutorials/api/create/databases/teradata-vantage.md)
          - [SQL Server](tutorials/api/create/databases/sql-server.md)
       - eCommerce {#ecommerce}
+         - [SAP Commerce](tutorials/api/create/ecommerce/sap-commerce.md)
          - [Shopify](tutorials/api/create/ecommerce/shopify.md)
          - [Streaming Shopify](tutorials/api/create/ecommerce/shopify-streaming.md)
       - Automatisation du marketing {#marketing-automation}
@@ -261,7 +261,6 @@ ht-degree: 98%
          - [Intégration OneTrust](tutorials/ui/create/consent-and-preferences/onetrust.md)
       - CRM {#crm}
          - [Microsoft Dynamics](tutorials/ui/create/crm/dynamics.md)
-         - [SAP Hybris](tutorials/ui/create/crm/sap-hybris.md)
          - [Salesforce](tutorials/ui/create/crm/salesforce.md)
          - [Comptes et contacts SugarCRM](tutorials/ui/create/crm/sugarcrm-accounts-contacts.md)
          - [Événements SugarCRM](tutorials/ui/create/crm/sugarcrm-events.md)
@@ -293,6 +292,7 @@ ht-degree: 98%
          - [Snowflake](tutorials/ui/create/databases/snowflake.md)
          - [Teradata Vantage](tutorials/ui/create/databases/teradata-vantage.md)
       - eCommerce {#ecommerce}
+         - [SAP Commerce](tutorials/ui/create/ecommerce/sap-commerce.md)
          - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
          - [Streaming Shopify](tutorials/ui/create/ecommerce/shopify-streaming.md)
       - Système local {#local-system}

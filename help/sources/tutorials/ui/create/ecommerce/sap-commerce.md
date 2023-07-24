@@ -1,0 +1,254 @@
+---
+title: Création d’une connexion source SAP Commerce dans l’interface utilisateur
+description: Découvrez comment créer une connexion source SAP Commerce à l’aide de l’interface utilisateur de Adobe Experience Platform.
+hide: true
+hidefromtoc: true
+badge: Version Beta
+source-git-commit: 99edb8b2bcd4225235038e966a367d91375c961a
+workflow-type: tm+mt
+source-wordcount: '1010'
+ht-degree: 33%
+
+---
+
+# Créer une connexion source [!DNL SAP Commerce] dans l’interface utilisateur
+
+>[!NOTE]
+>
+>La source [!DNL SAP Commerce] est en version Beta. Voir [présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de sources étiquetées bêta.
+
+Le tutoriel suivant vous guide tout au long des étapes de création d’un [!DNL SAP Commerce] connexion source à apporter [[!DNL SAP] Facturation d’abonnement](https://www.sap.com/products/financial-management/subscription-billing.html) contacts et données client à l’aide de l’interface utilisateur de Adobe Experience Platform.
+
+## Prise en main {#getting-started}
+
+Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform : 
+
+* [[!DNL Experience Data Model (XDM)] Système](../../../../../xdm/home.md) : le cadre normalisé en fonction duquel [!DNL Experience Platform] organise les données d’expérience client.
+   * [Principes de base de la composition des schémas](../../../../../xdm/schema/composition.md) : découvrez les blocs de création de base des schémas XDM, y compris les principes clés et les bonnes pratiques en matière de composition de schémas.
+   * [Tutoriel sur l’éditeur de schémas](../../../../../xdm/tutorials/create-schema-ui.md) : découvrez comment créer des schémas personnalisés à l’aide de l’interface utilisateur de l’éditeur de schémas.
+* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md) : fournit un profil de consommateur unifié en temps réel, basé sur des données agrégées provenant de plusieurs sources.
+
+Si vous disposez déjà d’un compte [!DNL SAP Commerce], vous pouvez ignorer le reste de ce document et passer au tutoriel expliquant comment [Configurer un flux de données](../../dataflow/ecommerce.md).
+
+### Collecter les informations d’identification requises {#gather-credentials}
+
+Pour vous connecter [!DNL SAP Commerce] pour Experience Platform, vous devez fournir des valeurs pour les propriétés de connexion suivantes :
+
+| Informations d’identification | Description |
+| --- | --- |
+| Identifiant client | La valeur de `clientId` à partir de la clé de service. |
+| Secret client | La valeur de `clientSecret` à partir de la clé de service. |
+| Point de terminaison du jeton | La valeur de `url` à partir de la clé de service, la variable `https://subscriptionbilling.authentication.eu10.hana.ondemand.com`. |
+| Région | Emplacement de votre centre de données. La région est présente dans la variable `url` et a une valeur similaire à `eu10` ou `us10`. Par exemple, si la variable `url` is `https://eu10.revenue.cloud.sap/api` vous aurez besoin de `eu10`. |
+
+Pour plus d’informations, reportez-vous à la section [[!DNL SAP Commerce] documentation](https://help.sap.com/docs/CLOUD_TO_CASH_OD/987aec876092428f88162e438acf80d6/c5fcaf96daff4c7a8520188e4d8a1843.html).
+
+### Création d’un schéma Platform {#create-platform-schema}
+
+Avant de créer un [!DNL SAP Commerce] connexion source, vous devez également vous assurer de créer au préalable un schéma Experience Platform à utiliser pour votre source. Voir le tutoriel sur [création d’un schéma Platform](../../../../../xdm/schema/composition.md) pour obtenir des instructions complètes sur la création d’un schéma.
+
+Développez la section suivante pour afficher un exemple de schéma.
+
++++ Exemple de schéma d’affichage
+
+```
+{
+  "_extconndev": {
+    "addresses": [
+      {
+        "addressUUID": "{ADDRESS_UUID}",
+        "city": "Burnaby",
+        "country": "Canada",
+        "email": "chandni@acme.com",
+        "houseNumber": "27",
+        "isDefault": false,
+        "phone": "123-456-7890",
+        "postalCode": "V3J 1X9",
+        "state": "British Columbia",
+        "street": "Beresford"
+      }
+    ],
+    "changedAt": "1687204041",
+    "changedBy": "vero@acme.com",
+    "contactNumber": "123-456-7980",
+    "corporateInfo": {
+      "company": "acme"
+    },
+    "createAt": "1687204041",
+    "createdBy": "vero@acme.com",
+    "customReferences": [
+      {
+        "id": "Sample value",
+        "typeCode": "Sample value"
+      }
+    ],
+    "customerNumber": "Sample value",
+    "customerType": "Sample value",
+    "defaultAddress": {
+      "addressUUID": "Sample value",
+      "city": "North Vancouver",
+      "country": "Canada",
+      "email": "chandni@acme.come",
+      "houseNumber": "34",
+      "isDefault": false,
+      "phone": "123-456-7890",
+      "postalCode": "V7H 2P1",
+      "state": "British Columbia",
+      "street": "Maple"
+    },
+    "externalObjectReferences": [
+      {
+        "externalId": "{EXTERNAL_ID}",
+        "externalIdTypeCode": "{EXTERNAL_ID_TYPE_CODE}",
+        "externalSystemId": "{EXTERNAL_SYSTEM_ID}"
+      }
+    ],
+    "markets": [
+      {
+        "active": false,
+        "country": "USA",
+        "currency": "USD",
+        "marketId": "Sample value",
+        "priceinfo": {
+          "incoterms": "{INCO_TERMS}",
+          "incotermsLocation": "{INCO_TERMS_LOCATION}",
+          "priceGroup": "{PRICE_GROUP}",
+          "priceListType": "{PRICE_LIST_TYPE}"
+        },
+        "salesArea": {
+          "distributionChannel": "{DISTRIBUTION_CHANNEL}",
+          "division": "{DIVISION}",
+          "salesOrganization": "{SALES_ORGANIZATION}"
+        }
+      }
+    ],
+    "personalInfo": {
+      "firstName": "Chandni",
+      "lastName": "Kaur"
+    }
+  },
+  "_id": "/uri-reference",
+  "_repo": {
+    "createDate": "2004-10-23T12:00:00-06:00",
+    "modifyDate": "2004-10-23T12:00:00-06:00"
+  },
+  "createdByBatchID": "/uri-reference",
+  "modifiedByBatchID": "/uri-reference",
+  "personID": "{PERSON_ID}",
+  "repositoryCreatedBy": "kevin@acme.com",
+  "repositoryLastModifiedBy": "kevin@acme.com"
+}
+```
+
++++
+
+## Connecter votre compte [!DNL SAP Commerce] {#connect-account}
+
+Dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Sources]** à partir de la barre de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources]. L’écran [!UICONTROL Catalogue] affiche diverses sources avec lesquelles vous pouvez créer un compte.
+
+Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de votre écran. Vous pouvez également trouver la source spécifique à utiliser à l’aide de l’option de recherche.
+
+Sous , *eCommerce* catégorie, sélectionnez **[!UICONTROL SAP Commerce]**, puis sélectionnez **[!UICONTROL Ajouter des données]**.
+
+![Capture d’écran de l’interface utilisateur de Platform pour le catalogue avec carte SAP Commerce](../../../../images/tutorials/create/ecommerce/sap-commerce/catalog-card.png)
+
+Le **[!UICONTROL Connexion au compte SAP Commerce]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
+
+### Compte existant {#existing-account}
+
+Pour utiliser un compte existant, sélectionnez le compte [!DNL SAP Commerce] avec lequel vous souhaitez créer un flux de données, puis sélectionnez **[!UICONTROL Suivant]** pour continuer.
+
+![Copie d’écran de l’interface utilisateur de Platform pour connecter un compte SAP Commerce à un compte existant](../../../../images/tutorials/create/ecommerce/sap-commerce/existing.png)
+
+### Nouveau compte {#new-account}
+
+Si vous créez un compte, sélectionnez **[!UICONTROL Nouveau compte]**, puis fournissez un nom, une description facultative et vos informations d’identification . Lorsque vous avez terminé, sélectionnez **[!UICONTROL Se connecter à la source]** puis attendez que la nouvelle connexion s’établisse.
+
+![Capture d’écran de l’interface utilisateur de Platform pour connecter un compte SAP Commerce à un nouveau compte](../../../../images/tutorials/create/ecommerce/sap-commerce/new.png)
+
+### Sélectionner les données {#select-data}
+
+Enfin, vous devez sélectionner le type d’objet à ingérer dans Platform.
+
+| Type d’objet | Description |
+| --- | --- |
+| `Customers` | Les entités qui ont des abonnements. |
+| `Contacts` | Les coordonnées des clients. |
+
+>[!BEGINTABS]
+
+>[!TAB Clients]
+
+Pour ingérer des données client, sélectionnez **[!UICONTROL Clients]** comme type d’objet, puis sélectionnez **[!UICONTROL Suivant]**.
+
+![Capture d’écran de l’interface utilisateur de Platform pour SAP Commerce montrant la configuration avec l’option Clients sélectionnée](../../../../images/tutorials/create/ecommerce/sap-commerce/configuration-customers.png)
+
+>[!TAB Contacts]
+
+Pour ingérer les données de contact, sélectionnez **[!UICONTROL Contacts]** comme type d’objet, puis sélectionnez **[!UICONTROL Suivant]**.
+
+![Copie d’écran de l’interface utilisateur de Platform pour SAP Commerce montrant la configuration avec l’option Contacts sélectionnée](../../../../images/tutorials/create/ecommerce/sap-commerce/configuration-contacts.png)
+
+>[!ENDTABS]
+
+## Étapes suivantes {#next-steps}
+
+En suivant ce tutoriel, vous avez établi une connexion à votre compte [!DNL SAP Commerce]. Vous pouvez maintenant passer au tutoriel suivant et [configurer un flux de données pour importer des données dans Platform](../../dataflow/ecommerce.md).
+
+## Ressources supplémentaires {#additional-resources}
+
+Les sections ci-dessous contiennent des ressources supplémentaires auxquelles vous pouvez vous référer lors de l’utilisation de la variable [!DNL SAP Commerce] source.
+
+### Mappage {#mapping}
+
+Platform fournit des recommandations intelligentes pour les champs mappés automatiquement en fonction du schéma ou du jeu de données cible que vous avez sélectionné. Vous pouvez ajuster manuellement les règles de mappage en fonction de vos cas d’utilisation. Selon vos besoins, vous pouvez choisir de mapper directement des champs ou d’utiliser des fonctions de préparation de données pour transformer les données sources afin d’obtenir des valeurs informatisées ou calculées. Pour obtenir des instructions complètes sur l’utilisation de l’interface du mappeur et des champs calculés, reportez-vous à la section [Guide de l’interface utilisateur de la préparation de données](../../../../../data-prep/ui/mapping.md).
+
+Les configurations de mappage de votre flux de données diffèrent selon votre schéma et le type d’objet que vous choisissez d’ingérer.
+
+>[!BEGINTABS]
+
+>[!TAB Clients]
+
+Pour les données client, [!DNL SAP Commerce] utilise la variable [clients](https://api.sap.com/api/BusinessPartner_APIs/path/GET_customers) et le [relations client-contact](https://api.sap.com/api/BusinessPartner_APIs/path/GET_relationships-customer-contacts) points de terminaison de [!DNL SAP Business Partners] API pour récupérer les données
+
+Voici un exemple de configurations de mappage pour [!DNL SAP Commerce] flux de données pour les données client :
+
+| Champ cible | Description |
+| --- | --- |
+| `customerNumber` | Numéro du client. |
+| `corporateInfo` | Numéro du client. |
+| `customerType` | Type de client. |
+| `createdAt` | Horodatage indiquant quand le client a été créé. |
+| `changedAt` | Horodatage indiquant quand le client a été mis à jour pour la dernière fois. |
+| `markets[*].country` | Les marchés clients, récupérés sous la forme d’un objet de tableau . |
+| `addresses[*].email` | Emails associés aux différentes adresses du client, récupérés sous la forme d’un objet de tableau. |
+| `addresses[*].city` | Villes associées aux plusieurs adresses du client, récupérées sous la forme d’un objet de tableau. |
+| `addresses[*].addressUUID` | Identifiants associés aux différentes adresses du client, récupérés sous la forme d’un objet de tableau. |
+| `externalObjectReferences[*].externalSystemId` | Données supplémentaires, récupérées sous la forme d’un objet de tableau. |
+| `externalObjectReferences[*].externalId` | Données supplémentaires, récupérées sous la forme d’un objet de tableau. |
+| `customReferences[*].id` | Données supplémentaires, récupérées sous la forme d’un objet de tableau. |
+| `customReferences[*].typeCode` | Données supplémentaires, récupérées sous la forme d’un objet de tableau. |
+
+![L’étape de mappage du workflow des sources.](../../../../images/tutorials/create/ecommerce/sap-commerce/mapping-customers.png)
+
+>[!TAB Contacts]
+
+Pour les données de contact, [!DNL SAP Commerce] utilise la variable [contacts](https://api.sap.com/api/BusinessPartner_APIs/path/GET_contacts) point d’entrée du [!DNL SAP Business Partners] API pour récupérer les données.
+
+Voici un exemple de configurations de mappage pour [!DNL SAP Commerce] flux de données pour les données de contact :
+
+| Champ cible | Description |
+| --- | --- |
+| `contactNumber` | Numéro du contact. |
+| `createdAt` | Horodatage indiquant quand le contact a été créé. |
+| `changedAt` | Horodatage indiquant quand le contact a été mis à jour pour la dernière fois. |
+| `personalInfo.lastName` | Nom du contact. |
+| `personalInfo.firstName` | Prénom du contact. |
+| `externalObjectReferences[*].externalSystemId` | Données supplémentaires, récupérées sous la forme d’un objet de tableau. |
+| `externalObjectReferences[*].externalId` | Données supplémentaires, récupérées sous la forme d’un objet de tableau. |
+| `externalObjectReferences[*].externalIdTypeCode` | Données supplémentaires, récupérées sous la forme d’un objet de tableau. |
+
+![L’étape de mappage du workflow des sources.](../../../../images/tutorials/create/ecommerce/sap-commerce/mapping-contacts.png)
+
+>[!ENDTABS]
+
