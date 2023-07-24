@@ -2,7 +2,7 @@
 title: Configuration de l’extension du SDK Web Adobe Experience Platform
 description: Comment configurer l’extension de balise du SDK Web de Adobe Experience Platform dans l’interface utilisateur.
 exl-id: 96d32db8-0c9a-49f0-91f3-0244522d66df
-source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '1185'
 ht-degree: 9%
@@ -52,7 +52,7 @@ Le [!UICONTROL Domaine Edge] est le domaine à partir duquel l’extension Adobe
 
 Lorsqu’une demande est envoyée au réseau Adobe Experience Platform Edge, un identifiant de flux de données est utilisé pour référencer la configuration côté serveur. Vous pouvez mettre à jour la configuration sans avoir à apporter de modifications au code sur votre site web.
 
-Consultez le guide sur la [datastreams](../../../../edge/datastreams/overview.md) pour plus d’informations.
+Consultez le guide sur la [datastreams](../../../../datastreams/overview.md) pour plus d’informations.
 
 
 ## [!UICONTROL Confidentialité]
@@ -112,10 +112,10 @@ Vous pouvez ainsi déclencher différents comportements de flux de données par 
 
 Le remplacement de la configuration du flux de données est un processus en deux étapes :
 
-1. Tout d’abord, vous devez définir vos remplacements de configuration de trains de données sur la page de [configuration des trains de données](../../../../edge/datastreams/configure.md).
+1. Tout d’abord, vous devez définir vos remplacements de configuration de trains de données sur la page de [configuration des trains de données](../../../../datastreams/configure.md).
 2. Ensuite, vous devez envoyer les remplacements au réseau Edge par le biais d’une commande de SDK Web ou à l’aide de l’extension de balise du SDK Web.
 
-Voir la structure de données [la documentation de remplacement de configuration](../../../../edge/datastreams/overrides.md) pour obtenir des instructions détaillées sur la façon de remplacer les configurations datastream.
+Voir la structure de données [la documentation de remplacement de configuration](../../../../datastreams/overrides.md) pour obtenir des instructions détaillées sur la façon de remplacer les configurations datastream.
 
 Au lieu de transmettre les remplacements par le biais d’une commande SDK Web, vous pouvez configurer les remplacements dans l’écran d’extension de balise illustré ci-dessous.
 

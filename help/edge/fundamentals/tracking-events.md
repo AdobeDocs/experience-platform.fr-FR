@@ -3,7 +3,7 @@ title: Suivi des événements à l’aide du SDK Web de Adobe Experience Platfor
 description: Découvrez comment effectuer le suivi des événements du SDK Web Adobe Experience Platform.
 keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;envoyer la balise;documentUnloading;document Unloading;onBeforeEventSend;
 exl-id: 8b221cae-3490-44cb-af06-85be4f8d280a
-source-git-commit: a6948e3744aa754eda22831a7e68b847eb904e76
+source-git-commit: 5f2358c2e102c66a13746004ad73e2766e933705
 workflow-type: tm+mt
 source-wordcount: '1194'
 ht-degree: 31%
@@ -140,7 +140,7 @@ alloy("sendEvent", {
 
 >[!IMPORTANT]
 >
->Le `datasetId` l’option prise en charge par `sendEvent` était obsolète. Pour remplacer un identifiant de jeu de données, utilisez [remplacements de configuration](../datastreams/overrides.md) au lieu de .
+>Le `datasetId` l’option prise en charge par `sendEvent` était obsolète. Pour remplacer un identifiant de jeu de données, utilisez [remplacements de configuration](../../datastreams/overrides.md) au lieu de .
 
 Dans certains cas d’utilisation, vous pouvez envoyer un événement à un jeu de données autre que celui configuré dans l’interface utilisateur de configuration. Pour ce faire, vous devez définir la variable `datasetId` sur l’option `sendEvent` command :
 
@@ -254,20 +254,20 @@ Quelques notes sur le `onBeforeEventSend` callback :
 
 * L’événement XDM peut être modifié pendant le rappel. Une fois le rappel renvoyé, tous les champs et valeurs modifiés des objets content.xdm et content.data sont envoyés avec l’événement .
 
-   ```javascript
-   onBeforeEventSend: function(content){
-     //sets a query parameter in XDM
-     const queryString = window.location.search;
-     const urlParams = new URLSearchParams(queryString);
-     content.xdm.marketing.trackingCode = urlParams.get('cid')
-   }
-   ```
+  ```javascript
+  onBeforeEventSend: function(content){
+    //sets a query parameter in XDM
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    content.xdm.marketing.trackingCode = urlParams.get('cid')
+  }
+  ```
 
 * Si le rappel renvoie une exception, le traitement de l’événement est interrompu et l’événement n’est pas envoyé.
 * Si le rappel renvoie la valeur booléenne de `false`, le traitement des événements s’interrompt, sans erreur, et l’événement n’est pas envoyé. Ce mécanisme permet d’ignorer facilement certains événements en examinant les données d’événement et en renvoyant `false` si l’événement ne doit pas être envoyé.
 
-   >[!NOTE]
-   >Veillez à ne pas renvoyer la valeur false lors du premier événement d’une page. Le renvoi de la valeur false sur le premier événement peut avoir une incidence négative sur la personnalisation.
+  >[!NOTE]
+  >Veillez à ne pas renvoyer la valeur false lors du premier événement d’une page. Le renvoi de la valeur false sur le premier événement peut avoir une incidence négative sur la personnalisation.
 
 ```javascript
    onBeforeEventSend: function(content) {

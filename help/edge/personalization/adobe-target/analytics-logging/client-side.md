@@ -5,7 +5,7 @@ seo-title: Client-side logging for A4T data in the Platform Web SDK
 seo-description: Learn how to enable client-side logging for Adobe Analytics for Target (A4T) using the Experience Platform Web SDK.
 keywords: target;a4t;journalisation;sdk web;expérience;plateforme;
 exl-id: 7071d7e4-66e0-4ab5-a51a-1387bbff1a6d
-source-git-commit: de420d3bbf35968fdff59b403a0f2b18110f3c17
+source-git-commit: 5f2358c2e102c66a13746004ad73e2766e933705
 workflow-type: tm+mt
 source-wordcount: '1155'
 ht-degree: 5%
@@ -14,7 +14,7 @@ ht-degree: 5%
 
 # Journalisation côté client des données A4T dans le SDK Web Platform
 
-## Présentation {#overview}
+## Vue d’ensemble {#overview}
 
 Le SDK Web de Adobe Experience Platform vous permet de collecter des données [Adobe Analytics for Target (A4T)](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=fr) données côté client de votre application web.
 
@@ -40,7 +40,7 @@ Les sous-sections suivantes expliquent comment activer la journalisation côté 
 
 ### Activation de la journalisation côté client d’Analytics {#enable-analytics-client-side-logging}
 
-Pour que la journalisation côté client Analytics soit activée pour votre mise en oeuvre, vous devez désactiver la configuration Adobe Analytics dans votre [datastream](../../../datastreams/overview.md).
+Pour que la journalisation côté client Analytics soit activée pour votre mise en oeuvre, vous devez désactiver la configuration Adobe Analytics dans votre [datastream](../../../../datastreams/overview.md).
 
 ![Configuration de la banque de données Analytics désactivée](../assets/disable-analytics-datastream.png)
 
@@ -212,8 +212,7 @@ Toutes les valeurs de `scopeDetails.characteristics.analyticsToken`, ainsi que `
 >
 >Dans les exemples d’implémentation fournis dans la section suivante, plusieurs jetons Analytics sont collectés de manière itérative. Pour concaténer un tableau de jetons Analytics, utilisez une fonction similaire à celle-ci :
 >
->
-```javascript
+>```javascript
 >var concatenateAnalyticsPayloads = function concatenateAnalyticsPayloads(analyticsPayloads) {
 >   if (analyticsPayloads.size > 1) {
 >       return [].concat(analyticsPayloads).join(',');

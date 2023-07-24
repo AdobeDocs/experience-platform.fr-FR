@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Configuration d’un jeu de données pour capturer les données de consentement et de préférences
 description: Découvrez comment configurer un schéma et un jeu de données de modèle de données d’expérience (XDM) pour capturer les données de consentement et de préférence dans Adobe Experience Platform.
 exl-id: 61ceaa2a-c5ac-43f5-b118-502bdc432234
-source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '1573'
 ht-degree: 5%
@@ -26,7 +26,6 @@ Ce document décrit les étapes de configuration d’un jeu de données pour tra
 >* Groupe de champs de consentement normalisé
 >* Un groupe de champs de consentement personnalisé créé par votre organisation
 >* Combinaison du groupe de champs de consentement normalisé et des champs supplémentaires fournis par un groupe de champs de consentement personnalisé
-
 
 ## Conditions préalables
 
@@ -160,7 +159,7 @@ Enfin, sélectionnez **[!UICONTROL Activer]** dans la fenêtre contextuelle de c
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/enable-dataset.png)
 
-Le jeu de données est maintenant enregistré et activé pour une utilisation dans [!DNL Profile]. Si vous envisagez d’utiliser le SDK Web de Platform pour envoyer des données de consentement à Profile, vous devez sélectionner ce jeu de données en tant que [!UICONTROL Jeu de données de profil] lors de la configuration de [datastream](../../../../edge/datastreams/overview.md).
+Le jeu de données est maintenant enregistré et activé pour une utilisation dans [!DNL Profile]. Si vous envisagez d’utiliser le SDK Web de Platform pour envoyer des données de consentement à Profile, vous devez sélectionner ce jeu de données en tant que [!UICONTROL Jeu de données de profil] lors de la configuration de [datastream](../../../../datastreams/overview.md).
 
 ## Étapes suivantes
 

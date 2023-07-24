@@ -2,8 +2,8 @@
 title: Notes de mise à jour relatives aux balises et au transfert d’événements
 description: Dernières notes de mise à jour concernant les balises et le transfert d’événement dans Adobe Experience Platform.
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: 626330395c2d6b813d5d2157e92ada77ab4f96b1
-workflow-type: ht
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+workflow-type: tm+mt
 source-wordcount: '841'
 ht-degree: 100%
 
@@ -54,7 +54,7 @@ De nouvelles extensions ont été publiées :
 
 ## 26 octobre 2022
 
-* **Gestion des données sensibles pour les flux de données** : les flux de données exploitent désormais plusieurs technologies Platform pour gérer de manière appropriée les données sensibles selon les applications des réglementations telles que le Health Insurance Portability and Accountability Act (HIPAA). Consultez la section relative à la [gestion des données sensibles dans les flux de données](../../edge/datastreams/overview.md#sensitive) pour plus d’informations.
+* **Gestion des données sensibles pour les flux de données** : les flux de données exploitent désormais plusieurs technologies Platform pour gérer de manière appropriée les données sensibles selon les applications des réglementations telles que le Health Insurance Portability and Accountability Act (HIPAA). Consultez la section relative à la [gestion des données sensibles dans les flux de données](../../datastreams/overview.md#sensitive) pour plus d’informations.
 * Extension **[!DNL Splunk] pour le transfert d’événement** : vous pouvez désormais envoyer des données à [!DNL Splunk] à l’aide d’une extension de [transfert d’événement](../ui/event-forwarding/overview.md). Pour plus d’informations, consultez la [[!DNL Splunk] présentation de l’extension](../extensions/server/splunk/overview.md).
 * Extension **[!DNL Zendesk] pour le transfert d’événement** : vous pouvez désormais envoyer des données à [!DNL Zendesk] à l’aide d’une extension de [transfert d’événement](../ui/event-forwarding/overview.md). Pour plus d’informations, consultez la [[!DNL Zendesk] présentation de l’extension](../extensions/server/zendesk/overview.md).
 

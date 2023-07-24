@@ -2,7 +2,7 @@
 title: Interaction avec Adobe Analytics
 description: Découvrez comment utiliser l’API Edge Network Server pour interagir avec Adobe Analytics.
 exl-id: b5e7a4d0-9aea-4e70-a7d6-b9aad09aaddf
-source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '179'
 ht-degree: 2%
@@ -11,13 +11,13 @@ ht-degree: 2%
 
 # Interaction avec Adobe Analytics
 
-## Présentation {#overview}
+## Vue d’ensemble {#overview}
 
 La collecte de données Adobe Analytics fonctionne en traduisant les données XDM dans un format compréhensible par Adobe Analytics. Plusieurs champs XDM [mappé automatiquement](../edge/data-collection/adobe-analytics/automatically-mapped-vars.md) aux variables Analytics.
 
 Vous pouvez également [mappage manuel des valeurs XDM](../edge/data-collection/adobe-analytics/manually-mapping-variables.md) aux variables Analytics héritées.
 
-Pour permettre à Adobe Analytics de recevoir des données de l’API serveur, vous devez [configuration de votre flux de données](../edge/datastreams/overview.md#adobe-analytics-settings) pour transférer des événements vers Adobe Analytics, en saisissant l’identifiant de suite de rapports dans la page de configuration de la chaîne de données.
+Pour permettre à Adobe Analytics de recevoir des données de l’API serveur, vous devez [configuration de votre flux de données](../datastreams/overview.md#adobe-analytics-settings) pour transférer des événements vers Adobe Analytics, en saisissant l’identifiant de suite de rapports dans la page de configuration de la chaîne de données.
 
 ![Configuration des flux de données Adobe Analytics](assets/analytics-datastream.png)
 
@@ -31,7 +31,7 @@ POST /ee/v2/interact?dataStreamId={DATASTREAM_ID}
 
 ### Requête {#request}
 
-L’exemple ci-dessous comprend plusieurs valeurs mappées automatiquement à partir de la variable `_experience.analytics` groupe de champs. Elle comprend également des couches de données basées sur JSON. Bien que ces couches de données ne puissent pas être mappées automatiquement, il est possible d’utiliser [Préparation de données pour la collecte de données](../edge/datastreams/data-prep.md) pour mapper ces valeurs à un schéma qui contient des groupes de champs référencés ci-dessus.
+L’exemple ci-dessous comprend plusieurs valeurs mappées automatiquement à partir de la variable `_experience.analytics` groupe de champs. Elle comprend également des couches de données basées sur JSON. Bien que ces couches de données ne puissent pas être mappées automatiquement, il est possible d’utiliser [Préparation de données pour la collecte de données](../datastreams/data-prep.md) pour mapper ces valeurs à un schéma qui contient des groupes de champs référencés ci-dessus.
 
 Toutes les valeurs que les utilisateurs mappent à ces champs sont automatiquement associées aux valeurs Analytics appropriées, comme si elles étaient incluses dans la requête API.
 

@@ -5,9 +5,9 @@ user-guide-title: Aide du SDK web d’Adobe Experience Platform
 breadcrumb-title: Guide du SDK web
 user-guide-description: Interagissez avec les services Experience Cloud via le réseau Edge.
 feature: Web SDK
-source-git-commit: 131c33d1049b018ba21898418abefc48e2200f3f
+source-git-commit: cc864e091f5e3f338f025238572158f555c3ede9
 workflow-type: tm+mt
-source-wordcount: '194'
+source-wordcount: '169'
 ht-degree: 100%
 
 ---
@@ -27,14 +27,6 @@ ht-degree: 100%
    * [Configuration d’un fichier CSP](fundamentals/configuring-a-csp.md)
    * [Interaction avec plusieurs propriétés](fundamentals/interacting-with-multiple-properties.md)
    * [Conseils sur le client User-Agent](fundamentals/user-agent-client-hints.md)
-* Train de données {#datastreams}
-   * [Aperçu](./datastreams/overview.md)
-   * [Configurer un train de données](./datastreams/configure.md)
-   * [Configurer les remplacements de train de données](./datastreams/overrides.md)
-   * [Préparation des données pour la collecte de données](./datastreams/data-prep.md)
-   * Enrichissement des données {#data-enrichment}
-      * [Données météo par The Weather Channel](./datastreams/data-enrichment/weather.md)
-      * [Mappages des champs de données météo](./datastreams/data-enrichment/weather-reference.md)
 * Identité {#identity}
    * [Aperçu](identity/overview.md)
    * [Identifiants d’appareils propriétaires](identity/first-party-device-ids.md)

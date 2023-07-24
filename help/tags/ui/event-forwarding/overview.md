@@ -3,7 +3,7 @@ title: Présentation du transfert dʼévénements
 description: Découvrez Adobe Experience Platform, qui vous permet dʼutiliser Platform Edge Network afin dʼexécuter des tâches sans modifier votre implémentation de balises.
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: 81f25e74931354003d89a57adedb578ddfe00704
+source-git-commit: 2005238d2e06ed91fd4b0835be38a4b7b8ecf3b4
 workflow-type: tm+mt
 source-wordcount: '1070'
 ht-degree: 88%
@@ -81,7 +81,7 @@ La valeur de **[!UICONTROL Chemin]** pour l’élément de données doit suivre 
 
 ### Règles {#rules}
 
-La création de règles dans les propriétés de transfert d’événement fonctionne de la même manière que les balises. La principale différence réside dans le fait que vous ne pouvez pas sélectionner d’événements en tant que composants de règle. À la place, une règle de transfert d’événement traite tous les événements qu’elle reçoit du [flux de données](../../../edge/datastreams/overview.md) et transfère ces événements vers les destinations si certaines conditions sont remplies.
+La création de règles dans les propriétés de transfert d’événement fonctionne de la même manière que les balises. La principale différence réside dans le fait que vous ne pouvez pas sélectionner d’événements en tant que composants de règle. À la place, une règle de transfert d’événement traite tous les événements qu’elle reçoit du [flux de données](../../../datastreams/overview.md) et transfère ces événements vers les destinations si certaines conditions sont remplies.
 
 En outre, un délai d’attente de 30 secondes s’applique à un seul événement, car il est traité dans toutes les règles (et donc toutes les actions) au sein d’une propriété de transfert d’événement. Cela signifie que toutes les règles et toutes les actions pour un événement unique doivent être exécutées au cours de cette période.
 

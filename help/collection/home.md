@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Présentation de la collecte de données
 description: Découvrez les différentes technologies impliquées dans la collecte de données relatives aux expériences client dans Adobe Experience Platform.
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-source-git-commit: 13c02dd5930905e3851ff147c0ea4d914e3dc6c7
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '516'
 ht-degree: 100%
@@ -25,7 +25,7 @@ La collecte de données se concentre sur la capacité de découverte et l’acce
 
 * [Adobe Experience Platform Edge Network](https://experienceleague.adobe.com/docs/web-sdk-learn/tutorials/introduction-to-web-sdk-and-edge-network.html?lang=fr)
 * [Balises](../tags/home.md)
-* [Flux de données](../edge/datastreams/overview.md)
+* [Flux de données](../datastreams/overview.md)
 * [Transfert d’événement](../tags/ui/event-forwarding/overview.md)
 * [SDK web Adobe Experience Platform](../edge/home.md)
 * [ SDK Mobile Adobe Experience Platform](https://aep-sdks.gitbook.io/docs/)
@@ -45,9 +45,9 @@ La compression de ces bibliothèques accélère la collecte de données et conso
 
 ## Platform Edge Network et flux de données {#edge}
 
-Platform Edge Network est un réseau de serveurs distribué dans le monde entier. Rapide et fiable, il est capable de recevoir et de traiter des données à très grande échelle. Grâce aux balises, vous pouvez mettre en place des [flux de données](../edge/datastreams/overview.md) pour des produits comme Adobe Target, Adobe Audience Manager et Adobe Analytics. Ces configurations vous permettent d‘activer les produits en question côté serveur sans modifier le code côté client.
+Platform Edge Network est un réseau de serveurs distribué dans le monde entier. Rapide et fiable, il est capable de recevoir et de traiter des données à très grande échelle. Grâce aux balises, vous pouvez mettre en place des [flux de données](../datastreams/overview.md) pour des produits comme Adobe Target, Adobe Audience Manager et Adobe Analytics. Ces configurations vous permettent d‘activer les produits en question côté serveur sans modifier le code côté client.
 
-En outre, les flux de données sont intégrés à plusieurs fonctionnalités Platform qui permettent de s’assurer que toutes les données sensibles que vous envoyez sont traitées de manière appropriée et en respect des politiques organisationnelles et des réglementations juridiques. Consultez la section sur [la gestion des données sensibles](../edge/datastreams/overview.md#sensitive) dans la documentation sur les flux de données pour plus d’informations.
+En outre, les flux de données sont intégrés à plusieurs fonctionnalités Platform qui permettent de s’assurer que toutes les données sensibles que vous envoyez sont traitées de manière appropriée et en respect des politiques organisationnelles et des réglementations juridiques. Consultez la section sur [la gestion des données sensibles](../datastreams/overview.md#sensitive) dans la documentation sur les flux de données pour plus d’informations.
 
 ![Solutions de flux de données et d’Adobe](./images/home/adobe-solutions.png)
 

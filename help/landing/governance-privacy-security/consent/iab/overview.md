@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Prise en charge du TCF 2.0 de l’IAB dans l’Experience Platform
 description: Découvrez comment configurer vos opérations de données et vos schémas pour transmettre les choix de consentement des clients lors de l’activation de segments vers des destinations dans Adobe Experience Platform.
 exl-id: af787adf-b46e-43cf-84ac-dfb0bc274025
-source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '2558'
 ht-degree: 2%
@@ -118,7 +118,7 @@ Une fois que vous avez configuré votre CMP pour générer des chaînes de conse
 
 ### Créer un flux de données
 
-Pour que le SDK envoie des données à l’Experience Platform, vous devez d’abord créer un nouveau flux de données pour Platform. Vous trouverez des étapes spécifiques pour créer un flux de données dans la section [Documentation du SDK](../../../../edge/datastreams/overview.md).
+Pour que le SDK envoie des données à l’Experience Platform, vous devez d’abord créer un nouveau flux de données pour Platform. Vous trouverez des étapes spécifiques pour créer un flux de données dans la section [Documentation du SDK](../../../../datastreams/overview.md).
 
 Après avoir fourni un nom unique pour la banque de données, cliquez sur le bouton de basculement en regard de **[!UICONTROL Adobe Experience Platform]**. Utilisez ensuite les valeurs suivantes pour compléter le reste du formulaire :
 

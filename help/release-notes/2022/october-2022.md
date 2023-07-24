@@ -2,7 +2,7 @@
 title: Notes de mise à jour d’octobre 2022 d’Adobe Experience Platform
 description: Les notes de mise à jour d’octobre 2022 pour Adobe Experience Platform.
 exl-id: 61ef2472-5e79-433f-9f60-b1245f619b42
-source-git-commit: 8bbac729324ad5bd701f8609c443092ddb045b96
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '1328'
 ht-degree: 100%
@@ -34,7 +34,7 @@ Adobe Experience Platform fournit une suite de technologies qui vous permetten
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Gestion des données sensibles pour les flux de données | Les flux de données exploitent désormais plusieurs technologies Platform pour gérer de manière appropriée les données sensibles selon les applications des réglementations telles que le Health Insurance Portability and Accountability Act (HIPAA). Consultez la section relative à la [gestion des données sensibles dans les flux de données](../../edge/datastreams/overview.md#sensitive) pour plus d’informations. |
+| Gestion des données sensibles pour les flux de données | Les flux de données exploitent désormais plusieurs technologies Platform pour gérer de manière appropriée les données sensibles selon les applications des réglementations telles que le Health Insurance Portability and Accountability Act (HIPAA). Consultez la section relative à la [gestion des données sensibles dans les flux de données](../../datastreams/overview.md#sensitive) pour plus d’informations. |
 | Extension [!DNL Splunk] pour le transfert d’événement | Vous pouvez désormais envoyer des données à [!DNL Splunk] à l’aide d’une extension de [transfert d’événement](../../tags/ui/event-forwarding/overview.md). Pour plus d’informations, consultez la présentation de l’extension [[!DNL Splunk] ](../../tags/extensions/server/splunk/overview.md). |
 | Extension [!DNL Zendesk] pour le transfert d’événement | Vous pouvez désormais envoyer des données à [!DNL Zendesk] à l’aide d’une extension de [transfert d’événement](../../tags/ui/event-forwarding/overview.md). Pour plus d’informations, consultez la présentation de l’extension [[!DNL Zendesk] ](../../tags/extensions/server/zendesk/overview.md). |
 
@@ -102,7 +102,7 @@ Query Service vous permet d’utiliser le langage SQL standard pour interroger l
 | Fonctionnalité | Description |
 | --- | --- |
 | Surveiller des requêtes via l’interface utilisateur de Platform | L’onglet [!UICONTROL Requêtes planifiées] de Query Service offre une visibilité améliorée du statut de tous les traitements de requêtes à travers l’interface utilisateur. Vous pouvez maintenant retrouver des informations importantes sur le statut de vos exécutions de requête, y compris des messages d’erreur et des codes en cas d’échec, depuis l’onglet [!UICONTROL Requêtes planifiées]. Via l’interface utilisateur, vous pouvez également vous abonner à des alertes pour n’importe laquelle de ces requêtes, en fonction de son statut. Consultez le [document sur la surveillance des requêtes](../../query-service/ui/monitor-queries.md) pour en savoir plus sur cette fonctionnalité. |
-| Modèle de données d’insights de rapports accélérés par les requêtes | Dans le cadre du SKU Data Distiller, le magasin d’accélération des requêtes vous permet de réduire le temps et la puissance de traitement requis pour obtenir des insights importants à partir de vos données. Avec le magasin d’accélération des requêtes, vous pouvez créer un modèle de données personnalisé et/ou étendre les modèles de données Adobe Real-time Customer Data Platform existants pour améliorer vos insights de rapports et leurs visualisations. Consultez le [document sur les insights de rapports du magasin d’accélération des requêtes](../../query-service/data-distiller/query-accelerated-store/reporting-insights-data-model.md) pour en savoir plus sur cette fonctionnalité. |
+| Modèle de données d’informations de rapports accélérés par les requêtes | Dans le cadre du SKU Data Distiller, le magasin d’accélération des requêtes vous permet de réduire le temps et la puissance de traitement requis pour obtenir des informations importantes à partir de vos données. Avec le magasin d’accélération des requêtes, vous pouvez créer un modèle de données personnalisé et/ou étendre les modèles de données Adobe Real-time Customer Data Platform existants pour améliorer vos informations de rapports et leurs visualisations. Consultez le [document sur les informations de rapports du magasin d’accélération des requêtes](../../query-service/data-distiller/query-accelerated-store/reporting-insights-data-model.md) pour en savoir plus sur cette fonctionnalité. |
 
 {style="table-layout:auto"}
 
@@ -113,7 +113,7 @@ Nouvelles fonctionnalités d’Adobe Experience Platform :
 
 Adobe Experience Platform peut ingérer des données à partir de sources externes tout en vous permettant de structurer, d’étiqueter et d’améliorer ces données à l’aide des services de Platform. Vous pouvez ingérer des données à partir de diverses sources telles que les applications Adobe, le stockage dans le cloud, des logiciels tiers et votre système de gestion de la relation client.
 
-Experience Platform fournit une API RESTful et une interface utilisateur interactive qui vous permet de configurer facilement des connexions source à différents fournisseurs de données. Ces connexions source vous permettent de vous authentifier et de vous connecter à des services de gestion de la relation client et à des systèmes de stockage externes, de définir des heures d’ingestion et de gérer le débit d’ingestion des données.
+Experience Platform fournit une API RESTful et une interface utilisateur interactive qui vous permet de configurer facilement des connexions source à différents fournisseurs de données. Ces connexions source vous permettent de vous authentifier et de vous connecter à des services de gestion de la relation client et à des systèmes de stockage externes, de définir des heures d’ingestion et de gérer le débit d’ingestion des données.
 
 **Fonctionnalités mises à jour**
 

@@ -2,7 +2,7 @@
 title: Gestion des identités dans le workflow d’activation des destinations
 description: Découvrez comment l’exportation d’identités est gérée dans le workflow d’activation, en fonction du type de destination.
 exl-id: f4894a08-c7a9-4d57-a6d3-660c49206d6a
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '1186'
 ht-degree: 100%
@@ -82,7 +82,7 @@ Les clientes et clients n’ont pas besoin de sélectionner des identifiants dan
 
 Ces destinations nécessitent qu’une synchronisation des identifiants se produise via [!UICONTROL Experience Cloud ID Service] ou [!UICONTROL Experience Platform Web SDK].
 
-Si vous utilisez le [!UICONTROL SDK Web Experience Platform] et que l’ancien [!UICONTROL Experience Cloud ID Service] n’est pas implémenté sur la page, vous devez vous assurer que le flux de données du site web en question est activé pour permettre la synchronisation des identifiants tiers, comme indiqué dans la [documentation sur la configuration des trains de données](/help/edge/datastreams/configure.md#create).
+Si vous utilisez le [!UICONTROL SDK Web Experience Platform] et que l’ancien [!UICONTROL Experience Cloud ID Service] n’est pas implémenté sur la page, vous devez vous assurer que le flux de données du site web en question est activé pour permettre la synchronisation des identifiants tiers, comme indiqué dans la [documentation sur la configuration des trains de données](/help/datastreams/configure.md#create).
 
 Lors de la configuration d’un train de données comme décrit dans la documentation ci-dessus, vous devez vous assurer que le curseur **[!UICONTROL Synchronisation des identifiants tiers]** est activé. La plupart des clientes et clients laissent le champ `container_id` vide (0 par défaut). Vous ne devez modifier cette valeur que si l’ancienne implémentation de votre Audience Manager utilisait un ID de conteneur spécifique (notez toutefois qu’il s’agit de la vaste minorité de clientes et clients).
 

@@ -2,9 +2,9 @@
 solution: Experience Platform
 title: Prise en main des API Media Edge
 description: Prise en main des API Media Edge
-source-git-commit: 6570149298defe1aeb0c3e35cb71e166aeb7a3f7
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
-source-wordcount: '960'
+source-wordcount: '959'
 ht-degree: 62%
 
 ---
@@ -60,7 +60,7 @@ Pour démarrer la session multimédia sur le serveur, utilisez le point d’entr
 
 Avant d’effectuer la requête de démarrage de session, vous devez disposer des éléments suivants :
 
-* Le `datastreamId`: paramètre requis pour la requête Démarrage de session du POST. Pour récupérer un paramètre `datastreamId`, consultez la section [Configurer un flux de données](https://experienceleague.adobe.com/docs/experience-platform/edge/datastreams/configure.html?lang=fr).
+* Le `datastreamId`: paramètre requis pour la requête Démarrage de session du POST. Pour récupérer un paramètre `datastreamId`, consultez la section [Configurer un flux de données](https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html?lang=fr).
 
 * Objet JSON pour la payload de la requête contenant les données minimales requises (comme illustré dans l’exemple de requête ci-dessous).
 

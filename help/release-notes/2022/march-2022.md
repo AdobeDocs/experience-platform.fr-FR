@@ -2,7 +2,7 @@
 title: Notes de mise à jour d’Adobe Experience Platform - Mars 2022
 description: Les notes de mise à jour de mars 2022 pour Adobe Experience Platform.
 exl-id: 0d499aa6-e25d-4d34-ad32-5e4ab361cba1
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '1176'
 ht-degree: 100%
@@ -114,7 +114,7 @@ Platform fournit un ensemble de technologies qui vous permettent de collecter de
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Paramètres globaux de flux de données | Vous pouvez désormais configurer plusieurs nouveaux paramètres globaux lors de la configuration d’un flux de données : géolocalisation, cookie des identifiants internes et synchronisation des identifiants tiers. Pour plus d’informations, consultez la section sur la [configuration d’un flux de données](../../edge/datastreams/overview.md#create) du guide de l’interface utilisateur des flux de données. |
+| Paramètres globaux de flux de données | Vous pouvez désormais configurer plusieurs nouveaux paramètres globaux lors de la configuration d’un flux de données : géolocalisation, cookie des identifiants internes et synchronisation des identifiants tiers. Pour plus d’informations, consultez la section sur la [configuration d’un flux de données](../../datastreams/overview.md#create) du guide de l’interface utilisateur des flux de données. |
 | [API d’Edge Network Server](../../server-api/overview.md) | Le serveur API permet aux clients d’interagir avec Edge Experience Platform Network à l’aide d’un nouveau point d’entrée authentifié, afin d’alimenter plusieurs cas d’utilisation de la collecte de données, de la personnalisation, de la publicité et du marketing. |
 
 Pour plus d’informations sur la collecte de données dans Platform, consultez la [Présentation de la collecte de données](../../collection/home.md).
@@ -137,7 +137,7 @@ Pour plus d’informations sur les fonctionnalités disponibles, consultez la se
 
 Adobe Experience Platform peut ingérer des données à partir de sources externes tout en vous permettant de structurer, d’étiqueter et d’améliorer ces données à l’aide des services de Platform. Vous pouvez ingérer des données à partir de diverses sources telles que les applications Adobe, le stockage dans le cloud, des logiciels tiers et votre système de gestion de la relation client.
 
-Experience Platform fournit une API RESTful et une interface utilisateur interactive qui vous permet de configurer facilement des connexions source à différents fournisseurs de données. Ces connexions source vous permettent de vous authentifier et de vous connecter à des services de gestion de la relation client (CRM) et à des systèmes de stockage externes, de définir des heures d’ingestion et de gérer entièrement l’ingestion des données.
+Experience Platform fournit une API RESTful et une interface utilisateur interactive qui vous permet de configurer facilement des connexions source à différents fournisseurs de données. Ces connexions source vous permettent de vous authentifier et de vous connecter à des services de gestion de la relation client (CRM) et à des systèmes de stockage externes, de définir des heures d’ingestion et de gérer entièrement l’ingestion des données.
 
 **Fonctionnalités mises à jour**
 
@@ -149,4 +149,4 @@ Experience Platform fournit une API RESTful et une interface utilisateur intera
 
 {style="table-layout:auto"}
 
-Pour en savoir plus sur les sources, consultez la [présentation des sources](../../sources/home.md).
+Pour en savoir plus sur les sources, consultez la [vue d’ensemble des sources](../../sources/home.md).

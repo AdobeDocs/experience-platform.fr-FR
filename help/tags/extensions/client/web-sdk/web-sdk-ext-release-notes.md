@@ -2,7 +2,7 @@
 title: Notes de mise à jour de l’extension du SDK Web Adobe Experience Platform
 description: Extension de la balise SDK Web Adobe Experience Platform
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '1688'
 ht-degree: 99%
@@ -27,7 +27,7 @@ Ce document contient les notes de mise à jour de l’extension de balises du SD
 **Nouvelles fonctionnalités**
 
 * Contient la version 2.16.0 du SDK web d’Adobe Experience Platform.
-* Ajout de la prise en charge des [remplacements de la configuration du train de données](../../../../edge/datastreams/overrides.md).
+* Ajout de la prise en charge des [remplacements de la configuration du train de données](../../../../datastreams/overrides.md).
 * Ajout d’un avis d’obsolescence à l’option `datasetId` de la commande `sendEvent`.
 
 

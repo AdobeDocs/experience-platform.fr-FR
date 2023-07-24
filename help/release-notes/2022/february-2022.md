@@ -2,7 +2,7 @@
 title: Notes de mise à jour d’Adobe Experience Platform - Février 2022
 description: Les notes de mise à jour de février 2022 pour Adobe Experience Platform.
 exl-id: ae453f7d-ac75-4cc3-8435-57d25f086cc3
-source-git-commit: e2342a8a7d03074ac26fbd129a2e7fd520ccb0c3
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '1019'
 ht-degree: 100%
@@ -45,8 +45,8 @@ Platform fournit un ensemble de technologies qui vous permettent de collecter de
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Workflow de l’interface utilisateur amélioré pour la configuration des flux de données | Le workflow de création d’un flux de données dans l’interface utilisateur de la collecte de données a été mis à jour. Lors de l’ajout de services à un flux de données, seuls les services auxquels vous avez accès seront inclus dans la liste des options. Pour plus d’informations, consultez le guide de [configuration dʼun flux de données](../../edge/datastreams/overview.md). |
-| Préparer des données pour la collecte de données | Si vous utilisez le SDK web Adobe Experience Platform, vous pouvez désormais réutiliser des fonctionnalités de préparation des données pour mapper vos données au modèle de données d’expérience (XDM) côté serveur. Pour plus d’informations, consultez la section [Préparer des données pour la collecte de données](../../edge/datastreams/data-prep.md) dans le guide des flux de données. |
+| Workflow de l’interface utilisateur amélioré pour la configuration des flux de données | Le workflow de création d’un flux de données dans l’interface utilisateur de la collecte de données a été mis à jour. Lors de l’ajout de services à un flux de données, seuls les services auxquels vous avez accès seront inclus dans la liste des options. Pour plus d’informations, consultez le guide de [configuration dʼun flux de données](../../datastreams/overview.md). |
+| Préparer des données pour la collecte de données | Si vous utilisez le SDK web Adobe Experience Platform, vous pouvez désormais réutiliser des fonctionnalités de préparation des données pour mapper vos données au modèle de données d’expérience (XDM) côté serveur. Pour plus d’informations, consultez la section [Préparer des données pour la collecte de données](../../datastreams/data-prep.md) dans le guide des flux de données. |
 | Identifiants d’appareils propriétaires | Vous pouvez désormais envoyer vos propres identifiants d’appareil au réseau Adobe Experience Platform Edge lors de la collecte de données client à l’aide du SDK web Platform. Vous pouvez ainsi contourner les restrictions récentes imposées par les navigateurs sur la durée de vie des cookies tiers. Pour plus d’informations, consultez le guide des [Identifiants d’appareils propriétaires](../../edge/identity/first-party-device-ids.md). |
 
 Pour plus d’informations sur la collecte de données dans Platform, consultez la [Présentation de la collecte de données](../../collection/home.md).
@@ -63,9 +63,9 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 
 ## [!DNL Identity Service] {#identity}
 
-Proposer des expériences numériques pertinentes nécessite une compréhension complète de votre client. Cela devient plus difficile lorsque les données de vos clients sont fragmentées entre plusieurs systèmes, chaque client semble donc posséder plusieurs « identités ».
+Proposer des expériences digitales pertinentes nécessite une compréhension complète de votre client. Cela devient plus difficile lorsque les données de vos clients sont fragmentées entre plusieurs systèmes, chaque client semble donc posséder plusieurs « identités ».
 
-Adobe Experience Platform [!DNL Identity Service] vous permet de mieux connaître vos clients et leurs comportements, en établissant un lien entre les identités des différents appareils et systèmes, ce qui vous permet de proposer des expériences numériques personnelles et percutantes en temps réel.
+Adobe Experience Platform [!DNL Identity Service] vous permet de mieux connaître vos clients et leurs comportements, en établissant un lien entre les identités des différents appareils et systèmes, ce qui vous permet de proposer des expériences digitales personnelles et percutantes en temps réel.
 
 **Fonctionnalités mises à jour**
 

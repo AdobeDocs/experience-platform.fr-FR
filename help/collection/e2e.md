@@ -2,7 +2,7 @@
 title: Présentation complète de la collecte de données
 description: Présentation générale de l’envoi de données d’événement aux solutions Adobe Experience Cloud à l’aide des fonctionnalités de collecte de données Adobe Experience Platform.
 exl-id: 01ddbb19-40bb-4cb5-bfca-b272b88008b3
-source-git-commit: f619bbf2c8d313eabc6444b4bd8c09615a00cc42
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '2621'
 ht-degree: 95%
@@ -103,7 +103,7 @@ Sélectionner **[!UICONTROL Datastreams]** dans le volet de navigation de gauche
 
 ![Flux de données](./images/e2e/datastreams.png)
 
-Les exigences de configuration d’un flux de données dépendent des produits et fonctionnalités auxquels vous envoyez des données. Pour plus d’informations sur les options de configuration de chaque produit, consultez la [présentation des flux de données](../edge/datastreams/overview.md).
+Les exigences de configuration d’un flux de données dépendent des produits et fonctionnalités auxquels vous envoyez des données. Pour plus d’informations sur les options de configuration de chaque produit, consultez la [présentation des flux de données](../datastreams/overview.md).
 
 ## Installation et configuration du SDK Mobile {#install}
 

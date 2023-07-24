@@ -3,10 +3,10 @@ title: Utilisation d’Offer Decisioning avec le SDK Web Platform
 description: Le SDK Web de Adobe Experience Platform peut diffuser et générer des offres personnalisées gérées dans Offer Decisioning. Vous pouvez créer vos offres et d’autres objets associés à l’aide de l’interface utilisateur ou de l’API Offer Decisioning.
 keywords: offer decisioning;prise de décision;SDK Web;SDK Web Platform;offres personnalisées;diffuser des offres;diffusion d’offres;personnalisation des offres ;
 exl-id: 4ab51f9d-3c44-4855-b900-aa2cde673a9a
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 5f2358c2e102c66a13746004ad73e2766e933705
 workflow-type: tm+mt
 source-wordcount: '863'
-ht-degree: 19%
+ht-degree: 20%
 
 ---
 
@@ -32,28 +32,28 @@ Il est important de comprendre la terminologie suivante lorsque vous utilisez Of
 
 * **Portées de décision :** Pour les Offers decisionings, les portées de décision sont les chaînes codées Base64 de JSON contenant les identifiants d’activité et d’emplacement que vous souhaitez que le service d’offer decisioning utilise pour proposer des offres.
 
-   *Portée de décision JSON :*
+  *Portée de décision JSON :*
 
-   ```json
-   {
-     "activityId":"xcore:offer-activity:11cfb1fa93381aca",
-     "placementId":"xcore:offer-placement:1175009612b0100c"
-   }
-   ```
+  ```json
+  {
+    "activityId":"xcore:offer-activity:11cfb1fa93381aca",
+    "placementId":"xcore:offer-placement:1175009612b0100c"
+  }
+  ```
 
-   *Chaîne codée Base64 du périmètre de la décision :*
+  *Chaîne codée Base64 du périmètre de la décision :*
 
-   ```json
-   "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ=="
-   ```
+  ```json
+  "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ=="
+  ```
 
-   >[!TIP]
-   >
-   >Vous pouvez copier la valeur de la portée de décision à partir de la variable **Présentation de l’activité** dans l’interface utilisateur.
+  >[!TIP]
+  >
+  >Vous pouvez copier la valeur de la portée de décision à partir de la variable **Présentation de l’activité** dans l’interface utilisateur.
 
-   ![](assets/decision-scope-copy.png)
+  ![](assets/decision-scope-copy.png)
 
-* **Datastreams :** Pour plus d’informations, veuillez lire la [datastreams](../../datastreams/overview.md) documentation.
+* **Datastreams :** Pour plus d’informations, veuillez lire la [datastreams](../../../datastreams/overview.md) documentation.
 
 * **Identité**: Pour plus d’informations, veuillez lire cette documentation décrivant comment [Le SDK Web Platform utilise Identity Service](../../identity/overview.md).
 
@@ -61,7 +61,7 @@ Il est important de comprendre la terminologie suivante lorsque vous utilisez Of
 
 Pour activer l’Offer decisioning, procédez comme suit :
 
-1. Adobe Experience Platform activé dans votre [datastream](../../datastreams/overview.md) et cochez la case &quot;Offer decisioning&quot;
+1. Adobe Experience Platform activé dans votre [datastream](../../../datastreams/overview.md) et cochez la case &quot;Offer decisioning&quot;
 
    ![offer-decisioning-edge-config](./assets/offer-decisioning-edge-config.png)
 
@@ -81,10 +81,11 @@ Pour activer l’Offer decisioning, procédez comme suit :
              ]
           })
          ```
+
    * Installation du SDK par le biais de balises
 
       1. [Créer une propriété de balise](../../../tags/ui/administration/companies-and-properties.md)
-      1. [Ajouter du code incorporé](https://experienceleague.adobe.com/docs/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
+      1. [Ajouter du code incorporé](https://experienceleague.adobe.com/docs/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html?lang=fr)
       1. Installez et configurez l’extension SDK Web Platform avec le Datastream que vous avez créé en sélectionnant la configuration dans la liste déroulante &quot;Datastream&quot;. Consultez la documentation relative aux [extensions](../../../tags/ui/managing-resources/extensions/overview.md).
 
          ![install-aep-web-sdk-extension](./assets/install-aep-web-sdk-extension.png)
@@ -101,10 +102,9 @@ Pour activer l’Offer decisioning, procédez comme suit :
 
          * Ajoutez une action Envoyer l’événement du SDK Web Platform et ajoutez le `decisionScopes` à la configuration de cette action.
 
-            ![send-event-action-décisionScopes](./assets/send-event-action-decisionScopes.png)
+           ![send-event-action-décisionScopes](./assets/send-event-action-decisionScopes.png)
+
       1. [](../../../tags/ui/publishing/libraries.md)Créez et publiez une bibliothèque contenant toutes les règles, éléments de données et extensions pertinents que vous avez configurés
-
-
 
 ## Exemples de requêtes et de réponses
 

@@ -3,7 +3,7 @@ title: Activation des audiences vers des destinations de personnalisation de pé
 description: Découvrez comment activer les audiences de Adobe Experience Platform vers les destinations de personnalisation de périphérie pour les cas d’utilisation de la personnalisation de la même page et de la page suivante.
 type: Tutorial
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: 37819b5a6480923686d327e30b1111ea29ae71da
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '1833'
 ht-degree: 19%
@@ -80,7 +80,7 @@ Lors de la configuration du flux de données, sous **[!UICONTROL Adobe Experien
 
 ![Configurer le flux de données](../assets/ui/activate-edge-personalization-destinations/datastream-config.png)
 
-Pour plus d’informations sur la configuration d’un flux de données, suivez les instructions décrites dans la section [Documentation du SDK web Platform](../../edge/datastreams/configure.md#aep).
+Pour plus d’informations sur la configuration d’un flux de données, suivez les instructions décrites dans la section [Documentation du SDK web Platform](../../datastreams/configure.md#aep).
 
 ### Créez un [!DNL Active-On-Edge] stratégie de fusion {#create-merge-policy}
 

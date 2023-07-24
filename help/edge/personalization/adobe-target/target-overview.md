@@ -3,7 +3,7 @@ title: Utilisation d’Adobe Target avec le SDK Web Platform
 description: Découvrez comment effectuer le rendu du contenu personnalisé avec le SDK Web Experience Platform à l’aide d’Adobe Target
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;champ de décision;fragment de code de masquage préalable;vec;compositeur d’expérience d’après les formulaires;xdm;audiences;décisions;portée;schéma;schéma;diagramme système;diagramme
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
-source-git-commit: 5a048505be139b58dbb3bf85120df5e3cc46881e
+source-git-commit: 5f2358c2e102c66a13746004ad73e2766e933705
 workflow-type: tm+mt
 source-wordcount: '1318'
 ht-degree: 7%
@@ -52,7 +52,7 @@ Le diagramme suivant vous aide à comprendre le workflow de [!DNL Target] et [!D
 
 Pour activer [!DNL Target], procédez comme suit :
 
-1. Activer [!DNL Target] dans votre [datastream](../../datastreams/overview.md) avec le code client approprié.
+1. Activer [!DNL Target] dans votre [datastream](../../../datastreams/overview.md) avec le code client approprié.
 1. Ajoutez la variable `renderDecisions` à vos événements.
 
 Vous pouvez ensuite, éventuellement, ajouter les options suivantes :

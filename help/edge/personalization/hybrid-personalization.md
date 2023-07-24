@@ -3,7 +3,7 @@ title: Personnalisation hybride à l’aide du SDK Web et de l’API Edge Networ
 description: Cet article explique comment utiliser le SDK Web conjointement avec l’API du serveur pour déployer la personnalisation hybride sur vos propriétés web.
 keywords: personnalisation;hybride;api du serveur;côté serveur;implémentation hybride;
 exl-id: 506991e8-701c-49b8-9d9d-265415779876
-source-git-commit: a9887535b12b8c4aeb39bb5a6646da88db4f0308
+source-git-commit: 5f2358c2e102c66a13746004ad73e2766e933705
 workflow-type: tm+mt
 source-wordcount: '830'
 ht-degree: 100%
@@ -65,7 +65,7 @@ Les requêtes d’API du serveur sont nécessaires pour obtenir des propositions
 
 Lors de l’implémentation d’une personnalisation hybride, vous devez faire particulièrement attention à ce que les accès aux pages ne soient pas comptabilisés plusieurs fois dans Analytics.
 
-Lorsque vous [configurez un flux de données](../datastreams/overview.md) dans Analytics, les événements sont automatiquement transférés afin que les accès à la page soient capturés.
+Lorsque vous [configurez un flux de données](../../datastreams/overview.md) dans Analytics, les événements sont automatiquement transférés afin que les accès à la page soient capturés.
 
 L’exemple de cette mise en œuvre utilise deux flux de données différents :
 
@@ -162,7 +162,7 @@ curl -X POST "https://edge.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM_I
 
 | Paramètre | Type | Obligatoire | Description |
 | --- | --- | --- | --- |
-| `dataStreamId` | `String` | Oui. | L’identifiant du flux de données que vous utilisez pour transmettre les interactions à Edge Network. Voir la [présentation des flux de données](../datastreams/overview.md) pour savoir comment configurer un flux de données. |
+| `dataStreamId` | `String` | Oui. | L’identifiant du flux de données que vous utilisez pour transmettre les interactions à Edge Network. Voir la [présentation des flux de données](../../datastreams/overview.md) pour savoir comment configurer un flux de données. |
 | `requestId` | `String` | Non | Un identifiant aléatoire permettant de corréler les requêtes internes du serveur. Si aucun n’est fourni, le Edge Network en génère un et le renvoie dans la réponse. |
 
 ### Réponse côté serveur {#server-response}
