@@ -4,10 +4,10 @@ title: Guide du tableau de bord Profils
 description: Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur les données Real-time Customer Profile de votre entreprise.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: f4f4deda02c96e567cbd0815783f192d1c54096c
+source-git-commit: c558ee6cc1c7ae36f87aaff5d40be57cfb21b2e4
 workflow-type: tm+mt
 source-wordcount: '3393'
-ht-degree: 83%
+ht-degree: 82%
 
 ---
 
@@ -226,7 +226,7 @@ Le widget **[!UICONTROL Chevauchement des identités]** utilise un diagramme de 
 
 Utilisez les menus déroulants du widget pour sélectionner les identités à comparer. Les cercles affichent le nombre total relatif de profils qui contiennent chaque identité. Le nombre de profils contenant les deux identités est représenté par la taille du chevauchement entre les cercles. Si un(e) client(e) interagit avec votre marque sur plusieurs canaux, plusieurs identités seront associées à ce(tte) client(e) individuel(le). Par conséquent, il est probable que votre organisation dispose de plusieurs profils contenant des fragments provenant de plusieurs identités.
 
-Pour plus d&#39;informations sur les fragments de profil, reportez-vous à la section sur [fragments de profil par rapport aux profils fusionnés](https://experienceleague.adobe.com/docs/experience-platform/profile/home.html?lang=fr#profile-fragments-vs-merged-profiles) dans la présentation de Real-time Customer Profile.
+Pour plus d&#39;informations sur les fragments de profil, consultez la section sur [fragments de profil par rapport aux profils fusionnés](https://experienceleague.adobe.com/docs/experience-platform/profile/home.html?lang=fr#profile-fragments-vs-merged-profiles) dans la présentation de Real-time Customer Profile.
 
 Pour en savoir plus sur les identités, consultez la [documentation du Service d’identités Adobe Experience Platform](../../identity-service/home.md).
 
@@ -258,7 +258,7 @@ Pointez sur des barres individuelles pour afficher une boîte de dialogue détai
 >title="Profils non segmentés"
 >abstract="Ce widget fournit le nombre total de profils qui ne sont associés à aucune audience et représente l’opportunité d’activation des profils à l’échelle de votre organisation."
 
-Le [!UICONTROL Profils non segmentés] fournit le nombre total de tous les profils qui ne sont associés à aucune audience. Le nombre, généré à partir du dernier instantané, est précis et souligne l’opportunité d’activation de profils dans votre entreprise. Il indique également la possibilité d’effacer les profils qui ne fournissent pas un retour sur investissement adéquat.
+La variable [!UICONTROL Profils non segmentés] fournit le nombre total de tous les profils qui ne sont associés à aucune audience. Le nombre, généré à partir du dernier instantané, est précis et souligne l’opportunité d’activation de profils dans votre entreprise. Il indique également la possibilité d’effacer les profils qui ne fournissent pas un retour sur investissement adéquat.
 
 ![Widget Profils non segmentés.](../images/profiles/unsegmented-profiles.png)
 
@@ -269,7 +269,7 @@ Le [!UICONTROL Profils non segmentés] fournit le nombre total de tous les profi
 >title="Tendance des profils non segmentés"
 >abstract="Ce widget fournit une illustration graphique linéaire du nombre de profils qui ne sont associés à aucune audience sur une période donnée. La tendance des profils non associés à une audience peut être visualisée sur des périodes de 30 jours, 90 jours et 12 mois."
 
-Le [!UICONTROL Les profils non segmentés changent de tendance] widget utilise un graphique linéaire pour illustrer le nombre de profils ajoutés depuis le dernier instantané quotidien qui ne sont associés à aucune audience. La tendance de changement des profils qui ne sont associés à aucune audience peut être visualisée sur des périodes de 30 jours, 90 jours et 12 mois. La période est sélectionnée dans un menu déroulant du widget. Le nombre de profils est reflété sur l’axe des ordonnées et la période sur l’axe des abscisses.
+La variable [!UICONTROL Les profils non segmentés changent de tendance] widget utilise un graphique linéaire pour illustrer le nombre de profils ajoutés depuis le dernier instantané quotidien qui ne sont associés à aucune audience. La tendance de changement des profils qui ne sont associés à aucune audience peut être visualisée sur des périodes de 30 jours, 90 jours et 12 mois. La période est sélectionnée dans un menu déroulant du widget. Le nombre de profils est reflété sur l’axe des ordonnées et la période sur l’axe des abscisses.
 
 ![Les profils non segmentés changent de widget de tendance.](../images/profiles/unsegmented-profiles-change-trend.png)
 
@@ -339,7 +339,7 @@ Sélectionnez **[!UICONTROL Fermer]** pour revenir au tableau de bord des [!UICO
 
 ### [!UICONTROL Audiences mappées au statut de destination] {#audiences-mapped-to-destination-status}
 
-Le widget [!UICONTROL Audiences mappées au statut de destination] affiche le nombre total d’audiences mappées et non mappées dans une seule mesure et utilise un graphique en anneau pour illustrer la différence proportionnelle entre les totaux. Les nombres calculés dépendent de la politique de fusion choisie.
+La variable [!UICONTROL Audiences mappées à l’état de destination] widget affiche le nombre total d’audiences mappées et non mappées dans une seule mesure et utilise un graphique en anneau pour illustrer la différence proportionnelle entre leurs totaux. Les nombres calculés dépendent de la politique de fusion choisie.
 
 Les nombres individuels des audiences mappées ou non mappées s’affichent dans une boîte de dialogue lorsque le curseur survole la section correspondante du graphique en anneau.
 
@@ -347,13 +347,13 @@ Les nombres individuels des audiences mappées ou non mappées s’affichent dan
 
 ### [!UICONTROL Taille des audiences] {#audiences-size}
 
-Le [!UICONTROL Taille des audiences] widget fournit un tableau à deux colonnes qui répertorie les noms de 20 audiences au maximum et le nombre total de profils contenus dans chaque audience. La liste est classée de haut en bas en fonction du nombre total de profils contenus dans l&#39;audience. Le nombre total de tailles d’audience dépend de la stratégie de fusion appliquée.
+La variable [!UICONTROL Taille des audiences] widget fournit un tableau à deux colonnes qui répertorie les noms de 20 audiences au maximum et le nombre total de profils contenus dans chaque audience. La liste est classée de haut en bas en fonction du nombre total de profils contenus dans l&#39;audience. Le nombre total de tailles d’audience dépend de la stratégie de fusion appliquée.
 
 ![Le widget Taille des audiences.](../images/profiles/audiences-size.png)
 
-Pour afficher des informations complètes sur une audience, sélectionnez un nom d’audience dans la liste fournie pour accéder à la fonction [!UICONTROL Audiences] [!UICONTROL Détail] page. En outre, en sélectionnant **[!UICONTROL Afficher toutes les audiences]** à partir de la fin du widget, vous pouvez accéder au [!UICONTROL Audiences] [!UICONTROL Parcourir] pour rechercher une audience existante.
+Pour afficher des informations complètes sur une audience, sélectionnez un nom d’audience dans la liste fournie pour accéder à la fonction [!UICONTROL Audiences] [!UICONTROL Détail] page. En sélectionnant **[!UICONTROL Afficher toutes les audiences]** à partir de la fin du widget, vous pouvez accéder au [!UICONTROL Audiences] [!UICONTROL Parcourir] pour rechercher une audience existante.
 
-![Le widget Taille de l’audience avec un nom d’audience et le texte Afficher toutes les audiences mis en surbrillance.](../images/profiles/audiences-size-view-all-audiences.png)
+![Le widget Taille des audiences avec un nom d’audience et le texte Afficher toutes les audiences mis en surbrillance.](../images/profiles/audiences-size-view-all-audiences.png)
 
 Pour plus d’informations sur la variable [[!UICONTROL Audiences] [!UICONTROL  Parcourir] tab](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html?lang=fr#browse).
 

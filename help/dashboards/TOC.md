@@ -4,10 +4,10 @@ user-guide-title: Aide sur les tableaux de bord dʼAdobe Experience Platform
 breadcrumb-title: Guide des tableaux de bord
 user-guide-description: Découvrez comment visualiser les données dans Experience Platform via des tableaux de bord personnalisables.
 feature: Dashboards
-source-git-commit: 32f3383d87a7fc4920b9551df434a2fc26f73fea
+source-git-commit: c558ee6cc1c7ae36f87aaff5d40be57cfb21b2e4
 workflow-type: tm+mt
-source-wordcount: '80'
-ht-degree: 87%
+source-wordcount: '88'
+ht-degree: 79%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 87%
 * [Présentation des tableaux de bord](home.md)
 * [Autorisations d’accès aux tableaux de bord](permissions.md)
 * [Inventaire des tableaux de bord](inventory.md)
-* [Tableaux de bord définis par l’utilisateur](user-defined-dashboards.md)
+* [Tableaux de bord définis par les utilisateurs](user-defined-dashboards.md)
 * [Téléchargement de tableaux de bord au format PDF](download.md)
 * Tableaux de bord disponibles {#guides}
    * [Profils](guides/profiles.md)
@@ -25,6 +25,8 @@ ht-degree: 87%
    * [Audiences](guides/audiences.md)
    * [Destinations](guides/destinations.md)
    * [Utilisation des licences](guides/license-usage.md)
+   * [Informations sur les profils Customer AI](guides/customer-ai-profiles.md)
+   * [Informations sur les audiences de Customer AI](guides/customer-ai-audiences.md)
 * Personnalisation des tableaux de bord {#customize}
    * [Présentation de la personnalisation](customize/overview.md)
    * [Modification des tableaux de bord](customize/modify.md)
