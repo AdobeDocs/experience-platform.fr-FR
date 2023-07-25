@@ -3,10 +3,10 @@ keywords: personnalisation personnalisée;destination;destination personnalisée
 title: Connexion de personnalisation personnalisée
 description: Cette destination fournit une personnalisation externe, des systèmes de gestion de contenu, des serveurs de publicités et d’autres applications qui s’exécutent sur votre site pour récupérer les informations d’audience de Adobe Experience Platform. Cette destination fournit une personnalisation en temps réel basée sur l’appartenance à l’audience du profil utilisateur.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: d8c1e41b90b5b81dd8475bd697f31ba27551e7fa
+source-git-commit: c12a48686997ff69aea24f41bf5cbd9b89fcc57a
 workflow-type: tm+mt
-source-wordcount: '933'
-ht-degree: 56%
+source-wordcount: '934'
+ht-degree: 57%
 
 ---
 
@@ -68,7 +68,7 @@ En outre, cette destination prend également en charge l’activation des audien
 >id="platform_destinations_custom_personalization_datastream"
 >title="À propos des identifiants de flux de données"
 >abstract="Cette option détermine dans quel jeu de données de collecte de données les audiences seront incluses dans la réponse à la page. Le menu déroulant affiche uniquement les flux de données pour lesquels la configuration de destination est activée. Vous devez configurer un flux de données avant de pouvoir configurer votre destination."
->additional-url="https://experienceleague.adobe.com/docs/platform-learn/implement-mobile-sdk/initial-configuration/create-datastream.html" text="Découvrez comment configurer un flux de données"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html?lang=fr" text="Découvrez comment configurer un flux de données"
 
 >[!IMPORTANT]
 > 
