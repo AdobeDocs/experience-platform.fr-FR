@@ -4,10 +4,10 @@ description: Découvrez comment utiliser le connecteur LiveRamp pour intégrer d
 hidefromtoc: true
 hide: true
 exl-id: b8ce7ec2-7af9-4d26-b12f-d38c85ba488a
-source-git-commit: 1c9725c108d55aea5d46b086fbe010ab4ba6cf45
+source-git-commit: 8c9d736c8d2c45909a2915f0f1d845a7ba4d876d
 workflow-type: tm+mt
-source-wordcount: '1736'
-ht-degree: 81%
+source-wordcount: '1834'
+ht-degree: 77%
 
 ---
 
@@ -37,6 +37,20 @@ Avant d’envoyer des données d’Experience Platform vers [!DNL LiveRamp SFTP
 Le SFTP de LiveRamp prend en charge l’activation d’identités telles que les identifiants basés sur des informations d’identification personnelles, les identifiants connus et les identifiants personnalisés, décrits dans la [documentation officielle de LiveRamp](https://docs.liveramp.com/connect/en/identity-and-identifier-terms-and-concepts.html#known-identifiers).
 
 À l’[étape de mappage](#map) du workflow d’activation, vous devez définir les mappages cibles en tant qu’attributs personnalisés.
+
+## Audiences prises en charge {#supported-audiences}
+
+Cette section décrit toutes les audiences que vous pouvez exporter vers cette destination.
+
+Toutes les destinations prennent en charge l’activation des audiences générées par l’Experience Platform [Segmentation Service](../../../segmentation/home.md).
+
+En outre, cette destination prend également en charge l’activation des audiences décrites dans le tableau ci-dessous.
+
+| Type d’audience | Description |
+---------|----------|
+| Chargements personnalisés | Audiences [importé](../../../segmentation/ui/overview.md#importing-an-audience) dans Experience Platform à partir de fichiers CSV. |
+
+{style="table-layout:auto"}
 
 ## Type et fréquence d’exportation {#export-type-frequency}
 
@@ -190,7 +204,9 @@ Platform exportera deux fichiers CSV vers [!DNL LiveRamp SFTP] :
 * un fichier CSV contenant les audiences A, C et D ;
 * Un fichier CSV contenant l’audience B.
 
-Les fichiers CSV exportés contiennent des profils avec les attributs sélectionnés et l’état d’audience correspondant, sur des colonnes distinctes, avec le nom d’attribut et les identifiants d’audience comme en-têtes de colonne.
+Les fichiers CSV exportés contiennent des profils avec les attributs sélectionnés et l’état d’audience correspondant, sur des colonnes distinctes, avec le nom de l’attribut, et `audience_namespace:audience_ID` des paires sous forme d’en-têtes de colonne, comme illustré dans l’exemple ci-dessous :
+
+`ATTRIBUTE_NAME, AUDIENCE_NAMESPACE_1:AUDIENCE_ID_1, AUDIENCE_NAMESPACE_2:AUDIENCE_ID_2,..., AUDIENCE_NAMESPACE_X:AUDIENCE_ID_X`
 
 Les profils inclus dans les fichiers exportés peuvent correspondre à l’un des états de qualification d’audience suivants :
 
@@ -198,11 +214,10 @@ Les profils inclus dans les fichiers exportés peuvent correspondre à l’un de
 * `Expired`: Le profil n’est plus qualifié pour l’audience, mais s’est qualifié par le passé.
 * `""`(chaîne vide) : Le profil n’a jamais été qualifié pour l’audience.
 
-
-Par exemple, un fichier CSV exporté avec un `email` et 3 audiences peuvent ressembler à ceci :
+Par exemple, un fichier CSV exporté avec un `email` , deux audiences provenant de l’Experience Platform [Segmentation Service](../../../segmentation/home.md)et un [importé](../../../segmentation/ui/overview.md#importing-an-audience) audience externe, pourrait ressembler à ceci :
 
 ```csv
-email,aa2e3d98-974b-4f8b-9507-59f65b6442df,45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f,7729e537-4e42-418e-be3b-dce5e47aaa1e
+email,ups:aa2e3d98-974b-4f8b-9507-59f65b6442df,ups:45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f,CustomerAudienceUpload:7729e537-4e42-418e-be3b-dce5e47aaa1e
 abc117@testemailabc.com,active,,
 abc111@testemailabc.com,,,active
 abc102@testemailabc.com,,,active
@@ -210,6 +225,8 @@ abc116@testemailabc.com,active,,
 abc107@testemailabc.com,active,expired,active
 abc101@testemailabc.com,active,active,
 ```
+
+Dans l’exemple ci-dessus, la variable `ups:aa2e3d98-974b-4f8b-9507-59f65b6442df` et `ups:45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f` Les sections décrivent les audiences provenant du service de segmentation, tandis que `CustomerAudienceUpload:7729e537-4e42-418e-be3b-dce5e47aaa1e` décrit une audience importée dans Platform sous la forme d’une [téléchargement personnalisé](../../../segmentation/ui/overview.md#importing-an-audience).
 
 Comme Platform génère un fichier CSV pour chaque [ID de stratégie de fusion](../../../profile/merge-policies/overview.md), il génère également une exécution de flux de données distincte pour chaque ID de stratégie de fusion.
 
