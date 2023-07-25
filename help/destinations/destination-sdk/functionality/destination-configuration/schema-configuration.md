@@ -1,10 +1,10 @@
 ---
 description: Découvrez comment configurer les schémas du partenaire pour les destinations créées avec Destination SDK.
 title: Configuration des schémas de partenaire
-source-git-commit: 20dc7b31f75e88badac17faa542e046598632690
+source-git-commit: ca4fb2dce097197aa1a97e0716e6294546bfee38
 workflow-type: tm+mt
-source-wordcount: '1892'
-ht-degree: 90%
+source-wordcount: '1898'
+ht-degree: 89%
 
 ---
 
@@ -48,7 +48,7 @@ Pour en savoir plus sur les types d’intégration qui prennent en charge les fo
 Destination SDK prend en charge plusieurs configurations de schéma :
 
 * Les schémas statiques sont définis depuis le tableau `profileFields` de la section `schemaConfig`. Dans un schéma statique, vous définissez chaque attribut cible qui doit s’afficher dans l’interface utilisateur d’Experience Platform dans le tableau `profileFields`. Si vous devez mettre à jour votre schéma, vous devez procéder à une [mise à jour de la configuration de destination](../../authoring-api/destination-configuration/update-destination-configuration.md).
-* Les schémas dynamiques utilisent un type de serveur de destination supplémentaire, intitulé [serveur de schéma dynamique](../../authoring-api/destination-server/create-destination-server.md), afin de générer dynamiquement des schémas en fonction de votre propre API. Les schémas dynamiques n’utilisent pas le tableau `profileFields`. Si vous devez mettre à jour votre schéma, vous n’êtes pas obligé de procéder à une [mise à jour de la configuration de destination](../../authoring-api/destination-configuration/update-destination-configuration.md). Au lieu de cela, le serveur de schéma dynamique récupère le schéma mis à jour de votre API.
+* Les schémas dynamiques utilisent un type de serveur de destination supplémentaire, appelé [serveur de schéma dynamique](../../authoring-api/destination-server/create-destination-server.md#dynamic-schema-servers), pour récupérer dynamiquement les attributs de cible pris en charge et générer des schémas basés sur votre propre API. Les schémas dynamiques n’utilisent pas le tableau `profileFields`. Si vous devez mettre à jour votre schéma, vous n’êtes pas obligé de procéder à une [mise à jour de la configuration de destination](../../authoring-api/destination-configuration/update-destination-configuration.md). Au lieu de cela, le serveur de schéma dynamique récupère le schéma mis à jour de votre API.
 * Dans la configuration du schéma, vous avez la possibilité d’ajouter des mappages obligatoires (ou prédéfinis). Il s’agit de mappages que les utilisateurs peuvent afficher dans l’interface utilisateur de Platform, mais qu’ils ne peuvent pas modifier pendant la configuration d’une connexion à la destination. Vous pouvez, par exemple, appliquer le champ de l’adresse e-mail pour qu’il soit toujours envoyé à la destination.
 
 `schemaConfig` utilise plusieurs paramètres de configuration, en fonction du type de schéma dont vous avez besoin, comme indiqué dans les sections ci-dessous.
@@ -126,7 +126,7 @@ Destination SDK prend en charge la création de schémas de partenaire dynamique
 
 >[!IMPORTANT]
 >
->Avant de créer un schéma dynamique, vous devez procéder à la [création d’un serveur de schéma dynamique](../../authoring-api/destination-server/create-destination-server.md).
+>Avant de créer un schéma dynamique, vous devez procéder à la [création d’un serveur de schéma dynamique](../../authoring-api/destination-server/create-destination-server.md#dynamic-schema-servers).
 
 Dans une configuration de schéma dynamique, le tableau `profileFields` est remplacé par `dynamicSchemaConfig`, comme illustré ci-dessous.
 
