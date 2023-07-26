@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guide de l’IU de Segmentation Service
 description: Découvrez comment créer et gérer des audiences et des définitions de segment dans l’interface utilisateur de Adobe Experience Platform.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 04c0b19bf4ffbc0719a89f710570cc667ca5e482
+source-git-commit: 1314b2742af5cd281acb5f9db81eec0ccf885f77
 workflow-type: tm+mt
-source-wordcount: '3606'
+source-wordcount: '3607'
 ht-degree: 32%
 
 ---
@@ -25,8 +25,8 @@ L’utilisation des audiences et des définitions de segment nécessite une comp
 
 Vous devez également comprendre deux termes clés utilisés dans ce document et comprendre la différence entre eux :
 
-- **Audience**: Ensemble de personnes qui partagent des comportements et/ou des caractéristiques similaires. Cette collection de personnes peut être générée par Adobe Experience Platform à l’aide de définitions de segment ou de composition d’audience (audience générée par Platform) ou à partir de sources externes telles que les téléchargements personnalisés (audience générée en externe).
-- **Définition de segment**: Les règles utilisées par Adobe Experience Platform pour décrire les caractéristiques ou le comportement clés d’une audience cible.
+- **Audience**: ensemble de personnes qui partagent des comportements et/ou des caractéristiques similaires. Cette collection de personnes peut être générée par Adobe Experience Platform à l’aide de définitions de segment ou de composition d’audience (audience générée par Platform) ou à partir de sources externes telles que les téléchargements personnalisés (audience générée en externe).
+- **Définition de segment**: règles utilisées par Adobe Experience Platform pour décrire les caractéristiques ou le comportement clés d’une audience cible.
 - **Segmenter** : acte de séparation des profils en audiences.
 
 ## Vue d’ensemble
@@ -39,9 +39,9 @@ Dans l’interface utilisateur de l’Experience Platform, sélectionnez **[!UIC
 
 ### [!UICONTROL Audiences] tableau de bord {#segments-dashboard}
 
-Le **[!UICONTROL Audiences]** Le tableau de bord décrit les mesures clés liées aux données d’audience de votre entreprise.
+La variable **[!UICONTROL Audiences]** Le tableau de bord décrit les mesures clés liées aux données d’audience de votre entreprise.
 
-Pour en savoir plus, rendez-vous sur la page [guide du tableau de bord des audiences](../../dashboards/guides/audiences.md).
+Pour en savoir plus, consultez la [guide du tableau de bord des audiences](../../dashboards/guides/audiences.md).
 
 ![Le tableau de bord de l’audience s’affiche. Il affiche divers widgets, notamment la taille de l’audience, les profils par identité, le chevauchement des identités et la tendance de changement de la taille de l’audience.](../../dashboards/images/segments/dashboard-overview.png)
 
@@ -62,7 +62,7 @@ Pour en savoir plus, rendez-vous sur la page [guide du tableau de bord des audie
 >title="Ajouter toutes les audiences à planifier"
 >abstract="Activez cette option pour inclure toutes les audiences évaluées à l’aide de la segmentation par lots dans la mise à jour planifiée quotidienne. Désactivez cette option pour supprimer toutes les audiences de la mise à jour planifiée."
 
-Sélectionnez la **[!UICONTROL Parcourir]** pour afficher la liste de toutes les audiences de votre organisation.
+Sélectionnez la variable **[!UICONTROL Parcourir]** pour afficher la liste de toutes les audiences de votre organisation.
 
 ![L’écran de navigation des s’affiche. Une liste de toutes les audiences appartenant à l’organisation s’affiche.](../images/ui/overview/audience-browse.png)
 
@@ -75,7 +75,7 @@ Vous pouvez ajouter des champs supplémentaires à cet affichage en sélectionna
 | [!UICONTROL Nom] | Nom de l’audience. |
 | [!UICONTROL Nombre de profils] | Nombre total de profils qui remplissent les critères de l’audience. |
 | [!UICONTROL Origine] | Origine de l’audience. Cela indique d’où vient l’audience. Les valeurs possibles sont Segmentation Service, Chargement personnalisé, Composition de l’audience et Audience Manager. |
-| [!UICONTROL Créé] | Date et heure, en UTC, auxquelles l’audience a été créée. |
+| [!UICONTROL Créé] | Date et heure de création de l’audience en UTC. |
 | [!UICONTROL Dernière mise à jour] | Date et heure de la dernière mise à jour de l’audience en UTC. |
 | [!UICONTROL Balises] | Les balises définies par l’utilisateur qui appartiennent à l’audience. Vous trouverez plus d’informations sur ces balises dans la section [section sur les balises](#tags). |
 | [!UICONTROL Répartition] | ventilation de l’état du profil pour l’audience. Vous trouverez ci-dessous une description plus détaillée de cette ventilation de statut du profil. |
@@ -94,7 +94,7 @@ Si la répartition est sélectionnée, l’affichage présente un graphique à b
 | [!UICONTROL Existant] | Nombre de profils qui **sont restés** dans le segment au cours des dernières 24 heures depuis la dernière exécution de la tâche de segmentation par lots. |
 | [!UICONTROL Sortant] | Nombre de profils qui **sont sortis** du segment au cours des dernières 24 heures depuis la dernière exécution de la tâche de segmentation par lots. |
 
-Une icône de points de suspension se trouve à côté de chaque audience. Cette option affiche la liste des actions rapides disponibles pour l’audience. Cette liste d’actions diffère selon l’origine de l’audience.
+Une icône de points de suspension se trouve à côté de chaque audience. Cette option affiche la liste des actions rapides disponibles pour l’audience. Cette liste d’actions diffère en fonction de l’origine de l’audience.
 
 ![La liste des actions rapides s’affiche pour les audiences dont l’origine est [!UICONTROL Composition de l’audience].](../images/ui/overview/browse-audience-composition-details.png)
 
@@ -125,7 +125,7 @@ Sélection **[!UICONTROL Créer une audience]** vous permet de créer une audien
 >
 > Vous aurez **not** peuvent supprimer une audience utilisée dans une activation de destination.
 
-### Filtrage et balisage {#manage-audiences}
+### Filtrage, dossiers et balisage {#manage-audiences}
 
 Pour améliorer votre efficacité, vous pouvez rechercher des audiences existantes, ajouter des balises définies par l’utilisateur aux audiences, placer des audiences dans des dossiers et filtrer les audiences affichées.
 
@@ -145,16 +145,16 @@ Vous pouvez ajouter des balises définies par l’utilisateur pour mieux décrir
 
 Pour ajouter une balise, sélectionnez **[!UICONTROL Gestion des balises]** sur l’audience que vous souhaitez baliser.
 
-![Le [!UICONTROL Gestion des balises] est sélectionné pour une audience spécifique.](../images/ui/overview/browse-manage-tags.png)
+![La variable [!UICONTROL Gestion des balises] est sélectionné pour une audience spécifique.](../images/ui/overview/browse-manage-tags.png)
 
-Le **[!UICONTROL Gestion des balises]** s’affiche. Dans cette fenêtre contextuelle, vous pouvez sélectionner une balise catégorisée ou une balise non classée.
+La variable **[!UICONTROL Gestion des balises]** s’affiche. Dans cette fenêtre contextuelle, vous pouvez sélectionner une balise catégorisée ou une balise non classée.
 
 | Type de balise | Description |
 | -------- | ----------- |
 | Catégorisé | Balise créée et gérée par les administrateurs de votre entreprise. |
-| Non classé | Balise créée dans la variable [!UICONTROL Gestion des balises] de la fenêtre contextuelle. N’importe qui peut créer ou gérer ces types de balises. |
+| Non catégorisé | Balise créée dans la variable [!UICONTROL Gestion des balises] s’affiche. N’importe qui peut créer ou gérer ces types de balises. |
 
-![Le [!UICONTROL Gestion des balises] s’affiche. Les options de sélection d’une catégorie ou d’une catégorie non catégorisée sont mises en surbrillance.](../images/ui/overview/create-tag.png)
+![La variable [!UICONTROL Gestion des balises] s’affiche. Les options de sélection d’une catégorie ou d’une catégorie sont mises en surbrillance.](../images/ui/overview/create-tag.png)
 
 Après avoir ajouté toutes les balises à joindre à l’audience, sélectionnez **[!UICONTROL Enregistrer]**.
 
@@ -168,9 +168,9 @@ Vous pouvez placer des audiences dans des dossiers pour une meilleure gestion de
 
 Pour déplacer une audience dans un dossier, sélectionnez **[!UICONTROL Déplacer vers le dossier]** sur l’audience que vous souhaitez déplacer.
 
-![Le [!UICONTROL Déplacer vers le dossier] est sélectionné pour une audience spécifique.](../images/ui/overview/browse-move-to-folder.png)
+![La variable [!UICONTROL Déplacer vers le dossier] est sélectionné pour une audience spécifique.](../images/ui/overview/browse-move-to-folder.png)
 
-Le **Déplacer l’audience vers le dossier** s’affiche. Sélectionnez le dossier vers lequel vous souhaitez déplacer l’audience, puis sélectionnez **[!UICONTROL Enregistrer]**.
+La variable **Déplacer l’audience vers le dossier** s’affiche. Sélectionnez le dossier vers lequel vous souhaitez déplacer l’audience, puis sélectionnez **[!UICONTROL Enregistrer]**.
 
 ![La fenêtre contextuelle Déplacer l’audience vers le dossier s’affiche. Le dossier vers lequel l’audience sera déplacée est mis en surbrillance.](../images/ui/overview/move-to-folder.png)
 
@@ -210,7 +210,7 @@ La page Détails de l’audience s’affiche. En haut se trouve un résumé de l
 
 **Synthèse de l’audience** {#segment-summary}
 
-Le **[!UICONTROL Synthèse de l’audience]** fournit des informations telles que l’identifiant, le nom, la description, l’origine et les détails des attributs.
+La variable **[!UICONTROL Synthèse de l’audience]** fournit des informations telles que l’identifiant, le nom, la description, l’origine et les détails des attributs.
 
 De plus, vous avez la possibilité d’activer l’audience vers une destination, d’appliquer des étiquettes d’accès ou de modifier/mettre à jour l’audience.
 
@@ -250,13 +250,13 @@ Sélection **[!UICONTROL Modifier les propriétés]** vous permet de modifier le
 
 **Total de l’audience** {#audience-total}
 
-Le **[!UICONTROL Total de l’audience]** indique le nombre total de profils qui remplissent les critères de l’audience.
+La variable **[!UICONTROL Total de l’audience]** indique le nombre total de profils qui remplissent les critères de l’audience.
 
 Les estimations sont générées en utilisant une taille d’échantillon des données d’exemple du jour. S’il y a moins d’un million d’entités dans votre banque de profils, l’ensemble des données est utilisé. Entre 1 et 20 millions d’entités, 1 million d’entités sont utilisées. Et pour plus de 20 millions d’entités, 5 % du total des entités sont utilisés. Vous trouverez plus d’informations sur la génération d’estimations dans la section [section génération d’estimation](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) du tutoriel sur la création d’audience.
 
 **Destinations activées** {#activated-destinations}
 
-Le **[!UICONTROL Destinations activées]** affiche les destinations pour lesquelles cette audience est activée.
+La variable **[!UICONTROL Destinations activées]** affiche les destinations pour lesquelles cette audience est activée.
 
 >[!NOTE]
 >
@@ -312,7 +312,7 @@ Vous pouvez sélectionner **[!UICONTROL Importer une audience]** pour importer u
 
 ![Sur la page de navigation Audience, le bouton Importer une audience est mis en surbrillance.](../images/ui/overview/browse-import-audience.png)
 
-Le **[!UICONTROL Importation d’un fichier CSV d’audience]** le workflow s’affiche. Vous pouvez sélectionner un fichier CSV à importer en tant qu’audience générée en externe.
+La variable **[!UICONTROL Importation d’un fichier CSV d’audience]** le workflow s’affiche. Vous pouvez sélectionner un fichier CSV à importer en tant qu’audience générée en externe.
 
 ![Dans le [!UICONTROL Importation d’un fichier CSV d’audience] le workflow, [!UICONTROL Glisser-déposer des fichiers] est mise en surbrillance, indiquant où vous pouvez charger votre audience générée en externe.](../images/ui/overview/import-audience-csv.png)
 
@@ -324,17 +324,17 @@ Après avoir sélectionné le fichier CSV à importer, une liste d’exemples de
 
 ![Des exemples de données pour l’audience générée en externe s’affichent.](../images/ui/overview/import-audience-sample-data.png)
 
-Le **[!UICONTROL Détails de l’audience]** s’affiche. Vous pouvez ajouter des informations sur votre audience, notamment son nom, sa description, son identité Principale et sa valeur d’espace de noms d’identité.
+La variable **[!UICONTROL Détails de l’audience]** s’affiche. Vous pouvez ajouter des informations sur votre audience, notamment son nom, sa description, son identité Principale et sa valeur d’espace de noms d’identité.
 
-![Le [!UICONTROL Détails de l’audience] s’affiche.](../images/ui/overview/import-audience-audience-details.png)
+![La variable [!UICONTROL Détails de l’audience] s’affiche.](../images/ui/overview/import-audience-audience-details.png)
 
 Après avoir renseigné les détails de votre audience, sélectionnez **[!UICONTROL Suivant]**.
 
-![Le [!UICONTROL Suivant] est mis en surbrillance sur le bouton [!UICONTROL Détails de l’audience] page.](../images/ui/overview/import-audience-filled-details.png)
+![La variable [!UICONTROL Suivant] est mis en surbrillance sur le bouton [!UICONTROL Détails de l’audience] page.](../images/ui/overview/import-audience-filled-details.png)
 
-Le **[!UICONTROL Réviser]** s’affiche. Vous pouvez consulter les détails de l’audience nouvellement importée en externe.
+La variable **[!UICONTROL Réviser]** s’affiche. Vous pouvez consulter les détails de l’audience nouvellement importée en externe.
 
-![Le [!UICONTROL Réviser] s’affiche, avec les détails de votre audience nouvellement importée en externe.](../images/ui/overview/import-audience-review-details.png)
+![La variable [!UICONTROL Réviser] s’affiche, avec les détails de votre audience nouvellement importée en externe.](../images/ui/overview/import-audience-review-details.png)
 
 Une fois que les détails sont corrects, sélectionnez **[!UICONTROL Terminer]** pour importer votre audience générée de l’extérieur dans Adobe Experience Platform.
 
@@ -358,7 +358,7 @@ Actuellement, les plannings ne peuvent être créés qu’à l’aide de l’API
 
 ## Compositions {#compositions}
 
-Sélectionnez la **[!UICONTROL Compositions]** pour afficher une liste de toutes les audiences générées par le biais de la composition de l’audience pour votre organisation.
+Sélectionnez la variable **[!UICONTROL Compositions]** pour afficher une liste de toutes les audiences générées par le biais de la composition de l’audience pour votre organisation.
 
 ![Liste des audiences créées dans Composition de l’audience pour votre organisation.](../images/ui/overview/compositions.png)
 
@@ -413,6 +413,6 @@ Une fois la création de votre audience terminée, l’audience est analysée pa
 
 ## Étapes suivantes et ressources supplémentaires {#next-steps}
 
-Le [!DNL Segmentation Service] L’interface utilisateur fournit un workflow riche qui vous permet de créer des audiences commercialisables à partir de [!DNL Real-Time Customer Profile] data.
+La variable [!DNL Segmentation Service] L’interface utilisateur fournit un workflow riche qui vous permet de créer des audiences commercialisables à partir de [!DNL Real-Time Customer Profile] data.
 
 Pour en savoir plus sur [!DNL Segmentation Service], veuillez continuer à lire la documentation. Pour savoir comment utiliser l’API [!DNL Segmentation Service], consultez le [[!DNL Segmentation Service] guide de développement](../api/overview.md).

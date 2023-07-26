@@ -3,14 +3,18 @@ solution: Experience Platform
 title: Guide de l’interface utilisateur du créateur de segments
 description: Le créateur de segments de l’interface utilisateur d’Adobe Experience Platform fournit un espace de travail riche qui vous permet d’interagir avec les éléments de données de profil. L’espace de travail fournit des commandes intuitives pour la création et la modification de règles, telles que le glisser-déposer de mosaïques utilisées pour représenter les propriétés des données.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 6d33c1bd3921a754edfab227fad236caf60ac960
+source-git-commit: 56d9d3ec5565960438540ffec867ed528b52eaf1
 workflow-type: tm+mt
-source-wordcount: '3308'
-ht-degree: 89%
+source-wordcount: '3338'
+ht-degree: 88%
 
 ---
 
 # Guide de l’interface utilisateur de [!DNL Segment Builder]
+
+>[!NOTE]
+>
+>Ce guide explique comment créer des audiences par le biais de **définitions de segment** à l’aide du créateur de segments. Pour savoir comment créer des audiences à l’aide de la composition de l’audience, veuillez lire le [Guide de l’interface utilisateur de composition d’audience](./audience-composition.md).
 
 Le [!DNL Segment Builder] offre un vaste espace de travail qui vous permet d’interagir avec les éléments de données de [!DNL Profile]. L’espace de travail fournit des commandes intuitives pour la création et la modification de règles, telles que le glisser-déposer de mosaïques utilisées pour représenter les propriétés des données.
 
@@ -115,7 +119,7 @@ Pour ajouter une nouvelle règle à votre définition de segment, faites glisser
 
 >[!IMPORTANT]
 >
->Les dernières modifications apportées à Adobe Experience Platform ont mis à jour l’utilisation des opérateurs logiques `OR` et `AND` entre les événements. Ces mises à jour n’auront aucune incidence sur les définitions de segment existantes. Cependant, toutes les mises à jour ultérieures des définitions de segment existantes et des définitions de segment nouvellement créées seront affectées par ces modifications. Consultez la [mise à jour des constantes de temps](./segment-refactoring.md) pour plus d’informations.
+>Les dernières modifications apportées à Adobe Experience Platform ont mis à jour l’utilisation des opérateurs logiques `OR` et `AND` entre les événements. Ces mises à jour n’affectent pas les définitions de segment existantes. Cependant, toutes les mises à jour ultérieures des définitions de segment existantes et des définitions de segment nouvellement créées seront affectées par ces modifications. Consultez la [mise à jour des constantes de temps](./segment-refactoring.md) pour plus d’informations.
 
 Lors de la sélection d’une valeur pour l’attribut, vous verrez une liste de valeurs d’énumération pour l’attribut.
 
