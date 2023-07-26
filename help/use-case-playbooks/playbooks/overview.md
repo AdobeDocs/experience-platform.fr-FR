@@ -4,7 +4,7 @@ title: Vue d’ensemble des playbooks de cas d’utilisation
 description: Découvrez comment utiliser la fonction des playbooks de cas d’utilisation dans Experience Platform pour commencer à utiliser divers cas d’utilisation marketing
 badgeBeta: label="Beta" type="Informative"
 source-git-commit: 896ca002b34e79bd464467011875a54acd5c187c
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '400'
 ht-degree: 100%
 
