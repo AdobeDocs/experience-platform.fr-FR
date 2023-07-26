@@ -4,9 +4,9 @@ title: (Version bêta) Exportation de jeux de données à l’aide de l’API Fl
 description: Découvrez comment utiliser l’API Flow Service pour exporter des jeux de données vers des destinations sélectionnées.
 type: Tutorial
 exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
-source-git-commit: 4873af44f623082375fe4b2caa82475e2ba5b808
+source-git-commit: fadc1f5f3842c9c2e39b6204dd455621ec84ad68
 workflow-type: tm+mt
-source-wordcount: '3524'
+source-wordcount: '3520'
 ht-degree: 19%
 
 ---
@@ -23,7 +23,7 @@ Cet article explique le workflow requis pour utiliser la variable [!DNL Flow Ser
 
 >[!TIP]
 >
->Vous pouvez également utiliser l’interface utilisateur de l’Experience Platform pour exporter des jeux de données. Lisez le [tutoriel sur l’interface utilisateur des jeux de données d’exportation](/help/destinations/ui/export-datasets.md) pour plus d’informations.
+>Vous pouvez également utiliser l’interface utilisateur Experience Platform pour exporter des jeux de données. Lisez la section [tutoriel sur l’interface utilisateur des jeux de données d’exportation](/help/destinations/ui/export-datasets.md) pour plus d’informations.
 
 ## Destinations prises en charge {#supported-destinations}
 
@@ -44,14 +44,14 @@ Actuellement, vous pouvez exporter des jeux de données vers les destinations de
 
 Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
 
-* [[!DNL Experience Platform datasets]](/help/catalog/datasets/overview.md): Toutes les données correctement ingérées dans Adobe Experience Platform sont conservées dans la variable [!DNL Data Lake] comme des jeux de données. Un jeu de données est une structure de stockage et de gestion pour la collecte de données, généralement sous la forme d’un tableau, qui contient un schéma (des colonnes) et des champs (des lignes). Les jeux de données contiennent également des métadonnées qui décrivent divers aspects des données stockées.
+* [[!DNL Experience Platform datasets]](/help/catalog/datasets/overview.md): toutes les données correctement ingérées dans Adobe Experience Platform sont conservées dans la variable [!DNL Data Lake] comme des jeux de données. Un jeu de données est une structure de stockage et de gestion pour la collecte de données, généralement sous la forme d’un tableau, qui contient un schéma (des colonnes) et des champs (des lignes). Les jeux de données contiennent également des métadonnées qui décrivent divers aspects des données stockées.
 * [[!DNL Sandboxes]](../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
 Les sections suivantes apportent des informations supplémentaires que vous devez connaître pour exporter des jeux de données vers des destinations de stockage dans le cloud dans Platform.
 
 ### Autorisations nécessaires {#permissions}
 
-Pour exporter des jeux de données, vous avez besoin des [autorisations de contrôle d’accès](/help/access-control/home.md#permissions) **[!UICONTROL Gérer les destinations]**, **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer des destinations]**, et **[!UICONTROL Gérer et activer des destinations de jeu de données]**. Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+Pour exporter des jeux de données, vous avez besoin de l’événement **[!UICONTROL Affichage des destinations]** et **[!UICONTROL Gestion et activation des destinations de jeu de données]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
 Pour vous assurer que vous disposez des autorisations nécessaires pour exporter des jeux de données et que la destination prend en charge l’exportation de jeux de données, parcourez le catalogue des destinations. Si une destination comporte un contrôle **[!UICONTROL Activer]** ou **[!UICONTROL Exporter des jeux de données]**, vous disposez des autorisations appropriées.
 
@@ -81,7 +81,7 @@ Toutes les requêtes qui contiennent un payload (POST, PUT, PATCH) nécessitent 
 
 ### Documentation de référence sur les API {#api-reference-documentation}
 
-Ce tutoriel vous permet de trouver la documentation de référence relative à toutes les opérations API. Reportez-vous à la section [[!DNL Flow Service] - Documentation de l’API Destinations sur le site web d’Adobe Developer](https://developer.adobe.com/experience-platform-apis/references/destinations/). Nous vous recommandons de consulter ce tutoriel et la documentation de référence sur les API en parallèle.
+Ce tutoriel vous permet de trouver la documentation de référence relative à toutes les opérations API. Voir [[!DNL Flow Service] - Documentation de l’API Destinations sur le site web Adobe Developer](https://developer.adobe.com/experience-platform-apis/references/destinations/). Nous vous recommandons de consulter ce tutoriel et la documentation de référence sur les API en parallèle.
 
 ### Glossaire {#glossary}
 
@@ -103,7 +103,7 @@ Avant de démarrer le workflow pour exporter un jeu de données, identifiez les 
 
 {style="table-layout:auto"}
 
-Vous avez besoin de ces identifiants pour construire diverses [!DNL Flow Service] entités. Vous devez également vous référer aux parties de la section [!DNL Connection Spec] pour configurer certaines entités afin que vous puissiez récupérer la variable [!DNL Connection Spec] de [!DNL Flow Service APIs]. Consultez les exemples ci-dessous de récupération des spécifications de connexion pour toutes les destinations dans le tableau :
+Vous avez besoin de ces identifiants pour construire diverses [!DNL Flow Service] entités. Vous devez également vous référer à des parties de la variable [!DNL Connection Spec] pour configurer certaines entités afin que vous puissiez récupérer la variable [!DNL Connection Spec] de [!DNL Flow Service APIs]. Consultez les exemples ci-dessous de récupération des spécifications de connexion pour toutes les destinations dans le tableau :
 
 >[!BEGINTABS]
 
@@ -336,7 +336,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 --header 'Authorization: Bearer {ACCESS_TOKEN}'
 ```
 
-Notez que pour récupérer les jeux de données éligibles, la variable [!DNL connection spec] L’identifiant utilisé dans l’URL de requête doit correspondre à l’identifiant de spécification de la connexion au lac de données, `23598e46-f560-407b-88d5-ea6207e49db0`et les deux paramètres de requête `outputField=datasets` et `outputType=activationDatasets` doit être spécifié. Tous les autres paramètres de requête sont des paramètres standard pris en charge par la variable [API Catalog Service](https://developer.adobe.com/experience-platform-apis/references/catalog/).
+Notez que pour récupérer les jeux de données éligibles, la variable [!DNL connection spec] L’identifiant utilisé dans l’URL de requête doit correspondre à l’identifiant de spécification de la connexion au lac de données, `23598e46-f560-407b-88d5-ea6207e49db0`, et les deux paramètres de requête `outputField=datasets` et `outputType=activationDatasets` doit être spécifié. Tous les autres paramètres de requête sont des paramètres standard pris en charge par la variable [API Catalog Service](https://developer.adobe.com/experience-platform-apis/references/catalog/).
 
 +++
 
@@ -495,7 +495,7 @@ N’oubliez pas que :
 
 ![Diagramme affichant l’étape 3 du workflow d’exportation des jeux de données](../assets/api/export-datasets/export-datasets-api-workflow-create-base-connection.png)
 
-Une connexion de base stocke en toute sécurité les informations d’identification vers votre destination. Selon le type de destination, les informations d’identification nécessaires pour s’authentifier sur cette destination peuvent varier. Pour rechercher ces paramètres d’authentification, récupérez d’abord la variable [!DNL connection spec] pour la destination souhaitée, comme décrit dans la section [Collecte des spécifications de connexion et des spécifications de flux](#gather-connection-spec-flow-spec) puis regardez le `authSpec` de la réponse. Référencez les onglets ci-dessous pour le `authSpec` propriétés de toutes les destinations prises en charge.
+Une connexion de base stocke en toute sécurité les informations d’identification vers votre destination. Selon le type de destination, les informations d’identification nécessaires pour s’authentifier sur cette destination peuvent varier. Pour rechercher ces paramètres d’authentification, récupérez d’abord la variable [!DNL connection spec] pour la destination souhaitée, comme décrit dans la section [Collecte des spécifications de connexion et des spécifications de flux](#gather-connection-spec-flow-spec) et puis regardez le `authSpec` de la réponse. Référencez les onglets ci-dessous pour le `authSpec` propriétés de toutes les destinations prises en charge.
 
 >[!BEGINTABS]
 
@@ -802,7 +802,7 @@ Notez la ligne mise en surbrillance avec les commentaires insérés dans la [!DN
 
 >[!ENDTABS]
 
-Utilisation des propriétés spécifiées dans la spécification d’authentification (c.-à-d. `authSpec` à partir de la réponse) vous pouvez créer une connexion de base avec les informations d’identification requises, spécifiques à chaque type de destination, comme illustré dans les exemples ci-dessous :
+En utilisant les propriétés spécifiées dans la spécification d’authentification (c.-à-d. `authSpec` à partir de la réponse) vous pouvez créer une connexion de base avec les informations d’identification requises, spécifiques à chaque type de destination, comme illustré dans les exemples ci-dessous :
 
 >[!BEGINTABS]
 
@@ -968,7 +968,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Aucune information d’identification d’authentification n’est requise pour la destination de la zone d’entrée des données. Pour plus d’informations, reportez-vous à la section [s’authentifier à la destination](/help/destinations/catalog/cloud-storage/data-landing-zone.md#authenticate) de la page de documentation sur la destination des zones d’entrée de données.
+>Aucune information d’identification d’authentification n’est requise pour la destination de la zone d’entrée des données. Pour plus d’informations, voir la section [s’authentifier à la destination](/help/destinations/catalog/cloud-storage/data-landing-zone.md#authenticate) de la page de documentation sur la destination des zones d’entrée de données.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -1144,7 +1144,7 @@ Notez l’identifiant de connexion de la réponse. Cet identifiant sera requis �
 
 ![Diagramme présentant l’étape 4 du workflow d’exportation des jeux de données](../assets/api/export-datasets/export-datasets-api-workflow-create-target-connection.png)
 
-Ensuite, vous devez créer une connexion cible qui stocke les paramètres d’exportation de vos jeux de données. Les paramètres d’exportation incluent l’emplacement, le format de fichier, la compression et d’autres détails. Reportez-vous à la section `targetSpec` propriétés fournies dans la spécification de connexion de la destination pour comprendre les propriétés prises en charge pour chaque type de destination. Référencez les onglets ci-dessous pour le `targetSpec` propriétés de toutes les destinations prises en charge.
+Ensuite, vous devez créer une connexion cible qui stocke les paramètres d’exportation de vos jeux de données. Les paramètres d’exportation incluent l’emplacement, le format de fichier, la compression et d’autres détails. Voir `targetSpec` propriétés fournies dans la spécification de connexion de la destination pour comprendre les propriétés prises en charge pour chaque type de destination. Référencez les onglets ci-dessous pour le `targetSpec` propriétés de toutes les destinations prises en charge.
 
 >[!BEGINTABS]
 
@@ -1595,7 +1595,7 @@ En utilisant la spécification ci-dessus, vous pouvez créer une requête de con
 
 >[!TIP]
 >
->Pour plus d’informations sur l’obtention des paramètres de ciblage requis, reportez-vous à la section [remplir les détails de destination](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details) de la section [!DNL Amazon S3] page de documentation de destination.
+>Pour plus d’informations sur l’obtention des paramètres de ciblage requis, reportez-vous à la section [remplir les détails de destination](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details) de la [!DNL Amazon S3] page de documentation de destination.
 >Pour les autres valeurs prises en charge par `datasetFileType`, consultez la documentation de référence sur les API .
 
 Notez les lignes surlignées avec des commentaires intégrés dans l’exemple de requête, qui fournissent des informations supplémentaires. Supprimez les commentaires insérés dans la requête lorsque vous copiez-collez la requête dans votre terminal de votre choix.
@@ -1648,7 +1648,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Pour plus d’informations sur l’obtention des paramètres de ciblage requis, reportez-vous à la section [remplir les détails de destination](/help/destinations/catalog/cloud-storage/azure-blob.md#destination-details) de la section [!DNL Azure Blob Storage] page de documentation de destination.
+>Pour plus d’informations sur l’obtention des paramètres de ciblage requis, reportez-vous à la section [remplir les détails de destination](/help/destinations/catalog/cloud-storage/azure-blob.md#destination-details) de la [!DNL Azure Blob Storage] page de documentation de destination.
 >Pour les autres valeurs prises en charge par `datasetFileType`, consultez la documentation de référence sur les API .
 
 
@@ -1754,7 +1754,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Pour plus d’informations sur l’obtention des paramètres de ciblage requis, reportez-vous à la section [remplir les détails de destination](/help/destinations/catalog/cloud-storage/data-landing-zone.md#destination-details) de la section [!DNL Data Landing Zone] page de documentation de destination.
+>Pour plus d’informations sur l’obtention des paramètres de ciblage requis, reportez-vous à la section [remplir les détails de destination](/help/destinations/catalog/cloud-storage/data-landing-zone.md#destination-details) de la [!DNL Data Landing Zone] page de documentation de destination.
 >Pour les autres valeurs prises en charge par `datasetFileType`, consultez la documentation de référence sur les API .
 
 Notez les lignes surlignées avec des commentaires intégrés dans l’exemple de requête, qui fournissent des informations supplémentaires. Supprimez les commentaires insérés dans la requête lorsque vous copiez-collez la requête dans votre terminal de votre choix.
@@ -1806,7 +1806,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Pour plus d’informations sur l’obtention des paramètres de ciblage requis, reportez-vous à la section [remplir les détails de destination](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) de la section [!DNL Google Cloud Storage] page de documentation de destination.
+>Pour plus d’informations sur l’obtention des paramètres de ciblage requis, reportez-vous à la section [remplir les détails de destination](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) de la [!DNL Google Cloud Storage] page de documentation de destination.
 >Pour les autres valeurs prises en charge par `datasetFileType`, consultez la documentation de référence sur les API .
 
 
@@ -2185,7 +2185,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Requête**
 
-+++Création d’un flux de données de jeu de données vers la destination SFTP - Requête
++++Créer un flux de données de jeu de données vers la destination SFTP - Requête
 
 Notez les lignes surlignées avec des commentaires intégrés dans l’exemple de requête, qui fournissent des informations supplémentaires. Supprimez les commentaires insérés dans la requête lorsque vous copiez-collez la requête dans votre terminal de votre choix.
 
@@ -2250,7 +2250,7 @@ Pour vérifier les exécutions d’un flux de données, utilisez l’API des ex�
 
 +++Obtenir les exécutions de flux de données - Requête
 
-Dans la requête de récupération des exécutions de flux de données, ajoutez en tant que paramètre de requête l’identifiant de flux de données que vous avez obtenu à l’étape précédente, lors de la création du flux de données.
+Dans la requête de récupération des exécutions de flux de données, ajoutez en tant que paramètre de requête l’identifiant de flux de données obtenu à l’étape précédente, lors de la création du flux de données.
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/runs?property=flowId==eb54b3b3-3949-4f12-89c8-64eafaba858f' \
@@ -2313,7 +2313,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 >[!ENDSHADEBOX]
 
-Vous trouverez des informations sur la variable [divers paramètres renvoyés par l’API d’exécution de flux de données](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Dataflow-runs/operation/getFlowRuns) dans la documentation de référence de l’API.
+Vous trouverez des informations sur la variable [divers paramètres renvoyés par l’API Dataflow run](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Dataflow-runs/operation/getFlowRuns) dans la documentation de référence de l’API.
 
 ## Vérifier l’exportation réussie d’un jeu de données {#verify}
 
@@ -2331,7 +2331,7 @@ La présence de ces fichiers dans votre emplacement de stockage confirme que l�
 
 #### Fichiers de jeux de données compressés {#compressed-dataset-files}
 
-À l’étape [créer une connexion cible](#create-target-connection), vous pouvez sélectionner les fichiers de jeu de données exportés à compresser.
+À l’étape [créer une connexion cible ;](#create-target-connection), vous pouvez sélectionner les fichiers de jeu de données exportés à compresser.
 
 Notez la différence de format de fichier entre les deux types de fichiers, lorsqu’ils sont compressés :
 
@@ -2340,11 +2340,11 @@ Notez la différence de format de fichier entre les deux types de fichiers, lors
 
 ## Gestion des erreurs d’API {#api-error-handling}
 
-Les points de terminaison d’API de ce tutoriel suivent les principes généraux des messages d’erreur de l’API Experience Platform. Voir [Codes d’état d’API](/help/landing/troubleshooting.md#api-status-codes) et [erreurs d’en-tête de requête](/help/landing/troubleshooting.md#request-header-errors) dans le guide de dépannage de Platform pour plus d’informations sur l’interprétation des réponses d’erreur.
+Les points de terminaison d’API de ce tutoriel suivent les principes généraux des messages d’erreur de l’API d’Experience Platform. Voir [Codes d’état d’API](/help/landing/troubleshooting.md#api-status-codes) et [erreurs d’en-tête de requête](/help/landing/troubleshooting.md#request-header-errors) dans le guide de dépannage de Platform pour plus d’informations sur l’interprétation des réponses d’erreur.
 
 ## Étapes suivantes {#next-steps}
 
-En suivant ce tutoriel, vous avez réussi à connecter Platform à l’une de vos destinations de stockage par lots dans le cloud et à configurer un flux de données vers la destination correspondante pour exporter les jeux de données. Consultez les pages suivantes pour plus d’informations, telles que la modification des flux de données existants à l’aide de l’API Flow Service :
+En suivant ce tutoriel, vous avez réussi à connecter Platform à l’une de vos destinations de stockage dans le cloud par lots préférées et à configurer un flux de données vers la destination correspondante pour exporter les jeux de données. Consultez les pages suivantes pour plus d’informations, telles que la modification des flux de données existants à l’aide de l’API Flow Service :
 
 * [Présentation des destinations](../home.md)
 * [Présentation du catalogue des destinations](../catalog/overview.md)

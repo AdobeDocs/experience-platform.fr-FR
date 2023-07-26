@@ -3,10 +3,10 @@ title: (Version bêta) Exporter des jeux de données vers des destinations d’e
 type: Tutorial
 description: Découvrez comment exporter des jeux de données d’Adobe Experience Platform vers l’emplacement d’espace de stockage de votre choix.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: 6627953aba4f1cd665c3d5c4bc8711c48064374f
+source-git-commit: fadc1f5f3842c9c2e39b6204dd455621ec84ad68
 workflow-type: tm+mt
-source-wordcount: '1425'
-ht-degree: 84%
+source-wordcount: '1421'
+ht-degree: 82%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 84%
 
 Cet article explique le workflow requis pour l’exportation [jeux de données](/help/catalog/datasets/overview.md) de Adobe Experience Platform à l’emplacement de stockage de votre choix dans le cloud, par exemple [!DNL Amazon S3], emplacements SFTP ou [!DNL Google Cloud Storage] en utilisant l’interface utilisateur de l’Experience Platform.
 
-Vous pouvez également utiliser les API Experience Platform pour exporter des jeux de données. Lisez le [tutoriel sur l’API d’exportation de jeux de données](/help/destinations/api/export-datasets.md) pour plus d’informations.
+Vous pouvez également utiliser les API Experience Platform pour exporter des jeux de données. Lisez la section [tutoriel sur l’API d’exportation de jeux de données](/help/destinations/api/export-datasets.md) pour plus d’informations.
 
 ## Destinations prises en charge {#supported-destinations}
 
@@ -50,7 +50,7 @@ Pour exporter des jeux de données vers des destinations d’espace de stockage,
 
 ### Autorisations nécessaires {#permissions}
 
-Pour exporter des jeux de données, vous avez besoin des [autorisations de contrôle d’accès](/help/access-control/home.md#permissions) **[!UICONTROL Gérer les destinations]**, **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer des destinations]**, et **[!UICONTROL Gérer et activer des destinations de jeu de données]**. Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+Pour exporter des jeux de données, vous avez besoin de l’événement **[!UICONTROL Affichage des destinations]** et **[!UICONTROL Gestion et activation des destinations de jeu de données]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
 Pour vous assurer que vous disposez des autorisations nécessaires pour exporter des jeux de données et que la destination prend en charge l’exportation de jeux de données, parcourez le catalogue des destinations. Si une destination comporte un contrôle **[!UICONTROL Activer]** ou **[!UICONTROL Exporter des jeux de données]**, vous disposez des autorisations appropriées.
 
