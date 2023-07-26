@@ -1,13 +1,13 @@
 ---
 title: Ingestion de données chiffrées
-description: Découvrez comment ingérer des fichiers chiffrés par le biais de sources par lots de stockage dans le cloud à l’aide de l’API.
+description: Découvrez comment ingérer des fichiers chiffrés par le biais de sources de lots d’espaces de stockage à l’aide de l’API.
 hide: true
 hidefromtoc: true
 exl-id: 83a7a154-4f55-4bf0-bfef-594d5d50f460
 source-git-commit: f0e518459eca72d615b380d11cabee6c1593dd9a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1017'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -43,7 +43,7 @@ Pour plus d’informations sur la manière d’effectuer des appels vers les API
 
 ### Extensions de fichiers prises en charge pour les fichiers chiffrés
 
-La liste des extensions de fichier prises en charge pour les fichiers chiffrés est la suivante :
+La liste des extensions de fichier prises en charge pour les fichiers chiffrés est la suivante :
 
 * .csv
 * .tsv
@@ -62,7 +62,7 @@ La liste des extensions de fichier prises en charge pour les fichiers chiffrés 
 
 >[!NOTE]
 >
->L’ingestion de fichiers chiffrés dans les sources Adobe Experience Platform prend en charge openPGP et non pas une version propriétaire spécifique de PGP.
+>L’ingestion de fichiers chiffrés dans les sources d’Adobe Experience Platform prend en charge openPGP et non pas une version propriétaire spécifique de PGP.
 
 ## Créer une paire de clés de chiffrement {#create-encryption-key-pair}
 
