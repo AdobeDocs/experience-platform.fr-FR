@@ -5,9 +5,9 @@ breadcrumb-title: Guide de Query Service
 user-guide-description: Utilisez le langage SQL standard pour interroger les données du lac de données dans Experience Platform.
 feature: Queries
 source-git-commit: 9fe547e6270b4ede3151158e3b474f8c3dfd2297
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '278'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
