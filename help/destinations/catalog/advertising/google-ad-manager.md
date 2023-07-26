@@ -75,7 +75,7 @@ Si vous souhaitez créer votre première destination avec [!DNL Google Ad Manage
 La liste autorisée est obligatoire avant de configurer votre première destination [!DNL Google Ad Manager] dans Platform. Veillez à terminer le processus de liste autorisée décrit ci-dessous, avant de créer votre destination.
 
 1. Suivez les étapes décrites dans la section [Documentation de Google Ad Manager](https://support.google.com/admanager/answer/3289669?hl=fr) pour ajouter Adobe en tant que plateforme de gestion des données liée (DMP).
-2. Dans le [!DNL Google Ad Manager] , accédez à **[!UICONTROL Administration]** > **[!UICONTROL Paramètres globaux]** > **[!UICONTROL Paramètres réseau]**, puis activez la variable **[!UICONTROL Accès API]** curseur.
+2. Dans le [!DNL Google Ad Manager] interface, accédez à **[!UICONTROL Administration]** > **[!UICONTROL Paramètres globaux]** > **[!UICONTROL Paramètres réseau]**, puis activez la variable **[!UICONTROL Accès API]** curseur.
 
 ## Se connecter à la destination {#connect}
 
@@ -90,17 +90,17 @@ Pour vous connecter à cette destination, procédez comme décrit dans le [tutor
 >[!CONTEXTUALHELP]
 >id="platform_destinations_gam_appendSegmentID"
 >title="Ajout d’un ID d’audience au nom de l’audience"
->abstract="Sélectionnez cette option pour que le nom de l’audience dans Google Ad Manager inclue l’ID d’audience de l’Experience Platform, comme suit : `Audience Name (Audience ID)`"
+>abstract="Sélectionnez cette option pour que le nom de l’audience dans Google Ad Manager inclue l’ID de l’audience de l’Experience Platform, comme suit : `Audience Name (Audience ID)`"
 
 Pendant la [configuration](../../ui/connect-destination.md) de cette destination, vous devez fournir les informations suivantes :
 
 * **[!UICONTROL Nom]** : renseignez le nom de votre choix pour cette destination.
 * **[!UICONTROL Description]** : facultatif. Vous pouvez, par exemple, mentionner la campagne pour laquelle vous utilisez cette destination.
-* **[!UICONTROL Identifiant de compte]**: Saisissez votre [!DNL Audience Link ID] de votre [!DNL Google] compte . Il s’agit d’un identifiant spécifique associé à votre [!DNL Google Ad Manager] réseau (et non votre [!DNL Network code]). Vous pouvez trouver ceci sous **[!UICONTROL Admin > Paramètres globaux]** dans le [!DNL Google Ad Manager] .
+* **[!UICONTROL Identifiant de compte]**: entrez votre [!DNL Audience Link ID] de votre [!DNL Google] compte . Il s’agit d’un identifiant spécifique associé à votre [!DNL Google Ad Manager] réseau (et non votre [!DNL Network code]). Vous pouvez trouver ceci sous **[!UICONTROL Admin > Paramètres globaux]** dans le [!DNL Google Ad Manager] .
 * **[!UICONTROL Type de compte]** : sélectionnez une option, en fonction de votre compte avec Google :
    * Utiliser `DFP by Google` pour [!DNL DoubleClick] pour les éditeurs
    * Utiliser `AdX buyer` pour [!DNL Google AdX]
-* **[!UICONTROL Ajout d’un ID d’audience au nom de l’audience]**: Sélectionnez cette option pour que le nom de l’audience dans Google Ad Manager inclue l’ID d’audience de l’Experience Platform, comme suit : `Audience Name (Audience ID)`.
+* **[!UICONTROL Ajout d’un ID d’audience au nom de l’audience]**: sélectionnez cette option pour que le nom de l’audience dans Google Ad Manager inclue l’ID d’audience de l’Experience Platform, comme suit : `Audience Name (Audience ID)`.
 
 >[!NOTE]
 >
