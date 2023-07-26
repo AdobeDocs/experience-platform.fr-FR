@@ -1,39 +1,32 @@
 ---
-keywords: Experience Platform;accueil;rubriques les plus consultées;Phoenix;phoenix
-solution: Experience Platform
-title: Présentation du connecteur source Phoenix
-description: Découvrez comment connecter Phoenix à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur.
+title: Présentation de la source Phoenix
+description: Découvrez comment connecter votre compte Phoenix à Adobe Experience Platform à l’aide des API ou de l’interface utilisateur.
+last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: 45e6ef18-a0b7-4bb2-b099-b2a878e96637
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: efffd6ce1ed541ce20ee6500e42165465f2fa6a0
 workflow-type: tm+mt
-source-wordcount: '244'
-ht-degree: 57%
+source-wordcount: '186'
+ht-degree: 32%
 
 ---
 
-# (Version bêta) [!DNL Phoenix] connector
+# [!DNL Phoenix]
 
->[!NOTE]
->
->Le [!DNL Phoenix] Le connecteur est en version bêta. Voir [Présentation des sources](../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs libellés en version bêta.
-
-Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les bases de données, etc.
-
-[!DNL Experience Platform] prend en charge l’ingestion de données provenant d’une base de données tierce. [!DNL Platform] peuvent se connecter à différents types de bases de données, telles que les entrepôts relationnels, NoSQL ou de données. La prise en charge des fournisseurs de base de données inclut [!DNL Phoenix].
+Les sources Adobe Experience Platform prennent en charge l’ingestion de données provenant de bases de données tierces, telles que [[!DNL Phoenix]](https://phoenix.apache.org/index.html). Ce document fournit des informations prérequises avant de connecter votre [!DNL Phoenix] compte par le biais de [!DNL Flow Service] API ou l’interface utilisateur Experience Platform.
 
 ## Liste autorisée d’adresses IP
 
 Une liste d’adresses IP doit être ajoutée à une liste autorisée avant d’utiliser les connecteurs source. Si vous n’ajoutez pas vos adresses IP spécifiques à une région à votre liste autorisée, des erreurs ou une absence de performances peuvent se produire lors de l’utilisation de sources. Voir la page [Liste autorisée d’adresses IP](../../ip-address-allow-list.md) pour plus d’informations.
 
-La documentation ci-dessous fournit des informations sur la connexion d’[!DNL Phoenix] à à l’aide d’API ou de l’interface utilisateur :[!DNL Platform]
+La documentation ci-dessous fournit des informations sur la connexion. [!DNL Phoenix] pour les Experience Platform à l’aide d’API ou de l’interface utilisateur :
 
-## Connecter [!DNL Phoenix] à [!DNL Platform] à lʼaide dʼAPI
+## Connexion [!DNL Phoenix] Experience Platform à l’aide d’API
 
-- [Création d’une connexion de base Phoenix à l’aide de l’API Flow Service](../../tutorials/api/create/databases/phoenix.md)
-- [Explorer des tableaux de données à l’aide de l’API Flow Service](../../tutorials/api/explore/tabular.md)
-- [Création d’un flux de données pour une source de base de données à l’aide de l’API Flow Service](../../tutorials/api/collect/database-nosql.md)
+* [Création d’une connexion de base Phoenix à l’aide de l’API Flow Service](../../tutorials/api/create/databases/phoenix.md)
+* [Explorer des tableaux de données à l’aide de l’API Flow Service](../../tutorials/api/explore/tabular.md)
+* [Création d’un flux de données pour une source de base de données à l’aide de l’API Flow Service](../../tutorials/api/collect/database-nosql.md)
 
-## Connecter [!DNL Phoenix] à [!DNL Platform] à lʼaide de l’interface utilisateur
+## Connexion [!DNL Phoenix] Experience Platform à l’aide de l’interface utilisateur
 
-- [Création d’une connexion source Phoenix dans l’interface utilisateur](../../tutorials/ui/create/databases/phoenix.md)
-- [Création d’un flux de données pour une connexion à la source de la base de données dans l’interface utilisateur](../../tutorials/ui/dataflow/databases.md)
+* [Connectez-vous à [!DNL Phoenix] compte utilisant l’interface utilisateur de l’Experience Platform](../../tutorials/ui/create/databases/phoenix.md)
+* [Création d’un flux de données pour une connexion source de base de données dans l’interface utilisateur](../../tutorials/ui/dataflow/databases.md)
