@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform;accueil;rubriques les plus consultées;flow service;
 title: Réessayer les exécutions de flux de données ayant échoué
-description: Ce tutoriel décrit les étapes à suivre pour tenter de relancer des exécutions de flux de données ayant échoué à l’aide de l’API Flow Service
+description: Découvrez comment réessayer les exécutions de flux de données ayant échoué à l’aide de l’API Flow Service.
 exl-id: b9abc737-9a57-47e6-98ab-6d6c44f38d17
-source-git-commit: a9887535b12b8c4aeb39bb5a6646da88db4f0308
+source-git-commit: d4dba26a151619a555a69287e182ff8398cca7b4
 workflow-type: tm+mt
-source-wordcount: '258'
-ht-degree: 42%
+source-wordcount: '273'
+ht-degree: 38%
 
 ---
 
@@ -22,8 +21,8 @@ Ce tutoriel décrit les étapes à suivre pour tenter de relancer des exécution
 
 Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform :
 
-* [Sources ](../../home.md): [!DNL Experience Platform]permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services [!DNL Platform].
-* [Sandbox](../../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
+* [Sources](../../home.md)[!DNL Platform] : Experience  permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, de libeller et d’améliorer les données entrantes à l’aide des services de Platform.
+* [Sandbox](../../../sandboxes/home.md)[!DNL Platform] : Experience  fournit des sandbox virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
 ### Utiliser les API Platform
 
@@ -45,6 +44,10 @@ POST /runs/{RUN_ID}/action?op=re-trigger
 | `op` | Opération qui détermine l’action à effectuer. Pour réessayer une exécution de flux de données ayant échoué, vous devez indiquer `re-trigger` comme votre opération. |
 
 **Requête**
+
+>[!NOTE]
+>
+>Vous pouvez utiliser la variable `re-trigger` pour essayer de relancer les exécutions de flux de données réussies, étant donné que l’exécution de flux de données réussie ne comporte aucun enregistrement ingéré.
 
 La requête suivante tente de relancer l’exécution du flux de données pour l’ID d’exécution. `4fb0418e-1804-45d6-8d56-dd51f05c0baf`.
 
