@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Guide de l’interface utilisateur des jeux de données
 description: Découvrez comment exécuter des actions courantes lors de l’utilisation de jeux de données dans l’interface utilisateur de Adobe Experience Platform.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 127cc88735fdffa9227bdb0919ae086dbe76184d
+source-git-commit: 141037fd844c78e98785ea2246026ac120961dd5
 workflow-type: tm+mt
-source-wordcount: '2548'
-ht-degree: 19%
+source-wordcount: '2745'
+ht-degree: 17%
 
 ---
 
@@ -22,9 +22,9 @@ Ce guide d’utilisation nécessite une compréhension professionnelle des compo
 * [Jeu de données](overview.md) : la structure de stockage et de gestion pour la persistance des données dans [!DNL Experience Platform].
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md) : cadre normalisé selon lequel [!DNL Experience Platform] organise les données de l’expérience client.
    * [Principes de base de la composition des schémas](../../xdm/schema/composition.md) : découvrez les blocs de création de base des schémas XDM, y compris les principes clés et les bonnes pratiques en matière de composition de schémas.
-   * [Éditeur de schéma](../../xdm/tutorials/create-schema-ui.md): Découvrez comment créer vos propres schémas XDM personnalisés à l’aide du [!DNL Schema Editor] dans le [!DNL Platform] de l’interface utilisateur.
+   * [Éditeur de schéma](../../xdm/tutorials/create-schema-ui.md): découvrez comment créer vos propres schémas XDM personnalisés à l’aide du [!DNL Schema Editor] dans la fonction [!DNL Platform] de l’interface utilisateur.
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md) : fournit un profil de consommateur unifié en temps réel, basé sur des données agrégées provenant de plusieurs sources.
-* [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md): Veillez à la conformité aux réglementations, aux restrictions et aux politiques concernant l’utilisation des données clients.
+* [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md): garantissez la conformité aux réglementations, aux restrictions et aux politiques concernant l’utilisation des données clients.
 
 ## Affichage des jeux de données {#view-datasets}
 
@@ -50,19 +50,19 @@ Sélectionnez le nom d’un jeu de données dans la [!UICONTROL Parcourir] pour 
 
 ## Actions de jeux de données intégrés {#inline-actions}
 
-L’interface utilisateur des jeux de données propose désormais des collections d’actions intégrées pour chaque jeu de données disponible. Sélectionnez les points de suspension d’un jeu de données que vous souhaitez gérer pour afficher les options disponibles dans un menu contextuel. Les actions disponibles sont les suivantes : [[!UICONTROL Prévisualisation d’un jeu de données]](#preview), [[!UICONTROL Gestion des données et des étiquettes d’accès]](#manage-and-enforce-data-governance), [[!UICONTROL Activer le profil unifié]](#enable-profile), [[!UICONTROL Gestion des balises]](#add-tags), et [[!UICONTROL Supprimer]](#delete). Vous trouverez plus d’informations sur ces actions disponibles dans les sections respectives.
+L’interface utilisateur des jeux de données propose désormais des collections d’actions intégrées pour chaque jeu de données disponible. Sélectionnez les points de suspension (...) d’un jeu de données que vous souhaitez gérer pour afficher les options disponibles dans un menu contextuel. Les actions disponibles sont les suivantes : [[!UICONTROL Prévisualisation d’un jeu de données]](#preview), [[!UICONTROL Gestion des données et des étiquettes d’accès]](#manage-and-enforce-data-governance), [[!UICONTROL Activer le profil unifié]](#enable-profile), [[!UICONTROL Gestion des balises]](#add-tags), [[!UICONTROL Déplacer vers des dossiers]](#move-to-folders), et [[!UICONTROL Supprimer]](#delete). Vous trouverez plus d’informations sur ces actions disponibles dans les sections respectives.
 
 ### Ajout de balises de jeu de données {#add-tags}
 
-Ajoutez des balises personnalisées créées pour organiser les jeux de données et améliorer les fonctionnalités de recherche, de filtrage et de tri. Dans la [!UICONTROL Parcourir] de l’onglet [!UICONTROL Jeux de données] workspace, sélectionnez les points de suspension d’un jeu de données à gérer, suivi de **[!UICONTROL Gestion des balises]** dans le menu déroulant.
+Ajoutez des balises personnalisées créées pour organiser les jeux de données et améliorer les fonctionnalités de recherche, de filtrage et de tri. Dans la [!UICONTROL Parcourir] de la [!UICONTROL Jeux de données] workspace, sélectionnez les points de suspension d’un jeu de données à gérer, suivi de **[!UICONTROL Gestion des balises]** dans le menu déroulant.
 
 ![L’onglet Parcourir de l’espace de travail des jeux de données avec les options Points de suspension et Gérer les balises mises en surbrillance pour le jeu de données sélectionné.](../images/datasets/user-guide/manage-tags.png)
 
-Le [!UICONTROL Gestion des balises] s’affiche. Entrez une brève description pour créer une balise personnalisée ou faites votre choix parmi une balise préexistante pour étiqueter votre jeu de données. Cliquez sur **[!UICONTROL Enregistrer]** pour confirmer les paramètres.
+La variable [!UICONTROL Gestion des balises] s’affiche. Entrez une brève description pour créer une balise personnalisée ou faites votre choix parmi une balise préexistante pour étiqueter votre jeu de données. Cliquez sur **[!UICONTROL Enregistrer]** pour confirmer les paramètres.
 
 ![La boîte de dialogue Gérer les balises avec les balises personnalisées est mise en surbrillance.](../images/datasets/user-guide/manage-tags-dialog.png)
 
-Le [!UICONTROL Gestion des balises] La boîte de dialogue peut également supprimer des balises existantes d’un jeu de données. Il vous suffit de sélectionner le &quot;x&quot; en regard de la balise que vous souhaitez supprimer et de sélectionner **[!UICONTROL Enregistrer]**.
+La variable [!UICONTROL Gestion des balises] dialog peut également supprimer des balises existantes d’un jeu de données. Il vous suffit de sélectionner le &quot;x&quot; en regard de la balise que vous souhaitez supprimer et de sélectionner **[!UICONTROL Enregistrer]**.
 
 Une fois qu’une balise a été ajoutée à un jeu de données, les jeux de données peuvent être filtrés en fonction de la balise correspondante. Consultez la section sur la façon de [filtrer les jeux de données par balises](#enable-profile) pour plus d’informations.
 
@@ -110,13 +110,13 @@ Vous pouvez filtrer les jeux de données en fonction du schéma qui définit leu
 
 ## Tri des jeux de données par date de création {#sort}
 
-Jeux de données dans [!UICONTROL Parcourir] peut être triée par date ascendante ou descendante. Sélectionnez la [!UICONTROL Créé] ou [!UICONTROL Dernière mise à jour] en-têtes de colonne pour alterner entre croissant et décroissant. Une fois la colonne sélectionnée, une flèche vers le haut ou vers le bas s’affiche sur le côté de l’en-tête de colonne.
+Jeux de données dans [!UICONTROL Parcourir] peut être triée par date ascendante ou descendante. Sélectionnez la variable [!UICONTROL Créé] ou [!UICONTROL Dernière mise à jour] en-têtes de colonne pour alterner entre croissant et décroissant. Une fois la colonne sélectionnée, une flèche vers le haut ou vers le bas s’affiche sur le côté de l’en-tête de colonne.
 
 ![L’onglet Parcourir de l’espace de travail des jeux de données avec la colonne Créé et Dernière mise à jour mise en surbrillance.](../images/datasets/user-guide/ascending-descending-columns.png)
 
 ## Prévisualisation d’un jeu de données {#preview}
 
-Vous pouvez prévisualiser des données d’exemple de jeu de données à partir des deux options intégrées de la variable [!UICONTROL Parcourir] et également [!UICONTROL Activité du jeu de données] vue. Dans la [!UICONTROL Parcourir] , sélectionnez les ellipses en regard du nom du jeu de données que vous souhaitez prévisualiser. Une liste d’options s’affiche. Ensuite, sélectionnez **[!UICONTROL Prévisualisation d’un jeu de données]** dans la liste des options disponibles. Si le jeu de données est vide, le lien de prévisualisation est désactivé et indique à la place que l’aperçu n’est pas disponible.
+Vous pouvez prévisualiser des données d’exemple de jeu de données à partir des deux options intégrées de la variable [!UICONTROL Parcourir] et également [!UICONTROL Activité du jeu de données] vue. Dans la [!UICONTROL Parcourir] , sélectionnez les ellipses (...) en regard du nom du jeu de données que vous souhaitez prévisualiser. Une liste d’options s’affiche. Ensuite, sélectionnez **[!UICONTROL Prévisualisation d’un jeu de données]** dans la liste des options disponibles. Si le jeu de données est vide, le lien de prévisualisation est désactivé et indique à la place que l’aperçu n’est pas disponible.
 
 ![L’onglet Parcourir de l’espace de travail des jeux de données avec les points de suspension et l’option Prévisualiser le jeu de données mise en surbrillance pour le jeu de données sélectionné.](../images/datasets/user-guide/preview-dataset-option.png)
 
@@ -158,7 +158,7 @@ L’étape **[!UICONTROL Configurer le jeu de données]** apparaît. Attribuez u
 
 ![Les détails de configuration du jeu de données sont insérés. Cela inclut des détails tels que le nom et la description du jeu de données.](../images/datasets/user-guide/configure-dataset-schema.png)
 
-Les jeux de données peuvent être filtrés à partir de la liste des jeux de données disponibles dans l’interface utilisateur à l’aide du filtre de schéma. Consultez la section sur la façon de [filtrer les jeux de données par schéma](#filter-by-schema) pour plus d’informations.
+Les jeux de données peuvent être filtrés à partir de la liste des jeux de données disponibles dans l’interface utilisateur avec le filtre de schéma. Consultez la section sur la façon de [filtrer les jeux de données par schéma](#filter-by-schema) pour plus d’informations.
 
 ### Création d’un jeu de données à partir d’un fichier CSV {#csv}
 
@@ -185,9 +185,9 @@ Chaque jeu de données a la possibilité d’enrichir les profils clients des do
 * Le schéma comporte au moins un attribut défini comme propriété d’identité.
 * Le schéma comporte au moins une propriété d’identité définie comme identité principale.
 
-Pour plus d’informations sur l’activation d’un schéma pour [!DNL Profile], reportez-vous à la section [Guide d’utilisation de l’éditeur de schémas](../../xdm/tutorials/create-schema-ui.md).
+Pour plus d’informations sur l’activation d’un schéma pour [!DNL Profile], voir [Guide d’utilisation de l’éditeur de schémas](../../xdm/tutorials/create-schema-ui.md).
 
-Vous pouvez activer un jeu de données pour Profile à partir des deux options intégrées de la variable [!UICONTROL Parcourir] et également [!UICONTROL Activité du jeu de données] vue. Dans la [!UICONTROL Parcourir] de l’onglet [!UICONTROL Jeux de données] workspace, sélectionnez les points de suspension d’un jeu de données que vous souhaitez activer pour Profile. Une liste d’options s’affiche. Ensuite, sélectionnez **[!UICONTROL Activer le profil unifié]** dans la liste des options disponibles.
+Vous pouvez activer un jeu de données pour Profile à partir des deux options intégrées de la variable [!UICONTROL Parcourir] et également [!UICONTROL Activité du jeu de données] vue. Dans la [!UICONTROL Parcourir] de la [!UICONTROL Jeux de données] workspace, sélectionnez les points de suspension d’un jeu de données que vous souhaitez activer pour Profile. Une liste d’options s’affiche. Ensuite, sélectionnez **[!UICONTROL Activer le profil unifié]** dans la liste des options disponibles.
 
 ![L’onglet Parcourir de l’espace de travail des jeux de données avec les ellipses et Activer le profil unifié mis en surbrillance.](../images/datasets/user-guide/enable-for-profile.png)
 
@@ -203,13 +203,33 @@ Les jeux de données qui ont été activés pour Profile peuvent également êtr
 
 ## Gestion et application de la gouvernance des données sur un jeu de données {#manage-and-enforce-data-governance}
 
-Vous pouvez gérer les étiquettes de gouvernance des données d’un jeu de données en sélectionnant les options intégrées de la variable [!UICONTROL Parcourir] . Sélectionnez les ellipses en regard du nom du jeu de données que vous souhaitez gérer, suivies de **[!UICONTROL Gestion des données et des étiquettes d’accès]** dans le menu déroulant.
+Vous pouvez gérer les étiquettes de gouvernance des données d’un jeu de données en sélectionnant les options intégrées de la variable [!UICONTROL Parcourir] . Sélectionnez les points de suspension (...) en regard du nom du jeu de données que vous souhaitez gérer, suivi de **[!UICONTROL Gestion des données et des étiquettes d’accès]** dans le menu déroulant.
 
 Les libellés d’utilisation des données, appliqués au niveau du schéma, vous permettent de classer les jeux de données et les champs en fonction des stratégies d’utilisation qui s’appliquent à ces données. Voir [Présentation de la gouvernance des données](../../data-governance/home.md) pour en savoir plus sur les étiquettes, ou reportez-vous à la section [guide d’utilisation des libellés d’utilisation des données](../../data-governance/labels/overview.md) pour obtenir des instructions sur la manière d’appliquer des libellés aux schémas pour la propagation aux jeux de données.
 
+### Déplacer vers des dossiers {#move-to-folders}
+
+Vous pouvez placer des jeux de données dans des dossiers pour une meilleure gestion des jeux de données. Pour déplacer un jeu de données dans un dossier, sélectionnez les ellipses (...) en regard du nom du jeu de données que vous souhaitez gérer, suivies de **[!UICONTROL Déplacer vers le dossier]** dans le menu déroulant.
+
+![La variable [!UICONTROL Jeux de données] tableau de bord avec les ellipses et [!UICONTROL Déplacer vers le dossier] surlignée.](../images/datasets/user-guide/move-to-folder.png)
+
+La variable [!UICONTROL Déplacer] la boîte de dialogue dataset to folder s’affiche. Sélectionnez le dossier vers lequel vous souhaitez déplacer l’audience, puis sélectionnez **[!UICONTROL Déplacer]**. Une notification contextuelle vous informe que le déplacement du jeu de données a réussi.
+
+![La variable [!UICONTROL Déplacer] Boîte de dialogue du jeu de données [!UICONTROL Déplacer] surlignée.](../images/datasets/user-guide/move-dialog.png)
+
+>
+>
+>Vous pouvez également créer des dossiers directement à partir de la boîte de dialogue Déplacer le jeu de données . Pour créer un dossier, sélectionnez l’icône de création de dossier (![Icône Créer un dossier .](../images/datasets/user-guide/create-folder-icon.png)) en haut à droite de la boîte de dialogue.
+>
+>![La variable [!UICONTROL Déplacer] Boîte de dialogue du jeu de données avec l’icône de création de dossier mise en surbrillance.](/help/catalog/images/datasets/user-guide/create-folder.png)
+
+Une fois que le jeu de données se trouve dans un dossier, vous pouvez choisir d’afficher uniquement les jeux de données appartenant à un dossier spécifique. Pour ouvrir la structure de dossiers, sélectionnez l’icône Afficher les dossiers (![Icône Afficher les dossiers](../images/datasets/user-guide/show-folders-icon.png)). Sélectionnez ensuite le dossier de votre choix pour afficher tous les jeux de données associés.
+
+![La variable [!UICONTROL Jeux de données] tableaux de bord avec la structure de dossiers des jeux de données affichée, l’icône afficher les dossiers et un dossier sélectionné en surbrillance.](../images/datasets/user-guide/folder-structure.png)
+
 ## Suppression d’un jeu de données {#delete}
 
-Vous pouvez supprimer un jeu de données des actions en ligne du jeu de données dans le [!UICONTROL Parcourir] ou dans le coin supérieur droit de la [!UICONTROL Activité du jeu de données] vue. Dans la [!UICONTROL Parcourir] sélectionnez les ellipses en regard du nom du jeu de données à supprimer. Une liste d’options s’affiche. Ensuite, sélectionnez **[!UICONTROL Supprimer]** dans le menu déroulant.
+Vous pouvez supprimer un jeu de données des actions en ligne du jeu de données dans le [!UICONTROL Parcourir] ou dans le coin supérieur droit de la [!UICONTROL Activité du jeu de données] vue. Dans la [!UICONTROL Parcourir] sélectionnez les ellipses (...) en regard du nom du jeu de données que vous souhaitez supprimer. Une liste d’options s’affiche. Ensuite, sélectionnez **[!UICONTROL Supprimer]** dans le menu déroulant.
 
 ![L’onglet Parcourir de l’espace de travail des jeux de données avec les points de suspension et l’option Supprimer mise en surbrillance pour le jeu de données sélectionné.](../images/datasets/user-guide/inline-delete-dataset.png)
 
@@ -249,7 +269,7 @@ Si vous souhaitez supprimer le lot, sélectionnez **[!UICONTROL Supprimer le lot
 
 ## Étapes suivantes
 
-Ce guide d’utilisation a fourni des instructions sur l’exécution d’actions courantes lors de l’utilisation de jeux de données dans la variable [!DNL Experience Platform] de l’interface utilisateur. Pour les étapes à suivre [!DNL Platform] workflows impliquant des jeux de données, reportez-vous aux tutoriels suivants :
+Ce guide d’utilisation a fourni des instructions sur l’exécution d’actions courantes lors de l’utilisation de jeux de données dans le [!DNL Experience Platform] de l’interface utilisateur. Pour les étapes à suivre [!DNL Platform] workflows impliquant des jeux de données, reportez-vous aux tutoriels suivants :
 
 * [Création d’un jeu de données à l’aide d’API](create.md)
 * [Interrogation des données d’un jeu de données à l’aide de l’API Data Access](../../data-access/home.md)
