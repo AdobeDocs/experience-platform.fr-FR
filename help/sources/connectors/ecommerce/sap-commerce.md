@@ -2,10 +2,8 @@
 title: Présentation de la source SAP Commerce
 description: Découvrez comment connecter SAP Commerce à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur.
 last-substantial-update: 2023-07-26T00:00:00Z
-hide: true
-hidefromtoc: true
 badge: Version Beta
-source-git-commit: 99edb8b2bcd4225235038e966a367d91375c961a
+source-git-commit: a848ea11e388678ade780fd81ef3ff6a3477b741
 workflow-type: tm+mt
 source-wordcount: '394'
 ht-degree: 17%
@@ -20,7 +18,7 @@ ht-degree: 17%
 
 [[!DNL SAP Commerce]](https://www.sap.com/india/products/acquired-brands/what-is-hybris.html), une solution de plateforme de commerce électronique basée sur le cloud pour les entreprises B2B et B2C est disponible dans le cadre du portefeuille d’expérience client SAP. [[!DNL SAP] Facturation d’abonnement](https://www.sap.com/products/financial-management/subscription-billing.html) est un produit appartenant au portefeuille qui permet une gestion complète du cycle de vie des abonnements avec des expériences de vente et de paiement simplifiées grâce à des intégrations normalisées.
 
-Le [!DNL SAP Commerce] source vous permet d’ingérer des informations sur les clients et les contacts dans Platform à partir du [[!DNL SAP] Facturation d’abonnement](https://www.sap.com/products/financial-management/subscription-billing.html) Points de terminaison de l’API des partenaires commerciaux ci-dessous :
+La variable [!DNL SAP Commerce] source vous permet d’ingérer des informations sur les clients et les contacts dans Platform à partir du [[!DNL SAP] Facturation d’abonnement](https://www.sap.com/products/financial-management/subscription-billing.html) Points de terminaison de l’API des partenaires commerciaux ci-dessous :
 
 * [Clients](https://api.sap.com/api/BusinessPartner_APIs/path/GET_customers)
 * [Contacts](https://api.sap.com/api/BusinessPartner_APIs/path/GET_contacts)
@@ -35,9 +33,9 @@ Il peut être nécessaire d’ajouter une liste d’adresses IP à une liste aut
 
 Avant d’apporter votre [!DNL SAP Commerce] pour Experience Platform, vous devez d’abord vous assurer que vous disposez des éléments suivants :
 
-* A [!DNL SAP Subscription Billing] compte . Si vous ne disposez pas déjà d’un compte de facturation valide, contactez votre [!DNL SAP] gestionnaire de compte. Reportez-vous à la section [[!DNL SAP] Configuration de la plateforme](https://help.sap.com/doc/5fd179965d5145fbbe7f2a7aa1272338/latest/en-US/PlatformConfiguration.pdf) pour plus de détails.
+* A [!DNL SAP Subscription Billing] compte . Si vous ne disposez pas déjà d’un compte de facturation valide, contactez votre [!DNL SAP] gestionnaire de compte. Voir [[!DNL SAP] Configuration de la plateforme](https://help.sap.com/doc/5fd179965d5145fbbe7f2a7aa1272338/latest/en-US/PlatformConfiguration.pdf) pour plus de détails.
 
-* [!DNL SAP] clé de service. Le [!DNL SAP] la clé de service vous permet d’accéder à la [!DNL SAP Subscription Billing] API via Experience Platform. [!DNL SAP Commerce] requiert ce qui suit :
+* [!DNL SAP] clé de service. La variable [!DNL SAP] la clé de service vous permet d’accéder à la [!DNL SAP Subscription Billing] API via Experience Platform. [!DNL SAP Commerce] requiert ce qui suit :
    * Identifiant client
    * Secret client
    * URL. Le modèle d’URL est le suivant : `https://subscriptionbilling.authentication.eu10.hana.ondemand.com`. Cette valeur sera utilisée ultérieurement pour obtenir des valeurs pour `region` et `tokenEndpoint` lorsque vous [Créer une connexion de base](../../tutorials/api/create/ecommerce/sap-commerce.md#base-connection) à l’aide de l’API ou lorsque vous [Connectez-vous à [!DNL SAP Commerce] account](../../tutorials/ui/create/ecommerce/sap-commerce.md#connect-account) via l’interface utilisateur de Platform.
@@ -76,4 +74,4 @@ La documentation ci-dessous fournit des informations sur la connexion d’[!DNL 
 
 * [Créer une connexion source et un flux de données à importer [!DNL SAP Commerce] données vers Platform à l’aide d’API](../../tutorials/api/create/ecommerce/sap-commerce.md).
 * [Connectez-vous à [!DNL SAP Commerce] compte à Experience Platform à l’aide de l’interface utilisateur](../../tutorials/ui/create/ecommerce/sap-commerce.md).
-* [Création d’un flux de données pour une source à l’aide de l’interface utilisateur](../../tutorials/ui/dataflow/ecommerce.md)
+* [Créer un flux de données pour une source à l’aide de l’interface utilisateur](../../tutorials/ui/dataflow/ecommerce.md)

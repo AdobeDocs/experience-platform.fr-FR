@@ -1,23 +1,21 @@
 ---
-title: Création d’une connexion source et d’un flux de données pour SAP Commerce à l’aide de l’API Flow Service
+title: Créez une connexion source et un flux de données pour SAP Commerce à l’aide de l’API Flow Service
 description: Découvrez comment créer une connexion source et un flux de données pour importer les données SAP Commerce vers Experience Platform à l’aide de l’API Flow Service.
-hide: true
-hidefromtoc: true
 badge: Version Beta
-source-git-commit: 99edb8b2bcd4225235038e966a367d91375c961a
+source-git-commit: a848ea11e388678ade780fd81ef3ff6a3477b741
 workflow-type: tm+mt
 source-wordcount: '2358'
 ht-degree: 55%
 
 ---
 
-# Création d’une connexion source et d’un flux de données pour [!DNL SAP Commerce] utilisation de l’API Flow Service
+# Créer une connexion source et un flux de données pour [!DNL SAP Commerce] utilisation de l’API Flow Service
 
 >[!NOTE]
 >
 >La source [!DNL SAP Commerce] est en version Beta. Voir [présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de sources étiquetées bêta.
 
-Le tutoriel suivant vous guide tout au long des étapes de création d’un [!DNL SAP Commerce] connexion source et flux de données à importer [[!DNL SAP] Facturation d’abonnement](https://www.sap.com/products/financial-management/subscription-billing.html) les contacts et les données client vers Adobe Experience Platform à l’aide de la variable [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Le tutoriel suivant décrit les étapes à suivre pour créer un [!DNL SAP Commerce] connexion source et flux de données à importer [[!DNL SAP] Facturation d’abonnement](https://www.sap.com/products/financial-management/subscription-billing.html) les contacts et les données client vers Adobe Experience Platform à l’aide de la variable [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Prise en main
 
@@ -39,9 +37,9 @@ Pour vous connecter [!DNL SAP Commerce] pour Experience Platform, vous devez fou
 | `tokenEndpoint` | La valeur de `url` à partir de la clé de service, la variable `https://subscriptionbilling.authentication.eu10.hana.ondemand.com`. |
 | `region` | Emplacement de votre centre de données. La région est présente dans la variable `url` et a une valeur similaire à `eu10` ou `us10`. Par exemple, si la variable `url` is `https://subscriptionbilling.authentication.eu10.hana.ondemand.com`, vous aurez alors besoin de `eu10`. |
 
-Pour plus d’informations sur ces informations d’identification, reportez-vous à la section [[!DNL SAP Commerce] documentation](https://help.sap.com/docs/CLOUD_TO_CASH_OD/987aec876092428f88162e438acf80d6/c5fcaf96daff4c7a8520188e4d8a1843.html).
+Pour plus d’informations sur ces informations d’identification, reportez-vous au [[!DNL SAP Commerce] documentation](https://help.sap.com/docs/CLOUD_TO_CASH_OD/987aec876092428f88162e438acf80d6/c5fcaf96daff4c7a8520188e4d8a1843.html).
 
-## Connexion [!DNL SAP Commerce] vers Platform à l’aide de [!DNL Flow Service] API
+## Connexion [!DNL SAP Commerce] vers Platform à l’aide de la méthode [!DNL Flow Service] API
 
 Les étapes suivantes décrivent les étapes à suivre pour authentifier votre [!DNL SAP Commerce] source, créer une connexion source et créer un flux de données pour importer vos comptes et vos données de contacts dans Experience Platform.
 
@@ -131,7 +129,7 @@ Lors de l’exécution de requêtes GET pour explorer la structure et le contenu
 | `{PREVIEW}` | Valeur booléenne qui définit si le contenu de la connexion prend en charge la prévisualisation. |
 | `{SOURCE_PARAMS}` | Définit les paramètres du fichier source que vous souhaitez importer dans Platform. Pour récupérer le type de format accepté pour `{SOURCE_PARAMS}`, vous devez coder l’intégralité de la chaîne  en base64. <br> [!DNL SAP Commerce] prend en charge plusieurs API. Selon le type d’objet que vous utilisez, transmettez l’un des types suivants : <ul><li>`customers`</li><li>`contacts`</li></ul> |
 
-Le [!DNL SAP Commerce] source prend en charge plusieurs API. Selon le type d’objet utilisé pour l’envoi de la requête, procédez comme suit :
+La variable [!DNL SAP Commerce] source prend en charge plusieurs API. Selon le type d’objet utilisé pour l’envoi de la requête, procédez comme suit :
 
 >[!NOTE]
 >
@@ -663,7 +661,7 @@ curl -X POST \
 | `baseConnectionId` | Identifiant de connexion de base de [!DNL SAP Commerce]. Cet identifiant a été généré lors d’une étape précédente. |
 | `connectionSpec.id` | Identifiant de spécification de connexion correspondant à votre source. |
 | `data.format` | Format des données [!DNL SAP Commerce] que vous souhaitez ingérer. Actuellement, le format de données `json` est le seul à être pris en charge. |
-| `object_type` | [!DNL SAP Commerce] prend en charge plusieurs API. Pour l’API contacts, la variable `object_type` doit être défini sur `contacts`. |
+| `object_type` | [!DNL SAP Commerce] prend en charge plusieurs API. Pour l’API de contacts, la variable `object_type` doit être défini sur `contacts`. |
 | `path` | Cette valeur sera la même que celle que vous sélectionnez pour *`object_type`*. |
 
 +++
@@ -987,7 +985,7 @@ Une réponse réussie renvoie les détails du mappage nouvellement créé, y com
 
 ### Créer un flux {#flow}
 
-La dernière étape pour obtenir des données de [!DNL SAP Commerce] à Platform consiste à créer un flux de données. Vous disposez à présent des valeurs requises suivantes :
+La dernière étape pour obtenir des données de [!DNL SAP Commerce] vers Platform consiste à créer un flux de données. Vous disposez à présent des valeurs requises suivantes :
 
 * [ID de connexion source](#source-connection)
 * [ID de connexion cible](#target-connection)
@@ -1076,7 +1074,7 @@ Une fois votre flux de données créé, vous pouvez surveiller les données ing�
 
 ### Mettre à jour votre flux de données
 
-Mettez à jour les détails de votre flux de données, tels que son nom et sa description, ainsi que son planning d’exécution et les jeux de mappages associés, en envoyant une requête PATCH à la variable `/flows` point d’entrée [!DNL Flow Service] API, tout en fournissant l’identifiant de votre flux de données. Lors de l’exécution d’une requête de PATCH, vous devez fournir l’unique de votre flux de données `etag` dans le `If-Match` en-tête . Pour consulter des exemples complets d’API, reportez-vous au guide sur [mise à jour des flux de données sources à l’aide de l’API](../../update-dataflows.md).
+Mettez à jour les détails de votre flux de données, tels que son nom et sa description, ainsi que son planning d’exécution et les jeux de mappages associés, en envoyant une requête PATCH à la variable `/flows` point d’entrée de [!DNL Flow Service] API, tout en fournissant l’identifiant de votre flux de données. Lors de l’exécution d’une requête de PATCH, vous devez fournir l’unique de votre flux de données `etag` dans le `If-Match` en-tête . Pour consulter des exemples complets d’API, reportez-vous au guide sur [mise à jour des flux de données de sources à l’aide de l’API](../../update-dataflows.md).
 
 ### Mettre à jour votre compte
 
