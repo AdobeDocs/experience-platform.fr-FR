@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;accueil;rubriques les plus consultées;mapper csv;mapper le fichier csv;mapper le fichier csv à xdm;mapper csv à xdm;guide de l’interface utilisateur;mappeur;mappage;champs de mappage;fonctions de mappage;
+keywords: Experience Platform;accueil;rubriques les plus consultées;mapper csv;mapper le fichier csv;mapper le fichier csv à xdm;mapper csv à xdm;guide de l’interface utilisateur;mappeur;mappage;champs de mappage;fonctions de mappage
 solution: Experience Platform
 title: Fonctions de mappage de prép de données
 description: Ce document présente les fonctions de mappage utilisées avec Data Prep.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: a89faf5f1d1befdc057cd872fcd190703c620c2d
+source-git-commit: c9fb9320c7ef1da5aba41b3d01bca44b07ec6c17
 workflow-type: tm+mt
-source-wordcount: '4916'
-ht-degree: 14%
+source-wordcount: '5221'
+ht-degree: 13%
 
 ---
 
@@ -45,7 +45,7 @@ Les tableaux suivants répertorient toutes les fonctions de mappage prises en ch
 
 | Fonction | Description | Paramètres | Syntaxe | Expression | Exemple de résultat |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
-| concat | Concatène les chaînes données. | <ul><li>STRING: Chaînes qui seront concaténées.</li></ul> | concat(STRING_1, STRING_2) | concat(&quot;Hi, &quot;, &quot;there&quot;, &quot;!&quot;) | `"Hi, there!"` |
+| concat | Concatène les chaînes données. | <ul><li>STRING : chaînes qui seront concaténées.</li></ul> | concat(STRING_1, STRING_2) | concat(&quot;Hi, &quot;, &quot;there&quot;, &quot;!&quot;) | `"Hi, there!"` |
 | explode | Divise la chaîne sur base d’un regex et renvoie un tableau de parties. Peut éventuellement inclure une expression régulière pour fractionner la chaîne. Par défaut, la division est résolue sur &quot;,&quot;. Les délimiteurs suivants **need** à échapper avec `\`: `+, ?, ^, \|, ., [, (, {, ), *, $, \` Si vous incluez plusieurs caractères comme délimiteur, le délimiteur est traité comme un délimiteur à plusieurs caractères. | <ul><li>STRING: **Obligatoire** Chaîne à fractionner.</li><li>REGEX : *Facultatif* Expression régulière pouvant être utilisée pour fractionner la chaîne.</li></ul> | explode(STRING, REGEX) | explode(&quot;Hi, there!&quot;, &quot; &quot;) | `["Hi,", "there"]` |
 | instr | Renvoie l’emplacement/l’index d’une sous-chaîne. | <ul><li>INPUT : **Obligatoire** Chaîne en cours de recherche.</li><li>SUBSTRING : **Obligatoire** Sous-chaîne recherchée dans la chaîne.</li><li>START_POSITION : *Facultatif* Emplacement où commencer la recherche dans la chaîne.</li><li>OCCURRENCE : *Facultatif* La énième occurrence à rechercher à partir de la position de départ. Par défaut, elle est définie sur 1. </li></ul> | instr(INPUT, SUBSTRING, START_POSITION, OCCURRENCE) | instr(&quot;adobe.com&quot;, &quot;com&quot;) | 6 |
 | replacestr | Remplace la chaîne de recherche si elle est présente dans la chaîne d’origine. | <ul><li>INPUT : **Obligatoire** Chaîne d’entrée.</li><li>TO_FIND : **Obligatoire** Chaîne à rechercher dans l’entrée.</li><li>TO_REPLACE : **Obligatoire** Chaîne qui remplacera la valeur dans &quot;TO_FIND&quot;.</li></ul> | replacester(INPUT, TO_FIND, TO_REPLACE) | replacestr(&quot;This is a string re test&quot;, &quot;re&quot;, &quot;replace&quot;) | &quot;This is a string replace test&quot; |
@@ -61,8 +61,8 @@ Les tableaux suivants répertorient toutes les fonctions de mappage prises en ch
 | ltrim | Supprime l’espace blanc du début de la chaîne. | <ul><li>STRING: **Obligatoire** Chaîne dont vous souhaitez supprimer l’espace blanc.</li></ul> | ltrim(STRING) | ltrim(&quot; hello&quot;) | &quot;hello&quot; |
 | rtrim | Supprime l’espace blanc de la fin de la chaîne. | <ul><li>STRING: **Obligatoire** Chaîne dont vous souhaitez supprimer l’espace blanc.</li></ul> | rtrim(STRING) | rtrim(&quot;hello&quot;) | &quot;hello&quot; |
 | trim | Supprime l’espace blanc du début et de la fin de la chaîne. | <ul><li>STRING: **Obligatoire** Chaîne dont vous souhaitez supprimer l’espace blanc.</li></ul> | trim(STRING) | trim(&quot; hello &quot;) | &quot;hello&quot; |
-| est égal à | Compare deux chaînes pour confirmer si elles sont égales. Cette fonction est sensible à la casse. | <ul><li>STRING1 : **Obligatoire** Première chaîne à comparer.</li><li>STRING2 : **Obligatoire** La deuxième chaîne que vous souhaitez comparer.</li></ul> | STRING1. &#x200B;equals( &#x200B; STRING2) | &quot;string1&quot;. &#x200B;est égal à &#x200B;(&quot;STRING1&quot;) | false |
-| equalsIgnoreCase | Compare deux chaînes pour confirmer si elles sont égales. Cette fonction est **not** sensible à la casse. | <ul><li>STRING1 : **Obligatoire** Première chaîne à comparer.</li><li>STRING2 : **Obligatoire** La deuxième chaîne que vous souhaitez comparer.</li></ul> | STRING1. &#x200B;equalsIgnoreCase &#x200B;(STRING2) | &quot;string1&quot;. &#x200B;equalsIgnoreCase &#x200B;(&quot;STRING1) | vrai |
+| est égal à | Compare deux chaînes pour confirmer si elles sont égales. Cette fonction respecte la casse. | <ul><li>STRING1 : **Obligatoire** Première chaîne à comparer.</li><li>STRING2 : **Obligatoire** La deuxième chaîne à comparer.</li></ul> | STRING1. &#x200B;equals( &#x200B; STRING2) | &quot;string1&quot;. &#x200B;est égal à &#x200B;(&quot;STRING1&quot;) | false |
+| equalsIgnoreCase | Compare deux chaînes pour confirmer si elles sont égales. Cette fonction est **not** sensible à la casse. | <ul><li>STRING1 : **Obligatoire** Première chaîne à comparer.</li><li>STRING2 : **Obligatoire** La deuxième chaîne à comparer.</li></ul> | STRING1. &#x200B;equalsIgnoreCase &#x200B;(STRING2) | &quot;string1&quot;. &#x200B;equalsIgnoreCase &#x200B;(&quot;STRING1) | vrai |
 
 {style="table-layout:auto"}
 
@@ -102,8 +102,8 @@ Les tableaux suivants répertorient toutes les fonctions de mappage prises en ch
 | get_url_protocol | Renvoie le protocole de l’URL donnée. Si l’entrée n’est pas valide, elle renvoie null. | <ul><li>URL : **Obligatoire** URL à partir de laquelle le protocole doit être extrait.</li></ul> | get_url_protocol &#x200B;(URL) | get_url_protocol(&quot;https://platform &#x200B; .adobe.com/home&quot;) | https |
 | get_url_host | Renvoie l’hôte de l’URL donnée. Si l’entrée n’est pas valide, elle renvoie null. | <ul><li>URL : **Obligatoire** URL à partir de laquelle l’hôte doit être extrait.</li></ul> | get_url_host &#x200B;(URL) | get_url_host &#x200B;(&quot;https://platform &#x200B; .adobe.com/home&quot;) | platform.adobe.com |
 | get_url_port | Renvoie le port de l’URL donnée. Si l’entrée n’est pas valide, elle renvoie null. | <ul><li>URL : **Obligatoire** URL à partir de laquelle le port doit être extrait.</li></ul> | get_url_port(URL) | get_url_port &#x200B;(&quot;sftp://example.com//home/ &#x200B; joe/employee.csv&quot;) | 22 |
-| get_url_path | Renvoie le chemin d’accès de l’URL donnée. Par défaut, le chemin complet est renvoyé. | <ul><li>URL : **Obligatoire** URL à partir de laquelle le chemin d’accès doit être extrait.</li><li>FULL_PATH : *Facultatif* Une valeur boolean qui détermine si le chemin complet est renvoyé. S’il est défini sur false, seule la fin du chemin est renvoyée.</li></ul> | get_url_path &#x200B;(URL, FULL_PATH) | get_url_path &#x200B;(&quot;sftp://example.com// &#x200B; home/joe/employee.csv&quot;) | &quot;//home/joe/ &#x200B; employee.csv&quot; |
-| get_url_query_str | Renvoie la chaîne de requête d’une URL donnée sous la forme d’un mappage de nom de chaîne de requête et de valeur de chaîne de requête. | <ul><li>URL : **Obligatoire** URL à partir de laquelle vous essayez d’obtenir la chaîne de requête.</li><li>ANCRAGE : **Obligatoire** Détermine ce qui sera fait avec l’ancre dans la chaîne de requête. Peut être l’une des trois valeurs suivantes : &quot;keep&quot; (conserver), &quot;remove&quot; (supprimer) ou &quot;append&quot; (ajouter).<br><br>Si la valeur est &quot;preserve&quot;, l’ancre est associée à la valeur renvoyée.<br>Si la valeur est &quot;remove&quot;, l’ancre est supprimée de la valeur renvoyée.<br>Si la valeur est &quot;append&quot;, l’ancre est renvoyée sous la forme d’une valeur distincte.</li></ul> | get_url_query_str &#x200B;(URL, ANCHOR) | get_url_query_str &#x200B;(&quot;foo://example.com:8042 &#x200B;/over/here?name= &#x200B; furet#nose&quot;, &quot;keep&quot;)<br>get_url_query_str &#x200B;(&quot;foo://example.com:8042 &#x200B;/over/here?name= &#x200B; furet#nose&quot;, &quot;remove&quot;)<br>get_url_query_str &#x200B;(&quot;foo://example.com &#x200B;:8042/over/here &#x200B;?name=ferret#nose&quot;, &quot;append&quot;) | `{"name": "ferret#nose"}`<br>`{"name": "ferret"}`<br>`{"name": "ferret", "_anchor_": "nose"}` |
+| get_url_path | Renvoie le chemin d’accès de l’URL donnée. Par défaut, le chemin d’accès complet est renvoyé. | <ul><li>URL : **Obligatoire** URL à partir de laquelle le chemin d’accès doit être extrait.</li><li>FULL_PATH : *Facultatif* Une valeur boolean qui détermine si le chemin complet est renvoyé. S’il est défini sur false, seule la fin du chemin est renvoyée.</li></ul> | get_url_path &#x200B;(URL, FULL_PATH) | get_url_path &#x200B;(&quot;sftp://example.com// &#x200B; home/joe/employee.csv&quot;) | &quot;//home/joe/ &#x200B; employee.csv&quot; |
+| get_url_query_str | Renvoie la chaîne de requête d’une URL donnée sous la forme d’un mappage de nom de chaîne de requête et de valeur de chaîne de requête. | <ul><li>URL : **Obligatoire** URL à partir de laquelle vous essayez d’obtenir la chaîne de requête.</li><li>ANCRAGE : **Obligatoire** Détermine ce qui sera fait avec l’ancre dans la chaîne de requête. Il peut s’agir de l’une des trois valeurs suivantes : &quot;keep&quot; (conserver), &quot;remove&quot; (supprimer) ou &quot;append&quot; (ajouter).<br><br>Si la valeur est &quot;preserve&quot;, l’ancre est associée à la valeur renvoyée.<br>Si la valeur est &quot;remove&quot;, l’ancre est supprimée de la valeur renvoyée.<br>Si la valeur est &quot;append&quot;, l’ancre est renvoyée sous la forme d’une valeur distincte.</li></ul> | get_url_query_str &#x200B;(URL, ANCHOR) | get_url_query_str &#x200B;(&quot;foo://example.com:8042 &#x200B;/over/here?name= &#x200B; furet#nose&quot;, &quot;keep&quot;)<br>get_url_query_str &#x200B;(&quot;foo://example.com:8042 &#x200B;/over/here?name= &#x200B; furet#nose&quot;, &quot;remove&quot;)<br>get_url_query_str &#x200B;(&quot;foo://example.com &#x200B;:8042/over/here &#x200B;?name=ferret#nose&quot;, &quot;append&quot;) | `{"name": "ferret#nose"}`<br>`{"name": "ferret"}`<br>`{"name": "ferret", "_anchor_": "nose"}` |
 | get_url_encoded | Cette fonction utilise une URL comme entrée et remplace ou code les caractères spéciaux avec des caractères ASCII. Pour plus d’informations sur les caractères spéciaux, veuillez lire la section [liste de caractères spéciaux](#special-characters) dans l’annexe du présent document. | <ul><li>URL : **Obligatoire** L’URL d’entrée avec des caractères spéciaux que vous souhaitez remplacer ou coder avec des caractères ASCII.</li></ul> | get_url_encoded(URL) | get_url_encoded(&quot;https</span>://example.com/partner_asia-pacifique_2022&quot;) | https%3A%2F%2Fexample.com%2Fpartner_asia-pacifique_2022 |
 | get_url_décoded | Cette fonction utilise une URL comme entrée et décode les caractères ASCII en caractères spéciaux.  Pour plus d’informations sur les caractères spéciaux, veuillez lire la section [liste de caractères spéciaux](#special-characters) dans l’annexe du présent document. | <ul><li>URL : **Obligatoire** URL d’entrée contenant des caractères ASCII que vous souhaitez décoder en caractères spéciaux.</li></ul> | get_url_décoded(URL) | get_url_décoded(&quot;https%3A%2F%2Fexample.com%2Fpartner_asia-pacifique_2022&quot;) | https</span>://example.com/partner_asia-pacifique_2022 |
 
@@ -117,8 +117,8 @@ Les tableaux suivants répertorient toutes les fonctions de mappage prises en ch
 
 | Fonction | Description | Paramètres | Syntaxe | Expression | Exemple de résultat |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
-| now | Récupère l’heure actuelle. |  | now() | now() | `2021-10-26T10:10:24Z` |
-| timestamp | Récupère l’heure Unix actuelle. |  | timestamp() | timestamp() | 1571850624571 |
+| now | Récupère l’heure actuelle. | | now() | now() | `2021-10-26T10:10:24Z` |
+| timestamp | Récupère l’heure Unix actuelle. | | timestamp() | timestamp() | 1571850624571 |
 | format | Formate la date d’entrée selon un format spécifié. | <ul><li>DATE : **Obligatoire** La date d’entrée, en tant qu’objet ZonedDateTime, que vous souhaitez mettre en forme.</li><li>FORMAT : **Obligatoire** Le format vers lequel vous souhaitez que la date soit modifiée.</li></ul> | format(DATE, FORMAT) | format(2019-10-23T11:24:00+00:00, &quot;aaaa-MM-jj HH:mm:ss&quot;) | `2019-10-23 11:24:35` |
 | dformat | Convertit une date et une heure en chaîne de date selon un format spécifié. | <ul><li>TIMESTAMP : **Obligatoire** Horodatage que vous souhaitez mettre en forme. Il est écrit en millisecondes.</li><li>FORMAT : **Obligatoire** Format que vous souhaitez que l’horodatage soit défini.</li></ul> | dformat(TIMESTAMP, FORMAT) | dformat(1571829875000, &quot;aaaa-MM-jj-T&#39;HH:mm:ss.SSSX&quot;) | `2019-10-23T11:24:35.000Z` |
 | date | Convertit une chaîne de date en objet ZonedDateTime (format ISO 8601). | <ul><li>DATE : **Obligatoire** Chaîne représentant la date.</li><li>FORMAT : **Obligatoire** Chaîne représentant le format de la date source.**Remarque :** Cela signifie que **not** représentent le format dans lequel vous souhaitez convertir la chaîne de date. </li><li>DEFAULT_DATE : **Obligatoire** La date par défaut renvoyée, si la date fournie est nulle.</li></ul> | date(DATE, FORMAT, DEFAULT_DATE) | date(&quot;2019-10-23 11:24&quot;, &quot;aaaa-MM-jj HH:mm&quot;, now()) | `2019-10-23T11:24:00Z` |
@@ -126,9 +126,9 @@ Les tableaux suivants répertorient toutes les fonctions de mappage prises en ch
 | date | Convertit une chaîne de date en objet ZonedDateTime (format ISO 8601). | <ul><li>DATE : **Obligatoire** Chaîne représentant la date.</li></ul> | date(DATE) | date(&quot;2019-10-23 11:24&quot;) | &quot;2019-10-23T11:24:00Z&quot; |
 | date_part | Récupère les parties de la date. Les valeurs de composant suivantes sont prises en charge : <br><br>&quot;year&quot;<br>&quot;aaaa&quot;<br>&quot;yy&quot;<br><br>&quot;quart&quot;<br>&quot;qq&quot;<br>&quot;q&quot;<br><br>&quot;month&quot;<br>&quot;mm&quot;<br>&quot;m&quot;<br><br>&quot;dayofyear&quot;<br>&quot;dy&quot;<br>&quot;y&quot;<br><br>&quot;day&quot;<br>&quot;dd&quot;<br>&quot;d&quot;<br><br>&quot;week&quot;<br>&quot;ss&quot;<br>&quot;w&quot;<br><br>&quot;weekday&quot;<br>&quot;dw&quot;<br>&quot;w&quot;<br><br>&quot;hour&quot;<br>&quot;hh&quot;<br>&quot;hh24&quot;<br>&quot;hh12&quot;<br><br>&quot;minute&quot;<br>&quot;mi&quot;<br>&quot;n&quot;<br><br>&quot;second&quot;<br>&quot;ss&quot;<br>&quot;s&quot;<br><br>&quot;milliseconde&quot;<br>&quot;SSS&quot; | <ul><li>COMPOSANT : **Obligatoire** Chaîne représentant la partie de la date. </li><li>DATE : **Obligatoire** La date, dans un format standard.</li></ul> | date_part &#x200B;(COMPONENT, DATE) | date_part(&quot;MM&quot;, date(&quot;2019-10-17 11:55:12&quot;)) | 10 |
 | set_date_part | Remplace un composant à une date donnée. Les composants suivants sont acceptés : <br><br>&quot;year&quot;<br>&quot;yyyy&quot;<br>&quot;yy&quot;<br><br>&quot;month&quot;<br>&quot;mm&quot;<br>&quot;m&quot;<br><br>&quot;day&quot;<br>&quot;dd&quot;<br>&quot;d&quot;<br><br>&quot;hour&quot;<br>&quot;hh&quot;<br><br>&quot;minute&quot;<br>&quot;mi&quot;<br>&quot;n&quot;<br><br>&quot;second&quot;<br>&quot;ss&quot;<br>&quot;s&quot; | <ul><li>COMPOSANT : **Obligatoire** Chaîne représentant la partie de la date. </li><li>VALEUR : **Obligatoire** La valeur à définir pour le composant pour une date donnée.</li><li>DATE : **Obligatoire** La date, dans un format standard.</li></ul> | set_date_part &#x200B;(COMPONENT, VALUE, DATE) | set_date_part(&quot;m&quot;, 4, date(&quot;2016-11-09T11:44:44.797&quot;) | &quot;2016-04-09T11:44:44Z&quot; |
-| make_date_time | Crée une date à partir de parties. Cette fonction peut également être induite à l’aide de make_timestamp. | <ul><li>ANNÉE : **Obligatoire** L&#39;année, écrite en quatre chiffres.</li><li>MOIS : **Obligatoire** Le mois. Les valeurs autorisées sont comprises entre 1 et 12.</li><li>JOUR : **Obligatoire** Le jour. Les valeurs autorisées sont comprises entre 1 et 31.</li><li>HEURE : **Obligatoire** L&#39;heure. Les valeurs autorisées sont comprises entre 0 et 23.</li><li>MINUTE : **Obligatoire** La minute. Les valeurs autorisées sont comprises entre 0 et 59.</li><li>NANOSECOND : **Obligatoire** Les valeurs de nanoseconde. Les valeurs autorisées sont comprises entre 0 et 999999999.</li><li>TIMEZONE : **Obligatoire** Fuseau horaire de la date et de l’heure.</li></ul> | make_date_time &#x200B;(ANNÉE, MOIS, JOUR, HEURE, MINUTE, SECONDE, NANOSECOND, TIMEZONE) | make_date_time &#x200B;(2019, 10, 17, 11, 55, 12, 999, &quot;Amérique/Los_Angeles&quot;) | `2019-10-17T11:55:12Z` |
+| make_date_time | Crée une date à partir de parties. Cette fonction peut également être induite à l’aide de make_timestamp. | <ul><li>ANNÉE : **Obligatoire** L&#39;année, écrite en quatre chiffres.</li><li>MOIS : **Obligatoire** Le mois. Les valeurs autorisées sont comprises entre 1 et 12.</li><li>JOUR : **Obligatoire** Le jour. Les valeurs autorisées sont comprises entre 1 et 31.</li><li>HEURE : **Obligatoire** L&#39;heure. Les valeurs autorisées sont comprises entre 0 et 23.</li><li>MINUTE : **Obligatoire** La minute. Les valeurs autorisées sont comprises entre 0 et 59.</li><li>NANOSECOND : **Obligatoire** Les valeurs de nanoseconde. Les valeurs autorisées sont 0 à 999999999.</li><li>TIMEZONE : **Obligatoire** Fuseau horaire de la date et de l’heure.</li></ul> | make_date_time &#x200B;(ANNÉE, MOIS, JOUR, HEURE, MINUTE, SECONDE, NANOSECOND, TIMEZONE) | make_date_time &#x200B;(2019, 10, 17, 11, 55, 12, 999, &quot;Amérique/Los_Angeles&quot;) | `2019-10-17T11:55:12Z` |
 | zone_date_to_utc | Convertit une date de n’importe quel fuseau horaire en date en UTC. | <ul><li>DATE : **Obligatoire** La date que vous essayez de convertir.</li></ul> | zone_date_to_utc &#x200B;(DATE) | `zone_date_to_utc&#x200B;(2019-10-17T11:55:&#x200B;12 PST` | `2019-10-17T19:55:12Z` |
-| zone_date_to_zone | Convertit une date d’un fuseau horaire en un autre fuseau horaire. | <ul><li>DATE : **Obligatoire** La date que vous essayez de convertir.</li><li>ZONE : **Obligatoire** Fuseau horaire auquel vous essayez de convertir la date.</li></ul> | zone_date_to_zone &#x200B;(DATE, ZONE) | `zone_date_to_utc&#x200B;(now(), "Europe/Paris")` | `2021-10-26T15:43:59Z` |
+| zone_date_to_zone | Convertit une date d’un fuseau horaire en un autre. | <ul><li>DATE : **Obligatoire** La date que vous essayez de convertir.</li><li>ZONE : **Obligatoire** Fuseau horaire auquel vous essayez de convertir la date.</li></ul> | zone_date_to_zone &#x200B;(DATE, ZONE) | `zone_date_to_utc&#x200B;(now(), "Europe/Paris")` | `2021-10-26T15:43:59Z` |
 
 {style="table-layout:auto"}
 
@@ -143,11 +143,14 @@ Les tableaux suivants répertorient toutes les fonctions de mappage prises en ch
 | is_empty | Vérifie si un objet est vide ou non. | <ul><li>INPUT : **Obligatoire** L’objet que vous essayez de vérifier est vide.</li></ul> | is_empty(INPUT) | `is_empty([1, null, 2, 3])` | false |
 | array_to_object | Crée une liste d’objets. | <ul><li>INPUT : **Obligatoire** Groupement de paires clé-tableau.</li></ul> | array_to_object(INPUT) | `arrays_to_objects('sku', explode("id1\|id2", '\\\|'), 'price', [22.5,14.35])` | ```[{ "sku": "id1", "price": 22.5 }, { "sku": "id2", "price": 14.35 }]``` |
 | to_object | Crée un objet basé sur les paires clé/valeur plate données. | <ul><li>INPUT : **Obligatoire** Liste plate de paires clé/valeur.</li></ul> | to_object(INPUT) | to_object &#x200B;(&quot;firstName&quot;, &quot;John&quot;, &quot;lastName&quot;, &quot;Doe&quot;) | `{"firstName": "John", "lastName": "Doe"}` |
-| str_to_object | Crée un objet à partir de la chaîne d’entrée. | <ul><li>STRING: **Obligatoire** Chaîne analysée pour créer un objet.</li><li>VALUE_DELIMITER: *Facultatif* Délimiteur qui sépare un champ de la valeur. Le délimiteur par défaut est `:`.</li><li>FIELD_DELIMITER : *Facultatif* Délimiteur qui sépare les paires valeur-champ. Le délimiteur par défaut est `,`.</li></ul> | str_to_object &#x200B;(STRING, VALUE_DELIMITER, FIELD_DELIMITER) **Remarque**: Vous pouvez utiliser la variable `get()` fonction avec `str_to_object()` pour récupérer les valeurs des clés dans la chaîne. | <ul><li>Exemple #1 : str_to_object(&quot;firstName - John ; lastName - ; - 123 345 7890&quot;, &quot;-&quot;, &quot;;&quot;)</li><li>Exemple #2 : str_to_object(&quot;firstName - John ; lastName - ; phone - 123 456 7890&quot;, &quot;-&quot;, &quot;;&quot;).get(&quot;firstName&quot;)</li></ul> | <ul><li>Exemple #1 :`{"firstName": "John", "lastName": "Doe", "phone": "123 456 7890"}`</li><li>Exemple #2 : &quot;John&quot;</li></ul> |
-| contains_key | Vérifie si l’objet existe dans les données source. **Remarque :** Cette fonction remplace le `is_set()` fonction . | <ul><li>INPUT : **Obligatoire** Chemin à vérifier s’il existe dans les données source.</li></ul> | contains_key(INPUT) | contains_key(&quot;evars.evar.field1&quot;) | vrai |
-| nullify | Définit la valeur de l’attribut sur `null`. Vous devez l’utiliser lorsque vous ne souhaitez pas copier le champ dans le schéma cible. |  | nullify() | nullify() | `null` |
-| get_keys | Analyse les paires clé/valeur et renvoie toutes les clés. | <ul><li>OBJECT : **Obligatoire** Objet à partir duquel les clés seront extraites.</li></ul> | get_keys(OBJECT) | get_keys({&quot;book1&quot;: &quot;Fierté et préjugé&quot;, &quot;livre2&quot; : &quot;1984&quot;}) | `["book1", "book2"]` |
-| get_values | Analyse les paires clé/valeur et renvoie la valeur de la chaîne, en fonction de la clé donnée. | <ul><li>STRING: **Obligatoire** Chaîne à analyser.</li><li>CLÉ : **Obligatoire** Clé pour laquelle la valeur doit être extraite.</li><li>VALUE_DELIMITER: **Obligatoire** Délimiteur qui sépare le champ de la valeur. Si l’une des variables `null` ou une chaîne vide est fournie, cette valeur est `:`.</li><li>FIELD_DELIMITER : *Facultatif* Délimiteur qui sépare les paires champ-valeur. Si l’une des variables `null` ou une chaîne vide est fournie, cette valeur est `,`.</li></ul> | get_values(STRING, KEY, VALUE_DELIMITER, FIELD_DELIMITER) | get_values(\&quot;firstName - John , lastName - Cena , phone - 555 420 8692\&quot;, \&quot;firstName\&quot;, \&quot;-\&quot;, \&quot;,\&quot;) | John |
+| str_to_object | Crée un objet à partir de la chaîne d’entrée. | <ul><li>STRING: **Obligatoire** Chaîne analysée pour créer un objet.</li><li>VALUE_DELIMITER: *Facultatif* Délimiteur qui sépare un champ de la valeur. Le délimiteur par défaut est `:`.</li><li>FIELD_DELIMITER : *Facultatif* Délimiteur qui sépare les paires valeur-champ. Le délimiteur par défaut est `,`.</li></ul> | str_to_object &#x200B;(STRING, VALUE_DELIMITER, FIELD_DELIMITER) **Remarque**: vous pouvez utiliser la variable `get()` fonction avec `str_to_object()` pour récupérer les valeurs des clés dans la chaîne. | <ul><li>Exemple #1 : str_to_object(&quot;firstName - John ; lastName - ; - 123 345 7890&quot;, &quot;-&quot;, &quot;;&quot;)</li><li>Exemple #2 : str_to_object(&quot;firstName - John ; lastName - ; phone - 123 456 7890&quot;, &quot;-&quot;, &quot;;&quot;).get(&quot;firstName&quot;)</li></ul> | <ul><li>Exemple #1 :`{"firstName": "John", "lastName": "Doe", "phone": "123 456 7890"}`</li><li>Exemple #2 : &quot;John&quot;</li></ul> |
+| contains_key | Vérifie si l’objet existe dans les données source. **Remarque :** Cette fonction remplace le `is_set()` de la fonction | <ul><li>INPUT : **Obligatoire** Chemin à vérifier s’il existe dans les données source.</li></ul> | contains_key(INPUT) | contains_key(&quot;evars.evar.field1&quot;) | vrai |
+| nullify | Définit la valeur de l’attribut sur `null`. Vous devez l’utiliser lorsque vous ne souhaitez pas copier le champ dans le schéma cible. | | nullify() | nullify() | `null` |
+| get_keys | Analyse les paires clé/valeur et renvoie toutes les clés. | <ul><li>OBJECT : **Obligatoire** Objet à partir duquel les clés seront extraites.</li></ul> | get_keys(OBJECT) | get_keys({&quot;book1&quot;: &quot;Pride and Prejudices&quot;, &quot;book2&quot;: &quot;1984&quot;}) | `["book1", "book2"]` |
+| get_values | Analyse les paires clé/valeur et renvoie la valeur de la chaîne, en fonction de la clé donnée. | <ul><li>STRING: **Obligatoire** Chaîne que vous souhaitez analyser.</li><li>CLÉ : **Obligatoire** Clé pour laquelle la valeur doit être extraite.</li><li>VALUE_DELIMITER: **Obligatoire** Délimiteur qui sépare le champ de la valeur. Si l’une des `null` ou une chaîne vide est fournie, cette valeur est `:`.</li><li>FIELD_DELIMITER : *Facultatif* Délimiteur qui sépare les paires champ-valeur. Si l’une des `null` ou une chaîne vide est fournie, cette valeur est `,`.</li></ul> | get_values(STRING, KEY, VALUE_DELIMITER, FIELD_DELIMITER) | get_values(\&quot;firstName - John , lastName - Cena , phone - 555 420 8692\&quot;, \&quot;firstName\&quot;, \&quot;-\&quot;, \&quot;,\&quot;) | John |
+| map_get_values | Prend une carte et une entrée clé. Si l’entrée est une clé unique, la fonction renvoie la valeur associée à cette clé. Si l’entrée est un tableau de chaîne, la fonction renvoie toutes les valeurs correspondant aux clés fournies. Si la carte entrante comporte des clés en double, la valeur renvoyée doit dédupliquer les clés et renvoyer des valeurs uniques. | <ul><li>MAP : **Obligatoire** Données de la carte d’entrée.</li><li>CLÉ :  **Obligatoire** La clé peut être une chaîne unique ou un tableau de chaîne. Si un autre type primitif (données/nombre) est fourni, il est traité comme une chaîne.</li></ul> | get_values(MAP, KEY) | Veuillez consulter la [annexe](#map_get_values) pour un exemple de code. | |
+| map_has_keys | Si une ou plusieurs clés d’entrée sont fournies, la fonction renvoie true (vrai). Si un tableau de chaîne est fourni comme entrée, la fonction renvoie true (vrai) sur la première clé trouvée. | <ul><li>MAP :  **Obligatoire** Données de la carte d’entrée</li><li>CLÉ :  **Obligatoire** La clé peut être une chaîne unique ou un tableau de chaîne. Si un autre type primitif (données/nombre) est fourni, il est traité comme une chaîne.</li></ul> | map_has_keys(MAP, KEY) | Veuillez consulter la [annexe](#map_has_keys) pour un exemple de code. | |
+| add_to_map | Accepte au moins deux entrées. Tout nombre de cartes peut être fourni en tant qu’entrées. La préparation de données renvoie une carte unique qui contient toutes les paires clé-valeur de toutes les entrées. Si une ou plusieurs clés sont répétées (dans la même carte ou sur plusieurs cartes), la préparation de données déduplique les clés afin que la première paire clé-valeur persiste dans l’ordre dans lequel elles ont été transmises dans l’entrée. | MAP : **Obligatoire** Données de la carte d’entrée. | add_to_map(MAP 1, MAP 2, MAP 3, etc.) | Veuillez consulter la [annexe](#add_to_map) pour un exemple de code. | |
 
 {style="table-layout:auto"}
 
@@ -164,12 +167,12 @@ Pour plus d’informations sur la fonction de copie d’objet, voir la section [
 | coalesce | Renvoie le premier objet non nul d’un tableau donné. | <ul><li>INPUT : **Obligatoire** Tableau dont vous souhaitez trouver le premier objet non nul.</li></ul> | coalesce(INPUT) | coalesce(null, null, null, &quot;first&quot;, null, &quot;second&quot;) | &quot;first&quot; |
 | first | Récupère le premier élément du tableau donné. | <ul><li>INPUT : **Obligatoire** Le tableau dont vous souhaitez trouver le premier élément.</li></ul> | first(INPUT) | first(&quot;1&quot;, &quot;2&quot;, &quot;3&quot;) | &quot;1&quot; |
 | last | Récupère le dernier élément du tableau donné. | <ul><li>INPUT : **Obligatoire** Le tableau dont vous souhaitez trouver le dernier élément.</li></ul> | last(INPUT) | last(&quot;1&quot;, &quot;2&quot;, &quot;3&quot;) | &quot;3&quot; |
-| add_to_array | Ajoute des éléments à la fin du tableau. | <ul><li>ARRAY : **Obligatoire** Le tableau auquel vous ajoutez des éléments.</li><li>VALEURS : Éléments que vous souhaitez ajouter au tableau.</li></ul> | add_to_array &#x200B;(ARRAY, VALUES) | add_to_array &#x200B;([&#39;a&#39;, &#39;b&#39;], &quot;c&quot;, &quot;d&quot;) | [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;] |
-| join_arrays | Combine les tableaux les uns avec les autres. | <ul><li>ARRAY : **Obligatoire** Le tableau auquel vous ajoutez des éléments.</li><li>VALEURS : Les tableaux que vous souhaitez ajouter au tableau parent.</li></ul> | join_arrays &#x200B;(ARRAY, VALES) | join_arrays &#x200B;([&#39;a&#39;, &#39;b&#39;], [&quot;c&quot;], [&#39;d&#39;, &#39;e&#39;]) | [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;] |
+| add_to_array | Ajoute des éléments à la fin du tableau. | <ul><li>ARRAY : **Obligatoire** Le tableau auquel vous ajoutez des éléments.</li><li>VALEURS : éléments que vous souhaitez ajouter au tableau.</li></ul> | add_to_array &#x200B;(ARRAY, VALUES) | add_to_array &#x200B;([&#39;a&#39;, &#39;b&#39;], &quot;c&quot;, &quot;d&quot;) | [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;] |
+| join_arrays | Combine les tableaux les uns avec les autres. | <ul><li>ARRAY : **Obligatoire** Le tableau auquel vous ajoutez des éléments.</li><li>VALEURS : tableau(s) que vous souhaitez ajouter au tableau parent.</li></ul> | join_arrays &#x200B;(ARRAY, VALES) | join_arrays &#x200B;([&#39;a&#39;, &#39;b&#39;], [&quot;c&quot;], [&#39;d&#39;, &#39;e&#39;]) | [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;] |
 | to_array | Prend une liste d’entrées et la convertit en tableau. | <ul><li>INCLUDE_NULLS : **Obligatoire** Valeur boolean indiquant s’il faut inclure ou non les valeurs nulles dans le tableau de réponse.</li><li>VALEURS : **Obligatoire** Les éléments à convertir en tableau.</li></ul> | to_array &#x200B;(INCLUDE_NULLS, VALUES) | to_array(false, 1, null, 2, 3) | `[1, 2, 3]` |
 | size_of | Renvoie la taille de l’entrée. | <ul><li>INPUT : **Obligatoire** L&#39;objet dont vous essayez de trouver la taille.</li></ul> | size_of(INPUT) | `size_of([1, 2, 3, 4])` | 4 |
 | upsert_array_append | Cette fonction est utilisée pour ajouter tous les éléments du tableau d’entrée entier à la fin du tableau dans Profile. Cette fonction est **only** applicable pendant les mises à jour. Si elle est utilisée dans le contexte d’insertions, cette fonction renvoie l’entrée telle quelle. | <ul><li>ARRAY : **Obligatoire** Tableau à ajouter au tableau dans le profil.</li></ul> | upsert_array_append(ARRAY) | `upsert_array_append([123, 456])` | [123, 456] |
-| upsert_array_replace | Cette fonction est utilisée pour remplacer des éléments d’un tableau. Cette fonction est **only** applicable pendant les mises à jour. Si elle est utilisée dans le contexte d’insertions, cette fonction renvoie l’entrée telle quelle. | <ul><li>ARRAY : **Obligatoire** Tableau à remplacer dans le profil.</li></li> | upsert_array_replace(ARRAY) | `upsert_array_replace([123, 456], 1)` | [123, 456] |
+| upsert_array_replace | Cette fonction est utilisée pour remplacer des éléments d’un tableau. Cette fonction est **only** applicable pendant les mises à jour. Si elle est utilisée dans le contexte d’insertions, cette fonction renvoie l’entrée telle quelle. | <ul><li>ARRAY : **Obligatoire** Le tableau à remplacer dans le profil.</li></li> | upsert_array_replace(ARRAY) | `upsert_array_replace([123, 456], 1)` | [123, 456] |
 
 {style="table-layout:auto"}
 
@@ -234,7 +237,7 @@ Pour plus d’informations sur la fonction de copie d’objet, voir la section [
 
 | Fonction | Description | Paramètres | Syntaxe | Expression | Exemple de résultat |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
-| uuid /<br>guid | Génère un identifiant pseudo-aléatoire. |  | uuid()<br>guid() | uuid()<br>guid() | 7c0267d2-bb74-4e1a-9275-3bf4fcda5f4<br>c7016dc7-3163-43f7-afc7-2e1c9c206333 |
+| uuid /<br>guid | Génère un identifiant pseudo-aléatoire. | | uuid()<br>guid() | uuid()<br>guid() | 7c0267d2-bb74-4e1a-9275-3bf4fcda5f4<br>c7016dc7-3163-43f7-afc7-2e1c9c206333 |
 | `fpid_to_ecid ` | Cette fonction prend une chaîne FPID et la convertit en ECID à utiliser dans les applications Adobe Experience Platform et Adobe Experience Cloud. | <ul><li>STRING: **Obligatoire** Chaîne FPID à convertir en ECID.</li></ul> | `fpid_to_ecid(STRING)` | `fpid_to_ecid("4ed70bee-b654-420a-a3fd-b58b6b65e991")` | `"28880788470263023831040523038280731744"` |
 
 {style="table-layout:auto"}
@@ -254,14 +257,14 @@ Pour plus d’informations sur les valeurs de champ d’appareil, veuillez lire 
 
 | Fonction | Description | Paramètres | Syntaxe | Expression | Exemple de résultat |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
-| ua_os_name | Extrait le nom du système d’exploitation de la chaîne de l’agent utilisateur. | <ul><li>USER_AGENT : **Obligatoire** Chaîne de l’agent utilisateur.</li></ul> | ua_os_name &#x200B;(USER_AGENT) | ua_os_name &#x200B;(&quot;Mozilla/5.0 (iPhone); Processeur iPhone OS 5_1_1 comme Mac OS X) AppleWebKit/534.46 (KHTML, comme Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | iOS |
-| ua_os_version_major | Extrait la version principale du système d’exploitation de la chaîne de l’agent utilisateur. | <ul><li>USER_AGENT : **Obligatoire** Chaîne de l’agent utilisateur.</li></ul> | ua_os_version_major &#x200B;(USER_AGENT) | ua_os_version_major &#x200B; s(&quot;Mozilla/5.0 (iPhone); Processeur iPhone OS 5_1_1 comme Mac OS X) AppleWebKit/534.46 (KHTML, comme Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | iOS 5 |
-| ua_os_version | Extrait la version du système d’exploitation de la chaîne de l’agent utilisateur. | <ul><li>USER_AGENT : **Obligatoire** Chaîne de l’agent utilisateur.</li></ul> | ua_os_version &#x200B;(USER_AGENT) | ua_os_version &#x200B;(&quot;Mozilla/5.0 (iPhone); Processeur iPhone OS 5_1_1 comme Mac OS X) AppleWebKit/534.46 (KHTML, comme Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | 5.1.1 |
-| ua_os_name_version | Extrait le nom et la version du système d’exploitation de la chaîne de l’agent utilisateur. | <ul><li>USER_AGENT : **Obligatoire** Chaîne de l’agent utilisateur.</li></ul> | ua_os_name_version &#x200B;(USER_AGENT) | ua_os_name_version &#x200B;(&quot;Mozilla/5.0 (iPhone); Processeur iPhone OS 5_1_1 comme Mac OS X) AppleWebKit/534.46 (KHTML, comme Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | iOS 5.1.1 |
-| ua_agent_version | Extrait la version de l’agent de la chaîne de l’agent utilisateur. | <ul><li>USER_AGENT : **Obligatoire** Chaîne de l’agent utilisateur.</li></ul> | ua_agent_version &#x200B;(USER_AGENT) | ua_agent_version &#x200B;(&quot;Mozilla/5.0 (iPhone); Processeur iPhone OS 5_1_1 comme Mac OS X) AppleWebKit/534.46 (KHTML, comme Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | 5.1 |
-| ua_agent_version_major | Extrait le nom de l’agent et la version majeure de la chaîne de l’agent utilisateur. | <ul><li>USER_AGENT : **Obligatoire** Chaîne de l’agent utilisateur.</li></ul> | ua_agent_version_major &#x200B;(USER_AGENT) | ua_agent_version_major &#x200B;(&quot;Mozilla/5.0 (iPhone; Processeur iPhone OS 5_1_1 comme Mac OS X) AppleWebKit/534.46 (KHTML, comme Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | Safari 5 |
-| ua_agent_name | Extrait le nom de l’agent de la chaîne de l’agent utilisateur. | <ul><li>USER_AGENT : **Obligatoire** Chaîne de l’agent utilisateur.</li></ul> | ua_agent_name &#x200B;(USER_AGENT) | ua_agent_name &#x200B;(&quot;Mozilla/5.0 (iPhone); Processeur iPhone OS 5_1_1 comme Mac OS X) AppleWebKit/534.46 (KHTML, comme Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | Safari |
-| ua_device_class | Extrait la classe device de la chaîne user agent. | <ul><li>USER_AGENT : **Obligatoire** Chaîne de l’agent utilisateur.</li></ul> | ua_device_class &#x200B;(USER_AGENT) | ua_device_class &#x200B;(&quot;Mozilla/5.0 (iPhone); Processeur iPhone OS 5_1_1 comme Mac OS X) AppleWebKit/534.46 (KHTML, comme Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | Téléphone |
+| ua_os_name | Extrait le nom du système d’exploitation de la chaîne de l’agent utilisateur. | <ul><li>USER_AGENT : **Obligatoire** Chaîne de l’agent utilisateur.</li></ul> | ua_os_name &#x200B;(USER_AGENT) | ua_os_name &#x200B;(&quot;Mozilla/5.0 (iPhone ; CPU iPhone OS 5_1_1 comme Mac OS X) AppleWebKit/534.46 (KHTML, comme Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | iOS |
+| ua_os_version_major | Extrait la version principale du système d’exploitation de la chaîne de l’agent utilisateur. | <ul><li>USER_AGENT : **Obligatoire** Chaîne de l’agent utilisateur.</li></ul> | ua_os_version_major &#x200B;(USER_AGENT) | ua_os_version_major &#x200B; s(&quot;Mozilla/5.0 (iPhone ; CPU iPhone OS 5_1_1 comme Mac OS X) AppleWebKit/534.46 (KHTML, comme Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | iOS 5 |
+| ua_os_version | Extrait la version du système d’exploitation de la chaîne de l’agent utilisateur. | <ul><li>USER_AGENT : **Obligatoire** Chaîne de l’agent utilisateur.</li></ul> | ua_os_version &#x200B;(USER_AGENT) | ua_os_version &#x200B;(&quot;Mozilla/5.0 (iPhone ; CPU iPhone OS 5_1_1 comme Mac OS X) AppleWebKit/534.46 (KHTML, comme Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | 5.1.1 |
+| ua_os_name_version | Extrait le nom et la version du système d’exploitation de la chaîne de l’agent utilisateur. | <ul><li>USER_AGENT : **Obligatoire** Chaîne de l’agent utilisateur.</li></ul> | ua_os_name_version &#x200B;(USER_AGENT) | ua_os_name_version &#x200B;(&quot;Mozilla/5.0 (iPhone ; CPU iPhone OS 5_1_1 comme Mac OS X) AppleWebKit/534.46 (KHTML, comme Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | iOS 5.1.1 |
+| ua_agent_version | Extrait la version de l’agent de la chaîne de l’agent utilisateur. | <ul><li>USER_AGENT : **Obligatoire** Chaîne de l’agent utilisateur.</li></ul> | ua_agent_version &#x200B;(USER_AGENT) | ua_agent_version &#x200B;(&quot;Mozilla/5.0 (iPhone ; CPU iPhone OS 5_1_1 comme Mac OS X) AppleWebKit/534.46 (KHTML, comme Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | 5.1 |
+| ua_agent_version_major | Extrait le nom de l’agent et la version majeure de la chaîne de l’agent utilisateur. | <ul><li>USER_AGENT : **Obligatoire** Chaîne de l’agent utilisateur.</li></ul> | ua_agent_version_major &#x200B;(USER_AGENT) | ua_agent_version_major &#x200B;(&quot;Mozilla/5.0 (iPhone ; CPU iPhone OS 5_1_1 comme Mac OS X) AppleWebKit/534.46 (KHTML, comme Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | Safari 5 |
+| ua_agent_name | Extrait le nom de l’agent de la chaîne de l’agent utilisateur. | <ul><li>USER_AGENT : **Obligatoire** Chaîne de l’agent utilisateur.</li></ul> | ua_agent_name &#x200B;(USER_AGENT) | ua_agent_name &#x200B;(&quot;Mozilla/5.0 (iPhone ; CPU iPhone OS 5_1_1 comme Mac OS X) AppleWebKit/534.46 (KHTML, comme Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | Safari |
+| ua_device_class | Extrait la classe device de la chaîne user agent. | <ul><li>USER_AGENT : **Obligatoire** Chaîne de l’agent utilisateur.</li></ul> | ua_device_class &#x200B;(USER_AGENT) | ua_device_class &#x200B;(&quot;Mozilla/5.0 (iPhone ; CPU iPhone OS 5_1_1 comme Mac OS X) AppleWebKit/534.46 (KHTML, comme Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | Téléphone |
 
 {style="table-layout:auto"}
 
@@ -355,8 +358,8 @@ Le tableau ci-dessous présente une liste des valeurs de champ d’appareil et l
 | Appareil | Description |
 | --- | --- |
 | Bureau | Un ordinateur de bureau ou un ordinateur portable de type appareil. |
-| Anonymisé | Appareil anonyme. Dans certains cas, ces `useragents` qui ont été modifiées par un logiciel d’anonymisation. |
-| Inconnu | Un appareil inconnu. Celles-ci sont généralement `useragents` qui ne contiennent aucune information sur l’appareil. |
+| Anonymisé | Un appareil anonyme. Dans certains cas, ces `useragents` qui ont été modifiées par un logiciel d’anonymisation. |
+| Inconnu | Un appareil inconnu. Ces variables sont généralement `useragents` qui ne contiennent aucune information sur l’appareil. |
 | Mobile | Appareil mobile qui n’est pas encore identifié. Ce périphérique mobile peut être un lecteur électronique, une tablette, un téléphone, une montre, etc. |
 | Tablette | Appareil mobile avec un grand écran (généralement > 7 pouces). |
 | Téléphone | Appareil mobile avec un petit écran (généralement &lt; 7 pouces). |
@@ -366,15 +369,89 @@ Le tableau ci-dessous présente une liste des valeurs de champ d’appareil et l
 | eReader | Un appareil similaire à une tablette, mais généralement avec une [!DNL eInk] écran. |
 | Cadre de configuration | Appareil connecté qui permet l’interaction par le biais d’un écran de la taille d’une télévision. |
 | TV | Un appareil semblable à la visionneuse, mais intégré à la télévision. |
-| Approvisionnement à domicile | Un appareil domestique (généralement grand), comme un réfrigérateur. |
+| Approvisionnement maison | Un appareil domestique (généralement grand), comme un réfrigérateur. |
 | Console de jeu | Un système de jeu fixe tel qu’un [!DNL Playstation] ou [!DNL XBox]. |
 | Console de jeu pour portables | Un système de jeu mobile comme un [!DNL Nintendo Switch]. |
-| Voix | Un appareil piloté par la voix, tel qu’un [!DNL Amazon Alexa] ou [!DNL Google Home]. |
+| Voix | Un appareil piloté par la voix, tel un [!DNL Amazon Alexa] ou [!DNL Google Home]. |
 | Voiture | Navigateur basé sur un véhicule. |
 | Robot | Des robots qui visitent un site web. |
 | Robot Mobile | Robots qui visitent un site web mais qui indiquent qu’ils souhaitent être vus comme un visiteur mobile. |
-| Robot Imitator | Des robots qui visitent un site web, faisant semblant d&#39;être des robots comme [!DNL Google]mais ils ne le sont pas. **Remarque**: Dans la plupart des cas, les robots d&#39;imagerie sont en effet des robots. |
+| Robot Imitator | Des robots qui visitent un site web, prétendant être des robots comme [!DNL Google]mais ils ne le sont pas. **Remarque**: Dans la plupart des cas, les robots d&#39;imagerie sont en effet des robots. |
 | Cloud | Une application cloud. Ce ne sont ni des robots ni des hackers, mais des applications qui doivent se connecter. Cela inclut [!DNL Mastodon] serveurs. |
 | Hacker | Cette valeur de périphérique est utilisée au cas où un script est détecté dans la variable `useragent` chaîne. |
 
 {style="table-layout:auto"}
+
+### Exemples de code {#code-samples}
+
+#### map_get_values {#map-get-values}
+
++++Sélectionner pour afficher l’exemple
+
+```json
+ example = "map_get_values(book_details,\"author\") where input is : {\n" +
+        "    \"book_details\":\n" +
+        "    {\n" +
+        "        \"author\": \"George R. R. Martin\",\n" +
+        "        \"price\": 17.99,\n" +
+        "        \"ISBN\": \"ISBN-978-0553801477\"\n" +
+        "    }\n" +
+        "}",
+      result = "{\"author\": \"George R. R. Martin\"}"
+```
+
++++
+
+#### map_has_keys {#map_has_keys}
+
++++Sélectionner pour afficher l’exemple
+
+```json
+ example = "map_has_keys(book_details,\"author\")where input is : {\n" +
+        "    \"book_details\":\n" +
+        "    {\n" +
+        "        \"author\": \"George R. R. Martin\",\n" +
+        "        \"price\": 17.99,\n" +
+        "        \"ISBN\": \"ISBN-978-0553801477\"\n" +
+        "    }\n" +
+        "}",
+      result = "true"
+```
+
++++
+
+#### add_to_map {#add_to_map}
+
++++Sélectionner pour afficher l’exemple
+
+```json
+example = "add_to_map(book_details, book_details2) where input is {\n" +
+        "    \"book_details\":\n" +
+        "    {\n" +
+        "        \"author\": \"George R. R. Martin\",\n" +
+        "        \"price\": 17.99,\n" +
+        "        \"ISBN\": \"ISBN-978-0553801477\"\n" +
+        "    }\n" +
+        "}" +
+        "{\n" +
+        "    \"book_details2\":\n" +
+        "    {\n" +
+        "        \"author\": \"Neil Gaiman\",\n" +
+        "        \"price\": 17.99,\n" +
+        "        \"ISBN\": \"ISBN-0-380-97365-0\"\n" +
+        "        \"publisher\": \"William Morrow\"\n" +
+        "    }\n" +
+        "}",
+      result = "{\n" +
+        "    \"book_details\":\n" +
+        "    {\n" +
+        "        \"author\": \"George R. R. Martin\",\n" +
+        "        \"price\": 17.99,\n" +
+        "        \"ISBN\": \"ISBN-978-0553801477\"\n" +
+        "        \"publisher\": \"William Morrow\"\n" +
+        "    }\n" +
+        "}",
+      returns = "A new map with all elements from map and addends"
+```
+
++++
