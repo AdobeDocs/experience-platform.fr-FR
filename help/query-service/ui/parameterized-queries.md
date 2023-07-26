@@ -1,14 +1,14 @@
 ---
 title: Requêtes paramétrées
 description: Découvrez comment utiliser des requêtes paramétrées dans l’interface utilisateur de Adobe Experience Platform.
-source-git-commit: d927f1f98c1f3a42907501921fcd2367241fa625
+source-git-commit: d8845e080489af12e98badc892bb60cb9749bd47
 workflow-type: tm+mt
-source-wordcount: '694'
-ht-degree: 0%
+source-wordcount: '696'
+ht-degree: 2%
 
 ---
 
-# Requêtes paramétrées
+# Requêtes paramétrées (version limitée)
 
 >[!IMPORTANT]
 >
@@ -47,7 +47,7 @@ Pour créer votre requête paramétrée dans l’interface utilisateur, accédez
 
 Utilisez la variable `'$'` pour saisir un paramètre de requête dans votre requête dans l’éditeur de texte. Ajoutez ensuite la valeur manquante pour la clé dans la variable [!UICONTROL Paramètres de requête] sous l’éditeur. La requête ne peut pas être exécutée si vous négligez d’ajouter une valeur à l’une des clés requises. Icône d’alerte (![Icône d’alerte.](../images/ui/parameterized-queries/alert-icon.png)) apparaît dans la section Paramètres de requête en regard de tout élément vide [!UICONTROL Valeur] champs de saisie.
 
-![L’éditeur de requêtes avec une requête paramétrée et la section Paramètres de requête sont surlignés.](../images/ui/parameterized-queries/parameterized-query.png)
+![L’éditeur de requêtes avec une requête paramétrée est mis en surbrillance et la section Paramètres de requête est mise en surbrillance.](../images/ui/parameterized-queries/parameterized-query.png)
 
 >[!TIP]
 >

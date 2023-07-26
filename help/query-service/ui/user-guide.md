@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Guide de l’interface utilisateur de Query Editor
 description: Query Editor est un outil interactif fourni par Adobe Experience Platform Query Service. Il permet d’écrire, de valider et d’exécuter des requêtes pour les données d’expérience client dans l’interface utilisateur d’Experience Platform. Query Editor prend en charge le développement de requête pour l’analyse et l’exploration de données. Il vous permet également d’exécuter des requêtes interactives à des fins de développement, ainsi que des requêtes non interactives pour renseigner les jeux de données dans Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: ff4b528a0456f46d8c99e5921cfc99b197956ba6
+source-git-commit: e30942aec6c66aeed8375d6221b454725f5a958d
 workflow-type: tm+mt
-source-wordcount: '1670'
-ht-degree: 88%
+source-wordcount: '1901'
+ht-degree: 65%
 
 ---
 
@@ -19,7 +19,7 @@ Pour plus d’informations sur les concepts et les fonctionnalités de [!DNL Que
 
 ## Prise en main {#getting-started}
 
-[!DNL Query Editor] offre une exécution flexible des requêtes en se connectant à [!DNL Query Service], et ces requêtes seront uniquement exécutées tant que cette connexion sera active.
+[!DNL Query Editor] permet une exécution flexible des requêtes en se connectant à [!DNL Query Service]et les requêtes s’exécutent uniquement lorsque cette connexion est principale.
 
 ### Connexion à [!DNL Query Service] {#connecting-to-query-service}
 
@@ -29,7 +29,7 @@ Pour plus d’informations sur les concepts et les fonctionnalités de [!DNL Que
 
 ### Exécution des requêtes depuis [!DNL Query Editor] {#run-a-query}
 
-Dans [!DNL Query Editor], les requêtes sont exécutées de manière interactive. Cela signifie que la requête sera annulée si vous fermez le navigateur ou quittez l’éditeur. Cela concerne également les requêtes visant à générer des jeux de données à partir de sorties de requête.
+Requêtes exécutées depuis [!DNL Query Editor] s’exécuter de manière interactive, ce qui signifie que si vous fermez le navigateur ou quittez le navigateur, la requête est annulée. Il en va de même pour les requêtes effectuées pour générer des jeux de données à partir de sorties de requête.
 
 ## Création de requête à l’aide du [!DNL Query Editor] {#query-authoring}
 
@@ -37,9 +37,30 @@ Avec [!DNL Query Editor], vous pouvez écrire, exécuter et enregistrer des requ
 
 ### Accéder à [!DNL Query Editor] {#accessing-query-editor}
 
-Pour ouvrir l’espace de travail [!DNL Query Service], cliquez sur **[!UICONTROL Requêtes]** dans le menu de navigation à gauche de l’interface utilisateur d’[!DNL Experience Platform]. Cliquez ensuite sur **[!UICONTROL Créer une requête]** dans la partie supérieure droite de l’écran pour commencer à écrire des requêtes. Ce lien est disponible depuis n’importe quelle page de l’espace de travail [!DNL Query Service].
+Pour ouvrir l’espace de travail [!DNL Query Service], cliquez sur **[!UICONTROL Requêtes]** dans le menu de navigation à gauche de l’interface utilisateur d’[!DNL Experience Platform]. Ensuite, pour commencer à écrire des requêtes, sélectionnez **[!UICONTROL Créer une requête]** en haut à droite de l’écran. Ce lien est disponible depuis n’importe quelle page de l’espace de travail [!DNL Query Service].
 
 ![Onglet Présentation de l’espace de travail Requêtes avec l’option Créer une requête mise en surbrillance.](../images/ui/query-editor/create-query.png)
+
+### Bascule de l’éditeur de requêtes amélioré {#enhanced-editor-toggle}
+
+>[!CONTEXTUALHELP]
+>id="platform_queryService_queryEditor_enhancedEditorToggle"
+>title="Bascule de l’éditeur amélioré"
+>abstract="Permet de basculer entre la version héritée et la version améliorée de Query Editor. La version héritée est activée par défaut, bien que la version améliorée offre une meilleure accessibilité et une prise en charge multi-thème. Pour en savoir plus sur ces modifications, consultez la documentation."
+
+Un bouton d’activation/désactivation de l’interface utilisateur vous permet de basculer entre la version héritée et la version améliorée de Query Editor. La version héritée est activée par défaut, bien que la version améliorée offre une meilleure accessibilité et une prise en charge multi-thème. Activez la version améliorée pour accéder aux paramètres de Query Editor.
+
+![Éditeur de requêtes avec le bouton d’activation/désactivation amélioré de l’éditeur de requêtes mis en surbrillance.](../images/ui/query-editor/enhanced-query-editor-toggle.png)
+
+L’activation du bouton bascule l’éditeur vers le thème de lumière et améliore la lisibilité de votre syntaxe. Une icône de paramètres s’affiche également au-dessus du champ de saisie de l’éditeur de requêtes qui incorpore le bouton de saisie à saisie semi-automatique. À partir de l’icône des paramètres, vous pouvez activer le thème sombre ou désactiver/activer la saisie automatique.
+
+>[!TIP]
+>
+>Grâce à l’éditeur de requêtes amélioré, vous pouvez [!UICONTROL Désactivation de la saisie automatique de la syntaxe] lors de la création d’une requête sans perdre la progression. En règle générale, si vous désactivez la fonction de saisie automatique lors de la modification, toutes les modifications apportées à la requête sont perdues.
+
+Pour activer les thèmes sombres ou lumineux, sélectionnez l’icône de paramètres (![Icône Paramètres .](../images/ui/query-editor/settings-icon.png)) suivi de l’option du menu déroulant qui s’affiche.
+
+![L’éditeur de requêtes avec l’icône de paramètres et l’option de menu déroulant Activer le thème sombre sont mises en surbrillance.](../images/ui/query-editor/query-editor-settings.png)
 
 ### Rédaction de requêtes {#writing-queries}
 
@@ -59,7 +80,7 @@ Pour réduire le temps de développement, nous vous recommandons de développer 
 
 ![Quelques caractères SQL avec le menu déroulant de saisie automatique qui fournit des options du Query Editor.](../images/ui/query-editor/syntax-auto.png)
 
-- **Saisie automatique de tableau et de champ :** commencez à saisir le nom du tableau auquel vous souhaitez appliquer `SELECT`, puis utilisez les touches fléchées pour accéder au tableau recherché et appuyez sur **Entrée**. Une fois le tableau sélectionné, la saisie automatique reconnaît les champs de ce tableau.
+- **Saisie automatique de tableau et de champ :** commencez à saisir le nom du tableau auquel vous souhaitez appliquer `SELECT`, puis utilisez les touches fléchées pour accéder au tableau recherché et appuyez sur **Entrée**. Une fois qu’un tableau est sélectionné, la saisie automatique reconnaît les champs de ce tableau.
 
 ![Entrée du Query Editor affichant les suggestions de noms de tableau déroulant.](../images/ui/query-editor/tables-auto.png)
 
@@ -73,7 +94,7 @@ Le paramètre de configuration de saisie automatique est défini par utilisateur
 
 La désactivation de cette fonction arrête le traitement de plusieurs commandes de métadonnées et la suggestion de recommandations qui accélère généralement la vitesse de l’auteur lors de la modification des requêtes.
 
-Lorsque vous cliquez sur le bouton (bascule) pour activer la fonction de saisie automatique, les suggestions recommandées pour les noms de tableau et de colonne ainsi que les mots-clés SQL deviennent disponibles après une courte pause. Un message de réussite dans la console sous le Query Editor indique que la fonctionnalité est activée.
+Lorsque vous cliquez sur le bouton (bascule) pour activer la fonction de saisie automatique, les suggestions recommandées pour les noms de tableau et de colonne ainsi que les mots-clés SQL deviennent disponibles après une courte pause. Un message de réussite dans la console sous l’éditeur de requêtes indique que la fonctionnalité est principale.
 
 Si vous désactivez la fonction de saisie automatique, une actualisation de page est nécessaire pour que cette action soit appliquée. Une boîte de dialogue de confirmation s’affiche avec trois options lorsque vous désactivez le bouton de la [!UICONTROL Saisie automatique de la syntaxe] :
 
@@ -83,11 +104,11 @@ Si vous désactivez la fonction de saisie automatique, une actualisation de page
 
 >[!IMPORTANT]
 >
->Si vous écrivez ou modifiez une requête lors de la désactivation de cette fonction, vous devez enregistrer les modifications apportées à votre requête avant d’actualiser la page, sinon toute progression sera perdue.
+>Si vous écrivez ou modifiez une requête lors de la désactivation de cette fonction, vous devez enregistrer les modifications apportées à votre requête avant d’actualiser la page, faute de quoi toute la progression sera perdue.
 
 ![Boîte de dialogue de confirmation permettant de désactiver la fonction de saisie automatique.](../images/ui/query-editor/confirmation-dialog.png)
 
-Sélectionnez l’option appropriée pour désactiver la fonction de saisie automatique.
+Pour désactiver la fonction de saisie semi-automatique, sélectionnez l’option de confirmation appropriée.
 
 ### Détection des erreurs {#error-detection}
 
@@ -101,27 +122,27 @@ Lorsque des erreurs sont détectées, vous pouvez afficher les messages d’erre
 
 ### Détails de la requête {#query-details}
 
-Sélectionnez un modèle enregistré dans l’onglet [!UICONTROL Modèles] pour l’afficher dans Query Editor. Le panneau des détails de la requête fournit plus d’informations et d’outils pour gérer la requête sélectionnée.
+Pour afficher une requête dans l’éditeur de requêtes, sélectionnez un modèle enregistré dans le [!UICONTROL Modèles] . Le panneau des détails de la requête fournit plus d’informations et d’outils pour gérer la requête sélectionnée.
 
 ![Query Editor avec le panneau des détails de la requête mis en surbrillance.](../images/ui/query-editor/query-details.png)
 
 Ce panneau vous permet de générer un jeu de données de sortie directement à partir de l’interface utilisateur, de supprimer ou de nommer la requête affichée, et d’ajouter un planning à la requête.
 
-Ce panneau présente également des métadonnées utiles, telles que la dernière fois où la requête a été modifiée et qui l’a modifiée, le cas échéant. Pour générer un jeu de données, sélectionnez **[!UICONTROL Jeu de données de sortie]**. La boîte de dialogue **[!UICONTROL Jeu de données de sortie]** s’affiche. Saisissez un nom et une description, puis sélectionnez **[!UICONTROL Exécuter la requête]**. Le nouveau jeu de données s’affiche dans l’onglet **[!UICONTROL Jeux de données]** de l’interface utilisateur [!DNL Query Service] dans [!DNL Platform].
+Ce panneau affiche également des métadonnées utiles, telles que la dernière fois où la requête a été modifiée et qui l’a modifiée, le cas échéant. Pour générer un jeu de données, sélectionnez **[!UICONTROL Jeu de données de sortie]**. La boîte de dialogue **[!UICONTROL Jeu de données de sortie]** s’affiche. Saisissez un nom et une description, puis sélectionnez **[!UICONTROL Exécuter la requête]**. Le nouveau jeu de données s’affiche dans l’onglet **[!UICONTROL Jeux de données]** de l’interface utilisateur [!DNL Query Service] dans [!DNL Platform].
 
 ### Requêtes planifiées {#scheduled-queries}
 
-Les requêtes qui ont été enregistrées en tant que modèle peuvent être planifiées à partir de l’éditeur de requêtes. Vous pouvez ainsi automatiser les exécutions de requête exécutées sur une cadence personnalisée. Vous pouvez planifier des requêtes en fonction de la fréquence, de la date et de l’heure, et choisir également un jeu de données de sortie pour vos résultats, si nécessaire. Les plannings de requête peuvent également être désactivés ou supprimés via l’interface utilisateur.
+Les requêtes qui ont été enregistrées en tant que modèle peuvent être planifiées à partir de l’éditeur de requêtes. La planification des requêtes vous permet d’automatiser les exécutions de requête sur une cadence personnalisée. Vous pouvez planifier des requêtes en fonction de la fréquence, de la date et de l’heure, et choisir également un jeu de données de sortie pour vos résultats, si nécessaire. Les plannings de requête peuvent également être désactivés ou supprimés via l’interface utilisateur.
 
-Les planifications sont définies dans l’éditeur de requêtes. Lorsque vous utilisez Query Editor, vous ne pouvez ajouter qu’un planning à une requête qui a déjà été créée, enregistrée et exécutée. Cela ne s’applique pas au [!DNL Query Service] API :
+Les planifications sont définies dans l’éditeur de requêtes. Lorsque vous utilisez Query Editor, vous ne pouvez ajouter qu’un planning à une requête qui a déjà été créée, enregistrée et exécutée. La même limitation ne s’applique pas au [!DNL Query Service] API :
 
-Consultez la documentation sur les plannings de requête pour savoir comment [création de plannings de requête dans l’interface utilisateur](./query-schedules.md). Pour savoir comment ajouter des plannings à l’aide de l’API, vous pouvez également lire le [guide de point de terminaison des requêtes planifiées](../api/scheduled-queries.md).
+Consultez la documentation sur les plannings de requête pour savoir comment [création de calendriers de requête dans l’interface utilisateur](./query-schedules.md). Pour savoir comment ajouter des plannings à l’aide de l’API, vous pouvez également lire le [guide de point de terminaison des requêtes planifiées](../api/scheduled-queries.md).
 
-Toutes les requêtes planifiées sont ajoutées à la liste dans la variable [!UICONTROL Requêtes planifiées] . Depuis cet espace de travail, vous pouvez surveiller l’état de toutes les tâches de requête planifiées via l’interface utilisateur. Sur le [!UICONTROL Requêtes planifiées] vous pouvez trouver des informations importantes sur les exécutions de requête et vous abonner aux alertes. Les informations disponibles incluent l’état, les détails de planification et les codes/messages d’erreur en cas d’échec de l’exécution. Voir [Surveiller le document des requêtes planifiées](./monitor-queries.md) pour plus d’informations.
+Toutes les requêtes planifiées sont ajoutées à la liste dans la variable [!UICONTROL Requêtes planifiées] . Depuis cet espace de travail, vous pouvez surveiller l’état de toutes les tâches de requête planifiées via l’interface utilisateur. Sur le [!UICONTROL Requêtes planifiées] , vous pouvez trouver des informations importantes sur les exécutions de requête et vous abonner aux alertes. Les informations disponibles incluent l’état, les détails de planification et les messages/codes d’erreur en cas d’échec de l’exécution. Voir [Surveiller le document des requêtes planifiées](./monitor-queries.md) pour plus d’informations.
 
 ### Enregistrement des requêtes {#saving-queries}
 
-Le [!DNL Query Editor] offre une fonction de sauvegarde qui vous permet d’enregistrer une requête et d’y revenir ultérieurement. Pour enregistrer une requête, sélectionnez **[!UICONTROL Enregistrer]** dans le coin supérieur droit du [!DNL Query Editor]. Avant de pouvoir enregistrer une requête, vous devez lui donner un nom à l’aide du panneau **[!UICONTROL Détails sur la requête]**.
+Le [!DNL Query Editor] offre une fonction de sauvegarde qui vous permet d’enregistrer une requête et d’y revenir ultérieurement. Pour enregistrer une requête, sélectionnez **[!UICONTROL Enregistrer]** dans le coin supérieur droit de [!DNL Query Editor]. Avant de pouvoir enregistrer une requête, vous devez lui donner un nom à l’aide du panneau **[!UICONTROL Détails sur la requête]**.
 
 >[!NOTE]
 >
@@ -149,7 +170,7 @@ La console fournit des informations sur le statut et le fonctionnement de [!DNL 
 
 >[!NOTE]
 >
->La console affiche uniquement les erreurs résultant de l’exécution d’une requête. Elle n’affiche pas les erreurs de validation de requête avant l’exécution de la requête.
+>La console affiche uniquement les erreurs résultant de l&#39;exécution d&#39;une requête. Elle n’affiche pas les erreurs de validation de requête qui se produisent avant l’exécution d’une requête.
 
 ### Résultats de requête {#query-results}
 
@@ -159,7 +180,7 @@ Une fois une requête terminée, les résultats sont affichés dans l’onglet *
 
 ## Exécuter des requêtes avec le tutoriel vidéo sur [!DNL Query Service] {#query-tutorial-video}
 
-La vidéo suivante montre comment exécuter des requêtes dans l’interface Adobe Experience Platform et dans un client PSQL. En outre, l’utilisation de propriétés individuelles dans un objet XDM, l’utilisation de fonctions définies par Adobe et l’utilisation de CREATE TABLE AS SELECT (CTAS) sont illustrées.
+La vidéo suivante montre comment exécuter des requêtes dans l’interface Adobe Experience Platform et dans un client PSQL. La vidéo présente également l’utilisation de propriétés individuelles dans un objet XDM, des fonctions définies par l’Adobe et comment utiliser des requêtes CREATE TABLE AS SELECT (CTAS).
 
 >[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)
 
