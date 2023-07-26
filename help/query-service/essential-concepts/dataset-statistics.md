@@ -1,10 +1,10 @@
 ---
 title: Calcul des statistiques des jeux de données
 description: Ce document décrit comment calculer les statistiques au niveau des colonnes sur les jeux de données Azure Data Lake Storage (ADLS) avec des commandes SQL.
-source-git-commit: c7bc395038906e27449c82c518bd33ede05c5691
+source-git-commit: 66354932ee42137ca98e7033d942556f13c64de1
 workflow-type: tm+mt
-source-wordcount: '730'
-ht-degree: 90%
+source-wordcount: '1087'
+ht-degree: 39%
 
 ---
 
@@ -14,9 +14,9 @@ Vous pouvez désormais calculer les statistiques au niveau des colonnes sur les 
 
 >[!NOTE]
 >
->Actuellement, les statistiques générées ne sont valides que pour cette session et ne sont pas persistantes entre chaque session. Elles ne sont pas accessibles dans différentes sessions PSQL.
+>Les statistiques calculées sont stockées dans des tables temporaires ayant une persistance au niveau de la session. Vous pouvez accéder aux résultats des calculs à tout moment au cours de cette session. Elles ne sont pas accessibles dans différentes sessions PSQL.
 
-Avec la commande `SHOW STATISTICS FOR <alias_name>`, vous pouvez voir les statistiques qui ont été calculées avec la commande `ANALYZE TABLE COMPUTE STATISTICS`. Grâce à la combinaison de ces commandes, vous pouvez désormais calculer les statistiques des colonnes sur l’ensemble du jeu de données, un sous-ensemble d’un jeu de données, toutes les colonnes ou un sous-ensemble de colonnes.
+Pour afficher les statistiques qui ont été calculées avec la variable `ANALYZE TABLE COMPUTE STATISTICS` , vous pouvez utiliser une requête SELECT sur le nom d’alias ou l’identifiant de statistiques. Vous pouvez également limiter la portée de l’analyse statistique à l’ensemble du jeu de données, à un sous-ensemble d’un jeu de données, à toutes les colonnes ou à un sous-ensemble de colonnes.
 
 >[!IMPORTANT]
 >
@@ -26,11 +26,11 @@ Ce guide vous aide à structurer vos requêtes afin que vous puissiez calculer l
 
 ## Calcul des statistiques {#compute-statistics}
 
-D’autres éléments ont été ajoutés à la commande `ANALYZE TABLE` qui vous permettent de **calculer les statistiques pour un sous-ensemble d’un jeu de données et pour certaines colonnes**. Pour ce faire, vous devez utiliser le format `ANALYZE TABLE <tableName> COMPUTE STATISTICS`.
+D’autres éléments ont été ajoutés au `ANALYZE TABLE` qui vous permet de **calculer les statistiques pour un sous-ensemble d’un jeu de données et pour certaines colonnes ;**. Pour calculer les statistiques d’un jeu de données, vous devez utiliser la variable `ANALYZE TABLE <tableName> COMPUTE STATISTICS` format.
 
 >[!IMPORTANT]
 >
->Le comportement par défaut calcule les statistiques pour le **jeu de données complet** et pour **toutes les colonnes**. Pour calculer les statistiques sur toutes les colonnes, vous devez utiliser le format de requête `ANALYZE TABLE COMPUTE STATISTICS`. Nous vous recommandons de ne **pas** l’utiliser sur un jeu de données ADLS, car la taille du jeu de données peut être très importante (potentiellement des pétaoctets de données). Vous devez toujours envisager d’exécuter la commande d’analyse à l’aide de `FILTERCONTEXT` et d’une liste de colonnes spécifiée. Reportez-vous aux sections sur la [limitation des colonnes analysées](#limit-included-columns) et l’[ajout d’une condition de filtre](#filter-condition) pour plus d’informations.
+>Le comportement par défaut calcule les statistiques pour le **jeu de données complet** et pour **toutes les colonnes**. Pour calculer les statistiques sur toutes les colonnes, vous devez utiliser le format de requête `ANALYZE TABLE COMPUTE STATISTICS`. Vous êtes **not** recommandé d’utiliser la variable `COMPUTE STATISTICS` sans filtres sur un jeu de données ADLS, car la taille du jeu de données peut être très importante (potentiellement pétaoctets de données). Vous devez toujours envisager d’exécuter la commande d’analyse à l’aide de `FILTERCONTEXT` et d’une liste de colonnes spécifiée. Reportez-vous aux sections sur la [limitation des colonnes analysées](#limit-included-columns) et l’[ajout d’une condition de filtre](#filter-condition) pour plus d’informations.
 
 L’exemple illustré ci-dessous calcule les statistiques pour le jeu de données `adc_geometric` et pour **toutes** les colonnes du jeu de données.
 
@@ -40,16 +40,25 @@ ANALYZE TABLE adc_geometric COMPUTE STATISTICS;
 
 >[!NOTE]
 >
->`COMPUTE STATISTICS` ne prend pas en charge les types de données de tableau ou de mappage. Vous pouvez définir un indicateur `skip_stats_for_complex_datatypes` pour envoyer une notification ou un message d’erreur si le cadre de données d’entrée comporte des colonnes avec des types de données de tableau et de mappage. Par défaut, l’indicateur est défini sur « true ». Pour activer les notifications ou les erreurs, utilisez la commande suivante : `SET skip_stats_for_complex_datatypes = false`.
+>La variable `COMPUTE STATISTICS` ne prend pas en charge les types de données tableau ou map . Vous pouvez définir une `skip_stats_for_complex_datatypes` Indicateur à avertir ou à exclure si le cadre de données d’entrée comporte des colonnes avec des tableaux et des types de données de mappage. Par défaut, l’indicateur est défini sur « true ». Pour activer les notifications ou les erreurs, utilisez la commande suivante : `SET skip_stats_for_complex_datatypes = false`.
 
-<!-- Commented out until the <alias_name> feature is released.
-This second example, is a more real-world example as it uses an alias name. See the [alias name section](#alias-name) for more details on this feature.
+## Création d’un nom d’alias {#alias-name}
+
+Comme les résultats des calculs peuvent être très volumineux, il n’est pas raisonnable de renvoyer les données calculées directement dans la sortie de console. Bien que les noms d’alias soient facultatifs, il est recommandé de les utiliser comme bonne pratique lors du calcul des statistiques. Indiquez un nom d’alias dans l’instruction pour référencer de manière descriptive les résultats de vos requêtes SQL. Vous pouvez également générer automatiquement une `Statistics ID` est généré et utilisé pour stocker les informations calculées.
+
+L’exemple ci-dessous stocke les statistiques calculées de sortie dans la variable `alias_name` à titre de référence ultérieure. Le nom d’alias utilisé dans la requête est disponible à titre de référence dès que le champ `ANALYZE TABLE` a été exécutée.
 
 ```sql
-ANALYZE TABLE adc_geometric COMPUTE STATISTICS as <alias_name>;
-``` -->
+ANALYZE TABLE adc_geometric COMPUTE STATISTICS AS alias_name;
+```
 
-La sortie console n’affiche pas les statistiques en réponse à la commande de calcul de statistiques de la table d’analyse. À la place, la console affiche une colonne à une seule ligne de `Statistics ID` avec un identifiant universel unique pour référencer les résultats. Vous pouvez également choisir **directement sur la`Statistics ID`**. Une fois la requête `COMPUTE STATISTICS` terminée, les résultats sont affichés comme suit :
+La sortie de l’exemple ci-dessus est la suivante : `SUCCESSFULLY COMPLETED, alias_name`. La sortie de la console n&#39;affiche pas les statistiques dans la réponse à la commande d&#39;analyse des statistiques de calcul du tableau. Pour afficher les résultats détaillés, vous devez utiliser une requête SELECT sur le nom d’alias ou l’identifiant de statistiques.
+
+## Afficher la sortie des statistiques calculées {#view-output-of-computed-statistics}
+
+Si vous n’indiquez pas de nom d’alias à l’avance, Query Service génère automatiquement un nom pour la variable `Statistics ID` qui suit le format de `<tableName_stats_{incremental_number}>`. Si un nom d’alias est fourni, il apparaît dans la variable `Statistics ID` colonne .
+
+Un exemple de sortie d’un `COMPUTE STATISTICS` la requête est la suivante :
 
 ```console
 | Statistics ID    | 
@@ -58,95 +67,16 @@ La sortie console n’affiche pas les statistiques en réponse à la commande de
 (1 row)
 ```
 
-Vous pouvez interroger directement la sortie des statistiques en référençant la variable `Statistics ID` comme illustré ci-dessous :
+Vous pouvez alors **interroger directement les statistiques calculées ;** en référençant le `Statistics ID`. L’exemple d’instruction ci-dessous vous permet d’afficher la sortie complète lorsque vous l’utilisez avec la fonction `Statistics ID` ou le nom de l’alias.
 
 ```sql
 SELECT * FROM adc_geometric_stats_1; 
 ```
 
-Cette instruction vous permet d’afficher la sortie de la même manière que la commande AFFICHER les STATISTIQUES lors de l’utilisation de avec la fonction `Statistics ID`.
-
-Vous pouvez afficher une liste de toutes les statistiques calculées de la session en exécutant la commande AFFICHER LES STATISTIQUES . Vous trouverez ci-dessous un exemple de sortie de la commande AFFICHER LES STATISTIQUES .
+Le résultat des statistiques calculées peut ressembler à l’exemple ci-dessous.
 
 ```console
-statsId | tableName | columnSet | filterContext | timestamp
------------+---------------+-----------+---------------------------------------+---------------
-adc_geometric_stats_1 |adc_geometric | (age) | | 25/06/2023 09:22:26
-demo_table_stats_1 | demo_table | (*) | ((age > 25)) | 25/06/2023 12:50:26
-```
-
-<!-- Commented out until the <alias_name> feature is released.
-
-To see the output, you must use the `SHOW STATISTICS` command. Instructions on [how to show the statistics](#show-statistics) are provided later in the document. 
-
--->
-
-## Limiter les colonnes incluses {#limit-included-columns}
-
-Vous pouvez calculer des statistiques pour des colonnes de jeux de données spécifiques en les classant par nom. Utilisez la syntaxe `FOR COLUMNS (<col1>, <col2>)` pour cibler des colonnes spécifiques. L’exemple ci-dessous calcule les statistiques pour les colonnes  `commerce`, `id`, et `timestamp` pour le jeu de données `tableName`.
-
-```sql
-ANALYZE TABLE tableName COMPUTE STATISTICS FOR columns (commerce, id, timestamp);
-```
-
-Vous pouvez calculer les statistiques pour n’importe quel niveau racine ou colonne imbriquée. L’exemple suivant illustre ces références.
-
-```sql
-ANALYZE TABLE adcgeometric COMPUTE STATISTICS FOR columns (commerce, commerce.purchases.value, commerce.productListAdds.value);
-```
-
-## Ajouter une condition de filtre date et heure {#filter-condition}
-
-Vous pouvez ajouter une condition de filtre date et heure pour cibler l’analyse de vos colonnes. Vous pouvez l’utiliser pour filtrer les données historiques ou concentrer votre analyse des données sur une période spécifique. La commande `FILTERCONTEXT` calcule les statistiques sur un sous-ensemble du jeu de données en fonction de la condition de filtre que vous fournissez.
-
-Dans l’exemple ci-dessous, les statistiques sont calculées sur toutes les colonnes du jeu de données. `tableName`, où la date/heure de la colonne contient des valeurs comprises entre la plage spécifiée de `2023-04-01 00:00:00` et `2023-04-05 00:00:00`.
-
-```sql
-ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-04-01 00:00:00') and timestamp <= to_timestamp('2023-04-05 00:00:00')) COMPUTE STATISTICS FOR ALL COLUMNS;
-```
-
-Vous pouvez combiner la limite des colonnes et le filtre pour créer des requêtes de calcul hautement spécifiques pour vos colonnes de jeux de données. Par exemple, la requête suivante calcule les statistiques sur les colonnes `commerce`, `id`, et `timestamp` pour le jeu de données `tableName`, où la date/heure de la colonne contient des valeurs comprises entre la plage spécifiée de `2023-04-01 00:00:00` et `2023-04-05 00:00:00`.
-
-```sql
-ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-04-01 00:00:00') and timestamp <= to_timestamp('2023-04-05 00:00:00')) COMPUTE STATISTICS FOR columns (commerce, id, timestamp);
-```
-
-<!-- Commented out until the <alias_name> feature is released.
-## Create an alias name {#alias-name}
-
-Since the filter condition and the column list can target a large amount of data, it is unrealistic to remember the exact values. Instead, you can provide an `<alias_name>` to store this calculated information. If you do not provide an alias name for these calculations, Query Service generates a universally unique identifier for the alias ID. You can then use this alias ID to look up the computed statistics with the `SHOW STATISTICS` command. 
-
->[!NOTE]
->
->Although alias names are optional, you are recommended to use them as best practice.
-
-The example below stores the output computed statistics in the `alias_name` for later reference.
-
-```sql
-ANALYZE TABLE adc_geometric COMPUTE STATISTICS FOR ALL COLUMNS as alias_name;
-```
-
-The output for the above example is `SUCCESSFULLY COMPLETED, alias_name`. The console output does not display the statistics in the response of the analyze table compute statistics command. To see the output, you must use the `SHOW STATISTICS` command discussed below. 
--->
-
-<!-- Commented out until the <alias_name> feature is released.
-
-## Show the statistics {#show-statistics}
-
-The alias name used in the query is available as soon as the `ANALYZE TABLE` command has been run.  
-
-Even with a filter condition and a column list, the computation can target a large amount of data. Query Service generates a universally unique identifier for the statistics ID to store this calculated information. You can then use this statistics ID to look up the computed statistics with the `SHOW STATISTICS` command at any time within that session. 
-
-The statistics ID and the statistics generated are only valid for this particular session and cannot be accessed across different PSQL sessions. The computed statistics are not currently persistent. To display the statistics, use the command seen below.
-
-```sql
-SHOW STATISTICS FOR <STATISTICS_ID>;
-```
-
-An output might look similar to the example below. 
-
-```console
-                         columnName                         |      mean      |      max       |      min       | standardDeviation | approxDistinctCount | nullCount | dataType  
+ columnName                                                 |      mean      |      max       |      min       | standardDeviation | approxDistinctCount | nullCount | dataType  
 ------------------------------------------------------------+----------------+----------------+----------------+-------------------+---------------------+-----------+-----------
  marketing.trackingcode                                     |            0.0 |            0.0 |            0.0 |               0.0 |              1213.0 |         0 | String
  _experience.analytics.customdimensions.evars.evar13        |            0.0 |            0.0 |            0.0 |               0.0 |              8765.0 |        20 | String
@@ -163,7 +93,61 @@ An output might look similar to the example below.
 (12 rows)
 ```
 
--->
+## Affichage des métadonnées d’analyse statistique {#show-statistics}
+
+Vous pouvez utiliser la variable `SHOW STATISTICS` pour afficher les métadonnées de tous les tableaux de statistiques temporaires générés dans la session. Cette commande peut vous aider à affiner la portée de votre analyse statistique.
+
+Exemple de sortie de `SHOW STATISTICS` est illustré ci-dessous.
+
+```console
+statsId | tableName | columnSet | filterContext | timestamp
+--------+-----------+-----------+---------------+---------------
+adc_geometric_stats_1 | adc_geometric | (age) |  | 25/06/2023 09:22:26
+demo_table_stats_1 | demo_table | (*) | ((age > 25)) | 25/06/2023 12:50:26
+age_stats | castedtitanic | (age) | ((age > 25) AND (age < 40)) | 25/06/2023 09:22:26
+```
+
+Vous trouverez ci-dessous une description des noms des colonnes de métadonnées.
+
+| Nom de la colonne | Description |
+|---|---|
+| `statsId` | Cet identifiant fait référence au tableau de statistiques temporaire généré par le `COMPUTE STATISTICS` . |
+| `tableName` | Le tableau d’origine utilisé pour l’analyse. |
+| `columnSet` | Liste de toutes les colonnes sélectionnées spécifiquement pour l&#39;analyse. Une valeur vide indique que toutes les colonnes ont été analysées. Voir la section sur [limitation des colonnes](#limit-included-columns) pour plus d’informations. |
+| `filterContext` | Liste de tous les filtres appliqués à l&#39;analyse. |
+| `timestamp` | Tout filtre chronologique appliqué à votre analyse de données pour se concentrer sur une période spécifique. Voir [section condition de filtre d’horodatage](#filter-condition) pour plus d’informations. |
+
+Vous pouvez utiliser l’ID de statistiques ou le nom d’alias pour rechercher les statistiques calculées avec une instruction SELECT à tout moment au cours de cette session. L’identifiant de statistiques et les statistiques générées ne sont valides que pour cette session particulière et ne sont pas accessibles dans différentes sessions PSQL. Les statistiques calculées ne sont actuellement pas persistantes. Consultez la section sur la façon de [afficher le résultat de vos statistiques calculées ;](#view-output-of-computed-statistics) pour plus d’informations.
+
+## Limiter les colonnes incluses {#limit-included-columns}
+
+Pour cibler votre analyse, vous pouvez calculer des statistiques pour des colonnes de jeux de données spécifiques en les référençant par nom. Utilisez la syntaxe `FOR COLUMNS (<col1>, <col2>)` pour cibler des colonnes spécifiques. L’exemple ci-dessous calcule les statistiques pour les colonnes  `commerce`, `id`, et `timestamp` pour le jeu de données `tableName`.
+
+```sql
+ANALYZE TABLE tableName COMPUTE STATISTICS FOR columns (commerce, id, timestamp);
+```
+
+Vous pouvez calculer les statistiques pour n’importe quel niveau racine ou colonne imbriquée. L’exemple suivant illustre ces références.
+
+```sql
+ANALYZE TABLE adcgeometric COMPUTE STATISTICS FOR columns (commerce, commerce.purchases.value, commerce.productListAdds.value);
+```
+
+## Ajouter une condition de filtre date et heure {#filter-condition}
+
+Pour cibler l&#39;analyse de vos colonnes en fonction de la chronologie, vous pouvez ajouter une condition de filtre d&#39;horodatage. Cette condition peut être utilisée pour filtrer les données historiques ou cibler votre analyse de données sur une période spécifique. La variable `FILTERCONTEXT` calcule les statistiques sur un sous-ensemble du jeu de données en fonction de la condition de filtre que vous fournissez.
+
+Dans l’exemple ci-dessous, les statistiques sont calculées sur toutes les colonnes du jeu de données. `tableName`, où la date/heure de la colonne contient des valeurs comprises entre la plage spécifiée de `2023-04-01 00:00:00` et `2023-04-05 00:00:00`.
+
+```sql
+ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-04-01 00:00:00') and timestamp <= to_timestamp('2023-04-05 00:00:00')) COMPUTE STATISTICS FOR ALL COLUMNS;
+```
+
+Vous pouvez combiner la limite des colonnes et le filtre pour créer des requêtes de calcul hautement spécifiques pour vos colonnes de jeux de données. Par exemple, la requête suivante calcule les statistiques sur les colonnes `commerce`, `id`, et `timestamp` pour le jeu de données `tableName`, où la date/heure de la colonne contient des valeurs comprises entre la plage spécifiée de `2023-04-01 00:00:00` et `2023-04-05 00:00:00`.
+
+```sql
+ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-04-01 00:00:00') and timestamp <= to_timestamp('2023-04-05 00:00:00')) COMPUTE STATISTICS FOR columns (commerce, id, timestamp);
+```
 
 ## Étapes suivantes {#next-steps}
 
