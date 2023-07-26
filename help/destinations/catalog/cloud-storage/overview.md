@@ -3,10 +3,10 @@ keywords: destination de stockage dans le cloud;espace de stockage dans le cloud
 title: Présentation des destinations de stockage dans le cloud
 description: Adobe Experience Platform peut fournir vos audiences sous forme de fichiers de données à vos emplacements de stockage dans le cloud Amazon S3, AWS Kinesis, Azure Event Hubs ou SFTP.
 exl-id: d29f0a6e-b323-4f78-bbd0-dee2f1e0fedb
-source-git-commit: 3f31a54c0cf329d374808dacce3fac597a72aa11
+source-git-commit: 5d318d8fa4207ece26a8b0a291d81907af029aed
 workflow-type: tm+mt
-source-wordcount: '309'
-ht-degree: 66%
+source-wordcount: '385'
+ht-degree: 49%
 
 ---
 
@@ -20,15 +20,15 @@ Adobe Experience Platform peut fournir vos audiences sous forme de fichiers de d
 
 ## Destinations de stockage dans le cloud prises en charge {#supported-destinations}
 
-Adobe Experience Platform prend en charge les destinations de stockage dans le cloud suivantes :
+Adobe Experience Platform prend en charge les exportations de données vers les destinations de stockage dans le cloud suivantes :
 
 * [Connexion Amazon Kinesis](amazon-kinesis.md)
 * [Connexion Amazon S3](amazon-s3.md)
 * [Connexion Azure Blob](azure-blob.md)
-* [Azure Data Lake Storage Gen2 (version Bêta)](adls-gen2.md)
-* [Connexion Azure Event Hubs](azure-event-hubs.md)
-* [Data Landing Zone (version Bêta)](data-landing-zone.md)
-* [Google Cloud Storage (version Bêta)](google-cloud-storage.md)
+* [Azure Data Lake Storage Gen2](adls-gen2.md)
+* [Azure Event Hubs Connexion ](azure-event-hubs.md)
+* [Data Landing Zone](data-landing-zone.md)
+* [Google Cloud Storage](google-cloud-storage.md)
 * [Connexion SFTP](sftp.md)
 
 ## Se connecter à une nouvelle destination de stockage dans le cloud {#connect-destination}
@@ -65,4 +65,10 @@ Chemin du dossier dans votre emplacement de stockage : `acme/campaigns/2021/Lux
 
 ## Type d’exportation de données {#export-type}
 
-Les destinations de stockage dans le cloud prennent en charge l’**Exportation basée sur les profils**. Cela signifie que vous exportez des détails sur les individus dans l’audience. Ces détails sont nécessaires à la personnalisation et peuvent inclure des attributs, des événements, des appartenances à l’audience, etc.
+Les destinations de stockage dans le cloud prennent en charge les types d’exportation suivants :
+* **Exportation basée sur les profils**. Cela signifie que vous exportez des détails sur les individus dans l’audience. Ces détails sont nécessaires à la personnalisation et peuvent inclure des attributs, des événements, des appartenances à l’audience, etc.
+* [!BADGE Version bêta]{type=Informative}**Exportation des jeux de données**. Cette fonctionnalité vous permet d’exporter des jeux de données entiers vers des destinations de stockage dans le cloud. [En savoir plus](/help/destinations/ui/export-datasets.md) à propos de la fonctionnalité.
+
+## Étapes suivantes {#next-steps}
+
+Après avoir sélectionné l’une des options [destinations cloud prises en charge](#supported-destinations) Si vous souhaitez utiliser, lisez le [tutoriel sur la connexion aux destinations](/help/destinations/ui/connect-destination.md) pour savoir comment établir une connexion à la destination. Lisez ensuite le tutoriel sur l’activation pour les destinations basées sur des fichiers afin d’apprendre à démarrer. [export](/help/destinations/ui/activate-batch-profile-destinations.md) données vers votre destination de stockage dans le cloud.

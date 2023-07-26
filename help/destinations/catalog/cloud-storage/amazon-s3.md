@@ -2,9 +2,9 @@
 title: Connexion Amazon S3
 description: Créez une connexion sortante active vers votre stockage Amazon Web Services (AWS) S3 pour exporter régulièrement des fichiers de données CSV depuis Adobe Experience Platform vers vos propres compartiments S3.
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 5d318d8fa4207ece26a8b0a291d81907af029aed
 workflow-type: tm+mt
-source-wordcount: '1110'
+source-wordcount: '975'
 ht-degree: 70%
 
 ---
@@ -13,24 +13,12 @@ ht-degree: 70%
 
 ## Journal des modifications de destination {#changelog}
 
->[!IMPORTANT]
->
->Avec la version bêta de la fonctionnalité d’exportation des jeux de données et la fonctionnalité améliorée d’exportation de fichiers, vous pouvez maintenant voir deux cartes [!DNL Amazon S3] dans le catalogue des destinations.
->* Si vous exportez déjà des fichiers vers le **[!UICONTROL Amazon S3]** destination, créez de nouveaux flux de données pour le nouveau **[!UICONTROL Amazon S3 bêta]** destination.
->* Si vous n’avez pas encore créé de flux de données pour la destination **[!UICONTROL Amazon S3]**, veuillez utiliser la nouvelle carte **[!UICONTROL bêta Amazon S3]** pour exporter des fichiers vers **[!UICONTROL Amazon S3]**.
+Avec la version Experience Platform de juillet 2023, la variable [!DNL Amazon S3] destination offre de nouvelles fonctionnalités, comme indiqué ci-dessous :
 
-![Image des deux cartes de destination Amazon S3 dans une vue côte à côte.](../../assets/catalog/cloud-storage/amazon-s3/two-amazons3-destination-cards.png)
-
-Améliorations de la nouvelle carte de destination [!DNL Amazon S3] :
-
-* [Prise en charge de l’exportation des jeux de données](/help/destinations/ui/export-datasets.md).
+* [!BADGE Version bêta]{type=Informative}[Prise en charge de l’exportation des jeux de données](/help/destinations/ui/export-datasets.md).
 * [Options de dénomination de fichier](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) supplémentaires.
 * Possibilité de définir des en-têtes de fichier personnalisés dans vos fichiers exportés via l’[étape de mappage améliorée](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
 * [Possibilité de personnaliser le formatage des fichiers de données CSV exportés](/help/destinations/ui/batch-destinations-file-formatting-options.md).
-
-## Présentation {#overview}
-
-Créez une connexion sortante active vers votre stockage [!DNL Amazon S3] pour exporter régulièrement des fichiers de données depuis Adobe Experience Platform vers vos propres compartiments S3.
 
 ## Se connecter à [!DNL Amazon S3] stockage via l’API ou l’interface utilisateur {#connect-api-or-ui}
 
@@ -105,9 +93,9 @@ Pour configurer les détails de la destination, renseignez les champs obligatoir
 * **[!UICONTROL Description]** : saisissez une description de cette destination.
 * **[!UICONTROL Nom du compartiment]** : saisissez le nom du compartiment [!DNL Amazon S3] que cette destination doit utiliser.
 * **[!UICONTROL Chemin du dossier]** : saisissez le chemin du dossier de destination qui hébergera les fichiers exportés.
-* **[!UICONTROL Type de fichier]**: sélectionnez le format que l’Experience Platform doit utiliser pour les fichiers exportés. Cette option n’est disponible que pour la variable **[!UICONTROL Amazon S3 bêta]** destination. Lorsque vous sélectionnez la variable [!UICONTROL CSV] , vous pouvez également [configuration des options de formatage de fichier](../../ui/batch-destinations-file-formatting-options.md).
-* **[!UICONTROL Format de compression]**: sélectionnez le type de compression que l’Experience Platform doit utiliser pour les fichiers exportés. Cette option n’est disponible que pour la variable **[!UICONTROL Amazon S3 bêta]** destination.
-* **[!UICONTROL Inclure le fichier manifeste]**: activez cette option si vous souhaitez que les exportations incluent un fichier JSON manifeste contenant des informations sur l’emplacement d’exportation, la taille de l’exportation, etc. Cette option n’est disponible que pour la variable **[!UICONTROL Amazon S3 bêta]** destination.
+* **[!UICONTROL Type de fichier]**: sélectionnez le format que l’Experience Platform doit utiliser pour les fichiers exportés. Lorsque vous sélectionnez la variable [!UICONTROL CSV] , vous pouvez également [configuration des options de formatage de fichier](../../ui/batch-destinations-file-formatting-options.md).
+* **[!UICONTROL Format de compression]**: sélectionnez le type de compression que l’Experience Platform doit utiliser pour les fichiers exportés.
+* **[!UICONTROL Inclure le fichier manifeste]**: activez cette option si vous souhaitez que les exportations incluent un fichier JSON manifeste contenant des informations sur l’emplacement d’exportation, la taille de l’exportation, etc.
 
 >[!TIP]
 >

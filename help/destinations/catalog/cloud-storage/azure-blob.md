@@ -2,10 +2,10 @@
 title: Connexion Azure Blob
 description: Créez une connexion sortante active vers votre stockage Blob Azure afin d’exporter régulièrement des fichiers de données CSV à partir d’Adobe Experience Platform.
 exl-id: 8099849b-e3d2-48a5-902a-ca5a5ec88207
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: f069f97e82955fbb3a02c5d6cb73420069fa5403
 workflow-type: tm+mt
-source-wordcount: '1085'
-ht-degree: 69%
+source-wordcount: '973'
+ht-degree: 68%
 
 ---
 
@@ -13,17 +13,9 @@ ht-degree: 69%
 
 ## Journal des modifications de destination {#changelog}
 
->[!IMPORTANT]
->
->Avec la version bêta de la fonctionnalité d’exportation des jeux de données et la fonctionnalité améliorée d’exportation de fichiers, vous pouvez maintenant voir deux cartes [!DNL Azure Blob] dans le catalogue des destinations.
->* Si vous exportez déjà des fichiers vers la destination **[!UICONTROL Azure Blob]**, créez des flux de données vers la nouvelle destination **[!UICONTROL Azure Blob Beta]**.
->* Si vous n’avez pas encore créé de flux de données vers la destination **[!UICONTROL Azure Blob]**, utilisez la nouvelle carte **[!UICONTROL Azure Blob Beta]** pour exporter des fichiers vers **[!UICONTROL Azure Blob]**.
+Avec la version Experience Platform de juillet 2023, la variable [!DNL Azure Blob] destination offre de nouvelles fonctionnalités, comme indiqué ci-dessous :
 
-![Image des deux cartes de destination Azure Blob en vue côte à côte.](../../assets/catalog/cloud-storage/blob/two-azure-blob-destination-cards.png)
-
-Améliorations de la nouvelle carte de destination [!DNL Azure Blob] :
-
-* [Prise en charge de l’exportation des jeux de données](/help/destinations/ui/export-datasets.md).
+* [!BADGE Version bêta]{type=Informative}[Prise en charge de l’exportation des jeux de données](/help/destinations/ui/export-datasets.md).
 * [Options de dénomination de fichier](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) supplémentaires.
 * Possibilité de définir des en-têtes de fichier personnalisés dans vos fichiers exportés via l’[étape de mappage améliorée](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
 * [Possibilité de personnaliser le formatage des fichiers de données CSV exportés](/help/destinations/ui/batch-destinations-file-formatting-options.md).
@@ -32,9 +24,9 @@ Améliorations de la nouvelle carte de destination [!DNL Azure Blob] :
 
 [!DNL Azure Blob] (ci-après dénommé [!DNL Blob]) est la solution de stockage d’objets Microsoft pour le cloud. Ce tutoriel présente les étapes à suivre pour créer une destination [!DNL Blob] à l’aide de l’interface utilisateur de [!DNL Platform].
 
-## Connectez-vous à votre [!UICONTROL Azure Blob] stockage via l’API ou l’interface utilisateur {#connect-api-or-ui}
+## Se connecter à [!UICONTROL Azure Blob] stockage via l’API ou l’interface utilisateur {#connect-api-or-ui}
 
-* Pour vous connecter à [!UICONTROL Azure Blob] Emplacement de stockage à l’aide de l’interface utilisateur de Platform, lisez les sections [Connexion à la destination](#connect) et [Activer les audiences vers cette destination](#activate) ci-dessous.
+* Pour vous connecter à [!UICONTROL Azure Blob] Emplacement de stockage à l’aide de l’interface utilisateur de Platform, lisez les sections [Connexion à la destination](#connect) et [Activer les audiences vers cette destination](#activate) ci-dessous
 * Pour vous connecter à [!UICONTROL Azure Blob] emplacement de stockage par programmation, lisez la [Activation des audiences vers des destinations basées sur des fichiers à l’aide du tutoriel de l’API Flow Service](../../api/activate-segments-file-based-destinations.md).
 
 ## Prise en main
@@ -110,9 +102,9 @@ Pour configurer les détails de la destination, renseignez les champs obligatoir
 * **[!UICONTROL Description]** : entrez une description de cette destination.
 * **[!UICONTROL Chemin du dossier]** : entrez le chemin d’accès au dossier de destination qui hébergera les fichiers exportés.
 * **[!UICONTROL Conteneur]** : entrez le nom du conteneur [!DNL Azure Blob Storage] qui sera utilisé par cette destination.
-* **[!UICONTROL Type de fichier]**: sélectionnez le format que l’Experience Platform doit utiliser pour les fichiers exportés. Cette option n’est disponible que pour la variable **[!UICONTROL Azure Blob beta]** destination. Lorsque vous sélectionnez la variable [!UICONTROL CSV] , vous pouvez également [configuration des options de formatage de fichier](../../ui/batch-destinations-file-formatting-options.md).
-* **[!UICONTROL Format de compression]**: sélectionnez le type de compression que l’Experience Platform doit utiliser pour les fichiers exportés. Cette option n’est disponible que pour la variable **[!UICONTROL Azure Blob beta]** destination.
-* **[!UICONTROL Inclure le fichier manifeste]**: activez cette option si vous souhaitez que les exportations incluent un fichier JSON manifeste contenant des informations sur l’emplacement de l’exportation, la taille de l’exportation, etc. Cette option n’est disponible que pour la variable **[!UICONTROL Azure Blob beta]** destination.
+* **[!UICONTROL Type de fichier]**: sélectionnez le format que l’Experience Platform doit utiliser pour les fichiers exportés. Lorsque vous sélectionnez la variable [!UICONTROL CSV] , vous pouvez également [configuration des options de formatage de fichier](../../ui/batch-destinations-file-formatting-options.md).
+* **[!UICONTROL Format de compression]**: sélectionnez le type de compression que l’Experience Platform doit utiliser pour les fichiers exportés.
+* **[!UICONTROL Inclure le fichier manifeste]**: activez cette option si vous souhaitez que les exportations incluent un fichier JSON manifeste contenant des informations sur l’emplacement d’exportation, la taille de l’exportation, etc.
 
 ### Activer les alertes {#enable-alerts}
 

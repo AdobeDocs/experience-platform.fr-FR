@@ -1,27 +1,23 @@
 ---
-title: (Version bêta) Connexion à Azure Data Lake Storage Gen2
+title: Connexion Azure Data Lake Storage Gen2
 description: Découvrez comment vous connecter à Azure Data Lake Storage Gen2 pour activer les audiences et exporter des jeux de données.
 exl-id: d265a02d-c901-4b39-8714-fe9ecdbb5bb1
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: f069f97e82955fbb3a02c5d6cb73420069fa5403
 workflow-type: tm+mt
-source-wordcount: '836'
-ht-degree: 70%
+source-wordcount: '805'
+ht-degree: 68%
 
 ---
 
-# Connexion à [!DNL Azure Data Lake Storage Gen2] (version Beta)
-
->[!IMPORTANT]
->
->Cette destination est actuellement en version bêta et nʼest disponible que pour un nombre de clients limité. Pour demander l’accès à la connexion [!DNL Azure Data Lake Storage Gen2], contactez votre représentant Adobe et fournissez votre [!DNL Organization ID].
+# Connexion [!DNL Azure Data Lake Storage Gen2]
 
 ## Présentation {#overview}
 
 Lisez cette page pour apprendre à créer une connexion sortante active vers votre lac de données [[!DNL Azure Data Lake Storage Gen2]](https://learn.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction) ([!DNL ADLS Gen2]) pour exporter périodiquement des fichiers de données à partir d’Experience Platform.
 
-## Connectez-vous à votre [!DNL ADLS Gen2] stockage via l’API ou l’interface utilisateur {#connect-api-or-ui}
+## Se connecter à [!DNL ADLS Gen2] stockage via l’API ou l’interface utilisateur {#connect-api-or-ui}
 
-* Pour vous connecter à [!DNL ADLS Gen2] Emplacement de stockage à l’aide de l’interface utilisateur de Platform, lisez les sections [Connexion à la destination](#connect) et [Activer les audiences vers cette destination](#activate) ci-dessous.
+* Pour vous connecter à [!DNL ADLS Gen2] Emplacement de stockage à l’aide de l’interface utilisateur de Platform, lisez les sections [Connexion à la destination](#connect) et [Activer les audiences vers cette destination](#activate) ci-dessous
 * Pour vous connecter à [!DNL ADLS Gen2] emplacement de stockage par programmation, lisez la [Activation des audiences vers des destinations basées sur des fichiers à l’aide du tutoriel de l’API Flow Service](../../api/activate-segments-file-based-destinations.md).
 
 ## Audiences prises en charge {#supported-audiences}
@@ -80,7 +76,7 @@ Pour configurer les détails de la destination, renseignez les champs obligatoir
 * **[!UICONTROL Chemin d’accès au dossier]** : saisissez le chemin d’accès au dossier de destination qui héberge les fichiers exportés.
 * **[!UICONTROL Type de fichier]**: sélectionnez le format que l’Experience Platform doit utiliser pour les fichiers exportés. Lorsque vous sélectionnez la variable [!UICONTROL CSV] , vous pouvez également [configuration des options de formatage de fichier](../../ui/batch-destinations-file-formatting-options.md).
 * **[!UICONTROL Format de compression]**: sélectionnez le type de compression que l’Experience Platform doit utiliser pour les fichiers exportés.
-* **[!UICONTROL Inclure le fichier manifeste]**: activez cette option si vous souhaitez que les exportations incluent un fichier JSON manifeste contenant des informations sur l’emplacement de l’exportation, la taille de l’exportation, etc.
+* **[!UICONTROL Inclure le fichier manifeste]**: activez cette option si vous souhaitez que les exportations incluent un fichier JSON manifeste contenant des informations sur l’emplacement d’exportation, la taille de l’exportation, etc.
 
 ### Activer les alertes {#enable-alerts}
 

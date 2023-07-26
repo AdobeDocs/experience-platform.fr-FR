@@ -2,19 +2,18 @@
 title: Destination de Data Landing Zone
 description: Découvrez comment vous connecter à Data Landing Zone pour activer des audiences et exporter des jeux de données.
 exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
-source-git-commit: 4b9e7c22282a5531f2f25f3d225249e4eb0e178e
+source-git-commit: f069f97e82955fbb3a02c5d6cb73420069fa5403
 workflow-type: tm+mt
-source-wordcount: '1434'
-ht-degree: 55%
+source-wordcount: '1404'
+ht-degree: 54%
 
 ---
 
-# Destination de Data Landing Zone (Version bêta)
+# Destination de Data Landing Zone
 
 >[!IMPORTANT]
 >
->* Cette destination est actuellement en version bêta et nʼest disponible que pour un nombre de clients limité. Pour demander l’accès à la connexion [!DNL Data Landing Zone], contactez votre représentant Adobe et fournissez votre [!DNL Organization ID].
->* Cette page de documentation fait référence au [!DNL Data Landing Zone] *destination*. Il y a également un [!DNL Data Landing Zone] *source* dans le catalogue des sources. Pour plus d’informations, reportez-vous à la section [[!DNL Data Landing Zone] source](/help/sources/connectors/cloud-storage/data-landing-zone.md) documentation.
+>Cette page de documentation fait référence au [!DNL Data Landing Zone] *destination*. Il y a également un [!DNL Data Landing Zone] *source* dans le catalogue des sources. Pour plus d’informations, consultez la section [[!DNL Data Landing Zone] source](/help/sources/connectors/cloud-storage/data-landing-zone.md) la documentation.
 
 
 ## Présentation {#overview}
@@ -25,9 +24,9 @@ ht-degree: 55%
 
 Platform applique une durée de vie (TTL) stricte de sept jours sur tous les fichiers chargés dans un conteneur [!DNL Data Landing Zone]. Tous les fichiers sont supprimés au bout de sept jours.
 
-## Connectez-vous à votre [!UICONTROL Zone d’entrée des données] stockage via l’API ou l’interface utilisateur {#connect-api-or-ui}
+## Se connecter à [!UICONTROL Zone d’entrée des données] stockage via l’API ou l’interface utilisateur {#connect-api-or-ui}
 
-* Pour vous connecter à [!UICONTROL Zone d’entrée des données] Emplacement de stockage à l’aide de l’interface utilisateur de Platform, lisez les sections [Connexion à la destination](#connect) et [Activer les audiences vers cette destination](#activate) ci-dessous.
+* Pour vous connecter à [!UICONTROL Zone d’entrée des données] Emplacement de stockage à l’aide de l’interface utilisateur de Platform, lisez les sections [Connexion à la destination](#connect) et [Activer les audiences vers cette destination](#activate) ci-dessous
 * Pour vous connecter à [!UICONTROL Zone d’entrée des données] emplacement de stockage par programmation, lisez la [Activation des audiences vers des destinations basées sur des fichiers à l’aide du tutoriel de l’API Flow Service](../../api/activate-segments-file-based-destinations.md).
 
 ## Audiences prises en charge {#supported-audiences}
@@ -61,7 +60,7 @@ Notez les conditions préalables suivantes qui doivent être remplies pour pouvo
 
 ### Connectez-vous à [!DNL Data Landing Zone] conteneur à [!DNL Azure Storage Explorer]
 
-Vous pouvez utiliser [[!DNL Azure Storage Explorer]](https://azure.microsoft.com/en-us/products/storage/storage-explorer/) pour gérer le contenu de votre conteneur [!DNL Data Landing Zone]. Pour commencer à utiliser [!DNL Data Landing Zone], vous devez d’abord récupérer vos informations d’identification, puis les entrer dans [!DNL Azure Storage Explorer], puis connectez vos [!DNL Data Landing Zone] conteneur à [!DNL Azure Storage Explorer].
+Vous pouvez utiliser [[!DNL Azure Storage Explorer]](https://azure.microsoft.com/en-us/products/storage/storage-explorer/) pour gérer le contenu de votre conteneur [!DNL Data Landing Zone]. Pour commencer à [!DNL Data Landing Zone], vous devez d’abord récupérer vos informations d’identification, puis les entrer dans [!DNL Azure Storage Explorer], puis connectez vos [!DNL Data Landing Zone] conteneur à [!DNL Azure Storage Explorer].
 
 Dans l’interface utilisateur [!DNL Azure Storage Explorer], sélectionnez l’icône de connexion dans la barre de navigation de gauche. La fenêtre **Sélectionner la ressource** s’affiche, vous permettant d’accéder à des options de connexion. Sélectionnez **[!DNL Blob container]** pour vous connecter à votre espace de stockage [!DNL Data Landing Zone].
 
@@ -77,7 +76,7 @@ Après avoir sélectionné votre méthode de connexion, vous devez fournir un **
 
 ### Récupérez les informations d’identification de vos [!DNL Data Landing Zone] {#retrieve-dlz-credentials}
 
-Vous devez utiliser les API de Platform pour récupérer vos [!DNL Data Landing Zone] informations d’identification. L’appel API pour récupérer vos informations d’identification est décrit ci-dessous. Pour plus d’informations sur l’obtention des valeurs requises pour vos en-têtes, reportez-vous à la section [Prise en main des API Adobe Experience Platform](/help/landing/api-guide.md) guide.
+Vous devez utiliser les API Platform pour récupérer vos [!DNL Data Landing Zone] informations d’identification. L’appel API pour récupérer vos informations d’identification est décrit ci-dessous. Pour plus d’informations sur l’obtention des valeurs requises pour vos en-têtes, reportez-vous à la section [Prise en main des API Adobe Experience Platform](/help/landing/api-guide.md) guide.
 
 **Format d’API**
 
@@ -87,7 +86,7 @@ GET /data/foundation/connectors/landingzone/credentials?type=dlz_destination
 
 | Paramètres de requête | Description |
 | --- | --- |
-| `dlz_destination` | Le `dlz_destination` type permet à l’API de distinguer un conteneur de destination de zone d’entrée des autres types de conteneurs disponibles. |
+| `dlz_destination` | La variable `dlz_destination` type permet à l’API de distinguer un conteneur de destination de zone d’entrée des autres types de conteneurs disponibles. |
 
 {style="table-layout:auto"}
 
@@ -120,9 +119,9 @@ La réponse suivante renvoie les informations d’identification pour votre zone
 
 | Propriété | Description |
 | --- | --- |
-| `containerName` | Nom de votre zone d’entrée. |
+| `containerName` | Le nom de votre zone d’entrée. |
 | `SASToken` | Jeton de signature d’accès partagé pour votre zone d’entrée. Cette chaîne contient toutes les informations nécessaires pour autoriser une requête. |
-| `SASUri` | URI de signature d’accès partagé pour votre zone d’entrée. Cette chaîne est une combinaison de l’URI de la zone d’entrée pour laquelle vous êtes authentifié et de son jeton SAS correspondant, |
+| `SASUri` | L’URI de signature d’accès partagé pour votre zone d’entrée. Cette chaîne est une combinaison de l’URI de la zone d’entrée pour laquelle vous êtes authentifié et de son jeton SAS correspondant, |
 
 {style="table-layout:auto"}
 
@@ -138,8 +137,8 @@ POST /data/foundation/connectors/landingzone/credentials?type=dlz_destination&ac
 
 | Paramètres de requête | Description |
 | --- | --- |
-| `dlz_destination` | Le `dlz_destination` type permet à l’API de distinguer un conteneur de destination de zone d’entrée des autres types de conteneurs disponibles. |
-| `refresh` | Le `refresh` vous permet de réinitialiser les informations d’identification de votre zone d’entrée et de générer automatiquement une nouvelle `SASToken`. |
+| `dlz_destination` | La variable `dlz_destination` type permet à l’API de distinguer un conteneur de destination de zone d’entrée des autres types de conteneurs disponibles. |
+| `refresh` | La variable `refresh` vous permet de réinitialiser les informations d’identification de votre zone d’entrée et de générer automatiquement une nouvelle `SASToken`. |
 
 {style="table-layout:auto"}
 
@@ -207,7 +206,7 @@ Pour configurer les détails de la destination, renseignez les champs obligatoir
 * **[!UICONTROL Chemin d’accès au dossier]** : saisissez le chemin d’accès au dossier de destination qui héberge les fichiers exportés.
 * **[!UICONTROL Type de fichier]**: sélectionnez le format que l’Experience Platform doit utiliser pour les fichiers exportés. Lorsque vous sélectionnez la variable [!UICONTROL CSV] , vous pouvez également [configuration des options de formatage de fichier](../../ui/batch-destinations-file-formatting-options.md).
 * **[!UICONTROL Format de compression]**: sélectionnez le type de compression que l’Experience Platform doit utiliser pour les fichiers exportés.
-* **[!UICONTROL Inclure le fichier manifeste]**: activez cette option si vous souhaitez que les exportations incluent un fichier JSON manifeste contenant des informations sur l’emplacement de l’exportation, la taille de l’exportation, etc.
+* **[!UICONTROL Inclure le fichier manifeste]**: activez cette option si vous souhaitez que les exportations incluent un fichier JSON manifeste contenant des informations sur l’emplacement d’exportation, la taille de l’exportation, etc.
 
 ### Activer les alertes {#enable-alerts}
 

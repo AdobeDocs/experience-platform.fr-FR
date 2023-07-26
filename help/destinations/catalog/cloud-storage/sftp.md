@@ -2,9 +2,9 @@
 title: Connexion SFTP
 description: Créez une connexion sortante active à votre serveur SFTP afin d’exporter périodiquement des fichiers de données délimités à partir d’Adobe Experience Platform.
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: f05f8cb47a1f65e8931500d7064fdce48aa53347
+source-git-commit: f069f97e82955fbb3a02c5d6cb73420069fa5403
 workflow-type: tm+mt
-source-wordcount: '1041'
+source-wordcount: '940'
 ht-degree: 61%
 
 ---
@@ -13,17 +13,9 @@ ht-degree: 61%
 
 ## Journal des modifications de destination {#changelog}
 
->[!IMPORTANT]
->
->Avec la version Beta de la fonctionnalité d’exportation des jeux de données et l’amélioration de la fonctionnalité d’exportation de fichiers, vous pouvez maintenant voir deux cartes [!DNL SFTP] dans le catalogue des destinations.
->* Si vous exportez déjà des fichiers vers la destination **[!UICONTROL SFTP]**, créez des flux de données vers la nouvelle destination **[!UICONTROL SFTP en version Beta]**.
->* Si vous n’avez pas encore créé de flux de données pour la variable **[!UICONTROL SFTP]** destination, utilisez la nouvelle **[!UICONTROL Version bêta SFTP]** carte pour exporter des fichiers vers **[!UICONTROL SFTP]**.
+Avec la version Experience Platform de juillet 2023, la destination SFTP offre de nouvelles fonctionnalités, comme indiqué ci-dessous :
 
-![Image des deux cartes de destination SFTP dans une vue côte à côte.](../../assets/catalog/cloud-storage/sftp/two-sftp-destination-cards.png)
-
-Améliorations de la nouvelle carte de destination [!DNL SFTP] :
-
-* [Prise en charge de l’exportation des jeux de données](/help/destinations/ui/export-datasets.md).
+* [!BADGE Version bêta]{type=Informative}[Prise en charge de l’exportation des jeux de données](/help/destinations/ui/export-datasets.md).
 * [Options de dénomination de fichier](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) supplémentaires.
 * Possibilité de définir des en-têtes de fichier personnalisés dans vos fichiers exportés via l’[étape de mappage améliorée](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
 * [Possibilité de personnaliser le formatage des fichiers de données CSV exportés](/help/destinations/ui/batch-destinations-file-formatting-options.md).
@@ -38,7 +30,7 @@ Créez une connexion sortante active à votre serveur SFTP afin d’exporter pé
 
 ## Connexion à SFTP via l’API ou l’interface utilisateur {#connect-api-or-ui}
 
-* Pour vous connecter à votre emplacement de stockage SFTP à l’aide de l’interface utilisateur de Platform, lisez les sections [Connexion à la destination](#connect) et [Activer les audiences vers cette destination](#activate) ci-dessous.
+* Pour vous connecter à votre emplacement de stockage SFTP à l’aide de l’interface utilisateur de Platform, lisez les sections [Connexion à la destination](#connect) et [Activer les audiences vers cette destination](#activate) ci-dessous
 * Pour vous connecter à votre emplacement de stockage SFTP par programmation, lisez le [Activation des audiences vers des destinations basées sur des fichiers à l’aide du tutoriel de l’API Flow Service](../../api/activate-segments-file-based-destinations.md).
 
 ## Audiences prises en charge {#supported-audiences}
@@ -88,7 +80,7 @@ Pour vous connecter à cette destination, procédez comme décrit dans le [tutor
 >title="Clé SSH privée"
 >abstract="La clé SSH privée doit être une chaîne codée en Base64 au format RSA et ne doit pas être protégée par un mot de passe."
 
-Si vous sélectionnez la variable **[!UICONTROL SFTP avec mot de passe]** type d’authentification pour se connecter à votre emplacement SFTP :
+Si vous sélectionnez l’option **[!UICONTROL SFTP avec mot de passe]** type d’authentification pour se connecter à votre emplacement SFTP :
 
 ![Authentification de base de la destination SFTP](../../assets/catalog/cloud-storage/sftp/stfp-basic-authentication.png)
 
@@ -122,9 +114,9 @@ Après avoir établi la connexion d’authentification à l’emplacement SFTP, 
 * **[!UICONTROL Nom]**: saisissez un nom qui vous aide à identifier cette destination dans l’interface utilisateur de l’Experience Platform ;
 * **[!UICONTROL Description]** : saisissez une description pour cette destination ;
 * **[!UICONTROL Chemin du dossier]** : saisissez le chemin d’accès au dossier de votre emplacement SFTP où les fichiers seront exportés.
-* **[!UICONTROL Type de fichier]**: sélectionnez le format que l’Experience Platform doit utiliser pour les fichiers exportés. Cette option n’est disponible que pour la variable **[!UICONTROL Version bêta SFTP]** destination. Lorsque vous sélectionnez la variable [!UICONTROL CSV] , vous pouvez également [configuration des options de formatage de fichier](../../ui/batch-destinations-file-formatting-options.md).
-* **[!UICONTROL Format de compression]**: sélectionnez le type de compression que l’Experience Platform doit utiliser pour les fichiers exportés. Cette option n’est disponible que pour la variable **[!UICONTROL Version bêta SFTP]** destination.
-* **[!UICONTROL Inclure le fichier manifeste]**: activez cette option si vous souhaitez que les exportations incluent un fichier JSON manifeste contenant des informations sur l’emplacement de l’exportation, la taille de l’exportation, etc. Cette option n’est disponible que pour la variable **[!UICONTROL Version bêta SFTP]** destination.
+* **[!UICONTROL Type de fichier]**: sélectionnez le format que l’Experience Platform doit utiliser pour les fichiers exportés. Lorsque vous sélectionnez la variable [!UICONTROL CSV] , vous pouvez également [configuration des options de formatage de fichier](../../ui/batch-destinations-file-formatting-options.md).
+* **[!UICONTROL Format de compression]**: sélectionnez le type de compression que l’Experience Platform doit utiliser pour les fichiers exportés.
+* **[!UICONTROL Inclure le fichier manifeste]**: activez cette option si vous souhaitez que les exportations incluent un fichier JSON manifeste contenant des informations sur l’emplacement d’exportation, la taille de l’exportation, etc.
 
 ## Activer les audiences vers cette destination {#activate}
 

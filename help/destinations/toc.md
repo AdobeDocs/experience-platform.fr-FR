@@ -4,9 +4,9 @@ user-guide-title: Guide des destinations
 user-guide-description: Activez vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
 description: Ce document répertorie la table des matières des destinations Adobe Experience Platform
 feature: Destinations
-source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
+source-git-commit: f069f97e82955fbb3a02c5d6cb73420069fa5403
 workflow-type: tm+mt
-source-wordcount: '1167'
+source-wordcount: '1164'
 ht-degree: 96%
 
 ---
@@ -116,10 +116,10 @@ ht-degree: 96%
       * [Connexion Amazon Kinesis](./catalog/cloud-storage/amazon-kinesis.md)
       * [Connexion Amazon S3](./catalog/cloud-storage/amazon-s3.md)
       * [Connexion Azure Blob](./catalog/cloud-storage/azure-blob.md)
-      * [Azure Data Lake Storage Gen2 (version Bêta)](./catalog/cloud-storage/adls-gen2.md)
-      * [Connexion Azure Event Hubs](./catalog/cloud-storage/azure-event-hubs.md)
-      * [Data Landing Zone (version Bêta)](./catalog/cloud-storage/data-landing-zone.md)
-      * [Google Cloud Storage (version Bêta)](./catalog/cloud-storage/google-cloud-storage.md)
+      * [Azure Data Lake Storage Gen2](./catalog/cloud-storage/adls-gen2.md)
+      * [Azure Event Hubs Connexion ](./catalog/cloud-storage/azure-event-hubs.md)
+      * [Data Landing Zone](./catalog/cloud-storage/data-landing-zone.md)
+      * [Google Cloud Storage](./catalog/cloud-storage/google-cloud-storage.md)
       * [Connexion SFTP](./catalog/cloud-storage/sftp.md)
       * [Liste autorisée d’adresses IP pour les destinations SFTP](./catalog/cloud-storage/ip-address-allow-list.md)
    * Destinations de la gestion de la relation client (CRM) {#crm}
