@@ -5,7 +5,7 @@ exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
 source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '1110'
-ht-degree: 68%
+ht-degree: 70%
 
 ---
 
@@ -32,9 +32,9 @@ Améliorations de la nouvelle carte de destination [!DNL Amazon S3] :
 
 Créez une connexion sortante active vers votre stockage [!DNL Amazon S3] pour exporter régulièrement des fichiers de données depuis Adobe Experience Platform vers vos propres compartiments S3.
 
-## Connectez-vous à votre [!DNL Amazon S3] stockage via l’API ou l’interface utilisateur {#connect-api-or-ui}
+## Se connecter à [!DNL Amazon S3] stockage via l’API ou l’interface utilisateur {#connect-api-or-ui}
 
-* Pour vous connecter à [!DNL Amazon S3] Emplacement de stockage à l’aide de l’interface utilisateur de Platform, lisez les sections [Connexion à la destination](#connect) et [Activer les audiences vers cette destination](#activate) ci-dessous.
+* Pour vous connecter à [!DNL Amazon S3] Emplacement de stockage à l’aide de l’interface utilisateur de Platform, lisez les sections [Connexion à la destination](#connect) et [Activer les audiences vers cette destination](#activate) ci-dessous
 * Pour vous connecter à [!DNL Amazon S3] emplacement de stockage par programmation, lisez la [Activation des audiences vers des destinations basées sur des fichiers à l’aide du tutoriel de l’API Flow Service](../../api/activate-segments-file-based-destinations.md).
 
 ## Audiences prises en charge {#supported-audiences}
@@ -96,7 +96,7 @@ Pour vous authentifier auprès de la destination, renseignez les champs requis e
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_s3_folderpath"
 >title="Chemin du dossier"
->abstract="Doit contenir uniquement les caractères A-Z, a-z, 0-9 et peut contenir les caractères spéciaux suivants : `/!-_.'()"^[]+$%.*"`. Pour créer un dossier par fichier d&#39;audience, insérez la macro `/%SEGMENT_NAME%` ou `/%SEGMENT_ID%` ou `/%SEGMENT_NAME%/%SEGMENT_ID%` dans le champ de texte. Les macros ne peuvent être insérées qu’à la fin du chemin du dossier. Affichez des exemples de macro dans la documentation."
+>abstract="Doit contenir uniquement les caractères A-Z, a-z, 0-9 et peut contenir les caractères spéciaux suivants : `/!-_.'()"^[]+$%.*"`. Pour créer un dossier par fichier d’audience, insérez la macro `/%SEGMENT_NAME%` ou `/%SEGMENT_ID%` ou `/%SEGMENT_NAME%/%SEGMENT_ID%` dans le champ de texte. Les macros ne peuvent être insérées qu’à la fin du chemin du dossier. Affichez des exemples de macro dans la documentation."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/cloud-storage/overview.html?lang=fr#use-macros" text="Utiliser les macros pour créer un dossier à votre emplacement de stockage"
 
 Pour configurer les détails de la destination, renseignez les champs obligatoires et facultatifs ci-dessous. Un astérisque situé en regard d’un champ de l’interface utilisateur indique que le champ est obligatoire.
@@ -107,7 +107,7 @@ Pour configurer les détails de la destination, renseignez les champs obligatoir
 * **[!UICONTROL Chemin du dossier]** : saisissez le chemin du dossier de destination qui hébergera les fichiers exportés.
 * **[!UICONTROL Type de fichier]**: sélectionnez le format que l’Experience Platform doit utiliser pour les fichiers exportés. Cette option n’est disponible que pour la variable **[!UICONTROL Amazon S3 bêta]** destination. Lorsque vous sélectionnez la variable [!UICONTROL CSV] , vous pouvez également [configuration des options de formatage de fichier](../../ui/batch-destinations-file-formatting-options.md).
 * **[!UICONTROL Format de compression]**: sélectionnez le type de compression que l’Experience Platform doit utiliser pour les fichiers exportés. Cette option n’est disponible que pour la variable **[!UICONTROL Amazon S3 bêta]** destination.
-* **[!UICONTROL Inclure le fichier manifeste]**: activez cette option si vous souhaitez que les exportations incluent un fichier JSON manifeste contenant des informations sur l’emplacement de l’exportation, la taille de l’exportation, etc. Cette option n’est disponible que pour la variable **[!UICONTROL Amazon S3 bêta]** destination.
+* **[!UICONTROL Inclure le fichier manifeste]**: activez cette option si vous souhaitez que les exportations incluent un fichier JSON manifeste contenant des informations sur l’emplacement d’exportation, la taille de l’exportation, etc. Cette option n’est disponible que pour la variable **[!UICONTROL Amazon S3 bêta]** destination.
 
 >[!TIP]
 >

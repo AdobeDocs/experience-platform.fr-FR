@@ -6,7 +6,7 @@ exl-id: e93f1bd5-9d29-43a1-a9a6-8933f9d85150
 source-git-commit: 1c9725c108d55aea5d46b086fbe010ab4ba6cf45
 workflow-type: tm+mt
 source-wordcount: '992'
-ht-degree: 66%
+ht-degree: 69%
 
 ---
 
@@ -89,8 +89,8 @@ Pour vous connecter à cette destination, procédez comme décrit dans le [tutor
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_gam_appendSegmentID"
->title="Ajout d’un ID d’audience au nom de l’audience"
->abstract="Sélectionnez cette option pour que le nom de l’audience dans Google Ad Manager inclue l’ID de l’audience de l’Experience Platform, comme suit : `Audience Name (Audience ID)`"
+>title="Ajouter un identifiant d’audience au nom de l’audience"
+>abstract="Sélectionnez cette option pour que le nom de l’audience dans Google Ad Manager inclue l’identifiant de l’audience d’Experience Platform, comme suit : `Audience Name (Audience ID)`"
 
 Pendant la [configuration](../../ui/connect-destination.md) de cette destination, vous devez fournir les informations suivantes :
 

@@ -6,7 +6,7 @@ exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
 source-git-commit: 3f31a54c0cf329d374808dacce3fac597a72aa11
 workflow-type: tm+mt
 source-wordcount: '2000'
-ht-degree: 42%
+ht-degree: 44%
 
 ---
 
@@ -18,12 +18,12 @@ ht-degree: 42%
 >
 > Cette destination est disponible uniquement pour les clients d’[Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform.html).
 
-Le [!DNL Kinesis Data Streams] service by [!DNL Amazon Web Services] vous permet de collecter et de traiter de grands flux d’enregistrements de données en temps réel.
+La variable [!DNL Kinesis Data Streams] service by [!DNL Amazon Web Services] vous permet de collecter et de traiter de grands flux d’enregistrements de données en temps réel.
 
-Vous pouvez créer une connexion sortante en temps réel vers votre [!DNL Amazon Kinesis] stockage pour diffuser des données à partir de Adobe Experience Platform.
+Vous pouvez créer une connexion sortante en temps réel vers votre [!DNL Amazon Kinesis] stockage pour diffuser des données depuis Adobe Experience Platform.
 
-* Pour plus d’informations sur [!DNL Amazon Kinesis], reportez-vous à la section [Documentation Amazon](https://docs.aws.amazon.com/streams/latest/dev/introduction.html).
-* Pour vous connecter à [!DNL Amazon Kinesis] par programmation, reportez-vous à la section [Tutoriel sur l’API des destinations de diffusion en continu](../../api/streaming-destinations.md).
+* Pour plus d’informations sur [!DNL Amazon Kinesis], voir [Documentation Amazon](https://docs.aws.amazon.com/streams/latest/dev/introduction.html).
+* Pour vous connecter à [!DNL Amazon Kinesis] par programmation, voir la section [Tutoriel sur l’API des destinations de diffusion en continu](../../api/streaming-destinations.md).
 * Pour vous connecter à [!DNL Amazon Kinesis] à l’aide de l’interface utilisateur de Platform, consultez les sections ci-dessous.
 
 ![Amazon Kinesis dans l’interface utilisateur](../../assets/catalog/cloud-storage/amazon-kinesis/catalog.png)
@@ -32,7 +32,7 @@ Vous pouvez créer une connexion sortante en temps réel vers votre [!DNL Amazon
 
 En utilisant des destinations de diffusion en continu, telles que [!DNL Amazon Kinesis], vous pouvez facilement alimenter les événements de segmentation à valeur élevée et les attributs de profil associés dans vos systèmes de choix.
 
-Par exemple, un prospect a téléchargé un livre blanc qui les qualifie en segment &quot;forte propension à convertir&quot;. En mappant l’audience que le prospect appartient à la variable [!DNL Amazon Kinesis] destination, vous recevriez cet événement dans [!DNL Amazon Kinesis]. Vous pouvez y utiliser une approche par vous-même et décrire la logique commerciale en plus de l’événement, comme vous le pensez, qui fonctionne le mieux avec vos systèmes informatiques d’entreprise.
+Par exemple, un prospect a téléchargé un livre blanc qui les qualifie en segment &quot;forte propension à la conversion&quot;. En mappant l’audience que le prospect appartient à la variable [!DNL Amazon Kinesis] destination, vous recevriez cet événement dans [!DNL Amazon Kinesis]. Vous pouvez y utiliser une approche par vous-même et décrire la logique commerciale en plus de l’événement, comme vous le pensez, qui fonctionne le mieux avec vos systèmes informatiques d’entreprise.
 
 ## Audiences prises en charge {#supported-audiences}
 
@@ -65,7 +65,7 @@ Pour répondre aux exigences de sécurité et de conformité des clients, Experi
 
 ## Autorisations [!DNL Amazon Kinesis] nécessaires {#required-kinesis-permission}
 
-Pour établir une connexion et exporter des données vers votre [!DNL Amazon Kinesis] flux, l’Experience Platform a besoin d’autorisations pour les actions suivantes :
+Pour établir une connexion et exporter des données vers [!DNL Amazon Kinesis] flux, l’Experience Platform a besoin d’autorisations pour les actions suivantes :
 
 * `kinesis:ListStreams`
 * `kinesis:PutRecord`
@@ -102,7 +102,7 @@ L’exemple ci-dessous présente les droits d’accès minimaux requis pour expo
 
 {style="table-layout:auto"}
 
-Pour plus d’informations sur le contrôle de l’accès à [!DNL Kinesis] flux de données, lisez ce qui suit : [[!DNL Kinesis] document](https://docs.aws.amazon.com/streams/latest/dev/controlling-access.html).
+Pour plus d’informations sur le contrôle de l’accès à [!DNL Kinesis] flux de données, lisez ce qui suit [[!DNL Kinesis] document](https://docs.aws.amazon.com/streams/latest/dev/controlling-access.html).
 
 ## Se connecter à la destination {#connect}
 
@@ -119,29 +119,29 @@ Saisissez les champs ci-dessous et sélectionnez **[!UICONTROL Se connecter à l
 ![Image de l’écran de l’interface utilisateur présentant les champs renseignés pour les détails de l’authentification Kinesis Amazon](../../assets/catalog/cloud-storage/amazon-kinesis/kinesis-authentication-fields.png)
 
 * **[!DNL Amazon Web Services]Clé d’accès et  clé secrète** : dans [!DNL Amazon Web Services], générez une paire `access key - secret access key` pour accorder à Platform l’accès à votre compte [!DNL Amazon Kinesis]. En savoir plus dans la [Documentation Amazon Web Services](https://docs.aws.amazon.com/fr_fr/IAM/latest/UserGuide/id_credentials_access-keys.html).
-* **[!UICONTROL Région]**: Permet d’indiquer [!DNL Amazon Web Services] région vers laquelle diffuser des données.
+* **[!UICONTROL Région]**: indique laquelle [!DNL Amazon Web Services] région vers laquelle diffuser des données.
 
 ### Renseigner les détails de la destination {#destination-details}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_kinesis_includesegmentnames"
 >title="Inclure les noms de segment"
->abstract="Basculez si vous souhaitez que l’exportation des données contienne les noms des audiences que vous exportez. Consultez la documentation pour un exemple d’exportation de données avec cette option sélectionnée."
+>abstract="Activez ce bouton si vous voulez que l’export de données inclue les noms des audiences que vous exportez. Consultez la documentation pour un exemple d’exportation de données avec cette option sélectionnée."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_kinesis_includesegmenttimestamps"
 >title="Inclure la date et l’heure de segment"
->abstract="Basculez si vous souhaitez que l’exportation des données inclue l’horodatage UNIX lors de la création et de la mise à jour des audiences, ainsi que l’horodatage UNIX lorsque les audiences ont été mappées à la destination pour activation. Consultez la documentation pour un exemple d’exportation de données avec cette option sélectionnée."
+>abstract="Activez ce bouton si vous souhaitez que l’export de données inclue la date et l’heure UNIX de la création et des mises à jour des audiences, ainsi que la date et l’heure UNIX du mappage des audiences à la destination pour l’activation. Consultez la documentation pour un exemple d’exportation de données avec cette option sélectionnée."
 
 Pour configurer les détails de la destination, renseignez les champs obligatoires et facultatifs ci-dessous. Un astérisque situé en regard d’un champ de l’interface utilisateur indique que le champ est obligatoire.
 
-![Image de l’écran de l’interface utilisateur affichant les champs remplis pour les détails de destination d’Amazon Kinesis](../../assets/catalog/cloud-storage/amazon-kinesis/kinesis-destination-details.png)
+![Image de l’écran de l’interface utilisateur affichant les champs remplis pour les détails de destination Kinesis Amazon](../../assets/catalog/cloud-storage/amazon-kinesis/kinesis-destination-details.png)
 
-* **[!UICONTROL Nom]**: Attribuez un nom à votre connexion pour [!DNL Amazon Kinesis]
-* **[!UICONTROL Description]**: Fournissez une description de votre connexion à [!DNL Amazon Kinesis].
-* **[!UICONTROL Diffusion]**: Indiquez le nom d’un flux de données existant dans votre [!DNL Amazon Kinesis] compte . Platform exportera les données vers ce flux.
-* **[!UICONTROL Inclure les noms de segment]**: Basculez si vous souhaitez que l’exportation des données contienne les noms des audiences que vous exportez. Pour un exemple d’exportation de données avec cette option sélectionnée, reportez-vous à la section [Données exportées](#exported-data) plus bas.
-* **[!UICONTROL Inclure les horodatages de segment]**: Basculez si vous souhaitez que l’exportation des données inclue l’horodatage UNIX lors de la création et de la mise à jour des audiences, ainsi que l’horodatage UNIX lorsque les audiences ont été mappées à la destination pour activation. Pour un exemple d’exportation de données avec cette option sélectionnée, reportez-vous à la section [Données exportées](#exported-data) plus bas.
+* **[!UICONTROL Nom]**: attribuez un nom à votre connexion pour [!DNL Amazon Kinesis]
+* **[!UICONTROL Description]**: fournissez une description de votre connexion à [!DNL Amazon Kinesis].
+* **[!UICONTROL Diffusion]**: indiquez le nom d’un flux de données existant dans votre [!DNL Amazon Kinesis] compte . Platform exportera les données vers ce flux.
+* **[!UICONTROL Inclure les noms de segment]**: basculez si vous souhaitez que l’exportation des données contienne les noms des audiences que vous exportez. Pour un exemple d’exportation de données avec cette option sélectionnée, reportez-vous à la section [Données exportées](#exported-data) plus bas.
+* **[!UICONTROL Inclure les horodatages de segment]**: basculez si vous souhaitez que l’exportation des données inclue l’horodatage UNIX lors de la création et de la mise à jour des audiences, ainsi que l’horodatage UNIX lorsque les audiences ont été mappées à la destination pour l’activation. Pour un exemple d’exportation de données avec cette option sélectionnée, reportez-vous à la section [Données exportées](#exported-data) plus bas.
 
 <!--
 
@@ -183,7 +183,7 @@ En ce qui concerne les données exportées pour un profil donné, il est importa
 
 | Ce qui détermine une exportation de destination | Éléments inclus dans l’exportation de destination |
 |---------|----------|
-| <ul><li>Les attributs et audiences mappés servent de repère pour un export de destination. Cela signifie que si des audiences mappées changent d’états (à partir de `null` to `realized` ou de `realized` to `exiting`) ou si les attributs mappés sont mis à jour, une exportation de destination est déclenchée.</li><li>Puisque les identités ne peuvent actuellement pas être mappées à [!DNL Amazon Kinesis] les destinations, les modifications de toute identité sur un profil donné déterminent également les exportations de destination.</li><li>Toute modification pour un attribut est considérée comme une mise à jour, qu’il s’agisse ou non de la même valeur. Cela signifie qu’une réécriture sur un attribut est considérée comme une modification, même si la valeur elle-même n’a pas changé.</li></ul> | <ul><li>Le `segmentMembership` inclut l’audience mappée dans le flux de données d’activation, pour laquelle l’état du profil a changé suite à un événement de qualification ou de sortie d’audience. Notez que les autres audiences non mappées pour lesquelles le profil est qualifié peuvent faire partie de l’exportation de destination, si ces audiences appartiennent au même type. [stratégie de fusion](/help/profile/merge-policies/overview.md) comme l’audience mappée dans le flux de données d’activation. </li><li>Toutes les identités dans la variable `identityMap` sont également inclus (l’Experience Platform ne prend actuellement pas en charge le mappage d’identité dans la variable [!DNL Amazon Kinesis] destination).</li><li>Seuls les attributs mappés sont inclus dans l’exportation de destination.</li></ul> |
+| <ul><li>Les attributs et audiences mappés servent de repère pour un export de destination. Cela signifie que si des audiences mappées changent d’états (à partir de `null` to `realized` ou de `realized` to `exiting`) ou si les attributs mappés sont mis à jour, une exportation de destination est déclenchée.</li><li>Puisque les identités ne peuvent actuellement pas être mappées à [!DNL Amazon Kinesis] les destinations, les modifications d’une identité sur un profil donné déterminent également les exportations de destination.</li><li>Toute modification pour un attribut est considérée comme une mise à jour, qu’il s’agisse ou non de la même valeur. Cela signifie qu’une réécriture sur un attribut est considérée comme une modification, même si la valeur elle-même n’a pas changé.</li></ul> | <ul><li>La variable `segmentMembership` inclut l’audience mappée dans le flux de données d’activation, pour laquelle l’état du profil a changé suite à un événement de qualification ou de sortie d’audience. Notez que les autres audiences non mappées pour lesquelles le profil est qualifié peuvent faire partie de l’exportation de destination, si ces audiences appartiennent au même type. [stratégie de fusion](/help/profile/merge-policies/overview.md) comme audience mappée dans le flux de données d’activation. </li><li>Toutes les identités dans la variable `identityMap` sont également inclus (Experience Platform ne prend actuellement pas en charge le mappage d’identité dans la variable [!DNL Amazon Kinesis] destination).</li><li>Seuls les attributs mappés sont inclus dans l’exportation de destination.</li></ul> |
 
 {style="table-layout:fixed"}
 

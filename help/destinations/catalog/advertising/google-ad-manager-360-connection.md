@@ -5,7 +5,7 @@ exl-id: 3251145a-3e4d-40aa-b120-d79c8c9c7cae
 source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '1030'
-ht-degree: 73%
+ht-degree: 75%
 
 ---
 
@@ -75,7 +75,7 @@ La liste autorisée est obligatoire avant de configurer votre première destinat
 >L’exception à cette règle concerne les [Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html?lang=fr) clients. Si vous avez déjà créé une connexion à cette destination Google dans Audience Manager, il n’est pas nécessaire de passer à nouveau par le processus de liste autorisée et vous pouvez passer directement aux étapes suivantes.
 
 1. Suivez les étapes décrites dans la section [Documentation de Google Ad Manager](https://support.google.com/admanager/answer/3289669?hl=fr) pour ajouter Adobe en tant que plateforme de gestion des données liée (DMP).
-2. Dans le [!DNL Google Ad Manager] , accédez à **[!UICONTROL Administration]** > **[!UICONTROL Paramètres globaux]** > **[!UICONTROL Paramètres réseau]**, puis activez la variable **[!UICONTROL Accès API]** curseur.
+2. Dans le [!DNL Google Ad Manager] interface, accédez à **[!UICONTROL Administration]** > **[!UICONTROL Paramètres globaux]** > **[!UICONTROL Paramètres réseau]**, puis activez la variable **[!UICONTROL Accès API]** curseur.
 
 
 ## Se connecter à la destination {#connect}
@@ -99,8 +99,8 @@ Pour plus d’informations sur ces valeurs, consultez le guide [Clés HMAC de Go
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_gam360_appendSegmentID"
->title="Ajout d’un ID d’audience au nom de l’audience"
->abstract="Sélectionnez cette option pour que le nom de l’audience dans Google Ad Manager 360 inclue l’ID d’audience de l’Experience Platform, comme suit : `Audience Name (Audience ID)`"
+>title="Ajouter un identifiant d’audience au nom de l’audience"
+>abstract="Sélectionnez cette option pour que le nom de l’audience dans Google Ad Manager 360 inclue l’identifiant de l’audience d’Experience Platform, comme suit : `Audience Name (Audience ID)`"
 
 Pour configurer les détails de la destination, renseignez les champs obligatoires et facultatifs ci-dessous. Un astérisque situé en regard d’un champ de l’interface utilisateur indique que le champ est obligatoire.
 
@@ -108,11 +108,11 @@ Pour configurer les détails de la destination, renseignez les champs obligatoir
 * **[!UICONTROL Description]** : facultatif. Vous pouvez, par exemple, mentionner la campagne pour laquelle vous utilisez cette destination.
 * **[!UICONTROL Chemin d’accès au dossier]** : saisissez le chemin d’accès au dossier de destination qui héberge les fichiers exportés.
 * **[!UICONTROL Nom du compartiment]** : saisissez le nom du compartiment [!DNL Google Cloud Storage] que cette destination doit utiliser.
-* **[!UICONTROL Identifiant de compte]**: Saisissez votre [!DNL Audience Link ID] de votre [!DNL Google] compte . Il s’agit d’un identifiant spécifique associé à votre [!DNL Google Ad Manager] réseau (et non votre [!DNL Network code]). Vous pouvez trouver ceci sous **[!UICONTROL Admin > Paramètres globaux]** dans le [!DNL Google Ad Manager] .
-* **[!UICONTROL Type de compte]**: Sélectionnez une option, en fonction de votre [!DNL Google] compte :
+* **[!UICONTROL Identifiant de compte]**: entrez votre [!DNL Audience Link ID] de votre [!DNL Google] compte . Il s’agit d’un identifiant spécifique associé à votre [!DNL Google Ad Manager] réseau (et non votre [!DNL Network code]). Vous pouvez trouver ceci sous **[!UICONTROL Admin > Paramètres globaux]** dans le [!DNL Google Ad Manager] .
+* **[!UICONTROL Type de compte]**: sélectionnez une option, en fonction de votre [!DNL Google] compte :
    * Utiliser `AdX buyer` pour [!DNL Google AdX]
    * Utiliser `DFP by Google` pour [!DNL DoubleClick] pour les éditeurs
-* **[!UICONTROL Ajout d’un ID d’audience au nom de l’audience]**: Sélectionnez cette option pour que le nom de l’audience dans Google Ad Manager 360 inclue l’ID d’audience de l’Experience Platform, comme suit : `Audience Name (Audience ID)`.
+* **[!UICONTROL Ajout d’un ID d’audience au nom de l’audience]**: sélectionnez cette option pour que le nom de l’audience dans Google Ad Manager 360 inclue l’ID d’audience de l’Experience Platform, comme suit : `Audience Name (Audience ID)`.
 
 ### Activer les alertes {#enable-alerts}
 

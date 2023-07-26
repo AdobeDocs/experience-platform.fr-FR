@@ -1,12 +1,12 @@
 ---
-keywords: la publicité; bing;
+keywords: la publicité;
 title: Connexion Microsoft Bing
 description: Avec la destination de connexion Microsoft Bing, vous pouvez exécuter le reciblage et l’audience des campagnes numériques ciblées dans Microsoft Display Advertising.
 exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
 source-git-commit: 1c9725c108d55aea5d46b086fbe010ab4ba6cf45
 workflow-type: tm+mt
 source-wordcount: '670'
-ht-degree: 45%
+ht-degree: 51%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 45%
 
 ## Présentation {#overview}
 
-Le [!DNL Microsoft Bing] la destination vous aide à envoyer des données de profil à [!DNL Microsoft Display Advertising].
+La variable [!DNL Microsoft Bing] la destination vous aide à envoyer des données de profil à [!DNL Microsoft Display Advertising].
 
 Pour envoyer des données de profil à [!DNL Microsoft Bing], vous devez d’abord vous connecter à la destination.
 
@@ -63,7 +63,7 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 >[!IMPORTANT]
 >
->Si vous souhaitez créer votre première destination avec [!DNL Microsoft Bing] et n’ont pas activé la variable [Fonctionnalité de synchronisation des identifiants](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html?lang=fr) dans le service d’ID Experience Cloud par le passé (avec Adobe Audience Manager ou d’autres applications), veuillez contacter Adobe Consulting ou l’assistance clientèle pour activer la synchronisation des identifiants. Si vous avez configuré précédemment des intégrations [!DNL Microsoft Bing] dans Audience Manager, les synchronisations d’identifiant que vous aviez configurées sont transférées vers Platform.
+>Si vous souhaitez créer votre première destination avec [!DNL Microsoft Bing] et n’ont pas activé la variable [fonctionnalité de synchronisation des identifiants](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html?lang=fr) dans le service d’ID Experience Cloud par le passé (avec Adobe Audience Manager ou d’autres applications), veuillez contacter Adobe Consulting ou l’assistance clientèle pour activer la synchronisation des identifiants. Si vous avez configuré précédemment des intégrations [!DNL Microsoft Bing] dans Audience Manager, les synchronisations d’identifiant que vous aviez configurées sont transférées vers Platform.
 
 Lors de la configuration de la destination, vous devez fournir les informations suivantes :
 
@@ -83,7 +83,7 @@ Pendant la [configuration](../../ui/connect-destination.md) de cette destination
 
 * **[!UICONTROL Nom]** : un nom par lequel vous reconnaîtrez cette destination à l’avenir.
 * **[!UICONTROL Description]** : une description qui vous aidera à identifier cette destination à l’avenir.
-* **[!UICONTROL Identifiant de compte]**: Votre [!DNL Bing Ads Customer ID] (CID). Votre ID de client est un entier, qui se trouve dans l’URL lorsque vous vous connectez. [!DNL Microsoft Advertising].
+* **[!UICONTROL Identifiant de compte]**: votre [!DNL Bing Ads Customer ID] (CID). Votre ID de client est un entier, qui se trouve dans l’URL lorsque vous vous connectez. [!DNL Microsoft Advertising].
 
 ### Activer les alertes {#enable-alerts}
 
@@ -96,7 +96,7 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 >[!CONTEXTUALHELP]
 >id="platform_destinations_bing_mapping_id"
 >title="Identifiant de mappage"
->abstract="Saisissez l’ID d’audience Bing numérique auquel vous souhaitez mapper le segment sélectionné. Si la variable [!UICONTROL ID de mappage] ne correspond pas à un ID d’audience dans la destination Bing. Vous ne verrez pas les données d’audience attendues dans votre compte Bing."
+>abstract="Saisissez l’identifiant numérique de l’audience Bing auquel vous souhaitez mapper le segment sélectionné. Si l’[!UICONTROL ID de mappage] ne correspond pas à un identifiant d’audience dans la destination Bing, vous ne verrez pas les données d’audience attendues dans votre compte Bing."
 
 >[!IMPORTANT]
 > 

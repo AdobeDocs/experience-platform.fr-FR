@@ -7,7 +7,7 @@ exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
 source-git-commit: 37819b5a6480923686d327e30b1111ea29ae71da
 workflow-type: tm+mt
 source-wordcount: '1029'
-ht-degree: 24%
+ht-degree: 25%
 
 ---
 
@@ -51,9 +51,9 @@ Pour sélectionner les audiences que vous souhaitez activer vers la destination,
 
 Vous pouvez sélectionner plusieurs types d’audiences, selon leur origine :
 
-* **[!UICONTROL Segmentation Service]**: Audiences générées dans Experience Platform par le service de segmentation. Voir [documentation sur la segmentation](../../segmentation/ui/overview.md) pour plus d’informations.
-* **[!UICONTROL Chargement personnalisé]**: Audiences générées en dehors de l’Experience Platform et chargées dans Platform sous la forme de fichiers CSV. Pour en savoir plus sur les audiences externes, consultez la documentation sur [import d&#39;une audience](../../segmentation/ui/overview.md#import-audience).
-* Autres types d’audiences, provenant d’autres solutions d’Adobe, telles que [!DNL Audience Manager].
+* **[!UICONTROL Segmentation Service]**: audiences générées dans Experience Platform par le service de segmentation. Voir [documentation sur la segmentation](../../segmentation/ui/overview.md) pour plus d’informations.
+* **[!UICONTROL Chargement personnalisé]**: audiences générées en dehors de l’Experience Platform et chargées dans Platform sous la forme de fichiers CSV. Pour en savoir plus sur les audiences externes, consultez la documentation sur [import d&#39;une audience](../../segmentation/ui/overview.md#import-audience).
+* Autres types d’audiences, provenant d’autres solutions Adobe, telles que [!DNL Audience Manager].
 
 ![Sélection des audiences](../assets/ui/activate-segment-streaming-destinations/select-audiences.png)
 
@@ -73,7 +73,7 @@ Certaines destinations de diffusion en continu d’audience nécessitent que vou
 
    ![Sélectionner le champ source](../assets/ui/activate-segment-streaming-destinations/select-source-field.png)
 
-1. Dans le **[!UICONTROL Sélectionner le champ source]** , utilisez la méthode **[!UICONTROL Sélectionner des attributs]** ou le **[!UICONTROL Sélectionner un espace de noms d’identité]** pour basculer entre les deux catégories de champs sources disponibles. Disponible [!DNL XDM] attributs de profil et espaces de noms d’identité, sélectionnez ceux que vous souhaitez mapper à la destination, puis choisissez **[!UICONTROL Sélectionner]**.
+1. Dans le **[!UICONTROL Sélectionner le champ source]** , utilisez la méthode **[!UICONTROL Sélectionner des attributs]** ou le **[!UICONTROL Sélectionner un espace de noms d’identité]** pour basculer entre les deux catégories de champs sources disponibles. À partir de la [!DNL XDM] attributs de profil et espaces de noms d’identité, sélectionnez ceux que vous souhaitez mapper à la destination, puis choisissez **[!UICONTROL Sélectionner]**.
 
    ![Sélectionner la page du champ source](../assets/ui/activate-segment-streaming-destinations/source-field-page.png)
 
@@ -81,7 +81,7 @@ Certaines destinations de diffusion en continu d’audience nécessitent que vou
 
    ![Sélectionner le champ cible](../assets/ui/activate-segment-streaming-destinations/select-target-field.png)
 
-1. Dans le **[!UICONTROL Sélectionner le champ cible]** , sélectionnez l’espace de noms de l’identité cible vers lequel vous souhaitez mapper le champ source, puis choisissez **[!UICONTROL Sélectionner]**.
+1. Dans le **[!UICONTROL Sélectionner le champ cible]** , sélectionnez l’espace de noms de l’identité cible auquel vous souhaitez mapper le champ source, puis choisissez **[!UICONTROL Sélectionner]**.
 
    ![Sélectionner la page de champ cible](../assets/ui/activate-segment-streaming-destinations/target-field-page.png)
 
@@ -103,7 +103,7 @@ Quand vous mappez des attributs source non hachés avec des attributs cibles qui
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_enddate"
 >title="Date de fin"
->abstract="L’ajout d’une date de fin pour le planning d’audience n’est pas disponible."
+>abstract="L’ajout d’une date de fin pour le planning des audiences n’est pas disponible."
 
 Par défaut, la variable **[!UICONTROL Planification de l’audience]** n’affiche que les audiences nouvellement sélectionnées dans le flux d’activation actuel.
 
@@ -141,7 +141,7 @@ Si votre organisation a acheté **Adobe HealthCare Shield** ou **Adobe Privacy &
 
 ### Vérifications des stratégies d’utilisation des données {#data-usage-policy-checks}
 
-Dans le **[!UICONTROL Réviser]** , Experience Platform recherche également les violations de stratégie d’utilisation des données. Vous trouverez ci-dessous un exemple de violation de la politique. Vous ne pouvez pas terminer le workflow d’activation de l’audience tant que vous n’avez pas résolu la violation. Pour plus d’informations sur la résolution des violations de stratégie, reportez-vous à la section [violations de la stratégie d’utilisation des données](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) dans la section documentation sur la gouvernance des données .
+Dans le **[!UICONTROL Réviser]** , Experience Platform recherche également les violations de stratégie d’utilisation des données. Vous trouverez ci-dessous un exemple de violation de la politique. Vous ne pouvez pas terminer le workflow d’activation de l’audience tant que vous n’avez pas résolu la violation. Pour plus d’informations sur la résolution des violations de stratégie, reportez-vous à la section [violations de la stratégie d’utilisation des données](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) dans la section de documentation sur la gouvernance des données .
 
 ![violation de la politique de données](../assets/common/data-policy-violation.png)
 

@@ -1,12 +1,12 @@
 ---
 keywords: Destination du hub d’événements Azure ; hub d’événements Azure ; thub d’événements azure
 title: Connexion Azure Event Hubs
-description: Créez une connexion sortante en temps réel avec votre [!DNL Azure Event Hubs] stockage pour diffuser des données depuis l’Experience Platform.
+description: Créez une connexion sortante en temps réel avec votre [!DNL Azure Event Hubs] stockage pour diffuser des données depuis Experience Platform.
 exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
 source-git-commit: 3f31a54c0cf329d374808dacce3fac597a72aa11
 workflow-type: tm+mt
 source-wordcount: '2118'
-ht-degree: 38%
+ht-degree: 40%
 
 ---
 
@@ -20,10 +20,10 @@ ht-degree: 38%
 
 [!DNL Azure Event Hubs] est une plateforme de diffusion en continu de données volumineuses et un service d’ingestion d’événements. Il peut recevoir et traiter des millions d’événements par seconde. Les données envoyées à un hub d’événements peuvent être transformées et stockées à l’aide de n’importe quel fournisseur d’analyses en temps réel ou d’adaptateurs de traitement par lot/stockage.
 
-Vous pouvez créer une connexion sortante en temps réel vers votre [!DNL Azure Event Hubs] stockage pour diffuser des données à partir de Adobe Experience Platform.
+Vous pouvez créer une connexion sortante en temps réel vers votre [!DNL Azure Event Hubs] stockage pour diffuser des données depuis Adobe Experience Platform.
 
-* Pour plus d’informations sur [!DNL Azure Event Hubs], reportez-vous à la section [Documentation Microsoft](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-about).
-* Pour vous connecter à [!DNL Azure Event Hubs] par programmation, reportez-vous à la section [Tutoriel sur l’API des destinations de diffusion en continu](../../api/streaming-destinations.md).
+* Pour plus d’informations sur [!DNL Azure Event Hubs], voir [Documentation Microsoft](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-about).
+* Pour vous connecter à [!DNL Azure Event Hubs] par programmation, voir la section [Tutoriel sur l’API des destinations de diffusion en continu](../../api/streaming-destinations.md).
 * Pour vous connecter à [!DNL Azure Event Hubs] à l’aide de l’interface utilisateur de Platform, consultez les sections ci-dessous.
 
 ![AWS Kinesis dans l’interface utilisateur](../../assets/catalog/cloud-storage/event-hubs/catalog.png)
@@ -32,7 +32,7 @@ Vous pouvez créer une connexion sortante en temps réel vers votre [!DNL Azure 
 
 En utilisant des destinations de diffusion en continu, telles que [!DNL Azure Event Hubs], vous pouvez facilement alimenter les événements de segmentation à valeur élevée et les attributs de profil associés dans vos systèmes de choix.
 
-Par exemple, un prospect a téléchargé un livre blanc qui les qualifie en segment &quot;forte propension à convertir&quot;. En mappant l’audience que le prospect appartient à la variable [!DNL Azure Event Hubs] destination, vous recevriez cet événement dans [!DNL Azure Event Hubs]. Vous pouvez y utiliser une approche par vous-même et décrire la logique commerciale en plus de l’événement, comme vous le pensez, qui fonctionne le mieux avec vos systèmes informatiques d’entreprise.
+Par exemple, un prospect a téléchargé un livre blanc qui les qualifie en segment &quot;forte propension à la conversion&quot;. En mappant l’audience que le prospect appartient à la variable [!DNL Azure Event Hubs] destination, vous recevriez cet événement dans [!DNL Azure Event Hubs]. Vous pouvez y utiliser une approche par vous-même et décrire la logique commerciale en plus de l’événement, comme vous le pensez, qui fonctionne le mieux avec vos systèmes informatiques d’entreprise.
 
 ## Audiences prises en charge {#supported-audiences}
 
@@ -77,44 +77,44 @@ Pour vous connecter à cette destination, procédez comme décrit dans le [tutor
 
 ![Image de l’écran de l’interface utilisateur affichant les champs remplis pour les détails d’authentification standard Azure Event Hubs](../../assets/catalog/cloud-storage/event-hubs/event-hubs-standard-authentication.png)
 
-Si vous sélectionnez la variable **[!UICONTROL Authentification standard]** Saisissez pour vous connecter à votre point de terminaison HTTP, renseignez les champs ci-dessous et sélectionnez **[!UICONTROL Se connecter à la destination]**:
+Si vous sélectionnez l’option **[!UICONTROL Authentification standard]** Saisissez pour vous connecter à votre point de terminaison HTTP, renseignez les champs ci-dessous et sélectionnez **[!UICONTROL Se connecter à la destination]**:
 
-* **[!UICONTROL Nom de clé SAS]**: Nom de la règle d’autorisation, également appelé nom de clé SAS.
-* **[!UICONTROL Clé SAS]**: Clé Principale de l’espace de noms des centres d’événements. Le `sasPolicy` que la variable `sasKey` correspond à **gérer** droits configurés pour que la liste des centres d’événements soit renseignée. En savoir plus sur l’authentification à [!DNL Azure Event Hubs] avec les clés SAS dans [Documentation Microsoft](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
-* **[!UICONTROL Espace de noms]**: Renseignez vos [!DNL Azure Event Hubs] espace de noms. En savoir plus sur [!DNL Azure Event Hubs] espaces de noms dans [Documentation Microsoft](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace).
+* **[!UICONTROL Nom de clé SAS]**: nom de la règle d’autorisation, également connu sous le nom de clé SAS.
+* **[!UICONTROL Clé SAS]**: clé Principale de l’espace de noms des centres d’événements. La variable `sasPolicy` que la variable `sasKey` correspond à doit avoir **gérer** droits configurés pour que la liste des centres d’événements soit renseignée. En savoir plus sur l’authentification à [!DNL Azure Event Hubs] avec les clés SAS dans [Documentation Microsoft](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
+* **[!UICONTROL Espace de noms]**: renseignez vos [!DNL Azure Event Hubs] espace de noms. En savoir plus [!DNL Azure Event Hubs] espaces de noms dans [Documentation Microsoft](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace).
 
 #### Authentification SAS (Shared Access Signature) {#sas-authentication}
 
 ![Image de l’écran de l’interface utilisateur affichant les champs remplis pour les détails d’authentification standard Azure Event Hubs](../../assets/catalog/cloud-storage/event-hubs/event-hubs-sas-authentication.png)
 
-Si vous sélectionnez la variable **[!UICONTROL Authentification standard]** Saisissez pour vous connecter à votre point de terminaison HTTP, renseignez les champs ci-dessous et sélectionnez **[!UICONTROL Se connecter à la destination]**:
+Si vous sélectionnez l’option **[!UICONTROL Authentification standard]** Saisissez pour vous connecter à votre point de terminaison HTTP, renseignez les champs ci-dessous et sélectionnez **[!UICONTROL Se connecter à la destination]**:
 
-* **[!UICONTROL Nom de clé SAS]**: Nom de la règle d’autorisation, également appelé nom de clé SAS.
-* **[!UICONTROL Clé SAS]**: Clé Principale de l’espace de noms des centres d’événements. Le `sasPolicy` que la variable `sasKey` correspond à **gérer** droits configurés pour que la liste des centres d’événements soit renseignée. En savoir plus sur l’authentification à [!DNL Azure Event Hubs] avec les clés SAS dans [Documentation Microsoft](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
-* **[!UICONTROL Espace de noms]**: Renseignez vos [!DNL Azure Event Hubs] espace de noms. En savoir plus sur [!DNL Azure Event Hubs] espaces de noms dans [Documentation Microsoft](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace).
-* **[!UICONTROL Nom du noeud d’événement]**: Renseignez vos [!DNL Azure Event Hub] name . En savoir plus sur [!DNL Azure Event Hubs] dans le [Documentation Microsoft](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub).
+* **[!UICONTROL Nom de clé SAS]**: nom de la règle d’autorisation, également connu sous le nom de clé SAS.
+* **[!UICONTROL Clé SAS]**: clé Principale de l’espace de noms des centres d’événements. La variable `sasPolicy` que la variable `sasKey` correspond à doit avoir **gérer** droits configurés pour que la liste des centres d’événements soit renseignée. En savoir plus sur l’authentification à [!DNL Azure Event Hubs] avec les clés SAS dans [Documentation Microsoft](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
+* **[!UICONTROL Espace de noms]**: renseignez vos [!DNL Azure Event Hubs] espace de noms. En savoir plus [!DNL Azure Event Hubs] espaces de noms dans [Documentation Microsoft](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace).
+* **[!UICONTROL Nom du noeud d’événement]**: renseignez vos [!DNL Azure Event Hub] name . En savoir plus [!DNL Azure Event Hubs] dans le [Documentation Microsoft](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub).
 
 ### Renseigner les détails de la destination {#destination-details}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_eventhubs_includesegmentnames"
 >title="Inclure les noms de segment"
->abstract="Basculez si vous souhaitez que l’exportation des données contienne les noms des audiences que vous exportez. Consultez la documentation pour un exemple d’exportation de données avec cette option sélectionnée."
+>abstract="Activez ce bouton si vous voulez que l’export de données inclue les noms des audiences que vous exportez. Consultez la documentation pour un exemple d’exportation de données avec cette option sélectionnée."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_eventhubs_includesegmenttimestamps"
 >title="Inclure la date et l’heure de segment"
->abstract="Basculez si vous souhaitez que l’exportation des données inclue l’horodatage UNIX lors de la création et de la mise à jour des audiences, ainsi que l’horodatage UNIX lorsque les audiences ont été mappées à la destination pour activation. Consultez la documentation pour un exemple d’exportation de données avec cette option sélectionnée."
+>abstract="Activez ce bouton si vous souhaitez que l’export de données inclue la date et l’heure UNIX de la création et des mises à jour des audiences, ainsi que la date et l’heure UNIX du mappage des audiences à la destination pour l’activation. Consultez la documentation pour un exemple d’exportation de données avec cette option sélectionnée."
 
 Pour configurer les détails de la destination, renseignez les champs obligatoires et facultatifs ci-dessous. Un astérisque situé en regard d’un champ de l’interface utilisateur indique que le champ est obligatoire.
 
 ![Image de l’écran de l’interface utilisateur affichant les champs remplis pour les détails de destination des centres d’événements Azure](../../assets/catalog/cloud-storage/event-hubs/event-hubs-destination-details.png)
 
-* **[!UICONTROL Nom]**: Renseignez un nom pour la connexion à [!DNL Azure Event Hubs].
-* **[!UICONTROL Description]**: Fournissez une description de la connexion.  Exemples : &quot;Clients de niveau Premium&quot;, &quot;Clients intéressés par le kitesurfing&quot;.
-* **[!UICONTROL eventHubName]**: Attribuez un nom à la diffusion de [!DNL Azure Event Hubs] destination.
-* **[!UICONTROL Inclure les noms de segment]**: Basculez si vous souhaitez que l’exportation des données contienne les noms des audiences que vous exportez. Pour un exemple d’exportation de données avec cette option sélectionnée, reportez-vous à la section [Données exportées](#exported-data) plus bas.
-* **[!UICONTROL Inclure les horodatages de segment]**: Basculez si vous souhaitez que l’exportation des données inclue l’horodatage UNIX lors de la création et de la mise à jour des audiences, ainsi que l’horodatage UNIX lorsque les audiences ont été mappées à la destination pour activation. Pour un exemple d’exportation de données avec cette option sélectionnée, reportez-vous à la section [Données exportées](#exported-data) plus bas.
+* **[!UICONTROL Nom]**: renseignez un nom pour la connexion à [!DNL Azure Event Hubs].
+* **[!UICONTROL Description]**: fournissez une description de la connexion.  Exemples : &quot;Clients Premium&quot;, &quot;Clients intéressés par le kitesurfing&quot;.
+* **[!UICONTROL eventHubName]**: attribuez un nom à la diffusion de [!DNL Azure Event Hubs] destination.
+* **[!UICONTROL Inclure les noms de segment]**: basculez si vous souhaitez que l’exportation des données contienne les noms des audiences que vous exportez. Pour un exemple d’exportation de données avec cette option sélectionnée, reportez-vous à la section [Données exportées](#exported-data) plus bas.
+* **[!UICONTROL Inclure les horodatages de segment]**: basculez si vous souhaitez que l’exportation des données inclue l’horodatage UNIX lors de la création et de la mise à jour des audiences, ainsi que l’horodatage UNIX lorsque les audiences ont été mappées à la destination pour l’activation. Pour un exemple d’exportation de données avec cette option sélectionnée, reportez-vous à la section [Données exportées](#exported-data) plus bas.
 
 ### Activer les alertes {#enable-alerts}
 
@@ -148,7 +148,7 @@ En ce qui concerne les données exportées pour un profil donné, il est importa
 
 | Ce qui détermine une exportation de destination | Éléments inclus dans l’exportation de destination |
 |---------|----------|
-| <ul><li>Les attributs et audiences mappés servent de repère pour un export de destination. Cela signifie que si des audiences mappées changent d’états (à partir de `null` to `realized` ou de `realized` to `exiting`) ou si les attributs mappés sont mis à jour, une exportation de destination est déclenchée.</li><li>Puisque les identités ne peuvent actuellement pas être mappées à [!DNL Azure Event Hubs] les destinations, les modifications de toute identité sur un profil donné déterminent également les exportations de destination.</li><li>Toute modification pour un attribut est considérée comme une mise à jour, qu’il s’agisse ou non de la même valeur. Cela signifie qu’une réécriture sur un attribut est considérée comme une modification, même si la valeur elle-même n’a pas changé.</li></ul> | <ul><li>Le `segmentMembership` inclut l’audience mappée dans le flux de données d’activation, pour laquelle l’état du profil a changé suite à un événement de qualification ou de sortie d’audience. Notez que les autres audiences non mappées pour lesquelles le profil est qualifié peuvent faire partie de l’exportation de destination, si ces audiences appartiennent au même type. [stratégie de fusion](/help/profile/merge-policies/overview.md) comme l’audience mappée dans le flux de données d’activation. </li><li>Toutes les identités dans la variable `identityMap` sont également inclus (l’Experience Platform ne prend actuellement pas en charge le mappage d’identité dans la variable [!DNL Azure Event Hubs] destination).</li><li>Seuls les attributs mappés sont inclus dans l’exportation de destination.</li></ul> |
+| <ul><li>Les attributs et audiences mappés servent de repère pour un export de destination. Cela signifie que si des audiences mappées changent d’états (à partir de `null` to `realized` ou de `realized` to `exiting`) ou si les attributs mappés sont mis à jour, une exportation de destination est déclenchée.</li><li>Puisque les identités ne peuvent actuellement pas être mappées à [!DNL Azure Event Hubs] les destinations, les modifications d’une identité sur un profil donné déterminent également les exportations de destination.</li><li>Toute modification pour un attribut est considérée comme une mise à jour, qu’il s’agisse ou non de la même valeur. Cela signifie qu’une réécriture sur un attribut est considérée comme une modification, même si la valeur elle-même n’a pas changé.</li></ul> | <ul><li>La variable `segmentMembership` inclut l’audience mappée dans le flux de données d’activation, pour laquelle l’état du profil a changé suite à un événement de qualification ou de sortie d’audience. Notez que les autres audiences non mappées pour lesquelles le profil est qualifié peuvent faire partie de l’exportation de destination, si ces audiences appartiennent au même type. [stratégie de fusion](/help/profile/merge-policies/overview.md) comme audience mappée dans le flux de données d’activation. </li><li>Toutes les identités dans la variable `identityMap` sont également inclus (Experience Platform ne prend actuellement pas en charge le mappage d’identité dans la variable [!DNL Azure Event Hubs] destination).</li><li>Seuls les attributs mappés sont inclus dans l’exportation de destination.</li></ul> |
 
 {style="table-layout:fixed"}
 

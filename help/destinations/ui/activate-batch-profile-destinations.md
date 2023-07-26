@@ -7,7 +7,7 @@ exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
 source-git-commit: 37819b5a6480923686d327e30b1111ea29ae71da
 workflow-type: tm+mt
 source-wordcount: '3961'
-ht-degree: 65%
+ht-degree: 68%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 65%
 > 
 > Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 >
-> Certains clients participant au programme bêta de la fonctionnalité d’exportation améliorée de fichiers voient la nouvelle étape **[!UICONTROL Mappage]** dans le cadre de leur workflow d’activation vers les [nouvelles destinations bêta de stockage dans le cloud](/help/release-notes/2022/october-2022.md#destinations). Considérez la variable [limites connues](#known-limitations) dans le cadre de la version.
+> Certains clients participant au programme bêta de la fonctionnalité d’exportation améliorée de fichiers voient la nouvelle étape **[!UICONTROL Mappage]** dans le cadre de leur workflow d’activation vers les [nouvelles destinations bêta de stockage dans le cloud](/help/release-notes/2022/october-2022.md#destinations). Consultez la section [limites connues](#known-limitations) dans le cadre de la version.
 
 ## Vue d’ensemble {#overview}
 
@@ -53,9 +53,9 @@ Pour sélectionner les audiences que vous souhaitez activer vers la destination,
 
 Vous pouvez sélectionner plusieurs types d’audiences, selon leur origine :
 
-* **[!UICONTROL Segmentation Service]**: Audiences générées dans Experience Platform par le service de segmentation. Voir [documentation sur la segmentation](../../segmentation/ui/overview.md) pour plus d’informations.
-* **[!UICONTROL Chargement personnalisé]**: Audiences générées en dehors de l’Experience Platform et chargées dans Platform sous la forme de fichiers CSV. Pour en savoir plus sur les audiences externes, consultez la documentation sur [import d&#39;une audience](../../segmentation/ui/overview.md#import-audience).
-* Autres types d’audiences, provenant d’autres solutions d’Adobe, telles que [!DNL Audience Manager].
+* **[!UICONTROL Segmentation Service]**: audiences générées dans Experience Platform par le service de segmentation. Voir [documentation sur la segmentation](../../segmentation/ui/overview.md) pour plus d’informations.
+* **[!UICONTROL Chargement personnalisé]**: audiences générées en dehors de l’Experience Platform et chargées dans Platform sous la forme de fichiers CSV. Pour en savoir plus sur les audiences externes, consultez la documentation sur [import d&#39;une audience](../../segmentation/ui/overview.md#import-audience).
+* Autres types d’audiences, provenant d’autres solutions Adobe, telles que [!DNL Audience Manager].
 
 ![Image montrant comment sélectionner une ou plusieurs audiences à activer](../assets/ui/activate-batch-profile-destinations/select-audiences.png)
 
@@ -78,7 +78,7 @@ Vous pouvez sélectionner plusieurs types d’audiences, selon leur origine :
 >
 >Les noms de fichiers fractionnés sont ajoutés avec un nombre indiquant que le fichier fait partie d’une exportation plus importante, comme : `filename.csv`, `filename_2.csv`, `filename_3.csv`.
 
-Sélectionnez la **[!UICONTROL Créer un planning]** correspondant à l’audience que vous souhaitez envoyer à votre destination.
+Sélectionnez la variable **[!UICONTROL Créer un planning]** correspondant à l’audience que vous souhaitez envoyer à votre destination.
 
 ![Image mettant en surbrillance le bouton Créer un planning](../assets/ui/activate-batch-profile-destinations/create-schedule-button.png)
 
@@ -87,12 +87,12 @@ Sélectionnez la **[!UICONTROL Créer un planning]** correspondant à l’audien
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_exportoptions"
 >title="Options d’exportation de fichiers"
->abstract="Sélectionner **Exporter les fichiers complets** pour exporter un instantané complet de tous les profils éligibles à l’audience. Sélectionner **Exportation de fichiers incrémentiels** pour n&#39;exporter que les profils qualifiés pour l&#39;audience depuis le dernier export. <br> La première exportation de fichier incrémentielle comprend tous les profils qui remplissent les critères de l’audience, agissant comme un renvoi. Les prochains fichiers incrémentiels incluront uniquement les profils qualifiés pour l’audience depuis la première exportation incrémentielle de fichier."
+>abstract="Sélectionnez **Exporter des fichiers complets** pour exporter une capture instantanée complète de tous les profils qui remplissent les critères pour l’audience. Sélectionnez **Exporter des fichiers incrémentiels** pour n’exporter que les profils qui remplissent les critères pour l’audience depuis le dernier export. <br> Le premier export de fichier incrémentiel comprend tous les profils qui remplissent les critères pour l’audience, agissant comme un renvoi. Les futurs fichiers incrémentiels incluent uniquement les profils qui remplissent les critères pour l’audience depuis le premier export de fichier incrémentiel."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=fr#export-incremental-files" text="Exporter des fichiers incrémentiels"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_aftersegmentevaluation"
->title="Activer après l’évaluation de l’audience"
+>title="Activer après l’évaluation des audiences"
 >abstract="L’activation s’exécute immédiatement une fois la tâche de segmentation quotidienne terminée. Ainsi, les profils les plus à jour sont exportés."
 
 >[!CONTEXTUALHELP]
@@ -113,7 +113,7 @@ Sélectionner **[!UICONTROL Exporter les fichiers complets]** pour déclencher l
 
    >[!NOTE]
    >
-   >Le **[!UICONTROL Après l’évaluation du segment]** L’option décrite ci-dessous n’est disponible que pour sélectionner les clients bêta.
+   >La variable **[!UICONTROL Après l’évaluation du segment]** L’option décrite ci-dessous n’est disponible que pour sélectionner les clients bêta.
 
    Utiliser l’option **[!UICONTROL Après l’évaluation du segment]** pour que le traitement d’activation s’exécute immédiatement après la fin du traitement quotidien de segmentation par lots de Platform. Cette option garantit que lorsque la tâche d’activation s’exécute, les profils les plus récents sont exportés vers votre destination.
 
@@ -191,12 +191,12 @@ Le nom de destination et l’ID d’audience ne peuvent pas être supprimés des
 | Option de nom de fichier | Description |
 |---------|----------|
 | **[!UICONTROL Nom de l’audience]** | Nom de l’audience exportée. |
-| **[!UICONTROL Date et heure]** | Effectuez une sélection entre l’ajout d’une `MMDDYYYY_HHMMSS` format ou horodatage UNIX à 10 chiffres de l’heure de génération des fichiers. Choisissez l’une de ces options si vous souhaitez que vos fichiers aient un nom de fichier dynamique généré avec chaque exportation de fichier incrémentiel. |
+| **[!UICONTROL Date et heure]** | Sélectionnez entre l’ajout d’une `MMDDYYYY_HHMMSS` format ou horodatage UNIX à 10 chiffres de l’heure de génération des fichiers. Choisissez l’une de ces options si vous souhaitez que vos fichiers aient un nom de fichier dynamique généré avec chaque exportation de fichier incrémentiel. |
 | **[!UICONTROL Texte personnalisé]** | Tout texte personnalisé que vous souhaitez ajouter aux noms de fichier. |
 | **[!UICONTROL Identifiant de destination]** | L’identifiant du flux de données de destination que vous utilisez pour exporter l’audience. <br> **Remarque** : cette option d’ajout de nom de fichier est disponible uniquement pour les clients bêta qui participent au programme bêta de la fonctionnalité d’exportation améliorée de fichiers. Contactez votre représentant Adobe ou l’assistance clientèle si vous souhaitez accéder au programme bêta. |
 | **[!UICONTROL Nom de la destination]** | Nom du flux de données de destination que vous utilisez pour exporter l’audience. <br> **Remarque** : cette option d’ajout de nom de fichier est disponible uniquement pour les clients bêta qui participent au programme bêta de la fonctionnalité d’exportation améliorée de fichiers. Contactez votre représentant Adobe ou l’assistance clientèle si vous souhaitez accéder au programme bêta. |
 | **[!UICONTROL Nom de l’organisation]** | Nom de votre organisation dans Experience Platform. <br> **Remarque** : cette option d’ajout de nom de fichier est disponible uniquement pour les clients bêta qui participent au programme bêta de la fonctionnalité d’exportation améliorée de fichiers. Contactez votre représentant Adobe ou l’assistance clientèle si vous souhaitez accéder au programme bêta. |
-| **[!UICONTROL Nom du sandbox]** | L’identifiant de l’environnement de test que vous utilisez pour exporter l’audience. <br> **Remarque** : cette option d’ajout de nom de fichier est disponible uniquement pour les clients bêta qui participent au programme bêta de la fonctionnalité d’exportation améliorée de fichiers. Contactez votre représentant Adobe ou l’assistance clientèle si vous souhaitez accéder au programme bêta. |
+| **[!UICONTROL Nom du sandbox]** | ID de l’environnement de test que vous utilisez pour exporter l’audience. <br> **Remarque** : cette option d’ajout de nom de fichier est disponible uniquement pour les clients bêta qui participent au programme bêta de la fonctionnalité d’exportation améliorée de fichiers. Contactez votre représentant Adobe ou l’assistance clientèle si vous souhaitez accéder au programme bêta. |
 
 {style="table-layout:auto"}
 
@@ -206,7 +206,7 @@ Sélectionnez **[!UICONTROL Appliquer les modifications]** pour confirmer votre 
 > 
 >Si vous ne sélectionnez pas l’option **[!UICONTROL Date et heure]**, les noms de fichier seront statiques et le nouveau fichier exporté remplacera le fichier précédent de votre emplacement de stockage à chaque exportation. L’option recommandée consiste à exécuter une tâche d’importation récurrente depuis un emplacement de stockage vers une plateforme de marketing par e-mail.
 
-Une fois la configuration de toutes vos audiences terminée, sélectionnez **[!UICONTROL Suivant]** pour continuer.
+Une fois que vous avez terminé de configurer toutes vos audiences, sélectionnez **[!UICONTROL Suivant]** pour continuer.
 
 ## Sélectionner des attributs de profil {#select-attributes}
 
@@ -476,9 +476,9 @@ En tant que solution temporaire, si vous devez ajouter des espaces de noms d’i
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_exclude_enrichment_attributes"
->title="Exclusion des attributs d’enrichissement"
->abstract="Activez cette option pour exporter les profils des audiences chargées personnalisées sélectionnées vers votre destination, tout en excluant tous leurs attributs."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html#select-enrichment-attributes" text="En savoir plus dans la documentation."
+>title="Exclure les attributs d’enrichissement"
+>abstract="Activez cette option pour exporter les profils des audiences chargées personnalisées sélectionnées vers votre destination, tout en excluant leurs attributs."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=fr#select-enrichment-attributes" text="En savoir plus dans la documentation."
 
 >[!IMPORTANT]
 >
@@ -522,7 +522,7 @@ Si votre organisation a acheté **Adobe HealthCare Shield** ou **Adobe Privacy &
 
 ### Vérifications des stratégies d’utilisation des données {#data-usage-policy-checks}
 
-Dans le **[!UICONTROL Réviser]** , Experience Platform recherche également les violations de stratégie d’utilisation des données. Vous trouverez ci-dessous un exemple de violation de la politique. Vous ne pouvez pas terminer le workflow d’activation de l’audience tant que vous n’avez pas résolu la violation. Pour plus d’informations sur la résolution des violations de stratégie, reportez-vous à la section [violations de la stratégie d’utilisation des données](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) dans la section documentation sur la gouvernance des données .
+Dans le **[!UICONTROL Réviser]** , Experience Platform recherche également les violations de stratégie d’utilisation des données. Vous trouverez ci-dessous un exemple de violation de la politique. Vous ne pouvez pas terminer le workflow d’activation de l’audience tant que vous n’avez pas résolu la violation. Pour plus d’informations sur la résolution des violations de stratégie, reportez-vous à la section [violations de la stratégie d’utilisation des données](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) dans la section de documentation sur la gouvernance des données .
 
 ![violation de la politique de données](../assets/common/data-policy-violation.png)
 

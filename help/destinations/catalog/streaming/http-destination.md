@@ -6,7 +6,7 @@ exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
 source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '2486'
-ht-degree: 72%
+ht-degree: 74%
 
 ---
 
@@ -167,12 +167,12 @@ Si vous sélectionnez le type d’authentification **[!UICONTROL Informations d�
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_includesegmentnames"
 >title="Inclure les noms de segment"
->abstract="Basculez si vous souhaitez que l’exportation des données contienne les noms des audiences que vous exportez. Consultez la documentation pour un exemple d’exportation de données avec cette option sélectionnée."
+>abstract="Activez ce bouton si vous voulez que l’export de données inclue les noms des audiences que vous exportez. Consultez la documentation pour un exemple d’exportation de données avec cette option sélectionnée."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_includesegmenttimestamps"
 >title="Inclure la date et l’heure de segment"
->abstract="Basculez si vous souhaitez que l’exportation des données inclue l’horodatage UNIX lors de la création et de la mise à jour des audiences, ainsi que l’horodatage UNIX lorsque les audiences ont été mappées à la destination pour activation. Consultez la documentation pour un exemple d’exportation de données avec cette option sélectionnée."
+>abstract="Activez ce bouton si vous souhaitez que l’export de données inclue la date et l’heure UNIX de la création et des mises à jour des audiences, ainsi que la date et l’heure UNIX du mappage des audiences à la destination pour l’activation. Consultez la documentation pour un exemple d’exportation de données avec cette option sélectionnée."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_queryparameters"
@@ -188,8 +188,8 @@ Pour configurer les détails de la destination, renseignez les champs obligatoir
 * **[!UICONTROL En-têtes]** : saisissez tous les en-têtes personnalisés que vous souhaitez inclure dans les appels de destination, en suivant ce format : `header1:value1,header2:value2,...headerN:valueN`.
 * **[!UICONTROL Point d’entrée HTTP]** : URL du point d’entrée HTTP vers lequel vous souhaitez envoyer les données de profil.
 * **[!UICONTROL Paramètres de requête]** : vous pouvez éventuellement ajouter des paramètres de requête à l’URL du point d’entrée HTTP. Mettez en forme les paramètres de requête que vous utilisez comme suit : `parameter1=value&parameter2=value`.
-* **[!UICONTROL Inclure les noms de segment]**: Basculez si vous souhaitez que l’exportation des données contienne les noms des audiences que vous exportez. Pour un exemple d’exportation de données avec cette option sélectionnée, reportez-vous à la section [Données exportées](#exported-data) plus bas.
-* **[!UICONTROL Inclure les horodatages de segment]**: Basculez si vous souhaitez que l’exportation des données inclue l’horodatage UNIX lors de la création et de la mise à jour des audiences, ainsi que l’horodatage UNIX lorsque les audiences ont été mappées à la destination pour activation. Pour un exemple d’exportation de données avec cette option sélectionnée, reportez-vous à la section [Données exportées](#exported-data) plus bas.
+* **[!UICONTROL Inclure les noms de segment]**: basculez si vous souhaitez que l’exportation des données contienne les noms des audiences que vous exportez. Pour un exemple d’exportation de données avec cette option sélectionnée, reportez-vous à la section [Données exportées](#exported-data) plus bas.
+* **[!UICONTROL Inclure les horodatages de segment]**: basculez si vous souhaitez que l’exportation des données inclue l’horodatage UNIX lors de la création et de la mise à jour des audiences, ainsi que l’horodatage UNIX lorsque les audiences ont été mappées à la destination pour l’activation. Pour un exemple d’exportation de données avec cette option sélectionnée, reportez-vous à la section [Données exportées](#exported-data) plus bas.
 
 ### Activer les alertes {#enable-alerts}
 
@@ -227,7 +227,7 @@ Concernant les données exportées pour un profil donné, il est important de co
 
 | Ce qui détermine une exportation de destination | Éléments inclus dans l’exportation de destination |
 |---------|----------|
-| <ul><li>Les attributs et audiences mappés servent de repère pour un export de destination. Cela signifie que si des audiences mappées changent d’états (à partir de `null` to `realized` ou de `realized` to `exiting`) ou si les attributs mappés sont mis à jour, une exportation de destination est déclenchée.</li><li>Comme les identités ne peuvent actuellement pas être mappées aux destinations d’API HTTP, les modifications d’identité sur un profil donné déterminent également les exportations de destination.</li><li>Toute modification pour un attribut est considérée comme une mise à jour, qu’il s’agisse ou non de la même valeur. Cela signifie qu’une réécriture sur un attribut est considérée comme une modification, même si la valeur elle-même n’a pas changé.</li></ul> | <ul><li>Le `segmentMembership` inclut l’audience mappée dans le flux de données d’activation, pour laquelle l’état du profil a changé suite à un événement de qualification ou de sortie d’audience. Notez que les autres audiences non mappées pour lesquelles le profil est qualifié peuvent faire partie de l’exportation de destination, si ces audiences appartiennent au même type. [stratégie de fusion](/help/profile/merge-policies/overview.md) comme l’audience mappée dans le flux de données d’activation. </li><li>Toutes les identités dans l’objet `identityMap` sont également incluses (actuellement Experience Platform ne prend pas en charge le mappage d’identité dans la destination de l’API HTTP).</li><li>Seuls les attributs mappés sont inclus dans l’exportation de destination.</li></ul> |
+| <ul><li>Les attributs et audiences mappés servent de repère pour un export de destination. Cela signifie que si des audiences mappées changent d’états (à partir de `null` to `realized` ou de `realized` to `exiting`) ou si les attributs mappés sont mis à jour, une exportation de destination est déclenchée.</li><li>Comme les identités ne peuvent actuellement pas être mappées aux destinations d’API HTTP, les modifications d’identité sur un profil donné déterminent également les exportations de destination.</li><li>Toute modification pour un attribut est considérée comme une mise à jour, qu’il s’agisse ou non de la même valeur. Cela signifie qu’une réécriture sur un attribut est considérée comme une modification, même si la valeur elle-même n’a pas changé.</li></ul> | <ul><li>La variable `segmentMembership` inclut l’audience mappée dans le flux de données d’activation, pour laquelle l’état du profil a changé suite à un événement de qualification ou de sortie d’audience. Notez que les autres audiences non mappées pour lesquelles le profil est qualifié peuvent faire partie de l’exportation de destination, si ces audiences appartiennent au même type. [stratégie de fusion](/help/profile/merge-policies/overview.md) comme audience mappée dans le flux de données d’activation. </li><li>Toutes les identités dans l’objet `identityMap` sont également incluses (actuellement Experience Platform ne prend pas en charge le mappage d’identité dans la destination de l’API HTTP).</li><li>Seuls les attributs mappés sont inclus dans l’exportation de destination.</li></ul> |
 
 {style="table-layout:fixed"}
 

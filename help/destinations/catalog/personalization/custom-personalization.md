@@ -6,7 +6,7 @@ exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
 source-git-commit: c12a48686997ff69aea24f41bf5cbd9b89fcc57a
 workflow-type: tm+mt
 source-wordcount: '934'
-ht-degree: 57%
+ht-degree: 59%
 
 ---
 
@@ -31,7 +31,7 @@ ht-degree: 57%
 
 ## Vue d’ensemble {#overview}
 
-Cette destination permet de récupérer les informations sur l’audience de Adobe Experience Platform vers des plateformes de personnalisation externes, des systèmes de gestion de contenu, des serveurs de publicités et d’autres applications qui s’exécutent sur les sites web des clients.
+Cette destination permet de récupérer les informations sur l’audience de Adobe Experience Platform vers des plateformes de personnalisation externes, des systèmes de gestion de contenu, des serveurs de publicités et d’autres applications exécutées sur les sites web des clients.
 
 ## Conditions préalables {#prerequisites}
 
@@ -67,7 +67,7 @@ En outre, cette destination prend également en charge l’activation des audien
 >[!CONTEXTUALHELP]
 >id="platform_destinations_custom_personalization_datastream"
 >title="À propos des identifiants de flux de données"
->abstract="Cette option détermine dans quel jeu de données de collecte de données les audiences seront incluses dans la réponse à la page. Le menu déroulant affiche uniquement les flux de données pour lesquels la configuration de destination est activée. Vous devez configurer un flux de données avant de pouvoir configurer votre destination."
+>abstract="Cette option détermine dans quel train de données de collecte de données les audiences seront inclues dans la réponse à la page. Le menu déroulant affiche uniquement les flux de données pour lesquels la configuration de destination est activée. Vous devez configurer un flux de données avant de pouvoir configurer votre destination."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html?lang=fr" text="Découvrez comment configurer un flux de données"
 
 >[!IMPORTANT]
@@ -83,7 +83,7 @@ Pendant la [configuration](../../ui/connect-destination.md) de cette destination
 * **[!UICONTROL Nom]** : renseignez le nom de votre choix pour cette destination.
 * **[!UICONTROL Description]** : saisissez une description pour votre destination. Vous pouvez, par exemple, mentionner la campagne pour laquelle vous utilisez cette destination. Ce champ est facultatif.
 * **[!UICONTROL Alias d’intégration]** : cette valeur est envoyée au SDK web Experience Platform sous forme de nom d’objet JSON.
-* **[!UICONTROL Identifiant du flux de données]**: Cela détermine dans quel flux de données de collecte de données les audiences seront incluses dans la réponse à la page. Le menu déroulant affiche uniquement les flux de données pour lesquels la configuration de destination est activée. Voir [Configurer un flux de données](../../../datastreams/overview.md) pour plus d’informations.
+* **[!UICONTROL Identifiant du flux de données]**: détermine dans quel jeu de données de collecte de données les audiences seront incluses dans la réponse à la page. Le menu déroulant affiche uniquement les flux de données pour lesquels la configuration de destination est activée. Voir [Configurer un flux de données](../../../datastreams/overview.md) pour plus d’informations.
 
 ### Activer les alertes {#enable-alerts}
 
@@ -161,7 +161,7 @@ alloy("sendEvent", {
 
 ### Exemple de réponse pour [!UICONTROL Personnalisation Personnalisée Avec Attributs]
 
-Lors de l’utilisation de **[!UICONTROL Personnalisation Personnalisée Avec Attributs]**, la réponse de l’API ressemblera à l’exemple ci-dessous.
+Lorsque vous utilisez **[!UICONTROL Personnalisation Personnalisée Avec Attributs]**, la réponse de l’API ressemblera à l’exemple ci-dessous.
 
 La différence entre **[!UICONTROL Personnalisation Personnalisée Avec Attributs]** et **[!UICONTROL Personnalisation personnalisée]** est l’inclusion de la variable `attributes` dans la réponse de l’API.
 

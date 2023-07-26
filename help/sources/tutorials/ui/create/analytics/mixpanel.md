@@ -1,6 +1,6 @@
 ---
-title: Création d’une connexion à la source Mixpanel dans l’interface utilisateur
-description: Découvrez comment créer une connexion source Mixpanel à l’aide de l’interface utilisateur de Adobe Experience Platform.
+title: Création d’une connexion à la source dans l’interface utilisateur
+description: Découvrez comment créer une connexion source à l’aide de l’interface utilisateur de Adobe Experience Platform.
 exl-id: 2a02f6a4-08ed-468c-8052-f5b7be82d183
 source-git-commit: 6f8abca8f0db8a559fe62e6c143f2d0506d3b886
 workflow-type: tm+mt
@@ -30,7 +30,7 @@ Pour connecter [!DNL Mixpanel] à Platform, vous devez fournir des valeurs pour 
 | --- | --- | --- |
 | Nom d’utilisateur | Le nom d’utilisateur du compte de service qui correspond à votre [!DNL Mixpanel] compte . Voir [[!DNL Mixpanel] documentation sur les comptes de service](https://developer.mixpanel.com/reference/service-accounts#authenticating-with-a-service-account) pour plus d’informations. | `Test8.6d4ee7.mp-service-account` |
 | Mot de passe | mot de passe du compte de service qui correspond à votre [!DNL Mixpanel] compte . | `dLlidiKHpCZtJhQDyN2RECKudMeTItX1` |
-| Identifiant du projet | Votre [!DNL Mixpanel] ID de projet. Cet identifiant est nécessaire pour créer une connexion source. Voir [[!DNL Mixpanel] documentation sur les paramètres du projet](https://help.mixpanel.com/hc/en-us/articles/115004490503-Project-Settings) et le [[!DNL Mixpanel] guide de création et de gestion des projets](https://help.mixpanel.com/hc/en-us/articles/115004505106-Create-and-Manage-Projects) pour plus d’informations. | `2384945` |
+| Identifiant du projet | Votre [!DNL Mixpanel] ID de projet. Cet identifiant est nécessaire pour créer une connexion source. Voir [[!DNL Mixpanel] documentation sur les paramètres du projet](https://help.mixpanel.com/hc/en-us/articles/115004490503-Project-Settings) et la variable [[!DNL Mixpanel] guide de création et de gestion des projets](https://help.mixpanel.com/hc/en-us/articles/115004505106-Create-and-Manage-Projects) pour plus d’informations. | `2384945` |
 | Fuseau horaire | Le fuseau horaire correspondant à votre [!DNL Mixpanel] projet. Le fuseau horaire est requis pour créer une connexion source. Voir [Documentation sur les paramètres du projet Mixpanel](https://help.mixpanel.com/hc/en-us/articles/115004490503-Project-Settings) pour plus d’informations. | `Pacific Standard Time` |
 
 Pour plus d’informations sur l’authentification [!DNL Mixpanel] source, voir [[!DNL Mixpanel] présentation de la source](../../../../connectors/analytics/mixpanel.md).
@@ -45,7 +45,7 @@ Sous , *Analytics* catégorie, sélectionnez [!DNL Mixpanel], puis sélectionnez
 
 ![catalogue](../../../../images/tutorials/create/mixpanel-export-events/catalog.png)
 
-Le **[!UICONTROL Connexion au compte Mixpanel]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
+La variable **[!UICONTROL Connexion au compte Mixpanel]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
 
 ### Compte existant
 
@@ -71,7 +71,7 @@ Une fois la source authentifiée, indiquez l’ID de projet et le fuseau horaire
 
 Le fuseau horaire que vous avez désigné avant d’ingérer votre [!DNL Mixpanel] Les données de Platform doivent être identiques à votre [!DNL Mixpanel] paramètre de fuseau horaire du profil. Toute modification du fuseau horaire de vos données ne sera appliquée qu’aux nouveaux événements et aux anciens événements resteront dans le fuseau horaire que vous avez précédemment désigné. [!DNL Mixpanel] prend en charge l’heure d’été et adapte l’horodatage d’ingestion de manière appropriée. Pour plus d’informations sur l’impact des fuseaux horaires sur vos données, voir [!DNL Mixpanel] guide on [gestion des fuseaux horaires pour les projets](https://help.mixpanel.com/hc/en-us/articles/115004547203-Manage-Timezones-for-Projects-in-Mixpanel).
 
-Après quelques instants, l’interface appropriée se met à jour vers un panneau d’aperçu, ce qui vous permet d’examiner votre schéma avant de créer un flux de données. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Suivant]**.
+Au bout de quelques instants, l’interface appropriée se met à jour vers un panneau d’aperçu, ce qui vous permet d’examiner votre schéma avant de créer un flux de données. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Suivant]**.
 
 ![configuration](../../../../images/tutorials/create/mixpanel-export-events/authentication-configuration.png)
 
@@ -85,9 +85,9 @@ Les sections ci-dessous contiennent des ressources supplémentaires auxquelles v
 
 ### Validation {#validation}
 
-La section suivante décrit les étapes que vous pouvez suivre pour vérifier que vous avez bien connecté votre [!DNL Mixpanel] source et [!DNL Mixpanel] sont ingérés dans Platform.
+La section suivante décrit les étapes que vous pouvez suivre pour vérifier que vous avez bien connecté votre [!DNL Mixpanel] source et cela [!DNL Mixpanel] sont ingérés dans Platform.
 
-Dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Jeux de données]** à partir de la barre de navigation de gauche pour accéder au [!UICONTROL Jeux de données] workspace. Le [!UICONTROL Activité du jeu de données] affiche les détails des exécutions.
+Dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Jeux de données]** à partir de la barre de navigation de gauche pour accéder au [!UICONTROL Jeux de données] workspace. La variable [!UICONTROL Activité du jeu de données] affiche les détails des exécutions.
 
 ![dataset-activity](../../../../images/tutorials/create/mixpanel-export-events/dataset-activity.png)
 
