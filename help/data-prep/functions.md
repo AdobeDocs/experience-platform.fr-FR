@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Fonctions de mappage de prép de données
 description: Ce document présente les fonctions de mappage utilisées avec Data Prep.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 61247a5cac0f00a4163007fd693d3a0b0efc23ab
+source-git-commit: 4064c4a7f855fa065c711df5d02d6b7982cc7627
 workflow-type: tm+mt
-source-wordcount: '4916'
-ht-degree: 14%
+source-wordcount: '5221'
+ht-degree: 13%
 
 ---
 
@@ -148,9 +148,9 @@ Les tableaux suivants répertorient toutes les fonctions de mappage prises en ch
 | nullify | Définit la valeur de l’attribut sur `null`. Vous devez l’utiliser lorsque vous ne souhaitez pas copier le champ dans le schéma cible. | | nullify() | nullify() | `null` |
 | get_keys | Analyse les paires clé/valeur et renvoie toutes les clés. | <ul><li>OBJECT : **Obligatoire** Objet à partir duquel les clés seront extraites.</li></ul> | get_keys(OBJECT) | get_keys({&quot;book1&quot;: &quot;Pride and Prejudices&quot;, &quot;book2&quot;: &quot;1984&quot;}) | `["book1", "book2"]` |
 | get_values | Analyse les paires clé/valeur et renvoie la valeur de la chaîne, en fonction de la clé donnée. | <ul><li>STRING: **Obligatoire** Chaîne que vous souhaitez analyser.</li><li>CLÉ : **Obligatoire** Clé pour laquelle la valeur doit être extraite.</li><li>VALUE_DELIMITER: **Obligatoire** Délimiteur qui sépare le champ de la valeur. Si l’une des `null` ou une chaîne vide est fournie, cette valeur est `:`.</li><li>FIELD_DELIMITER : *Facultatif* Délimiteur qui sépare les paires champ-valeur. Si l’une des `null` ou une chaîne vide est fournie, cette valeur est `,`.</li></ul> | get_values(STRING, KEY, VALUE_DELIMITER, FIELD_DELIMITER) | get_values(\&quot;firstName - John , lastName - Cena , phone - 555 420 8692\&quot;, \&quot;firstName\&quot;, \&quot;-\&quot;, \&quot;,\&quot;) | John |
-<!-- | map_get_values | Takes a map and a key input. If the input is a single key, then the function returns the value associated with that key. If the input is a string array, then the function returns all values corresponding to the keys provided. If the incoming map has duplicate keys, the return value must de-duplicate the keys and return unique values. | <ul><li>MAP: **Required** The input map data.</li><li>KEY:  **Required** The key can be a single string or a string array. If any other primitive type (data / number) is provided, then it is treated as a string.</li></ul> | get_values(MAP, KEY) | Please see the [appendix](#map_get_values) for a code sample. | |
-| map_has_keys | If one or more input keys are provided, then the function returns true. If a string array is provided as input, then the function returns true on the first key that is found. | <ul><li>MAP:  **Required** The input map data</li><li>KEY:  **Required** The key can be a single string or a string array. If any other primitive type (data / number) is provided, then it is treated as a string.</li></ul> | map_has_keys(MAP, KEY) | Please see the [appendix](#map_has_keys) for a code sample. | |
-| add_to_map | Accepts at least two inputs. Any number of maps can be provided as inputs. Data Prep returns a single map that has all key-value pairs from all the inputs. If one or more keys are repeated (in the same map or across maps), Data Prep de-duplicates the keys so that the first key-value pair persists in the order that they were passed in the input. | MAP: **Required** The input map data. | add_to_map(MAP 1, MAP 2, MAP 3, ...) | Please see the [appendix](#add_to_map) for a code sample. | | -->
+| map_get_values | Prend une carte et une entrée clé. Si l’entrée est une clé unique, la fonction renvoie la valeur associée à cette clé. Si l’entrée est un tableau de chaîne, la fonction renvoie toutes les valeurs correspondant aux clés fournies. Si la carte entrante comporte des clés en double, la valeur renvoyée doit dédupliquer les clés et renvoyer des valeurs uniques. | <ul><li>MAP : **Obligatoire** Données de la carte d’entrée.</li><li>CLÉ :  **Obligatoire** La clé peut être une chaîne unique ou un tableau de chaîne. Si un autre type primitif (données/nombre) est fourni, il est traité comme une chaîne.</li></ul> | get_values(MAP, KEY) | Veuillez consulter la [annexe](#map_get_values) pour un exemple de code. | |
+| map_has_keys | Si une ou plusieurs clés d’entrée sont fournies, la fonction renvoie true (vrai). Si un tableau de chaîne est fourni comme entrée, la fonction renvoie true (vrai) sur la première clé trouvée. | <ul><li>MAP :  **Obligatoire** Données de la carte d’entrée</li><li>CLÉ :  **Obligatoire** La clé peut être une chaîne unique ou un tableau de chaîne. Si un autre type primitif (données/nombre) est fourni, il est traité comme une chaîne.</li></ul> | map_has_keys(MAP, KEY) | Veuillez consulter la [annexe](#map_has_keys) pour un exemple de code. | |
+| add_to_map | Accepte au moins deux entrées. Tout nombre de cartes peut être fourni en tant qu’entrées. La préparation de données renvoie une carte unique qui contient toutes les paires clé-valeur de toutes les entrées. Si une ou plusieurs clés sont répétées (dans la même carte ou sur plusieurs cartes), la préparation de données déduplique les clés afin que la première paire clé-valeur persiste dans l’ordre dans lequel elles ont été transmises dans l’entrée. | MAP : **Obligatoire** Données de la carte d’entrée. | add_to_map(MAP 1, MAP 2, MAP 3, etc.) | Veuillez consulter la [annexe](#add_to_map) pour un exemple de code. | |
 
 {style="table-layout:auto"}
 
@@ -381,12 +381,12 @@ Le tableau ci-dessous présente une liste des valeurs de champ d’appareil et l
 | Hacker | Cette valeur de périphérique est utilisée au cas où un script est détecté dans la variable `useragent` chaîne. |
 
 {style="table-layout:auto"}
-<!-- 
-### Code samples {#code-samples}
+
+### Exemples de code {#code-samples}
 
 #### map_get_values {#map-get-values}
 
-+++Select to view example
++++Sélectionner pour afficher l’exemple
 
 ```json
  example = "map_get_values(book_details,\"author\") where input is : {\n" +
@@ -404,7 +404,7 @@ Le tableau ci-dessous présente une liste des valeurs de champ d’appareil et l
 
 #### map_has_keys {#map_has_keys}
 
-+++Select to view example
++++Sélectionner pour afficher l’exemple
 
 ```json
  example = "map_has_keys(book_details,\"author\")where input is : {\n" +
@@ -422,7 +422,7 @@ Le tableau ci-dessous présente une liste des valeurs de champ d’appareil et l
 
 #### add_to_map {#add_to_map}
 
-+++Select to view example
++++Sélectionner pour afficher l’exemple
 
 ```json
 example = "add_to_map(book_details, book_details2) where input is {\n" +
@@ -454,4 +454,4 @@ example = "add_to_map(book_details, book_details2) where input is {\n" +
       returns = "A new map with all elements from map and addends"
 ```
 
-+++ -->
++++
