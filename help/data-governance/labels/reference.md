@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Glossaire des étiquettes dʼutilisation des données
 description: Ce document décrit toutes les étiquettes dʼutilisation des données actuellement prises en charge par Adobe Experience Platform.
 exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
-source-git-commit: f4f4deda02c96e567cbd0815783f192d1c54096c
+source-git-commit: d1d817646fdc943428ca13f3dd8b52725bce4921
 workflow-type: tm+mt
-source-wordcount: '2109'
-ht-degree: 98%
+source-wordcount: '2207'
+ht-degree: 93%
 
 ---
 
@@ -23,7 +23,7 @@ Les libellés d’utilisation des données vous permettent de classer les jeux d
 
 Ce document décrit les libellés dʼutilisation des données de base actuellement fournies par Experience Platform.
 
-## Étiquettes Contrat
+## Étiquettes Contrat {#contract}
 
 Les étiquettes Contrat « C » sont utilisées pour catégoriser des données qui possèdent des obligations contractuelles ou qui sont liées aux politiques de gouvernance des données de votre organisation.
 
@@ -42,7 +42,7 @@ Les étiquettes Contrat « C » sont utilisées pour catégoriser des données
 | [C11](#c11) | Les données ne peuvent pas être partagées avec les partenaires de correspondance de segment. |
 | [C12](#c12) | Les données ne peuvent pas être exportées de quelque manière que ce soit. |
 
-## Étiquettes Identité
+## Étiquettes Identité {#identity}
 
 Les étiquettes Identité « I » sont utilisées pour catégoriser des données pouvant identifier ou contacter une personne en particulier.
 
@@ -63,6 +63,20 @@ Différents types de données géographiques peuvent être considérés comme se
 | **S2** | Données pouvant être utilisées pour déterminer une zone de géobarrière au sens large. |
 | **PSPD** | Les données personnelles sensibles autorisées (PSPD) se rapportent à des données que vous êtes contractuellement autorisé(e) par Adobe à télécharger et qui sont considérées comme « sensibles », « catégorie spéciale de données », ou comme un terme similaire utilisé par les lois en vigueur. Cela exclut spécifiquement les informations protégées sur la santé (IPS) et d’autres données réglementées sur la santé. |
 | **RHD** | Données qui font référence à des informations protégées sur la santé (IPS) ou à des informations sur un patient que vous êtes contractuellement autorisé(e) par Adobe à télécharger. |
+
+## (Version bêta) Étiquettes Écosystème du partenaire {#partner}
+
+>[!IMPORTANT]
+>
+>Le libellé de données tiers est en version bêta. Elle n’est pas disponible pour tous les utilisateurs et la documentation peut faire l’objet de modifications.
+
+Les étiquettes Ecosystème partenaires sont utilisées pour classer les données obtenues à partir de sources externes à votre organisation.
+
+Ce libellé est utilisé pour régir l’utilisation des données de prospect.
+
+| Libellé | Définition |
+| --- | --- |
+| **Troisième niveau** | Les données tierces sont des données fournies par un fournisseur de données tiers. Un fournisseur de données tiers est une entité qui a conclu un accord avec votre organisation vous autorisant à accéder, utiliser, afficher et transmettre les données du tiers avec Platform. |
 
 ## Annexe
 
