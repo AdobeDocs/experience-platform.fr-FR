@@ -4,10 +4,10 @@ description: Découvrez comment ingérer des fichiers chiffrés par le biais de 
 hide: true
 hidefromtoc: true
 exl-id: 83a7a154-4f55-4bf0-bfef-594d5d50f460
-source-git-commit: f0e518459eca72d615b380d11cabee6c1593dd9a
-workflow-type: ht
-source-wordcount: '1017'
-ht-degree: 100%
+source-git-commit: d05202fc1e64bbb06c886aedbe59e07c45f80686
+workflow-type: tm+mt
+source-wordcount: '1343'
+ht-degree: 76%
 
 ---
 
@@ -111,6 +111,65 @@ Une réponse réussie renvoie votre clé publique codée en Base64, votre identi
 }
 ```
 
+| Propriété | Description |
+| --- | --- |
+| `publicKey` | La clé publique est utilisée pour chiffrer les données dans votre espace de stockage dans le cloud. Cette clé correspond à la clé privée qui a également été créée lors de cette étape. Cependant, la clé privée est immédiatement envoyée à l’Experience Platform. |
+| `publicKeyId` | L’identifiant de clé publique est utilisé pour créer un flux de données et ingérer vos données de stockage dans le cloud cryptées dans Experience Platform. |
+| `expiryTime` | Le délai d’expiration définit la date d’expiration de votre paire de clés de chiffrement. Cette date est automatiquement définie sur 180 jours après la date de génération de la clé et s’affiche au format d’horodatage unix. |
+
++++(Facultatif) Création d’une paire de clés de vérification des signes pour les données signées
+
+### Création d’une paire de clés gérée par le client
+
+Vous pouvez éventuellement créer une paire de clés de vérification des signes pour signer et ingérer vos données chiffrées.
+
+Pendant cette étape, vous devez générer votre propre combinaison de clé privée et de clé publique, puis utiliser votre clé privée pour signer vos données cryptées. Ensuite, vous devez coder votre clé publique dans Base64, puis la partager avec l’Experience Platform afin que Platform vérifie votre signature.
+
+### Partager votre clé publique sur Experience Platform
+
+Pour partager votre clé publique, envoyez une demande de POST à l’ `/customer-keys` point d’entrée tout en fournissant votre algorithme de chiffrement et votre clé publique codée en Base64.
+
+**Format d’API**
+
+```http
+POST /data/foundation/connectors/encryption/customer-keys
+```
+
+**Requête**
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/connectors/encryption/customer-keys' \
+  -H 'Authorization: Bearer {{ACCESS_TOKEN}}' \
+  -H 'x-api-key: {{API_KEY}}' \
+  -H 'x-gw-ims-org-id: {{ORG_ID}}' \
+  -H 'x-sandbox-name: {{SANDBOX_NAME}}' \
+  -H 'Content-Type: application/json' 
+  -d '{
+      "encryptionAlgorithm": {{ENCRYPTION_ALGORITHM}},       
+      "publicKey": {{BASE_64_ENCODED_PUBLIC_KEY}}
+    }'
+```
+
+| Paramètre | Description |
+| --- | --- |
+| `encryptionAlgorithm` | Type d’algorithme de chiffrement que vous utilisez. Les types de chiffrement pris en charge sont `PGP` et `GPG`. |
+| `publicKey` | Clé publique correspondant aux clés gérées par le client utilisées pour signer votre code crypté. Cette clé doit être encodée en Base64. |
+
+**Réponse**
+
+```json
+{    
+  "publicKeyId": "e31ae895-7896-469a-8e06-eb9207ddf1c2" 
+} 
+```
+
+| Propriété | Description |
+| --- | --- |
+| `publicKeyId` | Cet identifiant de clé publique est renvoyé en réponse au partage de votre clé gérée par le client avec l’Experience Platform. Vous pouvez fournir cet ID de clé publique comme ID de clé de vérification de signature lors de la création d’un flux de données pour les données signées et chiffrées. |
+
++++
+
 ## Connecter votre source d‘espace de stockage dans le cloud à Experience Platform à l’aide de l’API [!DNL Flow Service]
 
 Une fois que vous avez récupéré votre paire de clés de chiffrement, vous pouvez procéder à la création d’une connexion source pour votre source d’espace de stockage dans le cloud et importer vos données chiffrées vers Platform.
@@ -150,6 +209,10 @@ POST /flows
 ```
 
 **Requête**
+
+>[!BEGINTABS]
+
+>[!TAB Création d’un flux de données pour l’ingestion de données chiffrées]
 
 La requête suivante crée un flux de données pour ingérer des données chiffrées pour une source d’espace de stockage dans le cloud.
 
@@ -206,6 +269,58 @@ curl -X POST \
 | `scheduleParams.startTime` | Heure de début du flux de données en temps Unix. |
 | `scheduleParams.frequency` | Fréquence de collecte des données par le flux de données. Les valeurs possibles sont les suivantes : `once`, `minute`, `hour`, `day` ou `week`. |
 | `scheduleParams.interval` | L’intervalle désigne la période entre deux exécutions consécutives de flux. La valeur de l’intervalle doit être un nombre entier non nul. L’intervalle n’est pas requis lorsque la fréquence est définie sur `once` et doit être supérieur ou égal à `15` pour d’autres valeurs de fréquence. |
+
+
+>[!TAB Créer un flux de données pour ingérer des données chiffrées et signées]
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/flows' \
+  -H 'x-api-key: {{API_KEY}}' \
+  -H 'x-gw-ims-org-id: {{ORG_ID}}' \
+  -H 'x-sandbox-name: {{SANDBOX_NAME}}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "name": "ACME Customer Data (with Sign Verification)",
+    "description": "ACME Customer Data (with Sign Verification)",
+    "flowSpec": {
+        "id": "9753525b-82c7-4dce-8a9b-5ccfce2b9876",
+        "version": "1.0"
+    },
+    "sourceConnectionIds": [
+        "655f7c1b-1977-49b3-a429-51379ecf0e15"
+    ],
+    "targetConnectionIds": [
+        "de688225-d619-481c-ae3b-40c250fd7c79"
+    ],
+    "transformations": [
+        {
+            "name": "Mapping",
+            "params": {
+                "mappingId": "6b6e24213dbe4f57bd8207d21034ff03",
+                "mappingVersion":"0"
+            }
+        },
+        {
+            "name": "Encryption",
+            "params": {
+                "publicKeyId":"311ef6f8-9bcd-48cf-a9e9-d12c45fb7a17",
+                "signVerificationKeyId":"e31ae895-7896-469a-8e06-eb9207ddf1c2"
+            }
+        }
+    ],
+    "scheduleParams": {
+        "startTime": "1675793392",
+        "frequency": "once"
+    }
+}'
+```
+
+| Propriété | Description |
+| --- | --- |
+| `params.signVerificationKeyId` | L’identifiant de clé de vérification des signes est identique à l’identifiant de clé publique récupéré après le partage de votre clé publique encodée en Base64 avec Experience Platform. |
+
+>[!ENDTABS]
 
 **Réponse**
 
