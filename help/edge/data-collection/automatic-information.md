@@ -1,9 +1,9 @@
 ---
 title: Informations collectées automatiquement dans le SDK Web de Adobe Experience Platform
-description: Présentation de chaque information collectée automatiquement par le SDK Adobe Experience Platform.
+description: Une vue d’ensemble de chaque information collectée automatiquement par le SDK Adobe Experience Platform.
 keywords: collecter des informations;contexte;configurer;appareil;hauteur d’écran;orientation de l’écran;orientation de l’écran;largeur d’écran;largeur d’écran;environnement;hauteur de fenêtre d’affichage;hauteur de fenêtre d’affichage;largeur de fenêtre d’affichage;détails du navigateur;détails de la mise en oeuvre;détails de la mise en oeuvre;nom;version;contexte local;heure locale;fuseau horaire local Décalage du fuseau horaire;horodatage;web;url;webPageDetails;détails de la page web;webReferrer;référent web;paysage;portrait;
 exl-id: 901df786-df36-4986-9c74-a32d29c11b71
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: e3f507e010ea2a32042b53d46795d87e82e3fb72
 workflow-type: tm+mt
 source-wordcount: '511'
 ht-degree: 60%
@@ -92,7 +92,7 @@ Identifiant du kit de développement logiciel (SDK).  Ce champ utilise un URI po
 
 Lorsque la bibliothèque autonome est utilisée, la valeur est simplement la version de la bibliothèque. Lorsque la bibliothèque est utilisée dans le cadre de l’extension de balise, il s’agit de la version de la bibliothèque et de la version de l’extension de balise associée à un &quot;+&quot;. Par exemple, si la version de la bibliothèque est 2.1.0 et que la version de l’extension de balise est 2.1.3, la valeur est `2.1.0+2.1.3`.
 
-### Environnement
+### Environnement {#environment}
 
 | **Chemin d’accès dans la charge utile :** | **Exemple :** |
 | ------------------------------------------------ | ------------ |
@@ -100,7 +100,7 @@ Lorsque la bibliothèque autonome est utilisée, la valeur est simplement la ver
 
 Environnement dans lequel les données ont été collectées. Cette valeur est toujours définie sur `browser`.
 
-## Contexte de l’emplacement (`placeContext`)
+## Contexte de l’emplacement (`placeContext`) {#place-context}
 
 Informations sur l’emplacement de l’utilisateur final.
 
