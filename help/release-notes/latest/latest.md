@@ -2,10 +2,10 @@
 title: Notes de mise à jour d’Adobe Experience Platform
 description: Les notes de mise à jour de juillet 2023 pour Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 7cc7d43f6424ff91bd237235b278bf13a0add45d
+source-git-commit: 819c4e8b4ab24d364cf6d26d3ce38d0bc372e603
 workflow-type: tm+mt
-source-wordcount: '1017'
-ht-degree: 35%
+source-wordcount: '1297'
+ht-degree: 38%
 
 ---
 
@@ -15,10 +15,24 @@ ht-degree: 35%
 
 Mises à jour des fonctionnalités existantes dans Adobe Experience Platform :
 
+- [Service de catalogue](#catalog-service)
 - [Collecte de données](#data-collection)
 - [Destinations](#data-prep)
+- [Query Service](#query-service)
 - [Segmentation Service](#segmentation)
 - [Sources](#sources)
+
+## Service de catalogue {#catalog-service}
+
+Le Catalog Service est le système d’enregistrement pour l’emplacement et la parenté des données au sein d’Adobe Experience Platform. Bien que toutes les données ingérées dans Experience Platform soient stockées dans le lac de données sous forme de fichiers et de répertoires, le catalogue renferme les métadonnées et la description de ces fichiers et répertoires à des fins de recherche et de surveillance.
+
+| Fonctionnalité | Description |
+| --- | --- |
+| Gestion des stocks de jeux de données | L’interface utilisateur des jeux de données propose désormais un ensemble d’actions intégrées pour mieux gérer vos jeux de données. La gestion avancée des jeux de données améliore votre efficacité par la création et l’affectation de dossiers et de balises à vos jeux de données, ce qui permet de filtrer et d’améliorer la visibilité. Pour plus d’informations sur la [actions intégrées](../../catalog/datasets/user-guide.md#inline-actions), comment [recherche et filtrage de jeux de données](../../catalog/datasets/user-guide.md#search-and-filter), et [déplacer des jeux de données vers des dossiers ;](../../catalog/datasets/user-guide.md#move-to-folders). |
+
+{style="table-layout:auto"}
+
+Pour plus d’informations sur le service de catalogue, reportez-vous au [Présentation du service de catalogue](../../catalog/home.md).
 
 ## Collecte de données {#data-collection}
 
@@ -83,7 +97,22 @@ La mise à jour et la mise à jour générale des six destinations de stockage d
 - Correction d’un problème avec la destination de Marketing Cloud Salesforce (API) en raison duquel, à l’étape de mappage, tous les attributs de cible disponibles n’étaient pas renvoyés par Salesforce. Il existe maintenant une [limite supérieure de 2 000 attributs cibles](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-exact-target.md#mapping-considerations-example) de Salesforce qui peut être affiché.
 - Correction d’un problème avec la destination Microsoft Dynamics 365. La destination prend désormais en charge le routage régional des données via le [Sélecteur de région](/help/destinations/catalog/crm/microsoft-dynamics-365.md#authenticate), afin que vous puissiez acheminer vos exportations de données en fonction de la région dans laquelle votre entreprise est configurée dans l’écosystème Microsoft. ![Nouveau sélecteur de région mis en surbrillance.](/help/release-notes/2023/assets/region-parameter-microsoft-dynamics-365.png "Nouveau sélecteur de région mis en surbrillance."){width="100" zoomable="yes"}
 
-Pour des informations plus générales sur les destinations, consultez la [présentation des destinations](../../destinations/home.md).
+Pour des informations plus générales sur les destinations, reportez-vous à la [présentation des destinations](../../destinations/home.md).
+
+## Query Service {#query-service}
+
+Query Service vous permet d’utiliser le langage SQL standard pour interroger les données dans le lac de données d’Adobe Experience Platform. Vous pouvez joindre n’importe quel jeu de données à partir du lac de données et capturer les résultats de la requête sous la forme d’un nouveau jeu de données à utiliser dans les rapports, dans l’espace de travail de science des données ou à ingérer en tant que profil client en temps réel.
+
+**Fonctionnalités mises à jour**
+
+| Fonctionnalité | Description |
+| --- | --- |
+| Bascule de l’éditeur de requêtes amélioré | Le bouton bascule amélioré de l’éditeur de requêtes offre une meilleure accessibilité et une prise en charge multi-thème. Les paramètres d’éditeur améliorés vous permettent d’activer les thèmes foncés ou clairs. Pour plus d’informations, consultez la [documentation](../../query-service/ui/user-guide.md#enhanced-editor-toggle). |
+| Nom d’alias pour les statistiques calculées | Vous pouvez maintenant fournir un nom d’alias pour référencer de manière descriptive les résultats de votre dans vos statistiques calculées dans les requêtes SQL. Consultez la documentation pour plus d’informations à ce sujet et sur d’autres mises à jour de la commande CALCULER les STATISTIQUES . Pour plus d’informations, consultez la [documentation](../../query-service/essential-concepts/dataset-statistics.md#alias-name). |
+
+{style="table-layout:auto"}
+
+Pour plus d’informations sur Query Service, consultez la [vue d’ensemble de Query Service](../../query-service/home.md).
 
 ## Segmentation Service {#segmentation}
 
