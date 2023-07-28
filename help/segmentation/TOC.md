@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform Segmentation Service
 breadcrumb-title: Guide de Segmentation Service
 user-guide-description: Créez des audiences à partir de vos données Real-time Customer Profile à l’aide de définitions de segment générées par Adobe Experience Platform ou de sources externes.
 feature: Segments
-source-git-commit: 4dbd20dd3ac596052a3390eb6d3731fac7095c0d
+source-git-commit: 5fb8edd9dd664f9a0ed036d1340b5f8fcd4ba0c4
 workflow-type: tm+mt
-source-wordcount: '176'
+source-wordcount: '178'
 ht-degree: 87%
 
 ---
@@ -34,6 +34,7 @@ ht-degree: 87%
    - [Composition de l’audience](ui/audience-composition.md)
    - [Créateur de segments](ui/segment-builder.md)
    - [Segmentation Edge](ui/edge-segmentation.md)
+   - [Public potentiel](ui/prospect-audience.md)
    - [Segmentation en flux continu](ui/streaming-segmentation.md)
    - [Segmentation en flux continu (Vidéo)](video/streaming-segmentation-overview.md)
    - [Remaniement des contraintes de temps](ui/segment-refactoring.md)
