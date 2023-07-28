@@ -3,11 +3,11 @@ title: (Version bêta) Interagir et acquérir de nouveaux clients au moyen de ca
 description: Découvrez comment interagir et acquérir de nouveaux clients grâce à des cas d’utilisation de prospection, activés par le support des données des partenaires dans Real-Time CDP.
 hide: true
 hidefromtoc: true
-badgeBeta: label="Version bêta" type="informative" before-title="true"
-source-git-commit: 486e1390dfa0602bef15d196d4a1a5befdc9ff23
+badgeBeta: label="Version Beta" type="informative" before-title="true"
+source-git-commit: d0227dd8dc3d79674d954899e2724d2893e16b73
 workflow-type: tm+mt
 source-wordcount: '1953'
-ht-degree: 1%
+ht-degree: 16%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 1%
 
 >[!AVAILABILITY]
 >
->* Cette fonctionnalité bêta est disponible pour les clients qui disposent d’une licence Real-Time CDP (App Service), Adobe Experience Platform Activation, la plateforme de données clients en temps réel, Real-Time CDP Prime, Real-Time CDP Ultimate. Pour en savoir plus sur ces packages, voir [description des produits](https://helpx.adobe.com/legal/product-descriptions.html) et contactez votre représentant d’Adobe pour plus d’informations.
+>* Cette fonctionnalité Beta est disponible pour les clientes et clients qui disposent d’une licence Real-Time CDP (App Service), Adobe Experience Platform Activation, Real-time CDP, Real-Time CDP Prime et Real-Time CDP Ultimate. Consultez la [description des produits](https://helpx.adobe.com/fr/legal/product-descriptions.html) pour en savoir plus sur ces packages et contactez votre représentant ou représentante Adobe pour obtenir plus d’informations.
 
 Utilisez la prise en charge de données tierces dans Real-Time CDP pour développer votre base de profils avec les profils de prospect des partenaires de données et interagissez avec eux pour acquérir ou atteindre de nouveaux clients.
 
@@ -31,7 +31,7 @@ Lorsque vous envisagez de contacter et d’acquérir de nouveaux clients en util
 * Les données du partenaire que vous ingérez sont-elles liées à un identifiant durable largement accepté, tel que les informations d’identification personnelles, les informations d’identification personnelles hachées ou un identifiant de partenaire ?
 * Quelles politiques d’utilisation des données devez-vous connaître du point de vue du partenaire et de votre propre équipe juridique, de confidentialité ou de conformité ?
 
-## Comment réaliser le cas d’utilisation : présentation de haut niveau {#achieve-the-use-case-high-level}
+## Comment réaliser le cas d’utilisation : aperçu de haut niveau {#achieve-the-use-case-high-level}
 
 Avant de développer Real-Time CDP pour engager et acquérir de nouveaux clients, veillez à utiliser Real-Time CDP pour créer une base solide pour vos données de première partie. Les workflows pour réaliser ce cas d’utilisation sont similaires aux workflows pour interagir avec vos clients connus.
 
@@ -44,9 +44,9 @@ Avant de développer Real-Time CDP pour engager et acquérir de nouveaux clients
 5. Comme **client**, vous activez les audiences de prospects vers les destinations qui acceptent les identités disponibles dans votre liste de prospects.
 6. Si nécessaire, travaillez avec la fonction **partenaire de données** pour l’activation du dernier kilomètre des audiences vers les destinations de médias payants souhaitées.
 
-## Comment réaliser le cas d’utilisation : Instructions détaillées {#step-by-step-instructions}
+## Comment réaliser le cas d’utilisation : instructions détaillées {#step-by-step-instructions}
 
-Lisez les sections ci-dessous, qui contiennent des liens vers d’autres documents, pour suivre chacune des étapes de la présentation de haut niveau ci-dessus.
+Parcourez les sections ci-dessous, qui contiennent des liens vers d’autres documents, pour suivre chacune des étapes de la vue d’ensemble de haut niveau ci-dessus.
 
 ### Fonctionnalités et éléments de l’interface utilisateur que vous utiliserez {#ui-functionality-and-elements}
 
@@ -83,7 +83,7 @@ Commencez par créer un nouveau type d’identité pour les profils que vous rec
 ![Créez un espace de noms d’identité du Partner ID.](/help/rtcdp/assets/partner-data/prospecting/create-partner-identity-namespace.png)
 
 * En savoir plus sur les espaces de noms des identifiants de partenaire dans la section [section types d’identité](/help/identity-service/namespaces.md).
-* En savoir plus [comment définir des champs d’identité](/help/xdm/ui/fields/identity.md) dans l’interface utilisateur de l’Experience Platform.
+* Découvrez [comment définir des champs d’identité](/help/xdm/ui/fields/identity.md) dans l’interface utilisateur d’Experience Platform.
 
 #### Créez un nouveau schéma avec le **[!UICONTROL Profil XDM Individual Prospect]** class
 
@@ -93,7 +93,7 @@ Ensuite, dans **[!UICONTROL Data Management]** > **[!UICONTROL Schémas]**, cré
 
 Lire comment [création et modification de schémas dans l’interface utilisateur](/help/xdm/ui/resources/schemas.md) et obtenir des informations complètes sur la classe XDM Individual Prospect Profile (lien à venir).
 
-Le **[!UICONTROL Profil XDM Individual Prospect]** est préconfigurée avec les champs illustrés ci-dessous. Pour enrichir votre schéma avec des attributs fournis par le partenaire pour les profils de prospect, vous pouvez soit créer un nouveau groupe de champs avec les attributs attendus et l’ajouter au schéma, soit utiliser l’un des groupes de champs préconfigurés fournis par Adobe.
+La variable **[!UICONTROL Profil XDM Individual Prospect]** est préconfigurée avec les champs illustrés ci-dessous. Pour enrichir votre schéma avec des attributs fournis par le partenaire pour les profils de prospect, vous pouvez soit créer un nouveau groupe de champs avec les attributs attendus et l’ajouter au schéma, soit utiliser l’un des groupes de champs préconfigurés fournis par Adobe.
 
 ![Champs préconfigurés pour la classe XDM Individual Prospect Profile.](/help/rtcdp/assets/partner-data/prospecting/preconfigured-fields-individual-prospect-class.png)
 
@@ -117,7 +117,7 @@ Pour ce faire, procédez comme suit :
 
 1. Accédez au schéma que vous avez créé et sélectionnez le **[!UICONTROL Étiquettes]** .
 2. Sélectionnez tous les champs de ce schéma à l’aide de la case à cocher située tout en haut, puis cliquez sur l’icône en forme de crayon à droite pour appliquer des libellés de gouvernance des données à ce schéma.
-3. Sélectionnez la **[!UICONTROL Écosystème partenaire]** Libellé des catégories sur la gauche.
+3. Sélectionnez la variable **[!UICONTROL Écosystème partenaire]** Libellé des catégories sur la gauche.
 4. Choisissez le libellé appelé **[!UICONTROL Troisième niveau]** et sélectionnez **[!UICONTROL Enregistrer]**.
 5. Notez que tous les champs du schéma portent désormais le libellé que vous avez sélectionné à l’étape précédente.
 
@@ -125,11 +125,11 @@ Pour ce faire, procédez comme suit :
 >
 >Votre schéma est maintenant prêt à l’emploi et vous pouvez passer à l’étape suivante pour ingérer les données de prospect de votre partenaire de données.
 
-Au cours de cette étape également, réfléchissez à la manière dont votre modèle de gouvernance des données change à mesure que vous développez votre stratégie de gestion des données pour inclure les données tierces fournies par le partenaire. Consultez les points à prendre en compte dans les liens de documentation ci-dessous :
+Au cours de cette étape, réfléchissez également à la manière dont votre modèle de gouvernance des données change à mesure que vous développez votre politique de gestion des données pour inclure les données tierces fournies par le partenaire. Consultez les points à prendre en compte dans la documentation ci-dessous :
 
-* (**Bientôt disponible**) Conserver les données tierces dans un jeu de données distinct afin de faciliter la suppression et l’annulation des intégrations.
-* (**Bientôt disponible**) Utilisez la variable [expiration du jeu de données](/help/hygiene/ui/dataset-expiration.md) fonctionnalité du jeu de données pour les clients qui ont acheté le module complémentaire d’hygiène des données.
-* (**Bientôt disponible**) Soyez prudent lors de la création de jeux de données dérivés qui extraient des données tierces, car une fois mélangés, la seule solution pour supprimer les données tierces consiste à supprimer l’ensemble du jeu de données dérivé.
+* (**Bientôt disponible**) Conservez les données tierces dans un jeu de données distinct afin de faciliter la suppression et l’annulation des intégrations.
+* (**Bientôt disponible**) Utilisez la fonctionnalité [expiration du jeu de données](/help/hygiene/ui/dataset-expiration.md) du jeu de données pour les clientes et clients qui ont acheté le module complémentaire d’hygiène des données.
+* (**Bientôt disponible**) Agissez avec prudence lors de la création de jeux de données dérivés qui contiennent des données tierces, car une fois intégrés, la seule façon de supprimer les données tierces consiste à supprimer l’ensemble du jeu de données dérivé.
 
 ### Charger la liste des profils de prospects et examiner la vue des profils de prospects
 
@@ -153,7 +153,7 @@ Notez que, comme à l’étape de création d’un schéma, vous devez activer l
 
 Pour charger un fichier que vous avez reçu du partenaire dans le jeu de données, sélectionnez le jeu de données, faites défiler la page vers le bas dans le rail de droite, puis sélectionnez **[!UICONTROL Ajouter des données]**. Vous pouvez faire glisser votre fichier ou sélectionner **[!UICONTROL Sélection de fichiers]** pour accéder à l’emplacement du fichier et le sélectionner.
 
-![Ajouter un fichier au jeu de données.](/help/rtcdp/assets/partner-data/prospecting/add-file-to-dataset.png)
+![Ajoutez un fichier au jeu de données.](/help/rtcdp/assets/partner-data/prospecting/add-file-to-dataset.png)
 
 Après avoir chargé la liste des profils du partenaire de données dans Real-Time CDP, passez à la [Inspect de la section Profils de prospect chargés](#inspect-profiles) pour vérifier que les profils de prospect sont renseignés dans l’interface utilisateur.
 
@@ -172,11 +172,11 @@ Après avoir chargé la liste des profils du partenaire de données dans Real-Ti
 
 Pour afficher la liste des profils de prospect, accédez à **[!UICONTROL Perspectives]** > **[!UICONTROL Profils]** dans le rail de gauche.
 
-Notez que les profils de prospect que vous venez de charger dans Real-Time CDP peuvent prendre jusqu’à deux heures pour s’afficher dans la variable **[!UICONTROL Parcourir]** vue de l’écran Profil de projet. Si la page affiche le message &quot;Il n’y a aucun profil de prospect à parcourir en ce moment&quot;, veuillez réessayer après un certain temps. Après un certain temps d’attente, les profils de prospect doivent commencer à s’afficher dans la variable **[!UICONTROL Parcourir]** vue.
+Notez que les profils de prospect que vous venez de charger dans Real-Time CDP peuvent prendre jusqu’à deux heures pour s’afficher dans la variable **[!UICONTROL Parcourir]** vue de l’écran Profil de projet. Si la page affiche le message &quot;Il n’y a aucun profil de prospect à parcourir en ce moment&quot;, veuillez réessayer après un certain temps. Après un certain temps d’attente, les profils de prospect doivent commencer à apparaître dans la variable **[!UICONTROL Parcourir]** vue.
 
 >[!TIP]
 >
->Notez la présence de la variable **[!UICONTROL Espace de noms d’identité]** colonne . Si vous travaillez avec plusieurs fournisseurs de données, utilisez cette colonne pour déduire l’origine des profils de prospect.
+>Notez la présence de la variable **[!UICONTROL Identity Namespace]** colonne . Si vous travaillez avec plusieurs fournisseurs de données, utilisez cette colonne pour déduire l’origine des profils de prospect.
 
 ![Vue des profils de prospect chargés dans Real-Time CDP.](/help/rtcdp/assets/partner-data/prospecting/prospect-profiles-view.png)
 
@@ -204,11 +204,11 @@ Notez que l’expérience de création d’audiences pour les profils de prospec
 
 ### Activation des profils de prospect vers des destinations {#activate-to-destinations}
 
-Utilisez les audiences de prospects en les exportant vers des destinations. Actuellement, seules certaines destinations, telles que [Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md) ou le [!BADGE Alpha]{type=Informative}[LiveRamp](/help/destinations/catalog/advertising/liveramp.md) l’activation de la prise en charge des destinations pour les profils de prospect.
+Utilisez les audiences de prospects en les exportant vers des destinations. Actuellement, seules certaines destinations, telles que [Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md) ou le [!BADGE Alpha]{type=Informative}[LiveRamp](/help/destinations/catalog/advertising/liveramp-onboarding.md) l’activation de la prise en charge des destinations pour les profils de prospect.
 
 ## Autres cas d’utilisation réalisés grâce à la prise en charge des données des partenaires {#other-use-cases}
 
-Explorez d’autres cas d’utilisation activés grâce à la prise en charge des données des partenaires dans Real-Time CDP :
+Explorez d’autres cas d’utilisation activés grâce à la prise en charge des données des partenaires dans Real-Time CDP :
 
-* [!BADGE Version bêta]{type=Informative}[Compléter les profils propriétaires avec les attributs des partenaires de données approuvés](/help/rtcdp/partner-data/supplement-first-party-profiles.md) pour améliorer votre base de données et obtenir de nouvelles informations sur votre base de clients et optimiser l’audience.
-* (**Bientôt disponible**) [!BADGE Beta]{type=Informative}**Utiliser la reconnaissance assistée par le partenaire** pour personnaliser les expériences sur site au cours de la visite et pour recibler une visite de publication hors site, sans que l’utilisateur s’authentifie ou n’ait jamais eu d’historique avec votre marque.
+* [!BADGE Version bêta]{type=Informative}[Complétez les profils propriétaires avec les attributs des partenaires de données de confiance pour améliorer votre base de données, obtenir de nouvelles informations sur votre base de clientes et clients et optimiser l’audience.](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
+* (**Bientôt disponible**) [!BADGE Beta]{type=Informative}**Utilisez la reconnaissance assistée par le partenaire** pour personnaliser les expériences sur site au cours de la visite et pour le reciblage hors site après une visite, sans que l’utilisateur ou l’utilisatrice s’authentifie ou ait déjà interagi avec votre marque.
