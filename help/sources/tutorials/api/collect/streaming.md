@@ -5,10 +5,10 @@ title: Création d’un flux de données en flux continu pour les données brute
 type: Tutorial
 description: Ce tutoriel décrit les étapes à suivre pour récupérer des données en continu et les introduire dans Platform à l’aide des connecteurs source et des API.
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 92f39f970402ab907f711d23a8f5f599668f0fe0
 workflow-type: tm+mt
-source-wordcount: '1098'
-ht-degree: 55%
+source-wordcount: '1124'
+ht-degree: 54%
 
 ---
 
@@ -24,8 +24,8 @@ Ce tutoriel nécessite une compréhension du fonctionnement des composants suiva
    - [Principes de base de la composition des schémas](../../../../xdm/schema/composition.md) : découvrez les blocs de création de base des schémas XDM, y compris les principes clés et les bonnes pratiques en matière de composition de schémas.
    - [Guide du développeur de Schema Registry](../../../../xdm/api/getting-started.md) : inclut des informations importantes à connaître avant dʼeffectuer des appels vers l’API Schema Registry. Cela inclut votre `{TENANT_ID}`, le concept de « conteneurs » et les en-têtes requis pour effectuer des requêtes (avec une attention particulière à l’en-tête Accept et à ses valeurs possibles).
 - [[!DNL Catalog Service]](../../../../catalog/home.md) : Catalogue constitue le système d’enregistrement de l’emplacement et de la liaison des données dans Experience Platform.
-- [[!DNL Streaming ingestion]](../../../../ingestion/streaming-ingestion/overview.md): L’ingestion par flux pour Platform fournit aux utilisateurs une méthode pour envoyer en temps réel des données de périphériques côté client et côté serveur vers Experience Platform.
-- [Sandbox](../../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
+- [[!DNL Streaming ingestion]](../../../../ingestion/streaming-ingestion/overview.md): l’ingestion par flux pour Platform fournit aux utilisateurs une méthode pour envoyer en temps réel des données de périphériques côté client et côté serveur vers Experience Platform.
+- [Sandbox](../../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
 ### Utiliser les API Platform
 
@@ -246,9 +246,9 @@ curl -X POST \
 
 | Propriété | Description |
 | -------- | ----------- |
-| `connectionSpec.id` | L’identifiant de spécification de connexion utilisé pour se connecter à la variable [!DNL Data Lake]. Cet identifiant est `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
-| `data.format` | Le format spécifié des données que vous amenez à [!DNL Data Lake]. |
-| `params.dataSetId` | Identifiant du jeu de données cible récupéré à l’étape précédente. |
+| `data.format` | Le format spécifié des données que vous apportez au lac de données. |
+| `params.dataSetId` | Identifiant du jeu de données cible généré à l’étape précédente. **Remarque**: vous devez fournir un identifiant de jeu de données valide lors de la création d’une connexion cible. Un identifiant de jeu de données non valide entraînera une erreur. |
+| `connectionSpec.id` | Identifiant de spécification de connexion utilisé pour se connecter au lac de données. Cet identifiant est `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
 **Réponse**
 
@@ -345,7 +345,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie une liste de spécifications de flux de données. L’identifiant de spécification de flux de données que vous devez récupérer pour créer un flux de données à l’aide de l’un des [!DNL Amazon Kinesis], [!DNL Azure Event Hubs]ou  [!DNL Google PubSub], est `d69717ba-71b4-4313-b654-49f9cf126d7a`.
+Une réponse réussie renvoie une liste de spécifications de flux de données. L’identifiant de spécification de flux de données que vous devez récupérer pour créer un flux de données à l’aide de l’un des [!DNL Amazon Kinesis], [!DNL Azure Event Hubs], ou  [!DNL Google PubSub], est `d69717ba-71b4-4313-b654-49f9cf126d7a`.
 
 ```json
 {

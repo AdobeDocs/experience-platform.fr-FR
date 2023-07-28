@@ -5,10 +5,10 @@ title: Créez un flux de données pour les sources de succès client à l’aide
 type: Tutorial
 description: Ce tutoriel décrit les étapes à suivre pour récupérer des données d’un système de succès client et les ingérer dans Platform à l’aide des connecteurs source et des API.
 exl-id: 0fae04d0-164b-4113-a274-09677f4bbde5
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 92f39f970402ab907f711d23a8f5f599668f0fe0
 workflow-type: tm+mt
-source-wordcount: '1237'
-ht-degree: 94%
+source-wordcount: '1264'
+ht-degree: 91%
 
 ---
 
@@ -18,7 +18,7 @@ Ce tutoriel décrit les étapes à suivre pour récupérer des données d’une 
 
 >[!NOTE]
 >
->Pour créer un flux de données, vous devez déjà disposer d’un identifiant de connexion de base valide avec une source de succès client. Si vous ne disposez pas de cet identifiant, reportez-vous à la section [présentation des sources](../../../home.md#customer-success) pour obtenir une liste des sources de succès client avec lesquelles vous pouvez créer une connexion de base.
+>Pour créer un flux de données, vous devez déjà disposer d’un identifiant de connexion de base valide avec une source de succès client. Si vous ne disposez pas de cet identifiant, reportez-vous au [présentation des sources](../../../home.md#customer-success) pour obtenir une liste des sources de succès client avec lesquelles vous pouvez créer une connexion de base.
 
 ## Prise en main
 
@@ -191,8 +191,8 @@ curl -X POST \
 | -------- | ----------- |
 | `data.schema.id` | `$id` du schéma XDM cible. |
 | `data.schema.version` | La version du schéma. Cette valeur doit être définie sur `application/vnd.adobe.xed-full+json;version=1`, qui renvoie la dernière version mineure du schéma. |
-| `params.dataSetId` | L’identifiant du jeu de données cible. |
-| `connectionSpec.id` | L’identifiant de spécification de connexion utilisé pour la connexion au lac de données. Cet identifiant est `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
+| `params.dataSetId` | Identifiant du jeu de données cible généré à l’étape précédente. **Remarque**: vous devez fournir un identifiant de jeu de données valide lors de la création d’une connexion cible. Un identifiant de jeu de données non valide entraînera une erreur. |
+| `connectionSpec.id` | Identifiant de spécification de connexion utilisé pour se connecter au lac de données. Cet identifiant est `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
 **Réponse**
 
@@ -618,7 +618,7 @@ Une réponse réussie renvoie l’identifiant `id` du nouveau flux de données.
 
 ## Surveiller votre flux de données
 
-Une fois votre flux de données créé, vous pouvez surveiller les données ingérées pour afficher des informations sur les exécutions du flux, le statut d’achèvement et les erreurs. Pour plus d’informations sur la surveillance des flux de données, suivez le tutoriel sur la [surveillance des flux de données dans l’API](../monitor.md).
+Une fois votre flux de données créé, vous pouvez surveiller les données ingérées pour afficher des informations sur les exécutions du flux, le statut d’achèvement et les erreurs. Pour plus d’informations sur la surveillance des flux de données, consultez le tutoriel sur la [surveillance des flux de données dans l’API](../monitor.md)
 
 ## Étapes suivantes
 
