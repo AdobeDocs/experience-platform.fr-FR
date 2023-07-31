@@ -2,7 +2,7 @@
 title: Notes de mise à jour d’Adobe Experience Platform
 description: Les notes de mise à jour de juillet 2023 pour Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 819c4e8b4ab24d364cf6d26d3ce38d0bc372e603
+source-git-commit: 3090b8a8eade564190dc32142c3fc71701007337
 workflow-type: tm+mt
 source-wordcount: '1297'
 ht-degree: 38%
@@ -17,7 +17,7 @@ Mises à jour des fonctionnalités existantes dans Adobe Experience Platform 
 
 - [Service de catalogue](#catalog-service)
 - [Collecte de données](#data-collection)
-- [Destinations](#data-prep)
+- [Destinations](#destinations)
 - [Query Service](#query-service)
 - [Segmentation Service](#segmentation)
 - [Sources](#sources)
@@ -95,7 +95,7 @@ La mise à jour et la mise à jour générale des six destinations de stockage d
 **Correctifs et améliorations** {#destinations-fixes-and-enhancements}
 
 - Correction d’un problème avec la destination de Marketing Cloud Salesforce (API) en raison duquel, à l’étape de mappage, tous les attributs de cible disponibles n’étaient pas renvoyés par Salesforce. Il existe maintenant une [limite supérieure de 2 000 attributs cibles](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-exact-target.md#mapping-considerations-example) de Salesforce qui peut être affiché.
-- Correction d’un problème avec la destination Microsoft Dynamics 365. La destination prend désormais en charge le routage régional des données via le [Sélecteur de région](/help/destinations/catalog/crm/microsoft-dynamics-365.md#authenticate), afin que vous puissiez acheminer vos exportations de données en fonction de la région dans laquelle votre entreprise est configurée dans l’écosystème Microsoft. ![Nouveau sélecteur de région mis en surbrillance.](/help/release-notes/2023/assets/region-parameter-microsoft-dynamics-365.png "Nouveau sélecteur de région mis en surbrillance."){width="100" zoomable="yes"}
+- Correction d’un problème avec la destination Microsoft Dynamics 365. La destination prend désormais en charge le routage régional des données via le [Sélecteur de région](/help/destinations/catalog/crm/microsoft-dynamics-365.md#authenticate), afin que vous puissiez acheminer vos exportations de données en fonction de la région dans laquelle votre entreprise est configurée dans l’écosystème Microsoft. <br> ![Nouveau sélecteur de région mis en surbrillance.](/help/release-notes/2023/assets/region-parameter-microsoft-dynamics-365.png "Nouveau sélecteur de région mis en surbrillance."){width="100" zoomable="yes"}
 
 Pour des informations plus générales sur les destinations, reportez-vous à la [présentation des destinations](../../destinations/home.md).
 

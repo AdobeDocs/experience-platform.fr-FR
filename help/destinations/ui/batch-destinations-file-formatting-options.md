@@ -2,19 +2,16 @@
 description: Découvrez comment configurer les options de formatage des fichiers lors de l’activation des données vers des destinations basées sur des fichiers.
 title: (Beta) Configurer des options de formatage de fichier pour les destinations basées sur des fichiers
 exl-id: f59b1952-e317-40ba-81d1-35535e132a72
-source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
+source-git-commit: 3b5f4abd516259402e9b3c4cfbcc17e32f18b6f5
 workflow-type: tm+mt
-source-wordcount: '1226'
-ht-degree: 53%
+source-wordcount: '1190'
+ht-degree: 52%
 
 ---
 
 # (Beta) Configurer des options de formatage de fichier pour les destinations basées sur des fichiers
 
 >[!IMPORTANT]
->
->La fonctionnalité **[!UICONTROL Options de formatage des fichiers]** d’Adobe Experience Platform est actuellement en version bêta. La documentation et les fonctionnalités peuvent changer.
->Contactez votre représentant Adobe pour accéder à cette fonctionnalité.
 > 
 >Les options de formatage des fichiers décrites dans ce document ne sont actuellement disponibles que pour les fichiers CSV.
 
@@ -35,7 +32,7 @@ Pour afficher les options de formatage de fichier, lancez le [se connecter à la
 >
 >Toutes ces options ne sont peut-être pas disponibles pour la destination à laquelle vous vous connectez. Il appartient au développeur de la destination de déterminer les options de formatage des fichiers qu’il souhaite prendre en charge dans sa destination. Le développeur de la destination peut déterminer quelles options sont disponibles lors de la connexion à la destination. Les options obligatoires sont marquées d’un astérisque dans l’interface utilisateur d’Experience Platform.
 > 
->Les nouvelles destinations de stockage dans le cloud - [(Version bêta) Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [(Version bêta) Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md), [(Version bêta) Azure Data Lake Storage Gen2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [(Version bêta) Zone d’entrée des données](/help/destinations/catalog/cloud-storage/data-landing-zone.md), [(Version bêta) Stockage dans le cloud Google](/help/destinations/catalog/cloud-storage/google-cloud-storage.md), [(Version bêta) SFTP](/help/destinations/catalog/cloud-storage/sftp.md) - ne prend actuellement en charge que les six options CSV mises en évidence ci-dessous.
+>Destinations de stockage dans le cloud Adobe - [Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md), [Azure Data Lake Storage Gen2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [Zone d’entrée des données](/help/destinations/catalog/cloud-storage/data-landing-zone.md), [Stockage dans le cloud Google](/help/destinations/catalog/cloud-storage/google-cloud-storage.md), [SFTP](/help/destinations/catalog/cloud-storage/sftp.md) - ne prend actuellement en charge que les six options CSV mises en évidence ci-dessous.
 
 ![Image montrant certaines des options de formatage de fichier disponibles.](../assets/ui/batch-destinations-file-formatting-options/file-formatting-options.png)
 
