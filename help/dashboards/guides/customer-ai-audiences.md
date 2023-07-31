@@ -3,7 +3,7 @@ title: Widgets Customer AI du tableau de bord Audiences
 description: Découvrez comment Customer AI fournit des informations importantes sur l’attrition ou la propension des audiences Real-time Customer Profile de votre entreprise.
 hide: true
 hidefromtoc: true
-source-git-commit: 162ef470751b9fb252658cff4b43595ddb7fe5d5
+source-git-commit: 74dcb35b389a962a5238c1fd5ef1370a76bdd57e
 workflow-type: tm+mt
 source-wordcount: '838'
 ht-degree: 20%
@@ -23,7 +23,7 @@ THe links when required
 ## [!UICONTROL Distribution des scores par Customer AI] {#customer-ai-distribution-of-scores}
 
 >[!CONTEXTUALHELP]
->id="platform_dashboards_audiences_distributionOfScores"
+>id="platform_dashboards_segments_distributionOfScores"
 >title="Distribution des scores"
 >abstract="Ce widget visualise la distribution du nombre total de profils en fonction de leurs scores de propension, par incréments de cinq pour cent. La distribution du nombre de profils est déterminée par le modèle d’IA et la politique de fusion sélectionnée. Vous pouvez modifier le modèle d’IA dans le menu déroulant sous le titre du widget."
 
@@ -52,7 +52,7 @@ Pour plus d’informations sur Customer AI, voir [guide de l’interface utilisa
 ## [!UICONTROL Résumé de notation de Customer AI] {#customer-ai-scoring-summary}
 
 >[!CONTEXTUALHELP]
->id="platform_dashboards_audiences_scoringSummary"
+>id="platform_dashboards_segments_scoringSummary"
 >title="Résumé des scores"
 >abstract="Le résumé des scores affiche le nombre total de profils notés et les classe en compartiments de propension élevée, moyenne et faible. Le graphique en anneau illustre la composition proportionnelle du total des profils selon la propension élevée, moyenne et faible."
 

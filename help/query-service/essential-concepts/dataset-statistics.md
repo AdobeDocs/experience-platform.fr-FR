@@ -1,7 +1,7 @@
 ---
 title: Calcul des statistiques des jeux de données
 description: Ce document décrit comment calculer les statistiques au niveau des colonnes sur les jeux de données Azure Data Lake Storage (ADLS) avec des commandes SQL.
-source-git-commit: 66354932ee42137ca98e7033d942556f13c64de1
+source-git-commit: 02b0939ee8fe92580402a78c7ebb5a250902d01c
 workflow-type: tm+mt
 source-wordcount: '1087'
 ht-degree: 39%
@@ -61,8 +61,8 @@ Si vous n’indiquez pas de nom d’alias à l’avance, Query Service génère 
 Un exemple de sortie d’un `COMPUTE STATISTICS` la requête est la suivante :
 
 ```console
-| Statistics ID    | 
-| ---------------- |
+| Statistics ID         | 
+| --------------------- |
 | adc_geometric_stats_1 |
 (1 row)
 ```
@@ -100,11 +100,11 @@ Vous pouvez utiliser la variable `SHOW STATISTICS` pour afficher les métadonné
 Exemple de sortie de `SHOW STATISTICS` est illustré ci-dessous.
 
 ```console
-statsId | tableName | columnSet | filterContext | timestamp
---------+-----------+-----------+---------------+---------------
-adc_geometric_stats_1 | adc_geometric | (age) |  | 25/06/2023 09:22:26
-demo_table_stats_1 | demo_table | (*) | ((age > 25)) | 25/06/2023 12:50:26
-age_stats | castedtitanic | (age) | ((age > 25) AND (age < 40)) | 25/06/2023 09:22:26
+      statsId         |   tableName   | columnSet |         filterContext       |      timestamp
+----------------------+---------------+-----------+-----------------------------+--------------------
+adc_geometric_stats_1 | adc_geometric |   (age)   |                             | 25/06/2023 09:22:26
+demo_table_stats_1    |  demo_table   |    (*)    |       ((age > 25))          | 25/06/2023 12:50:26
+age_stats             | castedtitanic |   (age)   | ((age > 25) AND (age < 40)) | 25/06/2023 09:22:26
 ```
 
 Vous trouverez ci-dessous une description des noms des colonnes de métadonnées.
