@@ -6,7 +6,7 @@ hidefromtoc: true
 source-git-commit: 162ef470751b9fb252658cff4b43595ddb7fe5d5
 workflow-type: tm+mt
 source-wordcount: '838'
-ht-degree: 10%
+ht-degree: 20%
 
 ---
 
@@ -25,7 +25,7 @@ THe links when required
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_audiences_distributionOfScores"
 >title="Distribution des scores"
->abstract="Ce widget visualise la distribution du nombre total de profils en fonction de leurs scores de propension, par incréments de 5 %. La distribution du nombre de profils est déterminée par le modèle AI et la stratégie de fusion sélectionnée. Vous pouvez modifier le modèle AI dans le menu déroulant sous le titre du widget."
+>abstract="Ce widget visualise la distribution du nombre total de profils en fonction de leurs scores de propension, par incréments de cinq pour cent. La distribution du nombre de profils est déterminée par le modèle d’IA et la politique de fusion sélectionnée. Vous pouvez modifier le modèle d’IA dans le menu déroulant sous le titre du widget."
 
 La variable [!UICONTROL Distribution des scores par Customer AI] widget classe le nombre total de profils en fonction de leurs scores de propension. La distribution du nombre de profils est déterminée par le modèle AI et la stratégie de fusion sélectionnée, puis visualisée par incréments de 5 % qui indiquent leur propension. Le nombre de profils est fourni le long de l’axe Y et les scores de propension sont fournis le long de l’axe X.
 
@@ -53,8 +53,8 @@ Pour plus d’informations sur Customer AI, voir [guide de l’interface utilisa
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_audiences_scoringSummary"
->title="Résumé de notation"
->abstract="Ce widget affiche le nombre total de profils notés et les classe en compartiments de propension élevée, moyenne et faible. Le graphique en anneau illustre la composition proportionnelle des profils totaux selon la propension élevée, moyenne et faible."
+>title="Résumé des scores"
+>abstract="Le résumé des scores affiche le nombre total de profils notés et les classe en compartiments de propension élevée, moyenne et faible. Le graphique en anneau illustre la composition proportionnelle du total des profils selon la propension élevée, moyenne et faible."
 
 Ce widget affiche le nombre total de profils notés et les classe en compartiments de propension élevée, moyenne et faible sous la forme respectivement de vert, de jaune et de rouge. Un graphique en anneau est utilisé pour illustrer la composition proportionnelle des profils totaux entre les propensions élevées, moyennes et faibles, en vert, jaune et rouge, respectivement. Un profil est admissible pour une propension élevée à plus de 75 ans, une propension moyenne entre 25 et 74 ans et une propension faible à moins de 24 ans. Une légende indique le code couleur et les seuils de propension. Les valeurs de profil correspondant aux propensions élevées, moyennes et faibles s’affichent dans une boîte de dialogue lorsque le curseur survole la section correspondante du graphique en anneau.
 

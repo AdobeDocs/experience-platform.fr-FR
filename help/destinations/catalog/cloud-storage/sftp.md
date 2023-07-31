@@ -5,7 +5,7 @@ exl-id: 27abfc38-ec19-4321-b743-169370d585a0
 source-git-commit: f069f97e82955fbb3a02c5d6cb73420069fa5403
 workflow-type: tm+mt
 source-wordcount: '940'
-ht-degree: 61%
+ht-degree: 65%
 
 ---
 
@@ -78,7 +78,7 @@ Pour vous connecter à cette destination, procédez comme décrit dans le [tutor
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_sftp_ssh"
 >title="Clé SSH privée"
->abstract="La clé SSH privée doit être une chaîne codée en Base64 au format RSA et ne doit pas être protégée par un mot de passe."
+>abstract="La clé SSH privée doit être une chaîne codée en Base64 et formatée pour le RSA, et ne doit pas être protégée par un mot de passe."
 
 Si vous sélectionnez l’option **[!UICONTROL SFTP avec mot de passe]** type d’authentification pour se connecter à votre emplacement SFTP :
 
@@ -100,7 +100,7 @@ Si vous sélectionnez le type d’authentification **[!UICONTROL SFTP avec clé 
 * **[!UICONTROL Domaine]** : indiquez l’adresse IP ou le nom de domaine de votre compte SFTP ;
 * **[!UICONTROL Port]** : le port utilisé par votre emplacement de stockage SFTP ;
 * **[!UICONTROL Nom d’utilisateur]** : nom d’utilisateur pour se connecter à l’emplacement de stockage de votre SFTP ;
-* **[!UICONTROL Clé SSH]** : clé SSH privée utilisée pour se connecter à l’emplacement de stockage de votre SFTP. La clé privée doit être une chaîne codée en Base64 au format RSA et ne doit pas être protégée par un mot de passe.
+* **[!UICONTROL Clé SSH]** : clé SSH privée utilisée pour se connecter à l’emplacement de stockage de votre SFTP. La clé privée doit être une chaîne codée en Base64 et formatée pour le RSA, et ne doit pas être protégée par un mot de passe.
 * **[!UICONTROL Clé de chiffrement]** : vous pouvez éventuellement joindre votre clé publique au format RSA pour ajouter un chiffrement à vos fichiers exportés. Vous pouvez voir un exemple de clé correctement formatée dans l’image ci-dessous.
 
   ![Image montrant un exemple de clé PGP correctement formatée dans l’interface utilisateur](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
