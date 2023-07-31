@@ -4,15 +4,19 @@ title: Activation des audiences vers les destinations d’exportation de profils
 type: Tutorial
 description: Découvrez comment activer les audiences que vous avez dans Adobe Experience Platform en les envoyant vers des destinations basées sur un profil de lot.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 1e6cdbaa12c89dc678232245a9544bdfa81aebcf
+source-git-commit: d7264d94a03f0ba19da90559b156ecaace0d8f95
 workflow-type: tm+mt
-source-wordcount: '3759'
-ht-degree: 66%
+source-wordcount: '3673'
+ht-degree: 64%
 
 ---
 
 
 # Activation des audiences vers les destinations d’exportation de profils par lots
+
+>[!IMPORTANT]
+> 
+> La fonctionnalité décrite sur la page n’est pas encore disponible pour les clients en général. Cette page est actuellement destinée aux équipes internes d’Adobe en tant que prélecture des fonctionnalités à venir. Veuillez ne pas le partager en dehors de l’Adobe tant que cette note n’est pas supprimée.
 
 >[!IMPORTANT]
 > 
@@ -122,10 +126,6 @@ Utilisez l’option **[!UICONTROL Planifié]** pour que la tâche d’activation
 
    ![Image mettant en surbrillance l’option Planifié dans le flux d’activation pour les destinations par lots et affichant le sélecteur de l’heure.](../assets/ui/activate-batch-profile-destinations/scheduled-option.png)
 
-   >[!IMPORTANT]
-   >
-   >De par la configuration des processus Experience Platform internes, la première exportation de fichier incrémentiel ou complet peut ne pas contenir toutes les données de renvoi. <br> <br> Pour garantir une exportation complète et à jour des données de renvoi pour les fichiers complets et incrémentiels, Adobe recommande de définir l’heure d’exportation du premier fichier après 12h GMT du jour suivant. Cette limitation sera corrigée dans les prochaines versions.
-
 1. Utilisez le sélecteur **[!UICONTROL Date]** pour choisir le jour ou l’intervalle d’exportation. Pour les exportations quotidiennes, il est recommandé de définir les dates de début et de fin de sorte qu’elles correspondent à la durée de vos campagnes sur vos plateformes en aval.
 
    >[!IMPORTANT]
@@ -151,11 +151,7 @@ Sélectionner **[!UICONTROL Exportation de fichiers incrémentiels]** pour décl
 
 1. Utilisez le sélecteur **[!UICONTROL Heure]** pour choisir l’heure de la journée, au format [!DNL UTC], à laquelle l’exportation doit avoir lieu.
 
-   >[!IMPORTANT]
-   >
-   >De par la configuration des processus Experience Platform internes, la première exportation de fichier incrémentiel ou complet peut ne pas contenir toutes les données de renvoi. <br> <br> Pour garantir une exportation complète et à jour des données de renvoi pour les fichiers complets et incrémentiels, Adobe recommande de définir l’heure d’exportation du premier fichier après 12h GMT du jour suivant. Cette limitation sera corrigée dans les prochaines versions.
-
-1. Utilisez le sélecteur **[!UICONTROL Date]** pour choisir l’intervalle à partir duquel l’exportation doit avoir lieu. La bonne pratique consiste à définir les dates de début et de fin de sorte qu’elles correspondent à la durée de vos campagnes sur vos plateformes en aval.
+1. Utilisez le sélecteur **[!UICONTROL Date]** pour choisir l’intervalle au cours duquel l’exportation doit avoir lieu. La bonne pratique consiste à définir les dates de début et de fin de sorte qu’elles correspondent à la durée de vos campagnes sur vos plateformes en aval.
 
    >[!IMPORTANT]
    >
