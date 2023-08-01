@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Guide de l’IU de Segmentation Service
 description: Découvrez comment créer et gérer des audiences et des définitions de segment dans l’interface utilisateur de Adobe Experience Platform.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 1314b2742af5cd281acb5f9db81eec0ccf885f77
+source-git-commit: 378b51b13547af994bd258a42d1068118d099eb4
 workflow-type: tm+mt
-source-wordcount: '3607'
-ht-degree: 32%
+source-wordcount: '3610'
+ht-degree: 31%
 
 ---
 
@@ -80,7 +80,7 @@ Vous pouvez ajouter des champs supplémentaires à cet affichage en sélectionna
 | [!UICONTROL Balises] | Les balises définies par l’utilisateur qui appartiennent à l’audience. Vous trouverez plus d’informations sur ces balises dans la section [section sur les balises](#tags). |
 | [!UICONTROL Répartition] | ventilation de l’état du profil pour l’audience. Vous trouverez ci-dessous une description plus détaillée de cette ventilation de statut du profil. |
 | [!UICONTROL Statut du cycle de vie] | Statut de l’audience. Les valeurs possibles pour ce champ incluent `Draft`, `Published` et `Archived`. |
-| [!UICONTROL Fréquence de mise à jour] | Valeur qui indique la fréquence de mise à jour des données de l’audience. Les valeurs possibles pour ce champ incluent `On Demand`, `Scheduled` et `Continuous`. |
+| [!UICONTROL Fréquence de mise à jour] | Valeur qui indique la fréquence de mise à jour des données de l’audience. Les valeurs possibles pour ce champ incluent `On Demand` (Lot), `Scheduled` (Diffusion en continu) et `Continuous` (Edge). |
 | [!UICONTROL Dernière mise à jour par] | Nom de la personne qui a mis à jour l’audience pour la dernière fois. |
 | [!UICONTROL Description] | Description de l’audience. |
 | [!UICONTROL Créé par] | Nom de la personne qui a créé l’audience. |
