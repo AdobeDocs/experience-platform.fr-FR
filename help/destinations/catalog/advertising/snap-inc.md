@@ -2,9 +2,9 @@
 title: Connexion d’accrochage Inc
 description: Découvrez comment vous connecter à la plateforme Snapchat Ads et exporter vos audiences depuis Experience Platform.
 exl-id: 1f0f2dc0-5f3d-424b-9b22-b1a14ac30039
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
 workflow-type: tm+mt
-source-wordcount: '989'
+source-wordcount: '994'
 ht-degree: 25%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 25%
 
 >[!IMPORTANT]
 >
->Cette page de documentation a été créée par la fonction *Accrocher à* l&#39;équipe. Pour toute demande de mise à jour ou de renseignements, contactez-les directement à l’adresse *dev-support@snap.com*
+>Cette page de documentation et de connecteur de destination est créée et conservée par *Accrocher à* l&#39;équipe. Pour toute demande d’information ou de mise à jour, contactez-les directement à l’adresse *dev-support@snap.com*
 
 ## Cas d’utilisation {#use-cases}
 
@@ -31,13 +31,13 @@ Pour utiliser cette destination, vous devez disposer d’un compte Snapchat Ads.
 
 ## Limites {#limitations}
 
-* La fonction d’accrochage automatique ne prend pas en charge plusieurs identités pour un segment d’audience donné. Mappez une seule identité lors de l’activation d’un segment.
+* La fonction d’accrochage publicitaire ne prend pas en charge plusieurs identités pour un segment d’audience donné. Veuillez n’associer qu’une seule identité lors de l’activation d’un segment.
 * La fonction d’accrochage Inc ne prend pas en charge le changement de nom des segments. Pour renommer un segment, vous devez le désactiver, le renommer, puis l’activer.
 * Il n’est pas possible de définir une période de rétention pour les membres d’un segment d’audience. Tous les membres conservent leur durée de vie et resteront dans l’audience jusqu’à ce qu’ils soient supprimés.
 
 ## Identités prises en charge {#supported-identities}
 
-Le *Accrocher à* destination prend en charge l’activation des identités décrites dans le tableau ci-dessous. En savoir plus sur les [identités](/help/identity-service/namespaces.md).
+La variable *Accrocher à* destination prend en charge l’activation des identités décrites dans le tableau ci-dessous. En savoir plus sur les [identités](/help/identity-service/namespaces.md).
 
 Tous les identifiants envoyés à la variable *Accrocher à* destination doit être hachée au format SHA-256. Pour hacher les identifiants en texte brut avant de les envoyer à la destination, cochez la case **[!UICONTROL Appliquer la transformation]** lors du mappage des identifiants de cible pour la destination.
 
@@ -98,7 +98,7 @@ Pour configurer les détails de la destination, renseignez les champs requis et 
 
 * **[!UICONTROL Nom]** : un nom par lequel vous reconnaîtrez cette destination à l’avenir.
 * **[!UICONTROL Description]** : une description qui vous aidera à identifier cette destination à l’avenir.
-* **[!UICONTROL Identifiant de compte]**: Identifiant du compte publicitaire associé au compte publicitaire dans lequel vous souhaitez importer vos audiences. Pour plus d’informations sur la façon de le trouver, reportez-vous à la section [cette documentation sur le Centre d’aide aux entreprises Snapchat](https://businesshelp.snapchat.com/s/article/biz-acct-id?language=en_US).
+* **[!UICONTROL Identifiant de compte]**: identifiant du compte publicitaire associé au compte publicitaire dans lequel vous souhaitez importer vos audiences. Pour plus d’informations sur la façon de le trouver, reportez-vous à la section [cette documentation sur le Centre d’aide aux entreprises Snapchat](https://businesshelp.snapchat.com/s/article/biz-acct-id?language=en_US).
 
 >[!IMPORTANT]
 > 

@@ -3,9 +3,9 @@ title: Connexion à TikTok
 description: Créez des audiences personnalisées sur TikTok avec vos données pour le ciblage de vos campagnes publicitaires. Il peut s’agir de personnes qui ont visité votre site web ou interagi avec votre contenu. Poussez rapidement et en toute sécurité l’audience souhaitée de Adobe Experience Platform vers TikTok à l’aide de l’intégration en temps réel d’Adobe à TikTok Ads Manager.
 last-substantial-update: 2023-03-20T00:00:00Z
 exl-id: 7b12d17f-7d9a-4615-9830-92bffe3f6927
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
 workflow-type: tm+mt
-source-wordcount: '978'
+source-wordcount: '983'
 ht-degree: 42%
 
 ---
@@ -18,7 +18,7 @@ Créez des audiences personnalisées sur TikTok avec vos données pour le ciblag
 
 >[!IMPORTANT]
 >
->Cette page de documentation a été créée par l’équipe TikTok. Pour toute demande de mise à jour ou de renseignements, contactez-les directement à l’adresse [https://ads.tiktok.com/help/](https://ads.tiktok.com/help/).
+>Ce connecteur de destination et cette page de documentation sont créés et gérés par l’équipe TikTok. Pour toute demande d’information ou de mise à jour, contactez-les directement à l’adresse [https://ads.tiktok.com/help/](https://ads.tiktok.com/help/).
 
 ## Cas d’utilisation {#use-cases}
 
@@ -78,7 +78,7 @@ Pour configurer les détails de la destination, renseignez les champs obligatoir
 
 * **[!UICONTROL Nom]** : un nom par lequel vous reconnaîtrez cette destination à l’avenir.
 * **[!UICONTROL Description]** : une description qui vous aidera à identifier cette destination à l’avenir.
-* **[!UICONTROL Identifiant TikTok Ads Manager]**: Votre [!DNL TikTok Ads Manager ID]. Vous pouvez le trouver dans votre [!DNL TikTok Ads manager] compte .
+* **[!UICONTROL Identifiant TikTok Ads Manager]**: votre [!DNL TikTok Ads Manager ID]. Vous pouvez le trouver dans votre [!DNL TikTok Ads manager] compte .
 
 ![Identifiant TikTok Ads Manager](/help/destinations/assets/catalog/social/tiktok/tiktok-ads-manager-ID.png "Image de l’interface utilisateur de TikTok Ads Manager, montrant comment obtenir l’identifiant de TikTok Ads Manager")
 
@@ -120,4 +120,4 @@ Lors de la gestion de vos données, toutes les destinations [!DNL Adobe Experien
 
 ## Ressources supplémentaires {#additional-resources}
 
-Reportez-vous à la section [Page Centre d’aide TikTok](https://ads.tiktok.com/help/article/audiences?lang=en) pour plus d’informations.
+Reportez-vous à [Page Centre d’aide TikTok](https://ads.tiktok.com/help/article/audiences?lang=en) pour plus d’informations.

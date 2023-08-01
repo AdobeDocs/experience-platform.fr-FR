@@ -2,9 +2,9 @@
 title: Connexion à Medallia
 description: Activez les profils pour les enquêtes et la collecte de commentaires Medallia ciblées afin de mieux comprendre les besoins et les attentes des clients.
 exl-id: 2c2766eb-7be1-418c-bf17-d119d244de92
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
 workflow-type: tm+mt
-source-wordcount: '1095'
+source-wordcount: '1100'
 ht-degree: 33%
 
 ---
@@ -17,7 +17,7 @@ Activez les profils pour les enquêtes et la collecte de commentaires Medallia c
 
 >[!IMPORTANT]
 >
->Cette page de documentation a été créée par l’équipe de Medallia. Pour toute demande d&#39;information ou de mise à jour, contactez-les directement à l&#39;adresse adobe-integrations@medallia.com.
+>Ce connecteur de destination et cette page de documentation sont créés et gérés par l’équipe Medallia. Pour toute demande d&#39;information ou de mise à jour, contactez-les directement à l&#39;adresse adobe-integrations@medallia.com.
 
 ## Cas d’utilisation {#use-cases}
 
@@ -48,7 +48,7 @@ Medallia prend en charge l’activation des identités décrites dans le tableau
 
 | Identité cible | Description | Considérations |
 |---|---|---|
-| adresse e-mail | Adresse e-mail | Sélectionnez l&#39;identité de la cible du courrier électronique lorsque vous souhaitez envoyer des enquêtes sur les invitations par courrier électronique. Lorsqu’un profil est associé à plusieurs adresses électroniques, Medallia déclenche uniquement l’invitation au premier email. |
+| adresse e-mail | Adresse e-mail | Sélectionnez l&#39;identité de la cible du courrier électronique lorsque vous souhaitez envoyer des enquêtes sur les invitations par courrier électronique. Lorsqu’un profil est associé à plusieurs adresses électroniques, Medallia ne déclenche l’invitation qu’au premier email. |
 | phone | Numéros de téléphone hachés au format E.164 | Sélectionnez l&#39;identité de la cible du téléphone lorsque vous souhaitez envoyer des enquêtes basées sur des SMS. Le numéro de téléphone doit être au format E.164, qui comprend un signe plus (+), un code d&#39;appel international, un code local et un numéro de téléphone. Par exemple : (+) (code pays) (indicatif régional) (numéro de téléphone). Lorsqu’un profil est associé à plusieurs numéros de téléphone, Medallia déclenche uniquement l’invitation au premier numéro de téléphone. |
 
 {style="table-layout:auto"}
@@ -59,7 +59,7 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 | Élément | Type | Notes |
 ---------|----------|---------|
-| Type d’exportation | **[!UICONTROL Basé sur les profils]** | Vous exportez tous les membres nouvellement qualifiés d’un segment, ainsi que les champs de schéma souhaités (par exemple : adresse électronique, numéro de téléphone, nom), tel que sélectionné dans l’écran de sélection des attributs de profil de la fonction [workflow d’activation de destination](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
+| Type d’exportation | **[!UICONTROL Basé sur les profils]** | Vous exportez tous les membres nouvellement qualifiés d’un segment, ainsi que les champs de schéma souhaités (par exemple : adresse email, numéro de téléphone, nom), tels qu’ils sont sélectionnés dans l’écran de sélection des attributs de profil de la variable [workflow d’activation de destination](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
 | Fréquence des exportations | **[!UICONTROL Diffusion en continu]** | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu&#39;un profil est mis à jour en Experience Platform en fonction de l&#39;évaluation de l&#39;audience, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
@@ -76,9 +76,9 @@ Pour vous connecter à cette destination, procédez comme décrit dans le [tutor
 
 Pour vous authentifier à la destination, renseignez les champs requis et sélectionnez **[!UICONTROL Se connecter à la destination]**.
 
-* **[!UICONTROL URL du point d’entrée du jeton OAuth]**: Se présente généralement sous la forme https://instance.medallia.tld/oauth/tenant/token.
-* **[!UICONTROL ID client]**: Demandez à votre équipe de diffusion Medallia.
-* **[!UICONTROL Secret du client]**: Demandez à votre équipe de diffusion Medallia.
+* **[!UICONTROL URL du point d’entrée du jeton OAuth]**: prend généralement la forme https://instance.medallia.tld/oauth/tenant/token.
+* **[!UICONTROL ID client]**: procurez-vous des informations auprès de votre équipe de diffusion Medallia.
+* **[!UICONTROL Secret du client]**: procurez-vous des informations auprès de votre équipe de diffusion Medallia.
 
 ![Image montrant l’écran d’authentification pour cette destination.](/help/destinations/assets/catalog/voice/medallia-destination-oauth.png)
 
@@ -88,8 +88,8 @@ Pour configurer les détails de la destination, renseignez les champs obligatoir
 
 * **[!UICONTROL Nom]** : un nom par lequel vous reconnaîtrez cette destination à l’avenir.
 * **[!UICONTROL Description]** : une description qui vous aidera à identifier cette destination à l’avenir.
-* **[!UICONTROL URL de passerelle API]**: Demandez à votre équipe de diffusion Medallia. Se présente généralement sous la forme https://instance-tenant.apis.medallia.com.
-* **[!UICONTROL Nom de l’API d’importation]**: Demandez à votre équipe de diffusion Medallia. Nom de l’API d’importation Medallia (également appelée flux web) à utiliser dans cette connexion. Vous pouvez activer différentes audiences sur différentes API d&#39;import afin de déclencher différents programmes d&#39;enquête.
+* **[!UICONTROL URL de passerelle API]**: procurez-vous des informations auprès de votre équipe de diffusion Medallia. Se présente généralement sous la forme https://instance-tenant.apis.medallia.com.
+* **[!UICONTROL Nom de l’API d’importation]**: procurez-vous des informations auprès de votre équipe de diffusion Medallia. Nom de l’API d’importation Medallia (également appelée flux web) à utiliser dans cette connexion. Vous pouvez activer différentes audiences sur différentes API d&#39;import afin de déclencher différents programmes d&#39;enquête.
 
 ![Image montrant l’écran des détails de la destination pour cette destination.](/help/destinations/assets/catalog/voice/medallia-destination-details.png)
 
@@ -124,11 +124,11 @@ Il est vivement recommandé de mapper des attributs personnalisés de ciblage su
 
 >[!IMPORTANT]
 > 
-> Partagez avec votre équipe de diffusion Medallia les **Noms d’attributs** pour chaque attribut personnalisé cible que vous mappez à l’aide de **Champ cible** > **Sélectionner des attributs personnalisés** > **Nom de l’attribut**. Vous pouvez réaliser une capture d’écran de la page de mappage à partager directement.
+> Partagez avec votre équipe de diffusion Medallia les informations exactes **Noms d’attributs** pour chaque attribut personnalisé cible que vous mappez à l’aide de **Champ cible** > **Sélectionner des attributs personnalisés** > **Nom de l’attribut**. Vous pouvez réaliser une capture d’écran de la page de mappage à partager directement.
 
 ## Données exportées {#exported-data}
 
-Une fois que vous avez activé vos segments vers la destination, informez votre équipe de diffusion Medallia, qui pourra valider les données exportées de Adobe Experience Platform vers Medallia. Notez que les enquêtes ne peuvent être activées dans Medallia qu’après une vérification des données réussie ; avant cela, les données seront exportées vers Medallia, mais ne déclencheront pas d&#39;enquêtes auprès des clients.
+Une fois que vous avez activé vos segments vers la destination, informez votre équipe de diffusion Medallia, qui pourra valider les données exportées de Adobe Experience Platform vers Medallia. Notez que les enquêtes ne peuvent être activées dans Medallia qu’après une vérification des données réussie. Avant cela, les données seront exportées vers Medallia, mais ne déclencheront pas d’enquêtes auprès des clients.
 
 Vous trouverez ci-dessous un exemple JSON des données exportées, qui utilise l’exemple de mappage de la capture d’écran ci-dessus dans la variable **Mise en correspondance des attributs et des identités** section :
 
@@ -140,8 +140,8 @@ Vous trouverez ci-dessous un exemple JSON des données exportées, qui utilise l
         "aep_segments_new": ["c1c3edcc-07cb-4f66-b5dd-aff485148aba"],
         "aep_segments_existing": [],
         "aep_segments_removed": [],
-        "firstname":  “John” ,
-        "lastname":  “Smith”,
+        "firstname":  "John" ,
+        "lastname":  "Smith",
         "contactId": "jsmith120002",
     }
 ]

@@ -3,9 +3,9 @@ title: Connecteur de profil Pega
 description: Utilisez Pega Profile Connector for Amazon S3 dans Adobe Experience Platform pour exporter des données de profil complètes ou incrémentielles, ou les deux, vers l’espace de stockage dans le cloud Amazon S3. Dans Pega Customer Decision Hub, les tâches de données peuvent être planifiées dans Customer Profile Designer pour importer régulièrement des données de profil à partir du stockage Amazon S3.
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: f422f21b-174a-4b93-b05d-084b42623314
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
 workflow-type: tm+mt
-source-wordcount: '1079'
+source-wordcount: '1084'
 ht-degree: 46%
 
 ---
@@ -20,7 +20,7 @@ Ce connecteur permet de configurer l’exportation initiale des données de prof
 
 >[!IMPORTANT]
 >
->Cette page de documentation a été créée par Pegasystems. Pour toute demande d&#39;information ou de mise à jour, veuillez contacter directement Pega. [here](mailto:support@pega.com).
+>Ce connecteur de destination et cette page de documentation sont créés et conservés par les systèmes Pegasystems. Pour toute demande d&#39;information ou de mise à jour, veuillez contacter directement Pega. [here](mailto:support@pega.com).
 
 ## Cas d’utilisation
 
@@ -28,7 +28,7 @@ Pour découvrir les avantages de la destination [!DNL Pega Profile Connector] et
 
 ### Cas d’utilisation 1
 
-Un spécialiste du marketing souhaite d’abord configurer [!DNL Pega Customer Decision Hub] avec les données de profil chargées à partir de Adobe Experience Platform. Il s’agit d’une charge complète initiale suivie de chargements delta programmés.
+Un marketeur souhaite commencer par configurer [!DNL Pega Customer Decision Hub] avec les données de profil chargées à partir de Adobe Experience Platform. Il s’agit d’une charge complète initiale suivie de chargements delta programmés.
 
 ### Cas d’utilisation 2
 
@@ -40,7 +40,7 @@ Avant d’utiliser cette destination pour exporter des données en dehors de Ado
 
 * Configurer [!DNL Amazon S3] et le chemin d’accès au dossier à utiliser pour l’exportation et l’importation de fichiers de données.
 * Configurez la variable [!DNL Amazon S3] clé d’accès et [!DNL Amazon S3] clé secrète : Dans [!DNL Amazon S3], générez une `access key - secret access key` pour accorder l’accès à Platform à votre [!DNL Amazon S3] compte .
-* Pour établir une connexion et exporter des données vers votre [!DNL Amazon S3] emplacement de stockage, créez un utilisateur de gestion des identités et des accès (IAM) pour [!DNL Platform] in [!DNL Amazon S3] et attribuer des autorisations telles que `s3:DeleteObject`, `s3:GetBucketLocation`, `s3:GetObject`, `s3:ListBucket`, `s3:PutObject`, `s3:ListMultipartUploadParts`
+* Pour établir une connexion et exporter des données vers [!DNL Amazon S3] emplacement de stockage, créez un utilisateur de gestion des identités et des accès (IAM) pour [!DNL Platform] in [!DNL Amazon S3] et attribuer des autorisations telles que `s3:DeleteObject`, `s3:GetBucketLocation`, `s3:GetObject`, `s3:ListBucket`, `s3:PutObject`, `s3:ListMultipartUploadParts`
 * Assurez-vous que les [!DNL Pega Customer Decision Hub] est mise à niveau vers la version 8.8 ou ultérieure.
 
 ## Identités prises en charge {#supported-identities}
@@ -76,7 +76,7 @@ Pour vous connecter à cette destination, procédez comme décrit dans le [tutor
 
 Pour vous authentifier à la destination, renseignez les champs requis et sélectionnez **[!UICONTROL Se connecter à la destination]**.
 
-* **[!DNL Amazon S3]clé d&#39;accès** et **[!DNL Amazon S3]clé secrète**: Dans [!DNL Amazon S3], générez une `access key - secret access key` pour accorder à Adobe Experience Platform l’accès à [!DNL Amazon S3] compte . En savoir plus dans la [Documentation Amazon Web Services](https://docs.aws.amazon.com/fr_fr/IAM/latest/UserGuide/id_credentials_access-keys.html).
+* **[!DNL Amazon S3]clé d&#39;accès** et **[!DNL Amazon S3]clé secrète**: dans [!DNL Amazon S3], générez une `access key - secret access key` pour accorder à Adobe Experience Platform l’accès à [!DNL Amazon S3] compte . En savoir plus dans la [Documentation Amazon Web Services](https://docs.aws.amazon.com/fr_fr/IAM/latest/UserGuide/id_credentials_access-keys.html).
 
 ### Renseigner les détails de la destination {#destination-details}
 
@@ -90,7 +90,7 @@ Pour configurer les détails de la destination, renseignez les champs requis et 
 * **[!UICONTROL Description]** : saisissez une description de cette destination.
 * **[!UICONTROL Nom du compartiment]** : saisissez le nom du compartiment [!DNL Amazon S3] que cette destination doit utiliser.
 * **[!UICONTROL Chemin du dossier]** : saisissez le chemin du dossier de destination qui hébergera les fichiers exportés.
-* **[!UICONTROL Type de compression]**: Sélectionnez le type de compression GZIP ou NONE.
+* **[!UICONTROL Type de compression]**: sélectionnez le type de compression GZIP ou NONE.
 
 >[!TIP]
 >

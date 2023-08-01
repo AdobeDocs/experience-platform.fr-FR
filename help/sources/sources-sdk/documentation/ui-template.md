@@ -3,28 +3,28 @@ keywords: Experience Platform;accueil;rubriques populaires;sources;connecteurs;c
 title: Modèle de documentation en libre-service pour l’interface utilisateur
 description: Découvrez comment créer une connexion source YOURSOURCE à l’aide de l’interface utilisateur de Adobe Experience Platform.
 exl-id: 6471c0a2-22e8-4133-a76f-ee3c5c669ef8
-source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
+source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
 workflow-type: tm+mt
-source-wordcount: '722'
+source-wordcount: '727'
 ht-degree: 22%
 
 ---
 
-# Créez un *VOTRE SOURCE* connexion source dans l’interface utilisateur
+# Créez un *YOURSOURCE* connexion source dans l’interface utilisateur
 
 *Lorsque vous parcourez ce modèle, remplacez ou supprimez tous les paragraphes en italique (en commençant par celui-ci).*
 
-*Commencez par mettre à jour les métadonnées (titre et description) en haut de la page. Veuillez ignorer toutes les instances d&#39;UICONTROL sur cette page. Il s’agit d’une balise qui aide nos processus de traduction automatique à traduire correctement la page dans les multiples langues prises en charge. Nous ajouterons des balises à votre documentation après l’avoir envoyée.*
+*Commencez par mettre à jour les métadonnées (titre et description) en haut de la page. Ignorez toutes les instances d’UICONTROL sur cette page. Il s’agit d’une balise qui aide nos processus de traduction automatique à traduire correctement la page dans les multiples langues prises en charge. Nous ajouterons des balises à votre documentation après l’avoir envoyée.*
 
-Ce tutoriel décrit les étapes à suivre pour créer une *VOTRE SOURCE* connecteur source à l’aide de l’interface utilisateur de Platform.
+Ce tutoriel décrit les étapes à suivre pour créer une *YOURSOURCE* connecteur source à l’aide de l’interface utilisateur de Platform.
 
-## Présentation
+## Vue d’ensemble
 
 *Fournissez un bref aperçu de votre entreprise, y compris la valeur qu’elle fournit aux clients. Pour plus d’informations, insérez un lien vers la page d’accueil de la documentation du produit.*
 
 >[!IMPORTANT]
 >
->Cette page de documentation a été créée par la fonction *VOTRE SOURCE* l&#39;équipe. Pour toute demande de mise à jour ou de renseignements, contactez-les directement à l’adresse *Ajouter un lien ou une adresse électronique permettant d’accéder aux mises à jour*.
+>Cette page de documentation et de connecteur source est créée et conservée par *YourSource* l&#39;équipe. Pour toute demande d’information ou de mise à jour, contactez-les directement à l’adresse *Ajouter un lien ou une adresse électronique permettant d’accéder aux mises à jour*.
 
 ## Conditions préalables
 
@@ -37,23 +37,23 @@ Ce tutoriel décrit les étapes à suivre pour créer une *VOTRE SOURCE* connect
 
 ### Collecter les informations d’identification requises
 
-Pour vous connecter *VOTRE SOURCE* Pour Platform, vous devez fournir des valeurs pour les propriétés de connexion suivantes :
+Pour vous connecter *YOURSOURCE* Pour Platform, vous devez fournir des valeurs pour les propriétés de connexion suivantes :
 
 | Informations d’identification | Description | Exemple |
 | --- | --- | --- |
 | *identifiant un* | *Ajoutez ici une brève description des informations d’identification d’authentification de votre source.* | *Ajoutez ici un exemple d’informations d’identification d’authentification de votre source.* |
 | *credential two* | *Ajoutez ici une brève description des informations d’identification d’authentification de votre source.* | *Ajoutez ici un exemple d’informations d’identification d’authentification de votre source.* |
-| *identifiant trois* | *Ajoutez ici une brève description des informations d’identification d’authentification de votre source.* | *Ajoutez ici un exemple d’informations d’identification d’authentification de votre source.* |
+| *identification d’identification trois* | *Ajoutez ici une brève description des informations d’identification d’authentification de votre source.* | *Ajoutez ici un exemple d’informations d’identification d’authentification de votre source.* |
 
-Pour plus d’informations sur ces informations d’identification, voir *VOTRE SOURCE* documentation d’authentification. *Veuillez ajouter un lien vers la documentation d’authentification de votre plateforme ici*.
+Pour plus d’informations sur ces informations d’identification, voir *YOURSOURCE* documentation d’authentification. *Veuillez ajouter un lien vers la documentation d’authentification de votre plateforme ici*.
 
-## Connectez-vous à *VOTRE SOURCE* account
+## Connectez-vous à *YOURSOURCE* account
 
 Dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Sources]** à partir de la barre de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources]. L’écran [!UICONTROL Catalogue] affiche diverses sources avec lesquelles vous pouvez créer un compte.
 
 Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de votre écran. Vous pouvez également trouver la source spécifique à utiliser à l’aide de l’option de recherche.
 
-Sous , *LA CATÉGORIE DE VOTRE SOURCE* catégorie, sélectionnez *VOTRE SOURCE*, puis sélectionnez **[!UICONTROL Ajouter des données]**.
+Sous , *LA CATÉGORIE DE VOTRE SOURCE* catégorie, sélectionnez *YOURSOURCE*, puis sélectionnez **[!UICONTROL Ajouter des données]**.
 
 >[!TIP]
 >
@@ -61,11 +61,11 @@ Sous , *LA CATÉGORIE DE VOTRE SOURCE* catégorie, sélectionnez *VOTRE SOURCE*,
 
 ![catalogue](../assets/ui/catalog.png)
 
-Le **[!UICONTROL Connexion à votre compte SOURCE]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
+La variable **[!UICONTROL Connexion à votre compte SOURCE]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
 
 ### Compte existant
 
-Pour utiliser un compte existant, sélectionnez la variable *VOTRE SOURCE* compte avec lequel vous souhaitez créer un nouveau flux de données, puis sélectionnez **[!UICONTROL Suivant]** pour continuer.
+Pour utiliser un compte existant, sélectionnez la variable *YOURSOURCE* compte avec lequel vous souhaitez créer un nouveau flux de données, puis sélectionnez **[!UICONTROL Suivant]** pour continuer.
 
 ![existant](../assets/ui/existing.png)
 
@@ -79,7 +79,7 @@ Si vous créez un compte, sélectionnez **[!UICONTROL Nouveau compte]**, puis fo
 
 *Les workflows pour les étapes restantes de la création d’un flux de données sont modulaires. Si vous souhaitez effectuer des appels spécifiques concernant votre source, reportez-vous à la section Ressources supplémentaires ci-dessous.*
 
-En suivant ce tutoriel, vous avez établi une connexion à votre *VOTRE SOURCE* compte . Vous pouvez maintenant passer au tutoriel suivant et [configurer un flux de données pour importer des données dans Platform](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/crm.html).
+En suivant ce tutoriel, vous avez établi une connexion à votre *YOURSOURCE* compte . Vous pouvez maintenant passer au tutoriel suivant et [configurer un flux de données pour importer des données dans Platform](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/crm.html).
 
 ## Ressources supplémentaires
 

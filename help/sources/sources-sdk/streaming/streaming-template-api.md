@@ -4,26 +4,26 @@ description: Découvrez comment importer des données en continu d’une source 
 hide: true
 hidefromtoc: true
 exl-id: a06384a2-cd99-456d-9f00-babcf3f7b7d9
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
 workflow-type: tm+mt
-source-wordcount: '1699'
+source-wordcount: '1704'
 ht-degree: 42%
 
 ---
 
-# Création d’une connexion source et d’un flux de données pour la diffusion *VOTRE SOURCE* à l’aide de la variable [!DNL Flow Service] API
+# Création d’une connexion source et d’un flux de données pour la diffusion *YOURSOURCE* à l’aide de la variable [!DNL Flow Service] API
 
 *Lorsque vous parcourez ce modèle, remplacez ou supprimez tous les paragraphes en italique (en commençant par celui-ci).*
 
 *Commencez par mettre à jour les métadonnées (titre et description) en haut de la page. Ignorez toutes les instances de DNL sur cette page. Il s’agit d’une balise qui aide nos processus de traduction automatique à traduire correctement la page dans les multiples langues prises en charge. Nous ajouterons des balises à votre documentation après l’avoir envoyée.*
 
-## Présentation
+## Vue d’ensemble
 
 *Fournissez un bref aperçu de votre entreprise, y compris la valeur qu’elle fournit aux clients. Insérez un lien vers la page d’accueil de la documentation du produit pour en savoir plus.*
 
 >[!IMPORTANT]
 >
->Cette page de documentation a été créée par la fonction *VOTRE SOURCE* l&#39;équipe. Pour toute demande de mise à jour ou de renseignements, contactez-les directement à l’adresse *Ajouter un lien ou une adresse électronique permettant d’accéder aux mises à jour*.
+>Cette page de documentation et de connecteur source est créée et conservée par *YOURSOURCE* l&#39;équipe. Pour toute demande d’information ou de mise à jour, contactez-les directement à l’adresse *Ajouter un lien ou une adresse électronique permettant d’accéder aux mises à jour*.
 
 ## Conditions préalables
 
@@ -36,23 +36,23 @@ ht-degree: 42%
 
 ### Collecter les informations d’identification requises
 
-Pour vous connecter *VOTRE SOURCE* pour Experience Platform, vous devez fournir des valeurs pour les propriétés de connexion suivantes :
+Pour vous connecter *YOURSOURCE* pour Experience Platform, vous devez fournir des valeurs pour les propriétés de connexion suivantes :
 
 | Informations d’identification | Description | Exemple |
 | --- | --- | --- |
 | *identifiant un* | *Ajoutez ici une brève description des informations d’identification d’authentification de votre source.* | *Ajoutez ici un exemple d’informations d’identification d’authentification de votre source.* |
 | *credential two* | *Ajoutez ici une brève description des informations d’identification d’authentification de votre source.* | *Ajoutez ici un exemple d’informations d’identification d’authentification de votre source.* |
-| *identifiant trois* | *Ajoutez ici une brève description des informations d’identification d’authentification de votre source.* | *Ajoutez ici un exemple d’informations d’identification d’authentification de votre source.* |
+| *identification d’identification trois* | *Ajoutez ici une brève description des informations d’identification d’authentification de votre source.* | *Ajoutez ici un exemple d’informations d’identification d’authentification de votre source.* |
 
-Pour plus d’informations sur ces informations d’identification, voir *VOTRE SOURCE* documentation d’authentification. *Veuillez ajouter un lien vers la documentation d’authentification de votre plateforme ici*.
+Pour plus d’informations sur ces informations d’identification, voir *YOURSOURCE* documentation d’authentification. *Veuillez ajouter un lien vers la documentation d’authentification de votre plateforme ici*.
 
-### Intégrer *VOTRE SOURCE* avec votre webhook
+### Intégrer *YOURSOURCE* avec votre webhook
 
 *Le SDK de diffusion en continu nécessite que votre source puisse prendre en charge les webhooks pour communiquer avec l’Experience Platform. Dans cette section, vous devez indiquer les étapes que vos utilisateurs devront suivre pour intégrer VOTRE SOURCE à un webhook.*
 
-## Connexion *VOTRE SOURCE* vers Platform à l’aide de [!DNL Flow Service] API
+## Connexion *YOURSOURCE* vers Platform à l’aide de la méthode [!DNL Flow Service] API
 
-Le tutoriel suivant vous guide tout au long des étapes de création d’un *VOTRE SOURCE* connexion source et créer un flux de données à importer *VOTRE SOURCE* données vers Platform à l’aide de la fonction [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Le tutoriel suivant décrit les étapes à suivre pour créer un *YOURSOURCE* connexion source et créer un flux de données à importer *YOURSOURCE* données vers Platform à l’aide de la fonction [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ### Créer une connexion source {#source-connection}
 
@@ -66,7 +66,7 @@ POST /sourceConnections
 
 **Requête**
 
-La requête suivante crée une connexion source pour *VOTRE SOURCE*:
+La requête suivante crée une connexion source pour *YOURSOURCE*:
 
 ```shell
 curl -X POST \
@@ -95,7 +95,7 @@ curl -X POST \
 | `name` | Nom de votre connexion source. Assurez-vous que le nom de votre connexion source est descriptif, car vous pouvez l’utiliser pour rechercher des informations sur votre connexion source. |
 | `description` | Valeur facultative que vous pouvez inclure pour fournir plus d’informations sur votre connexion source. |
 | `connectionSpec.id` | Identifiant de spécification de connexion correspondant à votre source. |
-| `data.format` | Le format de la variable *VOTRE SOURCE* données que vous souhaitez ingérer. Actuellement, le format de données `json` est le seul à être pris en charge. |
+| `data.format` | Le format de la variable *YOURSOURCE* données que vous souhaitez ingérer. Actuellement, le format de données `json` est le seul à être pris en charge. |
 
 **Réponse**
 
@@ -136,7 +136,7 @@ POST /targetConnections
 
 **Requête**
 
-La requête suivante crée une connexion cible pour *VOTRE SOURCE*:
+La requête suivante crée une connexion cible pour *YOURSOURCE*:
 
 
 ```shell
@@ -173,7 +173,7 @@ curl -X POST \
 | `name` | Nom de la connexion cible. Assurez-vous que le nom de votre connexion cible est explicite, car vous pouvez l’utiliser pour rechercher des informations sur votre connexion cible. |
 | `description` | Valeur facultative que vous pouvez inclure pour fournir plus d’informations sur votre connexion cible. |
 | `connectionSpec.id` | L’identifiant de spécification de connexion qui correspond au lac de données. Cet ID fixe est `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
-| `data.format` | Le format de la variable *VOTRE SOURCE* données que vous souhaitez apporter à Platform. |
+| `data.format` | Le format de la variable *YOURSOURCE* données que vous souhaitez apporter à Platform. |
 | `params.dataSetId` | Identifiant du jeu de données cible récupéré lors d’une étape précédente. |
 
 
@@ -253,7 +253,7 @@ Une réponse réussie renvoie les détails du mappage nouvellement créé, y com
 
 ### Créer un flux {#flow}
 
-La dernière étape pour obtenir des données de *VOTRE SOURCE* à Platform consiste à créer un flux de données. Vous disposez à présent des valeurs requises suivantes :
+La dernière étape pour obtenir des données de *YOURSOURCE* vers Platform consiste à créer un flux de données. Vous disposez à présent des valeurs requises suivantes :
 
 * [ID de connexion source](#source-connection)
 * [ID de connexion cible](#target-connection)
@@ -325,11 +325,11 @@ Une réponse réussie renvoie l’identifiant (`id`) du flux de données nouvell
 }
 ```
 
-### Obtention de l’URL de votre point de terminaison de diffusion en continu
+### Obtention de l’URL de votre point de terminaison de diffusion
 
 Une fois votre flux de données créé, vous pouvez désormais récupérer l’URL de votre point de terminaison de diffusion en continu. Vous utiliserez cette URL de point de terminaison pour abonner votre source à un webhook, ce qui vous permettra de communiquer avec votre Experience Platform.
 
-Pour récupérer l’URL de votre point de terminaison de diffusion en continu, envoyez une demande de GET à la fonction `/flows` et indiquez l’identifiant de votre flux de données.
+Pour récupérer l’URL de votre point de terminaison de diffusion en continu, envoyez une demande de GET à la fonction `/flows` et fournissez l’identifiant de votre flux de données.
 
 **Format d’API**
 
@@ -439,7 +439,7 @@ Une fois votre flux de données créé, vous pouvez surveiller les données ing�
 
 ### Mettre à jour votre flux de données
 
-Mettez à jour les détails de votre flux de données, tels que son nom et sa description, ainsi que son planning d’exécution et les jeux de mappages associés, en envoyant une requête PATCH à la variable `/flows` point d’entrée [!DNL Flow Service] API, tout en fournissant l’identifiant de votre flux de données. Lors de l’exécution d’une requête de PATCH, vous devez fournir l’unique de votre flux de données `etag` dans le `If-Match` en-tête . Pour consulter des exemples complets d’API, reportez-vous au guide sur [mise à jour des flux de données sources à l’aide de l’API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update-dataflows.html)
+Mettez à jour les détails de votre flux de données, tels que son nom et sa description, ainsi que son planning d’exécution et les jeux de mappages associés, en envoyant une requête PATCH à la variable `/flows` point d’entrée de [!DNL Flow Service] API, tout en fournissant l’identifiant de votre flux de données. Lors de l’exécution d’une requête de PATCH, vous devez fournir l’unique de votre flux de données `etag` dans le `If-Match` en-tête . Pour consulter des exemples complets d’API, reportez-vous au guide sur [mise à jour des flux de données de sources à l’aide de l’API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update-dataflows.html)
 
 ### Mettre à jour votre compte
 

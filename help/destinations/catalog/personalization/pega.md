@@ -2,9 +2,9 @@
 title: Connexion à Pega Customer Decision Hub
 description: Utilisez la destination Pega Customer Decision Hub dans Adobe Experience Platform pour envoyer les attributs de profil et les données d’appartenance à l’audience à Pega Customer Decision Hub pour la prise de décision la plus appropriée.
 exl-id: 0546da5d-d50d-43ec-bbc2-9468a7db4d90
-source-git-commit: 9ccfbeb6ef36b10b8ecbfc25797c26980e7d1dcd
+source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
 workflow-type: tm+mt
-source-wordcount: '1006'
+source-wordcount: '1011'
 ht-degree: 25%
 
 ---
@@ -13,13 +13,13 @@ ht-degree: 25%
 
 ## Vue d’ensemble {#overview}
 
-Utilisez la variable [!DNL Pega Customer Decision Hub] destination dans Adobe Experience Platform pour envoyer des attributs de profil et des données d’appartenance à l’audience à [!DNL Pega Customer Decision Hub] pour la prise de décision next-best-action.
+Utilisez la variable [!DNL Pega Customer Decision Hub] destination dans Adobe Experience Platform pour envoyer des attributs de profil et des données d’appartenance à l’audience à [!DNL Pega Customer Decision Hub] pour la prise de décision la plus adaptée.
 
 Appartenance à l’audience de profil à partir de Adobe Experience Platform, lorsqu’elle est chargée dans [!DNL Pega Customer Decision Hub], peut être utilisé comme prédicteur dans les modèles adaptatifs et aider à fournir les données contextuelles et comportementales appropriées à des fins de prise de décision de la meilleure action suivante.
 
 >[!IMPORTANT]
 >
->Cette page de documentation a été créée par Pegasystems. Pour toute demande d&#39;information ou de mise à jour, veuillez contacter directement Pega. [here](mailto:support@pega.com).
+>Ce connecteur de destination et cette page de documentation sont créés et conservés par les systèmes Pegasystems. Pour toute demande d&#39;information ou de mise à jour, veuillez contacter directement Pega. [here](mailto:support@pega.com).
 
 ## Cas d’utilisation
 
@@ -74,7 +74,7 @@ Pour vous connecter à cette destination, procédez comme décrit dans le [tutor
 
 Renseignez les champs ci-dessous et sélectionnez **[!UICONTROL Se connecter à la destination]**:
 
-* **[!UICONTROL URL du jeton d’accès]**: L’URL du jeton d’accès OAuth 2 sur votre [!DNL Pega Customer Decision Hub] instance.
+* **[!UICONTROL URL du jeton d’accès]**: l’URL du jeton d’accès OAuth 2 sur votre [!DNL Pega Customer Decision Hub] instance.
 * **[!UICONTROL ID client]**: OAuth 2 [!DNL client ID] que vous avez généré dans votre [!DNL Pega Customer Decision Hub] instance.
 * **[!UICONTROL Secret du client]**: OAuth 2 [!DNL client secret] que vous avez généré dans votre [!DNL Pega Customer Decision Hub] instance.
 
@@ -88,7 +88,7 @@ Pour configurer les détails de la destination, renseignez les champs requis et 
 
 * **[!UICONTROL Nom]** : un nom par lequel vous reconnaîtrez cette destination à l’avenir.
 * **[!UICONTROL Description]** : une description qui vous aidera à identifier cette destination à l’avenir.
-* **[!UICONTROL Nom d’hôte]**: Nom d’hôte Pega Customer Decision Hub vers lequel le profil est exporté en tant que données json.
+* **[!UICONTROL Nom d’hôte]**: nom d’hôte Pega Customer Decision Hub vers lequel le profil est exporté en tant que données json.
 
 ## Activer les audiences vers cette destination {#activate}
 
@@ -113,7 +113,7 @@ Sélection des champs sources :
 
 Sélection des champs cibles :
 
-* Sélectionnez la `CustomerID` espace de noms en tant qu’identité cible.
+* Sélectionnez la variable `CustomerID` espace de noms en tant qu’identité cible.
 * Sélectionnez les noms d’attributs de profil de destination qui doivent être mappés aux attributs de profil source XDM correspondants.
 
 ![Mappage des identités](../../assets/catalog/personalization/pega/pega-source-destination-mapping.png)

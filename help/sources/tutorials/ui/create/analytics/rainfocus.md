@@ -1,11 +1,11 @@
 ---
 title: Connexion de votre compte RainFocus à un Experience Platform à l’aide de l’interface utilisateur
 description: Découvrez comment connecter votre compte RainFocus à Experience Platform à l’aide de l’interface utilisateur.
-badge: Version bêta
-source-git-commit: 81f157216546d65c00090059c13c85e8ae5878f1
+badge: Version Beta
+source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1007'
+ht-degree: 29%
 
 ---
 
@@ -15,11 +15,11 @@ ht-degree: 0%
 >
 >La source [!DNL RainFocus] est en version Beta. Voir [présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de sources étiquetées bêta.
 
-Ce tutoriel décrit les étapes à suivre pour connecter votre [!DNL RainFocus] gestion des événements de compte et de diffusion en continu et données d’analyse vers Adobe Experience Platform.
+Ce tutoriel décrit les étapes à suivre pour connecter votre [!DNL RainFocus] gestion des événements de compte et de flux et données d’analyse vers Adobe Experience Platform.
 
 >[!IMPORTANT]
 >
->Cette page de documentation a été créée par la fonction [!DNL RainFocus] l&#39;équipe. Pour toute demande de renseignements ou de mise à jour, contactez-les directement au service clientèle.<span>@rainfocus.com ou rendez-vous sur la page [[!DNL RainFocus] Centre d’aide](https://help.rainfocus.com/hc/en-us)
+>Cette page de documentation et de connecteur source est créée et conservée par [!DNL RainFocus] l&#39;équipe. Pour toute demande de renseignements ou de mise à jour, contactez-les directement auprès de l’assistance clientèle.<span>@rainfocus.com ou rendez-vous sur la [[!DNL RainFocus] Centre d’aide](https://help.rainfocus.com/hc/en-us)
 
 ## Prise en main
 
@@ -35,7 +35,7 @@ Ce tutoriel nécessite une compréhension du fonctionnement des composants suiva
 Avant de pouvoir connecter votre [!DNL RainFocus] pour Experience Platform, vous devez d’abord effectuer les tâches prérequises suivantes :
 
 * [Collecter les informations d’identification requises](../../../../connectors/analytics/rainfocus.md#gather-required-credentials)
-* [Création d’un schéma XDM et définition du champ d’identité](../../../../connectors/analytics/rainfocus.md#create-an-xdm-schema-and-define-the-identity-field)
+* [Créer un schéma XDM et définir le champ d’identité](../../../../connectors/analytics/rainfocus.md#create-an-xdm-schema-and-define-the-identity-field)
 * [Création d’un profil d’intégration dans RainFocus](../../../../connectors/analytics/rainfocus.md#create-an-integration-profile-in-rainfocus)
 
 Une fois la configuration prérequise terminée, vous pouvez passer aux étapes décrites ci-dessous.
@@ -71,7 +71,7 @@ Lorsque vous avez terminé, sélectionnez **[!UICONTROL Suivant]**.
 
 ## Détails du flux de données
 
-Le **Détails du flux de données** s’affiche, vous fournissant des options permettant d’utiliser un jeu de données existant ou d’établir un nouveau jeu de données pour votre flux de données, ainsi qu’une opportunité de fournir un nom et une description pour votre flux de données. Au cours de cette étape, vous pouvez également configurer des paramètres pour l’ingestion de profils, les diagnostics d’erreur, l’ingestion partielle et les alertes.
+La variable **Détails du flux de données** s’affiche, vous fournissant des options permettant d’utiliser un jeu de données existant ou d’établir un nouveau jeu de données pour votre flux de données, ainsi qu’une opportunité de fournir un nom et une description pour votre flux de données. Au cours de cette étape, vous pouvez également configurer des paramètres pour l’ingestion de profils, les diagnostics d’erreur, l’ingestion partielle et les alertes.
 
 Lorsque vous avez terminé, sélectionnez **[!UICONTROL Suivant]**.
 
@@ -81,7 +81,7 @@ Lorsque vous avez terminé, sélectionnez **[!UICONTROL Suivant]**.
 
 L’interface de mappage fournit un outil complet pour mapper les champs sources de votre schéma source aux champs XDM cibles correspondants dans le schéma cible.
 
-Experience Platform fournit des recommandations intelligentes pour les champs mappés automatiquement en fonction du schéma ou du jeu de données cible que vous avez sélectionné. Vous pouvez ajuster manuellement les règles de mappage en fonction de vos cas d’utilisation. Selon vos besoins, vous pouvez choisir de mapper directement des champs ou d’utiliser des fonctions de préparation de données pour transformer les données sources afin d’obtenir des valeurs informatisées ou calculées. Pour obtenir des instructions complètes sur l’utilisation de l’interface du mappeur et des champs calculés, reportez-vous à la section [Guide de l’interface utilisateur de la préparation de données](../../../../../data-prep/ui/mapping.md).
+Experience Platform fournit des recommandations intelligentes pour les champs mappés automatiquement en fonction du schéma ou du jeu de données cible que vous avez sélectionné. Vous pouvez ajuster manuellement les règles de mappage en fonction de vos cas d’utilisation. Selon vos besoins, vous pouvez choisir de mapper directement des champs ou d’utiliser des fonctions de préparation de données pour transformer les données sources afin d’obtenir des valeurs informatisées ou calculées. Pour obtenir des instructions complètes sur l’utilisation de l’interface du mappeur et des champs calculés, voir la section [Guide de l’interface utilisateur de la préparation de données](../../../../../data-prep/ui/mapping.md).
 
 Une fois le mappage de vos données source réussi, sélectionnez **[!UICONTROL Suivant]**.
 
@@ -98,11 +98,11 @@ Une fois que vous avez vérifié votre flux de données, sélectionnez **Termine
 
 ![L’étape de révision du processus des sources.](/help/sources/images/tutorials/create/rainfocus/rainfocus_source-compelete.png)
 
-## Obtention de l’URL de votre point de terminaison de diffusion en continu {#get-your-streaming-endpoint-url}
+## Obtention de l’URL de votre point de terminaison de diffusion {#get-your-streaming-endpoint-url}
 
 Une fois votre flux de données de diffusion en continu créé, vous pouvez désormais récupérer l’URL de votre point de terminaison de diffusion en continu. Ce point de terminaison sera utilisé pour s’abonner à votre webhook, ce qui permet à votre source de diffusion en continu de communiquer avec l’Experience Platform.
 
-Pour récupérer votre point de terminaison de diffusion en continu, accédez à *[!UICONTROL Activité Flux de données]* de la page du flux de données que vous venez de créer et de copier le point de terminaison depuis le bas de la page *[!UICONTROL Propriétés]* du panneau.
+Pour récupérer votre point de terminaison de diffusion en continu, accédez à la *[!UICONTROL Activité Flux de données]* de la page du flux de données que vous venez de créer et de copier le point de terminaison depuis le bas de la page *[!UICONTROL Propriétés]* du panneau.
 
 ![Page d’activité de flux de données dans l’espace de travail des sources, avec l’URL du point de terminaison de diffusion en continu mise en surbrillance.](/help/sources/images/tutorials/create/rainfocus/rainfocus_source-dataflow-api.png)
 
@@ -112,7 +112,7 @@ Une fois votre flux de données terminé et que vous avez récupéré l’URL de
 
 * Connectez-vous au [[!DNL RainFocus] platform](https://app.rainfocus.com). Dans la navigation Principale, sélectionnez **[!DNL Libraries]** et **[!DNL Integration Profiles]**
 * Ouvrez le [!DNL Integration Profile] que vous avez créé précédemment dans le cadre du [conditions préalables](../../../../connectors/analytics/rainfocus.md#create-an-integration-profile-in-rainfocus).
-* Collez le **Identifiant de flux de données** et **Point de terminaison de diffusion** copié à partir du flux de données dans Experience Platform et sélectionnez **Enregistrer**
+* Collez le **Identifiant de flux de données** et **Point de terminaison de diffusion en continu** copié à partir du flux de données dans Experience Platform et sélectionnez **Enregistrer**
 
 ## Étapes suivantes
 
@@ -125,5 +125,5 @@ Les documents suivants fournissent des conseils supplémentaires sur les nuances
 * [Centre d’aide de RainFocus](https://help.rainfocus.com/hc/en-us)
 * [Création d’un compte de service Adobe (JWT) dans le portail Adobe Developer](https://developer.adobe.com/developer-console/docs/guides/authentication/ServiceAccountIntegration/)
 * [Création d’un schéma dans l’API](../../../../../xdm/tutorials/create-schema-api.md)
-* [Création d’un schéma dans l’interface utilisateur](../../../../../xdm/tutorials/create-schema-ui.md)
+* [Créer un schéma dans l’interface utilisateur](../../../../../xdm/tutorials/create-schema-ui.md)
 * [Définition des champs d’identité dans l’interface utilisateur](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/fields/identity.html)

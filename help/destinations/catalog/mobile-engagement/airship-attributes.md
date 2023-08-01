@@ -3,9 +3,9 @@ keywords: attributs de navire d’aviation;destination du navire d’aviation
 title: Connexion Attributs Airship
 description: Transférez en toute transparence les données d’audience Adobe à Airship en tant qu’attributs d’audience pour le ciblage au sein de Airship.
 exl-id: bfc1b52f-2d68-40d6-9052-c2ee1e877961
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
 workflow-type: tm+mt
-source-wordcount: '1017'
+source-wordcount: '1022'
 ht-degree: 32%
 
 ---
@@ -18,11 +18,11 @@ ht-degree: 32%
 
 Cette intégration transmet les données de profil d’Adobe dans [!DNL Airship] as [Attributs](https://docs.airship.com/guides/audience/attributes/) pour le ciblage ou le déclenchement.
 
-Pour en savoir plus sur [!DNL Airship], reportez-vous à la section [Documents de navigation](https://docs.airship.com).
+Pour en savoir plus sur [!DNL Airship], voir [Documents de navigation](https://docs.airship.com).
 
 >[!TIP]
 >
->Cette page de documentation a été créée par la fonction [!DNL Airship] l&#39;équipe. Pour toute demande de mise à jour ou de renseignements, contactez-les directement à l’adresse [support.airship.com](https://support.airship.com/).
+>Cette page de documentation et de connecteur de destination est créée et conservée par [!DNL Airship] l&#39;équipe. Pour toute demande d’information ou de mise à jour, contactez-les directement à l’adresse [support.airship.com](https://support.airship.com/).
 
 ## Conditions préalables {#prerequisites}
 
@@ -53,7 +53,7 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 | Élément | Type | Notes |
 ---------|----------|---------|
-| Type d’exportation | **[!UICONTROL Basé sur les profils]** | Vous exportez tous les membres d’un segment, ainsi que les champs de schéma de votre choix (par exemple : adresse électronique, numéro de téléphone, nom) et/ou identités, en fonction du mappage de vos champs. |
+| Type d’exportation | **[!UICONTROL Basé sur les profils]** | Vous exportez tous les membres d’un segment, ainsi que les champs de schéma souhaités (par exemple : adresse email, numéro de téléphone, nom) et/ou les identités, en fonction du mapping de vos champs. |
 | Fréquence des exportations | **[!UICONTROL Diffusion en continu]** | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu&#39;un profil est mis à jour en Experience Platform en fonction de l&#39;évaluation de l&#39;audience, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
@@ -84,7 +84,7 @@ Tirez parti des données de profil collectées dans Adobe Experience Platform po
 
 ### Cas d’utilisation #2
 
-Utilisation des attributs de Adobe Experience Platform pour enrichir davantage [!DNL Airship] profils et les combiner à l’aide du SDK ou [!DNL Airship] données prédictives. Par exemple, un détaillant peut créer une audience avec un état de fidélité et des données de localisation (attributs de Platform) et [!DNL Airship] prédit d’envoyer des données pour envoyer des messages très ciblés aux utilisateurs ayant le statut de fidélité à l’or qui vivent à Las Vegas, NV, et ont une forte probabilité d’attrition.
+Utilisation des attributs de Adobe Experience Platform pour enrichir davantage [!DNL Airship] profils et les combiner à l’aide du SDK ou [!DNL Airship] données prédictives. Par exemple, un détaillant peut créer une audience avec l’état de fidélité et des données de localisation (attributs de Platform) et [!DNL Airship] prédit d’envoyer des données pour envoyer des messages très ciblés aux utilisateurs ayant le statut de fidélité à l’or qui vivent à Las Vegas, NV, et ont une forte probabilité d’attrition.
 
 ## Se connecter à la destination {#connect}
 
@@ -98,7 +98,7 @@ Pour vous connecter à cette destination, procédez comme décrit dans le [tutor
 
 Pour vous authentifier à la destination, renseignez les champs requis et sélectionnez **[!UICONTROL Se connecter à la destination]**.
 
-* **[!UICONTROL Jeton de porteur]**: le jeton porteur que vous avez généré à partir de la fonction [!DNL Airship] tableau de bord.
+* **[!UICONTROL Jeton de porteur]**: le jeton porteur que vous avez généré à partir du [!DNL Airship] tableau de bord.
 
 ### Renseigner les détails de la destination {#destination-details}
 
@@ -106,7 +106,7 @@ Pour configurer les détails de la destination, renseignez les champs obligatoir
 
 * **[!UICONTROL Nom]** : saisissez un nom qui vous aidera à identifier cette destination.
 * **[!UICONTROL Description]**: saisissez une description pour cette destination.
-* **[!UICONTROL Domaine]**: sélectionner un centre de données américain ou européen, selon le [!DNL Airship] le centre de données s’applique à cette destination.
+* **[!UICONTROL Domaine]**: sélectionnez un centre de données des États-Unis ou de l’UE, selon lequel [!DNL Airship] le centre de données s’applique à cette destination.
 
 ### Activer les alertes {#enable-alerts}
 
@@ -147,7 +147,7 @@ Sélectionnez le champ cible :
 
 ![Connexion aux attributs des navires](../../assets/catalog/mobile-engagement/airship/select-target-identity.png)
 
-**Attribut Map**
+**Attribut de carte**
 
 Sélectionner l’attribut source :
 

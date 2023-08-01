@@ -1,11 +1,11 @@
 ---
-keywords: la publicité; les critères;
+keywords: la publicité, les critères;
 title: Connexion à un critère
 description: Criteo optimise la publicité de confiance et d’impact afin d’offrir à chaque consommateur des expériences plus riches sur l’Internet libre. Grâce au jeu de données commercial le plus important du monde et à l’IA la plus performante du monde, Criteo s’assure que chaque point de contact du parcours d’achat est personnalisé pour atteindre les clients avec la bonne publicité, au bon moment.
 exl-id: e6f394b2-ab82-47bb-8521-1cf9d01a203b
-source-git-commit: 9ccfbeb6ef36b10b8ecbfc25797c26980e7d1dcd
+source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
 workflow-type: tm+mt
-source-wordcount: '1005'
+source-wordcount: '1010'
 ht-degree: 24%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 24%
 
 >[!IMPORTANT]
 >
->Cette page de documentation a été créée par Criteo. Il s’agit actuellement d’un produit en version Beta qui peut faire l’objet de modifications. Pour toute demande de mise à jour ou de mise à jour, contactez directement Criteo. [here](mailto:criteoTechnicalPartnerships@criteo.com).
+>Cette page de documentation et de connecteur de destination est créée et conservée par Criteo. Il s’agit actuellement d’un produit en version Beta qui peut faire l’objet de modifications. Pour toute demande de mise à jour ou de mise à jour, contactez directement Criteo. [here](mailto:criteoTechnicalPartnerships@criteo.com).
 
 Criteo optimise la publicité de confiance et d’impact afin d’offrir à chaque consommateur des expériences plus riches sur l’Internet libre. Grâce au jeu de données commercial le plus important du monde et à l’IA la plus performante du monde, Criteo s’assure que chaque point de contact du parcours d’achat est personnalisé pour atteindre les clients avec la bonne publicité, au bon moment.
 
@@ -40,7 +40,7 @@ Criteo prend en charge l’activation des identités décrites dans le tableau c
 | Identité cible | Description | Considérations |
 | --- | --- | --- |
 | `email_sha256` | Adresses électroniques hachées avec l’algorithme SHA-256 | Adobe Experience Platform prend en charge le texte brut et les adresses électroniques hachées SHA-256. Lorsque votre champ source contient des attributs non hachés, vérifiez la variable [!UICONTROL Appliquer la transformation] pour que Platform hache automatiquement les données lors de l’activation. |
-| `gum_id` | Criteo [!DNL GUM] identifiant de cookie | [!DNL GUM IDs] permettre aux clients de gérer une correspondance entre leur système d’identification utilisateur et l’identification utilisateur de Criteo ([!DNL UID]). Si le type d’identifiant est `gum_id`, un paramètre supplémentaire, [!DNL GUM Caller ID], doit également être inclus. Contactez votre équipe de compte Criteo pour connaître les [!DNL GUM Caller ID] ou pour obtenir plus d’informations à ce sujet [!DNL GUM ID] synchronisation, si nécessaire. |
+| `gum_id` | Criteo [!DNL GUM] identifiant de cookie | [!DNL GUM IDs] permettre aux clients de gérer une correspondance entre leur système d’identification utilisateur et l’identification utilisateur de Criteo ([!DNL UID]). Si le type d’identifiant est `gum_id`, un paramètre supplémentaire, la variable [!DNL GUM Caller ID], doit également être inclus. Contactez votre équipe de compte Criteo pour connaître les [!DNL GUM Caller ID] ou pour obtenir plus d’informations à ce sujet [!DNL GUM ID] synchronisation, si nécessaire. |
 
 ## Type et fréquence d’exportation {#export-type-frequency}
 
@@ -53,13 +53,13 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 ## Cas d’utilisation {#use-cases}
 
-Pour vous aider à mieux comprendre comment utiliser la variable [!DNL Criteo] destination, voici quelques objectifs que les clients Adobe Experience Platform peuvent atteindre. [!DNL Criteo]:
+Pour mieux comprendre comment utiliser la variable [!DNL Criteo] destination, voici quelques objectifs que les clients Adobe Experience Platform peuvent atteindre. [!DNL Criteo]:
 
 ### Cas d’utilisation 1 : Obtention du trafic
 
-Présenter à votre entreprise des offres de produits pertinentes et des créations flexibles. Grâce aux recommandations de produits intelligents, vos publicités présentent automatiquement les produits les plus susceptibles de déclencher des visites et des engagements. Le ciblage flexible vous permet de créer des audiences à partir de l’ensemble de données commerciales de Criteo ou de vos propres listes de prospects et d’Adobe de segments CDP.
+Présenter à votre entreprise des offres de produits pertinentes et des créations flexibles. Avec des recommandations de produits intelligentes, vos publicités proposeront automatiquement les produits les plus susceptibles de déclencher des visites et des engagements. Le ciblage flexible vous permet de créer des audiences à partir de l’ensemble de données commerciales de Criteo ou de vos propres listes de prospects et d’Adobe de segments CDP.
 
-### Cas d’utilisation 2 : Augmenter les conversions du site web
+### Cas d’utilisation 2 : augmentation des conversions du site web
 
 Lorsque les visiteurs quittent votre site web, rappelez-leur ce qui leur manque avec les publicités de reciblage qui augmentent les conversions en présentant des offres spéciales et des offres hyper-pertinentes, où qu’ils se rendent. Connectez votre audience CDP d’Adobe pour réengager les clients existants ou cibler les consommateurs similaires à vos acheteurs les plus fidèles.
 
@@ -117,7 +117,7 @@ Lecture [Activation des profils et des audiences vers les destinations d’expor
 
 ## Données exportées {#exported-data}
 
-Vous pouvez afficher les audiences exportées dans le [Centre de gestion des critères](https://marketing.criteo.com/audience-manager/dashboard).
+Vous pouvez afficher les audiences exportées dans la variable [Centre de gestion des critères](https://marketing.criteo.com/audience-manager/dashboard).
 
 Le corps de la requête d’ajout d’un profil utilisateur reçu par le [!DNL Criteo] La connexion ressemble à ceci :
 
@@ -177,7 +177,7 @@ Le corps de requête de suppression du profil utilisateur reçu par le [!DNL Cri
 
 ## Utilisation et gouvernance des données {#data-usage}
 
-Toutes les destinations Adobe Experience Platform sont conformes aux politiques d’utilisation des données lors de la gestion de vos données. Pour plus d’informations sur la manière dont Adobe Experience Platform applique la gouvernance des données, reportez-vous à la section [Présentation de la gouvernance des données](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=fr).
+Toutes les destinations Adobe Experience Platform sont conformes aux politiques d’utilisation des données lors de la gestion de vos données. Pour plus d’informations sur la manière dont Adobe Experience Platform applique la gouvernance des données, consultez la section [Présentation de la gouvernance des données](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=fr).
 
 ## Ressources supplémentaires
 

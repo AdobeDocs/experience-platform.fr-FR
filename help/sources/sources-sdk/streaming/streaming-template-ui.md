@@ -4,28 +4,28 @@ description: Découvrez comment importer des données en continu d’une source 
 hide: true
 hidefromtoc: true
 exl-id: 82254be0-fa31-4114-a0ec-179a990e0904
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
 workflow-type: tm+mt
-source-wordcount: '1193'
+source-wordcount: '1198'
 ht-degree: 19%
 
 ---
 
-# Création d’une connexion source et d’un flux de données pour la diffusion *VOTRE SOURCE* données à l’aide de l’interface utilisateur
+# Création d’une connexion source et d’un flux de données pour la diffusion *YOURSOURCE* données utilisant l’interface utilisateur
 
 *Lorsque vous parcourez ce modèle, remplacez ou supprimez tous les paragraphes en italique (en commençant par celui-ci).*
 
-*Commencez par mettre à jour les métadonnées (titre et description) en haut de la page. Veuillez ignorer toutes les instances d&#39;UICONTROL sur cette page. Il s’agit d’une balise qui aide nos processus de traduction automatique à traduire correctement la page dans les multiples langues prises en charge. Nous ajouterons des balises à votre documentation après l’avoir envoyée.*
+*Commencez par mettre à jour les métadonnées (titre et description) en haut de la page. Ignorez toutes les instances d’UICONTROL sur cette page. Il s’agit d’une balise qui aide nos processus de traduction automatique à traduire correctement la page dans les multiples langues prises en charge. Nous ajouterons des balises à votre documentation après l’avoir envoyée.*
 
-Ce tutoriel décrit les étapes à suivre pour créer une *VOTRE SOURCE* connecteur source à l’aide de l’interface utilisateur de Platform.
+Ce tutoriel décrit les étapes à suivre pour créer une *YOURSOURCE* connecteur source à l’aide de l’interface utilisateur de Platform.
 
-## Présentation
+## Vue d’ensemble
 
 *Fournissez un bref aperçu de votre entreprise, y compris la valeur qu’elle fournit aux clients. Pour plus d’informations, insérez un lien vers la page d’accueil de la documentation du produit.*
 
 >[!IMPORTANT]
 >
->Cette page de documentation a été créée par la fonction *VOTRE SOURCE* l&#39;équipe. Pour toute demande de mise à jour ou de renseignements, contactez-les directement à l’adresse *Ajouter un lien ou une adresse électronique permettant d’accéder aux mises à jour*.
+>Cette page de documentation et de connecteur source est créée et conservée par *YOURSOURCE* l&#39;équipe. Pour toute demande d’information ou de mise à jour, contactez-les directement à l’adresse *Ajouter un lien ou une adresse électronique permettant d’accéder aux mises à jour*.
 
 ## Conditions préalables
 
@@ -38,27 +38,27 @@ Ce tutoriel décrit les étapes à suivre pour créer une *VOTRE SOURCE* connect
 
 ### Collecter les informations d’identification requises
 
-Pour vous connecter *VOTRE SOURCE* Pour Platform, vous devez fournir des valeurs pour les propriétés de connexion suivantes :
+Pour vous connecter *YOURSOURCE* Pour Platform, vous devez fournir des valeurs pour les propriétés de connexion suivantes :
 
 | Informations d’identification | Description | Exemple |
 | --- | --- | --- |
 | *identifiant un* | *Ajoutez ici une brève description des informations d’identification d’authentification de votre source.* | *Ajoutez ici un exemple d’informations d’identification d’authentification de votre source.* |
 | *credential two* | *Ajoutez ici une brève description des informations d’identification d’authentification de votre source.* | *Ajoutez ici un exemple d’informations d’identification d’authentification de votre source.* |
-| *identifiant trois* | *Ajoutez ici une brève description des informations d’identification d’authentification de votre source.* | *Ajoutez ici un exemple d’informations d’identification d’authentification de votre source.* |
+| *identification d’identification trois* | *Ajoutez ici une brève description des informations d’identification d’authentification de votre source.* | *Ajoutez ici un exemple d’informations d’identification d’authentification de votre source.* |
 
-Pour plus d’informations sur ces informations d’identification, voir *VOTRE SOURCE* documentation d’authentification. *Veuillez ajouter un lien vers la documentation d’authentification de votre plateforme ici*.
+Pour plus d’informations sur ces informations d’identification, voir *YOURSOURCE* documentation d’authentification. *Veuillez ajouter un lien vers la documentation d’authentification de votre plateforme ici*.
 
-### Intégrer *VOTRE SOURCE* avec votre webhook
+### Intégrer *YOURSOURCE* avec votre webhook
 
 *Le SDK de diffusion en continu nécessite que votre source puisse prendre en charge les webhooks pour communiquer avec l’Experience Platform. Dans cette section, vous devez indiquer les étapes que vos utilisateurs devront suivre pour intégrer VOTRE SOURCE à un webhook.*
 
-## Connectez-vous à *VOTRE SOURCE* account
+## Connectez-vous à *YOURSOURCE* account
 
 Dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Sources]** à partir de la barre de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources]. L’écran [!UICONTROL Catalogue] affiche diverses sources avec lesquelles vous pouvez créer un compte.
 
 Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de votre écran. Vous pouvez également trouver la source spécifique à utiliser à l’aide de l’option de recherche.
 
-Sous , **Diffusion en continu** catégorie, sélectionnez *VOTRE SOURCE*, puis sélectionnez **[!UICONTROL Ajouter des données]**.
+Sous , **Diffusion en continu** catégorie, sélectionnez *YOURSOURCE*, puis sélectionnez **[!UICONTROL Ajouter des données]**.
 
 >[!TIP]
 >
@@ -68,7 +68,7 @@ Sous , **Diffusion en continu** catégorie, sélectionnez *VOTRE SOURCE*, puis s
 
 ## Sélectionner les données
 
-Le **[!UICONTROL Sélectionner des données]** s’affiche, fournissant une interface vous permettant de sélectionner les données que vous apportez à Platform.
+La variable **[!UICONTROL Sélectionner des données]** s’affiche, fournissant une interface vous permettant de sélectionner les données que vous apportez à Platform.
 
 * La partie gauche de l’interface est un navigateur qui vous permet d’afficher les flux de données disponibles dans votre compte ;
 * La partie droite de l’interface vous permet de prévisualiser jusqu’à 100 lignes de données à partir d’un fichier JSON.
@@ -85,7 +85,7 @@ Lorsque vous avez terminé, sélectionnez **[!UICONTROL Suivant]**.
 
 ## Détails du flux de données
 
-Le **Détails du flux de données** s’affiche, vous fournissant des options permettant d’utiliser un jeu de données existant ou d’établir un nouveau jeu de données pour votre flux de données, ainsi qu’une opportunité de fournir un nom et une description pour votre flux de données. Au cours de cette étape, vous pouvez également configurer des paramètres pour l’ingestion de profils, les diagnostics d’erreur, l’ingestion partielle et les alertes.
+La variable **Détails du flux de données** s’affiche, vous fournissant des options permettant d’utiliser un jeu de données existant ou d’établir un nouveau jeu de données pour votre flux de données, ainsi qu’une opportunité de fournir un nom et une description pour votre flux de données. Au cours de cette étape, vous pouvez également configurer des paramètres pour l’ingestion de profils, les diagnostics d’erreur, l’ingestion partielle et les alertes.
 
 Lorsque vous avez terminé, sélectionnez **[!UICONTROL Suivant]**.
 
@@ -95,7 +95,7 @@ Lorsque vous avez terminé, sélectionnez **[!UICONTROL Suivant]**.
 
 L’interface de [!UICONTROL mappage] fournit un outil complet pour mapper les champs sources de votre schéma source aux champs XDM cibles correspondants dans le schéma cible.
 
-Platform fournit des recommandations intelligentes pour les champs mappés automatiquement en fonction du schéma ou du jeu de données cible que vous avez sélectionné. Vous pouvez ajuster manuellement les règles de mappage en fonction de vos cas d’utilisation. Selon vos besoins, vous pouvez choisir de mapper directement des champs ou d’utiliser des fonctions de préparation de données pour transformer les données sources afin d’obtenir des valeurs informatisées ou calculées. Pour obtenir des instructions complètes sur l’utilisation de l’interface du mappeur et des champs calculés, reportez-vous à la section [Guide de l’interface utilisateur de la préparation de données](https://experienceleague.adobe.com/docs/experience-platform/data-prep/ui/mapping.html).
+Platform fournit des recommandations intelligentes pour les champs mappés automatiquement en fonction du schéma ou du jeu de données cible que vous avez sélectionné. Vous pouvez ajuster manuellement les règles de mappage en fonction de vos cas d’utilisation. Selon vos besoins, vous pouvez choisir de mapper directement des champs ou d’utiliser des fonctions de préparation de données pour transformer les données sources afin d’obtenir des valeurs informatisées ou calculées. Pour obtenir des instructions complètes sur l’utilisation de l’interface du mappeur et des champs calculés, voir la section [Guide de l’interface utilisateur de la préparation de données](https://experienceleague.adobe.com/docs/experience-platform/data-prep/ui/mapping.html).
 
 Une fois le mappage de vos données source réussi, sélectionnez **[!UICONTROL Suivant]**.
 
@@ -108,15 +108,15 @@ L’écran de **[!UICONTROL Révision]** s’affiche, vous permettant dʼexamine
 * **[!UICONTROL Connexion]** : affiche le type de source, le chemin d’accès correspondant au fichier source choisi et le nombre de colonnes au sein de ce fichier source.
 * **[!UICONTROL Attribuer des champs de jeu de données et de mappage]** : affiche le jeu de données dans lequel les données sources sont ingérées, y compris le schéma auquel le jeu de données se conforme.
 
-Une fois que vous avez examiné votre flux de données, cliquez sur **[!UICONTROL Terminer]** et accorder un certain temps pour la création du flux de données.
+Une fois le flux de données examiné, cliquez sur **[!UICONTROL Terminer]** et accorder un certain temps pour la création du flux de données.
 
 ![L’étape de révision du processus des sources.](../assets/streaming/review.png)
 
-## Obtention de l’URL de votre point de terminaison de diffusion en continu
+## Obtention de l’URL de votre point de terminaison de diffusion
 
 Une fois votre flux de données de diffusion en continu créé, vous pouvez désormais récupérer l’URL de votre point de terminaison de diffusion en continu. Ce point de terminaison sera utilisé pour s’abonner à votre webhook, ce qui permet à votre source de diffusion en continu de communiquer avec l’Experience Platform.
 
-Pour récupérer votre point de terminaison de diffusion en continu, accédez à [!UICONTROL Activité Flux de données] de la page du flux de données que vous venez de créer et de copier le point de terminaison depuis le bas de la page [!UICONTROL Propriétés] du panneau.
+Pour récupérer votre point de terminaison de diffusion en continu, accédez à la [!UICONTROL Activité Flux de données] de la page du flux de données que vous venez de créer et de copier le point de terminaison depuis le bas de la page [!UICONTROL Propriétés] du panneau.
 
 ![Point de terminaison de diffusion en continu dans l’activité de flux de données.](../assets/testing/endpoint-test.png)
 
@@ -124,7 +124,7 @@ Pour récupérer votre point de terminaison de diffusion en continu, accédez à
 
 *Les workflows pour les étapes restantes de la création d’un flux de données sont modulaires. Si vous souhaitez effectuer des appels spécifiques concernant votre source, reportez-vous à la section Ressources supplémentaires ci-dessous.*
 
-En suivant ce tutoriel, vous avez établi une connexion à votre *VOTRE SOURCE* compte . Vous pouvez maintenant passer au tutoriel suivant et [configurer un flux de données pour importer des données dans Platform](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/crm.html).
+En suivant ce tutoriel, vous avez établi une connexion à votre *YOURSOURCE* compte . Vous pouvez maintenant passer au tutoriel suivant et [configurer un flux de données pour importer des données dans Platform](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/crm.html).
 
 ## Ressources supplémentaires
 

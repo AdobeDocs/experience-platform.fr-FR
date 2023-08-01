@@ -3,10 +3,10 @@ keywords: destinations;adobe experience platform;platform;présentation des dest
 title: Présentation des destinations
 description: Les destinations sont des intégrations préconfigurées à des plateformes de destination qui permettent dʼactiver facilement des données provenant dʼAdobe Experience Platform. Vous pouvez utiliser les destinations dans Adobe Experience Platform pour activer vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: 54165264364d7d53da2ff822b9ceb32157900b6a
+source-git-commit: ce1aec87b827b6e8626018846bc6f438834fff54
 workflow-type: tm+mt
-source-wordcount: '801'
-ht-degree: 82%
+source-wordcount: '925'
+ht-degree: 71%
 
 ---
 
@@ -46,6 +46,12 @@ Les commandes de l’[espace de travail des destinations](./ui/destinations-work
 ## Types et catégories de destination {#types-and-categories}
 
 Avec Experience Platform, vous pouvez activer des données vers différents types de destinations, afin de répondre à vos cas d’utilisation d’activation. Les destinations vont des intégrations basées sur les API aux intégrations avec les systèmes de réception de fichiers, en passant par les destinations de recherche de profil, etc. Pour plus d’informations sur toutes les destinations disponibles, voir [Présentation des types et catégories de destination](./destination-types.md).
+
+## Destinations construites en Adobe et construites par des partenaires {#adobe-and-partner-built-destinations}
+
+Certains des connecteurs du catalogue des destinations Experience Platform sont créés et gérés par Adobe, tandis que d’autres sont créés et gérés par des sociétés partenaires qui utilisent [Destination SDK](/help/destinations/destination-sdk/overview.md). Une note en haut de la page de documentation pour chaque connecteur créé par un partenaire indique si une destination est créée et gérée par le partenaire. Par exemple, la variable [Connecteur Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md) est créé par Adobe, tandis que la variable [Connecteur TikTok](/help/destinations/catalog/social/tiktok.md) est créé et géré par l’équipe TikTok.
+
+Pour les connecteurs créés et gérés par un partenaire, cela signifie que les problèmes avec le connecteur peuvent avoir à être résolus par l’équipe du partenaire (méthode de contact fournie dans la note de la page de documentation). Pour tout problème concernant les connecteurs créés et gérés par Adobe, contactez votre représentant Adobe ou l’assistance clientèle.
 
 ## Destinations et contrôles d’accès {#access-controls}
 

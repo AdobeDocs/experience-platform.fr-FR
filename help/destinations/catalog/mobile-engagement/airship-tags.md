@@ -3,9 +3,9 @@ keywords: balises d’avion;destination du navire d’aviation
 title: Connexion Balises Airship
 description: Transmettez en toute transparence les données d’audience Adobe à Airship en tant que balises d’audience pour le ciblage dans Airship.
 exl-id: 84cf5504-f0b5-48d8-8da1-ff91ee1dc171
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
 workflow-type: tm+mt
-source-wordcount: '989'
+source-wordcount: '994'
 ht-degree: 31%
 
 ---
@@ -18,12 +18,12 @@ ht-degree: 31%
 
 Cette intégration transmet les données d’audience Adobe Experience Platform dans [!DNL Airship] as [Balises](https://docs.airship.com/guides/audience/tags/) pour le ciblage ou le déclenchement.
 
-Pour en savoir plus sur [!DNL Airship], reportez-vous à la section [Documents de navigation](https://docs.airship.com).
+Pour en savoir plus sur [!DNL Airship], voir [Documents de navigation](https://docs.airship.com).
 
 
 >[!TIP]
 >
->Cette page de documentation a été créée par la fonction [!DNL Airship] l&#39;équipe. Pour toute demande de mise à jour ou de renseignements, contactez-les directement à l’adresse [support.airship.com](https://support.airship.com/).
+>Cette page de documentation et de connecteur de destination est créée et conservée par [!DNL Airship] l&#39;équipe. Pour toute demande d’information ou de mise à jour, contactez-les directement à l’adresse [support.airship.com](https://support.airship.com/).
 
 ## Conditions préalables
 
@@ -107,7 +107,7 @@ Pour vous connecter à cette destination, procédez comme décrit dans le [tutor
 
 Pour vous authentifier à la destination, renseignez les champs requis et sélectionnez **[!UICONTROL Se connecter à la destination]**.
 
-* **[!UICONTROL Jeton de porteur]**: le jeton porteur que vous avez généré à partir de la fonction [!DNL Airship] tableau de bord.
+* **[!UICONTROL Jeton de porteur]**: le jeton porteur que vous avez généré à partir du [!DNL Airship] tableau de bord.
 
 ### Renseigner les détails de la destination {#destination-details}
 
@@ -115,7 +115,7 @@ Pour configurer les détails de la destination, renseignez les champs obligatoir
 
 * **[!UICONTROL Nom]** : saisissez un nom qui vous aidera à identifier cette destination.
 * **[!UICONTROL Description]**: saisissez une description pour cette destination.
-* **[!UICONTROL Domaine]**: sélectionner un centre de données américain ou européen, selon le [!DNL Airship] le centre de données s’applique à cette destination.
+* **[!UICONTROL Domaine]**: sélectionnez un centre de données des États-Unis ou de l’UE, selon lequel [!DNL Airship] le centre de données s’applique à cette destination.
 
 ### Activer les alertes {#enable-alerts}
 

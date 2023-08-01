@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Présentation des connecteurs source
 description: Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les bases de données, etc.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: a848ea11e388678ade780fd81ef3ff6a3477b741
+source-git-commit: ce1aec87b827b6e8626018846bc6f438834fff54
 workflow-type: tm+mt
-source-wordcount: '1324'
-ht-degree: 84%
+source-wordcount: '1449'
+ht-degree: 77%
 
 ---
 
@@ -25,6 +25,12 @@ Experience Platform vous permet de centraliser les données que vous collectez 
 <div id="recs-overview-body-4"></div>
 <div id="recs-overview-body-5"></div>
 <div id="recs-overview-body-6"></div>
+
+## Sources construites par les Adobes et construites par les partenaires {#adobe-and-partner-built-sources}
+
+Certains des connecteurs du catalogue des sources Experience Platform sont créés et gérés par Adobe, tandis que d’autres sont créés et gérés par des sociétés partenaires à l’aide de [SDK Sources](/help/sources/sources-sdk/overview.md). Une note en haut de la page de documentation pour chaque connecteur créé par un partenaire indique si une source est créée et gérée par le partenaire. Par exemple, la variable [Connecteur Amazon S3](/help/sources/connectors/cloud-storage/s3.md) est créé par Adobe, tandis que la variable [Connecteur RainFocus](/help/sources/connectors/analytics/rainfocus.md) est créé et géré par l’équipe RainFocus.
+
+Pour les connecteurs créés et gérés par un partenaire, cela signifie que les problèmes avec le connecteur peuvent avoir à être résolus par l’équipe du partenaire (méthode de contact fournie dans la note de la page de documentation). Pour tout problème concernant les connecteurs créés et gérés par Adobe, contactez votre représentant Adobe ou l’assistance clientèle.
 
 ## Types de sources
 

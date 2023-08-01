@@ -1,11 +1,11 @@
 ---
-title: (Version bêta) Bureau commercial - Connexion CRM
+title: (Version bêta) Le bureau de commerce - connexion CRM
 description: Activez les profils dans votre compte de bureau Commerce pour le ciblage et la suppression des audiences en fonction des données CRM.
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
 workflow-type: tm+mt
-source-wordcount: '1076'
+source-wordcount: '1081'
 ht-degree: 19%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 19%
 >* Si vos données proviennent de l’UE, utilisez la destination **[!DNL The Trade Desk - CRM (EU)]**.
 >* Si vos données proviennent des régions APAC ou NAMER, utilisez la destination **[!DNL The Trade Desk - CRM (NAMER & APAC)]**.
 >
->Les deux destinations en Experience Platform sont actuellement en version bêta. Cette page de documentation a été créée par la fonction *[!DNL Trade Desk]* l&#39;équipe. Pour toute question ou demande de mise à jour, veuillez contacter votre [!DNL Trade Desk] représentative, la documentation et la fonctionnalité peuvent être modifiées.
+>Les deux destinations en Experience Platform sont actuellement en version bêta. Cette page de documentation et de connecteur de destination est créée et conservée par *[!DNL Trade Desk]* l&#39;équipe. Pour toute question ou demande de mise à jour, veuillez contacter votre [!DNL Trade Desk] représentative, la documentation et la fonctionnalité peuvent faire l’objet de modifications.
 
 ## Vue d’ensemble {#overview}
 
@@ -34,7 +34,7 @@ Ce document est conçu pour vous aider à activer les profils dans votre [!DNL T
 
 ## Conditions préalables {#prerequisites}
 
-Avant d’activer des audiences vers [!DNL The Trade Desk], vous devez contacter votre [!DNL The Trade Desk] gestionnaire de compte pour signer le contrat d’intégration CRM. [!DNL The Trade Desk] donnera ensuite l’autorisation et partagera votre identifiant publicitaire pour configurer votre destination.
+Avant d’activer des audiences vers [!DNL The Trade Desk], vous devez contacter [!DNL The Trade Desk] gestionnaire de compte pour signer le contrat d’intégration CRM. [!DNL The Trade Desk] donnera ensuite l’autorisation et partagera votre identifiant publicitaire pour configurer votre destination.
 
 ## Exigences de correspondance des identifiants {#id-matching-requirements}
 
@@ -61,7 +61,7 @@ Pour en savoir plus sur l’ingestion d’adresses électroniques en Experience 
 
 Si vous choisissez de hacher vous-même les adresses électroniques, veillez à respecter les exigences suivantes :
 
-* Supprimez les espaces de début et de fin.
+* Supprimer les espaces de début et de fin.
 * Convertissez tous les caractères ASCII en minuscules.
 * Dans `gmail.com` Supprimez les caractères suivants de la partie nom d’utilisateur de l’adresse électronique :
    * Le point (. (Code ASCII 46). Par exemple, normaliser `jane.doe@gmail.com` to `janedoe@gmail.com`.
@@ -88,10 +88,10 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 Avant de pouvoir envoyer ou activer des données d’audience vers une destination, vous devez configurer une connexion à votre propre plateforme de destination. Pendant la [configuration](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=fr) de cette destination, vous devez fournir les informations suivantes :
 
-* **[!UICONTROL Type de compte]**: Veuillez choisir la **[!UICONTROL Compte existant]** .
+* **[!UICONTROL Type de compte]**: choisissez la variable **[!UICONTROL Compte existant]** .
 * **[!UICONTROL Nom]** : un nom par lequel vous reconnaîtrez cette destination à l’avenir.
 * **[!UICONTROL Description]** : une description qui vous aidera à identifier cette destination à l’avenir.
-* **[!UICONTROL Identifiant publicitaire]**: your [!DNL Trade Desk Advertiser ID], qui peut être partagé par votre [!DNL Trade Desk] Gestionnaire de compte ou sous [!DNL Advertiser Preferences] dans le [!DNL Trade Desk] Interface utilisateur.
+* **[!UICONTROL Identifiant publicitaire]**: votre [!DNL Trade Desk Advertiser ID], qui peut être partagé par votre [!DNL Trade Desk] Gestionnaire de compte ou sous [!DNL Advertiser Preferences] dans le [!DNL Trade Desk] Interface utilisateur.
 
 ![Capture d’écran de l’interface utilisateur de Platform montrant comment remplir les détails de destination.](/help/destinations/assets/catalog/advertising/tradedesk/configuredestination2.png)
 
@@ -123,8 +123,8 @@ Vous trouverez ci-dessous un exemple de mappage d’identité correct lors de l�
 
 Sélection des champs sources :
 
-* Sélectionnez la `Email` espace de noms ou attribut comme identité source si vous utilisez l’adresse électronique brute lors de l’ingestion des données.
-* Sélectionnez la `Email_LC_SHA256` espace de noms ou attribut comme identité source si vous avez haché des adresses électroniques client lors de l’ingestion de données dans Platform.
+* Sélectionnez la variable `Email` espace de noms ou attribut comme identité source si vous utilisez l’adresse électronique brute lors de l’ingestion des données.
+* Sélectionnez la variable `Email_LC_SHA256` espace de noms ou attribut comme identité source si vous avez haché des adresses électroniques client lors de l’ingestion de données dans Platform.
 
 Sélection des champs cibles :
 
@@ -133,7 +133,7 @@ Sélection des champs cibles :
 
 ## Validation de l’exportation des données {#validate}
 
-Pour vérifier que les données sont correctement exportées depuis l’Experience Platform et vers [!DNL The Trade Desk], recherchez les audiences sous la mosaïque de données Adobe 1PD dans [!DNL The Trade Desk] Plateforme de gestion des données (DMP). Vous trouverez ci-dessous les étapes à suivre pour trouver l’identifiant correspondant dans la variable [!DNL Trade Desk] Interface utilisateur :
+Pour vérifier que les données sont correctement exportées depuis l’Experience Platform et vers [!DNL The Trade Desk], recherchez les audiences sous la mosaïque de données Adobe 1PD dans [!DNL The Trade Desk] Data Management Platform (DMP). Vous trouverez ci-dessous les étapes à suivre pour trouver l’identifiant correspondant dans la variable [!DNL Trade Desk] Interface utilisateur :
 
 1. Tout d’abord, cliquez sur le **[!UICONTROL Données]** Onglet et révision **[!UICONTROL Premier niveau]**.
 2. Faites défiler la page vers le bas, sous **[!UICONTROL Données importées]**, vous trouverez la variable **[!UICONTROL Mosaïque Adobe 1PD]**.
