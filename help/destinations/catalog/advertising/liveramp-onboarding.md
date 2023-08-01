@@ -3,10 +3,10 @@ title: LiveRamp - Connexion à l’intégration
 description: Découvrez comment utiliser le connecteur LiveRamp pour intégrer des audiences d’Adobe Real-time Customer Data Platform vers LiveRamp Connect.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: b8ce7ec2-7af9-4d26-b12f-d38c85ba488a
-source-git-commit: 3090b8a8eade564190dc32142c3fc71701007337
+source-git-commit: 5da570aaa0c6a8972d1c3d2c5b3bec9e733c1851
 workflow-type: tm+mt
-source-wordcount: '1868'
-ht-degree: 69%
+source-wordcount: '1830'
+ht-degree: 70%
 
 ---
 
@@ -36,9 +36,9 @@ Avant d’envoyer des données d’Experience Platform vers [!DNL LiveRamp - On
 
 Cette section décrit toutes les audiences que vous pouvez exporter vers cette destination.
 
-Toutes les destinations prennent en charge l’activation des audiences générées par l’Experience Platform [Segmentation Service](../../../segmentation/home.md).
+Cette destination prend en charge l’activation des audiences générées par l’Experience Platform. [Segmentation Service](../../../segmentation/home.md).
 
-En outre, cette destination prend également en charge l’activation des audiences décrites dans le tableau ci-dessous.
+En outre, cette destination prend également en charge l’activation des audiences supplémentaires décrites dans le tableau ci-dessous.
 
 | Type d’audience | Description |
 ---------|----------|
@@ -129,13 +129,8 @@ Lecture [Activation des données d’audience vers des destinations d’exportat
 
 Dans le [!UICONTROL Planification] créez un planning d&#39;export pour chaque audience, avec les paramètres ci-dessous.
 
->[!IMPORTANT]
->
->Toutes les audiences activées vers cette destination doivent être configurées selon le même planning, comme illustré ci-dessous.
-
 * **[!UICONTROL Options d’exportation de fichiers]** : [!UICONTROL Exporter des fichiers complets]. Les [exportations de fichiers incrémentiels](../../ui/activate-batch-profile-destinations.md#export-incremental-files) ne sont actuellement pas prises en charge pour la destination [!DNL LiveRamp].
 * **[!UICONTROL Fréquence]** : [!UICONTROL quotidiennement]
-* Définissez l’heure d’exportation sur **[!UICONTROL Après l’évaluation du segment]**. Exports d’audience planifiés et [Exports de fichiers à la demande](../../ui/export-file-now.md) ne sont actuellement pas pris en charge pour le [!DNL LiveRamp] destination.
 * **[!UICONTROL Date]** : sélectionnez les heures de début et de fin de l’exportation comme vous le souhaitez.
 
 ![Capture d’écran de l’interface utilisateur de Platform montrant l’étape de planification de l’audience.](../../assets/catalog/advertising/liveramp-onboarding/liveramp_scheduling_screenshot.png)
