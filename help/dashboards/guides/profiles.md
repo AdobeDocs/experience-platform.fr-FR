@@ -4,10 +4,10 @@ title: Guide du tableau de bord Profils
 description: Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur les données Real-time Customer Profile de votre entreprise.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: c558ee6cc1c7ae36f87aaff5d40be57cfb21b2e4
+source-git-commit: 29c93c178a1f6247b61c663e87dbb0e5b95d318e
 workflow-type: tm+mt
-source-wordcount: '3393'
-ht-degree: 82%
+source-wordcount: '3520'
+ht-degree: 64%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 82%
 
 L’interface utilisateur d’Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur vos données [!DNL Real-Time Customer Profile], présentées ainsi lors d’un instantané quotidien. Ce guide explique comment accéder au tableau de bord Profils et l’utiliser dans l’interface utilisateur. Il fournit également des informations sur les mesures affichées dans le tableau de bord.
 
-Pour une présentation de toutes les fonctionnalités de profil de l’interface utilisateur de l’Experience Platform, reportez-vous à la section [Guide de l’interface utilisateur de Real-Time Customer Profile](../../profile/ui/user-guide.md).
+Voir [Guide de l’interface utilisateur de Real-Time Customer Profile](../../profile/ui/user-guide.md) pour une présentation des fonctionnalités de profil dans l’interface utilisateur de l’Experience Platform.
 
 ## Données du tableau de bord Profils
 
@@ -39,9 +39,9 @@ Pour accéder au tableau de bord Profils dans l’interface utilisateur de Platf
 
 ### Modifier le tableau de bord Profils
 
-Vous pouvez modifier l’aspect du tableau de bord Profils en sélectionnant **[!UICONTROL Modifier le tableau de bord]**. Cela vous permet de déplacer, d’ajouter et de supprimer des widgets du tableau de bord, ainsi que d’accéder à la **[!UICONTROL Bibliothèque de widgets]** pour explorer les widgets disponibles et créer des widgets personnalisés pour votre organisation.
+Vous pouvez modifier l’aspect du tableau de bord Profils en sélectionnant **[!UICONTROL Modifier le tableau de bord]**. Vous pouvez déplacer, ajouter, redimensionner et supprimer des widgets du tableau de bord, ainsi que d’accéder au **[!UICONTROL Bibliothèque de widgets]** pour explorer les widgets disponibles et créer des widgets personnalisés pour votre organisation.
 
-Reportez-vous à la documentation sur la [modification des tableaux de bord](../customize/modify.md) et à la [Présentation de la bibliothèque de widgets](../customize/widget-library.md) pour en savoir plus.
+Pour en savoir plus, voir la section [modification des tableaux de bord](../customize/modify.md) et [Présentation de la bibliothèque de widgets](../customize/widget-library.md) la documentation.
 
 ### Ajouter des widgets {#add-widget}
 
@@ -69,7 +69,7 @@ The layout of this dashboard is also customizable by selecting [**[!UICONTROL Mo
 
 L’onglet [!UICONTROL Parcourir] vous permet de rechercher et d’afficher les profils en lecture seule ingérés dans votre organisation. Vous y trouverez des informations importantes appartenant au profil concernant leurs préférences, les événements passés, les interactions et les audiences.
 
-Pour en savoir plus sur les fonctionnalités d’affichage des profils fournies dans l’interface utilisateur de Platform, consultez la documentation sur la [navigation dans les profils dans Adobe Real-time Customer Data Platform](../../rtcdp/profile/profile-browse.md).
+Pour en savoir plus sur les fonctionnalités d’affichage des profils fournies dans l’interface utilisateur de Platform, consultez la documentation sur [navigation dans les profils dans Adobe Real-time Customer Data Platform](../../rtcdp/profile/profile-browse.md).
 
 ## Politiques de fusion {#merge-policies}
 
@@ -77,7 +77,7 @@ Les mesures affichées dans le tableau de bord Profils reposent sur les stratég
 
 Pour plus d’informations sur les politiques de fusion, notamment sur la création, la modification et la déclaration d’une politique de fusion par défaut pour votre organisation, reportez-vous à la [présentation des politiques de fusion](../../profile/merge-policies/overview.md).
 
-Le tableau de bord sélectionne automatiquement une politique de fusion à utiliser. La politique de fusion appliquée peut être modifiée à l’aide du menu déroulant à côté du nom de la politique de fusion.
+Le tableau de bord sélectionne automatiquement une stratégie de fusion à utiliser. La politique de fusion appliquée peut être modifiée à l’aide du menu déroulant à côté du nom de la politique de fusion.
 
 >[!NOTE]
 >
@@ -91,7 +91,7 @@ Le tableau de bord [!UICONTROL Schéma d’union] affiche le schéma d’union p
 
 Les schémas d’union sont composés de plusieurs schémas qui partagent la même classe et qui ont été activés pour Profile. Ils vous permettent de voir en une seule vue, une fusion de chaque champ contenu dans chaque schéma qui partage la même classe.
 
-Consultez le guide de l’interface utilisateur du schéma d’union pour en savoir plus sur l’[affichage des schémas d’union dans l’interface utilisateur de Platform](../../profile/ui/union-schema.md#view-union-schemas).
+Pour en savoir plus sur [affichage des schémas d’union dans l’interface utilisateur de Platform](../../profile/ui/union-schema.md#view-union-schemas), reportez-vous au guide de l’interface utilisateur du schéma d’union.
 
 ## Widgets et mesures
 
@@ -101,9 +101,23 @@ La date et l’heure de l’instantané le plus récent s’affichent en haut de
 
 ![Onglet Aperçu du tableau de bord Profils avec la date et l’heure de l’instantané le plus récent en surbrillance.](../images/profiles/snapshot-timestamp.png)
 
+## Widgets par défaut {#default-widgets}
+
+Un chargement de widget par défaut est fourni pour toutes les nouvelles instances de Adobe Experience Platform qui mettent en évidence les dernières informations disponibles à partir de vos données. Les widgets suivants sont préconfigurés dans l’affichage des segments dès le départ. Vous trouverez ci-dessous des détails complets sur l’objectif et la fonction des widgets.
+
+* [[!UICONTROL Nombre de profils]](#profile-count)
+* [[!UICONTROL Modification du nombre de profils]](#profile-count-change)
+* [[!UICONTROL Tendance de modification du nombre de profils]](#profiles-count-change-trend)
+* [[!UICONTROL Profils par identité]](#profiles-by-identity)
+* [[!UICONTROL Chevauchement des identités]](#identity-overlap)
+
+>[!NOTE]
+>
+>Depuis le 26 juillet 2023, la variable [!UICONTROL Profils], [!UICONTROL Audiences], et [!UICONTROL Destinations] Les tableaux de bord Aperçu ont été réinitialisés à un nouveau chargement de widget par défaut pour tous les utilisateurs qui n’ont pas modifié leurs vues au cours des six derniers mois. Reportez-vous à la documentation du [Destinations](./destinations.md#default-widgets) et [Audiences](./audiences.md#default-widgets) sections de widget par défaut pour plus d’informations sur les widgets qui sont inclus dans les chargements de widgets par défaut. Vous pouvez continuer à personnaliser vos widgets de tableau de bord comme auparavant.
+
 ## Widgets standard {#standard-widgets}
 
-Adobe fournit plusieurs widgets standards que vous pouvez utiliser pour visualiser différentes mesures liées à vos données de profil. Vous pouvez également créer des widgets personnalisés à partager avec votre organisation à l’aide de la [!UICONTROL Bibliothèque de widgets]. Pour en savoir plus sur la création de widgets personnalisés, commencez par lire la [Présentation de la bibliothèque de widgets](../customize/widget-library.md).
+Adobe fournit plusieurs widgets standards que vous pouvez utiliser pour visualiser différentes mesures liées à vos données de profil. Vous pouvez également créer des widgets personnalisés à partager avec votre organisation à l’aide de la [!UICONTROL Bibliothèque de widgets]. Pour en savoir plus sur la création de widgets personnalisés, commencez par lire le [Présentation de la bibliothèque de widgets](../customize/widget-library.md).
 
 Pour en savoir plus sur chacun des widgets standards disponibles, sélectionnez le nom d’un widget dans la liste suivante :
 
@@ -138,7 +152,7 @@ Pour en savoir plus, consultez la [section sur les politiques de fusion plus hau
 
 >[!NOTE]
 >
->Le widget [!UICONTROL Nombre de profils] peut afficher un nombre différent du nombre de profils affiché dans l’onglet [!UICONTROL Parcourir] dans la section [!UICONTROL Profils] de l’interface utilisateur pour plusieurs raisons. La raison la plus courante est que l’onglet [!UICONTROL Parcourir] référence le nombre total de profils fusionnés en fonction de la politique de fusion par défaut de votre organisation, tandis que le widget [!UICONTROL Nombre de profils] référence le nombre total de profils fusionnés en fonction de la politique de fusion que vous avez sélectionnée pour afficher dans le tableau de bord.
+>Le widget [!UICONTROL Nombre de profils] peut afficher un nombre différent du nombre de profils affiché dans l’onglet [!UICONTROL Parcourir] dans la section [!UICONTROL Profils] de l’interface utilisateur pour plusieurs raisons. La raison la plus courante de cette différence est que la variable [!UICONTROL Parcourir] L’onglet référence le nombre total de profils fusionnés en fonction de la stratégie de fusion par défaut de votre organisation, tandis que la variable [!UICONTROL Nombre de profils] Le widget référence le nombre total de profils fusionnés en fonction de la stratégie de fusion que vous avez sélectionnée pour afficher dans le tableau de bord.
 >
 >Une autre raison courante est due aux différences entre le moment où l’instantané du tableau de bord est pris et le moment où l’exemple de tâche est exécuté pour l’onglet [!UICONTROL Parcourir]. Vous pouvez voir quand le widget [!UICONTROL Nombre de profils] a été mis à jour pour la dernière fois en regardant la date et l’heure sur le widget. Pour en savoir plus sur la manière dont l’exemple de tâche est déclenché sur la page [!UICONTROL Parcourir] , voir [section sur le nombre de profils dans le guide de l’interface utilisateur de Real-time Customer Profile](https://experienceleague.adobe.com/docs/experience-platform/profile/ui/user-guide.html?lang=fr#profile-count).
 
@@ -146,7 +160,7 @@ Pour en savoir plus, consultez la [section sur les politiques de fusion plus hau
 
 ### [!UICONTROL Tendance du nombre de profils] {#profile-count-trend}
 
-Le widget [!UICONTROL Tendance du nombre de profils] utilise un graphique linéaire pour illustrer la tendance du nombre total de profils contenus dans le système au fil du temps. Ce nombre total inclut tous les profils importés dans le système depuis le dernier instantané quotidien. Les données peuvent être consultées sur des périodes de 30 jours, 90 jours et 12 mois. La période est sélectionnée dans un menu déroulant du widget.
+Le widget [!UICONTROL Tendance du nombre de profils] utilise un graphique linéaire pour illustrer la tendance du nombre total de profils contenus dans le système au fil du temps. Ce nombre total inclut tous les profils importés dans le système depuis le dernier instantané quotidien. Les données peuvent être visualisées sur des périodes de 30 jours, 90 jours et 12 mois. La période est sélectionnée dans un menu déroulant du widget.
 
 ![Le widget Tendance du nombre de profils.](../images/profiles/profile-count-trend.png)
 
@@ -161,7 +175,7 @@ Le widget **[!UICONTROL Modification du nombre de profils]** affiche le nombre d
 
 >[!NOTE]
 >
->Le widget [!UICONTROL Modification du nombre de profils] reflète le nombre de profils ajoutés **après** la configuration initiale de l’ingestion des profils et de la banque de profils. En d’autres termes, si votre organisation a configuré la banque de profils et ingéré 4 000 000 profils au jour 1, le tableau de bord sera disponible dans les 24 heures, mais le widget [!UICONTROL Modification du nombre de profils] sera défini sur 0. Cela permet d’éviter un pic associé à l’ingestion initiale des profils dans le système. Au cours des 30 prochains jours, votre organisation ingèrera 1 000 000 profils supplémentaires dans la banque de profils. Une fois l’instantané suivant pris, le widget [!UICONTROL Modification du nombre de profils] affiche un total de 1 000 000 profils ajoutés, tandis que le widget [!UICONTROL Nombre de profils] affiche un total de 5 000 000 profils.
+>Le widget [!UICONTROL Modification du nombre de profils] reflète le nombre de profils ajoutés **après** la configuration initiale de l’ingestion des profils et de la banque de profils. En d’autres termes, si votre organisation a configuré la banque de profils et ingéré 4 000 000 profils au jour 1, le tableau de bord sera disponible dans les 24 heures, mais le widget [!UICONTROL Modification du nombre de profils] sera défini sur 0. Cette méthode de comptage est effectuée pour éviter un pic associé à l’ingestion initiale des profils dans le système. Au cours des 30 prochains jours, votre organisation ingèrera 1 000 000 profils supplémentaires dans la banque de profils. Une fois l’instantané suivant pris, le widget [!UICONTROL Modification du nombre de profils] affiche un total de 1 000 000 profils ajoutés, tandis que le widget [!UICONTROL Nombre de profils] affiche un total de 5 000 000 profils.
 
 ![Le tableau de bord Profils de l’interface utilisateur de Platform avec le widget Modification du nombre de profils mis en surbrillance.](../images/profiles/profile-count-change.png)
 
@@ -174,9 +188,9 @@ Le widget **[!UICONTROL Modification du nombre de profils]** affiche le nombre d
 
 Le widget **[!UICONTROL Tendance de modification du nombre de profils]** affiche le nombre total de profils fusionnés qui ont été ajoutés quotidiennement à la banque de profils au cours des 30 derniers jours, des 90 derniers jours, ou des 12 derniers mois. Ce nombre est mis à jour chaque jour lorsque l’instantané est pris. Par conséquent, si vous deviez ingérer des profils dans Platform, le nombre de profils ne serait pas reflété tant que l’instantané suivant n’aurait pas été pris. Le nombre de profils ajoutés est le résultat de l’application de la politique de fusion sélectionnée à vos données de profil afin de fusionner les fragments de profil pour former un seul profil pour chaque individu.
 
-Pour en savoir plus, consultez la [section sur les politiques de fusion plus haut dans ce document](#merge-policies).
+Pour en savoir plus, voir la section [section sur les stratégies de fusion plus tôt dans ce document](#merge-policies).
 
-Le widget **[!UICONTROL Tendance de modification du nombre de profils]** affiche un bouton « légendes » en haut à droite du widget. Sélectionnez **[!UICONTROL Légendes]** pour ouvrir la boîte de dialogue des légendes automatiques.
+Le widget **[!UICONTROL Tendance de modification du nombre de profils]** affiche un bouton « légendes » en haut à droite du widget. Pour ouvrir la boîte de dialogue de sous-titres automatiques, sélectionnez **[!UICONTROL Sous-titres]**.
 
 ![L’onglet Aperçu du profil affiche le widget Tendance de modification du nombre de profils avec le bouton Légendes en surbrillance.](../images/profiles/profiles-count-change-trend-captions.png)
 
@@ -188,7 +202,7 @@ Un modèle de machine learning génère automatiquement des légendes pour décr
 
 <!-- This widget uses a line graph to illustrate the change in number of profiles filtered by a chosen source identity and merge policy. -->
 
-Ce widget filtre le nombre de profils en fonction d’une identité source sélectionnée et d’une politique de fusion, puis illustre la modification du nombre pour diverses périodes à l’aide d’un graphique linéaire. La politique de fusion est sélectionnée dans la liste déroulante d’aperçu située en haut de la page. L’identité source et la période sont sélectionnées dans les menus déroulants du widget. La tendance peut être visualisée sur des périodes de 30 jours, 90 jours et 12 mois.
+Ce widget filtre le nombre de profils en fonction d’une identité source sélectionnée et fusionne la stratégie, puis illustre le changement de nombre pour différentes périodes à l’aide d’un graphique linéaire. La stratégie de fusion est sélectionnée dans la liste déroulante d’aperçu en haut de la page, l’identité source et la période sont sélectionnées dans les menus déroulants du widget. La tendance peut être visualisée sur des périodes de 30 jours, 90 jours et 12 mois.
 
 Ce widget vous permet de gérer vos besoins d’activation de destination en présentant le modèle de croissance des profils filtrés selon l’identité requise.
 
@@ -201,19 +215,19 @@ Ce widget vous permet de gérer vos besoins d’activation de destination en pr�
 >title="Profils par identité"
 >abstract="Ce widget affiche la répartition de tous les profils fusionnés dans votre banque de profils par identités."
 
-Le widget **[!UICONTROL Profils par identité]** affiche la répartition des identités pour tous les profils fusionnés de votre banque de profils. Le nombre total de profils par identité (c’est-à-dire en additionnant les valeurs affichées pour chaque espace de noms) peut être supérieur au nombre total de profils fusionnés, car plusieurs espaces de noms peuvent être associés à un profil. Par exemple, si un client interagit avec votre marque sur plusieurs canaux, plusieurs espaces de noms seront associés à ce client individuel.
+Le widget **[!UICONTROL Profils par identité]** affiche la répartition des identités pour tous les profils fusionnés de votre banque de profils. Le nombre total de profils par identité (c’est-à-dire en additionnant les valeurs affichées pour chaque espace de noms) peut être supérieur au nombre total de profils fusionnés, car plusieurs espaces de noms peuvent être associés à un profil. Par exemple, si un client interagit avec votre marque sur plusieurs canaux, plusieurs espaces de noms sont associés à ce client individuel.
 
-Pour en savoir plus, consultez la [section sur les politiques de fusion plus haut dans ce document](#merge-policies).
+Pour en savoir plus, voir la section [section sur les stratégies de fusion plus tôt dans ce document](#merge-policies).
 
 ![Le tableau de bord d’aperçu des profils avec le widget Profils par identité mis en surbrillance.](../images/profiles/profiles-by-identity.png)
 
-Sélectionnez **[!UICONTROL Légendes]** pour ouvrir la boîte de dialogue des légendes automatiques.
+Pour ouvrir la boîte de dialogue de sous-titres automatiques, sélectionnez **[!UICONTROL Sous-titres]**.
 
 ![La boîte de dialogue des légendes des profils par identité.](../images/profiles/profiles-by-identity-captions.png)
 
 Un modèle de machine learning génère automatiquement des informations sur les données en analysant la distribution globale et les dimensions clés des données.
 
-Pour en savoir plus sur les identités, consultez la [documentation du Service d’identités Adobe Experience Platform](../../identity-service/home.md).
+Pour en savoir plus sur les identités, reportez-vous au [Documentation du service Adobe Experience Platform Identity](../../identity-service/home.md).
 
 ### [!UICONTROL Chevauchement des identités] {#identity-overlap}
 
@@ -224,11 +238,11 @@ Pour en savoir plus sur les identités, consultez la [documentation du Service d
 
 Le widget **[!UICONTROL Chevauchement des identités]** utilise un diagramme de Venn, ou un diagramme logique, pour afficher le chevauchement des profils de votre banque de profils qui contiennent les deux identités sélectionnées.
 
-Utilisez les menus déroulants du widget pour sélectionner les identités à comparer. Les cercles affichent le nombre total relatif de profils qui contiennent chaque identité. Le nombre de profils contenant les deux identités est représenté par la taille du chevauchement entre les cercles. Si un(e) client(e) interagit avec votre marque sur plusieurs canaux, plusieurs identités seront associées à ce(tte) client(e) individuel(le). Par conséquent, il est probable que votre organisation dispose de plusieurs profils contenant des fragments provenant de plusieurs identités.
+Utilisez les menus déroulants du widget pour sélectionner les identités à comparer. Les cercles affichent le nombre total relatif de profils qui contiennent chaque identité. Le nombre de profils contenant les deux identités est représenté par la taille du chevauchement entre les cercles. Si un client interagit avec votre marque sur plusieurs canaux, plusieurs identités sont associées à ce client individuel. Dans ce cas, il est probable que votre organisation dispose de plusieurs profils contenant des fragments provenant de plusieurs identités.
 
-Pour plus d&#39;informations sur les fragments de profil, consultez la section sur [fragments de profil par rapport aux profils fusionnés](https://experienceleague.adobe.com/docs/experience-platform/profile/home.html?lang=fr#profile-fragments-vs-merged-profiles) dans la présentation de Real-time Customer Profile.
+Pour plus d&#39;informations sur les fragments de profil, consultez la section sur [fragments de profil par rapport aux profils fusionnés](../../profile/home.md#profile-fragments-vs-merged-profiles) dans la présentation de Real-time Customer Profile.
 
-Pour en savoir plus sur les identités, consultez la [documentation du Service d’identités Adobe Experience Platform](../../identity-service/home.md).
+Pour en savoir plus sur les identités, reportez-vous au [Documentation du service Adobe Experience Platform Identity](../../identity-service/home.md).
 
 ![Le tableau de bord Profils présente un aperçu du widget de chevauchement des identités mis en surbrillance.](../images/profiles/identity-overlap.png)
 
@@ -247,7 +261,7 @@ Le widget [!UICONTROL Profils à identité unique] fournit un nombre des profils
 
 Ce widget utilise un graphique à barres pour illustrer le nombre total de profils qui sont identifiés à l’aide d’un identifiant unique. Le widget prend en charge jusqu’à cinq des identités les plus courantes.
 
-Pointez sur des barres individuelles pour afficher une boîte de dialogue détaillant le nombre total de profils pour une identité.
+Pour afficher une boîte de dialogue détaillant le nombre total de profils pour une identité, placez le curseur sur des barres individuelles.
 
 ![Widget Profils d’identité unique par identité.](../images/profiles/single-identity-profiles-by-identity.png)
 
@@ -294,7 +308,7 @@ The [!UICONTROL Unsegmented Profiles by Identity] widget categorizes the total n
 
 Ce widget fournit le nombre total d’audiences prêtes à être activées, en fonction de la stratégie de fusion choisie appliquée aux données de votre profil.
 
-Sélectionnez **[!UICONTROL Audiences]** pour accéder à l’onglet [!UICONTROL Parcourir] du tableau de bord [!UICONTROL Segments]. De là, vous pouvez voir une liste de toutes les définitions de segment pour votre organisation.
+Sélectionner **[!UICONTROL Audiences]** pour accéder au [!UICONTROL Audiences] tableau de bord [!UICONTROL Parcourir] . À partir de là, vous pouvez voir une liste de toutes les définitions de segment pour votre organisation.
 
 ![Widget Audiences.](../images/profiles/audiences.png)
 
@@ -303,7 +317,7 @@ Sélectionnez **[!UICONTROL Audiences]** pour accéder à l’onglet [!UICONTROL
 <!-- * [[!UICONTROL Audiences change trend]](#audiences-change-trend) -->
 <!-- ### [!UICONTROL Audiences change trend] {#audiences-change-trend}
 
-This line graph widget visualizes the change in the total number of audiences each day, trending over time. The change in the number of audiences is dependent on the selected merge policy being applied to your profile data. The period of analysis is selected from the widget dropdown menu. The bar chart can be visualized over 30 days, 90 days, and 12-month periods.  
+This line graph widget visualizes the change in the total number of audiences each day, trending over time. The change in the number of audiences is dependent on the selected merge policy being applied to your profile data. The period of analysis is selected from the widget dropdown menu. The bar chart can be visualized over 30 days, 90 days, and 12-month periods.
 
 The visualization allows you to monitor the overall health of audiences within Adobe Experience Platform by understanding trends in the growth or decline of the total number of audiences. -->
 
@@ -319,19 +333,19 @@ Sélectionnez **[!UICONTROL Afficher plus]** pour ouvrir une boîte de dialogue 
 
 ![Le widget Rapport de chevauchement des audiences avec l’option Afficher plus en surbrillance.](../images/profiles/profiles-audience-overlap-report.png)
 
-La boîte de dialogue [!UICONTROL Rapport de chevauchement des audiences] s’affiche. Cette boîte de dialogue peut contenir jusqu’à 50 lignes d’analyses de chevauchement des audiences, divisées en six colonnes. Sélectionnez l’icône des paramètres (![Icône des paramètres.](../images/profiles/settings-icon.png)) pour supprimer ou ajouter des colonnes du tableau.
+La boîte de dialogue [!UICONTROL Rapport de chevauchement des audiences] s’affiche. Cette boîte de dialogue peut contenir jusqu’à 50 lignes d’analyses de chevauchement des audiences, divisées en six colonnes. Pour supprimer ou ajouter des colonnes du tableau, sélectionnez l’icône de paramètres (![Icône Paramètres .](../images/profiles/settings-icon.png)).
 
 ![Boîte de dialogue Rapport de chevauchement des audiences.](../images/profiles/profiles-audience-overlap-report-dialog.png)
 
 >[!NOTE]
 >
->Sélectionnez l’en-tête de colonne **[!UICONTROL Chevauchement]** pour modifier le classement des résultats, du plus haut au plus bas ou du plus bas au plus haut.
+>Pour modifier le classement des résultats entre le plus haut au plus bas ou le plus bas au plus haut, sélectionnez la variable **[!UICONTROL Chevauchement]** en-tête de colonne.
 
 Pour télécharger l’intégralité du rapport au format PDF, sélectionnez le menu d’options (**`...`**), puis **[!UICONTROL Télécharger]**.
 
 ![La boîte de dialogue Rapport de chevauchement des audiences avec les points de suspension et l’option de téléchargement en surbrillance.](../images/profiles/profiles-audience-overlap-report-dialog-download.png)
 
-Sélectionnez une ligne dans le rapport pour ouvrir un diagramme de Venn de l’analyse de chevauchement. Passez la souris sur une section du diagramme de Venn pour afficher le nombre de profils dans une boîte de dialogue.
+Pour ouvrir un diagramme de Venn de l’analyse de chevauchement, sélectionnez une ligne dans le rapport. Pour afficher le nombre de profils dans une boîte de dialogue, passez la souris sur une section du diagramme de Venn.
 
 ![La boîte de dialogue Rapport de chevauchement des audiences avec un diagramme de Venn et une ligne en surbrillance.](../images/profiles/profiles-audience-overlap-report-dialog-venn.png)
 
@@ -436,4 +450,4 @@ The three levels of completeness are:
 
 ## Étapes suivantes
 
-En suivant ce document, vous devriez maintenant pouvoir localiser le tableau de bord des profils et comprendre les mesures affichées dans les widgets disponibles. Pour en savoir plus sur l’utilisation de [!DNL Profile] données de l’interface utilisateur de l’Experience Platform, reportez-vous à la section [Guide de l’interface utilisateur de Real-Time Customer Profile](../../profile/ui/user-guide.md).
+En suivant ce document, vous devriez maintenant pouvoir localiser le tableau de bord des profils et comprendre les mesures affichées dans les widgets disponibles. Pour en savoir plus sur l’utilisation de [!DNL Profile] données de l’interface utilisateur Experience Platform, voir [Guide de l’interface utilisateur de Real-Time Customer Profile](../../profile/ui/user-guide.md).

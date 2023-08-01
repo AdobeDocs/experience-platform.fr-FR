@@ -4,10 +4,10 @@ title: Guide du tableau de bord Audiences
 description: Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur les audiences que votre entreprise a créées.
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: f4f4deda02c96e567cbd0815783f192d1c54096c
+source-git-commit: d9ce17bbe17df175db30d283387d8fa569b97dee
 workflow-type: tm+mt
-source-wordcount: '2098'
-ht-degree: 50%
+source-wordcount: '2232'
+ht-degree: 48%
 
 ---
 
@@ -19,7 +19,7 @@ Pour obtenir un aperçu de toutes les fonctionnalités du service de segmentatio
 
 ## [!UICONTROL Audiences] données du tableau de bord
 
-Le [!UICONTROL Audiences] Le tableau de bord affiche un instantané des données d’attribut (enregistrement) dont votre organisation dispose dans la banque de profils dans Experience Platform. L’instantané n’inclut aucune donnée d’événement (série temporelle).
+La variable [!UICONTROL Audiences] Le tableau de bord affiche un instantané des données d’attribut (enregistrement) dont votre organisation dispose dans la banque de profils dans Experience Platform. L’instantané n’inclut aucune donnée d’événement (série temporelle).
 
 Les données de lʼinstantané montrent les données exactement comme elles apparaissent au moment précis où lʼinstantané a été pris. En d’autres termes, l’instantané n’est pas une approximation ou un échantillon des données, et la variable [!UICONTROL Audiences] Le tableau de bord n’est pas mis à jour en temps réel.
 
@@ -35,9 +35,9 @@ Pour accéder au [!UICONTROL Audiences] Tableau de bord dans l’interface utili
 >
 >Si votre entreprise est une nouvelle entreprise de Platform et qu’elle ne dispose pas encore de jeux de données Profile principaux ni de stratégies de fusion créés, la variable [!UICONTROL Audiences] tableau de bord n’est pas visible. Au lieu de cela, l’onglet [!UICONTROL Présentation] affiche des liens et de la documentation pour vous aider à démarrer avec la segmentation.
 
-![Le [!UICONTROL Audiences] tableau de bord [!UICONTROL Présentation] avec [!UICONTROL Audiences] et [!UICONTROL Présentation] surlignée.](../images/audiences/dashboard-overview.png)
+![La variable [!UICONTROL Audiences] tableau de bord [!UICONTROL Présentation] avec [!UICONTROL Audiences] et [!UICONTROL Présentation] surlignée.](../images/audiences/dashboard-overview.png)
 
-### Modifiez le [!UICONTROL Audiences] tableau de bord {#modify}
+### Modifiez la variable [!UICONTROL Audiences] tableau de bord {#modify}
 
 Vous pouvez modifier l’aspect de la variable [!UICONTROL Audiences] tableau de bord en sélectionnant **[!UICONTROL Modifier le tableau de bord]**. Cela vous permet de déplacer, d’ajouter et de supprimer des widgets du tableau de bord ainsi que d’accéder à la **[!UICONTROL Bibliothèque de widgets]** pour explorer les widgets disponibles et créer des widgets personnalisés pour votre organisation.
 
@@ -47,7 +47,7 @@ Reportez-vous à la section [Modification des tableaux de bord](../customize/mod
 
 Sélectionnez **[!UICONTROL Ajouter un widget]** pour accéder à la bibliothèque de widgets et voir la liste des widgets disponibles à ajouter à votre tableau de bord.
 
-![Le [!UICONTROL Audiences] présentation du tableau de bord avec [!UICONTROL Ajouter un widget] surlignée.](../images/audiences/audiences-overview-add-widget.png)
+![La variable [!UICONTROL Audiences] présentation du tableau de bord avec [!UICONTROL Ajouter un widget] surlignée.](../images/audiences/audiences-overview-add-widget.png)
 
 Dans la bibliothèque de widgets, vous pouvez parcourir la sélection de widgets d’audience standard et personnalisés. Pour plus d’informations sur l’ajout de widgets, consultez la documentation de la bibliothèque de widgets sur la manière d’[ajouter un widget](../customize/widget-library.md#add-widgets).
 
@@ -63,15 +63,29 @@ Pour choisir une autre audience, sélectionnez la liste déroulante en regard du
 
 ![Aperçu du tableau de bord Audiences avec le menu déroulant de l’audience globale en surbrillance.](../images/audiences/change-audience.png)
 
-![Le [!UICONTROL Sélection de l’audience] qui affiche toutes les audiences disponibles.](../images/audiences/select-audience-dialog.png)
+![La variable [!UICONTROL Sélection de l’audience] qui affiche toutes les audiences disponibles.](../images/audiences/select-audience-dialog.png)
 
 ## Widgets et mesures {#widgets-and-metrics}
 
-Le [!UICONTROL Audiences] Le tableau de bord est composé de widgets, qui sont des mesures en lecture seule fournissant des informations importantes sur votre audience sélectionnée.
+La variable [!UICONTROL Audiences] Le tableau de bord est composé de widgets, qui sont des mesures en lecture seule fournissant des informations importantes sur votre audience sélectionnée.
 
-La date et l’heure de l’instantané le plus récent sont affichées en haut de la [!UICONTROL Présentation] en regard de la liste déroulante audience. Toutes les données du widget sont exactes à cette date et cette heure. La date et l’heure de l’instantané sont fournies en UTC ; elles ne se trouvent pas dans le fuseau horaire de l’utilisateur/utilisatrice ou de l’organisation.
+La date et l’heure de l’instantané le plus récent sont affichées en haut de la [!UICONTROL Présentation] à côté de la liste déroulante audience. Toutes les données du widget sont exactes à cette date et cette heure. La date et l’heure de l’instantané sont fournies en UTC ; elles ne se trouvent pas dans le fuseau horaire de l’utilisateur/utilisatrice ou de l’organisation.
 
 ![Onglet Aperçu des audiences avec un horodatage de widget mis en surbrillance.](../images/audiences/widget-timestamp.png)
+
+## Widgets par défaut {#default-widgets}
+
+Un chargement de widget par défaut est fourni pour toutes les nouvelles instances de Adobe Experience Platform qui mettent en évidence les dernières informations disponibles à partir de vos données. Les widgets suivants sont préconfigurés dans l’affichage des segments dès le départ. Vous trouverez des détails complets sur l’objectif et la fonction des widgets dans leurs sections respectives.
+
+* [[!UICONTROL Taille de l’audience]](#audience-size)
+* [[!UICONTROL Tendance de changement de la taille de l’audience]](#audience-size-change-trend)
+* [[!UICONTROL Chevauchement des identités]](#identity-overlap)
+* [[!UICONTROL Profils par identité]](#profiles-by-identity)
+
+>[!NOTE]
+>
+>Depuis le 26 juillet 2023, [!UICONTROL Profils], [!UICONTROL Audiences], et [!UICONTROL Destinations] Les tableaux de bord Aperçu ont été réinitialisés à un nouveau chargement de widget par défaut pour tous les utilisateurs qui n’ont pas modifié leurs vues au cours des six derniers mois.
+>Reportez-vous à la documentation du [Profils](./profiles.md#default-widgets) et [Destinations](./destinations.md#default-widgets) sections de widget par défaut pour plus d’informations sur les widgets qui sont inclus dans les chargements de widgets par défaut. Vous pouvez continuer à personnaliser vos widgets de tableau de bord comme auparavant.
 
 ## Widgets standard {#standard-widgets}
 
@@ -97,11 +111,11 @@ Pour en savoir plus sur chacun des widgets standards disponibles, sélectionnez 
 >title="Taille de l’audience"
 >abstract="Ce widget affiche le nombre total de profils fusionnés dans l’audience sélectionnée. Ce nombre dépend de la politique de fusion appliquée à vos données et est correct au moment de l’instantané le plus récent."
 
-Le **[!UICONTROL Taille de l’audience]** widget affiche le nombre total de profils fusionnés dans l’audience sélectionnée au moment de la prise de vue instantanée. Ce nombre est le résultat de l’application de la stratégie de fusion d’audiences à vos données de profil pour fusionner des fragments de profil et former un seul profil pour chaque individu de l’audience.
+La variable **[!UICONTROL Taille de l’audience]** widget affiche le nombre total de profils fusionnés dans l’audience sélectionnée au moment de la prise de vue instantanée. Ce nombre est le résultat de l’application de la stratégie de fusion d’audiences à vos données de profil pour fusionner des fragments de profil et former un seul profil pour chaque individu de l’audience.
 
 Pour plus d&#39;informations sur les fragments et les profils fusionnés, reportez-vous à la section [Présentation de Real-Time Customer Profile](../../profile/home.md).
 
-![Le [!UICONTROL Audiences] présentation du tableau de bord avec la fonction [!UICONTROL Taille de l’audience] widget mis en surbrillance.](../images/audiences/audience-size.png)
+![La variable [!UICONTROL Audiences] présentation du tableau de bord avec la méthode [!UICONTROL Taille de l’audience] en surbrillance.](../images/audiences/audience-size.png)
 
 ### [!UICONTROL Tendance de la taille de l’audience] {#audience-size-trend}
 
@@ -110,11 +124,11 @@ Pour plus d&#39;informations sur les fragments et les profils fusionnés, report
 >title="Tendance de la taille de l’audience"
 >abstract="Ce widget fournit des informations sur le nombre total de profils qui répondent aux critères de **toute** définition de segment, telle qu’elle est capturée lors de l’instantané quotidien, pendant les derniers 30 jours, 90 jours ou 12 mois."
 
-Le **[!UICONTROL Tendance de la taille de l’audience]** Le widget fournit une représentation graphique linéaire pour le nombre total de profils à inclure **any** sur une période donnée. La tendance de la taille d’audience peut être visualisée sur des périodes de 30 jours, 90 jours et 12 mois. La période est sélectionnée dans un menu déroulant du widget. La taille de l’audience est représentée sur l’axe y et le temps est représenté sur l’axe x.
+La variable **[!UICONTROL Tendance de la taille de l’audience]** Le widget fournit une représentation graphique linéaire pour le nombre total de profils à inclure **any** sur une période donnée. La tendance de la taille d’audience peut être visualisée sur des périodes de 30 jours, 90 jours et 12 mois. La période est sélectionnée dans un menu déroulant du widget. La taille de l’audience est représentée sur l’axe y et le temps est représenté sur l’axe x.
 
 Ce widget inclut également le [!UICONTROL Sous-titres] fonction dans laquelle un modèle d’apprentissage automatique analyse les données de graphique et d’audience et génère automatiquement des sous-titres pour décrire les tendances clés et les événements importants. Sélectionnez **[!UICONTROL Légendes]** pour ouvrir la boîte de dialogue des légendes automatiques.
 
-![Le [!UICONTROL Audiences] La présentation affiche le widget de tendance de taille d’audience .](../images/audiences/audience-size-trend-captions.png)
+![La variable [!UICONTROL Audiences] La présentation affiche le widget de tendance de taille d’audience .](../images/audiences/audience-size-trend-captions.png)
 
 La boîte de dialogue de légendes automatique s’ouvre, vous permettant d’obtenir des informations sur vos données.
 
@@ -183,15 +197,15 @@ Sélectionner **[!UICONTROL Fermer]** pour revenir au [!UICONTROL Audiences] tab
 >title="Chevauchement des identités"
 >abstract="Ce widget affiche le chevauchement des profils de votre audience contenant les deux identités sélectionnées. Les cercles affichent la taille relative de chaque identité. Le nombre de profils contenant les deux espaces de noms est représenté par le chevauchement entre les cercles."
 
-Le **[!UICONTROL Superposition des identités]** ce widget affiche un diagramme de Venn, ou un diagramme de jeu, qui montre le chevauchement des profils de votre audience contenant plusieurs identités.
+La variable **[!UICONTROL Superposition des identités]** ce widget affiche un diagramme de Venn, ou un diagramme de jeu, qui montre le chevauchement des profils de votre audience contenant plusieurs identités.
 
 Utilisez les menus déroulants du widget pour sélectionner les identités à comparer. Les cercles affichent la taille relative de chaque identité choisie, le nombre de profils contenant les deux espaces de noms étant représenté par la taille du chevauchement entre les cercles.
 
-Si un client interagit avec votre marque sur plusieurs canaux, plusieurs identités seront associées à ce client individuel. Cela signifie qu’il est probable que votre organisation dispose de plusieurs profils contenant des fragments provenant de plusieurs identités.
+Si un client interagit avec votre marque sur plusieurs canaux, plusieurs identités seront associées à ce client individuel. Cette situation rend probable le fait que votre organisation comportera plusieurs profils contenant des fragments provenant de plusieurs identités.
 
-Pour en savoir plus sur les identités, rendez-vous sur la page [Documentation d’Identity Service](../../identity-service/home.md).
+Pour en savoir plus sur les identités, consultez la [Documentation d’Identity Service](../../identity-service/home.md).
 
-![Le [!UICONTROL Audiences] Présentation du tableau de bord avec le widget de chevauchement d’identités surligné.](../images/audiences/identity-overlap.png)
+![La variable [!UICONTROL Audiences] Présentation du tableau de bord avec le widget de chevauchement d’identités surligné.](../images/audiences/identity-overlap.png)
 
 ### [!UICONTROL Profils par identité] {#profiles-by-identity}
 
@@ -200,15 +214,15 @@ Pour en savoir plus sur les identités, rendez-vous sur la page [Documentation d
 >title="Profils par identité"
 >abstract="Ce widget affiche la répartition des identités pour chaque profil fusionné dans votre audience sélectionnée."
 
-Le **[!UICONTROL Profils par identité]** widget affiche la ventilation des identités pour chaque profil fusionné de l’audience sélectionnée. Le nombre total de profils par identité peut être supérieur au nombre total de profils dans l’audience, car plusieurs identités peuvent y être associées pour un profil. En d’autres termes, le fait de additionner les valeurs affichées pour chaque identité peut représenter un total supérieur à la taille totale de l’audience. En effet, si un client interagit avec votre marque sur plusieurs canaux, plusieurs identités peuvent être associées à ce client individuel.
+La variable **[!UICONTROL Profils par identité]** widget affiche la ventilation des identités pour chaque profil fusionné de l’audience sélectionnée. Le nombre total de profils par identité peut être supérieur au nombre total de profils dans l’audience, car plusieurs identités peuvent y être associées pour un profil. En d’autres termes, le fait de additionner les valeurs affichées pour chaque identité peut représenter un total supérieur à la taille totale de l’audience. En effet, si un client interagit avec votre marque sur plusieurs canaux, plusieurs identités peuvent être associées à ce client individuel.
 
 Sélectionnez **[!UICONTROL Légendes]** pour ouvrir la boîte de dialogue des légendes automatiques.
 
-![Le [!UICONTROL Audiences] Présentation du tableau de bord avec l’option Profils par widget d’identité et Légendes mise en surbrillance.](../images/audiences/profiles-by-identity.png)
+![La variable [!UICONTROL Audiences] Présentation du tableau de bord avec l’option Profils par widget d’identité et Légendes mise en surbrillance.](../images/audiences/profiles-by-identity.png)
 
 Un modèle de machine learning génère automatiquement des informations sur les données en analysant la distribution globale et les dimensions clés des données.
 
-Pour en savoir plus sur les identités, rendez-vous sur la page [Documentation d’Identity Service](../../identity-service/home.md).
+Pour en savoir plus sur les identités, consultez la [Documentation d’Identity Service](../../identity-service/home.md).
 
 ### Activations planifiées {#scheduled-activations}
 
@@ -220,4 +234,4 @@ Le widget vous permet de découvrir en un coup d’œil où et quand l’audienc
 
 ## Étapes suivantes
 
-En suivant ce document, vous devriez maintenant pouvoir localiser la variable [!UICONTROL Audiences] tableau de bord et sélectionnez l’audience à afficher. Vous devriez également comprendre désormais les mesures affichées dans les widgets disponibles. Pour en savoir plus sur l’utilisation des audiences dans l’interface utilisateur de l’Experience Platform, reportez-vous à la section [Guide de l’interface utilisateur de Segmentation Service](../../segmentation/ui/overview.md).
+En suivant ce document, vous devriez maintenant pouvoir localiser la variable [!UICONTROL Audiences] tableau de bord et sélectionnez l’audience à afficher. Vous devriez également comprendre désormais les mesures affichées dans les widgets disponibles. Pour en savoir plus sur l’utilisation des audiences dans l’interface utilisateur de l’Experience Platform, reportez-vous au [Guide de l’interface utilisateur de Segmentation Service](../../segmentation/ui/overview.md).

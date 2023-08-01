@@ -3,10 +3,10 @@ keywords: Experience Platform;interface utilisateur;UI;tableaux de bord;tableau
 title: Widgets de tableaux de bord standard
 description: Ce guide fournit des instructions détaillées sur l’ajout de widgets standard à vos tableaux de bord Adobe Experience Platform.
 exl-id: 37353e73-b207-444a-b2b5-a20a3628086b
-source-git-commit: 0391c15e959ab25604a70c163fa7a5ed53e78993
+source-git-commit: d9ce17bbe17df175db30d283387d8fa569b97dee
 workflow-type: tm+mt
-source-wordcount: '429'
-ht-degree: 93%
+source-wordcount: '508'
+ht-degree: 75%
 
 ---
 
@@ -14,7 +14,12 @@ ht-degree: 93%
 
 Adobe Experience Platform vous permet d’afficher les données de votre organisation et d’interagir avec elles à l’aide de plusieurs tableaux de bord. Vous pouvez également mettre à jour certains tableaux de bord en ajoutant de nouveaux widgets à l’affichage de votre tableau de bord. Adobe propose une sélection de widgets standard que vous pouvez ajouter à vos tableaux de bord.
 
-Ce guide fournit des instructions détaillées sur l’ajout de widgets standard pour personnaliser les tableaux de bord [!UICONTROL Profils], [!UICONTROL Segments] et [!UICONTROL Destinations] dans l’interface utilisateur de Platform.
+La variable [!UICONTROL Profils], [!UICONTROL Audiences], et [!UICONTROL Destinations] Les tableaux de bord comportent chacun un chargement de widget par défaut lors de la création d’une instance Platform. Ce guide fournit des instructions détaillées sur l’ajout de widgets standard pour personnaliser la variable [!UICONTROL Profils], [!UICONTROL Audiences], et [!UICONTROL Destinations] Tableaux de bord dans l’interface utilisateur de Platform.
+
+>[!NOTE]
+>
+>Depuis le 26 juillet 2023, [!UICONTROL Profils], [!UICONTROL Audiences], et [!UICONTROL Destinations] Les tableaux de bord Aperçu ont été réinitialisés à un nouveau chargement de widget par défaut pour tous les utilisateurs qui n’ont pas modifié leurs vues au cours des six derniers mois.
+>Reportez-vous à la documentation du [Profils](../guides/profiles.md#default-widgets), [Audiences](../guides/audiences.md#default-widgets), et [Destinations](../guides/destinations.md#default-widgets) sections de widget par défaut pour plus d’informations sur les widgets qui sont inclus dans les chargements de widgets par défaut.
 
 Pour en savoir plus sur les widgets personnalisés, consultez le guide de [création de widgets personnalisés](custom-widgets.md).
 
