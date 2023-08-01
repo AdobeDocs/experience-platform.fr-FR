@@ -2,10 +2,10 @@
 title: Notes de mise à jour de l’extension du SDK Web Adobe Experience Platform
 description: Extension de la balise SDK Web Adobe Experience Platform
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: 27bff79c38395e2c2366f9bd89101eb03fcd5608
 workflow-type: tm+mt
-source-wordcount: '1688'
-ht-degree: 99%
+source-wordcount: '1723'
+ht-degree: 98%
 
 ---
 
@@ -14,9 +14,20 @@ ht-degree: 99%
 
 Ce document contient les notes de mise à jour de l’extension de balises du SDK Web Adobe Experience Platform. Pour obtenir les dernières notes de mise à jour sur le SDK lui-même, voir les [notes de mise à jour du SDK Web Platform](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html?lang=fr).
 
-## Version 2.19.0 - 21 juin 2023
+## Version 2.20.0 - 31 juillet 2023
 
-* Le **[!UICONTROL Variable]** élément de données et **[!UICONTROL Mettre à jour la variable]** Les actions sont désormais disponibles en général.
+**Nouvelles fonctionnalités**
+
+* Ajout de la prise en charge de [remplacements par commande de l’identifiant de flux de données](../../../../datastreams/overrides.md).
+
+**Correctifs et améliorations**
+
+* Obsolète `edgeConfigId` en faveur `datastreamId` dans la configuration du SDK.
+* Plusieurs améliorations de l’expérience utilisateur pour la configuration du flux de données remplacent l’interface utilisateur.
+
+## Version 2.19.0 - 21 juin 2023
+
+* L’élément de données **[!UICONTROL Variable]** et les actions **[!UICONTROL Mettre à jour la variable]** sont désormais disponibles pour toutes les personnes utilisatrices.
 
 ## Version 2.18.0 - 18 mai 2023
 

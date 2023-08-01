@@ -3,10 +3,10 @@ title: Notes de mise à jour du SDK web d’Adobe Experience Platform
 description: Notes de mise à jour les plus récentes pour le SDK web d’Adobe Experience Platform.
 keywords: SDK web Adobe Experience Platform;SDK web Platform;SDK web;notes de mise à jour;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 5f2358c2e102c66a13746004ad73e2766e933705
+source-git-commit: 49624d51d6868fa951fe70b29715142b3cbad55b
 workflow-type: tm+mt
-source-wordcount: '1549'
-ht-degree: 100%
+source-wordcount: '1589'
+ht-degree: 97%
 
 ---
 
@@ -16,7 +16,18 @@ ht-degree: 100%
 Ce document présente les notes de mise à jour du SDK web d’Adobe Experience Platform.
 Pour obtenir les dernières notes de mise à jour sur l’extension de balise du SDK web, reportez-vous à la section [Notes de mise à jour de l’extension de balise du SDK web](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
 
-## Version 2.16.0 - 17 mai 2023
+## Version 2.18.0 - 31 juillet 2023
+
+**Nouvelles fonctionnalités**
+
+* Ajout de la prise en charge de [remplacements par commande de l’identifiant de flux de données](../datastreams/overrides.md).
+
+**Correctifs et améliorations**
+
+* Correction d’un problème en raison duquel les liens de sortie ne remplissaient pas les critères du fait que le domaine faisait partie de la requête.
+* Obsolète `edgeConfigId` en faveur `datastreamId` dans la configuration du SDK Web.
+
+## Version 2.17.0 - 17 mai 2023
 
 **Correctifs et améliorations**
 
