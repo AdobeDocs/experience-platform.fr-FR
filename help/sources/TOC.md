@@ -4,10 +4,10 @@ user-guide-title: Aide sur les connecteurs source d’Adobe Experience Platfor
 breadcrumb-title: Guide des connecteurs sources
 user-guide-description: Ingérez des données à partir de diverses sources. Découvrez comment structurer, étiqueter et améliorer les données déjà ingérées.
 feature: Sources
-source-git-commit: cb8fd7a7e3803c356adbdf0c20cde869c1de602c
+source-git-commit: 732693b34bf4425cd3a44fba5647d337588abfa0
 workflow-type: tm+mt
-source-wordcount: '990'
-ht-degree: 98%
+source-wordcount: '987'
+ht-degree: 99%
 
 ---
 
@@ -21,10 +21,9 @@ ht-degree: 98%
       - [Source Analytics](connectors/adobe-applications/analytics.md)
       - [Source Audience Manager](connectors/adobe-applications/audience-manager.md)
       - [Source Adobe Campaign Managed Cloud Services](connectors/adobe-applications/campaign.md)
-      - [Source Adobe Commerce](connectors/adobe-applications/commerce.md)
+      - [Source Adobe Commerce](connectors/adobe-applications/commerce.md)
       - [Source des attributs du client](connectors/adobe-applications/customer-attributes.md)
       - [Source de collecte de données](connectors/adobe-applications/data-collection.md)
-      - [Source Workfront](connectors/adobe-applications/workfront.md)
       - Mappages de champs {#mapping}
          - [Mappages de champs Analytics](connectors/adobe-applications/mapping/analytics.md)
          - [Mappages de champs Audience Manager](connectors/adobe-applications/mapping/audience-manager.md)
@@ -234,7 +233,6 @@ ht-degree: 98%
          - [Attributs du client](tutorials/ui/create/adobe-applications/customer-attributes.md)
          - [Marketo Engage](tutorials/ui/create/adobe-applications/marketo.md)
          - [Activités personnalisées Marketo](tutorials/ui/create/adobe-applications/marketo-custom-activities.md)
-         - [Workfront](tutorials/ui/create/adobe-applications/workfront.md)
       - Publicité {#advertising}
          - [Google Ads](tutorials/ui/create/advertising/ads.md)
          - [Pinterest Ads](tutorials/ui/create/advertising/pinterest-ads.md)

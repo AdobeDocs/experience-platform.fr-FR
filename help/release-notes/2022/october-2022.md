@@ -2,9 +2,9 @@
 title: Notes de mise à jour d’octobre 2022 d’Adobe Experience Platform
 description: Les notes de mise à jour d’octobre 2022 pour Adobe Experience Platform.
 exl-id: 61ef2472-5e79-433f-9f60-b1245f619b42
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: e1deeadb98240f885e9dc95ecbc58ae48049a190
 workflow-type: tm+mt
-source-wordcount: '1328'
+source-wordcount: '1159'
 ht-degree: 100%
 
 ---
@@ -18,7 +18,6 @@ ht-degree: 100%
 - [Destinations](#destinations)
 - [Modèle de données d’expérience](#xdm)
 - [Query Service](#query-service)
-- [Sources](#sources-sources)
 
 ## Clés gérées par le client {#cmk}
 
@@ -109,16 +108,3 @@ Query Service vous permet d’utiliser le langage SQL standard pour interroger l
 Pour plus d’informations sur Query Service, consultez la [présentation de Query Service](../../query-service/home.md).
 Nouvelles fonctionnalités d’Adobe Experience Platform :
 
-## Sources {#sources}
-
-Adobe Experience Platform peut ingérer des données à partir de sources externes tout en vous permettant de structurer, d’étiqueter et d’améliorer ces données à l’aide des services de Platform. Vous pouvez ingérer des données à partir de diverses sources telles que les applications Adobe, le stockage dans le cloud, des logiciels tiers et votre système de gestion de la relation client.
-
-Experience Platform fournit une API RESTful et une interface utilisateur interactive qui vous permet de configurer facilement des connexions source à différents fournisseurs de données. Ces connexions source vous permettent de vous authentifier et de vous connecter à des services de gestion de la relation client et à des systèmes de stockage externes, de définir des heures d’ingestion et de gérer le débit d’ingestion des données.
-
-**Fonctionnalités mises à jour**
-
-| Fonctionnalité | Description |
-| --- | --- | 
-| Disponibilité Beta de la source Adobe Workfront | Utilisez la [source Adobe Workfront](../../sources/connectors/adobe-applications/workfront.md) pour importer vos données Workfront dans Experience Platform et réaliser des cas d’utilisation, par exemple combiner vos enregistrements de travail avec des données tierces, appliquer des analyses d’historique et de série temporelle aux enregistrements de travail et interroger les données de travail à l’aide de SQL standard. Pour plus d’informations, consultez le guide sur la [création d’une connexion source Workfront dans l’interface utilisateur](../../sources/tutorials/ui/create/adobe-applications/workfront.md). |
-
-Pour en savoir plus sur les sources, lisez la [présentation des sources](../../sources/home.md).
