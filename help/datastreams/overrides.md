@@ -2,9 +2,9 @@
 title: Configurer les remplacements de train de données
 description: Découvrez comment configurer les remplacements de flux de données dans l’interface utilisateur des flux de données et les activer via le SDK Web.
 exl-id: 7829f411-acdc-49a1-a8fe-69834bcdb014
-source-git-commit: 32f36d96e3aa6beb72121adcc74f2da0bd2c9473
+source-git-commit: b0b53d9fcf410812eee3abdbbb6960d328fee99f
 workflow-type: tm+mt
-source-wordcount: '997'
+source-wordcount: '1231'
 ht-degree: 4%
 
 ---
@@ -25,6 +25,26 @@ Cet article explique le processus de remplacement de la configuration de flux de
 >[!IMPORTANT]
 >
 >Les remplacements de flux de données ne sont pris en charge que pour [SDK Web](../edge/home.md) intégrations. [SDK Mobile](https://developer.adobe.com/client-sdks/documentation/) et [API du serveur](../server-api/overview.md) les intégrations ne prennent actuellement pas en charge les remplacements de flux de données.
+><br><br>
+>Les remplacements de flux de données doivent être utilisés lorsque vous avez besoin de données différentes envoyées à différents flux de données. Vous ne devez pas utiliser de remplacements de flux de données pour les cas d’utilisation de la personnalisation ou les données de consentement.
+
+## Cas d’utilisation {#use-cases}
+
+Pour vous aider à mieux comprendre comment et à quel moment utiliser les remplacements de flux de données, voici quelques cas d’utilisation que les clients Adobe Experience Platform peuvent résoudre à l’aide de cette fonctionnalité.
+
+**Collecte de données multirégion**
+
+Une société possède différents sites web ou sous-domaines pour les différents pays dans lesquels elle opère. Ils ont [configuré](configure.md) des flux de données distincts avec des suites de rapports spécifiques aux analyses correspondantes, des jetons de propriété Adobe Target spécifiques aux pays, des schémas spécifiques aux pays, des jeux de données, des configurations Journey Optimizer, etc. L’entreprise dispose également d’un ensemble global de configurations où toutes les données spécifiques à un pays sont agrégées.
+
+En utilisant les remplacements de flux de données, l’entreprise peut déplacer dynamiquement le flux de données vers différents flux de données, au lieu du comportement par défaut consistant à envoyer des données à un flux de données.
+
+Un cas d’utilisation courant peut être d’envoyer des données à un flux de données spécifique à un pays et d’envoyer des données à un flux de données global où les clients effectuent une action importante, comme passer une commande ou mettre à jour leur profil utilisateur.
+
+**Différenciation des profils et des identités pour différentes unités opérationnelles**
+
+Une entreprise qui possède plusieurs unités opérationnelles souhaite utiliser plusieurs environnements de test Experience Platform pour stocker des données spécifiques à chaque unité opérationnelle.
+
+Au lieu d’envoyer des données à un flux de données par défaut, l’entreprise peut utiliser les remplacements de flux de données pour s’assurer que chaque unité opérationnelle dispose de son propre flux de données pour recevoir les données.
 
 ## Configuration des remplacements de flux de données dans l’interface utilisateur des flux de données {#configure-overrides}
 
