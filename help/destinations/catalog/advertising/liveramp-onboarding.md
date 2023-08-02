@@ -3,10 +3,10 @@ title: LiveRamp - Connexion à l’intégration
 description: Découvrez comment utiliser le connecteur LiveRamp pour intégrer des audiences d’Adobe Real-time Customer Data Platform vers LiveRamp Connect.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: b8ce7ec2-7af9-4d26-b12f-d38c85ba488a
-source-git-commit: 5da570aaa0c6a8972d1c3d2c5b3bec9e733c1851
+source-git-commit: 804cc13d9f672e87ad56b328bae73216500e07dd
 workflow-type: tm+mt
-source-wordcount: '1830'
-ht-degree: 70%
+source-wordcount: '1814'
+ht-degree: 68%
 
 ---
 
@@ -75,9 +75,9 @@ Pour vous authentifier à la destination, renseignez les champs requis et sélec
 
 * **[!UICONTROL Nom d’utilisateur]** : nom d’utilisateur de votre emplacement de stockage [!DNL LiveRamp - Onboarding].
 * **[!UICONTROL Mot de passe]** : mot de passe de votre emplacement de stockage [!DNL LiveRamp - Onboarding].
-* **[!UICONTROL Clé de chiffrement PGP/GPG]** : vous pouvez éventuellement joindre votre clé publique au format RSA pour ajouter un chiffrement à vos fichiers exportés. Vous pouvez voir un exemple de clé correctement formatée dans l’image ci-dessous. Si vous fournissez une clé de chiffrement, vous devez également fournir un **[!UICONTROL ID de sous-clé de chiffrement]** dans la section [détails de la destination](#destination-details).
-
+* **[!UICONTROL Clé de chiffrement PGP/GPG]** : vous pouvez éventuellement joindre votre clé publique au format RSA pour ajouter un chiffrement à vos fichiers exportés. Vous pouvez voir un exemple de clé correctement formatée dans l’image ci-dessous.
   ![Image montrant un exemple de clé PGP correctement formatée dans l’interface utilisateur](../../assets/catalog/advertising/liveramp-onboarding/pgp-key.png)
+* **[!UICONTROL ID de sous-clé]**:Si vous fournissez une clé de chiffrement, vous devez également fournir une **[!UICONTROL ID de sous-clé]**. Consultez la [documentation sur le chiffrement](https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key) de [!DNL LiveRamp] pour savoir comment obtenir l’ID de sous-clé.
 
 **SFTP avec authentification par clé SSH** {#sftp-ssh}
 
@@ -88,9 +88,9 @@ Pour vous authentifier à la destination, renseignez les champs requis et sélec
 
    * Pour connecter votre clé [!DNL SSH] au serveur [!DNL LiveRamp - Onboarding], vous devez soumettre un ticket via le portail d’assistance technique de [!DNL LiveRamp] et fournir votre clé publique. Pour plus d’informations, voir la [documentation LiveRamp](https://docs.liveramp.com/connect/en/upload-a-file-via-liveramp-s-sftp.html#upload-with-an-sftp-client).
 
-* **[!UICONTROL Clé de chiffrement PGP/GPG]** : vous pouvez éventuellement joindre votre clé publique au format RSA pour ajouter un chiffrement à vos fichiers exportés. Si vous fournissez une clé de chiffrement, vous devez également fournir un **[!UICONTROL ID de sous-clé de chiffrement]** dans la section [détails de la destination](#destination-details). Vous pouvez voir un exemple de clé correctement formatée dans l’image ci-dessous.
-
+* **[!UICONTROL Clé de chiffrement PGP/GPG]** : vous pouvez éventuellement joindre votre clé publique au format RSA pour ajouter un chiffrement à vos fichiers exportés. Vous pouvez voir un exemple de clé correctement formatée dans l’image ci-dessous.
   ![Image montrant un exemple de clé PGP correctement formatée dans l’interface utilisateur](../../assets/catalog/advertising/liveramp-onboarding/pgp-key.png)
+* **[!UICONTROL ID de sous-clé]**:Si vous fournissez une clé de chiffrement, vous devez également fournir une **[!UICONTROL ID de sous-clé]**. Consultez la [documentation sur le chiffrement](https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key) de [!DNL LiveRamp] pour savoir comment obtenir l’ID de sous-clé.
 
 ### Renseigner les détails de la destination {#destination-details}
 
@@ -109,7 +109,6 @@ Pour configurer les détails de la destination, renseignez les champs obligatoir
 * **[!UICONTROL Chemin du dossier]** : saisissez le sous-dossier `uploads` de [!DNL LiveRamp] qui hébergera les fichiers exportés. Le préfixe `uploads` est automatiquement ajouté au chemin du dossier. [!DNL LiveRamp] recommande de créer un sous-dossier dédié pour les diffusions d’Adobe Real-Time CDP afin de séparer les fichiers des autres flux existants et de garantir un bon fonctionnement de l’automatisation.
    * Par exemple, si vous souhaitez exporter vos fichiers vers `uploads/my_export_folder`, saisissez `my_export_folder` dans le champ **[!UICONTROL Chemin du dossier]**.
 * **[!UICONTROL Format de compression]** : sélectionnez le type de compression qu’Experience Platform doit utiliser pour les fichiers exportés. Les options disponibles sont **[!UICONTROL GZIP]** ou **[!UICONTROL Aucun]**.
-* **[!UICONTROL ID de sous-clé de chiffrement]** : sous-clé utilisée pour le chiffrement, en fonction de la clé de chiffrement publique [!DNL LiveRamp]. Ce champ est obligatoire si vous avez fourni une clé de chiffrement à l’étape d’[authentification](#authenticate). Consultez la [documentation sur le chiffrement](https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key) de [!DNL LiveRamp] pour savoir comment obtenir l’ID de sous-clé.
 
 ### Activer les alertes {#enable-alerts}
 
