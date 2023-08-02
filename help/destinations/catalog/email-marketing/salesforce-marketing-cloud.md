@@ -3,9 +3,9 @@ keywords: e-mail;e-mail;destinations d’e-mail;Salesforce;destination Salesforc
 title: Connexion Salesforce Marketing Cloud
 description: Salesforce Marketing Cloud est une suite de marketing numérique anciennement connue sous le nom d’ExactTarget qui vous permet de créer et de personnaliser les parcours des visiteurs et des clients afin d’offrir une expérience personnalisée.
 exl-id: e85049a7-eaed-4f8a-b670-9999d56928f8
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
 workflow-type: tm+mt
-source-wordcount: '803'
+source-wordcount: '804'
 ht-degree: 56%
 
 ---
@@ -22,13 +22,13 @@ Pour envoyer des données d’audience à [!DNL Salesforce Marketing Cloud], vou
 
 Cette section décrit toutes les audiences que vous pouvez exporter vers cette destination.
 
-Toutes les destinations prennent en charge l’activation des audiences générées par l’Experience Platform [Segmentation Service](../../../segmentation/home.md).
+Cette destination prend en charge l’activation de toutes les audiences générées par l’Experience Platform. [Segmentation Service](../../../segmentation/home.md).
 
-En outre, cette destination prend également en charge l’activation des audiences décrites dans le tableau ci-dessous.
+*En outre*, cette destination prend également en charge l’activation des audiences décrites dans le tableau ci-dessous.
 
 | Type d’audience | Description |
 ---------|----------|
-| Chargements personnalisés | Audiences ingérées dans Experience Platform à partir de fichiers CSV. |
+| Chargements personnalisés | Audiences [importé](../../../segmentation/ui/overview.md#import-audience) dans Experience Platform à partir de fichiers CSV. |
 
 {style="table-layout:auto"}
 
@@ -80,8 +80,8 @@ Pendant la [configuration](../../ui/connect-destination.md) de cette destination
 * Vous pouvez éventuellement joindre votre clé publique au format RSA pour ajouter un chiffrement avec PGP/GPG à vos fichiers exportés sous le **[!UICONTROL Clé]** . Votre clé publique doit être écrite en tant que chaîne codée en [!DNL Base64].
 * **[!UICONTROL Nom]** : choisissez un nom pertinent pour votre destination.
 * **[!UICONTROL Description]** : saisissez une description pour votre destination.
-* **[!UICONTROL Chemin du dossier]**: Indiquez le chemin d’accès dans votre emplacement de stockage où Platform dépose vos données d’exportation au format CSV.
-* **[!UICONTROL Format du fichier]**: Sélectionner **CSV** pour exporter des fichiers CSV vers votre emplacement de stockage.
+* **[!UICONTROL Chemin du dossier]**: indiquez le chemin d’accès dans l’emplacement de stockage où Platform dépose vos données d’exportation au format CSV.
+* **[!UICONTROL Format du fichier]**: sélectionnez **CSV** pour exporter des fichiers CSV vers votre emplacement de stockage.
 
 <!--
 
@@ -107,7 +107,7 @@ Voir [Activation des données d’audience vers des destinations d’exportation
 
 ### Attributs de destination {#destination-attributes}
 
-Lors de l’activation d’audiences vers cette destination, Adobe vous recommande de sélectionner un identifiant unique parmi vos [schéma d’union](../../../profile/home.md#profile-fragments-and-union-schemas). Sélectionnez l’identifiant unique et tout autre champ XDM que vous souhaitez exporter vers la destination. Pour plus d’informations, reportez-vous à la section [bonnes pratiques lors de l’activation d’audiences vers des destinations de marketing par e-mail](overview.md#best-practices).
+Lors de l’activation d’audiences vers cette destination, Adobe vous recommande de sélectionner un identifiant unique parmi vos [schéma d’union](../../../profile/home.md#profile-fragments-and-union-schemas). Sélectionnez l’identifiant unique et tout autre champ XDM que vous souhaitez exporter vers la destination. Pour plus d’informations, voir [bonnes pratiques lors de l’activation d’audiences vers des destinations de marketing par e-mail](overview.md#best-practices).
 
 ## Données exportées {#exported-data}
 
@@ -115,4 +115,4 @@ Pour les destinations [!DNL Salesforce Marketing Cloud], Platform crée un fichi
 
 ## Configurer l’importation des données dans [!DNL Salesforce Marketing Cloud] {#import-data-into-salesforce}
 
-Après la connexion [!DNL Platform] à [!DNL SFTP] stockage, vous devez configurer l’importation des données depuis l’emplacement de stockage vers [!DNL Salesforce Marketing Cloud]. Pour découvrir la procédure à suivre, reportez-vous à la section [Importation d’abonnés dans un Marketing Cloud à partir d’un fichier](https://help.salesforce.com/articleView?id=mc_es_import_subscribers_from_file.htm&amp;type=5) dans le [!DNL Salesforce Help Center].
+Après la connexion [!DNL Platform] à votre [!DNL SFTP] stockage, vous devez configurer l’importation des données depuis l’emplacement de stockage vers [!DNL Salesforce Marketing Cloud]. Pour découvrir la procédure à suivre, voir [Importation d’abonnés dans un Marketing Cloud à partir d’un fichier](https://help.salesforce.com/articleView?id=mc_es_import_subscribers_from_file.htm&amp;type=5) dans le [!DNL Salesforce Help Center].

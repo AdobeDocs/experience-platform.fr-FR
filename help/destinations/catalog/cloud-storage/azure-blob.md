@@ -2,9 +2,9 @@
 title: Connexion Azure Blob
 description: Créez une connexion sortante active vers votre stockage Blob Azure afin d’exporter régulièrement des fichiers de données CSV à partir d’Adobe Experience Platform.
 exl-id: 8099849b-e3d2-48a5-902a-ca5a5ec88207
-source-git-commit: f069f97e82955fbb3a02c5d6cb73420069fa5403
+source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
 workflow-type: tm+mt
-source-wordcount: '973'
+source-wordcount: '974'
 ht-degree: 68%
 
 ---
@@ -44,13 +44,13 @@ Si vous disposez déjà d’un [!DNL Blob] , vous pouvez ignorer le reste de ce 
 
 Cette section décrit toutes les audiences que vous pouvez exporter vers cette destination.
 
-Toutes les destinations prennent en charge l’activation des audiences générées par l’Experience Platform [Segmentation Service](../../../segmentation/home.md).
+Cette destination prend en charge l’activation de toutes les audiences générées par l’Experience Platform. [Segmentation Service](../../../segmentation/home.md).
 
-En outre, cette destination prend également en charge l’activation des audiences décrites dans le tableau ci-dessous.
+*En outre*, cette destination prend également en charge l’activation des audiences décrites dans le tableau ci-dessous.
 
 | Type d’audience | Description |
 ---------|----------|
-| Chargements personnalisés | Audiences ingérées dans Experience Platform à partir de fichiers CSV. |
+| Chargements personnalisés | Audiences [importé](../../../segmentation/ui/overview.md#import-audience) dans Experience Platform à partir de fichiers CSV. |
 
 {style="table-layout:auto"}
 

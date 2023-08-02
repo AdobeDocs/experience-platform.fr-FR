@@ -1,11 +1,11 @@
 ---
-keywords: mobile; le braquage; la messagerie;
+keywords: mobile, braser, messagerie;
 title: Connexion Braze
 description: Braze est une plateforme d’engagement client complète qui optimise les expériences pertinentes et mémorables entre les clients et les marques qu’ils aiment.
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
-source-git-commit: 3f31a54c0cf329d374808dacce3fac597a72aa11
+source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
 workflow-type: tm+mt
-source-wordcount: '1041'
+source-wordcount: '1040'
 ht-degree: 31%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 31%
 
 ## Présentation {#overview}
 
-Le [!DNL Braze] la destination vous aide à envoyer des données de profil à [!DNL Braze].
+La variable [!DNL Braze] la destination vous aide à envoyer des données de profil à [!DNL Braze].
 
 [!DNL Braze] est une plateforme d’engagement client exhaustive qui optimise les expériences pertinentes et mémorisables entre les clients et les marques qu’ils aiment.
 
@@ -24,7 +24,7 @@ Pour envoyer des données de profil à [!DNL Braze], vous devez d’abord vous c
 
 Notez les détails suivants qui sont spécifiques à la variable [!DNL Braze] destination :
 
-* [!DNL Adobe Experience Platform] les audiences sont exportées vers [!DNL Braze] sous le `AdobeExperiencePlatformSegments` attribut.
+* [!DNL Adobe Experience Platform] audiences vers [!DNL Braze] sous le `AdobeExperiencePlatformSegments` attribut.
 
 >[!NOTE]
 >
@@ -40,19 +40,19 @@ En tant que marketeur, je souhaite cibler les utilisateurs dans une destination 
 
 | Identité cible | Description | Considérations |
 |---|---|---|
-| external_id | Personnalisé [!DNL Braze] identifiant qui prend en charge le mappage de n’importe quelle identité. | Vous pouvez envoyer n’importe quel [identité](../../../identity-service/namespaces.md) au [!DNL Braze] tant que vous le mappez à la variable [!DNL Braze] [`external_id`](https://www.braze.com/docs/api/basics/#external-user-id-explanation). |
+| external_id | Personnalisé [!DNL Braze] identifiant qui prend en charge le mappage de n’importe quelle identité. | Vous pouvez envoyer n’importe quel [identité](../../../identity-service/namespaces.md) à la fonction [!DNL Braze] tant que vous le mappez à la variable [!DNL Braze] [`external_id`](https://www.braze.com/docs/api/basics/#external-user-id-explanation). |
 
 {style="table-layout:auto"}
 
-## Prise en charge des audiences externes {#external-audiences-support}
+## Audiences prises en charge {#supported-audiences}
 
-Toutes les destinations prennent en charge l’activation des audiences générées par l’Experience Platform [Segmentation Service](../../../segmentation/home.md).
+Cette destination prend en charge l’activation de toutes les audiences générées par l’Experience Platform. [Segmentation Service](../../../segmentation/home.md).
 
-En outre, cette destination prend également en charge l’activation des audiences externes décrites dans le tableau ci-dessous.
+*En outre*, cette destination prend également en charge l’activation des audiences décrites dans le tableau ci-dessous.
 
 | Type d’audience externe | Description |
 ---------|----------|
-| Chargements personnalisés | Audiences ingérées dans Experience Platform à partir de fichiers CSV. |
+| Chargements personnalisés | Audiences [importé](../../../segmentation/ui/overview.md#import-audience) dans Experience Platform à partir de fichiers CSV. |
 
 {style="table-layout:auto"}
 
@@ -62,7 +62,7 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 | Élément | Type | Notes |
 ---------|----------|---------|
-| Type d’exportation | **[!UICONTROL Basé sur les profils]** | Vous exportez tous les membres d’un segment, ainsi que les champs de schéma de votre choix (par exemple : adresse électronique, numéro de téléphone, nom) et/ou identités, en fonction du mappage de vos champs.[!DNL Adobe Experience Platform] les audiences sont exportées vers [!DNL Braze] sous le `AdobeExperiencePlatformSegments` attribut. |
+| Type d’exportation | **[!UICONTROL Basé sur les profils]** | Vous exportez tous les membres d’un segment, ainsi que les champs de schéma souhaités (par exemple : adresse email, numéro de téléphone, nom) et/ou les identités, en fonction du mapping de vos champs.[!DNL Adobe Experience Platform] audiences vers [!DNL Braze] sous le `AdobeExperiencePlatformSegments` attribut. |
 | Fréquence des exportations | **[!UICONTROL Diffusion en continu]** | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu&#39;un profil est mis à jour en Experience Platform en fonction de l&#39;évaluation de l&#39;audience, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
@@ -79,7 +79,7 @@ Pour vous connecter à cette destination, procédez comme décrit dans le [tutor
 
 Pour vous authentifier à la destination, renseignez les champs requis et sélectionnez **[!UICONTROL Se connecter à la destination]**.
 
-* **[!UICONTROL Jeton de compte de frein]**: C&#39;est votre [!DNL Braze] [!DNL API] clé. Vous trouverez des instructions détaillées sur la manière d’obtenir votre [!DNL API] clé ici : [Présentation de la clé API REST](https://www.braze.com/docs/api/api_key/).
+* **[!UICONTROL Jeton de compte de braquage]**: Il s’agit de votre [!DNL Braze] [!DNL API] clé. Vous trouverez des instructions détaillées sur la manière d’obtenir votre [!DNL API] clé ici : [Présentation de la clé API REST](https://www.braze.com/docs/api/api_key/).
 
 ### Renseigner les détails de la destination {#destination-details}
 
@@ -87,7 +87,7 @@ Pour configurer les détails de la destination, renseignez les champs obligatoir
 
 * **[!UICONTROL Nom]**: saisissez un nom par lequel vous reconnaîtrez cette destination à l’avenir.
 * **[!UICONTROL Description]**: saisissez une description qui vous aidera à identifier cette destination ultérieurement.
-* **[!UICONTROL Instance de point de fin]**: demandez votre [!DNL Braze] représente l’instance de point d’entrée que vous devez utiliser.
+* **[!UICONTROL Instance de point de fin]**: demandez à votre [!DNL Braze] représente l’instance de point d’entrée que vous devez utiliser.
 
 ### Activer les alertes {#enable-alerts}
 
@@ -105,7 +105,7 @@ Voir [Activation des données d’audience vers des destinations d’exportation
 
 ## Considérations relatives au mappage {#mapping-considerations}
 
-Pour envoyer correctement les données de votre audience à partir de [!DNL Adobe Experience Platform] au [!DNL Braze] destination, vous devez passer par l’étape de mappage des champs.
+Pour envoyer correctement les données de votre audience à partir de [!DNL Adobe Experience Platform] à la fonction [!DNL Braze] destination, vous devez passer par l’étape de mappage des champs.
 
 Le mappage consiste à créer un lien entre votre [!DNL Experience Data Model] Champs de schéma (XDM) dans votre [!DNL Platform] et leurs équivalents de la destination cible.
 
@@ -124,7 +124,7 @@ Dans le [!UICONTROL Sélectionner le champ source] vous pouvez choisir entre deu
 
 ![Attribut source de mappage de destination de braquage](../../assets/catalog/mobile-engagement/braze/mapping-attributes.png)
 
-* [!UICONTROL Sélectionner un espace de noms d’identité]: Utilisez cette option pour mapper une [!DNL Platform] espace de noms d’identité en un [!DNL Braze] espace de noms.
+* [!UICONTROL Sélectionner un espace de noms d’identité]: utilisez cette option pour mapper une [!DNL Platform] espace de noms d’identité en un [!DNL Braze] espace de noms.
 
 ![Espace de noms source du mapping de destination de la suppression](../../assets/catalog/mobile-engagement/braze/mapping-namespaces.png)
 
@@ -135,8 +135,8 @@ Dans le [!UICONTROL Champ cible] , cliquez sur l’icône de mappage située à 
 ![Mappage cible de la destination de braquage](../../assets/catalog/mobile-engagement/braze/mapping-target.png)
 
 Dans le [!UICONTROL Sélectionner le champ cible] , vous pouvez choisir entre deux catégories de champs cibles :
-* [!UICONTROL Sélectionner un espace de noms d’identité]: Utiliser cette option pour mapper [!DNL Platform] espaces de noms d’identité vers [!DNL Braze] espaces de noms d’identité.
-* [!UICONTROL Sélectionner des attributs personnalisés]: Utilisez cette option pour mapper des attributs XDM à des attributs personnalisés [!DNL Braze] attributs que vous avez définis dans votre [!DNL Braze] compte . <br> Vous pouvez également utiliser cette option pour renommer les attributs XDM existants en [!DNL Braze]. Par exemple, le mappage d’un `lastName` Attribut XDM à un `Last_Name` dans [!DNL Braze], crée la variable `Last_Name` dans [!DNL Braze], s’il n’existe pas déjà, et mappez la variable `lastName` Attribut XDM à celui-ci.
+* [!UICONTROL Sélectionner un espace de noms d’identité]: utilisez cette option pour mapper [!DNL Platform] espaces de noms d’identité vers [!DNL Braze] espaces de noms d’identité.
+* [!UICONTROL Sélectionner des attributs personnalisés]: utilisez cette option pour mapper des attributs XDM à des attributs personnalisés [!DNL Braze] attributs que vous avez définis dans votre [!DNL Braze] compte . <br> Vous pouvez également utiliser cette option pour renommer les attributs XDM existants en [!DNL Braze]. Par exemple, le mappage d’un `lastName` Attribut XDM à un `Last_Name` dans [!DNL Braze], crée la variable `Last_Name` dans [!DNL Braze], s’il n’existe pas déjà, et mappez la variable `lastName` Attribut XDM à celui-ci.
 
 ![Braquer les champs de mappage cible de destination](../../assets/catalog/mobile-engagement/braze/mapping-target-fields.png)
 
@@ -163,7 +163,7 @@ Le mappage correct se présente comme suit :
 
 ## Données exportées {#exported-data}
 
-Pour vérifier si les données ont bien été exportées vers la destination [!DNL Braze], vérifiez votre compte [!DNL Braze]. [!DNL Adobe Experience Platform] les audiences sont exportées vers [!DNL Braze] sous le `AdobeExperiencePlatformSegments` attribut.
+Pour vérifier si les données ont bien été exportées vers la destination [!DNL Braze], vérifiez votre compte [!DNL Braze]. [!DNL Adobe Experience Platform] audiences vers [!DNL Braze] sous le `AdobeExperiencePlatformSegments` attribut.
 
 ## Utilisation et gouvernance des données {#data-usage-governance}
 

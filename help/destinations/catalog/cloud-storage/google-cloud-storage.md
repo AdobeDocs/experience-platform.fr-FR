@@ -3,9 +3,9 @@ title: Connexion à Google Cloud Storage
 description: Découvrez comment vous connecter à Google Cloud Storage et activer des audiences ou exporter des jeux de données.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: ab274270-ae8c-4264-ba64-700b118e6435
-source-git-commit: 3090b8a8eade564190dc32142c3fc71701007337
+source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
 workflow-type: tm+mt
-source-wordcount: '1030'
+source-wordcount: '1031'
 ht-degree: 75%
 
 ---
@@ -25,13 +25,13 @@ Créez une connexion sortante active vers [!DNL Google Cloud Storage] pour expor
 
 Cette section décrit toutes les audiences que vous pouvez exporter vers cette destination.
 
-Toutes les destinations prennent en charge l’activation des audiences générées par l’Experience Platform [Segmentation Service](../../../segmentation/home.md).
+Cette destination prend en charge l’activation de toutes les audiences générées par l’Experience Platform. [Segmentation Service](../../../segmentation/home.md).
 
-En outre, cette destination prend également en charge l’activation des audiences décrites dans le tableau ci-dessous.
+*En outre*, cette destination prend également en charge l’activation des audiences décrites dans le tableau ci-dessous.
 
 | Type d’audience | Description |
 ---------|----------|
-| Chargements personnalisés | Audiences ingérées dans Experience Platform à partir de fichiers CSV. |
+| Chargements personnalisés | Audiences [importé](../../../segmentation/ui/overview.md#import-audience) dans Experience Platform à partir de fichiers CSV. |
 
 {style="table-layout:auto"}
 

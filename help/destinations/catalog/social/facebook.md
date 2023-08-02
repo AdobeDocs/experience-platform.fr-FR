@@ -3,10 +3,10 @@ keywords: Connexion facebook;connexion facebook;destinations facebook;facebook;i
 title: Connexion Facebook
 description: Activez les profils de vos campagnes Facebook pour le ciblage, la personnalisation et la suppression des audiences en fonction des courriers électroniques hachés.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: c1ba465a8a866bd8bdc9a2b294ec5d894db81e11
+source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
 workflow-type: tm+mt
-source-wordcount: '1906'
-ht-degree: 29%
+source-wordcount: '1907'
+ht-degree: 30%
 
 ---
 
@@ -22,7 +22,7 @@ Vous pouvez utiliser cette destination pour le ciblage des audiences sur l’ens
 
 ## Cas d’utilisation
 
-Pour vous aider à mieux comprendre comment et à quel moment utiliser la variable [!DNL Facebook] destination, voici deux exemples de cas d’utilisation que les clients Adobe Experience Platform peuvent résoudre à l’aide de cette fonctionnalité.
+Pour mieux comprendre comment et à quel moment utiliser la variable [!DNL Facebook] destination, voici deux exemples de cas d’utilisation que les clients Adobe Experience Platform peuvent résoudre à l’aide de cette fonctionnalité.
 
 ### Cas d’utilisation #1
 
@@ -52,13 +52,13 @@ Ensuite, ils peuvent utiliser leurs données hors ligne, y compris les identifia
 
 Cette section décrit toutes les audiences que vous pouvez exporter vers cette destination.
 
-Toutes les destinations prennent en charge l’activation des audiences générées par l’Experience Platform [Segmentation Service](../../../segmentation/home.md).
+Cette destination prend en charge l’activation de toutes les audiences générées par l’Experience Platform. [Segmentation Service](../../../segmentation/home.md).
 
-En outre, cette destination prend également en charge l’activation des audiences décrites dans le tableau ci-dessous.
+*En outre*, cette destination prend également en charge l’activation des audiences décrites dans le tableau ci-dessous.
 
 | Type d’audience | Description |
 ---------|----------|
-| Chargements personnalisés | Audiences ingérées dans Experience Platform à partir de fichiers CSV. |
+| Chargements personnalisés | Audiences [importé](../../../segmentation/ui/overview.md#import-audience) dans Experience Platform à partir de fichiers CSV. |
 
 {style="table-layout:auto"}
 
@@ -78,11 +78,11 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 Avant d’envoyer vos audiences à [!DNL Facebook], assurez-vous de respecter les conditions suivantes :
 
 * Votre [!DNL Facebook] Le compte utilisateur doit avoir la variable **[!DNL Manage campaigns]** autorisation activée pour le compte publicitaire que vous prévoyez d’utiliser.
-* Le **Adobe Experience Cloud** votre compte professionnel doit être ajouté en tant que partenaire publicitaire dans votre [!DNL Facebook Ad Account]. Utilisez `business ID=206617933627973`. Voir [Ajout de partenaires à votre compte Business Manager](https://www.facebook.com/business/help/1717412048538897) pour plus d’informations, voir la documentation de Facebook .
+* La variable **Adobe Experience Cloud** votre compte professionnel doit être ajouté en tant que partenaire publicitaire dans votre [!DNL Facebook Ad Account]. Utilisez `business ID=206617933627973`. Voir [Ajout de partenaires à votre compte Business Manager](https://www.facebook.com/business/help/1717412048538897) pour plus d’informations, voir la documentation de Facebook .
   >[!IMPORTANT]
   >
   > Lors de la configuration des autorisations pour Adobe Experience Cloud, vous devez activer l’autorisation **Gérer des campagnes**. L’autorisation est requise pour la variable [!DNL Adobe Experience Platform] intégration.
-* Lisez et signez les Conditions d’utilisation [!DNL Facebook Custom Audiences]. Pour ce faire, accédez à `https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]`où `accountID` est votre [!DNL Facebook Ad Account ID].
+* Lisez et signez les Conditions d’utilisation [!DNL Facebook Custom Audiences]. Pour ce faire, accédez à `https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]`, où `accountID` est votre [!DNL Facebook Ad Account ID].
   >[!IMPORTANT]
   >
   >Lors de la signature de la [!DNL Facebook Custom Audiences] Conditions d’utilisation, veillez à utiliser le même compte utilisateur que celui que vous utilisiez pour vous authentifier dans l’API Facebook.
@@ -108,11 +108,11 @@ Il existe deux méthodes pour activer les numéros de téléphone dans [!DNL Fac
 
 Vous pouvez hacher les adresses électroniques avant de les ingérer dans Adobe Experience Platform ou utiliser les adresses électroniques en clair dans Experience Platform et disposer des [!DNL Platform] hachez-les lors de l’activation.
 
-Pour en savoir plus sur l’ingestion d’adresses électroniques dans Experience Platform, voir [Présentation de l’ingestion par lots](/help/ingestion/batch-ingestion/overview.md) et le [présentation de l’ingestion par flux](/help/ingestion/streaming-ingestion/overview.md).
+Pour en savoir plus sur l’ingestion d’adresses électroniques dans Experience Platform, voir [Présentation de l’ingestion par lots](/help/ingestion/batch-ingestion/overview.md) et la variable [présentation de l’ingestion par flux](/help/ingestion/streaming-ingestion/overview.md).
 
 Si vous choisissez de hacher vous-même les adresses électroniques, veillez à respecter les exigences suivantes :
 
-* Rogner tous les espaces de début et de fin de la chaîne de courrier électronique ; exemple : `johndoe@example.com`, not `<space>johndoe@example.com<space>`;
+* Rogner tous les espaces de début et de fin de la chaîne d’email ; par exemple : `johndoe@example.com`, not `<space>johndoe@example.com<space>`;
 * Lors du hachage des chaînes d’email, veillez à mettre la chaîne en minuscules par hachage.
    * Exemple : `example@email.com`, not `EXAMPLE@EMAIL.COM`;
 * Assurez-vous que la chaîne hachée est entièrement en minuscules.
@@ -123,13 +123,13 @@ Si vous choisissez de hacher vous-même les adresses électroniques, veillez à 
 >
 >Les données des espaces de noms non hachés sont automatiquement hachées par [!DNL Platform] lors de l’activation.
 > Les données de la source d’attributs ne sont pas automatiquement hachées. Lorsque votre champ source contient des attributs non hachés, cochez l’option **[!UICONTROL Appliquer la transformation]** pour que [!DNL Platform] hache automatiquement les données lors de l’activation.
-> Le **[!UICONTROL Appliquer la transformation]** ne s’affiche que lorsque vous sélectionnez des attributs comme champs source. Il ne s’affiche pas lorsque vous choisissez des espaces de noms.
+> La variable **[!UICONTROL Appliquer la transformation]** ne s’affiche que lorsque vous sélectionnez des attributs comme champs source. Il ne s’affiche pas lorsque vous choisissez des espaces de noms.
 
 ![Transformation du mapping des identités](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
 
 ## Utilisation d’espaces de noms personnalisés {#custom-namespaces}
 
-Avant d’utiliser la variable `Extern_ID` espace de noms auquel envoyer des données [!DNL Facebook], veillez à synchroniser vos propres identifiants à l’aide de [!DNL Facebook Pixel]. Voir [Documentation officielle de facebook](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences/#external_identifiers) pour plus d’informations.
+Avant d’utiliser la variable `Extern_ID` Espace de noms pour envoyer des données à [!DNL Facebook], veillez à synchroniser vos propres identifiants à l’aide de [!DNL Facebook Pixel]. Voir [Documentation officielle de facebook](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences/#external_identifiers) pour plus d’informations.
 
 ## Se connecter à la destination {#connect}
 
@@ -145,7 +145,7 @@ La vidéo ci-dessous présente également les étapes de configuration d’une [
 
 >[!NOTE]
 >
->L’interface utilisateur d’Experience Platform est fréquemment mise à jour et peut avoir changé depuis l’enregistrement de cette vidéo. Pour obtenir les informations les plus récentes, reportez-vous à la section [tutoriel sur la configuration des destinations](../../ui/connect-destination.md).
+>L’interface utilisateur d’Experience Platform est fréquemment mise à jour et peut avoir changé depuis l’enregistrement de cette vidéo. Pour obtenir les informations les plus récentes, reportez-vous au [tutoriel sur la configuration des destinations](../../ui/connect-destination.md).
 
 ### S’authentifier auprès de la destination {#authenticate}
 
@@ -165,7 +165,7 @@ Pour configurer les détails de la destination, renseignez les champs obligatoir
 
 * **[!UICONTROL Nom]** : un nom par lequel vous reconnaîtrez cette destination à l’avenir.
 * **[!UICONTROL Description]** : une description qui vous aidera à identifier cette destination à l’avenir.
-* **[!UICONTROL Identifiant de compte]**: Votre [!DNL Facebook Ad Account ID]. Vous pouvez trouver cet identifiant dans votre [!DNL Facebook Ads Manager] compte . Lors de la saisie de cet identifiant, faites-le toujours précéder de `act_`.
+* **[!UICONTROL Identifiant de compte]**: votre [!DNL Facebook Ad Account ID]. Vous pouvez trouver cet identifiant dans votre [!DNL Facebook Ads Manager] compte . Lors de la saisie de cet identifiant, faites-le toujours précéder de `act_`.
 
 ### Activer les alertes {#enable-alerts}
 
@@ -211,20 +211,20 @@ Vous trouverez ci-dessous un exemple de mappage d’identité correct lors de l�
 
 Sélection des champs sources :
 
-* Sélectionnez la `Email` espace de noms comme identité source si les adresses électroniques que vous utilisez ne sont pas hachées.
-* Sélectionnez la `Email_LC_SHA256` espace de noms comme identité source si vous avez haché des adresses électroniques client lors de l’ingestion de données dans [!DNL Platform], en fonction de [!DNL Facebook] [exigences de hachage des emails](#email-hashing-requirements).
-* Sélectionnez la `PHONE_E.164` espace de noms en tant qu’identité source si vos données se composent de numéros de téléphone non hachés. [!DNL Platform] hachera les numéros de téléphone pour les [!DNL Facebook] conditions requises.
-* Sélectionnez la `Phone_SHA256` espace de noms comme identité source si vous avez haché des numéros de téléphone lors de l’ingestion des données dans [!DNL Platform], en fonction de [!DNL Facebook] [exigences de hachage des numéros de téléphone](#phone-number-hashing-requirements).
-* Sélectionnez la `IDFA` espace de noms comme identité source si vos données sont composées [!DNL Apple] ID d’appareil.
-* Sélectionnez la `GAID` espace de noms comme identité source si vos données sont composées [!DNL Android] ID d’appareil.
-* Sélectionnez la `Custom` espace de noms comme identité source si vos données sont composées d’autres types d’identifiants.
+* Sélectionnez la variable `Email` espace de noms comme identité source si les adresses électroniques que vous utilisez ne sont pas hachées.
+* Sélectionnez la variable `Email_LC_SHA256` espace de noms comme identité source si vous avez haché des adresses électroniques client lors de l’ingestion de données dans [!DNL Platform], selon [!DNL Facebook] [exigences de hachage des emails](#email-hashing-requirements).
+* Sélectionnez la variable `PHONE_E.164` espace de noms en tant qu’identité source si vos données se composent de numéros de téléphone non hachés. [!DNL Platform] hachera les numéros de téléphone pour qu’ils soient conformes. [!DNL Facebook] conditions requises.
+* Sélectionnez la variable `Phone_SHA256` espace de noms comme identité source si vous avez haché des numéros de téléphone lors de l’ingestion des données dans [!DNL Platform], selon [!DNL Facebook] [exigences de hachage des numéros de téléphone](#phone-number-hashing-requirements).
+* Sélectionnez la variable `IDFA` espace de noms comme identité source si vos données sont composées [!DNL Apple] ID d’appareil.
+* Sélectionnez la variable `GAID` espace de noms comme identité source si vos données sont composées [!DNL Android] ID d’appareil.
+* Sélectionnez la variable `Custom` espace de noms comme identité source si vos données sont composées d’autres types d’identifiants.
 
 Sélection des champs cibles :
 
-* Sélectionnez la `Email_LC_SHA256` espace de noms comme identité cible lorsque vos espaces de noms sources `Email` ou `Email_LC_SHA256`.
-* Sélectionnez la `Phone_SHA256` espace de noms comme identité cible lorsque vos espaces de noms sources `PHONE_E.164` ou `Phone_SHA256`.
-* Sélectionnez la `IDFA` ou `GAID` les espaces de noms comme identité cible lorsque vos espaces de noms sources `IDFA` ou `GAID`.
-* Sélectionnez la `Extern_ID` espace de noms comme identité cible lorsque votre espace de noms source est personnalisé.
+* Sélectionnez la variable `Email_LC_SHA256` l’espace de noms comme identité cible lorsque vos espaces de noms sources `Email` ou `Email_LC_SHA256`.
+* Sélectionnez la variable `Phone_SHA256` l’espace de noms comme identité cible lorsque vos espaces de noms sources `PHONE_E.164` ou `Phone_SHA256`.
+* Sélectionnez la variable `IDFA` ou `GAID` les espaces de noms comme identité cible lorsque vos espaces de noms sources `IDFA` ou `GAID`.
+* Sélectionnez la variable `Extern_ID` espace de noms comme identité cible lorsque votre espace de noms source est personnalisé.
 
 >[!IMPORTANT]
 >

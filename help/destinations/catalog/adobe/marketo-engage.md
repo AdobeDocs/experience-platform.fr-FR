@@ -2,9 +2,9 @@
 title: Destination Marketo Engage
 description: Marketo Engage est la seule solution de gestion de l’expérience client de bout en bout (CXM) pour le marketing, la publicité, les analyses et le commerce. Il vous permet d’automatiser et de gérer les activités, de la gestion de la relation client à la gestion de la relation client en passant par le marketing basé sur les comptes et l’attribution des recettes.
 exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
-source-git-commit: c1ba465a8a866bd8bdc9a2b294ec5d894db81e11
+source-git-commit: 0507fd3596246bc2ead5c212c228822bf25f94e5
 workflow-type: tm+mt
-source-wordcount: '910'
+source-wordcount: '909'
 ht-degree: 25%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 25%
 >[!IMPORTANT]
 >
 >Avec la publication de la [connecteur de destination Marketo V2 amélioré](/help/release-notes/2022/july-2022.md#destinations), vous voyez maintenant deux cartes Marketo dans le catalogue des destinations.
->* Si vous activez déjà les données de la variable **[!UICONTROL Marketo V1]** destination : Créez de nouveaux flux de données pour la variable **[!UICONTROL Marketo V2]** destination et suppression des flux de données existants dans **[!UICONTROL Marketo V1]** destination d’ici février 2023. À compter de cette date, la variable **[!UICONTROL Marketo V1]** la carte de destination sera supprimée.
+>* Si vous activez déjà les données de la variable **[!UICONTROL Marketo V1]** destination : créez de nouveaux flux de données pour la variable **[!UICONTROL Marketo V2]** destination et suppression des flux de données existants dans **[!UICONTROL Marketo V1]** destination d’ici février 2023. À compter de cette date, la variable **[!UICONTROL Marketo V1]** la carte de destination sera supprimée.
 >* Si vous n’avez pas encore créé de flux de données pour la variable **[!UICONTROL Marketo V1]** destination, veuillez utiliser la nouvelle **[!UICONTROL Marketo V2]** pour vous connecter à Marketo et exporter des données vers cette application.
 
 ![Image des deux cartes de destination Marketo dans une vue côte à côte.](../..//assets/catalog/adobe/marketo-side-by-side-view.png)
@@ -24,7 +24,7 @@ ht-degree: 25%
 Les améliorations apportées à la destination Marketo V2 sont les suivantes :
 
 * Dans Marketo V1, à l’étape de **[!UICONTROL Planification de segment]** du processus d’activation, il vous fallait ajouter manuellement un **ID de mappage** pour exporter des données vers Marketo. Cette étape manuelle n’est plus obligatoire dans Marketo V2.
-* Dans Marketo V1, à l’étape de **[!UICONTROL Mappage]** du processus d’activation, vous ne pouviez mapper les champs XDM qu’à trois champs cibles dans Marketo : `firstName`, `lastName` et `companyName`. Avec la version Marketo V2, vous pouvez désormais mapper des champs XDM à de nombreux autres champs dans Marketo. Pour plus d’informations, reportez-vous à la section [attributs pris en charge](#supported-attributes) voir la section ci-dessous.
+* Dans Marketo V1, à l’étape de **[!UICONTROL Mappage]** du processus d’activation, vous ne pouviez mapper les champs XDM qu’à trois champs cibles dans Marketo : `firstName`, `lastName` et `companyName`. Avec la version Marketo V2, vous pouvez désormais mapper des champs XDM à de nombreux autres champs dans Marketo. Pour plus d’informations, consultez la section [attributs pris en charge](#supported-attributes) voir la section ci-dessous.
 
 ## Vue d’ensemble {#overview}
 
@@ -51,15 +51,15 @@ La destination permet aux marketeurs de pousser les audiences créées dans Adob
 
 Vous pouvez mapper des attributs d’Experience Platform à n’importe quel attribut auquel votre organisation a accès dans Marketo. Dans Marketo, vous pouvez utiliser la variable [Description de la requête API](https://developers.marketo.com/rest-api/lead-database/leads/#describe) pour récupérer les champs d’attribut auxquels votre organisation a accès.
 
-## Prise en charge des audiences externes {#external-audiences-support}
+## Audiences prises en charge {#supported-audiences}
 
-Toutes les destinations prennent en charge l’activation des audiences générées par l’Experience Platform [Segmentation Service](../../../segmentation/home.md).
+Cette destination prend en charge l’activation de toutes les audiences générées par l’Experience Platform. [Segmentation Service](../../../segmentation/home.md).
 
-En outre, cette destination prend également en charge l’activation des audiences externes décrites dans le tableau ci-dessous.
+En outre, cette destination prend également en charge l’activation des audiences décrites dans le tableau ci-dessous.
 
 | Type d’audience externe | Description |
 ---------|----------|
-| Chargements personnalisés | Audiences ingérées dans Experience Platform à partir de fichiers CSV. |
+| Chargements personnalisés | Audiences [importé](../../../segmentation/ui/overview.md#import-audience) dans Experience Platform à partir de fichiers CSV. |
 
 {style="table-layout:auto"}
 
@@ -81,9 +81,9 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 >* Pour vous connecter à la destination, vous devez disposer de l’**[!UICONTROL autorisation de contrôle d’accès]** [Gérer les destinations](/help/access-control/home.md#permissions).
 >* Pour activer les données, vous avez besoin des [autorisations de contrôle d’accès](/help/access-control/home.md#permissions) pour les fonctions **[!UICONTROL Gérer les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]**, et **[!UICONTROL Afficher les segments]**. Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
-Pour obtenir des instructions détaillées sur la configuration de la destination et l’activation des audiences, consultez [Envoyer une audience Adobe Experience Platform vers une liste statique Marketo](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html?lang=en) dans la documentation de Marketo.
+Pour obtenir des instructions détaillées sur la configuration de la destination et l’activation des audiences, consultez [Envoi d’une audience Adobe Experience Platform vers une liste statique Marketo](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html?lang=en) dans la documentation de Marketo.
 
-La vidéo ci-dessous présente également les étapes de configuration d’une destination Marketo et d’activation des audiences.
+La vidéo ci-dessous présente également les étapes de configuration d’une destination Marketo et d’activation d’audiences.
 
 >[!IMPORTANT]
 >

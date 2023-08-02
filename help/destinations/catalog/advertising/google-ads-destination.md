@@ -3,9 +3,9 @@ keywords: annonces Google;annonces Google;mots-clés Google;mots-clés Google Ad
 title: Connexion Google Ads
 description: Google Ads, appelé auparavant Google AdWords, est un service de publicité en ligne qui permet aux entreprises faire de la publicité avec paiement par clic sur des recherches textuelles, des affichages graphiques, des vidéos YouTube et des affichages mobiles in-app.
 exl-id: 7143f476-49a8-42aa-bfb4-b11fc2b8f5c3
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
 workflow-type: tm+mt
-source-wordcount: '994'
+source-wordcount: '995'
 ht-degree: 71%
 
 ---
@@ -47,13 +47,13 @@ Notez les détails suivants qui sont spécifiques aux destinations [!DNL Google 
 
 Cette section décrit toutes les audiences que vous pouvez exporter vers cette destination.
 
-Toutes les destinations prennent en charge l’activation des audiences générées par l’Experience Platform [Segmentation Service](../../../segmentation/home.md).
+Cette destination prend en charge l’activation de toutes les audiences générées par l’Experience Platform. [Segmentation Service](../../../segmentation/home.md).
 
-En outre, cette destination prend également en charge l’activation des audiences décrites dans le tableau ci-dessous.
+*En outre*, cette destination prend également en charge l’activation des audiences décrites dans le tableau ci-dessous.
 
 | Type d’audience | Description |
 ---------|----------|
-| Chargements personnalisés | Audiences ingérées dans Experience Platform à partir de fichiers CSV. |
+| Chargements personnalisés | Audiences [importé](../../../segmentation/ui/overview.md#import-audience) dans Experience Platform à partir de fichiers CSV. |
 
 {style="table-layout:auto"}
 
@@ -74,7 +74,7 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 >[!IMPORTANT]
 >
-> [!DNL Google] has deprecated new [!DNL Google Ads] intégrations de cookies avec des fournisseurs tiers. Pour effectuer les étapes de liste autorisée de la section suivante, vous devez disposer d’une intégration existante avec [!DNL Google Ads]. Par conséquent, l’approche recommandée pour l’utilisation de [!DNL Google Ads] est en train de configurer une [!DNL Google Customer Match] intégration. Pour plus d’informations sur la création d’un [!DNL Google Customer Match] intégration, veuillez lire le tutoriel sur la création d’un [[!DNL Google Customer Match]](./google-customer-match.md) connexion.
+> [!DNL Google] has deprecated new [!DNL Google Ads] intégrations de cookies avec des fournisseurs tiers. Pour effectuer les étapes de liste autorisée de la section suivante, vous devez disposer d’une intégration existante avec [!DNL Google Ads]. Par conséquent, l’approche recommandée pour l’utilisation de [!DNL Google Ads] configure un [!DNL Google Customer Match] intégration. Pour plus d’informations sur la création d’un [!DNL Google Customer Match] intégration, veuillez lire le tutoriel sur la création d’un [[!DNL Google Customer Match]](./google-customer-match.md) connexion.
 
 ### Liste autorisée {#allow-listing}
 
@@ -88,7 +88,7 @@ Avant de créer la destination [!DNL Google Ads] dans Platform, vous devez conta
 * **Identifiant de compte** : il s’agit de l’identifiant de compte Adobe avec Google. Identifiant de compte : 87933855.
 * **Identifiant client** : l’identifiant client d’Adobe avec Google. Identifiant client : 89690775.
 * Votre type de compte : **AdWords**
-* **Google AdWords ID**: Il s’agit de votre identifiant avec [!DNL Google]. Le format d’identifiant est généralement 123-456-7890.
+* **Google AdWords ID**: il s’agit de votre identifiant avec [!DNL Google]. Le format d’identifiant est généralement 123-456-7890.
 
 ## Se connecter à la destination {#connect}
 
@@ -135,6 +135,6 @@ Lors de la configuration de cette destination, vous risquez de recevoir l’erre
 
 Cette erreur se produit lorsque les comptes clients ne respectent pas les [conditions préalables](#prerequisites) ou lorsque les clients tentent de configurer la destination sans qu’un [!DNL Google Ads] compte .
 
-[!DNL Google] has deprecated new [!DNL Google Ads] intégrations de cookies avec des fournisseurs tiers. Pour exécuter la fonction [liste autorisée](#allow-listing) , vous devez disposer d’une intégration existante avec [!DNL Google Ads].
+[!DNL Google] has deprecated new [!DNL Google Ads] intégrations de cookies avec des fournisseurs tiers. Pour exécuter la fonction [liste autorisée](#allow-listing) , vous devez avoir une intégration existante avec [!DNL Google Ads].
 
-L’approche recommandée pour l’utilisation de [!DNL Google Ads] est en train de configurer une [[!DNL Google Customer Match]](google-customer-match.md) intégration.
+Approche recommandée pour l’utilisation de [!DNL Google Ads] configure un [[!DNL Google Customer Match]](google-customer-match.md) intégration.

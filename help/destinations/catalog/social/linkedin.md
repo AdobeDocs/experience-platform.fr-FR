@@ -3,9 +3,9 @@ keywords: connexion linkedin;connexion linkedin;destinations linkedin;linkedin;
 title: Connexion à des audiences mises en correspondance Linkedin
 description: Activez les profils de vos campagnes LinkedIn pour le ciblage, la personnalisation et la suppression des audiences, en fonction des courriers électroniques hachés.
 exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
-source-git-commit: c1ba465a8a866bd8bdc9a2b294ec5d894db81e11
+source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
 workflow-type: tm+mt
-source-wordcount: '1087'
+source-wordcount: '1088'
 ht-degree: 36%
 
 ---
@@ -20,7 +20,7 @@ Activez les profils pour votre [!DNL LinkedIn] campagnes pour le ciblage, la per
 
 ## Cas d’utilisation
 
-Pour vous aider à mieux comprendre comment et à quel moment utiliser la variable [!DNL LinkedIn Matched Audiences] destination : voici un cas d’utilisation que les clients Adobe Experience Platform peuvent résoudre à l’aide de cette fonctionnalité.
+Pour mieux comprendre comment et à quel moment utiliser la variable [!DNL LinkedIn Matched Audiences] destination : voici un cas d’utilisation que les clients Adobe Experience Platform peuvent résoudre à l’aide de cette fonctionnalité.
 
 Une société de logiciels organise une conférence et souhaite rester en contact avec les participants et leur présenter des offres personnalisées en fonction de leur statut de participation à la conférence. L’entreprise peut ingérer des adresses électroniques ou des identifiants d’appareil mobile à partir de ses propres adresses. [!DNL CRM] dans Adobe Experience Platform. Ensuite, ils peuvent créer des audiences à partir de leurs propres données hors ligne et envoyer ces audiences au [!DNL LinkedIn] plateforme sociale, optimisant leurs dépenses publicitaires.
 
@@ -40,13 +40,13 @@ Une société de logiciels organise une conférence et souhaite rester en contac
 
 Cette section décrit toutes les audiences que vous pouvez exporter vers cette destination.
 
-Toutes les destinations prennent en charge l’activation des audiences générées par l’Experience Platform [Segmentation Service](../../../segmentation/home.md).
+Cette destination prend en charge l’activation de toutes les audiences générées par l’Experience Platform. [Segmentation Service](../../../segmentation/home.md).
 
-En outre, cette destination prend également en charge l’activation des audiences décrites dans le tableau ci-dessous.
+*En outre*, cette destination prend également en charge l’activation des audiences décrites dans le tableau ci-dessous.
 
 | Type d’audience | Description |
 ---------|----------|
-| Chargements personnalisés | Audiences ingérées dans Experience Platform à partir de fichiers CSV. |
+| Chargements personnalisés | Audiences [importé](../../../segmentation/ui/overview.md#import-audience) dans Experience Platform à partir de fichiers CSV. |
 
 {style="table-layout:auto"}
 
@@ -63,7 +63,7 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 ## Conditions préalables au compte linkedIn {#LinkedIn-account-prerequisites}
 
-Avant d’utiliser la variable [!UICONTROL Audience mise en correspondance linkedIn] destination, assurez-vous que [!DNL LinkedIn Campaign Manager] Le compte a la variable [!DNL Creative Manager] niveau d’autorisation ou supérieur.
+Avant d’utiliser la variable [!UICONTROL Audience mise en correspondance linkedIn] destination, assurez-vous que [!DNL LinkedIn Campaign Manager] Le compte a la propriété [!DNL Creative Manager] niveau d’autorisation ou supérieur.
 
 Pour savoir comment modifier votre [!DNL LinkedIn Campaign Manager] autorisations utilisateur, voir [Ajout, modification et suppression des autorisations d’utilisateur sur les comptes Advertising](https://www.linkedin.com/help/lms/answer/5753) dans la documentation de LinkedIn.
 
@@ -77,7 +77,7 @@ Selon le type d’ID que vous ingérez dans Adobe Experience Platform, vous deve
 
 Vous pouvez hacher les adresses électroniques avant de les ingérer dans Adobe Experience Platform ou utiliser les adresses électroniques en clair dans Experience Platform et disposer des [!DNL Platform] hachez-les lors de l’activation.
 
-Pour en savoir plus sur l’ingestion d’adresses électroniques dans Experience Platform, voir [Présentation de l’ingestion par lots](/help/ingestion/batch-ingestion/overview.md) et le [présentation de l’ingestion par flux](/help/ingestion/streaming-ingestion/overview.md).
+Pour en savoir plus sur l’ingestion d’adresses électroniques dans Experience Platform, voir [Présentation de l’ingestion par lots](/help/ingestion/batch-ingestion/overview.md) et la variable [présentation de l’ingestion par flux](/help/ingestion/streaming-ingestion/overview.md).
 
 Si vous choisissez de hacher vous-même les adresses électroniques, veillez à respecter les exigences suivantes :
 
@@ -95,7 +95,7 @@ Si vous choisissez de hacher vous-même les adresses électroniques, veillez à 
 > 
 > Durant : [Mappage des identités](../../ui/activate-segment-streaming-destinations.md#mapping) lorsque votre champ source contient des attributs non hachés, vérifiez la variable **[!UICONTROL Appliquer la transformation]** option, pour avoir [!DNL Platform] hachage automatique des données lors de l’activation.
 > 
-> Le **[!UICONTROL Appliquer la transformation]** ne s’affiche que lorsque vous sélectionnez des attributs comme champs source. Il ne s’affiche pas lorsque vous choisissez des espaces de noms.
+> La variable **[!UICONTROL Appliquer la transformation]** ne s’affiche que lorsque vous sélectionnez des attributs comme champs source. Il ne s’affiche pas lorsque vous choisissez des espaces de noms.
 
 ![Transformation du mapping des identités](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
 
@@ -113,7 +113,7 @@ La vidéo ci-dessous présente également les étapes de configuration d’une [
 
 >[!NOTE]
 >
->L’interface utilisateur d’Experience Platform est fréquemment mise à jour et peut avoir changé depuis l’enregistrement de cette vidéo. Pour obtenir les informations les plus récentes, reportez-vous à la section [tutoriel sur la configuration des destinations](../../ui/connect-destination.md).
+>L’interface utilisateur d’Experience Platform est fréquemment mise à jour et peut avoir changé depuis l’enregistrement de cette vidéo. Pour obtenir les informations les plus récentes, reportez-vous au [tutoriel sur la configuration des destinations](../../ui/connect-destination.md).
 
 ### S’authentifier auprès de la destination {#authenticate}
 
@@ -133,7 +133,7 @@ Pour configurer les détails de la destination, renseignez les champs obligatoir
 
 * **[!UICONTROL Nom]** : un nom par lequel vous reconnaîtrez cette destination à l’avenir.
 * **[!UICONTROL Description]** : une description qui vous aidera à identifier cette destination à l’avenir.
-* **[!UICONTROL Identifiant de compte]**: Votre [!DNL LinkedIn Campaign Manager Account ID]. Vous pouvez trouver cet identifiant dans votre [!DNL LinkedIn Campaign Manager] compte .
+* **[!UICONTROL Identifiant de compte]**: votre [!DNL LinkedIn Campaign Manager Account ID]. Vous pouvez trouver cet identifiant dans votre [!DNL LinkedIn Campaign Manager] compte .
 
 ### Activer les alertes {#enable-alerts}
 

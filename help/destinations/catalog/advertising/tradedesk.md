@@ -1,11 +1,11 @@
 ---
-keywords: la publicité; le bureau de commerce; pupitre publicitaire
+keywords: publicité, bureau de commerce, bureau de publicité
 title: Connexion à The Trade Desk
 description: Le bureau commercial est une plateforme en libre-service permettant aux acheteurs de publicités d’exécuter le reciblage et d’exécuter des campagnes numériques ciblées sur l’affichage, la vidéo et les sources d’inventaire mobiles.
 exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
-source-git-commit: 1c9725c108d55aea5d46b086fbe010ab4ba6cf45
+source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
 workflow-type: tm+mt
-source-wordcount: '725'
+source-wordcount: '726'
 ht-degree: 40%
 
 ---
@@ -22,7 +22,7 @@ Pour envoyer des données de profil à [!DNL Trade Desk], vous devez d’abord v
 
 ## Cas d’utilisation {#use-cases}
 
-En tant que marketeur, je souhaite pouvoir utiliser des audiences composées de [!DNL Trade Desk IDs] ou des identifiants d’appareil pour créer un reciblage ou des campagnes numériques ciblées.
+En tant que marketeur, je souhaite pouvoir utiliser des audiences composées de [!DNL Trade Desk IDs] ou des identifiants d’appareil pour créer un reciblage ou une audience pour des campagnes numériques ciblées.
 
 ## Identités prises en charge {#supported-identities}
 
@@ -40,13 +40,13 @@ En tant que marketeur, je souhaite pouvoir utiliser des audiences composées de 
 
 Cette section décrit toutes les audiences que vous pouvez exporter vers cette destination.
 
-Toutes les destinations prennent en charge l’activation des audiences générées par l’Experience Platform [Segmentation Service](../../../segmentation/home.md).
+Cette destination prend en charge l’activation de toutes les audiences générées par l’Experience Platform. [Segmentation Service](../../../segmentation/home.md).
 
-En outre, cette destination prend également en charge l’activation des audiences décrites dans le tableau ci-dessous.
+*En outre*, cette destination prend également en charge l’activation des audiences décrites dans le tableau ci-dessous.
 
 | Type d’audience | Description |
 ---------|----------|
-| Chargements personnalisés | Audiences ingérées dans Experience Platform à partir de fichiers CSV. |
+| Chargements personnalisés | Audiences [importé](../../../segmentation/ui/overview.md#import-audience) dans Experience Platform à partir de fichiers CSV. |
 
 {style="table-layout:auto"}
 
@@ -65,7 +65,7 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 >[!IMPORTANT]
 >
->Si vous souhaitez créer votre première destination avec [!DNL The Trade Desk] et n’ont pas activé la variable [Fonctionnalité de synchronisation des identifiants](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html?lang=fr) dans le service d’ID Experience Cloud par le passé (avec Adobe Audience Manager ou d’autres applications), veuillez contacter Adobe Consulting ou l’assistance clientèle pour activer la synchronisation des identifiants. Si vous avez configuré précédemment des intégrations [!DNL The Trade Desk] dans Audience Manager, les synchronisations d’identifiant que vous aviez configurées sont transférées vers Platform.
+>Si vous souhaitez créer votre première destination avec [!DNL The Trade Desk] et n’ont pas activé la variable [fonctionnalité de synchronisation des identifiants](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html?lang=fr) dans le service d’ID Experience Cloud par le passé (avec Adobe Audience Manager ou d’autres applications), veuillez contacter Adobe Consulting ou l’assistance clientèle pour activer la synchronisation des identifiants. Si vous avez configuré précédemment des intégrations [!DNL The Trade Desk] dans Audience Manager, les synchronisations d’identifiant que vous aviez configurées sont transférées vers Platform.
 
 ## Se connecter à la destination {#connect}
 
@@ -81,8 +81,8 @@ Pendant la [configuration](../../ui/connect-destination.md) de cette destination
 
 * **[!UICONTROL Nom]** : un nom par lequel vous reconnaîtrez cette destination à l’avenir.
 * **[!UICONTROL Description]** : une description qui vous aidera à identifier cette destination à l’avenir.
-* **[!UICONTROL Identifiant de compte]**: Votre [!DNL Trade Desk] [!UICONTROL Identifiant de compte].
-* **[!UICONTROL Emplacement du serveur]**: Demandez à votre [!DNL Trade Desk] représente le serveur régional que vous devez utiliser. Il s’agit des serveurs régionaux disponibles :
+* **[!UICONTROL Identifiant de compte]**: votre [!DNL Trade Desk] [!UICONTROL Identifiant de compte].
+* **[!UICONTROL Emplacement du serveur]**: demandez à votre [!DNL Trade Desk] représente le serveur régional que vous devez utiliser. Il s’agit des serveurs régionaux disponibles :
    * **[!UICONTROL Europe]**
    * **[!UICONTROL Singapour]**
    * **[!UICONTROL Tokyo]**

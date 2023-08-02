@@ -3,9 +3,9 @@ title: (Version bêta) Audiences Experience Cloud
 description: Découvrez comment partager des audiences d’Experience Platform vers différentes solutions d’Experience Platform.
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: 2bdbcda3-2efb-4a4e-9702-4fd9991e9461
-source-git-commit: 1288652ca3b18b4adb357b2d8884f408725cb0a2
+source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
 workflow-type: tm+mt
-source-wordcount: '1631'
+source-wordcount: '1632'
 ht-degree: 19%
 
 ---
@@ -23,7 +23,7 @@ Cette destination vous permet de partager des audiences de l’Experience Platfo
 
 ## Cas d’utilisation et avantages {#use-cases}
 
-Pour vous aider à mieux comprendre comment et à quel moment utiliser la variable [!UICONTROL Audiences Experience Cloud] destination, voici des exemples de cas d’utilisation que les clients Adobe Experience Platform peuvent résoudre à l’aide de cette destination.
+Pour mieux comprendre comment et à quel moment utiliser la variable [!UICONTROL Audiences Experience Cloud] destination, voici des exemples de cas d’utilisation que les clients Adobe Experience Platform peuvent résoudre à l’aide de cette destination.
 
 ### Activation des cas d’utilisation de Data Management Platform {#dmp-use-cases}
 
@@ -61,13 +61,13 @@ Note: briefly talk about when to share audiences to these destinations using the
 >
 > * Cette destination est disponible pour [Adobe Real-time Customer Data Platform Prime et Ultimate](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform.html) clients.
 > * Vous avez besoin d’une licence d’Audience Manager pour activer la variable [Cas d’utilisation de Data Management Platform](#dmp-use-cases) mentionné plus haut.
-> * You *ne doivent pas* une licence d’Audience Manager permettant de partager des audiences Experience Platform avec Adobe Advertising Cloud, Adobe Target, Marketo et d’autres solutions Experience Cloud, comme indiqué dans la section [section supérieure](#share-segments-with-other-solutions).
+> * You *ne doivent pas* une licence d’Audience Manager permettant de partager des audiences Experience Platform avec Adobe Advertising Cloud, Adobe Target, Marketo et d’autres solutions Experience Cloud, comme indiqué dans la section [section ci-dessus](#share-segments-with-other-solutions).
 
 ### Pour les clients qui utilisent la solution de partage d’audience héritée
 
 Si vous partagez déjà des audiences de l’Experience Platform vers l’Audience Manager et d’autres solutions d’Experience Cloud via la variable [intégration du partage d’audience héritée](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam), vous devez contacter l’assistance clientèle ou votre équipe de compte d’Adobe pour désactiver l’intégration héritée. L’assistance clientèle et les équipes du compte d’Adobe doivent déposer un ticket Jira (voir le ticket de modèle PLAT-160986) pour désactiver l’intégration.
 
-Le délai d’activation pour résoudre le ticket de désapprovisionnement pour les clients bêta est de six jours ouvrables ou moins. Une fois l’intégration héritée existante désactivée, vous pouvez procéder à la [création d&#39;une connexion](#connect) via la carte de destination en libre-service.
+Le délai d’activation pour résoudre le ticket de désapprovisionnement pour les clients bêta est de six jours ouvrables ou moins. Une fois l’intégration héritée existante désactivée, vous pouvez procéder à la [créer une connexion](#connect) via la carte de destination en libre-service.
 
 >[!IMPORTANT]
 >
@@ -80,7 +80,7 @@ Notez les limites connues suivantes et les légendes importantes dans la version
 * [Surveillance des flux de données](/help/dataflows/ui/monitor-destinations.md) n’est pas prise en charge.
 * Lorsque vous vous connectez à la destination, vous pouvez voir une option permettant d’accéder à [activation des alertes de flux de données](#enable-alerts). Bien qu’elle soit visible dans l’interface utilisateur, la variable **l’option activer les alertes n’est pas prise en charge** dans la version bêta.
 * **Les renvois ne sont pas pris en charge**. Le premier export vers Audience Manager ou d’autres solutions Experience Cloud n’inclut pas une population historique des audiences.
-* Dans la version bêta, vous pouvez créer **une connexion de destination unique à la destination Audiences Experience Cloud ;**, sur tous les environnements de test appartenant à votre organisation Experience Platform.
+* Vous pouvez créer des **une connexion de destination unique à la destination Audiences Experience Cloud ;**, sur tous les environnements de test appartenant à votre organisation Experience Platform.
 
 ### Latence lors de l’activation des audiences {#audience-activation-latency}
 
@@ -107,13 +107,13 @@ Profils exportés vers le [!UICONTROL Audiences Experience Cloud] Les destinatio
 
 Cette section décrit toutes les audiences que vous pouvez exporter vers cette destination.
 
-Toutes les destinations prennent en charge l’activation des audiences générées par l’Experience Platform [Segmentation Service](../../../segmentation/home.md).
+Cette destination prend en charge l’activation de toutes les audiences générées par l’Experience Platform. [Segmentation Service](../../../segmentation/home.md).
 
-En outre, cette destination prend également en charge l’activation des audiences décrites dans le tableau ci-dessous.
+*En outre*, cette destination prend également en charge l’activation des audiences décrites dans le tableau ci-dessous.
 
 | Type d’audience | Description |
 ---------|----------|
-| Chargements personnalisés | Audiences ingérées dans Experience Platform à partir de fichiers CSV. |
+| Chargements personnalisés | Audiences [importé](../../../segmentation/ui/overview.md#import-audience) dans Experience Platform à partir de fichiers CSV. |
 
 {style="table-layout:auto"}
 
@@ -181,7 +181,7 @@ Pour valider une exportation de données réussie, vous pouvez vérifier que vos
 
 ### Validation des données dans Audience Manager
 
-Vos audiences Experience Platform apparaissent dans Audience Manager sous la forme [signals](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=en#aep-segments-as-aam-signals), [traits](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=en#aep-segments-as-aam-traits), et [segments](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=en#aep-segments-as-aam-segments). Vous pouvez vérifier en Audience Manager si les données sont apparues comme décrit dans les liens de documentation ci-dessus.
+Les audiences Experience Platform s’affichent dans Audience Manager sous la forme [signals](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=en#aep-segments-as-aam-signals), [traits](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=en#aep-segments-as-aam-traits), et [segments](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=en#aep-segments-as-aam-segments). Vous pouvez vérifier en Audience Manager si les données sont apparues comme décrit dans les liens de documentation ci-dessus.
 
 ## Utilisation et gouvernance des données {#data-usage-governance}
 

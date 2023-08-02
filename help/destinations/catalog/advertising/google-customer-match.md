@@ -3,9 +3,9 @@ keywords: correspondance client Google;correspondance client Google;correspondan
 title: Connexion à Google Customer Match
 description: La correspondance client Google vous permet d’utiliser vos données en ligne et hors ligne pour atteindre vos clients et interagir avec eux dans les propriétés détenues et exploitées de Google, telles que la recherche, le shopping, Gmail et YouTube.
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: 1c9725c108d55aea5d46b086fbe010ab4ba6cf45
+source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
 workflow-type: tm+mt
-source-wordcount: '1818'
+source-wordcount: '1819'
 ht-degree: 19%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 19%
 
 ## Cas d’utilisation {#use-cases}
 
-Pour vous aider à mieux comprendre comment et à quel moment utiliser la variable [!DNL Google Customer Match] destination, voici des exemples de cas d’utilisation que les clients Adobe Experience Platform peuvent résoudre à l’aide de cette fonctionnalité.
+Pour mieux comprendre comment et à quel moment utiliser la variable [!DNL Google Customer Match] destination, voici des exemples de cas d’utilisation que les clients Adobe Experience Platform peuvent résoudre à l’aide de cette fonctionnalité.
 
 ### Cas d’utilisation #1
 
@@ -54,13 +54,13 @@ Certaines destinations en Experience Platform ont certaines règles et obligatio
 
 Cette section décrit toutes les audiences que vous pouvez exporter vers cette destination.
 
-Toutes les destinations prennent en charge l’activation des audiences générées par l’Experience Platform [Segmentation Service](../../../segmentation/home.md).
+Cette destination prend en charge l’activation de toutes les audiences générées par l’Experience Platform. [Segmentation Service](../../../segmentation/home.md).
 
-En outre, cette destination prend également en charge l’activation des audiences décrites dans le tableau ci-dessous.
+*En outre*, cette destination prend également en charge l’activation des audiences décrites dans le tableau ci-dessous.
 
 | Type d’audience | Description |
 ---------|----------|
-| Chargements personnalisés | Audiences ingérées dans Experience Platform à partir de fichiers CSV. |
+| Chargements personnalisés | Audiences [importé](../../../segmentation/ui/overview.md#import-audience) dans Experience Platform à partir de fichiers CSV. |
 
 {style="table-layout:auto"}
 
@@ -79,7 +79,7 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 Avant de configurer une [!DNL Google Customer Match] destination dans Experience Platform, veillez à lire et à respecter la politique de Google pour l’utilisation de [!DNL Customer Match], comme indiqué dans la section [Documentation de prise en charge de Google](https://support.google.com/google-ads/answer/6299717).
 
-Ensuite, assurez-vous que la variable [!DNL Google] compte configuré pour un [!DNL Standard] ou niveau d’autorisation supérieur. Voir [Documentation sur Google Ads](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&amp;rd=1) pour plus d’informations.
+Ensuite, assurez-vous que la variable [!DNL Google] est configuré pour un compte [!DNL Standard] ou niveau d’autorisation supérieur. Voir [Documentation sur Google Ads](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&amp;rd=1) pour plus d’informations.
 
 ### Liste autorisée {#allowlist}
 
@@ -112,17 +112,17 @@ Pour plus d’informations sur les exigences de hachage de Google et d’autres 
 
 * [[!DNL Customer Match] avec adresse électronique, adresse ou identifiant utilisateur](https://developers.google.com/google-ads/api/docs/remarketing/audience-types/customer-match#customer_match_with_email_address_address_or_user_id)
 * [[!DNL Customer Match] considérations](https://developers.google.com/google-ads/api/docs/remarketing/audience-types/customer-match#customer_match_considerations)
-* [[!DNL Customer Match] avec numéro de téléphone](https://developers.google.com/google-ads/api/docs/remarketing/audience-types/customer-match#customer_match_with_phone_number)
+* [[!DNL Customer Match] avec le numéro de téléphone](https://developers.google.com/google-ads/api/docs/remarketing/audience-types/customer-match#customer_match_with_phone_number)
 * [[!DNL Customer Match] avec des identifiants d’appareil mobile](https://developers.google.com/google-ads/api/docs/remarketing/audience-types/customer-match#customer_match_with_mobile_device_ids)
 
 
-Pour en savoir plus sur l’ingestion d’adresses électroniques dans Experience Platform, voir [Présentation de l’ingestion par lots](../../../ingestion/batch-ingestion/overview.md) et le [présentation de l’ingestion par flux](../../../ingestion/streaming-ingestion/overview.md).
+Pour en savoir plus sur l’ingestion d’adresses électroniques dans Experience Platform, voir [Présentation de l’ingestion par lots](../../../ingestion/batch-ingestion/overview.md) et la variable [présentation de l’ingestion par flux](../../../ingestion/streaming-ingestion/overview.md).
 
 Si vous choisissez de hacher vous-même les adresses électroniques, veillez à respecter les exigences de Google, décrites dans les liens ci-dessus.
 
 ### Utilisation d’espaces de noms personnalisés {#custom-namespaces}
 
-Avant d’utiliser la variable `User_ID` espace de noms pour envoyer des données à Google, veillez à synchroniser vos propres identifiants à l’aide de [!DNL gTag]. Reportez-vous à la section [Documentation officielle de Google](https://support.google.com/google-ads/answer/9199250) pour plus d’informations.
+Avant d’utiliser la variable `User_ID` espace de noms pour envoyer des données à Google, veillez à synchroniser vos propres identifiants à l’aide de [!DNL gTag]. Voir [Documentation officielle de Google](https://support.google.com/google-ads/answer/9199250) pour plus d’informations.
 
 <!-- Data from unhashed namespaces is automatically hashed by [!DNL Platform] upon activation.
 
@@ -147,13 +147,13 @@ Pour vous connecter à cette destination, procédez comme décrit dans le [tutor
 
 Pendant la [configuration](../../ui/connect-destination.md) de cette destination, vous devez fournir les informations suivantes :
 
-* **[!UICONTROL Nom]**: fournir un nom pour cette connexion de destination ;
-* **[!UICONTROL Description]**: fournir une description pour cette connexion de destination ;
-* **[!UICONTROL Identifiant de compte]**: your [Identifiant client Google Ads](https://support.google.com/google-ads/answer/1704344?hl=en). Le format de l’ID est xxx-xxx-xxxx. Si vous utilisez la variable [!DNL Google Ads Manager Account (My Client Center)], n’utilisez pas votre ID de compte de gestionnaire. Utilisez la variable [Identifiant client Google Ads](https://support.google.com/google-ads/answer/1704344?hl=en) au lieu de .
+* **[!UICONTROL Nom]**: indiquez un nom pour cette connexion de destination.
+* **[!UICONTROL Description]**: fournissez une description pour cette connexion de destination.
+* **[!UICONTROL Identifiant de compte]**: votre [Identifiant client Google Ads](https://support.google.com/google-ads/answer/1704344?hl=en). Le format de l’ID est xxx-xxx-xxxx. Si vous utilisez la variable [!DNL Google Ads Manager Account (My Client Center)], n’utilisez pas votre ID de compte de gestionnaire. Utilisez la variable [Identifiant client Google Ads](https://support.google.com/google-ads/answer/1704344?hl=en) au lieu de .
 
 >[!IMPORTANT]
 >
-> * Le **[!UICONTROL Combiner avec les PII]** l’action marketing est sélectionnée par défaut pour la variable [!DNL Google Customer Match] destination et ne peuvent pas être supprimés.
+> * La variable **[!UICONTROL Combiner avec les PII]** l’action marketing est sélectionnée par défaut pour la variable [!DNL Google Customer Match] destination et ne peuvent pas être supprimés.
 
 ### Activer les alertes {#enable-alerts}
 
@@ -173,7 +173,7 @@ Dans le **[!UICONTROL Planification du segment]** , vous devez fournir la variab
 
 ![ID de l’application de correspondance client Google](../../assets/catalog/advertising/google-customer-match/gcm-destination-appid.png)
 
-Pour plus d’informations sur la manière de trouver le [!DNL App ID], reportez-vous à la section [Documentation officielle de Google](https://developers.google.com/adwords/api/docs/reference/v201809/AdwordsUserListService.CrmBasedUserList#appid).
+Pour plus d’informations sur la manière de trouver le [!DNL App ID], reportez-vous au [Documentation officielle de Google](https://developers.google.com/adwords/api/docs/reference/v201809/AdwordsUserListService.CrmBasedUserList#appid).
 
 ### Exemple de mappage : activation des données d’audience dans [!DNL Google Customer Match] {#example-gcm}
 
@@ -181,20 +181,20 @@ Il s’agit d’un exemple de mappage d’identité correct lors de l’activati
 
 Sélection des champs sources :
 
-* Sélectionnez la `Email` espace de noms comme identité source si les adresses électroniques que vous utilisez ne sont pas hachées.
-* Sélectionnez la `Email_LC_SHA256` espace de noms comme identité source si vous avez haché des adresses électroniques client lors de l’ingestion de données dans [!DNL Platform], en fonction de [!DNL Google Customer Match] [exigences de hachage des emails](#hashing-requirements).
-* Sélectionnez la `PHONE_E.164` espace de noms en tant qu’identité source si vos données se composent de numéros de téléphone non hachés. [!DNL Platform] hachera les numéros de téléphone pour les [!DNL Google Customer Match] conditions requises.
-* Sélectionnez la `Phone_SHA256_E.164` espace de noms comme identité source si vous avez haché des numéros de téléphone lors de l’ingestion des données dans [!DNL Platform], en fonction de [!DNL Facebook] [exigences de hachage des numéros de téléphone](#phone-number-hashing-requirements).
-* Sélectionnez la `IDFA` espace de noms comme identité source si vos données sont composées [!DNL Apple] ID d’appareil.
-* Sélectionnez la `GAID` espace de noms comme identité source si vos données sont composées [!DNL Android] ID d’appareil.
-* Sélectionnez la `Custom` espace de noms comme identité source si vos données sont composées d’autres types d’identifiants.
+* Sélectionnez la variable `Email` espace de noms comme identité source si les adresses électroniques que vous utilisez ne sont pas hachées.
+* Sélectionnez la variable `Email_LC_SHA256` espace de noms comme identité source si vous avez haché des adresses électroniques client lors de l’ingestion de données dans [!DNL Platform], selon [!DNL Google Customer Match] [exigences de hachage des emails](#hashing-requirements).
+* Sélectionnez la variable `PHONE_E.164` espace de noms en tant qu’identité source si vos données se composent de numéros de téléphone non hachés. [!DNL Platform] hachera les numéros de téléphone pour qu’ils soient conformes. [!DNL Google Customer Match] conditions requises.
+* Sélectionnez la variable `Phone_SHA256_E.164` espace de noms comme identité source si vous avez haché des numéros de téléphone lors de l’ingestion des données dans [!DNL Platform], selon [!DNL Facebook] [exigences de hachage des numéros de téléphone](#phone-number-hashing-requirements).
+* Sélectionnez la variable `IDFA` espace de noms comme identité source si vos données sont composées [!DNL Apple] ID d’appareil.
+* Sélectionnez la variable `GAID` espace de noms comme identité source si vos données sont composées [!DNL Android] ID d’appareil.
+* Sélectionnez la variable `Custom` espace de noms comme identité source si vos données sont composées d’autres types d’identifiants.
 
 Sélection des champs cibles :
 
-* Sélectionnez la `Email_LC_SHA256` espace de noms comme identité cible lorsque vos espaces de noms sources `Email` ou `Email_LC_SHA256`.
-* Sélectionnez la `Phone_SHA256_E.164` espace de noms comme identité cible lorsque vos espaces de noms sources `PHONE_E.164` ou `Phone_SHA256_E.164`.
-* Sélectionnez la `IDFA` ou `GAID` les espaces de noms comme identité cible lorsque vos espaces de noms sources `IDFA` ou `GAID`.
-* Sélectionnez la `User_ID` espace de noms comme identité cible lorsque votre espace de noms source est personnalisé.
+* Sélectionnez la variable `Email_LC_SHA256` l’espace de noms comme identité cible lorsque vos espaces de noms sources `Email` ou `Email_LC_SHA256`.
+* Sélectionnez la variable `Phone_SHA256_E.164` l’espace de noms comme identité cible lorsque vos espaces de noms sources `PHONE_E.164` ou `Phone_SHA256_E.164`.
+* Sélectionnez la variable `IDFA` ou `GAID` les espaces de noms comme identité cible lorsque vos espaces de noms sources `IDFA` ou `GAID`.
+* Sélectionnez la variable `User_ID` espace de noms comme identité cible lorsque votre espace de noms source est personnalisé.
 
 ![Mappage des identités](../../assets/ui/activate-segment-streaming-destinations/identity-mapping-gcm.png)
 
