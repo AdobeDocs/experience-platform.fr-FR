@@ -3,7 +3,7 @@ title: Suivi des liens à l’aide du SDK Web de Adobe Experience Platform
 description: Découvrez comment envoyer des données de lien à Adobe Analytics avec le SDK Web Experience Platform
 keywords: adobe analytics;analytics;sendEvent;s.t();s.tl();webPageDetails;pageViews;webInteraction;interaction web;pages vues;suivi des liens;liens;suivre les liens;cliquer sur la collection;cliquer sur la collection;
 exl-id: d5a1804c-8f91-4083-a46e-ea8f7edf36b6
-source-git-commit: 04078a53bc6bdc01d8bfe0f2e262a28bbaf542da
+source-git-commit: edf33d0d5991aed5c0535d0e7010aef082bcf48a
 workflow-type: tm+mt
 source-wordcount: '470'
 ht-degree: 1%
@@ -12,9 +12,8 @@ ht-degree: 1%
 
 # Suivi des liens
 
-Les liens peuvent être définis manuellement ou suivis. [automatiquement](#automaticLinkTracking). Le suivi manuel est effectué en ajoutant les détails sous la variable `web.webInteraction` fait partie du schéma. Il existe trois variables obligatoires :
+Les liens peuvent être définis manuellement ou suivis. [automatiquement](#automaticLinkTracking). Le suivi manuel est effectué en ajoutant les détails sous la variable `web.webInteraction` fait partie du schéma. Il existe deux variables obligatoires :
 
-* `web.webInteraction.name`
 * `web.webInteraction.type`
 * `web.webInteraction.linkClicks.value`
 
@@ -43,7 +42,7 @@ Le type de lien peut correspondre à l’une des trois valeurs suivantes :
 * **`download`:** Lien de téléchargement
 * **`exit`:** Un lien de sortie
 
-Ces valeurs sont les suivantes : [mappé automatiquement](adobe-analytics/automatically-mapped-vars.md) dans Adobe Analytics si [configuré](adobe-analytics/analytics-overview.md) pour ce faire.
+Ces valeurs sont [mappé automatiquement](adobe-analytics/automatically-mapped-vars.md) dans Adobe Analytics si [configuré](adobe-analytics/analytics-overview.md) pour ce faire.
 
 ## Suivi automatique des liens {#automaticLinkTracking}
 
@@ -106,7 +105,7 @@ alloy("configure", {
 });
 ```
 
-Lors du filtrage des événements de suivi des liens à l’aide de la variable `onBeforeLinkClickSend` , Adobe recommande de renvoyer la commande `false` pour les clics sur les liens qui ne doivent pas être suivis. Toute autre réponse fera en sorte que le SDK Web envoie les données au réseau Edge.
+Lors du filtrage des événements de suivi des liens à l’aide de la variable `onBeforeLinkClickSend` , Adobe recommande de renvoyer la commande `false` pour les clics sur les liens qui ne doivent pas faire l’objet d’un suivi. Toute autre réponse fera en sorte que le SDK Web envoie les données au réseau Edge.
 
 
 >[!NOTE]
