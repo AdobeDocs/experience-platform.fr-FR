@@ -2,9 +2,9 @@
 title: Configurer les remplacements de train de données
 description: Découvrez comment configurer les remplacements de flux de données dans l’interface utilisateur des flux de données et les activer via le SDK Web.
 exl-id: 7829f411-acdc-49a1-a8fe-69834bcdb014
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: 32f36d96e3aa6beb72121adcc74f2da0bd2c9473
 workflow-type: tm+mt
-source-wordcount: '972'
+source-wordcount: '997'
 ht-degree: 4%
 
 ---
@@ -22,6 +22,10 @@ Le remplacement de la configuration du flux de données est un processus en deux
 
 Cet article explique le processus de remplacement de la configuration de flux de données de bout en bout pour chaque type de remplacement pris en charge.
 
+>[!IMPORTANT]
+>
+>Les remplacements de flux de données ne sont pris en charge que pour [SDK Web](../edge/home.md) intégrations. [SDK Mobile](https://developer.adobe.com/client-sdks/documentation/) et [API du serveur](../server-api/overview.md) les intégrations ne prennent actuellement pas en charge les remplacements de flux de données.
+
 ## Configuration des remplacements de flux de données dans l’interface utilisateur des flux de données {#configure-overrides}
 
 Les remplacements de configuration des flux de données vous permettent de modifier les configurations de flux de données suivantes :
@@ -33,7 +37,7 @@ Les remplacements de configuration des flux de données vous permettent de modif
 
 ### Remplacements de flux de données pour Adobe Target {#target-overrides}
 
-Pour configurer les remplacements de flux de données pour un flux de données Adobe Target, vous devez d’abord créer un flux de données Adobe Target. Suivez les instructions de la section [configuration d’un flux de données](configure.md) avec le [Adobe Target](configure.md#target) service.
+Pour configurer les remplacements de flux de données pour un flux de données Adobe Target, vous devez d’abord créer un flux de données Adobe Target. Suivez les instructions de la section [configuration d’un flux de données](configure.md) avec la propriété [Adobe Target](configure.md#target) service.
 
 Une fois que vous avez créé le flux de données, modifiez la variable [Adobe Target](configure.md#target) que vous avez ajouté et que vous utilisez **[!UICONTROL Remplacements de jetons de propriété]** pour ajouter les remplacements de la banque de données souhaitée, comme illustré dans l’image ci-dessous. Ajoutez un jeton de propriété par ligne.
 
@@ -45,7 +49,7 @@ Vous devez maintenant configurer les remplacements de la banque de données Adob
 
 ### Remplacements de flux de données pour Adobe Analytics {#analytics-overrides}
 
-Pour configurer les remplacements de flux de données pour un flux de données Adobe Analytics, vous devez d’abord disposer d’un [Adobe Analytics](configure.md#analytics) datastream créé. Suivez les instructions de la section [configuration d’un flux de données](configure.md) avec le [Adobe Analytics](configure.md#analytics) service.
+Pour configurer les remplacements de flux de données pour un flux de données Adobe Analytics, vous devez d’abord avoir une [Adobe Analytics](configure.md#analytics) datastream créé. Suivez les instructions de la section [configuration d’un flux de données](configure.md) avec la propriété [Adobe Analytics](configure.md#analytics) service.
 
 Une fois que vous avez créé le flux de données, modifiez la variable [Adobe Analytics](configure.md#target) que vous avez ajouté et que vous utilisez **[!UICONTROL Remplacements de suites de rapports]** pour ajouter les remplacements de la banque de données souhaitée, comme illustré dans l’image ci-dessous.
 
@@ -59,9 +63,9 @@ Vous devez maintenant configurer les remplacements de la banque de données Adob
 
 ### Remplacements de la chaîne de données pour les jeux de données d’événements Experience Platform {#event-dataset-overrides}
 
-Pour configurer les remplacements de flux de données pour les jeux de données d’événements Experience Platform, vous devez d’abord disposer d’un [Adobe Experience Platform](configure.md#aep) datastream créé. Suivez les instructions de la section [configuration d’un flux de données](configure.md) avec le [Adobe Experience Platform](configure.md#aep) service.
+Pour configurer les remplacements de flux de données pour les jeux de données d’événements Experience Platform, vous devez d’abord disposer d’un [Adobe Experience Platform](configure.md#aep) datastream créé. Suivez les instructions de la section [configuration d’un flux de données](configure.md) avec la propriété [Adobe Experience Platform](configure.md#aep) service.
 
-Une fois que vous avez créé le flux de données, modifiez la variable [Adobe Experience Platform](configure.md#aep) service que vous avez ajouté et sélectionnez **[!UICONTROL Ajouter un jeu de données d’événement]** pour ajouter un ou plusieurs jeux de données d’événement de remplacement, comme illustré dans l’image ci-dessous.
+Une fois que vous avez créé le flux de données, modifiez la variable [Adobe Experience Platform](configure.md#aep) service que vous avez ajouté et sélectionnez **[!UICONTROL Ajout d’un jeu de données d’événement]** pour ajouter un ou plusieurs jeux de données d’événement de remplacement, comme illustré dans l’image ci-dessous.
 
 ![Copie d’écran de l’interface utilisateur des flux de données présentant les paramètres du service Adobe Experience Platform, avec les remplacements de jeux de données d’événement surlignés.](assets/overrides/override-aep.png)
 
@@ -97,9 +101,9 @@ Après [configuration des remplacements de la banque de données](#configure-ove
 
 L’envoi des remplacements au réseau Edge via le SDK Web constitue la deuxième et dernière étape de l’activation des remplacements de configuration de la banque de données.
 
-Les remplacements de configuration de la chaîne de données sont envoyés au réseau Edge par l’intermédiaire de la variable `edgeConfigOverrides` SDK Web, commande. Cette commande crée des remplacements de flux de données qui sont transmis au [!DNL Edge Network] dans la commande suivante, ou, dans le cas de la fonction `configure` pour chaque requête.
+Les remplacements de configuration de la chaîne de données sont envoyés au réseau Edge par l’intermédiaire de la variable `edgeConfigOverrides` SDK Web, commande. Cette commande crée des remplacements de flux de données qui sont transmis à la variable [!DNL Edge Network] dans la commande suivante, ou, dans le cas de la fonction `configure` pour chaque requête.
 
-Le `edgeConfigOverrides` crée des remplacements de flux de données qui sont transmis au [!DNL Edge Network] sur la commande suivante, ou, dans le cas de `configure`, pour chaque requête.
+La variable `edgeConfigOverrides` crée des remplacements de flux de données qui sont transmis au [!DNL Edge Network] sur la commande suivante, ou, dans le cas de `configure`, pour chaque requête.
 
 Lorsqu’un remplacement de configuration est envoyé avec la variable `configure` , elle est incluse dans les commandes suivantes du SDK Web.
 
