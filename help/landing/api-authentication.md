@@ -4,10 +4,10 @@ title: Authentification et accès aux API Experience Platform
 type: Tutorial
 description: Ce document fournit un tutoriel détaillé pour accéder à un compte de développeur Adobe Experience Platform afin d’effectuer des appels API Experience Platform.
 exl-id: dfe8a7be-1b86-4d78-a27e-87e4ed8b3d42
-source-git-commit: 361f409c7aeee2e3e789bb263eca7c59b73db8ec
+source-git-commit: f598c6dabe9296044055d8e961cf5177a655f5fa
 workflow-type: tm+mt
-source-wordcount: '2240'
-ht-degree: 10%
+source-wordcount: '2205'
+ht-degree: 11%
 
 ---
 
@@ -36,6 +36,7 @@ Pour passer avec succès des appels à des API Experience Platform, vous devez d
 
 * Une organisation ayant accès à Adobe Experience Platform.
 * Administrateur de Admin Console capable de vous ajouter en tant que développeur et utilisateur pour un profil de produit.
+* Administrateur système Experience Platform qui peut vous accorder les contrôles d’accès basés sur les attributs nécessaires pour effectuer des opérations de lecture ou d’écriture sur différentes parties de l’Experience Platform via les API.
 
 Vous devez également disposer d’un Adobe ID pour suivre ce tutoriel. Si vous ne possédez pas d’Adobe ID, vous pouvez en créer un en suivant les étapes suivantes :
 
@@ -55,7 +56,9 @@ Une fois que vous êtes désigné en tant que développeur, vous pouvez commence
 
 ### Obtenir un accès en tant qu’utilisateur {#gain-user-access}
 
-Votre [!DNL Admin Console] L’administrateur doit également vous ajouter en tant qu’utilisateur au même profil de produit. Consultez le guide sur la [gestion des groupes d’utilisateurs dans [!DNL Admin Console]](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/user-groups.ug.html) pour plus d’informations.
+Votre [!DNL Admin Console] L’administrateur doit également vous ajouter en tant qu’utilisateur au même profil de produit. Avec l’accès utilisateur, vous pouvez voir dans l’interface utilisateur le résultat des opérations de l’API que vous effectuez.
+
+Consultez le guide sur la [gestion des groupes d’utilisateurs dans [!DNL Admin Console]](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/user-groups.ug.html) pour plus d’informations.
 
 ## Génération d’une clé API (ID client) et d’un ID d’organisation {#generate-credentials}
 
@@ -65,21 +68,25 @@ Votre [!DNL Admin Console] L’administrateur doit également vous ajouter en ta
 
 Une fois que vous avez reçu l’accès développeur et utilisateur à Platform via [!DNL Admin Console], l’étape suivante consiste à générer votre `{ORG_ID}` et `{API_KEY}` informations d’identification dans la console Adobe Developer. Ces informations d’identification ne doivent être générées qu’une seule fois et peuvent être réutilisées dans les futurs appels d’API Platform.
 
-### Ajout d’un Experience Platform à un projet {#add-platform-to-project}
+### Ajouter un Experience Platform à un projet {#add-platform-to-project}
 
 Accédez à [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) et connectez-vous avec votre Adobe ID. Suivez ensuite les étapes décrites dans le tutoriel sur la [création dʼun projet vide](https://developer.adobe.com/developer-console/docs/guides/projects/projects-empty/) disponible dans la documentation dʼAdobe Developer Console.
 
-Une fois que vous avez créé un projet, sélectionnez **[!UICONTROL Ajout d’une API]** sur le **[!UICONTROL Présentation du projet]** écran.
+Une fois que vous avez créé un projet, sélectionnez **[!UICONTROL Ajouter une API]** sur le **[!UICONTROL Présentation du projet]** écran.
 
-![](./images/api-authentication/add-api.png)
+>[!TIP]
+>
+>Si vous êtes configuré pour plusieurs organisations, utilisez le sélecteur d’organisations dans le coin supérieur droit de l’interface pour vous assurer que vous êtes dans l’organisation dont vous avez besoin.
 
-L’écran **[!UICONTROL Ajouter une API]** s’affiche. Sélectionnez l’icône de produit pour Adobe Experience Platform, puis choisissez **[!UICONTROL API Experience Platform]** avant de sélectionner **[!UICONTROL Suivant]**.
+![Écran Developer Console avec l’option Ajouter une API mise en surbrillance.](./images/api-authentication/add-api.png)
+
+L’écran **[!UICONTROL Ajouter une API]** s’affiche. Sélectionnez l’icône de produit pour Adobe Experience Platform, puis choisissez **[!UICONTROL API EXPERIENCE PLATFORM]** avant de sélectionner **[!UICONTROL Suivant]**.
 
 ![Sélectionnez API Experience Platform.](./images/api-authentication/platform-api.png)
 
 >[!TIP]
 >
->Sélectionnez la **[!UICONTROL Affichage des documents]** pour accéder à la [Documentation de référence de l’API Experience Platform](https://developer.adobe.com/experience-platform-apis/).
+>Sélectionnez la variable **[!UICONTROL Affichage des documents]** pour accéder à la [Documentation de référence de l’API Experience Platform](https://developer.adobe.com/experience-platform-apis/).
 
 ### Sélectionnez le type d’authentification OAuth Server-to-Server {#select-oauth-server-to-server}
 
@@ -87,20 +94,22 @@ Sélectionnez ensuite le type d&#39;authentification pour générer les jetons d
 
 >[!IMPORTANT]
 >
->Sélectionnez la **[!UICONTROL OAuth serveur à serveur]** car il s’agira de la seule méthode prise en charge à l’avenir. Le **[!UICONTROL Compte de service (JWT)]** est obsolète. Bien que les intégrations utilisant la méthode d’authentification JWT continueront à fonctionner jusqu’au 1er janvier 2025, Adobe recommande vivement de migrer les intégrations existantes vers la nouvelle méthode OAuth Server-to-Server avant cette date. Pour plus d’informations, reportez-vous à la section [!BADGE Obsolète]{type=negative}[Génération d’un jeton Web JSON (JWT)](#jwt).
+>Sélectionnez la variable **[!UICONTROL OAuth serveur à serveur]** car il s’agira de la seule méthode prise en charge à l’avenir. La variable **[!UICONTROL Compte de service (JWT)]** est obsolète. Bien que les intégrations utilisant la méthode d’authentification JWT continueront à fonctionner jusqu’au 1er janvier 2025, Adobe recommande vivement de migrer les intégrations existantes vers la nouvelle méthode OAuth Server-to-Server avant cette date. Pour plus d’informations, consultez la section [!BADGE Obsolète]{type=negative}[Génération d’un jeton Web JSON (JWT)](#jwt).
 
 ![Sélectionnez API Experience Platform.](./images/api-authentication/oauth-authentication-method.png)
 
 ### Sélection des profils de produit pour votre intégration {#select-product-profiles}
 
-Sélectionnez ensuite les profils de produits à appliquer à votre intégration.
-Le compte de service de votre intégration aura accès à des fonctionnalités granulaires par le biais des profils de produits sélectionnés ici.
+Dans le **[!UICONTROL Configuration de l’API]** écran, sélectionnez **[!UICONTROL AEP-Default-All-Users]**.
 
-Notez que pour accéder à certaines fonctionnalités de Platform, vous avez également besoin d’un administrateur système pour vous accorder les autorisations de contrôle d’accès en fonction des attributs nécessaires. En savoir plus dans la section [Obtention des autorisations de contrôle d’accès basées sur les attributs nécessaires](#get-abac-permissions).
+<!--
+Your integration's service account will gain access to granular features through the product profiles selected here.
 
->[!TIP]
+-->
+
+>[!IMPORTANT]
 >
-Si vous prévoyez de voir un certain profil de produit ici, contactez votre administrateur système. Les administrateurs système peuvent afficher et gérer les informations d’identification de l’API dans la vue Autorisations. Voir à ce sujet la section [Ajout de développeurs à un profil de produit](#add-developers-to-product-profile).
+Pour accéder à certaines fonctionnalités de Platform, vous avez également besoin d’un administrateur système pour vous accorder les autorisations de contrôle d’accès basées sur les attributs nécessaires. En savoir plus dans la section [Obtention des autorisations de contrôle d’accès basées sur les attributs nécessaires](#get-abac-permissions).
 
 ![Sélectionnez les profils de produit pour votre intégration.](./images/api-authentication/select-product-profiles.png)
 
@@ -112,7 +121,7 @@ Une présentation des étapes décrites ci-dessus pour configurer une intégrati
 
 ### Collectez les informations d’identification de . {#gather-credentials}
 
-Une fois l’API ajoutée au projet, la variable **[!UICONTROL API Experience Platform]** La page du projet affiche les informations d’identification suivantes, requises dans tous les appels aux API Experience Platform :
+Une fois l’API ajoutée au projet, la variable **[!UICONTROL API EXPERIENCE PLATFORM]** La page du projet affiche les informations d’identification suivantes, requises dans tous les appels aux API Experience Platform :
 
 ![Informations d’intégration après l’ajout d’une API dans Developer Console.](./images/api-authentication/api-integration-information.png)
 
@@ -131,9 +140,9 @@ In addition to the above credentials, you also need the generated **[!UICONTROL 
 
 -->
 
-## Génération d’un jeton d’accès {#generate-access-token}
+## Générer un jeton d’accès {#generate-access-token}
 
-L’étape suivante consiste à générer une `{ACCESS_TOKEN}` informations d’identification à utiliser dans les appels API Platform. Contrairement aux valeurs de `{API_KEY}` et `{ORG_ID}`, un nouveau jeton doit être généré toutes les 24 heures pour continuer à utiliser les API de Platform. Sélectionner **[!UICONTROL Générer un jeton d’accès]**, comme illustré ci-dessous.
+L’étape suivante consiste à générer une `{ACCESS_TOKEN}` informations d’identification à utiliser dans les appels d’API Platform. Contrairement aux valeurs de `{API_KEY}` et `{ORG_ID}`, un nouveau jeton doit être généré toutes les 24 heures pour continuer à utiliser les API de Platform. Sélectionner **[!UICONTROL Générer un jeton d’accès]**, comme illustré ci-dessous.
 
 ![Afficher comment générer un jeton d’accès](././images/api-authentication/generate-access-token.gif)
 
@@ -148,7 +157,7 @@ Vous pouvez également utiliser un environnement et une collection Postman pour 
 La méthode JWT pour générer des jetons d’accès a été abandonnée. Toutes les nouvelles intégrations doivent être créées à l’aide du [Méthode d’authentification OAuth serveur à serveur](#select-oauth-server-to-server). Adobe vous recommande également de migrer vos intégrations existantes vers la méthode OAuth. Lisez la documentation importante suivante :
 > 
 * [Guide de migration de vos applications de JWT vers OAuth](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/)
-* [Guide de mise en oeuvre pour les nouvelles et les anciennes applications avec OAuth](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation/)
+* [Guide de mise en œuvre pour les nouvelles et les anciennes applications avec OAuth](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation/)
 * [Avantages de l’utilisation de la méthode d’identification OAuth serveur à serveur](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/#why-oauth-server-to-server-credentials)
 
 +++ Affichage des informations obsolètes
@@ -159,27 +168,27 @@ L’étape suivante consiste à générer un jeton Web JSON (JWT) basé sur les 
 >
 Pour les besoins de ce tutoriel, les étapes ci-dessous indiquent comment générer un jeton JWT dans Developer Console. Cependant, cette méthode de génération ne doit être utilisée qu’à des fins de test et d’évaluation.
 >
-Pour une utilisation régulière, le jeton JWT doit être généré automatiquement. Pour plus d’informations sur la manière de générer des jetons JWT par programmation, reportez-vous à la section [Guide d’authentification de compte de service](https://www.adobe.io/developer-console/docs/guides/authentication/JWT/) sur Adobe Developer.
+Pour une utilisation régulière, le jeton JWT doit être généré automatiquement. Pour plus d’informations sur la manière de générer des jetons JWT par programmation, voir la section [Guide d’authentification de compte de service](https://www.adobe.io/developer-console/docs/guides/authentication/JWT/) sur Adobe Developer.
 
 Sélectionner **[!UICONTROL Compte de service (JWT)]** dans le volet de navigation de gauche, puis sélectionnez **[!UICONTROL Génération de JWT]**.
 
 ![](././images/api-authentication/generate-jwt.png)
 
-Dans la zone de texte fournie sous **[!UICONTROL Génération d’un JWT personnalisé]**, collez le contenu de la clé privée que vous avez générée précédemment lors de l’ajout de l’API Platform à votre compte de service. Sélectionnez ensuite **[!UICONTROL Générer un jeton]**.
+Dans la zone de texte fournie sous **[!UICONTROL Générer un JWT personnalisé]**, collez le contenu de la clé privée que vous avez générée précédemment lors de l’ajout de l’API Platform à votre compte de service. Sélectionnez ensuite **[!UICONTROL Générer un jeton]**.
 
 ![](././images/api-authentication/paste-key.png)
 
-La page se met à jour pour afficher le JWT généré, ainsi qu’un exemple de commande cURL qui vous permet de générer un jeton d’accès. Pour les besoins de ce tutoriel, sélectionnez **[!UICONTROL Copier]** en regard de **[!UICONTROL JWT généré]** pour copier le jeton dans le presse-papiers.
+La page se met à jour pour afficher le JWT généré, ainsi qu’un exemple de commande cURL qui vous permet de générer un jeton d’accès. Dans ce tutoriel, sélectionnez **[!UICONTROL Copier]** en regard de **[!UICONTROL JWT généré]** pour copier le jeton dans le presse-papiers.
 
 ![](././images/api-authentication/copy-jwt.png)
 
-**Génération d’un jeton d’accès**
+**Générer un jeton d’accès**
 
 Une fois que vous avez généré un jeton JWT, vous pouvez l’utiliser dans un appel API pour générer votre `{ACCESS_TOKEN}`. Contrairement aux valeurs de `{API_KEY}` et `{ORG_ID}`, un nouveau jeton doit être généré toutes les 24 heures pour continuer à utiliser les API de Platform.
 
 **Requête**
 
-La requête suivante génère une nouvelle `{ACCESS_TOKEN}` en fonction des informations d’identification fournies dans la payload. Ce point de terminaison accepte uniquement les données de formulaire comme charge utile. Il doit donc recevoir une `Content-Type` en-tête de `multipart/form-data`.
+La requête suivante génère une nouvelle `{ACCESS_TOKEN}` en fonction des informations d’identification fournies dans la payload. Ce point de terminaison accepte uniquement les données de formulaire comme charge utile. Il doit donc recevoir une `Content-Type` header of `multipart/form-data`.
 
 ```shell
 curl -X POST https://ims-na1.adobelogin.com/ims/exchange/jwt \
@@ -191,7 +200,7 @@ curl -X POST https://ims-na1.adobelogin.com/ims/exchange/jwt \
 
 | Propriété | Description |
 | --- | --- |
-| `{API_KEY}` | Le `{API_KEY}` ([!UICONTROL ID client]) que vous avez récupéré dans une [étape précédente](#api-ims-secret). |
+| `{API_KEY}` | La variable `{API_KEY}` ([!UICONTROL ID client]) que vous avez récupéré dans une [étape précédente](#api-ims-secret). |
 | `{SECRET}` | Le secret client que vous avez récupéré dans une [étape précédente](#api-ims-secret). |
 | `{JWT}` | Le jeton JWT que vous avez généré dans une [étape précédente](#jwt). |
 
@@ -260,11 +269,11 @@ Si votre réponse est similaire à celle illustrée ci-dessous, vos informations
 
 >[!IMPORTANT]
 >
-Bien que l’appel ci-dessus soit suffisant pour tester vos informations d’identification d’accès, sachez que vous ne pourrez pas accéder à plusieurs ressources ou les modifier sans disposer des autorisations appropriées de contrôle d’accès en fonction des attributs. En savoir plus dans la section [Obtention des autorisations de contrôle d’accès basées sur les attributs nécessaires](#get-abac-permissions) .
+Bien que l’appel ci-dessus soit suffisant pour tester vos informations d’identification d’accès, sachez que vous ne pourrez pas accéder à plusieurs ressources ou les modifier sans disposer des autorisations appropriées de contrôle d’accès basées sur des attributs. En savoir plus dans la section **Obtention des autorisations de contrôle d’accès basées sur les attributs nécessaires** ci-dessous.
 
 ## Obtention des autorisations de contrôle d’accès basées sur les attributs nécessaires {#get-abac-permissions}
 
-Pour accéder à plusieurs ressources ou les modifier dans Experience Platform, vous devez disposer des autorisations de contrôle d’accès appropriées. Les administrateurs système peuvent vous accorder la [autorisations dont vous avez besoin](/help/access-control/ui/permissions.md). Pour plus d’informations, reportez-vous à la section sur [gestion des informations d’identification d’API pour un rôle](/help/access-control/abac/ui/permissions.md#manage-api-credentials-for-role).
+Pour accéder à plusieurs ressources ou les modifier dans Experience Platform, vous devez disposer des autorisations de contrôle d’accès appropriées. Les administrateurs système peuvent vous accorder la [autorisations dont vous avez besoin](/help/access-control/ui/permissions.md). Pour plus d’informations, voir la section sur [gestion des informations d’identification d’API pour un rôle](/help/access-control/abac/ui/permissions.md#manage-api-credentials-for-role).
 
 Des informations détaillées sur la manière dont un administrateur système peut accorder les autorisations requises pour accéder aux ressources Platform via l’API sont également disponibles dans le tutoriel vidéo ci-dessous :
 
@@ -276,11 +285,11 @@ Des informations détaillées sur la manière dont un administrateur système pe
 
 Des informations détaillées sur l’utilisation de Postman avec des collections et des environnements Experience Platform sont également disponibles dans les tutoriels vidéo ci-dessous :
 
-**Téléchargement et importation d’un environnement Postman à utiliser avec les API Experience Platform**
+**Télécharger et importer un environnement Postman à utiliser avec les API Experience Platform**
 
 >[!VIDEO](https://video.tv.adobe.com/v/28832/?learn=on&t=106)
 
-**Utilisation d’une collection Postman pour générer des jetons d’accès**
+**Utiliser une collection Postman pour générer des jetons d’accès**
 
 Téléchargez la [Collection Postman Identity Management Service](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/ims) et regardez la vidéo ci-dessous pour savoir comment générer des jetons d’accès.
 
@@ -294,7 +303,7 @@ Téléchargez la [Collection Postman Identity Management Service](https://github
 This [Medium post](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f) describes how you can set up Postman to automatically perform JWT authentication and use it to consume Platform APIs.
 -->
 
-## Administrateurs système : Accorder un contrôle d’accès aux développeurs et aux API avec des autorisations d’Experience Platform {#grant-developer-and-api-access-control}
+## Administrateurs système : octroi aux développeurs et aux API d’un contrôle d’accès avec des autorisations d’Experience Platform {#grant-developer-and-api-access-control}
 
 >[!NOTE]
 >
@@ -314,9 +323,9 @@ Dans la **[!UICONTROL Profils de produit]** onglet, sélectionnez **[!UICONTROL 
 
 ![Recherche du profil de produit](././images/api-authentication/select-product-profile.png)
 
-Sélectionnez la **[!UICONTROL Développeurs]** , puis sélectionnez **[!UICONTROL Ajouter un développeur]**.
+Sélectionnez la variable **[!UICONTROL Développeurs]** , puis sélectionnez **[!UICONTROL Ajouter un développeur]**.
 
-![Ajout d’un développeur à partir de l’onglet Développeurs](././images/api-authentication/add-developer1.png)
+![Ajouter un développeur à partir de l’onglet Développeurs](././images/api-authentication/add-developer1.png)
 
 Saisissez le **[!UICONTROL Email ou nom d’utilisateur]**. Un valide [!UICONTROL Email ou nom d’utilisateur] affiche les détails du développeur. Sélectionnez **[!UICONTROL Enregistrer]**.
 
@@ -326,25 +335,31 @@ Le développeur a bien été ajouté et apparaît sur le [!UICONTROL Développeu
 
 ![Développeurs répertoriés dans l’onglet Développeurs](././images/api-authentication/developer-added.png)
 
-### Configuration d’une API
+<!--
 
-Un développeur peut ajouter et configurer une API dans un projet dans la console Adobe Developer.
+Commenting out this part since it duplicates information from the section Add Experience Platform to a project
 
-Sélectionnez votre projet, puis cliquez sur **[!UICONTROL Ajout d’une API]**.
+### Set up an API
 
-![Ajout d’une API à un projet](././images/api-authentication/add-api-project.png)
+A developer can add and configure an API within a project in the Adobe Developer Console.
 
-Dans le **[!UICONTROL Ajout d’une API]** boîte de dialogue de sélection **[!UICONTROL Adobe Experience Platform]**, puis sélectionnez **[!UICONTROL API Experience Platform]**.
+Select your project, then select **[!UICONTROL Add API]**.
 
-![Ajout d’une API dans Experience Platform](././images/api-authentication/add-api-platform.png)
+![Add API to a project](././images/api-authentication/add-api-project.png)
 
-Dans le **[!UICONTROL Configuration de l’API]** écran, sélectionnez **[!UICONTROL AEP-Default-All-Users]**.
+In the **[!UICONTROL Add an API]** dialog box select **[!UICONTROL Adobe Experience Platform]**, then select **[!UICONTROL Experience Platform API]**.
+
+![Add an API in Experience Platform](././images/api-authentication/add-api-platform.png)
+
+In the **[!UICONTROL Configure API]** screen, select **[!UICONTROL AEP-Default-All-Users]**.
+
+-->
 
 ### Attribution d’une API à un rôle
 
 Un administrateur système peut affecter des API aux rôles dans l’interface utilisateur de l’Experience Platform.
 
-Sélectionner **[!UICONTROL Autorisations]** et le rôle auquel vous souhaitez ajouter l’API. Sélectionnez la **[!UICONTROL Informations d’identification de l’API]** , puis sélectionnez **[!UICONTROL Ajout des informations d’identification d’API]**.
+Sélectionner **[!UICONTROL Autorisations]** et le rôle auquel vous souhaitez ajouter l’API. Sélectionnez la variable **[!UICONTROL Informations d’identification API]** , puis sélectionnez **[!UICONTROL Ajout des informations d’identification d’API]**.
 
 ![Onglet Informations d’identification de l’API dans le rôle sélectionné](././images/api-authentication/api-credentials.png)
 
@@ -352,7 +367,7 @@ Sélectionnez l’API que vous souhaitez ajouter au rôle, puis sélectionnez **
 
 ![Liste des API disponibles pour la sélection](././images/api-authentication/select-api.png)
 
-Vous revenez alors au [!UICONTROL Informations d’identification de l’API] , où l’API nouvellement ajoutée est répertoriée.
+Vous revenez alors à la variable [!UICONTROL Informations d’identification API] , où l’API nouvellement ajoutée est répertoriée.
 
 ![Onglet Informations d’identification de l’API avec l’API nouvellement ajoutée](././images/api-authentication/api-credentials-with-added-api.png)
 
