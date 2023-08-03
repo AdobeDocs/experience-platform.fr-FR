@@ -7,10 +7,10 @@ landing-page-description: Trouvez des réponses aux questions fréquemment posé
 short-description: Trouvez des réponses aux questions fréquemment posées et obtenez un guide afin de résoudre les problèmes courants dans Experience Platform.
 type: Documentation
 exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 035fee1c3be69ff56b515251afcffaf1dff00f0d
 workflow-type: tm+mt
-source-wordcount: '1868'
-ht-degree: 100%
+source-wordcount: '1905'
+ht-degree: 98%
 
 ---
 
@@ -90,7 +90,7 @@ Vous pouvez rencontrer les codes d’état suivants sur n’importe quelle API [
 |--- | --- | ---|
 | 400 | Mauvaise requête | La requête a été mal construite, des informations de clé étaient absentes et/ou sa syntaxe était incorrecte. |
 | 401 | Échec de l’authentification | La requête n’a pas pu être authentifiée. Votre jeton d’accès est peut-être absent ou non valide. Pour plus d’informations, reportez-vous à la section [erreurs de jeton OAuth](#oauth-token-is-missing) ci-dessous. |
-| 403 | Interdit | La ressource a été trouvée, mais vous ne possédez pas les informations d’identification appropriées pour la consulter. |
+| 403 | Interdit | <p>La ressource a été trouvée, mais vous ne possédez pas les informations d’identification appropriées pour la consulter.</p><p> Une cause probable de cette erreur est que vous ne disposez peut-être pas de la variable [autorisations de contrôle d’accès](/help/access-control/home.md) pour accéder à la ressource ou la modifier. Lire comment [obtenir les autorisations de contrôle d’accès en fonction des attributs nécessaires ;](/help/landing/api-authentication.md#get-abac-permissions) pour utiliser les API de Platform. </p> |
 | 404 | Introuvable | La ressource demandée n’a pas été trouvée sur le serveur. La ressource a peut-être été supprimée, ou le chemin d’accès demandé n’a pas été correctement saisi. |
 | 500 | Erreur interne du serveur | Il s’agit d’une erreur côté serveur. Si vous effectuez de nombreux appels simultanés, vous pouvez atteindre la limite de l’API et devoir filtrer vos résultats. (Pour en savoir plus, consultez la sous-partie du guide de développement de l’API [!DNL Catalog Service] portant sur le [filtrage des données](../catalog/api/filter-data.md).) Patientez avant de réessayer d’exécuter votre requête et contactez votre administrateur si le problème persiste. |
 
