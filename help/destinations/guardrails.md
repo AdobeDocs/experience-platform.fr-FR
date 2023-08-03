@@ -6,7 +6,7 @@ product: experience platform
 type: Documentation
 description: En savoir plus sur l’utilisation par défaut de l’activation des données et les limites de débit.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: f360df6273986be35340432c72d8f8620f339b67
+source-git-commit: 51f65799a45229fc810a1d41f8b40b215d3666da
 workflow-type: tm+mt
 source-wordcount: '1272'
 ht-degree: 77%
@@ -94,7 +94,7 @@ Les mécanismes de sécurisation ci-dessous s’appliquent à l’activation par
 
 {style="table-layout:auto"}
 
-## [!BADGE Beta]Exports de jeux de données {type=Informative} {#dataset-exports}
+### [!BADGE Beta]Exports de jeux de données {type=Informative} {#dataset-exports}
 
 Les exportations de jeux de données sont actuellement prises en charge dans une **[!UICONTROL Premier Complet puis Incrémentiel]** [pattern](/help/destinations/ui/export-datasets.md#scheduling). Les barrières de sécurité décrites dans cette section s’appliquent au premier export complet qui se produit après la configuration d’un workflow d’exportation de jeux de données.
 
