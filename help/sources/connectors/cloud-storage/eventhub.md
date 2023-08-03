@@ -3,9 +3,9 @@ title: Présentation du connecteur source Azure Event Hub
 description: Découvrez comment connecter Azure Event Hubs à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: b4d4bc7f-2241-482d-a5c2-4422c31705bf
-source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
+source-git-commit: 7240f96cb30e79add500a1957d93062eecd79ee2
 workflow-type: tm+mt
-source-wordcount: '537'
+source-wordcount: '538'
 ht-degree: 19%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 19%
 
 >[!IMPORTANT]
 >
->Le [!DNL Azure Event Hubs] source est disponible dans le catalogue des sources pour les utilisateurs qui ont acheté Real-time Customer Data Platform Ultimate.
+>La variable [!DNL Azure Event Hubs] source est disponible dans le catalogue des sources pour les utilisateurs qui ont acheté Real-time Customer Data Platform Ultimate.
 
 Adobe Experience Platform fournit une connectivité native pour les fournisseurs cloud tels qu’AWS, [!DNL Google Cloud Platform], et [!DNL Azure]. Vous pouvez importer vos données de ces systèmes dans Platform.
 
@@ -26,11 +26,11 @@ Le facteur d’échelle de votre [!DNL Event Hubs] doit être augmentée si vous
 
 ### Entrer des données à volume supérieur
 
-Actuellement, le volume maximal de données que vous pouvez importer de votre [!DNL Event Hubs] compte à Platform est de 2 000 enregistrements par seconde. Pour augmenter et ingérer des données à volume supérieur, contactez votre représentant Adobe.
+Actuellement, le volume maximal de données que vous pouvez importer à partir de votre [!DNL Event Hubs] compte à Platform est de 2 000 enregistrements par seconde. Pour augmenter et ingérer des données à volume supérieur, contactez votre représentant Adobe.
 
 ### Augmenter le parallélisme sur [!DNL Event Hubs] et plateforme
 
-Le parallèle fait référence à l’exécution simultanée des mêmes tâches sur plusieurs unités de traitement afin d’augmenter la vitesse et les performances. Vous pouvez augmenter le parallélisme sur la variable [!DNL Event Hubs] côte à côte en augmentant la partition ou en acquérant plus d’unités de traitement pour votre [!DNL Event Hubs] compte . Voir [[!DNL Event Hubs] document à l’échelle](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-scalability) pour plus d’informations.
+Le parallèle fait référence à l’exécution simultanée des mêmes tâches sur plusieurs unités de traitement afin d’augmenter la vitesse et les performances. Vous pouvez augmenter le parallélisme sur la variable [!DNL Event Hubs] côte à côte en augmentant la partition ou en acquérant plus d’unités de traitement pour votre [!DNL Event Hubs] compte . Voir [[!DNL Event Hubs] document sur la mise à l’échelle](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-scalability) pour plus d’informations.
 
 Pour augmenter la vitesse d’ingestion du côté Platform, Platform doit augmenter le nombre de tâches dans le connecteur source à lire à partir de votre [!DNL Event Hubs] partitions. Une fois que vous avez augmenté le parallélisme sur le [!DNL Event Hubs] côté, contactez votre représentant d’Adobe pour mettre à l’échelle les tâches de Platform en fonction de votre nouvelle partition. Actuellement, ce processus n’est pas automatisé.
 
@@ -38,9 +38,9 @@ Pour augmenter la vitesse d’ingestion du côté Platform, Platform doit augmen
 
 Vous pouvez configurer un réseau virtuel pour vous connecter. [!DNL Event Hubs] à Platform lorsque vos mesures de pare-feu sont activées. Pour configurer un réseau virtuel, procédez comme suit : [[!DNL Event Hubs] document d’ensemble de règles réseau](https://docs.microsoft.com/en-us/rest/api/eventhub/preview/namespaces-network-rule-set/create-or-update-network-rule-set#code-try-0) et procédez comme suit :
 
-* Sélectionner **Essayez** dans le panneau API REST ;
-* Authentifiez votre [!DNL Azure] compte utilisant vos informations d’identification dans le même navigateur ;
-* Sélectionnez la [!DNL Event Hubs] espace de noms, groupe de ressources et abonnement que vous souhaitez apporter à Platform, puis sélectionnez **RUN**;
+* Sélectionner **Essayer** dans le panneau API REST ;
+* Authentifiez votre [!DNL Azure] compte à l’aide de vos informations d’identification dans le même navigateur ;
+* Sélectionnez la variable [!DNL Event Hubs] espace de noms, groupe de ressources et abonnement que vous souhaitez apporter à Platform, puis sélectionnez **EXÉCUTER**;
 * Dans le corps JSON qui s’affiche, ajoutez le sous-réseau Platform suivant sous `virtualNetworkRules` inside `properties`:
 
 
@@ -88,7 +88,7 @@ Consultez la liste ci-dessous pour différentes régions des sous-réseaux Platf
     "virtualNetworkRules": [
       {
         "subnet": {
-            "id": "/subscriptions/40bde086-46ad-44c3-afba-c306f54b64ec/resourceGroups/ethos_12_prod_nld2_network/providers/Microsoft.Network/virtualNetworks/ethos_12_prod_nld2_network_10_20_40_0_23/subnets/ethos_12_prod_nld2_network_10_20_40_0_23"
+            "id": "/subscriptions/40bde086-46ad-44c3-afba-c306f54b64ec/resourceGroups/ethos_12_prod_nld2_network/providers/Microsoft.Network/virtualNetworks/ethos_12_prod_nld2-vnet/subnets/ethos_12_prod_nld2_network_10_20_40_0_23"
         }, 
         "ignoreMissingVnetServiceEndpoint": true
       },
@@ -117,7 +117,7 @@ Consultez la liste ci-dessous pour différentes régions des sous-réseaux Platf
 }
 ```
 
-Voir ce qui suit : [[!DNL Event Hubs] document](https://docs.microsoft.com/en-us/rest/api/eventhub/preview/namespaces-network-rule-set/create-or-update-network-rule-set) pour plus d’informations sur les ensembles de règles réseau.
+Voir ce qui suit [[!DNL Event Hubs] document](https://docs.microsoft.com/en-us/rest/api/eventhub/preview/namespaces-network-rule-set/create-or-update-network-rule-set) pour plus d’informations sur les ensembles de règles réseau.
 
 ## Connecter [!DNL Event Hubs] à Platform
 
