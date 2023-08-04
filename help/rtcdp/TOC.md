@@ -4,10 +4,10 @@ solution: Real-Time Customer Data Platform
 audience: user
 user-guide-title: Guide de Real-Time Customer Data Platform
 user-guide-description: Regroupez les données connues et anonymes provenant de plusieurs entreprises sources afin de créer des profils clients, puis des segments d’audience à partir de ces profils et enfin d’activer ces segments vers des destinations tierces.
-source-git-commit: 7dfbf7c1d9d12e8e1fb654cf357d31a91611a18e
+source-git-commit: f63cddc1158e739ce26e0ce1d3d54b491bd80c06
 workflow-type: tm+mt
-source-wordcount: '231'
-ht-degree: 93%
+source-wordcount: '242'
+ht-degree: 90%
 
 ---
 
@@ -66,7 +66,8 @@ ht-degree: 93%
    * [Sources dans l’édition B2B de Real-Time CDP](sources/b2b.md)
 * Cas d’utilisation {#use-cases}
    * Cas d’utilisation des données du partenaire {#partner-data}
-      * [Compléter les profils propriétaires](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
       * [Interagir et acquérir de nouveaux clients grâce à l’assistance clientèle](/help/rtcdp/partner-data/prospecting.md)
+      * [Compléter les profils propriétaires avec les attributs fournis par les partenaires](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
+      * [Utiliser la reconnaissance des visiteurs par les partenaires pour personnaliser les expériences sur site](/help/rtcdp/partner-data/onsite-personalization.md)
 * [Notes de mise à jour d’Experience Platform](https://docs.adobe.com/content/help/fr-FR/experience-platform/release-notes/latest.html)
 * [Glossaire Experience Platform](https://docs.adobe.com/content/help/fr-FR/experience-platform/landing/glossary.html)

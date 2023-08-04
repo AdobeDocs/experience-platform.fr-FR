@@ -4,7 +4,7 @@ description: Découvrez comment interagir et acquérir de nouveaux clients grâc
 hide: true
 hidefromtoc: true
 badgeBeta: label="Version Beta" type="informative" before-title="true"
-source-git-commit: d0227dd8dc3d79674d954899e2724d2893e16b73
+source-git-commit: 2e2a473efd247cb235ee7e8f94058baa48fd1b1a
 workflow-type: tm+mt
 source-wordcount: '1953'
 ht-degree: 16%
@@ -76,7 +76,7 @@ Les composants d’identité, de gestion des données et de gouvernance que vous
 * **(Documentation à venir)** Groupes de champs personnalisés pour la prise en charge des données des partenaires
 * **(Documentation à venir)** Étiquettes tierces que vous ajouterez aux attributs provenant des partenaires
 
-#### Création d’un espace de noms d’identité Identifiant de partenaire
+#### Création d’un espace de noms d’identité Identifiant de partenaire {#create-partner-id-namespace}
 
 Commencez par créer un nouveau type d’identité pour les profils que vous recevrez du partenaire. Pour ce faire, dans la section Identité , vous devez créer un espace de noms d’identité du type **[!UICONTROL Identifiant du partenaire]**.
 
