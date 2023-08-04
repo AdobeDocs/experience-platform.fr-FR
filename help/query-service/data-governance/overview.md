@@ -2,9 +2,9 @@
 title: Gouvernance des données dans Query Service
 description: Cette présentation couvre les principaux éléments de la gouvernance des données dans Experience Platform Query Service.
 exl-id: 37543d43-bd8c-4bf9-88e5-39de5efe3164
-source-git-commit: c05df76976e58da1f96c6e8c030c919ff5b1eb19
+source-git-commit: c3ce6548e18078e604ecd5db276eb162935f6181
 workflow-type: tm+mt
-source-wordcount: '2843'
+source-wordcount: '3132'
 ht-degree: 3%
 
 ---
@@ -23,11 +23,11 @@ Les catégories suivantes sont essentielles pour respecter les réglementations 
 1. Audit
 1. Utilisation des données
 1. Confidentialité   
-<!-- 1. Data hygiene -->
+1. Hygiène des données
 
 Ce document examine chacun des différents domaines de gouvernance et montre comment faciliter la conformité des données lors de l’utilisation de Query Service. Voir [Présentation de la gouvernance, de la confidentialité et de la sécurité](../../landing/governance-privacy-security/overview.md) pour plus d’informations sur la manière dont Experience Platform vous permet de gérer les données client et d’assurer la conformité.
 
-## Sécurité
+## Sécurité {#security}
 
 La sécurité des données est le processus qui consiste à protéger les données contre les accès non autorisés et à garantir un accès sécurisé tout au long de son cycle de vie. L’accès sécurisé est conservé dans Experience Platform par l’application des rôles et des autorisations par des fonctionnalités telles que le contrôle d’accès basé sur les rôles et le contrôle d’accès basé sur les attributs. Les informations d’identification, le protocole SSL et le cryptage des données sont également utilisés pour assurer la protection des données dans Platform.
 
@@ -35,8 +35,7 @@ La sécurité relative à Query Service est divisée en plusieurs catégories :
 
 * [Contrôle d’accès](#access-control): l’accès est contrôlé par l’intermédiaire des rôles et des autorisations, y compris les autorisations au niveau du jeu de données et des colonnes.
 * Sécurisation des données par le biais de [connectivité](#connectivity): les données sont sécurisées par le biais de Platform et de clients externes en établissant une connexion limitée avec des informations d’identification arrivant à expiration ou des informations d’identification non arrivant à expiration.
-* Sécurisation des données par le biais de [cryptage et clés au niveau du système](#encryption): la sécurité des données est assurée par le cryptage lorsque les données sont au repos.
-<!-- * Securing data through [encryption and customer-managed keys (CMK)](#encryption-and-customer-managed-keys): Access controlled through encryption when data is at rest. -->
+* Sécurisation des données par le biais de [cryptage et clés gérées par le client (CMK)](#encryption-and-customer-managed-keys): accès contrôlé par cryptage lorsque les données sont au repos.
 
 ### Contrôle d’accès {#access-control}
 
@@ -132,17 +131,14 @@ Pour une sécurité accrue, Query Service fournit une prise en charge native des
 
 Consultez le guide sur les [Options SSL pour les connexions de clients tiers à Query Service](../clients/ssl-modes.md) pour plus d’informations, notamment sur la manière de se connecter à l’aide de la variable `verify-full` Valeur du paramètre SSL.
 
-### Encryption (chiffrement) {#encryption}
-
-<!-- Commented out lines to be included when customer-managed keys is released. Link out to the new document. -->
-
-<!-- ### Encryption and customer-managed keys (CMK) {#encryption-and-customer-managed-keys} -->
+### Chiffrement et clés gérées par le client (CMK) {#encryption-and-customer-managed-keys}
 
 Le cryptage est l’utilisation d’un processus algorithmique pour transformer les données en texte codé et illisible, afin de garantir que les informations sont protégées et inaccessibles sans clé de décryptage.
 
 La conformité des données de Query Service garantit que les données sont toujours cryptées. Les données en transit sont toujours conformes au protocole HTTPS et les données au repos sont chiffrées dans un magasin Azure Data Lake à l’aide de clés au niveau du système. Consultez la documentation relative à [comment les données sont chiffrées dans Adobe Experience Platform](../../landing/governance-privacy-security/encryption.md) pour plus d’informations. Pour plus d’informations sur la façon dont les données au repos sont chiffrées dans Azure Data Lake Storage, reportez-vous à la section [documentation Azure officielle](https://docs.microsoft.com/fr-fr/azure/data-lake-store/data-lake-store-encryption).
 
-<!-- Data-in-transit is always HTTPS compliant and similarly when the data is at rest in the data lake, the encryption is done with Customer Management Key (CMK), which is already supported by Data Lake Management. The currently supported version is TLS1.2. -->
+Les données en transit sont toujours conformes au protocole HTTPS. De même, lorsque les données sont au repos dans le lac de données, le chiffrement est effectué avec la clé de gestion client (CMK), qui est déjà prise en charge par Data Lake Management. La version actuellement prise en charge est TLS1.2. Voir [Documentation sur les clés gérées par le client (CMK)](../../landing/governance-privacy-security/customer-managed-keys.md) pour savoir comment configurer vos propres clés de chiffrement pour les données stockées dans Adobe Experience Platform.
+
 
 ## Audit {#audit}
 
@@ -206,14 +202,14 @@ Les fonctionnalités de Query Service pour la gouvernance des données simplifie
 
 Les champs de données de schéma peuvent être définis en tant que champ d’identité via l’interface utilisateur de Platform et Query Service vous permet également de [marquer les identités Principales à l’aide de la commande SQL &#39;ALTER TABLE&#39;](../sql/syntax.md#alter-table). Définition d’une identité à l’aide de la variable `ALTER TABLE` est particulièrement utile lorsque des jeux de données sont créés à l’aide de SQL plutôt que directement à partir d’un schéma via l’interface utilisateur de Platform. Consultez la documentation pour obtenir des instructions sur la manière de [définition de champs d’identité dans l’interface utilisateur](../../xdm/ui/fields/identity.md) lors de l’utilisation de schémas standard.
 
-<!-- COMMENTING OUT DATA HYGEINE SECTION TEMPORARILY UNTIL IT IS GA. currently it is in Beta only.
+## Hygiène des données {#data-hygiene}
 
-## Data hygiene 
+L’hygiène des données désigne le processus de réparation ou de suppression de données susceptibles d’être obsolètes, inexactes, mal formatées, dupliquées ou incomplètes. Ces processus garantissent que les jeux de données sont précis et cohérents sur tous les systèmes. Il est important d’assurer une hygiène adéquate des données à chaque étape du parcours des données et même à partir de l’emplacement de stockage initial des données. Dans Experience Platform Query Service, il s’agit du lac de données ou de la boutique accélérée.
 
-"Data hygiene" refers to the process of repairing or removing data that may be outdated, inaccurate, incorrectly formatted, duplicated, or incomplete. It is important to ensure adequate data hygiene along every step of the data's journey and even from the initial data storage location. 
+Vous pouvez affecter une identité à un jeu de données dérivé pour permettre à leur gestion des données de suivre les services d’hygiène des données centralisés de Platform.
 
-It is necessary to assign an identity to a derived dataset to allow their management by the [!DNL Data Hygiene] service. Conversely, when you create aggregated data on an accelerated data store, the aggregated data cannot be used to derive the original data. As a result of this data aggregation, the need to raise data hygiene requests is eliminated. == THIS APPEARS TO BE A PRIVACY USE CASE NAD NOT DATA HYGEINE ++  this is confusing.
+Inversement, lorsque vous créez un jeu de données agrégé sur le magasin accéléré, les données agrégées ne peuvent pas être utilisées pour dériver les données d’origine. Grâce à cette agrégation de données, la nécessité d’augmenter les demandes d’hygiène des données est éliminée.
 
-An exception to this scenario is the case of deletion. If a data hygiene deletion is requested on a dataset and before the deletion is completed, another derived dataset query is executed, then the derived dataset will capture information from the original dataset. In this case, you must be mindful that if a request to delete a dataset has been sent, you must not execute any new derived dataset queries using the same dataset source. 
+Une exception à ce scénario est le cas de la suppression. Si une suppression de l’hygiène des données est demandée sur un jeu de données et avant que la suppression ne soit terminée, une autre requête de jeu de données dérivé est exécutée, alors le jeu de données dérivé capturera les informations du jeu de données d’origine. Dans ce cas, vous devez garder à l’esprit que si une demande de suppression d’un jeu de données a été envoyée, vous ne devez pas exécuter de requêtes de jeu de données nouvellement dérivées utilisant la même source de jeu de données.
 
-See the [data hygiene overview](../../hygiene/home.md) for more information on data hygiene in Adobe Experience Platform. -->
+Voir [présentation de l’hygiène des données](../../hygiene/home.md) pour plus d’informations sur l’hygiène des données dans Adobe Experience Platform.
