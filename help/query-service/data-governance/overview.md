@@ -2,7 +2,7 @@
 title: Gouvernance des données dans Query Service
 description: Cette présentation couvre les principaux éléments de la gouvernance des données dans Experience Platform Query Service.
 exl-id: 37543d43-bd8c-4bf9-88e5-39de5efe3164
-source-git-commit: 54a6f508818016df1a4ab2a217bc0765b91df9e9
+source-git-commit: c05df76976e58da1f96c6e8c030c919ff5b1eb19
 workflow-type: tm+mt
 source-wordcount: '2843'
 ht-degree: 3%
@@ -20,7 +20,7 @@ Les organisations qui effectuent régulièrement le traitement des données doiv
 Les catégories suivantes sont essentielles pour respecter les réglementations de conformité des données lors de l’utilisation de Query Service :
 
 1. Sécurité
-1. Journal
+1. Audit
 1. Utilisation des données
 1. Confidentialité   
 <!-- 1. Data hygiene -->
@@ -29,14 +29,13 @@ Ce document examine chacun des différents domaines de gouvernance et montre com
 
 ## Sécurité
 
-La sécurité des données est le processus de protection des données contre les accès non autorisés et d’assurance d’un accès sécurisé tout au long de son cycle de vie. L’accès sécurisé est conservé dans Experience Platform par l’application des rôles et des autorisations par des fonctionnalités telles que le contrôle d’accès basé sur les rôles et le contrôle d’accès basé sur les attributs. Les informations d’identification, le protocole SSL et le cryptage des données sont également utilisés pour assurer la protection des données dans Platform.
+La sécurité des données est le processus qui consiste à protéger les données contre les accès non autorisés et à garantir un accès sécurisé tout au long de son cycle de vie. L’accès sécurisé est conservé dans Experience Platform par l’application des rôles et des autorisations par des fonctionnalités telles que le contrôle d’accès basé sur les rôles et le contrôle d’accès basé sur les attributs. Les informations d’identification, le protocole SSL et le cryptage des données sont également utilisés pour assurer la protection des données dans Platform.
 
 La sécurité relative à Query Service est divisée en plusieurs catégories :
 
-* [Contrôle d’accès](#access-control): L’accès est contrôlé par l’intermédiaire des rôles et des autorisations, y compris les autorisations au niveau du jeu de données et des colonnes.
-* Sécurisation des données par le biais de [connectivité](#connectivity): Les données sont sécurisées par le biais de Platform et de clients externes en établissant une connexion limitée avec des informations d’identification arrivant à expiration ou des informations d’identification non arrivant à expiration.
-* Sécurisation des données par le biais de [cryptage et clés au niveau du système](#encryption): La sécurité des données est assurée par le cryptage lorsque les données sont au repos.
-
+* [Contrôle d’accès](#access-control): l’accès est contrôlé par l’intermédiaire des rôles et des autorisations, y compris les autorisations au niveau du jeu de données et des colonnes.
+* Sécurisation des données par le biais de [connectivité](#connectivity): les données sont sécurisées par le biais de Platform et de clients externes en établissant une connexion limitée avec des informations d’identification arrivant à expiration ou des informations d’identification non arrivant à expiration.
+* Sécurisation des données par le biais de [cryptage et clés au niveau du système](#encryption): la sécurité des données est assurée par le cryptage lorsque les données sont au repos.
 <!-- * Securing data through [encryption and customer-managed keys (CMK)](#encryption-and-customer-managed-keys): Access controlled through encryption when data is at rest. -->
 
 ### Contrôle d’accès {#access-control}
@@ -82,8 +81,8 @@ Une fois le niveau d’accès approprié appliqué à l’aide de libellés et d
 
 1. Si un utilisateur s’est vu refuser l’accès à l’une des colonnes d’un schéma, il se voit également refuser l’autorisation de lire ou d’écrire sur la colonne restreinte. Cela s’applique aux scénarios courants suivants :
 
-   * **Cas 1**: Lorsqu’un utilisateur tente d’exécuter une requête affectant uniquement une colonne restreinte, le système renvoie une erreur indiquant que la colonne n’existe pas.
-   * **Cas 2**: Lorsqu’un utilisateur tente d’exécuter une requête avec plusieurs colonnes, y compris une colonne restreinte, le système renvoie uniquement la sortie pour toutes les colonnes non restreintes.
+   * **Cas 1**: lorsqu’un utilisateur tente d’exécuter une requête affectant uniquement une colonne restreinte, le système renvoie une erreur indiquant que la colonne n’existe pas.
+   * **Cas 2**: lorsqu’un utilisateur tente d’exécuter une requête avec plusieurs colonnes, y compris une colonne restreinte, le système renvoie la sortie pour toutes les colonnes non restreintes uniquement.
 
 1. Si un utilisateur tente d&#39;accéder à un champ calculé, il doit avoir accès à tous les champs utilisés dans la composition ou le système lui refuse également l&#39;accès au champ calculé.
 
@@ -91,11 +90,11 @@ Une fois le niveau d’accès approprié appliqué à l’aide de libellés et d
 
 Query Service permet d’utiliser le langage SQL ANSI standard pour [`CREATE VIEW`](../sql/syntax.md#create-view) des instructions. Pour les workflows de données hautement sensibles, vous devez appliquer les contrôles appropriés lors de la création de vues.
 
-Le `CREATE VIEW` keyword définit une vue d’une requête, mais la vue n’est pas matérialisée physiquement. Au lieu de cela, la requête est exécutée chaque fois que la vue est référencée dans une requête. Lorsqu’un utilisateur crée une vue à partir d’un jeu de données, les règles de contrôle d’accès basées sur les rôles et les attributs du jeu de données parent sont **not** appliqué de manière hiérarchique. Par conséquent, vous devez définir explicitement des autorisations sur chacune des colonnes lors de la création d’une vue.
+La variable `CREATE VIEW` keyword définit une vue d’une requête, mais la vue n’est pas matérialisée physiquement. Au lieu de cela, la requête est exécutée chaque fois que la vue est référencée dans une requête. Lorsqu’un utilisateur crée une vue à partir d’un jeu de données, les règles de contrôle d’accès basées sur les rôles et les attributs du jeu de données parent sont **not** appliqué de manière hiérarchique. Par conséquent, vous devez définir explicitement des autorisations sur chacune des colonnes lors de la création d’une vue.
 
 #### Création de restrictions d’accès basées sur les champs sur les jeux de données accélérés {#create-field-based-access-restrictions-on-accelerated-datasets}
 
-Avec le [fonctionnalité de contrôle d’accès basé sur les attributs](../../access-control/abac/overview.md) vous pouvez définir des portées d’utilisation des données ou de l’organisation sur les jeux de données de faits et de dimensions dans la variable [boutique accélérée](../data-distiller/query-accelerated-store/send-accelerated-queries.md). Cela permet aux administrateurs de gérer l’accès à des segments spécifiques et de mieux gérer l’accès attribué aux utilisateurs ou groupes d’utilisateurs.
+Avec la variable [fonctionnalité de contrôle d’accès basé sur les attributs](../../access-control/abac/overview.md) vous pouvez définir des portées d’utilisation des données ou de l’organisation sur les jeux de données de faits et de dimensions dans la variable [boutique accélérée](../data-distiller/query-accelerated-store/send-accelerated-queries.md). Cela permet aux administrateurs de gérer l’accès à des segments spécifiques et de mieux gérer l’accès attribué aux utilisateurs ou groupes d’utilisateurs.
 
 Pour créer des restrictions d’accès basées sur les champs sur des jeux de données accélérés, vous pouvez utiliser les requêtes CTAS de Query Service pour créer des jeux de données accélérés et structurer ces jeux de données en fonction de schémas XDM ou de schémas ad hoc existants. Les administrateurs peuvent alors [ajout et modification des libellés d’utilisation des données pour le schéma](../../xdm/tutorials/labels.md#edit-the-labels-for-the-schema-or-field) ou [schéma ad hoc](./ad-hoc-schema-labels.md#edit-governance-labels). Vous pouvez appliquer, créer et modifier des libellés à vos schémas à partir du [!UICONTROL Étiquettes] de l’espace de travail [!UICONTROL Schémas] Interface utilisateur.
 
@@ -125,7 +124,7 @@ Pour activer l’option de génération des informations d’identification non 
 
 Les comptes d’utilisateurs techniques autorisés avec des informations d’identification non arrivant à expiration peuvent se voir attribuer des rôles pour garantir une gouvernance des données appropriée en définissant la portée de leur accès en lecture et écriture en fonction de leurs responsabilités et besoins. Voir la section précédente sur [utilisation d’autorisations basées sur les rôles par le biais du contrôle d’accès](#access-control) pour gérer l’accès à Query Service.
 
-Une fois le workflow prérequis terminé, les utilisateurs autorisés peuvent désormais [générer les informations d’identification de connexion requises ;](../ui/credentials.md#generate-credentials).
+Une fois le workflow prérequis terminé, les utilisateurs autorisés peuvent désormais [générer les informations de connexion requises ;](../ui/credentials.md#generate-credentials).
 
 #### Cryptage des données SSL
 
@@ -145,7 +144,7 @@ La conformité des données de Query Service garantit que les données sont touj
 
 <!-- Data-in-transit is always HTTPS compliant and similarly when the data is at rest in the data lake, the encryption is done with Customer Management Key (CMK), which is already supported by Data Lake Management. The currently supported version is TLS1.2. -->
 
-## Journal {#audit}
+## Audit {#audit}
 
 Query Service enregistre l’activité de l’utilisateur et classe cette activité dans différents types de journaux. Informations d’approvisionnement des journaux sur **who** performance **what** et **when**. Chaque action enregistrée dans un journal contient des métadonnées qui indiquent le type d’action, la date et l’heure, l’ID d’e-mail de l’utilisateur ou de l’utilisatrice qui a exécuté l’action et des attributs supplémentaires liés au type d’action.
 
@@ -155,7 +154,7 @@ Toutes les catégories de journaux peuvent être demandées selon vos besoins pa
 
 L’interface utilisateur des logs de requête vous permet de surveiller et de consulter les détails d’exécution de toutes les requêtes qui ont été exécutées via Query Editor ou l’API Query Service. Cela apporte de la transparence aux activités Query Service, ce qui vous permet de vérifier les métadonnées pour **all** les requêtes qui ont été exécutées sur Query Service. Il comprend tous les types de requêtes, qu’il s’agisse d’une requête exploratoire, de lot ou planifiée.
 
-Les journaux de requête sont accessibles via l’interface utilisateur de Platform dans la [!UICONTROL Journaux] de l’onglet [!UICONTROL Requêtes] workspace.
+Les journaux de requête sont accessibles via l’interface utilisateur de Platform dans la [!UICONTROL Journaux] de la [!UICONTROL Requêtes] workspace.
 
 ![Onglet Journal des requêtes avec le panneau Détails en surbrillance.](../images/data-governance/overview/queries-log.png)
 
@@ -175,9 +174,9 @@ Le tableau suivant indique les catégories de requêtes capturées par les journ
 
 Vous trouverez ci-dessous une liste de trois journaux de serveur étendus qui contiennent plus de détails que ceux trouvés dans les journaux de requête. Les journaux étendus se trouvent dans les catégories de requête des journaux d’audit :
 
-1. **Journaux des requêtes Meta**: Lorsqu’une requête est exécutée, différentes sous-requêtes du serveur principal associées (telles que l’analyse) sont exécutées. Ces types de requêtes sont appelés requêtes de &quot;métadonnées&quot;. Vous trouverez leurs informations pertinentes dans les journaux d’audit.
-1. **Journaux de session**: Le système crée un journal d’entrée de session pour un utilisateur lorsqu’il se connecte à Query Service, qu’il exécute une requête ou non.
-1. **Journaux de connexion client tiers**: Un journal d’audit de connectivité est généré lorsqu’un utilisateur connecte Query Service à un client tiers.
+1. **Journaux des requêtes Meta**: lorsqu’une requête est exécutée, différentes sous-requêtes du serveur principal associées (telles que l’analyse) sont exécutées. Ces types de requêtes sont appelés requêtes de &quot;métadonnées&quot;. Vous trouverez leurs informations pertinentes dans les journaux d’audit.
+1. **Journaux de session**: le système crée un journal d’entrée de session pour un utilisateur lorsqu’il se connecte à Query Service, qu’il exécute une requête ou non.
+1. **Journaux de connexion client tiers**: un journal d’audit de connectivité est généré lorsqu’un utilisateur connecte Query Service à un client tiers.
 
 Voir [aperçu des journaux d’audit](../../landing/governance-privacy-security/audit-logs/overview.md) pour plus d’informations sur la manière dont les journaux d’audit peuvent aider votre entreprise à approcher la conformité des données.
 
@@ -185,13 +184,13 @@ Voir [aperçu des journaux d’audit](../../landing/governance-privacy-security/
 
 Le cadre de gouvernance des données de Platform fournit un moyen uniforme d’utiliser les données de manière responsable sur toutes les solutions, services et plateformes d’Adobe. Il coordonne l’approche systémique de la capture, de la communication et de l’utilisation des métadonnées dans l’ensemble de Adobe Experience Cloud. Cela permet aux contrôleurs de données d’étiqueter les données en fonction des actions marketing nécessaires et des restrictions imposées à ces données à partir des actions marketing prévues. Consultez la présentation sur [libellés d’utilisation des données](../../data-governance/labels/overview.md) pour plus d’informations sur la manière dont la gouvernance des données vous permet d’appliquer des libellés d’utilisation des données aux jeux de données et aux champs.
 
-Il est recommandé d’oeuvrer à la conformité des données à chaque étape du parcours des données. À cette fin, les jeux de données dérivés qui utilisent des schémas ad hoc doivent être correctement étiquetés dans le cadre de la gouvernance des données. Il existe deux types de jeux de données dérivés formés par Query Service : jeux de données qui utilisent un schéma standard et des jeux de données qui utilisent un schéma ad hoc.
+Il est recommandé d’oeuvrer à la conformité des données à chaque étape du parcours des données. À cette fin, les jeux de données dérivés qui utilisent des schémas ad hoc doivent être correctement étiquetés dans le cadre de la gouvernance des données. Il existe deux types de jeux de données dérivés formés par Query Service : les jeux de données qui utilisent un schéma standard et les jeux de données qui utilisent un schéma ad hoc.
 
 >[!NOTE]
 >
 >Les jeux de données créés à l’aide de Query Service sont appelés &quot;jeux de données dérivés&quot;.
 
-Comme les schémas ad hoc sont créés par un utilisateur individuel à des fins spécifiques, les champs de schéma XDM sont des espaces de noms pour ce jeu de données spécifique et ne sont pas destinés à être utilisés dans différents jeux de données. Par conséquent, les schémas ad hoc ne sont pas visibles par défaut dans l’interface utilisateur de l’Experience Platform. Bien qu’il n’y ait aucune différence dans l’application des libellés d’utilisation des données entre les schémas standard et ad hoc, les schémas ad hoc créés par Query Service à des fins d’étiquetage doivent d’abord être rendus visibles dans l’interface utilisateur de Platform. Consultez le guide sur la [découverte de schémas ad hoc dans l’interface utilisateur de Platform](./ad-hoc-schema-labels.md#discover-ad-hoc-schemas) pour plus d’informations.
+Comme les schémas ad hoc sont créés par un utilisateur individuel à des fins spécifiques, les champs de schéma XDM sont des espaces de noms pour ce jeu de données spécifique et ne sont pas destinés à être utilisés dans différents jeux de données. Par conséquent, les schémas ad hoc ne sont pas visibles par défaut dans l’interface utilisateur Experience Platform. Bien qu’il n’y ait aucune différence dans l’application des libellés d’utilisation des données entre les schémas standard et ad hoc, les schémas ad hoc créés par Query Service à des fins d’étiquetage doivent d’abord être rendus visibles dans l’interface utilisateur de Platform. Consultez le guide sur la [découverte de schémas ad hoc dans l’interface utilisateur de Platform](./ad-hoc-schema-labels.md#discover-ad-hoc-schemas) pour plus d’informations.
 
 Après avoir accédé au schéma, vous pouvez [appliquer des libellés à des champs individuels ;](../../xdm/tutorials/labels.md). Une fois qu’un schéma a été étiqueté, tous les jeux de données qui dérivent de ce schéma héritent de ces libellés. À partir de là, vous pouvez configurer des stratégies d’utilisation des données qui peuvent restreindre l’activation de certaines destinations aux données avec certains libellés. Pour plus d’informations, reportez-vous à la présentation de [stratégies d’utilisation des données](../../data-governance/policies/overview.md).
 
@@ -211,7 +210,7 @@ Les champs de données de schéma peuvent être définis en tant que champ d’i
 
 ## Data hygiene 
 
-"Data hygiene" refers to the process of repairing or removing data that may be outdated, inaccurate, incorrectly formatted, duplicated, or incomplete. It is important to ensure adequate data hygiene along every step of the data's journey and even from the initial data storage location. In Query Service, this is either the data lake or the data warehouse.
+"Data hygiene" refers to the process of repairing or removing data that may be outdated, inaccurate, incorrectly formatted, duplicated, or incomplete. It is important to ensure adequate data hygiene along every step of the data's journey and even from the initial data storage location. 
 
 It is necessary to assign an identity to a derived dataset to allow their management by the [!DNL Data Hygiene] service. Conversely, when you create aggregated data on an accelerated data store, the aggregated data cannot be used to derive the original data. As a result of this data aggregation, the need to raise data hygiene requests is eliminated. == THIS APPEARS TO BE A PRIVACY USE CASE NAD NOT DATA HYGEINE ++  this is confusing.
 

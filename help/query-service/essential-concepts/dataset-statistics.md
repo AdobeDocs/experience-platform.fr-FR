@@ -1,10 +1,10 @@
 ---
 title: Calcul des statistiques des jeux de données
 description: Ce document décrit comment calculer les statistiques au niveau des colonnes sur les jeux de données Azure Data Lake Storage (ADLS) avec des commandes SQL.
-source-git-commit: 02b0939ee8fe92580402a78c7ebb5a250902d01c
+source-git-commit: c05df76976e58da1f96c6e8c030c919ff5b1eb19
 workflow-type: tm+mt
-source-wordcount: '1087'
-ht-degree: 39%
+source-wordcount: '1086'
+ht-degree: 38%
 
 ---
 
@@ -20,7 +20,7 @@ Pour afficher les statistiques qui ont été calculées avec la variable `ANALYZ
 
 >[!IMPORTANT]
 >
->Les commandes `COMPUTE STATISTICS`, `FILTERCONTEXT`, `FOR COLUMNS`, et `SHOW STATISTICS` ne sont pas prises en charge sur les tables de l’entrepôt de données. Ces extensions pour la commande `ANALYZE TABLE` ne sont actuellement prises en charge que pour les tables ADLS. Pour plus d’informations, voir la [section TABLE D’ANALYSE](../sql/syntax.md#analyze-table) du guide de syntaxe SQL.
+>La variable `COMPUTE STATISTICS`, `FILTERCONTEXT`, `FOR COLUMNS`, et `SHOW STATISTICS` Les commandes ne sont pas prises en charge sur les tables de magasin accélérées. Ces extensions pour la commande `ANALYZE TABLE` ne sont actuellement prises en charge que pour les tables ADLS. Pour plus d’informations, voir la [section TABLE D’ANALYSE](../sql/syntax.md#analyze-table) du guide de syntaxe SQL.
 
 Ce guide vous aide à structurer vos requêtes afin que vous puissiez calculer les statistiques de colonnes d’un jeu de données ADLS. À l’aide de ces commandes, vous pouvez afficher les statistiques générées dans votre session via un client PSQL à l’aide d’une requête SQL.
 
@@ -95,7 +95,7 @@ Le résultat des statistiques calculées peut ressembler à l’exemple ci-desso
 
 ## Affichage des métadonnées d’analyse statistique {#show-statistics}
 
-Vous pouvez utiliser la variable `SHOW STATISTICS` pour afficher les métadonnées de tous les tableaux de statistiques temporaires générés dans la session. Cette commande peut vous aider à affiner la portée de votre analyse statistique.
+Vous pouvez utiliser la variable `SHOW STATISTICS` pour afficher les métadonnées de toutes les statistiques temporaires générées dans la session. Cette commande peut vous aider à affiner la portée de votre analyse statistique.
 
 Exemple de sortie de `SHOW STATISTICS` est illustré ci-dessous.
 
