@@ -1,16 +1,16 @@
 ---
 title: Calcul des statistiques des jeux de données
 description: Ce document décrit comment calculer les statistiques au niveau des colonnes sur les jeux de données Azure Data Lake Storage (ADLS) avec des commandes SQL.
-source-git-commit: c05df76976e58da1f96c6e8c030c919ff5b1eb19
+source-git-commit: b94536be6e92354e237b99d36af13adf5a49afa7
 workflow-type: tm+mt
-source-wordcount: '1086'
-ht-degree: 38%
+source-wordcount: '1085'
+ht-degree: 37%
 
 ---
 
 # Calcul des statistiques des jeux de données
 
-Vous pouvez désormais calculer les statistiques au niveau des colonnes sur les jeux de données [!DNL Azure Data Lake Storage] (ADLS) avec les commandes SQL `COMPUTE STATISTICS` et `SHOW STATISTICS`. Les commandes SQL qui calculent les statistiques des jeux de données sont une extension de la commande `ANALYZE TABLE`. Vous trouverez des détails complets sur la commande `ANALYZE TABLE` dans la [documentation de référence SQL](../sql/syntax.md#analyze-table).
+Vous pouvez désormais calculer les statistiques au niveau des colonnes sur [!DNL Azure Data Lake Storage] (ADLS) des jeux de données avec la variable `COMPUTE STATISTICS` Commande SQL. Les commandes SQL qui calculent les statistiques des jeux de données sont une extension de la commande `ANALYZE TABLE`. Vous trouverez des détails complets sur la commande `ANALYZE TABLE` dans la [documentation de référence SQL](../sql/syntax.md#analyze-table).
 
 >[!NOTE]
 >
@@ -20,7 +20,7 @@ Pour afficher les statistiques qui ont été calculées avec la variable `ANALYZ
 
 >[!IMPORTANT]
 >
->La variable `COMPUTE STATISTICS`, `FILTERCONTEXT`, `FOR COLUMNS`, et `SHOW STATISTICS` Les commandes ne sont pas prises en charge sur les tables de magasin accélérées. Ces extensions pour la commande `ANALYZE TABLE` ne sont actuellement prises en charge que pour les tables ADLS. Pour plus d’informations, voir la [section TABLE D’ANALYSE](../sql/syntax.md#analyze-table) du guide de syntaxe SQL.
+>La variable `COMPUTE STATISTICS`, `FILTERCONTEXT`, et `FOR COLUMNS` Les commandes ne sont pas prises en charge sur les tables de magasin accélérées. Ces extensions pour la commande `ANALYZE TABLE` ne sont actuellement prises en charge que pour les tables ADLS. Pour plus d’informations, voir la [section TABLE D’ANALYSE](../sql/syntax.md#analyze-table) du guide de syntaxe SQL.
 
 Ce guide vous aide à structurer vos requêtes afin que vous puissiez calculer les statistiques de colonnes d’un jeu de données ADLS. À l’aide de ces commandes, vous pouvez afficher les statistiques générées dans votre session via un client PSQL à l’aide d’une requête SQL.
 
