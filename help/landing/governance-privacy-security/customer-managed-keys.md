@@ -2,10 +2,10 @@
 title: Clés gérées par le client dans Adobe Experience Platform
 description: Découvrez comment configurer vos propres clés de chiffrement pour les données stockées dans Adobe Experience Platform.
 exl-id: cd33e6c2-8189-4b68-a99b-ec7fccdc9b91
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 04ed092d4514d1668068ed73a1be4400c6cd4d8e
 workflow-type: tm+mt
-source-wordcount: '1617'
-ht-degree: 92%
+source-wordcount: '1774'
+ht-degree: 79%
 
 ---
 
@@ -15,7 +15,7 @@ Les données stockées sur Adobe Experience Platform sont chiffrées au repos 
 
 >[!NOTE]
 >
->Les données du lac de données Adobe Experience Platform et du magasin de profils (CosmosDB) sont chiffrés à l’aide de CMK.
+>Les données du lac de données Adobe Experience Platform et de la banque de profils sont chiffrées à l’aide de CMK. Elles sont considérées comme vos Principaux entrepôts de données.
 
 Ce document décrit le processus d’activation de la fonctionnalité des clés gérées par le client (CMK) dans Platform.
 
@@ -282,12 +282,21 @@ L’attribut `status` peut avoir l’une des quatre valeurs ayant la significati
 1. `COMPLETED` : le coffre de clés et le nom des clés ont été ajoutés aux magasins de données.
 1. `FAILED` : un problème s’est produit, principalement lié à la configuration de la clé, du coffre de clés ou de l’application multi-utilisateur.
 
-## Étapes suivantes
+## Révoquer l’accès {#revoke-access}
 
-En suivant les étapes ci-dessus, vous avez activé le CMK pour votre entreprise. Les données ingérées dans Platform seront désormais chiffrées et déchiffrées à l’aide des clés de votre coffre de clés [!DNL Azure]. Si vous souhaitez révoquer l’accès de Platform à vos données, vous pouvez supprimer le rôle d’utilisateur associé à l’application du coffre de clés dans [!DNL Azure].
-
-Après avoir désactivé l’accès à l’application, il peut s’écouler de quelques minutes à 24 heures avant que les données ne soient plus accessibles dans Platform. Le même délai s’applique pour que les données soient à nouveau disponibles lors de la réactivation de l’accès à l’application.
+Si vous souhaitez révoquer l’accès de Platform à vos données, vous pouvez supprimer le rôle d’utilisateur associé à l’application du coffre de clés dans [!DNL Azure].
 
 >[!WARNING]
 >
->Une fois que le coffre de clés, la clé ou l’application CMK est désactivée et que les données ne sont plus accessibles dans Platform, les opérations en aval liées à ces données ne sont plus disponibles. Assurez-vous de comprendre les impacts en aval de la révocation de l’accès de Platform à vos données avant d’apporter des modifications à votre configuration.
+>La désactivation du coffre de clés, de la clé ou de l’application CMK peut entraîner une modification entraînant une rupture. Une fois que l’application Key Vault, Key ou CMK est désactivée et que les données ne sont plus accessibles dans Platform, les opérations en aval liées à ces données ne seront plus possibles. Assurez-vous de comprendre les impacts en aval de la révocation de l’accès à Platform à votre clé avant d’apporter des modifications à votre configuration.
+
+Après avoir supprimé l’accès à la clé ou désactivé/supprimé la clé de votre [!DNL Azure] Vault clé, qui peut prendre entre quelques minutes et 24 heures pour que cette configuration se propage dans les Principaux entrepôts de données. Les workflows Platform incluent également les entrepôts de données en mémoire cache et transitoires requis pour les performances et les fonctionnalités de base des applications. La propagation de la révocation du CMK via ces magasins mis en cache et transitoires peut prendre jusqu’à sept jours, comme déterminé par leurs workflows de traitement des données. Par exemple, cela signifie que le tableau de bord Profil conserve et affiche les données de son entrepôt de données de cache et met sept jours à expiration pour que les données conservées dans les entrepôts de données du cache fassent l’objet d’un cycle d’actualisation. Le même délai s’applique pour que les données soient à nouveau disponibles lors de la réactivation de l’accès à l’application.
+
+>[!NOTE]
+>
+>Il existe deux exceptions spécifiques au cas d’utilisation à l’expiration du jeu de données de sept jours sur les données non Principales (mises en cache/transitoires). Pour plus d’informations sur ces fonctionnalités, consultez leur documentation respective.<ul><li>[Réducteur d’URL Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/sms/sms-configuration.html?lang=fr#message-preset-sms)</li><li>[Projections Edge](https://experienceleague.adobe.com/docs/experience-platform/profile/home.html#edge-projections)</li></ul>
+
+## Étapes suivantes
+
+En suivant les étapes ci-dessus, vous avez activé le CMK pour votre entreprise. Les données ingérées dans des entrepôts de données Principaux seront désormais chiffrées et déchiffrées à l’aide des clés de votre [!DNL Azure] Key Vault.
+
