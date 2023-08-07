@@ -7,7 +7,7 @@ exl-id: d7732244-0372-467d-84e2-5308f42c5d51
 source-git-commit: e30942aec6c66aeed8375d6221b454725f5a958d
 workflow-type: tm+mt
 source-wordcount: '1901'
-ht-degree: 65%
+ht-degree: 68%
 
 ---
 
@@ -45,8 +45,8 @@ Pour ouvrir l’espace de travail [!DNL Query Service], cliquez sur **[!UICONTRO
 
 >[!CONTEXTUALHELP]
 >id="platform_queryService_queryEditor_enhancedEditorToggle"
->title="Bascule de l’éditeur amélioré"
->abstract="Permet de basculer entre la version héritée et la version améliorée de Query Editor. La version héritée est activée par défaut, bien que la version améliorée offre une meilleure accessibilité et une prise en charge multi-thème. Pour en savoir plus sur ces modifications, consultez la documentation."
+>title="Bouton (bascule) de l’éditeur amélioré"
+>abstract="Permet de basculer entre la version héritée et la version améliorée de l’éditeur de requêtes. La version héritée est activée par défaut, bien que la version améliorée offre une meilleure accessibilité et une prise en charge multi-thème. Pour en savoir plus sur ces modifications, consultez la documentation."
 
 Un bouton d’activation/désactivation de l’interface utilisateur vous permet de basculer entre la version héritée et la version améliorée de Query Editor. La version héritée est activée par défaut, bien que la version améliorée offre une meilleure accessibilité et une prise en charge multi-thème. Activez la version améliorée pour accéder aux paramètres de Query Editor.
 
