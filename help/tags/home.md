@@ -3,7 +3,7 @@ title: Présentation des balises
 description: Les balises dans Adobe Experience Platform Launch représentent la nouvelle génération des fonctionnalités de gestion des balises dʼAdobe. Les balises offrent aux clients un moyen simple de déployer et de gérer toutes les balises dʼanalyse, de marketing et de publicité nécessaires pour offrir des expériences client pertinentes.
 exl-id: 23d882a5-1ddd-404b-a7e9-3000f1804971
 source-git-commit: 81f25e74931354003d89a57adedb578ddfe00704
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '562'
 ht-degree: 100%
 
