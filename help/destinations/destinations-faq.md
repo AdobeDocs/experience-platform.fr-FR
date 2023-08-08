@@ -3,10 +3,10 @@ keywords: destinations ; questions ; questions fréquentes ; faq ; faq sur les d
 title: Questions fréquentes
 description: Réponses aux questions les plus fréquemment posées sur les destinations Adobe Experience Platform
 exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
-source-git-commit: 810bcd011fd6e172c79f4482e047aa6e715c3918
+source-git-commit: 75b9cc3e2c9a18ec8c08c9c3ca774accae31eb7e
 workflow-type: tm+mt
-source-wordcount: '1531'
-ht-degree: 6%
+source-wordcount: '1638'
+ht-degree: 5%
 
 ---
 
@@ -146,6 +146,7 @@ Pour obtenir des explications détaillées sur les exigences de correspondance d
 
 +++Réponse
 [!DNL LinkedIn Matched Audiences] prend en charge l’activation des identités suivantes : emails hachés, [!DNL GAID], et [!DNL IDFA].
+
 +++
 
 ## Personnalisation de la même page et de la page suivante via les destinations Adobe Target et Personnalisation personnalisée {#same-next-page-personalization}
@@ -209,3 +210,20 @@ Non. Toutes les audiences que vous souhaitez activer dans Adobe Target doivent u
 +++Réponse
 Oui. La variable [Stratégies de gouvernance et de consentement des données](../data-governance/home.md) l’activation des attributs sélectionnés sera régie par les actions marketing créées et associées aux actions marketing sélectionnées.
 +++
+
+### Sont les [!DNL Adobe Target] et [!DNL Custom Personalization] destinations [!DNL HIPAA]-compatible ?
+
++++Réponse
+[!DNL Adobe Target] n’est pas [!DNL HIPPA]-compatible avec [[!DNL Adobe Healthcare Shield]](https://business.adobe.com/solutions/industries/healthcare.html). Les clients doivent consulter leurs propres équipes juridiques au sujet de [!DNL HIPPA]-préparation aux canaux d’optimisation personnalisés avant d’utiliser la personnalisation de périphérie via [!DNL Adobe Target] ou le [!DNL Custom Personalization] destinations.
+
+Pour les cas d’utilisation où la gestion de la stratégie de consentement doit être appliquée à grande échelle, les clients doivent acheter [!DNL Adobe Privacy & Security Shield]. [!DNL Adobe Privacy & Security Shield] Les fonctionnalités sont vendues comme une suite avancée de fonctionnalités et ne peuvent pas être achetées séparément.
+
+Ce service comprend des clés gérées par le client et des seuils élevés pour gérer le cycle de vie des données client.
+
+La variable [!DNL Adobe Target] et [!DNL Custom Personalization] les destinations sont intégrées à la fonction [Étiquettes d’utilisation des données Experience Platform](../data-governance/labels/overview.md) et la variable [Service d’application de la stratégie de consentement](../data-governance/enforcement/overview.md). Ces fonctionnalités sont disponibles pour tous les clients.
+
+
+
+
++++
+
