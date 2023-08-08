@@ -7,7 +7,7 @@ topic-legacy: Getting started
 description: Apprenez-en plus sur les événements, les entrées et les sorties requis utilisés par l’IA dédiée aux clientes et clients.
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
 source-git-commit: 07a110f6d293abff38804b939014e28f308e3b30
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2484'
 ht-degree: 100%
 
