@@ -5,14 +5,14 @@ description: Prise en main des API Media Edge
 source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '959'
-ht-degree: 62%
+ht-degree: 100%
 
 ---
 
 
 # Prise en main de l’API Media Edge
 
-Ce guide vous aide à démarrer avec le service d’API Media Edge. Cela inclut le démarrage d’une session multimédia, puis le suivi des événements envoyés à une solution Adobe Experience Platform telle que Customer Journey Analytics (CJA). Le service d’API Media Edge est lancé à l’aide du point d’entrée « Session Start ». Une fois la session lancée, un ou plusieurs des événements suivants peuvent faire l’objet d’un suivi :
+Ce guide vous aide à démarrer avec le service d’API Media Edge. Apprenez à lancer une session multimédia et à suivre les événements envoyés à une solution Adobe Experience Platform telle que Customer Journey Analytics (CJA). Le service d’API Media Edge est lancé à l’aide du point d’entrée « Session Start ». Une fois la session lancée, un ou plusieurs des événements suivants peuvent faire l’objet d’un suivi :
 
 * `play`
 * `ping`
@@ -32,7 +32,7 @@ Ce guide vous aide à démarrer avec le service d’API Media Edge. Cela inclut 
 * `sessionComplete`
 * `statesUpdate`
 
-Chaque événement possède son propre point d’entrée. Tous les points d’entrée de l’API Media Edge sont des méthodes POST, avec des corps de requête JSON pour les données d’événement. Pour plus d’informations sur les points de terminaison, les paramètres et les exemples de l’API Media Edge, voir la section [Fichier Media Edge Swagger](swagger.md).
+Chaque événement possède son propre point d’entrée. Tous les points d’entrée de l’API Media Edge sont des méthodes POST, avec des corps de requête JSON pour les données d’événement. Pour plus d’informations sur les points d’entrée de l’API Media Edge, les paramètres, et des exemples, consultez le [fichier Swagger Media Edge](swagger.md).
 
 Ce guide décrit comment effectuer le suivi des événements suivants après le démarrage de la session :
 
@@ -42,7 +42,7 @@ Ce guide décrit comment effectuer le suivi des événements suivants après le 
 
 ## Mise en œuvre de l’API {#implement-api}
 
-Outre les différences mineures dans le modèle et les chemins appelés, l’API Media Edge a la même mise en oeuvre que la variable [API Media Collection](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-overview.html?lang=fr). Les détails de mise en oeuvre de l’API Media Collection restent valides pour l’API Media Edge, comme décrit dans la documentation suivante :
+Mis à part quelques différences mineures dans le modèle et les chemins appelés, l’API Media Edge partage l’implémentation de l’[API Media Collection](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-overview.html?lang=fr). Les détails de mise en oeuvre de l’API Media Collection restent valides pour l’API Media Edge, comme décrit dans la documentation suivante :
 
 * [Définition du type de requête HTTP dans votre lecteur](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-sed-pings.html?lang=fr)
 * [Envoi d’événements ping](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-sed-pings.html?lang=fr)
@@ -60,7 +60,7 @@ Pour démarrer la session multimédia sur le serveur, utilisez le point d’entr
 
 Avant d’effectuer la requête de démarrage de session, vous devez disposer des éléments suivants :
 
-* Le `datastreamId`: paramètre requis pour la requête Démarrage de session du POST. Pour récupérer un paramètre `datastreamId`, consultez la section [Configurer un flux de données](https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html?lang=fr).
+* `datastreamId` est un paramètre obligatoire pour la requête POST de démarrage de session. Pour récupérer un paramètre `datastreamId`, consultez la section [Configurer un flux de données](https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html?lang=fr).
 
 * Objet JSON pour la payload de la requête contenant les données minimales requises (comme illustré dans l’exemple de requête ci-dessous).
 
@@ -99,7 +99,7 @@ curl -i --request POST '{uri}/ee/va/v1/sessionStart?configId={dataStreamId}' \
 
 Dans l’exemple de requête ci-dessus, la valeur `eventType` contient le préfixe `media.` selon le [Modèle de données d’expérience (XDM)](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=fr) pour spécifier les domaines.
 
-En outre, le mappage des types de données pour `eventType` dans l’exemple ci-dessus, les éléments suivants sont proposés :
+En outre, le mappage des types de données pour `eventType` dans l’exemple ci-dessus sont les suivants :
 
 | eventType | datatypes |
 | -------- | ------ |
@@ -108,9 +108,9 @@ En outre, le mappage des types de données pour `eventType` dans l’exemple ci-
 | media.adBreakStart | [advertisingPodDetails](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/advertisingpoddetails.schema.md) |
 | media.adStart | [advertisingDetails](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/advertisingdetails.schema.md) |
 | media.error | [errorDetails](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/errordetails.schema.md) |
-| media.statesUpdate | [statesStart](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/mediadetails.schema.md#xdmstatesstart): Tableau[playerStateData], [statesEnd](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/mediadetails.schema.md#xdmstatesend): Tableau[playerStateData] |
+| media.statesUpdate | [statesStart](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/mediadetails.schema.md#xdmstatesstart): Array[playerStateData], [statesEnd](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/mediadetails.schema.md#xdmstatesend): Array[playerStateData] |
 | media.sessionStart, media.chapterStart, media.adStart | [customMetadata](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/mediadetails.schema.md#xdmcustommetadata) |
-| tous | [qoeDataDetails](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/qoedatadetails.schema.md) |
+| all | [qoeDataDetails](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/qoedatadetails.schema.md) |
 
 ### Exemple de réponse
 
@@ -164,14 +164,14 @@ x-content-type-options: nosniff
 
 Dans l’exemple de réponse ci-dessus, le paramètre `sessionId` s’affiche comme `af8bb22766e458fa0eef98c48ea42c9e351c463318230e851a19946862020333`. Vous utiliserez cet identifiant dans les requêtes d’événement ultérieures en tant que paramètre obligatoire.
 
-Pour plus d’informations sur les paramètres de point de fin de début de session et des exemples, voir la section [Media Edge Swagger](swagger.md) fichier .
+Pour plus d’informations sur les paramètres de point d’entrée « Session Start » et des exemples, consultez le fichier [Swagger Media Edge](swagger.md).
 
 Pour plus d’informations sur les paramètres de données multimédia XDM, consultez la section [Schéma d’informations sur les détails de média](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/mediadetails.schema.md#xdmplayhead).
 
 
 ## Requête d’événement de début de la mémoire tampon {#buffer-start}
 
-L’événement Début de la mémoire tampon signale le démarrage de la mise en mémoire tampon sur le lecteur multimédia. La reprise de la mémoire tampon n’est pas un événement du service d’API ; au lieu de cela, elle est déduite lorsqu’un événement play est envoyé après le début de la mémoire tampon. Pour effectuer une requête d’événement de début de mémoire tampon, insérez `sessionId` dans la payload d’un appel au point d&#39;entrée suivant :
+L’événement Début de la mémoire tampon signale le démarrage de la mise en mémoire tampon sur le lecteur multimédia. La reprise de la mémoire tampon n’est pas un événement du service d’API, mais intervient lorsqu’un événement de lecture est envoyé après le début de la mémoire tampon. Pour effectuer une requête d’événement de début de mémoire tampon, insérez `sessionId` dans la payload d’un appel au point d&#39;entrée suivant :
 
 **POST**  `https://edge.adobedc.net/ee-pre-prd/va/v1/bufferStart \`
 
@@ -200,11 +200,11 @@ curl -X 'POST' \
 }'
 ```
 
-Dans l’exemple de requête ci-dessus, la même `sessionId` qui est renvoyé dans l’appel précédent est utilisé comme paramètre requis dans la requête de début de la mémoire tampon.
+Dans l’exemple de requête ci-dessus, le même paramètre `sessionId` que celui renvoyé dans l’appel précédent est utilisé en tant que paramètre obligatoire dans la requête de début de mémoire tampon.
 
-La réponse réussie indique un état de 200 et n’inclut aucun contenu.
+La réponse réussie indique un statut 200 et n’inclut aucun contenu.
 
-Pour plus d’informations sur les paramètres du point de terminaison de début de la mémoire tampon et des exemples, reportez-vous à la section [Media Edge Swagger](swagger.md) fichier .
+Pour plus d’informations sur les paramètres du point d’entrée de début de mémoire tampon et des exemples, consultez le fichier [Swagger Media Edge](swagger.md).
 
 
 ## Requête d’événement de lecture {#play-event}
@@ -238,9 +238,9 @@ curl -X 'POST' \
 }'
 ```
 
-La réponse réussie indique un état de 200 et n’inclut aucun contenu.
+La réponse réussie indique un statut 200 et n’inclut aucun contenu.
 
-Pour plus d’informations sur les paramètres du point de fin de lecture et des exemples, voir la section [Media Edge Swagger](swagger.md) fichier .
+Pour plus d’informations sur les paramètres de point d’entrée de lecture et des exemples, consultez le fichier [Swagger Media Edge](swagger.md).
 
 ## Requête d’événement de fin de session {#session-complete}
 
@@ -273,9 +273,9 @@ curl -X 'POST' \
 }'
 ```
 
-La réponse réussie indique un état de 200 et n’inclut aucun contenu.
+La réponse réussie indique un statut 200 et n’inclut aucun contenu.
 
-Pour plus d’informations sur les paramètres et les exemples de point de terminaison de la fin de la session, reportez-vous à la section [Media Edge Swagger](swagger.md) fichier .
+Pour plus d’informations sur les paramètres de point d’entrée de fin de session et des exemples, consultez le fichier [Swagger Media Edge](swagger.md).
 
 ## Codes de réponse
 
@@ -284,13 +284,13 @@ Le tableau suivant affiche les codes de réponse possibles suite aux requêtes d
 | État | Description |
 | ---------- | --------- |
 | 200 | La session a été créée. |
-| 207 | Problème avec l’un des services qui se connectent à Experience Edge Network (voir plus dans la section [guide de dépannage](troubleshooting.md)) |
+| 207 | L’un des services qui se connectent à Experience Edge Network rencontre un problème (pour plus d’informations, consultez le [guide de dépannage](troubleshooting.md)) |
 | 400-level | Requête incorrecte |
 | 500-level | Erreur du serveur |
 
 ## Plus d’informations sur cette fonctionnalité
 
-* [Guide de dépannage de Media Edge](troubleshooting.md)
+* [Guide de dépannage de Media Edge](troubleshooting.md)
 * [Vue d’ensemble de l’API Media Edge](overview.md)
 
 

@@ -7,7 +7,7 @@ exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
 source-git-commit: e59def7a05862ad880d0b6ada13b1c69c655ff90
 workflow-type: tm+mt
 source-wordcount: '4309'
-ht-degree: 98%
+ht-degree: 99%
 
 ---
 
@@ -303,7 +303,7 @@ Commencez par consulter les journaux pour connaître les détails de l’erreur.
 
 Vous pouvez également consulter la documentation pour obtenir des conseils sur la manière d’effectuer des [requêtes planifiées dans l’interface utilisateur](./ui/user-guide.md#scheduled-queries) et par le biais de [l’API](./api/scheduled-queries.md).
 
-N’oubliez pas que lorsque vous utilisez la variable [!DNL Query Editor] vous pouvez uniquement ajouter un planning à une requête qui a déjà été créée, enregistrée et exécutée. Cela ne s’applique pas au [!DNL Query Service] API.
+N’oubliez pas que lorsque vous utilisez [!DNL Query Editor], vous pouvez uniquement ajouter un planning à une requête qui a déjà été créée, enregistrée et exécutée. Ceci ne s’applique pas à l’API [!DNL Query Service].
 +++
 
 ### Que signifie l’erreur « Limite de session atteinte » ?
