@@ -2,7 +2,7 @@
 description: Découvrez comment formater un appel API pour soumettre une requête de publication de destination avec Adobe Experience Platform Destination SDK.
 title: Création d’une requête de publication de destination
 source-git-commit: 8ec5d450d2856b9a12457e1b1b0b46baf930253a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '447'
 ht-degree: 100%
 
