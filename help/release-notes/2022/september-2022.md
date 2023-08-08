@@ -3,7 +3,7 @@ title: Notes de mise à jour d’Adobe Experience Platform - Septembre 2022
 description: Les notes de mise à jour de septembre 2022 pour Adobe Experience Platform.
 exl-id: a7a4dcf8-2cf3-4e39-879d-bdfcbacb737a
 source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2940'
 ht-degree: 100%
 
