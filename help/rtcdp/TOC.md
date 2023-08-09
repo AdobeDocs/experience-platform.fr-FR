@@ -4,10 +4,10 @@ solution: Real-Time Customer Data Platform
 audience: user
 user-guide-title: Guide de Real-Time Customer Data Platform
 user-guide-description: Regroupez les données connues et anonymes provenant de plusieurs entreprises sources afin de créer des profils clients, puis des segments d’audience à partir de ces profils et enfin d’activer ces segments vers des destinations tierces.
-source-git-commit: f63cddc1158e739ce26e0ce1d3d54b491bd80c06
+source-git-commit: 4a89650a8c1599b95e109a710e4f12df34e67f6f
 workflow-type: tm+mt
-source-wordcount: '242'
-ht-degree: 90%
+source-wordcount: '250'
+ht-degree: 88%
 
 ---
 
@@ -65,6 +65,8 @@ ht-degree: 90%
    * [Présentation des sources](sources/sources-overview.md)
    * [Sources dans l’édition B2B de Real-Time CDP](sources/b2b.md)
 * Cas d’utilisation {#use-cases}
+   * Cas d’utilisation du réengagement intelligent {#intelligent-re-engagement}
+      * [Réengager intelligemment vos clients](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md)
    * Cas d’utilisation des données du partenaire {#partner-data}
       * [Interagir et acquérir de nouveaux clients grâce à l’assistance clientèle](/help/rtcdp/partner-data/prospecting.md)
       * [Compléter les profils propriétaires avec les attributs fournis par les partenaires](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
