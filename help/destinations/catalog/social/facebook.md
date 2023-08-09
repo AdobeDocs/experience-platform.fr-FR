@@ -3,9 +3,9 @@ keywords: Connexion facebook;connexion facebook;destinations facebook;facebook;i
 title: Connexion Facebook
 description: Activez les profils de vos campagnes Facebook pour le ciblage, la personnalisation et la suppression des audiences en fonction des courriers électroniques hachés.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
+source-git-commit: 37e8d36d89bf984673345743b371c31b4bb1f94d
 workflow-type: tm+mt
-source-wordcount: '1907'
+source-wordcount: '1926'
 ht-degree: 30%
 
 ---
@@ -77,6 +77,7 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 Avant d’envoyer vos audiences à [!DNL Facebook], assurez-vous de respecter les conditions suivantes :
 
+* Votre [!DNL Facebook] le compte utilisateur doit disposer d’un accès complet à la variable [!DNL Facebook Business Account] qui détient le compte publicitaire que vous utiliserez.
 * Votre [!DNL Facebook] Le compte utilisateur doit avoir la variable **[!DNL Manage campaigns]** autorisation activée pour le compte publicitaire que vous prévoyez d’utiliser.
 * La variable **Adobe Experience Cloud** votre compte professionnel doit être ajouté en tant que partenaire publicitaire dans votre [!DNL Facebook Ad Account]. Utilisez `business ID=206617933627973`. Voir [Ajout de partenaires à votre compte Business Manager](https://www.facebook.com/business/help/1717412048538897) pour plus d’informations, voir la documentation de Facebook .
   >[!IMPORTANT]

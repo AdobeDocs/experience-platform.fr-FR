@@ -3,9 +3,9 @@ title: Réengagement intelligent
 description: Diffusez des expériences attrayantes et connectées au cours des moments de conversion clés pour réengager intelligemment les clients les plus rares.
 hide: true
 hidefromtoc: true
-source-git-commit: 4f0902b874d5e8179c009ad3b603e008b9a22bb4
+source-git-commit: 290c914216c1af070e065a38f726e2028c2cea8c
 workflow-type: tm+mt
-source-wordcount: '3496'
+source-wordcount: '3482'
 ht-degree: 9%
 
 ---
@@ -110,9 +110,7 @@ Pour créer un schéma, procédez comme suit :
 
 Pour plus d’informations sur la création de schémas, consultez la section [tutoriel sur la création de schéma.](/help/xdm/tutorials/create-schema-ui.md)
 
-Quatre conceptions de schéma sont utilisées pour le parcours de réengagement.
-
-Chaque schéma nécessite la configuration de champs spécifiques, ainsi que de champs fortement recommandés.
+Quatre conceptions de schéma sont utilisées pour le parcours de réengagement. Chaque schéma nécessite la configuration de champs spécifiques, ainsi que de champs fortement recommandés.
 
 #### Exigences relatives aux groupes de champs pour le schéma des attributs du client
 
@@ -315,8 +313,6 @@ Les attributs d’audit du système de source externe sont un type de données X
 
 Le schéma du connecteur web d’Adobe est un [!UICONTROL XDM ExperienceEvent] contenant les groupes de champs suivants :
 
-Les groupes de champs requis pour le schéma d’événement d’expérience pour le flux de données Adobe Analytics sont les suivants :
-
 +++Modèle ExperienceEvent Adobe Analytics (groupe de champs)
 
 | Champs | Exigence | Description |
@@ -382,8 +378,6 @@ Les attributs d’audit du système de source externe sont un type de données X
 +++
 
 ![Schéma du connecteur web d’Adobe qui met en surbrillance la liste des groupes de champs.](../intelligent-re-engagement/images/adobe-web-connector.png)
-
->[!ENDTABS]
 
 ### Création d’un jeu de données à partir d’un schéma
 
