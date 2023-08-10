@@ -2,10 +2,10 @@
 title: Bonnes pratiques relatives aux droits de licence de gestion des données
 description: Découvrez les bonnes pratiques à suivre et les outils que vous pouvez utiliser pour mieux gérer vos droits de licence avec Adobe Experience Platform.
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: 225fee7e2addf5067cb13da11615f6acff62ed72
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '2203'
-ht-degree: 78%
+source-wordcount: '2202'
+ht-degree: 77%
 
 ---
 
@@ -19,7 +19,7 @@ Ce document décrit les bonnes pratiques à suivre et les outils que vous pouvez
 
 ## Présentation du stockage des données dans Adobe Experience Platform
 
-Experience Platform se compose principalement de deux référentiels de données : la valeur [!DNL data lake] et la banque de profils.
+Experience Platform se compose principalement de deux référentiels de données : [!DNL data lake] et la banque de profils.
 
 Le **[!DNL data lake]** remplit principalement les fonctions suivantes :
 
@@ -27,7 +27,7 @@ Le **[!DNL data lake]** remplit principalement les fonctions suivantes :
 * Il sert de stockage de données à long terme pour toutes les données Experience Platform.
 * Il permet des cas d’utilisation tels que l’analyse des données et la science des données.
 
-Le **Boutique de profils** est l’endroit où les profils client sont créés et qui remplit principalement les fonctions suivantes :
+La variable **Boutique de profils** est l’endroit où les profils client sont créés et qui remplit principalement les fonctions suivantes :
 
 * Il sert de stockage de données pour les profils utilisés afin de prendre en charge les expériences en temps réel.
 * Il permet des cas d’utilisation tels que la segmentation, l’activation et la personnalisation.
@@ -137,7 +137,7 @@ Cette fonctionnalité vous permet de supprimer automatiquement les profils pseud
 
 #### Expirations des événements d’expérience {#event-expirations}
 
-Cette fonctionnalité vous permet de supprimer automatiquement les données comportementales d’un jeu de données activé par Profile qui n’est plus utile pour vos cas d’utilisation. Consultez la présentation sur [Expiration des événements d’expérience](../../profile/event-expirations.md) pour plus d’informations sur le fonctionnement de ce processus une fois qu’il est activé pour un jeu de données.
+Cette fonctionnalité vous permet de supprimer automatiquement les données comportementales d’un jeu de données activé par Profile qui n’est plus utile pour vos cas d’utilisation. Consultez la présentation sur [Expiration des événements d’expérience](../../profile/event-expirations.md) pour plus d’informations sur le fonctionnement de ce processus une fois activé pour un jeu de données.
 
 ## Résumé des bonnes pratiques pour la conformité de l’utilisation des licences {#best-practices}
 
@@ -151,7 +151,7 @@ Vous trouverez ci-dessous une liste des bonnes pratiques recommandées pour gara
 
 ## Résumé et disponibilité des fonctionnalités {#feature-summary}
 
-Les bonnes pratiques et outils décrits dans ce document vous aideront à mieux gérer les droits d’utilisation de licence dans Adobe Experience Platform. Ce document sera mis à jour lorsque des fonctionnalités supplémentaires seront disponibles pour offrir visibilité et contrôle à tous les clients Experience Platform.
+Les bonnes pratiques et outils décrits dans ce document vous aideront à mieux gérer l’utilisation des droits de licence dans Adobe Experience Platform. Ce document sera mis à jour lorsque des fonctionnalités supplémentaires seront disponibles pour offrir visibilité et contrôle à tous les clients Experience Platform.
 
 Le tableau suivant présente la liste des fonctionnalités actuellement disponibles afin de mieux gérer les droits d’utilisation de licence.
 

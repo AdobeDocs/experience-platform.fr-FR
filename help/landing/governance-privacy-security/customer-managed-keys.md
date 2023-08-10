@@ -2,10 +2,10 @@
 title: Clés gérées par le client dans Adobe Experience Platform
 description: Découvrez comment configurer vos propres clés de chiffrement pour les données stockées dans Adobe Experience Platform.
 exl-id: cd33e6c2-8189-4b68-a99b-ec7fccdc9b91
-source-git-commit: 04ed092d4514d1668068ed73a1be4400c6cd4d8e
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1774'
-ht-degree: 79%
+source-wordcount: '1773'
+ht-degree: 78%
 
 ---
 
@@ -92,7 +92,7 @@ Une fois que vous avez créé un coffre de clés, vous pouvez générer une nouv
 
 ![Générer une clé](../images/governance-privacy-security/customer-managed-keys/view-keys.png)
 
-Utilisez le formulaire fourni pour attribuer un nom à la clé, puis sélectionnez **RSA** pour le type de clé. Au minimum, la **[!DNL RSA key size]** doit être de **3072** bits comme [!DNL Cosmos DB] l’exige. [!DNL Azure Data Lake Storage] est également compatible avec RSA 3027.
+Utilisez le formulaire fourni pour attribuer un nom à la clé, puis sélectionnez **RSA** pour le type de clé. Au minimum, la variable **[!DNL RSA key size]** doit être au moins **3072** bits requis par [!DNL Cosmos DB]. [!DNL Azure Data Lake Storage] est également compatible avec RSA 3027.
 
 >[!NOTE]
 >

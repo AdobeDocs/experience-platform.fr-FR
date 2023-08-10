@@ -2,9 +2,9 @@
 title: Authentification
 description: Découvrez comment configurer l’authentification pour l’API Adobe Experience Platform Edge Network Server.
 exl-id: 73c7a186-9b85-43fe-a586-4c6260b6fa8c
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '637'
+source-wordcount: '636'
 ht-degree: 21%
 
 ---
@@ -13,11 +13,11 @@ ht-degree: 21%
 
 ## Vue d’ensemble
 
-Le [!DNL Edge Network Server API] gère à la fois la collecte de données authentifiées et non authentifiées, en fonction de la source des événements et du domaine de collecte de l’API.
+La variable [!DNL Edge Network Server API] gère à la fois la collecte de données authentifiées et non authentifiées, en fonction de la source des événements et du domaine de collecte de l’API.
 
 Pour chaque requête, la variable [!DNL Server API] vérifie le flux de données [!DNL access type] . Grâce à ce paramètre, les clients peuvent configurer un flux de données pour accepter les données authentifiées ou les données authentifiées et non authentifiées. Par défaut, les deux types de données sont acceptés.
 
-Pour plus d’informations sur la configuration du type d’accès au flux de données, consultez la documentation sur la manière de [création et configuration d’un flux de données](../datastreams/overview.md#create).
+Pour plus d’informations sur la configuration du type d’accès au flux de données, consultez la documentation sur la manière de [créer et configurer un flux de données](../datastreams/overview.md#create).
 
 Vous trouverez ci-dessous un résumé du comportement, basé sur le flux de données [!DNL Access Type] configuration et le point de terminaison sur lequel la requête est reçue.
 
@@ -67,7 +67,7 @@ Pour configurer les autorisations d’écriture de jeux de données, accédez au
 
 | Code d’erreur | Message d’erreur | Description |
 | --- | --- | --- |
-| `EXEG-0500-401` | Jeton d’autorisation non valide | Ce message d&#39;erreur s&#39;affiche dans l&#39;une des situations suivantes :  <ul><li>Le `authorization` valeur d’en-tête manquante.</li><li>Le `authorization` La valeur d’en-tête n’inclut pas la valeur requise `Bearer` jeton.</li><li>Le format du jeton d’autorisation fourni n’est pas valide.</li><li>Le flux de données nécessite une authentification, mais les en-têtes requis ne sont pas présents dans la requête.</li></ul> |
+| `EXEG-0500-401` | Jeton d’autorisation non valide | Ce message d&#39;erreur s&#39;affiche dans l&#39;une des situations suivantes :  <ul><li>La variable `authorization` valeur d’en-tête manquante.</li><li>La variable `authorization` La valeur d’en-tête n’inclut pas la valeur requise `Bearer` jeton.</li><li>Le format du jeton d’autorisation fourni n’est pas valide.</li><li>Le flux de données nécessite une authentification, mais les en-têtes requis ne sont pas présents dans la requête.</li></ul> |
 | `EXEG-0501-401` | Jeton d’autorisation d’utilisateur non valide | Ce message d&#39;erreur s&#39;affiche dans l&#39;une des situations suivantes : <ul><li>L’appel API n’a pas le paramètre requis `x-user-token` en-tête .</li><li>Le format du jeton utilisateur fourni n’est pas valide.</li></ul> |
 | `EXEG-0502-401` | Jeton d’autorisation non valide | Ce message d’erreur s’affiche lorsque le jeton d’autorisation fourni a un format valide (JWT), mais que sa signature n’est pas valide. Vérifiez les [tutoriel sur l’authentification](../landing/api-authentication.md) pour savoir comment obtenir un jeton JWT valide. |
 | `EXEG-0503-401` | Jeton d’autorisation non valide | Ce message d’erreur s’affiche lorsque le jeton d’autorisation fourni a expiré. Accédez au [tutoriel sur l’authentification](../landing/api-authentication.md) pour générer un nouveau jeton. |

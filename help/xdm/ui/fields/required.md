@@ -3,9 +3,9 @@ keywords: Experience Platform;accueil;rubriques les plus consultées;api;API;XDM
 title: Définition des champs obligatoires dans l’interface utilisateur
 description: Découvrez comment définir un champ XDM obligatoire dans l’interface utilisateur de l’Experience Platform.
 exl-id: 3a5885a0-6f07-42f3-b521-053083d5b556
-source-git-commit: fe3d9a3fc473e7ca13f0e0c2f222bcc1b1a991c4
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '362'
+source-wordcount: '361'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ Dans le modèle de données d’expérience (XDM), un champ obligatoire indique 
 >
 >Qu’un champ de schéma soit obligatoire ou non, Platform n’accepte pas `null` ou des valeurs vides pour tout champ ingéré. S’il n’existe aucune valeur pour un champ particulier dans un enregistrement ou un événement, la clé de ce champ doit être exclue de la charge utile d’ingestion.
 
-When [définition d’un nouveau champ](./overview.md#define) dans l’interface utilisateur de Adobe Experience Platform, vous pouvez définir ce champ comme champ obligatoire en sélectionnant l’option **[!UICONTROL Obligatoire]** dans le rail de droite. Sélectionner **[!UICONTROL Appliquer]** pour appliquer la modification au schéma.
+When [définition d’un nouveau champ](./overview.md#define) dans l’interface utilisateur de Adobe Experience Platform, vous pouvez définir ce champ comme champ obligatoire en sélectionnant le **[!UICONTROL Obligatoire]** dans le rail de droite. Sélectionner **[!UICONTROL Appliquer]** pour appliquer la modification au schéma.
 
 ![Case à cocher obligatoire](../../images/ui/fields/required/root.png)
 

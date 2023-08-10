@@ -2,10 +2,10 @@
 title: Point d’entrée Propriétés
 description: Découvrez comment effectuer des appels vers le point d’entrée /Propriétés dans l’API Reactor.
 exl-id: 7830c519-312f-4f73-b3f5-64ab0420d902
-source-git-commit: e602f78470fe4eeb2a42e6333ba52096d8a9fe8a
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1104'
-ht-degree: 100%
+source-wordcount: '1103'
+ht-degree: 99%
 
 ---
 
@@ -1406,7 +1406,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie les détails de la société détentrice de la propriété spécifiée.
+Une réponse réussie renvoie les détails de la société de la propriété spécifiée.
 
 ```json
 {

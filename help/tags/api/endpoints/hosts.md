@@ -2,10 +2,10 @@
 title: Point d’entrée des hôtes
 description: Découvrez comment effectuer des appels au point d’entrée /hôtes dans l’API Reactor.
 exl-id: 9d0d2a65-49e9-429c-a665-754b59a11cf1
-source-git-commit: 905384b3190cd55e7caa9c4560d6b2774280eee7
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '797'
-ht-degree: 92%
+source-wordcount: '796'
+ht-degree: 91%
 
 ---
 
@@ -430,7 +430,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie les détails de la propriété de lʼhôte spécifié.
+Une réponse réussie renvoie les détails de la propriété de l’hôte spécifié.
 
 ```json
 {

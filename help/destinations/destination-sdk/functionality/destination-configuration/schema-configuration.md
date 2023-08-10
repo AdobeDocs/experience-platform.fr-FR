@@ -1,10 +1,10 @@
 ---
 description: Découvrez comment configurer les schémas du partenaire pour les destinations créées avec Destination SDK.
 title: Configuration des schémas de partenaire
-source-git-commit: ca4fb2dce097197aa1a97e0716e6294546bfee38
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1898'
-ht-degree: 89%
+source-wordcount: '1897'
+ht-degree: 87%
 
 ---
 
@@ -21,7 +21,7 @@ Pendant la configuration du schéma de partenaire pour la destination, vous pouv
 * Créer des schémas de partenaire dynamique qu’Experience Platform peut appeler dynamiquement pour récupérer une liste de tous les attributs pris en charge dans la destination.
 * Définir les mappages de champs obligatoires par votre plateforme de destination.
 
-Pour comprendre la place de ce composant dans une intégration créée avec Destination SDK, consultez le diagramme de la documentation [Options de configuration](../configuration-options.md) ou consultez le guide sur l’[utilisation de Destination SDK pour configurer une destination basée sur des fichiers](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration).
+Pour comprendre où ce composant entre dans une intégration créée avec Destination SDK, reportez-vous au diagramme de la section [options de configuration](../configuration-options.md) ou consulter le guide sur la manière d’effectuer [utiliser la Destination SDK pour configurer une destination basée sur des fichiers ;](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration).
 
 Vous pouvez configurer vos paramètres de schéma via le point d’entrée `/authoring/destinations`. Pour obtenir des exemples d’appels API détaillés dans lesquels vous pouvez configurer les composants affichés sur cette page, consultez les pages de référence de l’API suivantes.
 
@@ -106,7 +106,7 @@ Pour créer un schéma statique avec des attributs de profil, définissez les at
 | `segmentRequired` | Booléen | Obligatoire | Ce paramètre est demandé par Destination SDK et doit toujours être défini sur `true`. |
 | `identityRequired` | Booléen | Obligatoire | Définissez-le sur `true` si les utilisateurs doivent être en mesure de mapper les [types d’identité](identity-namespace-configuration.md) d’Experience Platform aux attributs que vous avez définis dans le tableau `profileFields`. |
 | `segmentNamespaceAllowList` | Tableau | Facultatif | Définit des espaces de noms d’audience spécifiques à partir desquels les utilisateurs peuvent mapper des audiences à la destination. Utilisez ce paramètre pour empêcher les utilisateurs de Platform d’exporter des audiences à partir des espaces de noms d’audience que vous définissez dans le tableau . Ce paramètre ne peut pas être utilisé avec `segmentNamespaceDenyList`.<br> <br> Exemple : `"segmentNamespaceAllowList": ["AudienceManager"]` permettra aux utilisateurs de mapper uniquement les audiences de la `AudienceManager` à cette destination. <br> <br> Pour permettre aux utilisateurs d’exporter n’importe quelle audience vers votre destination, vous pouvez ignorer ce paramètre. <br> <br> Si les deux `segmentNamespaceAllowList` et `segmentNamespaceDenyList` ne sont pas présents dans votre configuration, les utilisateurs pourront uniquement exporter des audiences provenant de la [Segmentation Service](../../../../segmentation/home.md). |
-| `segmentNamespaceDenyList` | Tableau | Facultatif | Limite la capacité des utilisateurs à mapper des audiences à la destination, à partir des espaces de noms d’audience définis dans le tableau . Ne peut pas être utilisé avec `segmentNamespaceAllowed`. <br> <br> Exemple : `"segmentNamespaceDenyList": ["AudienceManager"]` empêche les utilisateurs de mapper les audiences à partir de la variable `AudienceManager` à cette destination. <br> <br> Pour permettre aux utilisateurs d’exporter n’importe quelle audience vers votre destination, vous pouvez ignorer ce paramètre. <br> <br> Si les deux `segmentNamespaceAllowed` et `segmentNamespaceDenyList` ne sont pas présents dans votre configuration, les utilisateurs pourront uniquement exporter des audiences provenant de la [Segmentation Service](../../../../segmentation/home.md). <br> <br> Pour autoriser l’exportation de toutes les audiences, quelle que soit leur origine, définissez `"segmentNamespaceDenyList":[]`. |
+| `segmentNamespaceDenyList` | Tableau | Facultatif | Limite la capacité des utilisateurs à mapper des audiences à la destination, à partir des espaces de noms d’audience définis dans le tableau . Ne peut pas être utilisé avec `segmentNamespaceAllowed`. <br> <br> Exemple : `"segmentNamespaceDenyList": ["AudienceManager"]` empêche les utilisateurs de mapper les audiences à partir du `AudienceManager` à cette destination. <br> <br> Pour permettre aux utilisateurs d’exporter n’importe quelle audience vers votre destination, vous pouvez ignorer ce paramètre. <br> <br> Si les deux `segmentNamespaceAllowed` et `segmentNamespaceDenyList` ne sont pas présents dans votre configuration, les utilisateurs pourront uniquement exporter des audiences provenant de la [Segmentation Service](../../../../segmentation/home.md). <br> <br> Pour autoriser l’exportation de toutes les audiences, quelle que soit leur origine, définissez `"segmentNamespaceDenyList":[]`. |
 
 {style="table-layout:auto"}
 

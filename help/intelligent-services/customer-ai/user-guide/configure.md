@@ -5,9 +5,9 @@ feature: Customer AI
 title: Configuration d’une instance Customer AI
 description: Les services AI/ML fournissent Customer AI en tant que service Adobe Sensei simple d’utilisation pouvant être configuré pour différents cas d’utilisation. Les sections suivantes décrivent les étapes de configuration d’une instance de Customer AI.
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
-source-git-commit: 07a110f6d293abff38804b939014e28f308e3b30
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '2828'
+source-wordcount: '2827'
 ht-degree: 8%
 
 ---
@@ -25,20 +25,20 @@ Dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Services
 
 ![](../images/user-guide/navigate-to-service.png)
 
-Le **Customer AI** L’interface utilisateur s’affiche et affiche toutes vos instances de service.
+La variable **Customer AI** L’interface utilisateur s’affiche et affiche toutes vos instances de service.
 
-- Vous trouverez la variable **[!UICONTROL Profils totaux notés]** mesure située dans le coin inférieur droit de la **[!UICONTROL Créer une instance]** conteneur. Cette mesure effectue le suivi du nombre total de profils notés par Customer AI pour l’année civile en cours, y compris tous les environnements de test et toutes les instances de service supprimées.
+- Vous pouvez trouver la variable **[!UICONTROL Nombre total de profils notés]** mesure située dans le coin inférieur droit de la **[!UICONTROL Créer une instance]** conteneur. Cette mesure effectue le suivi du nombre total de profils notés par Customer AI pour l’année civile en cours, y compris tous les environnements de test et toutes les instances de service supprimées.
 
 ![](../images/user-guide/total-profiles.png)
 
 Les instances de service peuvent être modifiées, clonées et supprimées à l’aide des commandes situées dans la partie droite de l’interface utilisateur. Pour afficher ces commandes, sélectionnez une instance parmi les **[!UICONTROL Instances de service]**. Les contrôles contiennent les éléments suivants :
 
-- **[!UICONTROL Modifier]**: Sélection **[!UICONTROL Modifier]** permet de modifier une instance de service existante. Vous pouvez modifier le nom, la description et la fréquence de notation de l’instance.
-- **[!UICONTROL Cloner]**: Sélection **[!UICONTROL Cloner]** copie la configuration de l’instance de service actuellement sélectionnée. Vous pouvez ensuite modifier le workflow pour effectuer des ajustements mineurs et le renommer en nouvelle instance.
-- **[!UICONTROL Supprimer]**: Vous pouvez supprimer une instance de service, y compris les exécutions historiques. Le jeu de données de sortie correspondant sera supprimé de Platform. Toutefois, les scores synchronisés dans Real-time Customer Profile ne sont pas supprimés.
-- **[!UICONTROL Source de données]**: Un lien vers le jeu de données utilisé par cette instance. Si plusieurs jeux de données sont utilisés, la sélection du texte de lien hypertexte ouvre la fenêtre contextuelle d’aperçu du jeu de données.
-- **[!UICONTROL Détails de la dernière exécution]**: Cette option n’est affichée que lorsqu’une exécution échoue. Vous trouverez ici des informations sur les raisons de l’échec de l’exécution, telles que les codes d’erreur.
-- **[!UICONTROL Définition de score]**: Aperçu rapide de l’objectif que vous avez configuré pour cette instance.
+- **[!UICONTROL Modifier]**: sélection **[!UICONTROL Modifier]** permet de modifier une instance de service existante. Vous pouvez modifier le nom, la description et la fréquence de notation de l’instance.
+- **[!UICONTROL Cloner]**: sélection **[!UICONTROL Cloner]** copie la configuration de l’instance de service actuellement sélectionnée. Vous pouvez ensuite modifier le workflow pour effectuer des ajustements mineurs et le renommer en nouvelle instance.
+- **[!UICONTROL Supprimer]**: vous pouvez supprimer une instance de service, y compris les exécutions historiques. Le jeu de données de sortie correspondant sera supprimé de Platform. Toutefois, les scores synchronisés dans Real-time Customer Profile ne sont pas supprimés.
+- **[!UICONTROL Source de données]**: lien vers le jeu de données utilisé par cette instance. Si plusieurs jeux de données sont utilisés, la sélection du texte de lien hypertexte ouvre la fenêtre contextuelle d’aperçu du jeu de données.
+- **[!UICONTROL Détails de la dernière exécution]**: s’affiche uniquement lorsqu’une exécution échoue. Vous trouverez ici des informations sur les raisons de l’échec de l’exécution, telles que les codes d’erreur.
+- **[!UICONTROL Définition de score]**: aperçu rapide de l’objectif que vous avez configuré pour cette instance.
 
 ![](../images/user-guide/service-instance-panel.png)
 
@@ -66,7 +66,7 @@ Indiquez les valeurs requises, puis sélectionnez **[!UICONTROL Suivant]** pour 
 
 Par conception, Customer AI utilise Adobe Analytics, Adobe Audience Manager, les événements d’expérience en général et les données d’événement d’expérience client pour calculer les scores de propension. Lors de la sélection d’un jeu de données, seuls les jeux compatibles avec Customer AI sont répertoriés. Pour sélectionner un jeu de données, sélectionnez (**+**) en regard du nom du jeu de données ou cochez la case pour ajouter plusieurs jeux de données à la fois. Utilisez l’option de recherche pour trouver rapidement les jeux de données qui vous intéressent.
 
-![Sélection et recherche d’un jeu de données](../images/user-guide/configure-dataset-page-save-and-exit-cai.png)
+![Sélectionner et rechercher un jeu de données](../images/user-guide/configure-dataset-page-save-and-exit-cai.png)
 
 Après avoir sélectionné les jeux de données que vous souhaitez utiliser, sélectionnez la variable **[!UICONTROL Ajouter]** pour ajouter les jeux de données au volet d’aperçu du jeu de données.
 
@@ -74,7 +74,7 @@ Après avoir sélectionné les jeux de données que vous souhaitez utiliser, sé
 
 Icône Sélectionner l’information ![icône info](../images/user-guide/info-icon.png) en regard du jeu de données, la fenêtre contextuelle d’aperçu du jeu de données s’ouvre.
 
-![Sélection et recherche d’un jeu de données](../images/user-guide/dataset-info.png)
+![Sélectionner et rechercher un jeu de données](../images/user-guide/dataset-info.png)
 
 L’aperçu du jeu de données contient des données telles que l’heure de la dernière mise à jour, le schéma source et un aperçu des dix premières colonnes.
 
@@ -100,7 +100,7 @@ Vous pouvez désormais joindre plusieurs jeux de données les uns aux autres en 
 
 >[!IMPORTANT]
 >
->Le même type d’identité (espace de noms) doit être utilisé pour chaque jeu de données sélectionné. Une coche verte s’affiche en regard du type d’identité dans la colonne d’identité pour indiquer que les jeux de données sont compatibles. Par exemple, lors de l’utilisation de l’espace de noms Phone et `mobilePhone.number` comme identifiant, tous les identifiants des jeux de données restants doivent contenir et utiliser l’espace de noms Phone.
+>Le même type d’identité (espace de noms) doit être utilisé pour chaque jeu de données sélectionné. Une coche verte s’affiche en regard du type d’identité dans la colonne d’identité pour indiquer que les jeux de données sont compatibles. Par exemple, lorsque vous utilisez l’espace de noms Phone et `mobilePhone.number` comme identifiant, tous les identifiants des jeux de données restants doivent contenir et utiliser l’espace de noms Phone.
 
 Pour sélectionner une identité, sélectionnez la valeur soulignée située dans la colonne d’identité. La fenêtre contextuelle Sélectionner une identité s’affiche.
 
@@ -113,20 +113,20 @@ Dans le cas où plusieurs identités sont disponibles dans un espace de noms, ve
 
 >[!NOTE]
 >
-> S’il n’existe aucun type d’identité (espace de noms) valide pour un jeu de données, vous devez définir une identité Principale et l’affecter à un espace de noms d’identité à l’aide de la variable [éditeur de schéma](../../../xdm/schema/composition.md#identity). Pour en savoir plus sur les espaces de noms et les identités, rendez-vous sur la page [Espaces de noms Identity Service](../../../identity-service/namespaces.md) documentation.
+> S’il n’existe aucun type d’identité (espace de noms) valide pour un jeu de données, vous devez définir une identité Principale et l’affecter à un espace de noms d’identité à l’aide de la variable [éditeur de schéma](../../../xdm/schema/composition.md#identity). Pour en savoir plus sur les espaces de noms et les identités, consultez la page [Espaces de noms Identity Service](../../../identity-service/namespaces.md) la documentation.
 
 ## Définition d’un objectif {#define-a-goal}
 
 <!-- https://www.adobe.com/go/cai-define-a-goal -->
 
-Le **[!UICONTROL Définition d’un objectif]** s’affiche et fournit un environnement interactif qui vous permet de définir visuellement un objectif de prédiction. Un objectif est composé d’un ou de plusieurs événements, où l’occurrence de chaque événement est basée sur la condition qu’il contient. L’objectif d’une instance de Customer AI est de déterminer la probabilité d’atteindre l’objectif au cours d’une période donnée.
+La variable **[!UICONTROL Définition d’un objectif]** s’affiche et fournit un environnement interactif qui vous permet de définir visuellement un objectif de prédiction. Un objectif est composé d’un ou de plusieurs événements, où l’occurrence de chaque événement est basée sur la condition qu’il contient. L’objectif d’une instance de Customer AI est de déterminer la probabilité d’atteindre l’objectif au cours d’une période donnée.
 
 Pour créer un objectif, sélectionnez **[!UICONTROL Saisir le nom du champ]** et suivi d’un champ de la liste déroulante. Sélectionnez la seconde entrée, une clause pour la condition de l’événement, puis éventuellement la valeur cible pour terminer l’événement. D’autres événements peuvent être configurés en sélectionnant **[!UICONTROL Ajouter un événement]**. Enfin, atteignez l’objectif en appliquant une période de prédiction en nombre de jours, puis sélectionnez **[!UICONTROL Suivant]**.
 
 <!-- ![](../images/user-guide/define-a-goal.png) -->
 ![](../images/user-guide/cai-define-a-goal.png)
 
-### Se produira et ne se produira pas
+### Se produit et ne se produit pas
 
 Lors de la définition de votre objectif, vous avez la possibilité de sélectionner **[!UICONTROL Se produit]** ou **[!UICONTROL Ne se produit pas]**. Sélection **[!UICONTROL Se produit]** signifie que les conditions d’événement que vous définissez doivent être remplies pour que les données d’événement d’un client soient incluses dans l’interface utilisateur d’insights.
 
@@ -145,7 +145,7 @@ Par exemple, si vous souhaitez prédire quels clients sont les moins engagés et
 
 Dans certains cas, vous pouvez vouloir prédire si une combinaison d’événements se produira. Dans d’autres cas, vous pouvez vouloir prédire l’occurrence de tout événement d’un ensemble prédéfini. Pour prédire si un client aura une combinaison d’événements, sélectionnez la variable **[!UICONTROL Tous les]** dans la liste déroulante de deuxième niveau de la fonction **[!UICONTROL Définition de l’objectif]** page.
 
-Vous pouvez, par exemple, prédire si un client achète un produit particulier. Cet objectif de prédiction est défini par deux conditions : a `commerce.order.purchaseID` **existe** et le `productListItems.SKU` **est égal à** une valeur spécifique.
+Vous pouvez, par exemple, prédire si un client achète un produit particulier. Cet objectif de prédiction est défini par deux conditions : une `commerce.order.purchaseID` **existe** et la variable `productListItems.SKU` **est égal à** une valeur spécifique.
 
 ![Tous les exemples](../images/user-guide/all-of.png)
 
@@ -183,7 +183,7 @@ Enfin, saisissez la ou les valeurs du champ si l&#39;opérateur sélectionné en
 
 ![Valeur du champ Événement personnalisé](../images/user-guide/custom-value.png)
 
-Une fois l’opération terminée, sélectionnez **[!UICONTROL Suivant]** en haut à droite pour continuer.
+Une fois terminé, sélectionnez **[!UICONTROL Suivant]** en haut à droite pour continuer.
 
 ### Attributs de profil personnalisés (*facultatif*)
 
@@ -193,7 +193,7 @@ Vous pouvez définir des champs de jeu de données Profile importants (avec horo
 >
 >L’ajout d’un attribut de profil personnalisé suit le même processus que l’ajout d’un événement personnalisé. Comme pour les événements personnalisés, les attributs de profil personnalisés affectent la notation de votre modèle de la même manière. Pour obtenir une explication détaillée, consultez la rubrique [Exemple d’événement personnalisé](#custom-event) .
 
-![ajout d’un attribut de profil personnalisé](../images/user-guide/profile-attributes.png)
+![ajouter un attribut de profil personnalisé](../images/user-guide/profile-attributes.png)
 
 #### Sélection d’attributs de profil à partir de l’exportation de l’instantané de profil
 
@@ -227,9 +227,9 @@ Pour configurer un planning de notation, commencez par configurer le **[!UICONTR
 
 ### Exclusions de prédiction *(facultatif)*
 
-Si votre jeu de données contenait des colonnes ajoutées en tant que données de test, vous pouvez ajouter cette colonne ou cet événement à une liste d’exclusion en sélectionnant **[!UICONTROL Ajouter une exclusion]** puis saisissez le champ que vous souhaitez exclure. Cela empêche l’évaluation des événements répondant à certaines conditions lors de la génération de scores. Cette fonction peut être utilisée pour filtrer les entrées de données ou les promotions non pertinentes.
+Si votre jeu de données contenait des colonnes ajoutées en tant que données de test, vous pouvez ajouter cette colonne ou cet événement à une liste d’exclusion en sélectionnant **[!UICONTROL Ajouter une exclusion]** puis saisissez le champ que vous souhaitez exclure. Cela empêche l’évaluation des événements qui répondent à certaines conditions lors de la génération de scores. Cette fonction peut être utilisée pour filtrer les entrées de données ou les promotions non pertinentes.
 
-Pour exclure un événement, sélectionnez **[!UICONTROL Ajouter une exclusion]** et définissez l’événement. Pour supprimer une exclusion, sélectionnez les ellipses (**[!UICONTROL ...]**) en haut à droite du conteneur d’événements, puis sélectionnez **[!UICONTROL Supprimer le conteneur]**.
+Pour exclure un événement, sélectionnez **[!UICONTROL Ajouter une exclusion]** et définissez l’événement. Pour supprimer une exclusion, sélectionnez les ellipses (**[!UICONTROL ..]**) en haut à droite du conteneur d’événements, puis sélectionnez **[!UICONTROL Supprimer le conteneur]**.
 
 ![](../images/user-guide/exclusion.png)
 

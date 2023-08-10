@@ -3,9 +3,9 @@ keywords: Experience Platform;accueil;rubriques populaires;sources;connecteurs;c
 title: Configuration des spécifications d’authentification pour les sources en libre-service (SDK par lots)
 description: Ce document présente les configurations que vous devez préparer pour utiliser les sources en libre-service (SDK par lots).
 exl-id: 68ed22fe-1f22-46d2-9d58-72ad8a9e6b98
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '519'
+source-wordcount: '518'
 ht-degree: 4%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 4%
 
 Les spécifications d’authentification définissent la manière dont les utilisateurs de Adobe Experience Platform peuvent se connecter à votre source.
 
-Le `authSpec` contient des informations sur les paramètres d’authentification requis pour connecter une source à Platform. N’importe quelle source donnée peut prendre en charge plusieurs types d’authentification différents.
+La variable `authSpec` contient des informations sur les paramètres d’authentification requis pour connecter une source à Platform. Toute source donnée peut prendre en charge plusieurs types d’authentification différents.
 
 ## Spécifications d’authentification
 
@@ -135,7 +135,7 @@ Un code d’actualisation OAuth 2 permet un accès sécurisé à une application
 
 ### Authentification de base
 
-L’authentification de base est un type d’authentification qui vous permet d’accéder à votre application en combinant le nom d’utilisateur de votre compte et le mot de passe de votre compte.
+L’authentification de base est un type d’authentification qui vous permet d’accéder à votre application à l’aide d’une combinaison de votre nom d’utilisateur de compte et de votre mot de passe de compte.
 
 ```json
 {
@@ -237,4 +237,4 @@ Voici un exemple de spécification d’authentification terminée à l’aide d�
 
 ## Étapes suivantes
 
-Une fois vos spécifications d’authentification renseignées, vous pouvez procéder à la configuration des spécifications source pour la source que vous souhaitez intégrer à Platform. Voir le document sur [configuration des spécifications source](./sourcespec.md) pour plus d’informations.
+Une fois vos spécifications d’authentification renseignées, vous pouvez procéder à la configuration des spécifications source pour la source que vous souhaitez intégrer à Platform. Consultez le document sur [configuration des spécifications source](./sourcespec.md) pour plus d’informations.

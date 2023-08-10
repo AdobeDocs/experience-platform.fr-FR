@@ -3,9 +3,9 @@ title: Utilisation de la reconnaissance des visiteurs assistée par les partenai
 description: Découvrez comment utiliser la reconnaissance des visiteurs avec l’aide de partenaires pour offrir des expériences personnalisées sur site à vos visiteurs.
 hide: true
 hidefromtoc: true
-source-git-commit: f63cddc1158e739ce26e0ce1d3d54b491bd80c06
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '2493'
+source-wordcount: '2492'
 ht-degree: 7%
 
 ---

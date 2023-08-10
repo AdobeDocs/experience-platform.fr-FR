@@ -2,9 +2,9 @@
 title: Création d’une connexion source Marketo Engage et d’un flux de données pour les données d’activité personnalisée dans l’interface utilisateur
 description: Ce tutoriel décrit les étapes à suivre pour créer une connexion source Marketo Engage et un flux de données dans l’interface utilisateur afin d’importer des données d’activités personnalisées dans Adobe Experience Platform.
 exl-id: 05a7b500-11d2-4d58-be43-a2c4c0ceeb87
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1481'
+source-wordcount: '1480'
 ht-degree: 22%
 
 ---
@@ -21,13 +21,13 @@ En complément de [activités standard](../../../../connectors/adobe-application
 
 Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform :
 
-* [Espaces de noms B2B et utilitaire de génération automatique de schéma](../../../../connectors/adobe-applications/marketo/marketo-namespaces.md): Les espaces de noms B2B et l’utilitaire de génération automatique de schéma vous permettent d’utiliser [!DNL Postman] pour générer automatiquement des valeurs pour vos espaces de noms et vos schémas B2B. Vous devez d’abord renseigner vos espaces de noms et schémas B2B avant de créer une [!DNL Marketo] connexion source et flux de données.
+* [Espaces de noms B2B et utilitaire de génération automatique de schéma](../../../../connectors/adobe-applications/marketo/marketo-namespaces.md): les espaces de noms B2B et l’utilitaire de génération automatique de schéma vous permettent d’utiliser [!DNL Postman] pour générer automatiquement des valeurs pour vos espaces de noms et vos schémas B2B. Vous devez d’abord renseigner vos espaces de noms et schémas B2B avant de créer une [!DNL Marketo] connexion source et flux de données.
 * [Sources](../../../../home.md) : Experience Platform permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de Platform.
 * [Modèle de données d’expérience (XDM)](../../../../../xdm/home.md) : framework normalisé selon lequel Experience Platform organise les données d’expérience client.
    * [Créer et modifier des schémas dans l’interface utilisateur](../../../../../xdm/ui/resources/schemas.md) : découvrez comment créer et modifier des schémas dans l’interface utilisateur.
 * [Espaces de noms d’identité](../../../../../identity-service/namespaces.md) : les espaces de noms d’identité sont des composants d’[!DNL Identity Service] qui servent d’indicateurs du contexte auquel une identité se rapporte. Une identité complète est composée d’une valeur d’identifiant et d’un espace de noms.
 * [[!DNL Real-Time Customer Profile]](/help/profile/home.md) : fournit un profil de consommateur unifié en temps réel, basé sur des données agrégées provenant de plusieurs sources.
-* [Sandbox](../../../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
+* [Sandbox](../../../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
 ## Récupération des détails de votre activité personnalisée
 
@@ -45,7 +45,7 @@ Sélectionner **Champs** dans l’en-tête supérieur pour afficher les champs a
 
 ## Configuration de groupes de champs pour les activités personnalisées dans le schéma des activités B2B
 
-Dans le *[!UICONTROL Schémas]* Tableau de bord de l’interface utilisateur de l’Experience Platform, sélectionnez **[!UICONTROL Parcourir]** puis sélectionnez **[!UICONTROL Activité B2B]** dans la liste des schémas.
+Dans le *[!UICONTROL Schémas]* Tableau de bord de l’interface utilisateur Experience Platform, sélectionnez **[!UICONTROL Parcourir]** puis sélectionnez **[!UICONTROL Activité B2B]** dans la liste des schémas.
 
 >[!TIP]
 >
@@ -61,7 +61,7 @@ Pour ajouter un nouveau groupe de champs, sélectionnez **[!UICONTROL + Ajouter]
 
 ![Structure du schéma.](../../../../images/tutorials/create/marketo-custom-activities/add-new-field-group.png)
 
-Le *[!UICONTROL Ajouter des groupes de champs]* s’affiche. Sélectionner **[!UICONTROL Créer un groupe de champs]** puis indiquez le même nom d’affichage pour l’activité personnalisée que vous avez récupérée à une étape précédente et fournissez une description facultative pour votre nouveau groupe de champs. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Ajouter des groupes de champs]**.
+La variable *[!UICONTROL Ajouter des groupes de champs]* s’affiche. Sélectionner **[!UICONTROL Créer un groupe de champs]** puis indiquez le même nom d’affichage pour l’activité personnalisée que vous avez récupérée à une étape précédente et fournissez une description facultative pour votre nouveau groupe de champs. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Ajouter des groupes de champs]**.
 
 ![Fenêtre d’étiquetage et de création d’un groupe de champs.](../../../../images/tutorials/create/marketo-custom-activities/create-new-field-group.png)
 

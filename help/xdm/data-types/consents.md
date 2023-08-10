@@ -3,16 +3,16 @@ keywords: Experience Platform;profil;profil client en temps réel;dépannage;API
 title: Type de données Consentements et Préférences
 description: Le type de données Consentement pour la confidentialité, la personnalisation et les préférences marketing est destiné à prendre en charge la collecte des autorisations et préférences client générées par les plateformes de gestion du consentement (CMP) et d’autres sources provenant de vos opérations de données.
 exl-id: cdcc7b04-eeb9-40d3-b0b5-f736a5472621
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '2034'
+source-wordcount: '2033'
 ht-degree: 2%
 
 ---
 
 # [!UICONTROL Consentements et préférences] type de données
 
-Le [!UICONTROL Consentement pour la confidentialité, la personnalisation et les préférences marketing] type de données (ci-après appelé &quot;[!UICONTROL Consentements et préférences] type de données&quot;) est un [!DNL Experience Data Model] Type de données (XDM) destiné à prendre en charge la collecte des autorisations et préférences client générées par les plateformes de gestion du consentement (CMP) et d’autres sources provenant de vos opérations de données.
+La variable [!UICONTROL Consentement pour la confidentialité, la personnalisation et les préférences marketing] type de données (ci-après appelé &quot;[!UICONTROL Consentements et préférences] type de données&quot;) est un [!DNL Experience Data Model] Type de données (XDM) destiné à prendre en charge la collecte des autorisations et préférences client générées par les plateformes de gestion du consentement (CMP) et d’autres sources provenant de vos opérations de données.
 
 Ce document couvre la structure et l&#39;utilisation prévue des champs fournis par le [!UICONTROL Consentements et préférences] type de données.
 
@@ -27,16 +27,16 @@ Ce document nécessite une compréhension pratique de XDM et de l’utilisation 
 
 >[!IMPORTANT]
 >
->Le [!UICONTROL Consentements et préférences] le type de données est conçu pour couvrir un éventail de cas d’utilisation de la gestion des préférences et des consentements. Par conséquent, ce document décrit l’utilisation des champs du type de données en termes généraux et ne fait que des suggestions sur la manière dont vous devez interpréter l’utilisation de ces champs. Consultez votre équipe juridique de la confidentialité pour aligner la structure du type de données sur la manière dont votre organisation interprète et présente à vos clients ces choix de consentement et de préférence.
+>La variable [!UICONTROL Consentements et préférences] le type de données est conçu pour couvrir un éventail de cas d’utilisation de la gestion des préférences et des consentements. Par conséquent, ce document décrit l’utilisation des champs du type de données en termes généraux et ne fait que des suggestions sur la manière dont vous devez interpréter l’utilisation de ces champs. Consultez votre équipe juridique de la confidentialité pour aligner la structure du type de données sur la manière dont votre organisation interprète et présente à vos clients ces choix de consentement et de préférence.
 
-Le [!UICONTROL Consentements et préférences] le type de données fournit plusieurs champs utilisés pour la capture. **consentement** et **préférence** informations.
+La variable [!UICONTROL Consentements et préférences] le type de données fournit plusieurs champs utilisés pour la capture. **consentement** et **préférence** informations.
 
 Un consentement est une option qui permet à un client de spécifier comment ses données peuvent être utilisées. La plupart des consentements ont un aspect juridique, dans la mesure où certaines juridictions exigent l’obtention d’une autorisation avant que les données ne puissent être utilisées d’une manière particulière, ou exigent que le client ait la possibilité d’arrêter cette utilisation (opt-out) si un consentement positif n’est pas requis.
 
 Une préférence est une option qui permet au client de spécifier comment gérer différents aspects de son expérience avec une marque. Elles se divisent en deux catégories :
 
-* **Préférences de personnalisation**: Préférences concernant la manière dont la marque doit personnaliser les expériences diffusées à un client.
-* **Préférences marketing**: Préférences concernant le fait qu’une marque soit autorisée à contacter un client par le biais de divers canaux.
+* **Préférences de personnalisation**: préférences concernant la manière dont la marque doit personnaliser les expériences diffusées à un client.
+* **Préférences marketing**: préférences permettant à une marque de contacter un client par le biais de divers canaux.
 
 La capture d’écran suivante montre comment la structure du type de données est représentée dans l’interface utilisateur de Platform :
 
@@ -90,7 +90,6 @@ Le fichier JSON suivant illustre un exemple du type de données que la variable 
 >
 >* [Génération d’exemples de données dans l’interface utilisateur](../ui/sample.md)
 >* [Génération d’exemples de données dans l’API](../api/sample-data.md)
-
 
 ## `consents` {#choices}
 
@@ -285,7 +284,7 @@ Le tableau suivant décrit les valeurs acceptées pour `val`:
 | `p` | En attente de vérification | Le système n’a pas encore reçu de valeur de consentement ou de préférence finale. Il est le plus souvent utilisé dans le cadre d’un consentement qui nécessite une vérification en deux étapes. Par exemple, si un client choisit de recevoir des emails, ce consentement est défini sur `p` jusqu’à ce qu’ils sélectionnent un lien dans un courrier électronique pour vérifier qu’ils ont fourni l’adresse électronique correcte, à ce moment-là le consentement est mis à jour pour `y`.<br><br>Si ce consentement ou cette préférence n’utilise pas un processus de vérification à deux ensembles, la variable `p` choix peut être utilisé pour indiquer que le client n’a pas encore répondu à l’invite de consentement. Par exemple, vous pouvez définir automatiquement la valeur sur `p` sur la première page d’un site web, avant que le client n’ait répondu à l’invite de consentement. Dans les juridictions qui ne requièrent pas de consentement explicite, vous pouvez également l’utiliser pour indiquer que le client n’a pas explicitement exercé son droit d’opposition (en d’autres termes, le consentement est supposé). |
 | `u` | Inconnu | Les informations de consentement ou de préférence du client sont inconnues. |
 | `dy` | Par défaut : Oui (inclusion) | Le client n’a pas fourni de valeur de consentement lui-même et est traité comme un accord préalable (&quot;Oui&quot;) par défaut. En d’autres termes, le consentement est supposé jusqu’à ce que le client indique le contraire.<br><br>Notez que si des lois ou des modifications apportées à la politique de confidentialité de votre entreprise entraînent des modifications des valeurs par défaut de certains utilisateurs ou de tous les utilisateurs, vous devez mettre à jour manuellement tous les profils contenant des valeurs par défaut. |
-| `dn` | Valeur par défaut de Non (opt-out) | Le client n’a pas fourni de valeur de consentement lui-même et est traité comme un droit d’opposition (&quot;Non&quot;) par défaut. En d’autres termes, le client est supposé avoir refusé le consentement jusqu’à ce qu’il en indique autrement.<br><br>Notez que si des lois ou des modifications apportées à la politique de confidentialité de votre entreprise entraînent des modifications des valeurs par défaut de certains utilisateurs ou de tous les utilisateurs, vous devez mettre à jour manuellement tous les profils contenant des valeurs par défaut. |
+| `dn` | Non par défaut (opt-out) | Le client n’a pas fourni de valeur de consentement lui-même et est traité comme un droit d’opposition (&quot;Non&quot;) par défaut. En d’autres termes, le client est supposé avoir refusé le consentement jusqu’à ce qu’il en indique autrement.<br><br>Notez que si des lois ou des modifications apportées à la politique de confidentialité de votre entreprise entraînent des modifications des valeurs par défaut de certains utilisateurs ou de tous les utilisateurs, vous devez mettre à jour manuellement tous les profils contenant des valeurs par défaut. |
 | `LI` | L&#39;intérêt légitime | L’intérêt commercial légitime de collecter et de traiter ces données à des fins spécifiées l’emporte sur le préjudice potentiel qu’elles peuvent causer à l’individu. |
 | `CT` | Contrat | La collecte de données aux fins spécifiées est nécessaire pour respecter les obligations contractuelles avec l’individu. |
 | `CP` | Respect d’une obligation juridique | La collecte de données aux fins spécifiées est nécessaire pour respecter les obligations légales de l’entreprise. |

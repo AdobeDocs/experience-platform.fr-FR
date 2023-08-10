@@ -3,33 +3,33 @@ title: Conduire à la correspondance de comptes dans Real-Time CDP B2B
 type: Documentation
 description: Présentation et informations supplémentaires sur la fonctionnalité de correspondance de comptes dans la plateforme CDP B2B Experience Platform.
 exl-id: 2f853599-6bca-4ba6-bbba-131a49d8854e
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '616'
+source-wordcount: '615'
 ht-degree: 6%
 
 ---
 
 # Conduire à la correspondance de comptes dans Real-Time CDP B2B
 
-## Présentation {#overview}
+## Vue d’ensemble {#overview}
 
 Le marketing basé sur les comptes est une stratégie de plus en plus importante pour le marketing B2B. Le marketing basé sur les comptes offre les avantages clés suivants pour acquérir des clients à forte valeur ajoutée spécifiques :
 
 - Effacer le ROI
-- Alignement des ventes et du marketing
+- Alignement commercial et marketing
 - Une approche personnalisée
-- Moins de ressources perdues
+- Moins de ressources gaspillées
 - Un cycle de vente plus court
 
-Le marketing basé sur les comptes permet de lier des personnes connues et des visiteurs web anonymes à des comptes de ventes. Cela permet aux équipes marketing d’interagir avec les prospects potentiels des comptes cibles tôt dans le parcours client pour augmenter leurs chances de conversion. Un enregistrement de personne connue comprend généralement une partie ou l’ensemble des informations suivantes :
+Le marketing basé sur les comptes permet de lier des personnes connues et des visiteurs web anonymes à des comptes de ventes. Cela permet aux équipes marketing d’interagir avec les prospects potentiels des comptes cibles dès le début du parcours client afin d’augmenter leurs chances de conversion. Un enregistrement de personne connue comprend généralement une partie ou l’ensemble des informations suivantes :
 
 - Nom de la personne
 - Adresse e-mail
 - Numéro de contact
 - Nom de l’entreprise
 - Site Web de la société
-- Titre de la tâche
+- Fonction
 - Emplacement
 
 La correspondance des prospects et des comptes permet d’associer des profils de personnes connus à des profils de compte. Vous pouvez ensuite segmenter et cibler des données dans un contexte B2B tel que des comptes, des opportunités, etc. Les profils de personnes peuvent être classés dans les trois catégories suivantes :
@@ -58,7 +58,7 @@ La correspondance des prospects et des comptes permet d’associer des profils d
 
 ## Fonctionnement {#how-it-works}
 
-Les tâches exécutées quotidiennement utilisent des facteurs déterministes et probabilistes pour faire correspondre des profils de prospect connus sans aucune association de compte existante. Les profils de prospect connus auront l’un des attributs suivants disponibles :
+Les tâches exécutées quotidiennement utilisent des facteurs déterministes et probabilistes pour faire correspondre des profils de prospect connus sans aucune association de compte existante. L’un des attributs suivants est disponible pour les profils de prospect connus :
 
 - b2b.companyName
 - b2b.companyWebsite
@@ -88,7 +88,7 @@ Pour prévisualiser le jeu de données, sélectionnez **[!UICONTROL Prévisualis
 
 ![Nouveau jeu de données](/help/rtcdp/accounts/images/b2b-dataset-output.png)
 
-Le jeu de données inclut les informations de compte correspondantes ainsi que le score de correspondance du jeu de données sélectionné. Le **[!UICONTROL Source de la relation]** indique s’il provient du processus de correspondance de piste vers compte.
+Le jeu de données inclut les informations de compte correspondantes ainsi que le score de correspondance du jeu de données sélectionné. La variable **[!UICONTROL Source de la relation]** indique s’il provient du processus de correspondance de piste vers compte.
 
 ![Prévisualiser les scores de confiance et la sortie du jeu de données](/help/rtcdp/accounts/images/b2b-dataset-preview.png)
 

@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Prise en main de l’API Policy Service
 description: L’API Policy Service vous permet de créer et de gérer diverses ressources liées à la gouvernance des données d’Adobe Experience Platform. Ce document présente les concepts de base que vous devez connaître avant d’effectuer des appels à l’API Policy Service.
 exl-id: 5539976c-8433-45af-a147-2ab82ae308b2
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '443'
-ht-degree: 100%
+source-wordcount: '442'
+ht-degree: 95%
 
 ---
 
@@ -17,12 +17,12 @@ L’API [!DNL Policy Service] vous permet de créer et de gérer diverses ressou
 
 ## Conditions préalables
 
-L’utilisation du guide du développement nécessite une bonne compréhension des différents services [!DNL Experience Platform] impliqués dans l’utilisation des fonctionnalités de gouvernance des données. Avant de commencer à travailler avec les [!DNL Policy Service API], consultez la documentation relative aux services suivants :
+L’utilisation du guide de développement nécessite une compréhension pratique des différentes [!DNL Experience Platform] Services impliqués dans l’utilisation des fonctionnalités de gouvernance des données. Avant de commencer à travailler avec les [!DNL Policy Service API], consultez la documentation relative aux services suivants :
 
 * [Gouvernance des données](../home.md) : cadre selon lequel [!DNL Experience Platform] applique la conformité d’utilisation des données.
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md) : Cadre normalisé selon lequel [!DNL Experience Platform] organise les données de l’expérience client.
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
-* [Sandbox](../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
+* [Sandbox](../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
 ## Lecture d’exemples d’appels API
 

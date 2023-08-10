@@ -2,9 +2,9 @@
 description: Cette page fournit toutes les informations dont vous avez besoin pour soumettre une révision d’une destination productisée créée à l’aide de Destination SDK.
 title: Envoyer pour révision une destination productisée créée en Destination SDK
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1014'
+source-wordcount: '1013'
 ht-degree: 36%
 
 ---
@@ -35,7 +35,7 @@ Cette page répertorie toutes les informations dont vous avez besoin pour envoye
    * Joignez un fichier d’exemple généré par votre destination et exporté vers votre emplacement de stockage.
    * Envoyez une forme de BAT indiquant que vous avez correctement ingéré le fichier exporté à partir de l’emplacement de stockage dans votre système.
 * La preuve que vous avez envoyé une demande de publication de destination pour votre destination à l’aide de l’[API de publication de destination](../publishing-api/create-publishing-request.md).
-* Une requête de tirage de documentation, suivant les instructions décrites dans la section [processus de documentation en libre-service](../docs-framework/documentation-instructions.md).
+* Une documentation PR (requête de tirage), suivant les instructions décrites dans la section [processus de documentation en libre-service](../docs-framework/documentation-instructions.md).
 * Un fichier image qui s’affichera sous forme de logo sur votre carte de destination dans le catalogue des destinations dʼExperience Platform.
 
 Vous trouverez des informations détaillées sur chaque élément dans les sections ci-dessous :
@@ -44,8 +44,8 @@ Vous trouverez des informations détaillées sur chaque élément dans les secti
 
 Fournissez une description des cas d’utilisation que votre destination résout pour les clients Experience Platform. Vos descriptions peuvent être similaires aux cas d’utilisation des partenaires existants :
 
-* [Pinterest](/help/destinations/catalog/advertising/pinterest.md): Créez des audiences à partir des listes de clients, des personnes qui ont visité votre site ou des personnes qui ont déjà interagi avec votre contenu sur Pinterest.
-* [Yahoo Data X](/help/destinations/catalog/advertising/datax.md#use-cases): Les API DataX sont disponibles pour les annonceurs qui souhaitent cibler un groupe d’audience spécifique en dehors des adresses électroniques dans Verizon Media (VMG). Elles peuvent rapidement créer une nouvelle audience et pousser le groupe d’audience souhaité à l’aide de l’API en temps quasi réel de VMG.
+* [Pinterest](/help/destinations/catalog/advertising/pinterest.md): créez des audiences à partir des listes de clients, des personnes qui ont visité votre site ou des personnes qui ont déjà interagi avec votre contenu sur Pinterest.
+* [Yahoo Data X](/help/destinations/catalog/advertising/datax.md#use-cases): les API DataX sont disponibles pour les annonceurs qui souhaitent cibler un groupe d’audience spécifique en dehors des adresses électroniques dans Verizon Media (VMG) peuvent rapidement créer une nouvelle audience et pousser le groupe d’audience souhaité à l’aide de l’API en temps quasi réel de VMG.
 
 ## Raison de la mise à jour {#reason-for-update}
 

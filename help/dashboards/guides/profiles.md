@@ -4,9 +4,9 @@ title: Guide du tableau de bord Profils
 description: Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur les données Real-time Customer Profile de votre entreprise.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 29c93c178a1f6247b61c663e87dbb0e5b95d318e
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '3520'
+source-wordcount: '3519'
 ht-degree: 64%
 
 ---
@@ -373,7 +373,7 @@ Pour plus d’informations sur la variable [[!UICONTROL Audiences] [!UICONTROL  
 
 ### [!UICONTROL Chevauchements d’audience par politique de fusion] {#audience-overlap-by-merge-policy}
 
-Ce widget utilise un diagramme de Venn pour afficher le chevauchement de deux audiences sélectionnées. La stratégie de fusion est choisie dans la liste déroulante d’aperçu en haut de la page et les audiences à analyser sont sélectionnées dans deux menus déroulants du widget. Le nombre total de profils contenus dans la définition de segment pertinente peut être affiché en passant la souris sur un cercle ou l’intersection.
+Ce widget utilise un diagramme de Venn pour afficher le chevauchement de deux audiences sélectionnées. La stratégie de fusion est choisie dans la liste déroulante d’aperçu en haut de la page et les audiences à analyser sont sélectionnées dans deux menus déroulants du widget. Le nombre total de profils contenus dans la définition de segment appropriée peut être affiché en passant la souris sur un cercle ou l’intersection.
 
 Ce widget affiche le croisement visuel des définitions de segment et vous permet d’optimiser la politique de segmentation en étudiant les similitudes entre les définitions de segment.
 

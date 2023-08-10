@@ -4,10 +4,10 @@ title: Exploration, vérification et traitement des jeux de données de tableau 
 type: Documentation
 description: Découvrez comment utiliser Query Service pour explorer et traiter des jeux de données bruts alimentant les tableaux de bord de profil, d’audience et de destination dans Experience Platform.
 exl-id: 0087dcab-d5fe-4a24-85f6-587e9ae74fb8
-source-git-commit: 79966442f5333363216da17342092a71335a14f0
+source-git-commit: c431973100cc65d99d9466553fe6624ac2653d4b
 workflow-type: tm+mt
-source-wordcount: '964'
-ht-degree: 38%
+source-wordcount: '946'
+ht-degree: 37%
 
 ---
 
@@ -19,7 +19,7 @@ Adobe Experience Platform fournit des informations importantes sur les données 
 
 Adobe Experience Platform [!DNL Query Service] prend en charge les marketeurs pour obtenir des informations à partir de leurs données en permettant l’utilisation de SQL standard pour interroger les données du lac de données. [!DNL Query Service] offre une interface utilisateur et une API qui peuvent être utilisées pour joindre n’importe quel jeu de données dans le lac de données et capturer les résultats de la requête sous forme de nouveaux jeux de données à utiliser dans les rapports, l’apprentissage automatique ou pour ingestion dans Real-time Customer Profile.
 
-Pour en savoir plus sur [!DNL Query Service] et son rôle dans l&#39;Experience Platform, veuillez commencer par lire la [[!DNL Query Service] aperçu](../query-service/home.md).
+Pour en savoir plus sur [!DNL Query Service] et son rôle dans l&#39;Experience Platform, veuillez commencer par lire [[!DNL Query Service] aperçu](../query-service/home.md).
 
 ## Accès aux jeux de données disponibles
 
@@ -33,9 +33,9 @@ Vous pouvez utiliser [!DNL Query Service] pour interroger des jeux de données b
 >
 >Les jeux de données générés par le système sont masqués par défaut. Par défaut, la variable [!UICONTROL Parcourir] n’affiche que les jeux de données dans lesquels vous avez ingéré des données.
 
-Pour afficher les jeux de données générés par le système, sélectionnez l’icône de filtre (![Une icône de filtre.](./images/query/filter.png)) situé à gauche de la barre de recherche.
+Pour afficher les jeux de données générés par le système, sélectionnez l’icône de filtre (![Icône de filtre.](./images/query/filter.png)) situé à gauche de la barre de recherche.
 
-![L’onglet Parcourir des jeux de données avec l’icône de filtre en surbrillance.](./images/query/filter-datasets.png)
+![L’onglet Parcourir des jeux de données avec l’icône de filtre mise en surbrillance.](./images/query/filter-datasets.png)
 
 Une barre latérale s’affiche avec deux bascules, [!UICONTROL Inclus dans Profile] et [!UICONTROL Affichage des jeux de données système]. Sélectionnez le bouton bascule pour [!UICONTROL Affichage des jeux de données système] pour inclure des jeux de données générés par le système dans la liste des jeux de données pouvant être parcourus.
 
@@ -66,7 +66,7 @@ Ce jeu de données peut être exploré à l’aide de l’interface utilisateur 
 
 ### Jeu de données de métadonnées d’audience
 
-Un jeu de données de métadonnées d’audience est disponible dans le lac de données et contient des métadonnées pour chaque audience de votre entreprise.
+Un jeu de données de métadonnées d’audience est disponible dans le lac de données et contient des métadonnées pour chaque audience de votre organisation.
 
 La convention d’affectation des noms de ce jeu de données est **Segmentdefinition-Snapshot-Export** suivi d’une valeur alphanumérique. Par exemple : `Segmentdefinition-Snapshot-Export-acf28952-2b6c-47ed-8f7f-016ac3c6b4e7`
 
@@ -82,11 +82,7 @@ Pour comprendre le schéma complet du jeu de données de destination DIM, vous p
 
 ![Aperçu du jeu de données DIM_Destination.](images/query/destinations-metadata.png)
 
-## (Version bêta) Rapports sur les insights de la plateforme de données clients (CDP)
-
->[!IMPORTANT]
->
->La fonctionnalité Modèles de données de statistiques CDP est en version bêta. Les fonctionnalités et la documentation peuvent faire l’objet de changements.
+## Rapports d’informations sur la plateforme de données client (CDP)
 
 La fonction Modèles de données de statistiques CDP expose le code SQL qui alimente les informations pour divers widgets de profil, de destination et de segmentation. Vous pouvez personnaliser ces modèles de requête SQl afin de créer des rapports CDP pour vos cas d’utilisation de marketing et d’ICP.
 
@@ -123,7 +119,7 @@ Select
 
 ### Nombre de profils par audience
 
-Cet aperçu de l’audience fournit le nombre total de profils fusionnés au sein de chaque audience dans le jeu de données. Ce nombre est le résultat de l’application de la stratégie de fusion d’audiences à vos données de profil afin de fusionner les fragments de profil pour former un seul profil pour chaque individu de l’audience.
+Cet aperçu de l’audience fournit le nombre total de profils fusionnés dans chaque audience du jeu de données. Ce nombre est le résultat de l’application de la stratégie de fusion d’audiences à vos données de profil afin de fusionner les fragments de profil pour former un seul profil pour chaque individu de l’audience.
 
 ```sql
 Select          

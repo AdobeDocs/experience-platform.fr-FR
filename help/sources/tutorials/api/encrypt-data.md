@@ -4,10 +4,10 @@ description: Découvrez comment ingérer des fichiers chiffrés par le biais de 
 hide: true
 hidefromtoc: true
 exl-id: 83a7a154-4f55-4bf0-bfef-594d5d50f460
-source-git-commit: d05202fc1e64bbb06c886aedbe59e07c45f80686
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1343'
-ht-degree: 76%
+source-wordcount: '1342'
+ht-degree: 75%
 
 ---
 
@@ -335,4 +335,4 @@ Une réponse réussie renvoie l’identifiant (`id`) du nouveau flux de données
 
 ## Étapes suivantes
 
-En suivant ce tutoriel, vous avez créé une paire de clés de chiffrement pour vos données d’espace de stockage dans le cloud et un flux de données pour ingérer vos données chiffrées à l’aide de [!DNL Flow Service API]. Pour connaître les mises à jour de statut sur l’exhaustivité, les erreurs et les mesures de votre flux de données, consultez le guide sur la [surveillance de votre flux de données à l’aide de l’API  [!DNL Flow Service] ](./monitor.md).
+En suivant ce tutoriel, vous avez créé une paire de clés de chiffrement pour vos données d’espace de stockage dans le cloud et un flux de données pour ingérer vos données chiffrées à l’aide de [!DNL Flow Service API]. Pour connaître les mises à jour d’état relatives à l’exhaustivité, aux erreurs et aux mesures de votre flux de données, consultez le guide sur [surveillance de votre flux de données à l’aide de la fonction [!DNL Flow Service] API](./monitor.md).

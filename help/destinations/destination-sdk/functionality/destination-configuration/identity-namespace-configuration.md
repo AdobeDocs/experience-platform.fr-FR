@@ -1,10 +1,10 @@
 ---
 description: Découvrez comment configurer les identités cibles prises en charge pour les destinations créées avec Destination SDK.
 title: Configuration de l’espace de noms d’identité
-source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '842'
-ht-degree: 100%
+source-wordcount: '841'
+ht-degree: 95%
 
 ---
 
@@ -25,7 +25,7 @@ Pendant la configuration des espaces de noms d’identité pour la destination, 
 * Autoriser les utilisateurs à mapper les [espaces de noms d’identité standard](../../../../identity-service/namespaces.md#standard) à vos propres espaces de noms d’identité.
 * Autoriser les utilisateurs à mapper les [espaces de noms d’identité personnalisés](../../../../identity-service/namespaces.md#manage-namespaces) à vos propres espaces de noms d’identité.
 
-Pour comprendre la place de ce composant dans une intégration créée avec Destination SDK, consultez le diagramme de la documentation [Options de configuration](../configuration-options.md) ou consultez le guide sur l’[utilisation de Destination SDK pour configurer une destination basée sur des fichiers](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration).
+Pour comprendre où ce composant entre dans une intégration créée avec Destination SDK, reportez-vous au diagramme de la section [options de configuration](../configuration-options.md) ou consulter le guide sur la manière d’effectuer [utiliser la Destination SDK pour configurer une destination basée sur des fichiers ;](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration).
 
 Vous pouvez configurer vos espaces de noms d’identité pris en charge via le point d’entrée `/authoring/destinations`. Pour obtenir des exemples d’appels API détaillés dans lesquels vous pouvez configurer les composants affichés sur cette page, consultez les pages de référence de l’API suivantes.
 

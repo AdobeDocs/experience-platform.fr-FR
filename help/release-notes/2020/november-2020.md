@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: November 10, 2020
 author: crhoades, ens25212
 exl-id: 29179b56-e49a-44e8-8c64-a7c383c2eaaf
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '2182'
+source-wordcount: '2181'
 ht-degree: 28%
 
 ---
@@ -62,11 +62,11 @@ Pour plus d’informations, consultez la [présentation du contrôle d’accès]
 | Bibliothèque d’offres centralisée | Interface dans laquelle vous créez et gérez les différents éléments qui composent vos offres, et définissez leurs règles et contraintes. |
 | Moteur de décision d’offre | Le moteur de décision d’offre tire parti de [!DNL Platform] data et [!DNL Real-Time Customer Profiles], ainsi que la bibliothèque des offres, afin de sélectionner l’heure, les clients et les canaux auxquels les offres seront diffusées. |
 
-Pour plus d’informations, reportez-vous à la section [[!DNL Offer Decisioning]](https://experienceleague.adobe.com/docs/offer-decisioning/using/offer-decisioning-home.html?lang=fr) documentation.
+Pour plus d’informations, voir la section [[!DNL Offer Decisioning]](https://experienceleague.adobe.com/docs/offer-decisioning/using/offer-decisioning-home.html?lang=fr) la documentation.
 
 ## [!DNL Sandboxes] {#sandboxes}
 
-[!DNL Experience Platform] est conçu pour enrichir les applications d’expérience numérique à l’échelle mondiale. Les entreprises exécutent souvent plusieurs applications d’expérience numérique en parallèle et doivent prendre en charge le développement, les tests et le déploiement de ces applications tout en assurant la conformité opérationnelle. Pour répondre à ce besoin, [!DNL Experience Platform] fournit des environnements de test qui divisent une seule [!DNL Platform] dans des environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
+[!DNL Experience Platform] est conçu pour enrichir les applications d’expérience digitale à l’échelle mondiale. Les entreprises exécutent souvent plusieurs applications d’expérience digitale en parallèle et doivent prendre en charge le développement, les tests et le déploiement de ces applications tout en assurant la conformité opérationnelle. Pour répondre à ce besoin, [!DNL Experience Platform] fournit des environnements de test qui divisent une seule [!DNL Platform] dans des environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
 
 **Fonctionnalités clés**
 
@@ -94,7 +94,7 @@ Pour plus d’informations, reportez-vous à la [[!DNL Data Prep] présentation]
 
 ## Espace de travail de science des données {#dsw}
 
-L’espace de travail de science des données utilise le machine learning et l’intelligence artificielle pour exploiter les informations contenues dans vos données. Intégré à Adobe Experience Platform, Data Science Workspace vous aide à obtenir des prévisions en utilisant votre contenu et des ressources de données de l’ensemble des solutions Adobe. Data Science Workspace accomplit cela notamment par l’utilisation de [!DNL JupyterLab]. [!DNL JupyterLab] est une interface utilisateur web pour [[!DNL Project Jupyter]](https://jupyter.org/) et est étroitement intégré à Adobe Experience Platform. Il fournit un environnement de développement interactif avec lequel les spécialistes des données peuvent travailler. [!DNL Jupyter] notebooks, code et données.
+L’espace de travail de science des données utilise le machine learning et l’intelligence artificielle pour exploiter les informations contenues dans vos données. Intégré à Adobe Experience Platform, l’espace de travail de sciences des données vous aide à obtenir des prévisions en utilisant votre contenu et des ressources de données de l’ensemble des solutions Adobe. L’espace de travail de sciences des données accomplit cela notamment par l’utilisation de [!DNL JupyterLab]. [!DNL JupyterLab] est une interface utilisateur web pour [[!DNL Project Jupyter]](https://jupyter.org/) et est étroitement intégré à Adobe Experience Platform. Il fournit un environnement de développement interactif avec lequel les spécialistes des données peuvent travailler. [!DNL Jupyter] notebooks, code et données.
 
 **Fonctionnalités clés**
 
@@ -163,7 +163,7 @@ Pour plus d’informations, veuillez lire la [Présentation d’Attribution AI](
 
 ### IA dédiée aux clients
 
-En tant que composant des services intelligents, Customer AI permet aux professionnel du marketing de générer des prédictions client au niveau individuel avec des explications. À l’aide de facteurs d’influence, Customer AI peut vous indiquer ce qu’un client est susceptible de faire et pourquoi. De plus, les professionnels du marketing peuvent tirer parti des prédictions et des informations de Customer AI pour personnaliser les expériences client en diffusant les offres et les messages les plus appropriés.
+En tant que composant des services intelligents, Customer AI permet aux spécialistes marketing de générer des prédictions client au niveau individuel avec des explications. À l’aide de facteurs d’influence, Customer AI peut vous indiquer ce qu’un client est susceptible de faire et pourquoi. De plus, les spécialistes marketing peuvent tirer parti des prédictions et des informations de Customer AI pour personnaliser les expériences client en diffusant les offres et les messages les plus appropriés.
 
 **Fonctionnalités clés**
 
@@ -196,7 +196,7 @@ Pour plus d’informations sur Real-time Customer Profile, notamment des tutorie
 
 Adobe Experience Platform peut ingérer des données à partir de sources externes tout en vous permettant de structurer, d’étiqueter et d’améliorer ces données à l’aide de [!DNL Platform] services. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les logiciels tiers et le système de gestion de la relation client.
 
-[!DNL Experience Platform] fournit une API RESTful et une interface utilisateur interactive qui vous permet de configurer facilement des connexions source à différents fournisseurs de données. Ces connexions source vous permettent de vous authentifier et de vous connecter à des services de gestion de la relation client et à des systèmes de stockage externes, de définir des heures d’ingestion et de gérer le débit d’ingestion des données.
+[!DNL Experience Platform] fournit une API RESTful et une interface utilisateur interactive qui vous permet de configurer facilement des connexions source à différents fournisseurs de données. Ces connexions source vous permettent de vous authentifier et de vous connecter à des services de gestion de la relation client et à des systèmes de stockage externes, de définir des heures d’ingestion et de gérer le débit d’ingestion des données.
 
 **Nouvelles sources**
 
@@ -208,12 +208,12 @@ Adobe Experience Platform peut ingérer des données à partir de sources extern
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
-| Mise à jour des informations de connexion | Vous pouvez désormais mettre à jour les noms, descriptions et informations d’identification des connexions par lots existantes à l’aide de la variable [!DNL Flow Service] API et interface utilisateur. Pour plus d’informations, consultez le tutoriel sur [mise à jour des connexions à l’aide de l’API Flow Service](../../sources/tutorials/api/update.md) et [modification des détails d’un compte à l’aide de l’interface utilisateur](../../sources/tutorials/ui/monitor.md). |
-| Suppression des connexions | Les connexions par lots contenant des erreurs ou devenues inutiles peuvent désormais être supprimées à l’aide de la variable [!DNL Flow Service] API et interface utilisateur. Pour plus d’informations, consultez le tutoriel sur [suppression des connexions à l’aide de l’API Flow Service](../../sources/tutorials/api/delete.md) et [suppression de comptes à l’aide de l’interface utilisateur](../../sources/tutorials/ui/delete-accounts.md). |
+| Mise à jour des informations de connexion | Vous pouvez désormais mettre à jour les noms, descriptions et informations d’identification des connexions par lots existantes à l’aide de la variable [!DNL Flow Service] API et l’interface utilisateur. Pour plus d’informations, consultez le tutoriel sur [mise à jour des connexions à l’aide de l’API Flow Service](../../sources/tutorials/api/update.md) et [modification des détails du compte à l’aide de l’interface utilisateur](../../sources/tutorials/ui/monitor.md). |
+| Suppression des connexions | Les connexions par lots contenant des erreurs ou devenues inutiles peuvent désormais être supprimées à l’aide de la variable [!DNL Flow Service] API et l’interface utilisateur. Pour plus d’informations, consultez le tutoriel sur [suppression des connexions à l’aide de l’API Flow Service](../../sources/tutorials/api/delete.md) et [suppression de comptes dans l’interface utilisateur](../../sources/tutorials/ui/delete-accounts.md). |
 | Mappage hiérarchique | Vous pouvez prévisualiser un fichier source hiérarchique, tel que JSON ou Parquet, pendant le processus d’ingestion des données. Voir le tutoriel sur [configuration d’un flux de données pour les connecteurs de stockage dans le cloud dans l’interface utilisateur](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) pour plus d’informations. |
-| Prise en charge des API pour le mappage dans les sources de diffusion en continu | Vous pouvez désormais utiliser des API pour exécuter des fonctions de mappage avec des sources en continu. |
+| Prise en charge des API pour le mappage dans les sources en continu | Vous pouvez désormais utiliser des API pour exécuter des fonctions de mappage avec des sources en continu. |
 | Prise en charge des API pour les délimiteurs personnalisés pour les sources de stockage dans le cloud | Vous pouvez désormais collecter des fichiers non délimités par un fichier CSV à l’aide de sources de stockage dans le cloud. Vous pouvez utiliser n’importe quel délimiteur de colonne, tel qu’une tabulation, une virgule, une barre verticale, un point-virgule ou un hachage, pour collecter des fichiers plats dans n’importe quel format. |
 | Prise en charge des environnements de test pour le connecteur Adobe Audience Manager | Le connecteur d’Audience Manager est désormais compatible avec les environnements de test. Les utilisateurs peuvent activer le connecteur pour acheminer les jeux de données d’Audience Manager vers l’environnement de test de leur choix (y compris les environnements de test hors production). La configuration est limitée à un environnement de test par organisation. |
 | Améliorations de l’expérience utilisateur | L’ingestion basée sur des fichiers est désormais accessible par le biais du catalogue de sources. |
 
-Pour en savoir plus sur les sources, consultez la [présentation des sources](../../sources/home.md).
+Pour en savoir plus sur les sources, consultez la [vue d’ensemble des sources](../../sources/home.md).

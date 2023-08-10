@@ -2,10 +2,10 @@
 title: Présentation de l’extension Adobe Privacy
 description: Découvrez lʼextension de balise Adobe Privacy dans Adobe Experience Platform.
 exl-id: 8401861e-93ad-48eb-8796-b26ed8963c32
-source-git-commit: bfbad3c11df64526627e4ce2d766b527df678bca
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '901'
-ht-degree: 92%
+source-wordcount: '900'
+ht-degree: 89%
 
 ---
 
@@ -21,7 +21,7 @@ Ce guide explique comment installer et configurer l’extension Adobe Privacy da
 
 >[!NOTE]
 >
->Si vous préférez installer ces fonctionnalités sans utiliser de balises, reportez-vous à la section [Présentation de la bibliothèque JavaScript de confidentialité](../../../../privacy-service/js-library.md) pour savoir comment mettre en œuvre l’utilisation du code brut.
+>Si vous préférez installer ces fonctionnalités sans utiliser de balises, reportez-vous à la section [Présentation de la bibliothèque JavaScript de confidentialité](../../../../privacy-service/js-library.md) pour savoir comment mettre en oeuvre l’utilisation du code brut.
 
 ## Installation et configuration de l’extension 
 

@@ -1,11 +1,11 @@
 ---
 title: Création d’une connexion source Customer.io et d’un flux de données dans l’interface utilisateur
 description: Découvrez comment créer une connexion source Customer.io à l’aide de l’interface utilisateur de Adobe Experience Platform.
-badge: Version bêta
+badge: Version Beta
 exl-id: 7655a34c-808a-46e3-94e3-022a433755a4
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1233'
+source-wordcount: '1232'
 ht-degree: 20%
 
 ---
@@ -71,7 +71,7 @@ Accédez au [!UICONTROL Automatisation du marketing] pour afficher la catégorie
 
 ## Sélectionner les données {#select-data}
 
-Le **[!UICONTROL Sélectionner des données]** s’affiche, fournissant une interface vous permettant de sélectionner les données à importer dans Platform.
+La variable **[!UICONTROL Sélectionner des données]** s’affiche, fournissant une interface vous permettant de sélectionner les données à importer dans Platform.
 
 * La partie gauche de l’interface est un navigateur qui vous permet d’afficher les flux de données disponibles dans votre compte ;
 * La partie droite de l’interface vous permet de prévisualiser jusqu’à 100 lignes de données à partir d’un fichier JSON.
@@ -88,7 +88,7 @@ Lorsque vous avez terminé, sélectionnez **[!UICONTROL Suivant]**.
 
 ## Détails du flux de données {#dataflow-detail}
 
-Le **Détails du flux de données** s’affiche, vous fournissant des options permettant d’utiliser un jeu de données existant ou d’établir un nouveau jeu de données pour votre flux de données, ainsi qu’une opportunité de fournir un nom et une description pour votre flux de données. Au cours de cette étape, vous pouvez également configurer des paramètres pour l’ingestion de profils, les diagnostics d’erreur, l’ingestion partielle et les alertes.
+La variable **Détails du flux de données** s’affiche, vous fournissant des options permettant d’utiliser un jeu de données existant ou d’établir un nouveau jeu de données pour votre flux de données, ainsi qu’une opportunité de fournir un nom et une description pour votre flux de données. Au cours de cette étape, vous pouvez également configurer des paramètres pour l’ingestion de profils, les diagnostics d’erreur, l’ingestion partielle et les alertes.
 
 Lorsque vous avez terminé, sélectionnez **[!UICONTROL Suivant]**.
 
@@ -98,9 +98,9 @@ Lorsque vous avez terminé, sélectionnez **[!UICONTROL Suivant]**.
 
 L’interface de [!UICONTROL mappage] fournit un outil complet pour mapper les champs sources de votre schéma source aux champs XDM cibles correspondants dans le schéma cible.
 
-Platform fournit des recommandations intelligentes pour les champs mappés automatiquement en fonction du schéma ou du jeu de données cible que vous avez sélectionné. Vous pouvez ajuster manuellement les règles de mappage en fonction de vos cas d’utilisation. Selon vos besoins, vous pouvez choisir de mapper directement des champs ou d’utiliser des fonctions de préparation de données pour transformer les données sources afin d’obtenir des valeurs informatisées ou calculées. Pour obtenir des instructions complètes sur l’utilisation de l’interface du mappeur et des champs calculés, reportez-vous à la section [Guide de l’interface utilisateur de la préparation de données](../../../../../data-prep/ui/mapping.md).
+Platform fournit des recommandations intelligentes pour les champs mappés automatiquement en fonction du schéma ou du jeu de données cible que vous avez sélectionné. Vous pouvez ajuster manuellement les règles de mappage en fonction de vos cas d’utilisation. Selon vos besoins, vous pouvez choisir de mapper directement des champs ou d’utiliser des fonctions de préparation de données pour transformer les données sources afin d’obtenir des valeurs informatisées ou calculées. Pour obtenir des instructions complètes sur l’utilisation de l’interface du mappeur et des champs calculés, voir la section [Guide de l’interface utilisateur de la préparation de données](../../../../../data-prep/ui/mapping.md).
 
-Tous les mappages répertoriés ci-dessous sont obligatoires et doivent être configurés avant de passer à la [!UICONTROL Réviser] scène.
+Tous les mappages répertoriés ci-dessous sont obligatoires et doivent être configurés avant de passer à la variable [!UICONTROL Réviser] scène.
 
 | Champ cible | Description |
 | --- | --- |
@@ -108,9 +108,9 @@ Tous les mappages répertoriés ci-dessous sont obligatoires et doivent être co
 | `id` | Identifiant de l’objet. |
 | `email` | Adresse électronique associée à l’objet. |
 | `event_id` | Identifiant unique de l’événement. |
-| `cio_id` | Le [!DNL Customer.io] identifiant de l’événement. |
-| `metric` | Le type d&#39;événement. Pour plus d’informations, reportez-vous à la section [!DNL Customer.io] [events](https://customer.io/docs/webhooks/#events) documentation pour les types pris en charge. |
-| `timestamp` | Horodatage au moment où l’événement s’est produit. |
+| `cio_id` | La variable [!DNL Customer.io] identifiant de l’événement. |
+| `metric` | Le type d&#39;événement. Pour plus d’informations, voir la section [!DNL Customer.io] [events](https://customer.io/docs/webhooks/#events) documentation pour les types pris en charge. |
+| `timestamp` | Horodatage de l’événement. |
 
 >[!IMPORTANT]
 >
@@ -131,7 +131,7 @@ Une fois que vous avez vérifié votre flux de données, sélectionnez **[!UICON
 
 ![L’étape de révision du processus des sources.](../../../../images/tutorials/create/marketing-automation/customerio-webhook/review.png)
 
-## Obtention de l’URL de votre point de terminaison de diffusion en continu {#get-streaming-endpoint}
+## Obtention de l’URL de votre point de terminaison de diffusion {#get-streaming-endpoint}
 
 Une fois votre flux de données de diffusion en continu créé, vous pouvez désormais récupérer l’URL de votre point de terminaison de diffusion en continu. Ce point de terminaison sera utilisé pour s’abonner à votre webhook, ce qui permet à votre source de diffusion en continu de communiquer avec l’Experience Platform.
 
@@ -146,7 +146,7 @@ Pour récupérer votre **[!UICONTROL Identifiant de flux de données]** et **[!U
 
 Une fois que vous avez récupéré votre point de terminaison de diffusion en continu et votre identifiant de flux de données, créez une URL basée sur le modèle suivant : ```{STREAMING_ENDPOINT}?x-adobe-flow-id={DATAFLOW_ID}```. Par exemple, une URL webhook construite peut se présenter comme suit : ``https://dcs.adobedc.net/collection/febc116d22ba0ea2868e9c93b199375302afb8a589617700991bb8f3f0341ad7?x-adobe-flow-id=439b3fc4-3042-4a3a-b5e0-a494898d3fb0``
 
-## Configuration du webhook de création de rapports dans [!DNL Customer.io] {#set-up-webhook}
+## Configuration du webhook de reporting dans [!DNL Customer.io] {#set-up-webhook}
 
 Une fois votre URL webhook créée, vous pouvez désormais configurer votre webhook de création de rapports à l’aide de la variable [!DNL Customer.io] de l’interface utilisateur. Pour obtenir des instructions sur la configuration des webhooks de reporting, veuillez lire le [[!DNL Customer.io] guide](https://customer.io/docs/webhooks/#setup) lors de la configuration des webhooks.
 
@@ -168,7 +168,7 @@ Les sections ci-dessous contiennent des ressources supplémentaires auxquelles v
 
 ### Mécanismes de sécurisation {#guardrails}
 
-Pour plus d’informations sur les barrières de sécurité, reportez-vous à la section [[!DNL Customer.io] page délais et échecs](https://customer.io/docs/webhooks/#timeouts-and-failures).
+Pour plus d’informations sur les barrières de sécurité, reportez-vous au [[!DNL Customer.io] page délais et échecs](https://customer.io/docs/webhooks/#timeouts-and-failures).
 
 ### Validation {#validation}
 

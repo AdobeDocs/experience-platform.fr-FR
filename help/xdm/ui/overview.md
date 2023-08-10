@@ -4,16 +4,16 @@ solution: Experience Platform
 title: Présentation de l’interface utilisateur des schémas
 description: Cet aperçu couvre les principales fonctionnalités de l’espace de travail des schémas dans Experience Platform.
 exl-id: b6e089ce-cf9e-4150-92ab-368382a75049
-source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '296'
+source-wordcount: '295'
 ht-degree: 9%
 
 ---
 
 # [!UICONTROL Schémas] Présentation de l’interface utilisateur
 
-Le [!UICONTROL Schémas] Workspace de l’interface utilisateur de Adobe Experience Platform vous permet de gérer des ressources de modèle de données d’expérience (XDM), y compris les schémas, les classes, les groupes de champs de schéma et les types de données. Vous pouvez afficher et explorer les ressources de base fournies par Adobe, ainsi que créer des ressources et des schémas personnalisés pour votre organisation.
+La variable [!UICONTROL Schémas] Workspace de l’interface utilisateur de Adobe Experience Platform vous permet de gérer des ressources de modèle de données d’expérience (XDM), y compris les schémas, les classes, les groupes de champs de schéma et les types de données. Vous pouvez afficher et explorer les ressources de base fournies par Adobe, ainsi que créer des ressources et des schémas personnalisés pour votre organisation.
 
 Pour accéder à l’espace de travail dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Schémas]** dans le rail de gauche.
 
@@ -27,7 +27,7 @@ Il est également recommandé de suivre le [tutoriel sur la création de schéma
 
 ## Création et gestion des ressources XDM
 
-Le [!UICONTROL Schémas] workspace fournit des outils puissants pour la création et la personnalisation des ressources XDM de votre entreprise. Reportez-vous à la documentation suivante pour savoir comment créer et modifier chaque type de ressource dans l’interface utilisateur :
+La variable [!UICONTROL Schémas] workspace fournit des outils puissants pour la création et la personnalisation des ressources XDM de votre entreprise. Reportez-vous à la documentation suivante pour savoir comment créer et modifier chaque type de ressource dans l’interface utilisateur :
 
 * [Schémas](./resources/schemas.md)
 * [Classes](./resources/classes.md)
@@ -36,7 +36,7 @@ Le [!UICONTROL Schémas] workspace fournit des outils puissants pour la créatio
 
 ## Définition des champs XDM
 
-Les classes, les groupes de champs et les types de données contribuent tous aux champs d’un schéma. Vous pouvez choisir parmi une liste de types de champ standard lors de l&#39;ajout de champs à ces ressources et définir des champs spécialisés pour certains cas d&#39;utilisation. Reportez-vous au guide sur la [définition des champs XDM dans l’interface utilisateur](./fields/overview.md) pour plus d’informations.
+Les classes, les groupes de champs et les types de données contribuent tous à un schéma. Vous pouvez choisir parmi une liste de types de champ standard lors de l&#39;ajout de champs à ces ressources et définir des champs spécialisés pour certains cas d&#39;utilisation. Reportez-vous au guide sur [définition des champs XDM dans l’interface utilisateur](./fields/overview.md) pour plus d’informations.
 
 ## Étapes suivantes
 

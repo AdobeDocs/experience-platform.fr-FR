@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: January 27, 2021
 author: ens60013
 exl-id: 6fb92e35-922c-47ba-8cf4-44edd92acfa1
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '717'
-ht-degree: 96%
+source-wordcount: '716'
+ht-degree: 93%
 
 ---
 
@@ -49,7 +49,7 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
-| Correspondance d’ID avancée | Améliorations des fonctionnalités relatives aux taux de correspondance d’audience dans [!DNL Facebook Custom Audiences] et [!DNL Google Customer Match], grâce à l’ajout de la prise en charge de la correspondance d’identités supplémentaires, comme les ID externes, les numéros de téléphone et les ID d’équipement mobile. Pour plus d’informations, consultez la documentation suivante : <ul><li>[Destination Facebook](../../destinations/catalog/social/facebook.md)</li><li>[Destination Google Customer Match](../../destinations/catalog/advertising/google-customer-match.md)</li><li>[Activation des données d’audience vers des destinations d’exportation de segments de diffusion](../../destinations/ui/activate-segment-streaming-destinations.md)</li></ul> |
+| Correspondance d’ID avancée | Améliorations des fonctionnalités relatives aux taux de correspondance d’audience dans [!DNL Facebook Custom Audiences] et [!DNL Google Customer Match], grâce à l’ajout de la prise en charge de la correspondance d’identités supplémentaires, comme les ID externes, les numéros de téléphone et les ID d’appareil mobile. Pour plus d’informations, consultez la documentation suivante : <ul><li>[Destination Facebook](../../destinations/catalog/social/facebook.md)</li><li>[Destination Google Customer Match](../../destinations/catalog/advertising/google-customer-match.md)</li><li>[Activation des données d’audience vers des destinations d’exportation de segments de diffusion](../../destinations/ui/activate-segment-streaming-destinations.md)</li></ul> |
 
 Pour en savoir plus, consultez la [présentation des destinations](../../destinations/home.md).
 
@@ -80,6 +80,6 @@ Experience Platform fournit une API RESTful et une interface utilisateur intera
 | Améliorations du connecteur source [!DNL Google BigQuery] | Vous pouvez désormais ingérer des fichiers de plus de 10 Go lors d’une seule exécution de flux à l’aide du connecteur source [!DNL BigQuery]. Pour plus d’informations, consultez la présentation du connecteur source [[!DNL BigQuery] ](../../sources/connectors/databases/bigquery.md). |
 | Prise en charge de types de données complexes pour le stockage sur le cloud | Vous pouvez désormais ingérer des types de données complexes, tels que des tableaux dans des fichiers JSON, lors de l’utilisation d’un connecteur source d’espace de stockage. Pour plus d’informations, consultez les tutoriels sur la création d’un flux de données d’espace de stockage [dans l’interface utilisateur](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) ou [à l’aide de  [!DNL Flow Service] l’API ](../../sources/tutorials/api/collect/cloud-storage.md). |
 | Prise en charge de l’authentification basée sur la clé de service principale pour la source [!DNL Microsoft Dynamics] | Vous pouvez désormais vous authentifier auprès de votre compte [!DNL Dynamics] à l’aide d’une clé de service principale. Cela représente une alternative à l’authentification par mot de passe. Pour plus d’informations, consultez la présentation du connecteur source [[!DNL Dynamics] ](../../sources/connectors/crm/ms-dynamics.md). |
-| Prise en charge de l’interface utilisateur pour les séparateurs personnalisés dans les sources d’espace de stockage | Vous pouvez désormais définir un délimiteur de colonne personnalisé, tel qu’une virgule (`,`), une tabulation (`\t`) ou une barre verticale (`|`) pour collecter les fichiers délimités dans l’interface utilisateur. Pour plus d’informations, consultez le tutoriel sur la [création d’un flux de données avec un connecteur source d’espace de stockage](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md). |
+| Prise en charge de l’interface utilisateur pour les séparateurs personnalisés dans les sources d’espace de stockage | Vous pouvez désormais définir un délimiteur de colonne personnalisé, tel qu’une virgule (`,`), onglet (`\t`) ou une barre verticale (`|`), pour collecter des fichiers délimités dans l’interface utilisateur. Pour plus d’informations, consultez le tutoriel sur la [création d’un flux de données avec un connecteur source d’espace de stockage](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md). |
 
 Pour en savoir plus sur les sources, consultez la [présentation des sources](../../sources/home.md).

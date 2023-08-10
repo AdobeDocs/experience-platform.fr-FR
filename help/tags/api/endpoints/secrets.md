@@ -2,10 +2,10 @@
 title: Point d’entrée des secrets
 description: Découvrez comment effectuer des appels vers le point d’entrée /secrets dans l’API Reactor.
 exl-id: 76875a28-5d13-402d-8543-24db7e2bee8e
-source-git-commit: 24e79c14268b9eab0e8286eb8cd1352c1dfcd1b6
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1247'
-ht-degree: 92%
+source-wordcount: '1246'
+ht-degree: 89%
 
 ---
 
@@ -302,7 +302,7 @@ Vous pouvez créer un secret en effectuant une requête POST.
 
 >[!NOTE]
 >
->Lorsque vous créez un secret, l’API renvoie une réponse immédiate contenant des informations pour cette ressource. Dans le même temps, une tâche d’échange de secrets est déclenchée pour vérifier que l’échange d’informations d’identification est fonctionnel. Cette tâche est traitée de manière asynchrone et met à jour l’attribut status du secret vers `succeeded` ou `failed`, selon le résultat.
+>Lorsque vous créez un secret, l’API renvoie une réponse immédiate contenant des informations pour cette ressource. Dans le même temps, une tâche d’échange de secrets est déclenchée pour vérifier que l’échange d’informations d’identification est fonctionnel. Cette tâche est traitée de manière asynchrone et met à jour l’attribut status du secret vers `succeeded` ou `failed` selon le résultat.
 
 **Format d’API**
 
@@ -658,11 +658,11 @@ PATCH /secrets/{SECRET_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{SECRET_ID}` | Le `id` du secret que vous souhaitez réautoriser. |
+| `{SECRET_ID}` | La variable `id` du secret que vous souhaitez réautoriser. |
 
 **Requête**
 
-Le `data` dans le payload de la requête doit contenir un `meta.action` définie sur `reauthorize`.
+La variable `data` dans le payload de la requête doit contenir un `meta.action` définie sur `reauthorize`.
 
 ```shell
 curl -X PATCH \

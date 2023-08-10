@@ -2,9 +2,9 @@
 title: Présentation d’Identity Namespace
 description: Les espaces de noms d’identité sont des composants du Service d’identités qui servent d’indicateurs du contexte auquel une identité se rapporte. Par exemple, ils distinguent une valeur de "name@email.com" comme adresse électronique ou "443522" comme identifiant CRM numérique.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: c456d02e746c160c1d133d0b4358415edffaa6f8
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1766'
+source-wordcount: '1765'
 ht-degree: 30%
 
 ---
@@ -17,9 +17,9 @@ Les espaces de noms d’identité sont des composants d’[[!DNL Identity Servic
 
 L’utilisation des espaces de noms d’identité nécessite une compréhension des différents services d’Adobe Experience Platform impliqués. Avant de commencer à travailler avec les espaces de noms d’identité, veuillez consulter la documentation relative aux services suivants :
 
-- [[!DNL Real-Time Customer Profile]](../profile/home.md): Fournit un profil client unifié en temps réel basé sur des données agrégées provenant de plusieurs sources.
+- [[!DNL Real-Time Customer Profile]](../profile/home.md): fournit un profil client en temps réel unifié basé sur des données agrégées provenant de plusieurs sources.
 - [[!DNL Identity Service]](./home.md) : profitez d’une meilleure compréhension de vos clients et de leurs comportements en rapprochant des identités entre appareils et systèmes.
-- [[!DNL Privacy Service]](../privacy-service/home.md): Les espaces de noms d’identité sont utilisés dans les demandes de conformité pour les réglementations de confidentialité juridiques telles que le Règlement général sur la protection des données (RGPD). Chaque demande d’accès à des informations personnelles est relative à un espace de noms afin d’identifier les données des consommateurs qui doivent être affectées.
+- [[!DNL Privacy Service]](../privacy-service/home.md): les espaces de noms d’identité sont utilisés dans les demandes de conformité pour les réglementations de confidentialité juridiques telles que le Règlement général sur la protection des données (RGPD). Chaque demande d’accès à des informations personnelles est relative à un espace de noms afin d’identifier les données des consommateurs qui doivent être affectées.
 
 ## Compréhension des espaces de noms d’identité
 
@@ -65,14 +65,14 @@ Les espaces de noms standard suivants sont fournis pour être utilisés par tout
 | Adobe Analytics (identifiant hérité) | Espace de noms représentant Adobe Analytics. Consultez le document suivant sur [Espaces de noms Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/gdpr-namespaces.html?lang=en#namespaces) pour plus d’informations. |
 | IDFA Apple (ID pour les annonceurs) | Un espace de noms représentant l’ID Apple pour les annonceurs. Pour plus d’informations, consultez le document sur les [annonces basées sur les intérêts](https://support.apple.com/fr-fr/HT202074). |
 | Service de notification push Apple | Espace de noms représentant les identités collectées à l’aide du service de notification push Apple. Consultez le document suivant sur [Service de notification push Apple](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html#//apple_ref/doc/uid/TP40008194-CH8-SW1) pour plus d’informations. |
-| CORE | Espace de noms représentant Adobe Audience Manager. Cet espace de noms peut également être référencé par son nom hérité : &quot;Adobe AudienceManager&quot;. Consultez le document suivant sur [ID d’Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/data-privacy-reference/data-privacy-ids.html?lang=en#aam-ids) pour plus d’informations. |
+| CORE | Espace de noms représentant Adobe Audience Manager. Cet espace de noms peut également être mentionné par son nom hérité : &quot;Adobe AudienceManager&quot;. Consultez le document suivant sur [ID d’Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/data-privacy-reference/data-privacy-ids.html?lang=en#aam-ids) pour plus d’informations. |
 | ECID | Espace de noms qui représente l’ECID. Cet espace de noms peut également être référencé par les alias suivants : « ID Adobe Marketing Cloud », « ID Adobe Experience Cloud », « ID Adobe Experience Platform ». Consultez le document suivant sur [ECID](./ecid.md) pour plus d’informations. |
 | E-mail | Espace de noms représentant une adresse électronique. Ce type d’espace de noms est souvent associé à une seule personne et peut donc être utilisé pour identifier cette personne sur différents canaux. |
 | E-mails (SHA256, en minuscules) | Un espace de noms pour adresse électronique préhachée. Les valeurs fournies dans cet espace de noms sont converties en minuscules avant le hachage en SHA-256. Les espaces de début et de fin doivent être supprimés avant qu’une adresse e-mail ne soit normalisée. Ce paramètre ne peut pas être modifié rétroactivement. Consultez le document suivant sur [Prise en charge du hachage SHA-256](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html?lang=fr#hashing-support) pour plus d’informations. |
-| Firebase Cloud Messaging | Espace de noms représentant les identités collectées à l’aide de Google Firebase Cloud Messaging pour notifications push. Consultez le document suivant sur [Google Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging) pour plus d’informations. |
+| Firebase Cloud Messaging | Espace de noms représentant les identités collectées à l’aide de Google Firebase Cloud Messaging pour les notifications push. Consultez le document suivant sur [Google Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging) pour plus d’informations. |
 | Google Ad ID (GAID) | Un espace de noms représentant un ID Google Advertising. Pour plus d’informations, consultez le document suivant sur l’[ID Google Advertising](https://support.google.com/googleplay/android-developer/answer/6048248?hl=fr). |
 | Google Click ID | Espace de noms représentant un identifiant de clic Google. Consultez le document suivant sur [Suivi des clics dans Google Ads](https://developers.google.com/adwords/api/docs/guides/click-tracking) pour plus d’informations. |
-| Téléphone | Espace de noms qui représente un numéro de téléphone. Ce type d’espace de noms est souvent associé à une seule personne et peut donc être utilisé pour identifier cette personne sur différents canaux. |
+| Téléphone | Un espace de noms qui représente un numéro de téléphone. Ce type d’espace de noms est souvent associé à une seule personne et peut donc être utilisé pour identifier cette personne sur différents canaux. |
 | Téléphone (E.164) | Espace de noms qui représente les numéros de téléphone bruts qui doivent être hachés au format E.164. Le format E.164 comprend un signe plus (`+`), un numéro de téléphone international, un numéro de téléphone local et un numéro de téléphone. Par exemple : `(+)(country code)(area code)(phone number)`. |
 | Téléphone (SHA256) | Espace de noms qui représente les numéros de téléphone qui doivent être hachés à l’aide de SHA256. Vous devez supprimer les symboles, les lettres et les zéros de début. Vous devez également ajouter le code d’appel de pays comme préfixe. |
 | Téléphone (SHA256_E.164) | Un espace de noms représentant des numéros de téléphone bruts qui doivent être hachés au format SHA256 et E.164. |
@@ -110,7 +110,7 @@ Pour créer un espace de noms personnalisé à l’aide de l’interface utilisa
 
 ![select-create](./images/select-create.png)
 
-Le **[!UICONTROL Créer un espace de noms d’identité]** s’affiche. Fournir une variable **[!UICONTROL Nom d’affichage]** et **[!UICONTROL Symbole d’identité]** puis sélectionnez le type d’identité que vous souhaitez créer. Vous pouvez également ajouter une description facultative pour ajouter des informations supplémentaires sur l’espace de noms. Tous les types d’identité, à l’exception de **Identifiant de non-personne** suit le même comportement que le groupement. Si vous sélectionnez **Identifiant de non-personne** comme type d’identité lors de la création d’un espace de noms, l’assemblage ne se produit pas. Pour plus d’informations sur chaque type d’identité, reportez-vous au tableau de la section [types d’identité](#identity-types).
+La variable **[!UICONTROL Créer un espace de noms d’identité]** s’affiche. Fournir une variable **[!UICONTROL Nom d’affichage]** et **[!UICONTROL Symbole d’identité]** puis sélectionnez le type d’identité que vous souhaitez créer. Vous pouvez également ajouter une description facultative pour ajouter des informations supplémentaires sur l’espace de noms. Tous les types d’identité sauf **Identifiant de non-personne** suit le même comportement que le groupement. Si vous sélectionnez **Identifiant de non-personne** comme type d’identité lors de la création d’un espace de noms, l’assemblage ne se produit pas. Pour plus d’informations sur chaque type d’identité, reportez-vous au tableau de la section [types d’identité](#identity-types).
 
 Lorsque vous avez terminé, cliquez sur **[!UICONTROL Créer]**.
 
@@ -128,7 +128,7 @@ Comme pour les espaces de noms standard, vous pouvez sélectionner un espace de 
 
 ## Espaces de noms dans les données d’identité
 
-La délivrance de l’espace de noms pour une identité dépend de la méthode que vous utilisez pour fournir les données d’identité. Pour plus d’informations sur la délivrance de données d’identité, reportez-vous à la section sur [fournissant des données d’identité](./home.md#supplying-identity-data-to-identity-service) dans le [!DNL Identity Service] aperçu.
+La délivrance de l’espace de noms pour une identité dépend de la méthode que vous utilisez pour fournir les données d’identité. Pour plus d’informations sur la délivrance de données d’identité, consultez la section sur [fournissant des données d’identité](./home.md#supplying-identity-data-to-identity-service) dans le [!DNL Identity Service] aperçu.
 
 ## Étapes suivantes
 

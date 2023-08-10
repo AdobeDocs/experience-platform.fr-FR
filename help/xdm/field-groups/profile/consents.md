@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Groupe de champs de schéma de contenu et de préférences
 description: Ce document présente un aperçu du groupe de champs de schéma Contenus et Préférences .
 exl-id: ec592102-a9d3-4cac-8b94-58296a138573
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '941'
+source-wordcount: '940'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 ## Structure du groupe de champs {#structure}
 
-Le [!UICONTROL Consentements et préférences] Le groupe de champs fournit un champ de type objet unique, `consents`, pour capturer les informations sur le consentement et les préférences. Ce champ étend la propriété [[!UICONTROL Consentement pour la confidentialité, la personnalisation et les préférences marketing] type de données](../../data-types/consents.md), suppression de la variable `adID` et ajouter un `idSpecific` champ map .
+La variable [!UICONTROL Consentements et préférences] Le groupe de champs fournit un champ de type objet unique, `consents`, pour capturer les informations sur le consentement et les préférences. Ce champ étend la propriété [[!UICONTROL Consentement pour la confidentialité, la personnalisation et les préférences marketing] type de données](../../data-types/consents.md), suppression de la variable `adID` et ajouter un `idSpecific` champ map .
 
 ![](../../images/field-groups/consent.png)
 
@@ -95,10 +95,9 @@ Le fichier JSON suivant illustre un exemple du type de données que la variable 
 >* [Génération d’exemples de données dans l’interface utilisateur](../../ui/sample.md)
 >* [Génération d’exemples de données dans l’API](../../api/sample-data.md)
 
-
 ### `idSpecific`
 
-`idSpecific` peut être utilisé lorsqu’un consentement ou une préférence spécifique ne s’applique pas universellement à un client, mais est limité à un seul appareil ou à un seul identifiant. Par exemple, un client peut refuser de recevoir des emails à une adresse, tout en autorisant éventuellement l’envoi d’emails à une autre.
+`idSpecific` peut être utilisé lorsqu’un consentement ou une préférence spécifique ne s’applique pas de manière universelle à un client, mais qu’il est limité à un seul appareil ou à un seul identifiant. Par exemple, un client peut refuser de recevoir des emails à une adresse, tout en autorisant éventuellement l’envoi d’emails à une autre.
 
 >[!IMPORTANT]
 >
@@ -106,7 +105,6 @@ Le fichier JSON suivant illustre un exemple du type de données que la variable 
 >
 >* Si le client s’est désabonné au niveau du canal, tous les consentements ou préférences équivalents dans `idSpecific` sont ignorées.
 >* Si le consentement ou la préférence au niveau du canal n’est pas définie ou si le client s’est inscrit, alors les consentements ou préférences équivalents dans `idSpecific` sont honorés.
-
 
 Chaque clé dans la variable `idSpecific` représente un espace de noms d’identité spécifique reconnu par le service Adobe Experience Platform Identity. Bien que vous puissiez définir vos propres espaces de noms personnalisés pour classer différents identifiants, il est recommandé d’utiliser l’un des espaces de noms standard fournis par Identity Service pour réduire les tailles de stockage pour Real-Time Customer Profile. Pour plus d’informations sur les espaces de noms d’identité, voir [présentation de l’espace de noms d’identité](../../../identity-service/namespaces.md) dans la documentation d’Identity Service.
 
@@ -141,13 +139,13 @@ Les clés de chaque objet d’espace de noms représentent les valeurs d’ident
 }
 ```
 
-Within `marketing` objets fournis dans la variable `idSpecific` , `any` et `preferred` ne sont pas pris en charge. Ces champs ne peuvent être configurés qu’au niveau de l’utilisateur. En outre, la variable `idSpecific` préférences marketing pour `email`, `sms`, et `push` ne pas prendre en charge `subscriptions` champs.
+Within `marketing` objets fournis dans la variable `idSpecific` , `any` et `preferred` ne sont pas pris en charge. Ces champs ne peuvent être configurés qu’au niveau de l’utilisateur. En outre, la variable `idSpecific` préférences marketing pour `email`, `sms`, et `push` ne pas prendre en charge `subscriptions` des champs.
 
 Il existe également un consentement qui ne peut être fourni que dans la variable `idSpecific` section : `adID`. Ce champ est traité dans la sous-section ci-dessous.
 
 #### `adID`
 
-Le `adID` le consentement représente le consentement du client pour savoir si un ID d’annonceur (IDFA ou GAID) peut être utilisé pour lier le client à l’ensemble des applications de cet appareil. Cette valeur ne peut être configurée que sous le `ECID` espace de noms d’identité dans la variable `idSpecific` et ne peuvent pas être définies pour d’autres espaces de noms ou au niveau de l’utilisateur pour ce groupe de champs.
+La variable `adID` le consentement représente le consentement du client pour savoir si un ID d’annonceur (IDFA ou GAID) peut être utilisé pour lier le client à l’ensemble des applications de cet appareil. Cette valeur ne peut être configurée que sous le `ECID` espace de noms d’identité dans la variable `idSpecific` et ne peuvent pas être définies pour d’autres espaces de noms ou au niveau de l’utilisateur pour ce groupe de champs.
 
 ```json
 "idSpecific": {
@@ -175,7 +173,7 @@ Le `adID` le consentement représente le consentement du client pour savoir si u
 
 ## Ingestion de données à l’aide du groupe de champs {#ingest}
 
-Pour utiliser la variable [!UICONTROL Consentements et préférences] groupe de champs pour ingérer les données de consentement de vos clients, vous devez créer un jeu de données basé sur un schéma qui contient ce groupe de champs.
+Pour utiliser la variable [!UICONTROL Consentements et préférences] pour ingérer des données de consentement de vos clients, vous devez créer un jeu de données basé sur un schéma qui contient ce groupe de champs.
 
 Voir le tutoriel sur [création d’un schéma dans l’interface utilisateur](https://www.adobe.com/go/xdm-schema-editor-tutorial-en) pour savoir comment affecter des groupes de champs à des champs. Une fois que vous avez créé un schéma contenant un champ avec la propriété [!UICONTROL Consentements et préférences] groupe de champs, voir la section sur [création d’un jeu de données](../../../catalog/datasets/user-guide.md#create) dans le guide d’utilisation du jeu de données, en suivant les étapes de création d’un jeu de données avec un schéma existant.
 

@@ -3,10 +3,10 @@ keywords: Experience Platform;accueil;rubriques populaires;contrôle d’accès;
 title: Présentation du contrôle d’accès basé sur les attributs
 description: Ce document fournit des informations sur le contrôle d’accès basé sur les attributs dans Adobe Experience Platform.
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1826'
-ht-degree: 97%
+source-wordcount: '1825'
+ht-degree: 95%
 
 ---
 
@@ -93,18 +93,17 @@ En tant qu’administrateur, vous pouvez utiliser des fonctionnalités de contr�
 >* Dans l’[étape de mappage du processus d’activation](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping), vous pouvez uniquement afficher et sélectionner pour activation les champs auxquels vous avez accès.
 >* Si vous souhaitez activer des segments supplémentaires vers une destination existante et que vous n’avez pas accès à tous les champs mappés à l’exportation, le workflow d’activation est bloqué pour vous.
 
-
 Pour plus d’informations sur les [!DNL Destinations], consultez la [[!DNL Destinations] présentation](../../destinations/home.md).
 
 ### Service d’identités
 
-Adobe Experience Platform [!DNL Identity Service] vous permet de mieux connaître vos client(e)s et leurs comportements, en établissant un lien entre les identités des différents appareils et systèmes, ce qui vous permet de proposer des expériences numériques personnelles et percutantes en temps réel.
+Adobe Experience Platform [!DNL Identity Service] vous permet de mieux connaître vos clients et leurs comportements, en établissant un lien entre les identités des différents appareils et systèmes, ce qui vous permet de proposer des expériences digitales personnelles et percutantes en temps réel.
 
 Dans le cadre du contrôle d’accès basé sur les attributs, l’autorisation `view-identity-graph` vous permet de déterminer quels utilisateurs et utilisatrices de votre organisation peuvent accéder au graphique d’identité par le biais de l’interface utilisateur ou des API. Pour plus dʼinformations, consultez le guide sur lʼ[utilisation de la visionneuse de graphiques dʼidentité](../../identity-service/ui/identity-graph-viewer.md).
 
 Pour plus d’informations sur [!DNL Identity Service], consultez la [[!DNL Identity Service] présentation](../../identity-service/home.md).
 
-### Real-time Customer Profile
+### Profil client en temps réel
 
 Platform vous permet d’offrir aux clients des expériences coordonnées, cohérentes et pertinentes, quel que soit l’endroit ou le moment où ils interagissent avec votre marque. Le profil client en temps réel offre une vue holistique de chaque client qui combine des données issues de plusieurs canaux, notamment des données en ligne, hors ligne, CRM et tierces. Le profil vous permet de consolider vos diverses données client en une vue unifiée offrant un compte horodaté et exploitable de chaque interaction client.
 
@@ -130,11 +129,11 @@ Pour plus d’informations sur [!DNL Segmentation Service], consultez la [[!DNL 
 
 ### XDM
 
-Le modèle de données d’expérience (XDM) est une spécification open source conçue pour améliorer la puissance des expériences numériques. Il fournit des structures et des définitions communes à toutes les applications pour communiquer avec des services sur Platform. En adhérant aux normes XDM, toutes les données d’expérience client peuvent être intégrées dans une représentation commune afin de fournir des informations plus rapidement et de manière plus intégrée. Vous pouvez obtenir des informations précieuses à partir des actions des clients, définir des types de clients par le biais de segments et utiliser les attributs du client à des fins de personnalisation.
+Le modèle de données d’expérience (XDM) est une spécification open source conçue pour améliorer la puissance des expériences digitales. Il fournit des structures et des définitions communes à toutes les applications pour communiquer avec des services sur Platform. En adhérant aux normes XDM, toutes les données d’expérience client peuvent être intégrées dans une représentation commune afin de fournir des informations plus rapidement et de manière plus intégrée. Vous pouvez obtenir des informations précieuses à partir des actions des clients, définir des types de clients par le biais de segments et utiliser les attributs du client à des fins de personnalisation.
 
 Avec le contrôle d’accès basé sur les attributs, vous pouvez :
 
-* [appliquer des étiquettes d’utilisation des données aux groupes et classes de champs](../../xdm/tutorials/labels.md). Cela permet d’avoir plusieurs schémas avec les mêmes groupes ou classes de champs et ayant des champs balisés avec les mêmes attributs, selon les configurations au niveau du groupe ou de la classe des champs ;
+* [appliquer des étiquettes d’utilisation des données aux groupes et classes de champs](../../xdm/tutorials/labels.md). Cela permet à plusieurs schémas avec les mêmes groupes ou classes de champs d’avoir des champs balisés avec les mêmes attributs, selon les configurations au niveau du groupe de champs ou de la classe ;
 * Configurer l’accès des utilisateurs et utilisatrices avec des champs de schéma XDM spécifiques en fonction des jeux d’autorisations appliqués aux rôles affectés aux utilisateurs et utilisatrices.
 
 Pour plus d’informations sur XDM, consultez la [présentation du système XDM](../../xdm/home.md).

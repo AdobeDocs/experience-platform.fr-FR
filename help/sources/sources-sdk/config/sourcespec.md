@@ -3,9 +3,9 @@ keywords: Experience Platform;accueil;rubriques populaires;sources;connecteurs;c
 title: Configuration des spécifications de source pour les sources en libre-service (SDK par lots)
 description: Ce document présente les configurations que vous devez préparer pour utiliser les sources en libre-service (SDK par lots).
 exl-id: f814c883-b529-4ecc-bedd-f638bf0014b5
-source-git-commit: b1173adb0e0c3a6460b2cb15cba9218ddad7abcb
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1847'
+source-wordcount: '1846'
 ht-degree: 45%
 
 ---
@@ -253,7 +253,7 @@ Voir [annexe](#source-spec) pour un exemple de spécification de source entière
 | `sourceSpec.attributes.spec.properties.explodeEntityPath.keepAttributes` | Cette propriété vous permet de spécifier explicitement les attributs individuels que vous souhaitez conserver. | `[total_items]` |
 | `sourceSpec.attributes.spec.properties.explodeEntityPath.overrideWrapperAttribute` | Cette propriété vous permet de remplacer la valeur du nom d’attribut que vous avez spécifiée dans `explodeEntityPath`. | `activity` |
 | `sourceSpec.attributes.spec.properties.paginationParams` | Définit les paramètres ou les champs qui doivent être fournis pour obtenir un lien vers la page suivante à partir de la réponse de page active de l’utilisateur ou lors de la création d’une URL de page suivante. |
-| `sourceSpec.attributes.spec.properties.paginationParams.type` | Affiche le type de pagination pris en charge pour votre source. | <ul><li>`OFFSET` : ce type de pagination vous permet d’analyser les résultats en spécifiant un index à partir duquel démarrer le tableau associé, ainsi qu’une limite du nombre de résultats renvoyés.</li><li>`POINTER` : ce type de pagination permet d’utiliser une variable `pointer` pour pointer vers un élément particulier qui doit être envoyé avec une requête. La pagination du type de pointeur nécessite un chemin d’accès dans la payload qui pointe vers la page suivante..</li><li>`CONTINUATION_TOKEN`: Ce type de pagination vous permet d’ajouter vos paramètres de requête ou d’en-tête avec un jeton de continuation pour récupérer les données renvoyées restantes de votre source, qui n’ont pas été renvoyées initialement en raison d’un maximum prédéterminé.</li><li>`PAGE`: Ce type de pagination vous permet d’ajouter votre paramètre de requête avec un paramètre de pagination pour parcourir les données renvoyées par pages, à partir de la page zéro.</li><li>`NONE`: Ce type de pagination peut être utilisé pour les sources qui ne prennent en charge aucun des types de pagination disponibles. Type de pagination `NONE` renvoie l’intégralité des données de réponse après une requête.</li></ul> |
+| `sourceSpec.attributes.spec.properties.paginationParams.type` | Affiche le type de pagination pris en charge pour votre source. | <ul><li>`OFFSET` : ce type de pagination vous permet d’analyser les résultats en spécifiant un index à partir duquel démarrer le tableau associé, ainsi qu’une limite du nombre de résultats renvoyés.</li><li>`POINTER` : ce type de pagination permet d’utiliser une variable `pointer` pour pointer vers un élément particulier qui doit être envoyé avec une requête. La pagination du type de pointeur nécessite un chemin d’accès dans la payload qui pointe vers la page suivante..</li><li>`CONTINUATION_TOKEN`: ce type de pagination vous permet d’ajouter vos paramètres de requête ou d’en-tête avec un jeton de continuation pour récupérer les données renvoyées restantes de votre source, qui n’ont pas été renvoyées initialement en raison d’un maximum prédéterminé.</li><li>`PAGE`: ce type de pagination vous permet d’ajouter votre paramètre de requête avec un paramètre de pagination à parcourir par les données renvoyées par pages, à partir de la page zéro.</li><li>`NONE`: ce type de pagination peut être utilisé pour les sources qui ne prennent en charge aucun des types de pagination disponibles. Type de pagination `NONE` renvoie l’intégralité des données de réponse après une requête.</li></ul> |
 | `sourceSpec.attributes.spec.properties.paginationParams.limitName` | Nom de la limite avec laquelle l’API peut spécifier le nombre d’enregistrements à récupérer dans une page. | `limit` ou `count`. |
 | `sourceSpec.attributes.spec.properties.paginationParams.limitValue` | Nombre d’enregistrements à récupérer dans une page. | `limit=10` ou `count=10`. |
 | `sourceSpec.attributes.spec.properties.paginationParams.offSetName` | Nom de l’attribut offset. Obligatoire si le type de pagination est défini sur `offset`. | `offset` |
@@ -401,9 +401,9 @@ Une source qui prend en charge le type de pagination des jetons de continuation 
 | --- | --- |
 | `type` | Type de pagination utilisé pour renvoyer des données. |
 | `continuationTokenPath` | La valeur qui doit être ajoutée aux paramètres de requête afin de passer à la page suivante des résultats renvoyés. |
-| `parameterType` | Le `parameterType` définit l’emplacement où la propriété `parameterName` doit être ajouté. Le `QUERYPARAM` vous permet d’ajouter votre requête à l’aide de la propriété `parameterName`. Le `HEADERPARAM` vous permet d’ajouter `parameterName` à votre requête d’en-tête. |
+| `parameterType` | La variable `parameterType` définit l’emplacement où `parameterName` doit être ajouté. La variable `QUERYPARAM` vous permet d’ajouter votre requête à l’aide de la propriété `parameterName`. La variable `HEADERPARAM` vous permet d’ajouter `parameterName` à votre requête d’en-tête. |
 | `parameterName` | Nom du paramètre utilisé pour incorporer le jeton de continuation. Le format est le suivant : `{PARAMETER_NAME}={CONTINUATION_TOKEN}`. |
-| `delayRequestMillis` | Le `delayRequestMillis` dans la pagination, vous permet de contrôler le taux de requêtes envoyées à votre source. Certaines sources peuvent avoir une limite au nombre de requêtes que vous pouvez effectuer par minute. Par exemple : [!DNL Zendesk] est limitée à 100 requêtes par minute et définit  `delayRequestMillis` to `850` vous permet de configurer la source pour effectuer des appels à environ 80 demandes par minute, bien en dessous du seuil de 100 demandes par minute. |
+| `delayRequestMillis` | La variable `delayRequestMillis` dans la pagination, vous permet de contrôler le taux de requêtes envoyées à votre source. Certaines sources peuvent avoir une limite au nombre de requêtes que vous pouvez effectuer par minute. Par exemple : [!DNL Zendesk] est limitée à 100 requêtes par minute et définit  `delayRequestMillis` to `850` vous permet de configurer la source pour effectuer des appels à environ 80 demandes par minute, bien en dessous du seuil de 100 demandes par minute. |
 
 Voici un exemple de réponse renvoyée à l’aide du type de pagination du jeton de continuation :
 
@@ -434,7 +434,7 @@ Voici un exemple de réponse renvoyée à l’aide du type de pagination du jeto
 
 #### `PAGE`
 
-Le `PAGE` type de pagination permet de parcourir les données renvoyées par nombre de pages commençant par zéro. Lors de l’utilisation de `PAGE` type pagination, vous devez indiquer le nombre d&#39;enregistrements sur une seule page.
+La variable `PAGE` type de pagination permet de parcourir les données renvoyées par nombre de pages commençant par zéro. Lorsque vous utilisez `PAGE` type pagination, vous devez indiquer le nombre d&#39;enregistrements sur une seule page.
 
 ```json
 "paginationParams": {
@@ -463,7 +463,7 @@ Le `PAGE` type de pagination permet de parcourir les données renvoyées par nom
 
 #### `NONE`
 
-Le `NONE` Le type de pagination peut être utilisé pour les sources qui ne prennent en charge aucun des types de pagination disponibles. Sources qui utilisent le type de pagination de `NONE` renvoyez simplement tous les enregistrements récupérables lorsqu’une demande de GET est effectuée.
+La variable `NONE` Le type de pagination peut être utilisé pour les sources qui ne prennent en charge aucun des types de pagination disponibles. Sources qui utilisent le type de pagination de `NONE` renvoyez simplement tous les enregistrements récupérables lorsqu’une demande de GET est effectuée.
 
 ```json
 "paginationParams": {
@@ -473,9 +473,9 @@ Le `NONE` Le type de pagination peut être utilisé pour les sources qui ne pren
 
 ### Planification avancée pour les sources en libre-service (SDK par lots)
 
-Configurez le planning incrémentiel et de renvoi de votre source à l’aide d’une planification avancée. Le `incremental` vous permet de configurer un planning dans lequel votre source n’ingèrera que des enregistrements nouveaux ou modifiés, tandis que la propriété `backfill` vous permet de créer un planning pour l’ingestion de données historiques.
+Configurez le planning incrémentiel et de renvoi de votre source à l’aide d’une planification avancée. La variable `incremental` vous permet de configurer un planning dans lequel votre source n’ingèrera que des enregistrements nouveaux ou modifiés, tandis que la propriété `backfill` vous permet de créer un planning pour l’ingestion de données historiques.
 
-Avec la planification avancée, vous pouvez utiliser des expressions et des fonctions spécifiques à votre source pour configurer les plannings incrémentiels et de renvoi. Dans l’exemple ci-dessous, la variable [!DNL Zendesk] La source nécessite que le planning incrémentiel soit formaté comme `type:user updated > {START_TIME} updated < {END_TIME}` et renvoyer en tant que `type:user updated < {END_TIME}`.
+Avec la planification avancée, vous pouvez utiliser des expressions et des fonctions spécifiques à votre source pour configurer les plannings incrémentiels et de renvoi. Dans l’exemple ci-dessous, la variable [!DNL Zendesk] La source nécessite que le planning incrémentiel soit formaté comme `type:user updated > {START_TIME} updated < {END_TIME}` et renvoyer comme `type:user updated < {END_TIME}`.
 
 ```json
 "scheduleParams": {
@@ -611,4 +611,4 @@ Voici un exemple de schéma personnalisé que vous pouvez ajouter à la spécifi
 
 ## Étapes suivantes
 
-Une fois vos spécifications de source renseignées, vous pouvez procéder à la configuration des spécifications d’exploration pour la source que vous souhaitez intégrer à Platform. Voir le document sur la [configuration des spécifications d’exploration](./explorespec.md) pour plus d’informations.
+Une fois vos spécifications de source renseignées, vous pouvez procéder à la configuration des spécifications d’exploration pour la source que vous souhaitez intégrer à Platform. Consultez le document sur [configuration des spécifications d’exploration](./explorespec.md) pour plus d’informations.

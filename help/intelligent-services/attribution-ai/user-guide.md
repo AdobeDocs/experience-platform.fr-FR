@@ -4,9 +4,9 @@ feature: Attribution AI
 title: Guide de l’interface utilisateur Attribution AI
 description: Ce document sert de guide pour interagir avec Attribution AI dans l’interface utilisateur d’Intelligent Services.
 exl-id: 32e1dd07-31a8-41c4-88df-8893ff773f79
-source-git-commit: 66d20dc1141ff33211635ba74d320350f8b27fb7
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '2443'
+source-wordcount: '2442'
 ht-degree: 36%
 
 ---
@@ -25,23 +25,23 @@ Dans le [!DNL Adobe Experience Platform] Interface utilisateur, sélectionnez **
 
 La page de service d’Attribution AI s’affiche. Cette page répertorie les modèles de service d’Attribution AI et affiche des informations les concernant, notamment le nom du modèle, les événements de conversion, la fréquence d’exécution du modèle et l’état de la dernière mise à jour.
 
-Vous trouverez la variable **[!UICONTROL Nombre total d’événements de conversion notés]** mesure située dans le coin inférieur droit de la **[!UICONTROL Créer un modèle]** conteneur. Cette mesure effectue le suivi du nombre total d’événements de conversion marqués par Attribution AI pour l’année civile en cours, y compris tous les environnements de test et les modèles de service supprimés.
+Vous pouvez trouver la variable **[!UICONTROL Total des événements de conversion notés]** mesure située dans le coin inférieur droit de la **[!UICONTROL Créer un modèle]** conteneur. Cette mesure effectue le suivi du nombre total d’événements de conversion marqués par Attribution AI pour l’année civile en cours, y compris tous les environnements de test et les modèles de service supprimés.
 
 ![total des conversions](./images/user-guide/total_conversions.png)
 
 Les modèles de service peuvent être modifiés, clonés et supprimés à l’aide des commandes situées dans la partie droite de l’interface utilisateur. Pour afficher ces commandes, sélectionnez un modèle parmi les **[!UICONTROL Modèles de service]**. Les contrôles contiennent les informations suivantes :
 
-- **[!UICONTROL Modifier]**: Sélection **[!UICONTROL Modifier]** vous permet de modifier un modèle de service existant. Vous pouvez modifier le nom, la description, l’état, la fréquence de notation du modèle et d’autres colonnes de jeux de données de score.
-- **[!UICONTROL Cloner]**: Sélection **[!UICONTROL Cloner]** copie le modèle de service sélectionné. Vous pouvez ensuite modifier le workflow pour effectuer des ajustements mineurs et le renommer en tant que nouveau modèle.
-- **[!UICONTROL Supprimer]**: Vous pouvez supprimer un modèle de service, y compris les exécutions historiques. Le jeu de données de sortie correspondant sera supprimé de Platform. Toutefois, les scores synchronisés dans Real-time Customer Profile ne sont pas supprimés.
-- **[!UICONTROL Source de données]**: Lien vers le jeu de données utilisé. Si plusieurs jeux de données sont utilisés par Attribution AI, &quot;Multiple&quot; suivi du nombre de jeux de données s’affiche. Lorsque vous sélectionnez l’hyperlien, la fenêtre contextuelle d’aperçu des jeux de données s’affiche.
-- **[!UICONTROL Détails de la dernière exécution]**: Cette option n’est affichée que lorsqu’une exécution échoue. Vous trouverez ici des informations sur les raisons pour lesquelles l’exécution a échoué, telles que les codes d’erreur.
+- **[!UICONTROL Modifier]**: sélection **[!UICONTROL Modifier]** vous permet de modifier un modèle de service existant. Vous pouvez modifier le nom, la description, l’état, la fréquence de notation du modèle et d’autres colonnes de jeux de données de score.
+- **[!UICONTROL Cloner]**: sélection **[!UICONTROL Cloner]** copie le modèle de service sélectionné. Vous pouvez ensuite modifier le workflow pour effectuer des ajustements mineurs et le renommer en nouveau modèle.
+- **[!UICONTROL Supprimer]**: vous pouvez supprimer un modèle de service, y compris les exécutions historiques. Le jeu de données de sortie correspondant sera supprimé de Platform. Toutefois, les scores synchronisés dans Real-time Customer Profile ne sont pas supprimés.
+- **[!UICONTROL Source de données]**: lien vers le jeu de données utilisé. Si plusieurs jeux de données sont utilisés par Attribution AI, &quot;Multiple&quot; suivi du nombre de jeux de données s’affiche. Lorsque vous sélectionnez l’hyperlien, la fenêtre contextuelle d’aperçu des jeux de données s’affiche.
+- **[!UICONTROL Détails de la dernière exécution]**: s’affiche uniquement lorsqu’une exécution échoue. Vous trouverez ici des informations sur les raisons pour lesquelles l’exécution a échoué, telles que les codes d’erreur.
 
 ![Volet latéral](./images/user-guide/multiple-datasets-pane.png)
 
-- **[!UICONTROL Événements de conversion]**: Aperçu rapide des événements de conversion configurés pour ce modèle.
-- **[!UICONTROL Intervalle de recherche en amont]**: La période que vous avez définie indiquant le nombre de jours avant l’inclusion des points de contact de l’événement de conversion.
-- **[!UICONTROL Points de contact]**: Liste de tous les points de contact que vous avez définis lors de la création de ce modèle.
+- **[!UICONTROL Événements de conversion]**: aperçu rapide des événements de conversion configurés pour ce modèle.
+- **[!UICONTROL Intervalle de recherche en amont]**: la période que vous avez définie indiquant le nombre de jours avant l’inclusion des points de contact d’événement de conversion.
+- **[!UICONTROL Points de contact]**: liste de tous les points de contact que vous avez définis lors de la création de ce modèle.
 
 ![](./images/user-guide/side_panel_2.png)
 
@@ -51,7 +51,7 @@ Sélectionner **[!UICONTROL Créer un modèle]** pour commencer.
 
 Ensuite, la page de configuration d’Attribution AI s’affiche, où vous pouvez fournir un nom et une description facultative de votre modèle de service.
 
-![attribution d’un nom à un modèle](./images/user-guide/naming_instance.png)
+![dénomination d’un modèle](./images/user-guide/naming_instance.png)
 
 ## Sélectionner les données {#select-data}
 
@@ -65,7 +65,7 @@ Après avoir sélectionné les jeux de données que vous souhaitez utiliser, sé
 
 Icône Sélectionner l’information ![icône info](./images/user-guide/info-icon.png) en regard d’un jeu de données, la fenêtre contextuelle d’aperçu du jeu de données s’ouvre.
 
-![Sélection et recherche d’un jeu de données](./images/user-guide/dataset-preview.png)
+![Sélectionner et rechercher un jeu de données](./images/user-guide/dataset-preview.png)
 
 L’aperçu du jeu de données contient des données telles que l’heure de la dernière mise à jour, le schéma source et un aperçu des dix premières colonnes.
 
@@ -77,7 +77,7 @@ Sélectionner **[!UICONTROL Enregistrer]** pour enregistrer vos brouillons au fu
 
 <!-- https://www.adobe.com/go/aai-dataset-completeness -->
 
-Dans l’aperçu du jeu de données, il existe une valeur en pourcentage d’exhaustivité du jeu de données. Cette valeur fournit un instantané du nombre de colonnes vides/nulles de votre jeu de données. Si un jeu de données contient de nombreuses valeurs manquantes et que ces valeurs sont capturées ailleurs, il est vivement recommandé d’inclure le jeu de données contenant les valeurs manquantes.
+Dans l’aperçu du jeu de données, il y a une valeur en pourcentage d’exhaustivité du jeu de données. Cette valeur fournit un instantané du nombre de colonnes vides/nulles de votre jeu de données. Si un jeu de données contient de nombreuses valeurs manquantes et que ces valeurs sont capturées ailleurs, il est vivement recommandé d’inclure le jeu de données contenant les valeurs manquantes.
 
 >[!NOTE]
 >
@@ -91,7 +91,7 @@ Vous pouvez désormais joindre plusieurs jeux de données les uns aux autres en 
 
 >[!IMPORTANT]
 >
->Le même type d’identité (espace de noms) doit être utilisé pour chaque jeu de données sélectionné. Une coche verte s’affiche en regard du type d’identité dans la colonne d’identité pour indiquer que les jeux de données sont compatibles. Par exemple, lors de l’utilisation de l’espace de noms Phone et `mobilePhone.number` comme identifiant, tous les identifiants des jeux de données restants doivent contenir et utiliser l’espace de noms Phone.
+>Le même type d’identité (espace de noms) doit être utilisé pour chaque jeu de données sélectionné. Une coche verte s’affiche en regard du type d’identité dans la colonne d’identité pour indiquer que les jeux de données sont compatibles. Par exemple, lorsque vous utilisez l’espace de noms Phone et `mobilePhone.number` comme identifiant, tous les identifiants des jeux de données restants doivent contenir et utiliser l’espace de noms Phone.
 
 Pour sélectionner une identité, sélectionnez la valeur soulignée située dans la colonne d’identité. La fenêtre contextuelle Sélectionner une identité s’affiche.
 
@@ -103,7 +103,7 @@ Dans le cas où plusieurs identités sont disponibles dans un espace de noms, ve
 
 >[!NOTE]
 >
-> S’il n’existe aucun type d’identité (espace de noms) valide pour un jeu de données, vous devez définir une identité Principale et l’affecter à un espace de noms d’identité à l’aide de la variable [éditeur de schéma](../../xdm/schema/composition.md#identity). Pour en savoir plus sur les espaces de noms et les identités, rendez-vous sur la page [Espaces de noms Identity Service](../../identity-service/namespaces.md) documentation.
+> S’il n’existe aucun type d’identité (espace de noms) valide pour un jeu de données, vous devez définir une identité Principale et l’affecter à un espace de noms d’identité à l’aide de la variable [éditeur de schéma](../../xdm/schema/composition.md#identity). Pour en savoir plus sur les espaces de noms et les identités, consultez la page [Espaces de noms Identity Service](../../identity-service/namespaces.md) la documentation.
 
 ## Mappage du canal média et des champs de campagne {#aai-mapping}
 
@@ -143,7 +143,7 @@ Les boutons **[!UICONTROL Ajouter un événement]** et **[!UICONTROL Ajouter un 
 
 ![ajouter un événement](./images/user-guide/add_event.png)
 
-Sélection **[!UICONTROL Ajouter un événement]** crée des champs supplémentaires qui peuvent être remplis en utilisant la même méthode que celle décrite ci-dessus. Cela permet d’ajouter une instruction ET à la définition de la chaîne sous le nom de la conversion. Sélectionnez la **x** pour supprimer un événement qui a été ajouté.
+Sélection **[!UICONTROL Ajouter un événement]** crée des champs supplémentaires qui peuvent être remplis en utilisant la même méthode que celle décrite ci-dessus. Cela permet d’ajouter une instruction ET à la définition de la chaîne sous le nom de la conversion. Sélectionnez la variable **x** pour supprimer un événement qui a été ajouté.
 
 ![menu ajouter un événement](./images/user-guide/add_event_result.png)
 
@@ -171,7 +171,7 @@ Pour ce point de contact, sélectionnez **equals**.
 
 ![étape 1](./images/user-guide/touchpoint_step1.png)
 
-Une fois qu’un opérateur pour un point de contact est sélectionné, *Saisir la valeur du champ* est mis à disposition. Les valeurs du menu déroulant pour *Saisir la valeur du champ* reposent sur l’opérateur et la valeur du point de contact que vous avez sélectionnés précédemment. Si une valeur n’apparaît pas dans le menu déroulant, vous pouvez la saisir manuellement. Sélectionnez la liste déroulante, puis sélectionnez **CLIQUEZ**.
+Une fois qu’un opérateur pour un point de contact est sélectionné, *Saisir la valeur du champ* est mis à disposition. Les valeurs du menu déroulant pour *Saisir la valeur du champ* reposent sur l’opérateur et la valeur du point de contact que vous avez sélectionnés précédemment. Si une valeur n’apparaît pas dans le menu déroulant, vous pouvez la saisir manuellement. Sélectionnez la liste déroulante, puis sélectionnez **CLICK**.
 
 >[!NOTE]
 >
@@ -181,11 +181,11 @@ Une fois qu’un opérateur pour un point de contact est sélectionné, *Saisir 
 
 Les boutons **Ajouter un événement** et **Ajouter un groupe** permettent de définir plus précisément votre point de contact. En raison de la nature complexe des points de contact, il n’est pas rare d’avoir plusieurs événements et groupes pour un seul point de contact.
 
-Lorsque cette option est sélectionnée, **Ajouter un événement** permet d’ajouter des champs supplémentaires. sélectionnez la variable **x** pour supprimer un événement qui a été ajouté.
+Lorsque cette option est sélectionnée, **Ajouter un événement** permet d’ajouter des champs supplémentaires. sélectionnez l’option **x** pour supprimer un événement qui a été ajouté.
 
 ![ajouter un événement](./images/user-guide/touchpoint_add_event.png)
 
-Sélection **Ajouter un groupe** permet de créer des champs supplémentaires distincts de l’original. Avec l’ajout de groupes, un bouton bleu *Et* apparaît. Sélectionner **Et** pour modifier le paramètre, le nouveau paramètre &quot;Ou&quot; est utilisé pour définir plusieurs chemins performants. Ce point de contact particulier n’a qu’un seul chemin performant. Par conséquent, « Ou » n’est pas nécessaire.
+Sélection **Ajouter un groupe** vous donne la possibilité de créer des champs supplémentaires distincts de l’original. Avec l’ajout de groupes, un bouton bleu *Et* apparaît. Sélectionner **Et** pour modifier le paramètre, le nouveau paramètre &quot;Ou&quot; est utilisé pour définir plusieurs chemins performants. Ce point de contact particulier n’a qu’un seul chemin performant. Par conséquent, « Ou » n’est pas nécessaire.
 
 ![présentation du point de contact](./images/user-guide/add_group_touchpoint.png)
 
@@ -267,7 +267,7 @@ Une fois la fenêtre de formation sélectionnée, sélectionnez **[!UICONTROL Te
 
 ## Étapes suivantes
 
-En suivant ce tutoriel, vous avez réussi à créer une instance de service dans Attribution AI. Une fois que la notation avec l’instance est terminée (compter jusqu’à 24 heures), vous êtes prêt à [découvrir les insights d’Attribution AI](./discover-insights.md). De plus, si vous souhaitez télécharger les résultats de la notation, rendez-vous sur la page [téléchargement de scores](./download-scores.md) documentation.
+En suivant ce tutoriel, vous avez réussi à créer une instance de service dans Attribution AI. Une fois que la notation avec l’instance est terminée (compter jusqu’à 24 heures), vous êtes prêt à [découvrir les informations d’Attribution AI](./discover-insights.md). De plus, si vous souhaitez télécharger les résultats de la notation, visitez le [téléchargement de scores](./download-scores.md) la documentation.
 
 ## Ressources supplémentaires
 

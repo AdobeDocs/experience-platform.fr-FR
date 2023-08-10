@@ -2,9 +2,9 @@
 title: Connexion Liste des Clients Pinterest
 description: Créez des audiences à partir des listes de clients, des personnes qui ont visité votre site ou des personnes qui ont déjà interagi avec votre contenu sur Pinterest.
 exl-id: e601f75f-0d40-4cd0-93ca-54d7439f1db7
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '694'
+source-wordcount: '693'
 ht-degree: 47%
 
 ---
@@ -26,7 +26,7 @@ Créez des audiences à partir des listes de clients, des personnes qui ont visi
 
 ## Identités prises en charge {#supported-identities}
 
-Le [!DNL Pinterest Customer List] destination prend en charge l’activation des identités décrites dans le tableau ci-dessous. En savoir plus sur les [identités](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=fr#getting-started).
+La variable [!DNL Pinterest Customer List] destination prend en charge l’activation des identités décrites dans le tableau ci-dessous. En savoir plus sur les [identités](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=fr#getting-started).
 
 Dans le [étape de mappage](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) du workflow d’activation de destination, faites correspondre les identités de votre choix au champ cible. *pinterest_audience*. Les identités sont distinguées et résolues lors de l’ingestion de données dans Pinterest.
 
@@ -71,7 +71,7 @@ Pendant la [configuration](../../ui/connect-destination.md) de cette destination
 
 * **[!UICONTROL Nom]** : un nom par lequel vous reconnaîtrez cette destination à l’avenir.
 * **[!UICONTROL Description]** : une description qui vous aidera à identifier cette destination à l’avenir.
-* **[!UICONTROL Identifiant publicitaire]**: Votre identifiant publicitaire Pinterest.
+* **[!UICONTROL Identifiant publicitaire]**: votre identifiant publicitaire Pinterest.
 
 ### Activer les alertes {#enable-alerts}
 
@@ -93,4 +93,4 @@ Lors de la gestion de vos données, toutes les destinations [!DNL Adobe Experien
 
 ## Ressources supplémentaires {#additional-resources}
 
-Reportez-vous au [Page Centre d’aide pinterest](https://help.pinterest.com/en/business/article/audience-targeting) pour plus d’informations.
+Reportez-vous à [Page Centre d’aide pinterest](https://help.pinterest.com/en/business/article/audience-targeting) pour plus d’informations.

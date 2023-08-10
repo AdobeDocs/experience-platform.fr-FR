@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Définition des champs d’énumération et des valeurs proposées dans l’interface utilisateur
 description: Découvrez comment définir des énumérations et des valeurs suggérées pour les champs de chaîne dans l’interface utilisateur de l’Experience Platform.
 exl-id: 67ec5382-31de-4f8d-9618-e8919bb5a472
-source-git-commit: a3140d5216857ef41c885bbad8c69d91493b619d
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1257'
+source-wordcount: '1256'
 ht-degree: 8%
 
 ---
@@ -48,11 +48,11 @@ Le canevas se met à jour pour refléter les modifications. Lorsque vous explore
 
 ## Définir les valeurs suggérées {#suggested-values}
 
-Sélectionner **[!UICONTROL Enumérations et valeurs proposées]**, puis sélectionnez **[!UICONTROL Valeurs proposées]** pour afficher des contrôles supplémentaires. À partir de là, sélectionnez **[!UICONTROL Ajouter une ligne]** pour commencer à ajouter des valeurs suggérées.
+Sélectionner **[!UICONTROL Enumérations et valeurs proposées]**, puis sélectionnez **[!UICONTROL Valeurs proposées]** pour que des contrôles supplémentaires apparaissent. À partir de là, sélectionnez **[!UICONTROL Ajouter une ligne]** pour commencer à ajouter des valeurs suggérées.
 
 ![Image montrant l’option Valeurs proposées sélectionnée dans l’interface utilisateur](../../images/ui/fields/enum/suggested-add-row.png)
 
-Sous , **[!UICONTROL Nom d’affichage]** indiquez un nom convivial pour la valeur telle que vous souhaitez la voir apparaître dans l’interface utilisateur de segmentation. Pour ajouter d’autres valeurs suggérées, sélectionnez **[!UICONTROL Ajouter une ligne]** et répétez le processus selon vos besoins. Pour supprimer une ligne précédemment ajoutée, sélectionnez ![l’icône de suppression](../../images/ui/fields/enum/remove-icon.png) à côté de la ligne en question.
+Sous , **[!UICONTROL Nom d’affichage]** indiquez un nom convivial pour la valeur telle que vous souhaitez la voir apparaître dans l’interface utilisateur de segmentation. Pour ajouter d’autres valeurs suggérées, sélectionnez **[!UICONTROL Ajouter une ligne]** et répétez le processus selon vos besoins. Pour supprimer une ligne précédemment ajoutée, sélectionnez ![icône de suppression](../../images/ui/fields/enum/remove-icon.png) à côté de la ligne en question.
 
 Lorsque vous avez terminé, sélectionnez **[!UICONTROL Appliquer]** pour appliquer les modifications au schéma.
 
@@ -68,7 +68,7 @@ Certains champs des composants XDM standard contiennent leurs propres valeurs su
 
 ![Image montrant les valeurs d’énumération et les noms d’affichage renseignés pour le champ de chaîne dans l’interface utilisateur](../../images/ui/fields/enum/suggested-standard.png)
 
-Pour ajouter de nouvelles valeurs suggérées pour un champ standard, sélectionnez **[!UICONTROL Ajouter une ligne]**. Pour supprimer une valeur suggérée précédemment ajoutée par votre organisation, sélectionnez ![l’icône de suppression](../../images/ui/fields/enum/remove-icon.png) à côté de la ligne en question.
+Pour ajouter de nouvelles valeurs suggérées pour un champ standard, sélectionnez **[!UICONTROL Ajouter une ligne]**. Pour supprimer une valeur suggérée précédemment ajoutée par votre organisation, sélectionnez ![icône de suppression](../../images/ui/fields/enum/remove-icon.png) à côté de la ligne en question.
 
 ![Image montrant les valeurs d’énumération et les noms d’affichage renseignés pour le champ de chaîne dans l’interface utilisateur](../../images/ui/fields/enum/suggested-standard-add.png)
 

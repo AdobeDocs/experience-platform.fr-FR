@@ -4,10 +4,10 @@ solution: Experience Platform
 title: FAQ sur les réglementations de confidentialité
 description: Ce document répond aux questions les plus fréquemment posées sur les réglementations de confidentialité légales prises en charge et leur mise en oeuvre dans Adobe Experience Cloud.
 exl-id: ec553e53-664b-4e18-abb1-4e4063fdd2c9
-source-git-commit: 7e86721f6dd6fd280ae7e7e67aca21b4258ffb66
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1619'
-ht-degree: 35%
+source-wordcount: '1618'
+ht-degree: 33%
 
 ---
 
@@ -25,11 +25,11 @@ Les questions suivantes concernent toutes les réglementations de confidentialit
 
 ### Quelles sont les répercussions des réglementations de confidentialité prises en charge ?
 
-Le [réglementations de confidentialité prises en charge par l’Experience Cloud](./overview.md) s’appliquent à toutes les organisations qui stockent et traitent les données personnelles des citoyens dans les juridictions respectives des règlements, quel que soit l’emplacement géographique de l’organisation.
+La variable [réglementations de confidentialité prises en charge par l’Experience Cloud](./overview.md) s’appliquent à toutes les organisations qui stockent et traitent les données personnelles des citoyens dans les juridictions respectives des règlements, quel que soit l’emplacement géographique de l’organisation.
 
 ### Que signifie la notion de données personnelles ?
 
-Les données personnelles constituent toute information relative à une personne physique ou à un sujet des données qui peut être utilisée pour identifier directement ou indirectement la personne. Il peut s’agir d’un nom, d’une photo, d’une adresse e-mail, de détails bancaires, de publications sur les réseaux sociaux, d’informations médicales ou de l’adresse IP d’un ordinateur.
+Les données personnelles constituent toute information relative à une personne physique ou à un titulaire de données qui peut être utilisée pour identifier directement ou indirectement la personne. Il peut s’agir d’un nom, d’une photo, d’une adresse e-mail, de détails bancaires, de publications sur les réseaux sociaux, d’informations médicales ou de l’adresse IP d’un ordinateur.
 
 Les identifiants suivants sont couramment utilisés dans des applications Experience Cloud et peuvent être soumis à des exigences de réglementation en matière de confidentialité :
 
@@ -55,9 +55,9 @@ Le **contrôleur des données** est l’entité qui détermine les finalités, c
 
 A **contrôleur de données** est la personne ou l’organisation qui a le pouvoir et la responsabilité de prendre des décisions concernant la collecte, l’utilisation ou la divulgation de données personnelles. A **responsable du traitement des données** est la personne ou l’organisation qui opère en relation avec la collecte, l’utilisation ou la divulgation des données personnelles et la direction du contrôleur des données.
 
-### Quelle est la différence entre le consentement explicite et le consentement univoque du sujet des données ?
+### Quelle est la différence entre le consentement explicite et le consentement univoque du titulaire de données ?
 
-**Consentement explicite** fait référence à une norme de consentement qui implique une indication spécifique, éclairée et sans ambiguïté des souhaits du sujet des données sous forme orale ou écrite. En d’autres termes, le sujet des données doit littéralement et explicitement dire &quot;J’accepte&quot; ou &quot;Je suis d’accord&quot; pour que le consentement soit considéré comme explicite. En outre, il doit être aussi facile de retirer le consentement que de le donner.
+**Consentement explicite** fait référence à une norme de consentement qui implique une indication spécifique, éclairée et sans ambiguïté des souhaits du sujet de données sous forme orale ou écrite. En d’autres termes, le sujet des données doit littéralement et explicitement dire &quot;J’accepte&quot; ou &quot;Je suis d’accord&quot; pour que le consentement soit considéré comme explicite. En outre, il doit être aussi facile de retirer le consentement que de le donner.
 
 **Consentement non ambigu (implicite)** fait référence au consentement qui n’a pas été donné explicitement par le sujet des données, mais qui n’en est pas moins sans ambiguïté dans sa nature. Par exemple, lors du processus d’inscription à un site web d’entreprise, un avis est donné qu’en fournissant une adresse électronique, le sujet des données accepte de recevoir des emails sur des offres spéciales. Si le sujet des données lit l&#39;avis, la discrimination positive consistant à entrer dans son email est suffisante pour être considérée comme un consentement univoque.
 
@@ -86,9 +86,9 @@ En supposant que l’entreprise ait collecté des informations personnelles et q
 
 | Régulation | Période de réponse | Notes |
 | --- | --- | --- |
-| CCPA (Californie) | 45 jours |  |
+| CCPA (Californie) | 45 jours | |
 | RGPD (Union européenne) | 30 jours | Si la demande est complexe ou si de nombreuses demandes ont été effectuées par le même sujet de données, la demande peut être étendue à 60 jours. |
-| LGPD (Brésil) | 15 jours |  |
+| LGPD (Brésil) | 15 jours | |
 | PDPA (Thaïlande) | 30 jours | Si une société ne peut pas répondre à la demande d’un sujet de données dans le délai de conformité, elle disposera de 30 jours supplémentaires à compter de la date à laquelle elle n’a pas été en mesure de répondre par écrit à la personne concernée. |
 
 <!-- | New Zealand [!DNL Privacy Act] | 20 working days | | -->
@@ -115,7 +115,7 @@ Une fois que vous avez pris les mesures nécessaires pour authentifier les clien
 
 ## Questions relatives au CCPA
 
-Les questions suivantes concernent spécifiquement la CCPA.
+Les questions suivantes se rapportent spécifiquement à la CCPA.
 
 ### Comment les différents rôles et responsabilités de la CCPA s’appliquent-ils à Experience Cloud ?
 
@@ -144,7 +144,7 @@ Les questions suivantes concernent spécifiquement le RGPD.
 
 Un **règlement** constitue un acte législatif contraignant qui doit être appliqué dans son intégralité au sein de l’UE. Une **directive** est un acte législatif qui définit un objectif que tous les pays de l’UE doivent atteindre, mais c’est à chacun des pays de décider la manière dont ils souhaitent procéder pour y parvenir.
 
-Il faut souligner que le RGPD est un règlement, contrairement à la législation précédente (la directive sur la protection des données personnelles), qui est une directive.
+Il est important de noter que le RGPD est un règlement, contrairement à la législation précédente (la directive sur la protection des données), qui est une directive.
 
 ### De quelle manière le RGPD influe-t-il sur les politiques relatives aux violations des données ?
 
@@ -156,4 +156,4 @@ Les questions suivantes concernent spécifiquement le PDPA.
 
 ### Qu’est-ce que la notion de données personnelles sensibles ?
 
-Le PDPA prévoit des exigences strictes pour la collecte et le stockage de données personnelles sensibles, qui incluent des données personnelles concernant : l&#39;origine raciale ou ethnique, les opinions politiques, les croyances religieuses ou philosophiques, le casier judiciaire, les syndicalistes, les données génétiques, les données biométriques, les dossiers de santé et l&#39;orientation ou les préférences sexuelles.
+Le PDPA prévoit des exigences strictes pour la collecte et le stockage de données personnelles sensibles, notamment les données personnelles concernant : l’origine raciale ou ethnique, les opinions politiques, les croyances religieuses ou philosophiques, les casiers judiciaires, les adhésions syndicales, les données génétiques, les données biométriques, les dossiers de santé et l’orientation ou les préférences sexuelles.

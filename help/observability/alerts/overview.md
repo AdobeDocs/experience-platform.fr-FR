@@ -4,10 +4,10 @@ title: Présentation des alertes
 description: Découvrez les alertes dans Adobe Experience Platform, y compris la structure de la définition des règles d’alerte.
 feature: Alerts
 exl-id: c38a93c6-1618-4ef9-8f94-41c7ab4af43c
-source-git-commit: 37700c3b3b728b59083fd51cabf1d8e4b8213580
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '774'
-ht-degree: 94%
+source-wordcount: '773'
+ht-degree: 91%
 
 ---
 
@@ -83,13 +83,13 @@ Pour utiliser des alertes dans l’interface utilisateur de Platform, vous devez
 >
 >Pour plus d’informations sur la gestion des autorisations dans Platform, consultez la [documentation sur le contrôle d’accès](../../access-control/ui/overview.md).
 
-Avec l’autorisation Afficher les alertes, vous pouvez afficher les alertes reçues en sélectionnant l’icône représentant une cloche (![Icône de cloche](../images/alerts/overview/icon.png)) dans le coin supérieur droit.
+Avec l’autorisation Afficher les alertes , vous pouvez afficher les alertes reçues en sélectionnant l’icône représentant une cloche (![Icône Bell](../images/alerts/overview/icon.png)) dans le coin supérieur droit.
 
 ![](../images/alerts/overview/ui.png)
 
 >[!NOTE]
 >
-> Sélectionnez une alerte pour accéder au tableau de bord associé afin d’obtenir des informations plus détaillées sur les raisons pour lesquelles l’alerte a été déclenchée.
+> Sélectionnez une alerte pour accéder au tableau de bord associé afin d’obtenir des informations plus détaillées sur les raisons de déclenchement de l’alerte.
 
 En outre, l’onglet [!UICONTROL Alertes] de l’interface utilisateur permet à chaque utilisateur de s’abonner à des types d’alerte spécifiques et permet aux administrateurs d’activer ou de désactiver complètement les règles d’alerte. Pour plus d’informations sur la gestion des alertes, consultez le [guide de l’interface utilisateur](./ui.md).
 

@@ -7,10 +7,10 @@ landing-page-description: Trouvez des réponses aux questions fréquemment posé
 short-description: Trouvez des réponses aux questions fréquemment posées et obtenez un guide afin de résoudre les problèmes courants dans Experience Platform.
 type: Documentation
 exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
-source-git-commit: 096b844246d194a822e4ba1811aef05e494c92be
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1905'
-ht-degree: 98%
+source-wordcount: '1904'
+ht-degree: 97%
 
 ---
 
@@ -68,7 +68,7 @@ De nombreuses opérations PATCH dans les API [!DNL Platform] utilisent des chaî
 
 ## Quelle est la configuration requise pour [!DNL Platform] ? {#what-are-the-system-requirements-for-platform}
 
-Selon que vous utilisez l’interface utilisateur ou l’API, la configuration suivante est nécessaire :
+Selon que vous utilisez l’interface utilisateur ou l’API, la configuration système requise suivante s’applique :
 
 **Pour les opérations basées sur l’interface utilisateur :**
 - Un navigateur web standard et moderne. Bien que la dernière version de [!DNL Chrome] soit recommandée, les versions majeures actuelles et antérieures de [!DNL Firefox], [!DNL Internet Explorer], et Safari sont également prises en charge.
