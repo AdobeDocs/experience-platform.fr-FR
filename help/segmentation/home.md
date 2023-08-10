@@ -6,7 +6,7 @@ exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
 source-git-commit: 44c92e2163e2b6c0c140c64bba41dfbcc15d5d7f
 workflow-type: tm+mt
 source-wordcount: '1633'
-ht-degree: 48%
+ht-degree: 50%
 
 ---
 
@@ -57,7 +57,7 @@ Pour plus d’informations sur la création de définitions de segment à l’ai
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation"
 >title="Méthodes d’évaluation"
->abstract="Platform prend actuellement en charge trois méthodes d’évaluation des audiences : segmentation par flux, segmentation par lots et segmentation par périphérie."
+>abstract="Platform prend actuellement en charge trois méthodes d’évaluation des audiences : segmentation en flux continu, segmentation par lots et segmentation Edge."
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_streaming"
@@ -65,7 +65,7 @@ Pour plus d’informations sur la création de définitions de segment à l’ai
 >abstract="La segmentation par flux est un processus continu de sélection des données qui met à jour vos audiences en réponse à l’activité des utilisateurs et utilisatrices."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/api/streaming-segmentation.html?lang=fr" text="Évaluer les événements en temps quasi réel grâce à la segmentation par flux"
 
-Platform prend actuellement en charge trois méthodes d’évaluation des audiences : segmentation par flux, segmentation par lots et segmentation par périphérie.
+Platform prend actuellement en charge trois méthodes d’évaluation des audiences : segmentation en flux continu, segmentation par lots et segmentation Edge.
 
 ### Segmentation en flux continu {#streaming}
 
@@ -78,7 +78,7 @@ Pour plus d’informations sur la segmentation par flux, consultez la [documenta
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_batch"
 >title="Évaluation par lots"
->abstract="Au lieu d’un processus en continu de sélection de données, la segmentation par lots déplace toutes les données de profil à la fois dans les définitions de segment afin de produire des audiences correspondantes. Une fois créée, l&#39;audience est enregistrée et stockée afin que vous puissiez l&#39;exporter pour l&#39;utiliser."
+>abstract="Au lieu d’un processus en continu de sélection de données, la segmentation par lots déplace toutes les données de profil à la fois dans les définitions de segment afin de produire des audiences correspondantes. Une fois créée, l’audience est enregistrée et stockée afin que vous puissiez l&#39;exporter pour l’utiliser."
 
 Au lieu d’un processus en continu de sélection de données, la segmentation par lots déplace toutes les données de profil à la fois dans les définitions de segment afin de produire des audiences correspondantes. Une fois créée, l&#39;audience obtenue est enregistrée et stockée afin que vous puissiez l&#39;exporter pour l&#39;utiliser.
 
