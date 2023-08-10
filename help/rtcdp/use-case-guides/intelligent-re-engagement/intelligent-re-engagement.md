@@ -3,9 +3,9 @@ title: Réengagement intelligent
 description: Diffusez des expériences attrayantes et connectées au cours des moments de conversion clés pour réengager intelligemment les clients les plus rares.
 hide: true
 hidefromtoc: true
-source-git-commit: 7ff623626b557cbf67ad6164157d1a5ef4820cb1
+source-git-commit: 8b38114e600986979728e1c4e36245ff0aa3be65
 workflow-type: tm+mt
-source-wordcount: '3259'
+source-wordcount: '3258'
 ht-degree: 8%
 
 ---
@@ -401,7 +401,7 @@ To create a dataset from a schema, complete the steps below:
 ![A recording of the steps to create a dataset from a schema.](../intelligent-re-engagement/images/dataset-from-schema.gif)
 -->
 
->Remarque
+>[!NOTE]
 >
 >Tout comme l’étape de création d’un schéma, vous devez activer l’inclusion du jeu de données dans le profil client en temps réel. Pour plus d’informations sur l’activation du jeu de données à utiliser dans Real-Time Customer Profile, consultez la section [tutoriel sur la création de schéma.](/help/xdm/tutorials/create-schema-ui.md#profile).
 
