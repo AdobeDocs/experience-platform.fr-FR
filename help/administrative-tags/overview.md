@@ -1,20 +1,16 @@
 ---
 keywords: Experience Platform;accueil;rubriques les plus consultées;balises unifiées;balises;
-title: Présentation des balises unifiées (version Beta)
+title: Présentation des balises unifiées
 description: Ce document est consacré aux balises unifiées dans Adobe Experience Platform.
 exl-id: a19e37c3-697a-4000-9cb8-d67478b47dc6
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 6977438d57dc8e1390812e58bf039ebc60cb830d
 workflow-type: tm+mt
-source-wordcount: '607'
-ht-degree: 100%
+source-wordcount: '578'
+ht-degree: 98%
 
 ---
 
-# Présentation des balises unifiées (version Beta)
-
->[!IMPORTANT]
->
->Les balises unifiées sont disponibles en version Beta. Pour faire part de vos commentaires, cliquez sur le bouton en haut de la page d’administration Balises.
+# Présentation des balises unifiées
 
 Les balises sont une fonctionnalité d’Adobe Experience Platform qui permet à l’administration de gérer les taxonomies de métadonnées et de classer les objets d’entreprise pour une découverte et un classement plus simples. Pensez aux balises comme à des mots-clés : associez-les à un segment, un jeu de données, un parcours, etc. pour identifier ces objets. Vous pourrez ensuite rechercher cet objet et les objets associés grâce à leur balise. Il existe deux catégories de balises : classées et non classées.
 
