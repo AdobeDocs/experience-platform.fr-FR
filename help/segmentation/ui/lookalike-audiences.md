@@ -5,9 +5,9 @@ description: Découvrez comment cibler de nouvelles audiences à forte valeur aj
 badgeLimitedAvailability: label="Disponibilité limitée" type=Caution
 hide: true
 hidefromtoc: true
-source-git-commit: d0b839dfc35ff9f8b4db34c61d2cdd820bfd448b
+source-git-commit: c4a888768015542e37290cb3c919cb60fca4e548
 workflow-type: tm+mt
-source-wordcount: '1937'
+source-wordcount: '2123'
 ht-degree: 1%
 
 ---
@@ -42,7 +42,7 @@ Dans Adobe Experience Platform, le modèle analogue utilise trois types de point
 
 Tous ces points de données sont transformés en paires valeur-clé qui sont transmises au modèle analogue. Seules les paires clé-valeur avec un pourcentage significatif de correspondance de profils seront conservées.
 
-Le modèle analogue est exécuté de manière fréquente, ce qui crée et recrée les facteurs d’influence et les graphiques de similitudes pour les audiences de base. La notation pour les audiences analogue est également exécutée fréquemment.
+Actuellement, le modèle look-alike est exécuté toutes les 24 heures, créant et recréant les facteurs d’influence et les graphiques de similitudes pour les audiences de base. La notation pour les audiences analogue est également exécutée fréquemment.
 
 ## Droits {#entitlements}
 
@@ -52,11 +52,26 @@ Les droits suivants s’appliquent à l’utilisation des audiences de type anal
 - Les clients Real-Time CDP Ultimate ont le droit de **20** Audiences ressemblantes principales dans les environnements de test de production
 - Les environnements de test de développement sont limités à **5** Audiences identiques pour tous les clients Real-Time CDP
 
-Des modules complémentaires sont disponibles, ce qui augmente les droits pour les environnements de test de production de 20 audiences semblables par pack.
+Les modules complémentaires, qui seront disponibles ultérieurement, augmenteront les droits pour les environnements de test de production de 20 audiences analogue par pack.
 
 Pour confirmer que vous avez accès aux audiences analogue, contactez votre représentant d’Adobe.
 
 ## Affichage des insights semblables {#view}
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_lookAlike_notEligible"
+>title="Non éligible"
+>abstract="Cette audience n’est actuellement pas éligible aux insights semblables, car elle peut avoir moins du nombre minimum de profils requis pour la formation ou l’exportation de profils n’a pas encore été déclenchée."
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_lookAlike_processing"
+>title="En cours de traitement"
+>abstract="Cette audience est en cours de traitement. Le traitement du modèle peut prendre jusqu’à 24 heures. Veuillez vérifier à nouveau plus tard."
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_lookAlike_error"
+>title="Erreur"
+>abstract="Une erreur s’est produite lors du traitement de ce modèle. Supprimez et recréez ce modèle ou réessayez plus tard."
 
 Les insights semblables sont intégrés à la page des détails de l’audience. Pour consulter les insights semblables d’une audience, sélectionnez **[!UICONTROL Audiences]** dans la barre de navigation de gauche, suivie de **[!UICONTROL Parcourir]** et l’audience pour laquelle vous souhaitez afficher les insights.
 
@@ -68,10 +83,10 @@ La page Détails de l’audience s’affiche. Sélectionner **[!UICONTROL Aperç
 
 ### Similarité et portée {#similarity-and-reach}
 
-<!-- >[!CONTEXTUALHELP]
+>[!CONTEXTUALHELP]
 >id="platform_audiences_lookAlike_similarityAndReach"
->title="Similarity and reach"
->abstract="" -->
+>title="Similarité et portée"
+>abstract="Le graphique de similarité et de portée trace la portée attendue d’une audience analogue composée de profils au-dessus d’un score de similarité donné. Vous pouvez pointer sur un point spécifique du graphique pour afficher le pourcentage de similarité et le nombre de profils attendu pour le point actuellement surligné."
 
 La section similarité et portée affiche un graphique qui trace la portée attendue d’une audience analogue composée de profils au-dessus d’un score de similarité donné. Le score de similarité représente la variable **distance** de similarité entre le profil de l’audience de base et le profil de l’insight analogue.
 
@@ -93,11 +108,11 @@ La section Audiences identiques affiche la liste de toutes les audiences similai
 
 ### Facteurs d’influence {#influential-factors}
 
-<!-- >[!CONTEXTUALHELP]
+>[!CONTEXTUALHELP]
 >id="platform_audiences_lookAlike_influentialFactors"
->title="Influential factors"
->abstract="Influential factors are attributes, events and audience memberships that are important in explaining similarity of a profile to members of the base audience. Data usage labels and policies can be used to exclude certain data from being considered as influential factors in look-alike models."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/lookalike-audiences.html?lang=en#exclude" text="Exclude data" -->
+>title="Facteurs d’influence"
+>abstract="Les facteurs d’influence sont les attributs, les événements et les appartenances à l’audience qui sont importants pour expliquer la similarité d’un profil aux membres de l’audience de base. Les libellés et stratégies d’utilisation des données peuvent être utilisés pour exclure certaines données de la prise en compte comme facteurs d’influence dans les modèles semblables."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/lookalike-audiences.html?lang=en#exclude" text="Exclure des données"
 
 La section facteurs d’influence présente les 100 principaux facteurs qui influencent le modèle analogue pour l’audience de base sélectionnée. Ces facteurs d’influence sont les attributs de profil, les événements d’expérience et les appartenances à l’audience qui sont les plus importants pour expliquer les similitudes dans l’audience de base. La compréhension des principaux facteurs d’influence vous permet de mieux personnaliser le contenu marketing de votre audience et de toute audience analogue que vous créez à partir de celle-ci. Notez que tous les facteurs d’influence qui affectent le modèle analogue ne s’affichent pas.
 
