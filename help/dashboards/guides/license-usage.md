@@ -7,7 +7,7 @@ exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
 source-git-commit: fa4fc154f57243250dec9bdf9557db13ef7768e8
 workflow-type: tm+mt
 source-wordcount: '935'
-ht-degree: 16%
+ht-degree: 17%
 
 ---
 
@@ -25,7 +25,7 @@ Le tableau de bord de l’utilisation des licences affiche un instantané des do
 >
 >Les modifications ou mises à jour apportées aux données depuis la prise dʼun instantané ne seront pas reflétées dans le tableau de bord avant la prise de lʼinstantané suivant.
 
-## Exploration du tableau de bord de l’utilisation des licences
+## Exploration du tableau de bord d’utilisation des licences
 
 Pour accéder au tableau de bord de l’utilisation des licences dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Utilisation des licences]** dans le rail de gauche. L’onglet **[!UICONTROL Vue d’ensemble]** du tableau de bord s’ouvre alors.
 
@@ -50,7 +50,6 @@ La création de rapports de consommation pour les environnements de test est cum
 >1. Créez un profil de produit dans Adobe Admin Console.
 >2. Sous Autorisation dans la catégorie Sandbox , ajoutez tous les environnements de test que vous souhaitez afficher dans le tableau de bord de l’utilisation des licences.
 >3. Dans la catégorie Autorisation du tableau de bord utilisateur , ajoutez l’autorisation &quot;Afficher le tableau de bord de l’utilisation de la licence&quot;.
-
 
 ### Sélection d’une période
 
@@ -83,12 +82,12 @@ La disponibilité de ces mesures et la définition spécifique de chacune d’el
 
 | Licence | Description du produit |
 |---|---|
-| <ul><li>Adobe Experience Platform:OD LITE</li><li>Adobe Experience Platform:OD STANDARD</li><li>Adobe Experience Platform:OD HEAVY</li></ul> | [Adobe Experience Platform](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform.html) |
-| <ul><li>Adobe Experience Platform:OD</li></ul> | [Experience Platform, services d’application et services intelligents](https://helpx.adobe.com/legal/product-descriptions/exp-platform-app-svcs.html) |
+| <ul><li>ADOBE EXPERIENCE PLATFORM:OD LITE</li><li>ADOBE EXPERIENCE PLATFORM:OD STANDARD</li><li>ADOBE EXPERIENCE PLATFORM:OD HEAVY</li></ul> | [Adobe Experience Platform](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform.html) |
+| <ul><li>ADOBE EXPERIENCE PLATFORM:OD</li></ul> | [Experience Platform, services d’application et services intelligents](https://helpx.adobe.com/legal/product-descriptions/exp-platform-app-svcs.html) |
 | <ul><li>RT CUSTOMOMENT DATA PLATFORM:OD</li><li>RT CUSTOMER DATA PLATFORM:OD PRFL À 10M</li><li>RT CUSTOMER DATA PLATFORM:OD PRFL À 50M</li></ul> | [Adobe Real-time Customer Data Platform](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform.html) |
 | <ul><li>ACTIVATION AEP:OD</li><li>AEP:OD ACTIVATION PRFL À 10M</li><li>AEP:PRFL D’ACTIVATION OD JUSQU’À 50 M</li></ul> | [Activation de Adobe Experience Platform](https://helpx.adobe.com/fr/legal/product-descriptions/adobe-experience-platform0.html) |
 | <ul><li>AEP:INTELLIGENCE OD</li></ul> | [Adobe Experience Platform Intelligence](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform-intelligence---product-description.html) |
-| <ul><li>Journey Optimizer SELECT:OD</li><li>Journey Optimizer PRIME : OD</li><li>Journey Optimizer ULTIMATE:OD</li><li>UNP AJO PRIME STARTER:OD</li><li>UNP AJO ULTIMATE STARTER:OD</li><li>UNP Real-Time CDP : ORCHESTRATION DU PROFIL OD</li></ul> | [Adobe Journey Optimizer](https://helpx.adobe.com/fr/legal/product-descriptions/adobe-journey-optimizer.html) |
+| <ul><li>JOURNEY OPTIMIZER SELECT:OD</li><li>JOURNEY OPTIMIZER PRIME : OD</li><li>JOURNEY OPTIMIZER ULTIMATE:OD</li><li>UNP AJO PRIME STARTER:OD</li><li>DÉMARRAGE ULTIMATE DE L’OPTION UNP AJO : OD</li><li>UNP REAL-TIME CDP : ORCHESTRATION DU PROFIL OD</li></ul> | [Adobe Journey Optimizer](https://helpx.adobe.com/fr/legal/product-descriptions/adobe-journey-optimizer.html) |
 
 >[!WARNING]
 >

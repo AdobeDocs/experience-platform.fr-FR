@@ -2,7 +2,7 @@
 keywords: Experience Platform;accueil;rubriques populaires;sandbox;Sandbox;test;Test
 solution: Experience Platform
 title: Présentation des sandbox
-description: Les sandbox constituent des partitions virtuelles au sein d’une instance d’Experience Platform unique, ce qui permet une intégration transparente au processus de développement de vos applications d’expérience numérique.
+description: Les sandbox constituent des partitions virtuelles au sein d’une instance d’Experience Platform unique, ce qui permet une intégration transparente au processus de développement de vos applications d’expérience digitale.
 exl-id: b760a979-8134-4a44-8433-ec6fb49bc508
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
@@ -13,15 +13,15 @@ ht-degree: 100%
 
 # Présentation des sandbox
 
-Adobe Experience Platform est conçu pour enrichir les applications d’expérience numérique à l’échelle mondiale. Les entreprises exécutent souvent plusieurs applications d’expérience numérique en parallèle et doivent prendre en charge le développement, les tests et le déploiement de ces applications tout en assurant la conformité opérationnelle.
+Adobe Experience Platform est conçu pour enrichir les applications d’expérience digitale à l’échelle mondiale. Les entreprises exécutent souvent plusieurs applications d’expérience digitale en parallèle et doivent prendre en charge le développement, les tests et le déploiement de ces applications tout en assurant la conformité opérationnelle.
 
-Pour répondre à ce besoin, Experience Platform fournit des sandbox qui divisent une instance unique de Platform en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
+Pour répondre à ce besoin, Experience Platform fournit des sandbox qui divisent une instance de Platform unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
 Ce document présente de manière générale les sandbox dans Experience Platform.
 
 ## Fonctionnement des sandbox
 
-Les sandbox constituent des partitions virtuelles au sein d’une instance d’Experience Platform unique, ce qui permet une intégration transparente au processus de développement de vos applications d’expérience numérique. Tout le contenu et les actions réalisés dans un sandbox sont limités à celui-ci et n’en affectent aucun autre. Deux types de sandbox sont pris en charge sur Experience Platform :
+Les sandbox constituent des partitions virtuelles au sein d’une instance d’Experience Platform unique, ce qui permet une intégration transparente au processus de développement de vos applications d’expérience digitale. Tout le contenu et les actions réalisés dans un sandbox sont limités à celui-ci et n’en affectent aucun autre. Deux types de sandbox sont pris en charge sur Experience Platform :
 
 * **Sandbox de production** : un sandbox de production est conçu pour être utilisé avec des profils dans votre environnement de production. Platform vous permet de créer plusieurs sandbox de production afin de fournir les fonctionnalités appropriées aux données tout en maintenant l’isolation opérationnelle. Cette fonctionnalité vous permet de dédier des sandbox de production spécifiques à des secteurs d’activité, des marques, des projets ou des régions distincts. Les sandbox de production prennent en charge un volume de profils de production allant jusqu’à votre engagement sous licence de [!DNL Profile] (mesuré de manière cumulée sur tous vos sandbox de production autorisés). Vous avez le droit d’utiliser un profil moyen sous licence par [!DNL Profile] autorisé (mesuré de manière cumulée sur tous vos sandbox de production autorisés).
 * **Sandbox de développement** : un sandbox de développement est un sandbox qui peut être utilisé exclusivement à des fins de développement et de test avec des profils hors production. Les sandbox de développement prennent en charge un volume de profils hors production pouvant atteindre 10 % de votre engagement sous licence de [!DNL Profile] (mesuré de manière cumulée sur tous vos sandbox de développement autorisés). Vos droits incluent jusqu’à :
@@ -41,7 +41,7 @@ Enfin, la sandbox de production par défaut est la première sandbox de producti
 
 Pour résumer, les sandbox offrent les avantages suivants :
 
-* **Gestion du cycle de vie des applications** : créez des environnements virtuels distincts pour développer et faire évoluer des applications d’expérience numérique.
+* **Gestion du cycle de vie des applications** : créez des environnements virtuels distincts pour développer et faire évoluer des applications d’expérience digitale.
 * **Gestion de projet et de marque** : permet à plusieurs projets de fonctionner en parallèle au sein de la même organisation, tout en maintenant l’isolement et le contrôle d’accès. Les prochaines versions prendront en charge l’assistance au déploiement dans plusieurs régions.
 * **Écosystème de développement flexible** : proposez des sandbox de manière transparente, évolutive et économique pour l’exploration, l’activation et la démonstration.
 
