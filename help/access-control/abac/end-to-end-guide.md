@@ -1,9 +1,9 @@
 ---
 keywords: Experience Platform;accueil;rubriques populaires;contrôle d’accès;contrôle d’accès basé sur les attributs;
 title: Guide de bout en bout du contrôle d’accès basé sur les attributs
-description: Ce document fournit un guide de bout en bout sur le contrôle d’accès basé sur les attributs dans Adobe Experience Platform.
+description: Ce document fournit un guide de bout en bout sur le contrôle d’accès basé sur les attributs dans Adobe Experience Platform
 exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
-source-git-commit: 004f6183f597132629481e3792b5523317b7fb2f
+source-git-commit: cf10eb11773320d10ece53f192beacc8da83e980
 workflow-type: tm+mt
 source-wordcount: '1726'
 ht-degree: 27%
@@ -42,10 +42,10 @@ Pour ce faire, vous devez configurer les rôles, les ressources et les stratégi
 
 Vous allez :
 
-* [Étiqueter les rôles de vos utilisateurs](#label-roles): Utilisez l’exemple d’un prestataire de santé (ACME Business Group) dont le groupe marketing travaille avec des agences externes.
-* [Étiqueter vos ressources (champs de schéma et segments)](#label-resources): Attribuez le **[!UICONTROL PHI/Données d’intégrité réglementées]** libellé aux ressources de schéma et aux segments.
+* [Étiqueter les rôles de vos utilisateurs](#label-roles): utilisez l’exemple d’un prestataire de santé (ACME Business Group) dont le groupe marketing travaille avec des agences externes.
+* [Étiqueter vos ressources (champs de schéma et segments)](#label-resources): attribuez la variable **[!UICONTROL PHI/Données d’intégrité réglementées]** libellé aux ressources de schéma et aux segments.
 * 
-   * [Activez la stratégie qui les reliera : ](#policy): Activez la stratégie par défaut pour empêcher l’accès aux champs de schéma et aux segments en connectant les libellés de vos ressources aux libellés de votre rôle. Les utilisateurs disposant de libellés correspondants auront alors accès au champ de schéma et au segment dans tous les environnements de test.
+   * [Activez la stratégie qui les reliera :](#policy): activez la stratégie par défaut pour empêcher l’accès aux champs de schéma et aux segments en connectant les libellés de vos ressources aux libellés de votre rôle. Les utilisateurs disposant de libellés correspondants auront alors accès au champ de schéma et au segment dans tous les environnements de test.
 
 ## Autorisations
 
@@ -55,7 +55,7 @@ Via [!UICONTROL Autorisations], vous pouvez créer et gérer des rôles et attri
 
 Contactez votre administrateur système pour obtenir un accès si vous ne disposez pas de droits d’administrateur.
 
-Une fois que vous disposez des droits d’administrateur, accédez à [Adobe Experience Cloud](https://experience.adobe.com/) et connectez-vous à l’aide de vos informations d’identification d’Adobe. Une fois connecté, l’événement **[!UICONTROL Présentation]** s’affiche pour votre organisation pour laquelle vous disposez des droits d’administrateur. Cette page présente les produits auxquels votre organisation est abonnée, ainsi que d’autres contrôles permettant d’ajouter des utilisateurs et des administrateurs à l’organisation. Sélectionner **[!UICONTROL Autorisations]** pour ouvrir l’espace de travail de votre intégration Platform.
+Une fois que vous disposez des droits d’administrateur, accédez à [Adobe Experience Cloud](https://experience.adobe.com/) et connectez-vous à l’aide de vos informations d’identification d’Adobe. Une fois connecté, le **[!UICONTROL Présentation]** s’affiche pour votre organisation pour laquelle vous disposez des droits d’administrateur. Cette page présente les produits auxquels votre organisation est abonnée, ainsi que d’autres contrôles permettant d’ajouter des utilisateurs et des administrateurs à l’organisation. Sélectionner **[!UICONTROL Autorisations]** pour ouvrir l’espace de travail de votre intégration Platform.
 
 ![Image montrant le produit Autorisations sélectionné dans Adobe Experience Cloud](../images/flac-ui/flac-select-product.png)
 
@@ -104,7 +104,7 @@ Ensuite, sélectionnez **[!UICONTROL Étiquettes]** puis sélectionnez **[!UICON
 
 Une liste de tous les libellés de votre organisation s’affiche. Sélectionner **[!UICONTROL RHD]** pour ajouter le libellé de **[!UICONTROL PHI/Données d’intégrité réglementées]**. Autoriser l’affichage d’une coche bleue en regard du libellé pendant quelques instants, puis sélectionnez **[!UICONTROL Enregistrer]**.
 
-![Image montrant l&#39;étiquette du disque dur en cours de sélection et d&#39;enregistrement](../images/abac-end-to-end-user-guide/abac-select-role-label.png)
+![Image montrant le libellé du disque dur (RHD) sélectionné et enregistré](../images/abac-end-to-end-user-guide/abac-select-role-label.png)
 
 >[!NOTE]
 >
@@ -114,17 +114,17 @@ Une liste de tous les libellés de votre organisation s’affiche. Sélectionner
 
 Maintenant que vous avez configuré un rôle d’utilisateur avec la fonction [!UICONTROL RHD] , l’étape suivante consiste à ajouter le même libellé aux ressources que vous souhaitez contrôler pour ce rôle.
 
-Sélectionner **[!UICONTROL Schémas]** dans le volet de navigation de gauche, puis sélectionnez **[!UICONTROL ACME Health Care]** dans la liste des schémas qui s’affichent.
+Sélectionner **[!UICONTROL Schémas]** dans le volet de navigation de gauche, puis sélectionnez **[!UICONTROL ACME Healthcare]** dans la liste des schémas qui s’affichent.
 
 ![Image montrant le schéma ACME Health care sélectionné dans l’onglet Schémas](../images/abac-end-to-end-user-guide/abac-select-schema.png)
 
-Ensuite, sélectionnez **[!UICONTROL Étiquettes]** pour afficher une liste qui affiche les champs associés à votre schéma. À partir de là, vous pouvez attribuer des étiquettes à un ou plusieurs champs à la fois. Sélectionnez la **[!UICONTROL BloodGluglucose]** et **[!UICONTROL InsulinLevel]** puis sélectionnez **[!UICONTROL Appliquer les étiquettes d’accès et de gouvernance des données]**.
+Ensuite, sélectionnez **[!UICONTROL Étiquettes]** pour afficher une liste qui affiche les champs associés à votre schéma. À partir de là, vous pouvez attribuer des étiquettes à un ou plusieurs champs à la fois. Sélectionnez la variable **[!UICONTROL BloodGluglucose]** et **[!UICONTROL InsulinLevel]** puis sélectionnez **[!UICONTROL Appliquer les étiquettes d’accès et de gouvernance des données]**.
 
 ![Image montrant la sélection des étiquettes BloodGluglucose et InsulinLevel et l’application des étiquettes d’accès et de gouvernance des données](../images/abac-end-to-end-user-guide/abac-select-schema-labels-tab.png)
 
-Le **[!UICONTROL Modifier les libellés]** s’affiche, vous permettant de choisir les libellés à appliquer aux champs du schéma. Pour ce cas pratique, sélectionnez la variable **[!UICONTROL PHI/Données d’intégrité réglementées]** libellé, puis sélectionnez **[!UICONTROL Enregistrer]**.
+La variable **[!UICONTROL Modifier les libellés]** s’affiche, vous permettant de choisir les libellés à appliquer aux champs du schéma. Pour ce cas pratique, sélectionnez la variable **[!UICONTROL PHI/Données d’intégrité réglementées]** libellé, puis sélectionnez **[!UICONTROL Enregistrer]**.
 
-![Image montrant l&#39;étiquette du disque dur en cours de sélection et d&#39;enregistrement](../images/abac-end-to-end-user-guide/abac-select-schema-labels.png)
+![Image montrant le libellé du disque dur (RHD) sélectionné et enregistré](../images/abac-end-to-end-user-guide/abac-select-schema-labels.png)
 
 >[!NOTE]
 >
@@ -132,7 +132,7 @@ Le **[!UICONTROL Modifier les libellés]** s’affiche, vous permettant de chois
 
 ## Application d’étiquettes aux segments
 
-Une fois que vous avez terminé l’étiquetage de vos champs de schéma, vous pouvez commencer à les libeller.
+Une fois les champs de schéma libellés, vous pouvez commencer à les libeller.
 
 Sélectionner **[!UICONTROL Segments]** dans le volet de navigation de gauche. Une liste des segments disponibles dans votre organisation s’affiche. Dans cet exemple, les deux segments suivants doivent être étiquetés, car ils contiennent des données d’intégrité sensibles :
 
@@ -147,7 +147,7 @@ Le segment **[!UICONTROL Détails]** s’affiche. Sélectionner **[!UICONTROL G�
 
 ![Image montrant la sélection de l’accès Manages](../images/abac-end-to-end-user-guide/abac-segment-fields-manage-access.png)
 
-Le **[!UICONTROL Modifier les libellés]** s’affiche, vous permettant de choisir les libellés à appliquer au segment. Pour ce cas pratique, sélectionnez la variable **[!UICONTROL PHI/Données d’intégrité réglementées]** libellé, puis sélectionnez **[!UICONTROL Enregistrer]**.
+La variable **[!UICONTROL Modifier les libellés]** s’affiche, vous permettant de choisir les libellés à appliquer au segment. Pour ce cas pratique, sélectionnez la variable **[!UICONTROL PHI/Données d’intégrité réglementées]** libellé, puis sélectionnez **[!UICONTROL Enregistrer]**.
 
 ![Image montrant la sélection du libellé RHD et de l&#39;enregistrement sélectionné](../images/abac-end-to-end-user-guide/abac-select-segment-labels.png)
 
@@ -190,7 +190,7 @@ La confirmation de l’activation de la stratégie est reçue et vous revenez à
 >[!CONTEXTUALHELP]
 >id="platform_permissions_policies_edit_permitdeny"
 >title="Configure permissible and impermissible actions for a policy"
->abstract="A <b>deny access to</b> policy will deny users access when the criteria is met. Combined with <b>The following being false</b> - all users will be denied access unless they meet the matching criteria set. This type of policy allows you to protect a sensitive resource and only allow access to users with matching labels. <br>A <b>permit access to</b> policy will permit users access when the criteria are met. When combined with <b>The following being true</b> - users will be given access if they meet the matching criteria set. This does not explicitly deny access to users, but adds a permit access. This type of policy allows you to give additional access to resource and in addition to those users who might already have access through role permissions."</br>
+>abstract="A <b>deny access to</b> policy will deny users access when the criteria is met. Combined with <b>The following being false</b> - all users will be denied access unless they meet the matching criteria set. This type of policy allows you to protect a sensitive resource and only allow access to users with matching labels. <br>A <b>permit access to</b> policy will permit users access when the criteria are met. When combined with <b>The following being true</b> - users will be given access if they meet the matching criteria set. This does not explicitly deny access to users, but adds a permit access. This type of policy allows you to give additional access to resource and in addition to those users who might already have access through role permissions."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=en#edit-a-policy" text="Edit a policy"
 
 >[!CONTEXTUALHELP]
