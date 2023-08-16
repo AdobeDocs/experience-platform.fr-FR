@@ -3,9 +3,7 @@ solution: Experience Platform
 title: Audiences similaires
 description: Découvrez comment cibler de nouvelles audiences à forte valeur ajoutée dans Adobe Experience Platform à l’aide d’audiences analogue.
 badgeLimitedAvailability: label="Disponibilité limitée" type=Caution
-hide: true
-hidefromtoc: true
-source-git-commit: c4a888768015542e37290cb3c919cb60fca4e548
+source-git-commit: 4bd26857d2c714cd629fc46dbb9b6da6a29358c8
 workflow-type: tm+mt
 source-wordcount: '2123'
 ht-degree: 1%
@@ -48,8 +46,8 @@ Actuellement, le modèle look-alike est exécuté toutes les 24 heures, créant 
 
 Les droits suivants s’appliquent à l’utilisation des audiences de type analogue :
 
-- Les clients Real-Time CDP Prime ont le droit de **5** Audiences ressemblantes principales dans les environnements de test de production
-- Les clients Real-Time CDP Ultimate ont le droit de **20** Audiences ressemblantes principales dans les environnements de test de production
+- Les clients Real-Time CDP Prime ont le droit de **5** Audiences similaires actives dans les environnements de test de production
+- Les clients Real-Time CDP Ultimate ont le droit de **20** Audiences similaires actives dans les environnements de test de production
 - Les environnements de test de développement sont limités à **5** Audiences identiques pour tous les clients Real-Time CDP
 
 Les modules complémentaires, qui seront disponibles ultérieurement, augmenteront les droits pour les environnements de test de production de 20 audiences analogue par pack.
