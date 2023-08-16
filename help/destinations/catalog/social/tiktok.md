@@ -3,10 +3,10 @@ title: Connexion à TikTok
 description: Créez des audiences personnalisées sur TikTok avec vos données pour le ciblage de vos campagnes publicitaires. Il peut s’agir de personnes qui ont visité votre site web ou interagi avec votre contenu. Poussez rapidement et en toute sécurité l’audience souhaitée de Adobe Experience Platform vers TikTok à l’aide de l’intégration en temps réel d’Adobe à TikTok Ads Manager.
 last-substantial-update: 2023-03-20T00:00:00Z
 exl-id: 7b12d17f-7d9a-4615-9830-92bffe3f6927
-source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
+source-git-commit: d9d31013d93e0e9e4e291a63840869e73d30ef01
 workflow-type: tm+mt
-source-wordcount: '983'
-ht-degree: 42%
+source-wordcount: '1010'
+ht-degree: 41%
 
 ---
 
@@ -30,7 +30,9 @@ Une marque de vêtements d’athlétisme veut atteindre ses clients existants pa
 
 ## Conditions préalables {#prerequisites}
 
-Avant d’envoyer des données à [!DNL TikTok Ads Manager] , vous devez autoriser Adobe Experience Platform à accéder à votre compte publicitaire pour `Audience Management`. Cette autorisation peut être fournie en saisissant votre identifiant publicitaire dans Experience Platform et en suivant la redirection pour accorder l’autorisation. Vous trouverez plus d’instructions dans la section [Documentation de l’API TikTok](https://ads.tiktok.com/marketing_api/docs?id=1738373141733378).
+Vous devez avoir [!DNL Admin] ou [!DNL Operator] accéder au compte TikTok Ads Manager auquel vous souhaitez envoyer des audiences. Vous trouverez plus d’instructions sur la page [Centre d’aide TikTok](https://ads.tiktok.com/help/article/add-users-tiktok-business-center?lang=en).
+
+Avant d’envoyer des données à votre compte TikTok Ads Manager, vous devez autoriser Adobe Experience Platform à accéder à votre compte publicitaire pour la variable `Audience Management`. Cette autorisation peut être fournie par [saisie de votre identifiant Ads Manager](#authenticate) dans l’interface utilisateur de l’Experience Platform et en accordant l’autorisation après avoir été redirigé vers votre compte TikTok Ads Manager.
 
 ## Identités prises en charge {#supported-identities}
 
