@@ -5,7 +5,7 @@ breadcrumb-title: Balises
 user-guide-description: Découvrez comment déployer et gérer des balises d’analyse, de marketing et de publicité pour améliorer les expériences clients.
 feature: Tags
 solution: Data Collection
-source-git-commit: 2772660936444e39124a75deda6f78d97f7793f2
+source-git-commit: 1ca080f6dd62c49c1f1672ec36ce446af591b6b6
 workflow-type: tm+mt
 source-wordcount: '1027'
 ht-degree: 98%
@@ -45,7 +45,7 @@ ht-degree: 98%
    * [Bibliothèques](./ui/publishing/libraries.md)
    * [Bibliothèques auto-hébergées](./ui/publishing/hosts/self-hosting-libraries.md)
    * [Republication de bibliothèque](./ui/publishing/republish.md)
-   * [Prise en charge du réseau CDN Premium (bêta)](./ui/publishing/premium-cdn.md)
+   * [Balises Experience Platform (Chine)](./ui/publishing/premium-cdn.md)
 * Informations côté client {#client-side}
    * [Aperçu](./ui/client-side/overview.md)
    * [Déploiement asynchrone](./ui/client-side/asynchronous-deployment.md)
