@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Évaluer les événements en temps quasi réel grâce à la segmentation en flux continu
 description: Ce document contient des exemples d’utilisation de la segmentation par diffusion en flux continu avec l’API du service de segmentation Adobe Experience Platform.
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: 23504dd0909488e2ee63bf356fba4c7f0f7320dc
 workflow-type: tm+mt
-source-wordcount: '1992'
-ht-degree: 71%
+source-wordcount: '1956'
+ht-degree: 69%
 
 ---
 
@@ -31,7 +31,7 @@ La segmentation en flux continu sur [!DNL Adobe Experience Platform] permet aux 
 Ce guide de développement nécessite une connaissance pratique des divers services [!DNL Adobe Experience Platform] impliqués dans la segmentation en flux continu. Avant de commencer ce tutoriel, veuillez consulter la documentation relative aux services suivants :
 
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md) : fournit un profil de consommateur en temps réel unifié basé sur des données agrégées provenant de plusieurs sources.
-- [[!DNL Segmentation]](../home.md): Permet de créer des audiences à l’aide de définitions de segment et d’autres sources externes à partir de vos [!DNL Real-Time Customer Profile] data.
+- [[!DNL Segmentation]](../home.md): permet de créer des audiences à l’aide de définitions de segment et d’autres sources externes à partir de votre [!DNL Real-Time Customer Profile] data.
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md) : cadre normalisé selon lequel [!DNL Platform] organise les données de l’expérience client.
 
 Les sections suivantes contiennent des informations supplémentaires nécessaires pour passer des appels à des API [!DNL Platform].
@@ -76,8 +76,7 @@ Pour qu’une définition de segment soit évaluée à l’aide de la segmentati
 | Événement unique dans une fenêtre temporelle relative | Toute définition de segment qui fait référence à un seul événement entrant. |
 | Événement unique avec une fenêtre temporelle | Toute définition de segment qui fait référence à un seul événement entrant avec une fenêtre temporelle. |
 | Profil uniquement | Toute définition de segment qui ne fait référence qu’à un attribut de profil. |
-| Événement unique avec un attribut de profil | Toute définition de segment qui fait référence à un seul événement entrant, sans restriction temporelle, et à un ou plusieurs attributs de profil. **Remarque :** la requête est immédiatement évaluée lorsque l’événement arrive. Toutefois, dans le cas d’un événement de profil, il doit attendre 24 heures pour être incorporé. |
-| Événement unique avec un attribut de profil dans une fenêtre temporelle relative | Toute définition de segment qui fait référence à un seul événement entrant et à un ou plusieurs attributs de profil. |
+| Événement unique avec un attribut de profil dans une fenêtre temporelle relative inférieure à 24 heures | Toute définition de segment qui fait référence à un seul événement entrant, avec un ou plusieurs attributs de profil, et qui se produit dans une fenêtre de temps relative de moins de 24 heures. |
 | Segment de segments | Toute définition de segment contenant un ou plusieurs segments par lots ou en diffusion en flux continu. **Remarque :** si un segment est utilisé, la disqualification du profil se produit **toutes les 24 heures**. |
 | Plusieurs événements avec un attribut de profil | Toute définition de segment qui fait référence à plusieurs événements **au cours des dernières 24 heures** et (éventuellement) comporte un ou plusieurs attributs de profil. |
 
@@ -105,7 +104,7 @@ Vous pouvez récupérer une liste de toutes vos définitions de segment activée
 
 **Format d’API**
 
-Pour récupérer les définitions de segment activées pour la diffusion en continu, vous devez inclure le paramètre de requête . `evaluationInfo.continuous.enabled=true` dans le chemin d’accès de la requête.
+Pour récupérer les définitions de segment activées pour la diffusion en continu, vous devez inclure le paramètre de requête `evaluationInfo.continuous.enabled=true` dans le chemin d’accès de la requête.
 
 ```http
 GET /segment/definitions?evaluationInfo.continuous.enabled=true
@@ -212,7 +211,7 @@ Une réponse réussie renvoie un tableau de définitions de segment de votre org
 }
 ```
 
-## Création d’une définition de segment compatible avec la diffusion en continu
+## Création d’une définition de segment activée pour le flux
 
 Une définition de segment est automatiquement activée en continu si elle correspond à l’une des [types de segmentation par flux répertoriés ci-dessus](#query-types).
 
@@ -350,7 +349,7 @@ curl -X POST \
 | `name` | **(Obligatoire)** Le nom du planning. Doit être une chaîne. |
 | `type` | **(Obligatoire)** Le type de tâche au format chaîne. Les types `batch_segmentation` et `export` sont pris en charge. |
 | `properties` | **(Obligatoire)** Un objet contenant des propriétés supplémentaires liées au planning. |
-| `properties.segments` | **(Obligatoire lorsque `type` est égal à `batch_segmentation`)** Utilisation `["*"]` s’assure que toutes les définitions de segment sont incluses. |
+| `properties.segments` | **(Obligatoire lorsque `type` est égal à `batch_segmentation`)** Utilisation `["*"]` garantit que toutes les définitions de segment sont incluses. |
 | `schedule` | **(Obligatoire)** Une chaîne contenant le planning de la tâche. Vous ne pouvez planifier qu’une seule exécution de tâche par jour, ce qui signifie que vous ne pouvez pas planifier l’exécution d’une tâche plus d’une fois au cours d’une période de 24 heures. L’exemple illustré (`0 0 1 * * ?`) signifie que la tâche est déclenchée tous les jours à 1:00:00 UTC. Pour plus d’informations, veuillez consulter l’annexe sur le [format d’expression cron](./schedules.md#appendix) dans la documentation sur les planifications dans la segmentation. |
 | `state` | *(Facultatif)* Chaîne contenant l’état du planning. Valeurs disponibles : `active` et `inactive`. La valeur par défaut est `inactive`. Une organisation ne peut créer qu’une seule planification. Les étapes de mise à jour du planning sont disponibles plus loin dans ce tutoriel. |
 
