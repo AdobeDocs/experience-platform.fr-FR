@@ -1,14 +1,19 @@
 ---
 title: Requêtes paramétrées
 description: Découvrez comment utiliser des requêtes paramétrées dans l’interface utilisateur de Adobe Experience Platform.
-source-git-commit: d8845e080489af12e98badc892bb60cb9749bd47
+source-git-commit: 4fc94fc39fa09756a440b5e532330cd310dd96d2
 workflow-type: tm+mt
-source-wordcount: '696'
+source-wordcount: '755'
 ht-degree: 2%
 
 ---
 
-# Requêtes paramétrées (version limitée)
+# Requêtes paramétrées (version limitée) {#parameterized-queries}
+
+>[!CONTEXTUALHELP]
+>id="platform_queryService_queryEditor_parameterizedQueries"
+>title="Requêtes paramétrées"
+>abstract="Utilisez des requêtes paramétrées pour ajouter des valeurs de paramètre au moment de l’exécution. Vous pouvez ainsi travailler avec des données dynamiques et réutiliser des requêtes pour différents cas d’utilisation. Utilisez la variable `'$'` pour saisir un paramètre de requête dans votre requête dans l’éditeur de texte. Ajoutez ensuite une valeur pour la clé dans la section Paramètres de requête sous l’éditeur."
 
 >[!IMPORTANT]
 >
