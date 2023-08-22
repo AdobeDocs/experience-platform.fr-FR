@@ -4,10 +4,10 @@ description: Découvrez comment utiliser l’assistant d’IA pour parcourir et 
 badge: Alpha
 hide: true
 hidefromtoc: true
-source-git-commit: 65abbb4dde5b83f597a3a5bfd96ce7c081c88275
+source-git-commit: ca606e4e29f4ba1df281f47a86b4e3cfa850ae35
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '2627'
+ht-degree: 1%
 
 ---
 
@@ -72,7 +72,7 @@ Sélectionnez la variable **[!UICONTROL Icône Assistant IA]** dans l’en-tête
 
 Prenons un cas d’utilisation où vous créez une **Commerce des périphériques dans le schéma d’événement**. Au cours du processus de création de schéma ExperienceEvent, vous rencontrez le `eventType` champ . À ce stade, vous pouvez quitter votre workflow et consulter la documentation de la section [principes de base de la composition d’un schéma](../xdm/schema/composition.md)ou vous pouvez utiliser l’assistant d’IA pour obtenir des réponses immédiates à vos questions.
 
-Pour commencer, saisissez votre question dans la zone de texte fournie. Dans l’exemple ci-dessous, l’assistant d’IA répond à la question : &quot;Quel est le champ eventType dans un schéma Experience Event ?&quot;
+Pour commencer, saisissez votre question dans la zone de texte fournie. Dans l’exemple ci-dessous, l’assistant d’IA répond à la question : &quot;**Quel est le champ eventType dans un schéma d’événement d’expérience ?**&quot;
 
 ![L’assistant d’IA pour les Experience Platform avec la question suivante est préparé pour l’interrogation : &quot;Quel est le champ eventType dans un schéma ExperienceEvent ?](./images/ai-assistant/question.png)
 
@@ -82,7 +82,7 @@ L’assistant d’IA interroge ensuite sa base de connaissances et calcule une r
 
 Vous pouvez en savoir plus sur un sujet particulier en posant une question suivante. Dans l’exemple suivant, on demande à l’assistant d’IA comment eventType peut être utilisé dans la segmentation.
 
-![Une question et une réponse s’affichent ensuite sur l’assistant d’IA pour Experience Platform.](./images/ai-assistant/follow-up-question.png)
+![Une question et une réponse s’affichent ensuite sur l’assistant d’IA pour Experience Platform.](./images/ai-assistant/follow-up-answer.png)
 
 Vous pouvez également poser des questions sur l’utilisation des données à l’assistant d’IA. Pour toute question concernant l’utilisation des données, vous devez être dans un environnement de test actif afin que l’assistant d’IA puisse répondre à votre requête.
 
@@ -100,15 +100,13 @@ Pour fournir des commentaires, sélectionnez la ou les pouces vers le haut ou ve
 
 >[!ENDSHADEBOX]
 
-![L’assistant d’IA pour les Experience Platform affiche les options que vous pouvez choisir après une requête.](./images/ai-assistant/options.png)
-
 >[!BEGINTABS]
 
 >[!TAB Afficher la source]
 
 Sélectionner **[!UICONTROL Afficher la source]** pour obtenir une liste des liens vers la documentation à laquelle l’assistant d’IA fait référence pour calculer sa réponse.
 
-![Liens vers les citations affichées dans l’assistant d’IA.](./images/ai-assistant/citations.png)
+![Liens vers la source affichée dans l’assistant d’IA.](./images/ai-assistant/show-sources.png)
 
 >[!TAB Pouces vers le haut]
 
@@ -134,7 +132,7 @@ Sélectionnez l’icône d’indicateur pour fournir d’autres rapports sur vot
 
 Vous pouvez également utiliser les invites prédéfinies fournies par l’assistant d’IA pour commencer.
 
-![Les invites fournies dans le panneau Assistant d’IA.](./images/ai-assistant/ideas-to-get-started.png)
+![Les invites fournies dans le panneau Assistant d’IA.](./images/ai-assistant/ideas.png)
 
 ## Informations supplémentaires
 
