@@ -6,7 +6,7 @@ badgeLimitedAvailability: label="Disponibilité limitée" type=Caution
 source-git-commit: 4bd26857d2c714cd629fc46dbb9b6da6a29358c8
 workflow-type: tm+mt
 source-wordcount: '2123'
-ht-degree: 1%
+ht-degree: 10%
 
 ---
 
@@ -59,12 +59,12 @@ Pour confirmer que vous avez accès aux audiences analogue, contactez votre repr
 >[!CONTEXTUALHELP]
 >id="platform_audiences_lookAlike_notEligible"
 >title="Non éligible"
->abstract="Cette audience n’est actuellement pas éligible aux insights semblables, car elle peut avoir moins du nombre minimum de profils requis pour la formation ou l’exportation de profils n’a pas encore été déclenchée."
+>abstract="Cette audience n’est actuellement pas éligible aux informations analogues, car elle peut avoir moins que le nombre minimum de profils requis pour la formation, ou l’exportation de profils n’a pas encore été déclenchée."
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_lookAlike_processing"
 >title="En cours de traitement"
->abstract="Cette audience est en cours de traitement. Le traitement du modèle peut prendre jusqu’à 24 heures. Veuillez vérifier à nouveau plus tard."
+>abstract="Cette audience est en cours de traitement. Le traitement du modèle peut prendre jusqu’à 24 heures. Veuillez réessayer plus tard."
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_lookAlike_error"
@@ -109,8 +109,8 @@ La section Audiences identiques affiche la liste de toutes les audiences similai
 >[!CONTEXTUALHELP]
 >id="platform_audiences_lookAlike_influentialFactors"
 >title="Facteurs d’influence"
->abstract="Les facteurs d’influence sont les attributs, les événements et les appartenances à l’audience qui sont importants pour expliquer la similarité d’un profil aux membres de l’audience de base. Les libellés et stratégies d’utilisation des données peuvent être utilisés pour exclure certaines données de la prise en compte comme facteurs d’influence dans les modèles semblables."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/lookalike-audiences.html?lang=en#exclude" text="Exclure des données"
+>abstract="Les facteurs d’influence sont les attributs, les événements et les appartenances à l’audience qui sont importants pour expliquer la similarité d’un profil aux profils membres de l’audience de base.Les libellés et politiques d’utilisation des données peuvent être utilisés pour exclure certaines données en tant que facteurs d’influence dans les modèles analogues."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/lookalike-audiences.html?lang=fr#exclude" text="Exclure des données"
 
 La section facteurs d’influence présente les 100 principaux facteurs qui influencent le modèle analogue pour l’audience de base sélectionnée. Ces facteurs d’influence sont les attributs de profil, les événements d’expérience et les appartenances à l’audience qui sont les plus importants pour expliquer les similitudes dans l’audience de base. La compréhension des principaux facteurs d’influence vous permet de mieux personnaliser le contenu marketing de votre audience et de toute audience analogue que vous créez à partir de celle-ci. Notez que tous les facteurs d’influence qui affectent le modèle analogue ne s’affichent pas.
 
