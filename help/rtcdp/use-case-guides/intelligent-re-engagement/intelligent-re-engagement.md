@@ -3,9 +3,9 @@ title: Réengagement intelligent
 description: Diffusez des expériences attrayantes et connectées au cours des moments de conversion clés pour réengager intelligemment les clients les plus rares.
 hide: true
 hidefromtoc: true
-source-git-commit: 43e365e20a2fd91a0e822eb6f66bb7db6fc218f5
+source-git-commit: 69d83e0ca7530f09042e0740e3f25ba92ecb24e4
 workflow-type: tm+mt
-source-wordcount: '2934'
+source-wordcount: '3395'
 ht-degree: 5%
 
 ---
@@ -30,12 +30,12 @@ Vous allez créer des schémas, des jeux de données et des audiences à mesure 
 
 À mesure que vous réalisez les étapes de mise en oeuvre du cas d’utilisation, vous utiliserez les fonctionnalités et éléments d’interface utilisateur de Real-Time CDP suivants (répertoriés dans l’ordre dans lequel vous les utiliserez). Assurez-vous de disposer des autorisations de contrôle d’accès en fonction des attributs nécessaires pour toutes ces zones ou demandez à votre administrateur système de vous octroyer les autorisations nécessaires.
 
-* [Adobe Real-time Customer Data Platform (Real-Time CDP)](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/understanding-the-real-time-customer-data-platform.html) : agrège les données entre les sources de données pour alimenter la campagne. Ces données sont ensuite utilisées pour créer les audiences de campagne et faire apparaître les éléments de données personnalisés utilisés dans l&#39;email et les mosaïques de promotion web (par exemple, le nom ou les informations liées au compte). La plateforme de données clients (CDP) est également utilisée pour activer les audiences par courrier électronique et sur le web (via Adobe Target).
+* [[!DNL Adobe Real-Time Customer Data Platform (Real-Time CDP)]](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/understanding-the-real-time-customer-data-platform.html) : intègre des données à l’échelle des sources de données pour alimenter la campagne. Ces données sont ensuite utilisées pour créer les audiences de campagne et faire apparaître les éléments de données personnalisés utilisés dans l&#39;email et les mosaïques de promotion web (par exemple, le nom ou les informations liées au compte). La plateforme de données clients (CDP) est également utilisée pour activer les audiences par courrier électronique et sur le web (via [!DNL Adobe Target]).
    * [Schémas](/help/xdm/home.md)
    * [Profils](/help/profile/home.md)
    * [Jeux de données](/help/catalog/datasets/overview.md)
    * [Audiences](/help/segmentation/home.md)
-   * [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html?lang=fr)
+   * [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html?lang=fr)
    * [Destinations](/help/destinations/home.md)
    * [Déclencheur d’événement ou d’audience](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/collect-event-data/data-collection.html)
    * [Audiences/Événements](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/about-audiences.html)
@@ -49,10 +49,10 @@ Vous trouverez ci-dessous un aperçu général des trois exemples de parcours de
 
 >[!TAB Parcours de réengagement]
 
-Le parcours de réengagement cible la navigation des produits abandonnés sur le site web et dans l’application mobile. Ce parcours est déclenché lorsqu’un produit a été consulté mais n’a pas été acheté ni ajouté au panier. L’engagement de la marque est déclenché au bout de trois jours s’il n’y a aucun ajout de liste au cours des dernières 24 heures.<p>![Présentation visuelle de haut niveau du parcours de réengagement intelligent du client.](../intelligent-re-engagement/images/re-engagement-journey.png "Présentation visuelle de haut niveau du parcours de réengagement intelligent du client."){width="1920" zoomable="yes"}</p>
+Le parcours de réengagement cible la navigation des produits abandonnés sur le site web et dans l’application mobile. Ce parcours est déclenché lorsqu’un produit a été consulté mais n’a pas été acheté ni ajouté au panier. L’engagement de la marque est déclenché au bout de trois jours s’il n’y a aucun ajout de liste au cours des dernières 24 heures.<p>![Présentation visuelle de haut niveau du parcours de réengagement intelligent du client.](../intelligent-re-engagement/images/re-engagement-journey.png "Présentation visuelle de haut niveau du parcours de réengagement intelligent du client."){width="2560" zoomable="yes"}</p>
 
-1. Vous créez des schémas et des jeux de données marqués pour [!UICONTROL Profil].
-2. Les données sont agrégées dans Experience Platform par le biais du SDK Web, du SDK Mobile Edge ou de l’API. Le connecteur de données Analytics peut également être utilisé, mais peut entraîner une latence de parcours.
+1. Vous créez des schémas et des jeux de données, puis marquez pour [!UICONTROL Profil].
+2. Les données sont intégrées à Experience Platform par le biais du SDK Web, du SDK Mobile Edge ou de l’API. Le connecteur de données Analytics peut également être utilisé, mais peut entraîner une latence de parcours.
 3. Vous chargez des profils dans Real-Time CDP et créez des stratégies de gouvernance pour garantir une utilisation responsable.
 4. Vous créez des audiences ciblées à partir de la liste des profils pour vérifier si un **client** a fait un engagement au cours des trois derniers jours.
 5. Vous créez un parcours de réengagement dans [!DNL Adobe Journey Optimizer].
@@ -61,26 +61,25 @@ Le parcours de réengagement cible la navigation des produits abandonnés sur le
 
 >[!TAB Parcours de panier abandonné]
 
-Le parcours de panier abandonné cible les produits qui ont été placés dans le panier mais qui n’ont pas encore été achetés sur le site web et sur l’application mobile. En outre, les campagnes de médias payants sont lancées et arrêtées à l’aide de cette méthode.<p>![Présentation visuelle de haut niveau du parcours de panier abandonné par le client.](../intelligent-re-engagement/images/abandoned-cart-journey.png "Présentation visuelle de haut niveau du parcours de panier abandonné par le client."){width="1920" zoomable="yes"}</p>
+Le parcours de panier abandonné cible les produits qui ont été placés dans le panier mais qui n’ont pas encore été achetés sur le site web et sur l’application mobile. En outre, les campagnes de médias payants sont lancées et arrêtées à l’aide de cette méthode.<p>![Présentation visuelle de haut niveau du parcours de panier abandonné par le client.](../intelligent-re-engagement/images/abandoned-cart-journey.png "Présentation visuelle de haut niveau du parcours de panier abandonné par le client."){width="2560" zoomable="yes"}</p>
 
-1. Vous créez des schémas et des jeux de données marqués pour [!UICONTROL Profil].
-2. Les données sont agrégées dans Experience Platform par le biais du SDK Web, du SDK Mobile Edge ou de l’API. Le connecteur de données Analytics peut également être utilisé, mais peut entraîner une latence de parcours.
+1. Vous créez des schémas et des jeux de données, la marque pour [!UICONTROL Profil].
+2. Les données sont intégrées à Experience Platform par le biais du SDK Web, du SDK Mobile Edge ou de l’API. Le connecteur de données Analytics peut également être utilisé, mais peut entraîner une latence de parcours.
 3. Vous chargez des profils dans Real-Time CDP et créez des stratégies de gouvernance pour garantir une utilisation responsable.
 4. Vous créez des audiences ciblées à partir de la liste des profils pour vérifier si un **client** a placé un élément dans son panier mais n’a pas terminé l’achat. La variable **[!UICONTROL Ajouter au panier]** démarre un minuteur qui attend pendant 30 minutes, puis vérifie l’achat. Si aucun achat n’a été effectué, la variable **client** est ajouté à la variable **[!UICONTROL Abandonner le panier]** audiences.
-5. Vous créez un parcours de panier abandonné dans Adobe Journey Optimizer
+5. Vous créez un parcours de panier abandonné dans [!DNL Adobe Journey Optimizer].
 6. Si nécessaire, travaillez avec la fonction **partenaire de données** pour activer les audiences vers les destinations de médias payants souhaitées.
 7. [!DNL Adobe Journey Optimizer] recherche le consentement et envoie les différentes actions configurées.
 
 >[!TAB Parcours de confirmation de commande]
 
-Le parcours de confirmation de commande se concentre sur les achats de produits effectués par le biais du site web et de l’application mobile.<p>![Présentation visuelle de haut niveau du parcours de confirmation de commande du client.](../intelligent-re-engagement/images/order-confirmation-journey.png "Présentation visuelle de haut niveau du parcours de confirmation de commande du client."){width="1920" zoomable="yes"}</p>
+Le parcours de confirmation de commande se concentre sur les achats de produits effectués par le biais du site web et de l’application mobile.<p>![Présentation visuelle de haut niveau du parcours de confirmation de commande du client.](../intelligent-re-engagement/images/order-confirmation-journey.png "Présentation visuelle de haut niveau du parcours de confirmation de commande du client."){width="2560" zoomable="yes"}</p>
 
-1. Vous créez des schémas et des jeux de données marqués pour [!UICONTROL Profil].
-2. Les données sont agrégées dans Experience Platform par le biais du SDK Web, du SDK Mobile Edge ou de l’API. Le connecteur de données Analytics peut également être utilisé, mais peut entraîner une latence de parcours.
+1. Vous créez des schémas et des jeux de données, puis marquez pour [!UICONTROL Profil].
+2. Les données sont intégrées à Experience Platform par le biais du SDK Web, du SDK Mobile Edge ou de l’API. Le connecteur de données Analytics peut également être utilisé, mais peut entraîner une latence de parcours.
 3. Vous chargez des profils dans Real-Time CDP et créez des stratégies de gouvernance pour garantir une utilisation responsable.
-4. Vous créez des audiences ciblées à partir de la liste des profils pour vérifier si un **client** a effectué un achat.
-5. Vous créez un parcours de confirmation dans Adobe Journey Optimizer.
-6. [!DNL Adobe Journey Optimizer] envoie un message de confirmation de commande à l’aide du canal préféré.
+4. Vous créez un parcours de confirmation dans [!DNL Adobe Journey Optimizer].
+5. [!DNL Adobe Journey Optimizer] envoie un message de confirmation de commande à l’aide du canal préféré.
 
 >[!ENDTABS]
 
@@ -94,13 +93,15 @@ Lorsque vous terminerez les étapes de mise en oeuvre du cas d’utilisation, vo
 
 ### Création d’une conception de schéma et spécification de groupes de champs
 
-Les ressources du modèle de données d’expérience (XDM) sont gérées dans le [!UICONTROL Schémas] espace de travail dans Adobe Experience Platform. Vous pouvez afficher et explorer les ressources de base fournies par Adobe et créer des ressources et des schémas personnalisés pour votre organisation.
+Les ressources du modèle de données d’expérience (XDM) sont gérées dans le [!UICONTROL Schémas] espace de travail dans [!DNL Adobe Experience Platform]. Vous pouvez afficher et explorer les ressources de base fournies par [!DNL Adobe] (par exemple, [!UICONTROL Groupes de champs]) et créez des ressources et des schémas personnalisés pour votre organisation.
 
-Pour plus d’informations sur la création de schémas, consultez la section [tutoriel sur la création de schéma.](/help/xdm/tutorials/create-schema-ui.md)
+Pour plus d’informations sur la création [schémas](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=fr), lisez le [tutoriel sur la création de schéma.](/help/xdm/tutorials/create-schema-ui.md)
 
-Quatre conceptions de schéma sont utilisées pour le parcours de réengagement. Chaque schéma nécessite la configuration de champs spécifiques et certains champs fortement recommandés.
+Quatre conceptions de schéma sont utilisées pour le cas d’utilisation du réengagement. Chaque schéma nécessite la configuration de champs spécifiques et certains champs fortement recommandés.
 
 #### Schéma des attributs du client
+
+Ce schéma est utilisé pour structurer et référencer les données de profil qui constituent les informations sur vos clients. Ces données sont généralement ingérées dans [!DNL Adobe Experience Platform] via votre système CRM ou similaire. Il est nécessaire de référencer les détails du client utilisés pour la personnalisation, le consentement marketing et des fonctionnalités de segmentation améliorées.
 
 Le schéma des attributs du client est représenté par une [!UICONTROL XDM Individual Profile] , qui inclut les groupes de champs suivants :
 
@@ -154,6 +155,8 @@ Ce groupe de champs est utilisé pour les bonnes pratiques.
 +++
 
 #### Schéma des transactions numériques client
+
+Ce schéma est utilisé pour structurer et référencer les données d’événement qui constituent l’activité de votre client sur votre site web et/ou les plateformes numériques associées. Ces données sont généralement ingérées dans [!DNL Adobe Experience Platform] via le SDK Web. Il est nécessaire de référencer les différents événements de navigation et de conversion utilisés pour le déclenchement des parcours, l’analyse détaillée des clients en ligne et les fonctionnalités de segmentation améliorées.
 
 Le schéma des transactions numériques client est représenté par une [!UICONTROL XDM ExperienceEvent] , qui inclut les groupes de champs suivants :
 
@@ -225,18 +228,9 @@ Détails web est un groupe de champs de schéma standard pour la classe XDM Expe
 | `endUserIDs._experience.emailid.authenticatedState` | Obligatoire | ID d’adresse électronique de l’utilisateur final état authentifié. |
 | `endUserIDs._experience.emailid.id` | Obligatoire | ID de l’adresse électronique de l’utilisateur final. |
 | `endUserIDs._experience.emailid.namespace.code` | Obligatoire | Code d’espace de noms de l’adresse électronique de l’utilisateur final. |
-| `endUserIDs._experience.mcid.authenticatedState` | Obligatoire | État d’authentification du Adobe Marketing Cloud ID (MCID). Le MCID est désormais connu sous le nom d’ID Experience Cloud (ECID). |
-| `endUserIDs._experience.mcid.id` | Obligatoire | Adobe Marketing Cloud ID (MCID). Le MCID est désormais connu sous le nom d’ID Experience Cloud (ECID). |
-| `endUserIDs._experience.mcid.namespace.code` | Obligatoire | Code d’espace de noms Adobe Marketing Cloud ID (MCID). |
-
-+++
-
-+++Valeur de classe (groupe de champs)
-
-| Champs | Exigence |
-| --- | --- |
-| `eventType` | Obligatoire |
-| `timestamp` | Obligatoire |
+| `endUserIDs._experience.mcid.authenticatedState` | Obligatoire | [!DNL Adobe] État d’authentification de l’ID de Marketing Cloud (MCID). Le MCID est désormais connu sous le nom d’ID Experience Cloud (ECID). |
+| `endUserIDs._experience.mcid.id` | Obligatoire | [!DNL Adobe] ID de Marketing Cloud (MCID). Le MCID est désormais connu sous le nom d’ID Experience Cloud (ECID). |
+| `endUserIDs._experience.mcid.namespace.code` | Obligatoire | [!DNL Adobe] Code d’espace de noms de l’identifiant de Marketing Cloud (MCID). |
 
 +++
 
@@ -247,6 +241,8 @@ Les attributs d’audit du système de source externe sont un type de données X
 +++
 
 #### Schéma des transactions hors ligne client
+
+Ce schéma est utilisé pour structurer et référencer les données d’événement qui constituent l’activité de votre client sur les plateformes en dehors de votre site web. Ces données sont généralement ingérées dans [!DNL Adobe Experience Platform] d’un point de contact (ou d’un système similaire) et le plus souvent diffusé en continu dans Platform via une connexion API. Son objectif est de référencer les différents événements de conversion hors ligne utilisés pour le déclenchement des parcours, une analyse client en ligne et hors ligne approfondie et des fonctionnalités de segmentation améliorées.
 
 Le schéma des transactions hors ligne du client est représenté par une [!UICONTROL XDM ExperienceEvent] , qui inclut les groupes de champs suivants :
 
@@ -276,15 +272,6 @@ Le schéma des transactions hors ligne du client est représenté par une [!UICO
 
 +++
 
-+++Valeur de classe (groupe de champs)
-
-| Champs | Exigence |
-| --- | --- |
-| `eventType` | Obligatoire |
-| `timestamp` | Obligatoire |
-
-+++
-
 +++Détails de l’audit du système source externe (groupe de champs)
 
 Les attributs d’audit du système de source externe sont un type de données XDM (Experience Data Model) standard qui capture les détails d’audit d’un système de source externe.
@@ -293,7 +280,13 @@ Les attributs d’audit du système de source externe sont un type de données X
 
 #### Schéma du connecteur web Adobe
 
-Le schéma du connecteur web Adobe est représenté par une [!UICONTROL XDM ExperienceEvent] , qui inclut les groupes de champs suivants :
+>[!NOTE]
+>
+>Il s’agit d’une implémentation facultative si vous utilisez le [!DNL Adobe Analytics Data Connector].
+
+Ce schéma est utilisé pour structurer et référencer les données d’événement qui constituent l’activité de votre client sur votre site web et/ou les plateformes numériques associées. Ce schéma est similaire au schéma des transactions numériques client, mais il est différent dans la mesure où il est destiné à être utilisé lorsque le SDK Web n’est pas une option de collecte de données. Ce schéma est donc nécessaire lorsque vous utilisez le [!DNL Adobe Analytics Data Connector] pour envoyer vos données en ligne dans [!DNL Adobe Experience Platform] en tant que flux de données principal ou secondaire.
+
+La variable [!DNL Adobe] le schéma du connecteur web est représenté par une [!UICONTROL XDM ExperienceEvent] , qui inclut les groupes de champs suivants :
 
 +++Modèle ExperienceEvent Adobe Analytics (groupe de champs)
 
@@ -338,9 +331,9 @@ Le schéma du connecteur web Adobe est représenté par une [!UICONTROL XDM Expe
 | `endUserIDs._experience.emailid.authenticatedState` | Obligatoire | ID d’adresse électronique de l’utilisateur final état authentifié. |
 | `endUserIDs._experience.emailid.id` | Obligatoire | ID de l’adresse électronique de l’utilisateur final. |
 | `endUserIDs._experience.emailid.namespace.code` | Obligatoire | Code d’espace de noms de l’adresse électronique de l’utilisateur final. |
-| `endUserIDs._experience.mcid.authenticatedState` | Obligatoire | État d’authentification du Adobe Marketing Cloud ID (MCID). Le MCID est désormais connu sous le nom d’ID Experience Cloud (ECID). |
-| `endUserIDs._experience.mcid.id` | Obligatoire | Adobe Marketing Cloud ID (MCID). Le MCID est désormais connu sous le nom d’ID Experience Cloud (ECID). |
-| `endUserIDs._experience.mcid.namespace.code` | Obligatoire | Code d’espace de noms Adobe Marketing Cloud ID (MCID). |
+| `endUserIDs._experience.mcid.authenticatedState` | Obligatoire | [!DNL Adobe] État d’authentification de l’ID de Marketing Cloud (MCID). Le MCID est désormais connu sous le nom d’ID Experience Cloud (ECID). |
+| `endUserIDs._experience.mcid.id` | Obligatoire | [!DNL Adobe] ID de Marketing Cloud (MCID). Le MCID est désormais connu sous le nom d’ID Experience Cloud (ECID). |
+| `endUserIDs._experience.mcid.namespace.code` | Obligatoire | [!DNL Adobe] Code d’espace de noms de l’identifiant de Marketing Cloud (MCID). |
 
 +++
 
@@ -361,9 +354,9 @@ Les attributs d’audit du système de source externe sont un type de données X
 
 ### Création d’un jeu de données à partir d’un schéma
 
-Un jeu de données est une structure de stockage et de gestion pour un groupe de données, souvent un tableau avec des champs (lignes) et un schéma (colonnes). Chaque schéma pour les parcours de réengagement intelligents comporte un seul jeu de données.
+Un jeu de données est une structure de stockage et de gestion pour un groupe de données. Chaque schéma pour les parcours de réengagement intelligents comporte un seul jeu de données.
 
-Pour plus d’informations sur la création d’un jeu de données à partir d’un schéma, consultez la section [Guide de l’interface utilisateur des jeux de données](/help/catalog/datasets/user-guide.md).
+Pour plus d’informations sur la création d’un [dataset](/help/catalog/datasets/overview.md) à partir d’un schéma, lisez la [Guide de l’interface utilisateur des jeux de données](/help/catalog/datasets/user-guide.md).
 
 >[!NOTE]
 >
@@ -377,23 +370,23 @@ Pour plus d’informations sur la création d’un jeu de données à partir d�
 >
 >Disposer aux clients de la possibilité de se désabonner de la réception de communications d’une marque est une obligation légale, et garantir le respect de ce choix. Pour en savoir plus sur la législation applicable, consultez la [documentation Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/privacy/regulations/overview.html).
 
-Lors de la création d’un chemin de réengagement, les stratégies de consentement suivantes doivent être prises en compte et utilisées :
+Lors de la création d’un chemin de réengagement, les stratégies de consentement suivantes doivent être prises en compte :
 
 * If `consents.marketing.email.val = "Y"` alors peut envoyer un courrier électronique
 * If `consents.marketing.sms.val = "Y"` alors peut envoyer des SMS
 * If `consents.marketing.push.val = "Y"` Push
 * If `consents.share.val = "Y"` puis peuvent faire la publicité
-* Besoin défini par l’implémentation client
 
 #### Libellé DULE et application
 
-Les adresses électroniques personnelles sont utilisées comme données d’identification directe utilisées pour identifier ou contacter une personne spécifique plutôt qu’un appareil.
+Lors de la création d’un chemin de réengagement, les libellés DULE suivants doivent être pris en compte :
 
-* `personalEmail.address = I1`
+* Les adresses électroniques personnelles sont utilisées comme données d’identification directe utilisées pour identifier ou contacter une personne spécifique plutôt qu’un appareil.
+   * `personalEmail.address = I1`
 
 #### Stratégies marketing
 
-Aucune autre stratégie marketing n’est nécessaire pour les parcours de réengagement. Toutefois, les éléments suivants doivent être pris en compte comme vous le souhaitez :
+Aucune stratégie marketing n’est requise pour les parcours de réengagement. Toutefois, les éléments suivants doivent être pris en compte comme vous le souhaitez :
 
 * Limitation des données sensibles
 * Limitation de la publicité Onsite
@@ -405,9 +398,9 @@ Aucune autre stratégie marketing n’est nécessaire pour les parcours de réen
 
 #### Création d’audiences pour les parcours de réengagement de marque
 
-Les parcours de réengagement utilisent des audiences pour définir des attributs ou des comportements spécifiques partagés par un sous-ensemble de profils de votre banque de profils afin de distinguer un groupe de clients potentiels de votre base. Les audiences peuvent être créées de deux manières différentes sur Adobe Experience Platform : soit directement composées en tant qu’audiences, soit par le biais de définitions de segment dérivées de Platform.
+Les parcours de réengagement utilisent des audiences pour définir des attributs ou des comportements spécifiques partagés par un sous-ensemble de profils de votre banque de profils afin de distinguer un groupe de clients potentiels de votre base. Les audiences peuvent être créées de plusieurs façons sur [!DNL Adobe Experience Platform].
 
-Pour plus d’informations sur la façon de composer directement des audiences, lisez le [Guide de l’interface utilisateur de composition d’audience](/help/segmentation/ui/audience-composition.md).
+Pour plus d’informations sur la composition directe [Audiences](/help/segmentation/home.md), lisez le [Guide de l’interface utilisateur de composition d’audience](/help/segmentation/ui/audience-composition.md).
 
 Pour plus d’informations sur la création d’audiences par le biais de définitions de segment dérivées de Platform, consultez la section [Guide de l’interface utilisateur d’Audience Builder](/help/segmentation/ui/segment-builder.md).
 
@@ -415,13 +408,15 @@ Pour plus d’informations sur la création d’audiences par le biais de défin
 
 >[!TAB Parcours de réengagement]
 
+Cette audience est créée afin d’améliorer le scénario classique &quot;Abandon de panier&quot;. Alors que l’abandon de panier se concentre généralement sur un ajout de panier sans achat ultérieur pendant une certaine période, cette audience recherche un engagement précédent, en particulier ceux qui ont pu parcourir un produit particulier mais ne l’ont pas ajouté au panier et n’ont eu aucune activité de suivi sur votre site au cours d’une certaine période. Cette audience permet de garder votre marque à l’esprit pour les clients qui répondent à ces critères d’inclusion et peut également être utilisée pour les clients dont les propriétés numériques peuvent différer d’un modèle de commerce électronique traditionnel.
+
 Les événements suivants sont utilisés pour le parcours de réengagement où les utilisateurs ont consulté des produits en ligne et n’ont pas ajouté au panier au cours des 24 heures suivantes, suivi d’aucun engagement de marque au cours des 3 jours suivants.
 
 Les champs et conditions suivants sont requis lors de la configuration de cette audience :
 
 * `EventType: commerce.productViews`
    * `Timestamp: <= 24 hours before now`
-* `EventType is not: commerce.productListAdds`
+* `EventType is not: commerce.procuctListAdds`
    * `Timestamp: <= 24 hours before now, GAP(>= 3 days)`
 * `EventType: application.launch or web.webpagedetails.pageViews or commerce.purchases`
    * `Timestamp: <= 2 days before now`
@@ -432,16 +427,18 @@ Le descripteur du parcours de réengagement apparaît comme suit :
 
 >[!TAB Parcours de panier abandonné]
 
+Cette audience est créée pour prendre en charge le scénario classique &quot;Abandon de panier&quot;. Son objectif est de trouver les clients qui ont ajouté un produit à leur panier, mais qui n’ont finalement pas effectué d’achat. Cette audience vous aidera à garder non seulement votre marque en tête de vos clients, mais aussi les produits qu’ils ont laissés sans achat ultérieur.
+
 Les événements suivants sont utilisés pour le parcours de panier abandonné, où les utilisateurs ont ajouté un produit à leur panier, mais n’ont pas effectué l’achat ou vidé leur panier au cours des dernières 24 heures.
 
 Les champs et conditions suivants sont requis lors de la configuration de cette audience :
 
 * `EventType: commerce.productListAdds`
-   * `Timestamp: >= 30 minutes before now and <= 1440 minutes before now`
+   * `Timestamp: >= 1 days before now and <= 4 days before now `
 * `EventType: commerce.purchases`
-   * `Timestamp: <= 30 minutes before now`
+   * `Timestamp: <= 4 days before now`
 * `EventType: commerce.productListRemovals`
-   * `Timestamp: <= 30 minutes before now`
+   * `Timestamp: <= 4 days before now`
 
 Le descripteur du parcours de panier abandonné apparaît comme suit :
 
@@ -453,17 +450,19 @@ Le descripteur du parcours de panier abandonné apparaît comme suit :
 
 >[!NOTE]
 >
->Adobe Journey Optimizer n’englobe pas tout ce qui est affiché dans les diagrammes en haut de cette page. Toutes les publicités multimédia payantes sont créées dans [!UICONTROL Destinations].
+>[!DNL Adobe Journey Optimizer] n’englobe pas tout ce qui est affiché dans les diagrammes. Toutes les publicités multimédia payantes sont créées dans [!UICONTROL Destinations].
 
-Adobe Journey Optimizer vous aide à offrir à vos clients des expériences connectées, contextuelles et personnalisées. Le parcours client correspond à l’ensemble du processus des interactions d’un client avec la marque. Chaque parcours de cas d’utilisation nécessite des informations spécifiques. Vous trouverez ci-dessous les données précises nécessaires à chaque branche de Parcours.
+[[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html?lang=fr) vous aide à offrir à vos clients des expériences connectées, contextuelles et personnalisées. Le parcours client correspond à l’ensemble du processus des interactions d’un client avec la marque. Chaque parcours de cas d’utilisation nécessite des informations spécifiques. Vous trouverez ci-dessous les données précises nécessaires à chaque branche de Parcours.
 
 >[!BEGINTABS]
 
 >[!TAB Parcours de réengagement]
 
+Le parcours de réengagement cible la navigation des produits abandonnés sur le site web et dans l’application mobile.<p>![Présentation visuelle de haut niveau du parcours de réengagement intelligent du client.](../intelligent-re-engagement/images/re-engagement-journey.png "Présentation visuelle de haut niveau du parcours de réengagement intelligent du client."){width="2560" zoomable="yes"}</p>
+
 +++Événements
 
-* Consultations produits
+* Événement 1 : Consultations de produit
    * Schéma : transactions numériques client
    * Champs:
       * `EventType`
@@ -489,7 +488,7 @@ Adobe Journey Optimizer vous aide à offrir à vos clients des expériences conn
          * `endUserIDs._experience.emailid.namespace.code`
          * `_id`
 
-* Ajouter au panier
+* Événement 2 : ajout au panier
    * Schéma : transactions numériques client
    * Champs:
       * `EventType`
@@ -516,7 +515,7 @@ Adobe Journey Optimizer vous aide à offrir à vos clients des expériences conn
          * `endUserIDs._experience.emailid.namespace.code`
          * `_id`
 
-* Engagement de marque
+* Événement 3 : Engagement de marque
    * Schéma : transactions numériques client
    * Champs:
       * `EventType`
@@ -568,7 +567,7 @@ Adobe Journey Optimizer vous aide à offrir à vos clients des expériences conn
       * `timestamp > timestamp of product last viewed`
 
    * Recherchez au moins un achat hors ligne depuis la dernière consultation du produit :
-      * Schéma : Transactions hors ligne client v.1
+      * Schéma : transactions hors ligne client
       * `eventType = commerce.purchases`
       * `timestamp > timestamp of product last viewed`
 
@@ -587,9 +586,11 @@ Adobe Journey Optimizer vous aide à offrir à vos clients des expériences conn
 
 >[!TAB Parcours de panier abandonné]
 
+Le parcours de panier abandonné cible les produits qui ont été placés dans le panier mais qui n’ont pas encore été achetés sur le site web et sur l’application mobile.<p>![Présentation visuelle de haut niveau du parcours de panier abandonné par le client.](../intelligent-re-engagement/images/abandoned-cart-journey.png "Présentation visuelle de haut niveau du parcours de panier abandonné par le client."){width="2560" zoomable="yes"}</p>
+
 +++Événements
 
-* Ajouter au panier
+* Événement 2 : ajout au panier
    * Schéma : transactions numériques client
    * Champs:
       * `EventType`
@@ -616,7 +617,7 @@ Adobe Journey Optimizer vous aide à offrir à vos clients des expériences conn
          * `endUserIDs._experience.emailid.namespace.code`
          * `_id`
 
-* Achats en ligne
+* Événement 4 : Achats en ligne
    * Schéma : transactions numériques client
    * Champs:
       * `EventType`
@@ -642,7 +643,7 @@ Adobe Journey Optimizer vous aide à offrir à vos clients des expériences conn
          * `endUserIDs._experience.emailid.namespace.code`
          * `_id`
 
-* Engagement de marque
+* Événement 3 : Engagement de marque
    * Schéma : transactions numériques client
    * Champs:
       * `EventType`
@@ -690,12 +691,12 @@ Adobe Journey Optimizer vous aide à offrir à vos clients des expériences conn
 * AuthenticatedState dans authentifié
 
 * Condition : achats hors ligne depuis la dernière abandon du panier :
-   * Schéma : Transactions hors ligne client v.1
+   * Schéma : transactions hors ligne client
    * `eventType = commerce.purchases`
    * `timestamp > timestamp of cart was last abandoned`
 
 * Condition : le panier est effacé depuis la dernière abandon du panier :
-   * Schéma : Transactions numériques client v.1
+   * Schéma : transactions numériques client
    * `eventType = commerce.cartCleared`
    * `cartID` (Identifiant du panier)
    * `timestamp > timestamp of cart was last abandoned`
@@ -714,9 +715,11 @@ Adobe Journey Optimizer vous aide à offrir à vos clients des expériences conn
 
 >[!TAB Parcours de confirmation de commande]
 
+Le parcours de confirmation de commande se concentre sur les achats de produits effectués par le biais du site web et de l’application mobile.<p>![Présentation visuelle de haut niveau du parcours de confirmation de commande du client.](../intelligent-re-engagement/images/order-confirmation-journey.png "Présentation visuelle de haut niveau du parcours de confirmation de commande du client."){width="2560" zoomable="yes"}</p>
+
 +++Événements
 
-* Achats en ligne
+* Événement 4 : Achats en ligne
    * Schéma : transactions numériques client
    * Champs:
       * `EventType`
@@ -763,11 +766,11 @@ Adobe Journey Optimizer vous aide à offrir à vos clients des expériences conn
 
 >[!ENDTABS]
 
-Pour plus d’informations sur la création de parcours dans [Adobe Journey Optimizer], lisez le [Guide de prise en main de parcours](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html?lang=fr).
+Pour plus d’informations sur la création de parcours dans [!DNL Adobe Journey Optimizer], lisez le [Guide de prise en main de parcours](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html?lang=fr).
 
 ### Configuration des publicités multimédia payantes dans les destinations
 
-La structure des destinations est utilisée pour les publicités multimédia payantes. Une fois le consentement vérifié, il est envoyé vers les différentes destinations configurées. Par exemple, courrier, courrier électronique, notification push et SMS.
+La structure des destinations est utilisée pour les publicités multimédia payantes. Une fois le consentement vérifié, il est envoyé vers les différentes destinations configurées. Pour plus d’informations sur les destinations, consultez la [Présentation des destinations](/help/destinations/home.md) document.
 
 #### Données requises pour les destinations
 
