@@ -4,10 +4,10 @@ title: Présentation des alertes
 description: Découvrez les alertes dans Adobe Experience Platform, y compris la structure de la définition des règles d’alerte.
 feature: Alerts
 exl-id: c38a93c6-1618-4ef9-8f94-41c7ab4af43c
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: cb889a169aa42b761b0eeff5aa7fb771ad6ed4be
 workflow-type: tm+mt
-source-wordcount: '773'
-ht-degree: 91%
+source-wordcount: '796'
+ht-degree: 89%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 91%
 
 >[!NOTE]
 >
->Les alertes ne sont pas prises en charge dans les environnements de test hors production. Pour vous abonner aux alertes, vous devez vous assurer que vous utilisez un environnement de test de production.
+>Les alertes ne sont pas prises en charge dans les environnements de test hors production. Pour vous abonner aux alertes, vous devez vous assurer que vous utilisez un environnement de test de production. Toutes les alertes d’abonnement seront réinitialisées lorsque l’environnement de test sera réinitialisé. De même, toutes les alertes d’abonnement seront effacées lorsqu’un environnement de test est supprimé.
 
 Adobe Experience Platform vous permet de vous abonner à des alertes basées sur des événements concernant les activités Adobe Experience Platform. Les alertes réduisent ou éliminent la nécessité d’interroger l’[[!DNL Observability Insights] API](../api/overview.md) afin de vérifier si une tâche est terminée, si un certain jalon a été atteint dans un processus ou si des erreurs se sont produites.
 
