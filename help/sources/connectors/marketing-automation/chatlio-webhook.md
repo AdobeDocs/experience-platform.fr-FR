@@ -1,20 +1,15 @@
 ---
 title: Présentation de la source Chatlio
 description: Découvrez comment connecter Chatlio à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur en utilisant des webhooks
-badge: Version bêta
 exl-id: 4a71d1dc-e0eb-443e-a956-8caa0e82fa18
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: 68c14d7b187075b4af6b019a8bd1ca2625beabde
 workflow-type: tm+mt
-source-wordcount: '364'
-ht-degree: 21%
+source-wordcount: '346'
+ht-degree: 20%
 
 ---
 
 # [!DNL Chatlio]
-
->[!NOTE]
->
->La source [!DNL Chatlio] est en version Beta. Veuillez lire la [présentation des sources](../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de sources étiquetées bêta.
 
 Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les bases de données, etc.
 
@@ -22,7 +17,7 @@ Experience Platform prend en charge l’ingestion de données à partir d’appl
 
 [[!DNL Chatlio]](https://chatlio.com/) est une application de chat en direct qui est entièrement intégrée à [!DNL Slack] et facilite l’utilisation de plusieurs agents d’assistance pour aider simultanément un visiteur individuel du site. [!DNL Chatlio] utilise la variable [!DNL Chatio Zapier App] pour se connecter [!DNL Chatlio] avec plus de 2 000 applications et services différents.
 
-Le [!DNL Chatlio] source vous permet d’ingérer les schémas d’événement webhook pris en charge et leurs données d’événement associées à partir de [!DNL Chatlio.com] en utilisant la variable [[!DNL Chatlio] Webhooks](https://chatlio.com/docs/webhooks/).
+La variable [!DNL Chatlio] source vous permet d’ingérer les schémas d’événement webhook pris en charge et leurs données d’événement associées à partir de [!DNL Chatlio.com] en utilisant la variable [[!DNL Chatlio] Webhooks](https://chatlio.com/docs/webhooks/).
 
 Les webhooks pris en charge sont les suivants :
 
@@ -36,7 +31,7 @@ Les webhooks pris en charge sont les suivants :
 
 Avant de pouvoir créer un [!DNL Chatlio] connexion source, vous devez d’abord vous assurer que vous disposez des éléments suivants :
 
-* A [!DNL Chatlio] compte . Si vous n’en avez pas déjà un, rendez-vous sur la page [[!DNL Chatlio] page d’inscription](https://chatlio.com/app/#/signup) pour enregistrer et créer votre compte.
+* A [!DNL Chatlio] compte . Si vous n’en avez pas déjà un, consultez la page [[!DNL Chatlio] page d’inscription](https://chatlio.com/app/#/signup) pour enregistrer et créer votre compte.
 * Une fois que vous avez enregistré un compte, suivez la [[!DNL Chatlio] documentation de configuration](https://chatlio.com/docs/setup/) pour terminer la configuration de votre compte.
 
 ### Configuration [!DNL Chatlio] webhook {#set-up-webhook}

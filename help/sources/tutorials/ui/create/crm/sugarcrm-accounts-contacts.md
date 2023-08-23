@@ -2,18 +2,14 @@
 title: Création d’une connexion source aux comptes et contacts SugarCRM dans l’interface utilisateur
 description: Découvrez comment créer une connexion source aux comptes et contacts SugarCRM à l’aide de l’interface utilisateur de Adobe Experience Platform.
 exl-id: 45840d7e-4c19-4720-8629-be446347862d
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: 0de4b32ac2ddc90dabefd469b6658388a4532e0d
 workflow-type: tm+mt
-source-wordcount: '779'
-ht-degree: 39%
+source-wordcount: '762'
+ht-degree: 41%
 
 ---
 
-# (Version bêta) Créez un [!DNL SugarCRM Accounts & Contacts] connexion source dans l’interface utilisateur
-
->[!NOTE]
->
->La source [!DNL SugarCRM Accounts & Contacts] est en version Beta. Voir [présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de sources étiquetées bêta.
+# Créer une connexion source [!DNL SugarCRM Accounts & Contacts] dans l’interface utilisateur
 
 Ce tutoriel décrit les étapes à suivre pour créer une [!DNL SugarCRM Accounts & Contacts] connexion source à l’aide de l’interface utilisateur de Adobe Experience Platform.
 
@@ -42,7 +38,7 @@ Pour connecter [!DNL SugarCRM Accounts & Contacts] à Platform, vous devez fourn
 
 Avant de créer un [!DNL SugarCRM] connexion source, vous devez également vous assurer de créer au préalable un schéma Platform à utiliser pour votre source. Voir le tutoriel sur [création d’un schéma Platform](../../../../../xdm/schema/composition.md) pour obtenir des instructions complètes sur la création d’un schéma.
 
-Le [!DNL SugarCRM Accounts & Contacts] prend en charge plusieurs API. Cela signifie que vous devez créer un schéma distinct, en fonction du type d’objet que vous utilisez. Consultez les exemples ci-dessous pour les schémas de comptes et de contacts :
+La variable [!DNL SugarCRM Accounts & Contacts] prend en charge plusieurs API. Cela signifie que vous devez créer un schéma distinct, en fonction du type d’objet que vous utilisez. Consultez les exemples ci-dessous pour les schémas de comptes et de contacts :
 
 >[!BEGINTABS]
 
@@ -66,7 +62,7 @@ Sous , *CRM* catégorie, sélectionnez **[!UICONTROL Comptes et contacts CRM Sug
 
 ![Copie d’écran de l’interface utilisateur de Platform pour le catalogue avec la carte Comptes et contacts SugarCRM](../../../../images/tutorials/create/sugarcrm-accounts-contacts/catalog-sugarcrm-accounts-contacts.png)
 
-Le **[!UICONTROL Connexion au compte Comptes et contacts SugarCRM]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
+La variable **[!UICONTROL Connexion au compte Comptes et contacts SugarCRM]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
 
 ### Compte existant
 
@@ -111,7 +107,7 @@ Les sections ci-dessous contiennent des ressources supplémentaires auxquelles v
 
 ### Mécanismes de sécurisation {#guardrails}
 
-Le [!DNL SugarCRM] Les taux de ralentissement de l’API sont de 90 appels par minute ou de 2 000 appels par jour, selon ce qui se produit en premier. Toutefois, cette restriction a été contournée en ajoutant un paramètre dans la spécification de connexion qui retardera le temps de demande afin que la limite de taux ne soit jamais atteinte.
+La variable [!DNL SugarCRM] Les taux de ralentissement de l’API sont de 90 appels par minute ou de 2 000 appels par jour, selon ce qui se produit en premier. Toutefois, cette restriction a été contournée en ajoutant un paramètre dans la spécification de connexion qui retardera le temps de demande afin que la limite de taux ne soit jamais atteinte.
 
 ### Validation {#validation}
 
@@ -135,4 +131,4 @@ Pour vérifier que vous avez correctement configuré la source et [!DNL SugarCRM
 
 >[!NOTE]
 >
->Le [!DNL SugarMarket] Les pages n’incluent pas le nombre d’objets supprimés. Toutefois, les données récupérées via cette source incluent également le nombre supprimé, qui sera marqué d’un indicateur supprimé.
+>La variable [!DNL SugarMarket] Les pages n’incluent pas le nombre d’objets supprimés. Toutefois, les données récupérées via cette source incluent également le nombre supprimé, qui sera marqué d’un indicateur supprimé.

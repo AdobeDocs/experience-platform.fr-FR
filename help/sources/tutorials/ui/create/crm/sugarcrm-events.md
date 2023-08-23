@@ -2,18 +2,14 @@
 title: Création d’une connexion source d’événements SugarCRM dans l’interface utilisateur
 description: Découvrez comment créer une connexion source d’événements SugarCRM à l’aide de l’interface utilisateur de Adobe Experience Platform.
 exl-id: db346ec0-2c57-4b82-8a39-f15d4cd377d4
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: 68c14d7b187075b4af6b019a8bd1ca2625beabde
 workflow-type: tm+mt
-source-wordcount: '663'
-ht-degree: 45%
+source-wordcount: '646'
+ht-degree: 46%
 
 ---
 
-# (Version bêta) Créez un [!DNL SugarCRM Events] connexion source dans l’interface utilisateur
-
->[!NOTE]
->
->La source [!DNL SugarCRM Events] est en version Beta. Voir [présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de sources étiquetées bêta.
+# Créer une connexion source [!DNL SugarCRM Events] dans l’interface utilisateur
 
 Ce tutoriel décrit les étapes à suivre pour créer une [!DNL SugarCRM Events] connexion source à l’aide de l’interface utilisateur de Adobe Experience Platform.
 
@@ -58,7 +54,7 @@ Sous , *CRM* catégorie, sélectionnez **[!UICONTROL Événements SugarCRM]**, p
 
 ![Copie d’écran de l’interface utilisateur de Platform pour le catalogue avec carte Événements SugarCRM](../../../../images/tutorials/create/sugarcrm-events/catalog-sugarcrm-events.png)
 
-Le **[!UICONTROL Connexion au compte Événements SugarCRM]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
+La variable **[!UICONTROL Connexion au compte Événements SugarCRM]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
 
 ### Compte existant
 
@@ -82,7 +78,7 @@ Les sections ci-dessous contiennent des ressources supplémentaires auxquelles v
 
 ### Mécanismes de sécurisation {#guardrails}
 
-Le [!DNL SugarCRM] Les taux de ralentissement de l’API sont de 90 appels par minute ou de 2 000 appels par jour, selon ce qui se produit en premier. Toutefois, cette restriction a été contournée en ajoutant un paramètre dans la spécification de connexion qui retardera le temps de demande afin que la limite de taux ne soit jamais atteinte.
+La variable [!DNL SugarCRM] Les taux de ralentissement de l’API sont de 90 appels par minute ou de 2 000 appels par jour, selon ce qui se produit en premier. Toutefois, cette restriction a été contournée en ajoutant un paramètre dans la spécification de connexion qui retardera le temps de demande afin que la limite de taux ne soit jamais atteinte.
 
 ### Validation {#validation}
 
@@ -96,4 +92,4 @@ Pour vérifier que vous avez correctement configuré la source et [!DNL SugarCRM
 
 >[!NOTE]
 >
->Le [!DNL SugarMarket] Les pages n’incluent pas le nombre d’objets supprimés. Toutefois, les données récupérées via cette source incluent également le nombre supprimé, qui sera marqué d’un indicateur supprimé.
+>La variable [!DNL SugarMarket] Les pages n’incluent pas le nombre d’objets supprimés. Toutefois, les données récupérées via cette source incluent également le nombre supprimé, qui sera marqué d’un indicateur supprimé.

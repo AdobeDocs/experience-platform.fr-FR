@@ -1,20 +1,15 @@
 ---
 title: Présentation de la source Pendo
 description: Découvrez comment connecter Pendo à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur en utilisant des webhooks
-badge: Version bêta
 exl-id: 376f18ef-1eea-4c42-8041-6fadb5906e9b
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: 68c14d7b187075b4af6b019a8bd1ca2625beabde
 workflow-type: tm+mt
-source-wordcount: '370'
-ht-degree: 20%
+source-wordcount: '352'
+ht-degree: 19%
 
 ---
 
 # [!DNL Pendo]
-
->[!NOTE]
->
->La source [!DNL Pendo] est en version Beta. Veuillez lire la [présentation des sources](../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de sources étiquetées bêta.
 
 Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les bases de données, etc.
 
@@ -22,7 +17,7 @@ Experience Platform prend en charge l’ingestion de données à partir d’une 
 
 [[!DNL Pendo]](https://pendo.io/) est une application product-analytics conçue pour aider les sociétés de logiciels à développer des produits qui interagissent avec leurs clients. L’application permet aux développeurs de logiciels d’incorporer leurs produits à un large éventail d’outils qui peuvent à la fois offrir une meilleure expérience produit aux utilisateurs et de nouvelles informations pour l’équipe produit.
 
-Le [!DNL Pendo] source vous permet d’ingérer les schémas d’événement webhook pris en charge et leurs données d’événement associées à partir de [!DNL Pendo.io] en utilisant la variable [[!DNL Pendo] Webhooks](https://support.pendo.io/hc/en-us/articles/360032285012-Webhooks). Le [!DNL Pendo] source fonctionne avec [!DNL Pendo] Les webhooks d’URL.
+La variable [!DNL Pendo] source vous permet d’ingérer les schémas d’événement webhook pris en charge et leurs données d’événement associées à partir de [!DNL Pendo.io] en utilisant la variable [[!DNL Pendo] Webhooks](https://support.pendo.io/hc/en-us/articles/360032285012-Webhooks). La variable [!DNL Pendo] source fonctionne avec [!DNL Pendo] Les webhooks d’URL.
 
 Les webhooks pris en charge sont les suivants :
 
