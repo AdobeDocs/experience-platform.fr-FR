@@ -2,9 +2,9 @@
 title: Configuration de l’extension du SDK Web Adobe Experience Platform
 description: Comment configurer l’extension de balise du SDK Web de Adobe Experience Platform dans l’interface utilisateur.
 exl-id: 96d32db8-0c9a-49f0-91f3-0244522d66df
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: 97b435b9bcaf20be0e41150b6a7a408e083fbd61
 workflow-type: tm+mt
-source-wordcount: '1185'
+source-wordcount: '1220'
 ht-degree: 9%
 
 ---
@@ -42,11 +42,11 @@ Par défaut, le nom de l’extension est &quot;[!DNL alloy]&quot;. Vous pouvez t
 
 ### **[!UICONTROL Identifiant IMS de l’organisation]**
 
-Le [!UICONTROL Identifiant de l’organisation IMS] est l’organisation à laquelle vous souhaitez envoyer les données dans Adobe. La plupart du temps, utilisez la valeur par défaut qui est renseignée automatiquement. Si la page contient plusieurs instances, renseignez ce champ avec la valeur de la deuxième organisation à laquelle vous souhaitez envoyer des données.
+La variable [!UICONTROL Identifiant de l’organisation IMS] est l’organisation à laquelle vous souhaitez envoyer les données dans Adobe. La plupart du temps, utilisez la valeur par défaut qui est renseignée automatiquement. Si la page contient plusieurs instances, renseignez ce champ avec la valeur de la deuxième organisation à laquelle vous souhaitez envoyer des données.
 
 ### **[!UICONTROL Domaine Edge]**
 
-Le [!UICONTROL Domaine Edge] est le domaine à partir duquel l’extension Adobe Experience Platform envoie et reçoit des données. Adobe recommande d’utiliser un domaine propriétaire (CNAME) pour cette extension. Le domaine tiers par défaut fonctionne pour les environnements de développement, mais ne convient pas aux environnements de production. Les instructions de configuration d’un CNAME propriétaire sont répertoriées [ici](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html?lang=fr).
+La variable [!UICONTROL Domaine Edge] est le domaine à partir duquel l’extension Adobe Experience Platform envoie et reçoit des données. Adobe recommande d’utiliser un domaine propriétaire (CNAME) pour cette extension. Le domaine tiers par défaut fonctionne pour les environnements de développement, mais ne convient pas aux environnements de production. Les instructions de configuration d’un CNAME propriétaire sont répertoriées [ici](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html?lang=fr).
 
 ## [!UICONTROL Flux de données]
 
@@ -59,7 +59,7 @@ Consultez le guide sur la [datastreams](../../../../datastreams/overview.md) pou
 
 ![](assets/privacy.png)
 
-Le [!UICONTROL Confidentialité] vous permet de configurer la manière dont le SDK traite les signaux de consentement de l’utilisateur de votre site web. Plus précisément, il vous permet de sélectionner le niveau de consentement par défaut supposé d’un utilisateur si aucune autre préférence de consentement explicite n’a été fournie. Le niveau de consentement par défaut n’est pas enregistré dans le profil de l’utilisateur. Le tableau suivant décompose les fonctions de chaque option :
+La variable [!UICONTROL Privacy] vous permet de configurer la manière dont le SDK traite les signaux de consentement de l’utilisateur de votre site web. Plus précisément, il vous permet de sélectionner le niveau de consentement par défaut supposé d’un utilisateur si aucune autre préférence de consentement explicite n’a été fournie. Le niveau de consentement par défaut n’est pas enregistré dans le profil de l’utilisateur. Le tableau suivant décompose les fonctions de chaque option :
 
 | [!UICONTROL Niveau de consentement par défaut] | Description |
 | --- | --- |
@@ -68,7 +68,7 @@ Le [!UICONTROL Confidentialité] vous permet de configurer la manière dont le S
 | [!UICONTROL En attente] | Événements de file d’attente qui se produisent avant que l’utilisateur ne fournisse ses préférences de consentement. Lorsque les préférences de consentement sont fournies, les événements sont collectés ou ignorés en fonction des préférences fournies. |
 | [!UICONTROL Fourni par l’élément de données] | Le niveau de consentement par défaut est déterminé par un élément de données distinct que vous définissez. Lorsque vous utilisez cette option, vous devez spécifier l’élément de données à l’aide du menu déroulant fourni. |
 
-Utilisez Out ou Pending (En attente) si vous avez besoin du consentement explicite de l’utilisateur pour vos activités commerciales.
+Utilisez Out ou Pending (En attente) si vous avez besoin d’un consentement explicite de l’utilisateur pour vos activités commerciales.
 
 ## [!UICONTROL Identité]
 
@@ -118,6 +118,10 @@ Le remplacement de la configuration du flux de données est un processus en deux
 Voir la structure de données [la documentation de remplacement de configuration](../../../../datastreams/overrides.md) pour obtenir des instructions détaillées sur la façon de remplacer les configurations datastream.
 
 Au lieu de transmettre les remplacements par le biais d’une commande SDK Web, vous pouvez configurer les remplacements dans l’écran d’extension de balise illustré ci-dessous.
+
+>[!IMPORTANT]
+>
+> Les remplacements de flux de données doivent être configurés par environnement. Les environnements de développement, d’évaluation et de production ont tous des remplacements distincts. Vous pouvez copier les paramètres entre eux à l’aide des options dédiées affichées dans l’écran ci-dessous.
 
 ![Image montrant les remplacements de la configuration de la banque de données dans la page de l’extension de balise du SDK Web.](assets/datastream-overrides.png)
 
