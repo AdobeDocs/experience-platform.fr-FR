@@ -3,10 +3,10 @@ title: Réengagement intelligent
 description: Diffusez des expériences attrayantes et connectées au cours des moments de conversion clés pour réengager intelligemment les clients les plus rares.
 hide: true
 hidefromtoc: true
-source-git-commit: 69d83e0ca7530f09042e0740e3f25ba92ecb24e4
+source-git-commit: 7de5fe7808a22137c417a4ca865d764b0814b90e
 workflow-type: tm+mt
-source-wordcount: '3395'
-ht-degree: 5%
+source-wordcount: '3424'
+ht-degree: 4%
 
 ---
 
@@ -83,7 +83,7 @@ Le parcours de confirmation de commande se concentre sur les achats de produits 
 
 >[!ENDTABS]
 
-## Comment réaliser le cas d’utilisation : instructions détaillées {#step-by-step-instructions}
+## Comment réaliser le cas d’utilisation {#achieve-use-case-instruction}
 
 Pour terminer chacune des étapes des présentations de haut niveau ci-dessus, consultez les sections ci-dessous, qui proposent des liens vers des informations supplémentaires et des instructions plus détaillées.
 
@@ -91,7 +91,7 @@ Pour terminer chacune des étapes des présentations de haut niveau ci-dessus, c
 
 Lorsque vous terminerez les étapes de mise en oeuvre du cas d’utilisation, vous utiliserez les fonctionnalités de Real-Time CDP et les éléments d’IU répertoriés au début de ce document. Assurez-vous de disposer des autorisations de contrôle d’accès en fonction des attributs nécessaires pour toutes ces zones ou demandez à votre administrateur système de vous octroyer les autorisations nécessaires.
 
-### Création d’une conception de schéma et spécification de groupes de champs
+### Création d’une conception de schéma et spécification de groupes de champs {#schema-design}
 
 Les ressources du modèle de données d’expérience (XDM) sont gérées dans le [!UICONTROL Schémas] espace de travail dans [!DNL Adobe Experience Platform]. Vous pouvez afficher et explorer les ressources de base fournies par [!DNL Adobe] (par exemple, [!UICONTROL Groupes de champs]) et créez des ressources et des schémas personnalisés pour votre organisation.
 
@@ -337,22 +337,13 @@ La variable [!DNL Adobe] le schéma du connecteur web est représenté par une [
 
 +++
 
-+++Valeur de classe (groupe de champs)
-
-| Champs | Exigence |
-| --- | --- |
-| `eventType` | Obligatoire |
-| `timestamp` | Obligatoire |
-
-+++
-
 +++Détails de l’audit du système source externe (groupe de champs)
 
 Les attributs d’audit du système de source externe sont un type de données XDM (Experience Data Model) standard qui capture les détails d’audit d’un système de source externe.
 
 +++
 
-### Création d’un jeu de données à partir d’un schéma
+### Création d’un jeu de données à partir d’un schéma {#dataset-from-schema}
 
 Un jeu de données est une structure de stockage et de gestion pour un groupe de données. Chaque schéma pour les parcours de réengagement intelligents comporte un seul jeu de données.
 
@@ -362,31 +353,31 @@ Pour plus d’informations sur la création d’un [dataset](/help/catalog/datas
 >
 >Tout comme l’étape de création d’un schéma, vous devez activer l’inclusion du jeu de données dans le profil client en temps réel. Pour plus d’informations sur l’activation du jeu de données à utiliser dans Real-Time Customer Profile, consultez la section [tutoriel sur la création de schéma.](/help/xdm/tutorials/create-schema-ui.md#profile).
 
-### Confidentialité, consentement et gouvernance des données
+### Confidentialité, consentement et gouvernance des données {#privacy-consent}
 
 #### Stratégies de consentement
 
 >[!IMPORTANT]
 >
->Disposer aux clients de la possibilité de se désabonner de la réception de communications d’une marque est une obligation légale, et garantir le respect de ce choix. Pour en savoir plus sur la législation applicable, consultez la [documentation Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/privacy/regulations/overview.html).
+>Disposer aux clients de la possibilité de se désabonner de la réception de communications d’une marque est une obligation légale, et garantir le respect de ce choix. En savoir plus sur la législation applicable dans la section [Présentation des réglementations sur la confidentialité](https://experienceleague.adobe.com/docs/experience-platform/privacy/regulations/overview.html).
 
-Lors de la création d’un chemin de réengagement, les stratégies de consentement suivantes doivent être prises en compte :
+Lors de la création d’un chemin de réengagement, les [stratégies de consentement](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/consent/overview.html) doit être prise en compte :
 
 * If `consents.marketing.email.val = "Y"` alors peut envoyer un courrier électronique
 * If `consents.marketing.sms.val = "Y"` alors peut envoyer des SMS
 * If `consents.marketing.push.val = "Y"` Push
 * If `consents.share.val = "Y"` puis peuvent faire la publicité
 
-#### Libellé DULE et application
+#### Libellé de gouvernance des données et application
 
-Lors de la création d’un chemin de réengagement, les libellés DULE suivants doivent être pris en compte :
+Lors de la création d’un chemin de réengagement, les [Étiquettes de gouvernance des données](/help/data-governance/labels/overview.md) doit être prise en compte :
 
 * Les adresses électroniques personnelles sont utilisées comme données d’identification directe utilisées pour identifier ou contacter une personne spécifique plutôt qu’un appareil.
    * `personalEmail.address = I1`
 
 #### Stratégies marketing
 
-Aucune stratégie marketing n’est requise pour les parcours de réengagement. Toutefois, les éléments suivants doivent être pris en compte comme vous le souhaitez :
+Il n’y a pas de [stratégies marketing](/help/data-governance/policies/overview.md) Toutefois, pour les parcours de réengagement, les éléments suivants doivent être pris en compte comme vous le souhaitez :
 
 * Limitation des données sensibles
 * Limitation de la publicité Onsite
@@ -394,11 +385,13 @@ Aucune stratégie marketing n’est requise pour les parcours de réengagement. 
 * Limitation du ciblage intersite
 * Restreindre la combinaison de données directement identifiables avec des données anonymes
 
-### Création d’une audience
+### Création d’une audience {#create-audience}
 
 #### Création d’audiences pour les parcours de réengagement de marque
 
 Les parcours de réengagement utilisent des audiences pour définir des attributs ou des comportements spécifiques partagés par un sous-ensemble de profils de votre banque de profils afin de distinguer un groupe de clients potentiels de votre base. Les audiences peuvent être créées de plusieurs façons sur [!DNL Adobe Experience Platform].
+
+Pour plus d’informations sur la création d’une audience, lisez le [Guide de l’interface utilisateur d’Audience Service](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#create-audience).
 
 Pour plus d’informations sur la composition directe [Audiences](/help/segmentation/home.md), lisez le [Guide de l’interface utilisateur de composition d’audience](/help/segmentation/ui/audience-composition.md).
 
@@ -444,13 +437,17 @@ Le descripteur du parcours de panier abandonné apparaît comme suit :
 
 `Include EventType = commerce.productListAdds between 30 min and 1440 minutes before now. exclude EventType = commerce.purchases 30 minutes before now OR EventType = commerce.productListRemovals AND Cart ID equals Product List Adds1 Cart ID (the inclusion event).`
 
+>[!TAB Parcours de confirmation de commande]
+
+Ce parcours ne nécessite aucune audience à créer.
+
 >[!ENDTABS]
 
-### Configuration des parcours dans Adobe Journey Optimizer
+### Configuration des parcours dans Adobe Journey Optimizer {#journey-setup}
 
 >[!NOTE]
 >
->[!DNL Adobe Journey Optimizer] n’englobe pas tout ce qui est affiché dans les diagrammes. Toutes les publicités multimédia payantes sont créées dans [!UICONTROL Destinations].
+>[!DNL Adobe Journey Optimizer] n’englobe pas tout ce qui est affiché dans les diagrammes. Tous [publicités médias payantes](/help/destinations/catalog/social/overview.md) sont créées dans [!UICONTROL Destinations].
 
 [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html?lang=fr) vous aide à offrir à vos clients des expériences connectées, contextuelles et personnalisées. Le parcours client correspond à l’ensemble du processus des interactions d’un client avec la marque. Chaque parcours de cas d’utilisation nécessite des informations spécifiques. Vous trouverez ci-dessous les données précises nécessaires à chaque branche de Parcours.
 
@@ -768,7 +765,7 @@ Le parcours de confirmation de commande se concentre sur les achats de produits 
 
 Pour plus d’informations sur la création de parcours dans [!DNL Adobe Journey Optimizer], lisez le [Guide de prise en main de parcours](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html?lang=fr).
 
-### Configuration des publicités multimédia payantes dans les destinations
+### Configuration des publicités multimédia payantes dans les destinations {#paid-media-ads}
 
 La structure des destinations est utilisée pour les publicités multimédia payantes. Une fois le consentement vérifié, il est envoyé vers les différentes destinations configurées. Pour plus d’informations sur les destinations, consultez la [Présentation des destinations](/help/destinations/home.md) document.
 
@@ -787,6 +784,3 @@ Le segment Abandon du panier est en flux continu et peut donc être utilisé par
    * [Mobile](/help/destinations/catalog/mobile-engagement/overview.md)
    * [Destination de diffusion en continu](/help/destinations/catalog/streaming/http-destination.md)
    * [Destination SDK personnalisée](/help/destinations/destination-sdk/overview.md)
-
-* Fichier/Planifié toutes les trois heures
-   * [Marketing par e-mail](/help/destinations/catalog/email-marketing/overview.md)
