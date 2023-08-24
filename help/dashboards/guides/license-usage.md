@@ -4,7 +4,7 @@ title: Tableau de bord d’utilisation de la licence Guide
 description: Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur l’utilisation des licences de votre entreprise.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: fa4fc154f57243250dec9bdf9557db13ef7768e8
+source-git-commit: 6ff198d1b4b567667eb3c74a2c6393ee3dc9ee7d
 workflow-type: tm+mt
 source-wordcount: '935'
 ht-degree: 17%
@@ -41,7 +41,7 @@ Pour choisir un environnement de test à afficher dans le tableau de bord, séle
 
 La création de rapports de consommation pour les environnements de test est cumulative pour tous les environnements de test du même type. En d’autres termes, la sélection [!UICONTROL Production] ou [!UICONTROL Développement] fournit des rapports sur la consommation pour tous les environnements de test de production ou de développement, respectivement.
 
-![Onglet Aperçu de l’utilisation de la licence avec le sélecteur d’environnements de test en surbrillance.](../images/license-usage/select-sandbox.png)
+![Onglet Aperçu de l’utilisation de la licence avec le sélecteur d’environnements de test en surbrillance.](../images/license-usage/select-sandbox-old.png)
 
 >[!WARNING]
 >
@@ -55,11 +55,11 @@ La création de rapports de consommation pour les environnements de test est cum
 
 Après avoir sélectionné un environnement de test, vous pouvez utiliser la liste déroulante de période pour sélectionner la période à afficher dans le tableau de bord. Plusieurs options sont disponibles, notamment la valeur par défaut des 30 derniers jours.
 
-![L’onglet Aperçu du tableau de bord de l’utilisation de la licence avec la liste déroulante de la période mise en surbrillance.](../images/license-usage/select-date-range.png)
+![L’onglet Aperçu du tableau de bord de l’utilisation de la licence avec la liste déroulante de la période mise en surbrillance.](../images/license-usage/select-date-range-old.png)
 
 Vous pouvez également sélectionner **[!UICONTROL Date personnalisée]** pour choisir la période qui s’affiche.
 
-![L’onglet Aperçu du tableau de bord de l’utilisation de la licence avec les options de période personnalisées surlignées.](../images/license-usage/select-custom-date.png)
+![L’onglet Aperçu du tableau de bord de l’utilisation de la licence avec les options de période personnalisées surlignées.](../images/license-usage/select-custom-date-old.png)
 
 ## Widgets
 
@@ -67,7 +67,7 @@ Le tableau de bord de l’utilisation des licences est constitué de widgets qui
 
 Chaque widget affiche un graphique linéaire qui compare les chiffres réels de votre entreprise au total disponible avec les licences de votre entreprise et fournit un pourcentage de l’utilisation totale.
 
-![L’onglet Aperçu du tableau de bord de l’utilisation de la licence avec le graphique linéaire du widget de mesure de l’utilisation de l’exemple de licence mis en surbrillance.](../images/license-usage/widgets.png)
+![L’onglet Aperçu du tableau de bord de l’utilisation de la licence avec le graphique linéaire du widget de mesure de l’utilisation de l’exemple de licence mis en surbrillance.](../images/license-usage/widgets-old.png)
 
 ## Mesures disponibles
 
