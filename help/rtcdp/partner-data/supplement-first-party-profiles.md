@@ -1,13 +1,10 @@
 ---
-title: (Version Beta) Complémenter les profils propriétaires avec des attributs fournis par le partenaire
+title: Complémenter les profils propriétaires avec des attributs fournis par le partenaire
 description: Découvrez comment compléter les profils propriétaires avec des attributs de partenaires de données de confiance pour améliorer vos bases de données, obtenir de nouvelles informations sur votre base de clientes et de clients et optimiser l’audience.
-hide: true
-hidefromtoc: true
-badgeBeta: label="Version Beta" type="informative" before-title="true"
-source-git-commit: 486e1390dfa0602bef15d196d4a1a5befdc9ff23
+source-git-commit: 9dd305be4dcb45c290a2b8ee0476191949369adc
 workflow-type: tm+mt
-source-wordcount: '1083'
-ht-degree: 100%
+source-wordcount: '1091'
+ht-degree: 94%
 
 ---
 
@@ -15,7 +12,7 @@ ht-degree: 100%
 
 >[!AVAILABILITY]
 >
->* Cette fonctionnalité Beta est disponible pour les clientes et clients qui disposent d’une licence Real-Time CDP (App Service), Adobe Experience Platform Activation, Real-time CDP, Real-Time CDP Prime et Real-Time CDP Ultimate. Consultez la [description des produits](https://helpx.adobe.com/fr/legal/product-descriptions.html) pour en savoir plus sur ces packages et contactez votre représentant ou représentante Adobe pour obtenir plus d’informations.
+>* Cette fonctionnalité est disponible pour les clientes et clients qui disposent d’une licence Real-Time CDP (App Service), Adobe Experience Platform Activation, Real-time CDP, Real-Time CDP Prime et Real-Time CDP Ultimate. Consultez la [description des produits](https://helpx.adobe.com/fr/legal/product-descriptions.html) pour en savoir plus sur ces packages et contactez votre représentant ou représentante Adobe pour obtenir plus d’informations.
 
 Complétez les profils propriétaires avec les attributs des partenaires de données de confiance pour améliorer votre base de données, obtenir de nouvelles informations sur votre base de clientes et clients et optimiser l’audience.
 
@@ -121,5 +118,6 @@ Notez que les limites suivantes s’appliquent lorsque vous utilisez le cas d’
 
 Explorez d’autres cas d’utilisation activés grâce à la prise en charge des données des partenaires dans Real-Time CDP :
 
-* (**Bientôt disponible**) [!BADGE Beta]{type=Informative}**Utilisez la reconnaissance assistée par le partenaire** pour personnaliser les expériences sur site au cours de la visite et pour le reciblage hors site après une visite, sans que l’utilisateur ou l’utilisatrice s’authentifie ou ait déjà interagi avec votre marque.
-* (**Bientôt disponible**) [!BADGE Beta]{type=Informative}L’**activation étendue** à l’aide d’identifiants de partenaire pour publier des écosystèmes qui n’acceptent pas les informations d’identification personnelle ou les informations d’identification personnelles hachées.
+* Utilisation de la prise en charge de données tierces dans Real-Time CDP pour [développer votre base de profils avec des profils de prospect des partenaires de données et interagir avec eux pour acquérir ou atteindre de nouveaux clients ;](/help/rtcdp/partner-data/prospecting.md).
+* [Tirer parti de la reconnaissance assistée par les partenaires pour personnaliser les expériences sur site](/help/rtcdp/partner-data/onsite-personalization.md) pendant la visite sans que l’utilisateur s’authentifie ou n’ait un historique antérieur avec votre marque.
+* [Activation étendue des profils de prospects et des audiences de prospects](/help/destinations/ui/activate-prospect-audiences.md) pour sélectionner des destinations.

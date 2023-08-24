@@ -1,13 +1,11 @@
 ---
 title: Activation des audiences de prospects vers les destinations
 type: Tutorial
-hide: true
-hidefromtoc: true
 description: Découvrez comment activer les audiences de prospects vers les destinations
-source-git-commit: e04d7a3cd75f4e61329a2de8ca5ddcc4d9518a57
+source-git-commit: 9dd305be4dcb45c290a2b8ee0476191949369adc
 workflow-type: tm+mt
-source-wordcount: '522'
-ht-degree: 18%
+source-wordcount: '619'
+ht-degree: 23%
 
 ---
 
@@ -33,7 +31,7 @@ Accédez à **[!UICONTROL Connexions]** > **[!UICONTROL Destinations]**, puis s
 
 ### Autorisations nécessaires {#permissions}
 
-Pour activer les audiences de prospects, vous avez besoin de l’événement **[!UICONTROL Gestion des destinations]**, **[!UICONTROL Affichage des destinations]**, **[!UICONTROL Activation des destinations]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+Pour activer les audiences de prospects, vous avez besoin de l’événement **[!UICONTROL Gestion des destinations]**, **[!UICONTROL Affichage des destinations]**, **[!UICONTROL Activation des destinations]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
 
 Pour vous assurer que vous disposez des autorisations nécessaires pour activer les audiences du prospect, parcourez le catalogue des destinations. Si une destination comporte une variable **[!UICONTROL Activer]** contrôlez, puis vous disposez des autorisations appropriées.
 
@@ -82,3 +80,11 @@ Pour le reste du workflow d’activation afin d’exporter des audiences de pros
 Note that we will need to add links to other destination types here as more destinations become supported 
 
 -->
+
+## Autres cas d’utilisation réalisés grâce à la prise en charge des données des partenaires {#other-use-cases}
+
+Explorez d’autres cas d’utilisation activés grâce à la prise en charge des données des partenaires dans Real-Time CDP :
+
+* [Complétez les profils propriétaires avec les attributs des partenaires de données de confiance pour améliorer votre base de données, obtenir de nouvelles informations sur votre base de clientes et clients et optimiser l’audience.](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
+* Utilisation de la prise en charge de données tierces dans Real-Time CDP pour [développer votre base de profils avec des profils de prospect des partenaires de données et interagir avec eux pour acquérir ou atteindre de nouveaux clients ;](/help/rtcdp/partner-data/prospecting.md).
+* [Tirer parti de la reconnaissance assistée par les partenaires pour personnaliser les expériences sur site](/help/rtcdp/partner-data/onsite-personalization.md) pendant la visite sans que l’utilisateur s’authentifie ou n’ait un historique antérieur avec votre marque.

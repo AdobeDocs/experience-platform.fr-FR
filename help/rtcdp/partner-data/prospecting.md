@@ -1,13 +1,10 @@
 ---
-title: (Version bêta) Interagir et acquérir de nouveaux clients au moyen de cas d’utilisation de prospection
+title: Interagir et acquérir de nouveaux clients au moyen de cas d’utilisation de prospection
 description: Découvrez comment interagir et acquérir de nouveaux clients grâce à des cas d’utilisation de prospection, activés par le support des données des partenaires dans Real-Time CDP.
-hide: true
-hidefromtoc: true
-badgeBeta: label="Version Beta" type="informative" before-title="true"
-source-git-commit: 2e2a473efd247cb235ee7e8f94058baa48fd1b1a
+source-git-commit: 9dd305be4dcb45c290a2b8ee0476191949369adc
 workflow-type: tm+mt
-source-wordcount: '1953'
-ht-degree: 16%
+source-wordcount: '1941'
+ht-degree: 14%
 
 ---
 
@@ -15,7 +12,7 @@ ht-degree: 16%
 
 >[!AVAILABILITY]
 >
->* Cette fonctionnalité Beta est disponible pour les clientes et clients qui disposent d’une licence Real-Time CDP (App Service), Adobe Experience Platform Activation, Real-time CDP, Real-Time CDP Prime et Real-Time CDP Ultimate. Consultez la [description des produits](https://helpx.adobe.com/fr/legal/product-descriptions.html) pour en savoir plus sur ces packages et contactez votre représentant ou représentante Adobe pour obtenir plus d’informations.
+>* Cette fonctionnalité est disponible pour les clientes et clients qui disposent d’une licence Real-Time CDP (App Service), Adobe Experience Platform Activation, Real-time CDP, Real-Time CDP Prime et Real-Time CDP Ultimate. Consultez la [description des produits](https://helpx.adobe.com/fr/legal/product-descriptions.html) pour en savoir plus sur ces packages et contactez votre représentant ou représentante Adobe pour obtenir plus d’informations.
 
 Utilisez la prise en charge de données tierces dans Real-Time CDP pour développer votre base de profils avec les profils de prospect des partenaires de données et interagissez avec eux pour acquérir ou atteindre de nouveaux clients.
 
@@ -57,8 +54,8 @@ Parcourez les sections ci-dessous, qui contiennent des liens vers d’autres doc
 * [Libellés d’utilisation des données](/help/data-governance/labels/overview.md)
 * [Jeux de données](/help/catalog/datasets/overview.md)
 * [Sources](/help/sources/home.md)
-* Profils (lien vers les profils de prospect)
-* Audiences (lien vers les audiences prospects)
+* [Profils de prospects](/help/profile/ui/prospect-profile.md)
+* [Public potentiel](/help/segmentation/ui/prospect-audience.md)
 * [Destinations](/help/destinations/home.md)
 
 ### Obtention d’une licence pour les détails du profil tiers du partenaire {#license-profiles-from-partner}
@@ -97,13 +94,13 @@ La variable **[!UICONTROL Profil XDM Individual Prospect]** est préconfigurée 
 
 ![Champs préconfigurés pour la classe XDM Individual Prospect Profile.](/help/rtcdp/assets/partner-data/prospecting/preconfigured-fields-individual-prospect-class.png)
 
-Ensuite, vous devez sélectionner l’identité partnerID que vous avez créée précédemment comme identité Principale pour le schéma. Les enregistrements de profil doivent comporter un identifiant Principal. Cette étape est nécessaire pour s’assurer que les données de prospect peuvent être chargées dans l’entrepôt de profils et mises à disposition pour la segmentation et l’activation.
+Ensuite, vous devez sélectionner l’identité partnerID que vous avez créée précédemment comme identité principale pour le schéma. Les enregistrements de profil doivent comporter un identifiant principal. Cette étape est nécessaire pour s’assurer que les données de prospect peuvent être chargées dans l’entrepôt de profils et mises à disposition pour la segmentation et l’activation.
 
 >[!AVAILABILITY]
 >
 >Les profils potentiels sont automatiquement limités pour utiliser uniquement les espaces de noms d’ID du type Identifiant de partenaire. Cela s’effectue par conception et garantit une séparation nette entre vos profils propriétaires et prospects.
 
-![Sélectionnez l’identifiant de partenaire configuré précédemment comme identité Principale dans le schéma.](/help/rtcdp/assets/partner-data/prospecting/select-partner-id-as-primary-identity.gif)
+![Sélectionnez l’identifiant de partenaire configuré précédemment comme identité principale dans le schéma.](/help/rtcdp/assets/partner-data/prospecting/select-partner-id-as-primary-identity.gif)
 
 Notez que le schéma n’est pas encore activé pour profile. Activez le bouton Profil pour activer l’inclusion de ce schéma dans le service de profil. Pour plus d’informations sur l’activation du schéma à utiliser dans Real-Time Customer Profile, consultez la section [tutoriel sur la création de schéma.](/help/xdm/tutorials/create-schema-ui.md#profile)
 
@@ -184,7 +181,7 @@ Vous pouvez également sélectionner n’importe quel profil de prospect pour un
 
 ![Vue de la manière d’inspecter les profils de prospect.](/help/rtcdp/assets/partner-data/prospecting/inspect-prospect-profile.gif)
 
-(**Bientôt disponible**) En savoir plus sur les profils de prospect.
+En savoir plus sur [profils de prospect](/help/profile/ui/prospect-profile.md).
 
 ### Créer des audiences de prospects {#create-prospect-audiences}
 
@@ -200,7 +197,7 @@ Notez que l’expérience de création d’audiences pour les profils de prospec
 * Évaluation de profil par lots uniquement.
 * Ne prend pas en charge la création d’audiences basées sur des événements de série temporelle.
 
-(**Bientôt disponible**) En savoir plus sur les audiences de prospects.
+En savoir plus sur [audiences prospects](/help/segmentation/ui/prospect-audience.md).
 
 ### Activation des profils de prospect vers des destinations {#activate-to-destinations}
 
@@ -210,5 +207,6 @@ Utilisez les audiences de prospects en les exportant vers des destinations. Actu
 
 Explorez d’autres cas d’utilisation activés grâce à la prise en charge des données des partenaires dans Real-Time CDP :
 
-* [!BADGE Version bêta]{type=Informative}[Complétez les profils propriétaires avec les attributs des partenaires de données de confiance pour améliorer votre base de données, obtenir de nouvelles informations sur votre base de clientes et clients et optimiser l’audience.](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
-* (**Bientôt disponible**) [!BADGE Beta]{type=Informative}**Utilisez la reconnaissance assistée par le partenaire** pour personnaliser les expériences sur site au cours de la visite et pour le reciblage hors site après une visite, sans que l’utilisateur ou l’utilisatrice s’authentifie ou ait déjà interagi avec votre marque.
+* [Complétez les profils propriétaires avec les attributs des partenaires de données de confiance pour améliorer votre base de données, obtenir de nouvelles informations sur votre base de clientes et clients et optimiser l’audience.](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
+* [Tirer parti de la reconnaissance assistée par les partenaires pour personnaliser les expériences sur site](/help/rtcdp/partner-data/onsite-personalization.md) pendant la visite sans que l’utilisateur s’authentifie ou n’ait un historique antérieur avec votre marque.
+* [Activation étendue des profils de prospects et des audiences de prospects](/help/destinations/ui/activate-prospect-audiences.md) pour sélectionner des destinations.

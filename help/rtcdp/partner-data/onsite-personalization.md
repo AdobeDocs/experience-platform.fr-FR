@@ -1,16 +1,18 @@
 ---
 title: Utilisation de la reconnaissance des visiteurs assistée par les partenaires pour personnaliser les expériences Onsite
 description: Découvrez comment utiliser la reconnaissance des visiteurs avec l’aide de partenaires pour offrir des expériences personnalisées sur site à vos visiteurs.
-hide: true
-hidefromtoc: true
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: 9d7e8ef99a42e804896f5c9befcf98bb1c010606
 workflow-type: tm+mt
-source-wordcount: '2492'
-ht-degree: 7%
+source-wordcount: '2530'
+ht-degree: 8%
 
 ---
 
 # Utiliser la reconnaissance des visiteurs par les partenaires pour personnaliser les expériences sur site
+
+>[!AVAILABILITY]
+>
+>Cette fonctionnalité est disponible pour les clientes et clients qui disposent d’une licence Real-Time CDP (App Service), Adobe Experience Platform Activation, Real-time CDP, Real-Time CDP Prime et Real-Time CDP Ultimate. Consultez la [description des produits](https://helpx.adobe.com/fr/legal/product-descriptions.html) pour en savoir plus sur ces packages et contactez votre représentant ou représentante Adobe pour obtenir plus d’informations.
 
 Découvrez comment utiliser la reconnaissance assistée par les partenaires pour offrir des expériences personnalisées aux visiteurs de vos propriétés web. Utilisez ce tutoriel pour comprendre la séquence d’implémentation de divers éléments dans les solutions Experience Platform et autres solutions Experience Cloud afin d’afficher une expérience personnalisée pour les visiteurs authentifiés et non authentifiés.
 
@@ -243,7 +245,7 @@ Vous êtes maintenant prêt à créer et activer des audiences pour la personnal
 
 Configuration [segmentation de périphérie](/help/segmentation/ui/edge-segmentation.md) ainsi, l’appartenance de l’audience de vos visiteurs est évaluée en temps réel, lorsqu’ils visitent votre propriété web.
 
-Veillez également à configurer une [Stratégie de fusion principale-on-edge](/help/destinations/ui/activate-edge-personalization-destinations.md#create-merge-policy) pour les audiences Edge.
+Veillez également à configurer une [stratégie de fusion active-on-edge](/help/destinations/ui/activate-edge-personalization-destinations.md#create-merge-policy) pour les audiences Edge.
 
 #### Intégration à Adobe Target ou à une autre destination de personnalisation personnalisée
 
@@ -265,4 +267,4 @@ Explorez d’autres cas d’utilisation activés grâce à la prise en charge de
 
 * [Complétez les profils propriétaires avec les attributs des partenaires de données de confiance pour améliorer votre base de données, obtenir de nouvelles informations sur votre base de clientes et clients et optimiser l’audience.](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
 * Utilisation de la prise en charge de données tierces dans Real-Time CDP pour [développer votre base de profils avec des profils de prospect des partenaires de données et interagir avec eux pour acquérir ou atteindre de nouveaux clients ;](/help/rtcdp/partner-data/prospecting.md).
-* (**Bientôt disponible**) [!BADGE Beta]{type=Informative}L’**activation étendue** à l’aide d’identifiants de partenaire pour publier des écosystèmes qui n’acceptent pas les informations d’identification personnelle ou les informations d’identification personnelles hachées.
+* [Activation étendue des profils de prospects et des audiences de prospects](/help/destinations/ui/activate-prospect-audiences.md) pour sélectionner des destinations.
