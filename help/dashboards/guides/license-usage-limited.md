@@ -5,7 +5,7 @@ description: Adobe Experience Platform fournit un tableau de bord grâce auquel 
 type: Documentation
 hide: true
 hidefromtoc: true
-source-git-commit: c1ad20def39ef58253e8486ca4dcfcce2501510b
+source-git-commit: 25f57b1bfbcb2ec95f88afb69386a10deb600125
 workflow-type: tm+mt
 source-wordcount: '1495'
 ht-degree: 7%
@@ -68,7 +68,7 @@ Le tableau indique la mesure principale de chaque produit, car chaque produit pe
 
 Toutes les mesures disponibles s’affichent sur la page [!UICONTROL Résumé] . Les mesures disponibles dépendent du produit sous licence. Cette vue fournit **une vue consolidée de toutes les mesures pour tous les environnements de test de production ou de développement ;**. Le même niveau d’analyse est fourni pour les environnements de test de production et de développement.
 
-![Vue récapitulative d’un produit Platform qui affiche toutes les mesures disponibles pour ce produit.]()
+![Vue récapitulative d’un produit Platform qui affiche toutes les mesures disponibles pour ce produit.](../images/license-usage/summary-tab.png)
 
 Dans l’onglet Résumé, le tableau comprend la variable [!UICONTROL Mesure] colonne . Ces descriptions lisibles par l’utilisateur indiquent toutes les mesures utilisées pour ce type d’environnement de test.
 
@@ -78,7 +78,7 @@ Pour modifier l’affichage entre les types d’environnements de test de produc
 
 La création de rapports de consommation pour les environnements de test est cumulative pour tous les environnements de test du même type. En d’autres termes, la sélection [!UICONTROL Production] ou [!UICONTROL Développement] fournit des rapports sur la consommation pour tous les environnements de test de production ou de développement, respectivement.
 
-![La vue de synthèse d’un produit Platform avec des environnements de test de production et des environnements de test de développement est mise en surbrillance.](../images/license-usage/summary-tab.png)
+![La vue de synthèse d’un produit Platform avec des environnements de test de production et des environnements de test de développement est mise en surbrillance.](../images/license-usage/summary-tab-sandboxes.png)
 
 >[!WARNING]
 >

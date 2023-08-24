@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guide de l’interface utilisateur des jeux de données
 description: Découvrez comment exécuter des actions courantes lors de l’utilisation de jeux de données dans l’interface utilisateur de Adobe Experience Platform.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 141037fd844c78e98785ea2246026ac120961dd5
+source-git-commit: 25f57b1bfbcb2ec95f88afb69386a10deb600125
 workflow-type: tm+mt
 source-wordcount: '2745'
 ht-degree: 17%
@@ -207,7 +207,7 @@ Vous pouvez gérer les étiquettes de gouvernance des données d’un jeu de don
 
 Les libellés d’utilisation des données, appliqués au niveau du schéma, vous permettent de classer les jeux de données et les champs en fonction des stratégies d’utilisation qui s’appliquent à ces données. Voir [Présentation de la gouvernance des données](../../data-governance/home.md) pour en savoir plus sur les étiquettes, ou reportez-vous à la section [guide d’utilisation des libellés d’utilisation des données](../../data-governance/labels/overview.md) pour obtenir des instructions sur la manière d’appliquer des libellés aux schémas pour la propagation aux jeux de données.
 
-### Déplacer vers des dossiers {#move-to-folders}
+## Déplacer vers des dossiers {#move-to-folders}
 
 Vous pouvez placer des jeux de données dans des dossiers pour une meilleure gestion des jeux de données. Pour déplacer un jeu de données dans un dossier, sélectionnez les ellipses (...) en regard du nom du jeu de données que vous souhaitez gérer, suivies de **[!UICONTROL Déplacer vers le dossier]** dans le menu déroulant.
 
@@ -217,7 +217,7 @@ La variable [!UICONTROL Déplacer] la boîte de dialogue dataset to folder s’a
 
 ![La variable [!UICONTROL Déplacer] Boîte de dialogue du jeu de données [!UICONTROL Déplacer] surlignée.](../images/datasets/user-guide/move-dialog.png)
 
->
+>[!TIP]
 >
 >Vous pouvez également créer des dossiers directement à partir de la boîte de dialogue Déplacer le jeu de données . Pour créer un dossier, sélectionnez l’icône de création de dossier (![Icône Créer un dossier .](../images/datasets/user-guide/create-folder-icon.png)) en haut à droite de la boîte de dialogue.
 >
