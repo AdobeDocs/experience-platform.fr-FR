@@ -2,10 +2,10 @@
 title: Surveillance des requêtes planifiées
 description: Découvrez comment surveiller les requêtes via l’interface utilisateur de Query Service.
 exl-id: 4640afdd-b012-4768-8586-32f1b8232879
-source-git-commit: 75ef9c58aa7c5f1cc628d1f13b6c5f56b362458a
+source-git-commit: fa871529a4136263399bad3200ee3888049d06a5
 workflow-type: tm+mt
-source-wordcount: '1812'
-ht-degree: 40%
+source-wordcount: '1818'
+ht-degree: 39%
 
 ---
 
@@ -15,11 +15,11 @@ Adobe Experience Platform offre une meilleure visibilité du statut de toutes le
 
 ## [!UICONTROL Requêtes planifiées]
 
-Le [!UICONTROL Requêtes planifiées] fournit un aperçu de toutes vos requêtes CTAS et ITAS planifiées. Vous trouverez des détails sur l’exécution pour toutes les requêtes planifiées, ainsi que des codes d’erreur et des messages pour toutes les requêtes ayant échoué.
+La variable [!UICONTROL Requêtes planifiées] fournit un aperçu de toutes vos requêtes CTAS et ITAS planifiées. Vous trouverez des détails sur l’exécution pour toutes les requêtes planifiées, ainsi que des codes d’erreur et des messages pour toutes les requêtes ayant échoué.
 
 Pour accéder à l’onglet [!UICONTROL Requêtes planifiées], sélectionnez **[!UICONTROL Requêtes]** dans la barre de navigation de gauche, suivi de **[!UICONTROL Requêtes planifiées]**
 
-![L’onglet Requêtes planifiées de l’espace de travail Requêtes.](../images/ui/monitor-queries/scheduled-queries.png)
+![Onglet Requêtes planifiées de l’espace de travail Requêtes avec surbrillance Requêtes planifiées et Requêtes.](../images/ui/monitor-queries/scheduled-queries.png)
 
 Le tableau ci-dessous décrit chaque colonne disponible.
 
@@ -37,7 +37,7 @@ Le tableau ci-dessous décrit chaque colonne disponible.
 | **[!UICONTROL Créé]** | La date et l’heure de création de la requête, au format UTC. |
 | **[!UICONTROL La date et l’heure de la dernière exécution]** | La date et l’heure les plus récentes auxquelles la requête a été exécutée. Cette colonne met en évidence si une requête a été exécutée conformément à son planning actuel. |
 | **[!UICONTROL Statut de la dernière exécution]** | Statut de la dernière exécution de la requête. Les valeurs d’état sont les suivantes : `Success`, `Failed`, `In progress`, et `No runs`. |
-| **[!UICONTROL État de la planification]** | État actuel de la requête planifiée. Il existe cinq valeurs potentielles, [!UICONTROL Enregistrement], [!UICONTROL Principal], [!UICONTROL Inactif], [!UICONTROL Supprimé]et un trait d’union. <ul><li>Le trait d’union indique que la requête planifiée est une requête ponctuelle non récurrente.</li><li>Le [!UICONTROL Enregistrement] Le statut indique que le système traite toujours la création du nouveau planning pour la requête. Remarque : vous ne pouvez pas désactiver ou supprimer une requête planifiée lors de son enregistrement.</li><li>Le [!UICONTROL Principal] le statut indique que la requête planifiée possède **pas encore passé** sa date et son heure d’achèvement.</li><li>Le [!UICONTROL Inactif] le statut indique que la requête planifiée possède **transmis** sa date et son heure d’achèvement.</li><li>Le [!UICONTROL Supprimé] Le statut indique que le planning de requête a été supprimé.</li></ul> |
+| **[!UICONTROL État de la planification]** | État actuel de la requête planifiée. Il existe cinq valeurs potentielles, [!UICONTROL Enregistrement], [!UICONTROL Actif], [!UICONTROL Inactif], [!UICONTROL Supprimé]et un trait d’union. <ul><li>Le trait d’union indique que la requête planifiée est une requête ponctuelle non récurrente.</li><li>La variable [!UICONTROL Enregistrement] Le statut indique que le système traite toujours la création du nouveau planning pour la requête. Remarque : vous ne pouvez pas désactiver ou supprimer une requête planifiée lors de son enregistrement.</li><li>La variable [!UICONTROL Actif] le statut indique que la requête planifiée possède **pas encore passé** date et heure d’achèvement.</li><li>La variable [!UICONTROL Inactif] le statut indique que la requête planifiée possède **transmis** date et heure d’achèvement.</li><li>La variable [!UICONTROL Supprimé] Le statut indique que le planning de requête a été supprimé.</li></ul> |
 
 >[!TIP]
 >
@@ -49,7 +49,7 @@ Vous pouvez ajuster les colonnes de l’onglet [!UICONTROL Requêtes planifiées
 
 >[!NOTE]
 >
->Le [!UICONTROL Créé] qui fait référence à la date de création du planning est masquée par défaut.
+>La variable [!UICONTROL Créé] qui fait référence à la date de création du planning est masquée par défaut.
 
 ![L’onglet Requêtes planifiées avec l’icône Personnaliser les paramètres du tableau en surbrillance.](../images/ui/monitor-queries/customze-table-settings-icon.png)
 
@@ -63,7 +63,7 @@ Activez/désactivez les cases à cocher appropriées pour supprimer ou ajouter u
 
 ## Gestion des requêtes planifiées avec des actions intégrées {#inline-actions}
 
-Le [!UICONTROL Requêtes planifiées] view propose diverses actions intégrées pour gérer toutes vos requêtes planifiées à partir d’un seul emplacement. Les actions intégrées sont indiquées par des points de suspension dans chaque ligne. Sélectionnez les points de suspension d’une requête planifiée que vous souhaitez gérer pour afficher les options disponibles dans un menu contextuel. Les options disponibles sont les suivantes : [[!UICONTROL Désactiver le planning]](#disable) ou [!UICONTROL Activation du planning], [[!UICONTROL Supprimer le planning]](#delete), et [[!UICONTROL S’abonner]](#alert-subscription) pour interroger des alertes.
+La variable [!UICONTROL Requêtes planifiées] view propose diverses actions intégrées pour gérer toutes vos requêtes planifiées à partir d’un seul emplacement. Les actions intégrées sont indiquées par des points de suspension dans chaque ligne. Sélectionnez les points de suspension d’une requête planifiée que vous souhaitez gérer pour afficher les options disponibles dans un menu contextuel. Les options disponibles incluent [[!UICONTROL Désactiver le planning]](#disable) ou [!UICONTROL Activation du planning], [[!UICONTROL Supprimer le planning]](#delete), et [[!UICONTROL Abonner]](#alert-subscription) pour interroger des alertes.
 
 ![L’onglet Requêtes planifiées avec les ellipses d’action intégrées et le menu contextuel en surbrillance.](../images/ui/monitor-queries/disable-inline.png)
 
@@ -85,9 +85,9 @@ Si vous souhaitez planifier des exécutions pour ce modèle de requête, sélect
 
 ### S’abonner aux alertes {#alert-subscription}
 
-Pour vous abonner aux alertes pour les exécutions de requête planifiées, sélectionnez les points de suspension d’une requête planifiée à gérer, puis sélectionnez **[!UICONTROL S’abonner]** dans les options du menu contextuel.
+Pour vous abonner aux alertes pour les exécutions de requête planifiées, sélectionnez les points de suspension d’une requête planifiée à gérer, puis sélectionnez **[!UICONTROL Abonner]** dans les options du menu contextuel.
 
-Le [!UICONTROL Alertes] s’ouvre. Le [!UICONTROL Alertes] vous abonne aux notifications de l’interface utilisateur et aux alertes par courrier électronique. Les alertes reposent sur le statut de la requête. Trois options sont disponibles : `start`, `success` et `failure`. Cochez la ou les cases correspondantes et sélectionnez **[!UICONTROL Enregistrer]** pour vous abonner. Vous pouvez vous abonner à des alertes tant qu’elles n’ont pas de [!UICONTROL Horodatage de la dernière exécution] .
+La variable [!UICONTROL Alertes] s’ouvre. La variable [!UICONTROL Alertes] vous abonne aux notifications de l’interface utilisateur et aux alertes par courrier électronique. Les alertes reposent sur le statut de la requête. Trois options sont disponibles : `start`, `success` et `failure`. Cochez la ou les cases correspondantes et sélectionnez **[!UICONTROL Enregistrer]** pour vous abonner. Vous pouvez vous abonner à des alertes tant qu’elles n’ont pas de [!UICONTROL Horodatage de la dernière exécution] .
 
 ![Boîte de dialogue d’abonnement aux alertes.](../images/ui/monitor-queries/alert-subscription-dialog.png)
 
@@ -125,7 +125,7 @@ Ces informations apparaissent dans un tableau à cinq colonnes. Chaque ligne ind
 
 | Nom de la colonne | Description |
 |---|---|
-| **[!UICONTROL ID d’exécution de requête]** | ID pour l’exécution de requête quotidienne. Sélectionnez la **[!UICONTROL Identifiant d’exécution de requête]** pour accéder au [!UICONTROL Présentation de l’exécution de requête]. |
+| **[!UICONTROL ID d’exécution de requête]** | ID pour l’exécution de requête quotidienne. Sélectionnez la variable **[!UICONTROL Identifiant d’exécution de requête]** pour accéder au [!UICONTROL Présentation de l’exécution de requête]. |
 | **[!UICONTROL Démarrage de l’exécution de requête]** | Date et heure de l’exécution de la requête. L’horodatage est au format UTC. |
 | **[!UICONTROL Fin de l’exécution de requête]** | Date et heure de la fin de la requête. L’horodatage est au format UTC. |
 | **[!UICONTROL Statut]** | Statut de la dernière exécution de la requête. Les trois valeurs de statut sont les suivantes : `successful` `failed` ou `in progress`. |
@@ -141,7 +141,7 @@ Sélectionnez un ID d’exécution de requête pour accéder à la page des dét
 
 ## Présentation de l’exécution de requête {#query-run-overview}
 
-Le [!UICONTROL Présentation de l’exécution de requête] fournit des informations sur les exécutions individuelles pour cette requête planifiée et une ventilation plus détaillée de l’état d’exécution. Cette page contient également les informations sur le client et les détails des erreurs qui ont pu entraîner l’échec de la requête.
+La variable [!UICONTROL Présentation de l’exécution de requête] fournit des informations sur les exécutions individuelles pour cette requête planifiée et une ventilation plus détaillée de l’état d’exécution. Cette page contient également les informations sur le client et les détails des erreurs qui ont pu entraîner l’échec de la requête.
 
 ![Écran de détails de l’exécution avec la section de présentation mise en surbrillance.](../images/ui/monitor-queries/query-run-details.png)
 
