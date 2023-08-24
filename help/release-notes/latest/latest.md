@@ -2,7 +2,7 @@
 title: Notes de mise à jour d’Adobe Experience Platform
 description: Les notes de mise à jour d’août 2023 pour Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: c7cd33c5d3d18095fc525b7a8b36a06cad681200
+source-git-commit: 8a313587a339ea775adc5422519841b1e679be7a
 workflow-type: tm+mt
 source-wordcount: '1592'
 ht-degree: 41%
@@ -64,10 +64,13 @@ Pour plus d’informations sur le contrôle d’accès basé sur les attributs, 
 Adobe Experience Platform fournit de nombreux tableaux de bord grâce auxquels vous pouvez afficher des informations importantes sur les données de votre organisation, telles quʼelles sont capturées lors dʼinstantanés quotidiens.
 
 **Fonctionnalités nouvelles ou mises à jour**
-&#x200B; | Fonctionnalité | Description | | — | — | |Cas d’utilisation de l’analyse du consentement et du suivi | Découvrez comment créer un tableau de bord de consentement pour divers cas d’utilisation marketing pour les données Real-Time CDP avec la variable [document d’analyse et de suivi du consentement](../../dashboards/insights-use-cases/consent-analysis.md). Il explique comment créer une audience avec les attributs appropriés pour vos besoins professionnels, puis utiliser les informations à l’aide de widgets préconfigurés dans l’interface utilisateur de Adobe Experience Platform. Il fournit également des instructions sur la création de votre propre widget personnalisé avec la fonction de tableaux de bord définis par l’utilisateur. Le document couvre les cas d’utilisation des tendances de consentement et de chevauchement du consentement. |
+
+| Fonctionnalité | Description |
+| --- | --- |
+| Cas d’utilisation de l’analyse du consentement et du suivi | Découvrez comment créer un tableau de bord de consentement pour divers cas d’utilisation marketing pour les données Real-Time CDP à l’aide du [document d’analyse et de suivi du consentement](../../dashboards/insights-use-cases/consent-analysis.md). Il explique comment créer une audience avec les attributs appropriés pour vos besoins professionnels, puis utiliser les informations à l’aide de widgets préconfigurés dans l’interface utilisateur de Adobe Experience Platform. Il fournit également des instructions sur la création de votre propre widget personnalisé avec la fonction de tableaux de bord définis par l’utilisateur. Le document couvre les cas d’utilisation des tendances de consentement et de chevauchement du consentement. |
 
 {style="table-layout:auto"}
-&#x200B;
+
 Pour plus dʼinformations sur les tableaux de bord, notamment sur la manière dʼoctroyer des autorisations dʼaccès et de créer des widgets personnalisés, commencez par lire la [Présentation des tableaux de bord](../../dashboards/home.md).
 
 ## Collecte de données {#data-collection}
