@@ -1,60 +1,36 @@
 ---
 solution: Experience Platform
 title: Audiences similaires
-description: Découvrez comment cibler de nouvelles audiences à forte valeur ajoutée dans Adobe Experience Platform à l’aide d’audiences analogue.
+description: Découvrez comment cibler de nouvelles audiences à forte valeur ajoutée dans Adobe Experience Platform à l’aide d’audiences look-alike.
 badgeLimitedAvailability: label="Disponibilité limitée" type=Caution
-source-git-commit: 4bd26857d2c714cd629fc46dbb9b6da6a29358c8
+source-git-commit: a44b1a1f6028e54ca23149249697dea9407bf60a
 workflow-type: tm+mt
 source-wordcount: '2123'
-ht-degree: 10%
+ht-degree: 9%
 
 ---
 
 
-# Guide des audiences analogue
+# Guide des audiences semblables
 
 >[!IMPORTANT]
 >
 >Notez que les insights semblables et les audiences semblables sont dans **disponibilité limitée**.
 
-Dans Adobe Experience Platform, les audiences de type look-Alike fournissent des informations intelligentes sur chacune de vos audiences, en exploitant les informations basées sur l’apprentissage automatique pour identifier et cibler les clients à forte valeur ajoutée dans vos campagnes marketing.
+Dans Adobe Experience Platform, les audiences look-alike fournissent des insights intelligents sur chacune de vos audiences, en exploitant les insights basés sur l’apprentissage automatique pour identifier et cibler les clients à forte valeur ajoutée dans vos campagnes marketing.
 
-Avec les audiences semblables, vous pouvez créer des audiences étendues qui ciblent des clients similaires à vos audiences hautement performantes ou des clients similaires aux audiences converties précédemment.
+Avec les audiences look-alike, vous pouvez créer des audiences étendues qui ciblent des clients similaires à vos audiences hautement performantes ou des clients ciblés similaires aux audiences converties précédemment.
 
 ## Terminologie {#terminology}
 
-Avant de commencer à utiliser les audiences analogue, veillez à comprendre les concepts suivants :
+Avant de commencer avec les audiences look-alike, veillez à comprendre les concepts suivants :
 
 - **Audience de base**: l’audience de base est l’audience dont vous souhaitez obtenir plus d’informations. Il s’agit de l’audience que le modèle analogue est **based** sur .
 - **Modèle analogue**: un modèle analogue est un modèle d’apprentissage automatique formé sur chaque audience de base éligible sans aucune entrée client. Chaque modèle analogue crée des facteurs d’influence et des graphiques de similarité. Un modèle analogue fait **not** on obtient un score.
-- **Audience analogue**: une audience analogue est l’audience créée lorsqu’un modèle analogue avec un seuil de similarité sélectionné est appliqué à l’audience de base. Vous pouvez créer plusieurs audiences analogue à l’aide du même modèle. Le public analogue est ce qui obtient un score.
+- **Audience analogue**: une audience analogue est l’audience créée lorsqu’un modèle analogue avec un seuil de similarité sélectionné est appliqué à l’audience de base. Vous pouvez créer plusieurs audiences look-alike à l’aide du même modèle look-alike. L&#39;audience analogue est ce qui obtient un score.
 - **Taille totale de l’audience adressable**: la taille totale de l’audience adressable est le nombre total de profils au cours des 30 derniers jours, moins la population de base de l’audience au cours des 30 derniers jours. Par exemple, si un client a 10 millions de profils au cours des 30 derniers jours et que l’audience de base a 1 million de profils au cours des 30 derniers jours, la taille totale de l’audience adressable est de 9 millions de profils.
 
 ## Détails du modèle analogue {#details}
-
-Dans Adobe Experience Platform, le modèle analogue utilise trois types de points de données différents :
-
-- Appartenance à l’audience au cours des 30 derniers jours
-- Événements d’expérience des 30 derniers jours ingérés dans le profil client en temps réel
-- Attributs de profil des 30 derniers jours ingérés dans le profil client en temps réel
-
-Tous ces points de données sont transformés en paires valeur-clé qui sont transmises au modèle analogue. Seules les paires clé-valeur avec un pourcentage significatif de correspondance de profils seront conservées.
-
-Actuellement, le modèle look-alike est exécuté toutes les 24 heures, créant et recréant les facteurs d’influence et les graphiques de similitudes pour les audiences de base. La notation pour les audiences analogue est également exécutée fréquemment.
-
-## Droits {#entitlements}
-
-Les droits suivants s’appliquent à l’utilisation des audiences de type analogue :
-
-- Les clients Real-Time CDP Prime ont le droit de **5** Audiences similaires actives dans les environnements de test de production
-- Les clients Real-Time CDP Ultimate ont le droit de **20** Audiences similaires actives dans les environnements de test de production
-- Les environnements de test de développement sont limités à **5** Audiences identiques pour tous les clients Real-Time CDP
-
-Les modules complémentaires, qui seront disponibles ultérieurement, augmenteront les droits pour les environnements de test de production de 20 audiences analogue par pack.
-
-Pour confirmer que vous avez accès aux audiences analogue, contactez votre représentant d’Adobe.
-
-## Affichage des insights semblables {#view}
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_lookAlike_notEligible"
@@ -71,11 +47,35 @@ Pour confirmer que vous avez accès aux audiences analogue, contactez votre repr
 >title="Erreur"
 >abstract="Une erreur s’est produite lors du traitement de ce modèle. Supprimez et recréez ce modèle ou réessayez plus tard."
 
+Dans Adobe Experience Platform, le modèle analogue utilise trois types de points de données différents :
+
+- Appartenance à l’audience au cours des 30 derniers jours
+- Événements d’expérience des 30 derniers jours ingérés dans le profil client en temps réel
+- Attributs de profil des 30 derniers jours ingérés dans le profil client en temps réel
+
+Tous ces points de données sont transformés en paires valeur-clé qui sont transmises au modèle analogue. Seules les paires clé-valeur avec un pourcentage significatif de correspondance de profils seront conservées.
+
+Actuellement, le modèle look-alike est exécuté toutes les 24 heures, créant et recréant les facteurs d’influence et les graphiques de similitudes pour les audiences de base. La notation pour les audiences look-alike est également exécutée fréquemment.
+
+## Droits {#entitlements}
+
+Les droits suivants s’appliquent pour l’utilisation d’audiences look-alike :
+
+- Les clients Real-Time CDP Prime ont le droit de **5** Audiences look-alike de production actives
+- Les clients Real-Time CDP Ultimate ont le droit de **20** Audiences look-alike de production actives
+- Les environnements de test de développement sont limités à **5** Audiences semblables pour tous les clients Real-Time CDP
+
+Les modules complémentaires, qui seront disponibles ultérieurement, augmenteront les droits pour les environnements de test de production de 20 audiences semblables par pack.
+
+Pour confirmer que vous avez accès aux audiences look-alike, contactez votre représentant d’Adobe.
+
+## Affichage des insights semblables {#view}
+
 Les insights semblables sont intégrés à la page des détails de l’audience. Pour consulter les insights semblables d’une audience, sélectionnez **[!UICONTROL Audiences]** dans la barre de navigation de gauche, suivie de **[!UICONTROL Parcourir]** et l’audience pour laquelle vous souhaitez afficher les insights.
 
 ![Le bouton Audiences est mis en surbrillance, ainsi que l’audience de base utilisée pour la modélisation analogue.](../images/ui/lookalike-audiences/browse.png)
 
-La page Détails de l’audience s’affiche. Sélectionner **[!UICONTROL Aperçu identique]** pour afficher les insights semblables de l’audience. La variable **[!UICONTROL Aperçu identique]** s’affiche. Cette page comporte trois éléments principaux : le graphique de la similarité et de la portée, les audiences &quot;look-Alike&quot; et les facteurs d’influence.
+La page Détails de l’audience s’affiche. Sélectionner **[!UICONTROL Aperçu identique]** pour afficher les insights semblables de l’audience. La variable **[!UICONTROL Aperçu identique]** s’affiche. Cette page comporte trois éléments principaux : le graphique de similarité et de portée, les audiences semblables et les facteurs d’influence.
 
 ![L’onglet Aperçu identique est mis en surbrillance, affichant les insights semblables pour l’audience de base.](../images/ui/lookalike-audiences/look-alike-insights.png)
 
@@ -98,11 +98,11 @@ Veuillez noter que le graphique est **cumulatif** de droite à gauche. Cela sign
 
 Vous pouvez pointer sur un point spécifique du graphique pour afficher le pourcentage de similarité et le nombre de profils attendu pour le point actuellement surligné.
 
-### Audiences similaires {#list}
+### Audiences semblables {#list}
 
-La section Audiences identiques affiche la liste de toutes les audiences similaires qui ont été créées précédemment pour l’audience de base sélectionnée.
+La section Audiences look-alike présente une liste de toutes les audiences look-alike qui ont été créées précédemment pour l’audience de base sélectionnée.
 
-![La section Audiences similaires est mise en surbrillance.](../images/ui/lookalike-audiences/select-laa.png)
+![La section Audiences look-alike est mise en surbrillance.](../images/ui/lookalike-audiences/select-laa.png)
 
 ### Facteurs d’influence {#influential-factors}
 
@@ -112,7 +112,7 @@ La section Audiences identiques affiche la liste de toutes les audiences similai
 >abstract="Les facteurs d’influence sont les attributs, les événements et les appartenances à l’audience qui sont importants pour expliquer la similarité d’un profil aux profils membres de l’audience de base.Les libellés et politiques d’utilisation des données peuvent être utilisés pour exclure certaines données en tant que facteurs d’influence dans les modèles analogues."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/lookalike-audiences.html?lang=fr#exclude" text="Exclure des données"
 
-La section facteurs d’influence présente les 100 principaux facteurs qui influencent le modèle analogue pour l’audience de base sélectionnée. Ces facteurs d’influence sont les attributs de profil, les événements d’expérience et les appartenances à l’audience qui sont les plus importants pour expliquer les similitudes dans l’audience de base. La compréhension des principaux facteurs d’influence vous permet de mieux personnaliser le contenu marketing de votre audience et de toute audience analogue que vous créez à partir de celle-ci. Notez que tous les facteurs d’influence qui affectent le modèle analogue ne s’affichent pas.
+La section facteurs d’influence présente les 100 principaux facteurs qui influencent le modèle analogue pour l’audience de base sélectionnée. Ces facteurs d’influence sont les attributs de profil, les événements d’expérience et les appartenances à l’audience qui sont les plus importants pour expliquer les similitudes dans l’audience de base. Comprendre les principaux facteurs d’influence vous permet de mieux personnaliser votre contenu marketing pour cette audience et pour toute audience analogue que vous créez à partir de celle-ci. Notez que tous les facteurs d’influence qui affectent le modèle analogue ne s’affichent pas.
 
 Pour les facteurs d’influence qui sont numériques, les paires clé-valeur peuvent être regroupées, en fonction du nombre de valeurs différentes dont dispose la clé. Par exemple, si vous disposez d’une clé de `income`, il y aurait probablement de nombreuses valeurs uniques. Par conséquent, les paires clé-valeur seront placées dans des compartiments qui peuvent ressembler à `income=[0 -> 30000]`, `income=[30000 -> 50000]`, et `income=[50000 -> 100000]`.
 
@@ -135,9 +135,9 @@ Ces compartiments sont régulièrement recalculés pour s’assurer que les donn
 
 >[!IMPORTANT]
 >
->You **cannot** utiliser une audience analogue comme audience de base pour une autre audience analogue. C&#39;est-à-dire, vous **cannot** créer des audiences similaires enchaînées.
+>You **cannot** utiliser une audience analogue comme audience de base pour une autre audience analogue ; C&#39;est-à-dire, vous **cannot** créer des audiences look-alike.
 
-Pour créer une audience analogue, vous devez sélectionner l’audience dont vous souhaitez baser l’audience analogue. Pour accéder à la liste des audiences disponibles, sélectionnez **[!UICONTROL Audiences]** dans la barre de navigation de gauche, suivie de **[!UICONTROL Parcourir]**. La liste des audiences s’affiche. Sur cette page, vous pouvez sélectionner l’audience que vous souhaitez utiliser comme audience de base.
+Pour créer une audience analogue, vous devez sélectionner l’audience dont vous souhaitez baser l’audience correspondante. Pour accéder à la liste des audiences disponibles, sélectionnez **[!UICONTROL Audiences]** dans la barre de navigation de gauche, suivie de **[!UICONTROL Parcourir]**. La liste des audiences s’affiche. Sur cette page, vous pouvez sélectionner l’audience que vous souhaitez utiliser comme audience de base.
 
 ![Le bouton Audiences est mis en surbrillance, ainsi que l’audience de base utilisée pour la modélisation analogue.](../images/ui/lookalike-audiences/browse.png)
 
@@ -145,7 +145,7 @@ Sur la page des détails de l’audience, sélectionnez **[!UICONTROL Création 
 
 ![La variable [!UICONTROL Création d’une audience analogue] est mise en surbrillance.](../images/ui/lookalike-audiences/create-look-alike-audience.png)
 
-La variable **[!UICONTROL Création d’une audience analogue]** s’affiche. Sur cette page, vous pouvez définir le pourcentage de similarité pour l’audience analogue.
+La variable **[!UICONTROL Création d’une audience analogue]** s’affiche. Sur cette page, vous pouvez définir le pourcentage de similarité pour l’audience look-alike.
 
 ![La variable [!UICONTROL Création d’une audience analogue] s’affiche.](../images/ui/lookalike-audiences/create-audience.png)
 
@@ -155,7 +155,7 @@ Vous pouvez définir ce pourcentage de similarité de trois manières différent
 - Saisissez le pourcentage de similarité dans la zone de saisie numérique en regard du curseur.
 - Pointez sur le graphique et sélectionnez l’emplacement souhaité pour définir le pourcentage de similarité.
 
-Vous pouvez également mettre à jour les détails sur l’audience analogue, y compris son nom et sa description. Par défaut, le nom de l’audience analogue est généré en fonction du nom de l’audience de base et du pourcentage de similarité précédemment spécifié.
+Vous pouvez également mettre à jour les détails sur l’audience look-alike, y compris son nom et sa description. Par défaut, le nom de l’audience analogue est généré en fonction du nom de l’audience de base et du pourcentage de similarité spécifié précédemment.
 
 ![Les informations de base sont mises en surbrillance dans la variable [!UICONTROL Création d’une audience analogue] s’affiche.](../images/ui/lookalike-audiences/basic-info.png)
 
@@ -163,13 +163,13 @@ Sélectionner **[!UICONTROL Créer]** pour terminer la création de votre audien
 
 ![Le bouton de création est mis en surbrillance dans la [!UICONTROL Création d’une audience analogue] s’affiche.](../images/ui/lookalike-audiences/create-audience.png)
 
-Le public analogue nouvellement créé est accessible dans la **[!UICONTROL Audiences semblables]** de la page des détails de l’audience. Elle est également disponible dans Audience Portal et pour d’autres utilisations en aval. Veuillez noter que la notation de l’audience analogue prendra du temps. Tant qu’il n’a pas été noté, le nombre de profils s’affiche à 0.
+Vous pouvez accéder à l’audience look-alike nouvellement créée. **[!UICONTROL Audiences semblables]** de la page des détails de l’audience. Elle est également disponible dans Audience Portal et pour d’autres utilisations en aval. Veuillez noter que le score de l’audience look-alike prendra un certain temps. Tant qu’il n’a pas été noté, le nombre de profils s’affiche à 0.
 
-## Afficher les détails de l’audience analogue {#view-details}
+## Affichage des détails d’une audience analogue {#view-details}
 
-Pour afficher les détails d’une audience analogue, sélectionnez l’audience analogue dans le **[!UICONTROL Audiences similaires]** de l’audience de base.
+Pour afficher les détails d’une audience analogue, sélectionnez l’audience analogue dans la **[!UICONTROL Audiences semblables]** de l’audience de base.
 
-![La section Audiences similaires est mise en surbrillance.](../images/ui/lookalike-audiences/select-laa.png)
+![La section Audiences look-alike est mise en surbrillance.](../images/ui/lookalike-audiences/select-laa.png)
 
 La page Détails de l’audience s’affiche. Pour plus d’informations sur cette page, veuillez lire le [section des détails de l’audience du guide de l’interface utilisateur de Segmentation Service](./overview.md#audience-details).
 
@@ -177,14 +177,14 @@ La page Détails de l’audience s’affiche. Pour plus d’informations sur cet
 
 ## Exclusion des champs de données de la modélisation analogue {#exclude}
 
-Il est possible de configurer les audiences semblables pour exclure les champs de données qui sont restreints à l’action marketing &quot;Data Science&quot; en appliquant les libellés et les stratégies d’utilisation des données appropriés. Les données étiquetées comme étant interdites d’utilisation pour la science des données seront supprimées lors de la formation d’un modèle d’audience analogue et de la génération d’une audience analogue à partir du modèle formé. 
+Les audiences semblables peuvent être configurées pour exclure les champs de données qui sont restreints à l’action marketing &quot;Science des données&quot; en appliquant les libellés et stratégies d’utilisation des données appropriés. Les données étiquetées comme étant interdites d’utilisation pour la science des données seront supprimées lors de la formation d’un modèle d’audience analogue et de la génération d’une audience analogue à partir du modèle formé. 
 
 L’étiquette &quot;C9&quot; standard peut être utilisée pour étiqueter les données qui ne doivent pas être utilisées pour la science des données et qui peuvent être appliquées en activant la politique standard &quot;Limiter la science des données&quot;. Vous pouvez également créer des stratégies supplémentaires pour limiter les données aux autres étiquettes, y compris les étiquettes sensibles, à partir de l’utilisation de la science des données. Pour plus d’informations sur la gestion des stratégies d’utilisation des données, consultez la section [Guide d’utilisation des stratégies de données](../../data-governance/policies/user-guide.md). Pour plus d’informations sur la gestion des libellés d’utilisation des données, consultez la section [Guide d’utilisation des libellés d’utilisation des données](../../data-governance/labels/user-guide.md).
 
-Par défaut, le processus de modélisation des audiences de l’apparence exclut **any** champ, jeu de données ou audience en fonction de la politique de confidentialité activée pour votre entreprise. Si l’audience de base ne comporte pas de libellés de contrat, le processus de modélisation exclura **any** champ, jeu de données ou audience en fonction de la politique de confidentialité activée pour votre entreprise.
+Par défaut, le processus de modélisation pour les audiences look-alike exclut **any** champ, jeu de données ou audience en fonction de la politique de confidentialité activée pour votre entreprise. Si l’audience de base ne comporte pas de libellés de contrat, le processus de modélisation exclura **any** champ, jeu de données ou audience en fonction de la politique de confidentialité activée pour votre entreprise.
 
 Veuillez noter que **you** sont chargés de s’assurer que les données, y compris les données sensibles, sont correctement étiquetées et que les stratégies d’utilisation des données ont été définies et activées pour se conformer aux obligations légales et réglementaires en vertu desquelles vous opérez. Vous devez également savoir que les champs de données ou les appartenances aux segments qui sont **not** la corrélation directe avec les champs de données généralement associés à des types de données sensibles ou protégés peut être une source de biais potentiel. **You** sont chargés d’analyser vos données afin d’identifier, d’étiqueter et d’appliquer les stratégies d’utilisation des données appropriées à vos données, y compris les champs de données susceptibles de représenter des types de données sensibles ou protégés et qui doivent être exclus de la modélisation.
 
 ## Étapes suivantes
 
-Après avoir lu ce guide, vous avez appris à afficher des insights semblables et à créer des audiences semblables à ceux-ci. Pour plus d’informations sur les audiences dans l’interface utilisateur de Adobe Experience Platform, veuillez lire le [Guide de l’interface utilisateur de Segmentation Service](./overview.md).
+Après avoir lu ce guide, vous avez appris à afficher des insights semblables et à créer des audiences semblables en fonction de ces insights. Pour plus d’informations sur les audiences dans l’interface utilisateur de Adobe Experience Platform, veuillez lire le [Guide de l’interface utilisateur de Segmentation Service](./overview.md).
