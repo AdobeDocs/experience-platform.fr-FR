@@ -1,9 +1,7 @@
 ---
 title: Réengagement intelligent
 description: Diffusez des expériences attrayantes et connectées au cours des moments de conversion clés pour réengager intelligemment les clients les plus rares.
-hide: true
-hidefromtoc: true
-source-git-commit: 7de5fe7808a22137c417a4ca865d764b0814b90e
+source-git-commit: 79ba0e350d64f43558af9bc3c2ecd4ac13d11499
 workflow-type: tm+mt
 source-wordcount: '3424'
 ht-degree: 4%
@@ -12,7 +10,7 @@ ht-degree: 4%
 
 # Réengagez intelligemment vos clients pour qu’ils reviennent
 
-Réengager les clients qui ont abandonné une conversion avant de la terminer de manière intelligente et responsable. Engagez des clients obsolètes par le biais d’expériences plutôt que de rappels afin d’améliorer la conversion et de stimuler la croissance de la valeur de durée de vie du client.
+Réengager les clients qui ont abandonné une conversion avant de l’effectuer de manière intelligente et responsable. Engagez des clients obsolètes par le biais d’expériences plutôt que de rappels afin d’améliorer la conversion et de stimuler la croissance de la valeur de durée de vie du client.
 
 Utilisez des considérations en temps réel, prenez en compte toutes les qualités et comportements des consommateurs et proposez une réqualification rapide basée sur des événements en ligne et hors ligne.
 
