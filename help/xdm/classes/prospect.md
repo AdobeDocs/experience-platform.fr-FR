@@ -1,21 +1,14 @@
 ---
 title: Classe XDM Individual Prospect
 description: Ce document présente la classe XDM Individual Prospect Profile dans le modèle de données d’expérience (XDM).
-badgeBeta: label="Version Beta" type="Informative"
-hide: true
-hidefromtoc: true
-source-git-commit: 83f01c58e21bc42a53e2e7a08bd7a60ef90b41e6
+source-git-commit: 437bd602462330a96f356b83d7afe922b5315d9f
 workflow-type: tm+mt
-source-wordcount: '374'
-ht-degree: 14%
+source-wordcount: '348'
+ht-degree: 12%
 
 ---
 
 # [!UICONTROL Profil XDM Individual Prospect] class
-
->[!IMPORTANT]
->
->La variable [!UICONTROL Profil XDM Individual Prospect] est en version bêta et n’est pas disponible pour tous les utilisateurs. La documentation et les fonctionnalités peuvent changer.
 
 Dans le modèle de données d’expérience (XDM), le [!UICONTROL Profil XDM Individual Prospect] capture les profils prospect provenant généralement des partenaires de données pour les cas d’utilisation d’acquisition client top-of-the-funnel.
 

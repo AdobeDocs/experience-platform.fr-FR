@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Glossaire des étiquettes dʼutilisation des données
 description: Ce document décrit toutes les étiquettes dʼutilisation des données actuellement prises en charge par Adobe Experience Platform.
 exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
-source-git-commit: d1d817646fdc943428ca13f3dd8b52725bce4921
+source-git-commit: 538c5e2c7ff3c684edf6db12087fdf0a58e40199
 workflow-type: tm+mt
-source-wordcount: '2207'
-ht-degree: 93%
+source-wordcount: '2185'
+ht-degree: 94%
 
 ---
 
@@ -64,11 +64,7 @@ Différents types de données géographiques peuvent être considérés comme se
 | **PSPD** | Les données personnelles sensibles autorisées (PSPD) se rapportent à des données que vous êtes contractuellement autorisé(e) par Adobe à télécharger et qui sont considérées comme « sensibles », « catégorie spéciale de données », ou comme un terme similaire utilisé par les lois en vigueur. Cela exclut spécifiquement les informations protégées sur la santé (IPS) et d’autres données réglementées sur la santé. |
 | **RHD** | Données qui font référence à des informations protégées sur la santé (IPS) ou à des informations sur un patient que vous êtes contractuellement autorisé(e) par Adobe à télécharger. |
 
-## (Version bêta) Étiquettes Écosystème du partenaire {#partner}
-
->[!IMPORTANT]
->
->Le libellé de données tiers est en version bêta. Elle n’est pas disponible pour tous les utilisateurs et la documentation peut faire l’objet de modifications.
+## Étiquettes Écosystème partenaires {#partner}
 
 Les étiquettes Ecosystème partenaires sont utilisées pour classer les données obtenues à partir de sources externes à votre organisation.
 
