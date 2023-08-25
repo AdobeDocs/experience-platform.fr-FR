@@ -2,7 +2,7 @@
 title: Notes de mise à jour d’Adobe Experience Platform
 description: Les notes de mise à jour d’août 2023 pour Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 5c1566bac20f7fb83a0ce48c4fe7a22e15dbeb37
+source-git-commit: bf4c4186ed9196e547620a91826f86aa09d683fd
 workflow-type: tm+mt
 source-wordcount: '1650'
 ht-degree: 41%
@@ -108,7 +108,6 @@ La préparation des données permet aux personnes travaillant dans l’ingénier
 | Fonctionnalité | Description |
 | --- | --- |
 | Prise en charge du filtrage des identités secondaires | Vous pouvez désormais utiliser la préparation de données pour filtrer les identités provenant d’Adobe Analytics, telles qu’AAID et AACUSTOMID. Si elles sont filtrées, ces identités ne sont pas ingérées dans Real-Time Customer Profile. Les données non filtrées continueront à être ingérées dans le lac de données. |
-| Prise en charge de la nouvelle `correlationID` champ pour Adobe Analytics | La variable `_experience.decisioning.propositions.scopeDetails.correlationID` est maintenant disponible dans le schéma du connecteur source Adobe Analytics. Ce champ est utilisé pour prendre en charge les classifications A4T et sera renseigné à compter de septembre 2023. |
 
 {style="table-layout:auto"}
 
@@ -173,6 +172,7 @@ Experience Platform fournit une API RESTful et une interface utilisateur inter
 | --- | --- |
 | Disponibilité générale des [!DNL SugarCRM] | [!DNL SugarCRM] Les sources sont désormais disponibles. Utilisez les [!DNL SugarCRM Accounts & Contacts] et les sources [!DNL SugarCRM Events] pour importer des données à partir de votre compte [!DNL SugarCRM] dans Experience Platform. Pour plus d’informations, consultez la [[!DNL SugarCRM] vue d’ensemble](../../sources/connectors/crm/sugarcrm.md). |
 | Prise en charge de l’ingestion à la demande pour les flux de données de sources dans l’interface utilisateur | Vous pouvez désormais créer des exécutions de flux à la demande pour un flux de données de sources existantes dans l’interface utilisateur. Pour plus d’informations, consultez le guide sur [création d’un flux à la demande pour les sources à l’aide de l’interface utilisateur](../../sources/tutorials/ui/on-demand-ingestion.md). |
+| Prise en charge de la nouvelle `correlationID` champ pour Adobe Analytics | La variable `_experience.decisioning.propositions.scopeDetails.correlationID` est maintenant disponible dans le schéma du connecteur source Adobe Analytics. Ce champ est utilisé pour prendre en charge les classifications A4T et sera renseigné à compter de septembre 2023. |
 
 {style="table-layout:auto"}
 
