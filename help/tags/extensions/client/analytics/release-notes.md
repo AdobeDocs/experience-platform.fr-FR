@@ -2,10 +2,10 @@
 title: Notes de mise à jour de l’extension Adobe Analytics
 description: Dernières notes de mise à jour pour lʼextension de balise Adobe Analytics dans Adobe Experience Platform.
 exl-id: 3c7b4ec0-4b81-4ef4-b15f-6ad102525840
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 80c46748d809fe0b0367cf779f41d7851e8e62db
 workflow-type: tm+mt
-source-wordcount: '1333'
-ht-degree: 92%
+source-wordcount: '1394'
+ht-degree: 89%
 
 ---
 
@@ -15,7 +15,20 @@ Vous trouverez ci-dessous une liste des notes de mise à jour de l’extension d
 
 >[!NOTE]
 >
->L’extension de balise Analytics si elle est souvent mise à jour en réponse aux mises à jour apportées à la variable [Bibliothèque JavaScript AppMeasurement](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=fr). Reportez-vous à la section [Notes de mise à jour d’AppMeasurement](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=fr) pour plus d’informations sur les versions spécifiques mentionnées ci-dessous.
+>L’extension de balise Analytics si elle est souvent mise à jour en réponse aux mises à jour apportées à la variable [Bibliothèque JavaScript AppMeasurement](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=fr). Voir [Notes de mise à jour d’AppMeasurement](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=fr) pour plus d’informations sur les versions spécifiques mentionnées ci-dessous.
+
+## 19 juillet 2023
+
+**Extension Adobe Analytics 1.9.2**
+
+**Fonctionnalités**:
+
+* Mise à niveau vers AppMeasurement v2.24.0.
+* Ajout d’une configuration facultative (`decodeLinkParameters` default `false`) qui décode les URL de lien contenant des caractères codés sur deux octets.
+
+**Correctifs de bugs**:
+* Ajout d’une gestion des erreurs supplémentaire pour les navigateurs à forte entropie défectueuse. [Conseils sur le client User-Agent](https://experienceleague.adobe.com/docs/analytics/technotes/client-hints.html?lang=fr) des API.
+* Modifié [POST](https://developer.mozilla.org/fr-FR/docs/Web/HTTP/Methods/POST) En-tête Content-Type à utiliser `x-www-form-urlencoded` par défaut.
 
 ## 23 septembre 2022
 
@@ -172,7 +185,7 @@ Vous trouverez ci-dessous une liste des notes de mise à jour de l’extension d
 * Mise à jour de l’extension Adobe Analytics pour la prise en charge de DIL 9.2 pour Audience Manager
 
 * Mise à jour de l’extension pour la prise en charge d’[AppMeasurement 2.15.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=fr#Version 2.15.0)
-* Suppression de la case à cocher suivante, car elle n’est plus prise en charge : &quot;Ne joignez pas l’IFRAME de publication de destination au DOM ou aux destinations de déclenchement&quot;
+* Suppression de la case à cocher suivante puisqu’elle n’est plus prise en charge : &quot;Ne joignez pas l’IFRAME de publication de destination au DOM ou aux destinations de déclenchement&quot;
 
 ## 4 juin 2019
 
