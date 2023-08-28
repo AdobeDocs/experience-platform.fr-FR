@@ -6,10 +6,10 @@ product: experience platform
 type: Documentation
 description: En savoir plus sur l’utilisation par défaut de l’activation des données et les limites de débit.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: 51f65799a45229fc810a1d41f8b40b215d3666da
+source-git-commit: 0835021523a7eb1642a6dbcb24334eac535aaa6d
 workflow-type: tm+mt
-source-wordcount: '1272'
-ht-degree: 77%
+source-wordcount: '1270'
+ht-degree: 76%
 
 ---
 
@@ -42,8 +42,8 @@ Les mécanismes de sécurisation ci-dessous s’appliquent généralement à l�
 | Mécanisme de sécurisation | Limite | Type de limite | Description |
 | --- | --- | --- | --- |
 | Nombre maximal d’audiences vers une seule destination | 250 | Soft | Il est recommandé de mapper un maximum de 250 audiences à une seule destination dans un flux de données. <br><br> Si vous devez activer plus de 250 audiences vers une destination, vous pouvez effectuer l’une des opérations suivantes : <ul><li> Dissociez les audiences que vous ne souhaitez plus activer, ou</li><li>Créez un nouveau flux de données vers la destination souhaitée et mappez les audiences à ce nouveau flux de données.</li></ul> <br> Notez que dans le cas de certaines destinations, vous pouvez être limité à moins de 250 audiences mappées à la destination. Ces destinations sont répertoriées plus bas sur la page, dans leurs sections respectives. |
-| Nombre maximal de destinations | 100 | Soft | Il est recommandé de créer un maximum de 100 destinations auxquelles vous pouvez connecter et activer des données *par sandbox*. Les [destinations de personnalisation Edge (personnalisation personnalisée)](#edge-destinations-activation) peuvent représenter un maximum de 10 sur les 100 destinations recommandées. |
 | Nombre maximal d’attributs mappés vers une destination | 50 | Soft | Dans le cas de plusieurs destinations et types de destination, vous pouvez sélectionner des attributs de profil et des identités à mapper pour l’exportation. Pour des performances optimales, un maximum de 50 attributs doit être mappé dans un flux de données vers une destination. |
+| Nombre maximal de destinations | 100 | Hard | Vous pouvez créer un maximum de 100 destinations auxquelles vous pouvez vous connecter et activer des données, *par environnement de test*. Les [destinations de personnalisation Edge (personnalisation personnalisée)](#edge-destinations-activation) peuvent représenter un maximum de 10 sur les 100 destinations recommandées. |
 | Type de données activées vers les destinations | Données de profil, y compris les identités et le mappage d’identités | Hard | Actuellement, il n’est possible d’exporter que des *attributs d’enregistrement de profil* vers les destinations. Pour l’instant, les attributs XDM qui décrivent les données d’événement ne sont pas pris en charge pour l’exportation. |
 | Type de données activées vers les destinations : prise en charge des attributs de tableau et de mappage | Non disponible | Hard | À l’heure actuelle, il n’est **pas** possible d’exporter des *attributs de tableau ou de mappage* vers des destinations. L’exception à cette règle est le [mappage d’identités](/help/xdm/field-groups/profile/identitymap.md), qui est exporté à la fois dans les activations par flux et basées sur des fichiers. |
 
