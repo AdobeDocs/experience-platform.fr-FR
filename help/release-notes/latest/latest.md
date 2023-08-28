@@ -2,10 +2,10 @@
 title: Notes de mise à jour d’Adobe Experience Platform
 description: Les notes de mise à jour d’août 2023 pour Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 4211a19bfd511c495d9efac898467230678aeb96
+source-git-commit: 5181d39e92fbf957f154c3b1dcf4f9af90cfeae9
 workflow-type: tm+mt
-source-wordcount: '1664'
-ht-degree: 41%
+source-wordcount: '1749'
+ht-degree: 42%
 
 ---
 
@@ -20,7 +20,8 @@ Mises à jour des fonctionnalités existantes dans Adobe Experience Platform 
 - [Tableaux de bord](#dashboards)
 - [Collecte de données](#data-collection)
 - [Ingestion de données](#data-ingestion)
-- [Préparation de données](#data-prep)
+- [Préparation des données](#data-prep)
+- [Destinations](#destinations)
 - [Modèle de données d’expérience (XDM)](#xdm)
 - [Service d’identités](#identity-service)
 - [Segmentation Service](#segmentation)
@@ -112,6 +113,17 @@ La préparation des données permet aux personnes travaillant dans l’ingénier
 {style="table-layout:auto"}
 
 Pour plus d’informations, veuillez lire la [Aperçu de la préparation des données](../../data-prep/home.md).
+
+## Destinations {#destinations}
+
+Les [!DNL Destinations] sont des intégrations préconfigurées à des plateformes de destination qui permettent d’activer facilement des données provenant d’Adobe Experience Platform. Vous pouvez utiliser les destinations pour activer vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
+
+**Fonctionnalités nouvelles ou mises à jour** {#destinations-new-updated-functionality}
+
+- Vous pouvez désormais [activation des audiences de prospect](../../destinations/ui/activate-prospect-audiences.md) vers des destinations basées sur des fichiers.
+- Le général [barrières de sécurité d’activation](../../destinations/guardrails.md#general-activation-guardrails) mise à jour d’un maximum de 100 destinations par environnement de test pour qu’il soit _limite_.
+
+Pour des informations plus générales sur les destinations, consultez la [présentation des destinations](../../destinations/home.md).
 
 ## Modèle de données d’expérience (XDM) {#xdm}
 
