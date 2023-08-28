@@ -4,9 +4,9 @@ description: Découvrez comment utiliser l’assistant d’IA pour parcourir et 
 badge: Alpha
 hide: true
 hidefromtoc: true
-source-git-commit: ca606e4e29f4ba1df281f47a86b4e3cfa850ae35
+source-git-commit: e84f5aff6885535b58874a4fe02db2944e1d9b7f
 workflow-type: tm+mt
-source-wordcount: '2627'
+source-wordcount: '2629'
 ht-degree: 1%
 
 ---
@@ -342,4 +342,4 @@ Lisez le tableau ci-dessous pour obtenir des exemples :
 | --- | --- | --- |
 | Quel est mon segment le plus important ? | Quel est mon segment le plus important ? Utiliser les données. | Indiquez explicitement à l’assistant d’IA que vous souhaitez que la réponse soit basée sur les données. |
 | Quel est mon segment le plus important ? | Liste de mon segment le plus important. | Il existe des cas où une question &quot;quoi...&quot; peut être confondue avec une question basée sur la documentation. L’utilisation d’une commande telle que &quot;list&quot; est un indicateur plus fort que vous posez une question avec des données en contexte. |
-| Combien de jeux de données ai-je ? | Comptez mes jeux de données. | Bien que les segments de question d’origine ne fonctionnent pas avec les jeux de données. |
+| Combien de jeux de données ai-je ? | Comptez mes jeux de données. | La question d’origine fonctionne pour les segments, mais elle peut ne pas fonctionner avec les jeux de données. |
