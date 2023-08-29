@@ -3,7 +3,7 @@ title: LiveRamp - Connexion à l’intégration
 description: Découvrez comment utiliser le connecteur LiveRamp pour intégrer des audiences d’Adobe Real-time Customer Data Platform vers LiveRamp Connect.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: b8ce7ec2-7af9-4d26-b12f-d38c85ba488a
-source-git-commit: 804cc13d9f672e87ad56b328bae73216500e07dd
+source-git-commit: 7ea411c9543230f254f2a0565c04f277fed2b17b
 workflow-type: tm+mt
 source-wordcount: '1814'
 ht-degree: 68%
@@ -209,7 +209,7 @@ Les profils inclus dans les fichiers exportés peuvent correspondre à l’un de
 Par exemple, un fichier CSV exporté avec un `email` , deux audiences provenant de l’Experience Platform [Segmentation Service](../../../segmentation/home.md)et un [importé](../../../segmentation/ui/overview.md#importing-an-audience) audience externe, pourrait ressembler à ceci :
 
 ```csv
-email,ups:aa2e3d98-974b-4f8b-9507-59f65b6442df,ups:45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f,CustomerAudienceUpload:7729e537-4e42-418e-be3b-dce5e47aaa1e
+email,ups_aa2e3d98-974b-4f8b-9507-59f65b6442df,ups_45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f,CustomerAudienceUpload_7729e537-4e42-418e-be3b-dce5e47aaa1e
 abc117@testemailabc.com,active,,
 abc111@testemailabc.com,,,active
 abc102@testemailabc.com,,,active
@@ -218,7 +218,7 @@ abc107@testemailabc.com,active,expired,active
 abc101@testemailabc.com,active,active,
 ```
 
-Dans l’exemple ci-dessus, la variable `ups:aa2e3d98-974b-4f8b-9507-59f65b6442df` et `ups:45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f` Les sections décrivent les audiences provenant du service de segmentation, tandis que `CustomerAudienceUpload:7729e537-4e42-418e-be3b-dce5e47aaa1e` décrit une audience importée dans Platform sous la forme d’une [téléchargement personnalisé](../../../segmentation/ui/overview.md#importing-an-audience).
+Dans l’exemple ci-dessus, la variable `ups_aa2e3d98-974b-4f8b-9507-59f65b6442df` et `ups_45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f` Les sections décrivent les audiences provenant du service de segmentation, tandis que `CustomerAudienceUpload_7729e537-4e42-418e-be3b-dce5e47aaa1e` décrit une audience importée dans Platform sous la forme d’une [téléchargement personnalisé](../../../segmentation/ui/overview.md#importing-an-audience).
 
 Comme Platform génère un fichier CSV pour chaque [ID de stratégie de fusion](../../../profile/merge-policies/overview.md), il génère également une exécution de flux de données distincte pour chaque ID de stratégie de fusion.
 
