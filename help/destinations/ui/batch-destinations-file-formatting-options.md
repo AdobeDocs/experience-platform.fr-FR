@@ -1,15 +1,15 @@
 ---
 description: Découvrez comment configurer les options de formatage des fichiers lors de l’activation des données vers des destinations basées sur des fichiers.
-title: (Beta) Configurer des options de formatage de fichier pour les destinations basées sur des fichiers
+title: Configurer des options de formatage de fichier pour les destinations basées sur des fichiers
 exl-id: f59b1952-e317-40ba-81d1-35535e132a72
-source-git-commit: 3b5f4abd516259402e9b3c4cfbcc17e32f18b6f5
+source-git-commit: 0eb17d4d7ad9db3737a14f383bdafe40d59eb12c
 workflow-type: tm+mt
-source-wordcount: '1190'
+source-wordcount: '1188'
 ht-degree: 52%
 
 ---
 
-# (Beta) Configurer des options de formatage de fichier pour les destinations basées sur des fichiers
+# Configurer des options de formatage de fichier pour les destinations basées sur des fichiers
 
 >[!IMPORTANT]
 > 
