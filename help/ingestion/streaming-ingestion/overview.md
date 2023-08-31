@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Présentation de l’ingestion par flux
 description: L’ingestion par flux pour Adobe Experience Platform fournit aux utilisateurs une méthode pour envoyer en temps réel des données de périphériques côté client et côté serveur vers Experience Platform.
 exl-id: 851f15fd-7ac5-4a9f-934d-6b907057da87
-source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
+source-git-commit: 008537dffff4cc428de9070964446f4e7ebf039f
 workflow-type: tm+mt
 source-wordcount: '348'
 ht-degree: 17%
@@ -23,7 +23,7 @@ La vidéo suivante est conçue pour vous aider à comprendre l’ingestion par f
 
 >[!VIDEO](https://video.tv.adobe.com/v/28425?quality=12&learn=on)
 
-### Diffusion en continu des enregistrements de profil et [!DNL ExperienceEvents]
+### Diffusion des enregistrements de profil et [!DNL ExperienceEvents]
 
 Grâce à l’ingestion par flux, les utilisateurs peuvent diffuser en continu des enregistrements de profil et des [!DNL ExperienceEvents] to [!DNL Platform] en secondes pour faciliter la personnalisation en temps réel. Toutes les données envoyées aux API d’ingestion par flux sont automatiquement conservées dans la variable [!DNL Data Lake].
 
@@ -48,7 +48,7 @@ Le tableau ci-dessous présente des conseils sur les limites de requête par sec
 
 | Limite RPS | Notes |
 | --- | --- |
-| 1 000 demandes par seconde | Ils peuvent contenir plusieurs messages lors de l’utilisation de `/collection/batch` point de terminaison . |
+| 1 000 demandes par seconde | Ils peuvent contenir plusieurs messages lorsque vous utilisez `/collection/batch` point de terminaison . |
 | 1 000 messages individuels par seconde | Les messages peuvent être regroupés en moins de requêtes réelles lors de l’utilisation de la variable `/collection/batch` point de terminaison . |
 
 >[!IMPORTANT]
@@ -57,4 +57,4 @@ Le tableau ci-dessous présente des conseils sur les limites de requête par sec
 
 ## Extension Adobe Experience Platform
 
-Vous pouvez utiliser l’extension Adobe Experience Platform pour créer une connexion en continu. Le [!DNL Experience Platform] L’extension fournit des actions pour envoyer des balises formatées dans [!DNL Experience Data Model] (XDM) pour l’ingestion en temps réel vers [!DNL Experience Platform]. Pour plus d’informations, consultez la documentation de [l’extension Experience Platform](../../tags/extensions/client/web-sdk/overview.md).
+Vous pouvez utiliser l’extension Adobe Experience Platform pour créer une connexion en continu. La variable [!DNL Experience Platform] L’extension fournit des actions pour envoyer des balises formatées dans [!DNL Experience Data Model] (XDM) pour l’ingestion en temps réel vers [!DNL Experience Platform]. Pour plus d’informations, consultez la documentation de [l’extension Experience Platform](../../tags/extensions/client/web-sdk/overview.md).

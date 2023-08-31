@@ -3,10 +3,10 @@ keywords: Experience Platform;dépannage;mécanismes de sécurisation;conseils;
 title: Mécanismes de sécurisation pour l’ingestion des données
 description: Ce document fournit des conseils sur les mécanismes de sécurisation pour l’ingestion de données dans Adobe Experience Platform.
 exl-id: f07751cb-f9d3-49ab-bda6-8e6fec59c337
-source-git-commit: 582f6ffdea6fa1978f6af6f0f0f92e50a12f6200
+source-git-commit: 008537dffff4cc428de9070964446f4e7ebf039f
 workflow-type: tm+mt
-source-wordcount: '534'
-ht-degree: 97%
+source-wordcount: '496'
+ht-degree: 93%
 
 ---
 
@@ -29,11 +29,14 @@ Le tableau suivant décrit les mécanismes de sécurisation à prendre en compte
 
 ## Mécanismes de sécurisation pour l’ingestion en flux continu
 
-Le tableau suivant décrit les mécanismes de sécurisation à prendre en compte lors de l’utilisation de l’[API d’ingestion en flux continu](./streaming-ingestion/overview.md) ou sources en flux continu :
+Lisez la section [présentation de l’ingestion par flux](./streaming-ingestion/overview.md) pour plus d’informations sur les barrières de sécurité pour l’ingestion par flux.
+
+## Barrières de sécurité pour les sources en continu
+
+Le tableau suivant décrit les barrières de sécurité à prendre en compte lors de l’utilisation des sources de diffusion en continu :
 
 | Type d’ingestion | Instructions | Notes |
 | --- | --- | --- |
-| Ingestion en flux continu | <ul><li>La taille d’enregistrement maximale est de 1 Mo, la taille recommandée étant de 10 Ko.</li><li>Vous pouvez traiter jusqu’à 2 500 requêtes par seconde dans Profile.</li><li>Vous pouvez traiter jusqu’à 20 000 requêtes par seconde vers le lac de données en moins de 15 minutes.</li></ul> | Utilisez l’API d’ingestion par lots si vous avez besoin d’un débit de données plus élevé. |
 | Sources en flux continu | <ul><li>La taille d’enregistrement maximale est de 1 Mo, la taille recommandée étant de 10 Ko.</li><li>Les sources en flux continu prennent en charge entre 4 000 et 5 000 requêtes par seconde lors de la création d’une connexion source. **Remarque** : il peut s’écouler jusqu’à 30 minutes avant que les données de diffusion en continu ne soient complètement traitées dans le lac de données.</li><li>Vous pouvez traiter entre 4 000 et 5 000 requêtes par seconde vers un lac de données. **Remarque** : il peut s’écouler jusqu’à 30 minutes avant que les données de diffusion en continu ne soient complètement traitées dans le lac de données.</li></ul> | Les sources en flux continu, telles que [!DNL Kafka], [!DNL Azure Event Hubs] et [!DNL Amazon Kinesis], n’utilisent pas l’itinéraire [!DNL Data Collection Core Service] (DCCS) et peuvent avoir différentes limites de débit. Consultez la [présentation des sources](../sources/home.md) pour un catalogue de sources que vous pouvez utiliser pour l’ingestion de données. |
 
 ## Étapes suivantes
