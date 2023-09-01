@@ -1,15 +1,20 @@
 ---
 title: Création d’une connexion source Pendo dans l’interface utilisateur
 description: Découvrez comment créer une connexion source Pendo à l’aide de l’interface utilisateur de Adobe Experience Platform.
+badge: Version Beta
 exl-id: defdec30-42af-43c8-b2eb-7ce98f7871e3
-source-git-commit: 68c14d7b187075b4af6b019a8bd1ca2625beabde
+source-git-commit: 8de45a54607bed17fd79bbed693666beb09c0502
 workflow-type: tm+mt
-source-wordcount: '1194'
-ht-degree: 20%
+source-wordcount: '1212'
+ht-degree: 21%
 
 ---
 
 # Créez un [!DNL Pendo] Flux de données de connexion source et dans l’interface utilisateur
+
+>[!NOTE]
+>
+>La source [!DNL Pendo] est en version Beta. Veuillez lire la [présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de sources étiquetées bêta.
 
 Ce tutoriel décrit les étapes à suivre pour créer une [!DNL Pendo] connexion source et flux de données à l’aide de l’interface utilisateur de Adobe Experience Platform.
 
