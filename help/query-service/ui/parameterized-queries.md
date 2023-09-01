@@ -4,7 +4,7 @@ description: Découvrez comment utiliser des requêtes paramétrées dans l’in
 source-git-commit: 4fc94fc39fa09756a440b5e532330cd310dd96d2
 workflow-type: tm+mt
 source-wordcount: '755'
-ht-degree: 2%
+ht-degree: 11%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 2%
 >[!CONTEXTUALHELP]
 >id="platform_queryService_queryEditor_parameterizedQueries"
 >title="Requêtes paramétrées"
->abstract="Utilisez des requêtes paramétrées pour ajouter des valeurs de paramètre au moment de l’exécution. Vous pouvez ainsi travailler avec des données dynamiques et réutiliser des requêtes pour différents cas d’utilisation. Utilisez la variable `'$'` pour saisir un paramètre de requête dans votre requête dans l’éditeur de texte. Ajoutez ensuite une valeur pour la clé dans la section Paramètres de requête sous l’éditeur."
+>abstract="Utilisez des requêtes paramétrées pour ajouter des valeurs de paramètre au moment de l’exécution. Vous pouvez ainsi travailler avec des données dynamiques et réutiliser des requêtes pour différents cas d’utilisation. Utilisez la préface `'$'` pour saisir un paramètre de requête dans l’éditeur de texte. Ajoutez ensuite une valeur pour la clé dans la section Paramètres de requête sous l’éditeur."
 
 >[!IMPORTANT]
 >
@@ -50,7 +50,7 @@ SELECT
 
 Pour créer votre requête paramétrée dans l’interface utilisateur, accédez à l’éditeur de requêtes. Voir la section sur [Accès à Query Editor](./user-guide.md#accessing-query-editor) pour plus d’instructions.
 
-Utilisez la variable `'$'` pour saisir un paramètre de requête dans votre requête dans l’éditeur de texte. Ajoutez ensuite la valeur manquante pour la clé dans la variable [!UICONTROL Paramètres de requête] sous l’éditeur. La requête ne peut pas être exécutée si vous négligez d’ajouter une valeur à l’une des clés requises. Icône d’alerte (![Icône d’alerte.](../images/ui/parameterized-queries/alert-icon.png)) apparaît dans la section Paramètres de requête en regard de tout élément vide [!UICONTROL Valeur] champs de saisie.
+Utilisez la préface `'$'` pour saisir un paramètre de requête dans l’éditeur de texte. Ajoutez ensuite la valeur manquante pour la clé dans la variable [!UICONTROL Paramètres de requête] sous l’éditeur. La requête ne peut pas être exécutée si vous négligez d’ajouter une valeur à l’une des clés requises. Icône d’alerte (![Icône d’alerte.](../images/ui/parameterized-queries/alert-icon.png)) apparaît dans la section Paramètres de requête en regard de tout élément vide [!UICONTROL Valeur] champs de saisie.
 
 ![L’éditeur de requêtes avec une requête paramétrée est mis en surbrillance et la section Paramètres de requête est mise en surbrillance.](../images/ui/parameterized-queries/parameterized-query.png)
 
