@@ -4,7 +4,7 @@ description: Découvrez comment utiliser le SDK Web d’Adobe Experience Platfor
 keywords: SDK Web Adobe Experience Platform;SDK Web Platform;SDK Web;edge;Visitor.js;AppMeasurement.js;AT.js;DIL.js;sdk web;SDK;SDK web;Launch;launch
 exl-id: 1348144a-7d25-4c27-bc40-3daee2f043a6
 source-git-commit: 606052562da79982cbe4977c65ecf8ab64e4fa66
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '802'
 ht-degree: 100%
 
