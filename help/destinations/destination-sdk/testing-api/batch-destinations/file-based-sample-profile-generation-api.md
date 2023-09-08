@@ -3,9 +3,9 @@ description: Cette page explique comment utiliser le point d’entrée de l’AP
 title: Génération de profils types en fonction d’un schéma source
 exl-id: aea50d2e-e916-4ef0-8864-9333a4eafe80
 source-git-commit: c1ba465a8a866bd8bdc9a2b294ec5d894db81e11
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '651'
-ht-degree: 86%
+ht-degree: 100%
 
 ---
 
@@ -60,11 +60,11 @@ curl -X GET 'https://platform.adobe.io/data/core/activation/authoring/sample-pro
 
 **Réponse**
 
-Une réponse réussie renvoie un état HTTP 200 avec le nombre spécifié de profils d’exemple, avec l’appartenance à l’audience, les identités et les attributs de profil qui correspondent au schéma XDM source.
+Une réponse réussie renvoie le statut HTTP 200 avec le nombre spécifié d’échantillons de profils, les appartenances à l’audience, les identités et les attributs de profil qui correspondent au schéma XDM source.
 
 >[!NOTE]
 >
-> La réponse renvoie uniquement les attributs d’appartenance, d’identité et de profil de l’audience utilisés dans l’instance de destination. Même si votre schéma source comporte d’autres champs, ceux-ci sont ignorés.
+> La réponse ne renvoie que les appartenances à l’audience, les identités et les attributs de profil utilisés dans l’instance de destination. Même si votre schéma source comporte d’autres champs, ceux-ci sont ignorés.
 
 ```json
 [
@@ -105,9 +105,9 @@ Une réponse réussie renvoie un état HTTP 200 avec le nombre spécifié de pro
 
 | Propriété | Description |
 | -------- | ----------- |
-| `segmentMembership` | Objet map qui décrit les appartenances à l’audience de l’individu. Pour plus d’informations sur `segmentMembership`, lire [Détails de l’appartenance à une audience](../../../../xdm/field-groups/profile/segmentation.md). |
+| `segmentMembership` | Objet de mappage décrivant les appartenances à des audiences d’un individu. Pour plus d’informations sur `segmentMembership`, consultez [Détails de l’appartenance à une audience](../../../../xdm/field-groups/profile/segmentation.md). |
 | `lastQualificationTime` | Date et heure de la dernière qualification de ce profil pour le segment. |
-| `status` | Un champ de chaîne qui indique si l’appartenance à l’audience a été réalisée dans le cadre de la demande actuelle. Les valeurs suivantes sont acceptées : <ul><li>`realized` : le profil fait partie du segment.</li><li>`exited`: Le profil quitte l’audience dans le cadre de la requête actuelle.</li></ul> |
+| `status` | Champ de type chaîne indiquant si l’appartenance à l’audience a été établie dans le cadre de la requête actuelle. Les valeurs suivantes sont acceptées : <ul><li>`realized` : le profil fait partie du segment.</li><li>`exited` : le profil quitte l’audience dans le cadre de la requête actuelle.</li></ul> |
 | `identityMap` | Champ de type map qui décrit les différentes valeurs d’identité d’un individu, ainsi que les espaces de noms qui lui sont associés. Pour plus d’informations sur `identityMap`, consultez la [base de la composition des schémas](../../../../xdm/schema/composition.md#identityMap). |
 
 {style="table-layout:auto"}
