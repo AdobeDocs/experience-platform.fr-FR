@@ -5,9 +5,9 @@ breadcrumb-title: Guide de modèle de données d’expérience (XDM)
 user-guide-description: Utilisez les classes des modèles de données d’expérience (XDM) et les groupes de champs de schéma pour normaliser les données d’expérience.
 feature: Schemas
 source-git-commit: b181a6af8cb3f6ae6db28f0475b8999de2e9d8b5
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '519'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
