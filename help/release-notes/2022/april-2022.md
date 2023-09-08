@@ -3,9 +3,9 @@ title: Notes de mise à jour d’Adobe Experience Platform - Avril 2022
 description: Les notes de mise à jour d’avril 2022 pour Adobe Experience Platform.
 exl-id: 39233787-3089-4469-8363-b006ae41ae21
 source-git-commit: 4bdbb987905b6010f4b4f75bee060828d0e07368
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2904'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -26,9 +26,9 @@ Mises à jour des fonctionnalités existantes dans Adobe Experience Platform 
 
 ## [!DNL Dashboards] {#dashboards}
 
- Platform fournit de nombreux tableaux de bord grâce auxquels vous pouvez afficher des informations importantes sur les données de votre entreprise, telles quʼelles sont capturées lors dʼinstantanés quotidiens.
+Platform fournit de nombreux tableaux de bord grâce auxquels vous pouvez afficher des informations importantes sur les données de votre entreprise, telles quʼelles sont capturées lors dʼinstantanés quotidiens.
 
-Les tableaux de bord fournissent des options de création de rapports préconfigurées pour les données de votre entreprise et sont directement intégrés au workflow du marketeur dans Platform. La mise à disposition de ces tableaux de bord ne nécessite pas d’assistance informatique supplémentaire. En outre, ils offrent un gain de temps et d’effort en évitant de recourir à l’exportation et au traitement des données avec une conception et une implémentation d’entreposage de données supplémentaires.
+Les tableaux de bord proposent des options de rapports préconfigurées sur les données de votre organisation. Ils sont directement intégrés au workflow de la personne spécialiste marketing dans Platform. La mise à disposition de ces tableaux de bord ne nécessite pas d’assistance informatique supplémentaire. En outre, ils offrent un gain de temps et d’effort en évitant de recourir à l’exportation et au traitement des données avec une conception et une implémentation d’entreposage de données supplémentaires.
 
 Les widgets suivants sont disponibles via la bibliothèque de widgets dans leurs tableaux de bord respectifs. Pour plus d’informations, consultez la documentation sur l’[ajout de widgets via la bibliothèque de widgets](../../dashboards/customize/widget-library.md).
 
@@ -169,11 +169,11 @@ XDM est une spécification Open Source qui fournit des structures et des défini
 
 {style="table-layout:auto"}
 
-Pour plus d’informations sur XDM dans Platform, consultez la [présentation du système XDM](../../xdm/home.md).
+Pour plus d’informations sur XDM dans Platform, consultez la [vue d’ensemble du système XDM](../../xdm/home.md).
 
 ## [!DNL Artificial Intelligence/Machine Learning services] {#ai/ml-services}
 
-Les services d’IA/ML permettent aux analystes et spécialistes du marketing d’exploiter la puissance de l’intelligence artificielle et du machine learning dans les cas d’utilisation de l’expérience client. Les analystes marketing peuvent obtenir des prédictions spécifiques aux besoins d&#39;une entreprise en utilisant des configurations au niveau de l&#39;entreprise sans avoir besoin d&#39;expertise en sciences des données.
+Les services d’IA/ML permettent aux analystes et spécialistes du marketing d’exploiter la puissance de l’intelligence artificielle et du machine learning dans les cas d’utilisation de l’expérience client. Les analystes marketing peuvent obtenir des prédictions spécifiques aux besoins d’une entreprise en utilisant des configurations au niveau de l’entreprise sans avoir besoin d’expertise en sciences des données.
 
 ### IA dédiée à l’attribution
 
@@ -196,13 +196,13 @@ L’IA dédiée aux clients disponible dans Real-time Customer Data Platform est
 | Fonctionnalité | Description |
 | ------- | ----------- |
 | Prise en charge de jeux de données multiples | La fonctionnalité de jeux de données multiples prend désormais en charge tous les jeux de données d’événement d’expérience, ainsi que la sélection du mappage d’identité comme identité. Les clients peuvent sélectionner le mappage d’identité et les ID associés, à condition que les jeux de données disposent d’un espace de noms d’identité commun. L’IA dédiée aux clients prend en charge les schémas suivants : Adobe Analytics, Événement d’experience, Événement d’experience consommateur et le schéma Adobe Audience Manager. Pour plus d’informations sur la prise en charge de jeux de données multiples dans l’IA dédiée aux clients, consultez le [guide d’utilisation de l’IA dédiée aux clients](../../intelligent-services/customer-ai/user-guide/configure.md). |
-| Nouvelles mesures d’évaluation de modèle dans l’IA dédiée aux clients | Les nouveaux graphiques de gains dans l’IA dédiée aux clients permettent aux professionnels du marketing de déterminer la taille du groupe à cibler en fonction de leur budget et de leurs objectifs de retour sur investissement. Les nouveaux graphiques de courbe d’élévation évaluent la qualité du modèle, offrant ainsi une meilleure visibilité sur la courbe d’élévation obtenue par rapport à un ciblage aléatoire. Pour plus d’informations, consultez le document [découvrir des informations avec l’IA dédiée aux clients](../../intelligent-services/customer-ai/user-guide/discover-insights.md). |
+| Nouvelles mesures d’évaluation de modèle dans l’IA dédiée aux clients | Les nouveaux graphiques de gains dans l’IA dédiée aux clients permettent aux spécialistes marketing de déterminer la taille du groupe à cibler en fonction de leur budget et de leurs objectifs de retour sur investissement. Les nouveaux graphiques de courbe d’élévation évaluent la qualité du modèle, offrant ainsi une meilleure visibilité sur la courbe d’élévation obtenue par rapport à un ciblage aléatoire. Pour plus d’informations, consultez le document [découvrir des informations avec l’IA dédiée aux clients](../../intelligent-services/customer-ai/user-guide/discover-insights.md). |
 
 Pour plus d’informations sur Query Service [!DNL Intelligent Services], consultez la [[!DNL Intelligent Services] présentation](../../intelligent-services/home.md) de Query Service.
 
 ## Édition B2B de Real-Time Customer Data Platform {#B2B}
 
-Basée sur Real-time Customer Data Platform (Real-time CDP), l’édition B2B de Real-time CDP a été conçue pour les professionnels du marketing travaillant dans un modèle de service business-to-business. Elle rassemble des données provenant de sources multiples et les combine en une vue unique des profils de comptes et d’utilisateurs. Ces données unifiées permettent aux professionnels du marketing de cibler précisément des audiences spécifiques afin de stimuler leur engagement sur tous les canaux disponibles.
+Basée sur Real-time Customer Data Platform (Real-time CDP), l’édition B2B de Real-time CDP a été conçue pour les professionnels du marketing travaillant dans un modèle de service business-to-business. Elle rassemble des données provenant de sources multiples et les combine en une vue unique des profils de comptes et d’utilisateurs. Ces données unifiées permettent aux spécialistes marketing de cibler précisément des audiences spécifiques afin de stimuler leur engagement sur tous les canaux disponibles.
 
 **Fonctionnalités mises à jour**
 
