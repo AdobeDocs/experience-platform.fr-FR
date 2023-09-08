@@ -4,9 +4,9 @@ title: Présentation des destinations
 description: Les destinations sont des intégrations préconfigurées à des plateformes de destination qui permettent dʼactiver facilement des données provenant dʼAdobe Experience Platform. Vous pouvez utiliser les destinations dans Adobe Experience Platform pour activer vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
 source-git-commit: ce1aec87b827b6e8626018846bc6f438834fff54
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '925'
-ht-degree: 71%
+ht-degree: 100%
 
 ---
 
@@ -40,18 +40,18 @@ Les commandes de l’[espace de travail des destinations](./ui/destinations-work
 * parcourir le catalogue des plateformes de destination dans lesquelles vous pouvez activer vos données ;
 * créer, modifier, activer et désactiver des flux de données vers les destinations du catalogue ;
 * créer un compte dans un emplacement de stockage ou lier Platform au compte dans la plateforme des destinations ;
-* Sélectionnez les audiences qui doivent être activées vers les destinations.
-* Sélectionnez laquelle [Champs du modèle de données d’expérience (XDM)](../xdm/home.md) à exporter lors de l’activation d’audiences vers des destinations de marketing par e-mail.
+* sélectionner les audiences à activer vers les destinations ;
+* sélectionner les [champs Modèle de données d’expérience (XDM)](../xdm/home.md) à exporter lors de l’activation d’audiences vers des destinations de marketing par e-mail.
 
 ## Types et catégories de destination {#types-and-categories}
 
 Avec Experience Platform, vous pouvez activer des données vers différents types de destinations, afin de répondre à vos cas d’utilisation d’activation. Les destinations vont des intégrations basées sur les API aux intégrations avec les systèmes de réception de fichiers, en passant par les destinations de recherche de profil, etc. Pour plus d’informations sur toutes les destinations disponibles, voir [Présentation des types et catégories de destination](./destination-types.md).
 
-## Destinations construites en Adobe et construites par des partenaires {#adobe-and-partner-built-destinations}
+## Destinations créées par Adobe et les partenaires {#adobe-and-partner-built-destinations}
 
-Certains des connecteurs du catalogue des destinations Experience Platform sont créés et gérés par Adobe, tandis que d’autres sont créés et gérés par des sociétés partenaires qui utilisent [Destination SDK](/help/destinations/destination-sdk/overview.md). Une note en haut de la page de documentation pour chaque connecteur créé par un partenaire indique si une destination est créée et gérée par le partenaire. Par exemple, la variable [Connecteur Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md) est créé par Adobe, tandis que la variable [Connecteur TikTok](/help/destinations/catalog/social/tiktok.md) est créé et géré par l’équipe TikTok.
+Certains des connecteurs du catalogue des destinations Experience Platform sont créés et gérés par Adobe, tandis que d’autres sont créés et gérés par des sociétés partenaires qui utilisent [Destination SDK](/help/destinations/destination-sdk/overview.md). Une note en haut de la page de documentation pour chaque connecteur créé par un partenaire indique si une destination est créée et gérée par le partenaire. Par exemple, le [connecteur Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md) est créé par Adobe, tandis que le [connecteur TikTok](/help/destinations/catalog/social/tiktok.md) est créé et géré par l’équipe TikTok.
 
-Pour les connecteurs créés et gérés par un partenaire, cela signifie que les problèmes avec le connecteur peuvent avoir à être résolus par l’équipe du partenaire (méthode de contact fournie dans la note de la page de documentation). Pour tout problème concernant les connecteurs créés et gérés par Adobe, contactez votre représentant Adobe ou l’assistance clientèle.
+Pour les connecteurs créés et gérés par un partenaire, les problèmes liés au connecteur peuvent devoir être résolus par l’équipe du partenaire (la méthode de contact est fournie dans la note de la page de documentation). Pour tout problème concernant les connecteurs créés et gérés par Adobe, contactez votre personne représentante d’Adobe ou l’Assistance clientèle.
 
 ## Destinations et contrôles d’accès {#access-controls}
 
@@ -62,8 +62,8 @@ Le tableau suivant décrit les autorisations et combinaisons d’autorisations r
 | Niveau d’autorisation | Description |
 | ---- | ---- |
 | **[!UICONTROL Gérer les destinations]** | Pour vous connecter aux destinations, vous avez besoin de l’[autorisation de contrôle d’accès](/help/access-control/home.md#permissions) **[!UICONTROL Gérer les destinations]**. |
-| **[!UICONTROL Gérer les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** | Pour activer les audiences vers les destinations et activer la variable [étape de mappage](ui/activate-batch-profile-destinations.md#mapping) du workflow, vous avez besoin de l’événement **[!UICONTROL Gestion des destinations]**, **[!UICONTROL Activation des destinations]**, **[!UICONTROL Afficher les profils]**, et **[!UICONTROL Affichage de segments]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). |
-| **[!UICONTROL Gestion des destinations]**, **[!UICONTROL Activation des segments sans mappage]**, **[!UICONTROL Afficher les profils]**, et **[!UICONTROL Affichage de segments]** | Pour activer les audiences vers les destinations et masquer la variable [étape de mappage](ui/activate-batch-profile-destinations.md#mapping) du workflow, vous avez besoin de l’événement **[!UICONTROL Gestion des destinations]**, **[!UICONTROL Activation des segments sans mappage]**, **[!UICONTROL Afficher les profils]**, et **[!UICONTROL Affichage de segments]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). |
+| **[!UICONTROL Gérer les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** | Pour activer les audiences vers les destinations et activer l’[étape de mappage](ui/activate-batch-profile-destinations.md#mapping) du workflow, vous devez disposer des [autorisations de contrôle d’accès](/help/access-control/home.md#permissions) suivantes : **[!UICONTROL Gérer les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]**. |
+| **[!UICONTROL Gérer les destinations]**, **[!UICONTROL Activer les segments sans mappage]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** | Pour activer les segments vers les destinations et masquer l’[étape de mappage](ui/activate-batch-profile-destinations.md#mapping) du workflow, vous devez disposer des [autorisations de contrôle d’accès](/help/access-control/home.md#permissions) suivantes : **[!UICONTROL Gérer les destinations]**, **[!UICONTROL Activer les segments sans mappage]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]**. |
 
 {style="table-layout:auto"}
 
@@ -99,10 +99,10 @@ Pour plus d’informations sur la sélection d’actions marketing dans le workf
 * [Destinations publicitaires - Google Display &amp; Video 360](./catalog/advertising/google-dv360.md)
 * [Destinations de stockage dans le cloud](./catalog/cloud-storage/overview.md)
 * [Destinations de marketing par e-mail ](./catalog/email-marketing/overview.md)
-* [Destinations sociales ](./catalog/social/overview.md)
+* [Destinations sociales](./catalog/social/overview.md)
 
-Pour plus d’informations sur les violations de stratégie de données dans le processus d’activation de l’audience, voir **[!UICONTROL Réviser]** dans les guides suivants :
+Pour plus d’informations sur les violations de politique de données dans le workflow Audience Activation, voir l’étape **[!UICONTROL Révision]** dans les guides suivants :
 
-* [Activation des données d’audience vers des destinations d’exportation d’audiences par flux](./ui/activate-segment-streaming-destinations.md#review)
+* [Activer les données d’audience vers des destinations d’export d’audiences en flux continu](./ui/activate-segment-streaming-destinations.md#review)
 * [Activer les données d’audience vers des destinations d’exportation de profils de diffusion en continu](./ui/activate-streaming-profile-destinations.md#review)
 * [Activer les données d’audience vers des destinations d’exportation de profils par lots](./ui/activate-batch-profile-destinations.md#review)
