@@ -1,12 +1,12 @@
 ---
-keywords: annonces Google;annonces Google;mots-clés Google;mots-clés Google AdWords;mots-clés Google
-title: Connexion Google Ads
-description: Google Ads, appelé auparavant Google AdWords, est un service de publicité en ligne qui permet aux entreprises faire de la publicité avec paiement par clic sur des recherches textuelles, des affichages graphiques, des vidéos YouTube et des affichages mobiles in-app.
+keywords: Google ads;google ads;google adwords;Google AdWords;Google Adwords
+title: Connexion Google Ads
+description: Google Ads, appelé auparavant Google AdWords, est un service de publicité en ligne qui permet aux entreprises de faire de la publicité avec paiement par clic sur des recherches textuelles, des affichages graphiques, des vidéos YouTube et des affichages mobiles in-app.
 exl-id: 7143f476-49a8-42aa-bfb4-b11fc2b8f5c3
 source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '995'
-ht-degree: 71%
+ht-degree: 100%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 71%
 
 ## Présentation {#overview}
 
-[!DNL Google Ads], appelé auparavant , est un service de publicité en ligne qui permet aux entreprises faire de la publicité avec paiement par clic sur des recherches textuelles, des affichages graphiques, des vidéos et des affichages mobiles in-app.[!DNL Google AdWords][!DNL YouTube]
+[!DNL Google Ads], appelé auparavant [!DNL Google AdWords], est un service de publicité en ligne qui permet aux entreprises de faire de la publicité avec paiement par clic sur des recherches textuelles, des affichages graphiques, des vidéos [!DNL YouTube] et des affichages mobiles in-app.
 
 ## Spécificités de la destination {#specifics}
 
@@ -25,7 +25,7 @@ Notez les détails suivants qui sont spécifiques aux destinations [!DNL Google 
 
 >[!IMPORTANT]
 >
->Si vous souhaitez créer votre première destination avec [!DNL Google Ads] sans jamais avoir activé la [fonctionnalité de synchronisation des identifiants](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html?lang=fr) dans le service Experience Cloud ID dans le passé (avec Audience Manager ou d’autres applications), prenez contact avec Adobe Consulting ou l’assistance clientèle d’Adobe pour activer la synchronisation des identifiants. Si vous avez précédemment configuré les intégrations Google dans Audience Manager, les synchronisations d’ID que vous avez configurées sont transférées vers Platform.
+>Si vous souhaitez créer votre première destination avec [!DNL Google Ads] sans jamais avoir activé la [fonctionnalité de synchronisation des identifiants](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html?lang=fr) dans le service Experience Cloud ID dans le passé (avec Audience Manager ou d’autres applications), prenez contact avec Adobe Consulting ou l’assistance clientèle d’Adobe pour activer la synchronisation des identifiants. Si vous avez configuré précédemment des intégrations Google dans Audience Manager, les synchronisations d’identifiant que vous aviez configurées sont transférées vers Platform.
 
 ## Identités prises en charge {#supported-identities}
 
@@ -47,13 +47,13 @@ Notez les détails suivants qui sont spécifiques aux destinations [!DNL Google 
 
 Cette section décrit toutes les audiences que vous pouvez exporter vers cette destination.
 
-Cette destination prend en charge l’activation de toutes les audiences générées par l’Experience Platform. [Segmentation Service](../../../segmentation/home.md).
+Cette destination prend en charge l’activation de toutes les audiences générées par le [Segmentation Service](../../../segmentation/home.md) d’Experience Platform.
 
 *En outre*, cette destination prend également en charge l’activation des audiences décrites dans le tableau ci-dessous.
 
 | Type d’audience | Description |
 ---------|----------|
-| Chargements personnalisés | Audiences [importé](../../../segmentation/ui/overview.md#import-audience) dans Experience Platform à partir de fichiers CSV. |
+| Chargements personnalisés | Audiences [importées](../../../segmentation/ui/overview.md#import-audience) dans Experience Platform à partir de fichiers CSV. |
 
 {style="table-layout:auto"}
 
@@ -63,18 +63,18 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 | Élément | Type | Notes |
 ---------|----------|---------|
-| Type d’exportation | **[!UICONTROL Exportation de l’audience]** | Vous exportez tous les membres d’une audience vers la destination Google. |
-| Fréquence des exportations | **[!UICONTROL Diffusion en continu]** | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu&#39;un profil est mis à jour en Experience Platform en fonction de l&#39;évaluation de l&#39;audience, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
+| Type d’exportation | **[!UICONTROL Export d’audience]** | Vous exportez toutes les personnes membres d’une audience vers la destination Google. |
+| Fréquence des exportations | **[!UICONTROL Diffusion en continu]** | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation des audiences, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
 ## Conditions préalables {#prerequisites}
 
-### Existant [!DNL Google Ads] account
+### Compte [!DNL Google Ads] existant
 
 >[!IMPORTANT]
 >
-> [!DNL Google] has deprecated new [!DNL Google Ads] intégrations de cookies avec des fournisseurs tiers. Pour effectuer les étapes de liste autorisée de la section suivante, vous devez disposer d’une intégration existante avec [!DNL Google Ads]. Par conséquent, l’approche recommandée pour l’utilisation de [!DNL Google Ads] configure un [!DNL Google Customer Match] intégration. Pour plus d’informations sur la création d’un [!DNL Google Customer Match] intégration, veuillez lire le tutoriel sur la création d’un [[!DNL Google Customer Match]](./google-customer-match.md) connexion.
+> [!DNL Google] a abandonné les nouvelles intégrations de cookies [!DNL Google Ads] avec des fournisseurs tiers. Pour effectuer les étapes de liste autorisée de la section suivante, vous devez disposer d’une intégration existante avec [!DNL Google Ads]. Par conséquent, l’approche recommandée pour l’utilisation de [!DNL Google Ads] est de configurer une intégration [!DNL Google Customer Match]. Pour plus d’informations sur la création d’une intégration [!DNL Google Customer Match], lisez le tutoriel sur la création d’une connexion [[!DNL Google Customer Match]](./google-customer-match.md).
 
 ### Liste autorisée {#allow-listing}
 
@@ -88,7 +88,7 @@ Avant de créer la destination [!DNL Google Ads] dans Platform, vous devez conta
 * **Identifiant de compte** : il s’agit de l’identifiant de compte Adobe avec Google. Identifiant de compte : 87933855.
 * **Identifiant client** : l’identifiant client d’Adobe avec Google. Identifiant client : 89690775.
 * Votre type de compte : **AdWords**
-* **Google AdWords ID**: il s’agit de votre identifiant avec [!DNL Google]. Le format d’identifiant est généralement 123-456-7890.
+* **Identifiant Google AdWords** : il s’agit de votre identifiant avec [!DNL Google]. Le format d’identifiant est généralement 123-456-7890.
 
 ## Se connecter à la destination {#connect}
 
@@ -113,13 +113,13 @@ Vous pouvez activer les alertes pour recevoir des notifications sur le statut de
 
 Lorsque vous avez terminé de renseigner les détails sur votre connexion de destination, sélectionnez **[!UICONTROL Suivant]**.
 
-## Activer les audiences vers cette destination {#activate}
+## Activer des audiences vers cette destination {#activate}
 
 >[!IMPORTANT]
 > 
 >Pour activer les données, vous avez besoin des [autorisations de contrôle d’accès](/help/access-control/home.md#permissions) pour les fonctions **[!UICONTROL Gérer les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]**, et **[!UICONTROL Afficher les segments]**. Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
-Voir [Activation des données d’audience vers des destinations d’exportation d’audience par flux](../../ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
+Voir [Activer les données d’audience vers des destinations d’export d’audiences en flux continu](../../ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audience vers cette destination.
 
 ## Données exportées
 
@@ -127,14 +127,14 @@ Pour vérifier si les données ont bien été exportées vers la destination [!D
 
 ## Dépannage {#troubleshooting}
 
-### Message d’erreur 400 Bad Request {#bad-request}
+### Message d’erreur 400 Requête incorrecte {#bad-request}
 
-Lors de la configuration de cette destination, vous risquez de recevoir l’erreur suivante :
+Lors de la configuration de cette destination, vous risquez de recevoir l’erreur suivante :
 
 `{"message":"Google Error: AuthorizationError.USER_PERMISSION_DENIED","code":"400 BAD_REQUEST"}`
 
-Cette erreur se produit lorsque les comptes clients ne respectent pas les [conditions préalables](#prerequisites) ou lorsque les clients tentent de configurer la destination sans qu’un [!DNL Google Ads] compte .
+Cette erreur se produit lorsque les comptes clients ne respectent pas les [conditions préalables](#prerequisites) ou lorsque les clientes et clients tentent de configurer la destination sans un compte [!DNL Google Ads] existant.
 
-[!DNL Google] has deprecated new [!DNL Google Ads] intégrations de cookies avec des fournisseurs tiers. Pour exécuter la fonction [liste autorisée](#allow-listing) , vous devez avoir une intégration existante avec [!DNL Google Ads].
+[!DNL Google] a abandonné les nouvelles intégrations de cookies [!DNL Google Ads] avec des fournisseurs tiers. Pour exécuter les étapes de la [liste autorisée](#allow-listing), vous devez avoir une intégration existante avec [!DNL Google Ads].
 
-Approche recommandée pour l’utilisation de [!DNL Google Ads] configure un [[!DNL Google Customer Match]](google-customer-match.md) intégration.
+L’approche recommandée pour l’utilisation de [!DNL Google Ads] est de configurer une intégration [[!DNL Google Customer Match]](google-customer-match.md).
