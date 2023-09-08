@@ -3,9 +3,9 @@ description: Découvrez comment utiliser l’API de test de destination pour val
 title: Validation de la structure de profil exportée
 exl-id: e64ea89e-6064-4a05-9730-e0f7d7a3e1db
 source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '789'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -186,7 +186,7 @@ Une réponse non réussie renvoie un état HTTP 400 avec la description des err
 **Requête**
 
 
-La requête suivante effectue le rendu de plusieurs profils exportés correspondant au format attendu par votre destination. Dans cet exemple, l’identifiant de destination correspond à une configuration de destination avec une agrégation configurable. Deux profils sont inclus dans le corps de la requête, chacun avec trois qualifications d’audience et cinq identités. Vous pouvez générer des profils à envoyer lors de l’appel à l’aide de l’[API de génération de profil type](sample-profile-generation-api.md).
+La requête suivante effectue le rendu de plusieurs profils exportés correspondant au format attendu par votre destination. Dans cet exemple, l’identifiant de destination correspond à une configuration de destination avec une agrégation configurable. Deux profils sont inclus dans le corps de la requête, chacun avec trois qualifications d’audience et cinq identités. Vous pouvez générer des profils à envoyer lors de l’appel à l’aide de l’[API de génération de profil type](sample-profile-generation-api.md).
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/core/activation/authoring/testing/template/render' \
@@ -307,7 +307,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 **Réponse**
 
 La réponse renvoie le résultat du rendu du modèle ou toute erreur rencontrée.
-Une réponse réussie renvoie un état HTTP 200 avec les détails des données exportées. Notez dans la réponse comment les profils sont agrégés en fonction de l’appartenance à l’audience et des identités. Recherchez les profils exportés dans le paramètre `output` sous forme de chaîne placée dans une séquence dʼéchappement.
+Une réponse réussie renvoie un état HTTP 200 avec les détails des données exportées. Notez dans la réponse la manière dont les profils sont agrégés en fonction de l’appartenance à une audience et des identités. Recherchez les profils exportés dans le paramètre `output` sous forme de chaîne placée dans une séquence dʼéchappement.
 Une réponse non réussie renvoie un état HTTP 400 avec la description des erreurs rencontrées.
 
 ```json
