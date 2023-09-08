@@ -5,9 +5,9 @@ title: Présentation de Query Service
 description: Ce document donne une vue d’ensemble du rôle de Query Service dans Experience Platform.
 exl-id: fdaefc12-a97d-4e4e-9aed-d3dbd0f43ea0
 source-git-commit: e59def7a05862ad880d0b6ada13b1c69c655ff90
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '721'
-ht-degree: 89%
+ht-degree: 100%
 
 ---
 
@@ -33,7 +33,7 @@ Adobe Experience Platform [!DNL Data Science Workspace] utilise le machine lea
 
 ### [!DNL Segmentation Service]
 
-Adobe Experience Platform [!DNL Segmentation Service] permet aux utilisateurs de diviser leurs clients en plus petits groupes partageant des caractéristiques similaires. Ces audiences peuvent ensuite être évaluées afin de fournir une meilleure analyse sur vos [!DNL Real-Time Customer Profile] data. [!DNL Query Service] peut être utilisé pour fournir cette analyse en exécutant des requêtes sur ces données d’audience dans la variable [!DNL Data Lake]. Veuillez lire la [!DNL Segmentation Service] pour plus d’informations sur la segmentation et la variable [!DNL Profile Query Language] (PQL) pour plus d’informations sur l’analyse des audiences.
+Adobe Experience Platform [!DNL Segmentation Service] permet aux utilisateurs de diviser leurs clients en plus petits groupes partageant des caractéristiques similaires. Ces audiences peuvent ensuite être évaluées afin de fournir une meilleure analyse de vos données [!DNL Real-Time Customer Profile]. [!DNL Query Service] peut être utilisé pour fournir cette analyse en exécutant des requêtes sur cette audience de données dans le [!DNL Data Lake]. Pour plus dʼinformations sur la segmentation, reportez-vous à la vue d’ensemble de [!DNL Segmentation Service] et au guide de [!DNL Profile Query Language] (PQL) pour plus dʼinformations sur lʼanalyse des audiences.
 
 ## Cas d’utilisation
 
