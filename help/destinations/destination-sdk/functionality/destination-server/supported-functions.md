@@ -2,9 +2,9 @@
 description: Experience Platform Destination SDK utilise des modèles Pebble, ce qui vous permet de transformer les données exportées d’Experience Platform au format demandé par la destination.
 title: Fonctions de transformation prises en charge dans Destination SDK
 source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '579'
-ht-degree: 91%
+ht-degree: 100%
 
 ---
 
@@ -29,7 +29,7 @@ Le modèle de transformation des messages est utilisé dans la [configuration du
 
 Pour comprendre les concepts et les fonctions de cette page de référence, commencez par consulter le document relatif au [format du message](message-format.md). Vous devez comprendre la [structure d’un profil](message-format.md#profile-structure) dans Experience Platform avant de pouvoir utiliser les modèles [!DNL Pebble] à transformer et les données exportées.
 
-Avant d’accéder aux fonctions décrites ci-dessous, consultez les exemples de modèle dans la section . [Utilisation d’une langue de modèle pour les transformations d’identité, d’attributs et d’appartenance à une audience](message-format.md#using-templating). Ces exemples commencent très simplement et se complexifient au fur et à mesure.
+Avant d’accéder aux fonctions décrites ci-dessous, consultez les exemples de modèle dans la section [Utiliser un langage de modèle pour les transformations d’identité, d’attributs et d’appartenance à une audience](message-format.md#using-templating). Ces exemples commencent très simplement et se complexifient au fur et à mesure.
 
 ## Fonction [!DNL Pebble] prise en charge {#supported-functions}
 
@@ -91,7 +91,7 @@ Outre les fonctions prêtes à l’emploi fournies par [!DNL Pebble], consultez 
 
 #### Cas d’utilisation
 
-Ces fonctions peuvent être utilisées pour obtenir une liste des audiences qui ont été ajoutées ou supprimées d’un profil.
+Ces fonctions peuvent être utilisées pour obtenir la liste des audiences qui ont été ajoutées ou supprimées d’un profil.
 
 #### Exemple
 
