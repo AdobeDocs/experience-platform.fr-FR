@@ -5,15 +5,15 @@ title: Bonnes pratiques de modélisation des données
 description: Ce document présente les schémas du modèle de données d’expérience (XDM) ainsi que les blocs de création, principes et bonnes pratiques de la composition de schémas à utiliser dans Adobe Experience Platform.
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
 source-git-commit: 55f86fdd4fd36d21dcbd575d6da83df18abb631d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2709'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
 # Bonnes pratiques de modélisation des données
 
-[!DNL Experience Data Model] (XDM) est le cadre de base qui normalise les données d’expérience client en fournissant des structures et des définitions communes à utiliser dans les services Adobe Experience Platform en aval. En adhérant aux normes XDM, toutes les données d’expérience client peuvent être intégrées à une représentation commune qui vous permet d’obtenir des informations précieuses à partir des actions du client, de définir des audiences de client et d’exprimer les attributs du client à des fins de personnalisation.
+[!DNL Experience Data Model] (XDM) est le cadre de base qui normalise les données d’expérience client en fournissant des structures et des définitions communes à utiliser dans les services Adobe Experience Platform en aval. En adhérant aux normes XDM, toutes les données d’expérience client peuvent être intégrées à une représentation commune qui vous permet d’obtenir des informations précieuses à partir des actions de la clientèle, de définir des audiences de clientèle par le biais de segments et d’exprimer les attributs de clientèle à des fins de personnalisation.
 
 XDM étant extrêmement polyvalent et personnalisable par sa conception, il est donc important de suivre les bonnes pratiques de modélisation des données lors de la conception de vos schémas. Ce document couvre les principales décisions et considérations à prendre lors du mappage de vos données d’expérience client vers XDM.
 
@@ -92,24 +92,24 @@ Si vous souhaitez analyser la manière dont certains attributs au sein d’une e
 
 #### Cas d’utilisation de segmentation
 
-Lors de la catégorisation de vos entités, il est important de réfléchir aux audiences que vous souhaitez peut-être créer pour répondre à vos cas d’utilisation professionnels particuliers.
+Lors de la catégorisation de vos entités, il est important de réfléchir aux audiences que vous pourriez vouloir créer pour répondre aux cas d’utilisation particuliers de votre entreprise.
 
-Prenons l’exemple d’une entreprise qui souhaite connaître tous les membres « Gold » ou « Platinum » de son programme de fidélité ayant effectué plus de cinq achats au cours de l’année dernière. Sur la base de cette logique de segmentation, vous pouvez tirer les conclusions suivantes concernant la manière dont les entités pertinentes doivent être représentées :
+Prenons l’exemple d’une entreprise qui souhaite connaître toutes les personnes membres « Gold » ou « Platinum » de son programme de fidélité ayant effectué plus de cinq achats au cours de l’année dernière. Sur la base de cette logique de segmentation, vous pouvez tirer les conclusions suivantes concernant la manière dont les entités pertinentes doivent être représentées :
 
-* « Gold » et « Platinum » représentent des statuts de fidélité applicables à un client particulier. Puisque la logique de segmentation ne concerne que l’état actuel de fidélité des clients, ces données peuvent être modélisées dans le cadre d’un schéma de profil. Si vous souhaitez suivre les modifications du statut de fidélité au fil du temps, vous pouvez également créer un schéma d’événement supplémentaire pour les modifications du statut de fidélité.
-* Les achats sont des événements qui se produisent à un moment donné et la logique de segmentation est liée aux événements d’achat dans une fenêtre temporelle spécifiée. Ces données doivent donc être modélisées en tant que schéma d’événement.
+* « Gold » et « Platinum » représentent des statuts de fidélité applicables à une personne cliente particulière. Puisque la logique de segmentation ne concerne que le statut de fidélité actuel de la clientèle, ces données peuvent être modélisées dans le cadre d’un schéma de profil. Si vous souhaitez suivre les modifications du statut de fidélité au fil du temps, vous pouvez également créer un schéma d’événement supplémentaire pour les modifications du statut de fidélité.
+* Les achats sont des événements qui se produisent à un moment donné et la logique de segmentation concerne les événements d’achat dans une fenêtre temporelle spécifiée. Ces données doivent donc être modélisées en tant que schéma d’événement.
 
 #### Cas d’utilisation d’activation
 
-Outre les considérations relatives aux cas d’utilisation de la segmentation, vous devez également examiner les cas d’utilisation de l’activation pour ces audiences afin d’identifier d’autres attributs pertinents.
+Outre les considérations relatives aux cas d’utilisation de segmentation, vous devez également examiner les cas d’utilisation d’activation pour ces audiences afin d’identifier d’autres attributs pertinents.
 
-Par exemple, une entreprise a créé un d’audience basé sur la règle que `country = US`. Ensuite, lors de l’activation de cette audience vers certaines cibles en aval, l’entreprise souhaite filtrer tous les profils exportés en fonction de l’état d’origine. Par conséquent, un attribut `state` doit également être capturé dans l’entité de profil applicable.
+Par exemple, une entreprise a créé une audience basée sur la règle stipulant que `country = US`. Ensuite, lors de l’activation de cette audience vers certaines cibles en aval, l’entreprise souhaite filtrer tous les profils exportés en fonction de l’État d’origine. Par conséquent, un attribut `state` doit également être capturé dans l’entité de profil applicable.
 
 #### Valeurs agrégées
 
 En fonction du cas d’utilisation et de la granularité de vos données, vous devez décider si certaines valeurs doivent être pré-agrégées avant d’être incluses dans un profil ou une entité d’événement.
 
-Par exemple, une entreprise souhaite créer une audience en fonction du nombre d’achats de panier. Vous pouvez choisir d’incorporer ces données avec la granularité la plus faible en incluant chaque événement d’achat horodaté comme une entité à part entière. Cependant, cela peut parfois augmenter de façon exponentielle le nombre d’événements enregistrés. Pour réduire le nombre d’événements ingérés, vous pouvez choisir de créer une valeur agrégée `numberOfPurchases` sur une période d’une semaine ou d’un mois. D’autres fonctions d’agrégation telles que MIN et MAX peuvent également s’appliquer à ces situations.
+Par exemple, une entreprise souhaite créer une audience en fonction du nombre d’achats. Vous pouvez choisir d’incorporer ces données avec la granularité la plus faible en incluant chaque événement d’achat horodaté comme une entité à part entière. Cependant, cela peut parfois augmenter de façon exponentielle le nombre d’événements enregistrés. Pour réduire le nombre d’événements ingérés, vous pouvez choisir de créer une valeur agrégée `numberOfPurchases` sur une période d’une semaine ou d’un mois. D’autres fonctions d’agrégation telles que MIN et MAX peuvent également s’appliquer à ces situations.
 
 >[!CAUTION]
 >
@@ -173,7 +173,7 @@ La seconde approche consiste à utiliser des schémas d’événement pour repr�
 
 **Inconvénients**
 
-* La segmentation devient plus complexe pour le cas d’utilisation original prévu (identification du statut des abonnements les plus récents des clients). L’audience a désormais besoin d’une logique supplémentaire pour marquer le dernier événement d’abonnement pour un client afin de vérifier son état.
+* La segmentation devient plus complexe pour le cas d’utilisation original prévu (identification du statut des abonnements les plus récents des clients). L’audience a désormais besoin d’une logique supplémentaire pour indiquer le dernier événement d’abonnement pour un client ou une cliente afin de vérifier son statut.
 * Les événements risquent davantage d’expirer automatiquement et d’être purgés de la banque de profils. Pour plus d’informations, consultez le guide sur les [expirations des événements d’expérience](../../profile/event-expirations.md).
 
 ## Créer des schémas en fonction de vos entités classées
