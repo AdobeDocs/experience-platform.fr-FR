@@ -2,16 +2,16 @@
 description: Découvrez les qualifications des historiques prises en charge par les destinations créées avec Destination SDK.
 title: Qualifications des profils historiques
 source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '214'
-ht-degree: 69%
+ht-degree: 100%
 
 ---
 
 
 # Qualifications des profils historiques
 
-Toutes les destinations créées avec Destination SDK prennent en charge les qualifications de profil historiques par défaut. Cela signifie que lorsque les utilisateurs configurent pour la première fois un flux de données d’activation vers vos destinations, la première exportation contient tous les membres de l’audience qui se sont déjà qualifiés pour ce segment.
+Toutes les destinations créées avec Destination SDK prennent en charge les qualifications de profil historiques par défaut. Cela signifie que quand les personnes configurent pour la première fois un flux de données d’activation vers vos destinations, la première exportation contient tous les membres de l’audience qui ne se sont jamais qualifiés pour ce segment.
 
 Ce comportement est défini par le paramètre `"backfillHistoricalProfileData":true` dans la configuration de destination.
 
@@ -40,7 +40,7 @@ Pour en savoir plus sur les types d’intégration qui prennent en charge les fo
 
 ## Étapes suivantes {#next-steps}
 
-Après avoir lu cet article, vous devez savoir que Experience Platform exporte automatiquement une population historique de tous les profils qui se sont qualifiés pour une audience activée lorsque l’audience est exportée pour la première fois vers la destination. Cette option n’est pas configurable dans Destination SDK ni dans l’interface utilisateur d’Experience Platform.
+Vous avez lu l’intégralité de cet article. À présent, vous devez savoir qu’Experience Platform exporte automatiquement un historique de tous les profils qui se sont qualifiés pour une audience activée quand l’audience est exportée pour la première fois vers la destination. Cette option n’est pas configurable dans Destination SDK ni dans l’interface utilisateur d’Experience Platform.
 
 Pour en savoir plus sur les autres composants de destination, consultez les articles suivants :
 
