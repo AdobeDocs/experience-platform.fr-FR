@@ -4,9 +4,9 @@ title: Vue d’ensemble de PQL (Profile Query Language)
 description: Ce guide présente un aperçu général de PQL, couvre les instructions de formatage et apporte des exemples d’expressions PQL.
 exl-id: 4f7ab50e-89a3-42db-b74a-c6f2d86c9bcb
 source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '706'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -87,4 +87,4 @@ Le tableau suivant décrit les différentes catégories des fonctions PQL prises
 
 ## Étapes suivantes
 
-Maintenant que vous avez appris à utiliser [!DNL Profile Query Language], vous pouvez utiliser PQL lors de la création et de la modification de définitions de segment. Pour plus d’informations sur la segmentation, veuillez lire la [présentation de la segmentation](../home.md).
+Maintenant que vous savez comment utiliser [!DNL Profile Query Language], vous pouvez utiliser PQL lorsque vous créez et modifiez des définitions de segments. Pour plus d’informations sur la segmentation, veuillez lire la [vue d’ensemble de la segmentation](../home.md).
