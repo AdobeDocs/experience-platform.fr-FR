@@ -4,9 +4,9 @@ title: Guide de l’interface utilisateur du créateur de segments
 description: Le créateur de segments de l’interface utilisateur d’Adobe Experience Platform fournit un espace de travail riche qui vous permet d’interagir avec les éléments de données de profil. L’espace de travail fournit des commandes intuitives pour la création et la modification de règles, telles que le glisser-déposer de mosaïques utilisées pour représenter les propriétés des données.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
 source-git-commit: 56d9d3ec5565960438540ffec867ed528b52eaf1
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '3338'
-ht-degree: 88%
+ht-degree: 100%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 88%
 
 >[!NOTE]
 >
->Ce guide explique comment créer des audiences par le biais de **définitions de segment** à l’aide du créateur de segments. Pour savoir comment créer des audiences à l’aide de la composition de l’audience, veuillez lire le [Guide de l’interface utilisateur de composition d’audience](./audience-composition.md).
+>Ce guide décrit la création d’audiences par le biais de **définitions de segment** dans le créateur de segments. Pour savoir comment créer des audiences à l’aide de la composition d’audience, consultez le [Guide de l’interface utilisateur de la composition d’audience](./audience-composition.md).
 
 Le [!DNL Segment Builder] offre un vaste espace de travail qui vous permet d’interagir avec les éléments de données de [!DNL Profile]. L’espace de travail fournit des commandes intuitives pour la création et la modification de règles, telles que le glisser-déposer de mosaïques utilisées pour représenter les propriétés des données.
 
@@ -41,7 +41,7 @@ L’onglet **[!UICONTROL Attributs]** vous permet de parcourir les attributs [!D
 
 ### Événements
 
-L’onglet **[!UICONTROL Événements]** vous permet de créer une audience basée sur des événements ou des actions qui ont eu lieu en utilisant des éléments de données [!DNL XDM ExperienceEvent] Vous pouvez également trouver les types d’événement sur la page **[!UICONTROL Événements]** , qui sont un ensemble d’événements fréquemment utilisés pour vous permettre de créer plus rapidement vos définitions de segment.
+L’onglet **[!UICONTROL Événements]** vous permet de créer une audience basée sur des événements ou des actions qui ont eu lieu en utilisant des éléments de données [!DNL XDM ExperienceEvent] Vous pouvez également trouver les types d’événements dans l’onglet **[!UICONTROL Événements]**, qui sont une collection d’événements couramment utilisés pour vous permettre de créer vos définitions de segments plus rapidement.
 
 Outre la possibilité de rechercher des éléments [!DNL ExperienceEvent], vous pouvez également rechercher des types d’événements. Les types d’événements utilisent la même logique de codage que [!DNL ExperienceEvents] sans qu’il soit nécessaire de faire une recherche dans la classe [!DNL XDM ExperienceEvent] pour trouver l’événement correct. Par exemple, l’utilisation de la barre de recherche pour rechercher « cart » (panier) renvoie les types d’événements « [!UICONTROL AddCart] » et « [!UICONTROL RemoveCart] », qui sont deux actions liées au panier très couramment utilisées lors de la création de définitions de segment.
 
@@ -119,7 +119,7 @@ Pour ajouter une nouvelle règle à votre définition de segment, faites glisser
 
 >[!IMPORTANT]
 >
->Les dernières modifications apportées à Adobe Experience Platform ont mis à jour l’utilisation des opérateurs logiques `OR` et `AND` entre les événements. Ces mises à jour n’affectent pas les définitions de segment existantes. Cependant, toutes les mises à jour ultérieures des définitions de segment existantes et des définitions de segment nouvellement créées seront affectées par ces modifications. Consultez la [mise à jour des constantes de temps](./segment-refactoring.md) pour plus d’informations.
+>Les dernières modifications apportées à Adobe Experience Platform ont mis à jour l’utilisation des opérateurs logiques `OR` et `AND` entre les événements. Ces mises à jour n’auront aucune incidence sur les définitions de segment existantes. Cependant, toutes les mises à jour ultérieures des définitions de segment existantes et des définitions de segment nouvellement créées seront affectées par ces modifications. Consultez la [mise à jour des constantes de temps](./segment-refactoring.md) pour plus d’informations.
 
 Lors de la sélection d’une valeur pour l’attribut, vous verrez une liste de valeurs d’énumération pour l’attribut.
 
@@ -161,11 +161,11 @@ Si des conflits surviennent lors de la conversion d’audiences en règles, le [
 
 ### Affichage du code
 
-Vous pouvez également afficher une version codée d’une règle créée dans le [!DNL Segment Builder]. Une fois que vous avez créé votre règle dans le canevas du créateur de règles, vous pouvez sélectionner **[!UICONTROL Affichage du code]** pour voir votre définition de segment comme PQL.
+Vous pouvez également afficher une version codée d’une règle créée dans le [!DNL Segment Builder]. Une fois que vous avez créé votre règle dans la zone de travail du créateur de règles, vous pouvez sélectionner **[!UICONTROL Affichage du code]** pour afficher votre définition de segment en PQL.
 
-![Le bouton d’affichage du code est mis en surbrillance, ce qui vous permet d’afficher la définition de segment sous la forme PQL.](../images/ui/segment-builder/code-view.png)
+![Le bouton d’affichage du code est mis en surbrillance, ce qui vous permet d’afficher la définition de segment en PQL.](../images/ui/segment-builder/code-view.png)
 
-L’affichage du code fournit un bouton qui vous permet de copier la valeur de la définition de segment à utiliser dans les appels API. Pour obtenir la dernière version de la définition de segment, veillez à enregistrer les dernières modifications apportées à la définition de segment.
+L’affichage du code fournit un bouton qui vous permet de copier la valeur de la définition de segment à utiliser dans les appels d’API. Pour obtenir la dernière version de la définition de segment, assurez-vous d’avoir enregistré vos dernières modifications apportées à la définition de segment.
 
 ![Le bouton « Copier le code » est mis en surbrillance, ce qui vous permet de ](../images/ui/segment-builder/copy-code.png)
 
@@ -181,7 +181,7 @@ Après avoir placé l’événement dans le conteneur Événements, sélectionne
 
 ![Le texte agrégé est mis en surbrillance. En le sélectionnant, vous pouvez sélectionner des fonctions d’agrégation.](../images/ui/segment-builder/add-aggregation.png)
 
-L’agrégation est maintenant ajoutée. Vous pouvez maintenant sélectionner la fonction d’agrégation, choisir l’attribut à agréger, la fonction d’égalité, ainsi que la valeur. Pour l’exemple ci-dessous, cette définition de segment qualifierait tout profil dont la somme des valeurs achetées est supérieure à 100 €, même si chaque achat individuel est inférieur à 100 €.
+L’agrégation est maintenant ajoutée. Vous pouvez maintenant sélectionner la fonction d’agrégation, choisir l’attribut à agréger, la fonction d’égalité, ainsi que la valeur. Pour l’exemple ci-dessous, cette définition de segment peut être considérée comme un profil dont la somme des valeurs achetées est supérieure à 100 $, même si chaque achat individuel est inférieur à 100 $.
 
 ![Les règles d’événement, qui affichent une fonction d’agrégation.](../images/ui/segment-builder/filled-aggregation.png)
 
@@ -251,19 +251,19 @@ Pour sélectionner une politique de fusion pour votre définition de segment, s�
 >abstract="Vous pouvez actualiser les estimations de votre définition de segment pour afficher immédiatement un aperçu du nombre de profils admissibles pour la définition de segment proposé. Les estimations d’audience sont générées en utilisant une taille d’échantillon des données d’exemple du jour."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=fr#estimate-and-preview-an-audience" text="Estimation et prévisualisation d’une audience"
 
-Lors de la création d’une définition de segment, la variable **[!UICONTROL Propriétés du segment]** sur le côté droit de l’espace de travail, la section affiche une estimation de la taille de la définition de segment résultante, ce qui vous permet d’ajuster votre définition de segment selon vos besoins avant de créer l’audience elle-même.
+Lors de la création d’une définition de segment, la section **[!UICONTROL Propriétés du segment]** située à droite de l’espace de travail affiche une estimation de la taille de la définition de segment obtenue, ce qui vous permet d’ajuster votre définition de segment selon vos besoins avant de créer l’audience elle-même.
 
 La section **[!UICONTROL Propriétés du segment]** vous permet également de spécifier des informations importantes sur votre définition de segment, y compris son nom, sa description et son type d’évaluation. Les noms des définitions de segment sont utilisés pour identifier votre définition de segment parmi celles définies par votre organisation et doivent donc être descriptifs, concis et uniques.
 
 Au fur et à mesure que vous continuez à créer votre définition de segment, vous pouvez visualiser un aperçu paginé de l’audience en sélectionnant **[!UICONTROL Afficher les profils]**.
 
-![La section des propriétés de définition de segment est mise en surbrillance. Les propriétés de définition de segment incluent, sans s’y limiter, le nom, la description et la méthode d’évaluation de la définition de segment.](../images/ui/segment-builder/segment-properties.png)
+![La section des propriétés de définition de segment est mise en surbrillance. Les propriétés de la définition de segment comportent, sans s’y limiter, le nom, la description et la méthode d’évaluation de la définition de segment.](../images/ui/segment-builder/segment-properties.png)
 
 >[!NOTE]
 >
->Les estimations d’audience sont générées en utilisant une taille d’échantillon des données d’exemple du jour. S’il y a moins d’un million d’entités dans votre banque de profils, l’ensemble des données est utilisé. Entre 1 et 20 millions d’entités, 1 million d’entités sont utilisées. Et pour plus de 20 millions d’entités, 5 % du total des entités sont utilisés. Vous trouverez plus d’informations sur la génération d’estimations pour les définitions de segment dans la section [section génération d’estimation](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) du tutoriel sur la création de définitions de segment.
+>Les estimations d’audience sont générées en utilisant une taille d’échantillon des données d’exemple du jour. S’il y a moins d’un million d’entités dans votre banque de profils, l’ensemble des données est utilisé. Entre 1 et 20 millions d’entités, 1 million d’entités sont utilisées. Et pour plus de 20 millions d’entités, 5 % du total des entités sont utilisés. Vous trouverez plus d’informations sur la génération d’estimations de définitions de segments dans la [section Génération d’estimations](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) du tutoriel sur la création de définitions de segments.
 
-Vous pouvez également sélectionner votre méthode d’évaluation. Si vous savez quelle méthode d’évaluation vous voulez utiliser, vous pouvez sélectionner la méthode d’évaluation souhaitée à l’aide de la liste déroulante. Si vous souhaitez savoir à quels types d’évaluation cette définition de segment est admissible, vous pouvez sélectionner l’icône Parcourir . ![icône de dossier avec loupe](../images/ui/segment-builder/segment-evaluation-select-icon.png) pour afficher la liste des méthodes d’évaluation de définition de segment disponibles.
+Vous pouvez également sélectionner votre méthode d’évaluation. Si vous savez quelle méthode d’évaluation vous voulez utiliser, vous pouvez sélectionner la méthode d’évaluation souhaitée à l’aide de la liste déroulante. Si vous souhaitez savoir pour quels types d’évaluation cette définition de segment est admissible, vous pouvez sélectionner l’icône Parcourir ![icône de dossier avec une loupe](../images/ui/segment-builder/segment-evaluation-select-icon.png) pour voir la liste des méthodes d’évaluation de définition de segment disponibles.
 
 L’[!UICONTROL Éligibilité de la méthode d’évaluation] s’affiche. Cette fenêtre contextuelle affiche les méthodes d’évaluation disponibles, à savoir par lots, en flux continu et Edge. La fenêtre contextuelle affiche les méthodes d’évaluation éligibles et non éligibles. Selon les paramètres que vous avez utilisés dans votre définition de segment, il se peut qu’elle ne soit pas admissible pour certaines méthodes d’évaluation. Pour plus d’informations sur les exigences de chaque méthode d’évaluation, veuillez lire les présentations sur la [segmentation en flux continu](./streaming-segmentation.md#query-types) ou la [segmentation Edge](./edge-segmentation.md#query-types).
 
@@ -271,7 +271,7 @@ L’[!UICONTROL Éligibilité de la méthode d’évaluation] s’affiche. Cette
 
 Si vous sélectionnez une méthode d’évaluation non valide, vous serez invité à modifier vos règles de définition de segment ou la méthode d’évaluation.
 
-![La fenêtre contextuelle de méthode d’évaluation s’affiche. Si une méthode d’évaluation de non éligible est sélectionnée, la fenêtre contextuelle explique pourquoi celle-ci n’est pas éligible.](../images/ui/segment-builder/ineligible-evaluation-method.png)
+![La fenêtre contextuelle de méthode d’évaluation s’affiche. Si une méthode d’évaluation non éligible est sélectionnée, la fenêtre contextuelle explique pourquoi celle-ci n’est pas éligible.](../images/ui/segment-builder/ineligible-evaluation-method.png)
 
 Vous trouverez plus d’informations sur les différentes méthodes d’évaluation de définition de segment dans la [présentation de la segmentation](../home.md#evaluate-segments).
 
