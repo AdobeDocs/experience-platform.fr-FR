@@ -1,22 +1,22 @@
 ---
 solution: Data Collection
 audience: user
-user-guide-title: Aide concernant les flux de données Adobe Experience Platform
+user-guide-title: Aide concernant les trains de données Adobe Experience Platform
 breadcrumb-title: Guide des flux de données
 user-guide-description: Découvrez comment configurer des flux de données dans Adobe Experience Platform.
 feature: Datastreams
 source-git-commit: 57867a7c78ae7f8100ead278cf901fed63780caa
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '45'
-ht-degree: 91%
+ht-degree: 100%
 
 ---
 
 
-# Adobe Experience Platform Datastreams {#datastreams}
+# Trains de données Adobe Experience Platform {#datastreams}
 
-* [Présentation des flux de données](overview.md)
-* [Configurer un train de données](configure.md)
+* [Présentation des trains de données](overview.md)
+* [Configurer un trains de données](configure.md)
 * [Configurer les remplacements de train de données](overrides.md)
 * [Préparation des données pour la collecte de données](data-prep.md)
 * Enrichissement des données {#data-enrichment}
