@@ -2,9 +2,9 @@
 description: Le service de destinations dans Adobe Experience Platform utilise des points d’entrée de configuration pour plusieurs composants qui créent la fonctionnalité de destinations. Découvrez comment ces composants combinés permettent à Experience Platform de se connecter à des partenaires de destination, d’envoyer des messages personnalisés et d’activer des données de profil dans l’écosystème numérique.
 title: Options de configuration dans Destination SDK
 source-git-commit: 3f31a54c0cf329d374808dacce3fac597a72aa11
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '828'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -45,14 +45,14 @@ Pour en savoir plus sur chacun des composants de configuration de destination, c
 * [Configuration du schéma](destination-configuration/schema-configuration.md) : découvrez comment définir le schéma cible de la destination vers lequel les utilisateurs peuvent mapper les attributs et les identités de profil.
 * [Configuration de l’espace de noms d’identité](destination-configuration/identity-namespace-configuration.md) : découvrez comment configurer les identités prises en charge par la destination. Cette configuration renseigne les identités cibles dans l’[étape de mappage](../../ui/activate-segment-streaming-destinations.md#mapping) de l’interface utilisateur d’Experience Platform, où les utilisateurs mappent les identités et les attributs de leurs schémas XDM au schéma de la destination.
 * [Diffusion de destination](destination-configuration/destination-delivery.md) : découvrez comment configurer l’emplacement exact des données exportées et la règle d’authentification utilisée à l’emplacement d’entrée des données.
-* [Configuration des métadonnées d’audience](destination-configuration/audience-metadata-configuration.md): Découvrez comment les métadonnées d’audience telles que les noms ou les identifiants d’audience doivent être partagées entre l’Experience Platform et votre destination.
+* [Configuration des métadonnées d’audience](destination-configuration/audience-metadata-configuration.md) : découvrez comment les métadonnées d’audience, telles que les noms d’audience ou les identifiants, doivent être partagées entre Experience Platform et la destination.
 * [Politique d’agrégation](destination-configuration/aggregation-policy.md) : découvrez comment configurer une politique d’agrégation pour déterminer comment les requêtes HTTP vers la destination doivent être groupées et regroupées par lot.
 * [Configuration par lots](destination-configuration/batch-configuration.md) : configurez divers paramètres de dénomination de fichiers et de planification de l’exportation disponibles pour les utilisateurs au moment de la connexion à la destination dans l’interface utilisateur d’Experience Platform.
 * [Qualifications des profils historiques](destination-configuration/historical-profile-qualifications.md) : découvrez les qualifications de profil historiques prises en charge par les destinations créées avec Destination SDK.
 
 ## Configuration des métadonnées d’audience {#audience-metadata-configuration}
 
-Ce composant vous permet de configurer la manière dont les audiences sont créées, mises à jour ou supprimées par programmation dans votre destination. Pour les destinations basées sur des fichiers, il vous permet de configurer une notification chaque fois que les fichiers sont correctement diffusés vers la destination. Vous pouvez configurer cette fonctionnalité via le [point d’entrée audience-modèles](../metadata-api/create-audience-template.md).
+Ce composant vous permet de configurer la manière dont les audiences sont créées, mises à jour ou supprimées par programmation dans la destination. Pour les destinations basées sur des fichiers, il vous permet de configurer une notification chaque fois que les fichiers sont correctement diffusés vers la destination. Vous pouvez configurer cette fonctionnalité via le [point d’entrée audience-modèles](../metadata-api/create-audience-template.md).
 
 ## Étapes suivantes {#next-steps}
 
