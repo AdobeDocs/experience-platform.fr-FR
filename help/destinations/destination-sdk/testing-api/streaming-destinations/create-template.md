@@ -3,9 +3,9 @@ description: Découvrez comment utiliser l’API de test de destination pour tes
 title: Création et test d’un modèle de transformation de message
 exl-id: 15e7f436-4d33-4172-bd14-ad8dfbd5e4a8
 source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '950'
-ht-degree: 90%
+ht-degree: 100%
 
 ---
 
@@ -24,7 +24,7 @@ L’illustration ci-dessous montre comment la création et le test d’un modèl
 
 ## Pourquoi créer et tester un modèle de transformation de messages {#why-create-message-transformation-template}
 
-L’une des premières étapes de la création de votre destination dans Destination SDK consiste à réfléchir à la manière dont le format de données pour l’appartenance à une audience, les identités et les attributs de profil est transformé lors de l’exportation de Adobe Experience Platform vers votre destination. Pour plus d’informations sur la transformation entre le schéma XDM d’Adobe et votre schéma de destination, consultez le [Document du format du message](../../functionality/destination-server/message-format.md#using-templating).
+L’une des premières étapes de la création de la destination dans Destination SDK consiste à réfléchir à la manière dont le format de données pour l’appartenance à une audience, les identités et les attributs de profil est transformé au moment de l’exportation d’Adobe Experience Platform vers la destination. Pour plus d’informations sur la transformation entre le schéma XDM d’Adobe et votre schéma de destination, consultez le [Document du format du message](../../functionality/destination-server/message-format.md#using-templating).
 
 Pour que la transformation réussisse, vous devez fournir un modèle de transformation semblable au modèle suivant : [Création d’un modèle qui envoie des segments, des identités et des attributs de profil](../../functionality/destination-server/message-format.md#segments-identities-attributes).
 
@@ -38,8 +38,8 @@ Adobe fournit un outil de modèle qui vous permet de créer et de tester le mod�
 Avant de pouvoir créer le modèle, procédez comme suit :
 
 1. [Créez une configuration de serveur de destination](../../authoring-api/destination-server/create-destination-server.md). Le modèle que vous allez générer est différent en fonction de la valeur fournie pour le paramètre `maxUsersPerRequest`.
-   * Utilisation `maxUsersPerRequest=1` si vous souhaitez qu’un appel API à votre destination inclue un seul profil, ainsi que ses qualifications d’audience, ses identités et ses attributs de profil,
-   * Utilisation `maxUsersPerRequest` avec une valeur supérieure à un si vous souhaitez qu’un appel API à votre destination inclue plusieurs profils, ainsi que leurs qualifications d’audience, leurs identités et leurs attributs de profil.
+   * Utilisez `maxUsersPerRequest=1` si vous souhaitez inclure un seul profil dans un appel API à la destination, ainsi que ses qualifications d’audience, ses identités et ses attributs de profil.
+   * Utilisez `maxUsersPerRequest` avec une valeur supérieure à un si vous souhaitez inclure plusieurs profils dans un appel API à la destination, ainsi que leurs qualifications d’audience, leurs identités et leurs attributs de profil.
 2. [Créez une configuration de destination](../../authoring-api/destination-configuration/create-destination-configuration.md) et ajoutez l’identifiant de la configuration du serveur de destination dans `destinationDelivery.destinationServerId`.
 3. [Obtenez l’identifiant de la configuration de destination](../../authoring-api/destination-configuration/retrieve-destination-configuration.md) que vous venez de créer, afin de l’utiliser dans l’outil de création de modèles.
 4. Identifiez [les fonctions et filtres que vous pouvez utiliser](../../functionality/destination-server/supported-functions.md) dans le modèle de transformation des messages.
