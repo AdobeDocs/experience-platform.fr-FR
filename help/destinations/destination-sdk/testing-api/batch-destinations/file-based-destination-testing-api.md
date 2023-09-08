@@ -3,9 +3,9 @@ description: Cette page explique comment utiliser le point d’entrée /testing/
 title: Test de la destination basée sur des fichiers avec des profils types
 exl-id: 75f76aec-245b-4f07-8871-c64a710db9f6
 source-git-commit: 9ac6b075af3805da4dad0dd6442d026ae96ab5c7
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '827'
-ht-degree: 85%
+ht-degree: 100%
 
 ---
 
@@ -111,7 +111,7 @@ Une réponse réussie renvoie le statut HTTP 200 avec la payload de la réponse
 
 | Propriété | Description |
 | -------- | ----------- |
-| `activations` | Renvoie l’ID d’audience et l’ID d’exécution de flux pour chaque audience activée. Le nombre d’entrées d’activation (et de fichiers générés associés) est égal au nombre d’audiences mappées sur l’instance de destination. <br><br> Exemple : Si vous avez mappé deux audiences à l’instance de destination, la variable `activations` contient deux entrées. Chaque audience activée correspond à un fichier exporté. |
+| `activations` | Renvoie l’identifiant de l’audience et l’identifiant de l’exécution du flux pour chaque audience activée. Le nombre d’entrées d’activation (et de fichiers générés associés) est égal au nombre d’audiences mappées sur l’instance de destination. <br><br> Exemple : si vous avez mappé deux audiences sur l’instance de destination, le tableau `activations` contient deux entrées. Chaque audience activée correspond à un fichier exporté. |
 | `results` | Renvoie l’identifiant de l’instance de destination et les identifiants d’exécution de flux que vous pouvez utiliser pour appeler l’[API des résultats](file-based-destination-results-api.md) pour tester davantage l’intégration. |
 | `inputProfiles` | Renvoie les profils types générés automatiquement par l’API. |
 
@@ -232,7 +232,7 @@ Une réponse réussie renvoie le statut HTTP 200 avec la payload de la réponse
 
 | Propriété | Description |
 | -------- | ----------- |
-| `activations` | Renvoie l’ID d’audience et l’ID d’exécution de flux pour chaque audience activée. Le nombre d’entrées d’activation (et de fichiers générés associés) est égal au nombre d’audiences mappées sur l’instance de destination. <br><br> Exemple : Si vous avez mappé deux audiences à l’instance de destination, la variable `activations` contient deux entrées. Chaque audience activée correspond à un fichier exporté. |
+| `activations` | Renvoie l’identifiant de l’audience et l’identifiant de l’exécution du flux pour chaque audience activée. Le nombre d’entrées d’activation (et de fichiers générés associés) est égal au nombre d’audiences mappées sur l’instance de destination. <br><br> Exemple : si vous avez mappé deux audiences à l’instance de destination, le tableau `activations` contient deux entrées. Chaque audience activée correspond à un fichier exporté. |
 | `results` | Renvoie l’identifiant de l’instance de destination et les identifiants d’exécution de flux que vous pouvez utiliser pour appeler l’[API des résultats](file-based-destination-results-api.md) pour tester davantage l’intégration. |
 | `inputProfiles` | Renvoie les profils types personnalisés que vous avez transmis dans la requête API. |
 
