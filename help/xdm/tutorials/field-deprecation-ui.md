@@ -3,9 +3,9 @@ title: Rendre obsolète un champ XDM dans l’IU
 description: Découvrez comment rendre obsolètes les champs de modèle de données d’expérience (XDM) à l’aide de l’éditeur de schémas dans Experience Platform.
 exl-id: f4c5f58a-5190-47d7-8bfc-b33ed238bf25
 source-git-commit: 4fa98df9dcc296ba7cb141cb22df116524a0eb0c
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '699'
-ht-degree: 84%
+ht-degree: 100%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 84%
 
 Le modèle de données d’expérience (XDM) vous offre la possibilité de gérer votre modèle de données en fonction des besoins de votre entreprise en rendant obsolètes les champs de schéma une fois les données ingérées. Les champs superflus peuvent être rendus obsolètes. Ils seront alors supprimés de l’affichage de l’IU et masqués des IU en aval. Pour votre confort, une case à cocher dans l’éditeur de schémas permet d’afficher les champs obsolètes et, le cas échéant, d’annuler l’obsolescence.
 
-Comme les champs obsolètes sont masqués de l’interface utilisateur par défaut, cela simplifie votre schéma dans l’éditeur de schémas et empêche l’ajout de champs indésirables aux dépendances en aval telles que le créateur de segments, le concepteur de parcours, etc. L’obsolescence des champs est également rétrocompatible. D’autres systèmes qui utilisent des champs obsolètes, tels que les audiences et les requêtes, continueront à les évaluer comme prévu. Si un champ obsolète est utilisé dans une audience existante, il est traité normalement, ce qui signifie que le champ s’affiche comme prévu dans le canevas du créateur de segments ou qu’il est évalué en fonction des données disponibles dans les champs obsolètes. Il s’agit d’un changement sans rupture qui n’a aucune incidence négative sur les flux de données existants.
+Comme les champs obsolètes sont masqués de l’IU par défaut, cela simplifie votre schéma dans l’éditeur de schémas et empêche l’ajout de champs non souhaités aux dépendances en aval telles que le créateur de segments, le concepteur de parcours, etc. L’obsolescence des champs est également rétrocompatible. Les autres systèmes qui utilisent les champs obsolètes, tels que les audiences et les requêtes, continueront à les évaluer comme prévu. Un champ obsolète utilisé dans une audience existante garde toute sa validité : le champ s’affiche comme prévu dans la zone de travail du créateur de segments et il est évalué en fonction des données disponibles dans les champs obsolètes. Il s’agit d’un changement sans rupture qui n’a aucune incidence négative sur les flux de données existants.
 
 >[!NOTE]
 >
