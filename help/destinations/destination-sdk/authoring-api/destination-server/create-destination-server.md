@@ -2,9 +2,9 @@
 description: Cette page illustre comment l’appel API est utilisé pour créer un serveur de destination avec Adobe Experience Platform Destination SDK.
 title: Création d’une configuration de serveur de destination
 source-git-commit: ca4fb2dce097197aa1a97e0716e6294546bfee38
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1696'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
@@ -46,9 +46,9 @@ POST /authoring/destination-servers
 
 Selon le type de destination que vous créez, vous devez configurer un type de serveur de destination légèrement différent.
 
-### Création de serveurs de destination de schéma statique {#static-destination-servers}
+### Créer des serveurs de destination de schéma statique {#static-destination-servers}
 
-Consultez les onglets ci-dessous des exemples de serveurs de destination pour les destinations qui utilisent [schémas statiques](../../functionality/destination-configuration/schema-configuration.md#attributes-schema).
+Les onglets ci-dessous proposent des exemples de serveurs de destination pour les destinations qui utilisent des [schémas statiques](../../functionality/destination-configuration/schema-configuration.md#attributes-schema).
 
 Les exemples de payloads ci-dessous incluent tous les paramètres pris en charge par chaque type de serveur de destination. Il n’est pas nécessaire d’inclure tous les paramètres dans votre requête. La payload peut être personnalisée en fonction de vos besoins.
 
@@ -776,11 +776,11 @@ Une réponse réussie renvoie le statut HTTP 200 avec les détails de la config
 
 >[!ENDTABS]
 
-### Création de serveurs de destination de schéma dynamique {#dynamic-schema-servers}
+### Créer des serveurs de destination de schéma dynamique {#dynamic-schema-servers}
 
 Les schémas dynamiques vous permettent de récupérer dynamiquement les attributs cibles pris en charge et de générer des schémas basés sur votre propre API. Vous devez configurer un serveur de destination pour les schémas dynamiques avant de pouvoir configurer le schéma.
 
-Voir dans l’onglet ci-dessous un exemple de serveur de destination pour les destinations qui utilisent [schémas dynamiques](../../functionality/destination-configuration/schema-configuration.md#dynamic-schema-configuration).
+Consultez dans l’onglet ci-dessous un exemple de serveur de destination pour les destinations qui utilisent les [schémas dynamiques](../../functionality/destination-configuration/schema-configuration.md#dynamic-schema-configuration).
 
 L’exemple de payload ci-dessous inclut tous les paramètres requis pour un serveur de schéma dynamique.
 
