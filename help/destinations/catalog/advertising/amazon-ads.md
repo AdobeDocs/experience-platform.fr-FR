@@ -4,9 +4,9 @@ description: Amazon Ads offre toute une gamme de solutions pour vous aider à a
 last-substantial-update: 2023-03-29T00:00:00Z
 exl-id: 724f3d32-65e0-4612-a882-33333e07c5af
 source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1404'
-ht-degree: 91%
+ht-degree: 100%
 
 ---
 
@@ -20,7 +20,7 @@ L’intégration d’Amazon Ads à Adobe Experience Platform offre une intég
 
 >[!IMPORTANT]
 >
->Cette page de documentation et de connecteur de destination est créée et conservée par *Publicités Amazon* l&#39;équipe. Il s’agit actuellement d’un produit en version Beta qui peut faire l’objet de modifications. Pour toute demande ou information, contactez directement l’équipe d’Amazon Ads à l’adresse *`amc-support@amazon.com`.*
+>L’équipe *Amazon Ads* est responsable de la création et de la maintenance du connecteur de destination et de la page de documentation. Il s’agit actuellement d’un produit en version Beta qui peut faire l’objet de modifications. Pour toute demande ou information, contactez directement l’équipe d’Amazon Ads à l’adresse *`amc-support@amazon.com`.*
 
 ## Cas d’utilisation {#use-cases}
 
@@ -28,7 +28,7 @@ Pour découvrir les avantages de la destination *Amazon Ads* et son utilisation
 
 ### Activation et ciblage {#activation-and-targeting}
 
-Cette intégration avec Amazon DSP permet aux annonceurs d’Amazon Ads de transmettre les audiences CDP des annonceurs de Adobe Experience Platform à Amazon DSP afin de créer des audiences d’annonceurs pour le ciblage publicitaire. Configurez Amazon DSP pour effectuer un ciblage positif ou négatif (suppression) des audiences.
+Cette intégration avec Amazon DSP permet aux annonceurs d’Amazon Ads de transmettre les audiences CDP des annonceurs d’Adobe Experience Platform à Amazon DSP afin de créer des audiences d’annonceurs pour le ciblage publicitaire. Configurez Amazon DSP pour effectuer un ciblage positif ou négatif (suppression) des audiences.
 
 ## Conditions préalables {#prerequisites}
 
@@ -53,8 +53,8 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 | Élément | Type | Notes |
 ---------|----------|---------|
-| Type d’exportation | **[!UICONTROL Exportation de l’audience]** | Vous exportez tous les membres d’une audience avec les identifiants (nom, numéro de téléphone ou autres) utilisés dans la variable *Publicités Amazon* destination. |
-| Fréquence des exportations | **[!UICONTROL Diffusion en continu]** | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu&#39;un profil est mis à jour en Experience Platform en fonction de l&#39;évaluation de l&#39;audience, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
+| Type d’exportation | **[!UICONTROL Exportation d’audiences]** | Vous exportez tous les membres d’une audience ainsi que les identifiants (nom, numéro de téléphone ou autres) utilisés dans la destination *Amazon Ads*. |
+| Fréquence des exportations | **[!UICONTROL Diffusion en continu]** | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation des audiences, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -98,13 +98,13 @@ Vous pouvez activer les alertes pour recevoir des notifications sur le statut de
 
 Lorsque vous avez terminé de renseigner les détails sur votre connexion de destination, sélectionnez **[!UICONTROL Suivant]**.
 
-## Activer les audiences vers cette destination {#activate}
+## Activer des audiences vers cette destination {#activate}
 
 >[!IMPORTANT]
 > 
 >Pour activer les données, vous avez besoin des [autorisations de contrôle d’accès](/help/access-control/home.md#permissions) pour les fonctions **[!UICONTROL Gérer les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]**, et **[!UICONTROL Afficher les segments]**. Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
-Lecture [Activation des profils et des audiences vers les destinations d’exportation d’audiences par flux](/help/destinations/ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
+Consultez la section [Activer les profils et les audiences vers les destinations d’exportation d’audiences en flux continu](/help/destinations/ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
 
 ### Mapper les attributs et les identités {#map}
 
