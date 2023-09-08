@@ -4,9 +4,9 @@ title: Vue d’ensemble du profil client en temps réel
 description: Le profil client en temps réel fusionne des données provenant de diverses sources et permet d’accéder à ces données sous la forme de profils clients individuels et d’événements de séries temporelles associés. Cette fonctionnalité permet aux spécialistes marketing d’offrir à leur audience des expériences coordonnées, cohérentes et pertinentes sur plusieurs canaux.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
 source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1990'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -26,7 +26,7 @@ Le [!DNL Real-Time Customer Profile] fusionne les données de divers systèmes d
 
 ### Composition de l’entité de profil
 
-Un profil client en temps réel est composé d’une entité principale, appelée l’**entité principale**, et de diverses entités annexes. Dans le contexte de l’Experience Platform, l’entité Principale est généralement une **entité de profil**, qui est composé des caractéristiques, des comportements et des appartenances à l’audience d’une personne individuelle. D’autres entités permettent au moteur de segmentation d’utiliser des données en dehors de l’entité principale du profil, et incluent les éléments suivants :
+Un profil client en temps réel est composé d’une entité principale, appelée l’**entité principale**, et de diverses entités annexes. Dans le contexte d’Experience Platform, l’entité principale est généralement une **entité de profil**, qui est composée des caractéristiques, des comportements et des appartenances à une audience d’une personne individuelle. D’autres entités permettent au moteur de segmentation d’utiliser des données en dehors de l’entité principale du profil, et incluent les éléments suivants :
 
 - **Entité dimensionnelle** : l’entité utilisée pour simplifier le processus de modélisation des données pour les informations partagées entre les événements ou les enregistrements de profil. On parle également d’entité de recherche ou d’entité de classification.
 - **Entité B2B** : entités qui décrivent la relation du profil avec les comptes et opportunités business-to-business.
@@ -100,11 +100,11 @@ Computed attributes are functions used to aggregate event-level data into profil
 
 ## Profils et audiences
 
-Le [!DNL Segmentation Service] d’Adobe Experience Platform fournit les audiences nécessaires à l’optimisation de l’expérience de chaque client. Lorsqu’une audience est créée, l’identifiant de cette audience est ajouté à la liste des appartenances à l’audience pour tous les profils admissibles. Les règles de segmentation sont créées et appliquées aux données du [!DNL Real-Time Customer Profile] à l’aide des API RESTful et de l’interface utilisateur du créateur de segments. Pour en savoir plus sur la segmentation, commencez pas lire la [Présentation de Segmentation Service](../segmentation/home.md).
+Le [!DNL Segmentation Service] d’Adobe Experience Platform fournit les audiences nécessaires à l’optimisation de l’expérience de chaque client et cliente. Lorsqu’une audience est créée, l’identifiant de cette audience est ajouté à la liste d’appartenance à l’audience pour tous les profils éligibles. Les règles de segmentation sont créées et appliquées aux données du [!DNL Real-Time Customer Profile] à l’aide des API RESTful et de l’interface utilisateur du créateur de segments. Pour en savoir plus sur la segmentation, commencez pas lire la [Présentation de Segmentation Service](../segmentation/home.md).
 
 ### Ingestion par flux et segmentation par flux
 
-L’entrée en temps réel est possible grâce à un processus appelé ingestion par flux. Lorsque les données de profil et de série temporelle sont ingérées, [!DNL Real-Time Customer Profile] décide automatiquement d’inclure ou d’exclure ces données des audiences par le biais d’un processus continu appelé segmentation par flux, avant de les fusionner avec les données existantes et de mettre à jour la vue d’union. Par conséquent, vous pouvez instantanément effectuer des calculs et prendre des décisions pour offrir aux clients de meilleures expériences personnalisées lorsqu’ils interagissent avec votre marque. Lors de l’ingestion, les données sont également soumises à un processus de validation pour s’assurer qu’elles sont correctement ingérées et conformes au schéma sur lequel le jeu de données est basé. Pour plus d’informations sur la validation effectuée lors de l’ingestion, commencez par lire la [présentation de la qualité d’ingestion des données](../ingestion/quality/overview.md).
+L’entrée en temps réel est possible grâce à un processus appelé ingestion par flux. À mesure que les données de profil et de série temporelle sont ingérées, le [!DNL Real-Time Customer Profile] décide automatiquement d’inclure ou d’exclure ces données des audiences par le biais d’un processus continu appelé la segmentation par flux, avant de les fusionner avec les données existantes et de mettre à jour la vue d’union. Par conséquent, vous pouvez instantanément effectuer des calculs et prendre des décisions pour offrir aux clients de meilleures expériences personnalisées lorsqu’ils interagissent avec votre marque. Lors de l’ingestion, les données sont également soumises à un processus de validation pour s’assurer qu’elles sont correctement ingérées et conformes au schéma sur lequel le jeu de données est basé. Pour plus d’informations sur la validation effectuée lors de l’ingestion, commencez par lire la [présentation de la qualité d’ingestion des données](../ingestion/quality/overview.md).
 
 ## Projections de périphérie
 
