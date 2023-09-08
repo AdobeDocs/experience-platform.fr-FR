@@ -2,9 +2,9 @@
 description: Utilisez les modèles de métadonnées d’audience pour créer, mettre à jour ou supprimer des audiences par programmation dans votre destination. Adobe fournit un modèle de métadonnées d’audience extensible que vous pouvez configurer en fonction des spécifications de votre API marketing. Une fois le modèle défini, testé et envoyé, il sera utilisé par Adobe pour structurer les appels API vers votre destination.
 title: Gérer les métadonnées d’audience
 source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1037'
-ht-degree: 72%
+ht-degree: 100%
 
 ---
 
@@ -23,23 +23,23 @@ Selon la configuration de votre API, vous devrez peut-être utiliser le point d�
 
 ## Cas d’utilisation pris en charge par la gestion des métadonnées d’audience {#use-cases}
 
-Avec la prise en charge des métadonnées d’audience dans Destination SDK, lorsque vous configurez votre destination Experience Platform, vous pouvez donner aux utilisateurs de Platform l’une des options suivantes lorsqu’ils mappent et activent des audiences sur votre destination. Vous pouvez contrôler les options disponibles pour l’utilisateur via les paramètres de la section [Configuration des métadonnées d’audience](../functionality/destination-configuration/audience-metadata-configuration.md) de la configuration de destination.
+Grâce à la prise en charge des métadonnées d’audience dans Destination SDK, lors de la configuration de votre destination Experience Platform, vous pouvez proposer aux utilisateurs et utilisatrices de Platform de choisir entre plusieurs options lorsqu’ils mappent et activent des audiences vers votre destination. Vous pouvez contrôler les options disponibles pour l’utilisateur via les paramètres de la section [Configuration des métadonnées d’audience](../functionality/destination-configuration/audience-metadata-configuration.md) de la configuration de destination.
 
-### Cas d’utilisation 1 : vous disposez d’une API tierce et les utilisateurs n’ont pas besoin de saisir les identifiants de mappage.
+### Cas d’utilisation 1 : vous disposez d’une API tierce et les utilisateurs et utilisatrices n’ont pas besoin de saisir les identifiants de mappage
 
-Si vous disposez d’un point de terminaison API pour créer/mettre à jour/supprimer des audiences ou des audiences, vous pouvez utiliser des modèles de métadonnées d’audience pour configurer la Destination SDK afin qu’elle corresponde aux spécifications de votre point de terminaison de création/mise à jour/suppression d’audience. Experience Platform peut par programmation créer, mettre à jour ou supprimer des audiences et resynchroniser les métadonnées dans Experience Platform.
+Si vous disposez d’un point d’entrée de l’API pour créer/mettre à jour/supprimer des audiences, vous pouvez utiliser des modèles de métadonnées d’audience pour configurer Destination SDK afin qu’il corresponde aux spécifications de votre point d’entrée de création/mise à jour/suppression d’audiences. Experience Platform peut créer/mettre à jour/supprimer des audiences par programmation et synchroniser les métadonnées avec Experience Platform.
 
-Lors de l’activation des audiences vers votre destination dans l’interface utilisateur de l’Experience Platform, les utilisateurs n’ont pas besoin de remplir manuellement un champ ID de mappage d’audience dans le workflow d’activation.
+Lors de l’activation d’audiences vers votre destination dans l’interface utilisateur (IU) dʼExperience Platform, les personnes n’ont pas besoin de remplir manuellement un champ d’identifiant de mappage d’audiences dans le workflow d’activation.
 
-### Cas d’utilisation 2 - Les utilisateurs doivent d’abord créer une audience dans votre destination et doivent saisir manuellement l’ID de mappage
+### Cas d’utilisation 2 : les personnes doivent d’abord créer une audience dans votre destination et saisir manuellement l’identifiant de mappage
 
-Si des audiences et d’autres métadonnées doivent être créées manuellement par des partenaires ou des utilisateurs dans votre destination, les utilisateurs doivent renseigner manuellement le champ ID de mappage d’audience dans le workflow d’activation pour synchroniser les métadonnées d’audience entre votre destination et votre Experience Platform.
+Si des audiences et d’autres métadonnées doivent être créées manuellement par des partenaires ou des personnes dans votre destination, les personnes doivent renseigner manuellement le champ identifiant de mappage d’audiences dans le workflow d’activation pour synchroniser les métadonnées d’audiences entre votre destination et Experience Platform.
 
 ![Identifiant de mappage d’entrée](../assets/functionality/input-mapping-id.png)
 
-### Cas d’utilisation 3 - Votre destination accepte l’ID d’audience Experience Platform, les utilisateurs n’ont pas besoin de saisir manuellement l’ID de mappage
+### Cas d’utilisation 3 : votre destination accepte l’identifiant d’audience Experience Platform et les personnes n’ont pas besoin de saisir manuellement l’identifiant de mappage
 
-Si votre système de destination accepte l’ID d’audience Experience Platform, vous pouvez le configurer dans votre modèle de métadonnées d’audience. Les utilisateurs n’ont pas à renseigner d’ID de mappage d’audience lors de l’activation d’un segment.
+Si votre système de destination accepte l’identifiant de l’audience Experience Platform, vous pouvez le configurer dans votre modèle de métadonnées d’audience. Les personnes n’ont pas à renseigner d’identifiant de mappage d’audience lors de l’activation d’un segment.
 
 ## Modèle d’audience générique et extensible {#generic-and-extensible}
 
@@ -525,13 +525,13 @@ Recherchez des descriptions de tous les paramètres du modèle dans la référen
 
 ## Macros utilisées dans les modèles de métadonnées d’audience
 
-Pour transmettre des informations telles que les identifiants d’audience, les jetons d’accès, les messages d’erreur, etc. entre l’Experience Platform et votre API, les modèles d’audience incluent des macros que vous pouvez utiliser. Lisez ci-dessous une description des macros utilisées dans les trois exemples de configuration de cette page :
+Afin de transmettre des informations telles que des ID d’audience, des jetons d’accès, des messages d’erreur, etc. entre Experience Platform et votre API, les modèles d’audience incluent des macros que vous pouvez utiliser. Lisez ci-dessous une description des macros utilisées dans les trois exemples de configuration de cette page :
 
 | Macro | Description |
 |--- |--- |
-| `{{segment.alias}}` | Permet d&#39;accéder à l&#39;alias de l&#39;audience dans Experience Platform. |
-| `{{segment.name}}` | Permet d&#39;accéder au nom de l&#39;audience dans Experience Platform. |
-| `{{segment.id}}` | Permet d’accéder à l’ID d’audience dans Experience Platform. |
+| `{{segment.alias}}` | Permet d’accéder à l’alias de l’audience dans Experience Platform. |
+| `{{segment.name}}` | Permet d’accéder au nom de l’audience dans Experience Platform. |
+| `{{segment.id}}` | Permet d’accéder à l’ID de l’audience dans Experience Platform. |
 | `{{customerData.accountId}}` | Permet d’accéder au champ d’identifiant de compte que vous configurez dans la configuration de destination. |
 | `{{oauth2ServiceAccessToken}}` | Permet de générer dynamiquement un jeton d’accès en fonction de votre configuration OAuth 2. |
 | `{{authData.accessToken}}` | Permet de transmettre le jeton d’accès à votre point d’entrée d’API. Utilisez `{{authData.accessToken}}` si Experience Platform doit utiliser des jetons non expirants pour se connecter à votre destination, sinon utilisez `{{oauth2ServiceAccessToken}}` pour générer un jeton d’accès. |
