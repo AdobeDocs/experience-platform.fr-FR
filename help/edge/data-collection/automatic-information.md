@@ -1,151 +1,34 @@
 ---
-title: Informations collectées automatiquement dans le SDK Web de Adobe Experience Platform
-description: Une vue d’ensemble de chaque information collectée automatiquement par le SDK Adobe Experience Platform.
-keywords: collecter des informations;contexte;configurer;appareil;hauteur d’écran;orientation de l’écran;orientation de l’écran;largeur d’écran;largeur d’écran;environnement;hauteur de fenêtre d’affichage;hauteur de fenêtre d’affichage;largeur de fenêtre d’affichage;détails du navigateur;détails de la mise en oeuvre;détails de la mise en oeuvre;nom;version;contexte local;heure locale;fuseau horaire local Décalage du fuseau horaire;horodatage;web;url;webPageDetails;détails de la page web;webReferrer;référent web;paysage;portrait;
-exl-id: 901df786-df36-4986-9c74-a32d29c11b71
-source-git-commit: e3f507e010ea2a32042b53d46795d87e82e3fb72
+title: Informations collectées automatiquement
+description: Une vue d’ensemble des données que le SDK Web de Adobe Experience Platform collecte automatiquement.
+source-git-commit: 89b981104e3cbe597d1556484f4365866bf2a11d
 workflow-type: tm+mt
-source-wordcount: '511'
-ht-degree: 60%
+source-wordcount: '331'
+ht-degree: 32%
 
 ---
 
 # Informations collectées automatiquement
 
-Le SDK Web de Adobe Experience Platform collecte automatiquement un certain nombre d’informations sans configuration particulière. Toutefois, ces informations peuvent être désactivées si nécessaire à l’aide de l’option `context` de la commande `configure`. [Voir Configuration du SDK](../fundamentals/configuring-the-sdk.md). Vous trouverez ci-dessous la liste de ces informations. Le nom entre parenthèses indique la chaîne à utiliser lors de la configuration du contexte.
+Le SDK Web de Adobe Experience Platform collecte automatiquement certaines informations prêtes à l’emploi. Si votre entreprise ne souhaite pas collecter automatiquement ces données, vous pouvez utiliser la variable `context` dans le [`configure` command](../fundamentals/configuring-the-sdk.md).
 
-## Appareil (`device`)
+Mots-clés exclus de la variable `context` ne sont pas inclus dans la collecte de données. Si la variable `context` n’existe pas dans le tableau `configure` , toutes les données du tableau ci-dessous sont automatiquement collectées.
 
-Informations sur l’appareil. Elles ne comprennent pas les données qui peuvent être recherchées côté serveur à partir de la chaîne de l’agent utilisateur.
+| Nom | Description | `context` mot-clé de tableau | Chemin XDM | Exemple de valeur |
+| --- | --- | --- | --- | --- |
+| Hauteur d’écran | Hauteur de l’écran en pixels. | `device` | `events[].xdm.device.screenHeight` | `900` |
+| Largeur d’écran | Largeur de l’écran en pixels. | `device` | `events[].xdm.device.screenWidth` | `1440` |
+| Orientation de l’écran | Orientation de l’écran. | `device` | `events[].xdm.device.screenOrientation` | `landscape` ou `portrait`. |
+| Type d’environnement | Type d’environnement par lequel l’expérience est apparue. Le SDK Web de Adobe Experience Platform définit toujours ce champ sur `browser`. | `environment` | `events[].xdm.environment.type` | `browser` |
+| Hauteur de la fenêtre d’affichage | Hauteur de la zone de contenu du navigateur en pixels. | `environment` | `events[].xdm.environment.browserDetails.viewportHeight` | `679` |
+| Largeur de la fenêtre d’affichage | Largeur de la zone de contenu du navigateur en pixels. | `environment` | `events[].xdm.environment.browserDetails.viewportWidth` | `642` |
+| Nom du SDK | Identifiant du SDK. Ce champ utilise un URI pour améliorer l’unicité entre les identifiants fournis par différentes bibliothèques de logiciels. Lorsque la bibliothèque autonome est utilisée, la valeur est `https://ns.adobe.com/experience/alloy`. Lorsque la bibliothèque est utilisée dans le cadre de l’extension de balise, la valeur est `https://ns.adobe.com/experience/alloy+reactor`. | | `events[].xdm.implementationDetails.name` | `https://ns.adobe.com/experience/alloy` |
+| Version du SDK | Lorsque la bibliothèque autonome est utilisée, la valeur est la version de la bibliothèque. Lorsque la bibliothèque est utilisée dans le cadre de l’extension de balise, la valeur est une concaténation de la version de la bibliothèque et de la version de l’extension de balise. | | `events[].xdm.implementationDetails.version` | `2.1.0+2.1.3` |
+| Environnement | Environnement dans lequel les données ont été collectées. Le SDK Web de Adobe Experience Platform définit toujours ce champ sur `browser`. | | `events[].xdm.implementationDetails.environment` | `browser` |
+| Heure locale | Horodatage local pour l’utilisateur final au format ISO étendu simplifié [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6). | `placeContext` | `events[].xdm.placeContext.localTime` | `YYYY-08-07T15:47:17.129-07:00` |
+| Décalage du fuseau horaire local | Nombre de minutes pendant lesquelles l’utilisateur est décalé par rapport à GMT. | `placeContext` | `events[].xdm.placeContext.localTimezoneOffset` | `360` |
+| Date et heure | Horodatage UTC pour l’utilisateur final au format ISO étendu simplifié [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6). | Toujours inclus | `events[].xdm.timestamp` | `YYYY-08-07T22:47:17.129Z` |
+| URL de la page actuelle | URL de la page active. | `web` | `events[].xdm.web.webPageDetails.URL` | `https://example.com/index.html` |
+| URL du référent | URL de la page précédemment visitée. | `web` | `events[].xdm.web.webReferrer.URL` | `http://example.org/linkedpage.html` |
 
-### Hauteur d’écran
-
-| **Chemin d’accès dans la charge utile :** | **Exemple :** |
-| ---------------------------------- | ------------ |
-| `events[].xdm.device.screenHeight` | `900` |
-
-Hauteur de l’écran (en pixels).
-
-### Orientation de l’écran
-
-| **Chemin d’accès dans la charge utile :** | **Valeurs possibles :** |
-| --------------------------------------- | ------------------------- |
-| `events[].xdm.device.screenOrientation` | `landscape` ou `portrait` |
-
-Orientation de l’écran.
-
-### Largeur d’écran
-
-| **Chemin d’accès dans la charge utile :** | **Exemple :** |
-| --------------------------------- | ------------ |
-| `events[].xdm.device.screenWidth` | `1440` |
-
-Largeur de l’écran (en pixels).
-
-## Environnement (`environment`)
-
-Détails sur l’environnement du navigateur.
-
-### Type d’environnement
-
-Navigateur
-
-| **Chemin d’accès dans la charge utile :** | **Exemple :** |
-| ------------------------------- | ------------ |
-| `events[].xdm.environment.type` | `browser` |
-
-Type d’environnement par lequel l’expérience est apparue. Le SDK Web de Adobe Experience Platform définit toujours cette valeur sur `browser`.
-
-### Hauteur de la fenêtre d’affichage
-
-| **Chemin d’accès dans la charge utile :** | **Exemple :** |
-| -------------------------------------------------------- | ------------ |
-| `events[].xdm.environment.browserDetails.viewportHeight` | `679` |
-
-Hauteur de la zone de contenu du navigateur (en pixels).
-
-### Largeur de la fenêtre d’affichage
-
-| **Chemin d’accès dans la charge utile :** | **Exemple :** |
-| ------------------------------------------------------- | ------------ |
-| `events[].xdm.environment.browserDetails.viewportWidth` | `642` |
-
-Largeur de la zone de contenu du navigateur (en pixels).
-
-## Détails d’implémentation
-
-Informations sur le SDK utilisé pour collecter l’événement.
-
-### Nom
-
-| **Chemin d’accès dans la charge utile :** | **Exemple :** |
-| ----------------------------------------- | --------------------------------------- |
-| `events[].xdm.implementationDetails.name` | `https://ns.adobe.com/experience/alloy` |
-
-Identifiant du kit de développement logiciel (SDK).  Ce champ utilise un URI pour améliorer l’unicité entre les identifiants fournis par différentes bibliothèques de logiciels. Lorsque la bibliothèque autonome est utilisée, la valeur est `https://ns.adobe.com/experience/alloy`. Lorsque la bibliothèque est utilisée dans le cadre de l’extension de balise, la valeur est `https://ns.adobe.com/experience/alloy+reactor`.
-
-### Version
-
-| **Chemin d’accès dans la charge utile :** | **Exemple :** |
-| -------------------------------------------- | ------------ |
-| `events[].xdm.implementationDetails.version` | `0.11.0` |
-
-Lorsque la bibliothèque autonome est utilisée, la valeur est simplement la version de la bibliothèque. Lorsque la bibliothèque est utilisée dans le cadre de l’extension de balise, il s’agit de la version de la bibliothèque et de la version de l’extension de balise associée à un &quot;+&quot;. Par exemple, si la version de la bibliothèque est 2.1.0 et que la version de l’extension de balise est 2.1.3, la valeur est `2.1.0+2.1.3`.
-
-### Environnement {#environment}
-
-| **Chemin d’accès dans la charge utile :** | **Exemple :** |
-| ------------------------------------------------ | ------------ |
-| `events[].xdm.implementationDetails.environment` | `browser` |
-
-Environnement dans lequel les données ont été collectées. Cette valeur est toujours définie sur `browser`.
-
-## Contexte de l’emplacement (`placeContext`) {#place-context}
-
-Informations sur l’emplacement de l’utilisateur final.
-
-### Heure locale
-
-| **Chemin d’accès dans la charge utile :** | **Exemple :** |
-| ------------------------------------- | ------------------------------- |
-| `events[].xdm.placeContext.localTime` | `2019-08-07T15:47:17.129-07:00` |
-
-Horodatage local pour l’utilisateur final au format ISO étendu simplifié [ISO 8601](https://tools.ietf.org/html/rfc3339#section-5.6).
-
-### Décalage du fuseau horaire local
-
-| **Chemin d’accès dans la charge utile :** | **Exemple :** |
-| ----------------------------------------------- | ------------ |
-| `events[].xdm.placeContext.localTimezoneOffset` | `360` |
-
-Nombre de minutes pendant lesquelles l’utilisateur est décalé par rapport au temps universel.
-
-## Horodatage
-
-| **Chemin d’accès dans la charge utile :** | **Exemple :** |
-| ------------------------ | -------------------------- |
-| `events[].xdm.timestamp` | `2019-08-07T22:47:17.129Z` |
-
-Horodatage de l’événement.  Cette partie du contexte ne peut pas être supprimée.
-
-Horodatage UTC pour l’utilisateur final au format ISO étendu simplifié [ISO 8601](https://tools.ietf.org/html/rfc3339#section-5.6).
-
-## Détails Web (`web`)
-
-Informations sur la page sur laquelle se trouve l’utilisateur.
-
-### URL de la page actuelle
-
-| **Chemin d’accès dans la charge utile :** | **Exemple :** |
-| ------------------------------------- | ------------------------------------ |
-| `events[].xdm.web.webPageDetails.URL` | `https://somesite.com/somepage.html` |
-
-URL de la page active.
-
-### URL du référent
-
-| **Chemin d’accès dans la charge utile :** | **Exemple :** |
-| ---------------------------------- | ----------------------------------------- |
-| `events[].xdm.web.webReferrer.URL` | `http://somereferrer.com/linkedpage.html` |
-
-URL de la page précédemment visitée.
+{style="table-layout:auto"}

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Traitement du consentement dans Adobe Experience Platform
 description: Découvrez comment traiter les signaux de consentement des clients dans Adobe Experience Platform à l’aide de la norme Adobe 2.0.
 exl-id: cd76a3f6-ae55-4d75-9b30-900fadb4664f
-source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
+source-git-commit: 139d6a6632532b392fdf8d69c5c59d1fd779a6d1
 workflow-type: tm+mt
-source-wordcount: '1567'
+source-wordcount: '1568'
 ht-degree: 1%
 
 ---
@@ -26,11 +26,11 @@ Ce document fournit une vue d’ensemble de la configuration de vos opérations 
 Ce guide nécessite une compréhension pratique des différents services Experience Platform impliqués dans le traitement des données de consentement :
 
 * [Modèle de données d’expérience (XDM)](../../../../xdm/home.md) : framework normalisé selon lequel Experience Platform organise les données d’expérience client.
-* [Service Adobe Experience Platform Identity](../../../../identity-service/home.md): Résout le problème fondamental posé par la fragmentation des données d’expérience client en rapprochant les identités entre les appareils et les systèmes.
+* [Service Adobe Experience Platform Identity](../../../../identity-service/home.md): résout le problème fondamental posé par la fragmentation des données d’expérience client en rapprochant les identités entre les appareils et les systèmes.
 * [Profil client en temps réel](../../../../profile/home.md): Utilisations [!DNL Identity Service] fonctionnalités pour créer des profils client détaillés à partir de vos jeux de données en temps réel. Real-Time Customer Profile extrait les données du lac de données et conserve les profils clients dans sa propre banque de données distincte.
-* [SDK Web Adobe Experience Platform](../../../../edge/home.md): Bibliothèque JavaScript côté client qui vous permet d’intégrer divers services Platform à votre site web destiné aux clients.
-   * [Commandes de consentement du SDK](../../../../edge/consent/supporting-consent.md): Présentation du cas d’utilisation des commandes du SDK liées au consentement présentée dans ce guide.
-* [Adobe Experience Platform Segmentation Service](../../../../segmentation/home.md): Permet de diviser les données de Real-time Customer Profile en groupes d’individus partageant des caractéristiques similaires et réagissant de la même manière aux stratégies marketing.
+* [SDK Web Adobe Experience Platform](../../../../edge/home.md): une bibliothèque JavaScript côté client qui vous permet d’intégrer divers services Platform à votre site web destiné aux clients.
+   * [Commandes de consentement du SDK](../../../../edge/consent/supporting-consent.md): présentation du cas d’utilisation des commandes du SDK liées au consentement présentée dans ce guide.
+* [Adobe Experience Platform Segmentation Service](../../../../segmentation/home.md): vous permet de diviser les données de Real-time Customer Profile en groupes d’individus partageant des caractéristiques similaires et réagissant de la même manière aux stratégies marketing.
 
 ## Synthèse du flux de traitement du consentement {#summary}
 
@@ -55,7 +55,7 @@ Une fois le système configuré, le SDK Web Platform interprète la valeur de co
 
 ## Déterminer comment générer des données de consentement client dans votre CMP {#consent-data}
 
-Chaque système de CMP étant unique, vous devez déterminer la meilleure manière de permettre à vos clients de fournir un consentement lorsqu’ils interagissent avec votre service. Pour ce faire, utilisez généralement une boîte de dialogue de consentement de cookie, comme dans l’exemple suivant :
+Chaque système de CMP étant unique, vous devez déterminer la meilleure manière de permettre à vos clients de fournir un consentement lorsqu’ils interagissent avec votre service. Pour ce faire, utilisez une boîte de dialogue de consentement de cookie, comme dans l’exemple suivant :
 
 ![](../../../images/governance-privacy-security/consent/adobe/overview/consent-dialog.png)
 
@@ -65,7 +65,7 @@ Cette boîte de dialogue doit permettre au client d’activer ou de désactiver 
 
 Les données de consentement du client doivent être envoyées à un [!DNL Profile]Jeu de données activé dont le schéma contient des champs de consentement. Ces champs doivent être inclus dans le même schéma et jeu de données que celui que vous utilisez pour capturer des informations d’attributs sur des clients individuels.
 
-Reportez-vous au tutoriel sur [configuration d’un jeu de données pour capturer des données de consentement](./dataset.md) pour obtenir des instructions détaillées sur la manière d’ajouter ces champs obligatoires à un [!DNL Profile]Jeu de données activé avant de poursuivre avec ce guide.
+Consultez le tutoriel sur [configuration d’un jeu de données pour capturer des données de consentement](./dataset.md) pour obtenir des instructions détaillées sur la manière d’ajouter ces champs obligatoires à un [!DNL Profile]Jeu de données activé avant de poursuivre avec ce guide.
 
 ## Mettre à jour [!DNL Profile] stratégies de fusion pour inclure des données de consentement {#merge-policies}
 
@@ -93,13 +93,13 @@ Une fois que vous avez configuré votre CMP pour écouter les événements de mo
 
 Si des préférences de consentement du client sont requises dans votre application mobile, vous pouvez intégrer le SDK Mobile Experience Platform pour récupérer et mettre à jour les paramètres de consentement, en les envoyant à Platform chaque fois que l’API de consentement est appelée.
 
-Reportez-vous à la documentation du SDK Mobile pour [configuration de l’extension mobile Consent](https://aep-sdks.gitbook.io/docs/foundation-extensions/consent-for-edge-network) et [utilisation de l’API de consentement](https://aep-sdks.gitbook.io/docs/foundation-extensions/consent-for-edge-network/api-reference). Pour plus d’informations sur la gestion des problèmes de confidentialité à l’aide du SDK Mobile, reportez-vous à la section . [Confidentialité et RGPD](https://aep-sdks.gitbook.io/docs/resources/privacy-and-gdpr).
+Reportez-vous à la documentation du SDK Mobile pour [configuration de l’extension mobile Consent](https://developer.adobe.com/client-sdks/documentation/consent-for-edge-network/) et [utilisation de l’API de consentement](https://developer.adobe.com/client-sdks/documentation/consent-for-edge-network/api-reference/). Pour plus d’informations sur la gestion des problèmes de confidentialité à l’aide du SDK Mobile, reportez-vous à la section . [Confidentialité et RGPD](https://developer.adobe.com/client-sdks/documentation/resources/privacy-and-gdpr/).
 
 ### Ingestion directe des données de consentement conformes à XDM {#batch}
 
 Vous pouvez ingérer des données de consentement conformes à XDM à partir d’un fichier CSV à l’aide de l’ingestion par lots. Cela peut s’avérer utile si vous disposez d’un journal des données de consentement collectées antérieurement qui doivent encore être intégrées à vos profils client.
 
-Suivez le tutoriel sur [mappage d’un fichier CSV à XDM](../../../../ingestion/tutorials/map-csv/overview.md) pour savoir comment convertir vos champs de données en XDM et les ingérer dans Platform. Lorsque vous sélectionnez la variable [!UICONTROL Destination] pour le mappage, veillez à sélectionner la variable **[!UICONTROL Utilisation d’un jeu de données existant]** et choisissez l’option [!DNL Profile]Jeu de données de consentement activé que vous avez créé précédemment.
+Suivez le tutoriel sur [mappage d’un fichier CSV à XDM](../../../../ingestion/tutorials/map-csv/overview.md) pour savoir comment convertir vos champs de données en XDM et les ingérer dans Platform. Lorsque vous sélectionnez la variable [!UICONTROL Destination] pour le mappage, veillez à sélectionner la variable **[!UICONTROL Utiliser un jeu de données existant]** et choisissez l’option [!DNL Profile]Jeu de données de consentement activé que vous avez créé précédemment.
 
 ## Tester votre mise en oeuvre {#test-implementation}
 

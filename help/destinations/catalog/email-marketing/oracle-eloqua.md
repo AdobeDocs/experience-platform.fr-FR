@@ -3,10 +3,10 @@ keywords: e-mail;e-mail;destinations d’e-mail;oracle eloqua;oracle
 title: Connexion Oracle Eloqua (Fichiers)
 description: Oracle Eloqua est une plateforme de logiciel en tant que service (SaaS, Software as a service) pour l’automatisation du marketing proposée par Oracle, qui vise à aider les spécialistes marketing et les entreprises B2B à gérer les campagnes marketing et la génération de pistes commerciales.
 exl-id: 6eaa79ff-8874-423b-bdff-aa04f6101a53
-source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
+source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
 workflow-type: tm+mt
-source-wordcount: '716'
-ht-degree: 54%
+source-wordcount: '695'
+ht-degree: 58%
 
 ---
 
@@ -18,15 +18,12 @@ Pour envoyer des données d’audience à [!DNL Oracle Eloqua], vous devez d’a
 
 ## Audiences prises en charge {#supported-audiences}
 
-Cette section décrit toutes les audiences que vous pouvez exporter vers cette destination.
+Cette section décrit le type d’audiences que vous pouvez exporter vers cette destination.
 
-Cette destination prend en charge l’activation de toutes les audiences générées par l’Experience Platform. [Segmentation Service](../../../segmentation/home.md).
-
-*En outre*, cette destination prend également en charge l’activation des audiences décrites dans le tableau ci-dessous.
-
-| Type d’audience | Description |
----------|----------|
-| Chargements personnalisés | Audiences [importé](../../../segmentation/ui/overview.md#import-audience) dans Experience Platform à partir de fichiers CSV. |
+| Origine de l’audience | Pris en charge | Description |
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ | Audiences générées par l’Experience Platform [Segmentation Service](../../../segmentation/home.md). |
+| Chargements personnalisés | ✓ | Audiences [importées](../../../segmentation/ui/overview.md#import-audience) dans Experience Platform à partir de fichiers CSV. |
 
 {style="table-layout:auto"}
 
@@ -51,7 +48,7 @@ Voir [LISTE AUTORISÉE d’adresses IP pour les destinations SFTP](../cloud-stor
 
 >[!IMPORTANT]
 > 
->Pour vous connecter à la destination, vous devez disposer de l’[autorisation de contrôle d’accès](/help/access-control/home.md#permissions) **[!UICONTROL Gérer les destinations]**. Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises
+>Pour vous connecter à la destination, vous devez disposer de l’[autorisation de contrôle d’accès](/help/access-control/home.md#permissions) **[!UICONTROL Gérer les destinations]**. Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises
 
 Pour vous connecter à cette destination, procédez comme décrit dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md).
 
@@ -95,7 +92,7 @@ Vous pouvez activer les alertes pour recevoir des notifications sur le statut de
 
 Lorsque vous avez terminé de renseigner les détails sur votre connexion de destination, sélectionnez **[!UICONTROL Suivant]**.
 
-## Activer les audiences vers cette destination {#activate}
+## Activer des audiences vers cette destination {#activate}
 
 >[!IMPORTANT]
 > 

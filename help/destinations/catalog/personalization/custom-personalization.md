@@ -3,10 +3,10 @@ keywords: personnalisation personnalisée;destination;destination personnalisée
 title: Connexion de personnalisation personnalisée
 description: Cette destination fournit une personnalisation externe, des systèmes de gestion de contenu, des serveurs de publicités et d’autres applications qui s’exécutent sur votre site pour récupérer les informations d’audience de Adobe Experience Platform. Cette destination fournit une personnalisation en temps réel basée sur l’appartenance à l’audience du profil utilisateur.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
+source-git-commit: 139d6a6632532b392fdf8d69c5c59d1fd779a6d1
 workflow-type: tm+mt
-source-wordcount: '935'
-ht-degree: 59%
+source-wordcount: '915'
+ht-degree: 65%
 
 ---
 
@@ -35,7 +35,7 @@ Cette destination permet de récupérer les informations sur l’audience de Ado
 
 ## Conditions préalables {#prerequisites}
 
-Cette intégration est optimisée par le [SDK web Adobe Experience Platform](../../../edge/home.md) ou le [SDK mobile Adobe Experience Platform](https://aep-sdks.gitbook.io/docs/). Pour utiliser cette destination, vous devez utiliser l’un de ces SDK.
+Cette intégration est optimisée par le [SDK web Adobe Experience Platform](../../../edge/home.md) ou le [SDK mobile Adobe Experience Platform](https://developer.adobe.com/client-sdks/documentation/). Pour utiliser cette destination, vous devez utiliser l’un de ces SDK.
 
 >[!IMPORTANT]
 >
@@ -43,15 +43,12 @@ Cette intégration est optimisée par le [SDK web Adobe Experience Platform](../
 
 ## Audiences prises en charge {#supported-audiences}
 
-Cette section décrit toutes les audiences que vous pouvez exporter vers cette destination.
+Cette section décrit le type d’audiences que vous pouvez exporter vers cette destination.
 
-Cette destination prend en charge l’activation de toutes les audiences générées par l’Experience Platform. [Segmentation Service](../../../segmentation/home.md).
-
-*En outre*, cette destination prend également en charge l’activation des audiences décrites dans le tableau ci-dessous.
-
-| Type d’audience | Description |
----------|----------|
-| Chargements personnalisés | Audiences [importé](../../../segmentation/ui/overview.md#import-audience) dans Experience Platform à partir de fichiers CSV. |
+| Origine de l’audience | Pris en charge | Description |
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ | Audiences générées par l’Experience Platform [Segmentation Service](../../../segmentation/home.md). |
+| Chargements personnalisés | ✓ | Audiences [importées](../../../segmentation/ui/overview.md#import-audience) dans Experience Platform à partir de fichiers CSV. |
 
 {style="table-layout:auto"}
 
@@ -60,7 +57,7 @@ Cette destination prend en charge l’activation de toutes les audiences génér
 | Élément | Type | Notes |
 ---------|----------|---------|
 | Type d’exportation | **[!DNL Profile request]** | Vous demandez toutes les audiences qui sont mappées dans la destination de personnalisation personnalisée pour un seul profil. Différentes destinations de personnalisation personnalisées peuvent être configurées pour différents [flux de données de collecte de données Adobe](../../../datastreams/overview.md). |
-| Fréquence des exportations | **[!UICONTROL Diffusion en continu]** | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu&#39;un profil est mis à jour en Experience Platform en fonction de l&#39;évaluation de l&#39;audience, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
+| Fréquence des exportations | **[!UICONTROL Diffusion en continu]** | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation des audiences, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
 
 ## Se connecter à la destination {#connect}
 
@@ -91,7 +88,7 @@ Vous pouvez activer les alertes pour recevoir des notifications sur le statut de
 
 Lorsque vous avez terminé de renseigner les détails sur votre connexion de destination, sélectionnez **[!UICONTROL Suivant]**.
 
-## Activer les audiences vers cette destination {#activate}
+## Activer des audiences vers cette destination {#activate}
 
 >[!IMPORTANT]
 > 

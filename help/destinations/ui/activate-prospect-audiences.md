@@ -1,11 +1,11 @@
 ---
-title: Activation des audiences de prospects vers les destinations
+title: Activer les audiences de prospects vers des destinations
 type: Tutorial
 description: Découvrez comment activer les audiences de prospects vers les destinations
-source-git-commit: 9dd305be4dcb45c290a2b8ee0476191949369adc
+source-git-commit: 384faa13154386ef2578da4c20ab47f171aefeda
 workflow-type: tm+mt
-source-wordcount: '619'
-ht-degree: 23%
+source-wordcount: '620'
+ht-degree: 28%
 
 ---
 
@@ -20,7 +20,7 @@ Cet article explique le workflow requis pour l’exportation [audiences prospect
 
 ## Destinations prises en charge {#supported-destinations}
 
-Accédez à **[!UICONTROL Connexions]** > **[!UICONTROL Destinations]**, puis sélectionnez l’onglet **[!UICONTROL Catalogue]**. Utilisez la variable **[!UICONTROL Types de données]** filtrer et sélectionner **[!UICONTROL Perspectives]** pour voir les destinations qui prennent en charge l’activation des audiences de prospects. Actuellement, l’exportation d’audiences de prospects est disponible uniquement pour le [[!DNL Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md#changelog) destination.
+Accédez à **[!UICONTROL Connexions]** > **[!UICONTROL Destinations]**, puis sélectionnez l’onglet **[!UICONTROL Catalogue]**. Utilisez la variable **[!UICONTROL Types de données]** filtrer et sélectionner **[!UICONTROL Perspectives]** pour voir les destinations qui prennent en charge l’activation des audiences de prospects. Actuellement, l’exportation d’audiences de prospects est disponible uniquement pour les destinations de stockage dans le cloud.
 
 ![Destinations qui prennent en charge les exportations de jeux de données](/help/destinations/assets/ui/activate-prospect-audiences/data-types-filter.png)
 
@@ -85,6 +85,6 @@ Note that we will need to add links to other destination types here as more dest
 
 Explorez d’autres cas d’utilisation activés grâce à la prise en charge des données des partenaires dans Real-Time CDP :
 
-* [Complétez les profils propriétaires avec les attributs des partenaires de données de confiance pour améliorer votre base de données, obtenir de nouvelles informations sur votre base de clientes et clients et optimiser l’audience.](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
-* Utilisation de la prise en charge de données tierces dans Real-Time CDP pour [développer votre base de profils avec des profils de prospect des partenaires de données et interagir avec eux pour acquérir ou atteindre de nouveaux clients ;](/help/rtcdp/partner-data/prospecting.md).
+* [Complétez les profils propriétaires avec les attributs des partenaires de données de confiance pour améliorer votre base de données, obtenir de nouvelles informations sur votre base de clientèle et optimiser l’audience.](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
+* Utilisez la prise en charge de données tierces dans Real-Time CDP pour [développer votre base de profils avec les profils de prospects des partenaires de données et interagissez avec eux pour acquérir ou atteindre une nouvelle clientèle](/help/rtcdp/partner-data/prospecting.md).
 * [Tirer parti de la reconnaissance assistée par les partenaires pour personnaliser les expériences sur site](/help/rtcdp/partner-data/onsite-personalization.md) pendant la visite sans que l’utilisateur s’authentifie ou n’ait un historique antérieur avec votre marque.

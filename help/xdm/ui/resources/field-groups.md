@@ -4,14 +4,19 @@ solution: Experience Platform
 title: Création et modification de groupes de champs de schéma dans l’interface utilisateur
 description: Découvrez comment créer et modifier des groupes de champs de schéma dans l’interface utilisateur de l’Experience Platform.
 exl-id: 928d70a6-0468-4fb7-a53a-6686ac77f2a3
-source-git-commit: 542ad49f475ac9586da506a8afa5408e83262121
+source-git-commit: 51ef116ad125b0d699bf4808e3d26d3b00b743e2
 workflow-type: tm+mt
-source-wordcount: '839'
-ht-degree: 0%
+source-wordcount: '901'
+ht-degree: 1%
 
 ---
 
-# Création et modification de groupes de champs de schéma dans l’interface utilisateur
+# Créer et modifier les groupes de champs de schéma dans l’interface utilisateur {#ui-create-and-edit}
+
+>[!CONTEXTUALHELP]
+>id="platform_schemas_fieldgroup_filter"
+>title="Filtre de groupe de champs standard ou personnalisé"
+>abstract="La liste des groupes de champs disponibles est préfiltrée en fonction de la manière dont ils ont été créés. Sélectionnez le bouton radio à choisir entre les options Standard et Personnalisé. L’option Standard affiche les entités créées par Adobe et l’option Personnaliser affiche les entités créées dans votre organisation. Consultez la documentation pour en savoir plus sur la création et la modification de groupes de champs."
 
 Dans le modèle de données d’expérience (XDM), les groupes de champs de schéma sont des composants réutilisables qui définissent un ou plusieurs champs qui implémentent certaines fonctions, telles que les détails personnels, les préférences de l’hôtel ou l’adresse. Les groupes de champs sont destinés à être inclus dans le cadre d’un schéma qui met en oeuvre une classe compatible.
 
@@ -21,13 +26,13 @@ Adobe Experience Platform fournit de nombreux groupes de champs standard qui cou
 
 ## Conditions préalables
 
-Ce guide nécessite une compréhension pratique du système XDM. Reportez-vous à la section [Présentation de XDM](../../home.md) pour une présentation du rôle de XDM dans l’écosystème Experience Platform, et de [principes de base de la composition des schémas](../../schema/composition.md) pour savoir comment les groupes de champs contribuent aux schémas XDM.
+Ce guide nécessite une compréhension pratique du système XDM. Voir [Présentation de XDM](../../home.md) pour une présentation du rôle de XDM dans l’écosystème Experience Platform, et la variable [principes de base de la composition des schémas](../../schema/composition.md) pour savoir comment les groupes de champs contribuent aux schémas XDM.
 
 Bien que ce guide ne soit pas obligatoire, il est recommandé de suivre également le tutoriel sur [composition d’un schéma dans l’interface utilisateur](../../tutorials/create-schema-ui.md) pour vous familiariser avec les différentes capacités de la fonction [!DNL Schema Editor].
 
 ## Créer un groupe de champs {#create}
 
-Pour créer un nouveau groupe de champs, vous devez d’abord sélectionner un schéma auquel le groupe de champs sera ajouté. Vous pouvez choisir de [créer un nouveau schéma](./schemas.md#create) ou [sélectionner un schéma existant à modifier ;](./schemas.md#edit).
+Pour créer un nouveau groupe de champs, vous devez d’abord sélectionner un schéma auquel le groupe de champs sera ajouté. Vous pouvez choisir de [créer un nouveau schéma ;](./schemas.md#create) ou [sélectionner un schéma existant à modifier ;](./schemas.md#edit).
 
 Une fois que le schéma est ouvert dans le [!DNL Schema Editor], sélectionnez **[!UICONTROL Ajouter]** en regard de [!UICONTROL Groupes de champs] dans le rail de gauche.
 
@@ -37,7 +42,7 @@ Dans la boîte de dialogue qui s’affiche, sélectionnez **[!UICONTROL Créer u
 
 ![](../../images/ui/resources/field-groups/create-field-group.png)
 
-Le [!DNL Schema Editor] réapparaît, avec le nouveau groupe de champs répertorié dans le rail de gauche. Puisqu’il s’agit d’un nouveau groupe de champs, il ne fournit actuellement aucun champ au schéma et le canevas reste donc inchangé. Vous pouvez maintenant commencer. [ajout de champs au groupe de champs](#add-fields).
+La variable [!DNL Schema Editor] réapparaît, avec le nouveau groupe de champs répertorié dans le rail de gauche. Puisqu’il s’agit d’un nouveau groupe de champs, il ne fournit actuellement aucun champ au schéma et le canevas reste donc inchangé. Vous pouvez maintenant commencer. [ajout de champs au groupe de champs](#add-fields).
 
 ![](../../images/ui/resources/field-groups/field-group-added.png)
 
@@ -49,7 +54,7 @@ Le [!DNL Schema Editor] réapparaît, avec le nouveau groupe de champs répertor
 >
 >Une fois qu’un groupe de champs personnalisé a été enregistré et utilisé dans un schéma pour l’ingestion de données, seules des modifications supplémentaires peuvent être apportées par la suite au groupe de champs. Voir [règles d’évolution des schémas](../../schema/composition.md#evolution) pour plus d’informations.
 
-Pour modifier un groupe de champs existant, vous devez d’abord ouvrir un schéma qui utilise le groupe de champs dans le [!DNL Schema Editor]. Vous pouvez [sélectionner un schéma existant à modifier ;](./schemas.md#edit), ou vous pouvez [créer un nouveau schéma](./schemas.md#create) et ajoutez le groupe de champs en question.
+Pour modifier un groupe de champs existant, vous devez d’abord ouvrir un schéma qui utilise le groupe de champs dans le [!DNL Schema Editor]. Vous pouvez [sélectionner un schéma existant à modifier ;](./schemas.md#edit), ou vous pouvez [créer un nouveau schéma ;](./schemas.md#create) et ajoutez le groupe de champs en question.
 
 Une fois le schéma ouvert dans l’éditeur, vous pouvez commencer. [ajout de champs au groupe de champs](#add-fields).
 

@@ -1,11 +1,11 @@
 ---
-title: Connexion à des audiences personnalisées twitter
+title: Connexion à des audiences personnalisées par twitter
 description: Ciblez vos abonnés et clients existants sur Twitter et créez des campagnes de remarketing pertinentes en activant vos audiences créées dans Adobe Experience Platform
 exl-id: fd244e58-cd94-4de7-81e4-c321eb673b65
-source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
+source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
 workflow-type: tm+mt
-source-wordcount: '861'
-ht-degree: 51%
+source-wordcount: '840'
+ht-degree: 60%
 
 ---
 
@@ -20,7 +20,7 @@ Ciblez vos abonnés et clients existants sur Twitter et créez des campagnes de 
 Avant de configurer votre [!DNL Twitter Custom Audiences] destination, veillez à passer en revue les conditions préalables Twitter suivantes que vous devez remplir.
 
 1. Votre [!DNL Twitter Ads] doit être éligible à la publicité. Nouveau [!DNL Twitter Ads] les comptes ne sont pas éligibles à la publicité dans les 2 premières semaines suivant leur création.
-2. Votre compte utilisateur Twitter pour lequel vous avez autorisé l’accès dans [!DNL Twitter Audience Manager] doit avoir la variable *[!DNL Partner Audience Manager]* autorisation activée.
+2. Votre compte utilisateur de Twitter pour lequel vous avez autorisé l’accès dans [!DNL Twitter Audience Manager] doit avoir la variable *[!DNL Partner Audience Manager]* autorisation activée.
 
 ## Identités prises en charge {#supported-identities}
 
@@ -35,15 +35,12 @@ Avant de configurer votre [!DNL Twitter Custom Audiences] destination, veillez �
 
 ## Audiences prises en charge {#supported-audiences}
 
-Cette section décrit toutes les audiences que vous pouvez exporter vers cette destination.
+Cette section décrit le type d’audiences que vous pouvez exporter vers cette destination.
 
-Cette destination prend en charge l’activation de toutes les audiences générées par l’Experience Platform. [Segmentation Service](../../../segmentation/home.md).
-
-*En outre*, cette destination prend également en charge l’activation des audiences décrites dans le tableau ci-dessous.
-
-| Type d’audience | Description |
----------|----------|
-| Chargements personnalisés | Audiences [importé](../../../segmentation/ui/overview.md#import-audience) dans Experience Platform à partir de fichiers CSV. |
+| Origine de l’audience | Pris en charge | Description |
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ | Audiences générées par l’Experience Platform [Segmentation Service](../../../segmentation/home.md). |
+| Chargements personnalisés | ✓ | Audiences [importées](../../../segmentation/ui/overview.md#import-audience) dans Experience Platform à partir de fichiers CSV. |
 
 {style="table-layout:auto"}
 
@@ -53,8 +50,8 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 | Élément | Type | Notes |
 ---------|----------|---------|
-| Type d’exportation | **[!UICONTROL Exportation de l’audience]** | Vous exportez tous les membres d’une audience avec les identifiants utilisés dans la destination Audiences personnalisées de Twitter. |
-| Fréquence des exportations | **[!UICONTROL Diffusion en continu]** | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu&#39;un profil est mis à jour en Experience Platform en fonction de l&#39;évaluation de l&#39;audience, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
+| Type d’exportation | **[!UICONTROL Export d’audience]** | Vous exportez tous les membres d’une audience avec les identifiants utilisés dans la destination Audiences personnalisées du Twitter. |
+| Fréquence des exportations | **[!UICONTROL Diffusion en continu]** | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation des audiences, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -64,7 +61,7 @@ Pour découvrir les avantages de la destination [!DNL Twitter Custom Audiences] 
 
 ### Cas d’utilisation 1
 
-Ciblez vos abonnés et clients existants dans Twitter et créez des campagnes de remarketing pertinentes en activant vos audiences créées dans Adobe Experience Platform as [!DNL List Custom Audiences] dans Twitter.
+Ciblez vos abonnés et clients existants dans Twitter et créez des campagnes de remarketing pertinentes en activant vos audiences créées dans Adobe Experience Platform as [!DNL List Custom Audiences] en Twitter.
 
 ## Se connecter à la destination {#connect}
 
@@ -79,7 +76,7 @@ Pour vous connecter à cette destination, procédez comme décrit dans le [tutor
 1. Recherchez le [!DNL Twitter Custom Audiences] destination dans le catalogue des destinations et sélectionnez **[!UICONTROL Configuration]**.
 2. Sélectionner **[!UICONTROL Se connecter à la destination]**.
    ![Authentification à LinkedIn](/help/destinations/assets/catalog/social/twitter/authenticate-twitter-destination.png)
-3. Saisissez vos informations d’identification Twitter et sélectionnez **Connexion**.
+3. Saisissez vos informations d’identification de Twitter et sélectionnez **Connexion**.
 
 ### Renseigner les détails de la destination {#destination-details}
 
@@ -100,13 +97,13 @@ Vous pouvez activer les alertes pour recevoir des notifications sur le statut de
 
 Lorsque vous avez terminé de renseigner les détails sur votre connexion de destination, sélectionnez **[!UICONTROL Suivant]**.
 
-## Activer les audiences vers cette destination {#activate}
+## Activer des audiences vers cette destination {#activate}
 
 >[!IMPORTANT]
 > 
 >Pour activer les données, vous avez besoin des [autorisations de contrôle d’accès](/help/access-control/home.md#permissions) pour les fonctions **[!UICONTROL Gérer les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]**, et **[!UICONTROL Afficher les segments]**. Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
-Lecture [Activation des profils et des audiences vers les destinations d’exportation d’audiences par flux](/help/destinations/ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
+Consultez la section [Activer les profils et les audiences vers les destinations d’exportation d’audiences en flux continu](/help/destinations/ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
 
 ## Utilisation et gouvernance des données {#data-usage-governance}
 
@@ -114,9 +111,9 @@ Lors de la gestion de vos données, toutes les destinations [!DNL Adobe Experien
 
 ## Ressources supplémentaires {#additional-resources}
 
-Lors du mappage des audiences à Twitter, assurez-vous de respecter les exigences suivantes en termes d’attribution de noms aux audiences :
+Lors du mappage des audiences sur Twitter, assurez-vous de respecter les exigences suivantes en termes d’attribution de noms aux audiences :
 
 1. Fournir des noms de mappage d’audience lisibles par l’utilisateur. Nous vous recommandons d’utiliser le même nom que celui utilisé pour les segments Experience Platform.
-2. N’utilisez pas de caractères spéciaux (+ &amp; , % : ; @ / = ? $) dans les noms des mappages d’audience et d’audience. Si le nom de l’audience Experience Platform contient ces caractères, supprimez-les avant de mapper l’audience à une destination Twitter.
+2. N’utilisez pas de caractères spéciaux (+ &amp; , % : ; @ / = ? $) dans les noms des mappages d’audience et d’audience. Si le nom de l’audience Experience Platform contient ces caractères, supprimez-les avant de mapper l’audience à une destination de Twitter.
 
-Plus d’informations sur [!DNL List Custom Audiences] dans Twitter se trouve dans la variable [Documentation twitter](https://business.twitter.com/en/help/campaign-setup/campaign-targeting/custom-audiences/lists.html).
+Plus d’informations sur [!DNL List Custom Audiences] en Twitter se trouve dans la variable [Documentation du twitter](https://business.twitter.com/en/help/campaign-setup/campaign-targeting/custom-audiences/lists.html).

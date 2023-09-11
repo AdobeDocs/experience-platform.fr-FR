@@ -3,10 +3,10 @@ keywords: Destination du hub d’événements Azure ; hub d’événements Azure
 title: Connexion Azure Event Hubs
 description: Créez une connexion sortante en temps réel avec votre [!DNL Azure Event Hubs] stockage pour diffuser des données depuis Experience Platform.
 exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
-source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
+source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
 workflow-type: tm+mt
-source-wordcount: '2119'
-ht-degree: 40%
+source-wordcount: '2098'
+ht-degree: 53%
 
 ---
 
@@ -36,15 +36,12 @@ Par exemple, un prospect a téléchargé un livre blanc qui les qualifie en segm
 
 ## Audiences prises en charge {#supported-audiences}
 
-Cette section décrit toutes les audiences que vous pouvez exporter vers cette destination.
+Cette section décrit le type d’audiences que vous pouvez exporter vers cette destination.
 
-Cette destination prend en charge l’activation de toutes les audiences générées par l’Experience Platform. [Segmentation Service](../../../segmentation/home.md).
-
-*En outre*, cette destination prend également en charge l’activation des audiences décrites dans le tableau ci-dessous.
-
-| Type d’audience | Description |
----------|----------|
-| Chargements personnalisés | Audiences [importé](../../../segmentation/ui/overview.md#import-audience) dans Experience Platform à partir de fichiers CSV. |
+| Origine de l’audience | Pris en charge | Description |
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ | Audiences générées par l’Experience Platform [Segmentation Service](../../../segmentation/home.md). |
+| Chargements personnalisés | ✓ | Audiences [importées](../../../segmentation/ui/overview.md#import-audience) dans Experience Platform à partir de fichiers CSV. |
 
 {style="table-layout:auto"}
 
@@ -55,7 +52,7 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 | Élément | Type | Notes |
 ---------|----------|---------|
 | Type d’exportation | **[!UICONTROL Basé sur les profils]** | Vous exportez tous les membres d’un segment, ainsi que les champs de schéma de votre choix (par exemple : adresse électronique, numéro de téléphone, nom), tel que sélectionné dans l’écran de sélection des attributs de profil du [workflow d’activation de destination](../../ui/activate-batch-profile-destinations.md#select-attributes). |
-| Fréquence des exportations | **[!UICONTROL Diffusion en continu]** | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu&#39;un profil est mis à jour en Experience Platform en fonction de l&#39;évaluation de l&#39;audience, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
+| Fréquence des exportations | **[!UICONTROL Diffusion en continu]** | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation des audiences, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -80,7 +77,7 @@ Pour vous connecter à cette destination, procédez comme décrit dans le [tutor
 Si vous sélectionnez l’option **[!UICONTROL Authentification standard]** Saisissez pour vous connecter à votre point de terminaison HTTP, renseignez les champs ci-dessous et sélectionnez **[!UICONTROL Se connecter à la destination]**:
 
 * **[!UICONTROL Nom de clé SAS]**: nom de la règle d’autorisation, également connu sous le nom de clé SAS.
-* **[!UICONTROL Clé SAS]**: clé Principale de l’espace de noms des centres d’événements. La variable `sasPolicy` que la variable `sasKey` correspond à doit avoir **gérer** droits configurés pour que la liste des centres d’événements soit renseignée. En savoir plus sur l’authentification à [!DNL Azure Event Hubs] avec les clés SAS dans [Documentation Microsoft](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
+* **[!UICONTROL Clé SAS]**: clé primaire de l’espace de noms des centres d’événements. La variable `sasPolicy` que la variable `sasKey` correspond à doit avoir **gérer** droits configurés pour que la liste des centres d’événements soit renseignée. En savoir plus sur l’authentification à [!DNL Azure Event Hubs] avec les clés SAS dans [Documentation Microsoft](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
 * **[!UICONTROL Espace de noms]**: renseignez vos [!DNL Azure Event Hubs] espace de noms. En savoir plus [!DNL Azure Event Hubs] espaces de noms dans [Documentation Microsoft](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace).
 
 #### Authentification SAS (Shared Access Signature) {#sas-authentication}
@@ -90,7 +87,7 @@ Si vous sélectionnez l’option **[!UICONTROL Authentification standard]** Sais
 Si vous sélectionnez l’option **[!UICONTROL Authentification standard]** Saisissez pour vous connecter à votre point de terminaison HTTP, renseignez les champs ci-dessous et sélectionnez **[!UICONTROL Se connecter à la destination]**:
 
 * **[!UICONTROL Nom de clé SAS]**: nom de la règle d’autorisation, également connu sous le nom de clé SAS.
-* **[!UICONTROL Clé SAS]**: clé Principale de l’espace de noms des centres d’événements. La variable `sasPolicy` que la variable `sasKey` correspond à doit avoir **gérer** droits configurés pour que la liste des centres d’événements soit renseignée. En savoir plus sur l’authentification à [!DNL Azure Event Hubs] avec les clés SAS dans [Documentation Microsoft](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
+* **[!UICONTROL Clé SAS]**: clé primaire de l’espace de noms des centres d’événements. La variable `sasPolicy` que la variable `sasKey` correspond à doit avoir **gérer** droits configurés pour que la liste des centres d’événements soit renseignée. En savoir plus sur l’authentification à [!DNL Azure Event Hubs] avec les clés SAS dans [Documentation Microsoft](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
 * **[!UICONTROL Espace de noms]**: renseignez vos [!DNL Azure Event Hubs] espace de noms. En savoir plus [!DNL Azure Event Hubs] espaces de noms dans [Documentation Microsoft](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace).
 * **[!UICONTROL Nom du noeud d’événement]**: renseignez vos [!DNL Azure Event Hub] name . En savoir plus [!DNL Azure Event Hubs] dans le [Documentation Microsoft](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub).
 
@@ -122,7 +119,7 @@ Vous pouvez activer les alertes pour recevoir des notifications sur le statut de
 
 Lorsque vous avez terminé de renseigner les détails sur votre connexion de destination, sélectionnez **[!UICONTROL Suivant]**.
 
-## Activer les audiences vers cette destination {#activate}
+## Activer des audiences vers cette destination {#activate}
 
 >[!IMPORTANT]
 > 
@@ -134,11 +131,11 @@ Voir [Activation des données d’audience vers des destinations d’exportation
 
 Experience Platform optimise le comportement d’exportation de profils dans votre [!DNL Azure Event Hubs] destination : pour exporter uniquement les données vers votre destination lorsque des mises à jour pertinentes ont eu lieu suite à la qualification de l’audience ou à d’autres événements significatifs. Les profils sont exportés vers votre destination dans les situations suivantes :
 
-* La mise à jour du profil a été déterminée par un changement de l’appartenance à l’audience pour au moins une des audiences mappées à la destination. Par exemple, le profil s’est qualifié pour l’une des audiences mappées à la destination ou a quitté l’une des audiences mappées à la destination.
-* La mise à jour du profil a été déterminée par une modification dans le [mappage d’identités](/help/xdm/field-groups/profile/identitymap.md). Par exemple, un profil qui s’était déjà qualifié pour l’une des audiences mappées à la destination a été ajouté une nouvelle identité dans l’attribut identity map .
+* La mise à jour du profil a été déterminée par une modification de l’appartenance à une audience pour au moins une des audiences mappées à la destination. Par exemple, le profil est éligible à l’une des audiences mappées à la destination ou a quitté l’une de ces audiences.
+* La mise à jour du profil a été déterminée par une modification dans le [mappage d’identités](/help/xdm/field-groups/profile/identitymap.md). Par exemple, une nouvelle identité a été ajoutée dans l’attribut de mappage d’identités à un profil qui était déjà éligible à l’une des audiences mappées à la destination.
 * La mise à jour du profil a été déterminée par une modification des attributs pour au moins un des attributs mappés à la destination. Par exemple, l’un des attributs mappés à la destination dans l’étape de mappage est ajouté à un profil.
 
-Dans tous les cas décrits ci-dessus, seuls les profils pour lesquels des mises à jour pertinentes se sont produites sont exportés vers votre destination. Par exemple, si une audience mappée au flux de destination comporte une centaine de membres et que cinq nouveaux profils sont qualifiés pour le segment, l’exportation vers votre destination est incrémentielle et inclut uniquement les cinq nouveaux profils.
+Dans tous les cas décrits ci-dessus, seuls les profils pour lesquels des mises à jour pertinentes se sont produites sont exportés vers votre destination. Par exemple, si une audience mappée au flux de destination comporte cent membres et que cinq nouveaux profils sont éligibles à ce segment, l’exportation vers votre destination est incrémentielle et inclut uniquement les cinq nouveaux profils.
 
 Remarque : tous les attributs mappés sont exportés pour un profil, quel que soit l’emplacement des modifications. Ainsi, dans l’exemple ci-dessus, tous les attributs mappés pour ces cinq nouveaux profils seront exportés même si les attributs eux-mêmes restent inchangés.
 
@@ -148,7 +145,7 @@ En ce qui concerne les données exportées pour un profil donné, il est importa
 
 | Ce qui détermine une exportation de destination | Éléments inclus dans l’exportation de destination |
 |---------|----------|
-| <ul><li>Les attributs et audiences mappés servent de repère pour un export de destination. Cela signifie que si des audiences mappées changent d’états (à partir de `null` to `realized` ou de `realized` to `exiting`) ou si les attributs mappés sont mis à jour, une exportation de destination est déclenchée.</li><li>Puisque les identités ne peuvent actuellement pas être mappées à [!DNL Azure Event Hubs] les destinations, les modifications d’une identité sur un profil donné déterminent également les exportations de destination.</li><li>Toute modification pour un attribut est considérée comme une mise à jour, qu’il s’agisse ou non de la même valeur. Cela signifie qu’une réécriture sur un attribut est considérée comme une modification, même si la valeur elle-même n’a pas changé.</li></ul> | <ul><li>La variable `segmentMembership` inclut l’audience mappée dans le flux de données d’activation, pour laquelle l’état du profil a changé suite à un événement de qualification ou de sortie d’audience. Notez que les autres audiences non mappées pour lesquelles le profil est qualifié peuvent faire partie de l’exportation de destination, si ces audiences appartiennent au même type. [stratégie de fusion](/help/profile/merge-policies/overview.md) comme audience mappée dans le flux de données d’activation. </li><li>Toutes les identités dans la variable `identityMap` sont également inclus (Experience Platform ne prend actuellement pas en charge le mappage d’identité dans la variable [!DNL Azure Event Hubs] destination).</li><li>Seuls les attributs mappés sont inclus dans l’exportation de destination.</li></ul> |
+| <ul><li>Les attributs et audiences mappés servent de repère pour un export de destination. Cela signifie que si une audience mappée change d’état (de `null` à `realized` ou de `realized` à `exiting`) ou qu’un attribut mappé est mis à jour, une destination est exportée.</li><li>Puisque les identités ne peuvent actuellement pas être mappées à [!DNL Azure Event Hubs] les destinations, les modifications d’une identité sur un profil donné déterminent également les exportations de destination.</li><li>Toute modification pour un attribut est considérée comme une mise à jour, qu’il s’agisse ou non de la même valeur. Cela signifie qu’une réécriture sur un attribut est considérée comme une modification, même si la valeur elle-même n’a pas changé.</li></ul> | <ul><li>L’objet `segmentMembership` inclut l’audience mappée dans le flux de données d’activation, pour lequel le statut du profil a changé suite à un événement d’éligibilité ou de sortie d’audience. Notez que d’autres audiences non mappées pour lesquelles le profil est éligible peuvent faire partie de l’export de destination, si ces audiences appartiennent à la même [politique de fusion](/help/profile/merge-policies/overview.md) que l’audience mappée dans le flux de données d’activation. </li><li>Toutes les identités dans la variable `identityMap` sont également inclus (Experience Platform ne prend actuellement pas en charge le mappage d’identité dans la variable [!DNL Azure Event Hubs] destination).</li><li>Seuls les attributs mappés sont inclus dans l’exportation de destination.</li></ul> |
 
 {style="table-layout:fixed"}
 

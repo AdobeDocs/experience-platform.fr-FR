@@ -4,10 +4,10 @@ title: Règles d’alerte standard
 description: Ce document couvre les règles d’alerte prédéfinies fournies par Experience Platform.
 feature: Alerts
 exl-id: b4af1c15-b1bc-4e4b-a447-09cc17a63988
-source-git-commit: 6650894c145fd1f42731fd5ed8aeb6e38062aa61
+source-git-commit: 9120377f5f2048579d7e2a4740cfcbc56d49d61a
 workflow-type: tm+mt
-source-wordcount: '943'
-ht-degree: 78%
+source-wordcount: '961'
+ht-degree: 77%
 
 ---
 
@@ -20,6 +20,10 @@ Lors de l’[affichage des règles d’alerte dans l’interface utilisateur de 
 ## Ingestion des données
 
 Les règles d’alerte suivantes sont spécifiques à l’[Ingestion des données](../../ingestion/home.md) et aux [sources](../../sources/home.md) :
+
+>[!NOTE]
+>
+>Les sources de diffusion en continu ne sont actuellement pas prises en charge par les alertes. Vous ne pouvez vous abonner qu’aux notifications d’alerte pour les sources par lots.
 
 | Abonnement aux événements I/O | Règle d’alerte | Description |
 | --- | --- | --- |
@@ -52,7 +56,7 @@ Les règles d’alerte suivantes sont spécifiques au [service d’identités](.
 
 {style="table-layout:auto"}
 
-## Real-time Customer Profile
+## Profil client en temps réel
 
 Les règles d’alerte suivantes sont spécifiques à [Profil client en temps réel](../../profile/home.md):
 
@@ -73,7 +77,7 @@ Les règles d’alerte suivantes sont spécifiques à [Segmentation Service](../
 | --- | --- | --- |
 | Informations relatives à la tâche d’évaluation de segments | Début de la tâche relative aux segments | Cette alerte se déclenche lorsqu’une tâche d’évaluation de segments commence à traiter des données. |
 | Informations relatives à la tâche d’évaluation de segments | Réussite de la tâche relative aux segments | Cette alerte se déclenche lorsqu’une tâche d’évaluation de segments se termine avec succès. |
-| Retards, échecs et erreurs relatifs à la tâche d’évaluation de segments | Retard de la tâche relative aux segments | Cette alerte se déclenche lorsqu’une tâche d’évaluation de segments dure plus de 150 minutes. <br> L’un des états suivants s’affiche : <br>- FIRING - La condition de l’échec ou du retard a été remplie (envisagez-la dans un état PRINCIPAL). <br>- INACTIVE - La condition n’a pas été remplie ou n’a pas été résolue (envisagez-la dans un état RÉSOLU). |
+| Retards, échecs et erreurs relatifs à la tâche d’évaluation de segments | Retard de la tâche relative aux segments | Cette alerte se déclenche lorsqu’une tâche d’évaluation de segments dure plus de 150 minutes. <br> L’un des états suivants s’affiche : <br>- FIRING - La condition d’échec ou de retard a été remplie (considérez-la comme ACTIVE). <br>- INACTIVE - La condition n’a pas été remplie ou n’a pas été résolue (envisagez-la dans un état RÉSOLU). |
 | Retards, échecs et erreurs relatifs à la tâche d’évaluation de segments | Échec de la tâche relative aux segments | Cette alerte se déclenche lorsqu’une tâche d’évaluation de segments génère une erreur. |
 | Retards, échecs et erreurs relatifs à la tâche d’évaluation de segments | Définition de segments désactivée | Cette alerte se déclenche lorsqu’une définition de segments est désactivée en raison d’une erreur interne. Cette action déclenche automatiquement un dispositif d’urgence pour qu’une équipe d’ingénieurs Adobe enquête sur le problème. Cette alerte a pour seul but d’être informative et ne nécessite aucune action de votre part. |
 
@@ -93,7 +97,7 @@ Les règles d’alerte suivantes sont spécifiques aux [destinations](../../dest
 
 {style="table-layout:auto"}
 
-## Query Service
+## Query Service
 
 Les règles d’alerte suivantes sont spécifiques à [Query Service](../../query-service/home.md):
 

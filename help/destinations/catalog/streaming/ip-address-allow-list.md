@@ -4,9 +4,9 @@ title: Liste autorisée d’adresses IP pour les destinations en flux continu
 type: Documentation
 description: Cette page fournit des plages d’adresses IP que vous pouvez ajouter à votre liste autorisée afin d’exporter en toute sécurité des données d’Experience Platform vers votre point de terminaison API REST HTTP, Amazon Kinesis ou votre instance Azure Event Hubs.
 exl-id: f41303bd-c886-4c67-9e39-21efc3f5b768
-source-git-commit: 4d71e246c8ce92cbdae4d248568cf32ab44ac82a
+source-git-commit: ca3c9ed87f2365cc1d9e4ef5e4a6145266a11bba
 workflow-type: tm+mt
-source-wordcount: '268'
+source-wordcount: '271'
 ht-degree: 15%
 
 ---
@@ -18,8 +18,7 @@ ht-degree: 15%
 > * Adobe vous recommande de mettre cette page en signet et de la revoir tous les trois mois pour rechercher les dernières adresses IP. Adobe ne fournit pas de notification pour les nouvelles plages d’adresses IP.
 > * La liste des adresses IP documentée ici *ne fait pas* s’appliquent à toutes les destinations que vous créez à l’aide de [[!DNL Destination SDK]](/help/destinations/destination-sdk/overview.md).
 
-
-## Présentation {#overview}
+## Vue d’ensemble {#overview}
 
 Les plages d’adresses IP documentées ici s’appliquent aux destinations suivantes :
 
@@ -29,13 +28,13 @@ Les plages d’adresses IP documentées ici s’appliquent aux destinations suiv
 
 Le trafic sortant de l’Experience Platform vers ces destinations passe toujours par les adresses IP répertoriées sur cette page.
 
-Cette page fournit des plages d’adresses IP que vous pouvez ajouter à votre liste autorisée pour exporter en toute sécurité des données d’Experience Platform vers votre point d’entrée HTTP, [!DNL Amazon Kinesis]ou [!DNL Azure Event Hubs] instance. Cette fonctionnalité est particulièrement utile si votre point de terminaison HTTP se trouve derrière un pare-feu d’entreprise ou si les normes de sécurité et de conformité de votre entreprise nécessitent qu’une liste de plages d’adresses IP soit placée sur la liste autorisée.
+Cette page fournit des plages d’adresses IP que vous pouvez ajouter à votre liste autorisée pour exporter en toute sécurité des données d’Experience Platform vers votre point d’entrée HTTP, [!DNL Amazon Kinesis], ou [!DNL Azure Event Hubs] instance. Cette fonctionnalité est particulièrement utile si votre point de terminaison HTTP se trouve derrière un pare-feu d’entreprise ou si les normes de sécurité et de conformité de votre entreprise nécessitent qu’une liste de plages d’adresses IP soit placée sur la liste autorisée.
 
 Vous pouvez définir des contrôles d’accès réseau via votre pare-feu réseau. En spécifiant la plage d’adresses IP appropriée, vous pouvez autoriser le trafic pour le service de transfert de données.
 
 Adobe vous recommande d’ajouter les plages d’adresses IP suivantes à une liste autorisée avant de travailler avec les destinations mentionnées ci-dessus sur cette page. Si vous ne parvenez pas à ajouter votre plage d’adresses IP spécifique à une région à votre liste autorisée, des erreurs ou des performances peuvent se produire lors de l’utilisation de ces destinations de diffusion en continu.
 
-## VA7 : Clients américains et américains {#us-americas}
+## VA7 : clients des États-Unis et des Amériques {#us-americas}
 
 `20.186.185.239`
 `40.70.154.136/29`
@@ -57,8 +56,9 @@ Adobe vous recommande d’ajouter les plages d’adresses IP suivantes à une li
 `52.254.106.240/28`
 `52.254.107.0/28`
 `52.254.107.144/28`
+`20.22.83.112`
 
-## NLD2 : Clients EMEA {#emea}
+## NLD2 : clients EMEA {#emea}
 
 `40.74.4.160/28`
 `40.74.6.128/28`
@@ -84,7 +84,7 @@ Adobe vous recommande d’ajouter les plages d’adresses IP suivantes à une li
 `51.105.144.81`
 `51.124.70.4`
 
-## AUS5 : Clients APAC {#apac}
+## AUS5 : clients APAC {#apac}
 
 `20.43.104.80/28`
 `20.43.104.16/28`
@@ -109,3 +109,33 @@ Adobe vous recommande d’ajouter les plages d’adresses IP suivantes à une li
 `20.40.191.96/28`
 `20.43.104.32/28`
 `20.43.104.64/28`
+`20.53.206.128`
+`20.227.35.177`
+
+## CAN2 : clients canadiens {#can}
+
+`20.104.46.128/28`
+`20.104.46.160/28`
+`20.104.46.64/28`
+`20.104.46.80/28`
+`20.116.145.94`
+`20.116.147.168`
+`20.200.70.192/28`
+`20.200.70.208/28`
+`20.200.70.224/28`
+`20.200.70.240/28`
+`20.200.71.0/28`
+`20.200.71.112/28`
+`20.200.71.128/28`
+`20.200.71.144/28`
+`20.200.71.16/28`
+`20.200.71.160/28`
+`20.200.71.176/28`
+`20.200.71.32/28`
+`20.200.71.48/28`
+`20.200.71.64/28`
+`20.200.71.80/28`
+`20.200.71.96/28`
+`20.200.93.180`
+`20.200.94.116`
+`20.200.94.83`

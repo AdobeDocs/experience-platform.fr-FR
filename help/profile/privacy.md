@@ -5,9 +5,9 @@ title: Traitement des demandes d’accès à des informations personnelles dans 
 type: Documentation
 description: Adobe Experience Platform Privacy Service traite les demandes des clients en matière dʼaccès, de retrait du consentement à la vente ou de suppression de leurs données personnelles conformément aux nombreuses réglementations en matière de confidentialité. Ce document couvre les concepts essentiels liés au traitement des demandes d’accès à des informations personnelles pour Real-time Customer Profile.
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
-source-git-commit: fb2686eb44bbf7581120f40b241bead0e61baee9
+source-git-commit: f0179bacc55134241bed8de240ee632d0f38e4b6
 workflow-type: tm+mt
-source-wordcount: '1612'
+source-wordcount: '1625'
 ht-degree: 26%
 
 ---
@@ -23,6 +23,10 @@ Ce document couvre les concepts essentiels associés au traitement des demandes 
 >Ce guide porte uniquement sur la manière d’effectuer des demandes d’accès à des informations personnelles pour le magasin de données Profile dans Experience Platform. Si vous prévoyez également d’effectuer des demandes d’accès à des informations personnelles pour le lac de données de Platform, reportez-vous au guide sur la [traitement des demandes d’accès à des informations personnelles dans le lac de données](../catalog/privacy.md) en plus de ce tutoriel.
 >
 >Pour savoir comment effectuer des demandes d’accès à des informations personnelles pour d’autres applications Adobe Experience Cloud, reportez-vous à la [documentation du Privacy Service](../privacy-service/experience-cloud-apps.md).
+
+>[!IMPORTANT]
+>
+>La demande d’accès à des informations personnelles présentée dans ce guide **not** couvrir les entités non personnelles B2B ;
 
 ## Prise en main
 
@@ -42,7 +46,7 @@ Pour plus dʼinformations sur les espaces de noms dʼidentité dans [!DNL Experi
 
 ## Envoi de requêtes {#submit}
 
-Les sections ci-dessous décrivent comment effectuer des demandes d’accès à des informations personnelles pour [!DNL Real-Time Customer Profile] en utilisant l’API ou l’interface utilisateur [!DNL Privacy Service]. Avant de lire ces sections, il est vivement conseillé de consulter la section [API Privacy Service](../privacy-service/api/getting-started.md) ou [Interface utilisateur du Privacy Service](../privacy-service/ui/overview.md) documentation pour obtenir des instructions complètes sur la manière d’envoyer une tâche de confidentialité, y compris sur la manière de formater correctement les données d’identité utilisateur envoyées dans les payloads de requête.
+Les sections ci-dessous décrivent comment effectuer des demandes d’accès à des informations personnelles pour [!DNL Real-Time Customer Profile] en utilisant l’API ou l’interface utilisateur [!DNL Privacy Service]. Avant de lire ces sections, il est vivement conseillé de consulter la section [API PRIVACY SERVICE](../privacy-service/api/getting-started.md) ou [Interface utilisateur du Privacy Service](../privacy-service/ui/overview.md) documentation pour obtenir des instructions complètes sur la manière d’envoyer une tâche de confidentialité, y compris sur la manière de formater correctement les données d’identité utilisateur envoyées dans les payloads de requête.
 
 >[!IMPORTANT]
 >
@@ -62,9 +66,9 @@ En outre, le tableau `include` de la payload de requête doit inclure les valeur
 
 >[!NOTE]
 >
->Voir la section sur [demandes de profil et demandes d’identité](#profile-v-identity) plus loin dans ce document pour plus d’informations sur les effets de l’utilisation de `ProfileService` et `identity` dans le `include` tableau.
+>Voir la section sur [demandes de profil et demandes d’identité](#profile-v-identity) plus loin dans ce document pour plus d’informations sur les effets de l’utilisation de `ProfileService` et `identity` dans la fonction `include` tableau.
 
-La requête suivante crée une tâche de confidentialité pour les données d’un seul client dans la variable [!DNL Profile] magasin. Deux valeurs d’identité sont fournies pour le client dans la variable `userIDs` tableau ; une utilisant la norme `Email` espace de noms d’identité, et l’autre à l’aide d’un espace de noms personnalisé `Customer_ID` espace de noms. Elle inclut également la valeur de produit pour [!DNL Profile] (`ProfileService`) dans la variable `include` tableau :
+La requête suivante crée une tâche de confidentialité pour les données d’un seul client dans la variable [!DNL Profile] magasin. Deux valeurs d’identité sont fournies pour le client dans la variable `userIDs` tableau ; un tableau utilisant la norme `Email` espace de noms d’identité, et l’autre utilisant un espace de noms personnalisé `Customer_ID` espace de noms. Elle inclut également la valeur de produit pour [!DNL Profile] (`ProfileService`) dans la variable `include` tableau :
 
 **Requête**
 
@@ -167,21 +171,21 @@ Lors de la création de requêtes de tâche dans l’interface utilisateur, veil
 
 ![Une requête de tâche d’accès en cours de création dans l’interface utilisateur, avec l’option Profil sélectionnée sous Produits](./images/privacy/product-value.png)
 
-## Fragments de profil dans les demandes d’accès à des informations personnelles {#fragments}
+## Fragments de profil dans les requêtes de confidentialité {#fragments}
 
 Dans le [!DNL Profile] entrepôt de données, les données personnelles d’un client individuel sont souvent composées de plusieurs fragments de profil, qui sont associés à la personne via le graphique d’identités. Lors de l’envoi de requêtes de confidentialité à la variable [!DNL Profile] magasin, il est important de noter que les requêtes sont traitées uniquement au niveau du fragment de profil, plutôt que sur l’ensemble du profil.
 
 Prenons l’exemple d’une situation où vous stockez des données d’attributs du client dans trois jeux de données distincts, qui utilisent différents identifiants pour associer ces données à des clients individuels :
 
-| Nom du jeu de données | Champ d’identité Principal | Attributs stockés |
+| Nom du jeu de données | Champ d’identité du Principal | Attributs stockés |
 | --- | --- | --- |
 | Jeu de données 1 | `customer_id` | `address` |
 | Jeu de données 2 | `email_id` | `firstName`, `lastName` |
 | Jeu de données 3 | `email_id` | `mlScore` |
 
-L’un des jeux de données utilise `customer_id` comme identifiant Principal, alors que les deux autres utilisent `email_id`. Si vous envoyez une demande d’accès à des informations personnelles (accès ou suppression) en utilisant uniquement `email_id` comme valeur d’identifiant utilisateur, seule la variable `firstName`, `lastName`, et `mlScore` Les attributs sont traités, tandis que `address` ne serait pas affecté.
+L’un des jeux de données utilise `customer_id` comme identifiant principal, alors que les deux autres utilisent `email_id`. Si vous envoyez une demande d’accès à des informations personnelles (accès ou suppression) en utilisant uniquement `email_id` comme valeur d’identifiant utilisateur, seule la variable `firstName`, `lastName`, et `mlScore` Les attributs sont traités, tandis que `address` ne serait pas affecté.
 
-Pour vous assurer que vos demandes d’accès à des informations personnelles traitent tous les attributs du client pertinents, vous devez fournir les Principales valeurs d’identité pour tous les jeux de données applicables où ces attributs peuvent être stockés (jusqu’à neuf identifiants par client). Consultez la section sur les champs d’identité dans la [principes de base de la composition des schémas](../xdm/schema/composition.md#identity) pour plus d’informations sur les champs généralement marqués comme identités.
+Pour vous assurer que vos demandes d’accès à des informations personnelles traitent tous les attributs du client pertinents, vous devez fournir les valeurs d’identité principales de tous les jeux de données applicables où ces attributs peuvent être stockés (jusqu’à neuf identifiants par client). Voir la section sur les champs d’identité dans la section [principes de base de la composition des schémas](../xdm/schema/composition.md#identity) pour plus d’informations sur les champs généralement marqués comme identités.
 
 ## Traitement des demandes de suppression {#delete}
 
@@ -200,7 +204,7 @@ Selon que vous avez également inclus ou non Identity Service (`identity`) et le
 | `ProfileService` et `aepDataLake` | Le profil est immédiatement supprimé dès que Platform envoie la confirmation que la demande de suppression a été reçue. Cependant, le graphique d’identités du profil reste inchangé et le profil peut éventuellement être reconstitué lorsque de nouvelles données avec les mêmes identités sont ingérées.<br><br>Lorsque le produit du lac de données répond que la demande a été reçue et qu’il est en cours de traitement, les données associées au profil sont supprimées de manière réversible et ne sont donc accessibles à aucun [!DNL Platform] service. Une fois la tâche terminée, les données sont complètement supprimées du lac de données. |
 | `ProfileService`, `identity`, et `aepDataLake` | Le profil et son graphique d’identités associé sont immédiatement supprimés dès que Platform envoie la confirmation que la demande de suppression a été reçue.<br><br>Lorsque le produit du lac de données répond que la demande a été reçue et qu’il est en cours de traitement, les données associées au profil sont supprimées de manière réversible et ne sont donc accessibles à aucun [!DNL Platform] service. Une fois la tâche terminée, les données sont complètement supprimées du lac de données. |
 
-Reportez-vous à la section [[!DNL Privacy Service] documentation](../privacy-service/home.md#monitor) pour plus d’informations sur les états des tâches de suivi.
+Voir [[!DNL Privacy Service] documentation](../privacy-service/home.md#monitor) pour plus d’informations sur les états des tâches de suivi.
 
 ### Requêtes de profil et requêtes d’identité {#profile-v-identity}
 
@@ -213,9 +217,9 @@ Pour supprimer le profil et toutes les associations d’identité pour un client
 ### Limites des stratégies de fusion {#merge-policy-limitations}
 
 Privacy Service ne peut traiter que [!DNL Profile] données utilisant une stratégie de fusion qui n’effectue pas de combinaison d’identités. Si vous utilisez l’interface utilisateur pour confirmer que vos demandes d’accès à des informations personnelles sont en cours de traitement, assurez-vous que vous utilisez une stratégie avec **[!DNL None]** comme son [!UICONTROL Combinaison d’identifiants] type. En d’autres termes, vous ne pouvez pas utiliser une stratégie de fusion dans laquelle [!UICONTROL Combinaison d’identifiants] est défini sur [!UICONTROL Graphique privé].
->>
-![Le groupement d’identifiants de la stratégie de fusion est défini sur Aucun.](./images/privacy/no-id-stitch.png)
->
+
+>![Le groupement d’identifiants de la stratégie de fusion est défini sur Aucun.](./images/privacy/no-id-stitch.png)
+
 ## Étapes suivantes
 
 En lisant ce document, vous avez découvert les concepts importants liés au traitement des demandes d’accès à des informations personnelles dans [!DNL Experience Platform]. Pour mieux comprendre comment gérer les données d’identité et créer des tâches de confidentialité, veuillez continuer à lire la documentation fournie dans ce guide.

@@ -3,14 +3,14 @@ keywords: e-mail;e-mail;destinations d’e-mail;adobe campaign;campagne
 title: Connexion Adobe Campaign
 description: Adobe Campaign est un ensemble de solutions qui permet de personnaliser les campagnes et de les diffuser via tous vos canaux en ligne et hors ligne.
 exl-id: 0de91738-8f56-41f5-8745-9b14b15db76a
-source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
+source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
 workflow-type: tm+mt
-source-wordcount: '941'
-ht-degree: 42%
+source-wordcount: '920'
+ht-degree: 45%
 
 ---
 
-# Adobe Campaign Connexion 
+# Adobe Campaign Connexion
 
 ## Présentation {#overview}
 
@@ -20,15 +20,12 @@ Pour envoyer des données d’audience à Adobe Campaign, vous devez d’abord [
 
 ## Audiences prises en charge {#supported-audiences}
 
-Cette section décrit toutes les audiences que vous pouvez exporter vers cette destination.
+Cette section décrit le type d’audiences que vous pouvez exporter vers cette destination.
 
-Cette destination prend en charge l’activation de toutes les audiences générées par l’Experience Platform. [Segmentation Service](../../../segmentation/home.md).
-
-*En outre*, cette destination prend également en charge l’activation des audiences décrites dans le tableau ci-dessous.
-
-| Type d’audience | Description |
----------|----------|
-| Chargements personnalisés | Audiences [importé](../../../segmentation/ui/overview.md#import-audience) dans Experience Platform à partir de fichiers CSV. |
+| Origine de l’audience | Pris en charge | Description |
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ | Audiences générées par l’Experience Platform [Segmentation Service](../../../segmentation/home.md). |
+| Chargements personnalisés | ✓ | Audiences [importées](../../../segmentation/ui/overview.md#import-audience) dans Experience Platform à partir de fichiers CSV. |
 
 {style="table-layout:auto"}
 
@@ -53,7 +50,7 @@ Voir [LISTE AUTORISÉE d’adresses IP pour les destinations SFTP](../cloud-stor
 
 >[!IMPORTANT]
 > 
->Pour vous connecter à la destination, vous devez disposer de l’[autorisation de contrôle d’accès](/help/access-control/home.md#permissions) **[!UICONTROL Gérer les destinations]**. Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises
+>Pour vous connecter à la destination, vous devez disposer de l’[autorisation de contrôle d’accès](/help/access-control/home.md#permissions) **[!UICONTROL Gérer les destinations]**. Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises
 
 Pour vous connecter à cette destination, procédez comme décrit dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md).
 
@@ -88,7 +85,7 @@ Vous pouvez activer les alertes pour recevoir des notifications sur le statut de
 
 Lorsque vous avez terminé de renseigner les détails sur votre connexion de destination, sélectionnez **[!UICONTROL Suivant]**.
 
-## Activer les audiences vers cette destination {#activate}
+## Activer des audiences vers cette destination {#activate}
 
 >[!IMPORTANT]
 > 
@@ -109,10 +106,10 @@ Pour les destinations [!DNL Adobe Campaign], [!DNL Platform] crée un fichier `.
 
 >[!IMPORTANT]
 >
->* Gardez à l’esprit les [!DNL SFTP] limites de stockage, limites de stockage dans la base de données et principales limites de profil conformément à votre contrat Adobe Campaign lors de l’exécution de cette intégration.
->* Vous devez planifier, importer et mapper vos segments exportés dans Adobe Campaign à l’aide de [!DNL Campaign] workflows. Voir [Configurer un import récurrent](https://experienceleague.adobe.com/docs/campaign-classic/using/automating-with-workflows/use-cases/data-management/recurring-import-workflow.html?lang=fr) dans la documentation Adobe Campaign Classic et [A propos des activités de Data Management](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/data-management-activities/about-data-management-activities.html) dans la documentation Adobe Campaign Standard.
+>* Gardez à l’esprit les [!DNL SFTP] limites de stockage, limites de stockage dans la base de données et limites de profil actives conformément à votre contrat Adobe Campaign lors de l’exécution de cette intégration.
+>* Vous devez planifier, importer et mapper vos segments exportés dans Adobe Campaign à l’aide de [!DNL Campaign] workflows. Voir [Configurer un import récurrent](https://experienceleague.adobe.com/docs/campaign-classic/using/automating-with-workflows/use-cases/data-management/recurring-import-workflow.html?lang=fr) dans la documentation Adobe Campaign Classic et [A propos des activités de Data Management](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/data-management-activities/about-data-management-activities.html) dans la documentation de Adobe Campaign Standard.
 >* La méthode préconisée pour envoyer des données à Adobe Campaign consiste à : [!DNL Amazon S3] ou [!DNL Azure Blob].
 
 Après la connexion [!DNL Platform] à votre [!DNL Amazon S3] ou [!DNL Azure Blob] stockage, vous devez configurer l’importation des données depuis l’emplacement de stockage vers Adobe Campaign. Pour découvrir la procédure à suivre, consultez les pages de documentation Adobe Campaign suivantes :
 * [Prise en main de l’import et de l’export de données](https://experienceleague.adobe.com/docs/campaign-classic/using/getting-started/importing-and-exporting-data/get-started-data-import-export.html?lang=fr) et [Chargement (fichier)](https://experienceleague.adobe.com/docs/campaign-classic/using/automating-with-workflows/action-activities/data-loading--file-.html?lang=fr) dans la documentation de Adobe Campaign Classic.
-* [Prise en main des processus et de la gestion des données](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/get-started-workflows.html) et [Chargement de fichier](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/data-management-activities/load-file.html) dans la documentation Adobe Campaign Standard.
+* [Prise en main des processus et de la gestion des données](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/get-started-workflows.html) et [Chargement de fichier](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/data-management-activities/load-file.html) dans la documentation de Adobe Campaign Standard.

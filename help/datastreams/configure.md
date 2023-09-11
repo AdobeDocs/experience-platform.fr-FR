@@ -2,9 +2,9 @@
 title: Configurer un flux de données
 description: Découvrez comment connecter votre intégration SDK Web côté client à d’autres produits Adobe et destinations tierces.
 exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
-source-git-commit: e3f507e010ea2a32042b53d46795d87e82e3fb72
-workflow-type: ht
-source-wordcount: '2275'
+source-git-commit: 139d6a6632532b392fdf8d69c5c59d1fd779a6d1
+workflow-type: tm+mt
+source-wordcount: '2276'
 ht-degree: 100%
 
 ---
@@ -57,7 +57,7 @@ Sélectionnez **[!UICONTROL Options avancées]** pour afficher des commandes sup
 | [!UICONTROL Synchronisation des identifiants tiers] | Les synchronisations des identifiants peuvent être regroupées en conteneurs afin de permettre l’exécution de différentes synchronisations d’identifiant à différents moments. Lorsqu’il est activé, ce paramètre vous permet de spécifier le conteneur des synchronisations d’identifiant à exécuter pour ce flux de données. |
 | [!UICONTROL ID de conteneur de synchronisation d’identifiants tiers] | L’identifiant numérique du conteneur à utiliser pour la synchronisation des identifiants tiers. |
 | [!UICONTROL Remplacements d’identifiants de conteneur] | Dans cette section, vous pouvez définir des identifiants de conteneur de synchronisation d’identifiants tiers supplémentaires, que vous pouvez utiliser pour remplacer celui par défaut. |
-| [!UICONTROL Type d’accès] | Définit le type d’authentification qu’Edge Network accepte pour le train de données. <ul><li>**[!UICONTROL Authentification mixte]** : lorsque cette option est activée, Edge Network accepte les demandes authentifiées et non authentifiées. Sélectionnez cette option lorsque vous prévoyez d’utiliser le SDK web ou le [SDK mobile](https://aep-sdks.gitbook.io/docs/), ainsi que l’[API Server](../server-api/overview.md). </li><li>**[!UICONTROL Authentifié uniquement]** : lorsque cette option est activée, Edge Network accepte uniquement les demandes authentifiées. électionnez cette option lorsque vous prévoyez d’utiliser uniquement l’API Server et que vous souhaitez empêcher le traitement des demandes non authentifiées par Edge Network.</li></ul> |
+| [!UICONTROL Type d’accès] | Définit le type d’authentification qu’Edge Network accepte pour le train de données. <ul><li>**[!UICONTROL Authentification mixte]** : lorsque cette option est activée, Edge Network accepte les demandes authentifiées et non authentifiées. Sélectionnez cette option lorsque vous prévoyez d’utiliser le SDK web ou le [SDK mobile](https://developer.adobe.com/client-sdks/documentation/), ainsi que l’[API Server](../server-api/overview.md). </li><li>**[!UICONTROL Authentifié uniquement]** : lorsque cette option est activée, Edge Network accepte uniquement les demandes authentifiées. électionnez cette option lorsque vous prévoyez d’utiliser uniquement l’API Server et que vous souhaitez empêcher le traitement des demandes non authentifiées par Edge Network.</li></ul> |
 
 Ensuite, si vous configurez le flux de données d’Experience Platform, suivez le tutoriel sur la [Préparation des données pour la collecte de données](./data-prep.md) afin de mapper les données à un schéma d’événement de Platform avant de revenir à ce guide. Sinon, sélectionnez **[!UICONTROL Enregistrer]** et passez à la section suivante.
 
@@ -172,7 +172,7 @@ Vous pouvez créer une copie d’un flux de données existant et en modifier les
 
 À partir de la page principale de l’espace de travail [!UICONTROL Flux de données], sélectionnez les points de suspension (**....**) pour le flux de données en question, puis sélectionnez **[!UICONTROL Copier]**.
 
-![Image illustrant l’option [!UICONTROL Copier] sélectionnée dans la vue de liste du flux de données](assets/configure/copy-datastream-list.png).
+![Image illustrant l’option [!UICONTROL Copier] sélectionnée dans la vue Liste du flux de données](assets/configure/copy-datastream-list.png).
 
 Vous pouvez également sélectionner **[!UICONTROL Copier le flux de données]** dans la vue des détails d’un flux de données particulier.
 

@@ -2,9 +2,9 @@
 title: Dépannage
 description: Découvrez comment résoudre les erreurs lors de l’utilisation de l’API Edge Network Server.
 exl-id: f0223fca-30ec-4229-93a5-3faa6cef5482
-source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
+source-git-commit: 139d6a6632532b392fdf8d69c5c59d1fd779a6d1
 workflow-type: tm+mt
-source-wordcount: '96'
+source-wordcount: '90'
 ht-degree: 2%
 
 ---
@@ -15,4 +15,4 @@ L’API Adobe Experience Platform Edge Network Server vous permet de capturer le
 
 Même mécanisme utilisé par la fonction [Débogueur Experience Platform](https://experienceleague.adobe.com/docs/debugger-learn/tutorials/experience-platform-debugger/introduction-to-the-experience-platform-debugger.html?lang=en) vous permet de déboguer des implémentations basées sur l’API.
 
-Utilisation [Griffon du projet](https://aep-sdks.gitbook.io/docs/beta/project-griffon), vous pouvez créer un ID de session de débogage que vous pourrez ensuite utiliser dans les requêtes réseau Edge pour suivre les événements.
+Utilisation [Assurance](../assurance/home.md), vous pouvez créer un ID de session de débogage que vous pourrez ensuite utiliser dans les requêtes réseau Edge pour suivre les événements.

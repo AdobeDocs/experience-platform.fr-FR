@@ -1,10 +1,10 @@
 ---
 title: Notes de mise à jour d’Adobe Experience Platform
 description: Les notes de mise à jour d’août 2023 pour Adobe Experience Platform.
-source-git-commit: 5181d39e92fbf957f154c3b1dcf4f9af90cfeae9
+source-git-commit: 384faa13154386ef2578da4c20ab47f171aefeda
 workflow-type: tm+mt
-source-wordcount: '1749'
-ht-degree: 42%
+source-wordcount: '1750'
+ht-degree: 46%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 42%
 
 Mises à jour des fonctionnalités existantes dans Adobe Experience Platform :
 
-- [Real-Time Customer Data Platform](#rtcdp)
+- [Real-Time Customer Data Platform](#rtcdp)
 - [Contrôle d’accès basé sur les attributs](#abac)
 - [Tableaux de bord](#dashboards)
 - [Collecte de données](#data-collection)
@@ -26,7 +26,7 @@ Mises à jour des fonctionnalités existantes dans Adobe Experience Platform 
 - [Segmentation Service](#segmentation)
 - [Sources](#sources)
 
-## Real-Time Customer Data Platform {#rtcdp}
+## Real-Time Customer Data Platform {#rtcdp}
 
 Basée sur Experience Platform, Real-time Customer Data Platform ([!DNL Real-Time CDP]) aide les entreprises à rassembler des données connues et inconnues pour activer les profils des clients et clientes avec une prise de décision intelligente tout au long du parcours client.
 
@@ -119,7 +119,7 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 
 **Fonctionnalités nouvelles ou mises à jour** {#destinations-new-updated-functionality}
 
-- Vous pouvez désormais [activation des audiences de prospect](../../destinations/ui/activate-prospect-audiences.md) vers des destinations basées sur des fichiers.
+- Vous pouvez désormais [activation des audiences de prospect](../../destinations/ui/activate-prospect-audiences.md) vers les destinations de stockage dans le cloud.
 - Le général [barrières de sécurité d’activation](../../destinations/guardrails.md#general-activation-guardrails) mise à jour d’un maximum de 100 destinations par environnement de test pour qu’il soit _limite_.
 
 Pour des informations plus générales sur les destinations, consultez la [présentation des destinations](../../destinations/home.md).
@@ -132,7 +132,7 @@ XDM est une spécification Open Source qui fournit des structures et des défini
 
 | Type de composant | Nom | Description |
 | --- | --- | --- |
-| Classe | [[!UICONTROL XDM Individual Prospect Profile]](https://github.com/adobe/xdm/pull/1758/files) | Utilisez cette classe pour importer les profils de prospect provenant des cas d’utilisation d’acquisition client les plus récents des fournisseurs de données. Voir [[!UICONTROL Profil XDM Individual Prospect]](../../xdm/classes/prospect.md) documentation pour consulter des exemples et en savoir plus. |
+| Classe | [[!UICONTROL XDM Individual Prospect Profile]](https://github.com/adobe/xdm/pull/1758/files) | Cette classe permet d’importer les profils de prospect provenant des cas d’utilisation d’acquisition de clientèle au sommet de l’entonnoir des fournisseurs de données. Voir [[!UICONTROL Profil XDM Individual Prospect]](../../xdm/classes/prospect.md) documentation pour consulter des exemples et en savoir plus. |
 
 {style="table-layout:auto"}
 
@@ -161,7 +161,7 @@ Pour plus d’informations, veuillez lire la [Présentation d’Identity Service
 
 ## Segmentation Service {#segmentation}
 
-[!DNL Segmentation Service] vous permet de segmenter les données stockées dans [!DNL Experience Platform] qui se rapporte aux individus (tels que les clients, les prospects, les utilisateurs ou les organisations) dans des audiences. Vous pouvez créer des audiences par le biais de définitions de segment ou d’autres sources à partir de vos [!DNL Real-Time Customer Profile] data. Ces audiences sont configurées et gérées de manière centralisée sur [!DNL Platform], et sont facilement accessibles par toute solution d’Adobe.
+[!DNL Segmentation Service] permet de segmenter en audiences les données stockées dans [!DNL Experience Platform] qui se rapportent aux personnes (tels que les clientes et clients, les prospects, les utilisateurs et utilisatrices ou les organisations). Vous pouvez créer des audiences par le biais de définitions de segment ou d’autres sources à partir de vos données [!DNL Real-Time Customer Profile]. Ces audiences sont configurées et conservées de manière centralisée sur [!DNL Platform] et sont facilement accessibles à partir de n’importe quelle solution Adobe.
 
 **Fonctionnalités nouvelles ou mises à jour**
 

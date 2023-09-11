@@ -3,10 +3,10 @@ title: (Version bêta) Audiences Experience Cloud
 description: Découvrez comment partager des audiences d’Experience Platform vers différentes solutions d’Experience Platform.
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: 2bdbcda3-2efb-4a4e-9702-4fd9991e9461
-source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
+source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
 workflow-type: tm+mt
-source-wordcount: '1632'
-ht-degree: 19%
+source-wordcount: '1611'
+ht-degree: 24%
 
 ---
 
@@ -97,23 +97,20 @@ Profils exportés vers le [!UICONTROL Audiences Experience Cloud] Les destinatio
 | Identité cible | Description | Considérations |
 |---|---|---|
 | ECID | Experience Cloud ID | Espace de noms qui représente l’ECID. Cet espace de noms peut également être référencé par les alias suivants : « ID Adobe Marketing Cloud », « ID Adobe Experience Cloud », « ID Adobe Experience Platform ». Consultez le document suivant sur [ECID](/help/identity-service/ecid.md) pour plus d’informations. |
-| GAID | Google Advertising ID | Les profils ingérés dans Experience Platform avec une identité Principale de Google Advertising ID (GAID) peuvent être exportés vers cette destination. |
-| IDFA | Identifiant Apple pour les annonceurs | Les profils ingérés dans Experience Platform avec une identité Principale d’Apple ID for Advertisers (IDFA) peuvent être exportés vers cette destination. |
-| email_lc_sha256 | Adresses e-mail hachées avec l’algorithme SHA256 | Les profils ingérés dans l’Experience Platform avec une Principale identité d’adresse électronique hachée peuvent être exportés vers cette destination. |
+| GAID | Google Advertising ID | Les profils ingérés dans Experience Platform avec une identité principale de Google Advertising ID (GAID) peuvent être exportés vers cette destination. |
+| IDFA | Identifiant Apple pour les annonceurs | Les profils ingérés dans Experience Platform avec une identité principale d’Apple ID for Advertisers (IDFA) peuvent être exportés vers cette destination. |
+| email_lc_sha256 | Adresses e-mail hachées avec l’algorithme SHA256 | Les profils ingérés dans Experience Platform avec une identité principale d’adresse électronique hachée peuvent être exportés vers cette destination. |
 
 {style="table-layout:auto"}
 
 ## Audiences prises en charge {#supported-audiences}
 
-Cette section décrit toutes les audiences que vous pouvez exporter vers cette destination.
+Cette section décrit le type d’audiences que vous pouvez exporter vers cette destination.
 
-Cette destination prend en charge l’activation de toutes les audiences générées par l’Experience Platform. [Segmentation Service](../../../segmentation/home.md).
-
-*En outre*, cette destination prend également en charge l’activation des audiences décrites dans le tableau ci-dessous.
-
-| Type d’audience | Description |
----------|----------|
-| Chargements personnalisés | Audiences [importé](../../../segmentation/ui/overview.md#import-audience) dans Experience Platform à partir de fichiers CSV. |
+| Origine de l’audience | Pris en charge | Description |
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ | Audiences générées par l’Experience Platform [Segmentation Service](../../../segmentation/home.md). |
+| Chargements personnalisés | ✓ | Audiences [importées](../../../segmentation/ui/overview.md#import-audience) dans Experience Platform à partir de fichiers CSV. |
 
 {style="table-layout:auto"}
 
@@ -123,8 +120,8 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 | Élément | Type | Notes |
 |---------|----------|---------|
-| Type d’exportation | **[!UICONTROL Exportation de l’audience]** | Vous exportez tous les membres d’une audience à partir des identités répertoriées dans la section ci-dessus. |
-| Fréquence des exportations | **[!UICONTROL Diffusion en continu]** | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu&#39;un profil est mis à jour en Experience Platform en fonction de l&#39;évaluation de l&#39;audience, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
+| Type d’exportation | **[!UICONTROL Export d’audience]** | Vous exportez tous les membres d’une audience à partir des identités répertoriées dans la section ci-dessus. |
+| Fréquence des exportations | **[!UICONTROL Diffusion en continu]** | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation des audiences, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -167,13 +164,13 @@ You can enable alerts to receive notifications on the status of the dataflow to 
 Lorsque vous avez terminé de renseigner les détails sur votre connexion de destination, sélectionnez **[!UICONTROL Suivant]**.
 
 
-## Activer les audiences vers cette destination {#activate}
+## Activer des audiences vers cette destination {#activate}
 
 >[!IMPORTANT]
 > 
 >Pour activer les données, vous avez besoin des [autorisations de contrôle d’accès](/help/access-control/home.md#permissions) pour les fonctions **[!UICONTROL Gérer les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]**, et **[!UICONTROL Afficher les segments]**. Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
-Lecture [Activation des profils et des audiences vers les destinations d’exportation d’audiences par flux](/help/destinations/ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination. Notez que non [étape de mappage](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) est requis et non [étape de planification](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) est disponible pour cette destination.
+Consultez la section [Activer les profils et les audiences vers les destinations d’exportation d’audiences en flux continu](/help/destinations/ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination. Notez que non [étape de mappage](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) est requis et non [étape de planification](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) est disponible pour cette destination.
 
 ## Valider l’exportation des données {#exported-data}
 

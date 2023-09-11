@@ -4,10 +4,10 @@ description: Découvrez comment utiliser l’assistant d’IA pour parcourir et 
 badge: Alpha
 hide: true
 hidefromtoc: true
-source-git-commit: e84f5aff6885535b58874a4fe02db2944e1d9b7f
+source-git-commit: 55d2518cdded50bcc8d6f7cc36f29581c5e64dab
 workflow-type: tm+mt
-source-wordcount: '2629'
-ht-degree: 1%
+source-wordcount: '2369'
+ht-degree: 0%
 
 ---
 
@@ -154,112 +154,55 @@ Vous pouvez également poser des questions à l’assistant d’IA sur l’utili
 
 * Attributs
 * Jeux de données
-* Destinations
-* Schémas
+* Destinations (pour l’instant, il n’est pas possible de répondre aux questions concernant les comptes et à certaines questions concernant le flux de données.)
+* Schémas (pour l’instant, il n’est pas possible de répondre aux questions concernant les groupes de champs.)
 * Segments
-* Sources
+* Sources (pour l’instant, il n’est pas possible de répondre aux questions concernant les comptes.)
 
-Pour les requêtes de données d’utilisation, les réponses peuvent ne pas refléter l’état actuel de l’interface utilisateur. Les données sur lesquelles reposent ces questions sont mises à jour toutes les 12 à 24 heures. Vous devrez peut-être mettre en forme vos questions comme : &quot;Quand le segment a-t-il eu le titre ? {TITLE} created ?&quot; au lieu de &quot;Quand était le {TITLE} segment créé ?&quot;
+Pour les requêtes de données d’utilisation, les réponses peuvent ne pas refléter l’état actuel de l’interface utilisateur. Les données sur lesquelles reposent ces questions sont mises à jour toutes les 24 heures. Par exemple, les modifications apportées par les utilisateurs dans Real-Time CDP pendant la journée sont synchronisées avec les entrepôts de données la nuit, puis elles deviennent disponibles pour les questions des utilisateurs le matin. Vous devrez peut-être formater vos questions comme suit : &quot;Quand le segment a-t-il eu le titre ? {TITLE} created ?&quot; au lieu de &quot;Quand était le {TITLE} segment créé ?&quot;
 
 Vous devrez vous connecter à un environnement de test pour obtenir des informations sur des données spécifiques liées à des objets tels que les schémas, les jeux de données, les attributs, les destinations et les segments.
 
-+++Sélectionnez pour obtenir la liste des questions d’utilisation des données prises en charge
+### Questions d’utilisation des données prises en charge
+
++++Sélectionner pour afficher la liste des questions d’utilisation des données prises en charge
 
 Vous trouverez ci-dessous une liste des questions d’utilisation des données actuellement prises en charge, regroupées par domaine.
 
->[!BEGINTABS]
-
->[!TAB Segments]
-
-* Existe-t-il des segments en double ?
-* Afficher tous les segments en continu.
-* Est le segment nommé {SEGMENT_ID} évalué dans Batch OR Stream ?
-* Quels segments sont des doublons ?
+* Liste des attributs utilisés pour ce segment ?
 * Combien de segments y a-t-il au total ?
-* Existe-t-il des segments portant le même nom mais ayant des ID différents ?
-* Quelle est la distribution des méthodes d’évaluation (par lot, en périphérie, en flux continu) entre les segments ?
 * Afficher une liste des segments qui ont été modifiés pour la dernière fois le mois dernier.
 * Quels segments ont été modifiés la semaine dernière ?
-* Certains segments n’ont-ils pas été modifiés au cours des six derniers mois ?
-* Liste des segments créés l’année dernière.
-* Afficher les segments qui ont été modifiés pour la dernière fois avant aujourd’hui.
-* Existe-t-il des schémas ou des tendances dans les dates de création de segments au cours de l’année écoulée ?
-* Pouvez-vous identifier les segments qui n’ont pas été modifiés depuis leur création ?
-* Certains segments n’ont-ils pas été modifiés depuis leur création ?
-* Quelle est la tendance de la création de segments au fil du temps ?
-* Quelle est la distribution des dates de création de segment ?
-* Quelle est la distribution des dates de modification de segment ?
-* Quels segments comportent le plus de profils utilisateur ?
-* Quels segments comportent le moins de profils utilisateur ?
-* Liste de tous les segments par lot.
-* Liste de tous les segments Edge.
-* Quels segments sont activés ?
-* Quels segments sont transférés vers Facebook ?
-* Le segment est-il nommé &quot;Clients APAC&quot; par lot ou en flux continu ?
-* Combien de profils comporte le segment Travail actif ?
-* L’un de mes segments comporte-t-il 0 profil ?
-* Quels jeux de données ont un impact sur le segment de fidélité bronze ?
-* Quelles définitions de segment utilisent les champs XDM qui contiennent &quot;gender&quot; ?
-* Quels champs XDM renseignés se produisent dans les segments en flux continu ?
-* Combien de champs XDM y a-t-il dans toutes les définitions de segment ?
-* Quels segments le jeu de données &quot;Utilisateurs professionnels&quot; a-t-il un impact ?
-* Quels segments sont transférés vers l’API HTTP ?
-* Parmi les segments activés, lesquels sont activés pour le plus grand nombre de types de destinations ?
+* À quoi correspond le nombre de profils ? {SEGMENT_NAME} segment ?
+* Répertorier tous les segments en double.
+* Afficher les segments que j’ai créés ou mis à jour au cours des 7 derniers jours
+* Quelle est la distribution du nombre de profils entre les segments ?
+* Combien de champs sont utilisés dans la segmentation ?
 * Quel est le nombre total de segments activés ?
-* Combien de segments sont activés ?
+* Quels segments sont activés ?
 * Combien de segments en double sont activés ?
+* Liste des segments créés l’année dernière.
+* Afficher les segments qui ont été modifiés pour la dernière fois avant {DATE}.
+* Nombre de noms de segment uniques associés à la variable {SCHEMA_NAME} schéma ?
+* Quels schémas sont les plus couramment utilisés dans les segments ?
+* Combien de schémas ai-je ?
+* Quels jeux de données utilisent ? {SCHEMA_NAME} schéma ?
+* Liste de tous les schémas modifiés la semaine dernière.
+* Combien de schémas le profil est-il activé ?
+* Répertorier tous les schémas de classe d’événements d’expérience ?
+* Les jeux de données ingérés dans la variable {SCHEMA_NAME} schéma ?
+* Combien de jeux de données ont été ingérés à l’aide du même schéma ?
+* Combien de jeux de données ai-je ?
+* Quels jeux de données sont utilisés dans chaque segment ?
+* Quels segments utilisent ? {ATTRIBUTE_NAME} attribut?
+* Quels schémas ont {ATTRIBUTE_NAME} y sont associées ?
+* Combien d’attributs de schéma XDM ne sont utilisés dans aucun segment ?
+* Dans quel(s) jeu(s) de données est/sont {ATTRIBUTE_NAME} Champs XDM renseignés ?
+* Les jeux de données pour lesquels des données sont {ATTRIBUTE_NAME} attribut?
 * Combien de segments sont activés pour chaque destination ?
-* Quels segments sont activés pour 0, 1 ou plusieurs destinations ? Afficher la distribution.
 * Quels segments sont activés pour le plus grand nombre de destinations ?
-* Quels segments en double sont activés ?
-* Quels segments sont activés dans Adobe Target ?
-* Sur tous les segments, combien de fois chaque stratégie de fusion est-elle utilisée ?
-
->[!TAB Schémas]
-
-* Combien de schémas XDM sont définis ?
-* Quels sont les schémas créés le plus récemment ?
-* Combien de schémas pour chaque classe XDM ?
-* Quel schéma le jeu de données &quot;Segment Ingestion&quot; utilise-t-il ?
-* Quels schémas ne sont utilisés par aucun jeu de données ?
-
->[!TAB Destinations]
-
-* Combien de destinations y a-t-il ?
-* Quelles sont les destinations créées le plus récemment ?
-* Quelles destinations sont associées à chaque segment ?
-
->[!TAB Sources]
-
-* Combien de sources ont été créées ?
-* Quelles sont les sources créées le plus récemment ?
-* Combien de sources sont disponibles, réparties par catégorie ?
-* Puis-je créer une connexion source à partir de S3 ?
-* Quelles sources ont contribué au jeu de données Mutual365 ?
-
->[!TAB Jeux de données]
-
-* Combien de jeux de données y a-t-il ?
-* Quels sont les jeux de données créés le plus récemment ?
-* Quels jeux de données sont activés pour le profil unifié ?
-* Existe-t-il un paramètre TTL pour le jeu de données d’ingestion de segments ?
-* Qu’est-ce que la durée de vie du jeu de données des utilisateurs professionnels ?
-* Quels jeux de données utilisent le schéma Utilisateurs professionnels ?
-
->[!TAB Attributs]
-
-* Quels sont les champs XDM les plus fréquemment renseignés dans tous les jeux de données ?
-* Quels sont les champs et attributs XDM les plus couramment utilisés dans les schémas ?
-* Quels champs et attributs XDM sont utilisés dans le schéma Utilisateurs professionnels ?
-* Liste des attributs utilisés pour ce segment avec identifiant {SEGMENT_ID}.
-* Combien de champs XDM sont utilisés dans 2 segments ou plus ?
-* Quels sont les champs les plus couramment utilisés dans les segments ?
-* Des champs sont-ils utilisés dans un seul segment ?
-* Quels attributs sont utilisés pour le segment de fidélité Bronze ?
-* Quels attributs ne sont utilisés dans aucun segment ?
-* Quels sont les attributs les plus couramment utilisés dans les segments ?
-
->[!ENDTABS]
+* L’un de mes segments comporte-t-il 0 profil ?
+* Combien de flux de données ai-je ?
 
 +++
 
@@ -343,3 +286,5 @@ Lisez le tableau ci-dessous pour obtenir des exemples :
 | Quel est mon segment le plus important ? | Quel est mon segment le plus important ? Utiliser les données. | Indiquez explicitement à l’assistant d’IA que vous souhaitez que la réponse soit basée sur les données. |
 | Quel est mon segment le plus important ? | Liste de mon segment le plus important. | Il existe des cas où une question &quot;quoi...&quot; peut être confondue avec une question basée sur la documentation. L’utilisation d’une commande telle que &quot;list&quot; est un indicateur plus fort que vous posez une question avec des données en contexte. |
 | Combien de jeux de données ai-je ? | Comptez mes jeux de données. | La question d’origine fonctionne pour les segments, mais elle peut ne pas fonctionner avec les jeux de données. |
+
+

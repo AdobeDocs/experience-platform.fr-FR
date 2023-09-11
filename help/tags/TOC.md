@@ -5,10 +5,10 @@ breadcrumb-title: Balises
 user-guide-description: Découvrez comment déployer et gérer des balises d’analyse, de marketing et de publicité pour améliorer les expériences clients.
 feature: Tags
 solution: Data Collection
-source-git-commit: 1ca080f6dd62c49c1f1672ec36ce446af591b6b6
+source-git-commit: c2baf3d14e57df87303aeadeed90203dcd233242
 workflow-type: tm+mt
-source-wordcount: '1027'
-ht-degree: 98%
+source-wordcount: '1034'
+ht-degree: 99%
 
 ---
 
@@ -104,8 +104,8 @@ ht-degree: 98%
          * [Types d’éléments de données](./extensions/client/web-sdk/data-element-types.md)
          * [Accès à l’ECID](./extensions/client/web-sdk/accessing-the-ecid.md)
          * [Plug-ins SDK Web](./extensions/client/web-sdk/web-sdk-plugins.md)
-         * [Notes de mise à jour de l’extension SDK web](./extensions/client/web-sdk/web-sdk-ext-release-notes.md)
-         * [Notes de mise à jour des modules externes SDK Web](./extensions/client/web-sdk/web-sdk-plugins-release-notes.md)
+         * [Notes de mise à jour de l’extension SDK Web](./extensions/client/web-sdk/web-sdk-ext-release-notes.md)
+         * [Notes de mise à jour des plug-ins SDK Web](./extensions/client/web-sdk/web-sdk-plugins-release-notes.md)
       * des statistiques sur les ressources Adobe Experience Manager {#asset-insights}
          * [Aperçu](./extensions/client/asset-insights/overview.md)
          * [Notes de mise à jour](./extensions/client/asset-insights/release-notes.md)
@@ -246,6 +246,7 @@ ht-degree: 98%
          * [Aperçu](./extensions/server/splunk/overview.md)
       * [!DNL Twitter] {#twitter}
          * [Aperçu](./extensions/server/twitter/overview.md)
+      * [[!DNL Tiktok] API des événements web](https://exchange.adobe.com/apps/ec/109834)
       * API des événements [!DNL Zendesk] {#zendesk}
          * [Aperçu](./extensions/server/zendesk/overview.md)
 * Développement d’extension {#extension-dev}

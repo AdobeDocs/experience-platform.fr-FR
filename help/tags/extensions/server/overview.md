@@ -2,10 +2,10 @@
 title: Référence des extensions de transfert d’événement
 description: Recherchez la documentation pour les extensions de transfert d’événement dans Adobe Experience Platform.
 exl-id: e7b42241-b41c-4d12-8551-4df14e3c9b74
-source-git-commit: 0d931c90b6321d93eec9da16f360a3ecd2fd8f14
+source-git-commit: c2baf3d14e57df87303aeadeed90203dcd233242
 workflow-type: tm+mt
-source-wordcount: '184'
-ht-degree: 54%
+source-wordcount: '191'
+ht-degree: 57%
 
 ---
 
@@ -32,7 +32,7 @@ Vous trouverez ci-dessous une liste de la documentation relative aux extensions 
 * [[!DNL AWS]](./aws/overview.md)
 * [[!DNL Braze]](./braze/overview.md)
 * [Connecteur cloud pour Google Analytics](https://exchange.adobe.com/apps/ec/106542)*
-* [Connecteur cloud pour les Google Analytics 4](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.109820.html)*
+* [Connecteur cloud pour Google Analytics](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.109820.html)*
 * [Base](./core/overview.md)
 * [API d’événement Epsilon](https://exchange.adobe.com/apps/ec/109127)*
 * [Conversions améliorées de Google Ads](./google-ads-enhanced-conversions/overview.md)
@@ -47,4 +47,5 @@ Vous trouverez ci-dessous une liste de la documentation relative aux extensions 
 * [Snowflake](./snowflake/overview.md)
 * [[!DNL Splunk]](./splunk/overview.md)
 * [[!DNL Twitter]](./twitter/overview.md)
+* [[!DNL Tiktok] API des événements web](https://exchange.adobe.com/apps/ec/109834)*
 * [API des événements [!DNL Zendesk] ](./zendesk/overview.md)

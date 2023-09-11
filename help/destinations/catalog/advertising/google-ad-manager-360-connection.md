@@ -2,10 +2,10 @@
 title: Connexion à  [!DNL Google Ad Manager 360]  (Version bêta)
 description: Google Ad Manager 360 est une plateforme de diffusion des publicités de Google qui donne aux éditeurs les moyens de gérer l’affichage des publicités sur leurs sites web, en vidéo et dans les applications mobiles.
 exl-id: 3251145a-3e4d-40aa-b120-d79c8c9c7cae
-source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
+source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
 workflow-type: tm+mt
-source-wordcount: '1031'
-ht-degree: 75%
+source-wordcount: '1010'
+ht-degree: 78%
 
 ---
 
@@ -41,15 +41,12 @@ Notez les détails suivants qui sont spécifiques aux destinations [!DNL Google 
 
 ## Audiences prises en charge {#supported-audiences}
 
-Cette section décrit toutes les audiences que vous pouvez exporter vers cette destination.
+Cette section décrit le type d’audiences que vous pouvez exporter vers cette destination.
 
-Cette destination prend en charge l’activation de toutes les audiences générées par l’Experience Platform. [Segmentation Service](../../../segmentation/home.md).
-
-*En outre*, cette destination prend également en charge l’activation des audiences décrites dans le tableau ci-dessous.
-
-| Type d’audience | Description |
----------|----------|
-| Chargements personnalisés | Audiences [importé](../../../segmentation/ui/overview.md#import-audience) dans Experience Platform à partir de fichiers CSV. |
+| Origine de l’audience | Pris en charge | Description |
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ | Audiences générées par l’Experience Platform [Segmentation Service](../../../segmentation/home.md). |
+| Chargements personnalisés | ✓ | Audiences [importées](../../../segmentation/ui/overview.md#import-audience) dans Experience Platform à partir de fichiers CSV. |
 
 {style="table-layout:auto"}
 
@@ -68,7 +65,7 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 ### Liste autorisée {#allow-listing}
 
-La liste autorisée est obligatoire avant de configurer votre première destination [!DNL Google Ad Manager 360] dans Platform. Veillez à terminer le processus de liste autorisée décrit ci-dessous, avant de créer votre destination.
+La liste autorisée est obligatoire avant de configurer votre première destination [!DNL Google Ad Manager 360] dans Platform. Veillez à terminer le processus de mise en liste autorisée décrit ci-dessous, avant de créer votre destination.
 
 >[!NOTE]
 >
@@ -120,7 +117,7 @@ Vous pouvez activer les alertes pour recevoir des notifications sur le statut de
 
 Lorsque vous avez terminé de renseigner les détails sur votre connexion de destination, sélectionnez **[!UICONTROL Suivant]**.
 
-## Activer les audiences vers cette destination {#activate}
+## Activer des audiences vers cette destination {#activate}
 
 >[!IMPORTANT]
 > 

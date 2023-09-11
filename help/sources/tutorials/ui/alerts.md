@@ -3,10 +3,10 @@ keywords: Experience Platform;accueil;rubriques les plus consultées ; alertes
 description: Vous pouvez vous abonner à des alertes lors de la création d’un flux de données pour recevoir des messages d’alerte concernant l’état, la réussite ou l’échec de votre exécution de flux.
 title: Abonnement à des alertes contextuelles dans l’interface utilisateur
 exl-id: 5d51edaa-ecba-4ac0-8d3c-49010466b9a5
-source-git-commit: 3f7f66c0d58d127299ad12027869ca0e9837f5cd
+source-git-commit: 9120377f5f2048579d7e2a4740cfcbc56d49d61a
 workflow-type: tm+mt
-source-wordcount: '868'
-ht-degree: 21%
+source-wordcount: '846'
+ht-degree: 23%
 
 ---
 
@@ -28,7 +28,7 @@ Ce document nécessite une compréhension pratique des composants suivants de Ad
 
 * [Sources ](../../home.md): [!DNL Experience Platform]permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services [!DNL Platform].
 * [Observability vous permet de surveiller les activités de Platform en utilisant des mesures statistiques et des notifications dʼévénement.](../../../observability/home.md)[!DNL Observability Insights]
-   * [Alertes](../../../observability/alerts/overview.md): Lorsqu’un certain ensemble de conditions de vos opérations Platform est atteint (par exemple, un problème potentiel lorsque le système enfreint un seuil), Platform peut envoyer des messages d’alerte à tous les utilisateurs de votre organisation qui se sont abonnés à eux.
+   * [Alertes](../../../observability/alerts/overview.md): lorsqu’un certain ensemble de conditions est atteint dans vos opérations Platform (par exemple un problème potentiel lorsque le système dépasse un seuil), Platform peut envoyer des messages d’alerte à tous les utilisateurs de votre organisation qui se sont abonnés à eux.
 
 ## Abonnement aux alertes dans l’interface utilisateur {#subscribe-sources-alerts}
 
@@ -42,20 +42,23 @@ Ce document nécessite une compréhension pratique des composants suivants de Ad
 >
 >Vous devez activer les notifications instantanées des e-mails pour votre compte Platform afin de recevoir des notifications d’alerte par e-mail pour vos flux de données.
 
-Vous pouvez activer des alertes pour vos flux de données pendant la [!UICONTROL Détails du flux de données] de l’étape du workflow sources dans l’espace de travail sources .
+Vous pouvez activer des alertes pour vos flux de données au cours de la [!UICONTROL Détails du flux de données] de l’étape du workflow sources dans l’espace de travail sources .
 
 ![dataflow-detail](../../images/tutorials/alerts/dataflow-detail.png)
 
 Les alertes disponibles pour les flux de données de sources sont les suivantes :
 
+>[!NOTE]
+>
+>Les sources de diffusion en continu ne sont actuellement pas prises en charge par les alertes. Vous ne pouvez vous abonner qu’aux notifications d’alerte pour les sources par lots.
+
 | Alertes | Description |
 | --- | --- |
-| Démarrage de l’exécution du flux de données sources | Cette alerte vous envoie un message lorsque votre flux de données source a démarré. |
-| Réussite de l’exécution du flux de données sources | Cette alerte vous envoie un message lorsque les données de votre source sont correctement ingérées dans Platform. |
-| Échec de l’exécution des flux de données sources | Cette alerte vous envoie un message si une erreur se produit dans votre flux de données. |
-| ~~Sources Flux de données : absence d’ingestion~~ | ~~Cette alerte vous envoie un message si l’ingestion est retardée de plus de sept heures et qu’aucune donnée n’est ingérée dans Platform.~~ <br>**Remarque :** Vous ne recevrez plus d’alertes car cette alerte est obsolète. |
+| Début d’exécution du flux de sources | Cette alerte vous envoie un message lorsque votre flux de données source a démarré. |
+| Succès de l’exécution du flux de sources | Cette alerte vous envoie un message lorsque les données de votre source sont correctement ingérées dans Platform. |
+| Échec de l’exécution du flux des sources | Cette alerte vous envoie un message si une erreur se produit dans votre flux de données. |
 
-Sélectionnez les alertes auxquelles vous souhaitez vous abonner, puis sélectionnez **[!UICONTROL Suivant]** pour passer en revue et terminer votre flux de données.
+Sélectionnez les alertes auxquelles vous souhaitez vous abonner, puis sélectionnez **[!UICONTROL Suivant]** pour revoir et terminer votre flux de données.
 
 ![select-alertes](../../images/tutorials/alerts/select-alerts.png)
 
@@ -93,11 +96,11 @@ Sélectionnez le message d’alerte pour afficher des informations spécifiques 
 
 ![select-alert-message](../../images/tutorials/alerts/select-alert-message.png)
 
-Le [!UICONTROL Présentation de l’exécution du flux de données] s’affiche. La moitié supérieure de l’écran affiche un aperçu de votre flux de données, y compris des informations sur ses attributs, l’identifiant d’exécution de flux de données correspondant et un résumé d’erreur de haut niveau.
+La variable [!UICONTROL Présentation de l’exécution du flux de données] s’affiche. La moitié supérieure de l’écran affiche un aperçu de votre flux de données, y compris des informations sur ses attributs, l’identifiant d’exécution de flux de données correspondant et un résumé d’erreur de haut niveau.
 
 ![dataflow-overview](../../images/tutorials/alerts/dataflow-overview.png)
 
-La moitié inférieure de la page affiche toutes les [!UICONTROL Erreurs d’exécution du flux de données] qui se produisaient pendant l’étape d’exécution du flux de données. À partir de là, vous pouvez prévisualiser les diagnostics d’erreur ou utiliser le [[!DNL Data Access] API](https://www.adobe.io/experience-platform-apis/references/data-access/) pour télécharger les diagnostics d’erreur ou le manifeste de fichier correspondant à votre flux de données.
+La moitié inférieure de la page affiche toutes les [!UICONTROL Erreurs d’exécution du flux de données] qui se produisaient pendant l’étape d’exécution du flux de données. Vous pouvez y afficher un aperçu des diagnostics d’erreur ou utiliser le [[!DNL Data Access] API](https://www.adobe.io/experience-platform-apis/references/data-access/) pour télécharger les diagnostics d’erreur ou le manifeste de fichier correspondant à votre flux de données.
 
 ![dataflow-run-errors](../../images/tutorials/alerts/dataflow-run-error.png)
 

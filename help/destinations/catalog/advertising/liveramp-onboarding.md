@@ -1,24 +1,24 @@
 ---
-title: LiveRamp - Connexion à l’intégration
+title: LiveRamp - Connexion pour l’intégration
 description: Découvrez comment utiliser le connecteur LiveRamp pour intégrer des audiences d’Adobe Real-time Customer Data Platform vers LiveRamp Connect.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: b8ce7ec2-7af9-4d26-b12f-d38c85ba488a
-source-git-commit: 7ea411c9543230f254f2a0565c04f277fed2b17b
+source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
 workflow-type: tm+mt
-source-wordcount: '1814'
-ht-degree: 68%
+source-wordcount: '1793'
+ht-degree: 98%
 
 ---
 
 # Connexion [!DNL LiveRamp - Onboarding] {#liveramp-onboarding}
 
-Utilisez la variable [!DNL LiveRamp - Onboarding] connexion aux audiences intégrées depuis Adobe Real-time Customer Data Platform vers [!DNL LiveRamp Connect].
+Utilisez la connexion [!DNL LiveRamp - Onboarding] pour intégrer des audiences à partir d’Adobe Real-time Customer Data Platform vers [!DNL LiveRamp Connect].
 
 ## Cas d’utilisation {#use-cases}
 
 Pour mieux comprendre quand et comment utiliser la destination [!DNL LiveRamp - Onboarding], consultez l’exemple de cas d’utilisation ci-dessous que les clientes et clients d’Adobe Experience Platform peuvent résoudre à l’aide de cette destination.
 
-En tant que marketeur, je souhaite envoyer des audiences de Adobe Experience Platform vers des identités intégrées dans [!DNL LiveRamp Connect] afin de cibler les utilisateurs sur les appareils mobiles, le web ouvert, les réseaux sociaux et [!DNL CTV] plateformes, à l’aide de [!DNL Ramp ID] identifiant.
+En tant que personne spécialiste marketing, je souhaite envoyer des audiences d’Adobe Experience Platform vers des identités intégrées dans [!DNL LiveRamp Connect] afin que je puisse cibler les utilisateurs et utilisatrices sur les plateformes mobiles, web ouvertes, de réseaux sociaux et [!DNL CTV], à l’aide de l’identifiant [!DNL Ramp ID].
 
 ## Conditions préalables {#prerequisites}
 
@@ -28,21 +28,18 @@ Avant d’envoyer des données d’Experience Platform vers [!DNL LiveRamp - On
 
 ## Identités prises en charge {#supported-identities}
 
-[!DNL LiveRamp - Onboarding] prend en charge l’activation d’identités telles que les identifiants basés sur des informations d’identification personnelles, les identifiants connus et les identifiants personnalisés, décrits dans la section [Documentation LiveRamp](https://docs.liveramp.com/connect/en/identity-and-identifier-terms-and-concepts.html#known-identifiers).
+[!DNL LiveRamp - Onboarding] prend en charge l’activation d’identités telles que les identifiants basés sur des informations d’identification personnelles, les identifiants connus et les identifiants personnalisés, décrits dans la [documentation de LiveRamp](https://docs.liveramp.com/connect/en/identity-and-identifier-terms-and-concepts.html#known-identifiers).
 
 À l’[étape de mappage](#map) du workflow d’activation, vous devez définir les mappages cibles en tant qu’attributs personnalisés.
 
 ## Audiences prises en charge {#supported-audiences}
 
-Cette section décrit toutes les audiences que vous pouvez exporter vers cette destination.
+Cette section décrit le type d’audiences que vous pouvez exporter vers cette destination.
 
-Cette destination prend en charge l’activation des audiences générées par l’Experience Platform. [Segmentation Service](../../../segmentation/home.md).
-
-En outre, cette destination prend également en charge l’activation des audiences supplémentaires décrites dans le tableau ci-dessous.
-
-| Type d’audience | Description |
----------|----------|
-| Chargements personnalisés | Audiences [importé](../../../segmentation/ui/overview.md#importing-an-audience) dans Experience Platform à partir de fichiers CSV. |
+| Origine de l’audience | Pris en charge | Description |
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ | Audiences générées par l’Experience Platform [Segmentation Service](../../../segmentation/home.md). |
+| Chargements personnalisés | ✓ | Audiences [importées](../../../segmentation/ui/overview.md#import-audience) dans Experience Platform à partir de fichiers CSV. |
 
 {style="table-layout:auto"}
 
@@ -52,8 +49,8 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 | Élément | Type | Notes |
 ---------|----------|---------|
-| Type d’exportation | **[!UICONTROL Exportation de l’audience]** | Vous exportez tous les membres d’une audience avec les identifiants (nom, numéro de téléphone ou autres) utilisés dans la variable [!DNL LiveRamp - Onboarding] destination. |
-| Fréquence des exportations | **[!UICONTROL Lot quotidien]** | Les profils étant mis à jour en Experience Platform en fonction de l’évaluation de l’audience, les profils (identités) sont mis à jour une fois par jour en aval de la plateforme de destination. En savoir plus sur les [destinations basées sur des fichiers par lots](/help/destinations/destination-types.md#file-based). |
+| Type d’exportation | **[!UICONTROL Exportation d’audience]** | Vous exportez tous les profils membres d’une audience ainsi que les identifiants (nom, numéro de téléphone ou autres) utilisés dans la destination [!DNL LiveRamp - Onboarding]. |
+| Fréquence des exportations | **[!UICONTROL Lot quotidien]** | Étant donné que les profils sont mis à jour dans Experience Platform en fonction de l’évaluation des audiences, les profils (identités) sont mis à jour une fois par jour en aval de la plateforme de destination. En savoir plus sur les [destinations basées sur des fichiers par lots](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
 
@@ -77,7 +74,7 @@ Pour vous authentifier à la destination, renseignez les champs requis et sélec
 * **[!UICONTROL Mot de passe]** : mot de passe de votre emplacement de stockage [!DNL LiveRamp - Onboarding].
 * **[!UICONTROL Clé de chiffrement PGP/GPG]** : vous pouvez éventuellement joindre votre clé publique au format RSA pour ajouter un chiffrement à vos fichiers exportés. Vous pouvez voir un exemple de clé correctement formatée dans l’image ci-dessous.
   ![Image montrant un exemple de clé PGP correctement formatée dans l’interface utilisateur](../../assets/catalog/advertising/liveramp-onboarding/pgp-key.png)
-* **[!UICONTROL ID de sous-clé]**:Si vous fournissez une clé de chiffrement, vous devez également fournir une **[!UICONTROL ID de sous-clé]**. Consultez la [documentation sur le chiffrement](https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key) de [!DNL LiveRamp] pour savoir comment obtenir l’ID de sous-clé.
+* **[!UICONTROL ID de sous-clé]** : si vous fournissez une clé de chiffrement, vous devez également indiquer un **[!UICONTROL ID de sous-clé]**. Consultez la [documentation sur le chiffrement](https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key) de [!DNL LiveRamp] pour savoir comment obtenir l’ID de sous-clé.
 
 **SFTP avec authentification par clé SSH** {#sftp-ssh}
 
@@ -90,7 +87,7 @@ Pour vous authentifier à la destination, renseignez les champs requis et sélec
 
 * **[!UICONTROL Clé de chiffrement PGP/GPG]** : vous pouvez éventuellement joindre votre clé publique au format RSA pour ajouter un chiffrement à vos fichiers exportés. Vous pouvez voir un exemple de clé correctement formatée dans l’image ci-dessous.
   ![Image montrant un exemple de clé PGP correctement formatée dans l’interface utilisateur](../../assets/catalog/advertising/liveramp-onboarding/pgp-key.png)
-* **[!UICONTROL ID de sous-clé]**:Si vous fournissez une clé de chiffrement, vous devez également fournir une **[!UICONTROL ID de sous-clé]**. Consultez la [documentation sur le chiffrement](https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key) de [!DNL LiveRamp] pour savoir comment obtenir l’ID de sous-clé.
+* **[!UICONTROL ID de sous-clé]** : si vous fournissez une clé de chiffrement, vous devez également indiquer un **[!UICONTROL ID de sous-clé]**. Consultez la [documentation sur le chiffrement](https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key) de [!DNL LiveRamp] pour savoir comment obtenir l’ID de sous-clé.
 
 ### Renseigner les détails de la destination {#destination-details}
 
@@ -106,7 +103,7 @@ Pour configurer les détails de la destination, renseignez les champs obligatoir
 
 * **[!UICONTROL Nom]** : un nom par lequel vous reconnaîtrez cette destination à l’avenir.
 * **[!UICONTROL Description]** : une description qui vous aidera à identifier cette destination à l’avenir.
-* **[!UICONTROL Chemin du dossier]** : saisissez le sous-dossier `uploads` de [!DNL LiveRamp] qui hébergera les fichiers exportés. Le préfixe `uploads` est automatiquement ajouté au chemin du dossier. [!DNL LiveRamp] recommande de créer un sous-dossier dédié pour les diffusions d’Adobe Real-Time CDP afin de séparer les fichiers des autres flux existants et de garantir un bon fonctionnement de l’automatisation.
+* **[!UICONTROL Chemin du dossier]** : saisissez le sous-dossier `uploads` de [!DNL LiveRamp] qui hébergera les fichiers exportés. Le préfixe `uploads` est automatiquement ajouté au chemin du dossier. [!DNL LiveRamp] recommande de créer un sous-dossier dédié pour les diffusions d’Adobe Real-Time CDP afin de séparer les fichiers des autres flux existants et de garantir le bon fonctionnement de l’automatisation.
    * Par exemple, si vous souhaitez exporter vos fichiers vers `uploads/my_export_folder`, saisissez `my_export_folder` dans le champ **[!UICONTROL Chemin du dossier]**.
 * **[!UICONTROL Format de compression]** : sélectionnez le type de compression qu’Experience Platform doit utiliser pour les fichiers exportés. Les options disponibles sont **[!UICONTROL GZIP]** ou **[!UICONTROL Aucun]**.
 
@@ -116,23 +113,23 @@ Vous pouvez activer les alertes pour recevoir des notifications sur le statut de
 
 Lorsque vous avez terminé de renseigner les détails sur votre connexion de destination, sélectionnez **[!UICONTROL Suivant]**.
 
-## Activer les audiences vers cette destination {#activate}
+## Activer des audiences vers cette destination {#activate}
 
 >[!IMPORTANT]
 > 
 >Pour activer les données, vous avez besoin des [autorisations de contrôle d’accès](/help/access-control/home.md#permissions) pour les fonctions **[!UICONTROL Gérer les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]**, et **[!UICONTROL Afficher les segments]**. Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
-Lecture [Activation des données d’audience vers des destinations d’exportation de profils par lots](/help/destinations/ui/activate-batch-profile-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
+Consultez la section [Activer des données d’audience vers des destinations d’exportation de profils par lots](/help/destinations/ui/activate-batch-profile-destinations.md) pour obtenir des instructions sur l’activation des audience vers cette destination.
 
 ### Planification {#scheduling}
 
-Dans le [!UICONTROL Planification] créez un planning d&#39;export pour chaque audience, avec les paramètres ci-dessous.
+À l’étape [!UICONTROL Planification], créez une planification d’exportation pour chaque audience, avec les paramètres présentés ci-dessous.
 
 * **[!UICONTROL Options d’exportation de fichiers]** : [!UICONTROL Exporter des fichiers complets]. Les [exportations de fichiers incrémentiels](../../ui/activate-batch-profile-destinations.md#export-incremental-files) ne sont actuellement pas prises en charge pour la destination [!DNL LiveRamp].
 * **[!UICONTROL Fréquence]** : [!UICONTROL quotidiennement]
 * **[!UICONTROL Date]** : sélectionnez les heures de début et de fin de l’exportation comme vous le souhaitez.
 
-![Capture d’écran de l’interface utilisateur de Platform montrant l’étape de planification de l’audience.](../../assets/catalog/advertising/liveramp-onboarding/liveramp_scheduling_screenshot.png)
+![Capture d’écran de l’interface utilisateur de Platform montrant l’étape de planification des audiences.](../../assets/catalog/advertising/liveramp-onboarding/liveramp_scheduling_screenshot.png)
 
 Le nom de fichier exporté ne peut actuellement pas être configuré par l’utilisateur ou l’utilisatrice. Tous les fichiers exportés vers la destination [!DNL LiveRamp - Onboarding] sont automatiquement nommés en fonction du modèle suivant :
 
@@ -158,7 +155,7 @@ Luma_LiveRamp_52137231-4a99-442d-804c-39a09ddd005d_20230330_153857.csv
 
 >[!IMPORTANT]
 >
->Pour toute modification apportée aux champs cible après la remise initiale du fichier à [!DNL LiveRamp], veuillez prévenir votre [!DNL LiveRamp] équipe de compte ou [envoyer un ticket à l’assistance LiveRamp](https://docs.liveramp.com/connect/en/considerations-when-uploading-the-first-file-to-an-audience.html#creating-a-support-case) pour s’assurer que les modifications sont répercutées dans le processus d’automatisation.
+>Si vous modifiez les champs cibles après la diffusion initiale du fichier à [!DNL LiveRamp], prévenez votre équipe de compte [!DNL LiveRamp] ou [soumettez un ticket à l’assistance LiveRamp](https://docs.liveramp.com/connect/en/considerations-when-uploading-the-first-file-to-an-audience.html#creating-a-support-case) pour vous assurer que les modifications sont reflétées dans le processus d’automatisation.
 
 1. Dans l’étape **[!UICONTROL Mappage]**, sélectionnez **[!UICONTROL Ajouter un nouveau mappage]**. Une nouvelle ligne de mappage s’affichera à l’écran.
 
@@ -184,29 +181,29 @@ Vos données sont exportées vers l’emplacement de stockage [!DNL LiveRamp - O
 
 Lors de l’exportation de fichiers vers la destination [!DNL LiveRamp - Onboarding], Platform génère un fichier CSV pour chaque [ID de stratégie de fusion](../../../profile/merge-policies/overview.md).
 
-Prenons l’exemple des audiences suivantes :
+Prenons par exemple les audiences suivantes :
 
-* Audience A (stratégie de fusion 1)
-* Audience B (stratégie de fusion 2)
-* Audience C (stratégie de fusion 1)
-* Audience D (stratégie de fusion 1)
+* Audience A (politique de fusion 1)
+* Audience B (politique de fusion 2)
+* Audience C (politique de fusion 1)
+* Audience D (politique de fusion 1)
 
 Platform exportera deux fichiers CSV vers [!DNL LiveRamp - Onboarding] :
 
-* un fichier CSV contenant les audiences A, C et D ;
-* Un fichier CSV contenant l’audience B.
+* un fichier CSV contenant les audiences A, C et D ;
+* un fichier CSV contenant l’audience B.
 
-Les fichiers CSV exportés contiennent des profils avec les attributs sélectionnés et l’état d’audience correspondant, sur des colonnes distinctes, avec le nom de l’attribut, et `audience_namespace:audience_ID` des paires en-têtes de colonne, comme illustré dans l’exemple ci-dessous :
+Les fichiers CSV exportés contiennent des profils avec les attributs sélectionnés et le statut d’audience correspondant, sur des colonnes distinctes, avec le nom de l’attribut, et les paires `audience_namespace:audience_ID` en tant qu’en-têtes de colonne, comme illustré dans l’exemple ci-dessous :
 
 `ATTRIBUTE_NAME, AUDIENCE_NAMESPACE_1:AUDIENCE_ID_1, AUDIENCE_NAMESPACE_2:AUDIENCE_ID_2,..., AUDIENCE_NAMESPACE_X:AUDIENCE_ID_X`
 
-Les profils inclus dans les fichiers exportés peuvent correspondre à l’un des états de qualification d’audience suivants :
+Les profils inclus dans les fichiers exportés peuvent correspondre à l’un des statuts de qualification d’audience suivants :
 
-* `Active`: le profil est actuellement qualifié pour l’audience.
-* `Expired`: le profil n’est plus qualifié pour l’audience, mais il l’a déjà été.
-* `""`(chaîne vide) : le profil n’a jamais été qualifié pour l’audience.
+* `Active` : le profil est actuellement qualifié pour l’audience.
+* `Expired` : le profil n’est plus qualifié pour l’audience, mais il l’a déjà été.
+* `""` (chaîne vide) : le profil n’a jamais été qualifié pour l’audience.
 
-Par exemple, un fichier CSV exporté avec un `email` , deux audiences provenant de l’Experience Platform [Segmentation Service](../../../segmentation/home.md)et un [importé](../../../segmentation/ui/overview.md#importing-an-audience) audience externe, pourrait ressembler à ceci :
+Par exemple, un fichier CSV exporté avec un attribut `email`, deux audiences provenant du [Segmentation Service](../../../segmentation/home.md) d’Experience Platform et une audience externe [importée](../../../segmentation/ui/overview.md#importing-an-audience) ressemble à ceci :
 
 ```csv
 email,ups_aa2e3d98-974b-4f8b-9507-59f65b6442df,ups_45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f,CustomerAudienceUpload_7729e537-4e42-418e-be3b-dce5e47aaa1e
@@ -218,13 +215,13 @@ abc107@testemailabc.com,active,expired,active
 abc101@testemailabc.com,active,active,
 ```
 
-Dans l’exemple ci-dessus, la variable `ups_aa2e3d98-974b-4f8b-9507-59f65b6442df` et `ups_45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f` Les sections décrivent les audiences provenant du service de segmentation, tandis que `CustomerAudienceUpload_7729e537-4e42-418e-be3b-dce5e47aaa1e` décrit une audience importée dans Platform sous la forme d’une [téléchargement personnalisé](../../../segmentation/ui/overview.md#importing-an-audience).
+Dans l’exemple ci-dessus, les sections `ups_aa2e3d98-974b-4f8b-9507-59f65b6442df` et `ups_45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f` décrivent les audiences provenant de Segmentation Service, tandis que `CustomerAudienceUpload_7729e537-4e42-418e-be3b-dce5e47aaa1e` décrit une audience importée dans Platform sous la forme d’un [chargement personnalisé](../../../segmentation/ui/overview.md#importing-an-audience).
 
 Comme Platform génère un fichier CSV pour chaque [ID de stratégie de fusion](../../../profile/merge-policies/overview.md), il génère également une exécution de flux de données distincte pour chaque ID de stratégie de fusion.
 
-Cela signifie que la variable **[!UICONTROL Identités activées]** et **[!UICONTROL Profils reçus]** des [exécutions de flux de données](../../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) sont agrégées pour chaque groupe d’audiences qui utilisent la même stratégie de fusion, au lieu d’être affichées pour chaque audience.
+Cela signifie que les mesures **[!UICONTROL Identités activées]** et **[!UICONTROL Profils reçus]** de la page [exécutions de flux de données](../../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) sont agrégées pour chaque groupe d’audiences qui utilisent la même politique de fusion, au lieu d’être affichées pour chaque audience.
 
-Du fait que les flux de données sont générés pour un groupe d’audiences qui utilisent la même stratégie de fusion, les noms d’audience ne s’affichent pas dans la variable [tableau de bord de surveillance](../../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations).
+Du fait de la génération d’exécutions de flux de données pour un groupe d’audiences qui utilisent la même politique de fusion, les noms d’audience ne s’affichent pas dans le [tableau de bord de surveillance](../../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations).
 
 ![Capture d’écran de l’interface utilisateur d’Experience Platform affichant la mesure Identités activées.](../../assets/catalog/advertising/liveramp-onboarding/liveramp-metrics.png)
 
@@ -240,4 +237,4 @@ Lors de la gestion de vos données, toutes les destinations [!DNL Adobe Experien
 
 ## Ressources supplémentaires {#additional-resources}
 
-Pour plus d’informations sur la configuration de votre [!DNL LiveRamp - Onboarding] stockage, voir [documentation officielle](https://docs.liveramp.com/connect/en/upload-a-file-via-liveramp-s-sftp.html).
+Pour plus d’informations sur la configuration de votre stockage [!DNL LiveRamp - Onboarding], consultez la [documentation officielle](https://docs.liveramp.com/connect/en/upload-a-file-via-liveramp-s-sftp.html).

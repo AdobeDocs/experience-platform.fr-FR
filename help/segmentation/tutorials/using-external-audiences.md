@@ -5,9 +5,9 @@ description: Suivez ce tutoriel pour découvrir comment utiliser des audiences e
 exl-id: 56fc8bd3-3e62-4a09-bb9c-6caf0523f3fe
 hide: true
 hidefromtoc: true
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: c83070d85177c72b2e4c4ae472b89c08c20ee743
 workflow-type: tm+mt
-source-wordcount: '1720'
+source-wordcount: '1722'
 ht-degree: 5%
 
 ---
@@ -24,11 +24,11 @@ Adobe Experience Platform prend en charge la possibilité d’importer une audie
 
 Ce tutoriel nécessite une compréhension pratique des différentes [!DNL Adobe Experience Platform] services impliqués dans la création d’audiences. Avant de commencer ce tutoriel, veuillez consulter la documentation relative aux services suivants :
 
-- [Segmentation Service](../home.md): Permet de créer des audiences à partir de données Real-time Customer Profile.
+- [Segmentation Service](../home.md): vous permet de créer des audiences à partir de données Real-time Customer Profile.
 - [Profil client en temps réel](../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
 - [Modèle de données d’expérience (XDM)](../../xdm/home.md) : cadre normalisé selon lequel Experience Platform organise les données d’expérience client. Pour utiliser au mieux la segmentation, veillez à ce que vos données soient ingérées en tant que profils et événements en fonction des [bonnes pratiques pour la modélisation des données](../../xdm/schema/best-practices.md).
 - [Jeu de données](../../catalog/datasets/overview.md) : la structure de stockage et de gestion pour la persistance des données dans Experience Platform.
-- [Ingestion par flux](../../ingestion/streaming-ingestion/overview.md): Comment Experience Platform ingère et stocke des données à partir de périphériques côté client et côté serveur en temps réel.
+- [Ingestion par flux](../../ingestion/streaming-ingestion/overview.md): méthode d’ingestion et de stockage de données par Experience Platform à partir de périphériques côté client et côté serveur en temps réel.
 
 ### Audiences et définitions de segment
 
@@ -58,19 +58,19 @@ Pour commencer à composer un schéma, sélectionnez d’abord **[!UICONTROL Sch
 
 ![Les options Créer un schéma et Parcourir sont mises en surbrillance.](../images/tutorials/external-audiences/create-schema-browse.png)
 
-Puisque vous créez une définition de segment, qui est une classe prédéfinie, sélectionnez **[!UICONTROL Utilisation d’une classe existante]**. Maintenant, sélectionnez le **[!UICONTROL Définition de segment]** , suivie de **[!UICONTROL Attribuer une classe]**.
+Puisque vous créez une définition de segment, qui est une classe prédéfinie, sélectionnez **[!UICONTROL Utiliser la classe existante]**. Maintenant, sélectionnez le **[!UICONTROL Définition de segment]** , suivie de **[!UICONTROL Attribuer une classe]**.
 
 ![La classe de définition de segment est mise en surbrillance.](../images/tutorials/external-audiences/assign-class.png)
 
-Maintenant que votre schéma a été créé, vous devez spécifier le champ qui contiendra l’identifiant du segment. Ce champ doit être marqué comme identité Principale et affecté aux espaces de noms que vous avez précédemment créés.
+Maintenant que votre schéma a été créé, vous devez spécifier le champ qui contiendra l’identifiant du segment. Ce champ doit être marqué comme identité principale et affecté aux espaces de noms que vous avez précédemment créés.
 
-![Les cases à cocher permettant de marquer le champ sélectionné comme identité Principale sont mises en surbrillance dans l’éditeur de schémas.](../images/tutorials/external-audiences/mark-primary-identifier.png)
+![Les cases à cocher permettant de marquer le champ sélectionné comme identité principale sont mises en surbrillance dans l’éditeur de schémas.](../images/tutorials/external-audiences/mark-primary-identifier.png)
 
-Après avoir marqué la variable `_id` champ comme identité Principale, sélectionnez le titre du schéma, suivi du bouton bascule intitulé **[!UICONTROL Profil]**. Sélectionner **[!UICONTROL Activer]** pour activer le schéma pour [!DNL Real-Time Customer Profile].
+Après avoir marqué la variable `_id` champ comme identité principale, sélectionnez le titre du schéma, suivi du bouton à bascule intitulé **[!UICONTROL Profil]**. Sélectionner **[!UICONTROL Activer]** pour activer le schéma pour [!DNL Real-Time Customer Profile].
 
 ![La bascule permettant d’activer le schéma pour Profile est mise en surbrillance dans l’éditeur de schémas.](../images/tutorials/external-audiences/schema-profile.png)
 
-Désormais, ce schéma est activé pour Profile, avec la Principale identification affectée à l’espace de noms d’identité non-personne que vous avez créé. Par conséquent, cela signifie que les métadonnées de segment importées dans Platform à l’aide de ce schéma seront ingérées dans Profile sans être fusionnées avec d’autres données de profil liées aux personnes.
+Désormais, ce schéma est activé pour Profile, l’identification principale étant affectée à l’espace de noms d’identité non-personne que vous avez créé. Par conséquent, cela signifie que les métadonnées de segment importées dans Platform à l’aide de ce schéma seront ingérées dans Profile sans être fusionnées avec d’autres données de profil liées aux personnes.
 
 ## Création d’un jeu de données pour le schéma
 
@@ -175,7 +175,7 @@ Maintenant que le schéma a été créé, vous devez ajouter le groupe de champs
 
 ![Le groupe de champs Détails de l’appartenance au segment est mis en surbrillance.](../images/tutorials/external-audiences/segment-membership-details.png)
 
-De plus, assurez-vous que le schéma est marqué pour **[!UICONTROL Profil]**. Pour ce faire, vous devez marquer un champ comme identité Principale.
+De plus, assurez-vous que le schéma est marqué pour **[!UICONTROL Profil]**. Pour ce faire, vous devez marquer un champ comme identité principale.
 
 ![La bascule permettant d’activer le schéma pour Profile est mise en surbrillance dans l’éditeur de schémas.](../images/tutorials/external-audiences/external-segment-profile.png)
 
@@ -265,4 +265,4 @@ Vous trouverez ci-dessous un exemple de payload de l’appartenance à une audie
 
 >[!NOTE]
 >
->Par défaut, les appartenances aux audiences externes ne sont conservées que pendant 30 jours. Pour les conserver pendant plus de 30 jours, utilisez la variable `validUntil` lors de l’ingestion de vos données d’audience. Pour plus d&#39;informations sur ce champ, veuillez lire le guide sur [Groupes de champs de schéma Détails de l’appartenance aux segments](../../xdm/field-groups/profile/segmentation.md).
+>Par défaut, les appartenances à une audience externe sont supprimées au bout de 30 jours. Pour empêcher la suppression et la conserver pendant plus de 30 jours, utilisez la variable `validUntil` lors de l’ingestion de vos données d’audience. Pour plus d&#39;informations sur ce champ, veuillez lire le guide sur [Groupes de champs de schéma Détails de l’appartenance aux segments](../../xdm/field-groups/profile/segmentation.md).

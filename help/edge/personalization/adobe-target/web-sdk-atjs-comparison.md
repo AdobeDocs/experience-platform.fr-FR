@@ -3,16 +3,16 @@ title: Comparaison d’at.js au SDK Web Experience Platform
 description: Découvrez comment comparer les fonctionnalités d’at.js au SDK Web Experience Platform
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;champ de décision;fragment de code de masquage préalable;vec;compositeur d’expérience d’après les formulaires;xdm;audiences;décisions;portée;schéma;schéma;diagramme système;diagramme
 exl-id: b63fe47d-856a-4cae-9057-51917b3e58dd
-source-git-commit: 5065d76ad8008988c843c88e33a25731fb5284d0
+source-git-commit: 139d6a6632532b392fdf8d69c5c59d1fd779a6d1
 workflow-type: tm+mt
-source-wordcount: '2286'
+source-wordcount: '2281'
 ht-degree: 8%
 
 ---
 
 # Comparer la bibliothèque at.js au SDK Web
 
-## Présentation
+## Vue d’ensemble
 
 Cet article présente un aperçu des différences entre les `at.js` et le SDK Web d’Experience Platform.
 
@@ -20,11 +20,11 @@ Cet article présente un aperçu des différences entre les `at.js` et le SDK We
 
 ### Installation d’at.js
 
-Nous autorisons nos clients à télécharger la bibliothèque directement depuis l’onglet Mise en oeuvre de Adobe Experience Cloud. La bibliothèque at.js est personnalisée avec les paramètres suivants du client : clientCode, imsOrgId, etc.
+Nous autorisons nos clients à télécharger la bibliothèque directement depuis l’onglet Mise en oeuvre de Adobe Experience Cloud. La bibliothèque at.js est personnalisée avec les paramètres du client : clientCode, imsOrgId, etc.
 
 ### Installation du SDK Web
 
-La version prédéfinie est disponible sur un CDN. Vous pouvez référencer la bibliothèque sur le réseau de diffusion de contenu directement sur votre page, ou la télécharger et l’héberger sur votre propre infrastructure. Il est disponible dans des formats minimisés et non minimisés. La version non minimisée est utile à des fins de débogage.
+La version prédéfinie est disponible sur un réseau de diffusion de contenu. Vous pouvez référencer la bibliothèque sur le réseau de diffusion de contenu directement sur votre page, ou la télécharger et l’héberger sur votre propre infrastructure. Il est disponible dans des formats minimisés et non minimisés. La version non minimisée est utile à des fins de débogage.
 
 Structure de l’URL : https://cdn1.adoberesources.net/alloy/[VERSION]/alloy.min.js OU alloy.js pour la version non minimisée.
 
@@ -75,7 +75,7 @@ window.adobe.target.init(window, document, {
 });
 ```
 
-[En savoir plus](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetgobalsettings.html?lang=en).
+[En savoir plus](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetgobalsettings.html?lang=en)
 
 
 ### Configuration du SDK Web
@@ -240,7 +240,7 @@ adobe.target.getOffers({
 .catch(console.error);
 ```
 
-[En savoir plus](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/cmp-atjs-functions.html?lang=en).
+[En savoir plus](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/cmp-atjs-functions.html?lang=en)
 
 ### Utilisation du SDK Web
 
@@ -325,12 +325,12 @@ adobe.target.getOffers({
 .catch(console.error);
 ```
 
-[En savoir plus](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/cmp-atjs-functions.html?lang=en).
+[En savoir plus](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/cmp-atjs-functions.html?lang=en)
 
 
 ### Utilisation du SDK Web
 
-Vous pouvez récupérer les activités basées sur le compositeur d’après les formulaires à l’aide de la fonction `sendEvent` et transmission des noms de mbox sous le `decisionScopes` . Le `sendEvent` renvoie une promesse résolue avec un objet contenant les activités/propositions demandées : Voici comment la variable `propositions` tableau se présente comme suit :
+Vous pouvez récupérer les activités basées sur le compositeur d’après les formulaires à l’aide de la fonction `sendEvent` et transmission des noms de mbox sous la propriété `decisionScopes` . La variable `sendEvent` renvoie une promesse qui est résolue avec un objet contenant les activités/propositions demandées : c’est de cette manière que la fonction `propositions` tableau se présente comme suit :
 
 ```javascript
 [
@@ -462,7 +462,7 @@ adobe.target.getOffers({...})
   .catch(error => console.log("Error", error));
 ```
 
-En savoir plus sur les `applyOffers` à partir de la commande [documentation dédiée](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-applyoffers-atjs-2.html?lang=en).
+En savoir plus sur les `applyOffers` à partir de [documentation dédiée](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-applyoffers-atjs-2.html?lang=en).
 
 
 ### Utilisation du SDK Web
@@ -477,9 +477,9 @@ alloy("applyPropositions", {
 });
 ```
 
-En savoir plus sur les `applyPropositions` à partir de la commande [documentation dédiée](../../personalization/rendering-personalization-content.md#applypropositions).
+En savoir plus sur les `applyPropositions` à partir de [documentation dédiée](../../personalization/rendering-personalization-content.md#applypropositions).
 
-## Suivi des événements
+## Comment effectuer le suivi des événements
 
 ### Utilisation d’at.js
 
@@ -514,16 +514,16 @@ adobe.target.sendNotifications({
 });
 ```
 
-[En savoir plus](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-trackevent.html?lang=en).
+[En savoir plus](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-trackevent.html?lang=en)
 
 ### Utilisation du SDK Web
 
 Vous pouvez effectuer le suivi des événements et des actions de l’utilisateur en appelant le `sendEvent` , renseigner la variable `_experience.decisioning.propositions` Groupe de champs XDM et définition de la variable `eventType` à l’une des deux valeurs suivantes :
 
 * `decisioning.propositionDisplay`: Indique le rendu de l’activité Target.
-* `decisioning.propositionInteract`: Indique une interaction de l’utilisateur avec l’activité, comme un clic de souris.
+* `decisioning.propositionInteract`: indique une interaction de l’utilisateur avec l’activité, comme un clic de souris.
 
-Le `_experience.decisioning.propositions` Le groupe de champs XDM est un tableau d’objets. Les propriétés de chaque objet sont dérivées de la propriété `result.propositions` qui est renvoyé dans la variable `sendEvent` command : `{ id, scope, scopeDetails }`
+La variable `_experience.decisioning.propositions` Le groupe de champs XDM est un tableau d’objets. Les propriétés de chaque objet sont dérivées de la propriété `result.propositions` qui est renvoyé dans la variable `sendEvent` command : `{ id, scope, scopeDetails }`
 
 **Exemple 1 - Suivi d’une `decisioning.propositionDisplay` événement après le rendu d’une activité**
 
@@ -637,7 +637,7 @@ alloy("sendEvent", {
 
 ### Utilisation d’at.js
 
-Utilisez la variable `adobe.target.triggerView` fonction . Cette fonction peut être appelée à chaque chargement d’une nouvelle page ou lorsqu’un composant fait l’objet d’un nouveau rendu sur une page. La fonction adobe.target.triggerView() doit être implémentée pour les applications d’une seule page (SPA) afin d’utiliser le compositeur d’expérience visuelle (VEC) pour créer des activités de tests A/B et de ciblage d’expérience (XT). Si adobe.target.triggerView() n’est pas implémenté sur le site, le VEC ne peut pas être utilisé pour SPA.
+Utilisez la variable `adobe.target.triggerView` de la fonction Cette fonction peut être appelée à chaque chargement d’une nouvelle page ou lorsqu’un composant fait l’objet d’un nouveau rendu sur une page. La fonction adobe.target.triggerView() doit être implémentée pour les applications d’une seule page (SPA) afin d’utiliser le compositeur d’expérience visuelle (VEC) pour créer des activités de tests A/B et de ciblage d’expérience (XT). Si adobe.target.triggerView() n’est pas implémenté sur le site, le VEC ne peut pas être utilisé pour SPA.
 
 **Exemple**
 
@@ -645,12 +645,12 @@ Utilisez la variable `adobe.target.triggerView` fonction . Cette fonction peut �
 adobe.target.triggerView("homeView")
 ```
 
-[En savoir plus](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-triggerview-atjs-2.html?lang=en).
+[En savoir plus](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-triggerview-atjs-2.html?lang=en)
 
 
 ### Utilisation du SDK Web
 
-Pour déclencher ou signaler un changement d’affichage d’application d’une seule page, définissez la variable `web.webPageDetails.viewName` sous la propriété `xdm` de l’option `sendEvent` . Le SDK Web vérifie le cache des vues, s’il existe des offres pour la variable `viewName` spécifié dans `sendEvent` il les exécute et envoie un événement de notification d’affichage.
+Pour déclencher ou signaler un changement d’affichage d’application d’une seule page, définissez la variable `web.webPageDetails.viewName` sous `xdm` de l’ `sendEvent` . Le SDK Web vérifie le cache des vues, s’il existe des offres pour la variable `viewName` spécifié dans `sendEvent` il les exécute et envoie un événement de notification d’affichage.
 
 **Exemple**
 
@@ -685,7 +685,7 @@ document.addEventListener(adobe.target.event.REQUEST_SUCCEEDED, function(e) {
 }); 
 ```
 
-[En savoir plus](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=en).
+[En savoir plus](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=en)
 
 
 ### Utilisation du SDK Web
@@ -694,7 +694,7 @@ document.addEventListener(adobe.target.event.REQUEST_SUCCEEDED, function(e) {
 >
 >Assurez-vous que vous utilisez la version 2.6.0 ou ultérieure du SDK Web Platform.
 
-Les jetons de réponse sont renvoyés dans le cadre de la fonction `propositions` qui sont exposées dans le résultat de la fonction `sendEvent` . Chaque proposition contient un tableau de `items`, et chaque élément aura une `meta` renseigné avec des jetons de réponse s’ils sont activés dans l’interface utilisateur d’administration de Target. [En savoir plus](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=en).
+Les jetons de réponse sont renvoyés dans le cadre de la `propositions` qui sont exposées dans le résultat de la fonction `sendEvent` . Chaque proposition contient un tableau de `items`, et chaque élément aura une `meta` renseignés avec des jetons de réponse s’ils sont activés dans l’interface utilisateur d’administration de Target. [En savoir plus](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=en)
 
 **Exemple**
 
@@ -775,12 +775,12 @@ Lors du chargement du SDK Web asynchrone, il est recommandé d’injecter le fra
 
 Il existe deux types de journalisation A4T pris en charge à l’aide d’at.js :
 
-* Journalisation côté client d’Analytics
+* Journalisation côté client Analytics
 * Journalisation côté serveur Analytics
 
-#### Journalisation côté client d’Analytics
+#### Journalisation côté client Analytics
 
-**Exemple 1 : Utilisation du paramètre global de Target**
+**Exemple 1 : utilisation du paramètre global de Target**
 
 La journalisation côté client Analytics peut être activée en définissant `analyticsLogging: client_side` dans les paramètres at.js ou en remplaçant la variable `window.targetglobalSettings` .
 Lorsque cette option est configurée, le format de la payload renvoyé ressemble à ce qui suit :
@@ -798,7 +798,7 @@ Lorsque cette option est configurée, le format de la payload renvoyé ressemble
 
 La payload peut ensuite être transmise à Analytics via l’API d’insertion de données.
 
-Exemple 2 : Le configurer dans chaque `getOffers` function:
+Exemple 2 : le configurer dans chaque `getOffers` function:
 
 ```javascript
 adobe.target.getOffers({
@@ -865,17 +865,17 @@ Ensuite, les données s’enchaînent comme suit :
 
 Le SDK Web prend également en charge :
 
-* Journalisation côté client d’Analytics
+* Journalisation côté client Analytics
 * Journalisation côté serveur Analytics
 
-#### Journalisation côté client d’Analytics
+#### Journalisation côté client Analytics
 
 La journalisation côté client d’Analytics est activée lorsqu’Adobe Analytics est désactivé pour cette configuration de DataStream.
 
 ![](assets/analytics-disabled-datastream-config.png)
 
 Le client a accès au jeton Analytics (`tnta`) qui doivent être partagées avec Analytics à l’aide de [API d’insertion de données](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md)
-en enchaînant la variable `sendEvent` et effectuez une itération sur le tableau propositions obtenu.
+en enchaînant la variable `sendEvent` et effectuez une itération sur le tableau de propositions obtenu.
 
 **Exemple**
 
@@ -942,7 +942,7 @@ window.targetGlobalSettings = {
 };
 ```
 
-[En savoir plus](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetgobalsettings.html?lang=en).
+[En savoir plus](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetgobalsettings.html?lang=en)
 
 ### Utilisation du SDK Web
 
@@ -1042,7 +1042,7 @@ adobe.target.getOffers({
 .catch(console.error);
 ```
 
-[En savoir plus](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-getoffers-atjs-2.html?lang=en).
+[En savoir plus](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-getoffers-atjs-2.html?lang=en)
 
 
 ### Utilisation du SDK Web
@@ -1069,7 +1069,7 @@ alloy("sendEvent", {
 
 ### Utilisation d’at.js
 
-Il existe plusieurs façons d’envoyer at.js `mbox3rdPartyId`, à l’aide de `getOffer` ou `getOffers`:
+Il existe plusieurs façons d’envoyer at.js `mbox3rdPartyId`, en utilisant `getOffer` ou `getOffers`:
 
 **Exemple 1**
 
@@ -1104,7 +1104,7 @@ adobe.target.getOffers({
 Ou il existe un moyen de configurer la variable `mbox3rdPartyId` dans `targetPageParams` ou `targetPageParamsAll`.
 Lors de sa définition dans `targetPageParams`, il sera envoyé dans les demandes pour `target-global-mbox` également connu sous le nom `pag-lLoad`.
 La recommandation doit être définie à l’aide de `targetPageParamsAll` car il sera envoyé dans chaque requête cible.
-L’avantage de l’utilisation de `targetPageParamsAll` est que vous pouvez définir la variable `mbox3rdPartyId` sur la page une fois, ce qui garantit que toutes les requêtes cibles ont le droit `mbox3rdPartyId`.
+L’avantage d’utiliser `targetPageParamsAll` est que vous pouvez définir la variable `mbox3rdPartyId` sur la page une fois, ce qui garantit que toutes les requêtes cibles ont le droit `mbox3rdPartyId`.
 
 ```javascript
 window.targetPageParamsAll = function() {
@@ -1122,12 +1122,12 @@ window.targetPageParams = function() {
 };
 ```
 
-[En savoir plus](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetpageparams.html?lang=en).
+[En savoir plus](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetpageparams.html?lang=en)
 
 ### Utilisation du SDK Web
 
 Le SDK Web prend en charge l’identifiant tiers Target. Toutefois, cela nécessite quelques étapes supplémentaires. Avant de nous plonger dans la solution, nous devrions parler un peu `identityMap`.
-La carte des identités permet aux clients d’envoyer plusieurs identités. Toutes les identités sont des espaces de noms. Chaque espace de noms peut avoir une ou plusieurs identités. Une identité particulière peut être marquée comme Principale.
+La carte des identités permet aux clients d’envoyer plusieurs identités. Toutes les identités sont des espaces de noms. Chaque espace de noms peut avoir une ou plusieurs identités. Une identité particulière peut être marquée comme identité principale.
 En gardant ces connaissances à l’esprit, nous pouvons voir quelles sont les étapes nécessaires pour configurer le sdk web afin d’utiliser l’identifiant tiers Target.
 
 1. Configurez l’espace de noms qui contiendra l’identifiant tiers Target dans la vue Configuration du flux de données :
@@ -1188,7 +1188,7 @@ Cela signifie que chaque appel Target pour cette configuration de flux de donné
 
 ### Utilisation d’at.js
 
-Cette fonctionnalité est disponible uniquement dans at.js 2.x. at.js 2.x comporte une nouvelle fonction nommée `getOffers`. `getOffers` permettent aux clients de prérécupérer du contenu pour une ou plusieurs mbox. Voici un exemple :
+Cette fonctionnalité est disponible uniquement dans at.js 2.x. at.js 2.x a une nouvelle fonction nommée `getOffers`. `getOffers` permettent aux clients de prérécupérer du contenu pour une ou plusieurs mbox. Voici un exemple :
 
 ```javascript
 adobe.target.getOffers({
@@ -1211,7 +1211,7 @@ adobe.target.getOffers({
 .catch(console.error);
 ```
 
-REMARQUE : Il est vivement conseillé de s’assurer que la variable `mbox` dans le `mboxes` a son propre index. Généralement, la première mbox comporte `index=0`, le suivant `index=1`, etc.
+REMARQUE : Il est vivement conseillé de s’assurer que chaque `mbox` dans le `mboxes` a son propre index. En règle générale, la première mbox comporte `index=0`, le suivant `index=1`, etc.
 
 ### Utilisation du SDK Web
 
@@ -1227,14 +1227,14 @@ at.js expose les fonctionnalités de débogage suivantes :
 * Débogage de mbox : at.js consigne chaque action.
 * Target Trace : avec un jeton de suivi de mbox généré dans Bullseye, un objet trace avec les détails qui ont participé au processus de prise de décision est disponible sous `window.___target_trace` objet
 
-Remarque : Toutes ces fonctions de débogage sont disponibles avec des fonctionnalités améliorées dans [Débogueur Adobe Experience Platform](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
+Remarque : Toutes ces fonctions de débogage sont disponibles avec des fonctionnalités améliorées dans [Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
 
 ### Utilisation du SDK Web
 
 Vous disposez de plusieurs fonctionnalités de débogage lors de l’utilisation du SDK Web :
 
-* Utilisation [Griffon](https://aep-sdks.gitbook.io/docs/beta/project-griffon)
+* Utilisation [Assurance](../../../assurance/home.md)
 * [Débogage du SDK Web activé](../../../edge/fundamentals/debugging.md)
 * Utilisation [Hooks de surveillance du SDK Web](https://github.com/adobe/alloy/wiki/Monitoring-Hooks)
-* Utilisation [Débogueur Adobe Experience Platform](../../../debugger/home.md)
+* Utilisation [Adobe Experience Platform Debugger](../../../debugger/home.md)
 * Target Trace

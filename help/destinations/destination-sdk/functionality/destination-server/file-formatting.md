@@ -1,10 +1,10 @@
 ---
 description: Découvrez comment configurer les options de formatage de fichier pour les destinations basées sur des fichiers créés avec Adobe Experience Platform Destination SDK, via le point d’entrée `/destination-servers`.
 title: Configuration du formatage des fichiers
-source-git-commit: 249a12e6a079e3c99bf13bec4bf83b2a53cd522b
+source-git-commit: 511e02f92b7016a7f07dd3808b39594da9438d15
 workflow-type: tm+mt
-source-wordcount: '999'
-ht-degree: 95%
+source-wordcount: '1004'
+ht-degree: 96%
 
 ---
 
@@ -178,7 +178,7 @@ Vous trouverez ci-dessous une référence complète de toutes les options de for
 | `templatingStrategy` | Obligatoire | Pour chaque option de formatage de fichier que vous configurez, vous devez ajouter le paramètre `templatingStrategy`, qui peut avoir deux valeurs : <br><ul><li>`NONE` : utilisez cette valeur si vous n’envisagez pas de donner aux utilisateurs la possibilité de choisir entre différentes valeurs pour une configuration. Pour obtenir un exemple d’options de formatage de fichier corrigées, consultez [cette configuration](#file-configuration-templating-none).</li><li>`PEBBLE_V1` : utilisez cette valeur si vous souhaitez donner aux utilisateurs la possibilité de choisir entre différentes valeurs pour une configuration. Dans ce cas, vous devez également configurer un champ de données client correspondant dans la configuration des points d’entrées `/destination`, pour faire apparaître les différentes options aux utilisateurs dans l’interface utilisateur. Pour obtenir un exemple où les utilisateurs peuvent sélectionner différentes valeurs pour les options de formatage de fichier, consultez [cette configuration](#file-configuration-templating-pebble).</li></ul> | - | - | - |
 | `compression.value` | Facultatif | Codec de compression à utiliser lors de l’enregistrement de données dans un fichier. Valeurs prises en charge : `none`, `bzip2`, `gzip`, `lz4` et `snappy`. | `none` | - | - |
 | `fileType.value` | Facultatif | Indique le format du fichier de sortie. Valeurs prises en charge : `csv`, `parquet` et `json`. | `csv` | - | - |
-| `csvOptions.quote.value` | Facultatif | *Uniquement pour`"fileType.value": "csv"`*. Définit un caractère unique utilisé pour lʼéchappement des valeurs entre guillemets où le séparateur peut faire partie de la valeur. | `null` | - | - |
+| `csvOptions.quote.value` | Facultatif | *Uniquement pour`"fileType.value": "csv"`*. Définit un caractère unique utilisé pour lʼéchappement des valeurs entre guillemets où le séparateur peut faire partie de la valeur. | `null` | Exemple de valeur par défaut : `quote.value: "u0000"` —> `male,NULJohn,LastNameNUL` | Exemple personnalisé : `quote.value: "\""` —> `male,"John,LastName"` |
 | `csvOptions.quoteAll.value` | Facultatif | *Uniquement pour`"fileType.value": "csv"`*. Indique si toutes les valeurs doivent toujours être placées entre guillemets. La valeur par défaut est lʼéchappement des valeurs contenant un guillemet. | `false` | `quoteAll`:`false` --> `male,John,"TestLastName"` | `quoteAll`:`true` -->`"male","John","TestLastName"` |
 | `csvOptions.delimiter.value` | Facultatif | *Uniquement pour`"fileType.value": "csv"`*. Définit un séparateur pour chaque champ et valeur. Ce séparateur peut contenir un ou plusieurs caractères. | `,` | `delimiter`:`,` --> `comma-separated values"` | `delimiter`:`\t` --> `tab-separated values` |
 | `csvOptions.escape.value` | Facultatif | *Uniquement pour`"fileType.value": "csv"`*. Définit un caractère unique utilisé pour lʼéchappement des guillemets dans une valeur déjà entre guillemets. | `\` | `"escape"`:`"\\"` --> `male,John,"Test,\"LastName5"` | `"escape"`:`"'"` --> `male,John,"Test,'''"LastName5"` |
@@ -191,7 +191,7 @@ Vous trouverez ci-dessous une référence complète de toutes les options de for
 | `csvOptions.timestampFormat.value` | Facultatif | *Uniquement pour`"fileType.value": "csv"`*. Définit la chaîne qui indique un format d’horodatage. | `yyyy-MM-dd'T'HH:mm:ss[.SSS][XXX]` | - | - |
 | `csvOptions.charToEscapeQuoteEscaping.value` | Facultatif | *Uniquement pour`"fileType.value": "csv"`*. Définit un caractère unique utilisé pour l’échappement du caractère de guillemet. | `\` lorsque les caractères d’échappement et de guillemet sont différents. `\0` lorsque les caractères d’échappement et de guillemet sont identiques. | - | - |
 | `csvOptions.emptyValue.value` | Facultatif | *Uniquement pour`"fileType.value": "csv"`*. Définit la représentation sous forme de chaîne d’une valeur vide. | `""` | `"emptyValue":""` --> `male,"",John` | `"emptyValue":"empty"` --> `male,empty,John` |
-| `maxFileRowCount` | Facultatif | Indique le nombre maximal de lignes par fichier exporté, entre 1 000 000 et 10 000 000 lignes. | 5 000 000 |
+| `maxFileRowCount` | Facultatif | Indique le nombre maximal de lignes par fichier exporté, entre 1 000 000 et 10 000 000 de lignes. | 5 000 000 |
 
 {style="table-layout:auto"}
 
