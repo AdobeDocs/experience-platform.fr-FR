@@ -1,9 +1,9 @@
 ---
-keywords: Experience Platform;accueil;rubriques les plus consultées;espace de stockage dans le cloud;espace de stockage dans le cloud
+keywords: Experience Platform;accueil;rubriques populaires;espace de stockage dans le cloud;espace de stockage dans le cloud
 title: Exploration d’un dossier de stockage dans le cloud à l’aide de l’API Flow Service
 description: Ce tutoriel utilise l’API Flow Service pour explorer un système de stockage dans le cloud tiers.
 exl-id: ba1a9bff-43a6-44fb-a4e7-e6a45b7eeebd
-source-git-commit: 88e6f084ce1b857f785c4c1721d514ac3b07e80b
+source-git-commit: 9b9803b4d2aeb2a86ef980f34ee34909679ea3d9
 workflow-type: tm+mt
 source-wordcount: '699'
 ht-degree: 19%
@@ -16,7 +16,7 @@ Ce tutoriel décrit les étapes à suivre pour explorer et prévisualiser la str
 
 >[!NOTE]
 >
->Pour explorer votre espace de stockage dans le cloud, vous devez déjà disposer d’un identifiant de connexion de base valide pour une source de stockage dans le cloud. Si vous ne disposez pas de cet identifiant, reportez-vous à la section [présentation des sources](../../../home.md#cloud-storage) pour obtenir la liste des sources de stockage dans le cloud avec lesquelles vous pouvez créer une connexion de base.
+>Pour explorer votre espace de stockage dans le cloud, vous devez déjà disposer d’un identifiant de connexion de base valide pour une source de stockage dans le cloud. Si vous ne disposez pas de cet identifiant, reportez-vous au [présentation des sources](../../../home.md#cloud-storage) pour obtenir la liste des sources de stockage dans le cloud avec lesquelles vous pouvez créer une connexion de base.
 
 ## Prise en main
 
@@ -106,14 +106,14 @@ Vous pouvez examiner la structure d’un fichier de données à partir de votre 
 GET /connections/{BASE_CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&fileType={FILE_TYPE}&{QUERY_PARAMS}&preview=true
 GET /connections/{BASE_CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&preview=true&fileType=delimited&columnDelimiter=\t
 GET /connections/{BASE_CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&preview=true&fileType=delimited&compressionType=gzip;
-GET /connections/{BASE_CONNECTION_ID}/explore?objectType=FILE&object={FILE_PATH}&preview=true&ileType=delimited&encoding=ISO-8859-1;
+GET /connections/{BASE_CONNECTION_ID}/explore?objectType=FILE&object={FILE_PATH}&preview=true&fileType=delimited&encoding=ISO-8859-1;
 ```
 
 | Paramètre | Description |
 | --------- | ----------- |
 | `{BASE_CONNECTION_ID}` | Identifiant de connexion de votre connecteur source de stockage dans le cloud. |
 | `{FILE_PATH}` | Le chemin d’accès au fichier que vous souhaitez inspecter. |
-| `{FILE_TYPE}` | Type du fichier. Les types de fichiers pris en charge sont les suivants :<ul><li>DELIMITED</code>: Valeur séparée par un délimiteur. Les fichiers DSV doivent être séparés par des virgules.</li><li>JSON</code>: Notation d’objet JavaScript. Les fichiers JSON doivent être conformes à XDM</li><li>PARQUET</code>: Apache Parquet. Les fichiers parquet doivent être conformes à XDM.</li></ul> |
+| `{FILE_TYPE}` | Type du fichier. Les types de fichiers pris en charge sont les suivants :<ul><li><code>DELIMITED</code>: valeur séparée par un délimiteur. Les fichiers DSV doivent être séparés par des virgules.</li><li><code>JSON</code>: notation d’objet JavaScript. Les fichiers JSON doivent être conformes à XDM</li><li><code>PARQUET</code>: Apache Parquet. Les fichiers parquet doivent être conformes à XDM.</li></ul> |
 | `{QUERY_PARAMS}` | Paramètres de requête facultatifs pouvant être utilisés pour filtrer les résultats. Voir la section sur [paramètres de requête](#query) pour plus d’informations. |
 
 **Requête**
@@ -158,13 +158,13 @@ Une réponse réussie renvoie la structure du fichier interrogé, y compris les 
 
 ## Utilisation des paramètres de requête {#query}
 
-Le [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) prend en charge l’utilisation de paramètres de requête pour prévisualiser et inspecter différents types de fichiers.
+La variable [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) prend en charge l’utilisation de paramètres de requête pour prévisualiser et inspecter différents types de fichiers.
 
 | Paramètre | Description |
 | --------- | ----------- |
 | `columnDelimiter` | La valeur à caractère unique que vous avez spécifiée comme délimiteur de colonne pour inspecter les fichiers CSV ou TSV. Si le paramètre n’est pas fourni, la valeur est définie par défaut sur une virgule. `(,)`. |
 | `compressionType` | Paramètre de requête requis pour la prévisualisation d’un fichier délimité compressé ou JSON. Les fichiers compressés pris en charge sont les suivants : <ul><li>`bzip2`</li><li>`gzip`</li><li>`deflate`</li><li>`zipDeflate`</li><li>`tarGzip`</li><li>`tar`</li></ul> |
-| `encoding` | Définit le type de codage à utiliser lors de la prévisualisation du rendu. Les types de codage pris en charge sont les suivants : `UTF-8` et `ISO-8859-1`. **Remarque**: Le `encoding` n’est disponible que lors de l’ingestion de fichiers CSV délimités. Les autres types de fichiers seront ingérés avec le codage par défaut, `UTF-8`. |
+| `encoding` | Définit le type de codage à utiliser lors de la prévisualisation du rendu. Les types de codage pris en charge sont les suivants : `UTF-8` et `ISO-8859-1`. **Remarque**: la variable `encoding` n’est disponible que lors de l’ingestion de fichiers CSV délimités. Les autres types de fichiers seront ingérés avec le codage par défaut, `UTF-8`. |
 
 ## Étapes suivantes
 
