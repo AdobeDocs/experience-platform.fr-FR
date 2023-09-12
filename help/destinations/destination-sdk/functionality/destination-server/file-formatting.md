@@ -1,10 +1,10 @@
 ---
 description: Découvrez comment configurer les options de formatage de fichier pour les destinations basées sur des fichiers créés avec Adobe Experience Platform Destination SDK, via le point d’entrée `/destination-servers`.
 title: Configuration du formatage des fichiers
-source-git-commit: 511e02f92b7016a7f07dd3808b39594da9438d15
+source-git-commit: 4f4ffc7fc6a895e529193431aba77d6f3dcafb6f
 workflow-type: tm+mt
-source-wordcount: '1004'
-ht-degree: 96%
+source-wordcount: '1093'
+ht-degree: 88%
 
 ---
 
@@ -119,7 +119,11 @@ Dans l’exemple de configuration ci-dessous, toutes les options CSV sont préd
                 "value": ""
             }
         },
-        "maxFileRowCount":5000000
+        "maxFileRowCount":5000000,
+        "includeFileManifest": {
+            "templatingStrategy":"PEBBLE_V1",
+            "value":"{{ customerData.includeFileManifest }}"
+      }
     }
 ```
 
@@ -160,7 +164,11 @@ Dans l’exemple de configuration ci-dessous, aucune des options CSV n’est pr
             "value":"{% if customerData contains 'csvOptions' and customerData.csvOptions contains 'emptyValue' %}{{customerData.csvOptions.emptyValue}}{% else %}{% endif %}"
          }
       },
-      "maxFileRowCount":5000000
+      "maxFileRowCount":5000000,
+      "includeFileManifest": {
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"{{ customerData.includeFileManifest }}"
+      }
    }
 }
 ```
@@ -192,6 +200,7 @@ Vous trouverez ci-dessous une référence complète de toutes les options de for
 | `csvOptions.charToEscapeQuoteEscaping.value` | Facultatif | *Uniquement pour`"fileType.value": "csv"`*. Définit un caractère unique utilisé pour l’échappement du caractère de guillemet. | `\` lorsque les caractères d’échappement et de guillemet sont différents. `\0` lorsque les caractères d’échappement et de guillemet sont identiques. | - | - |
 | `csvOptions.emptyValue.value` | Facultatif | *Uniquement pour`"fileType.value": "csv"`*. Définit la représentation sous forme de chaîne d’une valeur vide. | `""` | `"emptyValue":""` --> `male,"",John` | `"emptyValue":"empty"` --> `male,empty,John` |
 | `maxFileRowCount` | Facultatif | Indique le nombre maximal de lignes par fichier exporté, entre 1 000 000 et 10 000 000 de lignes. | 5 000 000 |
+| `includeFileManifest` | Facultatif | Permet la prise en charge de l’exportation d’un manifeste de fichier avec les exportations de fichiers. Le fichier JSON manifeste contient des informations sur l’emplacement de l’exportation, la taille de l’exportation, etc. Le manifeste est nommé au format `manifest-<<destinationId>>-<<dataflowRunId>>.json`. | Afficher un [exemple de fichier manifeste](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json). Le fichier de manifeste comprend les champs suivants : <ul><li>`flowRunId`: la variable [exécution du flux de données](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) qui a généré le fichier exporté.</li><li>`scheduledTime`: heure en UTC à laquelle le fichier a été exporté. </li><li>`exportResults.sinkPath`: chemin d’accès dans l’emplacement de stockage où le fichier exporté est déposé. </li><li>`exportResults.name`: nom du fichier exporté.</li><li>`size`: taille du fichier exporté, en octets.</li></ul> |
 
 {style="table-layout:auto"}
 
