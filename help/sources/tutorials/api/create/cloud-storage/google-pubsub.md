@@ -3,10 +3,10 @@ title: Créer une connexion source Google PubSub à l’aide de l’API Flow Ser
 description: Découvrez comment connecter Adobe Experience Platform à un compte Google PubSub à l’aide de l’API Flow Service.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: f5b8f9bf-8a6f-4222-8eb2-928503edb24f
-source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
+source-git-commit: b157b9147d8ea8100bcaedca272b303a3c04e71a
 workflow-type: tm+mt
-source-wordcount: '979'
-ht-degree: 67%
+source-wordcount: '996'
+ht-degree: 65%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 67%
 
 >[!IMPORTANT]
 >
->Le [!DNL Google PubSub] source est disponible dans le catalogue des sources pour les utilisateurs qui ont acheté Real-time Customer Data Platform Ultimate.
+>La variable [!DNL Google PubSub] source est disponible dans le catalogue des sources pour les utilisateurs qui ont acheté Real-time Customer Data Platform Ultimate.
 
 Ce tutoriel vous guide tout au long des étapes de connexion de [!DNL Google PubSub] (ci-après dénommé « [!DNL PubSub] ») à Experience Platform à l’aide de l’API [[!DNL Flow Service] ](<https://www.adobe.io/experience-platform-apis/references/flow-service/>).
 
@@ -23,7 +23,7 @@ Ce tutoriel vous guide tout au long des étapes de connexion de [!DNL Google Pub
 Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
 
 * [Sources](../../../../home.md) : Experience Platform permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de Platform.
-* [Sandbox](../../../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
+* [Sandbox](../../../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
 Les sections suivantes contiennent des informations supplémentaires que vous devez connaître pour réussir à connecter [!DNL PubSub] à Platform à l’aide de l’API [!DNL Flow Service].
 
@@ -34,9 +34,9 @@ Pour que [!DNL Flow Service] puisse se connecter à [!DNL PubSub], vous devez fo
 | Informations d’identification | Description |
 | ---------- | ----------- |
 | `projectId` | Identifiant de projet requis pour authentifier [!DNL PubSub]. |
-| `credentials` | Informations d’identification ou clé requises pour authentifier [!DNL PubSub]. |
+| `credentials` | Informations d’identification requises pour l’authentification [!DNL PubSub]. Vous devez vous assurer de placer l’intégralité du fichier JSON après avoir supprimé les espaces blancs de vos informations d’identification. |
 | `topicName` | Nom de la ressource qui représente un flux de messages. Vous devez spécifier un nom de rubrique si vous souhaitez donner accès à un flux de données spécifique dans votre [!DNL PubSub] source. Le format du nom de la rubrique est le suivant : `projects/{PROJECT_ID}/topics/{TOPIC_ID}`. |
-| `subscriptionName` | Le nom de votre [!DNL PubSub] abonnement. Dans [!DNL PubSub], les abonnements permettent de recevoir des messages, en s’abonnant à la rubrique sur laquelle les messages ont été publiés. **Remarque**: Une seule [!DNL PubSub] abonnement ne peut être utilisé que pour un seul flux de données. Pour créer plusieurs flux de données, vous devez disposer de plusieurs abonnements. Le format du nom de l&#39;abonnement est le suivant : `projects/{PROJECT_ID}/subscriptions/{SUBSCRIPTION_ID}`. |
+| `subscriptionName` | Le nom de votre [!DNL PubSub] abonnement. Dans [!DNL PubSub], les abonnements permettent de recevoir des messages, en s’abonnant à la rubrique sur laquelle les messages ont été publiés. **Remarque**: une seule [!DNL PubSub] abonnement ne peut être utilisé que pour un seul flux de données. Pour créer plusieurs flux de données, vous devez disposer de plusieurs abonnements. Le format du nom de l&#39;abonnement est le suivant : `projects/{PROJECT_ID}/subscriptions/{SUBSCRIPTION_ID}`. |
 | `connectionSpec.id` | La spécification de connexion renvoie les propriétés du connecteur d’une source, y compris les spécifications d’authentification liées à la création des connexions cible de base et source. L’identifiant de spécification de connexion [!DNL PubSub] est : `70116022-a743-464a-bbfe-e226a7f8210c`. |
 
 Pour plus d’informations sur ces valeurs, voir le document d’[[!DNL PubSub] authentification](https://cloud.google.com/pubsub/docs/authentication). Pour utiliser l’authentification par compte de service, consultez le [[!DNL PubSub] Guide de création de comptes de service](https://cloud.google.com/docs/authentication/production#create_service_account) pour savoir comment générer vos informations d’identification.
@@ -55,11 +55,11 @@ La première étape de création d’une connexion source consiste à authentifi
 
 Pour créer un identifiant de connexion de base, envoyez une requête POST au point d’entrée `/connections` lors de la fourniture des informations d’identification d’authentification [!DNL PubSub] dans le cadre des paramètres de requête.
 
-Le [!DNL PubSub] source vous permet de spécifier le type d’accès que vous souhaitez autoriser lors de l’authentification. Vous pouvez configurer votre compte pour qu’il dispose d’un accès racine ou restreindre l’accès à un [!DNL PubSub] rubrique et abonnement.
+La variable [!DNL PubSub] source vous permet de spécifier le type d’accès que vous souhaitez autoriser lors de l’authentification. Vous pouvez configurer votre compte pour qu’il dispose d’un accès racine ou restreindre l’accès à un [!DNL PubSub] rubrique et abonnement.
 
 >[!NOTE]
 >
->Principal (rôles) affecté à un [!DNL PubSub] les projets sont hérités dans toutes les rubriques et tous les abonnements créés dans une [!DNL PubSub] projet. Si vous souhaitez qu’une entité (rôle) ait accès à une rubrique spécifique, cette entité (rôle) doit également être ajoutée à l’abonnement correspondant à la rubrique. Pour plus d’informations, reportez-vous à la section [[!DNL PubSub] documentation sur le contrôle d’accès](<https://cloud.google.com/pubsub/docs/access-control>).
+>Entité de sécurité (rôles) affectée à une [!DNL PubSub] les projets sont hérités dans toutes les rubriques et tous les abonnements créés dans une [!DNL PubSub] projet. Si vous souhaitez qu’une entité (rôle) ait accès à une rubrique spécifique, cette entité (rôle) doit également être ajoutée à l’abonnement correspondant à la rubrique. Pour plus d’informations, consultez la section [[!DNL PubSub] documentation sur le contrôle d’accès](<https://cloud.google.com/pubsub/docs/access-control>).
 
 **Format d’API**
 
@@ -135,8 +135,8 @@ curl -X POST \
 | Propriété | Description |
 | -------- | ----------- |
 | `auth.params.credentials` | Informations d’identification ou clé requises pour authentifier [!DNL PubSub]. |
-| `auth.params.topicName` | L’ID de projet et la paire d’ID de rubrique pour la variable [!DNL PubSub] source à laquelle vous souhaitez accorder l’accès. |
-| `auth.params.subscriptionName` | L’ID de projet et l’ID d’abonnement pour la [!DNL PubSub] source à laquelle vous souhaitez accorder l’accès. |
+| `auth.params.topicName` | L’ID de projet et la paire d’ID de rubrique pour la [!DNL PubSub] source à laquelle vous souhaitez donner accès. |
+| `auth.params.subscriptionName` | L’ID de projet et l’ID d’abonnement pour la [!DNL PubSub] source à laquelle vous souhaitez donner accès. |
 | `connectionSpec.id` | L’identifiant de spécification de connexion [!DNL PubSub] : `70116022-a743-464a-bbfe-e226a7f8210c`. |
 
 >[!ENDTABS]
