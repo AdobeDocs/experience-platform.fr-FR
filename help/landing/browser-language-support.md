@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Prise en charge du navigateur et de la langue pour l’interface utilisateur Experience Platform
 description: Adobe Experience Platform est l’un des meilleurs systèmes ouverts, flexibles et performants du marché permettant de créer et de gérer des solutions complètes qui optimisent l’expérience client. Experience Platform permet aux entreprises de centraliser et de normaliser les données et le contenu des clients à partir de n’importe quel système et d’appliquer la science des données et le machine learning afin d’améliorer considérablement la conception et la diffusion d’expériences riches et personnalisées.
 exl-id: 1b74aede-55df-4e81-8360-e49d1932b373
-source-git-commit: 20cb7afe6338f1ca79e86558f1f0cbec54790212
+source-git-commit: 9c46f2eeb563009da52acb629796ee9992136343
 workflow-type: tm+mt
-source-wordcount: '236'
-ht-degree: 35%
+source-wordcount: '247'
+ht-degree: 34%
 
 ---
 
@@ -51,9 +51,11 @@ Votre langue d’interface utilisateur par défaut est déterminée par la régi
 
 Pour modifier la langue :
 
-1. Sélectionnez la langue courante dans le pied de page de la [!DNL Experience Platform] de l’interface utilisateur.
-2. Dans les paramètres du profil, sélectionnez **[!UICONTROL Changement de région]**.
-3. Sélectionnez votre région.
+1. Connectez-vous à votre compte Experience Platform.
+1. Presse `Ctrl + i` pour afficher le menu informations sur le compte .
+1. Accédez à **[!UICONTROL Langues préférées]**.
+1. Sélectionnez vos préférences de langue première et seconde.
+1. Sélectionner **[!UICONTROL Enregistrer]** et fermez la fenêtre.
 
 >[!NOTE]
 >
