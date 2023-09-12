@@ -4,10 +4,10 @@ description: Découvrez comment ingérer des fichiers chiffrés par le biais de 
 hide: true
 hidefromtoc: true
 exl-id: 83a7a154-4f55-4bf0-bfef-594d5d50f460
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: cd8844121fef79205d57fa979ca8630fc1b1ece4
 workflow-type: tm+mt
-source-wordcount: '1342'
-ht-degree: 75%
+source-wordcount: '1473'
+ht-degree: 89%
 
 ---
 
@@ -113,21 +113,21 @@ Une réponse réussie renvoie votre clé publique codée en Base64, votre identi
 
 | Propriété | Description |
 | --- | --- |
-| `publicKey` | La clé publique est utilisée pour chiffrer les données dans votre espace de stockage dans le cloud. Cette clé correspond à la clé privée qui a également été créée lors de cette étape. Cependant, la clé privée est immédiatement envoyée à l’Experience Platform. |
-| `publicKeyId` | L’identifiant de clé publique est utilisé pour créer un flux de données et ingérer vos données de stockage dans le cloud cryptées dans Experience Platform. |
-| `expiryTime` | Le délai d’expiration définit la date d’expiration de votre paire de clés de chiffrement. Cette date est automatiquement définie sur 180 jours après la date de génération de la clé et s’affiche au format d’horodatage unix. |
+| `publicKey` | La clé publique permet de chiffrer les données dans votre espace de stockage. Cette clé correspond à la clé privée, qui a également été créée lors de cette étape. Cependant, la clé privée est immédiatement envoyée à Experience Platform. |
+| `publicKeyId` | L’identifiant de clé publique permet de créer un flux de données et d’ingérer les données chiffrées provenant de votre espace de stockage dans Experience Platform. |
+| `expiryTime` | Le délai d’expiration définit la date d’expiration de votre paire de clés de chiffrement. Cette date est automatiquement définie sur 180 jours après la date de génération de la clé et s’affiche au format de date et heure UNIX. |
 
-+++(Facultatif) Création d’une paire de clés de vérification des signes pour les données signées
++++(Facultatif) Créer une paire de clés de vérification de signature pour les données signées
 
-### Création d’une paire de clés gérée par le client
+### Créer une paire de clés gérée par le client ou la cliente
 
-Vous pouvez éventuellement créer une paire de clés de vérification des signes pour signer et ingérer vos données chiffrées.
+Si vous le souhaitez, vous pouvez créer une paire de clés de vérification de signature pour signer et ingérer vos données chiffrées.
 
-Pendant cette étape, vous devez générer votre propre combinaison de clé privée et de clé publique, puis utiliser votre clé privée pour signer vos données cryptées. Ensuite, vous devez coder votre clé publique dans Base64, puis la partager avec l’Experience Platform afin que Platform vérifie votre signature.
+Pendant cette étape, vous devez générer votre propre combinaison de clé privée et de clé publique, puis utiliser votre clé privée pour signer vos données chiffrées. Codez ensuite votre clé publique au format Base64, puis partagez-la avec Experience Platform afin que Platform vérifie votre signature.
 
-### Partager votre clé publique sur Experience Platform
+### Partager votre clé publique avec Experience Platform
 
-Pour partager votre clé publique, envoyez une demande de POST à l’ `/customer-keys` point d’entrée tout en fournissant votre algorithme de chiffrement et votre clé publique codée en Base64.
+Pour partager votre clé publique, envoyez une requête POST au point d’entée `/customer-keys` en spécifiant l’algorithme de chiffrement et la clé publique codée au format Base64.
 
 **Format d’API**
 
@@ -154,7 +154,7 @@ curl -X POST \
 | Paramètre | Description |
 | --- | --- |
 | `encryptionAlgorithm` | Type d’algorithme de chiffrement que vous utilisez. Les types de chiffrement pris en charge sont `PGP` et `GPG`. |
-| `publicKey` | Clé publique correspondant aux clés gérées par le client utilisées pour signer votre code crypté. Cette clé doit être encodée en Base64. |
+| `publicKey` | La clé publique qui correspond aux clés gérées par le client ou la cliente utilisées pour signer vos données chiffrées. Cette clé doit être codée au format Base64. |
 
 **Réponse**
 
@@ -166,7 +166,7 @@ curl -X POST \
 
 | Propriété | Description |
 | --- | --- |
-| `publicKeyId` | Cet identifiant de clé publique est renvoyé en réponse au partage de votre clé gérée par le client avec l’Experience Platform. Vous pouvez fournir cet ID de clé publique comme ID de clé de vérification de signature lors de la création d’un flux de données pour les données signées et chiffrées. |
+| `publicKeyId` | Cet identifiant de clé publique est renvoyé en réponse au partage de votre clé gérée par le client ou la cliente avec Experience Platform. Vous pouvez fournir cet ID de clé publique comme ID de clé de vérification de signature lors de la création d’un flux de données pour les données signées et chiffrées. |
 
 +++
 
@@ -212,7 +212,7 @@ POST /flows
 
 >[!BEGINTABS]
 
->[!TAB Création d’un flux de données pour l’ingestion de données chiffrées]
+>[!TAB Créer un flux de données pour l’ingestion de données chiffrées]
 
 La requête suivante crée un flux de données pour ingérer des données chiffrées pour une source d’espace de stockage dans le cloud.
 
@@ -318,7 +318,7 @@ curl -X POST \
 
 | Propriété | Description |
 | --- | --- |
-| `params.signVerificationKeyId` | L’identifiant de clé de vérification des signes est identique à l’identifiant de clé publique récupéré après le partage de votre clé publique encodée en Base64 avec Experience Platform. |
+| `params.signVerificationKeyId` | L’identifiant de clé de vérification de signature est identique à l’identifiant de clé publique récupéré après le partage de votre clé publique encodée en Base64 avec Experience Platform. |
 
 >[!ENDTABS]
 
@@ -332,6 +332,40 @@ Une réponse réussie renvoie l’identifiant (`id`) du nouveau flux de données
     "etag": "\"8e000533-0000-0200-0000-5f3c40fd0000\""
 }
 ```
+
+
+>[!BEGINSHADEBOX]
+
+**Restrictions relatives à l’ingestion récurrente**
+
+L’ingestion de données chiffrées ne prend pas en charge l’ingestion de dossiers récurrents ou à plusieurs niveaux dans des sources. Tous les fichiers cryptés doivent être contenus dans un seul dossier. Les caractères génériques avec plusieurs dossiers dans un seul chemin source ne sont pas non plus pris en charge.
+
+Voici un exemple de structure de dossiers prise en charge, où le chemin source est `/ACME-customers/*.csv.gpg`.
+
+Dans ce scénario, les fichiers en gras sont ingérés dans Experience Platform.
+
+* ACME-customers
+   * **File1.csv.gpg**
+   * File2.json.gpg
+   * **File3.csv.gpg**
+   * File4.json
+   * **File5.csv.gpg**
+
+Voici un exemple de structure de dossiers non prise en charge où le chemin d’accès source est `/ACME-customers/*`.
+
+Dans ce scénario, l’exécution du flux échoue et renvoie un message d’erreur indiquant que les données ne peuvent pas être copiées à partir de la source.
+
+* ACME-customers
+   * File1.csv.gpg
+   * File2.json.gpg
+   * Subfolder1
+      * File3.csv.gpg
+      * File4.json.gpg
+      * File5.csv.gpg
+* ACME-loyalty
+   * File6.csv.gpg
+
+>[!ENDSHADEBOX]
 
 ## Étapes suivantes
 
