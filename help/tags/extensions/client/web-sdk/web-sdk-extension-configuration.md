@@ -1,65 +1,67 @@
 ---
-title: Configuration de l’extension du SDK Web Adobe Experience Platform
-description: Comment configurer l’extension de balise du SDK Web de Adobe Experience Platform dans l’interface utilisateur.
-exl-id: 96d32db8-0c9a-49f0-91f3-0244522d66df
-source-git-commit: 97b435b9bcaf20be0e41150b6a7a408e083fbd61
+title: Configurer le SDK Web extension de balise
+description: Découvrez comment configurer l’extension de balise SDK Web Experience Platform dans l’interface utilisateur des balises.
+source-git-commit: ec0aa64c466a8228d49a776d27040253b5a1b196
 workflow-type: tm+mt
-source-wordcount: '1220'
-ht-degree: 9%
+source-wordcount: '1458'
+ht-degree: 11%
 
 ---
 
 
-# Configuration de l’extension de balise du SDK Web Adobe Experience Platform
+# Configuration de l’extension de balise du SDK Web
 
-L’extension de balise SDK Web Adobe Experience Platform envoie des données à Adobe Experience Cloud à partir de propriétés web via Adobe Experience Platform Edge Network. L’extension vous permet de diffuser des données dans Platform, de synchroniser les identités, de traiter les signaux de consentement du client et de collecter automatiquement des données contextuelles.
+La variable [!DNL Web SDK] l’extension de balise envoie des données à Adobe Experience Cloud à partir de propriétés web par le biais du réseau Edge Experience Platform.
 
-Ce document explique comment configurer l’extension dans l’interface utilisateur.
+L’extension vous permet de diffuser des données dans Platform, de synchroniser les identités, de traiter les signaux de consentement du client et de collecter automatiquement des données contextuelles.
 
-## Prise en main
+Ce document explique comment configurer l’extension de balise dans l’interface utilisateur de balises.
 
-Si l’extension SDK Web Platform a déjà été installée pour une propriété, ouvrez la propriété dans l’interface utilisateur et sélectionnez l’option **[!UICONTROL Extensions]** . Sous Platform Web SDK, sélectionnez **[!UICONTROL Configurer]**.
+## Installation de l’extension de balise du SDK Web {#install}
 
-![](assets/configure.png)
+Une propriété doit être installée sur l’extension de balise SDK Web. Si vous ne l’avez pas déjà fait, consultez la documentation sur [création d’une propriété de balise](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/create-a-property.html?lang=fr).
 
-Si vous n’avez pas encore installé l’extension, sélectionnez l’extension **[!UICONTROL Catalogue]** . Dans la liste des extensions disponibles, recherchez l’extension SDK Web Platform et sélectionnez **[!UICONTROL Installer]**.
+Après avoir créé une propriété, ouvrez-la et sélectionnez l’option **[!UICONTROL Extensions]** de la barre de gauche.
 
-![](assets/install.png)
+Sélectionnez la variable **[!UICONTROL Catalogue]** . Recherchez le composant [!DNL Web SDK] extension et sélectionner **[!UICONTROL Installer]**.
 
-Dans les deux cas, vous accédez à la page de configuration du SDK Web Platform. Les sections ci-dessous expliquent les options de configuration de l’extension.
+![Image présentant l’interface utilisateur des balises avec l’extension SDK Web sélectionnée](assets/web-sdk-install.png)
 
-![](assets/config-screen.png)
+Après avoir sélectionné **[!UICONTROL Installer]**, vous devez configurer l’extension de balise du SDK Web et enregistrer la configuration.
 
-## Options de configuration générales
+>[!NOTE]
+>
+>L’extension de balise n’est installée qu’après l’enregistrement de la configuration. Reportez-vous aux sections suivantes pour savoir comment configurer l’extension de balise.
+
+## Configuration des paramètres d’instance {#general}
 
 Les options de configuration en haut de la page indiquent à Adobe Experience Platform où acheminer les données et quelles configurations utiliser sur le serveur.
 
-### [!UICONTROL Nom]
+![Image présentant les paramètres généraux de l’extension de balise SDK Web dans l’interface utilisateur des balises](assets/web-sdk-ext-general.png)
 
-L’extension SDK Web Adobe Experience Platform prend en charge plusieurs instances sur la page. Le nom est utilisé pour envoyer des données à plusieurs organisations avec une configuration de balise.
+* **[!UICONTROL Nom]**: l’extension SDK Web de Adobe Experience Platform prend en charge plusieurs instances sur la page. Le nom est utilisé pour envoyer des données à plusieurs organisations avec une configuration de balise. Le nom de l’instance est défini par défaut sur `alloy`. Vous pouvez toutefois remplacer le nom de l’instance par n’importe quel nom d’objet JavaScript valide.
+* **[!UICONTROL Identifiant de l’organisation IMS]**: identifiant de l’organisation à laquelle vous souhaitez envoyer les données dans Adobe. La plupart du temps, utilisez la valeur par défaut qui est renseignée automatiquement. Si la page contient plusieurs instances, renseignez ce champ avec la valeur de la deuxième organisation à laquelle vous souhaitez envoyer des données.
+* **[!UICONTROL Domaine Edge]**: domaine à partir duquel l’extension envoie et reçoit des données. Adobe recommande d’utiliser un domaine propriétaire (CNAME) pour cette extension. Le domaine tiers par défaut fonctionne pour les environnements de développement, mais ne convient pas aux environnements de production. Les instructions de configuration d’un CNAME propriétaire sont répertoriées [ici](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html?lang=fr).
 
-Par défaut, le nom de l’extension est &quot;[!DNL alloy]&quot;. Vous pouvez toutefois remplacer le nom de l’instance par n’importe quel nom d’objet JavaScript valide.
+## Configuration des paramètres du flux de données {#datastreams}
 
-### **[!UICONTROL Identifiant IMS de l’organisation]**
+Cette section vous permet de sélectionner les flux de données à utiliser pour chacun des trois environnements disponibles (production, évaluation et développement).
 
-La variable [!UICONTROL Identifiant de l’organisation IMS] est l’organisation à laquelle vous souhaitez envoyer les données dans Adobe. La plupart du temps, utilisez la valeur par défaut qui est renseignée automatiquement. Si la page contient plusieurs instances, renseignez ce champ avec la valeur de la deuxième organisation à laquelle vous souhaitez envoyer des données.
+Lorsqu’une demande est envoyée au réseau Edge, un identifiant de flux de données est utilisé pour référencer la configuration côté serveur. Vous pouvez mettre à jour la configuration sans avoir à apporter de modifications au code sur votre site web.
 
-### **[!UICONTROL Domaine Edge]**
+Consultez le guide sur la [datastreams](../../../../datastreams/overview.md) pour savoir comment configurer un flux de données.
 
-La variable [!UICONTROL Domaine Edge] est le domaine à partir duquel l’extension Adobe Experience Platform envoie et reçoit des données. Adobe recommande d’utiliser un domaine propriétaire (CNAME) pour cette extension. Le domaine tiers par défaut fonctionne pour les environnements de développement, mais ne convient pas aux environnements de production. Les instructions de configuration d’un CNAME propriétaire sont répertoriées [ici](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html?lang=fr).
+Vous pouvez choisir un flux de données dans les menus déroulants disponibles ou sélectionner **[!UICONTROL Saisir des valeurs]** et saisissez un identifiant de flux de données personnalisé pour chaque environnement.
 
-## [!UICONTROL Flux de données]
+![Image montrant les paramètres de flux de données de l’extension de balise SDK Web dans l’interface utilisateur des balises](assets/web-sdk-ext-datastreams.png)
 
-Lorsqu’une demande est envoyée au réseau Adobe Experience Platform Edge, un identifiant de flux de données est utilisé pour référencer la configuration côté serveur. Vous pouvez mettre à jour la configuration sans avoir à apporter de modifications au code sur votre site web.
+## Configuration des paramètres de confidentialité {#privacy}
 
-Consultez le guide sur la [datastreams](../../../../datastreams/overview.md) pour plus d’informations.
+Cette section vous permet de configurer la manière dont le SDK Web traite les signaux de consentement des utilisateurs de votre site Web. Plus précisément, il vous permet de sélectionner le niveau de consentement par défaut supposé d’un utilisateur si aucune autre préférence de consentement explicite n’a été fournie.
 
+Le niveau de consentement par défaut n’est pas enregistré dans le profil utilisateur.
 
-## [!UICONTROL Confidentialité]
-
-![](assets/privacy.png)
-
-La variable [!UICONTROL Privacy] vous permet de configurer la manière dont le SDK traite les signaux de consentement de l’utilisateur de votre site web. Plus précisément, il vous permet de sélectionner le niveau de consentement par défaut supposé d’un utilisateur si aucune autre préférence de consentement explicite n’a été fournie. Le niveau de consentement par défaut n’est pas enregistré dans le profil de l’utilisateur. Le tableau suivant décompose les fonctions de chaque option :
+![Image montrant les paramètres de confidentialité de l’extension de balise SDK Web dans l’interface utilisateur des balises](assets/web-sdk-ext-privacy.png)
 
 | [!UICONTROL Niveau de consentement par défaut] | Description |
 | --- | --- |
@@ -68,49 +70,44 @@ La variable [!UICONTROL Privacy] vous permet de configurer la manière dont le S
 | [!UICONTROL En attente] | Événements de file d’attente qui se produisent avant que l’utilisateur ne fournisse ses préférences de consentement. Lorsque les préférences de consentement sont fournies, les événements sont collectés ou ignorés en fonction des préférences fournies. |
 | [!UICONTROL Fourni par l’élément de données] | Le niveau de consentement par défaut est déterminé par un élément de données distinct que vous définissez. Lorsque vous utilisez cette option, vous devez spécifier l’élément de données à l’aide du menu déroulant fourni. |
 
-Utilisez Out ou Pending (En attente) si vous avez besoin d’un consentement explicite de l’utilisateur pour vos activités commerciales.
+>[!TIP]
+>
+>Utilisation **[!UICONTROL Out]** ou **[!UICONTROL En attente]** si vous avez besoin d’un consentement explicite de l’utilisateur pour vos activités commerciales.
 
-## [!UICONTROL Identité]
+## Configuration des paramètres d’identité {#identity}
 
-![](assets/identity.png)
+Cette section vous permet de définir le comportement du SDK Web lorsqu’il s’agit de gérer l’identification des utilisateurs.
 
-### [!UICONTROL Migration de l’ECID depuis VisitorAPI]
+![Image présentant les paramètres d’identité de l’extension de balise SDK Web dans l’interface utilisateur des balises](assets/web-sdk-ext-identity.png)
 
-Cette option est affichée par défaut. Lorsque cette fonction est activée, le SDK peut lire les cookies AMCV et s_ecid et définir le cookie AMCV utilisé par Visitor.js. Cette fonctionnalité est importante lors de la migration vers le SDK Web de Adobe Experience Platform, car certaines pages peuvent toujours utiliser Visitor.js. Il permet au SDK de continuer à utiliser le même ECID afin que les utilisateurs ne soient pas identifiés comme deux utilisateurs distincts.
+* **[!UICONTROL Migration de l’ECID depuis VisitorAPI]**: cette option est activée par défaut. Lorsque cette fonction est activée, le SDK peut lire la variable `AMCV` et `s_ecid` et définissez la variable `AMCV` cookie utilisé par [!DNL Visitor.js]. Cette fonctionnalité est importante lors de la migration vers le SDK Web, car certaines pages utilisent toujours [!DNL Visitor.js]. Cette option permet au SDK de continuer à utiliser la même [!DNL ECID] afin que les utilisateurs ne soient pas identifiés comme deux utilisateurs distincts.
+* **[!UICONTROL Utilisation de cookies tiers]**: lorsque cette option est activée, le SDK Web tente de stocker un identifiant d’utilisateur dans un cookie tiers. En cas de réussite, l’utilisateur est identifié comme un utilisateur unique lorsqu’il navigue sur plusieurs domaines, plutôt que comme un utilisateur distinct sur chaque domaine. Si cette option est activée, le SDK peut toujours ne pas pouvoir stocker l’identifiant de l’utilisateur dans un cookie tiers si le navigateur ne prend pas en charge les cookies tiers ou s’il a été configuré par l’utilisateur pour ne pas autoriser les cookies tiers. Dans ce cas, le SDK stocke uniquement l’identifiant dans le domaine propriétaire.
 
-### [!UICONTROL Utilisation de cookies tiers]
+## Configuration des paramètres de personnalisation {#personalization}
 
-Cette option permet au SDK de tenter de stocker un identifiant d’utilisateur dans un cookie tiers. En cas de réussite, l’utilisateur est identifié comme un utilisateur unique lorsqu’il navigue sur plusieurs domaines, plutôt que comme un utilisateur distinct sur chaque domaine. Si cette option est activée, le SDK peut toujours ne pas pouvoir stocker l’identifiant de l’utilisateur dans un cookie tiers si le navigateur ne prend pas en charge les cookies tiers ou s’il a été configuré par l’utilisateur pour ne pas autoriser les cookies tiers. Dans ce cas, le SDK stocke uniquement l’identifiant dans le domaine propriétaire.
+Cette section vous permet de configurer le mode de masquage de certaines parties d’une page lors du chargement du contenu personnalisé.
 
-## [!UICONTROL Personnalisation]
+Vous pouvez spécifier les éléments à masquer dans l’éditeur de style de prémasquage. Vous pouvez ensuite copier le fragment de code de masquage préalable par défaut qui vous a été fourni et le coller dans le `<head>` élément du site [!DNL HTML] code.
 
-![](assets/personalization.png)
+![Image montrant les paramètres de personnalisation de l’extension de balise SDK Web dans l’interface utilisateur des balises](assets/web-sdk-ext-personalization.png)
 
-Si vous souhaitez masquer certaines parties si le contenu personnalisé de votre site est chargé, vous pouvez spécifier les éléments à masquer dans l’éditeur de style de prémasquage. Vous pouvez ensuite copier le fragment de code de masquage préalable par défaut qui vous a été fourni et le coller dans le `<head>`de votre site de HTML.
+* **[!UICONTROL Migration de Target depuis at.js vers le SDK Web]**: utilisez cette option pour activer [!DNL Web SDK] pour lire et écrire l’héritage `mbox` et `mboxEdgeCluster` cookies utilisés par at.js `1.x` ou `2.x` bibliothèques. Vous pouvez ainsi conserver le profil du visiteur lors du passage d’une page qui utilise le SDK Web à une page qui utilise at.js. `1.x` ou `2.x` et vice versa.
 
-## [!UICONTROL Collecte de données]
+## Configuration des paramètres de collecte de données {#data-collection}
 
-![](assets/data-collection.png)
+![Image présentant les paramètres de collecte de données de l’extension de balise SDK Web dans l’interface utilisateur des balises](assets/web-sdk-ext-collection.png)
 
-### [!UICONTROL Fonction de rappel]
+* **[!UICONTROL Fonction de rappel]**: la fonction de rappel fournie dans l’extension est également appelée [`onBeforeEventSend` function](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=fr) dans la bibliothèque. Cette fonction vous permet de modifier les événements de manière globale avant qu’ils ne soient envoyés au réseau Edge. Vous trouverez des informations plus détaillées sur l’utilisation de cette fonction [here](../../../../edge/fundamentals/tracking-events.md#modifying-events-globally).
+* **[!UICONTROL Activer la collecte de données de clic]**: le SDK Web peut automatiquement collecter des informations sur les clics sur les liens. Cette fonctionnalité est activée par défaut, mais elle peut être désactivée à l’aide de cette option. Les liens sont également étiquetés comme liens de téléchargement s’ils contiennent l’une des expressions de téléchargement répertoriées dans la variable [!UICONTROL Télécharger le qualificateur de lien] textbox. Adobe vous fournit quelques qualificateurs de lien de téléchargement par défaut. Vous pouvez les modifier en fonction de vos besoins.
+* **[!UICONTROL Données contextuelles collectées automatiquement]**: par défaut, le SDK Web collecte certaines données contextuelles concernant l’appareil, le web, l’environnement et le contexte de lieu. Si vous souhaitez voir une liste des informations collectées par l&#39;Adobe, vous pouvez la trouver. [here](../../../../edge/data-collection/automatic-information.md). Si vous ne souhaitez pas que ces données soient collectées ou que certaines catégories de données soient uniquement collectées, sélectionnez **[!UICONTROL Informations contextuelles spécifiques]** et sélectionnez les données à collecter.
 
-La fonction de rappel fournie dans l’extension est également appelée [`onBeforeEventSend` function](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=fr) dans la bibliothèque. Cette fonction vous permet de modifier les événements de manière globale avant qu’ils ne soient envoyés à Adobe Edge Network. Vous trouverez des informations plus détaillées sur l’utilisation de cette fonction [here](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en#modifying-events-globally).
+## Configurer les remplacements de trains de données {#datastream-overrides}
 
-### [!UICONTROL Clic sur la collecte de données]
+Les remplacements de trains de données vous permettent de définir des configurations supplémentaires pour vos trains de données, qui sont transmises au réseau Edge via le SDK Web.
 
-Le SDK peut automatiquement collecter des informations sur les clics sur les liens. Cette fonctionnalité est activée par défaut, mais elle peut être désactivée à l’aide de cette option. Les liens sont également étiquetés comme liens de téléchargement s’ils contiennent l’une des expressions de téléchargement répertoriées dans la variable [!UICONTROL Télécharger le qualificateur de lien] textbox. Adobe vous fournit quelques qualificateurs de lien de téléchargement par défaut, mais ils peuvent être modifiés à tout moment.
+Vous pouvez ainsi déclencher des comportements de trains de données différents de ceux par défaut, sans créer de train de données ni modifier vos paramètres existants.
 
-### [!UICONTROL Données contextuelles collectées automatiquement]
-
-Par défaut, le SDK collecte certaines données contextuelles concernant l’appareil, le web, l’environnement et le contexte de lieu. Si vous souhaitez voir une liste des informations collectées par l&#39;Adobe, vous pouvez la trouver. [here](https://experienceleague.adobe.com/docs/experience-platform/edge/data-collection/automatic-information.html?lang=en). Si vous ne souhaitez pas que ces données soient collectées ou que vous souhaitez uniquement que certaines catégories de données soient collectées, vous pouvez modifier ces options.
-
-## [!UICONTROL Remplacements de configuration des flux de données]
-
-Les remplacements de flux de données vous permettent de définir des configurations supplémentaires pour vos flux de données, qui sont transmises au réseau Edge via le SDK Web.
-
-Vous pouvez ainsi déclencher différents comportements de flux de données par rapport aux comportements par défaut, sans créer de flux de données ni modifier vos paramètres existants.
-
-Le remplacement de la configuration du flux de données est un processus en deux étapes :
+Le remplacement de la configuration du train de données comporte deux étapes :
 
 1. Tout d’abord, vous devez définir vos remplacements de configuration de trains de données sur la page de [configuration des trains de données](../../../../datastreams/configure.md).
 2. Ensuite, vous devez envoyer les remplacements au réseau Edge par le biais d’une commande de SDK Web ou à l’aide de l’extension de balise du SDK Web.
@@ -125,10 +122,8 @@ Au lieu de transmettre les remplacements par le biais d’une commande SDK Web, 
 
 ![Image montrant les remplacements de la configuration de la banque de données dans la page de l’extension de balise du SDK Web.](assets/datastream-overrides.png)
 
-## [!UICONTROL Paramètres avancés]
+## Configuration des paramètres avancés
 
-![](assets/advanced-settings.png)
+Utilisez la variable **[!UICONTROL Chemin de base Edge]** si vous devez modifier le chemin de base utilisé pour interagir avec le réseau Edge. Cela ne doit pas nécessiter de mise à jour, mais dans le cas où vous participez à une version bêta ou alpha, l’Adobe peut vous demander de modifier ce champ.
 
-### [!UICONTROL Chemin de base Edge]
-
-Utilisez ce champ si vous devez modifier le chemin de base utilisé pour interagir avec Adobe Edge Network. Cela ne doit pas nécessiter de mise à jour, mais dans le cas où vous participez à une version bêta ou alpha, l’Adobe peut vous demander de modifier ce champ.
+![Image montrant les paramètres avancés dans la page de l’extension de balise du SDK Web.](assets/advanced-settings.png)
