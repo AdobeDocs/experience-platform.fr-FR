@@ -1,8 +1,8 @@
 ---
 description: Cette page illustre comment l’appel API est utilisé pour créer un serveur de destination avec Adobe Experience Platform Destination SDK.
 title: Création d’une configuration de serveur de destination
-source-git-commit: ca4fb2dce097197aa1a97e0716e6294546bfee38
-workflow-type: ht
+source-git-commit: 03ec0e919304c9d46ef88d606eed9e12d1824856
+workflow-type: tm+mt
 source-wordcount: '1696'
 ht-degree: 100%
 
@@ -244,7 +244,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 {
    "name":"File-based SFTP destination server",
    "destinationServerType":"FILE_BASED_SFTP",
-   "fileBasedSftpDestination":{
+   "fileBasedSFTPDestination":{
       "rootDirectory":{
          "templatingStrategy":"PEBBLE_V1",
          "value":"{{customerData.rootDirectory}}"
@@ -319,10 +319,10 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 |---|---|---|
 | `name` | Chaîne | Nom de votre connexion de destination. |
 | `destinationServerType` | Chaîne | Définissez cette valeur en fonction de votre plateforme de destination. Pour les destinations [!DNL SFTP], définissez ce paramètre sur `FILE_BASED_SFTP`. |
-| `fileBasedSftpDestination.rootDirectory.templatingStrategy` | Chaîne | *Obligatoire.* Utilisez `PEBBLE_V1`. |
-| `fileBasedSftpDestination.rootDirectory.value` | Chaîne | Répertoire racine de lʼespace de stockage de destination. |
-| `fileBasedSftpDestination.hostName.templatingStrategy` | Chaîne | *Obligatoire.* Utilisez `PEBBLE_V1`. |
-| `fileBasedSftpDestination.hostName.value` | Chaîne | Nom d’hôte de lʼespace de stockage de destination. |
+| `fileBasedSFTPDestination.rootDirectory.templatingStrategy` | Chaîne | *Obligatoire.* Utilisez `PEBBLE_V1`. |
+| `fileBasedSFTPDestination.rootDirectory.value` | Chaîne | Répertoire racine de lʼespace de stockage de destination. |
+| `fileBasedSFTPDestination.hostName.templatingStrategy` | Chaîne | *Obligatoire.* Utilisez `PEBBLE_V1`. |
+| `fileBasedSFTPDestination.hostName.value` | Chaîne | Nom d’hôte de lʼespace de stockage de destination. |
 | `port` | Nombre entier | Port du serveur de fichiers SFTP. |
 | `encryptionMode` | Chaîne | Indique s’il faut utiliser le chiffrement de fichier. Valeurs prises en charge : <ul><li>PGP</li><li>Aucun</li></ul> |
 | `fileConfigurations` | S/O | Pour en savoir plus sur la manière de configurer ces paramètres, consultez la [configuration du formatage de fichier](../../functionality/destination-server/file-formatting.md). |
