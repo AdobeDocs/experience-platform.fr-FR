@@ -3,10 +3,10 @@ keywords: mobile, braser, messagerie;
 title: Connexion Braze
 description: Braze est une plateforme d’engagement client complète qui optimise les expériences pertinentes et mémorables entre les clients et les marques qu’ils aiment.
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
-source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
+source-git-commit: e2317201ae4810734714cea6c5d172ea6a542f5b
 workflow-type: tm+mt
-source-wordcount: '1031'
-ht-degree: 37%
+source-wordcount: '1096'
+ht-degree: 35%
 
 ---
 
@@ -163,6 +163,14 @@ Le mappage correct se présente comme suit :
 ## Données exportées {#exported-data}
 
 Pour vérifier si les données ont bien été exportées vers la destination [!DNL Braze], vérifiez votre compte [!DNL Braze]. [!DNL Adobe Experience Platform] audiences vers [!DNL Braze] sous le `AdobeExperiencePlatformSegments` attribut.
+
+## Dépannage {#troubleshooting}
+
+**J’ai reçu une erreur de délai d’expiration lors de l’activation de mes audiences vers cette destination. Que dois-je faire ?**
+
+L’activation de l’audience vers cette destination peut parfois entraîner une erreur de délai d’expiration. Cette erreur n’indique pas un problème d’activation.
+
+Si vous recevez une erreur de délai d’expiration, vérifiez la taille de l’audience dans la plateforme de destination. Si la taille de l’audience est correcte, l’intégration fonctionne comme prévu.
 
 ## Utilisation et gouvernance des données {#data-usage-governance}
 
