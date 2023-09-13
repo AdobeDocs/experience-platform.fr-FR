@@ -1,22 +1,18 @@
 ---
 keywords: Activer des destinations de profils;activer des destinations;activer des données;activer des destinations de marketing par e-mail;activer des destinations d’espace de stockage dans le cloud
-title: Activation des audiences vers les destinations d’exportation de profils par lots
+title: Activer les audiences vers des destinations d’export de profils par lots
 type: Tutorial
 description: Découvrez comment activer les audiences que vous avez dans Adobe Experience Platform en les envoyant vers des destinations basées sur un profil de lot.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: d7264d94a03f0ba19da90559b156ecaace0d8f95
+source-git-commit: 823f781e59fe7f5f15620a2b99f9c0c1e7144666
 workflow-type: tm+mt
-source-wordcount: '3673'
-ht-degree: 64%
+source-wordcount: '3633'
+ht-degree: 65%
 
 ---
 
 
-# Activation des audiences vers les destinations d’exportation de profils par lots
-
->[!IMPORTANT]
-> 
-> La fonctionnalité décrite sur la page n’est pas encore disponible pour les clients en général. Cette page est actuellement destinée aux équipes internes d’Adobe en tant que prélecture des fonctionnalités à venir. Veuillez ne pas le partager en dehors de l’Adobe tant que cette note n’est pas supprimée.
+# Activer les audiences vers des destinations d’export de profils par lots
 
 >[!IMPORTANT]
 > 
