@@ -2,9 +2,9 @@
 title: Présentation d’Identity Namespace
 description: Les espaces de noms d’identité sont des composants du Service d’identités qui servent d’indicateurs du contexte auquel une identité se rapporte. Par exemple, ils distinguent une valeur de "name@email.com" comme adresse électronique ou "443522" comme identifiant CRM numérique.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: ac53678ca9ef51cb638590138a16a3506c6a1fc0
 workflow-type: tm+mt
-source-wordcount: '1765'
+source-wordcount: '1764'
 ht-degree: 30%
 
 ---
@@ -25,7 +25,7 @@ L’utilisation des espaces de noms d’identité nécessite une compréhension 
 
 Une identité complète est composée d’une valeur d’identifiant et d’un espace de noms. Lors de la mise en correspondance de données d’enregistrement entre des fragments de profil, comme lorsque [!DNL Real-Time Customer Profile] fusionne les données de profil ; la valeur d’identité et l’espace de noms doivent correspondre.
 
-Par exemple, deux fragments de profil peuvent contenir des identifiants Principaux différents, mais ils partagent la même valeur pour l’espace de noms &quot;Email&quot;. [!DNL Platform] est capable de voir que ces fragments sont en fait la même personne et rassemble les données dans le graphique d’identités de l’individu.
+Par exemple, deux fragments de profil peuvent contenir des identifiants principaux différents, mais ils partagent la même valeur pour l’espace de noms &quot;Email&quot;. [!DNL Platform] est capable de voir que ces fragments sont en fait la même personne et rassemble les données dans le graphique d’identités de l’individu.
 
 ![](images/identity-service-stitching.png)
 
@@ -45,10 +45,10 @@ Les types d’identité suivants sont disponibles dans [!DNL Platform]:
 | --- | --- |
 | Cookie Identifiant | Les ID de cookie identifient les navigateurs Web. Ces identités sont essentielles à l’expansion et constituent la majorité du graphique d’identités. Cependant, par nature, elles se désintègrent rapidement et perdent leur valeur au fil du temps. |
 | Identifiant multi-appareils | Les identifiants multi-appareils identifient un individu et lient généralement d’autres identifiants ensemble. Par exemple, un identifiant de connexion, un identifiant CRM et un identifiant de fidélité. Cela indique que [!DNL Identity Service] pour gérer la valeur avec précaution. |
-| ID de périphérique | Les identifiants d’appareil identifient les appareils matériels, tels qu’IDFA (iPhone et iPad), GAID (Android) et RIDA (Roku), et peuvent être partagés par plusieurs personnes dans des foyers. |
+| ID d’appareil | Les identifiants d’appareil identifient les appareils matériels, tels qu’IDFA (iPhone et iPad), GAID (Android) et RIDA (Roku), et peuvent être partagés par plusieurs personnes dans des foyers. |
 | Adresse e-mail | Les adresses électroniques sont souvent associées à une seule personne et peuvent donc être utilisées pour identifier cette personne sur différents canaux. Les identités de ce type comprennent des informations d’identification personnelle (PII). Cela indique que [!DNL Identity Service] pour gérer la valeur avec précaution. |
 | Identifiant non-humain | Les identifiants non-personnes sont utilisés pour stocker les identifiants qui nécessitent des espaces de noms, mais ne sont pas connectés à un cluster de personnes. Par exemple, un SKU de produit, des données liées aux produits, aux organisations ou aux magasins. |
-| Identifiant du partenaire [!BADGE Beta]{type=Informative} | <ul><li>Les identifiants de partenaire sont des identifiants utilisés par les partenaires de données pour représenter des personnes. Les identifiants de partenaire sont souvent pseudonymes afin de ne pas révéler la véritable identité d&#39;une personne, et peuvent être probabilistes. Dans Real-time Customer Data Platform, les identifiants de partenaire sont principalement utilisés pour l’activation étendue de l’audience et l’enrichissement des données, et non pour la création de liens entre graphiques d’identités.</li><li>Les graphiques d’identités ne sont pas générés lors de l’ingestion d’une identité contenant un espace de noms d’identité spécifié comme type d’identifiant de partenaire.</li><li>Si vous n’ingérez pas de données de partenaire à l’aide du type d’identité de l’identifiant de partenaire, vous risquez d’atteindre les limites des graphiques système sur Identity Service, ainsi que de fusionner des profils indésirables.</li><ul> |
+| Identifiant du partenaire | <ul><li>Les identifiants de partenaire sont des identifiants utilisés par les partenaires de données pour représenter des personnes. Les identifiants de partenaire sont souvent pseudonymes afin de ne pas révéler la véritable identité d&#39;une personne, et peuvent être probabilistes. Dans Real-time Customer Data Platform, les identifiants de partenaire sont principalement utilisés pour l’activation étendue de l’audience et l’enrichissement des données, et non pour la création de liens entre graphiques d’identités.</li><li>Les graphiques d’identités ne sont pas générés lors de l’ingestion d’une identité contenant un espace de noms d’identité spécifié comme type d’identifiant de partenaire.</li><li>Si vous n’ingérez pas de données de partenaire à l’aide du type d’identité de l’identifiant de partenaire, vous risquez d’atteindre les limites des graphiques système sur Identity Service, ainsi que de fusionner des profils indésirables.</li><ul> |
 | Numéro de téléphone | Les numéros de téléphone sont souvent associés à une seule personne et peuvent donc être utilisés pour identifier cette personne sur différents canaux. Les identités de ce type incluent des informations d’identification personnelle. Cela indique que [!DNL Identity Service] pour gérer la valeur avec précaution. |
 
 {style="table-layout:auto"}
