@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Présentation du contrôle d’accès
 description: Dans Adobe Experience Platform, le contrôle dʼaccès est fourni par le biais dʼAdobe Admin Console. Cette fonctionnalité exploite les profils de produit dans l’Admin Console, liant les utilisateurs et utilisatrices à des autorisations et des sandbox.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: 88bfcdef65b4a938d573b1beb1952c7e030ebc13
-workflow-type: ht
-source-wordcount: '1567'
-ht-degree: 100%
+source-git-commit: d83a5558d706e7bf059edb912f6fd43d4b66cc54
+workflow-type: tm+mt
+source-wordcount: '1678'
+ht-degree: 92%
 
 ---
 
@@ -99,7 +99,11 @@ Le tableau suivant décrit les autorisations disponibles pour Experience Platfo
 | [!DNL Profile Management] | [!UICONTROL Gestion des politiques de fusion] | Accès à la lecture, la création, la modification et la suppression des politiques de fusion. |
 | [!DNL Profile Management] | [!UICONTROL Affichage des politiques de fusion] | Accès en lecture seule aux politiques de fusion disponibles. |
 | [!DNL Profile Management] | [!UICONTROL Exportation de l’audience pour un segment] | Capacité à exporter un segment ciblé évalué vers un jeu de données. |
-| [!DNL Profile Management] | [!UICONTROL Évaluation dʼun segment sur une audience] | Capacité à générer des profils pour une audience en évaluant une définition de segment. |
+| [!DNL Profile Management] | [!UICONTROL Évaluation dʼun segment sur une audience] | Possibilité de générer des profils pour une audience en évaluant une définition de segment. |
+| [!DNL Profile Management] | [!UICONTROL Affichage de l’IA B2B] | Accès en lecture seule aux paramètres et aux configurations pour tous les services B2B AI/ML. |
+| [!DNL Profile Management] | [!UICONTROL Gestion de l’IA B2B] | Accès à la lecture, la création, la modification et la suppression des paramètres et des configurations pour tous les services B2B AI/ML. |
+| [!DNL Profile Management] | [!UICONTROL Affichage du profil B2B] | Accès en lecture seule aux profils d’entité B2B (tels que Compte, Opportunité, etc.), aux paramètres et configurations pour tous les services B2B AI/ML et aux widgets de tableau de bord B2B. |
+| [!DNL Profile Management] | [!UICONTROL Gestion du profil B2B] | Accès à la lecture, la création, la modification et la suppression des profils d’entité B2B (tels que Compte, Opportunité, etc.). Accès en lecture seule aux paramètres et configurations pour tous les services B2B AI/ML et aux widgets de tableau de bord B2B. |
 | [!DNL Identity Management] | [!UICONTROL Gestion des espaces de noms d’identité] | Accès à la lecture, la création, la modification et la suppression des espaces de noms d’identité. |
 | [!DNL Identity Management] | [!UICONTROL Affichages des espaces de noms d’identité] | Accès en lecture seule aux espaces de noms d’identité. |
 | [!DNL Identity Management] | [!UICONTROL Afficher un graphique d’identité] | Accès en lecture seule aux graphiques d’identité. |
