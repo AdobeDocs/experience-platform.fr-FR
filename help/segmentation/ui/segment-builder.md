@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Guide de l’interface utilisateur du créateur de segments
 description: Le créateur de segments de l’interface utilisateur d’Adobe Experience Platform fournit un espace de travail riche qui vous permet d’interagir avec les éléments de données de profil. L’espace de travail fournit des commandes intuitives pour la création et la modification de règles, telles que le glisser-déposer de mosaïques utilisées pour représenter les propriétés des données.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 56d9d3ec5565960438540ffec867ed528b52eaf1
-workflow-type: ht
-source-wordcount: '3338'
-ht-degree: 100%
+source-git-commit: f3bad477156db8f8cf79582c7a6cc2562e983b63
+workflow-type: tm+mt
+source-wordcount: '3354'
+ht-degree: 99%
 
 ---
 
@@ -98,6 +98,10 @@ Une fois les suites de rapports mappées, vous pouvez utiliser ces nouveaux cham
 | Suites de rapports multiples | Aucun descripteur de nom convivial n’est inclus avec les variables génériques. <br><br>**Exemple :** eVar2 | <ul><li>Tout champ comportant plusieurs descripteurs apparaît comme générique. Cela signifie qu’aucun nom convivial n’apparaît dans l’interface utilisateur.</li><li>Les requêtes peuvent utiliser les données de n’importe quel jeu de données contenant l’eVar, ce qui peut entraîner des résultats variés ou incorrects.</li></ul> | Les requêtes utilisent correctement les résultats combinés de plusieurs jeux de données. |
 
 ### Audiences
+
+>[!NOTE]
+>
+>Pour les audiences créées dans Platform, seules les audiences qui ont la variable **same** la stratégie de fusion s’affiche.
 
 L’onglet **[!UICONTROL Audiences]** répertorie toutes les audiences importées de sources externes, telles qu’Adobe Audience Manager, ainsi que les audiences créées dans [!DNL Experience Platform].
 
