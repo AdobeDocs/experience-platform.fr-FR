@@ -3,10 +3,10 @@ keywords: Experience Platform;accueil;rubriques populaires;contrôle d’accès;
 title: Présentation du contrôle d’accès basé sur les attributs
 description: Ce document fournit des informations sur le contrôle d’accès basé sur les attributs dans Adobe Experience Platform.
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: 36e38824963139414f2803ef4127706d1e521d1a
 workflow-type: tm+mt
-source-wordcount: '1825'
-ht-degree: 95%
+source-wordcount: '1847'
+ht-degree: 94%
 
 ---
 
@@ -21,6 +21,10 @@ Cette fonctionnalité vous permet d’étiqueter les champs de schéma d’un mo
 >Le contrôle d’accès basé sur les attributs ne doit pas être confondu avec les fonctionnalités de gouvernance des données des Experience Platform, qui vous permettent d’utiliser des libellés et des stratégies pour contrôler la manière dont les données sont utilisées dans Platform plutôt que les utilisateurs de votre organisation qui y ont accès. Voir [présentation de la gouvernance des données](../../data-governance/home.md) pour plus d’informations.
 
 Grâce au contrôle d’accès basé sur les attributs, les administrateurs de votre organisation peuvent contrôler l’accès des utilisateurs aux données personnelles sensibles (SPD), aux informations d’identification personnelle (PII) et à d’autres types de données personnalisées sur l’ensemble des workflows et ressources de Platform. Les administrateurs peuvent définir des rôles d’utilisateur qui n’ont accès qu’à des champs spécifiques et aux données correspondant à ces champs.
+
+La vidéo suivante est destinée à vous aider à comprendre le contrôle d’accès basé sur les attributs et explique comment configurer les rôles, les ressources et les stratégies.
+
+>[!VIDEO](https://video.tv.adobe.com/v/345641?learn=on)
 
 ## Terminologie du contrôle d’accès basé sur les attributs
 
