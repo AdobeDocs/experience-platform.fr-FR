@@ -6,7 +6,7 @@ last-update: March 31, 2021
 author: ens72741
 exl-id: 027cd7b1-1651-4939-bc97-968a41824117
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '425'
 ht-degree: 100%
 
@@ -52,7 +52,7 @@ Pour plus d’informations sur [!DNL Segmentation Service], consultez la [prése
 
 Adobe Experience Platform peut ingérer des données à partir de sources externes tout en vous permettant de structurer, d’étiqueter et d’améliorer ces données à l’aide des services de Platform. Vous pouvez ingérer des données à partir de diverses sources telles que les applications Adobe, le stockage dans le cloud, des logiciels tiers et votre système de gestion de la relation client.
 
-Experience Platform fournit une API RESTful et une interface utilisateur interactive qui vous permet de configurer facilement des connexions source à différents fournisseurs de données. Ces connexions source vous permettent de vous authentifier et de vous connecter à des services de gestion de la relation client et à des systèmes de stockage externes, de définir des heures d’ingestion et de gérer le débit d’ingestion des données.
+Experience Platform fournit une API RESTful et une interface utilisateur interactive qui vous permet de configurer facilement des connexions source à différents fournisseurs de données. Ces connexions source vous permettent de vous authentifier et de vous connecter à des services de gestion de la relation client et à des systèmes de stockage externes, de définir des heures d’ingestion et de gérer le débit d’ingestion des données.
 
 | Fonctionnalité | Description |
 | ------- | ----------- |

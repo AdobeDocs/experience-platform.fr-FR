@@ -3,7 +3,7 @@ title: Notes de mise à jour d’octobre 2021 d’Adobe Experience Platform
 description: Les notes de mise à jour d’octobre 2021 pour Adobe Experience Platform.
 exl-id: 8f8bcb24-6478-4281-9362-9559158384af
 source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '455'
 ht-degree: 100%
 
@@ -53,7 +53,7 @@ Voir la [[!DNL Data Prep] présentation](../../data-prep/home.md) pour en savoir
 
 Adobe Experience Platform peut ingérer des données à partir de sources externes tout en vous permettant de structurer, d’étiqueter et d’améliorer ces données à l’aide des services de Platform. Vous pouvez ingérer des données à partir de diverses sources telles que les applications Adobe, le stockage dans le cloud, des logiciels tiers et votre système de gestion de la relation client.
 
-Experience Platform fournit une API RESTful et une interface utilisateur interactive qui vous permet de configurer facilement des connexions source à différents fournisseurs de données. Ces connexions source vous permettent de vous authentifier et de vous connecter à des services de gestion de la relation client et à des systèmes de stockage externes, de définir des heures d’ingestion et de gérer le débit d’ingestion des données.
+Experience Platform fournit une API RESTful et une interface utilisateur interactive qui vous permet de configurer facilement des connexions source à différents fournisseurs de données. Ces connexions source vous permettent de vous authentifier et de vous connecter à des services de gestion de la relation client et à des systèmes de stockage externes, de définir des heures d’ingestion et de gérer le débit d’ingestion des données.
 
 | Fonctionnalité | Description |
 | --- | --- |
