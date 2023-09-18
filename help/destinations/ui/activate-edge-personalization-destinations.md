@@ -1,23 +1,23 @@
 ---
-title: Activation des audiences vers des destinations de personnalisation de périphérie
+title: Activer les audiences vers des destinations de personnalisation Edge
 description: Découvrez comment activer les audiences de Adobe Experience Platform vers les destinations de personnalisation de périphérie pour les cas d’utilisation de la personnalisation de la même page et de la page suivante.
 type: Tutorial
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: afcb5f80edaa4d68ba167123feb2ba9060469243
 workflow-type: tm+mt
-source-wordcount: '1833'
-ht-degree: 19%
+source-wordcount: '1869'
+ht-degree: 20%
 
 ---
 
 
-# Activation des audiences vers des destinations de personnalisation de périphérie
+# Activer les audiences vers des destinations de personnalisation Edge
 
 ## Vue d’ensemble {#overview}
 
 Utilisation de Adobe Experience Platform [segmentation de périphérie](../../segmentation/ui/edge-segmentation.md) ainsi que des destinations de périphérie pour permettre aux clients de créer et de cibler des audiences à grande échelle, en temps réel. Cette fonctionnalité vous permet de configurer des cas d’utilisation de personnalisation de la même page et de la page suivante.
 
-Voici des exemples de destinations de périphérie : [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) et le [Personnalisation personnalisée](../../destinations/catalog/personalization/custom-personalization.md) connexions.
+Voici des exemples de destinations de périphérie : [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) et la variable [Personnalisation personnalisée](../../destinations/catalog/personalization/custom-personalization.md) connexions.
 
 >[!NOTE]
 >
@@ -27,8 +27,9 @@ Voici des exemples de destinations de périphérie : [Adobe Target](../../destin
 > 
 > * Pour activer les données et activer la variable [étape de mappage](#mapping) du workflow, vous avez besoin de l’événement **[!UICONTROL Gestion des destinations]**, **[!UICONTROL Activation des destinations]**, **[!UICONTROL Afficher les profils]**, et **[!UICONTROL Affichage de segments]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions).
 > * Pour activer les données sans passer par la fonction [étape de mappage](#mapping) du workflow, vous avez besoin de l’événement **[!UICONTROL Gestion des destinations]**, **[!UICONTROL Activation du segment sans mappage]**, **[!UICONTROL Afficher les profils]**, et **[!UICONTROL Affichage de segments]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions).
+>* Pour exporter *identités*, vous avez besoin de la fonction **[!UICONTROL Affichage du graphique des identités]** [autorisation de contrôle d’accès](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 > 
-> Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+> Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
 
 Cet article explique le processus requis pour activer les audiences dans les destinations Adobe Experience Platform Edge. Utilisé conjointement avec [segmentation de périphérie](../../segmentation/ui/edge-segmentation.md) et le paramètre facultatif [mapping des attributs de profil](#mapping), ces destinations activent des cas d’utilisation de la personnalisation de la même page et de la page suivante sur vos propriétés web et mobiles.
 
@@ -64,7 +65,7 @@ Un utilisateur visite la page A de votre site web. En fonction de cette interact
 
 Un utilisateur visite plusieurs pages de votre site web. En fonction de ces interactions, l’utilisateur s’est qualifié pour un ensemble d’audiences. L’utilisateur met ensuite fin à la session de navigation actuelle.
 
-Le lendemain, l’utilisateur revient au même site web client. Les audiences pour lesquelles ils avaient rempli les critères lors de l’interaction précédente avec toutes les pages du site web visitées, ainsi que les mises à jour de profil déterminées par la visite actuelle du site web, seront utilisées pour sélectionner l’action/la décision suivante (par exemple, la bannière publicitaire à afficher au visiteur ou, dans le cas de tests A/B, la version de la page à afficher).
+Le lendemain, l’utilisateur revient au même site web client. Les audiences pour lesquelles ils avaient rempli les critères lors de l’interaction précédente avec toutes les pages du site web visitées, ainsi que les mises à jour de profil déterminées par la visite du site web en cours, seront utilisées pour sélectionner l’action/la décision suivante (par exemple, la bannière publicitaire à afficher au visiteur ou, dans le cas d’un test A/B, la version de la page à afficher).
 
 ### Personnaliser une bannière de page d’accueil {#home-page-banner}
 
@@ -84,11 +85,11 @@ Pour plus d’informations sur la configuration d’un flux de données, suivez 
 
 ### Créez un [!DNL Active-On-Edge] stratégie de fusion {#create-merge-policy}
 
-Une fois votre connexion de destination créée, vous devez créer une politique de fusion [!DNL Active-On-Edge]. Le [!DNL Active-On-Edge] la stratégie de fusion garantit que les audiences sont constamment évaluées. [sur le bord](../../segmentation/ui/edge-segmentation.md) et sont disponibles pour les cas d’utilisation de la personnalisation en temps réel et de la page suivante.
+Une fois votre connexion de destination créée, vous devez créer une politique de fusion [!DNL Active-On-Edge]. La variable [!DNL Active-On-Edge] la stratégie de fusion garantit que les audiences sont constamment évaluées. [sur le bord](../../segmentation/ui/edge-segmentation.md) et sont disponibles pour les cas d’utilisation de la personnalisation en temps réel et de la page suivante.
 
 >[!IMPORTANT]
 >
->Actuellement, les destinations Edge ne prennent en charge que l’activation des audiences qui utilisent la variable [Stratégie de fusion principale sur périphérie](../../segmentation/ui/segment-builder.md#merge-policies) défini comme valeur par défaut. Si vous mappez des audiences qui utilisent une autre stratégie de fusion avec des destinations de périphérie, ces audiences ne seront pas évaluées.
+>Actuellement, les destinations Edge ne prennent en charge que l’activation des audiences qui utilisent la variable [Stratégie de fusion active sur périphérie](../../segmentation/ui/segment-builder.md#merge-policies) définie par défaut. Si vous mappez des audiences qui utilisent une autre stratégie de fusion avec des destinations de périphérie, ces audiences ne seront pas évaluées.
 
 Suivez les instructions de la section [création d’une politique de fusion](../../profile/merge-policies/ui-guide.md#create-a-merge-policy) et assurez-vous d’activer le bouton **[!UICONTROL Politique de fusion Active-On-Edge]**.
 
@@ -96,7 +97,7 @@ Suivez les instructions de la section [création d’une politique de fusion](..
 
 Après avoir créé la variable [!DNL Active-On-Edge] stratégie de fusion, vous devez créer une audience dans Platform.
 
-Suivez la [créateur d’audiences](../../segmentation/ui/segment-builder.md) pour créer votre nouvelle audience et veillez à [affecter](../../segmentation/ui/segment-builder.md#merge-policies) la valeur [!DNL Active-On-Edge] stratégie de fusion que vous avez créée à l’étape 3.
+Suivez la [créateur d’audiences](../../segmentation/ui/segment-builder.md) pour créer votre nouvelle audience et veillez à [affecter](../../segmentation/ui/segment-builder.md#merge-policies) la valeur [!DNL Active-On-Edge] stratégie de fusion créée à l’étape 3.
 
 ### Création d’une connexion de destination {#connect-destination}
 
@@ -135,9 +136,9 @@ Pour sélectionner les audiences que vous souhaitez activer vers la destination,
 
 Vous pouvez sélectionner plusieurs types d’audiences, selon leur origine :
 
-* **[!UICONTROL Segmentation Service]**: Audiences générées dans Experience Platform par le service de segmentation. Voir [documentation sur la segmentation](../../segmentation/ui/overview.md) pour plus d’informations.
-* **[!UICONTROL Chargement personnalisé]**: Audiences générées en dehors de l’Experience Platform et chargées dans Platform sous la forme de fichiers CSV. Pour en savoir plus sur les audiences externes, consultez la documentation sur [import d&#39;une audience](../../segmentation/ui/overview.md#import-audience).
-* Autres types d’audiences, provenant d’autres solutions d’Adobe, telles que [!DNL Audience Manager].
+* **[!UICONTROL Segmentation Service]**: audiences générées dans Experience Platform par le service de segmentation. Voir [documentation sur la segmentation](../../segmentation/ui/overview.md) pour plus d’informations.
+* **[!UICONTROL Chargement personnalisé]**: audiences générées en dehors de l’Experience Platform et chargées dans Platform sous la forme de fichiers CSV. Pour en savoir plus sur les audiences externes, consultez la documentation sur [import d&#39;une audience](../../segmentation/ui/overview.md#import-audience).
+* Autres types d’audiences, provenant d’autres solutions Adobe, telles que [!DNL Audience Manager].
 
 ![Sélection des audiences](../assets/ui/activate-edge-personalization-destinations/select-audiences.png)
 
@@ -199,7 +200,7 @@ Si votre organisation a acheté **Adobe HealthCare Shield** ou **Adobe Privacy &
 
 ### Vérifications des stratégies d’utilisation des données {#data-usage-policy-checks}
 
-Dans le **[!UICONTROL Réviser]** , Experience Platform recherche également les violations de stratégie d’utilisation des données. Vous trouverez ci-dessous un exemple de violation de la politique. Vous ne pouvez pas terminer le workflow d’activation de l’audience tant que vous n’avez pas résolu la violation. Pour plus d’informations sur la résolution des violations de stratégie, reportez-vous à la section [violations de la stratégie d’utilisation des données](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) dans la section documentation sur la gouvernance des données .
+Dans le **[!UICONTROL Réviser]** , Experience Platform recherche également les violations de stratégie d’utilisation des données. Vous trouverez ci-dessous un exemple de violation de la politique. Vous ne pouvez pas terminer le workflow d’activation de l’audience tant que vous n’avez pas résolu la violation. Pour plus d’informations sur la résolution des violations de stratégie, reportez-vous à la section [violations de la stratégie d’utilisation des données](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) dans la section de documentation sur la gouvernance des données .
 
 ![violation de la politique de données](../assets/common/data-policy-violation.png)
 

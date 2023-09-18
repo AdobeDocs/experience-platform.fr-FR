@@ -2,10 +2,10 @@
 title: Connexion Zendesk
 description: La destination Zendesk vous permet d’exporter les données de votre compte et de les activer dans Zendesk en fonction des besoins de votre entreprise.
 last-substantial-update: 2023-03-14T00:00:00Z
-source-git-commit: c1ba465a8a866bd8bdc9a2b294ec5d894db81e11
+source-git-commit: 661ef040398a9e2ef8dd9cebdf7bd27d4268636b
 workflow-type: tm+mt
-source-wordcount: '1470'
-ht-degree: 46%
+source-wordcount: '1506'
+ht-degree: 48%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 46%
 
 [[!DNL Zendesk]](https://www.zendesk.fr) est une solution de service client et un outil de vente.
 
-Ceci [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) tire parti de [[!DNL Zendesk] API de contacts](https://developer.zendesk.com/api-reference/sales-crm/resources/contacts/), à **créer et mettre à jour des identités** au sein d’une audience en tant que contacts dans [!DNL Zendesk].
+Ceci [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) tire parti de la fonction [[!DNL Zendesk] API de contacts](https://developer.zendesk.com/api-reference/sales-crm/resources/contacts/), à **créer et mettre à jour des identités** au sein d’une audience en tant que contacts dans [!DNL Zendesk].
 
 [!DNL Zendesk] utilise des jetons au porteur comme mécanisme d’authentification pour communiquer avec le [!DNL Zendesk] API de contacts. Les instructions vous permettant de vous authentifier sur votre instance [!DNL Zendesk] sont plus loin dans la section [Authentifier à la destination](#authenticate).
 
@@ -31,7 +31,7 @@ Reportez-vous à la documentation Experience Platform pour [Groupe de champs Dé
 
 ### Conditions préalables de [!DNL Zendesk] {#prerequisites-destination}
 
-Pour exporter des données de Platform vers votre [!DNL Zendesk] vous devez disposer d’un compte [!DNL Zendesk] compte .
+Pour exporter des données de Platform vers votre [!DNL Zendesk] vous devez disposer d’un [!DNL Zendesk] compte .
 
 #### Collectez les informations d’identification de [!DNL Zendesk]. {#gather-credentials}
 
@@ -43,7 +43,7 @@ Notez les éléments ci-dessous avant de vous authentifier à la destination [!D
 
 ## Mécanismes de sécurisation {#guardrails}
 
-Le [Tarifs et limites de taux](https://developer.zendesk.com/api-reference/sales-crm/rate-limits/#pricing) détaille la page [!DNL Zendesk] Limites d’API associées à votre compte. Vous devez vous assurer que vos données et votre payload sont conformes à ces contraintes.
+La variable [Tarifs et limites de taux](https://developer.zendesk.com/api-reference/sales-crm/rate-limits/#pricing) détaille la page [!DNL Zendesk] Limites d’API associées à votre compte. Vous devez vous assurer que vos données et votre payload sont conformes à ces contraintes.
 
 ## Identités prises en charge {#supported-identities}
 
@@ -60,7 +60,7 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 | Élément | Type | Notes |
 ---------|----------|---------|
 | Type d’exportation | **[!UICONTROL Basé sur les profils]** | <ul><li>Vous exportez tous les membres d’un segment, ainsi que les champs de schéma souhaités, *(par exemple : adresse e-mail, numéro de téléphone, nom)*, en fonction de votre mappage de champs.</li><li> Chaque état de segment dans [!DNL Zendesk] est mis à jour avec l’état d’audience correspondant de Platform, en fonction de la variable **[!UICONTROL ID de mappage]** valeur fournie pendant la [planification des audiences](#schedule-segment-export-example) étape .</li></ul> |
-| Fréquence des exportations | **[!UICONTROL Diffusion en continu]** | <ul><li>Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu&#39;un profil est mis à jour en Experience Platform en fonction de l&#39;évaluation de l&#39;audience, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations).</li></ul> |
+| Fréquence des exportations | **[!UICONTROL Diffusion en continu]** | <ul><li>Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation des audiences, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations).</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -77,7 +77,7 @@ Dans **[!UICONTROL Destinations]** > **[!UICONTROL Catalogue]**, recherchez [!DN
 ### S’authentifier auprès de la destination {#authenticate}
 
 Renseignez les champs obligatoires ci-dessous. Reportez-vous à la section [ [!DNL Zendesk] Collecter des informations d’identification ](#gather-credentials) pour obtenir des conseils.
-* **[!UICONTROL Jeton porteur]**: Le jeton d’accès que vous avez généré dans votre [!DNL Zendesk] compte .
+* **[!UICONTROL Jeton de porteur]**: le jeton d’accès que vous avez généré dans votre [!DNL Zendesk] compte .
 
 Pour vous authentifier auprès de la destination, sélectionnez **[!UICONTROL Se connecter à la destination]**.
 ![Capture d’écran montrant comment s’authentifier sur l’interface utilisateur de Platform.](../../assets/catalog/crm/zendesk/authenticate-destination.png)
@@ -98,13 +98,14 @@ Vous pouvez activer les alertes pour recevoir des notifications sur le statut de
 
 Lorsque vous avez terminé de renseigner les détails sur votre connexion de destination, sélectionnez **[!UICONTROL Suivant]**.
 
-## Activer les audiences vers cette destination {#activate}
+## Activer des audiences vers cette destination {#activate}
 
 >[!IMPORTANT]
->
->Pour activer les données, vous avez besoin des [autorisations de contrôle d’accès](/help/access-control/home.md#permissions) pour les fonctions **[!UICONTROL Gérer les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]**, et **[!UICONTROL Afficher les segments]**. Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+> 
+>* Pour activer les données, vous avez besoin des [autorisations de contrôle d’accès](/help/access-control/home.md#permissions) pour les fonctions **[!UICONTROL Gérer les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]**, et **[!UICONTROL Afficher les segments]**. Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+>* Pour exporter *identités*, vous avez besoin de la fonction **[!UICONTROL Affichage du graphique des identités]** [autorisation de contrôle d’accès](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
-Lecture [Activation des profils et des audiences vers les destinations d’exportation d’audiences par flux](/help/destinations/ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
+Consultez la section [Activer les profils et les audiences vers les destinations d’exportation d’audiences en flux continu](/help/destinations/ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
 
 ### Considérations sur le mappage et exemple {#mapping-considerations-example}
 
@@ -126,7 +127,7 @@ Pour mapper correctement vos champs XDM vers les champs de destination [!DNL Zen
 
 >[!IMPORTANT]
 >
->Le `Attribute: last_name` et `Identity: email` les mappings de ciblage sont obligatoires pour cette destination. Si ces mappages sont manquants, tous les autres mappages sont ignorés et ne sont pas envoyés à [!DNL Zendesk].
+>La variable `Attribute: last_name` et `Identity: email` les mappings de ciblage sont obligatoires pour cette destination. Si ces mappages sont manquants, tous les autres mappages sont ignorés et ne sont pas envoyés à [!DNL Zendesk].
 
 Lorsque vous avez terminé de fournir les mappages pour votre connexion de destination, sélectionnez **[!UICONTROL Suivant]**.
 
@@ -150,7 +151,7 @@ Pour vérifier que vous avez correctement configuré la destination, procédez c
 1. Surveillez la synthèse de l’audience et assurez-vous que le nombre de profils correspond au nombre dans le segment.
    ![Exemple de capture d’écran de l’interface utilisateur de Platform montrant le segment.](../../assets/catalog/crm/zendesk/segment.png)
 
-1. Connectez-vous au [!DNL Zendesk] , puis accédez au **[!UICONTROL Contacts]** pour vérifier si les profils de l’audience ont été ajoutés. Cette liste peut être configurée pour afficher les colonnes des champs supplémentaires créés avec l&#39;audience**[!UICONTROL ID de mappage]Statuts des ** et des audiences.
+1. Connectez-vous au [!DNL Zendesk] , puis accédez à la **[!UICONTROL Contacts]** pour vérifier si les profils de l’audience ont été ajoutés. Cette liste peut être configurée pour afficher les colonnes des champs supplémentaires créés avec l&#39;audience**[!UICONTROL ID de mappage]Statuts des ** et de l’audience.
    ![Capture d’écran de l’interface utilisateur de Zendesk montrant la page Contacts avec les champs supplémentaires créés avec le nom de l’audience.](../../assets/catalog/crm/zendesk/contacts.png)
 
 1. Vous pouvez également effectuer une analyse approfondie dans une **[!UICONTROL Personne]** et vérifiez les **[!UICONTROL Champs supplémentaires]** affichant le nom de l’audience et les états de l’audience.
@@ -174,7 +175,7 @@ Cette section répertorie les nouvelles fonctionnalités et les mises à jour im
 
 | Mois de publication | Type de mise à jour | Description |
 |---|---|---|
-| Avril 2023 | Mise à jour de la documentation | <ul><li>Nous avons mis à jour la variable [use-case](#use-cases) avec un exemple plus clair de à quel moment les clients pourraient bénéficier de l’utilisation de cette destination.</li> <li>Nous avons mis à jour la variable [mapping](#mapping-considerations-example) pour refléter les mappages requis corrects. Le `Attribute: last_name` et `Identity: email` les mappings de ciblage sont obligatoires pour cette destination. Si ces mappages sont manquants, tous les autres mappages sont ignorés et ne sont pas envoyés à [!DNL Zendesk].</li> <li>Nous avons mis à jour la variable [mapping](#mapping-considerations-example) avec des exemples clairs de mappages obligatoires et facultatifs.</li></ul> |
+| Avril 2023 | Mise à jour de la documentation | <ul><li>Nous avons mis à jour la variable [use-case](#use-cases) avec un exemple plus clair de à quel moment les clients pourraient bénéficier de l’utilisation de cette destination.</li> <li>Nous avons mis à jour la variable [mapping](#mapping-considerations-example) pour refléter les mappages requis corrects. La variable `Attribute: last_name` et `Identity: email` les mappings de ciblage sont obligatoires pour cette destination. Si ces mappages sont manquants, tous les autres mappages sont ignorés et ne sont pas envoyés à [!DNL Zendesk].</li> <li>Nous avons mis à jour la variable [mapping](#mapping-considerations-example) avec des exemples clairs de mappages obligatoires et facultatifs.</li></ul> |
 | Mars 2023 | Version initiale | Version initiale de la destination et publication de la documentation. |
 
 {style="table-layout:auto"}

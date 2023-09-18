@@ -2,10 +2,10 @@
 title: Catégories d’intérêt Mailchimp
 description: Mailchimp (également appelé Intuit Mailchimp) est une plateforme de marketing automatisé populaire et un service de marketing par e-mail utilisé par les entreprises pour gérer et communiquer avec des contacts (clients, clients ou autres personnes intéressées) à l’aide de listes de diffusion et de campagnes de marketing par e-mail. Utilisez ce connecteur pour trier vos contacts en fonction de leurs centres d’intérêt et de leurs préférences.
 last-substantial-update: 2023-05-24T00:00:00Z
-source-git-commit: a293df660a9b959d12bdc170d1cb69f3543a30f1
+source-git-commit: 8e37ff057ec0fb750bc7b4b6f566f732d9fe5d68
 workflow-type: tm+mt
-source-wordcount: '2356'
-ht-degree: 22%
+source-wordcount: '2392'
+ht-degree: 23%
 
 ---
 
@@ -43,11 +43,11 @@ Notez les conditions préalables suivantes pour exporter des données de Platfor
 
 #### Vous devez disposer d’un [!DNL Mailchimp] account {#prerequisites-account}
 
-Avant de pouvoir créer un [!DNL Mailchimp Interest Categories] destination, vous devez d’abord vous assurer que vous disposez d’une [!DNL Mailchimp] compte . Si vous n’en avez pas déjà un, rendez-vous sur la page [[!DNL Mailchimp] page d’inscription](https://login.mailchimp.com/signup/) pour enregistrer et créer votre compte.
+Avant de pouvoir créer un [!DNL Mailchimp Interest Categories] destination, vous devez d’abord vous assurer que vous disposez d’une [!DNL Mailchimp] compte . Si vous n’en avez pas déjà un, consultez la page [[!DNL Mailchimp] page d’inscription](https://login.mailchimp.com/signup/) pour enregistrer et créer votre compte.
 
 #### Collecte [!DNL Mailchimp] Clé API {#gather-credentials}
 
-Vous avez besoin de votre [!DNL Mailchimp] **Clé API** pour authentifier la variable [!DNL Mailchimp Interest Categories] destination par rapport à votre [!DNL Mailchimp] compte . Le **Clé API** sert de **Mot de passe** lorsque vous [authentifier la destination](#authenticate).
+Vous avez besoin de votre [!DNL Mailchimp] **Clé API** pour authentifier la variable [!DNL Mailchimp Interest Categories] destination par rapport à votre [!DNL Mailchimp] compte . La variable **Clé API** sert de **Password** lorsque vous [authentifier la destination](#authenticate).
 
 Si vous n’avez pas votre **Clé API**, connectez-vous à votre compte et reportez-vous à la section [[!DNL Mailchimp] Génération de votre clé API](https://mailchimp.com/developer/marketing/guides/quick-start/#generate-your-api-key) pour en créer une.
 
@@ -63,7 +63,7 @@ Ensuite, vous devez identifier votre [!DNL Mailchimp] centre de données. Pour c
 
 La valeur correspond à la première partie de l’URL que vous voyez dans votre navigateur. Si l’URL est *https://`us14`.mailchimp.com/account/api/*, le centre de données est `us14`.
 
-Il est également ajouté à votre clé API dans le formulaire. *key-dc*; si votre clé API est `0123456789abcdef0123456789abcde-us14`, le centre de données est `us14`.
+Il est également ajouté à votre clé API dans le formulaire. *key-dc*; si votre clé d’API est `0123456789abcdef0123456789abcde-us14`, le centre de données est `us14`.
 
 Écrire la valeur du centre de données *(`us14` dans cet exemple)*, cette valeur est nécessaire lorsque vous [remplir les détails de destination](#destination-details).
 
@@ -71,9 +71,9 @@ Si vous avez besoin d’autres conseils, reportez-vous à la section [[!DNL Mail
 
 ### Mécanismes de sécurisation {#guardrails}
 
-Chacune de vos [!DNL Mailchimp] Les audiences peuvent contenir jusqu’à 60 noms de groupe (ou catégories d’intérêt) au sein d’un seul groupe ou de plusieurs groupes au sein d’une même audience. Voir [!DNL Mailchimp] [groups](https://mailchimp.com/help/getting-started-with-groups/) pour toute clarification requise. Lorsque vous atteignez cette limite, vous obtenez une `400 BAD_REQUEST Cannot have more than 60 interests per list (Across all categories)` message en tant que réponse d’erreur de la fonction [!DNL Mailchimp] API.
+Chacune de vos [!DNL Mailchimp] Les audiences peuvent contenir jusqu’à 60 noms de groupe (ou catégories d’intérêt) au sein d’un seul groupe ou entre plusieurs groupes au sein d’une même audience. Voir [!DNL Mailchimp] [groups](https://mailchimp.com/help/getting-started-with-groups/) pour toute clarification requise. Lorsque vous atteignez cette limite, vous obtenez une `400 BAD_REQUEST Cannot have more than 60 interests per list (Across all categories)` message en tant que réponse d’erreur de la fonction [!DNL Mailchimp] API.
 
-En outre, reportez-vous à la section [!DNL Mailchimp] [limites de taux](https://mailchimp.com/developer/marketing/docs/fundamentals/#api-limits) pour obtenir des informations détaillées sur les limites imposées par la variable [!DNL Mailchimp] API.
+En outre, reportez-vous au [!DNL Mailchimp] [limites de taux](https://mailchimp.com/developer/marketing/docs/fundamentals/#api-limits) pour obtenir des informations détaillées sur les limites imposées par la variable [!DNL Mailchimp] API.
 
 ## Identités prises en charge {#supported-identities}
 
@@ -113,7 +113,7 @@ Pour vous authentifier à la destination, renseignez les champs obligatoires ci-
 | Champ | Description |
 | --- | --- |
 | **[!UICONTROL Nom d’utilisateur]** | Votre [!DNL Mailchimp Interest Categories] nom d’utilisateur. |
-| **[!UICONTROL Mot de passe]** | Votre [!DNL Mailchimp] **Clé API**, que vous avez noté dans la variable [Collecte [!DNL Mailchimp] informations](#gather-credentials) .<br> Votre clé API prend la forme `{KEY}-{DC}`, où la variable `{KEY}` fait référence à la valeur indiquée dans la variable [[!DNL Mailchimp] Clé API](#gather-credentials) et le `{DC}` fait référence à la [[!DNL Mailchimp] centre de données](#identify-data-center). <br>Vous pouvez fournir le `{KEY}` ou l’intégralité du formulaire.<br> Par exemple, si votre clé API est <br>*`0123456789abcdef0123456789abcde-us14`*,<br> vous pouvez fournir *`0123456789abcdef0123456789abcde`*ou *`0123456789abcdef0123456789abcde-us14`*comme valeur. |
+| **[!UICONTROL Mot de passe]** | Votre [!DNL Mailchimp] **Clé API**, que vous avez noté dans la variable [Collecte [!DNL Mailchimp] informations](#gather-credentials) .<br> Votre clé API prend la forme `{KEY}-{DC}`, où la variable `{KEY}` fait référence à la valeur indiquée dans la variable [[!DNL Mailchimp] Clé API](#gather-credentials) et la section `{DC}` fait référence à la [[!DNL Mailchimp] centre de données](#identify-data-center). <br>Vous pouvez fournir le `{KEY}` ou l’intégralité du formulaire.<br> Par exemple, si votre clé API est <br>*`0123456789abcdef0123456789abcde-us14`*,<br> vous pouvez fournir *`0123456789abcdef0123456789abcde`*ou *`0123456789abcdef0123456789abcde-us14`*comme valeur. |
 
 {style="table-layout:auto"}
 
@@ -131,7 +131,7 @@ Pour configurer les détails de la destination, renseignez les champs obligatoir
 | --- | --- |
 | **[!UICONTROL Nom]** | Un nom par lequel vous reconnaîtrez cette destination à l’avenir. |
 | **[!UICONTROL Description]** | Description qui vous aidera à identifier cette destination ultérieurement. |
-| **[!UICONTROL Centre de données]** | Votre [!DNL Mailchimp] account `data center`. Reportez-vous à la section [Identifier [!DNL Mailchimp] centre de données](#identify-data-center) pour obtenir des conseils. |
+| **[!UICONTROL Centre de données]** | Votre [!DNL Mailchimp] account `data center`. Voir [Identifier [!DNL Mailchimp] centre de données](#identify-data-center) pour obtenir des conseils. |
 | **[!UICONTROL Nom de l’audience (veuillez d’abord sélectionner le centre de données)]** | Après avoir sélectionné **[!UICONTROL Centre de données]**, cette liste déroulante est automatiquement renseignée avec les noms d’audience de votre [!DNL Mailchimp] compte . Sélectionnez l’audience que vous souhaitez mettre à jour avec les données de Platform. |
 | **[!UICONTROL Catégorie d’intérêts (veuillez d’abord sélectionner le centre de données et le nom d’audience)]** | Après avoir sélectionné **[!UICONTROL Nom de l’audience]**, cette liste déroulante est automatiquement renseignée avec les noms de catégorie de groupes d’intérêt de votre [!DNL Mailchimp] compte . Sélectionnez le nom de la catégorie que vous souhaitez mettre à jour avec les données de Platform. |
 
@@ -139,7 +139,7 @@ Pour configurer les détails de la destination, renseignez les champs obligatoir
 
 >[!TIP]
 >
-> Si la clé d’API que vous avez fournie dans la variable **[!UICONTROL Mot de passe]** ou le champ **[!UICONTROL Centre de données]** est incorrecte, l’interface affiche une [!DNL Mailchimp] Réponse d’erreur de l’API : *`No options are available. Please verify the values selected for the following dependent fields: dataCenter`* comme illustré ci-dessous. Dans ce cas, vous ne pouvez pas sélectionner de valeur dans la variable **[!UICONTROL Nom de l’audience (veuillez d’abord sélectionner le centre de données)]** champ . Pour corriger cette erreur, indiquez les valeurs correctes.
+> Si la clé d’API que vous avez fournie dans la variable **[!UICONTROL Password]** ou le champ **[!UICONTROL Centre de données]** est incorrecte, l’interface affiche une [!DNL Mailchimp] Réponse d’erreur de l’API : *`No options are available. Please verify the values selected for the following dependent fields: dataCenter`* comme illustré ci-dessous. Dans ce cas, vous ne pouvez pas sélectionner de valeur dans la variable **[!UICONTROL Nom de l’audience (veuillez d’abord sélectionner le centre de données)]** champ . Pour corriger cette erreur, indiquez les valeurs correctes.
 
 ### Activer les alertes {#enable-alerts}
 
@@ -147,27 +147,28 @@ Vous pouvez activer les alertes pour recevoir des notifications sur le statut de
 
 Lorsque vous avez terminé de renseigner les détails sur votre connexion de destination, sélectionnez **[!UICONTROL Suivant]**.
 
-## Activer les audiences vers cette destination {#activate}
+## Activer des audiences vers cette destination {#activate}
 
 >[!IMPORTANT]
->
->Pour activer les données, vous avez besoin des [autorisations de contrôle d’accès](/help/access-control/home.md#permissions) pour les fonctions **[!UICONTROL Gérer les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]**, et **[!UICONTROL Afficher les segments]**. Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+> 
+>* Pour activer les données, vous avez besoin des [autorisations de contrôle d’accès](/help/access-control/home.md#permissions) pour les fonctions **[!UICONTROL Gérer les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]**, et **[!UICONTROL Afficher les segments]**. Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+>* Pour exporter *identités*, vous avez besoin de la fonction **[!UICONTROL Affichage du graphique des identités]** [autorisation de contrôle d’accès](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
-Lecture [Activation des profils et des audiences vers les destinations d’exportation d’audiences par flux](/help/destinations/ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
+Consultez la section [Activer les profils et les audiences vers les destinations d’exportation d’audiences en flux continu](/help/destinations/ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
 
 ### Considérations sur le mappage et exemple {#mapping-considerations-example}
 
 Pour envoyer correctement vos données d’audience de Adobe Experience Platform vers le [!DNL Mailchimp Interest Categories] destination, vous devez passer par l’étape de mappage des champs. Le mappage consiste à créer un lien entre vos champs de schéma de modèle de données d’expérience (XDM) dans votre compte Platform et leurs équivalents issus de la destination cible.
 
-Pour mapper correctement vos champs XDM à [!DNL Mailchimp Interest Categories] champs de destination, procédez comme suit :
+Pour mapper correctement vos champs XDM à [!DNL Mailchimp Interest Categories] pour les champs de destination, procédez comme suit :
 
 1. Dans l’étape **[!UICONTROL Mappage]**, sélectionnez **[!UICONTROL Ajouter un nouveau mappage]**. Vous pouvez désormais voir une nouvelle ligne de mappage sur l’écran.
 1. Dans le **[!UICONTROL Sélectionner le champ source]** , choisissez la **[!UICONTROL Sélectionner des attributs]** et sélectionnez l’attribut XDM ou choisissez l’option **[!UICONTROL Sélectionner un espace de noms d’identité]** et sélectionnez une identité.
-1. Dans le **[!UICONTROL Sélectionner le champ cible]** , choisissez la **[!UICONTROL Sélectionner un espace de noms d’identité]** et sélectionnez une identité ou choisissez **[!UICONTROL Sélectionner des attributs]** et sélectionnez dans la liste des attributs renseignés à partir du [!DNL Mailchimp] API. *Tous les attributs personnalisés que vous avez ajoutés au [!DNL Mailchimp] L’audience pourra également être sélectionnée comme champ cible.*
+1. Dans le **[!UICONTROL Sélectionner le champ cible]** , choisissez la **[!UICONTROL Sélectionner un espace de noms d’identité]** et sélectionnez une identité ou choisissez **[!UICONTROL Sélectionner des attributs]** et sélectionnez dans la liste des attributs renseignés à partir du [!DNL Mailchimp] API. *Tous les attributs personnalisés que vous avez ajoutés au [!DNL Mailchimp] L’audience sera également disponible pour la sélection en tant que champs cibles.*
 
    Mappages disponibles entre votre schéma de profil XDM et [!DNL Mailchimp Interest Categories] sont les suivants : | Champ source | Champ cible | Notes | | — | — | — | |`IdentityMap: Email`|`Identity: email`| Obligatoire : Oui | |`xdm: person.name.firstName`|`Attribute: FNAME`| | |`xdm: person.name.lastName`|`Attribute: LNAME`| | |`xdm: person.birthDayAndMonth`|`Attribute: BIRTHDAY`| |
 
-   En outre, `ADDRESS` est un champ cible spécial appelé `merge field` dans votre [!DNL Mailchimp] audience. Le [[!DNL Mailchimp] documentation](https://mailchimp.com/developer/marketing/docs/merge-fields/) définit les clés requises comme `addr1`, `city`, `state`, et `zip`et les clés facultatives `addr2` et `country`. Les valeurs de ces champs doivent être des chaînes. Si l’une des variables `ADDRESS` les mappages de champs sont présents, la destination transfère la variable `ADDRESS` vers l’objet [!DNL Mailchimp] API pour la mise à jour. Quelconque `ADDRESS` les champs qui ne sont pas mappés ont une valeur par défaut de `NULL` sauf pour le pays par défaut `US`.
+   En outre, `ADDRESS` est un champ cible spécial appelé `merge field` dans votre [!DNL Mailchimp] audience. La variable [[!DNL Mailchimp] documentation](https://mailchimp.com/developer/marketing/docs/merge-fields/) définit les clés requises comme `addr1`, `city`, `state`, et `zip`et les clés facultatives `addr2` et `country`. Les valeurs de ces champs doivent être des chaînes. Si l’une des variables `ADDRESS` les mappages de champs sont présents, la destination transfère la variable `ADDRESS` vers l’objet [!DNL Mailchimp] API pour la mise à jour. Quelconque `ADDRESS` les champs non mappés ont la valeur par défaut à `NULL` sauf pour le pays par défaut `US`.
 
    Les mappages disponibles pour la variable `ADDRESS` sont les suivants :
 
@@ -180,9 +181,9 @@ Pour mapper correctement vos champs XDM à [!DNL Mailchimp Interest Categories] 
    | `xdm: workAddress.postalCode` | `Attribute: ADDRESS.zip` |
    | `xdm: workAddress.country` | `Attribute: ADDRESS.country` |
 
-   Par exemple, vous souhaitez mettre à jour la valeur de `country` avec le champ d&#39;adresse existant du contact `addr1`, `city`, `state`, et `zip` valeurs en tant que `132, My Street, Kingston`, `New York`, `New York` et `12401`. Pour mettre à jour la variable `country` vous devez transmettre les valeurs existantes avec des modifications. *(le cas échéant)* et la nouvelle valeur du pays. Par conséquent, les valeurs de votre jeu de données doivent être `132, My Street, Kingston`, `New York`, `New York`, `12401`, et `US`. Réitérer, si vous ne réussissez que `country` et ne fournissent pas de valeurs pour `addr1`, `city`, `state`, et `zip` Ils seront remplacés par `NULL`.
+   Par exemple, vous souhaitez mettre à jour la valeur de `country` avec le champ d&#39;adresse existant du contact `addr1`, `city`, `state`, et `zip` valeurs en tant que `132, My Street, Kingston`, `New York`, `New York` et `12401`. Pour mettre à jour la variable `country` vous devez transmettre les valeurs existantes avec des modifications. *(le cas échéant)* et la nouvelle valeur pour le pays. Les valeurs de votre jeu de données doivent donc être `132, My Street, Kingston`, `New York`, `New York`, `12401`, et `US`. Réitérer, si vous ne réussissez que `country` et ne fournissent pas de valeurs pour `addr1`, `city`, `state`, et `zip` Ils seront remplacés par `NULL`.
 
-   Vous trouverez ci-dessous un exemple de mappages terminés :
+   Un exemple avec les mappages terminés est illustré ci-dessous :
    ![Exemple de capture d’écran de l’interface utilisateur de Platform montrant les mappages de champs.](../../assets/catalog/email-marketing/mailchimp-interest-categories/mappings.png)
 
 Une fois les mappages fournis pour la connexion à la destination, sélectionnez **[!UICONTROL Suivant]**.
@@ -191,7 +192,7 @@ Une fois les mappages fournis pour la connexion à la destination, sélectionnez
 
 Pour vérifier que vous avez correctement configuré la destination, procédez comme suit :
 
-* Connectez-vous à [[!DNL Mailchimp]](https://login.mailchimp.com/) compte . Ensuite, accédez au **[!DNL Audience]** page. Ensuite, développez la variable **[!DNL Manage Contacts]** et sélectionnez **[!DNL Groups]**.
+* Connectez-vous à [[!DNL Mailchimp]](https://login.mailchimp.com/) compte . Ensuite, accédez à la **[!DNL Audience]** page. Ensuite, développez la variable **[!DNL Manage Contacts]** et sélectionnez **[!DNL Groups]**.
 
 ![Capture d’écran de l’interface utilisateur de Mailchimp montrant la page du groupe Audience.](../../assets/catalog/email-marketing/mailchimp-interest-categories/audience-groups.png)
 
@@ -208,13 +209,13 @@ Lors de la gestion de vos données, toutes les destinations [!DNL Adobe Experien
 
 ## Erreurs et résolution des problèmes {#errors-and-troubleshooting}
 
-### Erreur rencontrée si [!DNL Mailchimp] Les valeurs de clé d’API ou de centre de données sont incorrectes {#incorrect-credentials-error}
+### Erreur rencontrée si [!DNL Mailchimp] Les valeurs de clé API ou de centre de données sont incorrectes {#incorrect-credentials-error}
 
-Si la clé d’API que vous avez fournie dans la variable **[!UICONTROL Mot de passe]** ou le champ **[!UICONTROL Centre de données]** est incorrecte, l’interface affiche une [!DNL Mailchimp] Réponse d’erreur de l’API : *`No options are available. Please verify the values selected for the following dependent fields: dataCenter`* comme illustré ci-dessous. Dans ce cas, vous ne pouvez pas sélectionner de valeur dans la variable **[!UICONTROL Nom de l’audience (veuillez d’abord sélectionner le centre de données)]** champ .
+Si la clé d’API que vous avez fournie dans la variable **[!UICONTROL Password]** ou le champ **[!UICONTROL Centre de données]** est incorrecte, l’interface affiche une [!DNL Mailchimp] Réponse d’erreur de l’API : *`No options are available. Please verify the values selected for the following dependent fields: dataCenter`* comme illustré ci-dessous. Dans ce cas, vous ne pouvez pas sélectionner de valeur dans la variable **[!UICONTROL Nom de l’audience (veuillez d’abord sélectionner le centre de données)]** champ .
 
-![Copie d’écran de l’interface utilisateur de Platform affichant une erreur si les valeurs de votre clé API ou de votre centre de données Mailchimp sont incorrectes.](../../assets/catalog/email-marketing/mailchimp-interest-categories/error.png)
+![Copie d’écran de l’interface utilisateur de Platform affichant une erreur si les valeurs de votre clé d’API Mailchimp ou de votre centre de données sont incorrectes.](../../assets/catalog/email-marketing/mailchimp-interest-categories/error.png)
 
-Pour corriger cette erreur et passer à l’étape suivante, vous devez fournir les valeurs correctes. Reportez-vous à la section [Identifier [!DNL Mailchimp] centre de données](#identify-data-center) et
+Pour corriger cette erreur et passer à l’étape suivante, vous devez fournir les valeurs correctes. Voir [Identifier [!DNL Mailchimp] centre de données](#identify-data-center) et
 [Collecte [!DNL Mailchimp] Clé API](#gather-credentials) si vous avez besoin d’instructions.
 
 ### Erreur rencontrée si [!DNL Mailchimp] la limite du nom de groupe est dépassée. {#group-name-limits-error}
@@ -223,13 +224,13 @@ Lors de la création de la destination, vous pouvez recevoir les messages d’er
 
 ### [!DNL Mailchimp] Codes d’état et d’erreur
 
-Reportez-vous à la section [[!DNL Mailchimp] page erreurs](https://mailchimp.com/developer/marketing/docs/errors/) pour obtenir une liste complète des codes d’état et d’erreur avec des explications.
+Voir [[!DNL Mailchimp] page erreurs](https://mailchimp.com/developer/marketing/docs/errors/) pour obtenir une liste complète des codes d’état et d’erreur avec des explications.
 
 ## Ressources supplémentaires {#additional-resources}
 
 Retrouvez d’autres informations utiles de la documentation de [!DNL Mailchimp] ci-dessous :
 * [Prise en main de [!DNL Mailchimp]](https://mailchimp.com/help/getting-started-with-mailchimp/)
-* [Prise en main d’Audiences](https://mailchimp.com/help/getting-started-audience/)
+* [Prise en main des audiences](https://mailchimp.com/help/getting-started-audience/)
 * [Création d’un public](https://mailchimp.com/help/create-audience/)
 * [Prise en main des groupes](https://mailchimp.com/help/getting-started-with-groups/)
 * [Création d’un groupe d’audiences](https://mailchimp.com/help/create-new-audience-group/)
