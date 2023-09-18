@@ -3,10 +3,10 @@ keywords: Experience Platform;identité;service d’identité;dépannage;garde-f
 title: Barrières de sécurité pour Identity Service
 description: Ce document fournit des informations sur l’utilisation et les limites de taux pour les données Identity Service afin de vous aider à optimiser l’utilisation du graphique d’identités.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: 87138cbf041e40bfc6b42edffb16f5b8a8f5b365
+source-git-commit: a9b5ab28d00941b7531729653eb630a61b5446fc
 workflow-type: tm+mt
-source-wordcount: '1112'
-ht-degree: 63%
+source-wordcount: '1182'
+ht-degree: 57%
 
 ---
 
@@ -32,7 +32,7 @@ Le tableau suivant décrit les limites statiques appliquées aux données d’id
 | Mécanisme de sécurisation | Limite | Notes |
 | --- | --- | --- |
 | (Comportement actuel) Nombre d’identités dans un graphique | 150 | La limite est appliquée au niveau de la sandbox. Une fois que le nombre d’identités atteint 150 ou plus, aucune nouvelle identité ne sera ajoutée et le graphique d’identités ne sera pas mis à jour. Les graphiques peuvent afficher des identités supérieures à 150 en raison de la liaison d’un ou de plusieurs graphiques avec moins de 150 identités. **Remarque**: nombre maximal d’identités dans un graphique d’identités **pour un profil fusionné individuel** est de 50. Les profils fusionnés basés sur des graphiques d’identités comportant plus de 50 identités sont exclus de Real-time Customer Profile. Pour plus d’informations, consultez le guide sur [Barrières de sécurité pour les données de profil](../profile/guardrails.md). |
-| (Comportement à venir) Nombre d’identités dans un graphique [!BADGE Beta]{type=Informative} | 50 | Lorsqu’un graphique comportant 50 identités liées est mis à jour, Identity Service applique un mécanisme « premier entré, premier sorti » et supprime l’identité la plus ancienne afin de libérer de l’espace pour la nouvelle identité. La suppression est basée sur le type d’identité et sur la date et l’heure. La limite est appliquée au niveau de la sandbox. Consultez l’[annexe](#appendix) pour obtenir plus d’informations sur la manière dont Identity Service supprime les identités une fois la limite atteinte. |
+| (Comportement à venir) Nombre d’identités dans un graphique [!BADGE Beta]{type=Informative} | 50 | Lorsqu’un graphique comportant 50 identités liées est mis à jour, Identity Service applique un mécanisme « premier entré, premier sorti » et supprime l’identité la plus ancienne afin de libérer de l’espace pour la nouvelle identité. La suppression est basée sur le type d’identité et sur la date et l’heure. La limite est appliquée au niveau de la sandbox. Pour plus d’informations, consultez la section sur [compréhension de la logique de suppression](#deletion-logic). |
 | Nombre d’identités dans un enregistrement XDM | 20 | Le nombre minimum d’enregistrements XDM requis est de deux. |
 | Nombre d’espaces de noms personnalisés | Aucun | Vous pouvez créer autant d’espaces de noms personnalisés que vous le souhaitez. |
 | Nombre de caractères présents dans le nom d’affichage d’un espace de noms ou un symbole d’identité | Aucun | Le nombre de caractères dans le nom d’affichage d’un espace de noms ou un symbole d’identité est illimité. |
@@ -50,32 +50,11 @@ Le tableau suivant décrit les règles à suivre pour garantir la validation de 
 
 Depuis le 31 mars 2023, Identity Service bloque l’ingestion des identifiants Adobe Analytics (AAID) pour les nouveaux clientes et clients. L’ingestion de cette identité s’effectue généralement par la [source Adobe Analytics](../sources/connectors/adobe-applications/analytics.md). La [source Adobe Audience Manager](../sources//connectors/adobe-applications/audience-manager.md) est redondante, car l’ECID représente le même navigateur web. Si vous souhaitez modifier cette configuration par défaut, contactez votre équipe Adobe en charge des comptes.
 
-## Étapes suivantes
-
-Pour plus d’informations sur [!DNL Identity Service], consultez la documentation suivante :
-
-* [Vue d’ensemble des [!DNL Identity Service]](home.md)
-* [Graphique d’identités observateur](ui/identity-graph-viewer.md)
-
-
-## Annexe {#appendix}
-
-La section suivante contient des informations supplémentaires sur les barrières de sécurité d’Identity Service.
-
-### [!BADGE Beta]{type=Informative} Comprendre la logique de suppression lorsqu’un graphique d’identité complet est mis à jour {#deletion-logic}
-
->[!IMPORTANT]
->
->La logique de suppression suivante est un comportement à venir d’Identity Service. Contactez le représentant de votre compte pour demander un changement de type d’identité si votre environnement de test de production contient :
->
-> * Espace de noms personnalisé dans lequel les identifiants de personne (tels que les identifiants CRM) sont configurés en tant que type d’identité de cookie/appareil.
-> * Espace de noms personnalisé dans lequel les identifiants de cookie/d’appareil sont configurés en tant que type d’identité multi-appareils.
->
->Une fois cette fonction disponible, les graphiques qui dépassent la limite de 50 identités sont réduits jusqu’à 50 identités. Pour la plateforme CDP B2C en temps réel, cela pourrait entraîner une augmentation minimale du nombre de profils qualifiés pour une audience, car ces profils étaient auparavant ignorés de la segmentation et de l’activation.
+## [!BADGE Beta]{type=Informative} Comprendre la logique de suppression lorsqu’un graphique d’identité complet est mis à jour {#deletion-logic}
 
 Lorsqu’un graphique d’identité complet est mis à jour, Identity Service supprime l’identité la plus ancienne du graphique avant d’ajouter la dernière identité. Cela permet de garantir l’exactitude et la pertinence des données d’identité. Le processus de suppression suit les deux règles suivantes :
 
-#### Règle 1 : la priorité de suppression dépend du type d’identité d’un espace de noms
+### Règle 1 : la priorité de suppression dépend du type d’identité d’un espace de noms
 
 La priorité de suppression est comme suit :
 
@@ -83,7 +62,7 @@ La priorité de suppression est comme suit :
 2. ID d’appareil
 3. ID, e-mail et téléphone sur l’ensemble des appareils
 
-#### Règle 2 : la suppression est basée sur la date et l’heure stockées sur l’identité
+### Règle 2 : la suppression est basée sur la date et l’heure stockées sur l’identité
 
 Chaque identité liée d’un graphique possède une date et une heure correspondantes qui lui sont propres. Lorsqu’un graphique complet est mis à jour, Identity Service supprime l’identité dont la date et l’heure sont les plus anciennes.
 
@@ -110,7 +89,36 @@ Dans cet exemple, avant que le graphique de gauche ne puisse être mis à jour a
 
 >[!ENDSHADEBOX]
 
+### Implications sur la mise en oeuvre
+
+Les sections suivantes décrivent les implications de la logique de suppression sur Identity Service, Real-Time Customer Profile et WebSDK.
+
+#### Identity Service : modifications du type d’identité d’espace de noms personnalisé
+
+Contactez votre équipe de compte d’Adobe pour demander un changement de type d’identité si votre environnement de test de production contient :
+
+* Espace de noms personnalisé dans lequel les identifiants de personne (tels que les identifiants CRM) sont configurés en tant que type d’identité de cookie/appareil.
+* Espace de noms personnalisé dans lequel les identifiants de cookie/d’appareil sont configurés en tant que type d’identité multi-appareils.
+
+Une fois cette fonction disponible, les graphiques qui dépassent la limite de 50 identités sont réduits jusqu’à 50 identités. Pour Real-Time CDP Édition B2C, cela peut entraîner une augmentation minimale du nombre de profils qualifiés pour une audience, car ces profils étaient auparavant ignorés de la segmentation et de l’activation.
+
+#### Profil client en temps réel : configuration du profil pseudonyme
+
 La suppression se produit uniquement pour les données d’Identity Service et non pour Real-Time Customer Profile.
 
 * Ce comportement peut donc créer plus de profils avec un seul ECID, car celui-ci ne fait plus partie du graphique d’identités.
 * Pour rester dans vos numéros de droits d’audience adressables, il est recommandé d’activer [expiration pseudonyme des données de profil](../profile/pseudonymous-profiles.md) pour supprimer vos anciens profils.
+
+#### Real-Time Customer Profile et WebSDK : suppression d’identité par Principal
+
+Si vous souhaitez conserver vos événements authentifiés par rapport à l’identifiant CRM, il est recommandé de modifier vos identifiants principaux ECID en identifiant CRM. Lisez les documents suivants pour connaître les étapes de mise en oeuvre de cette modification :
+
+* [Configuration de la carte d’identité pour les balises Experience Platform](../tags/extensions/client/web-sdk/data-element-types.md#identity-map).
+* [Données d’identité dans le SDK Web Experience Platform](../edge/identity/overview.md#using-identitymap)
+
+## Étapes suivantes
+
+Pour plus d’informations sur [!DNL Identity Service], consultez la documentation suivante :
+
+* [Vue d’ensemble des [!DNL Identity Service]](home.md)
+* [Graphique d’identités observateur](ui/identity-graph-viewer.md)

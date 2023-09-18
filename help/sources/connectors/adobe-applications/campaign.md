@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;accueil;rubriques populaires;Adobe Campaign Managed Cloud Services;campagne;services gérés de campagne
 title: Adobe Campaign Managed Cloud Services
-description: Découvrez comment connecter des Cloud Services gérés Campaign à Platform à l’aide de l’interface utilisateur
+description: Découvrez comment connecter des Cloud Service gérés Campaign à Platform à l’aide de l’interface utilisateur
 exl-id: 8f18bf73-ebf1-4b4e-a12b-964faa0e24cc
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 39a503b14c731aeed279bbbfa8c814c2ec26ed92
 workflow-type: tm+mt
-source-wordcount: '663'
-ht-degree: 11%
+source-wordcount: '757'
+ht-degree: 9%
 
 ---
 
@@ -20,7 +20,7 @@ La source Adobe Campaign Managed Cloud Services vous permet d’importer les don
 
 ## Conditions préalables
 
-Avant de pouvoir créer une connexion source pour que Campaign v8 soit Experience Platform, vous devez d&#39;abord remplir les conditions préalables suivantes :
+Avant de pouvoir créer une connexion source pour amener votre Campaign v8 vers l&#39;Experience Platform, vous devez d&#39;abord remplir les conditions préalables suivantes :
 
 * [Configuration de l’importation de votre journal d’événements à l’aide de la console cliente Adobe Campaign](#view-delivery-and-tracking-log-data)
 * [Création d’un schéma XDM ExperienceEvent](#create-a-schema)
@@ -56,9 +56,9 @@ Vous pouvez maintenant visualiser les logs de diffusion de vos destinataires, y 
 
 ![Les logs de diffusion des destinataires s&#39;affichent avec des informations sur leur nom modifié, canal de diffusion, nom de la diffusion interne et libellé.](./images/campaign/recipient-delivery-logs.png)
 
-### Création d’un schéma {#create-a-schema}
+### Créer un schéma {#create-a-schema}
 
-Créez ensuite un schéma XDM ExperienceEvent pour les logs de diffusion et les logs de suivi. Vous devez appliquer le groupe de champs Logs de diffusion de campagne à votre schéma de logs de diffusion et le groupe de champs Logs de tracking de campagne à votre schéma de logs de tracking. Vous devez également définir la variable `externalID` comme identité Principale de votre schéma.
+Créez ensuite un schéma XDM ExperienceEvent pour les logs de diffusion et les logs de suivi. Vous devez appliquer le groupe de champs Logs de diffusion de campagne à votre schéma de logs de diffusion et le groupe de champs Logs de tracking de campagne à votre schéma de logs de tracking. Vous devez également définir la variable `externalID` comme identité principale de votre schéma.
 
 >[!NOTE]
 >
@@ -70,8 +70,14 @@ Pour obtenir des instructions détaillées sur la création d’un schéma, cons
 
 Enfin, vous devez créer un jeu de données pour vos schémas. Pour obtenir des instructions détaillées sur la création d’un jeu de données, consultez le guide sur [création d’un jeu de données dans l’interface utilisateur](../../../catalog/datasets/user-guide.md).
 
-## Création d’une connexion source Adobe Campaign Managed Cloud Services à l’aide de l’interface utilisateur de Platform
+## Créer une connexion source Adobe Campaign Managed Cloud Services à l’aide de l’interface utilisateur de Platform
 
 Maintenant que vous avez accédé à vos logs de données dans la console cliente Campaign, que vous avez créé un schéma et un jeu de données, vous pouvez créer une connexion source pour importer vos données Campaign Managed Services dans Platform.
 
 Pour obtenir des instructions détaillées sur la manière d’importer vos données de logs de diffusion et de tracking Campaign v8 dans Experience Platform, consultez le guide sur [création d’une connexion source Managed Services en campagne dans l’interface utilisateur](../../tutorials/ui/create/adobe-applications/campaign.md).
+
+>[!IMPORTANT]
+>
+>Il existe un cas extrême où l’interaction d’un destinataire d’email récemment supprimé avec un email peut réingérer des informations personnelles dans Experience Platform. Dans certains cas, cela peut réactiver le marketing pour cet utilisateur.
+>
+>* Ce scénario est uniquement actif entre le moment où une demande d’accès à des informations personnelles a été exécutée dans Experience Platform et celui où elle a été exécutée dans Adobe Campaign Classic. Une fois la requête exécutée dans Campaign, une vérification est effectuée pour s’assurer que l’enregistrement n’est pas exporté vers Campaign. Pour résoudre ce problème, veuillez réémettre une demande RGPD après 72 heures d’exécution.
