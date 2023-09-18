@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Surveillance de l’ingestion des données
 description: Ce guide d’utilisation fournit des étapes détaillées sur la manière de surveiller vos données au sein de l’interface utilisateur d’Adobe Experience Platform. Ce guide nécessite que vous possédiez déjà un Adobe ID et un accès à Adobe Experience Platform.
 exl-id: 85711a06-2756-46f9-83ba-1568310c9f73
-source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
+source-git-commit: 9399a242b855e151e5822035bc952efa89fe4bf0
 workflow-type: tm+mt
-source-wordcount: '654'
-ht-degree: 37%
+source-wordcount: '657'
+ht-degree: 36%
 
 ---
 
@@ -24,7 +24,7 @@ Ce guide d’utilisation décrit les étapes à suivre pour surveiller vos donn�
 >title="Taux d&#39;ingestion"
 >abstract="Le nombre d&#39;événements traités avec succès par seconde."
 >text="Learn more in the documentation"
->additional-url="http://www.adobe.com/go/monitor-dataflows-en?lang=fr" text="Surveillance des flux de données pour les sources dans l&#39;interface utilisateur"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-sources.html" text="Surveillance des flux de données pour les sources dans l&#39;interface utilisateur"
 
 >[!TIP]
 >
@@ -44,7 +44,7 @@ Le graphique inférieur affiche le taux d’événements en flux continu traité
 
 >[!NOTE]
 >
->Pour que les données s’affichent sur ce graphique, les données doivent être **explicitement** activé pour [!DNL Profile]. Pour savoir comment activer la diffusion en continu de données pour [!DNL Profile], lisez le [guide d’utilisation des jeux de données](../../catalog/datasets/user-guide.md#enable-a-dataset-for-real-time-customer-profile).
+>Pour que les données s’affichent sur ce graphique, les données doivent être **explicitement** activé pour [!DNL Profile]. Pour savoir comment activer les données en continu pour [!DNL Profile], lisez le [guide d’utilisation des jeux de données](../../catalog/datasets/user-guide.md#enable-a-dataset-for-real-time-customer-profile).
 
 ![](../images/quality/monitor-data-flows/ingested-by-profile.png)
 
