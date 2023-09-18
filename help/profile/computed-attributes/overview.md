@@ -1,31 +1,36 @@
 ---
 title: Présentation des attributs calculés
 description: Les attributs calculés sont des fonctions permettant d’agréger des données au niveau de l’événement en attributs au niveau du profil. Ces fonctions sont automatiquement calculées afin de pouvoir être utilisées au niveau de la segmentation, de l’activation et de la personnalisation.
-badge: « Version bêta »
-source-git-commit: 3b4e1e793a610c9391b3718584a19bd11959e3be
+source-git-commit: 7ed473750b673eefd84b8d727043ad6ea35c3a8e
 workflow-type: tm+mt
-source-wordcount: '961'
-ht-degree: 11%
+source-wordcount: '1059'
+ht-degree: 10%
 
 ---
 
-# Présentation des attributs calculés
 
->[!IMPORTANT]
->
->Les attributs calculés se trouvent actuellement dans **bêta** et est **not** disponible pour tous les utilisateurs.
+# Présentation des attributs calculés
 
 La personnalisation basée sur le comportement des utilisateurs est une exigence clé pour les marketeurs afin d’optimiser l’impact de la personnalisation. Par exemple, personnaliser l’e-mail marketing avec le produit récemment consulté pour générer des conversions ou personnaliser la page web en fonction du total des achats effectués par les utilisateurs pour accroître la rétention.
 
 Les attributs calculés permettent de convertir rapidement les données comportementales de profil en valeurs agrégées au niveau du profil sans dépendre des ressources d’ingénierie pour :
 
-- Activation de la personnalisation ciblée avec l’activation d’agrégats comportementaux vers des destinations Real-time Customer Data Platform, l’utilisation dans Adobe Journey Optimizer ou la segmentation
+- Activation de la personnalisation individuelle ou par lots ciblée avec l’activation d’agrégats comportementaux vers les destinations et l’utilisation de Real-time Customer Data Platform dans Adobe Journey Optimizer
+- Segmentation d’audience simplifiée avec stockage d’agrégats comportementaux en tant qu’attributs de profil
 - Normalisation des données comportementales de profil agrégées pour une utilisation sur plusieurs plateformes et applications
 - Amélioration de la gestion des données avec la consolidation des anciennes données d’événements de profil dans des informations comportementales significatives
 
-Ces agrégats sont calculés en fonction des jeux de données d’événements d’expérience activés pour le profil ingérés dans Adobe Experience Platform. Chaque attribut calculé est un attribut de profil créé sur votre schéma d’union de profil et est regroupé sous le groupe de champs &quot;Attribut calculé&quot; dans votre schéma d’union.
+Ces agrégats sont calculés en fonction des jeux de données d’événements d’expérience activés pour le profil ingérés dans Adobe Experience Platform. Chaque attribut calculé est un attribut de profil créé sur votre schéma d’union de profil et est regroupé sous le groupe de champs &quot;SystemComputedAttribute&quot; dans votre schéma d’union.
 
-Parmi les exemples d’utilisation, citons la personnalisation des publicités avec le nom du dernier produit consulté pour les personnes n’ayant effectué aucun achat au cours des 7 derniers jours, la personnalisation des emails marketing avec le total des points de récompense pour féliciter les utilisateurs d’avoir été promus à un niveau de prime ou le calcul de la valeur de durée de vie de chaque client afin d’optimiser le ciblage.
+Voici des exemples de cas d’utilisation :
+
+- Personnaliser des emails marketing avec un total de points de récompense pour féliciter les utilisateurs d&#39;avoir été promus à un niveau Premium
+- Personnaliser les communications avec les utilisateurs en fonction du nombre et de la fréquence des achats
+- Personnaliser les emails de rétention en fonction des dates d&#39;expiration d&#39;abonnement
+- Reciblage des utilisateurs qui ont consulté mais n’ont pas acheté un produit avec le dernier produit consulté
+- Activation d’agrégats d’événements à l’aide d’attributs calculés sur un système en aval à l’aide des destinations Real-Time CDP
+- Réduction de plusieurs audiences basées sur des événements en un groupe plus condensé d’attributs calculés
+- Reciblage hors site des utilisateurs non authentifiés à l’aide d’identifiants de partenaire récents provenant d’événements
 
 Ce guide vous aidera à mieux comprendre le rôle des attributs calculés dans Platform, en plus d’expliquer les bases des attributs calculés.
 
@@ -43,11 +48,11 @@ Les attributs calculés vous permettent de définir des agrégats d’événemen
 
 | Fonction | Description | Types de données pris en charge | Exemple d’utilisation |
 | -------- | ----------- | -------------------- | ------------- |
-| SUM | Une fonction qui **sum** augmenter la valeur spécifiée pour les événements qualifiés. | Entiers, nombres, Longs | Somme de tous les achats des 7 derniers jours |
+| SUM | Une fonction qui **sum** augmentez la valeur spécifiée pour les événements qualifiés. | Entiers, nombres, Longs | Somme de tous les achats des 7 derniers jours |
 | COUNT | Une fonction qui **count** le nombre d’événements qui se sont produits pour la règle donnée. | S/O | Nombre d&#39;achats au cours des 3 derniers mois |
 | MIN | Une fonction qui recherche la variable **minimum** pour les événements qualifiés. | Entiers, Nombres, Longs, Horodatages | Premières données d’achat au cours des 7 derniers jours<br/>Montant minimum de la commande dans les 4 dernières semaines |
 | MAX | Une fonction qui recherche la variable **maximum** pour les événements qualifiés. | Entiers, Nombres, Longs, Horodatages | Données du dernier achat au cours des 7 derniers jours<br/>Montant maximum de la commande dans les 4 dernières semaines |
-| MOST_RECENT | Une fonction qui recherche la valeur d’attribut spécifiée à partir du dernier événement qualifié. | Toutes les valeurs primitives, tableaux de valeurs primitives | Dernier produit consulté au cours des 7 derniers jours |
+| MOST_RECENT | Une fonction qui recherche la valeur d’attribut spécifiée à partir du dernier événement qualifié. Cette fonction donne **both** la valeur ainsi que l’horodatage de l’attribut . | Toutes les valeurs primitives, tableaux de valeurs primitives | Dernier produit consulté au cours des 7 derniers jours |
 
 ### Périodes de recherche en amont
 
@@ -68,21 +73,19 @@ Par exemple, si votre attribut calculé a une période de recherche arrière des
 
 >[!NOTE]
 >
->Les semaines et les mois sont considérés comme **semaines calendaires** et **mois calendaires** lorsqu’elle est utilisée dans les recherches en amont d’événements.
+>Les semaines et les mois sont considérés comme **semaines calendaires** et **mois calendaires** lorsqu’elle est utilisée dans les recherches en amont d’événements. La semaine calendaire commence au moment de la **Dimanche** et se termine sur le **samedi** de la semaine.
 
-**Actualisation rapide**
+**Actualisation rapide** {#fast-refresh}
 
->[!IMPORTANT]
->
->Un maximum de **cinq** Par environnement de test, les attributs peuvent avoir une actualisation rapide activée.
-
-Une actualisation rapide vous permet de garder vos attributs à jour. L’activation de cette option vous permet d’actualiser quotidiennement vos attributs calculés, même pour des périodes de recherche en amont plus longues. Vous pouvez ainsi réagir en temps quasi réel aux activités des utilisateurs. Cette valeur s’applique uniquement aux attributs calculés avec une période de recherche arrière supérieure à une base hebdomadaire.
+Une actualisation rapide vous permet de garder vos attributs à jour. L’activation de cette option vous permet d’actualiser quotidiennement vos attributs calculés, même pour des périodes de recherche en amont plus longues, ce qui vous permet de réagir rapidement aux activités de l’utilisateur.
 
 >[!NOTE]
 >
 >L’activation d’une actualisation rapide varie les durées de recherche en amont de vos événements, puisque la période de recherche en amont s’étend respectivement sur une base hebdomadaire ou mensuelle.
 >
->Par exemple, si vous créez un attribut calculé avec une période de recherche en amont de deux semaines avec l’actualisation rapide activée, cela signifie que la période de recherche en amont initiale sera de deux semaines. Toutefois, à chaque actualisation quotidienne, la période de recherche arrière inclut les événements du jour supplémentaire. Cet ajout de jours se poursuit jusqu’au début de la semaine calendaire suivante, au cours de laquelle l’intervalle de recherche en amont s’affiche et revient à deux semaines.
+>Si vous créez un attribut calculé avec une période de recherche en amont de deux semaines avec l’actualisation rapide activée, cela signifie que la période de recherche en amont initiale sera de deux semaines. Toutefois, à chaque actualisation quotidienne, la période de recherche arrière inclut les événements du jour supplémentaire. Cet ajout de jours se poursuit jusqu’au début de la semaine calendaire suivante, au cours de laquelle l’intervalle de recherche en amont s’affiche et revient à deux semaines.
+>
+>Par exemple, si une période de recherche arrière de deux semaines a commencé le 15 mars (dimanche) avec l’actualisation rapide activée, avec actualisation quotidienne activée, la période de recherche arrière continuera à s’étendre de manière inclusive jusqu’au 22 mars, où elle reprendra deux semaines. En bref, l’attribut calculé est **actualisé** chaque jour, la période de recherche en amont augmentant de **two** semaines à **trois** durant la semaine, puis revenez à **two** semaines.
 
 ## Étapes suivantes
 

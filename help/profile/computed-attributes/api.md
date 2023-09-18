@@ -1,21 +1,19 @@
 ---
 title: Point de terminaison de l’API Attributs calculés
 description: Découvrez comment créer, afficher, mettre à jour et supprimer des attributs calculés à l’aide de l’API Real-time Customer Profile.
-badge: « Version bêta »
-source-git-commit: 3b4e1e793a610c9391b3718584a19bd11959e3be
+source-git-commit: e1c7d097f7ab39d05674c3dad620bea29f08092b
 workflow-type: tm+mt
-source-wordcount: '1565'
-ht-degree: 13%
+source-wordcount: '1654'
+ht-degree: 12%
 
 ---
+
 
 # Point d’entrée de l’API des attributs calculés
 
 >[!IMPORTANT]
 >
->La fonctionnalité des attributs calculés est actuellement en version bêta. La documentation et les fonctionnalités peuvent changer.
->
->En outre, l’accès à l’API est restreint. Pour savoir comment accéder à l’API des attributs calculés, contactez l’assistance Adobe.
+>L’accès à l’API est restreint. Pour savoir comment accéder à l’API des attributs calculés, contactez l’assistance Adobe.
 
 Les attributs calculés sont des fonctions utilisées pour regrouper des données au niveau de l’événement en attributs au niveau du profil. Ces fonctions sont automatiquement calculées afin de pouvoir être utilisées au niveau de la segmentation, de l’activation et de la personnalisation. Ce guide comprend des exemples d’appels API pour effectuer des opérations CRUD de base à l’aide de `/attributes` point de terminaison .
 
@@ -30,7 +28,7 @@ Avant de poursuivre, veuillez consulter la section [Guide de prise en main de l�
 En outre, veuillez consulter la documentation du service suivant :
 
 - [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md) : cadre normalisé selon lequel [!DNL Experience Platform] organise les données de l’expérience client.
-   - [Guide de prise en main du registre des schémas](../../xdm/api/getting-started.md#know-your-tenant_id): Informations relatives à `{TENANT_ID}`, qui apparaît dans les réponses de ce guide, est fourni.
+   - [Guide de prise en main du registre des schémas](../../xdm/api/getting-started.md#know-your-tenant_id): informations sur votre `{TENANT_ID}`, qui apparaît dans les réponses de ce guide, est fourni.
 
 ## Récupération d’une liste d’attributs calculés {#list}
 
@@ -52,7 +50,7 @@ Les paramètres de requête suivants peuvent être utilisés lors de la récupé
 | `limit` | Un paramètre qui spécifie le nombre maximal d’éléments renvoyés dans le cadre de la réponse. La valeur minimale de ce paramètre est 1 et la valeur maximale est 40. Si ce paramètre n’est pas inclus, 20 éléments sont renvoyés par défaut. | `limit=20` |
 | `offset` | Un paramètre qui spécifie le nombre d’éléments à ignorer avant de renvoyer les éléments. | `offset=5` |
 | `sortBy` | Un paramètre qui spécifie l’ordre dans lequel les éléments renvoyés sont triés. Les options disponibles incluent : `name`, `status`, `updateEpoch`, et `createEpoch`. Vous pouvez également choisir de trier dans l’ordre croissant ou décroissant en n’incluant pas ou en incluant un `-` devant l’option de tri. Par défaut, les éléments sont triés par `updateEpoch` dans l’ordre décroissant. | `sortBy=name` |
-| `status` | Paramètre permettant de filtrer selon l’état de l’attribut calculé. Les options disponibles incluent : `draft`, `new`, `processing`, `processed`, `failed`, `disabled`, et `initializing`. Cette option n’est pas sensible à la casse. | `status=draft` |
+| `property` | Paramètre permettant de filtrer les données selon différents champs d’attribut calculés. Les propriétés prises en charge incluent : `name`, `createEpoch`, `mergeFunction.value`, `updateEpoch`, et `status`. Les opérations prises en charge dépendent de la propriété répertoriée. <ul><li>`name`: `EQUAL` (=), `NOT_EQUAL` (!=), `CONTAINS` (=contains()), `NOT_CONTAINS` (=!contains())</li><li>`createEpoch`: `GREATER_THAN_OR_EQUALS` (&lt;=), `LESS_THAN_OR_EQUALS` (>=) </li><li>`mergeFunction.value`: `EQUAL` (=), `NOT_EQUAL` (!=), `CONTAINS` (=contient()), `NOT_CONTAINS` (!=contient())</li><li>`updateEpoch`: `GREATER_THAN_OR_EQUALS` (&lt;=), `LESS_THAN_OR_EQUALS` (>=)</li><li>`status`: `EQUAL` (=), `NOT_EQUAL` (!=), `CONTAINS` (=contains()), `NOT_CONTAINS` (=!contains())</li></ul> | `property=updateEpoch>=1683669114845`<br/>`property=name!=testingrelease`<br/>`property=status=contains(new,processing,disabled)` |
 
 **Requête**
 
@@ -107,19 +105,24 @@ Une réponse réussie renvoie un état HTTP 200 avec une liste des 3 derniers at
                 "default": true
             },
             "path": "{TENANT_ID}/ComputedAttributes",
+            "keepCurrent": false,
             "expression": {
                 "type": "PQL",
                 "format": "pql/text",
                 "value": "xEvent[(commerce.checkouts.value > 0.0 or commerce.purchases.value > 1.0 or commerce.order.priceTotal >= 10.0)",
-                "meta": " "
             },
             "mergeFunction": {
-                "value": "-"
+                "value": "SUM"
             },
             "status": "DRAFT",
             "schema": {
                 "name": "_xdm.context.profile"
             },
+            "duration": {
+                "count": 7,
+                "unit": "DAYS"
+            },
+            "lastEvaluationTs": "",
             "createEpoch": 1671223530322,
             "updateEpoch": 1673043640946,
             "createdBy": "{USER_ID}"
@@ -138,19 +141,24 @@ Une réponse réussie renvoie un état HTTP 200 avec une liste des 3 derniers at
                 "default": true
             },
             "path": "{TENANT_ID}/ComputedAttributes",
+            "keepCurrent": true,
             "expression": {
                 "type": "PQL",
                 "format": "pql/text",
-                "value": "xEvent[(commerce.checkouts.value > 0.0 or commerce.purchases.value > 1.0 or commerce.order.priceTotal >= 10.0)",
-                "meta": " "
+                "value": "xEvent[eventType.equals(\"commerce.backofficeOrderPlaced\", false)].topN(timestamp, 1).map({\"timestamp\": timestamp, \"value\": producedBy}).head()"
             },
             "mergeFunction": {
-                "value": "-"
+                "value": "MOST_RECENT"
             },
             "status": "DRAFT",
             "schema": {
                 "name": "_xdm.context.profile"
             },
+            "duration": {
+                "count": 7,
+                "unit": "DAYS"
+            },
+            "lastEvaluationTs": "",
             "createEpoch": 1671223586455,
             "updateEpoch": 1671223586455,
             "createdBy": "{USER_ID}"
@@ -173,15 +181,19 @@ Une réponse réussie renvoie un état HTTP 200 avec une liste des 3 derniers at
                 "type": "PQL",
                 "format": "pql/text",
                 "value": "xEvent[(commerce.checkouts.value > 0.0 or commerce.purchases.value > 1.0 or commerce.order.priceTotal >= 10.0)",
-                "meta": " "
             },
             "mergeFunction": {
-                "value": "-"
+                "value": "SUM"
             },
-            "status": "DRAFT",
+            "status": "PROCESSED",
             "schema": {
                 "name": "_xdm.context.profile"
             },
+            "duration": {
+                "count": 7,
+                "unit": "DAYS"
+            },
+            "lastEvaluationTs": "2023-08-27T00:14:55.028",
             "createEpoch": 1671220358902,
             "updateEpoch": 1671220358902,
             "createdBy": "{USER_ID}"
@@ -252,11 +264,11 @@ curl -X POST https://platform.adobe.io/data/core/ca/attributes \
 | `expression.type` | Type de l’expression. Actuellement, seul PQL est pris en charge. |
 | `expression.format` | Format de l’expression. Actuellement, seul `pql/text` est pris en charge. |
 | `expression.value` | La valeur de l’expression. |
-| `keepCurrent` | Valeur booléenne qui détermine si la valeur de l’attribut calculé est mise à jour ou non. Actuellement, cette valeur doit être définie sur `false`. |
+| `keepCurrent` | Valeur booléenne qui détermine si la valeur de l’attribut calculé est actualisée ou non à l’aide d’une actualisation rapide. Actuellement, cette valeur doit être définie sur `false`. |
 | `duration` | Objet qui représente la période de recherche arrière de l’attribut calculé. La période de recherche en amont représente le délai dans lequel il est possible de revenir en arrière pour calculer l’attribut calculé. |
 | `duration.count` | Un nombre qui représente la durée de la période de recherche en amont. Les valeurs possibles dépendent de la valeur de la variable `duration.unit` champ . <ul><li>`HOURS`: 1-24</li><li>`DAYS`: 1-7</li><li>`WEEKS`: 1-4</li><li>`MONTHS`: 1-6</li></ul> |
 | `duration.unit` | Chaîne représentant l’unité de temps qui sera utilisée pour la période de recherche arrière. Les valeurs possibles sont les suivantes : `HOURS`, `DAYS`, `WEEKS`, et `MONTHS`. |
-| `status` | État de l’attribut calculé. Les valeurs possibles sont les suivantes : `DRAFT` et `NEW`. |
+| `status` | État de l’attribut calculé. Les valeurs possibles incluent : `DRAFT` et `NEW`. |
 
 +++
 
@@ -294,6 +306,7 @@ Une réponse réussie renvoie un état HTTP 200 avec des informations sur votre 
     "schema": {
         "name": "_xdm.context.profile"
     },
+    "lastEvaluationTs": "",
     "createEpoch": 1680070188696,
     "updateEpoch": 1680070188696,
     "createdBy": "{USER_ID}"
@@ -368,6 +381,7 @@ Une réponse réussie renvoie un état HTTP 200 avec des informations détaillé
     "schema": {
         "name": "_xdm.context.profile"
     },
+    "lastEvaluationTs": "",
     "createEpoch": 1680070188696,
     "updateEpoch": 1680070188696,
     "createdBy": "{USER_ID}"
@@ -378,13 +392,18 @@ Une réponse réussie renvoie un état HTTP 200 avec des informations détaillé
 | -------- | ----------- |
 | `id` | Un identifiant unique, en lecture seule, généré par le système que vous pouvez utiliser pour faire référence à l’attribut calculé pendant les autres opérations API. |
 | `type` | Chaîne indiquant que l’objet renvoyé est un attribut calculé. |
+| `name` | Nom de l’attribut calculé. |
+| `displayName` | Nom d’affichage de l’attribut calculé. Il s’agit du nom qui s’affichera lors de la liste de vos attributs calculés dans l’interface utilisateur de Adobe Experience Platform. |
+| `description` | Une description de l’attribut calculé. Cela s’avère particulièrement utile une fois que plusieurs attributs calculés ont été définis, car cela aidera d’autres membres de votre organisation à déterminer l’attribut calculé correct à utiliser. |
 | `imsOrgId` | L’identifiant de l’organisation à laquelle appartient l’attribut calculé. |
 | `sandbox` | L’objet Sandbox contient des détails sur le sandbox sur lequel l’attribut calculé a été configuré. Ces informations sont tirées de l’en-tête du sandbox envoyé dans la requête. Pour plus d’informations, consultez la [présentation des sandbox](../../sandboxes/home.md). |
-| `path` | Le `path` à l’attribut calculé. |
+| `path` | La variable `path` à l’attribut calculé. |
+| `keepCurrent` | Valeur booléenne qui détermine si la valeur de l’attribut calculé est actualisée ou non à l’aide d’une actualisation rapide. |
 | `expression` | Objet contenant l’expression de l’attribut calculé. |
-| `mergeFunction` | Objet contenant la fonction de fusion pour l’attribut calculé. Cette valeur est basée sur le paramètre d’agrégation correspondant dans l’expression de l’attribut calculé. |
-| `status` | État de l’attribut calculé. Il peut s’agir de l’une des valeurs suivantes : `DRAFT`, `NEW`, `INITIALIZING`, `PROCESSING`, `PROCESSED`, `FAILED`ou `DISABLED`. |
+| `mergeFunction` | Objet contenant la fonction de fusion pour l’attribut calculé. Cette valeur est basée sur le paramètre d’agrégation correspondant dans l’expression de l’attribut calculé. Les valeurs possibles incluent : `SUM`, `MIN`, `MAX`, et `MOST_RECENT`. |
+| `status` | État de l’attribut calculé. Il peut s’agir de l’une des valeurs suivantes : `DRAFT`, `NEW`, `INITIALIZING`, `PROCESSING`, `PROCESSED`, `FAILED`, ou `DISABLED`. |
 | `schema` | Objet contenant des informations sur le schéma dans lequel l’expression est évaluée. Actuellement, seul `_xdm.context.profile` est pris en charge. |
+| `lastEvaluationTs` | Horodatage qui représente le moment où l’attribut calculé a été évalué pour la dernière fois. |
 | `createEpoch` | Heure à laquelle l’attribut calculé a été créé, en secondes. |
 | `updateEpoch` | Heure à laquelle l’attribut calculé a été mis à jour pour la dernière fois, en secondes. |
 | `createdBy` | L’identifiant de l’utilisateur qui a créé l’attribut calculé. |
@@ -407,7 +426,7 @@ DELETE /attributes/{ATTRIBUTE_ID}
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{ATTRIBUTE_ID}` | Le `id` de l’attribut calculé que vous souhaitez supprimer. |
+| `{ATTRIBUTE_ID}` | La variable `id` de l’attribut calculé que vous souhaitez supprimer. |
 
 **Requête**
 
@@ -457,6 +476,7 @@ Une réponse réussie renvoie un état HTTP 202 avec les détails de l’attribu
     "schema": {
         "name": "_xdm.context.profile"
     },
+    "lastEvaluationTs": "",
     "createEpoch": 1681365690928,
     "updateEpoch": 1681365690928,
     "createdBy": "{USER_ID}"
@@ -485,7 +505,7 @@ PATCH /attributes/{ATTRIBUTE_ID}
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{ATTRIBUTE_ID}` | Le `id` valeur de l’attribut calculé que vous souhaitez mettre à jour. |
+| `{ATTRIBUTE_ID}` | La variable `id` valeur de l’attribut calculé que vous souhaitez mettre à jour. |
 
 **Requête**
 
@@ -548,6 +568,7 @@ Une réponse réussie renvoie un état HTTP 200 avec des informations sur votre 
     "schema": {
         "name": "_xdm.context.profile"
     },
+    "lastEvaluationTs": "",
     "createEpoch": 1680071726825,
     "updateEpoch": 1680074429192,
     "createdBy": "{USER_ID}"

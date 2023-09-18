@@ -1,20 +1,15 @@
 ---
 title: Guide de l’interface utilisateur des attributs calculés
 description: Découvrez comment créer, afficher et mettre à jour des attributs calculés à l’aide de l’interface utilisateur de Adobe Experience Platform.
-badge: « Version bêta »
-source-git-commit: 3b4e1e793a610c9391b3718584a19bd11959e3be
+source-git-commit: 7ed473750b673eefd84b8d727043ad6ea35c3a8e
 workflow-type: tm+mt
-source-wordcount: '1236'
-ht-degree: 5%
+source-wordcount: '1439'
+ht-degree: 4%
 
 ---
 
 
 # Guide de l’interface utilisateur des attributs calculés
-
->[!IMPORTANT]
->
->Les attributs calculés se trouvent actuellement dans **bêta** et est **not** disponible pour tous les utilisateurs.
 
 Dans Adobe Experience Platform, les attributs calculés sont des fonctions utilisées pour agréger les données au niveau de l’événement en attributs au niveau du profil. Ces fonctions sont automatiquement calculées afin de pouvoir être utilisées au niveau de la segmentation, de l’activation et de la personnalisation.
 
@@ -31,7 +26,7 @@ Ce guide de l’interface utilisateur nécessite une compréhension des différe
 
 Dans l’interface utilisateur de l’Experience Platform, sélectionnez **[!UICONTROL Profils]** dans le volet de navigation de gauche, suivi de **[!UICONTROL Attributs calculés]** pour afficher la liste des attributs calculés disponibles pour votre organisation. Cela inclut des informations sur le nom, la description, la date de dernière évaluation et le statut de la dernière évaluation de l’attribut calculé.
 
-![Le [!UICONTROL Profil] et le [!UICONTROL Attributs calculés] les onglets sont mis en surbrillance et montrent aux utilisateurs comment accéder à la page de navigation des attributs calculés.](./images/ui/browse.png)
+![La variable [!UICONTROL Profil] et la section [!UICONTROL Attributs calculés] les onglets sont mis en surbrillance et montrent aux utilisateurs comment accéder à la page de navigation des attributs calculés.](./images/ui/browse.png)
 
 Pour sélectionner les champs visibles, vous pouvez sélectionner ![icône de configuration des colonnes](./images/ui/configure-icon.png) pour ajouter ou supprimer les champs à afficher.
 
@@ -41,10 +36,20 @@ Pour sélectionner les champs visibles, vous pouvez sélectionner ![icône de co
 | [!UICONTROL Description] | Description de l’attribut calculé. |
 | [!UICONTROL Méthode d’évaluation] | Méthode d’évaluation de l’attribut calculé. Pour l’instant, uniquement **batch** est prise en charge. |
 | [!UICONTROL Dernière évaluation] | Cet horodatage représente la dernière opération d’évaluation réussie. Seuls les événements qui se sont produits **before** cet horodatage est pris en compte dans la dernière évaluation réussie. |
-| [!UICONTROL Dernier état d’évaluation] | État qui indique si l’attribut calculé a été correctement calculé lors de la dernière exécution d’évaluation. Les valeurs possibles sont les suivantes : **[!UICONTROL Succès]** ou **[!UICONTROL En échec]**. |
+| [!UICONTROL Dernier état d’évaluation] | État qui indique si l’attribut calculé a été correctement calculé lors de la dernière exécution d’évaluation. Les valeurs possibles incluent : **[!UICONTROL Succès]** ou **[!UICONTROL En échec]**. |
 | [!UICONTROL Fréquence d’actualisation] | Une indication sur la fréquence à laquelle l’attribut calculé doit être actualisé. Les valeurs possibles sont toutes les heures, tous les jours, toutes les semaines ou tous les mois. |
 | [!UICONTROL Actualisation rapide] | Une valeur qui indique si l’actualisation rapide est activée ou non pour cet attribut de calcul. Si l’actualisation rapide est activée, l’attribut calculé peut être actualisé quotidiennement, plutôt que sur une base hebdomadaire, bimensuelle ou mensuelle. Cette valeur s’applique uniquement aux attributs calculés avec une période de recherche arrière supérieure à une base hebdomadaire. |
-| [!UICONTROL Statut du cycle de vie] | État actuel de l’attribut calculé. Il existe trois états possibles : <ul><li>**[!UICONTROL Version préliminaire]:** L’attribut calculé fait **not** ont déjà un champ créé sur le schéma. Dans cet état, l’attribut calculé peut être modifié. </li><li>**[!UICONTROL Publié]:** L’attribut calculé comporte un champ créé sur le schéma et est prêt à être utilisé. Dans cet état, l’attribut calculé **cannot** être modifié.</li><li>**[!UICONTROL Inactif]:** L’attribut calculé est désactivé. Pour plus d’informations sur l’état inactif, consultez la section [Page FAQ](./faq.md#inactive-status). </li> |
+| [!UICONTROL Statut du cycle de vie] | État actuel de l’attribut calculé. Il existe trois états possibles : <ul><li>**[!UICONTROL Version préliminaire]:** L’attribut calculé fait **not** ont déjà un champ créé sur le schéma. Dans cet état, l’attribut calculé peut être modifié. </li><li>**[!UICONTROL Publié]:** L’attribut calculé comporte un champ créé sur le schéma et est prêt à être utilisé. Dans cet état, l’attribut calculé **cannot** être édités.</li><li>**[!UICONTROL Inactif]:** L’attribut calculé est désactivé. Pour plus d’informations sur l’état inactif, consultez la section [Page FAQ](./faq.md#inactive-status). </li> |
+| [!UICONTROL Créé] | Horodatage indiquant la date et l’heure de création de l’attribut calculé. |
+| [!UICONTROL Dernière modification] | Horodatage indiquant la date et l’heure de la dernière modification de l’attribut calculé. |
+
+Vous pouvez également filtrer les attributs calculés affichés en fonction de l’état du cycle de vie. Sélectionnez la variable ![entonnoir](./images/ui/filter-icon.png) Icône
+
+![L’icône de filtre est mise en surbrillance.](./images/ui/select-filter.png)
+
+Vous pouvez désormais choisir de filtrer les attributs calculés par état ([!UICONTROL Version préliminaire], [!UICONTROL Publié], et [!UICONTROL Inactif]).
+
+![Les options de filtrage des attributs calculés par sont mises en surbrillance. Ces options incluent les suivantes : [!UICONTROL Version préliminaire], [!UICONTROL Publié], et [!UICONTROL Inactif].](./images/ui/view-filters.png)
 
 De plus, vous pouvez sélectionner un attribut calculé pour afficher des informations plus détaillées à son sujet. Pour plus d’informations sur la page des détails des attributs calculés, veuillez lire le [Affichage de la section des détails d’un attribut calculé](#view-details).
 
@@ -52,9 +57,9 @@ De plus, vous pouvez sélectionner un attribut calculé pour afficher des inform
 
 Pour créer un attribut calculé, sélectionnez **[!UICONTROL Création d’un attribut calculé]** pour entrer dans le nouveau workflow d’attribut calculé.
 
-![Le [!UICONTROL Création d’attributs calculés] est mis en surbrillance, ce qui indique aux utilisateurs comment accéder à la page de création d’un attribut calculé.](./images/ui/create.png)
+![La variable [!UICONTROL Création d’attributs calculés] est mis en surbrillance, ce qui indique aux utilisateurs comment accéder à la page de création d’un attribut calculé.](./images/ui/create.png)
 
-Le **[!UICONTROL Création d’un attribut calculé]** s’affiche. Sur cette page, vous pouvez ajouter les informations de base pour l’attribut calculé que vous souhaitez créer.
+La variable **[!UICONTROL Création d’un attribut calculé]** s’affiche. Sur cette page, vous pouvez ajouter les informations de base pour l’attribut calculé que vous souhaitez créer.
 
 | Champ | Description |
 | ----- | ----------- |
@@ -62,7 +67,7 @@ Le **[!UICONTROL Création d’un attribut calculé]** s’affiche. Sur cette pa
 | [!UICONTROL Nom du champ] | Nom utilisé pour faire référence à l’attribut calculé dans d’autres services en aval. Ce nom est dérivé automatiquement du nom d’affichage et est écrit en CamelCase. |
 | [!UICONTROL Description] | Une description de l’attribut calculé que vous essayez de créer. |
 
-![Le [!UICONTROL Informations de base] de la section [!UICONTROL Création d’un attribut calculé] est mise en surbrillance.](./images/ui/basic-information.png)
+![La variable [!UICONTROL Informations de base] de la [!UICONTROL Création d’un attribut calculé] est mise en surbrillance.](./images/ui/basic-information.png)
 
 Après avoir ajouté les détails des attributs calculés, vous pouvez commencer à définir vos règles.
 
@@ -70,7 +75,7 @@ Après avoir ajouté les détails des attributs calculés, vous pouvez commencer
 
 Pour créer une règle, commencez par sélectionner des attributs dans la **[!UICONTROL Événements]** pour filtrer les événements sur lesquels vous souhaitez effectuer une agrégation. Actuellement, seuls les attributs d’événement de type non tableau sont pris en charge.
 
-![Le [!UICONTROL Événements] est mise en surbrillance.](./images/ui/events.png)
+![La variable [!UICONTROL Événements] est mise en surbrillance.](./images/ui/events.png)
 
 Après avoir sélectionné l’attribut à utiliser dans la définition d’attribut calculée, vous pouvez choisir à quoi cette valeur sera comparée.
 
@@ -92,9 +97,24 @@ Après avoir appliqué la fonction d’agrégation, vous devrez définir la pér
 
 ![La durée de recherche arrière est mise en surbrillance.](./images/ui/select-lookback-duration.png)
 
+### Actualisation rapide {#fast-refresh}
+
+>[!CONTEXTUALHELP]
+>id="platform_profile_computedAttributes_fastRefresh"
+>title="Actualisation rapide"
+>abstract="Une actualisation rapide vous permet de garder vos attributs à jour. L’activation de cette option vous permet d’actualiser quotidiennement vos attributs calculés, même pour des périodes de recherche en amont plus longues, ce qui vous permet de réagir rapidement aux activités de l’utilisateur. Cette valeur s’applique uniquement aux attributs calculés avec une période de recherche arrière supérieure à une base hebdomadaire."
+
+Lors de l’application de la fonction d’agrégation, vous pouvez activer une actualisation rapide si la période de recherche arrière est supérieure à une semaine.
+
+![La variable [!UICONTROL Actualisation rapide] est mise en surbrillance.](./images/ui/enable-fast-refresh.png)
+
+Une actualisation rapide vous permet de garder vos attributs à jour. L’activation de cette option vous permet d’actualiser quotidiennement vos attributs calculés, même pour des périodes de recherche en amont plus longues, ce qui vous permet de réagir rapidement aux activités de l’utilisateur.
+
+Pour plus d’informations sur l’actualisation rapide, veuillez lire la section [section actualisation rapide](./overview.md#fast-refresh) de la présentation des attributs calculés.
+
 Une fois ces étapes terminées, vous pouvez choisir d’enregistrer cet attribut calculé en tant que brouillon ou de le publier immédiatement.
 
-![Le [!UICONTROL Enregistrer en tant que brouillon] et [!UICONTROL Publier] les boutons sont mis en surbrillance.](./images/ui/draft-or-publish.png)
+![La variable [!UICONTROL Enregistrer en tant que brouillon] et [!UICONTROL Publier] les boutons sont mis en surbrillance.](./images/ui/draft-or-publish.png)
 
 ## Affichage des détails d’un attribut calculé {#view-details}
 
@@ -120,7 +140,7 @@ Cette page affiche un résumé des détails de l’attribut calculé, ainsi qu�
 
 Lors de la sélection d’un attribut calculé de version préliminaire, la variable **[!UICONTROL Modification des attributs calculés]** s’affiche. Cette page, de la même manière que la variable [!UICONTROL Création d’attributs calculés] vous permet de modifier les informations de base de votre attribut calculé, ainsi que sa définition, avant de vous permettre de mettre à jour le brouillon ou de le publier.
 
-![Le [!UICONTROL Modification des attributs calculés] s’affiche.](./images/ui/edit.png)
+![La variable [!UICONTROL Modification des attributs calculés] s’affiche.](./images/ui/edit.png)
 
 ## Utilisation d’attributs calculés {#usage}
 
