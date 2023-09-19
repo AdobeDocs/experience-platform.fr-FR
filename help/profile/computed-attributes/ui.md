@@ -1,15 +1,19 @@
 ---
 title: Guide de l’interface utilisateur des attributs calculés
 description: Découvrez comment créer, afficher et mettre à jour des attributs calculés à l’aide de l’interface utilisateur de Adobe Experience Platform.
-source-git-commit: 7ed473750b673eefd84b8d727043ad6ea35c3a8e
+source-git-commit: 631b67eb6609381235113009acefaf0d0cd8063c
 workflow-type: tm+mt
-source-wordcount: '1439'
+source-wordcount: '1485'
 ht-degree: 4%
 
 ---
 
 
 # Guide de l’interface utilisateur des attributs calculés
+
+>[!NOTE]
+>
+>Pour accéder aux attributs calculés, vous devez disposer des autorisations appropriées (**Affichage des attributs calculés** et **Gestion des attributs calculés**). Pour plus d’informations sur les autorisations requises, consultez la section [documentation sur le contrôle d’accès](../../access-control/home.md). Pour savoir comment appliquer ces autorisations, veuillez lire le [guide de gestion des autorisations](../../access-control/ui/permissions.md).
 
 Dans Adobe Experience Platform, les attributs calculés sont des fonctions utilisées pour agréger les données au niveau de l’événement en attributs au niveau du profil. Ces fonctions sont automatiquement calculées afin de pouvoir être utilisées au niveau de la segmentation, de l’activation et de la personnalisation.
 

@@ -1,9 +1,9 @@
 ---
 title: Questions fréquentes sur les attributs calculés
 description: Découvrez les réponses aux questions fréquentes sur l’utilisation des attributs calculés.
-source-git-commit: fb5d3088b9fb330153bf64125df2f739eee80518
+source-git-commit: 631b67eb6609381235113009acefaf0d0cd8063c
 workflow-type: tm+mt
-source-wordcount: '848'
+source-wordcount: '870'
 ht-degree: 2%
 
 ---
@@ -12,6 +12,10 @@ ht-degree: 2%
 # Questions fréquentes
 
 Dans Adobe Experience Platform, les attributs calculés sont des fonctions utilisées pour agréger les données au niveau de l’événement en attributs au niveau du profil. Ces fonctions sont automatiquement calculées afin de pouvoir être utilisées au niveau de la segmentation, de l’activation et de la personnalisation. Vous trouverez ci-dessous une liste des questions fréquemment posées concernant les attributs calculés.
+
+## Comment accéder aux attributs calculés ?
+
+Pour accéder aux attributs calculés, vous devez disposer des autorisations appropriées (**Affichage des attributs calculés** et **Gestion des attributs calculés**). Pour plus d’informations sur les autorisations requises, consultez la section [documentation sur le contrôle d’accès](../../access-control/home.md). Pour savoir comment appliquer ces autorisations, veuillez lire le [guide de gestion des autorisations](../../access-control/ui/permissions.md).
 
 ## Quels jeux de données contribuent aux calculs d’attributs calculés ?
 
@@ -76,10 +80,6 @@ Comme tout autre attribut de profil, les attributs calculés sont disponibles et
 ## Comment les libellés d’utilisation des données sont-ils appliqués aux attributs calculés ?
 
 Les attributs calculés dérivés automatiquement des libellés d’utilisation des données des champs sources et des jeux de données qui ont été utilisés pour définir les attributs calculés. Cela permet de s’assurer que vos données comportementales sont correctement utilisées.
-
-## Comment accéder aux attributs calculés ?
-
-Pour accéder aux attributs calculés, vous devez disposer des autorisations appropriées. Pour plus d’informations sur les autorisations requises, consultez la section [documentation sur le contrôle d’accès](../../access-control/home.md).
 
 ## Comment utiliser les attributs calculés avec Adobe Journey Optimizer ?
 
