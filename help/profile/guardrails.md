@@ -1,14 +1,13 @@
 ---
-keywords: Experience Platform;profil;profil client en temps réel;dépannage;mécanismes de sécurisation;instructions;limite;entité;entité principale;entité de dimension;
 title: Barrières de sécurité par défaut pour les données de profil client en temps réel
 solution: Experience Platform
 product: experience platform
 type: Documentation
 description: Adobe Experience Platform utilise un modèle de données hybride fortement dénormalisé qui diffère du modèle de données relationnelles traditionnel. Ce document fournit des limites d’utilisation et de débit par défaut pour vous aider à modéliser vos données de profil afin d’optimiser les performances du système.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
+source-git-commit: 5dad03dd33855b225bb67391dbc51e5b31bf4d5e
 workflow-type: tm+mt
-source-wordcount: '1980'
+source-wordcount: '1965'
 ht-degree: 78%
 
 ---
@@ -30,7 +29,7 @@ Les services Experience Platform suivants sont impliqués dans la modélisation 
 * [[!DNL Real-Time Customer Profile]](home.md) : créez des profils clients unifiés à l’aide de données provenant de plusieurs sources.
 * [Identités](../identity-service/home.md) : associez les identités à partir de sources de données disparates lors de leur ingestion dans Platform.
 * [Schémas](../xdm/home.md) : les schémas du modèle de données d’expérience (XDM) sont le cadre normalisé selon lequel Experience Platform organise les données d’expérience client.
-* [Audiences](../segmentation/home.md): Le moteur de segmentation de Platform est utilisé pour créer des audiences à partir de vos profils clients en fonction des comportements et des attributs des clients.
+* [Audiences](../segmentation/home.md): le moteur de segmentation de Platform est utilisé pour créer des audiences à partir de vos profils clients en fonction des comportements et des attributs des clients.
 
 ## Types de limite
 
@@ -125,11 +124,11 @@ Cette section fournit des détails supplémentaires sur les limites de ce docume
 
 ### Types d’entités
 
-Le modèle de la banque de données [!DNL Profile] se compose de deux types d’entités principales : [Principales entités](#primary-entity) et [entités de dimension](#dimension-entity).
+Le modèle de la banque de données [!DNL Profile] se compose de deux types d’entités principales : [entités primaires](#primary-entity) et [entités de dimension](#dimension-entity).
 
-#### Entité Principal
+#### Entité de Principal
 
-Une entité Principale, ou entité de profil, fusionne les données pour former une &quot;source unique de vérité&quot; pour un individu. Ces données unifiées sont représentées à l’aide d’une « vue d’union ». Une vue d’union agrège les champs de tous les schémas qui implémentent la même classe dans un seul schéma d’union. Le schéma d’union pour [!DNL Real-Time Customer Profile] est un modèle de données hybride dénormalisé qui agit comme un conteneur pour tous les attributs de profil et événements comportementaux.
+Une entité principale, ou entité de profil, fusionne les données pour former une &quot;source unique de vérité&quot; pour un individu. Ces données unifiées sont représentées à l’aide d’une « vue d’union ». Une vue d’union agrège les champs de tous les schémas qui implémentent la même classe dans un seul schéma d’union. Le schéma d’union pour [!DNL Real-Time Customer Profile] est un modèle de données hybride dénormalisé qui agit comme un conteneur pour tous les attributs de profil et événements comportementaux.
 
 Les attributs indépendants du temps, également appelés « données d’enregistrement », sont modélisés à l’aide de [!DNL XDM Individual Profile], tandis que les données de série temporelle, également appelées « données d’événement », sont modélisées à l’aide de [!DNL XDM ExperienceEvent]. Comme les données d’enregistrement et de série temporelle sont ingérées dans Adobe Experience Platform, [!DNL Real-Time Customer Profile] commence à ingérer les données qui ont été activées pour son utilisation. Plus la quantité d’interactions et de détails ingérés est élevée, plus les profils deviennent robustes.
 
@@ -139,7 +138,7 @@ Les attributs indépendants du temps, également appelés « données d’enreg
 
 Bien que la banque de données de profil conservant les données de profil ne soit pas une banque de données relationnelle, Profile permet l’intégration à de petites entités de dimension afin de créer des audiences d’une manière simplifiée et intuitive. Cette intégration est connue sous le nom de [segmentation d’entités multiples](../segmentation/multi-entity-segmentation.md).
 
-Votre entreprise peut également définir des classes XDM pour décrire des éléments autres que des individus, tels que des magasins, des produits ou des propriétés. Ces[!DNL XDM Individual Profile] Les schémas sont appelés &quot;entités de dimension&quot; (également appelées &quot;entités de recherche&quot;) et ne contiennent pas de données de série temporelle. Les schémas qui représentent des entités de dimension sont liés à des entités de profil grâce à l’utilisation de [relations de schéma](../xdm/tutorials/relationship-ui.md).
+Votre entreprise peut également définir des classes XDM pour décrire des éléments autres que des individus, tels que des magasins, des produits ou des propriétés. Ces variables[!DNL XDM Individual Profile] Les schémas sont appelés &quot;entités de dimension&quot; (également appelées &quot;entités de recherche&quot;) et ne contiennent pas de données de série temporelle. Les schémas qui représentent des entités de dimension sont liés à des entités de profil grâce à l’utilisation de [relations de schéma](../xdm/tutorials/relationship-ui.md).
 
 Les entités de dimension fournissent des données de recherche qui aident et simplifient les définitions de segment multi-entités. Elles doivent être suffisamment petites pour que le moteur de segmentation puisse charger l’ensemble des données en mémoire pour un traitement optimal (recherche de point rapide).
 
