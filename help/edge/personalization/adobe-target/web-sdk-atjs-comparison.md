@@ -3,7 +3,7 @@ title: Comparaison d’at.js au SDK Web Experience Platform
 description: Découvrez comment comparer les fonctionnalités d’at.js au SDK Web Experience Platform
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;champ de décision;fragment de code de masquage préalable;vec;compositeur d’expérience d’après les formulaires;xdm;audiences;décisions;portée;schéma;schéma;diagramme système;diagramme
 exl-id: b63fe47d-856a-4cae-9057-51917b3e58dd
-source-git-commit: 139d6a6632532b392fdf8d69c5c59d1fd779a6d1
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
 source-wordcount: '2281'
 ht-degree: 8%
@@ -918,7 +918,7 @@ La journalisation côté serveur d’Analytics est activée lorsqu’Analytics e
 
 ![](assets/analytics-enabled-datastream-config.png)
 
-Lorsque la journalisation Analytics côté serveur est activée, la charge utile A4T qui doit être partagée avec Analytics afin que les rapports Analytics présentent les impressions et conversions correctes soient partagées au niveau Experience Edge, de sorte que le client n’ait pas à effectuer de traitement supplémentaire.
+Lorsque la journalisation Analytics côté serveur est activée, la charge utile A4T qui doit être partagée avec Analytics afin que les rapports Analytics présentent les impressions et conversions correctes soient partagées au niveau du réseau Edge, de sorte que le client n’ait pas à effectuer de traitement supplémentaire.
 
 Voici comment les données s’enchaînent dans nos systèmes lorsque la journalisation Analytics côté serveur est activée :
 

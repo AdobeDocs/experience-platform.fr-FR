@@ -2,9 +2,9 @@
 solution: Experience Platform
 title: Prise en main des API Media Edge
 description: Prise en main des API Media Edge
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
-workflow-type: ht
-source-wordcount: '959'
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+workflow-type: tm+mt
+source-wordcount: '958'
 ht-degree: 100%
 
 ---
@@ -284,7 +284,7 @@ Le tableau suivant affiche les codes de réponse possibles suite aux requêtes d
 | État | Description |
 | ---------- | --------- |
 | 200 | La session a été créée. |
-| 207 | L’un des services qui se connectent à Experience Edge Network rencontre un problème (pour plus d’informations, consultez le [guide de dépannage](troubleshooting.md)) |
+| 207 | L’un des services qui se connectent à  Edge Network rencontre un problème (pour plus d’informations, consultez le [guide de dépannage](troubleshooting.md)) |
 | 400-level | Requête incorrecte |
 | 500-level | Erreur du serveur |
 

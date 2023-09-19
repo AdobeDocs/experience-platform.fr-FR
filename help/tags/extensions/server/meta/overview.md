@@ -2,22 +2,22 @@
 title: Présentation de l’extension de l’API Meta Conversions
 description: Découvrez l’extension de l’API Meta Conversions pour le transfert d’événement dans Adobe Experience Platform.
 exl-id: 6b5836d6-6674-4978-9165-0adc1d7087b7
-source-git-commit: f5a9e8cb5cdbff485bc7d50e9567b0236ae5872e
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
-source-wordcount: '2368'
+source-wordcount: '2370'
 ht-degree: 1%
 
 ---
 
 # [!DNL Meta Conversions API] présentation de l’extension
 
-Le [[!DNL Meta Conversions API]](https://developers.facebook.com/docs/marketing-api/conversions-api/) vous permet de connecter vos données marketing côté serveur à [!DNL Meta] des technologies permettant d’optimiser le ciblage de vos publicités, de réduire le coût par action et de mesurer les résultats. Les événements sont liés à un [[!DNL Meta Pixel]](https://developers.facebook.com/docs/meta-pixel/) Les identifiants et sont traités de la même manière que les événements côté client.
+La variable [[!DNL Meta Conversions API]](https://developers.facebook.com/docs/marketing-api/conversions-api/) vous permet de connecter vos données marketing côté serveur à [!DNL Meta] des technologies permettant d’optimiser le ciblage de vos publicités, de réduire le coût par action et de mesurer les résultats. Les événements sont liés à un [[!DNL Meta Pixel]](https://developers.facebook.com/docs/meta-pixel/) Les identifiants et sont traités de la même manière que les événements côté client.
 
 En utilisant la variable [!DNL Meta Conversions API] , vous pouvez tirer parti des fonctionnalités de l’API dans votre [transfert d’événement](../../../ui/event-forwarding/overview.md) règles d’envoi de données à [!DNL Meta] à partir du réseau Adobe Experience Platform Edge. Ce document explique comment installer l’extension et utiliser ses fonctionnalités dans un transfert d’événement. [règle](../../../ui/managing-resources/rules.md).
 
 ## Conditions préalables
 
-Il est vivement recommandé d’utiliser [!DNL Meta Pixel] et le [!DNL Conversions API] partager et envoyer les mêmes événements du côté client et du côté serveur, respectivement, car cela peut aider à récupérer les événements qui n’ont pas été sélectionnés par [!DNL Meta Pixel]. Avant d’installer le [!DNL Conversions API] , consultez le guide sur la [[!DNL Meta Pixel] extension](../../client/meta/overview.md) pour savoir comment l’intégrer dans vos implémentations de balises côté client.
+Il est vivement recommandé d’utiliser [!DNL Meta Pixel] et la variable [!DNL Conversions API] partager et envoyer les mêmes événements du côté client et du côté serveur, respectivement, car cela peut aider à récupérer les événements qui n’ont pas été sélectionnés par [!DNL Meta Pixel]. Avant d’installer le [!DNL Conversions API] , consultez le guide sur la [[!DNL Meta Pixel] extension](../../client/meta/overview.md) pour savoir comment l’intégrer dans vos implémentations de balises côté client.
 
 >[!NOTE]
 >
@@ -27,7 +27,7 @@ Pour utiliser la variable [!DNL Conversions API] , vous devez avoir accès au tr
 
 >[!INFO]
 >
->Si vous prévoyez d’utiliser cette extension avec des données d’application mobile ou si vous utilisez également des données d’événement hors ligne dans votre [!DNL Meta] campagnes, vous devrez créer votre jeu de données par le biais d’une application existante et sélectionner **Créer à partir d’un ID de pixel** lorsque vous y êtes invité. Voir l’article [Déterminez quelle option de création de jeux de données convient à votre entreprise.](https://www.facebook.com/business/help/5270377362999582?id=490360542427371) pour plus d’informations. Reportez-vous à la section [API de conversion pour les événements d’application](https://developers.facebook.com/docs/marketing-api/conversions-api/app-events) document pour tous les paramètres de suivi d’application requis et facultatifs.
+>Si vous prévoyez d’utiliser cette extension avec des données d’application mobile ou si vous utilisez également des données d’événement hors ligne dans votre [!DNL Meta] campagnes, vous devrez créer votre jeu de données par le biais d’une application existante et sélectionner **Créer à partir d’un ID de pixel** lorsque vous y êtes invité. Voir l’article [Déterminez quelle option de création de jeux de données convient à votre entreprise.](https://www.facebook.com/business/help/5270377362999582?id=490360542427371) pour plus d’informations. Voir [API de conversion pour les événements d’application](https://developers.facebook.com/docs/marketing-api/conversions-api/app-events) document pour tous les paramètres de suivi d’application requis et facultatifs.
 
 ## Installation l’extension
 
@@ -35,15 +35,15 @@ Pour installer le [!DNL Meta Conversions API] , accédez à l’interface utilis
 
 Une fois que vous avez sélectionné ou créé la propriété souhaitée, sélectionnez **[!UICONTROL Extensions]** dans le volet de navigation de gauche, puis sélectionnez l’option **[!UICONTROL Catalogue]** . Recherchez le [!UICONTROL API des conversions de métadonnées] carte, puis sélectionnez **[!UICONTROL Installer]**.
 
-![Le [!UICONTROL Installer] sélectionné pour l’option [!UICONTROL API des conversions de métadonnées] dans l’interface utilisateur de la collecte de données.](../../../images/extensions/server/meta/install.png)
+![La variable [!UICONTROL Installer] sélectionné pour l’option [!UICONTROL API des conversions de métadonnées] dans l’interface utilisateur de la collecte de données.](../../../images/extensions/server/meta/install.png)
 
 Dans la vue de configuration qui s’affiche, vous devez fournir la variable [!DNL Pixel] ID que vous avez copié précédemment pour lier l’extension à votre compte. Vous pouvez coller l’identifiant directement dans l’entrée ou vous pouvez utiliser un élément de données à la place.
 
-Vous devez également fournir un jeton d’accès pour utiliser la variable [!DNL Conversions API] spécifiquement. Reportez-vous à la section [!DNL Conversions API] documentation sur [génération d’un jeton d’accès](https://developers.facebook.com/docs/marketing-api/conversions-api/get-started#access-token) pour savoir comment obtenir cette valeur.
+Vous devez également fournir un jeton d’accès pour utiliser la variable [!DNL Conversions API] spécifiquement. Voir [!DNL Conversions API] documentation sur [générer un jeton d’accès](https://developers.facebook.com/docs/marketing-api/conversions-api/get-started#access-token) pour savoir comment obtenir cette valeur.
 
 Lorsque vous avez terminé, sélectionnez **[!UICONTROL Enregistrer]**
 
-![Le [!DNL Pixel] ID fourni en tant qu’élément de données dans la vue de configuration de l’extension.](../../../images/extensions/server/meta/configure.png)
+![La variable [!DNL Pixel] ID fourni en tant qu’élément de données dans la vue de configuration de l’extension.](../../../images/extensions/server/meta/configure.png)
 
 L’extension est installée et vous pouvez désormais utiliser ses fonctionnalités dans vos règles de transfert d’événement.
 
@@ -57,16 +57,16 @@ Cette section explique comment utiliser la variable [!DNL Conversions API] dans 
 
 Commencez à créer une règle de transfert d’événement et configurez ses conditions selon vos besoins. Lors de la sélection des actions de la règle, sélectionnez **[!UICONTROL Extension de l’API Meta Conversions]** pour l’extension, puis sélectionnez **[!UICONTROL Envoi de l’événement d’API de conversion]** pour le type d’action.
 
-![Le [!UICONTROL Envoyer la page vue] type d’action sélectionné pour une règle dans l’interface utilisateur de la collecte de données.](../../../images/extensions/server/meta/select-action.png)
+![La variable [!UICONTROL Envoyer la page vue] type d’action sélectionné pour une règle dans l’interface utilisateur de la collecte de données.](../../../images/extensions/server/meta/select-action.png)
 
 Les commandes qui s’affichent vous permettent de configurer les données d’événement qui seront envoyées à [!DNL Meta] via le [!DNL Conversions API]. Ces options peuvent être saisies directement dans les entrées fournies. Vous pouvez également sélectionner des éléments de données existants pour représenter les valeurs à la place. Les options de configuration sont divisées en quatre sections principales, comme indiqué ci-dessous.
 
 | Section de configuration | Description |
 | --- | --- |
-| [!UICONTROL Paramètres d’événement du serveur] | Informations générales sur l’événement, notamment l’heure à laquelle il s’est produit et l’action source qui l’a déclenché. Reportez-vous à la section [!DNL Meta] documentation destinée aux développeurs pour plus d’informations sur le [paramètres d’événement standard](https://developers.facebook.com/docs/marketing-api/conversions-api/parameters/server-event) accepté par le [!DNL Conversions API].<br><br>Si vous utilisez les deux [!DNL Meta Pixel] et le [!DNL Conversions API] pour envoyer des événements, veillez à inclure une **[!UICONTROL Nom de l’événement]** (`event_name`) et **[!UICONTROL Identifiant d’événement]** (`event_id`) avec chaque événement, car ces valeurs sont utilisées pour [déduplication des événements](#deduplication).<br><br>Vous avez également la possibilité de **[!UICONTROL Activer l’utilisation limitée de données]** pour vous aider à vous conformer aux désinscriptions des clients. Voir [!DNL Conversions API] documentation sur [options de traitement des données](https://developers.facebook.com/docs/marketing-apis/data-processing-options/) pour plus d’informations sur cette fonctionnalité. |
-| [!UICONTROL Paramètres des informations client] | Données d’identité utilisateur utilisées pour attribuer l’événement à un client. Certaines de ces valeurs doivent être hachées avant d’être envoyées à l’API.<br><br>Pour garantir une bonne connexion API commune et une qualité d’événement élevée, il est recommandé d’envoyer tous les [paramètres d’informations client acceptés](https://developers.facebook.com/docs/marketing-api/conversions-api/parameters/customer-information-parameters) à côté des événements de serveur. Ces paramètres doivent également être [Priorisés en fonction de leur importance et de leur impact sur l&#39;QE](https://www.facebook.com/business/help/765081237991954?id=818859032317965). |
-| [!UICONTROL Données personnalisées] | Données supplémentaires à utiliser pour l’optimisation de la diffusion publicitaire, fournies sous la forme d’un objet JSON. Reportez-vous à la section [[!DNL Conversions API] documentation](https://developers.facebook.com/docs/marketing-api/conversions-api/parameters/custom-data) pour plus d’informations sur les propriétés acceptées pour cet objet.<br><br>Si vous envoyez un événement d’achat, vous devez utiliser cette section pour fournir les attributs requis. `currency` et `value`. |
-| [!UICONTROL Événement de test] | Cette option permet de vérifier si votre configuration entraîne la réception d’événements de serveur par [!DNL Meta] comme prévu. Pour utiliser cette fonctionnalité, sélectionnez la variable **[!UICONTROL Envoyer en tant qu’événement de test]** , puis fournissez un code d’événement de test de votre choix dans l’entrée ci-dessous. Une fois la règle de transfert d’événement déployée, si vous avez configuré correctement l’extension et l’action, les activités apparaissant dans la variable **[!DNL Test Events]** afficher dans [!DNL Meta Events Manager]. |
+| [!UICONTROL Paramètres d’événement du serveur] | Informations générales sur l’événement, notamment l’heure à laquelle il s’est produit et l’action source qui l’a déclenché. Voir [!DNL Meta] documentation destinée aux développeurs pour plus d’informations sur le [paramètres d’événement standard](https://developers.facebook.com/docs/marketing-api/conversions-api/parameters/server-event) accepté par le [!DNL Conversions API].<br><br>Si vous utilisez les deux [!DNL Meta Pixel] et la variable [!DNL Conversions API] pour envoyer des événements, veillez à inclure une **[!UICONTROL Nom de l’événement]** (`event_name`) et **[!UICONTROL Identifiant d’événement]** (`event_id`) avec chaque événement, car ces valeurs sont utilisées pour [déduplication des événements](#deduplication).<br><br>Vous avez également la possibilité de **[!UICONTROL Activer l’utilisation limitée de données]** pour vous aider à vous conformer aux désinscriptions des clients. Voir [!DNL Conversions API] documentation sur [options de traitement des données](https://developers.facebook.com/docs/marketing-apis/data-processing-options/) pour plus d’informations sur cette fonctionnalité. |
+| [!UICONTROL Paramètres d’informations client] | Données d’identité utilisateur utilisées pour attribuer l’événement à un client. Certaines de ces valeurs doivent être hachées avant d’être envoyées à l’API.<br><br>Pour garantir une bonne connexion API commune et une qualité d’événement élevée (EMQ), il est recommandé d’envoyer tous les [paramètres d’informations client acceptés](https://developers.facebook.com/docs/marketing-api/conversions-api/parameters/customer-information-parameters) à côté des événements de serveur. Ces paramètres doivent également être [Priorisés en fonction de leur importance et de leur impact sur l&#39;QE](https://www.facebook.com/business/help/765081237991954?id=818859032317965). |
+| [!UICONTROL Données personnalisées] | Données supplémentaires à utiliser pour l’optimisation de la diffusion publicitaire, fournies sous la forme d’un objet JSON. Voir [[!DNL Conversions API] documentation](https://developers.facebook.com/docs/marketing-api/conversions-api/parameters/custom-data) pour plus d’informations sur les propriétés acceptées pour cet objet.<br><br>Si vous envoyez un événement d’achat, vous devez utiliser cette section pour fournir les attributs requis `currency` et `value`. |
+| [!UICONTROL Événement test] | Cette option permet de vérifier si votre configuration entraîne la réception d’événements de serveur par [!DNL Meta] comme prévu. Pour utiliser cette fonctionnalité, sélectionnez la variable **[!UICONTROL Envoyer comme événement de test]** , puis fournissez un code d’événement de test de votre choix dans l’entrée ci-dessous. Une fois la règle de transfert d’événement déployée, si vous avez configuré correctement l’extension et l’action, les activités apparaissant dans la variable **[!DNL Test Events]** afficher dans [!DNL Meta Events Manager]. |
 
 {style="table-layout:auto"}
 
@@ -80,21 +80,20 @@ Lorsque la règle vous satisfait, sélectionnez **[!UICONTROL Enregistrer dans l
 
 Comme indiqué dans la section [section conditions préalables](#prerequisites), il est recommandé d’utiliser les [!DNL Meta Pixel] l’extension de balise et la variable [!DNL Conversions API] extension de transfert d’événement pour envoyer les mêmes événements du client et du serveur dans une configuration redondante. Cela peut aider à récupérer les événements qui n’ont pas été sélectionnés par une extension ou une autre.
 
-Si vous envoyez différents types d’événements du client et du serveur sans chevauchement entre les deux, la déduplication n’est pas nécessaire. Cependant, si un événement unique est partagé par les deux [!DNL Meta Pixel] et le [!DNL Conversions API], vous devez vous assurer que ces événements redondants sont dédupliqués afin que vos rapports ne soient pas affectés négativement.
+Si vous envoyez différents types d’événements du client et du serveur sans chevauchement entre les deux, la déduplication n’est pas nécessaire. Cependant, si un événement unique est partagé par les deux [!DNL Meta Pixel] et la variable [!DNL Conversions API], vous devez vous assurer que ces événements redondants sont dédupliqués afin que vos rapports ne soient pas affectés négativement.
 
 Lors de l’envoi d’événements partagés, veillez à inclure un identifiant et un nom d’événement avec chaque événement que vous envoyez à partir du client et du serveur. Lorsque plusieurs événements portant le même ID et le même nom sont reçus, [!DNL Meta] utilise automatiquement plusieurs stratégies pour les dédupliquer et conserver les données les plus pertinentes. Voir [!DNL Meta] documentation sur [déduplication pour [!DNL Meta Pixel] et [!DNL Conversions API] events](https://www.facebook.com/business/help/823677331451951?id=1205376682832142) pour plus d’informations sur ce processus.
 
-## Workflow de démarrage rapide : Extension de l’API des conversions de métadonnées (version bêta) {#quick-start}
+## Workflow de démarrage rapide : extension de l’API des métadonnées (version bêta) {#quick-start}
 
 >[!IMPORTANT]
 >
 >* La fonction de démarrage rapide est disponible pour les clients qui ont acheté le package Real-Time CDP Prime et Ultimate. Pour plus dʼinformations, contactez votre représentant commercial Adobe.
 >* Cette fonctionnalité est destinée aux nouvelles mises en oeuvre et ne prend actuellement pas en charge l’installation automatique d’extensions et de configurations sur les balises existantes et les propriétés de transfert d’événement.
 
-
 La fonction de démarrage rapide vous permet de configurer facilement et efficacement l’API des conversions de métadonnées et les extensions de pixel de métadonnées. Cet outil automatise plusieurs étapes effectuées dans les balises Adobe et le transfert d’événement, réduisant considérablement le temps de configuration.
 
-Cette fonctionnalité installe et configure automatiquement l’API des conversions de métadonnées et les extensions de pixel de métadonnées sur une nouvelle propriété de transfert d’événement et de balises générées automatiquement avec les règles et éléments de données nécessaires. De plus, il installe et configure automatiquement le SDK Web et la banque de données Experience Platform. Enfin, la fonction de démarrage rapide publie automatiquement la bibliothèque à l’URL désignée dans un environnement de développement, ce qui permet la collecte de données côté client et le transfert d’événements côté serveur en temps réel via Event Forwarding et Experience Edge.
+Cette fonctionnalité installe et configure automatiquement l’API des conversions de métadonnées et les extensions de pixel de métadonnées sur une nouvelle propriété de transfert d’événement et de balises générées automatiquement avec les règles et les éléments de données nécessaires. De plus, il installe et configure automatiquement le SDK Web et la banque de données Experience Platform. Enfin, la fonction de démarrage rapide publie automatiquement la bibliothèque à l’URL désignée dans un environnement de développement, ce qui permet la collecte de données côté client et le transfert d’événements côté serveur en temps réel via Event Forwarding et Experience Platform Edge Network.
 
 La vidéo suivante présente la fonction de démarrage rapide.
 
@@ -119,21 +118,21 @@ Saisissez votre **[!UICONTROL Domaine]**, puis sélectionnez **[!UICONTROL Suiva
 
 Dans le **[!UICONTROL Configuration initiale]** Entrez votre **[!UICONTROL ID de pixel de méta]**, **[!UICONTROL Jeton d’accès à l’API de conversion de métadonnées]**, et **[!UICONTROL Chemin de la couche de données]**, puis sélectionnez **[!UICONTROL Suivant]**.
 
-![Boîte de dialogue de configuration initiale](../../../images/extensions/server/meta/initial-setup.png)
+![Boîte de dialogue Configuration initiale](../../../images/extensions/server/meta/initial-setup.png)
 
 Patientez quelques minutes avant que le processus de configuration initial ne soit terminé, puis sélectionnez **[!UICONTROL Suivant]**.
 
-![Écran de confirmation de la configuration initiale terminée](../../../images/extensions/server/meta/setup-complete.png)
+![Écran de confirmation de la configuration initiale](../../../images/extensions/server/meta/setup-complete.png)
 
 Dans la **[!UICONTROL Ajout de code sur votre site]** Copiez le code fourni à l’aide de la copie ![Copier](../../../images/extensions/server/meta/copy-icon.png) et collez-les dans la fonction `<head>` de votre site web source. Une fois l’implémentation effectuée, sélectionnez **[!UICONTROL Commencer la validation]**
 
 ![Ajout de code dans la boîte de dialogue de votre site](../../../images/extensions/server/meta/add-code-on-your-site.png)
 
-Le [!UICONTROL Résultats de la validation] affiche les résultats de la mise en oeuvre de l’extension Meta. Sélectionnez **[!UICONTROL Suivant]**. Vous pouvez également afficher des résultats de validation supplémentaires en sélectionnant **[!UICONTROL Assurance]** lien.
+La variable [!UICONTROL Résultats de la validation] affiche les résultats de la mise en oeuvre de l’extension Meta. Sélectionnez **[!UICONTROL Suivant]**. Vous pouvez également afficher des résultats de validation supplémentaires en sélectionnant **[!UICONTROL Assurance]** lien.
 
 ![Boîte de dialogue des résultats de test affichant les résultats de mise en oeuvre](../../../images/extensions/server/meta/test-results.png)
 
-Le **[!UICONTROL Étapes suivantes]** l’affichage de l’écran confirme la fin de la configuration. À partir de là, vous avez la possibilité d’optimiser votre mise en oeuvre en ajoutant de nouveaux événements, qui s’affichent dans la section suivante.
+La variable **[!UICONTROL Étapes suivantes]** l’affichage de l’écran confirme la fin de la configuration. À partir de là, vous avez la possibilité d’optimiser votre mise en oeuvre en ajoutant de nouveaux événements, qui s’affichent dans la section suivante.
 
 Si vous ne souhaitez pas ajouter d’événements supplémentaires, sélectionnez **[!UICONTROL Fermer]**.
 
@@ -155,7 +154,7 @@ Pour ajouter une sélection d’événement **[!UICONTROL Ajouter]** sous le [!U
 
 ![Page de propriétés de balise sans événement](../../../images/extensions/server/meta/edit-rule.png)
 
-Sélectionnez la [!UICONTROL Type d’événement]. Dans cet exemple, nous avons sélectionné la variable [!UICONTROL Cliquez sur] et l’ont configuré pour se déclencher lorsque la variable **Bouton Ajouter au panier** est sélectionnée. Sélectionnez **[!UICONTROL Conserver les modifications]**.
+Sélectionnez la variable [!UICONTROL Type d’événement]. Dans cet exemple, nous avons sélectionné la variable [!UICONTROL Cliquez sur] et l’ont configuré pour se déclencher lorsque la variable **Bouton Ajouter au panier** est sélectionnée. Sélectionnez **[!UICONTROL Conserver les modifications]**.
 
 ![Écran de configuration d’événement affichant un événement de clic](../../../images/extensions/server/meta/event-configuration.png)
 
@@ -179,7 +178,7 @@ Pendant la configuration, on vous a demandé où se trouve votre couche de donn�
 
 ![Métadonnées de couche de données](../../../images/extensions/server/meta/data-layer-meta.png)
 
-Il est important de comprendre la variable `MetaConversion_*` La règle utilise cette structure de données pour transmettre les éléments de données appropriés à la variable [!DNL Meta Pixel] et au [!DNL Meta Conversions API]. Reportez-vous à la documentation relative à la [événements standard](https://developers.facebook.com/docs/meta-pixel/reference#standard-events) pour plus d’informations sur les données requises pour différents événements de métadonnées.
+Il est important de comprendre la variable `MetaConversion_*` La règle utilise cette structure de données pour transmettre les éléments de données appropriés à la variable [!DNL Meta Pixel] et au [!DNL Meta Conversions API]. Reportez-vous à la documentation relative à [événements standard](https://developers.facebook.com/docs/meta-pixel/reference#standard-events) pour plus d’informations sur les données requises pour différents événements de métadonnées.
 
 Par exemple, si vous souhaitez utiliser la variable `MetaConversion_Subscribe` règle, vous devez mettre à jour `window.dataLayer.meta.currency`, `window.dataLayer.meta.predicted_ltv`, et `window.dataLayer.meta.value` conformément aux propriétés de l’objet décrites dans la documentation sur [événements standard](https://developers.facebook.com/docs/meta-pixel/reference#standard-events).
 
@@ -195,7 +194,7 @@ Pour obtenir une référence locale sur l’aspect de la couche de données, vou
 
 Ce guide explique comment envoyer des données d’événement côté serveur à [!DNL Meta] en utilisant la variable [!DNL Meta Conversions API] extension . À partir de là, il est recommandé d’étendre votre intégration en connectant plus [!DNL Pixels] et partager d’autres événements, le cas échéant. L’une des actions suivantes peut vous aider à améliorer davantage les performances de votre publicité :
 
-* Connecter une autre [!DNL Pixels] qui ne sont pas encore connectés à un [!DNL Conversions API] intégration.
+* Connectez-vous à un autre [!DNL Pixels] qui ne sont pas encore connectés à un [!DNL Conversions API] intégration.
 * Si vous envoyez certains événements exclusivement par [!DNL Meta Pixel] côté client, envoyez ces mêmes événements au [!DNL Conversions API] du côté serveur également.
 
 Voir [!DNL Meta] documentation sur [bonnes pratiques pour la [!DNL Conversions API]](https://www.facebook.com/business/help/308855623839366?id=818859032317965) pour plus d’informations sur la mise en oeuvre efficace de votre intégration. Pour plus d’informations sur les balises et le transfert d’événement dans Adobe Experience Cloud, reportez-vous à la section [présentation des balises](../../../home.md).

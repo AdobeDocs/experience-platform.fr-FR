@@ -2,7 +2,7 @@
 title: Collecte de données interactive
 description: Découvrez comment l’API Adobe Experience Platform Edge Network Server effectue la collecte de données interactive.
 exl-id: 1b06e755-b6a9-42dd-96c1-98ad67e7d222
-source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
 source-wordcount: '138'
 ht-degree: 19%
@@ -11,9 +11,9 @@ ht-degree: 19%
 
 # Collecte de données interactive
 
-## Présentation {#overview}
+## Vue d’ensemble {#overview}
 
-Les points de terminaison de collecte de données interactives reçoivent un seul événement et sont utilisés lorsque le client s’attend à ce qu’une réponse soit renvoyée par le serveur Adobe Experience Platform Edge Network. Ces points de terminaison peuvent également renvoyer du contenu d’autres services Experience Edge, lors de la collecte de données.
+Les points de terminaison de collecte de données interactives reçoivent un seul événement et sont utilisés lorsque le client s’attend à ce qu’une réponse soit renvoyée par le serveur Adobe Experience Platform Edge Network. Ces points de terminaison peuvent également renvoyer du contenu d’autres services Edge Network, lors de la collecte de données.
 
 La réponse du serveur comprend une ou plusieurs `Handle` , comme illustré ci-dessous.
 

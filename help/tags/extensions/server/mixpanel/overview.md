@@ -1,12 +1,12 @@
 ---
 keywords: extension de transfert d’événement;mixpanel;extension de transfert d’événement mixpanel
 title: Extension de transfert d’événement d’API de suivi des événements Mixpanel
-description: Cette extension de transfert d’événement Adobe Experience Platform envoie les événements Adobe Experience Edge Network à Mixpanel.
+description: Cette extension de transfert d’événement Adobe Experience Platform envoie les événements Edge Network à Mixpanel.
 last-substantial-update: 2023-03-29T00:00:00Z
 exl-id: 21e2e0fa-4949-4be4-859f-d449d21d8f41
-source-git-commit: 4f75bbfee6b550552d2c9947bac8540a982297eb
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
-source-wordcount: '950'
+source-wordcount: '946'
 ht-degree: 2%
 
 ---
@@ -15,11 +15,11 @@ ht-degree: 2%
 
 [[!DNL Mixpanel]](https://www.mixpanel.com) est un outil d’analyse de produit qui vous permet de capturer des données sur la manière dont les utilisateurs interagissent avec un produit numérique. Vous pouvez analyser les données de produit à l’aide de rapports interactifs simples qui vous permettent d’interroger et de visualiser les données en quelques clics seulement. [!DNL Mixpanel] conçu pour rendre les équipes plus efficaces en permettant à chacun d’analyser les données utilisateur en temps réel afin d’identifier les tendances, de comprendre le comportement des utilisateurs et de prendre des décisions concernant votre produit.
 
-[!DNL Mixpanel] applique un modèle basé sur les événements et centré sur l’utilisateur qui connecte chaque interaction à un seul utilisateur. Le [!DNL Mixpanel] Le modèle de données repose sur les concepts d’utilisateurs, d’événements et de propriétés.
+[!DNL Mixpanel] applique un modèle basé sur les événements et centré sur l’utilisateur qui connecte chaque interaction à un seul utilisateur. La variable [!DNL Mixpanel] Le modèle de données repose sur les concepts d’utilisateurs, d’événements et de propriétés.
 
 >[!NOTE]
 >
->Reportez-vous à la section [!DNL Mixpanel] documentation sur [gestion de l&#39;identité](https://help.mixpanel.com/hc/en-us/articles/360041039771-Getting-Started-with-Identity-Management) pour comprendre comment [!DNL Mixpanel] fusionne les événements pour créer des clusters d’identités. Il est également recommandé de consulter le document sur [ID distincts](https://help.mixpanel.com/hc/en-us/articles/115004509426-Distinct-ID-Creation-JavaScript-iOS-Android-) pour comprendre comment elles sont utilisées pour identifier les utilisateurs dans les données d’événement.
+>Voir [!DNL Mixpanel] documentation sur [gestion de l&#39;identité](https://help.mixpanel.com/hc/en-us/articles/360041039771-Getting-Started-with-Identity-Management) pour comprendre comment [!DNL Mixpanel] fusionne les événements pour créer des clusters d’identités. Il est également recommandé de consulter le document sur [ID distincts](https://help.mixpanel.com/hc/en-us/articles/115004509426-Distinct-ID-Creation-JavaScript-iOS-Android-) pour comprendre comment elles sont utilisées pour identifier les utilisateurs dans les données d’événement.
 
 ## Cas d’utilisation
 
@@ -52,7 +52,7 @@ Dans [!DNL Mixpanel], un cluster d’identités contient une collection de `dist
 
 >[!NOTE]
 >
->Reportez-vous à la section [!DNL Mixpanel] document on [gestion de l&#39;identité](https://help.mixpanel.com/hc/en-us/articles/360041039771-Getting-Started-with-Identity-Management#user-identification) pour plus d’informations sur ces méthodes.
+>Voir [!DNL Mixpanel] document on [gestion de l&#39;identité](https://help.mixpanel.com/hc/en-us/articles/360041039771-Getting-Started-with-Identity-Management#user-identification) pour plus d’informations sur ces méthodes.
 >
 >Confirmez que vous avez activé la variable [[!DNL Mixpanel] fonctionnalité de fusion d’identités](#prerequisites-mixpanel) afin de s’assurer que les clusters d’identités sont résolus de manière appropriée.
 
@@ -62,7 +62,7 @@ Pour vous connecter à Experience Platform [!DNL Mixpanel] vous devez disposer d
 
 | Type de clé | Description | Exemple |
 | --- | --- | --- |
-| Jeton de projet | Jeton de projet associé à votre [!DNL Mixpanel] compte . Reportez-vous à la section [!DNL Mixpanel] documentation sur [recherche du jeton de projet](https://help.mixpanel.com/hc/en-us/articles/115004502806-Find-Project-Token-) pour obtenir des conseils. | `25470xxxxxxxxxxxxxxxxxxx1289` |
+| Jeton de projet | Jeton de projet associé à votre [!DNL Mixpanel] compte . Voir [!DNL Mixpanel] documentation sur [recherche du jeton de projet](https://help.mixpanel.com/hc/en-us/articles/115004502806-Find-Project-Token-) pour obtenir des conseils. | `25470xxxxxxxxxxxxxxxxxxx1289` |
 
 ## Installez et configurez le [!DNL Mixpanel] extension {#install}
 
@@ -74,7 +74,7 @@ Sélectionner **[!UICONTROL Extensions]** dans le volet de navigation de gauche.
 
 ## Créez un [!DNL Send Event] règle
 
-Commencez à créer une règle dans votre propriété de transfert d’événement. Sous **[!UICONTROL Actions]**, ajoutez une nouvelle action et définissez l’extension sur **[!UICONTROL Mixpanel]**. Définissez ensuite le type d’action sur **[!UICONTROL Suivi de l’événement]** pour envoyer des événements Adobe Experience Edge Network à [!DNL Mixpanel].
+Commencez à créer une règle dans votre propriété de transfert d’événement. Sous **[!UICONTROL Actions]**, ajoutez une nouvelle action et définissez l’extension sur **[!UICONTROL Mixpanel]**. Définissez ensuite le type d’action sur **[!UICONTROL Suivi de l’événement]** pour envoyer des événements Edge Network à [!DNL Mixpanel].
 
 | Entrée | Description | Obligatoire |
 | --- | --- | --- |
@@ -95,7 +95,7 @@ Une fois que la variable [!UICONTROL Suivi de l’événement] est ajoutée à l
 
 >[!IMPORTANT]
 >
->Si votre site web utilise la variable [!DNL Mixpanel] SDK, vous pouvez passer à l’étape suivante de [validation de vos données dans [!DNL Mixpanel]](#validate). Si vous n’utilisez pas la variable [!DNL Mixpanel] SDK, vous devez [créer une règle de suivi d’identité distincte](#create-an-identity-tracking-rule) pour s’assurer que les événements appropriés et `distinct_id` sont envoyées à [!DNL Mixpanel] lorsqu’un événement d’identification utilisateur se produit.
+>Si votre site web utilise la variable [!DNL Mixpanel] SDK, vous pouvez passer à l’étape suivante de [validation de vos données dans [!DNL Mixpanel]](#validate). Si vous n’utilisez pas la variable [!DNL Mixpanel] SDK, vous devez [créer une règle de suivi d’identité distincte](#create-an-identity-tracking-rule) pour garantir les événements appropriés et `distinct_id` sont envoyées à [!DNL Mixpanel] lorsqu’un événement d’identification utilisateur se produit.
 
 ## Validation des données dans [!DNL Mixpanel] {#validate}
 

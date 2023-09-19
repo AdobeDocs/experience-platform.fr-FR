@@ -1,12 +1,12 @@
 ---
 keywords: extension de transfert d’événement;ventilation;extension de transfert d’événement de ventilation
 title: Extension de transfert d’événement de braze
-description: Cette extension de transfert d’événement Adobe Experience Platform envoie les événements Adobe Experience Edge Network à Brand.
+description: Cette extension de transfert d’événement Adobe Experience Platform envoie les événements Edge Network à Braze.
 last-substantial-update: 2023-03-29T00:00:00Z
 exl-id: 297f48f8-2c3b-41c2-8820-35f4558c67b3
-source-git-commit: 4f75bbfee6b550552d2c9947bac8540a982297eb
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
-source-wordcount: '1863'
+source-wordcount: '1861'
 ht-degree: 6%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 6%
 - Ciblez des utilisateurs spécifiques pour les campagnes marketing et promotionnelles afin d’augmenter le nombre de clients réguliers.
 - Étudiez le comportement et les schémas des utilisateurs pour cibler des audiences spécifiques avec des messages personnalisés, ce qui peut contribuer à augmenter les recettes.
 
-Le [!DNL Braze Track Events API] [transfert d’événement](../../../ui/event-forwarding/overview.md) l’extension vous permet d’exploiter les données capturées dans Adobe Experience Platform Edge Network et de les envoyer à [!DNL Braze] sous la forme d’événements côté serveur à l’aide de la variable [[!DNL Braze User Track]](https://www.braze.com/docs/api/endpoints/user_data/post_user_track) API.
+La variable [!DNL Braze Track Events API] [transfert d’événement](../../../ui/event-forwarding/overview.md) l’extension vous permet d’exploiter les données capturées dans Adobe Experience Platform Edge Network et de les envoyer à [!DNL Braze] sous la forme d’événements côté serveur à l’aide de la variable [[!DNL Braze User Track]](https://www.braze.com/docs/api/endpoints/user_data/post_user_track) API.
 
 Ce document couvre les cas d’utilisation de l’extension, comment l’installer dans vos bibliothèques de transfert d’événements et comment utiliser ses fonctionnalités dans un transfert d’événement. [règle](../../../ui/managing-resources/rules.md).
 
@@ -30,11 +30,11 @@ Cette extension doit être utilisée si vous souhaitez utiliser les données du 
 
 Prenons l’exemple d’une entreprise de vente au détail présente sur plusieurs canaux (site web et mobile) et qui capture des entrées transactionnelles ou conversationnelles en tant que données d’événement de son site web et de ses plateformes mobiles. Utiliser divers [tag](../../../home.md) règles, ces données sont envoyées au réseau Edge en temps réel. À partir de là, le [!DNL Braze] l’extension de transfert d’événement envoie automatiquement les événements pertinents à [!DNL Braze] du côté serveur.
 
-Une fois les données envoyées, les équipes d’analyse de l’entreprise peuvent alors tirer parti des [!DNL Braze's] fonctionnalités permettant de traiter les jeux de données et d’obtenir des informations sur l’entreprise afin de générer des graphiques, des tableaux de bord ou d’autres visualisations pour informer les parties prenantes de l’entreprise. Reportez-vous à la section [[!DNL Braze] clients](https://www.braze.com/customers) pour plus d’informations sur les différents cas d’utilisation de la plateforme.
+Une fois les données envoyées, les équipes d’analyse de l’entreprise peuvent alors tirer parti des [!DNL Braze's] fonctionnalités permettant de traiter les jeux de données et d’obtenir des informations sur l’entreprise afin de générer des graphiques, des tableaux de bord ou d’autres visualisations pour informer les parties prenantes de l’entreprise. Voir [[!DNL Braze] clients](https://www.braze.com/customers) pour plus d’informations sur les différents cas d’utilisation de la plateforme.
 
 ## [!DNL Braze] conditions préalables et barrières de sécurité {#prerequisites}
 
-Vous devez disposer d’un [!DNL Braze] afin d&#39;utiliser ses technologies. Si vous ne disposez pas d’un compte, accédez à la variable [Page Prise en main](https://www.braze.com/get-started/) on [!DNL Braze] pour se connecter à [!DNL Braze Sales] et démarrez le processus de création de compte.
+Vous devez disposer d’un [!DNL Braze] afin d&#39;utiliser ses technologies. Si vous ne disposez pas d’un compte, accédez à la [Page Prise en main](https://www.braze.com/get-started/) on [!DNL Braze] pour se connecter à [!DNL Braze Sales] et démarrez le processus de création de compte.
 
 ### Protections des API
 
@@ -42,16 +42,16 @@ L’extension utilise deux des [!DNL Braze]Les API de d’ et leurs limites sont
 
 | API | Limites de taux |
 | --- | --- |
-| [!DNL User Track] | 50 000 demandes par minute. <br>Reportez-vous à la section [[!DNL User Track] Documentation des API](https://www.braze.com/docs/api/endpoints/user_data/post_user_track#rate-limit) pour plus d’informations. |
-| [!DNL User Identify] | 20 000 demandes par minute. <br>Reportez-vous à la section [[!DNL User Identify] Documentation des API](https://www.braze.com/docs/api/endpoints/user_data/post_user_identify#rate-limit) pour plus d’informations. |
+| [!DNL User Track] | 50 000 demandes par minute. <br>Voir [[!DNL User Track] Documentation de l’API](https://www.braze.com/docs/api/endpoints/user_data/post_user_track#rate-limit) pour plus d’informations. |
+| [!DNL User Identify] | 20 000 demandes par minute. <br>Voir [[!DNL User Identify] Documentation de l’API](https://www.braze.com/docs/api/endpoints/user_data/post_user_identify#rate-limit) pour plus d’informations. |
 
 >[!NOTE]
 >
-> Reportez-vous au guide sur la [[!DNL Braze] Limites de l’API](https://www.braze.com/docs/api/api_limits/) pour plus de détails sur les limites qu&#39;ils imposent.
+> Reportez-vous au guide sur [[!DNL Braze] Limites de l’API](https://www.braze.com/docs/api/api_limits/) pour plus de détails sur les limites qu&#39;ils imposent.
 
 ### Points de données facturables
 
-Envoi d’attributs personnalisés supplémentaires à [!DNL Braze] peut augmenter votre [!DNL Braze] consommation des points de données. Consultez votre [!DNL Braze] gestionnaire de compte avant d’envoyer des attributs personnalisés supplémentaires. Reportez-vous à la section [!DNL Braze] documentation sur [points de données facturables](https://www.braze.com/docs/user_guide/onboarding_with_braze/data_points/#billable-data-points) pour plus d’informations.
+Envoyer des attributs personnalisés supplémentaires à [!DNL Braze] peut augmenter votre [!DNL Braze] consommation des points de données. Consultez votre [!DNL Braze] gestionnaire de compte avant d’envoyer des attributs personnalisés supplémentaires. Voir [!DNL Braze] documentation sur [points de données facturables](https://www.braze.com/docs/user_guide/onboarding_with_braze/data_points/#billable-data-points) pour plus d’informations.
 
 ### Collecte des détails de configuration requis {#configuration-details}
 
@@ -59,8 +59,8 @@ Pour connecter le réseau Edge à [!DNL Braze], les entrées suivantes sont requ
 
 | Type de clé | Description | Exemple |
 | --- | --- | --- |
-| [!DNL Braze] Instance | Le point de terminaison REST associé à la variable [!DNL Braze] compte . Reportez-vous à la section [!DNL Braze] documentation sur [instances](https://www.braze.com/docs/user_guide/administrative/access_braze/sdk_endpoints) pour obtenir des conseils. | `https://rest.iad-03.braze.com` |
-| Clé API | Le [!DNL Braze] Clé API associée à [!DNL Braze] compte . <br/>Reportez-vous à la section [!DNL Braze] la documentation relative à la [Clé API REST](https://www.braze.com/docs/api/basics/#rest-api-key) pour obtenir des conseils. | `YOUR-BRAZE-REST-API-KEY` |
+| [!DNL Braze] Instance | Le point de terminaison REST associé à la variable [!DNL Braze] compte . Voir [!DNL Braze] documentation sur [instances](https://www.braze.com/docs/user_guide/administrative/access_braze/sdk_endpoints) pour obtenir des conseils. | `https://rest.iad-03.braze.com` |
+| Clé API | La variable [!DNL Braze] Clé API associée à [!DNL Braze] compte . <br/>Voir [!DNL Braze] la documentation relative à la [Clé API REST](https://www.braze.com/docs/api/basics/#rest-api-key) pour obtenir des conseils. | `YOUR-BRAZE-REST-API-KEY` |
 
 ### Créer un secret
 
@@ -76,16 +76,16 @@ Sélectionner **[!UICONTROL Extensions]** dans le volet de navigation de gauche.
 
 Dans l’écran suivant, saisissez ce qui suit : [valeurs de configuration](#configuration-details) que vous avez précédemment rassemblé à partir de [!DNL Braze]:
 
-- **[!UICONTROL URL du point de terminaison de la fonction de blocage]**: Vous pouvez saisir la valeur de la variable [!DNL Braze] URL du point de terminaison rest en tant que texte brut dans l’entrée fournie.
-- **[!UICONTROL Clé API]**: Sélectionnez la [élément de données secret](#create-a-secret) que vous avez créé précédemment, qui contient les [!DNL Braze] Clé API.
+- **[!UICONTROL URL du point de terminaison de la fonction de blocage]**: vous pouvez saisir la valeur de votre [!DNL Braze] URL du point de terminaison rest en tant que texte brut dans l’entrée fournie.
+- **[!UICONTROL Clé API]**: sélectionnez la variable [élément de données secret](#create-a-secret) que vous avez créé précédemment, qui contient les [!DNL Braze] Clé API.
 
 Lorsque vous avez terminé, cliquez sur **[!UICONTROL Enregistrer]**.
 
-![Le [!DNL Braze] page de configuration de l’extension.](../../../images/extensions/server/braze/configure-extension.png)
+![La variable [!DNL Braze] page de configuration de l’extension.](../../../images/extensions/server/braze/configure-extension.png)
 
 ## Créez un [!DNL Send Event] règle {#tracking-rule}
 
-Après l’installation de l’extension, créez un transfert d’événement. [règle](../../../ui/managing-resources/rules.md) et configurez ses conditions selon vos besoins. Lors de la configuration des actions de la règle, sélectionnez l’événement **[!UICONTROL Braze]** extension, puis sélectionnez **[!UICONTROL Envoyer un événement]** pour le type d’action.
+Après avoir installé l’extension, créez un transfert d’événement. [règle](../../../ui/managing-resources/rules.md) et configurez ses conditions selon vos besoins. Lors de la configuration des actions de la règle, sélectionnez l’événement **[!UICONTROL Braze]** extension, puis sélectionnez **[!UICONTROL Envoyer un événement]** pour le type d’action.
 
 ![Ajoutez une configuration d’action de règle de transfert d’événement.](../../../images/extensions/server/braze/braze-event-action.png)
 
@@ -95,7 +95,7 @@ Après l’installation de l’extension, créez un transfert d’événement. [
 | --- | --- |
 | [!UICONTROL Identifiant utilisateur externe] | UUID ou GUID longs, aléatoires et bien répartis. Si vous choisissez une autre méthode pour nommer vos ID utilisateur, ceux-ci doivent également être longs, aléatoires et bien répartis. En savoir plus sur [convention d’affectation des noms d’utilisateur suggérée](https://www.braze.com/docs/developer_guide/platform_integration_guides/web/analytics/setting_user_ids#suggested-user-id-naming-convention). |
 | [!UICONTROL Braquer l’identifiant utilisateur] | Identifiant de l’utilisateur de Braze. |
-| [!UICONTROL Alias utilisateur] | Un alias sert d’autre identifiant d’utilisateur unique. Utilisez des alias pour identifier les utilisateurs selon différentes dimensions que votre ID utilisateur principal. <br><br> L’objet user alias se compose de deux parties : un nom_alias pour l&#39;identifiant lui-même et un libellé_alias indiquant le type d&#39;alias. Les utilisateurs peuvent avoir plusieurs alias avec des libellés différents, mais un seul alias par alias_label. |
+| [!UICONTROL Alias utilisateur] | Un alias sert d’autre identifiant d’utilisateur unique. Utilisez des alias pour identifier les utilisateurs selon différentes dimensions que votre ID utilisateur principal. <br><br> L’objet user alias se compose de deux parties : un nom_alias pour l’identifiant lui-même et un libellé_alias indiquant le type d’alias. Les utilisateurs peuvent avoir plusieurs alias avec des libellés différents, mais un seul alias par alias_label. |
 
 {style="table-layout:auto"}
 
@@ -116,7 +116,7 @@ Après l’installation de l’extension, créez un transfert d’événement. [
 
 >[!NOTE]
 >
-> Le **[!UICONTROL Événement d’envoi de braquage]** une action ne requiert qu’un **[!UICONTROL Nom de l’événement]** et **[!UICONTROL Heure de l’événement]** à spécifier, mais vous devez inclure autant d’informations que possible dans le champ des propriétés personnalisées. Pour plus d’informations sur la variable [!DNL Braze] , voir [documentation officielle](https://www.braze.com/docs/api/objects_filters/event_object/).
+> La variable **[!UICONTROL Événement d’envoi de braquage]** une action ne requiert qu’un **[!UICONTROL Nom de l’événement]** et **[!UICONTROL Heure de l’événement]** à spécifier, mais vous devez inclure autant d’informations que possible dans le champ des propriétés personnalisées. Pour plus d’informations sur la variable [!DNL Braze] , voir [documentation officielle](https://www.braze.com/docs/api/objects_filters/event_object/).
 
 **[!UICONTROL Attributs d’utilisateur]**
 
@@ -128,20 +128,20 @@ Les attributs utilisateur peuvent être un objet JSON contenant des champs qui c
 | [!UICONTROL Nom] | |
 | [!UICONTROL Téléphone] | |
 | [!UICONTROL E-mail.] | |
-| [!UICONTROL Genre] | L’une des chaînes suivantes : &quot;M&quot;, &quot;F&quot;, &quot;O&quot; (autre), &quot;N&quot; (non applicable), &quot;P&quot; (préférez ne pas dire). |
+| [!UICONTROL Genre] | Une des chaînes suivantes : &quot;M&quot;, &quot;F&quot;, &quot;O&quot; (autre), &quot;N&quot; (non applicable), &quot;P&quot; (préférez ne pas dire). |
 | [!UICONTROL Ville] | |
 | [!UICONTROL Pays] | Pays sous forme de chaîne dans [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) format. |
 | [!UICONTROL Langue] | Langue sous forme de chaîne dans [ISO-639-1](https://fr.wikipedia.org/wiki/Liste_des_codes_ISO_639-1) format. |
 | [!UICONTROL Date de naissance] | Chaîne au format &quot;AAAA-MM-JJ&quot; (par exemple, 1980-12-21). |
 | [!UICONTROL Fuseau horaire] | Nom du fuseau horaire à partir de [Base de données des fuseaux horaires IANA](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) (par exemple, &quot;Amérique/New_York&quot; ou &quot;Heure de l’Est (États-Unis et Canada)&quot;). |
 | [!UICONTROL Facebook] | Hachage contenant n’importe quel identifiant (chaîne), mentions &quot;J’aime&quot; (tableau de chaînes), num_friend (entier). |
-| [!UICONTROL Twitter] | Hachage contenant n’importe quel ID (entier), screen_name (chaîne, pseudo Twitter), followers_count (entier), friend_count (entier), statuses_count(entier). |
+| [!UICONTROL Twitter] | Hachage contenant n’importe quel ID (entier), screen_name (chaîne, nom du Twitter), followers_count (entier), friend_count (entier), statuses_count(entier). |
 
 {style="table-layout:auto"}
 
 ## Créez un [!DNL Send Purchase Event] règle {#purchase-rule}
 
-Après l’installation de l’extension, créez un transfert d’événement. [règle](../../../ui/managing-resources/rules.md) et configurez ses conditions selon vos besoins. Lors de la configuration des actions de la règle, sélectionnez l’événement **[!UICONTROL Braze]** extension, puis sélectionnez **[!UICONTROL Envoyer un événement d’achat]** pour le type d’action.
+Après avoir installé l’extension, créez un transfert d’événement. [règle](../../../ui/managing-resources/rules.md) et configurez ses conditions selon vos besoins. Lors de la configuration des actions de la règle, sélectionnez l’événement **[!UICONTROL Braze]** extension, puis sélectionnez **[!UICONTROL Envoyer un événement d’achat]** pour le type d’action.
 
 ![Ajoutez une configuration d’action de règle de transfert d’événement de type Action de blocage des achats .](../../../images/extensions/server/braze/braze-purchase-event-action.png)
 
@@ -151,7 +151,7 @@ Après l’installation de l’extension, créez un transfert d’événement. [
 | --- | --- |
 | [!UICONTROL Identifiant utilisateur externe] | UUID ou GUID longs, aléatoires et bien répartis. Si vous choisissez une autre méthode pour nommer vos ID utilisateur, ceux-ci doivent également être longs, aléatoires et bien répartis. En savoir plus sur [convention d’affectation des noms d’utilisateur suggérée](https://www.braze.com/docs/developer_guide/platform_integration_guides/web/analytics/setting_user_ids#suggested-user-id-naming-convention). |
 | [!UICONTROL Braquer l’identifiant utilisateur] | Identifiant de l’utilisateur de Braze. |
-| [!UICONTROL Alias utilisateur] | Un alias sert d’autre identifiant d’utilisateur unique. Utilisez des alias pour identifier les utilisateurs selon différentes dimensions que votre ID utilisateur principal. <br><br> L’objet user alias se compose de deux parties : un nom_alias pour l&#39;identifiant lui-même et un libellé_alias indiquant le type d&#39;alias. Les utilisateurs peuvent avoir plusieurs alias avec des libellés différents, mais un seul alias par alias_label. |
+| [!UICONTROL Alias utilisateur] | Un alias sert d’autre identifiant d’utilisateur unique. Utilisez des alias pour identifier les utilisateurs selon différentes dimensions que votre ID utilisateur principal. <br><br> L’objet user alias se compose de deux parties : un nom_alias pour l’identifiant lui-même et un libellé_alias indiquant le type d’alias. Les utilisateurs peuvent avoir plusieurs alias avec des libellés différents, mais un seul alias par alias_label. |
 
 {style="table-layout:auto"}
 
@@ -175,7 +175,7 @@ Après l’installation de l’extension, créez un transfert d’événement. [
 
 >[!NOTE]
 >
-> Le **[!UICONTROL Événement d’envoi de braquage]** une action ne requiert qu’un **[!UICONTROL Nom de l’événement]** et **[!UICONTROL Heure de l’événement]** à spécifier, mais vous devez inclure autant d’informations que possible dans le champ des propriétés personnalisées. Pour plus d’informations sur la variable [!DNL Braze] , voir [documentation officielle](https://www.braze.com/docs/api/objects_filters/event_object/).
+> La variable **[!UICONTROL Événement d’envoi de braquage]** une action ne requiert qu’un **[!UICONTROL Nom de l’événement]** et **[!UICONTROL Heure de l’événement]** à spécifier, mais vous devez inclure autant d’informations que possible dans le champ des propriétés personnalisées. Pour plus d’informations sur la variable [!DNL Braze] , voir [documentation officielle](https://www.braze.com/docs/api/objects_filters/event_object/).
 
 **[!UICONTROL Attributs d’utilisateur]**
 
@@ -187,23 +187,23 @@ Les attributs utilisateur peuvent être un objet JSON contenant des champs qui c
 | [!UICONTROL Nom] | |
 | [!UICONTROL Téléphone] | |
 | [!UICONTROL E-mail.] | |
-| [!UICONTROL Genre] | L’une des chaînes suivantes : &quot;M&quot;, &quot;F&quot;, &quot;O&quot; (autre), &quot;N&quot; (non applicable), &quot;P&quot; (préférez ne pas dire). |
+| [!UICONTROL Genre] | Une des chaînes suivantes : &quot;M&quot;, &quot;F&quot;, &quot;O&quot; (autre), &quot;N&quot; (non applicable), &quot;P&quot; (préférez ne pas dire). |
 | [!UICONTROL Ville] | |
 | [!UICONTROL Pays] | Pays sous forme de chaîne dans [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) format. |
 | [!UICONTROL Langue] | Langue sous forme de chaîne dans [ISO-639-1](https://fr.wikipedia.org/wiki/Liste_des_codes_ISO_639-1) format. |
 | [!UICONTROL Date de naissance] | Chaîne au format &quot;AAAA-MM-JJ&quot; (par exemple, 1980-12-21). |
 | [!UICONTROL Fuseau horaire] | Nom du fuseau horaire à partir de [Base de données des fuseaux horaires IANA](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) (par exemple, &quot;Amérique/New_York&quot; ou &quot;Heure de l’Est (États-Unis et Canada)&quot;). |
 | [!UICONTROL Facebook] | Hachage contenant n’importe quel identifiant (chaîne), mentions &quot;J’aime&quot; (tableau de chaînes), num_friend (entier). |
-| [!UICONTROL Twitter] | Hachage contenant n’importe quel ID (entier), screen_name (chaîne, pseudo Twitter), followers_count (entier), friend_count (entier), statuses_count(entier). |
+| [!UICONTROL Twitter] | Hachage contenant n’importe quel ID (entier), screen_name (chaîne, nom du Twitter), followers_count (entier), friend_count (entier), statuses_count(entier). |
 
 {style="table-layout:auto"}
 
 ## Validation des données dans [!DNL Braze] {#validate}
 
-Si la collecte d’événements et [!DNL Adobe Experience Platform] l’intégration a réussi, vous verrez des événements dans la variable [!DNL Braze] lors de la console [affichage des profils utilisateur](https://www.braze.com/docs/user_guide/engagement_tools/segments/user_profiles/). Plus précisément, les nouvelles données d’événement envoyées à [!DNL Braze] est reflété dans la variable [!DNL Purchases] de la section d’un utilisateur particulier [onglet aperçu](https://www.braze.com/docs/user_guide/engagement_tools/segments/user_profiles/#overview-tab).
+Si la collecte d’événements et [!DNL Adobe Experience Platform] l’intégration a réussi, vous verrez des événements dans la variable [!DNL Braze] lors de la console [affichage des profils utilisateur](https://www.braze.com/docs/user_guide/engagement_tools/segments/user_profiles/). Plus précisément, les nouvelles données d’événement envoyées à [!DNL Braze] est reflété dans la variable [!DNL Purchases] de l’utilisateur [onglet aperçu](https://www.braze.com/docs/user_guide/engagement_tools/segments/user_profiles/#overview-tab).
 
 ## Étapes suivantes
 
-Ce guide explique comment envoyer des événements de conversion à [!DNL Braze] à l’aide du transfert d’événement. Pour plus d’informations sur les applications en aval pour les données d’événement envoyées à [!DNL Braze], reportez-vous à la section [documentation officielle](https://www.braze.com/docs).
+Ce guide explique comment envoyer des événements de conversion à [!DNL Braze] à l’aide du transfert d’événement. Pour plus d’informations sur les applications en aval pour les données d’événement envoyées à [!DNL Braze], reportez-vous au [documentation officielle](https://www.braze.com/docs).
 
 Pour plus d’informations sur les fonctionnalités de transfert d’événement dans Experience Platform, reportez-vous à la section [transfert d’événement - Aperçu](../../../ui/event-forwarding/overview.md).

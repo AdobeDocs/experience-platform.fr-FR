@@ -2,10 +2,10 @@
 solution: Experience Platform
 title: API Media Edge
 description: Vue d’ensemble des API Media Edge
-source-git-commit: ff4bc64843e3d05277f56ab67b60400fb9e65c4f
-workflow-type: ht
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+workflow-type: tm+mt
 source-wordcount: '393'
-ht-degree: 100%
+ht-degree: 96%
 
 ---
 
@@ -27,7 +27,7 @@ Les [API Media Collection](https://experienceleague.adobe.com/docs/media-analyt
 
 * Il s’agit du moyen le plus simple d’incorporer des schémas XDM dans votre flux de données.
 
-* Les appels sont directement dirigés d’un lecteur multimédia vers le [réseau Experience Edge Platform](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/overview.html?lang=fr).
+* Les appels sont dirigés d’un lecteur multimédia directement vers [Réseau Edge Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/overview.html?lang=fr).
 
 * Il effectue un suivi efficace des événements multimédia avec un minimum d’appels inter-serveurs.
 

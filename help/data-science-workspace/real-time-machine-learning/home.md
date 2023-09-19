@@ -2,12 +2,12 @@
 keywords: Experience Platform;guide de développement;Espace de travail de science des données;rubriques les plus consultées;machine learning en temps réel;
 solution: Experience Platform
 title: Vue d’ensemble du machine learning en temps réel
-description: Le machine learning en temps réel peut considérablement améliorer la pertinence de votre contenu d’expérience digitale pour vos utilisateurs finaux. Ce résultat est obtenu par l’utilisation de l’inférence en temps réel et de l’apprentissage continu sur Experience Edge.
+description: Le machine learning en temps réel peut considérablement améliorer la pertinence de votre contenu d’expérience digitale pour vos utilisateurs finaux. Cela est rendu possible grâce à l’utilisation de l’inférencement en temps réel et à l’apprentissage continu sur le réseau Edge Experience Platform.
 exl-id: 23eb1877-1bdf-4982-b58c-cfb58467035a
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
-source-wordcount: '549'
-ht-degree: 100%
+source-wordcount: '552'
+ht-degree: 93%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 100%
 >
 >Le machine learning en temps réel n’est pas encore disponible pour tous les utilisateurs et utilisatrices. Cette fonctionnalité est en version alpha et est encore en cours de test. Ce document est sujet à modification.
 
-Le machine learning en temps réel peut considérablement améliorer la pertinence de votre contenu d’expérience digitale pour vos utilisateurs finaux. Ce résultat est obtenu par l’utilisation de l’inférence en temps réel et de l’apprentissage continu sur [!DNL Experience Edge].
+Le machine learning en temps réel peut considérablement améliorer la pertinence de votre contenu d’expérience digitale pour vos utilisateurs finaux. Ce résultat est obtenu par l’utilisation de l’inférence en temps réel et de l’apprentissage continu sur [!DNL Experience Platform Edge Network].
 
 Une combinaison de calcul transparent sur le hub et [!DNL Edge] réduit considérablement la latence généralement liée à la fourniture d’expériences hyper-personnalisées qui sont à la fois pertinentes et réactives. Le machine learning en temps réel fournit donc des inférences avec une latence incroyablement faible pour une prise de décision synchrone. Il peut s’agir, par exemple, d’effectuer le rendu du contenu d’une page web personnalisée ou de faire apparaître une offre ou une remise pour réduire le taux d’attrition et augmenter les conversions sur une boutique en ligne.
 
@@ -43,11 +43,11 @@ Créez entièrement un modèle de machine learning en temps réel ou incorporez-
 
 ### Déploiement
 
-Déployez votre modèle sur [!DNL Experience Edge] pour créer un service de machine learning en temps réel dans la [!UICONTROL Galerie de services] à l’aide du point d’entrée de l’API Prediction.
+Déployez votre modèle sur le [!DNL Edge Network] Création d’un service d’apprentissage automatique en temps réel dans le [!UICONTROL Galerie de services] à l’aide du point de terminaison de l’API de prédiction.
 
 ### Inférence   
 
-Utilisez le point d’entrée de l’API REST Prediction pour générer des insights de machine learning en temps réel.
+Utilisez le point d’entrée de l’API REST Prediction pour générer des informations de machine learning en temps réel.
 
 ### Diffusion
 
@@ -66,10 +66,9 @@ Le machine learning en temps réel est actuellement en version alpha. Les foncti
 > - Pour le deep learning, vos données doivent être envoyées de manière à ce que, quand `df.values` est appelé, il renvoie un tableau acceptable par votre modèle DL. En effet, le nœud de notation du modèle ONNX utilise `df.values` et envoie la sortie pour noter le modèle.
 
 
-
 ### Fonctionnalités :
 
-|  | Version alpha (mai) |
+| | Version alpha (mai) |
 | --- | --- |
 | **Fonctionnalités** | - En utilisant le modèle de notebook RTML, créez, testez et déployez un modèle de machine learning personnalisé. <br> - Prise en charge de l’importation de modèles de machine learning préentraînés. <br> - SDK Real-time Machine Learning. <br> - Ensemble de démarrage de nœuds de création. <br> - Déployé sur le hub Adobe Experience Platform. |
 | **Disponibilité** | Amérique du Nord |

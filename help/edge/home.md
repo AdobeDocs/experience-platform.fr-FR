@@ -1,14 +1,13 @@
 ---
 title: Présentation du SDK (Web Software Development Kit) de Adobe Experience Platform
 description: Découvrez comment utiliser le SDK Web de Adobe Experience Platform pour intégrer des fonctionnalités de Platform à votre site web.
-keywords: SDK Web Adobe Experience Platform;SDK Web Platform;SDK Web;edge;Visitor.js;AppMeasurement.js;AT.js;DIL.js;sdk web;SDK;SDK web;Launch;launch
-exl-id: 1348144a-7d25-4c27-bc40-3daee2f043a6
-source-git-commit: 52dbde052322a00fc33cd9f9c86ab7f92671f36a
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
-source-wordcount: '773'
-ht-degree: 40%
+source-wordcount: '776'
+ht-degree: 33%
 
 ---
+
 
 # Présentation du SDK Web d’Adobe Experience Platform {#overview}
 
@@ -17,17 +16,15 @@ Le SDK (Web Software Development Kit) de Adobe Experience Platform est une bibli
 * Mise en oeuvre manuelle à l’aide de `alloy.js`. Ce guide de l’utilisateur fournit de la documentation sur cette méthode de mise en oeuvre.
 * La variable [Extension de balise SDK Web](../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md). Voir [Tutoriel sur la mise en oeuvre de Adobe Experience Cloud avec le SDK Web](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html?lang=fr) pour plus d’informations.
 
-## Adobe Experience Edge
+## Réseau Edge Experience Platform
 
-Le SDK Web Adobe Experience Platform fait partie de la collection qui constitue l’Adobe Experience Edge. Adobe Experience Edge comprend les technologies suivantes :
+Le SDK Web Experience Platform fait partie d’un ensemble d’outils qui constituent le réseau Adobe Experience Platform Edge. Le réseau Edge est constitué des composants suivants :
 
-* **[SDK Web Adobe Experience Platform](#overview):** Un SDK JavaScript et une extension de balise pour simplifier considérablement le déploiement des technologies d’Adobe.
-* **[SDK Adobe Experience Platform Mobile](https://developer.adobe.com/client-sdks/documentation/):** Une extension du SDK mobile v5 pour permettre aux clients d’utiliser la nouvelle méthodologie de déploiement
-* **[Adobe Experience Platform Edge Network](../server-api/overview.md):** Un réseau mondial distribué de serveurs permettant une nouvelle méthodologie de déploiement [!DNL Adobe] products
+* **[SDK Web Experience Platform](#overview):** Un SDK JavaScript et une extension de balise pour simplifier considérablement le déploiement des technologies d’Adobe.
+* **[SDK Mobile Experience Platform](https://developer.adobe.com/client-sdks/documentation/):** Une extension du SDK mobile v5 pour permettre aux clients d’utiliser la nouvelle méthodologie de déploiement
+* **[API du serveur réseau Edge Experience Platform](../server-api/overview.md):** Une API qui peut être utilisée pour divers cas d’utilisation de la collecte de données, de la personnalisation, de la publicité et du marketing. L’API serveur peut être utilisée sur des serveurs, des appareils IoT, des décodeurs et sur divers autres appareils.
 
-L’Adobe Experience Edge est un cadre pour la collecte de données à faible latence, l’informatique enfichable et l’activation rapide des données sur tous les canaux adressables.
-
-[!DNL Adobe Experience Edge] fournit un SDK consolidé unique pour chaque canal (JavaScript, mobile, côté serveur), qui envoie des données à un domaine Adobe commun (`adobedc.net`) et reçoit une seule payload pour la diffusion des données et de l’expérience.
+Le réseau Edge est un cadre pour la collecte de données à faible latence, l’informatique enfichable et l’activation rapide des données sur tous les canaux adressables. Il fournit un SDK consolidé unique pour chaque canal (JavaScript, mobile, côté serveur), qui envoie des données vers un domaine d’Adobe commun (`adobedc.net`) et reçoit une seule payload pour la diffusion des données et de l’expérience.
 
 Côté serveur, une passerelle de périphérie unifiée et une structure de service de plateforme commune facilitent le déploiement de nouvelles fonctionnalités dans cet environnement informatique en temps réel. Cette architecture :
 

@@ -2,10 +2,10 @@
 solution: Experience Platform
 title: Prise en main des API Media Edge
 description: Guide de dépannage des API Media Edge
-source-git-commit: ff4bc64843e3d05277f56ab67b60400fb9e65c4f
-workflow-type: ht
-source-wordcount: '669'
-ht-degree: 100%
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+workflow-type: tm+mt
+source-wordcount: '664'
+ht-degree: 98%
 
 ---
 
@@ -22,7 +22,7 @@ Pour aider à résoudre les problèmes de réponses infructueuses, les erreurs s
 ## Valider les débuts de session
 
 La plupart des problèmes rencontrés lors de la création de requêtes de début de session entraînent une réponse 207 multi-statut.
-La payload est similaire aux erreurs non fatales de l’API Experience Edge Network Server. Toutes les
+La payload est similaire à [API du serveur](../error-handling.md)est des erreurs non fatales. Toutes les
 erreurs Media Analytics sont du type suivant : `https://ns.adobe.com/aep/errors/va-edge-0XXX-XXX`. les nombres affichés dans la réponse correspondent au statut d’erreur.
 
 L’exemple suivant illustre un corps de réponse pour une requête de début de session qui ne comporte pas de champ obligatoire et dont le champ n’est pas valide.
@@ -65,7 +65,7 @@ Dans l’exemple ci-dessus, les deux problèmes sont signalés par les champs `n
 
 ## Valider les événements
 
-La plupart des requêtes d’événement non valides génèrent une réponse 400 Bad Request. Dans ce cas, la payload est similaire aux erreurs fatales de l’API Experience Edge Network Server.
+La plupart des requêtes d’événement non valides génèrent une réponse 400 Bad Request. Dans ce cas, la payload est similaire aux erreurs fatales de l’API Server.
 
 Pour les requêtes d’événement, le service d’API Media Edge effectue des vérifications supplémentaires qui ne sont pas capturées dans le modèle XDM lui-même. Il s’agit notamment de s’assurer que le paramètre `eventType` du chemin correspond au paramètre `eventType` dans la payload de la requête.
 

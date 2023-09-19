@@ -1,10 +1,10 @@
 ---
 title: Extension de transfert d’événements de la plateforme Google Cloud
-description: Cette extension de transfert d’événement Adobe Experience Platform envoie les événements Adobe Experience Edge Network à Google Cloud Platform.
+description: Cette extension de transfert d’événement Adobe Experience Platform envoie les événements Edge Network à Google Cloud Platform.
 last-substantial-update: 2023-06-21T00:00:00Z
-source-git-commit: 7e26ebe6d40796174ca48367f826c7c6f1512abf
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
-source-wordcount: '570'
+source-wordcount: '568'
 ht-degree: 4%
 
 ---
@@ -13,13 +13,13 @@ ht-degree: 4%
 
 [[!DNL Google Cloud Platform]](https://cloud.google.com/) est une plateforme de cloud computing qui offre un large éventail de services tels que l’informatique distribuée, le stockage de base de données, la diffusion de contenu et les services d’intégration de logiciels en tant que service (SaaS) pour la gestion de la relation client (CRM) et la planification des ressources de l’entreprise (ERP).
 
-Le [!DNL Google Cloud Platform] [transfert d’événement](../../../ui/event-forwarding/overview.md) les leviers d’extension [[!DNL Cloud Pub/Sub]](https://cloud.google.com/pubsub) pour envoyer des événements du réseau Adobe Experience Platform Edge au [!DNL Google Cloud Platform] pour un traitement ultérieur. Ce guide explique comment installer l’extension et utiliser ses fonctionnalités dans une règle de transfert d’événement.
+La variable [!DNL Google Cloud Platform] [transfert d’événement](../../../ui/event-forwarding/overview.md) les leviers d’extension [[!DNL Cloud Pub/Sub]](https://cloud.google.com/pubsub) pour envoyer des événements du réseau Adobe Experience Platform Edge au [!DNL Google Cloud Platform] pour un traitement ultérieur. Ce guide explique comment installer l’extension et utiliser ses fonctionnalités dans une règle de transfert d’événement.
 
 ## Conditions préalables
 
 Pour utiliser cette extension, vous devez disposer d’un [!DNL Google Cloud Platform] compte avec un compte existant [!DNL Cloud Pub/Sub] rubrique. Si vous ne disposez pas d’une rubrique préexistante, reportez-vous à la section [[!DNL Google Cloud Platform]](https://cloud.google.com/pubsub/docs/create-topic) documentation sur la création et la gestion des rubriques.
 
-### Création d’un secret et d’un élément de données
+### Créer un secret et un élément de données
 
 Tout d’abord, créez un `Google OAuth 2` [secret de transfert d’événement](../../../ui/event-forwarding/secrets.md), qui sera utilisé pour authentifier la connexion à votre compte tout en gardant la valeur sécurisée.
 
@@ -35,7 +35,7 @@ Sélectionner **[!UICONTROL Extensions]** dans le volet de navigation de gauche.
 
 Dans l’écran de configuration, saisissez le secret de l’élément de données que vous avez créé précédemment dans le champ **[!UICONTROL Jeton d’accès]** champ . Le secret de l’élément de données contiendra votre [!DNL Google Cloud Platform] Jeton OAuth 2. Lorsque vous avez terminé, cliquez sur **[!UICONTROL Enregistrer]**.
 
-![Le [!DNL Google Cloud Platform] page de configuration de l’extension.](../../../images/extensions/server/google-cloud-platform/configure-extension.png)
+![La variable [!DNL Google Cloud Platform] page de configuration de l’extension.](../../../images/extensions/server/google-cloud-platform/configure-extension.png)
 
 ## Créez un [!DNL Send Data to Cloud Pub/Sub] règle {#tracking-rule}
 
@@ -46,8 +46,8 @@ Une fois l’extension installée, créez un transfert d’événement. [règle]
 | Entrée | Description |
 | --- | --- |
 | [!UICONTROL Rubrique] | Rubrique qui recevra les événements du transfert d’événement. La valeur doit avoir le format `projects/{projectName}/topics/{topicName}`. |
-| [!UICONTROL Data] (Données) | Ce champ contient les données à transférer au [!DNL Cloud Pub/Sub] rubrique au format JSON.<br><br>Sous , **[!UICONTROL Brut]** , vous pouvez coller l’objet JSON directement dans le champ de texte fourni ou sélectionner l’icône d’élément de données (![Icône Jeu de données](../../../images/extensions/server/aws/data-element-icon.png)) pour effectuer une sélection dans une liste d’éléments de données existants afin de représenter les données.<br><br>Vous pouvez également utiliser la variable **[!UICONTROL Éditeur de paires clé-valeur JSON]** pour ajouter manuellement chaque paire clé-valeur par le biais d’un éditeur d’interface utilisateur. Chaque valeur peut être représentée par une entrée brute ou un élément de données peut être sélectionné à la place. |
-| [!UICONTROL Attributs] | Ce champ contient l’objet JSON avec des attributs supplémentaires à envoyer avec le message.<br><br>Sous , **[!UICONTROL Brut]** , vous pouvez coller l’objet JSON directement dans le champ de texte fourni ou sélectionner l’icône d’élément de données (![Icône Jeu de données](../../../images/extensions/server/aws/data-element-icon.png)) pour effectuer une sélection dans une liste d’éléments de données existants afin de représenter les données.<br><br>Vous pouvez également utiliser la variable **[!UICONTROL Éditeur de paires clé-valeur JSON]** pour ajouter manuellement chaque paire clé-valeur par le biais d’un éditeur d’interface utilisateur. Chaque valeur peut être représentée par une entrée brute ou un élément de données peut être sélectionné à la place. |
+| [!UICONTROL Data] (Données) | Ce champ contient les données à transférer au [!DNL Cloud Pub/Sub] rubrique au format JSON.<br><br>Sous , **[!UICONTROL Brut]** , vous pouvez coller l’objet JSON directement dans le champ de texte fourni ou sélectionner l’icône d’élément de données (![Icône Jeu de données](../../../images/extensions/server/aws/data-element-icon.png)) pour effectuer une sélection dans une liste d’éléments de données existants afin de représenter les données.<br><br>Vous pouvez également utiliser la variable **[!UICONTROL Éditeur de paires clé-valeur JSON]** pour ajouter manuellement chaque paire clé-valeur via un éditeur d’interface utilisateur. Chaque valeur peut être représentée par une entrée brute ou un élément de données peut être sélectionné à la place. |
+| [!UICONTROL Attributs] | Ce champ contient l’objet JSON avec des attributs supplémentaires à envoyer avec le message.<br><br>Sous , **[!UICONTROL Brut]** , vous pouvez coller l’objet JSON directement dans le champ de texte fourni ou sélectionner l’icône d’élément de données (![Icône Jeu de données](../../../images/extensions/server/aws/data-element-icon.png)) pour effectuer une sélection dans une liste d’éléments de données existants afin de représenter les données.<br><br>Vous pouvez également utiliser la variable **[!UICONTROL Éditeur de paires clé-valeur JSON]** pour ajouter manuellement chaque paire clé-valeur via un éditeur d’interface utilisateur. Chaque valeur peut être représentée par une entrée brute ou un élément de données peut être sélectionné à la place. |
 
 {style="table-layout:auto"}
 
