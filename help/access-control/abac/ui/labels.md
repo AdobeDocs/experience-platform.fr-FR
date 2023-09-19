@@ -3,14 +3,18 @@ keywords: Experience Platform;accueil;rubriques populaires;contrôle d’accès
 title: Gestion des étiquettes de contrôle d’accès basé sur les attributs
 description: Ce document fournit des informations sur la gestion des libellés par le biais de l’interface Autorisations dans Adobe Experience Cloud.
 exl-id: c790f09c-fda6-48bf-95db-3f5053cd882e
-source-git-commit: 4069924b4c4000192dff1f89e5cf9a9412bcd95c
+source-git-commit: 5810a7778d86db2720a0372ace33278348d1ffdf
 workflow-type: tm+mt
-source-wordcount: '190'
-ht-degree: 38%
+source-wordcount: '209'
+ht-degree: 35%
 
 ---
 
-# Gestion des étiquettes
+# Gérer les libellés
+
+>[!NOTE]
+>
+>Pour créer ou afficher des attributs calculés avec des champs contenant un libellé donné, vous devez avoir accès à ce libellé.
 
 Les libellés vous permettent de classer les jeux de données et les champs en fonction de l’utilisation et des stratégies d’accès qui s’appliquent à ces données. Vous pouvez appliquer les libellés à tout moment, ce qui vous offre une certaine flexibilité quant à la manière dont vous choisissez de gérer les données. Les bonnes pratiques recommandent de libeller les données dès qu’elles sont ingérées dans Platform, ou dès que les données sont disponibles pour une utilisation dans Platform.
 
@@ -29,7 +33,7 @@ Pour créer un nouveau libellé, sélectionnez le **[!UICONTROL Étiquettes]** d
 
 ![flac-new-label](../../images/flac-ui/create-label.png)
 
-Le **[!UICONTROL Créer un nouveau libellé]** s’affiche, vous invitant à saisir un nom, un nom convivial facultatif et une description facultative.
+La variable **[!UICONTROL Créer un nouveau libellé]** s’affiche, vous invitant à saisir un nom, un nom convivial facultatif et une description facultative.
 
 ![new-label-info](../../images/flac-ui/new-label-info.png)
 

@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Présentation du contrôle d’accès
 description: Dans Adobe Experience Platform, le contrôle dʼaccès est fourni par le biais dʼAdobe Admin Console. Cette fonctionnalité exploite les profils de produit dans l’Admin Console, liant les utilisateurs et utilisatrices à des autorisations et des sandbox.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: d83a5558d706e7bf059edb912f6fd43d4b66cc54
+source-git-commit: ded4df4062197fb69b54b71ab19fa1684ce17a58
 workflow-type: tm+mt
-source-wordcount: '1678'
-ht-degree: 92%
+source-wordcount: '1703'
+ht-degree: 91%
 
 ---
 
@@ -83,6 +83,8 @@ Le tableau suivant décrit les autorisations disponibles pour Experience Platfo
 | [!DNL Alerts] | [!UICONTROL Résoudre les alertes] | Accès à la lecture, la modification et la suppression des alertes. |
 | [!DNL Alerts] | [!UICONTROL Affichage des alertes] | Accès en lecture seule aux alertes. |
 | [!DNL Alerts] | [!UICONTROL Gérer les alertes] | Accès à la lecture, la création, la modification et la suppression de l’historique des alertes. |
+| [!DNL Computed Attributes] | [!UICONTROL Affichage des attributs calculés] | Accès en lecture seule à l’onglet Attributs calculés, à l’inventaire et aux détails. |
+| [!DNL Computed Attributes] | [!UICONTROL Gestion des attributs calculés] | Accès à la lecture, la création, la suppression de brouillons et la désactivation des attributs calculés. |
 | [!DNL Data Hygiene] | [!UICONTROL Afficher l’hygiène des données] | Accès en lecture seule à l’hygiène des données. |
 | [!DNL Data Hygiene] | [!UICONTROL Gérer l’hygiène des données] | Accès à la lecture, la création, la modification et la suppression de lʼhygiène des données. |
 | [!DNL Data Modeling] | [!UICONTROL Gestion des schémas] | Accès pour lire, créer, modifier et supprimer des schémas et des ressources associées. |
