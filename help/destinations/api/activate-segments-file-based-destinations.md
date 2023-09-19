@@ -4,16 +4,16 @@ title: Activation des audiences vers des destinations basées sur des fichiers �
 description: Découvrez comment utiliser l’API Flow Service pour exporter des fichiers avec des profils qualifiés vers des destinations de stockage dans le cloud.
 type: Tutorial
 exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
-source-git-commit: 3b5f4abd516259402e9b3c4cfbcc17e32f18b6f5
+source-git-commit: 9c07664873f649645db57a9a025277f515333b1e
 workflow-type: tm+mt
-source-wordcount: '4415'
+source-wordcount: '4401'
 ht-degree: 11%
 
 ---
 
 # Activation des audiences vers des destinations basées sur des fichiers à l’aide de l’API Flow Service
 
-Utilisez les fonctionnalités améliorées d’exportation de fichiers (actuellement en version bêta) pour accéder à des fonctionnalités de personnalisation améliorées lors de l’exportation de fichiers en dehors d’Experience Platform :
+Utilisez les fonctionnalités d’exportation de fichiers améliorées pour accéder à une fonctionnalité de personnalisation améliorée lors de l’exportation de fichiers hors d’Experience Platform :
 
 * [Options de dénomination de fichier](/help/destinations/ui/activate-batch-profile-destinations.md#file-names) supplémentaires.
 * Possibilité de définir des en-têtes de fichier personnalisés dans vos fichiers exportés via l’[étape de mappage améliorée](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
@@ -35,9 +35,13 @@ Cet article explique le workflow requis pour utiliser la variable [API de servic
 >
 >Vous pouvez également utiliser l’interface utilisateur de l’Experience Platform pour exporter des profils vers des destinations de stockage dans le cloud. Lisez la section [tutoriel sur l’activation des destinations basées sur des fichiers](/help/destinations/ui/activate-batch-profile-destinations.md) pour plus d’informations.
 
-## Migration des utilisateurs d’API {#api-migration}
+<!--
 
-Si vous utilisiez déjà l’API Flow Service pour exporter des profils vers les destinations de stockage dans le cloud Amazon S3, Azure Blob ou SFTP, lisez la [Guide de migration des API](/help/destinations/api/api-migration-guide-cloud-storage-destinations.md) pour les étapes de migration nécessaires, car Adobe transfère les utilisateurs des destinations héritées vers les nouvelles destinations.
+## API users migration {#api-migration}
+
+If you were already using the Flow Service API to export profiles to the Amazon S3, Azure Blob, or SFTP cloud storage destinations, read the [API migration guide](/help/destinations/api/api-migration-guide-cloud-storage-destinations.md) for necessary migration steps as Adobe transitions users from the legacy destinations to the new destinations. 
+
+-->
 
 ## Prise en main {#get-started}
 
@@ -53,7 +57,9 @@ Les sections suivantes apportent des informations supplémentaires dont vous ave
 
 ### Autorisations nécessaires {#permissions}
 
-Pour exporter des profils, vous avez besoin de l’événement **[!UICONTROL Gestion des destinations]**, **[!UICONTROL Affichage des destinations]**, et **[!UICONTROL Activation des destinations]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+Pour exporter des profils, vous avez besoin de l’événement **[!UICONTROL Gestion des destinations]**, **[!UICONTROL Affichage des destinations]**, et **[!UICONTROL Activation des destinations]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+
+Pour exporter *identités*, vous avez besoin de la fonction **[!UICONTROL Affichage du graphique des identités]** [autorisation de contrôle d’accès](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 ### Lecture d’exemples d’appels API {#reading-sample-api-calls}
 
@@ -99,7 +105,7 @@ Avant de démarrer le workflow pour exporter des profils, identifiez les spécif
 | Stockage Azure Blob | `6d6b59bf-fb58-4107-9064-4d246c0e5bb2` | `752d422f-b16f-4f0d-b1c6-26e448e3b388` |
 | Azure Data Lake Gen 2 (ADLS Gen2) | `be2c3209-53bc-47e7-ab25-145db8b873e1` | `17be2013-2549-41ce-96e7-a70363bec293` |
 | Zone d’entrée des données (DLZ) | `10440537-2a7b-4583-ac39-ed38d4b848e8` | `cd2fc47e-e838-4f38-a581-8fff2f99b63a` |
-| Google Cloud Storage | `c5d93acb-ea8b-4b14-8f53-02138444ae99` | `585c15c4-6cbf-4126-8f87-e26bff78b657` |
+| Google Cloud Storage | `c5d93acb-ea8b-4b14-8f53-02138444ae99` | `585c15c4-6cbf-4126-8f87-e26bff78b657` |
 | SFTP | `36965a81-b1c6-401b-99f8-22508f1e6a26` | `fd36aaa4-bf2b-43fb-9387-43785eeeb799` |
 
 {style="table-layout:auto"}
@@ -2356,7 +2362,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --data-raw '{
-    "name": "Amazon S3 Beta Target Connection",
+    "name": "Amazon S3 Target Connection",
     "baseConnectionId": "<FROM_STEP_CREATE_BASE_CONNECTION>",
     "params": {
         "mode": "Server-to-server",
@@ -2389,7 +2395,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --data-raw '{
-   "name":"Amazon S3 Beta Target Connection",
+   "name":"Amazon S3 Target Connection",
    "baseConnectionId":"<FROM_STEP_CREATE_BASE_CONNECTION>",
    "params":{
       "mode":"Server-to-server",
@@ -2448,7 +2454,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --data-raw '{
-    "name": "Azure Blob Storage Beta Target Connection",
+    "name": "Azure Blob Storage Target Connection",
     "baseConnectionId": "<FROM_STEP_CREATE_BASE_CONNECTION>",
     "params": {
         "mode": "Server-to-server",
@@ -2481,7 +2487,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --data-raw '{
-   "name":"Azure Blob Storage Beta Target Connection",
+   "name":"Azure Blob Storage Target Connection",
    "baseConnectionId":"<FROM_STEP_CREATE_BASE_CONNECTION>",
    "params":{
       "mode":"Server-to-server",
@@ -2663,7 +2669,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --data-raw '{
-   "name":"Data Landing Zone Beta Target Connection",
+   "name":"Data Landing Zone Target Connection",
    "baseConnectionId":"<FROM_STEP_CREATE_BASE_CONNECTION>",
    "params":{
       "mode":"Server-to-server",
@@ -2755,7 +2761,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --data-raw '{
-   "name":"Google Cloud Storage Beta Target Connection",
+   "name":"Google Cloud Storage Target Connection",
    "baseConnectionId":"<FROM_STEP_CREATE_BASE_CONNECTION>",
    "params":{
       "mode":"Server-to-server",

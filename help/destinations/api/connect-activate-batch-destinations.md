@@ -5,28 +5,34 @@ title: Se connecter aux destinations par lots et activer des données à l’aid
 description: Cette section contient des instructions détaillées sur l’utilisation de l’API Flow Service pour créer un espace de stockage par lots dans le cloud ou une destination de marketing par e-mail dans Experience Platform et activer les données.
 type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 9c07664873f649645db57a9a025277f515333b1e
 workflow-type: tm+mt
-source-wordcount: '3399'
-ht-degree: 80%
+source-wordcount: '3446'
+ht-degree: 76%
 
 ---
 
-# Se connecter aux destinations par lots et activer des données à l’aide de l’API Flow Service
+# Connectez-vous aux destinations de marketing par e-mail basées sur des fichiers et activez les données à l’aide de l’API Flow Service
 
 >[!IMPORTANT]
 > 
->Pour vous connecter à une destination, vous devez disposer de l’**[!UICONTROL autorisation de contrôle d’accès]** [Gérer les destinations](/help/access-control/home.md#permissions).
+>* Pour vous connecter à une destination, vous devez disposer de l’**[!UICONTROL autorisation de contrôle d’accès]** [Gérer les destinations](/help/access-control/home.md#permissions).
 >
->Pour activer les données, vous avez besoin des **[!UICONTROL autorisations de contrôle d’accès]** pour les fonctions **[!UICONTROL Gérer les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]**, et [Afficher les segments](/help/access-control/home.md#permissions).
+>* Pour activer les données, vous avez besoin des **[!UICONTROL autorisations de contrôle d’accès]** pour les fonctions **[!UICONTROL Gérer les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]**, et [Afficher les segments](/help/access-control/home.md#permissions).
 >
->Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+>* Pour exporter *identités*, vous avez besoin de la fonction **[!UICONTROL Affichage du graphique des identités]** [autorisation de contrôle d’accès](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>
+>Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
 
-Ce tutoriel vous explique comment utiliser l’API Flow Service pour créer un [espace de stockage par lots dans le cloud](../catalog/cloud-storage/overview.md) ou [une destination de marketing par e-mail](../catalog/email-marketing/overview.md), créer un flux de données vers la destination que vous venez de créer et exporter les données vers cette dernière au moyen de fichiers CSV.
+Ce tutoriel explique comment utiliser l’API Flow Service pour créer un fichier basé sur un fichier [destination de marketing par e-mail](../catalog/email-marketing/overview.md), créez un flux de données vers la destination que vous venez de créer et exportez les données vers cette dernière au moyen de fichiers CSV.
 
-Ce tutoriel utilise la destination [!DNL Adobe Campaign] dans tous ses exemples, mais les étapes sont identiques pour tous les stockages par lots dans le cloud et toutes les destinations de marketing par e-mail.
+>[!TIP]
+> 
+>Pour savoir comment activer des données vers des destinations de stockage dans le cloud à l’aide de l’API Flow Service, lisez la section [tutoriel sur les API dédiées](/help/destinations/api/activate-segments-file-based-destinations.md).
 
-![Présentation : étapes de création d’une destination et d’activation des audiences](../assets/api/email-marketing/overview.png)
+Ce tutoriel utilise la méthode [!DNL Adobe Campaign] destination dans tous les exemples, mais les étapes sont identiques pour les destinations de marketing par e-mail basées sur des fichiers.
+
+![Présentation : étapes pour créer une destination et activer des audiences](../assets/api/email-marketing/overview.png)
 
 Si vous préférez utiliser l’interface utilisateur Platform pour vous connecter à une destination et activer des données, reportez-vous aux tutoriels [Se connecter à une destination](../ui/connect-destination.md) et [Activer des données d’audience vers des destinations d’exportation de profils par lots](../ui/activate-batch-profile-destinations.md).
 
@@ -123,12 +129,9 @@ Une réponse réussie contient une liste des destinations disponibles et leurs i
 | Destination | Identifiant de spécification de connexion |
 ---------|----------|
 | [!DNL Adobe Campaign] | `0b23e41a-cb4a-4321-a78f-3b654f5d7d97` |
-| [!DNL Amazon S3] | `4890fc95-5a1f-4983-94bb-e060c08e3f81` |
-| [!DNL Azure Blob] | `e258278b-a4cf-43ac-b158-4fa0ca0d948b` |
 | [!DNL Oracle Eloqua] | `c1e44b6b-e7c8-404b-9031-58f0ef760604` |
 | [!DNL Oracle Responsys] | `a5e28ddf-e265-426e-83a1-9d03a3a6822b` |
 | [!DNL Salesforce Marketing Cloud] | `f599a5b3-60a7-4951-950a-cc4115c7ea27` |
-| SFTP | `64ef4b8b-a6e0-41b5-9677-3805d1ee5dd0` |
 
 {style="table-layout:auto"}
 
@@ -1237,11 +1240,11 @@ La réponse renvoyée doit inclure dans la variable `transformations` paramètre
 
 ## Gestion des erreurs d’API {#api-error-handling}
 
-Les points de terminaison d’API de ce tutoriel suivent les principes généraux des messages d’erreur de l’API Experience Platform. Voir [Codes d’état d’API](/help/landing/troubleshooting.md#api-status-codes) et [erreurs d’en-tête de requête](/help/landing/troubleshooting.md#request-header-errors) dans le guide de dépannage de Platform pour plus d’informations sur l’interprétation des réponses d’erreur.
+Les points de terminaison d’API de ce tutoriel suivent les principes généraux des messages d’erreur de l’API d’Experience Platform. Voir [Codes d’état d’API](/help/landing/troubleshooting.md#api-status-codes) et [erreurs d’en-tête de requête](/help/landing/troubleshooting.md#request-header-errors) dans le guide de dépannage de Platform pour plus d’informations sur l’interprétation des réponses d’erreur.
 
 ## Étapes suivantes {#next-steps}
 
-En suivant ce tutoriel, vous avez réussi à connecter Platform à l’une de vos destinations préférées de stockage dans le cloud par lots ou de marketing par e-mail, et à configurer un flux de données vers la destination correspondante pour exporter les fichiers de données. Les données sortantes peuvent désormais être utilisées dans la destination pour des campagnes par e-mail, de la publicité ciblée et de nombreux autres cas d’utilisation. Consultez les pages suivantes pour plus d’informations, telles que la modification des flux de données existants à l’aide de l’API Flow Service :
+En suivant ce tutoriel, vous avez réussi à connecter Platform à l’une de vos destinations de marketing par e-mail préférées basées sur des fichiers et à configurer un flux de données vers la destination correspondante pour exporter les fichiers de données. Les données sortantes peuvent désormais être utilisées dans la destination pour des campagnes par e-mail, de la publicité ciblée et de nombreux autres cas d’utilisation. Consultez les pages suivantes pour plus d’informations, telles que la modification des flux de données existants à l’aide de l’API Flow Service :
 
 * [Présentation des destinations](../home.md)
 * [Présentation du catalogue des destinations](../catalog/overview.md)

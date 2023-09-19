@@ -4,10 +4,10 @@ user-guide-title: Guide des destinations
 user-guide-description: Activez vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
 description: Ce document répertorie la table des matières des destinations Adobe Experience Platform
 feature: Destinations
-source-git-commit: 333f98a74e69f50ae356231733924d1c6793ddf1
+source-git-commit: 9c07664873f649645db57a9a025277f515333b1e
 workflow-type: tm+mt
-source-wordcount: '1170'
-ht-degree: 99%
+source-wordcount: '1159'
+ht-degree: 98%
 
 ---
 
@@ -22,15 +22,14 @@ ht-degree: 99%
    * [Comportement d’exportation de profils selon les types de destinations](./how-destinations-work/profile-export-behavior.md)
    * [Gestion des identités dans le workflow d’activation des destinations](./how-destinations-work/identity-handling.md)
 * Tutoriels sur les API {#api}
-   * [Guide de migration des API pour les destinations de stockage dans le cloud](/help/destinations/api/api-migration-guide-cloud-storage-destinations.md)
+   * [Activer des données vers des destinations basées sur des fichiers à l’aide de l’API de service de flux](/help/destinations/api/activate-segments-file-based-destinations.md)
    * [Se connecter aux destinations de diffusion en continu et activer les données à l’aide de l’API Flow Service](./api/streaming-destinations.md)
-   * [Se connecter à l’espace de stockage par lots et aux destinations de marketing par e-mail et activer les données à l’aide de l’API Flow Service](./api/connect-activate-batch-destinations.md)
+   * [Connectez-vous aux destinations de marketing par e-mail basées sur des fichiers et activez les données à l’aide de l’API Flow Service](./api/connect-activate-batch-destinations.md)
    * [(Version Beta) Activer les audiences vers des destinations par lots via l’API d’activation ad hoc](./api/ad-hoc-activation-api.md)
    * [Modifier la destination](./api/edit-destination.md)
    * [Mettre à jour les flux de données de destination](./api/update-destination-dataflows.md)
    * [Supprimer les comptes de destination](./api/delete-destination-account.md)
    * [Supprimer les flux de données de destination](./api/delete-destination-dataflow.md)
-   * [(Beta) Activer des données vers des destinations basées sur des fichiers à l’aide de l’API de service de flux](/help/destinations/api/activate-segments-file-based-destinations.md)
    * [(Version bêta) Exporter des jeux de données](/help/destinations/api/export-datasets.md)
 * Guides d’interface utilisateur {#ui}
    * [Espace de travail des destinations](./ui/destinations-workspace.md)
