@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Point de terminaison de l’API Sandbox disponible
 description: Vous pouvez répertorier les environnements de test disponibles pour l’utilisateur actuel en envoyant une requête de GET au point de terminaison des environnements de test disponibles.
 exl-id: 9b0719af-c1ca-439a-9c8b-86c7fa26a3b8
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 130f3a9b65befc1cc8cf400b8ca8ca4d6e7f71e4
 workflow-type: tm+mt
 source-wordcount: '256'
 ht-degree: 41%
@@ -33,7 +33,7 @@ GET /{QUERY_PARAMS}
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/foundation/sandbox-management/?&limit=3&offset=1 \
+  https://platform.adobe.io/data/foundation/sandbox-management/?limit=3&offset=1 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}'
@@ -103,7 +103,7 @@ Une réponse réussie renvoie une liste d’environnements de test disponibles p
 | --- | --- |
 | `name` | Le nom du sandbox. Utilisé à des fins de recherche dans les appels API. |
 | `title` | Le nom d’affichage du sandbox. |
-| `state` | L’état de traitement actuel du sandbox. Un sandbox peut avoir l’un des états suivants : <ul><li>`creating`: L’environnement de test a été créé, mais le système continue de le configurer.</li><li>`active`: L’environnement de test est créé et principal.</li><li>`failed`: En raison d’une erreur, le système n’a pas pu configurer l’environnement de test et est désactivé.</li><li>`deleted`: L’environnement de test a été désactivé manuellement.</li></ul> |
+| `state` | L’état de traitement actuel du sandbox. Un sandbox peut avoir l’un des états suivants : <ul><li>`creating`: l’environnement de test a été créé, mais le système continue de le configurer.</li><li>`active`: l’environnement de test est créé et actif.</li><li>`failed`: en raison d’une erreur, le système n’a pas pu configurer l’environnement de test et est désactivé.</li><li>`deleted`: l’environnement de test a été désactivé manuellement.</li></ul> |
 | `type` | Le type de sandbox : « développement » ou « production ». |
 | `isDefault` | Une propriété booléenne indiquant si cet environnement de test est l’environnement de test de production par défaut pour l’organisation. |
 | `eTag` | L’identifiant d’une version spécifique du sandbox. Utilisée pour le contrôle des versions et une mise en cache efficace, cette valeur est mise à jour chaque fois que le sandbox est modifié. |
