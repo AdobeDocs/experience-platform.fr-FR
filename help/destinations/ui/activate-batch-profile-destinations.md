@@ -4,9 +4,9 @@ title: Activer les audiences vers des destinations d’export de profils par lot
 type: Tutorial
 description: Découvrez comment activer les audiences que vous avez dans Adobe Experience Platform en les envoyant vers des destinations basées sur un profil de lot.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: afcb5f80edaa4d68ba167123feb2ba9060469243
+source-git-commit: 99ab9ed562d1959dc2bc801d563cb61d89bbde75
 workflow-type: tm+mt
-source-wordcount: '3669'
+source-wordcount: '3707'
 ht-degree: 64%
 
 ---
@@ -27,6 +27,11 @@ ht-degree: 64%
 Cet article explique le processus requis pour activer les audiences dans les destinations basées sur les profils de lot Adobe Experience Platform, telles que l’espace de stockage dans le cloud et les destinations de marketing par e-mail.
 
 ## Conditions préalables {#prerequisites}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_export_arrays_flat_files"
+>title="(Version bêta) Prise en charge des tableaux d’exportation"
+>abstract="(Version bêta) Exportez des tableaux de valeurs primitives de l’Experience Platform vers la destination de stockage dans le cloud de votre choix. Ce texte sera mis à jour plus d’informations. <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/license-usage-limited.html?lang=en#available-metrics">En savoir plus</a>. "
 
 Pour activer des audiences vers des destinations, vous devez avoir réussi [connecté à une destination](./connect-destination.md). Si vous ne l’avez pas déjà fait, accédez au [catalogue de destinations](../catalog/overview.md), parcourez les destinations prises en charge et configurez la destination que vous souhaitez utiliser.
 
