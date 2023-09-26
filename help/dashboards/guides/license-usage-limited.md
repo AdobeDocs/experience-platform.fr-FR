@@ -5,14 +5,19 @@ description: Adobe Experience Platform fournit un tableau de bord grâce auquel 
 type: Documentation
 hide: true
 hidefromtoc: true
-source-git-commit: 25f57b1bfbcb2ec95f88afb69386a10deb600125
+source-git-commit: 6a69ecebe67a156d67a324581e5b96699b96d2e6
 workflow-type: tm+mt
-source-wordcount: '1495'
+source-wordcount: '1553'
 ht-degree: 7%
 
 ---
 
 # Tableau de bord de l’utilisation de la licence (version limitée) {#license-usage-dashboard-limited-release}
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseUsage"
+>title="Tableau de bord d’utilisation des licences"
+>abstract="Le tableau de bord Utilisation de la licence donne des informations sur les produits Adobe Experience Platform que vous avez achetés. La présentation du tableau de bord affiche les mesures principales pour vos produits, y compris votre utilisation pour chacune des mesures principales, ainsi que le montant de votre licence. L’espace de travail des détails affiche une ventilation de vos mesures pour chaque produit dans des environnements de test spécifiques."
 
 >[!IMPORTANT]
 >
@@ -72,7 +77,7 @@ Toutes les mesures disponibles s’affichent sur la page [!UICONTROL Résumé] .
 
 Dans l’onglet Résumé, le tableau comprend la variable [!UICONTROL Mesure] colonne . Ces descriptions lisibles par l’utilisateur indiquent toutes les mesures utilisées pour ce type d’environnement de test.
 
-### Sélection d’un environnement de test {#select-sandbox}
+### Sélectionner un sandbox {#select-sandbox}
 
 Pour modifier l’affichage entre les types d’environnements de test de production et de développement, sélectionnez l’une des options suivantes : [!UICONTROL Environnements de test de production] ou [!UICONTROL Environnements de test de développement]. Le type d’environnement de test sélectionné est indiqué par le bouton radio en regard du nom de l’environnement de test.
 
