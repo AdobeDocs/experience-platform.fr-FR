@@ -1,12 +1,12 @@
 ---
 title: Connexion de votre compte de diffusion en continu de Snowflake à Adobe Experience Platform
 description: Découvrez comment connecter Adobe Experience Platform à Snowflake Streaming à l’aide de l’API Flow Service.
-badgeBeta: label="Beta" type="Informative"
+badgeBeta: label="Version Beta" type="Informative"
 badgeUltimate: label="Ultimate" type="Positive"
-source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
+source-git-commit: f2c392704e0404aaff2ad569e388241c06fba902
 workflow-type: tm+mt
-source-wordcount: '830'
-ht-degree: 30%
+source-wordcount: '867'
+ht-degree: 28%
 
 ---
 
@@ -14,8 +14,8 @@ ht-degree: 30%
 
 >[!IMPORTANT]
 >
->* Le [!DNL Snowflake] source de diffusion en continu est en version bêta. Veuillez lire la [Présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de sources étiquetées bêta.
->* Le [!DNL Snowflake] La source de diffusion en continu est disponible dans l’API pour les utilisateurs qui ont acheté Real-time Customer Data Platform Ultimate.
+>* La variable [!DNL Snowflake] source en continu est en version bêta. Veuillez lire la [Présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de sources étiquetées bêta.
+>* La variable [!DNL Snowflake] La source de diffusion en continu est disponible dans l’API pour les utilisateurs qui ont acheté Real-time Customer Data Platform Ultimate.
 
 Ce tutoriel décrit les étapes à suivre pour connecter et diffuser des données à partir de vos [!DNL Snowflake] à Adobe Experience Platform à l’aide de la variable [[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>).
 
@@ -26,7 +26,7 @@ Ce guide nécessite une compréhension professionnelle des composants suivants d
 * [Sources](../../../../home.md) : [!DNL Experience Platform] permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services [!DNL Platform].
 * [Sandbox](../../../../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
-Pour la configuration des prérequis et des informations sur la variable [!DNL Snowflake] source de diffusion en continu. Veuillez lire la [[!DNL Snowflake] présentation de la source de diffusion en continu](../../../../connectors/databases/snowflake-streaming.md).
+Pour la configuration des prérequis et des informations sur la variable [!DNL Snowflake] source de diffusion en continu. Veuillez lire la [[!DNL Snowflake] présentation de la source de flux continu](../../../../connectors/databases/snowflake-streaming.md).
 
 ### Utiliser les API Platform
 
@@ -50,7 +50,7 @@ La requête suivante permet de créer une connexion de base pour [!DNL Snowflake
 
 >[!TIP]
 >
->Le `auth.specName` doit être saisie exactement comme dans l’exemple ci-dessous, y compris les espaces vides.
+>La variable `auth.specName` doit être saisie exactement comme dans l’exemple ci-dessous, y compris les espaces vides.
 
 ```shell
 curl -X POST \
@@ -86,12 +86,12 @@ curl -X POST \
 | --- | --- |
 | `auth.params.account` | Le nom de votre [!DNL Snowflake] compte en continu. |
 | `auth.params.database` | Le nom de votre [!DNL Snowflake] base de données à partir de laquelle les données seront extraites. |
-| `auth.params.warehouse` | Le nom de votre [!DNL Snowflake] entrepôt. Le [!DNL Snowflake] l’entrepôt gère le processus d’exécution des requêtes de l’application. Chaque entrepôt est indépendant l’un de l’autre et doit être accessible individuellement lors de l’importation de données vers Platform. |
+| `auth.params.warehouse` | Le nom de votre [!DNL Snowflake] entrepôt. La variable [!DNL Snowflake] l’entrepôt gère le processus d’exécution des requêtes de l’application. Chaque entrepôt est indépendant l’un de l’autre et doit être accessible individuellement lors de l’importation de données vers Platform. |
 | `auth.params.username` | Le nom d’utilisateur de votre [!DNL Snowflake] compte en continu. |
 | `auth.params.schema` | (Facultatif) Le schéma de base de données associé à votre [!DNL Snowflake] compte en continu. |
 | `auth.params.password` | Le mot de passe de votre [!DNL Snowflake] compte en continu. |
 | `auth.params.role` | (Facultatif) Le rôle de l’utilisateur pour cette opération [!DNL Snowflake] connexion. Si elle n’est pas fournie, cette valeur est définie par défaut sur `public`. |
-| `connectionSpec.id` | Le [!DNL Snowflake] identifiant de spécification de connexion : `51ae16c2-bdad-42fd-9fce-8d5dfddaf140`. |
+| `connectionSpec.id` | La variable [!DNL Snowflake] identifiant de spécification de connexion : `51ae16c2-bdad-42fd-9fce-8d5dfddaf140`. |
 
 **Réponse**
 
@@ -185,7 +185,8 @@ curl -X POST \
       "params": {
           "tableName": "ACME",
           "timestampColumn": "dOb",
-          "backfill": "true"
+          "backfill": "true",
+          "timezoneValue": "PST"
       }
   }'
 ```
@@ -196,7 +197,8 @@ curl -X POST \
 | `connectionSpec.id` | L’identifiant de spécification de connexion pour la variable [!DNL Snowflake] source de diffusion en continu. |
 | `params.tableName` | Le nom de la table dans votre [!DNL Snowflake] base de données que vous souhaitez apporter à Platform. |
 | `params.timestampColumn` | Nom de la colonne d’horodatage qui sera utilisée pour récupérer les valeurs incrémentielles. |
-| `params.backfill` | Indicateur booléen qui détermine si les données sont récupérées à partir du début (0 époque) ou à partir du moment où la source est lancée. Pour plus d’informations sur cette valeur, lisez le [[!DNL Snowflake] présentation de la source de diffusion en continu](../../../../connectors/databases/snowflake-streaming.md). |
+| `params.backfill` | Indicateur booléen qui détermine si les données sont récupérées à partir du début (0 époque) ou à partir du moment où la source est lancée. Pour plus d’informations sur cette valeur, lisez le [[!DNL Snowflake] présentation de la source de flux continu](../../../../connectors/databases/snowflake-streaming.md). |
+| `params.timezoneValue` | La valeur du fuseau horaire indique l’heure actuelle du fuseau horaire à récupérer lors de l’interrogation de la variable [!DNL Snowflake] base de données. Ce paramètre doit être fourni si la colonne horodatage de la configuration est définie sur `TIMESTAMP_NTZ`. Si non fourni, `timezoneValue` par défaut : UTC. |
 
 **Réponse**
 
