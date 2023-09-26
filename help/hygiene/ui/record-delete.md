@@ -1,60 +1,63 @@
 ---
 title: Suppression d’enregistrements
 description: Découvrez comment supprimer des enregistrements dans l’interface utilisateur de Adobe Experience Platform.
-exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
 hide: true
 hidefromtoc: true
-source-git-commit: a20afcd95d47e38ccdec9fba9e772032e212d7a4
+source-git-commit: ccb2236fa169c26ef2f75d26776eee9f0122e92a
 workflow-type: tm+mt
-source-wordcount: '1184'
-ht-degree: 67%
+source-wordcount: '1493'
+ht-degree: 35%
 
 ---
 
-# Supprimer des enregistrements
+# [!BADGE Beta]{type=Informative} Supprimer des enregistrements {#record-delete}
 
-Le [[!UICONTROL Hygiène des données] workspace](./overview.md) dans l’interface utilisateur de Adobe Experience Platform vous permet de supprimer les enregistrements qui participent à Identity Service et à Real-Time Customer Profile. Ces enregistrements peuvent être liés à des consommateurs individuels ou à toute autre entité incluse dans le graphique d’identités.
+Utilisez la variable [[!UICONTROL Cycle de vie des données] workspace](./overview.md) pour supprimer des enregistrements dans Adobe Experience Platform en fonction de leur identité principale. Ces enregistrements peuvent être liés à des consommateurs individuels ou à toute autre entité incluse dans le graphique d’identités.
 
 >[!IMPORTANT]
->
->Les demandes de suppression d’enregistrement ne sont disponibles que pour les organisations qui ont acheté **Adobe Health Care Shield**.
->
->
->Les suppressions d’enregistrements sont destinées au nettoyage des données, à la suppression des données anonymes ou à la minimisation des données. Elles ne sont **pas** destinées aux demandes de droits des titulaires de données (conformité) en ce qui concerne les réglementations de confidentialité comme le Règlement général sur la protection des données (RGPD). Pour tous les cas d’utilisation de conformité, utilisez plutôt [Adobe Experience Platform Privacy Service](../../privacy-service/home.md).
+> 
+>La fonction de suppression d’enregistrement est actuellement en version bêta et disponible uniquement dans un **version limitée**. Il n’est pas disponible pour tous les clients. Les demandes de suppression d’enregistrements ne sont disponibles que pour les organisations de la version limitée.
+> 
+> 
+>Les suppressions d’enregistrements sont destinées à être utilisées pour la normalisation des données, la suppression des données anonymes ou la minimisation des données. Elles ne sont **pas** destinées aux demandes de droits des titulaires de données (conformité) en ce qui concerne les réglementations de confidentialité comme le Règlement général sur la protection des données (RGPD). Pour tous les cas d’utilisation de conformité, utilisez plutôt [Adobe Experience Platform Privacy Service](../../privacy-service/home.md).
 
-## Conditions préalables
+## Conditions préalables {#prerequisites}
 
-La suppression d’enregistrements nécessite une compréhension pratique du fonctionnement des champs d’identité dans Experience Platform. Plus précisément, vous devez connaître les Principales valeurs d’identité des entités dont vous souhaitez supprimer les enregistrements, en fonction du jeu de données (ou des jeux de données) duquel vous les supprimez.
+La suppression d’enregistrements nécessite une compréhension pratique du fonctionnement des champs d’identité dans Experience Platform. Plus précisément, vous devez connaître les valeurs d’identité principales des entités dont vous souhaitez supprimer les enregistrements, en fonction du jeu de données (ou des jeux de données) dans lequel vous les supprimez.
 
 Pour plus d’informations sur les identités dans Platform, consultez la documentation suivante :
 
 * [Adobe Experience Platform Identity Service](../../identity-service/home.md) : associe les identités des appareils et des systèmes, en liant les jeux de données en fonction des champs d’identité définis par les schémas XDM auxquels ils se conforment.
-   * [Espaces de noms d’identité](../../identity-service/namespaces.md) : définissent les différents types d’informations d’identité qui peuvent être associés à une seule personne et constituent un composant obligatoire pour chaque champ d’identité.
-* [Profil client en temps réel](../../profile/home.md): tire parti des graphiques d’identités pour fournir des profils consommateurs unifiés basés sur des données agrégées provenant de plusieurs sources, mises à jour en temps quasi réel.
+* [Espaces de noms d’identité](../../identity-service/namespaces.md) : définissent les différents types d’informations d’identité qui peuvent être associés à une seule personne et constituent un composant obligatoire pour chaque champ d’identité.
+* [Profil client en temps réel](../../profile/home.md): utilise des graphiques d’identités pour fournir des profils consommateurs unifiés basés sur des données agrégées provenant de plusieurs sources, mis à jour en temps quasi réel.
 * [Modèle de données d’expérience (XDM)](../../xdm/home.md) : fournit des structures et des définitions standard pour les données de Platform à l’aide de schémas. Tous les jeux de données de Platform sont conformes à un schéma XDM spécifique et le schéma définit les champs qui sont des identités.
-   * [Champs d’identité](../../xdm/ui/fields/identity.md) : découvrez la définition d’un champ d’identité dans un schéma XDM.
+* [Champs d’identité](../../xdm/ui/fields/identity.md) : découvrez la définition d’un champ d’identité dans un schéma XDM.
 
-## Créer une requête
+## Création d’une requête {#create-request}
 
-Pour lancer le processus, sélectionnez **[!UICONTROL Créer une requête]** dans la page principale de l’espace de travail.
+Pour lancer le processus, sélectionnez **[!UICONTROL Cycle de vie des données]** dans le volet de navigation de gauche de l’interface utilisateur de Platform. La variable [!UICONTROL Requêtes de cycle de vie des données] workspace s’affiche. Ensuite, sélectionnez **[!UICONTROL Créer une requête]** de la page principale de l’espace de travail.
 
-![Image illustrant le bouton [!UICONTROL Créer une requête] sélectionné](../images/ui/record-delete/create-request-button.png)
+![La variable [!UICONTROL Requêtes de cycle de vie des données] Workspace avec [!UICONTROL Créer une requête] sélectionné.](../images/ui/record-delete/create-request-button.png)
 
-La boîte de dialogue de création de requête s’affiche. Par défaut, la variable **[!UICONTROL Supprimer un client]** est sélectionnée sous la propriété **[!UICONTROL Action requise]** . Conservez la sélection de cette option.
+Le workflow de création de requête s’affiche. Par défaut, la variable **[!UICONTROL Supprimer un enregistrement]** est sélectionnée sous la propriété **[!UICONTROL Action requise]** . Conservez la sélection de cette option.
 
-![Image montrant l’option de suppression du consommateur sélectionnée dans la boîte de dialogue de création](../images/ui/record-delete/consumer-action.png)
+>[!IMPORTANT]
+> 
+>Dans le cadre des modifications en cours visant à améliorer l’efficacité et à rendre les opérations de jeux de données moins coûteuses, les organisations qui ont été déplacées au format Delta peuvent supprimer des données d’Identity Service, de Real-Time Customer Profile et du lac de données. Ce type d’utilisateur est appelé delta-migrated. Les utilisateurs des organisations qui ont fait l’objet d’une migration delta peuvent choisir de supprimer des enregistrements d’un seul jeu de données ou de tous les jeux de données. Les utilisateurs d’organisations qui n’ont pas fait l’objet d’une migration différentielle ne peuvent pas choisir de supprimer des enregistrements d’un seul jeu de données ou de tous les jeux de données comme illustré dans l’image ci-dessous. Dans ce cas, veuillez continuer à [fournir des identités](#provide-identities) du guide.
 
-## Sélectionner des jeux de données
+![Le workflow de création de la requête avec la fonction [!UICONTROL Supprimer un enregistrement] sélectionnée et surlignée.](../images/ui/record-delete/delete-record.png)
 
-Sous , **[!UICONTROL Détails du client]** , l’étape suivante consiste à déterminer si vous souhaitez supprimer des enregistrements d’un seul jeu de données ou de tous les jeux de données.
+## Sélectionner des jeux de données {#select-dataset}
 
-Si vous choisissez **[!UICONTROL Sélectionner un jeu de données]**, sélectionnez l’icône de base de données (![image de l’icône de base de données](../images/ui/record-delete/database-icon.png)). Une boîte de dialogue s’affiche et vous permet de sélectionner le jeu de données souhaité dans la liste.
+L’étape suivante consiste à déterminer si vous souhaitez supprimer des enregistrements d’un seul jeu de données ou de tous les jeux de données. Si cette option n’est pas disponible, veuillez continuer à [fournir des identités](#provide-identities) du guide.
 
-![Image illustrant la boîte de dialogue de sélection du jeu de données](../images/ui/record-delete/select-dataset.png)
+Sous , **[!UICONTROL Détails de l’enregistrement]** utilisez le bouton radio pour effectuer une sélection entre un jeu de données spécifique et tous les jeux de données. Si vous choisissez **[!UICONTROL Sélectionner un jeu de données]**, procédez pour sélectionner l’icône de base de données (![Icône Base de données](../images/ui/record-delete/database-icon.png)) pour ouvrir une boîte de dialogue qui fournit une liste de jeux de données disponibles. Sélectionnez le jeu de données souhaité dans la liste, suivi de **[!UICONTROL Terminé]**.
+
+![La variable [!UICONTROL Sélectionner un jeu de données] Boîte de dialogue avec un jeu de données sélectionné et [!UICONTROL Terminé] surlignée.](../images/ui/record-delete/select-dataset.png)
 
 Si vous souhaitez supprimer des enregistrements de tous les jeux de données, sélectionnez **[!UICONTROL Tous les jeux de données]**.
 
-![Image illustrant l’option [!UICONTROL Tous les jeux de données] sélectionnée](../images/ui/record-delete/all-datasets.png)
+![La variable [!UICONTROL Sélectionner un jeu de données] avec la boîte de dialogue [!UICONTROL Tous les jeux de données] l’option sélectionnée.](../images/ui/record-delete/all-datasets.png)
 
 >[!NOTE]
 >
@@ -80,9 +83,9 @@ Comme tous les champs d’identité de Platform, une identité principale se com
 >
 >Si vous ne connaissez pas l’identité principale d’un jeu de données spécifique, vous pouvez la trouver dans l’interface utilisateur de Platform. Dans l’espace de travail **[!UICONTROL Jeux de données]**, sélectionnez le jeu de données en question dans la liste. Sur la page des détails du jeu de données, passez la souris sur le nom du schéma du jeu de données dans le rail de droite. L’identité principale s’affiche avec le nom et la description du schéma.
 >
->![Image illustrant l’identité principale d’un jeu de données surligné dans l’interface utilisateur](../images/ui/record-delete/dataset-primary-identity.png)
+>![Le tableau de bord des jeux de données avec un jeu de données sélectionné et une boîte de dialogue de schéma s’ouvre dans le panneau des détails du jeu de données. L’identifiant principal du jeu de données est mis en surbrillance.](../images/ui/record-delete/dataset-primary-identity.png)
 
-Si vous supprimez des enregistrements d’un seul jeu de données, toutes les identités que vous fournissez doivent avoir le même type, car un jeu de données ne peut avoir qu’une seule identité Principale. Si vous effectuez une suppression dans tous les jeux de données, vous pouvez inclure plusieurs types d’identité, car différents jeux de données peuvent avoir différentes identités principales.
+Si vous supprimez des enregistrements d’un seul jeu de données, toutes les identités que vous fournissez doivent avoir le même type, car un jeu de données ne peut avoir qu’une seule identité principale. Si vous effectuez une suppression dans tous les jeux de données, vous pouvez inclure plusieurs types d’identité, car différents jeux de données peuvent avoir différentes identités principales.
 
 Deux options permettent de fournir des identités lors de la suppression d’enregistrements :
 
@@ -91,9 +94,9 @@ Deux options permettent de fournir des identités lors de la suppression d’enr
 
 ### Charger un fichier JSON {#upload-json}
 
-Pour charger un fichier JSON, vous pouvez le faire glisser et le déposer dans la zone prévue à cet effet ou sélectionner **[!UICONTROL Choisir les fichiers]** pour parcourir et sélectionner les fichiers dans votre répertoire local.
+Pour charger un fichier JSON, vous pouvez le faire glisser et le déposer dans la zone fournie, ou sélectionner **[!UICONTROL Sélection de fichiers]** pour parcourir et sélectionner dans votre répertoire local.
 
-![Image illustrant les méthodes de chargement de fichiers JSON dans l’interface utilisateur](../images/ui/record-delete/upload-json.png)
+![Le workflow de création de requête avec l’interface de sélection de fichiers et de glisser-déposer pour charger les fichiers JSON mis en surbrillance.](../images/ui/record-delete/upload-json.png)
 
 Le fichier JSON doit être formaté sous la forme d’un tableau d’objets, chaque objet représentant une identité.
 
@@ -117,38 +120,44 @@ Le fichier JSON doit être formaté sous la forme d’un tableau d’objets, cha
 
 Une fois le fichier chargé, vous pouvez continuer à [envoyer la requête](#submit).
 
-### Saisir des identités manuellement {#manual-identity}
+### Saisie manuelle des identités {#manual-identity}
 
 Pour saisir les identités manuellement, sélectionnez **[!UICONTROL Ajouter une identité]**.
 
-![Image illustrant le bouton [!UICONTROL Ajouter une identité] sélectionné](../images/ui/record-delete/add-identity.png)
+![Le workflow de création de la requête avec la fonction [!UICONTROL Ajouter une identité] en surbrillance.](../images/ui/record-delete/add-identity.png)
 
-Les commandes qui s’affichent vous permettent de saisir des identités une par une. Sous **[!UICONTROL Identité principale]**, utilisez le menu déroulant pour sélectionner le type d’identité. Sous **[!UICONTROL Valeur d’identité]**, indiquez la valeur d’identité Principale de l’enregistrement.
+Les commandes qui s’affichent vous permettent de saisir des identités une par une. Sous **[!UICONTROL Identité principale]**, utilisez le menu déroulant pour sélectionner le type d’identité. Sous **[!UICONTROL Valeur d’identité]**, indiquez la valeur d’identité principale de l’enregistrement.
 
-![Image illustrant un champ d’identité ajouté manuellement](../images/ui/record-delete/identity-added.png)
+![Le workflow de création de requête avec un champ d’identité ajouté manuellement.](../images/ui/record-delete/identity-added.png)
 
-Pour ajouter d’autres identités, cliquez sur l’icône plus (![image de l’icône plus](../images/ui/record-delete/plus-icon.png)) en regard de l’une des lignes ou sélectionnez **[!UICONTROL Ajouter une identité]**.
+Pour ajouter d’autres identités, cliquez sur l’icône plus (![Une icône plus.](../images/ui/record-delete/plus-icon.png)) en regard de l’une des lignes, ou sélectionnez **[!UICONTROL Ajouter une identité]**.
 
-![Image illustrant comment ajouter d’autres identités à la requête](../images/ui/record-delete/more-identities.png)
+![Le workflow de création de requête avec l’icône plus et l’icône d’ajout d’identité surlignée.](../images/ui/record-delete/more-identities.png)
 
 ## Envoyer la requête (#submit)
 
 Une fois que vous avez terminé d’ajouter des identités à la requête, sous **[!UICONTROL Paramètres de requête]**, attribuez un nom et une description facultative à la requête avant de sélectionner **[!UICONTROL Envoyer]**.
 
-![Image illustrant le bouton [!UICONTROL Envoyer] sélectionné](../images/ui/record-delete/submit.png)
+>[!IMPORTANT]
+> 
+>Il existe différentes limites pour le nombre total de suppressions d’enregistrement d’identité unique qui peuvent être envoyées chaque mois. Ces limites sont basées sur votre contrat de licence. Les organisations qui ont acheté toutes les éditions d’Adobe Real-time Customer Data Platform et de Adobe Journey Optimizer peuvent envoyer jusqu’à 100 000 enregistrements d’identité supprimés chaque mois. Organisations ayant effectué des achats **Adobe Health Care Shield** ou **Adobe de la confidentialité et de la sécurité** peut envoyer jusqu’à 600 000 enregistrements d’identité supprimés chaque mois.
 
-Vous êtes invité à confirmer la liste des identités dont vous souhaitez supprimer les données. Sélectionnez **[!UICONTROL Envoyer]** pour confirmer votre sélection.
+![Le paramètre de requête [!UICONTROL Nom] et [!UICONTROL Description] champs avec [!UICONTROL Envoyer] surlignée.](../images/ui/record-delete/submit.png)
 
-![Image illustrant la boîte de dialogue de confirmation](../images/ui/record-delete/confirm-request.png)
+A [!UICONTROL Confirmer la requête] s’affiche pour indiquer que les identités ne peuvent pas être récupérées une fois supprimées. Sélectionner **[!UICONTROL Envoyer]** pour confirmer la liste des identités dont vous souhaitez supprimer les données.
 
-Une fois la requête soumise, un ordre de travail est créé et s’affiche dans l’onglet [!UICONTROL Consommateur] de l’espace de travail [!UICONTROL Nettoyage de données]. Ensuite, vous pouvez surveiller le statut de l’ordre de travail lors du traitement de la requête.
+![La variable [!UICONTROL Confirmer la requête] boîte de dialogue.](../images/ui/record-delete/confirm-request.png)
+
+Une fois la demande envoyée, un ordre de travail est créé et s’affiche sur la page [!UICONTROL Enregistrement] de la [!UICONTROL Cycle de vie des données] workspace. Ensuite, vous pouvez surveiller le statut de l’ordre de travail lors du traitement de la requête.
 
 >[!NOTE]
 >
->Consultez la section de présentation sur [calendrier et transparence](../home.md#record-delete-transparency) pour plus d’informations sur le traitement des suppressions d’enregistrement une fois qu’elles sont exécutées.
+>Reportez-vous à la section de présentation sur [calendrier et transparence](../home.md#record-delete-transparency) pour plus d’informations sur le traitement des suppressions d’enregistrement une fois qu’elles sont exécutées.
+
+![La variable [!UICONTROL Enregistrement] de la [!UICONTROL Cycle de vie des données] espace de travail avec la nouvelle requête mise en surbrillance.](../images/ui/record-delete/request-log.png)
 
 ## Étapes suivantes
 
-Ce document explique comment supprimer des enregistrements dans l’interface utilisateur de l’Experience Platform. Pour plus d’informations sur l’exécution d’autres tâches d’hygiène de données dans l’interface utilisateur, consultez la [Présentation de l’interface utilisateur de l’hygiène de données](./overview.md).
+Ce document explique comment supprimer des enregistrements dans l’interface utilisateur de l’Experience Platform. Pour plus d’informations sur l’exécution d’autres tâches de gestion du cycle de vie des données dans l’interface utilisateur, reportez-vous au [Présentation de l’interface utilisateur du cycle de vie des données](./overview.md).
 
 Pour savoir comment supprimer des enregistrements à l’aide de l’API Data Hygiene, reportez-vous à la section [guide de point de terminaison des commandes de travail](../api/workorder.md).

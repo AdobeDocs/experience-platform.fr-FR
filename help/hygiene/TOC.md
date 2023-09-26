@@ -4,10 +4,10 @@ user-guide-title: Aide du nettoyage de données
 breadcrumb-title: Guide de nettoyage de données
 user-guide-description: Supprimez des enregistrements individuels et planifiez les expirations de jeux de données dans Experience Platform pour le nettoyage des données, la suppression des données anonymes et la minimisation des données.
 feature: Data Hygiene
-source-git-commit: a20afcd95d47e38ccdec9fba9e772032e212d7a4
+source-git-commit: 0deb861d016fc99cfc1a2b75a08800dac7d208f4
 workflow-type: tm+mt
-source-wordcount: '54'
-ht-degree: 100%
+source-wordcount: '55'
+ht-degree: 94%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 100%
    * [Présentation](./ui/overview.md)
    * [Parcourir les ordres de travail existants](./ui/browse.md)
    * [Gérer des expirations de jeux de données](./ui/dataset-expiration.md)
-   * [Supprimer des enregistrements](./ui/record-delete.md)
+   * [(Version bêta) Suppression d’enregistrements](./ui/record-delete.md)
 * API Data Hygiene {#api}
    * [Présentation](./api/overview.md)
    * [Expirations de jeux de données](./api/dataset-expiration.md)
