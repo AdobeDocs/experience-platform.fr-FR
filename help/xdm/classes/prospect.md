@@ -1,7 +1,7 @@
 ---
 title: Classe XDM Individual Prospect
 description: Ce document présente la classe XDM Individual Prospect Profile dans le modèle de données d’expérience (XDM).
-source-git-commit: 437bd602462330a96f356b83d7afe922b5315d9f
+source-git-commit: 7562da0f07a2109a2030653927d8d2639685e442
 workflow-type: tm+mt
 source-wordcount: '348'
 ht-degree: 12%
@@ -22,7 +22,7 @@ Dans le modèle de données d’expérience (XDM), le [!UICONTROL Profil XDM Ind
 | `_id` | [!UICONTROL Chaîne] | Identifiant de chaîne unique généré par le système pour l’enregistrement. Ce champ permet de suivre l’unicité d’un enregistrement individuel, d’éviter la duplication des données et de rechercher cet enregistrement dans les services en aval.<br><br>Ce champ étant généré par le système, il ne fournit pas de valeur explicite lors de l’ingestion des données. Cependant, vous pouvez choisir de fournir vos propres valeurs d’identifiant uniques si vous le souhaitez. |
 | `createdByBatchID` | [!UICONTROL Chaîne] | Identifiant du lot ingéré à l’origine de la création de l’enregistrement. |
 | `modifiedByBatchID` | [!UICONTROL Chaîne] | L’identifiant du dernier lot ingéré qui a provoqué la mise à jour de l’enregistrement. |
-| `partnerID` | [!UICONTROL Chaîne] | En règle générale, un identifiant pseudonyme unique qui identifie un prospect individuel. Consultez la documentation relative à [types d’identité](../../identity-service/namespaces.md#identity-types) pour en savoir plus sur l’identifiant de partenaire et les autres types d’identité disponibles dans Adobe Experience Platform. |
+| `partnerID` | [!UICONTROL Chaîne] | En règle générale, un identifiant pseudonyme unique qui identifie un prospect individuel. Consultez la documentation relative à [types d’identité](../../identity-service/namespaces.md#identity-type) pour en savoir plus sur l’identifiant de partenaire et les autres types d’identité disponibles dans Adobe Experience Platform. |
 | `repositoryCreatedBy` | [!UICONTROL Chaîne] | L’identifiant de l’utilisateur qui a créé l’enregistrement. |
 | `repositoryLastModifiedBy` | [!UICONTROL Chaîne] | L’identifiant de l’utilisateur qui a modifié l’enregistrement pour la dernière fois. Lors de la création de l’enregistrement, la variable `modifiedByUser` est définie comme `createdByUser` . |
 

@@ -1,45 +1,59 @@
 ---
 title: Présentation d’Identity Namespace
-description: Les espaces de noms d’identité sont des composants du Service d’identités qui servent d’indicateurs du contexte auquel une identité se rapporte. Par exemple, ils distinguent une valeur de "name@email.com" comme adresse électronique ou "443522" comme identifiant CRM numérique.
+description: Découvrez les espaces de noms d’identité dans Identity Service.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: ac53678ca9ef51cb638590138a16a3506c6a1fc0
+source-git-commit: 36a42a7c3722828776495359762289d0028b6ddc
 workflow-type: tm+mt
-source-wordcount: '1764'
-ht-degree: 30%
+source-wordcount: '1699'
+ht-degree: 22%
 
 ---
 
 # Présentation des espaces de noms d’identité
 
-Les espaces de noms d’identité sont des composants d’[[!DNL Identity Service]](./home.md) qui servent d’indicateurs du contexte auquel une identité se rapporte. Par exemple, ils distinguent une valeur « name<span>@email.com » comme adresse e-mail ou « 443522 » comme identifiant CRM numérique.
+Lisez le document suivant pour en savoir plus sur ce que vous pouvez faire avec les espaces de noms d’identité dans Adobe Experience Platform Identity Service.
 
 ## Prise en main
 
-L’utilisation des espaces de noms d’identité nécessite une compréhension des différents services d’Adobe Experience Platform impliqués. Avant de commencer à travailler avec les espaces de noms d’identité, veuillez consulter la documentation relative aux services suivants :
+Les espaces de noms d’identité nécessitent une compréhension des différents services Adobe Experience Platform. Avant de commencer à travailler avec les espaces de noms d’identité, veuillez consulter la documentation relative aux services suivants :
 
-- [[!DNL Real-Time Customer Profile]](../profile/home.md): fournit un profil client en temps réel unifié basé sur des données agrégées provenant de plusieurs sources.
-- [[!DNL Identity Service]](./home.md) : profitez d’une meilleure compréhension de vos clients et de leurs comportements en rapprochant des identités entre appareils et systèmes.
-- [[!DNL Privacy Service]](../privacy-service/home.md): les espaces de noms d’identité sont utilisés dans les demandes de conformité pour les réglementations de confidentialité juridiques telles que le Règlement général sur la protection des données (RGPD). Chaque demande d’accès à des informations personnelles est relative à un espace de noms afin d’identifier les données des consommateurs qui doivent être affectées.
+* [[!DNL Real-Time Customer Profile]](../profile/home.md): fournit un profil client en temps réel unifié basé sur des données agrégées provenant de plusieurs sources.
+* [[!DNL Identity Service]](./home.md) : profitez d’une meilleure compréhension de vos clients et de leurs comportements en rapprochant des identités entre appareils et systèmes.
+* [[!DNL Privacy Service]](../privacy-service/home.md): les espaces de noms d’identité sont utilisés dans les demandes de conformité pour les réglementations de confidentialité juridiques telles que le Règlement général sur la protection des données (RGPD). Chaque demande d’accès à des informations personnelles est relative à un espace de noms afin d’identifier les données des consommateurs qui doivent être affectées.
 
 ## Compréhension des espaces de noms d’identité
 
-Une identité complète est composée d’une valeur d’identifiant et d’un espace de noms. Lors de la mise en correspondance de données d’enregistrement entre des fragments de profil, comme lorsque [!DNL Real-Time Customer Profile] fusionne les données de profil ; la valeur d’identité et l’espace de noms doivent correspondre.
+Une identité entièrement qualifiée comprend deux composants : une **valeur d’identité** et un **espace de noms d’identité**. Par exemple, si la valeur d’une identité est `scott@acme.com`, puis un espace de noms fournit du contexte à cette valeur en la distinguant comme adresse électronique. De même, un espace de noms peut distinguer `555-123-456` comme numéro de téléphone ; et `3126ABC` comme identifiant CRM. Essentiellement, **un espace de noms fournit un contexte à une identité donnée ;**. Lors de la mise en correspondance de données d’enregistrement entre des fragments de profil, comme lorsque [!DNL Real-Time Customer Profile] fusionne les données de profil ; la valeur d’identité et l’espace de noms doivent correspondre.
 
-Par exemple, deux fragments de profil peuvent contenir des identifiants principaux différents, mais ils partagent la même valeur pour l’espace de noms &quot;Email&quot;. [!DNL Platform] est capable de voir que ces fragments sont en fait la même personne et rassemble les données dans le graphique d’identités de l’individu.
+Par exemple, deux fragments de profil peuvent contenir des identifiants principaux différents, mais ils partagent la même valeur pour l’espace de noms &quot;Email&quot;. Par conséquent, l’Experience Platform peut voir que ces fragments sont en fait la même personne et rassemble les données dans le graphique d’identités de la personne.
 
 ![](images/identity-service-stitching.png)
 
-### Types d’identité {#identity-types}
+### Composants d’un espace de noms
+
+Un espace de noms se compose des composants suivants :
+
+* **Nom d’affichage**: nom convivial d’un espace de noms donné.
+* **Symbole d’identité**: code utilisé en interne par Identity Service pour représenter un espace de noms.
+* **Type d’identité**: classification d’un espace de noms donné.
+* **Description**: (facultatif) toute information supplémentaire que vous pouvez fournir concernant un espace de noms donné.
+
+### Type d’identité {#identity-type}
 
 >[!CONTEXTUALHELP]
 >id="platform_identity_create_namespace"
 >title="Définition du type d&#39;identité"
->abstract="Le type d&#39;identité contrôle si les données sont stockées ou non dans le graphique d&#39;identité. Les identifiants autres que ceux des personnes ne seront pas stockés et tous les autres types d&#39;identité le seront."
+>abstract="Le type d&#39;identité contrôle si les données sont stockées ou non dans le graphique d&#39;identité. Les graphiques d’identités ne sont pas générés pour les types d’identité suivants : identifiants de non-personne et identifiants de partenaire."
 >text="Learn more in documentation"
 
-Les données peuvent être identifiées par plusieurs types d’identité différents. Le type d’identité est spécifié au moment de la création de l’espace de noms d’identité et contrôle la conservation ou non des données dans le graphique d’identités, ainsi que toutes les instructions spéciales concernant la manière dont ces données doivent être traitées. Tous les types d’identité sauf **Identifiant de non-personne** procédez de la même manière que pour associer un espace de noms et sa valeur d’identifiant correspondante à un cluster de graphiques d’identités. Les données ne sont pas regroupées lors de l’utilisation de **Identifiant de non-personne**.
+Un élément d’un espace de noms d’identité est le suivant : **type d&#39;identité**. Le type d’identité détermine :
 
-Les types d’identité suivants sont disponibles dans [!DNL Platform]:
+* Génération d’un graphique d’identités :
+   * Les graphiques d’identités ne sont pas générés pour les types d’identité suivants : identifiants de non-personne et identifiants de partenaire.
+   * Des graphiques d’identités sont générés pour tous les autres types d’identités.
+* Les identités qui sont supprimées du graphique d’identités lorsque les limites du système sont atteintes. Pour plus d’informations, consultez la section [barrières de sécurité pour les données d’identité](guardrails.md).
+
+Les types d’identité suivants sont disponibles dans Experience Platform :
 
 | Type d’identité | Description |
 | --- | --- |
@@ -88,43 +102,33 @@ Les espaces de noms standard suivants sont fournis pour être utilisés par tout
 
 Pour afficher les espaces de noms d’identité dans l’interface utilisateur, sélectionnez **[!UICONTROL Identités]** dans le volet de navigation de gauche, puis sélectionnez **[!UICONTROL Parcourir]**.
 
-![navigation](./images/browse.png)
+Un répertoire des espaces de noms de votre organisation s’affiche, affichant des informations sur leurs noms, symboles d’identité, dates de dernière mise à jour, types d’identité correspondants et description.
 
-Une liste d’espaces de noms d’identité s’affiche dans l’interface principale de la page, affichant des informations sur leur nom, les symboles d’identité, la date de dernière mise à jour et s’il s’agit d’un espace de noms standard ou personnalisé. Le rail de droite contient des informations sur [!UICONTROL Force du graphique d’identités].
+![Répertoire d’espaces de noms d’identité personnalisés dans votre organisation.](./images/namespace/browse.png)
 
-![identités](./images/identities.png)
-
-Platform fournit également des espaces de noms à des fins d’intégration. Ces espaces de noms sont masqués par défaut, car ils sont utilisés pour se connecter à d’autres systèmes et non pour assembler des identités. Pour afficher les espaces de noms d’intégration, sélectionnez **[!UICONTROL Affichage des identités d’intégration]**.
-
-![view-integration-identities](./images/view-integration-identities.png)
-
-Sélectionnez un espace de noms d’identité dans la liste pour afficher des informations sur un espace de noms spécifique. La sélection d’un espace de noms d’identité met à jour l’affichage sur le rail de droite afin d’afficher les métadonnées concernant l’espace de noms d’identité que vous avez sélectionné, y compris le nombre d’identités ingérées et le nombre d’enregistrements ayant échoué et ignorés.
-
-![select-namespace](./images/select-namespace.png)
-
-## Gestion des espaces de noms personnalisés {#manage-namespaces}
+## Créer des espaces de noms personnalisés {#create-namespaces}
 
 Selon les données de votre organisation et les cas d’utilisation, vous pouvez avoir besoin d’espaces de noms personnalisés. Les espaces de noms personnalisés peuvent être créés à l’aide de la variable [[!DNL Identity Service]](./api/create-custom-namespace.md) API ou via l’interface utilisateur.
 
-Pour créer un espace de noms personnalisé à l’aide de l’interface utilisateur, accédez au **[!UICONTROL Identités]** espace de travail, sélectionnez **[!UICONTROL Parcourir]**, puis sélectionnez **[!UICONTROL Créer un espace de noms d’identité]**.
+Pour créer un espace de noms personnalisé, sélectionnez **[!UICONTROL Créer un espace de noms d’identité]**.
 
-![select-create](./images/select-create.png)
+![Bouton Créer un espace de noms d’identité dans l’espace de travail des identités.](./images/namespace/create-identity-namespace.png)
 
-La variable **[!UICONTROL Créer un espace de noms d’identité]** s’affiche. Fournir une variable **[!UICONTROL Nom d’affichage]** et **[!UICONTROL Symbole d’identité]** puis sélectionnez le type d’identité que vous souhaitez créer. Vous pouvez également ajouter une description facultative pour ajouter des informations supplémentaires sur l’espace de noms. Tous les types d’identité sauf **Identifiant de non-personne** suit le même comportement que le groupement. Si vous sélectionnez **Identifiant de non-personne** comme type d’identité lors de la création d’un espace de noms, l’assemblage ne se produit pas. Pour plus d’informations sur chaque type d’identité, reportez-vous au tableau de la section [types d’identité](#identity-types).
+La variable [!UICONTROL Créer un espace de noms d’identité] s’affiche. Tout d’abord, vous devez fournir un nom d’affichage et un symbole d’identité pour l’espace de noms personnalisé que vous souhaitez créer. Vous pouvez également éventuellement fournir une description pour ajouter plus de contexte à l’espace de noms personnalisé que vous créez.
 
-Lorsque vous avez terminé, cliquez sur **[!UICONTROL Créer]**.
+![Fenêtre contextuelle dans laquelle vous pouvez saisir des informations concernant votre espace de noms d’identité personnalisé.](./images/namespace/name-and-symbol.png)
+
+Sélectionnez ensuite le type d’identité à affecter à l’espace de noms personnalisé. Lorsque vous avez terminé, cliquez sur **[!UICONTROL Créer]**.
+
+![Une sélection de types d’identité que vous pouvez choisir et affecter à votre espace de noms d’identité personnalisé.](./images/namespace/select-identity-type.png)
 
 >[!IMPORTANT]
 >
->Les espaces de noms que vous définissez sont propres à votre organisation et nécessitent un symbole d’identité unique pour être créés avec succès.
-
-![create-identity-namespace](./images/create-identity-namespace.png)
-
-Comme pour les espaces de noms standard, vous pouvez sélectionner un espace de noms personnalisé dans la variable **[!UICONTROL Parcourir]** pour afficher ses détails. Cependant, avec un espace de noms personnalisé, vous pouvez également modifier son nom d’affichage et sa description à partir de la zone de détails.
-
->[!NOTE]
+>* Les espaces de noms que vous définissez sont propres à votre organisation et nécessitent un symbole d’identité unique pour être créés avec succès.
 >
->Une fois qu’un espace de noms a été créé, il ne peut plus être supprimé et son symbole d’identité et son type ne peuvent plus être modifiés.
+>* Une fois qu’un espace de noms a été créé, il ne peut plus être supprimé et son symbole d’identité et son type ne peuvent plus être modifiés.
+>
+>* Les espaces de noms en double ne sont pas pris en charge. Vous ne pouvez pas utiliser un nom d’affichage et un symbole d’identité existants lors de la création d’un espace de noms.
 
 ## Espaces de noms dans les données d’identité
 
