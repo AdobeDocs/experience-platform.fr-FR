@@ -1,10 +1,10 @@
 ---
 description: Découvrez comment créer des champs d’entrée dans l’interface utilisateur d’Experience Platform qui permettent à vos utilisateurs de spécifier diverses informations relatives à la connexion et à l’exportation des données vers la destination.
 title: Champs de données client
-source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
+source-git-commit: cadffd60093eef9fb2dcf4562b1fd7611e61da94
 workflow-type: tm+mt
-source-wordcount: '1436'
-ht-degree: 100%
+source-wordcount: '1580'
+ht-degree: 91%
 
 ---
 
@@ -252,6 +252,93 @@ Pour ce faire, utilisez l’objet `namedEnum` comme illustré ci-dessous et conf
 ```
 
 ![Enregistrement d’écran montrant un exemple de sélecteurs de liste déroulante créée avec la configuration affichée ci-dessus.](../../assets/functionality/destination-configuration/customer-data-fields-dropdown.gif)
+
+## Création de sélecteurs de liste déroulante dynamiques pour les champs de données client {#dynamic-dropdown-selectors}
+
+Dans les cas où vous souhaitez appeler une API de manière dynamique et utiliser la réponse pour remplir de manière dynamique les options d’un menu déroulant, vous pouvez utiliser un sélecteur de liste déroulante dynamique.
+
+Les sélecteurs de liste déroulante dynamiques semblent identiques au [sélecteurs de liste déroulante standard](#dropdown-selectors) dans l’interface utilisateur. La seule différence réside dans le fait que les valeurs sont récupérées dynamiquement à partir d’une API.
+
+Pour créer un sélecteur de liste déroulante dynamique, vous devez configurer deux composants :
+
+**Étape 1.** [Création d’un serveur de destination](../../authoring-api/destination-server/create-destination-server.md#dynamic-dropdown-servers) avec un `responseFields` modèle pour l’appel API dynamique, comme illustré ci-dessous.
+
+```json
+{
+   "name":"Server for dynamic dropdown",
+   "destinationServerType":"URL_BASED",
+   "urlBasedDestination":{
+      "url":{
+         "templatingStrategy":"PEBBLE_V1",
+         "value":" <--YOUR-API-ENDPOINT-PATH--> "
+      }
+   },
+   "httpTemplate":{
+      "httpMethod":"GET",
+      "headers":[
+         {
+            "header":"Authorization",
+            "value":{
+               "templatingStrategy":"PEBBLE_V1",
+               "value":"My Bearer Token"
+            }
+         },
+         {
+            "header":"x-integration",
+            "value":{
+               "templatingStrategy":"PEBBLE_V1",
+               "value":"{{customerData.integrationId}}"
+            }
+         },
+         {
+            "header":"Accept",
+            "value":{
+               "templatingStrategy":"NONE",
+               "value":"application/json"
+            }
+         }
+      ]
+   },
+   "responseFields":[
+      {
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"{% set list = [] %} {% for record in response.body %} {% set list = list|merge([{'name' : record.name, 'value' : record.id }]) %} {% endfor %}{{ {'list': list} | toJson | raw }}",
+         "name":"list"
+      }
+   ]
+}
+```
+
+**Étape 2.** Utilisez la variable `dynamicEnum` comme illustré ci-dessous. Dans l’exemple ci-dessous, la variable `User` la liste déroulante est récupérée à l’aide du serveur dynamique.
+
+
+```json {line-numbers="true" highlight="13-21"}
+"customerDataFields": [
+  {
+    "name": "integrationId",
+    "title": "Integration ID",
+    "type": "string",
+    "isRequired": true
+  },
+  {
+    "name": "userId",
+    "title": "User",
+    "type": "string",
+    "isRequired": true,
+    "dynamicEnum": {
+      "queryParams": [
+        "integrationId"
+      ],
+      "destinationServerId": "<~dynamic-field-server-id~>",
+      "authenticationRule": "CUSTOMER_AUTHENTICATION",
+      "value": "$.list",
+      "responseFormat": "NAME_VALUE"
+    }
+  }
+]
+```
+
+Définissez la variable `destinationServerId` à l’identifiant du serveur de destination que vous avez créé à l’étape 1. Vous pouvez voir l’identifiant du serveur de destination dans la réponse de la [récupération d’une configuration de serveur de destination](../../authoring-api/destination-server/retrieve-destination-server.md) appel API.
 
 ## Création de champs de données client conditionnels {#conditional-options}
 

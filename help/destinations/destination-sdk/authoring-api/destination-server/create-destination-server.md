@@ -1,10 +1,10 @@
 ---
 description: Cette page illustre comment l’appel API est utilisé pour créer un serveur de destination avec Adobe Experience Platform Destination SDK.
 title: Création d’une configuration de serveur de destination
-source-git-commit: 03ec0e919304c9d46ef88d606eed9e12d1824856
+source-git-commit: cadffd60093eef9fb2dcf4562b1fd7611e61da94
 workflow-type: tm+mt
-source-wordcount: '1696'
-ht-degree: 100%
+source-wordcount: '2039'
+ht-degree: 89%
 
 ---
 
@@ -844,6 +844,103 @@ Une réponse réussie renvoie le statut HTTP 200 avec les détails de la config
 
 +++
 
+
+>[!ENDTABS]
+
+
+### Création de serveurs de destination de liste déroulante dynamiques {#dynamic-dropdown-servers}
+
+Utilisation [listes déroulantes dynamiques](../../functionality/destination-configuration/customer-data-fields.md#dynamic-dropdown-selectors) pour récupérer et remplir de manière dynamique les champs de données client de liste déroulante, en fonction de votre propre API. Vous pouvez, par exemple, récupérer une liste des comptes d’utilisateurs existants que vous souhaitez utiliser pour une connexion de destination.
+
+Vous devez configurer un serveur de destination pour les listes déroulantes dynamiques avant de pouvoir configurer le champ de données client de liste déroulante dynamique.
+
+Voir dans l’onglet ci-dessous un exemple de serveur de destination utilisé pour récupérer dynamiquement les valeurs à afficher dans un sélecteur de liste déroulante, à partir d’une API.
+
+L’exemple de payload ci-dessous inclut tous les paramètres requis pour un serveur de schéma dynamique.
+
+>[!BEGINTABS]
+
+>[!TAB Serveur de liste déroulante dynamique]
+
+**Créer un serveur de liste déroulante dynamique**
+
+Vous devez créer un serveur de liste déroulante dynamique similaire à celui illustré ci-dessous lorsque vous configurez une destination qui récupère les valeurs d’un champ de données client de liste déroulante de votre propre point de terminaison API.
+
++++Requête
+
+```shell
+curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-servers \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}' \
+ -d '
+{
+   "name":"Server for dynamic dropdown",
+   "destinationServerType":"URL_BASED",
+   "urlBasedDestination":{
+      "url":{
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"https://api.moviestar.com/data/{{customerData.users}}/items"
+      }
+   },
+   "httpTemplate":{
+      "httpMethod":"GET",
+      "headers":[
+         {
+            "header":"Authorization",
+            "value":{
+               "templatingStrategy":"PEBBLE_V1",
+               "value":"My Bearer Token"
+            }
+         },
+         {
+            "header":"x-integration",
+            "value":{
+               "templatingStrategy":"PEBBLE_V1",
+               "value":"{{customerData.integrationId}}"
+            }
+         },
+         {
+            "header":"Accept",
+            "value":{
+               "templatingStrategy":"NONE",
+               "value":"application/json"
+            }
+         }
+      ]
+   },
+   "responseFields":[
+      {
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"{% set list = [] %} {% for record in response.body %} {% set list = list|merge([{'name' : record.name, 'value' : record.id }]) %} {% endfor %}{{ {'list': list} | toJson | raw }}",
+         "name":"list"
+      }
+   ]
+}
+```
+
+| Paramètre | Type | Description |
+| -------- | ----------- | ----------- |
+| `name` | Chaîne | *Obligatoire.* Représente un nom convivial de votre serveur de liste déroulante dynamique, visible uniquement par Adobe. |
+| `destinationServerType` | Chaîne | *Obligatoire.* Définissez sur . `URL_BASED` pour les serveurs de liste déroulante dynamiques. |
+| `urlBasedDestination.url.templatingStrategy` | Chaîne | *Obligatoire.* <ul><li>Utilisez `PEBBLE_V1` si Adobe doit transformer l’URL dans le champ `value` ci-dessous. Utilisez cette option si vous disposez d’un point d’entrée tel que : `https://api.moviestar.com/data/{{customerData.region}}/items`. </li><li> Utilisez `NONE` si aucune transformation n’est nécessaire du côté d’Adobe, par exemple si vous avez un point d’entrée tel que : `https://api.moviestar.com/data/items`.</li></ul> |
+| `urlBasedDestination.url.value` | Chaîne | *Obligatoire.* Renseignez l’adresse du point de terminaison de l’API auquel l’Experience Platform doit se connecter et récupérez les valeurs de liste déroulante. |
+| `httpTemplate.httpMethod` | Chaîne | *Obligatoire.* Méthode qu’Adobe utilise dans les appels vers votre serveur. Pour les serveurs de liste déroulante dynamiques, utilisez `GET`. |
+| `httpTemplate.headers` | Objet | *Factiona.l* Incluez les en-têtes requis pour la connexion au serveur de liste déroulante dynamique. |
+| `responseFields.templatingStrategy` | Chaîne | *Obligatoire.* Utilisez `PEBBLE_V1`. |
+| `responseFields.value` | Chaîne | *Obligatoire.* Cette chaîne est le modèle de transformation avec échappement par des caractères qui transforme la réponse reçue de votre API en valeurs qui s’afficheront dans l’interface utilisateur de Platform. <br> <ul><li> Pour plus d’informations sur l’écriture du modèle, lisez la section [Utilisation des modèles](../../functionality/destination-server/message-format.md#using-templating). </li><li> Pour plus d’informations sur l’échappement des caractères, reportez-vous à la section [Norme RFC JSON, section 7](https://tools.ietf.org/html/rfc8259#section-7). |
+
+{style="table-layout:auto"}
+
++++
+
++++Réponse
+
+Une réponse réussie renvoie le statut HTTP 200 avec les détails de la configuration du serveur de destination que vous venez de créer.
+
++++
 
 >[!ENDTABS]
 
