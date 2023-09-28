@@ -2,10 +2,10 @@
 title: Configurer un flux de données
 description: Découvrez comment connecter votre intégration SDK Web côté client à d’autres produits Adobe et destinations tierces.
 exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
-source-git-commit: 139d6a6632532b392fdf8d69c5c59d1fd779a6d1
+source-git-commit: 705b1645eb8ca69169350c57cd28d3a1061f4928
 workflow-type: tm+mt
-source-wordcount: '2276'
-ht-degree: 100%
+source-wordcount: '2629'
+ht-degree: 86%
 
 ---
 
@@ -38,9 +38,42 @@ Si vous configurez ce flux de données pour l’utiliser dans Experience Platfor
 
 ![Configuration de base d’un flux de données](assets/configure/configure.png)
 
-Sélectionnez **[!UICONTROL Options avancées]** pour afficher des commandes supplémentaires permettant de configurer le flux de données.
+### Configuration de la géolocalisation et de la recherche réseau {#geolocation-network-lookup}
 
-![Options de configuration avancées](assets/configure/advanced-options.png) {#advanced-options}
+La géolocalisation et les paramètres de recherche réseau vous aident à définir le niveau de granularité des données géographiques et réseau que vous souhaitez collecter.
+
+Développez l’objet **[!UICONTROL Géolocalisation et recherche de réseau]** pour configurer les paramètres décrits ci-dessous.
+
+![Capture d’écran de l’interface utilisateur de Platform montrant l’écran de configuration de la banque de données avec les paramètres de géolocalisation et de recherche réseau mis en surbrillance.](assets/configure/geolookup.png)
+
+| Paramètre | Description |
+| --- | --- |
+| [!UICONTROL Recherche géographique] | Active les recherches de géolocalisation pour les options sélectionnées, sur la base de l’adresse IP du visiteur ou de la visiteuse. Pour effectuer des recherches de géolocalisation, vous devez inclure le groupe de champs [`placeContext`](../edge/data-collection/automatic-information.md#place-context) dans la configuration du SDK Web. <br> Options disponibles : <ul><li>Pays</li><li>Code postal</li><li>État/Province</li><li>DMA</li><li>Ville</li><li>Latitude </li><li>Longitude</li></ul>Les options **[!UICONTROL Ville]**, **[!UICONTROL Latitude]** ou **[!UICONTROL Longitude]** fournissent des coordonnées jusqu’à deux décimales, indépendamment des autres options sélectionnées. Il s’agit d’une granularité au niveau de la ville. <br> <br>Si vous ne sélectionnez aucune option, les recherches de géolocalisation sont désactivées. La géolocalisation intervient avant l’[!UICONTROL Obscurcissement de l’adresse IP]. Elle n’est donc pas affectée par le paramètre [!UICONTROL Obscurcissement d’adresses IP]. |
+| [!UICONTROL Recherche réseau] | Active les recherches réseau pour les options sélectionnées, sur la base de l’adresse IP du visiteur ou de la visiteuse. Pour effectuer des recherches réseau, vous devez inclure le groupe de champs [`Environment`](../edge/data-collection/automatic-information.md#environment) dans la configuration du SDK Web. <br>Options disponibles : <ul><li>Opérateur téléphonique</li><li>Domaine</li><li>Fournisseur de services Internet</li></ul>Ces options peuvent être utilisées pour fournir à d’autres services davantage d’informations sur le réseau spécifique d’où proviennent les requêtes. |
+
+### Configuration de la recherche de périphérique {#geolocation-device-lookup}
+
+La variable **[!UICONTROL Recherche de périphérique]** vous permettent de sélectionner le niveau de granularité des informations spécifiques à l’appareil que vous souhaitez collecter.
+
+Développez l’objet **[!UICONTROL Recherche de périphérique]** pour configurer les paramètres décrits ci-dessous.
+
+![Capture d’écran de l’interface utilisateur de Platform montrant l’écran de configuration de la banque de données avec les paramètres de recherche de périphérique mis en surbrillance.](assets/configure/device-lookup.png)
+
+>[!IMPORTANT]
+>
+>Les paramètres décrits dans le tableau ci-dessous s’excluent mutuellement. Vous ne pouvez pas sélectionner simultanément les informations de l’agent utilisateur et les données de recherche de périphérique.
+
+| Paramètre | Description |
+| --- | --- |
+| **[!UICONTROL Conserver les en-têtes de l’agent utilisateur et des conseils client]** | Sélectionnez cette option pour ne collecter que les informations stockées dans la chaîne de l’agent utilisateur. Il s’agit du paramètre par défaut. |
+| **[!UICONTROL Utilisez la recherche de périphérique pour collecter les informations suivantes :]** | Sélectionnez cette option si vous souhaitez collecter une ou plusieurs des informations suivantes spécifiques à l’appareil : <ul><li>**[!UICONTROL Appareil]** information :<ul><li>Fabricant de l’appareil</li><li>Modèle d’appareil</li><li>Nom marketing</li></ul></li><li>**[!UICONTROL Matériel]** information : <ul><li>Type d’appareil</li><li>Hauteur d’affichage</li><li>Largeur d’affichage</li><li>Profondeur de couleur d’affichage</li></ul></li><li>**[!UICONTROL Navigateur]** information : <ul><li>Fournisseur du navigateur</li><li>Nom du navigateur</li><li>Version du navigateur</li></ul></li><li>**[!UICONTROL Système d’exploitation]** information : <ul><li>Fournisseur du système d’exploitation</li><li>Nom du système d’exploitation</li><li>Version du système d’exploitation</li></ul></li></ul> <br>  Les informations de recherche de périphérique ne peuvent pas être collectées avec l’agent utilisateur et les conseils client. Si vous choisissez de collecter des informations sur l’appareil, la collecte de l’agent utilisateur et des conseils client sera désactivée, et vice versa. Toutes les informations de recherche de périphérique sont stockées dans la variable `xdm:device` groupe de champs. |
+| **[!UICONTROL Ne collectez aucune information sur l’appareil]** | Sélectionnez cette option si vous ne souhaitez collecter aucune sorte d’informations de recherche. Aucune information sur le périphérique, le matériel, le navigateur ou le système d’exploitation ne sera collectée, y compris aucun agent utilisateur ou en-tête d’indice client. |
+
+### Configuration des options avancées {#@advanced-options}
+
+Sélectionner **[!UICONTROL Options avancées]** pour afficher d’autres contrôles afin de configurer le flux de données, tels que l’obscurcissement des adresses IP, les cookies d’ID propriétaires, etc.
+
+![Options de configuration avancées](assets/configure/advanced-settings.png)
 
 >[!IMPORTANT]
 >
@@ -50,14 +83,13 @@ Sélectionnez **[!UICONTROL Options avancées]** pour afficher des commandes sup
 
 | Paramètre | Description |
 | --- | --- |
-| [!UICONTROL Recherche géographique] | Active les recherches de géolocalisation pour les options sélectionnées, sur la base de l’adresse IP du visiteur ou de la visiteuse. Pour effectuer des recherches de géolocalisation, vous devez inclure le groupe de champs [`placeContext`](../edge/data-collection/automatic-information.md#place-context) dans la configuration du SDK Web. <br> Options disponibles : <ul><li>Pays</li><li>Code postal</li><li>État/Province</li><li>DMA</li><li>Ville</li><li>Latitude </li><li>Longitude</li></ul>Les options **[!UICONTROL Ville]**, **[!UICONTROL Latitude]** ou **[!UICONTROL Longitude]** fournissent des coordonnées jusqu’à deux décimales, indépendamment des autres options sélectionnées. Il s’agit d’une granularité au niveau de la ville. <br> <br>Si vous ne sélectionnez aucune option, les recherches de géolocalisation sont désactivées. La géolocalisation intervient avant l’[!UICONTROL Obscurcissement de l’adresse IP]. Elle n’est donc pas affectée par le paramètre [!UICONTROL Obscurcissement d’adresses IP]. |
-| [!UICONTROL Recherche réseau] | Active les recherches réseau pour les options sélectionnées, sur la base de l’adresse IP du visiteur ou de la visiteuse. Pour effectuer des recherches réseau, vous devez inclure le groupe de champs [`Environment`](../edge/data-collection/automatic-information.md#environment) dans la configuration du SDK Web. <br>Options disponibles : <ul><li>Opérateur téléphonique</li><li>Domaine</li><li>Fournisseur de services Internet</li></ul>Ces options peuvent être utilisées pour fournir à d’autres services davantage d’informations sur le réseau spécifique d’où proviennent les requêtes. |
 | [!UICONTROL Obscurcissement d’IP] | Indique le type d’obscurcissement d’adresses IP à appliquer au train de données. Tout traitement basé sur l’adresse IP du client ou de la cliente est affecté par le paramètre d’obscurcissement des adresses IP. Cela inclut tous les services Experience Cloud qui reçoivent des données de votre train de données. <p>Options disponibles :</p> <ul><li>**[!UICONTROL Aucun]** : désactive l’obscurcissement des adresses IP. L’adresse IP complète de la personne sera envoyée via le train de données.</li><li>**[!UICONTROL Partiel]** : obscurcit le dernier octet de l’adresse IP pour les adresses IPv4. Pour les adresses IPv6, l’obscurcissement masque les 80 derniers bits de l’adresse IP. <p>Exemples :</p> <ul><li>IPv4 : `1.2.3.4` -> `1.2.3.0`</li><li>IPv6 : `2001:0db8:1345:fd27:0000:ff00:0042:8329` -> `2001:0db8:1345:0000:0000:0000:0000:0000`</li></ul></li><li>**[!UICONTROL Complet]** : obscurcit l’intégralité de l’adresse IP. <p>Exemples :</p> <ul><li>IPv4 : `1.2.3.4` -> `0.0.0.0`</li><li>IPv6 : `2001:0db8:1345:fd27:0000:ff00:0042:8329` -> `0:0:0:0:0:0:0:0`</li></ul></li></ul> Impact de l’obscurcissement des adresses IP sur d’autres produits Adobe : <ul><li>**Adobe Target** : le paramètre [!UICONTROL Obscurcissement d’adresses IP] au niveau du train de données est prioritaire sur toute option d’obscurcissement d’adresses IP définie dans Adobe Target. Par exemple, si l’option [!UICONTROL Obscurcissement d’adresses IP] est définie sur **[!UICONTROL Complet]** au niveau du train de données et sur **[!UICONTROL Obscurcissement du dernier octet]** dans Adobe Target, Adobe Target recevra une adresse IP entièrement obscurcie. Pour plus d’informations, consultez la documentation d’Adobe Target sur l’[Obscurcissement d’adresses IP](https://developer.adobe.com/target/before-implement/privacy/privacy/) et sur la [géolocalisation](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/geo.html?lang=fr).</li><li>**Audience Manager** : le paramètre d’obscurcissement des adresses IP au niveau du train de données est prioritaire sur toute option d’obscurcissement d’adresses IP définie dans Audience Manager. De plus, il s’applique à toutes les adresses IP. Les recherches de géolocalisation effectuées dans Audience Manager sont affectées par l’option [!UICONTROL Obscurcissement d’adresses IP] définie au niveau du train de données. Une recherche de géolocalisation effectuée dans Audience Manager, basée sur une adresse IP entièrement obscurcie, donnera une région inconnue et tout segment basé sur les données de géolocalisation obtenues ne sera pas réalisé. Pour plus d’informations, consultez la documentation d’Audience Manager sur l’[Obscurcissement d’adresses IP](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/administration/ip-obfuscation.html?lang=fr).</li><li>**Adobe Analytics** : Adobe Analytics ne reçoit actuellement les adresses IP partiellement obscurcies que si une option d’obscurcissement d’adresses IP autre que « AUCUN » est sélectionnée. Pour qu’Analytics reçoive des adresses IP entièrement obscurcies, vous devez configurer l’obscurcissement des adresses IP séparément, dans Adobe Analytics. Ce comportement sera mis à jour dans les prochaines versions. Consultez la [documentation](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/general-acct-settings-admin.html?lang=fr) d’Adobe Analytics pour obtenir plus d’informations sur l’activation de l’obscurcissement des adresses IP dans Analytics.</li></ul> |
 | [!UICONTROL Cookie interne d’identifiant] | Lorsqu’il est activé, ce paramètre indique à Edge Network de se référer à un cookie spécifié lors de la recherche d’un [identifiant d’appareil interne](../edge/identity/first-party-device-ids.md), plutôt que de rechercher cette valeur dans le mappage d’identité.<br><br>Lors de l’activation de ce paramètre, vous devez indiquer le nom du cookie dans lequel l’identifiant doit être stocké. |
 | [!UICONTROL Synchronisation des identifiants tiers] | Les synchronisations des identifiants peuvent être regroupées en conteneurs afin de permettre l’exécution de différentes synchronisations d’identifiant à différents moments. Lorsqu’il est activé, ce paramètre vous permet de spécifier le conteneur des synchronisations d’identifiant à exécuter pour ce flux de données. |
 | [!UICONTROL ID de conteneur de synchronisation d’identifiants tiers] | L’identifiant numérique du conteneur à utiliser pour la synchronisation des identifiants tiers. |
 | [!UICONTROL Remplacements d’identifiants de conteneur] | Dans cette section, vous pouvez définir des identifiants de conteneur de synchronisation d’identifiants tiers supplémentaires, que vous pouvez utiliser pour remplacer celui par défaut. |
 | [!UICONTROL Type d’accès] | Définit le type d’authentification qu’Edge Network accepte pour le train de données. <ul><li>**[!UICONTROL Authentification mixte]** : lorsque cette option est activée, Edge Network accepte les demandes authentifiées et non authentifiées. Sélectionnez cette option lorsque vous prévoyez d’utiliser le SDK web ou le [SDK mobile](https://developer.adobe.com/client-sdks/documentation/), ainsi que l’[API Server](../server-api/overview.md). </li><li>**[!UICONTROL Authentifié uniquement]** : lorsque cette option est activée, Edge Network accepte uniquement les demandes authentifiées. électionnez cette option lorsque vous prévoyez d’utiliser uniquement l’API Server et que vous souhaitez empêcher le traitement des demandes non authentifiées par Edge Network.</li></ul> |
+| [!UICONTROL Media Analytics] | Sélectionnez cette option pour activer le traitement des données de suivi en continu pour l’intégration d’Edge Network via les SDK Experience Platform ou l’API Media Edge. En savoir plus sur Media Analytics à partir du [documentation](https://experienceleague.adobe.com/docs/media-analytics/using/media-overview.html?lang=fr). |
 
 Ensuite, si vous configurez le flux de données d’Experience Platform, suivez le tutoriel sur la [Préparation des données pour la collecte de données](./data-prep.md) afin de mapper les données à un schéma d’événement de Platform avant de revenir à ce guide. Sinon, sélectionnez **[!UICONTROL Enregistrer]** et passez à la section suivante.
 
