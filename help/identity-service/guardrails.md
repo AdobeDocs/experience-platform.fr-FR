@@ -3,10 +3,10 @@ keywords: Experience Platform;identité;service d’identité;dépannage;garde-f
 title: Barrières de sécurité pour Identity Service
 description: Ce document fournit des informations sur l’utilisation et les limites de taux pour les données Identity Service afin de vous aider à optimiser l’utilisation du graphique d’identités.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: a9b5ab28d00941b7531729653eb630a61b5446fc
+source-git-commit: b78d1d00a42df8a703a4dd15959cf15b058e0b7a
 workflow-type: tm+mt
-source-wordcount: '1182'
-ht-degree: 57%
+source-wordcount: '1073'
+ht-degree: 61%
 
 ---
 
@@ -31,8 +31,7 @@ Le tableau suivant décrit les limites statiques appliquées aux données d’id
 
 | Mécanisme de sécurisation | Limite | Notes |
 | --- | --- | --- |
-| (Comportement actuel) Nombre d’identités dans un graphique | 150 | La limite est appliquée au niveau de la sandbox. Une fois que le nombre d’identités atteint 150 ou plus, aucune nouvelle identité ne sera ajoutée et le graphique d’identités ne sera pas mis à jour. Les graphiques peuvent afficher des identités supérieures à 150 en raison de la liaison d’un ou de plusieurs graphiques avec moins de 150 identités. **Remarque**: nombre maximal d’identités dans un graphique d’identités **pour un profil fusionné individuel** est de 50. Les profils fusionnés basés sur des graphiques d’identités comportant plus de 50 identités sont exclus de Real-time Customer Profile. Pour plus d’informations, consultez le guide sur [Barrières de sécurité pour les données de profil](../profile/guardrails.md). |
-| (Comportement à venir) Nombre d’identités dans un graphique [!BADGE Beta]{type=Informative} | 50 | Lorsqu’un graphique comportant 50 identités liées est mis à jour, Identity Service applique un mécanisme « premier entré, premier sorti » et supprime l’identité la plus ancienne afin de libérer de l’espace pour la nouvelle identité. La suppression est basée sur le type d’identité et sur la date et l’heure. La limite est appliquée au niveau de la sandbox. Pour plus d’informations, consultez la section sur [compréhension de la logique de suppression](#deletion-logic). |
+| Nombre d’identités dans un graphique | 50 | Lorsqu’un graphique comportant 50 identités liées est mis à jour, Identity Service applique un mécanisme « premier entré, premier sorti » et supprime l’identité la plus ancienne afin de libérer de l’espace pour la nouvelle identité. La suppression est basée sur le type d’identité et sur la date et l’heure. La limite est appliquée au niveau de la sandbox. Pour plus d’informations, consultez la section sur [compréhension de la logique de suppression](#deletion-logic). |
 | Nombre d’identités dans un enregistrement XDM | 20 | Le nombre minimum d’enregistrements XDM requis est de deux. |
 | Nombre d’espaces de noms personnalisés | Aucun | Vous pouvez créer autant d’espaces de noms personnalisés que vous le souhaitez. |
 | Nombre de caractères présents dans le nom d’affichage d’un espace de noms ou un symbole d’identité | Aucun | Le nombre de caractères dans le nom d’affichage d’un espace de noms ou un symbole d’identité est illimité. |
@@ -50,7 +49,7 @@ Le tableau suivant décrit les règles à suivre pour garantir la validation de 
 
 Depuis le 31 mars 2023, Identity Service bloque l’ingestion des identifiants Adobe Analytics (AAID) pour les nouveaux clientes et clients. L’ingestion de cette identité s’effectue généralement par la [source Adobe Analytics](../sources/connectors/adobe-applications/analytics.md). La [source Adobe Audience Manager](../sources//connectors/adobe-applications/audience-manager.md) est redondante, car l’ECID représente le même navigateur web. Si vous souhaitez modifier cette configuration par défaut, contactez votre équipe Adobe en charge des comptes.
 
-## [!BADGE Beta]{type=Informative} Comprendre la logique de suppression lorsqu’un graphique d’identité complet est mis à jour {#deletion-logic}
+## Comprendre la logique de suppression lorsqu’un graphique d’identités à la capacité est mis à jour {#deletion-logic}
 
 Lorsqu’un graphique d’identité complet est mis à jour, Identity Service supprime l’identité la plus ancienne du graphique avant d’ajouter la dernière identité. Cela permet de garantir l’exactitude et la pertinence des données d’identité. Le processus de suppression suit les deux règles suivantes :
 
