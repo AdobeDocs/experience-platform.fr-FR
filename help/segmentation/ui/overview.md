@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Guide de l’IU de Segmentation Service
 description: Découvrez comment créer et gérer des audiences et des définitions de segment dans l’interface utilisateur d’Adobe Experience Platform.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 378b51b13547af994bd258a42d1068118d099eb4
-workflow-type: ht
-source-wordcount: '3610'
-ht-degree: 100%
+source-git-commit: 7eaf3383bb8dde0d5918eefba1ee69caddea0c0b
+workflow-type: tm+mt
+source-wordcount: '3781'
+ht-degree: 94%
 
 ---
 
@@ -62,37 +62,9 @@ Pour en savoir plus, consultez le [guide du tableau de bord Audiences](../../das
 >title="Ajouter toutes les audiences à planifier"
 >abstract="Activez cette option pour inclure toutes les audiences évaluées à l’aide de la segmentation par lots dans la mise à jour planifiée quotidienne. Désactivez cette option pour supprimer toutes les audiences de la mise à jour planifiée."
 
-Sélectionnez l’onglet **[!UICONTROL Parcourir]** pour afficher la liste de toutes les audiences de votre organisation.
+Sélectionnez l’onglet **[!UICONTROL Parcourir]** pour afficher la liste de toutes les audiences de votre organisation. Cette vue répertorie des informations sur les audiences, notamment le nombre de profils, l’origine, la date de création, la date de dernière modification, les balises et la répartition.
 
 ![L’écran de navigation s’affiche. Une liste de toutes les audiences appartenant à l’organisation s’affiche.](../images/ui/overview/audience-browse.png)
-
-Cette vue répertorie des informations sur les audiences, notamment le nombre de profils, l’origine, la date de création, la date de dernière modification, les balises et la répartition.
-
-Vous pouvez ajouter des champs supplémentaires à cet affichage en sélectionnant ![l’icône d’attribut de filtre](../images/ui/overview/filter-attribute.png). Ces champs supplémentaires comprennent le statut du cycle de vie, la fréquence de mise à jour, la dernière mise à jour par, la description, la création par et les libellés d’accès.
-
-| Champ | Description |
-| ----- | ----------- |
-| [!UICONTROL Nom] | Nom de l’audience. |
-| [!UICONTROL Nombre de profils] | Nombre total de profils qui remplissent les critères de l’audience. |
-| [!UICONTROL Origine] | Origine de l’audience. Cette information indique d’où vient l’audience. Les valeurs possibles sont Segmentation Service, Chargement personnalisé, Composition de l’audience et Audience Manager. |
-| [!UICONTROL Créé] | Date et heure de création de l’audience en UTC. |
-| [!UICONTROL Dernière mise à jour] | Date et heure de la dernière mise à jour de l’audience en UTC. |
-| [!UICONTROL Balises] | Balises définies par l’utilisateur ou l’utilisatrice qui appartiennent à l’audience. Vous trouverez plus d’informations sur ces balises dans la [section sur les balises](#tags). |
-| [!UICONTROL Répartition] | Répartition du statut du profil pour l’audience. Vous trouverez ci-dessous une description plus détaillée de cette répartition du statut du profil. |
-| [!UICONTROL Statut du cycle de vie] | Statut de l’audience. Les valeurs possibles pour ce champ incluent `Draft`, `Published` et `Archived`. |
-| [!UICONTROL Fréquence de mise à jour] | Valeur qui indique la fréquence de mise à jour des données de l’audience. Les valeurs possibles pour ce champ incluent `On Demand` (par lots), `Scheduled` (en flux continu) et `Continuous` (Edge). |
-| [!UICONTROL Dernière mise à jour par] | Nom de la personne qui a mis à jour l’audience pour la dernière fois. |
-| [!UICONTROL Description] | Description de l’audience. |
-| [!UICONTROL Créé par] | Nom de la personne qui a créé l’audience. |
-| [!UICONTROL Libellés d’accès] | Libellés d’accès pour l’audience. Les libellés d’accès vous permettent de classer les jeux de données et les champs en fonction des politiques d’utilisation qui s’appliquent à ces données. Vous pouvez appliquer les libellés à tout moment, ce qui vous offre une certaine flexibilité quant à la manière dont vous choisissez de gérer les données. Pour plus d’informations sur les libellés d’accès, veuillez lire la documentation sur la [gestion des libellés](../../access-control/abac/ui/labels.md). |
-
-Si la répartition est sélectionnée, l’affichage présente un graphique à barres indiquant le pourcentage de profils appartenant à chacun des statuts suivants : [!UICONTROL Réalisé], [!UICONTROL Existant] et [!UICONTROL Sortant]. De plus, la répartition affichée dans l’onglet [!UICONTROL Parcourir] est la répartition la plus précise du statut de la définition du segment. Si ce nombre diffère de ce qui est indiqué dans l’onglet [!UICONTROL Vue d’ensemble], vous devez utiliser les nombres de l’onglet [!UICONTROL Parcourir] comme source d’informations correcte, puisque les nombres de l’onglet [!UICONTROL Vue d’ensemble] ne sont mis à jour qu’une seule fois par jour.
-
-| État | Description |
-| ------ | ----------- |
-| [!UICONTROL Réalisé] | Nombre de profils qui **ont rempli les critères** du segment au cours des dernières 24 heures depuis la dernière exécution de la tâche de segmentation par lots. |
-| [!UICONTROL Existant] | Nombre de profils qui **sont restés** dans le segment au cours des dernières 24 heures depuis la dernière exécution de la tâche de segmentation par lots. |
-| [!UICONTROL Sortant] | Nombre de profils qui **sont sortis** du segment au cours des dernières 24 heures depuis la dernière exécution de la tâche de segmentation par lots. |
 
 Une icône de points de suspension se trouve à côté de chaque audience. Cette option affiche la liste des actions rapides disponibles pour l’audience. Cette liste d’actions diffère en fonction de l’origine de l’audience.
 
@@ -110,8 +82,13 @@ Une icône de points de suspension se trouve à côté de chaque audience. Cette
 | Appliquer les libellés d’accès | Composition d’audience, chargement personnalisé, Segmentation Service | Permet de gérer les libellés d’accès qui appartiennent à l’audience. Pour plus d’informations sur les libellés d’accès, veuillez lire la documentation sur la [gestion des libellés](../../access-control/abac/ui/labels.md). |
 | Archiver | Chargement personnalisé | Archive l’audience sélectionnée. |
 | Supprimer | Composition d’audience, chargement personnalisé, Segmentation Service | Supprime l’audience sélectionnée. |
+| Ajouter au package | Composition d’audience, chargement personnalisé, Segmentation Service | Permet de déplacer l’audience entre les environnements de test. Pour plus d’informations sur cette fonctionnalité, veuillez lire la section [guide d’outils sandbox](../../sandboxes/ui/sandbox-tooling.md). |
 
-En haut de la page, vous trouverez les options permettant d’ajouter toutes les audiences à un planning, d’importer une audience et de créer une audience.
+>[!NOTE]
+>
+> Vous **ne pourrez pas** supprimer une audience utilisée dans une activation de destination.
+
+Dans la partie supérieure de la page, vous trouverez des options permettant d’ajouter toutes les audiences à un planning, d’importer une audience, de créer une audience et d’afficher une ventilation de la fréquence de mise à jour.
 
 L’activation de l’option **[!UICONTROL Planifier toutes les audiences]** active la segmentation planifiée. Vous trouverez plus d’informations sur la segmentation planifiée dans la [section segmentation planifiée de ce guide d’utilisation](#scheduled-segmentation).
 
@@ -121,9 +98,45 @@ Sélectionner **[!UICONTROL Créer une audience]** vous permet de créer une aud
 
 ![La barre de navigation supérieure de la page de navigation des audiences est mise en surbrillance. Cette barre contient un bouton pour créer une audience et un bouton pour importer une audience.](../images/ui/overview/browse-audiences-top.png)
 
->[!NOTE]
->
-> Vous **ne pourrez pas** supprimer une audience utilisée dans une activation de destination.
+Vous pouvez sélectionner **[!UICONTROL Résumé de la fréquence de mise à jour]** pour afficher un graphique circulaire indiquant la fréquence de mise à jour.
+
+![Le bouton Récapitulatif de la mise à jour de la fréquence est mis en surbrillance.](../images/ui/overview/browse-audience-update-frequency-summary.png)
+
+Le graphique en secteurs apparaît, affichant une répartition des audiences par fréquence de mise à jour. Le graphique présente le nombre total d’audiences au milieu. Si vous passez le curseur de la souris sur les différentes parties de l’audience, le nombre d’audiences appartenant à chaque type de fréquence de mise à jour s’affiche.
+
+![Le graphique en secteurs des fréquences de mise à jour s’affiche.](../images/ui/overview/update-frequency-chart.png)
+
+### Personnaliser {#customize}
+
+Vous pouvez ajouter des champs supplémentaires au [!UICONTROL Parcourir] en sélectionnant ![l’icône d’attribut de filtre](../images/ui/overview/filter-attribute.png). Ces champs supplémentaires comprennent le statut du cycle de vie, la fréquence de mise à jour, la dernière mise à jour par, la description, la création par et les libellés d’accès.
+
+| Champ | Description |
+| ----- | ----------- |
+| [!UICONTROL Nom] | Nom de l’audience. |
+| [!UICONTROL Nombre de profils] | Nombre total de profils qui remplissent les critères de l’audience. |
+| [!UICONTROL Origine] | Origine de l’audience. Cette information indique d’où vient l’audience. Les valeurs possibles sont Segmentation Service, Chargement personnalisé, Composition de l’audience et Audience Manager. |
+| [!UICONTROL Statut du cycle de vie] | Statut de l’audience. Les valeurs possibles pour ce champ incluent `Draft`, `Published` et `Archived`. |
+| [!UICONTROL Fréquence de mise à jour] | Valeur qui indique la fréquence de mise à jour des données de l’audience. Les valeurs possibles pour ce champ incluent [!UICONTROL Lot], [!UICONTROL Diffusion en continu], [!UICONTROL Edge], et [!UICONTROL Non planifié]. |
+| [!UICONTROL Dernière mise à jour par] | Nom de la personne qui a mis à jour l’audience pour la dernière fois. |
+| [!UICONTROL Créé] | Date et heure de création de l’audience en UTC. |
+| [!UICONTROL Dernière mise à jour] | Date et heure de la dernière mise à jour de l’audience en UTC. |
+| [!UICONTROL Balises] | Balises définies par l’utilisateur ou l’utilisatrice qui appartiennent à l’audience. Vous trouverez plus d’informations sur ces balises dans la [section sur les balises](#tags). |
+| [!UICONTROL Description] | Description de l’audience. |
+| [!UICONTROL Créé par] | Nom de la personne qui a créé l’audience. |
+| [!UICONTROL Libellés d’accès] | Libellés d’accès pour l’audience. Les libellés d’accès vous permettent de classer les jeux de données et les champs en fonction des politiques d’utilisation qui s’appliquent à ces données. Vous pouvez appliquer les libellés à tout moment, ce qui vous offre une certaine flexibilité quant à la manière dont vous choisissez de gérer les données. Pour plus d’informations sur les libellés d’accès, veuillez lire la documentation sur la [gestion des libellés](../../access-control/abac/ui/labels.md). |
+| [!UICONTROL Répartition] | Répartition du statut du profil pour l’audience. Vous trouverez ci-dessous une description plus détaillée de cette répartition du statut du profil. |
+
+Si la répartition est sélectionnée, l’affichage présente un graphique à barres indiquant le pourcentage de profils appartenant à chacun des statuts suivants : [!UICONTROL Réalisé], [!UICONTROL Existant] et [!UICONTROL Sortant]. De plus, la répartition affichée dans l’onglet [!UICONTROL Parcourir] est la répartition la plus précise du statut de la définition du segment. Si ce nombre diffère de ce qui est indiqué dans l’onglet [!UICONTROL Vue d’ensemble], vous devez utiliser les nombres de l’onglet [!UICONTROL Parcourir] comme source d’informations correcte, puisque les nombres de l’onglet [!UICONTROL Vue d’ensemble] ne sont mis à jour qu’une seule fois par jour.
+
+| État | Description |
+| ------ | ----------- |
+| [!UICONTROL Réalisé] | Nombre de profils qui **ont rempli les critères** du segment au cours des dernières 24 heures depuis la dernière exécution de la tâche de segmentation par lots. |
+| [!UICONTROL Existant] | Nombre de profils qui **sont restés** dans le segment au cours des dernières 24 heures depuis la dernière exécution de la tâche de segmentation par lots. |
+| [!UICONTROL Sortant] | Nombre de profils qui **sont sortis** du segment au cours des dernières 24 heures depuis la dernière exécution de la tâche de segmentation par lots. |
+
+Après avoir sélectionné les champs à afficher, vous pouvez redimensionner la largeur des colonnes affichées. Pour ce faire, faites glisser la zone entre les colonnes ou sélectionnez l’option ![icône de flèche](../images/ui/overview/arrow-icon.png) de la colonne à redimensionner, suivie de **[!UICONTROL Redimensionner la colonne]**.
+
+![Le bouton de colonne Redimensionner est mis en surbrillance.](../images/ui/overview/browse-audience-resize-column.png)
 
 ### Filtrage, dossiers et balisage {#manage-audiences}
 
