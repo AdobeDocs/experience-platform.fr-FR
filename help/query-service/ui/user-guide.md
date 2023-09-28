@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Guide de l’interface utilisateur de Query Editor
 description: Query Editor est un outil interactif fourni par Adobe Experience Platform Query Service. Il permet d’écrire, de valider et d’exécuter des requêtes pour les données d’expérience client dans l’interface utilisateur d’Experience Platform. Query Editor prend en charge le développement de requête pour l’analyse et l’exploration de données. Il vous permet également d’exécuter des requêtes interactives à des fins de développement, ainsi que des requêtes non interactives pour renseigner les jeux de données dans Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: e30942aec6c66aeed8375d6221b454725f5a958d
+source-git-commit: 88498a1382202bed057b8dc52d09359ba02748ea
 workflow-type: tm+mt
-source-wordcount: '1901'
-ht-degree: 68%
+source-wordcount: '2288'
+ht-degree: 56%
 
 ---
 
@@ -17,13 +17,23 @@ ht-degree: 68%
 
 Pour plus d’informations sur les concepts et les fonctionnalités de [!DNL Query Service], consultez la [Présentation de Query Service](../home.md). Pour en savoir plus sur la navigation dans l’interface utilisateur de Query Service sur [!DNL Platform], consultez la [Présentation de l’interface utilisateur de Query Service](./overview.md).
 
+>[!NOTE]
+>
+>Certaines fonctionnalités de Query Service ne sont pas fournies par la version héritée de Query Editor. Les captures d’écran utilisées dans ce document sont effectuées à l’aide de la version améliorée de Query Editor, sauf indication contraire. Consultez la section sur la [Éditeur de requêtes amélioré](#enhanced-editor-toggle) pour plus d’informations.
+
 ## Prise en main {#getting-started}
 
-[!DNL Query Editor] permet une exécution flexible des requêtes en se connectant à [!DNL Query Service]et les requêtes s’exécutent uniquement lorsque cette connexion est principale.
+[!DNL Query Editor] permet une exécution flexible des requêtes en se connectant à [!DNL Query Service], et les requêtes ne s’exécutent que lorsque cette connexion est active.
+
+## Accéder à [!DNL Query Editor] {#accessing-query-editor}
+
+Pour ouvrir l’espace de travail [!DNL Query Service], cliquez sur **[!UICONTROL Requêtes]** dans le menu de navigation à gauche de l’interface utilisateur d’[!DNL Experience Platform]. Ensuite, pour commencer à écrire des requêtes, sélectionnez **[!UICONTROL Créer une requête]** en haut à droite de l’écran. Ce lien est disponible depuis n’importe quelle page de l’espace de travail [!DNL Query Service].
+
+![Onglet Présentation de l’espace de travail Requêtes avec l’option Créer une requête mise en surbrillance.](../images/ui/query-editor/create-query.png)
 
 ### Connexion à [!DNL Query Service] {#connecting-to-query-service}
 
-[!DNL Query Editor] ne prend que quelques secondes pour l’initialisation et, une fois ouvert, se connecte à [!DNL Query Service]. La console vous indique qu’il est connecté, comme illustré ci-dessous. Si vous tentez d’exécuter une requête avant que l’éditeur ne soit connecté, l’exécution est retardée jusqu’à ce que la connexion soit établie.
+L’éditeur de requêtes prend quelques secondes pour s’initialiser et se connecter à Query Service à son ouverture. La console vous indique qu’il est connecté, comme illustré ci-dessous. Si vous tentez d’exécuter une requête avant que l’éditeur ne soit connecté, l’exécution est retardée jusqu’à ce que la connexion soit établie.
 
 ![Sortie de console du Query Editor lors de la connexion initiale.](../images/ui/query-editor/connect.png)
 
@@ -31,17 +41,13 @@ Pour plus d’informations sur les concepts et les fonctionnalités de [!DNL Que
 
 Requêtes exécutées depuis [!DNL Query Editor] s’exécuter de manière interactive, ce qui signifie que si vous fermez le navigateur ou quittez le navigateur, la requête est annulée. Il en va de même pour les requêtes effectuées pour générer des jeux de données à partir de sorties de requête.
 
+L’édition améliorée de Query Editor vous permet d’écrire plusieurs requêtes dans Query Editor et d’exécuter toutes les requêtes de manière séquentielle. Voir la section sur [exécution de plusieurs requêtes séquentielles](#execute-multiple-sequential-queries) pour plus d’informations.
+
 ## Création de requête à l’aide du [!DNL Query Editor] {#query-authoring}
 
 Avec [!DNL Query Editor], vous pouvez écrire, exécuter et enregistrer des requêtes de données d’expérience client. Toutes les requêtes enregistrées ou exécutées dans [!DNL Query Editor] sont accessibles à tous les utilisateurs de votre organisation bénéficiant d’un accès à [!DNL Query Service].
 
-### Accéder à [!DNL Query Editor] {#accessing-query-editor}
-
-Pour ouvrir l’espace de travail [!DNL Query Service], cliquez sur **[!UICONTROL Requêtes]** dans le menu de navigation à gauche de l’interface utilisateur d’[!DNL Experience Platform]. Ensuite, pour commencer à écrire des requêtes, sélectionnez **[!UICONTROL Créer une requête]** en haut à droite de l’écran. Ce lien est disponible depuis n’importe quelle page de l’espace de travail [!DNL Query Service].
-
-![Onglet Présentation de l’espace de travail Requêtes avec l’option Créer une requête mise en surbrillance.](../images/ui/query-editor/create-query.png)
-
-### Bascule de l’éditeur de requêtes amélioré {#enhanced-editor-toggle}
+## Bouton (bascule) de l’Éditeur de requête amélioré {#enhanced-editor-toggle}
 
 >[!CONTEXTUALHELP]
 >id="platform_queryService_queryEditor_enhancedEditorToggle"
@@ -62,7 +68,30 @@ Pour activer les thèmes sombres ou lumineux, sélectionnez l’icône de param�
 
 ![L’éditeur de requêtes avec l’icône de paramètres et l’option de menu déroulant Activer le thème sombre sont mises en surbrillance.](../images/ui/query-editor/query-editor-settings.png)
 
-### Rédaction de requêtes {#writing-queries}
+### Exécution de plusieurs requêtes séquentielles {#execute-multiple-sequential-queries}
+
+L’édition améliorée de Query Editor vous permet d’écrire plusieurs requêtes dans Query Editor et d’exécuter toutes les requêtes de manière séquentielle.
+
+L’exécution de plusieurs requêtes dans une séquence génère chacune une entrée de journal. Toutefois, seuls les résultats de la première requête s’affichent dans la console de l’éditeur de requêtes. Vérifiez le journal des requêtes si vous devez résoudre ou confirmer les requêtes qui ont été exécutées. Voir [documentation sur les journaux de requête](./query-logs.md) pour plus d’informations.
+
+>[!NOTE]
+> 
+>Si une requête CTAS est exécutée après la première requête dans Query Editor, une table est toujours créée, mais il n’y a aucune sortie dans la console Query Editor.
+
+### Exécuter la requête sélectionnée {#execute-selected-query}
+
+Si vous avez écrit plusieurs requêtes mais que vous ne devez exécuter qu’une seule requête, vous pouvez mettre en surbrillance la requête choisie et sélectionner l’événement
+[!UICONTROL Exécuter la requête sélectionnée] Icône Cette icône est désactivée par défaut, sauf si vous sélectionnez une requête dans l’éditeur.
+
+![L’éditeur de requêtes avec la variable [!UICONTROL Exécuter la requête sélectionnée] en surbrillance.](../images/ui/query-editor/run-selected-query.png)
+
+### Résultats count {#result-count}
+
+L’éditeur de requêtes dispose d’une sortie de ligne maximale de 50 000 lignes. Toutefois, seules 50 lignes s’affichent à la fois dans la console de l’éditeur de requêtes. Pour modifier le nombre de lignes affichées dans la console, sélectionnez l’option **[!UICONTROL Résultats count]** et choisissez 50, 100, 150, 300 et 500 valeurs.
+
+![La liste déroulante Query Editor avec le nombre de résultats est mise en surbrillance.](../images/ui/query-editor/result-count.png)
+
+## Rédaction de requêtes {#writing-queries}
 
 [!UICONTROL Query Editor est organisé de façon à rendre l’écriture de requête aussi facile que possible. ] La copie d’écran ci-dessous présente l’affichage de l’éditeur dans l’interface utilisateur. Le champ d’entrée SQL et le bouton **Lire** sont mis en surbrillance.
 
@@ -70,7 +99,7 @@ Pour activer les thèmes sombres ou lumineux, sélectionnez l’icône de param�
 
 Pour réduire le temps de développement, nous vous recommandons de développer vos requêtes en fixant des limites sur les lignes renvoyées. Par exemple : `SELECT fields FROM table WHERE conditions LIMIT number_of_rows`. Une fois que vous avez vérifié que votre requête produit la sortie attendue, supprimez les limites et exécutez la requête avec `CREATE TABLE tablename AS SELECT`, afin de générer un jeu de données avec la sortie.
 
-### Outils d’écriture dans le [!DNL Query Editor] {#writing-tools}
+## Outils d’écriture dans le [!DNL Query Editor] {#writing-tools}
 
 - **Mise en surbrillance automatique de la syntaxe :** facilite la lecture et l’organisation SQL.
 
@@ -84,6 +113,18 @@ Pour réduire le temps de développement, nous vous recommandons de développer 
 
 ![Entrée du Query Editor affichant les suggestions de noms de tableau déroulant.](../images/ui/query-editor/tables-auto.png)
 
+### Texte du format {#format-text}
+
+La variable [!UICONTROL Texte du format] rend votre requête plus lisible en ajoutant un style de syntaxe normalisé. Sélectionner **[!UICONTROL Texte du format]** pour normaliser tout le texte dans l’éditeur de requêtes.
+
+![L’éditeur de requêtes avec [!UICONTROL Texte du format] et les instructions SQL mises en surbrillance.](../images/ui/query-editor/format-text.png)
+
+### Copier SQL {#copy-sql}
+
+Sélectionnez l’icône Copier pour copier SQL à partir de Query Editor dans le presse-papiers. Cette fonctionnalité de copie est disponible à la fois pour les modèles de requête et les requêtes nouvellement créées dans Query Editor.
+
+![L&#39;espace de travail Requêtes avec un exemple de modèle de requête avec l&#39;icône de copie mise en surbrillance.](../images/ui/query-editor/copy-sql.png)
+
 ### Bouton (bascule) de configuration de saisie automatique de l’interface utilisateur {#auto-complete}
 
 Le [!DNL Query Editor] suggère automatiquement des mots-clés SQL potentiels ainsi que des détails de tableau ou de colonne pour la requête au fur et à mesure que vous l’écrivez. La fonction de saisie automatique est activée par défaut et peut être désactivée ou activée à tout moment en cliquant sur le bouton (bascule) [!UICONTROL Saisie automatique de la syntaxe] dans la partie supérieure droite du Query Editor.
@@ -94,7 +135,7 @@ Le paramètre de configuration de saisie automatique est défini par utilisateur
 
 La désactivation de cette fonction arrête le traitement de plusieurs commandes de métadonnées et la suggestion de recommandations qui accélère généralement la vitesse de l’auteur lors de la modification des requêtes.
 
-Lorsque vous cliquez sur le bouton (bascule) pour activer la fonction de saisie automatique, les suggestions recommandées pour les noms de tableau et de colonne ainsi que les mots-clés SQL deviennent disponibles après une courte pause. Un message de réussite dans la console sous l’éditeur de requêtes indique que la fonctionnalité est principale.
+Lorsque vous cliquez sur le bouton (bascule) pour activer la fonction de saisie automatique, les suggestions recommandées pour les noms de tableau et de colonne ainsi que les mots-clés SQL deviennent disponibles après une courte pause. Un message de réussite dans la console sous l’éditeur de requêtes indique que la fonction est active.
 
 Si vous désactivez la fonction de saisie automatique, une actualisation de page est nécessaire pour que cette action soit appliquée. Une boîte de dialogue de confirmation s’affiche avec trois options lorsque vous désactivez le bouton de la [!UICONTROL Saisie automatique de la syntaxe] :
 

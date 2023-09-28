@@ -2,9 +2,9 @@
 title: Journaux de requête
 description: Les logs de requête sont générés automatiquement chaque fois qu’une requête est exécutée et sont disponibles via l’interface utilisateur pour faciliter la résolution des problèmes. Ce document explique comment utiliser et parcourir la section Journaux de Query Service de l’interface utilisateur.
 exl-id: 929e9fba-a9ba-4bf9-a363-ca8657a84f75
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 88498a1382202bed057b8dc52d09359ba02748ea
 workflow-type: tm+mt
-source-wordcount: '585'
+source-wordcount: '899'
 ht-degree: 3%
 
 ---
@@ -57,9 +57,37 @@ Vous pouvez également sélectionner un nom de modèle de requête à partir du 
 
 ![La vue Détails du journal des requêtes .](../images/ui/query-log/query-log-details.png)
 
-Une icône en forme de crayon se trouve à côté du nom de modèle de chaque ligne ou du fragment SQL (![Une icône en forme de crayon.](../images/ui/query-log/edit-icon.png)) que vous pouvez utiliser pour accéder à l’éditeur de requêtes. La requête est alors prérenseignée dans l’éditeur en vue de sa modification.
+## Editer les journaux {#edit-logs}
+
+Une icône en forme de crayon se trouve à côté du nom de modèle de chaque ligne ou d’un extrait de code SQL (![Une icône en forme de crayon.](../images/ui/query-log/edit-icon.png)) que vous pouvez utiliser pour accéder à l’éditeur de requêtes. La requête est alors prérenseignée dans l’éditeur en vue de sa modification.
 
 ![L’espace de travail Journal des requêtes avec une icône en forme de crayon surlignée.](../images/ui/query-log/edit-query.png)
+
+## Journaux des filtres {#filter-logs}
+
+Vous pouvez filtrer la liste des logs de requête en fonction de différents paramètres. Sélectionnez l’icône de filtre (![L’icône de filtre.](../images/ui/query-log/filter-icon.png)) en haut à gauche de l’espace de travail pour ouvrir un ensemble d’options de filtre dans le rail de gauche.
+
+![Espace de travail Journal des requêtes avec l’icône de filtre mise en surbrillance.](../images/ui/query-log/log-filter.png)
+
+La liste des filtres disponibles s’affiche.
+
+![Espace de travail Journal des requêtes avec les options de filtre affichées et mises en surbrillance.](../images/ui/query-log/log-filter-settings.png)
+
+Le tableau suivant a prouvé la description de chaque filtre.
+
+| Filtre | Description |
+| ------ | ----------- |
+| [!UICONTROL Exclure les requêtes de tableau de bord] | Cette case à cocher est activée par défaut et exclut les journaux générés par les requêtes utilisées pour générer les informations. Ces requêtes sont générées par le système et obscurcissent les enregistrements des journaux générés par l’utilisateur nécessaires à la surveillance, à l’administration et au dépannage. Pour afficher les journaux générés par le système, désélectionnez la case à cocher. |
+| [!UICONTROL Date de début] | Pour filtrer les journaux des requêtes créées pendant une période spécifique, définissez la variable [!UICONTROL Début] et [!UICONTROL Fin] dates dans la variable [!UICONTROL Date de début] . |
+| [!UICONTROL Date d’achèvement] | Pour filtrer les journaux des requêtes terminées au cours d’une période spécifique, définissez la variable [!UICONTROL Début] et [!UICONTROL Fin] dates dans la variable [!UICONTROL Date d’achèvement] . |
+| [!UICONTROL Statut] | Pour filtrer les journaux en fonction de la variable [!UICONTROL État] de la requête, sélectionnez le bouton radio approprié. Les options disponibles incluent [!UICONTROL Envoyé], [!UICONTROL En cours], [!UICONTROL Succès], et [!UICONTROL En échec]. Vous ne pouvez filtrer les journaux que selon une condition d’état à la fois. |
+| [!UICONTROL Client] | Pour filtrer les logs en fonction du client de requête utilisé, saisissez l&#39;une des valeurs acceptées suivantes dans le champ de texte libre : `API`, `Adobe Query Service UI`, ou `QsAccel`. |
+| [!UICONTROL Mes requêtes] | Utilisez la variable [!UICONTROL Mes requêtes] bascule pour filtrer les journaux des requêtes exécutées par vous. |
+| [!UICONTROL identifiant du journal de requête] | Pour filtrer selon l’identifiant de journal unique d’une requête, saisissez l’identifiant de journal dans le champ de texte libre. Ces informations sont disponibles dans la section [!UICONTROL Détails du journal]. |
+
+Tous les filtres appliqués sont affichés au-dessus des résultats du journal filtré.
+
+![Onglet Journal de l’espace de travail Requêtes , avec la liste des filtres appliqués mise en surbrillance.](../images/ui/query-log/applied-log-filters.png)
 
 ## Étapes suivantes
 
