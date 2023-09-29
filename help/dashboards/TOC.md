@@ -4,10 +4,10 @@ user-guide-title: Aide sur les tableaux de bord dʼAdobe Experience Platform
 breadcrumb-title: Guide des tableaux de bord
 user-guide-description: Découvrez comment visualiser les données dans Experience Platform via des tableaux de bord personnalisables.
 feature: Dashboards
-source-git-commit: c1ad20def39ef58253e8486ca4dcfcce2501510b
+source-git-commit: ea9cfa38ae861fd5003bea55b17a473aaf2979d5
 workflow-type: tm+mt
-source-wordcount: '89'
-ht-degree: 78%
+source-wordcount: '85'
+ht-degree: 94%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 78%
 * [Présentation des tableaux de bord](home.md)
 * [Autorisations d’accès aux tableaux de bord](permissions.md)
 * [Inventaire des tableaux de bord](inventory.md)
-* [Tableaux de bord définis par les utilisateurs](user-defined-dashboards.md)
+* [Tableaux de bord définis par l’utilisateur ou l’utilisatrice](user-defined-dashboards.md)
 * [Téléchargement de tableaux de bord au format PDF](download.md)
 * Tableaux de bord disponibles {#guides}
    * [Profils](guides/profiles.md)
@@ -25,7 +25,6 @@ ht-degree: 78%
    * [Audiences](guides/audiences.md)
    * [Destinations](guides/destinations.md)
    * [Utilisation des licences](guides/license-usage.md)
-   * [Utilisation de la licence (version limitée)](guides/license-usage-limited.md)
 * Personnalisation des tableaux de bord {#customize}
    * [Présentation de la personnalisation](customize/overview.md)
    * [Modification des tableaux de bord](customize/modify.md)
@@ -38,5 +37,5 @@ ht-degree: 78%
 * Intégrations d’applications {#integrations}
    * [Power BI](integrations/power-bi.md)
 * [Jeux de données de tableau de bord des requêtes](query.md)
-* [Modèle de données Real-time Customer Data Platform Insights](cdp-insights-data-model.md)
+* [Modèle de données d’informations Real-Time Customer Data Platform](cdp-insights-data-model.md)
 * [Notes de mise à jour de Platform](https://docs.adobe.com/content/help/fr-FR/experience-platform/release-notes/latest.html)

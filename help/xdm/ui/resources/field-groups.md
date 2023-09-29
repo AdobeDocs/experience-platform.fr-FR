@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Création et modification de groupes de champs de schéma dans l’interface utilisateur
 description: Découvrez comment créer et modifier des groupes de champs de schéma dans l’interface utilisateur de l’Experience Platform.
 exl-id: 928d70a6-0468-4fb7-a53a-6686ac77f2a3
-source-git-commit: 4214339c4a661c6bca2cd571919ae205dcb47da1
+source-git-commit: 0375ddcb7d06208199bf1172b157aa6eb28811f6
 workflow-type: tm+mt
 source-wordcount: '985'
 ht-degree: 8%
