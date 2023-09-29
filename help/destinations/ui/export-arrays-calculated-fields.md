@@ -3,9 +3,9 @@ title: (Version bêta) Utilisation de champs calculés pour exporter des tableau
 type: Tutorial
 description: Découvrez comment utiliser des champs calculés pour exporter des tableaux dans des fichiers de schéma plats de Real-Time CDP vers des destinations de stockage dans le cloud.
 badge: « Version bêta »
-source-git-commit: 77fd0ace252bae66478f73a1dc4b7d4a3ccb867d
+source-git-commit: b4a18cdf434055be81dacbf19de4dd3e3f229d19
 workflow-type: tm+mt
-source-wordcount: '1207'
+source-wordcount: '1278'
 ht-degree: 2%
 
 ---
@@ -124,6 +124,19 @@ Dans ce cas, votre fichier de sortie ressemble à ce qui suit. Notez comment les
 John,Doe,"Marketing_Sales_Finance"
 ```
 
+### `iif` fonction d’exportation de tableaux {#iif-function-export-arrays}
+
+Utilisez la variable `iif` pour exporter des éléments d’un tableau sous certaines conditions. Par exemple, continuez avec la fonction `organzations` Objet de tableau situé au-dessus, vous pouvez créer une fonction conditionnelle simple comme `iif(organizations[0].equals("Marketing"), "isMarketing", "isNotMarketing")`.
+
+![Copie d’écran du mappage pour les première et dernière fonctions](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-iif-function.png)
+
+Dans ce cas, votre fichier de sortie ressemble à ce qui suit. Dans ce cas, le premier élément du tableau est Marketing, la personne est donc membre du service marketing.
+
+```
+`First_Name,Last_Name, Personal_Email, Is_Member_Of_Marketing_Dept
+John,Doe, johndoe@acme.org, "isMarketing"
+```
+
 ### `coalesce` fonction d’exportation de tableaux {#coalesce-function-export-arrays}
 
 Utilisez la variable `coalesce` pour accéder au premier élément non nul d’un tableau et l’exporter dans une chaîne.
@@ -188,14 +201,6 @@ Dans ce cas, votre fichier de sortie se présente comme suit :
 `Personal_Email,First_Purchase, Last_Purchase
 johndoe@acme.org,"1538097126","1664327526"
 ```
-
-<!--
-
-### `iif` function to export arrays {#iif-function-export-arrays}
-
-Here are some examples of how you could use the `iif` function to access and export arrays and other fields: (STILL TO DO)
-
--->
 
 ### `md5` et `sha256` fonctions de hachage {#hashing-functions}
 

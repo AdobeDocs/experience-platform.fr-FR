@@ -1,10 +1,10 @@
 ---
 title: Atteindre et acquérir une nouvelle clientèle à l’aide des cas d’utilisation de prospection
 description: Découvrez comment atteindre et acquérir une nouvelle clientèle à l’aide de cas d’utilisation de prospection activés par la prise en charge des données des partenaires dans Real-Time CDP.
-source-git-commit: 5352b461be3684ac4fe1703c916b9ec59bd14af1
+source-git-commit: b4a18cdf434055be81dacbf19de4dd3e3f229d19
 workflow-type: tm+mt
-source-wordcount: '1935'
-ht-degree: 97%
+source-wordcount: '1953'
+ht-degree: 96%
 
 ---
 
@@ -40,6 +40,12 @@ Avant de développer Real-Time CDP pour atteindre et acquérir une nouvelle cli
 4. En tant que **client ou cliente**, vous créez des audiences ciblées à partir de la liste des profils de prospects.
 5. En tant que **client ou cliente**, vous activez les audiences de prospect vers des destinations qui acceptent les identités disponibles dans votre liste de prospects.
 6. Si nécessaire, travaillez avec le **partenaire de données** pour l’activation des audiences vers les destinations de médias payants de votre choix sur le dernier kilomètre.
+
+## Présentation vidéo {#video-walkthrough}
+
+Consultez le tutoriel vidéo ci-dessous pour découvrir comment atteindre et interagir avec les audiences de prospects :
+
+>[!VIDEO](https://video.tv.adobe.com/v/3423071/?learn=on)
 
 ## Comment réaliser le cas d’utilisation : instructions détaillées {#step-by-step-instructions}
 

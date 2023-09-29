@@ -1,10 +1,10 @@
 ---
-title: Complémenter les profils propriétaires avec des attributs fournis par le partenaire
+title: Complémenter les profils propriétaires avec des attributs fournis par les partenaires
 description: Découvrez comment compléter les profils propriétaires avec des attributs de partenaires de données de confiance pour améliorer vos bases de données, obtenir de nouvelles informations sur votre base de clientes et de clients et optimiser l’audience.
-source-git-commit: 9dd305be4dcb45c290a2b8ee0476191949369adc
+source-git-commit: b4a18cdf434055be81dacbf19de4dd3e3f229d19
 workflow-type: tm+mt
-source-wordcount: '1091'
-ht-degree: 94%
+source-wordcount: '1110'
+ht-degree: 95%
 
 ---
 
@@ -30,6 +30,12 @@ Lorsque vous envisagez de compléter vos propres profils propriétaires avec des
 >[!WARNING]
 >
 >Les attributs supplémentaires fournis par le partenaire ingérés dans Real-Time CDP ont un impact sur la *richesse moyenne du profil*. Pour plus d’informations sur la richesse du profil, consultez la [description du produit Real-time Customer Data Platform](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform.html).
+
+## Présentation vidéo {#video-walkthrough}
+
+Consultez le tutoriel vidéo ci-dessous pour une présentation détaillée de la manière de compléter les audiences propriétaires avec les attributs fournis par les partenaires :
+
+>[!VIDEO](https://video.tv.adobe.com/v/3423075/?learn=on)
 
 ## Comment réaliser le cas d’utilisation : aperçu de haut niveau {#achieve-the-use-case-high-level}
 
@@ -118,6 +124,6 @@ Notez que les limites suivantes s’appliquent lorsque vous utilisez le cas d’
 
 Explorez d’autres cas d’utilisation activés grâce à la prise en charge des données des partenaires dans Real-Time CDP :
 
-* Utilisation de la prise en charge de données tierces dans Real-Time CDP pour [développer votre base de profils avec des profils de prospect des partenaires de données et interagir avec eux pour acquérir ou atteindre de nouveaux clients ;](/help/rtcdp/partner-data/prospecting.md).
+* Utilisez la prise en charge de données tierces dans Real-Time CDP pour [développer votre base de profils avec les profils de prospects des partenaires de données et interagissez avec eux pour acquérir ou atteindre une nouvelle clientèle](/help/rtcdp/partner-data/prospecting.md).
 * [Tirer parti de la reconnaissance assistée par les partenaires pour personnaliser les expériences sur site](/help/rtcdp/partner-data/onsite-personalization.md) pendant la visite sans que l’utilisateur s’authentifie ou n’ait un historique antérieur avec votre marque.
 * [Activation étendue des profils de prospects et des audiences de prospects](/help/destinations/ui/activate-prospect-audiences.md) pour sélectionner des destinations.
