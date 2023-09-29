@@ -1,10 +1,10 @@
 ---
 title: Notes de mise à jour d’Adobe Experience Platform
 description: Les notes de mise à jour de septembre 2023 pour Adobe Experience Platform.
-source-git-commit: 05136ca1a44fa0ecbf2fd9941d047c3a0899f2d1
+source-git-commit: c57845ab2bd9ce16fb34b6babfa90a393b101409
 workflow-type: tm+mt
-source-wordcount: '1232'
-ht-degree: 31%
+source-wordcount: '1308'
+ht-degree: 29%
 
 ---
 
@@ -66,19 +66,19 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 
 | Destination | Nouveau ou mis à jour | Description |
 | ----------- |----------------|----------- |
-| [[!DNL HubSpot]](../../destinations/catalog/crm/hubspot.md) | Nouveau  | [[!DNL HubSpot]](https://www.hubspot.com) est une plateforme CRM avec tous les logiciels, intégrations et ressources dont vous avez besoin pour connecter le marketing, les ventes, la gestion de contenu et le service client. Il vous permet de connecter vos données, vos équipes et vos clients sur une seule plateforme CRM. |
+| [[!DNL LiveRamp - Distribution]](../../destinations/catalog/advertising/liveramp-distribution.md) | Nouveau  | Activation des audiences précédemment intégrées à [!DNL LiveRamp] aux éditeurs Premium sur les médias mobiles, web, display et télévisés. <br> Après l’intégration d’audiences à vos [!DNL LiveRamp] compte par le biais de [LiveRamp - Intégration](../../destinations/catalog/advertising/liveramp-onboarding.md) connexion, utilisez la nouvelle [[!DNL LiveRamp - Distribution]](../../destinations/catalog/advertising/liveramp-distribution.md) connexion pour activer les audiences vers les destinations en aval. |
+| [[!DNL HubSpot]](../../destinations/catalog/crm/hubspot.md) | Nouveau | [[!DNL HubSpot]](https://www.hubspot.com) est une plateforme CRM avec tous les logiciels, intégrations et ressources dont vous avez besoin pour connecter le marketing, les ventes, la gestion de contenu et le service client. Il vous permet de connecter vos données, vos équipes et vos clients sur une seule plateforme CRM. |
 | [[!DNL Microsoft Dynamics 365]](../../destinations/catalog/crm/microsoft-dynamics-365.md) | Mis à jour | Ajout de la prise en charge de [!DNL Dynamics 365] préfixes de champ personnalisés pour les champs personnalisés qui n’ont pas été créés dans la solution par défaut dans [!DNL Dynamics 365]. un nouveau champ de saisie, **[!UICONTROL Préfixe de personnalisation]**, a été ajouté dans la variable [Renseignement des détails de destination](#destination-details) étape . |
+| [[!DNL Experience Cloud Audiences]](../../destinations/catalog/adobe/experience-cloud-audiences.md) | Mis à jour | La destination Audiences Experience Cloud est désormais disponible en général. Utilisez cette destination pour activer les audiences de Real-Time CDP vers Audience Manager et Adobe Analytics. Vous avez besoin d’une licence d’Audience Manager pour envoyer des audiences à Adobe Analytics. |
 
 {style="table-layout:auto"}
 
 <!-- 
 
-
 Add these to release notes as they go out
 
 | [[!DNL Qualtrics]] | New | Use the aggregation of multiple sources of operational data in Adobe Experience Platform as an input in Qualtrics Experience ID to better understand your customers and enable targeted outreach to close the gap when it comes to understanding intent, emotion and experience drivers. | 
-| [[!DNL LiveRamp - Distribution]](../../destinations/catalog/advertising/liveramp-distribution.md) | New | Activate audiences previously onboarded to [!DNL LiveRamp] to premium publishers across mobile, web, display, and connected TV mediums. <br> After onboarding audiences to your [!DNL LiveRamp] account through the [LiveRamp - Onboarding](liveramp-onboarding.md) connection, use the new [[!DNL LiveRamp - Distribution]](../../destinations/catalog/advertising/liveramp-distribution.md) connection to activate the audiences to downstream destinations.  |
-| [[!DNL Experience Cloud Audiences]](../../destinations/catalog/adobe/experience-cloud-audiences.md) | Updated | The Experience Cloud Audiences destination is now generally available. Use this destination to activate audiences from Real-Time CDP to Audience Manager and Adobe Analytics. You need an Audience Manager license to send audiences to Adobe Analytics. |
+
 
 -->
 
