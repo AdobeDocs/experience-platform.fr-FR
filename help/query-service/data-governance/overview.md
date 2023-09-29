@@ -2,7 +2,7 @@
 title: Gouvernance des données dans Query Service
 description: Cette présentation couvre les principaux éléments de la gouvernance des données dans Experience Platform Query Service.
 exl-id: 37543d43-bd8c-4bf9-88e5-39de5efe3164
-source-git-commit: c3ce6548e18078e604ecd5db276eb162935f6181
+source-git-commit: 260ba98f920c8006ab3ed7fb2519a8c1720916c8
 workflow-type: tm+mt
 source-wordcount: '3132'
 ht-degree: 3%
@@ -137,7 +137,7 @@ Le cryptage est l’utilisation d’un processus algorithmique pour transformer 
 
 La conformité des données de Query Service garantit que les données sont toujours cryptées. Les données en transit sont toujours conformes au protocole HTTPS et les données au repos sont chiffrées dans un magasin Azure Data Lake à l’aide de clés au niveau du système. Consultez la documentation relative à [comment les données sont chiffrées dans Adobe Experience Platform](../../landing/governance-privacy-security/encryption.md) pour plus d’informations. Pour plus d’informations sur la façon dont les données au repos sont chiffrées dans Azure Data Lake Storage, reportez-vous à la section [documentation Azure officielle](https://docs.microsoft.com/fr-fr/azure/data-lake-store/data-lake-store-encryption).
 
-Les données en transit sont toujours conformes au protocole HTTPS. De même, lorsque les données sont au repos dans le lac de données, le chiffrement est effectué avec la clé de gestion client (CMK), qui est déjà prise en charge par Data Lake Management. La version actuellement prise en charge est TLS1.2. Voir [Documentation sur les clés gérées par le client (CMK)](../../landing/governance-privacy-security/customer-managed-keys.md) pour savoir comment configurer vos propres clés de chiffrement pour les données stockées dans Adobe Experience Platform.
+Les données en transit sont toujours conformes au protocole HTTPS. De même, lorsque les données sont au repos dans le lac de données, le chiffrement est effectué avec la clé de gestion client (CMK), qui est déjà prise en charge par Data Lake Management. La version actuellement prise en charge est TLS1.2. Voir [Documentation sur les clés gérées par le client (CMK)](../../landing/governance-privacy-security/customer-managed-keys/overview.md) pour savoir comment configurer vos propres clés de chiffrement pour les données stockées dans Adobe Experience Platform.
 
 
 ## Audit {#audit}
@@ -198,9 +198,9 @@ Les demandes d’accès à des informations personnelles peuvent être envoyées
 
 Pour plus d’informations sur les [données d’identité pour les demandes d’accès à des informations personnelles](../../privacy-service/identity-data.md) et comment configurer vos opérations de données et utiliser les technologies d’Adobe pour récupérer efficacement les informations d’identité appropriées pour les demandes d’accès à des informations personnelles des clients.
 
-Les fonctionnalités de Query Service pour la gouvernance des données simplifient et rationalisent le processus de catégorisation des données et d’adhésion aux réglementations sur l’utilisation des données. Une fois les données identifiées, Query Service vous permet d’affecter l’identité Principale à tous les jeux de données de sortie. You **must** ajoutez des identités au jeu de données pour faciliter les demandes de confidentialité des données et travailler à la conformité des données.
+Les fonctionnalités de Query Service pour la gouvernance des données simplifient et rationalisent le processus de catégorisation des données et d’adhésion aux réglementations sur l’utilisation des données. Une fois les données identifiées, Query Service vous permet d’affecter l’identité principale à tous les jeux de données de sortie. You **must** ajoutez des identités au jeu de données pour faciliter les demandes de confidentialité des données et travailler à la conformité des données.
 
-Les champs de données de schéma peuvent être définis en tant que champ d’identité via l’interface utilisateur de Platform et Query Service vous permet également de [marquer les identités Principales à l’aide de la commande SQL &#39;ALTER TABLE&#39;](../sql/syntax.md#alter-table). Définition d’une identité à l’aide de la variable `ALTER TABLE` est particulièrement utile lorsque des jeux de données sont créés à l’aide de SQL plutôt que directement à partir d’un schéma via l’interface utilisateur de Platform. Consultez la documentation pour obtenir des instructions sur la manière de [définition de champs d’identité dans l’interface utilisateur](../../xdm/ui/fields/identity.md) lors de l’utilisation de schémas standard.
+Les champs de données de schéma peuvent être définis en tant que champ d’identité via l’interface utilisateur de Platform et Query Service vous permet également de [marquer les identités primaires à l’aide de la commande SQL &#39;ALTER TABLE&#39;](../sql/syntax.md#alter-table). Définition d’une identité à l’aide de la variable `ALTER TABLE` est particulièrement utile lorsque des jeux de données sont créés à l’aide de SQL plutôt que directement à partir d’un schéma via l’interface utilisateur de Platform. Consultez la documentation pour obtenir des instructions sur la manière de [définition de champs d’identité dans l’interface utilisateur](../../xdm/ui/fields/identity.md) lors de l’utilisation de schémas standard.
 
 ## Hygiène des données {#data-hygiene}
 

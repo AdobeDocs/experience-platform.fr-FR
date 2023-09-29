@@ -3,10 +3,10 @@ audience: user
 user-guide-title: Présentation d’Adobe Experience Platform
 breadcrumb-title: Présentation d’Experience Platform
 user-guide-description: Découvrez comment Experience Platform est capable de fournir des expériences personnalisées à vos clients en temps réel.
-source-git-commit: 65abbb4dde5b83f597a3a5bfd96ce7c081c88275
+source-git-commit: 73f10455233be9cc3f9f15a0fe5f0398ed987be9
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '281'
+ht-degree: 92%
 
 ---
 
@@ -66,7 +66,11 @@ ht-degree: 0%
          * [Événements](./governance-privacy-security/audit-logs/api/events.md)
          * [Exporter](./governance-privacy-security/audit-logs/api/export.md)
    * [Chiffrement des données](./governance-privacy-security/encryption.md)
-   * [Clés gérées par le client ou la cliente](./governance-privacy-security/customer-managed-keys.md)
+   * Clés gérées par le client ou la cliente {#customer-managed-keys}
+      * [Clés gérées par le client ou la cliente](./governance-privacy-security/customer-managed-keys/overview.md)
+      * [Configuration d’Azure Key Vault](./governance-privacy-security/customer-managed-keys/azure-key-vault-config.md)
+      * [Utilisation de l’API pour configurer le CMK](./governance-privacy-security/customer-managed-keys/api-set-up.md)
+      * [Utilisation de l’interface utilisateur pour configurer CMK](./governance-privacy-security/customer-managed-keys/ui-set-up.md)
 * Utilisation de la licence et barrières de sécurité {#license}
    * [Bonnes pratiques relatives aux droits de licence de gestion des données](./license-usage-and-guardrails/data-management-best-practices.md)
    * [Tableau de bord d’utilisation de la licence](./license-usage-and-guardrails/license-usage-dashboard.md)

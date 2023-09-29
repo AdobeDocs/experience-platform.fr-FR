@@ -2,8 +2,8 @@
 title: Notes de mise à jour d’octobre 2022 d’Adobe Experience Platform
 description: Les notes de mise à jour d’octobre 2022 pour Adobe Experience Platform.
 exl-id: 61ef2472-5e79-433f-9f60-b1245f619b42
-source-git-commit: e1deeadb98240f885e9dc95ecbc58ae48049a190
-workflow-type: ht
+source-git-commit: 260ba98f920c8006ab3ed7fb2519a8c1720916c8
+workflow-type: tm+mt
 source-wordcount: '1159'
 ht-degree: 100%
 
@@ -23,7 +23,7 @@ ht-degree: 100%
 
 Toutes les données stockées sur Adobe Experience Platform sont chiffrées au repos à l’aide de clés au niveau du système. Si vous utilisez une application reposant sur Platform, vous pouvez désormais choisir d’utiliser vos propres clés de chiffrement, ce qui vous permet de mieux contrôler la sécurité de vos données.
 
-Consultez la présentation des [clés gérées par le client](../../landing/governance-privacy-security/customer-managed-keys.md) pour plus d’informations sur la fonctionnalité.
+Consultez la présentation des [clés gérées par le client](../../landing/governance-privacy-security/customer-managed-keys/overview.md) pour plus d’informations sur la fonctionnalité.
 
 ## Collecte de données {#data-collection}
 
