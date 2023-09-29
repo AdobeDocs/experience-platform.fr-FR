@@ -3,10 +3,10 @@ keywords: destinations;destination;types de destinations
 title: Types et catégories de destination
 description: Découvrez les différents types et catégories de destinations dans Adobe Experience Platform.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: d0a9ac77346bea585691feee958e8d3b27f3f746
 workflow-type: tm+mt
-source-wordcount: '718'
-ht-degree: 72%
+source-wordcount: '717'
+ht-degree: 71%
 
 ---
 
@@ -69,7 +69,7 @@ La vidéo ci-dessous vous montre les particularités des deux types de destinati
 
 >[!VIDEO](https://video.tv.adobe.com/v/29707?quality=12)
 
-## (Version bêta) Destinations d’exportation de jeux de données {#dataset-export-destinations}
+## Destinations d’exportation de jeux de données {#dataset-export-destinations}
 
 Certaines destinations d’espace de stockage dans le catalogue des destinations prennent en charge les exportations de jeux de données. Utilisez ces destinations pour exporter des jeux de données brutes vers des emplacements d’espace de stockage.
 
@@ -89,7 +89,7 @@ Les extensions de balises transfèrent les données brutes des événements vers
 
 ## Utilisation des connexions et des extensions {#when-to-use}
 
-En tant que professionnel du marketing, vous pouvez utiliser une combinaison de connexions et d’extensions pour répondre à vos cas d’utilisation.
+En tant que spécialiste marketing, vous pouvez utiliser une combinaison de connexions et d’extensions pour répondre à vos cas d’utilisation.
 
 Les connexions sont utiles lorsqu’il est nécessaire d’exploiter un profil client centralisé complet ou une audience client pour l’activation. Par exemple, utilisez des connexions si vous combinez des données comportementales d’un système d’analyse avec des données de gestion de la relation client chargées afin de qualifier un utilisateur pour une audience donnée avant de lui envoyer un message personnalisé.
 
@@ -97,6 +97,6 @@ Les extensions s’avèrent utiles lorsque des données d’événement sont uti
 
 ## Catégories de destination {#categories}
 
-Les connexions et extensions du [catalogue des destinations](https://platform.adobe.com/destination/catalog) sont regroupées par catégorie de destination (**Publicité**, **Espace de stockage**, **Plateformes d’enquête**, **Marketing par e-mail**, etc.), selon les cas d’utilisation marketing qu’elles permettent de réaliser. Pour plus d’informations sur chaque catégorie, ainsi que sur les destinations incluses dans chaque catégorie, consultez la [documentation du catalogue des destinations](./catalog/overview.md).
+Les connexions et extensions du [catalogue des destinations](https://platform.adobe.com/destination/catalog) sont regroupées par catégorie de destination (**Publicité**, **Espace de stockage**, **Plateformes d’enquête**, **Marketing par e-mail**, etc.), selon l’action marketing qu’elles permettent de réaliser. Pour plus d’informations sur chaque catégorie, ainsi que sur les destinations incluses dans chaque catégorie, consultez la [documentation du catalogue des destinations](./catalog/overview.md).
 
 ![Catégories de destination mises en surbrillance dans la page de catalogue.](./assets/destination-types/destination-categories-menu.png)

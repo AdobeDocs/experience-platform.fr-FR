@@ -1,26 +1,65 @@
 ---
-title: (Version bêta) Exporter des jeux de données vers des destinations d’espace de stockage
+title: Exportation de jeux de données vers des destinations de stockage dans le cloud
 type: Tutorial
 description: Découvrez comment exporter des jeux de données d’Adobe Experience Platform vers l’emplacement d’espace de stockage de votre choix.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: 3090b8a8eade564190dc32142c3fc71701007337
+source-git-commit: 85bc1f0af608a7b5510bd0b958122e9db10ee27a
 workflow-type: tm+mt
-source-wordcount: '1421'
-ht-degree: 82%
+source-wordcount: '1754'
+ht-degree: 58%
 
 ---
 
-# (Version bêta) Exporter des jeux de données vers des destinations d’espace de stockage
+# Exportation des jeux de données vers des destinations de stockage dans le cloud
 
->[!IMPORTANT]
+>[!AVAILABILITY]
 >
->* La fonctionnalité d’exportation des jeux de données est actuellement en version bêta et n’est pas disponible pour tous les utilisateurs. La documentation et les fonctionnalités peuvent changer.
->* Cette fonctionnalité bêta prend en charge l’exportation des données de première génération, comme défini dans la [description du produit](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html) de Real-time Customer Data Platform.
->* Cette fonctionnalité est disponible pour les clients qui ont acheté les packages Real-Time CDP Prime et Ultimate. Pour plus d’informations, contactez votre représentant d’Adobe.
+>* Cette fonctionnalité est disponible pour les clients qui ont acheté le package Real-Time CDP Prime ou Ultimate, Adobe Journey Optimizer ou Customer Journey Analytics. Pour plus d’informations, contactez votre représentant d’Adobe.
 
 Cet article explique le workflow requis pour l’exportation [jeux de données](/help/catalog/datasets/overview.md) de Adobe Experience Platform à l’emplacement de stockage de votre choix dans le cloud, par exemple [!DNL Amazon S3], emplacements SFTP ou [!DNL Google Cloud Storage] en utilisant l’interface utilisateur de l’Experience Platform.
 
 Vous pouvez également utiliser les API Experience Platform pour exporter des jeux de données. Lisez la section [tutoriel sur l’API d’exportation de jeux de données](/help/destinations/api/export-datasets.md) pour plus d’informations.
+
+## Jeux de données disponibles pour l’exportation {#datasets-to-export}
+
+Les jeux de données que vous pouvez exporter dépendent de l’application Experience Platform (Real-Time CDP, Adobe Journey Optimizer), du niveau (Prime ou Ultimate) et des modules complémentaires achetés (par exemple : Data Distiller).
+
+Identifiez dans le tableau ci-dessous les types de jeux de données que vous pouvez exporter en fonction de votre application, du niveau du produit et des modules complémentaires achetés :
+
+<table>
+<thead>
+  <tr>
+    <th>Application/module complémentaire</th>
+    <th>Niveau</th>
+    <th>Jeux de données disponibles pour l’exportation</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td rowspan="2">Real-Time CDP</td>
+    <td>Prime</td>
+    <td>Jeux de données Profile et Experience Event créés dans l’interface utilisateur de l’Experience Platform après ingestion ou collecte de données par le biais de sources, SDK web, SDK mobile, Analytics Data Connector et Audience Manager.</td>
+  </tr>
+  <tr>
+    <td>Ultimate</td>
+    <td><ul><li>Jeux de données Profile et Experience Event créés dans l’interface utilisateur de l’Experience Platform après ingestion ou collecte de données par le biais de sources, SDK web, SDK mobile, Analytics Data Connector et Audience Manager.</li><li> Les jeux de données générés par le système, tels que <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/query.html?lang=en#profile-attribute-datasets">Jeu de données d’instantanés de profil</a>.</li></td>
+  </tr>
+  <tr>
+    <td rowspan="2">Adobe Journey Optimizer</td>
+    <td>Prime</td>
+    <td>Voir <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html?lang=fr"> Adobe Journey Optimizer</a> la documentation. (mise à jour vers un lien profond vers la table ou la section AJO pour les jeux de données pris en charge)</td>
+  </tr>
+  <tr>
+    <td>Ultimate</td>
+    <td>Voir <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html?lang=fr"> Adobe Journey Optimizer</a> la documentation. (mise à jour vers un lien profond vers la table ou la section AJO pour les jeux de données pris en charge)</td>
+  </tr>
+  <tr>
+    <td>Data Distiller</td>
+    <td>Distiller de données (module complémentaire)</td>
+    <td>Jeux de données dérivés créés via Query Service.</td>
+  </tr>
+</tbody>
+</table>
 
 ## Destinations prises en charge {#supported-destinations}
 
@@ -40,9 +79,9 @@ Actuellement, vous pouvez exporter des jeux de données vers les destinations de
 Certaines destinations basées sur des fichiers du catalogue de l’Experience Platform prennent en charge l’activation de l’audience et l’exportation de jeux de données.
 
 * Envisagez d’activer des audiences lorsque vous souhaitez que vos données soient structurées en profils regroupés par intérêt ou qualification d’audience.
-* Vous pouvez également envisager des exportations de jeux de données lorsque vous cherchez à exporter des jeux de données bruts, qui ne sont pas groupés ou structurés par intérêt ou qualification d’audience. Vous pouvez utiliser ces données pour la création de rapports, les workflows de science des données, afin de répondre aux exigences de conformité et à de nombreux autres cas d’utilisation.
+* Vous pouvez également envisager des exportations de jeux de données lorsque vous cherchez à exporter des jeux de données bruts, qui ne sont pas groupés ou structurés par intérêt ou qualification d’audience. Vous pouvez utiliser ces données pour la création de rapports, des workflows de science des données et de nombreux autres cas d’utilisation. Par exemple, en tant qu’administrateur, ingénieur de données ou analyste, vous pouvez exporter des données d’Experience Platform pour les synchroniser avec votre entrepôt de données, les utiliser dans des outils d’analyse de BI, des outils ML externes dans le cloud ou les stocker dans votre système pour des besoins de stockage à long terme.
 
-Ce document contient toutes les informations nécessaires à l’exportation de jeux de données. Si vous souhaitez activer des audiences vers des destinations de stockage dans le cloud ou de marketing par e-mail, lisez [Activation des données d’audience vers des destinations d’exportation de profils par lots](/help/destinations/ui/activate-batch-profile-destinations.md).
+Ce document contient toutes les informations nécessaires à l’exportation de jeux de données. Si vous souhaitez activer *audiences* vers le stockage dans le cloud ou les destinations de marketing par e-mail, lisez [Activation des données d’audience vers des destinations d’exportation de profils par lots](/help/destinations/ui/activate-batch-profile-destinations.md).
 
 ## Conditions préalables {#prerequisites}
 
@@ -50,7 +89,7 @@ Pour exporter des jeux de données vers des destinations d’espace de stockage,
 
 ### Autorisations nécessaires {#permissions}
 
-Pour exporter des jeux de données, vous avez besoin de l’événement **[!UICONTROL Affichage des destinations]** et **[!UICONTROL Gestion et activation des destinations de jeu de données]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+Pour exporter des jeux de données, vous avez besoin de l’événement **[!UICONTROL Affichage des destinations]**, **[!UICONTROL Affichage des jeux de données]**, et **[!UICONTROL Gestion et activation des destinations de jeu de données]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
 Pour vous assurer que vous disposez des autorisations nécessaires pour exporter des jeux de données et que la destination prend en charge l’exportation de jeux de données, parcourez le catalogue des destinations. Si une destination comporte un contrôle **[!UICONTROL Activer]** ou **[!UICONTROL Exporter des jeux de données]**, vous disposez des autorisations appropriées.
 
@@ -106,7 +145,7 @@ L’option **[!UICONTROL Exporter des fichiers incrémentiels]** est automatique
 
 2. Utilisez le sélecteur **[!UICONTROL Heure]** pour choisir l’heure de la journée, au format [!DNL UTC], à laquelle l’exportation doit avoir lieu.
 
-3. Utilisez le sélecteur **[!UICONTROL Date]** pour choisir l’intervalle au cours duquel l’exportation doit avoir lieu. Notez que dans la version bêta de la fonctionnalité, il n’est pas possible de définir une date de fin pour les exportations. Pour plus d’informations, voir la section [limitations connues](#known-limitations).
+3. Utilisez le sélecteur **[!UICONTROL Date]** pour choisir l’intervalle au cours duquel l’exportation doit avoir lieu. Notez que vous ne pouvez actuellement pas définir de date de fin pour les exportations. Pour plus d’informations, voir la section [limitations connues](#known-limitations).
 
 4. Sélectionnez **[!UICONTROL Suivant]** pour enregistrer la planification et passer à la l’étape **[!UICONTROL Révision]**.
 
@@ -169,12 +208,23 @@ Pour supprimer un jeu de données d’un flux de données existant, procédez co
 
    ![Boîte de dialogue présentant l’option Confirmer la suppression du jeu de données du flux de données.](../assets/ui/export-datasets/remove-dataset-confirm.png)
 
+
+## Droits d’exportation des jeux de données {#licensing-entitlement}
+
+Consultez les documents de description du produit pour comprendre la quantité de données que vous êtes autorisé à exporter pour chaque application Experience Platform, par an. Par exemple, vous pouvez afficher la description du produit Real-Time CDP. [here](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
+
+Notez que les droits à l’exportation des données pour différentes applications ne sont pas additifs. Par exemple, cela signifie que si vous achetez Real-Time CDP Ultimate et Adobe Journey Optimizer Ultimate, les droits d’exportation de profil seront les plus grands des deux droits, selon les descriptions de produit. Vos droits sur le volume sont calculés en prenant le nombre total de profils sous licence et en multipliant par 500 Ko pour Real-Time CDP Prime ou 700 Ko pour Real-Time CDP Ultimate afin de déterminer le volume de données auquel vous avez droit.
+
+D’un autre côté, si vous achetez des modules complémentaires tels que Data Distiller, la limite d’exportation des données à laquelle vous avez droit représente la somme du niveau produit et du module complémentaire.
+
+Dans le tableau de bord des licences, vous pouvez consulter et suivre vos exportations de profils par rapport à vos limites contractuelles.
+
 ## Limites connues {#known-limitations}
 
-Gardez à l’esprit les limites suivantes pour la version Beta des exportations de jeux de données :
+Gardez à l’esprit les limites suivantes relatives à la disponibilité générale des exportations de jeux de données :
 
-* Il existe actuellement une seule autorisation (**[!UICONTROL Gestion et activation des destinations de jeu de données]**) qui inclut des autorisations de gestion et d’activation sur les destinations de jeux de données. Ces contrôles seront ultérieurement divisés en autorisations plus granulaires. Consultez la section [autorisations requises](#permissions) pour obtenir la liste complète des autorisations dont vous avez besoin pour exporter des jeux de données.
 * Actuellement, vous ne pouvez exporter que des fichiers incrémentiels et il est impossible de sélectionner une date de fin pour vos exportations de jeux de données.
 * Les noms des fichiers exportés ne peuvent actuellement pas être personnalisés.
+* Les jeux de données créés via l’API ne sont actuellement pas disponibles pour l’exportation.
 * Actuellement, l’interface utilisateur ne vous empêche pas de supprimer un jeu de données en cours d’exportation vers une destination. Ne supprimez aucun jeu de données en cours d’exportation vers des destinations. [Supprimez le jeu de données](#remove-dataset) d’un flux de données de destination avant de le supprimer.
 * Les mesures de surveillance des exportations de jeux de données sont actuellement combinées avec les chiffres des exportations de profils afin qu’elles ne reflètent pas les vrais chiffres d’exportation.

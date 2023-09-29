@@ -4,7 +4,7 @@ title: Exploration, vérification et traitement des jeux de données de tableau 
 type: Documentation
 description: Découvrez comment utiliser Query Service pour explorer et traiter des jeux de données bruts alimentant les tableaux de bord de profil, d’audience et de destination dans Experience Platform.
 exl-id: 0087dcab-d5fe-4a24-85f6-587e9ae74fb8
-source-git-commit: c431973100cc65d99d9466553fe6624ac2653d4b
+source-git-commit: e808af41b0df7603ce6f44464d1e6e883d3f6208
 workflow-type: tm+mt
 source-wordcount: '946'
 ht-degree: 37%
@@ -27,7 +27,7 @@ Vous pouvez utiliser [!DNL Query Service] pour interroger des jeux de données b
 
 ![Le tableau de bord Parcourir le jeu de données avec l’onglet Jeux de données surligné dans le volet de navigation de gauche.](./images/query/browse-datasets.png)
 
-### Jeux de données générés par le système
+### Jeux de données générés par le système {#system-generated-datasets}
 
 >[!IMPORTANT]
 >
@@ -41,7 +41,7 @@ Une barre latérale s’affiche avec deux bascules, [!UICONTROL Inclus dans Prof
 
 ![L’onglet Parcourir des jeux de données avec le bouton Afficher les jeux de données système mis en surbrillance.](./images/query/show-system-datasets.png)
 
-### Jeux de données d’attributs de profils
+### Jeux de données d’attributs de profils {#profile-attribute-datasets}
 
 Les informations contenues dans le tableau de bord du profil sont liées aux politiques de fusion qui ont été définies par votre organisation. Pour chaque politique de fusion active, un jeu de données d’attributs de profil est disponible dans le lac de données.
 
@@ -66,7 +66,7 @@ Ce jeu de données peut être exploré à l’aide de l’interface utilisateur 
 
 ### Jeu de données de métadonnées d’audience
 
-Un jeu de données de métadonnées d’audience est disponible dans le lac de données et contient des métadonnées pour chaque audience de votre organisation.
+Un jeu de données de métadonnées d’audience est disponible dans le lac de données et contient des métadonnées pour chaque audience de votre entreprise.
 
 La convention d’affectation des noms de ce jeu de données est **Segmentdefinition-Snapshot-Export** suivi d’une valeur alphanumérique. Par exemple : `Segmentdefinition-Snapshot-Export-acf28952-2b6c-47ed-8f7f-016ac3c6b4e7`
 
