@@ -4,10 +4,10 @@ title: Créer une connexion à une destination
 type: Tutorial
 description: Découvrez comment vous connecter à une destination dans Adobe Experience Platform, activer des alertes et configurer des actions marketing pour votre destination connectée.
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: af705b8a77b2ea15b44b97ed3f1f2c5aa7433eb1
 workflow-type: tm+mt
-source-wordcount: '1107'
-ht-degree: 79%
+source-wordcount: '1141'
+ht-degree: 77%
 
 ---
 
@@ -36,7 +36,7 @@ Avant d’envoyer des données d’audience vers une destination, vous devez con
 
    Pour plus d’informations sur la différence entre ces options, vous pouvez également vous reporter à la section [Catalogue](../ui/destinations-workspace.md#catalog) de la documentation de l’espace de travail de destination.
 
-   Sélectionnez **[!UICONTROL Configuration]**, **[!UICONTROL Activer]** ou **[!UICONTROL Activation des audiences]**, selon le contrôle disponible.
+   Sélectionnez **[!UICONTROL Configuration]**, **[!UICONTROL Activer]**, ou **[!UICONTROL Activation des audiences]**, selon le contrôle disponible.
 
    ![Copie d’écran de l’interface utilisateur d’Experience Platform présentant la page du catalogue des destinations avec l’option Configurer mise en surbrillance.](../assets/ui/connect-destinations/set-up.png)
 
@@ -44,7 +44,7 @@ Avant d’envoyer des données d’audience vers une destination, vous devez con
 
 3. Si vous avez sélectionné **[!UICONTROL Configurer]**, passez à l’étape suivante, pour une [authentification](#authenticate) auprès de la destination.
 
-   Si vous avez sélectionné **[!UICONTROL Activer]**, **[!UICONTROL Activation des audiences]** ou **[!UICONTROL Exportation de jeux de données]**, vous pouvez désormais voir une liste des connexions de destination existantes.
+   Si vous avez sélectionné **[!UICONTROL Activer]**, **[!UICONTROL Activation des audiences]**, ou **[!UICONTROL Exportation de jeux de données]**, vous pouvez désormais voir une liste des connexions de destination existantes.
 
    Sélectionnez **[!UICONTROL Configurer une nouvelle destination]** pour établir une nouvelle connexion à la destination.
 
@@ -78,15 +78,19 @@ Paramètres d’entrée obligatoires et facultatifs pour **[!DNL The Trade Desk]
 
 ![Image montrant les paramètres d’entrée obligatoires et facultatifs lors de la connexion à une destination Trade Desk.](../assets/ui/connect-destinations/connect-destination-trade-desk-example.png)
 
-### (Version bêta) Configuration des options de formatage de fichier pour les fichiers exportés {#file-formatting-and-compression-options}
+### Configurer des options de formatage de fichier pour les fichiers exportés {#file-formatting-and-compression-options}
 
 Pour les destinations basées sur des fichiers, vous pouvez configurer divers paramètres liés à la manière dont les fichiers exportés sont formatés et compressés. Pour plus d’informations sur toutes les options de formatage et de compression disponibles, consultez le [tutoriel Configurer des options de formatage de fichier pour les destinations basées sur des fichiers](/help/destinations/ui/batch-destinations-file-formatting-options.md).
 
 ![Image montrant la sélection du type de fichier et diverses options pour les fichiers CSV.](/help/destinations/assets/ui/connect-destinations/file-formatting-options.png)
 
-### Configuration de la connexion de destination pour l’activation de l’audience ou les exportations de jeux de données {#segment-activation-or-dataset-exports}
+### Configuration de la connexion de destination pour l’activation de l’audience, l’activation des prospects ou les exportations de jeux de données {#segment-activation-or-dataset-exports}
 
-Certaines destinations basées sur des fichiers prennent en charge l’activation des audiences ainsi que l’exportation de jeux de données. Pour ces destinations, vous pouvez choisir de créer une connexion qui vous permet d’activer des audiences ou d’exporter des jeux de données.
+Certaines destinations basées sur des fichiers prennent en charge l’activation de l’audience pour des clients ou des prospects connus, ainsi que l’exportation de jeux de données. Pour ces destinations, vous pouvez choisir de créer une connexion qui vous permet de [activation des audiences](/help/destinations/ui/activate-batch-profile-destinations.md), [prospects](/help/destinations/ui/activate-prospect-audiences.md), ou [exportation de jeux de données](/help/destinations/ui/export-datasets.md).
+
+>[!WARNING]
+>
+>Lors de l’exportation de jeux de données, notez que les exportations vers les fichiers JSON sont prises en charge en mode compressé uniquement. Exportations vers [!DNL Parquet] Les fichiers sont pris en charge en mode compressé et décompressé.
 
 ![Image montrant le contrôle de sélection du type de données qui permet aux utilisateurs de choisir entre l’activation de l’audience et les exportations de jeux de données.](/help/destinations/assets/ui/connect-destinations/data-type-selection.png)
 
@@ -112,4 +116,4 @@ Certaines destinations basées sur des fichiers prennent en charge l’activatio
 
 En lisant ce document, vous avez appris à utiliser l’interface utilisateur d’Experience Platform pour établir une connexion à une destination. Pour rappel, les paramètres de connexion disponibles et requis varient d’une destination à l’autre. Consultez également la page de documentation sur la destination dans le [catalogues des destinations](/help/destinations/catalog/overview.md) pour obtenir des informations spécifiques sur les entrées requises et les options disponibles par type de destination.
 
-Ensuite, vous pouvez passer à [activation des audiences](/help/destinations/ui/activation-overview.md) ou [exportation de jeux de données](/help/destinations/ui/export-datasets.md) à votre destination.
+Ensuite, vous pouvez procéder à la [activation des audiences](/help/destinations/ui/activation-overview.md) ou [exportation de jeux de données](/help/destinations/ui/export-datasets.md) à votre destination.

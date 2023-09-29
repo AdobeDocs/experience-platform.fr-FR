@@ -4,10 +4,10 @@ title: Exportation de jeux de données à l’aide de l’API Flow Service
 description: Découvrez comment utiliser l’API Flow Service pour exporter des jeux de données vers des destinations sélectionnées.
 type: Tutorial
 exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
-source-git-commit: 28e07c464eb05ba7c20b132d430fccac15d8806e
+source-git-commit: af705b8a77b2ea15b44b97ed3f1f2c5aa7433eb1
 workflow-type: tm+mt
-source-wordcount: '3526'
-ht-degree: 18%
+source-wordcount: '3550'
+ht-degree: 17%
 
 ---
 
@@ -55,7 +55,7 @@ Les sections suivantes apportent des informations supplémentaires que vous deve
 
 ### Autorisations nécessaires {#permissions}
 
-Pour exporter des jeux de données, vous avez besoin des [autorisations de contrôle d’accès](/help/access-control/home.md#permissions) **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer et activer des destinations de jeu de données]**. Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+Pour exporter des jeux de données, vous avez besoin de l’événement **[!UICONTROL Affichage des destinations]**, **[!UICONTROL Affichage des jeux de données]**, et **[!UICONTROL Gestion et activation des destinations de jeu de données]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
 Pour vous assurer que vous disposez des autorisations nécessaires pour exporter des jeux de données et que la destination prend en charge l’exportation de jeux de données, parcourez le catalogue des destinations. Si une destination comporte un contrôle **[!UICONTROL Activer]** ou **[!UICONTROL Exporter des jeux de données]**, vous disposez des autorisations appropriées.
 
@@ -1149,6 +1149,10 @@ Notez l’identifiant de connexion de la réponse. Cet identifiant sera requis �
 ![Diagramme présentant l’étape 4 du workflow d’exportation des jeux de données](../assets/api/export-datasets/export-datasets-api-workflow-create-target-connection.png)
 
 Ensuite, vous devez créer une connexion cible qui stocke les paramètres d’exportation de vos jeux de données. Les paramètres d’exportation incluent l’emplacement, le format de fichier, la compression et d’autres détails. Voir `targetSpec` propriétés fournies dans la spécification de connexion de la destination pour comprendre les propriétés prises en charge pour chaque type de destination. Référencez les onglets ci-dessous pour le `targetSpec` propriétés de toutes les destinations prises en charge.
+
+>[!WARNING]
+>
+>Les exportations vers les fichiers JSON sont prises en charge en mode compressé uniquement. Exportations vers [!DNL Parquet] Les fichiers sont pris en charge en mode compressé et décompressé.
 
 >[!BEGINTABS]
 

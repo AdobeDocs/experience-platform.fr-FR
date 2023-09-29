@@ -1,11 +1,11 @@
 ---
-title: (Version bêta) Utilisation de champs calculés pour exporter des tableaux dans des fichiers plats
+title: (Version bêta) Utilisation de champs calculés pour exporter des tableaux dans des fichiers de schéma plats
 type: Tutorial
-description: Découvrez comment exporter des tableaux et des champs calculés de Real-Time CDP vers des destinations basées sur un profil de lot.
+description: Découvrez comment utiliser des champs calculés pour exporter des tableaux dans des fichiers de schéma plats de Real-Time CDP vers des destinations de stockage dans le cloud.
 badge: « Version bêta »
-source-git-commit: 79924b9a7d5114c94a004f99fb194102845b2127
+source-git-commit: 77fd0ace252bae66478f73a1dc4b7d4a3ccb867d
 workflow-type: tm+mt
-source-wordcount: '1180'
+source-wordcount: '1207'
 ht-degree: 2%
 
 ---
@@ -17,15 +17,8 @@ ht-degree: 2%
 >id="platform_destinations_export_arrays_flat_files"
 >title="(Version bêta) Prise en charge des tableaux d’exportation"
 >abstract="Exportez des tableaux simples de valeurs int, string ou booléennes de l’Experience Platform vers la destination de stockage dans le cloud souhaitée. Certaines restrictions s’appliquent. Consultez la documentation pour obtenir des exemples complets et des fonctions prises en charge."
-
-<!--
-
-additional links for contextualhelp:
-
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html#examples" text="Examples"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html#known-limitations" text="Known limitations"
-
--->
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html#examples" text="Exemples"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html#known-limitations" text="Limites connues"
 
 >[!AVAILABILITY]
 >
