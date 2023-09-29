@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Syntaxe SQL dans Query Service
 description: Ce document présente la syntaxe SQL prise en charge par Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: f729c54e490afb954bb627d150e499c98d51a53d
+source-git-commit: 18b8f683726f612a5979ab724067cc9f1bfecbde
 workflow-type: tm+mt
-source-wordcount: '3923'
-ht-degree: 8%
+source-wordcount: '4006'
+ht-degree: 9%
 
 ---
 
@@ -262,7 +262,7 @@ DROP TABLE [IF EXISTS] [db_name.]table_name
 
 ## CRÉER UNE BASE DE DONNÉES
 
-La variable `CREATE DATABASE` crée une base de données ADLS.
+La variable `CREATE DATABASE` crée une base de données Azure Data Lake Storage (ADLS).
 
 ```sql
 CREATE DATABASE [IF NOT EXISTS] db_name
@@ -296,7 +296,7 @@ DROP SCHEMA [IF EXISTS] db_name.schema_name [ RESTRICT | CASCADE]
 
 ## CREATE VIEW
 
-La syntaxe suivante définit une `CREATE VIEW` query :
+La syntaxe suivante définit une `CREATE VIEW` requête pour un jeu de données. Ce jeu de données peut être un jeu de données ADLS ou de magasin accéléré.
 
 ```sql
 CREATE VIEW view_name AS select_query
@@ -313,6 +313,46 @@ CREATE VIEW view_name AS select_query
 CREATE VIEW V1 AS SELECT color, type FROM Inventory
 
 CREATE OR REPLACE VIEW V1 AS SELECT model, version FROM Inventory
+```
+
+La syntaxe suivante définit une `CREATE VIEW` qui crée une vue dans le contexte d&#39;une base de données et d&#39;un schéma.
+
+**Exemple**
+
+```sql
+CREATE VIEW db_name.schema_name.view_name AS select_query
+CREATE OR REPLACE VIEW db_name.schema_name.view_name AS select_query
+```
+
+| Paramètres | Description |
+| ------ | ------ |
+| `db_name` | Le nom de la base de données. |
+| `schema_name` | Nom du schéma. |
+| `view_name` | Nom de la vue à créer. |
+| `select_query` | A `SELECT` . La syntaxe de la variable `SELECT` se trouve dans la variable [Section SELECT query](#select-queries). |
+
+**Exemple**
+
+```sql
+CREATE VIEW <dbV1 AS SELECT color, type FROM Inventory;
+
+CREATE OR REPLACE VIEW V1 AS SELECT model, version FROM Inventory;
+```
+
+## AFFICHER LES VUES
+
+La requête suivante affiche la liste des vues.
+
+```sql
+SHOW VIEWS;
+```
+
+```console
+ Db Name  | Schema Name | Name  | Id       |  Dataset Dependencies | Views Dependencies | TYPE
+----------------------------------------------------------------------------------------------
+ qsaccel  | profile_agg | view1 | view_id1 | dwh_dataset1          |                    | DWH
+          |             | view2 | view_id2 | adls_dataset          | adls_views         | ADLS
+(2 rows)
 ```
 
 ## DROP VIEW
@@ -622,14 +662,14 @@ La sortie de la console s’affiche comme illustré ci-dessous.
 (1 row)
 ```
 
-Vous pouvez ensuite interroger directement les statistiques calculées en référençant la variable `Statistics ID`. L’exemple d’instruction ci-dessous vous permet d’afficher la sortie complète lorsque vous l’utilisez avec la fonction `Statistics ID` ou le nom de l’alias. Pour en savoir plus sur cette fonctionnalité, voir [documentation sur les noms d’alias](../essential-concepts/dataset-statistics.md#alias-name).
+Vous pouvez alors interroger directement les statistiques calculées en référençant l’`Statistics ID`. L’exemple d’instruction ci-dessous permet d’afficher la sortie complète lorsque vous l’utilisez avec l’`Statistics ID` ou le nom d’alias. Pour en savoir plus sur cette fonctionnalité, voir [documentation sur les noms d’alias](../essential-concepts/dataset-statistics.md#alias-name).
 
 ```sql
 -- This statement gets the statistics generated for `alias adc_geometric_stats_1`.
 SELECT * FROM adc_geometric_stats_1;
 ```
 
-Utilisez la variable `SHOW STATISTICS` pour afficher les métadonnées de toutes les statistiques temporaires générées dans la session. Cette commande peut vous aider à affiner la portée de votre analyse statistique.
+Utilisez la variable `SHOW STATISTICS` pour afficher les métadonnées de toutes les statistiques temporaires générées dans la session. Vous pouvez ainsi affiner la portée de votre analyse statistique.
 
 ```sql
 SHOW STATISTICS;
@@ -890,13 +930,13 @@ COPY query
 
 ### ALTER TABLE {#alter-table}
 
-La variable `ALTER TABLE` vous permet d&#39;ajouter ou de déposer des contraintes de clé Principale ou étrangère, ainsi que d&#39;ajouter des colonnes dans le tableau.
+La variable `ALTER TABLE` vous permet d&#39;ajouter ou de déposer des contraintes de clé primaire ou étrangère, ainsi que d&#39;ajouter des colonnes dans le tableau.
 
 #### AJOUTER OU DÉPOSER UNE CONTRAINTE
 
-Les requêtes SQL suivantes montrent des exemples d’ajout ou de suppression de contraintes dans un tableau. Les contraintes de clé Principal et de clé étrangère peuvent être ajoutées à plusieurs colonnes avec des valeurs séparées par des virgules. Vous pouvez créer des clés composites en transmettant au moins deux valeurs de nom de colonne, comme illustré dans les exemples ci-dessous.
+Les requêtes SQL suivantes montrent des exemples d’ajout ou de suppression de contraintes dans un tableau. Les contraintes de clé de Principal et de clé étrangère peuvent être ajoutées à plusieurs colonnes avec des valeurs séparées par des virgules. Vous pouvez créer des clés composites en transmettant au moins deux valeurs de nom de colonne, comme illustré dans les exemples ci-dessous.
 
-**Définition de clés Principales ou composites**
+**Définition des clés primaires ou composites**
 
 ```sql
 ALTER TABLE table_name ADD CONSTRAINT PRIMARY KEY ( column_name ) NAMESPACE namespace
@@ -946,13 +986,13 @@ ALTER TABLE table_name DROP CONSTRAINT IDENTITY ( column_name )
 
 >[!NOTE]
 >
->Le schéma de la table doit être unique et ne pas être partagé entre plusieurs tables. En outre, l’espace de noms est obligatoire pour les contraintes de clé Principale, d’identité Principale et d’identité.
+>Le schéma de la table doit être unique et ne pas être partagé entre plusieurs tables. En outre, l’espace de noms est obligatoire pour les contraintes de clé primaire, d’identité principale et d’identité.
 
-#### Ajout ou suppression d’identités Principales et secondaires
+#### Ajout ou suppression d’identités primaires et secondaires
 
-La variable `ALTER TABLE` vous permet d’ajouter ou de supprimer des contraintes pour les colonnes des tables d’identités Principales et secondaires directement via SQL.
+La variable `ALTER TABLE` vous permet d’ajouter ou de supprimer des contraintes pour les colonnes de la table d’identités principale et secondaire directement via SQL.
 
-Les exemples suivants ajoutent une identité Principale et une identité secondaire en ajoutant des contraintes.
+Les exemples suivants ajoutent une identité principale et une identité secondaire en ajoutant des contraintes.
 
 ```sql
 ALTER TABLE t1 ADD CONSTRAINT PRIMARY IDENTITY (id) NAMESPACE 'IDFA';
@@ -1029,9 +1069,9 @@ ALTER TABLE table_name REMOVE SCHEMA database_name.schema_name
 | `column_name` | Nom de la colonne à ajouter. |
 | `data_type` | Type de données de la colonne à ajouter. Les types de données pris en charge sont les suivants : bigint, char, chaîne, date, datetime, double, double précision, entier, petit, minuscule, varchar. |
 
-### AFFICHER LES CLÉS PRINCIPAL
+### AFFICHER LES CLÉS DE PRINCIPAL
 
-La variable `SHOW PRIMARY KEYS` liste toutes les Principales contraintes de clé pour la base de données donnée.
+La variable `SHOW PRIMARY KEYS` liste toutes les contraintes de clé primaire pour la base de données donnée.
 
 ```sql
 SHOW PRIMARY KEYS
