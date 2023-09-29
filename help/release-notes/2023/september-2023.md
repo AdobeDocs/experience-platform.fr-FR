@@ -1,10 +1,10 @@
 ---
 title: Notes de mise à jour d’Adobe Experience Platform
 description: Les notes de mise à jour de septembre 2023 pour Adobe Experience Platform.
-source-git-commit: c57845ab2bd9ce16fb34b6babfa90a393b101409
+source-git-commit: c2563d43b9ee8b3191954275bd0102507a981071
 workflow-type: tm+mt
-source-wordcount: '1308'
-ht-degree: 29%
+source-wordcount: '2149'
+ht-degree: 31%
 
 ---
 
@@ -19,9 +19,14 @@ Nouvelles fonctionnalités d’Adobe Experience Platform :
 Mises à jour des fonctionnalités existantes dans  Experience Platform :
 
 - [Alertes](#alerts)
+- [Tableaux de bord](#dashboards)
 - [Collecte de données](#data-collection)
+- [Gouvernance des données](#data-governance)
+- [Hygiène des données](#hygiene)
 - [Destinations](#destinations)
-- [Identity Service](#identity-service)
+- [Modèle de données d’expérience (XDM)](#xdm)
+- [Service d’identités](#identity-service)
+- [Query Service](#query-service)
 - [Segmentation Service](#segmentation)
 - [Sources](#sources)
 
@@ -43,6 +48,18 @@ Experience Platform vous permet de vous abonner à des alertes basées sur des 
 
 Pour en savoir plus sur les alertes, veuillez lire le [[!DNL Observability Insights] aperçu](../../observability/home.md).
 
+## Tableaux de bord {#dashboards}
+
+Adobe Experience Platform fournit de nombreux [!DNL dashboards] grâce auxquels vous pouvez afficher des informations importantes sur les données de votre entreprise, telles quʼelles sont capturées lors dʼinstantanés quotidiens.
+
+| Fonctionnalité | Description |
+| --- | --- |
+| [Amélioration du tableau de bord d’utilisation des licences](../../dashboards/guides/license-usage.md) | Contrôlez vos contrats de licence grâce à de meilleurs rapports et à des visualisations des mesures clés concernant l’utilisation des licences de votre entreprise. Ces améliorations offrent un niveau élevé de granularité par rapport à vos mesures d’utilisation des licences pour tous les produits Experience Platform que vous avez achetés. |
+
+{style="table-layout:auto"}
+
+Pour en savoir plus sur le tableau de bord de l’utilisation des licences, voir [tableau de bord d’utilisation des licences - Aperçu](../../dashboards/guides/destinations.md).
+
 ## Collecte de données {#data-collection}
 
 Adobe Experience Platform fournit une suite de technologies qui vous permettent de collecter des données d’expérience client côté client. Vous pouvez ensuite les envoyer à Adobe Experience Platform Edge Network pour les enrichir, les transformer et les distribuer vers des destinations Adobe ou autres qu’Adobe.
@@ -57,6 +74,35 @@ Adobe Experience Platform fournit une suite de technologies qui vous permetten
 {style="table-layout:auto"}
 
 Pour en savoir plus sur la collecte de données, veuillez lire la section [présentation de la collecte de données](../../tags/home.md).
+
+## Gouvernance des données {#data-governance}
+
+Dans Adobe Experience Platform, la gouvernance des données désigne un ensemble de politiques et de technologies permettant de gérer les données clients et de garantir la conformité aux réglementations, aux restrictions et aux politiques applicables à l’utilisation des données. Elle joue un rôle clé dans Experience Platform à différents niveaux, notamment dans le catalogage, la traçabilité des données, l’étiquetage de l’utilisation des données, les politiques d’accès aux données et le contrôle de l’accès aux données pour les actions marketing.
+
+**Nouvelles fonctionnalités**
+
+| Fonctionnalité | Description |
+| --- | --- |
+| Nouvelles étiquettes écosystème de partenaire pour les données tierces | De nouveaux libellés d’utilisation des données pour l’enrichissement et la prospection tiers sont disponibles. Voir [documentation sur les étiquettes Ecosystem des partenaires](../../data-governance/labels/reference.md#partner) pour plus d’informations. |
+
+{style="table-layout:auto"}
+
+Pour en savoir plus sur la gouvernance des données, veuillez consulter la [vue d’ensemble de la gouvernance des données](../../data-governance/home.md).
+
+## Hygiène des données {#hygiene}
+
+Experience Platform offre toute une gamme de fonctionnalités d’hygiène des données. Celles-ci vous permettent de gérer vos données stockées par le biais de suppressions programmées d’enregistrements de consommateurs et de jeux de données. À l’aide de la fonction [!UICONTROL Cycle de vie des données] dans l’interface utilisateur ou par le biais d’appels à l’API Data Hygiene, vous pouvez gérer efficacement vos entrepôts de données. Utilisez ces fonctionnalités pour vous assurer que les informations sont utilisées comme prévu, qu’elles sont mises à jour lorsque des données incorrectes doivent être corrigées et qu’elles sont supprimées lorsque les stratégies organisationnelles le jugent nécessaire.
+
+**Nouvelles fonctionnalités**
+
+| Fonctionnalité | Description |
+| --- | --- |
+| [!BADGE Version Beta]{type=Informative} | Gérez votre cycle de vie des données dans tous les entrepôts de données afin de respecter les engagements des clients et les contrats de licence avec les fonctionnalités avancées de gestion du cycle de vie des données de Adobe Experience Platform : expiration automatisée du jeu de données et suppression des enregistrements.<br>Avec l’expiration automatisée des jeux de données, vous pouvez supprimer des jeux de données entiers et définir une date et une heure pour le jeu de données à supprimer.<br>La suppression d’enregistrements vous permet de supprimer des profils clients individuels en ciblant leurs identités principales. Vous pouvez fournir les identités principales individuellement par le biais de l’interface utilisateur ou via le téléchargement de fichier CSV/JSON. Voir [Documentation sur la suppression des enregistrements](../../hygiene/ui/record-delete.md) pour plus d’informations |
+| Expirations de jeux de données | Limitez vos données et gardez le contrôle de vos contrats de licence avec l’expiration automatisée du jeu de données. Réduire les volumes de données en supprimant des jeux de données entiers et en définissant une date et une heure pour le jeu de données à supprimer. Voir [documentation sur l’expiration des jeux de données](../../hygiene/ui/dataset-expiration.md) pour plus d’informations. |
+
+{style="table-layout:auto"}
+
+Pour plus d’informations sur les fonctionnalités d’hygiène des données de Platform, consultez la section [présentation de l’hygiène des données](../../hygiene/home.md).
 
 ## Destinations {#destinations}
 
@@ -75,10 +121,10 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 
 <!-- 
 
+
 Add these to release notes as they go out
 
 | [[!DNL Qualtrics]] | New | Use the aggregation of multiple sources of operational data in Adobe Experience Platform as an input in Qualtrics Experience ID to better understand your customers and enable targeted outreach to close the gap when it comes to understanding intent, emotion and experience drivers. | 
-
 
 -->
 
@@ -97,6 +143,23 @@ Add these to release notes as they go out
 
 Pour des informations plus générales sur les destinations, consultez la [présentation des destinations](../../destinations/home.md).
 
+## Modèle de données d’expérience (XDM) {#xdm}
+
+XDM est une spécification Open Source qui fournit des structures et des définitions communes (schémas) pour les données introduites dans Adobe Experience Platform. En adhérant aux normes XDM, toutes les données d’expérience client peuvent être intégrées dans une représentation commune afin de fournir des informations plus rapidement et de manière plus intégrée. Vous pouvez obtenir des informations précieuses à partir des actions des clients, définir des types de clients par le biais de segments et utiliser les attributs du client à des fins de personnalisation.
+
+**Nouvelles fonctionnalités**
+
+| Fonctionnalité | Description |
+| --- | --- |
+| Actions rapides ajoutées à l’éditeur de schémas | De nouvelles actions rapides ont été ajoutées au canevas de l’éditeur de schémas. Vous pouvez désormais copier la structure JSON ou supprimer le schéma directement à partir de l’éditeur.<br>![Actions rapides dans l’éditeur de schémas.](../2023/assets/schema-editor-copy-json.png "L’éditeur de schémas avec plus et Copier dans JSON est mis en surbrillance."){width="100" zoomable="yes"} |
+| Filtrage des ressources XDM par créateur personnalisé ou standard | Les listes des schémas, des groupes de champs, des types de données et des classes disponibles sont désormais préfiltrées en fonction de leur méthode de création. Vous pouvez ainsi filtrer les ressources selon qu’elles ont été créées ou créées par Adobe.<br>![Filtres standard et personnalisés dans l’espace de travail des schémas.](../2023/assets/standard-and-custom-classes.png "Espace de travail des schémas avec les filtres standard et personnalisés mis en surbrillance."){width="100" zoomable="yes"} <br> Voir [documentation sur la création et la modification de ressources](../../xdm/ui/resources/classes.md#filter.md) pour plus d’informations. |
+
+**Fonctionnalités mises à jour**
+
+| Fonctionnalité | Description |
+| --- | --- |
+| Workflow de création de schéma mis à jour | Un nouveau workflow de création de schéma a été mis en oeuvre pour rationaliser le processus. <br> ![Nouvelle interface utilisateur de création de schéma.](../2023/assets/schema-class-options.png "Nouveau sélecteur de détails de schéma mis en surbrillance."){width="100" zoomable="yes"} <br> Voir [documentation sur la création de schémas](../../xdm/ui/resources/schemas.md#create) pour plus d’informations. |
+
 ## Identity Service {#identity-service}
 
 Adobe Experience Platform Identity Service vous offre la possibilité de mieux connaître vos clients et clientes ainsi que leur comportement en établissant un lien entre les identités des différents appareils et systèmes, ce qui vous permet de proposer des expériences numériques personnelles et percutantes en temps réel.
@@ -111,6 +174,21 @@ Adobe Experience Platform Identity Service vous offre la possibilité de mieux
 {style="table-layout:auto"}
 
 Pour en savoir plus sur Identity Service, veuillez lire le [Présentation d’Identity Service](../../identity-service/home.md).
+
+## Query Service {#query-service}
+
+Query Service vous permet d’utiliser le langage SQL standard pour interroger les données dans le [!DNL Data Lake] d’Adobe Experience Platform. Vous pouvez joindre n’importe quel jeu de données à partir du [!DNL Data Lake] et capturer les résultats de la requête sous la forme d’un nouveau jeu de données à utiliser dans les rapports, dans l’espace de travail de science des données ou pour l’ingestion dans le profil client en temps réel.
+
+**Fonctionnalités mises à jour**
+
+| Fonctionnalité | Description |
+| --- | --- |
+| Mises à jour de l’interface utilisateur de filtrage de journal | Le filtrage amélioré du journal des requêtes améliore la visibilité des journaux générés par l’utilisateur pour la surveillance, l’administration et la résolution des problèmes. Vous pouvez filtrer la liste des logs de requête en fonction de différents paramètres. <br> ![Paramètres du filtre du journal des requêtes.](../2023/assets/log-filter-settings.png "Les nouveaux filtres de logs de requête sont mis en surbrillance."){width="100" zoomable="yes"}  <br> Voir [documentation sur les journaux de requête](../../query-service/ui/query-logs.md#filter-logs) pour plus d’informations. |
+| Mises à jour de l’interface utilisateur de l’éditeur de requêtes multiples | Vous pouvez désormais exécuter plusieurs requêtes séquentielles dans l’éditeur de requêtes ou écrire plusieurs requêtes et exécuter toutes les requêtes de manière séquentielle. Pour plus de flexibilité dans l&#39;exécution de votre requête, vous pouvez mettre en surbrillance la requête de votre choix et sélectionner cette requête spécifique à exécuter indépendamment des autres. Voir [Guide de l’interface utilisateur de Query Editor](../../query-service/ui/user-guide.md#execute-multiple-sequential-queries) pour plus d’informations. |
+
+{style="table-layout:auto"}
+
+Pour plus d’informations sur Query Service, consultez la section [présentation de Query Service](../../query-service/home.md).
 
 ## Segmentation Service {#segmentation}
 
