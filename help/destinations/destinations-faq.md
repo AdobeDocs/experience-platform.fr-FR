@@ -3,7 +3,7 @@ keywords: destinations ; questions ; questions fréquentes ; faq ; faq sur les d
 title: Questions fréquentes
 description: Réponses aux questions les plus fréquemment posées sur les destinations Adobe Experience Platform
 exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
-source-git-commit: 75b9cc3e2c9a18ec8c08c9c3ca774accae31eb7e
+source-git-commit: b41335ba5fd6dca422b0c19517bc32b320f1e733
 workflow-type: tm+mt
 source-wordcount: '1638'
 ht-degree: 5%
@@ -48,7 +48,32 @@ Vous réactivez l’audience mise à jour vers la même destination, mais comme 
 Pour vous assurer que tous les profils sont envoyés à votre destination, vous devez créer une nouvelle audience avec la nouvelle configuration, puis l’activer vers votre destination.
 
 +++
+<!--
+## [!DNL Experience Cloud Audiences] {#eca-faq}
 
+### What are the differences between the Experience Cloud Audiences and Adobe Target destinations?
+
++++Answer
+
+See the table below for a feature comparison between the Experience Cloud Audiences and Adobe Target destinations.
+
+||Experience Cloud Audiences|Adobe Target|
+|---|---|---|
+| **Supported Experience Cloud apps** | Supports audience activation to Audience Manager, Adobe Target, Adobe Analytics, Advertising Cloud, Marketo, Adobe Campaign | Supports audience activation only to Adobe Target |
+| **Supports audience activation** | ✓ | ✓ |
+| **Supports attribute activation** | X | ✓ |
+| **Latency** | Profiles begin activating in 6 hours. Full population is visible in 48 hours​. |Depends on implementation​ type. <ul><li>Web SDK enables same-page/next-page​ personalization.</li><li>AT.js enables next-session personalization.</li></ul> |
+| **DULE support** | ✓ | ✓ |
+| **Marketing actions support** | ✓ | ✓ |
+| **Supported IDs** | [!DNL ECID], [!DNL GAID], [!DNL IDFA], [!DNL email_lc_sha256] | Any ID type |
+| **Sandbox support** | One sandbox | Multiple sandboxes |
+| **Consent support** | X | Yes. Requires Privacy & Security Shield. |
+| **Edge segmentation support** | Supports activation of edge audiences. Does not support edge segmentation. | Supports edge segmentation and activation of edge audiences. |
+| **Supported audiences** | All types of audiences  | Edge merge policy required for activation.|
+
++++
+
+-->
 
 ## [!DNL Facebook Custom Audiences] {#facebook-faq}
 
@@ -58,6 +83,7 @@ Pour vous assurer que tous les profils sont envoyés à votre destination, vous 
 
 * Votre [!DNL Facebook] Le compte utilisateur doit avoir la variable **[!DNL Manage campaigns]** autorisation activée pour le compte publicitaire que vous prévoyez d’utiliser.
 * La variable **Adobe Experience Cloud** votre compte professionnel doit être ajouté en tant que partenaire publicitaire dans votre [!DNL Facebook Ad Account]. Utilisez `business ID=206617933627973`. Voir [Ajout de partenaires à votre compte Business Manager](https://www.facebook.com/business/help/1717412048538897) pour plus d’informations, voir la documentation de Facebook .
+
   >[!IMPORTANT]
   >
   > Lors de la configuration des autorisations pour Adobe Experience Cloud, vous devez activer l’autorisation **Gérer des campagnes**. Ceci est obligatoire pour l’intégration de la [!DNL Adobe Experience Platform].
@@ -199,10 +225,10 @@ Yes, you can activate a maximum of 150 edge audiences per sandbox.  For more inf
 +++Répondez Oui, l’API Edge Network Server fonctionne avec la destination de personnalisation personnalisée. Comme les attributs de profil peuvent contenir des données sensibles, pour protéger ces données, la destination de personnalisation personnalisée exige que vous utilisiez l’API Edge Network Server pour la collecte des données. En outre, tous les appels API doivent être effectués dans un [contexte authentifié](../server-api/authentication.md).
 +++
 
-### Je ne peux avoir qu’une seule stratégie de fusion principale. Puis-je créer des audiences qui utilisent une autre stratégie de fusion et les envoyer tout de même à Adobe Target en tant qu’audiences en continu ?
+### Je ne peux avoir qu’une seule stratégie de fusion active en périphérie. Puis-je créer des audiences qui utilisent une autre stratégie de fusion et les envoyer tout de même à Adobe Target en tant qu’audiences en continu ?
 
 +++Réponse
-Non. Toutes les audiences que vous souhaitez activer dans Adobe Target doivent utiliser un fichier principal sur le serveur. [stratégie de fusion](../profile/merge-policies/ui-guide.md).
+Non. Toutes les audiences que vous souhaitez activer dans Adobe Target doivent utiliser un [stratégie de fusion](../profile/merge-policies/ui-guide.md).
 +++
 
 ### Les stratégies Data Usage Labeling and Enforcement (DULE) et Consent sont-elles appliquées ?
