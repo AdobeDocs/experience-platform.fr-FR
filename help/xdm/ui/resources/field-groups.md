@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Création et modification de groupes de champs de schéma dans l’interface utilisateur
 description: Découvrez comment créer et modifier des groupes de champs de schéma dans l’interface utilisateur de l’Experience Platform.
 exl-id: 928d70a6-0468-4fb7-a53a-6686ac77f2a3
-source-git-commit: 51ef116ad125b0d699bf4808e3d26d3b00b743e2
+source-git-commit: 4214339c4a661c6bca2cd571919ae205dcb47da1
 workflow-type: tm+mt
-source-wordcount: '901'
-ht-degree: 1%
+source-wordcount: '985'
+ht-degree: 8%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 1%
 >[!CONTEXTUALHELP]
 >id="platform_schemas_fieldgroup_filter"
 >title="Filtre de groupe de champs standard ou personnalisé"
->abstract="La liste des groupes de champs disponibles est préfiltrée en fonction de la manière dont ils ont été créés. Sélectionnez le bouton radio à choisir entre les options Standard et Personnalisé. L’option Standard affiche les entités créées par Adobe et l’option Personnaliser affiche les entités créées dans votre organisation. Consultez la documentation pour en savoir plus sur la création et la modification de groupes de champs."
+>abstract="La liste des groupes de champs disponibles est préfiltrée en fonction de la manière dont ils ont été créés. Sélectionnez le bouton radio pour choisir entre les options Standard et Personnalisé. L’option Standard affiche les entités créées par Adobe et l’option Personnalisé affiche les entités créées au sein de votre organisation. Consultez la documentation pour en savoir plus sur la création et la modification de groupes de champs."
 
 Dans le modèle de données d’expérience (XDM), les groupes de champs de schéma sont des composants réutilisables qui définissent un ou plusieurs champs qui implémentent certaines fonctions, telles que les détails personnels, les préférences de l’hôtel ou l’adresse. Les groupes de champs sont destinés à être inclus dans le cadre d’un schéma qui met en oeuvre une classe compatible.
 
@@ -45,6 +45,12 @@ Dans la boîte de dialogue qui s’affiche, sélectionnez **[!UICONTROL Créer u
 La variable [!DNL Schema Editor] réapparaît, avec le nouveau groupe de champs répertorié dans le rail de gauche. Puisqu’il s’agit d’un nouveau groupe de champs, il ne fournit actuellement aucun champ au schéma et le canevas reste donc inchangé. Vous pouvez maintenant commencer. [ajout de champs au groupe de champs](#add-fields).
 
 ![](../../images/ui/resources/field-groups/field-group-added.png)
+
+## Filtrage des groupes de champs {#filter}
+
+La liste des groupes de champs disponibles est préfiltrée en fonction de la manière dont ils ont été créés. Le paramètre par défaut affiche les groupes de champs définis par Adobe. Cependant, vous pouvez également filtrer la liste pour afficher celles créées par votre organisation. Sélectionnez le bouton radio à choisir parmi les [!UICONTROL Standard] et [!UICONTROL Personnalisé] options. La variable [!UICONTROL Standard] affiche les entités créées par l’Adobe et la variable [!UICONTROL Personnalisé] affiche les entités créées dans votre organisation.
+
+![La variable [!UICONTROL Groupes de champs] de la [!UICONTROL Schémas] Workspace avec [!UICONTROL Standard] et [!UICONTROL Personnalisé] surlignée.](../../images/ui/resources/field-groups/standard-and-custom-field-groups.png)
 
 ## Modifier un groupe de champs existant {#edit}
 

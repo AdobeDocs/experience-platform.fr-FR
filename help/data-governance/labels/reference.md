@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Glossaire des étiquettes dʼutilisation des données
 description: Ce document décrit toutes les étiquettes dʼutilisation des données actuellement prises en charge par Adobe Experience Platform.
 exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
-source-git-commit: 538c5e2c7ff3c684edf6db12087fdf0a58e40199
+source-git-commit: c55ad6c592be95b01cf7fe0b39635b478bc98be6
 workflow-type: tm+mt
-source-wordcount: '2185'
-ht-degree: 94%
+source-wordcount: '2250'
+ht-degree: 96%
 
 ---
 
@@ -66,13 +66,15 @@ Différents types de données géographiques peuvent être considérés comme se
 
 ## Étiquettes Écosystème partenaires {#partner}
 
-Les étiquettes Ecosystème partenaires sont utilisées pour classer les données obtenues à partir de sources externes à votre organisation.
+Les libellés des réseaux partenaires servent à catégoriser les données collectées depuis des sources externes à votre organisation.
 
 Ce libellé est utilisé pour régir l’utilisation des données de prospect.
 
 | Libellé | Définition |
 | --- | --- |
-| **Troisième niveau** | Les données tierces sont des données fournies par un fournisseur de données tiers. Un fournisseur de données tiers est une entité qui a conclu un accord avec votre organisation vous autorisant à accéder, utiliser, afficher et transmettre les données du tiers avec Platform. |
+| **Tiers/Tierces** | Les données tierces sont des données qui vous sont fournies par un fournisseur de données tiers. Un fournisseur de données tiers est une entité qui a conclu un accord avec votre organisation, vous autorisant à consulter, utiliser, afficher et transmettre les données tierces conjointement avec Platform. |
+| **Enrichissement tiers** | Données collectées par une organisation tierce qui n’est pas directement liée au sujet des données. Le libellé doit être appliqué aux données tierces utilisées pour enrichir les profils propriétaires. |
+| **Prospection tierce** | Données collectées par une organisation tierce qui n’est pas directement liée au sujet des données. Le libellé doit être appliqué aux données tierces utilisées pour la prospection d’entonnoir destinée aux nouveaux clients net. |
 
 ## Annexe
 
@@ -144,11 +146,11 @@ Certains contrats prévoient des interdictions explicites sur l’utilisation de
 
 #### C10 {#c10}
 
-Certaines politiques de gouvernance des données limitent lʼutilisation de données dʼidentité assemblées pour la personnalisation. Le libellé C10 est automatiquement appliqué aux audiences si leurs stratégies de fusion utilisent l’option &quot;graphique privé&quot;.
+Certaines politiques de gouvernance des données limitent lʼutilisation de données dʼidentité assemblées pour la personnalisation. Lʼétiquette C10 est automatiquement appliquée aux audiences si leurs politiques de fusion utilisent lʼoption « graphe privé ».
 
 #### C11 {#c11}
 
-La correspondance de segment Adobe Experience Platform vous permet de faire correspondre les audiences générées par Platform avec les préférences de confidentialité et de consentement, ce qui facilite le profilage enrichi et les informations en aval. Le libellé C11 indique les données qui ne doivent pas être utilisées dans les processus [!DNL Segment Match]. Une fois que vous avez déterminé les jeux de données et/ou les champs que vous souhaitez exclure de la correspondance de segment et que vous avez ajouté le libellé C11 en conséquence, le libellé est automatiquement appliqué par le workflow Correspondance de segment.
+La correspondance de segments d’Adobe Experience Platform vous permet de faire correspondre des audiences générées par Platform avec des préférences de confidentialité et de consentement, ce qui facilite la création enrichie de profils utilisateurs et les informations en aval. Le libellé C11 indique les données qui ne doivent pas être utilisées dans les processus [!DNL Segment Match]. Une fois que vous avez déterminé les jeux de données et/ou les champs que vous souhaitez exclure de la correspondance de segment et que vous avez ajouté le libellé C11 en conséquence, le libellé est automatiquement appliqué par le workflow Correspondance de segment.
 
 #### C12 {#c12}
 

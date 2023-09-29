@@ -4,16 +4,16 @@ title: Exportation des schémas XDM dans l’interface utilisateur
 description: Découvrez comment exporter un schéma existant vers un environnement de test ou une organisation différente dans l’interface utilisateur de Adobe Experience Platform.
 type: Tutorial
 exl-id: c467666d-55bc-4134-b8f4-7758d49c4786
-source-git-commit: bed627b945c5392858bcc2dce18e9bbabe8bcdb6
+source-git-commit: d25042e80ca5f655a50deac6a65ce9168225d6e6
 workflow-type: tm+mt
-source-wordcount: '498'
+source-wordcount: '582'
 ht-degree: 0%
 
 ---
 
 # Exportation des schémas XDM dans l’interface utilisateur
 
-Toutes les ressources de la bibliothèque de schémas sont contenues dans un environnement de test spécifique au sein d’une organisation. Dans certains cas, vous pouvez vouloir partager des ressources de modèle de données d’expérience (XDM) entre des environnements de test et des organisations.
+Toutes les ressources de la bibliothèque de schémas sont contenues dans un environnement de test spécifique au sein d’une organisation. Dans certains cas, vous souhaiterez peut-être partager des ressources de modèle de données d’expérience (XDM) entre des environnements de test et des organisations.
 
 Pour répondre à ce besoin, la variable [!UICONTROL Schémas] Workspace dans l’interface utilisateur de Adobe Experience Platform vous permet de générer une charge d’exportation pour n’importe quel schéma dans la bibliothèque de schémas. Cette payload peut ensuite être utilisée dans un appel à l’API Schema Registry pour importer le schéma (et toutes les ressources dépendantes) dans un environnement de test et une organisation cible.
 
@@ -23,17 +23,19 @@ Pour répondre à ce besoin, la variable [!UICONTROL Schémas] Workspace dans l�
 
 ## Conditions préalables
 
-Bien que l’interface utilisateur de Platform vous permette d’exporter des ressources XDM, vous devez utiliser l’API Schema Registry pour importer ces ressources dans d’autres environnements de test ou organisations afin de terminer le processus. Reportez-vous au guide sur [Prise en main de l’API Schema Registry](../api/getting-started.md) pour obtenir des informations importantes sur les en-têtes d’authentification requis avant de suivre ce guide.
+Bien que l’interface utilisateur de Platform vous permette d’exporter des ressources XDM, vous devez utiliser l’API Schema Registry pour importer ces ressources dans d’autres environnements de test ou organisations afin de terminer le processus. Consultez le guide sur [Prise en main de l’API Schema Registry](../api/getting-started.md) pour obtenir des informations importantes sur les en-têtes d’authentification requis avant de suivre ce guide.
 
 ## Génération d’une payload d’exportation {#generate-export-payload}
 
-Dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Schémas]** dans le volet de navigation de gauche. Dans le [!UICONTROL Schémas] espace de travail, sélectionnez la ligne du schéma que vous souhaitez exporter pour afficher les détails du schéma dans la barre latérale droite.
+Les payloads d’exportation peuvent être générés dans l’interface utilisateur de Platform à partir du panneau Détails dans la variable [!UICONTROL Parcourir] ou directement à partir du canevas du schéma dans l’éditeur de schémas.
+
+Pour générer une payload d’exportation, sélectionnez **[!UICONTROL Schémas]** dans le volet de navigation de gauche. Dans le [!UICONTROL Schémas] espace de travail, sélectionnez la ligne du schéma que vous souhaitez exporter pour afficher les détails du schéma dans la barre latérale droite.
 
 >[!TIP]
 >
 >Consultez le guide sur la [exploration des ressources XDM](./explore.md) pour plus d’informations sur la manière de trouver la ressource XDM que vous recherchez.
 
-Sélectionnez ensuite le **[!UICONTROL Copie de JSON]** Icône (![Icône Copier](../images/ui/export/icon.png)) dans les options disponibles.
+Sélectionnez ensuite le **[!UICONTROL Copie de JSON]** icône (![Icône Copier](../images/ui/export/icon.png)) dans les options disponibles.
 
 ![Espace de travail des schémas avec une ligne de schéma et [!UICONTROL Copier vers JSON] surlignée.](../images/ui/export/copy-json.png)
 
@@ -200,6 +202,14 @@ Cette opération copie une charge utile JSON dans le presse-papiers, générée 
   }
 ]
 ```
+
+La charge utile peut également être copiée en sélectionnant [!UICONTROL Plus] en haut à droite de l’éditeur de schémas. Un menu déroulant propose deux options : [!UICONTROL Copie de la structure JSON] et [!UICONTROL Supprimer le schéma].
+
+>[!NOTE]
+>
+>Un schéma ne peut pas être supprimé s’il est activé pour Profile ou s’il comporte des jeux de données associés.
+
+![Éditeur de schémas avec [!UICONTROL Plus] et [!UICONTROL Copier vers JSON] surlignée.](../images/ui/export/schema-editor-copy-json.png)
 
 La charge utile prend la forme d’un tableau, chaque élément de tableau étant un objet qui représente une ressource XDM personnalisée à exporter. Dans l’exemple ci-dessus, le[!DNL Loyalty details]&quot; groupe de champs personnalisés et le &quot;[!DNL Loyalty Members]&quot; sont inclus. Les ressources de base utilisées par le schéma ne sont pas incluses dans l’exportation, car elles sont disponibles dans tous les environnements de test et toutes les organisations.
 

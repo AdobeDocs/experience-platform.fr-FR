@@ -5,9 +5,9 @@ title: Exploration des ressources de schéma dans l’interface utilisateur
 description: Découvrez comment explorer les schémas, classes, groupes de champs de schéma et types de données existants dans l’interface utilisateur de l’Experience Platform.
 type: Tutorial
 exl-id: b527b2a0-e688-4cfe-a176-282182f252f2
-source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
+source-git-commit: f08aa017b7f971a54197b95023e9331832ecb7f1
 workflow-type: tm+mt
-source-wordcount: '958'
+source-wordcount: '993'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ Ce tutoriel décrit les étapes à suivre pour explorer les schémas, classes, g
 
 ## Recherche d’une ressource de schéma {#lookup}
 
-Dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Schémas]** dans le volet de navigation de gauche. Le [!UICONTROL Schémas] workspace fournit une **[!UICONTROL Parcourir]** pour explorer tous les schémas de votre organisation, ainsi que d’autres onglets dédiés à l’exploration. **[!UICONTROL Classes]**, **[!UICONTROL Groupes de champs]**, et **[!UICONTROL Types de données]** respectivement.
+Dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Schémas]** dans le volet de navigation de gauche. La variable [!UICONTROL Schémas] workspace fournit une **[!UICONTROL Parcourir]** pour explorer tous les schémas de votre organisation, ainsi que d’autres onglets dédiés à l’exploration. **[!UICONTROL Classes]**, **[!UICONTROL Groupes de champs]**, et **[!UICONTROL Types de données]** respectivement.
 
 ![](../images/ui/explore/tabs.png)
 
@@ -28,11 +28,11 @@ Icône Filtrer (![Image de l’icône de filtre](../images/ui/explore/icon.png))
 
 Par exemple, pour filtrer la liste afin de n’afficher que les types de données standard fournis par Adobe, sélectionnez **[!UICONTROL Type de données]** et **[!UICONTROL Adobe]** sous le **[!UICONTROL Type]** et **[!UICONTROL Propriétaire]** , respectivement.
 
-Le **[!UICONTROL Inclus dans Profile]** activer/désactiver permet de filtrer les résultats afin d’afficher uniquement les ressources utilisées dans les schémas qui ont été activés pour une utilisation dans [Profil client en temps réel](../../profile/home.md).
+La variable **[!UICONTROL Inclus dans Profile]** activer/désactiver permet de filtrer les résultats afin d’afficher uniquement les ressources utilisées dans les schémas qui ont été activés pour une utilisation dans [Profil client en temps réel](../../profile/home.md). La variable **[!UICONTROL Affichage des schémas ad hoc]** bascule filtre la liste des schémas créés avec des champs dont l’espace de noms est réservé à un seul jeu de données.
 
-![](../images/ui/explore/filter.png)
+![La variable [!UICONTROL Schémas] workspace [!UICONTROL Parcourir] avec le panneau filtres mis en surbrillance.](../images/ui/explore/filter.png)
 
-Lors de la mise en liste des ressources sur la variable **[!UICONTROL Classes]**, **[!UICONTROL Groupes de champs]** ou **[!UICONTROL Types de données]** onglets, vous pouvez sélectionner **[!UICONTROL Adobe]** pour afficher uniquement les ressources standard ou **[!UICONTROL Client]** pour afficher uniquement les ressources créées par votre organisation.
+Lors de la mise en liste des ressources sur la variable **[!UICONTROL Classes]**, **[!UICONTROL Groupes de champs]**, ou **[!UICONTROL Types de données]** onglets, vous pouvez sélectionner **[!UICONTROL Adobe]** pour afficher uniquement les ressources standard ou **[!UICONTROL Client]** pour afficher uniquement les ressources créées par votre organisation.
 
 ![](../images/ui/explore/filter-data-type.png)
 
@@ -42,11 +42,11 @@ Vous pouvez également utiliser la barre de recherche pour affiner davantage les
 
 Les ressources affichées dans les résultats de recherche sont triées d’abord par correspondances de titre, puis par correspondances de description. En retour, plus le nombre de correspondances de mot dans l’une de ces catégories est élevé, plus la ressource apparaît dans la liste.
 
-Une fois que vous avez trouvé la ressource à explorer, sélectionnez son nom dans la liste pour afficher sa structure dans la zone de travail.
+Une fois que vous avez trouvé la ressource que vous souhaitez explorer, sélectionnez son nom dans la liste pour afficher sa structure dans la zone de travail.
 
 ## Exploration d’une ressource XDM dans la zone de travail {#explore}
 
-Une fois que vous avez sélectionné une ressource, sa structure s’ouvre dans la zone de travail.
+Lorsque vous sélectionnez une ressource, sa structure s’ouvre dans la zone de travail.
 
 ![](../images/ui/explore/canvas.png)
 
@@ -66,7 +66,7 @@ Pour chaque champ affiché dans la zone de travail, son type de données corresp
 
 ![](../images/ui/explore/data-types.png)
 
-Tout type de données ajouté avec des crochets (`[]`) représente un tableau de ce type de données particulier. Par exemple, un type de données de **[!UICONTROL Chaîne]\[]** indique que le champ attend un tableau de valeurs de chaîne. Un type de données de **[!UICONTROL Élément de paiement]\[]** indique un tableau d’objets conforme à la variable [!UICONTROL Élément de paiement] type de données.
+Tout type de données ajouté avec des crochets (`[]`) représente un tableau de ce type de données particulier. Par exemple, un type de données **[!UICONTROL Chaîne]\[]** indique que le champ attend un tableau de valeurs de chaîne. Un type de données de **[!UICONTROL Élément de paiement]\[]** indique un tableau d’objets conforme à la variable [!UICONTROL Élément de paiement] type de données.
 
 Si un champ de tableau est basé sur un type d’objet, vous pouvez sélectionner son icône dans la zone de travail afin d’afficher les attributs attendus pour chaque élément de tableau.
 
@@ -86,7 +86,7 @@ Si le champ que vous inspectez est un champ d’énumération, le rail droit aff
 
 Lors de l’inspection des schémas qui contiennent des champs d’identité, ces champs sont répertoriés dans le rail de gauche sous la classe ou le groupe de champs qui les fournit au schéma. Sélectionnez le nom du champ d’identité dans le rail de gauche pour afficher le champ dans la zone de travail, quelle que soit la profondeur d’imbrication.
 
-Les champs d’identité sont mis en surbrillance dans la zone de travail avec une icône d’empreinte digitale (![Image d’empreinte digitale](../images/ui/explore/identity-symbol.png)). Si vous sélectionnez le nom du champ d’identité, vous pouvez afficher des informations supplémentaires, telles que la variable [namespace d’identité](../../identity-service/namespaces.md) et si le champ est ou non l’identité Principale du schéma.
+Les champs d’identité sont mis en surbrillance dans la zone de travail avec une icône d’empreinte digitale (![Image d’empreinte digitale](../images/ui/explore/identity-symbol.png)). Si vous sélectionnez le nom du champ d’identité, vous pouvez afficher des informations supplémentaires, telles que la variable [espace de noms d’identité](../../identity-service/namespaces.md) et si le champ est ou non l’identité principale du schéma.
 
 ![](../images/ui/explore/identity-field.png)
 
@@ -98,7 +98,7 @@ Les champs d’identité sont mis en surbrillance dans la zone de travail avec u
 
 Si vous examinez un schéma qui contient un champ de relation, le champ sera répertorié dans le rail de gauche sous **[!UICONTROL Relations]**. Sélectionnez le nom du champ de relation dans le rail de gauche pour afficher le champ dans la zone de travail, quelle que soit la profondeur d’imbrication.
 
-Les champs de relation sont également surlignés de manière unique dans la zone de travail, indiquant le nom du schéma de référence auquel le champ est lié. Si vous sélectionnez le nom du champ de relation, vous pouvez afficher l’espace de noms d’identité de l’identité Principale du schéma de référence dans le rail de droite.
+Les champs de relation sont également surlignés de manière unique dans la zone de travail, indiquant le nom du schéma de référence auquel le champ est lié. Si vous sélectionnez le nom du champ de relation, vous pouvez afficher l’espace de noms d’identité de l’identité principale du schéma de référence dans le rail de droite.
 
 ![](../images/ui/explore/relationship-field.png)
 
@@ -108,4 +108,4 @@ Les champs de relation sont également surlignés de manière unique dans la zon
 
 ## Étapes suivantes
 
-Ce document explique comment explorer les ressources XDM existantes dans l’interface utilisateur Experience Platform. Pour plus d’informations sur les différentes fonctionnalités de la variable [!UICONTROL Schémas] espace de travail et [!DNL Schema Editor], reportez-vous à la section [[!UICONTROL Schémas] présentation de workspace](./overview.md).
+Ce document explique comment explorer les ressources XDM existantes dans l’interface utilisateur Experience Platform. Pour plus d’informations sur les différentes fonctionnalités de la variable [!UICONTROL Schémas] espace de travail et [!DNL Schema Editor], voir [[!UICONTROL Schémas] présentation de workspace](./overview.md).
