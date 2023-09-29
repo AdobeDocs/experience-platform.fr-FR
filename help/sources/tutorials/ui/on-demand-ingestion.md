@@ -1,9 +1,9 @@
 ---
 title: Ingestion à la demande pour les flux de données de sources dans l’interface utilisateur
 description: Découvrez comment créer des flux de données à la demande pour vos connexions source à l’aide de l’interface utilisateur Experience Platform.
-source-git-commit: ce1e6c08d1e53346c11f9746cea524689f402031
+source-git-commit: cea12160656ba0724789db03e62213022bacd645
 workflow-type: tm+mt
-source-wordcount: '503'
+source-wordcount: '499'
 ht-degree: 11%
 
 ---
@@ -44,9 +44,9 @@ Configurez le planning de votre ingestion à la demande. Sélectionnez la variab
 
 | Configuration de la planification | Description |
 | --- | --- |
-| [!UICONTROL Heure de début de l’ingestion] | Heure de début planifiée en UTC du début du flux de données à la demande. |
-| [!UICONTROL Heure de début de la période] | Date et heure de début à partir desquelles les données seront extraites. |
-| [!UICONTROL Date et heure de fin de la période] | Date et heure de fin auxquelles les données seront extraites. |
+| [!UICONTROL Heure de début de l’ingestion] | Heure planifiée du début de l’exécution du flux à la demande. |
+| [!UICONTROL Heure de début de la période] | Date et heure de récupération des données au plus tôt. |
+| [!UICONTROL Date et heure de fin de la période] | Date et heure auxquelles les données seront récupérées. |
 
 Sélectionner **[!UICONTROL Planification]** et laissez quelques instants à votre flux de données à la demande pour se déclencher.
 
