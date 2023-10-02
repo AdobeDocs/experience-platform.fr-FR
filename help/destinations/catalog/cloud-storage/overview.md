@@ -3,9 +3,9 @@ keywords: destination de stockage dans le cloud;espace de stockage dans le cloud
 title: Présentation des destinations de stockage dans le cloud
 description: Adobe Experience Platform peut fournir vos audiences sous forme de fichiers de données à vos emplacements de stockage dans le cloud Amazon S3, AWS Kinesis, Azure Event Hubs ou SFTP.
 exl-id: d29f0a6e-b323-4f78-bbd0-dee2f1e0fedb
-source-git-commit: 5d318d8fa4207ece26a8b0a291d81907af029aed
+source-git-commit: 8b8abea65ee0448594113ca77f75b84293646146
 workflow-type: tm+mt
-source-wordcount: '385'
+source-wordcount: '384'
 ht-degree: 49%
 
 ---
@@ -26,9 +26,9 @@ Adobe Experience Platform prend en charge les exportations de données vers les 
 * [Connexion Amazon S3](amazon-s3.md)
 * [Connexion Azure Blob](azure-blob.md)
 * [Azure Data Lake Storage Gen2](adls-gen2.md)
-* [Azure Event Hubs Connexion ](azure-event-hubs.md)
-* [Data Landing Zone](data-landing-zone.md)
-* [Google Cloud Storage](google-cloud-storage.md)
+* [Azure Event Hubs Connexion](azure-event-hubs.md)
+* [Zone d’atterrissage des données](data-landing-zone.md)
+* [Google Cloud Storage](google-cloud-storage.md)
 * [Connexion SFTP](sftp.md)
 
 ## Se connecter à une nouvelle destination de stockage dans le cloud {#connect-destination}
@@ -67,7 +67,7 @@ Chemin du dossier dans votre emplacement de stockage : `acme/campaigns/2021/Lux
 
 Les destinations de stockage dans le cloud prennent en charge les types d’exportation suivants :
 * **Exportation basée sur les profils**. Cela signifie que vous exportez des détails sur les individus dans l’audience. Ces détails sont nécessaires à la personnalisation et peuvent inclure des attributs, des événements, des appartenances à l’audience, etc.
-* [!BADGE Version bêta]{type=Informative}**Exportation des jeux de données**. Cette fonctionnalité vous permet d’exporter des jeux de données entiers vers des destinations de stockage dans le cloud. [En savoir plus](/help/destinations/ui/export-datasets.md) à propos de la fonctionnalité.
+* **Exportation des jeux de données**. Cette fonctionnalité vous permet d’exporter des jeux de données entiers vers des destinations de stockage dans le cloud. [En savoir plus](/help/destinations/ui/export-datasets.md) à propos de la fonctionnalité.
 
 ## Étapes suivantes {#next-steps}
 

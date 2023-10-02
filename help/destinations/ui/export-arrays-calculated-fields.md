@@ -2,21 +2,21 @@
 title: (Version bêta) Utilisation de champs calculés pour exporter des tableaux dans des fichiers de schéma plats
 type: Tutorial
 description: Découvrez comment utiliser des champs calculés pour exporter des tableaux dans des fichiers de schéma plats de Real-Time CDP vers des destinations de stockage dans le cloud.
-badge: « Version bêta »
-source-git-commit: b4a18cdf434055be81dacbf19de4dd3e3f229d19
+badge: Version Beta
+exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
+source-git-commit: 8b8abea65ee0448594113ca77f75b84293646146
 workflow-type: tm+mt
-source-wordcount: '1278'
+source-wordcount: '1479'
 ht-degree: 2%
 
 ---
-
 
 # (Version bêta) Utilisation de champs calculés pour exporter des tableaux dans des fichiers de schéma plats {#use-calculated-fields-to-export-arrays-in-flat-schema-files}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_flat_files"
 >title="(Version bêta) Prise en charge des tableaux d’exportation"
->abstract="Exportez des tableaux simples de valeurs int, string ou booléennes de l’Experience Platform vers la destination de stockage dans le cloud souhaitée. Certaines restrictions s’appliquent. Consultez la documentation pour obtenir des exemples complets et des fonctions prises en charge."
+>abstract="Utilisez la variable **Ajouter un champ calculé** pour exporter des tableaux simples de valeurs int, string ou booléennes d’Experience Platform vers la destination de stockage dans le cloud souhaitée. Certaines restrictions s’appliquent. Consultez la documentation pour obtenir des exemples complets et des fonctions prises en charge."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html#examples" text="Exemples"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html#known-limitations" text="Limites connues"
 
@@ -24,12 +24,12 @@ ht-degree: 2%
 >
 >* La fonctionnalité d’exportation de tableaux par le biais de champs calculés est actuellement en version bêta. La documentation et les fonctionnalités peuvent changer.
 
-Découvrez comment exporter des tableaux à travers des champs calculés de Real-Time CDP dans des fichiers de schéma plats vers des destinations de stockage dans le cloud. Lisez ce document pour comprendre les cas d’utilisation activés par cette fonctionnalité.
+Découvrez comment exporter des tableaux à travers des champs calculés de Real-Time CDP dans des fichiers de schéma plats vers [destinations de stockage cloud](/help/destinations/catalog/cloud-storage/overview.md). Lisez ce document pour comprendre les cas d’utilisation activés par cette fonctionnalité.
 
 Obtenez des informations détaillées sur les champs calculés - ce qu’ils sont et pourquoi ils comptent. Lisez les pages liées ci-dessous pour une introduction aux champs calculés dans la préparation des données et pour plus d’informations sur toutes les fonctions disponibles :
 
 * [Guide et présentation de l’interface utilisateur](/help/data-prep/ui/mapping.md#calculated-fields)
-* [Fonctions de préparation des données](/help/data-prep/functions.md)
+* [Fonctions de la préparation des données](/help/data-prep/functions.md)
 
 >[!IMPORTANT]
 >
@@ -50,13 +50,13 @@ Notez les limites connues suivantes pour la version bêta de cette fonctionnalit
 
 ## Conditions préalables {#prerequisites}
 
-Progression de la [étapes d’activation pour les destinations de stockage dans le cloud](/help/destinations/ui/activate-batch-profile-destinations.md) et accédez au [mapping](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) étape .
+[Connexion](/help/destinations/ui/connect-destination.md) vers la destination de stockage dans le cloud souhaitée, effectuez les opérations suivantes : [étapes d’activation pour les destinations de stockage dans le cloud](/help/destinations/ui/activate-batch-profile-destinations.md) et accédez au [mapping](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) étape .
 
 ## Comment exporter des champs calculés {#how-to-export-calculated-fields}
 
 À l’étape de mappage du workflow d’activation pour les destinations de stockage dans le cloud, sélectionnez **[!UICONTROL (Version bêta) Ajouter un champ calculé]**.
 
-![Ajouter un champ calculé à exporter](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields.png)
+![Ajoutez un champ calculé en surbrillance dans l’étape de mappage du workflow d’activation par lots.](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields.png)
 
 Cela ouvre une fenêtre modale dans laquelle vous pouvez sélectionner des attributs que vous pouvez utiliser pour exporter des attributs hors d’Experience Platform.
 
@@ -64,25 +64,25 @@ Cela ouvre une fenêtre modale dans laquelle vous pouvez sélectionner des attri
 >
 >Seuls certains des champs de votre schéma XDM sont disponibles dans la variable **[!UICONTROL Champ]** vue. Vous pouvez voir des valeurs de chaîne et des tableaux de valeurs string, int et boolean. Par exemple, la variable `segmentMembership` n’est pas affiché, car il inclut d’autres valeurs de tableau.
 
-![Fenêtre modale 1](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields-2.png)
+![Fenêtre modale de la fonctionnalité de champ calculé sans fonction encore sélectionnée.](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields-2.png)
 
 Par exemple, utilisez la variable `join` sur la fonction `loyaltyID` comme illustré ci-dessous pour exporter un tableau d’identifiants de fidélité sous forme de chaîne concaténée avec un trait de soulignement dans un fichier CSV. Affichage [plus d’informations à ce sujet et d’autres exemples ci-dessous](#join-function-export-arrays).
 
-![Fenêtre modale 2](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields-3.png)
+![Fenêtre modale de la fonctionnalité de champ calculé avec la fonction de jointure sélectionnée.](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields-3.png)
 
 Sélectionner **[!UICONTROL Enregistrer]** pour conserver le champ calculé et revenir à l’étape de mappage.
 
-![Fenêtre modale 3](/help/destinations/assets/ui/export-arrays-calculated-fields/save-calculated-field.png)
+![Fenêtre modale de la fonctionnalité de champ calculé avec la fonction de jointure sélectionnée et le contrôle Enregistrer en surbrillance.](/help/destinations/assets/ui/export-arrays-calculated-fields/save-calculated-field.png)
 
 De retour à l’étape de mappage du workflow, renseignez la variable **[!UICONTROL Champ cible]** avec la valeur de l’en-tête de colonne que vous souhaitez pour ce champ dans les fichiers exportés.
 
-![Sélectionner le champ cible 1](/help/destinations/assets/ui/export-arrays-calculated-fields/fill-in-target-field.png)
+![Correspondance de l’étape avec le champ cible surligné.](/help/destinations/assets/ui/export-arrays-calculated-fields/fill-in-target-field.png)
 
 ![Sélectionner le champ cible 2](/help/destinations/assets/ui/export-arrays-calculated-fields/target-field-filled-in.png)
 
 Une fois prêt, sélectionnez **[!UICONTROL Suivant]** pour passer à l’étape suivante du workflow d’activation.
 
-![Sélectionner en regard de la procédure](/help/destinations/assets/ui/export-arrays-calculated-fields/select-next-to-proceed.png)
+![Etape de mappage avec le champ cible surligné et une valeur cible renseignée.](/help/destinations/assets/ui/export-arrays-calculated-fields/select-next-to-proceed.png)
 
 ## Fonction  prise en charge {#supported-functions}
 
@@ -115,20 +115,20 @@ Par exemple, vous pouvez combiner les champs XDM suivants comme indiqué dans la
 * `person.name.lastName` string
 * `personalEmail.address` string
 
-![Copie d’écran de mappage](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-join-function.png)
+![Exemple de mappage comprenant la fonction join .](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-join-function.png)
 
 Dans ce cas, votre fichier de sortie ressemble à ce qui suit. Notez comment les trois éléments du tableau sont concaténés en une seule chaîne à l’aide de la variable `_` caractère.
 
 ```
-`First_Name,Last_Name,Organization
-John,Doe,"Marketing_Sales_Finance"
+`First_Name,Last_Name,Personal_Email,Organization
+John,Doe,johndoe@acme.org, "Marketing_Sales_Finance"
 ```
 
 ### `iif` fonction d’exportation de tableaux {#iif-function-export-arrays}
 
-Utilisez la variable `iif` pour exporter des éléments d’un tableau sous certaines conditions. Par exemple, continuez avec la fonction `organzations` Objet de tableau situé au-dessus, vous pouvez créer une fonction conditionnelle simple comme `iif(organizations[0].equals("Marketing"), "isMarketing", "isNotMarketing")`.
+Utilisez la variable `iif` pour exporter des éléments d’un tableau sous certaines conditions. Par exemple, continuez avec la fonction `organizations` Objet de tableau situé au-dessus, vous pouvez créer une fonction conditionnelle simple comme `iif(organizations[0].equals("Marketing"), "isMarketing", "isNotMarketing")`.
 
-![Copie d’écran du mappage pour les première et dernière fonctions](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-iif-function.png)
+![Exemple de mappage comprenant la fonction iif.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-iif-function.png)
 
 Dans ce cas, votre fichier de sortie ressemble à ce qui suit. Dans ce cas, le premier élément du tableau est Marketing, la personne est donc membre du service marketing.
 
@@ -137,18 +137,33 @@ Dans ce cas, votre fichier de sortie ressemble à ce qui suit. Dans ce cas, le p
 John,Doe, johndoe@acme.org, "isMarketing"
 ```
 
+### `add_to_array` fonction d’exportation de tableaux {#add-to-array-function-export-arrays}
+
+Utilisez la variable `add_to_array` pour ajouter des éléments à un tableau exporté. Vous pouvez associer cette fonction à la fonction `join` fonction décrite plus haut.
+
+Si vous continuez avec la variable `organizations` Objet de tableau ci-dessus, vous pouvez écrire une fonction comme `source: join('_', add_to_array(organizations,"2023"))`, renvoyant les organisations dont une personne est membre en 2023.
+
+![Exemple de mappage comprenant la fonction add_to_array .](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-add-to-array-function.png)
+
+Dans ce cas, votre fichier de sortie ressemble à ce qui suit. Notez comment les trois éléments du tableau sont concaténés en une seule chaîne à l’aide de la variable `_` et 2023 sont également ajoutés à la fin de la chaîne.
+
+```
+`First_Name,Last_Name,Personal_Email,Organization_Member_2023
+John,Doe, johndoe@acme.org,"Marketing_Sales_Finance_2023"
+```
+
 ### `coalesce` fonction d’exportation de tableaux {#coalesce-function-export-arrays}
 
 Utilisez la variable `coalesce` pour accéder au premier élément non nul d’un tableau et l’exporter dans une chaîne.
 
-Par exemple, vous pouvez combiner les champs XDM suivants comme indiqué dans la capture d’écran du mappage à l’aide d’une `coalesce(subscriptions.hasPromotion)` pour renvoyer la première valeur true de false dans le tableau :
+Par exemple, vous pouvez combiner les champs XDM suivants comme indiqué dans la capture d’écran du mappage à l’aide d’une `coalesce(subscriptions.hasPromotion)` pour renvoyer la première `true` de `false` dans le tableau :
 
 * `"subscriptions.hasPromotion": [null, true, null, false, true]` tableau
 * `person.name.firstName` string
 * `person.name.lastName` string
 * `personalEmail.address` string
 
-![Copie d’écran de mappage pour la fonction coalesce](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-coalesce-function.png)
+![Exemple de mappage comprenant la fonction coalesce.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-coalesce-function.png)
 
 Dans ce cas, votre fichier de sortie ressemble à ce qui suit. Remarquez comment la première valeur non nulle `true` dans le tableau est exportée dans le fichier .
 
@@ -156,7 +171,6 @@ Dans ce cas, votre fichier de sortie ressemble à ce qui suit. Remarquez comment
 First_Name,Last_Name,hasPromotion
 John,Doe,true
 ```
-
 
 ### `size_of` fonction d’exportation de tableaux {#sizeof-function-export-arrays}
 
@@ -167,7 +181,7 @@ Par exemple, vous pouvez combiner les champs XDM suivants comme indiqué dans la
 * `"purchaseTime": ["1538097126","1569633126,"1601255526","1632791526","1664327526"]` tableau indiquant cinq heures d’achat distinctes par le client
 * `personalEmail.address` string
 
-![Copie d’écran de mappage de la fonction size_of](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-size-of-function.png)
+![Exemple de mappage comprenant la fonction size_of .](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-size-of-function.png)
 
 Dans ce cas, votre fichier de sortie ressemble à ce qui suit. Notez comment la deuxième colonne indique le nombre d’éléments dans le tableau, correspondant au nombre d’achats distincts effectués par le client.
 
@@ -180,9 +194,9 @@ johndoe@acme.org,"5"
 
 Vous pouvez accéder à un index d’un tableau pour exporter un seul élément du tableau. Par exemple, similaire à l’exemple ci-dessus pour la variable `size_of` , si vous souhaitez accéder à un produit spécifique et l’exporter uniquement la première fois qu’un client l’a acheté, vous pouvez utiliser `purchaseTime[0]` pour exporter le premier élément de l&#39;horodatage, `purchaseTime[1]` pour exporter le deuxième élément de l&#39;horodatage, `purchaseTime[2]` pour exporter le troisième élément de l’horodatage, etc.
 
-![Copie d’écran de mappage pour l’accès à l’index](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-index.png)
+![Exemple de mappage montrant comment accéder à un élément d’un tableau.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-index.png)
 
-Dans ce cas, votre fichier de sortie se présente comme suit :
+Dans ce cas, votre fichier de sortie ressemble à ce qui suit, en exportant la première fois que le client a effectué un achat :
 
 ```
 `Personal_Email,First_Purchase
@@ -193,9 +207,9 @@ johndoe@acme.org,"1538097126"
 
 Utilisez la variable `first` et `last` pour exporter le premier ou le dernier élément d’un tableau. Par exemple, continuez avec la fonction `purchaseTime` avec plusieurs horodatages des exemples précédents, vous pouvez les utiliser dans des fonctions pour exporter la première ou la dernière heure d’achat effectuée par une personne.
 
-![Copie d’écran du mappage pour les première et dernière fonctions](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-first-last-functions.png)
+![Exemple de mappage comprenant la première et la dernière fonctions.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-first-last-functions.png)
 
-Dans ce cas, votre fichier de sortie se présente comme suit :
+Dans ce cas, votre fichier de sortie ressemble à ce qui suit, en exportant la première et la dernière fois que le client a effectué un achat :
 
 ```
 `Personal_Email,First_Purchase, Last_Purchase
@@ -207,6 +221,3 @@ johndoe@acme.org,"1538097126","1664327526"
 Outre les fonctions spécifiques à l’exportation de tableaux ou d’éléments à partir d’un tableau, vous pouvez utiliser des fonctions de hachage pour hacher des attributs. Par exemple, si vous disposez d’informations d’identification personnelle dans les attributs, vous pouvez hacher ces champs lors de leur exportation.
 
 Vous pouvez hacher directement des valeurs de chaîne, par exemple `md5(personalEmail.address)`. Si vous le souhaitez, vous pouvez également hacher des éléments individuels des champs de tableau, comme ceci : `md5(purchaseTime[0])`
-
-
-
