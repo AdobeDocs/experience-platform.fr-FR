@@ -1,10 +1,11 @@
 ---
 title: Atteindre et acquérir une nouvelle clientèle à l’aide des cas d’utilisation de prospection
 description: Découvrez comment atteindre et acquérir une nouvelle clientèle à l’aide de cas d’utilisation de prospection activés par la prise en charge des données des partenaires dans Real-Time CDP.
-source-git-commit: b4a18cdf434055be81dacbf19de4dd3e3f229d19
+exl-id: b9e7b3af-2a13-4904-bd12-e3ed05a1988e
+source-git-commit: da7a53c1e4accdacfa55e4022c1b499f70aab8fa
 workflow-type: tm+mt
-source-wordcount: '1953'
-ht-degree: 96%
+source-wordcount: '1960'
+ht-degree: 95%
 
 ---
 
@@ -207,7 +208,11 @@ En savoir plus sur [audiences prospects](/help/segmentation/ui/prospect-audience
 
 ### Activer les profils de prospects vers des destinations {#activate-to-destinations}
 
-Utilisez les audiences de prospects en les exportant vers des destinations. Actuellement, seules certaines destinations, telles qu’[Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md) ou la destination [!BADGE Alpha]{type=Informative}[LiveRamp](/help/destinations/catalog/advertising/liveramp-onboarding.md), prennent en charge l’activation des destinations pour les profils de prospects.
+Utilisez les audiences de prospects en les exportant vers des destinations. Actuellement, seules certaines destinations de stockage dans le cloud prennent en charge l’activation des profils de prospect.
+
+![Destinations qui prennent en charge les audiences de prospects.](/help/destinations/assets/ui/activate-prospect-audiences/data-types-filter.png)
+
+[En savoir plus](/help/destinations/ui/activate-prospect-audiences.md) à propos de l’activation des prospects vers les destinations de stockage dans le cloud.
 
 ## Autres cas d’utilisation réalisés grâce à la prise en charge des données des partenaires {#other-use-cases}
 

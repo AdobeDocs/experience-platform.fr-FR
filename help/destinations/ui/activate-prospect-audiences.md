@@ -2,13 +2,13 @@
 title: Activer les audiences de prospects vers des destinations
 type: Tutorial
 description: Découvrez comment activer les audiences de prospects vers les destinations
-source-git-commit: 384faa13154386ef2578da4c20ab47f171aefeda
+exl-id: 3e034a14-09d0-4b08-b171-5afb62ae4b62
+source-git-commit: fdb9d7b168d6323fddaab1ac7abc44d3a390afea
 workflow-type: tm+mt
 source-wordcount: '620'
 ht-degree: 28%
 
 ---
-
 
 # Activation des audiences de prospects
 
@@ -22,7 +22,7 @@ Cet article explique le workflow requis pour l’exportation [audiences prospect
 
 Accédez à **[!UICONTROL Connexions]** > **[!UICONTROL Destinations]**, puis sélectionnez l’onglet **[!UICONTROL Catalogue]**. Utilisez la variable **[!UICONTROL Types de données]** filtrer et sélectionner **[!UICONTROL Perspectives]** pour voir les destinations qui prennent en charge l’activation des audiences de prospects. Actuellement, l’exportation d’audiences de prospects est disponible uniquement pour les destinations de stockage dans le cloud.
 
-![Destinations qui prennent en charge les exportations de jeux de données](/help/destinations/assets/ui/activate-prospect-audiences/data-types-filter.png)
+![Destinations qui prennent en charge les audiences de prospects.](/help/destinations/assets/ui/activate-prospect-audiences/data-types-filter.png)
 
 ## Conditions préalables {#prerequisites}
 
