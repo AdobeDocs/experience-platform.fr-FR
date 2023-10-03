@@ -1,10 +1,11 @@
 ---
 title: Complémenter les profils propriétaires avec des attributs fournis par les partenaires
 description: Découvrez comment compléter les profils propriétaires avec des attributs de partenaires de données de confiance pour améliorer vos bases de données, obtenir de nouvelles informations sur votre base de clientes et de clients et optimiser l’audience.
-source-git-commit: b4a18cdf434055be81dacbf19de4dd3e3f229d19
+exl-id: ee21b988-88f9-4c8e-bd82-7fc55c37ec24
+source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
 workflow-type: tm+mt
 source-wordcount: '1110'
-ht-degree: 95%
+ht-degree: 90%
 
 ---
 
@@ -12,7 +13,7 @@ ht-degree: 95%
 
 >[!AVAILABILITY]
 >
->* Cette fonctionnalité est disponible pour les clientes et clients qui disposent d’une licence Real-Time CDP (App Service), Adobe Experience Platform Activation, Real-time CDP, Real-Time CDP Prime et Real-Time CDP Ultimate. Consultez la [description des produits](https://helpx.adobe.com/fr/legal/product-descriptions.html) pour en savoir plus sur ces packages et contactez votre représentant ou représentante Adobe pour obtenir plus d’informations.
+>* Cette fonctionnalité est disponible pour les clients qui disposent d’une licence Real-Time CDP (App Service), Adobe Experience Platform Activation, Real-Time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate. Consultez la [description des produits](https://helpx.adobe.com/fr/legal/product-descriptions.html) pour en savoir plus sur ces packages et contactez votre représentant ou représentante Adobe pour obtenir plus d’informations.
 
 Complétez les profils propriétaires avec les attributs des partenaires de données de confiance pour améliorer votre base de données, obtenir de nouvelles informations sur votre base de clientes et clients et optimiser l’audience.
 
@@ -24,7 +25,7 @@ Lorsque vous envisagez de compléter vos propres profils propriétaires avec des
 
 * Pensez à l’emplacement où la liste d’audiences sera exportée à partir de Real-Time CDP, en vue du partage avec le fournisseur de données. Cet emplacement doit prendre en charge l’exportation de fichiers.
 * Quels sont les identifiants attendus par le fournisseur de données pour qu’il puisse ajouter des attributs supplémentaires ?
-* Comment le fichier contenant les attributs fournis par le partenaire sera-t-il ingéré à nouveau dans Real-time CDP ? Par exemple, les fichiers peuvent être ingérés par le biais des connecteurs source d’espaces de stockage tels qu’[Amazon S3](/help/sources/connectors/cloud-storage/s3.md) ou [SFTP](/help/sources/connectors/cloud-storage/sftp.md).
+* Comment le fichier contenant les attributs fournis par le partenaire sera-t-il réingéré dans Real-Time CDP ? Par exemple, les fichiers peuvent être ingérés par le biais des connecteurs source d’espaces de stockage tels qu’[Amazon S3](/help/sources/connectors/cloud-storage/s3.md) ou [SFTP](/help/sources/connectors/cloud-storage/sftp.md).
 * Quelle est la cadence à laquelle vous prévoyez que les attributs fournis par les partenaires soient réintroduits dans Real-Time CDP et actualisés ?
 
 >[!WARNING]
@@ -94,7 +95,7 @@ Au cours de cette étape, réfléchissez également à la manière dont votre mo
 
 ### Exportez les audiences que vous souhaitez enrichir en saisissant des informations d’identification personnelles (PII) ou hachées {#export-audiences}
 
-Exportez les audiences que le partenaire doit enrichir. Utilisez les destinations d’espaces de stockage fournies par Real-time CDP, telles qu’Amazon S3 ou SFTP. Consultez la documentation suivante pour terminer cette étape :
+Exportez les audiences que le partenaire doit enrichir. Utilisez les destinations de stockage dans le cloud fournies par Real-Time CDP, telles qu’Amazon S3 ou SFTP. Consultez la documentation suivante pour terminer cette étape :
 
 * Documentation de la [destination Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md)
 * Documentation de la [destination SFTP](/help/destinations/catalog/cloud-storage/sftp.md)

@@ -2,14 +2,14 @@
 solution: Experience Platform
 title: Vue d’ensemble des playbooks de cas d’utilisation
 description: Découvrez comment utiliser la fonction des playbooks de cas d’utilisation dans Experience Platform pour commencer à utiliser divers cas d’utilisation marketing
-badgeBeta: label="Beta" type="Informative"
-source-git-commit: 896ca002b34e79bd464467011875a54acd5c187c
-workflow-type: ht
-source-wordcount: '400'
-ht-degree: 100%
+badgeBeta: label="Version Beta" type="Informative"
+exl-id: 9c5c4f61-ea99-4f54-9b77-d486be29813c
+source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
+workflow-type: tm+mt
+source-wordcount: '401'
+ht-degree: 88%
 
 ---
-
 
 # (Version bêta) Vue d’ensemble des playbooks de cas d’utilisation
 
@@ -41,11 +41,11 @@ Si vous sélectionnez un playbook Real-Time CDP, votre objectif peut être de g
 
 Si vous sélectionnez un playbook Adobe Journey Optimizer, votre objectif peut être de créer un parcours client dans votre produit et d’envoyer des messages pertinents à vos clients et clientes.
 
-Créez une instance d’un playbook pour générer des ressources spécifiques telles que des schémas, des segments ou des parcours adaptés à votre cas d’utilisation et réutilisables dans Experience Platform. L’objectif de ces objets est de vous aider à comprendre toutes les ressources requises pour mettre en œuvre votre cas d’utilisation spécifique. Ils ne contiennent aucune donnée et sont créés sur des sandbox de développement. Commencez à utiliser ces ressources ou apportez-y des modifications avant de les utiliser et de les partager avec votre équipe sur Real-Time CDP ou Journey Optimizer.
+Créez une instance d’un playbook pour générer des ressources spécifiques telles que des schémas, des segments ou des parcours adaptés à votre cas d’utilisation et réutilisables dans Experience Platform. L’objectif de ces objets est de vous aider à comprendre toutes les ressources requises pour mettre en œuvre votre cas d’utilisation spécifique. Ils ne contiennent aucune donnée et sont créés sur des sandbox de développement. Commencez à utiliser ces ressources ou apportez des modifications avant de les utiliser et partagez-les avec votre équipe dans Real-Time CDP ou Journey Optimizer.
 
 ## Disponibilité
 
-Certains [!UICONTROL Playbooks de cas d’utilisation] sont adaptés aux cas d’utilisation de Real-time CDP, tandis que d’autres sont mieux adaptés aux clients ou clientes utilisant Journey Optimizer. Parcourez le catalogue pour trouver les playbooks les mieux adaptés à votre produit et à votre cas d’utilisation.
+Certains [!UICONTROL Cas d’utilisation des classeurs] sont adaptés aux cas d’utilisation de Real-Time CDP, tandis que d’autres sont mieux adaptés aux clients utilisant Journey Optimizer. Parcourez le catalogue pour trouver les playbooks les mieux adaptés à votre produit et à votre cas d’utilisation.
 
 ## Guides d’interface utilisateur
 

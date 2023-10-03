@@ -1,11 +1,11 @@
 ---
 title: Notes de mise à jour d’Adobe Experience Platform - Avril 2023
 description: Les notes de mise à jour d’avril 2023 pour Adobe Experience Platform.
-exl-id: 8b8fa810-d301-43c1-98df-10d3903f3147
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
-workflow-type: ht
+exl-id: 7b501467-99a7-4aee-ae86-66c851250ecf
+source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
+workflow-type: tm+mt
 source-wordcount: '2084'
-ht-degree: 100%
+ht-degree: 98%
 
 ---
 
@@ -91,7 +91,7 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 | ----------- | ----------- |
 | Surveillance du flux de données pour les destinations [!DNL Custom Personalization] et [!DNL Adobe Commerce] | <p> Vous pouvez désormais afficher les mesures d’activation pour les connexions [Adobe Commerce](/help/destinations/catalog/personalization/adobe-commerce.md), [Personnalisation personnalisée](../../destinations/catalog/personalization/custom-personalization.md) et [Personnalisation avec les attributs](../../destinations/catalog/personalization/custom-personalization.md). </p> <p>![Image Adobe Commerce](/help/destinations/assets/common/adobe-commerce-metrics.png "Mesures Adobe Commerce"){width="100" zoomable="yes"}</p>  Voir [Surveillance des flux de données dans l’espace de travail des destinations](../../dataflows/ui/monitor-destinations.md#monitor-dataflows-in-the-destinations-workspace) pour plus d’informations. |
 | Nouveau champ **[!UICONTROL Ajouter un identifiant de segment au nom du segment]** pour les destinations [!DNL Google Ad Manager] et [!DNL Google Ad Manager 360] | <p>Vous pouvez à présent faire en sorte que le nom du segment dans [[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md#parameters) et [[!DNL Google Ad Manager 360]](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) inclue l’identifiant du segment d’Experience Platform, comme suit : `Segment Name (Segment ID)`.</p><p>![Ajouter une image d’identifiant de segment](/help/destinations/assets/common/append-segment-id-to-segment-name.png "Nouveau champ Ajouter un identifiant de segment au nom du segment "){width="100" zoomable="yes"}</p> |
-| Renvois d’audience planifiés | <p>Pour la destination [[!DNL Google Display & Video 360]](/help/destinations/catalog/advertising/google-dv360.md#specifics), l’activation des renvois d’audience vers la destination est planifiée 24 à 48 heures après le premier mappage d’un segment à une connexion de destination. Cette mise à jour répond à la politique de Google consistant à attendre 24 heures avant d’ingérer des données. Elle améliore les taux de correspondance entre Real-Time CDP et [!DNL Google Display & Video 360].</p> <p>Notez qu’il s’agit d’une configuration de serveur principal applicable uniquement à cette destination et qui n’est liée à aucune option de planification configurable par le client ou la cliente dans l’interface utilisateur.</p> |
+| Renvois d’audience planifiés | <p>Pour la destination [[!DNL Google Display & Video 360]](/help/destinations/catalog/advertising/google-dv360.md#specifics), l’activation des renvois d’audience vers la destination est planifiée 24 à 48 heures après le premier mappage d’un segment à une connexion de destination. Cette mise à jour répond à la stratégie de Google consistant à attendre 24 heures avant d’ingérer des données et améliorera les taux de correspondance entre Real-Time CDP et [!DNL Google Display & Video 360].</p> <p>Notez qu’il s’agit d’une configuration de serveur principal applicable uniquement à cette destination et qui n’est liée à aucune option de planification configurable par le client ou la cliente dans l’interface utilisateur.</p> |
 
 {style="table-layout:auto"}
 

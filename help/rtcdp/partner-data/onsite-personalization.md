@@ -1,10 +1,11 @@
 ---
 title: Utiliser la reconnaissance des visiteurs et visiteuses par les partenaires pour personnaliser les expériences sur site
 description: Découvrez comment utiliser la reconnaissance des visiteurs et visiteuses par les partenaires pour personnaliser les expériences sur site de vos visiteurs et visiteuses.
-source-git-commit: b4a18cdf434055be81dacbf19de4dd3e3f229d19
+exl-id: 99677988-1df8-47b1-96b1-0ef6db818a1d
+source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
 workflow-type: tm+mt
 source-wordcount: '2548'
-ht-degree: 98%
+ht-degree: 97%
 
 ---
 
@@ -12,7 +13,7 @@ ht-degree: 98%
 
 >[!AVAILABILITY]
 >
->Cette fonctionnalité est disponible pour les clientes et clients qui disposent d’une licence Real-Time CDP (App Service), Adobe Experience Platform Activation, Real-time CDP, Real-Time CDP Prime et Real-Time CDP Ultimate. Consultez la [description des produits](https://helpx.adobe.com/fr/legal/product-descriptions.html) pour en savoir plus sur ces packages et contactez votre représentant ou représentante Adobe pour obtenir plus d’informations.
+>Cette fonctionnalité est disponible pour les clients qui disposent d’une licence Real-Time CDP (App Service), Adobe Experience Platform Activation, Real-Time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate. Consultez la [description des produits](https://helpx.adobe.com/fr/legal/product-descriptions.html) pour en savoir plus sur ces packages et contactez votre représentant ou représentante Adobe pour obtenir plus d’informations.
 
 Découvrez comment utiliser la reconnaissance par les partenaires pour offrir des expériences personnalisées aux visiteurs et visiteuses de vos propriétés web. Utilisez ce tutoriel pour comprendre la séquence d’implémentation de divers éléments dans les solutions Experience Platform et autres solutions Experience Cloud, afin d’afficher une expérience personnalisée pour les visiteurs et visiteuses authentifiés et non authentifiés.
 

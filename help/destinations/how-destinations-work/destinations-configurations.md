@@ -2,10 +2,10 @@
 title: Paramètres d’exportation configurables et communs des destinations
 description: Découvrez quels paramètres d’exportation des destinations sont configurables au niveau de la destination et lesquels sont fixes et impossibles à modifier.
 exl-id: 3f4706cb-6d51-4567-81f6-5b2bf167b576
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
-workflow-type: ht
+source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
+workflow-type: tm+mt
 source-wordcount: '845'
-ht-degree: 100%
+ht-degree: 93%
 
 ---
 
@@ -13,9 +13,9 @@ ht-degree: 100%
 
 Lorsque vous réfléchissez au comportement de l’exportation vers des destinations Experience Platform, vous devez tenir compte de trois niveaux distincts sur lesquels les configurations agissent.
 
-* À un premier niveau, certains des paramètres liés au comportement d’exportation de profils et aux paramètres de configuration sont communs à toutes les destinations appartenant à un type de destination. Ces paramètres se rapportent à ce qui déclenche une exportation de destination et à ce qui est inclus dans une exportation et ne peut pas être modifié par les développeurs et développeuses de destinations ou les utilisateurs et utilisatrices de Real-time CDP.
+* À un premier niveau, certains des paramètres liés au comportement d’exportation de profils et aux paramètres de configuration sont communs à toutes les destinations appartenant à un type de destination. Ces paramètres se rapportent à ce qui déclenche une exportation de destination et à ce qui est inclus dans une exportation et ne peut pas être modifié par les développeurs de destination ou les utilisateurs de Real-Time CDP.
 * À un deuxième niveau, certains paramètres peuvent être personnalisés à un niveau de destination par le développeur ou la développeuse de destinations lors de la création de destinations à l’aide de Destination SDK.
-* À un troisième niveau, il existe des paramètres de configuration que les utilisateurs et utilisatrices de Real-time CDP peuvent définir dans les workflows d’activation.
+* À un troisième niveau, il existe des paramètres de configuration que les utilisateurs de Real-Time CDP peuvent définir dans les workflows d’activation.
 
 ![Diagramme montrant l’interaction entre les paramètres d’exportation communs et configurables pour les destinations](/help/destinations/assets/how-destinations-work/profile-export-behavior-diagram.png)
 
@@ -25,7 +25,7 @@ Cette page fournit des liens vers tous les paramètres d’exportation communs e
 
 Le comportement d’exportation de destination est cohérent sur toutes les destinations appartenant à un type de destination concernant *ce qui déclenche une exportation de destination* et *ce qui est inclus dans les exportations de destination*. Les exportations de destination sont déclenchées par des notifications que le service de destinations reçoit du [service Real-time Customer Profile en amont](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/platform-applications.html?lang=fr#adobe-experience-platform-%26-applications-detailed-architecture-diagram).
 
-Ce qui est inclus dans les exportations de destination varie légèrement d’un type de destination à l’autre. En savoir plus sur les [modèles communs de comportement d’exportation par type de destination](/help/destinations/how-destinations-work/profile-export-behavior.md). Ces paramètres ne peuvent pas être modifiés par les développeurs et les développeuses de destination ou les utilisateurs et utilisatrices de Real-time CDP.
+Ce qui est inclus dans les exportations de destination varie légèrement d’un type de destination à l’autre. En savoir plus sur les [modèles communs de comportement d’exportation par type de destination](/help/destinations/how-destinations-work/profile-export-behavior.md). Ces paramètres ne peuvent pas être modifiés par les développeurs de destination ou les utilisateurs de Real-Time CDP.
 
 ## Paramètres d’exportation personnalisables par les développeurs et développeuses de destinations {#customizable-settings-by-destination-developers}
 

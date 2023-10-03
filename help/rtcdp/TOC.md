@@ -4,10 +4,10 @@ solution: Real-Time Customer Data Platform
 audience: user
 user-guide-title: Guide de Real-Time Customer Data Platform
 user-guide-description: Regroupez les données connues et anonymes provenant de plusieurs entreprises sources afin de créer des profils clients, puis des segments d’audience à partir de ces profils et enfin d’activer ces segments vers des destinations tierces.
-source-git-commit: 7a977f92a81dd27c99ebe8bdf7be1a7d0425ad2a
+source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
 workflow-type: tm+mt
 source-wordcount: '250'
-ht-degree: 88%
+ht-degree: 94%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 88%
       * [Exemple de cas d’utilisation](./b2b-use-case.md)
       * [Tutoriel de bout en bout](./b2b-tutorial.md)
       * [Barrières de sécurité de l’édition B2B de Real-Time CDP](b2b-guardrails.md)
-* Audience Manager et Real-Time CDP {#evolution}
+* Audience Manager et Real-Time CDP {#evolution}
    * [Évolution à partir d’Audience Manager](aam-to-rtcdp.md)
 * Profils de compte {#account}
    * [Présentation des profils de compte](accounts/account-profile-overview.md)
@@ -68,8 +68,8 @@ ht-degree: 88%
    * Cas d’utilisation du réengagement intelligent {#intelligent-re-engagement}
       * [Réengager intelligemment vos clients](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md)
    * Cas d’utilisation des données du partenaire {#partner-data}
-      * [Interagir et acquérir de nouveaux clients grâce à l’assistance clientèle](/help/rtcdp/partner-data/prospecting.md)
-      * [Compléter les profils propriétaires avec les attributs fournis par les partenaires](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
-      * [Utiliser la reconnaissance des visiteurs par les partenaires pour personnaliser les expériences sur site](/help/rtcdp/partner-data/onsite-personalization.md)
+      * [Atteindre et acquérir une nouvelle clientèle à l’aide de la prise en charge de la prospection](/help/rtcdp/partner-data/prospecting.md)
+      * [Complémenter les profils propriétaires avec des attributs fournis par le partenaire](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
+      * [Utiliser la reconnaissance des visiteurs et visiteuses par les partenaires pour personnaliser les expériences sur site](/help/rtcdp/partner-data/onsite-personalization.md)
 * [Notes de mise à jour d’Experience Platform](https://docs.adobe.com/content/help/fr-FR/experience-platform/release-notes/latest.html)
 * [Glossaire Experience Platform](https://docs.adobe.com/content/help/fr-FR/experience-platform/landing/glossary.html)

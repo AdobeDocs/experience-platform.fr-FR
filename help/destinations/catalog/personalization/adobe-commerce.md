@@ -2,7 +2,7 @@
 title: Connecteur de destination Adobe Commerce
 description: Découvrez comment les marchands Adobe Commerce et Real-Time CDP peuvent personnaliser l’expérience d’achat en proposant du contenu et des promotions de site hautement pertinents, personnalisés en fonction des audiences client créées et gérées dans Real-Time CDP.
 exl-id: f7aa3c6c-ba7a-440c-a4d7-5d7b50dbbc0d
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
 workflow-type: tm+mt
 source-wordcount: '720'
 ht-degree: 59%
@@ -13,13 +13,13 @@ ht-degree: 59%
 
 ## Vue d’ensemble {#overview}
 
-Le [!DNL Adobe Commerce] Le connecteur de destination permet de sélectionner une ou plusieurs audiences Real-Time CDP à activer dans votre [!DNL Adobe Commerce] pour offrir une expérience personnalisée dynamique à vos clients. Within [!DNL Adobe Commerce], vous pouvez ensuite sélectionner ces audiences Real-Time CDP pour personnaliser les offres uniques du panier, telles que &quot;Acheter 2 et 1 gratuitement&quot;. Vous pouvez également afficher des bannières à forte identification et modifier le prix des produits au moyen d’offres promotionnelles, toutes personnalisées en fonction des audiences Adobe Real-Time CDP.
+La variable [!DNL Adobe Commerce] Le connecteur de destination permet de sélectionner une ou plusieurs audiences Real-Time CDP à activer dans votre [!DNL Adobe Commerce] pour offrir une expérience personnalisée dynamique à vos clients. Within [!DNL Adobe Commerce], vous pouvez ensuite sélectionner ces audiences Real-Time CDP pour personnaliser les offres uniques du panier, telles que &quot;Acheter 2 et 1 gratuitement&quot;. Vous pouvez également afficher des bannières à forte identification et modifier le prix des produits au moyen d’offres promotionnelles, toutes personnalisées en fonction des audiences Adobe Real-Time CDP.
 
 ## Conditions préalables {#prerequisites}
 
 Ce connecteur est disponible dans le catalogue des destinations pour les clients qui ont acheté Real-Time CDP Prime ou Ultimate et Adobe Commerce.
 
-Pour utiliser cette connexion de destination, vérifiez que vous avez accès aux éléments suivants :
+Pour utiliser cette connexion de destination, vérifiez que vous avez accès aux :
 
 - [Adobe Experience Platform](https://experience.adobe.com/)
 - [Adobe Developer Console](https://developer.adobe.com/developer-console/docs/guides/getting-started/). Avec l’accès à Developer Console, vous pouvez afficher les informations de compte de service et d’identification nécessaires pour [terminer la configuration](https://experienceleague.adobe.com/docs/commerce-admin/customers/customers-menu/audience-activation.html#configure-the-extension) de l’extension dans Adobe Commerce.
@@ -53,7 +53,7 @@ Pendant la [configuration](../../ui/connect-destination.md) de cette destination
 - **[!UICONTROL Nom]** : renseignez le nom de votre choix pour cette destination.
 - **[!UICONTROL Description]** : saisissez une description pour votre destination. Vous pouvez, par exemple, mentionner la campagne pour laquelle vous utilisez cette destination. Ce champ est facultatif.
 - **[!UICONTROL Alias d’intégration]** : cette valeur est envoyée au SDK web Experience Platform sous forme de nom d’objet JSON.
-- **[!UICONTROL Identifiant du flux de données]**: Cela détermine la banque de données de collecte de données qui contient les audiences incluses dans la réponse à la page. Le menu déroulant affiche uniquement les flux de données pour lesquels la configuration de destination est activée. Voir [Configurer un flux de données](../../../datastreams/overview.md) pour plus d’informations.
+- **[!UICONTROL Identifiant du flux de données]**: détermine la chaîne de données de collecte de données qui contient les audiences incluses dans la réponse à la page. Le menu déroulant affiche uniquement les flux de données pour lesquels la configuration de destination est activée. Voir [Configurer un flux de données](../../../datastreams/overview.md) pour plus d’informations.
 
 ### Activer les alertes {#enable-alerts}
 
@@ -75,7 +75,7 @@ Maintenant que vous avez configuré la variable [!DNL Commerce] destination dans
 
 ## Valider l’activation de l’audience dans Commerce {#exported-data}
 
-Après avoir activé les audiences Real-Time CDP sur votre [!DNL Adobe Commerce] vous verrez ces audiences disponibles lorsque vous accédez au _Administration_ barre latérale, puis accédez à **[!UICONTROL Clients]** > **[!UICONTROL Audience CDP en temps réel]**.
+Après avoir activé les audiences Real-Time CDP sur votre [!DNL Adobe Commerce] vous verrez ces audiences disponibles lorsque vous accédez au _Administration_ barre latérale, puis accédez à **[!UICONTROL Clients]** > **[!UICONTROL Audience Real-Time CDP]**.
 
 ![Tableau de bord des audiences Real-Time CDP](../../assets/catalog/personalization/adobe-commerce/audience-library.png)
 

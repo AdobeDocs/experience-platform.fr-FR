@@ -2,14 +2,14 @@
 solution: Experience Platform
 title: Trouver le bon playbook
 description: Découvrez le playbook approprié pour votre cas d’utilisation.
-badgeBeta: label="Beta" type="Informative"
-source-git-commit: 51e4a77472ccb560dbfa5f56011ce50932d87b64
-workflow-type: ht
-source-wordcount: '740'
-ht-degree: 100%
+badgeBeta: label="Version Beta" type="Informative"
+exl-id: 3dae6ad6-adb3-4606-ad63-c0d4ef6beeba
+source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
+workflow-type: tm+mt
+source-wordcount: '741'
+ht-degree: 96%
 
 ---
-
 
 # (Version Beta) Découvrez le playbook approprié.
 
@@ -23,7 +23,7 @@ Pour utiliser un playbook, accédez à **[!UICONTROL Playbooks de cas d’utilis
 
 Utilisez la fenêtre de recherche et les filtres disponibles sur la page pour trouver le playbook approprié à votre cas d’utilisation.
 
-Vous pouvez, par exemple, filtrer les playbooks que vous utilisez en fonction de l’étape dans l’entonnoir marketing que vous souhaitez cibler : conversion, engagement ou fidélisation. Vous pouvez également filtrer les playbooks affichés selon le secteur dans lequel vous vous trouvez ou le droit au produit auquel vous avez accès : Adobe Journey Optimizer ou Real-time CDP.
+Vous pouvez, par exemple, filtrer les playbooks que vous utilisez en fonction de l’étape dans l’entonnoir marketing que vous souhaitez cibler : conversion, engagement ou fidélisation. Vous pouvez également filtrer les playbooks affichés selon le secteur dans lequel vous vous trouvez ou le droit au produit auquel vous avez accès : Adobe Journey Optimizer ou Real-Time CDP.
 
 ![Filtrer les playbooks par entonnoir marketing, secteur ou produit](/help/use-case-playbooks/assets/playbooks/ui-guide/filter-by-funnel-industry-product.gif)
 

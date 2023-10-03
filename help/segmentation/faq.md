@@ -1,13 +1,13 @@
 ---
 title: Questions fréquentes sur les audiences
 description: Découvrez les réponses aux questions fréquentes sur les audiences et d’autres concepts liés à la segmentation.
-source-git-commit: 9a72d85bfb592012b36826135e24d28983f92e40
+exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
+source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
 workflow-type: tm+mt
 source-wordcount: '1935'
 ht-degree: 52%
 
 ---
-
 
 # Questions fréquentes
 
@@ -140,7 +140,7 @@ Pour en savoir plus sur le créateur de segments, veuillez lire le [Guide du cr�
 
 ### Puis-je envoyer des audiences de la composition d’audience à toutes les destinations et tous les canaux en aval ?
 
-À ce stade, non. Pour l’instant, vous pouvez utiliser les audiences de la composition d’audience dans les campagnes Adobe Journey Optimizer et les destinations Real-time CDP. Les parcours Adobe Journey Optimizer seront pris en charge dans une version ultérieure.
+À ce stade, non. Actuellement, vous pouvez utiliser les audiences de la composition de l’audience dans les campagnes Adobe Journey Optimizer et les destinations Real-Time CDP. Les parcours Adobe Journey Optimizer seront pris en charge dans une version ultérieure.
 
 ### Existe-t-il des barrières de sécurité qui limitent le nombre de compositions ?
 

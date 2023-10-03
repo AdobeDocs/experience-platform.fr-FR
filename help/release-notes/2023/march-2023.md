@@ -2,10 +2,10 @@
 title: Notes de mise à jour d’Adobe Experience Platform - Mars 2023
 description: Les notes de mise à jour de mars 2023 pour Adobe Experience Platform.
 exl-id: 3f4d764a-77cd-4e4a-ae11-e97a23006a53
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
 workflow-type: tm+mt
 source-wordcount: '2206'
-ht-degree: 86%
+ht-degree: 85%
 
 ---
 
@@ -50,7 +50,7 @@ Adobe Experience Platform fournit une suite de technologies qui vous permetten
 | Nouveau workflow de démarrage rapide pour l’API Meta Conversions (Beta) | Accédez aux nouveaux workflows de démarrage rapide sous « Prise en main » à partir de l’écran d’accueil Collecte de données. Le [workflow de démarrage rapide pour l’API Meta Conversions](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/meta/overview.html?lang=fr#quick-start) permet aux clientes et clients de collecter et de transférer rapidement des données d’événement côté serveur vers les métadonnées pour les conversions publicitaires en quelques étapes simples. |
 | Nouveau workflow de démarrage rapide pour le SDK mobile (Beta) | Accédez aux nouveaux workflows de démarrage rapide sous « Prise en main » à partir de l’écran d’accueil Collecte de données. Le [workflow de démarrage rapide pour le SDK mobile](https://developer.adobe.com/client-sdks/documentation/) vous permet d’implémenter rapidement le SDK mobile et de valider les événements mobiles de base en quelques étapes simples. |
 | Extension de transfert d’événement [!DNL Braze] | L’extension de transfert d’événement [[!DNL Braze Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html?lang=fr) vous permet de tirer parti des données capturées dans le réseau Edge d’Adobe Experience Platform et de les envoyer à [!DNL Braze] sous la forme d’événements côté serveur à l’aide des API de suivi des utilisateurs et utilisatrices [!DNL Braze]. |
-| Extension de transfert d’événement [!DNL Epsilon] | Le [[!DNL Epsilon Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/overview.html?lang=fr) l’extension vous permet d’exploiter le transfert d’événement pour capturer des informations d’événement dans Adobe Experience Platform Edge Network et les envoyer à [!DNL Epsilon] en utilisant la variable [!DNL Epsilon] API d’événement. |
+| Extension de transfert d’événement [!DNL Epsilon] | La variable [[!DNL Epsilon Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/overview.html?lang=fr) l’extension vous permet d’exploiter le transfert d’événement pour capturer des informations d’événement dans Adobe Experience Platform Edge Network et les envoyer à [!DNL Epsilon] en utilisant la variable [!DNL Epsilon] API d’événement. |
 | Extension de transfert d’événement [!DNL Mixpanel] | L’extension [[!DNL Mixpanel Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html?lang=fr) permet aux clientes et clients d’exploiter le transfert d’événement pour capturer des informations d’événement dans le réseau Edge d’Adobe Experience Platform et les envoyer à Mixpanel à l’aide de l’API de suivi des événements. |
 
 {style="table-layout:auto"}
@@ -96,7 +96,7 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 
 **Correctifs et améliorations** {#destinations-fixes-and-enhancements}
 
-Nous publions un correctif pour le chiffrement PGP/GPG dans les destinations basées sur des fichiers pour Real-time CDP. Avec cette modification, les destinations basées sur des fichiers qui utilisent actuellement le chiffrement généreront un nom de fichier avec une extension différente de la précédente.
+Nous publions un correctif pour le chiffrement PGP/GPG dans les destinations basées sur des fichiers pour Real-Time CDP. Avec cette modification, les destinations basées sur des fichiers qui utilisent actuellement le chiffrement généreront un nom de fichier avec une extension différente de la précédente.
 
 - Extension actuelle lors de l’utilisation du chiffrement : `filename.csv`
 - Extension future lors de l’utilisation du chiffrement : `filename.csv.gpg`
@@ -137,13 +137,13 @@ XDM est une spécification Open Source qui fournit des structures et des défini
 | Groupe de champs | [[!UICONTROL Balises d’entité AJO]](https://github.com/adobe/xdm/pull/1672/files) | Ajout de balises d’entité AJO à [!UICONTROL Champs d’entité AJO], qui correspondent à un Parcours ou à une campagne |
 | Groupe de champs | (Multiple) | Ajout de plusieurs champs pour [[!UICONTROL Champs communs des événements d’étape du Journey Orchestration]](https://github.com/adobe/xdm/pull/1671/files) |
 | Groupe de champs | (Multiple) | [Ajout de plusieurs types d’événement XDM pour [!UICONTROL Rapports multimédia]](https://github.com/adobe/xdm/pull/1670/files). |
-| Groupe de champs | [!UICONTROL Événement de changement de Workfront] | Le `Full Record` et `Accessor Employee Ids` des groupes de champs ont été ajoutés. |
-| Type de données | [[!UICONTROL Élément de liste de produits]](https://github.com/adobe/xdm/pull/1685/files) | Le [!UICONTROL Montant remboursé] a été ajouté pour indiquer le montant remboursé pour l’article, le cas échéant. |
+| Groupe de champs | [!UICONTROL Événement de changement de Workfront] | La variable `Full Record` et `Accessor Employee Ids` des groupes de champs ont été ajoutés. |
+| Type de données | [[!UICONTROL Élément de liste de produits]](https://github.com/adobe/xdm/pull/1685/files) | La variable [!UICONTROL Montant remboursé] a été ajouté pour indiquer le montant remboursé pour l’article, le cas échéant. |
 | Type de données | [[!UICONTROL Commande ]](https://github.com/adobe/xdm/pull/1685/files) | [!UICONTROL Liste des remboursements] a été ajouté à la liste des remboursements pour cette commande. |
 | Type de données | [[!UICONTROL Élément de liste de produits ]](https://github.com/adobe/xdm/pull/1677/files) | Des catégories de produits ont été ajoutées à la liste des données de catégorie de ce produit. |
-| Type de données | [!UICONTROL Informations détaillées sur la session] | Ajout de la fonction `pev3` champ de chaîne qui [indique le type de flux média utilisé pour la création de rapports.](https://github.com/adobe/xdm/pull/1676/files). Ajout également de la fonction `pccr` indique si une redirection a eu lieu. |
+| Type de données | [!UICONTROL Informations détaillées sur la session] | Ajout de la `pev3` champ de chaîne qui [indique le type de flux média utilisé pour la création de rapports.](https://github.com/adobe/xdm/pull/1676/files). Ajout également de la fonction `pccr` indique si une redirection a eu lieu. |
 | Type de données | [!UICONTROL Liste des demandes] | Fournit le [propriétés de la liste de demandes](https://github.com/adobe/xdm/pull/1675/files). Il s’agit du nom, de l’identifiant et de la description. |
-| Type de données | [!UICONTROL Commerce] | Le [Mise à jour du type de données Commerce](https://github.com/adobe/xdm/pull/1675/files) à inclure `requisitionListOpens`, `requisitionListAdds`, `requisitionListRemovals`, et `requisitionList`. |
+| Type de données | [!UICONTROL Commerce] | La variable [Mise à jour du type de données Commerce](https://github.com/adobe/xdm/pull/1675/files) à inclure `requisitionListOpens`, `requisitionListAdds`, `requisitionListRemovals`, et `requisitionList`. |
 
 {style="table-layout:auto"}
 
@@ -165,7 +165,7 @@ Pour plus d’informations sur Query Service, consultez la section [présentati
 
 ## Édition B2B de Real-Time Customer Data Platform {#b2b}
 
-Basée sur Real-time Customer Data Platform (Real-time CDP), l’édition B2B de Real-time CDP a été conçue pour les professionnels du marketing travaillant dans un modèle de service business-to-business. Elle rassemble des données provenant de sources multiples et les combine en une vue unique des profils de comptes et d’utilisateurs. Ces données unifiées permettent aux professionnels du marketing de cibler précisément des audiences spécifiques afin de stimuler leur engagement sur tous les canaux disponibles.
+Basée sur Real-time Customer Data Platform (Real-time CDP), l’édition B2B de Real-time CDP a été conçue pour les professionnels du marketing travaillant dans un modèle de service business-to-business. Elle rassemble des données provenant de sources multiples et les combine en une vue unique des profils de comptes et d’utilisateurs. Ces données unifiées permettent aux spécialistes marketing de cibler précisément des audiences spécifiques afin de stimuler leur engagement sur tous les canaux disponibles.
 
 **Fonctionnalités mises à jour**
 

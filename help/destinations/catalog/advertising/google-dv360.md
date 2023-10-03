@@ -3,7 +3,7 @@ keywords: DoubleClick Bid Manager;gestionnaire d’offres DoubleClick;DoubleClic
 title: Connexion Google Display & Video 360
 description: Display & Video 360, anciennement appelé DoubleClick Bid Manager, est un outil utilisé pour exécuter le reciblage et des campagnes numériques ciblées dans des sources d’inventaire Display, Video et Mobile.
 exl-id: bdd3b3fd-891f-44ec-bd47-daf7f3289f92
-source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
+source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
 workflow-type: tm+mt
 source-wordcount: '1022'
 ht-degree: 85%
@@ -21,7 +21,7 @@ ht-degree: 85%
 Notez les détails suivants qui sont spécifiques aux destinations [!DNL Google Display & Video 360] :
 
 * Les audiences activées sont créées par programmation dans la plateforme Google.
-* L’activation des renvoi d’audience vers le [!DNL Google Display & Video 360] La destination doit se produire entre 24 et 48 heures après le premier mappage d’une audience à une connexion de destination. Cette mise à jour répond à la stratégie de Google consistant à attendre 24 heures avant d’ingérer des données et est destinée à améliorer les taux de correspondance entre la plateforme de données clients en temps réel et [!DNL Google Display & Video 360]. Notez qu’il s’agit d’une configuration de serveur principal applicable uniquement à cette destination et qui n’est liée à aucune option de planification configurable par le client ou la cliente dans l’interface utilisateur.
+* L’activation des renvoi d’audience vers le [!DNL Google Display & Video 360] La destination doit se produire entre 24 et 48 heures après le premier mappage d’une audience à une connexion de destination. Cette mise à jour répond à la stratégie de Google consistant à attendre 24 heures avant d’ingérer des données. Elle est destinée à améliorer les taux de correspondance entre Real-Time CDP et [!DNL Google Display & Video 360]. Notez qu’il s’agit d’une configuration de serveur principal applicable uniquement à cette destination et qui n’est liée à aucune option de planification configurable par le client ou la cliente dans l’interface utilisateur.
 
 >[!IMPORTANT]
 >

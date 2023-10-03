@@ -2,10 +2,10 @@
 title: Atteindre et acquérir une nouvelle clientèle à l’aide des cas d’utilisation de prospection
 description: Découvrez comment atteindre et acquérir une nouvelle clientèle à l’aide de cas d’utilisation de prospection activés par la prise en charge des données des partenaires dans Real-Time CDP.
 exl-id: b9e7b3af-2a13-4904-bd12-e3ed05a1988e
-source-git-commit: da7a53c1e4accdacfa55e4022c1b499f70aab8fa
+source-git-commit: ec6375a025833027fda01c412124321132aefd65
 workflow-type: tm+mt
 source-wordcount: '1960'
-ht-degree: 95%
+ht-degree: 93%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 95%
 
 >[!AVAILABILITY]
 >
->* Cette fonctionnalité est disponible pour les clientes et clients qui disposent d’une licence Real-Time CDP (App Service), Adobe Experience Platform Activation, Real-time CDP, Real-Time CDP Prime et Real-Time CDP Ultimate. Consultez la [description des produits](https://helpx.adobe.com/fr/legal/product-descriptions.html) pour en savoir plus sur ces packages et contactez votre représentant ou représentante Adobe pour obtenir plus d’informations.
+>* Cette fonctionnalité est disponible pour les clients qui disposent d’une licence Real-Time CDP (App Service), Adobe Experience Platform Activation, Real-Time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate. Consultez la [description des produits](https://helpx.adobe.com/fr/legal/product-descriptions.html) pour en savoir plus sur ces packages et contactez votre représentant ou représentante Adobe pour obtenir plus d’informations.
 
 Utilisez la prise en charge de données tierces dans Real-Time CDP pour développer votre base de profils avec les profils de prospects des partenaires de données et interagissez avec eux pour acquérir ou atteindre une nouvelle clientèle.
 
