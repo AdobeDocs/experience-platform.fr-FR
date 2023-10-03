@@ -2,7 +2,7 @@
 title: Flux SQL transparent pour les attributs dérivés
 description: Query Service SQL a été étendu pour offrir une prise en charge transparente des attributs dérivés. Découvrez comment utiliser cette extension SQL pour créer un attribut dérivé activé pour profile et comment utiliser l’attribut pour Real-time Customer Profile et Segmentation Service.
 exl-id: bb1a1d8d-4662-40b0-857a-36efb8e78746
-source-git-commit: 6202b1a5956da83691eeb5422d3ebe7f3fb7d974
+source-git-commit: e9c4068419b36da6ffaec67f0d1c39fe87c2bc4c
 workflow-type: tm+mt
 source-wordcount: '1238'
 ht-degree: 2%
@@ -20,7 +20,7 @@ En règle générale, la génération et la publication d’un attribut pour Rea
 * Créez un espace de noms d’identité, s’il n’existe pas déjà.
 * Créez le type de données pour stocker l’attribut dérivé, si nécessaire.
 * Créez un groupe de champs avec ce type de données pour stocker les informations d’attribut dérivées.
-* Créez ou affectez une colonne d’identité Principale avec l’espace de noms créé précédemment.
+* Créez ou affectez une colonne d’identité principale avec l’espace de noms créé précédemment.
 * Créez un schéma à l’aide du groupe de champs et du type de données créés précédemment.
 * Créez un nouveau jeu de données à l’aide de votre schéma et activez-le pour le profil, si nécessaire.
 * Vous pouvez éventuellement marquer un jeu de données comme étant activé sur le profil.
@@ -35,13 +35,13 @@ Query Service vous permet d’effectuer toutes les actions répertoriées ci-des
 >
 >La requête SQL fournie ci-dessous suppose l’utilisation d’un espace de noms préexistant.
 
-Utilisez une requête Create Table as Select (CTAS) pour créer un jeu de données, attribuer des types de données, définir une identité Principale, créer un schéma et le marquer comme profil activé. L’exemple d’instruction SQL ci-dessous crée des attributs et les rend disponibles pour Real-time Customer Data Profile (Real-Time CDP). Votre requête SQL suit le format indiqué dans l’exemple ci-dessous :
+Utilisez une requête Create Table as Select (CTAS) pour créer un jeu de données, attribuer des types de données, définir une identité principale, créer un schéma et le marquer comme profil activé. L’exemple d’instruction SQL ci-dessous crée des attributs et les rend disponibles pour Real-time Customer Data Platform (Real-Time CDP). Votre requête SQL suit le format indiqué dans l’exemple ci-dessous :
 
 ```sql
 CREATE TABLE <your_table_name> [IF NOT EXISTS] (fieldname <your_data_type> primary identity namespace <your_namespace>, [field_name2 <your_data_type>]) [WITH(LABEL='PROFILE')];
 ```
 
-Les types de données pris en charge sont les suivants : booléen, date, datetime, texte, float, bigint, entier, map, tableau et struct/row.
+Les types de données pris en charge sont les suivants : booléen, date, date, date, heure, texte, flottant, bigint, entier, map, tableau et struct/row.
 
 Le bloc de code SQl ci-dessous fournit des exemples pour définir les types de données struct/row, map et array . La ligne 1 présente la syntaxe des lignes. La ligne 2 présente la syntaxe du mappage, la ligne 3, la syntaxe du tableau.
 
@@ -53,7 +53,7 @@ ARRAY <data_type>
 
 Vous pouvez également activer les jeux de données pour le profil via l’interface utilisateur de Platform. Pour plus d’informations sur le marquage d’un jeu de données comme activé pour un profil, voir la section [Activation d’un jeu de données pour la documentation de Real-time Customer Profile](../../../catalog/datasets/user-guide.md#enable-profile).
 
-Dans l’exemple de requête ci-dessous, la variable `decile_table` le jeu de données est créé avec `id` comme colonne d’identité Principale et contient l’espace de noms `IDFA`. Il comporte également un champ nommé `decile1Month` du type de données map . La table créée (`decile_table`) est activé pour profile.
+Dans l’exemple de requête ci-dessous, la variable `decile_table` le jeu de données est créé avec `id` comme colonne d’identité principale et possède l’espace de noms `IDFA`. Il comporte également un champ nommé `decile1Month` du type de données map . La table créée (`decile_table`) est activé pour profile.
 
 ```sql
 CREATE TABLE decile_table (id text PRIMARY KEY NAMESPACE 'IDFA', 
@@ -69,7 +69,7 @@ Created Table DataSet Id
 (1 row)
 ```
 
-Utilisation `label='PROFILE'` sur un `CREATE TABLE` pour créer un jeu de données activé par le profil. Le `upsert` est activée par défaut. Le `upsert` peut être remplacé à l’aide de la fonction `ALTER` comme le montre l&#39;exemple ci-dessous.
+Utilisation `label='PROFILE'` sur un `CREATE TABLE` pour créer un jeu de données activé par le profil. La variable `upsert` est activée par défaut. La variable `upsert` peut être remplacé à l’aide de la fonction `ALTER` comme le montre l&#39;exemple ci-dessous.
 
 ```sql
 ALTER TABLE <your_table_name> DROP label upsert;
@@ -93,9 +93,9 @@ ALTER TABLE your_decile_table ADD label 'PROFILE';
 >
 >Une fois l’exécution de la variable `ALTER TABLE` , la console renvoie `ALTER SUCCESS`.
 
-### Ajout d’une identité Principale à un jeu de données existant {#add-primary-identity}
+### Ajout d’une identité principale à un jeu de données existant {#add-primary-identity}
 
-Marquez une colonne existante dans un jeu de données comme un jeu d’identités Principal, sinon, une erreur se produit. Pour définir une identité Principale à l&#39;aide de SQL, utilisez le format de requête affiché ci-dessous.
+Marquez une colonne existante d’un jeu de données comme jeu d’identités principal. Sinon, une erreur se produit. Pour définir une identité principale à l’aide de SQL, utilisez le format de requête affiché ci-dessous.
 
 ```sql
 ALTER TABLE <your_table_name> ADD CONSTRAINT primary identity NAMESPACE
@@ -123,7 +123,7 @@ Par exemple :
 ALTER TABLE decile_table DROP label 'PROFILE';
 ```
 
-Cette instruction SQL fournit une méthode alternative efficace à l’utilisation d’un appel API. Pour plus d’informations, consultez la documentation sur la manière de [Désactivation d’un jeu de données à utiliser avec Real-Time CDP à l’aide de l’API des jeux de données](../../../catalog/datasets/enable-upsert.md#disable-the-dataset-for-profile).
+Cette instruction SQL fournit une méthode alternative efficace à l’utilisation d’un appel API. Pour plus d’informations, consultez la documentation sur la manière de [désactiver un jeu de données à utiliser avec Real-Time CDP à l’aide de l’API des jeux de données](../../../catalog/datasets/enable-upsert.md#disable-the-dataset-for-profile).
 
 ### Autoriser la mise à jour et l’insertion de fonctionnalités pour votre jeu de données {#enable-upsert-functionality-for-dataset}
 
@@ -221,7 +221,7 @@ DROP FIELDGROUP field_group_for_test123;
 
 ### Afficher tous les noms et identifiants des groupes de champs pour vos tableaux
 
-Le `SHOW FIELDGROUPS` La commande renvoie une table contenant le nom, fieldgroupId et le propriétaire des tables.
+La variable `SHOW FIELDGROUPS` La commande renvoie une table contenant le nom, fieldgroupId et le propriétaire des tables.
 
 Vous trouverez ci-dessous un exemple de sortie de cette commande :
 

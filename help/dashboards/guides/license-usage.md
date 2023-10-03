@@ -3,7 +3,8 @@ keywords: Experience Platform;interface utilisateur;interface utilisateur;perso
 title: Tableau de bord d’utilisation de la licence Guide
 description: Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur l’utilisation des licences de votre entreprise.
 type: Documentation
-source-git-commit: 5b3ec9aca773cf4a1ba0d4c7e432949769b942c1
+exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
+source-git-commit: e9c4068419b36da6ffaec67f0d1c39fe87c2bc4c
 workflow-type: tm+mt
 source-wordcount: '1987'
 ht-degree: 6%
@@ -19,7 +20,7 @@ ht-degree: 6%
 
 Vous pouvez afficher des informations importantes sur l’utilisation des licences de votre entreprise via Adobe Experience Platform [!UICONTROL Utilisation des licences] tableau de bord. Les informations affichées ici sont capturées pendant un instantané quotidien de votre instance Platform.
 
-Les rapports sur l’utilisation des licences fournissent un niveau de granularité élevé par rapport à vos mesures d’utilisation des licences. Le tableau de bord fournit des mesures d’utilisation pour chaque produit acheté, l’utilisation consolidée des mesures dans tous les environnements de test de production ou de développement et la mesure d’utilisation d’un environnement de test spécifique. Les applications Experience Platform suivantes peuvent être suivies avec des mesures d’utilisation : Real-Time Customer Data Profile, Adobe Journey Optimizer et Customer Journey Analytics.
+Les rapports sur l’utilisation des licences fournissent un niveau de granularité élevé par rapport à vos mesures d’utilisation des licences. Le tableau de bord fournit des mesures d’utilisation pour chaque produit acheté, l’utilisation consolidée des mesures dans tous les environnements de test de production ou de développement et la mesure d’utilisation d’un environnement de test spécifique. Les applications Experience Platform suivantes peuvent être suivies avec des mesures d’utilisation : Real-time Customer Data Platform, Adobe Journey Optimizer et Customer Journey Analytics.
 
 Ce guide explique comment accéder au tableau de bord de l’utilisation des licences dans l’interface utilisateur et l’utiliser. Il fournit également des informations supplémentaires sur les visualisations affichées dans le tableau de bord.
 
@@ -59,7 +60,7 @@ Ce tableau de bord affiche sous forme de tableau tous les produits Adobe Experie
 
 >[!NOTE]
 >
->Ajouts au [!UICONTROL Montant de la licence] des modules complémentaires sont ajoutés en plus de la fonction [!UICONTROL Montant de la licence] pour les produits de base tels que Real-time Customer Data Profile, Adobe Journey Optimizer et Customer Journey Analytics. L’utilisation de ce montant sous licence (après les modules complémentaires) est suivie par le biais des produits de base. Par exemple, si vous achetez un pack de cinq environnements de test, la quantité de cinq est ajoutée à celle du produit de base. Dans ce cas, le module complémentaire affiche une [!UICONTROL Montant de la licence] d’un, et l’utilisation de ce module complémentaire est &quot;vide&quot;, car l’utilisation est suivie via le produit de base.
+>Ajouts au [!UICONTROL Montant de la licence] des modules complémentaires sont ajoutés en plus de la fonction [!UICONTROL Montant de la licence] pour les produits de base tels que Real-time Customer Data Platform, Adobe Journey Optimizer et Customer Journey Analytics. L’utilisation de ce montant sous licence (après les modules complémentaires) est suivie par le biais des produits de base. Par exemple, si vous achetez un pack de cinq environnements de test, la quantité de cinq est ajoutée à celle du produit de base. Dans ce cas, le module complémentaire affiche une [!UICONTROL Montant de la licence] d’un, et l’utilisation de ce module complémentaire est &quot;vide&quot;, car l’utilisation est suivie via le produit de base.
 
 Le tableau indique la mesure principale de chaque produit, car chaque produit peut effectuer le suivi de nombreuses mesures.
 
