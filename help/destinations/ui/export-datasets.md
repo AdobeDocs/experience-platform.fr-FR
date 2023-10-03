@@ -3,9 +3,9 @@ title: Exportation de jeux de données vers des destinations de stockage dans le
 type: Tutorial
 description: Découvrez comment exporter des jeux de données d’Adobe Experience Platform vers l’emplacement d’espace de stockage de votre choix.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: 8b8abea65ee0448594113ca77f75b84293646146
+source-git-commit: 08463e9f14b0952fe5db177ae8b4546cc3c6cac5
 workflow-type: tm+mt
-source-wordcount: '1750'
+source-wordcount: '1724'
 ht-degree: 58%
 
 ---
@@ -47,11 +47,11 @@ Identifiez dans le tableau ci-dessous les types de jeux de données que vous pou
   <tr>
     <td rowspan="2">Adobe Journey Optimizer</td>
     <td>Prime</td>
-    <td>Voir <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html?lang=fr"> Adobe Journey Optimizer</a> la documentation. (mise à jour vers un lien profond vers la table ou la section AJO pour les jeux de données pris en charge)</td>
+    <td>Voir <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html#datasets"> Adobe Journey Optimizer</a> la documentation.</td>
   </tr>
   <tr>
     <td>Ultimate</td>
-    <td>Voir <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html?lang=fr"> Adobe Journey Optimizer</a> la documentation. (mise à jour vers un lien profond vers la table ou la section AJO pour les jeux de données pris en charge)</td>
+    <td>Voir <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html#datasets"> Adobe Journey Optimizer</a> la documentation.</td>
   </tr>
   <tr>
     <td>Data Distiller</td>
