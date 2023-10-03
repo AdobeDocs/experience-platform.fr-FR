@@ -3,10 +3,10 @@ keywords: Experience Platform;accueil;rubriques populaires;sources;connecteurs;c
 title: Configuration des spécifications de source pour les sources en libre-service (SDK par lots)
 description: Ce document présente les configurations que vous devez préparer pour utiliser les sources en libre-service (SDK par lots).
 exl-id: f814c883-b529-4ecc-bedd-f638bf0014b5
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: 1fdce7c798d8aff49ab4953298ad7aa8dddb16bd
 workflow-type: tm+mt
-source-wordcount: '1846'
-ht-degree: 45%
+source-wordcount: '2078'
+ht-degree: 44%
 
 ---
 
@@ -381,7 +381,53 @@ Voici une spécification de source complétée à l’aide de [!DNL MailChimp Me
 
 Vous trouverez ci-dessous des exemples d’autres types de pagination pris en charge par les sources en libre-service (SDK par lots) :
 
-#### `CONTINUATION_TOKEN`
+>[!BEGINTABS]
+
+>[!TAB Décalage]
+
+Ce type de pagination vous permet d’analyser les résultats en spécifiant un index à partir duquel démarrer le tableau résultant, ainsi qu’une limite sur le nombre de résultats renvoyés. Par exemple :
+
+```json
+"paginationParams": {
+        "type": "OFFSET",
+        "limitName": "limit",
+        "limitValue": "4",
+        "offSetName": "offset",
+        "endConditionName": "$.hasMore",
+        "endConditionValue": "Const:false"
+}
+```
+
+| Propriété | Description |
+| --- | --- |
+| `type` | Type de pagination utilisé pour renvoyer des données. |
+| `limitName` | Nom de la limite avec laquelle l’API peut spécifier le nombre d’enregistrements à récupérer dans une page. |
+| `limitValue` | Nombre d’enregistrements à récupérer dans une page. |
+| `offSetName` | Nom de l’attribut offset. Obligatoire si le type de pagination est défini sur `offset`. |
+| `endConditionName` | Une valeur définie par l’utilisateur qui indique la condition qui mettra fin à la boucle de pagination dans la requête HTTP suivante. Vous devez indiquer le nom de l’attribut sur lequel vous souhaitez mettre la condition de fin. |
+| `endConditionValue` | La valeur d’attribut sur laquelle vous souhaitez mettre la condition de fin. |
+
+>[!TAB Pointer]
+
+Ce type de pagination permet d’utiliser une `pointer` pour pointer vers un élément particulier qui doit être envoyé avec une requête. La pagination du type de pointeur nécessite un chemin dans la payload qui pointe vers la page suivante. Par exemple :
+
+```json
+{
+ "type": "POINTER",
+ "limitName": "limit",
+ "limitValue": 1,
+ "pointerPath": "paging.next"
+}
+```
+
+| Propriété | Description |
+| --- | --- |
+| `type` | Type de pagination utilisé pour renvoyer des données. |
+| `limitName` | Nom de la limite avec laquelle l’API peut spécifier le nombre d’enregistrements à récupérer dans une page. |
+| `limitValue` | Nombre d’enregistrements à récupérer dans une page. |
+| `pointerPath` | Nom de l’attribut du pointeur. Exige un chemin d’accès json vers l’attribut qui pointe vers la page suivante. |
+
+>[!TAB Jeton de maintien]
 
 Un type de pagination de jeton de continuation renvoie un jeton de chaîne qui signifie qu’il existe d’autres éléments qui n’ont pas pu être renvoyés, en raison d’un nombre maximal d’éléments prédéterminé qui peuvent être renvoyés dans une seule réponse.
 
@@ -432,7 +478,7 @@ Voici un exemple de réponse renvoyée à l’aide du type de pagination du jeto
 }
 ```
 
-#### `PAGE`
+>[!TAB Page]
 
 La variable `PAGE` type de pagination permet de parcourir les données renvoyées par nombre de pages commençant par zéro. Lorsque vous utilisez `PAGE` type pagination, vous devez indiquer le nombre d&#39;enregistrements sur une seule page.
 
@@ -461,7 +507,7 @@ La variable `PAGE` type de pagination permet de parcourir les données renvoyée
 {style="table-layout:auto"}
 
 
-#### `NONE`
+>[!TAB Aucun]
 
 La variable `NONE` Le type de pagination peut être utilisé pour les sources qui ne prennent en charge aucun des types de pagination disponibles. Sources qui utilisent le type de pagination de `NONE` renvoyez simplement tous les enregistrements récupérables lorsqu’une demande de GET est effectuée.
 
@@ -470,6 +516,8 @@ La variable `NONE` Le type de pagination peut être utilisé pour les sources qu
   "type": "NONE"
 }
 ```
+
+>[!ENDTABS]
 
 ### Planification avancée pour les sources en libre-service (SDK par lots)
 

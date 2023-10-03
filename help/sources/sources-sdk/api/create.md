@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Création d’une spécification de connexion à l’aide de l’API Flow Service
 description: Le document suivant décrit les étapes à suivre pour créer une spécification de connexion à l’aide de l’API Flow Service et intégrer une nouvelle source par le biais de sources en libre-service.
 exl-id: 0b0278f5-c64d-4802-a6b4-37557f714a97
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: f47b7f725475fc7f7fac6dd406975b46f257e390
 workflow-type: tm+mt
 source-wordcount: '797'
 ht-degree: 46%
@@ -39,7 +39,7 @@ Une fois fourni, vous devez structurer votre référentiel Git privé comme suit
 | Artefacts (noms de fichier) | Description | Exemple |
 | --- | --- | --- |
 | {your_source} | Nom de votre source. Ce dossier doit contenir tous les artefacts liés à votre source, dans votre référentiel Git privé. | `mailchimp-members` |
-| {your_source}-category.txt | Catégorie à laquelle appartient votre source, formatée en tant que fichier texte. La liste des catégories de sources disponibles prises en charge par les sources en libre-service (SDK par lot) comprend : <ul><li>Advertising</li><li>Analytics</li><li>Consentement et préférences</li><li>CRM</li><li>Succès client</li><li>Base de données</li><li>e-commerce</li><li>Automatisation du marketing</li><li>Paiements</li><li>Protocoles</li></ul> **Remarque**: Si vous pensez que votre source ne correspond à aucune des catégories ci-dessus, veuillez contacter votre représentant d’Adobe pour en discuter. | `mailchimp-members-category.txt` Dans le fichier, veuillez spécifier la catégorie de votre source, par exemple : `marketingAutomation`. |
+| {your_source}-category.txt | Catégorie à laquelle appartient votre source, formatée en tant que fichier texte. La liste des catégories de sources disponibles prises en charge par les sources en libre-service (SDK par lot) comprend : <ul><li>Advertising</li><li>Analytics</li><li>Consentement et préférences</li><li>CRM</li><li>Succès client</li><li>Base de données</li><li>e-commerce</li><li>Automatisation du marketing</li><li>Paiements</li><li>Protocoles</li></ul> **Remarque**: si vous pensez que votre source ne correspond à aucune des catégories ci-dessus, contactez votre représentant d’Adobe pour discuter. | `mailchimp-members-category.txt` Dans le fichier, veuillez spécifier la catégorie de votre source, par exemple : `marketingAutomation`. |
 | {your_source}-description.txt | Brève description de votre source. | [!DNL Mailchimp Members] est la source d’automatisation du marketing que vous pouvez utiliser pour apporter. [!DNL Mailchimp Members] données à Experience Platform. |
 | {your_source}-icon.svg | L’image à utiliser pour représenter votre source dans le catalogue de sources Experience Platform. Cette icône doit être un fichier de SVG. |
 | {your_source}-label.txt | Le nom de votre source tel qu’il doit apparaître dans le catalogue des sources Experience Platform. | Membres Mailchimp |
@@ -578,7 +578,9 @@ curl -X POST \
                   "type": "OFFSET",
                   "limitName": "count",
                   "limitValue": "100",
-                  "offSetName": "offset"
+                  "offSetName": "offset",
+                  "endConditionName": "$.hasMore",
+                  "endConditionValue": "Const:false"
               },
               "scheduleParams": {
                   "scheduleStartParamName": "since_last_changed",
@@ -767,7 +769,9 @@ Une réponse réussie renvoie la spécification de connexion nouvellement créé
                 "type": "OFFSET",
                 "limitName": "count",
                 "limitValue": "100",
-                "offSetName": "offset"
+                "offSetName": "offset",
+                "endConditionName": "$.hasMore",
+                "endConditionValue": "Const:false"
             },
             "scheduleParams": {
                 "scheduleStartParamName": "since_last_changed",
