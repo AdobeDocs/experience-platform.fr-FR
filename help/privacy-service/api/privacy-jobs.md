@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Point de terminaison de l’API Privacy Jobs
 description: Découvrez comment gérer les tâches de confidentialité pour les applications Experience Cloud à l’aide de l’API Privacy Service.
 exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
-source-git-commit: e59def7a05862ad880d0b6ada13b1c69c655ff90
+source-git-commit: a19f37d40b52ce41975bfc303339d2b85e12080e
 workflow-type: tm+mt
 source-wordcount: '1547'
 ht-degree: 64%
@@ -13,7 +13,7 @@ ht-degree: 64%
 
 # Point de terminaison des tâches de confidentialité
 
-Ce document explique comment utiliser les tâches de confidentialité à l’aide d’appels API. Plus précisément, il couvre l’utilisation de la variable `/job` du point de terminaison [!DNL Privacy Service] API. Avant de lire ce guide, reportez-vous à la section [guide de prise en main](./getting-started.md) pour obtenir des informations importantes à connaître afin d’effectuer avec succès des appels à l’API, notamment les en-têtes requis et la lecture d’exemples d’appels API.
+Ce document explique comment utiliser les tâches de confidentialité à l’aide d’appels API. Plus précisément, il couvre l’utilisation de la variable `/job` du point de terminaison [!DNL Privacy Service] API. Avant de lire ce guide, consultez la section [guide de prise en main](./getting-started.md) pour obtenir des informations importantes à connaître afin d’effectuer avec succès des appels à l’API, notamment les en-têtes requis et la lecture d’exemples d’appels API.
 
 >[!NOTE]
 >
@@ -36,7 +36,7 @@ GET /jobs?regulation={REGULATION}&page={PAGE}&size={SIZE}
 
 | Paramètre | Description |
 | --- | --- |
-| `{REGULATION}` | Le type de réglementation pour lequel vous souhaitez effectuer une requête. Les valeurs acceptées sont les suivantes : <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpra_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`nzpa_nzl`</li><li>`pdpa_tha`</li><li>`vcdpa_usa`</li><li>`cpa`</li><li>`ctdpa`</li></ul><br>Consultez la présentation sur [réglementations prises en charge](../regulations/overview.md) pour plus d’informations sur les réglementations de confidentialité que représentent les valeurs ci-dessus. |
+| `{REGULATION}` | Le type de réglementation pour lequel vous souhaitez effectuer une requête. Les valeurs acceptées sont les suivantes : <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpa`</li><li>`cpra_usa`</li><li>`ctdpa`</li><li>`ctdpa_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`nzpa_nzl`</li><li>`pdpa_tha`</li><li>`pdpd_vnm`</li><li>`ucpa_usa`</li><li>`vcdpa_usa`</li></ul><br>Consultez la présentation sur [réglementations prises en charge](../regulations/overview.md) pour plus d’informations sur les réglementations de confidentialité que représentent les valeurs ci-dessus. |
 | `{PAGE}` | La page de données à afficher à l’aide d’une numérotation basée sur 0. La valeur par défaut est de `0`. |
 | `{SIZE}` | Le nombre de résultats à afficher sur chaque page. `1` est la valeur par défaut et `100` est le maximum. Dépasser le maximum entraîne le code d’erreur 400 dans l’API. |
 
@@ -76,7 +76,7 @@ Avant de créer une nouvelle requête de tâche, vous devez d’abord collecter 
 >
 >Les applications Adobe Experience Cloud compatibles utilisent des valeurs d’identification des titulaires de données différentes. Pour plus d’informations sur les identifiants requis pour votre ou vos applications, consultez le guide sur [les applications Privacy Service et Experience Cloud](../experience-cloud-apps.md). Pour obtenir des instructions plus générales sur la détermination des ID à envoyer [!DNL Privacy Service], voir le document sur [données d’identité dans les demandes d’accès à des informations personnelles](../identity-data.md).
 
-Le [!DNL Privacy Service] L’API prend en charge deux types de requêtes de tâche pour les données personnelles :
+La variable [!DNL Privacy Service] L’API prend en charge deux types de requêtes de tâche pour les données personnelles :
 
 * [Accès et/ou suppression](#access-delete) : accédez (lisez) ou supprimez les données personnelles.
 * [Exclusion de la vente](#opt-out) : marquez les données personnelles comme ne pouvant pas être vendues.
@@ -240,7 +240,7 @@ GET /jobs/{JOB_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{JOB_ID}` | L’identifiant de la tâche que vous souhaitez rechercher. Cet identifiant est renvoyé sous `jobId` dans les réponses d’API réussies pour [création d’une tâche](#create-job) et [liste de toutes les tâches](#list). |
+| `{JOB_ID}` | L’identifiant de la tâche que vous souhaitez rechercher. Cet identifiant est renvoyé sous `jobId` dans les réponses API réussies pour [création d’une tâche](#create-job) et [liste de toutes les tâches](#list). |
 
 {style="table-layout:auto"}
 
@@ -333,10 +333,10 @@ Une réponse réussie renvoie les détails de la tâche spécifiée.
 | Propriété | Description |
 | --- | --- |
 | `productStatusResponse` | Chaque objet dans la variable `productResponses` contient des informations sur l’état actuel de la tâche par rapport à un [!DNL Experience Cloud] application. |
-| `productStatusResponse.status` | Catégorie d’état actuelle de la tâche. Consultez le tableau ci-dessous pour obtenir une liste des [catégories d’état disponibles](#status-categories) et leur signification correspondante. |
+| `productStatusResponse.status` | La catégorie d’état actuelle de la tâche. Consultez le tableau ci-dessous pour obtenir une liste des [catégories d’état disponibles](#status-categories) et leur signification correspondante. |
 | `productStatusResponse.message` | État spécifique de la tâche, correspondant à la catégorie d’état. |
 | `productStatusResponse.responseMsgCode` | Un code standard pour les messages de réponse de produit reçus par [!DNL Privacy Service]. Les détails du message sont fournis sous `responseMsgDetail`. |
-| `productStatusResponse.responseMsgDetail` | Une explication plus détaillée de l’état de la tâche. Les messages pour des statuts similaires peuvent varier d’un produit à l’autre. |
+| `productStatusResponse.responseMsgDetail` | Une explication plus détaillée du statut de la tâche. Les messages pour des statuts similaires peuvent varier d’un produit à l’autre. |
 | `productStatusResponse.results` | Pour certains statuts, certains produits peuvent renvoyer une `results` qui fournit des informations supplémentaires non couvertes par `responseMsgDetail`. |
 | `downloadURL` | Si l’état de la tâche est `complete`, cet attribut fournit une URL pour télécharger les résultats de la tâche sous la forme d’un fichier ZIP. Vous pouvez télécharger ce fichier pendant 60 jours à compter de l’achèvement de la tâche. |
 

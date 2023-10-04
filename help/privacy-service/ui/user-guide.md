@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Gestion des tâches liées à la confidentialité dans l’interface utilisateur du Privacy Service
 description: Découvrez comment utiliser l’interface utilisateur du Privacy Service pour coordonner et surveiller les demandes d’accès à des informations personnelles dans différentes applications Experience Cloud.
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
-source-git-commit: e5a1b57bc81b27d0e61c3c1ecc10156c10dd3f6e
+source-git-commit: a19f37d40b52ce41975bfc303339d2b85e12080e
 workflow-type: tm+mt
-source-wordcount: '1473'
-ht-degree: 67%
+source-wordcount: '1475'
+ht-degree: 68%
 
 ---
 
@@ -38,17 +38,18 @@ Le tableau de bord de la variable [!DNL Privacy Service] L’interface utilisate
 
 | Libellé de l’interface utilisateur | Régulation |
 | --- | --- |
+| [!UICONTROL APA_AUS] | La variable [!DNL Australia Privacy Act (Privacy Act)] |
 | [!UICONTROL CPA] | La variable [!DNL Colorado Privacy Act] |
 | [!UICONTROL CCPA] | La variable [!DNL California Consumer Privacy Act] |
+| [!UICONTROL CPRA_USA] | La variable [!DNL California Consumer Privacy Rights Act (CPRA)] |
 | [!UICONTROL CTDPA] | La variable [!DNL Connecticut Data Privacy Act] |
 | [!UICONTROL RGPD] | L&#39;Union européenne [!DNL General Data Protection Regulation] |
-| [!UICONTROL PDPA_THA] | Thaïlande [!DNL Personal Data Protection Act] |
+| [!UICONTROL HIPAA_AUS] | La variable [!DNL Health Insurance Portability and Accountability Act] |
 | [!UICONTROL LGPD_BRA] | Le Brésil [!DNL Lei Geral de Proteção de Dados] |
 | [!UICONTROL NZPA_NZL] | La Nouvelle-Zélande [!DNL Privacy Act] |
+| [!UICONTROL PDPA_THA] | Thaïlande [!DNL Personal Data Protection Act] |
+| [!UICONTROL UCPA] | La variable [!DNL Utah Consumer Privacy Act] |
 | [!UICONTROL VCDPA_USA] | La variable [!DNL Virginia Consumer Data Protection Act] |
-| [!UICONTROL CPRA_USA] | La variable [!DNL California Consumer Privacy Rights Act (CPRA)] |
-| [!UICONTROL APA_AUS] | La variable [!DNL Australia Privacy Act (Privacy Act)] |
-| [!UICONTROL HIPAA_AUS] | La variable [!DNL Health Insurance Portability and Accountability Act] |
 
 {style="table-layout:auto"}
 
@@ -56,7 +57,7 @@ Le tableau de bord de la variable [!DNL Privacy Service] L’interface utilisate
 >
 >Consultez la présentation sur [réglementations de confidentialité prises en charge](../regulations/overview.md) pour plus d’informations sur le contexte juridique de chaque réglementation.
 
-Les tâches pour chaque type de réglementation sont suivies séparément. Pour passer d’un type de réglementation à un autre, sélectionnez l’option **[!UICONTROL Type de réglementation]** menu déroulant et sélectionnez la réglementation souhaitée dans la liste.
+Les tâches pour chaque type de réglementation sont suivies séparément. Pour passer d’un type de réglementation à un autre, sélectionnez la variable **[!UICONTROL Type de réglementation]** menu déroulant et sélectionnez la réglementation souhaitée dans la liste.
 
 ![Console du Privacy Service avec la liste déroulante Type de réglementation .](../images/user-guide/regulation.png)
 
@@ -117,7 +118,7 @@ Pour télécharger l’ensemble des données de tâche sous forme de fichier CSV
 >
 >Pour créer une requête de tâche de confidentialité, vous devez fournir des informations d’identité aux clients spécifiques qui souhaitent accéder à leurs données ou les supprimer. Avant de poursuivre la lecture de cette section, consultez le document concernant les [informations d’identité pour les demandes d’accès à des informations personnelles](../identity-data.md).
 
-Le [!DNL Privacy Service] L’interface utilisateur propose deux méthodes pour créer de nouvelles requêtes de tâche :
+La variable [!DNL Privacy Service] L’interface utilisateur propose deux méthodes pour créer de nouvelles requêtes de tâche :
 
 * [Utilisation du créateur de requêtes](#request-builder)
 * [Charger un fichier JSON](#json)
@@ -136,7 +137,7 @@ La boîte de dialogue **[!UICONTROL Créer une requête]** s’ouvre et affiche 
 
 <img src="../images/user-guide/request-builder.png" width="500" /><br/>
 
-Sélectionnez la **[!UICONTROL Type de tâche]** de la requête (&quot;Supprimer&quot; ou &quot;Accéder&quot;) et d’un ou plusieurs produits disponibles dans la liste.
+Sélectionnez la variable **[!UICONTROL Type de tâche]** de la requête (&quot;Supprimer&quot; ou &quot;Accéder&quot;) et d’un ou plusieurs produits disponibles dans la liste.
 
 <img src="../images/user-guide/type-and-products.png" width="500" /><br/>
 
@@ -184,4 +185,4 @@ Lorsque vous avez terminé, cliquez sur **[!UICONTROL Créer]**. La boîte de di
 
 En lisant ce document, vous avez appris à utiliser le [!DNL Privacy Service] Interface utilisateur pour créer une tâche de confidentialité, afficher les détails d’une tâche, surveiller son état de traitement et télécharger les résultats une fois qu’elle est terminée.
 
-Pour savoir comment effectuer ces opérations par programmation à l’aide de la méthode [!DNL Privacy Service] API, reportez-vous à la section [Guide de l’API](../api/overview.md).
+Pour savoir comment effectuer ces opérations par programmation à l’aide de la méthode [!DNL Privacy Service] API, reportez-vous à [Guide de l’API](../api/overview.md).
