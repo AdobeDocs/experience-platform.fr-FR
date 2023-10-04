@@ -2,10 +2,10 @@
 title: Notes de mise à jour d’Adobe Experience Platform
 description: Les notes de mise à jour de septembre 2023 pour Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: b20e5e52b9d7568f4e20b94064819d0bebe4c236
+source-git-commit: 35d72969946dd79c356212ce53ee75b8c84f036c
 workflow-type: tm+mt
-source-wordcount: '2149'
-ht-degree: 31%
+source-wordcount: '2284'
+ht-degree: 33%
 
 ---
 
@@ -160,6 +160,27 @@ XDM est une spécification Open Source qui fournit des structures et des défini
 | Fonctionnalité | Description |
 | --- | --- |
 | Workflow de création de schéma mis à jour | Un nouveau workflow de création de schéma a été mis en oeuvre pour rationaliser le processus. <br> ![Nouvelle interface utilisateur de création de schéma.](../2023/assets/schema-class-options.png "Nouveau sélecteur de détails de schéma mis en surbrillance."){width="100" zoomable="yes"} <br> Voir [documentation sur la création de schémas](../../xdm/ui/resources/schemas.md#create) pour plus d’informations. |
+
+**Nouveaux composants XDM**
+
+| Type de composant | Nom | Description |
+| --- | --- | --- |
+| Type de données | [[!UICONTROL Retour]](https://github.com/adobe/xdm/pull/1773/files) | La RMA (Return Merchandise Authorization) a été émise. |
+| Type de données | [[!UICONTROL Élément de retour]](https://github.com/adobe/xdm/pull/1773/files) | Informations de l’élément renvoyé dans la RAM (Return Merchandise Authorization). |
+
+{style="table-layout:auto"}
+
+**Composants XDM mis à jour**
+
+| Type de composant | Nom | Description de la mise à jour |
+| --- | --- | --- |
+| Extension | [!UICONTROL Champs d’entité AJO] | La variable [[!UICONTROL Indicateur pour les variables multiples]](https://github.com/adobe/xdm/pull/1774/files) a été ajouté à [!UICONTROL Champs d’entité AJO] pour déterminer si la variante est multivariante ou non. |
+| Type de données | [!UICONTROL Élément de liste de produits] | [[!UICONTROL Élément de retour]](https://github.com/adobe/xdm/pull/1773/files) a été ajouté pour inclure les informations d’autorisation de marchandisage de retour. |
+| Type de données | Commande | [[!UICONTROL Infos sur le retour]](https://github.com/adobe/xdm/pull/1773/files) a été ajouté pour inclure la RAM (Return Merchandise Authorization) émise. |
+
+{style="table-layout:auto"}
+
+Pour plus d’informations sur XDM dans Platform, consultez la [vue d’ensemble du système XDM](../../xdm/home.md)
 
 ## Identity Service {#identity-service}
 
