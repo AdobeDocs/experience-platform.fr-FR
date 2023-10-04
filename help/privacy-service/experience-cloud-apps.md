@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Applications Privacy Service et Experience Cloud
 description: Ce document fournit une référence pour la configuration de différentes applications Experience Cloud pour les opérations liées à la confidentialité.
 exl-id: da21c15f-0b99-4eb7-ac9a-f0fe5e3ba842
-source-git-commit: ed3089a86d6ef25f23e4d69eee7da800d7242545
+source-git-commit: b0b49badd46601571be59afba84fad874ca1b368
 workflow-type: tm+mt
-source-wordcount: '926'
-ht-degree: 35%
+source-wordcount: '927'
+ht-degree: 33%
 
 ---
 
@@ -38,7 +38,7 @@ Voici une liste de [!DNL Experience Cloud] des applications intégrées à [!DNL
 | Adobe Campaign Standard | ✓ | ✓ | Les données stockées du sujet de données sont supprimées du système. | <ul><li>[Documentation sur l’accès et la suppression](https://docs.campaign.adobe.com/doc/standard/getting_started/fr/ACS_GDPR.html)</li><li>[Documentation sur l’opposition](../segmentation/consents.md)</li></ul> |
 | Adobe des attributs du client (CRS) | ✓ | N/A | Les attributs du sujet de données sont supprimés du système. | <ul><li>[Documentation sur l’accès et la suppression pour le RGPD](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/gdpr.html?lang=fr)</li><li>[Documentation sur l’accès et la suppression pour le CCPA](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/ccpa.html?lang=fr)</li><li>Les attributs du client n’ont pas la capacité de transférer des données. Par conséquent, les demandes d’opposition ne sont pas applicables.</li></ul> |
 | Adobe Experience Platform | ✓ | ✓ | Lorsqu’Experience Platform reçoit une demande de suppression de la part de Privacy Service, Platform envoie une confirmation à Privacy Service pour confirmer que la demande a été reçue et que les données concernées ont été marquées pour suppression. Les enregistrements sont ensuite supprimés du lac de données ou de la banque de profils une fois la tâche de confidentialité terminée. Avant la fin de la tâche, les données sont supprimées en douceur et ne sont donc accessibles par aucun service Platform. | <ul><li>[Documentation sur l’accès et la suppression pour le lac de données](../catalog/privacy.md)</li><li>[Documentation sur l’accès/la suppression pour Identity Service](../identity-service/privacy.md)</li><li>[Documentation sur l’accès et la suppression pour Real-time Customer Profile](../profile/privacy.md)</li><li>[!DNL Experience Platform] honneurs [demandes d’exclusion pour les segments ciblés](../segmentation/consents.md).</li></ul> |
-| Adobe Primetime Authentication | ✓ | N/A | Les données stockées du sujet de données sont supprimées du système. | <ul><li>[Documentation sur l’accès et la suppression](https://tve.helpdocsonline.com/how-to-make-a-privacy-request)</li><li>[!DNL Primetime] n’a pas la capacité de transférer des données. Par conséquent, les requêtes d’opposition ne sont pas applicables.</li></ul> |
+| Authentification Adobe Pass | ✓ | N/A | Les données stockées du sujet de données sont supprimées du système. | <ul><li>[Documentation sur l’accès et la suppression](https://tve.helpdocsonline.com/how-to-make-a-privacy-request)</li><li>Pass n’a pas la capacité de transférer des données. Par conséquent, les demandes d’opposition ne sont pas applicables.</li></ul> |
 | Adobe Target | ✓ | N/A | Toutes les données associées à l’identifiant du sujet de données sont supprimées de son profil du visiteur. Les données agrégées ou rendues anonymes qui n’identifient pas l’individu ou qui ne sont pas liées d’une autre manière (telles que les données de contenu) ne s’appliquent pas aux requêtes de suppression. | <ul><li>[Documentation sur l’accès et la suppression](https://experienceleague.adobe.com/docs/target/using/implement-target/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.html?lang=fr)</li><li>[!DNL Target] n’a pas la capacité de transférer des données. Par conséquent, les requêtes d’opposition ne sont pas applicables.</li></ul> |
 | Marketo Engage | ✓ | N/A | Les données stockées du sujet de données sont supprimées du système. | <ul><li>[Documentation sur l’accès et la suppression](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/privacy-requests.html)</li><li>[!DNL Marketo] n’a pas la capacité de transférer des données. Par conséquent, les requêtes d’opposition ne sont pas applicables.</li></ul> |
 
