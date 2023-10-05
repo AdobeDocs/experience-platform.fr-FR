@@ -5,7 +5,7 @@ title: Créer un schéma à l’aide de l’éditeur de schémas
 type: Tutorial
 description: Ce tutoriel décrit les étapes de création d’un schéma à l’aide de l’éditeur de schémas d’Experience Platform.
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
-source-git-commit: 28d9a53371beea37b5c61b3bc4b111816f6e63e0
+source-git-commit: bf3099afadd6c8807060a6796cb6f37471478b44
 workflow-type: tm+mt
 source-wordcount: '4619'
 ht-degree: 82%
@@ -345,7 +345,7 @@ Sélectionnez **[!UICONTROL Profile]** et une fenêtre pop-up s’affiche, vous 
 
 Sélectionnez **[!UICONTROL Activer]** pour confirmer votre choix. Vous pouvez de nouveau sélectionner le bouton **[!UICONTROL Profile]** pour désactiver le schéma si vous le souhaitez, mais une fois que le schéma a été enregistré alors que [!DNL Profile] est activé, il ne peut plus être désactivé.
 
-## Actions supplémentaires
+## Actions supplémentaires {#more}
 
 Dans l’éditeur de schémas, vous pouvez également exécuter des actions rapides pour copier la structure JSON du schéma ou supprimer le schéma s’il n’a pas été activé pour Real-time Customer Profile ou s’il comporte des jeux de données associés. Sélectionner [!UICONTROL Plus] dans la partie supérieure de la vue pour afficher une liste déroulante contenant des actions rapides.
 

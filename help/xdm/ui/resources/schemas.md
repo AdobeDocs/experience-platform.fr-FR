@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Création et modification de schémas dans l’interface utilisateur
 description: Découvrez les principes de base de la création et de l’édition de schémas dans l’interface utilisateur de l’Experience Platform.
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 943d1360e80caef58d09b8502507a3ad72edda03
+source-git-commit: 5e57df3fbc22baa1c7abbb02a003ad8663aad040
 workflow-type: tm+mt
-source-wordcount: '3571'
+source-wordcount: '3670'
 ht-degree: 3%
 
 ---
@@ -45,11 +45,9 @@ Saisissez un [!UICONTROL Nom d’affichage du schéma] dans le champ de texte. S
 
 ![La variable [!UICONTROL Nom et révision] de la [!UICONTROL Créer un schéma] avec la méthode [!UICONTROL Nom d’affichage du schéma], [!UICONTROL Description], et [!UICONTROL Terminer] surlignée.](../../images/ui/resources/schemas/name-and-review.png)
 
-La variable [!UICONTROL Schéma] [!UICONTROL Parcourir] s’affiche. Le schéma que vous venez de créer peut maintenant être modifié dans la [!DNL Schema Editor] et apparaît dans la liste des schémas disponibles.
+La variable [!UICONTROL Schéma] [!UICONTROL Parcourir] s’affiche. Le schéma que vous venez de créer est désormais répertorié dans la bibliothèque de schémas et peut être modifié dans la [!DNL Schema Editor].
 
-![L’éditeur de schémas affiche le schéma que vous venez de créer.](../../images/ui/resources/schemas/schema-details.png)
-
-Vous pouvez maintenant commencer à créer la structure du schéma en [ajout de champs de schéma](#add-field-groups) dans le [!DNL Schema Editor].
+![L’onglet Parcourir de l’espace de travail Schémas affichant le schéma que vous avez créé récemment.](../../images/ui/resources/schemas/example-schema.png)
 
 ## Modifier un schéma existant {#edit}
 
@@ -66,6 +64,14 @@ Pour modifier un schéma existant, sélectionnez l’option **[!UICONTROL Parcou
 >Vous pouvez utiliser les fonctionnalités de recherche et de filtrage de l’espace de travail pour faciliter la recherche du schéma. Consultez le guide sur la [exploration des ressources XDM](../explore.md) pour plus d’informations.
 
 Une fois que vous avez sélectionné un schéma, la variable [!DNL Schema Editor] apparaît avec la structure du schéma affichée dans la zone de travail. Vous pouvez désormais [ajouter des groupes de champs](#add-field-groups) au schéma (ou [ajouter des champs individuels ;](#add-individual-fields) de ces groupes), [modifier les noms d’affichage des champs](#display-names), ou [modifier des groupes de champs personnalisés ;](./field-groups.md#edit) si le schéma en utilise un.
+
+## Actions supplémentaires {#more}
+
+Dans l’éditeur de schémas, vous pouvez également exécuter des actions rapides pour copier la structure JSON du schéma ou supprimer le schéma s’il n’a pas été activé pour Real-time Customer Profile ou s’il comporte des jeux de données associés. Sélectionner [!UICONTROL Plus] dans la partie supérieure de la vue pour afficher une liste déroulante contenant des actions rapides.
+
+La fonctionnalité Copier la structure JSON vous permet de voir à quoi ressemblerait un exemple de payload pendant que vous créez encore le schéma et vos pipelines de données. Elle s’avère particulièrement utile dans les situations où il existe des structures de mappage d’objet complexes dans le schéma, telles qu’une carte d’identité.
+
+![L’éditeur de schémas avec le bouton Plus en surbrillance et les options de liste déroulante s’affichent.](../../images/tutorials/create-schema/more-actions.png)
 
 ## Bascule du nom d’affichage {#display-name-toggle}
 
