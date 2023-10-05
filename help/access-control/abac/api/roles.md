@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Point de terminaison de l’API Rôles
 description: Le point de terminaison /rôles de l’API de contrôle d’accès basé sur les attributs vous permet de gérer les rôles par programmation dans Adobe Experience Platform.
 exl-id: 049f7a18-7d06-437b-8ce9-25d7090ba782
-source-git-commit: 16d85a2a4ee8967fc701a3fe631c9daaba9c9d70
+source-git-commit: 4b48fa5e9a1e9933cd33bf45b73ff6b0d831f06f
 workflow-type: tm+mt
-source-wordcount: '1606'
-ht-degree: 27%
+source-wordcount: '1666'
+ht-degree: 28%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 27%
 
 Les rôles définissent l’accès dont dispose un administrateur, un spécialiste ou un utilisateur final aux ressources de votre entreprise. Dans un environnement de contrôle d’accès basé sur les rôles, la configuration de l’accès des utilisateurs est regroupée suivant les responsabilités et les besoins communs. Un rôle possède un jeu d’autorisations déterminé et les membres de votre organisation peuvent être affectés à un ou plusieurs rôles, selon la portée de l’accès en lecture ou en écriture dont ils ont besoin.
 
-Le `/roles` Le point de terminaison de l’API de contrôle d’accès basé sur les attributs vous permet de gérer par programmation les rôles dans votre organisation.
+La variable `/roles` Le point de terminaison de l’API de contrôle d’accès basé sur les attributs vous permet de gérer par programmation les rôles dans votre organisation.
 
 ## Prise en main
 
@@ -179,7 +179,7 @@ Une réponse réussie renvoie les détails de l’ID de rôle interrogé, y comp
 
 ## Recherche de sujets par identifiant de rôle
 
-Vous pouvez également récupérer des sujets en envoyant une requête de GET à la variable `/roles` point d’entrée tout en fournissant un {ROLE_ID}.
+Vous pouvez également récupérer des sujets en envoyant une requête de GET à la variable `/roles` point d’entrée lors de la fourniture d’un {ROLE_ID}.
 
 **Format d’API**
 
@@ -498,20 +498,18 @@ PATCH /roles/{ROLE_ID}
 La requête suivante met à jour les sujets associés aux `{ROLE_ID}`.
 
 ```shell
-curl -X PATCH \
-  https://platform.adobe.io/data/foundation/access-control/administration/roles/{ROLE_ID} \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}'
-  -d'{
-    "operations": [
-      {
+curl --location --request PATCH 'https://platform.adobe.io/data/foundation/access-control/administration/roles/<ROLE_ID>/subjects' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'Content-Type: application/json' \
+--data-raw '[
+    {
         "op": "add",
-        "path": "/subjects",
-        "value": "New subjects"
-      }
-    ]
-  }'
+        "path": "/user",
+        "value": "{USER ID}"
+    }
+]' 
 ```
 
 | Opérations | Description |
@@ -522,37 +520,7 @@ curl -X PATCH \
 
 **Réponse**
 
-Une réponse réussie renvoie les sujets mis à jour associés à l’ID de rôle interrogé.
-
-```json
-{
-  "subjects": [
-    {
-      "subjectId": "string",
-      "subjectType": "user"
-    }
-  ],
-  "_page": {
-    "limit": 0,
-    "count": 0
-  },
-  "_links": {
-    "next": {
-      "href": "string",
-      "templated": true
-    },
-    "page": {
-      "href": "string",
-      "templated": true
-    }
-  }
-}
-```
-
-| Propriété | Description |
-| --- | --- |
-| `subjectId` | L’identifiant d’un objet. |
-| `subjectType` | Type d’objet. |
+Une réponse réussie renvoie un état HTTP 204 (Pas de contenu) et un corps vide.
 
 ## Suppression d’un rôle {#delete}
 
@@ -585,3 +553,34 @@ curl -X DELETE \
 Une réponse réussie renvoie un état HTTP 204 (Pas de contenu) et un corps vide.
 
 Vous pouvez confirmer la suppression en tentant d’adresser une requête de recherche (GET) au rôle . Vous recevrez un état HTTP 404 (Not Found), car le rôle a été supprimé de l’administration.
+
+## Ajout d’informations d’identification d’API {#apicredential}
+
+Pour ajouter des informations d’identification d’API, envoyez une demande de PATCH à `/roles` point de terminaison tout en fournissant l’ID de rôle des sujets.
+
+**Format d’API**
+
+```shell
+curl --location --request PATCH 'https://platform.adobe.io/data/foundation/access-control/administration/roles/<ROLE_ID>/subjects' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'Content-Type: application/json' \
+--data-raw '[
+    {
+        "op": "add",
+        "path": "/api-integration",
+        "value": "{TECHNICAL ACCOUNT ID}"
+    }
+]'   
+```
+
+| Opérations | Description |
+| --- | --- |
+| `op` | Appel d’opération utilisé pour définir l’action nécessaire pour mettre à jour le rôle. Les opérations comprennent : `add`, `replace` et `remove`. |
+| `path` | Le chemin du paramètre à ajouter. |
+| `value` | La valeur avec laquelle vous souhaitez ajouter votre paramètre. |
+
+**Réponse**
+
+Une réponse réussie renvoie un état HTTP 204 (Pas de contenu) et un corps vide.
