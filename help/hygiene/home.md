@@ -2,18 +2,14 @@
 title: Présentation de l’hygiène de données
 description: Le nettoyage de données d’Adobe Experience Platform vous permet de gérer le cycle de vie des données en mettant à jour ou en purgeant des enregistrements obsolètes ou inexacts.
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
-source-git-commit: e59def7a05862ad880d0b6ada13b1c69c655ff90
-workflow-type: ht
-source-wordcount: '639'
+source-git-commit: ba23fb65fcc27a304e1075ec18b0bee3f240aa27
+workflow-type: tm+mt
+source-wordcount: '585'
 ht-degree: 100%
 
 ---
 
 # Hygiène de données sur Adobe Experience Platform
-
->[!IMPORTANT]
->
->L’hygiène des données n’est actuellement disponible que pour les organisations qui ont acheté **Adobe Healthcare Shield** ou **Adobe Privacy &amp; Security Shield**. Ces fonctionnalités doivent être disponibles prochainement. Pour plus d’informations sur leur future disponibilité, contactez la personne responsable de votre service Adobe. Cependant, vous pouvez immédiatement [supprimer des jeux de données par l’intermédiaire de l’UI [!UICONTROL Jeux de données]](../catalog/datasets/user-guide.md#delete).
 
 Adobe Experience Platform offre un ensemble d’outils fiables pour gérer des opérations de données complexes et volumineuses afin d’orchestrer les expériences client. Les données étant ingérées dans le système au fil du temps, il devient de plus en plus important de gérer les banques de données pour que les données soient utilisées comme prévu, mises à jour lorsque des données incorrectes doivent être corrigées et supprimées lorsque les politiques d’entreprise le jugent nécessaire.
 
