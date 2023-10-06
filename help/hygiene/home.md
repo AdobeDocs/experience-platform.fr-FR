@@ -2,7 +2,7 @@
 title: Présentation de la gestion avancée du cycle de vie des données
 description: La gestion avancée du cycle de vie des données vous permet de gérer le cycle de vie de vos données en mettant à jour ou en purgeant des enregistrements obsolètes ou inexacts.
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
-source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
+source-git-commit: 45dac5647e44ac35d9821d407eddeee72523faf9
 workflow-type: tm+mt
 source-wordcount: '589'
 ht-degree: 62%
@@ -49,7 +49,7 @@ Ce qui suit se produit lorsqu’une [requête d’expiration de jeu de données]
 | Nombre de profils mis à jour | 30 heures | Selon le contenu du jeu de données supprimé, certains profils peuvent être supprimés du système si tous leurs attributs de composant sont liés à ce jeu de données. 30 heures après la suppression du jeu de données, toutes les modifications résultantes dans le nombre total de profils sont répercutées dans les [widgets du tableau de bord](../dashboards/guides/profiles.md#profile-count-trend) et d’autres rapports. |
 | Audiences mises à jour | 48 heures | Une fois tous les profils affectés mis à jour, toutes les [audiences](../segmentation/home.md) connexes sont mises à jour pour refléter leur nouvelle taille. Selon le jeu de données supprimé et les attributs que vous segmentez, la taille de chaque audience peut augmenter ou diminuer en raison de la suppression. |
 | Destinations et parcours mis à jour | 50 heures | Les [Parcours](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journeys/journey.html?lang=fr), [destinations](../destinations/home.md), et [campagnes](https://experienceleague.adobe.com/docs/journey-optimizer/using/campaigns/get-started-with-campaigns.html?lang=fr) sont mis à jour en fonction des modifications apportées aux segments connexes. |
-| Suppression définitive terminée | 14 jours | Toutes les données relatives au jeu de données sont supprimées définitivement du lac de données. La variable [état de la tâche de cycle de vie des données](./ui/browse.md#view-details) qui a supprimé le jeu de données est mis à jour pour refléter cette situation. |
+| Suppression définitive terminée | 15 jours | Toutes les données relatives au jeu de données sont supprimées définitivement du lac de données. La variable [état de la tâche de cycle de vie des données](./ui/browse.md#view-details) qui a supprimé le jeu de données est mis à jour pour refléter cette situation. |
 
 {style="table-layout:auto"}
 

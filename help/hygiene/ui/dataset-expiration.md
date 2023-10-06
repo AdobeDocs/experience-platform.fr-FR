@@ -2,7 +2,7 @@
 title: Expiration automatisée de jeux de données
 description: Découvrez comment planifier l’expiration d’un jeu de données dans l’interface utilisateur d’Adobe Experience Platform.
 exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
-source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
+source-git-commit: 45dac5647e44ac35d9821d407eddeee72523faf9
 workflow-type: tm+mt
 source-wordcount: '828'
 ht-degree: 49%
@@ -26,7 +26,7 @@ Ce document explique comment planifier et automatiser les expirations de jeux de
 
 >[!NOTE]
 >
->L’expiration du jeu de données ne supprime actuellement pas les données du réseau Adobe Experience Platform Edge. Cependant, il n’est pas possible que les données restent dans le réseau Edge une fois le jeu de données défini pour expirer. En effet, le contrat de licence de service de 14 jours pour l’expiration du jeu de données correspond à la période de 14 jours pendant laquelle les données existent dans le réseau Edge avant d’être ignorées.
+>L’expiration du jeu de données ne supprime actuellement pas les données du réseau Adobe Experience Platform Edge. Cependant, il n’est pas possible que les données restent dans le réseau Edge une fois le jeu de données défini pour expirer. En effet, le contrat de licence de service de 15 jours pour l’expiration du jeu de données chevauche la période de 14 jours pendant laquelle les données existent dans le réseau Edge avant d’être ignorées.
 
 ## Planifier l’expiration d’un jeu de données {#schedule-dataset-expiration}
 
