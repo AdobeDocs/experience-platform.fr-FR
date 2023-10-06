@@ -2,18 +2,14 @@
 title: Guide de l’API Data Hygiene
 description: Découvrez comment corriger ou supprimer par programmation les données personnelles des clients stockées dans Adobe Experience Platform.
 exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
-source-git-commit: da8b5d9fffdf8a176a4d70be5df5b3021cf0df7b
+source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
 workflow-type: tm+mt
-source-wordcount: '469'
-ht-degree: 86%
+source-wordcount: '445'
+ht-degree: 69%
 
 ---
 
 # Guide de l’API Data Hygiene
-
->[!IMPORTANT]
->
->Actuellement, les fonctionnalités d’hygiène des données d’Adobe Experience Platform sont uniquement disponibles pour les organisations qui ont acheté **Adobe Healthcare Shield** ou **Adobe Privacy &amp; Security Shield**.
 
 L’API Data Hygiene vous permet de corriger ou de supprimer par programmation les données personnelles des clients stockées dans Adobe Experience Platform, ainsi que de planifier des dates d’expiration pour les jeux de données. Ce guide décrit les étapes préalables requises pour utiliser l’API et contient des liens vers une documentation plus spécifique aux points d’entrée.
 
@@ -52,12 +48,12 @@ Une expiration de jeu de données correspond à une action « supprimer un jeu 
 >
 >Les suppressions d’enregistrements sont destinées au nettoyage des données, à la suppression des données anonymes ou à la minimisation des données. Elles ne sont **pas** destinées aux demandes de droits des titulaires de données (conformité) en ce qui concerne les réglementations de confidentialité comme le Règlement général sur la protection des données (RGPD). Pour tous les cas d’utilisation de conformité, utilisez plutôt [Adobe Experience Platform Privacy Service](../../privacy-service/home.md).
 
-L’API Data Hygiene vous permet de supprimer tous les enregistrements associés à une identité dans un ou tous les jeux de données. Toutes les tâches d’hygiène des données qui suppriment les identités sont représentées par un concept appelé ordre de travail. Voir [guide de point de terminaison des commandes de travail](./workorder.md) pour plus d’informations sur l’utilisation des suppressions d’enregistrement dans l’API.
+L’API Data Hygiene vous permet de supprimer tous les enregistrements associés à une identité dans un ou tous les jeux de données. Toutes les tâches du cycle de vie des données qui suppriment les identités sont représentées par un concept appelé ordre de travail. Voir [guide de point de terminaison des commandes de travail](./workorder.md) pour plus d’informations sur l’utilisation des suppressions d’enregistrement dans l’API.
 
 ## Quota
 
-Votre entreprise est limitée à un quota mensuel de traitements prédéterminé pour chaque type d’opération d’hygiène des données, ce qui peut varier en fonction des licences. Voir [Guide du point d’entrée du quota](./quota.md) pour plus d’informations sur l’état actuel du quota de vos processus d’hygiène des données.
+Votre entreprise est limitée à un quota mensuel de tâches prédéterminé pour chaque type d’opération de cycle de vie des données, qui peut varier en fonction des licences. Voir [Guide du point de fin de quota](./quota.md) pour plus d’informations sur l’affichage de l’état actuel du quota de vos processus de cycle de vie des données.
 
 ## Étapes suivantes
 
-Ce guide explique comment gérer les demandes de nettoyage de données à l’aide d’appels API. Pour plus d’informations sur l’exécution de ces actions dans l’interface utilisateur de Platform, consultez le [Guide de l’interface utilisateur de nettoyage de données](../ui/overview.md).
+Ce guide explique comment gérer les demandes du cycle de vie des données à l’aide d’appels API. Pour plus d’informations sur l’exécution de ces actions dans l’interface utilisateur de Platform, voir [guide de l’interface utilisateur du cycle de vie des données](../ui/overview.md).

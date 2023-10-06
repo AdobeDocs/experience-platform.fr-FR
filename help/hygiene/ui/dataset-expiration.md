@@ -1,15 +1,15 @@
 ---
-title: Gérer des expirations de jeux de données
+title: Expiration automatisée de jeux de données
 description: Découvrez comment planifier l’expiration d’un jeu de données dans l’interface utilisateur d’Adobe Experience Platform.
 exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
-source-git-commit: 7931c8fe4a1ca5d255a80e7e6b0deb976d53c3de
+source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
 workflow-type: tm+mt
-source-wordcount: '819'
-ht-degree: 52%
+source-wordcount: '828'
+ht-degree: 49%
 
 ---
 
-# Gérer des expirations de jeux de données {#dataset-expiration}
+# Expiration automatisée des jeux de données {#dataset-expiration}
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_scheduleDatasetExpiration_description"
@@ -22,7 +22,7 @@ La variable [[!UICONTROL Cycle de vie des données] workspace](./overview.md) da
 >
 >Si un jeu de données est défini pour expirer, vous devez modifier manuellement les flux de données susceptibles d’ingérer des données dans ce jeu, afin que vos workflows en aval ne soient pas affectés négativement.
 
-Ce document explique comment planifier et gérer des expirations de jeux de données dans l’interface utilisateur de Platform.
+Ce document explique comment planifier et automatiser les expirations de jeux de données dans l’interface utilisateur de Platform.
 
 >[!NOTE]
 >
@@ -39,7 +39,7 @@ Pour créer une requête, sélectionnez **[!UICONTROL Créer une requête]** de 
 
 >[!IMPORTANT]
 >
-Vous pouvez avoir jusqu’à 20 expirations simultanées de jeux de données planifiées. Cela signifie que 20 jeux de données peuvent être supprimés simultanément. Il n&#39;existe aucune restriction quant à l&#39;heure ou à l&#39;année pour laquelle ces expirations sont définies. Par exemple, si vous disposez de 20 expirations de jeux de données planifiées et qu’un jeu de données doit être supprimé demain, vous ne pouvez plus définir d’expirations avant qu’après cette suppression du jeu de données.
+Les utilisateurs de Real-Time CDP, Adobe Journey Optimizer et de Customer Journey Analytics disposent de 20 commandes de travail d’expiration de jeu de données planifiées en attente. Les utilisateurs de Healthcare Shield et de Privacy and Security Shield disposent de 50 commandes d’expiration de jeu de données en attente. Cela signifie que 20 ou 50 jeux de données peuvent être supprimés simultanément.<br>Par exemple, si vous disposez de 20 expirations de jeux de données planifiées et qu’un jeu de données doit être supprimé demain, vous ne pouvez plus définir d’expirations avant qu’après cette suppression du jeu de données.
 
 ![La variable [!UICONTROL Cycle de vie des données] Workspace avec [!UICONTROL Créer une requête] surlignée.](../images/ui/ttl/create-request-button.png)
 

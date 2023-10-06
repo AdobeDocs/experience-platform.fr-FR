@@ -1,36 +1,36 @@
 ---
-title: Guide de l’interface utilisateur de nettoyage de données
-description: Découvrez comment gérer les tâches de nettoyage de données dans l’interface utilisateur d’Adobe Experience Platform.
+title: Guide de l’interface utilisateur du cycle de vie des données
+description: Découvrez comment gérer les tâches du cycle de vie des données dans l’interface utilisateur de Adobe Experience Platform.
 exl-id: 7199151a-5390-4150-8a1d-daf53b7a1f5b
-source-git-commit: a20afcd95d47e38ccdec9fba9e772032e212d7a4
+source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
 workflow-type: tm+mt
-source-wordcount: '213'
-ht-degree: 87%
+source-wordcount: '225'
+ht-degree: 16%
 
 ---
 
-# Guide de l’interface utilisateur de nettoyage de données {#hygiene-ui-guide}
+# Guide de l’interface utilisateur du cycle de vie des données {#lifecycle-ui-guide}
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_privacyconsole_consumer"
->title="Statut des demandes d&#39;hygiène des données"
->abstract="Ce widget affiche le nombre total de tâches de suppression d&#39;enregistrements d&#39;hygiène des données créées, ayant échoué et étant terminées. Pour plus d’informations sur vos processus d’hygiène des données, sélectionnez **Hygiène des données** dans le volet de navigation de gauche."
+>title="État des requêtes du cycle de vie des données"
+>abstract="Ce widget affiche le nombre total de tâches de suppression d’enregistrements de cycle de vie des données créées, ayant échoué et terminées. Pour plus d’informations sur vos processus de cycle de vie des données, sélectionnez **Cycle de vie des données** dans le volet de navigation de gauche."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_privacyconsole_recents"
->title="Parcourir les ordres de travail d’hygiène des données"
->abstract="Ce widget affiche les cinq derniers ordres de travail d’hygiène des données créés ou mis à jour, selon l’option sélectionnée en haut à droite. Pour plus d’informations sur vos processus d’hygiène des données, sélectionnez **Hygiène des données** dans le volet de navigation de gauche."
+>title="Commandes de travail récentes du cycle de vie des données"
+>abstract="Ce widget présente les cinq derniers ordres de travail du cycle de vie des données créés ou mis à jour, selon l’option que vous sélectionnez en haut à droite. Pour plus d’informations sur vos processus de cycle de vie des données, sélectionnez **Cycle de vie des données** dans le volet de navigation de gauche."
 
-Le **[!UICONTROL Hygiène des données]** workspace de l’interface utilisateur de Adobe Experience Platform vous permet de créer et de surveiller diverses tâches d’hygiène des données, notamment la suppression d’enregistrements et la planification de l’expiration des jeux de données.
+La variable **[!UICONTROL Cycle de vie des données]** workspace de l’interface utilisateur de Adobe Experience Platform vous permet de créer et de surveiller diverses tâches de gestion du cycle de vie des données, notamment la suppression d’enregistrements et la planification de l’expiration des jeux de données.
 
-Ce guide explique comment gérer les tâches de nettoyage de données dans l’interface utilisateur de Platform. Pour plus d’informations sur l’exécution de ces tâches à l’aide d’appels API, consultez le [Guide de l’API Data Hygiene](../api/overview.md).
+Ce guide explique comment gérer les tâches du cycle de vie des données dans l’interface utilisateur de Platform. Pour plus d’informations sur l’exécution de ces tâches à l’aide d’appels API, consultez le [Guide de l’API Data Hygiene](../api/overview.md).
 
-Pour accéder à l’espace de travail, sélectionnez **[!UICONTROL Nettoyage de données]** dans le volet de navigation de gauche.
+Pour accéder à l’espace de travail, sélectionnez **Cycle de vie des données** dans le volet de navigation de gauche.
 
-![Image illustrant l’espace de travail [!UICONTROL Nettoyage de données] dans l’interface utilisateur de Platform](../images/ui/overview/home.png)
+![La variable [!UICONTROL Cycle de vie des données] Workspace dans l’interface utilisateur de Platform, avec [!UICONTROL Cycle de vie des données] surligné dans le volet de navigation de gauche.](../images/ui/overview/home.png)
 
-Ensuite, vous pouvez parcourir les ordres de travail existants et configurer de nouvelles opérations d’nettoyage de données. Pour en savoir plus, consultez les sections suivantes de ce guide :
+À partir de là, vous pouvez parcourir les ordres de travail existants et configurer de nouvelles opérations de cycle de vie des données. Pour en savoir plus, consultez les sections suivantes de ce guide :
 
 * [Parcourir les ordres de travail existants](./browse.md)
 * [Créer une requête d’expiration de jeu de données](./dataset-expiration.md)
-<!-- * [Create a record delete request](./record-delete.md) -->
+* [Création d’une requête de suppression d’enregistrement](./record-delete.md)

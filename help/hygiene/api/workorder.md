@@ -1,24 +1,21 @@
 ---
-title: Point d’entrée de l’API de l’ordre de travail
+title: Point de terminaison de l’API Work Order
 description: Le point d’entrée /workorder de l’API Data Hygiene vous permet de gérer par programmation les tâches de suppression pour les identités.
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
 hide: true
 hidefromtoc: true
-source-git-commit: 54f92257d21f918b5d60c982670f96d30e879c60
+source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
 workflow-type: tm+mt
-source-wordcount: '1011'
-ht-degree: 74%
+source-wordcount: '997'
+ht-degree: 75%
 
 ---
 
 # Point d’entrée de l’ordre de travail
 
-Le `/workorder` Le point de terminaison de l’API Data Hygiene vous permet de gérer par programmation les demandes de suppression d’enregistrements dans Adobe Experience Platform.
+La variable `/workorder` Le point de terminaison de l’API Data Hygiene vous permet de gérer par programmation les demandes de suppression d’enregistrements dans Adobe Experience Platform.
 
 >[!IMPORTANT]
->
->Les demandes de suppression d’enregistrement ne sont disponibles que pour les organisations qui ont acheté **Adobe Health Care Shield**.
->
 >
 >Les suppressions d’enregistrements sont destinées au nettoyage des données, à la suppression des données anonymes ou à la minimisation des données. Elles ne sont **pas** destinées aux demandes de droits des titulaires de données (conformité) en ce qui concerne les réglementations de confidentialité comme le Règlement général sur la protection des données (RGPD). Pour tous les cas d’utilisation de conformité, utilisez plutôt [Adobe Experience Platform Privacy Service](../../privacy-service/home.md).
 
@@ -132,7 +129,7 @@ GET /workorder/{WORK_ORDER_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{WORK_ORDER_ID}` | Le `workorderId` de l’enregistrement que vous recherchez. |
+| `{WORK_ORDER_ID}` | La variable `workorderId` de l’enregistrement que vous recherchez. |
 
 {style="table-layout:auto"}
 
@@ -209,7 +206,7 @@ PUT /workorder{WORK_ORDER_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{WORK_ORDER_ID}` | Le `workorderId` de l’enregistrement que vous recherchez. |
+| `{WORK_ORDER_ID}` | La variable `workorderId` de l’enregistrement que vous recherchez. |
 
 {style="table-layout:auto"}
 
