@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Point de terminaison de l’API Privacy Jobs
 description: Découvrez comment gérer les tâches de confidentialité pour les applications Experience Cloud à l’aide de l’API Privacy Service.
 exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
-source-git-commit: a19f37d40b52ce41975bfc303339d2b85e12080e
+source-git-commit: 9d05752f3db78d9d10fd91fd0d3fed924217199c
 workflow-type: tm+mt
 source-wordcount: '1547'
 ht-degree: 64%
@@ -36,11 +36,15 @@ GET /jobs?regulation={REGULATION}&page={PAGE}&size={SIZE}
 
 | Paramètre | Description |
 | --- | --- |
-| `{REGULATION}` | Le type de réglementation pour lequel vous souhaitez effectuer une requête. Les valeurs acceptées sont les suivantes : <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpa`</li><li>`cpra_usa`</li><li>`ctdpa`</li><li>`ctdpa_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`nzpa_nzl`</li><li>`pdpa_tha`</li><li>`pdpd_vnm`</li><li>`ucpa_usa`</li><li>`vcdpa_usa`</li></ul><br>Consultez la présentation sur [réglementations prises en charge](../regulations/overview.md) pour plus d’informations sur les réglementations de confidentialité que représentent les valeurs ci-dessus. |
+| `{REGULATION}` | Le type de réglementation pour lequel vous souhaitez effectuer une requête. Les valeurs acceptées sont les suivantes : <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpa`</li><li>`cpra_usa`</li><li>`ctdpa`</li><li>`ctdpa_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`nzpa_nzl`</li><li>`pdpa_tha`</li><li>`ucpa_usa`</li><li>`vcdpa_usa`</li></ul><br>Consultez la présentation sur [réglementations prises en charge](../regulations/overview.md) pour plus d’informations sur les réglementations de confidentialité que représentent les valeurs ci-dessus. |
 | `{PAGE}` | La page de données à afficher à l’aide d’une numérotation basée sur 0. La valeur par défaut est de `0`. |
 | `{SIZE}` | Le nombre de résultats à afficher sur chaque page. `1` est la valeur par défaut et `100` est le maximum. Dépasser le maximum entraîne le code d’erreur 400 dans l’API. |
 
 {style="table-layout:auto"}
+
+<!-- Not released yet:
+<li>`pdpd_vnm`</li>
+ -->
 
 **Requête**
 

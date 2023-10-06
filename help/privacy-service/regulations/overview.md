@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Présentation des réglementations sur la confidentialité
 description: Ce document présente les différentes réglementations de confidentialité prises en charge par Adobe Experience Cloud.
 exl-id: 2ca946cf-94f8-4fd8-bb1a-7f06a5ab1256
-source-git-commit: a19f37d40b52ce41975bfc303339d2b85e12080e
+source-git-commit: 9d05752f3db78d9d10fd91fd0d3fed924217199c
 workflow-type: tm+mt
 source-wordcount: '951'
 ht-degree: 0%
@@ -33,6 +33,10 @@ En utilisant [Adobe Experience Platform Privacy Service](../home.md), Experience
 | VCDPA (Virginie) | La variable [[!DNL Virginia Consumer Data Protection Act (VCDPA)]](https://lis.virginia.gov/cgi-bin/legp604.exe?212+sum+HB2307) fournit de nouveaux droits sur la confidentialité des données aux résidents de la Virginie (&quot;Consommateurs&quot;), y compris le droit d’accéder à des données personnelles, de les supprimer et de les corriger. Les consommateurs ont également le droit de se désabonner de la vente de données personnelles, de se désabonner du profilage basé sur les données personnelles et du traitement des fins publicitaires personnelles. |
 
 {style="table-layout:auto"}
+
+<!-- Not yet released:
+ | PDPD (Vietnam) | The [[!DNL Personal Data Protection Decree (PDPD)]]() .... | 
+ -->
 
 ## Étapes suivantes
 

@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Gestion des tâches liées à la confidentialité dans l’interface utilisateur du Privacy Service
 description: Découvrez comment utiliser l’interface utilisateur du Privacy Service pour coordonner et surveiller les demandes d’accès à des informations personnelles dans différentes applications Experience Cloud.
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
-source-git-commit: a19f37d40b52ce41975bfc303339d2b85e12080e
+source-git-commit: 9d05752f3db78d9d10fd91fd0d3fed924217199c
 workflow-type: tm+mt
 source-wordcount: '1475'
 ht-degree: 68%
@@ -52,6 +52,10 @@ Le tableau de bord de la variable [!DNL Privacy Service] L’interface utilisate
 | [!UICONTROL VCDPA_USA] | La variable [!DNL Virginia Consumer Data Protection Act] |
 
 {style="table-layout:auto"}
+
+<!--Not released yet:
+| [!UICONTROL PDPA_VNM] | Vietnam's [!DNL Personal Data Protection Decree] |
+ -->
 
 >[!NOTE]
 >

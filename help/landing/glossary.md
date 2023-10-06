@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Glossaire Adobe Experience Platform
 description: Glossaire reprenant la terminologie principale d’Experience Platform.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: a19f37d40b52ce41975bfc303339d2b85e12080e
+source-git-commit: 9d05752f3db78d9d10fd91fd0d3fed924217199c
 workflow-type: tm+mt
 source-wordcount: '7979'
 ht-degree: 13%
@@ -380,6 +380,10 @@ ht-degree: 13%
 **Fichiers parquet**: un fichier parquet est un format de fichier de stockage en colonnes avec des structures de données imbriquées complexes. Des fichiers parquet sont nécessaires pour ajouter des données à un jeu de données de schéma.
 
 **PDPA**: la variable [[!DNL Personal Data Protection Act (PDPA)]](https://www.pdpc.gov.sg/Overview-of-PDPA/The-Legislation/Personal-Data-Protection-Act) a été introduit pour protéger les propriétaires de données thaïlandais de la collecte, de l’utilisation ou de la divulgation illégales de leurs données personnelles. Inspirée par le RGPD de l&#39;Union européenne, la réglementation accorde aux citoyens thaïlandais le droit de demander l&#39;accès à leurs données personnelles stockées ou de les supprimer.
+
+<!-- Not yet released
+**PDPD**: The [[!DNL Personal Data Protection Decree] (PDPD) 
+-->
 
 **Offres personnalisées**: une offre personnalisée est un message marketing personnalisable basé sur des règles d’éligibilité et des contraintes.
 

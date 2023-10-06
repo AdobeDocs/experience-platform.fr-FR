@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Terminologie des règlements sur la confidentialité
 description: Ce document fournit des définitions des termes clés liés aux réglementations de confidentialité prises en charge par Adobe Experience Cloud.
 exl-id: 9c0a7d26-0571-41d4-8cf5-6356025d51ef
-source-git-commit: a19f37d40b52ce41975bfc303339d2b85e12080e
+source-git-commit: 9d05752f3db78d9d10fd91fd0d3fed924217199c
 workflow-type: tm+mt
 source-wordcount: '1796'
 ht-degree: 4%
@@ -108,6 +108,10 @@ Ce document fournit des définitions des termes clés liés aux réglementations
 ## P
 
 **PDPA**: la variable [!DNL Personal Data Protection Act] de Thaïlande (PDPA) a été introduit pour protéger les propriétaires de données thaïlandais de la collecte, de l’utilisation ou de la divulgation illégale de leurs données personnelles. Inspirée par le RGPD de l&#39;Union européenne, la réglementation accorde aux citoyens thaïlandais le droit de demander l&#39;accès à leurs données personnelles stockées ou de les supprimer.
+
+<!-- Not yet released:
+**PDPD**: The [!DNL Personal Data Protection Decree] of Vietnam (PDPD) ...  
+-->
 
 **Données personnelles**: toute information relative à une personne physique ou à un &quot;sujet des données&quot;, qui peut être utilisée pour identifier directement ou indirectement la personne.
 
